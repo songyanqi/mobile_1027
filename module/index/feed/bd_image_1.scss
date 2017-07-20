@@ -1,0 +1,23 @@
+.clearfix:before {
+  display: table;
+  content: " ";
+}
+.clearfix:before {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+.dvd-col-4 {
+  width: 33.33333333%;
+}
+.pull-left {
+  float: left;
+}
+.index_model a {
+  overflow: hidden;
+  line-height: 0;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}

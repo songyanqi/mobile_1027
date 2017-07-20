@@ -1,0 +1,420 @@
+body.in_app .top0.true_top{
+    display: none;
+}
+.classification_search .top0 .top_container{
+}
+.classification_search .top0 .top_left{
+    display: block;
+}
+.classification_con{
+    font-size: 14px;
+    color: #666;}
+
+.classification_con_list{ width: 100%;}
+
+.classification_con_list a{height: 45px;
+    overflow: hidden;cursor: pointer;font-size: 14px;background-color: #fff; width:34%; position: relative; display:block; line-height:45px;border-bottom: 1px solid #eeeeee; float: left; text-align: center;}
+.classification_con_list a:before{
+    content: "";
+    position: absolute;
+    right: 0;
+    width:1px;
+    background-color: #eee;
+    height:45px;
+    display: block;}
+.classification_con_list a:nth-child(3n+0){ width:32%;}
+.classification_con_list a:nth-child(3n+0):before{
+    content: "";
+    position: absolute;
+    right: 0;
+    width:0;
+    background-color: #eee;
+    height:0;
+    display: block;}
+.classification{
+    background-color: #fff;
+}
+.classification_list li {
+    padding: 10px;
+    border-bottom: #f1f1f1 solid 1px;
+}
+.classification_list li .img_container {
+    position: relative;
+    /*height:70px;*/
+    /*overflow: hidden;*/
+}
+.img_container_inner{position: relative;}
+.img_container_inner iframe{
+    display: block !important;
+    opacity: 1 !important;
+    width: 70px !important;
+    height: 70px !important;
+}
+.img_container_inner_font{
+    position: absolute;
+    left: 0;
+    line-height: 15px;
+    background-color:rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 12px;
+    padding: 0px 2px;
+    bottom: 0;
+}
+.classification_list li .img_container img {
+    width:70px;
+    height:70px;
+}
+.classification_list li .classification_container {
+    position: absolute;
+    padding-left:80px;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.classification_list li .classification_container.p0{
+    position: relative;
+}
+.classification_list li  .classification_container .classification_name {
+    max-height: 3em;
+    overflow: hidden;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    font-size: 14px;
+}
+.static_height .classification_name{
+    height: 3em;
+}
+.classification_list li .classification_info {
+    margin-top:8px;
+    font-size: 11px;
+    color: #999;
+}
+.border_bottom{border-bottom: #f1f1f1 solid 1px;}
+.classification_top {
+    padding: 3px 10px 7px 40px;
+    background-color: #fff;
+    position: relative;
+}
+.classification_top .search_con{
+    width: 100%;
+    position: relative;
+    padding-right:32px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    top:2px;
+}
+
+.classification_top .search_con .search_icon{
+    position:absolute;
+    display: inline-block;
+    background      : url(//pic.davdian.com/free/index_search_icon_151214.png) no-repeat;
+    width: 13px;
+    height: 15px;
+    background-size: 13px;
+    top:7px;
+    left: 10px;
+}
+
+.classification_top .search_con .search_input{
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding-left: 32px;
+}
+.classification_top .left_icon_container {
+    left: 0;
+    z-index: 10;
+    position: absolute;
+}
+
+.classification_top .icon {
+    margin-top : 1px;
+    width      : 20px;
+    height     : 18px
+}
+
+.classification_top .icon_text {
+    color       : #666;
+    font-size   : 12px;
+    line-height : 9px
+}
+.classification_top .icon_with_text {
+    display    : inline-block;
+    width      : 40px;
+    text-align : center
+}
+.dav_icon_classification_40_30{
+    background-image: url("//pic.davdian.com/free/classification_icon_201619.png");
+    background-position:1px 0;
+    background-size: 20px;
+}
+.index_ads {
+    text-align : center;
+    overflow: hidden;
+    height: 37.5vw;
+    width : 100%;
+}
+
+@media screen and (min-width: 640px) {
+    .index_ads{
+        height: 240px;
+    }
+}
+
+.article-sequence{
+    padding: 10px;
+    text-align: right;
+    height: 22px;}
+.article-sequence ul{ border: 1px solid #FF4A7D;
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 3px;}
+.article-sequence li{width: 50px;
+    text-align: center;
+    float: left;
+    font-size: 12px;
+    color: #FF4A7D;
+}
+.article-sequence li.active{ width: 50px;
+    text-align: center;
+    background-color: #FF4A7D;
+    color: #fff;}
+
+.sold_number{
+    float: right;
+    font-size: 12px;
+    padding-top: 4px;
+    color: #666;
+}
+.classification_detail_con {line-height: 150%;font-size:14px;position: relative;}
+.index_search_con {
+    position: fixed;
+    top: 0;
+    z-index: 109;
+    width: 100%;
+    max-width: 640px;
+    background-color: #FCFCFC;
+}
+.classification_search .title_container{
+    margin:0 40px;
+    line-height: 40px;
+}
+.top_container input {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 10px 0 10px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+}
+.classification_search_ico{
+    width: 18px;
+    height: 18px;
+    background-image: url(//pic.davdian.com/free/searchLiveIcon_0826.png);
+    background-size: 100%;
+    display: block;
+    margin-top: 13px;
+    margin-left: 11px;
+    font-size: 14px;
+}
+.article-container iframe{
+    display: block !important;
+    opacity: 1 !important;
+}
+.article-toshop a.invoke{
+    border:solid 1px #FF4A7D;
+    background-color: #fff;
+    color: #FF4A7D;
+    margin-left: 30px;
+}
+.index_ads {
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+}
+.index_ads .swiper-pagination-bullet {
+    display: inline-block;
+    margin: 0 4px!important;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #dedede;
+    opacity: 1;
+}
+.index_ads.swiper-container-horizontal > .swiper-pagination-bullets{
+    bottom: 2px;
+}
+.index_ads .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: #FF4A7D;
+}
+
+.v_menu {
+    width: 100%;
+    max-width: 640px;
+    font-size: 14px;
+    margin-bottom: 1px;
+    height: 38px;
+    border-bottom: 0.5px solid rgba(0,0,0,0.05);
+    background-color: #fff;
+}
+.v_menu[v-cloak]{
+    background: none;
+}
+.v_menu:after{
+    content: "";
+    display: block;
+    width: 200%;
+    /*height:1px;*/
+    transform-origin: 0 1px;
+    transform: scale(0.5, 0.5);
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+.v_menu .swiper-wrapper{
+}
+
+.v_menu li {
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 30px;
+    padding-top: 6px;
+    position: relative;
+}
+.v_menu .swiper-slide{
+    width:22.22vw;
+    max-width:142px;
+}
+
+.v_menu li.hover span {
+    color: #FF4A7D;
+    position: relative;
+}
+.v_menu li.hover .hoverSpan{
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid #FF4A7D;
+}
+/*.v_menu li.hover span:after{
+    content: "";
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #FF4A7D;
+}*/
+.v_menu li span {
+    color: #333;
+    display: inline-block;
+    padding: 0 1px 0;
+}
+.strings{
+    display: inline-block;
+    margin: 0 10px 0;
+    color:#E1E1E1;
+}
+.not_point_praise {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(//pic.davdian.com/free/2017/02/07/material-share.png) no-repeat;
+    /*background: url(//pic.davdian.com/free/not_point_praise_208.png) no-repeat;*/
+    background-size: 15px;
+    /*background-position-y: 2px;*/
+    margin-bottom: -4px;
+    cursor: pointer;
+}
+.has_been_like {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(//pic.davdian.com/free/has_been_like_208.png) no-repeat;
+    background-size: 15px;
+    /*background-position-y: 2px;*/
+    margin-bottom: -4px;
+    cursor: pointer;
+}
+@keyframes praise
+{
+    0% {transform: scale(1,1);}
+    50% {transform: scale(1.5,1.5);}
+    100% {transform: scale(1,1);}
+}
+
+@-moz-keyframes praise /* Firefox */
+{
+    0% {transform: scale(1,1);}
+    50% {transform: scale(1.5,1.5);}
+    100% {transform: scale(1,1);}
+}
+
+@-webkit-keyframes praise /* Safari 和 Chrome */
+{
+    0% {transform: scale(1,1);}
+    50% {transform: scale(1.5,1.5);}
+    100% {transform: scale(1,1);}
+}
+
+@-o-keyframes praise /* Opera */
+{
+    0% {transform: scale(1,1);}
+    50% {transform: scale(1.5,1.5);}
+    100% {transform: scale(1,1);}
+}
+.active_praise{
+    -webkit-animation:praise 1.5s; /*Safari and Chrome*/
+    -o-animation:praise 1.5s;
+    animation:praise 1.5s;
+}
+.classroom_imgss{
+    margin: -10px -10px 10px -10px;
+    position: relative;
+}
+.playWhite{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -30px;
+    margin-left: -30px;
+    background-image: url(//pic.davdian.com/free/playWhite60.png);
+    background-size: 100%;
+}
+.playWhite2{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    margin-top: -15px;
+    margin-left: -15px;
+    background-image: url(//pic.davdian.com/free/listenWhite2.png);
+    background-size: 100%;
+}
+.point_praise{
+    display: inline-block;
+    margin-right: 5px;
+}
+.praise_num{
+    min-width: 10px;
+    display: inline-block;
+}

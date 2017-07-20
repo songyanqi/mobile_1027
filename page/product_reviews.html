@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>商品名称</title>
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <!-- /build -->
+    <!-- build:style detail -->
+    <link href="../stylesheet/v.css" rel="stylesheet">
+    <link href="../stylesheet/product_reviews.css" rel="stylesheet">
+    <!-- /build -->
+
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0,  // 头部分享按钮
+            btnOnHead:1,    // 头部文字按钮
+            btnText:"添加推荐语",     // 头部文字按钮文字
+            btnLink:""      // 头部文字按钮链接 需要套页面时候加上
+        };
+
+
+        var deleteReviewUrl = "33";
+        var refreshUrl = "../data/reviewList.json";
+
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+
+        //店铺描述
+        var descContent = '文/兜妈';
+        var shareTitle = '旗下适合0-3岁孩子的玩具有哪些？文章标题在这里';  //店铺名称
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+    </script>
+   
+</head>
+<body class="product_reviews_con">
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            商品评价
+        </div>
+        <div class="top_right">
+            <a href="" class="top_btn">
+                <span class="border_btn">添加推荐语</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="product_reviews clearfix box_shadow_none">
+    <div class="review_group">
+        <div class="reviews_list" data-id="sd">
+            <div class="list_title">
+                <div class="pull-right">
+                    <span class="pull-right delete">删除</span>
+                    <span class="pull-right dav-color9">2015-07-06</span>
+                </div>
+                <img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg" class="pull-left">
+
+                <div class="shop_name pull-left">haba</div>
+            </div>
+
+            <div class="list_text">这本书改变了世界，改变了宝宝。改变了一切，从此宝宝上了哈佛，当上了CEO，登录了纳斯达克。</div>
+        </div>
+        <div class="reviews_list">
+            <div class="list_title">
+                <div class="pull-right">
+                    <span class="pull-right dav-color9">2015-07-06</span>
+                </div>
+                <img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg" class="pull-left">
+
+                <div class="shop_name pull-left">haba</div>
+            </div>
+
+            <div class="list_text">这本书改变了世界，改变了宝宝。改变了一切，从此宝宝上了哈佛，当上了CEO，登录了纳斯达克。</div>
+        </div>
+        <div class="reviews_list">
+            <div class="list_title">
+                <div class="pull-right">
+                    <span class="pull-right dav-color9">2015-07-06</span>
+                </div>
+                <img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg" class="pull-left">
+
+                <div class="shop_name pull-left">haba</div>
+            </div>
+
+            <div class="list_text">这本书改变了世界，改变了宝宝。改变了一切，从此宝宝上了哈佛，当上了CEO，登录了纳斯达克。</div>
+        </div>
+        <div class="reviews_list" data-id="ds">
+            <div class="list_title">
+                <div class="pull-right">
+                    <span class="pull-right dav-color9">2015-07-06</span>
+                </div>
+                <img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg" class="pull-left">
+
+                <div class="shop_name pull-left">haba</div>
+            </div>
+
+            <div class="list_text">这本书改变了世界，改变了宝宝。改变了一切，从此宝宝上了哈佛，当上了CEO，登录了纳斯达克。</div>
+        </div>
+        <div class="reviews_list" data-id="ds">
+            <div class="list_title">
+                <div class="pull-right">
+                    <span class="pull-right dav-color9">2015-07-06</span>
+                </div>
+                <img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg" class="pull-left">
+
+                <div class="shop_name pull-left">haba</div>
+            </div>
+
+            <div class="list_text">这本书改变了世界，改变了宝宝。改变了一切，从此宝宝上了哈佛，当上了CEO，登录了纳斯达克。</div>
+        </div>
+    </div>
+    <div class="loading_container">
+        <img src="//pic.davdian.com/free/loading_32.gif">
+
+        <div>数据加载中...</div>
+        </div>
+    <a href="javascript:history.back()">
+        <div class="goback_detail">回到商品详情页</div>
+    </a>
+    </div>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script type="text/javascript" src="../cdn/wechat/jssdk/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/review.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/send_red.css" rel="stylesheet">
+    <link href="../stylesheet/fund.css" rel="stylesheet">
+    <title>财神送钱啦</title>
+
+    <script type="text/javascript">
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 1,   // 头部首页按钮
+            shareOnHead: 1
+        };
+
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+        var appid = ''; //apiID，可留空
+
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+
+        var sendUrl = '';
+    </script>
+</head>
+<body class="scroll_flag">
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            财神送钱啦
+        </div>
+        <div class="top_right">
+            <a href="" class="top_home">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!--活动已结束-->
+<div class="main_box" id="kd_end">
+    <!--卷轴财神鸡-->
+    <img src="//pic.davdian.com/free/send_redenvelope/Reel_bg.png" alt="">
+    <img class="timeover" src="//pic.davdian.com/free/send_redenvelope/active_over.png" alt="">
+</div>
+
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script type="text/javascript" src="../cdn/wechat/jssdk/jweixin-1.0.0.js"></script>
+<!-- build:script base -->
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+</body>
+</html>

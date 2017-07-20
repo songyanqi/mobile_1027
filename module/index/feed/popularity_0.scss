@@ -1,0 +1,74 @@
+a.popularity_0{
+  display: block;
+  position: relative;
+  background-color: #fff;
+  padding: 15px 18px;
+  color: #666;
+  .date{
+    display: block;
+    width: 132px;
+    height: 15px;
+    line-height: 15px;
+    border-right:#F1F1F1 solid 1px;
+    vertical-align: middle;
+  }
+  .hot{
+    position: absolute;
+    left: 150px;
+    top: 0;
+    padding: 10px 0 10px 10px;
+    height: 45px;
+    overflow: hidden;
+    right: 25px;
+    .pv{
+      line-height: 25px;
+      margin-right: 10px;
+    }
+    .headpic{
+      display: inline-block;
+      height: 25px;
+      position: absolute;
+      overflow: hidden;
+      .img{
+        width: 25px;
+        height: 25px;
+        border-radius: 25px;
+        display: inline-block;
+        overflow: hidden;
+        margin-right: 5px;
+      }
+    }
+  }
+  .getmore{
+    display: inline-block;
+    height: 22px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+    width: 10px;
+    .icon{
+      display: inline-block;
+      vertical-align: 0;
+      width: 10px;
+      height: 10px;
+      border-top: 1px solid #999;
+      border-right: 1px solid #999;
+      -moz-transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      background: none;
+      top: 6px;
+      position: absolute;
+      right: 3px;
+    }
+  }
+  .heart{
+    width:20px;
+    height: 20px;
+    text-align: center;
+    img{
+      width: 15px;
+    }
+  }
+}

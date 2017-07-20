@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/classroom.css" rel="stylesheet">
+
+    <title>分类列表</title>
+    <script>
+
+        var tj_id = 40;
+        var tj_path = 'classroom_classification';
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0
+        };
+    </script>
+</head>
+<body class="scroll_flag">
+<div class="top0">
+    <div class="top_container">
+        <div class="classification_search">
+            <div class="top0">
+                <div class="top_container">
+                    <div class="top_left">
+                        <a class="top_back" href="javascript:history.back();">
+                            <span class="home_arrow back_in_page"></span>
+                        </a>
+                    </div>
+                    <div class="title_container">
+                        <form class="search_form" type="search" action="ccc">
+                            <input class="search_input search_word" name="q" placeholder="输入关键字">
+                        </form>
+                    </div>
+                    <div class="top_right">
+                        <a class="top_share"  data-dav-tj="classroom|search|search|1|search@classroom">
+                            <span class="classification_search_ico"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="classification_con clearfix">
+    <ul class="classification_con_list">
+        <a href="" data-dav-tj="classroom_category|category_1|category_1|1|category_1@classroom_category">
+            <li>育儿</li>
+        </a>
+        <a href="">
+            <li>育儿</li>
+        </a>
+        <a href="">
+            <li>夫妻</li>
+        </a>
+        <a href="">
+            <li>大V说</li>
+        </a>
+        <a href="">
+            <li>育儿</li>
+        </a>
+        <a href="">
+            <li>直播内容</li>
+        </a>
+        <a href="">
+            <li>育儿</li>
+        </a>
+        <a href="">
+            <li>直播内容</li>
+        </a>
+        <a href="">
+            <li>夫妻</li>
+        </a>
+        <a href="">
+            <li>育儿</li>
+        </a>
+        <a href="">
+            <li>大V说</li>
+        </a>
+        <a href="">
+            <li>夫妻</li>
+        </a>
+        <a href="">
+            <li>育儿</li>
+        </a>
+        <a href="">
+            <li>直播内容</li>
+        </a>
+        <a href="">
+            <li>夫妻</li>
+        </a>
+        <a href="">
+            <li>育儿</li>
+        </a>
+        <a href="">
+            <li>操作指南</li>
+        </a>
+        <a href="">
+            <li>夫妻</li>
+        </a>
+    </ul>
+</div>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script src="../javascript/classroom.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>大V直播</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <!-- Chang URLs to wherever Video.js files will be hosted -->
+    <link href="../stylesheet/video-js.css" rel="stylesheet">
+    <link href="../stylesheet/video_live.css" rel="stylesheet">
+
+    <script>
+        var tj_id = 66;
+        var tj_path = "video_live_list";
+
+        var userId=222;
+        var attentionUrl="/index.php?m=default&c=videoLive&a=follow";
+
+        /////////////////////微信分享/////////////////////
+        // 店铺的图标
+        var imgUrl = "http://img.davdian.com/seller/shop_logo_22.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新                                                                                                                                                                                                                                               书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+        /////////////////////////////////////////////////
+    </script>
+
+
+</head>
+<body style="padding-bottom: 44px;">
+<a href="">
+    <div class="live_video_list_top">
+
+        <div class="pull-left">
+            <img class="shop_img" src="http://pic.davdian.com/free/live_head_64_64.png">
+            <span class="shop_title">
+                大V体验店
+                <p class="pic">来我的大V店,做更好的妈妈</p>
+            </span>
+        </div>
+        <div class="right menu_kd">
+            <div class="kd_btn"><i class="arrow"></i></div>
+        </div>
+
+    </div>
+</a>
+
+<!--直播-->
+<div class="live_video_title_page exclusiveOwner hide">
+        <img src="//pic.davdian.com/free/live_video_big_pic.png">
+        <div class="exclusive_owner">店主专享</div>
+        <div class="people_num">1.3万</div>
+        <div class="play_icon">直播中</div>
+        <div class="title">#和大V店一起，为爱漂流...</div>
+</div>
+
+<!--回放-->
+<div class="live_video_title_page playbacklist">
+    <img src="//pic.davdian.com/free/live_video_big_pic.png">
+    <div class="exclusive_owner">店主专享</div>
+    <div class="people_num">1.3万</div>
+    <div class="review_icon">回放</div>
+    <div class="title">#和大V店一起，为爱漂流...</div>
+</div>
+
+
+<div class="live_video_attention">
+    <div class="live_video_attention_left">
+        <img class="shop_img" src="http://pic.davdian.com/free/live_head_64_64.png"></div>
+    <div class="live_video_attention_center">
+        <div class="title"><span>风过梧桐</span><i class="v_icon"><img src="//pic.davdian.com/free/official_certification_icon.png"></i></div>
+        <div class="summary">来我的大V店,做更好的妈妈</div>
+    </div>
+    <div class="live_video_attention_right">
+        <div class="list_attention">关注</div>
+        <div class="already_attention hide">已关注</div>
+    </div>
+</div>
+
+<div class="hot_live_video">
+    <div class="title">热门直播</div>
+    <ul class="hot_list clearfix">
+        <li class="exclusiveOwner">
+            <div class="top">
+                <img src="//pic.davdian.com/free/live_video_small_pic.png">
+                <div class="list_exclusive_owner">店主专享</div>
+                <div class="list_live"><i class="live_icon"></i>直播中</div>
+                <div class="list_title">
+                    <i class="map_icon"></i>巴布亚新几内亚
+                </div>
+            </div>
+            <div class="con clearfix">
+                <div class="con_title">#天才宝宝#谁知道你的宝宝竟然是天才</div>
+                <div class="mt_15 c6 con_content clearfix">
+                    <div class="pull-left">小兔妈<i class="v_icon"><img
+                            src="//pic.davdian.com/free/official_certification_icon.png"></i></div>
+                    <div class="pull-right">1.2万人</div>
+                </div>
+            </div>
+        </li>
+        <li class="exclusiveOwner">
+            <div class="top">
+                <img src="//pic.davdian.com/free/live_video_small_pic.png">
+                <div class="list_exclusive_owner">店主专享</div>
+                <div class="list_playback"><i class="playback_icon"></i>回放</div>
+                <div class="list_title">
+                    <i class="map_icon"></i>巴布亚新几内亚
+                </div>
+            </div>
+            <div class="con clearfix">
+                <div class="con_title">#天才宝宝#谁知道你的宝宝竟然是天才</div>
+                <div class="mt_15 c6 con_content clearfix">
+                    <div class="pull-left">小兔妈<i class="v_icon"><img
+                            src="//pic.davdian.com/free/official_certification_icon.png"></i></div>
+                    <div class="pull-right">1.2万人</div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="">
+                <div class="top">
+                    <img src="//pic.davdian.com/free/live_video_small_pic.png">
+                    <div class="list_playback"><i class="playback_icon"></i>回放</div>
+                    <div class="list_title">
+                        <i class="map_icon"></i>巴布亚新几内亚
+                    </div>
+                </div>
+                <div class="con clearfix">
+                    <div class="con_title">#天才宝宝#谁知道你的宝宝竟然是天才</div>
+                    <div class="mt_15 c6 con_content clearfix">
+                        <div class="pull-left">小兔妈<i class="v_icon"><img src="//pic.davdian.com/free/official_certification_icon.png"></i></div>
+                        <div class="pull-right">1.2万人</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="top">
+                    <img src="//pic.davdian.com/free/live_video_small_pic.png">
+                    <div class="list_playback"><i class="playback_icon"></i>回放</div>
+                    <div class="list_title">
+                        <i class="map_icon"></i>巴布亚新几内亚
+                    </div>
+                </div>
+                <div class="con clearfix">
+                    <div class="con_title">#天才宝宝#谁知道你的宝宝竟然是天才</div>
+                    <div class="mt_15 c6 con_content clearfix">
+                        <div class="pull-left">小兔妈<i class="v_icon"><img src="//pic.davdian.com/free/official_certification_icon.png"></i></div>
+                        <div class="pull-right">1.2万人</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="live_video_list_bottom">
+    <div class="download_con">
+        <div class="close_btn_con">
+            <span class="close_btn"></span>
+        </div>
+        <div class="center_con"><img src="//pic.davdian.com/free/live_video_logo_0928.png"></div>
+        <a class="download_btn_con">
+            <div class="download_btn">打开</div>
+        </a>
+    </div>
+</div>
+
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script src="../javascript/jweixin-1.0.0.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/video_live_close.js"></script>
+
+</body>
+</html>

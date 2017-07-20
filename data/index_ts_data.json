@@ -1,0 +1,73 @@
+{
+  "code": 0,
+  "data_version": "b49976b314151d67f55124cda581a02c",
+  "shop_url": "http:\/\/13269099242.vyohui.cn",
+  "visitor_status": 3,
+  "sess_key": "e92d158595672ee2bdd01e5cfd16ca3402caa203",
+  "sys_time": 1497596554,
+  "data": {
+    "feedList": [
+      {
+        "marginTop": "0",
+        "body": {
+          "tplId": "bd_ts_prod_0",
+          "bgColor": "0xFFFFFF",
+          "isTimeshop": 1,
+          "dataList": [
+            {
+              "title": "\u4e0d\u8981\u4f7f\u7528",
+              "imageUrl": "http:\/\/img1.bravetime.net\/supplier\/2017\/06\/13\/640_640_98eb5a6cddc28504aa0f3b8c66f78fa1.png?x-oss-process=image\/resize,m_fill,w_130,h_130\/quality,Q_90&",
+              "nowPrice": "180",
+              "actInfo": "\u9650\u65f6\u7279\u5356",
+              "goodsId": "363552",
+              "timeshopIncome": "0",
+              "timeshopStock": "0",
+              "timeshopLimit": "0",
+              "percentage": "100",
+              "shopStartTime": "1497610800",
+              "statusInfo": "1",
+              "buttonName": "\u5f00\u62a2\u63d0\u9192",
+              "buttonStatus": 1,
+              "showLine":1,
+              "command": {
+                "content": "\/363552.html?rp=index&rl=timeshop_goods--363552",
+                "log": "|\u4e0d\u8981\u4f7f\u7528"
+              }
+            }
+          ]
+        },
+        "position": "0"
+      },
+      {
+        "marginTop": "0",
+        "body": {
+          "tplId": "bd_ts_prod_0",
+          "bgColor": "0xFFFFFF",
+          "isTimeshop": 1,
+          "dataList": [
+            {
+              "title": "\u76d8\u76c8",
+              "imageUrl": "http:\/\/img1.bravetime.net\/supplier\/2017\/06\/12\/640_640_98eb5a6cddc28504aa0f3b8c66f78fa1.png?x-oss-process=image\/resize,m_fill,w_130,h_130\/quality,Q_90&",
+              "nowPrice": "90",
+              "actInfo": "\u9650\u65f6\u7279\u5356",
+              "goodsId": "363551",
+              "timeshopIncome": "0",
+              "timeshopStock": "0",
+              "timeshopLimit": "0",
+              "percentage": "100",
+              "shopStartTime": "1497610800",
+              "statusInfo": "1",
+              "buttonName": "\u5f00\u62a2\u63d0\u9192",
+              "buttonStatus": 1,
+              "command": {
+                "content": "\/363551.html?rp=index&rl=timeshop_goods--363551",
+                "log": "|\u76d8\u76c8"
+              }
+            }
+          ]
+        },
+        "position": "1"
+      }
+    ]
+  }
+}

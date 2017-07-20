@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>个人中心</title>
+    <link href="../dist/user.css" rel="stylesheet">
+
+    <script>
+        //开店请求数据连接//
+        var createShopUrl="../data/experience_end.json";
+
+        var updateUserImgUrl = ''; // 更新用户头像URL
+        var userId = ""; //用户id
+    </script>
+
+
+</head>
+<body id="user">
+
+<div class="user_container">
+    <form id="change_user_img" action="//img.mamamba.net/upload.php?owner_id=15910661509" method='POST' enctype="multipart/form-data">
+        <div class="user_img_phone">
+            <img src="//pic.davdian.com/free/index_shop_logo_22.jpg">
+            <div class="user_phone">158112231234</div>
+            <input type="file" name="shop_logo" accept="image/gif,image/jpeg,image/png,image/jpg,image/bmp" id="img_input">
+        </div>
+    </form>
+    <div class="user_menu_group dav-shadow mt20">
+        <a class="user_menu_item" href="/t-312.html">
+            <span class="ico"><i class="icon dav_icon_money_54_54"></i></span>
+            <span>年终奖来啦！</span>
+            <span class="child pull-right"><span>了解详情</span><i class="icon dav_icon_dayuhao_18_38"></i></span>
+        </a>
+    </div>
+
+    <div class="year_module">
+        <div class="title">销售额奖金</div>
+        <div class="container">
+        <div class="title_container">12月份当前销售额<span class="color_FF4A7D fr">￥500</span></div>
+        <div class="text">已获得年终奖 <span class="color_FF4A7D">￥0</span> 元，销售额还差 <span class="color_FF4A7D">￥2000</span> 元即可获得 <span class="color_FF4A7D">￥100</span> 元。</div>
+        </div>
+    </div>
+
+    <div class="year_module">
+        <div class="title">邀请开店奖金</div>
+        <div class="container">
+            <div class="title_container">12月份当前邀请开店数量<span class="color_FF4A7D fr">30</span></div>
+            <div class="text">已获得年终奖 <span class="color_FF4A7D">￥0</span> 元，邀请开店差 <span class="color_FF4A7D">30</span> 个即可获得 <span class="color_FF4A7D">￥100</span> 元。</div>
+        </div>
+    </div>
+
+    <div class="user_menu_group dav-shadow mt12">
+        <a class="user_menu_item" href="./integral.html">
+            <span class="ico"><i class="icon dav_icon_v_54_54"></i></span>
+            <span>积分：2000</span>
+            <span class="child pull-right"><span>用户积分</span><i class="icon dav_icon_dayuhao_18_38"></i></span>
+        </a>
+    </div>
+    <div class="user_menu_group dav-shadow mt12">
+        <a class="user_menu_item" href="./orderList.html">
+            <span class="ico"><i class="icon dav_icon_order_54_54"></i></span>
+            <span>我的订单</span>
+            <span class="child pull-right"><i class="icon dav_icon_dayuhao_18_38"></i></span>
+        </a>
+        <a class="user_menu_item" href="">
+            <span class="ico"><i class="icon dav_icon_collect"></i></span>
+            <span>我的收藏</span>
+            <span class="child pull-right"><i class="icon dav_icon_dayuhao_18_38"></i></span>
+        </a>
+        <a class="user_menu_item" href="//nemo.davdian.com">
+            <span class="ico"><i class="icon dav_icon_tuan_54_54"></i></span>
+            <span class="latest_tips">我的组团<b>1</b></span>
+            <span class="child pull-right"><i class="icon dav_icon_dayuhao_18_38"></i></span>
+        </a>
+        <a class="user_menu_item" href="//nemo.davdian.com">
+            <span class="ico"><i class="icon dav_icon_bonus_54_54"></i></span>
+            <span>我的红包</span>
+            <span class="child pull-right"><i class="icon dav_icon_dayuhao_18_38"></i></span>
+        </a>
+        <a class="user_menu_item" href="//nemo.davdian.com">
+            <span class="ico"><i class="icon dav_icon_class_40_40"></i></span>
+            <span>我的课程</span>
+            <span class="child pull-right"><i class="icon dav_icon_dayuhao_18_38"></i></span>
+        </a>
+        <a class="user_menu_item" href="./setting.html">
+            <span class="ico"><i class="icon dav_icon_setting_54_54"></i></span>
+            <span>设置</span>
+            <span class="child pull-right"><i class="icon dav_icon_dayuhao_18_38"></i></span>
+        </a>
+        <a class="user_menu_item" href="./setting.html">
+            <span class="ico"><i class="icon dav_icon_userinfo_54_54"></i></span>
+            <span>个人资料</span>
+            <span class="child pull-right"><i class="icon dav_icon_dayuhao_18_38"></i></span>
+        </a>
+        <a class="user_menu_item" href="./idcardList.html">
+            <span class="ico"><i class="icon dav_icon_cardinfo_54_54"></i></span>
+            <span>证件信息</span>
+            <span class="child pull-right"><i class="icon dav_icon_dayuhao_18_38"></i></span>
+        </a>
+    </div>
+    <div class="user_menu_group mt12">
+        <a class="user_menu_item " id="create_shop">
+            <span>199开店（点击确定后将不能继续体验大V店）</span>
+            <span class="child pull-right"><i class="icon dav_icon_dayuhao_18_38"></i></span>
+        </a>
+    </div>
+    <div class="user_menu_group dav-shadow mt20">
+        <a class="user_menu_item" href="./orderList.html">
+            <span class="ico"><i class="icon dav_icon_manage_54_54"></i></span>
+            <span>管理店铺</span>
+            <span class="child pull-right"><i class="icon dav_icon_dayuhao_18_38"></i></span>
+        </a>
+    </div>
+    <div class="quit">
+        <a class="dav-btn btn-red" href="//nemo.davdian.com">
+            退出登录
+        </a>
+    </div>
+
+</div>
+
+
+<!--bottom模块 只需要cart数量 可以为0-->
+<dvd-bottom :active="3" :cart="4"></dvd-bottom>
+
+<!-- 关注弹出层 只有在用户没有关注公共号时候才展示
+<div class="download_layer">
+    <span class="close"></span>
+    <span class="logo"></span>
+    <span class="slogan">关注，获得售后服务</span>
+    <span class="download_btn">关注</span>
+</div>-->
+<!-- 二维码弹出层
+<div class="dialog_mask hide" style="display:block">
+    <div class="modal_dialog_wrap" style="/* margin-top: -155px; */">
+        <div class="modal_dialog">
+            <div class="modal_qr">
+                <div class="pop_up_layer">
+                    <img src="//pic.davdian.com/free/qr_new.png">
+                </div>
+                <div class="modal_close"></div>
+            </div>
+            <div class="modal_footer">
+                长按，即可关注
+            </div>
+        </div>
+    </div>
+</div>-->
+
+<!--app推广下载链接 不在app里面而且是卖家,而且在自己店铺才出现-->
+<div class="download_layer index_download_layer">
+    <span class="close"></span>
+    <span class="logo"></span>
+    <span class="slogan">
+        <p class="fz_12">大V店APP</p>
+        <p class="fz_15">让妈妈轻松开店</p>
+    </span>
+    <span class="download_btn" onclick="down();">下载</span>
+</div>
+
+<script src="http://cdn.davdian.com/vue/1.0.26/vue.min.js"></script>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="../dist/user.js"></script>
+
+</body>
+</html>

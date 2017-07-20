@@ -1,0 +1,90 @@
+var path = require('path');
+var webpack = require('webpack');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var HappyPack = require('happypack');
+var happyThreadPool = HappyPack.ThreadPool({ size: 8 });
+
+module.exports = {
+    entry:{
+        home:'./source/javascript/home.config.js',
+        vSchool:'./source/javascript/vSchool.config.js',
+        vClassroomPopList:'./source/javascript/v_classroom_pop_list.config.js',
+        vClassroomTeacher:'./source/javascript/v_classroom_teacher.config.js',
+        vClassroomPopularityList:'./source/javascript/v_classroom_popularity_list.config.js',
+        introduce:'./source/javascript/introduce.config.js',
+        classroom:'./source/javascript/classroom.config.js',
+        commonList:'./source/javascript/commonList.config.js',
+        // index:'./source/page/index.config.js',
+        cart:'./page/cart.config.js',
+        index_fe:'./source/javascript/index_fe.config.js',
+        detail:'./source/javascript/detail.config.js',
+        category:'./source/javascript/category.config.js',
+        user:'./source/javascript/user.config.js',
+        overtime:"./source/javascript/overtime.config.js",
+        orderList:"./source/javascript/orderList.config.js",
+        vList:"./source/javascript/vList.config.js",
+        search_page:"./source/javascript/search_page.config.js",
+        paySuccess:"./source/javascript/paySuccess.config.js",
+        seckill_more_discount:"./source/javascript/seckill_more_discount.config.js"
+    },
+    output:{
+        path:'dist/',
+        filename:'[name].js'
+    },
+    module:{
+        loaders:[
+            {
+                test: /\.scss$/,
+                loader: ExtractTextPlugin.extract(
+                    'style',
+                    path.resolve(__dirname, '../../../../node_modules', 'happypack/loader') + '?id=sass'
+
+                )
+            },
+            {
+                test: /\.es6$/,
+                loaders: [ 'happypack/loader?id=babel' ],
+            },
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract(
+                    'style',
+                    path.resolve(__dirname, '../../../../node_modules', 'happypack/loader') + '?id=css'
+
+                )
+            },
+            {
+                test:/\.css$/,
+                loaders: [ 'happypack/loader?id=css' ],
+            },
+            { test: /\.vue$/, loader: 'vue'}
+        ]
+    },
+    plugins:[
+        new ExtractTextPlugin("[name].css"),
+        new HappyPack({
+            id:"babel",
+            // loaders is the only required parameter:
+            loaders: [ 'babel?presets[]=es2015' ],
+            threadPool: happyThreadPool
+        }),
+        new HappyPack({
+            id:"sass",
+            // loaders is the only required parameter:
+            loaders: [ "css-loader", "sass-loader"],
+            threadPool: happyThreadPool
+        }),
+        new HappyPack({
+            id:"css",
+            // loaders is the only required parameter:
+            loaders: ["css-loader"],
+            threadPool: happyThreadPool
+        }),
+    ],
+    externals: {
+        "jquery": "$",
+        'Vue':true,
+        'Swiper':true,
+        "IScroll":"IScroll"
+    }
+};

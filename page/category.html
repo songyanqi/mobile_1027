@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="categoryApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../dist/category.css" rel="stylesheet">
+    <title>商品分类</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:1,   // 头部首页按钮
+            shareOnHead:0
+        };
+        // 获取数据接口
+
+        //var goodsUrl = "/categorySync-8-14-2.html";
+        var goodsUrl = "../data/goodUrl.json";
+        var pageIndexStart = 2;
+
+        var firstPageSize = 50;
+        var syncPageSize = 10;
+        console.log(goodsUrl.data)
+
+    </script>
+</head>
+<body class="category_container scroll_flag" id="cat">
+<!-- 头部  -->
+<title></title>
+<!-- 排序 -->
+<kindsort>
+
+</kindsort>
+
+<!--bottom模块 只需要cart数量 可以为0-->
+<dvd-bottom :active="1" :cart="4"></dvd-bottom>
+
+<script src="http://cdn.davdian.com/vue/1.0.26/vue.min.js"></script>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="../dist/category.js"></script>
+</body>
+</html>

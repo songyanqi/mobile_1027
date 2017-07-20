@@ -1,0 +1,881 @@
+@import "../core/reset";
+@import "./commonList";
+$commontop:205px;
+$closetop:172px;
+
+
+$flagtop:134px;
+$flagright:10px;
+
+
+#to-top{
+  display: none;
+}
+.self_shop{
+   padding-bottom: 0 !important;
+ }
+.myCardBox{
+  width:100%;
+  z-index: 119;
+}
+.right .blue{
+  background: #d0e0fc!important;
+}
+.blue::before{
+  border-top: 20px solid #d0e0fc!important;
+}
+.top_left img{
+  width: 20px!important;
+}
+.comment_dis{
+  text-align: left;
+}
+.class_introduce_text p{
+  text-align: left;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  display: block;
+  word-break: keep-all;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.bottom{
+  height: 1px;
+}
+.mask_con{
+  max-width: 640px;
+}
+.end{
+  height:40px;
+  width:100%;
+  line-height: 40px;
+  text-align: center;
+}
+
+.whereStartBox{
+  max-width: 640px;
+  background: rgba(0,0,0,.6);
+  width:100%;
+  height:100%;
+  position: fixed!important;
+  z-index: 120!important;
+  .whereStart{
+    padding:10px 0;
+    padding-top: 15px;
+    width:230px;
+    height:205px;
+    position: fixed;
+    z-index: 200;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    background: #FFFFFF;
+    font-size: 14px;
+    @include border-radius(5px);
+    text-align: center;
+    span{
+      display: block;
+      line-height: 45px;
+    }
+    .startVideo{
+      height: 45px;
+      color: #ff4a7d;
+      @include border(1px 0 1px 0,#e1e1e1);
+    }
+    .directStart{
+      color: #666;
+    }
+    .startPic{
+      height:100px;
+      .startImgBox{
+        @include border-radius(40px);
+        width:80px;
+        height:80px;
+        margin: 0 auto;
+        img{
+          display: block;
+          width:80px;
+          height:83px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+.img {
+  border-radius: 23px!important;
+}
+
+.classroom-container{
+  overflow-y: hidden;
+  position: absolute;
+  .mask{
+    position: absolute;
+  }
+  .flexd {
+    width: 100%;
+    position: fixed;
+    z-index: 105;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+    .common_position {
+      position: relative;
+      height: 35px;
+      margin-bottom: 5px;
+      img {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 25px!important;
+        height: 25px!important;
+        border-radius: 25px;
+      }
+      .common_box {
+        padding: 0 40px 0 10px;
+        color: #fff;
+        display: inline-block;
+        height: 35px;
+        line-height: 35px;
+        font-size: 12px;
+        background: rgba(0, 0, 0, .6);
+        border-radius: 35px;
+        max-width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-align: left;
+      }
+    }
+  }
+
+
+.dialog_mask{
+  position: absolute!important;
+}
+  .mask{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    //transform: translate3d(-50%,0,0);
+    max-width: 640px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 106;
+    background: rgba(0,0,0,0.5);
+    .mask_con{
+      position: fixed;
+      bottom:0;
+      width:100%;
+      z-index: 100;
+      height:73%;
+      background: #fff;
+      .close{
+        position:absolute;
+        height:30px;
+        width:30px;
+        right:0;
+        z-index:105;
+        top:-40px;
+        img{
+          width:30px;
+          height:40px;
+        }
+      }
+      .common{
+        height: 100%;
+        overflow: hidden;
+        .scrollcon{
+
+        }
+      }
+    }
+  }
+  height:100%;
+  @include flexbox();
+  display: -webkit-box;
+  width:100%;
+  @include flex-direction(column);
+  #scroll_container{
+    @include flex();
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    section{
+      padding-bottom:25px;
+    }
+  }
+
+  .flag{
+    z-index: 105;
+    position: fixed;
+    top: 134px;
+    width: 100%;
+    max-width: 640px;
+    text-align: right;
+    margin: 0 auto;
+  }
+  .flag span{
+    margin-right: 10px;
+    color: #ffffff;
+    width: 28px;
+    height:28px;
+    line-height: 28px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background: #FF4A7D;
+    display: inline-block;
+    position: relative;
+    border-radius:14px;
+  }
+  .flag span:after{
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    border: 1px solid #fff;
+    width: 100%;
+    height: 100%;
+    border-radius:14px;
+  }
+  /*Retina屏为2的时候调用下面的样式*/
+  @media
+  only screen and (-webkit-min-device-pixel-ratio:2),
+  only screen and (min-device-pixel-ratio:2),
+  only screen and (min--moz-device-pixel-ratio:2),
+  only screen and (-o-min-device-pixel-ratio:4/2),
+  only screen and (min-resolution:2dppx)
+  {
+    .flag span:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #fff;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      transform-origin: left top;
+
+      -ms-transform: scale(0.5); 		/* IE 9 */
+      -ms-transform-origin: left top; 		/* IE 9 */
+
+      -webkit-transform: scale(0.5);	/* Safari 和 Chrome */
+      -webkit-transform-origin: left top;	/* Safari 和 Chrome */
+
+      -moz-transform: scale(0.5);		/* Firefox */
+      -moz-transform-origin: left top;		/* Firefox */
+
+      -o-transform: scale(0.5);		/* Opera */
+      -o-transform-origin: left top;		/* Opera */
+      border-radius: 28px;
+    }
+  }
+  .callshare_container{
+    position: fixed;
+    max-width: 640px;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 105;
+    pointer-events: none;
+  }
+  .callshare{
+    pointer-events: all;
+    margin-top: 128px;
+    // margin-right:10px;
+    float: right;
+    // padding:0 10px 0 5px;
+    text-indent: 10px;
+    color: #FFFFFF;
+    height:28px;
+    line-height: 28px;
+    width:86px;
+    background: #FF4A7D;;
+    z-index: 99;
+    @include border-radius(10px 0 0 10px);
+  }
+  .commen_num{
+    position: fixed;
+    top: 137px;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: right;
+    z-index: 99;
+  }
+  .commen_num span{
+    display: inline-block;
+    margin-right: 24px;
+    padding: 0 19px 0 10px;
+    color: #fff;
+    height: 21px;
+    line-height: 21px;
+    font-size: 12px;
+    background: rgba(0,0,0,.6);
+    border-radius: 10px;
+    background-clip: padding-box!important;
+  }
+  .first_common{
+    top:54px;
+  }
+  .sec_common{
+    top:94px;
+  }
+  .countdownHeight{
+    height: 80px!important;
+  }
+  .countdown{
+    padding:0 9px;
+    width:100%;
+    height: 30px;
+    background: -webkit-linear-gradient(#FF7676, #FF4A7D);
+    background: -o-linear-gradient(#FF7676, #FF4A7D);
+    background: -moz-linear-gradient(#FF7676, #FF4A7D);
+    background: linear-gradient(#FF7676, #FF4A7D);
+    .counttop{
+      height:30px;
+      line-height: 30px;
+      color: #ffffff;
+      @include flexbox();
+      span{
+        @include flex(5);
+      }
+      i{
+        @include flex(2);
+        text-align: right;
+      }
+    }
+    .count_con{
+      padding:0 42px 0;
+      height:24px;
+      margin-top: 4px;
+      margin-bottom: 15px;
+      @include flexbox();
+      .day,.hour,.minute,.second{
+        @include flexbox();
+        @include flex-direction();
+        @include flex();
+        width:53px;
+        height:24px;
+        padding:0 15px;
+        span{
+          display:block!important;
+          width:26px!important;
+          height: 24px!important;
+          padding:0 3px;
+          background: #FFFFFF;
+          text-align: center;
+          line-height: 24px;
+          color:#FF7676;
+          //box-shadow:0 0 0 #FF4A7D, /*左边阴影*/
+          //0 0 0 #FF4A7D, /*右边阴影*/
+          //0 0 0 #FF4A7D, /*顶部阴影*/
+          //0 0 2px #FF4A7D; /*底边阴影*/
+          @include flex();
+        }
+        .time_left{
+          min-width: 24px;
+          @include border-radius(3px 0 0 3px);
+          z-index: 10;
+        }
+        .time_right{
+          z-index: 10;
+          display: block!important;
+          padding:0 3px;
+          min-width: 24px;
+          @include border(0 0 0 1px,#FF4A7D);
+          @include border-radius(0 3px 3px 0);
+        }
+      }
+    }
+  }
+  .share_card{
+    position: relative;
+    margin: 15px 18px 10px;
+    background: #fff;
+    padding-bottom: 10px;
+    @include border-radius(3px);
+    .share_tit{
+      text-align: center;
+      padding-top: 10px;
+      color: #FF4A7D;
+      .left,.right{
+        width:70px;
+      }
+      .share_text{
+        font-size: 14px;
+      }
+      .share_text:after{
+        content: "";
+        width: 58px;
+        height: 10px;
+        margin-left: 8px;
+        background: url("//pic.davdian.com/free/2016/12/21/116_20_7f938d33ff4eeb05d11465e8beef7427.png") no-repeat;
+        background-size: 58px;
+        display: inline-block;
+      }
+      .share_text:before{
+        content: "";
+        width: 58px;
+        height: 10px;
+        margin-right: 8px;
+        background: url("//pic.davdian.com/free/2016/12/21/116_20_c3cdd1bfd472a9432729130cca347215.png") no-repeat;
+        background-size: 58px;
+        display: inline-block;
+      }
+    }
+    .rank{
+      padding:8px 15px 0;
+      font-size: 12px;
+      li{
+        height:24px;
+        line-height: 24px;
+        @include flexbox();
+        img{
+          margin-right:10px;
+          display: block;
+          width:26px;
+          height:16px;
+          margin-top:2px;
+        }
+        p{
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+    }
+    .mycard{
+      width:96px;
+      height:28px;
+      line-height:28px;
+      background: #FF4A7D;
+      @include border-radius(2px);
+      margin:5px auto 0;
+      font-size: 12px;
+      color: #fff;
+      text-align: center;
+      z-index: 106;
+    }
+  }
+  .share_card:after{
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    border: 1px solid #DDDDDD;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    pointer-events: none;
+  }
+  /*Retina屏为2的时候调用下面的样式*/
+  @media
+  only screen and (-webkit-min-device-pixel-ratio:2),
+  only screen and (min-device-pixel-ratio:2),
+  only screen and (min--moz-device-pixel-ratio:2),
+  only screen and (-o-min-device-pixel-ratio:4/2),
+  only screen and (min-resolution:2dppx)
+  {
+    .share_card:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      border: 1px solid #DDDDDD;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      transform-origin: left top;
+
+      -ms-transform: scale(0.5); 		/* IE 9 */
+      -ms-transform-origin: left top; 		/* IE 9 */
+
+      -webkit-transform: scale(0.5);	/* Safari 和 Chrome */
+      -webkit-transform-origin: left top;	/* Safari 和 Chrome */
+
+      -moz-transform: scale(0.5);		/* Firefox */
+      -moz-transform-origin: left top;		/* Firefox */
+
+      -o-transform: scale(0.5);		/* Opera */
+      -o-transform-origin: left top;		/* Opera */
+      border-radius: 6px;
+    }
+  }
+
+  .commonroom{
+    width:100%!important;
+    padding:0 10px;
+    ul{
+      padding-bottom:80px;
+      width:100%;
+      min-height: 480px;
+      li{
+        min-height: 70px;
+        padding-bottom: 20px;
+        .timebox{
+          text-align: center;;
+          width:100%;
+          height:30px;
+          .talk_time{
+            display: inline-block;
+            height:20px;
+            color: #FFFFFF;
+            line-height: 20px;
+            padding:0 10px;
+            font-size: 11px;
+            background: #cccccc;
+            @include border-radius(4px);
+          }
+        }
+        .right {
+          .mainPic{
+            max-height: 230px;
+            max-width: 230px;
+            margin-top: 5px;
+            margin-left: 5px;
+            position: relative;
+            .picBox{
+              max-height: 230px;
+              max-width: 230px;
+              .picBox_icon{
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-top: 10px solid #fff;
+                border-bottom: transparent;
+                position: absolute;
+                left: 0;
+                top: 8px;
+                overflow: hidden;
+              }
+              .picBox_icon1_container{
+                position: absolute;
+                left: 1;
+                top: 8px;
+                width: 10px;
+                height: 20px;
+                overflow: hidden;
+                img{
+                  max-height: 230px;
+                  max-width: 230px;
+                  opacity: 1;
+                  margin-top: -8px;
+                }
+              }
+              .picBox_icon1{
+                position: absolute;
+                border-right: 10px solid transparent;
+                border-bottom: 20px solid #f0f0f0;
+                border-top: transparent;
+                width: 10px;
+                height: 20px;
+              }
+              .picBox_icon2{
+                position: absolute;
+                border-right: 10px solid #f0f0f0;
+                border-bottom: 3px solid transparent;
+              }
+              img{
+                max-height: 230px;
+                max-width: 230px;
+                opacity: 0;
+              }
+            }
+            .picBox_container{
+              max-height: 230px;
+              max-width: 220px;
+              position: absolute;
+              border-radius: 4px;
+              top: 0;
+              left: 10px;
+              overflow: hidden;
+              img{
+                max-height: 230px;
+                max-width: 230px;
+                margin-left: -10px;
+              }
+            }
+          }
+          margin-left: 30px;
+          h2 {
+            font-size: 12px;
+            font-weight: normal;
+            min-height: 20px;
+            margin-left: 5px;
+            color: #666;
+          }
+          .audiomain{
+            .main{
+              text-indent: 30px;
+              color: #333;
+            }
+            height:30px;
+            display: inline-block;
+            .voice {
+              height:40px;
+              .fa {
+                position: relative;
+                display: inline-block;
+              }
+              .min {
+                position: absolute;
+                right: -53px;
+                top: 8px;
+                width: 40px;
+                color: #666;
+                font-size: 12px;
+              }
+            }
+          }
+          .main{
+            min-width: 40px;
+            min-height: 40px;
+            font-size: 14px;
+            color: #333;
+            background-color: #fff;
+            border-radius: 3px;
+            padding: 7px 10px 6px;
+            position: relative;
+            display: inline-block;
+            line-height: 27px;
+            word-break: break-all;
+            word-wrap: break-word;
+            max-width: 80%;
+            margin-left: 15px;
+            margin-top: 5px;
+            padding-left: 12px;
+            span{
+              display: block;
+              word-break: keep-all;
+              word-wrap: break-word;
+              overflow: hidden;
+            }
+          }
+          .noPlay .fa:after {
+            content: "";
+            position: absolute;
+            top: -14px;
+            left: 35px;
+            width: 12px;
+            z-index: 100;
+            height: 17px;
+            background: url('//pic.davdian.com/free/2016/12/24/22_32_16dffc36683debdbbf6a813306594422.png') no-repeat;
+            background-size: 12px;
+          }
+          .play .fa:after {
+            content: "";
+            position: absolute;
+             left: 31px;
+             width: 20px;
+             top: -15px;
+             z-index: 100;
+             height: 20px;
+             background: url('//pic.davdian.com/free/2017/02/27/playVoice.gif') no-repeat;
+             background-size: 20px;
+          }
+          .main:before {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 20px solid #fff;
+            border-bottom: transparent;
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 8px;
+          }
+          .main_picBox_icon2{
+            position: absolute;
+            left: -15px;
+            border-right: 15px solid #f0f0f0;
+            border-bottom: 3px solid transparent;
+          }
+        }
+        .head{
+          width: 30px;
+          height: 30px;
+          float: left;
+          overflow: hidden;
+          img {
+            width: 30px;
+            height: 30px;
+            @include border-radius(15px);
+          }
+        }
+      }
+      .myself{
+        padding-bottom: 20px;
+        overflow: hidden;
+        .timebox{
+          text-align: center;;
+          width:100%;
+          height:30px;
+          .talk_time{
+            display: inline-block;
+            height:20px;
+            color: #FFFFFF;
+            line-height: 20px;
+            padding:0 5px;
+            background: #cccccc;
+            @include border-radius(3px);
+          }
+        }
+        .right {
+          float: right;
+          padding-right: 35px;
+          h2 {
+            position: absolute;
+            font-size: 12px;
+            font-weight: normal;
+            margin-bottom: 5px;
+          }
+          .audiomain{
+            height:30px;
+            .voice {
+              width: 80px;
+              background: #FFFFFF;
+              @include border-radius(5px);
+              .fa {
+                position: relative;
+                display: inline-block;
+              }
+              .min {
+                position: absolute;
+                right: -53px;
+                top: 8px;
+                width: 40px;
+                color: #666;
+                font-size: 12px;
+              }
+            }
+          }
+          .main{
+            float: right;
+            font-size: 14px;
+            background-color: #fff;
+            color: #666;
+            border-radius: 3px;
+            padding: 7px 10px 6px;
+            position: relative;
+            display: inline-block;
+            line-height: 17px;
+            word-break: break-all;
+            word-wrap: break-word;
+            max-width: 70%;
+            margin-left: 4px;
+            word-wrap:break-word;
+            word-break:break-all;
+          }
+          .play .fa:after {
+            content: "";
+            position: absolute;
+            top: -11px;
+            left: 39px;
+            width: 12px;
+            z-index: 100;
+            height: 13px;
+            background: url('//pic.davdian.com/free/voice_img_311.gif') no-repeat;
+            background-size: 12px;
+          }
+          .main:before {
+            width: 0;
+            height: 0;
+            border-left: 0px solid transparent;
+            border-right: 0px solid transparent;
+            border-top: 0px solid #fff;
+            border-bottom: transparent;
+            content: "";
+            position: absolute;
+            left: 0px;
+            top: 0px;
+          }
+          .main:after {
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #fff;
+            border-bottom: transparent;
+            content: "";
+            position: absolute;
+            right: -10px;
+            top: 8px;
+          }
+        }
+        .head{
+          position: absolute;
+          right: 0;
+          width: 25px;
+          height: 25px;
+          float: left;
+          overflow: hidden;
+          @include border-radius(25px);
+          img {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+  .bottominput{
+    max-width: 640px;
+    z-index: 112;
+    border-top: .5px solid #E3DFD8;
+    background: #F9F7F8;
+    @include border(1px 0 0 0,#e1e1e1);
+    height:45px;
+    width:100%;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    position:fixed;
+    bottom:0;
+    padding:8px;
+    .text_talk{
+      // margin-left:8px;
+      @include flex();
+      height:34px;
+      @include border(1px 1px 1px 1px,#eee);
+      background: #FFFFFF;
+      @include border-radius(5px);
+      input{
+        height:100%;
+        width:100%;
+        // padding:5px;
+        text-indent: 10px;
+        border-radius: 5px;
+      }
+    }
+    .send{
+      width:70px;
+      height:34px;
+      line-height:34px;
+      margin-left:8px;
+      text-align: center;
+      color: #FFFFFF;
+      background: #FF4A7D;
+      @include border-radius(3px);
+    }
+  }
+}
+
+body.in_app .top0{
+  display: none;
+}
+.scroll_flag{
+  overflow: hidden;
+}

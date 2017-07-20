@@ -1,0 +1,773 @@
+body {
+    padding: 0;
+}
+body.in_app .top0{
+    display: none;
+}
+.bg {
+    background:rgb(249, 58, 5) url("//pic.davdian.com/activity/2017/01/04/750_606_c3ad63a2b5a0046c0e3ecc27c7f6a589.png");
+    background-size: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.overbg {
+    background: url("//pic.davdian.com/free/2016/12/19/750_1334_a1f21860e87615fb03f65460ddc7c6e6.jpg");
+    background-size: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.bottom_btn {
+    position: absolute;
+    bottom: 0.15rem;
+    z-index: 5;
+}
+.gifts {
+    position: absolute;
+    height: 2.2rem;
+    width: 2.5rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 1.3rem;
+    z-index: 6;
+}
+.in_app .bg .gifts{
+    top:0.85rem;
+}
+.in_app .music_btn{
+    top:0.3rem;
+}
+.gifts_wrap {
+    width: 0.4rem;
+    height: 1.5rem;
+    position: absolute;
+    display: block;
+}
+.gift_plus {
+    width: 0.19rem;
+    height: 0.19rem;
+    background-image: url("//pic.davdian.com/free/choujiang_click_btn.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+    position: absolute;
+    z-index: 3;
+    left:0;
+    right:0;
+    margin: auto;
+    bottom:0.42rem;
+}
+.light_halo {
+    width: 0.19rem;
+    height: 0.19rem;
+    background-color: rgba(253, 196, 158, 0.85);
+    border-radius: 100%;
+    position: absolute;
+    -webkit-animation: scale_light 6s linear infinite; /*Safari and Chrome*/
+    -o-animation: scale_light 6s linear infinite;
+    animation: scale_light 6s linear infinite;
+    z-index: 2;
+    left:0;
+    right:0;
+    margin: auto;
+    bottom:0.42rem;
+}
+
+
+.gifts_wrap:nth-child(4) .light_halo {
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    -o-animation-delay: 5s;
+    animation-delay: 5s;
+}
+
+.gifts_wrap:nth-child(3) .light_halo {
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+    -o-animation-delay: 3.5s;
+    animation-delay: 3.5s;
+}
+
+.gifts_wrap:nth-child(2) .light_halo {
+    -webkit-animation-delay: 1.8s;
+    -moz-animation-delay: 1.8s;
+    -o-animation-delay: 1.8s;
+    animation-delay: 1.8s;
+}
+
+.gifts_wrap:nth-child(1) .light_halo {
+    -webkit-animation-delay: 0s;
+    -moz-animation-delay: 0s;
+    -o-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+.gifts_wrap {
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    bottom:0;
+}
+
+.gifts .gifts_wrap:nth-child(1) {
+    left: 0.3rem;
+    top:0.37rem;
+    -webkit-animation: rotate_gift_left 3s linear infinite; /*Safari and Chrome*/
+    -o-animation: rotate_gift_left 3s linear infinite;
+    animation: rotate_gift_left 3s linear infinite;
+}
+
+.gifts .gifts_wrap:nth-child(2) {
+    left: 0;
+    top: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-animation: rotate_gift_right 3s linear infinite; /*Safari and Chrome*/
+    -o-animation: rotate_gift_right 3s linear infinite;
+    animation: rotate_gift_right 3s linear infinite;
+}
+
+.gifts .gifts_wrap:nth-child(3) {
+    left: 1.56rem;
+    top:0.4rem;
+    -webkit-animation: rotate_gift_left 3s linear infinite; /*Safari and Chrome*/
+    -o-animation: rotate_gift_left 3s linear infinite;
+    animation: rotate_gift_left 3s linear infinite;
+}
+
+.gifts .gifts_wrap:nth-child(4) {
+    right:0;
+    bottom:0;
+    -webkit-animation: rotate_gift_right 3s linear infinite; /*Safari and Chrome*/
+    -o-animation: rotate_gift_right 3s linear infinite;
+    animation: rotate_gift_right 3s linear infinite;
+}
+
+.gift_1 {
+    width: 0.41rem;
+    height: 0.41rem;
+    background-image: url(//pic.davdian.com/activity/2017/01/04/96_95_ae24c15648478140c2d8d8c8c33ba804.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+    position: absolute;
+    z-index: 1;
+}
+.gift_s{
+    bottom: 0;
+}
+.gift_2 {
+    width: 0.41rem;
+    height: 0.41rem;
+    background-image: url(//pic.davdian.com/activity/2017/01/04/88_89_b77f9d02d279841e19ea2d77e70d6fd8.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.gift_3 {
+    width: 0.41rem;
+    height: 0.41rem;
+    background-image: url(//pic.davdian.com/activity/2017/01/04/87_88_229ee47d531d657986a735a0a1a8db9a.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.gift_4 {
+    width: 0.41rem;
+    height: 0.41rem;
+    background-image: url(//pic.davdian.com/activity/2017/01/04/91_93_43e08c9a4fe07331f50cf3203e0a4bab.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.mask {
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    z-index: 99;
+    height: 100%;
+}
+
+.con {
+    position: absolute;
+    top: 20%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.img_item {
+    position: relative;
+}
+
+.close_btn {
+    width: 46px;
+    height: 46px;
+    background-size: 46px;
+    margin: 10px auto 0;
+    position: absolute;
+    right: 0;
+    top: -10px;
+}
+
+.gift_bag {
+    position: absolute;
+    right: -17%;
+    top: -14%;
+    width: 55%;
+}
+
+.money_con {
+    width: 100%;
+    position: absolute;
+    top: 43%;
+    text-align: center;
+}
+
+.money_color {
+    color: #f7edbc;
+    font-weight: bold;
+    font-size: 0.24rem;
+}
+
+.money {
+    font-size: 0.24rem;
+}
+
+.money_unit {
+    font-size: 18px;
+}
+
+.effective_date {
+    font-size: 12px;
+    color: #f7edbc;
+    margin-top: 12px;
+}
+
+.lottery_done {
+    position: absolute;
+    top: 35%;
+    width: 80%;
+    margin-left: 10%;
+    z-index: 9;
+}
+
+.my_gift_con {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.my_gift_con_bg {
+    padding: 6px 6px 20px;
+    border-radius: 10px;
+    background:#f1e5b7 url("//pic.davdian.com/activity/2017/01/04/656_90_3a39b9b6cb1b17c27e334fae1215a431.png") no-repeat;
+    background-size: 100%;
+}
+
+.my_gift_list li {
+    position: relative;
+    margin-bottom: 3px;
+    height: 1.1rem;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
+}
+
+.my_gift_list_con {
+    top: 20%;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.my_gift_list_money_color {
+    color: #ffebb7;
+    font-weight: bold;
+}
+
+.my_gift_list_money {
+    font-size: 31px;
+}
+
+.my_gift_list_money_unit {
+    font-size: 18px;
+}
+
+.my_gift_list_effective_date {
+    font-size: 12px;
+    color: #ffebb7;
+}
+
+.my_gift_user_btn {
+    width: 90px;
+    margin: -8px auto 0;
+}
+.use_grey{
+    background-color: #a6775e;
+}
+.use_grey .my_gift_list_con {
+    top: 28%;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.use_grey .my_gift_list_money_color {
+    color: #ffebb7;
+    font-weight: bold;
+}
+
+.use_grey .my_gift_list_effective_date {
+    font-size: 12px;
+    color: #ffebb7;
+}
+
+.use_grey .my_gift_user_btn {
+    width: 63px;
+    position: absolute;
+    right: 5%;
+    margin-left: -31px;
+    top: 10%;
+    margin-top: -30px;
+    -webkit-transform: rotate(36deg);
+    -moz-transform: rotate(36deg);
+    -ms-transform: rotate(36deg);
+    -o-transform: rotate(36deg);
+    transform: rotate(36deg);
+}
+
+.look_my_gift {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    top: 0;
+    left: 7%;
+}
+
+.gotobtn {
+    position: absolute;
+    width: 34%;
+    height: 100%;
+    top: 0;
+    left: 33%;
+}
+
+.look_rule {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    top: 0;
+    left: 68%;
+}
+.rule .my_gift_con .my_gift_con_bg{
+    padding: 6px 10px 20px;
+}
+.rule .my_gift_con{
+    height: 1.34rem;
+}
+.get_jifen{
+    position: absolute;
+    right: 0;
+    top: 126%;
+    width: 1rem;
+    display: block;
+    height: 0.3rem;
+}
+.integral_con {
+    position: absolute;
+    top: 40%;
+    left: 18px;
+    color: #f3f0e8;
+    z-index: 8;
+}
+
+.integral_con_bg {
+    width: 0.7rem;
+    height: 0.7rem;
+    background: url("//pic.davdian.com/activity/2017/01/04/120_113_278b45f8a7840dc5475428eea6a150c4.png") no-repeat;
+    background-size: 0.7rem;
+    text-align: center;
+}
+
+.my_integral {
+    font-size: 0.09rem;
+    padding-top: 0.18rem;
+    line-height: 0.09rem;
+}
+
+.integral_number {
+    font-size: 0.11rem;
+    font-weight: bold;
+}
+
+.lottery_con {
+    font-size: 0.09rem;
+    padding-top: 0.1rem;
+    line-height: 0.11rem;
+    margin-top: 0.12rem;
+}
+
+.lottery_num {
+    font-size: 0.18rem;
+    font-weight: bold;
+}
+
+.lottery_font {
+    font-size: 0.09rem;
+    padding-left: 1px;
+}
+
+.music_btn {
+    position: absolute;
+    right: 10px;
+    top: 0.7rem;
+    width: 0.32rem;
+    height: 0.32rem;
+    background: url(//pic.davdian.com/activity/2017/01/05/73_73_f7bf66c1edb2a9bd4774e405e9f9ef89.png) no-repeat;
+    background-size: 0.32rem;
+    display: inline-block;
+    background-position: 0 0;
+    z-index: 8;
+}
+
+.music_btn.run_music {
+    -webkit-animation: run_music 4s linear infinite; /*Safari and Chrome*/
+    -o-animation: run_music 4s linear infinite;
+    animation: run_music 4s linear infinite;
+    -moz-animation:run_music 4s linear infinite;
+}
+
+.music_close_btn {
+    position: absolute;
+    right: 10px;
+    top: 0.7rem;
+    width: 0.32rem;
+    height: 0.32rem;
+    background: url(//pic.davdian.com/activity/2017/01/05/73_73_0746b0488a12a7db5ee74afb4c5bfe1f.png) no-repeat;
+    background-size: 0.32rem;
+    display: inline-block;
+}
+/*裙摆*/
+.sf_skirt{
+    margin-top: 44px;
+    position: relative;
+    z-index: 8;
+}
+.sf_title{
+    margin-top: -26px;
+    position: relative;
+    z-index: 7;
+}
+.sf_strings{
+    width: 0.09rem;
+    height: 1.08rem;
+    background-image: url(//pic.davdian.com/activity/2017/01/04/18_216_3197c8a3973adb63acd40f18205f9270.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0.04rem;
+}
+.use_red{
+    background-color: #e65126;
+}
+.sf_lion{
+    width: 100%;
+    height:2.03rem;
+    position: absolute;
+    background: url("//pic.davdian.com/activity/2017/01/05/474_812_6f8c369876fb702ad45b09d4c711419d.png") no-repeat;
+    background-size:63.7%;
+    background-position-x: center;
+    bottom: 0.7rem;
+    background-position-y: top;
+    -webkit-animation: lion_blink 1s steps(1) infinite; /*Safari and Chrome*/
+    -o-animation: lion_blink 1s steps(1) infinite;
+    animation: lion_blink 1s steps(1) infinite;
+    z-index: 4;
+}
+.sf_my_title{
+    width: 100%;
+    height: 0.47rem;
+    color: #f7edbc;
+    font-size: 21px;
+    text-align: center;
+    line-height: 0.3rem;
+}
+.jujuefagnwen{
+    width: 90%;
+    margin-top: 15%;
+    margin-left: 5%;
+}
+body.in_app .bg .sf_skirt{
+    margin-top: 0;
+}
+
+.promptbg {
+    background: url("//pic.davdian.com/free/2016/12/20/750_1334_22adb5db393e3a68f7e9d3fd2cbd6d24.jpg");
+    background-size: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.suixue{
+    width: 100%;
+    position: absolute;
+    bottom:0;
+    z-index: 2;
+}
+
+/*run music 音乐响起*/
+@keyframes run_music {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-moz-keyframes run_music {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes run_music {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-o-keyframes run_music {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*光晕动画*/
+@keyframes scale_light {
+    0% {
+        transform: scale(1, 1);
+    }
+    12.5% {
+        transform: scale(2, 2);
+    }
+    25% {
+        transform: scale(1, 1);
+    }
+}
+
+@-moz-keyframes scale_light /* Firefox */
+{
+    0% {
+        transform: scale(1, 1);
+    }
+    12.5% {
+        transform: scale(2, 2);
+    }
+    25% {
+        transform: scale(1, 1);
+    }
+}
+
+@-webkit-keyframes scale_light /* Safari 和 Chrome */
+{
+    0% {
+        transform: scale(1, 1);
+    }
+    12.5% {
+        transform: scale(2, 2);
+    }
+    25% {
+        transform: scale(1, 1);
+    }
+}
+
+@-o-keyframes scale_light /* Opera */
+{
+    0% {
+        transform: scale(1, 1);
+    }
+    7% {
+        transform: scale(2, 2);
+    }
+    14% {
+        transform: scale(1, 1);
+    }
+}
+
+/*摇摆动画*/
+@keyframes rotate_gift_left {
+    0% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(4deg);
+    }
+    100% {
+        transform: rotate(-4deg);
+    }
+}
+
+@-moz-keyframes rotate_gift_left /* Firefox */
+{
+    0% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(4deg);
+    }
+    100% {
+        transform: rotate(-4deg);
+    }
+}
+
+@-webkit-keyframes rotate_gift_left /* Safari 和 Chrome */
+{
+    0% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(4deg);
+    }
+    100% {
+        transform: rotate(-4deg);
+    }
+}
+
+@-o-keyframes rotate_gift_left /* Opera */
+{
+    0% {
+        transform: rotate(-4deg);
+    }
+    50% {
+        transform: rotate(4deg);
+    }
+    100% {
+        transform: rotate(-4deg);
+    }
+}
+
+/*摇摆动画*/
+@keyframes rotate_gift_right {
+    0% {
+        transform: rotate(4deg);
+    }
+    50% {
+        transform: rotate(-4deg);
+    }
+    100% {
+        transform: rotate(4deg);
+    }
+}
+
+@-moz-keyframes rotate_gift_right /* Firefox */
+{
+    0% {
+        transform: rotate(4deg);
+    }
+    50% {
+        transform: rotate(-4deg);
+    }
+    100% {
+        transform: rotate(4deg);
+    }
+}
+
+@-webkit-keyframes rotate_gift_right /* Safari 和 Chrome */
+{
+    0% {
+        transform: rotate(4deg);
+    }
+    50% {
+        transform: rotate(-4deg);
+    }
+    100% {
+        transform: rotate(4deg);
+    }
+}
+
+@-o-keyframes rotate_gift_right /* Opera */
+{
+    0% {
+        transform: rotate(4deg);
+    }
+    50% {
+        transform: rotate(-4deg);
+    }
+    100% {
+        transform: rotate(4deg);
+    }
+}
+/*狮子眨眼动画*/
+@keyframes lion_blink {
+    0% {
+        background-position-y:0.5%;
+    }
+    50% {
+        background-position-y:bottom;
+    }
+    100% {
+        background-position-y:0.5%;
+    }
+}
+@-moz-keyframes lion_blink {
+    0% {
+        background-position-y:0.5%;
+    }
+    50% {
+        background-position-y:bottom;
+    }
+    100% {
+        background-position-y:0.5%;
+    }
+}
+@-webkit-keyframes lion_blink {
+    0% {
+        background-position-y:0.5%;
+    }
+    50% {
+        background-position-y:bottom;
+    }
+    100% {
+        background-position-y:0.5%;
+    }
+}
+@-o-keyframes lion_blink {
+    0% {
+        background-position-y:0.5%;
+    }
+    50% {
+        background-position-y:bottom;
+    }
+    100% {
+        background-position-y:0.5%;
+    }
+}

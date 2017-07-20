@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Nemo的大V店</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/detail129.css" rel="stylesheet">
+    <link href="../stylesheet/swiper-3.3.1.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheet/chengzhang_lc.css">
+    <script>
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:0,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:1,  // 头部分享按钮
+            btnOnHead:0    // 头部文字按钮
+        };
+        /////////////////////微信分享/////////////////////
+
+        // 店铺的图标
+        var imgUrl = "http://pic.davdian.com/news/2016/08/29/80_80_05e29087209a712c882cdad2976aad8e.png@1e_1c_0o_0l_100h_100w.webp";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+
+        //店铺描述
+        var descContent = '大V店2周年，从接触到熟悉，从相识到相爱，满满的回忆';
+        var shareTitle = '参与亲子阅读XX天  我是xx的   亲子阅读xx派';  //店铺名称
+
+        // wechat
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+    </script>
+</head>
+<body class="detail129_h5">
+
+<audio style="display: none" class="run" id="bg_music" src=" http://pic.davdian.com/free/a_little_story_40mhz_new.mp3" loop></audio>
+
+<div class="swiper-container img_container kd_h5">
+    <div class="swiper-wrapper">
+       <div class="swiper-slide">
+            <div class="page page1">
+                <div class="lighting"></div>
+                <!--用户头像-->
+                <div class="t1" data-swiper-parallax="-500" style="background-image: none">
+                    <div id="image_title" class="image_title">
+                        <img src="http://pic.davdian.com/free/czlc/1/title.jpg" alt="">
+                    </div>
+                </div>
+                <div class="t2" data-swiper-parallax="-400" style="background-image: url(//pic.davdian.com/free/czlc/1/t2_new.png)"></div>
+                <div class="t3" data-swiper-parallax="-200"></div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="page page2">
+                <div class="t1 text" data-swiper-parallax="-500">
+                    <p>2014年11月11日</p>
+                    <p>我加入了大V店</p>
+                    <p>成为第 21 名V友</p>
+                </div>
+                <div class="t2" data-swiper-parallax="-200"></div>
+                <div class="t3" data-swiper-parallax="-400"></div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="page page3">
+                <div class="t1 text" data-swiper-parallax="-500">
+                    <p>2014年12月1日</p>
+                    <p>www 成为我的第一个邀请好友</p>
+                    <p>2014年12月1日</p>
+                    <p>我买了第一本绘本，开启了亲子阅读的美妙旅程</p>
+                </div>
+                <div class="t2" data-swiper-parallax="-400"></div>
+                <div class="t3" data-swiper-parallax="-200"></div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="page page4">
+                <div class="t1 text" data-swiper-parallax="-500">
+                    <p>2015年11月11日</p>
+                    <p>我成为“亲子阅读行动派”</p>
+                    <p>邀请了小绿妈妈，为亲子阅读代言</p>
+                    <p>在路上，相同的人总会相遇</p>
+                </div>
+                <div class="t2" data-swiper-parallax="-400"></div>
+                <div class="t3" data-swiper-parallax="-200"></div>
+            </div>
+        </div>
+        <!--下面五选一-->
+        <div class="swiper-slide">
+            <div class="page page5">
+                <div class="t1" data-swiper-parallax="-500"></div>
+                <div class="t2" data-swiper-parallax="-400"></div>
+                <div class="t3 text" data-swiper-parallax="-200">
+                    <p>截止现在，</p>
+                    <p>共1533本绘本参与我的阅读之旅。</p>
+                    <p>已经超过全国88%的家庭！</p>
+                    <p>获得大V店2周年最高荣誉“亲子阅读博学派”</p>
+                </div>
+                <div class="t4 login_container">
+                    <a href="http://nemo.davdian.com/login.html" class="login_btn_czlc">
+                        登录查看自己的历程 >>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="page page6">
+                <div class="t1" data-swiper-parallax="-500"></div>
+                <div class="t2" data-swiper-parallax="-400"></div>
+                <div class="t3 text" data-swiper-parallax="-200">
+                    <p>截止现在，</p>
+                    <p>共1533本绘本参与我的阅读之旅。</p>
+                    <p>已经超过全国68%的家庭！</p>
+                    <p>我是样样精通的“亲子阅读智慧派”</p>
+                </div>
+                <div class="t4 login_container">
+                    <a href="http://nemo.davdian.com/login.html" class="login_btn_czlc">
+                        立即开店 >>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="page page7">
+                <div class="t1" data-swiper-parallax="-500"></div>
+                <div class="t2" data-swiper-parallax="-400"></div>
+                <div class="t3 text" data-swiper-parallax="-200">
+                    <p>截止现在，</p>
+                    <p>共1533本绘本参与我的阅读之旅。</p>
+                    <p>已经超过全国33%的家庭！</p>
+                    <p>我是不折不扣的“亲子阅读实力派”</p>
+                </div>
+                <div class="t4 login_container">
+                    <a href="http://nemo.davdian.com/login.html" class="login_btn_czlc">
+                        登录查看自己的历程 >>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="page page8">
+                <div class="t1" data-swiper-parallax="-500"></div>
+                <div class="t2" data-swiper-parallax="-400"></div>
+                <div class="t3 text" data-swiper-parallax="-200">
+                    <p>截止现在，</p>
+                    <p>共1533本绘本参与我的阅读之旅。</p>
+                    <p>已经超过全国14%的家庭！</p>
+                    <p>我是不折不扣的“亲子阅读潜力派</p>
+                </div>
+                <div class="t4 login_container">
+                    <a href="http://nemo.davdian.com/login.html" class="login_btn_czlc">
+                        登录查看自己的历程 >>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+            <div class="page page9">
+                <div class="t1" data-swiper-parallax="-500"></div>
+                <div class="t2" data-swiper-parallax="-400"></div>
+                <div class="t3 text" data-swiper-parallax="-200">
+                    <p>远古的火星人？竟然还没有购买过绘本。</p>
+                </div>
+                <div class="t4 login_container">
+                    <a href="http://nemo.davdian.com/login.html" class="login_btn_czlc">
+                        登录查看自己的历程 >>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="tips">
+    <img src="//pic.davdian.com/free/czlc/swiper_icon.png" alt="">
+    <p class="text">滑动查看</p>
+</div>
+
+<!--
+
+<div class="page page10">
+    <div class="text_contaienr">
+        <div class="text_info">
+            哎呦~只有店主才能查看呦~
+        </div>
+        <div class="p10_login_container">
+            <a href="http://nemo.davdian.com/login.html" class="login_btn_czlc">
+                立即开店 >>
+            </a>
+        </div>
+    </div>
+</div>
+-->
+
+<div class="play_btn"></div>
+
+
+<div class="anniversary_title"></div>
+
+<script src="http://cdn.davdian.com/wx_jssdk/jweixin-1.0.0.js"></script>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script src="http://cdn.davdian.com/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script src="../javascript/chengzhang_lc.js"></script>
+
+</body>
+</html>

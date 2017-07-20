@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html style="font-size: 85px;">
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/fund.css" rel="stylesheet">
+    <title>11.11分钱集结令</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 1,   // 头部首页按钮
+            shareOnHead: 1
+        };
+        //发起组队接口
+        var begingroupUrl = "../data/list.json";
+        //确认加入接口
+        var confirmJoinUrl = "../data/list.json";
+
+        // 是否是店主/买家
+        //1==买家   3 == 卖家
+        var status = 1,
+                logined = true,
+                loginUrl = "/";
+
+    </script>
+</head>
+<body class="scroll_flag">
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            11.11分钱集结令
+        </div>
+        <div class="top_right">
+            <a href="/" class="top_home" data-dav-tj="detail|home|home|1|home@detail">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<!--发起组队页   和   确认加入队伍页二选一 -->
+<!--发起组队页-->
+<div class="main_bgColor">
+    <div class="double_font double_font_20">组队每天分瓜</div>
+    <div class="double_font double_font_60">100000 <span class="double_font_18">元现金</span></div>
+    <!--拉好友(买家)分钱去-->
+    <div class="double_font double_font_15"><span class="strings mr_20"></span>拉好友(买家)分钱去<span class="strings ml_20"></span></div>
+    <div id="begin_group" class="double_buttons double_button1 double_button_option1">发起组队</div>
+    <div class="double_button_tips double_font">只有店主才能发起组队</div>
+</div>
+<!--确认加入队伍页-->
+<div class="main_bgColor">
+    <div class="user_img_phone">
+        <img src="http://pic.davdian.com/news/2016/10/12/80_80_a0f42b9c68cc08159c0a8b5aab229584.png@1e_1c_0o_0l_100h_100w.webp">
+        <div class="user_phone double_font">队长 : 琪琪妈妈的店</div>
+    </div>
+    <div class="double_font double_font_18s join_double_title">加入我的队伍，即获10元红包</div>
+    <!--发起组队按钮-->
+    <div class="double_buttons_box">
+        <span id="confirm_join" class="double_buttons double_button1">确认加入</span>
+        <span class="double_buttons double_button2"><a href="/">进主会场</a></span>
+    </div>
+</div>
+<img class="double_ruletitle" src="//pic.davdian.com/activity/2016/11/01/750_1130_3f7c1b66d45714b1ff7a1f188d16e3ea.png">
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/model.js"></script>
+<script src="http://cdn.davdian.com/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script src="../javascript/elevenstartPage.js"></script>
+</body>
+</html>

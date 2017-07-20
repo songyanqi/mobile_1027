@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>注册大V店</title>
+    <link href="../dist/vClassroomLogin.css" rel="stylesheet">
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:1,   // 头部首页按钮
+            shareOnHead:0
+        };
+
+        var testPhoneNumberUrl = "../data/success.json"; // 验证手机号请求链接
+        var submitUrl = "../data/error.json"; // 完成请求链接
+        var dumpUrl = "/"; //完成后跳转链接
+    </script>
+</head>
+<body>
+<div id="vClassroomLoginContainer">
+    <v-classroom-login></v-classroom-login>
+</div>
+
+<script src="http://cdn.davdian.com/vue/2.0.5/vue.min.js"></script>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="../dist/vClassroomLogin.js"></script>
+</body>
+</html>

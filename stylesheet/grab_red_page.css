@@ -1,0 +1,199 @@
+body{
+    padding-top : 44px;
+    max-width:640px;
+    margin:0px auto;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #fff;
+    padding-bottom : 0px;
+    position: relative;
+}
+body.grab_redemption_code_page{
+    background: url(//pic.davdian.com/free/redemption_code_bg.png)center 0; background-size:cover;
+    min-height:100vh;
+}
+body.grab_redemption_code_used_page{
+    background: url(//pic.davdian.com/free/redemption_code_usedbg.png)center 0; background-size:cover;
+    min-height:100vh;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.red_page_top{
+    position:absolute;
+    top:0px;
+    color: #FF4A7D;
+    max-width:640px;
+    width: 100%;
+}
+.red_page_top .text{
+    padding-top:24%;
+    text-align: center;
+}
+
+.red_page_btn {
+    width: 230px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    background: #ffdb15;
+    color: #a51a1b;
+    display: block;
+    border-radius: 3px;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 auto;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+.yellow_dot{
+    width: 4px;
+    height: 4px;
+    background-color: #ffb22c;
+    display:inline-block;
+    border-radius: 4px;
+    margin-top: 8px;
+    float: left;
+    margin-right: 10px;
+}
+.bouns_list{
+    padding-top: 25px;
+}
+.bouns_red {
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-image: url(//pic.davdian.com/free/grab_red_redbg.png) 20 49 fill stretch;
+}
+.bouns_item {
+    margin: 10px 25px;
+    color: #fff;
+    position: relative;
+    height: 100px;
+}
+.bouns_item .con {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #6d3900;
+    color: #5b3000;
+}
+.bouns_item .con .price{
+    padding-left: 26px;
+    margin-top: -8px;
+}
+.bouns_item .con .use_condition{
+    font-size: 14px;
+    position: absolute;
+    top: 6px;
+    right: 12px;
+}
+.fz_55{font-size: 55px;}
+.fz_26{font-size: 26px;}
+.bouns_item .con .date {
+    text-align: center;
+    bottom: 2px;
+    position: absolute;
+    width: 100%;
+    font-size: 12px;
+}
+
+.luck_list{
+    padding: 40px 10px 0;
+}
+
+.luck_list .title{
+    border-top: 1px solid #dd8fa7;
+}
+.luck_list .title_text{
+    background-color: #a51a1b;
+    margin-top: -11px;
+    position: absolute;
+    max-width: 640px;
+    width: 140px;
+    left: 50%;
+    margin-left: -70px;
+    text-align: center;
+}
+
+.luck_list .list{
+    padding-top: 20px;
+}
+.color_fef1aa{
+    color: #fef1aa;
+}
+
+.luck_list .instructions{
+    padding-top: 25px;
+}
+
+.luck_list .instructions_list{
+    padding-bottom: 5px;
+}
+.luck_list .instructions_text{
+    padding-left:15px;
+}
+
+.b_container{
+    background-color: #a51a1b;
+    padding-bottom : 40px;
+}
+.grab_redemption_code_logo{
+    text-align: center;
+    padding-top: 10%;
+}
+.grab_redemption_code_content{
+    background-color:rgba(255,255,255,0.9);
+    width: 86%;
+    border-radius:5px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    margin-left: -43%;
+}
+.grab_redemption_code_content .con{
+    padding:35px 12px;
+}
+.grab_redemption_code_content .redemption_code_input{
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.grab_redemption_code_content .redemption_code_btn{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 19px;
+    background-color: #aeaeae;
+    border-radius: 3px;
+    margin-top: 15px;
+}
+.grab_redemption_code_content .redemption_code_btn.yellow{
+    background-color: #ffbc1d;
+    color: #980001;
+}
+
+.go_shop_btn{
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 19px;
+    border-radius: 3px;
+    background-color: #ffbc1d;
+    color: #980001 !important;
+    margin: 20% auto 0;
+    display: inherit;
+}
+.exchange_prompt{
+    text-align:center;
+    padding-top: 16%;
+}

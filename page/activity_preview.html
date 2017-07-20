@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>活动预览</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/activity_Initiate.css" rel="stylesheet">
+    <script>
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0
+        };
+
+        var activityId=0;//活动id;
+        var activity_submitUrl="../data/activity_sumbit.json";//发起活动url
+
+    </script>
+</head>
+<body>
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            活动预览
+        </div>
+    </div>
+</div>
+
+<div class="activity_page">
+    <div class="title">踏青带着朋友去春游</div>
+    <div class="activity_pic"><img src="http://pic.davdian.com/free/2017/03/02/750_360_4c4c62540587f8e8292ce91f2f97a59b.png"> </div>
+    <div class="info">
+        <p>时间: 3月8日下午两点</p>
+        <p>联系方式: xm18235589651</p>
+        <p>地址: 北京 朝阳区 凯德茂1层</p>
+        <p>报名: <span class="dav-color-FF4A7D">3</span>/10</p>
+    </div>
+    <div class="description">
+        <p>在昨日参与调查的113人中，31人是机关事业单位的，82人是企业员工。调查中85人表示非常期待单位能组织春游，占到受访者的75.2%。“大家集体春游，能把工作暂时放一放，愉悦身心又加强了交流，何乐而不为呢？”“我很期待单位能够组织一场春游活动，可以的话希望把家属、孩子都带上，搞个大联欢。”受访市民纷纷表达了让单位“组团”春游的意愿…</p>
+        <p>在昨日参与调查的113人中，31人是机关事业单位的，82人是企业员工。调查中85人表示非常期待单位能组织春游，占到受访者的75.2%。“大家集体春游，能把工作暂时放一放，愉悦身心又加强了交流，何乐</p>
+    </div>
+    <div class="joinPeople">
+        <div class="joinPeople_title"><span>报名人</span></div>
+        <ul class="joinPeople_list">
+            <li>
+                <span class="head"><img src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+                <span class="name">微信昵称</span>
+                <span class="tel">18210148543</span>
+            </li>
+            <li>
+                <span class="head"><img src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+                <span class="name">微信昵称</span>
+                <span class="tel">18210148543</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="activity_bottom">
+    <ul>
+        <a href="./activity.html"><li class="revise">修改</li></a>
+        <li class="activity_submit">发起活动</li>
+    </ul>
+</div>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="//fe.davdian.com/wap/17225/cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/activity_attend.js"></script>
+</body>
+</html>

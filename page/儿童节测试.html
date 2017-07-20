@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size:100px;">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="http://cdn.davdian.com/topic/css/topic-8875fcbb56.css" rel="stylesheet">
+  <link href="http://cdn.davdian.com/swiper/swiper-3.3.1.min.css" rel="stylesheet">
+  <!--分享部分-->
+
+  <script>
+    /////////////////////给app提供接口数据////////////
+    var appData = {
+      showHead: 1,     // 是否展示头部
+      showFoot: 0,     // 是否展示底部
+      backOnHead: 1,   // 头部返回按钮
+      homeOnHead: 1,   // 头部首页按钮
+      shareOnHead: 1
+    };
+    var imgUrl = 'http://pic.davdian.com/goods/2017/05/18/400_400_c890eff202ee61fb74174288856a927b.png';  //分享图片
+    var lineLink = location.href.split("/").slice(0,3).join("/")+"/t-11706.html"; // 分享网址
+    var descContent = '大V店|六一儿童节玩具满199减100/图书满400减120，玩猜猜看游戏赢巨额红包>>'; // 分享文案
+    var shareTitle = '快乐.六一狂欢开启！快来集红包卡赢￥6100现金大奖啦！';  //分享标题
+    var currentTime = {$current_time};
+    // t{$datetime}
+    //浏览次数：{if $read_times}{$read_times}{else}0{/if}
+
+    var redChangeList = [
+      {
+        startTime:"2017-02-23 0:00:00",
+        endTime:"2017-02-23 10:00:00",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_83006bf6586e6566d429539020b31de4.jpg"
+      },
+      {
+        startTime:"2017-02-23 10:00:00",
+        endTime:"2017-02-23 10:10:00",
+        href:"/ab-246.html",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_83006bf6586e6566d429539020b31de4.jpg"
+      },
+      {
+        startTime:"2017-02-23 10:10:00",
+        endTime:"2017-02-23 11:30:00",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_340f7d09fce1547b1ac2d20f8c188bca.jpg"
+      },
+      {
+        startTime:"2017-02-23 11:30:00",
+        endTime:"2017-02-23 12:00:00",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_a2c58675fcf74868791340e7b8324acd.jpg"
+      },
+      {
+        startTime:"2017-02-23 12:00:00",
+        endTime:"2017-02-23 12:10:00",
+        href:"/ab-247.html",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_780532329591bdafd4677ac05e494b6a.jpg"
+      },
+      {
+        startTime:"2017-02-23 12:10:00",
+        endTime:"2017-02-23 14:30:00",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_52e7a8e1a43820df9e3bf9ee3ba3c0f0.jpg"
+      },
+      {
+        startTime:"2017-02-23 14:30:00",
+        endTime:"2017-02-23 15:00:00",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_c14e88b3a41364883c79a2cbfecc40bc.jpg"
+      },
+      {
+        startTime:"2017-02-23 15:00:00",
+        endTime:"2017-02-23 15:10:00",
+        href:"/ab-248.html",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_780532329591bdafd4677ac05e494b6a.jpg"
+      },
+      {
+        startTime:"2017-02-23 15:10:00",
+        endTime:"2017-02-23 18:30:00",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_bc6fbe92f25971ec3a20a1a3600e5031.jpg"
+      },
+      {
+        startTime:"2017-02-23 18:30:00",
+        endTime:"2017-02-23 19:00:00",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_40c832a029fd0b458b1eeb377043b324.jpg"
+      },
+      {
+        startTime:"2017-02-23 19:00:00",
+        endTime:"2017-02-23 19:10:00",
+        href:"/ab-249.html",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_780532329591bdafd4677ac05e494b6a.jpg"
+      },
+      {
+        startTime:"2017-02-23 19:10:00",
+        endTime:"2017-02-23 20:30:00",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_4816a62ce73c50b2fca906a26aa643d3.jpg"
+      },
+      {
+        startTime:"2017-02-23 20:30:00",
+        endTime:"2017-02-23 21:00:00",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_eb3d2f240cb2f13637b57b801213796a.jpg"
+      },
+      {
+        startTime:"2017-02-23 21:00:00",
+        endTime:"2017-02-23 21:10:00",
+        href:"/ab-250.html",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_780532329591bdafd4677ac05e494b6a.jpg"
+      },
+      {
+        startTime:"2017-02-23 21:10:00",
+        endTime:"2017-02-23 24:00:00",
+        pic:"http://pic.davdian.com/goods/2017/02/22/740_268_d02edc75cf6ac3c8c2082e25784f8d8c.jpg"
+      }
+    ];
+    var $user_status = {$user_status};
+    var lotteryActId = 17;
+  </script>
+
+  <style>
+    .seckill_bg {
+      background: #ffdbe9;
+    }
+
+    .reverse_group_bg {
+      background: #ffdbe9;
+    }
+
+    .goodsList {
+      padding: 0 6px;
+    }
+
+    .goodsList ul {
+      padding-bottom: 5px;
+    }
+
+    .goodsList li .goodsTitle {
+      font-size: 12px;
+      color: #333;
+      text-overflow: ellipsis;
+      white-space: pre-line;
+      height: 36px;
+      line-height: 16px;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      display: -webkit-box;
+      overflow: hidden;
+      background: #fff;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    .goodsList li .goodsImg {
+      position: relative;
+    }
+
+    .goodsList li .goodsImg .sold_lable {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 60px;
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 50%;
+      margin-top: -30px;
+      left: 50%;
+      margin-left: -30px;
+    }
+
+    .more_seckill {
+      position: absolute;
+      width: 90%;
+      left: 5%;
+      top: 18%;
+    }
+
+    .fz_12 {
+      font-size: 12px;
+    }
+
+    .pull_right {
+      float: right;
+    }
+
+    .clearfix {
+      *zoom: 1;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+      display: table;
+      line-height: 0;
+      content: "";
+    }
+
+    .clearfix:after {
+      clear: both;
+    }
+
+    .banner_1212 {
+      position: relative;
+    }
+
+    .countdown {
+      position: absolute;
+      top: 2.17rem;
+      width: 2rem;
+      left: 50%;
+      margin-left: -1rem;
+      text-align: center;
+      color: #fff;
+    }
+
+    .countdown_title span {
+      font-size: 0.12rem;
+      font-weight: bold;
+      line-height: 0.21rem;
+    }
+
+    .countdown_title span:before {
+      width: 0.17rem;
+      height: 0.02rem;
+      background: #fff;
+      content: "";
+      display: inline-block;
+      margin-right: 0.1rem;
+      vertical-align: middle;
+    }
+
+    .countdown_title span:after {
+      width: 0.17rem;
+      height: 0.02rem;
+      background: #fff;
+      content: "";
+      display: inline-block;
+      margin-left: 0.1rem;
+      vertical-align: middle;
+    }
+
+    .activityCountdown {
+      font-size: 0.12rem;
+      margin-top: 0.02rem;
+    }
+
+    .activityCountdown_bg {
+      background: #333;
+      color: #fff;
+      margin-right: 0.03rem;
+      margin-left: 0.03rem;
+      padding: 0.03rem 0.03rem;
+      border-radius: 0.03rem;
+    }
+
+    @media screen and (min-width: 320px) and (max-width: 374px) {
+      .countdown {
+        top: 2.16rem;
+      }
+
+      .countdown_title span {
+        line-height: 0.16rem;
+      }
+
+      .activityCountdown {
+        margin-top: -0.02rem;
+      }
+    }
+
+    .active_game {
+      width: 100%;
+      min-height: 100px;
+      background-color: rgba(9, 199, 175, 0.32);
+      position: relative
+    }
+
+    .game_img_wrap {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0
+    }
+
+    .game_img_wrap > img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0
+    }
+
+    .mask2 {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      max-width: 640px;
+      margin: auto;
+      z-index: 1000
+    }
+
+    .begin_rule_btn {
+      width: 100%;
+      height: 12%;
+      position: absolute;
+      bottom: 3%
+    }
+
+    .begin_rule_btn div:nth-of-type(1) {
+      width: 30%;
+      height: 100%;
+      float: left;
+      margin-left: 18%
+    }
+
+    .begin_rule_btn div:nth-of-type(2) {
+      width: 30%;
+      height: 100%;
+      float: right;
+      margin-right: 15%
+    }
+
+    .main_bg.filters {
+      filter: blur(1.2px);
+      -ms-filter: blur(1.2px);
+      -webkit-filter: blur(1.2px);
+      -moz-filter: blur(1.2px)
+    }
+
+    .select_btn {
+      position: absolute;
+      top: 10%;
+      right: 0;
+      left: 0;
+      height: 50%;
+      margin: auto;
+      overflow: hidden
+    }
+
+    .select_btn > div {
+      width: 100%;
+      height: 50%;
+      border-radius: 10px
+    }
+
+    .select_btn > div:nth-of-type(1) {
+      padding-left: 6%
+    }
+
+    .select_btn > div:nth-of-type(2) {
+      padding-left: 20%
+    }
+
+    .select_btn > div:nth-of-type(1) div {
+      width: 27%;
+      height: 100%;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0 1%
+    }
+
+    .select_btn > div:nth-of-type(2) div {
+      width: 27%;
+      height: 100%;
+      border-radius: 50%;
+      display: inline-block;
+      margin: 0 2%
+    }
+
+    .mask_imgwrap {
+      min-height: 100px;
+      margin: 22% auto;
+      position: relative
+    }
+
+    .close_btn {
+      position: absolute;
+      width: 10%;
+      height: 10%;
+      right: 10%;
+      top: 10%
+    }
+
+    .tips_txtimg {
+      width: 100%;
+      height: 17%;
+      position: absolute;
+      bottom: 4.5%;
+      color: #868686;
+      text-align: center
+    }
+
+    .tips_txtimg > p {
+      display: inline-block;
+      max-width: 60%;
+      font-size: .15rem;
+      vertical-align: middle;
+      *display: inline;
+      *zoom: 1
+    }
+
+    .visible {
+      height: 100%;
+      vertical-align: middle;
+      width: 0;
+      display: inline-block
+    }
+
+    .get_red_tips > div:nth-of-type(1) {
+      position: absolute;
+      width: 55%;
+      height: 30%;
+      left: 0;
+      right: 0;
+      color: #868686;
+      bottom: 3%;
+      margin: auto
+    }
+
+    .get_red_tips > div:nth-of-type(1) div {
+      width: 45%;
+      height: 100%
+    }
+
+    #tips_html {
+      line-height: .18rem
+    }
+
+    .get_red_tips #get_reward_tip {
+      max-width: 75%;
+      margin-top: 1.3%
+    }
+
+    .red_pages {
+      display: block;
+      width: 65%;
+      margin: auto;
+      height: 41%;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 36%;
+      color: #FFF
+    }
+
+    .red_pages > div {
+      display: inline-block;
+      height: 100%;
+      float: left
+    }
+
+    .red_pages > div:nth-of-type(1) {
+      width: 30%;
+      height: 100%;
+      font-size: .33rem;
+      position: relative;
+    }
+
+    .red_pages > div:nth-of-type(2) {
+      width: 64%;
+      text-align: left;
+      font-size: .12rem;
+      line-height: .15rem
+    }
+
+    .red_pages > div:nth-of-type(2) {
+      padding-left: 2%
+    }
+
+    .red_pages > div:nth-of-type(2) p:nth-of-type(1) {
+      margin-top: 6%
+    }
+
+    #type_money {
+      position: absolute;
+      left: 34%;
+      bottom: 30%
+    }
+
+    .f_l {
+      float: left;
+    }
+
+    .f_r {
+      float: right;
+    }
+
+    .game_container {
+      top: 0;
+      z-index: 11;
+      max-width: 640px;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+    }
+
+    .game_container .mask {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: rgba(0, 0, 0, .6);
+    }
+    .game_container .heart {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: url('//pic.davdian.com/free/party/heart_icon.png') no-repeat;
+      background-size: 100%;
+      z-index: 1;
+      left: 0;
+      top: 0;
+
+    }
+
+    .game {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: table;
+      z-index: 1001;
+    }
+
+    .red_countdown {
+      width: 100%;
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .game .red_countdown img {
+      width: 100%;
+    }
+
+    .count_con {
+      position: relative;
+    }
+
+    .count_con span {
+      position: absolute;
+      left: 50%;
+      top: 55%;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .red_container {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    /**/
+    .red_container .red {
+      position: absolute;
+      z-index: 5;
+      /*top: -20%;*/
+      width: 80px;
+      animation-name: down0;
+      animation-duration: 3s;
+      -webkit-animation-name: down0;
+      -webkit-animation-duration: 3s;
+      /*animation-timing-function: cubic-bezier(1,.01,.98,.53);
+      -webkit-animation-timing-function: cubic-bezier(1,.01,.98,.53);*/
+      animation-timing-function: cubic-bezier(.96,.19,.91,.48);
+      -webkit-animation-timing-function: cubic-bezier(.96,.19,.91,.48);
+    }
+
+    @media screen and (max-width: 320px) {
+      .red_container .red {
+        animation-timing-function: cubic-bezier(1,.01,.98,.53);
+        -webkit-animation-timing-function: cubic-bezier(1,.01,.98,.53);
+      }
+    }
+
+    .red_container .red img {
+      width: 100%;
+    }
+
+    .red_container .red.boom {
+
+    }
+    @-webkit-keyframes down0 {
+      0% {
+        top: -20%;
+        /*-webkit-transform: translate3d(0,-200%,0);*/
+      }
+      80% {
+        top: 90%;
+        -webkit-animation-timing-function: ease-out;
+      }
+      83% {
+        top: 80%;
+        /*-webkit-transform: translate3d(0,450%,0);*/
+        -webkit-animation-timing-function: ease-in;
+      }
+      100% {
+        top: 120%;
+        /*-webkit-transform: translate3d(0,800%,0);*/
+        -webkit-animation-timing-function: ease-out;
+      }
+    }
+    @keyframes down0 {
+      0% {
+        top: -20%;
+        /*-webkit-transform: translate3d(0,-200%,0);*/
+      }
+      80% {
+        top: 90%;
+        -webkit-animation-timing-function: ease-out;
+      }
+      83% {
+        top: 80%;
+        /*-webkit-transform: translate3d(0,450%,0);*/
+        -webkit-animation-timing-function: ease-in;
+      }
+      100% {
+        top: 120%;
+        /*-webkit-transform: translate3d(0,800%,0);*/
+        -webkit-animation-timing-function: ease-out;
+      }
+    }
+    body.gaming {
+      overflow: hidden;
+    }
+
+    body.gaming .other {
+      pointer-events: none;
+    }
+
+    .result_container {
+      display: table;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+
+    .result {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    .result .img_con {
+      position: relative;
+      max-width: 357px;
+      display: inline-block;
+    }
+
+    .result img {
+      width: 357px;
+    }
+
+    .result .text {
+      position: absolute;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      bottom: 26%;
+      font-size: 13px;
+      font-weight: 400;
+      font-family: "PingFang SC";
+    }
+
+    .result_none .text {
+      /*bottom: 31%;*/
+      bottom: 28%;
+      font-weight: 400;
+    }
+
+    .result .num_text {
+      position: absolute;
+      color: #FF3232;
+      background-image: -webkit-linear-gradient(left,#ED004E,#FF3232);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-family: "PingFang SC";
+      font-weight: 500;
+      top: 21%;
+      font-size: 40px;
+      line-height: 33px;
+      left: 21%;
+    }
+    .result .num_text .num_text_icon {
+      font-size: 30px;
+      margin-right: 5px;
+    }
+
+    .result .num_type {
+      position: absolute;
+      color: #B85700;
+      left: 56%;
+      top: 45%;
+      font-size: 18px;
+    }
+
+    .result .min_text {
+      position: absolute;
+      color: #FE2F34;
+      font-size: 12px;
+      /*font-weight: bold;*/
+      left: 21%;
+      top: 15%;
+    }
+
+    .result .num_time {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      color: #333;
+      top: 31%;
+      font-size: 12px;
+      transform: scale(.8);
+      -webkit-transform: scale(.8);
+      right: 10%;
+      line-height: 1.2;
+    }
+
+    .result .img_con .close {
+      position: absolute;
+      top: 48%;
+      height: 12%;
+      left: 20%;
+      width: 57%;
+    }
+
+    .result .close {
+      width: 40px;
+      margin: 20px auto;
+    }
+
+    .result_none .close {
+      margin-top: 25px;
+    }
+
+    .result .look_red {
+      position: absolute;
+      display: block;
+      width: 11%;
+      left: 72%;
+      top: 12%;
+      height: 27%;
+    }
+
+    .dialog_mask {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: fixed;
+      background-color: rgba(0, 0, 0, .5);
+      z-index: 1500
+    }
+
+    .dialog_mask.o7 {
+      background-color: rgba(0, 0, 0, .7)
+    }
+
+    .modal_dialog_wrap {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      margin-top: -104px
+    }
+
+    .modal_dialog {
+      margin: 0 auto;
+      width: 250px;
+      background: #fff;
+      border-radius: 5px
+    }
+
+    .modal_body {
+      text-align: center;
+      padding: 20px;
+      line-height: 1.5;
+      border-bottom: 1px solid #eee;
+      position: relative
+    }
+
+    .modal_body .input_container {
+      padding: 8px;
+      border: 1px solid #eee;
+      margin-top: 6px;
+      background-color: #fafafa
+    }
+
+    .modal_body input.prompt {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      font-size: 14px;
+      line-height: 1.2;
+      height: 16px;
+      background: none
+    }
+
+    .modal_dialog_info_wrap .modal_body {
+      border-bottom: none
+    }
+
+    .modal_footer {
+      overflow: hidden
+    }
+
+    .modal_footer a {
+      display: block;
+      line-height: 3em;
+      text-align: center;
+      cursor: pointer
+    }
+
+    .modal_footer a, .modal_footer a:focus {
+      text-decoration: none;
+      color: #333
+    }
+
+    .modal_dialog_info_wrap .modal_footer {
+      display: none
+    }
+
+    .modal_dialog_info_wrap .modal_body {
+      background-image: none
+    }
+
+    .modal_dialog_confirm_wrap .modal_footer a {
+      border-left: 1px solid #eee;
+      margin-left: -1px;
+      width: 50%;
+      float: left
+    }
+
+    .modal_dialog .modal_footer .cancel {
+      display: none
+    }
+
+    .modal_dialog_confirm_wrap .modal_footer .cancel {
+      display: block
+    }
+
+    .modal_footer a:first-of-type {
+      border-bottom-left-radius: 5px;
+      -webkit-border-bottom-left-radius: 5px;
+      border-left: 0;
+      margin-left: 0;
+      margin-right: -1px
+    }
+
+    .modal_dialog .modal_footer .confirm, .modal_footer a:last-of-type {
+      border-bottom-right-radius: 5px;
+      -webkit-border-bottom-right-radius: 5px
+    }
+
+    .modal_dialog_confirm_wrap .modal_footer .confirm {
+      border-bottom-right-radius: 0;
+      -webkit-border-bottom-right-radius: 0
+    }
+
+    .modal_footer a.active {
+      background-color: #f3f3f3
+    }
+    .bookPos {
+      width: 100%;
+      height: 16.5%;
+      left: 0;
+      position: absolute;
+    }
+
+    .bookPosTo {
+      position: absolute;
+      width: 48%;
+      height: 24.5%;
+    }
+    .bookPosType {
+      position: absolute;
+      width: 48%;
+      height: 19.6%;
+    }
+
+
+
+    /*书中智慧滚动*/
+    .broadcast_double11{
+      position: relative;
+    }
+    .broadcast_double11_title{
+      overflow: hidden;
+      height: 0.4rem;
+      line-height:0.4rem;
+      position: absolute;
+      padding-left:22%;
+      width:95%;
+      top:0.07rem;
+      box-sizing: border-box;
+      z-index:1;
+      color:#777;
+      dont-size:0.14rem;
+    }
+    .broadcast_double11_title .swiper-slide{
+      background:transparent;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    .broadcast_double11_title .swiper {
+      width: 100%;
+      height: 100%;
+      padding: 0 0.35rem 0 0;
+      display: block;
+      box-sizing: border-box;
+      text-align: left;
+    }
+    /*秒杀的样式*/
+    .seckill_bg{
+      background: #ffd863;
+    }
+    .reverse_group_bg{
+      background: #ffffff;
+    }
+    .goodsList{
+      padding: 0 0.09rem;
+    }
+    .goodsList ul{
+      padding-bottom:0.05rem;
+    }
+    .goodsList li{
+      width: 33.3%;
+      float: left;
+      padding: 0 0.01rem 0.02rem;
+      box-sizing: border-box;
+      position: relative;
+    }
+    .goodsList li .goodsInfo{
+      background: #fff;
+      padding: 0 0.05rem 0.12rem;
+    }
+    .goodsList li .goodsTitle{
+      font-size: 0.12rem;
+      color: #333;
+      text-overflow: ellipsis;
+      white-space: pre-line;
+      height:0.3rem;
+      line-height:0.16rem;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      display: -webkit-box;
+      overflow: hidden;
+      background: #fff;
+      box-sizing: border-box;
+      margin:0.09rem 0;
+    }
+    .goodsList li .goodsPrice{
+      height:0.16rem;
+      line-height:0.16rem;
+      color: #ffd863;
+      box-sizing: border-box;
+    }
+    .goodsList li .goodsPrice .lable {
+      border-radius:0.08rem;
+      height:0.16rem;
+      line-height:0.16rem;
+      color: #fff;
+      background-color: #ff4a7d;
+      font-size:0.1rem;
+      display: inline-block;
+      font-family: sans-serif;
+      float:right;
+    }
+    .goodsList li .goodsImg{
+      position: relative;
+      padding:0.02rem 0.02rem 0;
+      background: #fff;
+    }
+    .goodsList li .goodsImg .sold_lable{
+      width: 0.6rem;
+      height: 0.6rem;
+      line-height: 0.6rem;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 0.6rem;
+      background-color: rgba(0,0,0,0.5);
+      position: absolute;
+      top: 50%;
+      margin-top: -0.3rem;
+      left: 50%;
+      margin-left: -0.3rem;
+    }
+    .more_seckill{position: absolute;width: 90%;left: 5%;top: 21.5%;}
+    .fz_12{font-size: 12px;}
+    .fz_16{font-size: 0.16rem;}
+    .pull_right{float: right;}
+    .clearfix {*zoom: 1;}
+    .clearfix:before,
+    .clearfix:after {display: table;line-height: 0; content: "";}
+    .clearfix:after {clear: both;}
+    .goodsTitle_kb{background: #ffffff;height:0.74rem;}
+    .img_item{position:relative;}
+
+
+
+  </style>
+
+
+  <!--页面标题-->
+  <title>快乐.六一狂欢开启</title>
+</head>
+<body <!--{if $is_from_app}--> class="in_app" <!--{/if}--> >
+<div class="top0">
+  <div class="top_container">
+    <div class="top_left">
+      <a class="top_back" href="javascript:history.back();">
+        <span class="home_arrow"></span>
+      </a>
+    </div>
+    <!--文章标题-->
+    <div class="title_container">快乐.六一狂欢开启</div>
+    <div class="top_right">
+      <a href="/" class="top_home">
+        <span class="home_icon"></span>
+      </a>
+    </div>
+  </div>
+</div>
+<div id="container">
+  <childrens></childrens>
+</div>
+<div class="red_change">
+</div>
+<!--超值秒杀-->
+<!-- {if $seckill_list} -->
+<div class="seckill_bg clearfix">
+  <img src="http://pic.davdian.com/goods/2017/05/18/750_219_a27ef505ebc4a2bfee0995778c9c61d7.jpg">
+  <div class="goodsList">
+    <ul class="clearfix">
+      <!--{foreach from=$seckill_list item=seckill}-->
+      <li>
+        <a href="{$seckill.href}">
+          <div class="goodsImg">
+            <img src="{$seckill.goods_img_self}">
+            {if $seckill.finish_percentage == 100}<div class="sold_lable">已抢光</div>{/if}
+          </div>
+          <div class="goodsInfo clearfix">
+            <div class="goodsTitle">{$seckill.good_name}</div>
+            <div class="goodsPrice"><span class="fz_16">¥{$seckill.goods_price}</span><span class="lable">秒杀价</span>
+            </div>
+          </div>
+        </a>
+      </li>
+      <!-- {/foreach} -->
+      <li>
+        <a href="/seckill.html">
+          <img src="http://pic.davdian.com/goods/2017/04/19/640_640_13d61b6fa15123d584f842989890ee6b.png">
+          <div class="goodsTitle_kb"></div>
+          <div class="more_seckill"><img src="http://pic.davdian.com/goods/2017/04/19/200_201_cde247f8f85e257526bc8c8d02dce313.jpg"> </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- {/if} -->
+
+<!--特色会场-->
+<div class="img_item"><img
+  src="http://pic.davdian.com/goods/2017/05/18/750_1201_224efd7f0f7a7831a2fa9054212fd64c.jpg" alt="">
+  <a href="/group_list.html" style="width: 47%;height: 3%;left: 2%;top: 2.5%;position:absolute;"></a>
+  <a href="/t-10914.html" style="width: 47%;height: 2.5%;left: 51%;top: 2.7%;position:absolute;"></a>
+  <a href="/t-10907.html" style="width: 48%;height: 2.5%;left: 2%;top: 5.7%;position:absolute;"></a>
+  <a href="/t-10907.html" style="width: 47%;height: 2.5%;left: 51%;top: 5.7%;position:absolute;"></a>
+  <a href="/t-10907.html" style="width: 47%;height: 4.5%;left: 1%;top: 8.5%;position:absolute;"></a>
+  <a href="/t-10907.html" style="width: 48%;height: 4.5%;left: 51%;top: 8.5%;position:absolute;"></a>
+  <!--周六六折-->
+  <div class="img_item"><img src="http://pic1.davdian.com/goods/2017/05/18/750_345_57b37c40b5b8d97aa260eba5f697f1cc.jpg" alt="">
+    <a href="/t-10875.html" style="width: 95%;height: 89%;left: 2%;top: 7%;position:absolute;"></a>
+  </div>
+  <!--组团-->
+  <div class="img_item"><img src="http://pic1.davdian.com/goods/2017/05/18/750_345_57b37c40b5b8d97aa260eba5f697f1cc.jpg" alt="">
+    <a href="/t-10867.html" style="width: 95%;height: 79%;left: 2%;top: 16%;position:absolute;"></a>
+  </div>
+  <!--图书-->
+  <div class="img_item"><img src="http://pic1.davdian.com/goods/2017/05/18/750_966_31656d9c0c554dc892ad2de41fb2a3f1.jpg" alt="">
+    <a href="/t-10976.html" style="width: 39%;height: 61%;left: 1%;top: 28%;position:absolute;"></a>
+    <a href="/t-10930.html" style="width: 25%;height: 30%;left: 43%;top: 28%;position:absolute;"></a>
+    <a href="/t-10943.html" style="width: 24%;height: 30%;left: 71%;top: 28%;position:absolute;"></a>
+    <a href="/t-10956.html" style="width: 25%;height: 30%;left: 43%;top: 59%;position:absolute;"></a>
+    <a href="/t-10924.html" style="width: 25%;height: 28%;left: 71%;top: 60%;position:absolute;"></a>
+  </div>
+  <!--玩具-->
+  <div class="img_item"><img src="http://pic1.davdian.com/goods/2017/05/18/750_715_4b27c20d66942f67fa000b89484046d4.jpg" alt="">
+    <a href="/t-10803.html" style="width: 28%;height: 42%;left: 1%;top: 1%;position:absolute;"></a>
+    <a href="/t-10751.html" style="width: 24%;height: 41%;left: 33%;top: 3%;position:absolute;"></a>
+    <a href="/t-10781.html" style="width: 24%;height: 41%;left: 5%;top: 45%;position:absolute;"></a>
+    <a href="/t-10968.html" style="width: 26%;height: 38%;left: 31%;top: 46%;position:absolute;"></a>
+    <a href="/t-10893.html" style="width: 38%;height: 82%;left: 59%;top: 3%;position:absolute;"></a>
+  </div>
+  <!--童装-->
+  <div class="img_item"><img src="http://pic1.davdian.com/goods/2017/05/18/750_720_46966deb38f9d276c23eb7ad20631421.jpg" alt="">
+    <a href="/t-10803.html" style="width: 40%;height: 86%;left: 1%;top: 1%;position:absolute;"></a>
+    <a href="/t-10751.html" style="width: 26%;height: 40%;left: 43%;top: 3%;position:absolute;"></a>
+    <a href="/t-10781.html" style="width: 24%;height: 41%;left: 72%;top: 3%;position:absolute;"></a>
+    <a href="/t-10968.html" style="width: 26%;height: 40%;left: 43%;top: 45%;position:absolute;"></a>
+    <a href="/t-10893.html" style="width: 27%;height: 41%;left: 70%;top: 45%;position:absolute;"></a>
+  </div>
+  <!--奶粉-->
+  <div class="img_item"><img src="http://pic1.davdian.com/goods/2017/05/18/750_719_acb6d8f8476c5249e82aa53fb0b980f7.jpg" alt="">
+    <a href="/t-10803.html" style="width: 27%;height: 42%;left: 3%;top: 1%;position:absolute;"></a>
+    <a href="/t-10751.html" style="width: 23%;height: 41%;left: 33%;top: 2%;position:absolute;"></a>
+    <a href="/t-10781.html" style="width: 27%;height: 40%;left: 3%;top: 45%;position:absolute;"></a>
+    <a href="/t-10968.html" style="width: 26%;height: 40%;left: 32%;top: 45%;position:absolute;"></a>
+    <a href="/t-10893.html" style="width: 37%;height: 83%;left: 60%;top: 3%;position:absolute;"></a>
+  </div>
+  <!--婴童洗护-->
+  <div class="img_item"><img src="http://pic1.davdian.com/goods/2017/05/18/750_719_41ccc51da2f047e3ae8e38a4114de027.jpg" alt="">
+    <a href="/t-10803.html" style="width: 40%;height: 85%;left: 1%;top: 1%;position:absolute;"></a>
+    <a href="/t-10751.html" style="width: 26%;height: 41%;left: 43%;top: 2%;position:absolute;"></a>
+    <a href="/t-10781.html" style="width: 26%;height: 40%;left: 71%;top: 3%;position:absolute;"></a>
+    <a href="/t-10968.html" style="width: 27%;height: 40%;left: 42%;top: 45%;position:absolute;"></a>
+    <a href="/t-10893.html" style="width: 27%;height: 41%;left: 70%;top: 45%;position:absolute;"></a>
+  </div>
+  <!--母婴室-->
+  <div class="img_item"><img src="http://pic1.davdian.com/goods/2017/05/18/750_719_f5a62c5799d49bea970ede2f639c8db9.jpg" alt="">
+    <a href="/t-10803.html" style="width: 29%;height: 42%;left: 1%;top: 1%;position:absolute;"></a>
+    <a href="/t-10751.html" style="width: 26%;height: 41%;left: 32%;top: 2%;position:absolute;"></a>
+    <a href="/t-10781.html" style="width: 27%;height: 41%;left: 3%;top: 45%;position:absolute;"></a>
+    <a href="/t-10968.html" style="width: 27%;height: 41%;left: 31%;top: 45%;position:absolute;"></a>
+    <a href="/t-10893.html" style="width: 37%;height: 84%;left: 60%;top: 2%;position:absolute;"></a>
+  </div>
+  <!--快乐生活屋-->
+  <div class="img_item"><img src="http://pic1.davdian.com/activity/2017/05/18/750_718_a251f7a0f42bdf57e46db5c5a7555006.jpg" alt="">
+    <a href="/t-10803.html" style="width: 40%;height: 85%;left: 1%;top: 1%;position:absolute;"></a>
+    <a href="/t-10751.html" style="width: 25%;height: 41%;left: 43%;top: 2%;position:absolute;"></a>
+    <a href="/t-10781.html" style="width: 25%;height: 40%;left: 71%;top: 3%;position:absolute;"></a>
+    <a href="/t-10968.html" style="width: 27%;height: 40%;left: 42%;top: 45%;position:absolute;"></a>
+    <a href="/t-10893.html" style="width: 28%;height: 40%;left: 69%;top: 45%;position:absolute;"></a>
+  </div>
+  <!--爱美城堡-->
+  <div class="img_item"><img src="http://pic1.davdian.com/goods/2017/05/18/750_719_eff3dab0d09d706c3b4db9630f55d1c3.jpg" alt="">
+    <a href="/t-10803.html" style="width: 28%;height: 41%;left: 1%;top: 3%;position:absolute;"></a>
+    <a href="/t-10751.html" style="width: 28%;height: 39%;left: 30%;top: 4%;position:absolute;"></a>
+    <a href="/t-10781.html" style="width: 26%;height: 41%;left: 3%;top: 45%;position:absolute;"></a>
+    <a href="/t-10968.html" style="width: 27%;height: 40%;left: 31%;top: 45%;position:absolute;"></a>
+    <a href="/t-10893.html" style="width: 38%;height: 82%;left: 59%;top: 3%;position:absolute;"></a>
+  </div>
+  <!--能量补充站-->
+  <div class="img_item"><img src="http://pic1.davdian.com/goods/2017/05/18/750_652_446af9518fc40074ce1bd6beb6950840.jpg" alt="">
+    <a href="/t-10803.html" style="width: 39%;height: 93%;left: 1%;top: 1%;position:absolute;"></a>
+    <a href="/t-10751.html" style="width: 26%;height: 45%;left: 42%;top: 2%;position:absolute;"></a>
+    <a href="/t-10781.html" style="width: 27%;height: 44%;left: 70%;top: 4%;position:absolute;"></a>
+    <a href="/t-10968.html" style="width: 26%;height: 44%;left: 42%;top: 50%;position:absolute;"></a>
+    <a href="/t-10893.html" style="width: 27%;height: 46%;left: 70%;top: 49%;position:absolute;"></a>
+  </div>
+  <!--分会场-->
+  <div class="img_item"><img src="http://pic1.davdian.com/goods/2017/05/18/750_553_97db741e141890323600a641b1655eb7.jpg" alt="">
+    <a href="/t-10875.html" style="width: 32%;height: 61%;left: 1%;top: 34%;position:absolute;"></a>
+    <a href="/t-10924.html" style="width: 30%;height: 52%;left: 35%;top: 41%;position:absolute;"></a>
+    <a href="/t-10977.html" style="width: 29%;height: 47%;left: 68%;top: 45%;position:absolute;"></a>
+  </div>
+  <!--规则-->
+  <div class="img_item"><img src="http://pic.davdian.com/goods/2017/04/20/1125_2141_a17e886fcb0e2533fd5ae5493d4c3b33.jpg" alt="">
+    <a href="/t-10999.html?dp=yhzzhbj_0414" style="width: 40%;height: 5%;left: 31%;top: 33%;position:absolute;"></a>
+  </div>
+  <!--大V店-->
+  <div class="img_item"><img src="http://pic.davdian.com/goods/2017/04/18/1125_193_f6f06a7dbd49468266b22633b22a7923.jpg" alt="">
+  </div>
+  <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://fe.davdian.com/wap/{$front_key}javascript/base.js"></script>
+  <script src="http://cdn.davdian.com/swiper/swiper-3.3.1.jquery.min.js"></script>
+  <script src="http://cdn.davdian.com/vue/2.0.5/vue.min.js"></script>
+  <script src="http://fe.davdian.com/wap/{$front_key}dist/childrens.js"></script>
+  <script>
+    var hexcase=0;var b64pad="";var chrsz=8;function hex_md5(s){return binl2hex(core_md5(str2binl(s),s.length*chrsz))}function b64_md5(s){return binl2b64(core_md5(str2binl(s),s.length*chrsz))}function str_md5(s){return binl2str(core_md5(str2binl(s),s.length*chrsz))}function hex_hmac_md5(key,data){return binl2hex(core_hmac_md5(key,data))}function b64_hmac_md5(key,data){return binl2b64(core_hmac_md5(key,data))}function str_hmac_md5(key,data){return binl2str(core_hmac_md5(key,data))}function md5_vm_test(){return hex_md5("abc")=="900150983cd24fb0d6963f7d28e17f72"}function core_md5(x,len){x[len>>5]|=0x80<<((len)%32);x[(((len+64)>>>9)<<4)+14]=len;var a=1732584193;var b=-271733879;var c=-1732584194;var d=271733878;for(var i=0;i<x.length;i+=16){var olda=a;var oldb=b;var oldc=c;var oldd=d;a=md5_ff(a,b,c,d,x[i+0],7,-680876936);d=md5_ff(d,a,b,c,x[i+1],12,-389564586);c=md5_ff(c,d,a,b,x[i+2],17,606105819);b=md5_ff(b,c,d,a,x[i+3],22,-1044525330);a=md5_ff(a,b,c,d,x[i+4],7,-176418897);d=md5_ff(d,a,b,c,x[i+5],12,1200080426);c=md5_ff(c,d,a,b,x[i+6],17,-1473231341);b=md5_ff(b,c,d,a,x[i+7],22,-45705983);a=md5_ff(a,b,c,d,x[i+8],7,1770035416);d=md5_ff(d,a,b,c,x[i+9],12,-1958414417);c=md5_ff(c,d,a,b,x[i+10],17,-42063);b=md5_ff(b,c,d,a,x[i+11],22,-1990404162);a=md5_ff(a,b,c,d,x[i+12],7,1804603682);d=md5_ff(d,a,b,c,x[i+13],12,-40341101);c=md5_ff(c,d,a,b,x[i+14],17,-1502002290);b=md5_ff(b,c,d,a,x[i+15],22,1236535329);a=md5_gg(a,b,c,d,x[i+1],5,-165796510);d=md5_gg(d,a,b,c,x[i+6],9,-1069501632);c=md5_gg(c,d,a,b,x[i+11],14,643717713);b=md5_gg(b,c,d,a,x[i+0],20,-373897302);a=md5_gg(a,b,c,d,x[i+5],5,-701558691);d=md5_gg(d,a,b,c,x[i+10],9,38016083);c=md5_gg(c,d,a,b,x[i+15],14,-660478335);b=md5_gg(b,c,d,a,x[i+4],20,-405537848);a=md5_gg(a,b,c,d,x[i+9],5,568446438);d=md5_gg(d,a,b,c,x[i+14],9,-1019803690);c=md5_gg(c,d,a,b,x[i+3],14,-187363961);b=md5_gg(b,c,d,a,x[i+8],20,1163531501);a=md5_gg(a,b,c,d,x[i+13],5,-1444681467);d=md5_gg(d,a,b,c,x[i+2],9,-51403784);c=md5_gg(c,d,a,b,x[i+7],14,1735328473);b=md5_gg(b,c,d,a,x[i+12],20,-1926607734);a=md5_hh(a,b,c,d,x[i+5],4,-378558);d=md5_hh(d,a,b,c,x[i+8],11,-2022574463);c=md5_hh(c,d,a,b,x[i+11],16,1839030562);b=md5_hh(b,c,d,a,x[i+14],23,-35309556);a=md5_hh(a,b,c,d,x[i+1],4,-1530992060);d=md5_hh(d,a,b,c,x[i+4],11,1272893353);c=md5_hh(c,d,a,b,x[i+7],16,-155497632);b=md5_hh(b,c,d,a,x[i+10],23,-1094730640);a=md5_hh(a,b,c,d,x[i+13],4,681279174);d=md5_hh(d,a,b,c,x[i+0],11,-358537222);c=md5_hh(c,d,a,b,x[i+3],16,-722521979);b=md5_hh(b,c,d,a,x[i+6],23,76029189);a=md5_hh(a,b,c,d,x[i+9],4,-640364487);d=md5_hh(d,a,b,c,x[i+12],11,-421815835);c=md5_hh(c,d,a,b,x[i+15],16,530742520);b=md5_hh(b,c,d,a,x[i+2],23,-995338651);a=md5_ii(a,b,c,d,x[i+0],6,-198630844);d=md5_ii(d,a,b,c,x[i+7],10,1126891415);c=md5_ii(c,d,a,b,x[i+14],15,-1416354905);b=md5_ii(b,c,d,a,x[i+5],21,-57434055);a=md5_ii(a,b,c,d,x[i+12],6,1700485571);d=md5_ii(d,a,b,c,x[i+3],10,-1894986606);c=md5_ii(c,d,a,b,x[i+10],15,-1051523);b=md5_ii(b,c,d,a,x[i+1],21,-2054922799);a=md5_ii(a,b,c,d,x[i+8],6,1873313359);d=md5_ii(d,a,b,c,x[i+15],10,-30611744);c=md5_ii(c,d,a,b,x[i+6],15,-1560198380);b=md5_ii(b,c,d,a,x[i+13],21,1309151649);a=md5_ii(a,b,c,d,x[i+4],6,-145523070);d=md5_ii(d,a,b,c,x[i+11],10,-1120210379);c=md5_ii(c,d,a,b,x[i+2],15,718787259);b=md5_ii(b,c,d,a,x[i+9],21,-343485551);a=safe_add(a,olda);b=safe_add(b,oldb);c=safe_add(c,oldc);d=safe_add(d,oldd)}return Array(a,b,c,d)}function md5_cmn(q,a,b,x,s,t){return safe_add(bit_rol(safe_add(safe_add(a,q),safe_add(x,t)),s),b)}function md5_ff(a,b,c,d,x,s,t){return md5_cmn((b&c)|((~b)&d),a,b,x,s,t)}function md5_gg(a,b,c,d,x,s,t){return md5_cmn((b&d)|(c&(~d)),a,b,x,s,t)}function md5_hh(a,b,c,d,x,s,t){return md5_cmn(b^c^d,a,b,x,s,t)}function md5_ii(a,b,c,d,x,s,t){return md5_cmn(c^(b|(~d)),a,b,x,s,t)}function core_hmac_md5(key,data){var bkey=str2binl(key);if(bkey.length>16)bkey=core_md5(bkey,key.length*chrsz);var ipad=Array(16),opad=Array(16);for(var i=0;i<16;i++){ipad[i]=bkey[i]^0x36363636;opad[i]=bkey[i]^0x5C5C5C5C}var hash=core_md5(ipad.concat(str2binl(data)),512+data.length*chrsz);return core_md5(opad.concat(hash),512+128)}function safe_add(x,y){var lsw=(x&0xFFFF)+(y&0xFFFF);var msw=(x>>16)+(y>>16)+(lsw>>16);return(msw<<16)|(lsw&0xFFFF)}function bit_rol(num,cnt){return(num<<cnt)|(num>>>(32-cnt))}function str2binl(str){var bin=Array();var mask=(1<<chrsz)-1;for(var i=0;i<str.length*chrsz;i+=chrsz)bin[i>>5]|=(str.charCodeAt(i/chrsz)&mask)<<(i%32);return bin}function binl2str(bin){var str="";var mask=(1<<chrsz)-1;for(var i=0;i<bin.length*32;i+=chrsz)str+=String.fromCharCode((bin[i>>5]>>>(i%32))&mask);return str}function binl2hex(binarray){var hex_tab=hexcase?"0123456789ABCDEF":"0123456789abcdef";var str="";for(var i=0;i<binarray.length*4;i++){str+=hex_tab.charAt((binarray[i>>2]>>((i%4)*8+4))&0xF)+hex_tab.charAt((binarray[i>>2]>>((i%4)*8))&0xF)}return str}function binl2b64(binarray){var tab="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";var str="";for(var i=0;i<binarray.length*4;i+=3){var triplet=(((binarray[i>>2]>>8*(i%4))&0xFF)<<16)|(((binarray[i+1>>2]>>8*((i+1)%4))&0xFF)<<8)|((binarray[i+2>>2]>>8*((i+2)%4))&0xFF);for(var j=0;j<4;j++){if(i*8+j*6>binarray.length*32)str+=b64pad;else str+=tab.charAt((triplet>>6*(3-j))&0x3F)}}return str}
+
+
+
+    var strSign = function(obj) {
+      var strObj = sortObj({obj:obj})
+      var str = ''
+      for (var i in strObj){
+        str +=  i + '=' + strObj[i] + '&'
+      }
+      return str;
+    }
+
+    var sortObj = function(obj) {
+      var Units = window.Units = window.Units||{};
+      var u = navigator.userAgent;
+      Units.isIOS = function(){
+        if(u.match(/ios/i)) {
+          return true;
+        }
+        return !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+      };
+      Units.isMobileIOS = function () {
+        return /iPhone|iPad|iPod/i.test(u);
+      };
+      Units.getAppVersion = function () {
+        // 空格分所有
+        var versionStr = u.match(/(ios|android)\.davdian\.com\/([\d\.]+)/i) ||  u.match(/(ios|android)\.bravetime\.net\/([\d\.]+)/i)||  u.match(/(ios|android)\.vyohui\.cn\/([\d\.]+)/i);
+        if(versionStr == null){
+          return 0;
+        }else{
+          var v = versionStr[2].split(".").reduce(function(a,b){return +a*10+ +b});
+        }
+        return +v;
+      };
+      Units.isAndroid = function () {
+        if(u.match(/(android|linux)/i)) {
+          return true;
+        }
+        return u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
+      };
+
+      var string = ''
+      var strObj = {}
+      var t = null
+      var tValue = null
+      var arrKey = ['shop_url','sess_key','device_token','format','ts','osv','wh','data_version']
+      var osv = "web_h5_*_*";
+      if(window.Units&&Units.isApp()&&Units.isIOS()){
+        osv = "web_ios_*_*";
+      }
+      if(window.Units&&Units.isApp()&&Units.isAndroid()){
+        osv = "web_android_*_*";
+      }
+      var arrValue = [location.host, document.cookie.split(';').filter(function(x){return x.indexOf("dvdsid")>-1})[0]?document.cookie.split(';').filter(function(x){return x.indexOf("dvdsid")>-1})[0].split("=")[1]:0, "", 'json', new Date().getTime(), osv, '750_1334', 0]
+
+      if (obj.obj){
+        for (var p in obj.obj){
+          arrKey.push(p)
+          arrValue.push(obj.obj[p])
+        }
+      }
+      for (var i = 0; i < arrKey.length; i++) {
+        for (var j = 0; j < arrKey.length - i - 1; j++) {
+          if (arrKey[j] > arrKey[j+1]) {
+            t = arrKey[j+1]
+            arrKey[j+1] = arrKey[j]
+            arrKey[j] = t
+
+            tValue = arrValue[j+1]
+            arrValue[j+1] = arrValue[j]
+            arrValue[j] = tValue
+          }
+        }
+      }
+      for (var i = 0; i < arrKey.length; i++) {
+        strObj[arrKey[i]] = arrValue[i]
+      }
+      for (var p in strObj) {
+        string += p + '=' + strObj[p]
+      }
+      var sign = hex_md5(string).toUpperCase()
+      strObj.sign = sign
+      return strObj
+    }
+  </script>
+  <script>
+    window.bravetime.newConfirm = function (msg, opt) {
+      var msg = msg || "",
+        opt = opt || {},
+        okText = opt.okText || "确定",
+        cancelText = opt.cancelText || "取消",
+        callback = opt.okLink || function () {
+          },
+        cancelCallback = opt.cancelLink || function () {
+          },
+        hideCancel = opt.hideCancel || false,
+        hideOkAndCancel = opt.hideOkAndCancel || false,
+        showPrompt = opt.showPrompt || false,
+        closeButton = opt.hasClostButton || false,
+        hideOnClick = opt.hideOnClick || false,
+        promptInput;
+
+      var $elAlert = $('.modal_dialog_wrap');
+      if ($elAlert.length < 1) {
+        $(['<div class="dialog_mask" style="display:block">', '<div class="modal_dialog_wrap">', '<div class="modal_dialog">', '<div class="modal_body"></div>', '<div class="modal_footer">', '<a class="confirm">确定</a>', '<a class="cancel">取消</a>', '</div>', '</div>', '</div>', '</div>'].join('')).appendTo(document.body);
+
+        $elAlert = $('.modal_dialog_wrap');
+        $elAlert.find('.confirm').click(function () {
+          $('.dialog_mask').hide();
+          var callback = $(this).data('callback');
+          if (callback) {
+            if (typeof callback === 'string') {
+              window.bravetime.goto(callback);
+            } else {
+              promptInput = $(".prompt");
+              if (showPrompt && promptInput.val()) {
+                callback(promptInput.val());
+              } else {
+                callback();
+              }
+            }
+          }
+        });
+        $elAlert.find('.cancel').click(function () {
+          var callback = $(this).data('cancel_callback');
+          if (callback) {
+            if (typeof callback === 'string') {
+              window.bravetime.goto(callback);
+            } else {
+              callback();
+            }
+          }
+          $('.dialog_mask').hide();
+        });
+      } else {
+        $('.dialog_mask').css('display', 'block');
+      }
+      if (hideOnClick) {
+        $('.dialog_mask').click(function (e) {
+          if ($(e.target).hasClass("dialog_mask")) {
+            $('.dialog_mask').hide();
+          }
+        });
+      }
+      $elAlert.toggleClass('modal_dialog_confirm_wrap', !hideCancel);
+      $elAlert.toggleClass('modal_dialog_info_wrap', hideOkAndCancel);
+      $elAlert.find('.modal_body').html(msg);
+      if (showPrompt) {
+        promptInput = $("<input>").addClass("prompt");
+        if (opt.placeholder) {
+          promptInput.attr("placeholder", opt.placeholder);
+        }
+        $elAlert.find('.modal_body').append($("<div class='input_container that_input'></div>").append(promptInput));
+        promptInput.focus(function () {
+          if (window.Units && Units.isWechat() && Units.isIOS()) {
+            $(".top0").addClass("hide");
+          }
+        }).blur(function () {
+          setTimeout(function () {
+            $(".top0").removeClass("hide");
+          }, 50);
+
+        })
+      }
+      if (closeButton) {
+        var closeBtn = $('<div class="modal_close"></div>');
+        $elAlert.find('.modal_body').append(closeBtn);
+        closeBtn.click(function () {
+          $('.dialog_mask').hide();
+        })
+      }
+      $elAlert.find('.confirm').html(okText).data('callback', callback || null);
+      $elAlert.find('.cancel').html(cancelText).data('cancel_callback', cancelCallback || null);
+      $elAlert.css('margin-top', $elAlert.height() * -0.5);
+    };
+
+    window.bravetime.newAlert = function (msg, callback) {
+      if (typeof callback == "function") {
+        window.bravetime.newConfirm(msg, {
+          hideCancel: true,
+          okLink: callback
+        });
+      } else {
+        var opt = callback || {};
+        opt["hideCancel"] = true;
+        window.bravetime.newConfirm(msg, opt);
+      }
+
+    };
+  </script>
+  <script>
+    (function(doc, win) {
+      var docEl = doc,
+        isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+        dpr = isIOS ? Math.min(win.devicePixelRatio, 3) : 1,
+        dpr = window.top === window.self ? dpr : 1, //被iframe引用时，禁止缩放
+        resizeEvt = "orientationchange" in window ? "orientationchange" : "resize";
+      docEl.documentElement.dataset.dpr = dpr;
+      var recalc = function() {
+        var width = docEl.body.clientWidth;
+
+        if (width / dpr > 750) {
+          width = 750 * dpr;
+        }
+        docEl.documentElement.dataset.width = width;
+        docEl.documentElement.dataset.percent = 200 * (width / 750);
+        docEl.documentElement.style.fontSize = 200*(width/750) + 'px';
+        docEl.body.style.fontSize = '14px';
+        var list = document.querySelectorAll("[base-on-rem]");
+        for(var i=0;i<list.length;i++){
+          list[i].removeAttribute('base-on-rem');
+        }
+      };
+      recalc();
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+    })(document, window);
+
+
+
+    // 红包雨，线上
+    var clickNum = 0,isStart = false,time, isLastTime = false;
+    var bounsId = 15;
+    var startURL = "/api/mg/sale/lottery/info";
+    var bounsURL = "/api/mg/sale/lottery/get";
+
+    //测试
+    // var clickNum = 0,isStart = false,time, isLastTime = false, isLimit = true;
+    // var bounsId = 6;
+    // // 开始结束时间
+    // var clickNum = 0,isStart = false,time, isLastTime = false;
+    // var startURL = startJson;
+    // var bounsURL = "/api/mg/sale/lottery/get";
+    // var bounsId = 4;
+    // var startTime = 1492531200000;
+    // var endTime = 1494950399000;
+    // var isStartGame = true, actTimeList = [
+    //     {
+    //         "beginTime": "09:00:00",
+    //         "overTime" : "12:15:00"
+    //     },
+    //     {
+    //         "beginTime": "15:00:00",
+    //         "overTime" : "23:15:00"
+    //     }
+    // ];
+
+    // //线上
+    var startTime = "",isFirst = true;
+    var endTime = "";
+    var isStartGame = false, actTimeList = [],isLimit = true;
+
+    $(function () {
+      //红包开始
+      //添加当前1分钟停留在页面时
+      isShow()
+      function isShow() {
+        $.ajax({
+          url: startURL,
+          data:strSign({
+            lotteryActId: bounsId,
+          }),
+          type: 'POST',
+          cache: false,
+          dataType: "json",
+          success: function (res) {
+            var data = res.data;
+            if (res.code == 0) {
+              isStartGame = data.joinLimit == 'no' ? true : false;
+              startTime = data.startTime*1000;
+              endTime = data.endTime*1000;
+              actTimeList = data.timeScope;
+
+              imgUrl = data.shareInfo.imgUrl;  //分享图片
+              // descContent = data.shareInfo.desc; // 分享文案
+              shareTitle = data.shareInfo.title;  //分享标题
+
+              if (isStartGame && isFirst) {
+                judgeTime(function () {
+                  judgeLogin(function () {
+                    loadImg(['//pic.davdian.com/free/2017/02/24/red_01.png'], function () {
+                      startGame();
+                    });
+                  });
+                });
+              } else {
+                isLimit = false;
+              }
+            } else {
+              console.log(res.msg);
+            }
+          },
+        })
+      }
+      if (!isStart) {
+        time = setInterval(function () {
+          judgeTime(function () {
+            judgeLogin(function () {
+              loadImg(['//pic.davdian.com/free/2017/02/24/red_01.png'], function () {
+                startGame();
+              });
+            });
+          });
+        },1000);
+      }
+    });
+
+    /**
+     * 判断时间
+     */
+    function judgeTime(callback) {
+      if (isLimit) {
+        var date = new Date(),
+          dateYears = date.getFullYear(),
+          dateMounth = date.getMonth() + 1,
+          dateDay = date.getDate(),
+          dateTime = date.getTime();
+
+        if (dateTime > new Date(startTime).getTime() && dateTime < new Date(endTime).getTime()) {
+
+          actTimeList.map(function (item) {
+            if (dateTime >= new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime() && dateTime <= new Date(
+                dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.overTime).getTime()) {
+              isStart = true;
+              clearInterval(time);
+              callback();
+            }
+          });
+        }
+      } else {
+        clearInterval(time);
+      }
+    }
+
+    /**
+     * 判断登录
+     */
+    function judgeLogin(callback) {
+      if (window.$user_status) {
+        callback()
+      } else {
+        bravetime.newConfirm("需要先登录才能参与糖果party活动哦，先去登录吧～", {
+          okLink: "/login.html?referer=" + encodeURI(location.href)
+        })
+      }
+    }
+
+    /**
+     * 加载图片
+     * @param list
+     * @param callback
+     */
+    function loadImg(list, callback) {
+      var loaded = 0, callbacked = false;
+      for (var i = 0; i < list.length; i++) {
+        (function () {
+          var img = new Image();
+          img.onload = function () {
+            loaded++;
+            if (loaded == list.length) {
+              if (!callbacked) {
+                callbacked = true;
+                callback && callback();
+              }
+            }
+          };
+          img.src = list[i];
+        })();
+      }
+      setTimeout(function () {
+        if (!callbacked) {
+          callbacked = true;
+          callback && callback();
+        }
+      }, 500)
+    }
+
+    /**
+     * 开始游戏
+     */
+    function startGame() {
+      if(sessionStorage.getItem("20170420_hby")){
+        return false;
+      }
+      var $container = $("<div class='game_container'><div class='mask'></div><div class='game'></div> </div>");
+      $('html body').css({"overflow": "hidden"})
+      $(document.body).addClass("gaming").append($container);
+      var $game = $container.find(".game");
+      countdown($game);
+      bravetime.tj.pvSend("hongbaoyu_1704_play")
+    }
+
+    /**
+     * 倒计时
+     */
+    function countdown($game) {
+      var $countdownContainer = $("<div class='red_countdown'><div class='count_con'>" +
+        "<img src='//pic.davdian.com/free/party/Countdown.png'>" +
+        "<span>3</span>" +
+        "</div></div> ");
+      $game.append($countdownContainer);
+      var size = $(".count_con").width() / 4;
+      var font = $game.find("span");
+      font.css("font-size", size + "px").css("margin-left", -(font.width() / 2) + "px");
+      var t = 3;
+      var timer = setInterval(function () {
+        if (t-- > 1) {
+          font.html(t)
+        } else {
+          showGame($game);
+          clearInterval(timer);
+          $countdownContainer.remove();
+        }
+      }, 1000);
+      //要替换的是这里的图片
+      loadImg(['//pic.davdian.com/free/party/bouns_icon1.png',
+        '//pic.davdian.com/free/party/bouns_icon2.png',
+        '//pic.davdian.com/free/party/bouns_icon3.png',
+        '//pic.davdian.com/free/party/bouns_icon4.png',
+        '//pic.davdian.com/free/party/bouns_icon5.png',
+        '//pic.davdian.com/free/party/bouns_icon6.png',
+        '//pic.davdian.com/free/party/bouns_icon7.png',
+        '//pic.davdian.com/free/party/bouns_icon8.png',
+        '//pic.davdian.com/free/party/bouns_icon9.png',
+        '//pic.davdian.com/free/party/fail_icon3.png',
+        '//pic.davdian.com/free/party/fail_icon4.png',
+        '//pic.davdian.com/free/party/success_icon3.png',
+        '//pic.davdian.com/free/party/explosion.png']);
+    }
+
+    /**
+     * 展示游戏
+     */
+    function showGame($game) {
+      var $redContainer = $("<div class='red_container'></div>");
+      $redContainer.append("<div class = 'heart'></div>");
+      $game.append($redContainer);
+      setTimeout(function () {
+        addRed($redContainer, 1);
+      }, 300);
+      loadImg(['//pic.davdian.com/free/party/fail_icon3.png', '//pic.davdian.com/free/party/success_icon1.png'])
+    }
+
+    /**
+     * 添加红包
+     */
+    function addRed($redContainer, redNum) {
+      var num = 50, removeTime = 4000;
+      var index = Math.ceil(Math.random() * 8) + 1;
+      var $red;
+      $red = $("<div class='red'><img src='//pic.davdian.com/free/party/bouns_icon" + index + ".png' alt=''></div>");
+      $red.css("left", (Math.random() * $redContainer.width())*0.8 + "px").css("top", '-100px');
+
+      $redContainer.append($red);
+
+      setTimeout(function () {
+        if (redNum < num) {
+          addRed($redContainer, ++redNum);
+        } else {
+          setTimeout(function () {
+            calculateResult();
+            $redContainer.remove();
+          }, removeTime);
+        }
+      }, 15000 / num);
+      setTimeout(function () {
+        $red && $red.length && $red.remove();
+      }, removeTime);
+      $red.on("mousedown touchstart", function (e) {
+        if (!$red.hasClass("clicked")) {
+          $red.addClass("clicked");
+          clickNum++;
+          $(this).addClass("boom").css("animation-play-state", "paused").find("img").attr("src", '//pic.davdian.com/free/party/explosion.png');
+          setTimeout(function () {
+            $red && $red.length && $red.remove();
+          }, 500)
+        }
+        event.preventDefault();
+        e.preventDefault();
+        return false;
+      })
+    }
+
+    /**
+     * 计算结果
+     */
+    function calculateResult() {
+      console.log("clickNum",clickNum);
+
+      if (clickNum > 0) {
+        showResult(bounsId);
+      } else {
+        showResult();
+      }
+      sessionStorage.setItem("20170420_hby",1);
+    }
+
+    window.calculateResult = calculateResult;
+
+    function r(list) {
+      var g = Math.random(), v = 0, theList = list[0];
+
+      console.log(list, g);
+      for (var i = 0; i < list.length; i++) {
+        v += +list[i].n;
+        if (v > g) {
+          theList = list[i];
+          break;
+        }
+      }
+      return theList.id;
+    }
+
+    /**
+     * 展示结果
+     * @param id
+     */
+    function showResult(id) {
+      $(document.body).removeClass("gaming");
+
+      var currents = new Date(),
+        dateYears = currents.getFullYear(),
+        dateMounth = currents.getMonth() + 1,
+        dateDay = currents.getDate(),
+        currentHour = currents.getHours(),
+        nextStr = "";
+
+      actTimeList.map(function (item, index) {
+        if (actTimeList[index+1]) {
+          var getMinutes = new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + actTimeList[index+1].beginTime).getMinutes();
+          getMinutes = getMinutes < 10 ? '0'+getMinutes : getMinutes;
+        }
+        var getMinutesTo = new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + actTimeList[0].beginTime).getMinutes();
+        getMinutesTo = getMinutesTo < 10 ? '0'+getMinutesTo : getMinutesTo;
+
+        if (currents.getTime() >= new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime() && currents.getTime() <= new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.overTime).getTime()) {
+          if (index == actTimeList.length-1) {
+            if (currents.getDate() == new Date(endTime).getDate()) {
+              nextStr = '';
+              isLastTime = true;
+            } else {
+              nextStr = "下一场糖果party开始时间：<br/>明天 "+ new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + actTimeList[0].beginTime).getHours() +":"+ getMinutesTo +":00";
+            }
+          } else {
+            nextStr = "下一场糖果party开始时间：<br/>今天 "+ new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + actTimeList[index+1].beginTime).getHours() +":"+ getMinutes +":00";
+          }
+        }
+      });
+      var $game = $(".game");
+      if (!id) {
+        isFirst = false;
+        var fStr = nextStr.indexOf('时间');
+        var second = nextStr.substring(0,fStr+3);
+        var tStr = nextStr.substring(fStr+3);
+        nextStr = second + " " + tStr;
+
+        var templateText = "<div class='result_container'>" +
+          "<div class='result result_none'><div class='img_con'>";
+        if (isLastTime) {
+          templateText += "<img src='//pic.davdian.com/free/party/fail_icon4.png'>";
+        } else {
+          templateText += "<img src='//pic.davdian.com/free/party/fail_icon3.png'>";
+        }
+
+        templateText += "<div class='text'>" + nextStr + "</div></div>" +
+          "<div class='close bounsColseBtn'><img src='//pic.davdian.com/free/2017/02/24/close_btn.png' alt=''></div> </div></div> ";
+
+        var $resultContainer = $(templateText);
+        $game.append($resultContainer);
+
+        $(".close").click(function () {
+          $(".game_container").hide();
+          $('html body').css({"overflow": "auto"})
+        });
+      } else {
+        console.log("抽中id为" + id + "的红包")
+        // if (clickNum >= 5) {
+        $.ajax({
+          url: bounsURL,
+          data:strSign({
+            lotteryActId: bounsId,
+          }),
+          type: 'POST',
+          cache: false,
+          dataType: "json",
+          success: function (result) {
+            if (result.code == 0) {
+              var data = result.data;
+              if (data.lotteryResult == 'success' && clickNum >= 5) {
+                var $resultContainer = $("<div class='result_container'>" +
+                  "<div class='result'><div class='img_con'>" +
+                  "<img src='//pic.davdian.com/free/party/success_icon3.png'>" +
+                  "<div class='text'>" + nextStr + "</div>" +
+                  "<div class='min_text'>满" + data.bonusInfo.minConsumePrice + "元可用</div>" +
+                  "<div class='num_text'><span class = 'num_text_icon'>¥</span>" +data.bonusInfo.bonusMoney+ "</div>" +
+                  "<div class='num_time'>有效期：" + data.bonusInfo.useBeginTime +"-"+data.bonusInfo.useEndTime +"</div>" +
+                  "<a class='look_red' href='/user_bonus.html?_refer=hongbaoyu'></a>" +
+                  "<div class='close bounsColseBtn'></div>" +
+                  "</div>" +
+                  "<div class='close bounsColseBtn'><img src='//pic.davdian.com/free/2017/02/24/close_btn.png' alt=''></div> </div></div> ")
+                $game.append($resultContainer);
+
+                $(".close").click(function () {
+                  $(".game_container").hide();
+                  $('html body').css({"overflow": "auto"})
+                });
+                if (!data.bonusInfo.minConsumePrice) {
+                  $(".min_text").hide();
+                };
+              } else {
+                showResult();
+              }
+            } else {
+              bravetime.info(result.data.msg);
+              $(".game_container").hide();
+              $('html body').css({"overflow": "auto"})
+            }
+          }, error: function () {
+            bravetime.info("网络异常，请稍后重试")
+            showResult();
+          }
+        });
+        // } else {
+        //   isFirst = false;
+        //   showResult();
+        // }
+      }
+      //点击关闭
+      (function () {
+        $(document).click('.bounsColseBtn',function () {
+          $(".game_container").remove();
+          $('html body').css({"overflow": "auto"})
+        })
+      })();
+    }
+
+    $(function () {
+      var tttt = Date.now();
+      // var tttt = currentTime*1000;
+
+      for(var i = 0,time;time = redChangeList[i++];){
+        if((new Date(time.startTime)).getTime()<=tttt&&(new Date(time.endTime)).getTime()>tttt){
+          var $changeList = $("<a><img></a>");
+          $(".red_change").append($changeList);
+          var $img =  $changeList.find("img");
+          $img.attr("src",time.pic);
+          $changeList.attr("href",time.href||"javascript::void()");
+        }
+      }
+    })
+  </script>
+  </body>
+</html>

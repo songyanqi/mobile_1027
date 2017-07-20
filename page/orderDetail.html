@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheet/order.css">
+    <title>订单详情</title>
+    <script type="text/javascript">
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+        // 发货提醒接口地址
+        var txUrl = "";
+        var orderId = "ds"; // 订单id ，用于关闭订单 删除订单
+        var deleteOrderUrl = "../data/deleteOrder.json";
+        var closeOrderUrl = "../data/closeOrder.json";
+        var orderListUrl = "fd";
+        var cancelOrderUrl = "../data/testCancel.json";
+        var arriveUrl = '../data/orderArrive_success.json'; // 确认收货地址
+        var arriveJumpUrl = '//nemo.davdian.com';
+    </script>
+</head>
+<body class="orderDetail">
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            订单详情
+        </div>
+        <div class="top_right">
+            <a href="" class="top_home">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="order_detail_container">
+    <div class="current_address dav-shadow">
+        <div class="info dav-red dav-small">
+            提示：您购买的这件商品是团购商品，需要成团之后才能发货；如果在规定时间内没有成团，您支付的款项将在2-7天退回到您的支付账户。
+        </div>
+    </div>
+    <div class="current_address dav-shadow">
+        <div class="info dav-red dav-small">
+            亲情提示：这是您的会员赠品，需要填写地址后才能成功领取，如果在截止时间年月日时分秒（会员赠品活动结束日期+7天）前没有填写地址，会员赠品则会失效，无法领取了。
+        </div>
+    </div>
+    <div class="order_index dav-shadow">
+        <div class="order_id">
+            <span class="dav-color6">订单编号：</span>
+            <span>345724356</span>
+            <span class='pull-right dav-red'>已发货/other</span>
+        </div>
+        <div class="order_date">
+            <span class="dav-color6">订单日期：</span>
+            <span>2015-04-27  10:23</span>
+        </div>
+    </div>
+
+
+    <!-- 没有身份证的情况 -->
+    <div class="order_address dav-shadow">
+        <div class="order_name">
+                <span>
+                    王志刚
+                </span>
+                <span class="pull-right">
+                    18601259686
+                </span>
+        </div>
+        <div class="order_address_detail dav-color6">
+            没有身份证的情况
+        </div>
+    </div>
+
+    <!--特殊时期开店成功才展示这个-->
+    <div class="order_detail_kd mt12 dav-shadow">
+        <div class="order_button_group"><i class="icon dav_icon_choice_selected_40_40"></i>
+            <span class="kd_text">开店成功</span>
+            <a class="dav-btn btn-white order-btn-red" href="">
+                免费领赠品
+            </a></div>
+
+    </div>
+
+    <!-- 订单处理情况 一旦支付成功就开始展示这个 -->
+    <div class="order_handle mt12 dav-shadow">
+        <ul>
+            <li><span></span>
+                <div class="left"><img src="//pic.davdian.com/free/order_head_pic_xl.png" style=" border-radius:32px;"></div>
+                <div class="right">
+                    <p class="dav-color9">2015-07-28  12:00:00</p>
+                    <p class="dav-color6 fz_14">订单支付成功，我们将尽快为您配货</p>
+                </div>
+            </li>
+            <li><span class="line"></span>
+                <div class="left"><img src="//pic.davdian.com/free/order_head_pic_ss.png" style=" border-radius:32px;"></div>
+                <div class="right">
+                    <p class="dav-color9">2015-07-28  12:00:00</p>
+                    <p class="dav-color6 fz_14">订单配货中，即将出库发货</p>
+                </div>
+            </li>
+            <li><span class="line"></span>
+                <div class="left"><img src="//pic.davdian.com/free/order_head_pic_xss.png" style=" border-radius:32px;"></div>
+                <div class="right">
+                    <p class="dav-color9">2015-07-28  12:00:00</p>
+                    <p class="dav-color6 fz_14">申请取消订单，待客服审核</p>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <!-- 没有身份证的情况 -->
+    <div class="order_address dav-shadow">
+        <div class="order_name">
+                <span>
+                    王志刚
+                </span>
+                <span class="pull-right">
+                    18601259686
+                </span>
+        </div>
+        <div class="order_address_detail dav-color6">
+            没有身份证的情况
+        </div>
+    </div>
+
+    <!-- 订单处理情况 一旦支付成功就开始展示这个 -->
+    <div class="order_handle mt12 dav-shadow">
+         <ul>
+             <li><span></span>
+                 <div class="left"><img src="//pic.davdian.com/free/order_head_pic_xl.png" style=" border-radius:32px;"></div>
+                 <div class="right">
+                     <p class="dav-color9">2015-07-28  12:00:00</p>
+                     <p class="dav-color6 fz_14">订单支付成功，我们将尽快为您配货</p>
+                 </div>
+             </li>
+             <li><span class="line"></span>
+                 <div class="left"><img src="//pic.davdian.com/free/order_head_pic_ss.png" style=" border-radius:32px;"></div>
+                 <div class="right">
+                     <p class="dav-color9">2015-07-28  12:00:00</p>
+                     <p class="dav-color6 fz_14">订单配货中，即将出库发货</p>
+                 </div>
+             </li>
+             <li><span class="line"></span>
+                 <div class="left"><img src="//pic.davdian.com/free/order_head_pic_xss.png" style=" border-radius:32px;"></div>
+                 <div class="right">
+                     <p class="dav-color9">2015-07-28  12:00:00</p>
+                     <p class="dav-color6 fz_14">申请取消订单，待客服审核</p>
+                 </div>
+             </li>
+             <li><span class="line"></span>
+                 <div class="left"><img src="//pic.davdian.com/free/order_head_pic_xss.png" style=" border-radius:32px;"></div>
+                 <div class="right">
+                     <p class="dav-color9">2015-07-28  12:00:00</p>
+                     <p class="dav-color6 fz_14">订单取消成功！</p>
+                 </div>
+             </li>
+             <li><span class="line"></span>
+                 <div class="left"><img src="//pic.davdian.com/free/order_head_pic_xl.png" style=" border-radius:32px;"></div>
+                 <div class="right">
+                     <p class="dav-color9">2015-07-28  12:00:00</p>
+                     <p class="dav-color6 fz_14" >退款完成，款项沿原路返回</p>
+                 </div>
+             </li>
+         </ul>
+    </div>
+
+    <!-- 没有身份证的情况 -->
+    <div class="order_address dav-shadow">
+        <div class="order_name">
+                <span>
+                    王志刚
+                </span>
+                <span class="pull-right">
+                    18601259686
+                </span>
+        </div>
+        <div class="order_address_detail dav-color6">
+            没有身份证的情况 北京市 朝阳区 阜通东大街方恒国际d座2810
+        </div>
+    </div>
+
+    <!-- 没有身份证的情况 -->
+    <div class="order_address dav-shadow">
+        <div class="order_name">
+                <span>
+                    王志刚
+                </span>
+                <span class="pull-right">
+                    18601259686
+                </span>
+        </div>
+        <div class="order_address_detail dav-color6">
+            没有身份证的情况
+        </div>
+    </div>
+
+    <!-- 有身份证的情况 -->
+    <div class="order_address dav-shadow">
+        <div class="order_name">
+                <span>
+                    王志刚
+                </span>
+                <span class="pull-right">
+                    18601259686
+                </span>
+        </div>
+        <div class="order_address_detail dav-color6">
+            有身份证的情况 北京市 朝阳区 阜通东大街方恒国际d座2810
+        </div>
+        <div class="order_address_more dav-color6">
+            <div>收货人身份证：130427100000000000</div>
+            <div>邮编：100000</div>
+        </div>
+    </div>
+
+    <!-- 已完成的情况-->
+    <!--<div class="order_goods_group mt12 dav-shadow">
+        <a class="order_goods_item" href="http://nemo.davdian.com">
+            <div class="order_good_img_container">
+                <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+            </div>
+            <div class="order_good_info_container dav-small">
+                <div class="order_good_name">贝亲 (Pigeon)食物研磨05008</div>
+                <div class="order_good_price">￥128.00 X 1</div>
+            </div>
+        </a>
+        <a class="order_goods_item" href="http://nemo.davdian.com">
+            <div class="order_good_img_container">
+                <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+            </div>
+            <div class="order_good_info_container dav-small">
+                <div class="order_good_name">贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨 05008</div>
+                <div class="order_good_price">￥128.00 X 1 <span class="dav-red">(已退货)</span></div>
+            </div>
+        </a>
+        <a class="order_goods_item" href="http://nemo.davdian.com">
+            <div class="order_good_img_container">
+                <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+            </div>
+            <div class="order_good_info_container dav-small">
+                <div class="order_good_name">贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨 05008 名字很长名字很长名字很长名字很长名字很长</div>
+                <div class="order_good_price">￥128.00 X 1</div>
+            </div>
+        </a>
+        <a class="order_goods_item" href="http://nemo.davdian.com">
+            <div class="order_good_img_container">
+                <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+            </div>
+            <div class="order_good_info_container dav-small">
+                <div class="order_good_name">贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨 05008
+                    名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长
+                </div>
+                <div class="order_good_price">￥128.00 X 1</div>
+            </div>
+        </a>
+
+        <div class="order_good_state">
+                <span class="dav-small dav-color-6">
+                    由大V店发货<span class="dav-red ">（已完成）</span>
+                </span>
+                <span class="dav-btn btn-white order-btn-red btn-small pull-right">
+                    再次购买
+                </span>
+        </div>
+    </div>-->
+
+
+    <!-- 已发货才有 下面注释的部分这个版本不要 -->
+    <!-- <div class="order_goods_group_wl_container  dav-color-6  dav-small">
+        <div class="order_goods_group_wl_con hide">
+            <div class="order_goods_group_wl_id">
+                <span>
+                    承运人：圆通快递
+                </span>
+                <span class="pull-right">
+                    订单编号:
+                    <a class="dav-green" href="//nemo.davdian.com">
+                        9199553506
+                    </a>
+                </span>
+            </div>
+            <div class="order_goods_group_wl_item">
+                <div class="order_goods_group_wl_inner">
+                    <div class="order_goods_group_wl_text">
+                        <div class="dav-normal">扫描地点：福建省莆田市公司，扫描信息：已收件 取件人：杨军</div>
+                        <div>2015-05-07  03:22</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order_goods_group_wl_item">
+                <div class="order_goods_group_wl_inner">
+                    <div class="order_goods_group_wl_text">
+                        <div class="dav-normal">比较短</div>
+                        <div>2015-05-07  03:22</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order_goods_group_wl_item">
+                <div class="order_goods_group_wl_inner">
+                    <div class="order_goods_group_wl_text">
+                        <div class="dav-normal">扫描地点：福建省莆田市公司，扫描信息：已收件 取件人：杨军</div>
+                        <div>2015-05-07  03:22</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order_goods_group_wl_item">
+                <div class="order_goods_group_wl_inner">
+                    <div class="order_goods_group_wl_text">
+                        <div class="dav-normal">扫描地点：福建省莆田市公司，扫描信息：已收件 取件人：杨军很长很长很长很长很长很长很长很长很长</div>
+                        <div>2015-05-07  03:22</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order_goods_group_wl_item">
+                <div class="order_goods_group_wl_inner">
+                    <div class="order_goods_group_wl_text">
+                        <div class="dav-normal">扫描地点：福建省莆田市公司，扫描信息：已收件 取件人：杨军超级超级长超级超级长超级超级长超级超级长超级超级长超级超级长超级超级长超级超级长超级超级长超级超级长超级超级长超级超级长</div>
+                        <div>2015-05-07  03:22</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="order_goods_group_button dav-green">
+            <span>展开物流信息</span>
+        </div>
+    </div> -->
+
+
+    <!-- 未发货的情况 --> <!-- data-for-order-id是子订单id -->
+    <div class="order_goods_group mt12 dav-shadow" data-for-order-id="11">
+
+        <a class="order_goods_item" href="//nemo.davdian.com">
+            <div class="order_good_img_container">
+                <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+            </div>
+            <div class="order_good_info_container dav-small">
+                <div class="order_good_name">贝亲 (Pigeon)食物研磨05008</div>
+                <div class="order_good_price">￥128.00 X 1</div>
+            </div>
+        </a>
+        <a href="###" class="returnGoodsMoneyButton">退货退款</a>
+
+        <a class="order_goods_item" href="//nemo.davdian.com">
+            <div class="order_good_img_container">
+                <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+            </div>
+            <div class="order_good_info_container dav-small">
+                <div class="order_good_name">贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨 05008</div>
+                <div class="order_good_price">￥128.00 X 1</div>
+            </div>
+        </a>
+        <a href="###" class="returnGoodsMoneyButton">退货退款</a>
+        <a class="order_goods_item" href="//nemo.davdian.com">
+            <div class="order_good_img_container">
+                <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+            </div>
+            <div class="order_good_info_container dav-small">
+                <div class="order_good_name">贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨 05008 名字很长名字很长名字很长名字很长名字很长</div>
+                <div class="order_good_price">￥128.00 X 1</div>
+            </div>
+        </a>
+        <a href="###" class="returnGoodsMoneyButton">退货退款</a>
+        <a class="order_goods_item" href="//nemo.davdian.com">
+            <div class="order_good_img_container">
+                <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+            </div>
+            <div class="order_good_info_container dav-small">
+                <div class="order_good_name">贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨 05008
+                    名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长
+                </div>
+                <div class="order_good_price">￥128.00 X 1</div>
+            </div>
+        </a>
+        <a href="###" class="returnGoodsMoneyButton">退货退款</a>
+
+        <div class="order_good_state">
+                <span class="dav-small dav-color-6">
+                    由大V店发货
+                </span>
+        </div>
+    </div>
+
+
+    <!-- 预售商品未发货的情况 --> <!-- data-for-order-id是子订单id -->
+    <div class="order_goods_group mt12 dav-shadow" data-for-order-id="11">
+        <a class="order_goods_item" href="//nemo.davdian.com">
+            <div class="order_good_img_container">
+                <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+            </div>
+            <div class="order_good_info_container dav-small">
+                <div class="order_good_name">贝亲 (Pigeon)食物研磨05008</div>
+                <div class="order_good_price">￥128.00 X 1</div>
+            </div>
+        </a>
+        <a class="order_goods_item" href="//nemo.davdian.com">
+            <div class="order_good_img_container">
+                <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+            </div>
+            <div class="order_good_info_container dav-small">
+                <div class="order_good_name">贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨 05008</div>
+                <div class="order_good_price">￥128.00 X 1</div>
+            </div>
+        </a>
+        <a class="order_goods_item" href="//nemo.davdian.com">
+            <div class="order_good_img_container">
+                <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+            </div>
+            <div class="order_good_info_container dav-small">
+                <div class="order_good_name">【预售】贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨 05008 名字很长名字很长名字很长名字很长名字很长</div>
+                <div class="order_good_price">￥128.00 X 1</div>
+            </div>
+        </a>
+        <a class="order_goods_item" href="//nemo.davdian.com">
+            <div class="order_good_img_container">
+                <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+
+                <div class="sale_prompt_text">预售</div>
+            </div>
+            <div class="order_good_info_container dav-small">
+                <div class="order_good_name">【预售】贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨 05008
+                    名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长
+                </div>
+                <div class="order_good_price">￥128.00 X 1</div>
+            </div>
+        </a>
+            <div class="order_goods_item presale_shop">
+                含预售商品，预计7月20日发货
+            </div>
+        <div class="order_good_state">
+                <span class="dav-small dav-color-6">
+                    由供应商发货
+                </span>
+        </div>
+    </div>
+
+
+    <div class="order_all mt12 clearfix">
+        <div class="order_all_price">
+            <div>商品总价：<span class="pull-right">¥597.00</span></div>
+            <div>优惠：<span class="pull-right">－ <span>¥59.00</span></span></div>
+            <div>商品总价：<span class="pull-right">＋ <span>¥57.00</span></span></div>
+        </div>
+        <div class="order_total_price">订单总价：<span class="pull-right dav-color-D73C6B">¥597.00</span></div>
+    </div>
+
+        <!--微信端联系客服-->
+        <div class="order_contact_con_pic mt12">
+            <img src="//pic.davdian.com/free/qr_2_press_2015_10_30.jpg">
+        </div>
+
+        <!--WAP端联系客服-->
+        <div class="order_contact_con mt12">
+            <div class="order_qr_codes">
+                <img src="//pic.davdian.com/free/qr_new.png" style="width:94px;">
+            </div>
+            <div class="order_contact"><h2>联系客服</h2>
+                微信扫二维码，关注此号，回复"<span class="color_FF4A7D">订单号+您的问题</span>"，立即获得售后服务
+            </div>
+        </div>
+
+
+    <!--app端联系客服-->
+    <div class="order_contact_con_app mt12">
+        <h2>联系客服</h2>
+            微信搜索并关注“<span class="color_D73C6B">果敢时代大V店</span>”公众号，回复"订单号+您的问题"，立即获得售后服务
+    </div>
+
+    <!--最新联系客服-->
+    <div class="Contact_Customer_Service mt12">
+        <span>联系客服</span>
+    </div>
+
+    <!--待发货-->
+    <div class="order_goods_state">
+        <!-- 有几个按钮就写几个，需要红色的就加class：order-btn-red -->
+        <a class="dav-btn btn-white order-btn-red order-tx">
+            提醒发货
+        </a>
+        <a class="dav-btn btn-white" href="./addaddress.html">
+            修改地址
+        </a>
+        <a class="dav-btn btn-white cancel_order">
+            取消订单
+        </a>
+    </div>
+
+    <!--取消审核中-->
+    <div class="order_goods_state hide">
+        <!-- 有几个按钮就写几个，需要红色的就加class：order-btn-red -->
+        <a class="dav-btn btn-white btn-disable">
+            取消审核中
+        </a>
+    </div>
+
+    <!--待收货-->
+    <div class="order_goods_state hide">
+        <!-- 有几个按钮就写几个，需要红色的就加class：order-btn-red -->
+        <span class="dav-btn btn-white order-btn-red order-arrive">
+                    确认收货
+        </span>
+        <a class="dav-btn btn-white" href="//nemo.davdian.com">
+            查看物流
+        </a>
+
+    </div>
+
+    <!--已完成-->
+    <div class="order_goods_state ">
+        <!-- 有几个按钮就写几个，需要红色的就加class：order-btn-red -->
+        <a class="dav-btn btn-white order-btn-red" href="/cart.html">
+                    再次购买
+        </a>
+
+        <!--此订单只有有多个商品的时候跳评价列表-->
+        <a class="dav-btn btn-white commentListBtn" data-href="http://joys.davdian.com/">
+            评价
+        </a>
+        <!--此订单只有一个商品的时候跳评价页面-->
+        <a class="dav-btn btn-white commentBtn" data-href="http://nemo.davdian.com/">
+            追加评价
+        </a>
+
+        <!--此订单已经评价及追加评价完成-->
+        <a class="dav-btn btn-white" href="http://nemo.davdian.com/">
+            查看评价
+        </a>
+
+        <a class="dav-btn btn-white" href="//nemo.davdian.com">
+            查看物流
+        </a>
+
+    </div>
+
+    <!--未付款-->
+    <div class="order_goods_state hide">
+        <!-- 有几个按钮就写几个，需要红色的就加class：order-btn-red -->
+        <a class="dav-btn btn-white order-btn-red" href="//nemo.davdian.com">
+            立即支付
+        </a>
+        <a class="dav-btn btn-white" href="//nemo.davdian.com">
+            找人代付
+        </a>
+        <a class="dav-btn btn-white cancel_order">
+            取消订单
+        </a>
+    </div>
+
+    <!--删除订单-->
+    <div class="order_goods_state hide">
+        <a class="dav-btn btn-white order-delete-order">
+        删除订单
+        </a>
+
+    </div>
+
+    <!--开店成功-->
+    <div class="order_goods_state hide">
+        <a class="dav-btn btn-white" href="//nemo.davdian.com">
+            查看物流
+        </a>
+    </div>
+
+
+</div>
+<div class='alertStyleMask'></div>
+<input type="" id='alertStyleContainerP1' name="" value='果敢时代大V店' style='height: 0;'>
+<!-- 未在微信中的提醒 -->
+<div class='alertStyle'>
+    <img src="//pic.davdian.com/free/2017/06/19/alert_top_bg.png" class='alertStyleTopImg'>
+    <div class='alertStyleContainer'>
+        <p class='alertStyleContainerP1'>请关注“果敢时代大V店”公众号</p>
+        <p class='alertStyleContainerP2'>请在微信中搜索公众号“果敢时代大V店”并关注，不关注公众号，可能无法找到订单、咨询售后</p>
+        <p class='alertStyleContainerBtn'>点我复制大V店公众号</p>
+    </div>
+</div>
+<!-- 微信中的提醒 -->
+<div class='alertStyle1'>
+    <img src="//pic.davdian.com/free/2017/06/19/alert_top_bg.png" class='alertStyleTopImg'>
+    <div class='alertStyleContainer1'>
+        <p class='alertStyleContainerP1'>请关注“果敢时代大V店”公众号</p>
+        <div class='alertStyleContainerP3'>
+            <p>不关注公众号</p>
+            <p>可能不能查看订单、咨询售后</p>
+        </div>
+        <img src="//pic.davdian.com/free/2017/06/21/scratch.png" class='alertStyleTopImg2'>
+        <p class='alertStyleContainerP4'>长按扫描二维码，关注公众号</p>
+    </div>
+</div>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script src="../javascript/jquery.cookie.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/order.js"></script>
+</body>
+</html>

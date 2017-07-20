@@ -1,0 +1,296 @@
+@import "../../../common/css/common.scss";
+
+// 文字颜色
+$color-red: #FF4A7D;
+
+body {
+  //background: #F7F7F7;
+  background: #f0f0f0;
+}
+
+.app {
+  position: relative;
+  color: #666;
+  font-size: ptr(12);
+  line-height: ptr(17);
+  box-sizing: border-box;
+  //padding-top: 44px;
+  //padding-bottom: ptr(100);
+  padding-bottom: 50px;
+}
+
+// 个人信息
+// 背景图原始比例176 X 68
+.g-info {
+  position: relative;
+  height: ptr(125);
+  background: url(../img/default-shop-bg.jpg) no-repeat center;
+  background-size: cover;
+  .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .setting {
+    position: absolute;
+    top: ptr(11);
+    left: ptr(15);
+    @include square(ptr(19));
+  }
+  .personal {
+    position: absolute;
+    bottom: 0.16rem;
+    padding: 0 ptr(20);
+    box-sizing: border-box;
+    width: 100%;
+    .head {
+      @include circle(ptr(60));
+      vertical-align: middle;
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    }
+    .info {
+      display: inline-block;
+      margin-left: ptr(10);
+      vertical-align: middle;
+      .nickname {
+        //margin-top: -0.03rem;
+        color: white;
+        font-size: ptr(14);
+        line-height: ptr(20);
+      }
+      .level {
+        margin-top: ptr(10);
+        height: ptr(22);
+        .pic {
+          height: ptr(14);
+        }
+      }
+    }
+  }
+}
+
+.g-feed {
+  // 分割线
+  .split-line-h {
+    margin: 0 ptr(10);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    transform: scaleY(0.5);
+  }
+
+  // 标题
+  .title {
+    background: white;
+    .btns {
+      display: flex;
+      padding: ptr(10);
+      line-height: ptr(20);
+      .name {
+        flex: 1;
+        display: block;
+        font-size: ptr(14);
+        text-align: left;
+      }
+      .more {
+        font-size: ptr(12);
+        color: #999;
+        .arrow {
+          position: relative;
+          top: ptr(2);
+          height: ptr(14);
+        }
+      }
+    }
+  }
+
+  // 订单
+  .body-order {
+    background: white;
+    // 订单按钮、功能按钮
+    .btns {
+      display: flex;
+      padding: 0.2rem 0 0.15rem 0;
+      .btn {
+        flex: 1;
+        display: block;
+        text-align: center;
+        .pic {
+          position: relative;
+          //margin-top: ptr(20);
+          display: inline-block;
+          img {
+            height: ptr(29);
+            vertical-align: middle;
+          }
+          .num {
+            position: absolute;
+            top: ptr(-7);
+            left: 55%;
+            font-size: ptr(10);
+            color: $color-red;
+            display: inline-block;
+            @include height(ptr(14));
+            min-width: ptr(10);
+            padding: 0 ptr(2);
+            border: 1px solid $color-red;
+            border-radius: ptr(10);
+            background: white;
+            white-space: nowrap;
+            font-style: normal;
+          }
+        }
+        .name {
+          //margin: ptr(0) 0 ptr(15) 0;
+          font-size: ptr(12);
+          color: #666;
+          @include height(ptr(17));
+        }
+      }
+    }
+  }
+
+  // 我的奖励
+  .body-prize {
+    background: white;
+    .btns {
+      padding: ptr(14) 0;
+      display: flex;
+      .btn {
+        flex: 1;
+        display: block;
+        text-align: center;
+        .num {
+          position: relative;
+          display: inline-block;
+          color: $color-red;
+          font-size: ptr(20);
+          @include height(ptr(28));
+          @include ellipsis;
+          overflow: visible;
+          .point {
+            position: absolute;
+            top: ptr(5);
+            right: ptr(-7);
+            @include circle(ptr(7));
+            background: #FF4A7D;
+          }
+          .unit {
+            font-size: ptr(12);
+          }
+        }
+        .name {
+          @include ellipsis;
+        }
+      }
+      .split-line-v {
+        margin-top: ptr(8);
+        height: ptr(29);
+        border-right: 1px solid #f0f0f0;
+        //transform: scaleX(0.5);
+      }
+    }
+  }
+
+  // 菜单
+  .body-menu {
+    background: white;
+    .btns {
+      display: flex;
+      padding: ptr(18) 0;
+      background: white;
+      .btn {
+        width: 25%;
+        //height: ptr(64);
+        text-align: center;
+        &:not(:nth-of-type(4n)) {
+          border-right: 1px solid #f0f0f0;
+        }
+        .pic {
+          //margin-top: ptr(10);
+          //height: ptr(22);
+          width: ptr(35);
+        }
+        .name {
+          //margin-top: ptr(5);
+        }
+      }
+    }
+  }
+}
+
+// 引导浮层
+.g-guide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.60);
+  .next-btn {
+    position: fixed;
+    margin-left: ptr(128);
+    bottom: ptr(60);
+    @include height(ptr(40));
+    width: ptr(120);
+    border-radius: ptr(20);
+    background-image: linear-gradient(-90deg, #FF7C7C 1%, #FF6A8B 100%);
+    font-size: ptr(14);
+    color: white;
+    text-align: center;
+    z-index: 1;
+  }
+  .guide-1 {
+    .pic-tip {
+      margin-top: ptr(77);
+      margin-left: ptr(90);
+      width: ptr(156);
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .guide-2 {
+    .pic-tip {
+      margin-top: ptr(165);
+      margin-left: ptr(29);
+      width: ptr(242);
+      position: relative;
+      z-index: 1;
+    }
+  }
+  .guide-3 {
+    .pic-tip {
+      position: relative;
+      margin-top: ptr(218);
+      margin-left: ptr(115);
+      width: ptr(159);
+      z-index: 1;
+    }
+    .next-btn {
+      &.iphone4 {
+        top: ptr(152);
+      }
+    }
+  }
+}
+
+// 引导目标元素(设置高亮)
+.g-guide-target-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.g-guide-target-2 {
+  position: relative;
+  z-index: 1;
+  .name {
+    color: white !important;
+  }
+}
+
+.g-guide-target-3 {
+  position: relative;
+  z-index: 1;
+}
+

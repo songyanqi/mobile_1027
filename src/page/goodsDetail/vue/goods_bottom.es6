@@ -1,0 +1,262 @@
+/**
+ * create by dony in 2017.03.13
+ **/
+import {  Group, Cell, XNumber,
+  Scroller, XInput } from 'vux';
+
+import Popup from "../../vux-fix/popup.vue";
+import confirm from './confirm.vue';
+import popup from '../../../common/js/module/popup.js';
+
+const GoodsBottom = {
+    components: {
+      Popup: Popup,
+      Group: Group,
+      Cell: Cell,
+      XNumber: XNumber,
+      Scroller: Scroller,
+      confirm: confirm,
+      XInput: XInput,
+    },
+    props: ['goodstatus','goodstatusonsale','goodstags', 'ismultigoods','goodslimitnum',
+        'goodsmodalobj', 'datarepresentid','isclose', 'handlechangenum',
+        'mayyoulikelist','relativegoodslist', 'cartnum', 'visitorstatus','infoobj',
+        'actendtime','isshowactive','islimitnum','spread','seckill',"parentid"],
+    data: () => {
+        return {
+          cartModal: false,
+          //购车数量
+          cartNum: 1,
+          //推荐展开和拉起
+          isSlide: true,
+          isOver: false,
+          tipsShow: false,
+          telVal: 0,
+          cartUrl: cartURL,
+          collected: 0,
+          //弹框是否是点击立即购买跳出来的
+          isBuyModal: false,
+        }
+    },
+    created () {
+        let that = this;
+        this.$root.eventHub.$on('time_over',(isover) => {
+            that.isOver = isover;
+        });
+    },
+
+    methods: {
+      //弹框弹出时，给body添加position:fixed；width: 100%;并且让body跳到当前位置。
+      handleModalShow() {
+        if (document.documentElement && document.documentElement.scrollTop) {
+          this.scrollTop = document.documentElement.scrollTop;
+        } else if (document.body) {
+          this.scrollTop = document.body.scrollTop;
+        }
+        document.body.style.top = -this.scrollTop + 'px';
+        document.body.classList.add("bodyFix");
+
+      },
+      //弹框消失时
+      handleModalHide() {
+        document.body.classList.remove("bodyFix");
+        document.body.scrollTop = this.scrollTop;
+      },
+      handleGuess (item) {
+        location.href = item.command.content;
+      },
+        //收藏
+        handleCollect (e) {
+            $.ajax({
+                url: collectURL,
+                type: 'GET',
+                dataType: 'JSON',
+                data: {
+                    id: this.parentid,
+                    collect: this.goodstatus.collected == 0 ? 1 : 0
+                },
+                success: (result) => {
+                    if (result.error == -1) {
+                        window.location.href = result.url;
+                    } else if (result.error) {
+                      popup.toast(result.msg,3000);
+
+                    } else {
+                      this.showToast = true;
+                      if (this.goodstatus.collected == 0) {
+                          this.goodstatus.collected = 1;
+                        popup.toast("收藏成功",3000);
+                      } else {
+                          this.goodstatus.collected = 0;
+                        popup.toast("取消成功",3000);
+                      }
+                    }
+                },
+                error (error) {
+                    console.log(error);
+                }
+            })
+        },
+        //多个商品时弹框
+        handleAddCart () {
+        //立即购买是否跳出弹框
+          this.isBuyModal = false;
+
+          this.cartModal = !this.cartModal;
+        },
+        //立即购买没选择时
+        handleAddCartBuy () {
+          //立即购买是否跳出弹框
+          this.isBuyModal = true;
+
+          this.cartModal = !this.cartModal;
+        },
+        // 点击单个商品的加入购物车
+        handleSingleCart () {
+            this.$emit('confirm-id','', 0);
+        },
+        handleModal () {
+        },
+        change (num) {
+            if (Number(this.goodslimitnum) == 0) {
+              this.goodslimitnum = 1;
+            }
+            if (Number(this.goodslimitnum) == Number(num)) {
+                if (Number(num) != 1) {
+                    $(".isLimit").animate({"opacity":"1"},200);
+                }
+                $(".vux-number-selector-plus").css({"background":"#eee"});
+                $(".vux-number-selector-plus path").css({"fill":"#bbb","stroke":"#bbb"});
+            } else {
+                $(".isLimit").animate({"opacity":"0"},200);
+                $(".vux-number-selector-plus").css({"background":"#fff"});
+                $(".vux-number-selector-plus path").css({"fill":"#666","stroke":"#666"});
+            }
+             this.$emit('change-cartnum',num);
+            this.cartNum = num;
+        },
+        handleTypes (items, item, e) {
+            if (item.isDisabled) {
+                return;
+            }
+            this.$emit('change-type',item);
+        },
+        handleModalConfirm (e) {
+            let dataId = e.target.getAttribute('dataid');
+            let isClose = e.target.getAttribute('isclose');
+            if (isClose) {
+                this.cartModal = !this.cartModal;
+            }
+
+            // this.$emit("confirm-id",dataId, 1);
+
+          //立即购买是否跳出弹框，区分是加入购物车还是立即购买
+          if (this.isBuyModal) {
+            this.$emit("confirm-id",dataId, 1);
+          } else {
+            this.$emit("confirm-id",dataId, 0);
+          }
+        },
+        //关闭弹窗
+        handleClose () {
+            this.cartModal = !this.cartModal;
+        },
+        handleBuy (e) {
+          if (Number(this.goodstatus.goodsStocks) <= 0) {
+            return;
+          }
+          let goodId = e.target.getAttribute('dataid');
+
+          if (this.seckill) {
+            if (this.ismultigoods) {
+              this.cartModal = !this.cartModal;
+            } else {
+              this.$emit('confirm-id', goodId, 1);
+            }
+          } else {
+            this.cartModal = !this.cartModal;
+          }
+
+          this.isBuyModal = true;
+        },
+        //点击推荐收起和展开
+        handleRecommendGoods () {
+            $(".other_goods").slideToggle();
+            $(".self-mask").toggleClass("vux-popup-show");
+            this.isSlide = !this.isSlide;
+
+            if (this.isSlide)  {
+                this.$emit('mask-modal',1);
+            } else {
+                this.$emit('mask-modal',0);
+            }
+        },
+        handleMask () {
+            $(".other_goods").slideUp();
+            $(".self-mask").removeClass("vux-popup-show");
+            this.isSlide = !this.isSlide;
+        },
+        //串商品
+        handleRelativeGoods (item, list, e) {
+            if (item.onSale == '0') {
+                return;
+            }
+            this.$emit("relative-goods",item);
+        },
+        //推广
+        handleSpread (e) {
+            window.location = this.spread;
+        },
+        //到货提醒ajax
+        getUrl (tel) {
+            let that = this;
+            let data = {
+                "c": "goods",
+                "a": "save_goods_stock_remind",
+                "goodId": this.datarepresentid,
+                "tel": tel,
+                "logRefererPage": "goods_detail",
+                "logRefererLocation": "guess"
+            }
+            $.ajax({
+                url: '/index.php',
+                type: "GET",
+                dataType: "JSON",
+                data,
+                success (res) {
+                  if (res.error_code) {
+                    popup.toast(res.error_msg);
+                  } else {
+                    popup.toast(res.error_msg);
+                  }
+                },
+                error (err) {
+                    console.log(err);
+                }
+            })
+        },
+        //到货提醒
+        handleTips () {
+            if (window.loginTel) {
+                this.getUrl(window.loginTel);
+            } else {
+                this.tipsShow = !this.tipsShow;
+            }
+        },
+        handleConfirm () {
+            this.getUrl(this.telVal);
+            this.tipsShow = false;
+        },
+        handleConfirmCancel () {
+          this.tipsShow = false;
+        },
+        hadleBlur (val) {
+            this.telVal = val;
+        },
+        //再逛逛；
+        handleLook () {
+            window.location.href = '/';
+        }
+    },
+};
+export default GoodsBottom;

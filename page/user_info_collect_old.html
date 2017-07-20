@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/user_info.css" rel="stylesheet">
+    <title>个人资料</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0,
+            btnOnHead: 1,    // 头部文字按钮
+            btnText: "编辑",     // 头部文字按钮文字
+            btnLink: "t-490.html"      // 头部文字按钮链接
+        };
+    </script>
+
+</head>
+<body>
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            个人资料
+        </div>
+        <div class="top_right">
+            <a class="top_btn" href="../user_info_collect_old_edit.html">
+                <span class="text_btn">编辑</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="user_info_list clearfix">
+    <div class="info_list one_border hairlines">
+        <ul>
+            <li class="border_inner"><span>您的生日</span><input type="date" value="2013-09-05" readonly="true"></li>
+            <li class="border_inner"><span>目前状态</span><input type="text" value="全职妈妈" readonly="true"></li>
+        </ul>
+    </div>
+</div>
+
+<div class="user_info_list clearfix">
+    <div class=" one_border hairlines">
+        <div class="info_title border_inner">大宝名片</div>
+    </div>
+    <div class="info_list one_border hairlines">
+        <ul>
+            <li class="border_inner"><span>宝宝名字</span><input type="text" value="哈哈" readonly="true"></li>
+            <li class="border_inner"><span>宝宝生日</span><input type="date" value="2013-09-05" readonly="true"></li>
+            <li class="border_inner"><span>宝宝性别</span><input type="text" value="小王子" readonly="true"></li>
+        </ul>
+    </div>
+</div>
+
+<div class="user_info_list clearfix">
+    <div class=" one_border hairlines">
+        <div class="info_title border_inner">小宝名片</div>
+    </div>
+    <div class="info_list one_border hairlines ">
+        <ul>
+            <li class="border_inner"><span>宝宝名字</span><input type="text" value="哈哈" readonly="true"></li>
+            <li class="border_inner"><span>宝宝生日</span><input type="date" value="2013-09-05" readonly="true"></li>
+            <li class="border_inner"><span>宝宝性别</span><input type="text" value="小王子" readonly="true"></li>
+        </ul>
+    </div>
+</div>
+
+<div class="user_info_list clearfix">
+    <div class=" one_border hairlines">
+        <div class="info_title border_inner">我的关注</div>
+    </div>
+    <div class="attention_list april_border hairlines clearfix">
+        <ul>
+            <li class="border_inner">妈妈课堂</li>
+            <li class="border_inner">开店指导</li>
+            <li class="border_inner">玩具尿裤</li>
+        </ul>
+    </div>
+</div>
+
+<div class="user_info_list clearfix">
+    <div class=" one_border hairlines">
+        <div class="info_title border_inner">我的爱好</div>
+    </div>
+    <div class="attention_list april_border hairlines clearfix">
+        <ul>
+            <li class="border_inner">妈妈课堂</li>
+            <li class="border_inner">开店指导</li>
+            <li class="border_inner">玩具尿裤</li>
+        </ul>
+    </div>
+</div>
+
+
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+
+</body>
+</html>

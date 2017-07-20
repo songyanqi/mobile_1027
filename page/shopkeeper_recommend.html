@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <!--app中去掉model.css-->
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <title>店主推荐</title>
+    <script>
+        var tj_id = 50;
+        var tj_path = 'shop_keeper';
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 1
+        };
+
+        var goodsUrl = "../module/goods2row.json";
+
+        var pageIndexStart = 2;
+        var pagesize = 10;
+
+    </script>
+</head>
+<!--app中去掉scroll_flag class-->
+<body class="scroll_flag">
+<!-- 头部  -->
+<!--app中去掉top0div-->
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            店主推荐
+        </div>
+    </div>
+</div>
+
+<!-- 排序 -->
+<div class="good_list_con shop_keeper">
+    <div class="shop_management"><a class="shop_management_btn" href="" >管理商品</a> </div>
+    <div class="good_list_2_row">
+        <a href="/1136.html?_refer=category_hot" class="good_item" data-dav-tj="category|hot_good|hot_good_1136|1|hot_good@category">
+            <div class="good_img_container">
+                <img data-original="//pic.davdian.com/images/201506/goods_img/1136_G_1434442104841.jpg@!es_w320h320_aq70"
+                     src="//pic.davdian.com/free/loading_320_320_v2.png">
+                <div class="tag tag3"></div>
+            </div>
+            <div class="good_con">
+                <div class="good_title">呀！屁股（一本畅销、幽默的屁股科普绘本。让你在喷饭大笑中，去了解你熟悉也陌生的屁股知识，一本适合用于开故事会的书，一本你拿起就放不下的书！耕林童书馆出品）</div>
+                <div class="fz_12">
+                    <span class="dav-color-price">¥18.00</span>
+                    <span class="lable">秒杀</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="/1136.html?_refer=category_hot" class="good_item" data-dav-tj="category|hot_good|hot_good_1136|1|hot_good@category">
+            <div class="good_img_container">
+                <img data-original="//pic.davdian.com/images/201506/goods_img/1136_G_1434442104841.jpg@!es_w320h320_aq70"
+                     src="//pic.davdian.com/free/loading_320_320_v2.png">
+                <div class="tag tag3"></div>
+            </div>
+            <div class="good_con">
+                <div class="good_title">呀！屁股（一本畅销、幽默的屁股科普绘本。让你在喷饭大笑中，去了解你熟悉也陌生的屁股知识，一本适合用于开故事会的书，一本你拿起就放不下的书！耕林童书馆出品）</div>
+                <div class="fz_12">
+                    <span class="dav-color-price">¥18.00</span>
+                    <span class="lable">秒杀</span>
+                </div>
+            </div>
+        </a>
+
+        <!--不到50个商品展示这个-->
+        <div  style="clear: both;"></div>
+        <div class="no_more">
+            没有更多商品了
+        </div>
+    </div>
+    <goods2row ng-model="goods"></goods2row>
+</div>
+
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script src="//apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../module/goods2row.js"></script>
+<script src="../cdn/jquery/jquery.lazyload.js"></script>
+</body>
+</html>

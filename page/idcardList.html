@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>证件信息</title>
+    <link href="../dist/idcardList.css" rel="stylesheet">
+    <script type="text/javascript">
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0,  // 头部分享按钮
+            btnOnHead:1,    // 头部文字按钮
+            btnText:"添加",     // 头部文字按钮文字
+            btnLink:"./idcardEdit.html?fromPage='+fromPage"      // 头部文字按钮链接
+        };
+
+        var idcardListUrl="../data/idcartList.json";//身份信息列表
+        var idcardDeleteUrl="../data/idcardDeleteUrl.json";//删除身份信息
+        var idcardCheckoutUrl="../data/checkout.json";//选择身份信息
+        var fromPage="checkout";//来自哪个页面
+        var idcardAddUrl="./idcardEdit.html";//身份信息列表页跳转身份信息编辑页
+    </script>
+</head>
+
+<body>
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            证件信息
+        </div>
+        <div class="top_right">
+            <a href="" class="top_btn">
+                <span class="border_btn">添加</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div id="idcardList">
+     <idcard-list></idcard-list>
+</div>
+
+<script src="//cdn.davdian.com/vue/2.0.5/vue.js"></script>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="//cdn.davdian.com/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script src="../dist/idcardList.js"></script>
+
+
+</body>
+</html>

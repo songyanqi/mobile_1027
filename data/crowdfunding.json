@@ -1,0 +1,22 @@
+{
+  "error": 0,
+  "msg": "",
+  "crowdfundingId": 1,
+  "currentMoney": 0,
+  "currentPeople": 0,
+  "remainDay": 10,
+  "goodsList": {
+    "567": {
+      "goodsPrice": "59.00",
+      "total": "100",
+      "remain": "100",
+      "current": 0
+    },
+    "568": {
+      "goodsPrice": "200.00",
+      "total": "100",
+      "remain": "100",
+      "current": 0
+    }
+  }
+}

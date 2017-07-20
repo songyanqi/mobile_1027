@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ch" ng-app="indexApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>哈爸大V店—MAMA+&nbsp;|&nbsp;大V店</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/share_red.css" rel="stylesheet">
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0,  // 头部分享按钮
+            btnOnHead: 0,    // 头部文字按钮
+            btnText: "",     // 头部文字按钮文字
+            btnLink: ""      // 头部文字按钮链接
+        };
+        /////////////////////微信分享/////////////////////
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+
+        var sendUrl = '../data/success.json';
+        var listUrl = "../data/list.json";
+        var pageIndexStart = 1;
+        var pageSize = 10;
+    </script>
+    <style>
+    </style>
+</head>
+<body style="background-color: #fff;" class="scroll_flag">
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            福利分享
+        </div>
+    </div>
+</div>
+
+
+<ul class="share_welfare_title">
+    <li class="hover flex-1" id="activity_info">
+        <div class="span_outer"><span>活动介绍</span></div>
+    </li>
+    <li class="flex-1" id="poster">
+        <div class="span_outer"><span>推广海报</span></div>
+    </li>
+</ul>
+
+<!--活动介绍-->
+<div class="activity_info">
+    <div class="activity_info_content">
+        <div class="activity_info_title">您是全国第1234位【为爱朗读】推广人</div>
+        <div class="activity_info_con">
+            <p>只有大V店的卖家用户才能成为【为爱朗读】推广人，并参与活动领取精美图书一本，活动规则如下：</p>
+            <p>1. 只有大V店卖家用户才可以参与免费领取图书活动</p>
+            <p>2. 卖家用户将福利福利分享页面或者推广海报分享给微信好友，即可邀请新用户领取20元红包</p>
+            <p><a href="">3. 当领取您分享的20元红包，并且完成注册的用户数到达10人，您就能收到我们寄送的精美图书一本哦~<span class="dav-color-price">免费领取图书</span><i class="get_books_arrow"></i></a></p>
+        </div>
+    </div>
+    <div class="share_WeChat">
+        <a href=""><div class="pull-left"><i class="share_WeChat_icon"></i>分享给微信好友</div><div class="pull-right"><i class="share_WeChat_arrow"></i></div></a>
+    </div>
+    <div class="share_red_title">领取了红包的用户：</div>
+    <div class="share_red_list">
+        <ul>
+            <li>
+                <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png"
+                                        src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+                <div class="con">
+                    <p>张晨<span class="registered">已注册</span></p>
+                    <p class="overflow">领取感想领取感想领取感想领</p>
+                </div>
+                <span class="price">30元</span>
+                <span class="date">2016/9/5</span>
+            </li>
+            <li>
+                <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png"
+                                        src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+                <div class="con">
+                    <p>张晨</p>
+                    <p class="overflow">领取感想领取感想领取感想领</p>
+                </div>
+                <span class="price">30元</span>
+                <span class="date">2016/9/5</span>
+            </li>
+            <li>
+                <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png"
+                                        src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+                <div class="con">
+                    <p>张晨</p>
+                    <p class="overflow">领取感想领取感想领取感想领</p>
+                </div>
+                <span class="price">30元</span>
+                <span class="date">2016/9/5</span>
+            </li>
+            <li>
+                <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png"
+                                        src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+                <div class="con">
+                    <p>张晨</p>
+                    <p class="overflow">领取感想领取感想领取感想领</p>
+                </div>
+                <span class="price">30元</span>
+                <span class="date">2016/9/5</span>
+            </li>
+            <li>
+                <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png"
+                                        src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+                <div class="con">
+                    <p>张晨</p>
+                    <p class="overflow">领取感想领取感想领取感想领</p>
+                </div>
+                <span class="price">30元</span>
+                <span class="date">2016/9/5</span>
+            </li>
+            <li>
+                <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png"
+                                        src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+                <div class="con">
+                    <p>张晨</p>
+                    <p class="overflow">领取感想领取感想领取感想领</p>
+                </div>
+                <span class="price">30元</span>
+                <span class="date">2016/9/5</span>
+            </li>
+            <li>
+                <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png"
+                                        src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+                <div class="con">
+                    <p>张晨</p>
+                    <p class="overflow">领取感想领取感想领取感想领</p>
+                </div>
+                <span class="price">30元</span>
+                <span class="date">2016/9/5</span>
+            </li>
+            <li>
+                <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png"
+                                        src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+                <div class="con">
+                    <p>张晨</p>
+                    <p class="overflow">领取感想领取感想领取感想领</p>
+                </div>
+                <span class="price">30元</span>
+                <span class="date">2016/9/5</span>
+            </li>
+            <li>
+                <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png"
+                                        src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+                <div class="con">
+                    <p>张晨</p>
+                    <p class="overflow">领取感想领取感想领取感想领</p>
+                </div>
+                <span class="price">30元</span>
+                <span class="date">2016/9/5</span>
+            </li>
+            <li>
+                <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png"
+                                        src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+                <div class="con">
+                    <p>张晨</p>
+                    <p class="overflow">领取感想领取感想领取感想领</p>
+                </div>
+                <span class="price">30元</span>
+                <span class="date">2016/9/5</span>
+            </li>
+            <li>
+                <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png"
+                                        src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+                <div class="con">
+                    <p>张晨</p>
+                    <p class="overflow">领取感想领取感想领取感想领</p>
+                </div>
+                <span class="price">30元</span>
+                <span class="date">2016/9/5</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--推广海报-->
+<div class="poster hide">
+    <div class="poster_btn">
+        <div class="share_btn pull-left" >分享图片至<i class="WeChat_icon"></i></div>
+        <div class="share_btn pull-right">分享图片至<i class="CircleOfFriends_icon"></i></div>
+    </div>
+    <div class="poster_pic"><img
+            src="http://img.vyohui.cn/api_act.php?app=1&t=1476177754&key=e681735f63509487677b565518b057cf&user_id=115173&wap=1"
+            alt=""></div>
+    <div class="activity_info_title">长按图片保存到手机</div>
+</div>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script src="../javascript/jweixin-1.0.0.js"></script>
+<script src="../cdn/jquery/jquery.lazyload.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/share_red.js"></script>
+
+</body>
+</html>

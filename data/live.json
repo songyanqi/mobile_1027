@@ -1,0 +1,36 @@
+[
+  { "id":9999,
+    "objectName":1,
+    "headImage":"//pic.davdian.com/free/2016/03/10/1280_1280_fdb0b10b9d012d7edffb2dc0872a487b.jpg",
+    "fromUserName":"lianzi",
+    "content":"ninini"
+  },
+  { "id":10001,
+    "objectName":2,
+    "headImage":"//pic.davdian.com/free/2016/03/10/1280_1280_fdb0b10b9d012d7edffb2dc0872a487b.jpg",
+    "fromUserName":"lianzi",
+    "content":"//pic.davdian.com/free/dianzhutouxiang_demo.jpg",
+    "imageUri":"//pic.davdian.com/free/dianzhutouxiang_demo.jpg"
+  },
+  { "id":10002,
+    "objectName":2,
+    "headImage":"//pic.davdian.com/free/2016/03/10/1280_1280_fdb0b10b9d012d7edffb2dc0872a487b.jpg",
+    "fromUserName":"lianzi",
+    "content":"//pic.davdian.com/free/dianzhutouxiang_demo.jpg",
+    "imageUri":"//pic.davdian.com/free/dianzhutouxiang_demo.jpg"
+  },
+  { "id":10003,
+    "objectName":2,
+    "headImage":"//pic.davdian.com/free/2016/03/10/1280_1280_fdb0b10b9d012d7edffb2dc0872a487b.jpg",
+    "fromUserName":"lianzi",
+    "content":"//pic.davdian.com/free/dianzhutouxiang_demo.jpg",
+    "imageUri":"//pic.davdian.com/free/dianzhutouxiang_demo.jpg"
+  },
+  { "id":99999,
+    "objectName":2,
+    "headImage":"//pic.davdian.com/free/2016/03/10/1280_1280_fdb0b10b9d012d7edffb2dc0872a487b.jpg",
+    "fromUserName":"lianzi",
+    "content":"//pic.davdian.com/free/dianzhutouxiang_demo.jpg",
+    "imageUri":"//pic.davdian.com/free/dianzhutouxiang_demo.jpg"
+  }
+]

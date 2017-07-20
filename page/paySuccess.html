@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <title>支付成功</title>
+    <script>
+        var goodsUrl = "../data/goodUrl";
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 1,   // 头部首页按钮
+            shareOnHead: 0
+        };
+    </script>
+</head>
+<body style="padding-bottom: 20px;">
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            支付成功
+        </div>
+        <div class="top_right">
+            <a href="" class="top_home">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<!--支付成功有商品群的情况-->
+<div class="paysuccess-container">
+    购买<span class="dav-red">《我爸爸我妈妈》</span>可加入微信读书交流群。读好书，成为更好的妈妈。
+</div>
+
+<!--微信端联系客服-->
+<div class="paysuccess_customer_service_pic">
+    <img src="//pic.davdian.com/free/qr_2_press_2015_10_30.jpg" style="width: 100%">
+</div>
+
+<!--WAP端联系客服-->
+<div class="paysuccess_customer_service">
+    <div class="order_qr_codes">
+        <img src="//pic.davdian.com/free/qr_new.png" style="width:94px;">
+    </div>
+    <div class="order_contact"><h2>联系客服</h2>
+        微信扫二维码，关注此号，回复"<span class="color_FF4A7D">订单号+您的问题</span>"，立即获得售后服务
+    </div>
+</div>
+
+<div class="paysuccess_text">
+    <i class="paysuccess_icon"></i>支付成功！
+</div>
+
+
+<div class="paysuccess_recommend">
+    <div class="paysuccess_recommend_title">
+        <div class="text">热销商品推荐</div>
+    </div>
+</div>
+
+
+<div class="paysuccess_address">
+    <!--下面这个a标签可以修改地址就拍链接,否则就拍下面的javascript-->
+    <a href="javascript:bravetime.info('已发货无法修改地址');">
+        <div class="paysuccess_address_tilte"><i class="paysuccess_address_icon"></i>收货地址<span
+                class="pull-right dav-color6 fz_12">去修改<i class="dav_icon_arrow"></i></span></div>
+    </a>
+    <div class="paysuccess_address_content">
+        <p class="fz_13">哈爸<span class="pull-right">18233019778</span></p>
+        <p class="dav-color6 fz_12">北京市 朝阳区 融科望京中心B座506</p>
+    </div>
+    <div class="center">
+        <a href="" class="paysuccess_btn mr_35">订单详情</a>
+        <a href="/" class="paysuccess_btn">回首页</a>
+    </div>
+</div>
+
+<div class="good_list_con paysuccess_goods_list">
+    <div class="good_list_2_row">
+        <a href="//nemo.davdian.com/327.html" class="good_item" data-url="//nemo.davdian.com/327.html">
+            <div class="good_img_container">
+                <!-- 图片真实地址放在data-original中 -->
+                <img data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg" src="//pic.davdian.com/free/loading_320_320_v2.png">                <!-- 商品售罄的显示-->
+                <div class="good_list_sell_out">售罄</div>
+                <!-- 多倍佣金-->
+                <div class="pic_info">2.0倍佣金</div>
+        </div>
+        <div class="good_con">
+            <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            <div class="fz_12">
+                <span class="dav-color-price">¥ 116.00</span>
+                <span class="lable">秒杀</span>
+            </div>
+        </div>
+    </a><a href="//nemo.davdian.com/327.html" class="good_item"
+           data-url="//nemo.davdian.com/327.html">
+        <div class="good_img_container">            <!-- 图片真实地址放在data-original中 --> <img
+                data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                src="//pic.davdian.com/free/loading_320_320_v2.png">            <!-- 商品售罄的显示-->
+            <div class="good_list_sell_out">售罄</div>
+            <div class="pic_info">2.0倍佣金</div>
+        </div>
+        <div class="good_con">
+            <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            <div class="fz_12">
+                <span class="dav-color-price">¥ 116.00</span>
+                <span class="lable">秒杀</span>
+            </div>
+        </div>
+    </a><a href="//nemo.davdian.com/327.html" class="good_item"
+           data-url="//nemo.davdian.com/327.html">
+        <div class="good_img_container">            <!-- 图片真实地址放在data-original中 --> <img
+                data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                src="//pic.davdian.com/free/loading_320_320_v2.png">            <!-- 商品售罄的显示-->
+            <div class="good_list_sell_out">售罄</div>
+            <div class="pic_info">2.0倍佣金</div>
+        </div>
+        <div class="good_con">
+            <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            <div class="fz_12">
+                <span class="dav-color-price">¥ 116.00</span>
+                <span class="lable">秒杀</span>
+            </div>
+        </div>
+    </a> <a href="//nemo.davdian.com/327.html" class="good_item"
+            data-url="//nemo.davdian.com/327.html">
+        <div class="good_img_container">                <!-- 图片真实地址放在data-original中 --> <img
+                data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                src="//pic.davdian.com/free/loading_320_320_v2.png">                <!-- 商品售罄的显示-->
+            <div class="good_list_sell_out">售罄</div>
+            <div class="pic_info">2.0倍佣金</div>
+        </div>
+        <div class="good_con">
+            <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            <div class="fz_12">
+                <span class="dav-color-price">¥ 116.00</span>
+            </div>
+        </div>
+    </a> <a href="//nemo.davdian.com/327.html" class="good_item"
+            data-url="//nemo.davdian.com/327.html">
+        <div class="good_img_container">                <!-- 图片真实地址放在data-original中 --> <img
+                data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                src="//pic.davdian.com/free/loading_320_320_v2.png">                <!-- 商品售罄的显示-->
+            <div class="good_list_sell_out">售罄</div>
+            <div class="pic_info">2.0倍佣金</div>
+        </div>
+        <div class="good_con">
+            <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            <div class="fz_12">
+                <span class="dav-color-price">¥ 116.00</span>
+                <span class="lable">秒杀</span>
+            </div>
+        </div>
+    </a> <a href="//nemo.davdian.com/327.html" class="good_item"
+            data-url="//nemo.davdian.com/327.html">
+        <div class="good_img_container">                <!-- 图片真实地址放在data-original中 --> <img
+                data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                src="//pic.davdian.com/free/loading_320_320_v2.png">                <!-- 商品售罄的显示-->
+            <div class="good_list_sell_out">售罄</div>
+            <div class="pic_info">2.0倍佣金</div>
+        </div>
+        <div class="good_con">
+            <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            <div class="fz_12">
+                <span class="dav-color-price">¥ 116.00</span>
+                <span class="lable">秒杀</span>
+            </div>
+        </div>
+    </a></div>
+</div>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+</body>
+</html>

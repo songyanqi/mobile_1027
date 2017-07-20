@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>订单确认</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/cartConfirm.css" rel="stylesheet">
+    <link href="../stylesheet/account.css" rel="stylesheet">
+    <script type="text/javascript">
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+
+        window.orderAmount = 341;
+        var payActionUrl = "/vdone.html"; // 支付请求action
+        var changeUrl = ""; //更改红包url
+        var defaultBonusId = 0;
+        var payPasswordUrl="../data/payPassword.json"//佣金确认使用请求
+        window.addressId=222;
+        window.line_price = 59;  // 判断是否需要邮费的金额
+        window.fee_price = 5; //邮费金额
+        var idcard_id="";//身份证信息id
+        var idcardListUrl="./idcardList.html";//跳转身份证信息列表链接
+    </script>
+</head>
+<body>
+<div class="js-to-hide-cart">
+    <div class="top0">
+        <div class="top_container">
+            <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+            <div class="top_left">
+                <a class="top_back" href="javascript:history.back();">
+                    <span class="home_arrow"></span>
+                </a>
+            </div>
+            <div class="title_container">
+                订单确认页
+            </div>
+        </div>
+    </div>
+
+    <div class="current_address">
+        <div class="info dav-red dav-small">
+            提示：您购买的这件商品是团购商品，需要成团之后才能发货；如果在规定时间内没有成团，您支付的款项将在2-7天退回到您的支付账户。
+        </div>
+    </div>
+
+    <div class="cart_confirm_container">
+        <a href="">
+        <div class="add_address_con mt_10">
+                <span class="bouns_text fz_14">暂无地址，马上添加</span>
+                <i class="pull-right add_address_arrow"></i>
+        </div>
+        </a>
+
+        <div class="change_address_container mt_10">
+            <a href="./addressList.html">
+                <div class="base_address">
+                    <span class="name">
+                        王志东
+                    </span>
+                    <span class="tel">
+                        18812345678
+                    </span>
+
+                    <div class="address_detail">
+                        北京市 朝阳区 阜通东大街方恒国际d座2810
+                    </div>
+                    <span class="change_link">更换<i class="arrow_icon"></i></span>
+                </div>
+            </a>
+        </div>
+
+        <div class="good_list_container dav-shadow mt12 limit_goods_list">
+            <div class="list_title"><span>!</span>以下商品不支持 乌鲁木齐 地址发货，请去 购物车修改 或 重新下单</div>
+            <div class="good_list_1_row">
+                <div class="good_item">
+                    <div class="img_container">
+                        <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+
+                    </div>
+                    <div class="good_info_container">
+                        <div class="good_title">
+                            贝亲 (Pigeon)食物研磨贝亲 (Pigeon)食物研磨 贝亲 (Pigeon)食物研磨 贝亲 (Pigeon)食物研磨
+                        </div>
+                        <div class="good_price">
+                                <span class="dav-price">
+                                    <span class="dav-small">￥</span>128.00
+                                </span>
+                            <span> X 1</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="good_item">
+                    <div class="img_container">
+                        <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+
+                    </div>
+                    <div class="good_info_container">
+                        <div class="good_title">
+                            贝亲 (Pigeon)食物研磨贝亲 (Pigeon)食物研磨 贝亲 (Pigeon)食物研磨 贝亲 (Pigeon)食物研磨
+                        </div>
+                        <div class="good_price">
+                                <span class="dav-price">
+                                    <span class="dav-small">￥</span>128.00
+                                </span>
+                            <span> X 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="address_container mt_10 clearfix">
+            <div class="other_address idcard">
+                <span class="title">身份证</span>
+                <div class="id_input_container" id="idcard"></div>
+                <span class="perfectInfo">完善身份信息<i class="arrow_icon"></i></span>
+            </div>
+
+            <div class="id_card_verification">
+                提示：含有海外商品，货物经过海关时，需对收货人进行实名认证，并提供身份证照片，错误信息可能导致无法正常清关
+            </div>
+            <div class="other_address">
+                <span class="title">邮编 :</span>
+                <div class="youbian_input_container">
+                    <div class="zipcode hide">222222</div>
+                    <input class="cart_confirm_zipcode" type="text" placeholder="请填写邮编" id="zipcode">
+                </div>
+            </div>
+        </div>
+
+        <div class="cart_confirm_list mt_10">
+            <ul>
+                <li class="bouns_con">
+                    <div class="bouns_title">
+                        <span class="bouns_text fz_14">使用红包</span>
+                        <span class="choice_bouns pull-right right"><span class="bonus_num">10元</span> <i class="icon"></i></span>
+                    </div>
+                </li>
+                <li class="commission_con">
+                     <span class="bouns_text fz_14">使用佣金</span>
+                     <span class="pull-right right"><span class="password enter_password">输密码可使用</span> <i class="icon"></i></span>
+                </li>
+            </ul>
+        </div>
+
+
+
+
+        <div class="good_list_container dav-shadow mt12">
+            <div class="list_title">商品列表</div>
+            <div class="good_list_1_row">
+                <div class="good_item">
+                    <div class="img_container">
+                        <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+
+                        <div class="sale_prompt_text">预售</div>
+                    </div>
+                    <div class="good_info_container">
+                        <div class="good_title">
+                            贝亲 (Pigeon)食物研磨贝亲 (Pigeon)食物研磨 贝亲 (Pigeon)食物研磨 贝亲 (Pigeon)食物研磨
+                        </div>
+                        <div class="good_price">
+                                <span class="dav-price">
+                                    <span class="dav-small">￥</span>128.00
+                                </span>
+                            <span> X 1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="good_item">
+                    <div class="img_container">
+                        <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+                    </div>
+                    <div class="good_info_container">
+                        <div class="good_title">
+                            贝亲 (Pigeon)食物研磨贝亲
+                        </div>
+                        <div class="good_price">
+                                <span class="dav-price">
+                                    <span class="dav-small">￥</span>128.00
+                                </span>
+                            <span> X 1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="good_item">
+                    <div class="img_container">
+                        <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+                    </div>
+                    <div class="good_info_container">
+                        <div class="good_title">
+                            贝亲 (Pigeon)食物研磨贝亲 (Pigeon)食物研磨 贝亲 (Pigeon)食物研磨 贝亲 (Pigeon)食物研磨
+                        </div>
+                        <div class="good_price">
+                                <span class="dav-price">
+                                    <span class="dav-small">￥</span>128.00
+                                </span>
+                            <span> X 1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="good_item">
+                    <div class="img_container">
+                        <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+                        <div class="dvd_gift">赠品</div>
+                    </div>
+                    <div class="good_info_container">
+                        <div class="good_title">
+                            贝亲 (Pigeon)食物研磨贝亲
+                        </div>
+                        <div class="good_price">
+                                <span class="dav-price">
+                                    <span class="dav-small">￥</span>128.00
+                                </span>
+                            <span> X 1</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="other_info mt12">
+            <input placeholder="备注信息、给商家留言，选填" id="note">
+        </div>
+
+        <div class="price_info mt12 dav-shadow">
+            <div class="price_reduce info_item">
+                <div class="price_item">
+                    <span class="item_title">商品总额 : </span>
+                    <span class="item_num dav-price">￥359.00</span>
+                </div>
+                <div class="price_item">
+                    <span class="item_title">满立减 : </span>
+                    <span class="item_num dav-price">-￥9.00</span>
+                </div>
+                <div class="price_item">
+                    <span class="item_title">享折扣 : </span>
+                    <span class="item_num dav-price">-￥9.00</span>
+                </div>
+                <div class="price_item">
+                    <span class="item_title">使用红包 : </span>
+                    <span class="item_num dav-price" id="reduce_bouns">-￥10.00</span>
+                </div>
+                <div class="price_item">
+                    <span class="item_title">使用佣金 : </span>
+                    <span class="item_num dav-price" id="brokerage">-￥0.00</span>
+                </div>
+            </div>
+            <div class="price_zeng info_item">
+                <div class="price_item">
+                    <span class="item_title">返红包 : </span>
+                    <span class="item_num dav-price">￥9.00</span>
+                </div>
+                <div class="price_item">
+                    <span class="item_title">满就送 : </span>
+                    <span class="item_num dav-price">巴士快递费按实际的浪费金额卡拉胶上岛咖啡看看就苦上加苦斯柯达积分</span>
+                </div>
+                <div class="price_item">
+                    <span class="item_title">赠品 : </span>
+                    <span class="item_num dav-price">我宝宝我妈妈</span>
+                </div>
+            </div>
+            <div class="price_add info_item">
+                <div class="price_item">
+                    <span class="item_title">邮费 : </span>
+                    <span class="item_num dav-price">￥0.00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart_confirm_picc mt20">
+            正品由<span class="picc_pic"></span>保险承保
+        </div>
+
+    </div>
+
+    <!--<div class="cart_confirm_bottom_container dav-shadow">-->
+        <!--<input type="hidden" id="order_id" value="0">-->
+
+        <!--<div class="back dav-btn btn-orange btn-small pull-left">-->
+            <!--返回-->
+        <!--</div>-->
+        <!--<div class="buy dav-btn btn-red btn-small pull-right ">-->
+            <!--去支付-->
+        <!--</div>-->
+        <!--<div class="bottom_price">-->
+            <!--<span class="fz_12">应付:</span>-->
+            <!--<span class="dav-price fz_14" id="all_price_reduce_bouns"><span class="fz_12">￥</span>331.00</span>-->
+        <!--</div>-->
+    <!--</div>-->
+
+  <div class="cart_confirm_bottom_container dav-shadow" style = "height: auto">
+    <input type="hidden" id="order_id" value="0">
+    <!--新增蒙层-->
+    <div class = "confirm_tips">本次购物可获得¥ <span>20</span>返现，订单完成后在 [我的]-[我的奖励] 中查看。</div>
+    <!--<div class = "confirm_mem">-->
+      <!--<span class = "comfirm_mem_tips">会员下单立返：¥ <span>20</span></span>-->
+      <!--<a class = "comfirm_mem_open">开通会员</a>-->
+    <!--</div>-->
+    <div class = "newConfirm_nav">
+      <div class = "newConfirm_left"><span class = "newConfirm_l_tips">应付: </span><span class = "newConfirm_money" id="all_price_reduce_bouns">￥331.00</span></div>
+      <div class = "newConfirm_right disableGray">去支付</div>
+      <!--<div class="back dav-btn btn-orange btn-small pull-left">-->
+        <!--返回-->
+      <!--</div>-->
+      <!--<div class="buy dav-btn btn-red btn-small pull-right ">-->
+        <!--去支付-->
+      <!--</div>-->
+      <!--<div class="bottom_price">-->
+        <!--<span class="fz_12">应付:</span>-->
+        <!--<span class="dav-price fz_14" id="all_price_reduce_bouns"><span class="fz_12">￥</span>331.00</span>-->
+      <!--</div>-->
+    </div>
+  </div>
+</div>
+<div class="account_bouns js-to-hide-bonus hide">
+    <div class="top0">
+        <div class="top_container">
+            <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+            <div class="top_left">
+                <a class="top_back" href="javascript:history.back();">
+                    <span class="home_arrow"></span>
+                </a>
+            </div>
+            <div class="title_container">
+                订单确认页
+            </div>
+        </div>
+    </div>
+
+    <div class="clearfix not_used_red">
+        暂不使用红包<span class="selected_state_small_default"></span>
+    </div>
+
+    <div class="bouns_list">
+        <!--默认选中红包-->
+        <div class="bouns_item bouns_red" data-for-min-amount="50" data-for-num="10" data-for-id="756507" data-dav-tj="cart_confirm|change_bonus|change_bonus|1|change_bonus@cart_confirm">
+            <div class="topbg">
+                <span class="topbg_pic"></span>
+            </div>
+            <div class="con">
+                <div class="red_type">现金劵</div>
+                <div class="price clearfix">
+                    <div class="pull-left">
+                        <span>¥</span>10
+                    </div>
+                    <div class="pull-right">
+                        <div class="fz_14 title">新人专享</div>
+                        <div class="fz_12 condition">满80元使用</div>
+                        <div class="fz_10">有效期：2016.3.28 - 2016.4.30</div>
+                    </div>
+                </div>
+                <div class="instructions">限绘本节活动期间使用</div>
+            </div>
+            <div class="selected_state_default selected_state_selected"></div>
+        </div>
+        <!--未选中红包-->
+        <div class="bouns_item bouns_red"  data-for-min-amount="50" data-for-num="20" data-for-id="756507">
+            <div class="topbg">
+                <span class="topbg_pic"></span>
+            </div>
+            <div class="con">
+                <div class="red_type">现金劵</div>
+                <div class="price clearfix">
+                    <div class="pull-left">
+                        <span>¥</span>20
+                    </div>
+                    <div class="pull-right">
+                        <div class="fz_14 title">新人专享</div>
+                        <div class="fz_12 condition">满80元使用</div>
+                        <div class="fz_10">有效期：2016.3.28 - 2016.4.30</div>
+                    </div>
+                </div>
+                <div class="instructions">限绘本节活动期间使用</div>
+            </div>
+            <div class="selected_state_default"></div>
+        </div>
+        <!--不能使用红包-->
+        <div class="bouns_item bouns_pink"  data-for-min-amount="50" data-for-num="30" data-for-id="756507">
+            <div class="topbg">
+                <span class="topbg_pic"></span>
+            </div>
+            <div class="con">
+                <div class="red_type">现金劵</div>
+                <div class="price clearfix">
+                    <div class="pull-left">
+                        <span>¥</span>30
+                    </div>
+                    <div class="pull-right">
+                        <div class="fz_14 title">新人专享</div>
+                        <div class="fz_12 condition">满80元使用</div>
+                        <div class="fz_10">有效期：2016.3.28 - 2016.4.30</div>
+                    </div>
+                </div>
+                <div class="instructions">全场通用</div>
+            </div>
+            <div class="selected_state_default"></div>
+        </div>
+
+    </div>
+</div>
+
+<div class="js-to-hide-commission hide">
+    <div class="top0">
+        <div class="top_container">
+            <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+            <div class="top_left">
+                <a class="top_back" href="javascript:history.back();">
+                    <span class="home_arrow"></span>
+                </a>
+            </div>
+            <div class="title_container">
+                订单确认页
+            </div>
+        </div>
+    </div>
+
+    <div class="commission_list_con">
+        <ul>
+            <li class="no_commission hide">不使用佣金<span class="pull_right"><i class="arrow"></i></span></li>
+            <li>当前佣金<span class="pull_right"><span class="fz_14">6元</span></span></li>
+            <li>
+                <p>本次可使用</p>
+                <p class="fz_12 dav-color-price mt_5">最多可使用订单金额的20%哦</p>
+                <span class="pull_right"><span class="fz_14 be_usable">6.00元</span></span>
+            </li>
+            <!--未设置密码显示-->
+            <li><a href=""> 设置支付密码后可使用佣金<span class="pull_right"><span class="dav-color-price">设置密码</span><i class="arrow"></i></span></a></li>
+        </ul>
+        <!--已设置密码显示-->
+        <div class="enter_password_con">
+            <div class="mb_30"><input type="password" placeholder="输入支付密码" class="enter_password_input"></div>
+            <div class="sure_use btn_red">确认使用</div>
+        </div>
+    </div>
+</div>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="//fe.davdian.com/wap/17225/cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+
+<!--<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>-->
+<script type="text/javascript" src="../javascript/jquery.cookie.js"></script>
+<script type="text/javascript" src="../javascript/iscroll.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../dist/cartConfirm.js"></script>
+</body>
+</html>

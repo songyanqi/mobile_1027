@@ -1,0 +1,55 @@
+{
+  "code": 0,
+  "msg": "success",
+  "data": [
+    {
+      "href":"http://murphylee.davdian.com",
+      "img_url":"//pic.davdian.com/activity/2015/11/26/640_240_6470a6b69df7a7a40dd48d1fc5ea6039.jpg",
+      "img_url_original":"//pic.davdian.com/activity/2015/11/26/640_240_6470a6b69df7a7a40dd48d1fc5ea6039.jpg",
+      "vip_good_title":"<可可西里>,遥远的大山,美丽的姑娘!",
+      "vip_price":"1129",
+      "not_vip_price":"2344",
+      "stock":"999"
+    },{
+      "href":"http://murphylee.davdian.com",
+      "img_url":"//pic.davdian.com/activity/2015/11/26/640_240_6470a6b69df7a7a40dd48d1fc5ea6039.jpg",
+      "img_url_original":"//pic.davdian.com/activity/2015/11/26/640_240_6470a6b69df7a7a40dd48d1fc5ea6039.jpg",
+      "vip_good_title":"<可可西里>,遥远的大山,美丽的姑娘!",
+      "vip_price":"1129",
+      "not_vip_price":"2344",
+      "stock":"999"
+    },{
+      "href":"http://murphylee.davdian.com",
+      "img_url":"//pic.davdian.com/activity/2015/11/26/640_240_6470a6b69df7a7a40dd48d1fc5ea6039.jpg",
+      "img_url_original":"//pic.davdian.com/activity/2015/11/26/640_240_6470a6b69df7a7a40dd48d1fc5ea6039.jpg",
+      "vip_good_title":"<可可西里>,遥远的大山,美丽的姑娘!",
+      "vip_price":"1129",
+      "not_vip_price":"2344",
+      "stock":"999"
+    },{
+      "href":"http://murphylee.davdian.com",
+      "img_url":"//pic.davdian.com/activity/2015/11/26/640_240_6470a6b69df7a7a40dd48d1fc5ea6039.jpg",
+      "img_url_original":"//pic.davdian.com/activity/2015/11/26/640_240_6470a6b69df7a7a40dd48d1fc5ea6039.jpg",
+      "vip_good_title":"<可可西里>,遥远的大山,美丽的姑娘!",
+      "vip_price":"1129",
+      "not_vip_price":"2344",
+      "stock":"999"
+    },{
+      "href":"http://murphylee.davdian.com",
+      "img_url":"//pic.davdian.com/activity/2015/11/26/640_240_6470a6b69df7a7a40dd48d1fc5ea6039.jpg",
+      "img_url_original":"//pic.davdian.com/activity/2015/11/26/640_240_6470a6b69df7a7a40dd48d1fc5ea6039.jpg",
+      "vip_good_title":"<可可西里>,遥远的大山,美丽的姑娘!",
+      "vip_price":"1129",
+      "not_vip_price":"2344",
+      "stock":"999"
+    },{
+      "href":"http://murphylee.davdian.com",
+      "img_url":"//pic.davdian.com/activity/2015/11/26/640_240_6470a6b69df7a7a40dd48d1fc5ea6039.jpg",
+      "img_url_original":"//pic.davdian.com/activity/2015/11/26/640_240_6470a6b69df7a7a40dd48d1fc5ea6039.jpg",
+      "vip_good_title":"<可可西里>,遥远的大山,美丽的姑娘!",
+      "vip_price":"1129",
+      "not_vip_price":"2344",
+      "stock":"999"
+    }
+  ]
+}

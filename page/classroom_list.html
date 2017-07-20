@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/classroom.css" rel="stylesheet">
+
+    <title>分类列表</title>
+    <script>
+        var tj_id = 42;
+        var tj_path = 'classroom_list';
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0
+        };
+
+        var down2refreshUrl = '/dvd/index.php?c=class&a=ajax_list'; // 下拉刷新url
+        var pageIndex = 2;
+        var pagesize = 15;
+        var sort = 2;
+        var category = 9;
+        var q = '';
+    </script>
+</head>
+<body class=" scroll_flag">
+<div class="top0">
+    <div class="top_container">
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            育儿
+        </div>
+    </div>
+</div>
+
+<div class="article-sequence clearfix">
+    <ul>
+        <li class="active"><a href="">默认</a></li>
+        <li><a href="">阅读数</a></li>
+    </ul>
+</div>
+
+<div class="classification clearfix">
+    <ul class="classification_list">
+        <li>
+            <a href="">
+                <div class="img_container">
+                    <div class="img_container_inner"><img src="//pic.davdian.com/base/2016/02/16/640_570_1e874b7ba79d70661e6661ee9e32455d.jpg"><span class="img_container_inner_font">视频</span></div>
+                    <div class="classification_container dav-small">
+                        <div class="classification_name">没有妈妈想要成为英雄，但每一个妈妈都在努力</div>
+                        <div class="classification_date">11:02</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="img_container">
+                    <div class="img_container_inner"><img src="//pic.davdian.com/base/2016/02/16/640_570_1e874b7ba79d70661e6661ee9e32455d.jpg"><span class="img_container_inner_font">语音</span></div>
+                    <div class="classification_container dav-small">
+                        <div class="classification_name">没有妈妈想要成为英雄，但每一个妈妈都在努力</div>
+                        <div class="classification_date">昨天</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="img_container">
+                    <div class="img_container_inner"><img src="//pic.davdian.com/base/2016/02/16/640_570_1e874b7ba79d70661e6661ee9e32455d.jpg"></div>
+                    <div class="classification_container dav-small">
+                        <div class="classification_name">没有妈妈想要成为英雄，但每一个妈妈都在努力</div>
+                        <div class="classification_date">11月2日</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="img_container">
+                    <div class="img_container_inner"><img src="//pic.davdian.com/base/2016/02/16/640_570_1e874b7ba79d70661e6661ee9e32455d.jpg"><span class="img_container_inner_font">语音</span></div>
+                    <div class="classification_container dav-small">
+                        <div class="classification_name">没有妈妈想要成为英雄，但每一个妈妈都在努力</div>
+                        <div class="classification_date">11月2日</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="img_container">
+                    <div class="img_container_inner"><img src="//pic.davdian.com/base/2016/02/16/640_570_1e874b7ba79d70661e6661ee9e32455d.jpg"></div>
+                    <div class="classification_container dav-small">
+                        <div class="classification_name">没有妈妈想要成为英雄，但每一个妈妈都在努力</div>
+                        <div class="classification_date">11月2日</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="img_container">
+                    <div class="img_container_inner"><img src="//pic.davdian.com/base/2016/02/16/640_570_1e874b7ba79d70661e6661ee9e32455d.jpg"><span class="img_container_inner_font">语音</span></div>
+                    <div class="classification_container dav-small">
+                        <div class="classification_name">没有妈妈想要成为英雄，但每一个妈妈都在努力</div>
+                        <div class="classification_date">11月2日</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="img_container">
+                    <div class="img_container_inner"><img src="//pic.davdian.com/base/2016/02/16/640_570_1e874b7ba79d70661e6661ee9e32455d.jpg"></div>
+                    <div class="classification_container dav-small">
+                        <div class="classification_name">没有妈妈想要成为英雄，但每一个妈妈都在努力</div>
+                        <div class="classification_date">11月2日</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<!--需要下拉刷新才展示这部分-->
+<div class="refresh">
+    <div class="uil-default-css-normal" style="-webkit-transform:scale(0.15);-moz-transform:scale(0.15);-webkit-transform-origin: 0 0;-moz-transform-origin: 0 0;width:30px;height: 30px;display: inline-block;"><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;"></div></div>
+    <div>数据加载中...</div>
+</div>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script src="../javascript/classroom.js"></script>
+</body>
+</html>

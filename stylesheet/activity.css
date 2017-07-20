@@ -1,0 +1,280 @@
+body{padding-top:42px;max-width:640px;margin:0 auto;  background-color: #f1f1f1;  padding-bottom: 30px;}
+.top0{position:fixed;top:0;width:100%;opacity:.8;max-width:640px;z-index:11}
+.top0 .top_container{font-size:20px;color:#fff;background-color:#FF4A7D;text-align:center;position:relative}
+.top0 .top_back{width:20px;height:20px;position:absolute;top:11px;left:8px}
+.top0 .top_back .arrow{position:absolute;top:1px;width:0;height:0;display:block;border-width:9px;border-style:dashed solid dashed dashed;border-color:transparent #fff transparent transparent}
+.top0 .top_back .arrow_fake{position:absolute;top:2px;left:4px;width:0;height:0;display:block;border-width:8px;border-style:dashed solid dashed dashed;border-color:transparent #FF4A7D transparent transparent}
+.top0 .title_container{margin-left:40px;padding:6px 0;height:30px;box-sizing:content-box}
+.top0 .title{line-height:30px;margin-right:40px;height: 30px;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;  font-size: 16px;}
+.top0 .top_menu_button{width:20px;height:20px;position:absolute;top:11px;right:15px}
+.top0 .menu-i{width: 22px;  height: 20px;  display: block;  position: relative;  background-size: 22px;  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAoCAYAAACFFRgXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAblJREFUeNrsmTFLAzEYhnuxFOpSBTdHf4BunXXqopv4FzwXxcWOLtJuCoIdnBzcdHHSRRzVzdHdWboJyl18U3ISzjSXkOTuCgk8XPtdmu/h465J7iJKaWOWWtN2gDRNZeEY9MA2+Fb9nhBilI94KAKTvQBb4Aa0XA5OPMm+gjOw6VyaXcM2JEmSEQMKXkCHx4Y8dgdaQt8/TPO5EpbJZpyrpKsQPlTIMiIw4n1uwVxlwkjYL5CVSV+L0qUJG8gqpUsRFmSfNWWnSnsXFmQfwbyBrBNpK9nc31op0layFsIMwmWNpHVlT2SylsINfuNl0pes8tbCwmz1T9aBcF56VCRtJetCmI+hLa0j+zBN1pWwiXSR7GT+11z8WAnrSjclC/IhDkfgB3yADXDveyeBvAMc2uATfIFdHt/DIp9Kl5dCZUWOy6gwPo8luSeVFvOR3HalDyIGvi5WsGW7yvILxL63SF5bEA7Crp9LoK2D04I+72CnLsIdsArewFhyfq1uFc7aAXiSxFlsIdx0QTgIB+EgHIRru5boYZuimqlWNMZY5k/kVe9I2q6EuxybtgT2XVQ4mrXXXr8CDADgFynnYGPomAAAAABJRU5ErkJggg==);}
+img{max-width: 100%;}
+a{text-decoration: none;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+
+.hide{
+    display: none;
+}
+
+/*商品总标题*/
+.good_container a.activity_title{background-image: url(//pic.davdian.com/free/zt_bcj_2.png);background-repeat: no-repeat;display: block;font-size: 16px; font-weight: bold;background-size: cover;color: #fff;line-height: 45px;  text-align: center;}
+.good_container .good_list_2_row{
+    overflow: hidden;
+    padding: 0 1%;
+}
+.good_container .good_list_2_row .good_item{
+    float: left;
+    width: 48%;
+    margin: 10px 1% 0;
+    box-shadow: 0px 0px 2px 0 #ddd;
+    position: relative;
+}
+.good_container .good_list_2_row .good_item:hover,.good_list_2_row .good_item:focus{
+    text-decoration: none;
+}
+.good_container .good_list_2_row .good_img_container{
+    padding: 0;
+    border-bottom: #ddd 1px solid;
+    position: relative;
+    background-color: #fff;
+}
+.good_container .good_list_2_row .good_item .good_img_container img{
+    width: 100%;
+}
+.good_container .good_list_2_row .good_item .good_img_container .tag{
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    top: 0;
+    right: 0;
+    background-size: 35px;
+    background-image: url(//pic.davdian.com/free/buyer_tag_list_2x.png);
+    background-image: url(//pic.davdian.com/free/buyer_tag_list.png)\9;
+}
+.good_container .good_list_2_row .good_item .good_img_container .tag.tag2{
+    background-position-y:-35px;
+}
+.good_container .good_list_2_row .good_item .good_img_container .tag.tag3{
+    background-position-y:-70px;
+}
+.good_container .good_list_2_row .good_item .good_img_container .tag.tag4{
+    background-position-y:-105px;
+}
+.good_container .good_list_2_row .good_item .good_title{
+    font-size: 12px;
+    color: #666;
+    text-overflow: ellipsis;
+    white-space: pre-line;
+    overflow: hidden;
+    height: 28px;
+    line-height: 14px;
+    padding: 5px 8px 0;
+    background-color: #fff;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    overflow: hidden;
+}
+.good_container .good_list_2_row .good_item .good_price{
+    color: #FF4A7D;
+    font-size: 14px;
+    padding: 5px 8px;
+    background-color: #fff;
+}
+.good_container .good_list_2_row .good_item .add_to_cart{
+    display: inline-block;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAkCAYAAADy19hsAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4JpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1QzQ5QkU0OTFEMjA2ODExODA4M0YxQ0Q4NzdGOTZGNCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFNDM2RkQ3RUUyOEUxMUU0OTBCNEFFNDk2QTdFRjk3QSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNDM2RkQ3REUyOEUxMUU0OTBCNEFFNDk2QTdFRjk3QSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgMjAxNCAoTWFjaW50b3NoKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOmI2NjViMTQ4LTgyNTAtNGExYS1hYTJhLTc2YTVlNzdhYTg0YyIgc3RSZWY6ZG9jdW1lbnRJRD0iYWRvYmU6ZG9jaWQ6cGhvdG9zaG9wOmUzMGM1NmQxLTIzY2MtMTE3OC1iMTIxLWZiNTJiZTBhNmFmMyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PrzXt4oAAARkSURBVHjaxJh5bAxxFMffbrermlUq1FFFEIm4ikoQV0TFESKiJCJBSETEXyTEnUgcCUIQgjiDEBG3UFfcgriirrqaoqpU22312O76vt03Nd1jZnd2ll/yyVy/38x33rzf+703Fo/HQzFrOy1aV3uDLJAJ2oBkUAjegItgP/jmP8jyHwSngu1grM7o32A9WAVqlJNW+retH3gQhlhuDcEycF2s/88FdwLnQKuAKwM2EU14SNRhYrBxA8B5YOcDW3FmZjW2d8FucAS4zFKYnFW3Gw9OgKZBOybhXZr1IUporvVlloLlbOFjoCs4IMI7xcC600D3KO8xH7S2JmdnT8VOGqsH6SK6m8mC55hwj0Qw0+b9dNnZPCNXwT3uYHsGnBXxv1QDEkAGaCbniyQMfQdaoSYF9DLpxUcEhDWIno7NXrAVzJPTVYrTR9pszYup0dBHvgN7E5hhUWAnnmxJHYnyL8EMj+tfc34kytmhHP0IJpg3t8WabSV4GxYc36qIHAOf+A4cuN2UT5HdoOAW0elBfw0QottGcBxMAltAnNFv6KlVRc4aJ9HLnYGd0kb6XobFFefUv1aaW8+eoQSfF6uOEsEuo6LdpY6/B1U/iW7ODuw08qxPcO5hfP7tWrd7bdVYFp/IxPO+p1ELuyvtVFviMCvaXNZa6XJlVUqQiGC4Vb1PNUMsf/HdWoLzZcuZ1NtonlT9IZXczsRoBbNrftIS/EW2LcDjaJ7EE895pwd5XCGmQUUBnO493iyk5z0DK7SiBKly0VTJmFZEI5r92Hm7Jzn6PyeLvab+xRuztIY+5WnJr6WXrX2WbUvwyAwndBU2pdIrfclV1CSs7rJ4cbZWoBeHSdWpNSiTZTglWtHsy2XXMsiW8pPsad8oHltrIuaT1e11GXdFwu+4pPLNkj2+C1g5dSYdL4Pt5PgamGxWfGJrM3WlT1wtfN3r4xuSsy4vCzVOyyUqeVaCLnK8L5bZPcSWy+4prX6hcgmlcYUwDDSSla4ENIiRZo6zOVKccgYZsYVJcmMlreQbHo6RWKcYYpteRz3B15U8VLYr1RWsiY1LqNdS2kcl+D5AxkIzpG8emGuy2DK594xw6kk9wWzNPaC9/PTgtgtwWfXVJME8L8aJ++k2vUnHjUvZl7I/BLxQ17vi4/6JAif71RrPLVe5VkmwEivUpLOF8VLfJf5yrfcQHJSVr0pZdeWzRlJM+lcv7GpXzbKw0tLl1xGHOYvJfsyxd7yWZSOxsNI4oR8uv43SxP+DJQVKzPbI59ZqFeI6JeGKsBmwRjHgqnChiDsJ1kiVote4/xIpvfhXwWry/amkWArmwvSo6pj/6PQBY/TcT2rFgapzg8FocCHchxv5GbggyDl+aGedcRki1j8iLI7k4UYE8yx3+8Vq718HnXEOVYFbl/NE+pWNCD4i4yolB+AJ9koqA728JE9C2i8Ji+wmh2IteC1YJw9MlDx5tMRj0klXudS5BxpLhFgeTsKjbn8EGAB37jRdIW8XawAAAABJRU5ErkJggg==);
+    width: 22px;
+    height: 18px;
+    -webkit-background-size: 22px;
+    background-size: 22px;
+    position: absolute;
+    bottom: 5px;
+    right: 6px;
+}
+
+/*购物车*/
+#cart-fixed {position: fixed;bottom: 20px;width: 45px;height: 45px;margin: 0 10px;}
+#cart-fixed a {display: block;position: relative;width: 45px;height: 45px;}
+#cart-fixed .cart-bg {background: url('//pic.davdian.com/free/article_cart.png') no-repeat;background-size:45px;width:45px;height:45px;}
+#cart-fixed .cart-good-num {position: absolute;top:5px;right:0px;  font-size: 12px;width: 16px;height: 16px;border-radius: 8px;background: #FF4A7D;text-align: center;line-height: 16px;color: #FFF;}
+#cart-fixed .cart-good-num.hide {display: none;}
+
+
+
+/* 弹层对话框 */
+.dialog_mask{
+    /*display: none;*/
+    top:0;
+    left: 0;
+    right:0;
+    bottom:0;
+    position: fixed;
+    background-color: rgba(0,0,0,.5);
+    z-index:1500;
+}
+.modal_dialog_wrap{
+    position:absolute;
+    top:50%;
+    left:0;
+    right:0;
+    margin-top:-104px;
+}
+.modal_dialog{
+    margin:0 auto;
+    width:250px;
+    background:#fff;
+    border-radius:5px;
+}
+.modal_body{
+    text-align:center;
+    padding:20px;
+    line-height:1.5;
+    border-bottom:1px solid #eee;
+    color: #333;
+}
+.modal_footer{
+    overflow:hidden;
+}
+.modal_footer a{
+    display:block;
+    line-height:3em;
+    text-align:center;
+    cursor:pointer;
+    text-decoration: none;
+    color: #333;
+}
+.modal_footer a:focus{
+    text-decoration: none;
+    color: #333;
+}
+.modal_dialog_info_wrap .modal_footer{
+    display: none;
+}
+.modal_dialog_info_wrap .modal_body{
+    background-image: none;
+
+}
+.modal_dialog_confirm_wrap .modal_footer a{
+    border-left:1px solid #eee;
+    margin-left:-1px;
+    width:50%;
+    float:left;
+}
+.modal_dialog .modal_footer .cancel{
+    display:none;
+}
+.modal_dialog_confirm_wrap .modal_footer .cancel{
+    display:block;
+}
+.modal_footer a:first-of-type{
+    border-bottom-left-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    border-left:0;
+    margin-left:0;
+    margin-right:-1px;
+}
+.modal_dialog .modal_footer .confirm,
+.modal_footer a:last-of-type{
+    border-bottom-right-radius:5px;
+    -webkit-border-bottom-right-radius:5px;
+}
+.modal_dialog_confirm_wrap .modal_footer .confirm{
+    border-bottom-right-radius:0;
+    -webkit-border-bottom-right-radius:0;
+}
+.modal_footer a.active{
+    background-color:#f3f3f3;
+}
+/*弹层对话框 end*/
+
+/*分享和收藏*/
+.mask-to-web, .mask-to-favorite {
+    position: fixed;
+    max-width: 636px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 9999;
+    /*display: block;*/
+}
+
+.mask-to-web p {
+    color: #ffffff;
+    font-size: 15px;
+    padding: 5px 30px;
+    word-break: break-all;
+}
+
+.mask-to-web .pointer {
+    height: 95px;
+    margin: 0px 40px 10px;
+    background: url("//pic.davdian.com/free/pointer.png") no-repeat right;
+}
+
+.mask-to-favorite .fake {
+    background-size: 320px;
+    color: #ffffff;
+    padding: 20px 20px;
+}
+
+.mask-to-favorite .fake .favorite-title {
+    font-size: 15px;
+}
+
+.mask-to-favorite .fake .favorite-con {
+    font-size: 12px;
+    padding: 20px 15px 40px 25px;
+    position: relative;
+}
+
+.mask-to-favorite .fake .top {
+    border-bottom: #ffffff 1px solid;
+}
+
+.mask-to-favorite .fake .bottom {
+    margin-top: 50px;
+}
+
+.mask-to-favorite .fake-favorite-we .bottom img {
+    width: 85%;
+}
+
+.mask-to-favorite .fake-favorite-we .bottom .favorite-con, .mask-to-favorite .fake-favorite-qq .bottom .favorite-con {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.mask-to-favorite .fake-favorite-we .bottom .fav-text, .mask-to-favorite .fake-favorite-qq .bottom .fav-text {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 40%;
+}
+
+.mask-to-favorite .fake-favorite-we .bottom, .mask-to-favorite .fake-favorite-qq .bottom {
+    margin-top: 20px;
+}
+
+.mask-to-favorite .fake-favorite-we .favorite-con {
+    padding: 15px 15px 30px 25px;
+}
+
+.mask-to-favorite .icon-small-qq-fav {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url(//pic.davdian.com/free/fav-qq-small_2x.png);
+    background-size: 25px;
+    margin: 0 4px -8px;
+}
+
+.mask-to-favorite .fake-favorite-qq .bottom img {
+    width: 55%;
+}
+
+/*分享和收藏end*/
+
+.hide {
+    display: none !important;
+}

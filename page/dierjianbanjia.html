@@ -1,0 +1,638 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="http://cdn.davdian.com/topic/css/topic-8875fcbb56.css" rel="stylesheet">
+
+
+    <title>大V店|周二·第二件半价</title>
+    <script>
+        var imgUrl = 'http://pic.davdian.com/goods/2016/12/12/320_320_047df3410f38b2c6dca6266a65f8bd32.jpg';  //分享图片
+        var lineLink = window.location.href; // 分享网址
+        var descContent = '半价|大V店周二第二件半价，仅限周二当天！'; // 分享文案
+        var shareTitle = '半价|大V店周二第二件半价，仅限周二当天！';  //分享标题
+        //浏览次数：{if $read_times}{$read_times}{else}0{/if}
+
+    </script>
+    <script>
+        // 半价数据
+        var data1 = [
+
+            [36070,36078],
+            [229625,229620],
+            [185134,220927],
+            [285576,315417],
+            [302559,286495],
+            [46035,41904],
+            [31913,256899],
+            [129259,750],
+            [33944,33945],
+            [46517,46518],
+            [321031,321033],
+            [321034,321032],
+            [315797,315404],
+            [313314,313322],
+            [313826,315597]
+
+
+
+
+
+        ];
+
+        var data2 = [
+            23051,10054,231851,320619,44243,78345,2805,150272,121257,281244,321467,313827,321143,321135,315374,314386
+
+        ];
+
+        var halfData = [];
+
+
+
+        //半价数据结束
+    </script>
+
+    <style>
+        body {
+            position: relative;
+            padding-top: 77px;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+
+        body.in_app {
+            padding-top: 37px;
+        }
+
+        .add-to-cart-i {
+            width: 45px;
+            height: 45px;
+            background-size: 45px;
+            margin-top: -8px;
+            margin-left: -15px;
+        }
+
+        #add-all-to-cart.disable {
+            background: #CCC !important;
+        }
+
+        .half-one {
+            background: #D73C6B;
+            color: #FFF;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .half-one .g-title {
+            text-align: center;
+            font-size: 14px;
+            line-height: 150%;
+            padding: 10px;
+        }
+
+        .half-one .g-list {
+            text-align: center;
+        }
+
+        .half-one .g-list .g {
+            width: 39%;
+            display: inline-block;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .half-one .g-list .g-middle {
+            width: 20%;
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .add-half-to-cart {
+            z-index: 100;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background: rgb(248, 248, 248);
+            max-width: 640px;
+            text-align: left;
+        }
+
+        .add-half-to-cart .header {
+            padding: 10px;
+            background: #FFF;
+        }
+
+        .add-half-to-cart .header .title {
+            font-size: 14px;
+            line-height: 150%;
+            padding: 10px 0;
+        }
+
+        .add-half-to-cart .price {
+            font-size: 14px;
+            color: #D73C6B;
+        }
+
+        .add-half-to-cart .market-price {
+            font-size: 14px;
+            text-decoration: line-through;
+            padding: 0 10px;
+            color: #999;
+        }
+
+        .add-half-to-cart .discount {
+            font-size: 14px;
+            color: #D73C6B;
+        }
+
+        .add-half-to-cart .g-list {
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .add-half-to-cart .g-list .g {
+            margin-top: 10px;
+            background: #FFF;
+            position: relative;
+        }
+
+        .add-half-to-cart .g-list .g .image {
+            width: 80px;
+            height: 80px;
+            float: left;
+        }
+
+        .add-half-to-cart .g-list .g .desc {
+            margin-left: 90px;
+            min-height: 80px;
+        }
+
+        .add-half-to-cart .half-to-cart {
+            line-height: 46px;
+            text-align: center;
+            background: #D73C6B;
+            font-size: 14px;
+            color: #FFF;
+        }
+
+        .g-name {
+            padding: 0 10px;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+            white-space: pre-line;
+            overflow: hidden;
+            display: -webkit-box;
+            line-height: 17px;
+            height: 34px;
+        }
+
+        .mask {
+            z-index: 15;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            top: 0;
+            max-width: 640px;
+        }
+
+        .animate_con {
+            position: fixed;
+            width: 160px;
+            height: 160px;
+            bottom: 50%;
+            left: 50%;
+            margin-left: -80px;
+            animation: add 1.5s forwards;
+            -webkit-animation: add 1.5s forwards;
+        }
+
+        @keyframes add {
+            0% {
+                width: 160px;
+                height: 160px;
+                bottom: 50%;
+                left: 50%;
+                margin-left: -80px;
+                opacity: 1;
+            }
+            90% {
+                width: 16px;
+                height: 16px;
+                bottom: 80px;
+                left: 40px;
+                margin-left: -8px;
+                opacity: 1;
+            }
+            100% {
+                width: 16px;
+                height: 16px;
+                bottom: 80px;
+                left: 40px;
+                margin-left: -8px;
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes add {
+            0% {
+                width: 160px;
+                height: 160px;
+                bottom: 50%;
+                left: 50%;
+                margin-left: -80px;
+                opacity: 1;
+            }
+            90% {
+                width: 16px;
+                height: 16px;
+                bottom: 80px;
+                left: 40px;
+                margin-left: -8px;
+                opacity: 1;
+            }
+            100% {
+                width: 16px;
+                height: 16px;
+                bottom: 80px;
+                left: 40px;
+                margin-left: -8px;
+                opacity: 0;
+            }
+        }
+
+        .animate_con img {
+            position: absolute;
+            width: 75%;
+        }
+
+        .h-cnt {
+            margin-top: -40px;
+            background: #FFf8f7;
+        }
+
+        .h-2-one {
+            width: 50%;
+            display: inline-block;
+            background: #ffffff;
+        }
+
+        .h-2-one-g {
+            position: relative;
+            padding: 6px 8px;
+        }
+        .h-2-one .g-name .g-price {
+            color: #D73C6B;
+        }
+
+        .h-2-buy {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .h-2-buy .discount {
+            color: #FF4A7D;
+            display: inline-block;
+            font-size: 16px;
+            border: dashed 1px #ff4a7d;
+        }
+
+        .h-2-buy .btn {
+            background: #ff4a7d;
+            color: #FFF;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            font-size: 14px;
+        }
+        .sale{
+            font-size: 14px;
+            float: left;
+            height: 20px;
+            color: #ff4a7d;
+            margin-top: 0px;
+            line-height: 20px;
+            padding: 0 10px;
+            position: relative;
+            border-radius: 2px;
+        }
+        .sale:before {
+            width: 200%;
+            height: 200%;
+            transform: scale(.5);
+            transform-origin: left top;
+            -ms-transform: scale(.5);
+            -ms-transform-origin: left top;
+            -webkit-transform: scale(.5);
+            -webkit-transform-origin: left top;
+            -moz-transform: scale(.5);
+            -moz-transform-origin: left top;
+            -o-transform: scale(.5);
+            -o-transform-origin: left top;
+        }
+        .sale:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid #ff4a7d;
+            border-radius: 2px;
+            width: 200%;
+            height: 200%;
+            box-sizing: border-box;
+        }
+        .order_good_name {
+            width: 100%;
+            font-size: 12px;
+            height: 34px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            line-height: 17px;
+        }
+        .h-1-buy {
+            padding: 15px 0px 0px;
+        }
+    </style>
+</head>
+
+
+<!--<body &lt;!&ndash;{if $is_from_app}&ndash;&gt; class="in_app" &lt;!&ndash;{/if}&ndash;&gt;  style="background:#F0F0F0;" id="in_app">-->
+<body>
+
+<div class="top0">
+    <div class="top_container">
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">周二第二件半价</div>
+        <div class="top_right">
+
+            <a href="/" class="top_home">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+        <div class="top_other" style="position: relative;background: #fff;font-size: 14px;line-height:37px;overflow:hidden;">
+            <div style="width: 50%;display: inline-block;box-sizing: border-box;float:left;border-right: solid 1px #d8d8d8;">
+                <img style="max-width: 22px;" src="http://pic.davdian.com/free/2017/01/10/44_46_548d79653492717cef067f12552cab08.png" alt="">
+                <a href="#2" style="display: inline-block;color: #FF4A7D;">两件不同款</a>
+            </div>
+            <div style="width: 50%;float: right;">
+                <img style="max-width: 22px;" src="http://pic.davdian.com/free/2017/01/10/44_46_51364d79c64bbabada06188554f3717a.png" alt="">
+                <a href="#1" style="display: inline-block;color: #666666;">两件同款</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="img_group" style="background:#FFF;position:relative;">
+    <div class="img_item">
+        <img src="http://pic.davdian.com/goods/2016/12/12/640_280_4c97cb210a1dba7e6763c657d8ee7033.jpg" alt="">
+    </div>
+    <div class="img_item">
+        <img src="http://pic.davdian.com/free/2017/01/10/750_212_96f07d654870e3e05c1f714b45f1559c.png" alt="">
+    </div>
+</div>
+
+
+<!--商品代码开始-->
+
+<div class="h-cnt h2">
+    <div style="position: relative;width: 100%;text-align: center;top: 13px;">
+        <span style="font-size: 16px;text-align: center;line-height: 40px;background: #Fff8f7;display: inline-block;padding: 0px 22.5px;color: #ff4a7d;border-radius: 12px;">两件不同款</span>
+    </div>
+    <div class="h-2" style="overflow:hidden;position: relative;">
+        <a href="/36070.html">
+            <div class="h-2-one" style="float:left;padding-right: 12.5px;box-sizing: border-box;">
+                <div class="h-2-one-g">
+                    <img src="http://pic.davdian.com/goods/2016/05/12/640_640_0effec3703a4312720942799d7a21616.jpg@!1e_1c_0o_0l_320h_320w.webp">
+                </div>
+                <div class="g-name">睡前5分钟小童话第一辑（9册，哄睡神器！9个经典童话、9本精美绘本。妈妈爱读，宝宝爱听的睡前故事，可提高0~3岁幼儿的专注力，促进幼儿视听能力和语言能力的发展，激发幼儿的想象力和创造力）</div>
+                <div style="padding: 20px 10px;">
+                    <span style="font-size: 14px;color: #ff4a7d;">￥</span><span style="font-size: 18px;color: #ff4a7d;">71.6</span>
+                </div>
+            </div>
+        </a>
+        <div style="width: 25px;float: left;position: absolute;left: 50%;margin-left: -12.5px;height: 100%;background: #fff8f7;color: #ff4a7d;font-size: 32px;text-align: center;/* line-height: 100%; *//* margin: 0; */padding-top: 30%;">+</div>
+        <a href="/36078.html">
+            <div class="h-2-one" style="float:left;padding-left: 12.5px;box-sizing: border-box;">
+                <div class="h-2-one-g">
+                    <img src="http://pic.davdian.com/goods/2016/05/16/640_640_b920c1d019e6877224640e9c4c1f6ffa.jpg@!1e_1c_0o_0l_320h_320w.webp">
+                </div>
+                <div class="g-name">睡前5分钟小童话第二辑（哄睡神器！9个经典童话、9本精美绘本。妈妈爱读，宝宝爱听的睡前故事，可提高0~3岁幼儿的专注力，促进幼儿视听能力和语言能力的发展，激发幼儿的想象力和创造力）</div>
+                <div style="padding: 20px 10px;">
+                    <span style="font-size: 14px;color: #ff4a7d;">半价</span><span style="color: #ff4a7d;font-size: 14px;">￥</span><span style="color: #ff4a7d;font-size: 18px;">71.6</span><span style="color: #999999;font-size: 10px;padding-left: 5px;text-decoration: line-through;">原件￥71.6</span>
+                </div>
+            </div>
+        </a>
+    </div>
+    <div class="h-2-buy">
+        <div style="display: inline-block;background-color: #FFffff;height: 10px;line-height: 8px;padding: 9px;border: dotted 1px #ff4a7d;color: #ff4a7d;border-right: solid 1px;">省 ¥<span style="font-size: 18px;/* line-height: 6px; */">23.00</span></div><div style="display: inline-block;background-color: #FF4A7D;height: 22px;line-height: 22px;padding: 4px 11px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;font-size: 14px;color: #ffffff;">第二件半价抢购</div>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+
+<div id="list" style="height: 194px;">
+    <a href="baidu.com">
+        <div style="position: relative;background-color: #FFFFFF;">
+            <div style="position: absolute;padding: 20px 15px;box-sizing: border-box;max-width: 184px;">
+                <img style="" src="http://pic.davdian.com/free/2017/01/10/308_308_101280d531e93a34d5dcdf52b11c420a.png" alt="">
+            </div>
+            <div style="position: absolute;padding: 20px 7px 20px 194px;left: 0px;right:0px;">
+                <div>
+                    <span class="sale">第二件半价 仅36.3</span>
+                </div>
+                <div class="order_good_name" style="padding-top: 10px;">语文故事（6册，是入选中国的语文故事的是入选中国的语…）语文故事（6册，是入选中国的语文故事的是入选中国的语…）语文故事（6册，是入选中国的语文故事的是入选中国的语…）</div>
+                <div style="padding-top: 24px;color:#ff4a7d;"><span style="font-size: 14px;">￥</span><span style="font-size: 18px;">23.00</span><span style="font-size: 14px;color: #999999">×2</span></div>
+                <div class="h-1-buy">
+                    <div style="display: inline-block;background-color: #FFffff;height: 10px;line-height: 8px;padding: 9px;border: dotted 1px #ff4a7d;color: #ff4a7d;border-right: solid 1px;">省 ¥<span style="font-size: 18px;">23.00</span></div><div style="display: inline-block;background-color: #FF4A7D;height: 22px;line-height: 22px;padding: 4px 14px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;font-size: 14px;color: #ffffff;">立即抢购</div>
+                </div>
+            </div>
+            <div class="thin_line"></div>
+        </div>
+    </a>
+</div>
+
+<!--商品代码结束-->
+
+<script src="http://cdn.davdian.com/wx_jssdk/jweixin-1.0.0.js"></script>
+<script src="http://cdn.davdian.com/vue/1.0.26/vue.min.js"></script>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://fe.davdian.com/staticfe/js/topic-87e9d8a502.js"></script>
+<script src="http://fe.davdian.com/staticfe/js/topic_fix-351e0c249f.js"></script>
+<script>
+    $(".top_other a").click(function () {
+        setTimeout(function () {
+            bravetime.callNativeReady();
+        }, 100);
+    });
+    var allId = data1.concat(data2).join(",");
+
+    new Vue({
+        el: "#in_app",
+        data: function () {
+            return {
+                show: false,
+                info: {},
+                animate: false,
+                cart_number: window.cart_number || 0,
+                g1: [],
+                g2: []
+            }
+        },
+        created: function () {
+            var that = this;
+            $.ajax({
+                url: "../data/dierjianbanjia.json",
+                data: {list: allId},
+                dataType: "json",
+                type: "post",
+                success: function (re) {
+                    // 生成数据
+                    var all = {};
+                    var g1 = [],g2=[];
+                    var inn = 0;
+                    for (var i in re.data) {
+                        all[re.data[i].goods_id] = re.data[i];
+                    }
+                    for(var i=0;i<data1.length;i++){
+                        if(all[data1[i][0]]&&all[data1[i][1]]){
+                            all[data1[i][0]].sgoods_name = all[data1[i][0]].goods_name.replace(/[(（](.)*[)）]/g,"");
+                            all[data1[i][1]].sgoods_name = all[data1[i][1]].goods_name.replace(/[(（](.)*[)）]/g,"");
+                            halfData[inn]={
+                                "title":all[data1[i][0]].sgoods_name+" + "+all[data1[i][1]].sgoods_name,
+                                "price": "¥"+ (+all[data1[i][0]].shop_price + +all[data1[i][1]].shop_price-Math.ceil(all[data1[i][1]].shop_price/2)).toFixed(2),
+                                "market_price": "¥"+ (+all[data1[i][0]].shop_price + +all[data1[i][1]].shop_price).toFixed(2),
+                                "price_info": "已优惠 ¥"+Math.ceil(all[data1[i][1]].shop_price/2)+".00",
+                                "goodsList": [
+                                    {
+                                        "goods_id": all[data1[i][0]].goods_id,
+                                        "goods_img": all[data1[i][0]].goods_img,
+                                        "goods_name": all[data1[i][0]].sgoods_name,
+                                        "price": all[data1[i][0]].shop_price,
+                                        "market_price":all[data1[i][0]].market_price
+                                    },
+                                    {
+                                        "goods_id": all[data1[i][1]].goods_id,
+                                        "goods_img": all[data1[i][1]].goods_img,
+                                        "goods_name": all[data1[i][1]].sgoods_name,
+                                        "price": "半价 ¥"+(all[data1[i][1]].shop_price-Math.ceil(all[data1[i][1]].shop_price/2)).toFixed(2),
+                                        "market_price":"¥ "+all[data1[i][1]].market_price
+                                    }
+                                ]
+                            }
+                            var obj = [all[data1[i][0]],all[data1[i][1]],Math.ceil(all[data1[i][1]].shop_price/2),inn++];
+                            g1[i]=obj;
+                        }else {
+                            console.log(data1[i]);
+                        }
+
+
+                    }
+                    for(var i=0;i<data2.length;i++){
+                        if(all[data2[i]]){
+                            all[data2[i]].sgoods_name = all[data2[i]].goods_name.replace(/[(（](.)*[)）]/g,"")
+                            halfData[inn]={
+                                "title":all[data2[i]].sgoods_name+" + "+all[data2[i]].sgoods_name,
+                                "price": "¥"+ (+all[data2[i]].shop_price + +all[data2[i]].shop_price).toFixed(2),
+                                "market_price": "¥"+( +all[data2[i]].market_price + +all[data2[i]].market_price).toFixed(2),
+                                "price_info": "已优惠 ¥"+Math.ceil(all[data2[i]].shop_price/2)+".00",
+                                "goodsList": [
+                                    {
+                                        "goods_id": all[data2[i]].goods_id,
+                                        "goods_img": all[data2[i]].goods_img,
+                                        "goods_name": all[data2[i]].sgoods_name,
+                                        "price": all[data2[i]].shop_price,
+                                        "market_price":all[data2[i]].market_price
+                                    },
+                                    {
+                                        "goods_id": all[data2[i]].goods_id,
+                                        "goods_img": all[data2[i]].goods_img,
+                                        "goods_name": all[data2[i]].sgoods_name,
+                                        "price":  "半价"+all[data2[i]].shop_price/2,
+                                        "market_price":all[data2[i]].market_price
+                                    }
+                                ]
+                            }
+
+                            var obj = [all[data2[i]],Math.ceil(all[data2[i]].shop_price/2),inn++];
+                            g2[i]=obj;
+                        }else{
+                            console.log(data2[i])
+                        }
+
+                    }
+                    that.g1 = g1;
+                    that.g2 = g2;
+                    console.log(g1,g2,11111)
+                }, error: function () {
+
+                }
+            });
+        },
+        methods: {
+            add: function (id) {
+                var data = window.halfData;
+                var currentData = data[id];
+                console.log(id);
+                if (currentData) {
+                    this.info = currentData;
+                    this.show = true;
+                }
+            },
+            hide: function () {
+                this.show = false;
+            },
+            add2cart: function (info) {
+                var success = 0, that = this, goodsList = info.goodsList;
+                this.hide();
+                ajaxFunc(0);
+
+                function ajaxFunc(i) {
+                    var goods = goodsList[i];
+                    $.ajax({
+                        url: "/index.php?m=default&c=cart&a=add_to_cart",
+                        data: {
+                            goods: JSON.stringify({goods_id: goods.goods_id, number: 1})
+                        },
+                        type: "POST",
+                        dataType: "json",
+                        success: function (result) {
+                            if (result.error) {
+                                bravetime.info(result.message);
+                            } else {
+                                success++;
+                                if (success == goodsList.length) {
+                                    that.animateFunc(info, result.cart_number);
+                                } else {
+                                    ajaxFunc(++i);
+                                }
+                            }
+                        }, error: function () {
+                            ajaxFunc(++i);
+                        }
+                    })
+                }
+            },
+            animateFunc: function (info, number) {
+                var that = this;
+                this.animate = true;
+                setTimeout(function () {
+                    that.animate = false;
+                    that.cart_number = number;
+                }, 1500);
+            }
+        }
+    });
+</script>
+
+
+</body>
+</html>

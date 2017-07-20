@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="http://cdn.davdian.com/swiper/swiper-3.3.1.min.css" rel="stylesheet">
+    <link href="../dist/orderList_comment_list.css" rel="stylesheet">
+    <title>商品评价</title>
+    <script type="text/javascript">
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+
+        var refreshUrl = "../data/comment.json";
+        var pagesize=20;
+        var pageIndexStart=1
+    </script>
+</head>
+<body class="scroll_flag publish_comment" >
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            商品评价
+        </div>
+    </div>
+</div>
+
+<div class="orderList_comment_list_top">商品好评率<span class="num">89%</span></div>
+
+<div id="comment_list">
+    <comment-list></comment-list>
+</div>
+
+<script src="//cdn.davdian.com/vue/2.0.5/vue.js"></script>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="//cdn.davdian.com/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script src="../dist/orderList_comment_list.js"></script>
+
+
+</body>
+</html>

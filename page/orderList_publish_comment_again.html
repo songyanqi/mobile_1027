@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/swiper-3.3.1.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheet/order.css">
+    <title>发表评论</title>
+    <script type="text/javascript">
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,
+            showFoot: 0,
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0,
+            btnColor:'ff4a7d',
+            btnOnHead:1,    // 头部文字按钮
+            btnText:"发表",     // 头部文字按钮文字
+            btnLink:"javascript:window.publishComment()"      // 头部文字按钮链接
+        };
+
+        var picUploadUrl = "../data/picUploadUrl.json";
+        var commentUrl = "../data/comment_publish.json"
+    </script>
+</head>
+<body class="scroll_flag publish_comment_again_page">
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            发表评价
+        </div>
+        <div class="top_right">
+            <a class="top_btn">
+                <span class="text_btn publish_comment_btn">发表</span>
+            </a>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="publish_comment_top">
+    <ul>
+        <li>
+            <div class="goods_pic"><img src="//img.davdian.com/free/good_pic_demo_800_800.jpg"></div>
+            <div class="goods_con">
+                <div class="goods_title">【立即开店】开个大V店，成为更好的妈妈成为更好的妈妈成为更好的妈妈成为更好的妈妈</div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="publish_comment_con">
+   <div class="comment_first_con">
+        <div class="title">很好的哦~</div>
+        <div class="star">
+            <ul>
+                <li class="hover"></li>
+                <li class="hover"></li>
+                <li class="hover"></li>
+                <li class="hover"></li>
+                <li class=""></li>
+            </ul>
+            <span class="date">2017-02-23</span>
+        </div>
+        <div class="img clearfix">
+            <ul>
+                <li><img src="http://pic.davdian.com/free/2017/02/23/750_273_d2d7cf5182abdab997c699f2c847bb22.jpg@160h_160w_1e_1c_2o"></li>
+                <li><img src="http://pic.davdian.com/free/2017/02/23/750_273_d2d7cf5182abdab997c699f2c847bb22.jpg@160h_160w_1e_1c_2o"></li>
+                <li><img src="http://pic.davdian.com/free/2017/02/23/750_273_d2d7cf5182abdab997c699f2c847bb22.jpg@160h_160w_1e_1c_2o"></li>
+                <li><img src="http://pic.davdian.com/free/2017/02/23/750_273_d2d7cf5182abdab997c699f2c847bb22.jpg@160h_160w_1e_1c_2o"></li>
+                <li><img src="http://pic.davdian.com/free/2017/02/23/750_273_d2d7cf5182abdab997c699f2c847bb22.jpg@160h_160w_1e_1c_2o"></li>
+            </ul>
+        </div>
+   </div>
+
+    <input type="hidden" name="goods_id" id="goods_id" value="150187">
+    <input type="hidden" name="delivery_id" id="delivery_id" value="7369047">
+    <input type="hidden" name="comment_id" id="comment_id" value="7369047">
+
+    <div class="comment_zj_title"><i class="zjicon"></i>追加评价</div>
+
+    <div class="mb_20">
+        <div class="publish_comment_textarea_con">
+            <textarea class="publish_comment_textarea" placeholder="还有想说的？可以追加评论哦～"></textarea>
+            <span class="publish_comment_textarea_num">500</span>
+        </div>
+    </div>
+
+    <div class="clearfix add_comment_con">
+        <ul>
+            <li class="add">
+                <img src="//pic.davdian.com/free/2017/04/01/160_160_6f13a875d0c4863286ad0c639b39c517.png">
+                <input type="file" class="add_pic_input" accept="image/*" multiple="multiple">
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="publish_pic_view hide">
+    <div class="publish_pic_preview">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="http://pic.davdian.com/images/201503/goods_img/430_G_1427372720530.jpg"></div>
+            <div class="swiper-slide"><img src="http://pic.davdian.com/images/201507/goods_img/1274_G_1435806602097.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="http://pic.davdian.com/images/201510/goods_img/3336_G_1444726917241.jpg" alt=""></div>
+        </div>
+    </div>
+    <div class="publish_pic_preview_bottom">
+        <span class="back"><i class="back_arrow"></i>返回</span>
+        <span class="num">3/4</span>
+        <span class="delete_btn"></span>
+    </div>
+</div>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script src="../javascript/swiper-3.3.1.jquery.min.js"></script>
+<script src="../javascript/comment.js"></script>
+</body>
+</html>

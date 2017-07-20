@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>我要签到</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheet/sign_in.css" rel="stylesheet">
+    <style>
+
+    </style>
+    <script>
+        var tj_id = 62;
+        var tj_path = "sign";
+
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '文/兜妈';
+        var shareTitle = '旗下适合0-3岁孩子的玩具有哪些？文章标题在这里';  //店铺名称
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+    </script>
+</head>
+<body>
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_btn" style="float: left;margin-left: 10px;">
+                <span class="border_btn">本次亲自阅读签到截止时间6月13日</span>
+            </a>
+        </div>
+
+        <div class="top_right">
+            <a class="top_btn">
+                <span class="border_btn">签到奖励</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="sign_main">
+    <h2 class="sign_continue">连续签到<span>15</span>天</h2>
+    <!--圆环容器-->
+    <!--签到完成度数值,天数-->
+    <div id="doughnutChart" class="chart" value="5">
+        <div class="date_container">
+                <div class="it it0">
+                    <div class="icon_red">￥10元</div>
+                    <div>第5天</div>
+                </div>
+            <div class="it it1">
+                <div class="icon_red">￥20元</div>
+                <div>第10天</div>
+            </div>
+            <div class="it it2">
+                <div class="icon_red">￥30元</div>
+                <div>第20天</div>
+            </div>
+            <div class="it it3">
+                <div class="icon_red">￥50元</div>
+                <div>第30天</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="book_slogan">
+        想起你，我会很幸福的，你知道我也看着星星啊。所有的星星将会有着生锈辘轳的井，所有的星星都会流出水来让我喝...
+        <div class="tr">——《小王子》</div>
+    </div>
+
+    <div class="sign_qrcode_con">
+        <div class="sign_qrcode"><img src="//pic.davdian.com/free/sing_qr_0407.png"> </div>
+    </div>
+</div>
+
+<div class="hot_activity_cotnainer index_model">
+    <div class="orange_title mb_1 ">
+        <span class="orange_title_font">热门书单</span>
+    </div>
+    <div class="limitbuy_con clearfix">
+        <ul>
+            <a href="//joys.davdian.com">
+                <li>
+                    <div class="pic"><img
+                            src="//pic.davdian.com/images/201508/goods_img/1811_G_1438831847643.jpg"></div>
+                    <div class="fz_11 c6">1986人已读</div>
+
+                </li>
+            </a>
+            <a href="//joys.davdian.com">
+                <li>
+                    <div class="pic"><img
+                            src="//pic.davdian.com/images/201508/goods_img/1811_G_1438831847643.jpg"></div>
+                    <div class="fz_11 c6">1986人已读</div>
+
+                </li>
+            </a>
+            <a href="//joys.davdian.com">
+                <li>
+                    <div class="pic"><img
+                            src="//pic.davdian.com/images/201508/goods_img/1811_G_1438831847643.jpg"></div>
+                    <div class="fz_11 c6">1986人已读</div>
+
+                </li>
+            </a>
+            <a href="//joys.davdian.com">
+                <li>
+                    <div class="pic"><img
+                            src="//pic.davdian.com/images/201508/goods_img/1811_G_1438831847643.jpg"></div>
+                    <div class="fz_11 c6">1986人已读</div>
+
+                </li>
+            </a>
+            <a href="//joys.davdian.com">
+                <li>
+                    <div class="pic"><img
+                            src="//pic.davdian.com/images/201508/goods_img/1811_G_1438831847643.jpg"></div>
+                    <div class="fz_11 c6">1986人已读</div>
+
+                </li>
+            </a>
+            <a href="//joys.davdian.com">
+                <li>
+                    <div class="pic"><img
+                            src="//pic.davdian.com/images/201508/goods_img/1811_G_1438831847643.jpg"></div>
+                    <div class="fz_11 c6">1986人已读</div>
+
+                </li>
+            </a>
+            <a href="//joys.davdian.com">
+                <li>
+                    <div class="pic"><img
+                            src="//pic.davdian.com/images/201508/goods_img/1811_G_1438831847643.jpg"></div>
+                    <div class="fz_11 c6">1986人已读</div>
+
+                </li>
+            </a>
+            <a href="//joys.davdian.com">
+                <li>
+                    <div class="pic"><img
+                            src="//pic.davdian.com/images/201508/goods_img/1811_G_1438831847643.jpg"></div>
+                    <div class="fz_11 c6">1986人已读</div>
+
+                </li>
+            </a>
+        </ul>
+    </div>
+</div>
+
+
+<div class="mask hide">
+    <div class="rule">
+        <div class="close"></div>
+        <div class="container">
+            <p style="font-size: 18px;text-align: center;margin-bottom: 16px;">签到奖励</p>
+            1. 首次签到，奖励5元红包<br/>
+            2. 连续签到5天，奖励10元红包<br/>
+            3. 连续签到10天，奖励20元红包<br/>
+            4. 连续签到20天，奖励30元红包<br/>
+            5. 连续签到30天，奖励50元红包<br/>
+            <br/>
+
+            (签到中断，从0开始计算连续天数；连续签到30天后，开始重新计算连续天数。)
+        </div>
+    </div>
+</div>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script src="../javascript/sign_in.js"></script>
+<!--圆环的大小以及样式调整在sign_in.js 中,圆环由SVG动态画制,如果要调整圆环请到js中看注释-->
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script>
+    $(function () {
+        var str = '<p style="text-align: left;">因签到功能升级，本次亲子签到活动截止到6月13日。<br/>活动结束当天，连续签到1-5天的送10元红包，连续签到6-10天送20元红包，连续签到11-20天，送30元红包，连续签到21-30天，送50元红包。<br/>新的签到功能敬请期待！</p>'
+        bravetime.newAlert(str,{okText:"我知道了"});
+    });
+</script>
+</body>
+</html>

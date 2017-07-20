@@ -1,0 +1,461 @@
+.text {
+    font-size: 0.15rem;
+    line-height: 0.22rem;
+    color: #fff;
+}
+
+.t1 {
+    z-index: 9;
+}
+
+.t2 {
+    z-index: 8;
+}
+
+.t3 {
+    z-index: 7;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-size: 100%;
+    background-position: center;
+}
+
+.lighting {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: 100%;
+    background-position: center;
+    background-image: url("//pic.davdian.com/free/anniversary_lighting.png");
+}
+
+.page > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: 100%;
+    background-position: center;
+}
+.page img{
+    width:100%;
+    height:100%;
+}
+
+.page1 {
+    background: -moz-linear-gradient(top, #fd8284, #fc5c8d);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fd8284), to(#fc5c8d));
+    background: -o-linear-gradient(top, #fd8284, #fc5c8d);
+}
+
+.page2 {
+    background: -moz-linear-gradient(top, #f0c65d, #fc7333);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#f0c65d), to(#fc7333));
+    background: -o-linear-gradient(top, #f0c65d, #fc7333);
+}
+
+.page3 {
+    background: -moz-linear-gradient(top, #76bcf7, #4973b6);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#76bcf7), to(#4973b6));
+    background: -o-linear-gradient(top, #76bcf7, #4973b6);
+}
+
+.page4 {
+    background: -moz-linear-gradient(top, #a0a4e7, #8461bd);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#a0a4e7), to(#8461bd));
+    background: -o-linear-gradient(top, #a0a4e7, #8461bd);
+}
+
+.page5, .page6, .page7, .page8, .page9 {
+    background: -moz-linear-gradient(top, #72d7e0, #36a3c9);
+    background: -webkit-gradient(linear, 0 0, 0 bottom, from(#72d7e0), to(#36a3c9));
+    background: -o-linear-gradient(top, #72d7e0, #36a3c9);
+}
+
+.page10 {
+    background-image: url("//pic.davdian.com/free/czlc/10/bg.jpg");
+}
+
+.page1 .t1 {
+    /*background-image: url(//pic.davdian.com/free/czlc/1/t1.png);*/
+}
+
+.page1 .t2 {
+    background-image: url(//pic.davdian.com/free/czlc/1/t2_new.png);
+}
+
+.page1 .t3 {
+    background-image: url(//pic.davdian.com/free/czlc/1/t3.png);
+}
+
+.page2 .text {
+    margin-top: 20%;
+}
+
+.page2 .t2 {
+    background-image: url(//pic.davdian.com/free/czlc/2/t3.png);
+}
+
+.page2 .t3 {
+    /*background-image: url(//pic.davdian.com/free/czlc/2/t2.png);*/
+}
+
+.page3 .text {
+    margin-top: 16%;
+}
+
+.page3 .t2 {
+    /*background-image: url(//pic.davdian.com/free/czlc/3/t2.png);*/
+}
+
+.page3 .t3 {
+    /*background-image: url(//pic.davdian.com/free/czlc/3/t3.png);*/
+}
+
+.page4 .text {
+    margin-top: 16%;
+}
+
+.page4 .t2 {
+    /*background-image: url(//pic.davdian.com/free/czlc/4/t2.png);*/
+}
+
+.page4 .t3 {
+    background-image: url(//pic.davdian.com/free/czlc/4/t3.png);
+}
+
+.page5 .text, .page6 .text, .page7 .text, .page8 .text, .page9 .text {
+    bottom: 80px;
+    height: 1rem;
+    top: inherit;
+}
+
+.page5 .t1 {
+    background-image: url(//pic.davdian.com/free/czlc/5/t1.png);
+}
+
+.page6 .t1 {
+    background-image: url(//pic.davdian.com/free/czlc/6/t1.png);
+}
+
+
+.page7 .t1 {
+    background-image: url(//pic.davdian.com/free/czlc/7/t1.png);
+}
+
+.page7 .t2 span {
+    background-image: url(//pic.davdian.com/free/czlc/7/t2.png);
+}
+
+.page8 .t1 {
+    background-image: url(//pic.davdian.com/free/czlc/8/t1.png);
+}
+
+.page8 .t2 span{
+    background-image: url(//pic.davdian.com/free/czlc/8/t2.png);
+}
+
+.page9 .t1 {
+    background-image: url(//pic.davdian.com/free/czlc/9/t1.png);
+}
+
+.page9 .t2 span{
+    background-image: url(//pic.davdian.com/free/czlc/9/t2.png);
+}
+
+.tips {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 9;
+    text-align: center;
+    height: 64px;
+    pointer-events: none;
+}
+
+.tips .text {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.tips img {
+    width: 20px;
+    top: 26px;
+    opacity: 1;
+    animation: show_kd_icon 2s linear infinite;
+    -webkit-animation: show_kd_icon 2s linear infinite;
+    position: relative;
+}
+
+a.login_btn_czlc {
+    font-size: 0.13rem;
+    color: #fe1c66;
+    background-color: #fff;
+    padding: 8px 16px;
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.t4.login_container {
+    height: 85px;
+    bottom: 0;
+    top: inherit;
+    z-index: 10;
+}
+
+.p10_login_container {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.p10_login_container .login_btn_czlc {
+    color: #fff;
+    background-color: #ff4245;
+}
+
+.page10 .text_contaienr {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 20% 10%;
+    width: 80%;
+    height: 25%;
+}
+
+.text_contaienr .text_info {
+    color: #000;
+    font-size: 0.18rem;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 15%;
+}
+
+.listen_container {
+    z-index: 14;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    left: 50%;
+    margin-left: -50px;
+    bottom: 30px;
+}
+
+.play_btn {
+    position: relative;
+    float: right;
+    right: 10px;
+    top: 10px;
+    background-size: 100%;
+    width: 40px;
+    height: 40px;
+    z-index: 15;
+    background-image: url(//pic.davdian.com/free/20161001_play-disable.png);
+}
+
+.play_btn.run {
+    animation: rotate360 4s linear infinite;
+    -webkit-animation: rotate360 4s linear infinite;
+    background-image: url(//pic.davdian.com/free/20161001_play.png);
+}
+
+.play_btn.disable {
+    animation: initial;
+    background-image: url(//pic.davdian.com/free/20161001_play-disable.png);
+}
+
+.anniversary_title {
+    position: relative;
+    float: left;
+    left: 10px;
+    top: 10px;
+    background-size: 100%;
+    width: 100px;
+    height: 29px;
+    z-index: 11;
+    background-image: url(//pic.davdian.com/free/anniversary.png);
+}
+
+@keyframes rotate360 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes rotate360 {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.image_title {
+    width: 85px;
+    height: 85px;
+    background-color: #fff;
+    border-radius: 50%;
+    border:3px solid #FFF;
+    overflow: hidden;
+}
+.image_title img {
+    width: 100%;
+}
+/*头像部分的媒体查询*/
+@media screen and (min-height: 736px){
+    .image_title{
+        margin:70px auto;
+    }
+}
+@media screen
+and (min-height: 480px)
+and (max-height: 568px)
+{
+    .image_title{
+        margin:1% auto;
+        width: 80px;
+        height: 80px;
+    }
+}
+@media screen
+and (min-height: 568px)
+and (max-height: 736px)
+{
+    .image_title{
+        margin:5% auto;
+        width: 80px;
+        height: 80px;
+    }
+}
+@media screen
+and (min-height: 736px)
+{
+    .image_title{
+        margin:8% auto;
+    }
+}
+.inpage{
+    display: inline-block;
+    width: 100%;
+    height:100%;
+    background-size: 100%;
+    background-position: center;
+}
+.moon{
+    background-image: url(//pic.davdian.com/free/czlc/3/moon.png);
+}
+.page5 .t2 span{
+    background-image: url(//pic.davdian.com/free/czlc/5/t2.png);
+}
+.page6 .t2 span{
+    background-image: url(//pic.davdian.com/free/czlc/6/t2.png);
+}
+.mum2{
+    background-image: url(//pic.davdian.com/free/czlc/4/t2.png);
+}
+.star{
+    background-image: url(//pic.davdian.com/free/czlc/3/t2.png);
+}
+.mamababy{
+    background-image: url(//pic.davdian.com/free/czlc/3/mama.png);
+}
+.leftcloud{
+    background-image: url(//pic.davdian.com/free/czlc/3/leftcloud.png);
+}
+.rightcloud{
+    background-image: url(//pic.davdian.com/free/czlc/3/rightcloud.png);
+}
+
+.tips.tips2 img{
+    top: 0;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    animation: show_kd_icon_revert 2s linear infinite;
+    -webkit-animation: show_kd_icon_revert 2s linear infinite;
+}
+@keyframes show_kd_icon_revert {
+    0% {
+        top: 0;
+        opacity: 1
+    }
+    30% {
+        top: 13px;
+        opacity: 1
+    }
+    60% {
+        top: 26px;
+        opacity: 0
+    }
+    100% {
+        top: 0;
+        opacity: 0
+    }
+}
+
+@-webkit-keyframes show_kd_icon_revert {
+    0% {
+        top: 0;
+        opacity: 1
+    }
+    30% {
+        top: 13px;
+        opacity: 1
+    }
+    60% {
+        top: 26px;
+        opacity: 0
+    }
+    100% {
+        top: 0;
+        opacity: 0
+    }
+}
+
+/* 判断iphone5 *//* 横屏竖屏判断方法与ipad一样 */
+/*@media only screen*/
+/*and (min-device-width: 320px)*/
+/*and (max-device-height: 568px) {*/
+/*!* style *!*/
+/*.image_title{*/
+/*margin:10% auto;*/
+/*}*/
+/*}*/
+/*判断iphone4-iphone4s  横屏竖屏判断方法与ipad一样*/
+/*@media only screen*/
+/*and (min-device-width : 320px)*/
+/*and (max-device-height : 480px){*/
+/*!* style *!*/
+/*.image_title{*/
+/*margin:1% auto;*/
+/*}*/
+/*}*/
+/*iphone6-plus*/
+/*@media only screen*/
+/*and (min-device-width : 414px)*/
+/*and (max-device-height : 736px){*/
+/*!* style *!*/
+/*.image_title{*/
+/*margin:50px auto;*/
+/*}*/
+/*}*/
+/*iphone6*/
+/*@media only screen*/
+/*and (min-device-width : 375px)*/
+/*and (max-device-height : 667px){*/
+/*!* style *!*/
+/*.image_title{*/
+/*margin:40px auto;*/
+/*}*/
+/*}*/

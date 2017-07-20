@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <!-- /build -->
+    <!-- build:style integral -->
+    <link href="../stylesheet/integral.css" rel="stylesheet">
+    <!-- /build -->
+    <title>我的积分</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+    </script>
+</head>
+<body>
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            我的积分
+        </div>
+    </div>
+</div>
+<div class="integral_container">
+    <div class="current_level_container dav-shadow">
+        <a href="./integralRule.html">
+            <div class="level_icon">
+                <i class="icon dav_icon_integral_1_40_40"></i>
+                <i class="icon dav_icon_integral_1_40_40"></i>
+                <i class="icon dav_icon_integral_1_40_40"></i>
+            </div>
+            <div class="integral_number">积分：2000</div>
+        </a>
+        <div class="integral_number_item all_integral">
+            <a href="./integralRecord.html">
+                <span>累计积分：</span>
+                <span class="dav-red">108</span>
+                <span class="pull-right">
+                    <span>历史记录</span>
+                    <i class="icon dav_icon_dayuhao_14_24"></i>
+                </span>
+            </a>
+        </div>
+        <div class="integral_number_item useful_integral">
+            <a href="./integralExchangeList.html">
+                <span>可消费积分：</span>
+                <span class="dav-red">88</span>
+                <span class="pull-right">
+                    <span>积分兑换</span>
+                    <i class="icon dav_icon_dayuhao_14_24"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+
+    <a href="./integralRule.html" class="next_level_container dav-shadow mt12">
+        <div class="next_icon_container">
+            <div class="left_icon">
+                <div class="level_icon">
+                    <i class="icon dav_icon_integral_1_40_40"></i>
+                    <i class="icon dav_icon_integral_1_40_40"></i>
+                    <i class="icon dav_icon_integral_1_40_40"></i>
+                </div>
+                <div class="level_link">
+                    <span></span>
+                </div>
+            </div>
+            <div class="right_icon">
+                <div class="level_icon">
+                    <i class="icon dav_icon_integral_2_40_40"></i>
+                </div>
+                <div class="level_link">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="level_loading" data-for-percent="75">
+            <div class="level_loading_background"></div>
+            <div class="level_loading_color"></div>
+        </div>
+        <div class="next_level_number_container">
+            <span>您当前积分是</span>
+            <span class="dav-red">108</span>
+            <span>分，距离下次升级还需要</span>
+            <span class="dav-red">402</span>
+            <span>分</span>
+        </div>
+    </a>
+    <div class="integral_get_help mt12">
+        <div class="get_all_title">积分获取指南</div>
+        <div class="integral_get_group dav-shadow">
+            <div class="get_item">
+                <i class="icon dav_icon_integral_get_home_60_60"></i>
+                <div class="get_right">
+                    <div class="get_title">
+                        每日登录店铺
+                    </div>
+                    <div class="get_description">
+                        获取2个积分
+                    </div>
+                </div>
+            </div>
+            <div class="get_item">
+                <i class="icon dav_icon_integral_get_cart_60_60"></i>
+                <div class="get_right">
+                    <div class="get_title">
+                        购物下单
+                    </div>
+                    <div class="get_description">
+                        购物消费每10元获得2个积分
+                    </div>
+                </div>
+            </div>
+            <div class="get_item">
+                <i class="icon dav_icon_integral_get_order_60_60"></i>
+                <div class="get_right">
+                    <div class="get_title">
+                        获取有效订单
+                    </div>
+                    <div class="get_description">
+                        佣金收入每元获取2个积分
+                    </div>
+                </div>
+            </div>
+            <div class="get_item">
+                <i class="icon dav_icon_integral_review_60_60"></i>
+                <div class="get_right">
+                    <div class="get_title">
+                        商品评论
+                    </div>
+                    <div class="get_description">
+                        评论商品获取1个积分，单个商品不能重复获取积分
+                    </div>
+                </div>
+            </div>
+            <div class="get_item">
+                <i class="icon dav_icon_integral_get_register_60_60"></i>
+                <div class="get_right">
+                    <div class="get_title">
+                        注册用户
+                    </div>
+                    <div class="get_description">
+                        新注册用户可获得50积分
+                    </div>
+                </div>
+            </div>
+            <div class="get_item">
+                <i class="icon dav_icon_integral_get_shop_60_60"></i>
+                <div class="get_right">
+                    <div class="get_title">
+                        开通店铺
+                    </div>
+                    <div class="get_description">
+                        开通店铺即可获得200积分
+                    </div>
+                </div>
+            </div>
+            <div class="get_item">
+                <i class="icon dav_icon_integral_get_activity_60_60"></i>
+                <div class="get_right">
+                    <div class="get_title">
+                        参与大V店活动
+                    </div>
+                    <div class="get_description">
+                        积极参与大V店活动，即可获得活动积分
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<!-- build:script base_little -->
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script src="../javascript/base.js"></script>
+<!-- /build -->
+<!-- build:script integral -->
+<script type="text/javascript" src="../javascript/integral.js"></script>
+<!-- /build -->
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <!-- /build -->
+
+    <!-- build:style iep -->
+
+    <link href="../stylesheet/groups_merchandise.css" rel="stylesheet">
+    <!-- /build -->
+    <title>组团商品</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 1
+        };
+        //数据请求接口
+        var groups_merchandise_myUrl = "../data/groups_my.json";
+    </script>
+</head>
+<!--如果是自己的店铺(没有回到我们店铺的按钮)就展示 self_shop-->
+<body class="scroll_flag self_shop">
+
+<!-- 以下为顶部搜索 -->
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            大V组团购
+        </div>
+    </div>
+</div>
+
+<!-- 标题Tab选项 -->
+<div class="groups_merchandise_title">
+    <span class="title_line"></span>
+    <ul class="clearfix">
+        <a href="goods.html">
+            <li class="pull-left">
+                <div class="desc"><span class="latest_tips">团购精选</span></div>
+            </li>
+        </a>
+        <a href="goods.html">
+            <li class="pull-left no-right-border">
+                <div class="desc active"><span class="latest_tips">我的店铺组团</span></div>
+            </li>
+        </a>
+    </ul>
+</div>
+
+
+
+<!-- 我的店铺组团 -->
+<div class="groups_merchandise_con" id="groups_merchandise_my">
+    <!-- 我的店铺组团 -->
+    <ul>
+        <a href="./groups_merchandise_detail.html">
+            <li class="mt_10">
+                <div class="groups_pic">
+                    <img src="//pic.davdian.com/images/201511/goods_img/5689_G_1447141995668.jpg">
+                    <div class="group_info">
+                        <span class="right">2人团</span>
+                        <span class="left">省95.88元</span>
+                    </div>
+                </div>
+                <div class="con">
+                    <div class="text">
+                        <p class="omission">女儿四岁了，我们开始聊哲学（软精装，全彩手绘·四册，国内首部亲子对话哲首部亲子对话哲学智慧</p>
+                    </div>
+                    <div class="mt_7 clearfix">
+                        <div class="pull-left">
+                            <div class="group_status_incomplete">
+                                <p>还差 2 人成团</p>
+                                <p class="surplus_times" data-remain-second="30">剩余时间：---</p>
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                            <div class="group_status_incomplete ta_r">
+                                <p >预计成团佣金:<span class="color_EC6890"> 66 元</span></p>
+                                <p>团长: 你好 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </a>
+
+        <a href="./groups_merchandise_detail.html">
+            <li class="mt_10">
+                <div class="groups_pic">
+                    <img src="//pic.davdian.com/images/201511/goods_img/5689_G_1447141995668.jpg">
+                    <div class="group_info">
+                        <span class="right">2人团</span>
+                        <span class="left">省95.88元</span>
+                    </div>
+                </div>
+                <div class="con">
+                    <div class="text">
+                        <p class="omission">女儿四岁了，我们开始聊哲学（软精装，全彩手绘·四册，国内首部亲子对话哲首部亲子对话哲学智慧</p>
+                    </div>
+                    <div class="mt_7 clearfix">
+                        <div class="pull-left">
+                            <div class="group_status_success">
+                                组团成功
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                            <div class="group_status_incomplete ta_r">
+                                <p >预计成团佣金:<span class="color_EC6890"> 66 元</span></p>
+                                <p>团长: 你好 </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </a>
+
+    </ul>
+
+
+    <!-- 暂无我的组团 -->
+    <!--<div class="none">-->
+        <!--<p>您还未发起组团</p>-->
+        <!--<p><span class="button">马上发起组团</span></p>-->
+    <!--</div>-->
+</div>
+<!-- 回到我的店铺提示 -->
+<div class="back_store_con">
+    <span class="close" onclick="var span = this.parentNode; span.parentNode.removeChild(span);"></span>
+    <a href="//nemo.davdian.com"><span class="store_btn">回到我的店铺</span></a>
+</div>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<!-- build:script base -->
+<script src="http://cdn.davdian.com/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../javascript/merchandise.js"></script>
+<script type="text/javascript" src="../javascript/groups_merchandise_my.js"></script>
+<!-- /build -->
+
+</body>
+</html>

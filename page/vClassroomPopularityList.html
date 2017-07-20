@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../dist/category.css" rel="stylesheet">
+    <title>人气分享榜</title>
+    <link rel="stylesheet" href="../stylesheet/model.css">
+    <link rel="stylesheet" href="../stylesheet/base.css">
+    <script>
+        var  shareTopList = "/api/content/course/shareTopList",
+                shareTopInfo = "/api/content/course/shareTopInfo",
+                courseId = "123";
+    </script>
+</head>
+<body class="scroll_flag self_shop in_app" style="padding-top: 0px;padding-bottom: 0px;">
+<div id="vPopularityList" >
+    <popularitylist></popularitylist>
+</div>
+
+<script src="http://cdn.davdian.com/vue/2.0.5/vue.min.js"></script>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://mock.bravetime.net/rap.plugin.js?projectId=1"></script>
+<script src="../dist/vClassroomPopularityList.js"></script>
+
+</body>
+
+</html>

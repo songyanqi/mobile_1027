@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的红包</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/account.css" rel="stylesheet">
+  <script>
+//    var designWidth = window.designWidth;
+//    function setRootSize (width) {
+//    width = width || designWidth || 375;
+//    var clientWidth = document.documentElement.clientWidth;
+//    if (clientWidth > 640) {
+//    clientWidth = 640
+//    } else {
+//    if (clientWidth < 320) {
+//    clientWidth = 320
+//    }
+//    }
+//    document.documentElement.style.fontSize = (clientWidth / width) * 100 + "px";
+//    }
+//
+//    window.addEventListener("resize", setRootSize, false);
+//    window.designWidth = undefined;
+//    setRootSize(750);
+//    setTimeout(function () {
+//    document.querySelector('.bouns_list').style.display = "block";
+//    },0)
+  </script>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0,
+            btnOnHead: 1,    // 头部文字按钮
+            btnText: "红包说明",     // 头部文字按钮文字
+            btnLink: "t-490.html"      // 头部文字按钮链接
+        };
+    </script>
+</head>
+<body class="account_bouns account_bouns_con">
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            我的红包
+        </div>
+    </div>
+</div>
+
+<!--<div class="footer" style="position: initial; bottom: initial; width: 100%;">-->
+<!--<div class="clearfix version_switcher">-->
+<!--<a href="//s.mamamba.net/login.html?view=view" class="pull-left selected">我领取的红包</a><a href="" class="pull-left">我发出的红包</a>-->
+<!--</div>-->
+<!---->
+<!--</div>-->
+
+<div class="bouns_list">
+    <!--跳转的红包-->
+    <a href="">
+        <div class="bouns_item bouns_red">
+            <div class="topbg">
+                <span class="topbg_pic"></span>
+            </div>
+            <div class="con">
+                <div class="red_type">现金劵</div>
+                <div class="price clearfix">
+                    <div class="pull-left">
+                        <span>¥</span>10
+                    </div>
+                    <div class="pull-right">
+                        <div class="fz_14 title">新人专享</div>
+                        <div class="fz_12 condition">满80元使用</div>
+                        <div class="fz_10">有效期：2016.3.28 - 2016.4.30</div>
+                    </div>
+                </div>
+                <div class="instructions">限绘本节活动期间使用</div>
+            </div>
+        </div>
+    </a>
+    <!--默认的红包-->
+    <div class="bouns_item bouns_pink">
+        <div class="topbg">
+            <span class="topbg_pic"></span>
+        </div>
+        <div class="con">
+            <div class="red_type">现金劵</div>
+            <div class="price clearfix">
+                <div class="pull-left">
+                    <span>¥</span>10
+                </div>
+                <div class="pull-right">
+                    <div class="fz_14 title">新人专享</div>
+                    <div class="fz_12 condition">满80元使用</div>
+                    <div class="fz_10">有效期：2016.3.28 - 2016.4.30</div>
+                </div>
+            </div>
+            <div class="instructions">限绘本节活动期间使用</div>
+        </div>
+    </div>
+    <!--已使用红包-->
+    <div class="bouns_item bouns_grey">
+        <div class="topbg">
+            <span class="topbg_pic"></span>
+        </div>
+        <div class="con">
+            <div class="red_type">现金劵</div>
+            <div class="price clearfix">
+                <div class="pull-left">
+                    <span>¥</span>10
+                </div>
+                <div class="pull-right">
+                    <div class="fz_14 title">新人专享</div>
+                    <div class="fz_12 condition">满80元使用</div>
+                    <div class="fz_10">有效期：2016.3.28 - 2016.4.30</div>
+                </div>
+            </div>
+            <div class="instructions">全场通用</div>
+        </div>
+        <div class="used_seal"></div>
+    </div>
+    <!--已过期红包-->
+    <div class="bouns_item bouns_grey">
+        <div class="topbg">
+            <span class="topbg_pic"></span>
+        </div>
+        <div class="con">
+            <div class="red_type">现金劵</div>
+            <div class="price clearfix">
+                <div class="pull-left">
+                    <span>¥</span>10
+                </div>
+                <div class="pull-right">
+                    <div class="fz_14 title">新人专享</div>
+                    <div class="fz_12 condition">满80元使用</div>
+                    <div class="fz_10">有效期：2016.3.28 - 2016.4.30</div>
+                </div>
+            </div>
+            <div class="instructions">全场通用</div>
+        </div>
+        <div class="expired_seal"></div>
+    </div>
+
+  <!--通用-->
+  <div class = "coupons_cont clearfix">
+    <div class = "coupons_left">
+      <div class = "coupons_l_money">¥ <span>100</span></div>
+      <div class = "coupons_l_condition">满300元可用</div>
+    </div>
+    <div class = "coupons_right">
+      <div class = "coupons_r_title">绘本姐阅读基金</div>
+      <div class = "coupons_r_condition">全场通用</div>
+      <div class = "coupons_r_date">2015.05.02 - 2015.05.02</div>
+    </div>
+  </div>
+  <!--已过期-->
+  <div class = "coupons_dueCont clearfix">
+    <div class = "coupons_left">
+      <div class = "coupons_l_money">¥ <span>100</span></div>
+      <div class = "coupons_l_condition">满300元可用</div>
+    </div>
+    <div class = "coupons_right">
+      <div class = "coupons_r_title">绘本姐阅读基金</div>
+      <div class = "coupons_r_condition">全场通用</div>
+      <div class = "coupons_r_date">2015.05.02 - 2015.05.02</div>
+    </div>
+  </div>
+  <!--以使用-->
+  <div class = "coupons_usedCont clearfix">
+    <div class = "coupons_left">
+      <div class = "coupons_l_money">¥ <span>100</span></div>
+      <div class = "coupons_l_condition">满300元可用</div>
+    </div>
+    <div class = "coupons_right">
+      <div class = "coupons_r_title">绘本姐阅读基金</div>
+      <div class = "coupons_r_condition">全场通用</div>
+      <div class = "coupons_r_date">2015.05.02 - 2015.05.02</div>
+    </div>
+  </div>
+</div>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/model.js"></script>
+<!--<script>-->
+  <!--var designWidth = window.designWidth;-->
+  <!--function setRootSize (width) {-->
+    <!--width = width || designWidth || 375;-->
+    <!--var clientWidth = document.documentElement.clientWidth;-->
+    <!--if (clientWidth > 640) {-->
+      <!--clientWidth = 640-->
+    <!--} else {-->
+      <!--if (clientWidth < 320) {-->
+        <!--clientWidth = 320-->
+      <!--}-->
+    <!--}-->
+    <!--document.documentElement.style.fontSize = (clientWidth / width) * 100 + "px";-->
+  <!--}-->
+
+  <!--window.addEventListener("resize", setRootSize, false);-->
+  <!--window.designWidth = undefined;-->
+  <!--setRootSize(750);-->
+  <!--setTimeout(function () {-->
+      <!--document.querySelector('.bouns_list').style.display = "block";-->
+  <!--},0)-->
+<!--</script>-->
+</body>
+</html>

@@ -1,0 +1,267 @@
+{
+  "code": 0,
+  "shop_url": "https://15201663952.davdian.com",
+  "visitor_status": 3,
+  "sess_key": "42df8bf6e510c97c11afe81a96569014027bf803",
+  "data": {
+    "webUrl": "https://15201663952.davdian.com",
+    "userInfo": {
+      "sellerId": 31026,
+      "userId": 31026,
+      "mobile": "18611620223",
+      "userName": "Jixin",
+      "shopName": "Jixin",
+      "shopBackground": "",
+      "shopIntro": "",
+      "rankTitle": "凤凰妈妈",
+      "stationRank": 1,
+      "personalSign": "xxx",
+      "shopDomain": "TEST",
+      "address": "Jixin",
+      "nickName": "18611620223",
+      "headImage": "",
+      "publish": true,
+      "verify": "认证状态",
+      "attentionWeixin": "1",
+      "cartNum": "11"
+    },
+    "feedList": [
+      {
+        "title": {
+          "tplId": "bd_user_title",
+          "leftTitle": "我的订单",
+          "rightTitle": "全部订单",
+          "command": {
+            "content": "点击时的动作",
+            "log": "我的订单|标题|1"
+          }
+        },
+        "body": {
+          "tplId": "bd_user_0",
+          "dataList": [
+            {
+              "position": "0",
+              "imageUrl": "[[static]]/page/center/img/order-wait-pay.png",
+              "title": "标题",
+              "num": "0",
+              "command": {
+                "content": "点击时的动作",
+                "log": "我的订单菜单项||1"
+              }
+            },
+            {
+              "position": "0",
+              "imageUrl": "[[static]]/page/center/img/order-wait-pay.png",
+              "title": "标题",
+              "num": "0",
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            },
+            {
+              "position": "0",
+              "imageUrl": "[[static]]/page/center/img/order-wait-pay.png",
+              "title": "标题",
+              "num": "0",
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            },
+            {
+              "position": "0",
+              "imageUrl": "[[static]]/page/center/img/order-wait-pay.png",
+              "title": "标题",
+              "num": "0",
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            },
+            {
+              "position": "0",
+              "imageUrl": "[[static]]/page/center/img/order-wait-pay.png",
+              "title": "标题",
+              "num": "123",
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "body": {
+          "tplId": "bd_user_1",
+          "dataList": [
+            {
+              "position": "0",
+              "imageUrl": "[[static]]/page/center/img/func-collection.png",
+              "title": "课程",
+              "num": "0",
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            },
+            {
+              "position": "0",
+              "imageUrl": "[[static]]/page/center/img/func-collection.png",
+              "title": "标题",
+              "num": "0",
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            },
+            {
+              "position": "0",
+              "imageUrl": "[[static]]/page/center/img/func-collection.png",
+              "title": "标题",
+              "num": "0",
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            },
+            {
+              "position": "0",
+              "imageUrl": "[[static]]/page/center/img/func-collection.png",
+              "title": "标题",
+              "num": "0",
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            },
+            {
+              "position": "0",
+              "imageUrl": "[[static]]/page/center/img/func-collection.png",
+              "title": "标题",
+              "num": "0",
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "marginTop": "10",
+        "title": {
+          "tplId": "bd_user_title",
+          "leftTitle": "我的奖励",
+          "rightTitle": "推广得奖励",
+          "command": {
+            "content": "点击时的动作",
+            "log": "统计动作"
+          }
+        },
+        "body": {
+          "tplId": "bd_user_2",
+          "dataList": [
+            {
+              "position": "0",
+              "title": "上标题",
+              "num": "293.99元",
+              "hasNewVisitor": 1,
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            },
+            {
+              "position": "0",
+              "title": "上标题",
+              "num": "293.99元",
+              "hasNewVisitor": 1,
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            },
+            {
+              "position": "0",
+              "title": "上标题",
+              "num": "293.99元",
+              "hasNewVisitor": 1,
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "title": {
+          "tplId": "bd_user_title",
+          "leftTitle": "由xxx推荐",
+          "luminance": "1",
+          "command": {
+            "content": "点击时的动作",
+            "log": "统计动作"
+          }
+        }
+      },
+      {
+        "title": {
+          "tplId": "bd_user_title",
+          "leftTitle": "239元正式开店，享受终身服务",
+          "oneKd": "1",
+          "command": {
+            "content": "",
+            "log": "统计动作"
+          }
+        }
+      },
+      {
+        "marginTop": "10",
+        "body": {
+          "tplId": "bd_user_3",
+          "dataList": [
+            {
+              "position": "0",
+              "title": "标题",
+              "imageUrl": "[[static]]/page/center/img/menu-point.png",
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            },
+            {
+              "position": "0",
+              "title": "标题",
+              "imageUrl": "[[static]]/page/center/img/menu-point.png",
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            },
+            {
+              "position": "0",
+              "title": "标题",
+              "imageUrl": "[[static]]/page/center/img/menu-point.png",
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            },
+            {
+              "position": "0",
+              "title": "标题",
+              "imageUrl": "[[static]]/page/center/img/menu-point.png",
+              "command": {
+                "content": "点击时的动作",
+                "log": "统计动作"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

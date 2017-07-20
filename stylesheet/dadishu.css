@@ -1,0 +1,352 @@
+.bg{
+    background-image: url('//pic.davdian.com/free/2016/11/30/bg4.jpg');
+    background-size: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.jing{
+    position: absolute;
+    left: 0;
+}
+.jing_ban{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size:100%;
+    background-image: url('//pic.davdian.com/free/2016/11/28/jb.png');
+    pointer-events: none;
+}
+.game{
+    position: absolute;
+    top: 0;
+}
+.lang{
+    overflow-y: hidden;
+    overflow-x: visible;
+    position: absolute;
+}
+.lang.moving img{
+    animation: mv 1s linear;
+    -webkit-animation: mv 1s linear;
+}
+.lang img{
+    margin-top: 128%;
+}
+@keyframes mv {
+    0% {
+        margin-top: 128%;
+    }
+    80%{
+        margin-top: 10%;
+    }
+    100% {
+        margin-top: 128%;
+    }
+}
+
+@-webkit-keyframes mv {
+    0% {
+        margin-top: 128%;
+    }
+    80%{
+        margin-top: 10%;
+    }
+    100% {
+        margin-top: 128%;
+    }
+}
+.bottom{
+    bottom:15px;
+    left: 0;
+    width: 100%;
+    position: absolute;
+}
+.rules{
+    height: 40px;
+    background-color: #FCEFCC;
+    border: #F3C269 solid 1px;
+    margin: 0 10px;
+    border-radius: 5px;
+    position: relative;
+    font-size: 12px;
+    line-height: 40px;
+    color: #632F00;
+    padding-left: 60px;
+    padding-right: 10px;
+}
+.rules:before{
+    content: "";
+    display: block;
+    background-image: url('//pic.davdian.com/free/2016/11/29/z.png');
+    width: 44px;
+    height: 55px;
+    background-size: 100%;
+    position: absolute;
+    left: 10px;
+    top: -14px;
+}
+.buttons{
+    padding:10px 5%;
+}
+.buttons:after{
+    content: "";
+    clear: both;
+}
+.buttons .btn{
+    display: inline-block;
+    width: 33.33%;
+    float: left;
+}
+.buttons .btn3{
+    float: right;
+}
+
+.mask{
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    z-index: 2;
+    height: 100%;
+}
+.success{
+    margin-top: 50%;
+    background-size:100%;
+    width: 92%;
+    margin-left: 4%;
+    position: relative;
+}
+.success .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 40% 15% 0;
+    text-align: center;
+}
+.success a{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    left: 0;
+}
+.success a img{
+    width: 40%;
+}
+.close{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-size: 25px;
+    top: -8px;
+    right: -8px;
+    background-image: url(//pic.davdian.com/free/2016/11/28/close.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.my_prize, .game_rules{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 40%;
+    position: relative;
+}
+.my_prize1{
+    margin-top: 60%;
+}
+.my_prize2{
+    margin-top: 50%;
+}
+.my_prize .context,.my_prize .bonus,.game_rules .context{
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    width: 92%;
+    left: 4%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 70%;
+}
+.my_prize1 .bonus{
+    top: 48%;
+    height: 40%;
+}
+.my_prize2 .bonus{
+    top: 34%;
+    height: 60%;
+}
+.my_prize .context,.game_rules .context{
+    overflow: hidden;
+}
+.my_prize .context img,.game_rules .context img{
+    width: 45%;
+    margin:3% 0;
+}
+.my_prize .context .text,.game_rules .context .text{
+    color: #632F00;
+    font-size: 16px;
+    margin: 5% ;
+}
+.use{
+    position: relative;
+    margin: 1% 1% 2%;
+}
+.money{
+    color: #fff;
+    text-shadow: 0 1px 2px #333 ;
+    position: absolute;
+    right: 73%;
+    font-size: 34px;
+    vertical-align: middle;
+    top: 35%;
+}
+.use .info{
+    position: absolute;
+    right: 0;
+    top: 2%;
+    width: 42%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.5;
+    height: 100%;
+}
+
+.info .info_m{
+    color: #FF4A7D;
+    font-weight: bold;
+    margin-top: 3%;
+}
+.info .info_d{
+    color: #FF4A7D;
+    font-size: 11px;
+    line-height: 13px;
+}
+ .use.use_grey .info .info_m,.use.use_grey .info .info_d{
+    color: #666;
+}
+ .btn_use{
+    background-color: #FF4A7D;
+    color: #fff;
+    font-size: 11px;
+    display: inline-block;
+    border-radius: 2px;
+    position: absolute;
+    width: 60px;
+    margin-left: -30px;
+    bottom: 15%;
+}
+.btn_use:hover,.btn_use:visited{
+    color: #fff;
+}
+ .use.use_grey .btn_use{
+    background-color: #cccccc;
+    color: #fff;
+}
+.game_rules .context .text{
+    text-align: left;
+    font-size: 14px;
+    margin-top: 2%;
+}
+
+.late, .game_end{
+    text-align: center;
+    margin-top: 60%;
+    color: #632F00;
+}
+.game_end{
+    margin-top: 65%;
+}
+.late img{
+    width: 84px;
+}
+.late .late_text{
+    font-size: 18px;
+}
+.late .late_text_small{
+    font-size: 14px;
+}
+.late .late_text,.late .late_text_small{
+    margin-top: 8%;
+}
+.game_end .save{
+    background-color: rgba(255,255,255,.7);
+    border: #F3C269 solid 1px;
+    margin: 10px;
+    font-size: 14px;
+    text-align: left;
+    padding: 10px;
+}
+.game_end .z {
+    width: 64px;
+    display: inline-block;
+    position: relative;
+}
+.game_end .z:after{
+    content: "";
+    display: block;
+    width: 44px;
+    height: 59px;
+    background-image: url(//pic.davdian.com/free/2016/11/29/z2.png);
+    background-size: 100%;
+    position: absolute;
+    top: -50px;
+    left: 10px;
+}
+.game_end .warn{
+    color: #FF4A7D;
+    padding: 0 4px;
+}
+.game_end .bonus{
+    background-color: rgba(255,255,255,.7);
+    margin: 10px;
+    font-size: 14px;
+    text-align: left;
+    padding: 10px;
+    position: relative;
+}
+.game_end .money{
+    font-size: 40px;
+}
+.game_end  .info .info_m{
+   font-size: 14px;
+}
+.game_end  .info .info_d{
+    font-size: 14px;
+    margin-top: 5%;
+}
+.game_end .text{
+    color: #632F00;
+    margin-top: 15px;
+}
+body{
+    padding: 0;
+}
+body.in_app .top0{
+    display: none;
+}
+.dao_time{
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 50%;
+    color: #FF4A7D;
+    font-size: 100px;
+    margin-left: -25px;
+    margin-top: -25px;
+    animation: size 1s linear;
+    font-weight: bold;
+    -webkit-animation: size 1s linear;
+}
+@keyframes size {
+    0% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

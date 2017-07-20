@@ -1,0 +1,351 @@
+.draw_plate_mainbox{
+    width: 100%;
+    min-height: 300px;
+    background-color: #5EC17D;
+    position: relative;
+    font-size: 14px;
+}
+.draw_plate_bottom > a{
+    display: inline-block;
+    text-align: center;
+    background-color: #D8246B;
+    width: 130px;
+    height: 30px;
+    border: 1px solid #E5DBB9;
+    color: #FFF;
+    line-height: 30px;
+    margin: 0 auto;
+    margin-left: 50%;
+    position: relative;
+    left: -65px;
+    margin-bottom: 60px;
+    border-radius: 5px;
+}
+.draw_plate{
+    width: 84%;
+    position: absolute;
+    top:30%;
+    left:0;right: 0;
+    margin: auto;
+}
+.draw_plate > img{
+    position: relative;
+    z-index: 5;
+}
+.plate_note{
+    top: 0px;
+    right: 0;
+    bottom:0;
+    left: 0px;
+    margin: auto auto;
+    position: absolute;
+    z-index: 5;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    display: -ms-flex;
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flexbox;
+    display: flex;
+    flex-direction:column;
+    width: 88%;
+    height: 85%;
+}
+.note_flex{
+    width: 100%;
+    height: 32.5%;
+    border-radius: 8px;
+    display: inline-block;
+}
+.note_flex > div{
+    width: 32.5%;
+    height:100%;
+    float: left;
+}
+.reword_note{
+    background-color: #F6F3DD;
+    border-radius: 4px;
+    /*margin: 2px;*/
+    text-align: center;
+    border: 3px solid #F6F3DD;
+    width: 100%;
+    height:100%;
+    box-sizing: border-box;
+}
+.reword_note img{
+    width: 100%;
+}
+.reword_note p{
+    font-size: 0.13rem;
+    line-height: 0.13rem;
+    color: #666666;
+}
+.note_flex .reword_note.click_reword_btn{
+    background-color: #692D0F;
+    background-image: url(//pic.davdian.com/free/2017/kaidianchoujiang20170221/click_btn.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+}
+.note_flex .reword_note.reword_btn_grey{
+    background-color: #692D0F;
+    background-image: url(//pic.davdian.com/free/2017/kaidianchoujiang20170221/click_btn_grey.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0;
+}
+
+.reword_note.select_note{
+    border: 3px solid #FE3AA5;
+}
+.draw_plate_bottom{
+    background-image: url(//pic.davdian.com/free/2017/kaidianchoujiang20170221/bg_repeat.png);
+    background-size: 100% auto;
+    min-height: 300px;
+    padding-bottom: 45px;
+    margin-top: -38%;
+}
+.remaining_number_bottom{
+    width: 69%;
+    background-color: #BB0000;
+    text-align: center;
+    border-radius: 4px;
+    color: #FFF9E1;
+    border:1px solid #E5DBB9;
+    font-size: 0.14rem;
+    padding: 0.1rem 0;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
+    margin: auto;
+}
+.remaining_number_top{
+    width: 54%;
+    margin: 0 auto;
+    height: 45%;
+    border-left: 0.03rem solid #7B1F18;
+    border-right: 0.03rem solid #7B1F18;
+}
+.remaining_number_top div{
+    width: 85%;
+    margin: 0 auto;
+    height: 100%;
+    border-left: 0.03rem solid #7B1F18;
+    border-right: 0.03rem solid #7B1F18;
+}
+
+
+
+
+
+.fund_satisfy_prompt{
+    margin: 15px auto 20px;
+    background: rgba(255,255,255,0.2);
+    font-size: 0.12rem;
+    text-align: left;
+    padding: 0.1rem;
+    position: relative;
+    line-height: 0.17rem;
+    border-radius: 0.04rem;
+    font-weight: normal;
+    width: 2.4rem;
+}
+.text_align_left{
+    text-align: left !important;
+}
+.fund_user_content{
+    padding-top: 20px;
+}
+.fund_user_title{
+    text-align: center;
+    font-size: 15px;
+    background: url(//pic.davdian.com/free/10w_fund_pic3png.png) no-repeat bottom;
+    background-size: 150px;
+    margin-bottom: 5px;
+    padding-bottom: 8px;
+}
+.fund_user_num{
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.fund_user_list{
+    position: relative;
+    height:244px;
+    overflow: hidden;
+}
+.user_list_reword{
+    margin:0 10px 0;
+    background-color:#F6F3DD;
+    padding: 48px 10px 20px;
+    border-radius: 10px;
+    position: relative;
+    border:1px solid #BD742A;
+}
+.list_reword_title{
+    width: 132px;
+    height: 39px;
+    background-color:#BD742A ;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 39px;
+    text-align: center;
+    border: 2px solid #F3E9C7;
+    position: absolute;top:0;
+    left:0;
+    right: 0;
+    margin: -20px auto;
+}
+.user_list_reword p{
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+.remaining_number{
+    position: absolute;
+    height: 21.3%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -19.5%;
+    z-index: 4;
+}
+
+.fund_user_list .swiper-slide{
+    height: 40px;
+    padding:7px 10px 10px 0;
+    position: relative;
+    font-size: 14px;
+}
+.fund_user_list .swiper-slide:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    background: #EDDFC2;
+    width: 100%;
+    height: 1px;
+    bottom:0;
+}
+
+.fund_user_list .swiper-slide .head{
+    width:30px;
+    height: 30px;
+}
+.fund_user_list .swiper-slide div{
+    line-height: 46px;
+}
+.fund_user_list .swiper-slide div span:nth-of-type(2){
+    display: inline-block;
+    margin-left: 10px;
+}
+.fund_user_list .swiper-slide .head img{
+    width:30px;
+    height: 30px;
+    border-radius: 30px;
+}
+/*Retina屏为2的时候调用下面的样式*/
+@media
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min-device-pixel-ratio:2),
+only screen and (min--moz-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:4/2),
+only screen and (min-resolution:2dppx)
+{
+    .fund_user_list li:after{
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+    .fund_satisfy_prompt:after,.fund_over_satisfy_prompt:after{
+        top: 0;
+        left: 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: left top;
+
+        -ms-transform: scale(0.5); 		/* IE 9 */
+        -ms-transform-origin: left top; 		/* IE 9 */
+
+        -webkit-transform: scale(0.5);	/* Safari 和 Chrome */
+        -webkit-transform-origin: left top;	/* Safari 和 Chrome */
+
+        -moz-transform: scale(0.5);		/* Firefox */
+        -moz-transform-origin: left top;		/* Firefox */
+
+        -o-transform: scale(0.5);		/* Opera */
+        -o-transform-origin: left top;		/* Opera */
+        border-radius: 0.08rem;
+    }
+}
+body.in_app .top0{
+    display: none;
+}
+body{
+    padding-bottom: 0px;
+}
+.mask {
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    z-index: 11;
+    height: 100%;
+}
+.con {
+    position: absolute;
+    top: 20%;
+    width: 90%;
+    margin-left: 5%;
+}
+.winning_btn{
+    position: absolute;
+    width: 77%;
+    height: 15%;
+    bottom: 6%;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.winning_btn a,.winning_btn div{
+    display: block;
+    height: 100%;
+    width: 45%;
+}
+.get_gift{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 0.16rem;
+    color: #632F00;
+}
+.get_gift img{
+    width: 40%;
+}
+.get_gift_close{
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    right: 0;
+    top: 0;
+}
+.fund_user_list .swiper-slide .pull-right{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    white-space:nowrap;
+    max-width: 45%;
+}

@@ -1,0 +1,89 @@
+{
+  "code": 0,
+  "data_version": "f57f6b5fc3f4e0a9130a530e23fc2e98",
+  "shop_url": "http:\/\/15928690607.vyohui.cn",
+  "visitor_status": 3,
+  "sess_key": "f6230680886e3dfb08bee116d8829bfa0275f463",
+  "data": {
+    "role": 3,
+    "teacherRoomId": "php_community_master_3",
+    "discussRoomId": "php_community_slave_3",
+    "communityTitle": "\u2764\ufe0f\u79ef\u6781\ud83d\udc1f\ud83d\ude044455",
+    "communityIntro": "\u6211\u91cc\u53ef\u8c03\u76ae\u7684\n\n\u4ee5\u5438\u5f15\uff0c\n\uff0c\u773c\u73e0\u4e00\uff0c\u5c31\n\u5192\u51fa\u4e00\u4e2a\u9b3c\u4e3b\u610f\n\u3002\n\n\u8fd9\u4e0d\uff0c\u4eca\u5929\u5348\u521a\u5403\n\u8fc7\u5348\u996d\uff0c\u6211\u53d1\u73b0\n\n\u7238\u7238\u8fdb\u95e8\u65f6\u6362\u4e0b\u7684\u76ae\u978b\u6a2a\u6321\u5728\u95e8\u53e3\uff0c\n\u521a\u628a\u5b83\u4eec\u653e\u597d\uff0c\u6211\n\n\u8111\u6d77\u91cc\u5c31\u95ea\u51fa\u4e00\u4e2a\u5ff5\n\u5934\uff1a\u7238\u7238\u7684\u978b\u559c\u6b22\n\n\u653e\u5728\u978b\u67b6\u6700\u4e0b\u4e00\u5c42\u91cc\n\n\uff0c\u800c\u978b\u67b6\u4e0aKTV\u9014\u5f84\u9ad8\u5b98\u539a\u7984\uff0c\u88e4\u5b50\u4e86\uff0c\u6211\uff0c\u54af\uff0c\u94c1\u8def\u5c40\uff0c\u4ed6\u5566\uff0c\u565c\uff0c\u63a8",
+    "communityHolderName": "\u4f60\u597d\u9177\u7684\u611f\u89c9\uff0c\u56fe",
+    "communityHolderImage": "http:\/\/pic.davdian.com\/news\/2016\/10\/03\/80_80_0c307199f3c059199a328e8b8318a4f2.png",
+    "communityMember": {
+      "command": {
+        "content": "\/"
+      },
+      "list": [
+        {
+          "avatar": "http:\/\/pic.davdian.com\/news\/2016\/10\/03\/80_80_0c307199f3c059199a328e8b8318a4f2.png"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/news\/2017\/02\/23\/80_80_bbe21d184fbea6100529005e90d2a3ab.png"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/shop_logo\/2017\/02\/10\/80_80_2ce13fc97909bd385eeecd512ba8a82f.jpg"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/shop_logo\/2017\/01\/01\/80_80_975fe373111365fd29c03b0ca52d7054.jpeg"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/free\/default_head_icon_0419.png"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/news\/2016\/10\/04\/80_80_31fda439b6351e545718f59e01556977.png"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/news\/2017\/01\/20\/80_80_ff2173a7f4ff67e3be17289dfb77ac3b.png"
+        },
+        {
+          "avatar": "http:\/\/wx.qlogo.cn\/mmopen\/lISXQSaVGI1lvfKiakPzuicsy9lDd3k9zLvXn7jhBRcpRg7wj1O1FjLf7XnDicFvhFdDtmqIicEB8R9uzWHkxia7gcyfoZPweFg9P\/0"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/shop_logo\/2016\/12\/05\/80_80_18078653e01ff6b16cda2d707d9c8255.jpg"
+        },
+        {
+          "avatar": "http:\/\/wx.qlogo.cn\/mmopen\/WBNHqzdc2TYMRNmuFNEib8rEnSGGF8SzXaiaibGTQ6vhibvDhbyZ0Z6btxhC4sthDAnibeDjZ85AicOMB0z0Kric9BoXM6icpfgIu0uB\/0"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/news\/2016\/10\/03\/80_80_0c307199f3c059199a328e8b8318a4f2.png"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/news\/2017\/02\/23\/80_80_bbe21d184fbea6100529005e90d2a3ab.png"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/shop_logo\/2017\/02\/10\/80_80_2ce13fc97909bd385eeecd512ba8a82f.jpg"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/shop_logo\/2017\/01\/01\/80_80_975fe373111365fd29c03b0ca52d7054.jpeg"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/free\/default_head_icon_0419.png"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/news\/2016\/10\/04\/80_80_31fda439b6351e545718f59e01556977.png"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/news\/2017\/01\/20\/80_80_ff2173a7f4ff67e3be17289dfb77ac3b.png"
+        },
+        {
+          "avatar": "http:\/\/wx.qlogo.cn\/mmopen\/lISXQSaVGI1lvfKiakPzuicsy9lDd3k9zLvXn7jhBRcpRg7wj1O1FjLf7XnDicFvhFdDtmqIicEB8R9uzWHkxia7gcyfoZPweFg9P\/0"
+        },
+        {
+          "avatar": "http:\/\/pic.davdian.com\/shop_logo\/2016\/12\/05\/80_80_18078653e01ff6b16cda2d707d9c8255.jpg"
+        },
+        {
+          "avatar": "http:\/\/wx.qlogo.cn\/mmopen\/WBNHqzdc2TYMRNmuFNEib8rEnSGGF8SzXaiaibGTQ6vhibvDhbyZ0Z6btxhC4sthDAnibeDjZ85AicOMB0z0Kric9BoXM6icpfgIu0uB\/0"
+        }
+      ]
+    },
+    "momGrowUp": {
+      "title": "\u5988\u5988\u6210\u957f",
+      "command": {
+        "content": "http:\/\/s.vyohui.cn\/station.html"
+      }
+    }
+  }
+}

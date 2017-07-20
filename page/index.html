@@ -1,0 +1,1874 @@
+<!DOCTYPE html>
+<html lang="ch" ng-app="indexApp" style="font-size: 100px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>哈爸大V店—MAMA+&nbsp;|&nbsp;大V店</title>
+    <script src="../javascript/check.js"></script>
+    <link href="http://cdn.davdian.com/swiper/swiper-3.3.1.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../dist/index.css">
+   <script>
+        //统计
+        var tj_id = 1;
+        var tj_path = 'index';
+        var tj_path_detail = 'index_c';
+
+        var app_need_update_flag = 0;
+
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 0,     // 是否展示头部
+            showFoot: 1,     // 是否展示底部
+            backOnHead: 0,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0,  // 头部分享按钮
+            btnOnHead: 0,    // 头部文字按钮
+            btnText: "",     // 头部文字按钮文字
+            btnLink: ""      // 头部文字按钮链接
+        };
+
+
+        /////////////////////微信分享/////////////////////
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+        /////////////////////////////////////////////////
+
+
+        // 下拉刷新数据
+        var userId = "22";
+        var pagesize = 4;
+        var pageIndexStart = 6;
+
+
+        // 秒杀豆腐块
+        var indexSeckillCountdown="1152000";
+
+        //弹红包数据
+        var getBounsUrl = "../data/send_bonus.json"; // 请求红包数据
+
+        var refreshUrl = "../new_page/module/good_list_2_row.ajax.json";
+
+        var getAppBonusUrl = "cc";
+
+        // 猜你喜欢数据
+        var maybeYouLikeUrl = "../module/goods2row.json";
+        var tuanDataUrl = "../module/tuanList.json";
+
+        var double11=1;
+
+    </script>
+    <script>
+        function fixFe(dom) {
+            var l = dom.children.length;
+            for(var i = 0;i<l;i++){
+                var d = dom.children[i];
+                if(d.tagName == "LINK" && d.href){
+                    var href = d.href;
+                    if(href.indexOf("fe")>-1){
+                        document.write('<link href="'+href.replace("fe2.","fe6.").replace("fe3.","fe6.").replace("fe.","fe6.")+'" rel="stylesheet">')
+                    }
+                    if(href.indexOf("cdn.davdian.com")>-1){
+                        document.write('<link href="'+href.replace("cdn.davdian.com","fe6.davdian.com/staticfe/libs")+'" rel="stylesheet">')
+                    }
+                }else if(d.tagName == "SCRIPT" && d.src){
+                    var src = d.src;
+                    if(src.indexOf("fe")>-1){
+                        document.write('<script type="text/javascript" src="'+src.replace("fe2.","fe6.").replace("fe3.","fe6.").replace("fe.","fe6.")+'"><\/script>')
+                    }
+                    if(src.indexOf("cdn.davdian.com")>-1){
+                        document.write('<script type="text/javascript" src="'+src.replace("cdn.davdian.com","fe6.davdian.com/staticfe/libs")+'"><\/script>')
+                    }
+                }
+            }
+        }
+        var flag = !window.checkFeIsAvailable;
+        if(flag){
+            fixFe(document.head);
+        }
+    </script>
+    <script type="text/javascript" src="https://dn-bughd-web.qbox.me/bughd.min.js" crossOrigin="anonymous"></script>
+    <script type="text/javascript">
+        window.bughd = window.bughd || function(){};
+        bughd("create",{key:"22d9198c9307fbec12531e5410399938"})
+    </script>
+</head>
+
+<!-------app--------------------这个scroll_flag在app里面不展示-->
+<!--如果是自己的店铺(没有回到我们店铺的按钮)就展示 self_shop-->
+<body class="scroll_flag self_shop" id="index">
+<div class="top0">
+    <div class="top_container">
+        <div class="index_top clearfix">
+            <a href="" class="left_icon_container">
+                <span class="shop_icon"></span>
+                <img class="shop_img"
+                     src="http://pic.davdian.com/user/2016/07/27/80_80_2c22cc2e7fc06b58a93f513df969581a.png">
+            </a>
+            <a href="search.html"  data-dav-tj="index|search|search|1|search@index">
+                <div class="search_con search_button">
+                    <span class="search_icon"></span>
+                    <input type="text" class="search_input" readonly/>
+                </div>
+                <div class="shop_name">在<span class="color_FF4A7D">纪拓的大V店纪拓的大V店纪拓的大V店</span>中搜索...</div>
+            </a>
+
+            <a class="right_icon_container">
+                <div class="kd_btn">邀请开店<i class="arrow"></i></div>
+            </a>
+        </div>
+        <!--头部-->
+        <ul class="index_con_menu">
+            <li class="hover flex-1" data-for-item="menu-item-1">
+                <div class="span_outer"><a href="index.html"><span>首页</span></a></div>
+            </li>
+            <li class="flex-1" data-for-item="menu-item-2">
+                <div class="span_outer"><a href="books_sound.html"><span>童书</span></a></div>
+            </li>
+            <li class="flex-1" data-for-item="menu-item-3">
+                <div class="span_outer"><a href="baby_products.html"><span>婴童</span></a></div>
+            </li>
+            <li class="flex-1">
+                <div class="span_outer"><a href="/348.html">妈妈</a></div>
+            </li>
+            <li class="flex-1">
+                <div class="span_outer"><a href="/348.html">我要开店</a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- 轮播图 -->
+<div class="swiper-container index_ads">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" data-dav-tj="index|banner|banner_1|1|banner_1@index"><a href=""><img src="//pic.davdian.com/free/1111_pic1_1110.png"></a></div>
+        <div class="swiper-slide" data-dav-tj="index|banner|banner_2|1|banner_2@index"><a href=""><img class="swiper-lazy" data-src="//pic.davdian.com/free/index_ad_02_0802.png"></a></div>
+        <div class="swiper-slide" data-dav-tj="index|banner|banner_2|1|banner_2@index"><a href=""><img class="swiper-lazy" data-src="http://pic.davdian.com/activity/2016/08/17/1125_480_ebed383ce09e922120a0f72c8be3963f.png"></a></div>
+        <div class="swiper-slide" data-dav-tj="index|banner|banner_2|1|banner_2@index"><a href=""><img class="swiper-lazy" data-src="http://pic.davdian.com/activity/2016/08/17/1125_480_4795cf27dd97f0e1d740aa8044e5fa5e.png"></a></div>
+        <div class="swiper-slide" data-dav-tj="index|banner|banner_2|1|banner_2@index"><a href=""><img class="swiper-lazy" data-src="http://pic.davdian.com/free/2016/08/17/1125_480_e716866ff33a6c5abc2b11e7c659d560.png"></a></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<div class="common_con">
+    <div class="double11_icon">
+        <img src="//pic.davdian.com/free/1111_pic2_1110.png">
+        <a href="/t-970.html" style="left: 8%;"></a>
+        <a href="/t-36.html" style="left: 30%;"></a>
+        <a href="/348.html?_refer=index&_refer_val=1" style="left: 52%;"></a>
+        <a href="./category_search.html" style="left: 74%;"></a>
+
+        <!-- h5页面上显示 -->
+        <!--<img src="//pic.davdian.com/free/1111_pic3_1110.png">
+        <a href="/t-970.html" style="left: 8%;"></a>
+        <a href="/t-36.html" style="left: 30%;"></a>
+        <a href="/articles.html?wx=0" style="left: 52%;"></a>
+        <a href="/index.php?m=default&c=live&a=livelist" style="left: 74%;"></a>-->
+    </div>
+
+    <div class="broadcast_double11">
+        <div class="broadcast_left_bg"></div>
+        <img src="//pic.davdian.com/free/1111_pic4_1110.png">
+        <div class="broadcast_title swiper-container broadcast_double11_title">
+            <div class="swiper_wrap swiper-wrapper">
+                <!--add_tj_tj 增加小喇叭tj 每个消息-->
+                <div class="swiper-slide swiper-no-swiping">
+                    <a href="//www.baidu.com" class="swiper" data-dav-tj="index|broadcast|broadcast_1|1|broadcast_1@index">
+                        <div class="broadcast_title_top">
+                            <span class="headline">头条</span><span class="broadcast_title_txt">宝宝不吃饭</span>
+                        </div>
+                        <div class="broadcast_title_bottom text_ellipsis">刘德华:你说你怎么看啊!我说你丫真的真的笨,笨到不能说啊说啊的呀哈哈哈</div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide swiper-no-swiping">
+                    <a href="//www.baidu.com" class="swiper" data-dav-tj="index|broadcast|broadcast_1|1|broadcast_1@index">
+                        <div class="broadcast_title_top">
+                            <span class="headline">头条</span><span class="broadcast_title_txt">妈妈好焦虑</span>
+                        </div>
+                        <div class="broadcast_title_bottom text_ellipsis">刘德华:你说你怎么看啊!我说你丫真的真的笨,笨到不能说啊说啊的呀哈哈哈</div>
+                    </a>
+                </div>
+                <div class="swiper-slide swiper-no-swiping">
+                    <a href="//www.baidu.com" class="swiper" data-dav-tj="index|broadcast|broadcast_1|1|broadcast_1@index">
+                        <div class="broadcast_title_top">
+                            <span class="headline">头条</span><span class="broadcast_title_txt">不吃饭,妈妈好焦虑</span>
+                        </div>
+                        <div class="broadcast_title_bottom text_ellipsis">刘德华:你说你怎么看啊!我说你丫真的真的笨,笨到不能说啊说啊的呀哈哈哈</div>
+                    </a>
+                </div>
+                <div class="swiper-slide swiper-no-swiping">
+                    <a href="//www.baidu.com" class="swiper" data-dav-tj="index|broadcast|broadcast_1|1|broadcast_1@index">
+                        <div class="broadcast_title_top">
+                            <span class="headline">头条</span><span class="broadcast_title_txt">宝宝不吃饭,妈妈好焦虑</span>
+                        </div>
+                        <div class="broadcast_title_bottom text_ellipsis">刘德华:你说你怎么看啊!我说你丫真的真的笨,笨到不能说啊说啊的呀哈哈哈</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hot_activity_cotnainer index_model no_margin" >
+        <div class="model_con">
+            <div style="position: relative">
+                <img src="//pic.davdian.com/free/1111_pic5_1110.png">
+                <a href="" style="position: absolute;z-index: 1;left: 5%;top:3%;height: 45%;width: 43%;"></a>
+                <a href="" style="position: absolute;z-index: 1;left: 52%;top: 3%;height: 45%;width: 43%;"></a>
+                <a href="" style="position: absolute;z-index: 1;left: 5%;top: 52%;height: 45%;width: 43%;"></a>
+                <a href="" style="position: absolute;z-index: 1;left: 52%;top: 52%;height: 45%;width: 43%;"></a>
+            </div>
+         </div>
+     </div>
+
+    <!-- 顶部入口，放四个 -->
+    <div class="index_links">
+        <a class="link_item" href="">
+            <img class="link_img"
+                 src="http://pic.davdian.com/goods/2016/06/08/80_80_7598b39596a0ed3d924a004f704ed16a.png">
+
+            <div class="link_text">新品推荐</div>
+        </a>
+        <a class="link_item" href="">
+            <img class="link_img"
+                 src="http://pic.davdian.com/goods/2016/06/08/80_80_7598b39596a0ed3d924a004f704ed16a.png">
+
+            <div class="link_text">新品推荐</div>
+        </a>
+        <a class="link_item" href="">
+            <img class="link_img"
+                 src="http://pic.davdian.com/goods/2016/06/08/80_80_7598b39596a0ed3d924a004f704ed16a.png">
+
+            <div class="link_text">新品推荐</div>
+        </a>
+        <a class="link_item" href="">
+            <img class="link_img"
+                 src="http://pic.davdian.com/goods/2016/06/08/80_80_7598b39596a0ed3d924a004f704ed16a.png">
+
+            <div class="link_text">新品推荐</div>
+        </a>
+        <a class="link_item" href="">
+            <img class="link_img"
+                 src="http://pic.davdian.com/goods/2016/06/08/80_80_7598b39596a0ed3d924a004f704ed16a.png">
+
+            <div class="link_text">新品推荐</div>
+        </a>
+        <a class="link_item" href="">
+            <img class="link_img"
+                 src="http://pic.davdian.com/goods/2016/06/08/80_80_7598b39596a0ed3d924a004f704ed16a.png">
+
+            <div class="link_text">新品推荐</div>
+        </a>
+        <a class="link_item" href="">
+            <img class="link_img"
+                 src="http://pic.davdian.com/goods/2016/06/08/80_80_7598b39596a0ed3d924a004f704ed16a.png">
+
+            <div class="link_text">新品推荐</div>
+        </a>
+        <a class="link_item" href="">
+            <img class="link_img"
+                 src="http://pic.davdian.com/goods/2016/06/08/80_80_7598b39596a0ed3d924a004f704ed16a.png">
+
+            <div class="link_text">新品推荐</div>
+        </a>
+
+    </div>
+
+
+    <!--小喇叭播报-->
+    <div class="broadcast">
+        <div class="broadcast_img">
+            <img src="//pic.davdian.com/free/broadcast_0802.png"/>
+            <span class="broadcast_string"></span>
+        </div>
+
+        <div class="broadcast_title swiper-container">
+            <div class="swiper_wrap swiper-wrapper">
+                <!--add_tj_tj 增加小喇叭tj 每个消息-->
+                <div class="swiper-slide swiper-no-swiping">
+                    <a href="//www.baidu.com" class="swiper" data-dav-tj="index|broadcast|broadcast_1|1|broadcast_1@index">
+                        <div class="broadcast_title_top">
+                            <span class="headline">头条</span><span class="broadcast_title_txt">宝宝不吃饭</span>
+                        </div>
+                        <div class="broadcast_title_bottom text_ellipsis">刘德华:你说你怎么看啊!我说你丫真的真的笨,笨到不能说啊说啊的呀哈哈哈</div>
+                    </a>
+                </div>
+
+                <div class="swiper-slide swiper-no-swiping">
+                    <a href="//www.baidu.com" class="swiper" data-dav-tj="index|broadcast|broadcast_1|1|broadcast_1@index">
+                        <div class="broadcast_title_top">
+                            <span class="headline">头条</span><span class="broadcast_title_txt">妈妈好焦虑</span>
+                        </div>
+                        <div class="broadcast_title_bottom text_ellipsis">刘德华:你说你怎么看啊!我说你丫真的真的笨,笨到不能说啊说啊的呀哈哈哈</div>
+                    </a>
+                </div>
+                <div class="swiper-slide swiper-no-swiping">
+                    <a href="//www.baidu.com" class="swiper" data-dav-tj="index|broadcast|broadcast_1|1|broadcast_1@index">
+                        <div class="broadcast_title_top">
+                            <span class="headline">头条</span><span class="broadcast_title_txt">不吃饭,妈妈好焦虑</span>
+                        </div>
+                        <div class="broadcast_title_bottom text_ellipsis">刘德华:你说你怎么看啊!我说你丫真的真的笨,笨到不能说啊说啊的呀哈哈哈</div>
+                    </a>
+                </div>
+                <div class="swiper-slide swiper-no-swiping">
+                    <a href="//www.baidu.com" class="swiper" data-dav-tj="index|broadcast|broadcast_1|1|broadcast_1@index">
+                        <div class="broadcast_title_top">
+                            <span class="headline">头条</span><span class="broadcast_title_txt">宝宝不吃饭,妈妈好焦虑</span>
+                        </div>
+                        <div class="broadcast_title_bottom text_ellipsis">刘德华:你说你怎么看啊!我说你丫真的真的笨,笨到不能说啊说啊的呀哈哈哈</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hot_activity_cotnainer index_model" >
+
+        <div class="model_con" data-dav-tj="index|doufu|doufu_1255|1|doufu_1255@index">
+            <div class="dvd-index-module clearfix">
+                <div class="index_activity" style="padding:0;margin:0;">
+                    <a href="/t-4434.html" style="padding:0;margin:0;">
+                        <img src="http://pic.davdian.com/goods/2016/08/18/1125_420_d4a692d9fe4ed2c7794ff59d509b4fc3.png@.webp" style="width:100%;"></a></div>                    </div>
+        </div>
+    </div>
+    <div class="hot_activity_cotnainer index_model"  style="background-color:#c3e8ee;">
+
+        <div class="df_new_title">
+            <span class="df_new_title_font">亲子阅读</span>
+            <a class="more" href="/channel.html?menu_id=1" data-dav-tj="index|doufu_more|doufu_more_1208|1|doufu_1208@index">
+                <span class="c6">更多</span> <i class="dav_icon_arrow"></i>
+            </a>
+        </div>
+
+        <div class="df_new_model_con">
+            <div class="haspadding clearfix">
+                <div class="dvd-col-12 need_js_height">
+                    <div class="dvd-new-index-module-child dvd-col-3">
+                        <div class="dvd-col-12">
+                            <a href="/t-4584.html">
+                                <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/goods/2016/09/08/264_300_396f67fc5655584a0bfd30c09678eccc.jpg@.webp">
+                                <div class="right_border" style="background-color:#c3e8ee;"></div>
+                            </a>
+                        </div>
+                        <div class="dvd-col-12">
+                            <a href="/116333.html">
+                                <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/goods/2016/09/09/264_300_1db38ff517cf70c7c582ad7abde2b3cb.jpg@.webp">
+                                <div class="right_border" style="background-color:#c3e8ee;"></div>
+                                <div class="top_border" style="background-color:#c3e8ee;"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class= "dvd-new-index-module-child dvd-col-6">
+                        <a href="/116907.html">
+                            <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/goods/2016/09/08/531_600_389800ae8138bf76912011a5edd296c9.jpg@.webp">
+                            <div class="right_border" style="background-color:#c3e8ee;"></div>
+                        </a>
+                    </div>
+
+                    <div class="dvd-new-index-module-child dvd-col-3">
+                        <div class="dvd-col-12">
+                            <a href="/127926.html">
+                                <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/goods/2016/09/07/264_300_c6c30bb676bec7fd08b9ae25807f3f39.jpg@.webp">
+                            </a>
+                        </div>
+                        <div class="dvd-col-12">
+                            <a href="/117403.html" >
+                                <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/goods/2016/09/07/264_300_c4ad752908673c9e84cf0f5df921281a.jpg@.webp">
+                                <div class="top_border" style="background-color:#c3e8ee;"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                    <div class="dvd-new-index-module-child dvd-col-6">
+                        <a href="/t-4507.html">
+                            <img src="http://pic.davdian.com/free/loading_310_175.png" data-original="http://pic.davdian.com/goods/2016/08/17/531_300_58f3c7f3f3cd58317c77923d9e16dcd1.jpg@.webp">
+                            <div class="right_border" style="background-color:#c3e8ee;"></div>
+                            <div class="top_border" style="background-color:#c3e8ee;"></div>
+                        </a>
+                    </div>
+                    <div class="dvd-new-index-module-child dvd-col-6">
+                        <a href="/t-4623.html">
+                            <img src="http://pic.davdian.com/free/loading_310_175.png" data-original="http://pic.davdian.com/goods/2016/08/19/531_300_8774c7b09cd00c60d8f1d9f66abb4167.jpg@.webp">
+                            <div class="top_border" style="background-color:#c3e8ee;"></div>
+                        </a>
+                    </div>
+
+            </div>                </div>
+    </div>
+    <div class="hot_activity_cotnainer index_model"  style="background-color:#fed2a2;">
+
+        <div class="df_new_title">
+            <span class="df_new_title_font">萌宝最爱</span>
+            <a class="more" href="/channel.html?menu_id=2" data-dav-tj="index|doufu_more|doufu_more_1209|1|doufu_1209@index">
+                <span class="c6">更多</span> <i class="dav_icon_arrow"></i>
+            </a>
+        </div>
+
+        <div class="df_new_model_con">
+            <div class="box box-v haspadding">
+                <div class="item box box-h need_js_height" style="height:2rem;">
+                    <div class="item box box-v">
+                        <div class="item">
+                            <a href="/t-4497.html">
+                                <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/activity/2016/08/15/264_300_4302130c3a698c44c154457c7f323e9a.jpg@.webp">
+                                <div class="right_border" style="background-color:#fed2a2;"></div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="/t-4457.html">
+                                <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/activity/2016/08/15/264_300_cf1f530e11f145f9eb6b58b441d39481.jpg@.webp">
+                                <div class="right_border" style="background-color:#fed2a2;"></div>
+                                <div class="top_border" style="background-color:#fed2a2;"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item item-2">
+                        <a href="/t-4471.html">
+                            <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/activity/2016/08/15/531_600_ef028d678492d86d19bb7e3e810f0e1f.jpg@.webp">
+                            <div class="right_border" style="background-color:#fed2a2;"></div>
+                        </a>
+                    </div>
+                    <div class="item box box-v">
+                        <div class="item">
+                            <a href="/category.html?p_id=390">
+                                <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/activity/2016/08/15/264_300_3b1e65c595220fa4948addb4e04ab316.jpg@.webp">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="/t-4483.html" >
+                                <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/activity/2016/08/15/264_300_bd365bdefa5316009d698312125a3a56.jpg@.webp">
+                                <div class="top_border" style="background-color:#fed2a2;"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item box box-h">
+                    <div class="item">
+                        <a href="/t-929.html">
+                            <img src="http://pic.davdian.com/free/loading_310_175.png" data-original="http://pic.davdian.com/activity/2016/08/15/531_300_5994267ae5d899ef6265dfcea73e771c.jpg@.webp">
+                            <div class="right_border" style="background-color:#fed2a2;"></div>
+                            <div class="top_border" style="background-color:#fed2a2;"></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/t-989.html">
+                            <img src="http://pic.davdian.com/free/loading_310_175.png" data-original="http://pic.davdian.com/activity/2016/08/15/531_300_d36603ed4c4916ef1f45c824e8ae04c2.jpg@.webp">
+                            <div class="top_border" style="background-color:#fed2a2;"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>                </div>
+    </div>
+    <div class="hot_activity_cotnainer index_model"  style="background-color:#fac5e4;">
+
+        <div class="df_new_title">
+            <span class="df_new_title_font">辣妈生活</span>
+            <a class="more" href="/channel.html?menu_id=3" data-dav-tj="index|doufu_more|doufu_more_1210|1|doufu_1210@index">
+                <span class="c6">更多</span> <i class="dav_icon_arrow"></i>
+            </a>
+        </div>
+
+        <div class="df_new_model_con">
+            <div class="box box-v haspadding">
+                <div class="item box box-h need_js_height" style="height:2rem;">
+                    <div class="item box box-v">
+                        <div class="item">
+                            <a href="/t-4367.html">
+                                <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/activity/2016/08/15/264_300_81d65d1aa0a17862a5fa088047c3a5f7.png@.webp">
+                                <div class="right_border" style="background-color:#fac5e4;"></div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="/t-3606.html">
+                                <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/activity/2016/08/19/264_300_8063d1c549c8f8536677f850cb4b00a6.png@.webp">
+                                <div class="right_border" style="background-color:#fac5e4;"></div>
+                                <div class="top_border" style="background-color:#fac5e4;"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item item-2">
+                        <a href="/t-4465.html">
+                            <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/activity/2016/08/19/531_600_5b841db330516dced61b75f8bf808cad.png@.webp">
+                            <div class="right_border" style="background-color:#fac5e4;"></div>
+                        </a>
+                    </div>
+                    <div class="item box box-v">
+                        <div class="item">
+                            <a href="/t-4290.html">
+                                <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/activity/2016/08/15/264_300_54b53560e67068e25720cc3a54f4eb8a.png@.webp">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="/t-4523.html" >
+                                <img src="http://pic.davdian.com/free/loading_310_350.png" data-original="http://pic.davdian.com/activity/2016/08/17/264_300_7af14a8c8eaa49c4b0fa861a0a7c81ff.png@.webp">
+                                <div class="top_border" style="background-color:#fac5e4;"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item box box-h">
+                    <div class="item">
+                        <a href="/t-4544.html">
+                            <img src="http://pic.davdian.com/free/loading_310_175.png" data-original="http://pic.davdian.com/activity/2016/08/17/531_300_5d14e9d65ff666105022909c48945f2e.png@.webp">
+                            <div class="right_border" style="background-color:#fac5e4;"></div>
+                            <div class="top_border" style="background-color:#fac5e4;"></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="/t-4491.html">
+                            <img src="http://pic.davdian.com/free/loading_310_175.png" data-original="http://pic.davdian.com/activity/2016/08/16/531_300_091dde47c22c15220d1380c700dabb36.png@.webp">
+                            <div class="top_border" style="background-color:#fac5e4;"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>                </div>
+    </div>
+
+    <!--这个新的首页秒杀豆腐块 包含新的title-->
+    <div class="hot_activity_cotnainer index_model" style="background-color:#fff;">
+        <div class="df_new_title_2">
+            <span class="df_new_font">店主推荐</span>
+            <a class="more" href="/">
+                <span>更多</span> <i class="dav_icon_arrow"></i>
+            </a>
+        </div>
+        <!--新的首页秒杀豆腐块1109-->
+        <div class="df_new_model_con">
+               <div class="clearfix" style="padding:10px 7.5px 5px 7.5px;">
+                <div class="dvd-col-12 need_js_height_seckill" style="overflow: hidden;">
+                    <div class="dvd-new-index-module-child dvd-col-6" style="padding: 0 2.5px;box-sizing: border-box">
+                        <a href="http://nemo.davdian.com">
+                            <div class="seckillCountdown seckill2"></div>
+                            <img src="//pic.davdian.com/free/index_seckill_pic1.png">
+                        </a>
+                    </div>
+
+                    <div class="dvd-new-index-module-child dvd-col-6" style="margin-bottom:5px;padding: 0 2.5px;box-sizing: border-box">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/index_seckill_pic2.png">
+                        </a>
+                    </div>
+
+                    <div class="dvd-new-index-module-child dvd-col-6" style="padding: 0 2.5px;box-sizing: border-box">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/index_seckill_pic3.png">
+                        </a>
+                    </div>
+                </div>
+
+                    <div class="dvd-new-index-module-child dvd-col-6" style="margin: 5px 0; padding: 0 2.5px;box-sizing: border-box">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/index_seckill_pic4.png">
+                        </a>
+                    </div>
+                    <div class="dvd-new-index-module-child dvd-col-6" style="margin: 5px 0;padding: 0 2.5px;box-sizing: border-box">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/index_seckill_pic5.png">
+                        </a>
+                    </div>
+            </div>
+        </div>
+
+        <div class="df_new_model_con hide">
+            <div class="clearfix">
+                <div class="dvd-col-12" style="height: 2rem; overflow: hidden">
+                    <div class="dvd-new-index-module-child dvd-col-6">
+                        <a href="http://nemo.davdian.com">
+                            <div class="seckillCountdown"></div>
+                            <img src="http://pic.davdian.com/goods/2016/09/09/561_600_49e96d14c5ddd8134bd95c4a851181da.png@.webp">
+                            <div class="right_border" style="background-color:#f0f0f0;"></div>
+                        </a>
+                    </div>
+
+                    <div class="dvd-new-index-module-child dvd-col-6">
+                        <a href="http://nemo.davdian.com">
+                            <img src="http://pic.davdian.com/free/2016/09/09/561_300_5c02bf7ff51578f4be22d02b5161a472.png@.webp">
+                        </a>
+                    </div>
+
+                    <div class="dvd-new-index-module-child dvd-col-3">
+                        <a href="http://nemo.davdian.com">
+                            <img src="http://pic.davdian.com/goods/2016/09/06/279_300_0f4aef326a79bd3fba3633541b2cba02.png@.webp">
+                            <div class="right_border" style="background-color:#f0f0f0;"></div>
+                            <div class="top_border" style="background-color:#f0f0f0;"></div>
+                        </a>
+                    </div>
+                    <div class="dvd-new-index-module-child dvd-col-3">
+                        <a href="http://nemo.davdian.com">
+                            <img src="http://pic.davdian.com/goods/2016/09/08/279_300_8e6d7a05c31c88b361ff2795787ed969.png@.webp">
+                            <div class="top_border" style="background-color:#f0f0f0;"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dvd-new-index-module-child dvd-col-6">
+                    <a href="http://nemo.davdian.com">
+                        <img src="//pic.davdian.com/free/df_ms_pic2_0802.png">
+                        <div class="top_border" style="background-color:#f0f0f0;"></div>
+                        <div class="right_border" style="background-color:#f0f0f0;"></div>
+                    </a>
+                </div>
+                <div class="dvd-new-index-module-child dvd-col-6">
+                    <a href="http://nemo.davdian.com">
+                        <img src="//pic.davdian.com/free/df_ms_pic2_0802.png">
+                        <div class="top_border" style="background-color:#f0f0f0;"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--这个新的首页限时团购 包含新的title-->
+    <a href="//joys.davdian.com" class="index_group_buy" data-dav-tj="index|group|group|1|group@index">
+        <div class="df_new_title_2">
+            <span class="df_new_font">限时团购</span>
+            <span class="more">
+                <span>更多</span> <i class="dav_icon_arrow"></i>
+            </span>
+        </div>
+        <div class="df_new_model_con">
+            <div class="swiper-container related-item-list">
+                <div class="swiper-wrapper">
+                    <div class="detail swiper-slide">
+
+                        <div class="goods_img_size"><img
+                                src="http://pic.davdian.com/goods/2016/06/23/640_640_7d91028ed57bb7a48537df41e9268a84.jpg">
+                        </div>
+                        <div class="name">红印去渍牙膏</div>
+                        <div class="price">
+                            <span class="current-price">¥ 7199.60</span>
+                            <span class="original-price">¥ 5899.99</span>
+                        </div>
+
+                    </div>
+                    <div class="detail swiper-slide">
+
+                        <div class="goods_img_size"><img
+                                src="http://pic.davdian.com/goods/2016/08/01/640_640_0c861a63d3824d17bfc8d4eb15d1b85e.jpg">
+                        </div>
+                        <div class="name">红印去渍牙膏</div>
+                        <div class="price">
+                            <span class="current-price">¥ 34</span>
+                            <span class="original-price">¥ 58</span>
+                        </div>
+
+                    </div>
+                    <div class="detail swiper-slide">
+
+                        <div class="goods_img_size"><img
+                                src="http://pic.davdian.com/supplier/2016/07/29/640_640_d05a8225bef4e90df03d7221dd5c7301.jpg">
+                        </div>
+                        <div class="name">红印去渍牙膏</div>
+                        <div class="price">
+                            <span class="current-price">¥ 34</span>
+                            <span class="original-price">¥ 58</span>
+                        </div>
+                    </div>
+                    <div class="detail swiper-slide">
+
+                        <div class="goods_img_size"><img
+                                src="http://img.xiaohongshu.com/items/c37eab87c21b61629b97ae6956ebda26@2e_320w_320h_0c_0i_0o_90Q_1x_2o.jpg">
+                        </div>
+                        <div class="name">红印去渍牙膏</div>
+                        <div class="price">
+                            <span class="current-price">¥ 34</span>
+                            <span class="original-price">¥ 58</span>
+                        </div>
+
+                    </div>
+                    <div class="detail swiper-slide">
+                        <div class="goods_img_size"><img
+                                src="http://img.xiaohongshu.com/items/0f4c02ad05144af1109c52d9144fe0be@2e_320w_320h_0c_0i_0o_90Q_1x_2o.jpg">
+                        </div>
+                        <div class="name">红印去渍牙膏</div>
+                        <div class="price">
+                            <span class="current-price">¥ 34</span>
+                            <span class="original-price">￥171.60</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+
+    <!--这个新的豆腐块 包含新的title-->
+    <div class="hot_activity_cotnainer index_model" style="background-color:#c2e8ef;">
+        <div class="df_new_title"><span class="df_new_title_font">图书绘本</span>
+            <a class="more" href="//nemo.davdian.com/category.html?p_id=8&amp;cat_id=14">
+                <span class="c6">更多</span> <i class="dav_icon_arrow"></i>
+            </a>
+        </div>
+        <div class="df_new_model_con">
+            <div class="box box-v haspadding">
+                <div class="item box box-h " style="height: 2rem">
+                    <div class="item box box-v">
+                        <div class="item">
+                            <a href="http://nemo.davdian.com">
+                                <img src="//pic.davdian.com/free/cct.jpg">
+                                <div class="right_border" style="background-color:#c2e8ef;"></div>
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="http://nemo.davdian.com">
+                                <img src="//pic.davdian.com/free/cct.jpg">
+                                <div class="right_border" style="background-color:#c2e8ef;"></div>
+                                <div class="top_border" style="background-color:#c2e8ef;"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item item-2">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/cct.jpg">
+                            <div class="right_border" style="background-color:#c2e8ef;"></div>
+                        </a>
+                    </div>
+                    <div class="item box box-v">
+                        <div class="item">
+                            <a href="http://nemo.davdian.com">
+                                <img src="//pic.davdian.com/free/cct.jpg">
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="http://nemo.davdian.com">
+                                <img src="//pic.davdian.com/free/cct.jpg">
+                                <div class="top_border" style="background-color:#c2e8ef;"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item box box-h">
+                    <div class="item">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/cct.jpg">
+                            <div class="right_border" style="background-color:#c2e8ef;"></div>
+                            <div class="top_border" style="background-color:#c2e8ef;"></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/cct.jpg">
+                            <div class="top_border" style="background-color:#c2e8ef;"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--这个新的首页限时团购 包含新的title-->
+    <div class="hot_activity_cotnainer index_model" style="background-color:#f0f0f0;">
+
+        <div class="df_new_model_con">
+            <div class="df_new_title_3">
+                <a href="">
+                    <img src="//pic.davdian.com/free/index_topichead_2x.png">
+                </a>
+                <span class="up_arrow"></span>
+            </div>
+            <div class="swiper-container related-item-list">
+                <div class="swiper-wrapper">
+                    <a class="detail swiper-slide">
+
+                        <div class="goods_img_size"><img
+                                src="http://pic.davdian.com/goods/2016/06/23/640_640_7d91028ed57bb7a48537df41e9268a84.jpg">
+                        </div>
+                        <div class="name">红印去渍牙膏</div>
+                        <div class="price">
+                            <span class="current-price">¥ 71.60</span>
+                            <span class="original-price">¥ 58</span>
+                        </div>
+
+                    </a>
+                    <a class="detail swiper-slide">
+
+                        <div class="goods_img_size"><img
+                                src="http://pic.davdian.com/goods/2016/08/01/640_640_0c861a63d3824d17bfc8d4eb15d1b85e.jpg">
+                        </div>
+                        <div class="name">红印去渍牙膏</div>
+                        <div class="price">
+                            <span class="current-price">¥ 34</span>
+                            <span class="original-price">¥ 58</span>
+                        </div>
+
+                    </a>
+                    <a class="detail swiper-slide">
+
+                        <div class="goods_img_size"><img
+                                src="http://pic.davdian.com/supplier/2016/07/29/640_640_d05a8225bef4e90df03d7221dd5c7301.jpg">
+                        </div>
+                        <div class="name">红印去渍牙膏</div>
+                        <div class="price">
+                            <span class="current-price">¥ 34</span>
+                            <span class="original-price">¥ 58</span>
+                        </div>
+                    </a>
+                    <a class="detail swiper-slide">
+
+                        <div class="goods_img_size"><img
+                                src="http://pic.davdian.com/free/loading_320_320_v2.png" data-original="http://img.xiaohongshu.com/items/c37eab87c21b61629b97ae6956ebda26@2e_320w_320h_0c_0i_0o_90Q_1x_2o.jpg">
+                        </div>
+                        <div class="name">红印去渍牙膏</div>
+                        <div class="price">
+                            <span class="current-price">¥ 34</span>
+                            <span class="original-price">¥ 58</span>
+                        </div>
+
+                    </a>
+                    <a class="detail swiper-slide">
+                        <div class="goods_img_size"><img
+                                src="http://pic.davdian.com/free/loading_320_320_v2.png" data-original="http://img.xiaohongshu.com/items/0f4c02ad05144af1109c52d9144fe0be@2e_320w_320h_0c_0i_0o_90Q_1x_2o.jpg">
+                        </div>
+                        <div class="name">红印去渍牙膏</div>
+                        <div class="price">
+                            <span class="current-price">¥ 34</span>
+                            <span class="original-price">￥171.60</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 限时团购 -->
+    <!--add_tj_tj 限时团购整体加tj-->
+    <a href="//8888.davdian.com" data-dav-tj="index|limit_tuan|limit_tuan|1|limit_tuan@index">
+        <div class="hot_activity_cotnainer index_model">
+            <div class="orange_title mb_1 ">
+                <span class="orange_title_font">限时团购</span>
+                <span class="countdown_con hide" data-tuan-time="8646">
+                12天19小时12分
+            </span>
+                <span class="more"
+                      href="//nemo.davdian.com/category.html?p_id=8&amp;cat_id=14">
+            <span>更多</span> <i class="dav_icon_arrow"></i> </span>
+            </div>
+            <div class="limitbuy_con clearfix">
+                <ul>
+                    <li>
+
+                        <div class="pic"><img
+                                src="//pic.davdian.com/images/201508/goods_img/1811_G_1438831847643.jpg"></div>
+                        <div class="dav-color-price">￥28.00</div>
+                        <div class="market_price">￥28.00</div>
+
+                    </li>
+                    <li>
+
+                        <div class="pic"><img
+                                src="//pic.davdian.com/images/201508/goods_img/1811_G_1438831847643.jpg"></div>
+                        <div class="dav-color-price">￥28.00</div>
+                        <div class="market_price">￥28.00</div>
+
+                    </li>
+                    <li>
+
+                        <div class="pic"><img
+                                src="//pic.davdian.com/images/201508/goods_img/1811_G_1438831847643.jpg"></div>
+                        <div class="dav-color-price">￥28.00</div>
+                        <div class="market_price">￥28.00</div>
+
+                    </li>
+                    <li>
+
+                        <div class="pic"><img
+                                src="//pic.davdian.com/images/201508/goods_img/1811_G_1438831847643.jpg"></div>
+                        <div class="dav-color-price">￥28.00</div>
+                        <div class="market_price">￥28.00</div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </a>
+    <!-- 图书音像,母婴用品等豆腐块，最多包含四张图片，每个图片对应一个链接 -->
+    <div class="hot_activity_cotnainer index_model">
+
+        <div class="model_con">
+            <div class="model_con_left">
+                <div class="model_con_top">
+                    <!--add_tj_tj 每个豆腐块的小块 加tj doufu_668中的668为小模块id-->
+                    <a href="http://nemo.davdian.com" data-dav-tj="index|doufu|doufu_668|1|doufu_668@index">
+                        <img src="//pic.davdian.com/free/books_block_pic_2x.png"></a>
+                </div>
+                <div class="model_con_bottom">
+                    <a href="http://nemo.davdian.com">
+                        <img src="//pic.davdian.com/free/books_leaderboard_pic.png"></a>
+                </div>
+            </div>
+            <div class="model_con_right">
+                <div class="model_con_top">
+                    <a href="http://nemo.davdian.com">
+                        <img src="//pic.davdian.com/free/baby_block_pic.png"></a>
+                </div>
+                <div class="model_con_bottom">
+                    <a href="http://nemo.davdian.com">
+                        <img src="//pic.davdian.com/free/baby_leaderboard_pic.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 店主推荐大于等于四个商品情况 -->
+    <!--add_tj_tj 店主推荐整体加tj 无论推荐了几个商品-->
+    <a href="/seller_recommend.html" data-dav-tj="index|recommend|recommend|1|recommend@index">
+        <div class="hot_activity_cotnainer index_model">
+            <div class="orange_title  mb_1 ">
+                <span class="orange_title_font">亲子阅读</span>
+                <a class="more" href="/channel.html?menu_id=1" data-dav-tj="index|little_doufu|little_doufu_7_1|1|little_doufu_7_1@index">
+                    <span>更多</span> <i class="dav_icon_arrow"></i>
+                </a>
+            </div>
+            <div class="limitbuy_con clearfix">
+                <ul>
+                    <li>
+                        <div class="pic"><img
+                                src="//pic.davdian.com/goods/2016/04/05/640_640_1db2470407984f8077aad17e28db6963.jpg">
+                        </div>
+                        <div class="dav-color-price">￥139.00</div>
+                        <div class="market_price">￥358.00</div>
+                    </li>
+                    <li>
+                        <div class="pic"><img
+                                src="//pic.davdian.com/goods/2016/03/08/640_640_469aa2a9d93317f4e6fcbeb381f80b22.jpg">
+                        </div>
+                        <div class="dav-color-price">￥499.00</div>
+                        <div class="market_price">￥598.00</div>
+                    </li>
+                    <li>
+                        <div class="pic"><img
+                                src="//pic.davdian.com/goods/2016/03/24/640_640_d84da4a69795b39b86984c70d504414e.jpg">
+                        </div>
+                        <div class="dav-color-price">￥19.90</div>
+                        <div class="market_price">￥38.00</div>
+                    </li>
+                    <li>
+                        <div class="pic"><img
+                                src="//pic.davdian.com/goods/2016/03/24/640_640_28645751c1c3b2af4dc8e62ce95072a5.jpg">
+                        </div>
+                        <div class="dav-color-price">￥35.00</div>
+                        <div class="market_price">￥39.00</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </a>
+
+    <!-- 店主推荐少于四个商品情况 -->
+
+    <a href="/seller_recommend.html">
+        <div class="hot_activity_cotnainer index_model">
+            <div class="orange_title mb_1 ">
+                <span class="orange_title_font">店主推荐</span>
+                <span class="more" href="/">
+		            <span>更多</span> <i class="dav_icon_arrow"></i> </span>
+            </div>
+            <div class="limitbuy_con clearfix">
+                <ul>
+                    <li>
+                        <div class="pic"><img
+                                src="//pic.davdian.com/goods/2016/04/05/640_640_1db2470407984f8077aad17e28db6963.jpg">
+                        </div>
+                        <div class="dav-color-price">￥139.00</div>
+                        <div class="market_price">￥358.00</div>
+                    </li>
+                    <li>
+                        <div class="pic"><img
+                                src="//pic.davdian.com/goods/2016/03/08/640_640_469aa2a9d93317f4e6fcbeb381f80b22.jpg">
+                        </div>
+                        <div class="dav-color-price">￥499.00</div>
+                        <div class="market_price">￥598.00</div>
+                    </li>
+                    <li>
+                        <div class="pic"><img
+                                src="//pic.davdian.com/goods/2016/03/24/640_640_d84da4a69795b39b86984c70d504414e.jpg">
+                        </div>
+                        <div class="dav-color-price">￥19.90</div>
+                        <div class="market_price">￥38.00</div>
+                    </li>
+                    <li class="add_goods">
+                        <div class="pic">
+                            <img src="//pic.davdian.com/free/add_goods_pic_314.png">
+                        </div>
+                        <div class="dav-color-price">添加商品</div>
+                        <div class="dav-color9">点击以添加</div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </a>
+
+
+    <div class="hot_activity_cotnainer index_model">
+        <div class="model_con">
+            <div class="dvd-index-module clearfix">
+                <div class="dvd-index-module clearfix">
+                    <div class="dvd-index-module-new-child dvd-col-12 is_top is_right">
+                        <a href="/t-741.html" target="_self" data-dav-tj="index|special|special_0|1|special_0@index"
+                           style="height: 36px;display: block;background: #fff;">
+                            <div style="position: absolute;top: 14%;height: 24px;width: 100%;line-height:24px;padding:0 10px 0 5px; box-sizing: border-box;">
+                <span style=" float: left;border-right: #aaa solid 1px;padding-right: 5px;">
+                <img src="//pic.davdian.com/free/2016/01/28/46_36_b02f80254b486af854e4c13ad098317e.png" alt=""
+                     style="width: 24px; height: 24px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.7)">
+                 </span>
+                                <span style=" float: left;margin-left: 5px;">
+                <img src="//pic.davdian.com/free/2016/01/25/365_400_e996fcdc0c579668c60e1b3e21217e4f.jpg" alt=""
+                     style="width: 24px; height: 24px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.7)">
+                 </span>
+                                <span style="color: #333;word-break: keep-all;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;display: block;">【大咖课回顾】萧袤：回归童真，寻找快乐
+                 </span>
+                            </div>
+
+                        </a>
+                    </div>
+                </div>
+                <div class="dvd-index-module-new-child dvd-col-6 is_top is_right">
+                    <a href="/t-462.html" target="_self" data-dav-tj="index|special|special_1|1|special_1@index">
+                        <img src="//pic.davdian.com/goods/2016/01/28/320_140_1ceb90547b466aec1c230824ad8238b7.png"
+                             alt=""></a>
+                </div>
+                <div class="dvd-index-module-new-child dvd-col-6 is_top is_right">
+                    <a href="/t-448.html" target="_self" data-dav-tj="index|special|special_2|1|special_2@index">
+                        <img src="//pic.davdian.com/goods/2016/01/28/320_140_5334809ef3fa3dc4d4c736e7046311cf.png"
+                             alt=""></a>
+                </div>
+                <div class="dvd-index-module-new-child dvd-col-6 is_top is_right">
+                    <a href="/t-461.html" target="_self" data-dav-tj="index|special|special_3|1|special_3@index">
+                        <img src="//pic.davdian.com/goods/2016/01/28/320_140_9d80991e76e36c890225d6e9d2998ee6.png"
+                             alt=""></a>
+                </div>
+                <div class="dvd-index-module-new-child dvd-col-6 is_top is_right">
+                    <a href="/t-449.html " target="_self" data-dav-tj="index|special|special_4|1|special_4@index">
+                        <img src="//pic.davdian.com/goods/2016/01/28/320_140_558fc0376413170201ed0807fd71cfc4.png"
+                             alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 热门活动，只放一块，最多包含四张图片，每个图片对应一个链接 -->
+    <div class="hot_activity_cotnainer index_model">
+
+        <div class="model_con">
+            <div class="model_con_left">
+                <div class="model_con_top">
+                    <a href="http://nemo.davdian.com">
+                        <img src="//pic.davdian.com/goods/1/20150917123000.png"></a>
+                </div>
+            </div>
+            <div class="model_con_right">
+                <div class="model_con_top">
+                    <a href="http://nemo.davdian.com">
+                        <img src="//pic.davdian.com/goods/1/20150917123142.png"></a>
+                </div>
+                <div class="model_con_bottom">
+                    <a href="http://nemo.davdian.com">
+                        <img src="//pic.davdian.com/goods/1/20150917123305.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 活动 -->
+    <div class="index_activity">
+        <a href="http://nemo.davdian.com">
+            <img data-original="//pic.davdian.com/free/index_banner2.png"
+                 src="//pic.davdian.com/free/index_banner2.png" style="display: inline;">
+        </a>
+        <a href="http://nemo.davdian.com">
+            <img data-original="//pic.davdian.com/free/index_banner2.png"
+                 src="//pic.davdian.com/free/index_banner2.png" style="display: inline;">
+        </a>
+    </div>
+
+
+
+        <!-- 图书绘本豆腐块 -->
+        <div class="hot_activity_cotnainer index_model" id="books" style="visibility: visible;">
+            <div class="orange_title  mb_1 "><span class="orange_title_font">图书绘本</span>
+                <!--add_tj_tj 豆腐块的更多,增加tj  doufu_more_668的id为大豆腐块模块id-->
+                <a class="more" href="//nemo.davdian.com/category.html?p_id=8&amp;cat_id=14"
+                   data-dav-tj="index|doufu_more|doufu_more_668|1|doufu_668@index">
+                    <span>更多</span> <i class="dav_icon_arrow"></i> </a></div>
+            <div class="model_con">
+                <div class="model_con_left">
+                    <div class="model_con_top"><a href="http://nemo.davdian.com"> <img
+                            src="//pic.davdian.com/free/books_block_pic_2x.png"></a></div>
+                    <div class="model_con_bottom"><a href="http://nemo.davdian.com"> <img
+                            src="//pic.davdian.com/free/books_block_pic_2x.png"></a></div>
+                </div>
+                <div class="model_con_right">
+                    <div class="model_con_top"><a href="http://nemo.davdian.com"> <img
+                            src="//pic.davdian.com/free/books_block_pic_2x.png"></a></div>
+                    <div class="model_con_bottom"><a href="http://nemo.davdian.com"> <img
+                            src="//pic.davdian.com/free/books_block_pic_2x.png"></a></div>
+                </div>
+            </div>
+        </div>
+        <!-- 首页豆腐块模板-->
+        <!-- 模板1-->
+        <div class="hot_activity_cotnainer index_model">
+            <div class="orange_title  mb_1 "><span class="orange_title_font">图书绘本</span> <a class="more"
+                                                                                            href="//nemo.davdian.com/category.html?p_id=8&amp;cat_id=14">
+                <span>更多</span> <i class="dav_icon_arrow"></i> </a></div>
+            <div class="model_con">
+                <div class="dvd-index-module clearfix">
+                    <div class="clearfix" style="height: 62.2vw; max-height: 400px; overflow: hidden;">
+                        <div class="dvd-index-module-new-child dvd-col-6 is_top"><a href="/t-137.html"
+                                                                                    target="_self"><img
+                                data-original="//pic.davdian.com/free/1212_01_pic.png"
+                                src="//pic.davdian.com/free/loading_320_400_1216.png" alt=""></a></div>
+                        <div class="dvd-index-module-new-child dvd-col-6 is_top is_right"><a href="/t-100.html"
+                                                                                             target="_self"><img
+                                data-original="//pic.davdian.com/free/1216_01_pic.png"
+                                src="//pic.davdian.com/free/loading_320_200_1216.png" alt=""></a></div>
+                        <div class="dvd-index-module-new-child dvd-col-3"><a href="/t-311.html" target="_self"><img
+                                data-original="//pic.davdian.com/activity/2015/12/09/160_200_04d351f91a0d8a50b5f2e0a3f36ec5f3.png"
+                                src="//pic.davdian.com/free/loading_160_200_1216.png"
+                                alt=""></a></div>
+                        <div class="dvd-index-module-new-child dvd-col-3 is_right"><a
+                                href="/category.html?p_id=119&cat_id=124" target="_self"><img
+                                data-original="//pic.davdian.com/activity/2015/12/09/160_200_c9ee1a1e5f42308aadd39e58a473a0ad.png"
+                                src="//pic.davdian.com/free/loading_160_200_1216.png"
+                                alt=""></a></div>
+                    </div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=94"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_03835d04c16b736011b588419ebad535.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=17"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_7a5946c0b30098c57fccb49fd4018cd7.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=73"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_927bc4ecd3f3941a6abd5bb1b5cbaacb.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3 is_right"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=94"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_03835d04c16b736011b588419ebad535.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=17"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_7a5946c0b30098c57fccb49fd4018cd7.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=73"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_927bc4ecd3f3941a6abd5bb1b5cbaacb.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3 is_right"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                </div>
+            </div>
+        </div>
+        <!-- 模板2-->
+        <div class="hot_activity_cotnainer index_model">
+            <div class="orange_title  mb_1 "><span class="orange_title_font">图书绘本</span> <a class="more"
+                                                                                            href="//nemo.davdian.com/category.html?p_id=8&amp;cat_id=14">
+                <span>更多</span> <i class="dav_icon_arrow"></i> </a></div>
+            <div class="model_con">
+                <div class="dvd-index-module clearfix">
+                    <div class="clearfix" style="height: 62.2vw; max-height: 400px; overflow: hidden;">
+                        <div class="dvd-index-module-new-child dvd-col-6 is_top"><a href="/t-137.html"
+                                                                                    target="_self"><img
+                                data-original="//pic.davdian.com/free/1212_01_pic.png"
+                                src="//pic.davdian.com/free/loading_320_400_1216.png" alt=""></a></div>
+                        <div class="dvd-index-module-new-child dvd-col-3 is_top"><a href="/t-39.html"
+                                                                                    target="_self"><img
+                                data-original="//pic.davdian.com/activity/2015/12/09/160_200_27a5a47053effd3c115abfbf5f5bdd29.png"
+                                src="//pic.davdian.com/free/loading_160_200_1216.png"
+                                alt=""></a></div>
+                        <div class="dvd-index-module-new-child dvd-col-3 is_top is_right"><a href="/t-100.html"
+                                                                                             target="_self"><img
+                                data-original="//pic.davdian.com/activity/2015/12/09/160_200_404d4573f9b6630d441b5080bbd367c5.png"
+                                src="//pic.davdian.com/free/loading_160_200_1216.png"
+                                alt=""></a></div>
+                        <div class="dvd-index-module-new-child dvd-col-3"><a href="/t-311.html" target="_self"><img
+                                data-original="//pic.davdian.com/activity/2015/12/09/160_200_04d351f91a0d8a50b5f2e0a3f36ec5f3.png"
+                                src="//pic.davdian.com/free/loading_160_200_1216.png"
+                                alt=""></a></div>
+                        <div class="dvd-index-module-new-child dvd-col-3 is_right"><a
+                                href="/category.html?p_id=119&cat_id=124" target="_self"><img
+                                data-original="//pic.davdian.com/activity/2015/12/09/160_200_c9ee1a1e5f42308aadd39e58a473a0ad.png"
+                                src="//pic.davdian.com/free/loading_160_200_1216.png"
+                                alt=""></a></div>
+                    </div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=94"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_03835d04c16b736011b588419ebad535.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=17"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_7a5946c0b30098c57fccb49fd4018cd7.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=73"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_927bc4ecd3f3941a6abd5bb1b5cbaacb.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3 is_right"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                </div>
+            </div>
+        </div>
+        <!-- 模板3-->
+        <div class="hot_activity_cotnainer index_model">
+            <div class="orange_title  mb_1 "><span class="orange_title_font">图书绘本</span> <a class="more"
+                                                                                            href="//nemo.davdian.com/category.html?p_id=8&amp;cat_id=14">
+                <span>更多</span> <i class="dav_icon_arrow"></i> </a></div>
+            <div class="model_con">
+                <div class="dvd-index-module clearfix">
+                    <div class="clearfix" style="height: 62.2vw; max-height: 400px; overflow: hidden;">
+                        <div class="dvd-index-module-new-child dvd-col-6 is_top"><a href="/t-137.html"
+                                                                                    target="_self"><img
+                                data-original="//pic.davdian.com/free/1212_01_pic.png"
+                                src="//pic.davdian.com/free/loading_320_400_1216.png" alt=""></a></div>
+                        <div class="dvd-index-module-new-child dvd-col-6 is_top is_right"><a href="/t-100.html"
+                                                                                             target="_self"><img
+                                data-original="//pic.davdian.com/free/1216_01_pic.png"
+                                src="//pic.davdian.com/free/loading_320_200_1216.png" alt=""></a></div>
+                        <div class="dvd-index-module-new-child dvd-col-6 is_right"><a href="/t-100.html" target="_self"><img
+                                data-original="//pic.davdian.com/free/1216_01_pic.png"
+                                src="//pic.davdian.com/free/loading_320_200_1216.png" alt=""></a></div>
+                    </div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=94"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_03835d04c16b736011b588419ebad535.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=17"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_7a5946c0b30098c57fccb49fd4018cd7.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=73"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_927bc4ecd3f3941a6abd5bb1b5cbaacb.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3 is_right"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=94"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_03835d04c16b736011b588419ebad535.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=17"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_7a5946c0b30098c57fccb49fd4018cd7.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=73"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_927bc4ecd3f3941a6abd5bb1b5cbaacb.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3 is_right"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                </div>
+            </div>
+        </div>
+        <!-- 模板4-->
+        <div class="hot_activity_cotnainer index_model">
+            <div class="orange_title  mb_1 "><span class="orange_title_font">图书绘本</span> <a class="more"
+                                                                                            href="//nemo.davdian.com/category.html?p_id=8&amp;cat_id=14">
+                <span>更多</span> <i class="dav_icon_arrow"></i> </a></div>
+            <div class="model_con">
+                <div class="dvd-index-module clearfix">
+                    <div class="dvd-index-module-new-child dvd-col-6 is_top"><a href="/t-100.html" target="_self"><img
+                            data-original="//pic.davdian.com/free/1216_01_pic.png"
+                            src="//pic.davdian.com/free/loading_320_200_1216.png" alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-6 is_top is_right"><a href="/t-100.html"
+                                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/free/1216_01_pic.png"
+                            src="//pic.davdian.com/free/loading_320_200_1216.png" alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-6"><a href="/t-100.html" target="_self"><img
+                            data-original="//pic.davdian.com/free/1216_01_pic.png"
+                            src="//pic.davdian.com/free/loading_320_200_1216.png" alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-6 is_right"><a href="/t-100.html" target="_self"><img
+                            data-original="//pic.davdian.com/free/1216_01_pic.png"
+                            src="//pic.davdian.com/free/loading_320_200_1216.png" alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=94"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_03835d04c16b736011b588419ebad535.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=17"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_7a5946c0b30098c57fccb49fd4018cd7.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=73"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_927bc4ecd3f3941a6abd5bb1b5cbaacb.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3 is_right"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=94"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_03835d04c16b736011b588419ebad535.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=17"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_7a5946c0b30098c57fccb49fd4018cd7.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=73"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_927bc4ecd3f3941a6abd5bb1b5cbaacb.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3 is_right"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                </div>
+            </div>
+        </div>
+        <!-- 模板5-->
+        <div class="hot_activity_cotnainer index_model">
+            <div class="orange_title  mb_1 "><span class="orange_title_font">图书绘本</span> <a class="more"
+                                                                                            href="//nemo.davdian.com/category.html?p_id=8&amp;cat_id=14">
+                <span>更多</span> <i class="dav_icon_arrow"></i> </a></div>
+            <div class="model_con">
+                <div class="dvd-index-module clearfix">
+
+                    <div class="clearfix" style="height: 62.2vw; max-height: 400px; overflow: hidden;">
+                        <div class="dvd-index-module-new-child dvd-col-6 is_top"><a href="/t-137.html"
+                                                                                    target="_self"><img
+                                data-original="//pic.davdian.com/free/1212_01_pic.png"
+                                src="//pic.davdian.com/free/loading_320_400_1216.png" alt=""></a></div>
+                        <div class="dvd-index-module-new-child dvd-col-6 is_top is_right"><a href="/t-100.html"
+                                                                                             target="_self"><img
+                                data-original="//pic.davdian.com/free/1212_01_pic.png"
+                                src="//pic.davdian.com/free/loading_320_400_1216.png" alt=""></a></div>
+                    </div>
+
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=94"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_03835d04c16b736011b588419ebad535.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=17"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_7a5946c0b30098c57fccb49fd4018cd7.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=73"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_927bc4ecd3f3941a6abd5bb1b5cbaacb.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3 is_right"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=94"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_03835d04c16b736011b588419ebad535.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=17"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_7a5946c0b30098c57fccb49fd4018cd7.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=73"
+                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_927bc4ecd3f3941a6abd5bb1b5cbaacb.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3 is_right"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                </div>
+            </div>
+        </div>
+        <!-- 模板6-->
+        <div class="hot_activity_cotnainer index_model">
+            <div class="orange_title  mb_1 "><span class="orange_title_font">图书绘本</span> <a class="more"
+                                                                                            href="//nemo.davdian.com/category.html?p_id=8&amp;cat_id=14">
+                <span>更多</span> <i class="dav_icon_arrow"></i> </a></div>
+            <div class="model_con">
+                <div class="dvd-index-module clearfix">
+                    <div class="clearfix" style="height: 62.2vw; max-height: 400px; overflow: hidden;">
+                        <div class="dvd-index-module-new-child dvd-col-6 is_top"><a href="/t-137.html"
+                                                                                    target="_self"><img
+                                data-original="//pic.davdian.com/free/1212_01_pic.png"
+                                src="//pic.davdian.com/free/loading_320_400_1216.png" alt=""></a></div>
+                        <div class="dvd-index-module-new-child dvd-col-6 is_top is_right"><a href="/t-100.html"
+                                                                                             target="_self"><img
+                                data-original="//pic.davdian.com/free/1216_01_pic.png"
+                                src="//pic.davdian.com/free/loading_320_200_1216.png" alt=""></a></div>
+                        <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=73"
+                                                                             target="_self"><img
+                                data-original="//pic.davdian.com/activity/2015/12/09/160_200_927bc4ecd3f3941a6abd5bb1b5cbaacb.png"
+                                src="//pic.davdian.com/free/loading_160_200_1216.png"
+                                alt=""></a></div>
+                        <div class="dvd-index-module-new-child dvd-col-3 is_right"><a href="/t-327.html" target="_self"><img
+                                data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                                src="//pic.davdian.com/free/loading_160_200_1216.png"
+                                alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 模板7-->
+        <div class="hot_activity_cotnainer index_model">
+            <div class="orange_title  mb_1 "><span class="orange_title_font">图书绘本</span> <a class="more"
+                                                                                            href="//nemo.davdian.com/category.html?p_id=8&amp;cat_id=14">
+                <span>更多</span> <i class="dav_icon_arrow"></i> </a></div>
+            <div class="model_con">
+                <div class="dvd-index-module clearfix">
+
+                    <div class="dvd-index-module-new-child dvd-col-3 is_top "><a href="/category.html?p_id=8&cat_id=73"
+                                                                                 target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_927bc4ecd3f3941a6abd5bb1b5cbaacb.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-6 is_top"><a href="/t-100.html"
+                                                                                target="_self"><img
+                            data-original="//pic.davdian.com/free/1216_01_pic.png"
+                            src="//pic.davdian.com/free/loading_320_200_1216.png" alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3 is_top is_right"><a
+                            href="/category.html?p_id=8&cat_id=73"
+                            target="_self"><img
+                            data-original="//pic.davdian.com/activity/2015/12/09/160_200_927bc4ecd3f3941a6abd5bb1b5cbaacb.png"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3 is_right"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                </div>
+            </div>
+        </div>
+        <!-- 模板8-->
+        <div class="hot_activity_cotnainer index_model">
+            <div class="orange_title  mb_1 "><span class="orange_title_font">图书绘本</span> <a class="more"
+                                                                                            href="//nemo.davdian.com/category.html?p_id=8&amp;cat_id=14">
+                <span>更多</span> <i class="dav_icon_arrow"></i> </a></div>
+            <div class="model_con">
+                <div class="dvd-index-module clearfix">
+
+                    <div class="dvd-index-module-new-child dvd-col-12 is_top is_right"><a
+                            href="/category.html?p_id=8&cat_id=73"
+                            target="_self"><img
+                            data-original="//pic.davdian.com/free/1216_03_pic.png"
+                            src="//pic.davdian.com/free/loading_640_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-3 is_right"><a href="/t-327.html" target="_self"><img
+                            data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                            src="//pic.davdian.com/free/loading_160_200_1216.png"
+                            alt=""></a></div>
+                </div>
+            </div>
+        </div>
+        <!-- 模板9-->
+        <div class="hot_activity_cotnainer index_model">
+            <div class="orange_title  mb_1 "><span class="orange_title_font">图书绘本</span> <a class="more"
+                                                                                            href="//nemo.davdian.com/category.html?p_id=8&amp;cat_id=14">
+                <span>更多</span> <i class="dav_icon_arrow"></i> </a></div>
+            <div class="model_con">
+                <div class="dvd-index-module clearfix">
+                    <div class="clearfix" style="height: 62.2vw; max-height: 400px; overflow: hidden;">
+                        <div class="dvd-index-module-new-child dvd-col-6 is_top">
+                            <a href="/t-137.html" target="_self">
+                                <img data-original="//pic.davdian.com/free/1212_01_pic.png" src="//pic.davdian.com/free/loading_320_400_1216.png" alt="">
+                            </a>
+                        </div>
+                        <div class="dvd-index-module-new-child dvd-col-6 is_top is_right">
+                            <a href="/t-100.html" target="_self">
+                                <img data-original="//pic.davdian.com/free/1216_01_pic.png" src="//pic.davdian.com/free/loading_320_200_1216.png" alt="">
+                            </a>
+                        </div>
+                        <div class="dvd-index-module-new-child dvd-col-3"><a href="/category.html?p_id=8&cat_id=73"
+                                                                             target="_self"><img
+                                data-original="//pic.davdian.com/activity/2015/12/09/160_200_927bc4ecd3f3941a6abd5bb1b5cbaacb.png"
+                                src="//pic.davdian.com/free/loading_160_200_1216.png"
+                                alt=""></a></div>
+                        <div class="dvd-index-module-new-child dvd-col-3 is_right"><a href="/t-327.html" target="_self"><img
+                                data-original="//pic.davdian.com/goods/2015/12/10/160_200_9ead0a2e35023452c5e4aa5bb27ba123.jpg"
+                                src="//pic.davdian.com/free/loading_160_200_1216.png"
+                                alt=""></a></div>
+                    </div>
+                    <div class="dvd-index-module-new-child dvd-col-6"><a href="/t-100.html" target="_self"><img
+                            data-original="//pic.davdian.com/free/1216_01_pic.png"
+                            src="//pic.davdian.com/free/loading_320_200_1216.png" alt=""></a></div>
+                    <div class="dvd-index-module-new-child dvd-col-6 is_right"><a href="/t-100.html"
+                                                                                         target="_self"><img
+                            data-original="//pic.davdian.com/free/1216_01_pic.png"
+                            src="//pic.davdian.com/free/loading_320_200_1216.png" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 活动 -->
+        <div class="index_activity">
+            <a href="http://nemo.davdian.com">
+                <img data-original="//pic.davdian.com/free/index_banner2.png"
+                     src="//pic.davdian.com/free/loading_640_200_v2.png">
+            </a>
+            <a href="http://nemo.davdian.com">
+                <img data-original="//pic.davdian.com/free/index_banner2.png"
+                     src="//pic.davdian.com/free/loading_640_200_v2.png">
+            </a>
+        </div>
+
+
+         <!--图书团购列表
+        <div class="mt_10">
+        <div class="orange_title  border_bottom_1"><span class="orange_title_font">图书团购</span></div>
+        <tuanlist ng-model="tuanData"></tuanlist>
+        </div>-->
+    <!--这个二级豆腐块热门精选-->
+    <div class="hot_activity_cotnainer index_model" style="background-color:#fff;">
+        <div class="df_new_title_2">
+            <span class="df_new_font">热门精选</span>
+            <a class="more" href="/">
+                <span>更多</span> <i class="dav_icon_arrow"></i>
+            </a>
+        </div>
+        <div class="df_new_model_con">
+            <div class="box box-v">
+                <div class="item box box-h">
+                    <div class="item">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic2_link_0804.png.png">
+                            <div class="right_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic2_link_0804.png.png">
+                            <div class="right_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic2_link_0804.png.png">
+                            <div class="right_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic2_link_0804.png.png">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--这个二级豆腐块上二下四-->
+    <div class="hot_activity_cotnainer index_model" style="background-color:#fff;">
+        <div class="df_new_model_con">
+            <div class="box box-v">
+                <div class="item box box-h">
+                    <div class="item item-2">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic_link_0804.png">
+                            <div class="right_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                    <div class="item item-2">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic_link_0804.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="item box box-h">
+                    <div class="item">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic2_link_0804.png.png">
+                            <div class="right_border" style="background-color:#fff;"></div>
+                            <div class="top_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic2_link_0804.png.png">
+                            <div class="right_border" style="background-color:#fff;"></div>
+                            <div class="top_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic2_link_0804.png.png">
+                            <div class="right_border" style="background-color:#fff;"></div>
+                            <div class="top_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic2_link_0804.png.png">
+                            <div class="top_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--这个二级豆腐块上二上二下四-->
+    <div class="hot_activity_cotnainer index_model" style="background-color:#fff;">
+        <div class="df_new_model_con">
+            <div class="box box-v">
+                <div class="item box box-h">
+                    <div class="item item-2">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic_link_0804.png">
+                            <div class="right_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                    <div class="item item-2">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic_link_0804.png">
+                        </a>
+                    </div>
+                </div>
+                <div class="item box box-h">
+                    <div class="item item-2">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic_link_0804.png">
+                            <div class="right_border" style="background-color:#fff;"></div>
+                            <div class="top_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                    <div class="item item-2">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic_link_0804.png">
+                            <div class="top_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="item box box-h">
+                    <div class="item">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic2_link_0804.png.png">
+                            <div class="right_border" style="background-color:#fff;"></div>
+                            <div class="top_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic2_link_0804.png.png">
+                            <div class="right_border" style="background-color:#fff;"></div>
+                            <div class="top_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic2_link_0804.png.png">
+                            <div class="right_border" style="background-color:#fff;"></div>
+                            <div class="top_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="http://nemo.davdian.com">
+                            <img src="//pic.davdian.com/free/shop_pic2_link_0804.png.png">
+                            <div class="top_border" style="background-color:#fff;"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt_10">        <!-- 爆款团购 -->
+        <div class="df_new_title_2">
+            <span class="df_new_font">爆款团购</span>
+            <a class="more" href="/">
+                <span>更多</span> <i class="dav_icon_arrow"></i>
+            </a>
+        </div>
+        <tuan-list :conifg="tuanConfig"></tuan-list>
+    </div>
+
+
+
+
+    <maybe-you-like></maybe-you-like>
+
+</div>
+
+
+<!--bottom模块 只需要cart数量 可以为0-->
+<dvd-bottom :active="0" :cart="4"></dvd-bottom>
+
+<!-- 红包提示 如果现在没有红包活动或者不会给当前用户弹红包就把下面div去掉-->
+<div class="bonus_prompt">
+    <img src="//pic.davdian.com/free/send_bonus_1119.png">
+    <div class="bonus_prompt_close"></div>
+    <div class="bonus_prompt_bg">
+        <p>你账户里还有<span class="bonus_prompt_bonus">10</span>元</p>
+        <p>购物红包未使用</p>
+        <p>下单时可抵现金</p>
+    </div>
+</div>
+
+<!-------app--------------------购物车入口 在wap里面不展示-->
+<a class="app_cart" href="cart.html">
+    <i class="app_cart_ico"></i>
+    <b>98</b>
+</a>
+
+<!-------app--------------------回到我的店铺 在app里面不展示-->
+<!-- 回到我的店铺提示 -->
+<div class="back_store_con back_store_bottom" v-cloak>
+    <span class="close" onclick="var span = this.parentNode; span.parentNode.removeChild(span);"></span>
+    <a href="//nemo.davdian.com"><span class="store_btn">回到我的店铺</span></a>
+</div>
+
+<!-------app--------------------红包-登录领取说明-->
+<div class="app_loginred_con hide">
+    <div class="app_loginred_con_bg">
+        <div class="app_loginred_con_date">今日签到成功，已连续签到1天，还剩4天获得10元红包</div>
+    </div>
+</div>
+
+<!--app推广下载链接 不在app里面而且是卖家,而且在自己店铺才出现-->
+<div class="download_layer index_download_layer" v-cloak>
+    <span class="close"></span>
+    <span class="logo"></span>
+    <span class="slogan">
+        <p class="fz_12">大V店APP</p>
+        <p class="fz_15">让妈妈轻松开店</p>
+    </span>
+    <span class="download_btn" onclick="down();">下载</span>
+</div>
+
+
+<script src="http://cdn.davdian.com/vue/1.0.26/vue.js"></script>
+<!--线上用min-->
+<!--<script src="http://cdn.davdian.com/vue/1.0.26/vue.min.js"></script>-->
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://cdn.davdian.com/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="http://cdn.davdian.com/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script src="http://cdn.davdian.com/wx_jssdk/jweixin-1.0.0.js"></script>
+<script src="http://cdn.davdian.com/angular.js/1.5.5/angular.min.js"></script>
+
+
+<script src="../dist/index.js"></script>
+
+<script>
+    function setHttp(type, a, b, c) {
+        var httpUrl = "//tj.davdian.com/tj.gif?t=" + type + "&a=" + a + "&b=" + b + "&c=" + c + "&tt=" + (Date.now() + Math.random());
+        var img = document.createElement('img');
+        document.body.appendChild(img);
+        img.style.display = "none";
+        img.src = httpUrl;
+    }
+
+    function sendHttpResult(url,type) {
+        var flag = 'error';
+        // 图片
+        if(type=="img"){
+            var img = document.createElement('img');
+            img.onload = function(){
+                flag = 'ok';
+            };
+            img.style.display = "none";
+            img.src = url;
+            document.body.appendChild(img);
+        }else if(type == "js"){
+            var js = document.createElement('script');
+            js.onload = function(){
+                flag = 'ok';
+            };
+            js.src = url;
+            document.body.appendChild(js);
+        }
+        setTimeout(function () {
+            setHttp(3,flag,type,encodeURIComponent(url));
+        },3000);
+    }
+    var scripts = document.scripts,images = document.images;
+    var testJsSrc,testImgSrc;
+    for(var i=0;i<scripts.length;i++){
+        testJsSrc = scripts[i].src;
+        if(testJsSrc&&testJsSrc.indexOf('davdian')>-1){
+            break;
+        }
+    }
+    for(var i=0;i<images.length;i++){
+        testImgSrc = images[i].src;
+        if(testImgSrc&&testImgSrc.indexOf("davdian")>-1){
+            break;
+        }
+    }
+    sendHttpResult(testJsSrc,'js');
+    sendHttpResult(testImgSrc,'img');
+</script>
+
+<script src="http://src.davdian.com/src/switch_20161015.js"></script>
+
+</body>
+</html>

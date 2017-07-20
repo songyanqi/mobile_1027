@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>推广</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/detail_spread.css" rel="stylesheet">
+
+    <script>
+        //统计
+        var tj_id = 65;
+        var tj_path = 'detail_spread';
+
+
+        // 推荐商品请求数据连接
+        var userId = "sd";
+        var goodsId = "6820";
+        var commonendUrl = "dfd";
+
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0
+        };
+
+        /////////////////////微信分享/////////////////////
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+        /////////////////////////////////////////////////
+
+    </script>
+</head>
+<!--如果是app里 就加一个in_app的class 否则就加scroll_flag-->
+<body class="scroll_flag">
+
+<div id="top_module">
+    <div class="top0 top_show">
+        <div class="top_container">
+            <div class="top_left">
+                <a class="top_back" href="javascript:history.back();" >
+                    <span class="home_arrow"></span>
+                </a>
+            </div>
+            <div class="title_container">
+                推广
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <div class="mt_10 spread_bg">
+         <div class="title">
+             <span>推广图片</span>（长按，保存后可分享）
+         </div>
+        <div class="spread_pic_con">
+            <img src="//pic.davdian.com/free/spread_pic_0524.png">
+        </div>
+    </div>
+
+<div class="mt_10 spread_bg">
+    <div class="title">
+        <span>推广文案</span>（长按，复制后可分享）
+    </div>
+    <div class="spread_pic_con">
+        “科学跑出来”系列涵盖多学科知识：古生物、地球科学、自然现象、太阳系等，体验最新科技互动阅读的乐趣，激发孩子主动学习的兴趣。全球合作印刷，取得国内外7项环保质量体系安全认证，绿色印刷，环保无毒。包括：恐龙跑出来了+龙卷风跑出来了+太阳跑出来了等。
+    </div>
+</div>
+
+<div class="mt_10 spread_bg">
+    <div class="title">
+        <span>推广文章</span>（点击后，可分享）
+    </div>
+    <div class="spread_text_con">
+         <ul>
+             <li>V友会班级试点计划展开，班委招募正式开放啦！</li>
+             <li>V友会班级试点计划展开，班委招募正式开放啦！</li>
+             <li>V友会班级试点计划展开，班委招募正式开放啦！</li>
+         </ul>
+    </div>
+</div>
+
+
+
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script src="../javascript/jweixin-1.0.0.js"></script>
+<script src="../cdn/jquery/jquery.iosslider.js"></script>
+<script src="../cdn/jquery/jquery.lazyload.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/top.js"></script>
+<script src="../javascript/slider.js"></script>
+<script src="../javascript/good_list_2_row.js"></script>
+
+<script>
+    module.slider.init("pics", 1, {max: 360});
+    module.good_list_2_row.init("like", true);
+</script>
+
+
+</body>
+</html>

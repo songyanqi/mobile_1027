@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../dist/new_goods_search.css" rel="stylesheet">
+    <title>搜索结果</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0
+        };
+        var userId = 901022;
+        var likeUrl = '../data/keywords.json';
+        var getHotwordsUrl =  '../data/searchhot.json';
+    </script>
+
+</head>
+<body class="scroll_flag">
+<div id="container">
+    <search></search>
+</div>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<!--<script src="../cdn/axios/axios.min.js"></script>-->
+<script src="http://cdn.davdian.com/vue/2.0.5/vue.min.js"></script>
+<script src="http://src.davdian.com/src/switch_20161122.js"></script>
+<script src="../javascript/jquery.cookie.js"></script>
+<script type="text/javascript" src="../dist/new_goods_search.js"></script>
+</body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheet/dadishu.css">
+    <title>打地鼠游戏</title>
+    <script>
+        var url = '../data/c.json';
+        var num = 3;
+
+        var tj_id="73";
+        var tj_path = 'double12_game';
+
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:1
+        };
+
+        // 店铺的图标
+        var imgUrl = "http://pic.davdian.com/supplier/2016/11/12/1000_1000_d6a73aee43616d63a718c1e88d886aa3.jpg";  //注意必须是绝对路径
+        // var lineLink = window.location.href;
+        var lineLink = window.location.href.split("?")[0];
+        //店铺描述
+        var descContent = '中国本土纸艺设计师倾情力作 花婆婆方素珍联合创作 纯手工制作，近200个零配件，400余道工序';
+        var shareTitle = '大闹天宫（立体书，不忘初心，让孩子们和孙悟空一起，学习爱和勇敢。）';
+
+        // 微信分享
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+
+
+
+    </script>
+</head>
+<body>
+<div class="top0">
+    <div class="top_container">
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();" data-dav-tj="detail|back|back|1|back@detail">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            东方宝宝杂志2016全年刊，每期包含：智力刊、绘本刊、国学启蒙卡、原创CD，适合0-4岁婴幼儿，赠送BOBO童巾一条
+        </div>
+        <div class="top_right">
+            <a href="/" class="top_home" data-dav-tj="detail|home|home|1|home@detail">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="bg">
+    <!--玩游戏才展示这块-->
+    <div class="jing">
+        <img src="//pic.davdian.com/free/2016/11/28/j2.png" alt="">
+        <div class="game">
+        </div>
+        <div class="jing_ban"></div>
+    </div>
+
+    <!--当天已经玩过游戏了-->
+    <div class="game_end hide">
+        <div class="save">
+            <span>今日已成功拯救</span><span class="z"></span><span>赢得</span><span class="warn">12.12</span>红包，购物省起来!
+        </div>
+        <div class="bonus">
+            <div class="use">
+                <img src="//pic.davdian.com/free/2016/11/29/use.png" alt="">
+                <div class="money">20</div>
+                <div class="info">
+                    <div class="info_m">满299元使用</div>
+                    <div class="info_d">12.12-12.12</div>
+                    <a class="btn_use">
+                        立即使用
+                    </a>
+                </div>
+            </div>
+
+            <div class="use use_grey hide">
+                <img src="//pic.davdian.com/free/2016/11/29/use_grey2.png" alt="">
+                <div class="money">20</div>
+                <div class="info">
+                    <div class="info_m">满299元使用</div>
+                    <div class="info_d">12.12-12.12</div>
+                    <a class="btn_use">
+                        立即使用
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="text">
+            12.06-12.12 每天都有一次拯救小猪的机会哦~<br/>
+            明天继续吧！<span class="warn">红包仅限当日使用哦~</span>
+        </div>
+    </div>
+
+    <!--活动结束展示这块-->
+    <!--
+    <div class="late">
+        <img src="//pic.davdian.com/free/2016/11/29/xz.png" alt="">
+        <div class="late_text">
+            您来晚啦！
+        </div>
+        <div class="late_text_small">
+            本次活动已结束，期待下次吧~
+        </div>
+    </div>
+ -->
+    <div class="bottom">
+        <!--
+        <div class="rules">
+            <marquee behavior="scroll" direction="left" scrollamount="3" scrolldelay="16">小猪佩被大灰狼抓走啦！打晕大灰狼，拯救小猪佩奇，可获得红包奖励哦！每天只有一次参与机会，且玩且珍惜吧～</marquee>
+        </div>
+        -->
+        <div class="buttons">
+            <span class="btn btn1"><img src="//pic.davdian.com/free/2016/11/28/button1.png" alt=""></span>
+            <!--下面三选一-->
+            <!--玩游戏-->
+            <span class="btn btn2"><img src="//pic.davdian.com/free/2016/11/28/button2.png" alt=""></span>
+
+            <!--以参加-->
+            <!--<a href="/" class="btn"><img src="//pic.davdian.com/free/2016/11/29/button6.png" alt=""></a>-->
+
+            <!--已结束-->
+            <!--<a href="/" class="btn"><img src="//pic.davdian.com/free/2016/11/29/button7.png" alt=""></a>-->
+            <span class="btn btn3"><img src="//pic.davdian.com/free/2016/11/28/button3.png" alt=""></span>
+        </div>
+    </div>
+</div>
+<div class="mask">
+    <!--固定div-->
+    <div class=" success con hide">
+        <img src="//pic.davdian.com/free/2016/11/28/success.png" alt="">
+        <div class="text">打晕20只大灰狼，成功拯救小猪赢得50元红包</div>
+        <a href="/">
+            <img src="//pic.davdian.com/free/2016/11/28/button5.png" alt="">
+        </a>
+        <div class="close reload"></div>
+    </div>
+
+    <div class="my_prize con">
+        <img src="//pic.davdian.com/free/2016/11/29/prize.png" alt="">
+        <!--没有奖品时-->
+        <!--
+        <div class="context">
+            <img src="//pic.davdian.com/free/2016/11/29/l3.png" alt="">
+            <div class="text">目前还没有赢得奖品哦，快去参与游戏吧~</div>
+        </div>
+        -->
+        <!--有红包时-->
+        <div class="bonus">
+            <div class="use">
+                <img src="//pic.davdian.com/free/2016/11/29/use.png" alt="">
+                <div class="money">20</div>
+                <div class="info">
+                    <div class="info_m">满299元使用</div>
+                    <div class="info_d">12.12-12.12</div>
+                    <a class="btn_use">
+                        立即使用
+                    </a>
+                </div>
+            </div>
+            <div class="use use_grey">
+                <img src="//pic.davdian.com/free/2016/11/29/use_grey2.png" alt="">
+                <div class="money">20</div>
+                <div class="info">
+                    <div class="info_m">满299元使用</div>
+                    <div class="info_d">12.12-12.12</div>
+                    <a class="btn_use">
+                        已使用
+                    </a>
+                </div>
+            </div>
+            <div class="use use_grey">
+                <img src="//pic.davdian.com/free/2016/11/29/use_grey2.png" alt="">
+                <div class="money">20</div>
+                <div class="info">
+                    <div class="info_m">满299元使用</div>
+                    <div class="info_d">12.12-12.12</div>
+                    <a class="btn_use">
+                        已过期
+                    </a>
+                </div>
+            </div>
+            <div class="use use_grey">
+                <img src="//pic.davdian.com/free/2016/11/29/use_grey2.png" alt="">
+                <div class="money">20</div>
+                <div class="info">
+                    <div class="info_m">满299元使用</div>
+                    <div class="info_d">12.12-12.12</div>
+                    <a class="btn_use">
+                        已过期
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="close"></div>
+    </div>
+
+    <div class="game_rules con hide">
+        <img src="//pic.davdian.com/free/2016/11/29/rules.png" alt="">
+        <div class="context">
+            <div class="text">1.游戏时间：2016.12.06 00:00:00—2016.12.12 23:59:59；<br>
+                2.登录后，在活动页面点击开始游戏进行“打大灰狼赢红包”游戏；<br>
+                3.活动有效期内，每个用户每天都有1次参加游戏机会；<br>
+                4.在本次活动中赢得的红包可在“我的奖品”进行查看，赢得的红包请在获得红包当天使用，过期失效；<br>
+                5.最终解释权归大V店所有。</div>
+        </div>
+        <div class="close"></div>
+    </div>
+</div>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://cdn.davdian.com/wx_jssdk/jweixin-1.0.0.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/dadishu.js"></script>
+</body>
+</html>

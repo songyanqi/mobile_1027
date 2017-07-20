@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/experience_end.css" rel="stylesheet">
+
+    <title>体验结束</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+    </script>
+</head>
+<body class="scroll_flag" style="background-color: #fff;">
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            体验结束
+        </div>
+    </div>
+</div>
+
+<div class="experience_end_top">
+    <div class="title">体验日期结束啦～</div>
+    <div class="income">获得收入<span class="money">234元</span></div>
+    <div class="fz_12 dav-color9">温馨提示：开店后收入才能提现</div>
+</div>
+
+<div class="welfare_shop">
+    <div class="title"><span>开店福利</span></div>
+    <div class="con clearfix">
+        <ul>
+            <li>
+                <img src="//pic.davdian.com/free/experience_icon_01_0528.png">
+                <p>大咖直播 随时学习</p>
+            </li>
+            <li>
+                <img src="//pic.davdian.com/free/experience_icon_02_0528.png">
+                <p>认识更多优秀的妈妈</p>
+            </li>
+            <li>
+                <img src="//pic.davdian.com/free/experience_icon_03_0528.png">
+                <p>开店即送199元红包</p>
+            </li>
+            <li>
+                <img src="//pic.davdian.com/free/experience_icon_04_0528.png">
+                <p>开店即送礼品一份</p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="experience_end_btn">
+    <a href="" class="goshopping">去购物</a><a href="" class="create_shop">去开店</a>
+</div>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/model.js"></script>
+</body>
+</html>

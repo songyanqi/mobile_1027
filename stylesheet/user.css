@@ -1,0 +1,361 @@
+.setting_container .user_menu_group {
+    background-color: #fff;
+}
+
+.setting_container .user_menu_group .user_menu_item {
+    display: block;
+    border-bottom: #eee solid 1px;
+    line-height: 40px;
+    padding-left: 10px;
+}
+
+.setting_container .user_menu_group .user_menu_item span {
+    display: inline-block;
+    height: 27px;
+    line-height: 27px;
+}
+
+.setting_container .user_menu_group .user_menu_item .ico {
+    vertical-align: top;
+    margin-right: 5px;
+}
+
+.setting_container .user_menu_group .user_menu_item .ico i.icon {
+    width: 27px;
+    height: 27px;
+}
+
+.setting_container .user_menu_group .user_menu_item .icon_integral {
+    vertical-align: sub;
+    height: 14px;
+    margin-right: 8px;
+    font-size: 0;
+}
+
+.setting_container .user_menu_group .user_menu_item .icon_integral i.icon {
+    width: 14px;
+    height: 14px;
+    -webkit-background-size: 14px;
+    background-size: 14px;
+    margin-right: 3px;
+}
+
+.setting_container .user_menu_group .user_menu_item .child {
+    padding-top: 4px;
+}
+
+.setting_container .user_menu_group .user_menu_item .child i.icon {
+    display: inline-block;
+    vertical-align: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-right: 10px;
+    background: none;
+}
+
+.setting_container .user_menu_group .user_menu_item .child span {
+    line-height: 16px;
+    height: 20px;
+    vertical-align: text-bottom;
+    margin-right: 8px;
+}
+
+.setting_container .user_menu_group .user_menu_item:last-child {
+    border-bottom: none;
+}
+
+.user_container {
+    position: relative;
+}
+
+.user_container .user_img_phone {
+    text-align: center;
+}
+
+.user_container .user_img_phone img {
+    width: 80px;
+    height: 80px;
+    border: #fff solid 2px;
+    border-radius: 50px;
+}
+
+.user_container .user_img_phone .user_phone {
+    margin-top: 6px;
+    font-size: 16px;
+}
+
+.user_container .user_img_phone input {
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    top: 0;
+    left: 50%;
+    margin-left: -42px;
+    opacity: 0;
+}
+
+.user_container .user_menu_group {
+    background-color: #fff;
+}
+
+.user_container .user_menu_group .user_menu_item {
+    display: block;
+    padding: 12px 10px;
+    border-bottom: #eee solid 1px;
+}
+
+.user_container .user_menu_group .user_menu_item span {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+}
+
+.user_container .user_menu_group .user_menu_item .ico {
+    vertical-align: top;
+    margin-right: 1px;
+}
+
+.user_container .user_menu_group .user_menu_item .ico i.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.user_container .user_menu_group .user_menu_item .icon_integral {
+    vertical-align: sub;
+    height: 14px;
+    margin-right: 8px;
+    font-size: 0;
+}
+
+.user_container .user_menu_group .user_menu_item .icon_integral i.icon {
+    width: 14px;
+    height: 14px;
+    -webkit-background-size: 14px;
+    background-size: 14px;
+    margin-right: 3px;
+}
+
+.user_container .user_menu_group .user_menu_item .child {
+    padding-top: 1px;
+}
+
+.user_container .user_menu_group .user_menu_item .child i.icon {
+    display: inline-block;
+    vertical-align: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-right: 10px;
+    background: none;
+    position: absolute;
+    top: 5px;
+    right: -10px;
+}
+
+
+.user_container .user_menu_group .user_menu_item .child span {
+    line-height: 16px;
+    height: 20px;
+    vertical-align: text-bottom;
+    margin-right: 12px;
+}
+
+.user_container .user_menu_group .user_menu_item:last-child {
+    border-bottom: none;
+}
+
+.user_container .quit {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 90px;
+}
+
+.user_container .quit .dav-btn {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    width: 220px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.latest_tips {
+    position: relative !important;
+    display: inline-block;
+}
+
+.latest_tips b {
+    font-weight: normal;
+    color: #fff;
+    background: #FF4A7D;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    border-radius: 9px;
+    position: absolute;
+    right: -17px;
+    bottom: 10px;
+}
+
+.dialog_mask {
+    /* display: none; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1500;
+}
+
+.modal_dialog_wrap {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -140px;
+}
+
+.modal_dialog {
+    margin: 0 auto;
+    width: 250px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.modal_qr {
+    text-align: center;
+    padding: 20px 20px 0;
+    line-height: 1.5;
+    position: relative;
+}
+
+.pop_up_layer {
+    padding: 15px 0 0;
+}
+
+.modal_footer {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    color: #666;
+}
+
+.year_module {
+    background-color: #fafafa;
+    border-top: 1px solid #f1f1f1;
+}
+
+.year_module .title {
+    border-bottom: 1px solid #f1f1f1;
+    padding: 0 15px;
+    line-height: 40px;
+    font-weight: bold;
+    background-color: #fff;
+}
+
+.year_module .container {
+    padding: 0px 15px;
+    font-size: 13px;
+}
+
+.year_module .container .title_container {
+    border-bottom: 1px solid #f1f1f1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.year_module .container .text {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.fr {
+    float: right;
+}
+#change_user_img{
+    background-image: url("//pic.davdian.com/free/2016/11/09/750_320_c1aa09dd2e5e95cb41089b671d3db764.png");
+    padding: 22px 0 20px;
+    background-size: cover;
+    color: #FFFFFF;
+}
+.score{
+    font-size: 12px;
+    height: 12px;
+    line-height: 12px;
+}
+.score i.icon{
+    width: 12px;
+    height: 12px;
+    background-size: 100% 100%;
+    position: relative;
+    top: 1px;
+}
+.user_order_option.dav-buyer-bottom .menu-item{
+    width: 20%;
+    float: left;
+    text-align: center;
+    display: block;
+    position: relative;
+    top: 15px;
+}
+.user_order_option.dav-buyer-bottom{
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    height: 78px;
+    max-width: 640px;
+}
+.user_order_option.dav-buyer-bottom .menu-text {
+    font-size: 12px;
+    color: #999;
+    text-decoration: none;
+    line-height: 12px;
+}
+.user_order_option.dav-buyer-bottom .menu-item i.icon {
+    width: 28px;
+    height: 28px;
+}
+.dav_icon_aftermarket{
+    background-size: 28px;
+    background-image: url(//pic.davdian.com/free/tinified11102/aftermarket.png);
+}
+.dav_icon_beEvaluated{
+    background-size: 28px;
+    background-image: url(//pic.davdian.com/free/tinified11102/beEvaluated.png);
+}
+.dav_icon_delivered{
+    background-size: 28px;
+    background-image: url(//pic.davdian.com/free/tinified11102/delivered.png);
+}
+.dav_icon_Inbound{
+    background-size: 28px;
+    background-image: url(//pic.davdian.com/free/tinified11102/Inbound.png);
+}
+.dav_icon_pendingPayment{
+    background-size: 28px;
+    background-image: url(//pic.davdian.com/free/tinified11102/pendingPayment.png);
+}
+.user_order_option.dav-buyer-bottom .menu-item b {
+    margin-top: -52px;
+    border-radius: 8px 8px 8px 8px;
+}
+
+
+/*# sourceMappingURL=user.css.map */

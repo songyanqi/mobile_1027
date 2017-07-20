@@ -1,0 +1,38 @@
+{
+  "code": 0,
+  "shop_url": "https://15522634982.davdian.com",
+  "visitor_status": 3,
+  "sess_key": "42df8bf6e510c97c11afe81a96569014027bf803",
+  "data": {
+    "name":"string, 活动名称",
+    "title":"string,页面标题",
+    "startTime":1494938333,
+    "endTime":1494939333,
+    "joinLimit":"no",
+    "remainingTimes":"4",
+    "timeScope":[
+      {
+        "beginTime":"开始时间",
+        "overTime":"结束时间"
+      }
+    ],
+    "shareInfo": {
+      "title": "分享标题",
+      "desc": "分享描述",
+      "imgUrl": "分享图片url地址",
+      "link": "分享链接url地址"
+    },
+    "lotteryResult": "抽奖结果，success: 抽中，fail: 未抽中",
+    "bonusInfo": {
+      "bonusId": "红包ID",
+      "bonusName": "全品类",
+      "bonusMoney": 50,
+      "minConsumePrice": 300,
+      "useBeginTime": "1495032640",
+      "useEndTime": "1495099640"
+    }
+  }
+}
+
+
+

@@ -1,0 +1,28 @@
+{
+  "code": 0,
+  "data_version": "5c88714107728a398d0447d76cc08ace",
+  "shop_url": "http:\/\/murphylee.davdian.com",
+  "visitor_status": 3,
+  "sess_key": "f25a84fb9fbf984e0d5f45542a47a7b100799f33",
+  "sys_time": 1496471108,
+  "data": {
+    "image": {
+      "url": "http:\/\/pic.davdian.com\/news\/2017\/01\/06\/80_80_6edc025a63e58d6446448529422bce0a.png",
+      "command": {
+        "content": "\/contact.html?rp=index&rl=search"
+      }
+    },
+    "search": {
+      "title": "\u91d1\u9f99\u5b9d\u5b9d\u7684\u5927V\u5e97",
+      "command": {
+        "content": "\/new-search.html?rp=index&rl=search"
+      }
+    },
+    "btn": {
+      "title": "\u9080\u8bf7\u5f00\u5e97",
+      "command": {
+        "content": "\/348.html?_refer=index&_refer_val=1&rp=index&rl=search"
+      }
+    }
+  }
+}

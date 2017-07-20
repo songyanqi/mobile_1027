@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheet/order.css">
+    <!-- <link rel="stylesheet" href="../stylesheet/csshake.min.css"> -->
+    <!--<style>-->
+    <!--.order_good_info_container .order_good_name{-->
+    <!--font-size: 14px;-->
+    <!--height: 2.4em!important;-->
+    <!--line-height: 1.2!important;-->
+    <!--}-->
+    <!--</style>-->
+    <title>售后</title>
+    <script type="text/javascript">
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+        var returnListUrl = "../data/return_list.json";
+        var userId = "ccc";
+        window.debug = true; // 这个写false
+    </script>
+</head>
+<body style = "font-size: 14px";>
+<!--顶部信息-->
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            售后
+        </div>
+        <div class="top_right">
+            <a href="" class="top_home">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<!--退货单内容-->
+<div class="order_list_container">
+    <!--待审核订单 type = 0-->
+    <div class="order_list_item dav-shadow" data-for-id="8740353">
+        <!--店铺信息-->
+        <div class="order_name">
+            <!--店铺名-->
+            <a href="http://dvd1211.davdian.com">
+                <span class="shop_icon"></span>
+                <span class="shop_title">晨晨妈的店铺</span>
+                <span class="shop_arrow"></span>
+            </a>
+            <!--退货单状态-->
+            <span class="pull-right dav-red">待审核</span>
+            <span class="pull-right dav-red" style="display: none;">待退货</span>
+            <span class="pull-right dav-red" style="display: none;">待签收</span>
+            <span class="pull-right dav-red" style="display: none;">待退款</span>
+            <span class="pull-right dav-red" style="display: none;">申请被驳回</span>
+            <span class="pull-right dav-red" style="display: none;">申请被关闭</span>
+        </div>
+        <!--订单内容-->
+        <a class="order_good_list single_good" href="/refund-8606598.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img style="display: inline" src="http://pic.davdian.com/goods/2016/10/25/640_640_98eb5a6cddc28504aa0f3b8c66f78fa1.png@1e_1c_0o_0l_160h_160w.webp" />
+                </div>
+                <div class="order_good_info_container dav-small dav-return">
+                    <div class="order_good_name" style="word-break: break-all">
+                        测试商品，请勿购买
+                    </div>
+                    <div class="order_good_price">
+                        ￥0.10 X 0
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!--退款信息-->
+        <div class="order_buttons">
+            <div style="float: right;">
+                退款金额：￥
+                <span class="span-right dav-red">0.00</span>
+            </div>
+            <div style="float: right;margin-right: 10px">
+                交易金额：￥
+                <span class="span-right">0.00</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <!--待退货订单 type = 1-->
+    <div class="order_list_item dav-shadow" data-for-id="8740353">
+        <div class="order_name">
+            <a href="http://haba.davdian.com"> <span class="shop_icon"></span> <span class="shop_title">哈爸</span> <span class="shop_arrow"></span> </a>
+            <span class="pull-right dav-red">待退货</span>
+        </div>
+        <a class="order_good_list single_good" href="/refund-8365737.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img style="display: inline" src="http://pic.davdian.com/supplier/2016/10/11/640_640_83c04a7aed79dea74ce97a0fecf99867.jpg@1e_1c_0o_0l_160h_160w.webp" />
+                </div>
+                <div class="order_good_info_container dav-small">
+                    <div class="order_good_name" style="word-break: break-all">
+                        【香辣味】 【2包装】得利斯小包装零食肉干猪肉干休闲猪肉铺 210g*2包无法拒绝的美味
+                    </div>
+                    <div class="order_good_price">
+                        ￥59.00 X 1
+                    </div>
+                </div>
+            </div> </a>
+        <div class="order_buttons">
+            <div style="float: right;">
+                退款金额：￥
+                <span class="span-right dav-red">14.00</span>
+            </div>
+            <div style="float: right;margin-right: 10px">
+                交易金额：￥
+                <span class="span-right">14.00</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <!--待签收订单 type = 2-->
+    <div class="order_list_item dav-shadow" data-for-id="8740353">
+        <div class="order_name">
+            <a href="http://haba.davdian.com"> <span class="shop_icon"></span> <span class="shop_title">哈爸</span> <span class="shop_arrow"></span> </a>
+            <span class="pull-right dav-red">待签收</span>
+        </div>
+        <a class="order_good_list single_good" href="/refund-8365645.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img style="display: inline" src="http://pic.davdian.com/supplier/2016/10/12/640_640_694c142db5690a0f6ea756290c391d6c.jpg@1e_1c_0o_0l_160h_160w.webp" />
+                </div>
+                <div class="order_good_info_container dav-small">
+                    <div class="order_good_name" style="word-break: break-all">
+                        【新农哥】开口板栗120gx1袋 原味
+                    </div>
+                    <div class="order_good_price">
+                        ￥26.90 X 2
+                    </div>
+                </div>
+            </div> </a>
+        <div class="order_buttons">
+            <div style="float: right;">
+                退款金额：
+                <span class="span-right dav-red">￥8.80</span>
+            </div>
+            <div style="float: right;margin-right: 10px">
+                <span class="span-right">交易金额：￥8.80</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <!--待退款订单 type = 3-->
+    <div class="order_list_item dav-shadow" data-for-id="8740353">
+        <div class="order_name">
+            <a href="http://haba.davdian.com"> <span class="shop_icon"></span> <span class="shop_title">哈爸</span> <span class="shop_arrow"></span> </a>
+            <span class="pull-right dav-red">待退款</span>
+        </div>
+        <a class="order_good_list single_good" href="/refund-8364173.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img style="display: inline" src="http://pic.davdian.com/supplier/2016/09/03/640_640_e37270747884efdee221791688b8506a.jpg@1e_1c_0o_0l_160h_160w.webp" />
+                </div>
+                <div class="order_good_info_container dav-small">
+                    <div class="order_good_name" style="word-break: break-all">
+                        张小盒商务男女铝框拉杆箱 24寸_银色_24寸
+                    </div>
+                    <div class="order_good_price">
+                        ￥508.00 X 1
+                    </div>
+                </div>
+            </div> </a>
+        <div class="order_buttons">
+            <div style="float: right;">
+                退款金额：
+                <span class="span-right dav-red">￥275.67</span>
+            </div>
+            <div style="float: right;margin-right: 10px">
+                <span class="span-right">交易金额：￥275.67</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <!--申请被驳回 type = 4-->
+    <div class="order_list_item dav-shadow" data-for-id="8740353">
+        <div class="order_name">
+            <a href="http://haba.davdian.com"> <span class="shop_icon"></span> <span class="shop_title">哈爸</span> <span class="shop_arrow"></span> </a>
+            <span class="pull-right dav-red">申请被驳回</span>
+        </div>
+        <a class="order_good_list single_good" href="/refund-8364173.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img style="display: inline" src="http://pic.davdian.com/supplier/2016/08/04/640_640_2d218e9c883cf7d95a3875b00ff840d2.jpg@1e_1c_0o_0l_160h_160w.webp" />
+                </div>
+                <div class="order_good_info_container dav-small">
+                    <div class="order_good_name" style="word-break: break-all">
+                        Mr.P 动物幼儿园书包宝宝男女儿童双肩儿童背包3-6岁 000470_长颈鹿
+                    </div>
+                    <div class="order_good_price">
+                        ￥109.00 X 1
+                    </div>
+                </div>
+            </div> </a>
+        <div class="order_buttons">
+            <div style="float: right;">
+                退款金额：
+                <span class="span-right dav-red">￥71.33</span>
+            </div>
+            <div style="float: right;margin-right: 10px">
+                <span class="span-right">交易金额：￥71.33</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <!--申请被关闭 type = 5-->
+    <div class="order_list_item dav-shadow" data-for-id="8740353">
+        <div class="order_name">
+            <a href="http://dvd1211.davdian.com"> <span class="shop_icon"></span> <span class="shop_title">晨晨妈的店铺</span> <span class="shop_arrow"></span> </a>
+            <span class="pull-right dav-red">申请被关闭</span>
+        </div>
+        <a class="order_good_list single_good" href="/refund-8162727.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img style="display: inline" src="http://pic.davdian.com/supplier/2016/06/16/640_640_02b87563b1c8e8d5e654beb325d59831.jpg@1e_1c_0o_0l_160h_160w.webp" />
+                </div>
+                <div class="order_good_info_container dav-small">
+                    <div class="order_good_name" style="word-break: break-all">
+                        贝恩施雪花片积木 儿童创意拼插塑料积木 宝宝益智安全无毒玩具013
+                    </div>
+                    <div class="order_good_price">
+                        ￥12.00 X 1
+                    </div>
+                </div>
+            </div> </a>
+        <div class="order_buttons">
+            <div style="float: right;">
+                退款金额：
+                <span class="span-right dav-red">￥68.20</span>
+            </div>
+            <div style="float: right;margin-right: 10px">
+                <span class="span-right">交易金额：￥68.20</span>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+</div>
+<!--数据加载中-->
+<div class="refresh" id = "loading">
+    <div class="uil-default-css-normal" style="-webkit-transform:scale(0.15);-moz-transform:scale(0.15);-webkit-transform-origin: 0 0;-moz-transform-origin: 0 0;width:30px;height: 30px;display: inline-block;"><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;"></div><div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;"></div></div>
+    <div>数据加载中...</div>
+</div>
+<script src="//apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../javascript/return_list.js"></script>
+<script src="../cdn/jquery/jquery.lazyload.js"></script>
+</body>
+</html>

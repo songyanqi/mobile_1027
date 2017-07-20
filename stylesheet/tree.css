@@ -1,0 +1,2007 @@
+@media screen and (max-width: 320px) {
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ol, ul, li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /*公用css样式*/
+    .tree-container {
+        max-width: 640px;
+    }
+
+    .swiper-slide {
+        max-width: 640px;
+    }
+
+    .swiper-wrapper {
+        height: 800px;
+    }
+
+    .music {
+        right: 8%;
+        width: 1rem;
+        top: 0.6rem;
+        display: none;
+        z-index: 6;
+    }
+
+    .music.selected {
+        display: block;
+    }
+
+    .page_title {
+        width: 3.6rem;
+        top: 0.2rem;
+        left: 0.2rem;
+        z-index: 6;
+    }
+
+    .swiper-slide {
+        width: 100%;
+    }
+
+    .absolute {
+        position: absolute;
+    }
+
+    .fixed {
+        position: fixed;
+        z-index: 10;
+    }
+
+    .arrow {
+        width: 1.2rem;
+        left: 50%;
+        margin-left: -0.6rem;
+        bottom: 0.4rem;
+        z-index: 20;
+        -webkit-animation-name: fadeOutDown;
+        animation-name: fadeOutDown;
+    }
+
+    @-webkit-keyframes fadeOutDown {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 50%, 0);
+            transform: translate3d(0, 50%, 0);
+        }
+    }
+
+    @keyframes fadeOutDown {
+        /*from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+          -webkit-transform: translate3d(0, 50%, 0);
+          transform: translate3d(0, 50%, 0);
+        }*/
+        0% {
+            opacity: 0;
+        }
+        30% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 50%, 0);
+            transform: translate3d(0, 50%, 0);
+        }
+    }
+
+    /*page1页面样式*/
+    .div1 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page1_background.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    .page1_headBackground {
+        width: 2.12rem;
+        height: 2.12rem;
+        top: 1rem;
+        left: 50%;
+        margin-left: -1.06rem;
+    }
+
+    .t1 {
+        position: absolute;
+        z-index: 12;
+        background: red;
+        border-radius: 50%;
+        width: 1.68rem;
+        margin-left: -0.84rem;
+        height: 1.68rem;
+        top: 1.2rem;
+        left: 50%;
+    }
+
+    .page1_leaf1 {
+        width: 2.8rem;
+        top: -0.4rem;
+        right: -0.4rem;
+    }
+
+    .page1_leaf2 {
+        width: 0.8rem;
+        top: 2.8rem;
+        left: -0.1rem;
+    }
+
+    .page1_start {
+        width: 0.8rem;
+        top: 1.8rem;
+        right: 8%;
+    }
+
+    .page1_textBackground1 {
+        width: 6.4rem;
+        left: 10%;
+        top: 3.8rem;
+    }
+
+    .page1_text {
+        width: 6.4rem;
+        left: 50%;
+        margin-left: -3.2rem;
+        top: 0.6rem;
+        z-index: 30;
+    }
+
+    .page1_text_1 {
+        width: 6.4rem;
+        left: 50%;
+        margin-left: -3.2rem;
+        top: 3.1rem;
+        height: 6rem;
+        z-index: 30;
+
+    }
+
+    .page1_text_title {
+        width: 4.8rem;
+        left: 50%;
+        margin-left: -2.4rem;
+        font-size: 0.52rem;
+        height: 0.8rem;
+        top: 0.2rem;
+    }
+
+    .page1_text_content {
+        width: 6.4rem;
+        left: 50%;
+        margin-left: -3.2rem;
+        height: 2rem;
+        top: 2.28rem;
+        font-size: 0.28rem;
+        z-index: 21;
+    }
+
+    .page1_text_content p {
+        height: 0.6rem;
+        line-height: 0.6rem;
+        margin-bottom: 0.04rem;
+        text-align: center;
+        font-size: 0.4rem;
+        color: #fd8769;
+    }
+
+    .page1_name1 {
+        width: 1rem;
+        top: 0.46rem;
+        left: 1.5rem;
+    }
+
+    .page1_name1_p1 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page1_p1.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .page1_name1_p2 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page1_p2.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .page1_name1_p3 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page1_p3.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .page1_name1_p4 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page1_p4.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .over_text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .page1_name {
+        text-align: center;
+        width: 100%;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        left: 0;
+        top: -0.2rem;
+        color: #fc8857;
+        font-size: 0.36rem;
+    }
+
+    .page1_num {
+        top: 0.48rem;
+        right: 1.5rem;
+        text-align: center;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        width: 1.6rem;
+        color: #fc8857;
+        font-size: 0.4rem;
+        z-index: 31;
+    }
+
+    .page1_bird {
+        width: 0.8rem;
+        left: 20%;
+        bottom: 3.4rem;
+    }
+
+    .page1_line {
+        width: 6.72rem;
+        left: 50%;
+        margin-left: -3.32rem;
+        bottom: 2.2rem;
+    }
+
+    .page1_peacock {
+        width: 6.4rem;
+        left: 50%;
+        margin-left: -3.2rem;
+        bottom: 0;
+        z-index: 11;
+    }
+
+    .page1_peacockBg {
+        width: 6.4rem;
+        left: 50%;
+        margin-left: -3.2rem;
+        bottom: 0px;
+    }
+
+    .page1_text3 {
+        width: 3.2rem;
+        left: 50%;
+        margin-left: -1.6rem;
+        bottom: 1.1rem;
+        z-index: 4;
+    }
+
+    .page1_textBackground3 {
+        width: 4.8rem;
+        left: 50%;
+        margin-left: -2.4rem;
+        bottom: 0.4rem;
+    }
+
+    .page1_bottomBackground {
+        width: 100%;
+        bottom: 0;
+    }
+
+    /*page2页面样式*/
+    .div2 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page2_background.jpg') no-repeat center;
+        background-size: cover;
+        font-size: 0.3rem;
+        color: #393c4d;
+    }
+
+    .page2_leaf1 {
+        width: 2.8rem;
+        right: -0.4rem;
+        top: -0.4rem;
+        z-index: 21;
+    }
+
+    .page2_leaf2 {
+        width: 1.6rem;
+        top: 0.7rem;
+        left: -0.24rem;
+        z-index: 21;
+    }
+
+    .page2_text {
+        width: 6.4rem;
+        left: 50%;
+        margin-left: -3.2rem;
+        top: 2rem;
+    }
+
+    .page2_text_2 {
+        /*width: 100%;*/
+        width: 6.4rem;
+        left: 50%;
+        margin-left: -3.2rem;
+        top: 4rem;
+    }
+
+    .page2_p1_name {
+        max-width: 4rem;
+        display: inline-block;
+        overflow: hidden;
+        /*background: red;*/
+    }
+
+    .page2_p {
+        width: 1.6rem;
+        height: 0.6rem;
+        left: 50%;
+        line-height: 0.4rem;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .page2_text2 {
+        width: 6.4rem;
+        left: 50%;
+        margin-left: -3.2rem;
+        top: 3rem;
+    }
+
+    .page2_p1 {
+        top: 2.16rem;
+        width: 6.4rem;
+        height: 0.6rem;
+        line-height: 0.6rem;
+        vertical-align: top;
+        /*background: red;*/
+        margin-left: -3.08rem;
+        font-size: 0.44rem;
+    }
+
+    .page2_p1 span {
+        vertical-align: top;
+        height: 0.6rem;
+        line-height: 0.6rem;
+    }
+
+    .page2_p1_img {
+        width: 2rem;
+        margin-top: -0.08rem;
+    }
+
+    .page2_p2 {
+        top: 4.24rem;
+        margin-left: 1.44rem;
+        width: 1rem;
+        height: 0.48rem;
+    }
+
+    .page2_p3 {
+        top: 5.2rem;
+        margin-left: -0.64rem;
+        width: 1rem;
+        height: 0.48rem;
+    }
+
+    /*page3页面样式*/
+    .div3 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page3_background.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    .page3_moon {
+        width: 6.4rem;
+        left: 50%;
+        margin-left: -3.2rem;
+        top: 0;
+    }
+
+    .page3_text {
+        bottom: 2rem;
+        width: 6.4rem;
+        left: 50%;
+        margin-left: -3.2rem;
+        z-index: 20;
+    }
+
+    .page3_start {
+        width: 4rem;
+        left: 50%;
+        margin-left: -2rem;
+        top: 6.6rem
+    }
+
+    .page3_planet {
+        width: 1rem;
+        left: 50%;
+        margin-left: -2rem;
+        top: 5.6rem;
+    }
+
+    /*page4页面样式*/
+    .div4 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page4_background.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    .page4_clouds {
+        width: 6.4rem;
+        left: 50%;
+        margin-left: -3.2rem;
+        top: 1.4rem;
+    }
+
+    .page4_phone {
+        width: 6.4rem;
+        left: 50%;
+        margin-left: -3.2rem;
+        bottom: 1.2rem;
+    }
+
+    .page4_eye {
+        width: 0.18rem;
+        left: 50%;
+        margin-left: 1.12rem;
+        bottom: 4.36rem;
+    }
+
+    /*page5页面样式*/
+    .div5 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page5_background.jpg') no-repeat center;
+        background-size: 100% 100%;
+    }
+
+    .t4 {
+        position: absolute;
+        z-index: 12;
+        background: red;
+        width: 1.68rem;
+        height: 1.68rem;
+        border-radius: 50%;
+        top: 1.12rem;
+        margin-top: 0.2rem;
+        left: 50%;
+        margin-left: -2.44rem;
+    }
+
+    .page5_headBackground {
+        width: 2.12rem;
+        height: 2.12rem;
+        top: 1.32rem;
+        left: 50%;
+        margin-left: -2.66rem;
+    }
+
+    .page5_start {
+        width: 2.4rem;
+        left: 50%;
+        bottom: 6rem;
+    }
+
+    .page5_person {
+        width: 6.4rem;
+        /*width:100%;*/
+        top: 1.2rem;
+        left: 50%;
+        margin-left: -3.2rem;
+    }
+
+    .page5_name {
+        top: 2.5rem;
+        left: 50%;
+        margin-left: -3.12rem;
+        width: 3rem;
+        height: 1.6rem;
+        /*line-height: 1rem;*/
+        text-align: center;
+        font-size: 0.36rem;
+        color: #fff;
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page5_titleBackground.png') no-repeat;
+        background-size: 100% 100%;
+        z-index: 21;
+    }
+
+    .page5_name span {
+        display: block;
+        width: 2.4rem;
+        height: 0.6rem;
+        line-height: 0.6rem;
+        margin: 0.2rem auto;
+        font-size: 0.24rem;
+    }
+
+    /*page6页面样式*/
+    .div6 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page6_background.jpg') no-repeat center;
+        background-size: 100% 100%;
+    }
+
+    .page6_div {
+        display: none;
+        width: 100%;
+        height: 12rem;
+    }
+
+    .page6_div.selected {
+        display: block;
+    }
+
+    .page6_img {
+        width: 6.4rem;
+        left: 50%;
+        top: 2rem;
+        margin-left: -3.2rem;
+    }
+
+    .page6_share {
+        width: 3.2rem;
+        left: 50%;
+        margin-left: -1.6rem;
+        bottom: 1.2rem;
+    }
+
+    .page6_makemoney1 {
+        width: 3.2rem;
+        left: 50%;
+        margin-left: -1.6rem;
+        bottom: 1.2rem;
+    }
+
+    .page6_day1 {
+        width: 0.6rem;
+        top: 0;
+        left: 1rem;
+    }
+
+    .page6_day2 {
+        width: 0.6rem;
+        top: 0;
+        left: 1.4rem;
+    }
+
+    .page6_time_all {
+        width: 0.6rem;
+        top: 0;
+    }
+
+    .page6_time1 {
+        left: 0;
+    }
+
+    .page6_time2 {
+        left: 0.6rem;
+    }
+
+    .page6_time3 {
+        left: 1.4rem;
+    }
+
+    .page6_time4 {
+        left: 2rem;
+    }
+
+    .page6_time5 {
+        left: 2.8rem;
+    }
+
+    .page6_time6 {
+        left: 3.4rem;
+    }
+
+    .page6_dot1 {
+        width: 0.2rem;
+        top: 0.16rem;
+        left: 1.2rem;
+    }
+
+    .page6_dot2 {
+        width: 0.2rem;
+        top: 0.16rem;
+        left: 2.6rem;
+    }
+
+    .page6_date {
+        top: 3.32rem;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform:translate(-50%, 0);
+        -o-transform:translate(-50%, 0);
+        transform: translate(-50%, 0);
+        margin-left: -0.4rem;
+        width: 1.6rem;
+        height: 1rem;
+        line-height: 1rem;
+        text-align: center;
+        font-size: 0.8rem;
+        color: #f08c64;
+        font-weight: bold;
+    }
+
+    .page6_time {
+        width: 4.2rem;
+        text-align: center;
+        height: 1rem;
+        line-height: 1rem;
+        top: 4.8rem;
+        left: 50%;
+        margin-left: -2.1rem;
+        font-size: 1rem;
+    }
+
+    .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .animatedInfinite {
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+
+    .animated.infinite {
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+
+    .animated.hinge {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+    }
+
+    .animated.flipOutX,
+    .animated.flipOutY,
+    .animated.bounceIn,
+    .animated.bounceOut {
+        -webkit-animation-duration: .75s;
+        animation-duration: .75s;
+    }
+
+    @-webkit-keyframes bounceInLeftJc {
+        from, 20%, 40%, 60%, 80%, 90%, 95%, to {
+            -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(-3000px, 0, 0);
+            transform: translate3d(-3000px, 0, 0);
+        }
+        20% {
+            opacity: 1;
+            -webkit-transform: translate3d(-300px, -100px, 0);
+            transform: translate3d(-300px, -100px, 0);
+        }
+        40% {
+            opacity: 1;
+            -webkit-transform: translate3d(0, -40px, 0);
+            transform: translate3d(0, -40px, 0);
+        }
+        60% {
+            opacity: 1;
+            -webkit-transform: translate3d(125px, -100px, 0);
+            transform: translate3d(125px, -100px, 0);
+        }
+        80% {
+            opacity: 1;
+            -webkit-transform: translate3d(125px, -1.6rem, 0);
+            transform: translate3d(125px, -1.6rem, 0);
+        }
+        90% {
+            -webkit-transform: translate3d(-10px, -10px, 0);
+            transform: translate3d(-10px, -10px, 0);
+        }
+
+        95% {
+            -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0);
+        }
+
+        to {
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    @keyframes bounceInLeftJc {
+        from, 20%, 40%, 60%, 80%, 90%, 95%, to {
+            -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(-3000px, 0, 0);
+            transform: translate3d(-3000px, 0, 0);
+        }
+        20% {
+            opacity: 1;
+            -webkit-transform: translate3d(-300px, -100px, 0);
+            transform: translate3d(-300px, -100px, 0);
+        }
+        40% {
+            opacity: 1;
+            -webkit-transform: translate3d(0, -40px, 0);
+            transform: translate3d(0, -40px, 0);
+        }
+        60% {
+            opacity: 1;
+            -webkit-transform: translate3d(125px, -100px, 0);
+            transform: translate3d(125px, -100px, 0);
+        }
+        80% {
+            opacity: 1;
+            -webkit-transform: translate3d(125px, -1.6rem, 0);
+            transform: translate3d(125px, -1.6rem, 0);
+        }
+        90% {
+            -webkit-transform: translate3d(-10px, -10px, 0);
+            transform: translate3d(-10px, -10px, 0);
+        }
+
+        95% {
+            -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0);
+        }
+
+        to {
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    .bounceInLeftJc {
+        -webkit-animation-name: bounceInLeftJc;
+        animation-name: bounceInLeftJc;
+    }
+
+    /*----------------------------------------*/
+    @-webkit-keyframes rotateInDownRightJc {
+        0% {
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes rotateInDownRightJc {
+        0% {
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+    }
+
+    .rotateInDownRightJc {
+        -webkit-animation-name: rotateInDownRightJc;
+        animation-name: rotateInDownRightJc;
+    }
+
+    /*----------------------------------------*/
+    @-webkit-keyframes rotateInDownLeftJc {
+        0% {
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes rotateInDownLeftJc {
+        0% {
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+    }
+
+    .rotateInDownLeftJc {
+        -webkit-animation-name: rotateInDownLeftJc;
+        animation-name: rotateInDownLeftJc;
+    }
+
+    /*-----------------------------------*/
+    @-webkit-keyframes rotateInDownCenterJc {
+        0% {
+            -webkit-transform-origin: center top;
+            transform-origin: 70% 0%;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: center top;
+            transform-origin: 70% 0%;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform-origin: center top;
+            transform-origin: 70% 0%;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes rotateInDownCenterJc {
+        0% {
+            -webkit-transform-origin: center top;
+            transform-origin: 70% 0%;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: center top;
+            transform-origin: 70% 0%;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform-origin: center top;
+            transform-origin: 70% 0%;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+    }
+
+    .rotateInDownCenterJc {
+        -webkit-animation-name: rotateInDownCenterJc;
+        animation-name: rotateInDownCenterJc;
+    }
+
+    /*-----------------------------------*/
+    @-webkit-keyframes rotateCenterJc {
+        0% {
+            -webkit-transform-origin: center top;
+            transform-origin: 50% 50%;
+            -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: center top;
+            transform-origin: 50% 50%;
+            -webkit-transform: rotate3d(0, 0, 1, 180deg);
+            transform: rotate3d(0, 0, 1, 180deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform-origin: center top;
+            transform-origin: 50% 50%;
+            -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes rotateCenterJc {
+        0% {
+            -webkit-transform-origin: center top;
+            transform-origin: 50% 50%;
+            -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: center top;
+            transform-origin: 50% 50%;
+            -webkit-transform: rotate3d(0, 0, 1, 180deg);
+            transform: rotate3d(0, 0, 1, 180deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform-origin: center top;
+            transform-origin: 50% 50%;
+            -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+            opacity: 1;
+        }
+    }
+
+    .rotateCenterJc {
+        -webkit-animation-name: rotateCenterJc;
+        animation-name: rotateCenterJc;
+    }
+}
+
+@media screen and (min-width: 321px) {
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    ol, ul, li {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /*公用css样式*/
+    .tree-container {
+        max-width: 640px;
+    }
+
+    .swiper-slide {
+        max-width: 640px;
+    }
+
+    .swiper-wrapper {
+        height: 800px;
+    }
+
+    .music {
+        right: 8%;
+        width: 50px;
+        top: 30px;
+        display: none;
+        z-index: 6;
+    }
+
+    .music.selected {
+        display: block;
+    }
+
+    .page_title {
+        width: 180px;
+        top: 10px;
+        left: 10px;
+        z-index: 6;
+    }
+
+    .swiper-slide {
+        width: 100%;
+    }
+
+    .absolute {
+        position: absolute;
+    }
+
+    .fixed {
+        position: fixed;
+        z-index: 10;
+    }
+
+    .arrow {
+        width: 60px;
+        left: 50%;
+        margin-left: -30px;
+        bottom: 20px;
+        z-index: 20;
+        -webkit-animation-name: fadeOutDown;
+        animation-name: fadeOutDown;
+    }
+
+    @-webkit-keyframes fadeOutDown {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 50%, 0);
+            transform: translate3d(0, 50%, 0);
+        }
+    }
+
+    @keyframes fadeOutDown {
+        /*from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+          -webkit-transform: translate3d(0, 50%, 0);
+          transform: translate3d(0, 50%, 0);
+        }*/
+        0% {
+            opacity: 0;
+        }
+        30% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+            -webkit-transform: translate3d(0, 50%, 0);
+            transform: translate3d(0, 50%, 0);
+        }
+    }
+    /*page1页面样式*/
+    .div1 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page1_background.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    .page1_headBackground {
+        width: 106px;
+        height: 106px;
+        top: 50px;
+        left: 50%;
+        margin-left: -53px;
+    }
+
+    .t1 {
+        position: absolute;
+        z-index: 12;
+        background: red;
+        border-radius: 50%;
+        width: 84px;
+        margin-left: -42px;
+        height: 84px;
+        top: 60px;
+        left: 50%;
+    }
+
+    .page1_leaf1 {
+        width: 140px;
+        top: -20px;
+        right: -20px;
+    }
+
+    .page1_leaf2 {
+        width: 40px;
+        top: 140px;
+        left: -5px;
+    }
+
+    .page1_start {
+        width: 40px;
+        top: 90px;
+        right: 8%;
+    }
+
+    .page1_textBackground1 {
+        width: 320px;
+        left: 10%;
+        top: 190px;
+    }
+
+    .page1_text {
+        width: 320px;
+        left: 50%;
+        margin-left: -160px;
+        top: 30px;
+        z-index: 30;
+    }
+
+    .page1_text_1 {
+        width: 320px;
+        left: 50%;
+        margin-left: -160px;
+        top: 155px;
+        height: 300px;
+        z-index: 30;
+
+    }
+
+    .page1_text_title {
+        width: 240px;
+        left: 50%;
+        margin-left: -120px;
+        font-size: 26px;
+        height: 40px;
+        top: 10px;
+    }
+
+    .page1_text_content {
+        width: 320px;
+        left: 50%;
+        margin-left: -160px;
+        font-size: 28px;
+        height: 100px;
+        top: 114px;
+        font-size: 14px;
+        z-index: 21;
+    }
+
+    .page1_text_content p {
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 2px;
+        text-align: center;
+        font-size: 20px;
+        color: #fd8769;
+    }
+
+    .page1_name1 {
+        width: 50px;
+        top: 23px;
+        left: 75px;
+    }
+
+    .page1_name1_p1 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page1_p1.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .page1_name1_p2 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page1_p2.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .page1_name1_p3 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page1_p3.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .page1_name1_p4 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page1_p4.png') no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .over_text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .page1_name {
+        text-align: center;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        left: 0;
+        top: -10px;
+        color: #fc8857;
+        font-size: 18px;
+    }
+
+    .page1_num {
+        top: 24px;
+        right: 75px;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        width: 80px;
+        color: #fc8857;
+        font-size: 20px;
+        z-index: 31;
+    }
+
+    .page1_bird {
+        width: 40px;
+        left: 20%;
+        bottom: 170px;
+    }
+
+    .page1_line {
+        width: 336px;
+        left: 50%;
+        margin-left: -166px;
+        bottom: 110px;
+    }
+
+    .page1_peacock {
+        width: 320px;
+        left: 50%;
+        margin-left: -160px;
+        bottom: 0;
+        z-index: 11;
+    }
+
+    .page1_peacockBg {
+        width: 320px;
+        left: 50%;
+        margin-left: -160px;
+        bottom: 0px;
+    }
+
+    .page1_text3 {
+        width: 160px;
+        left: 50%;
+        margin-left: -80px;
+        bottom: 55px;
+        z-index: 4;
+    }
+
+    .page1_textBackground3 {
+        width: 240px;
+        left: 50%;
+        margin-left: -120px;
+        bottom: 20px;
+    }
+
+    .page1_bottomBackground {
+        width: 100%;
+        bottom: 0;
+    }
+
+    /*page2页面样式*/
+    .div2 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page2_background.jpg') no-repeat center;
+        background-size: cover;
+        font-size: 15px;
+        color: #393c4d;
+    }
+
+    .page2_leaf1 {
+        width: 140px;
+        right: -20px;
+        top: -20px;
+        z-index: 21;
+    }
+
+    .page2_leaf2 {
+        width: 80px;
+        top: 35px;
+        left: -12px;
+        z-index: 21;
+    }
+
+    .page2_text {
+        width: 320px;
+        left: 50%;
+        margin-left: -160px;
+        top: 100px;
+    }
+
+    .page2_text_2 {
+        /*width: 100%;*/
+        width: 320px;
+        left: 50%;
+        margin-left: -160px;
+        top: 200px;
+    }
+
+    .page2_p1_name {
+        max-width: 200px;
+        display: inline-block;
+        overflow: hidden;
+        /*background: red;*/
+    }
+
+    .page2_p {
+        width: 80px;
+        height: 30px;
+        left: 50%;
+        line-height: 20px;
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .page2_text2 {
+        width: 320px;
+        left: 50%;
+        margin-left: -160px;
+        top: 150px;
+    }
+
+    .page2_p1 {
+        top: 108px;
+        width: 320px;
+        height: 30px;
+        line-height: 30px;
+        vertical-align: top;
+        /*background: red;*/
+        margin-left: -154px;
+        font-size: 22px;
+    }
+
+    .page2_p1 span {
+        vertical-align: top;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .page2_p1_img {
+        width: 100px;
+        margin-top: -4px;
+    }
+
+    .page2_p2 {
+        top: 212px;
+        margin-left: 72px;
+        width: 50px;
+        height: 24px;
+    }
+
+    .page2_p3 {
+        top: 260px;
+        margin-left: -32px;
+        width: 50px;
+        height: 24px;
+    }
+
+    /*page3页面样式*/
+    .div3 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page3_background.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    .page3_moon {
+        width: 320px;
+        left: 50%;
+        margin-left: -160px;
+        top: 0;
+    }
+
+    .page3_text {
+        bottom: 100px;
+        width: 320px;
+        left: 50%;
+        margin-left: -160px;
+        z-index: 20;
+    }
+
+    .page3_start {
+        width: 200px;
+        left: 50%;
+        margin-left: -100px;
+        top: 330px;
+    }
+
+    .page3_planet {
+        width: 50px;
+        left: 50%;
+        margin-left: -100px;
+        top: 280px;
+    }
+
+    /*page4页面样式*/
+    .div4 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page4_background.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    .page4_clouds {
+        width: 320px;
+        left: 50%;
+        margin-left: -160px;
+        top: 70px;
+    }
+
+    .page4_phone {
+        width: 320px;
+        left: 50%;
+        margin-left: -160px;
+        bottom: 60px;
+    }
+
+    .page4_eye {
+        width: 9px;
+        left: 50%;
+        margin-left: 56px;
+        bottom: 218px;
+    }
+
+    /*page5页面样式*/
+    .div5 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page5_background.jpg') no-repeat center;
+        background-size: 100% 100%;
+    }
+
+    .t4 {
+        position: absolute;
+        z-index: 12;
+        background: red;
+        width: 84px;
+        height: 84px;
+        border-radius: 50%;
+        top: 66px;
+        margin-top: 10px;
+        left: 50%;
+        margin-left: -122px;
+    }
+
+    .page5_headBackground {
+        width: 106px;
+        height: 106px;
+        top: 66px;
+        left: 50%;
+        margin-left: -133px;
+    }
+
+    .page5_start {
+        width: 120px;
+        left: 50%;
+        bottom: 6rem;
+    }
+
+    .page5_person {
+        width: 320px;
+        /*width:100%;*/
+        top: 60px;
+        left: 50%;
+        margin-left: -160px;
+    }
+
+    .page5_name {
+        top: 125px;
+        left: 50%;
+        margin-left: -156px;
+        width: 150px;
+        height: 80px;
+        /*line-height: 50px;*/
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page5_titleBackground.png') no-repeat;
+        background-size: 100% 100%;
+        z-index: 21;
+    }
+
+    .page5_name span {
+        display: block;
+        width: 120px;
+        height: 30px;
+        line-height: 30px;
+        margin: 10px auto;
+        font-size: 12px;
+    }
+
+    /*page6页面样式*/
+    .div6 {
+        background: url('//pic.davdian.com/free/2016/12/24/tree/page6_background.jpg') no-repeat center;
+        background-size: 100% 100%;
+    }
+
+    .page6_div {
+        display: none;
+        width: 100%;
+        height: 600px;
+    }
+
+    .page6_div.selected {
+        display: block;
+    }
+
+    .page6_img {
+        width: 320px;
+        left: 50%;
+        top: 100px;
+        margin-left: -160px;
+    }
+
+    .page6_share {
+        width: 160px;
+        left: 50%;
+        margin-left: -80px;
+        bottom: 60px;
+    }
+
+    .page6_makemoney1 {
+        width: 160px;
+        left: 50%;
+        margin-left: -80px;
+        bottom: 60px;
+    }
+
+    .page6_day1 {
+        width: 30px;
+        top: 0;
+        left: 50px;
+    }
+
+    .page6_day2 {
+        width: 30px;
+        top: 0;
+        left: 70px;
+    }
+
+    .page6_time_all {
+        width: 30px;
+        top: 0;
+    }
+
+    .page6_time1 {
+        left: 0;
+    }
+
+    .page6_time2 {
+        left: 30px;
+    }
+
+    .page6_time3 {
+        left: 70px;
+    }
+
+    .page6_time4 {
+        left: 100px;
+    }
+
+    .page6_time5 {
+        left: 140px;
+    }
+
+    .page6_time6 {
+        left: 170px;
+    }
+
+    .page6_dot1 {
+        width: 10px;
+        top: 8px;
+        left: 60px;
+    }
+
+    .page6_dot2 {
+        width: 10px;
+        top: 8px;
+        left: 130px;
+    }
+
+    .page6_date {
+        top: 166px;
+        left: 50%;
+        -webkit-transform: translate(-50%, 0);
+        -moz-transform: translate(-50%, 0);
+        -ms-transform:translate(-50%, 0);
+        -o-transform:translate(-50%, 0);
+        transform: translate(-50%, 0);
+        margin-left: -20px;
+        width: 80px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        font-size: 40px;
+        color: #f08c64;
+        font-weight: bold;
+    }
+
+    .page6_time {
+        width: 210px;
+        text-align: center;
+        height: 50px;
+        line-height: 50px;
+        top: 240px;
+        left: 50%;
+        margin-left: -105px;
+        font-size: 50px;
+    }
+
+    .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .animatedInfinite {
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+
+    .animated.infinite {
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    }
+
+    .animated.hinge {
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+    }
+
+    .animated.flipOutX,
+    .animated.flipOutY,
+    .animated.bounceIn,
+    .animated.bounceOut {
+        -webkit-animation-duration: .75s;
+        animation-duration: .75s;
+    }
+
+    @-webkit-keyframes bounceInLeftJc {
+        from, 20%, 40%, 60%, 80%, 90%, 95%, to {
+            -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(-3000px, 0, 0);
+            transform: translate3d(-3000px, 0, 0);
+        }
+        20% {
+            opacity: 1;
+            -webkit-transform: translate3d(-300px, -100px, 0);
+            transform: translate3d(-300px, -100px, 0);
+        }
+        40% {
+            opacity: 1;
+            -webkit-transform: translate3d(0, -40px, 0);
+            transform: translate3d(0, -40px, 0);
+        }
+        60% {
+            opacity: 1;
+            -webkit-transform: translate3d(125px, -100px, 0);
+            transform: translate3d(125px, -100px, 0);
+        }
+        80% {
+            opacity: 1;
+            -webkit-transform: translate3d(125px, -80px, 0);
+            transform: translate3d(125px, -80px, 0);
+        }
+        90% {
+            -webkit-transform: translate3d(-10px, -10px, 0);
+            transform: translate3d(-10px, -10px, 0);
+        }
+
+        95% {
+            -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0);
+        }
+
+        to {
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    @keyframes bounceInLeftJc {
+        from, 20%, 40%, 60%, 80%, 90%, 95%, to {
+            -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+
+        0% {
+            opacity: 0;
+            -webkit-transform: translate3d(-3000px, 0, 0);
+            transform: translate3d(-3000px, 0, 0);
+        }
+        20% {
+            opacity: 1;
+            -webkit-transform: translate3d(-300px, -100px, 0);
+            transform: translate3d(-300px, -100px, 0);
+        }
+        40% {
+            opacity: 1;
+            -webkit-transform: translate3d(0, -40px, 0);
+            transform: translate3d(0, -40px, 0);
+        }
+        60% {
+            opacity: 1;
+            -webkit-transform: translate3d(125px, -100px, 0);
+            transform: translate3d(125px, -100px, 0);
+        }
+        80% {
+            opacity: 1;
+            -webkit-transform: translate3d(125px, -80px, 0);
+            transform: translate3d(125px, -80px, 0);
+        }
+        90% {
+            -webkit-transform: translate3d(-10px, -10px, 0);
+            transform: translate3d(-10px, -10px, 0);
+        }
+
+        95% {
+            -webkit-transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0);
+        }
+
+        to {
+            -webkit-transform: none;
+            transform: none;
+        }
+    }
+
+    .bounceInLeftJc {
+        -webkit-animation-name: bounceInLeftJc;
+        animation-name: bounceInLeftJc;
+    }
+
+    /*----------------------------------------*/
+    @-webkit-keyframes rotateInDownRightJc {
+        0% {
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes rotateInDownRightJc {
+        0% {
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+        100% {
+            -webkit-transform-origin: right top;
+            transform-origin: right top;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+    }
+
+    .rotateInDownRightJc {
+        -webkit-animation-name: rotateInDownRightJc;
+        animation-name: rotateInDownRightJc;
+    }
+
+    /*----------------------------------------*/
+    @-webkit-keyframes rotateInDownLeftJc {
+        0% {
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes rotateInDownLeftJc {
+        0% {
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+    }
+
+    .rotateInDownLeftJc {
+        -webkit-animation-name: rotateInDownLeftJc;
+        animation-name: rotateInDownLeftJc;
+    }
+
+    /*-----------------------------------*/
+    @-webkit-keyframes rotateInDownCenterJc {
+        0% {
+            -webkit-transform-origin: center top;
+            transform-origin: 70% 0%;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: center top;
+            transform-origin: 70% 0%;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform-origin: center top;
+            transform-origin: 70% 0%;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes rotateInDownCenterJc {
+        0% {
+            -webkit-transform-origin: center top;
+            transform-origin: 70% 0%;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: center top;
+            transform-origin: 70% 0%;
+            -webkit-transform: rotate3d(0, 0, 1, 5deg);
+            transform: rotate3d(0, 0, 1, 5deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform-origin: center top;
+            transform-origin: 70% 0%;
+            -webkit-transform: rotate3d(0, 0, 1, -5deg);
+            transform: rotate3d(0, 0, 1, -5deg);
+            opacity: 1;
+        }
+    }
+
+    .rotateInDownCenterJc {
+        -webkit-animation-name: rotateInDownCenterJc;
+        animation-name: rotateInDownCenterJc;
+    }
+
+    /*-----------------------------------*/
+    @-webkit-keyframes rotateCenterJc {
+        0% {
+            -webkit-transform-origin: center top;
+            transform-origin: 50% 50%;
+            -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: center top;
+            transform-origin: 50% 50%;
+            -webkit-transform: rotate3d(0, 0, 1, 180deg);
+            transform: rotate3d(0, 0, 1, 180deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform-origin: center top;
+            transform-origin: 50% 50%;
+            -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+            opacity: 1;
+        }
+    }
+
+    @keyframes rotateCenterJc {
+        0% {
+            -webkit-transform-origin: center top;
+            transform-origin: 50% 50%;
+            -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+            opacity: 1;
+        }
+
+        50% {
+            -webkit-transform-origin: center top;
+            transform-origin: 50% 50%;
+            -webkit-transform: rotate3d(0, 0, 1, 180deg);
+            transform: rotate3d(0, 0, 1, 180deg);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform-origin: center top;
+            transform-origin: 50% 50%;
+            -webkit-transform: rotate3d(0, 0, 1, 0deg);
+            transform: rotate3d(0, 0, 1, 0deg);
+            opacity: 1;
+        }
+    }
+
+    .rotateCenterJc {
+        -webkit-animation-name: rotateCenterJc;
+        animation-name: rotateCenterJc;
+    }
+}

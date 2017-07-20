@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/vip.css" rel="stylesheet">
+    <title>会员专区</title>
+
+    <script type="text/javascript">
+        //统计
+        var tj_id = 56;
+        var tj_path = 'vip';
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+
+        //分享的基本信息
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+
+        //异步加载商品信息
+        var vipGoodsUrl = "../data/vipGoodsList.json";
+    </script>
+</head>
+<!--app里面body增加in_app的class-->
+<body>
+<!--app 里面不要top0 这个div-->
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();" data-dav-tj="vip|back|back|1|back@vip">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            会员专区
+        </div>
+        <div class="top_right">
+            <a href="/" class="top_home">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- 轮播图 -->
+<div class="vip_ads" id="index_ads">
+    <a href="http://nemo.davdian.com">
+        <img src="//pic.davdian.com/free/2016/04/15/640_400_46c01a2065ba0044f6fc1aac1e100d0b.png" alt="">
+    </a>
+
+</div>
+
+<div class="vip_good_list">
+
+    <!--<a href="" data-dav-tj="vip|good|good|1|good@vip">-->
+        <!--<div>-->
+            <!--<img data-original="//pic.davdian.com/activity/2016/07/04/640_280_74afdc43f653842f65e9f3eb66f35e8c.jpg"-->
+                 <!--src="//pic.davdian.com/free/loading_640_380_v2.png"></div>-->
+        <!--<div class="vip_good_info">-->
+            <!--<div class="vip_good_title">跟着大师玩创意》（全6册）让孩子像大🐘一样真相大白</div>-->
+            <!--<div class="vip_good_price">-->
+                <!--<span class="vip_price">会员价: ¥188.00</span>-->
+                <!--<span>非会员: ¥249.00</span>-->
+                <!--<span class="pull-right">库存: 2490</span>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</a>-->
+
+</div>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script src="../javascript/jweixin-1.0.0.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../cdn/jquery/jquery.iosslider.js"></script>
+<script src="../cdn/jquery/jquery.lazyload.js"></script>
+<script src="../cdn/jquery/jquery.cookie.js"></script>
+<script src="../javascript/vip.js"></script>
+<script src="../javascript/slider.js"></script>
+
+
+</body>
+</html>

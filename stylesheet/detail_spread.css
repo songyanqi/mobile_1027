@@ -1,0 +1,72 @@
+.shop_recommend {
+    background: #fff;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+.recommend_container{
+    cursor: pointer;
+}
+
+.recommend_container .shop_recommend.yes{
+    display: none;
+}
+.recommend_container .shop_recommend.no{
+    display: block;
+}
+.recommend_container.is_recommend .shop_recommend.yes{
+    display: block;
+}
+.recommend_container.is_recommend .shop_recommend.no{
+    display: none;
+}
+
+.recommend_container .shop_management {
+    background: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+.recommend_container .shop_management_btn{
+    color: #FF4A7D!important;
+    border: none;
+    padding: 0px 20px;
+    line-height: 20px;
+    border-radius: 3px;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.spread_bg{
+    background: #fff;
+}
+
+.spread_bg .title{
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+}
+
+.spread_bg .title span{
+    font-weight: bold;
+}
+
+.spread_pic_con{
+    padding:0 10px 15px ;
+    font-size: 12px;
+}
+
+.spread_pic_con img{
+    width: 100%;
+    -webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow:0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.spread_text_con li{
+    font-size: 12px;
+    padding: 10px;
+    border-top: 1px solid #f1f1f1;
+}
+body.in_app .top0{
+    display:none;
+}

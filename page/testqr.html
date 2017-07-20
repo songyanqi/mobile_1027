@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .hide{color:red;}
+        .hide_gray{color:gray;}
+    </style>
+    <script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+    <script>
+        $(document).ready(function(){
+            $("p.hide").click(function(){
+                if($(this).hasClass("hide_gray")){
+                    $(this).css({"color":"red","font-size":"12px"});
+                    $(this).removeClass("hide_gray")
+                }else{
+                    $(this).addClass("hide_gray");
+                    $(this).css({"color":"#000","font-size":"18px"})
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+<p class="hide">如果您点击我，我会消失。</p >
+<p>点击我，我会消失。</p >
+<p>也要点击我哦。</p >
+</body>
+</html>

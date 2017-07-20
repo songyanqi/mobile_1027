@@ -1,0 +1,124 @@
+{
+  "code":"0",
+  "shop_url":"https://15201663952.davdian.com",
+  "visitor_status":"3",
+  "sess_key":"48a275a991a0a6295706e6d9f8c3a784b62a4bbc",
+  "data_version":"xxxxxx",
+  "data": {
+    "more":"0",
+    "nextPageIndex": "10",
+    "type":[
+      {
+        "id":1,
+        "cat_name":"新书速递",
+        "cat_img":"http://pic.davdian.com/activity/2016/12/28/138_138_523b28ee170a8311ad9533e71cb60dc1.png"
+      },
+      {
+        "id":2,
+        "cat_name":"百货上新",
+        "cat_img":"http://pic.davdian.com/activity/2016/12/28/138_138_523b28ee170a8311ad9533e71cb60dc1.png"
+      }
+    ],
+    "referer":{
+      "rp":"best",
+      "rl":"sell"
+    },
+    "dataList":[
+      {
+        "act_type":0,
+        "goods_id":"307148",
+        "goods_img":"http://pic.davdian.com/supplier/2016/12/23/800_800_6900a1408a760046208b3d0d7b6a253c.jpg@!1e_1c_0o_0l_320h_320w.webp",
+        "goods_label":"满立减",
+        "goods_name":"大手下手玩游戏（精装，可爱的手指歌谣。大手下手玩游戏（精装，可爱的手指歌谣。",
+        "goods_number":4,
+        "market_price":"12.00",
+        "pic_info":"x倍佣金",
+        "ratio":2,
+        "recommend_word":"推荐语",
+        "sale_status":"售罄",
+        "shop_price":"13.00",
+        "suggest_price":"12.10",
+        "tag":"tag tag3"
+      },
+      {
+        "act_type":0,
+        "goods_id":"307148",
+        "goods_img":"http://pic.davdian.com/supplier/2016/12/23/800_800_6900a1408a760046208b3d0d7b6a253c.jpg@!1e_1c_0o_0l_320h_320w.webp",
+        "goods_label":"满立减",
+        "goods_name":"大手下手玩游戏（精装，可爱的手指歌谣。大手下手玩游戏（精装，可爱的手指歌谣。",
+        "goods_number":4,
+        "market_price":"12.00",
+        "pic_info":"x倍佣金",
+        "ratio":2,
+        "recommend_word":"推荐语",
+        "sale_status":"售罄",
+        "shop_price":"13.00",
+        "suggest_price":"12.10",
+        "tag":"tag tag3"
+      },{
+        "act_type":0,
+        "goods_id":"307148",
+        "goods_img":"http://pic.davdian.com/supplier/2016/12/23/800_800_6900a1408a760046208b3d0d7b6a253c.jpg@!1e_1c_0o_0l_320h_320w.webp",
+        "goods_label":"满立减",
+        "goods_name":"大手下手玩游戏（精装，可爱的手指歌谣。大手下手玩游戏（精装，可爱的手指歌谣。",
+        "goods_number":4,
+        "market_price":"12.00",
+        "pic_info":"x倍佣金",
+        "ratio":2,
+        "recommend_word":"推荐语",
+        "sale_status":"售罄",
+        "shop_price":"13.00",
+        "suggest_price":"12.10",
+        "tag":"tag tag3"
+      },
+      {
+        "act_type":0,
+        "goods_id":"307148",
+        "goods_img":"http://pic.davdian.com/supplier/2016/12/23/800_800_6900a1408a760046208b3d0d7b6a253c.jpg@!1e_1c_0o_0l_320h_320w.webp",
+        "goods_label":"满立减",
+        "goods_name":"大手下手玩游戏（精装，可爱的手指歌谣。大手下手玩游戏（精装，可爱的手指歌谣。",
+        "goods_number":4,
+        "market_price":"12.00",
+        "pic_info":"x倍佣金",
+        "ratio":2,
+        "recommend_word":"推荐语",
+        "sale_status":"售罄",
+        "shop_price":"13.00",
+        "suggest_price":"12.10",
+        "tag":"tag tag3"
+      },
+      {
+        "act_type":0,
+        "goods_id":"307148",
+        "goods_img":"http://pic.davdian.com/supplier/2016/12/23/800_800_6900a1408a760046208b3d0d7b6a253c.jpg@!1e_1c_0o_0l_320h_320w.webp",
+        "goods_label":"满立减",
+        "goods_name":"大手下手玩游戏（精装，可爱的手指歌谣。大手下手玩游戏（精装，可爱的手指歌谣。",
+        "goods_number":4,
+        "market_price":"12.00",
+        "pic_info":"x倍佣金",
+        "ratio":2,
+        "recommend_word":"推荐语",
+        "sale_status":"售罄",
+        "shop_price":"13.00",
+        "suggest_price":"12.10",
+        "tag":"tag tag3"
+      },{
+        "act_type":0,
+        "goods_id":"307148",
+        "goods_img":"http://pic.davdian.com/supplier/2016/12/23/800_800_6900a1408a760046208b3d0d7b6a253c.jpg@!1e_1c_0o_0l_320h_320w.webp",
+        "goods_label":"满立减",
+        "goods_name":"大手下手玩游戏（精装，可爱的手指歌谣。大手下手玩游戏（精装，可爱的手指歌谣。",
+        "goods_number":4,
+        "market_price":"12.00",
+        "pic_info":"x倍佣金",
+        "ratio":2,
+        "recommend_word":"推荐语",
+        "sale_status":"售罄",
+        "shop_price":"13.00",
+        "suggest_price":"12.10",
+        "tag":"tag tag3"
+      }
+
+    ]
+  }
+}

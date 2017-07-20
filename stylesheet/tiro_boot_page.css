@@ -1,0 +1,130 @@
+body,div,dl,dt,dd,ul,ol,li,i,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,header,nav,section,article,footer,aside{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    list-style-type:none;
+}
+body{
+    color: #fff;
+    background: url(//pic.davdian.com/free/boot_page_bg_201598_2x.png) no-repeat center #cd4170;
+    margin: 0 auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 640px;
+    background-size: 100%;
+    background-position-y: 0;
+    overflow: hidden;
+}
+
+input ,textarea{
+    -webkit-appearance:none;
+    outline:none;
+    border: solid 1px #ddd;
+    border-radius: 0px;
+    margin: 0;
+    box-shadow: none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+input:focus,textarea:focus{
+    outline: none;
+}
+
+img{
+    max-width: 100%;
+    vertical-align: middle;
+}
+img.special{
+    margin-top: -12px;
+    width: 200px;
+}
+
+a,a:focus,a:hover,a:active,a:visited{
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+div, span{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+}
+
+.center{
+    text-align: center;
+
+}
+
+.hide{
+    display: none !important;
+}
+
+
+.clearfix {
+    *zoom: 1;
+}
+
+.pull-left{
+    float: left;
+}
+.pull-right{
+    float: right;
+}
+
+.underline{
+    text-decoration: underline;
+}
+.fz_13{font-size: 13px;}
+.fz_14{font-size: 14px;}
+.fz_16{font-size: 16px;}
+.fz_20{font-size: 20px;}
+
+.dav_btn{width: 190px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    border-radius:2px;
+    border: 1px solid;
+    margin: 0px auto;
+    font-size: 16px;
+}
+.mt_84{ margin-top: 84px;}
+.mt_22{ margin-top: 22px;}
+.mt_8{margin-top: 8px;}
+.mt_40{margin-top: 40px;}
+.fw_bold{ font-weight: bold;}
+.tiro_boot_page_top{width: 80px; margin: 44px auto 37px;}
+.tiro_boot_page_top img{
+    width: 80px;
+    height: 80px;
+}
+.pl_5{ padding-left: 5px;}
+.tiro_boot_page_pic{width: 241px; margin:12px auto 0px; position: relative;text-align: center;}
+.hand{
+    background: url(//pic.davdian.com/free/boot_page_hand_201598_2x.png) no-repeat;
+    background-size: 37px 42px;
+    width: 37px;
+    height: 42px;
+    display: block;
+    position: absolute;}
+.hand1_position{right: 23px;bottom: -30px;}
+.hand2_position{left: 50px;bottom: -30px;}
+.hand3_position {left: 12px;bottom: -10px;}
+
+@-webkit-keyframes button-animate {
+    0% {    -webkit-transform: scale(1);}
+    50% {    -webkit-transform: scale(0.9);}
+    100% {    -webkit-transform: scale(1);}
+}
+
+@keyframes button-animate {
+    0% {    transform: scale(1);}
+    50% {    transform: scale(0.9);}
+    100% {    transform: scale(1);}
+}
+.dav_btn.btn_shadow{
+    -webkit-animation: button-animate 1s 0.5s linear infinite;
+    animation: button-animate 1s 0.5s linear infinite;
+}
+

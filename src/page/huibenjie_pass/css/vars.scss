@@ -1,0 +1,151 @@
+@import "../../../common/css/common.scss";
+
+// 关卡位置
+$passArray: (
+  // 关卡1
+  left: ptr(544),
+  top: ptr(6265)
+) (
+  // 关卡2
+  left: ptr(208),
+  top: ptr(5945)
+) (
+  // 关卡3
+  left: ptr(543),
+  top: ptr(5696)
+) (
+  // 关卡4
+  left: ptr(130),
+  top: ptr(5296)
+) (
+  // 关卡5
+  left: ptr(558),
+  top: ptr(4845)
+) (
+  // 关卡6
+  left: ptr(190),
+  top: ptr(4524)
+) (
+  // 关卡7
+  left: ptr(526),
+  top: ptr(4133)
+) (
+  // 关卡8
+  left: ptr(165),
+  top: ptr(3686)
+) (
+  // 关卡9
+  left: ptr(532),
+  top: ptr(3355)
+) (
+  // 关卡10
+  left: ptr(157),
+  top: ptr(2994)
+) (
+  // 关卡11
+  left: ptr(431),
+  top: ptr(2574)
+) (
+  // 关卡12
+  left: ptr(157),
+  top: ptr(2331)
+) (
+  // 关卡13
+  left: ptr(484),
+  top: ptr(2004)
+) (
+  // 关卡14
+  left: ptr(191),
+  top: ptr(1708)
+) (
+  // 关卡15
+  left: ptr(526),
+  top: ptr(1352)
+) (
+  // 关卡16
+  left: ptr(170),
+  top: ptr(1021)
+) (
+  // 关卡17
+  left: ptr(536),
+  top: ptr(661)
+) (
+  // 关卡18
+  left: ptr(186),
+  top: ptr(359)
+);
+
+// 云彩
+$cloudArray: (
+  // 云彩1
+  top: 0,
+  height: 0
+) (
+  // 云彩2
+  top: ptr(5801),
+  height: ptr(342)
+) (
+  // 云彩3
+  top: ptr(5580),
+  height: ptr(318)
+) (
+  // 云彩4
+  top: ptr(5098),
+  height: ptr(398)
+) (
+  // 云彩5
+  top: ptr(4700),
+  height: ptr(342)
+) (
+  // 云彩6
+  top: ptr(4362),
+  height: ptr(351)
+) (
+  // 云彩7
+  top: ptr(4051),
+  height: ptr(316)
+) (
+  // 云彩8
+  top: ptr(3554),
+  height: ptr(406)
+) (
+  // 云彩9
+  top: ptr(3208),
+  height: ptr(345)
+) (
+  // 云彩10
+  top: ptr(2844),
+  height: ptr(348)
+) (
+  // 云彩11
+  top: ptr(2474),
+  height: ptr(360)
+) (
+  // 云彩12
+  top: ptr(2135),
+  height: ptr(402)
+) (
+  // 云彩13
+  top: ptr(1865),
+  height: ptr(344)
+) (
+  // 云彩14
+  top: ptr(1557),
+  height: ptr(346)
+) (
+  // 云彩15
+  top: ptr(1188),
+  height: ptr(358)
+) (
+  // 云彩16
+  top: ptr(845),
+  height: ptr(400)
+) (
+  // 云彩17
+  top: ptr(578),
+  height: ptr(342)
+) (
+  // 云彩18
+  top: ptr(222),
+  height: ptr(344)
+);

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html style="font-size: 85px;">
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/draw_plate.css" rel="stylesheet">
+    <title>开大V店，游哈佛赢大奖</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 1,   // 头部首页按钮
+            shareOnHead: 1
+        };
+        var imgUrl = '//pic.davdian.com/free/2017/kaidianchoujiang20170221/kaidianchoujiang.png';  //分享图片
+        var lineLink = window.location.href; // 分享网址
+        var descContent = '首发活动开始啦！一套专为不好好吃饭的孩子和焦头烂额的妈妈准备的美食绘本！大V店特供版，随书赠送北极虾兑换券一张！兑换劵只限上海、北京地区使用。'; // 分享文案
+        var shareTitle = '【大V店首发】香喷喷食欲绘本系列，全5本。';  //分享标题
+        var choujiang = "../data/c.json"
+    </script>
+</head>
+<body>
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            开大V店，游哈佛赢大奖
+        </div>
+        <div class="top_right">
+            <a href="/" class="top_home" data-dav-tj="detail|home|home|1|home@detail">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<!--抽奖盘-->
+<div class="draw_plate_mainbox">
+    <!--主题背景部分-->
+    <img src="//pic.davdian.com/free/2017/kaidianchoujiang20170221/main_top.png" alt="">
+    <div class="draw_plate">
+        <img src="//pic.davdian.com/free/2017/kaidianchoujiang20170221/run_lamp.gif">
+        <div class="plate_note">
+            <div class="note_flex">
+                <div>
+                    <div class="reword_note reword_note1">
+                        <img src="//pic.davdian.com/free/2017/kaidianchoujiang20170221/p_second.png"
+                             alt="">
+                        <p>牛听听</p>
+                    </div>
+                </div>
+                <div style="margin: 0 1.25%;">
+                    <div class="reword_note reword_note2">
+                        <img src="//pic.davdian.com/free/2017/kaidianchoujiang20170221/p_first.png"
+                             alt="">
+                        <p>游哈佛</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="reword_note reword_note3">
+                        <img src="//pic.davdian.com/free/2017/kaidianchoujiang20170221/none.png"
+                             alt="">
+                        <p>未中奖</p>
+                    </div>
+                </div>
+            </div>
+            <div class="note_flex" style="margin:1.25% 0;">
+                <div>
+                    <div class="reword_note note_red reword_note8">
+                        <img src="//pic.davdian.com/free/2017/kaidianchoujiang20170221/p_third.png"
+                             alt="">
+                        <p>50元红包</p>
+                    </div>
+                </div>
+                <div style="margin: 0 1.25%;">
+                    <div class="reword_note click_reword_btn">
+
+                    </div>
+                </div>
+                <div>
+                    <div class="reword_note note_red reword_note4">
+                        <img src="//pic.davdian.com/free/2017/kaidianchoujiang20170221/p_four.png"
+                             alt="">
+                        <p>包邮+红包卷</p>
+                    </div>
+                </div>
+            </div>
+            <div class="note_flex">
+                <div>
+                    <div class="reword_note reword_note7">
+                        <img src="//pic.davdian.com/free/2017/kaidianchoujiang20170221/p_second.png"
+                             alt="">
+                        <p>牛听听</p>
+                    </div>
+                </div>
+                <div style="margin: 0 1.25%;">
+                    <div class="reword_note reword_note6">
+                        <img src="//pic.davdian.com/free/2017/kaidianchoujiang20170221/none.png"
+                             alt="">
+                        <p>未中奖</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="reword_note note_red reword_note5">
+                        <img src="//pic.davdian.com/free/2017/kaidianchoujiang20170221/p_third.png"
+                             alt="">
+                        <p>50元红包</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="remaining_number">
+            <div class="remaining_number_top">
+                <div></div>
+            </div>
+            <!--剩余次数-->
+            <!--<div class="remaining_number_bottom">-->
+            <!--还有2次抽奖机会-->
+            <!--</div>-->
+            <div class="remaining_number_bottom" style="width: 85%;">
+                <a href="">还有0次抽奖机会,邀请开店再抽奖 >></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="draw_plate_bottom">
+    <a href="开店抽奖-奖品列表页.html">查看我的奖品 >></a>
+    <div class="user_list_reword">
+        <div class="list_reword_title">
+            获奖用户
+        </div>
+        <div class="fund_user_list swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-no-swiping">
+                    <div class="pull-left">
+                        <span class="head">
+                            <img src="http://pic.davdian.com/user/2016/07/27/80_80_2c22cc2e7fc06b58a93f513df969581a.png">
+                        </span>
+                        <span>186****8765</span>
+                    </div>
+                    <div class="pull-right">
+                        莲子大V店,开个大V店，生个大V宝宝，哈哈哈
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-no-swiping">
+                    <div class="pull-left">
+                        <span class="head"><img
+                                src="http://pic.davdian.com/user/2016/07/27/80_80_2c22cc2e7fc06b58a93f513df969581a.png"></span><span>186****8765</span>
+                    </div>
+                    <div class="pull-right">
+                        莲子大V店,开个大V店，生个大V宝宝，哈哈哈
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-no-swiping">
+                    <div class="pull-left">
+                        <span class="head"><img
+                                src="http://pic.davdian.com/user/2016/07/27/80_80_2c22cc2e7fc06b58a93f513df969581a.png"></span><span>186****8765</span>
+                    </div>
+                    <div class="pull-right">
+                        莲子大V店13
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-no-swiping">
+                    <div class="pull-left">
+                        <span class="head"><img
+                                src="http://pic.davdian.com/user/2016/07/27/80_80_2c22cc2e7fc06b58a93f513df969581a.png"></span><span>186****8765</span>
+                    </div>
+                    <div class="pull-right">
+                        莲子大V店14
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-no-swiping">
+                    <div class="pull-left">
+                        <span class="head"><img
+                                src="http://pic.davdian.com/user/2016/07/27/80_80_2c22cc2e7fc06b58a93f513df969581a.png"></span><span>186****8765</span>
+                    </div>
+                    <div class="pull-right">
+                        莲子大V店15
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-no-swiping">
+                    <div class="pull-left">
+                        <span class="head"><img
+                                src="http://pic.davdian.com/user/2016/07/27/80_80_2c22cc2e7fc06b58a93f513df969581a.png"></span><span>186****8765</span>
+                    </div>
+                    <div class="pull-right">
+                        莲子大V店16
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-no-swiping">
+                    <div class="pull-left">
+                        <span class="head"><img
+                                src="http://pic.davdian.com/user/2016/07/27/80_80_2c22cc2e7fc06b58a93f513df969581a.png"></span><span>186****8765</span>
+                    </div>
+                    <div class="pull-right">
+                        莲子大V店17
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-no-swiping">
+                    <div class="pull-left">
+                        <span class="head"><img
+                                src="http://pic.davdian.com/user/2016/07/27/80_80_2c22cc2e7fc06b58a93f513df969581a.png"></span><span>186****8765</span>
+                    </div>
+                    <div class="pull-right">
+                        莲子大V店18
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-no-swiping">
+                    <div class="pull-left">
+                        <span class="head"><img
+                                src="http://pic.davdian.com/user/2016/07/27/80_80_2c22cc2e7fc06b58a93f513df969581a.png"></span><span>186****8765</span>
+                    </div>
+                    <div class="pull-right">
+                        莲子大V店19
+                    </div>
+                </div>
+                <div class="swiper-slide swiper-no-swiping">
+                    <div class="pull-left">
+                        <span class="head"><img
+                                src="http://pic.davdian.com/user/2016/07/27/80_80_2c22cc2e7fc06b58a93f513df969581a.png"></span><span>186****8765</span>
+                    </div>
+                    <div class="pull-right">
+                        莲子大V店20
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="user_list_reword" style="margin-top: 61px;">
+        <div class="list_reword_title">
+            活动规则
+        </div>
+        <div>
+            <p>1. 2月1日-2月8日，新开店用户与邀请人均可获得一次抽奖机会；每邀请一个开店，获得抽奖机会一次。</p>
+            <p>2.
+                兑奖通知会在3月8日发布到大V店APP“素材”，届时会告知兑奖方式。获得哈佛游和牛听听的用户，会在3月8日开始，由工作人员主动联系您办理兑奖；购物红包奖会直接发到参与抽奖的手机号名下，请及时关注兑奖通知。</p>
+            <p>3. 如店铺关闭（退店）邀请者和开店者的兑奖资格都会自动作废，抽（兑）奖权益仅限本人使用，不可转让，兑奖前会对所有参与行为进行排查，如有违规操作，将取消所有权益。</p>
+            <p>4. 活动最终解释权归大V店所有。</p>
+        </div>
+    </div>
+</div>
+
+<!--弹框遮照mass-->
+<div class="mask hide">
+    <div class="con hide">
+        <img src="//pic.davdian.com/free/2017/kaidianchoujiang20170221/draw_plate_alert.png"
+             alt="">
+        <div class="winning_btn">
+            <a class="f_l confirm_btn" href="javascript:void(0)"></a>
+            <a class="f_r" href="javascript:void(0)"></a>
+        </div>
+        <div class="get_gift"></div>
+        <div class="get_gift_close confirm_btn"></div>
+    </div>
+    <div class="con hide">
+        <img src="//pic.davdian.com/free/2017/kaidianchoujiang20170221/un_winning.png" alt="">
+        <div class="winning_btn">
+            <div class="f_l confirm_btn"></div>
+            <a class="f_r" href="javascript:void(0)"></a>
+        </div>
+        <div class="get_gift_close confirm_btn"></div>
+    </div>
+</div>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script src="http://cdn.davdian.com/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script src="../javascript/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/model.js"></script>
+<script src="../javascript/draw_plate.js"></script>
+</body>
+</html>

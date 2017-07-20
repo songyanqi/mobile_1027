@@ -1,0 +1,364 @@
+ <!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/tuan.css" rel="stylesheet">
+    <title>团购</title>
+
+    <script type="text/javascript">
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:1,   // 头部首页按钮
+            shareOnHead:1
+        };
+
+     // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+    
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+    </script>
+</head>
+<body>
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            限时团购
+        </div>
+        <div class="top_right">
+            <a href="/" class="top_home" data-dav-tj="tuan|home|home|1|home@tuan">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<div class="tuan_switcher">
+    <a class="tuan_today active" href="">
+        <div class="tuan_switcher_inner">
+            全部
+        </div>
+    </a>
+    <a class="tuan_today" href="">
+        <div class="tuan_switcher_inner">
+            图书
+        </div>
+    </a>
+    <a class="tuan_today" href="">
+        <div class="tuan_switcher_inner">
+            婴童
+        </div>
+    </a>
+    <a class="tuan_today" href="">
+        <div class="tuan_switcher_inner">
+            妈妈
+        </div>
+    </a>
+</div>
+
+<div class="tuan_list">
+    <a href="/119257.html?_refer=group" data-remain-second="103333" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/goods/2016/08/17/750_328_2b7843c869764ed737b8a864f90588b7.png@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">红袋鼠婴幼儿百科（套共装20册，中英双语，扫码听音频，您还在担心孩子输在英语阅读的起跑线上吗？ 您还在害怕自己蹩脚的英语发音坑害孩子吗？ 打开《红袋鼠婴幼儿百科》，一切都会有所不同！2~6岁适读）</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥65.00</span>
+                    <span class="market_price">¥100.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/76414.html?_refer=group" data-remain-second="302904" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/activity/2016/08/15/750_328_b4bb5505f25728d1ee154d276fb67719.jpg@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">米宝兔磁力片 107片交通工程套装系列</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥259.00</span>
+                    <span class="market_price">¥599.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/128476.html?_refer=group" data-remain-second="130104" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/activity/2016/08/16/750_328_4f32662c0cb769cda5967828b5413cac.jpg@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">威露士 家居衣物多用途消毒液1L*3+消毒液60ml*3+新加坡版消毒液330ml+环保袋</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥89.90</span>
+                    <span class="market_price">¥129.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/119285.html?_refer=group" data-remain-second="130104" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/goods/2016/08/17/750_328_f91c8805b408c03e545e517d7d7d5a77.png@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">百变马丁数学变变变·加减法（套装共2册，马丁拼图和数学计算的完美结合，让做题像是看动画做游戏，轻松掌握数学加减法。5~7岁适读）</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥35.00</span>
+                    <span class="market_price">¥50.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/128514.html?_refer=group" data-remain-second="130105" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/goods/2016/08/15/750_328_d7ec8f043d9bf0268956589ed58c1065.png@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">日本NATRUL MAGIC 私护神器 典雅版 1支/盒</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥229.00</span>
+                    <span class="market_price">¥298.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/128517.html?_refer=group" data-remain-second="130105" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/goods/2016/08/15/750_328_3c654f7dfe4fe932fc17c9bad3fa0929.png@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">日本NATRUL MAGIC 私护神器 活力版 1支/盒</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥145.00</span>
+                    <span class="market_price">¥198.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/128524.html?_refer=group" data-remain-second="1166905" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/activity/2016/08/16/750_328_6a413148bd99d94e51cd86e7ab5b7a6c.jpg@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">美食组合量贩装（四川特产小吃零食美食肥肠粉240g*1袋蜀道香鱼豆腐255g*1袋老川东灯影牛肉丝108g*1袋阿宽红）</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥45.80</span>
+                    <span class="market_price">¥60.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/128536.html?_refer=group" data-remain-second="302904" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/activity/2016/08/15/750_328_8da98854aa5bb894984cbfccdbf0745d.png@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">小白熊暖奶器多功能温奶器恒温暖奶器消毒奶瓶保温热奶器HL-0607</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥69.00</span>
+                    <span class="market_price">¥109.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/128537.html?_refer=group" data-remain-second="302904" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/activity/2016/08/15/750_328_71346dc88f9b31b47ce7e726856619dd.png@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">小白熊婴儿洗衣皂原装进口新生儿洗衣皂尿布皂宝宝专用肥皂200g*6</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥55.00</span>
+                    <span class="market_price">¥83.40</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/128788.html?_refer=group" data-remain-second="216505" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/goods/2016/08/16/750_328_459b16ac3023657f91d6f768581e062d.jpg@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">【英国直邮】Boots天然小黄瓜洁面卸妆乳 150ml*4瓶</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥189.00</span>
+                    <span class="market_price">¥300.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/128789.html?_refer=group" data-remain-second="216504" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/goods/2016/08/16/750_328_571dd89ca60c5d06159c10431a0e9fbc.jpg@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">【英国直邮】Boots天然小黄瓜面霜 100ml*4盒</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥185.00</span>
+                    <span class="market_price">¥268.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/128794.html?_refer=group" data-remain-second="216504" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/activity/2016/08/16/640_280_c6f0eb8f7be887d39ae1c7ecaf0a64e7.jpg@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">极星/ARCTOS 情侣款深林皮肤风衣 AGJB11158</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥179.00</span>
+                    <span class="market_price">¥398.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/129048.html?_refer=group" data-remain-second="216504" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/goods/2016/08/16/750_328_e3ac76c740b46a4c1788a6fec1b23a91.jpg@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">【英国直邮】Boots天然小黄瓜三分钟面膜 50ml*4支</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥188.00</span>
+                    <span class="market_price">¥268.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/129050.html?_refer=group" data-remain-second="216504" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/goods/2016/08/16/750_328_138f4dfdf00b220f21592d1b891a8c8e.jpg@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">【英国直邮】Boots天然小黄瓜系列秋季补水保湿套装 4件</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥185.00</span>
+                    <span class="market_price">¥268.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/129086.html?_refer=group" data-remain-second="216504" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/goods/2016/08/16/750_328_f80c81cd7097236c742137005566650c.jpg@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">Unicharm尤妮佳1/2超省水化妆棉卸妆棉66枚*2盒</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥52.00</span>
+                    <span class="market_price">¥72.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/129088.html?_refer=group" data-remain-second="130104" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/goods/2016/08/16/750_328_721e759ce4edf56d5533aae1ff94aa1a.jpg@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">Unicharm尤妮佳1/2超省水化妆棉卸妆棉82枚*2盒</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥52.00</span>
+                    <span class="market_price">¥72.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    <a href="/129554.html?_refer=group" data-remain-second="302905" data-dav-tj="goods_group|good|good|1|good@goods_group">
+        <div class="tuan_img_container">
+            <img data-original="http://pic.davdian.com/activity/2016/08/16/750_328_814c08f9b077f660cfc1c0039e255d1f.png@.webp" src="http://pic.davdian.com/free/loading_tuan_640_280.png">
+        </div>
+        <div class="tuan_info_container" base-on-rem>
+            <div class="time">-</div>
+            <div class="tuan_item_icon"></div>
+            <div class="tuan-other-info">
+                <div class="tuan_item_title">伟易达 vtech	小河马睡眠仪声控安抚玩具炫彩投影 蓝色 7*30*7cm</div>
+                <div class="tuan_item_price">
+                    <span class="current_price">¥199.00</span>
+                    <span class="market_price">¥499.00</span>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script type="text/javascript" src="../cdn/wechat/jssdk/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+
+</body>
+</html>

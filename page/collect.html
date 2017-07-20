@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <title>我的收藏</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 1,   // 头部首页按钮
+            shareOnHead: 1
+        };
+
+        var down2refreshUrl = "../data/collect_list.json"; // 下拉刷新url
+        var collectUrl = "../data/collect.json"; //异步删除收藏url
+
+        var pageIndexStart = 2;
+        var pagesize = 10;
+    </script>
+</head>
+<body class="collect_container scroll_flag">
+<!-- 头部  -->
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            我的收藏
+        </div>
+    </div>
+</div>
+
+<!-- 排序 -->
+<div class="good_list_2_row hot">
+    <div class="good_item" data-for-id="123">
+        <a href="//nemo.davdian.com/327.html">
+            <div class="good_img_container">
+                <img data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                     src="//pic.davdian.com/free/loading_320_320_v2.png">
+                <!-- 商品售罄的显示-->
+                <div class="good_list_sell_out">售罄</div>
+                <div class="tag tag4"></div>
+            </div>
+        </a>
+        <div class="good_con">
+            <a href="//nemo.davdian.com/327.html">
+                <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            </a>
+            <div class="fz_12">
+                <a href="//nemo.davdian.com/327.html"><span class="dav-color-price">¥ 116.00</span></a>
+                <span class="pull-right delete_btn">删除</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="good_item" data-for-id="124">
+        <a href="//nemo.davdian.com/327.html">
+            <div class="good_img_container">
+                <img data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                     src="//pic.davdian.com/free/loading_320_320_v2.png">
+                <!-- 商品售罄的显示-->
+                <div class="good_list_sell_out">售罄</div>
+                <div class="tag"></div>
+            </div>
+        </a>
+        <div class="good_con">
+            <a href="//nemo.davdian.com/327.html">
+                <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            </a>
+            <div class="fz_12">
+                <a href="//nemo.davdian.com/327.html"><span class="dav-color-price">¥ 116.00</span></a>
+                <span class="pull-right delete_btn">删除</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="good_item" data-for-id="125">
+        <a href="//nemo.davdian.com/327.html">
+            <div class="good_img_container">
+                <img data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                     src="//pic.davdian.com/free/loading_320_320_v2.png">
+                <!-- 商品售罄的显示-->
+                <div class="good_list_sell_out">售罄</div>
+                <div class="tag"></div>
+            </div>
+        </a>
+        <div class="good_con">
+            <a href="//nemo.davdian.com/327.html">
+                <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            </a>
+            <div class="fz_12">
+                <a href="//nemo.davdian.com/327.html"><span class="dav-color-price">¥ 116.00</span></a>
+                <span class="pull-right delete_btn">删除</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="good_item" data-for-id="126">
+        <a href="//nemo.davdian.com/327.html">
+            <div class="good_img_container">
+                <img data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                     src="//pic.davdian.com/free/loading_320_320_v2.png">
+                <!-- 商品售罄的显示-->
+                <div class="good_list_sell_out">售罄</div>
+                <div class="tag"></div>
+            </div>
+        </a>
+        <div class="good_con">
+            <a href="//nemo.davdian.com/327.html">
+                <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            </a>
+            <div class="fz_12">
+                <a href="//nemo.davdian.com/327.html"><span class="dav-color-price">¥ 116.00</span></a>
+                <span class="pull-right delete_btn">删除</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="good_item" data-for-id="126">
+        <a href="//nemo.davdian.com/327.html">
+            <div class="good_img_container">
+                <img data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                     src="//pic.davdian.com/free/loading_320_320_v2.png">
+                <!-- 商品售罄的显示-->
+                <div class="good_list_sell_out">售罄</div>
+                <div class="tag"></div>
+            </div>
+        </a>
+        <div class="good_con">
+            <a href="//nemo.davdian.com/327.html">
+                <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            </a>
+            <div class="fz_12">
+                <a href="//nemo.davdian.com/327.html"><span class="dav-color-price">¥ 116.00</span></a>
+                <span class="pull-right delete_btn">删除</span>
+            </div>
+        </div>
+    </div>
+    <div class="good_item" data-for-id="126">
+        <a href="//nemo.davdian.com/327.html">
+            <div class="good_img_container">
+                <img data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                     src="//pic.davdian.com/free/loading_320_320_v2.png">
+                <!-- 商品售罄的显示-->
+                <div class="good_list_sell_out">售罄</div>
+                <div class="tag"></div>
+            </div>
+        </a>
+        <div class="good_con">
+            <a href="//nemo.davdian.com/327.html">
+                <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            </a>
+            <div class="fz_12">
+                <a href="//nemo.davdian.com/327.html"><span class="dav-color-price">¥ 116.00</span></a>
+                <span class="pull-right delete_btn">删除</span>
+            </div>
+        </div>
+    </div>
+    <div class="good_item" data-for-id="126">
+        <a href="//nemo.davdian.com/327.html">
+            <div class="good_img_container">
+                <img data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                     src="//pic.davdian.com/free/loading_320_320_v2.png">
+                <!-- 商品售罄的显示-->
+                <div class="good_list_sell_out">售罄</div>
+                <div class="tag"></div>
+            </div>
+        </a>
+        <div class="good_con">
+            <a href="//nemo.davdian.com/327.html">
+                <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            </a>
+            <div class="fz_12">
+                <a href="//nemo.davdian.com/327.html"><span class="dav-color-price">¥ 116.00</span></a>
+                <span class="pull-right delete_btn">删除</span>
+            </div>
+        </div>
+    </div>
+    <div class="good_item" data-for-id="126">
+        <a href="//nemo.davdian.com/327.html">
+            <div class="good_img_container">
+                <img data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                     src="//pic.davdian.com/free/loading_320_320_v2.png">
+                <!-- 商品售罄的显示-->
+                <div class="good_list_sell_out">售罄</div>
+                <div class="tag"></div>
+            </div>
+        </a>
+        <div class="good_con">
+            <a href="//nemo.davdian.com/327.html">
+                <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            </a>
+            <div class="fz_12">
+                <a href="//nemo.davdian.com/327.html"><span class="dav-color-price">¥ 116.00</span></a>
+                <span class="pull-right delete_btn">删除</span>
+            </div>
+        </div>
+    </div>
+    <div class="good_item" data-for-id="126">
+        <a href="//nemo.davdian.com/327.html">
+            <div class="good_img_container">
+                <img data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                     src="//pic.davdian.com/free/loading_320_320_v2.png">
+                <!-- 商品售罄的显示-->
+                <div class="good_list_sell_out">售罄</div>
+                <div class="tag"></div>
+            </div>
+        </a>
+        <div class="good_con">
+            <a href="//nemo.davdian.com/327.html">
+                <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            </a>
+            <div class="fz_12">
+                <a href="//nemo.davdian.com/327.html"><span class="dav-color-price">¥ 116.00</span></a>
+                <span class="pull-right delete_btn">删除</span>
+            </div>
+        </div>
+    </div>
+    <div class="good_item" data-for-id="126">
+        <a href="//nemo.davdian.com/327.html">
+            <div class="good_img_container">
+                <img data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                     src="//pic.davdian.com/free/loading_320_320_v2.png">
+                <!-- 商品售罄的显示-->
+                <div class="good_list_sell_out">售罄</div>
+                <div class="tag"></div>
+            </div>
+        </a>
+        <div class="good_con">
+            <a href="//nemo.davdian.com/327.html">
+                <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            </a>
+            <div class="fz_12">
+                <a href="//nemo.davdian.com/327.html"><span class="dav-color-price">¥ 116.00</span></a>
+                <span class="pull-right delete_btn">删除</span>
+            </div>
+        </div>
+    </div>
+    <div class="good_item" data-for-id="126">
+        <a href="//nemo.davdian.com/327.html">
+            <div class="good_img_container">
+                <img data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                     src="//pic.davdian.com/free/loading_320_320_v2.png">
+                <!-- 商品售罄的显示-->
+                <div class="good_list_sell_out">售罄</div>
+                <div class="tag"></div>
+            </div>
+        </a>
+        <div class="good_con">
+            <a href="//nemo.davdian.com/327.html">
+                <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            </a>
+            <div class="fz_12">
+                <a href="//nemo.davdian.com/327.html"><span class="dav-color-price">¥ 116.00</span></a>
+                <span class="pull-right delete_btn">删除</span>
+            </div>
+        </div>
+    </div>
+    <div class="good_item" data-for-id="126">
+        <a href="//nemo.davdian.com/327.html">
+            <div class="good_img_container">
+                <img data-original="//pic.davdian.com/free/good_pic_demo_800_800.jpg"
+                     src="//pic.davdian.com/free/loading_320_320_v2.png">
+                <!-- 商品售罄的显示-->
+                <div class="good_list_sell_out">售罄</div>
+                <div class="tag"></div>
+            </div>
+        </a>
+        <div class="good_con">
+            <a href="//nemo.davdian.com/327.html">
+                <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+            </a>
+            <div class="fz_12">
+                <a href="//nemo.davdian.com/327.html"><span class="dav-color-price">¥ 116.00</span></a>
+                <span class="pull-right delete_btn">删除</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="refresh">
+    <div class="uil-default-css-normal"
+         style="-webkit-transform:scale(0.15);-moz-transform:scale(0.15);-webkit-transform-origin: 0 0;-moz-transform-origin: 0 0;width:30px;height: 30px;display: inline-block;">
+        <div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;"></div>
+        <div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;"></div>
+        <div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;"></div>
+        <div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;"></div>
+        <div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;"></div>
+        <div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;"></div>
+        <div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;"></div>
+        <div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;"></div>
+        <div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;"></div>
+        <div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;"></div>
+        <div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;"></div>
+        <div style="top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;"></div>
+    </div>
+    <div>数据加载中...</div>
+</div>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/collect.js"></script>
+<script src="../cdn/jquery/jquery.lazyload.js"></script>
+</body>
+</html>

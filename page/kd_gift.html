@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>礼包收货地址</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/cartConfirm.css" rel="stylesheet">
+    <script>
+
+        var addressStaticDataUrl = "../data/addressList2.json";
+
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+
+    </script>
+</head>
+<body>
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            礼包收货地址
+        </div>
+    </div>
+</div>
+<form action="//nemo.davdian.com/address.html" method="post" name="theForm" id="consigneeForm">
+    <div class="add_address_container dav-shadow">
+        <div class="tj_con dav-red  dav-shadow">我们会确保您的信息安全，谨防泄露，请放心填写</div>
+        <ul class="custom-info">
+            <li class="list-group-item">
+                <label for="consignee">收货人:</label>
+
+                <div class="input_wrap">
+                    <input type="text" name="consignee" id="consignee" value="哈哈哈" placeholder="名字">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <label for="mobile">电话:</label>
+
+                <div class="input_wrap">
+                    <input type="tel" name="mobile" id="mobile" value="15910661506" placeholder="11位手机号">
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <label>所在地区:</label>
+
+                    <div class="input_wrap">
+                        <input type="hidden" value="1" name="country">
+                        <select name="province" id="selProvinces"
+                                data-url="jsonRegion.json" style="background-color: #eae9e9;">
+                            <option value="0" selected>请选择省</option>
+                                                            <option value="2" >北京</option>
+                                                            <option value="3" >安徽</option>
+                                                            <option value="4" >福建</option>
+                                                            <option value="5" >甘肃</option>
+                                                            <option value="6" >广东</option>
+                                                            <option value="7" >广西</option>
+                                                            <option value="8" >贵州</option>
+                                                            <option value="9" >海南</option>
+                                                            <option value="10" >河北</option>
+                                                            <option value="11" >河南</option>
+                                                            <option value="12" >黑龙江</option>
+                                                            <option value="13" >湖北</option>
+                                                            <option value="14" >湖南</option>
+                                                            <option value="15" >吉林</option>
+                                                            <option value="16" >江苏</option>
+                                                            <option value="17" >江西</option>
+                                                            <option value="18" >辽宁</option>
+                                                            <option value="19" >内蒙古</option>
+                                                            <option value="20" >宁夏</option>
+                                                            <option value="21" >青海</option>
+                                                            <option value="22" >山东</option>
+                                                            <option value="23" >山西</option>
+                                                            <option value="24" >陕西</option>
+                                                            <option value="25" >上海</option>
+                                                            <option value="26" >四川</option>
+                                                            <option value="27" >天津</option>
+                                                            <option value="28" >西藏</option>
+                                                            <option value="29" >新疆</option>
+                                                            <option value="30" >云南</option>
+                                                            <option value="31" >浙江</option>
+                                                            <option value="32" >重庆</option>
+                        </select>
+                        <select name="city" id="selCities"
+                                style="background-color: #eae9e9;">
+                            <option value="0">请选择市</option>
+                        </select>
+                        <select name="district" id="selDistricts" style="background-color: #eae9e9;">
+                            <option value="0">请选择区</option>
+                        </select>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <label for="address">详细地址:</label>
+
+                <div class="input_wrap">
+                    <textarea name="address" id="address" placeholder="街道门牌信息">门票</textarea>
+                </div>
+            </li>
+        </ul>
+        <div class="mt12 dav-red  dav-shadow gift_info">*开店成功!请输入收货地址,我们会将开店礼包即送给您.</div>
+    </div>
+      
+      <div class="dav-btn btn-red" style="margin: 20px;box-sizing: border-box;display: block;text-align: center;font-size: 16px;" onclick="submitConfirm()">
+          <div class='uil-default-css-normal' style='-webkit-transform:scale(0.1);-webkit-transform-origin: 0 0;-moz-transform-origin: 0 0;'><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;'></div></div>
+         <span class="text">领取礼品</span>
+      </div>
+
+    <a href="" class="wait_gift">稍后领取</a>
+
+
+</form>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="//fe.davdian.com/wap/17225/cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+      <script type="text/javascript" src="../javascript/jquery.form.min.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+
+      <script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+      <script type="text/javascript" src="../javascript/cartConfirm.js"></script>
+</body>
+</html>

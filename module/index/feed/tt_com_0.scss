@@ -1,0 +1,17 @@
+//.df_new_title_2 {
+//  height: 44px;
+//  overflow: hidden;
+//  -webkit-box-orient: vertical;
+//  -webkit-line-clamp: 1;
+//  display: -webkit-box;
+//  background-color: white;
+//}
+.new_span {
+  display: -webkit-box;
+  height: 44px;
+  overflow: hidden;
+  width: calc(100% - 80px);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+}

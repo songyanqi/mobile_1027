@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheet/order.css">
+    <link href="../stylesheet/swiper-3.3.1.min.css" rel="stylesheet">
+    <title>退货历史详情</title>
+    <script type="text/javascript">
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0
+        };
+        // 发货提醒接口地址
+        var txUrl = "";
+        var orderId = "ds"; // 订单id ，用于关闭订单 删除订单
+        var deleteOrderUrl = "../data/deleteOrder.json";
+        var closeOrderUrl = "../data/closeOrder.json";
+        var orderListUrl = "fd";
+        var cancelOrderUrl = "../data/testCancel.json";
+        var arriveUrl = '../data/success.json'; // 确认收货地址
+        var arriveJumpUrl = '//nemo.davdian.com';
+    </script>
+</head>
+<body class="orderDetail">
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            退货历史详情
+        </div>
+        <div class="top_right">
+            <a href="" class="top_home">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<!--驳回情况列表-->
+
+<div class="backcolor_F p10 fz_12">
+    <span>订单号：</span><span>17737701050</span><br>
+    <span>退货原因：</span><span>商品受了内伤需要返厂疗伤</span><br>
+    <span>退货金额：</span><span>100</span><br>
+    <span>退货备注：</span><span>商品受了内伤需要返厂疗伤！商品受了内伤需要返厂疗伤！商品受了内伤需要返厂疗伤！商品受了内伤需要返厂疗伤！</span><br>
+</div>
+
+    <div class="mb_10 clearfix backcolor_F historyImg add_comment_con mt1 pt10">
+        <ul>
+            <li class="img">
+                <img src="http://pic.davdian.com/shop_logo/2016/11/08/src__73bed7e590d07a523b0f98d591838764.jpg@160h_160w_1e_1c_2o"
+                     data-show-src="http://pic.davdian.com/shop_logo/2016/11/08/src__73bed7e590d07a523b0f98d591838764.jpg">
+            </li>
+            <li class="img">
+                <img src="http://pic.davdian.com/shop_logo/2016/11/08/src__45e07104401de6adabb96462a4189145.jpg@160h_160w_1e_1c_2o"
+                     data-show-src="http://pic.davdian.com/shop_logo/2016/11/08/src__45e07104401de6adabb96462a4189145.jpg">
+            </li>
+        </ul>
+    </div>
+
+<div class="backcolor_F mt_10 prlist">
+    <i class="icon wallets pull-left mr_8"></i><span>完成退款</span>
+    <span class="inblock pull-right dav-color9 dav-small">2016年9月9日 12:15</span>
+</div>
+<div class="backcolor_F mt_10 prlist">
+    <i class="icon return_goods pull-left mr_8"></i><span>请退回商品</span>
+    <span class="inblock pull-right dav-color9 dav-small">2016年9月9日 12:15</span>
+</div>
+<div class="backcolor_F mt_10 prlist">
+    <i class="icon waits pull-left mr_8"></i><span>等待处理</span>
+    <span class="inblock pull-right dav-color9 dav-small">2016年9月9日 12:15</span>
+</div>
+<div class="backcolor_F mt_10 prlist">
+    <i class="icon boxreloads pull-left mr_8"></i><span>等待退款</span>
+    <span class="inblock pull-right dav-color9 dav-small">2016年9月9日 12:15</span>
+</div>
+<div class="backcolor_F p10 fz_12 mt1">
+    <span>订单号：</span><span>17737701050</span><br>
+    <span>退货原因：</span><span>商品受了内伤需要返厂疗伤</span><br>
+</div>
+<div class="backcolor_F mt_10 prlist">
+    <i class="icon alertOffs pull-left mr_8"></i><span>被驳回</span>
+    <span class="inblock pull-right dav-color9 dav-small">2016年9月9日 12:15</span>
+</div>
+<div class="backcolor_F p10 fz_12 mt1">
+    <span>驳回原因：</span><span>今天天气挺好的</span>
+</div>
+
+<div class="history_bar">
+<div class="backcolor_F mt_10 prlist">
+    <i class="icon alertOffs pull-left mr_8"></i><span>被关闭 <i>详情</i></span>
+    <span class="inblock pull-right dav-color9 dav-small">2016年9月9日 12:15</span>
+</div>
+<div class="backcolor_F p10 fz_12 mt1">
+    <span>订单号：</span><span>17737701050</span><br>
+    <span>退货原因：</span><span>商品受了内伤需要返厂疗伤</span><br>
+    <span>驳回原因：</span><span>今天天气挺好的</span>
+</div>
+</div>
+
+
+<div class="publish_pic_view hide">
+    <div class="publish_pic_preview">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="http://pic.davdian.com/images/201503/goods_img/430_G_1427372720530.jpg">
+            </div>
+            <div class="swiper-slide"><img src="http://pic.davdian.com/images/201507/goods_img/1274_G_1435806602097.jpg"
+                                           alt=""></div>
+            <div class="swiper-slide"><img src="http://pic.davdian.com/images/201510/goods_img/3336_G_1444726917241.jpg"
+                                           alt=""></div>
+        </div>
+    </div>
+    <div class="publish_pic_preview_bottom">
+        <span class="back"><i class="back_arrow"></i>返回</span>
+        <span class="num">3/4</span>
+    </div>
+</div>
+
+<script src="//apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script src="../javascript/jquery.cookie.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/comment.js"></script>
+<script type="text/javascript" src="../javascript/order.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script src="../javascript/swiper-3.3.1.jquery.min.js"></script>
+</body>
+</html>

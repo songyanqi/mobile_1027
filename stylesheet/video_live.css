@@ -1,0 +1,1204 @@
+.video_live_con{
+    overflow: hidden;
+}
+#video_con{
+    overflow: hidden;
+    position: relative;
+    background: #000;
+    width: 100%;
+    max-width: 640px;
+}
+#my-video{
+    width: 100%;
+    max-width: 640px;
+}
+#video_con video{
+    display: block;
+    background: #000;
+}
+
+.video_live_top{
+    position: absolute;
+    z-index: 11;
+    top: 54px;
+    left: 10px;
+    width: 100%;
+    color: #fff;
+}
+
+.video_live_top .people{
+    max-width: 640px;
+    width: 100%;
+    height: 40px;
+}
+
+.video_live_top .people .left{
+    min-width: 100px;
+    background:rgba(0,0,0,0.5);
+    position: relative;
+    border:none;
+    float: left;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 40px;
+}
+.video_live_top .people .left .head{
+    padding-left: 9px;
+    padding-top: 4px;
+    float: left;
+}
+.video_live_top .people .left .head img{
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+}
+.video_live_top .people .left .info{
+    font-size: 12px;
+    color: #fff;
+    float: left;
+    line-height: 18px;
+    padding: 2px 4px 0 4px;
+}
+.video_live_top .people .left .attention{
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    width: 40px;
+    background: #FF4A7D;
+    line-height:25px;
+    border-radius: 18px;
+    float: left;
+    margin-top: 8px;
+    margin-right: 10px;
+}
+.user_list.right {
+    height: 30px;
+    overflow: hidden;
+}
+.user_list.right ul{
+    white-space: nowrap;
+    width: 200%;
+}
+.user_list.right ul li{
+    float: left;
+    margin-right: 10px;
+    position: relative;
+    border: none;
+}
+
+.user_list.right ul li span{
+    width: 30px;
+    height: 30px;
+    border-radius: 40px;
+}
+.user_list.right ul li span img{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+.user_list.right ul li span:after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border: 1px solid rgba(255,255,255,0.8);
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius:30px;
+}
+.width_100{
+    width: 100%;
+}
+
+.video_live_top .praise{
+    font-size: 15px;
+    line-height:24px;
+    background: rgba(227,158,7,0.5);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 15px;
+    padding: 0 6px 0 28px;
+}
+
+.video_live_top .praise .icon{
+    width: 20px;
+    height: 20px;
+    background: url(//pic.davdian.com/free/video_praise_icon.png);
+    background-size: 20px;
+    display: inline-block;
+    position: absolute;
+    top:2px;
+    left: 4px;
+}
+.video_live_top .red{
+    font-size: 13px;
+    line-height:30px;
+    background: rgba(215,39,99,0.5);
+    border-top-left-radius: 2px;
+    border-top-right-radius: 19px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 19px;
+    padding: 0 10px 0 28px;
+    position: relative;
+    float: left;
+    margin-right: 10px;
+    min-width: 6px;
+}
+
+.video_live_top .red .icon{
+    width: 20px;
+    height: 20px;
+    background: url(//pic.davdian.com/free/video_red_icon.png);
+    background-size: 20px;
+    display: inline-block;
+    position: absolute;
+    top:5px;
+    left: 4px;
+}
+.video_live_top .get_number{
+    padding-left: 4px;
+    font-size: 15px;
+}
+
+.video_live_top .hairlines{
+    position: relative;
+    border: none;
+    display: inline-block;
+}
+.video_live_top .hairlines:after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border: 1px solid rgba(255,255,255,0.8);
+    width: 99%;
+    height: 23px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 28px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 28px;
+}
+.video_live_top .live_time{
+    font-size: 15px;
+    line-height: 20px;
+    height: 20px;
+    width: 75px;
+    text-align: center;
+    background: rgba(0,0,0,0.3);
+    border-radius: 50px;
+    display: block;
+}
+.video_live_top .open_dvd_link{
+    border-top-left-radius: 14px;
+    border-top-right-radius: 2px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 2px;
+    background: rgba(215,39,99,0.7);
+    color: #fff;
+    padding: 0 6px 0 14px;
+    font-size: 14px;
+    position: absolute;
+    right: 10px;
+    line-height: 24px;
+    top: 58px;
+}
+.video_live_top .open_dvd_link a{
+    text-decoration: underline;
+}
+.msg_container{
+    position: fixed;
+    width: 100%;
+    height: 190px;
+    /*background: url(//pic.davdian.com/free/live_info_bg1_0629.png) repeat-x;*/
+    z-index: 11;
+    bottom:0;
+    max-width: 640px;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.3)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.3) 100%);
+
+}
+.video_message{
+    width: 100%;
+    padding-right: 90px;
+    height: 128px;
+    position: absolute;
+    top:7px;
+    left: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    line-height: 24px;
+    overflow:auto;
+}
+.video_message ul{
+    height: 128px;
+}
+.video_message ul li{
+    position: relative;
+    text-shadow: 0 0.7px 0 rgba(0,0,0,0.5);
+}
+.info_title{
+    color: #F5A623;
+}
+.info_con{
+    color: #fff;
+}
+.color_white{
+    color: #fff;
+}
+
+.color_point{
+    color: #94DCD4;
+}
+
+.color_orange{
+    color: #F5A623;
+}
+
+.color_praise_info{
+    color: #F8E71C;
+    font-weight: bold;
+}
+
+.color_red_info{
+    color: #FB688F;
+    font-weight: bold;
+}
+
+.color_share_info{
+    color: #7ED321;
+    font-weight: bold;
+}
+.message_praise_icon{
+    width: 20px;
+    height: 20px;
+    background:url(//pic.davdian.com/free/video_praise_icon.png);
+    background-size: 20px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    left: 0;
+}
+
+.message_red_icon{
+    width: 32px;
+    height: 22px;
+    background:url(//pic.davdian.com/free/video_red_comment_icon.png);
+    background-size: 32px;
+    display:inline-block;
+    display: inline-block;
+    position: relative;
+    top: 6px;
+    left:0;
+}
+.message_send{
+    position: absolute;
+    width: 100%;
+    padding-left: 10px;
+    box-sizing: border-box;
+    top: 145px;
+}
+.message_send .send_input{
+    width: 100%;
+    position: absolute;
+    padding-right: 177px;
+    box-sizing: border-box;
+}
+.message_send .send_input input{
+    font-size: 15px;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid #D5D5D5;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.message_send .send_left{
+    position: absolute;
+    left: 0;
+}
+.message_send .send_left .chat_icon{
+    width: 35px;
+    height: 35px;
+    background: url(//pic.davdian.com/free/live_video_chat_icon_0812.png) no-repeat;
+    background-size: 35px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.message_send .send_left .shop_icon{
+    width: 35px;
+    height: 35px;
+    background: url(//pic.davdian.com/free/live_video_shop_icon_0812.png) no-repeat;
+    background-size: 35px;
+    display: inline-block;
+    margin-left: 10px;
+}
+.message_send .send_left .shop_icon .goods_num{
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 16px;
+    background: #FF4A7D;
+    font-size: 12px;
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    right: -8px;
+    text-align: center;
+    font-weight: normal;
+}
+.message_send .send_right{
+    position: absolute;
+    right: 0;
+}
+.message_send .send_right span{
+    float: left;
+    margin-right: 10px;
+}
+.message_send .send_right .send_btn{
+    width: 57px;
+    height: 35px;
+    line-height: 35px;
+    background: #FF4A7D;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    border-radius: 3px;
+}
+.message_send .send_right .gift_icon{
+    width: 35px;
+    height: 35px;
+    background: url(//pic.davdian.com/free/live_video_gift_icon_0812.png) no-repeat;
+    background-size: 35px;
+    display: inline-block;
+}
+.message_send .send_right .end_close_icon{
+    width: 35px;
+    height: 35px;
+    background: url(//pic.davdian.com/free/live_video_end_icon.png) no-repeat;
+    background-size: 35px;
+    display: inline-block;
+}
+.praise_bg{
+    position: fixed;
+    z-index: 12;
+    bottom: 55px;
+    max-width: 640px;
+    width: 100%;
+}
+.praise_num{
+    font-size: 10px;
+    line-height: 13px;
+    padding-top: 30px;
+    text-align: center;
+    color: #fff;
+    width: 50px;
+    float: right;
+    background: url(//pic.davdian.com/free/live_video_praise_icon_0708.png) no-repeat;
+    background-size: 50px;
+    height: 20px;
+    margin-right: 25px;
+}
+.download_con{
+    width: 100%;
+    height: 44px;
+    background: rgba(0,0,0,0.6);
+    -webkit-backdrop-filter: brightness(1.5) blur(10px);
+    position: fixed;
+    z-index: 100;
+    max-width: 640px;
+}
+.download_con .close_btn_con{
+    width: 15px;
+    height: 15px;
+    padding: 15px 12px 14px 13px;
+    float: left;
+}
+.download_con .close_btn_con .close_btn{
+    width: 15px;
+    height: 15px;
+    float: left;
+    background: url(//pic.davdian.com/free/live_video_close_icon_0629.png) no-repeat;
+    background-size:15px;
+    display: inline-block;
+}
+.download_con .center_con{
+    float: left;
+    width: 123px;
+    padding:8px 0 0 9px;
+}
+.download_con .download_btn_con{
+    width: 64px;
+    height: 24px;
+    position: absolute;
+    right:0;
+    padding: 10px 14px;
+}
+.download_con .download_btn_con .download_btn{
+    width: 62px;
+    height: 22px;
+    line-height: 22px;
+    font-size: 11px;
+    border-radius: 2px;
+    text-align: center;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.video_live_end{
+    position: fixed;
+    background: rgba(0,0,0,0.8);
+    -webkit-backdrop-filter: brightness(1.5) blur(7px);
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    z-index: 14;
+    top: 0;
+    text-align: center;
+    padding-top: 25%;
+    color: #fff;
+    box-sizing: border-box;
+}
+.video_live_end .end_title{
+    font-size:40px;
+    font-weight: bold;
+    line-height: 60px;
+    padding-bottom: 10px;
+}
+.video_live_end .video_total_time{
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 22px;
+    padding-bottom: 38px;
+    color: #94DCD4;
+}
+.video_live_end .video_total_time .live_long_time{
+    padding-left: 10px;
+}
+.video_live_end .end_info table{
+    margin:0 auto;
+}
+.video_live_end .end_info tr{
+    vertical-align: middle;
+    font-size: 12px;
+}
+.video_live_end .end_info tr td{
+    text-align: left;
+    padding-bottom:15px;
+    line-height: 26px;
+    height: 26px;
+}
+.video_live_end .end_info tr td.left{
+    padding-right: 5px;
+}
+.video_live_end .end_info tr td .icon_people{
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: url(//pic.davdian.com/free/live_end_people_icon_0629.png) center no-repeat;
+    background-size:21px 22px;
+}
+.video_live_end .end_info tr td .icon_praise{
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: url(//pic.davdian.com/free/live_end_praise_icon_0629.png) center no-repeat;
+    background-size:18px;
+}
+.video_live_end .end_info tr td .icon_red{
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: url(//pic.davdian.com/free/live_end_red_icon_0629.png) center no-repeat;
+    background-size: 30px;
+}
+.video_live_end .end_info tr td .num_style{
+    font-weight: bold;
+    font-size: 20px;
+}
+.video_live_end .hint{
+    margin-top: 76px;
+    font-size: 15px;
+}
+.video_playback_end{
+    position: absolute;
+    bottom: 20px;
+    width: 220px;
+    left: 50%;
+    margin-left: -110px;
+}
+.video_playback_end li{
+    position: relative;
+    border: none;
+    margin-bottom: 20px;
+    width: 220px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+}
+.video_playback_end li:after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border: 1px solid rgba(255,255,255,0.8);
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+}
+/*让该层下面的内容模糊*/
+@supports (-webkit-backdrop-filter: none) {
+    .download_con {
+        background: rgba(0,0,0,0.6);
+        -webkit-backdrop-filter: brightness(1.5) blur(10px);
+    }
+    .video_live_end {
+        background: rgba(0,0,0,0.5);
+        -webkit-backdrop-filter: brightness(1.5) blur(10px);
+    }
+}
+/*Retina屏为2的时候调用下面的样式*/
+@media
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min-device-pixel-ratio:2),
+only screen and (min--moz-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:4/2),
+only screen and (min-resolution:2dppx)
+{
+    .user_list.right ul li span:after{
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: left top;
+
+        -ms-transform: scale(0.5); 		/* IE 9 */
+        -ms-transform-origin: left top; 		/* IE 9 */
+
+        -webkit-transform: scale(0.5);	/* Safari 和 Chrome */
+        -webkit-transform-origin: left top;	/* Safari 和 Chrome */
+
+        -moz-transform: scale(0.5);		/* Firefox */
+        -moz-transform-origin: left top;		/* Firefox */
+
+        -o-transform: scale(0.5);		/* Opera */
+        -o-transform-origin: left top;		/* Opera */
+    }
+    .video_playback_end li:after{
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: left top;
+
+        -ms-transform: scale(0.5); 		/* IE 9 */
+        -ms-transform-origin: left top; 		/* IE 9 */
+
+        -webkit-transform: scale(0.5);	/* Safari 和 Chrome */
+        -webkit-transform-origin: left top;	/* Safari 和 Chrome */
+
+        -moz-transform: scale(0.5);		/* Firefox */
+        -moz-transform-origin: left top;		/* Firefox */
+
+        -o-transform: scale(0.5);		/* Opera */
+        -o-transform-origin: left top;		/* Opera */
+        border-radius: 36px;
+    }
+
+}
+
+.live_video_list_top {
+    background-color: rgba(0,0,0,0.6);
+    height: 44px;
+    width: 100%;
+    display: block;
+}
+
+.live_video_list_top .shop_img {
+    width: 38px;
+    height: 38px;
+    border-radius: 19px;
+    vertical-align: bottom;
+    margin:3px 10px;
+}
+
+.live_video_list_top .shop_title {
+    display: block;
+    overflow: hidden;
+    margin-top: -40px;
+    margin-left: 58px;
+    height: 32px;
+    color: #fff;
+    vertical-align: text-bottom;
+    font-size: 12px;
+    padding-bottom: 4px;
+    width: 140px;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.live_video_list_top .shop_title .pic {
+    width: 74px;
+    margin-top: -3px;
+    font-size: 11px;
+    color: #999;
+}
+
+.live_video_list_top .right {
+    float: right;
+    font-size: 12px;
+}
+
+.live_video_list_top .right .kd_btn {
+    width: 29px;
+    height: 30px;
+    padding-top: 14px;
+    padding-left: 15px;
+}
+
+.live_video_list_top .right .arrow {
+    display: inline-block;
+    vertical-align: 0;
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-left:2px;
+    vertical-align: baseline;
+}
+.live_video_list_bottom .download_con{
+    bottom: 0;
+}
+.live_video_bottom .download_con{
+    top: 0;
+}
+.live_video_title_page{
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+}
+.live_video_title_page .title{
+    width: 100%;
+    height: 49px;
+    line-height: 15px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    padding: 24px 10px 0 10px;
+    box-sizing: border-box;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.25)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.live_video_title_page .exclusive_owner{
+    position: absolute;
+    width: 60px;
+    height: 27px;
+    line-height: 27px;
+    color: #fff;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+    background: rgba(40,209,162,0.8);
+    font-size: 13px;
+    top:10px;
+    left:0px;
+    padding-left: 4px;
+}
+.live_video_title_page .people_num{
+    position: absolute;
+    top:16px;
+    right: 13px;
+    background: url(//pic.davdian.com/free/live_video_peopleWatchingWhite.png) no-repeat left;
+    background-size:31px;
+    padding-left: 34px;
+    color: #fff;
+    font-size: 15px;
+}
+.live_video_title_page .play_icon{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -43px;
+    font-size: 15px;
+    color: #fff;
+    background: url(//pic.davdian.com/free/playWhite60_icon2.png) no-repeat center top;
+    background-size:60px;
+    padding-top: 65px;
+    text-align: center;
+    width: 60px;
+}
+.live_video_title_page .review_icon{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-left: -30px;
+    margin-top: -43px;
+    font-size: 15px;
+    color: #fff;
+    background: url(//pic.davdian.com/free/playWhite60_icon.png) no-repeat center top;
+    background-size:60px;
+    padding-top: 65px;
+    text-align: center;
+    width: 60px;
+}
+.hot_live_video .title{
+    width: 100%;
+    height:44px;
+    line-height: 44px;
+    font-size:14px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    background: #fff;
+}
+.hot_live_video .hot_list li{
+    width: 50%;
+    float: left;
+    margin-bottom:3px;
+    position: relative;
+    padding-right: 1.5px;
+    box-sizing: border-box;
+}
+.hot_live_video .hot_list li:after{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: #f0f0f0;
+    right:-1.5px;
+    top: 0;
+    z-index: 1;
+}
+.hot_live_video .hot_list li:nth-child(2n+0){
+    padding-right: 0;
+    padding-left: 1.5px;
+    box-sizing: border-box;
+}
+.hot_live_video .hot_list li:nth-child(2n+0):after{
+    display: none;
+}
+.hot_live_video .hot_list li:nth-child(2n+0) .list_title{
+    margin-left: -1.5px;
+}
+.hot_live_video .hot_list li .list_title{
+    width:100%;
+    height:30px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 11px;
+    position: absolute;
+    bottom: 0;
+    box-sizing: border-box;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.2) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.25)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.25) 100%);
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    overflow: hidden;
+    padding-left:28px;
+}
+.hot_live_video .hot_list li .top{
+    position: relative;
+}
+.hot_live_video .hot_list li .list_title .map_icon{
+    width: 14px;
+    height: 16px;
+    background:url(//pic.davdian.com/free/live_video_location_icon.png) no-repeat;
+    background-size: 12px;
+    display: inline-block;
+    position: absolute;
+    left: 12px;
+    top: 7px;
+}
+.hot_live_video .hot_list li .list_exclusive_owner {
+    position: absolute;
+    width: 48px;
+    height: 17px;
+    line-height: 17px;
+    color: #fff;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background: rgba(40,209,162,0.8);
+    font-size: 11px;
+    top: 10px;
+    left: 0px;
+    padding-left: 2px;
+}
+.hot_live_video .hot_list li .list_live{
+    min-width: 50px;
+    border-radius: 50px;
+    height: 17px;
+    line-height: 17px;
+    border: 1px solid rgba(255,255,255,0.9);
+    font-size: 11px;
+    background: rgba(0,0,0,0.25);
+    position: absolute;
+    top:10px;
+    right: 10px;
+    color: #fff;
+    padding-left: 13px;
+    box-sizing: border-box;
+}
+.hot_live_video .hot_list li .list_live .live_icon{
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background: #92FDDF;
+    display: inline-block;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+.hot_live_video .hot_list li .list_playback{
+    min-width: 40px;
+    border-radius: 40px;
+    height: 17px;
+    line-height: 17px;
+    border: 1px solid rgba(255,255,255,0.9);
+    font-size: 11px;
+    background: rgba(0,0,0,0.25);
+    position: absolute;
+    top:10px;
+    right: 10px;
+    color: #fff;
+    padding-left: 13px;
+    box-sizing: border-box;
+}
+.hot_live_video .hot_list li .list_playback .playback_icon{
+    background: url(//pic.davdian.com/free/playback_icon_0923.png);
+    display: inline-block;
+    background-size: 6px;
+    width: 6px;
+    height: 7px;
+    position: absolute;
+    left: 5px;
+    top: 4px;
+}
+.hot_live_video .hot_list li .con{
+    background: #fff;
+    padding: 10px;
+    font-size: 12px;
+}
+.hot_live_video .hot_list li .con .con_title{
+    line-height: 15px;
+    height:30px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    overflow: hidden;
+}
+.hot_live_video .hot_list li .con .con_content{
+    line-height: 12px;
+}
+.hot_live_video .hot_list li .con .v_icon{
+    width: 12px;
+    height: 12px;
+    padding-left: 4px;
+}
+.hot_live_video .hot_list li .con .v_icon img{
+    width: 12px;
+    height: 12px;
+    margin-top: -2px;
+}
+.video_playback_bg{
+    height: 100vh;
+    background: url(//pic.davdian.com/free/video_playback_bg.jpg) no-repeat;
+    background-size: cover;
+}
+.video_playback_con{
+    position: relative;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    top: 40%;
+}
+.oval_load{
+    width: 30px;
+    padding-bottom: 10px;
+    margin: 0 auto;
+}
+.video_playback_con .app_link{
+    padding-top: 20px;
+}
+.video_playback_con .app_link a{
+    text-decoration: underline;
+}
+.video_playback_play{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 640px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.video_playback_play .play_btn_con{
+    font-size: 12px;
+    color: #fff;
+    line-height: 35px;
+}
+.video_playback_play .play_btn_con .play_btn{
+    width: 35px;
+    height: 35px;
+    background: url(//pic.davdian.com/free/playback_play_icon.png);
+    background-size: 35px;
+    display: inline-block;
+    float: left;
+    margin-right: 12px;
+}
+.video_playback_play .progress_bar_con{
+    height: 19px;
+    padding-top: 11px;
+    position: relative;
+}
+.video_playback_play .progress_bar_con .progress_bar{
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 6px;
+    display: inline-block;
+    position: absolute;
+}
+.video_playback_play .progress_bar_con .progress_bar_round{
+    width: 13px;
+    height: 13px;
+    border-radius: 13px;
+    background: #fff;
+    position: absolute;
+    top:5px;
+}
+
+
+/*手机横屏和在pc端打开时提示*/
+@media screen and (orientation:portrait) {
+    .lock_wrp {
+        display: none!important
+    }
+}
+.lock_wrp {
+    position: absolute;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    background-color: #3c98d1;
+    color: rgba(255,255,255,.8);
+    z-index: 9999
+}
+.lock {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 250px;
+    height: 150px;
+    margin: -75px 0 0 -125px;
+    text-align: center
+}
+.lock i {
+    position: relative;
+    display: block;
+    width: 74px;
+    height: 110px;
+    background: url(//pic.davdian.com/free/mobile_screen_icon.png) 0 0 no-repeat;
+    background-size: 100%;
+    margin: 0 auto;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-animation: iphone 1.6s ease-in infinite;
+    animation: iphone 1.6s ease-in infinite
+}
+@-webkit-keyframes iphone {
+    0% {
+        -webkit-transform:rotate(-90deg)
+    }
+    25% {
+        -webkit-transform:rotate(0deg)
+    }
+    50% {
+        -webkit-transform:rotate(0deg)
+    }
+    75% {
+        -webkit-transform:rotate(-90deg)
+    }
+    100% {
+        -webkit-transform:rotate(-90deg)
+    }
+}
+@keyframes iphone {
+    0% {
+        transform:rotate(-90deg)
+    }
+    25% {
+        transform:rotate(0deg)
+    }
+    50% {
+        transform:rotate(0deg)
+    }
+    75% {
+        transform:rotate(-90deg)
+    }
+    100% {
+        transform:rotate(-90deg)
+    }
+}
+
+
+
+/*.video-js .vjs-control-text {
+    display:none;
+}
+.video-js .vjs-big-play-button:before{
+    display:none;
+}
+!**/
+
+.vjs-control-text{
+    width:50px;
+    height: 50px;
+    display: inline-block;
+    background: url(//pic.davdian.com/free/live_paly_icon_50_50.png);
+}
+.video-js:hover .vjs-big-play-button,
+.video-js .vjs-big-play-button:focus {
+    border-color:transparent;
+    background-color: transparent;
+}
+
+.video-js .vjs-big-play-button:before{
+    content: "";
+    width:50px;
+    height: 50px;
+    display: inline-block;
+    background: url(//pic.davdian.com/free/live_paly_icon_50_50.png);
+    background-size: 50px;
+}
+.video-js .vjs-big-play-button{
+    background: none;
+    border: none;
+    top:50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+}
+.display_b{
+    display: block!important;
+}
+.video-js{
+    position: initial;
+    width: 100%;
+    height: 100%;
+    background: none;
+}
+.vjs-poster{
+    background-size: cover;
+}
+.vjs-control-bar{
+    display: none;
+}
+.vjs-has-started .vjs-control-bar{
+    display: none;
+}
+.vjs-default-skin.vjs-has-started .vjs-control-bar{
+    display: none;
+}
+
+.vjs-loading-spinner{
+    display: none!important;
+}
+
+.live_video_attention{
+    height: 60px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 60px;
+    padding-right: 100px;
+    box-sizing: border-box;
+}
+.live_video_attention_left{
+    position: absolute;
+    left: 10px;
+    top:10px;
+    width: 40px;
+    height: 40px;
+}
+.live_video_attention_center{
+    padding-top: 10px;
+}
+.live_video_attention_center .title{
+    font-size: 15px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    overflow: hidden;
+}
+.live_video_attention_center .v_icon{
+    margin-left: 5px;
+}
+.live_video_attention_center .v_icon img{
+    width: 15px;
+    height: 15px;
+    margin-top: -4px;
+}
+.live_video_attention_center .summary{
+    font-size: 12px;
+    color: #999;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    overflow: hidden;
+}
+.live_video_attention_left .shop_img{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+.live_video_attention_right{
+    position: absolute;
+    width: 80px;
+    height: 30px;
+    right: 10px;
+    top:15px;
+}
+.live_video_attention_right .list_attention{
+    background: url(//pic.davdian.com/free/video_live_attention_icon.png) no-repeat;
+    background-size: 100%;
+    width: 42px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 38px;
+    font-size: 12px;
+    color: #FF4A7D;
+}
+.live_video_attention_right .already_attention{
+    background: url(//pic.davdian.com/free/video_live_attention_icon2.png) no-repeat;
+    background-size: 100%;
+    width: 48px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 32px;
+    font-size: 12px;
+    color: #00BEB7;
+}

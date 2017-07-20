@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //图片上传地址
+        var picUploadUrl = "../data/uploadImg.json";
+    </script>
+    <style>
+        .img_big {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.62)
+        }
+
+        .img_big img {
+            width: 500px;
+            margin: auto auto;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            border-radius: 5px;
+            z-index: 6;
+        }
+
+    </style>
+</head>
+<body>
+<table>
+    <tbody>
+    <tr>
+        <td class="label">上传图片</td>
+        <td><input class="upLoadImginput" accept="image/gif,image/jpeg,image/png,image/jpg,image/bmp" type="file"
+                   multiple></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td class="img_container">
+            <div class="img_wrap"><img onclick="javascript:return_images_big(this)" src="http://pic.davdian.com/shop_logo/2016/11/08/src__73bed7e590d07a523b0f98d591838764.jpg@!100h_100w_1e_1c_2o" data="http://pic.davdian.com/shop_logo/2016/11/08/src__73bed7e590d07a523b0f98d591838764.jpg"><span class="delate_img">删除</span></div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+
+//    addPic();
+//    /**
+//     * 添加图片
+//     */
+//    function addPic() {
+//        var addBtn = $("input.upLoadImginput");
+//        addBtn.change(function () {
+//            var files = addBtn.get(0).files;
+//            if (files.length) {
+//                for (var i = 0; i < files.length; i++) {
+//                    pullFile(files[i]);
+//                }
+//            }
+//        });
+//        /**
+//         * 插入图片
+//         */
+//        function pullFile(file) {
+//            var picStr = 'shop_logo';
+//            if ($(".img_list").length >= 3) {
+//                alert("最多添加3张图片");
+//                return false;
+//            }
+//            /*原生JS版*/
+//            /* FormData 是表单数据类 */
+//            var fd = new FormData();
+//            var ajax = new XMLHttpRequest();
+//
+//            /* 把文件添加到表单里 */
+//            fd.append(picStr, file);
+//            ajax.open("post", window.picUploadUrl, true);
+//            ajax.onreadystatechange = function () {
+//                if (ajax.readyState == 4 && ajax.status == 200) {
+//                    console.log(typeof ajax.response);
+//                    var data;
+//                    if (typeof ajax.response == 'string') {
+//                        data = JSON.parse(ajax.response);
+//                    } else {
+//                        data = ajax.response;
+//                    }
+//                    var $div = $("<div>").addClass("img_wrap");
+//                    var $html = '<img onclick=\'clickImg("' + data.data[picStr].src + '")\' src="' + data.data[picStr].src + '@!100h_100w_1e_1c_2o" data-src="' + data.data[picStr].src + '"><span class="delate_img">删除</span>';
+//                    $div.html($html);
+//                    $(".img_container").append($div);
+//                } else {
+//                    alert("网络错误，请重试！")
+//                }
+//            };
+//            ajax.send(fd);
+//        }
+//    }
+    //
+    //    $("body").on("click", ".delate_img", function () {
+    //        var imgsrc = $(this).parent().find("img").attr("data-src");
+    //
+    //        $(this).parent().remove();
+    //    });
+    /**
+     * 点击图片
+     //     */
+//    function clickImg(img) {
+//        var $imgs = '<div class="img_big"><img src="' + img + '"></div>';
+//        $("body").append($imgs);
+//    }
+//    $("body").on("click", ".img_big", function () {
+//        $(this).remove();
+//    });
+//    $("#return_images").on("click","img",function () {
+//        var imgsrc = $(this).attr()
+//    })
+    function return_images_big(obj) {
+        var imgsrc = obj.getAttribute("data");
+        var img_div = document.createElement("div");
+        img_div.setAttribute("class","img_big");
+        img_div.setAttribute("onclick","javascript:remove(this)");
+        img_div.innerHTML='<img src="'+imgsrc+'"/>';
+        document.body.appendChild(img_div);
+    }
+    function remove(obj) {
+        obj.parentNode.removeChild(obj);
+    }
+    
+</script>
+</body>
+</html>

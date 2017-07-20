@@ -1,0 +1,17 @@
+{
+  "code": 0,
+  "shop_url": "https://15522634982.davdian.com",
+  "visitor_status": 3,
+  "sess_key": "42df8bf6e510c97c11afe81a96569014027bf803",
+  "data": {
+    "lotteryResult": "fail",
+    "bonusInfo": {
+      "bonusId": "红包ID",
+      "bonusName": "红包名称",
+      "bonusMoney": "红包金额",
+      "minConsumePrice": "最小订单金额使用限制",
+      "useBeginTime": "有效期开始时间",
+      "useEndTime": "有效期结束时间"
+    }
+  }
+}

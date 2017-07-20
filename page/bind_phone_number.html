@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="../dist/bind_phone.css" rel="stylesheet">
+  <title>账户绑定</title>
+  <script type="text/javascript">
+    /////////////////////给app提供接口数据////////////
+    var appData = {
+      showHead: 1,     // 是否展示头部
+      showFoot: 0,     // 是否展示底部
+      backOnHead: 1,   // 头部返回按钮
+      homeOnHead: 1,   // 头部首页按钮
+      shareOnHead: 0
+    };
+  </script>
+</head>
+<body>
+<div class="top0">
+  <div class="top_container">
+    <div class="top_left">
+      <a class="top_back" href="javascript:history.back();">
+        <span class="home_arrow"></span>
+      </a>
+    </div>
+    <div class="title_container">
+      账户绑定
+    </div>
+    <div class="top_right">
+      <a href="/" class="top_home">
+        <span class="home_icon"></span>
+      </a>
+    </div>
+  </div>
+</div>
+<div id="container" style="padding-top: 50px">
+  <input_container></input_container>
+</div>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script
+  type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script src="http://cdn.davdian.com/vue/2.0.5/vue.min.js"></script>
+<script type="text/javascript" src="../dist/bind_phone.js"></script>
+</body>
+</html>

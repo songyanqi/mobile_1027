@@ -1,0 +1,110 @@
+.login-container{
+	padding: 25px 12px;
+}
+.login-title-container{
+	font-size: 14px;
+	color: #666;
+	line-height: 20px;
+	border-top: #ddd solid 1px;
+	text-align: center;
+	margin-top: 10px;
+	/*margin-bottom: 12px;*/
+	 height: 0px;
+  margin-bottom: 45px;
+}
+.login-title-container.line-2{
+	margin-top: 18px;
+}
+.login-title-container.line-2 .login-title{
+	  top: -20px;
+}
+.login-title{
+  	background-color: #f1f1f1;
+  	display: inline-block;
+  top: -10px;
+  position: relative;
+}
+.login-title span{
+	display: inline-block;
+	padding: 0 10px;
+}
+.login-input-container{
+	margin-bottom: 16px;
+}
+.login-input{
+	margin-top: 12px;
+	position: relative;
+}
+.login-input .dav-btn{
+	position: absolute;
+  width: 100px;
+  right: 0;
+  top: 0;
+  line-height: 20px;
+  font-size: 12px;
+  padding: 11px;
+  border-radius: 1px;
+  text-align: center;
+}
+.login-input input{
+	font-size: 14px;
+	line-height: 20px;
+	color: #333;
+	padding: 10px 16px;
+	width: 100%;
+  	box-sizing: border-box;
+  	border-radius: 1px;  border: solid 1px #ddd;
+}
+.login-input input[readonly]{
+	background-color: #eee;
+	color: #bbb;
+}
+.login-button .dav-btn{
+	border-radius: 1px;
+	font-size: 14px;
+	line-height: 20px;
+	color: #fff;
+	border-radius: 3px;
+}
+.login-button{
+	margin-bottom: 16px;
+}
+
+.login-container .forget{
+	text-align: center;
+	display: block;
+}
+.bind_info{
+	color: #999;
+	padding: 0 12px;
+	font-size: 12px;
+	line-height: 17px;
+}
+.choice_container{
+	text-align: center;
+	padding: 20px 50px;
+	background-color: #fff;
+}
+.choice_container img{
+	width: 50px;
+}
+.choice_container .info_container{
+	margin-top: 10px;
+	color: #666;
+}
+.btn_container{
+	margin-top: 40px;
+	text-align: left;
+	color: #666666;
+	font-size: 14px;
+}
+.btn_container .dav-btn{
+	margin-top: 10px;
+	width: 100%;
+	text-align: center;
+}
+.btn_container .dav-btn.btn-other{
+	border:solid 1px #FF4A7D;
+	background-color: #fff;
+	color: #FF4A7D;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>绑定大V店账号</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="telephone=no" name="format-detection">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 , user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/bind.css" rel="stylesheet">
+    <script>
+        var bindUrl = "";
+        var jumpUrl = "";
+    </script>
+</head>
+
+<body>
+
+<div class="bind_wechat_wrap">
+    <div class="bind_title">
+        <img src="//pic.davdian.com/free/bind_wechat_logo.png">
+    </div>
+    <div class="bind_con">
+        <div class="clearfix item">
+            <span class="mobile_icon"></span>
+            <input type="tel" id="tel"  class="tel" onkeydown="changeEnter()"  maxlength="11" placeholder="请输入您的手机号"/>
+        </div>
+        <div class="clearfix item">
+            <span class="password_icon"></span>
+            <input type="password" class="pass" onkeydown="changeEnter()" placeholder="请输入您的密码">
+        </div>
+        <div class="bind_button">
+            <div class="dav-btn btn-red btn-disable">绑定</div>
+        </div>
+    </div>
+    <div class="bind_desc">绑定账号可接收订单和佣金相关信息</div>
+</div>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script src="../javascript/bind_wechat.js"></script>
+<script language="javascript">
+function changeEnter(){
+if(event.keyCode==13){event.keyCode=9;}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+@import "../../../common/css/common.scss";
+@import "vars.scss";
+
+body{
+  //height: ptr(6800);
+}
+
+.app {
+  font-size: 0;
+}
+
+.page{
+  position: relative;
+}
+
+.bg {
+  img {
+    max-width: 100%;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  font-size: ptr(14);
+  color: white;
+
+  // 关卡
+  .pass {
+    position: absolute;
+    left: ptr(0);
+    top: ptr(0);
+    text-align: center;
+    font-size: 0;
+    @for $i from 1 through 18 {
+      &.pass#{$i} {
+        left: map-get(nth($passArray, $i), left);
+        top: map-get(nth($passArray, $i), top);
+      }
+    }
+
+    .head {
+      position: absolute;
+      top: ptr(-147);
+      left: 50%;
+      margin-left: ptr(-119) / 2;
+      width: ptr(119);
+      max-width: none;
+      max-height: none;
+      display: none;
+    }
+
+    .circle {
+      position: relative;
+      @include circle(ptr(62));
+      background: #f6fffe;
+      .point {
+        @include center;
+        @include circle(ptr(30));
+        background: #75e0d0;
+      }
+    }
+    /*.title{
+      margin-top: ptr(4);
+      padding: 0 ptr(12);
+      @include height(ptr(60));
+      border: 1px solid #9bdfdd;
+      border-radius: ptr(30);
+      background-color: #fbf6d9;
+      font-size: ptr(28);
+      color: #6f6f6f;
+    }*/
+  }
+  .pass.current {
+    .head {
+      display: inline-block;
+    }
+    .circle {
+      // 动画
+      @keyframes point-animation {
+        0% {
+          transform: scale(1);
+        }
+        90% {
+          transform: scale(1.3);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      animation: point-animation 1s infinite;
+    }
+  }
+  .pass.over {
+    .circle {
+      animation: none;
+      .point {
+        background: #ff6245;
+      }
+    }
+  }
+
+  // 云彩
+  .cloud {
+    position: absolute;
+    @for $i from 2 through 18 {
+      &.cloud#{$i} {
+        top: map-get(nth($cloudArray, $i), top);
+        height: map-get(nth($cloudArray, $i), height);
+        @if ($i % 2 == 0) {
+          left: 0;
+        } @else {
+          right: 0;
+        }
+      }
+    }
+    @keyframes cloud-animation-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+    @keyframes cloud-animation-right {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+    &.animation {
+      animation: cloud-animation 2s 1s;
+      animation-fill-mode: forwards;
+    }
+    &.animation:nth-of-type(2n+1) {
+      animation-name: cloud-animation-left;
+    }
+    &.animation:nth-of-type(2n) {
+      animation-name: cloud-animation-right;
+    }
+  }
+
+  .rule-btn {
+    position: absolute;
+    left: ptr(18);
+    bottom: ptr(78);
+    width: ptr(164);
+    &:active {
+      opacity: 0.9;
+    }
+  }
+
+  .music-btn-open, .music-btn-close {
+    position: absolute;
+    right: ptr(18);
+    bottom: ptr(78);
+    width: ptr(66);
+    &:active {
+      opacity: 0.9;
+    }
+  }
+  .music-btn-open{
+    // 音乐开关旋转
+    @keyframes music-rotate-animation {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    animation: music-rotate-animation 6s infinite linear;
+  }
+
+  .pop-rule {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: none;
+    &.show {
+      display: block;
+    }
+    .rule-pic {
+      @include center;
+      width: ptr(586);
+      height: ptr(1100);
+      max-height: 80%;
+      text-align: center;
+      span {
+        position: relative;
+        img{
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+    }
+    .close-btn {
+      position: absolute;
+      right: 0;
+      @include square(ptr(90));
+      cursor: pointer;
+    }
+  }
+
+  .pic-display-box{
+    &.show{
+      .content > img{
+        @keyframes pic-display-box-img-animation {
+          0%{
+            transform: scale(0);
+          }
+          100%{
+            transform: scale(1);
+          }
+        }
+        animation: pic-display-box-img-animation 0.5s;
+        animation-fill-mode: forwards;
+        transform-origin: bottom;
+      }
+    }
+  }
+  .pic-display-box .cell .content .close-btn {
+    opacity: 0;
+  }
+  .pic-display-box#pop-begin .cell .content img {
+    width: ptr(518);
+  }
+  .pic-display-box#pop-miss-pass .cell .content img {
+    width: ptr(518);
+  }
+  .pic-display-box#pop-miss-day .cell .content {
+    img{
+      width: ptr(572);
+    }
+    .close-btn{
+      right: ptr(70);
+      top: ptr(20);
+      width: ptr(100);
+      height: ptr(100);
+    }
+  }
+
+}

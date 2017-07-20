@@ -1,0 +1,125 @@
+{
+  "code": 0,
+  "shop_url": "https://15522634982.davdian.com",
+  "visitor_status": 3,
+  "sess_key": "42df8bf6e510c97c11afe81a96569014027bf803",
+  "data": {
+    "questionList": [
+      {
+        "questionId": 1,
+        "questionContent": "游戏中XXX在XX吃了XX?",
+        "answer": [
+          {
+            "answerId": "2",
+            "answerConent": "t1",
+            "answerStatus": "1"
+          },
+          {
+            "answerId": "5",
+            "answerConent": "苹果11",
+            "answerStatus": "0"
+          }
+        ]
+      },
+      {
+        "questionId": 1,
+        "questionContent": "t2?",
+        "answer": [
+          {
+            "answerId": "2",
+            "answerConent": "t2",
+            "answerStatus": "1"
+          },
+          {
+            "answerId": "2",
+            "answerConent": "t",
+            "answerStatus": "0"
+          }
+        ]
+      },
+      {
+        "questionId": 1,
+        "questionContent": "t3?",
+        "answer": [
+          {
+            "answerId": "2",
+            "answerConent": "t2",
+            "answerStatus": "0"
+          },
+          {
+            "answerId": "2",
+            "answerConent": "t",
+            "answerStatus": "1"
+          }
+        ]
+      }
+    ],
+    "competeList": [
+      {
+        "user_mobile": "1323****388",
+        "level": "10",
+        "amount": "20"
+      },
+      {
+        "user_mobile": "1323****388",
+        "level": "10",
+        "amount": "20"
+      },
+      {
+        "user_mobile": "1323****388",
+        "level": "10",
+        "amount": "20"
+      },
+      {
+        "user_mobile": "1323****388",
+        "level": "10",
+        "amount": "20"
+      },
+      {
+        "user_mobile": "1323****388",
+        "level": "10",
+        "amount": "20"
+      },
+      {
+        "user_mobile": "1323****388",
+        "level": "10",
+        "amount": "20"
+      },
+      {
+        "user_mobile": "1323****388",
+        "level": "10",
+        "amount": "20"
+      },
+      {
+        "user_mobile": "1323****388",
+        "level": "10",
+        "amount": "20"
+      },
+      {
+        "user_mobile": "1323****388",
+        "level": "10",
+        "amount": "20"
+      },
+      {
+        "user_mobile": "1323****388",
+        "level": "10",
+        "amount": "20"
+      },
+      {
+        "user_mobile": "1323****388",
+        "level": "10",
+        "amount": "20"
+      },
+      {
+        "user_mobile": "1323****388",
+        "level": "10",
+        "amount": "20"
+      },
+      {
+        "user_mobile": "1323****388",
+        "level": "10",
+        "amount": "20"
+      }
+    ]
+  }
+}

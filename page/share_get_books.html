@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ch" ng-app="indexApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>哈爸大V店—MAMA+&nbsp;|&nbsp;大V店</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/share_red.css" rel="stylesheet">
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0,  // 头部分享按钮
+            btnOnHead: 0,    // 头部文字按钮
+            btnText: "",     // 头部文字按钮文字
+            btnLink: ""      // 头部文字按钮链接
+        };
+        /////////////////////微信分享/////////////////////
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+
+    </script>
+    <style>
+    </style>
+</head>
+<body style="background-color: #fff;" class="scroll_flag">
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            免费领取图书
+        </div>
+    </div>
+</div>
+
+<div class="get_books_title">在下面列表中任一选择一本图书</div>
+
+<div class="good_list_con mt20">
+    <div class="good_list_2_row">
+        <div class="good_item">
+            <a href="">
+                <div class="good_img_container">
+                    <img data-original="//pic.davdian.com/images/201503/goods_img/94_G_1426833984370.jpg"
+                         src="//pic.davdian.com/images/201503/goods_img/94_G_1426833984370.jpg"
+                         style="display: inline;">
+                </div>
+                <div class="good_con">
+                    <div class="get_book_good_title">宝宝的第一本躲猫猫游戏书(0-3岁适用)(套装共4册)</div>
+                    <div class="get_book_good_price">
+                        <span class="dav-color-price">￥128.00</span>
+                        <span class="get_book_market_price">￥150.00</span>
+                    </div>
+                </div>
+            </a>
+            <a href=""><div class="receive_free_btn">免费领取</div></a>
+        </div>
+        <div class="good_item">
+            <a href="">
+                <div class="good_img_container">
+                    <img data-original="//pic.davdian.com/images/201503/goods_img/94_G_1426833984370.jpg"
+                         src="//pic.davdian.com/images/201503/goods_img/94_G_1426833984370.jpg"
+                         style="display: inline;">
+                </div>
+                <div class="good_con">
+                    <div class="get_book_good_title">宝宝的第一本躲猫猫游戏书(0-3岁适用)(套装共4册)</div>
+                    <div class="get_book_good_price">
+                        <span class="dav-color-price">￥128.00</span>
+                        <span class="get_book_market_price">￥150.00</span>
+                    </div>
+                </div>
+            </a>
+            <a href=""><div class="receive_free_btn">免费领取</div></a>
+        </div>
+        <div class="good_item">
+            <a href="">
+                <div class="good_img_container">
+                    <img data-original="//pic.davdian.com/images/201503/goods_img/94_G_1426833984370.jpg"
+                         src="//pic.davdian.com/images/201503/goods_img/94_G_1426833984370.jpg"
+                         style="display: inline;">
+                </div>
+                <div class="good_con">
+                    <div class="get_book_good_title">宝宝的第一本躲猫猫游戏书(0-3岁适用)(套装共4册)</div>
+                    <div class="get_book_good_price">
+                        <span class="dav-color-price">￥128.00</span>
+                        <span class="get_book_market_price">￥150.00</span>
+                    </div>
+                </div>
+            </a>
+            <a href=""><div class="receive_free_btn">免费领取</div></a>
+        </div>
+        <div class="good_item">
+            <a href="">
+                <div class="good_img_container">
+                    <img data-original="//pic.davdian.com/images/201503/goods_img/94_G_1426833984370.jpg"
+                         src="//pic.davdian.com/images/201503/goods_img/94_G_1426833984370.jpg"
+                         style="display: inline;">
+                </div>
+                <div class="good_con">
+                    <div class="get_book_good_title">宝宝的第一本躲猫猫游戏书(0-3岁适用)(套装共4册)</div>
+                    <div class="get_book_good_price">
+                        <span class="dav-color-price">￥128.00</span>
+                        <span class="get_book_market_price">￥150.00</span>
+                    </div>
+                </div>
+            </a>
+            <a href=""><div class="receive_free_btn">免费领取</div></a>
+        </div>
+        <div class="good_item">
+            <a href="">
+                <div class="good_img_container">
+                    <img data-original="//pic.davdian.com/images/201503/goods_img/94_G_1426833984370.jpg"
+                         src="//pic.davdian.com/images/201503/goods_img/94_G_1426833984370.jpg"
+                         style="display: inline;">
+                </div>
+                <div class="good_con">
+                    <div class="get_book_good_title">宝宝的第一本躲猫猫游戏书(0-3岁适用)(套装共4册)</div>
+                    <div class="get_book_good_price">
+                        <span class="dav-color-price">￥128.00</span>
+                        <span class="get_book_market_price">￥150.00</span>
+                    </div>
+                </div>
+            </a>
+            <a href=""><div class="receive_free_btn">免费领取</div></a>
+        </div>
+    </div>
+</div>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script src="../javascript/jweixin-1.0.0.js"></script>
+<script src="../cdn/jquery/jquery.lazyload.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+</body>
+</html>

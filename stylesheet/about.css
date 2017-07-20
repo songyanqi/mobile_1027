@@ -1,0 +1,72 @@
+.about_container {
+  background-color: #fff; }
+  .about_container .about_group {
+    padding: 10px 0; }
+  .about_container .about_title {
+    font-size: 16px;
+    line-height: 20px; }
+    .about_container .about_title span {
+      display: inline-block;
+      vertical-align: middle; }
+  .about_container .about_title:before {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 15px;
+    background-color: #FF4A7D;
+    vertical-align: text-bottom; }
+  .about_container .about_item {
+    padding: 12px 12px 0 12px; }
+    .about_container .about_item b {
+      line-height: 22px;
+      vertical-align: super; }
+  .about_container .bb {
+    border-bottom: #eee solid 1px; }
+  .about_container .create_item {
+    padding: 12px 0; }
+    .about_container .create_item .vertical_container {
+      display: table-cell;
+      vertical-align: middle;
+      width: 106px; }
+    .about_container .create_item img {
+      width: 91px;
+      height: 91px;
+      -webkit-border-radius:50px;
+      -moz-border-radius:50px;
+      border-radius:50px;
+      border: #efefef solid 2px; }
+    .about_container .create_item .create_info {
+      display: table-cell;
+      vertical-align: middle; }
+      .about_container .create_item .create_info .create_pos {
+        color: #666;
+        font-size: 12px;
+        line-height: 14px; }
+      .about_container .create_item .create_info .create_detail {
+        margin-top: 4px;
+        font-size: 12px;
+        line-height: 15px; }
+
+.customer_service_container {
+  background-color: #fff;
+  margin-top: 12px;
+  padding: 12px 12px 30px;
+  margin-bottom: 30px; }
+  .customer_service_container .customer_service_qr_container {
+    font-size: 12px;
+    margin-top: 12px;
+    text-align: center; }
+    .customer_service_container .customer_service_qr_container .qr_con {
+      padding: 12px;
+      width: 148px;
+      height: 148px;
+      border: #eee solid 1px;
+      margin-bottom: 6px;
+      display: inline-block; }
+
+.about_con p {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  padding: 0px; }
+
+/*# sourceMappingURL=about.css.map */

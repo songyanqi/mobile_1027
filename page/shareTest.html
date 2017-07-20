@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>分享测试</title>
+    <link rel="stylesheet" href="../stylesheet/base.css">
+</head>
+<body>
+<div class="dav-btn btn-red" onclick="sharePic(-1)">分享图片</div>
+<div class="dav-btn btn-red" onclick="sharePic(0)">分享图片到朋友圈</div>
+<div class="dav-btn btn-red" onclick="sharePic(1)">分享图片到微信好友</div>
+<div class="dav-btn btn-red" onclick="sharePic(2)">分享图片到qq好友</div>
+<div class="dav-btn btn-red" onclick="sharePic(3)">分享图片到短信</div>
+<div class="dav-btn btn-red" onclick="sharePic(4)">分享图片的复制？</div>
+
+<div class="dav-btn btn-red" onclick="shareInfo(-1)">分享信息</div>
+<div class="dav-btn btn-red" onclick="shareInfo(0)">分享信息到朋友圈</div>
+<div class="dav-btn btn-red" onclick="shareInfo(1)">分享信息到微信好友</div>
+<div class="dav-btn btn-red" onclick="shareInfo(2)">分享信息到qq好友</div>
+<div class="dav-btn btn-red" onclick="shareInfo(3)">分享信息到短信</div>
+<div class="dav-btn btn-red" onclick="shareInfo(4)">分享信息的复制？</div>
+
+
+<div class="dav-btn btn-red" onclick="shareBigPic('http://pic.davdian.com/free/2016/12/08/9m.png')">分享信息到微信好友9M</div>
+<div class="dav-btn btn-red" onclick="shareBigPic('http://pic.davdian.com/free/2016/12/08/11m.jpg')">分享信息到微信好友11M</div>
+<div class="dav-btn btn-red" onclick="shareBigPic('http://pic.davdian.com/free/2016/12/08/23m.png')">分享信息到微信好友23M</div>
+<div class="dav-btn btn-red" onclick="shareBigPic('http://pic.davdian.com/free/2016/12/08/100m.png')">分享信息到微信好友100M</div>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/units.js"></script>
+<script>
+    $(function () {
+        window.sharePic = function (type) {
+            window.bravetime.callAppShareImg(type,'http://pic.davdian.com/activity/2016/11/30/1125_480_8b4c07967f4784af9f95b69407459646.jpg',function () {
+                alert("share ok");
+            },function () {
+                alert("share error");
+            })
+        };
+        window.shareInfo = function (type) {
+            window.bravetime.callAppShareInfo(type,{
+                "title":"分享标题000",
+                "desc":"分享内容描述111",
+                "link":location.href,
+                "imgUrl":"http://pic.davdian.com/activity/2016/11/30/1125_480_8b4c07967f4784af9f95b69407459646.jpg"
+            },function () {
+                alert("share ok");
+            },function (msg) {
+                alert("错误码:"+msg);
+            })
+        }
+
+        window.shareBigPic = function (img) {
+            window.bravetime.callAppShareImg(1,img,function () {
+                alert("share ok");
+            },function () {
+                alert("share error");
+            })
+        };
+    })
+</script>
+</body>
+</html>

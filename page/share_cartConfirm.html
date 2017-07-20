@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no"/>
+    <title>订单确认</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/cartConfirm.css" rel="stylesheet">
+    <link href="../stylesheet/account.css" rel="stylesheet">
+    <script type="text/javascript">
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+
+        var jumpUrl = "/";
+
+    </script>
+</head>
+<body style="background: #fff">
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            信息确认页
+        </div>
+    </div>
+</div>
+
+<div class="cart_confirm_container">
+    <div class="change_address_container">
+        <a href="./addressList.html">
+            <div class="base_address">
+                    <span class="name">
+                        王志东
+                    </span>
+                    <span class="tel">
+                        18812345678
+                    </span>
+
+                <div class="address_detail">
+                    北京市 朝阳区 阜通东大街方恒国际d座2810
+                </div>
+                <span class="change_link">更换<i class="arrow_icon"></i></span>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="good_book_list_container">
+        <div class="list_title">已选择免费领取的图书:</div>
+        <div class="good_list_1_row">
+            <div class="good_item">
+                <a href="">
+                    <div class="img_container">
+                        <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+                    </div>
+                    <div class="good_info_container">
+                        <div class="good_title">
+                            贝亲 (Pigeon)食物研磨贝亲 (Pigeon)食物研磨 贝亲 (Pigeon)食物研磨 贝亲 (Pigeon)食物研磨
+                        </div>
+                        <div class="good_price">
+                            <span class="dav-price">￥128.00</span>
+                            <span class="market-price">￥295.00</span>
+                        </div>
+                    </div>
+                </a>
+                <a href=""><span class="change_book_btn">更改</span></a>
+            </div>
+        </div>
+        <div class="invite_prompt">您已成功邀请 6 位新用户领取红包并注册大V店账号，再邀请 4位平台就将图书邮寄给您哟~</div>
+    </div>
+
+    <div class="dav-buyer-bottom clearfix">
+        <span class="receive_submit_btn">提交</span>
+    </div>
+</div>
+
+
+
+
+
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript" src="../javascript/jquery.cookie.js"></script>
+<script type="text/javascript" src="../javascript/iscroll.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script src="../javascript/share_confirm.js"></script>
+</body>
+</html>

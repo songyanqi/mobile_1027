@@ -1,0 +1,143 @@
+{
+  "code":"0",
+  "shop_url":"https://15201663952.davdian.com",
+  "visitor_status":"3",
+  "sess_key":"48a275a991a0a6295706e6d9f8c3a784b62a4bbc",
+  "data_version":"xxxxxx",
+  "data":{
+    "menuData":{
+      "md5DataVersion":"md5 dataversion",
+      "menuList":[
+        {
+          "category":0,
+          "title":"今日推荐",
+          "menuId":"菜单id"
+        },
+        {
+          "category":1,
+          "title":"开店素材",
+          "menuId":"菜单id"
+        },
+        {
+          "category":2,
+          "title":"开店推广",
+          "menuId":"菜单id"
+        },
+        {
+          "category":3,
+          "title":"开店推广",
+          "menuId":"菜单id"
+        },
+        {
+          "category":4,
+          "title":"开店推广",
+          "menuId":"菜单id"
+        }
+      ]
+    },
+    "feedList":{
+      "dataList":[
+        {
+          "marginTop":"0",
+          "body":{
+               "tplId":"bd_articles_1",
+               "dataList":[
+                    {
+                         "pageId":"微刊id",
+                         "pageType":"微刊类型",
+                         "menuName":"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
+                         "imageUrl":"http://pic.davdian.com/free/2017/02/07/1125_600_e77f444a214e48a4492e2ca553cc969d.jpg@!400h_750w_1e_1c",
+                         "ctime":"时间",
+                         "title":"标题",
+                         "menuId":"分类Id",
+                         "readTimes":"123",
+                         "shareNum":"51",
+                         "command": {
+                              "content" : "点击时的动作 请求商品详情接口"
+                         },
+                         "shareCommand": {
+                              "content" : "点击时的动作请求分享接口 更新分享数据"
+                         }
+                    }
+               ]
+          }
+        },
+        {
+          "marginTop":"10",
+          "body":{
+            "tplId":"bd_articles_2",
+            "dataList":[
+              {
+                "pageId":"微刊id",
+                "pageType":"微刊类型",
+                "menuName":"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
+                "imageUrl":"http://pic.davdian.com/free/2017/02/07/1125_600_e77f444a214e48a4492e2ca553cc969d.jpg@!400h_750w_1e_1c",
+                "ctime":"时间",
+                "title":"标题",
+                "menuId":"分类Id",
+                "readTimes":"123",
+                "shareNum":"51",
+                "command": {
+                      "content" : "点击时的动作 请求商品详情接口"
+                },
+                "shareCommand": {
+                      "content" : "点击时的动作请求分享接口 更新分享数据"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "marginTop":"10",
+          "body":{
+            "tplId":"bd_articles_3",
+            "dataList":[
+              {
+                "pageId":"微刊id",
+                "pageType":"微刊类型",
+                "menuName":"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
+                "imageUrl":"http://pic.davdian.com/free/2017/02/07/1125_600_e77f444a214e48a4492e2ca553cc969d.jpg@!400h_750w_1e_1c",
+                "ctime":"时间",
+                "title":"标题",
+                "menuId":"分类Id",
+                "readTimes":"123",
+                "shareNum":"51",
+                "command": {
+                      "content" : "点击时的动作 请求商品详情接口"
+                },
+                "shareCommand": {
+                      "content" : "点击时的动作请求分享接口 更新分享数据"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "marginTop":"10",
+          "body":{
+            "tplId":"bd_articles_4",
+            "dataList":[
+              {
+                "pageId":"微刊id",
+                "pageType":"微刊类型",
+                "menuName":"哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈",
+                "imageUrl":"http://pic.davdian.com/free/2017/02/07/1125_600_e77f444a214e48a4492e2ca553cc969d.jpg@!400h_750w_1e_1c",
+                "ctime":"时间",
+                "title":"标题",
+                "menuId":"分类Id",
+                "readTimes":"123",
+                "shareNum":"51",
+                "command": {
+                      "content" : "点击时的动作 请求商品详情接口"
+                },
+                "shareCommand": {
+                      "content" : "点击时的动作请求分享接口 更新分享数据"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

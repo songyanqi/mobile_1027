@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>直播回放</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/video_live.css" rel="stylesheet">
+
+    <script>
+        var tj_id = 69;
+        var tj_path = "video_playback";
+
+        /////////////////////微信分享/////////////////////
+        // 店铺的图标
+        var imgUrl = "http://img.davdian.com/seller/shop_logo_22.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新                                                                                                                                                                                                                                               书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+        /////////////////////////////////////////////////
+    </script>
+
+
+</head>
+<body>
+<div class="video_playback_bg">
+    <div class="video_playback_con">
+        <div class="oval_load"><img src="//pic.davdian.com/free/oval.svg" alt=""></div>
+        <div class="transcoding">直播转码中</div>
+        <div class="app_link"><a href="">打开大V店，直播更流畅</a></div>
+    </div>
+
+    <div class="video_playback_play">
+        <div class="play_btn_con"><i class="play_btn"></i>00:00/00:00</div>
+        <div class="progress_bar_con"><span class="progress_bar_round"></span><span class="progress_bar"></span></div>
+    </div>
+
+    <div class="live_video_bottom">
+        <div class="download_con">
+            <div class="close_btn_con">
+                <span class="close_btn"></span>
+            </div>
+            <div class="center_con"><img src="//pic.davdian.com/free/live_video_logo_0629.png"></div>
+            <a href="//a.app.qq.com/o/simple.jsp?pkgname=com.davdian.seller" class="download_btn_con">
+                <div class="download_btn">下载</div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script src="../javascript/jweixin-1.0.0.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+
+<script src="../javascript/video_live_close.js"></script>
+
+</body>
+</html>

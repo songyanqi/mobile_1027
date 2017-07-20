@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/cart.css" rel="stylesheet">
+    <title>购物车</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:1,   // 头部首页按钮
+            shareOnHead:0
+        };
+        var page="空购物车";
+    </script>
+
+
+</head>
+<body>
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            购物车
+        </div>
+        <div class="top_right">
+            <a href="" class="top_home">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="cart_blank">
+    <div class="icon_cart dav_icon_cart_188_166"></div>
+    <div class="dav-color6 center">购物车还是空的，您再去逛逛吧</div>
+    <div class="button_container">
+        <div class="dav-btn btn-red center">去逛逛</div>
+    </div>
+
+    <div class="order dav-shadow">
+        <div class="order_title">
+            最近未支付订单
+        </div>
+        <a href="//nemo.davdian.com">
+            <div class="order_name_state">
+                <span class="order_name">王志芳</span>
+                <span class="order_state pull-right">
+                    <span>订单状态：</span>
+                    <span class="dav-red">未付款</span>
+                </span>
+            </div>
+
+
+            <!--单个商品-->
+            <div class="good_container">
+                <div class="img_container">
+                    <div class="img_container_inner">
+                        <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+                        <div class="order_good_info_container dav-small">
+                            <div class="order_good_name">贝亲 (Pigeon)食物研磨贝亲 (Pigeon)食物研磨贝亲 (Pigeon)食物研磨贝亲 (Pigeon)食物研磨贝亲 (Pigeon)食物研磨05008</div>
+                            <div class="order_good_price">￥128.00 X 1</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--单个商品end-->
+
+
+            <div class="order_price">金额：￥189.00</div>
+        </a>
+        <div class="out_button_container">
+            <a class="dav-btn btn-small order-btn-red pull-right">
+                立即支付
+            </a>
+            <a class="dav-btn btn-small pull-right">
+                找人代付
+            </a>
+        </div>
+    </div>
+
+
+    <div class="order dav-shadow">
+        <div class="order_title">
+            最近未支付订单
+        </div>
+        <a href="//nemo.davdian.com">
+            <div class="order_name_state">
+                <span class="order_name">王志芳</span>
+                <span class="order_state pull-right">
+                    <span>订单状态：</span>
+                    <span class="dav-red">未付款</span>
+                </span>
+            </div>
+            <!--多个商品就增加many_goods-->
+            <div class="good_container">
+                <div class="img_container many_goods">
+                    <div class="img_container_inner">
+                        <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+                        <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+                        <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+                        <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+                    </div>
+                </div>
+            </div>
+            <!--多个商品end-->
+
+
+
+            <div class="order_price">金额：￥189.00</div>
+        </a>
+        <div class="out_button_container">
+            <a class="dav-btn btn-small order-btn-red pull-right">
+                立即支付
+            </a>
+            <a class="dav-btn btn-small pull-right">
+                找人代付
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../javascript/cart.js"></script>
+
+
+</body>
+</html>

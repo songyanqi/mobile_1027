@@ -1,0 +1,43 @@
+{
+  "code": 0,
+  "msg": "success",
+  "has_more":true,
+  "data": [
+   {
+      "href": "http://wang.davdian.com/reverse_group.html?act=info&reverse_id=245",
+      "img_url": "//pic.davdian.com/goods/2016/02/23/640_280_399e424378f0b0f9e12fb92391b6af91.png",
+      "goods_name":"女儿四岁了，我们开始聊哲学（软精装，全彩手绘·四册，国内首部亲子对话哲首部亲子对话哲学智慧",
+      "leave_number": 2,
+      "left_time": 0,
+      "total_seller_income": 11,
+      "consignee": "*波",
+      "g_status": 1,
+      "discount":"99.02",
+      "pepole_number": 3
+    },
+    {
+      "href": "http://wang.davdian.com/reverse_group.html?act=info&reverse_id=245",
+      "img_url": "//pic.davdian.com/goods/2016/02/23/640_280_399e424378f0b0f9e12fb92391b6af91.png",
+      "goods_name":"女儿四岁了，我们开始聊哲学（软精装，全彩手绘·四册，国内首部亲子对话哲首部亲子对话哲学智慧",
+      "leave_number": 3,
+      "left_time": 22,
+      "total_seller_income": 22,
+      "consignee": "*波",
+      "g_status": 2,
+      "discount":"99.05",
+      "pepole_number": 3
+    },
+    {
+      "href": "http://wang.davdian.com/reverse_group.html?act=info&reverse_id=245",
+      "img_url": "//pic.davdian.com/goods/2016/02/23/640_280_399e424378f0b0f9e12fb92391b6af91.png",
+      "goods_name":"女儿四岁了，我们开始聊哲学（软精装，全彩手绘·四册，国内首部亲子对话哲首部亲子对话哲学智慧",
+      "leave_number": 4,
+      "left_time": 60,
+      "total_seller_income": 33,
+      "consignee": "*波",
+      "g_status": 3,
+      "discount":"99.40",
+      "pepole_number": 3
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "code": 0,
+  "status":1,
+  "data": {
+    "status": 1,
+    "prize": "p_four",
+    "bonus_name": "50元红包",
+    "type_money": "90",
+    "min_goods_amount": "199",
+    "can_use_time": "11.11-12.22"
+  },
+  "msg": "活动已结束"
+}

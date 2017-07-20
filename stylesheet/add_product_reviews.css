@@ -1,0 +1,56 @@
+.add_product_reviews { background: #fff;}
+
+.add_product_reviews_group {
+	padding-top: 4px;
+  padding-bottom: 0;
+  position: relative;
+  padding: 10px;
+  background: #fff; border-top:12px solid #f1f1f1;
+}
+.add_product_reviews_item{
+  padding: 4px 0 0px;
+  display: block;
+}
+.add_product_reviews_img_container{
+  width: 52px;
+  height: 52px;
+  border: #eee solid 1px;
+  float: left;
+}
+.add_product_reviews_info_container {
+  margin-left: 68px;
+  min-height: 58px;
+}
+
+.add_product_reviews_name {
+  height: 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+}
+
+.add_product_reviews_price {
+  margin-top: 4px;
+}
+
+.add_product_reviews .add_reviews{ padding-left:10px; padding-right:10px; border-top:10px solid #f1f1f1; position:relative;}
+.add_reviews_textarea{ border:1px solid #ddd;border-radius:3px;  min-height:125px; padding:10px; width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box; margin-bottom:35px; font-size:14px; margin-top:10px; background-color:#f1f1f1;resize:none;overflow:auto;}
+
+.add_reviews_sendbtn{ display: block; width:150px; height:32px; line-height:32px; text-align:center; color:#fff; background-color:#FF4A7D; font-size:14px; margin:0px auto;border-radius:3px; cursor:pointer;}
+
+.add_reviews_sendbtn.disable {
+  background-color: #ccc;
+}
+
+.add_reviews_sendbtn.disable img {
+  width: 16px;
+  margin-right: 5px;
+}
+
+.add_reviews_text{position:absolute; top:140px; right:22px; color:#bdbdbd;}
+
+.add_reviews_text.error {
+  color: #FF4A7D
+}

@@ -1,0 +1,90 @@
+
+.vip_ads {
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.vip_good_list {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+}
+.vip_good_list a {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.vip_good_list img {
+    width: 100%;
+}
+.vip_good_info {
+    background-color: #fff;
+    margin-top: 1px;
+    padding-bottom:2px;
+    padding-top: 4px;
+}
+.vip_good_title {
+    overflow: hidden;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 14px;
+    color: #666;
+}
+.vip_good_price {
+    color: #666;
+    font-size: 10px;
+    padding: 4px 10px 0 10px;
+}
+.vip_price {
+    padding-right:10px;
+    color: #FF4A7D;
+    font-size: 13px;
+}
+.vip_introduce{
+    padding:0 10px;
+}
+.vip_introduce_con{
+    margin-top: 22px;
+    font-size: 14px;
+    color: #333;
+}
+.vip_introduce_con .title{
+   color: #FF4A7D;
+}
+.vip_introduce_con .title:before{
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    display: inline-block;
+    background-color: #FF4A7D;
+    position: relative;
+    top: -3px;
+    margin-right: 6px;
+}
+.mt_5{
+    margin-top: 5px;
+}
+.vip_introduce_dvd{
+    font-size: 11px;
+    color: #666;
+    margin-top: 7px;
+}
+.open_vip_btn{
+    width: 110px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    background-color: #FF4A7D;
+    margin: 25px auto 0;
+    border-radius: 3px;
+}
+.back_store_bottom{
+    bottom: 0;
+}

@@ -1,0 +1,537 @@
+
+body {
+    background-color: #f0f0f0;
+    max-width:640px;
+    margin:0px auto;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: #333;
+    padding-top: 44px;
+}
+body.in_app{
+    padding-top: 0;
+}
+.footer {
+    background: #fff;
+    padding: 10px 15px 5px;
+}
+
+.footer .version_switcher{
+    border-bottom: #ddd solid 1px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.footer .version_switcher a{
+    width: 50%;
+    text-align:center;
+}
+
+.footer .version_switcher a:first-child{
+    border-right: #ddd solid 1px;
+}
+
+.footer .version_switcher a.selected{
+    color: #FF4A7D;
+}
+
+.footer .copyright p{
+    font-size: 12px;
+    text-align: center;
+    color: #999;
+    margin: 0;
+}
+
+.footer.fix{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.account_bouns .footer{
+    margin: 10px 0 10px;
+}
+
+.account_bouns .footer .version_switcher{
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    border-bottom: none;
+
+}
+.account_bouns .footer .version_switcher a{
+    color: #333; text-decoration:none;
+}
+.account_bouns .footer .version_switcher a.selected{
+    color: #FF4A7D; text-decoration:none;
+}
+
+.account_bouns .bouns_item{
+    margin: 10px 10px;
+    position: relative;
+    height: 110px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    border: 1px solid #E6E6E6;
+    background: #fff;
+}
+
+.account_bouns .bouns_red .topbg{
+    background: #FF4A7D;
+}
+.account_bouns .bouns_pink .topbg{
+    background: #FF4A7D;
+}
+.account_bouns .bouns_grey .topbg{
+    background: #ddd;
+}
+.account_bouns .bouns_item .topbg{
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 1px 0 0;
+    height: 8px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+.account_bouns .bouns_item .topbg_pic{
+    background: url(//pic.davdian.com/free/accountbouns_bg2_0503.png) repeat-x;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background-size: 6px;
+    position: absolute;
+    bottom: 0;
+}
+.account_bouns .bouns_item .con{
+    width: 100%;
+    height: 100%;
+}
+
+.account_bouns .bouns_item .con .instructions{
+    color: #666;
+    font-size: 10px;
+    height: 10px;
+    line-height:0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 14px 10px;
+    background: url(//pic.davdian.com/free/accountbouns_bg1_0503.png) repeat-x;
+    background-size:4px;
+}
+.account_bouns .bouns_item .con .red_type{
+    position:absolute;
+    top:10px;
+    left: 9px;
+    font-size: 10px;
+    color: #FF4A7D
+}
+
+.account_bouns .bouns_item .con .pull-left{
+    width: 80px;
+    font-size: 30px;
+    color: #FF4A7D;
+    margin-top:37px;
+    margin-left:13px;
+}
+.account_bouns .bouns_item .con .pull-left span{
+    font-size: 10px;
+    padding-right: 6px;
+}
+.account_bouns .bouns_item .con .pull-right{
+    margin-top:13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 14px;
+    color: #666;
+    width: 205px;
+    float: left;
+}
+.account_bouns_con .bouns_item .con .pull-right{
+    margin-top:13px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 14px;
+    color: #666;
+    width: 205px;
+    float: right;
+}
+.account_bouns .bouns_item .con .pull-right .title{
+    color: #333;
+    width: 160px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.account_bouns .bouns_item .con .pull-right .condition{
+    margin-top: 6px;
+    margin-bottom: 2px;
+    width: 160px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.account_bouns .bouns_grey .con .pull-left,.account_bouns .bouns_grey .con .red_type,.account_bouns .bouns_grey .con .instructions,.account_bouns .bouns_grey .con .pull-right,.account_bouns .bouns_grey .con .pull-right .title{
+    color: #ddd;
+}
+.account_bouns.bouns_send .send_item{
+    padding: 10px;
+    background: white;
+    color: #999;
+    font-size: 15px;
+    line-height: 42px;
+    margin-bottom: 10px;
+}
+
+.account_bouns.bouns_send .send_item .top{
+    color: #666;
+    font-size: 12px;
+    line-height: 21px;
+}
+.account_bouns.bouns_send .send_item .bottom{
+    color: #999;
+    font-size: 12px;
+    line-height: 21px;
+}
+
+.account_bouns.bouns_send p {
+    text-align: center;
+    font-size: 15px;
+    color: #999;
+    line-height: 50px;
+}
+
+.account_bouns.bouns_send img{
+    width: 100%;
+}
+
+.bouns_list a:hover{
+    text-decoration: none;
+}
+
+.bouns_list a:focus{
+    text-decoration: none;
+}
+
+* {
+
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+}
+.pull-left {
+    float: left!important;
+}
+
+.glyphicon-menu-right {
+    display: inline-block;
+    vertical-align: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-left: 15px;
+}
+
+.fz_14{ font-size: 14px;}
+.fz_18{ font-size: 18px;}
+.fw_b{ font-weight: bold;}
+.selected_state_default{
+    background-image: url(//pic.davdian.com/free/selected_state_dargray_0503.png);
+    background-size: 100%;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    top:36px;
+}
+.selected_state_selected{
+    background-image: url(//pic.davdian.com/free/selected_state_red_0503.png);
+}
+.used_seal{
+    background-image: url(//pic.davdian.com/free/used_seal_0503.png);
+    background-size: 100%;
+    display: inline-block;
+    width:130px;
+    height:95px;
+    position: absolute;
+    left: 50%;
+    margin-left: -65px;
+    top:50%;
+    margin-top: -47px;
+}
+.expired_seal{
+    background-image: url(//pic.davdian.com/free/expired_seal_0503.png);
+    background-size: 100%;
+    display: inline-block;
+    width:130px;
+    height:95px;
+    position: absolute;
+    left: 50%;
+    margin-left: -65px;
+    top:50%;
+    margin-top: -47px;
+}
+
+.not_used_red{
+    margin: 10px;
+    text-align:center;
+    background: #fff;
+    position: relative;
+    line-height: 40px;
+    font-size: 14px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    color: #FF4A7D;
+    border: 1px solid #E6E6E6;
+}
+.not_used_red a{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: #333;
+}
+.not_used_red a:hover{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    color: #333;
+}
+
+.not_used_red .icon{
+    display: inline-block;
+    vertical-align: 0;
+    margin-left: 2px;
+    width: 10px;
+    height: 10px;
+    border-top: 1px solid #bdbdbd;
+    border-right: 1px solid #bdbdbd;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 12px;
+    top: 16px;
+}
+.selected_state_small_default{
+    background-image: url(//pic.davdian.com/free/selected_state_dargray_small_0503.png);
+    background-size: 100%;
+    display: inline-block;
+    width:16px;
+    height: 16px;
+    position: absolute;
+    right: 14px;
+    top: 12px;}
+.selected_state_red{
+    background-image: url(//pic.davdian.com/free/selected_state_red_small_0503.png);
+    }
+
+.coupons_cont,.coupons_dueCont,.coupons_usedCont {
+  height: 100px;
+  margin: 10px;
+}
+.coupons_cont {
+  background: url(//pic.davdian.com/free/goodsDetail/coupon_icons.png) no-repeat center center;
+  background-size: 100% auto;
+}
+.coupons_dueCont {
+  background: url(//pic.davdian.com/free/goodsDetail/bouns_due_icon.png) no-repeat center center;
+  background-size: 100% auto;
+}
+.coupons_usedCont {
+  background: url(//pic.davdian.com/free/goodsDetail/used_bouns_icon.png) no-repeat center center;
+  background-size: 100% auto;
+}
+.coupons_cont .coupons_left,.coupons_dueCont .coupons_left,.coupons_usedCont .coupons_left {
+  float: left;
+  width: 27%;
+  height: 100px;
+  box-sizing: border-box;
+  color: #fff;
+  padding: 25px 0 15px 12px;
+}
+/*模版把¥写到span里面去了*/
+.coupons_cont .coupons_l_money,.coupons_dueCont .coupons_l_money,.coupons_usedCont .coupons_l_money {
+  font-size: 30px;
+  white-space: nowrap;
+  padding-bottom: 18.5px;
+  font-family: "PingFang SC";
+}
+.coupons_cont .coupons_l_money span,.coupons_dueCont .coupons_l_money span,.coupons_usedCont .coupons_l_money span {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 320px) {
+  .coupons_cont,.coupons_dueCont,.coupons_usedCont {
+    margin: 0;
+  }
+  .coupons_cont .coupons_l_money,.coupons_dueCont .coupons_l_money,.coupons_usedCont .coupons_l_money {
+    padding-bottom: 15px;
+    white-space: nowrap;
+  }
+}
+.coupons_cont .coupons_l_condition,.coupons_dueCont .coupons_l_condition,.coupons_usedCont .coupons_l_condition {
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.coupons_cont .coupons_right,.coupons_dueCont .coupons_right,.coupons_usedCont .coupons_right {
+  float: left;
+  width: 73%;
+  height: 100px;
+  box-sizing: border-box;
+  padding: 15px 0 15px 50px;
+}
+
+.coupons_cont .coupons_r_title,.coupons_dueCont .coupons_r_title,.coupons_usedCont .coupons_r_title {
+  font-size: 16px;
+  color: #333;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clame: 1;
+  line-clame: 1;
+}
+
+.coupons_cont .coupons_r_condition,.coupons_dueCont .coupons_r_condition,.coupons_usedCont .coupons_r_condition {
+  font-size: 12px;
+  color: #666;
+  padding: 5px 0 10px 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clame: 1;
+  line-clame: 1;
+}
+
+@media screen and (max-width: 320px) {
+  .coupons_cont .coupons_r_condition,.coupons_dueCont .coupons_r_condition,.coupons_usedCont .coupons_r_condition {
+    font-size: 12px;
+    color: #666;
+    padding: 2.5px 0 5px 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clame: 1;
+    line-clame: 1;
+  }
+
+  .coupons_cont .coupons_l_money,.coupons_dueCont .coupons_l_money,.coupons_usedCont .coupons_l_money {
+    padding-bottom: 15px;
+    white-space: nowrap;
+  }
+}
+
+.coupons_cont .coupons_r_date,.coupons_dueCont .coupons_r_date,.coupons_usedCont .coupons_r_date {
+  font-size: 11px;
+  color: #999;
+}
+
+/*新增*/
+.confirm_tips {
+  font-size: 12px;
+  position: fixed;
+  bottom: 49px;
+  width: 100%;
+  line-height: 16px;
+  max-width: 640px;
+  background: rgba(102,102,102,.95);
+  color: #fff;
+  padding: 10px 0 10px 10px;
+}
+@media screen and (max-width: 320px) {
+  /*.confirm_tips {*/
+    /*padding: 5px 0 5px 10px;*/
+  /*}*/
+}
+.confirm_mem {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: fixed;
+  bottom: 49px;
+  width: 100%;
+  max-width: 640px;
+  /*background: rgba(0,0,0,.5);*/
+  background: rgba(102,102,102,.95);
+  padding: 0 10px;
+  /*height: 40px;*/
+  line-height: 16px;
+  white-space: nowrap;
+  color: #fff;
+}
+.confirm_mem .comfirm_mem_tips {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  height: 36px;
+  line-height: 36px;
+  /*height: 40px;*/
+  /*line-height: 40px;*/
+}
+.confirm_mem .comfirm_mem_open {
+  font-size: 11px;
+  height: 24px;
+  line-height: 24px;
+  padding: 0 5px;
+  margin: 6px 0;
+  color: #FFEDC3;
+  border: 1px solid #FFECC2;
+  border-radius: 15px;
+}
+.newConfirm_nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  height: 49px;
+  max-width: 640px;
+  line-height: 49px;
+  background: rgba(248, 248, 248, .98);
+
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.newConfirm_nav .newConfirm_l_tips {
+  color: #333;
+  font-weight: bold;
+}
+.newConfirm_nav .newConfirm_money {
+  color: #FF4A7D;
+}
+.newConfirm_nav .newConfirm_left {
+  padding-left: 10px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.newConfirm_nav .newConfirm_right {
+  width: 100px;
+  background: linear-gradient(to right, #FF5B5B, #FA1862);
+  background: -moz-linear-gradient(right, #FF5B5B, #FA1862);
+  background: -o-linear-gradient(right, #FF5B5B, #FA1862);
+  background: -webkit-linear-gradient(left, #FF5B5B, #FA1862);
+  text-align: center;
+  color: #fff;
+}
+.newConfirm_nav .disableGray {
+  background: linear-gradient(90deg,#c1c1c1,#999);
+  background: -moz-linear-gradient(right, #FF5B5B, #FA1862);
+  background: -o-linear-gradient(right, #FF5B5B, #FA1862);
+  background: -webkit-linear-gradient(left,#c1c1c1,#999);
+}

@@ -1,0 +1,436 @@
+footer {
+  width: 100%;
+  height: 50px;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+}
+
+footer div {
+  border-top: 1px solid #e3dfd8;
+  float: left;
+  width: 25%;
+  box-sizing: border-box;
+}
+
+.load {
+  width: 140px;
+  height: 140px;
+  position: fixed;
+  z-index: 101;
+  background: url('//pic.davdian.com/free/index0925_icon1.png') no-repeat;
+  background-size: contain;
+  top: 50%;
+  margin-left: -70px;
+  margin-top: -70px;
+  left: 50%;
+
+}
+
+.other_info {
+  width: 100%;
+}
+
+.mask_activity1 {
+  width: 100%;
+  max-width: 640px;
+  height: 40px;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+}
+
+.mask_activity2_f {
+  width: 100%;
+  max-width: 640px;
+  position: fixed;
+  z-index: 101;
+  top: 132px;
+  bottom: 117px;
+}
+
+.mask_activity2 {
+  position: absolute;
+  z-index: 103;
+  /*background: url('http://m2.quanjing.com/2m/alamyrf005/b1fw89.jpg') no-repeat center;*/
+  /*background-size: contain;*/
+  top: 0;
+  left: 40px;
+  right: 40px;
+  bottom: 0;
+}
+
+.mask_activity2_mask {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  background: #000;
+  opacity: .4;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/*.mask_activity2_img{*/
+/*	position: absolute;
+	z-index: 110; 
+	top: 50%;  
+	left: 50%;
+    margin: auto;
+    background: red;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);  
+}*/
+.exit {
+  width: 30px;
+  height: 30px;
+  background: #AAA;
+  color: #eee;
+  font-size: 26px;
+  text-align: center;
+  line-height: 30px;
+  z-index: 101;
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  border-radius: 50%;
+}
+
+.mask_sign {
+  width: 215px;
+  height: 138px;
+  position: fixed;
+  top: 245px;
+  left: 50%;
+  margin-left: -108px;
+  z-index: 100;
+  border-radius: 10px;
+}
+
+.mask_sign_title {
+  width: 150px;
+  height: 38px;
+  color: #FFF240;
+  font-size: 30px;
+  margin-top: 20px;
+  margin-left: 48px;
+}
+
+.mask_sign_content {
+  font-size: 18px;
+  color: #FFF240;
+  text-align: center;
+}
+
+.unLoad {
+  width: 100%;
+  height: 400px;
+  position: fixed;
+  top: 180px;
+  z-index: 101;
+  max-width: 640px;
+  color: #333;
+}
+
+.unLoad-img {
+  width: 122px;
+  height: 140px;
+  top: 0;
+  margin: auto;
+  background: url('//pic.davdian.com/free/2016/12/08/no_sign.png') no-repeat;
+  background-size: contain;
+}
+
+.unLoad-title {
+  width: 98px;
+  height: 20px;
+  margin: 30px auto;
+}
+
+.unLoad-btn {
+  width: 140px;
+  height: 33px;
+  text-align: center;
+  line-height: 33px;
+  margin: 20px auto;
+  border: 1px solid #999999;
+  border-radius: 2.5px;
+}
+
+/*圣诞节雪花飘样式*/
+#snow_ctnr {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  overflow: hidden;
+  opacity: 1;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.snow_dom_slice {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 600px
+}
+
+.snow_fall {
+  -webkit-transform-origin: 0% 0%;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  transform-origin: 0% 0%;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite
+}
+
+.snow_01 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  height: 100%;
+  -webkit-animation-name: snow_falling_fore;
+  animation-name: snow_falling_fore;
+  top: -100%
+}
+
+.snow_02 {
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+  -webkit-animation-name: snow_falling_fore;
+  animation-name: snow_falling_fore;
+  top: -100%;
+  height: 100%
+}
+
+.snow_03 {
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 40s;
+  animation-delay: 0s;
+  animation-duration: 40s;
+  opacity: .5;
+  -webkit-animation-name: snow_falling_mid;
+  animation-name: snow_falling_mid;
+  top: -100%;
+  height: 100%
+}
+
+.snow_04 {
+  -webkit-animation-delay: 20s;
+  -webkit-animation-duration: 40s;
+  animation-delay: 20s;
+  animation-duration: 40s;
+  opacity: .5;
+  -webkit-animation-name: snow_falling_mid;
+  animation-name: snow_falling_mid;
+  top: -100%;
+  height: 100%
+}
+
+.snow_drifter {
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  background-image: url(//pic.davdian.com/free/2016/12/15/600_200_728246d615eb6334238d443b7a4bdc7c.png)
+}
+
+@-webkit-keyframes snow_falling_fore {
+  0% {
+    top: -100%;
+    opacity: 0
+  }
+
+  1% {
+    top: -100%;
+    opacity: 1
+  }
+
+  99.8% {
+    top: 100%;
+    opacity: 1
+  }
+
+  99.9% {
+    opacity: 0
+  }
+
+  100% {
+    top: -100%;
+    opacity: 0
+  }
+}
+
+@keyframes snow_falling_fore {
+  0% {
+    top: -100%;
+    opacity: 0
+  }
+
+  1% {
+    top: -100%;
+    opacity: 1
+  }
+
+  99.8% {
+    top: 100%;
+    opacity: 1
+  }
+
+  99.9% {
+    opacity: 0
+  }
+
+  100% {
+    top: -100%;
+    opacity: 0
+  }
+}
+
+@-webkit-keyframes snow_falling_mid {
+  0% {
+    top: -100%;
+    opacity: 0
+  }
+
+  1% {
+    top: -100%;
+    opacity: 1
+  }
+
+  99.8% {
+    top: 100%;
+    opacity: 1
+  }
+
+  99.9% {
+    opacity: 0
+  }
+
+  100% {
+    top: -100%;
+    opacity: 0
+  }
+}
+
+@keyframes snow_falling_mid {
+  0% {
+    top: -100%;
+    opacity: 0
+  }
+
+  1% {
+    top: -100%;
+    opacity: 1
+  }
+
+  99.8% {
+    top: 100%;
+    opacity: 1
+  }
+
+  99.9% {
+    opacity: 0
+  }
+
+  100% {
+    top: -100%;
+    opacity: 0
+  }
+}
+
+.downAppWrap {
+  position: fixed;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.downApp{
+  width: 100%;
+  min-height: 20px;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  max-width: 640px;
+  margin: auto auto;
+  right: 0;
+}
+.downApp img{
+  width: 100%;
+}
+.downApp a{
+  display: inline-block;
+  height: 12%;
+  width: 25%;
+  position:absolute;
+  bottom:13.76%
+}
+.downApp a:nth-of-type(1){
+  left:4%;
+}
+.downApp a:nth-of-type(2){
+  left:31.2%;
+}
+.downApp .close8{
+    position: absolute;
+  right:0;
+  top:0;
+  height: 15%;
+  width: 10%;
+}
+.getReward{
+  position: fixed;
+  z-index: 15;
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.getReward a{
+  display: inline-block;
+  width: 73.333%;
+  min-height: 20px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+.getReward a img{
+  width: 100%;
+}
+.rewardiv_close{
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  right: 0;
+  background-image: url(//pic.davdian.com/free/2017/06/13/clearInput.png);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center center;
+}

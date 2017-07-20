@@ -1,0 +1,42 @@
+<div class="good_list_2_row" >
+    <div ng-if="!goods.length" class="logo_container">
+        <div class="logo_left"></div>
+        <div class="logo_right"></div>
+    </div>
+
+    <a ng-if="goods.length" href="/{{item.goods_id}}.html?_refer=index_hot" class="good_item" ng-repeat="(key,item) in goods"
+       data-dav-tj="index|hot_good|hot_good_{{item.goods_id}}|1|hot_good@index" data-url="/{{item.goods_id}}.html?_refer=index_hot">
+        <div class="good_img_container">
+            <img src="//pic.davdian.com/free/loading_320_320_v2.png"
+                 data-original="{{item.goods_img}}"
+                 style="display: inline;">
+            <div class="{{item.tag}}"></div>
+            <div ng-if="!item.sale_status==''|| !item.sale_status=='undefined'" class="good_list_sell_out">
+                <span ng-if="item.sale_status=='soldout'">售罄</span>
+                <span ng-if="item.sale_status=='offline'">未上架</span>
+            </div>
+        </div>
+        <div class="good_con">
+            <div class="good_title">{{item.goods_name}}</div>
+            <div class="fz_12">
+                <span class="dav-color-price">¥{{item.shop_price}}</span>
+                <span ng-if="!item.goods_label==''" class="lable">{{item.goods_label}}</span>
+            </div>
+        </div>
+    </a>
+
+    <div ng-if="goods.length" style="clear: both;">
+
+    </div>
+    <div ng-if="goods.length&&!has_more" class="no_more">
+        没有更多商品了
+    </div>
+
+    <div ng-if="goods.length&&has_more" class="no_more has_mores">
+        点击加载更多
+    </div>
+
+    <!--<div ng-if="goods.length&&has_more" class="no_more">-->
+        <!--商品加载中 <img src="//pic.davdian.com/free/loading_03252.svg">-->
+    <!--</div>-->
+</div>

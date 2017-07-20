@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/cashier.css" rel="stylesheet">
+    <title>收银台</title>
+    <script>
+        //支付宝跳转链接//
+        var alipayUrl="";
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+    </script>
+</head>
+<body class="index_scroll">
+
+<!-- 以下为顶部搜索 -->
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            收银台
+        </div>
+    </div>
+</div>
+
+<div class="cashier_to_pay dav-group">
+    <div class="dav-item">
+        需支付：<span class="price pull-right"><span class="fz13">￥</span>66.00元</span>
+    </div>
+</div>
+
+<div class="cashier_pay_type dav-group">
+
+    <div class="dav-item alipay_wechat" data-name="we">
+        <span class="icon icon_alipay"></span>支付宝支付<span class="icon icon_dy"></span>
+    </div>
+
+    <!-- 在微信里展示这三个 -->
+    <div class="dav-item" data-name="we">
+        <span class="icon icon_wechat"></span>微信支付<span class="icon icon_dy"></span>
+    </div>
+
+    <div class="dav-item i-am-zk" data-name="we"> <!-- 加了i-am-zk就不跳转了 如果需要跳转就不加-->
+        <span class="icon icon_bank_card"></span>银行卡快捷支付<span class="icon arrow_up"></span>
+    </div>
+    <div class="bank-card">
+        <div class="dav-item add" data-name="we">
+            <span class="icon icon_bank_detail detail_1"></span>工商银行储蓄卡（尾号2113）
+        </div>
+        <div class="dav-item add" data-name="we">
+            <span class="icon icon_bank_detail detail_2"></span>工商银行储蓄卡（尾号2113）
+        </div>
+        <div class="dav-item add" data-name="we">
+            <span class="icon_plus"></span>使用新的银行卡
+        </div>
+        <div class="dav-item add" data-name="we">
+            <span class="icon_plus"></span>使用新的银行卡
+        </div>
+    </div>
+
+    <!-- 在微信里展示这三个 -->
+    <a href="IEP_Send.html">
+        <div class="dav-item i-am-jujuede" data-name="we">
+            <span class="icon icon_iep_ico"></span>找人代付<span class="icon icon_dy"></span>
+        </div>
+    </a>
+
+
+</div>
+<!-- 电脑上再多展示一个二维码 -->
+<div class="pay-qr">
+    <img src="//pic.davdian.com/free/qr_new.png">
+
+    <div class="pay-text">
+        微信扫二维码支付
+    </div>
+</div>
+
+<div class="cashier_bottom">
+    本店交易由大V店进行担保
+</div>
+<div class="cashier_picc">
+    正品由<span class="picc_pic"></span>保险承保
+</div>
+<div class="mask hide">
+     <img src="//pic.davdian.com/free/alipay_wechat_prompt.png">
+</div>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+
+<script type="text/javascript">
+
+
+    $(".cashier_pay_type").find(".dav-item").click(function(){
+        if($(this).hasClass("i-am-jujuede")){
+
+        }else if($(this).hasClass("i-am-zk")){
+            if(!$(this).hasClass("zd")){
+                $(this).addClass("zd");
+                $(".bank-card").addClass('hide');
+            }else{
+                $(this).removeClass("zd");
+                $(".bank-card").removeClass('hide');
+            }
+        }else if($(this).hasClass("alipay_wechat")){
+            if(Units.isWechat()==true){
+                $(".mask").removeClass("hide")
+            }
+            else {
+                window.location.href=alipayUrl
+            }
+        }
+        else{
+            var name=$(this).attr("data-name");
+            if(name == 'webchat') {
+                // bravetime.newInfo("正在连接安全支付...");
+                callpay();
+            } else {
+                var url = '//nemo.davdian.com/pay.html?pay_id=421454&sign=de8ba6cb0933de430e8d0f29fb8c82d9&pay_type=' + name;
+                bravetime.newInfo("正在连接安全支付...");
+                $.ajax({
+                    type: 'GET',
+                    url: url,
+                    data: {},
+                    dataType: "jsonp",
+                    success: function(result) {
+                        $('.dialog_mask').hide(); //取消文字显示
+                        if (result.error) {
+                            bravetime.newAlert(result.msg);
+                        } else {
+                            window.location.href = result.url;
+                        }
+                    },
+                    error: function() {
+                        bravetime.hideNew();
+                        bravetime.ajaxError(1);
+                        bravetime.newAlert("连接失败");
+                    }
+                });
+            }
+        }
+    });
+
+    $(".mask").click(function () {
+        $(this).addClass("hide");
+    });
+</script>
+
+</body>
+</html>

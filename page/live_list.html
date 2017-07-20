@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="http://cdn.davdian.com/swiper/swiper-3.3.1.min.css" rel="stylesheet">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/live.css" rel="stylesheet">
+    <link href="../stylesheet/video_live.css" rel="stylesheet">
+    <title>妈妈课堂</title>
+
+    <script type="text/javascript">
+        //统计
+        var tj_id = 61;
+        var tj_path = 'live_list';
+        var live_list='../data/live_list.json';
+        var userId=222;
+        var attentionUrl="/index.php?m=default&c=videoLive&a=follow";//关注url
+
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+
+        //分享的基本信息
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+
+    </script>
+</head>
+<!--app里面body增加in_app的class-->
+<body style="padding-bottom: 0" class="scroll_flag">
+<!--app 里面不要top0 这个div-->
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();" >
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            妈妈课堂-家长阅读
+        </div>
+        <div class="top_right">
+            <a href="/" class="top_home">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- 轮播图 -->
+<div class="swiper-container index_ads">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href=""><img  src="//pic.davdian.com/free/index_ad_01_0802.png@.webp"></a></div>
+        <div class="swiper-slide"><a href=""><img class="swiper-lazy" data-src="//pic.davdian.com/free/index_ad_02_0802.png"></a></div>
+        <div class="swiper-slide"><a href=""><img class="swiper-lazy" data-src="http://pic.davdian.com/activity/2016/08/17/1125_480_ebed383ce09e922120a0f72c8be3963f.png"></a></div>
+    </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!--直播-->
+<div class="live_video_title_page exclusiveOwner mt_10">
+    <img src="//pic.davdian.com/free/live_video_big_pic.png">
+    <div class="exclusive_owner">店主专享</div>
+    <div class="people_num">1.3万</div>
+    <div class="play_icon">直播中</div>
+    <div class="title">#和大V店一起，为爱漂流...</div>
+</div>
+
+<div class="live_video_attention">
+    <div class="live_video_attention_left">
+        <img class="shop_img" src="http://pic.davdian.com/free/live_head_64_64.png"></div>
+    <div class="live_video_attention_center">
+        <div class="title"><span>风过梧桐</span><i class="v_icon"><img src="//pic.davdian.com/free/official_certification_icon.png"></i></div>
+        <div class="summary">来我的大V店,做更好的妈妈</div>
+    </div>
+    <div class="live_video_attention_right">
+        <div class="list_attention">关注</div>
+        <div class="already_attention hide">已关注</div>
+    </div>
+</div>
+
+<div class="hot_live_video mb_7 mt_10">
+    <ul class="hot_list clearfix">
+        <li class="exclusiveOwner">
+            <div class="top">
+                <img src="//pic.davdian.com/free/live_video_small_pic.png">
+                <div class="list_exclusive_owner">店主专享</div>
+                <div class="list_live"><i class="live_icon"></i>直播中</div>
+                <div class="list_title">
+                    <i class="map_icon"></i>巴布亚新几内亚
+                </div>
+            </div>
+            <div class="con clearfix">
+                <div class="con_title">#天才宝宝#谁知道你的宝宝竟然是天才</div>
+                <div class="mt_15 c6 con_content clearfix">
+                    <div class="pull-left">小兔妈<i class="v_icon"><img
+                            src="//pic.davdian.com/free/official_certification_icon.png"></i></div>
+                    <div class="pull-right">1.2万人</div>
+                </div>
+            </div>
+        </li>
+        <li class="exclusiveOwner">
+            <div class="top">
+                <img src="//pic.davdian.com/free/live_video_small_pic.png">
+                <div class="list_exclusive_owner">店主专享</div>
+                <div class="list_live"><i class="live_icon"></i>直播中</div>
+                <div class="list_title">
+                    <i class="map_icon"></i>巴布亚新几内亚
+                </div>
+            </div>
+            <div class="con clearfix">
+                <div class="con_title">#天才宝宝#谁知道你的宝宝竟然是天才</div>
+                <div class="mt_15 c6 con_content clearfix">
+                    <div class="pull-left">小兔妈<i class="v_icon"><img
+                            src="//pic.davdian.com/free/official_certification_icon.png"></i></div>
+                    <div class="pull-right">1.2万人</div>
+                </div>
+            </div>
+        </li>
+        <li class="exclusiveOwner">
+            <div class="top">
+                <img src="//pic.davdian.com/free/live_video_small_pic.png">
+                <div class="list_exclusive_owner">店主专享</div>
+                <div class="list_live"><i class="live_icon"></i>直播中</div>
+                <div class="list_title">
+                    <i class="map_icon"></i>巴布亚新几内亚
+                </div>
+            </div>
+            <div class="con clearfix">
+                <div class="con_title">#天才宝宝#谁知道你的宝宝竟然是天才</div>
+                <div class="mt_15 c6 con_content clearfix">
+                    <div class="pull-left">小兔妈<i class="v_icon"><img
+                            src="//pic.davdian.com/free/official_certification_icon.png"></i></div>
+                    <div class="pull-right">1.2万人</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="live_list">
+    <div class="live_list_title">妈妈课堂回顾</div>
+    <div class="live_list_con clearfix mt_10">
+        <ul id="review_list">
+            <a href="">
+                <li>
+                    <div class="list_pic">
+                        <img data-original="//pic.davdian.com/free/live_list_pic_0419.jpg" src="//pic.davdian.com/free/live_default_squre_0419.png">
+                        <div class="partake" isapply="true" status="3" type="2"></div>
+                        <div class="time" data-remain-second="0" starttime="1461154500" nowtime="1461240900" prefix="" status="4"></div>
+                    </div>
+                    <div class="list_con">
+                        <div class="clearfix title">让我们一起读懂孩子超级育儿师兰海力作</div>
+                        <div class="clearfix"><span class="listen_number">10万</span><span class="pull-right c6">大咖课</span></div>
+                    </div>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <div class="list_pic">
+                        <img data-original="//pic.davdian.com/free/live_list_pic_0419.jpg" src="//pic.davdian.com/free/live_default_squre_0419.png">
+                        <div class="partake" isapply="true" status="3" type="2"></div>
+                        <div class="time" data-remain-second="0" starttime="1459854420" nowtime="1461240900" prefix="" status="4"></div>
+                    </div>
+                    <div class="list_con">
+                        <div class="clearfix title">让我们一起读懂孩子超级育儿师兰海力作</div>
+                        <div class="clearfix"><span class="listen_number c6">10万</span><span class="pull-right c6">大咖课</span></div>
+                    </div>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <div class="list_pic">
+                        <img data-original="//pic.davdian.com/free/live_list_pic_0419.jpg" src="//pic.davdian.com/free/live_default_squre_0419.png">
+                        <div class="partake" isapply="true" status="3" type="2"></div>
+                        <div class="time" data-remain-second="0" starttime="1459514640" nowtime="1461240900" prefix="" status="4"></div>
+                    </div>
+                    <div class="list_con">
+                        <div class="clearfix title">让我们一起读懂孩子超级育儿师兰海力作</div>
+                        <div class="clearfix"><span class="listen_number">10万</span><span class="pull-right c6">大咖课</span></div>
+                    </div>
+                </li>
+            </a>
+            <a href="">
+                <li>
+                    <div class="list_pic">
+                        <img data-original="//pic.davdian.com/free/live_list_pic_0419.jpg" src="//pic.davdian.com/free/live_default_squre_0419.png">
+                        <div class="partake" isapply="true" status="3" type="2"></div>
+                        <div class="time" data-remain-second="0" starttime="1459514640" nowtime="1461240900" prefix="" status="4"></div>
+                    </div>
+                    <div class="list_con">
+                        <div class="clearfix title">让我们一起读懂孩子超级育儿师兰海力作</div>
+                        <div class="clearfix"><span class="listen_number c6">10万</span><span class="pull-right c6">大咖课</span></div>
+                    </div>
+                </li>
+            </a>
+        </ul>
+    </div>
+</div>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script src="../javascript/jweixin-1.0.0.js"></script>
+<script src="http://cdn.davdian.com/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../cdn/jquery/jquery.lazyload.js"></script>
+<script src="../javascript/live_list.js"></script>
+</body>
+</html>

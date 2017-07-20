@@ -1,0 +1,436 @@
+{
+  "code": 0,
+  "referer":{
+    "rp":"best",
+    "rl":"sell"
+  },
+  "data": [
+    {
+      "goods_id": "61432",
+      "goods_name": "\u4e50\u9ad8 \u6e29\u99a8\u5bb6\u5ead10686",
+      "goods_img": "http:\/\/pic.davdian.com\/goods\/2016\/06\/06\/640_640_21e5a1a95438f3e3ef3a33f80b7ea7ef.jpg@!1e_1c_0o_0l_320h_320w.webp",
+      "shop_price": "82.57",
+      "suggest_price": 0,
+      "goods_number": 0,
+      "sale_status": "",
+      "goods_label": "95\u6298",
+      "ratio": 2,
+      "pic_info": "11",
+      "act_type": "5",
+      "tag": ""
+    },
+    {
+      "goods_id": "28122",
+      "goods_name": "\u4e50\u9ad8 \u6d88\u9632\u603b\u5c40\uff082016\uff0960110",
+      "goods_img": "http:\/\/pic.davdian.com\/goods\/2016\/04\/14\/640_640_9b888054d4c6cb8f91837fbf3372d92e.jpg@!1e_1c_0o_0l_320h_320w.webp",
+      "shop_price": "206.77",
+      "suggest_price": 0,
+      "goods_number": 0,
+      "sale_status": "",
+      "goods_label": "95\u6298",
+      "ratio": 0,
+      "pic_info": "",
+      "act_type": "5",
+      "tag": ""
+    },
+    {
+      "goods_id": "28121",
+      "goods_name": "\u4e50\u9ad8 \u6d88\u9632\u76f4\u5347\u673a\u7ec4\u5408 60108",
+      "goods_img": "http:\/\/pic.davdian.com\/goods\/2016\/04\/14\/640_640_e13211c666011e790c72646a6215463e.jpg@!1e_1c_0o_0l_320h_320w.webp",
+      "shop_price": "64.17",
+      "suggest_price": 0,
+      "goods_number": 0,
+      "sale_status": "",
+      "goods_label": "95\u6298",
+      "ratio": 0,
+      "pic_info": "",
+      "act_type": "5",
+      "tag": ""
+    },
+    {
+      "goods_id": "28120",
+      "goods_name": "\u4e50\u9ad8 \u4e91\u68af\u6d88\u9632\u8f66 60107",
+      "goods_img": "http:\/\/pic.davdian.com\/goods\/2016\/04\/14\/640_640_44d14e2f7f63deacccfa8f8b9c21af19.jpg@!1e_1c_0o_0l_320h_320w.webp",
+      "shop_price": "41.17",
+      "suggest_price": 0,
+      "goods_number": 0,
+      "sale_status": "",
+      "goods_label": "95\u6298",
+      "ratio": 0,
+      "pic_info": "",
+      "act_type": "5",
+      "tag": ""
+    },
+    {
+      "goods_id": "28119",
+      "goods_name": "\u4e50\u9ad8 \u6df1\u6d77\u63a2\u9669\u52d8\u63a2\u8239 60095",
+      "goods_img": "http:\/\/pic.davdian.com\/goods\/2016\/04\/20\/640_640_37968fdbbd76d3b34e970fe078250a80.jpg@!1e_1c_0o_0l_320h_320w.webp",
+      "shop_price": "229.77",
+      "suggest_price": 0,
+      "goods_number": 0,
+      "sale_status": "",
+      "goods_label": "95\u6298",
+      "ratio": 0,
+      "pic_info": "",
+      "act_type": "5",
+      "tag": ""
+    },
+    {
+      "goods_id": "28117",
+      "goods_name": "\u4e50\u9ad8 \u6df1\u6d77\u63a2\u9669\u5165\u95e8\u5957\u88c5 60091",
+      "goods_img": "http:\/\/pic.davdian.com\/goods\/2016\/04\/14\/640_640_1223b583f732f22225b8b039832394bb.jpg@!1e_1c_0o_0l_320h_320w.webp",
+      "shop_price": "20.47",
+      "suggest_price": 0,
+      "goods_number": 0,
+      "sale_status": "",
+      "goods_label": "95\u6298",
+      "ratio": 0,
+      "pic_info": "",
+      "act_type": "5",
+      "tag": ""
+    },
+    {
+      "goods_id": "28116",
+      "goods_name": "\u4e50\u9ad8 \u57ce\u5e02\u5efa\u7b51\u5de5\u7a0b\u5165\u95e8\u5957\u88c5 60072",
+      "goods_img": "http:\/\/pic.davdian.com\/goods\/2016\/04\/14\/640_640_59aa843f0b161572afc665163bcd7871.jpg@!1e_1c_0o_0l_320h_320w.webp",
+      "shop_price": "20.47",
+      "suggest_price": 0,
+      "goods_number": 0,
+      "sale_status": "",
+      "goods_label": "95\u6298",
+      "ratio": 0,
+      "pic_info": "",
+      "act_type": "5",
+      "tag": ""
+    },
+    {
+      "goods_id": "28115",
+      "goods_name": "\u4e50\u9ad8 \u6c14\u57ab\u8239\u5927\u8ffd\u6355 60071",
+      "goods_img": "http:\/\/pic.davdian.com\/goods\/2016\/04\/14\/640_640_97a4f1cacfaed023e0f5568bf61a192d.jpg@!1e_1c_0o_0l_320h_320w.webp",
+      "shop_price": "91.77",
+      "suggest_price": 0,
+      "goods_number": 0,
+      "sale_status": "",
+      "goods_label": "95\u6298",
+      "ratio": 0,
+      "pic_info": "",
+      "act_type": "5",
+      "tag": ""
+    },
+    {
+      "goods_id": "28114",
+      "goods_name": "\u4e50\u9ad8 \u5192\u9669\u8425\u5730\u6811\u5c4b 41122",
+      "goods_img": "http:\/\/pic.davdian.com\/goods\/2016\/04\/14\/640_640_212a41e98ab21d067f16cd59b8118c3a.jpg@!1e_1c_0o_0l_320h_320w.webp",
+      "shop_price": "137.77",
+      "suggest_price": 0,
+      "goods_number": 0,
+      "sale_status": "",
+      "goods_label": "95\u6298",
+      "ratio": 0,
+      "pic_info": "",
+      "act_type": "5",
+      "tag": ""
+    },
+    {
+      "goods_id": "28112",
+      "goods_name": "\u4e50\u9ad8 \u5927\u6b4c\u661f\u6f14\u51fa\u821e\u53f0 41105",
+      "goods_img": "http:\/\/pic.davdian.com\/goods\/2016\/04\/14\/640_640_c817fc27b1c24e74df6763013892b055.jpg@!1e_1c_0o_0l_320h_320w.webp",
+      "shop_price": "91.77",
+      "suggest_price": 0,
+      "goods_number": 0,
+      "sale_status": "",
+      "goods_label": "95\u6298",
+      "ratio": 0,
+      "pic_info": "",
+      "act_type": "5",
+      "tag": ""
+    }
+  ],
+  "catIds": [
+    {
+      "label": "A",
+      "info": [
+        {
+          "name": "\u5b89\u5168\u51fa\u884c",
+          "catId": "193"
+        }
+      ]
+    },
+    {
+      "label": "B",
+      "info": [
+        {
+          "name": "\u5b9d\u5b9d\u670d\u9970",
+          "catId": "38"
+        },
+        {
+          "name": "\u5b9d\u5b9d\u6d17\u62a4",
+          "catId": "68"
+        }
+      ]
+    },
+    {
+      "label": "C",
+      "info": [
+        {
+          "name": "\u9910\u996e\u5177",
+          "catId": "125"
+        },
+        {
+          "name": "\u521b\u610f\u793c\u54c1",
+          "catId": "165"
+        }
+      ]
+    },
+    {
+      "label": "F",
+      "info": [
+        {
+          "name": "\u9632\u6652\u9a71\u868a",
+          "catId": "183"
+        }
+      ]
+    },
+    {
+      "label": "J",
+      "info": [
+        {
+          "name": "\u5bb6\u7528\u7535\u5668",
+          "catId": "126"
+        },
+        {
+          "name": "\u5bb6\u7eba",
+          "catId": "127"
+        },
+        {
+          "name": "\u9152\u6c34\u51b2\u8c03",
+          "catId": "163"
+        },
+        {
+          "name": "\u79ef\u6728\u62fc\u63d2",
+          "catId": "174"
+        }
+      ]
+    },
+    {
+      "label": "K",
+      "info": [
+        {
+          "name": "\u79d1\u666e\u767e\u79d1",
+          "catId": "74"
+        },
+        {
+          "name": "\u53e3\u8154\u62a4\u7406",
+          "catId": "144"
+        },
+        {
+          "name": "\u53e3\u8154\u536b\u751f",
+          "catId": "184"
+        }
+      ]
+    },
+    {
+      "label": "L",
+      "info": [
+        {
+          "name": "\u4e50\u5668\u73a9\u5177",
+          "catId": "177"
+        }
+      ]
+    },
+    {
+      "label": "M",
+      "info": [
+        {
+          "name": "\u7f8e\u5473\u8f85\u98df",
+          "catId": "31"
+        },
+        {
+          "name": "\u9762\u90e8\u62a4\u7406",
+          "catId": "142"
+        },
+        {
+          "name": "\u9762\u819c",
+          "catId": "150"
+        }
+      ]
+    },
+    {
+      "label": "N",
+      "info": [
+        {
+          "name": "\u5973\u88c5",
+          "catId": "129"
+        },
+        {
+          "name": "\u5973\u6027\u62a4\u7406",
+          "catId": "149"
+        },
+        {
+          "name": "\u5185\u8863",
+          "catId": "159"
+        },
+        {
+          "name": "\u7537\u7ae5\u670d\u88c5",
+          "catId": "187"
+        },
+        {
+          "name": "\u5973\u7ae5\u670d\u88c5",
+          "catId": "188"
+        }
+      ]
+    },
+    {
+      "label": "P",
+      "info": [
+        {
+          "name": "\u914d\u9970",
+          "catId": "160"
+        },
+        {
+          "name": "\u722c\u884c\u8da3\u73a9",
+          "catId": "180"
+        }
+      ]
+    },
+    {
+      "label": "Q",
+      "info": [
+        {
+          "name": "7-9\u5c81",
+          "catId": "92"
+        }
+      ]
+    },
+    {
+      "label": "S",
+      "info": [
+        {
+          "name": "3-6\u5c81",
+          "catId": "96"
+        },
+        {
+          "name": "10-14\u5c81",
+          "catId": "97"
+        },
+        {
+          "name": "\u8212\u9002\u5bdd\u5177",
+          "catId": "114"
+        },
+        {
+          "name": "\u751f\u6d3b\u65e5\u7528",
+          "catId": "124"
+        },
+        {
+          "name": "\u751f\u6d3b\u53ca\u5176\u5b83",
+          "catId": "138"
+        },
+        {
+          "name": "\u8eab\u4f53\u62a4\u7406",
+          "catId": "143"
+        },
+        {
+          "name": "\u65f6\u5c1a\u5973\u978b",
+          "catId": "161"
+        },
+        {
+          "name": "\u751f\u9c9c",
+          "catId": "162"
+        },
+        {
+          "name": "\u6570\u7801\u667a\u80fd",
+          "catId": "170"
+        },
+        {
+          "name": "\u6c99\u6ee9\u620f\u6c34",
+          "catId": "178"
+        }
+      ]
+    },
+    {
+      "label": "T",
+      "info": [
+        {
+          "name": "\u7ae5\u8f66\u7ae5\u5e8a",
+          "catId": "116"
+        }
+      ]
+    },
+    {
+      "label": "W",
+      "info": [
+        {
+          "name": "\u73a9\u5177\u4e50\u5668",
+          "catId": "65"
+        },
+        {
+          "name": "\u5582\u517b\u7528\u54c1",
+          "catId": "67"
+        }
+      ]
+    },
+    {
+      "label": "X",
+      "info": [
+        {
+          "name": "\u5b66\u4e60\u6587\u5177",
+          "catId": "112"
+        },
+        {
+          "name": "\u4f11\u95f2\u5c0f\u98df",
+          "catId": "117"
+        },
+        {
+          "name": "\u4f11\u95f2\u98df\u54c1",
+          "catId": "123"
+        },
+        {
+          "name": "\u6d17\u53d1\u62a4\u53d1",
+          "catId": "145"
+        },
+        {
+          "name": "\u6d17\u53d1\u6c90\u6d74",
+          "catId": "182"
+        }
+      ]
+    },
+    {
+      "label": "Y",
+      "info": [
+        {
+          "name": "\u827a\u672f\/\u73a9\u5177\u4e66",
+          "catId": "76"
+        },
+        {
+          "name": "\u8425\u517b\u4fdd\u5065",
+          "catId": "122"
+        },
+        {
+          "name": "\u76ca\u667a\u6e38\u620f",
+          "catId": "168"
+        },
+        {
+          "name": "\u5b55\u5988\u670d\u9970",
+          "catId": "172"
+        },
+        {
+          "name": "\u5a74\u5e7c\u7528\u54c1",
+          "catId": "189"
+        },
+        {
+          "name": "\u5b55\u5988\u7528\u54c1",
+          "catId": "196"
+        }
+      ]
+    },
+    {
+      "label": "Z",
+      "info": [
+        {
+          "name": "\u65e9\u6559\u76ca\u667a",
+          "catId": "176"
+        }
+      ]
+    }
+  ]
+}

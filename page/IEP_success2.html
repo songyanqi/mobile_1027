@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <!-- /build -->
+
+    <!-- build:style iep -->
+    <link href="../stylesheet/iep.css" rel="stylesheet">
+    <!-- /build -->
+    <title>给Ta代付</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+    </script>
+</head>
+<body class="index_scroll" style="background-color:#fff;"> 
+
+<!-- 以下为顶部搜索 -->
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            通知成功
+        </div>
+    </div>
+</div>
+
+<div class="iep_success_pic">
+   <img src="//pic.davdian.com/free/iep_pic2_201569.png">
+
+</div>
+
+<div class="iep_success_title">
+    支付成功！
+</div>
+
+<div class="iep_success_nr">要不</br>
+    你也买点?
+</div>
+
+<a href="//nemo.davdian.com" class="iep_send_con_sendbtn">走着~</a>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<!-- build:script base -->
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<!-- /build -->
+
+</body>
+</html>

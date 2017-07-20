@@ -1,0 +1,114 @@
+
+.main_box2 {
+    background:#3ABA67 url(//pic.davdian.com/free/2017/kaidianchoujiang20170221/reword_list_bg.png);
+    background-size: 100% auto;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:0;left: 0;right: 0px;
+
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    min-height: 100%;
+    max-width: 640px;
+    margin: auto;
+}
+.main{
+    width: 100%;
+    min-height: 100%;
+}
+.in_app .main_box2 .main .list_note:nth-of-type(1){
+    margin-top: 10px;
+}
+.list_note:nth-of-type(1){
+    margin-top: 54px;
+}
+.list_note:last-of-type{
+    margin-bottom: 95px;
+}
+.in_app .main_box2 {
+    top: 0;
+}
+
+.list_note {
+    width: 3.35rem;
+    height: 1.12rem;
+    background-color: #FFF;
+    margin: 0.1rem auto;
+    border-radius: 4px;
+}
+
+.harvard_reword_top {
+    height: 0.9rem;
+    width: 100%;
+}
+
+.harvard_reword_top > div {
+    height: 100%;
+    text-align: left;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: 93% auto;
+    background-position: center center;
+    width: 50%;
+}
+
+.harvard_reword_top > div:nth-of-type(1) {
+    width: 50%;
+    padding-left: 10%;
+
+}
+
+.harvard_reword_top > div:nth-of-type(2) {
+    width: 40%;
+}
+
+.harvard_reword_bottom {
+    height: 0.22rem;
+    width: 100%;
+    font-size: 0.12rem;
+    color: #999999;
+    text-align: center;
+}
+
+.bg_hafou {
+    background-image: url(//pic.davdian.com/free/2017/kaidianchoujiang20170221/p_first.png);
+}
+
+.bg_red50 {
+    background-image: url(//pic.davdian.com/free/2017/kaidianchoujiang20170221/p_third.png);
+}
+
+.bg_red10 {
+    background-image: url(//pic.davdian.com/free/2017/kaidianchoujiang20170221/p_four.png);
+}
+
+.bg_niutingting {
+    background-image: url(//pic.davdian.com/free/2017/kaidianchoujiang20170221/p_second.png);
+}
+
+.harvard_reword_top > div > div:nth-of-type(1) {
+    color: #FF4A7D;
+    font-size: 0.24rem;
+    line-height: 0.24rem;
+    margin-top: 0.15rem;
+    font-weight: 900;
+}
+
+.harvard_reword_top > div > div:nth-of-type(2) {
+    color: #333333;
+    font-size: 0.16rem;
+    line-height: 0.16rem;
+    margin-top: 0.1rem;
+}
+
+.bottom_p {
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    line-height: 14px;
+    margin: 80px 0 15px;
+    position: absolute;
+    bottom: 0;
+}

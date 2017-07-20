@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="http://cdn.davdian.com/swiper/swiper-3.3.1.min.css" rel="stylesheet">
+    <link href="../dist/commentDetail.css" rel="stylesheet">
+    <title>评价详情</title>
+    <script type="text/javascript">
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+
+        var commentDetailUrl = "../data/comment_detail.json";// 评价详情页面
+
+    </script>
+</head>
+<body class="scroll_flag" >
+<div id="commentDetail">
+    <comment-detail>
+
+    </comment-detail>
+</div>
+
+<script src="//cdn.davdian.com/vue/2.0.5/vue.js"></script>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="//cdn.davdian.com/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script src="../dist/commentDetail.js"></script>
+</body>
+</html>

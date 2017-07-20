@@ -1,0 +1,961 @@
+body {
+    padding-bottom: 45px;
+}
+
+.live_top {
+    background-color: #fff;
+    height: 40px;
+}
+
+.live_top .shop_img {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    vertical-align: bottom;
+    margin: 4px;
+}
+
+.live_top .shop_title {
+    display: block;
+    overflow: hidden;
+    margin-top: -38px;
+    margin-left: 42px;
+    height: 32px;
+    color: #333;
+    vertical-align: text-bottom;
+    font-size: 12px;
+    padding-bottom: 4px;
+    width: 140px;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.live_top .shop_title .pic {
+    width: 74px;
+    margin-top: -3px;
+}
+
+.live_top .right {
+    float: right;
+    font-size: 12px;
+}
+
+.live_top .right .kd_btn {
+    margin: 10px;
+    color: #666;
+    padding-right: 1px;
+}
+
+.live_top .right .arrow {
+    display: inline-block;
+    vertical-align: 0;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-left: 1px;
+    vertical-align: baseline;
+}
+
+.live_banner {
+    position: relative;
+}
+
+.live_banner .title {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 24px;
+    line-height: 24px;
+    background: rgba(51, 51, 51, 0.5);
+    color: #fff;
+    font-size: 12px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.listen_number {
+    float: left;
+}
+
+.listen_number:before {
+    content: "";
+    width: 17px;
+    height: 14px;
+    background: url(//pic.davdian.com/free/headset_white_0418.png) no-repeat;
+    background-size: 17px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    margin-right: 4px;
+}
+
+.join_arrow {
+    display: inline-block;
+    vertical-align: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-left: 3px;
+    vertical-align: baseline;
+}
+
+.live_countdown {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.live_countdown .time {
+    height: 20px;
+    line-height: 20px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+}
+
+.live_countdown .time_start {
+    height: 20px;
+    line-height: 20px;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+    text-align: center;
+}
+
+.live_summary {
+    background-color: #fff;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.live_info .live_summary:last-child {
+    border-bottom: none;
+}
+
+.live_summary .title {
+    position: relative;
+    font-size: 14px;
+    color: #333;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #f1f1f1;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.live_summary .title:before {
+    content: "";
+    width: 2px;
+    height: 16px;
+    background-color: #FF4A7D;
+    display: inline-block;
+    vertical-align: text-top;
+    margin-right: 7px;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    left: 0;
+}
+
+.live_summary .content {
+    padding: 10px;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.live_bottom {
+    height: 44px;
+    background-color: #F8F8F8;
+    border-top: 1px solid #ddd;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    max-width: 640px;
+    bottom: 0;
+}
+
+.live_bottom .close_btn {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: url(//pic.davdian.com/free/live_close_icon.png);
+    background-size: 20px;
+    margin: 12px;
+    float: left;
+}
+
+.live_bottom .center_con {
+    padding-right: 100px;
+    width: 100%;
+    position: absolute;
+    left: 40px;
+    box-sizing: border-box;
+}
+
+.live_bottom .center_con .icon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    float: left;
+    background: url(//pic.davdian.com/free/live_app_icon.png);
+    background-size: 32px;
+    margin-top: 6px;
+}
+
+.live_bottom .center_con .text {
+    float: left;
+    font-size: 12px;
+    line-height: 45px;
+}
+
+.live_bottom .shop_btn {
+    float: right;
+    margin: 8px 15px 0 0;
+    width: 74px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #FF4A7D;
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+.live_bottom .center_con .text_download {
+    float: left;
+    font-size: 12px;
+    line-height: 18px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.live_bottom .shop_btn a {
+    display: block;
+}
+
+.live_bottom .download_btn {
+    float: right;
+    margin: 8px 15px 0 0;
+    width: 125px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #FF4A7D;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+.live_bottom .download_btn a {
+    display: block;
+    padding-left: 5px;
+}
+
+.all_review {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.all_review .prompt {
+    color: #FF4A7D;
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 10px;
+    display: none;
+    margin-top: 20px;
+}
+
+.all_review .con_list {
+}
+
+.all_review .con_list li {
+    padding-bottom: 20px;
+}
+
+.all_review .con_list li .head {
+    width: 25px;
+    height: 25px;
+    float: left;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.all_review .con_list li .head img {
+    width: 25px;
+    height: 25px;
+}
+
+.all_review .con_list li .right {
+    margin-left: 30px;
+}
+
+.all_review .con_list li .right h2 {
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.all_review .con_list li .right .main {
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    color: #666;
+    border-radius: 3px;
+    padding: 7px 10px 6px;
+    position: relative;
+    display: inline-block;
+    line-height: 17px;
+    word-break: break-all;
+    word-wrap: break-word;
+    max-width: 75%;
+    margin-left: 4px;
+}
+
+.all_review .con_list li .right .main:before {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #fff;
+    border-bottom: transparent;
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 0px;
+}
+
+.all_review .con_list li .right .main .voice .fa {
+    position: relative;
+    display: inline-block;
+}
+
+.all_review .con_list li .right .main .play .fa:after {
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: 0;
+    width: 12px;
+    height: 13px;
+    background: url(//pic.davdian.com/free/voice_img_311.gif) no-repeat;
+    background-size: 12px;
+}
+
+.fa-rss:before {
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: 0;
+    width: 12px;
+    height: 13px;
+    background: url(//pic.davdian.com/free/voice_img_311.png) no-repeat;
+    background-size: 12px;
+}
+
+.all_review .con_list li .right .voice .min {
+    position: absolute;
+    right: -53px;
+    top: 8px;
+    width: 40px;
+    color: #666;
+    font-size: 12px;
+}
+
+.big_img_container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: #000;
+    max-width: 640px;
+    text-align: center;
+    z-index: 99;
+}
+
+.big_img_container img {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    margin: auto auto;
+}
+
+.organize_files {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.live_shop_link {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    background-color: #fff;
+    position: relative;
+}
+
+.live_shop_link .title {
+    padding: 0 30px;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.live_shop_link .title:before {
+    content: "";
+    background: url(//pic.davdian.com/free/goods_link_icon_311.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    background-size: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+    position: absolute;
+    top: 50%;
+    margin-top: -8px;
+    margin-left: -20px;
+}
+
+.live_shop_link .title_arrow {
+    display: inline-block;
+    vertical-align: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    right: 10px;
+}
+
+.course_details_link {
+    background-color: rgba(51, 51, 51, 0.5);
+    color: #fff;
+    font-size: 12px;
+    position: relative;
+    height: 24px;
+    line-height: 24px;
+}
+
+.course_details_link .title {
+    padding: 0 30px;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.course_details_link .title:before {
+    content: "";
+    background: url(//pic.davdian.com/free/headset_icon_312.png) no-repeat;
+    width: 17px;
+    height: 14px;
+    background-size: 17px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+    margin-left: -20px;
+}
+
+.course_details_link .title_arrow {
+    display: inline-block;
+    vertical-align: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    right: 10px;
+}
+
+.pb_10 {
+    padding-bottom: 10px !important;
+}
+
+.is_read {
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #FF4A7D;
+    display: inline-block;
+    position: absolute;
+    right: -28px;
+    top: 0px;
+}
+
+.pl_5 {
+    padding-left: 5px;
+}
+
+.live_review_bottom {
+    margin-bottom: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.live_review_bottom img {
+    width: 320px;
+    margin: 0 auto;
+}
+
+.shop_btn .april_border.hairlines .border_inner:after {
+    border: 1px solid #FF4A7D;
+}
+
+.download_btn .april_border.hairlines .border_inner:after {
+    border: 1px solid #FF4A7D;
+}
+
+/*Retina屏为2的时候调用下面的样式*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 4/2), only screen and (min-resolution: 2dppx) {
+    .shop_btn.april_border.hairlines .border_inner:after {
+        border: 1px solid #FF4A7D;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 4/2), only screen and (min-resolution: 2dppx) {
+    .download_btn.april_border.hairlines .border_inner:after {
+        border: 1px solid #FF4A7D;
+    }
+}
+
+.vip_limit_point {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 12px;
+    border-radius: 3px;
+    line-height: 24px;
+    color: #999;
+}
+
+.live_copyright {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.big_img_point {
+    width: 100%;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    line-height: 30px;
+
+}
+
+/*直播列表样式*/
+.live_list_hot li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.play_lable {
+    top: 6px;
+    left: 10px;
+    position: absolute;
+    z-index: 1;
+    width: 22px;
+    height: 22px;
+    background: url(//pic.davdian.com/free/live_play_icon_0418.png) no-repeat;
+    background-size: 22px;
+}
+
+.live_list_hot li .title {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 24px;
+    line-height: 24px;
+    background: rgba(51, 51, 51, 0.5);
+    color: #fff;
+    font-size: 12px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.listen_number {
+    float: left;
+}
+
+.listen_number:before {
+    content: "";
+    width: 17px;
+    height: 14px;
+    background: url(//pic.davdian.com/free/headset_white_0418.png) no-repeat;
+    background-size: 17px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    margin-right: 3px;
+}
+
+.live_list_title {
+    background: #fff;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 10px;
+}
+
+.live_list_con ul li {
+    width: 50%;
+    float: left;
+    margin-bottom: 3px;
+    position: relative;
+    padding-right: 1.5px;
+    box-sizing: border-box;
+}
+.live_list_con ul li:after{
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: #f0f0f0;
+    right:-1.5px;
+    top: 0;
+    z-index: 1;
+}
+.live_list_con ul a:nth-child(2n+0) li{
+    padding-right: 0;
+    padding-left: 1.5px;
+    box-sizing: border-box;
+}
+.live_list_con ul a:nth-child(2n+0) li:after{
+    display: none;
+}
+.live_list_con ul li .list_pic {
+    position: relative;
+}
+
+.live_list_con ul li .list_pic img {
+    width: 100%;
+}
+
+.live_list_con ul li .list_pic .time {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    line-height: 24px;
+    height: 24px;
+    background: rgba(51, 51, 51, 0.5);
+    color: #fff;
+}
+
+.live_list_con ul li .list_pic .partake {
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: rgba(51, 51, 51, 0.5);
+    position: absolute;
+    right: 0;
+    top: 4px;
+    font-size: 12px;
+    padding: 0 4px 0 6px;
+}
+
+.live_list_con ul li .list_con {
+    padding: 6px 5px;
+    background-color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.live_list_con ul li .list_con .title {
+    line-height: 18px;
+    font-size: 12px;
+    color: #333;
+    text-overflow: ellipsis;
+    white-space: pre-line;
+    overflow: hidden;
+    height: 36px;
+    margin-bottom: 2px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    overflow: hidden;
+}
+
+.live_list_con ul li .list_con .listen_number {
+    float: left;
+}
+
+.live_list_con ul li .list_con .listen_number:before {
+    content: "";
+    width: 17px;
+    height: 14px;
+    background: url(//pic.davdian.com/free/headset_gray_0418.png) no-repeat;
+    background-size: 17px;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    margin-right: 3px;
+}
+
+.ml_5 {
+    margin-left: 5px;
+}
+
+/*直播信息*/
+.live_info_con {
+    background: #fff;
+}
+
+.live_info_teacher {
+    height: 70px;
+    position: relative;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.live_info_teacher .head_img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    vertical-align: bottom;
+    left: 10px;
+    top: 10px;
+    position: relative;
+}
+
+.live_info_teacher .teacher_title {
+    display: block;
+    overflow: hidden;
+    margin-top: -35px;
+    margin-left: 70px;
+    margin-right: 55px;
+    color: #333;
+    vertical-align: text-bottom;
+    font-size: 12px;
+}
+
+.live_info_teacher .teacher_title .overflow {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.live_info_teacher .right_arrow {
+    display: inline-block;
+    vertical-align: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-left: 1px;
+    vertical-align: baseline;
+    position: absolute;
+    top: 31px;
+    right: 12px;
+}
+
+.fz_14 {
+    font-size: 14px;
+}
+
+.live_info_list {
+    height: 40px;
+    border-bottom: 1px solid #f1f1f1;
+    line-height: 40px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.live_info_arrow {
+    display: inline-block;
+    vertical-align: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin-left: 1px;
+    vertical-align: baseline;
+    position: absolute;
+    top: 15px;
+    right: 12px;
+}
+
+.partake_people {
+
+}
+
+.partake_people_title {
+    padding-left: 10px;
+    line-height: 40px;
+}
+
+.partake_people_list {
+    padding-top: 10px;
+}
+
+.partake_people_list li {
+    width: 20%;
+    float: left;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.partake_people_list li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    border: 1px solid #eee;
+    margin-bottom: 3px;
+}
+
+.partake_people_list li .name {
+    height: 17px;
+    line-height: 17px;
+    width: 50px;
+    text-align: center;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto;
+}
+
+.no_more {
+    text-align: center;
+    margin: 10px;
+    font-size: 12px;
+    color: #999;
+}
+
+.loading-con {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.loading-wrap {
+    background: url('//pic.davdian.com/free/loading.gif') center top no-repeat;
+    padding-top: 0;
+    margin: 0;
+    text-align: center;
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    margin-left: -18%;
+}
+
+.loading-text {
+    font-size: 12px;
+    color: #999;
+    vertical-align: bottom;
+}
+
+i.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+}
+
+
+/*下拉刷新外框*/
+#wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 65px;
+    bottom: 0px;
+    width: 100%;
+    max-width: 620px;
+    margin: auto auto;
+    left:0;
+    right:0;
+}
+.all_review .prompt_live {
+    color: #FF4A7D;
+    text-align: center;
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 15px;
+    height:15px;
+    -webkit-transition: margin-top .5s;
+    -moz-transition: margin-top .5s;
+    -ms-transition: margin-top .5s;
+    -o-transition: margin-top .5s;
+    transition: margin-top .5s;
+    display:block;
+}
+.all_review .prompt_ring{
+    height:15px;
+    background:url(//pic.davdian.com/free/loading_03252.svg) no-repeat center;
+}
+.text_link_live a,.text_link_live a:focus, .text_link_live a:hover, .text_link_live a:active, .text_link_live a:visited{
+    color: #173cf6;
+    text-decoration: underline;
+    padding-right: 5px;
+}
+
+.index_ads {
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+}
+.index_ads .swiper-pagination-bullet {
+    display: inline-block;
+    margin: 0 4px!important;
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #dedede;
+    opacity: 1;
+}
+.index_ads.swiper-container-horizontal > .swiper-pagination-bullets{
+    bottom: 2px;
+}
+.index_ads .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    background: #FF4A7D;
+}
+.mb_7{
+    margin-bottom: 7px;
+}

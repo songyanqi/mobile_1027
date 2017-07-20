@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/send_red.css" rel="stylesheet">
+    <link href="../stylesheet/fund.css" rel="stylesheet">
+    <title>财神送钱啦</title>
+
+    <script type="text/javascript">
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 1,   // 头部首页按钮
+            shareOnHead: 1
+        };
+
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+        var appid = ''; //apiID，可留空
+
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+
+        var sendUrl = '';
+    </script>
+</head>
+<body class="scroll_flag in_app">
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            财神送钱啦
+        </div>
+        <div class="top_right">
+            <a href="" class="top_home">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+<!--头部已发红包数-->
+<div class="red_top">
+        <span class="bitmap">
+        <span>大V已发：20007个红包</span>
+        </span>
+</div>
+<!--主题部分-->
+<div class="main_box">
+
+    <!--财神帽头像-->
+    <!--<div class="userImgs">-->
+    <!--<img src="//pic.davdian.com/free/send_redenvelope/userCap2.png" alt="">-->
+    <!--<div class="user_pics">-->
+    <!--<img src="http://pic.davdian.com/shop_logo/32254/80_80_1423364521.jpg@!1e_1c_0o_0l_100h_100w.webp" alt="">-->
+    <!--</div>-->
+    <!--<img src="//pic.davdian.com/free/send_redenvelope/userCap1.png" alt="">-->
+    <!--</div>-->
+
+    <!--恭喜你领取多少红包-->
+    <!--<img class="Group2" src="//pic.davdian.com/free/send_redenvelope/Group2.png" alt="">-->
+    <!--<div class="amount_num">-->
+    <!--<span>50</span>元-->
+    <!--</div>-->
+
+    <!--新年到，送红包，领完买个LV包-->
+    <!--<img class="Group1" src="//pic.davdian.com/free/send_redenvelope/Group1.png" alt="">-->
+
+    <!--新年到，做财神-->
+    <img class="Group3" src="//pic.davdian.com/free/send_redenvelope/Group3.png" alt="">
+
+    <!--卷轴财神鸡-->
+    <img src="//pic.davdian.com/free/send_redenvelope/Reel_bg.png" alt="">
+    <!--收入提示-->
+    <div class="income_tops">
+        <img src="//pic.davdian.com/free/send_redenvelope/tips.png" alt="">
+        <span>
+            红包太小？<br>
+            开个大V店，不囤货、不备货<br>
+            分享就赚钱，月入三五千<br>
+            17做自己的财神！
+        </span>
+    </div>
+</div>
+<div class="red_buttom">
+    <!--马上发红包按钮-->
+    <a class="button_send yellow_bg share_to_web">
+        马上发红包
+    </a>
+    <!--已抢光按钮-->
+    <a class="button_send grey_bg">
+        已抢光，明天晚上9点再来
+    </a>
+    <div class="red_lists">
+        <a class="" href="">发出的红包</a>
+    </div>
+</div>
+<div class="raiders">
+    <img src="//pic.davdian.com/free/send_redenvelope/Raiders_texturetop.png" alt="">
+    <div class="raiders_txt_wrap">
+        <!--财神攻略-->
+        <img src="//pic.davdian.com/free/send_redenvelope/Raiders_1.png" alt="">
+        <img src="//pic.davdian.com/free/send_redenvelope/Raiders_2.png" alt="">
+    </div>
+</div>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script type="text/javascript" src="../cdn/wechat/jssdk/jweixin-1.0.0.js"></script>
+<!-- build:script base -->
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+</body>
+</html>

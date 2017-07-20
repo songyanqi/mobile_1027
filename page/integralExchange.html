@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <!-- /build -->
+    <!-- build:style integral -->
+    <link href="../stylesheet/integral.css" rel="stylesheet">
+    <!-- /build -->
+    <title>积分兑换</title>
+    <script>
+        var integralUrl = ""; // 兑换商品后跳转到的兑换列表的url
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+    </script>
+</head>
+<body>
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            积分兑换
+        </div>
+    </div>
+</div>
+<div class="integral_exchange">
+    <!--非实物订单-->
+    <!--
+    <div class="integral_exchange_container dav-shadow">
+        <div class="integral_info_item">
+            兑换物品：6元购物红包
+        </div>
+        <div class="integral_info_item">
+            消耗积分：600
+        </div>
+        <div class="integral_info_item">
+            物品介绍：6元购物红包，无消费门槛。
+        </div>
+        <div class="integral_info_item">
+            有效期至：2015年5约20日
+        </div>
+        <form id="integral_exchange_form">
+            <input type="text" class="hide"/>
+            <div class="integral_button_container">
+                <div class="dav-btn btn-red">确认兑换</div>
+            </div>
+        </form>
+    </div>
+    -->
+
+    <!--实物订单-->
+    <div class="integral_exchange_container dav-shadow">
+        <div class="integral_info_item">
+            兑换物品：《我爸爸我妈妈》图书一本
+        </div>
+        <div class="integral_info_item">
+            消耗积分：6000
+        </div>
+        <div class="integral_info_item">
+            物品介绍：《我爸爸我妈妈》图书一本，请填写收货人地址
+        </div>
+        <div class="integral_info_item">
+            收货人地址：
+        </div>
+        <form id="integral_exchange_form">
+            <!--隐藏的input-->
+            <input type="text" class="hide">
+
+            <div class="name_container">
+                <span class="input_label">收货人</span>
+                <div class="input_wrap">
+                    <input value="王志芳">
+                </div>
+            </div>
+            <div class="tel_container">
+                <span class="input_label">手机号</span>
+                <div class="input_wrap">
+                    <input type="tel">
+                </div>
+            </div>
+            <div class="address_container">
+                <div class="input_wrap">
+                    <input type="hidden" value="1" name="country">
+                    <select name="province" id="selProvinces" onchange="region.changed(this, 2, 'selCities')" data-url="jsonRegion.json" >
+                        <option value="0" selected>请选择省</option>
+                        <option value="2" >北京</option>
+                        <option value="3" >安徽</option>
+                        <option value="4" >福建</option>
+                        <option value="5" >甘肃</option>
+                        <option value="6" >广东</option>
+                        <option value="7" >广西</option>
+                        <option value="8" >贵州</option>
+                        <option value="9" >海南</option>
+                        <option value="10" >河北</option>
+                        <option value="11" >河南</option>
+                        <option value="12" >黑龙江</option>
+                        <option value="13" >湖北</option>
+                        <option value="14" >湖南</option>
+                        <option value="15" >吉林</option>
+                        <option value="16" >江苏</option>
+                        <option value="17" >江西</option>
+                        <option value="18" >辽宁</option>
+                        <option value="19" >内蒙古</option>
+                        <option value="20" >宁夏</option>
+                        <option value="21" >青海</option>
+                        <option value="22" >山东</option>
+                        <option value="23" >山西</option>
+                        <option value="24" >陕西</option>
+                        <option value="25" >上海</option>
+                        <option value="26" >四川</option>
+                        <option value="27" >天津</option>
+                        <option value="28" >西藏</option>
+                        <option value="29" >新疆</option>
+                        <option value="30" >云南</option>
+                        <option value="31" >浙江</option>
+                        <option value="32" >重庆</option>
+                    </select>
+                    <select name="city" id="selCities" onchange="region.changed(this, 3, 'selDistricts')" >
+                        <option value="0" selected>请选择市</option>
+                        <option value="351" >乌鲁木齐</option>
+                        <option value="352" >阿克苏</option>
+                        <option value="353" >阿拉尔</option>
+                        <option value="354" >巴音郭楞</option>
+                        <option value="355" >博尔塔拉</option>
+                        <option value="356" >昌吉</option>
+                        <option value="357" >哈密</option>
+                        <option value="358" >和田</option>
+                        <option value="359" >喀什</option>
+                        <option value="360" >克拉玛依</option>
+                        <option value="361" >克孜勒苏</option>
+                        <option value="362" >石河子</option>
+                        <option value="363" >图木舒克</option>
+                        <option value="364" >吐鲁番</option>
+                        <option value="365" >五家渠</option>
+                        <option value="366" >伊犁</option>
+                        <option value="3412" >塔城地区</option>
+                    </select>
+                    <select name="district" id="selDistricts" >
+                        <option value="0" selected>请选择区</option>
+                        <option value="3022" >库尔勒市</option>
+                        <option value="3023" >轮台县</option>
+                        <option value="3024" >尉犁县</option>
+                        <option value="3025" >若羌县</option>
+                        <option value="3026" >且末县</option>
+                        <option value="3027" >焉耆</option>
+                        <option value="3028" >和静县</option>
+                        <option value="3029" >和硕县</option>
+                        <option value="3030" >博湖县</option>
+                    </select>
+                </div>
+            </div>
+            <div class="detail_address_container">
+                <span class="input_label">详细地址</span>
+                <div class="input_wrap">
+                    <textarea></textarea>
+                </div>
+            </div>
+            <div class="mt12 dav-red dav-small integral_exchange_warning">
+                *收货人信息提交后不允许修改
+            </div>
+
+            <div class="integral_button_container">
+                <div class="dav-btn btn-red">确认兑换</div>
+            </div>
+        </form>
+
+    </div>
+</div>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<!-- build:script base_with_region -->
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/region.js"></script>
+<script type="text/javascript" src="../javascript/jquery.form.min.js"></script>
+<!-- /build -->
+<!-- build:script integral -->
+<script type="text/javascript" src="../javascript/integral.js"></script>
+<!-- /build -->
+</body>
+</html>

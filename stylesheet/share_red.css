@@ -1,0 +1,514 @@
+body{
+    padding-bottom: 0;
+}
+.share_red_top{
+    border-bottom: 1px solid #ECECEC;
+    padding: 35px 10px;
+}
+.share_red_people{
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    z-index: 2;
+    position: relative;
+}
+.share_red_people img{
+    width:50px;
+    height: 50px;
+    border-radius: 50px;
+    margin-bottom: 4px;
+}
+.share_red_info{
+    font-size:12px;
+    line-height: 18px;
+    margin-top: 25px;
+}
+.share_red_icon{
+    text-align: center;
+    margin-top: 35px;
+}
+.share_red_icon img{
+    width:56px;
+    margin-left: 18px;
+    margin-right: 18px;
+    cursor: pointer;
+}
+
+.share_red_list{
+    padding-left: 10px;
+}
+.share_red_list li{
+    padding:15px 0 15px;
+    position: relative;
+    height: 40px;
+}
+.share_red_list li:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #E1E1E1;
+    width: 100%;
+    height: 1px;
+}
+.share_red_list li .head{
+    position: absolute;
+    width:40px;
+    height: 40px;
+    border-radius: 40px;
+    left: 0;
+}
+.share_red_list li .con{
+    margin-left: 50px;
+    margin-right:75px;
+    font-size: 15px;
+}
+.share_red_list li .con .registered{
+    display: inline-block;
+    width:46px;
+    height: 15px;
+    background: #FF4A7D;
+    text-align: center;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #fff;
+    line-height: 16px;
+    margin-left: 5px;
+}
+.share_red_list li .date{
+    font-size: 10px;
+    color: #999;
+    position: absolute;
+    right: 10px;
+    bottom:11px;
+}
+.overflow {
+    padding-top:3px;
+    color: #999;
+    font-size: 12px;
+    display:block;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.share_red_list li .price{
+    position: absolute;
+    color: #FF4A7D;
+    font-size: 15px;
+    top: 15px;
+    right: 10px;
+}
+.share_red_list li:last-child{
+    border-bottom:none;
+}
+
+.share_red_title{
+    background: #f1f1f1;
+    color: #999;
+    font-size: 12px;
+    padding: 15px 0 8px 10px;
+}
+
+.share_red_receive{
+    padding-bottom:20px;
+}
+.share_red_receive_bg{
+    width: 100%;
+    height: 320px;
+    background-color: #E93C36;
+    border-radius: 100%/50%;
+    margin-top: -237px;
+    position: relative;
+}
+.share_red_receive_bg a{
+    position: absolute;
+    bottom: 45px;
+    font-size: 12px;
+    color: #fff;
+    line-height: 22px;
+    cursor: pointer;
+}
+.share_red_receive_bg a.more_red{
+    left: 30px;
+}
+.share_red_receive_bg a.home_red{
+    right: 30px;
+}
+.share_red_receive_bg a img{
+    width: 22px;
+}
+.mt_26{
+    margin-top: -26px;
+}
+.mt_15{
+    margin-top: 15px;
+}
+.share_red_receive_con{
+    text-align: center;
+}
+.share_red_receive_con .red_rmb{
+    padding: 20px 0;
+    color: #FF4A7D;
+    font-size: 12px;
+}
+.share_red_receive_con .red_rmb_num{
+    font-size:50px;
+    line-height: 40px;
+    vertical-align: sub;
+    margin-right: 5px;
+    margin-left: 17px;
+}
+.share_red_input{
+    border: 1px solid #ddd;
+    background-color: #F1F1F1;
+    padding: 0 10px;
+    line-height: 30px;
+    border-radius: 3px;
+    width: 186px;
+    margin: 0 auto;
+}
+.share_red_btn{
+    width: 208px;
+    line-height: 32px;
+    height: 32px;
+    color: #fff;
+    font-size:15px;
+    border-radius: 3px;
+    background: #FF4A7D;
+    display: inline-block;
+    cursor: pointer;
+}
+.share_red_receive_success_con{
+    padding-top: 20px;
+}
+.fz_20{
+    font-size: 20px;
+}
+.success_text{
+    font-size: 30px;
+    margin-top: 10px;
+    line-height: 30px;
+    color: #FF4A7D;
+    text-align: center;
+}
+.success_info{
+    font-size: 12px;
+    padding: 20px 10px 3px;
+    text-align: center;
+}
+.dav_icon_up2top_80_80{
+    background-size: 44px;
+    background-image: url(//pic.davdian.com/free/back_top_icon_0803.png);
+}
+#to-top {
+    bottom: 40px;
+}
+
+.share_welfare_title{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    max-width: 640px;
+    font-size: 14px;
+    position: relative;
+}
+.share_welfare_title:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #E1E1E1;
+    width: 100%;
+    height: 1px;
+}
+.share_welfare_title li.hover {
+    color: #ff4a7d;
+}
+.share_welfare_title li {
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.flex-1 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.share_welfare_title li div.span_outer {
+    height: 16px;
+    line-height: 16px;
+    border-right: 1px solid #f2f0ec;
+    border-bottom: none;
+}
+.share_welfare_title li:last-child div.span_outer {
+    border-right: none;
+}
+.share_welfare_title li.hover span {
+    border-bottom: 2px solid #ff4a7d;
+}
+.share_welfare_title li span {
+    padding: 0 2px 7px;
+    display: inline-block;
+}
+.activity_info_content{
+    padding:20px 10px;
+}
+.activity_info_title{
+    text-align: center;
+    font-size: 12px;
+    padding-top: 22px;
+}
+.activity_info_title:before{
+    content: "";
+    width:28px;
+    height: 3px;
+    background: url(//pic.davdian.com/free/leftTitle_0930.png) no-repeat;
+    background-size: 28px;
+    display: inline-block;
+    position: relative;
+    left: -10px;
+    top: -2px;
+}
+.activity_info_title:after{
+    content: "";
+    width:28px;
+    height: 3px;
+    background: url(//pic.davdian.com/free/rightTitle_0930.png) no-repeat;
+    background-size: 28px;
+    display: inline-block;
+    position: relative;
+    right: -10px;
+    top: -2px;
+}
+.activity_info_con{
+    font-size: 12px;
+    padding-top: 10px;
+    line-height: 17px;
+    color: #666;
+}
+.activity_info_con p{
+    padding-top:10px;
+}
+.share_WeChat{
+    font-size: 14px;
+    height: 44px;
+    line-height: 44px;
+    margin: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    list-style-type: none;
+    position: relative;
+    cursor: pointer;
+    display: block;
+    border-top: 10px solid #f1f1f1;
+}
+.share_WeChat a {
+    display: inline-block;
+    width: 100%;
+}
+.share_WeChat_icon{
+    width:16px;
+    height: 16px;
+    background: url(//pic.davdian.com/free/thirdPartyWeChat_icon.png) no-repeat;
+    background-size: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+}
+.share_WeChat_arrow {
+    display: inline-block;
+    vertical-align: 0;
+    width:8px;
+    height:8px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: relative;
+    margin-right: 3px;
+}
+.poster{
+    padding:20px 0;
+}
+.poster_btn{
+    padding: 6px 35px;
+    height: 35px;
+}
+.poster_btn .share_btn{
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+    font-size: 12px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+.poster_btn .share_btn:after{
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    border: 1px solid #999;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+}
+.poster_btn .share_btn .WeChat_icon{
+    width: 20px;
+    height: 17px;
+    background: url("//pic.davdian.com/free/WeChat_icon_1206.png") no-repeat;
+    background-size: 20px;
+    display: inline-block;
+    margin-left: 10px;
+    position: absolute;
+    top: 9px;
+}
+.poster_btn .share_btn .CircleOfFriends_icon{
+    width: 19px;
+    height: 19px;
+    background: url("//pic.davdian.com/free/CircleOfFriends_icon_1206.png") no-repeat;
+    background-size: 19px;
+    display: inline-block;
+    margin-left: 10px;
+    position: absolute;
+    top: 8px;
+}
+.poster_pic{
+    margin-top: 20px;
+    text-align: center;
+    padding: 0 50px;
+}
+.get_books_title{
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.get_books_title:before{
+    content: "";
+    width:28px;
+    height: 3px;
+    background: url(//pic.davdian.com/free/leftTitle_0930.png) no-repeat;
+    background-size: 28px;
+    display: inline-block;
+    position: relative;
+    left: -10px;
+    top: -2px;
+}
+.get_books_title:after{
+    content: "";
+    width:28px;
+    height: 3px;
+    background: url(//pic.davdian.com/free/rightTitle_0930.png) no-repeat;
+    background-size: 28px;
+    display: inline-block;
+    position: relative;
+    right: -10px;
+    top: -2px;
+}
+.receive_free_btn{
+    margin: 10px 11px 0 11px;
+    background: #FF4A7D;
+    border-radius: 2px;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 14px;
+}
+.good_list_2_row .good_item .get_book_good_title{
+    font-size: 12px;
+    color: #333;
+    text-overflow: ellipsis;
+    white-space: pre-line;
+    margin-bottom:10px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    display: -webkit-box;
+    overflow: hidden;
+    padding-top: 10px;
+    height: 18px;
+}
+.get_book_good_price{
+    text-align: center;
+}
+.get_book_good_price .dav-color-price{
+    font-weight: bold;
+}
+.get_book_good_price .get_book_market_price{
+    font-size:11px;
+    color:#999;
+    text-decoration: line-through;
+    margin-left: 4px;
+}
+.get_books_arrow {
+    display: inline-block;
+    vertical-align: 0;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid #FF4A7D;
+    border-right: 1px solid #FF4A7D;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: relative;
+    margin-left: 3px;
+}
+/*Retina屏为2的时候调用下面的样式*/
+@media
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min-device-pixel-ratio:2),
+only screen and (min--moz-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:4/2),
+only screen and (min-resolution:2dppx)
+{
+    .share_red_list li:after,.share_welfare_title:after{
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+    .poster_btn .share_btn:after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border: 1px solid #999;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: left top;
+
+        -ms-transform: scale(0.5); 		/* IE 9 */
+        -ms-transform-origin: left top; 		/* IE 9 */
+
+        -webkit-transform: scale(0.5);	/* Safari 和 Chrome */
+        -webkit-transform-origin: left top;	/* Safari 和 Chrome */
+
+        -moz-transform: scale(0.5);		/* Firefox */
+        -moz-transform-origin: left top;		/* Firefox */
+
+        -o-transform: scale(0.5);		/* Opera */
+        -o-transform-origin: left top;		/* Opera */
+        border-radius: 6px;
+    }
+}
+.in_app .top0{
+    display: none;
+}

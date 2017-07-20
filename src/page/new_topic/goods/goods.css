@@ -1,0 +1,126 @@
+.goods_group{
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 5px;
+}
+.goods_group .goods_item{
+  width: 50%;
+  float: left;
+  padding: 5px;
+  box-sizing: border-box;
+  font-size: 0;
+  overflow: hidden;
+}
+.goods_img{
+  position: relative;
+  background-color: #f1f1f1;
+}
+.goods_item>a{
+  background-color: #fff;
+  display:block;
+  padding-bottom: 10px;
+  overflow: hidden;
+}
+.goods_name{
+  font-size: 12px;
+  line-height: 18px;
+  color: #333;
+  overflow: hidden;
+  height: 36px;
+  margin: 5px 10px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+}
+.goods_price{
+  color: #FF4A7D;
+  font-size: 16px;
+  padding: 0 8px;
+  width: 200%;
+}
+.goods_label{
+  border-radius: 8px;
+  height: 16px;
+  line-height: 16px;
+  color: #fff;
+  padding: 0 5px;
+  background-color: #FF4A7D;
+  font-size: 10px;
+  display: inline-block;
+  margin-left: 4px;
+  font-family: sans-serif;
+}
+.img_label{
+  font-weight: bold;
+  left: 0;
+  bottom:0;
+  position:absolute;
+  font-size: 10px;
+  opacity: 0.8;
+  background: linear-gradient(90deg,#ff5b5b,#fa1862);
+  background: -webkit-linear-gradient(left,#ff5b5b,#fa1862);
+  color:#fff;
+  line-height: 16px;
+  padding:1px 8px 0 6px;
+  border-top-right-radius: 8px;
+}
+.img_label:after{
+  content: "";
+  width: 0;
+  height: 0;
+  border-width: 0 4px 10px 0;
+  border-style: solid;
+  border-color: transparent transparent #fa1862 transparent;
+  position: absolute;
+  margin-left: 8px;
+  bottom: 0;
+}
+.vip_return{
+  line-height: 1;
+  font-size: 0;
+  color: #BF9D51;
+  padding-left: 4px;
+  position: relative;
+  display: inline-block;
+    -webkit-transform: scale(0.5);
+  -webkit-transform-origin: 0 60%;
+  transform: scale(0.5);
+  transform-origin: 0 60%;
+  vertical-align: middle;
+  margin-bottom: -4px;
+}
+.vip_return .vip_return_title{
+  font-size: 22px;
+}
+.vip_return .vip_return_f{
+  font-size: 18px;
+  padding: 0 2px 0 4px;
+}
+.vip_return .vip_return_price{
+  font-size: 24px;
+}
+.price{
+  vertical-align: sub;
+}
+ @media screen and (max-width:374px){
+    .vip_return{
+      padding-left:0;
+      margin-bottom: -6px;
+    }
+    .vip_return .vip_return_title{
+      font-size: 20px;
+    }
+    .vip_return .vip_return_f{
+      font-size: 14px;
+      padding: 0 2px 0 4px;
+    }
+    .vip_return .vip_return_price{
+      font-size: 20px;
+    }
+    small{
+      font-size: 70%;
+    }
+ }
+small{
+  padding: 0 2px;
+}

@@ -1,0 +1,222 @@
+
+.index_links {
+    background-color : #fff;
+    overflow         : hidden;
+    padding          : 10px 0;
+}
+
+.index_links .link_item {
+    text-align : center;
+    float      : left;
+    width      : 25%;
+}
+
+.index_links .link_img {
+    max-width     : 40px;
+    max-height    : 40px;
+    margin-bottom : 5px;
+}
+
+.index_links .link_text {
+    color       : #666;
+    font-size   : 12px;
+    line-height : 1;
+}
+
+.index_model {
+    margin-top       : 12px;
+    background-color : #fff;
+    position         : relative;
+}
+
+.orange_title {
+    height      : 45px;
+    color       : #FF4A7D;
+    font-size   : 16px;
+    line-height : 45px;
+}
+
+.index_model .more {
+    position : absolute;
+    top      : 5px;
+    right    : 10px;
+}
+
+.index_model .more span {
+    line-height  : 35px;
+    color        : #666;
+    font-size    : 14px;
+    margin-right : 6px;
+}
+
+.index_model .dav_icon_dayuhao_10_22 {
+    width  : 5px;
+    height : 11px;
+}
+
+.index_model .model_con {
+    border-top       : 1px #ddd solid;
+    background-color : #ddd;
+    overflow         : hidden;
+}
+
+.index_model .model_con_right {
+    width : 50%;
+    float : left;
+}
+
+.index_model .model_con_left {
+    width        : 50%;
+    float        : left;
+    border-right : 1px #ddd solid;
+    margin-left  : -1px;
+}
+
+.index_model .model_con_bottom, .index_model .model_con_top {
+    border : 0px;
+}
+
+.index_model .model_con_bottom {
+    margin-bottom : -1px;
+}
+
+.index_model a {
+    display     : block;
+    line-height : 0;
+    overflow    : hidden;
+}
+
+.index_activity {
+    margin-top : 10px;
+    padding    : 0 6px;
+}
+
+.index_activity a {
+    margin-bottom : 10px;
+    display       : block;
+}
+
+.index_tuan {
+    background-color : #f1f1f1;
+    margin-top       : 12px;
+}
+
+.tuan_top {
+    background-color : #fff;
+    padding          : 13px 6px;
+    position         : relative;
+}
+
+.tuan_top .text {
+    font-size : 16px;
+    color     : #FF4A7D;
+}
+
+.tuan_top .text i {
+    margin-top : 2px;
+}
+
+.tuan_top .tuan_time > div {
+    display : inline-block;
+}
+
+.tuan_top a.dav-btn {
+    position      : absolute;
+    background    : none;
+    border        : #666 solid 1px;
+    color         : #333;
+    font-size     : 12px;
+    line-height   : 14px;
+    border-radius : 3px;
+    box-shadow    : none;
+    top           : 11px;
+    right         : 6px;
+    padding       : 4px 12px;
+}
+
+.tuan_list {
+    background-color : #f1f1f1;
+    display          : block;
+    text-decoration  : none;
+    color            : #333;
+}
+
+.tuan_list:hover, .tuan_list:focus {
+    text-decoration : none;
+    color           : #333;
+}
+
+.tuan_item {
+    background-color : #fff;
+    box-shadow       : 0 2px 5px -2px #aaa;
+    margin-top       : 10px;
+    display          : block;
+    text-decoration  : none;
+    color            : #333;
+    padding-bottom   : 6px;
+}
+
+.tuan_item:hover, .tuan_item:focus {
+    text-decoration : none;
+    color           : #333;
+}
+
+.tuan_item_title {
+    padding       : 5px 10px;
+    font-size     : 16px;
+    text-overflow : ellipsis;
+    white-space   : nowrap;
+    overflow      : hidden;
+}
+
+.tuan_item_price {
+    font-size : 10px;
+    color     : #666;
+}
+
+.tuan_item_price .current_price {
+    font-size : 16px;
+    color     : #FF4A7D;
+    padding   : 5px 10px;
+}
+
+.tuan_item_price .market_price {
+    text-decoration : line-through;
+}
+
+.tuan_img_container img {
+    width : 100%;
+}
+
+.index_tuan .dao_time {
+    float        : right;
+    margin-right : 6px;
+    margin-top   : 3px;
+}
+
+.index_tuan .dao_time span {
+    margin-left : 3px;
+}
+
+.index_tuan .icon {
+    vertical-align : middle;
+}
+
+.refresh {
+    text-align : center;
+    margin     : 12px;
+}
+
+.activity_late {
+    width            : 100%;
+    height           : 120px;
+    background-color : #d9d9dc;
+    font-size        : 16px;
+    color            : #333;
+    text-align       : center;
+    line-height      : 120px;
+    margin-bottom    : -12px;
+}
+.activity_blank .top0 .top_container{
+    background-color:#FF4A7D ;
+}

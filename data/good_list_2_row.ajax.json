@@ -1,0 +1,44 @@
+{
+  "error": 0,
+  "msg": null,
+  "data": [
+    {
+      "img": "//a.davdian.com/images/201503/goods_img/325_G_1426696762513.jpg",
+      "title": "巴巴爸爸新故事系列（第一辑+第二辑，全12册）适合3-6岁儿童",
+      "price": "99.00",
+      "tag": "",
+      "sag_id": "337",
+      "sale_status": "",
+      "sale_amount": 23,
+      "sale_number":1111,
+      "good_id":325,
+      "goods_label":"秒杀"
+    },
+    {
+      "img": "//a.davdian.com/images/201508/goods_img/211_G_1440473727726.jpg",
+      "title": "中国传统节日故事（全8册）",
+      "price": "37.90",
+      "tag": "tag tag1",
+      "sag_id": "0",
+      "sale_status": "",
+      "sale_amount": 11,
+      "sale_number":21,
+      "good_id":325,
+      "goods_label":""
+    },
+    {
+      "url": "156.html?_refer=index_hot",
+      "img": "//a.davdian.com/images/201503/goods_img/156_G_1426689786701.jpg",
+      "title": "《哈！不要搞错！》＋《 哈！永远永远不要搞错！》适合3-6岁儿童",
+      "price": "53.20",
+      "tag": "",
+      "sag_id": "0",
+      "sale_status": "",
+      "sale_amount": 23,
+      "sale_number":92,
+      "good_id":325,
+      "goods_label":""
+    }
+  ],
+  "has_more": true
+}

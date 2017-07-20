@@ -1,0 +1,374 @@
+body{
+    background-color: #f1f1f1;
+    max-width: 640px;
+    margin:0 auto;
+    padding-top: 44px;
+    -webkit-user-select: initial;
+}
+.dav-group{
+    margin-top: 12px;
+    font-size:14px;
+    border-top:#eee solid 1px;
+    background-color: #fff;
+}
+.dav-item{
+    height: 44px;
+    line-height: 44px;
+    border-bottom:#eee solid 1px;
+    padding: 0 10px;
+    
+}
+.iep-group{ height:16px; width:100%; position:relative; max-width:640px; overflow:hidden;
+    }
+    
+.iep-group-left{ width: 50%;
+  height: 15px;
+  border-top: 1px solid #eee;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  left: -14px;
+    }
+.iep-group-left-jt{  display: inline-block;
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  border-right-color: #eee;
+  border-right-style: solid;
+  border-right-width: 1px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  position: absolute;
+  left: 50%;
+  margin-left: -26px;
+  top: 5px;
+    }
+.iep-group-right-jt{ display: inline-block;
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  border-left-color: #eee;
+  border-left-style: solid;
+  border-left-width: 1px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  position: absolute;
+  left: 50%;
+  margin-left:4px;
+  top: 5px;
+    }
+.iep-group-right{ width:50%; height:15px; border-top:1px solid #eee; background-color:#fff; display:block;position:absolute; right:-15px;
+    }
+.iep-item{
+    line-height:18px;
+    border-bottom:#eee solid 1px;
+    padding:10px 10px 0px 10px;
+    font-size:13px;
+    text-align:left;
+}
+.cashier_pay_type .dav-item{
+    cursor: pointer;
+}
+.dav-item.bank-card{
+    background-color: #f7f7f7;
+    color: #666;word-break:break-all;
+    padding-left: 10px;
+}
+.dav-item.ex{
+    background-color: #f7f7f7;
+    color: #666;word-break:break-all;
+    height: inherit;
+    line-height: 24px;
+    padding-top: 8px;
+}
+.dav-item.add{
+    padding-left: 10px;
+}
+.cashier_to_pay.dav-group{
+    font-size:14px;
+}
+
+.cashier_to_pay .price{
+    color:#FF4A7D;
+    font-size:16px;
+}
+.icon{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-image: url(//pic.davdian.com/free/cashier_icon_list.png);
+    -webkit-background-size: 25px;
+    background-size: 25px;
+    vertical-align: middle;
+    margin-right: 12px;
+}
+.icon.icon_bank_card{
+    -ms-background-position-y: -25px;
+    background-position-y: -25px;
+}
+.icon.icon_alipay{
+    -ms-background-position-y: -50px;
+    background-position-y: -50px;
+}
+.icon.icon_dy{
+    display: inline-block;
+    vertical-align: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    float: right;
+    margin-top: 18px;
+    background: none;
+    margin-right: 0;
+}
+.icon.arrow_up{
+    display: inline-block;
+    vertical-align: 0;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #D5D5D5;
+    border-top: transparent;
+    float: right;
+    margin-top: 18px;
+    background: none;
+    margin-right: 0;
+}
+.dav-item.i-am-zk.zd .arrow_up{display: inline-block;
+    vertical-align: 0;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #D5D5D5;
+    border-bottom: transparent;
+    float: right;
+    margin-top: 18px;
+    background: none;
+    margin-right: 0;
+
+}
+.dav-item.bank-card .icon.icon_dy{
+
+}
+.pay-qr{
+    width:40%;
+    margin: 35px auto;
+    text-align: center;
+    color: #666;
+    line-height: 40px;
+}
+.pay-qr img{
+    width: 100%;
+}
+.cashier_bottom{
+    color:#666;
+    line-height: 24px;
+    width:100%;
+    margin:0 auto;
+    text-align: center;
+}
+.cashier_bottom .logo{
+    display: inline-block;
+    background-image: url(//pic.davdian.com/free/mama_davdian_logo.png);
+    -webkit-background-size: 90px;
+    background-size: 90px;
+    width: 102px;
+    height: 27px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    background-position: center 5px;
+}
+.mask{
+    width: auto;
+    height: 100%;
+    position: fixed;
+    top:0;
+    background-color: rgba(0,0,0,0.8);
+    background-image: url(//pic.davdian.com/free/share_pointer_2x.png);
+    -webkit-background-size: 37px;
+    background-size: 37px;
+    z-index: 20;
+      background-repeat: no-repeat;
+      background-position: 90% 10px;
+      color:#fff;
+    padding: 80px 30px;
+}
+.mask p{
+    margin-bottom: 15px;
+    -webkit-user-select: initial;
+}
+.mask span{
+    color:#faa;
+}
+.icon_plus{
+    background-image: url(//pic.davdian.com/free/add_icon_20151026.png);
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    background-size: 21px;
+    margin-top: 5px;
+    margin-right:6px;
+    float: left;
+    margin-top: 11px;
+}
+.dav-item.i-am-zk .icon_dy{
+    -webkit-transform:rotate(135deg);
+    transform: rotate(135deg);
+}
+.icon.icon_bank_detail{
+    background-image: url(//pic.davdian.com/free/BankLogo.jpg);
+}
+.icon.icon_bank_detail.detail_2{background-position-y:-25px;}
+.icon.icon_bank_detail.detail_3{background-position-y:-50px;}
+.icon.icon_bank_detail.detail_4{background-position-y:-75px;}
+.icon.icon_bank_detail.detail_5{background-position-y:-100px;}
+.icon.icon_bank_detail.detail_6{background-position-y:-125px;}
+.icon.icon_bank_detail.detail_7{background-position-y:-150px;}
+.icon.icon_bank_detail.detail_8{background-position-y:-175px;}
+.icon.icon_bank_detail.detail_9{background-position-y:-200px;}
+.icon.icon_bank_detail.detail_10{background-position-y:-225px;}
+.icon.icon_bank_detail.detail_11{background-position-y:-250px;}
+.icon.icon_bank_detail.detail_12{background-position-y:-275px;}
+.icon.icon_bank_detail.detail_13{background-position-y:-300px;}
+.icon.icon_bank_detail.detail_14{background-position-y:-325px;}
+.icon.icon_bank_detail.detail_15{background-position-y:-350px;}
+.icon.icon_bank_detail.detail_16{background-position-y:-375px;}
+.icon.icon_bank_detail.detail_17{background-position-y:-400px;}
+.icon.icon_bank_detail.detail_18{background-position-y:-425px;}
+.icon.icon_bank_detail.detail_19{background-position-y:-450px;}
+.icon.icon_bank_detail.detail_20{background-position-y:-475px;}
+.icon.icon_bank_detail.detail_21{background-position-y:-500px;}
+.icon.icon_bank_detail.detail_22{background-position-y:-525px;}
+.icon.icon_bank_detail.detail_23{background-position-y:-550px;}
+.icon.icon_bank_detail.detail_24{background-position-y:-575px;}
+.icon.icon_bank_detail.detail_25{background-position-y:-600px;}
+.icon.icon_bank_detail.detail_26{background-position-y:-625px;}
+.icon.icon_bank_detail.detail_27{background-position-y:-650px;}
+.icon.icon_bank_detail.detail_28{background-position-y:-675px;}
+.icon.icon_bank_detail.detail_29{background-position-y:-700px;}
+.icon.icon_bank_detail.detail_30{background-position-y:-725px;}
+.icon.icon_bank_detail.detail_31{background-position-y:-750px;}
+.icon.icon_bank_detail.detail_32{background-position-y:-775px;}
+.icon.icon_bank_detail.detail_33{background-position-y:-800px;}
+
+.fz12{ font-size:12px;}
+.fz13{ font-size:13px;}
+.fz16{ font-size:16px;}
+
+
+.iep_pic{width:320px; margin:0px auto;}
+
+.iep_send_con{ padding-left:12px;padding-right:12px;}
+
+.iep_send_con_title{ padding-top:12px;}
+.iep_send_con_title li{ float:left; min-width:34px; padding-left:7px; padding-right:7px; margin-bottom:9px; border:1px solid #ddd; background-color:#fff; font-size:14px; line-height:25px; text-align:center; border-radius:3px; margin-right:5px; cursor:pointer;}
+
+.iep_send_con_title li.active{  border:1px solid #FF4A7D;}
+
+.iep_send_con_textarea{ border:1px solid #ddd;border-radius:3px;  min-height:125px; padding:10px; width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box; margin-bottom:35px; font-size:14px;resize:none;overflow:auto;}
+
+.iep_send_con_sendbtn{ display: block; width:150px; height:32px; line-height:32px; text-align:center; color:#fff !important; background-color:#FF4A7D; font-size:14px; margin:0px auto;border-radius:3px; cursor:pointer;}
+
+.iep_success_pic{width:320px; margin:0px auto; padding-top:18px;}
+
+.iep_success_title{ font-size:17px; border-bottom:1px solid #eee; line-height:45px; text-align:center; margin-left:15px; margin-right:15px; font-weight:bold;}
+
+.iep_success_nr{ text-align:center; font-size:14px; padding-top:20px; padding-bottom:20px;}
+
+.iep_paid_nr{ font-size:14px; padding-top:20px; padding-bottom:25px; margin-left:12px; margin-right:12px;}
+
+.iep_paid_nr_title{ font-size:14px;padding-bottom:8px;}
+
+.iep_paid_nr_input{ width:100%; height:30px; line-height:30px; border:1px solid #ccc; border-radius:3px; padding-left:10px; padding-right:10px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;font-size:14px;}
+
+.iep_textarea{font-size:14px; width:100%; background:none; resize:none; padding-top:5px; color:#666;overflow-y:visible; height:auto;}
+.send_link{color:#666; }
+
+.con_list li{
+    padding-bottom: 10px;
+}
+.con_list li .head{
+    width: 28px;
+    height: 28px;
+    float: left;
+    overflow: hidden;
+    border-radius: 28px;
+}
+.con_list li .right{
+    margin-left:36px;
+}
+.con_list li .right h2{
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.con_list li .right .text{
+    font-size: 12px;
+    background-color: #F1F1F1;
+    color: #666;
+    border-radius: 3px;
+    padding: 10px;
+    position: relative;
+}
+.con_list li .right .text:before{
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid #F1F1F1;
+    border-bottom: transparent;
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 0px;
+}
+.declaration-order {
+    /* Positioning */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+
+    /* Box-model */
+    display: block;
+    float: right;
+    width: 100px;
+    height: 100px;
+
+    /* Typography */
+    font: normal 13px "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+    color: #333;
+    text-align: center;
+
+    /* Visual */
+    background-color: #f5f5f5;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+
+    /* Misc */
+    opacity: 1;
+}
+.cashier_textarea {
+    font-size: 14px;
+    width: 100%;
+    background: none;
+    resize: none;
+    padding-top: 5px;
+    color: #666;
+}
+.alipay_wechat{
+    background-color: #f7f7f7;
+    border-bottom: none;
+}

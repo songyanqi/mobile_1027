@@ -1,0 +1,29 @@
+.bd_slide_0{
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+
+
+    &>.swiper-pagination-bullets{
+        bottom: 2px;
+    }
+
+    .swiper-pagination-bullet {
+        display: inline-block;
+        margin: 0 4px!important;
+        width: 6px;
+        height: 6px;
+        border-radius: 3px;
+        background-color: #dedede;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: #ff4a7d;
+    }
+
+    .swiper-slide{
+        font-size:0;
+        line-height: 0;
+    }
+}

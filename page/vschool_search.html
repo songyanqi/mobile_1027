@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!--<link href="http://fe.davdian.com/wap/13480/stylesheet/model.css" rel="stylesheet">-->
+    <!--<link href="http://fe.davdian.com/wap/13480/stylesheet/base.css" rel="stylesheet">-->
+    <!--<link href="http://fe.davdian.com/wap/13480/stylesheet/search_page.css" rel="stylesheet">-->
+    <link href="../dist/vSchool_search.css" rel="stylesheet">
+    <title>搜索结果</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0
+        };
+        var searchUrl = '../data/course.json';
+    </script>
+    <script type="text/javascript" src="//cdn.davdian.com/bughd/201609052/bughd.min.js"></script>
+    <script type="text/javascript">
+        window.bughd = window.bughd || function () {
+            };
+        bughd("create", {key: "22d9198c9307fbec12531e5410399938", sendConsoleError: false})
+    </script>
+</head>
+<body class="search_result_page scroll_flag">
+<div id="container">
+    <search></search>
+</div>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="http://fe.davdian.com/wap/13480/cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script src="http://cdn.davdian.com/vue/2.0.5/vue.min.js"></script>
+<script src="http://fe.davdian.com/wap/13480/javascript/jquery.cookie.js"></script>
+<script type="text/javascript" src="../dist/vSchool_search.js"></script>
+<script src="http://src.davdian.com/src/switch_20161122.js"></script>
+</body>
+</html>

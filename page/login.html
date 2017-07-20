@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link href="../stylesheet/base.css" rel="stylesheet">
+  <link href="../stylesheet/model.css" rel="stylesheet">
+  <link href="../stylesheet/login.css" rel="stylesheet">
+  <title>登录/注册</title>
+  <script type="text/javascript">
+    /////////////////////给app提供接口数据////////////
+    var appData = {
+      showHead: 1,     // 是否展示头部
+      showFoot: 0,     // 是否展示底部
+      backOnHead: 1,   // 头部返回按钮
+      homeOnHead: 1,   // 头部首页按钮
+      shareOnHead: 0
+    };
+
+    var sendUrl = ""; // 发送验证码的url
+  </script>
+</head>
+<body>
+<div class="top0">
+  <div class="top_container">
+    <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+    <div class="top_left">
+      <a class="top_back" href="javascript:history.back();">
+        <span class="home_arrow"></span>
+      </a>
+    </div>
+    <div class="title_container">
+      登录/注册
+    </div>
+    <div class="top_right">
+      <a href="" class="top_home">
+        <span class="home_icon"></span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="login-container login-container-1">
+  <form action="*">
+    <div class="login-title-container">
+      <div class="login-title">
+                <span>
+                    请填写您的手机号登录/注册
+                </span>
+      </div>
+    </div>
+    <div class="login-input-container">
+      <div class="login-input login-tel-num">
+        <input placeholder="请填写手机号" type="tel">
+      </div>
+    </div>
+    <div class="login-button">
+      <div class="dav-btn btn-red btn-block">下一步</div>
+    </div>
+  </form>
+</div>
+<div class="login-container login-container-2">
+  <form action="*">
+    <div class="login-title-container">
+      <div class="login-title">
+        <span>老用户请直接输入密码</span>
+      </div>
+    </div>
+    <div class="login-input-container">
+      <div class="login-input login-tel-num">
+        <input value="15910661508" readonly="readonly">
+      </div>
+      <div class="login-input login-tel-num">
+        <input placeholder="请填写密码" type="password">
+      </div>
+    </div>
+    <div class="login-button">
+      <div class="dav-btn btn-red btn-block">登录</div>
+    </div>
+    <a class="dav-red underline forget" href="//nemo.davdian.com">忘记密码 ？</a>
+  </form>
+</div>
+<!--<div class="login-container login-container-3">-->
+<!--<form action="*">-->
+<!--<div class="login-title-container line-2">-->
+<!--<div class="login-title">-->
+<!--<span>验证码已发送到您的手机<br/>输入验证码并设置密码</span>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="login-input-container">-->
+<!--<div class="login-input login-tel-num">-->
+<!--<input class="logined-tel" value="15910661508" readonly>-->
+<!--</div>-->
+<!--<div class="login-input login-tel-num">-->
+<!--<input placeholder="短信验证码">-->
+
+<!--<div class="dav-btn btn-red send_code">获取验证码</div>-->
+<!--</div>-->
+<!--<div class="login-input login-tel-num">-->
+<!--<input placeholder="请设置密码，长度不小于6位" type="password">-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="login-button">-->
+<!--<div class="dav-btn btn-red btn-block">确认</div>-->
+<!--</div>-->
+<!--</form>-->
+<!--</div>-->
+
+<!--只在大V课绑定时展示-->
+<div class="bind_info">
+  提示: 微信直接登录的账号暂时无法绑定到原有手机账号，如需查看微信账号下报名的课程，退出手机账号即可找回。
+</div>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script
+  type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/register.js"></script>
+</body>
+</html>

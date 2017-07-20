@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <title>领取新人专享300元红包</title>
+    <link rel="stylesheet" href="../stylesheet/xinren300.css">
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 1,   // 头部首页按钮
+            shareOnHead: 1
+        };
+
+        /////////////////////微信分享/////////////////////
+        // 店铺的图标
+        var imgUrl = "http://pic.davdian.com/free/2016/05/09/320_320_3ab4726358f5de88f095b46500edfa63.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '秒杀商品1元起，优质正品超低价格，另有红包出没，秒到就是赚到~';
+        var shareTitle = '大V超值秒杀好货天天抢，天天抢不停';  //店铺名称
+
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+        /////////////////////////////////////////////////
+    </script>
+</head>
+<!--app里面body增加in_app的class-->
+<body>
+    <div class="top0">
+        <div class="top_container">
+            <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+            <div class="top_left">
+                <a class="top_back" href="javascript:history.back();" data-dav-tj="vip|back|back|1|back@vip">
+                    <span class="home_arrow"></span>
+                </a>
+            </div>
+            <div class="title_container">
+                会员专区
+            </div>
+            <div class="top_right">
+                <a href="/" class="top_home">
+                    <span class="home_icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="xinren">
+        <!--可以领-->
+       <!-- <div class="con">
+            <img src="//pic.davdian.com/free/2016/11/30/1.png" alt="">
+            <a href="/"><img src="//pic.davdian.com/free/2016/11/30/5.png" alt=""></a>
+        </div>-->
+        <!--不可以领-->
+     <!--   <div class="con">
+            <img src="//pic.davdian.com/free/2016/11/30/2.png" alt="">
+            <a href="/"><img src="//pic.davdian.com/free/2016/11/30/6.png" alt=""></a>
+        </div>-->
+        <div class="bonus_list">
+            <div class="bonus_item">
+                <div class="text t1">
+                    现金券
+                </div>
+                <div class="text t2">
+                    ¥
+                </div>
+                <div class="text t3">
+                    100
+                </div>
+                <div class="text t4">
+                    新人专享
+                </div>
+                <div class="text t5">
+                    可直接使用
+                </div>
+                <div class="text t6">
+                    有效期: 2016.12.28-2016.12.12
+                </div>
+            </div>
+
+            <div class="bonus_item">
+                <div class="text t1">
+                    现金券
+                </div>
+                <div class="text t2">
+                    ¥
+                </div>
+                <div class="text t3">
+                    100
+                </div>
+                <div class="text t4">
+                    新人专享
+                </div>
+                <div class="text t5">
+                    可直接使用
+                </div>
+                <div class="text t6">
+                    有效期: 2016.12.28-2016.12.12
+                </div>
+            </div>
+        </div>
+        <div class="con1">
+            <a href="/"><img src="//pic.davdian.com/free/2016/11/30/6.png" alt=""></a>
+        </div>
+        <div class="con">
+            <img src="//pic.davdian.com/free/2016/11/30/4.png" alt="">
+        </div>
+    </div>
+    <script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="../javascript/jweixin-1.0.0.js"></script>
+    <script src="../javascript/base.js"></script>
+    <script src="../javascript/model.js"></script>
+</body>
+</html>

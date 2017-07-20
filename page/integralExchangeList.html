@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <!-- /build -->
+    <!-- build:style integral -->
+    <link href="../stylesheet/integral.css" rel="stylesheet">
+    <!-- /build -->
+    <title>积分兑换</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0,  // 头部分享按钮
+            btnOnHead:1,    // 头部文字按钮
+            btnText:"兑换记录",     // 头部文字按钮文字
+            btnLink:"/index.php?c=points&a=exchange_history"      // 头部文字按钮链接
+        };
+    </script>
+</head>
+<body>
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            积分兑换
+        </div>
+        <div class="top_right">
+            <a href="" class="top_btn">
+                <span class="border_btn">兑换记录</span>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="integral_exchange_list">
+    <div class="exchange_group">
+        <div class="exchange_item dav-shadow mt12">
+            <div class="exchange_title">
+                6元购物红包
+            </div>
+            <div class="exchange_description">
+                需600积分
+            </div>
+            <div class="exchange_button">
+                <a href="./integralExchange.html" class="dav-btn btn-red">
+                    兑换
+                </a>
+            </div>
+        </div>
+        <div class="exchange_item dav-shadow mt12">
+            <div class="exchange_title">
+                5元购物红包
+            </div>
+            <div class="exchange_description">
+                需500积分
+            </div>
+            <div class="exchange_button">
+                <a href="./integralExchange.html" class="dav-btn btn-red">
+                    兑换
+                </a>
+            </div>
+        </div>
+        <div class="exchange_item dav-shadow mt12">
+            <div class="exchange_title">
+                4元购物红包
+            </div>
+            <div class="exchange_description">
+                需400积分
+            </div>
+            <div class="exchange_button">
+                <a href="./integralExchange.html" class="dav-btn btn-red">
+                    兑换
+                </a>
+            </div>
+        </div>
+        <div class="exchange_item dav-shadow mt12">
+            <div class="exchange_title">
+                我爸爸我妈妈》一本
+            </div>
+            <div class="exchange_description">
+                需6000积分
+            </div>
+            <div class="exchange_button">
+                <a class="dav-btn btn-disable">
+                    可消费积分不足
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<!-- build:script base_little -->
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<!-- /build -->
+</body>
+</html>

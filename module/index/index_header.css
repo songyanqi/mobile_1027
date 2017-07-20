@@ -1,0 +1,209 @@
+.top0 {
+    z-index: 11;
+    position: fixed;
+    width: 100%;
+    max-width: 640px;
+}
+.top0 .top_container {
+    position: relative;
+    background: hsla(0,0%,98%,.95);
+}
+.head_index_top {
+    height: 44px;
+    position: relative;
+    background: #fff;
+}
+.head_index_top .search_con{
+    width: 100%;
+    position: relative;
+    padding-right: 42px;
+    padding-left: 54px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    top: 8px;
+    display: block;
+}
+.head_index_top .search_con .search_icon {
+    position: absolute;
+    display: inline-block;
+    background: url(//pic.davdian.com/free/index_searchBarSearchIcon_2x.png) no-repeat;
+    width: 14px;
+    height: 16px;
+    background-size: 14px;
+    top: 6px;
+    left: 64px;
+}
+.head_index_top .shop_name {
+    position: relative;
+    padding-right: 48px;
+    padding-left: 88px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-size: 12px;
+    color: #666;
+    top: -15px;
+    text-align: left;
+}
+.head_index_top .search_con .search_input {
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    background-color: #F0EDE8;
+    border-radius: 14px;
+    padding-left: 33px;
+    box-sizing: border-box;
+    margin: 0;
+}
+.head_index_top .right_icon_container {
+    right: 0;
+    top: 2px;
+    z-index: 10;
+    position: absolute;
+    font-size: 12px;
+}
+.head_index_top .right_icon_container b{
+  font-weight: normal;
+  color: #fff;
+  background-color: #FF4A7D;
+  font-size: 20px;
+  line-height: 30px;
+  height: 30px;
+  min-width: 30px;
+  border-radius: 30px;
+  text-align: center;
+  position: absolute;
+  top: 6px;
+  right: 4px;
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+.head_index_top .left_icon_container {
+    left: 0;
+    z-index: 10;
+    position: absolute;
+}
+.head_index_top .left_icon_container .shop_img {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    vertical-align: bottom;
+    margin: 4px 8px 0;
+}
+.head_index_top .left_icon_container .shop_icon {
+    width: 15px;
+    height: 15px;
+    /*background: url(//pic.davdian.com/free/index_owner_0804.png);*/
+    background: url(//pic.davdian.com/free/2017/06/23/28_28_4a0cbf7674b0133132dca697247c6520.png);
+    background-size: 15px;
+    display: inline-block;
+    position: absolute;
+    left: 33px;
+    top: 26px;
+}
+.head_index_top .icon {
+    margin-top: 2px;
+    width: 20px;
+    height: 18px
+}
+
+.head_index_top .icon_text {
+    color: #666;
+    font-size: 12px;
+    line-height: 9px
+}
+
+.head_index_top .icon_with_text {
+    display: inline-block;
+    width: 40px;
+    text-align: center
+}
+.index_con_menu {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    max-width: 640px;
+    font-size: 13px;
+    line-height: 34px;
+    position: relative;
+    top: 0;
+    z-index: 11;
+    margin-top: 0;
+}
+.index_con_menu:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom:-1px;
+    background: #f0f0f0;
+    width: 100%;
+    height: 1px;
+}
+/*Retina屏为2的时候调用下面的样式*/
+@media
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min-device-pixel-ratio:2),
+only screen and (min--moz-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:4/2),
+only screen and (min-resolution:2dppx)
+{
+    .index_con_menu:after{
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+}
+.index_con_menu li {
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    padding-top:9px;
+    padding-bottom:10px;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.index_con_menu li span {
+    padding: 0 2px 4px 2px;
+    display: inline-block;
+}
+.index_con_menu li.hover{
+    color:#FF4A7D;
+}
+.index_con_menu li.hover span {
+    border-bottom: 2px solid #FF4A7D
+}
+
+.index_con_menu li div.span_outer {
+    height: 16px;
+    line-height: 16px;
+    /*border-right: #F2F0EC solid 1px;*/
+    border-bottom: none;
+}
+
+.index_con_menu li:last-child div.span_outer {
+    border-right: none;
+}
+
+.index_con_menu li a.menu_kd {
+    background-color: #fff;
+    color: #FF4A7D;
+    padding: 3px 6px;
+    font-size: 12px;
+    line-height: 8px;
+    border-radius: 3px;
+    top: -1px;
+    position: relative;
+}
+body{
+    padding-top: 0px;
+}

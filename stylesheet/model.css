@@ -1,0 +1,519 @@
+body{
+    padding-top: 44px;
+    max-width: 640px;
+    margin: 0 auto;
+    padding-bottom : 58px;
+}
+body.top_hide{
+    animation:body_hide_animation 1s forwards;
+    -webkit-animation:body_hide_animation 1s forwards;
+}
+body.top_show{
+    animation:body_show_animation 0.25s forwards;
+    -webkit-animation:body_show_animation 0.25s forwards;
+}
+@-webkit-keyframes body_show_animation {
+    0% {padding-top:0}
+    90% {padding-top:44px}
+    100% {padding-top:44px}
+}
+@keyframes body_show_animation {
+    0% {padding-top:0}
+    90% {padding-top:44px}
+    100% {padding-top:44px}
+}
+@-webkit-keyframes body_hide_animation {
+    0% {padding-top:44px}
+    90% {padding-top:0}
+    100% {padding-top:0}
+}
+@keyframes body_hide_animation {
+    0% {padding-top:44px}
+    90% {padding-top:0}
+    100% {padding-top:0}
+}
+.top0 {
+    position: fixed;
+    /*position: -webkit-sticky;*/
+    /*position: sticky;*/
+    top: 0;
+    width: 100%;
+    max-width: 640px;
+    z-index: 11;
+}
+.top0.top_hide,body.top_hide .top0{
+    animation:top_hide_animation 0.25s forwards;
+    -webkit-animation:top_hide_animation 0.25s forwards;
+}
+@keyframes top_show_animation {
+    0% {top:-44px}
+    90% {top:0}
+    100% {top:0}
+}
+@-webkit-keyframes top_show_animation {
+    0% {top:-44px}
+    90% {top:0}
+    100% {top:0}
+}
+.top0.top_show,body.top_show .top0{
+    animation:top_show_animation 0.25s forwards;
+    -webkit-animation:top_show_animation 0.25s forwards;
+}
+@keyframes top_hide_animation {
+    0% {top:0}
+    90% {top:-44px}
+    100% {top:-44px}
+}
+@-webkit-keyframes top_hide_animation {
+    0% {top:0}
+    90% {top:-44px}
+    100% {top:-44px}
+}
+.top0.top_always_hide{
+    top:-44px;
+}
+.top0.nofixed{
+    position: absolute;
+}
+.top0 .top_container{
+    font-size: 16px;
+    background-color: rgba(250,250,250,0.95);
+    text-align: center;
+    position: relative;
+}
+@supports (-webkit-backdrop-filter: none) {
+    .top0 .top_container{
+        background: rgba(250,250,250,0.95);
+        -webkit-backdrop-filter: brightness(1.5) blur(10px);
+    }
+}
+.top0 .top_container:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom:-1px;
+    background: #f0f0f0;
+    width: 100%;
+    height: 1px;
+}
+/*Retina屏为2的时候调用下面的样式*/
+@media
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min-device-pixel-ratio:2),
+only screen and (min--moz-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:4/2),
+only screen and (min-resolution:2dppx)
+{
+    .top0 .top_container:after{
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+}
+body.in_app_150 .top0{
+    display: none;
+}
+.top0 .top_left{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.top0 .top_back{
+    width: 40px;
+    height: 44px;
+    float: left;
+}
+.top0 .home_arrow {
+    margin-top: 15px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: 0;
+    width: 12px;
+    height: 12px;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.top0 .top_back_home{
+    width: 70px;
+    height: 44px;
+    font-size: 12px;
+    line-height: 44px;
+    float: left;
+}
+.top0 .top_back_home .home_text {
+    vertical-align: top;
+}
+.top0 .top_right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.top0 .top_share {
+    width: 40px;
+    height: 44px;
+    float: right;
+}
+.top0 .top_share .icon {
+    width: 20px;
+    height: 19px;
+    background-image: url(//pic.davdian.com/free/share_icon_2x.png);
+    background-size: 100%;
+    display: block;
+    margin-top:10px;
+    margin-left: 9px;
+}
+.top0 .title_container{
+    margin-left: 80px;
+    margin-right: 80px;
+    font-size: 16px;
+    height: 44px;
+    line-height: 44px;
+    box-sizing: content-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #333;
+}
+.top0 .top_home {
+    width: 40px;
+    height: 44px;
+    float: right;
+}
+.top0 .top_home .home_icon{
+    width: 20px;
+    height: 20px;
+    background: url(//pic.davdian.com/free/home_icon_0825.png) no-repeat center;
+    background-size: 100%;
+    display: block;
+    margin-top: 12px;
+    margin-left:10px;
+}
+.top0 .top_info {
+    width: 40px;
+    height: 44px;
+    float: right;
+}
+.top0 .top_info .info_icon{
+    width: 22px;
+    height: 22px;
+    background-image: url(//pic.davdian.com/free/info_icon_0826.png);
+    background-size: 100%;
+    display: block;
+    margin-top:11px;
+    margin-left:9px;
+}
+.top0 .share_top_title{
+    vertical-align: text-bottom;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 114px;
+    display: inline-block;
+    position: relative;
+    padding: 0 23px;
+}
+
+.top0 .share_top_title:after{
+    content: "";
+    width: 18px;
+    height: 17px;
+    background-image: url(//pic.davdian.com/free/share_icon_36.png);
+    background-size: 100%;
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 12px;
+}
+.top0 .share_title_container{
+    margin-left:57px;
+    margin-right: 57px;
+    font-size: 15px;
+    height: 44px;
+    line-height: 44px;
+    box-sizing: content-box;
+    font-weight: bold;
+    display: inline-block;
+}
+.top0 .top_detail {
+    width: 40px;
+    height: 44px;
+    float: right;
+}
+.top0 .top_detail .detail_icon{
+    width: 22px;
+    height: 22px;
+    background-image: url(//pic.davdian.com/free/infoIcon_0826.png);
+    background-size: 100%;
+    display: block;
+    margin-top: 11px;
+    margin-left:9px;
+}
+.top0 .top_btn {
+    float: right;
+    margin-right: 15px;
+}
+.top0 .top_btn .border_btn{
+    width: auto;
+    line-height: 44px;
+    font-size: 14px;
+    color: #FF4A7D;
+    display: block;
+}
+
+.top0  .top_container.without_parent  .top_back{
+    width: 62px;
+    margin-left: -10px;
+}
+
+.top0 .title_container.kind_list{
+    margin-left: 18px !important;
+    margin-right: 0px;
+    line-height: 37px;
+}
+
+.top0 .title_container.search_result_top {
+    margin-left : 40px !important;
+}
+
+.top0 .top_right .text_btn{
+    font-size: 14px;
+    display: block;
+    line-height: 44px;
+    padding-left: 12px;
+    margin-right: -15px;
+    cursor: pointer;
+    padding-right: 12px;
+    color: #FF4A7D;
+}
+.top0 .top_left .cancel_btn{
+    font-size: 14px;
+    display: block;
+    line-height: 44px;
+    padding-left: 12px;
+    cursor: pointer;
+    padding-right: 12px;
+}
+.in_app .top0 .title_container.kind_list{
+    margin-left: 18px !important;
+}
+.in_app .top_left{
+    display: none;
+}
+.top0 .title{
+    line-height: 30px;
+    margin-right: 40px;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    overflow: hidden;
+}
+.top_container .cancel{
+    display: none;
+}
+.top_container.active .title_container{
+    margin-right: 50px;
+}
+.top_container.active i.icon-search{
+    right: 75px;
+}
+.top_container.active button{
+    right: 68px;
+}
+
+
+.top_container.active .cancel{
+    float: right;
+  font-size: 14px;
+  color: #333;
+  margin-top: -30px;
+  /* right: 5px; */
+  margin-right: 20px;
+  display: block;
+  cursor: pointer;
+}
+.search_result{
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding-top: 40px;
+    max-width: 640px;
+}
+.search_result .word_list{
+    background-color: #fcfcfc;
+    height: 100%;
+    padding: 15px;
+}
+.top_fix{
+    background-color: #FF4A7D;
+}
+.top_menu_button{
+    width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.top_menu_button.text{
+    font-size: 12px;
+    width: 50px;
+    right: 10px;
+    top:13px;
+}
+.top_menu_button.b3{
+  top: 11px;
+  right: 15px;
+}
+.top_menu_button.b3>div{
+    height: 3px;
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    margin-top: 2px;
+    margin-bottom: 3px;
+}
+
+.top0 .top_menu_detail{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    z-index: 11;
+    color: #fff;
+    max-width: 640px;
+}
+.top0 .top_menu_detail .arrow{
+    width:0;
+    height:0;
+    border-width:10px;
+    border-style: dashed dashed  solid  dashed;
+    border-color: transparent  transparent  #000 transparent;
+    right: 9px;
+    position: absolute;
+}
+.top0 .top_menu_detail .home, .top_menu_detail .share {
+    background-color: #000;
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.top0 .top_menu_detail .home {
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+.top0 .top_menu_detail .home_icon {
+    width: 22px;
+    height: 22px;
+    background-image: url(//pic.davdian.com/free/home_icon_2x.png);
+    background-size: 100%;
+    display: block;
+    margin-top: 8px;
+    margin-left: 20px;
+    float: left;
+    margin-right: 10px;
+}
+.top0 .top_menu_detail .share {
+    top: 60px;
+    border-top: #444 solid 1px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.top0 .top_menu_detail .share_icon {
+    width: 22px;
+    height: 21px;
+    background-image: url(//pic.davdian.com/free/share_icon_2x.png);
+    background-size: 100%;
+    display: block;
+    margin-top: 9px;
+    margin-left: 20px;
+    float: left;
+    margin-right: 10px;
+}
+.top0 .top_menu_detail img{
+    width: 18px;
+    margin-right: 8px;
+    margin-left: 22px;
+    vertical-align: middle;
+}
+
+.top0  .top_container.without_parent span.back-text{
+    font-size: 12px;
+  float: right;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.in_app .top_container {
+    color            : #999;
+    background-color : #fff;
+}
+
+.in_app .top_container input {
+    border : #ddd solid 1px;
+}
+
+body.in_app {
+    padding-top : 0;
+    animation: inherit;
+}
+
+
+.in_app .top0 {
+    position : relative;
+    z-index: 0;
+}
+.in_app .top0.fixed {
+    position : fixed;
+    z-index: 11;
+}
+
+
+/*
+@keyframes wewe
+{
+from {top: 40px;}
+to {top: 0px;}
+}
+
+@-moz-keyframes wewe 
+{
+from {top: 40px;}
+to {top: 0px;}
+}
+
+@-webkit-keyframes wewe 
+{
+from {top: 40px;}
+to {top: 0px;}
+}
+
+@-o-keyframes wewe 
+{
+from {top: 40px;}
+to {top: 0px;}
+}
+
+
+
+
+.search_result.wewe,.top0.wewe{
+    animation: wewe 0.25s linear 3s 1 alternate;
+
+-moz-animation: wewe 0.25s linear 3s 1 alternate;
+
+-webkit-animation: wewe 0.25s linear 3s 1 alternate;
+
+-o-animation: wewe 0.25s linear 3s 1 alternate;
+}*/

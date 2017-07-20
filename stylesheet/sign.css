@@ -1,0 +1,173 @@
+.sign_main{
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    padding-bottom: 10px;
+    background: -ms-linear-gradient(top, #FF4A7D, #FE78A1);
+    /* IE 10 */
+    background: -moz-linear-gradient(top, #FF4A7D, #FE78A1);
+    /*火狐*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FF4A7D), to(#FE78A1));
+    /*谷歌*/
+    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#FF4A7D), to(#FE78A1));
+    /* Safari 4-5, Chrome 1-9*/
+    background: -webkit-linear-gradient(top, #FF4A7D, #FE78A1);
+    /*Safari5.1 Chrome 10+*/
+    background: -o-linear-gradient(top, #FF4A7D, #FE78A1);
+    /*Opera 11.10+*/
+}
+.sign_main .title{
+    padding:20px 20px 10px;
+    color: #FFF;
+}
+.sign_main .title .head_img{
+    float: left;
+}
+.sign_main .title .head_img img{
+    width: 37px;
+    height: 34px;
+    border-radius:8px;
+}
+.sign_main .title .sign_info{
+    padding-left:7px;
+    float: left;
+    display: inline-block;
+    font-size: 15px;
+}
+.sign_main .title .sign_info p{
+    line-height: 19px;
+}
+.sign_main .title .date{
+    font-size: 24px;
+    line-height: 40px;
+}
+.sign_main .date_con{
+    background: #fff;
+    border-radius:9px;
+    margin: 0 10px;
+}
+.sign_main .date_con .table{
+    width: 100%;
+    padding-top: 20px;
+}
+.sign_main .date_con .table table{
+    width: 100%;
+    text-align: center;
+}
+.sign_main .date_con .table table th{
+    color: #B0B0B0;
+    font-size: 12px;
+    padding-bottom: 14px;
+}
+.sign_main .date_con .table table td{
+    padding-bottom: 23px;
+    position: relative;
+}
+.future span{
+    border: 1px solid #F7F7F7;
+    width:28px;
+    height: 28px;
+    line-height: 30px;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 0 5px;
+    color: #B0B0B0;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+}
+.expire span{
+    border: 1px solid #F7F7F7;
+    width:28px;
+    height: 28px;
+    line-height: 30px;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 0 5px;
+    color: #B0B0B0;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+}
+.expire span:before{
+    content:'';
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    position: absolute;
+    background: url(//pic.davdian.com/free/sign_closed_0530.png);
+    background-size: 15px;
+    top: 16px;
+    right: -6px;
+}
+.sign_date span{
+    border: 1px solid #ec6890;
+    width:28px;
+    height: 28px;
+    line-height: 30px;
+    border-radius: 30px;
+    display: inline-block;
+    margin: 0 5px;
+    color: #fff;
+    background: #ec6890;
+    font-size: 15px;
+    position: relative;
+}
+.sign_date_red span:before{
+    content:'';
+    width: 15px;
+    height: 17px;
+    display: inline-block;
+    position: absolute;
+    background: url(//pic.davdian.com/free/sign_red_0530.png);
+    background-size: 15px;
+    top: -5px;
+    right: -8px;
+}
+.sign_date_red .red_text{
+    position: absolute;
+    color: #EC6890;
+    text-align: center;
+    font-size: 11px;
+    width: 100%;
+}
+.book_slogan{
+    padding:0 10px 20px;
+    font-size: 12px;
+    color: #B0B0B0;
+}
+.tr{
+    text-align: right;
+}
+.mask{
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+    height: 100%;
+    width: 100%;
+}
+.mask .rule{
+    width: 240px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px 14px;
+    box-sizing: border-box;
+    margin-top: 100px;
+    position: relative;
+}
+
+.mask .rule .close{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAANCAYAAACdKY9CAAAABGdBTUEAALGPC/xhBQAAALlJREFUKBWNkLENAyEMRQNSiog1MkSarHHNDUCVhkEorkP0KZgkQ2QNlCISxEY2AsSdQmPr8775WHjv7ymll9b6ezo4zrmzlPImAX4AF1DY4+kuICsBWgmcmhgmZhXYDOLC8WZ6McxMNDFQrUOqoTXlnIsuhMigVxiZzoCCtfailHpjH2O8GmM+2PPpDJz5rxcYpkkL1fkfRvhwS3swZx7vJWziyTF4MsNYSSsRkUXDBnq3utbQmpD9AbSNafD9ZB3TAAAAAElFTkSuQmCC);
+    -webkit-background-size: 12px;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+}

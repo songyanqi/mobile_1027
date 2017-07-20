@@ -1,0 +1,140 @@
+
+.index_search_con {
+    position         : fixed;
+    top              : 0;
+    z-index          : 109;
+    width            : 100%;
+    max-width        : 640px;
+    background-color : #FCFCFC
+}
+
+.top0 .top_container {
+    position: relative;
+}
+
+.top_container .top_back {
+    top: 4px;
+    width: 25px;
+    color: #333;
+    position: absolute;
+    left: 10px;
+}
+.top0 .top_back {
+    height: 40px;
+    float: left;
+}
+.top_container .top_back .icon {
+    width               : 23px;
+    height              : 20px;
+    background-image: url("//pic.davdian.com/free/classification_icon_201619.png");
+    background-position : 3px 0;
+    background-size     : 20px;
+    background-repeat   : no-repeat
+}
+
+.top_container .top_back .text {
+    font-size   : 12px;
+    line-height : 12px
+}
+
+.shop_introduce {
+    position         : relative;
+    top              : 0;
+    background-color : #fff
+}
+
+.top_container .input_container {
+    margin-right : 10px
+}
+
+.top_container input {
+    box-sizing    : border-box;
+    margin        : 0;
+    padding       : 0 0 0 15px;
+    width         : 100%;
+    height        : 30px;
+    border        : 0;
+    border-radius : 3px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.top_container i.icon-search {
+    position : absolute;
+    top      : 13px;
+    right    : 25px;
+    opacity  : .6
+}
+
+.top_container button {
+    position : absolute;
+    top      : 9px;
+    right    : 18px;
+    opacity  : 0
+}
+
+.word_list {
+    overflow  : hidden;
+    font-size : 12px
+}
+
+.index_search_con .top0 {
+    position : relative
+}
+
+.index_search_con .search_result {
+    position    : relative;
+    padding-top : 0
+}
+.top0 .title_container {
+    font-size: 15px;
+    height: 40px;
+    line-height: 40px;
+    box-sizing: content-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+}
+.top0 .title_container.kind_list{
+    margin-left: 18px !important;
+    margin-right: 0px;
+    line-height: 37px;
+}
+.top_container .cancel{
+    display: none;
+}
+.top_container.active .title_container{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.top_container.active i.icon-search{
+    right: 75px;
+}
+.top_container.active button{
+    right: 68px;
+}
+
+.top_container.active .cancel{
+    float: right;
+    font-size: 14px;
+    color: #333;
+    margin-top: -30px;
+    margin-right: 20px;
+    display: block;
+    cursor: pointer;
+}
+.search_result{
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding-top: 42px;
+    max-width: 640px;
+}
+.search_result .word_list{
+    background-color: #fcfcfc;
+    height: 100%;
+    padding: 15px;
+}

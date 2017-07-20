@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="http://cdn.davdian.com/swiper/swiper-3.3.1.min.css" rel="stylesheet">
+    <link href="../dist/vList.css" rel="stylesheet">
+
+    <title>微刊</title>
+    <script>
+        var tj_id = 39;
+        var tj_path = 'classroom';
+
+        var needTransDomainList = ['mmbiz.qpic.cn'];
+
+        /////////////////////给app提供接口数据////////////
+        //      app版本小于1.5.0拍下面这段
+        var appData = {
+            showHead: 0,     // 是否展示头部
+            showFoot: 1,     // 是否展示底部
+            backOnHead: 0,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0
+        };
+
+        // app版本为1.5.0或以上 拍下面这段
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 1,     // 是否展示底部
+            backOnHead: 0,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0
+        };
+
+        //点赞
+        var praiseUrl = "../data/test.json";
+        var pageId = "90901";
+
+        //下拉异步加载
+        //cat_id == 0 是今日推荐
+        var cat_id = "1";
+        var down2refreshUrl = "/dvd/index.php?c=class&a=ajax_list";
+        var getListTitleUrl1 = "../data/v_info_data.json";
+        var getListTitleUrl = "../data/vList.json";
+        var pageIndexStart = 1;
+        var pagesize = 10;
+        var sort = 0;
+        var category = 0;
+        var q = '';
+
+    </script>
+</head>
+<!--是app body上加个in_app的class 否则加scroll_flag的class-->
+<body class="in_app">
+<div  id="vue_con">
+    <v-list></v-list>
+</div>
+
+
+<script src="//cdn.davdian.com/vue/2.0.5/vue.js"></script>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="//cdn.davdian.com/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script src="../dist/vList.js"></script>
+
+</body>
+</html>

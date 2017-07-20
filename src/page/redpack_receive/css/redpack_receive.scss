@@ -1,0 +1,381 @@
+@import "../../../common/css/common.scss";
+
+$red: #FF4A7D;
+
+.app {
+  color: #333;
+  min-height: ptr(650);
+  line-height: 1;
+}
+
+.envelope {
+  margin: ptr(155) auto 0;
+  width: ptr(309);
+  height: ptr(159);
+  background: url(http://pic.davdian.com/free/redpack_receive/envelope.png) no-repeat;
+  background-size: 100%;
+  text-align: center;
+  overflow: auto;
+  color: white;
+}
+
+.btn {
+  margin: ptr(24) auto ptr(45);
+  display: block;
+  width: ptr(225);
+  @include height(ptr(43));
+  background-color: #F63E29;
+  border-radius: ptr(80);
+  > p {
+    height: ptr(40);
+    background: linear-gradient(to bottom, #FF8457, #FF5847);
+    border-radius: ptr(80);
+    color: white;
+    text-align: center;
+    font-size: ptr(18);
+  }
+}
+
+.luck-list {
+  box-sizing: border-box;
+  margin: 0 ptr(10);
+  padding: ptr(15);
+  background-color: white;
+  border-radius: ptr(4);
+  overflow: auto;
+  min-height: ptr(200);
+  .title {
+    display: block;
+    margin: 0 auto;
+    width: ptr(284);
+  }
+  .com-scroll-list {
+    margin-top: ptr(10);
+    ul {
+      font-size: ptr(14);
+      li {
+        position: relative;
+        @include height(ptr(60));
+        display: flex;
+        justify-content: center;
+        &:not(:first-of-type):before {
+          content: '';
+          position: absolute;
+          display: block;
+          top: 0;
+          width: 100%;
+          height: 1px;
+          background-color: #E1E1E1;
+          transform: scaleY(0.5);
+        }
+        * {
+          vertical-align: middle;
+        }
+        .head {
+          img {
+            display: inline-block;
+            @include circle(ptr(30));
+          }
+        }
+        .mobile {
+          margin-left: ptr(10);
+          display: inline-block;
+          flex: 1;
+        }
+        .money {
+          flex: 1;
+          text-align: right;
+          color: $red;
+        }
+      }
+    }
+  }
+}
+
+.rule {
+  box-sizing: border-box;
+  margin: ptr(30) ptr(10);
+  padding: ptr(15) ptr(10);
+  background-color: white;
+  border-radius: ptr(4);
+  overflow: auto;
+  .title {
+    display: block;
+    margin: 0 auto;
+    width: ptr(297);
+  }
+  .rich-text {
+    margin-top: ptr(15);
+    text-align: left;
+    font-size: ptr(14);
+    line-height: 1.5;
+    p {
+      &:not(:first-of-type) {
+        margin-top: ptr(10);
+      }
+    }
+  }
+}
+
+.wrapper {
+  overflow: auto;
+  background: #ffc7d6 url(http://pic.davdian.com/free/redpack_receive/bg.png) no-repeat;
+  background-size: 100%;
+
+  // 组合红包
+  &.group {
+    .envelope {
+      p {
+        &:nth-of-type(1) {
+          margin-top: ptr(12);
+          font-size: ptr(18);
+          font-weight: 500;
+        }
+        &:nth-of-type(2) {
+          margin-top: ptr(8);
+          font-size: ptr(28);
+          span{
+            display: inline-block;
+            vertical-align: bottom;
+          }
+          .num {
+            margin-bottom: ptr(-5);
+            font-size: ptr(44);
+          }
+        }
+      }
+    }
+    // 红包列表
+    .redpack-list {
+      position: relative;
+      margin: ptr(13) ptr(10) 0;
+      background: rgba(255, 255, 255, 0.7);
+      padding: ptr(10) ptr(5);
+      border-radius: ptr(8);
+      font-size: 0;
+
+      .arrow {
+        position: absolute;
+        height: ptr(8);
+        margin: auto;
+        left: 0;
+        right: 0;
+        top: ptr(-7);
+        border: 0;
+      }
+
+      .redpack {
+        margin: ptr(5);
+        display: inline-block;
+        width: ptr(162);
+        height: ptr(79);
+        padding: ptr(5) ptr(15);
+        box-sizing: border-box;
+        background: url(http://pic.davdian.com/free/redpack_receive/redpack-bg.png) no-repeat;
+        background-size: 100%;
+        font-size: ptr(11);
+        text-align: left;
+        vertical-align: top;
+        color: white;
+        line-height: 1.5;
+
+        .name {
+          @include ellipsis;
+          font-weight: 500;
+        }
+        .info {
+          line-height: 1;
+          white-space: nowrap;
+          span {
+            display: inline-block;
+          }
+          .symbol {
+
+          }
+          .money {
+            font-size: ptr(27);
+          }
+          .right-info {
+            margin: ptr(3) 0 0 ptr(5);
+            line-height: 1.3;
+            .type {
+              font-weight: 500;
+              width: ptr(89);
+              @include ellipsis;
+            }
+            .condition {
+
+            }
+          }
+        }
+        .time {
+          margin-top: ptr(8);
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  // 随机、等额红包
+  &.random-and-equal {
+    .envelope {
+      text-align: left;
+      padding: 0 ptr(55);
+      box-sizing: border-box;
+      p {
+        &:nth-of-type(1) {
+          margin-top: ptr(8);
+          font-size: ptr(14);
+          font-weight: 500;
+          @include ellipsis;
+          line-height: 1.2;
+        }
+        &:nth-of-type(2) {
+          margin-top: ptr(6);
+          font-size: ptr(12);
+          white-space: nowrap;
+          span {
+            display: inline-block;
+            vertical-align: bottom;
+            &:nth-of-type(1) {
+              margin-bottom: ptr(2);
+              font-size: ptr(20);
+            }
+            &:nth-of-type(2) {
+              font-size: ptr(50);
+              margin-bottom: ptr(-3);
+            }
+            &:nth-of-type(3) {
+              margin-left: ptr(5);
+              p {
+                font-size: ptr(14);
+                text-align: left;
+                line-height: 1.5;
+                margin: 0;
+                @include ellipsis;
+                width: ptr(130);
+              }
+            }
+          }
+        }
+        &:nth-of-type(3) {
+          position: relative;
+          margin: ptr(9) auto;
+          @include height(ptr(28));
+          width: ptr(194);
+          font-size: ptr(11);
+          text-align: center;
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            border-top: 1px dashed white;
+            transform: scaleY(0.5);
+          }
+        }
+      }
+    }
+  }
+
+  // 状态:未开始
+  &.no-begin {
+    .envelope {
+      p {
+        line-height: 1.5;
+        &:nth-of-type(1) {
+          margin-top: ptr(11);
+          font-size: ptr(20);
+          font-weight: 500;
+        }
+        &:nth-of-type(2) {
+          margin-top: ptr(4);
+          img {
+            width: ptr(126);
+          }
+        }
+        &:nth-of-type(3) {
+          margin-top: ptr(2);
+          font-size: ptr(15);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  // 状态:已结束、状态:红包抢没了
+  &.no-remain, &.end {
+    .envelope {
+      p {
+        line-height: 1.5;
+        &:nth-of-type(1) {
+          margin-top: ptr(18);
+          font-size: ptr(20);
+          font-weight: 500;
+        }
+        &:nth-of-type(2) {
+          margin-top: ptr(11);
+          font-size: ptr(18);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  // 状态:未登录
+  &.no-login {
+    .envelope {
+      p {
+        line-height: 1.5;
+        &:nth-of-type(1) {
+          margin-top: ptr(18);
+          font-size: ptr(20);
+          font-weight: 500;
+        }
+        &:nth-of-type(2) {
+          margin-top: ptr(11);
+          font-size: ptr(18);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  // 状态:出错了
+  &.error {
+    background: #F1F1F1;
+    height: ptr(650);
+    text-align: center;
+    .error-pic {
+      margin-top: ptr(140);
+      img {
+        width: ptr(110);
+      }
+    }
+    .tip {
+      margin-top: ptr(30);
+      color: #666;
+      font-size: ptr(14);
+    }
+    .reload-btn {
+      display: block;
+      margin: ptr(20) auto;
+      width: ptr(140)*2;
+      @include height(ptr(33)*2);
+      border: 1px solid #999;
+      border-radius: ptr(20)*2;
+      font-size: ptr(12)*2;
+      transform: scale(0.5);
+      transform-origin: top;
+    }
+    .msg {
+      margin: 0 auto;
+      width: ptr(200);
+      font-size: ptr(10);
+      line-height: 1.5;
+    }
+  }
+}

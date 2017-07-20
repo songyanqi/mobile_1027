@@ -1,0 +1,634 @@
+body {
+    max-width: 640px;
+    color: #333;
+    background-color: #f6f6f6;
+    margin: 0px auto;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.hide {
+    display: none !important;
+}
+
+div, p, dl, dd, a, b, u, em, input, textarea, button, select, form, section, label, span, td, li, nav, footer, ul, i, h1, h2, h3, h4, h5, h6 {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 0;
+    margin: 0;
+    list-style: none
+}
+
+a:focus, a:active, input, button, textarea, select {
+    outline: 0;
+    -webkit-appearance: none
+}
+
+a {
+    text-decoration: none;
+    -webkit-touch-callout: none;
+    color: #333
+}
+
+body, td, input, textarea, option, select, button {
+    -webkit-text-size-adjust: none
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #fff;
+    position: relative
+}
+table{max-width:100%;background-color:transparent;border-collapse:collapse;border-spacing:0;}
+
+.gray {
+    color: #666
+}
+
+.red {
+    color: #FF4A7D
+}
+
+.fz_12 {
+    font-size: 12px;
+}
+
+.fz_14 {
+    font-size: 12px;
+}
+
+.fz_16 {
+    font-size: 12px;
+}
+.fl{float: left;}
+.mb_10{
+    margin-bottom: 10px;
+}
+
+img {
+    width: auto \9;
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic
+}
+
+.mask-to-web {
+    position: fixed;
+    max-width: 640px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 9999;
+    /*display: block;*/
+}
+
+.mask-to-web p {
+    color: #ffffff;
+    font-size: 15px;
+    padding: 5px 30px;
+    word-break: break-all;
+}
+
+.mask-to-web .pointer {
+    height: 95px;
+    margin: 0px 40px 10px;
+    background: url("//pic.davdian.com/free/pointer.png") no-repeat right;
+}
+
+body {
+    padding-top: 44px;
+}
+
+.top0 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 640px;
+    z-index: 11;
+}
+
+.top0 .top_container{
+    font-size: 16px;
+    background-color: rgba(250,250,250,0.95);
+    text-align: center;
+    position: relative;
+}
+@supports (-webkit-backdrop-filter: none) {
+    .top0 .top_container{
+        background: rgba(250,250,250,0.95);
+        -webkit-backdrop-filter: brightness(1.5) blur(10px);
+    }
+}
+.top0 .top_container:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom:-1px;
+    background: #f0f0f0;
+    width: 100%;
+    height: 1px;
+}
+/*Retina屏为2的时候调用下面的样式*/
+@media
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min-device-pixel-ratio:2),
+only screen and (min--moz-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:4/2),
+only screen and (min-resolution:2dppx)
+{
+    .top0 .top_container:after{
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+}
+
+.top0 .top_left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.top0 .top_back {
+    width: 40px;
+    height: 44px;
+    float: left;
+}
+
+.top0 .home_arrow {
+    margin-top: 15px;
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: 0;
+    width: 12px;
+    height: 12px;
+    border-left: 1px solid #333;
+    border-bottom: 1px solid #333;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.top0 .title_container {
+    margin-left: 80px;
+    margin-right: 80px;
+    font-size: 15px;
+    height: 44px;
+    line-height: 44px;
+    box-sizing: content-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.top0 .top_right {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.top0 .top_share {
+    width: 40px;
+    height: 44px;
+    float: right;
+}
+
+.top0 .top_share .icon {
+    width: 22px;
+    height: 21px;
+    background-image: url(//pic.davdian.com/free/share_icon_2x.png);
+    background-size: 100%;
+    display: block;
+    margin-top: 9px;
+    margin-left: 9px;
+}
+
+.top0 .top_home {
+    width: 40px;
+    height: 44px;
+    float: right;
+}
+
+.top0 .top_home .home_icon {
+    width: 20px;
+    height: 20px;
+    background: url(//pic.davdian.com/free/home_icon_0825.png) no-repeat center;
+    background-size: 100%;
+    display: block;
+    margin-top: 12px;
+    margin-left:10px;
+}
+
+.top0.top_hide {
+    animation: top_hide_animation 0.2s forwards;
+    -webkit-animation: top_hide_animation 0.2s forwards;
+}
+
+@keyframes top_show_animation {
+    0% {
+        top: -44px
+    }
+    90% {
+        top: 0
+    }
+    100% {
+        top: 0
+    }
+}
+
+@-webkit-keyframes top_show_animation {
+    0% {
+        top: -44px
+    }
+    90% {
+        top: 0
+    }
+    100% {
+        top: 0
+    }
+}
+
+.top0.top_show {
+    animation: top_show_animation 0.2s forwards;
+    -webkit-animation: top_show_animation 0.2s forwards;
+}
+
+@keyframes top_hide_animation {
+    0% {
+        top: 0
+    }
+    90% {
+        top: -44px
+    }
+    100% {
+        top: -44px
+    }
+}
+
+@-webkit-keyframes top_hide_animation {
+    0% {
+        top: 0
+    }
+    90% {
+        top: -44px
+    }
+    100% {
+        top: -44px
+    }
+}
+
+.top0.top_always_hide {
+    top: -44px;
+}
+
+
+ul{
+    -webkit-tap-highlight-color: transparent;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.topic_menu{
+    max-width: 640px;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:flex;
+    flex-flow:row;
+    width:100%;
+    height:40px;
+    background-color:#fff;
+    font-size:14px;
+    line-height:40px;
+    border-top:10px solid #f1f1f1;
+    top:0;
+    z-index:3;
+    margin-top:0}
+.topic_menu li {
+    flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    color: #333;
+    text-align: center;
+    cursor: pointer
+}
+
+.topic_menu li.hover {
+    border-bottom: 2px solid #FF4A7D;
+    color: #FF4A7D
+}
+
+.topic_menu li.hover a {
+    color: #FF4A7D
+}
+.tab_input_container.active{
+    border: #FF4A7D solid 1px;
+}
+.video_container iframe{
+    width: 100%!important;
+    height: 200px!important;
+}
+.people_container .people_tag{
+    display: inline-block;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQwAAAAoCAYAAAALxsQHAAAABGdBTUEAALGPC/xhBQAABVpJREFUeAHt3VtoHFUYB/DzzWxujYi1CRZqEavNboQg0opYkhDSipdHNa2tgfYliqYbjUEEX1xv9EVN0mxqvYKKVoztU8FLY1mTfUpBoYKbTaFKq5KaWBQajJud+fxOtLLd7GVmFpPd7H9fOjtzrr/SP3M5OyX174cfeaMiHjsdYVbbLu/DnxCAAASUotHAjrq7KRSyKZUj3t67gRcWvmXm+tT92IYABMpVgC5UVZm3bvpq8IIWMFIZ/Cf7fzaY9pAiO3U/tiEAgfIT0DlgKuq8HBZa4IrA0DsaokOjyqDn9DY+EIBAGQsY6sBiHqQQLAkMfcz/9cGXJV0+SymHTQhAoIwE5F5F1H9d65ITh4yBQURcW1vRKTc7zpWREaYKAQhoAaLfTJ+xm0Z2WukgGQNDF9r4Rf9Fg6hDaifSK+E7BCCwegVM5n2bI0M/ZZph1sDQhf3jQxNSoDdTReyDAARWoQBRf0N0+Hi2meUMDF3JHw0fklOUI9kawH4IQGB1CBCpU4HGpmdyzSZvYOjKa2uquyQ0vs/VEI5BAAKlKyBh8YfBlQ/Rm48u5JqFo8BY/+Urcyb5HlSkLuVqDMcgAIESFWDqaoj2n803ekeBoRtpGBuISeGufA3iOAQgUFoC8lT0cCAaHnEyaseBoRvzjw9/LJcmYScNowwEIFD8AnIpcrrKrHP8YMNVYOjpB9bX9UkiTRQ/BUYIAQjkFCCaI5N23RgJzecsl3LQdWDQSChRUWV26MUdKe1gEwIQKDEBg7jbHwlPuhm268DQjd80OniO2OjEj9TcUKMsBIpJgN73jw2/53ZEngJDdxKIHvyciV5y2yHKQwACKysgvxOJr11T/biXUXgODN1ZYPu652Xp+AkvHaMOBCCw/AJyk3NekW+nXirhpXcJm8I+8ba+Orb+0i/dub6wllAbAhD4vwXkgcVjgfHwYa/9FHSGoTv1R16dZaXGvQ4A9SAAgeURkLOLTwsJCz3KggMj3tq9VzHvXp4poxcIQMCLwOLbs0zD8XqLbH0UFBix1v1Ntq0OZWsc+yEAgeIQYMVGMsmDhY7Gc2CcuTd4tWJ1VAawptBBoD4EILAcAnx/rCX4bCE9eQ4M6xK/K5cimwvpHHUhAIHlFSDmFyebe+7x2qunwIg3dz8lT0Ue8Nop6kEAAisjoC9NWFkfTTX3bvIyAtePVWOtPduUbUWkswovHaIOBCCw8gLyePW7a2qq73S7HsPVGcaZlmA92dYnMl2Excr/nWMEEPAsIFcITb//Of+O2wYcBwaHQoal7COy5mKD205QHgIQKD4BCY1dky3Bp92MzHFgxE/OviD/7+p2N42jLAQgUOwC9oGp5uAOp6N0dA8j3tpzH9vWcTm7cFTeaecoBwEIFIGAflWF6dvaGBn4Md9o8p5hnG3vu8G27Q8QFvkocRwCJSrAvE5ZyWPnO3pr8s0gZ2BwR6gysTAv7/rja/M1hOMQgEAJCzDfNjedeCvfDHIGRnx6ZkDuW9yerxEchwAESl9A/q0/PNnS/WSumWS9JyG/E9mjbP4wV2UcgwAEVpkAUVKZ6q7GSDiSaWYZA0PWW9ySVDwhS79rM1XCPghAYPUKyKKuGR9Vbrl57LXz6bNccknya1voKov5KMIinQrfIVAeArI+oz5pJ4790BaqTp/xksC4aM2+LevNA+kF8R0CECgfAcmArQlr5vX0GV8RGLGW/UG9+iu9EL5DAALlJ2Cz2icvyOpOnfl/9zCmmp+4w1JJ/ao9/E4kVQjbEChvgQXD52v3RwajmmExMP55ke/8N/JYZWN522D2EIDAEgFS01RNWwInwr/8DfMMURjsPtxUAAAAAElFTkSuQmCC);
+    width: 134px;
+    background-size: 100%;
+    top: -10px;
+    position: absolute;
+    left: 50%;
+    margin-left: -67px;
+}
+
+body.in_app{
+    padding-top: 0;
+}
+body.in_app .top0{
+    display: none;
+}
+
+.good_list_2_row .good_item {
+    float: left;
+    width: 50%;
+    padding: 0 5px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+.good_img_container {
+    padding: 0;
+    position: relative;
+    background-color: #fff;
+}
+
+.goods_container .goods_item .goods_price_outer  .label{
+    border-radius: 8px;
+    height: 16px;
+    line-height: 16px;
+    color: #fff;
+    padding: 0px 5px;
+    background-color: #FF4A7D;
+    font-size: 10px;
+    display: inline-block;
+    margin-left: 4px;
+    font-family: sans-serif;
+}
+
+.goods_container .good_list_sell_out {
+    font-size: 15px;
+    color: #fff;
+    background-color: rgba(0,0,0,.7);
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    line-height: 60px;
+    top: 50%;
+    position: absolute;
+    z-index: 2;
+    margin-top: -30px;
+    left: 50%;
+    margin-left: -30px;
+    text-align: center;
+}
+.pic_info{
+    position: absolute;
+    right: .08rem;
+    top: .08rem;
+    width: .38rem;
+    font-size: .11rem;
+    background-color: #ff4a7d;
+    color: #fff;
+    border-radius: .19rem;
+    text-align: center;
+    line-height: .13rem;
+    height: .38rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 .02rem;
+    box-sizing: border-box;
+}
+.navigation_container{
+    border-bottom: solid 1px rgba(0,0,0,.1);
+    position: relative;
+}
+.navigation_container .fold{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    background: #fff;
+    border-bottom: #ddd solid 1px;
+}
+.navigation_container .fold .title{
+    height: 42px;
+    color: #999;
+    line-height: 42px;
+    padding: 0 40px 0 30px;
+    border-bottom: #ddd solid 1px;
+    position: relative;
+}
+.navigation_container .fold .unfold{
+    background-image: url(//pic.davdian.com/free/2017/02/10/icon2.png);
+}
+
+.navigation_container .anchor-list{
+    padding: 10px 24px;
+}
+
+.navigation_container .fold a{
+    line-height:30px;
+    font-size: 14px;
+    color: #999;
+    padding: 0 6px;
+    display: inline-block;
+}
+.navigation_container .fold a.hover{
+    color: #ff4a7d;
+}
+
+.anchor-menu{
+    width: 100%;
+    max-width: 640px;
+    font-size: 14px;
+    margin-bottom: 1px;
+    background-color: #fff;
+    height: 42px;
+}
+.anchor-menu.table-like ul{
+    display: table;
+}
+.anchor-menu.table-like li{
+    display: table-cell;
+}
+.anchor-menu li{
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 30px;
+    padding: 6px 6px 0;
+    min-width: 70px;
+    position: relative;
+    display: inline-block;
+    width: auto;
+    box-sizing: border-box;
+}
+.anchor-menu li span{
+    border-bottom: 2px solid #fff;
+    color: #333;
+    display: inline-block;
+    padding: 0 1px;
+    margin: 0 auto;
+}
+.anchor-menu li.hover span:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #ff4a7d;
+}
+.anchor-menu li.hover span a{
+    color: #ff4a7d;
+}
+
+.goods_container .label{
+    border-radius: 8px;
+    height: 14px;
+    line-height: 14px;
+    color: #fff;
+    padding: 0 5px;
+    background-color: #ff4a7d;
+    font-size: 10px;
+    display: inline-block;
+    margin-left: 4px;
+    font-family: sans-serif;
+}
+
+
+
+.unfold{
+    position: absolute;
+    width: 40px;
+    height: 41px;
+    right: 0;
+    top: 0;
+    z-index: 8;
+    background-image: url(//pic.davdian.com/free/2017/02/10/icon.png);
+    background-size: 20px;
+    background-position: center;
+    background-repeat:no-repeat;
+    background-color: #fff;
+    box-shadow: -4px 0 5px rgba(0,0,0,.15);
+}
+
+
+/*单列交叉商品*/
+.goods_cross a{
+    display: block;
+    height: 140px;
+    position: relative;
+    width: 100%;
+    border-bottom:#E1E1E1 solid 1px;
+}
+.goods_cross a:nth-last-child(1){
+    border-bottom:none;
+}
+.goods_cross a img{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top:10px;
+    left: 10px;
+}
+.goods_cross a .goods_info{
+    margin-left: 140px;
+    padding: 10px;
+}
+.goods_cross2 a:nth-child(2n) img{
+    left: inherit;
+    right: 10px;
+}
+.goods_cross2 a:nth-child(2n) .goods_info{
+    margin-left: inherit;
+    margin-right: 140px;
+}
+.goods_cross .goods_title{
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    height: 3em;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.goods_cross .goods_detail{
+    font-size: 10px;
+    color: #999;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    height: 3em;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.goods_cross .goods_price_outer{
+    margin-top: 30px;
+    font-size: 22px;
+    line-height: 30px;
+}
+.goods_cross .price{
+    color: #ff4a7d;
+}
+.goods_cross .label{
+    line-height: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+.goods_cross .market-price{
+    margin-left: 10px;
+    color: #999;
+    text-decoration: line-through
+}
+
+
+
+.app_top{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 640px;
+    z-index: 11;
+}
+
+.anch_fix_40 {
+    padding-top: 40px;
+}
+
+.anch_fix_80{
+    padding-top: 80px;
+}

@@ -1,0 +1,162 @@
+.top_container .input_container{
+    margin-right: 18px;
+    margin-left: 22px;
+    margin-top: 2px;
+}
+.top_container input{
+    width: 100%;
+    height: 30px;
+    padding: 0 0 0 26px;
+    margin: 0;
+    border-radius: 15px;
+    box-sizing: border-box;
+    border: 1px #eee solid;
+}
+
+.top_container input::-webkit-clear-button {
+    display : none;
+}
+
+.top_container i.icon-search{
+    position : absolute;
+    top: 13px;
+    right: 25px;
+    display : none;
+    opacity: 0.6;
+}
+
+.top_container.active i.icon-search {
+    display : block;
+}
+.top_container button{
+    position : absolute;
+    top: 9px;
+    right: 18px;
+    opacity: 0;
+    width: 32px;
+    height: 34px;
+    display: inline-block;
+}
+.search_form{
+    position: relative;
+}
+.search_icon {
+    position: absolute;
+    display: inline-block;
+    background: url(//pic.davdian.com/free/index_search_icon_160225.png) no-repeat;
+    width: 15px;
+    height: 15px;
+    background-size: 15px;
+    top: 5px;
+    left: 9px;
+}
+
+body{
+    padding-bottom: 0;
+ }
+.con{
+    position: absolute;
+    top:40px;
+    bottom: 10px;
+    width: 100%;
+    max-width: 640px;
+}
+body.in_app .dav-buyer-bottom{
+    display: none;
+}
+body.in_app .con{
+    top:0;
+    bottom: 0;
+}
+.con .left{
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+.con .left:before{
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: #f1f1f1;
+    right: 0;
+}
+.con .right{
+    overflow: hidden;
+}
+.con .right{
+    padding: 0 10px;
+}
+.con .right_con{
+    padding: 10px 0 5px;
+}
+.con .type{
+    line-height: 50px;
+    font-size: 12px;
+    text-align: center;
+    border-bottom:#F1F1F1 solid 1px;
+}
+@media
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min-device-pixel-ratio:2),
+only screen and (min--moz-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:4/2),
+only screen and (min-resolution:2dppx){
+    .con .type{
+        position: relative;
+        border-bottom: none;
+    }
+    .con .type:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        background: #F1F1F1;
+        width: 100%;
+        height: 1px;
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+    }
+}
+.con .type.active{
+    background-color: #f1f1f1;
+    color: #FF4A7D;
+}
+.con .banner{
+    margin-bottom: 10px;
+}
+.category{
+    text-align: center;
+    background-color: #fff;
+    font-size: 12px;
+    line-height: 40px;
+    color: #666;
+    padding-top: 8px;
+    margin-bottom: 10px;
+}
+.category .item{
+    padding: 9px 0;
+}
+.category img{
+    width: 62.5%;
+}
+.category .text{
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.cat_block{
+    overflow: hidden;
+}
+.swiper-container {
+    width: 100%;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets{
+    bottom: 0;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #FF4A7D;
+}

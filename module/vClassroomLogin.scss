@@ -1,0 +1,96 @@
+body{
+  background-color: #fff;
+}
+.classroom_form{
+  background-color: #fff;
+  padding: 50px;
+  .complete_container{
+    border: #D5D5D5 solid 1px;
+    background-color: #fff;
+    width: 100%;
+    height: 38px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    text-align: center;
+    color: #d5d5d5;
+    line-height: 38px;
+    margin-top: 25px;
+  }
+  .complete_container.com{
+    color: #fff;
+    background-color: #FF4A7D;
+    border: none;
+  }
+  .input_container{
+    background-color: #FAFAFA;
+    color: #333;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    position: relative;
+    input{
+      background:0;
+      font-size: 14px;
+      line-height: 14px;
+      height: 14px;
+      width: 100%;
+    }
+    .button_container{
+      position: absolute;
+      width: 82px;
+      height: 100%;
+      background: #fff;
+      top: 0;
+      right: 0;
+      .confirm_btn{
+        background-color: #FF4A7D;
+        color: #fff;
+        font-size: 12px;
+        border-radius: 3px;
+        position: absolute;
+        width: 72px;
+        text-align: center;
+        right: 0;
+        line-height: 40px;
+        &.countdowning{
+          background-color: #fafafa;
+          color: #999;
+        }
+      }
+    }
+  }
+  .login_href{
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    color: #666;
+    text-decoration: underline;
+  }
+}
+.other_info{
+  padding: 10px;
+  color: #999;
+  font-size: 14px;
+  .p1{
+    margin-bottom: 4px;
+  }
+  .p2{
+    font-size: 12px;
+    position: relative;
+    padding-left: 10px;
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      background-color: #ddd;
+      width: 4px;
+      height: 4px;
+      left: 0;
+      top: 8px;
+      border-radius: 4px;
+    }
+  }
+}

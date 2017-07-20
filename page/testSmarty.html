@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <script src="../javascript/fxtpl.js"></script>
+    <title></title>
+</head>
+<body>
+
+<div id="myTemplate">
+    不带key >
+    <ul>
+        <!--{foreach from=$userList item=$peo}-->
+            <li>姓名：<!--{$peo}--></li>
+        <!--{/foreach}-->
+    </ul>
+
+    带key >
+    <ul>
+        <!--{foreach from=$userList item=$peo key=$index}-->
+        <li>姓名：<!--{$peo}--> -------- id: <!--{$index}--></li>
+        <!--{/foreach}-->
+    </ul>
+
+    smarty3 > 待完善
+    <ul>
+        <!--{foreach $userList as $peo}-->
+        <li>姓名：<!--{$peo}--></li>
+        <!--{/foreach}-->
+    </ul>
+
+
+    >> if
+    <!--{if $status == '1'}-->
+    <div>直播中...</div>
+    <!--{/if}-->
+
+    >> if...else
+    <!--{if $live == '1'}-->
+    <div>直播中...</div>
+    <!--{else}-->
+    <div>休息中...</div>
+    <!--{/if}-->
+
+    >> if...elseif
+    <!--{if $live == '1'}-->
+    <div>直播中...</div>
+    <!--{elseif $live == '0'}-->
+    <div>录像中...</div>
+    <!--{/if}-->
+</div>
+
+<script>
+    var data = {
+        userList: [
+            '刘辰',
+            '文斌',
+            'Nemo'
+        ],
+        status: 1,
+        live: 0
+    };
+
+
+
+    Fxtpl.config.leftTag = '<!--{';//定义新的左分隔符
+    Fxtpl.config.rightTag = '}-->';//定义新的右分隔符
+    Fxtpl.render('myTemplate', data);
+</script>
+
+</body>
+</html>

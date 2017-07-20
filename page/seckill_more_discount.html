@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html ng-app="maybeYouLike">
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/seckill.css" rel="stylesheet">
+    <title>更多优惠</title>
+    <script>
+        //统计
+        var tj_id = 60;
+        var tj_path = 'seckill_more';
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 1
+        };
+
+        /////////////////////微信分享/////////////////////
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+        /////////////////////////////////////////////////
+
+        // 猜你喜欢数据
+        var maybeYouLikeUrl = "../module/goods2row.json";
+
+        var goodsid = 12;
+    </script>
+</head>
+<body class="scroll_flag">
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            更多优惠
+        </div>
+    </div>
+</div>
+
+<div class="seckill_list">
+    <ul>
+        <li>
+            <a href="">
+                <div class="img_container">
+                    <div class="img_container_inner">
+                        <img src="//pic.davdian.com/goods/2016/03/07/640_640_2785caae79ad6f94c1a4accd8753f3d3.jpg">
+                        <span class="sold_lable">已售罄</span>
+                    </div>
+                    <div class="order_good_info_container">
+                        <div class="order_good_name">中国第一套儿童情绪管理图画书</div>
+                        <div class="order_recommend goods_details">大V推荐：<<span class="dav-color6">这是一本值得推荐的绘本，它道出了孩子教育过程中非常重要的一环，情管理教育。</span>
+                        </div>
+                        <div class="order_good_price">抢购价 : 9.90<span class="market_price dav-small">抢购价 : 9.90</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="img_container">
+                    <div class="img_container_inner">
+                        <img src="//pic.davdian.com/goods/2016/03/07/640_640_2785caae79ad6f94c1a4accd8753f3d3.jpg">
+                        <span class="sold_lable">已售罄</span>
+                    </div>
+                    <div class="order_good_info_container">
+                        <div class="order_good_name">中国第一套儿童情绪管理图画书</div>
+                        <div class="order_recommend goods_details">大V推荐：<<span class="dav-color6">这是一本值得推荐的绘本，它道出了孩子教育过程中非常重要的一环，情管理教育。</span>
+                        </div>
+                        <div class="order_good_price">抢购价 : 9.90<span class="market_price dav-small">抢购价 : 9.90</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="img_container">
+                    <div class="img_container_inner">
+                        <img src="//pic.davdian.com/goods/2016/03/07/640_640_2785caae79ad6f94c1a4accd8753f3d3.jpg">
+                        <span class="sold_lable">已售罄</span>
+                    </div>
+                    <div class="order_good_info_container">
+                        <div class="order_good_name">中国第一套儿童情绪管理图画书</div>
+                        <div class="order_recommend goods_details">大V推荐：<<span class="dav-color6">这是一本值得推荐的绘本，它道出了孩子教育过程中非常重要的一环，情管理教育。</span>
+                        </div>
+                        <div class="order_good_price">抢购价 : 9.90<span class="market_price dav-small">抢购价 : 9.90</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="img_container">
+                    <div class="img_container_inner">
+                        <img src="//pic.davdian.com/goods/2016/03/07/640_640_2785caae79ad6f94c1a4accd8753f3d3.jpg">
+                        <span class="sold_lable">已售罄</span>
+                    </div>
+                    <div class="order_good_info_container">
+                        <div class="order_good_name">中国第一套儿童情绪管理图画书</div>
+                        <div class="order_recommend goods_details">大V推荐：<<span class="dav-color6">这是一本值得推荐的绘本，它道出了孩子教育过程中非常重要的一环，情管理教育。</span>
+                        </div>
+                        <div class="order_good_price">抢购价 : 9.90<span class="market_price dav-small">抢购价 : 9.90</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="img_container">
+                    <div class="img_container_inner">
+                        <img src="//pic.davdian.com/goods/2016/03/07/640_640_2785caae79ad6f94c1a4accd8753f3d3.jpg">
+                        <span class="sold_lable">已售罄</span>
+                    </div>
+                    <div class="order_good_info_container">
+                        <div class="order_good_name">中国第一套儿童情绪管理图画书</div>
+                        <div class="order_recommend goods_details">大V推荐：<<span class="dav-color6">这是一本值得推荐的绘本，它道出了孩子教育过程中非常重要的一环，情管理教育。</span>
+                        </div>
+                        <div class="order_good_price">抢购价 : 9.90<span class="market_price dav-small">抢购价 : 9.90</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <div class="img_container">
+                    <div class="img_container_inner">
+                        <img src="//pic.davdian.com/goods/2016/03/07/640_640_2785caae79ad6f94c1a4accd8753f3d3.jpg">
+                        <span class="sold_lable">已售罄</span>
+                    </div>
+                    <div class="order_good_info_container">
+                        <div class="order_good_name">中国第一套儿童情绪管理图画书</div>
+                        <div class="order_recommend goods_details">大V推荐：<<span class="dav-color6">这是一本值得推荐的绘本，它道出了孩子教育过程中非常重要的一环，情管理教育。</span>
+                        </div>
+                        <div class="order_good_price">抢购价 : 9.90<span class="market_price dav-small">抢购价 : 9.90</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<!--猜你喜欢-->
+<maybe-you-like></maybe-you-like>
+
+<script src="http://cdn.davdian.com/vue/1.0.26/vue.js"></script>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script src="//apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script src="../cdn/jquery/jquery.lazyload.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/model.js"></script>
+<script src="../dist/seckill_more_discount.js"></script>
+</body>
+</html>

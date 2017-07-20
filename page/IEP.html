@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <!-- /build -->
+
+    <!-- build:style iep -->
+    <link href="../stylesheet/iep.css" rel="stylesheet">
+    <!-- /build -->
+    <title>给Ta代付</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+    </script>
+    
+</head>
+<body class="index_scroll">
+
+<!-- 以下为顶部搜索 -->
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            给Ta代付
+        </div>
+    </div>
+</div>
+
+<div class="iep_pic">
+   <img src="//pic.davdian.com/free/iep_pic11_201569.png">
+
+</div>
+
+<div style="margin-top:-15px;">
+    <div class="iep-group">
+         <span class="iep-group-left"></span> 
+         
+           <span class="iep-group-left-jt"></span> 
+  
+  <span class="iep-group-right-jt"></span> 
+        
+         <span class="iep-group-right"></span> 
+    </div>
+    <div class="iep-item" style="background-color:#fff;">
+        <ul class="con_list">
+            <li>
+                <span class="head"><img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg"></span>
+                <div class="right">
+                    <h2>哈爸</h2>
+                    <div class="text"><span></span>同甘苦，共患难。家人有困难就一起扛，我有困难，就帮我解决。</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="cashier_to_pay dav-group">
+    <div class="dav-item">
+        给 Ta 支付：<span class="price pull-right"><span class="fz13">￥</span>66.00元</span>
+    </div>
+</div>
+
+<div class="cashier_pay_type dav-group">
+    <!-- 在微信里展示这三个 -->
+    <div class="dav-item" data-name="we">
+        <span class="icon icon_wechat"></span>微信支付<span class="icon icon_dy"></span>
+    </div>
+
+    <!-- 手机浏览器或者电脑上展示下面四个 -->
+    <!-- <div class="dav-item" data-name="we">
+        <span class="icon icon_alipay"></span>支付宝支付（手机）<span class="icon icon_dy"></span>
+    </div>
+    <div class="dav-item" data-name="we">
+        <span class="icon icon_alipay"></span>支付宝支付（电脑）<span class="icon icon_dy"></span>
+    </div> -->
+    <div class="dav-item i-am-zk" data-name="we"> <!-- 加了i-am-zk就不跳转了 如果需要跳转就不加-->
+        <span class="icon icon_bank_card"></span>银行卡快捷支付<span class="icon arrow_up"></span>
+    </div>
+    <div class="dav-item bank-card" data-name="we">
+        <span class="icon icon_bank_detail detail_1"></span>工商银行储蓄卡（尾号2113）<span class="icon icon_dy"></span>
+    </div>
+    <div class="dav-item bank-card" data-name="we">
+        <span class="icon icon_bank_detail detail_2"></span>工商银行储蓄卡（尾号2113）<span class="icon icon_dy"></span>
+    </div>
+    <div class="dav-item bank-card add" data-name="we">
+        <span class="icon_plus"></span>使用新的银行卡
+    </div>
+
+
+    <div class="dav-item i-am-jujuede"> <!-- 这个不跳转 -->
+        <span class="icon icon_alipay"></span>支付宝支付<span class="icon icon_dy"></span>
+    </div>
+    <div class="dav-item i-am-jujuede alipay_wechat"> <!-- 支付宝支付微信中显示 -->
+        <span class="icon icon_alipay"></span>支付宝支付
+    </div>
+    <div class="dav-item i-am-jujuede ex fz12"> <!-- 这个不跳转 -->
+        <p>微信中不能使用支付宝，请在浏览器中打开连接地址： </p>
+        <textarea class="cashier_textarea" readonly="true">//dfasddf.asdfasf/fasfasdf/asdf/asdf</textarea>
+        <!--<textarea class="iep_textarea" readonly="true" >//hello.dabdian.comhello.dabdian.comhello.dabdian.comhello.dabdian.comhello.dabdian.com</textarea>-->
+    </div>
+
+</div>
+<!-- 电脑上再多展示一个二维码 -->
+<div class="pay-qr">
+    <img src="//pic.davdian.com/free/qr_new.png">
+
+    <div class="pay-text">
+        微信扫二维码支付
+    </div>
+</div>
+
+<div class="cashier_bottom">
+    本店交易由大V店进行担保
+</div>
+<div class="mask hide">
+    <p>微信中不能使用支付宝支付，请在手机浏览器中使用支付宝支付。</p>
+
+    <p>方法：请点击右上角菜单按钮，选择“<span>在浏览器中打开</span>”进行下单支付。</p>
+</div>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<!-- build:script base -->
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<!-- /build -->
+<!-- build:script iep -->
+<script type="text/javascript" src="../javascript/iep.js"></script>
+<!-- /build -->
+</body>
+</html>

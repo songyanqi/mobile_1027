@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>视频直播</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <!-- Chang URLs to wherever Video.js files will be hosted -->
+    <link href="../stylesheet/video-js.css" rel="stylesheet">
+    <link href="../stylesheet/video_live.css" rel="stylesheet">
+
+    <script>
+        var tj_id = 68;
+        var tj_path = "video_live ";
+
+        var userId=222;
+        var attentionUrl="/index.php?m=default&c=videoLive&a=follow";//关注url
+
+        var it = "n19jmcy59zr29";
+        var tokenurl = "http://app.bravetime.net/api/live/getToken?format=json";
+
+        var video_live_chatRoomId="dvd_vlive_20376";//房间id
+        var praise_num= 3333;//房间获得的总赞数
+        var video_timer=3600;//直播时长
+        var user_num=30;//直播间人数
+        var bonus_money=6.0111;//获得的红包金额
+        var video_bg="http://img1.bravetime.net/live_thumbnail/2016/07/13/1239_1242_1c05808247d6fb785e276b1f8948b6ad.png";
+
+        var status=1;//直播状态
+
+        var exclusiveOwner=1;//直播专享
+
+        /////////////////////微信分享/////////////////////
+        // 店铺的图标
+        var imgUrl = "http://img.davdian.com/seller/shop_logo_22.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新                                                                                                                                                                                                                                               书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+        /////////////////////////////////////////////////
+    </script>
+
+
+</head>
+<body class="video_live_con">
+<div id="video_con">
+    <video id="example_video_1" class="video-js vjs-default-skin clearfix" preload="none"
+           data-setup="{}" webkit-playsinline>
+        <source src="http://3539.liveplay.myqcloud.com/dvlive/3539114239.flv?txSecret=47d13525f39d4580efba66816c7e232a&txTime=6e3a2be8" type='video/flv' />
+        <source src="http://3539.liveplay.myqcloud.com/dvlive/3539114239.m3u8?txSecret=47d13525f39d4580efba66816c7e232a&txTime=6e3a2be8" type='application/x-mpegurl' />
+    </video>
+
+    <!--观看人,点赞数,红包数,时长-->
+    <div class="video_live_top">
+        <div class="people">
+            <div class="left">
+                <span class="head"><img src="http://pic.davdian.com/free/2016/04/01/315_311_b7f1695be19ca8b68963438a06053ebe.png"></span>
+                <div class="info">
+                    <p>直播中</p>
+                    <p class="number"><span id="total_num"></span>人</p>
+                </div>
+                <div class="attention">关注</div>
+            </div>
+        </div>
+
+        <div class="width_100 mt_10">
+            <div class="red"><i class="icon"></i>红包<span class="get_number"></span></div>
+            <div class="user_list right clearfix">
+                <ul>
+                    <li user_id=""><span><img src="//pic.davdian.com/free/2016/04/01/315_311_b7f1695be19ca8b68963438a06053ebe.png"></span></li>
+                    <li user_id=""><span><img src="http://pic.davdian.com/free/2016/04/01/315_311_b7f1695be19ca8b68963438a06053ebe.png"></span></li>
+                    <li user_id=""><span><img src="http://pic.davdian.com/free/2016/04/01/315_311_b7f1695be19ca8b68963438a06053ebe.png"></span></li>
+                    <li user_id=""><span><img src="http://pic.davdian.com/free/2016/04/01/315_311_b7f1695be19ca8b68963438a06053ebe.png"></span></li>
+                    <li user_id=""><span><img src="http://pic.davdian.com/free/2016/04/01/315_311_b7f1695be19ca8b68963438a06053ebe.png"></span></li>
+                    <li user_id=""><span><img src="http://pic.davdian.com/free/2016/04/01/315_311_b7f1695be19ca8b68963438a06053ebe.png"></span></li>
+                    <li user_id=""><span><img src="http://pic.davdian.com/free/2016/04/01/315_311_b7f1695be19ca8b68963438a06053ebe.png"></span></li>
+                    <li user_id=""><span><img src="http://pic.davdian.com/free/2016/04/01/315_311_b7f1695be19ca8b68963438a06053ebe.png"></span></li>
+                    <li user_id=""><span><img src="http://pic.davdian.com/free/2016/04/01/315_311_b7f1695be19ca8b68963438a06053ebe.png"></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt_10 live_time" id="video_long_time" long_time="" data_end=""></div>
+        <!--<div class="open_dvd_link"><a href="">打开大V店，直播更流畅</a></div>-->
+    </div>
+
+    <!--弹幕消息-->
+    <div class="msg_container">
+        <div class="video_message">
+            <ul>
+                <li><span class="info_title color_white">直播消息 : </span><span class="info_con color_point">课程分享已经结束了，如果你还没有听够，点击看回顾哦！</span></li>
+                <li><span class="info_title">个人小站站长 : </span><span class="info_con">把爱好做成了事业</span></li>
+                <li><span class="info_title">MAMA : </span><span class="info_con color_praise_info">给你点赞啦~！<i class="message_praise_icon"></i></span></li>
+                <li><span class="info_title">这里橘子酸 : </span><span class="info_con color_red_info">给你发了红包<i class="message_red_icon"></i></span></li>
+                <li><span class="info_title">ammi : </span><span class="info_con color_share_info">分享了你的直播~</span></li>
+            </ul>
+        </div>
+        <div class="message_send">
+            <div class="send_left"><span class="chat_icon"></span><span class="shop_icon"><b class="goods_num">9</b></span></div>
+            <div class="send_right">
+                <span class="gift_icon"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="praise_bg">
+        <div class="praise_num"></div>
+    </div>
+
+</div>
+
+<div class="live_video_bottom">
+    <div class="download_con">
+        <div class="close_btn_con">
+            <span class="close_btn"></span>
+        </div>
+        <div class="center_con"><img src="//pic.davdian.com/free/live_video_logo_0928.png"></div>
+        <a class="download_btn_con">
+            <div class="download_btn">打开</div>
+        </a>
+    </div>
+</div>
+
+<!--店主专享直播不是店主的时候显示-->
+<div class="video_playback_bg hide">
+    <div class="video_playback_con">
+        <div>这是店主专享的独家课程，</div>
+        <div class="mt_5">需要成为店主后才能看呦~~</div>
+        <div class="app_link"><a href="/348.html">马上去开店</a></div>
+    </div>
+</div>
+
+<!--直播结束的时候显示-->
+<div class="video_live_end hide">
+    <div class="end_title">直播结束</div>
+    <div class="video_total_time">直播时长<span class="live_long_time"></span></div>
+    <div class="end_info">
+        <table>
+            <tr>
+                <td class="left"><i class="icon_people"></i></td>
+                <td><span class="num_style" id="people">999999</span> 人看过</td>
+            </tr>
+            <tr>
+                <td class="left"><i class="icon_praise"></i></td>
+                <td>收到 <span class="num_style" id="praise">1599</span> 个赞</td>
+            </tr>
+        </table>
+    </div>
+    <div class="hint">回放整理中，稍后再来</div>
+    <!--<div class="video_playback_end">
+        <ul>
+            <a href="javascript:history.back();"><li>再看一遍</li></a>
+            <a href="//a.app.qq.com/o/simple.jsp?pkgname=com.davdian.seller"><li>下载大V店，参与更多直播</li></a>
+        </ul>
+    </div>-->
+</div>
+
+
+<div class="lock_wrp hide" id="lock">
+    <div class="lock">
+        <i></i><br>
+        请使用移动终端竖屏浏览,体验更佳
+    </div>
+</div>
+
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script src="../javascript/jweixin-1.0.0.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+
+<script type="text/javascript" src="../cdn/jquery/jquery.cookie.js"></script>
+<script src="https://cdn.ronghub.com/RongIMLib-2.2.0.min.js"></script>
+<script src="https://cdn.ronghub.com/RongEmoji-2.2.0.min.js"></script>
+<script src="https://cdn.ronghub.com/RongIMVoice-2.2.0.min.js"></script>
+<script src="../javascript/video.js"></script>
+<script>
+    videojs.options.flash.swf = "../javascript/video-js.swf";
+</script>
+<script src="../javascript/video_live_close.js"></script>
+
+<script src="../javascript/video_live.js?c=cc3"></script>
+<script src="../javascript/video_live_message.js"></script>
+</body>
+</html>

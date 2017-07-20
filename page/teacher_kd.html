@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>送老师一座大V店</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link rel="stylesheet" href="../stylesheet/teacher_kd.css?o1=3">
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 1
+        };
+
+        var submitUrl = "";
+
+        var imgUrl = "http://pic.davdian.com/free/2016/09/09/320_320_777e4ab9bbe9cf1b080d29e90a77970f.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '老师您辛苦啦，祝您节日快乐！';
+        var shareTitle = '长大后我没有成为您，教师节我要送您一座大V店！';  //店铺名称
+
+        // wechat
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+
+    </script>
+</head>
+<body>
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            送老师一座大V店
+        </div>
+    </div>
+</div>
+
+<!--上部-->
+
+<!--情况一 上部图片-->
+<div class="up_con">
+    <img src="http://pic.davdian.com/free/2016/09/09/1125_480_75038b00888abda0c432eb866aa64603.jpg" alt="">
+</div>
+
+<!--情况二  有资格-->
+<div class="up_container">
+    <div class="up_con">
+        <div class="u1">恭喜，成功获取免费送店资格</div>
+        <div class="u2">
+            <input type="tel" placeholder="请输入手机号">
+            <div class="tel_text">
+                <span>请确认此手机号注册过大V店</span>
+            </div>
+        </div>
+        <div class="u3">
+            <div class="dav-btn btn-small submit">确认赠送</div>
+        </div>
+    </div>
+</div>
+
+<!--情况三 成功参与-->
+<div class="up_container">
+    <div class="up_con">
+        <div class="u1">您已经成功参与此活动</div>
+        <div class="u4">您赠送的店铺手机号为13521152721</div>
+    </div>
+</div>
+
+<!--情况四 已经结束-->
+<div class="up_container">
+    <div class="up_con">
+        <div class="u1">抱歉！此活动已结束。</div>
+    </div>
+</div>
+
+<!--下部-->
+<div class="bottom_con">
+    <div class="title">长大后我没有成为你，教师节我要送您一座大V店！</div>
+    <div class="bottom_inner_con">
+        <div class="inner_con center small">
+            小时候，你是我最恨也最爱的人<br/>
+我恨你，那些我偷偷压在课本下小人书<br/>
+以及，我藏在课桌下游戏机、玩偶、纸飞机<br/>
+统统变成你的战利品，放在那高高的讲台上<br/>
+我爱你，在父母亲不能接我的傍晚<br/>
+你踩着落日的余晖将我送回家<br/>
+在那些心里飘着雨的季节<br/>
+你将彩虹般的梦想放在我的心上<br/>
+小时候，总以为，长大后，我就成了你<br/>
+<br/>
+长大后，你是我最怀念也最感恩的人<br/>
+我总是想起小时候的一幕幕<br/>
+一部漫长而又令人无限怀念的电影<br/>
+阳光下的操场，微风里的野炊，朗朗的读书声<br/>
+还有，那个努力用知识和操守为我铺就一条<br/>
+美丽成长之路，并一路守望着我的你<br/>
+今天是9月10日，教师节，我亲爱的老师<br/>
+除了感谢与感恩，我还想说一句，您辛苦了<br/>
+——长大后我没有成为你，教师节我要送您一座大V店！
+</div>
+    </div>
+
+    <div class="bottom_inner_con">
+        <span class="inner_con">在教师节隆重到来的这一天，大V店为了向每一位老师致以节日的问候和崇高的敬意，发起了“教师节送老师一座大V店”的活动，活动详情如下：
+</span>
+    </div>
+    <div class="bottom_inner_con">
+        <span class="inner_title">参与用户：</span>
+        <span class="inner_con">所有店主</span>
+    </div>
+    <div class="bottom_inner_con">
+        <span class="inner_title">活动时间：</span>
+        <span class="inner_con">仅限9月10日12点至9月11日12点</span>
+    </div>
+    <div class="bottom_inner_con">
+        <div class="inner_title">活动内容：</div>
+        <div class="inner_con">1、店主自己购物的任一订单，购物实际支付金额（不累计，按个订单金额） ≥ 199元，可以获得邀请老师免费开店的名额 1 个；每个店主只可获得一次，获得的免费开店名额只可以用于赠送给老师，不可自用。</div>
+        <div class="inner_con">2、免费开店者享有9月10日当天商品销售佣金翻倍福利，翻倍的佣金在9月20日发放。</div>
+    </div>
+    <div class="bottom_inner_con">
+        <div class="inner_title">参与方式：</div>
+        <div class="inner_con">店主在自己店铺购物支付一个≥199的订单——到大V店首页顶部第1张轮播图点击进入——按提示填写被赠送者手机号码——提交——通知被赠送者点击收到的短信——登录店铺——快乐的玩转大V店。</div>
+    </div>
+    <div class="bottom_inner_con">
+        <div class="inner_title">活动须知：</div>
+        <div class="inner_con">1、邀请老师免费开店，邀请者有10%工资收益，但没有79元佣金奖励，免费开店的名额不计算40元的服务商奖励；</div>
+        <div class="inner_con">2、免费开店者，不赠送购物红包，不赠送礼品；</div>
+        <div class="inner_con">3、以订单支付成功的时间为准，来确定是否符合获得邀请老师免费开店的名额，获得的免费开店名额需要在9月12日（含）之前送出，过期视为放弃。</div>
+        <div class="inner_con">4、邀请老师免费开店的名额会在≥199那笔购物订单支付成功后的1小时后发放。获得免费开店的名额订单，如发生退款退货，大V店有权回收开店资格或关闭已经开店的店铺。</div>
+        <div class="inner_con">5、本活动如与正在进行的活动冲突，则只能享有其中一项。大V店拥有本次活动的最终解释权。</div>
+    </div>
+</div>
+
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://cdn.davdian.com/wx_jssdk/jweixin-1.0.0.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/teacher_kd.js"></script>
+</body>
+</html>

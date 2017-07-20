@@ -1,0 +1,999 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="http://cdn.davdian.com/topic/css/topic-8875fcbb56.css" rel="stylesheet">
+
+
+    <title>大V店|周二·第二件半价</title>
+    <script>
+        var imgUrl = 'http://pic.davdian.com/goods/2016/12/12/320_320_047df3410f38b2c6dca6266a65f8bd32.jpg';  //分享图片
+        var lineLink = window.location.href; // 分享网址
+        var descContent = '半价|大V店周二第二件半价，仅限周二当天！'; // 分享文案
+        var shareTitle = '半价|大V店周二第二件半价，仅限周二当天！';  //分享标题
+        //浏览次数：{if $read_times}{$read_times}{else}0{/if}
+
+    </script>
+    <script>
+        // 半价数据
+        var data1 = [
+
+            [36070,36078],
+            [229625,229620],
+            [185134,220927],
+            [285576,315417],
+            [302559,286495],
+            [46035,41904],
+            [31913,256899],
+            [129259,750],
+            [33944,33945],
+            [46517,46518],
+            [321031,321033],
+            [321034,321032],
+            [315797,315404],
+            [313314,313322],
+            [313826,315597]
+
+
+
+
+
+        ];
+
+        var data2 = [
+            129054,306599,321459,171050,291612,216351,321458,143885,1176,320619
+
+        ];
+
+        var halfData = [];
+
+
+
+        //半价数据结束
+    </script>
+
+    <style>
+        body {
+            position: relative;
+            padding-top: 77px;
+        }
+
+        [v-cloak] {
+            display: none;
+        }
+
+        body.in_app {
+            padding-top: 40px;
+        }
+
+        .add-to-cart-i {
+            width: 45px;
+            height: 45px;
+            background-size: 45px;
+            margin-top: -8px;
+            margin-left: -15px;
+        }
+
+        #add-all-to-cart.disable {
+            background: #CCC !important;
+        }
+
+        .half-one {
+            background: #D73C6B;
+            color: #FFF;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .half-one .g-title {
+            text-align: center;
+            font-size: 14px;
+            line-height: 150%;
+            padding: 10px;
+        }
+
+        .half-one .g-list {
+            text-align: center;
+        }
+
+        .half-one .g-list .g {
+            width: 39%;
+            display: inline-block;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .half-one .g-list .g-middle {
+            width: 20%;
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .add-half-to-cart {
+            z-index: 100;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background: rgb(248, 248, 248);
+            max-width: 640px;
+            text-align: left;
+        }
+
+        .add-half-to-cart .header {
+            padding: 10px;
+            background: #FFF;
+        }
+
+        .add-half-to-cart .header .title {
+            font-size: 14px;
+            line-height: 150%;
+            padding: 10px 0;
+        }
+
+        .add-half-to-cart .price {
+            font-size: 14px;
+            color: #D73C6B;
+        }
+
+        .add-half-to-cart .market-price {
+            font-size: 14px;
+            text-decoration: line-through;
+            padding: 0 10px;
+            color: #999;
+        }
+
+        .add-half-to-cart .discount {
+            font-size: 14px;
+            color: #D73C6B;
+        }
+
+        .add-half-to-cart .g-list {
+            padding: 0 20px;
+            margin-bottom: 20px;
+        }
+
+        .add-half-to-cart .g-list .g {
+            margin-top: 10px;
+            background: #FFF;
+            position: relative;
+        }
+
+        .add-half-to-cart .g-list .g .image {
+            width: 80px;
+            height: 80px;
+            float: left;
+        }
+
+        .add-half-to-cart .g-list .g .desc {
+            margin-left: 90px;
+            min-height: 80px;
+        }
+
+        .add-half-to-cart .half-to-cart {
+            line-height: 46px;
+            text-align: center;
+            background: #ff4a7d;
+            font-size: 14px;
+            color: #FFF;
+            margin-bottom: 10px;
+            border-radius: 3px;
+        }
+
+        .g-name {
+            padding: 0 10px;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            text-overflow: ellipsis;
+            white-space: pre-line;
+            overflow: hidden;
+            display: -webkit-box;
+            line-height: 18px;
+            height: 36px;
+        }
+        .g-name-cart {
+            padding: 0 10px;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            text-overflow: ellipsis;
+            white-space: pre-line;
+            overflow: hidden;
+            display: -webkit-box;
+            line-height: 18px;
+            height: 18px;
+        }
+        .mask {
+            z-index: 15;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            top: 0;
+            max-width: 640px;
+        }
+
+        .animate_con {
+            position: fixed;
+            width: 160px;
+            height: 160px;
+            bottom: 50%;
+            left: 50%;
+            margin-left: -80px;
+            animation: add 1.5s forwards;
+            -webkit-animation: add 1.5s forwards;
+        }
+
+        @keyframes add {
+            0% {
+                width: 160px;
+                height: 160px;
+                bottom: 50%;
+                left: 50%;
+                margin-left: -80px;
+                opacity: 1;
+            }
+            90% {
+                width: 16px;
+                height: 16px;
+                bottom: 80px;
+                left: 40px;
+                margin-left: -8px;
+                opacity: 1;
+            }
+            100% {
+                width: 16px;
+                height: 16px;
+                bottom: 80px;
+                left: 40px;
+                margin-left: -8px;
+                opacity: 0;
+            }
+        }
+
+        @-webkit-keyframes add {
+            0% {
+                width: 160px;
+                height: 160px;
+                bottom: 50%;
+                left: 50%;
+                margin-left: -80px;
+                opacity: 1;
+            }
+            90% {
+                width: 16px;
+                height: 16px;
+                bottom: 80px;
+                left: 40px;
+                margin-left: -8px;
+                opacity: 1;
+            }
+            100% {
+                width: 16px;
+                height: 16px;
+                bottom: 80px;
+                left: 40px;
+                margin-left: -8px;
+                opacity: 0;
+            }
+        }
+
+        .animate_con img {
+            position: absolute;
+            width: 75%;
+        }
+
+        .h-cnt {
+            padding-bottom: 30px;
+            background: #FFF8f7;
+            padding-top: 24px;
+            position: relative;
+        }
+
+        .h-2-one {
+            width: 50%;
+            display: inline-block;
+        }
+
+        .h-2-one-g {
+            padding: 10px;
+            position: relative;
+        }
+
+        .h-2-one-g .sort {
+            position: absolute;
+            top: 5px;
+            right: 0;
+            color: #FFF;
+            text-align: center;
+            font-size: 16px;
+            box-sizing: border-box;
+            line-height: 24px;
+            font-family: fantasy;
+        }
+
+        .h-2-one-g .sort .sort-inner {
+            width: 24px;
+            height: 24px;
+            background: rgba(197, 39, 88, 0.8);
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            display: inline-block;
+            padding-top: 2px;
+            box-sizing: border-box;
+        }
+
+        .h-2-one .g-name .g-price {
+            color: #D73C6B;
+        }
+
+        .h-2-buy {
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .h-2-buy .discount {
+            color: #D73C6B;
+            padding-bottom: 10px;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .h-2-buy .btn {
+            background: #D73C6B;
+            color: #FFF;
+            padding: 6px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .g-list-2{
+            background-color: #fff8f7;
+            position: relative;
+            top:20px;
+            padding-bottom: 17px;
+            box-shadow: 0 0 3px 3px #feeef0;
+        }
+        .g-list-1{
+            background-color: #fff8f7;
+            position: relative;
+            top:20px;
+            margin-top: 10px;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            box-shadow: 0 0 3px 3px #feeef0;
+        }
+        .different_2{
+            font-size: 16px;
+            text-align: center;
+            line-height: 38px;
+            background: #Fff8f7;
+            display: inline-block;
+            padding: 0px 22.5px;
+            color: #ff4a7d;
+            border-radius: 12px;
+            box-shadow: 0 0 3px 3px #feeef0;
+            margin-top: 3px;
+        }
+        .h-2{
+            overflow: hidden;
+            position: relative;
+            background: #ffffff;
+        }
+        .h-2-one-left{
+            float:left;padding-right: 12.5px;box-sizing: border-box;
+        }
+        .h-2-one-right{
+            float:left;padding-left: 12.5px;box-sizing: border-box;
+        }
+        .thin_line{
+            position: absolute;
+            bottom: 0px;
+            content: "";
+            display: block;
+            position: absolute;
+            left: -50%;
+            width: 200%;
+            height: 1px;
+            background: #e1e1e1;
+            -webkit-transform:scale(0.5);
+        }
+        .sale{
+            font-size: 14px;
+            float: left;
+            height: 20px;
+            color: #ff4a7d;
+            margin-top: 0px;
+            line-height: 20px;
+            padding: 0 10px;
+            position: relative;
+            border-radius: 2px;
+        }
+        .sale:before {
+            width: 200%;
+            height: 200%;
+            transform: scale(.5);
+            transform-origin: left top;
+            -ms-transform: scale(.5);
+            -ms-transform-origin: left top;
+            -webkit-transform: scale(.5);
+            -webkit-transform-origin: left top;
+            -moz-transform: scale(.5);
+            -moz-transform-origin: left top;
+            -o-transform: scale(.5);
+            -o-transform-origin: left top;
+        }
+        .sale:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid #ff4a7d;
+            border-radius: 2px;
+            width: 200%;
+            height: 200%;
+            box-sizing: border-box;
+        }
+        .order_good_name {
+            width: 100%;
+            font-size: 12px;
+            height: 34px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            line-height: 17px;
+        }
+        .h-1-buy {
+            padding: 15px 0px 0px;
+        }
+        .h-1-buy .sheng{
+            display: inline-block;
+            background-color: #FFffff;
+            height: 10px;
+            line-height: 8px;
+            padding: 9px;
+            border: dotted 1px #ff4a7d;
+            color: #ff4a7d;
+            border-right: solid 1px;
+        }
+        .h-1-buy .qiang{
+            display: inline-block;
+            background-color: #FF4A7D;
+            height: 22px;
+            line-height: 22px;
+            padding: 4px 14px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            font-size: 14px;
+            color: #ffffff;
+        }
+        .shengqian{
+            font-size: 18px;
+        }
+        .to_shop_btn{
+            color: #333333;
+            border: 1px solid #333333;
+            padding: 5px 20px;
+            border-radius: 3px;
+        }
+        .cat_price_1{
+            font-size: 12px;
+            color: #FF4A7D;
+            float: left;
+            line-height: 10px;
+        }
+        .cat_price_2{
+            color: #ff4a7d;
+            font-size: 12px;
+            float: left;
+            line-height: 13px;
+        }
+        .cat_price_3{
+            color: #ff4a7d;
+            font-size: 14px;
+            float: left;
+            line-height: 10px;
+        }
+        .cat_price_4{
+            color: #999999;
+            font-size: 10px;
+            display: block;
+            text-decoration: line-through;
+            float: left;
+            padding-left: 2px;
+            line-height: 10px;
+        }
+        .twice_price_1{
+            font-size: 14px;
+            color: #ff4a7d;
+            float: left;
+            line-height:10px;
+        }
+        .twice_price_2{
+            color: #ff4a7d;
+            font-size: 14px;
+            float: left;
+            line-height:13px;
+        }
+        .twice_price_3{
+            color: #ff4a7d;
+            font-size: 18px;
+            float: left;
+            line-height:10px;
+        }
+        .twice_price_4{
+            color: #999999;
+            font-size: 10px;
+            display: block;
+            text-decoration: line-through;
+            float: left;
+            padding-left: 3px;
+            line-height:10px;
+        }
+        @media screen and (max-width: 374px) {
+            .h-1-buy .sheng{
+                display: inline-block;
+                background-color: #FFffff;
+                height: 10px;
+                line-height: 8px;
+                padding: 9px 2px;
+                border: dotted 1px #ff4a7d;
+                color: #ff4a7d;
+                border-right: solid 1px;
+                font-size: 10px;
+            }
+            .h-1-buy .qiang{
+                display: inline-block;
+                background-color: #FF4A7D;
+                height: 22px;
+                line-height: 22px;
+                padding: 4px 2px;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                font-size: 11px;
+                color: #ffffff;
+            }
+            .sale{
+                font-size: 10px;
+                float: left;
+                height: 20px;
+                color: #ff4a7d;
+                margin-top: 0px;
+                line-height: 20px;
+                padding: 0 10px;
+                position: relative;
+                border-radius: 2px;
+            }
+            .shengqian{
+                font-size: 14px;
+            }
+            .cat_price_1 {
+                font-size: 10px;
+                color: #FF4A7D;
+                float: left;
+                line-height: 10px;
+            }
+            .cat_price_2 {
+                color: #ff4a7d;
+                font-size: 10px;
+                float: left;
+                line-height: 13px;
+            }
+            .cat_price_3 {
+                color: #ff4a7d;
+                font-size: 12px;
+                float: left;
+                line-height: 10px;
+            }
+            .cat_price_4 {
+                color: #999999;
+                font-size: 8px;
+                display: block;
+                text-decoration: line-through;
+                float: left;
+                padding-left: 0px;
+                line-height: 10px;
+            }
+            .twice_price_1{
+                font-size: 12px;
+                color: #ff4a7d;
+                float: left;
+                line-height: 10px;
+            }
+            .twice_price_2{
+                color: #ff4a7d;
+                font-size: 12px;
+                float: left;
+                line-height: 13px;
+            }
+            .twice_price_3{
+                color: #ff4a7d;
+                font-size: 14px;
+                float: left;
+                line-height: 10px;
+            }
+            .twice_price_4{
+                color: #999999;
+                font-size: 8px;
+                display: block;
+                text-decoration: line-through;
+                float: left;
+                padding-left: 3px;
+                line-height: 10px;
+            }
+        }
+    </style>
+</head>
+
+
+<body <!--{if $is_from_app}--> class="in_app" <!--{/if}-->  style="background:#F0F0F0;" id="in_app">
+
+
+<div class="top0">
+    <div class="top_container" style="border-bottom: solid 1px #d8d8d8;">
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">周二第二件半价</div>
+        <div class="top_right">
+
+            <a href="/" class="top_home">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+
+        <div class="top_other" style="position: relative;background: #fff;font-size: 14px;line-height:37px;overflow:hidden;">
+            <div style="width: 50%;display: inline-block;box-sizing: border-box;float:left;border-right: solid 1px #d8d8d8;">
+                <img style="max-width: 22px;" src="http://pic.davdian.com/free/2017/01/10/44_46_548d79653492717cef067f12552cab08.png" alt="">
+                <a id="different" @click="click_1" href="#2" style="display: inline-block;color: #FF4A7D;">两件不同款</a>
+            </div>
+            <div style="width: 50%;float: right;">
+                <img style="max-width: 22px;" src="http://pic.davdian.com/free/2017/01/10/44_46_51364d79c64bbabada06188554f3717a.png" alt="">
+                <a id="common" @click="click_2" href="#1" style="display: inline-block;color: #666666;">两件同款</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--{if $is_from_app}-->
+<div class="top_other" style="position: relative;background: #fff;font-size: 14px;line-height:37px;overflow:hidden;border-bottom: solid 1px #D8D8D8">
+    <div style="width: 50%;display: inline-block;box-sizing: border-box;float:left;border-right: solid 1px #d8d8d8;">
+        <img style="max-width: 22px;" src="http://pic.davdian.com/free/2017/01/10/44_46_548d79653492717cef067f12552cab08.png" alt="">
+        <a href="#2" style="display: inline-block;color: #FF4A7D;">两件不同款</a>
+    </div>
+    <div style="width: 50%;float: right;">
+        <img style="max-width: 22px;" src="http://pic.davdian.com/free/2017/01/10/44_46_51364d79c64bbabada06188554f3717a.png" alt="">
+        <a href="#1" style="display: inline-block;color: #666666;">两件同款</a>
+    </div>
+</div>
+<!--{/if}-->
+
+
+<div class="img_group" style="background:#FFF;">
+    <div class="img_item">
+        <img src="http://pic.davdian.com/free/2017/01/16/750_214_599a122efbc68e1e5c979838ecc3b17c.png" alt="">
+    </div>
+    <div class="img_item">
+        <img src="http://pic.davdian.com/free/2017/01/10/750_212_96f07d654870e3e05c1f714b45f1559c.png" alt="">
+    </div>
+</div>
+
+
+<!--商品代码开始-->
+
+
+<a name="2" style="margin-top: -90px;display: block;height: 70px;"></a>
+<div class="g-list-2">
+    <div style="position: absolute;width: 100%;text-align: center;top: -30px;">
+        <span class="different_2">两件不同款</span>
+    </div>
+    <div class="h-cnt h2" v-for="(k,ac) in g1">
+        <div class="h-2">
+            <a href="/{{goods.goods_id}}.html" v-for="(k1,goods) in ac" v-if="$index<2">
+                <div class="h-2-one" :class="{'h-2-one-left':k1==0 , 'h-2-one-right':k1==1 }">
+                    <div class="h-2-one-g">
+                        <img :src="goods.goods_img">
+                    </div>
+                    <div class="g-name">{{goods.goods_name}}</div>
+                    <div v-if="k1==0" style="padding: 20px 10px;line-height: 10px;">
+                        <span style="font-size: 14px;color: #ff4a7d;height: 10px;">￥</span><span style="font-size: 18px;color: #ff4a7d;">{{goods.shop_price}}</span>
+                    </div>
+                    <div v-if="k1==1" style="padding: 20px 10px;height: 10px;">
+                        <span class="twice_price_1">半价</span><span class="twice_price_2">￥</span><span class="twice_price_3">{{(goods.shop_price-Math.ceil(goods.shop_price/2)).toFixed(2)}}</span>
+                        <span class="twice_price_4">原价￥{{goods.shop_price}}</span>
+                    </div>
+                </div>
+            </a>
+            <div style="width: 25px;float: left;position: absolute;left: 50%;top:0px;margin-left: -12.5px;height: 100%;background: #fff8f7;color: #ff4a7d;font-size: 32px;text-align: center;padding-top: 30%;">+</div>
+        </div>
+        <div class="h-2-buy">
+            <div style="display: inline-block;background-color: #FFffff;height: 30px;line-height: 7px;padding: 9px;border: dotted 1px #ff4a7d;color: #ff4a7d;border-right: solid 1px;box-sizing: border-box;">省 ¥<span style="font-size: 18px;">{{ac[2]}}.00</span></div><div @click="add(ac[3])" style="display: inline-block;background-color: #FF4A7D;height: 22px;line-height: 22px;padding: 4px 11px;border-top-right-radius: 5px;border-bottom-right-radius: 5px;font-size: 14px;color: #ffffff;">第二件半价抢购</div>
+        </div>
+        <div class="thin_line" v-if="k != (g1.length-1)"></div>
+        <div style="clear: both;"></div>
+    </div>
+</div>
+
+
+
+
+<a name="1" style="margin-top: -70px;display: block;height: 70px;" id="two"></a>
+
+<div class="g-list-1">
+    <div style="position: absolute;width: 100%;text-align: center;top: -30px;height: 30px;overflow: hidden;">
+        <span class="different_2">两件同款 第二件半价</span>
+    </div>
+
+    <div style="height: 194px;background-color: #ffffff;margin-top: 10px;box-shadow: 0 0 3px 3px #feeef0;" v-for="(k,ac) in g2">
+        <a href="/{{g2[k][0].goods_id}}.html">
+            <div style="position: relative;background-color: #FFFFFF;">
+                <div style="position: absolute;padding: 20px 15px;box-sizing: border-box;max-width: 184px;">
+                    <img :src="g2[k][0].goods_img">
+                </div>
+                <div style="position: absolute;padding: 20px 7px 20px 194px;left: 0px;right:0px;">
+                    <div>
+                        <span class="sale">第二件半价 仅{{(g2[k][0].shop_price-Math.ceil(g2[k][0].shop_price/2)).toFixed(2)}}</span>
+                    </div>
+                    <div class="order_good_name" style="padding-top: 10px;">{{g2[k][0].goods_name}}</div>
+                    <div style="padding-top: 24px;color:#ff4a7d;"><span style="font-size: 14px;">￥</span><span style="font-size: 18px;">{{g2[k][0].shop_price}}</span><span style="font-size: 14px;color: #999999">×2</span></div>
+                    <div class="h-1-buy">
+                        <div class="sheng">省 ¥<span class="shengqian">{{(g2[k][0].shop_price-Math.ceil(g2[k][0].shop_price/2)).toFixed(2)}}</span></div><div @click="add(g2[k][2],$event)" class="qiang">立即抢购</div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="to_shop" style="margin-top: 30px;"><a href="/" class="to_shop_btn">返回店铺首页</a></div>
+
+
+</div>
+
+
+<!--商品代码结束-->
+
+<div id="cart-fixed" style="bottom:40px;">
+    <a href="/cart.html" data-dav-tj="article|cart|cart|1|cart@article">
+        <div class="cart-bg"></div>
+        <div class="cart-good-num" v-text="cart_number" v-if="cart_number"></div>
+    </a>
+</div>
+
+<div class="mask" v-show="show" v-cloak @click="hide()">
+
+</div>
+
+<div v-show="show" class="add-half-to-cart" v-cloak style="padding: 0px 10px;box-sizing: border-box;background: #fff8f7;border-top-left-radius: 8px;border-top-right-radius: 8px;box-shadow: 0 0 2px 2px #feeef0;">
+    <div @click="hide()" style="position: relative;top: 10px;z-index: 2;left: 100%;margin-left: -30px;"><img style="max-width: 20px;" src="http://pic.davdian.com/free/2017/01/16/57_57_26ffa504491b79ac05a08153c05698d2.png" alt=""></div>
+    <div class="h-cnt h2">
+        <div class="h-2">
+            <a v-for="(k1,goods) in info.goodsList" v-if="$index<2">
+                <div class="h-2-one" :class="{'h-2-one-left':k1==0 , 'h-2-one-right':k1==1 }">
+                    <div class="h-2-one-g" style="padding-left: 29px;padding-right: 29px;">
+                        <img :src="goods.goods_img">
+                    </div>
+                    <div class="g-name-cart">{{goods.goods_name}}</div>
+                    <div v-if="k1==0" style="padding: 20px 10px;height: 10px;">
+                        <span class="cat_price_2">￥</span><span class="cat_price_3">{{goods.price}}</span>
+                    </div>
+                    <div v-if="k1==1" style="padding: 20px 10px;height: 10px;">
+                        <span class="cat_price_1">半价</span><span class="cat_price_2">￥</span><span class="cat_price_3">{{goods.price}}</span>
+                        <span class="cat_price_4">原价￥{{goods.market_price}}</span>
+                    </div>
+                </div>
+            </a>
+            <div style="width: 25px;float: left;position: absolute;left: 50%;top:0px;margin-left: -12.5px;height: 100%;background: #fff8f7;color: #ff4a7d;font-size: 32px;text-align: center;padding-top: 30%;">+</div>
+        </div>
+    </div>
+    <div class="title" style="padding-bottom: 20px;font-size: 16px;">{{info.title}}</div>
+    <div style="padding-bottom: 20px;">
+        <span style="color: #ff4a7d;font-size: 14px;">￥<span style="font-size: 18px;font-weight: 400;">{{info.price}}</span></span><span style="color: #999999;font-size: 12px;padding-left: 5px;text-decoration: line-through;">原价: ￥{{info.market_price}}</span>
+        <span style="color: #ff4a7d;font-size: 14px;float:right;">￥已优惠 <span style="font-size: 18px;font-weight: 400;">{{info.price_info}}</span></span>
+    </div>
+    <div class="half-to-cart" target="2" @click="add2cart(info)">添加购物车</div>
+</div>
+
+
+<div v-if="animate" class="animate_con">
+    <img :src="info.goodsList[0].goods_img" alt="">
+    <img :src="info.goodsList[1].goods_img" alt="" style="right: 0;bottom: 0;">
+</div>
+
+
+<script src="http://cdn.davdian.com/wx_jssdk/jweixin-1.0.0.js"></script>
+<script src="http://cdn.davdian.com/vue/1.0.26/vue.min.js"></script>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://fe.davdian.com/staticfe/js/topic-87e9d8a502.js"></script>
+<script src="http://fe.davdian.com/staticfe/js/topic_fix-351e0c249f.js"></script>
+<script>
+    $(".top_other a").click(function () {
+        setTimeout(function () {
+            bravetime.callNativeReady();
+        }, 100);
+    });
+    var allId = data1.concat(data2).join(",");
+
+    new Vue({
+        el: "#in_app",
+        data: function () {
+            return {
+                show: false,
+                info: {},
+                animate: false,
+                cart_number: window.cart_number || 0,
+                g1: [],
+                g2: []
+            }
+        },
+        ready: function () {
+            var that = this;
+            $.ajax({
+                url: "/index.php?m=default&c=topic&a=ajax_goods_by_ids",
+                data: {list: allId},
+                dataType: "json",
+                type: "post",
+                success: function (re) {
+                    // 生成数据
+                    var all = {};
+                    var g1 = [],g2=[];
+                    var inn = 0;
+                    for (var i in re.data) {
+                        all[re.data[i].goods_id] = re.data[i];
+                    }
+                    for(var i=0;i<data1.length;i++){
+                        if(all[data1[i][0]]&&all[data1[i][1]]){
+                            all[data1[i][0]].sgoods_name = all[data1[i][0]].goods_name.replace(/[(（](.)*[)）]/g,"");
+                            all[data1[i][1]].sgoods_name = all[data1[i][1]].goods_name.replace(/[(（](.)*[)）]/g,"");
+                            halfData[inn]={
+                                "title":all[data1[i][0]].sgoods_name+" + "+all[data1[i][1]].sgoods_name,
+                                "price": ""+ (+all[data1[i][0]].shop_price + +all[data1[i][1]].shop_price-Math.ceil(all[data1[i][1]].shop_price/2)).toFixed(2),
+                                "market_price": ""+ (+all[data1[i][0]].shop_price + +all[data1[i][1]].shop_price).toFixed(2),
+                                "price_info": ""+Math.ceil(all[data1[i][1]].shop_price/2)+".00",
+                                "goodsList": [
+                                    {
+                                        "goods_id": all[data1[i][0]].goods_id,
+                                        "goods_img": all[data1[i][0]].goods_img,
+                                        "goods_name": all[data1[i][0]].sgoods_name,
+                                        "price": all[data1[i][0]].shop_price,
+                                        "market_price":all[data1[i][0]].market_price
+                                    },
+                                    {
+                                        "goods_id": all[data1[i][1]].goods_id,
+                                        "goods_img": all[data1[i][1]].goods_img,
+                                        "goods_name": all[data1[i][1]].sgoods_name,
+                                        "price": ""+(all[data1[i][1]].shop_price-Math.ceil(all[data1[i][1]].shop_price/2)).toFixed(2),
+                                        "market_price":""+all[data1[i][1]].market_price
+                                    }
+                                ]
+                            }
+                            var obj = [all[data1[i][0]],all[data1[i][1]],Math.ceil(all[data1[i][1]].shop_price/2),inn++];
+                            g1[i]=obj;
+                        }else {
+                            console.log(data1[i]);
+                        }
+
+
+                    }
+                    for(var i=0;i<data2.length;i++){
+                        if(all[data2[i]]){
+                            all[data2[i]].sgoods_name = all[data2[i]].goods_name.replace(/[(（](.)*[)）]/g,"")
+                            halfData[inn]={
+                                "title":all[data2[i]].sgoods_name+" + "+all[data2[i]].sgoods_name,
+                                "price": ""+ (+all[data2[i]].shop_price + +all[data2[i]].shop_price).toFixed(2),
+                                "market_price": ""+( +all[data2[i]].market_price + +all[data2[i]].market_price).toFixed(2),
+                                "price_info": "已优惠 ¥"+Math.ceil(all[data2[i]].shop_price/2)+".00",
+                                "goodsList": [
+                                    {
+                                        "goods_id": all[data2[i]].goods_id,
+                                        "goods_img": all[data2[i]].goods_img,
+                                        "goods_name": all[data2[i]].sgoods_name,
+                                        "price": all[data2[i]].shop_price,
+                                        "market_price":all[data2[i]].market_price
+                                    },
+                                    {
+                                        "goods_id": all[data2[i]].goods_id,
+                                        "goods_img": all[data2[i]].goods_img,
+                                        "goods_name": all[data2[i]].sgoods_name,
+                                        "price":  ""+all[data2[i]].shop_price/2,
+                                        "market_price":all[data2[i]].market_price
+                                    }
+                                ]
+                            }
+
+                            var obj = [all[data2[i]],Math.ceil(all[data2[i]].shop_price/2),inn++];
+                            g2[i]=obj;
+                        }else{
+                            console.log(data2[i])
+                        }
+
+                    }
+                    that.g1 = g1;
+                    that.g2=g2;
+                    console.log(that.g2);
+                }, error: function () {
+
+                }
+            });
+            $(window).scroll(function(){//滚动条滚动事件
+                var top = $('#two').offset().top;
+                if(window.pageYOffset >= top){
+                    that.click_2()
+                }else {
+                    that.click_1()
+                }
+
+            })
+
+        },
+        methods: {
+            add: function (id,event) {
+                var data = window.halfData;
+                var currentData = data[id];
+                console.log(id);
+                if (currentData) {
+                    this.info = currentData;
+                    this.show = true;
+                };
+                event.preventDefault()
+            },
+            hide: function () {
+                this.show = false;
+            },
+            add2cart: function (info) {
+                var success = 0, that = this, goodsList = info.goodsList;
+                this.hide();
+                ajaxFunc(0);
+
+                function ajaxFunc(i) {
+                    var goods = goodsList[i];
+                    $.ajax({
+                        url: "/index.php?m=default&c=cart&a=add_to_cart",
+                        data: {
+                            goods: JSON.stringify({goods_id: goods.goods_id, number: 1})
+                        },
+                        type: "POST",
+                        dataType: "json",
+                        success: function (result) {
+                            if (result.error) {
+                                bravetime.info(result.message);
+                            } else {
+                                success++;
+                                if (success == goodsList.length) {
+                                    that.animateFunc(info, result.cart_number);
+                                } else {
+                                    ajaxFunc(++i);
+                                }
+                            }
+                        }, error: function () {
+                            ajaxFunc(++i);
+                        }
+                    })
+                }
+            },
+            animateFunc: function (info, number) {
+                var that = this;
+                this.animate = true;
+                setTimeout(function () {
+                    that.animate = false;
+                    that.cart_number = number;
+                }, 1500);
+            },
+            click_1:function () {
+                $("#different").css('color',"#ff4a7d");
+                $("#different").prev('img')[0].src = 'http://pic.davdian.com/free/2017/01/10/44_46_548d79653492717cef067f12552cab08.png';
+                $("#common").css('color',"#666666");
+                $("#common").prev('img')[0].src = 'http://pic.davdian.com/free/2017/01/10/44_46_51364d79c64bbabada06188554f3717a.png';
+            },
+            click_2:function () {
+                $("#different").css('color',"#666666");
+                $("#different").prev('img')[0].src = 'http://pic.davdian.com/free/2017/01/10/44_46_b1973e69ac74adad2dda968febf4242f.png';
+                $("#common").css('color',"#ff4a7d");
+                $("#common").prev('img')[0].src = 'http://pic.davdian.com/free/2017/01/10/44_46_030c39bada11a944128afde2151e8bf5.png';
+            }
+        }
+    });
+</script>
+</body>
+</html>

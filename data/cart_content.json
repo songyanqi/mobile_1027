@@ -1,0 +1,218 @@
+{
+  "code": 0,
+  "msg": null,
+  "data": {
+    "goods_group": [
+      {
+        "activity_info": null,
+        "goods_list": [
+          {
+            "goods_id": 12,
+            "rec_id": 123,
+            "goods_img": "http://img.mamamba.net/free/buy_good_demo_640.jpg",
+            "goods_title": "贝亲 (Pigeon) 食物研磨食物磨",
+            "goods_price": 1456,
+            "goods_number": 2,
+            "max_amount":3,
+            "is_presale": true,
+            "is_miao": true,
+            "reduce_price":16,
+            "goods_type": [
+              {
+                "name": "颜色",
+                "value": "红色红色红色红色红色"
+              },
+              {
+                "name": "大小",
+                "value": "XXXXXXL"
+              }
+            ],
+            "is_check": true,
+            "remain_time": 14,
+            "gift": [
+              {
+                "name": "原创图书《不要和青蛙跳绳》",
+                "amount": 1
+              },
+              {
+                "name": "看花",
+                "amount": 1
+              }
+            ]
+          },
+          {
+            "goods_id": 13,
+            "rec_id": 124,
+            "goods_img": "http://img.mamamba.net/free/buy_good_demo_640.jpg",
+            "goods_title": "贝亲 (Pigeon) 特别长的名字特别长的名字特别长的名字特别长的名字特别长的名字",
+            "goods_price": 99999,
+            "goods_number": 1,
+            "is_presale": true,
+            "is_miao": true,
+            "goods_type": [
+              {
+                "name": "颜色",
+                "value": "蓝色"
+              },
+              {
+                "name": "大小",
+                "value": "XXXL"
+              }
+            ],
+            "is_check": true,
+            "remain_time": 18
+          },
+          {
+            "goods_id": 14,
+            "rec_id": 121,
+            "goods_img": "http://img.mamamba.net/free/buy_good_demo_640.jpg",
+            "goods_title": "贝亲 (Pigeon) 食物研磨食物磨磨05008",
+            "goods_price": 128,
+            "goods_number": 7,
+            "is_presale": true,
+            "is_miao": true,
+            "goods_type": [
+              {
+                "name": "颜色",
+                "value": "蓝色"
+              },
+              {
+                "name": "大小",
+                "value": "XXXL"
+              }
+            ],
+            "is_check": true,
+            "remain_time": 1
+          }
+        ]
+      },
+      {
+        "activity_info": {
+          "title": "满立减",
+          "content": "满立减 世界图书日，满100减5元，满200减15元",
+          "href": "http://nemo.davdian.com/t-2975.html"
+        },
+        "goods_list": [
+          {
+            "goods_id": 15,
+            "rec_id": 125,
+            "goods_img": "http://img.mamamba.net/free/buy_good_demo_640.jpg",
+            "goods_title": "贝亲 (Pigeon) 食物研磨食物磨磨05008",
+            "goods_price": 128,
+            "goods_number": 6,
+            "is_check": true,
+            "is_sale_out":true,
+            "gift": [
+              {
+                "name": "原创图书《不要和青蛙跳绳》",
+                "amount": 1
+              },
+              {
+                "name": "原创图书《不要和青蛙跳绳》",
+                "amount": 1
+              }
+            ]
+          },
+          {
+            "goods_id": 16,
+            "rec_id": 126,
+            "goods_img": "http://img.mamamba.net/free/buy_good_demo_640.jpg",
+            "goods_title": "贝亲 (Pigeon) 食物研磨食物磨磨05008",
+            "goods_price": 128,
+            "goods_number": 1
+          },
+          {
+            "goods_id": 17,
+            "rec_id": 127,
+            "goods_img": "http://img.mamamba.net/free/buy_good_demo_640.jpg",
+            "goods_title": "贝亲 (Pigeon) 食物研磨食物磨磨05008",
+            "goods_price": 128,
+            "goods_number": 1,
+            "is_presale": true,
+            "is_miao": true,
+            "is_check": true,
+            "remain_time": 9
+          }
+        ]
+      },
+      {
+        "invalid": true,
+        "goods_list": [
+          {
+            "goods_id": 18,
+            "rec_id": 128,
+            "goods_img": "http://img.mamamba.net/free/buy_good_demo_640.jpg",
+            "goods_title": "贝亲 (Pigeon) 食物研磨食物磨磨05008",
+            "goods_price": 128,
+            "goods_number": 1,
+            "is_check": true,
+            "gift": [
+              {
+                "name": "原创图书《不要和青蛙跳绳》",
+                "amount": 1
+              },
+              {
+                "name": "原创图书《不要和青蛙跳绳》",
+                "amount": 1
+              }
+            ]
+          },
+          {
+            "goods_id": 19,
+            "rec_id": 129,
+            "goods_img": "http://img.mamamba.net/free/buy_good_demo_640.jpg",
+            "goods_title": "贝亲 (Pigeon) 食物研磨食物磨磨05008",
+            "goods_price": 128,
+            "goods_type": [
+              {
+                "name": "颜色",
+                "value": "蓝色"
+              },
+              {
+                "name": "大小",
+                "value": "XXXL"
+              }
+            ],
+            "goods_number": 1
+          },
+          {
+            "goods_id": 10,
+            "rec_id": 120,
+            "goods_img": "http://img.mamamba.net/free/buy_good_demo_640.jpg",
+            "goods_title": "贝亲 (Pigeon) 食物研磨食物磨磨05008",
+            "goods_price": 128,
+            "goods_number": 1,
+            "is_presale": true,
+            "is_miao": true,
+            "is_check": true,
+            "remain_time": 2
+          }
+        ]
+      }
+    ],
+    "price_info":{
+      "goods_amount": 670,
+      "order_amount": 690.4,
+      "reduce_list": [
+        {
+          "name": "满立减",
+          "value": 22
+        },
+        {
+          "name": "享折扣",
+          "value": 269.6
+        }
+      ],
+      "present_list": [
+        {
+          "name": "满立送",
+          "value": "双螺旋秘密书"
+        }
+      ]
+    },
+    "login_info":{
+      "sms_code":"aqwedasffasd",
+      "logined":0
+    }
+  }
+}

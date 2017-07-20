@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <!-- /build -->
+    <!-- build:style integral -->
+    <link href="../stylesheet/integral.css" rel="stylesheet">
+    <!-- /build -->
+    <title>积分记录</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+    </script>
+</head>
+<body>
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            积分记录
+        </div>
+    </div>
+</div>
+<div class="integral_record">
+    <div class="integral_record_title">
+        本月
+    </div>
+    <div class="integral_record_container without_record dav-shadow">
+        暂时还没有明细记录
+    </div>
+
+    <div class="integral_record_title">
+        1月
+    </div>
+    <div class="integral_record_container dav-shadow">
+        <div class="integral_record_item">
+            <div class="record_title">
+                登录店铺
+            </div>
+            <div class="record_date">
+                2015-04-05 12:00:00
+            </div>
+            <div class="record_number dav-red">
+                +10
+            </div>
+        </div>
+        <div class="integral_record_item">
+            <div class="record_title">
+                登录店铺
+            </div>
+            <div class="record_date">
+                2015-04-05 12:00:00
+            </div>
+            <div class="record_number dav-red">
+                +10
+            </div>
+        </div>
+    </div>
+
+    <div class="integral_record_line">
+        <div class="integral_record_line_text">
+            2014年
+        </div>
+    </div>
+
+    <div class="integral_record_title">
+        12月
+    </div>
+    <div class="integral_record_container dav-shadow">
+        <div class="integral_record_item">
+            <div class="record_title">
+                登录店铺
+            </div>
+            <div class="record_date">
+                2015-04-05 12:00:00
+            </div>
+            <div class="record_number dav-red">
+                +10
+            </div>
+        </div>
+        <div class="integral_record_item">
+            <div class="record_title">
+                登录店铺
+            </div>
+            <div class="record_date">
+                2015-04-05 12:00:00
+            </div>
+            <div class="record_number dav-red">
+                +10
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<!-- build:script base_little -->
+<script type="text/javascript" src="../javascript/base.js"></script>
+<!-- /build -->
+</body>
+</html>

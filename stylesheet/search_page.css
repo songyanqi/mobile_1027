@@ -1,0 +1,462 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 640px;
+}
+
+.search_top {
+  height: 44px;
+  background-color: #F1F1F1;
+  position: relative;
+}
+
+@supports (-webkit-backdrop-filter: none) {
+  .search_top {
+    background: rgba(250, 250, 250, 0.95);
+    -webkit-backdrop-filter: brightness(1.5) blur(10px);
+  }
+}
+
+.search_top:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  background: #eee;
+  width: 100%;
+  height: 1px;
+}
+
+/*Retina屏为2的时候调用下面的样式*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 4/2), only screen and (min-resolution: 2dppx) {
+  .search_top:after {
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+}
+
+body.in_app .search_top {
+  /*display: none;*/
+}
+
+.search_top .search_con {
+  width: 100%;
+  position: absolute;
+  padding-right: 50px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  top: 7px;
+  padding-left: 8px;
+}
+
+.search_top .search_con .search_input_con {
+  position: relative;
+  top: -30px;
+}
+
+.search_top .search_con .search_icon {
+  position: absolute;
+  display: inline-block;
+  background: url(//pic.davdian.com/free/index_search_icon_160225.png) no-repeat;
+  width: 15px;
+  height: 15px;
+  background-size: 15px;
+  top: 8px;
+  left: 10px;
+}
+
+.search_top .search_con .search_input {
+  width: 100%;
+  height: 14px;
+  line-height: 14px;
+  border-radius: 30px;
+  padding: 15px 10px 15px 33px;
+  background: none;
+  box-sizing: border-box;
+  font-size: 12px;
+  color: #666666;
+}
+
+.search_top .left_icon_container {
+  left: 0;
+  z-index: 10;
+  position: absolute;
+  height: 44px;
+  width: 40px;
+}
+
+.search_top .left_icon_container .home_arrow {
+  margin-top: 15px;
+  margin-left: 19px;
+  display: inline-block;
+  vertical-align: 0;
+  width: 12px;
+  height: 12px;
+  border-left: 1px solid #333;
+  border-bottom: 1px solid #333;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+.search_top .search_btn {
+  right: 0;
+  z-index: 10;
+  font-size: 14px;
+  color: #666;
+  position: absolute;
+  line-height: 44px;
+  width: 50px;
+  text-align: center;
+  border: none;
+  background: none;
+  padding: 0;
+  outline: none
+}
+
+.search_top .icon_with_text {
+  display: inline-block;
+  width: 40px;
+  text-align: center;
+}
+
+.search_top .icon_text {
+  color: #666;
+  font-size: 10px;
+  line-height: 9px;
+}
+
+.search_top .icon {
+  margin-top: 5px;
+  width: 17px;
+  height: 15px;
+  display: inline-block;
+  background-repeat: no-repeat;
+}
+
+.dav_icon_classification_34_30 {
+  background-image: url("//pic.davdian.com/free/classification_icon_322.png");
+  background-size: 17px;
+}
+
+.search_link_lable {
+  background-color: #f9f9f9;
+  padding: 10px 0 0 10px;
+  overflow: hidden;
+  max-height: 76px;
+}
+
+.search_link_lable .font_black {
+  padding: 0 6px;
+  font-size: 12px;
+  border-radius: 3px;
+  color: #333;
+  line-height: 28px;
+  min-width: 40px;
+  text-align: center;
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  float: left;
+}
+
+.search_link_lable .font_red {
+  padding: 0 6px;
+  font-size: 12px;
+  border-radius: 3px;
+  color: #FF4A7D;
+  line-height: 28px;
+  min-width: 40px;
+  text-align: center;
+  display: inline-block;
+  margin: 0 10px 10px 0;
+  float: left;
+}
+
+.search_history, .search_like {
+  padding-top: 10px;
+}
+
+.search_like {
+  position: fixed;
+  width: 100%;
+  max-width: 640px;
+  top: 40px;
+  height: 100%;
+  background: #f9f9f9;
+  padding-top: 0;
+  z-index: 20;
+}
+
+.search_history h2, .search_like h2 {
+  font-size: 14px;
+  color: #666;
+  padding-left: 10px;
+  padding-bottom: 3px;
+}
+
+.search_history .history_list, .search_like .like_list {
+  padding-left: 10px;
+  background-color: #f9f9f9;
+}
+
+.search_history .history_list li, .search_like .like_list li {
+  font-size: 14px;
+  color: #333;
+  line-height: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.search_history .history_list li:last-child, .search_like .like_list li:last-child {
+  border-bottom: none;
+}
+
+.search_history .history_list li a, .search_like .like_list li a {
+  display: block;
+}
+
+.delete_history_btn {
+  width: 84px;
+  line-height: 26px;
+  color: #FF4A7D;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 12px;
+  margin: 15px auto;
+  display: block;
+  cursor: pointer;
+}
+
+.search_con.april_border.hairlines .border_inner {
+  width: 100%;
+  height: 30px;
+}
+
+.search_con.april_border.hairlines .border_inner:after {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+}
+
+/*Retina屏为2的时候调用下面的样式*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 4/2), only screen and (min-resolution: 2dppx) {
+  .search_con.april_border.hairlines .border_inner:after {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+  }
+}
+
+.search_result_page .search_top .search_btn {
+  display: none;
+}
+
+.search_result_page .search_top .search_con {
+  padding-left: 40px;
+  padding-right: 8px;
+  height: 36px;
+}
+
+.search_result_page .search_top .search_icon {
+  display: none;
+}
+
+.search_result_page .search_top .search_con .search_input {
+  padding-left: 10px;
+}
+
+.searching .search_top .search_btn {
+  display: block;
+}
+
+.searching .search_top .search_con {
+  padding-left: 8px;
+  padding-right: 50px;
+}
+
+.searching .search_top .search_icon {
+  display: block;
+}
+
+.searching .search_top .search_con .search_input {
+  padding-left: 33px;
+}
+
+.searching .left_icon_container {
+  display: none;
+}
+
+.kind_sort {
+  border-bottom: #f1f1f1 1px solid;
+  padding: 10px 0;
+  background-color: #fff;
+}
+
+.kind_sort a {
+  width: 24%;
+  display: inline-block;
+  text-align: center;
+}
+
+.kind_sort a.price {
+  border-right: none;
+}
+
+.kind_sort a, .kind_sort a:focus, .kind_sort a:focus {
+  color: #112;
+}
+
+.kind_sort a.selected span {
+  color: #FF4A7D;
+}
+
+.kind_sort a:last-child {
+  border-left: #ddd solid 1px;
+}
+
+.good_list_2_row {
+  padding: 8px 5px 0;
+}
+
+.two_arrow {
+  position: relative;
+}
+
+.two_arrow .arrow-up {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  border-bottom: 5px solid #f5f5f5;
+}
+
+.two_arrow .arrow-down {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  top: 9px;
+}
+
+.two_arrow.up .arrow-up {
+  border-bottom-color: #FF4A7D;
+}
+
+.two_arrow.up .arrow-down {
+  border-bottom-color: #D5D5D5;
+}
+
+.two_arrow.down .arrow-down {
+  border-bottom-color: #FF4A7D;
+}
+
+.kind_sort .dav_icon_arrow {
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+  left: 4px;
+  top: -2px;
+}
+
+.filter_container {
+  position: fixed;
+  width: 100%;
+  background: #f1f1f1;
+  top: 81px;
+  z-index: 12;
+  /*display: none;*/
+  bottom: 0;
+}
+
+.price_filter_container {
+  padding: 10px;
+  padding-top: 17px;
+  background: #fff;
+}
+
+.price_filter_container .price_filter_text {
+  margin-bottom: 15px;
+}
+
+.category_container .category_item {
+  margin-bottom: 30px;
+}
+
+.category_container label {
+  color: #333333;
+  font-size: 14px;
+}
+
+.category_container a {
+  width: 30%;
+  background-color: #f5f5f5;
+  font-size: 12px;
+  color: #666666;
+  display: inline-block;
+  line-height: 30px;
+  margin: 10px 1% 0;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.category_container a.selected {
+  background: #FFE7EE url(//pic.davdian.com/free/2017/04/19/iconsearchselect.png) no-repeat;
+  color: #FF4A7D;
+  background-position: 100% 100%;
+  background-size: auto 50%;
+}
+
+body.filtering .filter_container {
+  display: block;
+  max-width: 640px;
+}
+
+body.filtering .bg {
+  display: none;
+}
+
+body.filtering .filter_toggle_btn .dav_icon_arrow {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 2px;
+}
+
+.filter_bottom_container {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  border-top: #eee solid 1px;
+}
+
+.filter_bottom_container .filter_reset_btn, .filter_bottom_container .filter_finish_btn {
+  width: 50%;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  line-height: 3;
+  background-color: #fff;
+}
+
+.filter_bottom_container .filter_finish_btn {
+  background-color: #FF4A7D;
+  color: #fff;
+}
+
+#to-top {
+  bottom: 40px;
+}
+
+.pic_info {
+  position: absolute;
+  right: .08rem;
+  top: .08rem;
+  width: .38rem;
+  font-size: .11rem;
+  background-color: #ff4a7d;
+  color: #fff;
+  border-radius: .19rem;
+  text-align: center;
+  line-height: .13rem;
+  height: .38rem;
+  display: flex;
+  align-items: center;
+  padding: 0 .02rem;
+  box-sizing: border-box;
+  justify-content: center;
+}

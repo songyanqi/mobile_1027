@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn" ng-app="indexApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/search_page.css" rel="stylesheet">
+    <title>搜索结果</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+
+        //        var likeUrl = '/index.php?c=index&a=getKeyword';
+        var likeUrl = '../data/keywords.json';
+        //        var searchUrl =  '../module/goods2row.json';
+        var searchUrl =  '../data/goodUrl.json';
+        var keywords = '童装';
+
+    </script>
+</head>
+<!--在app里面的时候为body增加in_app 的class-->
+<body class="search_result_page scroll_flag">
+<search>
+
+</search>
+
+<category_sort>
+
+</category_sort>
+
+<script src="http://cdn.davdian.com/vue/1.0.26/vue.min.js"></script>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="../javascript/jquery.cookie.js"></script>
+<script src = "../dist/search_page.js"></script>
+
+</body>
+</html>

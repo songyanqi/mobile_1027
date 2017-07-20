@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="//hm.baidu.com/hm.js?9b39bbe0b5396b90787c80447d337d58"></script>
+    <link href="http://cdn.davdian.com/topic/css/topic-8875fcbb56.css" rel="stylesheet">
+    <title>畅销榜</title>
+    <script type="text/javascript"> var wx_js_token = 'false'; </script>
+    <script>
+        var booksUrl = "../data/babysUrl.json";
+        var babysUrl = "../data/booksUrl.json";
+        var momsUrl = "../data/momsUrl.json";
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:1,   // 头部首页按钮
+            shareOnHead:1
+        };
+    </script>
+</head>
+<body style="background-color: #f0f0f0;" class="in_app">
+    <div id = "best_sellers">
+        <best_sellers></best_sellers>
+    </div>
+    <script type="text/javascript" src="http://cdn.davdian.com/vue/2.0.5/vue.min.js"></script>
+    <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script type="text/javascript" src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../dist/best_sellers.js"></script>
+</body>
+</html>

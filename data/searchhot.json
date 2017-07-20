@@ -1,0 +1,127 @@
+{
+  "code": 0,
+  "shop_url": "https://15522634982.davdian.com",
+  "visitor_status": 3,
+  "sess_key": "42df8bf6e510c97c11afe81a96569014027bf803",
+  "data": {
+    "buttonsInfo": [
+      {
+        "name": "全部分类",
+        "command": {
+          "content": ""
+        }
+      }
+    ],
+    "list": [
+      {
+        "name": "开个大V店",
+        "colorType": "#FF0000",
+        "command": {
+          "content": "http://jiad.bravetime.net/index.php?c=ShopGoods&a=index&id=348&_refer=&_refer_val=&kd_type=1&rp=&rl="
+        }
+      },
+      {
+        "name": "清霄寒",
+        "colorType": "tan",
+        "command": {
+          "content": ""
+        }
+      },
+      {
+        "name": "金龙宝宝",
+        "colorType": "#FF0060",
+        "command": {
+          "content": ""
+        }
+      },
+      {
+        "name": "美女",
+        "colorType": "#FF9000",
+        "command": {
+          "content": ""
+        }
+      },
+      {
+        "name": "嘿嘿",
+        "colorType": "#FF1000",
+        "command": {
+          "content": ""
+        }
+      },
+      {
+        "name": "哈哈",
+        "colorType": "#FE0000",
+        "command": {
+          "content": ""
+        }
+      },
+      {
+        "name": "呵呵",
+        "colorType": "#FB0000",
+        "command": {
+          "content": ""
+        }
+      },
+      {
+        "name": "腻害",
+        "colorType": "#003000",
+        "url": "url"
+      },
+      {
+        "name": "开个大V店",
+        "colorType": "#FF0000",
+        "command": {
+          "content": ""
+        }
+      },
+      {
+        "name": "清霄寒",
+        "colorType": "tan",
+        "command": {
+          "content": ""
+        }
+      },
+      {
+        "name": "金龙宝宝",
+        "colorType": "#FF0060",
+        "command": {
+          "content": ""
+        }
+      },
+      {
+        "name": "美女",
+        "colorType": "#FF9000",
+        "command": {
+          "content": ""
+        }
+      },
+      {
+        "name": "嘿嘿",
+        "colorType": "#FF1000",
+        "command": {
+          "content": ""
+        }
+      },
+      {
+        "name": "哈哈",
+        "colorType": "#FE0000",
+        "command": {
+          "content": ""
+        }
+      },
+      {
+        "name": "呵呵",
+        "colorType": "#FB0000",
+        "command": {
+          "content": ""
+        }
+      },
+      {
+        "name": "腻害",
+        "colorType": "#003000",
+        "url": "url"
+      }
+    ],
+    "searchboxHotwords": "腻害"
+  }
+}

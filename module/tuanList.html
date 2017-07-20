@@ -1,0 +1,18 @@
+<div class="tuan_list">
+    <div ng-if="!tuanData.length" class="logo_container">
+        <div class="logo_left"></div>
+        <div class="logo_right"></div>
+    </div>
+
+    <a ng-if="tuanData.length" href="{{item.goods_id}}.html?_refer={{tj_page}}_group&_refer_val={{tj_page_detail}}" ng-repeat="(key,item) in tuanData"
+       data-dav-tj="{{tj_page}}|tuan|tuan_{{item.goods_id}}|1|tuan@{{tj_page}}">
+        <div class="tuan_img_container">
+            <img ng-src="{{item.group_img}}"></div>
+        <div class="time">{{item.left_second|calculate_time}}</div>
+        <div class="tuan-other-info">
+            <div class="tuan_item_title">{{item.goods_name}}</div>
+            <div class="tuan_item_price"><span class="current_price">¥{{item.group_price}}</span> <span>市场价：</span> <span
+                    class="market_price">¥{{item.market_price}}</span></div>
+        </div>
+    </a>
+</div>

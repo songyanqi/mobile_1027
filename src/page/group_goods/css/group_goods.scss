@@ -1,0 +1,291 @@
+@import "../../../common/css/common.scss";
+
+// 页面红色部分
+$red: #FF4A7D;
+
+// 页面容器
+.app {
+  padding-bottom: ptr(50);
+  line-height: 1.5;
+}
+
+// 商品信息
+.goods-info {
+  padding: ptr(10);
+  background: #fff;
+  .pic {
+    position: relative;
+    text-align: center;
+    font-size: 0;
+    > img {
+      height: 3rem;
+      max-width: 100%;
+    }
+    .sold-out {
+      @include center;
+      @include circle(ptr(90));
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 0;
+      line-height: 1;
+      text-align: center;
+      .top{
+        position: absolute;
+        top: ptr(22);
+        width: 100%;
+        font-size: ptr(18);
+      }
+      .split-line{
+        margin: ptr(50) auto;
+        width: ptr(70);
+        border-top: 1px solid white;
+        transform: translateY(0.5);
+      }
+      .bottom{
+        position: absolute;
+        top: ptr(58);
+        width: 100%;
+        font-size: ptr(12);
+      }
+    }
+    .box-info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: inline-block;
+      border: 1px solid $red;
+      border-top-left-radius: ptr(04);
+      border-top-right-radius: ptr(04);
+      font-size: ptr(12);
+      background: white;
+      .num {
+        color: $red;
+      }
+      .privilege {
+        padding: 0 ptr(02);
+        min-width: ptr(50);
+        background: $red;
+        color: #fff;
+      }
+    }
+  }
+  .desc {
+    margin-top: ptr(10);
+    font-size: ptr(14);
+    @include ellipsis(2);
+  }
+  .info {
+    margin-top: ptr(10);
+    @include clearfix;
+    @include ellipsis;
+    .group-price {
+      color: $red;
+      font-size: ptr(13);
+      .num {
+        margin-left: ptr(04);
+        font-size: ptr(20);
+        font-weight: bold;
+      }
+    }
+    .price {
+      color: #999999;
+      font-size: ptr(12);
+    }
+    .post {
+      position: relative;
+      top: ptr(-01);
+      margin-left: ptr(04);
+      padding: 0 ptr(06);
+      border: 1px solid $red;
+      border-radius: ptr(07);
+      color: $red;
+      font-size: ptr(10);
+    }
+    .income {
+      float: right;
+      position: relative;
+      right: ptr(1);
+      top: ptr(06);
+      font-size: ptr(12);
+      color: #666666;
+      .times {
+        margin-left: ptr(04);
+        color: $red;
+      }
+    }
+  }
+}
+
+// 团购信息
+.group-info {
+  margin: ptr(10) 0;
+  padding: ptr(10);
+  background: #fff;
+  overflow: hidden;
+  .tip {
+    font-size: ptr(12);
+    color: #666;
+  }
+  /*ul.groups {
+    margin-bottom: ptr(20);
+    li {
+      margin: ptr(10) 0;
+      @include height(ptr(40));
+      border: 1px solid $red;
+      border-radius: ptr(20);
+      font-size: 0;
+      cursor: pointer;
+      a > * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .head {
+        height: ptr(36);
+        width: ptr(36);
+        border-radius: 50%;
+        margin-left: ptr(2);
+      }
+      .nickname {
+        margin-left: ptr(10);
+        width: ptr(100);
+        @include ellipsis;
+        font-size: ptr(12);
+      }
+      .remain-place {
+        float: right;
+        width: ptr(90);
+        font-size: ptr(14);
+        color: #666;
+        @include ellipsis;
+        text-align: right;
+        margin-right: ptr(10);
+        .num {
+          color: $red;
+        }
+      }
+      .go-group {
+        float: right;
+        margin-right: -1px;
+        width: ptr(80);
+        height: ptr(40);
+        border-top-right-radius: ptr(20);
+        border-bottom-right-radius: ptr(20);
+        text-align: center;
+        color: white;
+        font-size: ptr(14);
+        background: linear-gradient(to right, #F9535A, #FA1862);
+      }
+    }
+  }*/
+  .groups-wrapper{
+    position: relative;
+    margin-bottom: ptr(5);
+  }
+  .time-over{
+    margin-bottom: ptr(1);
+    color: #666;
+  }
+  ul.groups {
+    position: absolute;
+    margin-bottom: ptr(20) / 2;
+    transform: scale(0.5);
+    transform-origin: left top;
+    width: 100% *2;
+    li {
+      margin: ptr(10)*2 0;
+      @include height(ptr(40)*2);
+      border: 1px solid $red;
+      border-radius: ptr(20)*2;
+      font-size: 0;
+      cursor: pointer;
+      a > * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .head {
+        height: ptr(36)*2;
+        width: ptr(36)*2;
+        border-radius: 50%;
+        margin-left: ptr(2)*2;
+      }
+      .nickname {
+        margin-left: ptr(10)*2;
+        width: ptr(100)*2;
+        @include ellipsis;
+        font-size: ptr(12)*2;
+      }
+      .remain-place {
+        float: right;
+        width: ptr(90)*2;
+        font-size: ptr(14)*2;
+        color: #666;
+        @include ellipsis;
+        text-align: right;
+        margin-right: ptr(10)*2;
+        .num {
+          color: $red;
+        }
+      }
+      .go-group {
+        float: right;
+        margin-right: -1px;
+        width: ptr(80)*2;
+        height: ptr(40)*2;
+        border-top-right-radius: ptr(20)*2;
+        border-bottom-right-radius: ptr(20)*2;
+        text-align: center;
+        color: white;
+        font-size: ptr(14)*2;
+        background: linear-gradient(to right, #F9535A, #FA1862);
+      }
+    }
+  }
+}
+
+// tab按钮
+.tab-btn {
+  display: flex;
+  background: #fff;
+  .btn {
+    flex: 1;
+    text-align: center;
+    font-size: ptr(14);
+    cursor: pointer;
+    .word {
+      display: inline-block;
+      box-sizing: border-box;
+      padding: 0 ptr(02);
+      @include height(ptr(44));
+      border-bottom: 2px solid transparent;
+    }
+    &.active {
+      .word {
+        color: $red;
+        border-color: $red;
+      }
+    }
+  }
+  .btn-split {
+    border-left: 1px solid #EEEEEE;
+    display: inline-block;
+    margin-top: ptr(44 - 24) / 2;
+    height: ptr(24);
+  }
+}
+
+.goods-detail, .act-rule {
+  font-size: ptr(12);
+  overflow: hidden;
+  img {
+    width: 100%;
+    vertical-align: middle;
+    &:first-of-type{
+      margin-top: -1px;
+    }
+  }
+}
+
+.split-line {
+  border-top: 1px solid #E1E1E1;
+  transform: scaleY(0.5);
+}

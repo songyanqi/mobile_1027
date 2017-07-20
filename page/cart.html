@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../dist/cart.css">
+    <title>购物车</title>
+
+    <script type="text/javascript">
+
+        var app_need_update_flag = 0;
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0
+        };
+
+        /////////////////// 2.6.0及以上 ////////////////////
+        var appData = {
+            showHead: 1,
+            showFoot: 0,
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0,
+            btnColor:'ff4a7d',
+            btnOnHead:1,    // 头部文字按钮
+            btnText:"编辑",     // 头部文字按钮文字
+            btnLink:"javascript:edit()"      // 头部文字按钮链接
+        };
+
+
+        var logined = true;
+        var loginTel = "18611115678";
+        var sms_code = "98311ab43a6b6e6c94a0d30e0f02f3ce";
+
+
+        var url1 = "/index.php?m=default&c=login&a=mobile";
+        var url2 = "/index.php?m=default&c=login&a=login";
+        var sendUrl = "/index.php?m=default&c=sms&a=send";
+        var registerUrl = "/index.php?m=default&c=login&a=register";
+
+        // 新接口 AD
+        var cartInfoUrl = "../data/cart_info_data.json?a=1";
+        var cartChangeUrl = "../data/cart_info_data.json?a=1";
+        var collectOverUrl = '../data/success.json'; //收藏超出商品
+        var deleteOverUrl = '../data/success.json'; // 删除超出商品
+
+        var selloutCheckUrl = "../data/selloutCheck.json";
+
+        var userStatus = 0;
+    </script>
+
+</head>
+<!--在APP中body加入class="in_app"-->
+<!--class="cart_edit"-->
+<body>
+<div id="cart" v-cloak>
+    <div class="account_type account_logined type_1">
+        <div class="account_text_number">
+            <span class="login_text">当前登录账号：</span><span class="login_tel">18233069531</span>
+        </div>
+        <div class="change_account_button april_border hairlines" data-dav-tj="cart|change|change|1|change@cart">
+            <div class="dav-btn btn-small border_inner">更换账号</div>
+        </div>
+    </div>
+    <!--<div class="account_type account_login type_2 hide">-->
+
+        <!--<div class="tel_container">-->
+            <!--<div class="tel_input_container">-->
+                <!--<input class="into" placeholder="请输入您的手机号" id="phone" name="phone" type="tel" maxlength="13">-->
+                <!--<span title="清空" class="delquery clear" style="display: none;"></span>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="change_account_button btn-disable sure_btn">-->
+            <!--<div class="dav-btn btn-red">确认手机号</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="account_type account_login account_login_passwd account_logged_in type_3 hide">
+        <div class="account_text">
+            <span class="login_text">手机号 : </span><span class="login_tel">182 3306 9531</span>
+        </div>
+        <div class="tel_container passwd_container">
+            <div class="tel_input_container">
+                <input class="passwd into" type="password" placeholder="请输入密码" name="password">
+                <span title="清空" class="delquery clear" style="display: none;"></span>
+            </div>
+        </div>
+        <div class="change_account_button btn-disable sure_btn" data-dav-tj="cart|login|login|1|login@cart">
+            <div class="dav-btn btn-red">登录</div>
+        </div>
+        <div class="mt_15">
+            <span class="virtual_link change_tel">修改手机号</span>
+            <span class="virtual_link forget_pw pull-right">忘记密码</span>
+        </div>
+
+    </div>
+
+    <div class="account_type account_login account_login_passwd account_login_register type_4 hide">
+        <div class="account_text">
+            <span class="login_text">注册手机 : </span><span class="login_tel">182 3306 9531</span>
+        </div>
+        <div class="tel_container code_container">
+
+            <div class="tel_input_container">
+                <input placeholder="请输入验证码" class="code code_inputs3" type="text" name="code">
+            </div>
+            <div class="dav-btn btn-red">重新发送</div>
+        </div>
+        <div class="tel_container passwd_container">
+
+            <div class="tel_input_container">
+                <input class="passwd into code_inputs3_value" type="password" placeholder="设置账户密码" name="password">
+                <span title="清空" class="delquery clear" style="display: none;"></span>
+            </div>
+        </div>
+        <div class="change_account_button btn-disable sure_btn code_inputs3_btn">
+            <div class="dav-btn btn-red">确定</div>
+        </div>
+        <div class="mt_15">
+            <span class="virtual_link change_tel">修改手机号</span>
+            <span class="send_voice_code virtual_link pull-right">试试语音验证</span>
+        </div>
+        <div class="center mt12">
+            <span class="virtual_link">* 注册即表示本人同意《<a class="dav-red" href="/t-424.html">用户协议</a>》</span>
+        </div>
+    </div>
+</div>
+
+<script src="http://cdn.davdian.com/vue/1.0.26/vue.min.js"></script>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="../dist/cart.js"></script>
+
+</body>
+</html>

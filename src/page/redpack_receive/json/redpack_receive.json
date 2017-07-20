@@ -1,0 +1,77 @@
+{
+  "code": 0,
+  "shop_url": "https://15522634982.davdian.com",
+  "visitor_status": 3,
+  "sess_key": "42df8bf6e510c97c11afe81a96569014027bf803",
+  "data": {
+    "msg": "原因原因原因原因",
+    "status": "0",
+    "bonusType": "1",
+    "bonusContent": "<p>1.每111位好友完成注册，邀请人即可获得一个10元投资红包，奖励红包数量无上限</p><p>1.每位好友完成注册，邀请人即可获得一个10元投资红包，奖励红包数量无上限</p><p>1.每位好友完成注册，邀请人即可获得一个10元投资红包，奖励红包数量无上限</p>",
+    "startTime" : "2017年03月10日00:00:00",
+    "endTime" : "2018年03月10日00:00:00",
+    "useUrl": "url",
+    "shareTitle": "title",
+    "shareDesc": "desc",
+    "shareImg": "url",
+    "bonusList": [
+      {
+        "bonusName": "红包名称",
+        "bonusMoney": "100",
+        "minConsumePrice": "100",
+        "useBeginTime": "2017-05-04",
+        "useEndTime": "2017-05-04",
+        "content": "通用券"
+      },
+      {
+        "bonusName": "红包名称",
+        "bonusMoney": "1",
+        "minConsumePrice": "100",
+        "useBeginTime": "2017-05-04",
+        "useEndTime": "2017-05-04",
+        "content": "通用券"
+      },
+      {
+        "bonusName": "红包名称",
+        "bonusMoney": "100",
+        "minConsumePrice": "100",
+        "useBeginTime": "2017-05-04",
+        "useEndTime": "2017-05-04",
+        "content": "通用券"
+      },
+      {
+        "bonusName": "红包名称",
+        "bonusMoney": "100",
+        "minConsumePrice": "100",
+        "useBeginTime": "2017-05-04",
+        "useEndTime": "2017-05-04",
+        "content": "通用券"
+      },
+      {
+        "bonusName": "红包名称",
+        "bonusMoney": "100",
+        "minConsumePrice": "100",
+        "useBeginTime": "2017-05-04",
+        "useEndTime": "2017-05-04",
+        "content": "通用券"
+      }
+    ],
+    "competeList": [
+      {
+        "nickname": "186****8765",
+        "avatar": "http://pic.davdian.com/shop_logo/2017/04/17/80_80_ded3be7e419ce5b69a70ff7e61b1771d.jpg",
+        "money": "20"
+      },
+      {
+        "nickname": "186****8765",
+        "avatar": "http://pic.davdian.com/shop_logo/2017/04/17/80_80_ded3be7e419ce5b69a70ff7e61b1771d.jpg",
+        "money": "20"
+      },
+      {
+        "nickname": "186****8765",
+        "avatar": "http://pic.davdian.com/shop_logo/2017/04/17/80_80_ded3be7e419ce5b69a70ff7e61b1771d.jpg",
+        "money": "20"
+      }
+    ]
+  }
+}

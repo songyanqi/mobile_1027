@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/send_red.css" rel="stylesheet">
+    <link href="../stylesheet/fund.css" rel="stylesheet">
+    <title>迎新春做财神</title>
+
+    <script type="text/javascript">
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:1
+        };
+        // 加载红包列表
+        var loadredlist = "../data/red_list.json";
+        var userId = 1230;
+
+    </script>
+</head>
+<body class="scroll_flag">
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            迎新春做财神
+        </div>
+        <div class="top_right">
+        </div>
+    </div>
+</div>
+<!--主题部分-->
+<div class="main_box2">
+    <div class="open_red open_red_normal">
+        <div class="open_red_top">
+            <div class="redlist_user f_l">
+                <img src="http://pic.davdian.com/shop_logo/32254/80_80_1423364521.jpg@!1e_1c_0o_0l_100h_100w.webp" alt="">
+            </div>
+            <div class="f_l user_number">
+                <span>17737701050</span><br>
+                <span>未开店</span>
+            </div>
+            <div class="f_l red_amount">
+                <span>50</span>元
+            </div>
+        </div>
+        <div class="open_red_bottom">
+            有效期：2017年1月28日15:23:00 - 2月3日15:23:00
+        </div>
+    </div>
+    <div class="open_red open_red_grey">
+        <div class="open_red_top">
+            <div class="redlist_user f_l">
+                <img src="http://pic.davdian.com/shop_logo/32254/80_80_1423364521.jpg@!1e_1c_0o_0l_100h_100w.webp" alt="">
+            </div>
+            <div class="f_l user_number">
+                <span>17737701050</span><br>
+                <span>未开店</span>
+            </div>
+            <div class="f_l red_amount">
+                <span>100</span>元
+            </div>
+        </div>
+        <div class="open_red_bottom">
+            有效期：2017年1月28日15:23:00 - 2月3日15:23:00
+        </div>
+    </div>
+</div>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script type="text/javascript" src="../cdn/wechat/jssdk/jweixin-1.0.0.js"></script>
+<!-- build:script base -->
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../javascript/send_red.js"></script>
+</body>
+</html>

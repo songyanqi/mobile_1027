@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ZH">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+
+        function setCookie(ob){
+            for(var i in ob){
+                set(i, ob[i]);
+            }
+        }
+
+        function set(name,value)
+        {
+            document.cookie += name + "="+ escape (value) + "; ";
+        }
+    </script>
+</body>
+</html>

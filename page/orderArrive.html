@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../dist/orderArriveList.css" rel="stylesheet">
+    <title>确认收货成功</title>
+    <script type="text/javascript">
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+
+        var orderArriveListUrl = "../data/comment_list.json";// 确认收货列表地址
+
+    </script>
+</head>
+<body class="scroll_flag" >
+<div id="orderArriveList">
+    <order-arrive-list>
+
+    </order-arrive-list>
+</div>
+
+<script src="//cdn.davdian.com/vue/2.0.5/vue.js"></script>
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="//cdn.davdian.com/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script src="../dist/orderArriveList.js"></script>
+</body>
+</html>

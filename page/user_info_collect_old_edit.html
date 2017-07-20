@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/user_info.css" rel="stylesheet">
+    <title>个人资料</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 0,
+            btnOnHead: 1,    // 头部文字按钮
+            btnText: "保存",     // 头部文字按钮文字
+            btnLink: "t-490.html"      // 头部文字按钮链接
+        };
+    </script>
+
+</head>
+<body id="info_edit">
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            个人资料
+        </div>
+        <div class="top_right">
+            <a class="top_btn">
+                <span class="text_btn">保存</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="user_info_list clearfix">
+    <div class="info_list one_border hairlines">
+        <ul>
+            <li class="border_inner"><span>您的生日</span><input type="date" value="" class="my_date"></li>
+            <li class="border_inner"><span>目前状态</span><select name="sel" class="crowdk">
+                <option>全职妈妈</option>
+                <option>职场女性</option>
+            </select>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="user_info_list clearfix baby_card big_baby">
+    <div class=" one_border hairlines">
+        <div class="info_title border_inner">大宝名片<span class="user_info_delete"></span></div>
+    </div>
+    <div class="info_list one_border hairlines">
+        <ul>
+            <li class="border_inner"><span>宝宝名字</span><input type="text" value="哈哈" class="baby_name"></li>
+            <li class="border_inner"><span>宝宝生日</span><input type="date" value="2013-09-05" class="baby_date"></li>
+            <li class="border_inner"><span>宝宝性别</span><select name="sel" class="baby_sex">
+                <option>王子</option>
+                <option>公主</option>
+            </select>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="user_info_list clearfix baby_card little_baby">
+    <div class=" one_border hairlines">
+        <div class="info_title border_inner">小宝名片<span class="user_info_delete"></span></div>
+    </div>
+    <div class="info_list one_border hairlines ">
+        <ul>
+            <li class="border_inner"><span>宝宝名字</span><input type="text" value="哈哈" class="baby_name"></li>
+            <li class="border_inner"><span>宝宝生日</span><input type="date" value="2013-09-05" class="baby_date"></li>
+            <li class="border_inner"><span>宝宝性别</span><select name="sel" class="baby_sex">
+                <option>王子</option>
+                <option selected="selected">公主</option>
+            </select>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="add_baby_card april_border hairlines ">
+    <span class="add_btn border_inner">添加宝宝</span>
+</div>
+
+<div class="user_info_list clearfix my_attention">
+    <div class=" one_border hairlines">
+        <div class="info_title border_inner">我的关注<span class="fz_12 dav-color9">（ 请选择3个哟 ）</span></div>
+    </div>
+    <div class="attention_list_edit april_border hairlines clearfix">
+        <ul>
+            <li class="checked"><span class="hover">妈妈课堂</span></li>
+            <li><span>开店指导</span></li>
+            <li class="checked"><span class="hover">购物指南</span></li>
+            <li><span>图书绘本</span></li>
+            <li class="checked"><span class="hover">奶粉辅食</span></li>
+            <li><span>玩具尿裤</span></li>
+            <li><span>居家生活</span></li>
+            <li><span>鲜果美食</span></li>
+            <li><span>健康保健</span></li>
+            <li><span>护肤美妆</span></li>
+            <li><span>服饰穿搭</span></li>
+            <li><span>出行箱包</span></li>
+        </ul>
+    </div>
+</div>
+
+<div class="user_info_list clearfix my_hobby">
+    <div class=" one_border hairlines">
+        <div class="info_title border_inner">我的爱好<span class="fz_12 dav-color9">（ 请选择3个哟 ）</span></div>
+    </div>
+    <div class="attention_list_edit april_border hairlines clearfix">
+        <ul>
+            <li><span>手工</span></li>
+            <li><span>摄影</span></li>
+            <li><span>运动</span></li>
+            <li class="checked"><span class="hover">旅行</span></li>
+            <li><span>交友</span></li>
+            <li><span>购物</span></li>
+            <li class="checked"><span class="hover">阅读</span></li>
+            <li><span>音乐</span></li>
+            <li><span>影视</span></li>
+            <li><span>扮娃</span></li>
+            <li class="checked"><span class="hover">绘画</span></li>
+            <li><span>烹饪</span></li>
+        </ul>
+    </div>
+</div>
+
+<form id="form" action="/index.php?m=admin&amp;c=store&amp;a=post" method="POST">
+
+    <!-- 提交时只提交这个form里面的数据,如果有默认数据也要放在这里一份（input class="hide"）-->
+    <input class="hide " id="user_attention" name="user_attention">
+    <input class="hide " id="user_hobby" name="user_hobby">
+    <input class="hide " id="big_baby_name" name="big_baby_name">
+    <input class="hide " id="big_baby_date" name="big_baby_date">
+    <input class="hide " id="big_baby_sex" name="big_baby_sex">
+    <input class="hide " id="little_baby_name" name="big_baby_name">
+    <input class="hide " id="little_baby_date" name="big_baby_date">
+    <input class="hide " id="little_baby_sex" name="big_baby_sex">
+    <input class="hide " id="my_date" name="my_date">
+    <input class="hide " id="crowdk" name="crowdk">
+
+</form>
+
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+
+<script type="text/javascript" src="../javascript/user_info_edit.js"></script>
+
+</body>
+</html>

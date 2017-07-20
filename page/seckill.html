@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/seckill.css" rel="stylesheet">
+    <link href="../stylesheet/swiper-3.3.1.min.css" rel="stylesheet">
+    <title>大V超值秒杀</title>
+    <script>
+        //统计
+        var tj_id = 59;
+        var tj_path = 'seckill';
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 0,   // 头部首页按钮
+            shareOnHead: 1
+        };
+
+        /////////////////////微信分享/////////////////////
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+        /////////////////////////////////////////////////
+
+        //初始页面加载接口
+        var loadPages = "../data/seckill.json";
+        //设置提醒和取消提醒
+        var remainds = "../data/remaind.json";
+
+        var pageStartIndex = 2;
+
+        var firstPageSize = 50;
+
+        var anniversary=1;//等于1代表是周年庆期间
+
+        var indexSeckillCountdown= 1484661600;
+
+        var start = 1;
+
+        var startTime = '22:00';
+    </script>
+</head>
+<body class="scroll_flag">
+
+
+<!--限时时段 只APP展示-->
+<!--<div class="swiper-container seckill_menu" style="position: fixed;top:0;">-->
+<!--<ul class="swiper-wrapper">-->
+<!--<li class="swiper-slide" value="001"><a href="###"><span><p>08:00</p><p class="time_state">抢购中</p></span></a></li>-->
+<!--<li class="swiper-slide" value="002"><a href="###"><span><p>09:00</p><p class="time_state">抢购中</p></span></a></li>-->
+<!--<li class="swiper-slide" value="003"><a href="###"><span><p>10:00</p><p class="time_state">抢购中</p></span></a></li>-->
+<!--<li class="swiper-slide" value="004"><a href="###"><span><p>11:00</p><p class="time_state">抢购中</p></span></a></li>-->
+<!--<li class="swiper-slide" value="005"><a href="###"><span><p>12:00</p><p class="time_state">抢购中</p></span></a></li>-->
+<!--<li class="swiper-slide" value="006"><a href="###"><span><p>13:00</p><p class="time_state">抢购中</p></span></a></li>-->
+<!--<li class="swiper-slide" value="007"><a href="###"><span><p>14:00</p><p class="time_state">抢购中</p></span></a></li>-->
+<!--<li class="swiper-slide hover" value="008"><a href="###"><span><p>15:00</p><p class="time_state">抢购中</p></span></a></li>-->
+<!--<li class="swiper-slide" value="009"><a href="###"><span><p>16:00</p><p class="time_state">抢购中</p></span></a></li>-->
+<!--<li class="swiper-slide" value="0010"><a href="###"><span><p>17:00</p><p class="time_state">抢购中</p></span></a></li>-->
+<!--</ul>-->
+<!--</div>-->
+
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="share_title_container" data-dav-tj="seckill|share_help|share_help|1|share_help@seckill">
+            <span>大V超值秒杀</span>
+        </div>
+        <div class="top_right">
+            <a href="/" class="top_home" data-dav-tj="seckill|home|home|1|home@seckill">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+
+    <!--限时时段1-->
+    <!--秒杀批次号添加到li里的 value中-->
+    <div class="swiper-container seckill_menu">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide" value="001">
+                <a href="###" data-dav-tj="seckill|batch|batch_001|1|batch_001@seckill">
+                    <span class="con">
+                        <p class="qianggou">08:00</p>
+                        <p class="time_state">抢购中</p>
+                    </span>
+                </a>
+            </li>
+            <li class="swiper-slide" value="002">
+                <a href="###" data-dav-tj="seckill|batch|batch_013|1|batch_013@seckill">
+                    <span class="con">
+                        <p class="qianggou">09:00</p>
+                        <p class="time_state">抢购中</p>
+                    </span>
+                </a>
+            </li>
+            <li class="swiper-slide" value="003">
+                <a href="###" data-dav-tj="seckill|batch|batch_005|1|batch_005@seckill">
+                    <span class="con">
+                        <p class="qianggou">10:00</p>
+                        <p class="time_state">抢购中</p>
+                    </span>
+                </a>
+            </li>
+            <li class="swiper-slide" value="004">
+                <a href="###">
+                    <span class="con">
+                        <p class="qianggou">11:00</p>
+                        <p class="time_state">抢购中</p>
+                    </span>
+                </a>
+            </li>
+            <li class="swiper-slide" value="005">
+                <a href="###">
+                    <span class="con">
+                        <p class="qianggou">12:00</p>
+                        <p class="time_state">抢购中</p>
+                    </span>
+                </a>
+            </li>
+            <li class="swiper-slide" value="006">
+                <a href="###">
+                    <span class="con">
+                        <p class="qianggou">13:00</p>
+                        <p class="time_state">抢购中</p>
+                    </span>
+                </a>
+            </li>
+            <li class="swiper-slide" value="007">
+                <a href="###">
+                    <span class="con">
+                        <p class="qianggou">14:00</p>
+                        <p class="time_state">抢购中</p>
+                    </span>
+                </a>
+            </li>
+            <li class="swiper-slide hover" value="008">
+                <a href="###">
+                    <span class="con">
+                        <p class="qianggou">15:00</p>
+                        <p class="time_state">抢购中</p>
+                    </span>
+                    <!--<div class="thin_line"></div>-->
+                </a>
+                <!--<img style="position: absolute;top: 39px;left: 50%;z-index: 11;width: 16px;margin-left: -8px;" src="http://pic.davdian.com/free/2017/01/17/42_15_df4ed521523f0f144c3414c2a1a36197.png" alt="">-->
+            </li>
+            <li class="swiper-slide" value="009">
+                <a href="###">
+                    <span class="con">
+                        <p class="qianggou">16:00</p>
+                        <p class="time_state">抢购中</p>
+                    </span>
+                </a>
+            </li>
+            <li class="swiper-slide" value="0010">
+                <a href="###">
+                    <span class="con">
+                        <p class="qianggou">17:00</p>
+                        <p class="time_state">抢购中</p>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="seckill_time">
+    <span class="hot">限时抢购 手慢无</span>
+    <div class = "time" style="float: right;">
+        <div class = "fz_13" style="text-align: center;"></div>
+        <div>
+            <div class="seckillCountdown">
+                <span class="seckill_semicolon"></span>
+                <span class="seckill_semicolon"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="seckill_banner"><img src="//pic.davdian.com/images/201511/goods_img/5689_G_1447141995668.jpg"></div>-->
+
+<!--标签号也同样添加到value中-->
+<!--<ul class="seckill_list_title">-->
+    <!--<li value="001" data-dav-tj="seckill|tag|tag_精选|1|tag_精选@seckill">精选</li>-->
+    <!--<li value="002" class="hover" data-dav-tj="seckill|tag|tag_标签|1|tag_标签@seckill">标签</li>-->
+    <!--<li value="003" data-dav-tj="seckill|tag|tag_标签|1|tag_标签@seckill">标签</li>-->
+    <!--<li value="004" data-dav-tj="seckill|tag|tag_标签|1|tag_标签@seckill">标签</li>-->
+<!--</ul>-->
+
+<div class="seckill_list">
+    <ul>
+        <li id="9995" class="list_style"><a href="/seckill_more.html?id=9995&amp;sag_id=65">
+            <div class="img_container">
+                <div class="img_container_inner"><img
+                        src="//pic.davdian.com/goods/2015/12/23/640_640_6321eb14d11c01592b34e0fbc3bd0da1.jpg">
+                    <span class="sold_lable">已抢光</span>
+                    <span class="anniversary_logo"></span>
+                </div>
+                <div class="order_good_info_container">
+                    <div class="order_good_name">新疆库尔勒开口小银杏 350g*2袋 不仅仅是好吃！</div>
+                    <div class="order_good_price">
+                        <span class="price_symbol">￥</span>1.00
+                        <span class="market_price dav-small">￥65.00</span>
+                    </div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_bg">
+                            <div class="progress_container" style="position:relative;width: 100%">
+                                <div class="progress_bar_percentage"></div>
+                            </div>
+                        </div>
+                        <div class="finish_percentage">已售100%</div>
+                    </div>
+                </div>
+            </div>
+        </a><a href="###" class="remain_btns">
+            <div class="more_concessions_btn">更多优惠</div>
+        </a></li>
+        <li id="9439" class="list_style"><a href="/seckill_more.html?id=9439&amp;sag_id=65">
+            <div class="img_container">
+                <div class="img_container_inner"><img
+                        src="//pic.davdian.com/goods/2015/12/26/640_640_4895058091f95e19651c028650d72e46.jpg">
+                    <span class="sold_lable">已抢光</span>
+                    <span class="anniversary_logo"></span>
+                </div>
+                <div class="order_good_info_container">
+                    <div class="order_good_name">南极熊幼儿学习N次涂鸦书·1~3岁（学画线、认颜色、学英文、学数学、认形状，超强功能，超大容量，开启知识大门）</div>
+                    <div class="order_good_price">
+                        <span class="price_symbol">￥</span>1.00
+                        <span class="market_price dav-small">￥49.80</span>
+                    </div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_bg">
+                            <div class="progress_container" style="position:relative;width: 100%">
+                                <div class="progress_bar_percentage"></div>
+                            </div>
+                        </div>
+                        <div class="finish_percentage">已售100%</div>
+                    </div>
+                </div>
+            </div>
+        </a><a href="###" class="remain_btns">
+            <div class="more_concessions_btn">更多优惠</div>
+        </a></li>
+        <li id="1933" class="list_style"><a href="/seckill_more.html?id=1933&amp;sag_id=65">
+            <div class="img_container">
+                <div class="img_container_inner"><img
+                        src="//pic.davdian.com/images/201507/goods_img/1933_G_1438133841517.jpg">
+                    <span class="sold_lable">已抢光</span>
+                    <span class="anniversary_logo"></span>
+                </div>
+                <div class="order_good_info_container">
+                    <div class="order_good_name">【澳洲直邮】澳大利亚Devondale德运高钙全脂成人牛奶粉 1kg*2</div>
+                    <div class="order_good_price">
+                        <span class="price_symbol">￥</span>199.00
+                        <span class="market_price dav-small">￥299.00</span>
+                    </div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_bg">
+                            <div class="progress_container" style="position:relative;width: 100%">
+                                <div class="progress_bar_percentage"></div>
+                            </div>
+                        </div>
+                        <div class="finish_percentage">已售100%</div>
+                    </div>
+                </div>
+            </div>
+        </a><a href="###" class="remain_btns">
+            <div class="more_concessions_btn">更多优惠</div>
+        </a></li>
+        <li id="25572" class="list_style"><a href="/25572.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img src="//pic.davdian.com/goods/2016/04/11/640_640_5ddd6337a4cb1f979a80d47989b33482.jpg">
+                    <span class="anniversary_logo"></span>
+                </div>
+                <div class="order_good_info_container">
+                    <div class="order_good_name">乐扣Hello Kitty 椭圆带柄水杯</div>
+                    <div class="order_good_price">
+                        <span class="price_symbol">￥</span>13.00
+                        <span class="market_price dav-small">￥22.00</span>
+                    </div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_bg">
+                            <div class="progress_container" style="position:relative;width: 5%">
+                                <div class="progress_bar_percentage"></div>
+                            </div>
+                        </div>
+                        <div class="finish_percentage">已售100%</div>
+                    </div>
+                </div>
+            </div>
+        </a><a href="###" class="remain_btns">
+            <div class="panic_buying_btn">立即抢</div>
+        </a></li>
+        <li id="11117" class="list_style"><a href="/11117.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img src="//pic.davdian.com/goods/2016/01/08/640_640_c2a0a0c1376875f3bb6e679e39f67516.jpg">
+                    <span class="anniversary_logo"></span>
+                </div>
+                <div class="order_good_info_container">
+                    <div class="order_good_name">
+                        小学生文库·必读名著经典彩图版：格列佛游记（注音版世界儿童文学名著，87幅美国国会图书馆珍藏经典初版手绘彩图。大V店创始人哈爸、小学语文特级教师于永正、亲近母语创始人徐冬梅等联名推荐！心喜阅童书出品）
+                    </div>
+                    <div class="order_good_price">
+                        <span class="price_symbol">￥</span>16.00
+                        <span class="market_price dav-small">￥32.00</span>
+                    </div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_bg">
+                            <div class="progress_container" style="position:relative;width: 12%">
+                                <div class="progress_bar_percentage"></div>
+                            </div>
+                        </div>
+                        <div class="finish_percentage">已售100%</div>
+                    </div>
+                </div>
+            </div>
+        </a><a href="###" class="remain_btns">
+            <div class="panic_buying_btn">立即抢</div>
+        </a></li>
+        <li id="2539" class="list_style"><a href="/2539.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img src="//pic.davdian.com/images/201508/goods_img/2539_G_1441012104431.jpg">
+                    <span class="anniversary_logo"></span>
+                </div>
+                <div class="order_good_info_container">
+                    <div class="order_good_name">【澳洲直邮】BLACKMORES/澳佳宝 维E面霜（2只装）</div>
+                    <div class="order_good_price">
+                        <span class="price_symbol">￥</span>159.00
+                        <span class="market_price dav-small">￥338.00</span>
+                    </div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_bg">
+                            <div class="progress_container" style="position:relative;width: 9%">
+                                <div class="progress_bar_percentage"></div>
+                            </div>
+                        </div>
+                        <div class="finish_percentage">已售9%</div>
+                    </div>
+                </div>
+            </div>
+        </a><a href="###" class="remain_btns">
+            <div class="panic_buying_btn">立即抢</div>
+        </a></li>
+        <li id="1164" class="list_style"><a href="/1164.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img src="//pic.davdian.com/goods/2016/04/13/640_640_4de29c744fe1d314db58b7c516617825.jpg">
+                    <span class="anniversary_logo"></span>
+                </div>
+                <div class="order_good_info_container">
+                    <div class="order_good_name">康馨儿 长效驱蚊贴18片/盒（3岁以上）幼儿型</div>
+                    <div class="order_good_price">
+                        <span class="price_symbol">￥</span>12.00
+                        <span class="market_price dav-small">￥19.80</span>
+                    </div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_bg">
+                            <div class="progress_container" style="position:relative;width: 23%">
+                                <div class="progress_bar_percentage"></div>
+                            </div>
+                        </div>
+                        <div class="finish_percentage">已售23%</div>
+                    </div>
+                </div>
+            </div>
+        </a><a href="###" class="remain_btns">
+            <div class="panic_buying_btn">立即抢</div>
+        </a></li>
+        <li id="17426" class="list_style"><a href="/17426.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img src="//pic.davdian.com/goods/2016/03/07/640_640_cca216aafaeaa7025cb674f850c23a21.jpg">
+                    <span class="anniversary_logo"></span>
+                </div>
+                <div class="order_good_info_container">
+                    <div class="order_good_name">
+                        图书馆老鼠绘本系列（共5册，被美国图书馆协会的《书单》杂志列为重点推荐图书，被评为“最受欢迎的图书”。故事都充满了想象力和冒险因素，能让孩子们体会到写作、友情、合作和探险带来的无限乐趣）
+                    </div>
+                    <div class="order_good_price">
+                        <span class="price_symbol">￥</span>1.00
+                        <span class="market_price dav-small">￥49.80</span>
+                    </div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_bg">
+                            <div class="progress_container" style="position:relative;width: 9%">
+                                <div class="progress_bar_percentage"></div>
+                            </div>
+                        </div>
+                        <div class="finish_percentage">已售9%</div>
+                    </div>
+                </div>
+            </div>
+        </a><a href="###" class="remain_btns">
+            <div class="panic_buying_btn">立即抢</div>
+        </a></li>
+        <li id="2121" class="list_style"><a href="/2121.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img src="//pic.davdian.com/images/201508/goods_img/2121_G_1439429817609.jpg">
+                    <span class="anniversary_logo"></span>
+                </div>
+                <div class="order_good_info_container">
+                    <div class="order_good_name">【澳洲直邮】Swisse 护肝排毒片（2瓶）</div>
+                    <div class="order_good_price">
+                        <span class="price_symbol">￥</span>279.00
+                        <span class="market_price dav-small">￥452.00</span>
+                    </div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_bg">
+                            <div class="progress_container" style="position:relative;width: 4%">
+                                <div class="progress_bar_percentage"></div>
+                            </div>
+                        </div>
+                        <div class="finish_percentage">已售4%</div>
+                    </div>
+                </div>
+            </div>
+        </a><a href="###" class="remain_btns">
+            <div class="panic_buying_btn">立即抢</div>
+        </a></li>
+        <li id="19389" class="list_style"><a href="/19389.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img src="//pic.davdian.com/goods/2016/03/16/640_640_603c5b15b3d0a83145d44d4916d5b656.jpg">
+                    <span class="anniversary_logo"></span>
+                </div>
+                <div class="order_good_info_container">
+                    <div class="order_good_name">好孩子植物精华婴儿玉米爽身粉140G(盒装送粉扑)</div>
+                    <div class="order_good_price">
+                        <span class="price_symbol">￥</span>15.00
+                        <span class="market_price dav-small">￥22.00</span>
+                    </div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_bg">
+                            <div class="progress_container" style="position:relative;width: 3%">
+                                <div class="progress_bar_percentage"></div>
+                            </div>
+                        </div>
+                        <div class="finish_percentage">已售3%</div>
+                    </div>
+                </div>
+            </div>
+        </a><a href="###" class="remain_btns">
+            <div class="panic_buying_btn">立即抢</div>
+        </a></li>
+        <li id="23664" class="list_style"><a href="/23664.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img src="//pic.davdian.com/goods/2016/04/01/640_640_36995574b5cdd41899631f283055ed5c.jpg">
+                    <span class="anniversary_logo"></span>
+                </div>
+                <div class="order_good_info_container">
+                    <div class="order_good_name">
+                        大师经典哲学绘本（4册，给孩子看的哲学故事书，以全新的视角看待生命与我们所处的社会。荣获德国青少年科学院奖、捕鼠人文学奖、猫头鹰文学奖提名奖，耕林童书馆出品）
+                    </div>
+                    <div class="order_good_price">
+                        <span class="price_symbol">￥</span>24.00
+                        <span class="market_price dav-small">￥40.00</span>
+                    </div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_bg">
+                            <div class="progress_container" style="position:relative;width: 17%">
+                                <div class="progress_bar_percentage"></div>
+                            </div>
+                        </div>
+                        <div class="finish_percentage">已售17%</div>
+                    </div>
+                </div>
+            </div>
+        </a><a href="###" class="remain_btns">
+            <div class="panic_buying_btn">立即抢</div>
+        </a></li>
+        <li id="32064" class="list_style"><a href="/32064.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img src="//pic.davdian.com/supplier/2016/04/22/640_640_b5d436db00986fe00ca8db5e77e001bd.jpg">
+                    <span class="anniversary_logo"></span>
+                </div>
+                <div class="order_good_info_container">
+                    <div class="order_good_name">楼兰蜜语 芝麻阿胶枣180g</div>
+                    <div class="order_good_price">
+                        <span class="price_symbol">￥</span>13.20
+                        <span class="market_price dav-small">￥19.00</span>
+                    </div>
+                    <div class="progress_bar">
+                        <div class="progress_bar_bg">
+                            <div class="progress_container" style="position:relative;width: 1%">
+                                <div class="progress_bar_percentage"></div>
+                            </div>
+                        </div>
+                        <div class="finish_percentage">已售1%</div>
+                    </div>
+                </div>
+            </div>
+        </a><a href="###" class="remain_btns">
+            <div class="panic_buying_btn">立即抢</div>
+        </a></li>
+        <li id="25935" class="list_style"><a href="/25935.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img src="//pic.davdian.com/goods/2016/04/05/640_640_0a7469bc08d01076f36b3daa41f6d630.jpg">
+                    <span class="anniversary_logo"></span>
+                </div>
+                <div class="order_good_info_container">
+                    <div class="order_good_name">金盾康馨 活性抑菌婴儿洗衣液1000ml</div>
+                    <div class="order_good_price">
+                        <span class="price_symbol">￥</span>19.00
+                        <span class="market_price dav-small">￥49.00</span>
+                    </div>
+                    <div class="fucure">
+                        <span style="font-size: 11px;color: #00c7c0;">15：00准时开抢</span>
+                    </div>
+                </div>
+            </div>
+        </a></li>
+        <li id="223" class="list_style"><a href="/223.html">
+            <div class="img_container">
+                <div class="img_container_inner">
+                    <img src="//pic.davdian.com/images/201503/goods_img/223_G_1426694141133.jpg">
+                    <span class="anniversary_logo"></span>
+                </div>
+                <div class="order_good_info_container">
+                    <div class="order_good_name">凯文·亨克斯和他的小老鼠（共6册）适合5-7岁儿童</div>
+                    <div class="order_good_price">
+                        <span class="price_symbol">￥</span>52.00
+                        <span class="market_price dav-small">￥84.00</span>
+                    </div>
+                    <div class="fucure">
+                        <span style="font-size: 11px;color: #00c7c0;">15：00准时开抢</span>
+                    </div>
+                </div>
+            </div>
+        </a></li>
+    </ul>
+</div>
+<!--小于50拍这个-->
+<div class="no_more">没有更多商品</div>
+
+<!--感恩节主会场链接(anniversary=1的时候显示)-->
+<a href="http://joys.davdian.com/"><div class="thanksgiving_meetingplace"></div></a>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/model.js"></script>
+<script src="../javascript/swiper-3.3.1.jquery.min.js"></script>
+<script type="text/javascript" src="../javascript/jquery.lazyload.js"></script>
+<script src="../javascript/seckill.js"></script>
+</body>
+</html>

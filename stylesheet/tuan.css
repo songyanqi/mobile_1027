@@ -1,0 +1,46 @@
+body{
+	background-color: #f1f1f1;
+	margin: 0 auto;
+	max-width: 640px;
+	padding-bottom: 30px;
+	line-height: 20px;
+}
+a,button,input{-webkit-tap-highlight-color:rgba(255,0,0,0);}
+.tuan_switcher {
+	padding-top: 10px;
+	height: 30px;
+	background-color: #fff;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-flow: row;
+	margin-bottom: 10px;
+}
+.tuan_today{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	display: inline-block;
+	text-align: center;
+	height: 18px;
+	color: #333;
+	text-decoration: none;
+}
+.tuan_switcher_inner{
+	text-align: center;
+	margin: 0 auto;
+	font-size: 14px;
+	height: 28px;
+}
+.tuan_switcher .active .tuan_switcher_inner{
+	color: #FF4A7D;
+	border-bottom: 2px solid #FF4A7D;
+}
+
+
+
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>商品名称</title>
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <!-- /build -->
+    <!-- build:style detail -->
+    <link href="../stylesheet/v.css" rel="stylesheet">
+    <link href="../stylesheet/add_product_reviews.css" rel="stylesheet">
+    <!-- /build -->
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+    </script>
+
+</head>
+<body class="add_product_reviews">
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            添加推荐理由
+        </div>
+    </div>
+</div>
+
+<div class="add_product_reviews_group">
+    <a class="add_product_reviews_item">
+        <div class="add_product_reviews_img_container">
+            <img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg">
+        </div>
+        <div class="add_product_reviews_info_container dav-small">
+            <div class="add_product_reviews_name">贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨 05008</div>
+            <div class="add_product_reviews_price dav-color-price">￥128.00</div>
+        </div>
+    </a>
+
+</div>
+
+<!--这个form的action和textarea的name需要你自己写，里面逻辑要返回一个result，不要直接跳走-->
+<!--result里三个字段，error,msg,callbackUrl, callbackUrl就是跳转的url-->
+<form class="add_review_form" action="/sd">
+    <div class="add_reviews">
+        <textarea class="add_reviews_textarea" placeholder="嗨，写一些推荐语，有助于其他买家了解，可以增加订单呦~（不超过200字）"
+                  maxlength="250"></textarea>
+
+        <div class="add_reviews_text hide">10</div>
+        <div class="add_reviews_sendbtn">提交</div>
+    </div>
+</form>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script type="text/javascript" src="../javascript/jquery.form.min.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/review.js"></script>
+</body>
+</html>

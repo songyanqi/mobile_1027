@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <!-- /build -->
+
+    <!-- build:style article -->
+    <link href="../stylesheet/article.css" rel="stylesheet">
+    <!-- /build -->
+    <title>Nemo的小店</title>
+
+    <script type="text/javascript">
+            // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+        var sort_type = 0; //需要拍一个排序方式
+        var page_num = 1;
+        var article_type = 1;
+        var page_size = 1;
+
+        var updateUrl = '/index.php?c=essay&a=ajax_list';
+    </script>
+
+
+</head>
+<body class="scroll_flag in_app">
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            精选文章
+        </div>
+        <div class="top_right">
+            <a class="top_share share_to_web">
+                <span class="icon"></span>
+            </a>
+            <a href="" class="top_home">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="article-sort dav-shadow article-sort-margin-top">
+    <div class="li-container clearfix">
+         <div class="li pull-left active"><span>全部</span></div>
+        <div class="li pull-left"><span><a href="/">夫妻</a></span></div>
+        <div class="li pull-left"><span><a href="/">育儿</a></span></div>
+        <div class="li pull-left"><span><a href="/">书评</a></span></div>
+        <div class="li pull-left"><span><a href="/">我们</a></span></div>
+    </div>
+</div>
+
+<div class="article-sequence clearfix">
+     <ul>
+     <li class="active"><a href="">默认</a></li>
+     <li><a href="">阅读数</a></li>
+     </ul>
+</div>
+
+<div class="article-list dav-shadow ">
+    <ul>
+        <a href="/">
+            <li class="clearfix">
+                <div class="li-left pull-left">
+                    <div class="article-list-title">婉妈邀您相约第三届桃花</div>
+                    <div class="article-list-num">
+                        夫妻  /  阅读 344
+                    </div>
+                </div>
+                <div class="li-right pull-right"><img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg"/></div>
+            </li>
+        </a>
+
+        <a href="/">
+            <li class="clearfix">
+                <div class="li-left pull-left">
+                    <div class="article-list-title">婉妈邀您相约第三届桃花节分享绘本【乌鲁木齐】婉妈邀您相约第三届桃花节分享绘本【乌鲁木齐】</div>
+                    <div class="article-list-num">
+                       夫妻  /  阅读 344
+                    </div>
+                </div>
+                <div class="li-right pull-right"><img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg"/></div>
+            </li>
+        </a>
+        <a href="/">
+            <li class="clearfix">
+                <div class="li-left pull-left">
+                    <div class="article-list-title">婉妈邀您相约第三届桃花节分享绘本【乌鲁木齐】</div>
+                    <div class="article-list-num">
+                         夫妻  /  阅读 344
+                    </div>
+                </div>
+                <div class="li-right pull-right"><img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg"/></div>
+            </li>
+        </a>
+        <a href="/">
+            <li class="clearfix">
+                <div class="li-left pull-left">
+                    <div class="article-list-title">婉妈邀您相约第三届桃花节分享绘本【乌鲁木齐】</div>
+                    <div class="article-list-num">
+                         夫妻  /  阅读 344
+                    </div>
+                </div>
+                <div class="li-right pull-right"><img src="//pic.davdian.com/free/good_pic_demo_800_800.jpg"/></div>
+            </li>
+        </a>
+    </ul>
+
+</div>
+<div class="article-more">点击加载更多</div>
+<div class="article-none">没有更多文章了</div>
+<div class="article-loading">
+    <div class='uil-default-css-normal' style='-webkit-transform:scale(0.15);-moz-transform:scale(0.15);-webkit-transform-origin: 0 0;-moz-transform-origin: 0 0;width:30px;height: 30px;display: inline-block;'><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;'></div><div style='top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;'></div></div>
+
+    <div>数据加载中...</div>
+</div>
+
+
+
+
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<!-- build:script base -->
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/jquery.lazyload.js"></script>
+
+<!-- /build -->
+<!-- build:script article -->
+<script type="text/javascript" src="../javascript/article.js"></script>
+<!-- /build -->
+</body>
+</html>

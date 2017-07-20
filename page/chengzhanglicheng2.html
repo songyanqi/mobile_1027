@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html id='html'>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>timeTree</title>
+    <link rel="stylesheet" href="../stylesheet/jcscript.css?t=123">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/detail129.css" rel="stylesheet">
+	<link rel="stylesheet" href="../stylesheet/swiper-3.4.0.min.css">
+	<link rel="stylesheet" href="../stylesheet/tree.css">
+	<script>
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:0,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:1,  // 头部分享按钮
+            btnOnHead:0    // 头部文字按钮
+        };
+        /////////////////////微信分享/////////////////////
+
+        // 店铺的图标
+        var imgUrl = "http://pic.davdian.com/news/2016/08/29/80_80_05e29087209a712c882cdad2976aad8e.png@1e_1c_0o_0l_100h_100w.webp";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+
+        //店铺描述
+        var descContent = '大V店2周年，从接触到熟悉，从相识到相爱，满满的回忆';
+        var shareTitle = '参与亲子阅读XX天  我是xx的   亲子阅读xx派';  //店铺名称
+
+        // wechat
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+        window.status = 3;
+        window.people = '13';
+	</script>
+</head>
+<body>
+
+	<audio style="display: none" id="bg_music" src="http://pic.davdian.com/free/2016/12/24/tree/music.mp3" loop=""></audio>
+	<div class="swiper-container tree-container">
+		<img src="http://pic.davdian.com/free/2016/12/24/tree/music.png"  class='music absolute' id='music'>
+		<img src="http://pic.davdian.com/free/2016/12/24/tree/noMusic.png" class='music absolute selected' id='noMusic'>
+		<img src="http://pic.davdian.com/free/2016/12/24/tree/title.png" class='page_title absolute'>
+		<img style='animation-iteration-count: infinite;animation-duration: 2s;' src="http://pic.davdian.com/free/2016/12/24/tree/arrow.png" class='arrow absolute animated'>
+	  <div class="swiper-wrapper">
+	    <div class="swiper-slide div1">
+	    	<img style='animation-iteration-count: infinite;' src="http://pic.davdian.com/free/2016/12/24/tree/page1_leaf1.png" class='page1_leaf1 absolute ani' swiper-animate-effect="rotateInDownRightJc" swiper-animate-duration="5s">
+	    	<img style='animation-iteration-count: infinite;' src="http://pic.davdian.com/free/2016/12/24/tree/page1_leaf2.png" class='page1_leaf2 absolute ani' swiper-animate-effect="rotateInDownLeftJc" swiper-animate-duration="4s">
+	    	<img style='animation-iteration-count: infinite;'  src="http://pic.davdian.com/free/2016/12/24/tree/page1_start.png" class='page1_start absolute ani' swiper-animate-effect="rotateCenterJc" swiper-animate-duration="5s">
+
+	    	<img src="http://pic.davdian.com/free/2016/12/24/tree/page1_headBackground.png" class='page1_headBackground absolute'>
+	    	<div class='t1' style="background: url('http://pic.davdian.com/user/2016/06/06/80_80_3ac6f90599265841db4f48c0c6a73e89.png') no-repeat center; background-size: cover;"></div>
+	    	<div class='page1_text_1 absolute'>
+	    		<img src="http://pic.davdian.com/free/2016/12/24/tree/page1_titleTextBackground.png" class='page1_text absolute'>
+	    		<div class='page1_text_title absolute'>
+	    			<div class='page1_name over_text absolute'>小丽的</div>
+	    			<div class='page1_num absolute'>10000</div>
+	    		</div>
+	    		<div class='page1_text_content absolute'>
+	    			<p class='page1_name1_p1'>1年来</p>
+	    			<p class='page1_name1_p2'>购买了x本绘本</p>
+	    			<p class='page1_name1_p3'>邀请了x位妈妈</p>
+	    			<p class='page1_name1_p4'>成为了</p>
+	    		</div>
+	    	</div>
+	    	<img class='page1_peacock absolute ani' swiper-animate-effect="bounceIn" swiper-animate-duration="1s" >
+	    </div>
+	    <div class="swiper-slide div2">
+	    	<img style='animation-iteration-count: infinite;' dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page2_leaf1.png" class='page2_leaf1 absolute ani' swiper-animate-effect="rotateInDownRightJc" swiper-animate-duration="5s" >
+	    	<img style='animation-iteration-count: infinite;' dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page2_leaf2.png" class='page2_leaf2 absolute ani' swiper-animate-effect="rotateInDownLeftJc" swiper-animate-duration="4s" >
+	    	<div class='ani' swiper-animate-effect="fadeIn" swiper-animate-duration="1s">
+	    		<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page2_text_1.png" class='page2_text absolute'>
+	    		<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page2_text_2.png" class='page2_text2 absolute'>
+	    		<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page2_text2.png" class='page2_text_2 absolute'>
+		    	<p class='page2_p page2_p1 absolute over_text'>
+		    		<span class='page2_p1_name'>小丽说sdfasf</span>
+		    		<span><img src="http://pic.davdian.com/free/2016/12/24/tree/page2_zaidavdian.png" class='page2_p1_img'></span>
+	    		</p>
+		    	<p class='page2_p page2_p2 absolute' style="background: url('http://pic.davdian.com/free/2016/12/24/tree/shiwan.png'); background-size: 100% 100%;"></p>
+		    	<p class='page2_p page2_p3 absolute' style="background: url('http://pic.davdian.com/free/2016/12/24/tree/90.png'); background-size: 100% 100%;"></p>
+	    	</div>
+	    </div>
+
+	    <div class="swiper-slide div3">
+	    	<img style='animation-iteration-count: infinite;'  dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page3_moon.png" class='page3_moon absolute ani' swiper-animate-effect="rotateInDownCenterJc" swiper-animate-duration="3s" swiper-animate-delay="0.3s">
+	    	<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page3_text.png" class='page3_text absolute ani' swiper-animate-effect="bounceIn" swiper-animate-duration="1s" swiper-animate-delay="0.3s">
+	    	<img style='animation-iteration-count: infinite;' dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page3_start.png" class="page3_start absolute ani" swiper-animate-effect="flash" swiper-animate-duration="3s" swiper-animate-delay="0.3s">
+	    	<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page3_planet.png" class='page3_planet absolute'>
+	    </div>
+	    <div class="swiper-slide div4">
+	    	<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page4_text.png" class='page4_clouds absolute'>
+	    	<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page4_phone.png" class='page4_phone absolute'>
+	    	<img src="http://pic.davdian.com/free/2016/12/24/tree/page4_eye1.png" id='page4_eye' num='1' class='page4_eye absolute'>
+	    </div>
+	    <div class="swiper-slide div5">
+	    	<div class='t4' style="background: url('http://pic.davdian.com/user/2016/06/06/80_80_3ac6f90599265841db4f48c0c6a73e89.png') no-repeat center; background-size: cover;"></div>
+	    	<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page1_headBackground.png" class='page5_headBackground absolute'>
+	    	<img style='animation-iteration-count: infinite;' dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page5_start.png" class='page5_start absolute ani' swiper-animate-effect="flash" swiper-animate-duration="5s" swiper-animate-delay="0.3s">
+	    	<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page5_personBackground.png" class='page5_person absolute'>
+	    	<div class='page5_name absolute'><span class='over_text'>小丽sdfsdfs</span></div>
+	    </div>
+	    <div class='swiper-slide div6'>
+	    	<div class='page6_div page6_div1 absolute'>
+	    		<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page6_shopkeeper.png" class='page6_shopkeeper page6_img absolute'>
+	    		<div class='share_to_web'>
+    				<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page6_btn2b.png" class='page6_makemoney1 absolute'>
+    			</div>
+	    		<div class='page6_date absolute'>
+	    			<!-- <img class='page6_day1 absolute'> -->
+    				<img class='page6_day2 absolute'>
+	    		</div>
+	    		<div class='page6_time absolute'>
+	    			<img class='page6_time1 page6_time_all absolute'>
+	    			<img class='page6_time2 page6_time_all absolute'>
+	    			<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page6_dot.png" class='page6_dot1 absolute'>
+	    			<img class='page6_time3 page6_time_all absolute'>
+	    			<img class='page6_time4 page6_time_all absolute'>
+	    			<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page6_dot.png" class='page6_dot2 absolute'>
+	    			<img class='page6_time5 page6_time_all absolute'>
+	    			<img class='page6_time6 page6_time_all absolute'>
+	    		</div>
+	    	</div>
+	    	<div class='page6_div page6_div2 absolute'>
+	    		<!-- <div class='share_to_web'> -->
+    			<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page6_tourist.png" class='page6_tourist page6_img absolute'>
+	    		<!-- </div> -->
+	    		<div class='dav-btn'>
+	    			<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page6_btn1b.png" class=' page6_share absolute'>
+	    		</div>
+	    		<div class='page6_date absolute'>
+	    			<!-- <img class='page6_day1 absolute'> -->
+    				<img class='page6_day2 absolute'>
+	    		</div>
+	    		<div class='page6_time absolute'>
+	    			<img class='page6_time1 page6_time_all absolute'>
+	    			<img class='page6_time2 page6_time_all absolute'>
+	    			<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page6_dot.png" class='page6_dot1 absolute'>
+	    			<img class='page6_time3 page6_time_all absolute'>
+	    			<img class='page6_time4 page6_time_all absolute'>
+	    			<img dataSrc="http://pic.davdian.com/free/2016/12/24/tree/page6_dot.png" class='page6_dot2 absolute'>
+	    			<img class='page6_time5 page6_time_all absolute'>
+	    			<img class='page6_time6 page6_time_all absolute'>
+	    		</div>
+	    	</div>
+	    </div>
+	  </div>
+	</div>
+	<!-- <div class="kd_confirm_container show_slow"> -->
+	<div class="kd_confirm_container hide">
+        <div class="mask"></div>
+        <div class="kd_confirm">
+            <div class="info_text">
+            </div>
+            <div class="input_container">
+                <input class="invite_code" placeholder="请输入邀请码或者您朋友的开店手机号">
+            </div>
+            <div class="error_code_info hide">这个码不对啊</div>
+            <div class="kd_code_btn">开店</div>
+            <div style="text-align: center;color: red;margin-top: 20px;">如果没有邀请人，请联系果敢时代大V店客服</div>
+        </div>
+    </div>
+	<script src="http://cdn.davdian.com/wx_jssdk/jweixin-1.0.0.js"></script>
+	<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../javascript/units.js"></script>
+	<script type="text/javascript" src="../javascript/base.js"></script>
+	<script src='../javascript/swiper.animate1.0.2.min.js'></script>
+	<script src='../javascript/swiper-3.4.0.min.js'></script>
+	<script src='../javascript/tree.js'></script>
+</body>
+</html>

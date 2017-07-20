@@ -1,0 +1,341 @@
+{
+  "code": 0,
+  "data": {
+    "cart_info":{
+      "goods_amount": 130,
+      "order_amount": 100,
+      "saving": 30,
+      "total_number": 3,
+      "sku_count": 2,
+      "sku_count_all": 7,
+      "goods_count": 4,
+      "total_income": 21.2,
+      "activitys": [
+        {
+          "act_id": 2511,
+          "act_type": 3,
+          "act_type_name": "\u4eab\u6298\u6263",
+          "act_info": "\u5df2\u6ee110.00\u5143\u4eab7\u6298",
+          "act_url":0,
+          "goods": {
+            "315": {
+              "goods_id": 315,
+              "goods_name": "\u8da3\u5a01\u6587\u5316 \u7ae5\u8c23\u5c0f\u94a2\u7434 \u8f7b\u677e\u5b66\u4e60\u97f3\u4e50\u8da3\u5a01\u6587\u5316 \u7ae5\u8c23\u5c0f\u94a2\u7434 \u8f7b\u677e\u5b66\u4e60\u97f3\u4e50\u8da3\u5a01\u6587\u5316 \u7ae5\u8c23\u5c0f\u94a2\u7434 \u8f7b\u677e\u5b66\u4e60\u97f3\u4e50",
+              "goods_price": 78,
+              "goods_number": 3,
+              "goods_thumb": "http:\/\/pic.davdian.com\/images\/201503\/goods_img\/315_G_1426698139175.jpg",
+              "goods_tags": [
+                {
+                  "tag_type_name": "版本",
+                  "tag_name": "精装"
+                }
+              ],
+              "seller_income":9,
+              "price_act_id": 155,
+              "price_act_type": "2",
+              "price_act_name": "\u56e2\u8d2d",
+              "reduce_money": 10,
+              "sag_left_time": 0,
+              "bkg_left_time": 0,
+              "act_income":{
+                "ratio":2
+              },
+              "checked": 1,
+              "pre_sale": 0,
+              "purchase_limit": 0,
+              "goods_stocks": 0,
+              "buy_gift":[{"gift_id":317275,"short_intro":"q","gift_number":2,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"},{"gift_id":317275,"short_intro":"q","gift_number":1,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"}]
+            },
+            "278": {
+              "goods_id": 278,
+              "goods_name": "\u5bb6\u5bb6\u5c0f\u9ea6\u7c98\u571f \u8da3\u5a01\u6587\u5316\u51fa\u54c1",
+              "goods_price": 72,
+              "goods_number": 11,
+              "goods_thumb": "http:\/\/pic.davdian.com\/images\/201503\/goods_img\/278_G_1426702384002.jpg",
+              "goods_tags": [
+                {
+                  "tag_name": "精装"
+                },
+                {
+                  "tag_name": "蓝色"
+                }
+              ],
+              "seller_income":9,
+              "price_act_id": 118,
+              "price_act_type": "1",
+              "price_act_name": "秒杀",
+              "reduce_money": 5,
+              "sag_left_time": 0,
+              "bkg_left_time": 17,
+              "fsp_left_time":22,
+              "act_income":{
+                "ratio":3
+              },
+              "checked": 1,
+              "pre_sale": 0,
+              "purchase_limit": 13,
+              "goods_stocks": 14,
+              "buy_gift":[{"gift_id":317275,"short_intro":"q","gift_number":2,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"},{"gift_id":317275,"short_intro":"q","gift_number":1,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"}]
+
+            }
+          },
+          "gifts": [
+            {
+              "goods_id": 11,
+              "goods_name": "赠品小汽车",
+              "goods_thumb": "http://pic.davdian.com/goods/2016/07/18/640_640_5a2c9314446c9f967b2cb643e8733c92.jpg",
+              "gift_number": 2,
+              "gift_stocks": 44,
+              "hint_info": "赠品有限,手慢无"
+            },
+            {
+              "goods_id": 12,
+              "goods_name": "开店花朵",
+              "goods_thumb": "http://pic.davdian.com/goods/2016/07/18/640_640_5a2c9314446c9f967b2cb643e8733c92.jpg",
+              "gift_number": 2,
+              "gift_stocks": 0,
+              "hint_info": "赠品有限,手慢无"
+            }
+          ]
+        },
+        {
+          "act_id": 2543,
+          "act_type": 2,
+          "act_type_name": "\u6ee1\u5c31\u9001",
+          "act_info": "\u5df2\u6ee168.00\u5143\uff0c\u53ef\u5f97\u8d60\u54c11",
+          "act_url": "\/t-3678.html",
+          "goods": {
+            "17425": {
+              "goods_id": 17425,
+              "goods_name": "2016\u5e74\u56fd\u9645\u5b89\u5f92\u751f\u5956\u5f97\u4e3b\u66f9\u6587\u8f69\u7ecf\u5178\u4f5c\u54c1\uff1a\u4e01\u4e01\u5f53\u5f53\uff08\u51687\u518c\uff0c\u8457\u540d\u513f\u7ae5\u6587\u5b66\u4f5c\u5bb6\u66f9\u6587\u8f69\u5341\u5e74\u78e8\u4e00\u5251\uff0c\u5173\u6ce8\u4eba\u6027\u5149\u8f89\u7684\u7ecf\u5178\u4e4b\u4f5c\u30029\u5c81\u4ee5\u4e0a\u9002\u8bfb\uff09\u9650\u91cf\u7b7e\u540d\u7248\uff0c\u968f\u673a\u8d60\u9001\uff0c\u5148\u5230\u5148\u5f97\u54e6\uff01",
+              "goods_price": 80,
+              "goods_number": 3,
+              "goods_thumb": "http:\/\/pic.davdian.com\/goods\/2016\/03\/04\/640_640_ba02350c9f3ff155c69a51c40a8da7f2.jpg",
+              "goods_tags": [
+                {
+                  "tag_type_name": "版本",
+                  "tag_name": "精装"
+                }
+              ],
+              "price_act_id": 0,
+              "price_act_type": "0",
+              "price_act_name": "",
+              "reduce_money": 44,
+              "sag_left_time": 0,
+              "fsp_left_time":7222,
+              "bkg_left_time":0,
+              "checked": 1,
+              "pre_sale": 1,
+              "purchase_limit": 13,
+              "goods_stocks": 2,
+              "buy_gift":[{"gift_id":317275,"short_intro":"q","gift_number":2,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"}]
+
+            }
+          }
+        },
+        {
+          "act_id": 0,
+          "act_type": 0,
+          "act_type_name": "",
+          "act_info": "",
+          "act_url": 0,
+          "goods": {
+            "1669": {
+              "goods_id": 1669,
+              "goods_name": "\u4e0d\u8981\u548c\u9752\u86d9\u8df3\u7ef3\uff08\u5f6d\u61ff\u3001\u4e5d\u513f\u539f\u521b\u56fe\u753b\u4e66\uff0c\u544a\u8bc9\u4f60\uff1a\u5b69\u5b50\u662f\u5982\u4f55\u5728\u4f60\u4e0d\u77e5\u9053\u7684\u65f6\u5019\u6084\u6084\u6210\u957f\uff0c2016\u5e74\u56fd\u9645\u513f\u7ae5\u8bfb\u7269\u8054\u76df\u63a8\u8350\u4e66\u5355\uff09",
+              "goods_price": 32.8,
+              "goods_number": 3,
+              "goods_thumb": "http:\/\/pic.davdian.com\/images\/201507\/goods_img\/1669_G_1436514761777.jpg",
+              "goods_tags": [],
+              "price_act_id": 0,
+              "price_act_type": "1",
+              "price_act_name": "秒杀",
+              "reduce_money": 0,
+              "sag_left_time": 2220,
+              "checked": 1,
+              "pre_sale": 0,
+              "purchase_limit":1,
+              "goods_stocks": 2,
+              "buy_gift":[{"gift_id":317275,"short_intro":"q","gift_number":2,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"},{"gift_id":317275,"short_intro":"q","gift_number":1,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"}]
+
+            },
+            "1123": {
+              "goods_id": 1669,
+              "goods_name": "\u4e0d\u8981\u548c\u9752\u86d9\u8df3\u7ef3\uff08\u5f6d\u61ff\u3001\u4e5d\u513f\u539f\u521b\u56fe\u753b\u4e66\uff0c\u544a\u8bc9\u4f60\uff1a\u5b69\u5b50\u662f\u5982\u4f55\u5728\u4f60\u4e0d\u77e5\u9053\u7684\u65f6\u5019\u6084\u6084\u6210\u957f\uff0c2016\u5e74\u56fd\u9645\u513f\u7ae5\u8bfb\u7269\u8054\u76df\u63a8\u8350\u4e66\u5355\uff09",
+              "goods_price": 32.8,
+              "goods_number": 3,
+              "goods_thumb": "http:\/\/pic.davdian.com\/images\/201507\/goods_img\/1669_G_1436514761777.jpg",
+              "goods_tags": [],
+              "price_act_id": 0,
+              "price_act_type": 0,
+              "price_act_name": "",
+              "reduce_money": 0,
+              "sag_left_time": 0,
+              "checked": 1,
+              "pre_sale": 0,
+              "purchase_limit":1,
+              "goods_stocks": 2,
+              "buy_gift":[{"gift_id":317275,"short_intro":"q","gift_number":2,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"},{"gift_id":317275,"short_intro":"q","gift_number":1,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"}]
+
+            },
+            "1124": {
+              "goods_id": 1669,
+              "goods_name": "\u4e0d\u8981\u548c\u9752\u86d9\u8df3\u7ef3\uff08\u5f6d\u61ff\u3001\u4e5d\u513f\u539f\u521b\u56fe\u753b\u4e66\uff0c\u544a\u8bc9\u4f60\uff1a\u5b69\u5b50\u662f\u5982\u4f55\u5728\u4f60\u4e0d\u77e5\u9053\u7684\u65f6\u5019\u6084\u6084\u6210\u957f\uff0c2016\u5e74\u56fd\u9645\u513f\u7ae5\u8bfb\u7269\u8054\u76df\u63a8\u8350\u4e66\u5355\uff09",
+              "goods_price": 32.8,
+              "goods_number": 3,
+              "goods_thumb": "http:\/\/pic.davdian.com\/images\/201507\/goods_img\/1669_G_1436514761777.jpg",
+              "goods_tags": [],
+              "price_act_id": 0,
+              "price_act_type": 0,
+              "price_act_name": "",
+              "reduce_money": 0,
+              "sag_left_time": 0,
+              "checked": 1,
+              "pre_sale": 0,
+              "purchase_limit":1,
+              "goods_stocks": 2,
+              "buy_gift":[{"gift_id":317275,"short_intro":"q","gift_number":2,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"},{"gift_id":317275,"short_intro":"q","gift_number":1,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"}]
+
+            },
+            "1125": {
+              "goods_id": 1669,
+              "goods_name": "\u4e0d\u8981\u548c\u9752\u86d9\u8df3\u7ef3\uff08\u5f6d\u61ff\u3001\u4e5d\u513f\u539f\u521b\u56fe\u753b\u4e66\uff0c\u544a\u8bc9\u4f60\uff1a\u5b69\u5b50\u662f\u5982\u4f55\u5728\u4f60\u4e0d\u77e5\u9053\u7684\u65f6\u5019\u6084\u6084\u6210\u957f\uff0c2016\u5e74\u56fd\u9645\u513f\u7ae5\u8bfb\u7269\u8054\u76df\u63a8\u8350\u4e66\u5355\uff09",
+              "goods_price": 32.8,
+              "goods_number": 3,
+              "goods_thumb": "http:\/\/pic.davdian.com\/images\/201507\/goods_img\/1669_G_1436514761777.jpg",
+              "goods_tags": [],
+              "price_act_id": 0,
+              "price_act_type": 0,
+              "price_act_name": "",
+              "reduce_money": 0,
+              "sag_left_time": 0,
+              "checked": 1,
+              "pre_sale": 0,
+              "purchase_limit":1,
+              "goods_stocks": 2,
+              "buy_gift":[{"gift_id":317275,"short_intro":"q","gift_number":2,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"},{"gift_id":317275,"short_intro":"q","gift_number":1,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"}]
+
+            }
+          },
+          "gifts": []
+        },
+        {
+          "act_id": -1,
+          "goods": {
+            "1669": {
+              "goods_id": 1669,
+              "goods_name": "\u4e0d\u8981\u548c\u9752\u86d9\u8df3\u7ef3\uff08\u5f6d\u61ff\u3001\u4e5d\u513f\u539f\u521b\u56fe\u753b\u4e66\uff0c\u544a\u8bc9\u4f60\uff1a\u5b69\u5b50\u662f\u5982\u4f55\u5728\u4f60\u4e0d\u77e5\u9053\u7684\u65f6\u5019\u6084\u6084\u6210\u957f\uff0c2016\u5e74\u56fd\u9645\u513f\u7ae5\u8bfb\u7269\u8054\u76df\u63a8\u8350\u4e66\u5355\uff09",
+              "goods_price": 32.8,
+              "goods_number": 1,
+              "goods_thumb": "http:\/\/pic.davdian.com\/images\/201507\/goods_img\/1669_G_1436514761777.jpg",
+              "goods_tags": [],
+              "price_act_id": 0,
+              "price_act_type": "0",
+              "price_act_name": "",
+              "reduce_money": 0,
+              "sag_left_time": 0,
+              "checked": 1,
+              "pre_sale": 0,
+              "purchase_limit": 0,
+              "goods_stocks": 1803,
+              "buy_gift":[{"gift_id":317275,"short_intro":"q","gift_number":2,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"},{"gift_id":317275,"short_intro":"q","gift_number":1,"surplus":9,"goods_name":"\u6d4b\u8bd5\u5546\u54c1\u5934\u56fe"}]
+
+            }
+          },
+          "gifts": []
+        }
+      ],
+      "discounts": {
+        "2511": {
+          "act_id": 2511,
+          "act_type": "3",
+          "act_tag_type_name": "\u4eab\u6298\u6263",
+          "discount": 30
+        }
+      }
+    },
+    "overruns": [
+      {
+        "goods_name": "泰国原装进口Comfleep纯天然乳胶枕 颈椎枕 护颈枕 高低按摩枕 抗菌防螨 改良颈椎腰椎血压睡眠"
+      },
+      {
+        "goods_name": "超能植翠洗衣液 2.5kg*2瓶+1kg*3袋"
+      },
+      {
+        "goods_name": "洁丽雅 纯棉小毛巾全棉小面巾混色三条装 50*25cm"
+      },
+      {
+        "goods_name": "超S013D正品静音左右摇摆多功能带拉绳踏步机 家用运动健身器材"
+      },
+      {
+        "goods_name": "干湿两用塑料防滑衣架无痕晾衣架衣服挂成人晾晒衣撑10个装 颜色随机发"
+      },
+      {
+        "goods_name": "日光生活 磁石眼部经络按摩器 P146"
+      },
+      {
+        "goods_name": "泰国原装进口Comfleep纯天然乳胶枕 颈椎枕 护颈枕 高低按摩枕 抗菌防螨 改良颈椎腰椎血压睡眠"
+      },
+      {
+        "goods_name": "泰国原装进口Comfleep纯天然乳胶枕 颈椎枕 护颈枕 高低按摩枕 抗菌防螨 改良颈椎腰椎血压睡眠"
+      },
+      {
+        "goods_name": "泰国原装进口Comfleep纯天然乳胶枕 颈椎枕 护颈枕 高低按摩枕 抗菌防螨 改良颈椎腰椎血压睡眠"
+      },
+      {
+        "goods_name": "泰国原装进口Comfleep纯天然乳胶枕 颈椎枕 护颈枕 高低按摩枕 抗菌防螨 改良颈椎腰椎血压睡眠"
+      },
+      {
+        "goods_name": "泰国原装进口Comfleep纯天然乳胶枕 颈椎枕 护颈枕 高低按摩枕 抗菌防螨 改良颈椎腰椎血压睡眠"
+      },
+      {
+        "goods_name": "泰国原装进口Comfleep纯天然乳胶枕 颈椎枕 护颈枕 高低按摩枕 抗菌防螨 改良颈椎腰椎血压睡眠"
+      },
+      {
+        "goods_name": "泰国原装进口Comfleep纯天然乳胶枕 颈椎枕 护颈枕 高低按摩枕 抗菌防螨 改良颈椎腰椎血压睡眠"
+      },
+      {
+        "goods_name": "泰国原装进口Comfleep纯天然乳胶枕 颈椎枕 护颈枕 高低按摩枕 抗菌防螨 改良颈椎腰椎血压睡眠"
+      },
+      {
+        "goods_name": "泰国原装进口Comfleep纯天然乳胶枕 颈椎枕 护颈枕 高低按摩枕 抗菌防螨 改良颈椎腰椎血压睡眠"
+      },
+      {
+        "goods_name": "泰国原装进口Comfleep纯天然乳胶枕 颈椎枕 护颈枕 高低按摩枕 抗菌防螨 改良颈椎腰椎血压睡眠"
+      },
+      {
+        "goods_name": "超能植翠洗衣液 2.5kg*2瓶+1kg*3袋"
+      },
+      {
+        "goods_name": "洁丽雅 纯棉小毛巾全棉小面巾混色三条装 50*25cm"
+      },
+      {
+        "goods_name": "超S013D正品静音左右摇摆多功能带拉绳踏步机 家用运动健身器材"
+      },
+      {
+        "goods_name": "干湿两用塑料防滑衣架无痕晾衣架衣服挂成人晾晒衣撑10个装 颜色随机发"
+      },
+      {
+        "goods_name": "日光生活 磁石眼部经络按摩器 P146"
+      },
+      {
+        "goods_name": "泰国原装进口Comfleep纯天然乳胶枕 颈椎枕 护颈枕 高低按摩枕 抗菌防螨 改良颈椎腰椎血压睡眠"
+      },
+      {
+        "goods_name": "超能植翠洗衣液 2.5kg*2瓶+1kg*3袋"
+      },
+      {
+        "goods_name": "洁丽雅 纯棉小毛巾全棉小面巾混色三条装 50*25cm"
+      },
+      {
+        "goods_name": "超S013D正品静音左右摇摆多功能带拉绳踏步机 家用运动健身器材"
+      },
+      {
+        "goods_name": "干湿两用塑料防滑衣架无痕晾衣架衣服挂成人晾晒衣撑10个装 颜色随机发"
+      },
+      {
+        "goods_name": "日光生活 磁石眼部经络按摩器 P146"
+      }
+    ]
+  }
+}

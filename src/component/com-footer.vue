@@ -1,0 +1,165 @@
+<template>
+  <!--底部菜单栏-->
+  <div class="com-footer" v-if="!isDvdApp">
+    <div class="btns">
+      <a class="btn" :class="{active: active == 'home'}" href="/">
+        <div class="pic-title">
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/home-active.png" v-if="active == 'home'">
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/home.png" v-else>
+          <div class="title">首页</div>
+        </div>
+      </a>
+      <a class="btn" :class="{active: active == 'school'}" href="/course.html">
+        <div class="pic-title">
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/school-active.png" v-if="active == 'school'">
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/school.png" v-else>
+          <div class="title">学院</div>
+        </div>
+      </a>
+      <!--<a class="btn" href="/cart.html">-->
+      <!--<div class="pic">-->
+      <!--<i class="num" v-if="cartNum && cartNum > 0">{{cartNum}}</i>-->
+      <!--<img src="[[static]]/page/center/img/footer-cart.png">-->
+      <!--</div>-->
+      <!--<div class="name">购物车</div>-->
+      <!--</a>-->
+      <a class="btn" :class="{active: active == 'dynamic'}" href="/articles.html">
+        <div class="pic-title">
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/dynamic-active.png?2" v-if="active == 'dynamic'">
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/dynamic.png?2" v-else>
+          <div class="title">动态</div>
+        </div>
+      </a>
+      <a class="btn" :class="{active: active == 'center'}" href="/center.html">
+        <div class="pic-title">
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/center-active.png" v-if="active == 'center'">
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/center.png" v-else>
+          <div class="title">我的</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</template>
+
+<script>
+  import ua from '../common/js/module/ua.js';
+
+  export default {
+    props: {
+      // 取值范围 home school dynamic center
+      active: {
+        type: String,
+        default: 'home'
+      },
+      cartNum: {
+        type: Number,
+        default: 0
+      },
+    },
+    data() {
+      return {
+        isDvdApp: ua.isDvdApp(),
+      }
+    },
+    computed: {},
+    created(){
+    },
+    mounted() {
+    },
+    methods: {
+      /**
+       * 接口名称:
+       * 接口文档:
+       */
+      getData(){
+        let ts = this;
+        $.ajax({
+          cache: false,
+          async: true,
+          url: '/api/m/index/cart?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: layout.strSign('feed', {}),
+          success(response) {
+            ts.response = response;
+          },
+          error(error) {
+//            ts.response = require('../json/center.json');
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+          }
+        });
+      },
+    },
+    filters: {},
+    watch: {},
+  }
+</script>
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "../common/css/util/all";
+
+  // 底部菜单栏
+  .com-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    font-size: 0;
+    max-width: $pageMaxWidth;
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      border-top: 1px solid #E3DFD8;;
+      transform: scaleY(0.5);
+    }
+    .btns {
+      display: flex;
+      height: 50px;
+      .btn {
+        flex: 1;
+        display: block;
+        text-align: center;
+        .pic-title {
+          position: relative;
+          display: inline-block;
+          .pic {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            .num {
+              position: absolute;
+              top: 0;
+              right: -8px;
+              @include circle(16px);
+              background: #FF4A7D;
+              font-size: 10px;
+              color: white;
+              font-style: normal;
+            }
+          }
+          .title {
+            position: absolute;
+            top: 30px;
+            width: 100%;
+            line-height: 14px;
+            font-size: 10px;
+            color: #999;
+          }
+        }
+        &.active {
+          .pic-title {
+            .pic {
+              .num {
+              }
+            }
+            .title {
+              color: #FF4A7D;
+            }
+          }
+        }
+
+      }
+    }
+  }
+</style>

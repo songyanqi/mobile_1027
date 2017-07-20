@@ -1,0 +1,213 @@
+.user_info_list{
+    background: #fff;
+    margin-top: 10px;
+}
+.user_info_list .info_title{
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #333;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+.user_info_list .info_list{
+    padding-left: 10px;
+}
+.user_info_list .info_list li{
+    padding-right: 10px;
+    position: relative;
+    height: 40px;
+}
+.user_info_list .info_list li:last-child.border_inner:after{
+    display: none;
+}
+.user_info_list .info_list li span{
+    position: absolute;
+    left: 0;
+    top:0;
+    font-size: 12px;
+    color: #999;
+    line-height: 40px;
+}
+.user_info_list .info_list li input{
+    width: 100%;
+    padding-left:78px;
+    font-size: 14px;
+    color: #333;
+    box-sizing: border-box;
+    line-height: 40px;
+}
+.user_info_list .info_list li input[type="text"]{
+    line-height: 20px;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+.user_info_list .info_list li input[type="date"]{
+    height: 40px;
+    background-color:transparent;
+}
+.user_info_list .info_list li select{
+    width:100%;
+    padding-left:78px;
+    font-size: 14px;
+    line-height: 14px;
+    color: #333;
+    background: transparent;
+    border: none;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    box-sizing: border-box;
+    outline:none;
+    position: absolute;
+    top:50%;
+    margin-top: -7px;
+}
+.user_info_list .info_list li select::-ms-expand {
+    display: none;
+}
+.user_info_list .attention_list{
+    margin: 10px 0 10px 10px;
+}
+.user_info_list .attention_list li{
+    margin:0 10px 10px 0;
+    padding: 0 9px;
+    display: inline-block;
+    font-size: 12px;
+    height: 22px;
+    line-height: 22px;
+    color: #FF4A7D;
+    float: left;
+}
+.user_info_list .attention_list_edit{
+    margin: 20px 0 0 20px;
+}
+.user_info_list .attention_list_edit li{
+    width: 33.3%;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 20px 20px 0
+}
+
+.user_info_list .attention_list_edit li span {
+    width: 100%;
+    border-radius: 31px;
+    display: inline-block;
+    text-align: center;
+    color: #999;
+    line-height: 30px;
+    position: relative;
+    border: none;
+}
+.user_info_list .attention_list_edit li span.hover {
+    color: #FF4A7D;
+}
+.user_info_list .attention_list_edit li span:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 1px solid #999;
+    width: 100%;
+    height: 100%;
+    border-radius: 31px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.user_info_list .attention_list_edit li span.hover:after{
+    border: 1px solid #FF4A7D;
+}
+.user_info_list .attention_list_edit li:nth-child(3n+0) span{
+    margin-right: 0;
+}
+
+/*Retina屏为2的时候调用下面的样式*/
+@media
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min-device-pixel-ratio:2),
+only screen and (min--moz-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:4/2),
+only screen and (min-resolution:2dppx)
+{
+    .user_info_list .attention_list_edit li span:after{
+        width: 200%;
+        height: 200%;
+        transform: scale(0.5);
+        transform-origin: left top;
+
+        -ms-transform: scale(0.5); 		/* IE 9 */
+        -ms-transform-origin: left top; 		/* IE 9 */
+
+        -webkit-transform: scale(0.5);	/* Safari 和 Chrome */
+        -webkit-transform-origin: left top;	/* Safari 和 Chrome */
+
+        -moz-transform: scale(0.5);		/* Firefox */
+        -moz-transform-origin: left top;		/* Firefox */
+
+        -o-transform: scale(0.5);		/* Opera */
+        -o-transform-origin: left top;		/* Opera */
+    }
+}
+
+.user_info_delete{
+    width: 15px;
+    height: 17px;
+    background: url(//pic.davdian.com/free/card_delete_icon_0621.png) no-repeat center;
+    background-size: 15px;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    padding: 11px;
+}
+.add_baby_card{
+    background: #fff;
+    height: 50px;
+    text-align: center;
+    margin-top: 10px;
+}
+.add_baby_card .add_btn{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    border: none;
+    display: inline-block;
+    color: #FF4A7D;
+    margin-top: 10px;
+}
+
+/*四条 border*/
+.user_info_list .attention_list.april_border.hairlines .border_inner:after{
+    border-radius: 26px;
+    border: 1px solid #FF4A7D;
+}
+.add_baby_card.april_border.hairlines .border_inner:after{
+    border: 1px solid #FF4A7D;
+    border-radius: 4px;
+}
+
+/*单条 border*/
+.user_info_list .one_border.hairlines .border_inner:after{
+    background: #eee;
+    bottom:0;
+}
+/*Retina屏为2的时候调用下面的样式*/
+@media
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min-device-pixel-ratio:2),
+only screen and (min--moz-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:4/2),
+only screen and (min-resolution:2dppx)
+{
+    .user_info_list .one_border.hairlines .border_inner:after{
+        background: #eee;
+    }
+    .user_info_list .attention_list.april_border.hairlines .border_inner:after{
+        border-radius: 26px;
+        border: 1px solid #FF4A7D;
+    }
+    .add_baby_card.april_border.hairlines .border_inner:after{
+        border: 1px solid #FF4A7D;
+        border-radius: 8px;
+    }
+}

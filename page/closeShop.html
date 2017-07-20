@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html style="font-size: 85px;">
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/closeShop.css" rel="stylesheet">
+    <title>关闭店铺确认</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:0,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+        var mobile="18210148543";
+        var oklink="http://joys.davdian.com/";
+        var closeShopUrl="../data/closeShop.json"
+    </script>
+</head>
+<body class="scroll_flag">
+
+<div class="top0">
+    <div class="top_container">
+        <div class="title_container">
+            关闭店铺确认
+        </div>
+    </div>
+</div>
+
+<div class="closeShop_con">
+    <h2>经过与客服确认后，请您确认关闭店铺</h2>
+    <div class="note">
+        <h2>关店后</h2>
+        <ul>
+            <li>不能提取账单金额</li>
+            <li>不能收听亲子教育课程</li>
+            <li>不能推广店铺内商品及课程</li>
+            <li>不能享受店主福利</li>
+        </ul>
+    </div>
+
+    <div class="btn_con">
+        <div class="btn pull-right sureCloseShop">确认关店</div>
+    </div>
+    <div class="btn_con">
+        <a href="/" class="btn pull-left">没那回事</a>
+    </div>
+
+</div>
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/model.js"></script>
+<script src="../javascript/closeShop.js"></script>
+
+</body>
+</html>

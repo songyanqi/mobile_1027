@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="http://cdn.davdian.com/topic/css/topic-8875fcbb56.css" rel="stylesheet">
+    <!--分享部分-->
+    <script>
+        var imgUrl = 'http://pic.davdian.com/activity/2016/01/12/319_284_13150dd4e5b90b1923b091d09dad95b5.png';  //分享图片
+        var lineLink = window.location.href; // 分享网址
+        var descContent = '首发活动开始啦！一套专为不好好吃饭的孩子和焦头烂额的妈妈准备的美食绘本！大V店特供版，随书赠送北极虾兑换券一张！兑换劵只限上海、北京地区使用。'; // 分享文案
+        var shareTitle = '【大V店首发】香喷喷食欲绘本系列，全5本。';  //分享标题
+
+        //浏览次数：{if $read_times}{$read_times}{else}0{/if}
+
+
+        //定义商品图片
+        //定义方法：i[商品ID] = "商品图片地址";
+        var i = new Array();
+        i[315800] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[315567] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[300809] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[304320] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[305858] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[303811] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[281472] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[292498] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[300364] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[281523] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[284492] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[284040] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[281524] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[279708] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[259282] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[193601] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[279708] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[268682] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[247888] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[234088] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[182588] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[230589] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[221709] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[201778] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[165525] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[201413] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[203987] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[217010] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[169155] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[203982] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[193468] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[187531] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[160587] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[159002] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[163627] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[175559] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[178371] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[178352] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[164496] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[152660] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[136080] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[133813] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[132091] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[133865] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png"
+        i[127926] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[101020] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[104018] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[115008] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[111369] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[114919] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[112799] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[108595] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[105680] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[76788] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[87242] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[74843] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[78261] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[72530] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[70999] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[70998] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[70997] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[69687] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[72530] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[75647] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[74666] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[74670] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[58774] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[48466] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[24021] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[71325] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[58775] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[45305] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[50484] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[47335] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[34642] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[34183] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[34182] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[33782] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[33818] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[32884] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[16235] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[26477] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[32694] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[26494] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[31395] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[25590] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[27257] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[23929] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[24021] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[17885] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[20607] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[20614] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[19412] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[16755] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[16482] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[15039] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[15040] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[16012] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[16228] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[15149] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[14978] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[12298] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[12333] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[12228] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[3332] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[5331] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[3224] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[4334] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[4481] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[5276] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+        i[4480] = "http://pic.davdian.com/free/2017/01/06/280_282_2392559a996aff92ef8349cb9848432b.png";
+
+        //定义置顶的三个首发位置的图书
+
+
+        t1=315800;
+        t2=315567;
+        t3=304320;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <style>
+        .tuan-other-info{
+            background: #fff;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        .tuan_item_title{
+            font-size: 14px;
+            padding-bottom: 5px;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            display: -webkit-box;
+            overflow: hidden;
+        }
+        .tuan_item_price{
+
+        }
+        .current_price{
+            color: #ff4a7d;
+        }
+        body.tuan{
+            background: #f1f1f1;
+        }
+        .order_good_name {
+            font-size: 14px;
+            height: 51px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            line-height: 17px;
+            padding: 20px 8px 0px 8px;
+        }
+        .normal_size{
+            font-size: 12px;
+        }
+        .big_size{
+            font-size: 14px;
+        }
+        .small_size{
+            font-size: 10px;
+        }
+        @media screen and (max-width: 374px) {
+            .normal_size{
+                font-size: 10px;
+            }
+            .big_size{
+                font-size: 12px;
+            }
+            .small_size{
+                font-size: 8px;
+            }
+        }
+        .thin_line{
+            position: absolute;
+            bottom: 0px;
+            content: "";
+            display: block;
+            position: absolute;
+            left: -50%;
+            width: 200%;
+            height: 1px;
+            background: #e1e1e1;
+            -webkit-transform:scale(0.5);
+        }
+    </style>
+    <!--页面标题-->
+    <title>图书首发专场</title>
+</head>
+<body <!--{if $is_from_app}--> class="in_app" <!--{/if}--> class="tuan" >
+<div class="top0">
+    <div class="top_container">
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <!--文章标题-->
+        <div class="title_container">图书首发专场</div>
+        <div class="top_right"></div>
+    </div>
+</div>
+<img src="http://pic.davdian.com/free/2017/01/11/750_284_a19626c180ae689e426194fc6902902a.png" alt="">
+<!--{foreach from=$goods_list item=v}-->
+<a href="/{$v.goods_id}.html">
+    <div style="width: 100%;position: relative;background-color: #ffffff;height: 140px;">
+        <div style="position: relative;width:140px;">
+            <img id="i{$v.goods_id}" data-original="" src="http://pic.davdian.com/free/loading_640_280_v2.png">
+        </div>
+        <div style="float: left;position: absolute;width: 100%;padding-left: 140px;box-sizing: border-box;top: 0px;">
+            <div class="fz_14 order_good_name">
+                {$v.goods_name}
+            </div>
+            <div style="padding: 30px 8px 15px 8px;height: 15px;">
+                <img style="width: 14px;" src="http://pic.davdian.com/free/2017/01/06/28_30_f486a24c3b455113eed5f41ece0617e1.png" alt="">
+                <span class="current_price normal_size" style="line-height: 15px;">大V售价 ￥</span><span class="big_size" style="color:#ff4a7d;"><!--{if $v.seckill_price gt 0}-->{$v.seckill_price}
+                <!--{elseif $v.group_price gt 0}-->{$v.group_price}<!--{else}-->{$v.shop_price}<!--{/if}--></span>
+                <span class="market_price small_size" style="font-size: 10px">市场价 ￥ {$v.market_price}</span>
+            </div>
+        </div>
+        <div class="thin_line"></div>
+    </div>
+</a>
+<!--{/foreach}-->
+
+
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://cdn.davdian.com/topic/js/topic-fd9e70da1a.js"></script>
+<script src="http://fe.davdian.com/staticfe/js/topic_fix-351e0c249f.js"></script>
+<script>
+    //遍历i数组，替换图片
+    $.each(i,function(k,v){
+        $("#i"+k).attr("src",v);
+    });
+
+    //更改置顶的三个商品
+    var t3c = $("#t"+ t3);
+    var t2c = $("#t"+ t2);
+    var t1c = $("#t"+ t1);
+    $("#t"+ t3).remove();
+    $("#t"+ t2).remove();
+    $("#t"+ t1).remove();
+    $(".tuan_cnt").prepend(t3c);
+    $(".tuan_cnt").prepend(t2c);
+    $(".tuan_cnt").prepend(t1c);
+
+
+
+</script>
+
+</body>
+</html>

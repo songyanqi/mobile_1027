@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <!-- /build -->
+    <!-- build:style integral -->
+    <link href="../stylesheet/integral.css" rel="stylesheet">
+    <!-- /build -->
+    <title>积分等级说明</title>
+    <script>
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+    </script>
+</head>
+<body>
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            积分等级说明
+        </div>
+    </div>
+</div>
+<div class="integral_level_info">
+    <div class="dav-shadow p12 dav-small bgf">
+        大V店的用户可以通过在平台上的多种活动来获得积分，用于提升自己的等级，越高的积分可以获得更多的特权。同时获得的积分也可以兑换成一些特定的奖品。
+    </div>
+    <div class="dav-shadow p12 bgf mt12">
+        <div>
+            <span>积分有两种类型：</span>
+            <span class="dav-red">累计积分</span>
+            <span>和</span>
+            <span class="dav-red">可消费积分</span>
+        </div>
+        <div class="type_item">
+            <span class="c6">•</span>
+            <span class="dav-red">累计积分</span>
+            <div class="dav-small c6 item_detail">用户获得的积分总和，累计积分用于评定用户的等级。</div>
+        </div>
+        <div class="type_item">
+            <span class="c6">•</span>
+            <span class="dav-red">可消费积分</span>
+            <div class="dav-small c6 item_detail">用户获得的积分总和减去用户消费的积分、被扣除的积分就是可消费积分。</div>
+        </div>
+    </div>
+    <div class="your_integral mt12">
+        <div class="get_all_title">您的积分</div>
+        <div class="dav-shadow rule_group bgf">
+        <span class="left">
+            累计积分：2000
+        </span>
+        <span class="right">
+            可消费积分：200
+        </span>
+        </div>
+    </div>
+
+    <div class="integral_rule mt12">
+        <div class="get_all_title">用户等级划分</div>
+        <div class="dav-shadow rule_group bgf">
+            <div class="rule_item title">
+                <span class="level">等级</span>
+                <span class="name">称呼</span>
+                <span class="number">积分范围</span>
+            </div>
+            <div class="rule_item">
+                <span class="level">
+                    <i class="icon dav_icon_integral_1_40_40"></i>
+                </span>
+                <span class="name">一心妈妈</span>
+                <span class="number">200以下</span>
+            </div>
+            <div class="rule_item">
+                <span class="level">
+                    <i class="icon dav_icon_integral_1_40_40"></i>
+                    <i class="icon dav_icon_integral_1_40_40"></i>
+                </span>
+                <span class="name">w心妈妈</span>
+                <span class="number">201-500</span>
+            </div>
+            <div class="rule_item">
+                <span class="level">
+                    <i class="icon dav_icon_integral_1_40_40"></i>
+                    <i class="icon dav_icon_integral_1_40_40"></i>
+                    <i class="icon dav_icon_integral_1_40_40"></i>
+                </span>
+                <span class="name">w心妈妈</span>
+                <span class="number">501-1000</span>
+            </div>
+            <div class="rule_item">
+                <span class="level">
+                    <i class="icon dav_icon_integral_2_40_40"></i>
+                </span>
+                <span class="name">一心妈妈</span>
+                <span class="number">1001-2000</span>
+            </div>
+            <div class="rule_item">
+                <span class="level">
+                    <i class="icon dav_icon_integral_2_40_40"></i>
+                    <i class="icon dav_icon_integral_2_40_40"></i>
+                </span>
+                <span class="name">w心妈妈</span>
+                <span class="number">2001-5000</span>
+            </div>
+            <div class="rule_item">
+                <span class="level">
+                    <i class="icon dav_icon_integral_2_40_40"></i>
+                    <i class="icon dav_icon_integral_2_40_40"></i>
+                    <i class="icon dav_icon_integral_2_40_40"></i>
+                </span>
+                <span class="name">w心妈妈</span>
+                <span class="number">5001-10000</span>
+            </div>
+            <div class="rule_item">
+                <span class="level">
+                    <i class="icon dav_icon_integral_3_40_40"></i>
+                </span>
+                <span class="name">一心妈妈</span>
+                <span class="number">10001-20000</span>
+            </div>
+            <div class="rule_item">
+                <span class="level">
+                    <i class="icon dav_icon_integral_3_40_40"></i>
+                    <i class="icon dav_icon_integral_3_40_40"></i>
+                </span>
+                <span class="name">w心妈妈</span>
+                <span class="number">20001-50000</span>
+            </div>
+            <div class="rule_item">
+                <span class="level">
+                    <i class="icon dav_icon_integral_3_40_40"></i>
+                    <i class="icon dav_icon_integral_3_40_40"></i>
+                    <i class="icon dav_icon_integral_3_40_40"></i>
+                </span>
+                <span class="name">w心妈妈</span>
+                <span class="number">50001-100000</span>
+            </div>
+            <div class="rule_item">
+                <span class="level">
+                    <i class="icon dav_icon_integral_4_40_40"></i>
+                </span>
+                <span class="name">一心妈妈</span>
+                <span class="number">100000以上</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<!-- build:script base_little -->
+<script type="text/javascript" src="../javascript/base.js"></script>
+<!-- /build -->
+</body>
+</html>

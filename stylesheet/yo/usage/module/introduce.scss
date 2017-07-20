@@ -1,0 +1,202 @@
+@import "./base";
+@import "../core/reset";
+
+//进入学院学习更多的样式
+.goClass{
+  height:70px;
+  width:100%;
+  background: #FFFFFF;
+  .goClass_box{
+    padding:20px 0;
+    span{
+      display: block;
+      color: #FF4A7D;
+      width:160px;
+      height:30px;
+      line-height: 30px;
+      margin:0 auto;
+      @include border(1px, #FF4A7D);
+      @include border-radius(5px);
+      text-align: center;
+    }
+  }
+}
+
+
+body{
+  padding-bottom: 50px;
+  margin: 0 auto;
+}
+
+.body{
+  height:100%;
+  .introduce_inner{
+    height:100%;
+  }
+}
+.course_desc_0{
+  .class_intrduce_left{
+    padding: 10px;
+    background: #FFFFFF;
+    word-break: break-all;
+  }
+  margin-top:12px;
+  background: #ffffff;
+  .class_introduce_tit{
+    @include border(0 0 1px 0,rgba(0,0,0,.05));
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    height: 17px;
+    padding: 15px 0;
+    box-sizing: content-box;
+    .class_dis{
+      @include flex();
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      //padding:0 46px;
+      height: 16px;
+      span{
+        padding: 13px 10px;
+        //@include flex();
+        text-align: center;
+      }
+      .active{
+        @include border(0 0 2px 0,#FF4A7D);
+      }
+    }
+    .theater_dis{
+      @extend  .class_dis;
+      @include border(0 0 0 2px,#eee);
+    }
+  }
+}
+
+
+
+
+#scroll_container{
+  height:100%;
+  width:100%;
+  overflow: scroll;
+  .other_info{
+    background-color: #fff;
+    margin-top: 10px;
+    padding: 10px 10px 20px;
+  }
+}
+.introduce-container{
+  //padding-bottom: 40px;
+  width:100%;
+}
+//baoming
+.invite_and_enroll{
+  position: absolute;
+  max-width: 640px!important;
+  margin:0 auto;
+  width:100%;
+  bottom:0;
+  z-index: 500;
+  background: rgba(249,247,248,0.95);
+  color: #ffffff;
+  height:49px;
+  font-size: 0;
+  @include border(1px 0 0 0,#E3DFD8);
+  //border:#E3DFD8 1px solid;
+  .btn_container{
+    display: inline-block;
+    font-size: 14px;
+    width: 50%;
+    position: absolute;
+    &.left{
+      left: 0;
+    }
+    &.right{
+      right: 0;
+    }
+  }
+  .invite{
+    width:150px;
+    height:30px;
+    margin: 9px auto;
+    background: rgba(255,168,27,100);
+    @include border-radius(3px);
+    text-align: center;
+    line-height: 30px;
+  }
+  .empty{
+    width:30px;
+    height:30px;
+  }
+  .enroll{
+    @extend .invite;
+    background: rgba(255,74,125,100)!important;
+    &.need_invite{
+      background-color: #00BEB7!important;
+    }
+  }
+}
+
+.other_info{
+  width:100%;
+  .course_btn_container{
+    width: 100%;
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 15px;
+    a.course_btn{
+      @include border(1px,#ff4a7d);
+      color: #ff4a7d;
+      padding: 6px 15px;
+
+    }
+  }
+}
+.unLoad{
+  width: 100%;
+  height: 400px;
+  position: fixed;
+  top: 180px;
+  z-index: 101;
+  max-width: 640px;
+  color: #333;
+}
+.unLoad-img{
+  width: 122px;
+  height: 140px;
+  top: 0;
+  margin: auto;
+  background: url('//pic.davdian.com/free/2016/12/08/no_sign.png') no-repeat;
+  background-size: contain;
+}
+.unLoad-title{
+  width: 150px;
+  height: 20px;
+  margin: 30px auto;
+  text-align: center;
+}
+.unLoad-btn{
+  width: 140px;
+  height: 33px;
+  text-align: center;
+  line-height: 33px;
+  margin: 20px auto;
+  border: 1px solid #999999;
+  border-radius: 2.5px;
+}
+
+body .top0{
+  position: absolute;
+}
+body.in_app .top0{
+  display: none;
+}
+
+.bravetime-info{
+  position: absolute!important;
+}
+
+[v-cloak] {
+  display: none;
+}

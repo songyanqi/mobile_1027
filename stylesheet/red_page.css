@@ -1,0 +1,210 @@
+body{
+    padding-top : 0px;
+    max-width:640px;
+    margin:0px auto;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #fff;
+    padding-bottom : 0px;
+}
+
+.red_page_top{
+    position:absolute;
+    top:0px;
+    color: #FF4A7D;
+    max-width:640px;
+    width: 100%;
+}
+.red_page_top .text{
+    padding-top:22%;
+    text-align: center;
+}
+.number_fz{
+    font-size: 100px;
+}
+.dollars_fz{
+    font-size: 36px;
+}
+.prompt_text{
+    padding-top: 17%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+}
+.late_text{
+    padding-top:40%;
+    text-align: center;
+    font-size: 24px;
+}
+.red_page_btn {
+    width: 230px;
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    background: #fef1aa;
+    color: #FF4A7D;
+    display: block;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 auto;
+    box-shadow: 0px 2px 0px #c41147;
+    margin-top: 25px;
+}
+.red_explain{
+    width: 218px;
+    margin: 0 auto;
+    padding-left: 12px;
+    margin-top: 22px;
+    font-size: 14px;
+}
+.yellow_dot{
+    width: 4px;
+    height: 4px;
+    background-color: #fef1aa;
+    display:inline-block;
+    border-radius: 4px;
+    margin-top: 8px;
+    float: left;
+    margin-right: 10px;
+}
+@media screen and (min-width: 640px){
+    .red_page_top .text{
+        padding-top:15%;
+        text-align: center;
+    }
+    .number_fz{
+        font-size: 200px;
+    }
+    .dollars_fz{
+        font-size: 72px;
+    }
+    .prompt_text{
+        padding-top: 10%;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        font-size: 30px;
+    }
+    .late_text{
+        padding-top:34%;
+        text-align: center;
+        font-size: 48px;
+    }
+    .red_page_btn {
+        width: 400px;
+        height: 60px;
+        line-height: 60px;
+        border-radius: 6px;
+        font-size: 30px;
+        box-shadow: 0px 4px 0px #c41147;
+        margin-top: 50px;
+    }
+    .red_explain{
+        width: 376px;
+        margin: 0 auto;
+        padding-left: 24px;
+        margin-top: 22px;
+        font-size: 14px;
+    }
+}
+
+.luck_list{
+    padding: 40px 10px 0;
+}
+
+.luck_list .title{
+    border-top: 1px solid #dd8fa7;
+}
+.luck_list .title_text{
+    background-color: #FF4A7D;
+    margin-top: -11px;
+    position: absolute;
+    max-width: 640px;
+    width: 140px;
+    left: 50%;
+    margin-left: -70px;
+    text-align: center;
+}
+
+.luck_list .list{
+    padding-top: 20px;
+}
+
+.luck_list .list li{
+    line-height: 40px;
+    border-bottom: 1px solid #db507a;
+    padding: 10px 0;
+}
+
+.luck_list .list .head{
+    float: left;
+    margin-right: 15px;
+}
+.luck_list .list .head img{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+.color_fef1aa{
+    color: #fef1aa;
+}
+
+.luck_list .instructions{
+    padding-top: 25px;
+}
+.white_dot{
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 4px;
+    margin-top: 8px;
+    float: left;
+}
+.luck_list .instructions_list{
+    padding-bottom: 5px;
+}
+.luck_list .instructions_text{
+    padding-left:15px;
+}
+.qrcode_content{
+    text-align: center;
+}
+.qrcode_content .text1{
+    padding-top: 45px;
+    font-size: 24px;
+}
+
+.qrcode_content .qrcode_img{
+    padding-top: 40px;
+}
+.qrcode_content .qrcode_img img{
+    border: 15px solid #fff;
+    width: 215px;
+    height: 215px;
+}
+.qrcode_content .text2{
+    padding-top: 20px;
+    font-size: 12px;
+}
+.b_container{
+    background-color: #FF4A7D;
+    padding-bottom : 40px;
+}
+.qrcode_content{
+    background-color: #FF4A7D;
+    min-height: 100vh;
+    padding-top : 40px;
+    box-sizing: border-box;
+}
+.dav_logo{
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+.dav_logo img{
+    width: 100px;
+}

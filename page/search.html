@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- build:style base -->
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <!-- /build -->
+
+    <!-- build:style iep -->
+    <link href="../stylesheet/search_page.css" rel="stylesheet">
+    <!-- /build -->
+    <title>搜索</title>
+
+    <script type="text/javascript">
+        var tj_id = 45;
+        var tj_path = 'index_search';
+
+        var likeUrl = '/index.php?c=index&a=getKeyword';
+
+    </script>
+
+
+</head>
+<body class="scroll_flag">
+<!-- 顶部 -->
+<div class="search_top clearfix">
+    <form type="search" action="searchResult.html">
+        <div class="search_con search_button april_border hairlines ">
+            <div class="border_inner"></div>
+            <div class="search_input_con">
+                <span class="search_icon"></span>
+                <input type="text" name="q" placeholder="请输入商品名称" class="search_input" autocomplete="off"/>
+            </div>
+        </div>
+        <a class="search_btn" data-dav-tj="" href="javascript:history.back()">取消</a>
+    </form>
+
+</div>
+
+<!-- 搜索标签 -->
+<div class="april_border hairlines clearfix search_link_lable">
+    <a href="//joys.davdian.com/" class="border_inner font_red">开个大V店</a>
+    <a href="//joys.davdian.com/" class="border_inner font_black">开个大V店</a>
+    <a href="//joys.davdian.com/" class="border_inner font_black">开个大V店</a>
+    <a href="//joys.davdian.com/" class="border_inner font_black">开个大V店</a>
+    <a href="//joys.davdian.com/" class="border_inner font_black">开个大V店</a>
+    <a href="//joys.davdian.com/" class="border_inner font_black">开个大V店</a>
+    <a href="//joys.davdian.com/" class="border_inner font_black">开个大V店</a>
+    <a href="//joys.davdian.com/" class="border_inner font_black">开个大V店</a>
+    <a href="//joys.davdian.com/" class="border_inner font_black">开个大V店</a>
+    <a href="//joys.davdian.com/" class="border_inner font_black">开个大V店</a>
+
+</div>
+
+<div class="search_history">
+    <h2>历史记录 :</h2>
+    <ul class="history_list">
+    </ul>
+    <div class="april_border hairlines ">
+        <span class="border_inner delete_history_btn">删除历史记录</span>
+    </div>
+</div>
+
+<!--下拉结果-->
+<div class="search_like hide">
+    <ul class="like_list">
+    </ul>
+</div>
+
+
+<script src="http://cdn.davdian.com/vue/1.0.26/vue.min.js"></script>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈-->
+<script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script type="text/javascript" src="../cdn/wechat/jssdk/jweixin-1.0.0.js"></script>
+<script src="../javascript/jquery.cookie.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/search.js"></script>
+</body>
+</html>

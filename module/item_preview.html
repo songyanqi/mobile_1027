@@ -1,0 +1,384 @@
+<div>
+<div ng-repeat="(key,item) in ngModel.list track by $index"  name="{{item.anchor|base}}" ng-class="{'theme-item':true,'anchor-item':item.id==19 ,'g_':item.goods&&item.goods.length>0}" data-g="{{item.goods.split(',')[0]}}">
+    <div ng-if="item.id==1" class="img_container" style="position: relative">
+        <img ng-src="{{item.imgUrl}}" style="width: 100%;">
+        <div link-modify-watch ng-model="item" style="position: absolute;bottom: 6px;right: 8px;font-size: 12px;line-height: 30px;cursor:pointer;color: #0076FF;background: #fff;padding: 0 8px;" ng-if="!ngModel.mode">修改跳转链接</div>
+        <input style="position: absolute;bottom: 5px;left:0;width: 200px" type="file" nv-file-select uploader="uploader({{key}})" ng-if="!ngModel.mode">
+        <a ng-if="ngModel.mode=='show'&&item.link&&item.link.length>0" href="{{item.link}}" style="width: 100%;height: 100%;position: absolute;top: 0;left:0;"></a>
+    </div>
+
+    <!--双排有划价，距中-->
+    <div ng-if="item.id==2" class="goods_container" style="overflow: hidden;padding: 5px;" goods-click-watch >
+
+        <a style="padding: 5px;float:left;width: 50%;box-sizing: border-box" ng-repeat="i in [1,2,3,4]" ng-if="!item.goodsDetail.length&&!ngModel.mode">
+            <div class="goods_item" style="border:#f1f1f1 1px solid;font-size: 12px;line-height: 16px;">
+                <img style="width:100%;border-bottom: #f8f8f8 solid 1px;" src="//pic.davdian.com/free/goods_exa.png">
+                <div class="goods_title" style="overflow: hidden;color: #666666;height: 32px;margin: 0 6px;-webkit-box-orient: vertical;-webkit-line-clamp: 2;display: -webkit-box;text-align: center;">商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</div>
+                <div class="goods_price_outer" style="margin: 10px;line-height: 1.5; text-align: center">
+                    <span class="price" style="color:#FF4A7D ">¥128.00</span>
+                    <span class="label">六折</span>
+                </div>
+            </div>
+        </a>
+
+        <a style="padding: 5px;float:left;width: 50%;box-sizing: border-box" ng-repeat="goodsInfo in item.goodsDetail" ng-if="item.goodsDetail.length&&(!ngModel.mode||ngModel.mode=='preview')">
+            <div class="goods_item" style="font-size: 12px;line-height: 16px;">
+                <img style="width:100%;" ng-src="{{goodsInfo.goods_img}}">
+                <div class="goods_title" style="overflow: hidden;height: 32px;margin: 4px 6px 0;-webkit-box-orient: vertical;-webkit-line-clamp: 2;display: -webkit-box;color: #666;text-align: center">
+                    {{goodsInfo.goods_name}}
+                </div>
+                <div class="goods_price_outer" style="margin: 4px 0;line-height: 20px;font-size: 14px;text-align: center">
+                    <span class="price" style="color:#FF4A7D ">¥{{goodsInfo.shop_price}}</span>
+                    <!--<span style="float: right;background-color: #FF4A7D;color: #fff;padding: 0 5px;border-radius: 2px;">立即购买</span>-->
+                    <span class="label"ng-if="goodsInfo.goods_label&&goodsInfo.goods_label.length">{{goodsInfo.goods_label}}</span>
+                </div>
+            </div>
+        </a>
+
+        <a style="padding: 5px;float:left;width: 50%;box-sizing: border-box" ng-repeat="goodsInfo in item.goodsDetail" ng-if="item.goodsDetail.length&&ngModel.mode=='show'" href="/{{goodsInfo.goods_id}}.html{{item.referer_str}}">
+            <div class="goods_item" style="font-size: 12px;line-height: 16px;">
+                <img style="width:100%;" data-original="{{goodsInfo.goods_img}}" src="http://pic.davdian.com/free/loading_320_320_v2.png">
+                <div class="goods_title" style="overflow: hidden;height: 32px;margin: 4px 6px 0;-webkit-box-orient: vertical;-webkit-line-clamp: 2;display: -webkit-box;color: #666;text-align: center">
+                    {{goodsInfo.goods_name}}
+                </div>
+                <div class="goods_price_outer" style="margin: 4px 0;line-height: 20px;font-size: 14px;text-align: center">
+                    <span class="price" style="color:#FF4A7D ">¥{{goodsInfo.shop_price}}</span>
+                    <!--<span style="float: right;background-color: #FF4A7D;color: #fff;padding: 0 5px;border-radius: 2px;">立即购买</span>-->
+                    <span class="label"ng-if="goodsInfo.goods_label&&goodsInfo.goods_label.length">{{goodsInfo.goods_label}}</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div ng-if="item.id==3" class="goods_container" style="overflow: hidden;padding: 5px;" goods-click-watch >
+
+        <a style="padding: 5px;float:left;width: 50%;box-sizing: border-box" ng-repeat="i in [1,2,3,4]" ng-if="!item.goodsDetail.length&&!ngModel.mode">
+            <div class="goods_item" style="border:#f1f1f1 1px solid;font-size: 12px;line-height: 16px;">
+                <img style="width:100%;border-bottom: #f8f8f8 solid 1px;" src="//pic.davdian.com/free/goods_exa.png">
+                <div class="goods_title" style="overflow: hidden;height: 32px;margin: 0 6px;-webkit-box-orient: vertical;-webkit-line-clamp: 2;display: -webkit-box;">商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</div>
+                <div class="goods_price_outer" style="margin: 10px;line-height: 20px;">
+                    <span class="price" style="color:#d83c6b ">¥128.00</span>
+                    <span style="float: right;background-color: #d83c6b;color: #fff;padding: 0 5px;border-radius: 2px;">立即购买</span>
+                </div>
+            </div>
+        </a>
+
+        <a style="padding: 5px;float:left;width: 50%;box-sizing: border-box" ng-repeat="goodsInfo in item.goodsDetail" ng-if="item.goodsDetail.length&&(!ngModel.mode||ngModel.mode=='preview')">
+            <div class="goods_item" style="border:#f1f1f1 1px solid;font-size: 12px;line-height: 16px;">
+                <img style="width:100%;border-bottom: #f8f8f8 solid 1px;" src="{{goodsInfo.goods_img}}">
+                <div class="goods_title" style="overflow: hidden;height: 32px;margin: 0 6px;-webkit-box-orient: vertical;-webkit-line-clamp: 2;display: -webkit-box;">
+                    {{goodsInfo.goods_name}}
+                </div>
+                <div class="goods_price_outer" style="margin: 10px;line-height: 20px;">
+                    <span class="price" style="color:#d83c6b ">¥{{goodsInfo.shop_price}}</span>
+                    <span style="float: right;background-color: #d83c6b;color: #fff;padding: 0 5px;border-radius: 2px;">立即购买</span>
+                </div>
+            </div>
+        </a>
+
+        <a style="padding: 5px;float:left;width: 50%;box-sizing: border-box" ng-repeat="goodsInfo in item.goodsDetail" ng-if="item.goodsDetail.length&&ngModel.mode=='show'" href="/{{goodsInfo.goods_id}}.html{{item.referer_str}}">
+            <div class="goods_item" style="border:#f1f1f1 1px solid;font-size: 12px;line-height: 16px;">
+                <img style="width:100%;border-bottom: #f8f8f8 solid 1px;" data-original="{{goodsInfo.goods_img}}" src="http://pic.davdian.com/free/loading_320_320_v2.png">
+                <div class="goods_title" style="overflow: hidden;height: 32px;margin: 0 6px;-webkit-box-orient: vertical;-webkit-line-clamp: 2;display: -webkit-box;">
+                    {{goodsInfo.goods_name}}
+                </div>
+                <div class="goods_price_outer" style="margin: 10px;line-height: 20px;">
+                    <span class="price" style="color:#d83c6b ">¥{{goodsInfo.shop_price}}</span>
+                    <span style="float: right;background-color: #d83c6b;color: #fff;padding: 0 5px;border-radius: 2px;">立即购买</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+
+    <!--单排交叉-->
+    <div ng-if="item.id==4||item.id==25" ng-class="{'goods_container':true,'goods_cross':true,'goods_cross2':item.id==4}" class="goods_container goods_cross" style="overflow: hidden;" goods-click-watch>
+
+        <a ng-repeat="i in [1,2]"
+           ng-if="!item.goodsDetail.length&&!ngModel.mode"
+        >
+            <img ng-src="//pic.davdian.com/free/goods_exa.png" alt="">
+            <div class="goods_info">
+                <div class="goods_title">
+                    商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称
+                </div>
+                <div class="goods_price_outer">
+                    <span class="price">¥199.00</span>
+                    <span class="label">六折</span>
+                </div>
+            </div>
+        </a>
+
+
+        <a ng-repeat="(goodsIndex,goodsInfo) in item.goodsDetail"
+           ng-if="item.goodsDetail.length"
+           ng-href="{{(ngModel.mode&&ngModel.mode=='show')?('/'+goodsInfo.goods_id+'.html'+item.referer_str):'javascript::void()'}}"
+        >
+            <img data-original="{{goodsInfo.goods_img}}" src="http://pic.davdian.com/free/loading_320_320_v2.png" alt="">
+            <div class="goods_info">
+                <div class="goods_title">
+                    {{goodsInfo.goods_name}}
+                </div>
+                <div class="goods_price_outer">
+                    <span class="price">¥{{goodsInfo.shop_price}}</span>
+                    <span class="label"ng-if="goodsInfo.goods_label&&goodsInfo.goods_label.length">{{goodsInfo.goods_label}}</span>
+                </div>
+            </div>
+        </a>
+
+
+
+    </div>
+    <div ng-if="item.id==5" class="title_container" style="text-align: center;margin: 10px 0">
+        <span class="title_left" style="margin-right: 5px;display: inline-block;width: 50px;height: 1px;background-color: #ec6890; vertical-align: middle;"></span>
+        <span class="title" contenteditable="plaintext-only" ng-keyup="ngModel.changeSpan($event,key)"  style="line-height: 20px;font-size: 14px;background: #ec6890;border-radius: 10px;display: inline-block;padding: 0 10px;color: #fff;" ng-if="!ngModel.mode">{{item.con||'请输入文字'}}</span>
+        <span class="title"  style="line-height: 20px;font-size: 14px;background: #ec6890;border-radius: 10px;display: inline-block;padding: 0 10px;color: #fff;" ng-if="ngModel.mode=='preview'||ngModel.mode=='show'">{{item.con}}</span>
+        <span class="title_right" style="margin-left: 5px;display: inline-block;width: 50px;height: 1px;background-color: #ec6890; vertical-align: middle;"></span>
+    </div>
+    <div ng-if="item.id==6" class="title_container" style="text-align: center;margin: 10px 0">
+        <span class="title_left" style="margin-right: 5px;display: inline-block;width: 50px;height: 1px;background-color: #333; vertical-align: middle;"></span>
+        <span class="title" contenteditable="plaintext-only" ng-keyup="ngModel.changeSpan($event,key)"  style="line-height: 20px;font-size: 14px;border-radius: 10px;display: inline-block;padding: 0 10px;" ng-if="!ngModel.mode">{{item.con||'请输入文字'}}</span>
+        <span class="title" style="line-height: 20px;font-size: 14px;border-radius: 10px;display: inline-block;padding: 0 10px;"  ng-if="ngModel.mode=='preview'||ngModel.mode=='show'">{{item.con||'请输入文字'}}</span>
+        <span class="title_right" style="margin-left: 5px;display: inline-block;width: 50px;height: 1px;background-color: #333; vertical-align: middle;"></span>
+    </div>
+    <div ng-if="item.id==7" class="title_container" style="text-align: center;margin: 10px 0">
+        <span class="title" contenteditable="plaintext-only" ng-keyup="ngModel.changeSpan($event,key)" style="line-height: 20px;font-size: 14px;display: inline-block;border-bottom: #333 2px solid;padding: 0 10px;" ng-if="!ngModel.mode">{{item.con||'标题'}}</span>
+        <span class="title" style="line-height: 20px;font-size: 14px;display: inline-block;border-bottom: #333 2px solid;padding: 0 10px;"  ng-if="ngModel.mode=='preview'||ngModel.mode=='show'">{{item.con||'标题'}}</span>
+    </div>
+
+    <div ng-if="item.id==8" class="text_container" style="padding: 6px 12px;">
+            <textarea class="container"
+                      style="width: 100%;color: #333;display: block;font-size: 14px;line-height: 20px;"
+                      ng-if="!ngModel.mode"
+                      ng-model="item.con"></textarea>
+
+        <p class="container" ng-if="ngModel.mode" ng-model="item" style="box-sizing: border-box;padding:0 12px;width: 100%;color: #333;font-size: 14px;line-height: 20px;" ng-bind-html="item.con|to_trusted"></p>
+    </div>
+
+    <div ng-if="item.id==9" class="btn_container">
+        <div style="text-align: center;margin: 20px">
+                <span contenteditable="plaintext-only"
+                      style="color:#d73c6b;border:1px solid #d73c6b;padding:5px 20px;border-radius:3px"
+                      ng-model="item"
+                      ng-if="!ngModel.mode"
+                      ng-keyup="ngModel.changeSpan($event,key)">{{item.con||'回到首页'}}</span>
+            <div link-modify-watch ng-model="item" style="position: absolute;bottom: -8px;left: 8px;font-size: 12px;line-height: 30px;cursor:pointer;color: #0076FF;background: #eee;padding: 0 8px;" ng-if="!ngModel.mode">修改链接</div>
+            <a style="text-decoration: inherit;color:#d73c6b;border:1px solid #d73c6b;padding:5px 20px;border-radius:3px"
+               ng-model="item"
+               ng-if="ngModel.mode=='preview'">{{item.con}}</a>
+            <a style="text-decoration: inherit;color:#d73c6b;border:1px solid #d73c6b;padding:5px 20px;border-radius:3px"
+               ng-model="item" href="{{item.link}}"
+               ng-if="ngModel.mode=='show'">{{item.con}}</a>
+        </div>
+    </div>
+
+    <div ng-if="item.id==10" class="goods_container" style="overflow: hidden;padding: 5px;" ng-model="item.goods" goods-click-watch>
+
+        <a style="padding: 5px;box-sizing: border-box" ng-repeat="i in [1,2]" ng-if="!item.goodsDetail.length&&!ngModel.mode">
+            <div class="goods_item" style="border:#f1f1f1 1px solid;font-size: 12px;line-height: 16px;">
+                <img style="width:100%;border-bottom: #f8f8f8 solid 1px;" src="//pic.davdian.com/free/goods_exa.png">
+                <div class="goods_title" style="overflow: hidden;height: 32px;color: #666666; margin: 0 6px;-webkit-box-orient: vertical;-webkit-line-clamp: 2;display: -webkit-box;">商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</div>
+                <div class="goods_price_outer" style="margin: 10px;line-height: 20px;">
+                    <span class="price" style="color:#FF4A7D ">¥128.00</span>
+                    <span style="margin-left: 5px;text-decoration: line-through;color: #666;">¥338.00</span>
+                    <span style="float: right;background-color: #FF4A7D;color: #fff;padding: 0 5px;border-radius: 2px;">立即购买</span>
+                </div>
+            </div>
+        </a>
+
+        <a style="padding: 5px;box-sizing: border-box" ng-repeat="goodsInfo in item.goodsDetail" ng-if="item.goodsDetail.length&&(!ngModel.mode||ngModel.mode=='preview')">
+            <div class="goods_item" style="border:#f1f1f1 1px solid;font-size: 12px;line-height: 16px;">
+                <img style="width:100%;border-bottom: #f8f8f8 solid 1px;" src="{{goodsInfo.goods_img}}">
+                <div class="goods_title" style="overflow: hidden;height: 32px;margin: 0 6px;-webkit-box-orient: vertical;-webkit-line-clamp: 2;display: -webkit-box;">
+                    {{goodsInfo.goods_name}}
+                </div>
+                <div class="goods_price_outer" style="margin: 10px;line-height: 20px;">
+                    <span class="price" style="color:#FF4A7D ">¥{{goodsInfo.shop_price}}</span>
+                    <span style="margin-left: 5px;text-decoration: line-through;color: #666;">¥{{goodsInfo.market_price}}</span>
+                    <span style="float: right;background-color: #FF4A7D;color: #fff;padding: 0 5px;border-radius: 2px;">立即购买</span>
+                </div>
+            </div>
+        </a>
+
+        <a style="padding: 5px;box-sizing: border-box" ng-repeat="goodsInfo in item.goodsDetail" ng-if="item.goodsDetail.length&&ngModel.mode=='show'" href="/{{goodsInfo.goods_id}}.html{{item.referer_str}}">
+            <div class="goods_item" style="border:#f1f1f1 1px solid;font-size: 12px;line-height: 16px;">
+                <img style="width:100%;border-bottom: #f8f8f8 solid 1px;" data-original="{{goodsInfo.goods_img}}" src="http://pic.davdian.com/free/loading_320_320_v2.png">
+                <div class="goods_title" style="overflow: hidden;height: 32px;margin: 0 6px;-webkit-box-orient: vertical;-webkit-line-clamp: 2;display: -webkit-box;">
+                    {{goodsInfo.goods_name}}
+                </div>
+                <div class="goods_price_outer" style="margin: 10px;line-height: 20px;">
+                    <span class="price" style="color:#FF4A7D ">¥{{goodsInfo.shop_price}}</span>
+                    <span style="margin-left: 5px;text-decoration: line-through;color: #666;">¥{{goodsInfo.market_price}}</span>
+                    <span style="float: right;background-color: #FF4A7D;color: #fff;padding: 0 5px;border-radius: 2px;">立即购买</span>
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+    <div class="tab_container" tab-watch ng-if="item.id==11">
+        <ul class="topic_menu" ng-if="!ngModel.mode&&!item.tab.length">
+            <li class="hover"><a>经典绘本</a></li>
+            <li><a>成长必读</a></li>
+            <li><a>爱的启蒙</a></li>
+            <li><a>亲子阅读</a></li>
+        </ul>
+        <ul class="topic_menu" ng-if="(!ngModel.mode||ngModel.mode=='preview')&&item.tab.length">
+            <li class="{{(i==item.active)&&'hover'}}" ng-repeat="(i,k) in item.tab" ng-if="k.title&&k.link&&k.title.length">
+                <a>{{k.title}}</a>
+            </li>
+        </ul>
+
+        <ul class="topic_menu" ng-if="(ngModel.mode=='show')&&item.tab.length">
+            <li class="{{(i==item.active)&&'hover'}}" ng-repeat="(i,k) in item.tab" ng-if="k.title&&k.link&&k.title.length">
+                <a href="{{k.link}}">{{k.title}}</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="video_container" ng-if="item.id==12">
+        <img src="{{item.showImg}}" style="width: 100%;" ng-if="!item.link||item.link==''">
+        <div ng-bind-html="item.link|to_trusted" ng-if="item.link&&item.link.length"></div>
+        <div video-modify-watch ng-model="item" style="position: absolute;bottom: 6px;right: 8px;font-size: 12px;line-height: 30px;cursor:pointer;color: #0076FF;background: #fff;padding: 0 8px;" ng-if="!ngModel.mode">修改视频地址</div>
+    </div>
+
+    <div class="people_container" ng-if="item.id==14||item.id==15" style="padding: 12px;text-align: center;">
+        <input ng-if="!ngModel.mode" style="position: absolute;  top: 5px; background: red;width: 100px; height: 100px;cursor:pointer;opacity: 0;" type="file" nv-file-select uploader="uploader({{key}})" ng-if="!ngModel.mode">
+        <img src="{{item.imgUrl||'//pic.davdian.com/free/default_head_icon_0419.png'}}" style="width: 100px;height:100px;border-radius: 10px;">
+        <div class="intro_container" style="border-radius: 7px;border: #ddd solid 1px;position: relative;" >
+            <span class="people_tag" style="">{{item.id==14?'超级大V说':'大V妈妈'}}</span>
+            <div ng-keyup="ngModel.changeSpan($event,key,'name')" contenteditable="{{!ngModel.mode?'plaintext-only':'false'}}" style="margin-top: 16px;font-size: 16px;color: #333;">{{item.name||'人物姓名'}}</div>
+            <div ng-keyup="ngModel.changeSpan($event,key,'sf')" contenteditable="{{!ngModel.mode?'plaintext-only':'false'}}" style="line-height:32px;font-size: 14px;color: #666;">{{item.sf||'职业:作家、教授、老师等'}}</div>
+            <div class="info" style="position: relative;text-align: left;padding: 0 6px;font-size: 12px;line-height: 1.5;">
+                <span style="position: absolute;">{{item.id==14?'人物简介:':'妈妈感想:'}}</span>
+                <p ng-keyup="ngModel.changeSpan($event,key,'info')" contenteditable="{{!ngModel.mode?'plaintext-only':'false'}}"
+                   style="text-indent:5em;margin: 0 0 6px;color: #666;">{{item.info||(item.id==14?'输入相关人物的简介,100字以内;输入相关人物的简介,100字以内;输入相关人物的简介,100字以内;':'输入相关人物的介绍,感想等,100字以内')}}</p>
+            </div>
+            <div class="works" style="position: relative;text-align: left;padding: 0 6px;font-size: 12px;line-height: 1.5;">
+                <span style="position: absolute;">{{item.id==14?'代表作品:':'她的店铺:'}}</span>
+                <p ng-if="item.id==14" ng-keyup="ngModel.changeSpan($event,key,'works')" contenteditable="{{!ngModel.mode?'plaintext-only':'false'}}"
+                   style="text-indent:5em;margin: 0 0 6px;color: #d73c6b;">{{item.works||'《作品名称1》《作品名称2》《作品名称3》《作品名称4》'}}</p>
+                <a  ng-if="item.id==15&&(!ngModel.mode||ngModel.mode=='preview')" class="underline" ng-keyup="ngModel.changeSpan($event,key,'works')" contenteditable="{{!ngModel.mode?'plaintext-only':'false'}}"
+                    style="text-indent:5em;margin: 0 0 6px;display:inline-block;color: #d73c6b;">{{item.works||'XXX的店铺'}}</a>
+                <a href="{{item.link}}" ng-if="item.id==15&&(ngModel.mode=='show')"  class="underline" style="text-indent:5em;margin: 0 0 6px;color: #d73c6b;display:inline-block;">{{item.works||'XXX的店铺'}}</a>
+                <div link-modify-watch ng-model="item" style="display:inline-block;font-size: 12px;cursor:pointer;color: #0076FF;background: #fff;padding: 0 8px;" ng-if="!ngModel.mode&&item.id==15">修改跳转链接</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="people_container" ng-if="item.id==16||item.id==17" style="margin: 12px;position: relative;border: #eee solid 1px;font-size: 0;">
+        <div class="people_left" style="text-align: center;width: 35%;padding: 10px;box-sizing: border-box;display: inline-block;">
+            <div class="img_container" style="position: relative;overflow: hidden;">
+                <input ng-if="!ngModel.mode" style="position: absolute;  top: 0px; background: red;bottom:0;left:0;right:0;cursor:pointer;opacity: 0;" type="file" nv-file-select uploader="uploader({{key}})" ng-if="!ngModel.mode">
+                <img src="{{item.imgUrl||'//pic.davdian.com/free/default_head_icon_0419.png'}}" style="width: 100%;border-radius: 10px;">
+            </div>
+            <div ng-keyup="ngModel.changeSpan($event,key,'name')" contenteditable="{{!ngModel.mode?'plaintext-only':'false'}}" style="margin-top: 14px;font-size: 14px;color: #333;">{{item.name||'人物姓名'}}</div>
+            <div ng-keyup="ngModel.changeSpan($event,key,'sf')" contenteditable="{{!ngModel.mode?'plaintext-only':'false'}}" style="line-height:16px;font-size: 12px;color: #666;margin: 6px 0;">{{item.sf||'职业:作家、教授、老师等'}}</div>
+        </div>
+        <div class="people_right" style="display: inline-block;padding-top: 12px;vertical-align: top;width: 65%;">
+            <div class="info" style="position: relative;text-align: left;padding: 0 6px;font-size: 12px;line-height: 1.5;">
+                <span style="position: absolute;">{{item.id==16?'人物简介:':'妈妈感想:'}}</span>
+                <p ng-keyup="ngModel.changeSpan($event,key,'info')" contenteditable="{{!ngModel.mode?'plaintext-only':'false'}}"
+                   style="text-indent:5em;margin: 0 0 6px;color: #666;">{{item.info||(item.id==16?'输入相关人物的简介,100字以内;输入相关人物的简介,100字以内;输入相关人物的简介,100字以内;':'输入相关人物的介绍,感想等,100字以内')}}</p>
+            </div>
+            <div class="works" style="position: relative;text-align: left;padding: 0 6px;font-size: 12px;line-height: 1.5;">
+                <span style="position: absolute;">{{item.id==16?'代表作品:':'她的店铺:'}}</span>
+                <p ng-if="item.id==16" ng-keyup="ngModel.changeSpan($event,key,'works')" contenteditable="{{!ngModel.mode?'plaintext-only':'false'}}" style="text-indent:5em;margin: 0 0 6px;color: #d73c6b;">{{item.works||'《作品名称1》《作品名称2》《作品名称3》《作品名称4》'}}</p>
+                <a  ng-if="item.id==17&&(!ngModel.mode||ngModel.mode=='preview')" class="underline" ng-keyup="ngModel.changeSpan($event,key,'works')" contenteditable="{{!ngModel.mode?'plaintext-only':'false'}}" style="text-indent:5em;margin: 0 0 6px;display:inline-block;color: #d73c6b;">{{item.works||'XXX的店铺'}}</a>
+                <a href="{{item.link}}" ng-if="item.id==17&&(ngModel.mode=='show')" class="underline"  style="text-indent:5em;margin: 0 0 6px;color: #d73c6b;display:inline-block;">{{item.works||'XXX的店铺'}}</a>
+                <div link-modify-watch ng-model="item" style="display:inline-block;font-size: 12px;cursor:pointer;color: #0076FF;background: #fff;padding: 0 8px;" ng-if="!ngModel.mode&&item.id==17">修改跳转链接</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--三排显示-->
+    <div ng-if="item.id==18" class="goods_container" style="overflow: hidden;padding: 5px;" goods-click-watch >
+
+        <a style="padding: 3px;float:left;width: 33.3333%;box-sizing: border-box" ng-repeat="i in [1,2,3,4,5,6]" ng-if="!item.goodsDetail.length&&!ngModel.mode">
+            <div class="goods_item" style="font-size: 12px;line-height: 16px;">
+                <img style="width:100%;border-bottom: #f8f8f8 solid 1px;" src="//pic.davdian.com/free/goods_exa.png">
+                <div class="goods_title" style="overflow: hidden;color: #666666;height: 32px;margin: 0 6px;-webkit-box-orient: vertical;-webkit-line-clamp: 2;display: -webkit-box;">商品名称商品名称商品名称商品名称商品名称商品名称商品名称商品名称</div>
+                <div class="goods_price_outer" style="margin: 10px;line-height: 1.5; text-align: center">
+                    <span class="price" style="color:#FF4A7D ">¥128.00</span>
+                    <!--<del style="color:#979797;">¥288.99</del>-->
+                </div>
+            </div>
+        </a>
+
+
+        <a style="padding: 3px;float:left;width: 33.3333%;box-sizing: border-box"  ng-repeat="goodsInfo in item.goodsDetail" ng-if="item.goodsDetail.length"
+           ng-href="{{(ngModel.mode&&ngModel.mode=='show')?('/'+goodsInfo.goods_id+'.html'+item.referer_str):'javascript::void()'}}">
+            <div class="goods_item" style="font-size: 12px;line-height: 16px;">
+                <img style="width:100%;" data-original="{{goodsInfo.goods_img}}" src="http://pic.davdian.com/free/loading_320_320_v2.png">
+                <div class="goods_title" style="color:#666;overflow: hidden;height: 32px;    margin: 4px 6px 0;-webkit-box-orient: vertical;-webkit-line-clamp: 2;display: -webkit-box;text-align: center;">
+                    {{goodsInfo.goods_name}}
+                </div>
+                <div class="goods_price_outer" style="text-align: center; margin: 6px;line-height: 20px;">
+                    <span class="price" style="color:#FF4A7D;font-size: 14px;">¥{{goodsInfo.shop_price}}</span>
+                    <!--<span style="float: right;background-color: #FF4A7D;color: #fff;padding: 0 5px;border-radius: 2px;">立即购买</span>-->
+                    <!--<del style="color:#979797;">¥{{goodsInfo.market_price}}</del>-->
+                </div>
+            </div>
+        </a>
+    </div>
+    <!--tab-watch   ng-if="!ngModel.mode&&!item.tab.length"-->
+    <div class="navigation_container" navigation-watch ng-if="item.id==19">
+        <!--无数据时默认展示-->
+        <ul class="navigation_menu" ng-if="!item.tab.length&&!ngModel.mode">
+            <li><span>导航1</span></li>
+            <li><span>导航2</span></li>
+            <li><span>导航3</span></li>
+            <li><span>导航4</span></li>
+        </ul>
+        <!--有数据-->
+        <ul class="navigation_menu" ng-if="item.tab.length&&!ngModel.mode">
+            <li ng-repeat="(i,k) in item.tab"><span>{{k}}</span></li>
+        </ul>
+        <div class="swiper-container anchor-menu" ng-if="ngModel.mode=='show'">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide" ng-repeat="(i,k) in item.tab track by $index" ng-class="{'swiper-wrapper':true,'hover':i==item.active}" data-index="{{i}}">
+                    <span><a data-href="#{{k|base}}" >{{k}}</a></span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div ng-if="item.id==20"style="background: #FFF9E3;height: 44px;" navigation-title-watch>
+        <div class="titText" style="background: #FFF9E3;height: 44px; text-align: center;font-size: 18px;line-height: 44px;color: #F3A100;">
+            <span style="margin-right: 20px;font-size: 14px">//</span>{{item.navigationTitle||'标题设置'}}<span style="margin-left: 20px; font-size: 14px;">//</span>
+        </div>
+    </div>
+    <div ng-if="item.id==21"style="background: #F5FEFF;height: 44px; "navigation-title-watch>
+        <div class="titText" style="background: #F5FEFF;height: 44px; text-align: center;font-size: 18px;line-height: 44px;color: #26B6F9;">
+            <span style="margin-right: 20px;font-size: 14px">//</span>{{item.navigationTitle||'标题设置'}}<span style="margin-left: 20px; font-size: 14px;">//</span>
+        </div>
+    </div>
+    <div ng-if="item.id==22"style="background: #FDF6FF;height: 44px;" navigation-title-watch>
+        <div class="titText" style="background: #FDF6FF;height: 44px; text-align: center;font-size: 18px;line-height: 44px;color: #DA7AF2;">
+            <span style="margin-right: 20px;font-size: 14px">//</span>{{item.navigationTitle||'标题设置'}}<span style="margin-left: 20px; font-size: 14px;">//</span>
+        </div>
+    </div>
+    <div ng-if="item.id==23"style="background: #FFEDF2;height: 44px;" navigation-title-watch>
+        <div class="titText" style="background: #FFEDF2;height: 44px; text-align: center;font-size: 18px;line-height: 44px;color: #FF4A7D;">
+            <span style="margin-right: 20px;font-size: 14px">//</span>{{item.navigationTitle||'标题设置'}}<span style="margin-left: 20px; font-size: 14px;">//</span>
+        </div>
+    </div>
+    <div ng-if="item.id==24"style="background: #fff;" empty-click-watch >
+        <div ng-if="!ngModel.mode" style="height: 30px;border:1px solid #333; line-height: 30px;text-align: center">设置留白高度</div>
+        <div ng-if="ngModel.mode=='preview'||ngModel.mode=='show'" ng-style="{height:item.value}"></div>
+    </div>
+
+
+    <div class="handle_group" ng-if="!ngModel.mode">
+        <div class="handle_btn anchor" anchor-watch ng-if="item.id!=19"></div>
+        <div class="handle_btn up" up-watch></div>
+        <div class="handle_btn down" down-watch></div>
+        <div class="close" close-watch></div>
+    </div>
+
+</div>
+</div>

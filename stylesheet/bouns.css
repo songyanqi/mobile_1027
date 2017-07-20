@@ -1,0 +1,301 @@
+body{line-height: 1.42857143;}
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus,
+.btn.focus {
+    color: #333;
+    text-decoration: none;
+}
+.btn:active,
+.btn.active {
+    background-image: none;
+    outline: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.btn-warning {
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
+}
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning.focus,
+.btn-warning:active,
+.btn-warning.active,
+.open > .dropdown-toggle.btn-warning {
+    color: #fff;
+    background-color: #ec971f;
+    border-color: #d58512;
+}
+body.view_bouns_seller{
+    padding: 0;
+    background: #faf2da;
+}
+
+body.view_bouns_seller .main{
+    width: 100%;
+    height: 335px;
+    background-color: #f1dfb1;
+    background-repeat: no-repeat;
+    background-image: url(//pic.davdian.com/free/bonus_seller_bg.png);
+    background-size: 100%;
+    padding-top: 65px;
+}
+
+body.view_bouns_seller .title_container{
+    border:18px solid transparent;
+    border-image:url(//pic.davdian.com/free/bonus_border_all.png) 36 stretch;
+    margin: 0 35px;
+    background-image: url(//pic.davdian.com/free/bonus_title.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 140px;
+    height: 48px;
+}
+
+body.view_bouns_seller.view_bouns_buyer .title_container{
+    background-image:none;
+    font-size: 20px;
+    color: #f70;
+    text-align: center;
+
+}
+body.view_bouns_seller.view_bouns_buyer .title_container .title_kd{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 20px;
+    margin:-4px;
+    ont-weight:bold;
+    color: #FF4A7D;
+}
+
+body.view_bouns_buyer .main{
+    text-align: center;
+}
+
+body.view_bouns_buyer .main .p1{
+    font-size: 18px;
+    margin: 18px auto 7px;
+    color: #FF4A7D;
+}
+
+
+
+body.view_bouns_buyer .main .p2{
+    font-size: 36px;
+    color: #FF4A7D;
+    font-weight: bold;
+}
+
+body.view_bouns_buyer .main .p3{
+    font-size: 24px;
+    color: #FF4A7D;
+    text-decoration: line-through;
+}
+
+body.view_bouns_buyer_null .main .p1{
+    font-size: 24px;
+    margin-top: 50px;
+    font-weight: bolder;
+}
+
+body.view_bouns_buyer_null .main .p2{
+    font-size: 30px;
+}
+
+body.view_bouns_buyer_null .main .p5{
+    font-size: 24px;
+    margin: 10px auto;
+    color: #FF4A7D;
+}
+
+body.view_bouns_seller .number_container{
+    width: 160px;
+    height: 60px;
+    margin: 30px auto;
+    background-image: url(//pic.davdian.com/free/bonus_num.png);
+    background-size: 81px;
+    background-repeat: no-repeat;
+    background-position: left;
+    text-align: right;
+    line-height: 60px;
+    color: #FF4A7D;
+    font-size: 60px;
+}
+
+body.view_bouns_seller .number_container small{
+    font-size: 26px;
+}
+
+body.view_bouns_seller .invite_button,body.view_bouns_seller .main .warn{
+    width: 250px;
+    height: 40px;
+    margin: 0 auto;
+    color: #b60;
+    margin-bottom: 12px;
+    font-size: 12px;
+}
+
+body.view_bouns_seller.view_bouns_buyer  .invite_button{
+    margin: 15px auto;
+}
+
+body.view_bouns_seller .invite_button .btn{
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    background-color: #FF4A7D;
+    box-sizing: border-box;
+    color: #fff;
+    line-height: 32px;
+    padding: 0px;
+    border: 0;
+    margin: 0;
+    border-radius: 3px;
+    height: 32px;
+}
+body.view_bouns_seller .invite_button .btn.disable{
+    background: #d5d5d5;
+    border-color: #bdbdbd;
+    color: #969696;
+}
+
+body.view_bouns_seller .info{
+    background-color: #faf2da;
+    font-size: 14px;
+    color: #666;
+    min-height: 300px;
+}
+
+body.view_bouns_buyer .info{
+    min-height: 250px;
+}
+
+
+body.view_bouns_buyer_null .info .logo{
+    margin: 25px auto 5px;
+}
+
+body.view_bouns_seller .info .logo {
+    width: 150px;
+    height: 39px;
+    background: url(//pic.davdian.com/free/mama_davdian_logo.png) no-repeat;
+    background-size: 150px;
+    margin: 20px auto 0;
+}
+body.view_bouns_seller .info .title{
+    color: #FF4A7D;
+    font-size: 14px;
+    text-align: center;
+    margin: 15px 30px 0;
+}
+
+body.view_bouns_buyer_null .info .title{
+    margin: 0px 30px 20px;
+}
+
+body.view_bouns_seller .info .con{
+    padding: 12px 15px 30px;
+    border-bottom: #ec9 solid 1px;
+}
+
+body.view_bouns_buyer .info .con{
+    border-bottom: none;
+    padding: 0px 15px 30px;
+}
+
+body.view_bouns_seller .table_container{
+    padding: 20px 15px;
+}
+
+body.view_bouns_seller .table_title{
+    font-size: 15px;
+    color: #333;
+}
+body.view_bouns_seller .table_container .list_container:not(:last-child){
+    border-bottom: #f6e7c6 1px solid;
+}
+body.view_bouns_seller .table_container .invited{
+    margin-left: 92px;
+    margin-right: 116px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+}
+
+body.view_bouns_seller .table_container .tel{
+    margin-left: -92px;
+}
+
+body.view_bouns_seller .table_container .kt{
+    margin-right: -116px;
+}
+
+body.view_bouns_seller .table_container .shop_name{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align:left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+body.view_bouns_buyer_null .main .p1{
+    font-size: 24px;
+    margin-top: 50px;
+    font-weight: bolder;
+}
+
+body.view_bouns_buyer_null .main .p2{
+    font-size: 30px;
+}
+
+body.view_bouns_buyer_null .main .p5{
+    font-size: 36px;
+    margin: 10px auto;
+    color: #FF4A7D;
+    padding: 0 12px;font-weight: bold;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body.view_bouns_buyer .main .p2 {
+    font-size: 36px;
+    color: #FF4A7D;
+    font-weight: bold;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ch" ng-app="indexApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>哈爸大V店—MAMA+&nbsp;|&nbsp;大V店</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/share_red.css" rel="stylesheet">
+    <script>
+        /////////////////////微信分享/////////////////////
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+
+        var sendUrl = '../data/success.json';
+        var listUrl = "../data/list.json";
+        var pageIndexStart = 1;
+        var pageSize = 10;
+    </script>
+    <style>
+    </style>
+</head>
+<body style="background-color: #fff; padding-top: 0;" class="scroll_flag">
+
+<div class="share_red_receive">
+    <div class="share_red_receive_bg">
+        <a href="/" class="more_red">
+            <div class="red_btn">
+                <img src="//pic.davdian.com/free/logo0509.png">
+                <span>了解更多</span>
+            </div>
+        </a>
+        <a href="/" class="home_red">
+            <div class="red_btn">
+                <img src="//pic.davdian.com/free/home_logo0509.png">
+                <span>去TA店铺</span>
+            </div>
+        </a>
+    </div>
+    <div class="share_red_people mt_26">
+        <p><img data-original="//pic.davdian.com/free/live_head_64_64.png" src="//pic.davdian.com/free/default_head_icon_0419.png"></p>
+        <p class="fz_12 dav-color-normal">水原希子的红包</p>
+    </div>
+
+    <div class="share_red_receive_con">
+        <div class="red_rmb"><span class="red_rmb_num">30</span><span>元</span></div>
+        <div class="center"><input placeholder="输入11位手机号码领取" type="tel" class="share_red_input"></div>
+        <div class="center mt_15"><span class="share_red_btn">点击领取红包</span></div>
+    </div>
+
+    <div class="share_red_receive_success_con hide">
+        <div class="fz_20 center color_FF4A7D amount">30元</div>
+        <div class="success_info"></div>
+        <div class="center mt_15"><a href="/" class="share_red_btn">立即使用</a></div>
+    </div>
+
+</div>
+
+<div class="share_red_title">领取了红包的用户：</div>
+<div class="share_red_list">
+    <ul>
+        <li>
+            <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png" src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+            <div class="con">
+                <p>张晨<span class="registered">已注册</span></p>
+                <p class="overflow">领取感想领取感想领取感想领</p>
+            </div>
+            <span class="price">30元</span>
+            <span class="date">2016/9/5</span>
+        </li>
+        <li>
+            <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png" src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+            <div class="con">
+                <p>张晨</p>
+                <p class="overflow">领取感想领取感想领取感想领</p>
+            </div>
+            <span class="price">30元</span>
+            <span class="date">2016/9/5</span>
+        </li>
+        <li>
+            <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png" src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+            <div class="con">
+                <p>张晨</p>
+                <p class="overflow">领取感想领取感想领取感想领</p>
+            </div>
+            <span class="price">30元</span>
+            <span class="date">2016/9/5</span>
+        </li>
+        <li>
+            <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png" src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+            <div class="con">
+                <p>张晨</p>
+                <p class="overflow">领取感想领取感想领取感想领</p>
+            </div>
+            <span class="price">30元</span>
+            <span class="date">2016/9/5</span>
+        </li>
+        <li>
+            <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png" src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+            <div class="con">
+                <p>张晨</p>
+                <p class="overflow">领取感想领取感想领取感想领</p>
+            </div>
+            <span class="price">30元</span>
+            <span class="date">2016/9/5</span>
+        </li>
+        <li>
+            <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png" src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+            <div class="con">
+                <p>张晨</p>
+                <p class="overflow">领取感想领取感想领取感想领</p>
+            </div>
+            <span class="price">30元</span>
+            <span class="date">2016/9/5</span>
+        </li>
+        <li>
+            <span class="head"><img class="head_img" data-original="//pic.davdian.com/free/live_head_64_64.png" src="//pic.davdian.com/free/default_head_icon_0419.png"></span>
+            <div class="con">
+                <p>张晨</p>
+                <p class="overflow">领取感想领取感想领取感想领</p>
+            </div>
+            <span class="price">30元</span>
+            <span class="date">2016/9/5</span>
+        </li>
+    </ul>
+</div>
+
+
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="../javascript/jweixin-1.0.0.js"></script>
+<script src="../cdn/jquery/jquery.lazyload.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/share_red.js"></script>
+
+</body>
+</html>

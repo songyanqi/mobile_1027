@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>即将开始：孩子不吃饭</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/live.css" rel="stylesheet">
+    <script>
+        var ClientInit = "n19jmcy59zr29";//融云init
+        var tokenurl = "//app.bravetime.net/api/live/getToken?format=json";//融云token链接
+        var historyUrl = "../data/live_review.json";//历史记录数据链接
+        var newMessageUrl = "../data/live.json";//直播数据链接
+        <!--{if $user_status==3 }-->
+        var msgShowCount=-1;
+        <!--{/if}-->
+        <!--{if $user_status==3 }-->
+        var msgShowCount=10;
+        <!--{/if}-->
+
+        var tj_id = 52;
+        var tj_path = "live";
+
+        /////////////////////微信分享/////////////////////
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新                                                                                                                                                                                                                                               书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+        /////////////////////////////////////////////////
+    </script>
+</head>
+<body>
+
+<div class="live_top">
+    <a href="">
+        <div class="pull-left">
+        <img class="shop_img" src="//pic.davdian.com/free/live_head_64_64.png">
+            <span class="shop_title">
+                大V体验店
+                <p class="pic">实时转播妈妈课堂</p>
+            </span>
+        </div>
+    <div class="right menu_kd">
+        <div class="kd_btn">进入店铺<i class="arrow"></i></div>
+    </div>
+    </a>
+</div>
+
+<a href="">
+    <div class="course_details_link">
+        <div class="title">了解更多课程详情</div>
+        <i class="title_arrow"></i>
+    </div>
+</a>
+<div id="wrapper">
+<div class="all_review">
+    <div class="prompt_live" style=""></div>
+    <ul class="con_list live_history" id="live_id">
+        <!--<li>-->
+        <!--<span class="head"><img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg"></span>-->
+
+        <!--<div class="right">-->
+        <!--<h2>主讲老师－王教授</h2>-->
+        <!--<div class="main">登录之后，如果是卖家，则分享她自己的店铺链接，且进入她自己的店铺；如果是买家，则依据她的绑定关系，分享对应的上家的店铺链接；如果没有则分享通用的链接，在用户访问该链接时按照绑定+随机分配。-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<span class="head"><img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg"></span>-->
+
+        <!--<div class="right">-->
+        <!--<h2>主讲老师－王教授</h2>-->
+        <!--<div class="main">登录之后，如果是卖家，则分享她自己的店铺链接，且进入她自己的店铺；如果是买家，则依据她的绑定关系，分享对应的上家的店铺链接；如果没有则分享通用的链接，在用户访问该链接时按照绑定+随机分配。-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<span class="head"><img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg"></span>-->
+
+        <!--<div class="right">-->
+        <!--<h2>主讲老师－王教授</h2>-->
+        <!--<div class="main"><img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg">-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<span class="head"><img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg"></span>-->
+
+        <!--<div class="right">-->
+        <!--<h2>主讲老师－王教授</h2>-->
+        <!--<div class="main">-->
+        <!--<div class="voice play"><i class="fa fa-rss"></i><p class="min">38''</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+        <!--<span class="head"><img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg"></span>-->
+
+        <!--<div class="right">-->
+        <!--<h2>主讲老师－王教授</h2>-->
+        <!--<div class="main">-->
+        <!--<div class="voice"><i class="fa fa-rss"></i><p class="min">38''</p>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</li>-->
+    </ul>
+    <ul class="con_list live">
+        <!--<li>-->
+            <!--<span class="head"><img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg"></span>-->
+
+            <!--<div class="right">-->
+                <!--<h2>主讲老师－王教授</h2>-->
+                <!--<div class="main">2222登录之后，如果是卖家，则分享她自己的店铺链接，且进入她自己的店铺；如果是买家，则依据她的绑定关系，分享对应的上家的店铺链接；如果没有则分享通用的链接，在用户访问该链接时按照绑定+随机分配。-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<span class="head"><img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg"></span>-->
+
+            <!--<div class="right">-->
+                <!--<h2>主讲老师－王教授</h2>-->
+                <!--<div class="main">登录之后，如果是卖家，则分享她自己的店铺链接，且进入她自己的店铺；如果是买家，则依据她的绑定关系，分享对应的上家的店铺链接；如果没有则分享通用的链接，在用户访问该链接时按照绑定+随机分配。-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<span class="head"><img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg"></span>-->
+
+            <!--<div class="right">-->
+                <!--<h2>主讲老师－王教授</h2>-->
+                <!--<div class="main"><img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg">-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<span class="head"><img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg"></span>-->
+
+            <!--<div class="right">-->
+                <!--<h2>主讲老师－王教授</h2>-->
+                <!--<div class="main">-->
+                    <!--<div class="voice play"><i class="fa fa-rss"></i><p class="min">38''</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<span class="head"><img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg"></span>-->
+
+            <!--<div class="right">-->
+                <!--<h2>主讲老师－王教授</h2>-->
+                <!--<div class="main">-->
+                    <!--<div class="voice"><i class="fa fa-rss"></i><p class="min">38''</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</li>-->
+    </ul>
+</div>
+</div>
+
+
+<div class="live_bottom">
+    <span class="close_btn"></span>
+    <div class="center_con ">
+        <div class="text ">
+            爱学习的妈妈都在「妈妈商学院」
+        </div>
+    </div>
+    <div class="shop_btn april_border hairlines">
+    <a href="" class="border_inner">立即加入</a>
+    </div>
+</div>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script src="../javascript/jweixin-1.0.0.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+
+
+<script src="../javascript/live_close.js"></script>
+<script src="../javascript/live_history_new.js"></script>
+<script type="text/javascript" src="../cdn/jquery/jquery.cookie.js"></script>
+<script src="//cdn.ronghub.com/RongIMLib-2.0.15.min.js"></script>
+<script src="//cdn.ronghub.com/RongEmoji-2.0.3.min.js"></script>
+<script src="//cdn.ronghub.com/RongIMVoice-2.0.15.min.js"></script>
+<script src="../javascript/live_new.js"></script>
+<script src="../javascript/iscroll.js"></script>
+<script>
+
+</script>
+
+
+
+</body>
+</html>

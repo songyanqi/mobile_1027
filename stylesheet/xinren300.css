@@ -1,0 +1,81 @@
+body{
+    padding-bottom:0;
+
+}
+body.in_app .top0{
+    display: none;
+}
+.xinren{
+    background-color: #FFE76C;
+}
+.con,.con1 {
+    position: relative;
+    text-align: center;
+}
+.con a{
+    position: absolute;
+    width: 64%;
+    bottom: 30%;
+    left: 18%;
+}
+.con1{
+    margin-bottom: 20px;
+}
+.con1 a{
+    width: 64%;
+    display: inline-block;
+}
+.bonus_list{
+    padding: 20px 10px 40px;
+}
+.bonus_item{
+    border-radius: 5px;
+    border:#FF4A7D solid 1px;
+    height: 97px;
+    position: relative;
+    background-color: #fff;
+    margin-bottom:10px;
+}
+.bonus_item:after{
+    content: "";
+    background-image: url('//pic.davdian.com/free/2016/11/30/3.png');
+    position: absolute;
+    width: 56px;
+    height: 99px;
+    background-size:100%;
+    right: -1px;
+    top:-1px;
+}
+.bonus_item .text{
+    position: absolute;
+    color: #FF4A7D;
+    font-size: 12px;
+}
+.bonus_item .text.t1{
+    left: 10px;
+    top: 10px;
+}
+.bonus_item .text.t2{
+    left: 10px;
+    top: 66px;
+}
+.bonus_item .text.t3{
+    font-size: 35px;
+    left: 20px;
+    top: 56px;
+}
+.bonus_item .text.t5,.bonus_item .text.t6,.bonus_item .text.t4{
+    left: 92px;
+    color: #666;
+}
+.bonus_item .text.t4{
+    color: #333;
+    top:16px;
+    font-size: 14px;
+}
+.bonus_item .text.t5{
+    top:48px;
+}
+.bonus_item .text.t6{
+    top:68px;
+}

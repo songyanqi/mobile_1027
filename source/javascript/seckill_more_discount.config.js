@@ -1,0 +1,1 @@
+require("../../javascript/seckill_more_discount.js");

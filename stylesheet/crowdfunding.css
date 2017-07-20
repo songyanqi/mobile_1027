@@ -1,0 +1,121 @@
+body{ background-color:#fff;}
+.crowdfunding_container { background-color:#fff; padding-bottom:49px;
+}
+.crowdfunding_container .current_level_container .title{ font-size:16px; color:#333;
+}
+.crowdfunding_container .current_level_container .nr{ font-size:12px; color:#666; padding-top:10px;
+}
+
+
+  .crowdfunding_container .next_level_container {
+    background-color: #fff;
+    padding: 20px 12px 18px;
+    display: block; }
+    .crowdfunding_container .next_level_container .next_icon_container {
+     
+      position: relative; margin-bottom:6px; margin-top:15px;
+	   }
+    
+    .crowdfunding_container .next_level_container .level_loading {
+      position: relative;
+      height: 12px; }
+      .crowdfunding_container .next_level_container .level_loading .level_loading_background, .crowdfunding_container .next_level_container .level_loading .level_loading_color {
+        width: 100%;
+        height: 12px;
+        background-color: #eae8f2;
+        position: absolute;
+        top: 0;
+        border-radius: 6px; }
+      .crowdfunding_container .next_level_container .level_loading .level_loading_color {
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAYCAMAAADNlS1EAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRF9oiI8m1tmseJ/QAAADNJREFUeNrU0CECAAAIg0D4/6eNFqpB4rUNN7bPaiiGYiiGYiiGYiiGYiixzovXRgABBgAGawEJiJfUygAAAABJRU5ErkJggg==);
+        width: 0; }
+    .crowdfunding_container .next_level_container .next_level_number_container {
+      margin: 20px 0px 0px 0px;
+      font-size: 14px;
+      border: #ddd solid 1px;
+	  padding-left:20px;
+      line-height: 28px;
+      border-radius: 5px; color:#333;}
+	  
+	   .crowdfunding_container .next_level_container .next_level_number_container .arrow{
+     width: 8px; display:inline-block; float:right; margin-top:10px; margin-right:20px;
+  height: 8px;
+  border-top:1px solid #666;border-right:1px solid #666; -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);}
+  .crowdfunding_container .crowdfunding_get_help .get_all_title {
+    line-height: 44px;
+    padding-left: 12px;
+	font-size:16px;
+	background-color:#f1f1f1;
+	
+   }
+  .crowdfunding_container .crowdfunding_get_help .crowdfunding_get_group {
+    padding: 0 12px;
+    background-color: #fff; font-size:12px; }
+	 .crowdfunding_container .crowdfunding_get_help .crowdfunding_get_group li .con {padding-bottom:14px; padding-top:14px;}
+	 .crowdfunding_container .crowdfunding_get_help .crowdfunding_get_group li .con  .title{font-size:18px; color:#FF4A7D; line-height:32px;}
+	 .crowdfunding_container .crowdfunding_get_help .crowdfunding_get_group li .support_btn{width:90px; float:right;height:32px; line-height:32px; display:inline-block; background-color:#FF4A7D; text-align:center; color:#fff; border-radius:3px; font-size:16px; cursor:pointer;}
+	  .crowdfunding_container .crowdfunding_get_help .crowdfunding_get_group li .support_btn_over{ background-color:#ddd; color:#999; }
+	  .crowdfunding_container .crowdfunding_get_help .crowdfunding_get_group li .con1 {padding-bottom:15px;}
+	  .crowdfunding_container .crowdfunding_get_help .crowdfunding_get_group li .con2 .img{padding-top:12px; height:100px;}
+	  .crowdfunding_container .crowdfunding_get_help .crowdfunding_get_group li .con2 .img img{width:100px; height:100px; padding-top:12px; float:left; margin-right:5px;}
+	  .crowdfunding_container .crowdfunding_get_help .crowdfunding_get_group li .con3 {padding-top:20px;}
+   .crowdfunding_container .crowdfunding_get_help .crowdfunding_get_group li{ border-bottom:1px solid #eee; padding-bottom:25px;}
+   .crowdfunding_container .crowdfunding_get_help .crowdfunding_get_group li:last-child{ border-bottom:none; padding-bottom:25px;}
+.crowdfunding_container .next_level_container .details{ width:100%; display:inline-block; margin-top:10px;}
+.crowdfunding_container .next_level_container .details li{ width:33.3%; float:left;}
+.fz16{ font-size:16px;}
+.fz12{ font-size:12px;}
+.color_FF4A7D{ color:#FF4A7D;}
+
+.crowdfunding_bottom{ width:100%; height:47px; border-top:1px solid #ccc; position:fixed; bottom:0px; z-index:100; background-color:#f1f1f1; max-width:640px;}
+.crowdfunding_bottom li{ width:33.3%; height:47px; float:left;}
+.crowdfunding_bottom li .WeChat{ width:100%;height:47px; display:inline-block;background:url(//pic.davdian.com/free/crowdfunding_ico1_2015625.png) no-repeat; background-size:32px; background-position:center;cursor:pointer;}
+.crowdfunding_bottom li .SinaWeibo{ width:100%;height:47px; display:inline-block;background:url(//pic.davdian.com/free/crowdfunding_ico2_2015625.png) no-repeat;background-size:32px; background-position:center;cursor:pointer;}
+.crowdfunding_bottom li .Qzone{width:100%;height:47px; display:inline-block;background:url(//pic.davdian.com/free/crowdfunding_ico3_2015625.png) no-repeat;background-size:32px; background-position:center; cursor:pointer;}
+
+.Percent{position:absolute; left:0px; font-size:14px; color:#FF4A7D; top:3px;}
+
+.crowdfunding_nr{ position:relative; height:25px;}
+.crowdfunding_nr_con{background-color:#FF4A7D; width:60px; text-align:center;height:20px; line-height:20px; right:0px; display:inline-block; color:#fff; border-radius:3px; font-size:12px; position:absolute;}
+.crowdfunding_nr_con .i{width:0; 
+    height:0; 
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:5px solid #FF4A7D; position:absolute; left:50%; margin-left:-5px; top:20px;}
+	
+.crowdfunding_nr_con_over{background-color:#d5d5d5; width:60px; text-align:center;height:20px; line-height:20px; right:0px; display:inline-block; color:#fff; border-radius:3px; font-size:12px; position:absolute;}
+.crowdfunding_nr_con_over .i_over{width:0; 
+    height:0; 
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    border-top:5px solid #d5d5d5; position:absolute; left:50%; margin-left:-5px; top:20px;}
+
+.WeChat_con{ width:100%; max-width:640px; position:fixed; z-index:2;top:0; padding-top:42px; background:rgba(255, 255, 255, 0.9); height:100%;}
+.WeChat_con .close{ width:22px; height:22px;background:url(//pic.davdian.com/free/crowdfunding_closeico_2015625.png) no-repeat;background-size:20px; top:60px; right:12px; position:absolute; cursor:pointer;}
+.WeChat_con .detail{ padding:50px 12px 0px; text-align:center;}
+.WeChat_con .detail .title{ font-size:18px; padding-bottom:22px;}
+.WeChat_con .detail .qrcodes{ width:235px; height:235px; margin:0px auto 28px;}
+.pb_12{ padding-bottom:12px;}
+
+.top_container .right_icon_container{
+    float: right;
+    margin-top: -33px;
+    margin-right: 4px;
+}
+.top_container .icon{
+    width: 30px;
+    height: 28px;
+    background-size: 30px;
+}
+.top_container .icon_text{
+    font-size: 12px;
+    color: #fff;
+    line-height: 12px;
+}
+.top_container .icon_with_text{
+    display: inline-block;
+    vertical-align: text-bottom;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>地址列表</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/cartConfirm.css" rel="stylesheet">
+    <script type="text/javascript">
+//        如果是切换订单地址是这样
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+//    如果是购物流程中展示地址列表是这样
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0,  // 头部分享按钮
+            btnOnHead:1,    // 头部文字按钮
+            btnText:"新增地址",     // 头部文字按钮文字
+            btnLink:"address.html?action=add"      // 头部文字按钮链接
+        };
+
+
+    var setDefaultUrl = ""; // 设置默认地址url
+    var setCurrentUrl = ""; // 设置当前地址Url
+    var deleteUrl = "/address.html?action=delete"; // 删除地址action
+    </script>
+</head>
+<!--如果是在修改订单时候就加一个class ：in_order_edit-->
+<body class="address_list">
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            地址列表
+        </div>
+        <div class="top_right">
+            <a href="" class="top_btn">
+                <span class="border_btn">新增地址</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="wd_address_list">
+    <ul class="address_list">
+        <li data-for="75910" data-index="0" class="address  without_id_card">
+            <a href="//nemo.davdian.com" class="show half_bottom_border">
+                <span class="name">哈哈哈</span>
+                <span class="tel">15910661506</span>
+
+                <p>新疆 巴音郭楞 若羌县 门票</p>
+            </a>
+
+            <div class="clearfix">
+                <div class="default_switcher ">
+                    <span class="icon"></span>
+                    <span>设为默认</span>
+                </div>
+                <a class="delete" href="/deleteAddress.html?address_id=75910&amp;order_id=0">
+                    <span class="icon"></span>
+                    <span>删除</span>
+                </a>
+                <a class="edit" href="/address.html?address_id=75910&amp;order_id=0">
+                    <span class="icon"></span>
+                    <span>编辑</span>
+                </a>
+            </div>
+        </li>
+        <li data-for="75909" data-index="1" class="address current">
+            <a href="//nemo.davdian.com" class="show half_bottom_border">
+                <span class="name">建辉谁</span><span class="tel">15910661509</span>
+
+                <p>
+                    澳门 擦了擦
+                </p>
+            </a>
+
+            <div class="clearfix">
+                <div class="default_switcher default">
+                    <span class="icon"></span><span>设为默认</span>
+                </div>
+                <a class="delete" href="/deleteAddress.html?address_id=75909&amp;order_id=0">
+                    <span class="icon"></span><span>删除</span>
+                </a>
+                <a class="edit" href="/address.html?address_id=75909&amp;order_id=0"><span
+                        class="icon"></span><span>编辑</span></a>
+            </div>
+        </li>
+        <li data-for="30413" data-index="2" class="address ">
+            <a href="//nemo.davdian.com" class="show half_bottom_border">
+                <span class="name">建辉大神</span><span class="tel">13311527905</span>
+
+                <p>
+                    北京 北京 朝阳区 望京街道 合生麒麟社五号楼(阜通西大街10号楼) 403
+                </p>
+            </a>
+
+            <div class="clearfix">
+                <div class="default_switcher ">
+                    <span class="icon"></span><span>设为默认</span>
+                </div>
+                <a class="delete" href="/deleteAddress.html?address_id=75910&amp;order_id=0">
+                    <span class="icon"></span><span>删除</span>
+                </a>
+                <a class="edit" href="/address.html?address_id=30413&amp;order_id=0"><span
+                        class="icon"></span><span>编辑</span></a>
+            </div>
+        </li>
+        <li data-for="11696" data-index="3" class="address ">
+            <a href="//nemo.davdian.com" class="show half_bottom_border">
+                <span class="name">ljh</span><span class="tel">15910661509</span>
+
+                <p>
+                    北京 北京 丰台区 ffgg
+                </p>
+
+                <p>
+                    身份证号：131082199009305835
+                </p>
+
+                <p>
+                    邮编：100000
+                </p>
+            </a>
+
+            <div class="clearfix">
+                <div class="default_switcher ">
+                    <span class="icon"></span><span>设为默认</span>
+                </div>
+                <a class="delete" href="/deleteAddress.html?address_id=75910&amp;order_id=0">
+                    <span class="icon"></span><span>删除</span>
+                </a>
+                <a class="edit" href="/address.html?address_id=11696&amp;order_id=0"><span
+                        class="icon"></span><span>编辑</span></a>
+            </div>
+        </li>
+    </ul>
+</div>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="//fe.davdian.com/wap/17225/cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script type="text/javascript" src="../javascript/jquery.cookie.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<!--如果是修改订单的地址就用address.js 购物流程中的选择地址就用cartconfirm.js-->
+<!--<script type="text/javascript" src="../javascript/address.js"></script>-->
+
+<script type="text/javascript" src="../javascript/cartConfirm.js"></script>
+</body>
+</html>

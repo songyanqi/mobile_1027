@@ -1,0 +1,77 @@
+{
+  "error" : 0,
+  "msg" : "原因",
+  "data" : [
+    {
+      "delivery_id" : "15",
+      "info" : [
+        {
+          "shipperCode" : "",
+          "LogisticCode" : "",
+          "State" : "",
+          "Traces" : [
+
+          ]
+
+      },
+        {
+          "shipperCode" : "",
+          "LogisticCode" : "",
+          "State" : "",
+          "Traces" : [
+            {
+              "AcceptTime": "2015-03-06 21:16:58",
+              "AcceptStation": "深圳市横岗速递营销部已收件，（揽投员姓名：钟定基;联系电话：）",
+              "Remark": ""
+            },
+            {
+              "AcceptTime": "2015-03-07 14:25:00",
+              "AcceptStation": "离开深圳市 发往广州市",
+              "Remark": ""
+            }
+          ]
+      }
+      ]
+    },
+    {
+      "delivery_id" : "11",
+      "info" : [
+        {
+          "shipperCode" : "",
+          "LogisticCode" : "",
+          "State" : "",
+          "Traces" : [
+            {
+              "AcceptTime": "2015-03-06 21:16:58",
+              "AcceptStation": "深圳市横岗速递营销部已收件，（揽投员姓名：钟定基;联系电话：）",
+              "Remark": ""
+            },
+            {
+              "AcceptTime": "2015-03-07 14:25:00",
+              "AcceptStation": "离开深圳市 发往广州市",
+              "Remark": ""
+            }
+          ]
+
+        },
+        {
+          "shipperCode" : "",
+          "LogisticCode" : "",
+          "State" : "",
+          "Traces" : [
+            {
+              "AcceptTime": "2015-03-06 21:16:58",
+              "AcceptStation": "深圳市横岗速递营销部已收件，（揽投员姓名：钟定基;联系电话：）",
+              "Remark": ""
+            },
+            {
+              "AcceptTime": "2015-03-07 14:25:00",
+              "AcceptStation": "离开深圳市 发往广州市",
+              "Remark": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

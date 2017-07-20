@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <title>年货节</title>
+    <link rel="stylesheet" href="../stylesheet/shopping_fair_for_spring_festival.css">
+    <script>
+        var tj_id = "74";
+        var tj_path = 'shopping_fair_for_spring_festival';
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead: 1,     // 是否展示头部
+            showFoot: 0,     // 是否展示底部
+            backOnHead: 1,   // 头部返回按钮
+            homeOnHead: 1,   // 头部首页按钮
+            shareOnHead: 1
+        };
+
+        /////////////////////微信分享/////////////////////
+        // 店铺的图标
+        var imgUrl = "http://pic.davdian.com/free/2016/05/09/320_320_3ab4726358f5de88f095b46500edfa63.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '秒杀商品1元起，优质正品超低价格，另有红包出没，秒到就是赚到~';
+        var shareTitle = '大V超值秒杀好货天天抢，天天抢不停';  //店铺名称
+
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+        /////////////////////////////////////////////////
+        /*抽奖按钮*/
+        var christmasLotteryDrawUrl = "../data/c.json";
+    </script>
+</head>
+<!--app里面body增加in_app的class-->
+<body class="in_app">
+<!--背景乐-->
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();" data-dav-tj="vip|back|back|1|back@vip">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            <a href="">年货节</a>
+        </div>
+        <div class="top_right">
+            <a href="/" class="top_home">
+                <span class="home_icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="bg">
+    <!---->
+    <audio style="display: none" class="run" id="bg_music"
+           src="http://pic.davdian.com/free/2017/01/04/music.mp3" loop></audio>
+    <!--裙摆-->
+    <img class="sf_skirt" src="http://pic.davdian.com/activity/2017/01/04/750_50_c7e054fa890ab8cf395800f5852bb85d.png"
+         alt="">
+    <img class="sf_title" src="http://pic.davdian.com/activity/2017/01/04/750_377_66f8348b4a1e5ae68de66acb5ab16a65.png"
+         alt="">
+    <!--舞狮子-->
+    <div class="sf_lion">
+
+    </div>
+    <!--礼物定位中间线-->
+    <div class="gifts">
+        <!--礼物容器-->
+        <div class="gifts_wrap js_gifts_wrap">
+            <a href="###">
+                <div class="sf_strings"></div>
+                <div class="gift_plus"></div>
+                <div class="light_halo"></div>
+                <div class="gift_s gift_1"></div>
+            </a>
+        </div>
+        <div class="gifts_wrap js_gifts_wrap">
+            <a href="###">
+                <div class="sf_strings"></div>
+                <div class="gift_plus"></div>
+                <div class="light_halo"></div>
+                <div class="gift_s gift_2"></div>
+            </a>
+        </div>
+        <div class="gifts_wrap js_gifts_wrap">
+            <a href="###">
+                <div class="sf_strings"></div>
+                <div class="gift_plus"></div>
+                <div class="light_halo"></div>
+                <div class="gift_s gift_3"></div>
+            </a>
+        </div>
+        <div class="gifts_wrap js_gifts_wrap">
+            <a href="###">
+                <div class="sf_strings"></div>
+                <div class="gift_plus"></div>
+                <div class="light_halo"></div>
+                <div class="gift_s gift_4"></div>
+            </a>
+        </div>
+    </div>
+    <!--音乐按钮显示-->
+    <div class="music_btn js_music music_close_btn"></div>
+    <!--音乐关闭按钮显示-->
+    <!--<div class="music_close_btn run_music"></div>-->
+    <!--积分和抽奖次数显示-->
+    <div class="integral_con">
+        <div class="integral_con_bg">
+            <div class="my_integral">可用积分</div>
+            <div class="integral_number">3653434</div>
+        </div>
+        <div class="integral_con_bg">
+            <div class="lottery_con">今日剩余</br>抽奖次数</div>
+            <div class="lottery_num">2<span class="lottery_font">次</span></div>
+        </div>
+    </div>
+    <!--底部三个按钮-->
+    <div class="bottom_btn">
+        <img src="http://pic.davdian.com/activity/2017/01/04/750_73_cc86b54db010882614658c9bd04cba98.png">
+        <span class="look_my_gift js_look_my_gift"></span>
+        <a href="cashier.html" class="gotobtn js_refresh"></a>
+        <span class="look_rule"></span>
+    </div>
+    <!--爆竹碎屑-->
+    <img class="suixue" src="http://pic.davdian.com/activity/2017/01/05/750_1334_babff983f4305ed9987f365e689d1194.png" alt="">
+</div>
+
+<div class="mask hide">
+    <!--点击礼物抽奖积分不够展示-->
+    <div class="con integral_not_enough hide">
+        <div class="img_item">
+            <img src="http://pic.davdian.com/activity/2017/01/05/655_542_d4a62f445e67ae9c08446dc6dda0f5fa.png">
+            <a href="" style="width: 40%;height: 17%;position: absolute;top: 72%;left: 6%;"></a>
+            <a href="" style="width: 40%;height: 17%;position: absolute;top: 72%;left: 51%;"></a>
+        </div>
+
+        <div class="close_btn"></div>
+    </div>
+    <!--点击礼物抽奖活动红包展示-->
+    <div class="con get_gift hide" style="width: 90%;margin-left: 5%;">
+        <div class="img_item">
+            <img src="http://pic.davdian.com/activity/2017/01/04/655_505_b5e3c88338f9642f054500716103966c.png">
+            <a class="js_refresh" href="" style="width: 40%;height: 17%;position: absolute;top: 72%;left: 5%;"></a>
+            <a class="share_to_web" style="width: 40%;height: 17%;position: absolute;top: 72%;left: 51%;"></a>
+            <div class="money_con">
+                <div class="money_color">恭喜你抽到<span class="money">10</span>元红包!</div>
+                <div class="effective_date">满<span class="full_con">100</span>元使用，有效期：2017-109010<span
+                        class="can_use_time"></span>
+                </div>
+            </div>
+        </div>
+        <div class="close_btn" style="top:10%;"></div>
+    </div>
+    <!--奖品列表-->
+    <div class="con my_gift js_my_gift hide">
+        <div class="my_gift_con">
+            <div class="my_gift_con_bg">
+                <div class="my_gift_title">
+                    <div class="sf_my_title">我的奖品</div>
+                    <div class="my_gift_list">
+                        <ul>
+                            <li class="use_red">
+                                <div class="my_gift_list_con">
+                                    <a href="http://blog.csdn.net/fswan/article/details/17238933">
+                                        <div class="my_gift_list_money_color"><span
+                                                class="my_gift_list_money">10</span><span
+                                                class="my_gift_list_money_unit">元红包</span>
+                                        </div>
+                                        <div class="my_gift_list_effective_date">满XX元使用，有效期：12.6-12.12</div>
+                                        <div class="my_gift_user_btn"><img
+                                                src="http://pic.davdian.com/free/2016/12/19/180_75_a5646d2a8c32646bceca7be87cd7ee8c.png">
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="use_grey">
+                                <div class="my_gift_list_con">
+                                    <div class="my_gift_list_money_color"><span
+                                            class="my_gift_list_money">10</span><span
+                                            class="my_gift_list_money_unit">元红包</span></div>
+                                    <div class="my_gift_list_effective_date">满XX元使用，有效期：12.6-12.12</div>
+                                    <div class="my_gift_user_btn"><img
+                                            src="http://pic.davdian.com/free/2016/12/19/126_114_45ecc024b7954794fe3b27ccf0b1e583.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="use_grey">
+                                <div class="my_gift_list_con">
+                                    <div class="my_gift_list_money_color"><span
+                                            class="my_gift_list_money">10</span><span
+                                            class="my_gift_list_money_unit">元红包</span></div>
+                                    <div class="my_gift_list_effective_date">满XX元使用，有效期：12.6-12.12</div>
+                                    <div class="my_gift_user_btn"><img
+                                            src="http://pic.davdian.com/free/2016/12/19/126_114_c8708d44ecdc65e3f8291ddc4fdf2d9b.png">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="use_grey">
+                                <div class="my_gift_list_con">
+                                    <div class="my_gift_list_money_color"><span
+                                            class="my_gift_list_money">10</span><span
+                                            class="my_gift_list_money_unit">元红包</span></div>
+                                    <div class="my_gift_list_effective_date">满XX元使用，有效期：12.6-12.12</div>
+                                    <div class="my_gift_user_btn"><img
+                                            src="http://pic.davdian.com/free/2016/12/19/126_114_c8708d44ecdc65e3f8291ddc4fdf2d9b.png">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="close_btn"></div>
+        </div>
+    </div>
+    <!--没有奖品展示-->
+    <div class="con my_gift no_gift hide">
+        <div class="my_gift_con">
+            <div class="my_gift_con_bg">
+                <div class="my_gift_title">
+                    <div class="sf_my_title">我的奖品</div>
+                    <div>
+                        <img src="http://pic.davdian.com/activity/2017/01/04/654_351_c9f3571849301354059a84d0b3be6b83.png">
+                    </div>
+                </div>
+            </div>
+            <div class="close_btn"></div>
+        </div>
+    </div>
+    <!--抽奖规则-->
+    <div class="con my_gift rule hide">
+        <div class="my_gift_con">
+            <div class="my_gift_con_bg">
+                <div class="my_gift_title">
+                    <div class="sf_my_title">抽奖规则</div>
+                    <div>
+                        <img src="http://pic.davdian.com/activity/2017/01/04/575_491_f3ed0e96fc9fe42be51272a40fe86241.png"
+                             alt="">
+                        <a class="get_jifen"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="close_btn"></div>
+        </div>
+    </div>
+</div>
+<!--点击礼物抽奖今日没有抽奖机会-->
+<div class="lottery_done hide">
+    <img src="http://pic.davdian.com/activity/2017/01/04/655_280_c80a9660da149f76a7f254ff0506b9af.png">
+</div>
+<!--活动结束显示-->
+<div class="bg hide">
+    <!--裙摆-->
+    <img class="sf_skirt" src="http://pic.davdian.com/activity/2017/01/04/750_50_c7e054fa890ab8cf395800f5852bb85d.png"
+         alt="">
+    <img class="sf_title" src="http://pic.davdian.com/activity/2017/01/04/750_377_66f8348b4a1e5ae68de66acb5ab16a65.png"
+         alt="">
+    <!--舞狮子-->
+    <div class="sf_lion"></div>
+    <!--音乐关闭按钮显示-->
+    <div class="music_close_btn"></div>
+    <!--积分和抽奖次数显示-->
+    <div class="integral_con">
+        <div class="integral_con_bg">
+            <div class="my_integral">可用积分</div>
+            <div class="integral_number">3653434</div>
+        </div>
+    </div>
+    <!--底部三个按钮-->
+    <div class="bottom_btn">
+        <img src="http://pic.davdian.com/activity/2017/01/04/750_73_cc86b54db010882614658c9bd04cba98.png">
+        <span class="look_my_gift js_look_my_gift"></span>
+        <a href="cashier.html" class="gotobtn js_refresh"></a>
+        <span class="look_rule"></span>
+    </div>
+    <!--活动结束-->
+    <div class="con" style="z-index: 9;top:35%;">
+        <div>
+            <img src="http://pic.davdian.com/activity/2017/01/05/655_280_0cfc48acd5a278bb238d9535de48c8ec.png" alt="">
+        </div>
+    </div>
+</div>
+<!--啊哦~您的访问被拒绝了~ 请去微信或者APP访问该链接-->
+<div class="bg hide">
+    <!--裙摆-->
+    <img class="sf_skirt" src="http://pic.davdian.com/activity/2017/01/04/750_50_c7e054fa890ab8cf395800f5852bb85d.png"
+         alt="">
+    <img class="jujuefagnwen" src="http://pic.davdian.com/activity/2017/01/05/615_303_97cb2c8f098cc38432f3e9b500ec423b.png"
+         alt="">
+</div>
+
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="../javascript/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+<script src="../javascript/model.js"></script>
+<script src="../javascript/shopping_fair_for_spring_festival.js"></script>
+</body>
+</html>

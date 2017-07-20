@@ -1,0 +1,68 @@
+{
+  "code" : "0",
+  "shop_url" : "https://bravetime.davdian.com",
+  "visitor_status" : "3",
+  "sess_key" : "48a275a991a0a6295706e6d9f8c3a784b62a4bbc",
+  "data_version": "xxxx",
+  "data" : {
+    "webUrl" : "https://bravetime.davdian.com",
+    "dataList":[
+      {
+        "position" : "0",
+        "imageUrl" : "https://static.vux.li/demo/2.jpg",
+        "title" : "商品标题商品标题商品标题商品标题商品标题商品标题商品标题商品标题",
+        "nowPrice" : "40",
+        "actInfo" : "",
+        "incomeInfo" : "1.5",
+        "statusInfo" : "上架",
+        "command" : {
+          "content" : "点击时的动作"
+        }
+      }, {
+        "position" : "0",
+        "imageUrl" : "https://static.vux.li/demo/1.jpg",
+        "title" : "商品标题",
+        "nowPrice" : "40",
+        "actInfo" : "",
+        "incomeInfo" : "1.5",
+        "statusInfo" : "soldout",
+        "command" : {
+          "content" : "点击时的动作"
+        }
+      },{
+        "position" : "0",
+        "imageUrl" : "https://static.vux.li/demo/1.jpg",
+        "title" : "商品标题",
+        "nowPrice" : "40",
+        "actInfo" : "7折",
+        "incomeInfo" : "1.5",
+        "statusInfo" : "上架",
+        "command" : {
+          "content" : "点击时的动作"
+        }
+      },{
+        "position" : "0",
+        "imageUrl" : "https://static.vux.li/demo/2.jpg",
+        "title" : "商品标题",
+        "nowPrice" : "40",
+        "actInfo" : "7折",
+        "incomeInfo" : "1.5",
+        "statusInfo" : "上架",
+        "command" : {
+          "content" : "点击时的动作"
+        }
+      },{
+        "position" : "0",
+        "imageUrl" : "https://static.vux.li/demo/1.jpg",
+        "title" : "商品标题",
+        "nowPrice" : "40",
+        "actInfo" : "7折",
+        "incomeInfo" : "1.5",
+        "statusInfo" : "上架",
+        "command" : {
+          "content" : "点击时的动作"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var data = [
+            {
+                "id": 1,
+                "issueDescription": "订单修改",
+                "childNode": [
+                    {
+                        "id": 1001,
+                        "issueDescription": "修改收货信息",
+                        "childNode": [
+                            {
+                                "id": 10011,
+                                "issueDescription": "修改姓名"
+                            },
+                            {
+                                "id": 10012,
+                                "issueDescription": "修改电话"
+                            },
+                            {
+                                "id": 10013,
+                                "issueDescription": "修改收货地址"
+                            },
+                            {
+                                "id": 10014,
+                                "issueDescription": "修改身份信息"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 1002,
+                        "issueDescription": "身份验证未通过",
+                        "childNode": [
+                            {
+                                "id": 10021,
+                                "issueDescription": "身份验证未通过"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "issueDescription": "订单取消",
+                "childNode": [
+                    {
+                        "id": 2001,
+                        "issueDescription": "用户原因",
+                        "childNode": [
+                            {
+                                "id": 20011,
+                                "issueDescription": "未使用红包"
+                            },
+                            {
+                                "id": 20012,
+                                "issueDescription": "买错商品"
+                            },
+                            {
+                                "id": 20013,
+                                "issueDescription": "重复下单"
+                            },
+                            {
+                                "id": 20014,
+                                "issueDescription": "商品质疑"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 1002,
+                        "issueDescription": "其他",
+                        "childNode": [
+                            {
+                                "id": 10021,
+                                "issueDescription": "其他"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    </script>
+</head>
+<body>
+    <div>
+        <select>
+            <option value="1">商品1</option>
+            <option value="2">商品2</option>
+            <option value="3">商品3</option>
+        </select>
+        <a onclick="addGoods(this)">添加</a>
+    </div>
+
+    <div>
+        <select id="q1" onchange="changeQ(1,this)"></select>
+        <select id="q2" onchange="changeQ(2,this)"> <option value="1">二级</option></select>
+        <select id="q3"><option value="1">三级</option></select>
+    </div>
+
+<script>
+    var q1 = document.getElementById("q1");
+    var q2 = document.getElementById("q2");
+    var q3 = document.getElementById("q3");
+    function addGoods(a) {
+        var p = a.parentNode;
+        var s = p.getElementsByTagName("select")[0];
+        var node = s.cloneNode(true);
+        p.insertBefore(node,a);
+    }
+
+    initQuestion();
+
+    function initQuestion() {
+        for (var i=0,d;d = data[i++];){
+            var o=document.createElement("option");
+            o.value = d.id;
+            o.innerHTML = d.issueDescription;
+            q1.appendChild(o);
+        }
+        changeQ(1);
+        changeQ(2);
+    }
+    
+    function changeQ(i) {
+        if(i==1){
+            var v = q1.value;
+            for (var i=0,d;d = data[i++];){
+                if(d.id==v){
+                    q2.innerHTML="";
+                    for (var i2=0,d2;d2 = d.childNode[i2++];){
+                        var o=document.createElement("option");
+                        o.value = d2.id;
+                        o.innerHTML = d2.issueDescription;
+                        q2.appendChild(o);
+                    }
+                }
+            }
+        }
+        if(i==2){
+            var v1 = q1.value;
+            var v2 = q2.value;
+            for (var i=0,d;d = data[i++];){
+                if(d.id==v1){
+                    for (var i2=0,d2;d2 = d.childNode[i2++];){
+                        if(d2.id == v2){
+                            q3.innerHTML="";
+                            for (var i3=0,d3;d3 = d2.childNode[i3++];){
+                                var o=document.createElement("option");
+                                o.value = d3.id;
+                                o.innerHTML = d3.issueDescription;
+                                q3.appendChild(o);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

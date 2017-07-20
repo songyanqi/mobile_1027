@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/vip.css" rel="stylesheet">
+    <title>会员专区介绍</title>
+
+    <script type="text/javascript">
+        //统计
+        var tj_id = 57;
+        var tj_path = 'vip_introduce';
+
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+
+        // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+
+        //分享的基本信息
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+    </script>
+</head>
+<body style="background-color: #fff;">
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();" data-dav-tj="vip_introduce|back|back|1|back@vip_introduce">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            会员专区
+        </div>
+    </div>
+</div>
+
+<div class="vip_introduce">
+    <div class="vip_introduce_con">会员专区FAQ</div>
+    <div class="vip_introduce_con">
+        <div class="title">什么是会员？</div>
+        <div class="mt_5">大V店卖家（店主）</div>
+    </div>
+    <div class="vip_introduce_con">
+        <div class="title"><span></span>怎样成为会员？</div>
+        <div class="mt_5">
+            <p>购买会员资格（开通大V店店铺），费用199元，一经开通不可退订，取消、转让、赠送等会员账户权益变更的操作，因此，请您深思熟虑后再决定是否开通。现在加入只需要199元，就可以成为永久会员哦！</p>
+        </div>
+    </div>
+    <div class="vip_introduce_con">
+        <div class="title">会员有哪些福利？</div>
+        <div class="mt_5">
+            <p>1、享有会员价购买［会员专区］商品的特权</p>
+            <p>2、免费听大咖课</p>
+            <p>3、赠送大V店店铺一个。注册大V店店铺成功后，享有大V店卖家(店主)相关权益。</p>
+            <p>4、赠送199元购物红包</p>
+            <p>5、可免费加入V友会</p>
+            <p>6、赠送大V店原创记事本及卖家手册</p>
+            <p>7、赠送神秘精美礼物一份（4月）</p>
+            <p>以上福利为4月福利，后期如发生变更会提前公告</p>
+            <p>更多福利敬请期待</p>
+        </div>
+    </div>
+    <div class="vip_introduce_con">
+        <div class="title">［会员专区］购物须知</div>
+        <div class="mt_5">1、会员身份购买</div>
+        <div class="mt_10">
+            <p>A、购买［会员专区］商品，享有会员价</p>
+            <p>B、购买［会员专区］商品，佣金为0</p>
+            <p>C、会员需要在自己店铺购买才可以享有会员价</p>
+        </div>
+        <div class="mt_5">2、非会员身份购买［会员专区］商品只能以正常价购买，不享有会员价</div>
+        <div class="mt_10">
+            <p>注：非会员在［会员专区］购买产生的成功订单收益归属店主</p>
+        </div>
+    </div>
+    <div class="vip_introduce_con">
+        <div class="title"><span></span>会员须知</div>
+        <div class="mt_5">
+            <p>1、加入大V店会员的费用为199元，一经开通不可退订，取消、转让，赠送等会员账户权益变更的操作，因此，请您深思熟虑后再决定是否开通；</p>
+            <p>2、成为会员后你享有大V店（卖家）店主相关的权益；</p>
+            <p>3、会员权益会根据用户需求和业务发展需求做变更，变更前会提前公告。</p>
+            <p>4、大V店拥有最终解释权。</p>
+        </div>
+    </div>
+    <div class="vip_introduce_dvd">大V店拥有会员专区的最终解释权。</div>
+    <a href="" data-dav-tj="vip_introduce|open_vip|open_vip|1|open_vip@vip_introduce" >
+        <div class="open_vip_btn" >立即开通会员</div>
+    </a>
+</div>
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script src="../javascript/jweixin-1.0.0.js"></script>
+<script src="../javascript/units.js"></script>
+<script src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/jquery.lazyload.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+
+</body>
+</html>

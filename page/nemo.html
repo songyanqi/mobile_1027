@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/v.css" rel="stylesheet">
+    <title>Nemo的小店</title>
+
+    <script type="text/javascript">
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:1,   // 头部首页按钮
+            shareOnHead:1
+        };
+            // 店铺的图标
+        var imgUrl = "//pic.davdian.com/free/dianzhutouxiang_demo.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        //店铺描述
+        var descContent = '全场包邮，还有获取哈爸签名新书机会。';
+        var shareTitle = 'nemo小店';  //店铺名称
+        var appid = ''; //apiID，可留空
+        var wx_token = 0;
+        var wx_appid = '';
+        var wx_timestamp = '';
+        var wx_nonceStr = '';
+        var wx_signature = '';
+    </script>
+
+
+</head>
+<body>
+<div class="top0">
+    <div class="top_container">
+         <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <a class="top_back" href="javascript:history.back();" >
+            <span class="home_arrow"></span>
+        </a>
+        <div class="title_container">
+            Nemo的小店
+        </div>
+    </div>
+</div>
+<div class="v-con">
+    <div class="shop_bg">
+        <div class="bg_container">
+            <img src="//pic.davdian.com/free/dianpubeijing_500_250.jpg">
+        </div>
+        <div class="v_info_container">
+                <div class="head_portrait">
+                    <img src="//pic.davdian.com/free/dianzhutouxiang_demo.jpg" class="v_info_img">
+                </div>
+                <div class="v_info_text">Nemo的小店</div>
+        </div>
+    </div>
+    <div class="dav-shadow v_info">
+        哈爸，亲子阅读推广人，《史上最接地气的幼儿书单》一书作者，欢迎关注微信公众号：经典绘本（jingdianhuiben）。 哈爸V店里的东东可七天无理由退货。
+    </div>
+    <div class="v_contact dav-shadow mt12">
+        <div class="item">
+        <span class="contact_title">微信公众号：</span><span class="dav-blue">经典绘本</span>
+        </div>
+        <div class="item">
+            <span class="contact_title">客服电话：</span><span class="dav-blue">4006081066</span>
+        </div>
+    </div>
+    <div class="qr-img-container  mt12">
+        <img src="//pic.davdian.com/free/index_qrcode_mama.png">
+        <div class="qr-text" >保存二维码图片到手机相册，用微信扫一扫选择二维码图片即可访问店铺。</div>
+    </div>
+    <div class="title_container">
+            <div class="title">我的推荐</div>
+    </div>
+    <div class="goos_list_con">
+        <div class="good_list_2_row">
+            <a href="/1136.html?_refer=category_hot" class="good_item" data-dav-tj="category|hot_good|hot_good_1136|1|hot_good@category">
+                <div class="good_img_container">
+                    <img data-original="//pic.davdian.com/images/201506/goods_img/1136_G_1434442104841.jpg@!es_w320h320_aq70"
+                         src="//pic.davdian.com/free/loading_320_320_v2.png">
+                    <div class="tag tag3"></div>
+                </div>
+                <div class="good_con">
+                    <div class="good_title">呀！屁股（一本畅销、幽默的屁股科普绘本。让你在喷饭大笑中，去了解你熟悉也陌生的屁股知识，一本适合用于开故事会的书，一本你拿起就放不下的书！耕林童书馆出品）</div>
+                    <div class="fz_12">
+                        <span class="dav-color-price">¥18.00</span>
+                        <span class="lable">秒杀</span>
+                    </div>
+                    <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+                    <div class="good_price">¥116.00</div>
+                    </div>
+                </a>
+
+            <a href="/1136.html?_refer=category_hot" class="good_item" data-dav-tj="category|hot_good|hot_good_1136|1|hot_good@category">
+                <div class="good_img_container">
+                    <img data-original="//pic.davdian.com/images/201506/goods_img/1136_G_1434442104841.jpg@!es_w320h320_aq70"
+                         src="//pic.davdian.com/free/loading_320_320_v2.png">
+                    <div class="tag tag3"></div>
+                </div>
+                <div class="good_con">
+                    <div class="good_title">呀！屁股（一本畅销、幽默的屁股科普绘本。让你在喷饭大笑中，去了解你熟悉也陌生的屁股知识，一本适合用于开故事会的书，一本你拿起就放不下的书！耕林童书馆出品）</div>
+                    <div class="fz_12">
+                        <span class="dav-color-price">¥18.00</span>
+                        <span class="lable">秒杀</span>
+                    </div>
+                    <div class="good_title">探索科学百科Discovery Education探索科学百科Discovery Education</div>
+                    <div class="good_price">¥116.00</div>
+                    </div>
+                </a>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script> <!--下面这个jquery要带着version哈--> <script type="text/javascript">     !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>'); </script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/jquery.lazyload.js"></script>
+
+<script type="text/javascript" src="../javascript/v.js"></script>
+
+
+</body>
+</html>

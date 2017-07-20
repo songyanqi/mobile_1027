@@ -1,0 +1,43 @@
+// 讲师介绍
+.class_introduce_right{
+  padding: 4px 10px 10px;
+  color: #666;
+  a{
+    display: block;
+  }
+  .class_introduce_con{
+    padding-top: 10px;
+    color: #333;
+  }
+  .teacher_tit{
+    img{
+      width: 40px;
+      height: 40px;
+      border-radius: 40px;
+    }
+    .teacher_dis{
+      display: inline-block;
+      color: #333;
+      vertical-align: middle;
+    }
+  }
+  .class_introduce_text{
+    color: #666;
+    margin-top: 10px;
+    word-break: break-all;
+  }
+}
+.guest_introduce_con{
+   margin-top: 10px;
+   border-top: #eee solid 1px;
+ }
+.class_intrduce_left{
+  color: #666;
+  .class_intrduce_left_div{
+    padding-bottom: 6px;
+  }
+  .class_intrduce_left_img{
+    margin-bottom: 10px;
+    border-radius: 7px;
+  }
+}

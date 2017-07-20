@@ -1,0 +1,907 @@
+
+{
+  "code" : "0",
+  "shop_url" : "https://bravetime.davdian.com",
+  "visitor_status" : "3",
+  "sess_key" : "48a275a991a0a6295706e6d9f8c3a784b62a4bbc",
+  "data_version": "xxxx",
+    "sys_time": 1495209400,
+  "data" :{
+    "representId" : "0",
+    "shopGoodsUrl" : "https://bravetime.davdian.com/348.html",
+    "shopGoodsMemo" : "店主购物月省1-2千，销售月入2-3千",
+    "basis" : {
+      "shareImg": "http://pic.davdian.com/supplier/2016/09/29/640_640_f74b90533612c526a3b292cee4c00a9b.jpg?x-oss-process=image/resize,m_fill,w_100,h_100/quality,Q_90&",
+      "goodsId" : "373427",
+      "goodsName" : "贝亲（Pigeon）食物是食物物是食物研磨器05008",
+      "goodsShortName" : "贝亲",
+      "goodsStyleName" : "xxxx",
+      "shareGoodsName" : "xxxx",
+      "shareRecommend" : "xxxx",
+      "goodsImg" : "http://pic.davdian.com/supplier/2017/04/22/1000_1000_a6f552960a5793c38debc72b3f35cf4a.jpg?x-oss-process=image/resize,m_fill,w_640,h_640/format,webp",
+      "goodsThumb" : "xxxx",
+      "originalImg" : "xxxx",
+      "pictures" : [
+        {
+          "imgUrl" : "https://static.vux.li/demo/2.jpg",
+          "thumbUrl" : "https://static.vux.li/demo/2.jpg",
+          "imgDesc" : "xxxx",
+          "imgOriginal" : "https://static.vux.li/demo/2.jpg"
+        },
+        {
+          "imgUrl" : "https://static.vux.li/demo/1.jpg",
+          "thumbUrl" : "https://static.vux.li/demo/1.jpg",
+          "imgDesc" : "xxxx",
+          "imgOriginal" : "https://static.vux.li/demo/2.jpg"
+        }
+      ],
+      "crossBorder" : "海外直邮",
+      "shopPrice" : "9.00",
+      "marketPrice" : "2.00",
+      "sellerIncome" : "4.00",
+      "bookAuthor" : "dony",
+      "bookPublishing" : "出版社",
+      "cats" : [
+        {
+          "catId" : "123"
+        }
+      ],
+      "kinds" : [
+        {
+          "id" : "152414",
+          "title" : "四层鞋架",
+          "onSale" : 0
+        },
+        {
+          "id" : "152416",
+          "title" : "三层鞋架",
+          "onSale" : 1
+        },
+        {
+          "id" : "152418",
+          "title" : "二层鞋架",
+          "onSale" : 1
+        },
+        {
+          "id" : "152419",
+          "title" : "一层鞋架",
+          "onSale" : 1
+        }
+      ],
+      "childs" : {
+        "tags" : [
+          {
+            "id" : "56",
+            "title" : "颜色",
+            "detail" : [
+              {
+                "id" : "-415",
+                "title" : "灰色"
+              },
+              {
+                "id" : "-416",
+                "title" : "黄色"
+              },
+              {
+                "id" : "-417",
+                "title" : "绿色"
+              },
+              {
+                "id" : "-418",
+                "title" : "蓝色"
+              },
+              {
+                "id" : "-419",
+                "title" : "红色"
+              }
+            ]
+          },
+          {
+            "id" : "63",
+            "title" : "尺码",
+            "detail" : [
+              {
+                "id" : "-94025",
+                "title" : "均码"
+              },
+              {
+                "id" : "-94026",
+                "title" : "34码"
+              },
+              {
+                "id" : "-94027",
+                "title" : "33码"
+              },
+              {
+                "id" : "-94028",
+                "title" : "32码"
+              },
+              {
+                "id" : "-94029",
+                "title" : "31码"
+              }
+            ]
+          }
+        ],
+        "list" : [
+          {
+            "tag" : "-415:-94025",
+            "goodsId" : "373427"
+          },
+          {
+            "tag" : "-415:-94026",
+            "goodsId" : "373428"
+          },
+          {
+            "tag" : "-415:-94027",
+            "goodsId" : "373429"
+          },
+          {
+            "tag" : "-415:-94028",
+            "goodsId" : "373430"
+          },
+          {
+            "tag" : "-416:-94025",
+            "goodsId" : "373431"
+          },
+          {
+            "tag" : "-416:-94026",
+            "goodsId" : "373432"
+          },
+          {
+            "tag" : "-416:-94027",
+            "goodsId" : "373433"
+          },
+          {
+            "tag" : "-416:-94028",
+            "goodsId" : "373434"
+          }
+        ]
+      },
+      "service" : [
+        {
+          "serviceTitle1" : "59包邮",
+          "serviceTitle2" : "满15包邮",
+          "servicePolicy" : "15包邮的政策政策政策政策政策政策政策",
+          "servicePolicyUrl" : "xxxx",
+          "servicePolicyRtf": "<p>看看出来了么</p>",
+          "command" : {
+            "content" : ""
+          }
+        },
+        {
+          "serviceTitle1" : "15天退换货",
+          "serviceTitle2" : "满15包邮",
+          "servicePolicy" : "15包邮的政策政策政策政策政策政策政策",
+          "servicePolicyUrl" : "xxxx",
+          "command" : {
+            "content" : ""
+          }
+        },
+        {
+          "serviceTitle1" : "PICC 承保",
+          "serviceTitle2" : "满15包邮",
+          "servicePolicy" : "15包邮的政策政策政策政策政策政策政策",
+          "servicePolicyUrl" : "xxxx",
+          "command" : {
+            "content" : ""
+          }
+        },
+        {
+          "serviceTitle1" : "大V店发货",
+          "serviceTitle2" : "满15包邮",
+          "servicePolicy" : "15包邮的政策政策政策政策政策政策政策",
+          "servicePolicyUrl" : "xxxx",
+          "command" : {
+            "content" : "点击时的动作"
+          }
+        },
+        {
+          "serviceTitle1" : "大V店发货大V店发货大V店发货大V店发货大V店发货",
+          "serviceTitle2" : "满15包邮",
+          "servicePolicy" : "15包邮的政策政策政策政策政策政策政策",
+          "servicePolicyUrl" : "xxxx",
+          "command" : {
+            "content" : "点击时的动作"
+          }
+        }
+      ],
+      "brand" : {
+        "brandName" : "阿迪达斯",
+        "brandLogo" : "sdfafdsf",
+        "brandDesc" : "阿迪达斯描述阿迪达斯描述阿迪达斯描述阿迪达斯描述阿迪达斯描述阿迪达斯描述阿迪达斯描述阿迪达斯描述阿迪达斯描述阿迪达斯描述阿迪达斯描述阿迪达斯描述",
+        "command": {
+          "content" : "http://baidu.com"
+        }
+      },
+      "attributes" : [{
+        "ttrId":"23850",
+        "attrInfo":"国学",
+        "attrType": "类型"
+      },
+        {
+          "ttrId":"23850",
+          "attrInfo":"国学",
+          "attrType": "类型"
+        }
+      ],
+      "details" : [
+        {
+          "detailId" : "123",
+          "detailPos" : "1",
+          "detailType" : "1",
+          "detailUrl" : "https://static.vux.li/demo/2.jpg"
+        },
+        {
+          "detailId" : "123",
+          "detailPos" : "1",
+          "detailType" : "1",
+          "detailUrl" : "https://static.vux.li/demo/1.jpg"
+        },
+        {
+          "detailId" : "123",
+          "detailPos" : "1",
+          "detailType" : "2",
+          "detailUrl" : "http://flv.bn.netease.com/videolib3/1703/16/dnwLS2333/SD/dnwLS2333-mobile.mp4"
+        },
+        {
+          "detailId" : "123",
+          "detailPos" : "1",
+          "detailType" : "1",
+          "detailUrl" : "https://static.vux.li/demo/2.jpg"
+        },
+        {
+          "detailId" : "123",
+          "detailPos" : "1",
+          "detailType" : "3",
+          "detailUrl" : "https://static.vux.li/demo/1.jpg"
+        },
+        {
+          "detailId" : "123",
+          "detailPos" : "1",
+          "detailType" : "1",
+          "detailUrl" : "https://static.vux.li/demo/2.jpg"
+        },
+        {
+          "detailId" : "123",
+          "detailPos" : "1",
+          "detailType" : "1",
+          "detailUrl" : "https://static.vux.li/demo/1.jpg"
+        },
+        {
+          "detailId" : "123",
+          "detailPos" : "1",
+          "detailType" : "1",
+          "detailUrl" : "https://static.vux.li/demo/2.jpg"
+        }
+      ]
+    },
+    "extra" : {
+      "parent" : {
+        "salesNumber" : "10",
+        "goodsStocks" : "10"
+      },
+      "dataList": [
+        {
+          "goodsId": "373427",
+          "tag" : "-415:-94025",
+          "price": {
+            "finalPrice": "2.00",
+            "shopPrice" : "10",
+            "importTariff": "1.25",
+            "sellerIncome": "1.00",
+            "activityRatio": "1.00",
+            "memberGoods": "0",
+            "memberPrice": "123"
+          },
+          "sales": {
+            "salesNumber": "20",
+            "goodsStocks": "10"
+          },
+          "bonus": {
+            "hasBonus": 1,
+            "typeMoney": "10.00",
+            "bonusUrl": "xxxx",
+            "dataList" : [
+              {
+                "bonusId": "123",
+                "typeId": "123",
+                "typeName" : "呜呜",
+                "typeMoney" : "10",
+                "minGoodsAmount" : "100",
+                "limitDesc" : "xxx",
+                "limitType" : "1",
+                "limitTypeName" : "1",
+                "beginDate" : "2017.05.01",
+                "endDate" : "2017.05.15",
+                "limitDays" : "3"
+              },
+              {
+                "bonusId": "123",
+                "typeId": "123",
+                "typeName" : "呜呜",
+                "typeMoney" : "10",
+                "minGoodsAmount" : "100",
+                "limitDesc" : "描述描述",
+                "limitType" : "1",
+                "limitTypeName" : "1",
+                "beginDate" : "2017.05.01",
+                "endDate" : "2017.05.15",
+                "limitDays" : "3"
+              }
+            ],
+            "command": {
+              "content": "this"
+            }
+          },
+          "activity": [
+            {
+              "actIntro" : "团购团购团购团购团购团购团购团购团购团购团购团购团购团购团购团购",
+              "typeId" : "4",
+              "typeName" : "赠品",
+              "actTypeId" : "6",
+              "actTypeName" : "",
+              "begTime" : "1496702133.893",
+              "endTime" : "1498308433.893",
+              "actUrl" : "http://baidu.com",
+              "showTime" : 1,
+              "gifts" : [
+              ],
+              "command" : {
+                "content" : "http:www.baidu.com"
+              }
+            }
+          ],
+          "coming": [
+            {
+              "actId" : "123",
+              "typeId" : "1",
+              "typeName" : "xxxx",
+              "actTypeId" : "1",
+              "actTypeName" : "xxxx",
+              "begTime" : "1",
+              "endTime" : "2",
+              "leftTime" : "0",
+              "actLabel" : "xxxx",
+              "showTime" : "true",
+              "command" : {
+                "content" : "点击时的动作"
+              }
+            }
+          ],
+          "status": {
+            "onSale": 1,
+            "preSale": 1,
+            "collected": 1,
+            "goodsLimit": "4"
+          },
+          "labels" : [
+            {
+              "goodsLabel" : "促销"
+            }
+          ]
+        },
+        {
+          "goodsId": "373428",
+          "tag" : "-415:-94026",
+          "price": {
+            "finalPrice": "10.00",
+            "shopPrice" : "10.00",
+            "importTariff": "1.25",
+            "sellerIncome": "1.00",
+            "activityRatio": "1.00",
+            "memberGoods": "1",
+            "memberPrice": "123"
+          },
+          "sales": {
+            "salesNumber": "10",
+            "goodsStocks": "50"
+          },
+          "bonus": {
+            "hasBonus": 1,
+            "typeMoney": "10.00",
+            "bonusUrl": "xxxx"
+          },
+          "activity": [
+            {
+              "actIntro" : "满减活动",
+              "typeId" : "1",
+              "typeName" : "满减",
+              "actTypeId" : "1",
+              "actTypeName" : "",
+              "begTime" : "1490155870312",
+              "endTime" : "1490300800000",
+              "actUrl" : "http://baidu.com",
+              "showTime" : 0,
+              "gifts" : [],
+              "command" : {
+                "content" : "点击时的动作"
+              }
+            }
+          ],
+          "status": {
+            "onSale": 1,
+            "preSale": 1,
+            "collected": 1,
+            "goodsLimit": "1"
+          },
+          "labels" : [
+            {
+              "goodsLabel" : "促销"
+            }
+          ]
+        },
+        {
+          "goodsId": "373428",
+          "tag" : "-418:-94025",
+          "price": {
+            "finalPrice": "10.00",
+            "shopPrice" : "10.00",
+            "importTariff": "1.25",
+            "sellerIncome": "1.00",
+            "activityRatio": "1.00",
+            "memberGoods": "1",
+            "memberPrice": "123"
+          },
+          "sales": {
+            "salesNumber": "10",
+            "goodsStocks": "0"
+          },
+          "bonus": {
+            "hasBonus": 1,
+            "typeMoney": "10.00",
+            "bonusUrl": "xxxx"
+          },
+          "activity": [
+            {
+              "actId": "123",
+              "actIntro": "满299-50",
+              "typeId": "1",
+              "typeName": "满立减",
+              "begTime": "1",
+              "endTime": "2",
+              "actUrl": "xxxx",
+              "gifts" : [],
+              "showTime": 1,
+              "command" : {
+                "content" : "点击时的动作"
+              }
+            }
+          ],
+          "status": {
+            "onSale": 0,
+            "preSale": 1,
+            "collected": 1,
+            "goodsLimit": "1"
+          },
+          "labels" : [
+            {
+              "goodsLabel" : "促销"
+            }
+          ]
+        },
+        {
+          "goodsId": "373429",
+          "tag" : "-415:-94027",
+          "price": {
+            "finalPrice": "100.00",
+            "shopPrice" : "10.00",
+            "importTariff": "3.25",
+            "sellerIncome": "2.22",
+            "activityRatio": "1.00",
+            "memberGoods": "1",
+            "memberPrice": "123"
+          },
+          "sales": {
+            "salesNumber": "20",
+            "goodsStocks": "1"
+          },
+          "bonus": {
+            "hasBonus": 0,
+            "typeMoney": "50.00",
+            "bonusUrl": "xxxx"
+          },
+          "activity": [
+            {
+              "actIntro" : "4",
+              "typeId" : "5",
+              "typeName" : "",
+              "actTypeId" : "6",
+              "actTypeName" : "单品折",
+              "gifts" : [],
+              "begTime" : "1490155870312",
+              "endTime" : "1491110004804",
+              "actUrl" : "http://baidu.com",
+              "showTime" : 1,
+              "command" : {
+                "content" : "点击时的动作"
+              }
+            }
+          ],
+          "status": {
+            "onSale": 1,
+            "preSale": 1,
+            "collected": 1,
+            "goodsLimit": "1"
+          },
+          "labels" : [
+            {
+              "goodsLabel" : "促销"
+            }
+          ]
+        },
+        {
+          "goodsId": "373430",
+          "tag" : "-415:-94028",
+          "price": {
+            "finalPrice": "10.00",
+            "shopPrice" : "10.00",
+            "importTariff": "1.25",
+            "sellerIncome": "1.00",
+            "activityRatio": "1.00",
+            "memberGoods": "1",
+            "memberPrice": "123"
+          },
+          "sales": {
+            "salesNumber": "10",
+            "goodsStocks": "1"
+          },
+          "bonus": {
+            "hasBonus": 0,
+            "typeMoney": "10.00",
+            "bonusUrl": "xxxx"
+          },
+          "activity": [
+            {
+              "actId": "123",
+              "actIntro": "满299-50",
+              "typeId": "1",
+              "typeName": "满立减",
+              "begTime": "1",
+              "endTime": "2",
+              "actUrl": "xxxx",
+              "gifts" : [],
+              "showTime": 1,
+              "command" : {
+                "content" : "点击时的动作"
+              }
+            }
+          ],
+          "status": {
+            "onSale": 1,
+            "preSale": 1,
+            "collected": 1,
+            "goodsLimit": "1"
+          },
+          "labels" : [
+            {
+              "goodsLabel" : "促销"
+            }
+          ]
+        },
+        {
+          "goodsId": "373430",
+          "tag" : "-419:-94027",
+          "price": {
+            "finalPrice": "10.00",
+            "shopPrice" : "10.00",
+            "importTariff": "1.25",
+            "sellerIncome": "1.00",
+            "activityRatio": "1.00",
+            "memberGoods": "1",
+            "memberPrice": "123"
+          },
+          "sales": {
+            "salesNumber": "10",
+            "goodsStocks": "20"
+          },
+          "bonus": {
+            "hasBonus": 1,
+            "typeMoney": "10.00",
+            "bonusUrl": "xxxx"
+          },
+          "activity": [
+            {
+              "actIntro" : "满299-50",
+              "typeId" : "2",
+              "typeName" : "",
+              "actTypeId" : "7",
+              "actTypeName" : "满立减",
+              "begTime" : "1490155870312",
+              "endTime" : "1491110004804",
+              "actUrl" : "http://baidu.com",
+              "gifts" : [],
+              "showTime" : 1,
+              "command" : {
+                "content" : "点击时的动作"
+              }
+            }
+          ],
+          "status": {
+            "onSale": 1,
+            "preSale": 1,
+            "collected": 1,
+            "goodsLimit": "1"
+          },
+          "labels" : [
+            {
+              "goodsLabel" : "促销"
+            }
+          ]
+        },
+        {
+          "goodsId": "373431",
+          "tag" : "-416:-94025",
+          "price": {
+            "finalPrice": "10.00",
+            "shopPrice" : "10.00",
+            "importTariff": "1.25",
+            "sellerIncome": "1.00",
+            "activityRatio": "1.00",
+            "memberGoods": "1",
+            "memberPrice": "123"
+          },
+          "sales": {
+            "salesNumber": "10",
+            "goodsStocks": "10"
+          },
+          "bonus": {
+            "hasBonus": 1,
+            "typeMoney": "10.00",
+            "bonusUrl": "xxxx"
+          },
+          "activity": [
+            {
+              "actIntro" : "满减活动",
+              "typeId" : "2",
+              "typeName" : "满减",
+              "actTypeId" : "1",
+              "actTypeName" : "",
+              "begTime" : "1490155870312",
+              "endTime" : "1490300800000",
+              "gifts" : [],
+              "actUrl" : "http://baidu.com",
+              "showTime" : 0
+            }
+          ],
+          "status": {
+            "onSale": 1,
+            "preSale": 1,
+            "collected": 0,
+            "goodsLimit": "1"
+          },
+          "labels" : [
+            {
+              "goodsLabel" : "促销"
+            }
+          ]
+        },
+        {
+          "goodsId": "373432",
+          "tag" : "-416:-94026",
+          "price": {
+            "finalPrice": "10.00",
+            "shopPrice" : "10.00",
+            "importTariff": "1.25",
+            "sellerIncome": "1.00",
+            "activityRatio": "1.00"
+          },
+          "sales": {
+            "salesNumber": "10",
+            "goodsStocks": "20"
+          },
+          "bonus": {
+            "hasBonus": 1,
+            "typeMoney": "10.00",
+            "bonusUrl": "xxxx"
+          },
+          "activity": [
+            {
+              "actId": "123",
+              "actIntro": "满299-50",
+              "typeId": "1",
+              "typeName": "满立减",
+              "gifts" : [],
+              "begTime": "1",
+              "endTime": "2",
+              "actUrl": "xxxx",
+              "showTime": 1
+            }
+          ],
+          "status": {
+            "onSale": 1,
+            "preSale": 1,
+            "collected": 1,
+            "goodsLimit": "1"
+          },
+          "labels" : [
+            {
+              "goodsLabel" : "促销"
+            }
+          ]
+        }
+      ]
+    },
+    "shop" : {
+      "sellerId" : "",
+      "sellerName" : "琪琪吗",
+      "sellerAvatar" : "https://static.vux.li/demo/1.jpg",
+      "servicePhone" : "1111111111",
+      "shopGoods" : {
+        "shopGoodsMemo" : "121212",
+        "command" : {
+          "content" : "qwqwq"
+        }
+      },
+      "command" : {
+        "content" : "点击时的动作"
+      }
+    },
+    "notice" :
+      {
+        "noticeName": "喜报",
+        "noticeUrl": "http://www.baidu.com",
+        "noticeContent": "放假了放假了",
+        "command" : {
+          "content" : "点击时的动作"
+        }
+      }
+    ,
+    "trends" :[
+      {
+        "trendId" : "123",
+        "trendInfo" : "12",
+        "trendTime" : "xxxx",
+        "trendUserId" : "12345",
+        "trendUserName" : "购买1",
+        "trendUserAvatar" : "https://static.vux.li/demo/1.jpg"
+      },
+      {
+        "trendId" : "123",
+        "trendInfo" : "123",
+        "trendTime" : "xxxx",
+        "trendUserId" : "12345",
+        "trendUserName" : "收藏2",
+        "trendUserAvatar" : "https://static.vux.li/demo/2.jpg"
+      },
+      {
+        "trendId" : "123",
+        "trendInfo" : "12",
+        "trendTime" : "xxxx",
+        "trendUserId" : "12345",
+        "trendUserName" : "购买1",
+        "trendUserAvatar" : "https://static.vux.li/demo/1.jpg"
+      },
+      {
+        "trendId" : "123",
+        "trendInfo" : "123",
+        "trendTime" : "xxxx",
+        "trendUserId" : "12345",
+        "trendUserName" : "收藏2",
+        "trendUserAvatar" : "https://static.vux.li/demo/2.jpg"
+      },
+      {
+        "trendId" : "123",
+        "trendInfo" : "12",
+        "trendTime" : "xxxx",
+        "trendUserId" : "12345",
+        "trendUserName" : "购买1",
+        "trendUserAvatar" : "https://static.vux.li/demo/1.jpg"
+      },
+      {
+        "trendId" : "123",
+        "trendInfo" : "123",
+        "trendTime" : "xxxx",
+        "trendUserId" : "12345",
+        "trendUserName" : "收藏2",
+        "trendUserAvatar" : "https://static.vux.li/demo/2.jpg"
+      },
+      {
+        "trendId" : "123",
+        "trendInfo" : "xxxx",
+        "trendTime" : "xxxx",
+        "trendUserId" : "12345",
+        "trendUserName" : "购买3",
+        "trendUserAvatar" : "https://static.vux.li/demo/3.jpg"
+      }
+    ],
+    "comments" : {
+      "commentNum" : "123",
+      "commentRate" : "97.9%",
+      "command": {
+        "content" : "点击时的动作"
+      },
+      "dataList" : [
+        {
+          "commentId" : "123",
+          "commentInfo" : "评论内容",
+          "commentTime" : "xxxx",
+          "commentRate" : "0",
+          "commentUserId" : "12345",
+          "commentUserName" : "dony1",
+          "commentUserAvatar" : "https://static.vux.li/demo/1.jpg",
+          "commentImgs" : [
+            {
+              "imgId" : "123",
+              "imgUrl" : "xxxx",
+              "bigUrl" : "xxxx"
+            }
+          ]
+        },
+        {
+          "commentId" : "123",
+          "commentInfo" : "评论内容",
+          "commentTime" : "xxxx",
+          "commentRate" : "2",
+          "commentUserId" : "12345",
+          "commentUserName" : "dony1",
+          "commentUserAvatar" : "https://static.vux.li/demo/1.jpg",
+          "commentImgs" : [
+            {
+              "imgId" : "123",
+              "imgUrl" : "xxxx",
+              "bigUrl" : "xxxx"
+            }
+          ]
+        },{
+          "commentId" : "123",
+          "commentInfo" : "评论内容",
+          "commentTime" : "xxxx",
+          "commentRate" : "4",
+          "commentUserId" : "12345",
+          "commentUserName" : "dony1",
+          "commentUserAvatar" : "https://static.vux.li/demo/1.jpg",
+          "commentImgs" : [
+            {
+              "imgId" : "123",
+              "imgUrl" : "xxxx",
+              "bigUrl" : "xxxx"
+            }
+          ]
+        },{
+          "commentId" : "123",
+          "commentInfo" : "评论内容",
+          "commentTime" : "xxxx",
+          "commentRate" : "1",
+          "commentUserId" : "12345",
+          "commentUserName" : "dony1",
+          "commentUserAvatar" : "https://static.vux.li/demo/1.jpg",
+          "commentImgs" : [
+            {
+              "imgId" : "123",
+              "imgUrl" : "xxxx",
+              "bigUrl" : "xxxx"
+            }
+          ]
+        },{
+          "commentId" : "123",
+          "commentInfo" : "评论内容评论内容评论内容评论内容评论内容评论内容评论内容",
+          "commentTime" : "xxxx",
+          "commentRate" : "1",
+          "commentUserId" : "12345",
+          "commentUserName" : "dony1",
+          "commentUserAvatar" : "https://static.vux.li/demo/1.jpg",
+          "commentImgs" : [
+            {
+              "imgId" : "123",
+              "imgUrl" : "xxxx",
+              "bigUrl" : "xxxx"
+            }
+          ]
+        }
+      ]
+    },
+    "spread": {
+      "spreadUrl" : "https://bravetime.davdian.com/spread/152414.html",
+      "command" : {
+        "content" : "点击时的动作"
+      }
+    },
+    "style" : {
+      "slide" : "?x-oss-process=image/format,webp",
+      "avatar" : "?x-oss-process=image/format,webp",
+      "detail" : "?x-oss-process=image/format,webp",
+      "guess" : "?x-oss-process=image/format,webp"
+    }
+  }
+}

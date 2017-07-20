@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="http://cdn.davdian.com/topic/css/topic-8875fcbb56.css" rel="stylesheet">
+    <style>
+        body{
+            background-color: #f1f1f1;
+            padding-bottom:20px;
+        }
+        .day-new {margin-top: 0px;}
+        .day-new ul, .day-new ul li {margin:0;padding:0;list-style: none;display: block;}
+        .day-new a {display: block;}
+        .good-detail {position: relative;}
+        .good-img {width: 120px;height: 120px;position: absolute;margin: 10px;}
+        .good-right {margin-left: 140px;min-height: 140px;padding:20px 10px 0 0;box-sizing: border-box;}
+        .good-info {position: absolute;bottom: 20px;}
+        .good-name {font-size: 14px;font-weight: bold;text-overflow: ellipsis;white-space: pre-line;
+            height: 66px;
+            line-height: 22px;
+            margin-bottom: 2px;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            display: -webkit-box;
+            overflow: hidden;}
+        .good-price {font-size: 18px;color:#D73C6B;}
+        .market-price {text-decoration: line-through;}
+        .good-price-icon {font-size: 12px;color:#D73C6B;}
+        .good-action {position: absolute;right: 10px;bottom: 10px;color: #D73C6B;}
+        .good-desc {padding: 10px;line-height: 180%;}
+        .good-desc .re {font-size:16px;color: #D73C6B;}
+        .index_links .link_item {
+            float: left;
+            width: 33.33333%;
+            text-align: center;
+            padding: 12px 0px;
+            position: relative;
+            background-color: #F7F7F7;
+        }
+        .link_bottom{
+            width: 100%;
+            height: 2px;
+            background-color: #FF4A7D;
+            position: absolute;
+            bottom: 0px;
+        }
+        .index_links .active {
+            background-color: #ffffff;
+        }
+        .index_links .link_img {
+            max-width: 46px;
+            max-height: 46px;
+            display: inline-block;
+        }
+        .index_links .link_text{
+            padding-top: 8px;
+            font-size: 12px;
+            color: #333333;
+            font-weight: lighter;
+        }
+        .order_good_name {
+            font-size: 14px;
+            height: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            line-height: 20px;
+        }
+        .order_good_text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+        .sale{
+            font-size: 14px;
+            float: right;
+            height: 30px;
+            color: #ff4a7d;
+            margin-top: -3px;
+            line-height: 30px;
+            padding: 0 10px;
+            position: relative;
+            border-radius: 2px;
+        }
+        .thin_line{
+            position: absolute;
+            bottom: 0px;
+            content: "";
+            display: block;
+            position: absolute;
+            left: -50%;
+            width: 200%;
+            height: 1px;
+            background: #e1e1e1;
+            -webkit-transform:scale(0.5);
+        }
+        .sale:before {
+            width: 200%;
+            height: 200%;
+            transform: scale(.5);
+            transform-origin: left top;
+            -ms-transform: scale(.5);
+            -ms-transform-origin: left top;
+            -webkit-transform: scale(.5);
+            -webkit-transform-origin: left top;
+            -moz-transform: scale(.5);
+            -moz-transform-origin: left top;
+            -o-transform: scale(.5);
+            -o-transform-origin: left top;
+        }
+        .sale:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid #ff4a7d;
+            border-radius: 2px;
+            width: 200%;
+            height: 200%;
+            box-sizing: border-box;
+        }
+        .shop_price{
+            font-size: 14px;color: #FF4A7D;float: left;line-height: 11px;line-height: 11px;padding-top: 16px;
+        }
+        .market_price{
+            font-size:11px;
+            padding-left: 10px;
+            color: #999999;
+        }
+        @media screen and (max-width: 374px) {
+            .sale{
+                font-size: 12px;
+                float: right;
+                height: 30px;
+                color: #ff4a7d;
+                margin-top: -3px;
+                line-height: 30px;
+                padding: 0 10px;
+                position: relative;
+                border-radius: 2px;
+            }
+            .shop_price{
+                font-size: 12px;
+                color: #FF4A7D;
+                float: left;
+                line-height: 11px;
+                line-height: 11px;
+                padding-top: 16px;
+            }
+            .market_price{
+                font-size:9px;
+                padding-left: 10px;
+                color: #999999;
+            }
+        }
+        .goods_img_size {
+            position: relative;
+        }
+        .goods_img_size:before {
+            width: 200%;
+            height: 200%;
+            transform: scale(.5);
+            transform-origin: left top;
+            -ms-transform: scale(.5);
+            -ms-transform-origin: left top;
+            -webkit-transform: scale(.5);
+            -webkit-transform-origin: left top;
+            -moz-transform: scale(.5);
+            -moz-transform-origin: left top;
+            -o-transform: scale(.5);
+            -o-transform-origin: left top;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+    </style>
+    <title>聚优品</title>
+    <script type="text/javascript">
+        // 店铺的图标
+        var imgUrl = "http://pic.davdian.com/activity/2015/11/21/320_320_390b539e503b11443137ced5fc786c7c.jpg";  //注意必须是绝对路径
+        var lineLink = window.location.href;
+        var descContent = '【每日上新】';//店铺描述
+        var shareTitle = '每天都有新惊喜';  //店铺名称
+        var appid = ''; //apiID，可留空
+        window.autotj = true;
+        //浏览次数：{if $read_times}{$read_times}{else}0{/if}
+    </script>
+
+
+</head>
+<body <!--{if $is_from_app}--> class="in_app" <!--{/if}--> class="tuan" >
+<div class="top0">
+    <div class="top_container">
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <!--文章标题-->
+        <div class="title_container">聚优品</div>
+        <div class="top_right"></div>
+    </div>
+</div>
+<!--<img src="http://pic.davdian.com/free/2017/01/11/750_284_a19626c180ae689e426194fc6902902a.png" alt="">-->
+<img src="http://pic.davdian.com/free/2017/01/13/750_280_2b53490e30f80f21a342a052e8eb0f25.png">
+
+<!--第三部分：商品列表-->
+
+
+<!--{foreach from=$goods_list item=v}-->
+
+<a href="/{$v.goods_id}.html">
+    <div style="position: relative;background-color: #FFFFFF;height: 140px;">
+        <div class="goods_img_size" style="position: absolute;max-width: 120px;top: 10px;left: 10px;">
+            <img id="i{$v.goods_id}" data-original="{$v.goods_img}" src="http://pic.davdian.com/free/loading_640_280_v2.png">
+        </div>
+        <div style="position: absolute;padding-left: 140px;top: 10px;padding-right: 10px;left: 0px;right:0px;">
+            <div class="order_good_name">{$v.goods_name}</div>
+            <div class="order_good_text" style="height: 48px;line-height: 16px;font-size: 11px;color:#666666;padding-top: 5px;">{$v.recommend_word}</div>
+            <div class="qqpp" style="padding-top: 17px;height: 26px;">
+                <div class="shop_price">
+                    <span>￥<!--{if $v.seckill_price gt 0}-->{$v.seckill_price}
+                        <!--{elseif $v.group_price gt 0}-->{$v.group_price}<!--{else}-->{$v.shop_price}<!--{/if}--></span><span class="market-price market_price">￥{$v.market_price}</span>
+                </div>
+                <div class="sale">
+                    <span>立即购买</span>
+                </div>
+            </div>
+        </div>
+        <div class="thin_line"></div>
+    </div>
+</a>
+<!--{/foreach}-->
+
+<!--第四部分：返回首页按钮-->
+<div class="to_shop"><a href="/" class="to_shop_btn">去店铺逛逛</a></div>
+
+
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://fe.davdian.com/staticfe/js/topic-e44755d057.js"></script>
+<script src="http://fe.davdian.com/staticfe/js/topic_fix-351e0c249f.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+body{
+    padding-bottom: 0;
+}
+.up_container{
+    padding: 40px 10px;
+    background-color: #fff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.up_con{
+}
+.u1{
+    font-size: 17px;
+    line-height: 1.5;
+    color: #FF4A7D;
+}
+.u2{
+    margin-top: 20px;
+    font-size: 12px;
+}
+.u2 input{
+    background-color: #fafafa;
+    line-height: 16px;
+    padding: 12px 10px;
+    width: 180px;
+}
+.u2 .tel_text{
+    display: inline-block;
+    margin-top: 3px;
+    width: 200px;
+}
+.u2 .tel_text span{
+    text-align: left;
+    color: #666;
+    display: block;
+}
+.u4{
+    font-size: 16px;
+}
+.bottom_con{
+    padding: 15px 25px;
+    background-color: #fff;
+    color: #333;
+    font-size: 16px;
+}
+.title{
+    font-size: 18px;
+    line-height: 1.4;
+    border-bottom:#eee solid 1px;
+    padding-bottom: 15px;
+}
+.bottom_inner_con{
+    margin-top: 22px;
+    line-height: 23px;
+}
+.inner_title{
+    color: #FF4A7D;
+}
+div.inner_title{
+    margin-bottom: 4px;
+}
+.inner_con{
+    font-size: 16px;
+}
+.dav-btn.submit{
+    background-color: #FF4A7D;
+    color: #fff;
+    margin-top: 16px;
+    width: 160px;
+    font-size: 16px;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 3px;
+}
+.center{
+    text-align: center;
+}
+.small{
+    font-size: 14px;
+}

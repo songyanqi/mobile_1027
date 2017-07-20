@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>地址列表</title>
+    <link href="../stylesheet/base.css" rel="stylesheet">
+    <link href="../stylesheet/model.css" rel="stylesheet">
+    <link href="../stylesheet/icon_list.css" rel="stylesheet">
+    <link href="../stylesheet/cartConfirm.css" rel="stylesheet">
+    <script type="text/javascript">
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0,  // 头部分享按钮
+            btnOnHead:1,    // 头部文字按钮
+            btnText:"新增地址",     // 头部文字按钮文字
+            btnLink:"address.html?action=add"      // 头部文字按钮链接
+        };
+
+
+    var deleteUrl = "/address.html?action=delete"; // 删除地址action
+    </script>
+</head>
+<!--如果是在修改订单时候就加一个class ：in_order_edit-->
+<body class="address_list">
+
+<div class="top0">
+    <div class="top_container">
+        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->
+        <div class="top_left">
+            <a class="top_back" href="javascript:history.back();">
+                <span class="home_arrow"></span>
+            </a>
+        </div>
+        <div class="title_container">
+            地址列表
+        </div>
+        <div class="top_right">
+            <a href="" class="top_btn">
+                <span class="border_btn">新增地址</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="wd_address_list">
+    <ul class="address_list">
+        <li data-for="75910" data-index="0" class="address  without_id_card">
+            <a href="//nemo.davdian.com" class="show half_bottom_border">
+                <span class="name">哈哈哈</span>
+                <span class="tel">15910661506</span>
+
+                <p>新疆 巴音郭楞 若羌县 门票</p>
+            </a>
+
+            <div class="clearfix">
+                <a class="delete" href="/deleteAddress.html?address_id=75910&order_id=0">
+                    <span class="icon"></span>
+                    <span>删除</span>
+                </a>
+                <a class="edit" href="/address.html?address_id=75910&order_id=0">
+                    <span class="icon"></span>
+                    <span>编辑</span>
+                </a>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://cdn.davdian.com/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="../javascript/model.js"></script>
+
+<script type="text/javascript" src="../javascript/base.js"></script>
+<script type="text/javascript" src="../javascript/units.js"></script>
+<script type="text/javascript" src="../javascript/share_get_address.js"></script>
+</body>
+</html>
