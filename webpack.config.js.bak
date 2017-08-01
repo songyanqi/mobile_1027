@@ -14,7 +14,7 @@ module.exports = {
         introduce:'./source/javascript/introduce.config.js',
         classroom:'./source/javascript/classroom.config.js',
         commonList:'./source/javascript/commonList.config.js',
-        // index:'./source/page/index.config.js','add test branch push xukaiqiang',
+        // index:'./source/page/index.config.js','add test branch push xukaiqiang20170801',
         cart:'./page/cart.config.js',
         index_fe:'./source/javascript/index_fe.config.js',
         detail:'./source/javascript/detail.config.js',
