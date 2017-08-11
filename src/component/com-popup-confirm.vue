@@ -4,10 +4,14 @@
     <div class="middle-wrapper">
       <!--alert提示框-->
       <div class="alert-box">
-        <div class="title" v-html="html"></div>
+        <!--<div class="title" v-html="html"></div>-->
+        <div class="titleCont">
+          <div class="title" v-html="title"></div>
+          <div class="okText" v-html="okContent"></div>
+        </div>
         <div class="btns">
-          <div class="btn" @click="ok(); destroy();">确定</div>
-          <div class="btn" @click="cancel(); destroy();">取消</div>
+          <div class="btn" @click="ok(); destroy();" v-html = "okText"></div>
+          <div class="btn colorGray" @click="cancel(); destroy();" v-html = "cancleText"></div>
         </div>
       </div>
     </div>
@@ -18,9 +22,25 @@
   export default {
     props: {
       // html
-      html: {
+//      html: {
+//        type: String,
+//        default: ''
+//      },
+      title: {
+        type: String,
+        default: '提示'
+      },
+      okContent: {
         type: String,
         default: ''
+      },
+      cancleText: {
+        type: String,
+        default: '取消'
+      },
+      okText: {
+        type: String,
+        default: '确定'
       },
       // 确定后的回调
       ok: {
@@ -55,7 +75,7 @@
   }
 </script>
 
-<style lang="sass" rel="stylesheet/scss">
+<style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../common/css/util/all";
 
   // 动画
@@ -92,12 +112,27 @@
       border-top-left-radius: $radius;
       border-top-right-radius: $radius;
       animation: com-popup-confirm-animation 0.3s;
-      .title {
+      /*.title {
         padding: ptr(25) ptr(15);
         border-top-left-radius: $radius;
         border-top-right-radius: $radius;
         font-size: ptr(14);
         line-height: 1.5;
+      }*/
+      .title {
+        color: #333;
+        font-size: ptr(16);
+      }
+      .titleCont {
+        padding: ptr(15) ptr(15);
+        border-top-left-radius: $radius;
+        border-top-right-radius: $radius;
+        font-size: ptr(14);
+        line-height: 1.5;
+        color: #666;
+      }
+      .okText {
+        padding-top: ptr(10);
       }
       .btns {
         display: flex;
@@ -112,6 +147,9 @@
           &:first-of-type {
             border-right: 1px solid #ddd;
           }
+        }
+        .colorGray {
+          color: #666;
         }
       }
     }

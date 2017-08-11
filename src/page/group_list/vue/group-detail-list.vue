@@ -56,7 +56,7 @@
 <!--组件定义-->
 <script>
   import response from '../json/list.json';
-  import layout from "../../../../module/index/layout.es6";
+  import encrypt from '../../../common/js/module/encrypt.js';
   import native from '../../../common/js/module/native.js';
   import ua from '../../../common/js/module/ua.js';
   import $ from '$';
@@ -109,7 +109,7 @@
           url: '/api/mg/sale/reverse/getList?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
-          data: layout.strSign('feed', {
+          data: encrypt({
 //            bpId: 14,
             pageIndex: ts.response ? ts.response.data.reverseGroup.nextPageIndex : 0,
             pageSize: 30,
@@ -188,7 +188,7 @@
 </script>
 
 <!--样式-->
-<style lang="sass" rel="stylesheet/scss">
+<style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../../../common/css/util/all";
 
   // 页面红色部分

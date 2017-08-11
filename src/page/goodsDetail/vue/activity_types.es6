@@ -125,20 +125,76 @@ export default {
             this.$emit('change-type',item);
         },
         handleModalConfirm (e) {
-            let dataId = e.target.getAttribute('dataid');
-            let isClose = e.target.getAttribute('isclose');
-            if (isClose) {
+          if (!window.navigator.onLine) {
+            popup.toast('网络不太顺畅哦~');
+            return;
+          }
+          let dataId = e.target.getAttribute('dataid');
+          let isClose = e.target.getAttribute('isclose');
+          // if (isClose) {
+          //     this.cartModal = !this.cartModal;
+          // }
+
+          //新增
+          if (this.infoobj.isComingActivity) {
+            let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            let okFun = () => {
+              this.$emit("confirm-id",dataId, 0);
+              if (isClose) {
                 this.cartModal = !this.cartModal;
-            }
+              }
+            };
+            let cancleFun = () => {
+              if (isClose) {
+                this.cartModal = !this.cartModal;
+              }
+            };
+            let Title = "限时购活动预告", okText = '任性买',cancleText = "再等等";
+            popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+          } else {
             this.$emit("confirm-id",dataId, 0);
+            if (isClose) {
+              this.cartModal = !this.cartModal;
+            }
+          }
+
+          // this.$emit("confirm-id",dataId, 0);
         },
         handleModalCart (e) {
-            let dataId = e.target.getAttribute('dataid');
-            let isClose = e.target.getAttribute('isclose');
-            if (isClose) {
+          if (!window.navigator.onLine) {
+            popup.toast('网络不太顺畅哦~');
+            return;
+          }
+          let dataId = e.target.getAttribute('dataid');
+          let isClose = e.target.getAttribute('isclose');
+          // if (isClose) {
+          //     this.cartModal = !this.cartModal;
+          // }
+
+          //新增
+          if (this.infoobj.isComingActivity) {
+            let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            let okFun = () => {
+              this.$emit("confirm-id",dataId, 1);
+              if (isClose) {
                 this.cartModal = !this.cartModal;
+              }
+            };
+            let cancleFun = () => {
+              if (isClose) {
+                this.cartModal = !this.cartModal;
+              }
+            };
+            let Title = "限时购活动预告", okText = '任性买',cancleText = "再等等";
+            popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+          } else {
+            this.$emit("confirm-id",dataId, 1);
+            if (isClose) {
+              this.cartModal = !this.cartModal;
             }
-            this.$emit('confirm-id',dataId, 1);
+          }
+
+            // this.$emit('confirm-id',dataId, 1);
         },
         //串商品
         handleRelativeGoods (item, list, e) {

@@ -5,7 +5,7 @@ Vue.use(VueLazyload, {
     preload:2
 });
 
-new Vue({
+window.backNewData = new Vue({
     el: "#seriesCourse",
     data:function(){
         return{

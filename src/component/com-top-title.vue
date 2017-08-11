@@ -47,12 +47,14 @@
 
       // 非native环境下,要显示H5标题栏并且要设置.app的padding-top
       if (!ua.isDvdApp()) {
+        let app = document.querySelector('.app');
         this.$el.style.position = '-webkit-sticky';
         this.$el.style.position = 'sticky';
         if (this.$el.style.position == '-webkit-sticky' || this.$el.style.position == 'sticky') {
         } else {
-          document.querySelector('.app').style.paddingTop = '44px';
+          app.style.paddingTop = '44px';
         }
+        app.style.backgroundPosition = '0 44px';
         if (!this.hideDisable) {
           this.setAutoAnimation();
         }
@@ -133,10 +135,6 @@
     100% {
       transform: translateY(0);
     }
-  }
-
-  .app {
-    overflow: initial;
   }
 
   // 顶部标题

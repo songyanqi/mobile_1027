@@ -296,7 +296,7 @@
             getMenuName(data){
                 for (let i=0;i<data.length;i++){
                     if (data[i].menuId == this.category){
-                        this.menuName = data[i].title
+                        this.menuName = data[i].title;
                         // document.title = data[i].title
                         setTimeout(function () {
                             window.Units.setTitle = data[i].title

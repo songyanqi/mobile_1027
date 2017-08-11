@@ -31,12 +31,11 @@
             }
         },
         created:function () {
-            
+          console.log(44444);
         },
         mounted:function () {
             this.init()
         },
-//        
         methods:{
             init(){
               var that = this
@@ -46,8 +45,6 @@
                 dataType: 'json',
                 data : layout.strSign('course'),
                 success:function(data){
-                  console.log(data)
-                  console.log(data.data.feedList)
                   that.feedList = data.data.feedList
                 },
                 error:function (e) {

@@ -59,7 +59,7 @@ let replacer = {
   '[[env_num]]': '',
   '[[static]]': '',
   '[[vendor]]': '//cdn-ws.davdian.com',
-  '[[v]]': '',
+  // '[[v]]': '',
 };
 let replacerRegExp = null;
 
@@ -111,7 +111,7 @@ function promptBuildArg(build, buidType) {
     }
 
     // 检查env_num
-    if (BuildArg.env_num === '' || parseInt(BuildArg.env_num) >= 1 && parseInt(BuildArg.env_num) <= 9) {
+    if (BuildArg.env_num === '' || parseInt(BuildArg.env_num) >= 1 && parseInt(BuildArg.env_num) <= 20) {
     } else {
       // throw new Error(`env_num参数不正确: ${BuildArg.env_num}`);
       let errorValue = BuildArg.env_num;
@@ -123,11 +123,11 @@ function promptBuildArg(build, buidType) {
     replacer['[[env_stage]]'] = BuildArg.env_stage;
     replacer['[[env_num]]'] = BuildArg.env_num;
     replacer['[[static]]'] = `//${domain}/wap/static${BuildArg.env_num || ''}/dist/static`;
-    if (buidType == 'default' || buidType == 'dev') {
-      replacer['[[v]]'] = `?v=${util.getTimeFormatVersion()}`;
-    } else {
-      replacer['[[v]]'] = ``;
-    }
+    // if (buidType == 'default' || buidType == 'dev') {
+    //   replacer['[[v]]'] = `?v=${util.getTimeFormatVersion()}`;
+    // } else {
+    //   replacer['[[v]]'] = ``;
+    // }
     replacerRegExp = function () {
       let arr = [];
       for (let i in replacer) {
@@ -216,7 +216,7 @@ function compileJs() {
 
   // 编译并返回流
   return gulp.src('')
-    .pipe(webpackStream(WebpackSrcConfig(config.js), webpack, function (err, stats) {
+    .pipe(webpackStream(WebpackSrcConfig(config.js, replacer['[[static]]']), webpack, function (err, stats) {
       // console.log('webpackStream执行完毕');
     }))
     // 替换环境变量
@@ -322,9 +322,24 @@ gulp.task('img:dist', () => {
 });
 
 
-function replaceKey() {
+/************************************ 收集旧静态资源的md5信息 ************************************/
 
-}
+gulp.task('old:rev', () => {
+  console.log(`>>>>>>>>>>>>>>> 图片文件开始编译。${util.getNow()}`);
+  return gulp.src([
+    `stylesheet/base.css`,
+    `stylesheet/model.css`,
+    `javascript/tongji.js`,
+    `javascript/units.js`,
+    `javascript/base.js`,
+    `javascript/model.js`,
+  ])
+    .pipe(rev())
+    .pipe(rev.manifest('rev-md5/old:rev.json'))
+    .pipe(gulp.dest(config.temp))
+    ;
+});
+
 
 /************************************ 编译HTML ************************************/
 
@@ -358,7 +373,9 @@ function compileHtml(production) {
 // 开发环境HTML编译
 gulp.task('html:dev', function () {
   return compileHtml()
-  // 显示文件体积
+  // 替换版本号
+    .pipe(replace('[[v]]', `?v=${util.getTimeFormatVersion()}`))
+    // 显示文件体积
     .pipe(size({showFiles: true}))
     // 输出
     .pipe(gulp.dest('dist/view'))
@@ -368,7 +385,9 @@ gulp.task('html:dev', function () {
 // 生产环境HTML编译
 gulp.task('html:dist', function () {
   return compileHtml(true)
-  // 增加MD5戳
+  // 替换版本号
+    .pipe(replace('[[v]]', ``))
+    // 增加MD5戳
     .pipe(revCollector())
     // 压缩HTML
     .pipe(minifyHtml())
@@ -384,17 +403,15 @@ gulp.task('html:dist', function () {
 
 // 开发环境webpack编译(带文件监听)
 gulp.task('webpack:default', () => {
-  if (BuildArg.webpack) {
-    console.log(`>>>>>>>>>>>>>>> 开始编译webpack.config.js。。。${util.getNow()}`);
-    WebpackConfig.output.path = undefined;
-    WebpackConfig.watch = true;
-    return gulp.src('')
-      .pipe(webpackStream(WebpackConfig, webpack, function (err, stats) {
-        // console.log('webpackStream执行完毕');
-      }))
-      .pipe(size({showFiles: true}))
-      .pipe(gulp.dest('dist'));
-  }
+  console.log(`>>>>>>>>>>>>>>> 开始编译webpack.config.js。。。${util.getNow()}`);
+  WebpackConfig.output.path = undefined;
+  WebpackConfig.watch = true;
+  return gulp.src('')
+    .pipe(webpackStream(WebpackConfig, webpack, function (err, stats) {
+      // console.log('webpackStream执行完毕');
+    }))
+    .pipe(size({showFiles: true}))
+    .pipe(gulp.dest('dist'));
 });
 
 // 开发环境webpack编译(不带文件监听)
@@ -438,18 +455,22 @@ gulp.task('default', () => {
       ['css:dev'],
       ['img:dev'],
       ['html:dev'],
-      ['webpack:default'],
+      // ['webpack:default'],
       function () {
-        console.log(`>>>>>>>>>>>>>>> gulp编译开发环境全部任务执行完毕。${util.getNow()}`);
         // 监视js变化
-        gulp.watch([`src/**/*.{js,vue,json}`], ['js:dev']);
+        gulp.watch([`src/**/*.{js,vue,json,es6}`], ['js:dev', 'html:dev']);
+        // 监视旧的js变化
+        gulp.watch([`{javascript,module,source,utils}/**/*.{js,vue,json,es6}`], ['js:dev', 'html:dev']);
         // 监视css变化
-        gulp.watch([`src/**/*.scss`], ['css:dev']);
+        gulp.watch([`src/**/*.scss`], ['css:dev', 'html:dev']);
         // 监视图片变化
-        gulp.watch([`src/**/img/*.{png,jpg,gif,jpeg}`], ['img:dev', 'js:dev']);
+        gulp.watch([`src/**/img/*.{png,jpg,gif,jpeg}`], ['img:dev', 'js:dev', 'html:dev']);
         // 监视html变化
-        gulp.watch([`src/**/*.html`], ['html:dev']);
-        console.log(`>>>>>>>>>>>>>>> gulp开始监听文件变化...${util.getNow()}`);
+        gulp.watch([`src/**/*.{html,include}`], ['html:dev']);
+        console.log(`>>>>>>>>>>>>>>> gulp开始监听src目录文件变化...${util.getNow()}`);
+        if (BuildArg.webpack) {
+          runSequence(['webpack:default']);
+        }
       }
     );
   }, 'default');
@@ -480,6 +501,7 @@ gulp.task('build:dist', () => {
       ['js:dist'],
       ['css:dist'],
       ['img:dist'],
+      ['old:rev'],
       ['html:dist'],
       ['clean:temp'],
       ['webpack:dist'],

@@ -3,6 +3,10 @@ import native from './native.js';
 import weixin from './weixin.js';
 import Vue from 'Vue';
 
+let getEl = function () {
+  return (document.querySelector('.app') || document.body).appendChild(document.createElement('div'));
+};
+
 /**
  * share模块
  * 与分享有关的模块
@@ -18,9 +22,9 @@ export default {
       imgUrl: 'http://pic.davdian.com/free/2016/04/09/320_320_0fc3e0dbbadd249b7f1b93a525f0adf0.jpg', // 分享图标
     });
    */
-  setShareInfo(param = {}) {
+  setShareInfo(param = {}, response) {
     if (ua.isWeiXin()) {
-      weixin.setShareInfo(param);
+      weixin.setShareInfo(param, response);
     } else if (ua.isDvdApp()) {
       native.custom.setShareInfo(param);
     }
@@ -29,17 +33,13 @@ export default {
    * 唤起浏览器分享(目前只支持弹出浮层引导分享)
    */
   callBrowserShare() {
-    let hook = document.querySelector('.app') || document.body;
-    let div = hook.appendChild(document.createElement('div'));
-    div.id = 'com-share-pop-tip';
-
     new Vue({
       components: {
         'com-share-pop-tip': require('../../../component/com-share-pop-tip.vue')
       },
-      el: "#com-share-pop-tip",
+      el: getEl(),
       data: {},
-      template: '<com-share-pop-tip ref="com-share-pop-tip"/>',
+      template: '<com-share-pop-tip/>',
     });
   },
   /**

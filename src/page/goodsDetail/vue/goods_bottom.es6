@@ -99,21 +99,86 @@ const GoodsBottom = {
         },
         //多个商品时弹框
         handleAddCart () {
-        //立即购买是否跳出弹框
-          this.isBuyModal = false;
+          if (!window.navigator.onLine) {
+            popup.toast('网络不太顺畅哦~');
+            return;
+          }
+          if (this.infoobj.isComingActivity) {
+            let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            let okFun = () => {
+              //立即购买是否跳出弹框
+              this.isBuyModal = false;
+              this.cartModal = !this.cartModal;
+            };
+            let cancleFun = () => {
 
-          this.cartModal = !this.cartModal;
+            };
+            let Title = "限时购活动预告", okText = '任性买',cancleText = "再等等";
+            popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+          } else {
+            //立即购买是否跳出弹框
+            this.isBuyModal = false;
+            this.cartModal = !this.cartModal;
+          }
+
+          //立即购买是否跳出弹框
+          // this.isBuyModal = false;
+          //
+          // this.cartModal = !this.cartModal;
         },
         //立即购买没选择时
         handleAddCartBuy () {
-          //立即购买是否跳出弹框
-          this.isBuyModal = true;
+          if (!window.navigator.onLine) {
+            popup.toast('网络不太顺畅哦~');
+            return;
+          }
+          if (this.infoobj.isComingActivity) {
+            let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            let okFun = () => {
+              //立即购买是否跳出弹框
+              this.isBuyModal = true;
+              this.cartModal = !this.cartModal;
+            };
+            let cancleFun = () => {
 
-          this.cartModal = !this.cartModal;
+            };
+            let Title = "限时购活动预告", okText = '任性买',cancleText = "再等等";
+            popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+          } else {
+            //立即购买是否跳出弹框
+            this.isBuyModal = true;
+            this.cartModal = !this.cartModal;
+          }
+
+
+
+          //立即购买是否跳出弹框
+          // this.isBuyModal = true;
+          //
+          // this.cartModal = !this.cartModal;
         },
         // 点击单个商品的加入购物车
         handleSingleCart () {
+          if (!window.navigator.onLine) {
+            popup.toast('网络不太顺畅哦~');
+            return;
+          }
+          if (this.infoobj.isComingActivity) {
+            let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            let okFun = () => {
+              //立即购买是否跳出弹框
+              this.$emit('confirm-id','', 0);
+            };
+            let cancleFun = () => {
+
+            };
+            let Title = "限时购活动预告", okText = '任性买',cancleText = "再等等";
+            popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+          } else {
+            //立即购买是否跳出弹框
             this.$emit('confirm-id','', 0);
+          }
+            // this.$emit('confirm-id','', 0);
         },
         handleModal () {
         },
@@ -142,13 +207,15 @@ const GoodsBottom = {
             this.$emit('change-type',item);
         },
         handleModalConfirm (e) {
-            let dataId = e.target.getAttribute('dataid');
-            let isClose = e.target.getAttribute('isclose');
-            if (isClose) {
-                this.cartModal = !this.cartModal;
-            }
-
-            // this.$emit("confirm-id",dataId, 1);
+          if (!window.navigator.onLine) {
+            popup.toast('网络不太顺畅哦~');
+            return;
+          }
+          let dataId = e.target.getAttribute('dataid');
+          let isClose = e.target.getAttribute('isclose');
+          if (isClose) {
+              this.cartModal = !this.cartModal;
+          }
 
           //立即购买是否跳出弹框，区分是加入购物车还是立即购买
           if (this.isBuyModal) {
@@ -162,22 +229,63 @@ const GoodsBottom = {
             this.cartModal = !this.cartModal;
         },
         handleBuy (e) {
+          if (!window.navigator.onLine) {
+            popup.toast('网络不太顺畅哦~');
+            return;
+          }
           if (Number(this.goodstatus.goodsStocks) <= 0) {
             return;
           }
           let goodId = e.target.getAttribute('dataid');
 
-          if (this.seckill) {
-            if (this.ismultigoods) {
-              this.cartModal = !this.cartModal;
-            } else {
-              this.$emit('confirm-id', goodId, 1);
-            }
+
+          //新增的
+          if (this.infoobj.isComingActivity) {
+            let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            let okFun = () => {
+
+              if (this.seckill) {
+                if (this.ismultigoods) {
+                  this.cartModal = !this.cartModal;
+                } else {
+                  this.$emit('confirm-id', goodId, 1);
+                }
+              } else {
+                this.cartModal = !this.cartModal;
+              }
+              this.isBuyModal = true;
+            };
+            let cancleFun = () => {
+
+            };
+            let Title = "限时购活动预告", okText = '任性买',cancleText = "再等等";
+            popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
           } else {
-            this.cartModal = !this.cartModal;
+            if (this.seckill) {
+              if (this.ismultigoods) {
+                this.cartModal = !this.cartModal;
+              } else {
+                this.$emit('confirm-id', goodId, 1);
+              }
+            } else {
+              this.cartModal = !this.cartModal;
+            }
+            this.isBuyModal = true;
           }
 
-          this.isBuyModal = true;
+
+
+          // if (this.seckill) {
+          //   if (this.ismultigoods) {
+          //     this.cartModal = !this.cartModal;
+          //   } else {
+          //     this.$emit('confirm-id', goodId, 1);
+          //   }
+          // } else {
+          //   this.cartModal = !this.cartModal;
+          // }
+
+          // this.isBuyModal = true;
         },
         //点击推荐收起和展开
         handleRecommendGoods () {

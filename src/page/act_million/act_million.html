@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @@include('meta.include')
+  <link rel="stylesheet" href="[[static]]/page/act_million/css/act_million.css[[v]]">
+</head>
+<body>
+<div class="app">
+  <!--标题-->
+  <com-top-title title="会员福利返利100万现金" home></com-top-title>
+
+  <!--活动区域-->
+  <div class="g-act">
+    <template v-if="response">
+      <!--活动未开始-->
+      <template v-if="response.data.act_status == '0'">
+        <div class="act-result transparent">
+          <div class="title">&nbsp;</div>
+          <div class="title">活动还未开始，稍后更多精彩~</div>
+        </div>
+      </template>
+
+      <!--未登录-->
+      <template v-else-if="!isLogined">
+        <act-info :response="response" :today-info="todayInfo"></act-info>
+        <div class="act-result">
+          <p>登录后才可参与活动~</p>
+          <act-btn type="login"></act-btn>
+        </div>
+      </template>
+
+      <!--买家-->
+      <template v-else-if="isBuyer">
+        <!---买家-活动中-->
+        <template v-if="response.data.act_status == '1'">
+          <act-info :response="response" :today-info="todayInfo"></act-info>
+          <div class="act-result">
+            <p>您当前为非会员用户</p>
+            <p>只有会员才可以获得此返现哦</p>
+            <act-btn type="member"></act-btn>
+          </div>
+        </template>
+
+        <!--买家-活动结束-->
+        <template v-else-if="response.data.act_status == '2'">
+          <div class="act-result transparent">
+            <div class="title">活动结束啦~</div>
+            <p>成为会员享受更多福利</p>
+            <act-btn type="member"></act-btn>
+          </div>
+        </template>
+      </template>
+
+      <!--卖家-->
+      <template v-else-if="isSeller">
+        <!--卖家-活动中-->
+        <template v-if="response.data.act_status == '1'">
+          <!--卖家-活动中-中奖-->
+          <template v-if="response.data.prize == '1'">
+            <act-info :response="response" :today-info="todayInfo"></act-info>
+            <div class="act-result">
+              <div class="title">活动期间，您累计实际支付为<span class="num">￥{{response.data.shop_price}}</span></div>
+              <p>是第 {{response.data.prize_order}}位满足条件的会员，获得 {{response.data.prize_price}}元现金</p>
+              <p>返现将会在 2017年9月1日 发放到您的账户中</p>
+              <act-btn></act-btn>
+            </div>
+          </template>
+
+          <!--卖家-活动中-未中奖-->
+          <template v-else-if="response.data.prize == '0'">
+            <!--卖家-活动中-未中奖-钱不够-->
+            <template v-if="response.data.shop_price - response.data.prize_amount < 0">
+
+              <!--卖家-活动中-未中奖-钱不够-发生退货-->
+              <template v-if="response.data.is_return_goods == '1'">
+                <act-info :response="response" :today-info="todayInfo"></act-info>
+                <div class="act-result">
+                  <div class="title">活动期间，您累计实际支付为<span class="num">￥{{response.data.shop_price}}</span></div>
+                  <template v-if="response.data.surplus > 0">
+                    <p>由于发生退货不满足门槛</p>
+                    <p>快去买买买，拿返现奖励</p>
+                  </template>
+                  <template v-else>
+                    <p>活动名额没有啦～后面可能追加哦～</p>
+                  </template>
+                  <act-btn></act-btn>
+                </div>
+              </template>
+
+              <!--卖家-活动中-未中奖-钱不够-未退货-->
+              <template v-else-if="response.data.is_return_goods == '0'">
+                <act-info :response="response" :today-info="todayInfo"></act-info>
+                <div class="act-result">
+                  <div class="title">活动期间，您累计实际支付为<span class="num">￥{{response.data.shop_price}}</span></div>
+                  <template v-if="response.data.surplus > 0">
+                    <p>
+                      还差 {{needMoney(response.data.prize_amount, response.data.shop_price)}}元 即可获得 {{todayInfo.money}}元返现哦~
+                    </p>
+                  </template>
+                  <template v-else>
+                    <p>活动名额没有啦～后面可能追加哦～</p>
+                  </template>
+                  <act-btn></act-btn>
+                </div>
+              </template>
+
+            </template>
+
+            <!--卖家-活动中-未中奖-钱够了-名额没了-->
+            <template v-else-if="parseInt(response.data.surplus) <= 0">
+              <act-info :response="response" :today-info="todayInfo"></act-info>
+              <div class="act-result">
+                <div class="title">活动期间，您累计实际支付为<span class="num">￥{{response.data.shop_price}}</span></div>
+                <p>是第 {{response.data.prize_order}}位满足条件的会员</p>
+                <p>很遗憾您与奖励擦肩而过</p>
+                <act-btn></act-btn>
+              </div>
+            </template>
+          </template>
+        </template>
+
+        <!--卖家-活动结束-->
+        <template v-if="response.data.act_status == '2'">
+          <!--卖家-活动结束-中奖-->
+          <template v-if="response.data.prize == '1'">
+            <div class="act-result transparent">
+              <div class="title">活动结束啦~</div>
+              <div class="title">活动期间，您累计支付为 ￥{{response.data.shop_price}}</div>
+              <p>是第 {{response.data.prize_order}}位满足条件的会员，获得 {{response.data.prize_price}}元现金</p>
+              <p>返现将会在 2017年9月1日 发放到您的账户中 </p>
+              <act-btn></act-btn>
+            </div>
+          </template>
+
+          <!--卖家-活动结束-未中奖-->
+          <template v-if="response.data.prize == '0'">
+            <div class="act-result transparent">
+              <div class="title">活动结束啦~</div>
+              <p>很遗憾您错过了这次活动</p>
+              <act-btn></act-btn>
+            </div>
+          </template>
+        </template>
+      </template>
+    </template>
+  </div>
+
+  <!--活动规则-->
+  <div class="g-rule">
+    <div class="panel">
+      <div class="content">
+        <div class="title">活动规则</div>
+        <p class="word-1">1.活动时间：2017年7月27日0时-2017年8月1日23时59分59秒；</p>
+        <p class="word-1">2.本活动仅限大V店会员参与；</p>
+        <p class="word-1">3.活动期间，全场累计实际支付金额（包含佣金支付部分）满399元（人民币）的会员可以获赠返现资格，仅限前2万名会员，数量有限，赠完即止，会员只能获得1次返现资格，具体内容如下：</p>
+        <p class="word-2">（1）自活动开始之日起，在7月27日23时59分59秒（含该时段）前达成活动条件的会员可获赠50元返现资格；</p>
+        <p class="word-2">（2）自活动开始之日起，在7月28日23时59分59秒（含该时段）前达成活动条件的会员可获赠40元返现资格；</p>
+        <p class="word-2">（3）自活动开始之日起，在活动结束前（8月1日23时59分59秒）前达成活动条件的会员可获赠30元返现资格；</p>
+        <p class="word-1">4.支付会员费用不参与该活动，同时满足多个活动条件达成的，以较高的获赠资格为准；</p>
+        <p class="word-1">5.累计实际支付金额指会员在活动期间内完成支付并且没有进行订单退换的累计实际支付订单金额；</p>
+        <p class="word-1">6.活动期间与活动结束后1个月内，因退货、换货等原因导致累计实际支付金额不满足399元（人民币），视为会员主动放弃；</p>
+        <p class="word-1">7.返现金额将于9月1日发放到满足条件的会员账户中；</p>
+        <p class="word-1">8.详情可咨询大V店客服。</p>
+      </div>
+    </div>
+  </div>
+
+  <!--返回顶部-->
+  <!--<com-to-top-icon></com-to-top-icon>-->
+</div>
+
+@@include('vendor.include')
+<script src="[[static]]/page/act_million/js/act_million.js[[v]]"></script>
+</body>
+</html>

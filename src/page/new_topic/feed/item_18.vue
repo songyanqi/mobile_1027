@@ -119,7 +119,7 @@
         </div>
         <div v-text="item.goods_name" class="goods_name"></div>
         <div class="goods_price"><small>¥</small>{{item.price[0]}}<small>{{item.price[1]}}</small></div>
-        <span class="vip_return">
+        <span class="vip_return" v-if = "item.seller_income && item.seller_income != '0'">
               <span class="vip_return_title">会员返</span>
               <span class="vip_return_f">¥</span>
               <span class="vip_return_price">{{item.seller_income}}</span>

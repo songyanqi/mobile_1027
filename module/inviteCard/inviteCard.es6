@@ -5,7 +5,6 @@ export default{
         return {
             flag:true,
             msg: "",
-            url: "/api/mg/content/course/shareCard",
             styleObject: {
                 maxHeight: document.documentElement.clientHeight  - 155 + "px"
             },
@@ -19,11 +18,30 @@ export default{
     },
     computed: {
         showCard: function () {
-            console.log(this.show)
+            console.log(this.show);
             return this.show
         },
         courseId: function () {
             return this.id;
+        },
+        seriesId:function () {
+            return this.id;
+        },
+        url:function () {
+            if(this.kind==0){
+              return "/api/mg/content/course/shareCard";
+            }
+            return "/api/mg/content/series_course/share_card";
+        },
+        obj:function () {
+            if(this.kind==0){
+              return {
+                courseId: this.courseId
+              }
+            }
+            return {
+              seriesId: this.seriesId
+            }
         }
     },
     watch: {
@@ -37,32 +55,36 @@ export default{
                             url: that.url,
                             dataType: "json",
                             type: "post",
-                            data: {
-                                courseId: that.courseId
-                            },
-                            updata: {
-                                courseId: that.courseId
-                            },
+                            data: that.obj,
+                            updata: that.obj,
                             success: function (result) {
-                                console.log('result->>>', result)
-                                if (result && result.visitor_status){
-                                    that.visitor = result.visitor_status
-                                }
-                                let {code, data}=result;
-                                if(data){
-                                    var {course, imgUrl} = data;
-                                }
-                                that.imgUrl = imgUrl;
-                                if (+code) {
-                                    bravetime.info("分享卡数据获取异常:" + code);
-                                    that.showFlag = false;
-                                } else {
+                              console.log('result->>>', result);
+                              if (result && result.visitor_status){
+                                that.visitor = result.visitor_status
+                              }
+                              let {code, data}=result;
+                              if(data){
+                                var {course, imgUrl} = data;
+                              }
+                              that.imgUrl = imgUrl;
+                              if (+code) {
+                                bravetime.info("分享卡数据获取异常:" + code);
+                                that.showFlag = false;
+                              } else {
+
+                                  if(that.kind==0){
                                     let {code, income, type} = course;
                                     that.type = type;
                                     that.income = income;
                                     that.password = code;
                                     that.flag = false;
-                                }
+                                  }else if(that.kind==1){
+                                    let {income} = course;
+                                    that.income = income;
+                                    that.flag = false;
+                                  }
+
+                              }
                             },
                             error: function () {
 
@@ -86,7 +108,7 @@ export default{
             }
         }
     },
-    props: ['show', 'id','statistics'],
+    props: ['show', 'id','statistics','kind'],
     methods: {
         closeCard(){
             this.$emit('close');

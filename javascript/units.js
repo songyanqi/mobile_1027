@@ -99,8 +99,8 @@
         for ( var i = 0; i < 17; i++) {   
             sum += Wi[i] * a_idCard[i];            // 加权求和   
         }   
-        valCodePosition = sum % 11;                // 得到验证码所位置   
-        if (a_idCard[17] == ValideCode[valCodePosition]) {   
+        valCodePosition = sum % 11;                // 得到验证码所位置
+        if (a_idCard[17] == ValideCode[valCodePosition]) {
             return true;   
         } else {   
             return false;   

@@ -3,6 +3,7 @@
     position: fixed;
     width: 100%;
     max-width: 640px;
+    border-bottom: none;
 }
 .top0 .top_container {
     position: relative;
@@ -57,7 +58,7 @@
 }
 .head_index_top .right_icon_container {
     right: 0;
-    top: 2px;
+    top: 0;
     z-index: 10;
     position: absolute;
     font-size: 12px;
@@ -121,20 +122,7 @@
     text-align: center
 }
 .index_con_menu {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-flow: row;
-    width: 100%;
-    max-width: 640px;
-    font-size: 13px;
-    line-height: 34px;
-    position: relative;
-    top: 0;
-    z-index: 11;
-    margin-top: 0;
+
 }
 .index_con_menu:after{
     content: '';

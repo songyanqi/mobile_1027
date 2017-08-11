@@ -32,7 +32,7 @@
                 <span class="price">单价买: ￥{{data.realShopPrice}}</span>
               </div>
             </span>
-            <span class="go-group">
+              <span class="go-group">
               <span>去组团</span>
               <i class="arrow"></i>
             </span>
@@ -56,7 +56,7 @@
 
 <script>
   import response from '../json/list.json';
-  import layout from "../../../../module/index/layout.es6";
+  import encrypt from '../../../common/js/module/encrypt.js';
   import native from '../../../common/js/module/native.js';
   import ua from '../../../common/js/module/ua.js';
   import $ from '$';
@@ -78,10 +78,10 @@
     },
     computed: {},
     created: function () {
-      if(this.propResponse){
+      if (this.propResponse) {
         this.response = this.propResponse;
         this.list = this.list.concat(this.response.data.reverseGroup.dataList);
-      }else{
+      } else {
         this.getData();
       }
     },
@@ -103,7 +103,7 @@
           url: '/api/mg/sale/reverse/getList?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
-          data: layout.strSign('feed', {
+          data: encrypt({
 //            bpId: 14,
             pageIndex: ts.response ? ts.response.data.reverseGroup.nextPageIndex : 0,
             pageSize: 10,
@@ -120,7 +120,6 @@
         });
       },
       listItemClick(url, event){
-        debugger
         event.preventDefault();
         if (ua.isDvdApp()) {
           native.Browser.open({
@@ -136,7 +135,7 @@
   }
 </script>
 
-<style lang="sass" rel="stylesheet/scss">
+<style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../../../common/css/util/all";
 
   // 页面红色部分
@@ -172,19 +171,19 @@
             line-height: 1;
             text-align: center;
             transform: scale(0.7);
-            .top{
+            .top {
               position: absolute;
               top: ptr(22);
               width: 100%;
               font-size: ptr(18);
             }
-            .split-line{
+            .split-line {
               margin: ptr(50) auto;
               width: ptr(70);
               border-top: 1px solid white;
               transform: translateY(0.5);
             }
-            .bottom{
+            .bottom {
               position: absolute;
               top: ptr(58);
               width: 100%;
@@ -285,6 +284,11 @@
             > * {
               vertical-align: middle;
               font-size: ptr(14);
+            }
+            span {
+              display: inline-block;
+              height: ptr(32);
+              line-height: ptr(33);
             }
             .arrow {
               display: inline-block;

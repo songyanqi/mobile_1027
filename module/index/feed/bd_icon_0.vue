@@ -9,7 +9,11 @@
     </div>
 </template>
 <script>
-    import './bd_icon_0.scss'
+//    import './bd_icon_0.scss'
     import bd_icon from './bd_icon_0.es6'
     export default bd_icon
 </script>
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./bd_icon_0.scss";
+</style>

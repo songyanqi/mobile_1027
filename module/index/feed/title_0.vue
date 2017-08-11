@@ -6,7 +6,9 @@
         </div>
     </div>
 </template>
-<style type="text/css">
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./title_0.scss";
     .title_o_come{
         margin-top: 15px;
         font-size: 18px;
@@ -18,7 +20,7 @@
     }
 </style>
 <script>
-import './title_0.scss'
+//import './title_0.scss'
 export default {
     data(){
         return {

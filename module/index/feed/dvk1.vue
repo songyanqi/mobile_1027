@@ -2,26 +2,29 @@
     <div :style="{ marginTop:data.marginTop + 'px' }">
         <tt_com_0 :data="data"></tt_com_0>
         <div class='dvk1_container' :style="styleObject">
+          <div class="dvk1_mask">
             <a @click.stop="clickAnalysis" :href="data.body.dataList[0].command.content" :position="data.position">
-                <div class='dvk1_img'>
-                    <img class="newImage" v-lazy="imgObject(data.body.dataList[0].courseCover)" />
-                    <div class='dvk1_money' v-if='data.body.dataList[0].price && data.body.dataList[0].price!="¥ 0.00"' v-text='data.body.dataList[0].price'></div>
+              <div class='dvk1_img'>
+                <img class="newImage" v-lazy="imgObject(data.body.dataList[0].courseCover)" />
+                <div class='dvk1_money' v-if='data.body.dataList[0].price && data.body.dataList[0].price!="¥ 0.00"' v-text='data.body.dataList[0].price'></div>
+              </div>
+              <div class='dvk1_content'>
+                <div class='dvk1_text' v-text='data.body.dataList[0].courseTitle'></div>
+                <div class='dvk1_name'>
+                  <span v-text='data.body.dataList[0].teacherName'></span>
                 </div>
-                <div class='dvk1_content'>
-                    <div class='dvk1_text' v-text='data.body.dataList[0].courseTitle'></div>
-                    <div class='dvk1_name'>
-                        <span v-text='data.body.dataList[0].teacherName'></span>
-                    </div>
-                    <div class='dvk1_share'>
-                        <span class='dvk1_share_left'>
-                            <span v-if="livenow(data.body.dataList[0])" class="circle"></span> 
-                            <span v-if='livetext(data.body.dataList[0])'>{{ livetext(data.body.dataList[0]) }}</span>
-                            <span v-if='!livetext(data.body.dataList[0])' v-text='data.body.dataList[0].startTimestamp'></span>
-                        </span>
-                        <span class='dvk1_share_right'><span v-text='data.body.dataList[0].readTimes'></span></span>
-                    </div>
+                <div class='dvk1_share'>
+                  <span class='dvk1_share_right'><span v-text='data.body.dataList[0].readTimes'></span></span>
+                  <span class="dvk1_line"></span>
+                  <span class='dvk1_share_left'>
+                    <span v-if="livenow(data.body.dataList[0])" class="circle"></span>
+                    <span v-if='livetext(data.body.dataList[0])'>{{ livetext(data.body.dataList[0]) }}</span>
+                    <span v-if='!livetext(data.body.dataList[0])' v-text='data.body.dataList[0].startTimestamp'></span>
+                  </span>
                 </div>
+              </div>
             </a>
+          </div>
         </div>
     </div>
 </template>
@@ -48,6 +51,7 @@
 
         },
         created(){
+            console.log(111);
             this.styleObject = layout.styleObjectDvk(this.data);
         },
         components: {
@@ -99,40 +103,37 @@
 </script>
 <style scoped>
     .dvk1_container{
-        height: 1.08rem;
+        height: 76px;
         position: relative;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .dvk1_img{
-        height: 0.88rem;
-        width: 1.27rem;
-        margin: 0.1rem;
+        height: 76px;
+        width: 110px;
         position: relative;
-        vertical-align: top;
-        display: inline-block;
+        float:left;
         overflow: hidden;
         background: #fff;
     }
     .dvk1_content{
-        display: inline-block;
         vertical-align: top;
-        width: 2.18rem;
+        margin-left: 120px;
+        height: 76px;
     }
     .dvk1_text{
-        margin: .1rem 0 0 0;
-        max-height: 3em;
-        line-height: 1.5;
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         display: -webkit-box;
-        font-size: 0.14rem;
+        font-size: 17px;
         color: #333333;
-        margin-bottom: 0.05rem;
+        margin-bottom: 5px;
     }
     .dvk1_name{
-        font-size: 0.12rem;
-        height: 0.17rem;
+        font-size: 12px;
+        line-height: 12px;
         color: #999;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -141,51 +142,43 @@
         display: -webkit-box;
     }
     .dvk1_share{
-        width: 2.1rem;
-        margin: 0 .1rem .12rem 0rem;
-        margin-top: 0.15rem;
-        font-size: 0.11rem;
-        height: 0.16rem;
-        position: absolute;
-        line-height: 0.16rem;
-        bottom: 0;
-        color: #999;
+        margin-top: 5px;
+        font-size: 12px;
+        line-height:15px;
+        color: #999999;
+        overflow:hidden;
     }
     .dvk1_border{
         border-left: 0.5px solid #999;
-        margin-left: 0.05rem;
+        margin-left: 5px;
         /*margin-right: 0.07rem;*/
     }
     .dvk1_imgNav{
         position: absolute;
-        top: 0.3rem;
-        left: 0.3rem;
-        width: 0.3rem;
-        height: 0.3rem;
+        top: 30px;
+        left: 30px;
+        width: 30px;
+        height: 30px;
     }
     .dvk1_share_left{
-        float: left;
-        width: 1.3rem;
+
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 1;
         display: -webkit-box;
     }
-    .dvk1_share_right{
-        float: right;
-    }
     .dvk1_money{
         position: absolute;
-        top: 0.05rem;
-        left: 0.05rem;
-        height: 0.18rem;
-        line-height: 0.2rem;
-        padding-left: 0.03rem;
-        padding-right: 0.03rem;
+        top: 5px;
+        left: 5px;
+        height: 18px;
+        line-height: 20px;
+        padding-left: 3px;
+        padding-right: 3px;
         text-align: center;
         color: #fff;
-        font-size: 0.11rem;
+        font-size: 11px;
         background: #FF4A7D;
     }
     .circle{
@@ -202,5 +195,22 @@
         display: inline;
         border: none;
         width: 100%;
+        border-radius: 4px;
+    }
+    .dvk1_mask{
+      height: 79px;
+      padding: 0 10px;
+    }
+    .dvk1_line{
+      height: 12px;
+      width: 1px;
+      background: #E1E1E1;
+      margin-left: 10px;
+    }
+    .dvk1_share>span{
+      float: left;
+    }
+    .dvk1_share_left{
+      margin-left: 10px;
     }
 </style>

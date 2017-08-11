@@ -96,7 +96,7 @@
               </div>
 
               <!--会员返返现-->
-              <div v-if="goods.seller_income" class="income_vip">会员返<em>￥</em>{{goods.seller_income}}</div>
+              <div v-if="goods.seller_income != '0' && userStatus == 3" class="income_vip">会员返<em>￥</em>{{goods.seller_income}}</div>
 
               <!--商品数量-->
               <div class="sold_out_collect" v-if="activity.act_id>=0&&!goods.goods_stocks"
@@ -286,10 +286,13 @@
   </div>
 
   <!--会员返现提示悬框-->
-  <div v-if="cartInfo.total_income" class="income_bottom_fixed">
+ <!--  <div v-if="cartInfo.total_income" class="income_bottom_fixed">
     <span v-if="userStatus == 3">本次购物可获得￥{{cartInfo.total_income}}返现，订单完成后在[我的]-[总额]中查看</span>
     <span v-else>会员下单立返￥{{cartInfo.total_income}}</span>
     <a v-if="userStatus != 3" :href="kdUrl">开通会员</a>
+  </div> -->
+  <div v-if="cartInfo.total_income && userStatus == 3" class="income_bottom_fixed">
+    <span>本次购物可获得￥{{cartInfo.total_income}}返现，订单完成后在[我的]-[总额]中查看</span>
   </div>
   <!--购物车结算低栏-->
   <div class="cart_bottom" v-if="!cartInfo.isEmpty">

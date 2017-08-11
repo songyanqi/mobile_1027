@@ -8,9 +8,13 @@
 const prefixList = ['-moz-box-', '-webkit-box-', '']
 
 export default {
+  name: 'flexbox-item',
   props: {
     span: [Number, String],
     order: [Number, String]
+  },
+  beforeMount () {
+    this.bodyWidth = document.documentElement.offsetWidth
   },
   methods: {
     buildWidth (width) {
@@ -44,7 +48,7 @@ export default {
   },
   data () {
     return {
-      bodyWidth: document.documentElement.offsetWidth
+      bodyWidth: 0
     }
   }
 }

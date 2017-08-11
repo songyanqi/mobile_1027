@@ -153,12 +153,18 @@
               v-if = "firstScreenFinish"
               :commentobj = "commentObj"
             ></goods-evaluate>
+
             <brand-type v-if="firstScreenFinish" :brandlist = "brandList"
             ></brand-type>
 
+            <!--广告banner-->
+            <ad-banner :ad-img="response.data.ADBanner.imageUrl" :ad-url="response.data.ADBanner.content"
+                       v-if="response && response.data && response.data.ADBanner && response.data.ADBanner.imageUrl">
+            </ad-banner>
+
             <div class = "parmas_wrapper clearfix"
                  v-if = "firstScreenFinish"
-                 style = "overfllow: hidden; margin-top: 10px;">
+                 >
               <tab
                 v-if = "goodsParamObj.length"
                 class = "picTab"
@@ -198,6 +204,7 @@
                     :isapp = "isApp"
                     :videoobj = "videoObj"
                     :goodsimglist = "goodsImgList"
+                    :goodsid = "goodsId"
                     :picdetails = "picDetails"></detail-pic>
                 </div>
                 <div class= "picCont"
@@ -244,7 +251,7 @@
           :seckill = "secKill"
         ></goods-bottom>
       </div>
-      <alert v-model="alertShow" title="提示" @on-hide="handleAlertHide"> {{ alertMsg }}</alert>
+      <!--<alert v-model="alertShow" title="提示" @on-hide="handleAlertHide"> {{ alertMsg }}</alert>-->
       <confirm v-if="confirmShow" title="提示"
                @on-cancel="handleConfirmCancel"
                :confirm-text = 'confirmText'

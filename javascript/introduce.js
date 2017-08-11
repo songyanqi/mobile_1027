@@ -5,7 +5,7 @@ var Vue = require('Vue');
 var introduce = require("../module/introduce.vue");
 // var title = require("../module/title.vue");
 
-new Vue({
+window.backNewData = new Vue({
     el: ".body",
     data: {},
     components:{

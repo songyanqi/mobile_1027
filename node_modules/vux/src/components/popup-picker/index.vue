@@ -2,15 +2,17 @@
   <div class="vux-cell-box">
     <div class="weui-cell vux-tap-active weui-cell_access" @click="onClick" v-show="showCell">
       <div class="weui-cell__hd">
-        <label class="weui-label" :style="{display: 'block', width: $parent.labelWidth || $parent.$parent.labelWidth, textAlign: $parent.labelAlign || $parent.$parent.labelAlign, marginRight: $parent.labelMarginRight || $parent.$parent.labelMarginRight}" v-if="title" v-html="title"></label>
-        <inline-desc v-if="inlineDesc">{{inlineDesc}}</inline-desc>
+        <slot name="title" label-class="weui-label" :label-style="labelStyles" :label-title="title">
+          <label class="weui-label" :style="labelStyles" v-if="title" v-html="title"></label>
+        </slot>
+        <inline-desc v-if="inlineDesc">{{ inlineDesc }}</inline-desc>
       </div>
       <div class="vux-cell-primary vux-popup-picker-select-box">
         <div class="vux-popup-picker-select" :style="{textAlign: valueTextAlign}">
           <span class="vux-popup-picker-value" v-if="!displayFormat && !showName && value.length">{{value | array2string}}</span>
           <span class="vux-popup-picker-value" v-if="!displayFormat && showName && value.length">{{value | value2name(data)}}</span>
           <span class="vux-popup-picker-value" v-if="displayFormat && value.length">{{ displayFormat(value, value2name(value, data)) }}</span>
-          <span v-if="!value.length && placeholder" v-html="placeholder" class="vux-popup-picker-placeholder"></span>
+          <span v-if="!value.length && placeholder" v-text="placeholder" class="vux-popup-picker-placeholder"></span>
         </div>
       </div>
       <div class="weui-cell__ft">
@@ -18,12 +20,17 @@
     </div>
 
     <div v-transfer-dom="isTransferDom">
-      <popup v-model="showValue" class="vux-popup-picker" :id="`vux-popup-picker-${uuid}`" @on-hide="onPopupHide" @on-show="onPopupShow">
+      <popup
+      v-model="showValue"
+      class="vux-popup-picker"
+      :id="`vux-popup-picker-${uuid}`"
+      @on-hide="onPopupHide"
+      @on-show="onPopupShow">
         <div class="vux-popup-picker-container">
-          <div class="vux-popup-picker-header">
+          <div class="vux-popup-picker-header" @touchmove.prevent>
             <flexbox>
-              <flexbox-item class="vux-popup-picker-header-menu vux-popup-picker-cancel" @click.native="onHide(false)">{{cancelText || $t('cancel_text')}}</flexbox-item>
-              <flexbox-item class="vux-popup-picker-header-menu vux-popup-picker-header-menu-right" @click.native="onHide(true)">{{confirmText || $t('confirm_text')}}</flexbox-item>
+              <flexbox-item class="vux-popup-picker-header-menu vux-popup-picker-cancel" @click.native="onHide(false)">{{ cancelText || $t('cancel_text') }}</flexbox-item>
+              <flexbox-item class="vux-popup-picker-header-menu vux-popup-picker-header-menu-right" @click.native="onHide(true)">{{ confirmText || $t('confirm_text') }}</flexbox-item>
             </flexbox>
           </div>
           <picker
@@ -66,6 +73,7 @@ const getObject = function (obj) {
 }
 
 export default {
+  name: 'popup-picker',
   directives: {
     TransferDom
   },
@@ -129,6 +137,16 @@ export default {
       default: true
     },
     columnWidth: Array
+  },
+  computed: {
+    labelStyles () {
+      return {
+        display: 'block',
+        width: this.$parent.labelWidth || this.$parent.$parent.labelWidth,
+        textAlign: this.$parent.labelAlign || this.$parent.$parent.labelAlign,
+        marginRight: this.$parent.labelMarginRight || this.$parent.$parent.labelMarginRight
+      }
+    }
   },
   methods: {
     value2name,
@@ -209,6 +227,9 @@ export default {
 @import '../../styles/variable.less';
 @import '../../styles/1px.less';
 
+.vux-cell-primary {
+  flex: 1;
+}
 .vux-cell-box {
   position: relative;
 }

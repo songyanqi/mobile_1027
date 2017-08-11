@@ -254,3 +254,10 @@
     -o-animation:praise 1.5s;
     animation:praise 1.5s;
 }
+
+.ad-banner {
+  margin-top: 10px;
+}
+.ad-banner img {
+  width: 100%;
+}

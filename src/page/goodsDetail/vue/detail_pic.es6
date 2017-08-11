@@ -7,15 +7,18 @@ import loading from './loading.vue';
 
 //猜你喜欢模块
 import maybeyoulike from '../../../component/com-maybeyoulike.vue';
+import tt_com_1 from '../../../../module/index/feed/tt_com_1.vue';
+import layout from "../../../../module/index/layout.es6";
 
 const DetailPic = {
     components: {
       confirm: confirm,
       loading: loading,
       maybeyoulike: maybeyoulike,
+      tt_com_1: tt_com_1,
     },
     props: ['picdetails','mayyoulikelist','mayyoulikenomore',
-            'isapp', 'isprompt','videoobj'],
+            'isapp', 'isprompt','videoobj','goodsid'],
     data () {
         return {
           goodsList: null,
@@ -52,18 +55,68 @@ const DetailPic = {
           isWaitTime: true,
           isShowToast: false,
           isMouseDown: false,
-          showText: '当前网络环境较差'
+          showText: '当前网络环境较差',
+          mayyoulikeData: {
+            title: {
+              name: "相似商品 为你推荐",
+              bgColor: "0xFFFFFF"
+            }
+          },
+          begin_time: 0,
+          end_time: 0,
         }
     },
     mounted () {
-        let that = this;
+        let scope = this;
+        scope.begin_time = 0;
+        scope.end_time = 0;
         $(window).scroll(() => {
-            if (!that.isLoader) {
-                if (document.body.scrollTop >= 200) {
-                    that.isLoader = true;
-                    that.$emit('loadmayyoulike', 1);
-                }
+          if (!scope.isLoader) {
+              if (document.body.scrollTop >= 200) {
+                  scope.isLoader = true;
+                  scope.$emit('loadmayyoulike', 1);
+              }
+          };
+          /*统计部分 猜你喜欢页面停留时长*/
+          let recommendBox = document.querySelector(".mt_10");
+          let scrollTop = 0;
+          if (document.documentElement && document.documentElement.scrollTop) {
+            scrollTop = document.documentElement.scrollTop;
+          } else if (document.body) {
+            scrollTop = document.body.scrollTop;
+          }
+
+          if (recommendBox) {
+            let offtop = recommendBox.offsetTop - scrollTop;
+            if (offtop < 50) {
+              if (!scope.begin_time) {
+                scope.begin_time = (new Date()).valueOf();
+                console.log("开始计算时间：",scope.begin_time);
+              }
             }
+            if (offtop > 50) {
+              if (scope.begin_time) {
+                if(!scope.end_time){
+                  scope.end_time = (new Date()).valueOf();
+                  console.log("结束计算时间：",scope.end_time);
+                  var laytime = scope.end_time - scope.begin_time;
+                  if(laytime < 500){
+                    scope.begin_time = 0;
+                    scope.end_time = 0;
+                    return false;
+                  }
+                  let tiData = {
+                    "period":laytime,
+                    "page":2,
+                    "goods_id": scope.goodsid
+                  };
+                  layout.statistics(tiData,function () {});
+                  scope.begin_time = 0;
+                  scope.end_time = 0;
+                }
+              }
+            }
+          }
         });
     },
   // watch: {
@@ -332,6 +385,30 @@ const DetailPic = {
       handleConfirmOk () {
         this.isConfirm = false;
       },
+      // 点击猜你喜欢结束时间
+      periodtj: function () {
+      let scope = this;
+      if (scope.begin_time) {
+        if(!scope.end_time){
+          scope.end_time = (new Date()).valueOf();
+          console.log("结束计算时间：",scope.end_time);
+          let laytime = scope.end_time - scope.begin_time;
+          if(laytime < 500){
+            scope.begin_time = 0;
+            scope.end_time = 0;
+            return false;
+          }
+          let tiData = {
+            "period":laytime,
+            "page":2,
+            "goods_id": scope.goodsid
+          };
+          layout.statistics(tiData,function () {});
+          scope.begin_time = 0;
+          scope.end_time = 0;
+        }
+      }
+    }
     }
 };
 

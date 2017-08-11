@@ -1,0 +1,51 @@
+{
+  "data":{
+    "code": "0",
+    "shop_url": "https://15201663952.davdian.com",
+    "visitor_status": "3",
+    "sess_key": "48a275a991a0a6295706e6d9f8c3a784b62a4bbc",
+    "data_version": "xxxxx",
+    "data": {
+      "dataInfo": {
+        "notesId": "笔记id",
+        "userName": "用户名",
+        "headImg": "//pic.davdian.com/free/2017/07/26/header.jpg",
+        "createTime": "2017-2-13 19:20",
+        "content": "学习了，sss很棒的课很棒的课很棒的课很棒的课很棒的课很棒的课很棒的课很棒的课很棒的课很棒的课很棒的课很棒的很棒的课很棒的课很棒的课很棒的课很棒的课很棒的很棒的课很棒的很棒的课很棒的课很棒的课很棒的课很棒的课很棒的课很棒的课很棒的课很棒的课很棒的很棒的的课很棒的很棒的的课很棒的的课很棒的很棒的的课很棒的的课很棒的很棒的的课很棒的的课很棒的很棒的的课很棒的的课很棒的很棒的的课很棒的的课很棒的很棒的的课很棒的的课很棒的很棒的的课很棒的的课很棒的的课很棒的很棒的的课很棒的很棒的的课很棒的的课很很棒的的课很棒的很棒的的课很棒的的课很棒的很棒的的课棒的很棒的的课sssssssss",
+        "courseId": "所属课程",
+        "score": "4",
+        "shareNum": "112125",
+        "status": "2",
+        "imgList":[
+          "http://pic.davdian.com/supplier/2017/07/19/1000_1000_e28829dfe41930f3947823ccd15047f6.jpg",
+          "http://pic.davdian.com/supplier/2017/07/19/1000_1000_e28829dfe41930f3947823ccd15047f6.jpg",
+          "http://pic.davdian.com/supplier/2017/07/19/1000_1000_e28829dfe41930f3947823ccd15047f6.jpg",
+          "http://pic.davdian.com/supplier/2017/07/19/1000_1000_e28829dfe41930f3947823ccd15047f6.jpg",
+          "http://pic.davdian.com/supplier/2017/07/19/1000_1000_e28829dfe41930f3947823ccd15047f6.jpg",
+          "http://pic.davdian.com/supplier/2017/07/19/1000_1000_e28829dfe41930f3947823ccd15047f6.jpg"
+        ],
+        "command": {
+          "content": "15776832314.davdian.com"
+        }
+      },
+      "courseInfo": {
+        "id": "3",
+        "title": "课程标题",
+        "imageUrl": "课程封面下载地址",
+        "startTime": "",
+        "endTime": "",
+        "startTimestamp": "",
+        "endTimestamp": "",
+        "teacher": "课程讲师",
+        "type": "1",
+        "pv": "100万",
+        "coursePrice": "5.10",
+        "command": {
+          "content": "点击时的动作",
+          "refer": "统计"
+        }
+      }
+    }
+  }
+
+}

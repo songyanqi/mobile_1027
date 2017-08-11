@@ -1,3 +1,6 @@
+// 基础模块
+import common from '../../src/common/js/common.js';
+
 import '../common/common.vue'
 import indexHead from './index_header.vue'
 import maybeYouLike from '../maybeYouLike.vue'
@@ -5,9 +8,10 @@ import bd_goods_1 from '../index/feed/bd_goods_1.vue'
 import indexFeed from './index_feed.vue'
 import indexFoot from '../../src/component/com-footer.vue'
 import layout from "./layout.es6"
-import { savebackData,getbackData } from "../../utils/utils.es6"
+import {savebackData, getbackData} from "../../utils/utils.es6"
 import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
+import share from '../../src/common/js/module/share.js'
+
 export default{
   data(){
     return {
@@ -21,10 +25,9 @@ export default{
         cart: 0
       },
       menuList: [],
-      menuMore:{},
+      menuMore: {},
       footData: {
         active: 0
-
       },
       top: 10,
       headerFlag: true,
@@ -43,8 +46,12 @@ export default{
       timeOutEvent: '',
       rewardData: {},
       getRewardtips: false,
-      usersta:'',
-      backTop:0
+      usersta: '',
+      backTop: 0,
+      menudata:{},
+      page_index:0,
+      menuId:8,
+      likeNum:0
     }
   },
   computed: {
@@ -62,10 +69,10 @@ export default{
   },
   mounted: function () {
     // this.sessionHistory();
-    var that = this
+    var that = this;
     this.$nextTick(function () {
-      getbackData(that, 'backTop')
-      if (!getbackData(that, 'backTop')){
+      getbackData(that, 'backTop');
+      if (!getbackData(that, 'backTop')) {
         that.initHistory();
         that.initDate();
       }
@@ -144,7 +151,7 @@ export default{
       }
       $.ajax({
         type: "POST",
-        url : strUrl,
+        url: strUrl,
         // url: '../data/index_data.json',
         data: strData,
         dataType: 'json',
@@ -159,7 +166,7 @@ export default{
                 top: window.scrollY,
                 data: data.data
               }
-              layout.sStorageSet(strStroageName, objData)
+              layout.sStorageSet(strStroageName, objData);
 
               localStorage.setItem('feedList', JSON.stringify(data));
               let feedIndex = 3;
@@ -188,7 +195,9 @@ export default{
               }
               that.contentData = data
             }
-            that.advert()
+            if (typeof that.advert == 'function') {
+              that.advert()
+            }
           } else {
             that.unLoadFlag = true
           }
@@ -382,8 +391,10 @@ export default{
       }
     },
     changeCategory: function (category, index) {
-      if (category=='-1'){
-        window.location.href = this.menuList[this.menuList.length-1].command.content
+      this.page_index = index;
+      this.menuId = category;
+      if (category == '-1') {
+        window.location.href = this.menuList[this.menuList.length - 1].command.content
         return
       }
       var that = this
@@ -415,15 +426,14 @@ export default{
             window.scrollTo(0, layout.sStorageGet('index_first', 'top'))
           }, 150)
         } else {
-          var flag_name = 'flag_'+Date.now();
+          var flag_name = 'flag_' + Date.now();
           console.log(flag_name)
           window[flag_name] = false;
-          setTimeout(function(){
-            if (!window[flag_name]){
+          setTimeout(function () {
+            if (!window[flag_name]) {
               NProgress.start();
             }
-          },200)
-
+          }, 200);
           $.ajax({
             type: "POST",
             url: '/api/mg/sale/index/getPageFirst',
@@ -431,15 +441,12 @@ export default{
             success: function (data) {
               window[flag_name] = true;
               NProgress.done();
-              console.log(flag_name)
               if (!data.code) {
-
                 that.contentData = data.data;
-
                 let objData = {
                   top: 0,
                   data: that.contentData
-                }
+                };
                 layout.sStorageSet('index_first', objData);
                 window.scrollTo(0, 0)
               } else {
@@ -465,14 +472,14 @@ export default{
           window.scrollTo(0, layout.sStorageGet('first_' + category, 'top'))
         }, 150)
       } else {
-        var flag_name = 'flag_'+Date.now();
-          console.log(flag_name)
-          window[flag_name] = false;
-          setTimeout(function(){
-            if (!window[flag_name]){
-              NProgress.start();
-            }
-          },200)
+        var flag_name = 'flag_' + Date.now();
+        console.log(flag_name)
+        window[flag_name] = false;
+        setTimeout(function () {
+          if (!window[flag_name]) {
+            NProgress.start();
+          }
+        }, 200)
         $.ajax({
           type: "POST",
           url: '/api/mg/sale/channel/getPageFirst',
@@ -483,8 +490,8 @@ export default{
             if (!data.code) {
               if (data.data.webUrl) {
                 layout.sStorageSet('v_index', oldObj)
-                if (layout.sStorageGet('v_index', 'category')){
-                  that.changeCategory(layout.sStorageGet('v_index', 'category'),layout.sStorageGet('v_index', 'index'))
+                if (layout.sStorageGet('v_index', 'category')) {
+                  that.changeCategory(layout.sStorageGet('v_index', 'category'), layout.sStorageGet('v_index', 'index'))
                 }
                 location.href = data.data.webUrl
               } else if (data.data.feedList) {
@@ -513,10 +520,10 @@ export default{
     getDataForUse: function (index) {
       let that = this
       let category = null;
-      if(that.menuList[index]){
+      if (that.menuList[index]) {
         category = that.menuList[index].id
       }
-      if (!category){
+      if (!category) {
         return;
       }
       let objApi = {
@@ -537,10 +544,10 @@ export default{
               layout.sStorageSet('first_' + category, objData)
             }
           }
-          that.getDataForUse(index+1)
+          that.getDataForUse(index + 1)
         },
         error: function (e) {
-          that.getDataForUse(index+1)
+          that.getDataForUse(index + 1)
           console.log(e)
         }
       })
@@ -565,12 +572,18 @@ export default{
         type: "POST",
         url: '/api/mg/sale/index/getMenu',
         // url: '../data/index_getmenu.json',
-        data: layout.strSign('indexMenu'),
+        // data: layout.strSign('indexMenu'),
+        data: layout.strSign('indexMenu', {js_wx_info: 1}),
         success: function (data) {
-          that.menuList = data.data.menuList;
-          that.menuMore = data.data.menuMore;
-          that.getDataForUse(0)
+          // check强制跳转
+          common.checkRedirect(data);
+
+          that.menudata = data.data;
+          console.log(that.menudata);
+          that.getDataForUse(0);
           that.checkdownTip(data.visitor_status);
+          // 设置分享信息
+          share.setShareInfo(data.data.shareInfo, data);
         },
         error: function (e) {
           console.log(e)
@@ -784,9 +797,9 @@ export default{
     },
     getRewardss: function () {
       var that = this;
-      if(that.isApp()){
+      if (that.isApp()) {
 
-      }else{
+      } else {
         //奖品
         $.ajax({
           type: "POST",
@@ -807,8 +820,8 @@ export default{
         })
       }
     },
-    events:function () {
-      
+    events: function () {
+
     }
   },
   components: {
@@ -817,7 +830,7 @@ export default{
     indexFoot: indexFoot,
     maybeYouLike: maybeYouLike,
     bd_goods_1: bd_goods_1,
-    NProgress:NProgress
+    NProgress: NProgress
   },
   created: function () {
     (function (doc, win) {
@@ -853,6 +866,12 @@ export default{
       $('body').css("paddingBottom", "48px")
     } else {
       $('body').css("paddingBottom", "0px")
+    }
+  },
+  watch: {
+    menuId:function () {
+      var scope = this;
+      this.likeNum++;
     }
   }
 }

@@ -18,7 +18,11 @@
 </template>
 
 <script>
-    import './bd_goods_2.scss'
+//    import './bd_goods_2.scss'
     import bd_goods_2 from './bd_goods_2.es6'
     export default bd_goods_2
 </script>
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./bd_goods_2.scss";
+</style>

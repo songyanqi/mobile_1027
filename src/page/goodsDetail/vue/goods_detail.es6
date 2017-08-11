@@ -5,10 +5,11 @@ import { Group, Cell, Tab, TabItem, Alert, Loading, Spinner } from 'vux';
 
 // 页面打开时
 import base from '../../../../utils/base.es6';
-import common from '../../../../module/common/common.es6';
+import common1 from '../../../../module/common/common.es6';
 import native from '../../../common/js/module/native.js';
 import confirm from './confirm.vue';
 import popup from '../../../common/js/module/popup.js';
+import weixin from '../../../common/js/module/weixin.js';
 
 require('babel-polyfill');
 base.init();
@@ -28,10 +29,16 @@ import GoodsParams from './goods_params.vue';
 import DetailPic from './detail_pic.vue';
 import BrandType from './brand_type.vue';
 import noFindGoods from './nofind_goods.vue';
+import vueLazyload from '../../../common/js/module/vueLazyload.js';
+
+import ua from '../../../common/js/module/ua.js';
+
+vueLazyload.init(true);
 
 export default {
     data () {
         return {
+            response: null,
             // goodListTitle: ['商品','详情'],
             // selectedTitle: '商品',
             goodListTitle: ['商品详情'],
@@ -121,11 +128,11 @@ export default {
             goodsLimitNum: 1,
             isLimitNum: false,
 
-            alertShow: false,
-            alertMsg: '',
+            // alertShow: false,
+            // alertMsg: '',
             loadingShow: false,
             //dataUrl,加入购物车返回的为url
-            dataUrl: '',
+            // dataUrl: '',
             confirmShow: false,
             confirmMsg: '',
             //confirm
@@ -201,17 +208,22 @@ export default {
           backTop: 0,
           //图文详情
           minHeight: window.innerHeight - 128,
+          //分享卡id
+          sellerId: "",
+          goodsId: "",
         }
     },
     created () {
-        if (platform == '2') {
-            window.title = shareTitle;
-            window.link = lineLink;
-            window.imgUrl = imgUrl.replace('pic.davdian.com','pic1.davdian.com');
-            window.desc = descContent;
-
-            base.ready();
-        }
+        // // if (platform == '2') {
+        // if (ua.isDvdApp() && ua.isAndroid()) {
+        //   alert(666)
+        //     window.title = shareTitle;
+        //     window.link = lineLink;
+        //     window.imgUrl = imgUrl.replace('pic.davdian.com','pic1.davdian.com');
+        //     window.desc = descContent;
+        //
+        //     base.ready();
+        // }
 
         $(window).scroll(() => {
           let topHead = $(".top_h_s_to");
@@ -560,6 +572,10 @@ export default {
                               goodsStockSales = data.extra.parent,
                               dataBasis = data.basis;
 
+                          //分享卡
+                          that.sellerId = data.shop.sellerId.toString();
+                          that.goodsId = dataBasis.goodsId;
+
                           //六一
                           if (Number(res.sys_time) * 1000 > 1497369600000 && Number(res.sys_time) * 1000 < 1497456000000) {
                             that.isShowa = true;
@@ -788,8 +804,14 @@ export default {
                             window.link = location.href;
                             window.imgUrl = dataBasis.shareImg.replace('pic.davdian.com','pic1.davdian.com');
                             window.desc = dataBasis.shareRecommend;
-                            common.initShare(5);
+                            common1.initShare(5);
                             base.ready();
+                            weixin.setShareInfo({
+                              title: window.title, // 分享标题
+                              desc: window.desc, // 分享描述
+                              link: window.link, // 分享链接
+                              imgUrl: window.imgUrl, // 分享图标
+                            });
                         }
                     } else {
                       popup.toast(res.data.msg,3000);
@@ -985,10 +1007,10 @@ export default {
                 shareMoney: shareMoney + "",
                 shareMoneyStr: '赚' + shareMoney + '元',
               });
-
               window.moreShareInfo = {
                 shareTitle: "分享至少赚" + shareMoney + "元",
-                shareDesc: "当好友点击您分享的链接，并进入您的店铺购物，您就可以获得对应的商品返现啦！"
+                shareDesc: "当好友点击您分享的链接，并进入您的店铺购物，您就可以获得对应的商品返现啦！",
+                bigImgUrl: `http://img.davdian.com/add_qrcode.php?goods_id=${that.goodsId}&seller_id=${that.sellerId}&t=${Date.now()}`,
               };
             }
           }
@@ -1038,9 +1060,8 @@ export default {
                     that.actEndTime = this.changeDate(item.endTime*1000,1);
                 }
             });
-            // 预告活动时间，预告没倒计时的时候
+            // 预告活动时间
             that.infoObj.isComingActivity = false;
-            // if (!dataExtra.activity.length && dataExtra.coming.length) {
             if (dataExtra.coming.length) {
               dataExtra.coming.map((item) => {
                 if (item.showTime == '1') {
@@ -1067,7 +1088,8 @@ export default {
           //判断限时购是否抢光提示。
 
           if (dataExtra.status.onSale == '1' && dataExtra.sales.goodsStocks > '0' && dataExtra.hints.hintsInfo && dataExtra.hints.hintsInfo.length) {
-            popup.toast(dataExtra.hints.hintsInfo,6000);
+            popup.alert("会员返现已恢复平日金额，返现金额以当前页面为准", () => {
+            }, "该商品限时购活动库存售罄");
           }
         },
         //dataExtra为空的时候
@@ -1184,9 +1206,9 @@ export default {
             }
         },
         //alert弹框
-        handleAlertHide () {
-            window.location.href = that.dataUrl;
-        },
+        // handleAlertHide () {
+        //     window.location.href = that.dataUrl;
+        // },
         //confirm弹框
         handleConfirmCancel () {
           window.location.href = '/cart.html?logRefererPage=goods_detail&logRefererLocation=cart';
@@ -1216,5 +1238,6 @@ export default {
         Loading: Loading,
         Spinner: Spinner,
         noFindGoods: noFindGoods,
+      'ad-banner': require('./ad-banner.vue')
     }
 };

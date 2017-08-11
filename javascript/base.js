@@ -165,6 +165,12 @@ $(document).ready(function () {
   window.iosInterface.nativeWebviewBack = function () {
     window.bravetime.initHead();
   };
+  window.iosInterface.refreshPreviousPageData = function () {
+    backNewData.$children[0].appUpData()
+  }
+  window.iosInterface.alreadyCached = function(){
+    window.backNewData.$children[0].cache = true
+  }
 
   window.iosInterface.setCookie = function (_name, _value) {
     var setCookie = function (name, value) {
@@ -237,7 +243,7 @@ $(document).ready(function () {
     if (href && href.length > 5 && href.substring(0,4) && href.substring(0,5)){
       var str = href.substring(0,4)
       var str1 = href.substring(0,5)
-      console.log(str =='http' && str1 != 'https')
+      // console.log(str =='http' && str1 != 'https')
       if (str =='http' && str1 != 'https'){
         return href.replace('http', 'https')
       } else {
@@ -359,12 +365,12 @@ $(document).ready(function () {
   };
 
   window.bravetime.enterVoiceRoom = function (courseId) {
-    if (!window.enterVoiceRoomFlag) {
-      window.enterVoiceRoomFlag = true;
+    // if (!window.enterVoiceRoomFlag) {
+      // window.enterVoiceRoomFlag = true;
       bravetime.callNative2("VoiceLive", "enterRoom", {courseId: courseId}, function () {
-        location.reload();
+        // location.reload();
       }, "3.4.0");
-    }
+    // }
 
   };
 
@@ -1671,11 +1677,11 @@ $(document).ready(function () {
 // 错误统计白名单
 var whiteList = [
   {
-    url: "?c=prize&a=send_bonus",
+    url: "/index.php?c=prize&a=send_bonus",
     code: -1
   },
   {
-    url: "/?c=prize&a=send_bonus",
+    url: "/index.php?c=prize&a=send_bonus",
     code: -1
   }
 ];
@@ -1699,7 +1705,7 @@ $.ajax = function (opt) {
 
   opt.data = opt.data || {};
   if (typeof opt.data == "object") {
-    for (var i = 0, d; d = ["rp", 'rl', 'logDp'][i++];) {
+    for (var i = 0, d; d = ["rp", 'rl', 'logDp','dp'][i++];) {
       var tmp_value = window.Units && Units.getQuery(d);
       if (tmp_value) {
         opt.data[d] = tmp_value;

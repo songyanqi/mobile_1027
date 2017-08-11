@@ -30,7 +30,13 @@ $(document).ready(function () {
     $(window).on("scroll", function () {
       $(".top_menu_detail").addClass("hide");
     });
+
+    //页面滚动时候操作
     $(window).scroll(scrollCallback);
+
+    //初始化页面的时候也要操作下scrollCallback
+    scrollCallback();
+
     $("*").on("DOMNodeInserted", function () {
       allHeight = $(document).height() - $(window).height();
     })
@@ -48,6 +54,8 @@ $(document).ready(function () {
     }
 
     var bottom = allHeight - top;
+
+    //如果有限时购  也即是 首页
     if (document.getElementById("ts_menu")) {
         //限时购时间条 外固定
         var objHeight = document.getElementById("ts_menu_wrap").offsetTop,
@@ -92,14 +100,18 @@ $(document).ready(function () {
           if (showheader) {
             if (document.getElementById("ts_menu_wrap").innerHTML == "") {
               ts_menu_wrap.appendChild(ts_menu);
-              v_menu.style.display = "block";
+              // v_menu.style.display = "block";
+              v_menu.style.visibility = "visible";
+              v_menu.style.marginTop= "0";
               ts_menu.style.zIndex = "12";
             }
           }
         }
       } else {
         top_container.appendChild(ts_menu);
-        v_menu.style.display = "none";
+        // v_menu.style.display = "none";
+        v_menu.style.visibility = "hidden";
+        v_menu.style.marginTop = "-40px";
         if (showheader) {
 
         } else {
@@ -152,6 +164,7 @@ $(document).ready(function () {
       }
 
     } else {
+      //其他二极管页面
       if (top < 40 || bottom < 40) {
         showHeader();
       } else if (top < lastY) {

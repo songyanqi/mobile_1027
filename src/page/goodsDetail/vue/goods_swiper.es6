@@ -38,7 +38,7 @@ export default {
           //是否显示进度条
           isShowControl: false,
           timeVideo: null,
-          isWechat: true,
+          // isWechat: true,
           //loading加载
           isLoad: false,
           //真个容器距离浏览器左边的距离
@@ -404,24 +404,6 @@ export default {
           this.isOver = true;
           this.$root.eventHub.$emit('time_over',this.isOver);
       },
-      //时间转换
-      /*changeDate (date) {
-        if (date) {
-          date = new Date(Number(date));
-
-          if (date > new Date()) {
-            let year = date.getFullYear(),
-              month = date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1,
-              dates = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate(),
-              hours = date.getHours() < 10 ? `0${date.getHours()}` : date.getHours(),
-              minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes();
-
-            return `${year}-${month}-${dates} ${hours}:${minutes}`;
-          } else {
-            return 0;
-          }
-        }
-      },*/
     },
     components: {
       Swiper: Swiper,

@@ -229,43 +229,14 @@
             <div v-for = "item of picdetails">
                 <img v-lazy="item.detailUrl">
             </div>
-            <div class = "mt_10">
-                <div class="df_new_title_2" style="border-bottom: none">
+            <div class = "mt_10" @click = "periodtj">
+                <!-- <div class="df_new_title_2" style="border-bottom: none">
                     <span class="df_new_font">猜你喜欢</span>
-                </div>
+                </div> -->
+                <tt_com_1 :data = "mayyoulikeData"></tt_com_1>
                 <maybeyoulike
                   :no_more = "mayyoulikenomore"
                   :list = "mayyoulikelist"></maybeyoulike>
-
-                <!--<div class = "good_list_2_row">-->
-                  <!--<div class="clearfix">-->
-                      <!--<a v-for = "item of mayyoulikelist"-->
-                         <!--:href = "item.command.content"-->
-                         <!--class="good_item">-->
-                          <!--<div class="good_img_container">-->
-                            <!--<img v-lazy="item.imageUrl">-->
-                            <!--<span class="good_list_sell_out" v-if = "item.statusInfo == 'soldout'">售罄</span>-->
-                            <!--<span class="good_list_sell_out" v-if = "item.statusInfo == 'presale'">预售</span>-->
-                            <!--<span class="good_list_sell_out" v-if = "item.statusInfo == 'offline'">未上架</span>-->
-                            <!--<span v-if = "item.actInfo" class="img_label">{{item.actInfo}}</span>-->
-                          <!--</div>-->
-                          <!--<div class="good_con">-->
-                              <!--<div class="good_title">{{item.title}}</div>-->
-                              <!--<div class="goods4_price_bar">-->
-                                  <!--<span class="dav-color-price"><span class = "goodPriceMenu">¥</span><span class = "now_price">{{(item.nowPrice+'').split(".")[0]}}</span><span class = "fz14" v-if = "(item.nowPrice+'').split('.').length == 2">.{{(item.nowPrice+"").split(".")[1]}}</span></span>-->
-                                  <!--<span v-if = "item.timeshopIncome" class = "vip_return">-->
-                                    <!--<span class="vip_return_title">会员返</span>-->
-                                    <!--<span class="vip_return_f">¥</span>-->
-                                    <!--<span class="vip_return_price">{{ item.timeshopIncome }}</span>-->
-                                  <!--</span>-->
-                              <!--</div>-->
-                          <!--</div>-->
-                      <!--</a>-->
-                  <!--</div>-->
-                  <!--<div v-show = "mayyoulikenomore" class="no_more">-->
-                      <!--没有更多商品了-->
-                  <!--</div>-->
-                <!--</div>-->
             </div>
         </div>
       <confirm v-if="isConfirm"
@@ -275,7 +246,6 @@
                @on-confirm="handleConfirmOk">
         <p style="text-align:center;">{{ confirmMsg }}</p>
       </confirm>
-      <!--<div v-if = "isShowToast" class = "tipWrapper">{{ showText }}</div>-->
     </div>
 </template>
 

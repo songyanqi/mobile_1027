@@ -42,12 +42,12 @@ body {
   user-select: none;
 }
 
-.app{
+.app {
   margin: auto;
   min-width: $pageMinWidth;
   max-width: $pageMaxWidth;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
 }
 
 // 超过最大展示边框

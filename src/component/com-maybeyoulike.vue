@@ -24,7 +24,7 @@
           <div class="goods4_price_bar" :class = "{ column3Cont: column && column == '3' }">
             <span v-if = "item.shop_price" class="dav-color-price font-weight" :class = "{ column3Price: column && column == 3 }"><em class="fz_14">¥</em><span class="nowPrice"><span>{{(item.shop_price+"").split(".")[0]}}</span><span class="fz_14" v-if="(item.shop_price+'').split('.').length == 2">.{{(item.shop_price+"").split(".")[1]}}</span></span></span>
             <span v-if = "item.nowPrice" class="dav-color-price font-weight" :class = "{ column3Price: column && column == 3 }"><em class="fz_14">¥</em><span class="nowPrice"><span>{{(item.nowPrice+"").split(".")[0]}}</span><span class="fz_14" v-if="(item.nowPrice+'').split('.').length == 2">.{{(item.nowPrice+"").split(".")[1]}}</span></span></span>
-            <span class="vip_return" :class = "{ column3VipReturn: column && column == 3 }" v-if = "item.seller_income != '0' || item.comm_income != '0' || item.timeshopIncome != '0' || item.income != '0'">
+            <span class="vip_return" :class = "{ column3VipReturn: column && column == 3 }" v-if = "(item.seller_income && item.seller_income != '0') || (item.comm_income && item.comm_income != '0') || (item.timeshopIncome && item.timeshopIncome != '0') || (item.income && item.income != '0')">
               <span class="vip_return_title">会员返</span>
               <span class="vip_return_f">¥</span>
               <span class="vip_return_price">{{item.seller_income || item.comm_income || item.timeshopIncome || item.income}}</span>
@@ -46,18 +46,44 @@
   </div>
 </template>
 <script>
+  import native from '../common/js/module/native.js';
+
   export default{
     data:function(){
       return{
+        isapp: false,
       }
     },
     props:["list","no_more","loading","refer","referer","errors","column"],
     created() {
     },
     mounted() {
-      console.log("column",this.column);
+      this.isapp = this.isApp();
     },
     methods:{
+      isApp() {
+        let u = navigator.userAgent;
+
+        return !!u.match(/davdian|bravetime|vyohui/);
+      },
+      // 是否为mobile
+      isMobile() {
+        let ua = navigator.userAgent;
+        return !!ua.match(/Mobile/i);
+      },
+      // 跳转方式
+      handleJump(url) {
+        this.isapp = this.isApp();
+        if (this.isapp) {
+          native.Browser.open({
+            url: url
+          });
+        } else if (this.isMobile()) {
+          window.open(url, '_blank');
+        } else {
+          window.open(url, '_self');
+        }
+      },
       handleHref(item) {
         let newHref = "";
         if(item.command && item.command.content) {
@@ -68,7 +94,8 @@
           newHref = this.a_href(item.goods_id);
         }
 
-        window.location.href = newHref;
+        // window.location.href = newHref;
+        this.handleJump(newHref);
       },
       a_href:function (goods_id) {
         var list = [],str="";
@@ -86,7 +113,7 @@
         return {
           src: imgSrc || '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
           error: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
-          loading: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png'
+          loading: '//pic.davdian.com/free/2017/08/04/davdianbg.jpg'
         }
       }
     },
@@ -117,9 +144,10 @@
     padding: 10px 5px 0 5px;
   }
   .good_list_2_row .good_img_container {
-    adding: 0;
+    padding: 0;
     position: relative;
     background-color: #fff;
+    min-height:145px;
   }
   .font-weight {
     font-weight: 500;

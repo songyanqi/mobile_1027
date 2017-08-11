@@ -1345,11 +1345,11 @@ $(document).ready(function () {
 // 错误统计白名单
 var whiteList = [
     {
-        url:"?c=prize&a=send_bonus",
+        url:"/index.php?c=prize&a=send_bonus",
         code:-1
     },
     {
-        url:"/?c=prize&a=send_bonus",
+        url:"/index.php?c=prize&a=send_bonus",
         code:-1
     }
 ];

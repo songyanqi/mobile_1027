@@ -9,7 +9,8 @@ new Vue({
         list: [], // 左侧列表
         index: 0, // 左侧选中
         category: {}, // 右侧数据
-        pos: 0 },
+        pos: 0
+    },
     ready: function ready() {
 
         initData(this);

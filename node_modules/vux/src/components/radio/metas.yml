@@ -74,12 +74,34 @@ props:
   fill-label:
     en: label for fill input
     zh-CN: 可填写时的label文字
+  disabled:
+    type: Boolean
+    version: v2.3.8
+    en: disable selecting
+    zh-CN: 禁用操作
+  selected-label-style:
+    type: Object
+    version: v2.4.0
+    en: set selected label style
+    zh-CN: 设置选中时的 label 样式，比如使用其他颜色更容易区分是否为选中项
 slots:
   each-item:
     version: v2.3.5
     en: custom how to display each item
     zh-CN: 自定义如何显示每一项
 changes:
+  v2.4.0:
+    en:
+      - '[feature] Add prop:selected-label-style'
+    zh-CN:
+      - '[feature] 添加属性 prop:selected-label-style 来支持定义选中项的文字样式'
+  v2.3.8:
+    en:
+      - '[feature] Add prop:disabled #1254'
+      - '[feature] Add less:@radio-checked-icon-color #896'
+    zh-CN:
+      - '[feature] 支持 prop:disabled 禁用操作 #1254'
+      - '[feature] 支持 less 变量 @radio-checked-icon-color #896'
   v2.3.5:
     en:
       - '[feature] Support slot:each-item'

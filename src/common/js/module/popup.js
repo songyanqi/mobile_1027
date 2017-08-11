@@ -20,17 +20,17 @@ export default {
       template: '<com-popup-toast :html="html" :duration="duration"/>',
     });
   },
-  alert(html, ok){
+  alert(okText, ok, title){
     new Vue({
       components: {
         'com-popup-alert': require('../../../component/com-popup-alert.vue')
       },
       el: getEl(),
-      data: {html, ok},
-      template: '<com-popup-alert :html="html" :ok="ok" />',
+      data: {okText, ok, title},
+      template: '<com-popup-alert :okText="okText" :ok="ok" :title="title" />',
     });
   },
-  confirm(html, ok, cancel){
+  /*confirm(html, ok, cancel){
     new Vue({
       components: {
         'com-popup-confirm': require('../../../component/com-popup-confirm.vue')
@@ -38,6 +38,16 @@ export default {
       el: getEl(),
       data: {html, ok, cancel},
       template: '<com-popup-confirm :html="html" :ok="ok" :cancel="cancel" />',
+    });
+  },*/
+  confirm(okContent, ok, cancel, title, okText, cancleText){
+    new Vue({
+      components: {
+        'com-popup-confirm': require('../../../component/com-popup-confirm.vue')
+      },
+      el: getEl(),
+      data: {title, okContent, okText, cancleText, ok, cancel},
+      template: '<com-popup-confirm :okContent = "okContent" :ok="ok" :cancel="cancel" :title= "title" :okText="okText" :cancleText = "cancleText" />',
     });
   },
   loading(show){

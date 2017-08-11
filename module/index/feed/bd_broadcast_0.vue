@@ -20,7 +20,10 @@
 </template>
 
 <script>
-    import './bd_broadcast_0.scss'
+//    import './bd_broadcast_0.scss'
     import bd_broadcast from './bd_broadcast_0.es6'
     export default bd_broadcast
 </script>
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./bd_broadcast_0.scss";
+</style>

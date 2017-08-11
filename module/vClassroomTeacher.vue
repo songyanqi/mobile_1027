@@ -1,4 +1,7 @@
 <style>
+    html body{
+      background: white;
+    }
     .other_info{
         width:100%;
     }
@@ -47,6 +50,7 @@
                 </span>
             </div>
         </div>
+
         <list :list="list" :top-heights="topHeights"></list>
         <div style="clear: both"></div>
         <div v-if="loading" class="no_more"> 加载中 <img src="//pic.davdian.com/free/loading_03252.svg"> </div>
@@ -89,6 +93,7 @@
             top:top,
         },
         created:function () {
+            console.log(567567567567);
             var scope = this;
             //判断是否是火狐浏览器，来选择滚动条滚动的方式
             scope.isFirefox=navigator.userAgent.toUpperCase().indexOf("FIREFOX")>0?true:false;

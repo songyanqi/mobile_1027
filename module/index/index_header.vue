@@ -19,14 +19,17 @@
                     v-text='head.search.title'></span>中搜索...
             </div>
           </a>
+          <a class="right_icon_container" style="right:40px;" href="/category_search.html">
+            <i class="cart_icon classification_icon"></i>
+          </a>
           <a class="right_icon_container" href="/cart.html">
             <i class="cart_icon"></i>
             <b v-if="cart" v-text="cart"></b>
           </a>
         </div>
-        <div class="swiper-container v_menu" id="v_menu">
-          <ul class="swiper-wrapper index_con_menu">
-            <li class="swiper-slide" v-for="(item, index) in list"
+        <div v-if="menudata" class="swiper-container v_menu index_con_menu" id="v_menu" id="v_menu">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide" v-for="(item, index) in menudata.menuList"
                 @click='changeCategory(item.id,index,$event)'>
               <p class="time_state" v-if='item && item.title'>
                 <span class="time_state_span" :class="{time_state_span_active:item.id == cate}">{{item.title}}
@@ -34,11 +37,11 @@
                 </span>
               </p>
             </li>
-            <li v-if="menumore" class="swiper-slide" @click="javascript:location.href=menumore.command.content">
-              <p class="time_state">
-                <span class="time_state_span" v-text="menumore.title"></span>
-              </p>
-            </li>
+            <!--<li v-if="menudata.menuMore" class="swiper-slide" @click="javascript:location.href=menudata.menuMore.command.content">-->
+              <!--<p class="time_state">-->
+                <!--<span class="time_state_span" v-text="menudata.menuMore.title"></span>-->
+              <!--</p>-->
+            <!--</li>-->
           </ul>
         </div>
       </div>
@@ -48,11 +51,13 @@
 
 <script>
   // TODO 等待数据接口和规则
-  import "./index_header.css"
+//  import "./index_header.css"
   import head from "./index_header.es6"
   export default head
 </script>
-<style scoped>
+
+<style lang="sass" lang="scss" rel="stylesheet/scss" scoped>
+  @import "./index_header.css";
   .v_menu {
     background: #fff;
     width: 100%;
@@ -60,31 +65,31 @@
 
   .cart_icon{
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 44px;
     background-position: center;
     -webkit-background-size:100%;
     background-size:100%;
-    background-image: url(//pic.davdian.com/free/2017/06/27/shoppingCart.png);
+    background-image: url(//pic.davdian.com/free/2017/07/20/shoppingCart.png);
+  }
+  .cart_icon.classification_icon{
+    background-image: url(//pic.davdian.com/free/2017/07/20/classification.png);
+  }
+  .head_index_top .shop_name{
+    padding-right: 88px;
   }
 
   .index_con_menu {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    flex-flow: row;
     width: 100%;
-    max-width: 640px;
     font-size: 13px;
     padding-top: 5px;
     line-height: 8px;
-    /*height: 35px;*/
     position: relative;
     top: 0;
     z-index: 11;
     margin-top: 0;
+    max-width: 640px;
+    overflow: hidden;
   }
 
   .index_con_menu li {
@@ -116,6 +121,9 @@
 
   .time_state_span_active {
     color: #ff4a7d;
+  }
+  .head_index_top .search_con{
+    padding-right: 82px;
   }
 
   /*新加部分 首页头部 透明*/

@@ -26,7 +26,11 @@
 </template>
 
 <script>
-    import './tt_com_0.scss'
+//    import './tt_com_0.scss'
     import tt_com_0 from './tt_com_0.es6'
     export default tt_com_0
 </script>
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./tt_com_0.scss";
+</style>

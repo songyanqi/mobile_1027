@@ -16,10 +16,10 @@
         <div class='success_text_top1' v-if='state==3'>累计已为您节省<span v-text='successData.orderInfo.totalIncome'></span>元</div>
         <p class='success_text_top2' v-if='state==3'>有好事别忘了朋友！</p>
         <p class='success_text_top3' v-if='state==3'>推荐朋友成为会员，您也能获得丰厚奖励</p>
-        <p class='success_text_top2' v-if='state==0 || state==1'>您刚刚与 <span v-text='successData.orderInfo.orderIncome'></span>元返现擦肩而过</p>
-        <p class='success_text_top3' v-if='state==0 || state==1'>立即加入会员，获得更多优惠</p>
+        <!-- <p class='success_text_top2' v-if='state==0 || state==1'>您刚刚与 <span v-text='successData.orderInfo.orderIncome'></span>元返现擦肩而过</p>
+        <p class='success_text_top3' v-if='state==0 || state==1'>立即加入会员，获得更多优惠</p> -->
         <div class='success_btn1' v-if='state==3' @click='goLink(successData.memberInfo.command.content)'>邀请好友</div>
-        <div class='success_btn1'  v-if='state==0 || state==1' @click='goLink(successData.memberInfo.command.content)'>加入会员</div>
+        <!-- <div class='success_btn1'  v-if='state==0 || state==1' @click='goLink(successData.memberInfo.command.content)'>加入会员</div> -->
       </div>
       
     </div>

@@ -1,4 +1,5 @@
-var crypto = require('crypto');
+// var crypto = require('crypto');
+import md5 from 'crypto-js/md5.js';
 var common = require('../common/common.es6');
 import utils from '../../utils/utils.es6';
 import $ from '$';
@@ -26,7 +27,7 @@ let strSign = (str, obj) => {
 
 let sortObj = (dataVersion, obj) => {
     obj = obj||{};
-    for(var i=0,d;d = ["rp",'rl','logDp'][i++];){
+    for(var i=0,d;d = ["rp",'rl','logDp','dp'][i++];){
         var tmp_value = utils.utils.getQuery(d);
         if(tmp_value){
             obj[d]=tmp_value.replace(/[ +]/g,"");
@@ -75,7 +76,8 @@ let sortObj = (dataVersion, obj) => {
   for (let p in strObj) {
     string += p + '=' + strObj[p]
   }
-  var sign = crypto.createHash('md5').update(string, 'utf8').digest('hex').toUpperCase()
+  // var sign = crypto.createHash('md5').update(string, 'utf8').digest('hex').toUpperCase()
+  var sign = md5(string).toString().toUpperCase();
   strObj.sign = sign
   return strObj
 }
@@ -368,6 +370,10 @@ let statistics = (obj = {},callback = null) => {
       "action": obj.action || '1',                              //1：点击
       "action_type":  obj.action_type || "1",                       //1：模板
       "object_id": obj.objectId || "",                          //模板id
+      "period":obj.period || "",                            //停留时长 毫秒
+      "page":obj.page || "",                       //1：首页 2：详情页 3购物车 4搜索空   猜你喜欢位置
+      "menu_id":obj.menu_id || "",                               //输出menu_id
+      "goods_id":obj.goods_id || "",                              //详情页输出goods_id
         "feed":{
             "itemPosition": obj.itemPosition || "",                  //整个feed item的位置，透传服务端下发的position
             "tplId": obj.tplId || "",                             //模板Id
@@ -376,7 +382,7 @@ let statistics = (obj = {},callback = null) => {
             "cmdContent": obj.cmdContent || "",                      //动作：点击，来自feed中的command->content
             "imgUrl": obj.imgUrl || "",                         //当前点击imgUrl，可以为空
             "cmdLog":obj.cmdLog||""
-        }
+        },
     }
   }
   try{

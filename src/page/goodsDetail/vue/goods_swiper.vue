@@ -270,14 +270,14 @@
           </swiper-item>
         </swiper>
         <!--促销标签 actendtime-->
-        <div class = "promote_wrapper" v-if = "isshowactive == '1' && singleactivity">
+        <!-- <div class = "promote_wrapper" v-if = "isshowactive == '1' && singleactivity"> -->
+        <div class = "promote_wrapper" v-if = "isshowactive == '1' && singleactivity && singleactivity.typeId != '8'">
             <div class = "promote_type" :class = "{ limitPro: singleactivity.typeId == 5,sellKill_type: singleactivity.typeId == 1 || singleactivity.typeId == 4 }">
                 <!--秒杀-->
                 <div v-if = "singleactivity.typeId == 1" class="secKill"></div>
                 <div v-if = "singleactivity.typeId == 2" class = "timeGroup"></div>
                 <!--促销活动-->
-                <div v-if = "singleactivity.typeId == 8" class = "timeBuy"></div>
-
+                <!-- <div v-if = "singleactivity.typeId == 8" class = "timeBuy"></div> -->
                 <div v-if = "singleactivity.typeId == 4" class = "memPricde"></div>
                 <div v-if = "singleactivity.typeId == 5" style = "height: 44px;">
                     <div v-if = "singleactivity.actTypeId == 6">
@@ -289,19 +289,19 @@
             </div>
             <div class = "promote_cont" :class = "{ limit_cont: singleactivity.typeId == 5,sellKill_cont: singleactivity.typeId == 1,member_cont: singleactivity.typeId == 4 }">
                 <div v-if = "actendtime">
-                    <!--<div v-if = "(singleactivity.typeId == 5 || singleactivity.typeId == 2 || singleactivity.typeId == 4) && !isOver" class = "price_show">-->
-                        <!--<div>价格将恢复 ¥ {{ infoobj.shopPrice }}</div>-->
-                    <!--</div>-->
-                    <div>
+                    <!-- <div> -->
                       <div v-if = "(singleactivity.typeId == 5 || singleactivity.typeId == 2 || singleactivity.typeId == 4) && !isOver" class = "price_show">价格将恢复 ¥ {{ infoobj.shopPrice }}</div>
-                      <div v-if = "singleactivity.typeId == 8 && !isOver && visitorstatus == '3'" class = "price_show">会员返现将恢复为 ¥ {{ infoobj.normalIncome }}</div>
-                    </div>
-                    <div style = "-webkit-flex:1; -webkit-box-flex: 1; flex: 1;text-align: right; font-weight: 400" v-if ="isOver">
+                      <!-- <div v-if = "singleactivity.typeId == 8 && !isOver && visitorstatus == '3'" class = "price_show">会员返现将恢复为 ¥ {{ infoobj.normalIncome }}</div> -->
+                    <!-- </div> -->
+                    <div class = "overTimes" v-if ="isOver">
                         活动已结束
                     </div>
-                    <div style = "display: -webkit-box;display: -webkit-flex;display: flex;"
+                    <!-- <div class = "timeConts"
                          v-else
-                         :class = "{price_show: singleactivity.typeId == '5' || singleactivity.typeId == 2 || singleactivity.typeId == 4 || (singleactivity.typeId == 8 && visitorstatus == '3')}">
+                         :class = "{price_show: singleactivity.typeId == '5' || singleactivity.typeId == 2 || singleactivity.typeId == 4 || (singleactivity.typeId == 8 && visitorstatus == '3')}"> -->
+                    <div class = "timeConts"
+                         v-else
+                         :class = "{price_show: singleactivity.typeId == '5' || singleactivity.typeId == 2 || singleactivity.typeId == 4 }">
                         <div class = "fontWeight">距离结束：</div>
                         <div class = "time_cont countLimit" v-if = "actendtime" :class = "{ countSize: singleactivity.typeId == 1 }">
                             <clocker :time="actendtime.toString()" @on-finish = "handleFish">

@@ -1,23 +1,22 @@
-import {Vue} from '../../../common/js/common.js';
+// 基础模块
+import common from '../../../common/js/common.js';
 
-// 前后端分离需要
-import commonSeperateHtml from "../../../common/js/commonSeperateHtml.js";
-
-// 第三方
+// 第三方模块
+import Vue from 'Vue';
 import $ from '$';
 import Cookies from 'js-cookie';
 
-// 工具模块
-// import layout from "../../../../module/index/layout.es6";
+// 业务模块
 import encrypt from '../../../common/js/module/encrypt.js';
 import util from '../../../common/js/module/util.js';
 import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
-// import share from '../../../common/js/module/share.js';
-// import ua from '../../../common/js/module/ua.js';
-// import native from '../../../common/js/module/native.js';
-// import param from '../../../common/js/module/param.js';
-// import login from '../../../common/js/module/login.js';
+import login from '../../../common/js/module/login.js';
+import vueLazyload from '../../../common/js/module/vueLazyload.js';
+
+login.needLogin();
+
+vueLazyload.init();
 
 new Vue({
   el: ".app",
@@ -61,7 +60,7 @@ new Vue({
       let ts = this;
 
       // 检测强制跳转
-      commonSeperateHtml.checkRedirect(ts.response);
+      common.checkRedirect(ts.response);
 
       // response变化后并渲染完dom,设置其他事项
       ts.$nextTick(function () {
@@ -69,9 +68,7 @@ new Vue({
       });
     }
   },
-  // 检测是否登录
   beforeCreate(){
-    commonSeperateHtml.needLogin();
   },
   created() {
     this.getData();

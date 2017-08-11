@@ -1,4 +1,6 @@
-var crypto = require('crypto')
+// var crypto = require('crypto')
+import md5 from 'crypto-js/md5.js';
+
 let utils = {};
 let u = navigator.userAgent
 utils.getQuery = function (name) {
@@ -13,6 +15,15 @@ export const getQuery = function (name) {
     if (r != null) return decodeURIComponent(r[2])
     return null
 }
+utils.isInisWechatOrApp = function (name) {
+    if (utils.isApp() || utils.isWechat()){
+      return true
+    } else {
+      return false
+    }
+}
+export const isInisWechatOrApp = utils.isInisWechatOrApp
+
 utils.isIOS = function(){
     if(u.match(/ios/i)) {
         return true;
@@ -257,7 +268,8 @@ let sortObj = function (obj) {
   for (let p in strObj) {
     string += p + '=' + strObj[p]
   }
-  var sign = crypto.createHash('md5').update(string, 'utf8').digest('hex').toUpperCase()
+  // var sign = crypto.createHash('md5').update(string, 'utf8').digest('hex').toUpperCase()
+  var sign = md5(string).toString().toUpperCase();
   strObj.sign = sign
   return strObj
 }

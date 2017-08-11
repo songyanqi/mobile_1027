@@ -48,7 +48,11 @@
 </template>
 
 <script>
-    import './bd_timer_1.scss'
+//    import './bd_timer_1.scss'
     import bd_timer from './bd_timer_1.es6'
     export default bd_timer
 </script>
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./bd_timer_1.scss";
+</style>

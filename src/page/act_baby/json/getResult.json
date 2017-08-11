@@ -1,0 +1,39 @@
+{
+  "data": {
+    "point": {
+      "iq": "30",
+      "language": "40",
+      "eq": "60",
+      "action": "80",
+      "art": "100"
+    },
+    "comment": {
+      "total": "你真棒啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦啦",
+      "tech": "技术真好",
+      "power": "力量真强",
+      "speed": "速度真快",
+      "edurance": "教育真好",
+      "progress": "进步很大"
+    },
+    "goodsList": [
+      {
+        "img": "[[static]]/page/act_baby/img/temp1.png",
+        "name": "新品来袭拯救皮肤商品标题品来袭拯救皮标题",
+        "price": "271.15",
+        "link": ""
+      },
+      {
+        "img": "[[static]]/page/act_baby/img/temp2.png",
+        "name": "新品来袭拯救皮肤商品标题品来袭拯救皮标题",
+        "price": "271.15",
+        "link": ""
+      },
+      {
+        "img": "[[static]]/page/act_baby/img/temp3.png",
+        "name": "新品来袭拯救皮肤商品标题品来袭拯救皮标题",
+        "price": "271.15",
+        "link": ""
+      }
+    ]
+  }
+}

@@ -1,4 +1,3 @@
-// add by someone
 import moment from 'moment';		// 时间格式化
 import path from 'path';
 

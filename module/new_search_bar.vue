@@ -23,6 +23,7 @@
 
   </div>
 </template>
+
 <style scoped>
   .search_top .search_con {
     padding-right: 54px;

@@ -9,7 +9,6 @@
             <span class="img_label" v-if="item.actInfo!=''" v-text="item.actInfo"></span>
              <span class="img_label" v-if="item.actInfo==''&&+item.ratio" v-text="'返现'+item.ratio+'倍'"></span>
           </div>
-             
           <div v-if="item.statusInfo&&item.statusInfo != ''" class="good_list_sell_out"><span>{{item.statusInfo}}</span></div>
           <div v-if="item.pic_info && item.ratio != 0" class="pic_info">{{item.ratio}}</div>
         </div>
@@ -17,7 +16,7 @@
           <div class="good_title">{{item.title}}</div>
           <div class="goods4_price_bar">
             <span class="dav-color-price font-weight"><em class="fz_14">￥</em><span class = "nowPriceCont"><span class="nowPrice">{{(item.nowPrice+'').split(".")[0]}}</span><span class="fz_14" v-if="(item.nowPrice+'').split('.').length == 2">.{{(item.nowPrice+"").split(".")[1]}}</span></span></span>
-            <span class="vip_return" v-if = "item.income != 0">
+            <span class="vip_return" v-if = "item.income && item.income != 0">
               <span class="vip_return_title">会员返</span>
               <span class="vip_return_f">¥</span>
               <span class="vip_return_price">{{item.income}}</span>

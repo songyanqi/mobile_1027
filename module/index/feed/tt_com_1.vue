@@ -4,6 +4,7 @@
       <div>
         <span>
           {{data.title.name}}
+          <!--为你推荐-->
         </span>
       </div>
     </div>
@@ -56,7 +57,8 @@
       width: 100%;
       span {
         display: inline-block;
-        background-image: url("//pic.davdian.com/free/2017/06/10/tt_com_1.png");
+        /*background-image: url("//pic.davdian.com/free/2017/06/10/tt_com_1.png");*/
+        background-image: url("//pic.davdian.com/free/2017/07/25/heart.png");
         padding-right: 21px;
         background-position: 100% 12px;
         background-repeat: no-repeat;
