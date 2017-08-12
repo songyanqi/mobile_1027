@@ -80,7 +80,6 @@ var sortObj = function(obj) {
   // var sign = hex_md5(string).toUpperCase()
   var sign = md5(string).toUpperCase()
   strObj.sign = sign
-  console.log("strObj",sign);
   return strObj
 }
 jQuery(document).ready(function ($) {
@@ -182,7 +181,6 @@ jQuery(document).ready(function ($) {
       document.body.scrollTop = scrollTop;
 
       var dataStatus = $(this).attr('data-status');
-      console.log("reasonName",encodeURI(reasonName));
       var reason = encodeURI(reasonName);
       /*$.ajax({
           // url: cancelOrderUrl,

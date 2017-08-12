@@ -84,7 +84,6 @@ new Vue({
 					common.checkRedirect(res);
 					that.laoding = false;
 					if (!res.code) {
-						console.log("sus1",res);
 						that.response = res;
 						that.getProgress(that.response.data.statusList);
 					} else {
@@ -108,7 +107,6 @@ new Vue({
 					this.progressList.unshift(item);
 				}
 			});
-			console.log(this.progressList);
 		},
 	}
 })

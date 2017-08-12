@@ -51,7 +51,6 @@ new Vue({
 	methods: {
 		// 当状态改变的时候，头部也改变
 		handleStatus(statusList) {
-			console.log("statusList",statusList);
 			this.progressList = statusList;
 		},
 		getParmas() {
@@ -87,7 +86,7 @@ new Vue({
 					if (!res.code) {
 						that.response = res;
 						that.getProgress(that.response.data.statusList);
-						// 存储到localstorage里面
+						// 存储到localstorage里面,没用到
 						if (localStorage.getItem('returnProgress')) {
 							localStorage.removeItem('returnProgress');
 						}
@@ -113,7 +112,6 @@ new Vue({
 					this.progressList.push(item);
 				}
 			});
-			console.log(this.progressList);
 		},
 	}
 })
