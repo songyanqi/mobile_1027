@@ -32,7 +32,7 @@ var webpackConfig = {
     category: './source/javascript/category.config.js',
     user: './source/javascript/user.config.js',
     overtime: "./source/javascript/overtime.config.js",
-    orderList: "./source/javascript/orderList.config.js",
+    // orderList: "./source/javascript/orderList.config.js",
     vList: "./source/javascript/vList.config.js",
     search_page: "./source/javascript/search_page.config.js",
     vSchool_search: "./source/javascript/vSchool_search.config.js",
@@ -49,10 +49,11 @@ var webpackConfig = {
     orderArriveList: "./source/javascript/orderArriveList.config.js",
     commentList: "./source/javascript/commentList.config.js",
     commentDetail: "./source/javascript/commentDetail.config.js",
+    // 取消订单
+    orderList: "./src/page/orderList/js/orderList.js",
 
     // 新版专题
     topic:"./src/page/new_topic/js/topic.js",
-
     // 组团
     group_list: "./src/page/group_list/js/group_list.js",
     group_goods: "./src/page/group_goods/js/group_goods.js",
