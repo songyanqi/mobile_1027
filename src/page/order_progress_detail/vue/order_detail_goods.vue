@@ -11,7 +11,6 @@
 		<div class = "progressCont">
 			<div class = "progressList" :class = "{progressNavs: index+1 == progresslist.length }" v-for = "(item,index) of progresslist">
 				<div class = "porgressTitle">
-					<!-- <span :class = "{ currentProgress: item.status == 'now' && item.desc != '完成退款',overReturn: item.status == 'future' && item.desc == '完成退款',oldProgress: item.status == 'history' }"></span> -->
 					<span :class = "{ currentProgress: index == '0' && response.data.status != '7',overReturn: index == '0' && response.data.status == '7',oldProgress: index != '0' }"></span>
 					<span v-if = "index != progresslist.length-1" class = "progressLine"></span>
 					<span v-if = "index != progresslist.length-1" class = "progressBLine"></span>

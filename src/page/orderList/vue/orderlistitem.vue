@@ -1,3 +1,22 @@
+<style>
+  .toastCont {
+    position: fixed;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    -webkit-transform:  translateX(-50%) translateY(-50%);
+    -moz-transform:  translateX(-50%) translateY(-50%);
+    -ms-transform:  translateX(-50%) translateY(-50%);
+    -o-transform:  translateX(-50%) translateY(-50%);
+    transform:  translateX(-50%) translateY(-50%);
+    min-width: 100px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 5px;
+    padding: 10px;
+  }
+</style>
 <template>
     <div v-if = 'allkind' class="order_list_item dav-shadow" v-for="item in list_type" data-for-id="{{ item.id }}" data-for = '11' data-for-delivery-id="{{item.delivery_id}}">
         <div class="order_name"><a href="{{ item.shop_url }}"><span class="shop_icon"></span><span
@@ -127,12 +146,14 @@
         </label>
         </div>
         <div @click = "handleConfirm" class = "disabledModal" :class = "{ modalConfirm: !isConfirm }">确定</div>
-      </div>
+    </div>
+    <div class = "order_toast"></div>
+    <!-- <div class = "toastCont" v-if = "isToast">{{ toastText }}</div> -->
 </template>
 <script>
   import layout from "../../../../module/index/layout.es6";
   import native from '../../../common/js/module/native.js';
-  import popup from '../../../common/js/module/popup.js';
+  // import popup from '../../../common/js/module/popup.js';
 
     export default{
         el:"#orderlistswitcher",
@@ -176,33 +197,34 @@
             }
         },
         created:function(){
+          let that = this;
           this.isapp = this.isApp();
 
-            if(!isPrivateMode){//浏览器中能存储session storage
-                var ua = navigator.userAgent.toLowerCase();
-                var patharr = JSON.parse(sessionStorage.history);//获取路径path
-                if(patharr.length > 2){//从标签页直接进入也会发出请求
-                    var lastPath = patharr[patharr.length-2].path;
-                    if(lastPath == 'order_detail' || lastPath == 'order_delivery' || lastPath == "detail" || lastPath=="grade" || lastPath =="add_address" || lastPath=="agent_pay"||(lastPath == "cart_confirm"&&$.cookie&&!$.cookie("dvd_cart_to_confirm"))) {//判断是否是浏览器上的返回键回到这个页面
-                        this.allData = eval(sessionStorage.getItem('data'));//获取session的数据
-                        this.typePage = JSON.parse(sessionStorage.getItem('typePage'));
-                        if (eval(sessionStorage.getItem('no_more')) != undefined) {
-                            this.anymore = eval(sessionStorage.getItem('no_more'));
-                        };
-                        if (/iphone|ipad|ipod/.test(ua)) {
-                            setTimeout(function(){
-                                document.body.scrollTop = eval(sessionStorage.getItem('top'));
-                            },0);
-                        }
-                    }else{
-                        // 清空数据
-                        sessionStorage.removeItem("data");
-                        sessionStorage.removeItem("typePage");
-                        sessionStorage.removeItem("no_more");
-                    }
-                }
-            };
-            this.scroll();
+          if(!isPrivateMode){//浏览器中能存储session storage
+              var ua = navigator.userAgent.toLowerCase();
+              var patharr = JSON.parse(sessionStorage.history);//获取路径path
+              if(patharr.length > 2){//从标签页直接进入也会发出请求
+                  var lastPath = patharr[patharr.length-2].path;
+                  if(lastPath == 'order_detail' || lastPath == 'order_delivery' || lastPath == "detail" || lastPath=="grade" || lastPath =="add_address" || lastPath=="agent_pay"||(lastPath == "cart_confirm"&&$.cookie&&!$.cookie("dvd_cart_to_confirm"))) {//判断是否是浏览器上的返回键回到这个页面
+                      this.allData = eval(sessionStorage.getItem('data'));//获取session的数据
+                      this.typePage = JSON.parse(sessionStorage.getItem('typePage'));
+                      if (eval(sessionStorage.getItem('no_more')) != undefined) {
+                          this.anymore = eval(sessionStorage.getItem('no_more'));
+                      };
+                      if (/iphone|ipad|ipod/.test(ua)) {
+                          setTimeout(function(){
+                              document.body.scrollTop = eval(sessionStorage.getItem('top'));
+                          },0);
+                      }
+                  }else{
+                      // 清空数据
+                      sessionStorage.removeItem("data");
+                      sessionStorage.removeItem("typePage");
+                      sessionStorage.removeItem("no_more");
+                  }
+              }
+          };
+          this.scroll();
         },
         methods:{
           // 弹框弹出时给body添加fixed
@@ -266,7 +288,6 @@
             let deliveryId = e.target.getAttribute("data-deliveryid");
             let url = `/cancle_order.html?orderId=${dataId}&deliveryId=${deliveryId}`;
             this.handleJump(url);
-            // location.href = `/cancle_order.html?orderId=${dataId}&deliveryId=${deliveryId}`;
           },
           getDatas() {
             let that = this;
@@ -325,12 +346,11 @@
           // 取消原因点击确定 /api/mg/order/cancelOrder/cancelByOrder
           handleConfirm() {
             if (this.isConfirm) {
-
+              
             } else {
                 let obj = layout.strSign('cancleOrder',{
                     reasonId: this.reasonId,
                     reasonName: this.reasonName,
-                    // reason: 123456,
                     orderId: this.dataId
                 });
                 let scope = this;
@@ -346,7 +366,13 @@
                     bravetime.removeLoader();
                     if (result.code != 0 && result.code != 60499) {
                         // bravetime.info(result.data.msg);
-                        popup.toast(result.data.msg,2000);
+                        // popup.toast(result.data.msg,2000);
+                        document.querySelector(".order_toast").style.display = 'block';
+                        let html = `<div class = 'toastCont'>${result.data.msg}</div>`;
+                        document.querySelector(".order_toast").html(html);
+                        setTimeout(() => {
+                          document.querySelector(".order_toast").style.display = 'none';
+                        },3000)
                         return;
                     }
                     var info = "取消审核中";
@@ -527,7 +553,7 @@
                     }
                 });
             },
-            // 跳到评论编辑或追加评价页面
+            // 跳到评论编辑或追加评价页面1
             evaluate:function(event){
                 var href = event.target.dataset.href;
                 if(window.Units && Units.isApp()){
