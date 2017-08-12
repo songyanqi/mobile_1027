@@ -44,12 +44,12 @@ new Vue({
 		this.getParmas();
 		this.isapp = this.isApp();
 
-		if (localStorage.getItem("returnProgress")) {
-				this.response = JSON.parse(localStorage.getItem("returnProgress"));
-				this.getProgress(this.response.data.statusList);
-			} else {
+		// if (localStorage.getItem("returnProgress")) {
+		// 		this.response = JSON.parse(localStorage.getItem("returnProgress"));
+		// 		this.getProgress(this.response.data.statusList);
+		// 	} else {
 				this.getData();
-			}
+			// }
 	},
 	methods: {
 		getParmas() {

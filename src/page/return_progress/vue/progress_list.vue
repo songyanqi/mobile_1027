@@ -159,7 +159,7 @@ import native from '../../../common/js/module/native.js';
 						if (!res.code) {
 							let statusArr = [], dates = that.changeDate(Date.now());
 
-							statusArr.push({"desc": "提交申请", "status": "history", "showType": 3},{desc: "等待客服确认", "time": that.response.data.statusList[1].time, "status": "history", "showType": 3},{desc: "售后申请撤销", "time": dates, "status": "now", "showType": 3});
+							statusArr.push({"desc": "提交申请","time": that.response.data.statusList[0].time, "status": "history", "showType": 3},{desc: "等待客服确认", "time": that.response.data.statusList[1].time, "status": "history", "showType": 3},{desc: "售后申请撤销", "time": dates, "status": "now", "showType": 3});
 							that.response.data.statusList = statusArr;
 							that.$emit('status-list', statusArr);
 							that.response.data.status = 2;

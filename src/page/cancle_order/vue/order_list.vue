@@ -15,8 +15,8 @@
 		  </a>
 	  </div>
 	  <div class = "common sumMoney">
-	  	<span>实付金额</span>
-	  	<span class = "moneyNum">¥ {{ data.data.moneyPaid }}</span>	
+	  	<div>实付金额</div>
+	  	<div class = "moneyNum">¥ {{ data.data.moneyPaid }}</div>	
 	  </div>
 	  <!-- 退款原因 -->
 	  <div class = "common m10" @click = "handleReasion">
