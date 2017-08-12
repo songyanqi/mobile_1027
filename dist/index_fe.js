@@ -27824,6 +27824,7 @@
 	          this.contentData = _layout2.default.sStorageGet(str, 'data');
 	          this.initcate = _layout2.default.sStorageGet('v_index', 'category');
 	          this.initCategory = _layout2.default.sStorageGet('v_index', 'index');
+	          this.channel(this.initcate);
 	        } else {
 	          this.init();
 	        }

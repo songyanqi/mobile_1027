@@ -34407,7 +34407,8 @@
 	            userId: null,
 	            cmd: null,
 	            cache: false,
-	            bottomBtn: false
+	            bottomBtn: false,
+	            enterClassroomFlag: true
 	        };
 	    },
 	    created: function created() {
@@ -34672,6 +34673,11 @@
 	        // 进入课堂
 	        enterClassroom: function enterClassroom() {
 	            var that = this;
+	            if (!that.enterClassroomFlag) return;
+	            that.enterClassroomFlag = false;
+	            setTimeout(function () {
+	                that.enterClassroomFlag = true;
+	            }, 5000);
 	            if (this.inApp) {
 	                // app的话进入app指定课堂
 	                that.enterAppCourse();
