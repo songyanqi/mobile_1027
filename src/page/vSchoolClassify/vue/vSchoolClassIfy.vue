@@ -23,7 +23,7 @@
         <div class='uptitle'>
           <div class='classifyOne' @click='classIfyAll'>
             <div class="classifyOneTag">
-              <span class='classifyOneTagText' :class='{titleFirstStyle : titleFirst != "分类"}'>{{titleFirst}}</span>
+              <span class='classifyOneTagText' :class='{titleFirstStyle : titleFirst != "课程"}'>{{titleFirst}}</span>
               <img class='classifyOneTagImg' v-if='!classIfyAllFlag' src="//pic.davdian.com/free/2017/07/20/arrowdown1.png">
               <img class='classifyOneTagImg' v-if='classIfyAllFlag' src="//pic.davdian.com/free/2017/07/20/arrowup1.png">
             </div>
@@ -117,7 +117,7 @@
         getCategoryRetFlag : true,
         more: 1,
         webUrl: '/api/mg/content/course/allCourseList',
-        titleFirst: getQuery('title') || '分类',
+        titleFirst: getQuery('title') || '课程',
         isInisWechatOrAppFlag: isInisWechatOrApp(),
         isNoData: false
       }
@@ -336,7 +336,7 @@
         this.oldfId = this.fId
         this.oldcId = this.cId
         if (this.fId == 0){
-          this.titleFirst = '分类'
+          this.titleFirst = '课程'
           this.getCategoryRetInit()
         }else {
           this.webUrl = '/api/mg/content/course/getCategoryRet'

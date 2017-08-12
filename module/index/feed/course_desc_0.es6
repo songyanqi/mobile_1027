@@ -49,26 +49,12 @@ export default {
                     }else {
                         window.backNewData.$children[0].bottomBtn = true
                         localStorage.setItem('introduceGuide', 1)
-                        if ($('.class_introduce_tit').offset().top > 300){
-                            $('#scroll_container').scrollTop($('.class_introduce_tit').offset().top-300)
+                        if ($('.class_introduce_tit').offset().top > 400){
+                            $('#scroll_container').scrollTop($('.class_introduce_tit').offset().top-400)
                         }
                         that.introduceGuide = true
                         that.class_introduce_left = 2
                         that.guide = 1
-                        setTimeout(function(){
-                            $(".introduceGuideMask").on('touchmove',function(e){
-                                e.preventDefault();
-                            })
-                            $(".bottomBtn").on('touchmove',function(e){
-                                e.preventDefault();
-                            })
-                            $(".lectureNnotesAll").on('touchmove',function(e){
-                                e.preventDefault();
-                            })
-                            $(".writeAllSignUp").on('touchmove',function(e){
-                                e.preventDefault();
-                            })
-                        },100)
                     }
                 }
             },1000)
@@ -110,20 +96,6 @@ export default {
         know:function(){
             if(this.guide==1){
                 this.guide = 2
-                setTimeout(function(){
-                    $(".introduceGuideMask").on('touchmove',function(e){
-                        e.preventDefault();
-                    })
-                    $(".bottomBtn").on('touchmove',function(e){
-                        e.preventDefault();
-                    })
-                    $(".lectureNnotesAll").on('touchmove',function(e){
-                        e.preventDefault();
-                    })
-                    $(".writeAllSignUp").on('touchmove',function(e){
-                        e.preventDefault();
-                    })
-                },100)
                 return
             }
             if (this.guide==2){

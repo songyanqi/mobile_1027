@@ -72,8 +72,8 @@
         </div>
         <div v-if="class_introduce_left==2">
             <div class='discuss_top'>
-                 <img v-if='introduceGuide && guide==2 && userTicket==1' class='introduceGuide1 writeAllSignUp' src="//pic.davdian.com/free/2017/08/11/writeAllSignUp.png">
-                 <img v-if='introduceGuide && guide==2 && userTicket==0' class='introduceGuide1 writeAllSignUp' src="//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png">
+                 <img v-if='introduceGuide && guide==2 && userTicket==1' class='introduceGuide1' src="//pic.davdian.com/free/2017/08/11/writeAllSignUp.png">
+                 <img v-if='introduceGuide && guide==2 && userTicket==0' class='introduceGuide1' src="//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png">
                 <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>
                     写我的听课笔记
                     <img src="//pic.davdian.com/free/2017/07/26/write.png">
@@ -135,7 +135,7 @@
             <p>老师开讲新课，我们会悄悄告诉你呦</p>
         </div>
 
-        <img v-if='introduceGuide && guide==1' class='introduceGuide lectureNnotesAll' src="//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png">
+        <img v-if='introduceGuide && guide==1' class='introduceGuide' src="//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png">
 
         <div v-if='introduceGuide' class='introduceGuideMask'></div>
         <div v-if='introduceGuide' class='introduceGuidebtn' @click='know'>知道了</div>
@@ -467,9 +467,9 @@
     .introduceGuide{
         position: absolute;
         top: -14px;
-        width: 320px;
-        right: 4%;
-        z-index: 1000;
+        width: 3.2rem;
+        right: 21px;
+        z-index:1000;
     }
     .introduceGuide1{
         position: absolute;
@@ -482,7 +482,7 @@
         position: fixed;
         top: 0;
         right: 0;
-        bottom: 60px;
+        bottom: 0;
         left: 0;
         background: #000000;
         opacity: 0.6;
