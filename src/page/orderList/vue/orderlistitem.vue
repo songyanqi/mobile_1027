@@ -148,7 +148,6 @@
         <div @click = "handleConfirm" class = "disabledModal" :class = "{ modalConfirm: !isConfirm }">确定</div>
     </div>
     <div class = "order_toast"></div>
-    <!-- <div class = "toastCont" v-if = "isToast">{{ toastText }}</div> -->
 </template>
 <script>
   import layout from "../../../../module/index/layout.es6";
@@ -369,7 +368,7 @@
                         // popup.toast(result.data.msg,2000);
                         document.querySelector(".order_toast").style.display = 'block';
                         let html = `<div class = 'toastCont'>${result.data.msg}</div>`;
-                        document.querySelector(".order_toast").html(html);
+                        $(".order_toast").html(html);
                         setTimeout(() => {
                           document.querySelector(".order_toast").style.display = 'none';
                         },3000)
