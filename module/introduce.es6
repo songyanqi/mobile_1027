@@ -30,7 +30,8 @@ export default {
             userId: null,
             cmd:null,
             cache:false,
-            bottomBtn: false
+            bottomBtn: false,
+            enterClassroomFlag: true,
         }
     },
     created(){
@@ -270,6 +271,12 @@ export default {
         // 进入课堂
         enterClassroom(){
             let that = this;
+            if (!that.enterClassroomFlag)
+                return
+            that.enterClassroomFlag = false
+            setTimeout(function(){
+                that.enterClassroomFlag = true
+            },5000)
             if(this.inApp){
                 // app的话进入app指定课堂
                 that.enterAppCourse();
