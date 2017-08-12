@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('meta.include')
+	<title>售后进度</title>
+	<link rel="stylesheet" href="[[static]]/page/return_progress/css/return_progress.css[[v]]">
+</head>
+<body>
+	<div class = "app" :class = "{ bodypd0: isapp }">
+		<order-top-title v-if = "!isapp" titleText = "售后进度"></order-top-title>
+		<order-top :data = "progressList"></order-top>
+		<progress-list :isapp = "isapp" @status-list = "handleStatus" :response = "response"></progress-list>
+		<loading v-if = "isLoad"></loading>
+	</div>
+	
+	@@include('vendor.include')
+  <script src="[[static]]/page/return_progress/js/return_progress.js[[v]]"></script>
+</body>
+</html>
