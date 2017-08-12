@@ -268,7 +268,7 @@
 //                                    window.descContent = respone.data.data.seriesDesc
 //                                    window.shareTitle = respone.data.data.seriesTitle
                                     that.setTitle(that.seriesShareIncome)
-                                    if (that.haveShareCard)
+                                    if (that.haveShareCard && that.haveShareCard !=0)
                                     window.moreShareInfo = {seriesId:that.seriesId}
                                     var shareInfo = {
                                         successTimelineShare: function () {
