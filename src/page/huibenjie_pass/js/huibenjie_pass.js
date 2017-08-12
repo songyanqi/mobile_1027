@@ -1,4 +1,13 @@
-import {Vue, autoRootSize} from '../../../common/js/common.js';
+// 基础模块
+import common from '../../../common/js/common.js';
+
+// 第三方模块
+import Vue from 'Vue';
+import Cookies from 'js-cookie';
+
+// 业务模块
+import autoRootSize from '../../../common/js/module/autoRootSize';
+import util from '../../../common/js/module/util.js';
 
 autoRootSize(750);
 
@@ -18,4 +27,10 @@ new Vue({
   },
   template: '<app />',
   el: ".app",
+});
+
+
+// 清除cookie
+Cookies.remove('force_domain', {
+  domain: util.getBaseDomain()
 });

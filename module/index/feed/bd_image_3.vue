@@ -45,7 +45,11 @@
 </template>
 
 <script>
-    import './bd_image_3.scss'
+//    import './bd_image_3.scss'
     import bd_image_3 from './bd_image_3.es6'
     export default bd_image_3
 </script>
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./bd_image_3.scss";
+</style>

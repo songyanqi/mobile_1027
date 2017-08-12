@@ -2,7 +2,7 @@
   <div class="vux-picker">
     <flexbox :gutter="0">
       <flexbox-item :span="columnWidth && columnWidth[index]" v-for="(one, index) in currentData" :key="index" style="margin-left:0;">
-        <div class="vux-picker-item" :id="'vux-picker-' + uuid + '-' + index"></div>
+        <div class="vux-picker-item" :id="`vux-picker-${uuid}-${index}`"></div>
       </flexbox-item>
     </flexbox>
   </div>
@@ -15,6 +15,7 @@ import Manager from './chain'
 import value2name from '../../filters/value2name'
 
 export default {
+  name: 'picker',
   components: {
     Flexbox,
     FlexboxItem
@@ -27,6 +28,7 @@ export default {
     }
   },
   mounted () {
+    this.uuid = Math.random().toString(36).substring(3, 8)
     this.$nextTick(() => {
       this.render(this.currentData, this.currentValue)
     })
@@ -85,7 +87,9 @@ export default {
           onSelect (value) {
             _this.$set(_this.currentValue, i, value)
             if (!this.columns || (this.columns && _this.getValue().length === _this.store.count)) {
-              _this.$emit('on-change', _this.getValue())
+              _this.$nextTick(() => {
+                _this.$emit('on-change', _this.getValue())
+              })
             }
             if (_this.columns !== 0) {
               _this.renderChain(i + 1)
@@ -117,7 +121,9 @@ export default {
         itemClass: _this.item_class,
         onSelect (value) {
           _this.$set(_this.currentValue, i, value)
-          _this.$emit('on-change', _this.getValue())
+          _this.$nextTick(() => {
+            _this.$emit('on-change', _this.getValue())
+          })
           _this.renderChain(i + 1)
         }
       })
@@ -145,7 +151,7 @@ export default {
     return {
       scroller: [],
       count: 0,
-      uuid: Math.random().toString(36).substring(3, 8),
+      uuid: '',
       currentData: this.data,
       currentValue: this.value
     }
@@ -214,7 +220,7 @@ export default {
   },
   beforeDestroy () {
     for (let i = 0; i < this.count; i++) {
-      this.scroller[i].destroy()
+      this.scroller[i] && this.scroller[i].destroy()
       this.scroller[i] = null
     }
   }

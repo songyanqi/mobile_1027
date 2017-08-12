@@ -1,6 +1,6 @@
 <!--分享提示浮层-->
 <template>
-  <div class="com-share-pop-tip" :style="styleObject" @click="close">
+  <div class="com-share-pop-tip" :style="styleObject" @click="close" @touchmove="touchmove">
     <img class="arrow" src="http://pic.davdian.com/free/pointer.png">
     <div class="tip">
       <template v-if="isWeixin">
@@ -41,7 +41,10 @@
 //        this.styleObject.display = 'none';
         this.$destroy();
         this.$el.parentNode.removeChild(this.$el);
-      }
+      },
+      touchmove(event){
+        event.preventDefault();
+      },
     },
     filters: {},
     computed: {},
@@ -53,7 +56,7 @@
   }
 </script>
 
-<style lang="sass" rel="stylesheet/scss">
+<style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../common/css/util/all";
 
   // 分享提示浮层
@@ -78,6 +81,7 @@
       font-size: ptr(15);
       padding: 0 ptr(30);
       text-align: center;
+      line-height: 1.5;
     }
   }
 

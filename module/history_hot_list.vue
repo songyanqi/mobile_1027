@@ -7,7 +7,7 @@
     <div class="child_list">
       <a v-if="clear" v-for="lis in item_list" @click="searchs(lis,'')">{{lis}}</a>
       <a v-if="!clear" v-for="lis in item_list" :style="{color:lis.colorType}"
-         @click="searchs(lis.name,lis.command.content)">
+        @click="searchs(lis.name,lis.command.content)">
         {{lis.name}}
       </a>
     </div>

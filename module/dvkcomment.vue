@@ -1,12 +1,7 @@
 <template>
     <div id='comment'>
         <comment-title :rightshow='starIndex && textLength>0' v-on:submit='submit' v-on:back='back'></comment-title>
-        <div class='container'>
-            <textarea class='text' placeholder="输入你想说的话" v-model.trim='text' maxlength="500"></textarea>
-            <div class='number'>
-                <span>{{textLength}}/{{500-textLength}}</span>
-            </div>
-        </div>
+
         <div class='star'>
             <span class='title'>课程评分</span>
             <div class='starImg'>
@@ -17,8 +12,31 @@
                 <div class='starImg4 starImg_btn' @click='starImg_btn4'></div>
                 <div class='starImg5 starImg_btn' @click='starImg_btn5'></div>
             </div>
-            
         </div>
+
+        <div class='container'>
+            <textarea class='text' placeholder="分享您的听课成果，和更多妈妈一起成长" v-model.trim='text' maxlength="500"></textarea>
+            <div class='number'>
+                <span>{{textLength}}/{{500-textLength}}</span>
+            </div>
+        </div>
+        
+        <div class='addImgtext'>
+            <span class='title'>添加图片</span>
+            <span class='title'>（{{imgList.length}}/9）</span>
+        </div>
+        <div class='addImgtext'>
+            <div class='imgContainer' v-for='(item, index) in imgList' @click='showImg(index,imgList,item)'>
+                <img v-if='!item' src="//pic.davdian.com/free/2017/08/02/page3.png" class='maskPage'>
+                <img v-if='item' :src="item" class='maskPage'>
+                <img v-if='item' @click='delImg(index)' class='addImgTextDel' src="//pic.davdian.com/free/2017/08/03/del.png">
+            </div>
+            <div class='imgContainer' v-if='imgList.length < 9'>
+                <img src="//pic.davdian.com/free/2017/08/02/addImg.png" class='img'>
+                <input class='inputStyle' type="file" multiple="multiple" accept="image/*" name="">
+            </div>
+        </div>
+
         <div class='mask' @click='cancel' v-if='alertContainer'></div>
         <div class='alertContainer' v-if='alertContainer'>
             <div class='alertContent'>评论还没提交呢，确定离开吗？</div>
@@ -27,10 +45,21 @@
                 <div class='alertBtn2' @click='btn_yes'>确定</div>
             </div>
         </div>
+        
         <div class='alertContainer1' v-if='alertFlag'>还没写文字/评分哦</div>
         <div class='alertContainer1' v-if='alertFlag1'>笔记至少12个字哦</div>
         <div class='alertContainer1' v-if='alertFlag2'>保存草稿成功</div>
         <div class='alertContainer1' v-if='alertFlag3'>评论成功</div>
+
+        <div class='mask' v-if='newAlert'></div>
+        <div class='alertContainer' v-if='newAlert'>
+            <div class='alertContent alertContent1'> <p>笔记提交后，需经过工作人员审核后才可以对所有可见，确定提交?</p> 
+            </div>
+            <div class='alertBtnAll'>
+                <div class='alertBtn1' @click='btn_no_new'>取消</div>
+                <div class='alertBtn2' @click='btn_yes_new'>确定</div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -40,6 +69,7 @@
     import lay from './layout/api.es6'
     import common from "./common/common.es6";
     var commentTitle = require("../module/dvkcommentTitle.vue");
+    import native from '../src/common/js/module/native.js'
     let axios = require("axios");
     require('babel-polyfill');
     require('es6-promise').polyfill();
@@ -57,16 +87,23 @@
                 alertFlag2:false,
                 alertFlag3:false,
                 userId: 931126,
-                starImg:'//pic.davdian.com/free/2017/05/11/commentStarnew.png',
-                inApp:window.Units&&Units.isApp()
+                newAlert:false,
+                starImg:'//pic.davdian.com/free/2017/08/03/zeroStarActive.png',
+                inApp:window.Units&&Units.isApp(),
+                imgList:[],
             }
         },
         created:function () {
             
         },
         mounted:function () {
-            this.init()
-            this.remSize();
+            var that = this
+            this.$nextTick(function(){
+                that.addImg()
+                that.init()
+                that.remSize();
+            })
+            
         },
         watch:{
             text:function(val,oldval){
@@ -74,6 +111,57 @@
             }
         },
         methods:{
+            delImg(i){
+                this.imgList.splice(i,1)
+            },
+            addImg(){
+                var that = this
+                var addBtn = $("input.inputStyle")
+                addBtn.change(function () {
+                    var files = addBtn.get(0).files
+                    if (files.length) {
+                        for (var i = 0; i < files.length; i++) {
+                            if (that.imgList.length != 9){
+                                that.imgList.unshift('')
+                                that.pullFile(files[i], i)
+                            }
+                        }
+                    }
+                });
+            },
+            pullFile(file, i){
+                var picStr = 'shop_logo';
+                var data = new FormData();
+                var that = this
+                data.append(picStr, file);
+                $.ajax({
+                    type: "POST",
+                    url: '/upload.php?owner_id=2368684',
+                    data: data,
+                    cache: false,
+                    contentType: false,    //不可缺
+                    processData: false,    //不可缺
+                    dataType: "json",
+                    success: function (data) {
+                        if (data && data.data && data.data.shop_logo && data.data.shop_logo.src)
+                        that.imgList.splice(i,1,data.data.shop_logo.src)
+                    },
+                    error: function (e) {
+                        console.log('e:',e)
+                        that.imgList.splice(i,1)
+                    }
+                });
+            },
+            showImg(i,imgList, img){
+                if(this.inApp){
+                  native.Browser.showBigImage({bigImages:imgList,showIndex:i})
+                } else {
+                    wx.previewImage({
+                        current: img,
+                        urls: imgList
+                      });
+                }
+            },
             remSize(){
                 (function(doc, win) {
                     var docEl = doc,
@@ -111,6 +199,51 @@
                 }
             },
             submit(b){
+                this.newAlert = true
+                this.b = b
+                // var that = this
+                // if (b){
+                //     if (this.textLength<12){
+                //         this.alertFlag1 = true
+                //         setTimeout(function(){
+                //             that.alertFlag1 = false
+                //         },2000)
+                //     } else{
+                //         var obj = {}
+
+                //         obj.obj = {
+                //             courseId: window.courseId,
+                //             content: that.text,
+                //             score: that.starIndex
+                //         }
+                //         if (that.imgList.length > 0){
+                //             obj.obj.imgList = JSON.stringify(that.imgList)
+                //         }
+                //         axios.post('/api/mg/content/course/lectureNotes',lay.strSign(obj))
+                //             .then(function (respone) {
+                //                 if (respone.data.code == 0){
+                //                     that.alertFlag3 = true
+                //                     sessionStorage.removeItem('commentList')
+                //                     setTimeout(function(){
+                //                         window.history.back()
+                //                     },1000)
+                //                 } else {
+                //                     alert(respone.data.data.msg)
+                //                 }
+                //                 console.log(respone, 22222222)
+                //             })
+                //             .catch(function (error) {
+                //                 console.log(error,11111111)
+                //             });
+                //     }
+                // }else {
+                //     this.alertFlag = true
+                //     setTimeout(function(){
+                //         that.alertFlag = false
+                //     },2000)
+                // }
+            },
+            submit1(b){
                 var that = this
                 if (b){
                     if (this.textLength<12){
@@ -119,11 +252,14 @@
                             that.alertFlag1 = false
                         },2000)
                     } else{
-                        var obj = {}
+                        var obj = {};
                         obj.obj = {
                             courseId: window.courseId,
                             content: that.text,
-                            score: that.starIndex 
+                            score: that.starIndex
+                        }
+                        if (that.imgList.length > 0){
+                            obj.obj.imgList = JSON.stringify(that.imgList)
                         }
                         axios.post('/api/mg/content/course/lectureNotes',lay.strSign(obj))
                             .then(function (respone) {
@@ -154,23 +290,23 @@
             },
             starImg_btn1(){
                 this.starIndex = 1
-                this.starImg = '//pic.davdian.com/free/2017/05/11/commentStar1.png'
+                this.starImg = '//pic.davdian.com/free/2017/08/03/oneStarActive.png'
             },
             starImg_btn2(){
                 this.starIndex = 2
-                this.starImg = '//pic.davdian.com/free/2017/05/11/commentStar2.png'
+                this.starImg = '//pic.davdian.com/free/2017/08/03/twoStarActive.png'
             },
             starImg_btn3(){
                 this.starIndex = 3
-                this.starImg = '//pic.davdian.com/free/2017/05/11/commentStar3.png'
+                this.starImg = '//pic.davdian.com/free/2017/08/03/threeStarActive.png'
             },
             starImg_btn4(){
                 this.starIndex = 4
-                this.starImg = '//pic.davdian.com/free/2017/05/11/commentStar4.png'
+                this.starImg = '//pic.davdian.com/free/2017/08/03/fourStarActive.png'
             },
             starImg_btn5(){
                 this.starIndex = 5
-                this.starImg = '//pic.davdian.com/free/2017/05/11/commentStar5.png'
+                this.starImg = '//pic.davdian.com/free/2017/08/03/fiveStarActive.png'
             },
             back(){
                 if (this.textLength > 0){
@@ -197,6 +333,12 @@
                 obj[this.userId] = ''
                 lay.sStorageSet('commentList', obj)
                 window.history.back()
+            },
+            btn_yes_new(){
+                this.submit1(this.b)
+            },
+            btn_no_new(){
+               this.newAlert = false
             }
         },
         components:{
@@ -205,6 +347,14 @@
     }
 </script>
 <style scoped lang='sass'>
+    .inputStyle{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
     .container{
         width: 3.55rem;
         margin-top: 0.1rem;
@@ -239,6 +389,46 @@
         }   
         input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {   
             color: #D0D0D0;   
+        }
+    }
+    .addImgtext{
+        margin-top: 0.1rem;
+        margin-left: 0.1rem;
+        font-size: 0;
+        .title{
+            color: #333333;
+            font-size: 0.14rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .imgContainer{
+            width: 0.82rem;
+            height: 0.82rem;
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 0.08rem;
+            margin-bottom: 0.08rem;
+            position: relative;
+            .addImgTextDel{
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 0.2rem;
+                padding-left: 0.05rem;
+                padding-bottom: 0.05rem;
+                z-index: 10;
+            }
+            .maskPage{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+            .img{
+                width: 0.82rem;
+                height: 0.82rem;
+            }
         }
     }
     .star{
@@ -293,12 +483,13 @@
     }
     .alertContainer{
         position: fixed;
-        z-index: 2;
+        z-index: 200;
         width: 2.7rem;
         height: 1.16rem;
         background: #fff;
         margin-left:0.52rem;
         border-radius: 6px;
+        top: 2.6rem;
         .alertContent{
             width: 100%;
             height: 0.75rem;
@@ -307,6 +498,20 @@
             font-size: 0.14rem;
             color: #666;
             border-bottom: 0.5px solid #eee;
+            p{
+                width: 100%;
+                height: 100%;
+                line-height: 0.2rem;
+                padding-top: 0.15rem;
+                padding-left: 0.15rem;
+                padding-right: 0.15rem;
+                box-sizing: border-box;
+            }
+        }
+        .alertContent1{
+            p{
+                padding-top: 0.2rem;
+            }
         }
         .alertBtnAll{
             font-size: 0;

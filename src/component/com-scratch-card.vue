@@ -167,7 +167,7 @@
   }
 </script>
 
-<style lang="sass" rel="stylesheet/scss">
+<style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../common/css/util/all";
 
   .com-scratch-card {

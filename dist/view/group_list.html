@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <script src="//fe-ws.davdian.com/wap/static/dist/static/common/js/autoRootSize.js?v=2017-08-11_18:36:17"></script>
+
+  <link rel="stylesheet" href="//fe-ws.davdian.com/wap/static/dist/static/page/group_list/css/group_list.css?v=2017-08-11_18:36:17">
+</head>
+<body>
+  <div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
+    <!--头部标题-->
+    <com-top-title title="大V店组团" border-bottom home></com-top-title>
+    <!--广告-->
+    <div class="group_ad">
+      <template v-for="ad in response.data.banner">
+        <a v-if="ad.isClick == '0'" :href="ad.command.content">
+          <img class="adPic" v-lazy="ad.imageUrl" v-if="ad.imageUrl" @click="adClick(ad)">
+        </a>
+        <img class="adPic" v-lazy="ad.imageUrl" v-if="ad.isClick == '1'" @click="showPopPic(ad.smallImageUrl)">
+      </template>
+      <com-pic-display-box ref="com-pic-display-box"></com-pic-display-box>
+    </div>
+    <!--tab按钮-->
+    <div class="tab-btn">
+      <span class="btn group" :class="{active: currentList == 1}" @click="tabBtnClick(1)">
+        <span class="word">团购精选</span>
+      </span>
+      <i class="btn-split"></i>
+      <span class="btn mine" :class="{active: currentList == 2}" @click="tabBtnClick(2)">
+        <span class="word">
+          <template v-if="response.visitor_status == '3'">我的店铺组团</template>
+          <template v-if="response.visitor_status != '3'">我的组团</template>
+        </span>
+      </span>
+    </div>
+
+    <!--列表-->
+    <keep-alive>
+      <!--组团商品-->
+      <goods-list v-if="currentList == 1" ref="goods-list" :prop-response="response"></goods-list>
+      <!--我的(店铺)组团-->
+      <mine-list v-if="currentList == 2" ref="mine-list"
+                 :is-seller="response.visitor_status == '3' ? true : false"
+                 @go-goods-tab="tabBtnClick(1)"></mine-list>
+    </keep-alive>
+
+    <!--至顶按钮-->
+    <com-to-top-icon></com-to-top-icon>
+
+    <!--浮动活动-->
+    <div class="float-act" v-if="window.float_act_img_url">
+      <a :href="window.float_act_jump_url">
+        <img v-lazy="window.float_act_img_url">
+      </a>
+    </div>
+  </div>
+
+    <script src="//cdn-ws.davdian.com/vue/2.4.2/vue.min.js"></script>
+  <script src="//cdn-ws.davdian.com/vue-lazyload/1.0.3/vue-lazyload.js"></script>
+  <script src="//cdn-ws.davdian.com/jquery/3.2.0/jquery.min.js"></script>
+  <!--<script src="//fe-ws.davdian.com/wap/static/dist/static/common/js/common.js?v=2017-08-11_18:36:17"></script>-->
+
+  <script src="//fe-ws.davdian.com/wap/static/dist/static/page/group_list/js/group_list.js?v=2017-08-11_18:36:17"></script>
+</body>
+</html>

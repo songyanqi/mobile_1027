@@ -61,8 +61,8 @@
 
 <!--组件定义-->
 <script>
-  // 前后端分离需要
-  import commonSeperateHtml from "../../../common/js/commonSeperateHtml.js";
+  // 基础模块
+  import common from "../../../common/js/common.js";
 
   // 第三方
   import $ from '$';
@@ -100,7 +100,7 @@
         let ts = this;
 
         // 检测强制跳转
-        commonSeperateHtml.checkRedirect(ts.response);
+        common.checkRedirect(ts.response);
 
         // response变化后并渲染完dom,设置其他事项
         this.$nextTick(function () {
@@ -231,6 +231,6 @@
 </script>
 
 <!--样式-->
-<style lang="sass" rel="stylesheet/scss">
+<style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../../../common/css/util/all";
 </style>

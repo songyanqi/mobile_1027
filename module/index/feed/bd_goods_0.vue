@@ -84,7 +84,10 @@
   </div>
 </template>
 <script>
-  import './bd_goods_0.scss'
+//  import './bd_goods_0.scss'
   import bd_goods_0 from './bd_goods_0.es6'
   export default bd_goods_0
 </script>
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./bd_goods_0.scss";
+</style>

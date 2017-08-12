@@ -1,5 +1,3 @@
-// add
-
 import wxShare from './WXShare.es6';
 import pathHistory from './pathHistory.es6';
 import appInterface from './appInterface.es6';

@@ -123,6 +123,7 @@ $flagright:10px;
     margin: 0 auto;
     text-align: right;
     padding: 10px;
+    padding-top: 35px;
     box-sizing: border-box;
     .common_position {
       position: relative;
@@ -214,7 +215,7 @@ $flagright:10px;
   .flag{
     z-index: 105;
     position: fixed;
-    top: 134px;
+    top: 159px;
     width: 100%;
     max-width: 640px;
     text-align: right;
@@ -289,10 +290,8 @@ $flagright:10px;
   }
   .callshare{
     pointer-events: all;
-    margin-top: 128px;
-    // margin-right:10px;
+    margin-top: 153px;
     float: right;
-    // padding:0 10px 0 5px;
     text-indent: 10px;
     color: #FFFFFF;
     height:28px;
@@ -304,7 +303,7 @@ $flagright:10px;
   }
   .commen_num{
     position: fixed;
-    top: 137px;
+    top: 162px;
     width: 100%;
     max-width: 640px;
     margin: 0 auto;
@@ -328,9 +327,6 @@ $flagright:10px;
   }
   .sec_common{
     top:94px;
-  }
-  .countdownHeight{
-    height: 80px!important;
   }
   .countdown{
     padding:0 9px;

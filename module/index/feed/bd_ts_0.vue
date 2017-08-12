@@ -3,7 +3,7 @@
     <div id="ts_menu_wrap">
       <div :style="styleObject" class="swiper-container ts_menu" id="ts_menu">
         <ul class="swiper-wrapper">
-          <li class="swiper-slide" v-for="(item, index) in data.body.dataList" :class="{pitch_on:item.selected == 1}"
+          <li class="swiper-slide" v-for="(item, index) in dataList" :class="{pitch_on:item.selected == 1}"
               @click="ts_tab(item,index)" :data="item.timeshopActId">
             <div class="" v-if='item && item.title'>
               <div class="time_state_span">{{item.title}}</div>
@@ -13,8 +13,6 @@
         </ul>
       </div>
     </div>
-    <!--内容-->
-    <!--<ts-feed id="" :data="feedData"></ts-feed>-->
   </div>
 </template>
 <script>
@@ -30,7 +28,9 @@
         timeshopActId: '',
         swiperIndex: 0,
         tsmenu: '',
-        index_ts_data: "/api/mg/sale/index/getTimeshop"
+        timestamp2: Date.parse(new Date()) / 1000,
+        index_ts_data: "/api/mg/sale/index/getTimeshop",
+        dataList: this.data.body.dataList
 //        index_ts_data: "../data/index_ts_data.json"
       }
     },
@@ -44,7 +44,6 @@
     mounted: function () {
       var that = this;
       that.init();
-      that.changeinit();
     },
     computed: {
       styleObject: function () {
@@ -53,44 +52,45 @@
       }
     },
     components: {},
-    updated(){
-        let that = this;
-        this.$nextTick(function () {
-          if(that.mySwiper11){
-            // that.mySwiper11.updateSlidesSize();
-          }
-        });
-    },
-    watch:{
-      data:function (newValue, oldValue) {
-        let that = this
-        console.log(newValue.body.dataList.length, oldValue.body.dataList.length)
-        if (newValue.body.dataList.length != oldValue.body.dataList.length && that.mySwiper11){
-          this.$nextTick(function () {
-            if (newValue.body.dataList.length > 4) {
-              this.mySwiper11 = new Swiper('.ts_menu', {
-                slidesPerView: 4.65,
-                grabCursor: true,
-                initialSlide: that.swiperIndex - 2,
-              });
-            } else {
-              this.mySwiper11 = new Swiper('.ts_menu', {
-                slidesPerView: newValue.body.dataList.length,
-                grabCursor: true
-              });
-            }
-          });
-        }
-      }
-    },
+    watch: {},
     methods: {
       init: function () {
+        console.log("init");
         var that = this;
-        var length = that.data.body.dataList.length;
-        for (var i = 0; i < that.data.body.dataList.length; i++) {
-          if (that.data.body.dataList[i].selected == 1) {
+        var length = that.dataList.length;
+        /**
+         * 先遍历限时购场次
+         * 判断有场次开始时间在5分钟之内
+         * 定时，时间到了之后，变更文案状态，重新获取该场次数据并缓存到session里
+         * 如果该场次处于选中状态，直接更新
+         * 因为首页数据session缓存没有做过期销毁，所以需要同时更新缓存数据
+         */
+        for (var i = 0; i < that.dataList.length; i++) {
+          //清除限时购缓存
+          socialCache.set('timeshopAct' + that.dataList[i].timeshopActId, '');
+          var minTime = that.dataList[i].startTime - that.timestamp2;
+          /**
+           * 如果minTime已经小于0就是该场次活动已经处于抢购中
+           * 如果状态是即将开始，更改为抢购中
+           * */
+          if (minTime < 0) {
+            if (that.dataList[i].statusInfo == "即将开始") {
+              that.dataList[i].statusInfo = "抢购中";
+            }
+          } else {
+            /**
+             * 如果该场次的开始时间小于300秒 也即是五分钟 操作定时 到时间后更换状态
+             */
+            if (minTime < 300) {
+              (function (a) {
+                setTimeout(function () {
+                  that.ts_timeUp(a);
+                }, minTime * 1000 + 500);
+              })(i);
+            }
+          }
+          if (that.dataList[i].selected == 1) {
             that.swiperIndex = i;
-            break;
           }
         }
         this.$nextTick(function () {
@@ -107,27 +107,26 @@
             });
           }
         });
-        for (var i = 0; i < that.data.body.dataList; i++) {
-          socialCache.set('timeshopAct' + that.data.body.dataList[i].timeshopActId, '')
-        }
       },
-      changeinit:function () {
-        var that = this
-        window.addEventListener('orientationchange', function(event){
-          if ( window.orientation == 180 || window.orientation==0 ) {
-            setTimeout(function(){
-              that.init()
-            },300)
+      ts_timeUp: function (i) {
+        var that = this;
+        that.dataList[i].statusInfo = "抢购中";
+        if (that.dataList[i].selected == 1) {
+          that.get_ts_data({"timeshopActId": that.dataList[i].timeshopActId});
+        } else {
+          var timeshopActCash = socialCache.get('timeshopAct' + that.dataList[i].timeshopActId);
+          if (timeshopActCash) {
+            socialCache.set('timeshopAct' + that.dataList[i].timeshopActId, '');
           }
-        });
+        }
       },
       ts_tab: function (item, index) {
         var that = this;
-        for (var i = 0; i < that.data.body.dataList.length; i++) {
-          that.data.body.dataList[i].selected = 0;
+        for (var i = 0; i < that.dataList.length; i++) {
+          that.dataList[i].selected = 0;
         }
         if (item.selected != 1) {
-          that.data.body.dataList[index].selected = 1;
+          that.dataList[index].selected = 1;
           this.mySwiper11.slideTo(Math.max(0, index - 2));
           var objHeight = document.getElementById("ts_menu_wrap").offsetTop;
           var top = window.scrollY;
@@ -136,7 +135,7 @@
           if (timeshopActCash) {
             that.$emit("tsfeed", JSON.parse(timeshopActCash));
           } else {
-            that.get_ts_data({"timeshopActId": item.timeshopActId}, item, index);
+            that.get_ts_data({"timeshopActId": item.timeshopActId});
           }
           if (objHeight < top) {
             // window.scroll(0, +objHeight - 20);
@@ -144,7 +143,7 @@
           }
         }
       },
-      get_ts_data: function (datas, item, index) {
+      get_ts_data: function (datas) {
         var that = this;
         var data = layout.strSign("ts_data", datas);
         if (that.timeout) {
@@ -163,18 +162,6 @@
               if (data.data) {
                 that.$emit("tsfeed", data.data.feedList);
                 socialCache.set('timeshopAct' + datas.timeshopActId, JSON.stringify(data.data.feedList), {exp: 180});
-                //定时刷新
-                if (item) {
-                  var timestamp = Date.parse(new Date())/1000;
-                  var timese = item.startTime - timestamp;
-                  if (timese < 60 && timese > 0) {
-                    that.timeout = setTimeout(function () {
-                      that.get_ts_data({}, 0);
-                      item.statusInfo = '抢购中';
-                      that.data.body.dataList[index] = item;
-                    }, 60000)
-                  }
-                }
               } else {
 
               }
@@ -275,7 +262,7 @@
 
 </style>
 <style>
-  #comon{
+  #comon {
     position: relative;
   }
 </style>

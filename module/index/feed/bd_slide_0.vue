@@ -12,11 +12,13 @@
 </template>
 
 <script>
-    import './bd_slide_0.scss'
+//    import './bd_slide_0.scss'
     import slide from './bd_slide_0.es6'
     export default slide
 </script>
-<style scoped>
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./bd_slide_0.scss";
+
   .newImage{
     width: 100%;
   }

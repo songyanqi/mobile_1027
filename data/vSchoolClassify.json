@@ -1,0 +1,41 @@
+{
+  "code":"0",
+    "shop_url":"https://15201663952.davdian.com",
+    "visitor_status":"3",
+    "sess_key":"48a275a991a0a6295706e6d9f8c3a784b62a4bbc",
+    "data_version":"xxxxxx",
+    "data":{
+     "dataList": [{
+                  "fId":"2",
+                  "fTitle":"妈妈成长",
+                  "sort" :"1", 
+                  "list" :[ 
+                    {        
+                      "cId":"3",
+                      "cTitle":"全部",
+                      "sort":"1",
+                    },
+                    {        
+                      "cTitle":"绘本",
+                      "sort":"2",
+                    },
+                    ]
+                  },
+                  {
+                    "fId":"2",
+                    "fTitle":"妈妈成长",
+                    "sort" :"1",
+                    "list" :[ 
+                      {        
+                        "cId":"3",
+                        "cTitle":"全部",
+                        "sort":"1",
+                      },
+                      {        
+                        "cTitle":"绘本",
+                        "sort":"2",
+                      },
+                    ]
+                  }]
+    }
+}

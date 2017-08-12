@@ -112,17 +112,15 @@
         h1{
             width: 100%;
             text-align: center;
-            font-size: 0.18rem;
+            font-size: 0.19rem;
             margin-top: 0.15rem;
             color: #333;
             margin-bottom: 0.1rem;
         }
         .alert_content{
-            margin-left: 0.15rem;
-            margin-right: 0.15rem;
-            font-size: 0.14rem;
+            font-size: 0.17rem;
             text-align: center;
-            margin-bottom: 0.15rem;
+            margin: 0.15rem;
         }
         .alert_btn_all{
             width: 100%;
@@ -144,8 +142,16 @@
             .alert_btn_yes{
                 color: #FF4A7D;
             }
+            position: absolute;
+            bottom: 0
         }
     }
+</style>
+<style scoped>
+  .alert_no .alert_btn_all{
+    position: absolute;
+    bottom: 0;
+  }
 </style>
 <template>
     <div>
@@ -179,8 +185,8 @@
             <div>老师开讲新课，我们会悄悄告诉你呦</div>
         </div>
         <div class='alert_no' v-if='alert_no'>
-            <h1>确定不在关注老师</h1>
-            <div class='alert_content'>您的大V店无法接收开抢消息提醒，请在手机的“设置-通用中心-大V店”中开启</div>
+            <h1>确定不再关注老师？</h1>
+            <div class='alert_content'>取消关注后,就不能收到老师的开课提醒了哦～</div>
             <div class='alert_btn_all'>
                 <span class='alert_btn' @click='alert_btn_no'>取消</span>
                 <span class='alert_btn alert_btn_yes' @click='alert_btn_yes'>确定</span>
@@ -207,6 +213,9 @@
             }
         },
         props:["list"],
+        created:function () {
+          console.log(5);
+        },
         methods:{
             imgObject:function (imgSrc) {
                 return{

@@ -2,7 +2,6 @@ $(function () {
     // var mySwiper = new Swiper('.publish_pic_preview', {
     //     autoplay: 5000,//可选选项，自动滑动
     // })
-
     star();
     any();
     commentInput();
@@ -273,8 +272,10 @@ $(function () {
          */
         function addPic() {
             var addBtn = $("input.add_pic_input");
+            // alert(123123)
             addBtn.change(function () {
                 var files = addBtn.get(0).files;
+                console.log(files)
                 if (files.length) {
                     for (var i = 0; i < files.length; i++) {
                         pullFile(files[i]);

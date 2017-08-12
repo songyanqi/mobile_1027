@@ -37,8 +37,9 @@ iosInterface.getShareInfo = function () {
     let shareInfo = wxShare.getShareInfo();
     return JSON.stringify(Object.assign(shareInfo, window.moreShareInfo));
 };
-
-
+iosInterface.refreshPreviousPageData = function () {
+    backNewData.$children[0].appUpData()
+};
 /**
  * 初始化头部
  */

@@ -1,10 +1,10 @@
 <template>
-    <div class="cover_0" :style="styleObject">
+    <div class="cover_0" :style="styleObject" >
         <img :src="data.body.imgUrl">
     </div>
 </template>
 <script>
-import './cover_0.scss'
+//import './cover_0.scss'
 export default {
     data(){
         return {
@@ -24,3 +24,7 @@ export default {
     }
 }
 </script>
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./cover_0.scss";
+</style>

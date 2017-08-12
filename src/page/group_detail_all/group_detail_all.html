@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>团成员列表</title>
-  <meta charset="UTF-8">
-  <meta name="renderer" content="webkit">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  @@include('meta.include')
+  <link rel="stylesheet" href="[[static]]/page/group_detail_all/css/group_detail_all.css[[v]]">
 </head>
 <body>
-  <div class="app"></div>
+  <div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
+    <!--头部标题-->
+    <com-top-title title="团成员列表" border-bottom home></com-top-title>
+    <!--全部成员列表-->
+    <ul class="all-group-people">
+      <template v-for="(member, i) in memberList">
+        <li>
+          <group-head-portrait :type="member.parendId === '0' ? 'leader' : 'normal'" :src="member.founderAvater"></group-head-portrait>
+          <span class="nickname">{{member.founderName}}</span>
+          <span class="begin-time">{{member.uTime}} {{member.parendId === '0' ? '开团' : '参团'}}</span>
+        </li>
+        <div class="split-line"></div>
+      </template>
+    </ul>
+  </div>
 
-  <script src="http://cdn.davdian.com/vue/2.0.5/vue.min.js"></script>
-  <script src="http://cdn.davdian.com/vue-lazyload/1.0.3/vue-lazyload.js"></script>
-  <script src="http://cdn.davdian.com/vue-router/2.3.0/vue-router.min.js"></script>
-  <script src="http://cdn.davdian.com/jquery/3.2.0/jquery.min.js"></script>
-  <script src="/wap/00000/dist/group_detail_all.js"></script>
+  @@include('vendor.include')
+  <script src="[[static]]/page/group_detail_all/js/group_detail_all.js[[v]]"></script>
 </body>
 </html>

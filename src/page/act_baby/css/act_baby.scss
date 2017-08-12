@@ -1,0 +1,390 @@
+@import "../../../common/css/common.scss";
+
+body {
+  font-size: 0;
+}
+
+.app {
+  background: #f5bfce;
+  font-size: 0;
+  .g-page-1 {
+    padding-bottom: ptr(60);
+    font-size: ptr(14);
+  }
+  .g-page-2 {
+    padding-bottom: ptr(20);
+    font-size: ptr(14);
+  }
+  .g-page-3 {
+    font-size: ptr(14);
+  }
+  .title-wapper {
+    padding-top: ptr(20);
+  }
+  .title1 {
+    display: block;
+    //width: ptr(355);
+    height: ptr(31);
+    margin: 0 auto ptr(15) auto;
+  }
+  .title2 {
+    display: block;
+    //width: ptr(355);
+    height: ptr(20);
+    margin: ptr(10) auto ptr(15) ptr(15);
+  }
+  .title3-wapper {
+    padding-bottom: ptr(15);
+    height: ptr(31);
+    .title3 {
+      display: block;
+      height: ptr(31);
+      margin: auto;
+    }
+  }
+  .start {
+    background: white;
+    border-radius: ptr(5);
+    margin: 0 ptr(16) 0 ptr(14);
+    padding: ptr(20) ptr(15) ptr(23) ptr(15);
+    .questions {
+      height: ptr(55);
+      word-break: normal;
+    }
+    p {
+      text-align: center;
+      color: #333;
+      line-height: ptr(21);
+      font-size: ptr(14);
+    }
+    /*page1*/
+    .center {
+      display: block;
+      margin: ptr(10) auto ptr(4) auto;
+      //width: ptr(133.72);
+      height: ptr(141);
+    }
+    /*page1*/
+    .ask {
+      margin: 0 auto;
+      margin-bottom: ptr(30);
+      font-size: ptr(16);
+    }
+    /*page1*/
+    .p1_trans {
+      position: relative;
+      height: ptr(40);
+      margin: 0 ptr(32) ptr(25) ptr(33);
+    }
+    .selector {
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scale(0.5);
+      font-size: ptr(36);
+      line-height: ptr(50);
+      span {
+        display: inline-block;
+        border: thin solid #BBBBBB;
+        border-radius: ptr(100);
+        width: ptr(220);
+        padding: ptr(14) 0 ptr(14) 0;
+        text-align: center;
+      }
+      .male {
+        margin-right: ptr(45);
+      }
+      .active {
+        background: #FF4A7D;
+        color: #FFffff;
+        border-color: #FF4A7D;
+      }
+    }
+    /*page1*/
+    .p1_trans_age {
+      position: relative;
+      margin: 0 ptr(5) 0 ptr(5);
+      height: ptr(40);
+    }
+    select#age {
+      position: absolute;
+      width: ptr(610);
+      height: ptr(82);
+      border-color: #BBBBBB;
+      transform-origin: 0 0;
+      transform: scale(0.5);
+      appearance: none;
+      background: url(../img/rectan.png) no-repeat scroll right;
+      select::-ms-expand {
+        display: none;
+      }
+      background-size: auto 110%;
+      font-size: ptr(28);
+      color: #333;
+      line-height: ptr(40);
+      padding: ptr(20) 0 ptr(20) ptr(30);
+      border-right: none;
+      border-radius: ptr(8);
+      outline: none;
+      option:nth-child(even) {
+        background-color: #f5f5f5;
+      }
+    }
+
+    /*page2*/
+    .p2_trans {
+      position: relative;
+      height: ptr(320);
+    }
+    .choose {
+      position: absolute;
+      -webkit-transform-origin: 0 0;
+      -webkit-transform: scale(0.5);
+      div {
+        width: ptr(360);
+        text-align: center;
+        font-size: ptr(28);
+        line-height: ptr(40);
+        margin: 0 ptr(74) ptr(40) ptr(134);
+        border-radius: ptr(100);
+        border: thin solid #BBBBBB;
+        padding: ptr(20) 0 ptr(20) 0;
+      }
+      #a5 {
+        margin-bottom: ptr(3);
+      }
+      .active {
+        background: #FF4A7D;
+        color: #FFffff;
+        border-color: #ff4a7d;
+      }
+      #a1 {
+        margin-top: ptr(50);
+      }
+    }
+    /*page3*/
+    .chart {
+      width: ptr(250);
+      height: ptr(190);
+      //height: 190px;
+      margin: ptr(10) auto ptr(30) auto;
+    }
+    .pro-comment {
+      > * {
+        text-align: left;
+      }
+      #title {
+        font-size: ptr(16);
+        color: #666666;
+        margin-bottom: ptr(10);
+      }
+      #summary {
+        margin-top: ptr(10);
+      }
+      #suggest {
+        margin-top: ptr(10);
+        font-size: ptr(12);
+        color: #666;
+      }
+      magin: ptr(20) auto;
+      ul {
+        color: #333;
+        line-height: 0.21rem;
+        font-size: 0.14rem;
+        list-style: square inside;
+        li {
+          margin: ptr(10) auto;
+          word-break: normal;
+        }
+      }
+    }
+  }
+  /*公用*/
+  .img-mid {
+    height: ptr(12);
+    img {
+      //width: ptr(345);
+      height: ptr(12);
+    }
+    margin: 0 0 ptr(16) ptr(14);
+  }
+  /*page1*/
+  .bottom {
+    margin: 0 ptr(50) 0 ptr(50);
+    .begin {
+      color: #FF4A7D;
+      text-align: center;
+      padding: ptr(10) 0 ptr(10) 0;
+      width: ptr(275);
+      background: #FFffff;
+      border-radius: ptr(100);
+      box-shadow: 0 ptr(3) ptr(11) ptr(0) rgba(255, 74, 125, 0.25)
+    }
+  }
+  .index {
+    margin-top: ptr(29);
+    text-align: center;
+    font-size: ptr(15);
+    color: #FFffff;
+  }
+  /*page2*/
+  .bottom2 {
+    color: #FF4a7d;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    max-width: $pageMaxWidth;
+    #index {
+      position: relative;
+      top: ptr(-50);
+      color: #FF4a7d;
+    }
+    #left {
+      position: relative;
+      top: ptr(-58);
+      float: left;
+    }
+    #right {
+      position: relative;
+      top: ptr(-58);
+      float: right;
+    }
+    img {
+      width: ptr(56);
+      top: 0;
+    }
+  }
+  /*page2*/
+  .submit_bottom {
+    margin: 0 ptr(70) 0 ptr(70);
+    p {
+      padding: ptr(10) 0 ptr(10) 0;
+    }
+    .begin {
+      color: #FF4A7D;
+      text-align: center;
+      padding: ptr(10) 0 ptr(10) 0;
+      width: ptr(235);
+      background: #FFffff;
+      border-radius: ptr(100);
+      box-shadow: 0 ptr(3) ptr(11) ptr(0) rgba(255, 74, 125, 0.25)
+    }
+  }
+  /*page3*/
+  .basket {
+    margin-top: ptr(9);
+    .recommend {
+      background: white;
+      border-radius: ptr(5);
+      margin: 1px ptr(16) 0 ptr(14);
+      position: relative;
+      width: ptr(345);
+      height: ptr(100);
+      #goods {
+        position: absolute;
+        top: ptr(10);
+        left: ptr(10);
+        width: ptr(80);
+        height: ptr(80);
+      }
+      .name {
+        position: absolute;
+        width: ptr(235);
+        height: ptr(40);
+        top: ptr(10);
+        left: ptr(95);
+        @include ellipsis(3);
+        color: #666666;
+        line-height: ptr(20);
+      }
+      .price {
+        position: absolute;
+        height: ptr(12);
+        top: ptr(68);
+        left: ptr(100);
+        color: #FF4A7D;
+        #unit {
+          font-size: ptr(12);
+        }
+        #integer {
+          font-size: ptr(16);
+        }
+        #decimal {
+          font-size: ptr(14);
+        }
+      }
+      .link {
+        position: absolute;
+        top: ptr(62);
+        left: ptr(260);
+        width: ptr(70);
+        height: ptr(25);
+        line-height: ptr(13);
+        color: #FFffff;
+        border-radius: ptr(94);
+        background: linear-gradient(to right, #ff7a76, #FF4A7D);
+        p {
+          font-size: ptr(11);
+          font-weight: bold;
+          text-align: center;
+          margin-top: ptr(7);
+        }
+      }
+    }
+  }
+  /*page3*/
+  .reset {
+    margin: ptr(30) auto auto;
+    a p {
+      margin: auto;
+      color: #FF4A7D;
+      text-align: center;
+      padding: ptr(10) 0 ptr(10) 0;
+      width: ptr(275);
+      background: #FFffff;
+      border-radius: ptr(100);
+      box-shadow: 0 ptr(3) ptr(11) ptr(0) rgba(255, 74, 125, 0.25);
+      font-weight: bold;
+    }
+  }
+  /*page3*/
+  .share {
+    margin: ptr(20) auto ptr(70);
+    p {
+      margin: auto;
+      color: #00c7bf;
+      text-align: center;
+      padding: ptr(10) 0 ptr(10) 0;
+      width: ptr(275);
+      background: #FFffff;
+      border-radius: ptr(100);
+      box-shadow: 0 ptr(3) ptr(11) ptr(0) rgba(255, 74, 125, 0.25);
+      font-weight: bold;
+    }
+  }
+
+  .g-weixin-tip {
+    display: none;
+    text-align: center;
+    font-size: ptr(14);
+    .pic {
+      margin-top: ptr(100);
+      img {
+        height: ptr(120);
+      }
+    }
+    .title {
+      margin: ptr(30) auto ptr(12);
+      color: #333333;
+    }
+    .word {
+      line-height: ptr(20);
+      font-size: ptr(12);
+      color: #666666;
+    }
+  }
+}

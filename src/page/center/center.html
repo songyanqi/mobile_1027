@@ -6,13 +6,14 @@
   <link rel="stylesheet" href="[[static]]/page/center/css/center.css[[v]]">
 </head>
 <body>
-  <div class="app" ref="app" v-if="response" @touchmove="preventScroll" @mousewheel="preventScroll" style="display: none;" :style="{display: response ? 'block' : 'none'}">
+  <div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}"
+       ref="app" @touchmove="preventScroll" @mousewheel="preventScroll">
     <!--个人信息-->
     <div class="g-info" :style="shopBg">
       <div class="mask"></div>
       <!--设置-->
       <a href="/settings.html" @click="tj(2);">
-        <img class="setting" src="[[static]]/page/center/img/setting.png">
+        <img class="setting" v-lazy="'[[static]]/page/center/img/setting.png'">
       </a>
       <div class="personal">
         <!--头像-->
@@ -71,7 +72,7 @@
             <!--按钮-->
             <div class="btns">
               <!--遍历输出订单按钮-->
-              <div class="btn" :class="{'g-guide-target-2': guideStep === 2 && (item.title == '课程'||item.title =='购物车')}"
+              <div class="btn" :class="{'g-guide-target-2': guideStep === 2 && (item.title == '课程' || item.title =='购物车')}"
                    v-for="item of feed.body.dataList">
                 <a :href="item.command.content" @click="tj(1, item.command.log);">
                   <div class="pic">
@@ -133,15 +134,15 @@
     <!--引导浮层第一步-->
     <div class="g-guide" ref="guide" v-show="isShowGuide">
       <div class="guide-1" v-show="guideStep === 1">
-        <img class="pic-tip" src="[[static]]/page/center/img/guide-tip-1.png">
+        <img class="pic-tip" v-lazy="'[[static]]/page/center/img/guide-tip-1.png'">
         <div class="next-btn" @click="guideStepNext">知道啦</div>
       </div>
       <div class="guide-2" v-show="guideStep === 2">
-        <img class="pic-tip" src="[[static]]/page/center/img/guide-tip-2.png?v=1">
+        <img class="pic-tip" v-lazy="'[[static]]/page/center/img/guide-tip-2.png?v=1'">
         <div class="next-btn" @click="guideStepNext">知道啦</div>
       </div>
       <div class="guide-3" v-show="guideStep === 3">
-        <img class="pic-tip" src="[[static]]/page/center/img/guide-tip-3.png">
+        <img class="pic-tip" v-lazy="'[[static]]/page/center/img/guide-tip-3.png'">
         <div class="next-btn" @click="guideStepNext" :class="{iphone4: document.documentElement.clientHeight < 670}">
           进入个人中心
         </div>

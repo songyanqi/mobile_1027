@@ -17,6 +17,9 @@ import * as bd_image_8 from './feed/bd_image_8.vue'
 import * as bd_image_9 from './feed/bd_image_9.vue'
 import * as bd_image_10 from './feed/bd_image_10.vue'
 import * as bd_goods_2 from './feed/bd_goods_2.vue'
+import * as bd_goods_6 from './feed/bd_goods_6.vue'
+import * as bd_goods_5 from './feed/bd_goods_5.vue'
+import * as bd_goods_7 from './feed/bd_goods_7.vue'
 import * as bd_menu_0 from './feed/bd_menu_0.vue'
 import * as tt_com_0 from './feed/tt_com_0.vue'
 import * as tt_com_1 from './feed/tt_com_1.vue'
@@ -200,7 +203,11 @@ export default{
     bd_ts_prod_0,
     bd_ts_goods_0,
     bd_ts_title_0,
-    bd_course_notes_0
+    bd_course_notes_0,
+    bd_goods_5,
+    bd_goods_6,
+    bd_goods_7,
+    'ad-banner': require('../../src/page/goodsDetail/vue/ad-banner.vue'),
   }
 }
 

@@ -95,6 +95,7 @@ function innerCall(param = {}) {
     console.log(`location.href方式唤起native,协议为: ${protocal}`);
 
     // 调用native
+    console.log(protocal)
     location.href = protocal;
   } else {
     // 版本错误提示
@@ -466,6 +467,22 @@ const native = {
         param: param
       });
     },
+
+    /**
+     * 功能: APP中点击图片显示大图
+     * 用法:
+     * native.Browser.selectIdentity({
+        cardName: ''
+      })
+     */
+    showBigImage(param = {}) {
+      call({
+        v: '4.1.0',
+        host: 'Browser',
+        action: 'showBigImage',
+        param: param
+      });
+    },
   },
 
 
@@ -655,6 +672,34 @@ const native = {
         param: param
       });
     },
+    /**
+     * 功能: 进入全部笔记页面
+     * 用法:
+     * native.VoiceLive.callAppEnterAllNote()
+       });
+     */
+    callAppEnterAllNote(param = {}) {
+      call({
+        v: '3.9.2',
+        host: 'VoiceLive',
+        action: 'openCourseCommentList',
+        param: param
+      });
+    },
+    /**
+     * 功能: 进入写笔记页面
+     * 用法:
+     * native.VoiceLive.callAppEnterWriteNote()
+       });
+     */
+    callAppEnterWriteNote(param = {}) {
+      call({
+        v: '4.1.0',
+        host: 'VoiceLive',
+        action: 'openCourseNoteEdit',
+        param: param
+      });
+    },
   },
 
 
@@ -726,6 +771,23 @@ const native = {
       });
     },
   },
+  /****************************** 12、H5触发cmd命令 ******************************/
+  Common: {
+    /**
+     * 功能: H5触发cmd客户端实现回到上一级页面
+     * 用法:
+     * native.BrowserTouch.goBackToRootPage();
+     */
+    log(param = {}) {
+      call({
+        v: '4.1.0',
+        host: 'Common',
+        action: 'log',
+        param: param
+      });
+    },
+  },
+
 
   /****************************** 自定义便捷接口 ******************************/
   custom: {

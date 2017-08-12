@@ -1,4 +1,6 @@
-var crypto = require('crypto')
+// var crypto = require('crypto')
+import md5Third from 'crypto-js/md5.js';
+
 
 let strSign = (str,flag,obj = {}) => {
     let strObj = sortObj(str,flag,obj)//字符串 传入当前的信息名称
@@ -77,12 +79,12 @@ let sortObj = (dataVersion, flag, obj = {}) => {//传入当前的信息名称 �
         string += p + '=' + strObj[p]
     }
     var sign = md5(string).toUpperCase();
-    console.log(string)
     strObj.sign = sign
     return strObj
 }
 
-let md5 = (str="") => crypto.createHash('md5').update(str, 'utf8').digest('hex')
+// let md5 = (str="") => crypto.createHash('md5').update(str, 'utf8').digest('hex')
+let md5 = (str="") => md5Third(str).toString().toUpperCase();
 
 let dataVersion =(str, obj={}) => {// 信息名称 以及该信息下的所有需要上传的信息
     if (obj.data_version && !window.isPrivateMode) {//如果数据版本号不为0
@@ -120,7 +122,7 @@ let getDataWithSign = (opt)=>{
         var obj = opt.updata
 
         obj = obj||{};
-        for(var i=0,d;d = ["rp",'rl','logDp'][i++];){
+        for(var i=0,d;d = ["rp",'rl','logDp','dp'][i++];){
             var tmp_value = window.Units&&Units.getQuery(d);
             if(tmp_value){
                 obj[d]=tmp_value;

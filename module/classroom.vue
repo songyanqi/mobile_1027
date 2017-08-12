@@ -34,25 +34,6 @@
                 </div>
             </div>
         </div>
-        <!--where start-->
-        <div class="whereStartBox" v-if="back_where[0]" @click='whereStartBoxCancel'>
-            <div class="whereStart">
-                <div class="startPic">
-                    <div class="startImgBox">
-                        <img src="//pic.davdian.com/free/2017/01/17/240_249_587ea59a39fb2c92bcdce79210df2bcc.png" alt="">
-                    </div>
-                </div>
-                <div v-if="back_where[2]" class="startVideo" @click="startFirstVideo">
-                    <span>从第一条语音开始听</span>
-                </div>
-                <div v-if="back_where[1]" @click="directListen">
-                    <span>直接进入课堂</span>
-                </div>
-                <div v-if="back_where[3]" class="directStart" @click="continueStart">
-                    <span>继续听课</span>
-                </div>
-            </div>
-        </div>
         <!--fiexd定位的弹幕-->
         <div v-if="commonflag && discussStatus" class="flexd" @click="open_comment">
             <div class="common_position"  v-if='commonList[commonList.length-2].msg.content'>
@@ -75,46 +56,27 @@
         <div v-if="!commonflag && discussStatus" class="flag">
             <span @click="switchflag">开</span>
         </div>
-        <div  class="commen_num" v-if='discussStatus'><span>讨论：{{total}}</span></div>
+        <div  class="commen_num"><span>加入讨论：{{total}}</span></div>
        <!--我的邀请卡-->
         <div class="callshare_container">
             <span class="callshare" @click="shareMyCard">我的邀请卡</span>
         </div>
 
         <!--倒计时-->
-        <div class="countdown" v-bind:class="{ countdownHeight: !rage.endTimestamp && !back_where[4] }">
-            <!--倒计时-->
+        <div class="countdown" v-if='timeShow != 0'>
             <!-- 未开始 -->
-            <!-- {{back_where[0]}},{{back_where[1]}},{{back_where[2]}},{{back_where[3]}},{{back_where[4]}} -->
-            <div class="counttop" v-if='!rage.endTimestamp && !back_where[4]'>
-                <span>开始时间：{{new Date(rage.startTimestamp * 1000).getFullYear()}}年{{new Date(rage.startTimestamp * 1000).getMonth() + 1}}月{{new Date(rage.startTimestamp * 1000).getDate()}}日{{timeStart[0]}}:{{timeStart[1]}}</span>
+            <div class="counttop" v-if='timeShow == 1'>
+                <span v-if='rage.startTimestamp'>课程将于&nbsp;{{new Date(rage.startTimestamp * 1000).getFullYear()}}年{{new Date(rage.startTimestamp * 1000).getMonth() + 1}}月{{new Date(rage.startTimestamp * 1000).getDate()}}日{{timeStart[0]}}&nbsp;:&nbsp;{{timeStart[1]}}开始</span>
                 <i>{{rage.pv}}人气</i>
             </div>
-            <div class="count_con" v-if='!rage.endTimestamp && !back_where[4]'>
-                <div class="day">
-                    <span class="daynum time_left">{{countdown[0]}}</span>
-                    <span class="time_right">天</span>
-                </div>
-                <div class="hour">
-                    <span class="hournum time_left">{{countdown[1]}}</span>
-                    <span class="time_right">时</span>
-                </div>
-                <div class="minute">
-                    <span class="minutenum time_left">{{countdown[2]}}</span>
-                    <span class="time_right">分</span>
-                </div>
-                <div class="second">
-                    <span class="secondnum time_left">{{countdown[3]}}</span>
-                    <span class="time_right">秒</span>
-                </div>
-            </div>
             <!-- 已开始 -->
-            <div class="counttop" v-if='!rage.endTimestamp && back_where[4]'>
-                <span>直播开始:{{getFullTimeString(countdown[1])}}:{{getFullTimeString(countdown[2])}}:{{getFullTimeString(countdown[3])}}</i>
+            <div class="counttop" v-if='timeShow == 2'>
+                <span v-if='rage.startTimestamp'>直播开始:{{getFullTimeString(countdown[1])}}:{{getFullTimeString(countdown[2])}}:{{getFullTimeString(countdown[3])}}</span>
+                <i>{{rage.pv}}人气</i>
             </div>
             <!-- 已结束 -->
-            <div class="counttop" v-if='rage.endTimestamp'>
-                <span>开始时间：{{new Date(rage.startTimestamp * 1000).getFullYear()}}年{{new Date(rage.startTimestamp * 1000).getMonth() + 1}}月{{new Date(rage.startTimestamp * 1000).getDate()}}日{{timeStart[0]}}:{{timeStart[1]}}</span>
+            <div class="counttop" v-if='timeShow == 3'>
+                <span v-if='rage.startTimestamp'>开始时间：{{new Date(rage.startTimestamp * 1000).getFullYear()}}年{{new Date(rage.startTimestamp * 1000).getMonth() + 1}}月{{new Date(rage.startTimestamp * 1000).getDate()}}日{{timeStart[0]}}:{{timeStart[1]}}</span>
                 <i>{{rage.pv}}人气</i>
             </div>
         </div>
@@ -171,11 +133,6 @@
                                     <i class='main_picBox_icon2'></i>
                                     <span class='TextMessageSpan formfield' v-html='hrefLink(common.msg.content)'>
                                     </span>
-                                    <!-- <div class='ulList_recall_content'> -->
-                                        <!-- <div class='ulList_recall' @click='copy(common, index)'>复制</div>
-                                        <div class='ulList_recall_angle'></div> -->
-                                    <!-- </div> -->
-                                    
                                 </div>
                                 <!--语音类型的信息-->
                                 <div class="audiomain" @click="playVoiceFlag(index)" v-if="common.msg.type==2||common.msg.type==91" :class="{'replied':common.replied}">
@@ -218,6 +175,23 @@
             <div class="send" @click="sentMessage">
                 <span>发送</span>
             </div>
+        </div>
+        <div class='firstPlayAudioBtn' v-if='firstPlayAudioBtn && barrageList[0]'>
+            <span class='firstPlatAudioBtnClose' @click='firstPlayAudioBtnClose'>
+                <img src="//pic.davdian.com/free/2017/07/15/clearInput.png">
+            </span>
+            <span class='firstPlatAudioBtnText' @click="startFirstVideo(0,1)">点我从第一条语音开始听</span>
+        </div>
+        <div class='upAndDown' v-if='upAndDown'>
+            <div class='upAndDown1' @click="startFirstVideo(-1,1)"></div>
+            <div class='upAndDown1' @click="startFirstVideo(1,0)"></div>
+        </div>
+        <div class="maskAlertMask" v-if='maskAlertBtn'></div>
+        <div class='maskAlert' v-if='maskAlertBtn'>
+            <img src="//pic.davdian.com/free/2017/07/17/maskAlertImg.png" class='maskAlertImg'>
+            <p class='maskAlertText' v-if='rage.startTimestamp'>课程将于{{new Date(rage.startTimestamp * 1000).getFullYear()}}年{{new Date(rage.startTimestamp * 1000).getMonth() + 1}}月{{new Date(rage.startTimestamp * 1000).getDate()}}日&nbsp;&nbsp;{{timeStart[0]}}:{{timeStart[1]}}准时开始
+请耐心等待</p>
+            <p class='maskAlertBtn' @click='maskAlertBtnClick'>好</p>
         </div>
     </div>
         <invite-card :show="cardShow" :id="courseId" statistics="4" v-on:close="closeCard"></invite-card>
@@ -273,6 +247,94 @@
         position: relative;
         top:0;
     }
+    .firstPlayAudioBtn{
+        position: fixed;
+        bottom: 60px;
+        width: 2rem;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        left: 50%;
+        margin-left: -1rem;
+        background: #000000;
+        text-align: center;
+        border-radius: 53px;
+        color: #fff;
+        opacity: 0.6;
+    }
+    .firstPlatAudioBtnClose{
+        position: fixed;
+        bottom: 61px;
+        width: 0.15rem;
+        display: inline-block;
+        height: 0.3rem;
+        vertical-align: top;
+        left: 1rem;
+    }
+    .firstPlatAudioBtnText{
+        display: inline-block;
+        height: 0.3rem;
+        vertical-align: top;
+        position: fixed;
+        bottom: 60px;
+        left: 1.24rem;
+        font-size: 0.14rem;
+    }
+    .upAndDown{
+        background: url('//pic.davdian.com/free/2017/07/17/upAndDown.png') no-repeat;
+        background-size: 100% 100%;
+        width: 35px;
+        height: 76px;
+        position: fixed;
+        bottom: 60px;
+        right: 10px; 
+    }
+    .upAndDown1{
+        width: 35px;
+        height: 38px;
+    }
+    .maskAlertMask{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #000;
+        opacity: 0.51;
+        z-index: 200;
+    }
+    .maskAlert{
+        width: 2.7rem;
+        height: 2.12rem;
+        background: #fff;
+        position:fixed;
+        left: 50%;
+        top: 50%;
+        margin-left: -1.35rem;
+        margin-top: -1.06rem;
+        text-align: center;
+        z-index: 201;
+    }
+    .maskAlertImg{
+        width: 0.8rem;
+        margin-top:0.21rem;
+    }
+    .maskAlertText{
+        margin-top: 0.12rem;
+        color: #666666;
+        font-size: 0.14rem;
+        padding-left: 0.05rem;
+        padding-right: 0.05rem;
+    }
+    .maskAlertBtn{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        height: 0.44rem;
+        line-height: 0.44rem;
+        border-top: 1px solid #E1E1E1;
+        color:#FF4A7D;
+        font-size: 0.16rem;
+    }
 </style>
 
 <script>
@@ -286,7 +348,6 @@
     export default {
         data () {
             return {
-                refreshFlag: true,
                 playIndexFlag: null,
                 sentMessageFlag: true,
                 title:"",
@@ -310,7 +371,6 @@
                 commonList:[],          //commentList的数据
                 commonflag:true,       //评论开关
                 countdown:[0,0,0,0],    //倒计时初始值
-                back_where:[false, false, false, false, false],         //提示弹框 从哪里开始
                 commonShow:false,       //commonList开关
                 flagOn:true,
                 callshare:false,
@@ -338,19 +398,19 @@
                 userid:0,
                 blurFlag:true,
                 tempHash:{},
-                curcleFullHash:{}
+                curcleFullHash:{},
+                firstPlayAudioBtn: false,
+                upAndDown: false,
+                maskAlertBtn: false,
+                timeShow: 0,
             }
         },
         created(){
-            this.init();
+            
         },
         ready:function(){
-            // console.log(window.navigator.userAgent)
             var that=this;
-            $(window).resize(function() {
-            });
-            var regexp = /span/gi
-            this.iScrollInit();
+            $(window).resize(function() {});
             IScroll.utils.preventDefaultException = function (el, exceptions) {
                 return true;
             };
@@ -369,6 +429,7 @@
                     $('.classroom-container').height(classroomContainerHeight+'px');
                 }
             });
+            //初始化已读未读
             if (localStorage.getItem('curcleFullHash')){
                 this.curcleFullHash = JSON.parse(localStorage.getItem('curcleFullHash'))
             }
@@ -378,8 +439,16 @@
                 if (that.commonScroll)
                 that.commonScroll.refresh();
             },1000)
+            this.init();
+            this.iScrollInit();
         },
         methods: {
+            maskAlertBtnClick: function(){
+                this.maskAlertBtn =false
+            },
+            firstPlayAudioBtnClose:function(){
+                this.firstPlayAudioBtn = false
+            },
             hrefLink:function (content) {
                 let text = decodeURIComponent(content)
                 return text.replace(/(http|ftp|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?/g, function(d){return "<a style='color: blue;' href='"+d+"'>"+d+"</a >";})
@@ -857,21 +926,12 @@
                     return "0" + s
                 }
             },
-            whereStartBoxCancel: function () {
-                this.back_where = [false, false, false, false]
-                if (new Date().getTime() - this.rage.startTimestamp*1000 >0){
-                    this.back_where[4] = true
-                } else {
-                    this.back_where[4] = false
-                }
-            },
             isPhoneNum: function (s) {
                 var patrn = /^((110)|(13[0-9])|(14[5-7])|(15[^4,\D])|(17[0-9])|(18[0-9]))\d{8}$/;
                 if (!patrn.exec(s)) return false;
                 return true;
             },
             init: function () {
-                let that = this;
                 this.getData()
             },
             // 打开页面就会获取数据
@@ -912,28 +972,15 @@
                                             }
                                         });
                                     }
-                                    if (that.rage.endTimestamp) {
-                                        if (sessionStorage.getItem('classroomBackWhere'+courseId)) {
-                                            that.back_where = [true, false, true, true]
-                                        } else {
-                                            that.backStartVideo()
-                                        }
+                                    if (that.rage.endTimestamp){
+                                        that.timeShow = 3
                                     } else {
-                                        that.countdownflag = true;
-                                        if (sessionStorage.getItem('classroomBackWhere'+courseId)) {
-                                            that.back_where = [true, false, true, true]
-                                        } else {
-                                            that.back_where = [true, true, true, false]
-                                            sessionStorage.setItem('classroomBackWhere'+courseId, JSON.stringify(true));
+                                        if (nowTime < parseInt(that.rage.startTimestamp) * 1000){
+                                            that.timeShow = 1
+                                        }else {
+                                            that.timeShow = 2
                                         }
                                     }
-                                    if (nowTime - that.rage.startTimestamp*1000 >0){
-                                        that.back_where[4] = true
-                                    } else {
-                                        that.back_where[4] = false
-                                    }
-                                    console.log('back_where--->', that.back_where)
-                                    //倒计时
                                     function timerFun(time, direction) {
                                         var timer = setInterval(function () {
                                             if (direction) {
@@ -945,7 +992,6 @@
                                         }, 1000);
                                     }
 
-                                    var nowTime = new Date().getTime()
                                     if (that.rage.endTimestamp <= 0) {
                                         if (nowTime < parseInt(that.rage.startTimestamp) * 1000) {
                                             var time = (parseInt(that.rage.startTimestamp) * 1000) - nowTime;
@@ -957,19 +1003,74 @@
                                             timerFun(time, true)
                                         }
                                     }
-                                    window.endTimestamp = that.rage.endTimestamp
-                                    window.startTimestamp = that.rage.startTimestamp
-                                    that.initRongyun();
 
-                                     // 第一次次进 而且没有结束
-                                    if (!sessionStorage.getItem('classroomScrollTop' + courseId) && !that.rage.endTimestamp) {
-                                            that.firstComeGetTeacher();
-                                        if(that.barrageList&&that.barrageList.length>2){
-                                            sessionStorage.setItem('barrageListTime' + courseId, JSON.stringify(that.barrageList[that.barrageList.length - 1].msg.time));
-                                        }
-                                    }else{
-                                        // that.continueStart();
+
+
+
+                                    console.log(that.rage.startTimestamp, that.rage.endTimestamp, that.timeShow)
+                                    if (!sessionStorage.getItem('classroomScrollTop' + courseId) &&nowTime < parseInt(that.rage.startTimestamp) * 1000 && that.rage.endTimestamp==0 ) {
+                                        that.firstComeGetTeacher(function(){
+                                            setTimeout(function () {
+                                                that.myScroll.refresh();
+                                                that.myScroll.scrollToElement(".bottom", 0);
+                                                that.firstPlayAudioBtn = true
+                                            }, 1000)
+                                        });
+                                        that.maskAlertBtn = true
+                                        console.log('课程开始前第一次进入直播间')
+                                    } 
+                                    if (sessionStorage.getItem('classroomScrollTop' + courseId) &&nowTime < parseInt(that.rage.startTimestamp) * 1000 && that.rage.endTimestamp==0) {
+                                        that.firstComeGetTeacher(function () {
+                                            setTimeout(function () {
+                                                that.myScroll.refresh();
+                                                that.myScroll.scrollToElement(".bottom", 0);
+                                                that.firstPlayAudioBtn = true
+                                            }, 1000)
+                                        });
+                                        console.log('课程开始前非第一次进入直播间')
                                     }
+
+                                    if (!sessionStorage.getItem('classroomScrollTop' + courseId) &&nowTime > parseInt(that.rage.startTimestamp) * 1000 && that.rage.endTimestamp==0) {
+                                        that.firstComeGetTeacher(function () {
+                                            setTimeout(function () {
+                                                that.myScroll.refresh();
+                                                that.myScroll.scrollToElement(".bottom", 0);
+                                                that.firstPlayAudioBtn = true
+                                            }, 1000)
+                                        })
+                                        console.log('课程开始后第一次进入直播间')
+                                    }
+                                    if (sessionStorage.getItem('classroomScrollTop' + courseId) &&nowTime > parseInt(that.rage.startTimestamp) * 1000  && that.rage.endTimestamp==0)  {
+                                        that.continueStart(function(){
+                                            setTimeout(function () {
+                                                that.myScroll.refresh();
+                                                that.myScroll.scrollToElement(".bottom", 0);
+                                                that.firstPlayAudioBtn = true
+                                            }, 1000)
+                                        });
+                                        console.log('课程开始后非第一次进入直播间')
+                                    }
+                                    if (!sessionStorage.getItem('classroomScrollTop' + courseId) &&nowTime > parseInt(that.rage.endTimestamp) * 1000 && that.rage.endTimestamp!=0){
+                                        that.firstComeGetTeacher(function(){
+                                            setTimeout(function () {
+                                                that.myScroll.refresh();
+                                                // that.myScroll.scrollToElement(".bottom", 0);
+                                            }, 1000)
+                                        });
+                                         console.log('课程结束第一次进入直播间')
+                                    }
+                                    if (sessionStorage.getItem('classroomScrollTop' + courseId) &&nowTime > parseInt(that.rage.endTimestamp) * 1000 && that.rage.endTimestamp!=0){
+                                        that.continueStart(function(){
+                                            setTimeout(function () {
+                                                that.myScroll.refresh();
+                                                that.myScroll.scrollToElement(".bottom", 0);
+                                                that.firstPlayAudioBtn = true
+                                            }, 1000)
+                                        });
+                                        console.log('课程结束非第一次进入直播间')
+                                    }
+                                    sessionStorage.setItem('classroomScrollTop' + courseId, 0)
+                                    that.initRongyun();
                                 }
                             } else {
                                 bravetime.info(res.msg)
@@ -1119,9 +1220,8 @@
                 this.cardShow = true;
             },
             //第一次进入调用teacherListUrl
-            firstComeGetTeacher: function () {
+            firstComeGetTeacher: function (callback) {
                 var that = this;
-                // that.tempHash={};
                 that.ryList=[];
                 if (!isPrivateMode) {
                     common.getDataWithSign({
@@ -1131,7 +1231,6 @@
                         success: function (res) {
                             if (res.code == 0) {
                                 if (res.data && res.data.dataList) {
-                                    // that.tempHash={};
                                     var pageSize = res.data.pageSize;
                                     if (res.data.dataList && res.data.dataList.length < pageSize) {
                                         that.ryflag = false;
@@ -1164,11 +1263,8 @@
                                     that.getMoreBarrage = false;
                                     that.refreshtxt = false;
                                     Vue.nextTick(function () {
-                                        setTimeout(function () {
-                                            that.myScroll.refresh();
-                                            that.myScroll.scrollToElement(".bottom", 0);
-                                        }, 200)
                                         localStorage.setItem('teacherListUrl' + courseId, JSON.stringify(that.barrageList))
+                                        sessionStorage.setItem('classroomScrollTop' + courseId, 0);
                                         that.myScroll.on('scroll', function () {
                                             let y = this.y,                 //当前位置
                                                 maxY = this.maxScrollY - y; //还可以滚动的高度
@@ -1177,6 +1273,13 @@
                                                     that.myScroll.refresh();
                                                 }, 200)
                                             }
+                                            window.timeFlag = new Date().getTime()
+                                            setTimeout(function () {
+                                                if (new Date().getTime()-timeFlag>1999){
+                                                    that.upAndDown = false
+                                                }
+                                            }, 2000)
+                                            that.upAndDown = true
                                             sessionStorage.setItem('classroomScrollTop' + courseId, JSON.stringify(y));
                                             sessionStorage.setItem('barrageListTime' + courseId, JSON.stringify(that.barrageList[that.barrageList.length - 1].msg.time));
                                             //做上拉加载旧的信息
@@ -1282,6 +1385,8 @@
                                             }
                                         });
                                     });
+                                    if (callback)
+                                    callback()
                                 } else {
                                     console.warn('直播间teacher,data为null')
                                     that.ryflag = false
@@ -1295,33 +1400,17 @@
                     })
                 }
             },
-            directListen: function () {
-                var that = this;
-                this.back_where = [false, false, false, false];
-                var nowTime = new Date().getTime()
-                if (nowTime - that.rage.startTimestamp*1000 >0){
-                    that.back_where[4] = true
-                } else {
-                    that.back_where[4] = false
-                }
-            },
-            continueStart: function () {
+            continueStart: function (callback) {
                 //继续听课
                 var that = this;
                 // that.tempHash={};
                 that.ryList=[];
-                this.back_where = [false, false, false, false];
                 var nowTime = new Date().getTime()
-                if (nowTime - that.rage.startTimestamp*1000 >0){
-                    that.back_where[4] = true
-                } else {
-                    that.back_where[4] = false
-                }
                 if (sessionStorage.getItem('barrageListTime' + courseId)) {
                     that.AjaxTime = JSON.parse(sessionStorage.getItem('barrageListTime' + courseId));
-                    that.firstComeGetTeacher();
+                    that.firstComeGetTeacher(callback);
                 }else{
-                    that.firstComeGetTeacher();
+                    that.firstComeGetTeacher(callback);
                 }
             },
             //课程结束
@@ -1408,20 +1497,27 @@
                     }
             },
             //继续 传参，主播数据获取最新的信息  需要做上拉加载
-            startFirstVideo: function () {
+            startFirstVideo: function (aa, bb) {
                 let that = this;
                 that.tempHash={};
                 that.ryList=[];
+                if (aa == 0 && bb == 1){
+                    that.firstPlayAudioBtn = false
+                }
                 if (that.more == 1) {
                     if (!isPrivateMode) {
                         common.getDataWithSign({
-                            updata: {courseId: courseId, roomType: 1, time: 0, direction: 1},
+                            updata: {courseId: courseId, roomType: 1, time: aa, direction: bb},
                             flag: 1,
                             keyName: 'teacherListUrl' + courseId,
                             url: that.teacherListUrl,
                             success: function (res) {
                                 if(!res.data){
-                                    that.myScroll.scrollToElement(".commonroom", 0);
+                                    if (aa == 1 && bb == 0){
+                                        that.myScroll.scrollToElement('.bottom', 1000);
+                                    }else {
+                                        that.myScroll.scrollToElement(".commonroom", 1000);
+                                    }
                                 }
                                 if (res && res.code == 0) {
                                     if (res.data && res.data.dataList) {
@@ -1456,130 +1552,25 @@
                                         Vue.nextTick(function () {
                                             setTimeout(function () {
                                                 that.myScroll.refresh();
-                                                that.myScroll.scrollToElement(".commonroom", 0);
-                                            }, 500)
+                                                if (aa == 1 && bb == 0){
+                                                    that.myScroll.scrollToElement('.bottom', 1000);
+                                                }else {
+                                                    that.myScroll.scrollToElement(".commonroom", 1000);
+                                                }
+                                            }, 200)
                                         });
                                     }else{
-                                        that.myScroll.scrollToElement(".commonroom", 0);
+                                        if (aa == 1 && bb == 0){
+                                            that.myScroll.scrollToElement('.bottom', 1000);
+                                        }else {
+                                            that.myScroll.scrollToElement(".commonroom", 1000);
+                                        }
                                     }
-
                                 } else {
                                     if (res) {
                                         bravetime.info(res.msg)
                                     }
                                 }
-                                Vue.nextTick(function () {
-                                    that.myScroll.refresh();
-                                    that.myScroll.on('scroll', function () {
-                                        let y = this.y,                 //当前位置
-                                            maxY = this.maxScrollY - y; //还可以滚动的高度
-                                        if (maxY >=100&&!that.ryflag) {
-                                            setTimeout(function () {
-                                                that.myScroll.refresh();
-                                            }, 200)
-                                        }
-                                        if (maxY>=60) {
-                                            if (that.getmoreflag && that.ryflag) {
-                                                that.getmoreflag = false;
-                                                that.teacherDownMore = true;
-                                                setTimeout(function () {
-                                                    //做下拉加载新数据
-                                                    that.AjaxTime = that.barrageList[that.barrageList.length - 1].msg.time;
-                                                    if (!isPrivateMode) {
-                                                        common.getDataWithSign({
-                                                            updata: {
-                                                                courseId: courseId,
-                                                                roomType: 1,
-                                                                time: that.AjaxTime,
-                                                                direction: 1
-                                                            },
-                                                            flag: 1,
-                                                            keyName: 'teacherListUrl' + courseId,
-                                                            url: that.teacherListUrl,
-                                                            success: function (res) {
-                                                                if (res.code == 0) {
-                                                                    if (res.data && res.data.dataList) {
-                                                                        that.teacherSuccessCallback(res)
-                                                                    } else {
-                                                                        console.warn('teacher null')
-                                                                        that.getMoreBarrage = false;
-                                                                    }
-                                                                } else {
-                                                                    bravetime.info(res.msg)
-                                                                }
-                                                                Vue.nextTick(function () {
-                                                                    setTimeout(function () {
-                                                                        that.myScroll.refresh();
-                                                                    },200)
-                                                                });
-                                                                that.getmoreflag = true;
-                                                                that.teacherDownMore = false;
-                                                                sessionStorage.setItem('barrageListTime' + courseId, JSON.stringify(that.barrageList[that.barrageList.length - 1].msg.time));
-                                                            },
-                                                            error: function () {
-                                                                that.ErrorCallback();
-                                                            }
-                                                        });
-                                                    }
-                                                }, 1000)
-                                            }
-                                        }
-                                        if (y >=60) {
-                                            setTimeout(function () {
-                                                if (that.barrageList[0] && that.barrageList[0].msg) {
-                                                    that.AjaxTime = that.barrageList[0].msg.time;
-                                                }
-                                                if (that.getmoreflag && that.upRyFlag) {
-                                                    that.getmoreflag = false;
-                                                    that.getMoreBarrage = true;
-                                                    setTimeout(function () {
-                                                        if (that.more == 1) {
-                                                            that.refreshtxt = true;
-                                                            common.getDataWithSign({
-                                                                updata: {
-                                                                    courseId: courseId,
-                                                                    roomType: 1,
-                                                                    time: that.AjaxTime,
-                                                                    direction: 0
-                                                                },
-                                                                keyName: 'teacherListUrl' + courseId,
-                                                                url: that.teacherListUrl,
-                                                                success: function (res) {
-                                                                    if (res.code == 0) {
-                                                                        if (res.data && res.data.dataList) {
-                                                                            that.teacherSuccessCallback(res, true)
-                                                                        } else {
-                                                                            console.warn('老师接口返回没有data')
-                                                                            that.getMoreBarrage = false;
-                                                                        }
-
-                                                                    } else {
-                                                                        bravetime.newAlert('下拉数据1＝'+ res.code, function () {
-                                                                            window.location = window.location.href;
-                                                                        });
-                                                                        that.getMoreBarrage = false;
-                                                                        bravetime.info(res.msg)
-                                                                    }
-                                                                    Vue.nextTick(function () {
-                                                                        setTimeout(function () {
-                                                                            that.myScroll.refresh();
-                                                                        },200)
-                                                                    });
-                                                                    that.refreshtxt = false;
-                                                                },
-                                                                error: function () {
-                                                                    that.ErrorCallback();
-                                                                }
-
-                                                            })
-                                                        }
-                                                    }, 1000)
-                                                }
-                                                return '';
-                                            }, 200)
-                                        }
-                                    });
-                                });
                             },
                             error: function () {
                                 bravetime.ajaxError();

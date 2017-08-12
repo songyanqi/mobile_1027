@@ -28,16 +28,75 @@ export default {
             deleteFlag: true,
             teacherId: null,
             userId: null,
-            cmd:null
+            cmd:null,
+            cache:false,
+            bottomBtn: false
         }
     },
     created(){
+      console.log(window);
         let that = this;
         //  用通用方法请求数据
         common.getDataWithSign({
             url:"/api/mg/content/course/detail",
             dataType:"json",
-            updata:{courseId:this.courseId},
+            updata:{courseId:that.courseId},
+            type:"post",
+            success:function (result) {
+                if (result.data.userId){
+                    that.userId = result.data.userId
+                    window.userId = result.data.userId
+                    window.userTicket = result.data.userTicket
+                }
+                if(result==""){
+                    that.error = true;
+                    return false;
+                }
+                let {code, data, visitor_status}=result;
+                if(+code){
+                    if (code==30024){
+                        that.deleteFlag = false
+                        that.cmd = result.data.cmd
+                        // that.teacherId = result.data.teacherId
+                    } else {
+                        that.error = true;
+                        bravetime.info("数据获取异常"+code);
+                    }
+                }else{
+                    let {userRole, userTicket, course:{type,money,income},feedList}= data;
+                    for (let i=0;i<feedList.length;i++){
+                        if (feedList[i].body.tplId =='title_0' && money){
+                            feedList[i].body.come = money
+                        }
+                    }
+                    that.feedData = feedList;
+                    that.userRole = userRole;
+                    that.userTicket = userTicket;
+                    that.type = type;
+                    that.money = money;
+                    that.income = income;
+                    that.visitor_status = visitor_status;
+                    that.$nextTick(function () {
+                        $("img").each(function (index, ele) {
+                            window.singlePicHold(ele);
+                        })
+                    });
+                }
+                console.log(that.userId, window.teacherId)
+            },
+            error:function () {
+                that.error = true;
+            }
+        });
+    },
+    methods: {
+        appUpData(){
+            let that = this;
+        //  用通用方法请求数据
+        common.getDataWithSign({
+            url:"/api/mg/content/course/detail",
+            dataType:"json",
+            updata:{courseId:that.courseId},
             type:"post",
             success:function (result) {
                 if (result.data.userId){
@@ -84,8 +143,7 @@ export default {
                 that.error = true;
             }
         });
-    },
-    methods: {
+        },
         goTeacherProfile(){
             console.log('/course-teacher-' + this.teacherId + '.html')
             if (this.cmd){
@@ -98,10 +156,9 @@ export default {
             // } else {
             //     alert('teacherId数据为:', this.teacherId)
             // }
-            
         },
         getData(){
-            window.location.reload();
+            // window.location.reload();
         },
         invite () {
             this.inviteShow=true;
@@ -114,12 +171,19 @@ export default {
             this.inviteShow = false;
         },
         // 普通课报名
+        newEnter(){
+            let  arr = window.backNewData.$children[0].$children[1].$children
+            for (let a=0;a<arr.length;a++){
+                window.backNewData.$children[0].$children[1].$children[a].userTicket = 1
+            }
+        },
         enroll(code) {
             let that = this;
             let data = {courseId:that.courseId,shareUserId:that.shareUserId};
             if(typeof code == "string"){
                 data.code = code;
             }
+            this.newEnter()
             // 成功后回调
             common.getDataWithSign({
                 url:"/api/mg/content/course/join",
@@ -128,6 +192,7 @@ export default {
                 type:"post",
                 success:function (result) {
                     let {code,data:{msg,payUrl,jsApi}}=result;
+                    that.appUpData()
                     if(+code){
                         if (code==30024){
                             bravetime.info("课程已删除");
@@ -181,7 +246,8 @@ export default {
             function goCourse() {
                 bravetime.info("报名成功");
                 setTimeout(function () {
-                        that.enterClassroom();
+                    that.enterClassroom();
+                    that.appUpData()
                 },1800);
             }
         },
@@ -222,7 +288,6 @@ export default {
                         }
                     });
                 }
-
             }
         },
         // 购买课程
@@ -230,11 +295,14 @@ export default {
             this.enroll();
         },
         enterAppCourse(){
-            var that = this;
-            if(!that.entered) {
-                that.entered = 1;
+            // var that = this;
+            // if(!that.entered) {
+                // that.entered = 1;
                 bravetime.enterVoiceRoom(this.courseId);
-            }
+                // setTimeout(function(){
+                //     that.entered = 0;
+                // },1000)
+            // }
             that.enterAppCourse = function () {
                 return false;
             }

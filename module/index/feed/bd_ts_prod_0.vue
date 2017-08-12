@@ -10,26 +10,27 @@
             </div>
             <div class="order_good_info_container">
               <div class="order_good_name">{{item.title}}</div>
+              <div class="order_good_name order_good_name_in">{{item.recomWord}}</div>
               <div class="order_good_price">
-                <!--<em class="price_symbol">￥</em>{{item.nowPrice}}-->
-                <!--<span class="membership_crown">会员返 <em>￥</em>{{item.timeshopIncome}}</span>-->
-                <em class="price_symbol">￥</em><span>{{(item.nowPrice+"").split(".")[0]}}</span><span v-if = "(item.nowPrice+'').split('.').length == 2" class = "newOriginal_price">.{{(item.nowPrice+"").split(".")[1]}}</span>
-                <span class="membership_crown">会员返 <em>￥</em>{{item.timeshopIncome}}</span>
+                <span class="f_l"><em class="price_symbol">￥</em><span>{{(item.nowPrice+"").split(".")[0]}}</span><span v-if="(item.nowPrice+'').split('.').length == 2" class="newOriginal_price">.{{(item.nowPrice+"").split(".")[1]}}</span></span><span v-if="item.timeshopIncome != '0'" class="membership_crown">限时返 <em>￥</em>{{item.timeshopIncome}}
+                <span v-if="item.income" class="membership_crown_pre">平日返<em>￥</em>{{item.income}}</span></span>
               </div>
-
-              <div class="progress_bar" v-if="(item.buttonStatus != 0)&&(item.buttonStatus != 1)">
-                <div class="progress_bar_bg">
-                  <div class="progress_container" :style="{width:item.percentage+'%'}">
-                  </div>
-                </div>
-                <div class="finish_percentage">已售{{item.percentage}}%</div>
+              <div v-if="item.buttonStatus != 3 && item.timeshopGoodsNum" class="progress_info">
+                仅剩 {{item.timeshopGoodsNum}} 件
               </div>
+              <!--<div class="progress_bar" v-if="(item.buttonStatus != 0)&&(item.buttonStatus != 1)">-->
+              <!--<div class="progress_bar_bg">-->
+              <!--<div class="progress_container" :style="{width:item.percentage+'%'}">-->
+              <!--</div>-->
+              <!--</div>-->
+              <!--<div class="finish_percentage">已售{{item.percentage}}%</div>-->
+              <!--</div>-->
             </div>
           </div>
         </a>
         <a class="remain_btns">
           <div class="panic_buying_btn"
-               :class="{panic_buying_btn2:item.buttonStatus < 2,buy_gray:item.buttonStatus == '3'}">{{item.buttonName}}
+               :class="{panic_buying_btn2:item.buttonStatus < 2,buy_gray:item.buttonStatus == '3',seteds:item.buttonStatus == '0'}">{{item.buttonName}}
           </div>
           <div @click="Panicbuying(item,index)" class="remain_btns_click"></div>
         </a>
@@ -45,11 +46,19 @@
   </div>
 </template>
 <style scoped>
+  .f_l{
+    float: left;
+  }
   .newOriginal_price {
     font-size: 14px;
   }
+
+  .list_style {
+    height: 130px;
+  }
+
   ul li {
-    padding: 10px;
+    padding: 10px 10px;
     position: relative;
     overflow: hidden;
   }
@@ -69,6 +78,7 @@
     z-index: 1;
   }
 
+
   ul li .img_container {
     position: relative;
   }
@@ -77,7 +87,8 @@
     width: 130px;
     position: relative;
   }
-  ul li .img_container_inner div{
+
+  ul li .img_container_inner div {
     height: 60px;
     width: 60px;
     background-color: rgba(0, 0, 0, 0.5);
@@ -97,22 +108,29 @@
   ul li .order_good_info_container {
     position: absolute;
     padding-left: 140px;
-    top: 10px;
+    top: 0;
+    padding-top: 10px;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
   }
 
   .order_good_name {
-    font-size: 15px;
-    max-height: 37px;
+    font-size: 14px;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
+    white-space: nowrap;
+    /*display: -webkit-box;*/
+    /*-webkit-line-clamp: 2;*/
+    /*-webkit-box-orient: vertical;*/
+    height: 20px;
     line-height: 20px;
-    color: #666666;
+    color: #333333;
+  }
+
+  .order_good_name_in {
+    font-size: 12px;
+    color: #999999;
   }
 
   .order_good_price {
@@ -120,14 +138,21 @@
     height: 16px;
     line-height: 16px;
     color: #FF4A7D;
-    padding-top: 10px;
+    padding-top: 5px;
   }
 
   .price_symbol {
-    font-size: 13px;
+    font-size: 12px;
     font-style: normal;
   }
 
+  .progress_info{
+    position: absolute;
+    width: 100%;
+    bottom: 14px;
+    font-size: 12px;
+    color: #999999;
+  }
   .market_price {
     text-decoration: line-through;
     color: #999;
@@ -154,12 +179,20 @@
     left: 0;
     top: 0;
   }
-  .panic_buying_btn.buy_gray{
+
+  .panic_buying_btn.buy_gray {
     background: -webkit-linear-gradient(left top, #DBDADA, #C5C5C5); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(bottom right, #DBDADA, #C5C5C5); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(bottom right, #DBDADA, #C5C5C5); /* Firefox 3.6 - 15 */
     background: linear-gradient(to bottom right, #DBDADA, #C5C5C5); /* 标准的语法 */
   }
+  .panic_buying_btn.seteds{
+    color:#999999;
+  }
+  .panic_buying_btn.seteds:after{
+    border-color: #999999;
+  }
+
   .progress_bar_percentage.wall {
     width: 100%;
     min-width: 10px;
@@ -169,7 +202,7 @@
     font-size: 11px;
     color: #FF4A7D;
     line-height: 11px;
-    margin-top:5px;
+    margin-top: 5px;
   }
 
   .panic_buying_btn {
@@ -196,7 +229,7 @@
     line-height: 26px;
   }
 
-  .panic_buying_btn2:after{
+  .panic_buying_btn2:after {
     content: "";
     transform: scale(0.5);
     width: 200%;
@@ -209,18 +242,27 @@
     transform-origin: 0 0;
     border-radius: 50px;
   }
+  .membership_crown_pre{
+    color:#999999;
+    text-decoration: line-through;
+    font-size: 11px;
+  }
+  .membership_crown .membership_crown_pre em{
+    font-size: 10px;
+  }
 
   .membership_crown {
-    font-size: 12px;
+    font-size: 11px;
     color: #D6B471;
     display: inline-block;
-    padding-left: 6px;
+    padding-left: 5px;
     position: relative;
-    bottom: 1px;
+    bottom: -1px;
+    float: left;
   }
 
   .membership_crown em {
-    font-size: 12px;
+    font-size: 10px;
     font-style: normal;
   }
 
@@ -259,12 +301,14 @@
     position: absolute;
     bottom: 0;
   }
-  .progress_bar{
+
+  .progress_bar {
     position: absolute;
     width: 100%;
     bottom: 20px;
   }
-  .remain_btns_click{
+
+  .remain_btns_click {
     width: 90px;
     height: 40px;
     position: absolute;
@@ -306,8 +350,8 @@
     components: {},
     methods: {
       Panicbuying: function (item, index) {
-        if(window.visitor_status == 0){
-           location.href = 'login.html?referer='+location.href
+        if (window.visitor_status == 0) {
+          location.href = 'login.html?referer=' + location.href
         }
         var that = this;
         if (item.buttonStatus == 2) {
@@ -315,11 +359,11 @@
         }
         if (item.buttonStatus == 0) {
           //剩余6分钟之内不在发出提醒请求，提示等待抢购
-          var dateTime = Date.parse(new Date())/1000;
+          var dateTime = Date.parse(new Date()) / 1000;
           var closetime = item.shopStartTime - dateTime;
-          if(closetime < 360){
+          if (closetime < 360) {
             bravetime.info("活动马上就要开始了，等待抢购比提醒更重要哦~");
-          }else{
+          } else {
             if (that.isWechart) {
               bravetime.info("将在活动开始前5分钟进行提醒~");
             } else {
@@ -329,12 +373,12 @@
         }
         if (item.buttonStatus == 1) {
           //剩余6分钟之内不在发出提醒请求，提示等待抢购
-          var dateTime = Date.parse(new Date())/1000;
+          var dateTime = Date.parse(new Date()) / 1000;
           var closetime = item.shopStartTime - dateTime;
-          if(closetime < 360){
+          if (closetime < 360) {
             bravetime.info("活动马上就要开始了，等待抢购比提醒更重要哦~");
             return false;
-          }else{
+          } else {
             //请求提醒接
             var datas = {
               "timeshopActId": item.timeshopActId,
@@ -355,11 +399,20 @@
                     bravetime.info("活动开始前5分钟会在微信公众号中进行提醒~");
                   }
                   item.buttonStatus = 0;
-                  item.buttonName = '等待提醒';
+                  item.buttonName = '已设提醒';
                   that.data.body.dataList[index] = item;
+                  /*活动提醒成功后统计PV*/
+                  var stData = {
+                    action_type:"2",
+                  };
+                  layout.statistics(stData);
                 }
                 else if (data.code == 64404) {
                   that.ts_tips = true;
+                  var stData = {
+                    action_type:"3",
+                  };
+                  layout.statistics(stData);
                 }
               }
             });
@@ -370,15 +423,15 @@
       tipsconfirm: function () {
         this.ts_tips = false;
       },
-      imgObject:function (imgSrc) {
-        return{
+      imgObject: function (imgSrc) {
+        return {
           src: imgSrc || '//pic.davdian.com/free/2017/06/23/260_260_359b8152fdd76bfc7a4b0679909d59c3.png',
           error: '//pic.davdian.com/free/2017/06/23/260_260_359b8152fdd76bfc7a4b0679909d59c3.png',
-          loading: '//pic.davdian.com/free/2017/06/23/260_260_359b8152fdd76bfc7a4b0679909d59c3.png'
+          loading: '//pic.davdian.com/free/2017/08/04/davdianbg.jpg'
         }
       },
-      events:function () {
-        
+      events: function () {
+
       }
     }
   }

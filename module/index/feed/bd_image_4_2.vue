@@ -19,7 +19,7 @@
     .index_links {
         width:100%;
         overflow: hidden;
-        min-height:100px;
+        min-height:50px;
         background-color:#FFFFFF;
     }
     .bd_icon_0 {

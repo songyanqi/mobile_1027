@@ -128,6 +128,7 @@
         </div>
       </div>
     </transition>
+
     <div class="bg" :class="{m144:no_goods&&!filterlistdata.length,m235:no_goods&&filterlistdata.length}">
       <!--商品列表内容-->
       <index-feed :data="feedData"></index-feed>
@@ -147,6 +148,7 @@
         <!--:no_more = "no_more"-->
         <!--:loading = "loading"></category>-->
     </div>
+
     <div v-show="roings" class="typering">
       <spinner :type="typering" slot="value"></spinner>
     </div>

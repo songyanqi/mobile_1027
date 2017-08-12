@@ -16,7 +16,16 @@ export default {
           //省的价格
           savePrice: 0,
           //从父组件获取的价格
-          infoObj: {}
+          infoObj: {},
+          // 倒计时
+          remainTime: {
+            day: '',
+            hour: '00',
+            minute: '00',
+            second: '00',
+          },
+          // 是否是限时购
+          isLimitBuy: false,
         }
     },
     // activitytypename去掉了
@@ -37,9 +46,23 @@ export default {
         handler (newInfoObj,oldInfoObj) {
           this.infoObj = newInfoObj;
           this.initMember(newInfoObj);
+          if (newInfoObj.isComingActivity) {
+            this.isLimitBuy = true;
+          }
+        },
+        deep: true,
+      },
+      singleactivity: {
+        handler (newInfoObj,oldInfoObj) {
+          this.cutDownTime(newInfoObj.lastTime);
+          if (newInfoObj.typeId == '8') {
+            this.isLimitBuy = true;
+          }
         },
         deep: true,
       }
+    },
+    mounted () {
     },
     methods: {
       //会员价
@@ -110,6 +133,40 @@ export default {
       handleMaskTask () {
           $(".tax_cont .weui-dialog").hide();
           $(".tax_cont .weui-mask").hide();
+      },
+      // 倒计时
+      cutDownTime (time) {
+        let oneMinute = 60,
+            oneHour = 60 * 60,
+            oneDay = 60 * 60 * 24;
+
+        let numTime = Number(time),that = this;
+        let newTime = numTime * 1000;
+        let timeStr = "";
+
+        let timer = setInterval(() => {
+          if (numTime > 0) {
+            numTime--;
+           // 计算显示数值
+            let day = parseInt(numTime / oneDay);
+            let hour = parseInt(numTime % oneDay / oneHour);
+            let minute = parseInt(numTime % oneDay % oneHour / oneMinute);
+            let second = parseInt(numTime % oneDay % oneHour % oneMinute);
+
+            that.remainTime.day = day >= 10 ? day : `${day}`;
+            that.remainTime.hour = hour >= 10 ? hour : `0${hour}`;
+            that.remainTime.minute = minute >= 10 ? minute : `0${minute}`;
+            that.remainTime.second = second >= 10 ? second : `0${second}`;
+          } else {
+            clearInterval(timer);
+            that.isOver = true;
+            that.$root.eventHub.$emit('time_over',that.isOver);
+            that.memPrice = that.infoobj.shopPrice;
+            // 会员返的价格还没变
+            
+            // that.initMember(that.infoObj);
+          }
+        },1000);
       },
     },
     components: {

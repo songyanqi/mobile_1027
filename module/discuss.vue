@@ -15,7 +15,6 @@
                 <img class='title_star title_all' v-if='item.score == 5' src="//pic.davdian.com/free/2017/05/09/star_5.png">
             </div>
             <div class='content' v-html="item.content.replace(/\n/g,'<br/>')"></div>
-            <!-- <div class='content' v-text='item.content'></div> -->
         </div>
         <div class='error' v-if='noDataFlag'>
             <img src="//pic.davdian.com/free/2017/05/10/error_img.png">

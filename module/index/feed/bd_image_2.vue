@@ -32,7 +32,11 @@
 </template>
 
 <script>
-    import './bd_image_2.scss'
+//    import './bd_image_2.scss'
     import bd_image_2 from './bd_image_2.es6'
     export default bd_image_2
 </script>
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./bd_image_2.scss";
+</style>

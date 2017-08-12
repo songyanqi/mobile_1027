@@ -12,8 +12,12 @@
     </div>
 </template>
 <script>
-    import './fire_work.scss'
+//    import './fire_work.scss'
     import fire_work from './fire_work.es6';
     // import fire_work from './fire_work.es6'
     export default fire_work
 </script>
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./fire_work.scss";
+</style>

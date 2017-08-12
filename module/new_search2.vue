@@ -205,6 +205,7 @@
           data: layout.strSign("search", {}),
           dataType: "json",
           success: function (result) {
+              console.log(result.data);
             if (!result.code) {
               if (result.data.list.length) {
                 scope.hotList = result.data.list;

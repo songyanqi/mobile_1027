@@ -1,6 +1,6 @@
 <template>
 
-  <div id="comon">
+  <div id="comon" @click="periodtj">
 
     <!--<div class="good_list_con">-->
       <!--<div class="good_list_2_row">-->
@@ -54,8 +54,12 @@
 </template>
 
 <script>
-  import './bd_goods_1.scss'
+//  import './bd_goods_1.scss'
   import bd_goods_1 from './bd_goods_1.es6'
   export default bd_goods_1
 </script>
 
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./bd_goods_1.scss";
+</style>

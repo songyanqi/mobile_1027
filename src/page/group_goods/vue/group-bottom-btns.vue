@@ -4,8 +4,6 @@
     <div class="top-line"></div>
     <div class="btns">
       <template v-for="btn in btnArray">
-        <!--微信登录-->
-        <!--<a v-if="btn.btnUrl" @click="click(btn)" :href="(btn.btnType == 'new' || btn.btnType == 'join' || btn.btnType == 'pay') && isLogin === 0 ? (isWechat ? 'http://open.'+(window.location.host).split('.')[1]+'.'+(window.location.host).split('.')[2]+'/WechatLogin/index?referer=' + encodeURIComponent(location.href) : '/login.html?referer='+encodeURIComponent(location.href)) : btn.btnUrl">{{btn.btnTxt}}</a>-->
         <a v-if="btn.btnUrl" @click="click(event, btn)"
            :href="(btn.btnType == 'new' || btn.btnType == 'join' || btn.btnType == 'pay') && isLogin === 0 ? '/login.html?referer='+encodeURIComponent(location.href) : btn.btnUrl">{{btn.btnTxt}}</a>
         <a v-if="!btn.btnUrl" @click="click(event, btn)">{{btn.btnTxt}}</a>
@@ -16,7 +14,7 @@
 
 <!--组件定义-->
 <script>
-  import layout from '../../../../module/index/layout.es6';
+  import tj from '../../../common/js/module/tj.js';
   import share from '../../../common/js/module/share.js';
   import popup from '../../../common/js/module/popup.js';
 
@@ -35,7 +33,6 @@
     },
     data: function () {
       return {
-//        isWechat: window.Units.isWechat()
       }
     },
     computed: {},
@@ -55,7 +52,7 @@
         }[btn.btnType];
         if (action_type) {
           try {
-            layout.statistics({
+            tj.send({
               production: 12,
               action: 1,
               action_type: action_type,
@@ -89,7 +86,7 @@
 
 
 <!--样式-->
-<style lang="sass" rel="stylesheet/scss">
+<style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../../../common/css/util/all";
   /*底部购买按钮*/
   .group-bottom-btns {

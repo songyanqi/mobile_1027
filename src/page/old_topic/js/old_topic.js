@@ -552,7 +552,7 @@ $(function () {
             '<span class="price">¥' +d.shop_price1+
             '<small>' + d.shop_price2 + '</small>' +
             '</span>' +
-            (d.seller_income  ? ( '<span class="vip_return">' +
+            (d.seller_income != '0'  ? ( '<span class="vip_return">' +
             '<span class="vip_return_title">会员返</span>' +
             '<span class="vip_return_f">¥</span> ' +
             '<span class="vip_return_price">' + d.seller_income + '</span>' +

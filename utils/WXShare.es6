@@ -92,7 +92,7 @@ let getNewLineLink = (href) => {
     if (href && href.length > 5 && href.substring(0,4) && href.substring(0,5)){
       var str = href.substring(0,4)
       var str1 = href.substring(0,5)
-      console.log(str =='http' && str1 != 'https')
+      // console.log(str =='http' && str1 != 'https')
       if (str =='http' && str1 != 'https'){
         return href.replace('http', 'https')
       } else {

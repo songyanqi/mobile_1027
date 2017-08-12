@@ -16,6 +16,6 @@ setRootSize();
 window.addEventListener("resize", function(){
   setRootSize();
 }, false);
-window.designWidth = undefined
+window.designWidth = undefined;
 
 export default setRootSize;

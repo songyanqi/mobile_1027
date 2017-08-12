@@ -17,7 +17,7 @@ let strSign = (obj) => {
 
 let sortObj = (obj) => {
   obj = obj || {};
-  for (var i = 0, d; d = ["rp", 'rl', 'logDp'][i++];) {
+  for (var i = 0, d; d = ["rp", 'rl', 'logDp','dp'][i++];) {
     var tmp_value = param.get(d);
     if (tmp_value) {
       obj[d] = tmp_value.replace(/[ +]/g, "");

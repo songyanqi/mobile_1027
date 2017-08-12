@@ -23,7 +23,7 @@
     </a>
 </template>
 <script>
-import "./popularity_0.scss";
+//import "./popularity_0.scss";
 export default {
     data(){
         return {
@@ -43,3 +43,7 @@ export default {
     }
 }
 </script>
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./popularity_0.scss";
+</style>

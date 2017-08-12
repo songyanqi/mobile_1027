@@ -50,7 +50,11 @@
 </template>
 
 <script>
-    import './bd_image_7.scss'
+//    import './bd_image_7.scss'
     import bd_image_7 from './bd_image_7.es6'
     export default bd_image_7
 </script>
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./bd_image_7.scss";
+</style>

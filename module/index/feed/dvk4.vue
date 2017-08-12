@@ -9,12 +9,13 @@
        </div>
        <div class='dvk4_title' v-if='!flag'>
            <span class='dvk4_title_now' @click='now' v-text='data.body.leftTitle'></span>
-           <span class='dvk4_title_tomorrow active' v-text='data.body.rightTitle'></span>
            <span class='dvk4_title_bottom1'></span>
+           <span class='dvk4_title_tomorrow active' v-text='data.body.rightTitle'></span>
        </div>
        <!--  -->
        <div class='dvk4_content' v-if='flag'>
-           <div class="dvk4_detail">
+
+           <div class="dvk4_detail first">
               <a @click.stop="clickAnalysis" :href="data.body.leftContent[0].command.content" :position="data.body.leftContent[0].position">
                <div class='dvk4_detail_content'>
                    <div class='dvk4_detail_content_img'>
@@ -25,40 +26,45 @@
                        <div class='dvk4_detail_content_title' v-text='data.body.leftContent[0].courseTitle'></div>
                        <div class='dvk4_detail_content_name' v-text='data.body.leftContent[0].teacherName'></div>
                        <div class='dvk4_detail_content_time'>
-                           <span class='dvk4_detail_content_times'>
-                              <span v-if="livenow(data.body.leftContent[0])" class="circle"></span> 
-                              <span v-if='livetext(data.body.leftContent[0])'>{{ livetext(data.body.leftContent[0]) }}</span>
+
+                           <span class='dvk4_detail_content_popular'><span v-text='data.body.leftContent[0].readTimes'></span></span>
+                           <span class='dvk4_detail_content_line'></span>
+                            <span class='dvk4_detail_content_times'>
+                              <span v-if="livenow(data.body.leftContent[0])" class="circle"></span>
+                              <span v-if='livetext(data.body.leftContent[0])' v-text="livetext(data.body.leftContent[0])"></span>
                               <span v-if='!livetext(data.body.leftContent[0])' v-text='data.body.leftContent[0].startTimestamp'></span>
                            </span>
-                           <span class='dvk4_detail_content_popular'><span v-text='data.body.leftContent[0].readTimes'></span></span>
                        </div>
                    </div>
                </div>
               </a>
            </div>
-           <div class="dvk4_detail border">
-              <a @click.stop="clickAnalysis" :href="data.body.leftContent[1].command.content" :position="data.body.leftContent[1].position">
-               <div class='dvk4_detail_content'>
-                   <div class='dvk4_detail_content_img'>
-                    <img class="newImage" v-lazy="imgObject(data.body.leftContent[1].courseCover)"/>
-                     <div class='dvk4_money' v-if='data.body.leftContent[1].price && data.body.leftContent[1].price!="¥ 0.00"' v-text='data.body.leftContent[1].price'></div>
-                   </div>
-                   <div class='dvk4_detail_content_text'>
-                       <div class='dvk4_detail_content_title' v-text='data.body.leftContent[1].courseTitle'></div>
-                       <div class='dvk4_detail_content_name' v-text='data.body.leftContent[1].teacherName'></div>
-                       <div class='dvk4_detail_content_time'>
+           <div class="dvk4_detail">
+                <a @click.stop="clickAnalysis" :href="data.body.leftContent[1].command.content" :position="data.body.leftContent[1].position">
+                  <div class='dvk4_detail_content'>
+                     <div class='dvk4_detail_content_img'>
+                        <img class="newImage" v-lazy="imgObject(data.body.leftContent[1].courseCover)"/>
+                        <div class='dvk4_money' v-if='data.body.leftContent[1].price && data.body.leftContent[1].price!="¥ 0.00"' v-text='data.body.leftContent[1].price'></div>
+                     </div>
+                     <div class='dvk4_detail_content_text'>
+                         <div class='dvk4_detail_content_title' v-text='data.body.leftContent[1].courseTitle'></div>
+                         <div class='dvk4_detail_content_name' v-text='data.body.leftContent[1].teacherName'></div>
+                         <div class='dvk4_detail_content_time'>
+                           <span class='dvk4_detail_content_popular'>
+                            <span v-text='data.body.leftContent[1].readTimes'></span>
+                           </span>
+                           <span class='dvk4_detail_content_line'></span>
                            <span class='dvk4_detail_content_times'>
-                              <span v-if="livenow(data.body.leftContent[1])" class="circle"></span> 
-                              <span v-if='livetext(data.body.leftContent[1])'>{{ livetext(data.body.leftContent[1]) }}</span>
+                              <span v-if="livenow(data.body.leftContent[1])" class="circle"></span>
+                              <span v-if='livetext(data.body.leftContent[1])' v-text="livetext(data.body.leftContent[1])"></span>
                               <span v-if='!livetext(data.body.leftContent[1])' v-text='data.body.leftContent[1].startTimestamp'></span>
                            </span>
-                           <span class='dvk4_detail_content_popular'><span v-text='data.body.leftContent[1].readTimes'></span></span>
-                       </div>
-                   </div>
-               </div>
-             </a>
+                         </div>
+                     </div>
+                  </div>
+                </a>
            </div>
-           <div class="dvk4_detail border">
+           <div class="dvk4_detail">
               <a @click.stop="clickAnalysis" :href="data.body.leftContent[2].command.content" :position="data.body.leftContent[2].position">
                <div class='dvk4_detail_content'>
                    <div class='dvk4_detail_content_img'>
@@ -69,20 +75,21 @@
                        <div class='dvk4_detail_content_title' v-text='data.body.leftContent[2].courseTitle'></div>
                        <div class='dvk4_detail_content_name' v-text='data.body.leftContent[2].teacherName'></div>
                        <div class='dvk4_detail_content_time'>
+                            <span class='dvk4_detail_content_popular'><span v-text='data.body.leftContent[2].readTimes'></span></span>
+                            <span class='dvk4_detail_content_line'></span>
                             <span class='dvk4_detail_content_times'>
-                              <span v-if="livenow(data.body.leftContent[2])" class="circle"></span> 
-                              <span v-if='livetext(data.body.leftContent[2])'>{{ livetext(data.body.leftContent[2]) }}</span>
+                              <span v-if="livenow(data.body.leftContent[2])" class="circle"></span>
+                              <span v-if='livetext(data.body.leftContent[2])' v-text="livetext(data.body.leftContent[2])"></span>
                               <span v-if='!livetext(data.body.leftContent[2])' v-text='data.body.leftContent[2].startTimestamp'></span>
                             </span>
-                           <span class='dvk4_detail_content_popular'><span v-text='data.body.leftContent[2].readTimes'></span></span>
                        </div>
                    </div>
                </div>
              </a>
            </div>
        </div>
-       <div class='dvk4_content'>
-           <div class="dvk4_detail" v-if='!flag'>
+       <div class='dvk4_content' v-if='!flag'>
+           <div class="dvk4_detail first" >
               <a @click.stop="clickAnalysis" :href="data.body.rightContent[0].command.content" :position="data.body.rightContent[0].position">
                <div class='dvk4_detail_content'>
                    <div class='dvk4_detail_content_img'>
@@ -93,18 +100,19 @@
                        <div class='dvk4_detail_content_title' v-text='data.body.rightContent[0].courseTitle'></div>
                        <div class='dvk4_detail_content_name' v-text='data.body.rightContent[0].teacherName'></div>
                        <div class='dvk4_detail_content_time'>
-                           <span class='dvk4_detail_content_times'>
-                              <span v-if="livenow(data.body.rightContent[0])" class="circle"></span> 
-                              <span v-if='livetext(data.body.rightContent[0])'>{{ livetext(data.body.rightContent[0]) }}</span>
+                         <span class='dvk4_detail_content_popular'><span v-text='data.body.rightContent[0].readTimes'></span></span>
+                         <span class='dvk4_detail_content_line'></span>
+                         <span class='dvk4_detail_content_times'>
+                              <span v-if="livenow(data.body.rightContent[0])" class="circle"></span>
+                              <span v-if="livetext(data.body.rightContent[0])" v-text="livetext(data.body.rightContent[0])"></span>
                               <span v-if='!livetext(data.body.rightContent[0])' v-text='data.body.rightContent[0].startTimestamp'></span>
-                           </span>
-                           <span class='dvk4_detail_content_popular'><span v-text='data.body.rightContent[0].readTimes'></span></span>
+                         </span>
                        </div>
                    </div>
                </div>
              </a>
            </div>
-           <div class="dvk4_detail border" v-if='!flag'>
+           <div class="dvk4_detail">
               <a @click.stop="clickAnalysis" :href="data.body.rightContent[1].command.content" :position="data.body.rightContent[1].position">
                <div class='dvk4_detail_content'>
                    <div class='dvk4_detail_content_img'>
@@ -115,18 +123,19 @@
                        <div class='dvk4_detail_content_title' v-text='data.body.rightContent[1].courseTitle'></div>
                        <div class='dvk4_detail_content_name' v-text='data.body.rightContent[1].teacherName'></div>
                        <div class='dvk4_detail_content_time'>
-                           <span class='dvk4_detail_content_times'>
-                              <span v-if="livenow(data.body.rightContent[1])" class="circle"></span> 
-                              <span v-if='livetext(data.body.rightContent[1])'>{{ livetext(data.body.rightContent[1]) }}</span>
+                         <span class='dvk4_detail_content_popular'><span v-text='data.body.rightContent[1].readTimes'></span></span>
+                         <span class='dvk4_detail_content_line'></span>
+                         <span class='dvk4_detail_content_times'>
+                              <span v-if="livenow(data.body.rightContent[1])" class="circle"></span>
+                              <span v-if='livetext(data.body.rightContent[1])' v-text="livetext(data.body.rightContent[1])"></span>
                               <span v-if='!livetext(data.body.rightContent[1])' v-text='data.body.rightContent[1].startTimestamp'></span>
-                           </span>
-                           <span class='dvk4_detail_content_popular'><span v-text='data.body.rightContent[1].readTimes'></span></span>
+                         </span>
                        </div>
                    </div>
                </div>
               </a>
            </div>
-           <div class="dvk4_detail border" v-if='!flag'>
+           <div class="dvk4_detail">
             <a @click.stop="clickAnalysis" :href="data.body.rightContent[2].command.content" :position="data.body.rightContent[2].position">
                <div class='dvk4_detail_content'>
                    <div class='dvk4_detail_content_img'>
@@ -137,12 +146,13 @@
                        <div class='dvk4_detail_content_title' v-text='data.body.rightContent[2].courseTitle'></div>
                        <div class='dvk4_detail_content_name' v-text='data.body.rightContent[2].teacherName'></div>
                        <div class='dvk4_detail_content_time'>
+                         <span class='dvk4_detail_content_popular'><span v-text='data.body.rightContent[2].readTimes'></span></span>
+                         <span class='dvk4_detail_content_line'></span>
                            <span class='dvk4_detail_content_times'>
-                              <span v-if="livenow(data.body.rightContent[2])" class="circle"></span> 
-                              <span v-if='livetext(data.body.rightContent[2])'>{{ livetext(data.body.rightContent[2]) }}</span>
+                              <span v-if="livenow(data.body.rightContent[2])" class="circle"></span>
+                              <span v-if='livetext(data.body.rightContent[2])' v-text="livetext(data.body.rightContent[2])"></span>
                               <span v-if='!livetext(data.body.rightContent[2])' v-text='data.body.rightContent[2].startTimestamp'></span>
                            </span>
-                           <span class='dvk4_detail_content_popular'><span v-text='data.body.rightContent[2].readTimes'></span></span>
                        </div>
                    </div>
                </div>
@@ -162,17 +172,18 @@
                 flag: true
             }
         },
+        mounted:function () {
+          console.log(this.data);
+        },
         props: ['data'],
         computed:{
             dataList: function () {
                 return this.data || []
             }
         },
-        computed: {
-           
-        },
         created(){
           this.styleObject = layout.styleObjectDvk(this.data);
+          console.log("666",this.data);
         },
         components: {
           tt_com_0:tt_com_0
@@ -189,11 +200,13 @@
                 layout.clickAnalysis(item,this,'body');
             },
             now: function () {
+                console.log("now");
               this.flag = true
               window.scrollTo(0,window.scrollY+1)
               window.scrollTo(0,window.scrollY-1)
             },
             tomorrow: function (){
+                console.log("tomorrow");
               this.flag = false
               window.scrollTo(0,window.scrollY+1)
               window.scrollTo(0,window.scrollY-1)
@@ -234,19 +247,19 @@
 <style scoped>
     .dvk4_container{
         width: 100%;
-        height: 3.65rem;
+        height: 365px;
         background: #fff;
     }
     .dvk4_title{
         width: 100%;
-        height: 0.5rem;
+        height: 43px;
         border-bottom: 0.005rem solid #E1E1E1;
         position: relative;
     }
     .dvk4_title_now{
         width: 1.86rem;
         height: 0.3rem;
-        margin-top: 0.1rem;
+        margin-top: 0.065rem;
         line-height: 0.3rem;
         text-align: center;
         border-right: 0.005rem solid #E1E1E1;
@@ -256,22 +269,22 @@
     }
     .dvk4_title_bottom{
         position: absolute;
-        top: 0.5rem;
-        width: 1rem;
-        left: 0.44rem;
-        border-bottom: 1px solid #FF4A7D;
+        top: 41px;
+        width: 0.6rem;
+        left: 0.64rem;
+        border-bottom: 2px solid #FF4A7D;
     }
     .dvk4_title_bottom1{
         position: absolute;
-        top: 0.5rem;
-        width: 1rem;
-        left: 2.3rem;
-        border-bottom: 1px solid #FF4A7D;
+        top: 41px;
+        width: 0.6rem;
+        left: 2.5rem;
+        border-bottom: 2px solid #FF4A7D;
     }
     .dvk4_title_tomorrow{
         width: 1.87rem;
         height: 0.3rem;
-        margin-top: 0.1rem;
+        margin-top: 0.065rem;
         line-height: 0.3rem;
         text-align: center;
         display: block;
@@ -286,72 +299,80 @@
         width: 3.55rem;
         margin-left: 0.1rem;
     }
-    .border{
-        border-top: 1px solid #E1E1E1;
-    }
     .dvk4_detail{
         width: 100%;
-        height: 0.98rem;
-        padding-top: 0.06rem;
+        height: 76px;
+        margin-top:25px;
+    }
+    .first{
+      margin-top:21px;
     }
     .dvk4_detail_content{
         width: 100%;
-        height: 0.88rem;
+        height: 76px;
     }
     .dvk4_detail_content_img{
-        width: 1.26rem;
-        height: 0.88rem;
-        display: inline-block;
-        vertical-align: top;
+        width: 110px;
+        height: 76px;
+        float: left;
         position: relative;
     }
     .dvk4_detail_content_text{
-        display: inline-block;
-        vertical-align: top;
-        width: 2.18rem;
-        height: 0.88rem;
-        margin-left:0.06rem;
+        height: 76px;
+        margin-left:120px;
         position: relative;
     }
     .dvk4_detail_content_title{
         color: #333333;
-        height: 0.39rem;
-        font-size: 0.14rem;
-        line-height: 0.2rem;
+        font-size: 14px;
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         display: -webkit-box;
+        margin-bottom: 6px;
+        line-height:20px;
     }
     .dvk4_detail_content_name{
         color: #999999;
-        font-size: 0.12rem;
+        font-size: 12px;
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 1;
         display: -webkit-box;
+        line-height:18px;
     }
     .dvk4_detail_content_time{
-        font-size: 0.12rem;
+        font-size: 12px;
         color: #999999;
-        height: 0.17rem;
-        /*margin-top: 0.14rem;*/
-        position: absolute;
-        bottom: 0.02rem;
+        margin-top: 2px;
     }
     .dvk4_detail_content_times{
         float: left;
-        width: 1.5rem;
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 1;
         display: -webkit-box;
+        height: 100%;
+        line-height: 14px;
+        color:#999999;
+        margin-left: 10px;
+    }
+    .dvk4_detail_content_line{
+      width: 1px;
+      height: 12px;
+      float:left;
+      background: #E1E1E1;
+      margin-left:10px;
+
     }
     .dvk4_detail_content_popular{
-        float: right;
+        float: left;
+        height: 100%;
+        line-height: 14px;
+        color:#999999;
     }
     .dvk4_money{
         position: absolute;
@@ -380,5 +401,6 @@
         display: inline;
         border: none;
         width: 100%;
+        border-radius: 0.04rem;
     }
 </style>

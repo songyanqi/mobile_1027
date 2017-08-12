@@ -1,4 +1,8 @@
-import {Vue} from '../../../common/js/common.js';
+// 基础模块
+import common from '../../../common/js/common.js';
+
+// 第三方模块
+import Vue from 'Vue';
 import VueRouter from 'VueRouter';
 
 Vue.use(VueRouter);
@@ -14,4 +18,3 @@ new Vue({
   }),
   el: "router-view",
 });
-

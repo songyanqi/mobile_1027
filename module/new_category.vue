@@ -18,7 +18,7 @@
           <div class="good_title">{{item.goods_name}}</div>
           <div class="goods4_price_bar">
             <span class="dav-color-price font-weight"><em class="fz_14">¥</em><span class="nowPrice"><span>{{(item.shop_price+'').split(".")[0]}}</span><span class="fz_14" v-if="(item.shop_price+'').split('.').length == 2">.{{(item.shop_price+"").split(".")[1]}}</span></span></span>
-            <span class="vip_return">
+            <span class="vip_return" v-if = "item.income != '0'">
               <span class="vip_return_title">会员返</span>
               <span class="vip_return_f">¥</span>
               <span class="vip_return_price">{{item.income}}</span>

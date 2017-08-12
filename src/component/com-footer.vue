@@ -43,6 +43,7 @@
 
 <script>
   import ua from '../common/js/module/ua.js';
+  import encrypt from '../common/js/module/encrypt.js';
 
   export default {
     props: {
@@ -79,7 +80,7 @@
           url: '/api/m/index/cart?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
-          data: layout.strSign('feed', {}),
+          data: encrypt({}),
           success(response) {
             ts.response = response;
           },

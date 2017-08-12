@@ -19,7 +19,7 @@
 </template>
 
 <script>
-  import './bd_image_0.scss'
+//  import './bd_image_0.scss'
   import layout from "../layout.es6"
   export default {
     data(){
@@ -51,3 +51,7 @@
     }
   }
 </script>
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./bd_image_0.scss";
+</style>

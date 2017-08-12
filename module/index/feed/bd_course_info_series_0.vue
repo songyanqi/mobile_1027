@@ -1,15 +1,13 @@
 <template>
     <div id='series_course' :style="{'marginTop':dataList.marginTop + 'px'}">
         <a :href="dataList.body.command.content" @click.stop="clickAnalysis"  :position="dataList.position">
-            <div class='series_title'>所属系列课</div>
+            <div class="series_title">所属系列课 <span>（第{{dataList.body.nowNo}}节 共{{dataList.body.courseNum}}节课）</span></div>
             <div class='series_container'>
-                <div class='series_img' :style="{'background': 'url(' + dataList.body.seriesImgUrl + ') center center / cover no-repeat' , 'background-size': 'cover'}" ></div>
-                <div class='series_content'>
-                    <div class='series_content_title' v-text='dataList.body.seriesTitle'></div>
-                    <div class='series_content_course_number'><span v-text='dataList.body.courseNum'></span>节课</div>
-                    <img class='series_content_img' src="//pic.davdian.com/free/2017/05/03/goSeriesCourse.png">
-                </div>
+                <img src="//pic.davdian.com/free/2017/08/01/seriesicon.png" class='icon'>
+                <span v-text='dataList.body.seriesTitle'></span>
             </div>
+            <div class='series_content_img1'>进入系列</div>
+            <!-- <img class='series_content_img' src="//pic.davdian.com/free/2017/07/28/goSeriesCourse1.png"> -->
         </a>
     </div>
 </template>
@@ -37,62 +35,60 @@
         }
     }
 </script>
-<style type="text/css" scoped>
+<style type="text/css" scoped lang='sass'>
     #series_course{
         width: 100%;
         background: #fff;
-        /*margin-top: 0.1rem;*/
+        position: relative;
+        padding-bottom: 0.1rem;
     }
     .series_title{
         width: 100%;
-        padding-top:0.1rem;
+        padding-top:0.14rem;
         padding-left: 0.1rem;
         padding-bottom: 0.1rem;
         font-size: 0.14rem; 
-        color: #333;
+        color: #FF4A7D;
+        span{
+            font-size: 0.1rem;
+            color:#999999;
+        }
     }
     .series_container{
-        width: 100%;
-        padding-bottom: 0.1rem;
+        width: 3rem;
         padding-left: 0.1rem;
-        font-size: 0;
-    }
-    .series_img{
-        width: 1.15rem;
-        height: 0.8rem;
-        background: red;
-        display: inline-block;
-        vertical-align: top;
-    }
-    .series_content{
-        width: 2.3rem;
-        height: 0.8rem;
-        display: inline-block;
-        vertical-align: top;
+        padding-right: 0.4rem;
         font-size: 0.14rem;
-        position: relative;
-    }
-    .series_content_title{
-        width: 100%;
-        margin-left: 0.1rem;
-        color: #333333;
         overflow: hidden;
         text-overflow: ellipsis;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         display: -webkit-box;
-    }
-    .series_content_course_number{
-        position: absolute;
-        bottom: 0;
-        left: 0.1rem;
-        font-size: 0.11rem;
-        color: #999999;
+        color: #333333;
     }
     .series_content_img{
         position: absolute;
+        height: 0.22rem;
+        right: 0.1rem;
+        top: 0.27rem;
+    }
+    .series_content_img1{
+        position: absolute;
         width: 0.64rem;
-        bottom: 0;
-        right: -0.1rem;
+        height: 0.22rem;
+        right: 0.1rem;
+        top: 0.27rem;
+        font-size: 0.12rem;
+        color: #FF4A7D;
+        border:1px solid #FF4A7D;
+        border-radius: 37px;
+        text-align: center;
+        line-height: 0.21rem;
+    }
+    .icon{
+        width: 0.12rem;
+        height: 0.12rem;
+        vertical-align: top;
+        margin-top: 0.03rem;
     }
 </style>

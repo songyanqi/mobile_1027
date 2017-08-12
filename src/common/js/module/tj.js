@@ -25,7 +25,7 @@ let defaultParam = {
   // session id
   session: login.getSessionId(),
   // 卖家状态 (0：游客 1:买家 3:卖家)
-  status: login.getUserStatus(),
+  status: login.getUserStatusCode(),
   // 1：点击
   action: 1,
   // 1：模板

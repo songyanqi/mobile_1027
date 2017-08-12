@@ -339,7 +339,7 @@ $(function () {
           obj[p.split("=")[0]] = p.split("=")[1];
         })
         $.ajax({
-          url: "/images/api/speard/index",
+          url: "/images/api/speard/index?redirect_flag=0",
           data: obj,
           type : 'POST',
           dataType: "json",

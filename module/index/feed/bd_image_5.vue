@@ -42,7 +42,11 @@
 </template>
 
 <script>
-    import './bd_image_5.scss'
+//    import './bd_image_5.scss'
     import bd_image_5 from './bd_image_5.es6'
     export default bd_image_5
 </script>
+
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "./bd_image_5.scss";
+</style>

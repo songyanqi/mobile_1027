@@ -1,16 +1,13 @@
 <template>
   <div class="index_inner">
     <!--头部-->
-    <index-head :usersta="usersta" :list='menuList' :menumore="menuMore" :data='headData' :init-category='initCategory'
-                :initcate='initcate'
-                v-if='!app'
-                v-on:categorya="changeCategory"></index-head>
+    <index-head :usersta="usersta" :menudata='menudata' :data='headData' :init-category='initCategory' :initcate='initcate' v-if='!app' v-on:categorya="changeCategory"></index-head>
     <div style='height: 80px' v-if='!app'></div>
     <n-progress></n-progress>
     <!--内容-->
     <index-feed :data="feedData" v-if='!loadFlag && !unLoadFlag'></index-feed>
 
-    <bd_goods_1></bd_goods_1>
+    <bd_goods_1 :tableindex="page_index" :menuid="menuId" :likenum="likeNum"></bd_goods_1>
     <!--底部-->
     <!--<index-foot :data='footData' v-if='!app'></index-foot>-->
     <index-foot active="home" v-if='!app' style="z-index: 13;"></index-foot>
@@ -67,12 +64,15 @@
 </template>
 
 <script>
-  import "./index.css"
+//  import "./index.css"
   import index from "./index.es6"
   export default index
 </script>
-<style>
-  #nprogress .spinner{
-    display:none!important;
+<style lang="sass" lang="scss" rel="stylesheet/scss">
+  @import "../../node_modules/nprogress/nprogress.css";
+  @import "./index.css";
+
+  #nprogress .spinner {
+    display: none !important;
   }
 </style>

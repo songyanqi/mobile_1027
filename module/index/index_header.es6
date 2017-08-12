@@ -1,10 +1,11 @@
-export default{
-  props: ['data', 'initCategory', 'list', 'menumore', 'initcate', 'usersta'],
-  data(){
+export default {
+  data() {
     return {
-      msg: 'hello vue'
+      msg: 'hello vue',
+      swiperIndex: 0
     }
   },
+  props: ['data', 'menudata', 'initCategory', 'initcate', 'usersta'],
   computed: {
     cart: function () {
       return this.data.cart || 0;
@@ -27,91 +28,72 @@ export default{
   },
   components: {},
   created: function () {
-    var that = this;
-    that.$nextTick(function () {
-      that.init();
-    });
-    this.changeinit()
+
   },
   mounted: function () {
-    var that = this;
-    that.$nextTick(function () {
-      that.init();
-    });
-    this.changeinit()
+
   },
-  updated(){
+  updated: function () {
     var that = this;
-    that.$nextTick(function () {
-      that.init();
-    })
+    that.init();
+  },
+  watch: {
+    menudata: function () {
+      var that = this;
+      that.init()
+    }
   },
   methods: {
     turn: function (event) {
       window.location = this.head.search.command.content
     },
-    init(){
-      var select = 0
-      var length = this.list.length;
+    init: function () {
       var that = this;
-      if (length) {
-        for (var i = 0; i < length; i++) {
-          if (this.list[i].id == this.initcate) {
-            select = i;
-          }
-        }
-        this.$nextTick(function () {
-          console.log("二极管",length);
-          if (that.menumore) {
-            if (length > 5) {
-              this.menu = new Swiper('.v_menu', {
-                slidesPerView: 5.5,
-                grabCursor: true,
-                initialSlide: select - 2
-              });
-            } else {
-              this.menu = new Swiper('.v_menu', {
-                slidesPerView: length - 1,
-                grabCursor: true
-              });
-            }
-          } else {
-            if (length > 5) {
-              this.menu = new Swiper('.v_menu', {
-                slidesPerView: 5.5,
-                grabCursor: true,
-                initialSlide: select - 2
-              });
-            } else {
-              this.menu = new Swiper('.v_menu', {
-                slidesPerView: length,
-                grabCursor: true
-              });
-            }
-          }
-
-        })
+      if (!that.menudata.menuList) {
+        return false;
       }
-    },
-    changeinit(){
-      var that = this
-      window.addEventListener('orientationchange', function (event) {
-        if (window.orientation == 180 || window.orientation == 0) {
-          setTimeout(function () {
-            that.init();
-          }, 300)
+      var length = that.menudata.menuList.length;
+      for (var i = 0; i < length; i++) {
+        if (that.menudata.menuList[i].id == that.initcate) {
+          that.swiperIndex = i;
         }
-      });
+      }
+      this.$nextTick(function () {
+         var swiper_num = window.screen.width / 59;
+
+        if (length > swiper_num) {
+          this.menuswiper = new Swiper('#v_menu', {
+            slidesPerView: swiper_num,
+            grabCursor: true,
+            initialSlide: that.swiperIndex - 2
+          });
+        } else {
+          this.menuswiper = new Swiper('#v_menu', {
+            slidesPerView: length,
+            grabCursor: true
+          });
+        }
+      })
     },
-    changeCategory(category, index){
-      this.initCategory = index
-      this.$emit('categorya', category, index)
-      this.menu.slideTo(Math.max(0, index - 2));
+    changeinit() {
+      // var that = this;
+      // window.addEventListener('orientationchange', function (event) {
+      //   if (window.orientation == 180 || window.orientation == 0) {
+      //     setTimeout(function () {
+      //       that.init();
+      //     }, 300)
+      //   }
+      // });
     },
+    changeCategory(category, index) {
+      this.initCategory = index;
+      this.$emit('categorya', category, index);
+      this.menuswiper.slideTo(Math.max(0, index - 2));
+    },
+  },
+  ready: function () {
+    this.$http.get('url').then(data => {
+      this.data = data;
+    });
   }
-  // ready:function(){
-  //     this.$http.get('url').then(data => {
-  //         this.data=data;
-  //     });
-  // }
 }

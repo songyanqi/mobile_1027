@@ -1,4 +1,5 @@
-var crypto = require('crypto')
+// var crypto = require('crypto')
+import md5 from 'crypto-js/md5.js';
 
 let config = {
   feed:  '/api/m/index/index?t=' + Date.now(),
@@ -65,7 +66,8 @@ let sortObj = (obj) => {
   for (let p in strObj) {
     string += p + '=' + strObj[p]
   }
-  var sign = crypto.createHash('md5').update(string, 'utf8').digest('hex').toUpperCase()
+  // var sign = crypto.createHash('md5').update(string, 'utf8').digest('hex').toUpperCase()
+  var sign = md5(string).toString().toUpperCase();
   strObj.sign = sign
   return strObj
 }
@@ -92,7 +94,7 @@ let api = (url, obj, callback) => {
     callback = obj
   }
     obj.data = obj.data||{};
-    for(var i=0,d;d = ["rp",'rl','logDp'][i++];){
+    for(var i=0,d;d = ["rp",'rl','logDp','dp'][i++];){
         var tmp_value = window.Units&&Units.getQuery(d);
         if(tmp_value){
             obj.data[d]=tmp_value;

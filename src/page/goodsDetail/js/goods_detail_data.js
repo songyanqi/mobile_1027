@@ -1,21 +1,30 @@
+// 基础模块
+import common from '../../../common/js/common.js';
+
 var layout = require("../../../../module/index/layout.es6").default;
 var dialog = require("../../../../utils/dialog.es6").default;
 var base = require("../../../../utils/base.es6").default;
-import common from '../../../../module/common/common.es6';
+import share from '../../../common/js/module/share.js';
+import ua from '../../../common/js/module/ua.js';
+import common1 from '../../../../module/common/common.es6';
+import weixin from '../../../common/js/module/weixin.js';
 
 base.init();
 
 var isDev = true;
 
-if (platform == '2') {
-    window.title = shareTitle;
-    window.link = lineLink;
-    window.imgUrl = imgUrl.replace('pic.davdian.com','pic1.davdian.com');
-    window.desc = descContent;
-}
+// // if (platform == '2') {
+// if (ua.isDvdApp() && ua.isAndroid()) {
+//     window.title = 'wefwef';
+//     window.link = location.href;
+//     window.imgUrl = '';
+//     window.desc = 'wgggg';
+// }
 
 var detailData = function (query) {
   var type, dataObj,data;
+  // query = query || {};
+  // query.js_wx_info = 1;
   if (isDev) {
     dataObj = layout.strSign("goodsDetailData",query);
     type = "POST";
@@ -28,8 +37,12 @@ var detailData = function (query) {
     type: type,
     url : detailURL,
     data : dataObj,
+    async : false,
     dataType: 'JSON',
     success: function(res) {
+      // check强制跳转
+      common.checkRedirect(res);
+
       renderData(res);
     },
     error: function (err) {
@@ -39,10 +52,12 @@ var detailData = function (query) {
 };
 
 function renderData(res) {
+  window.loginTel = res.data.userMobile;
   if (window.vm && window.vm.$children[0]) {
     var that = window.vm.$children[0]._data,
       events = window.vm.$children[0];
 
+    that.response = res;
     that.loadBefore = false;
     that.relativeGoodsList = [];
     that.goodsImgList = [];
@@ -65,10 +80,13 @@ function renderData(res) {
       } else {
         // window.goodsDetailData = res;
         var data = res.data,
-          dataExtra,
-          dataComment = data.comments,
-          goodsStockSales = data.extra.parent,
-          dataBasis = data.basis;
+            dataExtra,
+            dataComment = data.comments,
+            goodsStockSales = data.extra.parent,
+            dataBasis = data.basis;
+
+        that.sellerId = data.shop.sellerId.toString();
+        that.goodsId = dataBasis.goodsId;
 
         //六一
         if (Number(res.sys_time) * 1000 > 1497369600000 && Number(res.sys_time) * 1000 < 1497456000000) {
@@ -307,8 +325,14 @@ function renderData(res) {
         window.link = location.href;
         window.imgUrl = dataBasis.shareImg.replace('pic.davdian.com','pic1.davdian.com');
         window.desc = dataBasis.shareRecommend;
-        common.initShare(5);
+        common1.initShare(5);
         base.ready();
+        weixin.setShareInfo({
+          title: window.title, // 分享标题
+          desc: window.desc, // 分享描述
+          link: window.link, // 分享链接
+          imgUrl: window.imgUrl, // 分享图标
+        });
       }
 
     } else {
