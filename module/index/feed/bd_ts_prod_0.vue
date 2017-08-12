@@ -10,7 +10,7 @@
             </div>
             <div class="order_good_info_container">
               <div class="order_good_name">{{item.title}}</div>
-              <div class="order_good_name order_good_name_in">{{item.recomWord.split("\r\n")[0]}}</div>
+              <div class="order_good_name order_good_name_in">{{item.recomWord.split("\n")[0]}}</div>
               <div class="order_good_price">
                 <span class="f_l"><em class="price_symbol">￥</em><span>{{(item.nowPrice+"").split(".")[0]}}</span><span v-if="(item.nowPrice+'').split('.').length == 2" class="newOriginal_price">.{{(item.nowPrice+"").split(".")[1]}}</span></span><span v-if="item.timeshopIncome != '0'" class="membership_crown">限时返 <em>￥</em>{{item.timeshopIncome}}
                 <span v-if="item.income" class="membership_crown_pre">平日返<em>￥</em>{{item.income}}</span></span>
