@@ -177,7 +177,7 @@
 
       <div class="all_mask">
         <div class="white_space">我的笔记</div>
-        <div class="mask_img"><img class='myNote' src="//pic.davdian.com/free/2017/08/10/myNote.png" alt=""></div>
+        <div class="mask_img"><img src="//pic.davdian.com/free/2017/08/10/myNote.png" alt=""></div>
       </div>
     </div>
   </div>
@@ -273,12 +273,6 @@
               this.mask_close=false;
             }else{
               localStorage.setItem("dialog","localStorage");
-              $(".myNote").on('touchmove',function(e){
-                  e.preventDefault();
-              })
-              $(".sign_mask").on('touchmove',function(e){
-                  e.preventDefault();
-              })
             }
           },
           auto_click(){
@@ -574,12 +568,6 @@
               this.mask_close=false;
             }else{
               localStorage.setItem("dialog","localStorage");
-              $(".myNote").on('touchmove',function(e){
-                  e.preventDefault();
-              })
-              $(".sign_mask").on('touchmove',function(e){
-                  e.preventDefault();
-              })
             }
           }
       },

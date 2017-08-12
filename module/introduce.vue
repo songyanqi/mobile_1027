@@ -112,11 +112,11 @@
 </style>
 <style lang='sass' scoped>
     .bottomBtn{
-        position: fixed;
+        position: absolute;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        height: 60px;
         background: #000;
         opacity: 0.6;
         z-index: 300;
@@ -126,7 +126,7 @@
     }
     .introduce_inner .invite_and_enroll{
         position: fixed;
-        height: 50px;
+        height: 0.5rem;
         bottom:0;
     }
     .introduce_inner .invite_and_enroll .left1{
@@ -135,8 +135,8 @@
         height: 100%;
         .invite{
             width: 1.6rem;
-            height: 50px;
-            line-height: 50px;
+            height: 0.5rem;
+            line-height: 0.5rem;
             margin: 0;
             /*background: -webkit-linear-gradient(left, #FF5B5B, #FB1C62);*/
             background: #F9F7F8;
@@ -150,13 +150,13 @@
     }
     .introduce_inner .invite_and_enroll .right1{
         width: 2.15rem;
-        height: 50px;
+        height: 0.5rem;
         right: 0;
         .enroll1{
             width: 2.15rem;
-            height: 50px;
+            height: 0.5rem;
             margin: 0;
-            line-height: 50px;
+            line-height: 0.5rem;
             background: -webkit-linear-gradient(left, #FF5B5B, #FA1862);
             text-align: center;
             font-size: 14px;
