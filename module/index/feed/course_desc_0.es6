@@ -43,33 +43,31 @@ export default {
         this.$nextTick(function(){
             that.scroolFun()
             setTimeout(function(){
-                if (!that.isApp){
-                    if (localStorage.getItem('introduceGuide')){
-                        that.introduceGuide = false
-                    }else {
-                        window.backNewData.$children[0].bottomBtn = true
-                        localStorage.setItem('introduceGuide', 1)
-                        if ($('.class_introduce_tit').offset().top > 300){
-                            $('#scroll_container').scrollTop($('.class_introduce_tit').offset().top-300)
-                        }
-                        that.introduceGuide = true
-                        that.class_introduce_left = 2
-                        that.guide = 1
-                        setTimeout(function(){
-                            $(".introduceGuideMask").on('touchmove',function(e){
-                                e.preventDefault();
-                            })
-                            $(".bottomBtn").on('touchmove',function(e){
-                                e.preventDefault();
-                            })
-                            $(".lectureNnotesAll").on('touchmove',function(e){
-                                e.preventDefault();
-                            })
-                            $(".writeAllSignUp").on('touchmove',function(e){
-                                e.preventDefault();
-                            })
-                        },100)
+                if (localStorage.getItem('introduceGuide')){
+                    that.introduceGuide = false
+                }else {
+                    window.backNewData.$children[0].bottomBtn = true
+                    localStorage.setItem('introduceGuide', 1)
+                    if ($('.class_introduce_tit').offset().top > 300){
+                        $('#scroll_container').scrollTop($('.class_introduce_tit').offset().top-300)
                     }
+                    that.introduceGuide = true
+                    that.class_introduce_left = 2
+                    that.guide = 1
+                    setTimeout(function(){
+                        $(".introduceGuideMask").on('touchmove',function(e){
+                            e.preventDefault();
+                        })
+                        $(".bottomBtn").on('touchmove',function(e){
+                            e.preventDefault();
+                        })
+                        $(".lectureNnotesAll").on('touchmove',function(e){
+                            e.preventDefault();
+                        })
+                        $(".writeAllSignUp").on('touchmove',function(e){
+                            e.preventDefault();
+                        })
+                    },100)
                 }
             },1000)
         })
