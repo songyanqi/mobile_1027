@@ -122,8 +122,8 @@ new Vue({
         dataType: 'json',
         data: encrypt({}),
         success(response) {
-          // ts.response = response;
-          ts.response = require('../json/act_818.json');
+          ts.response = response;
+          // ts.response = require('../json/act_818.json');
           common.checkRedirect(ts.response);
         },
         error(error) {
