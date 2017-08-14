@@ -52,9 +52,9 @@ native.custom.onWebviewBack();
 function checkRedirect(domain) {
   // 当前域名与强制域名和小写强制域名都不符时，跳转到强制域名
   if (domain && domain !== location.host && ''.toLowerCase && new String(domain).toLowerCase() !== location.host) {
-    /*// nemo逻辑
-    // 设置临时跳转路径
-    sessionStorage.setItem('temp_domain', location.hostname);*/
+    // nemo逻辑，设置临时跳转路径
+    // sessionStorage.setItem('temp_domain', location.hostname);
+
     // 跳转强制domain
     location.href = location.href.replace(location.host, domain);
     // 中断程序执行
@@ -90,30 +90,38 @@ export default {
    * 说明：每个接口公参会返回强制跳转字段，如果这个字段有值并且与当前域名不同则跳转
    */
   checkRedirect(response) {
-    /*// nemo逻辑
+    // nemo逻辑
     // 百度脑图：http://naotu.baidu.com/file/845581a94947715ba1c8cf832d46eb37?token=bb2bd462d2f5f75f
-    if (response.code === 0 || response.code === '11012' || response.code === '11013') {
-      checkRedirect(Cookies.get('forceDomain'));
-    } else if (response.code === '11014') {
-      let temp_domain = sessionStorage.setItem('temp_domain', location.hostname);
-      if(temp_domain){
-        // 跳转临时domain
-        location.href = location.href.replace(location.host, temp_domain);
-      }else{
-        // 跳转默认domain
-        location.href = location.href.replace(location.host, 'bravetime.davdian.com');
-      }
-    }*/
+    // if (response.code === 0 || response.code === '11012' || response.code === '11013') {
+    //   checkRedirect(Cookies.get('forceDomain'));
+    // } else if (response.code === '11014') {
+    //   let temp_domain = sessionStorage.setItem('temp_domain', location.hostname);
+    //   if (temp_domain) {
+    //     // 跳转临时domain
+    //     location.href = location.href.replace(location.host, temp_domain);
+    //   } else {
+    //     // 跳转默认domain
+    //     location.href = location.href.replace(location.host, 'bravetime.davdian.com');
+    //   }
+    // }
 
     // 建生逻辑：11012、11013、11015(访问的手机号域名有自定义域名)时根据返的cookie跳；10010时跳bravetime；
     // 百度脑图：http://naotu.baidu.com/file/653525bad80d30f32561e78afacaae39?token=35f3626016726857
-    if (response.code === '11012' || response.code === '11013' || response.code === '11015') {
-      checkRedirect(Cookies.get('force_domain'));
-    } else if (response.code === '10010') {
+    // if (response.code === '11012' || response.code === '11013' || response.code === '11015') {
+    //   checkRedirect(Cookies.get('force_domain'));
+    // } else if (response.code === '10010') {
+    //   // 跳转强制domain
+    //   location.href = location.href.replace(location.host, `bravetime.${util.getBaseDomain()}`);
+    //   // 中断程序执行
+    //   throw new Error(`即将跳转强制域名(${location.href})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
+    // }
+    if (response.code === '10010') {
       // 跳转强制domain
       location.href = location.href.replace(location.host, `bravetime.${util.getBaseDomain()}`);
       // 中断程序执行
       throw new Error(`即将跳转强制域名(${location.href})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
+    } else {
+      checkRedirect(Cookies.get('force_domain'));
     }
   },
 }
