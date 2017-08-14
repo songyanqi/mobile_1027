@@ -50,8 +50,6 @@
             <span>
           <p>{{this.response.data.bonusList[0].content}}</p>
           <p>满{{this.response.data.bonusList[0].minConsumePrice}}元使用</p>
-          </span>
-          </p>
           <p>{{this.response.data.bonusList[0].useBeginTime}}-{{this.response.data.bonusList[0].useEndTime}}</p>
         </div>
         <!--按钮-->
@@ -148,6 +146,24 @@
       </div>
     </div>
 
+    <!--状态:非会员领取【会员专享红包活动】的时候触发-->
+    <div class="wrapper no-remain" v-if="response.code === 90010">
+      <!--标题-->
+      <com-top-title home title="会员专享红包"></com-top-title>
+      <!--信封-->
+      <div class="envelope">
+        <p>领取失败啦～</p>
+        <p>仅会员专享红包~</p>
+      </div>
+      <!--按钮-->
+      <a class="btn" :href="response.data.useUrl"><p>立即开通会员</p></a>
+      <!--使用说明-->
+      <div class="rule">
+        <img class="title" src="http://pic.davdian.com/free/redpack_receive/rule-title.png">
+        <div class="rich-text" v-html="response.data.bonusContent"></div>
+      </div>
+    </div>
+
     <!--状态:出错了-->
     <div class="wrapper error" v-if="isError">
       <!--标题-->
@@ -214,7 +230,7 @@
       },
       // 本次领取红包是否发生错误
       isError(){
-        if (this.response.code === 0 || this.response.code === 90005 || this.response.code === 90006 || this.response.code === 90001 || this.response.code === 90000) {
+        if (this.response.code === 0 || this.response.code === 90005 || this.response.code === 90006 || this.response.code === 90001 || this.response.code === 90000 || this.response.code === 90010) {
           return false;
         }
         return true;
