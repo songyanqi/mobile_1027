@@ -75,7 +75,7 @@
                 <div class="title">您累计支付为<span class="num">￥{{response.data.shopPrice}}</span>，获得 {{response.data.sendBonusAmount}}元红包</div>
                 <p>很遗憾没有活动名额啦~</p>
                 <p v-if="response.data.bonusAmount > response.data.sendBonusAmount">
-                  由于没有活动名额，您不能获得{{response.data.bonusAmount > response.data.sendBonusAmount}}元红包
+                  由于没有活动名额，您不能获得{{response.data.bonusAmount - response.data.sendBonusAmount}}元红包
                 </p>
                 <act-btn></act-btn>
                 <p class="send-tip">* 红包将会在 2017年9月18日 发放到您的账户中</p>
