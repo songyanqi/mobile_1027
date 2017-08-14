@@ -120,7 +120,12 @@ export default{
           this.contentData = layout.sStorageGet(str, 'data')
           this.initcate = layout.sStorageGet('v_index', 'category')
           this.initCategory = layout.sStorageGet('v_index', 'index')
-          this.channel(this.initcate)
+          if(+this.initCategory){
+            this.channel(this.initcate)
+          }else{
+            this.getPageFirst();
+          }
+          
         } else {
           this.init()
         }
