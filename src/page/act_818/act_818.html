@@ -15,8 +15,7 @@
     <template v-if="response">
       <!--活动未开始-->
       <template v-if="response.data.actStatus == '0'">
-        <div class="act-result transparent">
-          <div class="title">&nbsp;</div>
+        <div class="act-result">
           <div class="title">活动还未开始，稍后更多精彩~</div>
         </div>
       </template>
@@ -44,7 +43,7 @@
 
         <!--买家-活动结束-->
         <template v-else-if="response.data.actStatus == '2'">
-          <div class="act-result transparent">
+          <div class="act-result">
             <div class="title">活动结束啦~</div>
             <p>成为会员享受更多福利</p>
             <act-btn type="member"></act-btn>
@@ -62,7 +61,7 @@
             <template v-if="response.data.surplus > 0">
               <div class="act-result">
                 <act-info :response="response" :today-info="todayInfo"></act-info>
-                <div class="title">您累计支付为<span class="num">￥{{response.data.shop_price}}</span>，获得 {{response.data.sendBonusAmount}}元红包</div>
+                <div class="title">您累计支付为<span class="num">￥{{response.data.shopPrice}}</span>，获得 {{response.data.sendBonusAmount}}元红包</div>
                 <p>继续购物{{response.data.lessPrice}}元，可再获得60元红包</p>
                 <act-btn></act-btn>
                 <p class="send-tip">* 红包将会在 2017年9月18日 发放到您的账户中</p>
@@ -73,7 +72,7 @@
             <template v-else>
               <div class="act-result">
                 <act-info :response="response" :today-info="todayInfo"></act-info>
-                <div class="title">您累计支付为<span class="num">￥{{response.data.shop_price}}</span>，获得 {{response.data.sendBonusAmount}}元红包</div>
+                <div class="title">您累计支付为<span class="num">￥{{response.data.shopPrice}}</span>，获得 {{response.data.sendBonusAmount}}元红包</div>
                 <p>很遗憾没有活动名额啦~</p>
                 <p v-if="response.data.bonusAmount > response.data.sendBonusAmount">
                   由于没有活动名额，您不能获得{{response.data.bonusAmount > response.data.sendBonusAmount}}元红包
@@ -87,10 +86,10 @@
           <!--卖家-活动中-未中奖-->
           <template v-else-if="response.data.prize == '0'">
             <!--卖家-活动中-未中奖-钱不够-->
-            <template v-if="response.data.shop_price < 359">
+            <template v-if="response.data.shopPrice < 359">
               <div class="act-result">
                 <act-info :response="response" :today-info="todayInfo"></act-info>
-                <div class="title">您累计实际支付为<span class="num">￥{{response.data.shop_price}}</span></div>
+                <div class="title">您累计实际支付为<span class="num">￥{{response.data.shopPrice}}</span></div>
                 <template v-if="response.data.surplus > 0">
                   <p>还差{{response.data.lessPrice}}元，即可获得60元红包哦~</p>
                 </template>
@@ -103,10 +102,9 @@
 
             <!--卖家-活动中-未中奖-钱够了-名额没了-->
             <template v-else-if="parseInt(response.data.surplus) <= 0">
-              {{222}}
               <div class="act-result">
                 <act-info :response="response" :today-info="todayInfo"></act-info>
-                <div class="title">您累计实际支付为<span class="num">￥{{response.data.shop_price}}</span></div>
+                <div class="title">您累计实际支付为<span class="num">￥{{response.data.shopPrice}}</span></div>
                 <p>很遗憾您与奖励擦肩而过</p>
                 <act-btn></act-btn>
               </div>
@@ -118,9 +116,9 @@
         <template v-if="response.data.actStatus == '2'">
           <!--卖家-活动结束-中奖-->
           <template v-if="response.data.prize == '1'">
-            <div class="act-result transparent">
+            <div class="act-result">
               <div class="title">活动结束啦~</div>
-              <div class="title">您累计支付为 ￥{{response.data.shop_price}}，获得 {{response.data.sendBonusAmount}}元红包</div>
+              <div class="title">您累计支付为 ￥{{response.data.shopPrice}}，获得 {{response.data.sendBonusAmount}}元红包</div>
               <p v-if="response.data.bonusAmount > response.data.sendBonusAmount">
                 由于没有活动名额，您不能获得{{response.data.bonusAmount > response.data.sendBonusAmount}}元红包
               </p>
@@ -131,7 +129,7 @@
 
           <!--卖家-活动结束-未中奖-->
           <template v-if="response.data.prize == '0'">
-            <div class="act-result transparent">
+            <div class="act-result">
               <div class="title">活动结束啦~</div>
               <p>很遗憾您错过了这次活动</p>
               <act-btn></act-btn>
