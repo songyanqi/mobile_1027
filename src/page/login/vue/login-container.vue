@@ -87,6 +87,7 @@
 
   :-ms-input-placeholder { /* Internet Explorer 10+ */
       color: #999;
+
   }
   .loginbtn{
     width: 73.3333%;
