@@ -117,7 +117,7 @@ new Vue({
       $.ajax({
         cache: false,
         async: true,
-        url: '/api/mg/sale/returnmoney/getData?_=' + Date.now(),
+        url: '/api/mg/sale/returnbonus/getData?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
         data: encrypt({}),

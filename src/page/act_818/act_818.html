@@ -103,6 +103,7 @@
 
             <!--卖家-活动中-未中奖-钱够了-名额没了-->
             <template v-else-if="parseInt(response.data.surplus) <= 0">
+              {{222}}
               <div class="act-result">
                 <act-info :response="response" :today-info="todayInfo"></act-info>
                 <div class="title">您累计实际支付为<span class="num">￥{{response.data.shop_price}}</span></div>
