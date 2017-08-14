@@ -14,6 +14,12 @@
             <div class="scroll">
                 <index-feed :data="feedData"></index-feed>
             </div>
+
+            <!--818需求-->
+            <ad-banner ad-img="http://pic.davdian.com/free/2017/07/21/1125_780_3f570de26ccd4a07de4e28f8e33d55be.jpg?x-oss-process=image/format,webp" ad-url="wefewf"
+              v-if="Date.now() >= new Date(2017,7,18,0,0,0) && Date.now() < new Date(2017,7,24,0,0,0)">
+            </ad-banner>
+
             <!-- <div class="other_info">
                 <div>课程须知：</div>
                 <div>1、本次课堂内容永久保存，可反复收听；</div>

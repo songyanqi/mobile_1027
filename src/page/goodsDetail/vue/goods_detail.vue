@@ -157,9 +157,9 @@
             <brand-type v-if="firstScreenFinish" :brandlist = "brandList"
             ></brand-type>
 
-            <!--广告banner-->
+            <!--818需求-->
             <ad-banner :ad-img="response.data.ADBanner.imageUrl" :ad-url="response.data.ADBanner.content"
-                       v-if="response && response.data && response.data.ADBanner && response.data.ADBanner.imageUrl">
+                       v-if="Date.now() >= new Date(2017,7,18,0,0,0) && Date.now() < new Date(2017,7,24,0,0,0)">
             </ad-banner>
 
             <div class = "parmas_wrapper clearfix"

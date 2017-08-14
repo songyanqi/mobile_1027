@@ -11,6 +11,13 @@
       <div v-if = "isshowb" class = "partys">
         <a href="/t-12091.html?dp=goods_detail_618">618年中会员狂欢！领取45元红包>></a>
       </div> -->
+
+      <!--818需求-->
+      <!--<div class = "partys" v-if="response && response.sys_time * 1000 > new Date(2017, 8-1, 10, 0, 0, 0) && response.sys_time * 1000 < new Date(2017, 8-1, 18, 0, 0, 0)">-->
+      <div class = "partys" v-if="Date.now() >= new Date(2017,7,18,0,0,0) && Date.now() < new Date(2017,7,24,0,0,0)">
+        <a href="/t-12091.html?dp=goods_detail_618">618年中会员狂欢！领取45元红包>></a>
+      </div>
+
       <div class = "clearfix introPrice">
         <div style = "display: none">{{ membercont }}</div>
         <div>
