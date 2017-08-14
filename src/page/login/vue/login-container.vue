@@ -3,7 +3,7 @@
     <!--登录表单-->
 
     <!--正常登陆-->
-    <div>
+    <div v-if="login_form">
       <div class="inputbox" style="margin-top: 50px">
         <input type="tel" placeholder="请输入您的手机号" v-model="mobile" name="mobile">
         <img src="../img/clearInput.png" v-if="mobile != ''" v-on:click="mobile = ''">
@@ -14,7 +14,7 @@
       </div>
       <!--登录或注册按钮-->
       <div v-if="mobile == '' || password == ''" class="loginbtn" style="opacity: 0.4">登录</div>
-      <div v-else class="loginbtn">登录</div>
+      <div v-else class="loginbtn" v-on:click="login">登录</div>
       <!--忘记密码和注册账号按钮-->
       <div class="forget_sign">
         <a class="forgets">忘记密码</a>
@@ -23,7 +23,7 @@
     </div>
 
     <!--注册账号-->
-    <div v-if="false">
+    <div v-if="sign_form">
       <div class="inputbox" style="margin-top: 50px">
         <input type="tel" placeholder="请输入您的手机号" v-model="mobile" name="mobile">
         <img src="../img/clearInput.png" v-if="mobile != ''" v-on:click="mobile = ''">
@@ -72,11 +72,8 @@
       </div>
     </div>
 
-
-
-
     <!--输入邀请码-->
-    <div v-if="false">
+    <div v-if="invite_form">
       <div class="inputbox" style="margin-top: 50px">
         <input type="tel" placeholder="请输入邀请码" v-model="invitation_code" name="mobile">
         <img src="../img/clearInput.png" v-if="invitation_code != ''" v-on:click="invitation_code = ''">
@@ -101,7 +98,7 @@
     </div>
 
     <!--忘记密码-->
-    <div v-if="false">
+    <div v-if="forget_form">
       <div class="login_text">
         验证码已发送到 <span style="color: #FF4A7D">17737701050</span>
       </div>
@@ -134,6 +131,11 @@
     props: {},
     data() {
       return {
+        login_form:true,  //登录显示
+        sign_form:false,  //注册显示
+        forget_form:false,  //忘记密码显示
+        invite_form:false,  //输入邀请码显示
+        rule_form:false,  //邀请码规则显示
         mobile: '',
         password: '',
         invitation_code: '',
@@ -147,7 +149,26 @@
     },
     mounted() {
     },
-    methods: {}
+    methods: {
+      login:function () {
+        /*登录*/
+        var that = this;
+        if(!that.isTel(that.mobile)){
+          bravetime.info("请输入正确的手机号")
+        }else{
+          var tData = {
+            mobile:that.mobile,
+            password:that.password
+          };
+          console.log(tData);
+        }
+      },
+      isTel:function ( t ){
+        var tel = $.trim(t);
+        var reg = /^1\d{10}$/;
+        return reg.test( tel );
+      }
+    }
   }
 </script>
 <style lang="sass" lang="scss" rel="stylesheet/scss" scoped>
