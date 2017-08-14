@@ -82,7 +82,7 @@
   }
   .time{
     padding-right: 10px;
-    border: ;
+    border: 1px solid #999999;
     font-size:11px;
   }
 </style>
