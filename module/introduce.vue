@@ -15,9 +15,8 @@
                 <index-feed :data="feedData"></index-feed>
             </div>
 
-            <!--818需求-->
-            <ad-banner ad-img="http://pic.davdian.com/free/2017/07/21/1125_780_3f570de26ccd4a07de4e28f8e33d55be.jpg?x-oss-process=image/format,webp" ad-url="wefewf"
-              v-if="Date.now() >= new Date(2017,7,18,0,0,0) && Date.now() < new Date(2017,7,24,0,0,0)">
+            <!--课程介绍页广告banner, 818需求-->
+            <!--<ad-banner ad-img="http://pic.davdian.com/free/2017/07/21/1125_780_3f570de26ccd4a07de4e28f8e33d55be.jpg?x-oss-process=image/format,webp" ad-url="wefewf">
             </ad-banner>
 
             <!-- <div class="other_info">

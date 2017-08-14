@@ -172,9 +172,22 @@
   #goodsDetail .videoBackground {
     background: #fff;
   }
+  .good_top_wraper .left-bottom-logo {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    width: .60rem;
+  }
 </style>
 <template>
     <div class = "good_top_wraper">
+      <!--商品图左下角开学季icon，818需求-->
+      <!--<a v-if="Date.now() >= new Date(2017,7,18,0,0,0) && Date.now() < new Date(2017,7,24,0,0,0)">-->
+      <a>
+        <img class="left-bottom-logo" src="http://pic.davdian.com/goods/2017/08/14/500_500_bc93ac9568dd3db040b0731ec2303bda.png?x-oss-process=image/resize,m_fill,w_320,h_320/format,webp">
+      </a>
+
       <!--跨境标志-->
       <div v-if = "swiperinfo.crossBorder"
              class = "crossBorder"
