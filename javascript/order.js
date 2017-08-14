@@ -167,7 +167,6 @@ jQuery(document).ready(function ($) {
     $(".modalWrapper").on("click",".disabledModal",function () {
       var resonId = $(".reasonIpt:checked").attr("data-id");
       var reasonName = $(".reasonIpt:checked").attr("data-name");
-
       var me = this;
       if (resonId == undefined) {
         // window.bravetime.info("请选择退款原因");

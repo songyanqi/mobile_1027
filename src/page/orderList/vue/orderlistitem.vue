@@ -133,7 +133,9 @@
               :data-name = "item.reasonName" 
               :data-id = "item.reasonId" 
               class = 'navList'>
-            <div class = "flex1">{{ item.reasonName }}</div>
+            <div :data-name = "item.reasonName" 
+              :data-id = "item.reasonId"
+              class = "flex1">{{ item.reasonName }}</div>
             <div>
               <input class = 'reasonIpt'
                :data-name = "item.reasonName" 
@@ -272,7 +274,7 @@
             this.isConfirm = false;
             this.reasonId = e.target.getAttribute("data-id");
             this.reasonName = e.target.getAttribute('data-name');
-            console.log($(".cancle_"+this.dataId+""));
+            console.log(this.reasonName);
             $(".cancle_"+this.dataId+"").attr("reason-id",this.reasonId);
           },
           // 售后进度
