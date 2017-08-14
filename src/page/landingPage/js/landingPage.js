@@ -25,6 +25,7 @@ new Vue({
   components: {
     'com-top-title': require('../../../component/com-top-title.vue'),
     'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
+    'landingPage':require('../vue/landing.vue'),
   },
   data() {
     return {
