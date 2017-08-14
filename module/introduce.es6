@@ -34,7 +34,7 @@ export default {
         }
     },
     created(){
-      console.log(window);
+      console.log(456);
         let that = this;
         //  用通用方法请求数据
         common.getDataWithSign({
