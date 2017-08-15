@@ -574,7 +574,8 @@ export default {
 
                           //分享卡
                           that.sellerId = data.shop.sellerId.toString();
-                          that.goodsId = dataBasis.goodsId;
+                          // that.goodsId = dataBasis.goodsId;
+                          that.goodsId = data.representId == '0' ? dataBasis.goodsId : data.representId;
 
                           //六一
                           if (Number(res.sys_time) * 1000 > 1497369600000 && Number(res.sys_time) * 1000 < 1497456000000) {
@@ -597,6 +598,8 @@ export default {
                               img: `${item.imgUrl}`,
                             });
                           });
+                          //modal添加图片
+                          that.infoObj.goodsShortPic = dataBasis.goodsImg;
 
                           //图文详情新增视频
                           let detailPic = [];
@@ -983,6 +986,15 @@ export default {
 
           that.memberCont.memberGoods = dataExtra.price.memberGoods;
           that.memberCont.memberPrice = dataExtra.price.memberPrice;
+          //多规格modal添加图片
+          if (that.goodsList.length) {
+            that.goodsList.map((item,index) => {
+              if (dataExtra.goodsId == item.goodsId) {
+                that.infoObj.goodsShortPic = item.image;
+              }
+            })
+          }
+          console.log("goodsShortPic",that.infoObj.goodsShortPic);
 
           //判断是否有活动
           if (dataExtra.activity.length || dataExtra.labels.length) {

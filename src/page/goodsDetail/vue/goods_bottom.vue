@@ -163,8 +163,12 @@
             <div class = "modalCloseWrapper" @click = "handleClose"><span class = "modal-close"></span></div>
             <div class = "goodsTypeModal">
                 <i class="dav_icon_detail_close_btn"></i>
-                <div class="summary">
+                <div class="summary modalPicCont">
+                    <div class = "titlePic">
+                      <img :src="infoobj.goodsShortPic" alt="">
+                    </div>
                     <div>
+                      <div>
                         <span v-if = "infoobj.memberGoods == '0'">
                             <span v-if = "isshowactive == 1">
                                 <span v-if = "actendtime != 0" class = "summary_price">
@@ -210,18 +214,19 @@
                                 </span>
                             </span>
                         </span>
-                    </div>
-                    <div class = "summary_select" v-if = "relativegoodslist.length || goodstags.length"><span>选择</span>
-                      <span v-if = "relativegoodslist.length" style = "margin-right: 10px;">
-                          <span v-for = "item of relativegoodslist">
-                              <span v-if = "item.isActive">{{ item.title }}</span>
-                          </span>
-                      </span>
-                      <span v-if = "goodstags.length" style = "margin-right: 5px">
-                          <span v-for = "item of goodsmodalobj.goodsType">
-                              {{ item.title }}
-                          </span>
-                      </span>
+                      </div>
+                      <div class = "summary_select" v-if = "relativegoodslist.length || goodstags.length"><span>选择</span>
+                        <span v-if = "relativegoodslist.length" style = "margin-right: 10px;">
+                            <span v-for = "item of relativegoodslist">
+                                <span v-if = "item.isActive">{{ item.title }}</span>
+                            </span>
+                        </span>
+                        <span v-if = "goodstags.length" style = "margin-right: 5px">
+                            <span v-for = "item of goodsmodalobj.goodsType">
+                                {{ item.title }}
+                            </span>
+                        </span>
+                      </div>
                     </div>
                 </div>
                 <div class="sku-control" :class = "{ singleSkuControl: !relativegoodslist.length && !goodstags.length }">

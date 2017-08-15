@@ -280,7 +280,11 @@
             <div class = "modalCloseWrapper" @click = "handleTypeClose"><span class = "modal-close"></span></div>
             <div class = "goodsTypeModal">
                 <i class="dav_icon_detail_close_btn"></i>
-                <div class="summary">
+                <div class="summary modalPicCont">
+                  <div class = "titlePic">
+                    <img :src="infoobj.goodsShortPic" alt="">
+                  </div>
+                  <div>
                     <div>
                         <span v-if = "infoobj.memberGoods == '0'">
                             <span v-if = "isshowactive == 1">
@@ -329,7 +333,7 @@
                             </span>
                         </span>
                     </div>
-                    <div class = "summary_select">选择
+                    <div class = "summary_select">选择1
                       <span v-if = "relativegoodslist" class = "summary_m15">
                           <span v-for = "item of relativegoodslist">
                               <span v-if = "item.isActive">{{ item.title }}</span>
@@ -341,6 +345,7 @@
                           </span>
                       </span>
                     </div>
+                  </div>
                 </div>
                 <div class="sku-control">
                     <div class = "clearfix s-title-cont" v-if = "relativegoodslist.length">

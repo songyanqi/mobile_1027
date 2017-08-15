@@ -2823,8 +2823,40 @@ $crossBord: #FF4A7D;
       padding: 0 10px 10px 10px;
       color: $crossBord;
       position: relative;
-      //border-bottom: 1px solid #E1E1E1;
     }
+    .modalPicCont {
+      display: -webkit-box-flex;
+      display: -webkit-flex;
+      display: flex;
+      .titlePic {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin-top: -57px;
+        margin-right: 10px;
+        img {
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+      .titlePic:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        border-radius: 10px;
+        width: 200%;
+        height: 200%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid #E1E1E1;
+        -webkit-transform: scale(.5,.5);
+        transform: scale(.5,.5);
+        -webkit-transform-origin: left top;
+        transform-origin: left top;
+       }
+    }
+
     .singleSkuControl {
       height: 330px;
     }
