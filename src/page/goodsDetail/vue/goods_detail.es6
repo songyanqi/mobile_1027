@@ -1002,7 +1002,7 @@ export default {
               }
             }
 
-            if (shareMoney > 0) {
+            if (shareMoney > 0 && visitorStatus == '3') {
               native.Browser.setHead({
                 shareMoney: shareMoney + "",
                 shareMoneyStr: '赚' + shareMoney + '元',
