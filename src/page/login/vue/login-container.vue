@@ -9,7 +9,7 @@
         <img src="../img/clearInput.png" v-if="mobile != ''" v-on:click="mobile = ''">
       </div>
       <div class="inputbox">
-        <input type="password" placeholder="请输入密码" v-model="password" name="password">
+        <input type="password" placeholder="请输入密码" v-model="password" name="password" autocomplete="new-password">
         <img src="../img/clearInput.png" v-if="password != ''" v-on:click="password = ''">
       </div>
       <!--登录或注册按钮-->
@@ -17,8 +17,8 @@
       <div v-else class="loginbtn" v-on:click="login">登录</div>
       <!--忘记密码和注册账号按钮-->
       <div class="forget_sign">
-        <a class="forgets">忘记密码</a>
-        <a class="sign">注册会员</a>
+        <a class="forgets" @click="go_forget">忘记密码</a>
+        <a class="sign" v-on:click="go_sign">注册会员</a>
       </div>
     </div>
 
@@ -26,15 +26,16 @@
     <div v-if="sign_form">
       <div class="inputbox" style="margin-top: 50px">
         <input type="tel" placeholder="请输入您的手机号" v-model="mobile" name="mobile">
-        <img src="../img/clearInput.png" v-if="mobile != ''" v-on:click="mobile = ''">
+        <input v-if="!get_check" type="tel" v-model="mobile" name="mobile" disabled style="color:#999999;">
+        <img v-if="!get_check" src="../img/clearInput.png" v-if="mobile != ''" v-on:click="mobile = ''">
       </div>
       <div class="inputbox check_input">
         <div>
           <input type="tel" placeholder="请输入验证码" v-model="check_code" name="mobile">
           <img src="../img/clearInput.png" v-if="check_code != ''" v-on:click="check_code = ''">
         </div>
-        <div v-if="check_code=='' || get_check" class="get_check_code disable">{{get_checkbtnname}}</div>
-        <div v-else class="get_check_code">获取验证码</div>
+        <div v-if="mobile=='' || get_check" class="get_check_code disable">{{get_checkbtnname}}</div>
+        <div v-else class="get_check_code" @click="get_checks">获取验证码</div>
       </div>
       <div class="inputbox">
         <input type="password" placeholder="请设置密码" v-model="password" name="password">
@@ -45,7 +46,7 @@
         <img src="../img/clearInput.png" v-if="invitation_code != ''" v-on:click="invitation_code = ''">
       </div>
       <div class="what_invitation_code">
-        <a>什么是邀请码?</a>
+        <a @click="what_invite_code">什么是邀请码?</a>
       </div>
       <!--注册-->
       <div v-if="mobile=='' || check_code == '' || password == '' || invitation_code == ''"
@@ -54,11 +55,11 @@
       <div v-else class="loginbtn">注册</div>
       <!--已有账号登录-->
       <div class="forget_sign voice_check">
-        <a>已有账号登录</a>
+        <a v-on:click="go_login">已有账号登录</a>
       </div>
 
       <!--邀请码规则-->
-      <div v-if="false" class="invit_rule_wrap">
+      <div v-if="rule_form" class="invit_rule_wrap">
         <div class="invit_rule">
           <div>邀请码规则</div>
           <div>
@@ -67,7 +68,7 @@
             <p>3. 绑定邀请人后，您在大V店APP及果敢时代大V店公众号内都将访问邀请人店铺；</p>
             <p>4. 一个用户只能有一个邀请人，在您绑定邀请人后，可在7天内更换一次邀请人。</p>
           </div>
-          <div></div>
+          <div v-on:click="close_what_invite"></div>
         </div>
       </div>
     </div>
@@ -126,7 +127,7 @@
   </div>
 </template>
 <script>
-
+  import layout from "../../../../module/index/layout.es6";
   export default {
     props: {},
     data() {
@@ -148,6 +149,7 @@
     created() {
     },
     mounted() {
+      var that = this;
     },
     methods: {
       login:function () {
@@ -160,7 +162,40 @@
             mobile:that.mobile,
             password:that.password
           };
-          console.log(tData);
+          console.log(layout.strSign("login",tData));
+        }
+      },
+      go_sign:function () {
+        var that = this;
+        that.sign_form = true;
+        that.login_form = false;
+        this.$emit("titlename", "注册");
+      },
+      go_login:function () {
+        var that = this;
+        that.sign_form = false;
+        that.login_form = true;
+        this.$emit("titlename", "登录");
+      },
+      go_forget:function () {
+        /*去忘记密码*/
+      },
+      what_invite_code:function () {
+        var that = this;
+        that.rule_form = true;
+      },
+      close_what_invite:function () {
+        var that = this;
+        that.rule_form = false;
+      },
+      get_checks:function () {
+        /*获取验证码*/
+        var that= this;
+        if(that.isTel(that.mobile)){
+          that.get_check = true;
+
+        }else{
+          bravetime.info("请输入正确的手机号");
         }
       },
       isTel:function ( t ){

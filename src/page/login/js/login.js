@@ -1,7 +1,7 @@
 // 基础模块
 import common from '../../../common/js/common.js';
-// require("../../../../javascript/base.js");
-// require("../../../../stylesheet/base.css");
+require("../../../../javascript/base.js");
+require("../../../../stylesheet/base.css");
 // 第三方模块
 import Vue from 'Vue';
 import $ from '$';
@@ -32,7 +32,7 @@ new Vue({
     }
   },
   computed: {
-    
+
   },
   watch:{
 
@@ -48,7 +48,7 @@ new Vue({
      * 接口名称:
      * 接口文档:
      */
-    getData(){
+    getData:function(){
       let ts = this;
       $.ajax({
         cache: false,
@@ -68,5 +68,8 @@ new Vue({
         }
       });
     },
+    titlename:function (msg) {
+      this.title = msg;
+    }
   }
 });
