@@ -54,24 +54,22 @@ export default {
                     that.introduceGuide = true
                     that.class_introduce_left = 2
                     that.guide = 1
+                    setTimeout(function(){
+                        $(".introduceGuideMask").on('touchmove',function(e){
+                            e.preventDefault();
+                        })
+                        $(".bottomBtn").on('touchmove',function(e){
+                            e.preventDefault();
+                        })
+                        $(".lectureNnotesAll").on('touchmove',function(e){
+                            e.preventDefault();
+                        })
+                        $(".writeAllSignUp").on('touchmove',function(e){
+                            e.preventDefault();
+                        })
+                    },100)
                 }
-                that.introduceGuide = true
-                that.class_introduce_left = 2
-                that.guide = 1
-                setTimeout(function(){
-                    $(".introduceGuideMask").on('touchmove',function(e){
-                        e.preventDefault();
-                    })
-                    $(".bottomBtn").on('touchmove',function(e){
-                        e.preventDefault();
-                    })
-                    $(".lectureNnotesAll").on('touchmove',function(e){
-                        e.preventDefault();
-                    })
-                    $(".writeAllSignUp").on('touchmove',function(e){
-                        e.preventDefault();
-                    })
-                },100)
+                
             },1000)
         })
     },
