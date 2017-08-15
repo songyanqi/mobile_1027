@@ -25,9 +25,9 @@
     <!--注册账号-->
     <div v-if="sign_form">
       <div class="inputbox" style="margin-top: 50px">
-        <input type="tel" placeholder="请输入您的手机号" v-model="mobile" name="mobile">
-        <input v-if="!get_check" type="tel" v-model="mobile" name="mobile" disabled style="color:#999999;">
-        <img v-if="!get_check" src="../img/clearInput.png" v-if="mobile != ''" v-on:click="mobile = ''">
+        <input v-if="get_check" type="tel" v-model="mobile" name="mobile" disabled style="color:#999999;">
+        <input v-else type="tel" placeholder="请输入您的手机号" v-model="mobile" name="mobile">
+        <img src="../img/clearInput.png" v-if="mobile != '' && !get_check" v-on:click="mobile = ''">
       </div>
       <div class="inputbox check_input">
         <div>
@@ -35,10 +35,10 @@
           <img src="../img/clearInput.png" v-if="check_code != ''" v-on:click="check_code = ''">
         </div>
         <div v-if="mobile=='' || get_check" class="get_check_code disable">{{get_checkbtnname}}</div>
-        <div v-else class="get_check_code" @click="get_checks">获取验证码</div>
+        <div v-else class="get_check_code" @click="get_check_codes(1,1)">{{get_checkbtnname}}</div>
       </div>
       <div class="inputbox">
-        <input type="password" placeholder="请设置密码" v-model="password" name="password">
+        <input type="password" placeholder="设置密码，不少于6位" v-model="password" name="password">
         <img src="../img/clearInput.png" v-if="password != ''" v-on:click="password = ''">
       </div>
       <div class="inputbox">
@@ -52,7 +52,7 @@
       <div v-if="mobile=='' || check_code == '' || password == '' || invitation_code == ''"
            class="loginbtn" style="opacity: 0.4">注册
       </div>
-      <div v-else class="loginbtn">注册</div>
+      <div v-else class="loginbtn" @click="registers">注册</div>
       <!--已有账号登录-->
       <div class="forget_sign voice_check">
         <a v-on:click="go_login">已有账号登录</a>
@@ -108,8 +108,8 @@
           <input type="tel" placeholder="请输入验证码" v-model="check_code" name="mobile">
           <img src="../img/clearInput.png" v-if="check_code != ''" v-on:click="check_code = ''">
         </div>
-        <div v-if="check_code=='' || get_check" class="get_check_code disable">{{get_checkbtnname}}</div>
-        <div v-else class="get_check_code">获取验证码</div>
+        <div v-if="get_check" class="get_check_code disable">{{get_checkbtnname}}</div>
+        <div v-else class="get_check_code" @click="get_check_codes(1,2)">{{get_checkbtnname}}</div>
       </div>
       <div class="inputbox">
         <input type="password" placeholder="设置密码，不少于6位" v-model="password" name="password">
@@ -117,31 +117,31 @@
       </div>
       <!--确定-->
       <div v-if="check_code == '' || password == ''" class="loginbtn" style="opacity: 0.4">确定</div>
-      <div v-else class="loginbtn">确定</div>
+      <div v-else class="loginbtn" @click="reset_password">确定</div>
       <!--语音验证-->
       <div class="forget_sign voice_check">
-        <a>短信收不到？试试语音验证</a>
+        <a @click="get_check_codes(2,2)">短信收不到？试试语音验证</a>
       </div>
     </div>
-
   </div>
 </template>
 <script>
   import layout from "../../../../module/index/layout.es6";
+
   export default {
     props: {},
     data() {
       return {
-        login_form:true,  //登录显示
-        sign_form:false,  //注册显示
-        forget_form:false,  //忘记密码显示
-        invite_form:false,  //输入邀请码显示
-        rule_form:false,  //邀请码规则显示
+        login_form: true,  //登录显示
+        sign_form: false,  //注册显示
+        forget_form: false,  //忘记密码显示
+        invite_form: false,  //输入邀请码显示
+        rule_form: false,  //邀请码规则显示
         mobile: '',
         password: '',
         invitation_code: '',
         check_code: '',
-        get_check: false,
+        get_check: false, /*正在获取验证码中......*/
         get_checkbtnname: '获取验证码'
       }
     },
@@ -152,56 +152,137 @@
       var that = this;
     },
     methods: {
-      login:function () {
-        /*登录*/
+      /*登录*/
+      login: function () {
         var that = this;
-        if(!that.isTel(that.mobile)){
-          bravetime.info("请输入正确的手机号")
-        }else{
+        if (!that.isTel(that.mobile)) {
+          bravetime.info("请输入正确的手机号");
+        } else {
           var tData = {
-            mobile:that.mobile,
-            password:that.password
+            mobile: that.mobile,
+            password: that.password
           };
-          console.log(layout.strSign("login",tData));
+
+          console.log(layout.strSign("login", tData));
         }
       },
-      go_sign:function () {
+      /*注册*/
+      registers: function () {
+        var that = this;
+        if (!that.isTel(that.mobile)) {
+          bravetime.info("请输入正确的手机号");
+          return false;
+        }
+        if (that.password.length < 6) {
+          bravetime.info("密码不少于6位");
+          return false;
+        }
+        var regiserData = {
+          mobile: that.mobile,
+          captcha: that.check_code,
+          password: that.password,
+          inviteCode: that.invitation_code
+        };
+        console.log(regiserData);
+      },
+      /*重置密码*/
+      reset_password: function () {
+        var that = this;
+        var tData = {
+          mobile: that.mobile,
+          password: that.password
+        };
+        console.log(layout.strSign("login", tData));
+      },
+      /*去注册*/
+      go_sign: function () {
         var that = this;
         that.sign_form = true;
         that.login_form = false;
+        /*如果不是微信不是APP的话，不展现邀请码框*/
+
+        /*初始化数据*/
+        that.password = '';
+        that.invitation_code = '';
+        that.check_code = '';
+        that.get_check = false;
+        that.get_checkbtnname = '获取验证码';
         this.$emit("titlename", "注册");
       },
-      go_login:function () {
+      /*去登陆*/
+      go_login: function () {
         var that = this;
         that.sign_form = false;
         that.login_form = true;
+        /*初始化数据*/
+        that.password = '';
         this.$emit("titlename", "登录");
       },
-      go_forget:function () {
-        /*去忘记密码*/
-      },
-      what_invite_code:function () {
+      /*忘记密码*/
+      go_forget: function () {
         var that = this;
-        that.rule_form = true;
-      },
-      close_what_invite:function () {
-        var that = this;
-        that.rule_form = false;
-      },
-      get_checks:function () {
-        /*获取验证码*/
-        var that= this;
-        if(that.isTel(that.mobile)){
-          that.get_check = true;
+        if (that.isTel(that.mobile)) {
 
         }else{
           bravetime.info("请输入正确的手机号");
+          return false;
+        }
+        /*再验证手机号是否注册*/
+        that.login_form = false;
+        that.forget_form = true;
+        that.get_check = true;
+        that.check_code = '';
+        that.password = '';
+        that.sendLock();
+      },
+      /*什么是邀请码*/
+      what_invite_code: function () {
+        var that = this;
+        that.rule_form = true;
+      },
+      /*关闭邀请码介绍*/
+      close_what_invite: function () {
+        var that = this;
+        that.rule_form = false;
+      },
+      /*获取验证码*/
+      get_check_codes: function (smsType,sendType) {
+        var that = this;
+        if (that.isTel(that.mobile)) {
+          let sData = {
+            monile:that.mobile,
+            smsType:smsType,
+            sendType:sendType
+          };
+          that.get_check = true;
+          that.sendLock()
+        } else {
+          bravetime.info("请输入正确的手机号");
         }
       },
-      isTel:function ( t ){
+      sendLock: function () {
+        var that = this;
+        var t = 10;
+        t--;
+        // 倒计时
+        if (window.interval) {
+          clearInterval(window.interval);
+        }
+        that.get_checkbtnname = t + "s";
+        window.interval = setInterval(function () {
+          t--;
+          that.get_checkbtnname = t + "s";
+          if (t <= 0) {
+            that.get_checkbtnname = "重新发送";
+            that.get_check = false;
+            clearInterval(window.interval);
+          }
+        }, 1000);
+      },
+      isTel: function (t) {
         var tel = $.trim(t);
         var reg = /^1\d{10}$/;
-        return reg.test( tel );
+        return reg.test(tel);
       }
     }
   }
@@ -253,7 +334,7 @@
   }
 
   .inputbox.check_input .get_check_code {
-    float: left;
+    float: right;
     width: 27.79%;
     height: 40px;
     line-height: 40px;
@@ -262,7 +343,6 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin-left: 10px;
     font-size: 12px;
     font-weight: normal;
     position: relative;

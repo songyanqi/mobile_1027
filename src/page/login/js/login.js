@@ -1,5 +1,6 @@
 // 基础模块
 import common from '../../../common/js/common.js';
+
 require("../../../../javascript/base.js");
 require("../../../../stylesheet/base.css");
 // 第三方模块
@@ -24,21 +25,35 @@ new Vue({
   },
   data() {
     return {
-      title:"登录",
-      btn:{
-        "name":"会员介绍",
-        "href":"www.baidu.com"
+      title: "登录",
+      btn: {
+        "name": "会员介绍",
+        "href": "www.baidu.com"
       }
     }
   },
-  computed: {
-
-  },
-  watch:{
-
-  },
+  computed: {},
+  watch: {},
   beforeCreate() {
+    /*如果是APP，跳转到原生登陆*/
+    if (!!navigator.userAgent.match(/davdian|bravetime|vyohui/)) {
+      native.Account.login({
+        success: function (result) {
+          if (typeof result === "string") {
+            result = JSON.parse(result);
+            const code = +result.code;
+            alert(code);
+            if (code === 0) {
 
+            } else if (code === 1) {
+
+            } else {
+
+            }
+          }
+        }
+      });
+    }
   },
   created() {
     // this.getData();
@@ -48,7 +63,7 @@ new Vue({
      * 接口名称:
      * 接口文档:
      */
-    getData:function(){
+    getData: function () {
       let ts = this;
       $.ajax({
         cache: false,
@@ -68,7 +83,7 @@ new Vue({
         }
       });
     },
-    titlename:function (msg) {
+    titlename: function (msg) {
       this.title = msg;
     }
   }
