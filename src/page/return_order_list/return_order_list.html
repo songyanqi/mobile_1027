@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('meta.include')
+	<title>售后列表</title>
+	<link rel="stylesheet" href="[[static]]/page/return_order_list/css/return_order_list.css[[v]]">
+</head>
+<body>
+	<div class = "app" :class = "{ bodypd0: isapp }">
+		<order-top-title v-if = "!isapp" titletext = "售后列表"></order-top-title>
+		<keep-alive>
+			<return-list></return-list>
+		</keep-alive>
+	</div>
+	
+	@@include('vendor.include')
+  <script src="[[static]]/page/return_order_list/js/return_order_list.js[[v]]"></script>
+</body>
+</html>

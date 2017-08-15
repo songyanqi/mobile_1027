@@ -90,7 +90,7 @@ export default {
    * 说明：每个接口公参会返回强制跳转字段，如果这个字段有值并且与当前域名不同则跳转
    */
   checkRedirect(response) {
-    // nemo逻辑
+    // nemo逻辑 //
     // 百度脑图：http://naotu.baidu.com/file/845581a94947715ba1c8cf832d46eb37?token=bb2bd462d2f5f75f
     // if (response.code === 0 || response.code === '11012' || response.code === '11013') {
     //   checkRedirect(Cookies.get('forceDomain'));
