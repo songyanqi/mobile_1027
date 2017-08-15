@@ -333,7 +333,7 @@
                             </span>
                         </span>
                     </div>
-                    <div class = "summary_select">选择1
+                    <div class = "summary_select">选择
                       <span v-if = "relativegoodslist" class = "summary_m15">
                           <span v-for = "item of relativegoodslist">
                               <span v-if = "item.isActive">{{ item.title }}</span>
