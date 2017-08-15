@@ -48,8 +48,10 @@
             <span>¥</span>
             <span>{{this.response.data.bonusList[0].bonusMoney}}</span>
             <span>
-          <p>{{this.response.data.bonusList[0].content}}</p>
-          <p>满{{this.response.data.bonusList[0].minConsumePrice}}元使用</p>
+              <p>{{this.response.data.bonusList[0].content}}</p>
+              <p>满{{this.response.data.bonusList[0].minConsumePrice}}元使用</p>
+            </span>
+          </p>
           <p>{{this.response.data.bonusList[0].useBeginTime}}-{{this.response.data.bonusList[0].useEndTime}}</p>
         </div>
         <!--按钮-->
