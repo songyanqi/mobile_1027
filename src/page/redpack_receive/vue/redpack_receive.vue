@@ -156,7 +156,7 @@
         <p>开通会员才能领红包哦~</p>
       </div>
       <!--按钮-->
-      <a class="btn" :href="response.data.useUrl"><p>立即开通会员</p></a>
+      <a class="btn" href="/348.html?rp=bonusactivity&rl=button"><p>立即开通会员</p></a>
       <!--使用说明-->
       <div class="rule">
         <img class="title" src="http://pic.davdian.com/free/redpack_receive/rule-title.png">
