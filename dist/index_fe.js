@@ -45,7 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	document.body.style.display = 'none'
-	var index = __webpack_require__(1246);
+	var index = __webpack_require__(1251);
 	__webpack_require__(33);
 	__webpack_require__(37);
 
@@ -54,7 +54,7 @@
 	__webpack_require__(43);
 	__webpack_require__(42);
 
-	var VueLazyload = __webpack_require__(418);
+	var VueLazyload = __webpack_require__(423);
 	Vue.use(VueLazyload, {
 	    try: 3,
 	    preload:2
@@ -15386,7 +15386,7 @@
 
 
 	// module
-	exports.push([module.id, ".no_discuss[_v-26b56ef0] {\n  padding-bottom: 20px;\n  text-align: center;\n  /*margin-top: -15px;*/ }\n  .no_discuss img[_v-26b56ef0] {\n    width: 120px;\n    display: inline-block; }\n  .no_discuss p[_v-26b56ef0] {\n    color: #666;\n    margin-top: .3rem;\n    padding-bottom: .1rem;\n    width: 100%;\n    text-align: center;\n    font-size: .14rem;\n    display: inline-block; }\n  .no_discuss .discuss_top_write[_v-26b56ef0] {\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n    .no_discuss .discuss_top_write img[_v-26b56ef0] {\n      width: 11px;\n      margin-left: 0; }\n  .no_discuss .discuss_top_no_write[_v-26b56ef0] {\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n\n.discuss_top[_v-26b56ef0] {\n  padding: 10px;\n  padding-top: 15px;\n  position: relative; }\n  .discuss_top .discuss_top_write[_v-26b56ef0] {\n    float: left;\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 130px;\n    font-size: 12px; }\n    .discuss_top .discuss_top_write img[_v-26b56ef0] {\n      width: 11px; }\n  .discuss_top .discuss_top_no_write[_v-26b56ef0] {\n    float: left;\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 139px;\n    font-size: 12px; }\n  .discuss_top .discuss_top_alldiscuss[_v-26b56ef0] {\n    float: right;\n    color: #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-right: 10px;\n    font-size: 12px; }\n  .discuss_top .icon[_v-26b56ef0] {\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n    transform: rotate(45deg);\n    background: none;\n    top: 22px;\n    position: absolute;\n    right: 11px; }\n\n.discuss_top[_v-26b56ef0]:after {\n  content: \"\";\n  height: 0;\n  clear: both;\n  display: table; }\n\n.discuss_container[_v-26b56ef0] {\n  padding-top: 0.21rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  padding-bottom: 0.15rem;\n  font-size: 0;\n  background: #fff;\n  border-bottom: 0.5px solid #F1F1F1; }\n\n.discuss_container_noborder[_v-26b56ef0] {\n  border-bottom: 0px; }\n\n.discuss_title .title_all[_v-26b56ef0] {\n  display: inline-block;\n  vertical-align: middle; }\n\n.discuss_title .title_img[_v-26b56ef0] {\n  width: 0.24rem;\n  height: 0.24rem;\n  border-radius: 50%;\n  background: red; }\n\n.discuss_title .title_name[_v-26b56ef0] {\n  font-size: 0.14rem;\n  color: #666666;\n  margin-left: 0.05rem; }\n\n.discuss_title .title_time[_v-26b56ef0] {\n  font-size: 0.12rem;\n  margin-left: 0.03rem;\n  color: #999999; }\n\n.discuss_title .title_star[_v-26b56ef0] {\n  width: 0.59rem;\n  float: right;\n  margin-top: 0.06rem; }\n\n.discuss_content[_v-26b56ef0] {\n  font-size: 0.13rem;\n  color: #333333;\n  margin-top: 0.1rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 5;\n  display: -webkit-box; }\n\n.discuss_seeAll[_v-26b56ef0] {\n  width: 0.8rem;\n  font-size: 0.13rem;\n  color: #FF4A7D;\n  padding-top: 0.1rem; }\n\n.discuss_imgContainer[_v-26b56ef0] {\n  font-size: 0;\n  width: 3.1rem;\n  /*min-height: 1rem;*/\n  margin-top: 0.1rem; }\n  .discuss_imgContainer .discuss_img[_v-26b56ef0] {\n    width: 0.9rem;\n    height: 0.9rem;\n    background: red;\n    display: inline-block;\n    vertical-align: top;\n    margin-right: 0.1rem;\n    margin-bottom: 0.1rem;\n    border-radius: 3px; }\n\n.discuss_share[_v-26b56ef0] {\n  width: 100%;\n  height: 0.16rem; }\n  .discuss_share .discuss_share_container[_v-26b56ef0] {\n    height: 0.16rem;\n    float: right;\n    font-size: 0.11rem;\n    color: #999999; }\n    .discuss_share .discuss_share_container img[_v-26b56ef0] {\n      width: 0.15rem; }\n\n.discuss_all[_v-26b56ef0] {\n  width: 100%;\n  color: #999999;\n  text-align: center;\n  height: 0.5rem; }\n  .discuss_all .discuss_all_content[_v-26b56ef0] {\n    display: inline-block;\n    border-bottom: 1px solid #999;\n    height: 19px; }\n\n.attention_all[_v-26b56ef0] {\n  font-size: 0;\n  display: inline-block;\n  vertical-align: middle; }\n\n.attention_yes[_v-26b56ef0] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  /*border: 0.5px solid #FF4A7D;*/\n  border-radius: 13px; }\n\n.attention_yes1[_v-26b56ef0] {\n  width: 0.45rem !important;\n  height: 0.18rem !important;\n  display: inline-block;\n  vertical-align: top; }\n\n.attention_no[_v-26b56ef0] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #fff;\n  background: #D8D8D8;\n  border: 0.5px solid #D8D8D8;\n  border-radius: 13px; }\n\n.maskAttention[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background: #000;\n  opacity: 0.4;\n  z-index: 1001; }\n\n.contentAttention[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 1202;\n  margin: auto;\n  background: #000;\n  width: 2.7rem;\n  opacity: 0.65;\n  border-radius: 6px;\n  color: #fff;\n  height: 0.72rem; }\n\n.contentAttention h1[_v-26b56ef0] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center;\n  margin-top: 0.15rem; }\n\n.contentAttention p[_v-26b56ef0] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center; }\n\n.course_desc_0 .class_introduce_tit[_v-26b56ef0] {\n  text-align: center !important;\n  line-height: 15px; }\n\n.course_desc_0 .class_introduce_tit .class_dis[_v-26b56ef0], .course_desc_0 .class_introduce_tit .theater_dis[_v-26b56ef0] {\n  display: inline-block !important; }\n\n.course_desc_0 .class_introduce_tit .class_dis .active[_v-26b56ef0] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .theater_dis .active[_v-26b56ef0] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .class_dis span[_v-26b56ef0] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .class_introduce_tit .theater_dis span[_v-26b56ef0] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .fixStyle[_v-26b56ef0] {\n  position: fixed;\n  top: 44px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0 .fixStyle1[_v-26b56ef0] {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0[_v-26b56ef0] {\n  position: relative; }\n\n.introduceGuide[_v-26b56ef0] {\n  position: absolute;\n  top: -14px;\n  width: 320px;\n  right: 4%;\n  z-index: 1000; }\n\n.introduceGuide1[_v-26b56ef0] {\n  position: absolute;\n  left: 0;\n  width: 248px;\n  z-index: 1000;\n  bottom: -10px; }\n\n.introduceGuideMask[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 60px;\n  left: 0;\n  background: #000000;\n  opacity: 0.6;\n  z-index: 999; }\n\n.introduceGuidebtn[_v-26b56ef0] {\n  width: 120px;\n  height: 40px;\n  position: fixed;\n  left: 50%;\n  margin-left: -60px;\n  bottom: 60px;\n  z-index: 1000;\n  background: -webkit-linear-gradient(left, #FF7C7C, #FF6A8B);\n  border-radius: 100px;\n  text-align: center;\n  line-height: 40px;\n  color: #fff; }\n", ""]);
+	exports.push([module.id, ".no_discuss[_v-26b56ef0] {\n  padding-bottom: 20px;\n  text-align: center;\n  /*margin-top: -15px;*/ }\n  .no_discuss img[_v-26b56ef0] {\n    width: 120px;\n    display: inline-block; }\n  .no_discuss p[_v-26b56ef0] {\n    color: #666;\n    margin-top: .3rem;\n    padding-bottom: .1rem;\n    width: 100%;\n    text-align: center;\n    font-size: .14rem;\n    display: inline-block; }\n  .no_discuss .discuss_top_write[_v-26b56ef0] {\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n    .no_discuss .discuss_top_write img[_v-26b56ef0] {\n      width: 11px;\n      margin-left: 0; }\n  .no_discuss .discuss_top_no_write[_v-26b56ef0] {\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n\n.discuss_top[_v-26b56ef0] {\n  padding: 10px;\n  padding-top: 15px;\n  position: relative; }\n  .discuss_top .discuss_top_write[_v-26b56ef0] {\n    float: left;\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 130px;\n    font-size: 12px; }\n    .discuss_top .discuss_top_write img[_v-26b56ef0] {\n      width: 11px; }\n  .discuss_top .discuss_top_no_write[_v-26b56ef0] {\n    float: left;\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 139px;\n    font-size: 12px; }\n  .discuss_top .discuss_top_alldiscuss[_v-26b56ef0] {\n    float: right;\n    color: #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-right: 10px;\n    font-size: 12px; }\n  .discuss_top .icon[_v-26b56ef0] {\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n    transform: rotate(45deg);\n    background: none;\n    top: 22px;\n    position: absolute;\n    right: 11px; }\n\n.discuss_top[_v-26b56ef0]:after {\n  content: \"\";\n  height: 0;\n  clear: both;\n  display: table; }\n\n.discuss_container[_v-26b56ef0] {\n  padding-top: 0.21rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  padding-bottom: 0.15rem;\n  font-size: 0;\n  background: #fff;\n  border-bottom: 0.5px solid #F1F1F1; }\n\n.discuss_container_noborder[_v-26b56ef0] {\n  border-bottom: 0px; }\n\n.discuss_title .title_all[_v-26b56ef0] {\n  display: inline-block;\n  vertical-align: middle; }\n\n.discuss_title .title_img[_v-26b56ef0] {\n  width: 0.24rem;\n  height: 0.24rem;\n  border-radius: 50%;\n  background: red; }\n\n.discuss_title .title_name[_v-26b56ef0] {\n  font-size: 0.14rem;\n  color: #666666;\n  margin-left: 0.05rem; }\n\n.discuss_title .title_time[_v-26b56ef0] {\n  font-size: 0.12rem;\n  margin-left: 0.03rem;\n  color: #999999; }\n\n.discuss_title .title_star[_v-26b56ef0] {\n  width: 0.59rem;\n  float: right;\n  margin-top: 0.06rem; }\n\n.discuss_content[_v-26b56ef0] {\n  font-size: 0.13rem;\n  color: #333333;\n  margin-top: 0.1rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 5;\n  display: -webkit-box; }\n\n.discuss_seeAll[_v-26b56ef0] {\n  width: 0.8rem;\n  font-size: 0.13rem;\n  color: #FF4A7D;\n  padding-top: 0.1rem; }\n\n.discuss_imgContainer[_v-26b56ef0] {\n  font-size: 0;\n  width: 3.1rem;\n  /*min-height: 1rem;*/\n  margin-top: 0.1rem; }\n  .discuss_imgContainer .discuss_img[_v-26b56ef0] {\n    width: 0.9rem;\n    height: 0.9rem;\n    background: red;\n    display: inline-block;\n    vertical-align: top;\n    margin-right: 0.1rem;\n    margin-bottom: 0.1rem;\n    border-radius: 3px; }\n\n.discuss_share[_v-26b56ef0] {\n  width: 100%;\n  height: 0.16rem; }\n  .discuss_share .discuss_share_container[_v-26b56ef0] {\n    height: 0.16rem;\n    float: right;\n    font-size: 0.11rem;\n    color: #999999; }\n    .discuss_share .discuss_share_container img[_v-26b56ef0] {\n      width: 0.15rem; }\n\n.discuss_all[_v-26b56ef0] {\n  width: 100%;\n  color: #999999;\n  text-align: center;\n  height: 0.5rem; }\n  .discuss_all .discuss_all_content[_v-26b56ef0] {\n    display: inline-block;\n    border-bottom: 1px solid #999;\n    height: 19px; }\n\n.attention_all[_v-26b56ef0] {\n  font-size: 0;\n  display: inline-block;\n  vertical-align: middle; }\n\n.attention_yes[_v-26b56ef0] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  /*border: 0.5px solid #FF4A7D;*/\n  border-radius: 13px; }\n\n.attention_yes1[_v-26b56ef0] {\n  width: 0.45rem !important;\n  height: 0.18rem !important;\n  display: inline-block;\n  vertical-align: top; }\n\n.attention_no[_v-26b56ef0] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #fff;\n  background: #D8D8D8;\n  border: 0.5px solid #D8D8D8;\n  border-radius: 13px; }\n\n.maskAttention[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background: #000;\n  opacity: 0.4;\n  z-index: 1001; }\n\n.contentAttention[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 1202;\n  margin: auto;\n  background: #000;\n  width: 2.7rem;\n  opacity: 0.65;\n  border-radius: 6px;\n  color: #fff;\n  height: 0.72rem; }\n\n.contentAttention h1[_v-26b56ef0] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center;\n  margin-top: 0.15rem; }\n\n.contentAttention p[_v-26b56ef0] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center; }\n\n.course_desc_0 .class_introduce_tit[_v-26b56ef0] {\n  text-align: center !important;\n  line-height: 15px; }\n\n.course_desc_0 .class_introduce_tit .class_dis[_v-26b56ef0], .course_desc_0 .class_introduce_tit .theater_dis[_v-26b56ef0] {\n  display: inline-block !important; }\n\n.course_desc_0 .class_introduce_tit .class_dis .active[_v-26b56ef0] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .theater_dis .active[_v-26b56ef0] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .class_dis span[_v-26b56ef0] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .class_introduce_tit .theater_dis span[_v-26b56ef0] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .fixStyle[_v-26b56ef0] {\n  position: fixed;\n  top: 44px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0 .fixStyle1[_v-26b56ef0] {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0[_v-26b56ef0] {\n  position: relative; }\n\n.introduceGuide[_v-26b56ef0] {\n  position: absolute;\n  top: -14px;\n  width: 3.2rem;\n  right: 21px;\n  z-index: 1000; }\n\n.introduceGuide1[_v-26b56ef0] {\n  position: absolute;\n  left: 0;\n  width: 248px;\n  z-index: 1000;\n  bottom: -10px; }\n\n.introduceGuideMask[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background: #000000;\n  opacity: 0.6;\n  z-index: 999; }\n\n.introduceGuidebtn[_v-26b56ef0] {\n  width: 120px;\n  height: 40px;\n  position: fixed;\n  left: 50%;\n  margin-left: -60px;\n  bottom: 60px;\n  z-index: 1000;\n  background: -webkit-linear-gradient(left, #FF7C7C, #FF6A8B);\n  border-radius: 100px;\n  text-align: center;\n  line-height: 40px;\n  color: #fff; }\n", ""]);
 
 	// exports
 
@@ -15483,8 +15483,8 @@
 	//         </div>
 	//         <div v-if="class_introduce_left==2">
 	//             <div class='discuss_top'>
-	//                  <img v-if='introduceGuide && guide==2 && userTicket==1' class='introduceGuide1 writeAllSignUp' src="//pic.davdian.com/free/2017/08/11/writeAllSignUp.png">
-	//                  <img v-if='introduceGuide && guide==2 && userTicket==0' class='introduceGuide1 writeAllSignUp' src="//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png">
+	//                  <img v-if='introduceGuide && guide==2 && userTicket==1' class='introduceGuide1' src="//pic.davdian.com/free/2017/08/11/writeAllSignUp.png">
+	//                  <img v-if='introduceGuide && guide==2 && userTicket==0' class='introduceGuide1' src="//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png">
 	//                 <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>
 	//                     写我的听课笔记
 	//                     <img src="//pic.davdian.com/free/2017/07/26/write.png">
@@ -15546,7 +15546,7 @@
 	//             <p>老师开讲新课，我们会悄悄告诉你呦</p>
 	//         </div>
 	//
-	//         <img v-if='introduceGuide && guide==1' class='introduceGuide lectureNnotesAll' src="//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png">
+	//         <img v-if='introduceGuide && guide==1' class='introduceGuide' src="//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png">
 	//
 	//         <div v-if='introduceGuide' class='introduceGuideMask'></div>
 	//         <div v-if='introduceGuide' class='introduceGuidebtn' @click='know'>知道了</div>
@@ -15876,9 +15876,9 @@
 	//     .introduceGuide{
 	//         position: absolute;
 	//         top: -14px;
-	//         width: 320px;
-	//         right: 4%;
-	//         z-index: 1000;
+	//         width: 3.2rem;
+	//         right: 21px;
+	//         z-index:1000;
 	//     }
 	//     .introduceGuide1{
 	//         position: absolute;
@@ -15891,7 +15891,7 @@
 	//         position: fixed;
 	//         top: 0;
 	//         right: 0;
-	//         bottom: 60px;
+	//         bottom: 0;
 	//         left: 0;
 	//         background: #000000;
 	//         opacity: 0.6;
@@ -15989,26 +15989,12 @@
 	                    } else {
 	                        window.backNewData.$children[0].bottomBtn = true;
 	                        localStorage.setItem('introduceGuide', 1);
-	                        if ($('.class_introduce_tit').offset().top > 300) {
-	                            $('#scroll_container').scrollTop($('.class_introduce_tit').offset().top - 300);
+	                        if ($('.class_introduce_tit').offset().top > 400) {
+	                            $('#scroll_container').scrollTop($('.class_introduce_tit').offset().top - 400);
 	                        }
 	                        that.introduceGuide = true;
 	                        that.class_introduce_left = 2;
 	                        that.guide = 1;
-	                        setTimeout(function () {
-	                            $(".introduceGuideMask").on('touchmove', function (e) {
-	                                e.preventDefault();
-	                            });
-	                            $(".bottomBtn").on('touchmove', function (e) {
-	                                e.preventDefault();
-	                            });
-	                            $(".lectureNnotesAll").on('touchmove', function (e) {
-	                                e.preventDefault();
-	                            });
-	                            $(".writeAllSignUp").on('touchmove', function (e) {
-	                                e.preventDefault();
-	                            });
-	                        }, 100);
 	                    }
 	                }
 	            }, 1000);
@@ -16051,20 +16037,6 @@
 	        know: function know() {
 	            if (this.guide == 1) {
 	                this.guide = 2;
-	                setTimeout(function () {
-	                    $(".introduceGuideMask").on('touchmove', function (e) {
-	                        e.preventDefault();
-	                    });
-	                    $(".bottomBtn").on('touchmove', function (e) {
-	                        e.preventDefault();
-	                    });
-	                    $(".lectureNnotesAll").on('touchmove', function (e) {
-	                        e.preventDefault();
-	                    });
-	                    $(".writeAllSignUp").on('touchmove', function (e) {
-	                        e.preventDefault();
-	                    });
-	                }, 100);
 	                return;
 	            }
 	            if (this.guide == 2) {
@@ -19544,7 +19516,7 @@
 /* 310 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"course_desc_0\" :style=\"styleObject\" _v-26b56ef0=\"\">\n    <div class=\"block\" style=\"width: 100%;height: 47px;\" v-if=\"fixFlag\" _v-26b56ef0=\"\"></div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle: fixFlag}\" v-if=\"!isApp\" _v-26b56ef0=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-26b56ef0=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-26b56ef0=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-26b56ef0=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle1: fixFlag}\" v-if=\"isApp\" _v-26b56ef0=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-26b56ef0=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-26b56ef0=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-26b56ef0=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_intrduce_success\" _v-26b56ef0=\"\"></div>\n    <div v-if=\"class_introduce_left==1\" class=\"class_intrduce_left\" _v-26b56ef0=\"\">\n        <div v-if=\"courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_div\" _v-26b56ef0=\"\">\n            <img :src=\"item.imgUri\" v-for=\"(item,index) in courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_img\" _v-26b56ef0=\"\">\n        </div>\n        <div class=\"left_introduce_text\" _v-26b56ef0=\"\">\n            <p v-html=\"courseDescInfo.courseDesc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==0\" class=\"class_introduce_right\" _v-26b56ef0=\"\">\n        <div class=\"class_introduce_con\" _v-26b56ef0=\"\">\n            <a _v-26b56ef0=\"\">\n                <div class=\"teacher_tit\" _v-26b56ef0=\"\">\n                    <img @click=\"goTeacher(teacherDescInfo.command.content)\" class=\"img\" :src=\"teacherDescInfo.teacherAvatar\" alt=\"\" _v-26b56ef0=\"\">\n                    <div class=\"teacher_dis\" _v-26b56ef0=\"\">\n                        <span class=\"techer\" _v-26b56ef0=\"\">{{teacherDescInfo.teacherName}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != teacherDescInfo.teacherId\" _v-26b56ef0=\"\">\n                        <!-- <div class='attention_yes' v-if='attention==0' @click='attention_yes'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"attention==0\" @click=\"attention_yes\" _v-26b56ef0=\"\">\n                        <div class=\"attention_no\" v-if=\"attention==1\" _v-26b56ef0=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-26b56ef0=\"\">\n                <p v-html=\"teacherDescInfo.teacherDesc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n            </div>\n        </div>\n        <div class=\"class_introduce_con guest_introduce_con\" v-for=\"item in guestList\" _v-26b56ef0=\"\">\n            <a _v-26b56ef0=\"\">\n                <div class=\"teacher_tit\" _v-26b56ef0=\"\">\n                    <img @click=\"goTeacher(item.command.content)\" class=\"img\" :src=\"item.avatar\" alt=\"\" _v-26b56ef0=\"\">\n                    <div class=\"teacher_dis\" _v-26b56ef0=\"\">\n                        <span class=\"techer\" _v-26b56ef0=\"\">{{item.name}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != item.teacherId\" _v-26b56ef0=\"\">\n                        <!-- <div class='attention_yes' v-if='item.followStatus==0' @click='attention_yes_guest(item.teacherId)'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"item.followStatus==0\" @click=\"attention_yes_guest(item.teacherId)\" _v-26b56ef0=\"\">\n                        <div class=\"attention_no\" v-if=\"item.followStatus==1\" _v-26b56ef0=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-26b56ef0=\"\">\n                <p v-html=\"item.desc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n            </div>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==2\" _v-26b56ef0=\"\">\n        <div class=\"discuss_top\" _v-26b56ef0=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==1\" class=\"introduceGuide1 writeAllSignUp\" src=\"//pic.davdian.com/free/2017/08/11/writeAllSignUp.png\" _v-26b56ef0=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==0\" class=\"introduceGuide1 writeAllSignUp\" src=\"//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png\" _v-26b56ef0=\"\">\n            <div class=\"discuss_top_write\" @click=\"writeNote\" v-if=\"userTicket==1 &amp;&amp; AppVersionFlag\" _v-26b56ef0=\"\">\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\" _v-26b56ef0=\"\">\n\n            </div>\n            <div class=\"discuss_top_no_write\" v-if=\"userTicket==0 &amp;&amp; AppVersionFlag\" _v-26b56ef0=\"\">\n                报名后才能写笔记哦\n            </div>\n            <div class=\"discuss_top_alldiscuss\" @click=\"allNote\" _v-26b56ef0=\"\">\n                全部笔记\n                <!-- <img src=\"//pic.davdian.com/free/2017/07/26/entry.png\"> -->\n            </div>\n            <i class=\"icon\" _v-26b56ef0=\"\"></i>\n        </div>\n        <div class=\"discuss_container\" v-if=\"notesList.length!=0\" :class=\"{discuss_container_noborder: index == notesList.length-1}\" v-for=\"(item, index) in notesList\" @click.stop=\"show_all(item)\" _v-26b56ef0=\"\">\n            <div class=\"discuss_title\" _v-26b56ef0=\"\">\n                <div class=\"title_img title_all\" :style=\"{'background': 'url(' + item.headImg + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-26b56ef0=\"\"></div>    \n                <div class=\"title_name title_all\" v-text=\"item.userName\" _v-26b56ef0=\"\"></div>\n                <div class=\"title_time title_all\" v-text=\"item.createTime\" _v-26b56ef0=\"\"></div>\n                <img class=\"title_star title_all\" v-if=\"item.score == 1\" src=\"//pic.davdian.com/free/2017/05/09/star_1.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 2\" src=\"//pic.davdian.com/free/2017/05/09/star_2.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 3\" src=\"//pic.davdian.com/free/2017/05/09/star_3.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 4\" src=\"//pic.davdian.com/free/2017/05/09/star_4.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 5\" src=\"//pic.davdian.com/free/2017/05/09/star_5.png\" _v-26b56ef0=\"\">\n            </div>\n            <div class=\"discuss_content\" v-html=\"item.content.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==1\" @click.stop=\"showAll(index)\" _v-26b56ef0=\"\">查看全部</div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==2\" @click.stop=\"showAll1(index)\" _v-26b56ef0=\"\">收起</div>\n            <div class=\"discuss_imgContainer\" _v-26b56ef0=\"\">\n                <div class=\"discuss_img\" :style=\"{'background': 'url(' + item1 + ') center center / cover no-repeat' , 'background-size': 'cover'}\" v-for=\"(item1, index) in item.imgList\" @click=\"showImg(index,item.imgList, item1)\" _v-26b56ef0=\"\"></div>\n            </div>\n            <div class=\"discuss_share\" v-if=\"isApp\" _v-26b56ef0=\"\">\n                <div class=\"discuss_share_container\" @click.stop=\"share(item)\" v-if=\"isApp\" _v-26b56ef0=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/02/07/material-share.png\" _v-26b56ef0=\"\">\n                    <span v-text=\"item.shareNum\" v-if=\"item.shareNum !=0\" _v-26b56ef0=\"\"></span>\n                </div>\n            </div>\n        </div>\n        <!-- <div class='discuss_all'>\n            <div class=\"discuss_all_content\" @click='allNote' v-if='notesList.length!=0'>\n                查看全部{{notesNum}}条听课笔记\n            </div>\n        </div> -->\n        <div class=\"no_discuss\" v-if=\"notesList.length==0\" _v-26b56ef0=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/10/error_img.png\" _v-26b56ef0=\"\">\n            <p _v-26b56ef0=\"\">快来写笔记吧</p>\n            <!-- <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\">\n            </div>\n            <div class='discuss_top_no_write' v-if='userTicket==0 && AppVersionFlag'>\n                报名后才能写笔记哦\n            </div> -->\n        </div>\n    </div>\n    <!-- <div class='maskAttention' v-if='maskAttention'></div> -->\n    <div class=\"contentAttention\" v-if=\"maskAttention\" _v-26b56ef0=\"\">\n        <h1 _v-26b56ef0=\"\">关注成功</h1>\n        <p _v-26b56ef0=\"\">老师开讲新课，我们会悄悄告诉你呦</p>\n    </div>\n\n    <img v-if=\"introduceGuide &amp;&amp; guide==1\" class=\"introduceGuide lectureNnotesAll\" src=\"//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png\" _v-26b56ef0=\"\">\n\n    <div v-if=\"introduceGuide\" class=\"introduceGuideMask\" _v-26b56ef0=\"\"></div>\n    <div v-if=\"introduceGuide\" class=\"introduceGuidebtn\" @click=\"know\" _v-26b56ef0=\"\">知道了</div>\n\n</div>\n";
+	module.exports = "\n<div class=\"course_desc_0\" :style=\"styleObject\" _v-26b56ef0=\"\">\n    <div class=\"block\" style=\"width: 100%;height: 47px;\" v-if=\"fixFlag\" _v-26b56ef0=\"\"></div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle: fixFlag}\" v-if=\"!isApp\" _v-26b56ef0=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-26b56ef0=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-26b56ef0=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-26b56ef0=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle1: fixFlag}\" v-if=\"isApp\" _v-26b56ef0=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-26b56ef0=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-26b56ef0=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-26b56ef0=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_intrduce_success\" _v-26b56ef0=\"\"></div>\n    <div v-if=\"class_introduce_left==1\" class=\"class_intrduce_left\" _v-26b56ef0=\"\">\n        <div v-if=\"courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_div\" _v-26b56ef0=\"\">\n            <img :src=\"item.imgUri\" v-for=\"(item,index) in courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_img\" _v-26b56ef0=\"\">\n        </div>\n        <div class=\"left_introduce_text\" _v-26b56ef0=\"\">\n            <p v-html=\"courseDescInfo.courseDesc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==0\" class=\"class_introduce_right\" _v-26b56ef0=\"\">\n        <div class=\"class_introduce_con\" _v-26b56ef0=\"\">\n            <a _v-26b56ef0=\"\">\n                <div class=\"teacher_tit\" _v-26b56ef0=\"\">\n                    <img @click=\"goTeacher(teacherDescInfo.command.content)\" class=\"img\" :src=\"teacherDescInfo.teacherAvatar\" alt=\"\" _v-26b56ef0=\"\">\n                    <div class=\"teacher_dis\" _v-26b56ef0=\"\">\n                        <span class=\"techer\" _v-26b56ef0=\"\">{{teacherDescInfo.teacherName}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != teacherDescInfo.teacherId\" _v-26b56ef0=\"\">\n                        <!-- <div class='attention_yes' v-if='attention==0' @click='attention_yes'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"attention==0\" @click=\"attention_yes\" _v-26b56ef0=\"\">\n                        <div class=\"attention_no\" v-if=\"attention==1\" _v-26b56ef0=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-26b56ef0=\"\">\n                <p v-html=\"teacherDescInfo.teacherDesc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n            </div>\n        </div>\n        <div class=\"class_introduce_con guest_introduce_con\" v-for=\"item in guestList\" _v-26b56ef0=\"\">\n            <a _v-26b56ef0=\"\">\n                <div class=\"teacher_tit\" _v-26b56ef0=\"\">\n                    <img @click=\"goTeacher(item.command.content)\" class=\"img\" :src=\"item.avatar\" alt=\"\" _v-26b56ef0=\"\">\n                    <div class=\"teacher_dis\" _v-26b56ef0=\"\">\n                        <span class=\"techer\" _v-26b56ef0=\"\">{{item.name}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != item.teacherId\" _v-26b56ef0=\"\">\n                        <!-- <div class='attention_yes' v-if='item.followStatus==0' @click='attention_yes_guest(item.teacherId)'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"item.followStatus==0\" @click=\"attention_yes_guest(item.teacherId)\" _v-26b56ef0=\"\">\n                        <div class=\"attention_no\" v-if=\"item.followStatus==1\" _v-26b56ef0=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-26b56ef0=\"\">\n                <p v-html=\"item.desc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n            </div>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==2\" _v-26b56ef0=\"\">\n        <div class=\"discuss_top\" _v-26b56ef0=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==1\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllSignUp.png\" _v-26b56ef0=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==0\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png\" _v-26b56ef0=\"\">\n            <div class=\"discuss_top_write\" @click=\"writeNote\" v-if=\"userTicket==1 &amp;&amp; AppVersionFlag\" _v-26b56ef0=\"\">\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\" _v-26b56ef0=\"\">\n\n            </div>\n            <div class=\"discuss_top_no_write\" v-if=\"userTicket==0 &amp;&amp; AppVersionFlag\" _v-26b56ef0=\"\">\n                报名后才能写笔记哦\n            </div>\n            <div class=\"discuss_top_alldiscuss\" @click=\"allNote\" _v-26b56ef0=\"\">\n                全部笔记\n                <!-- <img src=\"//pic.davdian.com/free/2017/07/26/entry.png\"> -->\n            </div>\n            <i class=\"icon\" _v-26b56ef0=\"\"></i>\n        </div>\n        <div class=\"discuss_container\" v-if=\"notesList.length!=0\" :class=\"{discuss_container_noborder: index == notesList.length-1}\" v-for=\"(item, index) in notesList\" @click.stop=\"show_all(item)\" _v-26b56ef0=\"\">\n            <div class=\"discuss_title\" _v-26b56ef0=\"\">\n                <div class=\"title_img title_all\" :style=\"{'background': 'url(' + item.headImg + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-26b56ef0=\"\"></div>    \n                <div class=\"title_name title_all\" v-text=\"item.userName\" _v-26b56ef0=\"\"></div>\n                <div class=\"title_time title_all\" v-text=\"item.createTime\" _v-26b56ef0=\"\"></div>\n                <img class=\"title_star title_all\" v-if=\"item.score == 1\" src=\"//pic.davdian.com/free/2017/05/09/star_1.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 2\" src=\"//pic.davdian.com/free/2017/05/09/star_2.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 3\" src=\"//pic.davdian.com/free/2017/05/09/star_3.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 4\" src=\"//pic.davdian.com/free/2017/05/09/star_4.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 5\" src=\"//pic.davdian.com/free/2017/05/09/star_5.png\" _v-26b56ef0=\"\">\n            </div>\n            <div class=\"discuss_content\" v-html=\"item.content.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==1\" @click.stop=\"showAll(index)\" _v-26b56ef0=\"\">查看全部</div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==2\" @click.stop=\"showAll1(index)\" _v-26b56ef0=\"\">收起</div>\n            <div class=\"discuss_imgContainer\" _v-26b56ef0=\"\">\n                <div class=\"discuss_img\" :style=\"{'background': 'url(' + item1 + ') center center / cover no-repeat' , 'background-size': 'cover'}\" v-for=\"(item1, index) in item.imgList\" @click=\"showImg(index,item.imgList, item1)\" _v-26b56ef0=\"\"></div>\n            </div>\n            <div class=\"discuss_share\" v-if=\"isApp\" _v-26b56ef0=\"\">\n                <div class=\"discuss_share_container\" @click.stop=\"share(item)\" v-if=\"isApp\" _v-26b56ef0=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/02/07/material-share.png\" _v-26b56ef0=\"\">\n                    <span v-text=\"item.shareNum\" v-if=\"item.shareNum !=0\" _v-26b56ef0=\"\"></span>\n                </div>\n            </div>\n        </div>\n        <!-- <div class='discuss_all'>\n            <div class=\"discuss_all_content\" @click='allNote' v-if='notesList.length!=0'>\n                查看全部{{notesNum}}条听课笔记\n            </div>\n        </div> -->\n        <div class=\"no_discuss\" v-if=\"notesList.length==0\" _v-26b56ef0=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/10/error_img.png\" _v-26b56ef0=\"\">\n            <p _v-26b56ef0=\"\">快来写笔记吧</p>\n            <!-- <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\">\n            </div>\n            <div class='discuss_top_no_write' v-if='userTicket==0 && AppVersionFlag'>\n                报名后才能写笔记哦\n            </div> -->\n        </div>\n    </div>\n    <!-- <div class='maskAttention' v-if='maskAttention'></div> -->\n    <div class=\"contentAttention\" v-if=\"maskAttention\" _v-26b56ef0=\"\">\n        <h1 _v-26b56ef0=\"\">关注成功</h1>\n        <p _v-26b56ef0=\"\">老师开讲新课，我们会悄悄告诉你呦</p>\n    </div>\n\n    <img v-if=\"introduceGuide &amp;&amp; guide==1\" class=\"introduceGuide\" src=\"//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png\" _v-26b56ef0=\"\">\n\n    <div v-if=\"introduceGuide\" class=\"introduceGuideMask\" _v-26b56ef0=\"\"></div>\n    <div v-if=\"introduceGuide\" class=\"introduceGuidebtn\" @click=\"know\" _v-26b56ef0=\"\">知道了</div>\n\n</div>\n";
 
 /***/ },
 /* 311 */
@@ -22976,7 +22948,7 @@
 	//             </div>
 	//             <div class="order_good_info_container">
 	//               <div class="order_good_name">{{item.title}}</div>
-	//               <div class="order_good_name order_good_name_in">{{item.recomWord}}</div>
+	//               <div class="order_good_name order_good_name_in">{{item.recomWord.split("\n")[0]}}</div>
 	//               <div class="order_good_price">
 	//                 <span class="f_l"><em class="price_symbol">￥</em><span>{{(item.nowPrice+"").split(".")[0]}}</span><span v-if="(item.nowPrice+'').split('.').length == 2" class="newOriginal_price">.{{(item.nowPrice+"").split(".")[1]}}</span></span><span v-if="item.timeshopIncome != '0'" class="membership_crown">限时返 <em>￥</em>{{item.timeshopIncome}}
 	//                 <span v-if="item.income" class="membership_crown_pre">平日返<em>￥</em>{{item.income}}</span></span>
@@ -23289,7 +23261,7 @@
 /* 364 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-366e10d9=\"\">\n  <ul _v-366e10d9=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-366e10d9=\"\">\n      <a :href=\"item.command.content\" _v-366e10d9=\"\">\n        <div class=\"img_container\" _v-366e10d9=\"\">\n          <div class=\"img_container_inner\" _v-366e10d9=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-366e10d9=\"\">\n            <div v-if=\"item.buttonStatus == 3\" _v-366e10d9=\"\">已抢光</div>\n          </div>\n          <div class=\"order_good_info_container\" _v-366e10d9=\"\">\n            <div class=\"order_good_name\" _v-366e10d9=\"\">{{item.title}}</div>\n            <div class=\"order_good_name order_good_name_in\" _v-366e10d9=\"\">{{item.recomWord}}</div>\n            <div class=\"order_good_price\" _v-366e10d9=\"\">\n              <span class=\"f_l\" _v-366e10d9=\"\"><em class=\"price_symbol\" _v-366e10d9=\"\">￥</em><span _v-366e10d9=\"\">{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span v-if=\"(item.nowPrice+'').split('.').length == 2\" class=\"newOriginal_price\" _v-366e10d9=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span><span v-if=\"item.timeshopIncome != '0'\" class=\"membership_crown\" _v-366e10d9=\"\">限时返 <em _v-366e10d9=\"\">￥</em>{{item.timeshopIncome}}\n              <span v-if=\"item.income\" class=\"membership_crown_pre\" _v-366e10d9=\"\">平日返<em _v-366e10d9=\"\">￥</em>{{item.income}}</span></span>\n            </div>\n            <div v-if=\"item.buttonStatus != 3 &amp;&amp; item.timeshopGoodsNum\" class=\"progress_info\" _v-366e10d9=\"\">\n              仅剩 {{item.timeshopGoodsNum}} 件\n            </div>\n            <!--<div class=\"progress_bar\" v-if=\"(item.buttonStatus != 0)&&(item.buttonStatus != 1)\">-->\n            <!--<div class=\"progress_bar_bg\">-->\n            <!--<div class=\"progress_container\" :style=\"{width:item.percentage+'%'}\">-->\n            <!--</div>-->\n            <!--</div>-->\n            <!--<div class=\"finish_percentage\">已售{{item.percentage}}%</div>-->\n            <!--</div>-->\n          </div>\n        </div>\n      </a>\n      <a class=\"remain_btns\" _v-366e10d9=\"\">\n        <div class=\"panic_buying_btn\" :class=\"{panic_buying_btn2:item.buttonStatus < 2,buy_gray:item.buttonStatus == '3',seteds:item.buttonStatus == '0'}\" _v-366e10d9=\"\">{{item.buttonName}}\n        </div>\n        <div @click=\"Panicbuying(item,index)\" class=\"remain_btns_click\" _v-366e10d9=\"\"></div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-366e10d9=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-366e10d9=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-366e10d9=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-366e10d9=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-366e10d9=\"\"></div>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-366e10d9=\"\">\n  <ul _v-366e10d9=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-366e10d9=\"\">\n      <a :href=\"item.command.content\" _v-366e10d9=\"\">\n        <div class=\"img_container\" _v-366e10d9=\"\">\n          <div class=\"img_container_inner\" _v-366e10d9=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-366e10d9=\"\">\n            <div v-if=\"item.buttonStatus == 3\" _v-366e10d9=\"\">已抢光</div>\n          </div>\n          <div class=\"order_good_info_container\" _v-366e10d9=\"\">\n            <div class=\"order_good_name\" _v-366e10d9=\"\">{{item.title}}</div>\n            <div class=\"order_good_name order_good_name_in\" _v-366e10d9=\"\">{{item.recomWord.split(\"\\n\")[0]}}</div>\n            <div class=\"order_good_price\" _v-366e10d9=\"\">\n              <span class=\"f_l\" _v-366e10d9=\"\"><em class=\"price_symbol\" _v-366e10d9=\"\">￥</em><span _v-366e10d9=\"\">{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span v-if=\"(item.nowPrice+'').split('.').length == 2\" class=\"newOriginal_price\" _v-366e10d9=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span><span v-if=\"item.timeshopIncome != '0'\" class=\"membership_crown\" _v-366e10d9=\"\">限时返 <em _v-366e10d9=\"\">￥</em>{{item.timeshopIncome}}\n              <span v-if=\"item.income\" class=\"membership_crown_pre\" _v-366e10d9=\"\">平日返<em _v-366e10d9=\"\">￥</em>{{item.income}}</span></span>\n            </div>\n            <div v-if=\"item.buttonStatus != 3 &amp;&amp; item.timeshopGoodsNum\" class=\"progress_info\" _v-366e10d9=\"\">\n              仅剩 {{item.timeshopGoodsNum}} 件\n            </div>\n            <!--<div class=\"progress_bar\" v-if=\"(item.buttonStatus != 0)&&(item.buttonStatus != 1)\">-->\n            <!--<div class=\"progress_bar_bg\">-->\n            <!--<div class=\"progress_container\" :style=\"{width:item.percentage+'%'}\">-->\n            <!--</div>-->\n            <!--</div>-->\n            <!--<div class=\"finish_percentage\">已售{{item.percentage}}%</div>-->\n            <!--</div>-->\n          </div>\n        </div>\n      </a>\n      <a class=\"remain_btns\" _v-366e10d9=\"\">\n        <div class=\"panic_buying_btn\" :class=\"{panic_buying_btn2:item.buttonStatus < 2,buy_gray:item.buttonStatus == '3',seteds:item.buttonStatus == '0'}\" _v-366e10d9=\"\">{{item.buttonName}}\n        </div>\n        <div @click=\"Panicbuying(item,index)\" class=\"remain_btns_click\" _v-366e10d9=\"\"></div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-366e10d9=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-366e10d9=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-366e10d9=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-366e10d9=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-366e10d9=\"\"></div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 365 */
@@ -25081,7 +25053,12 @@
 
 /***/ },
 /* 417 */,
-/* 418 */
+/* 418 */,
+/* 419 */,
+/* 420 */,
+/* 421 */,
+/* 422 */,
+/* 423 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -25092,11 +25069,6 @@
 	!function(e,t){ true?module.exports=t():"function"==typeof define&&define.amd?define(t):e.VueLazyload=t()}(this,function(){"use strict";function e(e,t){if(e.length){var n=e.indexOf(t);return n>-1?e.splice(n,1):void 0}}function t(e,t){if(!e||!t)return e||{};if(e instanceof Object)for(var n in t)e[n]=t[n];return e}function n(e,t){for(var n=!1,i=0,r=e.length;i<r;i++)if(t(e[i])){n=!0;break}return n}function i(e,t){if("IMG"===e.tagName&&e.getAttribute("data-srcset")){var n=e.getAttribute("data-srcset"),i=[],r=e.parentNode,o=r.offsetWidth*t,a=void 0,s=void 0,u=void 0;n=n.trim().split(","),n.map(function(e){e=e.trim(),a=e.lastIndexOf(" "),a===-1?(s=e,u=999998):(s=e.substr(0,a),u=parseInt(e.substr(a+1,e.length-a-2),10)),i.push([u,s])}),i.sort(function(e,t){if(e[0]<t[0])return-1;if(e[0]>t[0])return 1;if(e[0]===t[0]){if(t[1].indexOf(".webp",t[1].length-5)!==-1)return 1;if(e[1].indexOf(".webp",e[1].length-5)!==-1)return-1}return 0});for(var d="",l=void 0,c=i.length,h=0;h<c;h++)if(l=i[h],l[0]>=o){d=l[1];break}return d}}function r(e,t){for(var n=void 0,i=0,r=e.length;i<r;i++)if(t(e[i])){n=e[i];break}return n}function o(){if(!f)return!1;var e=!0,t=document;try{var n=t.createElement("object");n.type="image/webp",n.style.visibility="hidden",n.innerHTML="!",t.body.appendChild(n),e=!n.offsetWidth,t.body.removeChild(n)}catch(t){e=!1}return e}function a(e,t){var n=null,i=0;return function(){if(!n){var r=Date.now()-i,o=this,a=arguments,s=function(){i=Date.now(),n=!1,e.apply(o,a)};r>=t?s():n=setTimeout(s,t)}}}function s(){if(f){var e=!1;try{var t=Object.defineProperty({},"passive",{get:function(){e=!0}});window.addEventListener("test",null,t)}catch(e){}return e}}function u(e){return null!==e&&"object"===("undefined"==typeof e?"undefined":l(e))}function d(e){if(!(e instanceof Object))return[];if(Object.keys)return Object.keys(e);var t=[];for(var n in e)e.hasOwnProperty(n)&&t.push(n);return t}var l="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol?"symbol":typeof e},c=function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")},h=function(){function e(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(t,n,i){return n&&e(t.prototype,n),i&&e(t,i),t}}(),f="undefined"!=typeof window,p=function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:1;return f&&window.devicePixelRatio||e},v=s(),y={on:function(e,t,n){v?e.addEventListener(t,n,{passive:!0}):e.addEventListener(t,n,!1)},off:function(e,t,n){e.removeEventListener(t,n)}},g=function(e,t,n){var i=new Image;i.src=e.src,i.onload=function(){t({naturalHeight:i.naturalHeight,naturalWidth:i.naturalWidth,src:i.src})},i.onerror=function(e){n(e)}},m=function(e,t){return"undefined"!=typeof getComputedStyle?getComputedStyle(e,null).getPropertyValue(t):e.style[t]},b=function(e){return m(e,"overflow")+m(e,"overflow-y")+m(e,"overflow-x")},L=function(e){if(f){if(!(e instanceof HTMLElement))return window;for(var t=e;t&&t!==document.body&&t!==document.documentElement&&t.parentNode;){if(/(scroll|auto)/.test(b(t)))return t;t=t.parentNode}return window}},w={},k=function(){function e(t){var n=t.el,i=t.src,r=t.error,o=t.loading,a=t.bindType,s=t.$parent,u=t.options,d=t.elRenderer;c(this,e),this.el=n,this.src=i,this.error=r,this.loading=o,this.bindType=a,this.attempt=0,this.naturalHeight=0,this.naturalWidth=0,this.options=u,this.filter(),this.initState(),this.performanceData={init:Date.now(),loadStart:null,loadEnd:null},this.rect=n.getBoundingClientRect(),this.$parent=s,this.elRenderer=d,this.render("loading",!1)}return h(e,[{key:"initState",value:function(){this.state={error:!1,loaded:!1,rendered:!1}}},{key:"record",value:function(e){this.performanceData[e]=Date.now()}},{key:"update",value:function(e){var t=e.src,n=e.loading,i=e.error,r=this.src;this.src=t,this.loading=n,this.error=i,this.filter(),r!==this.src&&(this.attempt=0,this.initState())}},{key:"getRect",value:function(){this.rect=this.el.getBoundingClientRect()}},{key:"checkInView",value:function(){return this.getRect(),this.rect.top<window.innerHeight*this.options.preLoad&&this.rect.bottom>this.options.preLoadTop&&this.rect.left<window.innerWidth*this.options.preLoad&&this.rect.right>0}},{key:"filter",value:function(){var e=this;d(this.options.filter).map(function(t){e.options.filter[t](e,e.options)})}},{key:"renderLoading",value:function(e){var t=this;g({src:this.loading},function(n){t.render("loading",!1),e()})}},{key:"load",value:function(){var e=this;return this.attempt>this.options.attempt-1&&this.state.error?void(this.options.silent||console.log("error end")):this.state.loaded||w[this.src]?this.render("loaded",!0):void this.renderLoading(function(){e.attempt++,e.record("loadStart"),g({src:e.src},function(t){e.naturalHeight=t.naturalHeight,e.naturalWidth=t.naturalWidth,e.state.loaded=!0,e.state.error=!1,e.record("loadEnd"),e.render("loaded",!1),w[e.src]=1},function(t){e.state.error=!0,e.state.loaded=!1,e.render("error",!1)})})}},{key:"render",value:function(e,t){this.elRenderer(this,e,t)}},{key:"performance",value:function(){var e="loading",t=0;return this.state.loaded&&(e="loaded",t=(this.performanceData.loadEnd-this.performanceData.loadStart)/1e3),this.state.error&&(e="error"),{src:this.src,state:e,time:t}}},{key:"destroy",value:function(){this.el=null,this.src=null,this.error=null,this.loading=null,this.bindType=null,this.attempt=0}}]),e}(),A="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",E=["scroll","wheel","mousewheel","resize","animationend","transitionend","touchmove"],T=function(s){return function(){function d(e){var t=this,n=e.preLoad,i=e.error,r=e.preLoadTop,s=e.dispatchEvent,u=e.loading,l=e.attempt,h=e.silent,f=e.scale,v=e.listenEvents,y=(e.hasbind,e.filter),g=e.adapter;c(this,d),this.version="1.0.5",this.ListenerQueue=[],this.TargetIndex=0,this.TargetQueue=[],this.options={silent:h||!0,dispatchEvent:!!s,preLoad:n||1.3,preLoadTop:r||0,error:i||A,loading:u||A,attempt:l||3,scale:f||p(f),ListenEvents:v||E,hasbind:!1,supportWebp:o(),filter:y||{},adapter:g||{}},this._initEvent(),this.lazyLoadHandler=a(function(){var e=!1;t.ListenerQueue.forEach(function(t){t.state.loaded||(e=t.checkInView(),e&&t.load())})},200)}return h(d,[{key:"config",value:function(){var e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};t(this.options,e)}},{key:"performance",value:function(){var e=[];return this.ListenerQueue.map(function(t){e.push(t.performance())}),e}},{key:"addLazyBox",value:function(e){this.ListenerQueue.push(e),f&&(this._addListenerTarget(window),e.$el&&e.$el.parentNode&&this._addListenerTarget(e.$el.parentNode))}},{key:"add",value:function(e,t,r){var o=this;if(n(this.ListenerQueue,function(t){return t.el===e}))return this.update(e,t),s.nextTick(this.lazyLoadHandler);var a=this._valueFormatter(t.value),u=a.src,d=a.loading,l=a.error;s.nextTick(function(){u=i(e,o.options.scale)||u;var n=Object.keys(t.modifiers)[0],a=void 0;n&&(a=r.context.$refs[n],a=a?a.$el||a:document.getElementById(n)),a||(a=L(e));var c=new k({bindType:t.arg,$parent:a,el:e,loading:d,error:l,src:u,elRenderer:o._elRenderer.bind(o),options:o.options});o.ListenerQueue.push(c),f&&(o._addListenerTarget(window),o._addListenerTarget(a)),o.lazyLoadHandler(),s.nextTick(function(){return o.lazyLoadHandler()})})}},{key:"update",value:function(e,t){var n=this,i=this._valueFormatter(t.value),o=i.src,a=i.loading,u=i.error,d=r(this.ListenerQueue,function(t){return t.el===e});d&&d.update({src:o,loading:a,error:u}),this.lazyLoadHandler(),s.nextTick(function(){return n.lazyLoadHandler()})}},{key:"remove",value:function(t){if(t){var n=r(this.ListenerQueue,function(e){return e.el===t});n&&(this._removeListenerTarget(n.$parent),this._removeListenerTarget(window),e(this.ListenerQueue,n)&&n.destroy())}}},{key:"removeComponent",value:function(t){t&&(e(this.ListenerQueue,t),t.$parent&&t.$el.parentNode&&this._removeListenerTarget(t.$el.parentNode),this._removeListenerTarget(window))}},{key:"_addListenerTarget",value:function(e){if(e){var t=r(this.TargetQueue,function(t){return t.el===e});return t?t.childrenCount++:(t={el:e,id:++this.TargetIndex,childrenCount:1,listened:!0},this._initListen(t.el,!0),this.TargetQueue.push(t)),this.TargetIndex}}},{key:"_removeListenerTarget",value:function(e){var t=this;this.TargetQueue.forEach(function(n,i){n.el===e&&(n.childrenCount--,n.childrenCount||(t._initListen(n.el,!1),t.TargetQueue.splice(i,1),n=null))})}},{key:"_initListen",value:function(e,t){var n=this;this.options.ListenEvents.forEach(function(i){return y[t?"on":"off"](e,i,n.lazyLoadHandler)})}},{key:"_initEvent",value:function(){var t=this;this.Event={listeners:{loading:[],loaded:[],error:[]}},this.$on=function(e,n){t.Event.listeners[e].push(n)},this.$once=function(e,n){function i(){r.$off(e,i),n.apply(r,arguments)}var r=t;t.$on(e,i)},this.$off=function(n,i){return i?void e(t.Event.listeners[n],i):void(t.Event.listeners[n]=[])},this.$emit=function(e,n,i){t.Event.listeners[e].forEach(function(e){return e(n,i)})}}},{key:"_elRenderer",value:function(e,t,n){if(e.el){var i=e.el,r=e.bindType,o=void 0;switch(t){case"loading":o=e.loading;break;case"error":o=e.error;break;default:o=e.src}if(r?i.style[r]="url("+o+")":i.getAttribute("src")!==o&&i.setAttribute("src",o),i.setAttribute("lazy",t),this.$emit(t,e,n),this.options.adapter[t]&&this.options.adapter[t](e,this.options),this.options.dispatchEvent){var a=new CustomEvent(t,{detail:e});i.dispatchEvent(a)}}}},{key:"_valueFormatter",value:function(e){var t=e,n=this.options.loading,i=this.options.error;return u(e)&&(e.src||this.options.silent||console.error("Vue Lazyload warning: miss src with "+e),t=e.src,n=e.loading||this.options.loading,i=e.error||this.options.error),{src:t,loading:n,error:i}}}]),d}()},_=function(e){return{props:{tag:{type:String,default:"div"}},render:function(e){return this.show===!1?e(this.tag):e(this.tag,null,this.$slots.default)},data:function(){return{state:{loaded:!1},rect:{},show:!1}},mounted:function(){e.addLazyBox(this),e.lazyLoadHandler()},beforeDestroy:function(){e.removeComponent(this)},methods:{getRect:function(){this.rect=this.$el.getBoundingClientRect()},checkInView:function(){return this.getRect(),f&&this.rect.top<window.innerHeight*e.options.preLoad&&this.rect.bottom>0&&this.rect.left<window.innerWidth*e.options.preLoad&&this.rect.right>0},load:function(){this.show=!0,this.state.loaded=!0,this.$emit("show",this)}}}},$={install:function(e){var n=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},i=T(e),r=new i(n),o="2"===e.version.split(".")[0];e.prototype.$Lazyload=r,n.lazyComponent&&e.component("lazy-component",_(r)),o?e.directive("lazy",{bind:r.add.bind(r),update:r.update.bind(r),componentUpdated:r.lazyLoadHandler.bind(r),unbind:r.remove.bind(r)}):e.directive("lazy",{bind:r.lazyLoadHandler.bind(r),update:function(e,n){t(this.vm.$refs,this.vm.$els),r.add(this.el,{modifiers:this.modifiers||{},arg:this.arg,value:e,oldValue:n},{context:this.vm})},unbind:function(){r.remove(this.el)}})}};return $});
 
 /***/ },
-/* 419 */,
-/* 420 */,
-/* 421 */,
-/* 422 */,
-/* 423 */,
 /* 424 */,
 /* 425 */,
 /* 426 */,
@@ -25117,17 +25089,17 @@
 /* 441 */,
 /* 442 */,
 /* 443 */,
-/* 444 */
+/* 444 */,
+/* 445 */,
+/* 446 */,
+/* 447 */,
+/* 448 */,
+/* 449 */
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
-/* 445 */,
-/* 446 */,
-/* 447 */,
-/* 448 */,
-/* 449 */,
 /* 450 */,
 /* 451 */,
 /* 452 */,
@@ -25209,17 +25181,22 @@
 /* 528 */,
 /* 529 */,
 /* 530 */,
-/* 531 */
+/* 531 */,
+/* 532 */,
+/* 533 */,
+/* 534 */,
+/* 535 */,
+/* 536 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(532)
+	__vue_script__ = __webpack_require__(537)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/maybeYouLike.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(538)
+	__vue_template__ = __webpack_require__(543)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -25244,7 +25221,7 @@
 	})()}
 
 /***/ },
-/* 532 */
+/* 537 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -25273,7 +25250,7 @@
 	// </template>
 	//
 	// <script>
-	var category = __webpack_require__(533);
+	var category = __webpack_require__(538);
 	//      var category = require("../src/component/com-maybeyoulike.vue");
 	exports.default = {
 	    el: "#maybeYouLike",
@@ -25356,18 +25333,18 @@
 	};
 
 /***/ },
-/* 533 */
+/* 538 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(534)
-	__vue_script__ = __webpack_require__(536)
+	__webpack_require__(539)
+	__vue_script__ = __webpack_require__(541)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/category.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(537)
+	__vue_template__ = __webpack_require__(542)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -25392,13 +25369,13 @@
 	})()}
 
 /***/ },
-/* 534 */
+/* 539 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(535);
+	var content = __webpack_require__(540);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -25418,7 +25395,7 @@
 	}
 
 /***/ },
-/* 535 */
+/* 540 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -25432,7 +25409,7 @@
 
 
 /***/ },
-/* 536 */
+/* 541 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -25683,23 +25660,18 @@
 	};
 
 /***/ },
-/* 537 */
+/* 542 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"good_list_con\">\n    <div class=\"good_list_2_row\">\n        <!--单个商品模版template-->\n        <a v-for=\"item in list\" :data-id=\"item.goods_id\" :href=\"a_href(item.goods_id)\"\n                 class=\"good_item\">\n                <div class=\"good_img_container\">\n                    <div class=\"img_container\">\n                        <img :src=\"item.goods_img\" style=\"display: inline;\">\n                        <span class=\"img_label\" v-if=\"item.goods_label!=''\" v-text=\"item.goods_label\"></span>\n                        <span class=\"img_label\" v-if=\"item.goods_label==''&&item.ratio\" v-text=\"'返现'+item.ratio+'倍'\"></span>\n                    </div>\n                    <div v-if = \"item.sale_status\" class=\"good_list_sell_out ng-scope\">\n                        <span v-if = \"item.sale_status == 'soldout'\" class=\"ng-scope\">售罄</span>\n                        <span v-if = \"item.sale_status == 'presale'\" class=\"ng-scope\">预售</span>\n                        <span v-if = \"item.sale_status == 'offline'\" class=\"ng-scope\">未上架</span>\n                    </div>\n                </div>\n\n                <div class=\"good_con\">\n                  <div class=\"good_title\">{{item.goods_name}}</div>\n                  <div class=\"goods4_price_bar\">\n                    <span class=\"dav-color-price font-weight\"><em class=\"fz_14\">¥</em><span class=\"nowPrice\"><span>{{(item.shop_price+\"\").split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.shop_price+'').split('.').length == 2\">.{{(item.shop_price+\"\").split(\".\")[1]}}</span></span></span>\n                    <span class=\"vip_return\" v-if = \"(item.seller_income && item.seller_income != 0) || (item.comm_income && item.comm_income != 0)\">\n                      <span class=\"vip_return_title\">会员返</span>\n                      <span class=\"vip_return_f\">¥</span>\n                      <span class=\"vip_return_price\">{{item.seller_income||item.comm_income}}</span>\n                    </span>\n                  </div>\n                </div>\n              </a>\n        <!--不到50个商品展示这个template-->\n        <div style=\"clear: both;\"></div>\n        <div v-show = \"loading\" class=\"no_more\">\n            商品加载中 <img src=\"//pic.davdian.com/free/loading_03252.svg\">\n        </div>\n        <div v-show = \"no_more\" class=\"no_more\">\n            没有更多商品了\n        </div>\n    </div>\n    <div class=\"good_list_2_row\" ng-model=\"goods\">\n        <div style=\"clear:both\"></div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 538 */
+/* 543 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class = \"mt_10\" id = \"comon\">\n    <div class=\"df_new_title_2\" style=\"border-bottom: none\">\n        <span class=\"df_new_font\">猜你喜欢</span>\n    </div>\n    <div class=\"logo_container\"  v-show = \"beforeFirstLoading\">\n        <div class=\"logo_left\"></div>\n        <div class=\"logo_right\"></div>\n    </div>\n    <div style=\"clear: both;\">\n    </div>\n    <category refer=\"guess_detail\" :referer=\"referer\"></category>\n    <!--<category refer=\"guess_detail\"-->\n              <!--:referer=\"referer\"-->\n              <!--:list = \"list\"-->\n              <!--:loading = \"beforeFirstLoading\"></category>-->\n\n</div>\n";
 
 /***/ },
-/* 539 */,
-/* 540 */,
-/* 541 */,
-/* 542 */,
-/* 543 */,
 /* 544 */,
 /* 545 */,
 /* 546 */,
@@ -26126,7 +26098,12 @@
 /* 967 */,
 /* 968 */,
 /* 969 */,
-/* 970 */
+/* 970 */,
+/* 971 */,
+/* 972 */,
+/* 973 */,
+/* 974 */,
+/* 975 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26135,7 +26112,7 @@
 	  value: true
 	});
 
-	var _scriptjs = __webpack_require__(971);
+	var _scriptjs = __webpack_require__(976);
 
 	var _scriptjs2 = _interopRequireDefault(_scriptjs);
 
@@ -26147,11 +26124,11 @@
 
 	var _config2 = _interopRequireDefault(_config);
 
-	var _jsCookie = __webpack_require__(972);
+	var _jsCookie = __webpack_require__(977);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(973);
+	var _util = __webpack_require__(978);
 
 	var _util2 = _interopRequireDefault(_util);
 
@@ -26319,7 +26296,7 @@
 	};
 
 /***/ },
-/* 971 */
+/* 976 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -26448,7 +26425,7 @@
 
 
 /***/ },
-/* 972 */
+/* 977 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -26619,7 +26596,7 @@
 
 
 /***/ },
-/* 973 */
+/* 978 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26666,11 +26643,6 @@
 	};
 
 /***/ },
-/* 974 */,
-/* 975 */,
-/* 976 */,
-/* 977 */,
-/* 978 */,
 /* 979 */,
 /* 980 */,
 /* 981 */,
@@ -26799,7 +26771,12 @@
 /* 1104 */,
 /* 1105 */,
 /* 1106 */,
-/* 1107 */
+/* 1107 */,
+/* 1108 */,
+/* 1109 */,
+/* 1110 */,
+/* 1111 */,
+/* 1112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26816,26 +26793,26 @@
 
 	var _ua2 = _interopRequireDefault(_ua);
 
-	var _login = __webpack_require__(1108);
+	var _login = __webpack_require__(1113);
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _jsCookie = __webpack_require__(972);
+	var _jsCookie = __webpack_require__(977);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(973);
+	var _util = __webpack_require__(978);
 
 	var _util2 = _interopRequireDefault(_util);
 
-	var _weixin = __webpack_require__(970);
+	var _weixin = __webpack_require__(975);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import scriptjs from 'scriptjs';
-	__webpack_require__(1109);
+	__webpack_require__(1114);
 
 
 	// ios wkwebview返回上一页执行回调刷新页面
@@ -26893,7 +26870,12 @@
 	/**
 	 * 功能：检测cookie是否需要强制跳转
 	 */
-	_checkRedirect(_jsCookie2.default.get('force_domain'));
+	(function () {
+	  var script = document.querySelector('script');
+	  if (script && script.src && script.src.indexOf('common/js/autoRootSize.js') !== -1) {
+	    _checkRedirect(_jsCookie2.default.get('force_domain'));
+	  }
+	})();
 
 	// fastclick
 	// iPhone; CPU iPhone OS 10_3_2 like Mac OS X
@@ -26942,7 +26924,7 @@
 	};
 
 /***/ },
-/* 1108 */
+/* 1113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26951,7 +26933,7 @@
 	  value: true
 	});
 
-	var _jsCookie = __webpack_require__(972);
+	var _jsCookie = __webpack_require__(977);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
@@ -27040,7 +27022,7 @@
 	};
 
 /***/ },
-/* 1109 */
+/* 1114 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -27071,7 +27053,7 @@
 	exports.default = setRootSize;
 
 /***/ },
-/* 1110 */
+/* 1115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27088,11 +27070,11 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
-	var _weixin = __webpack_require__(970);
+	var _weixin = __webpack_require__(975);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
-	var _Vue = __webpack_require__(444);
+	var _Vue = __webpack_require__(449);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
@@ -27134,7 +27116,7 @@
 	  callBrowserShare: function callBrowserShare() {
 	    new _Vue2.default({
 	      components: {
-	        'com-share-pop-tip': __webpack_require__(1111)
+	        'com-share-pop-tip': __webpack_require__(1116)
 	      },
 	      el: getEl(),
 	      data: {},
@@ -27155,18 +27137,18 @@
 	};
 
 /***/ },
-/* 1111 */
+/* 1116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1112)
-	__vue_script__ = __webpack_require__(1114)
+	__webpack_require__(1117)
+	__vue_script__ = __webpack_require__(1119)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-share-pop-tip.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1115)
+	__vue_template__ = __webpack_require__(1120)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -27191,13 +27173,13 @@
 	})()}
 
 /***/ },
-/* 1112 */
+/* 1117 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1113);
+	var content = __webpack_require__(1118);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -27217,7 +27199,7 @@
 	}
 
 /***/ },
-/* 1113 */
+/* 1118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -27231,7 +27213,7 @@
 
 
 /***/ },
-/* 1114 */
+/* 1119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27330,17 +27312,12 @@
 	// <script>
 
 /***/ },
-/* 1115 */
+/* 1120 */
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"com-share-pop-tip\" :style=\"styleObject\" @click=\"close\" @touchmove=\"touchmove\">\n  <img class=\"arrow\" src=\"http://pic.davdian.com/free/pointer.png\">\n  <div class=\"tip\">\n    <template v-if=\"isWeixin\">\n      <p>请点击右上角“分享”按钮,</p>\n      <p>然后可以选择“发送给朋友”、“分享到朋友圈”或者“复制链接”后发送链接给朋友。</p>\n    </template>\n    <template v-if=\"!isWeixin\">\n      <p>请复制地址栏链接，将链接发送给朋友</p>\n    </template>\n  </div>\n</div>\n";
 
 /***/ },
-/* 1116 */,
-/* 1117 */,
-/* 1118 */,
-/* 1119 */,
-/* 1120 */,
 /* 1121 */,
 /* 1122 */,
 /* 1123 */,
@@ -27466,18 +27443,23 @@
 /* 1243 */,
 /* 1244 */,
 /* 1245 */,
-/* 1246 */
+/* 1246 */,
+/* 1247 */,
+/* 1248 */,
+/* 1249 */,
+/* 1250 */,
+/* 1251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1247)
-	__vue_script__ = __webpack_require__(1251)
+	__webpack_require__(1252)
+	__vue_script__ = __webpack_require__(1256)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1265)
+	__vue_template__ = __webpack_require__(1270)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -27502,13 +27484,13 @@
 	})()}
 
 /***/ },
-/* 1247 */
+/* 1252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1248);
+	var content = __webpack_require__(1253);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -27528,13 +27510,13 @@
 	}
 
 /***/ },
-/* 1248 */
+/* 1253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
 	// imports
-	exports.i(__webpack_require__(1249), "");
-	exports.i(__webpack_require__(1250), "");
+	exports.i(__webpack_require__(1254), "");
+	exports.i(__webpack_require__(1255), "");
 
 	// module
 	exports.push([module.id, "#nprogress .spinner {\n  display: none !important; }\n", ""]);
@@ -27543,7 +27525,7 @@
 
 
 /***/ },
-/* 1249 */
+/* 1254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -27557,7 +27539,7 @@
 
 
 /***/ },
-/* 1250 */
+/* 1255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -27571,7 +27553,7 @@
 
 
 /***/ },
-/* 1251 */
+/* 1256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -27580,7 +27562,7 @@
 	  value: true
 	});
 
-	var _index = __webpack_require__(1252);
+	var _index = __webpack_require__(1257);
 
 	var _index2 = _interopRequireDefault(_index);
 
@@ -27665,7 +27647,7 @@
 	//  import "./index.css"
 
 /***/ },
-/* 1252 */
+/* 1257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27674,17 +27656,17 @@
 	  value: true
 	});
 
-	var _common = __webpack_require__(1107);
+	var _common = __webpack_require__(1112);
 
 	var _common2 = _interopRequireDefault(_common);
 
-	__webpack_require__(1253);
+	__webpack_require__(1258);
 
-	var _index_header = __webpack_require__(1257);
+	var _index_header = __webpack_require__(1262);
 
 	var _index_header2 = _interopRequireDefault(_index_header);
 
-	var _maybeYouLike = __webpack_require__(531);
+	var _maybeYouLike = __webpack_require__(536);
 
 	var _maybeYouLike2 = _interopRequireDefault(_maybeYouLike);
 
@@ -27706,11 +27688,11 @@
 
 	var _utils = __webpack_require__(94);
 
-	var _nprogress = __webpack_require__(1264);
+	var _nprogress = __webpack_require__(1269);
 
 	var _nprogress2 = _interopRequireDefault(_nprogress);
 
-	var _share = __webpack_require__(1110);
+	var _share = __webpack_require__(1115);
 
 	var _share2 = _interopRequireDefault(_share);
 
@@ -28567,12 +28549,12 @@
 	}; // 基础模块
 
 /***/ },
-/* 1253 */
+/* 1258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1254)
+	__webpack_require__(1259)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -28587,13 +28569,13 @@
 
 
 /***/ },
-/* 1254 */
+/* 1259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1255);
+	var content = __webpack_require__(1260);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -28613,12 +28595,12 @@
 	}
 
 /***/ },
-/* 1255 */
+/* 1260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
 	// imports
-	exports.i(__webpack_require__(1256), "");
+	exports.i(__webpack_require__(1261), "");
 
 	// module
 	exports.push([module.id, "\n", ""]);
@@ -28627,7 +28609,7 @@
 
 
 /***/ },
-/* 1256 */
+/* 1261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -28641,18 +28623,18 @@
 
 
 /***/ },
-/* 1257 */
+/* 1262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1258)
-	__vue_script__ = __webpack_require__(1261)
+	__webpack_require__(1263)
+	__vue_script__ = __webpack_require__(1266)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/index_header.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1263)
+	__vue_template__ = __webpack_require__(1268)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -28677,13 +28659,13 @@
 	})()}
 
 /***/ },
-/* 1258 */
+/* 1263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1259);
+	var content = __webpack_require__(1264);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -28703,12 +28685,12 @@
 	}
 
 /***/ },
-/* 1259 */
+/* 1264 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
 	// imports
-	exports.i(__webpack_require__(1260), "");
+	exports.i(__webpack_require__(1265), "");
 
 	// module
 	exports.push([module.id, "@charset \"UTF-8\";\n.v_menu[_v-75df2626] {\n  background: #fff;\n  width: 100%; }\n\n.cart_icon[_v-75df2626] {\n  display: block;\n  width: 42px;\n  height: 44px;\n  background-position: center;\n  background-size: 100%;\n  background-image: url(//pic.davdian.com/free/2017/07/20/shoppingCart.png); }\n\n.cart_icon.classification_icon[_v-75df2626] {\n  background-image: url(//pic.davdian.com/free/2017/07/20/classification.png); }\n\n.head_index_top .shop_name[_v-75df2626] {\n  padding-right: 88px; }\n\n.index_con_menu[_v-75df2626] {\n  width: 100%;\n  font-size: 13px;\n  padding-top: 5px;\n  line-height: 8px;\n  position: relative;\n  top: 0;\n  z-index: 11;\n  margin-top: 0;\n  max-width: 640px;\n  overflow: hidden; }\n\n.index_con_menu li[_v-75df2626] {\n  background: #fff;\n  color: #333;\n  text-align: center;\n  cursor: pointer;\n  padding-top: 9px;\n  padding-bottom: 10px;\n  word-break: keep-all;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  position: relative; }\n\n.time_state_span[_v-75df2626] {\n  position: relative; }\n\n.hoverSpan[_v-75df2626] {\n  display: block;\n  position: absolute;\n  top: 20px;\n  left: 0;\n  width: 100%;\n  border-bottom: 2px solid #ff4a7d; }\n\n.time_state_span_active[_v-75df2626] {\n  color: #ff4a7d; }\n\n.head_index_top .search_con[_v-75df2626] {\n  padding-right: 82px; }\n\n/*新加部分 首页头部 透明*/\n/*#index_fe_container .top0 .top_container,#index_fe_container .v_menu,#index_fe_container .index_con_menu li{*/\n/*background: none;*/\n/*}*/\n", ""]);
@@ -28717,7 +28699,7 @@
 
 
 /***/ },
-/* 1260 */
+/* 1265 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -28731,7 +28713,7 @@
 
 
 /***/ },
-/* 1261 */
+/* 1266 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -28740,7 +28722,7 @@
 	  value: true
 	});
 
-	var _index_header = __webpack_require__(1262);
+	var _index_header = __webpack_require__(1267);
 
 	var _index_header2 = _interopRequireDefault(_index_header);
 
@@ -28881,7 +28863,7 @@
 	//  import "./index_header.css"
 
 /***/ },
-/* 1262 */
+/* 1267 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -28989,13 +28971,13 @@
 	};
 
 /***/ },
-/* 1263 */
+/* 1268 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<header _v-75df2626=\"\">\n  <div class=\"top0\" :style=\"{ top: - data.top + 'px' }\" _v-75df2626=\"\">\n    <div class=\"top_container\" id=\"top_container\" _v-75df2626=\"\">\n      <div class=\"head_index_top clearfix\" :style=\"{'background': head.bgColor}\" _v-75df2626=\"\">\n        <a :href=\"head.image &amp;&amp; head.image.command.content\" class=\"left_icon_container\" _v-75df2626=\"\">\n          <span v-if=\"usersta == 3\" class=\"shop_icon\" _v-75df2626=\"\"></span>\n          <img v-if=\"usersta != 0\" :src=\"head.image &amp;&amp; head.image.url\" class=\"shop_img\" _v-75df2626=\"\">\n          <img v-if=\"usersta == 0\" class=\"shop_img\" src=\"http://pic.davdian.com/shop_logo/2016/06/13/80_80_f81f91d7ef5e31fa354fa935124dab20.png\" _v-75df2626=\"\">\n        </a>\n        <a :href=\"head.search &amp;&amp; head.search.command.content\" _v-75df2626=\"\">\n          <div class=\"search_con search_button\" v-on:click=\"turn\" _v-75df2626=\"\">\n            <span class=\"search_icon\" _v-75df2626=\"\"></span>\n            <input type=\"text\" class=\"search_input\" readonly=\"\" _v-75df2626=\"\">\n          </div>\n          <div class=\"shop_name\" v-on:click=\"turn\" _v-75df2626=\"\">在\n            <span v-if=\"head&amp;&amp;head.search&amp;&amp;head.search.title\" class=\"dav_base_red_color\" v-text=\"head.search.title\" _v-75df2626=\"\"></span>中搜索...\n          </div>\n        </a>\n        <a class=\"right_icon_container\" style=\"right:40px;\" href=\"/category_search.html\" _v-75df2626=\"\">\n          <i class=\"cart_icon classification_icon\" _v-75df2626=\"\"></i>\n        </a>\n        <a class=\"right_icon_container\" href=\"/cart.html\" _v-75df2626=\"\">\n          <i class=\"cart_icon\" _v-75df2626=\"\"></i>\n          <b v-if=\"cart\" v-text=\"cart\" _v-75df2626=\"\"></b>\n        </a>\n      </div>\n      <div v-if=\"menudata\" class=\"swiper-container v_menu index_con_menu\" id=\"v_menu\" _v-75df2626=\"\">\n        <ul class=\"swiper-wrapper\" _v-75df2626=\"\">\n          <li class=\"swiper-slide\" v-for=\"(item, index) in menudata.menuList\" @click=\"changeCategory(item.id,index,$event)\" _v-75df2626=\"\">\n            <p class=\"time_state\" v-if=\"item &amp;&amp; item.title\" _v-75df2626=\"\">\n              <span class=\"time_state_span\" :class=\"{time_state_span_active:item.id == cate}\" _v-75df2626=\"\">{{item.title}}\n                <i class=\"hoverSpan\" v-if=\"item.id == cate\" _v-75df2626=\"\"></i>\n              </span>\n            </p>\n          </li>\n          <!--<li v-if=\"menudata.menuMore\" class=\"swiper-slide\" @click=\"javascript:location.href=menudata.menuMore.command.content\">-->\n            <!--<p class=\"time_state\">-->\n              <!--<span class=\"time_state_span\" v-text=\"menudata.menuMore.title\"></span>-->\n            <!--</p>-->\n          <!--</li>-->\n        </ul>\n      </div>\n    </div>\n  </div>\n</header>\n";
 
 /***/ },
-/* 1264 */
+/* 1269 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* NProgress, (c) 2013, 2014 Rico Sta. Cruz - http://ricostacruz.com/nprogress
@@ -29477,7 +29459,7 @@
 
 
 /***/ },
-/* 1265 */
+/* 1270 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"index_inner\">\n  <!--头部-->\n  <index-head :usersta=\"usersta\" :menudata='menudata' :data='headData' :init-category='initCategory' :initcate='initcate' v-if='!app' v-on:categorya=\"changeCategory\"></index-head>\n  <div style='height: 80px' v-if='!app'></div>\n  <n-progress></n-progress>\n  <!--内容-->\n  <index-feed :data=\"feedData\" v-if='!loadFlag && !unLoadFlag'></index-feed>\n\n  <bd_goods_1 :tableindex=\"page_index\" :menuid=\"menuId\" :likenum=\"likeNum\"></bd_goods_1>\n  <!--底部-->\n  <!--<index-foot :data='footData' v-if='!app'></index-foot>-->\n  <index-foot active=\"home\" v-if='!app' style=\"z-index: 13;\"></index-foot>\n\n  <!--其他展示信息：签到 弹红包等-->\n  <div class=\"other_info\">\n    <div class='unLoad' v-if='unLoadFlag'>\n      <div class='unLoad-img'></div>\n      <div class='unLoad-title'>无法连接网络啦</div>\n      <div class='unLoad-btn' v-on:click='loadBtn'>点击重新加载</div>\n    </div>\n    <div v-on:click='clickAdvert1' class='mask_activity1' v-if='advertFlag[0] && advert.topBar'\n         :style=\"{'background': 'url(' + advert.topBar.imageUrl + ') no-repeat center' , 'background-size': 'cover'}\"></div>\n\n    <div class='mask_activity2_f' v-if='advertFlag[1] && advert.layer'>\n      <div class='mask_activity2' v-on:click='clickAdvert2'\n           :style=\"{'background': 'url(' + advert.layer.imageUrl + ') no-repeat center' , 'background-size': 'contain'}\">\n        <div class=\"exit\" v-on:click='exit($event)'>X</div>\n      </div>\n      <div class='mask_activity2_mask' v-on:click='exit($event)' v-if='advertFlag[1] && advert.layer'></div>\n    </div>\n\n\n    <div class='mask_sign' v-if='advertFlag[2]'\n         :style=\"{'background': 'url(' + signData.sign.imageUrl + ') no-repeat' , 'background-size': 'cover'}\">\n      <div class='mask_sign_title'>签到成功</div>\n      <div class='mask_sign_content' v-if='signData.sign'>\n        <span v-text='signData.sign.msgArr[0]'></span><br/>\n        <span v-text='signData.sign.msgArr[1]'></span>\n      </div>\n    </div>\n\n    <!--单次提示用户下载APP和关注公众号-->\n    <div class=\"downAppWrap\" v-if=\"iftips&&!app\" v-on:click=\"closeTips\">\n      <div class=\"downApp\" v-on:click.stop=\"events\">\n        <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/13/index_erweima.png\">\n        <img v-else src=\"//pic.davdian.com/free/2017/06/13/index_erweima.png\" alt=\"\" @touchstart=\"tipstouchstart\"\n             @touchmove=\"tipstouchmove\" @touchend=\"tipstouchend\">\n        <a href=\"https://itunes.apple.com/cn/app/dav-dian-rang-ma-ma-qing-song/id1042582462?l=en&mt=8\"></a>\n        <a href=\"http://a.app.qq.com/o/simple.jsp?pkgname=com.davdian.seller\"></a>\n        <div class=\"close8\" @click=\"closeTips\"></div>\n      </div>\n    </div>\n    <!--领取赠品弹窗-->\n    <div class=\"getReward\" v-if=\"getRewardtips && rewardData.imgUrl != ''\">\n      <a :href=\"rewardData.command.content\">\n        <img :src=\"rewardData.imgUrl\" alt=\"\">\n        <!--<img src=\"http://pic.davdian.com/goods/2017/06/06/800_384_b7862b07fef7e7dcd0c806e5e648f542.jpg\" alt=\"\">-->\n        <div class=\"rewardiv_close\" @click=\"close_rewardtip\"></div>\n      </a>\n    </div>\n  </div>\n</div>\n";

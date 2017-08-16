@@ -47,14 +47,14 @@
 
 	__webpack_require__(33);
 	__webpack_require__(37);
-	__webpack_require__(451);
+	__webpack_require__(456);
 
 
-	__webpack_require__(419);
+	__webpack_require__(424);
 	__webpack_require__(42);
 	__webpack_require__(43);
 	__webpack_require__(83);
-	__webpack_require__(453);
+	__webpack_require__(458);
 
 /***/ },
 
@@ -5780,7 +5780,7 @@
 
 /***/ },
 
-/***/ 418:
+/***/ 423:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -5792,7 +5792,7 @@
 
 /***/ },
 
-/***/ 419:
+/***/ 424:
 /***/ function(module, exports) {
 
 	/*
@@ -6117,20 +6117,20 @@
 
 /***/ },
 
-/***/ 451:
+/***/ 456:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 453:
+/***/ 458:
 /***/ function(module, exports, __webpack_require__) {
 
-	var title = __webpack_require__(454);
-	var kindsort = __webpack_require__(459);
-	var dvdBottom = __webpack_require__(462);
-	var  VueLazyload = __webpack_require__(418);
+	var title = __webpack_require__(459);
+	var kindsort = __webpack_require__(464);
+	var dvdBottom = __webpack_require__(467);
+	var  VueLazyload = __webpack_require__(423);
 	Vue.use(VueLazyload, {
 	  try: 3,
 	  preload:2,
@@ -6152,18 +6152,18 @@
 
 /***/ },
 
-/***/ 454:
+/***/ 459:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(455)
-	__vue_script__ = __webpack_require__(457)
+	__webpack_require__(460)
+	__vue_script__ = __webpack_require__(462)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/title.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(458)
+	__vue_template__ = __webpack_require__(463)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6189,13 +6189,13 @@
 
 /***/ },
 
-/***/ 455:
+/***/ 460:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(456);
+	var content = __webpack_require__(461);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6216,7 +6216,7 @@
 
 /***/ },
 
-/***/ 456:
+/***/ 461:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6231,7 +6231,7 @@
 
 /***/ },
 
-/***/ 457:
+/***/ 462:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -6278,24 +6278,24 @@
 
 /***/ },
 
-/***/ 458:
+/***/ 463:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n<div class=\"top0\">\n    <div class=\"top_container\">\n        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->\n        <div class=\"top_left\">\n            <a class=\"top_back\" href=\"javascript:history.back();\" data-dav-tj=\"order_list|back|back|1|back@order_list\">\n                <span class=\"home_arrow\"></span>\n            </a>\n        </div>\n        <div class=\"title_container\">\n            {{title}}\n        </div>\n        <div class=\"top_right\">\n            <a href=\"/\" class=\"top_home\" data-dav-tj=\"order_list|home|home|1|home@order_list\">\n                <span class=\"home_icon\"></span>\n            </a>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 459:
+/***/ 464:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(460)
+	__vue_script__ = __webpack_require__(465)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/kindsort.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(461)
+	__vue_template__ = __webpack_require__(466)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6321,7 +6321,7 @@
 
 /***/ },
 
-/***/ 460:
+/***/ 465:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -6539,25 +6539,25 @@
 
 /***/ },
 
-/***/ 461:
+/***/ 466:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"kind_sort\">\n    <a :class=\"{'selected':selected==1}\" href=\"javascript:void(0)\" @click = \"a\"><span>新品</span></a><a :class=\"{'selected':selected==2}\" href=\"javascript:void(0)\" @click = \"b\"><span>销量</span></a><a class=\"price\" :class=\"{'selected':selected==3}\" href=\"javascript:void(0)\" @click = \"c\"><span>价格</span></a>\n</div>\n<!--<categorys :referer=\"referer\"></categorys>-->\n<categorys :referer=\"referer\"></categorys>\n";
 
 /***/ },
 
-/***/ 462:
+/***/ 467:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(463)
-	__vue_script__ = __webpack_require__(465)
+	__webpack_require__(468)
+	__vue_script__ = __webpack_require__(470)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/bottom.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(466)
+	__vue_template__ = __webpack_require__(471)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6583,13 +6583,13 @@
 
 /***/ },
 
-/***/ 463:
+/***/ 468:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(464);
+	var content = __webpack_require__(469);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6610,7 +6610,7 @@
 
 /***/ },
 
-/***/ 464:
+/***/ 469:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6625,7 +6625,7 @@
 
 /***/ },
 
-/***/ 465:
+/***/ 470:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -6720,7 +6720,7 @@
 
 /***/ },
 
-/***/ 466:
+/***/ 471:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"dav-buyer-bottom clearfix\">\n    <div class=\"bottom-menu\">\n        <a class=\"menu-item\" :class=\"{'active':active==0}\" :href=\"active==0?'javascript:void();':'./'\" data-dav-tj=\"{{page}}|index|index|1|index@{{page}}\">\n            <i class=\"icon dav_icon_home_44_40\" :class=\"{'active':active==0}\" ></i>\n            <div class=\"menu-text\">首页</div>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==1}\" :href=\"active==1?'javascript:void();':'./course.html'\" data-dav-tj=\"{{page}}|category_search|index|1|index@{{page}}\">\n            <i class=\"icon dav_icon_search_44_40\" :class=\"{'active':active==1}\" ></i>\n            <div class=\"menu-text\" style='margin-top:-1px'>学院</div>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==2}\" :href=\"active==2?'javascript:void();':'./cart.html'\" data-dav-tj=\"{{page}}|cart|cart|1|cart@{{page}}\">\n            <i class=\"icon dav_icon_cart_44_40\" :class=\"{'active':active==2}\" ></i>\n            <div class=\"menu-text\">购物车</div>\n            <b v-if='cart' v-text=\"cart\"></b>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==3}\" :href=\"active==3?'javascript:void();':'./center.html'\" data-dav-tj=\"{{page}}|user|user|1|user@{{page}}\">\n            <i class=\"icon dav_icon_me_44_40\" :class=\"{'active':active==3}\" ></i>\n            <div class=\"menu-text\">我的</div>\n        </a>\n\n    </div>\n</div>\n";

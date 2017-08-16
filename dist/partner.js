@@ -47,7 +47,7 @@
 
 	"use strict";
 
-	var _Vue = __webpack_require__(444);
+	var _Vue = __webpack_require__(449);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
@@ -56,7 +56,7 @@
 	new _Vue2.default({
 	    el: "#partner",
 	    components: {
-	        partner: __webpack_require__(1376)
+	        partner: __webpack_require__(1381)
 	    }
 	}); /**
 	     * Created by jianchep on 17/06/26.
@@ -4599,14 +4599,14 @@
 
 /***/ },
 
-/***/ 444:
+/***/ 449:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 480:
+/***/ 485:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -6464,18 +6464,18 @@
 
 /***/ },
 
-/***/ 928:
+/***/ 933:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(929)
-	__vue_script__ = __webpack_require__(931)
+	__webpack_require__(934)
+	__vue_script__ = __webpack_require__(936)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/alert/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(937)
+	__vue_template__ = __webpack_require__(942)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6501,13 +6501,13 @@
 
 /***/ },
 
-/***/ 929:
+/***/ 934:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(930);
+	var content = __webpack_require__(935);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6528,7 +6528,7 @@
 
 /***/ },
 
-/***/ 930:
+/***/ 935:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6543,7 +6543,7 @@
 
 /***/ },
 
-/***/ 931:
+/***/ 936:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6552,7 +6552,7 @@
 	  value: true
 	});
 
-	var _xDialog = __webpack_require__(932);
+	var _xDialog = __webpack_require__(937);
 
 	var _xDialog2 = _interopRequireDefault(_xDialog);
 
@@ -6645,18 +6645,18 @@
 
 /***/ },
 
-/***/ 932:
+/***/ 937:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(933)
-	__vue_script__ = __webpack_require__(935)
+	__webpack_require__(938)
+	__vue_script__ = __webpack_require__(940)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/x-dialog/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(936)
+	__vue_template__ = __webpack_require__(941)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6682,13 +6682,13 @@
 
 /***/ },
 
-/***/ 933:
+/***/ 938:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(934);
+	var content = __webpack_require__(939);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6709,7 +6709,7 @@
 
 /***/ },
 
-/***/ 934:
+/***/ 939:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6724,7 +6724,7 @@
 
 /***/ },
 
-/***/ 935:
+/***/ 940:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -6807,21 +6807,21 @@
 
 /***/ },
 
-/***/ 936:
+/***/ 941:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-x-dialog\" @touchmove=\"onTouchMove\">\n  <transition :name=\"maskTransition\">\n    <div class=\"weui-mask\" @click=\"hideOnBlur && (currentValue = false)\" v-show=\"currentValue\"></div>\n  </transition>\n  <transition :name=\"dialogTransition\">\n    <div :class=\"dialogClass\" v-show=\"currentValue\" :style=\"dialogStyle\">\n      <slot></slot>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ },
 
-/***/ 937:
+/***/ 942:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-alert\">\n  <x-dialog\n  v-model=\"showValue\"\n  :mask-transition=\"maskTransition\"\n  :dialog-transition=\"dialogTransition\"\n  @on-hide=\"$emit('on-hide')\"\n  @on-show=\"$emit('on-show')\">\n    <div class=\"weui-dialog__hd\">\n      <strong class=\"weui-dialog__title\">{{title}}</strong>\n    </div>\n    <div class=\"weui-dialog__bd\">\n      <slot>\n        <div v-html=\"content\"></div>\n      </slot>\n    </div>\n    <div class=\"weui-dialog__ft\">\n      <a href=\"javascript:;\"\n      class=\"weui-dialog__btn weui-dialog__btn_primary\"\n      @click=\"_onHide\">{{buttonText || '确定'}}</a>\n    </div>\n  </x-dialog>\n</div>\n";
 
 /***/ },
 
-/***/ 951:
+/***/ 956:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7110,7 +7110,7 @@
 
 /***/ },
 
-/***/ 953:
+/***/ 958:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7123,11 +7123,11 @@
 
 	var _utils2 = _interopRequireDefault(_utils);
 
-	var _WXShare = __webpack_require__(951);
+	var _WXShare = __webpack_require__(956);
 
 	var _WXShare2 = _interopRequireDefault(_WXShare);
 
-	var _dialog = __webpack_require__(954);
+	var _dialog = __webpack_require__(959);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -7562,7 +7562,7 @@
 
 /***/ },
 
-/***/ 954:
+/***/ 959:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7573,15 +7573,15 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _index = __webpack_require__(955);
+	var _index = __webpack_require__(960);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(958);
+	var _index3 = __webpack_require__(963);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _vue = __webpack_require__(480);
+	var _vue = __webpack_require__(485);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
@@ -7636,7 +7636,7 @@
 
 /***/ },
 
-/***/ 955:
+/***/ 960:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7648,11 +7648,11 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _alert = __webpack_require__(928);
+	var _alert = __webpack_require__(933);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
-	var _plugin_helper = __webpack_require__(956);
+	var _plugin_helper = __webpack_require__(961);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -7717,7 +7717,7 @@
 
 /***/ },
 
-/***/ 956:
+/***/ 961:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7727,7 +7727,7 @@
 	});
 	exports.mergeOptions = undefined;
 
-	var _objectAssign = __webpack_require__(957);
+	var _objectAssign = __webpack_require__(962);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -7750,7 +7750,7 @@
 
 /***/ },
 
-/***/ 957:
+/***/ 962:
 /***/ function(module, exports) {
 
 	/*
@@ -7847,7 +7847,7 @@
 
 /***/ },
 
-/***/ 958:
+/***/ 963:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7859,11 +7859,11 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _toast = __webpack_require__(959);
+	var _toast = __webpack_require__(964);
 
 	var _toast2 = _interopRequireDefault(_toast);
 
-	var _plugin_helper = __webpack_require__(956);
+	var _plugin_helper = __webpack_require__(961);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -7946,18 +7946,18 @@
 
 /***/ },
 
-/***/ 959:
+/***/ 964:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(960)
-	__vue_script__ = __webpack_require__(962)
+	__webpack_require__(965)
+	__vue_script__ = __webpack_require__(967)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/toast/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(964)
+	__vue_template__ = __webpack_require__(969)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7983,13 +7983,13 @@
 
 /***/ },
 
-/***/ 960:
+/***/ 965:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(961);
+	var content = __webpack_require__(966);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8010,7 +8010,7 @@
 
 /***/ },
 
-/***/ 961:
+/***/ 966:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8025,7 +8025,7 @@
 
 /***/ },
 
-/***/ 962:
+/***/ 967:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8034,7 +8034,7 @@
 	  value: true
 	});
 
-	var _safariFix = __webpack_require__(963);
+	var _safariFix = __webpack_require__(968);
 
 	var _safariFix2 = _interopRequireDefault(_safariFix);
 
@@ -8216,7 +8216,7 @@
 
 /***/ },
 
-/***/ 963:
+/***/ 968:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8242,26 +8242,26 @@
 
 /***/ },
 
-/***/ 964:
+/***/ 969:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-toast\">\n  <div class=\"weui-mask_transparent\" v-show=\"isShowMask && show\"></div>\n  <transition :name=\"currentTransition\">\n    <div class=\"weui-toast\" :style=\"{width: width}\" :class=\"toastClass\" v-show=\"show\">\n      <i class=\"weui-icon-success-no-circle weui-icon_toast\" v-show=\"type !== 'text'\"></i>\n      <p class=\"weui-toast__content\" v-if=\"text\" :style=\"style\" v-html=\"text\"></p>\n      <p class=\"weui-toast__content\" v-else><slot></slot></p>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ },
 
-/***/ 1376:
+/***/ 1381:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1377)
-	__webpack_require__(1379)
-	__vue_script__ = __webpack_require__(1381)
+	__webpack_require__(1382)
+	__webpack_require__(1384)
+	__vue_script__ = __webpack_require__(1386)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/partner/vue/partner.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1382)
+	__vue_template__ = __webpack_require__(1387)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8287,13 +8287,13 @@
 
 /***/ },
 
-/***/ 1377:
+/***/ 1382:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1378);
+	var content = __webpack_require__(1383);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8314,7 +8314,7 @@
 
 /***/ },
 
-/***/ 1378:
+/***/ 1383:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8329,13 +8329,13 @@
 
 /***/ },
 
-/***/ 1379:
+/***/ 1384:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1380);
+	var content = __webpack_require__(1385);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8356,7 +8356,7 @@
 
 /***/ },
 
-/***/ 1380:
+/***/ 1385:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8371,7 +8371,7 @@
 
 /***/ },
 
-/***/ 1381:
+/***/ 1386:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -8382,11 +8382,11 @@
 
 	var _utils = __webpack_require__(94);
 
-	var _appInterface = __webpack_require__(953);
+	var _appInterface = __webpack_require__(958);
 
 	var _appInterface2 = _interopRequireDefault(_appInterface);
 
-	var _dialog = __webpack_require__(954);
+	var _dialog = __webpack_require__(959);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -8663,7 +8663,7 @@
 
 /***/ },
 
-/***/ 1382:
+/***/ 1387:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"container\" _v-18d33c40=\"\">\n    <div class=\"guide1\" _v-18d33c40=\"\">\n        <img src=\"//pic.davdian.com/free/2017/06/27/partner_bg.png?x-oss-process=image/quality,Q_80/format,jpg\" class=\"guide1Bg\" _v-18d33c40=\"\">\n        <div class=\"guide1Title guide1all\" _v-18d33c40=\"\">您已成功开通大V店会员</div>\n        <p class=\"p1\" _v-18d33c40=\"\">请选择您所在的区域</p>\n        <p class=\"p2\" _v-18d33c40=\"\">我们将据此为您推荐合适的线下活动</p>\n        <div class=\"p3\" v-if=\"dataList.area_rank_city\" v-text=\"dataList.area_rank_city.region_name\" _v-18d33c40=\"\">北京</div>\n        <select class=\"p4\" v-model=\"type\" v-bind:class=\"{ p4Select: type!='-1' }\" _v-18d33c40=\"\">\n            <option value=\"-1\" selected=\"true\" _v-18d33c40=\"\">请选择您所在的区域</option>\n            <option :value=\"item.region_id\" v-for=\"item in dataList.area_rank_county\" v-text=\"item.region_name\" _v-18d33c40=\"\"></option>\n          <!-- <option value =\"saab\" selected = \"true\">Saab</option>\n          <option value=\"opel\" selected = \"false\">Opel</option>\n          <option value=\"audi\">Audi</option> -->\n        </select>\n        <span class=\"p7\" v-if=\"type == -1\" _v-18d33c40=\"\"></span>\n        <div class=\"p5\" _v-18d33c40=\"\"></div>\n        <div class=\"p6\" _v-18d33c40=\"\">*请认真选择，提交后不支持修改</div>\n        <div class=\"guide1Btn guide1all\" @click=\"goProfile\" _v-18d33c40=\"\">提交并领取239元红包</div>\n    </div>\n</div>\n";

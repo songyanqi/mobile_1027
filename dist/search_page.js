@@ -50,13 +50,13 @@
 	 */
 	__webpack_require__(33);
 	__webpack_require__(37);
-	__webpack_require__(451);
+	__webpack_require__(456);
 
 
 	__webpack_require__(43);
 	__webpack_require__(42);
 	__webpack_require__(83);
-	__webpack_require__(1426);
+	__webpack_require__(1431);
 
 /***/ },
 
@@ -3846,25 +3846,25 @@
 
 /***/ },
 
-/***/ 451:
+/***/ 456:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 533:
+/***/ 538:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(534)
-	__vue_script__ = __webpack_require__(536)
+	__webpack_require__(539)
+	__vue_script__ = __webpack_require__(541)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/category.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(537)
+	__vue_template__ = __webpack_require__(542)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -3890,13 +3890,13 @@
 
 /***/ },
 
-/***/ 534:
+/***/ 539:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(535);
+	var content = __webpack_require__(540);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -3917,7 +3917,7 @@
 
 /***/ },
 
-/***/ 535:
+/***/ 540:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -3932,7 +3932,7 @@
 
 /***/ },
 
-/***/ 536:
+/***/ 541:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4184,18 +4184,18 @@
 
 /***/ },
 
-/***/ 537:
+/***/ 542:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"good_list_con\">\n    <div class=\"good_list_2_row\">\n        <!--单个商品模版template-->\n        <a v-for=\"item in list\" :data-id=\"item.goods_id\" :href=\"a_href(item.goods_id)\"\n                 class=\"good_item\">\n                <div class=\"good_img_container\">\n                    <div class=\"img_container\">\n                        <img :src=\"item.goods_img\" style=\"display: inline;\">\n                        <span class=\"img_label\" v-if=\"item.goods_label!=''\" v-text=\"item.goods_label\"></span>\n                        <span class=\"img_label\" v-if=\"item.goods_label==''&&item.ratio\" v-text=\"'返现'+item.ratio+'倍'\"></span>\n                    </div>\n                    <div v-if = \"item.sale_status\" class=\"good_list_sell_out ng-scope\">\n                        <span v-if = \"item.sale_status == 'soldout'\" class=\"ng-scope\">售罄</span>\n                        <span v-if = \"item.sale_status == 'presale'\" class=\"ng-scope\">预售</span>\n                        <span v-if = \"item.sale_status == 'offline'\" class=\"ng-scope\">未上架</span>\n                    </div>\n                </div>\n\n                <div class=\"good_con\">\n                  <div class=\"good_title\">{{item.goods_name}}</div>\n                  <div class=\"goods4_price_bar\">\n                    <span class=\"dav-color-price font-weight\"><em class=\"fz_14\">¥</em><span class=\"nowPrice\"><span>{{(item.shop_price+\"\").split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.shop_price+'').split('.').length == 2\">.{{(item.shop_price+\"\").split(\".\")[1]}}</span></span></span>\n                    <span class=\"vip_return\" v-if = \"(item.seller_income && item.seller_income != 0) || (item.comm_income && item.comm_income != 0)\">\n                      <span class=\"vip_return_title\">会员返</span>\n                      <span class=\"vip_return_f\">¥</span>\n                      <span class=\"vip_return_price\">{{item.seller_income||item.comm_income}}</span>\n                    </span>\n                  </div>\n                </div>\n              </a>\n        <!--不到50个商品展示这个template-->\n        <div style=\"clear: both;\"></div>\n        <div v-show = \"loading\" class=\"no_more\">\n            商品加载中 <img src=\"//pic.davdian.com/free/loading_03252.svg\">\n        </div>\n        <div v-show = \"no_more\" class=\"no_more\">\n            没有更多商品了\n        </div>\n    </div>\n    <div class=\"good_list_2_row\" ng-model=\"goods\">\n        <div style=\"clear:both\"></div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1426:
+/***/ 1431:
 /***/ function(module, exports, __webpack_require__) {
 
-	var search = __webpack_require__(1427);
-	var category_sort = __webpack_require__(1430);
+	var search = __webpack_require__(1432);
+	var category_sort = __webpack_require__(1435);
 
 	new Vue({
 	    el: "body",
@@ -4214,17 +4214,17 @@
 
 /***/ },
 
-/***/ 1427:
+/***/ 1432:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1428)
+	__vue_script__ = __webpack_require__(1433)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/search.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1429)
+	__vue_template__ = __webpack_require__(1434)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4250,7 +4250,7 @@
 
 /***/ },
 
-/***/ 1428:
+/***/ 1433:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4450,24 +4450,24 @@
 
 /***/ },
 
-/***/ 1429:
+/***/ 1434:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"search_top clearfix\">\n    <a class=\"left_icon_container\">\n        <span class=\"home_arrow\"></span>\n    </a>\n    <form type=\"search\" action=\"\" class=\"ng-pristine ng-valid\">\n        <div class=\"search_con search_button april_border hairlines \">\n            <div class=\"border_inner\"></div>\n            <div class=\"search_input_con\">\n                <span class=\"search_icon\"></span>\n                <input type=\"search\" name=\"q\" placeholder=\"请输入商品名称\" class=\"search_input\" autocomplete=\"off\">\n            </div>\n        </div>\n        <a class=\"search_btn\" data-dav-tj=\"\">取消</a>\n    </form>\n</div>\n<div class=\"search_like hide\">\n    <ul class=\"like_list\">\n        <li v-for  = \"item in list\">\n            <a href=\"/goods_search.html?q={{item}}\" v-if='!c_bind'>{{item}}</a>\n            <a href=\"/goods_search.html?q={{item}}&c_bind={{c_bind}}\" v-if='c_bind'>{{item}}</a>\n        </li>\n    </ul>\n</div>\n";
 
 /***/ },
 
-/***/ 1430:
+/***/ 1435:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1431)
+	__vue_script__ = __webpack_require__(1436)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/category_sort.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1432)
+	__vue_template__ = __webpack_require__(1437)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4493,7 +4493,7 @@
 
 /***/ },
 
-/***/ 1431:
+/***/ 1436:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4550,7 +4550,7 @@
 	//     </div>
 	// </template>
 	// <script>
-	var category = __webpack_require__(533);
+	var category = __webpack_require__(538);
 	exports.default = {
 	    data: function data() {
 	        return {
@@ -5116,7 +5116,7 @@
 
 /***/ },
 
-/***/ 1432:
+/***/ 1437:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"kind_sort\">\n    <a class=\"default_sort\" :class = \"{selected:selected == 0}\" @click=\"sort(0)\"><span>综合</span></a>\n    <a class=\"sales_sort\" :class = \"{selected:selected == 2 || selected == 3}\" @click=\"sort(selected==2?3:2)\"><span>销量</span>\n        <span class=\"two_arrow\" :class = \"{up:selected == 3,down:selected == 2}\">\n        <span class=\"arrow-up\"></span>\n        <span class=\"arrow-up arrow-down\"></span>\n    </span>\n    </a>\n    <a class=\"price_sort\" :class = \"{selected:selected == 4 || selected == 5}\" @click=\"sort(selected==4?5:4)\"><span>价格</span>\n        <span class=\"two_arrow\" :class = \"{up:selected == 4,down:selected == 5}\">\n        <span class=\"arrow-up\"></span>\n        <span class=\"arrow-up arrow-down\"></span>\n    </span>\n    </a>\n    <a class=\"filter_toggle_btn\">\n        <span>筛选</span>\n        <span class=\"dav_icon_arrow\"></span>\n    </a>\n</div>\n<div class=\"filter_container\">\n    <div class=\"price_filter_container\">\n        <div class=\"price_filter_text\">价格区间 (元) </div>\n        <input type=\"number\" id = \"minPrice\" v-model.number  = \"minPrice\" placeholder=\"最低价\"><span class=\"to\"></span><input id = \"maxPrice\" v-model.number=\"maxPrice\" type=\"number\" placeholder=\"最高价\">\n    </div>\n    <div class=\"category_container\">\n        <div class=\"category_item\">\n            <label>选择分类</label>\n            <div class=\"category_btn_list\">\n                <a class=\"category_btn all_category selected\" data-for-id=\"0\">全部</a>\n            </div>\n        </div>\n        <div class=\"category_item\" v-for = \"item in catIds\">\n            <label>{{item.label}}</label>\n            <div class=\"category_btn_list\">\n                <a v-for = \"kind_item in item.info\" class=\"category_btn\" data-for-id={{kind_item.catId}}>{{kind_item.name}}</a>\n            </div>\n        </div>\n    </div>\n    <div class=\"filter_bottom_container\">\n        <div class=\"filter_reset_btn\" ng-click=\"resetValue()\">重置</div>\n        <div class=\"filter_finish_btn\" @click=\"filter()\">完成</div>\n    </div>\n</div>\n<div class = \"bg\">\n    <category refer=\"search\" :referer=\"referer\"></category>\n</div>\n";

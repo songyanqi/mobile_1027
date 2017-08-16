@@ -52,10 +52,10 @@
 	__webpack_require__(37);
 
 
-	__webpack_require__(419);
+	__webpack_require__(424);
 	__webpack_require__(42);
 	__webpack_require__(43);
-	__webpack_require__(420);
+	__webpack_require__(425);
 
 /***/ },
 
@@ -4973,7 +4973,7 @@
 
 /***/ },
 
-/***/ 418:
+/***/ 423:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -4985,7 +4985,7 @@
 
 /***/ },
 
-/***/ 419:
+/***/ 424:
 /***/ function(module, exports) {
 
 	/*
@@ -5310,11 +5310,11 @@
 
 /***/ },
 
-/***/ 420:
+/***/ 425:
 /***/ function(module, exports, __webpack_require__) {
 
-	var best_sellers = __webpack_require__(421);
-	var  VueLazyload = __webpack_require__(418);
+	var best_sellers = __webpack_require__(426);
+	var  VueLazyload = __webpack_require__(423);
 
 	Vue.use(VueLazyload, {
 	    // error: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
@@ -5343,18 +5343,18 @@
 
 /***/ },
 
-/***/ 421:
+/***/ 426:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(422)
-	__vue_script__ = __webpack_require__(424)
+	__webpack_require__(427)
+	__vue_script__ = __webpack_require__(429)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/best_sellers.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(433)
+	__vue_template__ = __webpack_require__(438)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5380,13 +5380,13 @@
 
 /***/ },
 
-/***/ 422:
+/***/ 427:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(423);
+	var content = __webpack_require__(428);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5407,7 +5407,7 @@
 
 /***/ },
 
-/***/ 423:
+/***/ 428:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5422,7 +5422,7 @@
 
 /***/ },
 
-/***/ 424:
+/***/ 429:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -5666,8 +5666,8 @@
 	// </template>
 	//
 	// <script>
-	var to_shop = __webpack_require__(425);
-	var cache_info = __webpack_require__(430);
+	var to_shop = __webpack_require__(430);
+	var cache_info = __webpack_require__(435);
 	exports.default = {
 	    data: function data() {
 	        return {
@@ -5977,18 +5977,18 @@
 
 /***/ },
 
-/***/ 425:
+/***/ 430:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(426)
-	__vue_script__ = __webpack_require__(428)
+	__webpack_require__(431)
+	__vue_script__ = __webpack_require__(433)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/to_shop.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(429)
+	__vue_template__ = __webpack_require__(434)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6014,13 +6014,13 @@
 
 /***/ },
 
-/***/ 426:
+/***/ 431:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(427);
+	var content = __webpack_require__(432);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6041,7 +6041,7 @@
 
 /***/ },
 
-/***/ 427:
+/***/ 432:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6056,7 +6056,7 @@
 
 /***/ },
 
-/***/ 428:
+/***/ 433:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -6092,24 +6092,24 @@
 
 /***/ },
 
-/***/ 429:
+/***/ 434:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n<div class=\"to_shop\"><a href=\"/\" class=\"to_shop_btn\" style=\"color: #ff4a7d;\">去店铺逛逛</a></div>\n";
 
 /***/ },
 
-/***/ 430:
+/***/ 435:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(431)
+	__vue_script__ = __webpack_require__(436)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/cache_info.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(432)
+	__vue_template__ = __webpack_require__(437)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6135,7 +6135,7 @@
 
 /***/ },
 
-/***/ 431:
+/***/ 436:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -6159,14 +6159,14 @@
 
 /***/ },
 
-/***/ 432:
+/***/ 437:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"cache_info\" style=\"margin-top: 5px;padding: 6px;font-size: 10px;line-height: 1.5;background-color: #fff9c0;color: #666;\">因可能存在系统缓存、页面更新导致价格变动异常等不确定性情况出现，如您发现活动商品标价或促销信息有异常，请立即联系大V客服。</div>\n";
 
 /***/ },
 
-/***/ 433:
+/***/ 438:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div>\n    <!--头部，在app中不显示-->\n    <div class=\"top0\">\n        <div class=\"top_container\">\n            <div class=\"top_left\">\n                <a class=\"top_back\" href=\"javascript:history.back();\">\n                    <span class=\"home_arrow\"></span>\n                </a>\n            </div>\n\n            <div class=\"title_container\" style=\"font-weight: normal\">大V畅销榜</div>\n            <div class=\"top_right\">\n                <a href=\"/\" class=\"top_home\" data-dav-tj=\"detail|home|home|1|home@detail\">\n                    <span class=\"home_icon\"></span>\n                </a>\n            </div>\n        </div>\n    </div>\n    <!--banner图片-->\n    <img ref=\"biubiu\" id=\"bannerImg\" src=\"//pic.davdian.com/free/2017/01/16/750_300_2197441ac752452501ed3b946c14f129.png\" alt=\"\">\n    <!--三个icon-->\n    <div class=\"hot_activity_cotnainer index_model\">\n        <div class=\"df_new_model_con\">\n            <div class=\"index_links\">\n                <a v-for=\"(item,index) in type_list\" class=\"link_item\" @click=\"click(index)\" :style=\"styleObject\" :class=\"{active:selected == index}\">\n                    <img class=\"link_img\" :src=\"item.cat_img\">\n                    <div class=\"link_text\">{{item.cat_name}}</div>\n                    <div v-if=\"selected == index\" class=\"link_bottom\"></div>\n                </a>\n            </div>\n        </div>\n        <div style=\"clear: both;\"></div>\n    </div>\n    <!--商品列表-->\n    <div id=\"list\">\n        <a v-for=\"(item,index) in list\" :href=\"a_href(item.goods_id)\">\n            <div style=\"position: relative;background-color: #FFFFFF;height: 140px;\">\n                <div style=\"position: relative;max-width: 40px;height: 100%;\">\n                    <span class=\"number_text\" :class=\"{dvd_text:index >= 3,number_text_2:index>=9}\">{{index + 1}}</span>\n                    <img v-if=\"index == 0\" style=\"max-width: 21px;position: absolute;left: 50%;top: 50%;margin-left: -10px;margin-top: -10px;\" src=\"http://pic.davdian.com/free/2017/01/09/42_56_5776adc9320e1fa61aee0552a87380ee.png\" alt=\"\">\n                    <img v-if=\"index == 1\" style=\"max-width: 21px;position: absolute;left: 50%;top: 50%;margin-left: -10px;margin-top: -10px;\" src=\"http://pic.davdian.com/free/2017/01/09/42_56_eb3f4265cd02b9c7dc93d11e457b06e3.png\" alt=\"\">\n                    <img v-if=\"index == 2\" style=\"max-width: 21px;position: absolute;left: 50%;top: 50%;margin-left: -10px;margin-top: -10px;\" src=\"http://pic.davdian.com/free/2017/01/09/42_56_606405af49064a5909679a4b4eb86f45.png\" alt=\"\">\n                    <img v-if=\"index >= 3\" style=\"max-width: 21px;position: absolute;left: 50%;top: 50%;margin-left: -10px;margin-top: -10px;\" src=\"http://pic.davdian.com/free/2017/01/09/46_44_515f0f4ed882b1b47e309aab15c37723.png\" alt=\"\">\n                </div>\n                <div style=\"position: absolute;max-width: 120px;top: 10px;padding-left: 40px;\">\n                    <img style=\"\" v-lazy=\"imgObject(item.goods_img)\" alt=\"\">\n                </div>\n                <div style=\"position: absolute;padding-left: 176px;top: 10px;padding-right: 10px;left: 0px;right:0px;\">\n                    <div class=\"order_good_name\">{{ item.goods_name }}</div>\n                    <div style=\"padding-top: 10px;height: 26px;\">\n                        <div class=\"sale_price\">\n                            ￥{{ item.shop_price }}\n                        </div>\n                        <div class=\"sale\">\n                            总销量:{{item.sales_number}}\n                        </div>\n                    </div>\n                </div>\n                <div class=\"thin_line\"></div>\n            </div>\n        </a>\n    </div>\n    <div v-if=\"loading\" class=\"no_more\"> 加载中 <img src=\"//pic.davdian.com/free/loading_03252.svg\"></div>\n    <to_shop v-if=\"more\"></to_shop>\n</div>\n";

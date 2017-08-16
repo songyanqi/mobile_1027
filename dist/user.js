@@ -46,15 +46,15 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(33);
-	__webpack_require__(1453);
+	__webpack_require__(1458);
 	__webpack_require__(37);
-	__webpack_require__(1685);
+	__webpack_require__(1690);
 
 	__webpack_require__(41);
-	__webpack_require__(1687);
+	__webpack_require__(1692);
 	__webpack_require__(43);
-	__webpack_require__(1688);
-	__webpack_require__(1245);
+	__webpack_require__(1693);
+	__webpack_require__(1250);
 
 
 /***/ },
@@ -3481,18 +3481,18 @@
 
 /***/ },
 
-/***/ 462:
+/***/ 467:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(463)
-	__vue_script__ = __webpack_require__(465)
+	__webpack_require__(468)
+	__vue_script__ = __webpack_require__(470)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/bottom.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(466)
+	__vue_template__ = __webpack_require__(471)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -3518,13 +3518,13 @@
 
 /***/ },
 
-/***/ 463:
+/***/ 468:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(464);
+	var content = __webpack_require__(469);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -3545,7 +3545,7 @@
 
 /***/ },
 
-/***/ 464:
+/***/ 469:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -3560,7 +3560,7 @@
 
 /***/ },
 
-/***/ 465:
+/***/ 470:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3655,14 +3655,14 @@
 
 /***/ },
 
-/***/ 466:
+/***/ 471:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"dav-buyer-bottom clearfix\">\n    <div class=\"bottom-menu\">\n        <a class=\"menu-item\" :class=\"{'active':active==0}\" :href=\"active==0?'javascript:void();':'./'\" data-dav-tj=\"{{page}}|index|index|1|index@{{page}}\">\n            <i class=\"icon dav_icon_home_44_40\" :class=\"{'active':active==0}\" ></i>\n            <div class=\"menu-text\">首页</div>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==1}\" :href=\"active==1?'javascript:void();':'./course.html'\" data-dav-tj=\"{{page}}|category_search|index|1|index@{{page}}\">\n            <i class=\"icon dav_icon_search_44_40\" :class=\"{'active':active==1}\" ></i>\n            <div class=\"menu-text\" style='margin-top:-1px'>学院</div>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==2}\" :href=\"active==2?'javascript:void();':'./cart.html'\" data-dav-tj=\"{{page}}|cart|cart|1|cart@{{page}}\">\n            <i class=\"icon dav_icon_cart_44_40\" :class=\"{'active':active==2}\" ></i>\n            <div class=\"menu-text\">购物车</div>\n            <b v-if='cart' v-text=\"cart\"></b>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==3}\" :href=\"active==3?'javascript:void();':'./center.html'\" data-dav-tj=\"{{page}}|user|user|1|user@{{page}}\">\n            <i class=\"icon dav_icon_me_44_40\" :class=\"{'active':active==3}\" ></i>\n            <div class=\"menu-text\">我的</div>\n        </a>\n\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1245:
+/***/ 1250:
 /***/ function(module, exports) {
 
 	$(function () {
@@ -3792,21 +3792,21 @@
 
 /***/ },
 
-/***/ 1453:
+/***/ 1458:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1685:
+/***/ 1690:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1687:
+/***/ 1692:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -3823,7 +3823,7 @@
 
 /***/ },
 
-/***/ 1688:
+/***/ 1693:
 /***/ function(module, exports, __webpack_require__) {
 
 	$(function () {
@@ -3881,7 +3881,7 @@
 	});
 
 
-	var dvdBottom = __webpack_require__(462);
+	var dvdBottom = __webpack_require__(467);
 	new Vue({
 	    el: "#user",
 	    data:function(){

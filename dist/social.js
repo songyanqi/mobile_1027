@@ -45,9 +45,9 @@
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1464);
+	__webpack_require__(1469);
 	// require('../../javascript/base.js');
-	__webpack_require__(1466);
+	__webpack_require__(1471);
 
 
 /***/ },
@@ -5500,7 +5500,7 @@
 
 /***/ },
 
-/***/ 480:
+/***/ 485:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -7358,18 +7358,18 @@
 
 /***/ },
 
-/***/ 902:
+/***/ 907:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(903)
-	__vue_script__ = __webpack_require__(905)
+	__webpack_require__(908)
+	__vue_script__ = __webpack_require__(910)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/group/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(906)
+	__vue_template__ = __webpack_require__(911)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7386,137 +7386,6 @@
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
 	  var id = "_v-3a06d762/index.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-
-/***/ 903:
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(904);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(48)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
-				var newContent = require("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-
-/***/ 904:
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(35)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "/**\n* actionsheet\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/* alias */\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* form-preview\n*/\n/**\n* load-more\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* toast\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* search\n*/\n/**\n* radio\n*/\n.weui-cell_access {\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  color: inherit;\n}\n.weui-cell_access:active {\n  background-color: #ECECEC;\n}\n.weui-cell_access .weui-cell__ft {\n  padding-right: 13px;\n  position: relative;\n}\n.weui-cell_access .weui-cell__ft:after {\n  content: \" \";\n  display: inline-block;\n  height: 6px;\n  width: 6px;\n  border-width: 2px 2px 0 0;\n  border-color: #C8C8CD;\n  border-style: solid;\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n  position: relative;\n  top: -2px;\n  position: absolute;\n  top: 50%;\n  margin-top: -4px;\n  right: 2px;\n}\n.weui-cell_link {\n  color: #586C94;\n  font-size: 14px;\n}\n.weui-cell_link:first-child:before {\n  display: block;\n}\n.weui-cell_access.vux-cell-box {\n  padding-right: 13px;\n  position: relative;\n}\n.weui-cell_access.vux-cell-box:after {\n  content: \" \";\n  display: inline-block;\n  height: 6px;\n  width: 6px;\n  border-width: 2px 2px 0 0;\n  border-color: #C8C8CD;\n  border-style: solid;\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n  position: relative;\n  top: -2px;\n  position: absolute;\n  top: 50%;\n  margin-top: -4px;\n  right: 17px;\n}\n.weui-cells {\n  margin-top: 1.17647059em;\n  background-color: #FFFFFF;\n  line-height: 1.41176471;\n  font-size: 17px;\n  overflow: hidden;\n  position: relative;\n}\n.weui-cells:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  height: 1px;\n  border-bottom: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 100%;\n      -ms-transform-origin: 0 100%;\n          transform-origin: 0 100%;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells__title {\n  margin-top: 0.77em;\n  margin-bottom: 0.3em;\n  padding-left: 15px;\n  padding-right: 15px;\n  color: #999999;\n  font-size: 14px;\n}\n.weui-cells__title + .weui-cells {\n  margin-top: 0;\n}\n.weui-cells__tips {\n  margin-top: .3em;\n  color: #999999;\n  padding-left: 15px;\n  padding-right: 15px;\n  font-size: 14px;\n}\n.weui-cell {\n  padding: 10px 15px;\n  position: relative;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.weui-cell:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n  left: 15px;\n}\n.weui-cell:first-child:before {\n  display: none;\n}\n.weui-cell_primary {\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n     -moz-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n.weui-cell__bd {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.weui-cell__ft {\n  text-align: right;\n  color: #999999;\n}\n/**\n* http://www.zhangxinxu.com/wordpress/2015/01/tips-blank-character-chinese-align/\n*/\n.vux-blank-half:before {\n  content: '\\2002';\n  speak: none;\n}\n.vux-blank-full:before {\n  content: '\\2003';\n  speak: none;\n}\n.vux-no-group-title {\n  margin-top: 0.77em;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-
-/***/ 905:
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	// <template>
-	//   <div>
-	//     <div class="weui-cells__title" v-if="title" :style="{color:titleColor}" v-html="title"></div>
-	//     <div class="weui-cells" :class="{'vux-no-group-title':!title}" :style="{marginTop: typeof gutter === 'number' ? (gutter + 'px') : gutter}">
-	//       <slot name="after-title"></slot>
-	//       <slot></slot>
-	//     </div>
-	//   </div>
-	// </template>
-	//
-	// <script>
-	exports.default = {
-	  name: 'group',
-	  props: {
-	    title: String,
-	    titleColor: String,
-	    labelWidth: String,
-	    labelAlign: String,
-	    labelMarginRight: String,
-	    gutter: [String, Number]
-	  }
-	  // </script>
-	  //
-	  // <style lang="less">
-	  // @import '../../styles/weui/widget/weui_cell/weui_access';
-	  // @import '../../styles/weui/widget/weui_cell/weui_cell_global';
-	  // @import '../../styles/blank.less';
-	  //
-	  // .vux-no-group-title {
-	  //   margin-top: @group-title-margin-top;
-	  // }
-	  // </style>
-
-	};
-
-/***/ },
-
-/***/ 906:
-/***/ function(module, exports) {
-
-	module.exports = "\n<div>\n  <div class=\"weui-cells__title\" v-if=\"title\" :style=\"{color:titleColor}\" v-html=\"title\"></div>\n  <div class=\"weui-cells\" :class=\"{'vux-no-group-title':!title}\" :style=\"{marginTop: typeof gutter === 'number' ? (gutter + 'px') : gutter}\">\n    <slot name=\"after-title\"></slot>\n    <slot></slot>\n  </div>\n</div>\n";
-
-/***/ },
-
-/***/ 907:
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(908)
-	__vue_script__ = __webpack_require__(910)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] node_modules/vux/src/components/cell/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(918)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-31cdbf16/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7561,7 +7430,7 @@
 
 
 	// module
-	exports.push([module.id, "/**\n* actionsheet\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/* alias */\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* form-preview\n*/\n/**\n* load-more\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* toast\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* search\n*/\n/**\n* radio\n*/\n.vux-tap-active {\n  tap-highlight-color: rgba(0, 0, 0, 0);\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.vux-tap-active:active {\n  background-color: #ECECEC;\n}\n.weui-cells {\n  margin-top: 1.17647059em;\n  background-color: #FFFFFF;\n  line-height: 1.41176471;\n  font-size: 17px;\n  overflow: hidden;\n  position: relative;\n}\n.weui-cells:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  height: 1px;\n  border-bottom: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 100%;\n      -ms-transform-origin: 0 100%;\n          transform-origin: 0 100%;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells__title {\n  margin-top: 0.77em;\n  margin-bottom: 0.3em;\n  padding-left: 15px;\n  padding-right: 15px;\n  color: #999999;\n  font-size: 14px;\n}\n.weui-cells__title + .weui-cells {\n  margin-top: 0;\n}\n.weui-cells__tips {\n  margin-top: .3em;\n  color: #999999;\n  padding-left: 15px;\n  padding-right: 15px;\n  font-size: 14px;\n}\n.weui-cell {\n  padding: 10px 15px;\n  position: relative;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.weui-cell:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n  left: 15px;\n}\n.weui-cell:first-child:before {\n  display: none;\n}\n.weui-cell_primary {\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n     -moz-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n.weui-cell__bd {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.weui-cell__ft {\n  text-align: right;\n  color: #999999;\n}\n.weui-loading {\n  width: 20px;\n  height: 20px;\n  display: inline-block;\n  vertical-align: middle;\n  -webkit-animation: weuiLoading 1s steps(12, end) infinite;\n          animation: weuiLoading 1s steps(12, end) infinite;\n  background: transparent url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=\") no-repeat;\n  background-size: 100%;\n}\n.weui-loading.weui-loading_transparent {\n  background-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMjAnIGhlaWdodD0nMTIwJyB2aWV3Qm94PScwIDAgMTAwIDEwMCc+PHBhdGggZmlsbD0nbm9uZScgZD0nTTAgMGgxMDB2MTAwSDB6Jy8+PHJlY3QgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjU2KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgwIC0zMCknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjUpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKDMwIDEwNS45OCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjQzKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSg2MCA3NS45OCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjM4KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSg5MCA2NSA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjMyKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgxMjAgNTguNjYgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4yOCknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoMTUwIDU0LjAyIDY1KScvPjxyZWN0IHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyB4PSc0Ni41JyB5PSc0MCcgZmlsbD0ncmdiYSgyNTUsMjU1LDI1NSwuMjUpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKDE4MCA1MCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjIpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKC0xNTAgNDUuOTggNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4xNyknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoLTEyMCA0MS4zNCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjE0KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgtOTAgMzUgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4xKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgtNjAgMjQuMDIgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4wMyknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoLTMwIC01Ljk4IDY1KScvPjwvc3ZnPgo=\");\n}\n@-webkit-keyframes weuiLoading {\n  0% {\n    -webkit-transform: rotate3d(0, 0, 1, 0deg);\n            transform: rotate3d(0, 0, 1, 0deg);\n  }\n  100% {\n    -webkit-transform: rotate3d(0, 0, 1, 360deg);\n            transform: rotate3d(0, 0, 1, 360deg);\n  }\n}\n@keyframes weuiLoading {\n  0% {\n    -webkit-transform: rotate3d(0, 0, 1, 0deg);\n            transform: rotate3d(0, 0, 1, 0deg);\n  }\n  100% {\n    -webkit-transform: rotate3d(0, 0, 1, 360deg);\n            transform: rotate3d(0, 0, 1, 360deg);\n  }\n}\n.vux-cell-primary {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.vux-label {\n  display: block;\n  word-wrap: break-word;\n  word-break: break-all;\n}\n.weui-cell__ft .weui-loading {\n  display: block;\n}\n.weui-cell__ft.vux-cell-align-left {\n  text-align: left;\n}\n.weui-cell.vux-cell-no-border-intent:before {\n  left: 0;\n}\n.weui-cell_access .weui-cell__ft.vux-cell-arrow-down:after {\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(90deg);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(90deg);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(90deg);\n}\n.weui-cell_access .weui-cell__ft.vux-cell-arrow-up:after {\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(-90deg);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(-90deg);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(-90deg);\n}\n.vux-cell-arrow-transition:after {\n  -webkit-transition: -webkit-transform 300ms;\n  transition: -webkit-transform 300ms;\n  transition: transform 300ms;\n  transition: transform 300ms, -webkit-transform 300ms;\n}\n.vux-cell-disabled .vux-label {\n  color: #b2b2b2;\n}\n.vux-cell-disabled.weui-cell_access .weui-cell__ft:after {\n  border-color: #e2e2e2;\n}\n", ""]);
+	exports.push([module.id, "/**\n* actionsheet\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/* alias */\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* form-preview\n*/\n/**\n* load-more\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* toast\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* search\n*/\n/**\n* radio\n*/\n.weui-cell_access {\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  color: inherit;\n}\n.weui-cell_access:active {\n  background-color: #ECECEC;\n}\n.weui-cell_access .weui-cell__ft {\n  padding-right: 13px;\n  position: relative;\n}\n.weui-cell_access .weui-cell__ft:after {\n  content: \" \";\n  display: inline-block;\n  height: 6px;\n  width: 6px;\n  border-width: 2px 2px 0 0;\n  border-color: #C8C8CD;\n  border-style: solid;\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n  position: relative;\n  top: -2px;\n  position: absolute;\n  top: 50%;\n  margin-top: -4px;\n  right: 2px;\n}\n.weui-cell_link {\n  color: #586C94;\n  font-size: 14px;\n}\n.weui-cell_link:first-child:before {\n  display: block;\n}\n.weui-cell_access.vux-cell-box {\n  padding-right: 13px;\n  position: relative;\n}\n.weui-cell_access.vux-cell-box:after {\n  content: \" \";\n  display: inline-block;\n  height: 6px;\n  width: 6px;\n  border-width: 2px 2px 0 0;\n  border-color: #C8C8CD;\n  border-style: solid;\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n  position: relative;\n  top: -2px;\n  position: absolute;\n  top: 50%;\n  margin-top: -4px;\n  right: 17px;\n}\n.weui-cells {\n  margin-top: 1.17647059em;\n  background-color: #FFFFFF;\n  line-height: 1.41176471;\n  font-size: 17px;\n  overflow: hidden;\n  position: relative;\n}\n.weui-cells:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  height: 1px;\n  border-bottom: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 100%;\n      -ms-transform-origin: 0 100%;\n          transform-origin: 0 100%;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells__title {\n  margin-top: 0.77em;\n  margin-bottom: 0.3em;\n  padding-left: 15px;\n  padding-right: 15px;\n  color: #999999;\n  font-size: 14px;\n}\n.weui-cells__title + .weui-cells {\n  margin-top: 0;\n}\n.weui-cells__tips {\n  margin-top: .3em;\n  color: #999999;\n  padding-left: 15px;\n  padding-right: 15px;\n  font-size: 14px;\n}\n.weui-cell {\n  padding: 10px 15px;\n  position: relative;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.weui-cell:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n  left: 15px;\n}\n.weui-cell:first-child:before {\n  display: none;\n}\n.weui-cell_primary {\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n     -moz-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n.weui-cell__bd {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.weui-cell__ft {\n  text-align: right;\n  color: #999999;\n}\n/**\n* http://www.zhangxinxu.com/wordpress/2015/01/tips-blank-character-chinese-align/\n*/\n.vux-blank-half:before {\n  content: '\\2002';\n  speak: none;\n}\n.vux-blank-full:before {\n  content: '\\2003';\n  speak: none;\n}\n.vux-no-group-title {\n  margin-top: 0.77em;\n}\n", ""]);
 
 	// exports
 
@@ -7569,6 +7438,137 @@
 /***/ },
 
 /***/ 910:
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div>
+	//     <div class="weui-cells__title" v-if="title" :style="{color:titleColor}" v-html="title"></div>
+	//     <div class="weui-cells" :class="{'vux-no-group-title':!title}" :style="{marginTop: typeof gutter === 'number' ? (gutter + 'px') : gutter}">
+	//       <slot name="after-title"></slot>
+	//       <slot></slot>
+	//     </div>
+	//   </div>
+	// </template>
+	//
+	// <script>
+	exports.default = {
+	  name: 'group',
+	  props: {
+	    title: String,
+	    titleColor: String,
+	    labelWidth: String,
+	    labelAlign: String,
+	    labelMarginRight: String,
+	    gutter: [String, Number]
+	  }
+	  // </script>
+	  //
+	  // <style lang="less">
+	  // @import '../../styles/weui/widget/weui_cell/weui_access';
+	  // @import '../../styles/weui/widget/weui_cell/weui_cell_global';
+	  // @import '../../styles/blank.less';
+	  //
+	  // .vux-no-group-title {
+	  //   margin-top: @group-title-margin-top;
+	  // }
+	  // </style>
+
+	};
+
+/***/ },
+
+/***/ 911:
+/***/ function(module, exports) {
+
+	module.exports = "\n<div>\n  <div class=\"weui-cells__title\" v-if=\"title\" :style=\"{color:titleColor}\" v-html=\"title\"></div>\n  <div class=\"weui-cells\" :class=\"{'vux-no-group-title':!title}\" :style=\"{marginTop: typeof gutter === 'number' ? (gutter + 'px') : gutter}\">\n    <slot name=\"after-title\"></slot>\n    <slot></slot>\n  </div>\n</div>\n";
+
+/***/ },
+
+/***/ 912:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
+	__webpack_require__(913)
+	__vue_script__ = __webpack_require__(915)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] node_modules/vux/src/components/cell/index.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(923)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+	if (__vue_template__) {
+	__vue_options__.template = __vue_template__
+	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-31cdbf16/index.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+
+/***/ 913:
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(914);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(48)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
+				var newContent = require("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+
+/***/ 914:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(35)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "/**\n* actionsheet\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/* alias */\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* form-preview\n*/\n/**\n* load-more\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* toast\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* search\n*/\n/**\n* radio\n*/\n.vux-tap-active {\n  tap-highlight-color: rgba(0, 0, 0, 0);\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.vux-tap-active:active {\n  background-color: #ECECEC;\n}\n.weui-cells {\n  margin-top: 1.17647059em;\n  background-color: #FFFFFF;\n  line-height: 1.41176471;\n  font-size: 17px;\n  overflow: hidden;\n  position: relative;\n}\n.weui-cells:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  height: 1px;\n  border-bottom: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 100%;\n      -ms-transform-origin: 0 100%;\n          transform-origin: 0 100%;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells__title {\n  margin-top: 0.77em;\n  margin-bottom: 0.3em;\n  padding-left: 15px;\n  padding-right: 15px;\n  color: #999999;\n  font-size: 14px;\n}\n.weui-cells__title + .weui-cells {\n  margin-top: 0;\n}\n.weui-cells__tips {\n  margin-top: .3em;\n  color: #999999;\n  padding-left: 15px;\n  padding-right: 15px;\n  font-size: 14px;\n}\n.weui-cell {\n  padding: 10px 15px;\n  position: relative;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.weui-cell:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n  left: 15px;\n}\n.weui-cell:first-child:before {\n  display: none;\n}\n.weui-cell_primary {\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n     -moz-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n.weui-cell__bd {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.weui-cell__ft {\n  text-align: right;\n  color: #999999;\n}\n.weui-loading {\n  width: 20px;\n  height: 20px;\n  display: inline-block;\n  vertical-align: middle;\n  -webkit-animation: weuiLoading 1s steps(12, end) infinite;\n          animation: weuiLoading 1s steps(12, end) infinite;\n  background: transparent url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=\") no-repeat;\n  background-size: 100%;\n}\n.weui-loading.weui-loading_transparent {\n  background-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMjAnIGhlaWdodD0nMTIwJyB2aWV3Qm94PScwIDAgMTAwIDEwMCc+PHBhdGggZmlsbD0nbm9uZScgZD0nTTAgMGgxMDB2MTAwSDB6Jy8+PHJlY3QgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjU2KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgwIC0zMCknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjUpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKDMwIDEwNS45OCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjQzKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSg2MCA3NS45OCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjM4KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSg5MCA2NSA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjMyKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgxMjAgNTguNjYgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4yOCknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoMTUwIDU0LjAyIDY1KScvPjxyZWN0IHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyB4PSc0Ni41JyB5PSc0MCcgZmlsbD0ncmdiYSgyNTUsMjU1LDI1NSwuMjUpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKDE4MCA1MCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjIpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKC0xNTAgNDUuOTggNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4xNyknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoLTEyMCA0MS4zNCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjE0KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgtOTAgMzUgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4xKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgtNjAgMjQuMDIgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4wMyknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoLTMwIC01Ljk4IDY1KScvPjwvc3ZnPgo=\");\n}\n@-webkit-keyframes weuiLoading {\n  0% {\n    -webkit-transform: rotate3d(0, 0, 1, 0deg);\n            transform: rotate3d(0, 0, 1, 0deg);\n  }\n  100% {\n    -webkit-transform: rotate3d(0, 0, 1, 360deg);\n            transform: rotate3d(0, 0, 1, 360deg);\n  }\n}\n@keyframes weuiLoading {\n  0% {\n    -webkit-transform: rotate3d(0, 0, 1, 0deg);\n            transform: rotate3d(0, 0, 1, 0deg);\n  }\n  100% {\n    -webkit-transform: rotate3d(0, 0, 1, 360deg);\n            transform: rotate3d(0, 0, 1, 360deg);\n  }\n}\n.vux-cell-primary {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.vux-label {\n  display: block;\n  word-wrap: break-word;\n  word-break: break-all;\n}\n.weui-cell__ft .weui-loading {\n  display: block;\n}\n.weui-cell__ft.vux-cell-align-left {\n  text-align: left;\n}\n.weui-cell.vux-cell-no-border-intent:before {\n  left: 0;\n}\n.weui-cell_access .weui-cell__ft.vux-cell-arrow-down:after {\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(90deg);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(90deg);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(90deg);\n}\n.weui-cell_access .weui-cell__ft.vux-cell-arrow-up:after {\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(-90deg);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(-90deg);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(-90deg);\n}\n.vux-cell-arrow-transition:after {\n  -webkit-transition: -webkit-transform 300ms;\n  transition: -webkit-transform 300ms;\n  transition: transform 300ms;\n  transition: transform 300ms, -webkit-transform 300ms;\n}\n.vux-cell-disabled .vux-label {\n  color: #b2b2b2;\n}\n.vux-cell-disabled.weui-cell_access .weui-cell__ft:after {\n  border-color: #e2e2e2;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+
+/***/ 915:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7577,13 +7577,13 @@
 	  value: true
 	});
 
-	var _inlineDesc = __webpack_require__(911);
+	var _inlineDesc = __webpack_require__(916);
 
 	var _inlineDesc2 = _interopRequireDefault(_inlineDesc);
 
-	var _router = __webpack_require__(916);
+	var _router = __webpack_require__(921);
 
-	var _props = __webpack_require__(917);
+	var _props = __webpack_require__(922);
 
 	var _props2 = _interopRequireDefault(_props);
 
@@ -7709,18 +7709,18 @@
 
 /***/ },
 
-/***/ 911:
+/***/ 916:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(912)
-	__vue_script__ = __webpack_require__(914)
+	__webpack_require__(917)
+	__vue_script__ = __webpack_require__(919)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/inline-desc/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(915)
+	__vue_template__ = __webpack_require__(920)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7746,13 +7746,13 @@
 
 /***/ },
 
-/***/ 912:
+/***/ 917:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(913);
+	var content = __webpack_require__(918);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -7773,7 +7773,7 @@
 
 /***/ },
 
-/***/ 913:
+/***/ 918:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -7788,7 +7788,7 @@
 
 /***/ },
 
-/***/ 914:
+/***/ 919:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7816,14 +7816,14 @@
 
 /***/ },
 
-/***/ 915:
+/***/ 920:
 /***/ function(module, exports) {
 
 	module.exports = "\n<span class=\"vux-label-desc\"><slot></slot></span>\n";
 
 /***/ },
 
-/***/ 916:
+/***/ 921:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7856,7 +7856,7 @@
 
 /***/ },
 
-/***/ 917:
+/***/ 922:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7889,25 +7889,25 @@
 
 /***/ },
 
-/***/ 918:
+/***/ 923:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div\n  class=\"weui-cell\"\n  :class=\"{\n    'vux-tap-active': isLink || !!link,\n    'weui-cell_access': isLink || !!link,\n    'vux-cell-no-border-intent': !borderIntent,\n    'vux-cell-disabled': disabled\n  }\"\n  @click=\"onClick\">\n  <div class=\"weui-cell__hd\">\n    <slot name=\"icon\"></slot>\n  </div>\n  <div class=\"vux-cell-bd\" :class=\"{'vux-cell-primary': primary === 'title' && valueAlign !== 'left'}\">\n    <p>\n      <label class=\"vux-label\" :style=\"getLabelStyles()\" v-if=\"title || hasTitleSlot\">\n        <slot name=\"title\">{{ title }}</slot>\n      </label>\n      <slot name=\"after-title\"></slot>\n    </p>\n    <inline-desc>\n      <slot name=\"inline-desc\">{{ inlineDesc }}</slot>\n    </inline-desc>\n  </div>\n  <div class=\"weui-cell__ft\" :class=\"valueClass\">\n    <slot name=\"value\"></slot>\n    <slot>{{ value }}</slot>\n    <i class=\"weui-loading\" v-if=\"isLoading\"></i>\n  </div>\n  <slot name=\"child\"></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 928:
+/***/ 933:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(929)
-	__vue_script__ = __webpack_require__(931)
+	__webpack_require__(934)
+	__vue_script__ = __webpack_require__(936)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/alert/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(937)
+	__vue_template__ = __webpack_require__(942)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7933,13 +7933,13 @@
 
 /***/ },
 
-/***/ 929:
+/***/ 934:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(930);
+	var content = __webpack_require__(935);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -7960,7 +7960,7 @@
 
 /***/ },
 
-/***/ 930:
+/***/ 935:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -7975,7 +7975,7 @@
 
 /***/ },
 
-/***/ 931:
+/***/ 936:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7984,7 +7984,7 @@
 	  value: true
 	});
 
-	var _xDialog = __webpack_require__(932);
+	var _xDialog = __webpack_require__(937);
 
 	var _xDialog2 = _interopRequireDefault(_xDialog);
 
@@ -8077,18 +8077,18 @@
 
 /***/ },
 
-/***/ 932:
+/***/ 937:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(933)
-	__vue_script__ = __webpack_require__(935)
+	__webpack_require__(938)
+	__vue_script__ = __webpack_require__(940)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/x-dialog/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(936)
+	__vue_template__ = __webpack_require__(941)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8114,13 +8114,13 @@
 
 /***/ },
 
-/***/ 933:
+/***/ 938:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(934);
+	var content = __webpack_require__(939);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8141,7 +8141,7 @@
 
 /***/ },
 
-/***/ 934:
+/***/ 939:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8156,7 +8156,7 @@
 
 /***/ },
 
-/***/ 935:
+/***/ 940:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8239,21 +8239,21 @@
 
 /***/ },
 
-/***/ 936:
+/***/ 941:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-x-dialog\" @touchmove=\"onTouchMove\">\n  <transition :name=\"maskTransition\">\n    <div class=\"weui-mask\" @click=\"hideOnBlur && (currentValue = false)\" v-show=\"currentValue\"></div>\n  </transition>\n  <transition :name=\"dialogTransition\">\n    <div :class=\"dialogClass\" v-show=\"currentValue\" :style=\"dialogStyle\">\n      <slot></slot>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ },
 
-/***/ 937:
+/***/ 942:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-alert\">\n  <x-dialog\n  v-model=\"showValue\"\n  :mask-transition=\"maskTransition\"\n  :dialog-transition=\"dialogTransition\"\n  @on-hide=\"$emit('on-hide')\"\n  @on-show=\"$emit('on-show')\">\n    <div class=\"weui-dialog__hd\">\n      <strong class=\"weui-dialog__title\">{{title}}</strong>\n    </div>\n    <div class=\"weui-dialog__bd\">\n      <slot>\n        <div v-html=\"content\"></div>\n      </slot>\n    </div>\n    <div class=\"weui-dialog__ft\">\n      <a href=\"javascript:;\"\n      class=\"weui-dialog__btn weui-dialog__btn_primary\"\n      @click=\"_onHide\">{{buttonText || '确定'}}</a>\n    </div>\n  </x-dialog>\n</div>\n";
 
 /***/ },
 
-/***/ 954:
+/***/ 959:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8264,15 +8264,15 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _index = __webpack_require__(955);
+	var _index = __webpack_require__(960);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(958);
+	var _index3 = __webpack_require__(963);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _vue = __webpack_require__(480);
+	var _vue = __webpack_require__(485);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
@@ -8327,7 +8327,7 @@
 
 /***/ },
 
-/***/ 955:
+/***/ 960:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8339,11 +8339,11 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _alert = __webpack_require__(928);
+	var _alert = __webpack_require__(933);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
-	var _plugin_helper = __webpack_require__(956);
+	var _plugin_helper = __webpack_require__(961);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8408,7 +8408,7 @@
 
 /***/ },
 
-/***/ 956:
+/***/ 961:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8418,7 +8418,7 @@
 	});
 	exports.mergeOptions = undefined;
 
-	var _objectAssign = __webpack_require__(957);
+	var _objectAssign = __webpack_require__(962);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -8441,7 +8441,7 @@
 
 /***/ },
 
-/***/ 957:
+/***/ 962:
 /***/ function(module, exports) {
 
 	/*
@@ -8538,7 +8538,7 @@
 
 /***/ },
 
-/***/ 958:
+/***/ 963:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8550,11 +8550,11 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _toast = __webpack_require__(959);
+	var _toast = __webpack_require__(964);
 
 	var _toast2 = _interopRequireDefault(_toast);
 
-	var _plugin_helper = __webpack_require__(956);
+	var _plugin_helper = __webpack_require__(961);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8637,18 +8637,18 @@
 
 /***/ },
 
-/***/ 959:
+/***/ 964:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(960)
-	__vue_script__ = __webpack_require__(962)
+	__webpack_require__(965)
+	__vue_script__ = __webpack_require__(967)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/toast/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(964)
+	__vue_template__ = __webpack_require__(969)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8674,13 +8674,13 @@
 
 /***/ },
 
-/***/ 960:
+/***/ 965:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(961);
+	var content = __webpack_require__(966);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8701,7 +8701,7 @@
 
 /***/ },
 
-/***/ 961:
+/***/ 966:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8716,7 +8716,7 @@
 
 /***/ },
 
-/***/ 962:
+/***/ 967:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8725,7 +8725,7 @@
 	  value: true
 	});
 
-	var _safariFix = __webpack_require__(963);
+	var _safariFix = __webpack_require__(968);
 
 	var _safariFix2 = _interopRequireDefault(_safariFix);
 
@@ -8907,7 +8907,7 @@
 
 /***/ },
 
-/***/ 963:
+/***/ 968:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8933,25 +8933,25 @@
 
 /***/ },
 
-/***/ 964:
+/***/ 969:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-toast\">\n  <div class=\"weui-mask_transparent\" v-show=\"isShowMask && show\"></div>\n  <transition :name=\"currentTransition\">\n    <div class=\"weui-toast\" :style=\"{width: width}\" :class=\"toastClass\" v-show=\"show\">\n      <i class=\"weui-icon-success-no-circle weui-icon_toast\" v-show=\"type !== 'text'\"></i>\n      <p class=\"weui-toast__content\" v-if=\"text\" :style=\"style\" v-html=\"text\"></p>\n      <p class=\"weui-toast__content\" v-else><slot></slot></p>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ },
 
-/***/ 996:
+/***/ 1001:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(997)
-	__vue_script__ = __webpack_require__(999)
+	__webpack_require__(1002)
+	__vue_script__ = __webpack_require__(1004)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/cell-box/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1000)
+	__vue_template__ = __webpack_require__(1005)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8977,13 +8977,13 @@
 
 /***/ },
 
-/***/ 997:
+/***/ 1002:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(998);
+	var content = __webpack_require__(1003);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -9004,7 +9004,7 @@
 
 /***/ },
 
-/***/ 998:
+/***/ 1003:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -9019,7 +9019,7 @@
 
 /***/ },
 
-/***/ 999:
+/***/ 1004:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9028,7 +9028,7 @@
 	  value: true
 	});
 
-	var _router = __webpack_require__(916);
+	var _router = __webpack_require__(921);
 
 	exports.default = {
 	  name: 'cell-box',
@@ -9074,25 +9074,25 @@
 
 /***/ },
 
-/***/ 1000:
+/***/ 1005:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-cell-box weui-cell\" :class=\"{'vux-tap-active': isLink || !!link, 'weui-cell_access': isLink || !!link, 'vux-cell-no-border-intent': !borderIntent}\" @click=\"onClick\">\n  <div><slot></slot></div>\n</div>\n";
 
 /***/ },
 
-/***/ 1058:
+/***/ 1063:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1059)
-	__vue_script__ = __webpack_require__(1061)
+	__webpack_require__(1064)
+	__vue_script__ = __webpack_require__(1066)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/scroller/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1080)
+	__vue_template__ = __webpack_require__(1085)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -9118,13 +9118,13 @@
 
 /***/ },
 
-/***/ 1059:
+/***/ 1064:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1060);
+	var content = __webpack_require__(1065);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -9145,7 +9145,7 @@
 
 /***/ },
 
-/***/ 1060:
+/***/ 1065:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -9160,7 +9160,7 @@
 
 /***/ },
 
-/***/ 1061:
+/***/ 1066:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9169,19 +9169,19 @@
 	  value: true
 	});
 
-	var _objectAssign = __webpack_require__(957);
+	var _objectAssign = __webpack_require__(962);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
-	var _xscroll = __webpack_require__(1062);
+	var _xscroll = __webpack_require__(1067);
 
 	var _xscroll2 = _interopRequireDefault(_xscroll);
 
-	var _pulldown = __webpack_require__(1078);
+	var _pulldown = __webpack_require__(1083);
 
 	var _pulldown2 = _interopRequireDefault(_pulldown);
 
-	var _pullup = __webpack_require__(1079);
+	var _pullup = __webpack_require__(1084);
 
 	var _pullup2 = _interopRequireDefault(_pullup);
 
@@ -9532,18 +9532,18 @@
 
 /***/ },
 
-/***/ 1062:
+/***/ 1067:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063),
-		Base = __webpack_require__(1064),
-		Timer = __webpack_require__(1066),
-		Animate = __webpack_require__(1068),
-		Hammer = __webpack_require__(1069),
-		SimuScroll = __webpack_require__(1070),
-		OriginScroll = __webpack_require__(1077);
+	var Util = __webpack_require__(1068),
+		Base = __webpack_require__(1069),
+		Timer = __webpack_require__(1071),
+		Animate = __webpack_require__(1073),
+		Hammer = __webpack_require__(1074),
+		SimuScroll = __webpack_require__(1075),
+		OriginScroll = __webpack_require__(1082);
 	var XScroll = function(cfg) {
 			var _ = cfg && cfg.useOriginScroll ? OriginScroll : SimuScroll;
 			return new _(cfg);
@@ -9596,7 +9596,7 @@
 
 /***/ },
 
-/***/ 1063:
+/***/ 1068:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -9928,13 +9928,13 @@
 
 /***/ },
 
-/***/ 1064:
+/***/ 1069:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Events = __webpack_require__(1065);
+	var Util = __webpack_require__(1068);
+	var Events = __webpack_require__(1070);
 	/** 
 	      @constructor 
 	      @mixes Events
@@ -10003,12 +10003,12 @@
 
 /***/ },
 
-/***/ 1065:
+/***/ 1070:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
+	var Util = __webpack_require__(1068);
 	// Returns a function that will be executed at most one time, no matter how
 	// often you call it. Useful for lazy initialization.
 	var _once = function(func) {
@@ -10237,14 +10237,14 @@
 
 /***/ },
 
-/***/ 1066:
+/***/ 1071:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Base = __webpack_require__(1064);
-	var Easing = __webpack_require__(1067);
+	var Util = __webpack_require__(1068);
+	var Base = __webpack_require__(1069);
+	var Easing = __webpack_require__(1072);
 
 	var RAF = window.requestAnimationFrame ||
 		window.webkitRequestAnimationFrame ||
@@ -10412,7 +10412,7 @@
 
 /***/ },
 
-/***/ 1067:
+/***/ 1072:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -10449,15 +10449,15 @@
 
 /***/ },
 
-/***/ 1068:
+/***/ 1073:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Timer = __webpack_require__(1066);
-	var Easing = __webpack_require__(1067);
-	var Base = __webpack_require__(1064);
+	var Util = __webpack_require__(1068);
+	var Timer = __webpack_require__(1071);
+	var Easing = __webpack_require__(1072);
+	var Base = __webpack_require__(1069);
 	//transform
 	var vendorTransform = Util.prefixStyle("transform");
 	//transition webkitTransition MozTransition OTransition msTtransition
@@ -10804,7 +10804,7 @@
 
 /***/ },
 
-/***/ 1069:
+/***/ 1074:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -13266,18 +13266,18 @@
 
 /***/ },
 
-/***/ 1070:
+/***/ 1075:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063),
-	  Base = __webpack_require__(1064),
-	  Core = __webpack_require__(1071),
-	  Animate = __webpack_require__(1068),
-	  Hammer = __webpack_require__(1069),
-	  ScrollBar = __webpack_require__(1075),
-	  Controller = __webpack_require__(1076);
+	var Util = __webpack_require__(1068),
+	  Base = __webpack_require__(1069),
+	  Core = __webpack_require__(1076),
+	  Animate = __webpack_require__(1073),
+	  Hammer = __webpack_require__(1074),
+	  ScrollBar = __webpack_require__(1080),
+	  Controller = __webpack_require__(1081);
 	//reduced boundry pan distance
 	var PAN_RATE = 1 - 0.618;
 	//constant for scrolling acceleration
@@ -13973,18 +13973,18 @@
 
 /***/ },
 
-/***/ 1071:
+/***/ 1076:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063),
-	    Base = __webpack_require__(1064),
-	    Animate = __webpack_require__(1068),
-	    Boundry = __webpack_require__(1072),
-	    Hammer = __webpack_require__(1069),
-	    Sticky = __webpack_require__(1073),
-	    Fixed = __webpack_require__(1074);
+	var Util = __webpack_require__(1068),
+	    Base = __webpack_require__(1069),
+	    Animate = __webpack_require__(1073),
+	    Boundry = __webpack_require__(1077),
+	    Hammer = __webpack_require__(1074),
+	    Sticky = __webpack_require__(1078),
+	    Fixed = __webpack_require__(1079);
 	// boundry checked bounce effect
 	var BOUNDRY_CHECK_DURATION = 500;
 	var BOUNDRY_CHECK_EASING = "ease";
@@ -14341,12 +14341,12 @@
 
 /***/ },
 
-/***/ 1072:
+/***/ 1077:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	 var Util = __webpack_require__(1063);
+	 var Util = __webpack_require__(1068);
 
 	 function Boundry(cfg) {
 	     this.cfg = Util.mix({
@@ -14438,13 +14438,13 @@
 
 /***/ },
 
-/***/ 1073:
+/***/ 1078:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Base = __webpack_require__(1064);
+	var Util = __webpack_require__(1068);
+	var Base = __webpack_require__(1069);
 	//transform
 	var transform = Util.prefixStyle("transform");
 	// default render function for position:sticky elements
@@ -14674,13 +14674,13 @@
 
 /***/ },
 
-/***/ 1074:
+/***/ 1079:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Base = __webpack_require__(1064);
+	var Util = __webpack_require__(1068);
+	var Base = __webpack_require__(1069);
 	var transform = Util.prefixStyle("transform");
 
 	var Fixed = function(cfg) {
@@ -14815,13 +14815,13 @@
 
 /***/ },
 
-/***/ 1075:
+/***/ 1080:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Animate = __webpack_require__(1068);
+	var Util = __webpack_require__(1068);
+	var Animate = __webpack_require__(1073);
 	var MAX_BOUNCE_DISTANCE = 40;
 	var MIN_BAR_SCROLLED_SIZE = 10;
 	var MIN_BAR_SIZE = 50;
@@ -15016,7 +15016,7 @@
 
 /***/ },
 
-/***/ 1076:
+/***/ 1081:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -15024,8 +15024,8 @@
 		wrapped scroll controller
 	*/
 	"use strict";
-	var Util = __webpack_require__(1063),
-		Base = __webpack_require__(1064);
+	var Util = __webpack_require__(1068),
+		Base = __webpack_require__(1069);
 
 	var Controller = function(cfg) {
 		Controller.superclass.constructor.call(this, cfg);
@@ -15161,15 +15161,15 @@
 
 /***/ },
 
-/***/ 1077:
+/***/ 1082:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063),
-	    Base = __webpack_require__(1064),
-	    Core = __webpack_require__(1071),
-	    Animate = __webpack_require__(1068);
+	var Util = __webpack_require__(1068),
+	    Base = __webpack_require__(1069),
+	    Core = __webpack_require__(1076),
+	    Animate = __webpack_require__(1073);
 
 	var transformOrigin = Util.prefixStyle("transformOrigin");
 	/** 
@@ -15304,13 +15304,13 @@
 
 /***/ },
 
-/***/ 1078:
+/***/ 1083:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Base = __webpack_require__(1064);
+	var Util = __webpack_require__(1068);
+	var Base = __webpack_require__(1069);
 	var clsPrefix;
 	var containerCls;
 	var content = "Pull Down To Refresh";
@@ -15495,13 +15495,13 @@
 
 /***/ },
 
-/***/ 1079:
+/***/ 1084:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Base = __webpack_require__(1064);
+	var Util = __webpack_require__(1068);
+	var Base = __webpack_require__(1069);
 	var clsPrefix;
 	var containerCls;
 	var loadingContent = "Loading...";
@@ -15718,30 +15718,30 @@
 
 /***/ },
 
-/***/ 1080:
+/***/ 1085:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"styles\">\n  <div class=\"xs-container\">\n    <slot></slot>\n    <slot name=\"pulldown\"></slot>\n    <slot name=\"pullup\"></slot>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1464:
+/***/ 1469:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1466:
+/***/ 1471:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by jianchep on 17/03/29.
 	 */
 
-	var social = __webpack_require__(1467);
-	var manage = __webpack_require__(1503);
-	var member = __webpack_require__(1520);
+	var social = __webpack_require__(1472);
+	var manage = __webpack_require__(1508);
+	var member = __webpack_require__(1525);
 
 	const routes = [
 	    {path: '/', redirect: '/social'},
@@ -15764,19 +15764,19 @@
 
 /***/ },
 
-/***/ 1467:
+/***/ 1472:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1468)
-	__webpack_require__(1470)
-	__vue_script__ = __webpack_require__(1472)
+	__webpack_require__(1473)
+	__webpack_require__(1475)
+	__vue_script__ = __webpack_require__(1477)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/social.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1502)
+	__vue_template__ = __webpack_require__(1507)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -15802,13 +15802,13 @@
 
 /***/ },
 
-/***/ 1468:
+/***/ 1473:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1469);
+	var content = __webpack_require__(1474);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -15829,7 +15829,7 @@
 
 /***/ },
 
-/***/ 1469:
+/***/ 1474:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -15844,13 +15844,13 @@
 
 /***/ },
 
-/***/ 1470:
+/***/ 1475:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1471);
+	var content = __webpack_require__(1476);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -15871,7 +15871,7 @@
 
 /***/ },
 
-/***/ 1471:
+/***/ 1476:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -15886,7 +15886,7 @@
 
 /***/ },
 
-/***/ 1472:
+/***/ 1477:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -15895,23 +15895,23 @@
 	    value: true
 	});
 
-	var _speak = __webpack_require__(1473);
+	var _speak = __webpack_require__(1478);
 
 	var _speak2 = _interopRequireDefault(_speak);
 
-	var _social_title = __webpack_require__(1480);
+	var _social_title = __webpack_require__(1485);
 
 	var _social_title2 = _interopRequireDefault(_social_title);
 
-	var _switch = __webpack_require__(1483);
+	var _switch = __webpack_require__(1488);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _common = __webpack_require__(1490);
+	var _common = __webpack_require__(1495);
 
 	var _common2 = _interopRequireDefault(_common);
 
-	var _userCommon = __webpack_require__(1495);
+	var _userCommon = __webpack_require__(1500);
 
 	var _userCommon2 = _interopRequireDefault(_userCommon);
 
@@ -15923,7 +15923,7 @@
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _dialog = __webpack_require__(954);
+	var _dialog = __webpack_require__(959);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -16740,19 +16740,19 @@
 
 /***/ },
 
-/***/ 1473:
+/***/ 1478:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1474)
-	__webpack_require__(1476)
-	__vue_script__ = __webpack_require__(1478)
+	__webpack_require__(1479)
+	__webpack_require__(1481)
+	__vue_script__ = __webpack_require__(1483)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/speak.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1479)
+	__vue_template__ = __webpack_require__(1484)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -16778,13 +16778,13 @@
 
 /***/ },
 
-/***/ 1474:
+/***/ 1479:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1475);
+	var content = __webpack_require__(1480);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -16805,7 +16805,7 @@
 
 /***/ },
 
-/***/ 1475:
+/***/ 1480:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -16820,13 +16820,13 @@
 
 /***/ },
 
-/***/ 1476:
+/***/ 1481:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1477);
+	var content = __webpack_require__(1482);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -16847,7 +16847,7 @@
 
 /***/ },
 
-/***/ 1477:
+/***/ 1482:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -16862,7 +16862,7 @@
 
 /***/ },
 
-/***/ 1478:
+/***/ 1483:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -16970,24 +16970,24 @@
 
 /***/ },
 
-/***/ 1479:
+/***/ 1484:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div id=\"speak_container\" _v-62049158=\"\">\n    <div class=\"bottominput\" _v-62049158=\"\">\n        <div class=\"text_talk\" _v-62049158=\"\">\n            <input v-if=\"discussStatus\" class=\"text_talk_input\" v-model=\"sentmassagetext\" type=\"text\" placeholder=\"向群主提问或参与讨论\" _v-62049158=\"\">\n            <input v-if=\"!discussStatus\" type=\"text\" placeholder=\"评论关闭\" disabled=\"\" _v-62049158=\"\">\n        </div>\n        <div class=\"send\" @click=\"sendMessage\" _v-62049158=\"\">\n            <span _v-62049158=\"\">发送</span>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1480:
+/***/ 1485:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1481)
+	__vue_script__ = __webpack_require__(1486)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/social_title.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1482)
+	__vue_template__ = __webpack_require__(1487)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -17013,7 +17013,7 @@
 
 /***/ },
 
-/***/ 1481:
+/***/ 1486:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17062,26 +17062,26 @@
 
 /***/ },
 
-/***/ 1482:
+/***/ 1487:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"top0\">\n    <div class=\"top_container\">\n        <div class=\"top_left\" style=\"width: 40px\">\n            <a class=\"top_back\" href=\"javascript:history.back();\">\n                <span class=\"home_arrow\"></span>\n            </a>\n        </div>\n        <div class=\"title_container\">\n            {{data||msg}}\n        </div>\n        <div class=\"top_right\" style=\"width:40px;right:10px\" v-if=\"rightshow||false\" @click='manage'>\n            <a class=\"top_back\">\n                <img style=\"width:26px;margin-top:12px;\" class=\"back_home\" src=\"http://pic.davdian.com/free/2017/04/06/social_title.png\"/>\n            </a>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1483:
+/***/ 1488:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1484)
-	__webpack_require__(1486)
-	__vue_script__ = __webpack_require__(1488)
+	__webpack_require__(1489)
+	__webpack_require__(1491)
+	__vue_script__ = __webpack_require__(1493)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/switch.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1489)
+	__vue_template__ = __webpack_require__(1494)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -17107,13 +17107,13 @@
 
 /***/ },
 
-/***/ 1484:
+/***/ 1489:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1485);
+	var content = __webpack_require__(1490);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -17134,7 +17134,7 @@
 
 /***/ },
 
-/***/ 1485:
+/***/ 1490:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -17149,13 +17149,13 @@
 
 /***/ },
 
-/***/ 1486:
+/***/ 1491:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1487);
+	var content = __webpack_require__(1492);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -17176,7 +17176,7 @@
 
 /***/ },
 
-/***/ 1487:
+/***/ 1492:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -17191,7 +17191,7 @@
 
 /***/ },
 
-/***/ 1488:
+/***/ 1493:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17356,25 +17356,25 @@
 
 /***/ },
 
-/***/ 1489:
+/***/ 1494:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div id=\"switch\" _v-bec5a1bc=\"\">\n    <!--fiexd定位的弹幕-->\n    <div v-if=\"commonflag &amp;&amp; discussStatus\" class=\"flexd\" @click=\"open_comment\" _v-bec5a1bc=\"\">\n        <div class=\"common_position\" v-if=\"commonList[commonList.length-2] &amp;&amp; commonList[commonList.length-2].msg.content\" _v-bec5a1bc=\"\">\n            <span class=\"common_box\" v-text=\"decodeURIComponent(commonList[commonList.length-2].msg.content)\" _v-bec5a1bc=\"\"></span>\n            <img :src=\"commonList[commonList.length-2].speaker.avatar || defaultAvatar\" _v-bec5a1bc=\"\">\n        </div>\n\n        <div class=\"common_position\" v-if=\"commonList[commonList.length-1] &amp;&amp; commonList[commonList.length-1].msg.content\" _v-bec5a1bc=\"\">\n            <span class=\"common_box\" v-text=\"decodeURIComponent(commonList[commonList.length-1].msg.content)\" _v-bec5a1bc=\"\"></span>\n            <img :src=\"commonList[commonList.length-1].speaker.avatar || defaultAvatar\" _v-bec5a1bc=\"\">\n        </div>\n    </div>\n    <!--开关按钮-->\n    <div v-if=\"commonflag &amp;&amp; discussStatus\" class=\"flag\" _v-bec5a1bc=\"\">\n        <span @click=\"switchflag\" _v-bec5a1bc=\"\">关</span>\n    </div>\n    <div v-if=\"!commonflag &amp;&amp; discussStatus\" class=\"flag\" _v-bec5a1bc=\"\">\n        <span @click=\"switchflag\" _v-bec5a1bc=\"\">开</span>\n    </div>\n    <div class=\"commen_num\" v-if=\"discussStatus\" _v-bec5a1bc=\"\"><span _v-bec5a1bc=\"\">讨论：{{total}}</span></div>\n</div>\n";
 
 /***/ },
 
-/***/ 1490:
+/***/ 1495:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1491)
-	__vue_script__ = __webpack_require__(1493)
+	__webpack_require__(1496)
+	__vue_script__ = __webpack_require__(1498)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/common.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1494)
+	__vue_template__ = __webpack_require__(1499)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -17400,13 +17400,13 @@
 
 /***/ },
 
-/***/ 1491:
+/***/ 1496:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1492);
+	var content = __webpack_require__(1497);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -17427,7 +17427,7 @@
 
 /***/ },
 
-/***/ 1492:
+/***/ 1497:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -17442,7 +17442,7 @@
 
 /***/ },
 
-/***/ 1493:
+/***/ 1498:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18077,26 +18077,26 @@
 
 /***/ },
 
-/***/ 1494:
+/***/ 1499:
 /***/ function(module, exports) {
 
 	module.exports = "\n    <div id=\"common\" _v-082b234e=\"\">\n        <div class=\"commonroom\" _v-082b234e=\"\">\n\t        <ul id=\"ulList\" _v-082b234e=\"\">\n\t            <audio preload=\"auto\" class=\"allAudio\" _v-082b234e=\"\"></audio>\n\t            <li class=\"teacherChatData\" v-for=\"(common,index) in barrageList\" :key=\"common.uuid\" msg_id=\"{{decodeURIComponent(common.speake.name)}}\" _v-082b234e=\"\">\n\t                <div class=\"timebox\" v-if=\"index == 0 || (common.msg.time - barrageList[index - 1].msg.time) > 5*60*1000\" _v-082b234e=\"\">\n\t                    <span class=\"talk_time\" v-if=\"new Date()-common.msg.time < 60*60*12*1000\" _v-082b234e=\"\">{{getTime(parseInt(common.msg.time))}}</span>\n\t                    <span class=\"talk_time\" v-if=\"new Date()-common.msg.time >= 60*60*12*1000\" _v-082b234e=\"\">{{getFullTime(parseInt(common.msg.time))}}</span>\n\t                </div>\n\t                <div class=\"timebox\" _v-082b234e=\"\">\n\t                \t<div class=\"talk_time remindNews\" v-if=\"common.isTips || common.allMsg &amp;&amp; JSON.parse(common.allMsg) &amp;&amp; JSON.parse(JSON.parse(JSON.parse(common.allMsg).content).extra).info.isTips==1\" _v-082b234e=\"\">{{decodeURIComponent(common.msg.content)}}</div>\n\t                </div>\n\t                \n\n\t                <span class=\"head\" v-if=\"!(common.isTips || common.allMsg &amp;&amp; JSON.parse(common.allMsg) &amp;&amp; JSON.parse(JSON.parse(JSON.parse(common.allMsg).content).extra).info.isTips==1)\" _v-082b234e=\"\">\n\t                    <img :src=\"common.speaker.avatar || defaultAvatar\" _v-082b234e=\"\">\n\t                </span>\n\t                <div class=\"right\" v-if=\"!(common.isTips || common.allMsg &amp;&amp; JSON.parse(common.allMsg) &amp;&amp; JSON.parse(JSON.parse(JSON.parse(common.allMsg).content).extra).info.isTips==1)\" _v-082b234e=\"\">\n\t                    <h2 _v-082b234e=\"\">{{decodeURIComponent(common.speaker.name)}}</h2>\n\t                    <!--text类型的信息-->\n\t                    <div v-if=\"common.msg.type==0\" class=\"main\" :class=\"{'blue':common.is_answer}\" _v-082b234e=\"\">\n\t                        <i class=\"main_picBox_icon2\" _v-082b234e=\"\"></i>\n\t                        <span class=\"TextMessageSpan formfield\" _v-082b234e=\"\">{{decodeURIComponent(common.msg.content)}}</span>\n\t                    </div>\n\t                    <!--语音类型的信息-->\n\t                    <div class=\"audiomain\" @click=\"playVoiceFlag(index, common)\" v-if=\"common.msg.type==2||common.msg.type==91\" :class=\"{'replied':common.replied}\" _v-082b234e=\"\">\n\t                        <div class=\"voice\" :class=\"{ 'play': isPlay[index], 'noPlay': !isPlay[index] }\" _v-082b234e=\"\">\n\t                            <i class=\"fa fa-rss\" v-if=\"common.msg.duration>0\" _v-082b234e=\"\"></i>\n\t                            <!-- <p :style=\"{width:(common.msg.voicewidth + 40)+'px'}\" class=\"main\">{{common.msg.duration}}''</p> -->\n\t                            <p :style=\"{width:( getWidth(common.msg.duration) + 40)+'px'}\" class=\"main\" _v-082b234e=\"\">{{common.msg.duration}}''</p>\n\t                            <i class=\"curcle-full\" v-if=\"!curcleFullHash[common.uuid] &amp;&amp; !common.msg.curcleFullHash\" _v-082b234e=\"\"></i>\n\t                        </div>\n\t                        <div class=\"audio\" :data-src=\"common.msg.url\" preload=\"auto\" :data-type=\"1\" :data-index=\"index\" v-if=\"common.msg.type==2\" _v-082b234e=\"\"></div>\n\t                        <div class=\"audio\" :data-src=\"common.msg.url\" preload=\"auto\" :data-type=\"91\" :data-index=\"index\" v-if=\"common.msg.type==91\" _v-082b234e=\"\"></div>\n\t                    </div>\n\t                    <!--图片类型的信息-->\n\t                    <div v-if=\"common.msg.type==1\" class=\"mainPic\" _v-082b234e=\"\">\n\t                        <div class=\"picBox\" _v-082b234e=\"\">\n\t                            <div class=\"picBox_icon1_container\" _v-082b234e=\"\">\n\t                                <i class=\"picBox_icon1\" _v-082b234e=\"\"></i>\n\t                                <i class=\"picBox_icon2\" _v-082b234e=\"\"></i>\n\t                                <img :src=\"common.msg.url\" alt=\"\" _v-082b234e=\"\">\n\t                            </div>\n\t                            <img :src=\"common.msg.url\" alt=\"\" _v-082b234e=\"\">\n\t                        </div>\n\t                        <div class=\"picBox_container\" @click=\"previewImage(common.uuid)\" _v-082b234e=\"\">\n\t                            <img :style=\"getImageStyle(common)\" :src=\"common.msg.url\" alt=\"\" _v-082b234e=\"\">\n\t                        </div>\n\t                    </div>\n\t                </div>\n\t            </li>\n\t        </ul>\n\t        <div class=\"bottom\" _v-082b234e=\"\"></div>\n\t    </div>\n    </div>\n";
 
 /***/ },
 
-/***/ 1495:
+/***/ 1500:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1496)
-	__webpack_require__(1498)
-	__vue_script__ = __webpack_require__(1500)
+	__webpack_require__(1501)
+	__webpack_require__(1503)
+	__vue_script__ = __webpack_require__(1505)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/userCommon.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1501)
+	__vue_template__ = __webpack_require__(1506)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18122,13 +18122,13 @@
 
 /***/ },
 
-/***/ 1496:
+/***/ 1501:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1497);
+	var content = __webpack_require__(1502);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18149,7 +18149,7 @@
 
 /***/ },
 
-/***/ 1497:
+/***/ 1502:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18164,13 +18164,13 @@
 
 /***/ },
 
-/***/ 1498:
+/***/ 1503:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1499);
+	var content = __webpack_require__(1504);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18191,7 +18191,7 @@
 
 /***/ },
 
-/***/ 1499:
+/***/ 1504:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18206,7 +18206,7 @@
 
 /***/ },
 
-/***/ 1500:
+/***/ 1505:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18419,33 +18419,33 @@
 
 /***/ },
 
-/***/ 1501:
+/***/ 1506:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div id=\"userCommon\" _v-da70ccf8=\"\">\n    <div class=\"mask\" v-if=\"commonShow\" _v-da70ccf8=\"\">\n        <div class=\"mask_con_mask\" @click=\"close_comment\" _v-da70ccf8=\"\"></div>\n        <div class=\"mask_con\" _v-da70ccf8=\"\">\n            <!--关闭按钮-->\n            <div class=\"close\" @click=\"close_comment\" _v-da70ccf8=\"\">\n                <img src=\"//pic.davdian.com/free/2016/12/22/60_80_543e7ae3b77c0ce52ebeee2a210dbdf6.png\" alt=\"\" _v-da70ccf8=\"\">\n            </div>\n            <!--弹出层列表-->\n            <div class=\"common\" id=\"common\" _v-da70ccf8=\"\">\n                <div class=\"scrollcon\" id=\"scrollcon\" _v-da70ccf8=\"\">\n                    <div class=\"commonList-container\" _v-da70ccf8=\"\">\n                        <div class=\"end\" v-if=\"refreshtxt\" _v-da70ccf8=\"\">拉取更多</div>\n                        <div class=\"class_introduce_con\" v-for=\"(common, index) in commonList\" :key=\"common.uuid\" _v-da70ccf8=\"\">\n                            <div class=\"comment_tit\" _v-da70ccf8=\"\">\n                                <img class=\"img\" :src=\"common.speaker.avatar || defaultAvatar\" alt=\"\" _v-da70ccf8=\"\">\n                                <div class=\"comment_dis\" _v-da70ccf8=\"\">\n                                    <span class=\"commentname\" _v-da70ccf8=\"\">{{decodeURIComponent(common.speaker.name)}}</span>\n                                    <span v-if=\"new Date()-common.msg.time < 60*60*12*1000\" _v-da70ccf8=\"\">{{getTime(parseInt(common.msg.time))}}</span>\n                                    <span v-if=\"new Date()-common.msg.time >= 60*60*12*1000\" _v-da70ccf8=\"\">{{getFullTime(parseInt(common.msg.time))}}</span>\n                                </div>\n                            </div>\n                            <div class=\"class_introduce_text\" _v-da70ccf8=\"\">\n                                <p _v-da70ccf8=\"\">{{decodeURIComponent(common.msg.content)}}</p>\n                            </div>\n                        </div>\n                        <div class=\"commonbottom\" _v-da70ccf8=\"\"></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1502:
+/***/ 1507:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div id=\"socail_container\" _v-f3ad48ee=\"\">\n    <social-title :rightshow=\"true\" :id=\"communityId\" :data=\"title\" _v-f3ad48ee=\"\"></social-title>\n    <speak v-on:send=\"sendMsg\" _v-f3ad48ee=\"\"></speak>\n    <social-switch :data=\"userCommonRoomData\" :total=\"total\" v-on:usercomment=\"openUserComment\" _v-f3ad48ee=\"\"></social-switch>\n    <common v-if=\"commonRoomData[0]\" :id=\"communityId\" :flag=\"updataflagteacher\" :data=\"commonRoomData\" v-on:getupdatateacher=\"getupdatateacher\" _v-f3ad48ee=\"\"></common>\n    <user-common v-if=\"userCommonFlag\" :user-common-top=\"userCommonTop\" :getupdataflag=\"getupdataflag\" :flag=\"userCommonFlag\" :data=\"userCommonRoomData\" v-on:closeusercomment=\"closeUserComment\" v-on:getupdata=\"getupdata\" _v-f3ad48ee=\"\"></user-common>\n</div>\n";
 
 /***/ },
 
-/***/ 1503:
+/***/ 1508:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1504)
-	__webpack_require__(1506)
-	__vue_script__ = __webpack_require__(1508)
+	__webpack_require__(1509)
+	__webpack_require__(1511)
+	__vue_script__ = __webpack_require__(1513)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/social_manage.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1519)
+	__vue_template__ = __webpack_require__(1524)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18471,13 +18471,13 @@
 
 /***/ },
 
-/***/ 1504:
+/***/ 1509:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1505);
+	var content = __webpack_require__(1510);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18498,7 +18498,7 @@
 
 /***/ },
 
-/***/ 1505:
+/***/ 1510:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18513,13 +18513,13 @@
 
 /***/ },
 
-/***/ 1506:
+/***/ 1511:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1507);
+	var content = __webpack_require__(1512);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18540,7 +18540,7 @@
 
 /***/ },
 
-/***/ 1507:
+/***/ 1512:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18555,7 +18555,7 @@
 
 /***/ },
 
-/***/ 1508:
+/***/ 1513:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18568,31 +18568,31 @@
 
 	var _webStorageCache2 = _interopRequireDefault(_webStorageCache);
 
-	var _index = __webpack_require__(1058);
+	var _index = __webpack_require__(1063);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(902);
+	var _index3 = __webpack_require__(907);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _index5 = __webpack_require__(996);
+	var _index5 = __webpack_require__(1001);
 
 	var _index6 = _interopRequireDefault(_index5);
 
-	var _index7 = __webpack_require__(959);
+	var _index7 = __webpack_require__(964);
 
 	var _index8 = _interopRequireDefault(_index7);
 
-	var _index9 = __webpack_require__(958);
+	var _index9 = __webpack_require__(963);
 
 	var _index10 = _interopRequireDefault(_index9);
 
-	var _cell = __webpack_require__(1509);
+	var _cell = __webpack_require__(1514);
 
 	var _cell2 = _interopRequireDefault(_cell);
 
-	var _baseTitle = __webpack_require__(1514);
+	var _baseTitle = __webpack_require__(1519);
 
 	var _baseTitle2 = _interopRequireDefault(_baseTitle);
 
@@ -18608,7 +18608,7 @@
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _dialog = __webpack_require__(954);
+	var _dialog = __webpack_require__(959);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -18764,18 +18764,18 @@
 
 /***/ },
 
-/***/ 1509:
+/***/ 1514:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1510)
-	__vue_script__ = __webpack_require__(1512)
+	__webpack_require__(1515)
+	__vue_script__ = __webpack_require__(1517)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/vux-fix/cell.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1513)
+	__vue_template__ = __webpack_require__(1518)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18801,13 +18801,13 @@
 
 /***/ },
 
-/***/ 1510:
+/***/ 1515:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1511);
+	var content = __webpack_require__(1516);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18828,7 +18828,7 @@
 
 /***/ },
 
-/***/ 1511:
+/***/ 1516:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18843,7 +18843,7 @@
 
 /***/ },
 
-/***/ 1512:
+/***/ 1517:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18852,11 +18852,11 @@
 	    value: true
 	});
 
-	var _inlineDesc = __webpack_require__(911);
+	var _inlineDesc = __webpack_require__(916);
 
 	var _inlineDesc2 = _interopRequireDefault(_inlineDesc);
 
-	var _router = __webpack_require__(916);
+	var _router = __webpack_require__(921);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18926,25 +18926,25 @@
 
 /***/ },
 
-/***/ 1513:
+/***/ 1518:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"weui-cell\" :class=\"{'vux-tap-active': isLink || !!link, 'weui-cell_access': isLink || !!link}\" @click=\"onClick\">\n    <div class=\"weui-cell__hd\">\n        <slot name=\"icon\"></slot>\n    </div>\n    <div class=\"vux-cell-bd\" :class=\"{'vux-cell-primary':primary==='title'}\">\n        <p>\n            <label class=\"vux-label\" :style=\"{width: $parent.labelWidth, textAlign: $parent.labelAlign, marginRight: $parent.labelMarginRight}\" v-if=\"title\">{{title}}</label>\n            <slot name=\"after-title\"></slot>\n        </p>\n        <inline-desc v-html=\"inlineDesc\"></inline-desc>\n    </div>\n    <div class=\"weui-cell__ft\" :class=\"{'vux-cell-primary':primary==='content'}\">\n        {{value}}\n  <slot name=\"value\"></slot>\n        <slot></slot>\n    </div>\n    <slot name=\"child\"></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 1514:
+/***/ 1519:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1515)
-	__vue_script__ = __webpack_require__(1517)
+	__webpack_require__(1520)
+	__vue_script__ = __webpack_require__(1522)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/baseTitle.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1518)
+	__vue_template__ = __webpack_require__(1523)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18970,13 +18970,13 @@
 
 /***/ },
 
-/***/ 1515:
+/***/ 1520:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1516);
+	var content = __webpack_require__(1521);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18997,7 +18997,7 @@
 
 /***/ },
 
-/***/ 1516:
+/***/ 1521:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -19012,7 +19012,7 @@
 
 /***/ },
 
-/***/ 1517:
+/***/ 1522:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19055,32 +19055,32 @@
 
 /***/ },
 
-/***/ 1518:
+/***/ 1523:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n<div class=\"top0\">\n    <div class=\"top_container\">\n        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->\n        <div class=\"top_left\">\n            <a class=\"top_back\" href=\"javascript:history.back();\" data-dav-tj=\"order_list|back|back|1|back@order_list\">\n                <span class=\"home_arrow\"></span>\n            </a>\n        </div>\n        <div class=\"title_container\">\n            {{title}}\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1519:
+/***/ 1524:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"social_manage\" style=\"overflow: scroll;\" :style=\"{height:document.body.clientHeight-44+'px'}\" _v-4794010b=\"\">\n  <base-title value=\"群信息\" _v-4794010b=\"\"></base-title>\n  <div _v-4794010b=\"\">\n    <group _v-4794010b=\"\">\n      <cell title=\"群主\" class=\"avatar_outer\" _v-4794010b=\"\">\n        <div slot=\"value\" _v-4794010b=\"\">\n          <span class=\"v-middle mr6\" v-text=\"communityHolderName\" _v-4794010b=\"\"></span>\n          <img class=\"avatar_con\" :src=\"communityHolderImage\" alt=\"\" _v-4794010b=\"\">\n        </div>\n      </cell>\n      <cell title=\"群名称\" :value=\"communityTitle\" _v-4794010b=\"\"></cell>\n      <cell title=\"群成员\" is-link=\"\" :link=\"{path:'/member/'+socialId}\" _v-4794010b=\"\">\n                      <span slot=\"child\" class=\"avatar_list\" _v-4794010b=\"\">\n                          <img v-for=\"(communityMemberItem,index) in communityMemberList\" class=\"avatar_con mr10\" :src=\"communityMemberItem.avatar\" v-if=\"index<avatarNum\" alt=\"\" _v-4794010b=\"\">\n                      </span>\n      </cell>\n      <cell title=\"群介绍\" :inline-desc=\"communityIntro\" :value=\"describe\" _v-4794010b=\"\">\n\n      </cell>\n    </group>\n\n    <group _v-4794010b=\"\">\n      <div @click=\"goToGroup()\" _v-4794010b=\"\">\n        <cell :title=\"momGrowUpTitle\" is-link=\"\" _v-4794010b=\"\"></cell>\n      </div>\n    </group>\n    <div style=\"height: 40px\" _v-4794010b=\"\"></div>\n  </div>\n\n\n\n</div>\n";
 
 /***/ },
 
-/***/ 1520:
+/***/ 1525:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1521)
-	__vue_script__ = __webpack_require__(1523)
+	__webpack_require__(1526)
+	__vue_script__ = __webpack_require__(1528)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/social_member.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1534)
+	__vue_template__ = __webpack_require__(1539)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -19106,13 +19106,13 @@
 
 /***/ },
 
-/***/ 1521:
+/***/ 1526:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1522);
+	var content = __webpack_require__(1527);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -19133,7 +19133,7 @@
 
 /***/ },
 
-/***/ 1522:
+/***/ 1527:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -19148,7 +19148,7 @@
 
 /***/ },
 
-/***/ 1523:
+/***/ 1528:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19157,7 +19157,7 @@
 	  value: true
 	});
 
-	var _baseTitle = __webpack_require__(1514);
+	var _baseTitle = __webpack_require__(1519);
 
 	var _baseTitle2 = _interopRequireDefault(_baseTitle);
 
@@ -19173,23 +19173,23 @@
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _index = __webpack_require__(1058);
+	var _index = __webpack_require__(1063);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(902);
+	var _index3 = __webpack_require__(907);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _index5 = __webpack_require__(907);
+	var _index5 = __webpack_require__(912);
 
 	var _index6 = _interopRequireDefault(_index5);
 
-	var _index7 = __webpack_require__(1524);
+	var _index7 = __webpack_require__(1529);
 
 	var _index8 = _interopRequireDefault(_index7);
 
-	var _index9 = __webpack_require__(1529);
+	var _index9 = __webpack_require__(1534);
 
 	var _index10 = _interopRequireDefault(_index9);
 
@@ -19197,7 +19197,7 @@
 
 	var _webStorageCache2 = _interopRequireDefault(_webStorageCache);
 
-	var _dialog = __webpack_require__(954);
+	var _dialog = __webpack_require__(959);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -19311,18 +19311,18 @@
 
 /***/ },
 
-/***/ 1524:
+/***/ 1529:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1525)
-	__vue_script__ = __webpack_require__(1527)
+	__webpack_require__(1530)
+	__vue_script__ = __webpack_require__(1532)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/load-more/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1528)
+	__vue_template__ = __webpack_require__(1533)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -19348,13 +19348,13 @@
 
 /***/ },
 
-/***/ 1525:
+/***/ 1530:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1526);
+	var content = __webpack_require__(1531);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -19375,7 +19375,7 @@
 
 /***/ },
 
-/***/ 1526:
+/***/ 1531:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -19390,7 +19390,7 @@
 
 /***/ },
 
-/***/ 1527:
+/***/ 1532:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19436,25 +19436,25 @@
 
 /***/ },
 
-/***/ 1528:
+/***/ 1533:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"weui-loadmore\" :class=\"{'weui-loadmore_line':!showLoading, 'weui-loadmore_dot': !showLoading && !tip}\">\n  <i class=\"weui-loading\" v-if=\"showLoading\"></i>\n  <span class=\"weui-loadmore__tips\" :style=\"getStyle()\" v-show=\"tip || !showLoading\">{{tip}}</span>\n</div>\n";
 
 /***/ },
 
-/***/ 1529:
+/***/ 1534:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1530)
-	__vue_script__ = __webpack_require__(1532)
+	__webpack_require__(1535)
+	__vue_script__ = __webpack_require__(1537)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/divider/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1533)
+	__vue_template__ = __webpack_require__(1538)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -19480,13 +19480,13 @@
 
 /***/ },
 
-/***/ 1530:
+/***/ 1535:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1531);
+	var content = __webpack_require__(1536);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -19507,7 +19507,7 @@
 
 /***/ },
 
-/***/ 1531:
+/***/ 1536:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -19522,7 +19522,7 @@
 
 /***/ },
 
-/***/ 1532:
+/***/ 1537:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19576,14 +19576,14 @@
 
 /***/ },
 
-/***/ 1533:
+/***/ 1538:
 /***/ function(module, exports) {
 
 	module.exports = "\n<p class=\"vux-divider\">\n  <slot></slot>\n</p>\n";
 
 /***/ },
 
-/***/ 1534:
+/***/ 1539:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-62f84bc0=\"\">\n    <base-title value=\"群成员\" _v-62f84bc0=\"\"></base-title>\n    <scroller height=\"-44\" lock-x=\"\" scrollbar-y=\"\" ref=\"scroller\" :use-pullup=\"true\" :pullup-config=\"pullConfig\" @on-pullup-loading=\"pullupCallback\" _v-62f84bc0=\"\">\n        <div _v-62f84bc0=\"\">\n            <div class=\"member_container\" _v-62f84bc0=\"\">\n                <div v-for=\"(member, index) in memberList\" class=\"member_item vux-1px-b\" :index=\"index\" _v-62f84bc0=\"\">\n                    <img slot=\"icon\" class=\"avatar_con mr6\" :src=\"member.avatar\" _v-62f84bc0=\"\">\n                    <span v-text=\"member.name\" class=\"member_name\" _v-62f84bc0=\"\"></span>\n                    <span v-text=\"'邀'+member.inviteNum+'位好友'\" class=\"invite_number\" _v-62f84bc0=\"\"></span>\n                </div>\n            </div>\n            <divider v-if=\"!more\" _v-62f84bc0=\"\">没有更多了</divider>\n        </div>\n    </scroller>\n</div>\n";

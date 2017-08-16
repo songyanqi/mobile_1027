@@ -172,7 +172,12 @@
 	/**
 	 * 功能：检测cookie是否需要强制跳转
 	 */
-	_checkRedirect(_jsCookie2.default.get('force_domain'));
+	(function () {
+	  var script = document.querySelector('script');
+	  if (script && script.src && script.src.indexOf('common/js/autoRootSize.js') !== -1) {
+	    _checkRedirect(_jsCookie2.default.get('force_domain'));
+	  }
+	})();
 
 	// fastclick
 	// iPhone; CPU iPhone OS 10_3_2 like Mac OS X

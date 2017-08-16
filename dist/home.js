@@ -45,21 +45,21 @@
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1198);
+	__webpack_require__(1203);
 
-	__webpack_require__(1200);
+	__webpack_require__(1205);
 
 
 /***/ },
 
-/***/ 444:
+/***/ 449:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 480:
+/***/ 485:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -1917,18 +1917,18 @@
 
 /***/ },
 
-/***/ 1198:
+/***/ 1203:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1200:
+/***/ 1205:
 /***/ function(module, exports, __webpack_require__) {
 
-	var Vue = __webpack_require__(444);
-	var home = __webpack_require__(1201);
+	var Vue = __webpack_require__(449);
+	var home = __webpack_require__(1206);
 
 	var vm=new Vue({
 	    el: "body",
@@ -1946,17 +1946,17 @@
 
 /***/ },
 
-/***/ 1201:
+/***/ 1206:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1202)
+	__vue_script__ = __webpack_require__(1207)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/home.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1203)
+	__vue_template__ = __webpack_require__(1208)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -1982,7 +1982,7 @@
 
 /***/ },
 
-/***/ 1202:
+/***/ 1207:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1991,7 +1991,7 @@
 	    value: true
 	});
 
-	var _vue = __webpack_require__(480);
+	var _vue = __webpack_require__(485);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
@@ -2021,7 +2021,7 @@
 
 /***/ },
 
-/***/ 1203:
+/***/ 1208:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"home-container\">\n    首页...myy hello\n</div>\n";

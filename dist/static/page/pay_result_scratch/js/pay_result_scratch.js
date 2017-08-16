@@ -58,7 +58,7 @@
 	  __webpack_require__(40);
 	  new _Vue2.default({
 	    components: {
-	      app: __webpack_require__(1153)
+	      app: __webpack_require__(1159)
 	    },
 	    template: '<app />',
 	    el: ".activity_container"
@@ -4060,18 +4060,18 @@
 
 /***/ },
 
-/***/ 1147:
+/***/ 1153:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1148)
-	__vue_script__ = __webpack_require__(1150)
+	__webpack_require__(1154)
+	__vue_script__ = __webpack_require__(1156)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-scratch-card.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1151)
+	__vue_template__ = __webpack_require__(1157)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4097,13 +4097,13 @@
 
 /***/ },
 
-/***/ 1148:
+/***/ 1154:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1149);
+	var content = __webpack_require__(1155);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -4124,7 +4124,7 @@
 
 /***/ },
 
-/***/ 1149:
+/***/ 1155:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -4139,7 +4139,7 @@
 
 /***/ },
 
-/***/ 1150:
+/***/ 1156:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4339,25 +4339,25 @@
 
 /***/ },
 
-/***/ 1151:
+/***/ 1157:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n<!--顶部标题-->\n<div class=\"com-scratch-card\">\n  <canvas ref=\"canvas\" v-show=\"showMask\"></canvas>\n  <slot></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 1153:
+/***/ 1159:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1154)
-	__vue_script__ = __webpack_require__(1156)
+	__webpack_require__(1160)
+	__vue_script__ = __webpack_require__(1162)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/pay_result_scratch/vue/app.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1157)
+	__vue_template__ = __webpack_require__(1163)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4383,13 +4383,13 @@
 
 /***/ },
 
-/***/ 1154:
+/***/ 1160:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1155);
+	var content = __webpack_require__(1161);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -4410,7 +4410,7 @@
 
 /***/ },
 
-/***/ 1155:
+/***/ 1161:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -4425,7 +4425,7 @@
 
 /***/ },
 
-/***/ 1156:
+/***/ 1162:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4504,7 +4504,7 @@
 	// <script>
 	exports.default = {
 	  components: {
-	    'com-scratch-card': __webpack_require__(1147)
+	    'com-scratch-card': __webpack_require__(1153)
 	  },
 	  props: {},
 	  data: function data() {
@@ -4621,7 +4621,7 @@
 
 /***/ },
 
-/***/ 1157:
+/***/ 1163:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"activity_container\">\n  <div class=\"activity_huibenjie_scratch\">\n    <!--刮免单背景图-->\n    <img class=\"bg-pic\" src=\"//pic.davdian.com/free/huibenjie/scratch/scratch-bg.jpg\"\n         v-if=\"window.isShowLottery === '1'\">\n    <!--刮现金背景图-->\n    <img class=\"bg-pic\" src=\"//pic.davdian.com/free/huibenjie/scratch/scratch-bg-money.png\"\n         v-if=\"window.isShowLottery === '2'\">\n    <!--刮奖-->\n    <com-scratch-card :show-mask=\"showMask\" :can-scratch=\"valid\" mask-tip=\"刮一刮\" font-size=\"30px\" font-color=\"#CACACA\"\n                      @touchstart=\"bindCoupon(); addScratchTimes(); tongji('hbj_scratch');isValid(this);\"\n                      @mousedown=\"bindCoupon(); addScratchTimes(); tongji('hbj_scratch');\"\n                      @touchmove=\"addScratchTimes\" @touchmove=\"addScratchTimes\">\n      <!--免单刮刮卡文案-->\n      <template v-if=\"window.isShowLottery === '1'\">\n        <template v-if=\"window.isFreeOfCharge === '1'\">恭喜您抽中了此次免单</template>\n        <template v-if=\"window.isFreeOfCharge !== '1'\">没中奖！再接再厉！</template>\n      </template>\n      <!--现金刮刮卡文案-->\n      <template v-if=\"window.isShowLottery === '2'\">\n        <template v-if=\"window.lotteryMoney > 0\">恭喜您抽中{{window.lotteryMoney}}元现金！</template>\n        <template v-else>没中奖！再接再厉！</template>\n      </template>\n    </com-scratch-card>\n    <!--刮免单规则-->\n    <div class=\"rule\" v-if=\"window.isShowLottery === '1'\">\n      <p class=\"title\">母亲节免单规则：</p>\n      <p>活动时间：5月14日0点-5月14日24点</p>\n      <p>活动规则：</p>\n      <p>1.该活动只有大V店APP版本在3.8.0及以上的大V店店主才能参加，为了能正常参与抽奖，请及时升级您的版本；</p>\n      <p>2.活动期间，每个支付成功的订单都有一次抽奖机会，店主完成订单支付在支付成功页面可参与1次免单抽奖（仅免当前订单），如果抽中免单，则该订单的实际支付金额将于次月的14日以返现形式返回；</p>\n      <p>3.如果支付成功后店主离开了支付成功页未及时抽奖，将无法参与本次订单的免单抽奖活动，请谨慎操作；</p>\n      <p>4.违规处理：如遇退货，相应免单奖励予以取消。</p>\n    </div>\n    <!--刮现金规则-->\n    <div class=\"rule\" v-if=\"window.isShowLottery === '2'\">\n      <p class=\"title\">刮刮乐活动规则：</p>\n      <p>1.使用APP下单参与抽奖的大V店会员（店主）请提前升级到3.8.0及以上版本；</p>\n      <p>2.活动期间，会员完成订单支付后，在支付成功页面可进行一次刮奖，金额随机，刮开涂层可100%中奖，中奖金额将于次月的19日以返现形式返回，每个成功支付后的订单（组团和开通会员不参与该活动）都有一次刮奖机会；</p>\n      <p>3.违规处理：如遇退货或取消订单，相应中奖金额将予以取消。</p>\n    </div>\n  </div>\n\n</div>\n";

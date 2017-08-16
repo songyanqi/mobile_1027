@@ -56,7 +56,7 @@
 	new _Vue2.default({
 	    el: "#guide",
 	    components: {
-	        guide: __webpack_require__(1134)
+	        guide: __webpack_require__(1140)
 	    }
 	}); /**
 	     * Created by jianchep on 17/06/07.
@@ -8249,19 +8249,19 @@
 
 /***/ },
 
-/***/ 1134:
+/***/ 1140:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1135)
-	__webpack_require__(1137)
-	__vue_script__ = __webpack_require__(1139)
+	__webpack_require__(1141)
+	__webpack_require__(1143)
+	__vue_script__ = __webpack_require__(1145)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/partner_redpacket/vue/partner_redpacket.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1140)
+	__vue_template__ = __webpack_require__(1146)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8287,13 +8287,13 @@
 
 /***/ },
 
-/***/ 1135:
+/***/ 1141:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1136);
+	var content = __webpack_require__(1142);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -8314,7 +8314,7 @@
 
 /***/ },
 
-/***/ 1136:
+/***/ 1142:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -8329,13 +8329,13 @@
 
 /***/ },
 
-/***/ 1137:
+/***/ 1143:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1138);
+	var content = __webpack_require__(1144);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -8356,7 +8356,7 @@
 
 /***/ },
 
-/***/ 1138:
+/***/ 1144:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -8371,7 +8371,7 @@
 
 /***/ },
 
-/***/ 1139:
+/***/ 1145:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -8818,7 +8818,7 @@
 
 /***/ },
 
-/***/ 1140:
+/***/ 1146:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"container\" _v-5f622e14=\"\">\n    <div class=\"guide1\" _v-5f622e14=\"\">\n        <img src=\"//pic.davdian.com/free/2017/06/28/partner_bg2.png\" v-if=\"!giftButton\" class=\"guide1Bg\" _v-5f622e14=\"\">\n        <img src=\"//pic.davdian.com/free/2017/06/28/partner_bg1.png\" v-if=\"giftButton\" class=\"guide1Bg\" _v-5f622e14=\"\">\n        <div class=\"exit\" @click=\"goProfile\" _v-5f622e14=\"\"></div>\n        <div class=\"guide1Title guide1all\" _v-5f622e14=\"\">{{bonus.bonusCountMoney}}元红包已到账</div>\n        <div class=\"guide1Img guide1all\" v-if=\"bonusFlag\" _v-5f622e14=\"\">\n            <img src=\"//pic.davdian.com/free/2017/06/07/ticket.png\" class=\"guide1all\" @click=\"linkUrl(bonus.linkUrl)\" _v-5f622e14=\"\">\n            <div class=\"guide1Img1 guide1all\" _v-5f622e14=\"\"><span _v-5f622e14=\"\">¥&nbsp;</span>{{bonus.bonusMoney}}</div>\n            <div class=\"guide1Img3 guide1all\" _v-5f622e14=\"\">满{{bonus.limit}}元可用</div>\n            <div class=\"guide1Img2 guide1all\" v-text=\"bonus.bonusName\" _v-5f622e14=\"\"></div>\n            <div class=\"guide1Img4 guide1all\" v-text=\"bonus.useCat\" _v-5f622e14=\"\"></div>\n            <div class=\"guide1Img5 guide1all\" _v-5f622e14=\"\">有效期倒计时：<span _v-5f622e14=\"\">{{time}}</span></div>\n        </div>\n        <div class=\"guide1Text guide1all\" v-if=\"bonusFlag\" _v-5f622e14=\"\">240邮费抵用券正在路上～</div>\n        <div class=\"guide1Btn guide1all\" @click=\"goProfile\" _v-5f622e14=\"\">马上开始购物</div>\n        <div class=\"bottomImg\" v-if=\"giftButton\" @click=\"linkUrl(giftButton.linkUrl)\" :style=\"{'background': 'url(' + giftButton.imageUrl + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-5f622e14=\"\"></div>\n        <!-- <div class='bottomImg' @click='linkUrl(giftButton.linkUrl)' style='background:red'></div> -->\n    </div>\n    <div class=\"guide2\" v-if=\"goodsList\" _v-5f622e14=\"\">会员专享，限时抢购中</div>\n    <div class=\"guide3\" v-if=\"goodsList\" _v-5f622e14=\"\">\n        <div v-if=\"goodsList\" class=\"guide3Container\" @click=\"linkUrl(goods.linkUrl)\" v-for=\"goods in goodsList\" _v-5f622e14=\"\">\n            <img :src=\"goods.imageUrl\" class=\"guide3img\" _v-5f622e14=\"\">\n\n            <div class=\"guide3price\" _v-5f622e14=\"\">\n                <span v-text=\"goods.actInfo\" _v-5f622e14=\"\"></span>\n                <img src=\"//pic.davdian.com/free/2017/06/22/activityBg1.png\" _v-5f622e14=\"\">\n            </div>\n            <div class=\"guide3Container1\" _v-5f622e14=\"\">\n                <div class=\"guide3title\" v-text=\"goods.title\" _v-5f622e14=\"\"></div>\n                <div class=\"guide3money\" _v-5f622e14=\"\"><span _v-5f622e14=\"\">¥&nbsp;</span>{{goods.price}}</div>\n                <div class=\"guide3inComeMoney\" _v-5f622e14=\"\">会员返{{goods.saveMoney}}</div>\n            </div>\n            \n        </div>\n    </div>\n</div>\n";
