@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class = "commission" v-if = "visitorstatus == 3 && !isLimitBuy">
-        <div class = "memBack"><span v-if = "infoobj.memberGoods == '0'">会员返：¥ {{ infoobj.sellerIncome }}</span><span class = "memColor" v-else>分享奖励：¥ {{ infoobj.normalIncome }}</span><span class = "sellerTiems" v-if = "infoobj.activityRatio != 0"><span style = "display:inline-block; margin:0 3px;">*</span>{{ infoobj.activityRatio }}倍</span><span v-if = "infoobj.memberGoods == '0'" class = "member_iconCont"><span class = "question_ico question_icon_m" @click = " showMember('middle')"></span></span></div>
+        <div class = "memBack"><span v-if = "infoobj.memberGoods == '0'">会员返：¥ {{ infoobj.sellerIncome }}</span><span class = "memColor" v-else>分享奖励：¥ {{ infoobj.normalIncome }}</span><span class = "sellerTiems" v-if = "infoobj.activityRatio != 0"><span style = "display:inline-block; margin:0 3px;">*</span>{{ infoobj.activityRatio }}倍</span><span v-if = "infoobj.memberGoods == '0'" class = "member_iconCont"><span class = "question_ico question_icon_m question_icon_m5" @click = " showMember('middle')"></span></span></div>
       </div>
       
       <!--预告开始-->
