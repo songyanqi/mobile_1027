@@ -3,6 +3,7 @@ import indexFeed from './index/index_feed.vue'
 import inviteCard from './inviteCard/inviteCard.vue'
 import common from "./common/common.es6";
 import lay from "./layout/api.es6"
+import native from "../src/common/js/module/native.js"
 let axios = require("axios");
 require('babel-polyfill');
 require('es6-promise').polyfill();
@@ -31,7 +32,6 @@ export default {
             cmd:null,
             cache:false,
             bottomBtn: false,
-            aa:0
         }
     },
     created(){
@@ -51,6 +51,9 @@ export default {
                 if(result==""){
                     that.error = true;
                     return false;
+                }
+                if (result.visitor_status == 0){
+                    native.Browser.setHead({shareBtn:'0'})
                 }
                 let {code, data, visitor_status}=result;
                 if(+code){
@@ -106,6 +109,9 @@ export default {
                 if(result==""){
                     that.error = true;
                     return false;
+                }
+                if (result.visitor_status == 0){
+                    native.Browser.setHead({shareBtn:'0'})
                 }
                 let {code, data, visitor_status}=result;
                 if(+code){
