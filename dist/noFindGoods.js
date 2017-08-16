@@ -51,7 +51,7 @@
 	 * create by dony in 2017-03-28
 	 */
 
-	var NoFindGoods = __webpack_require__(1106);
+	var NoFindGoods = __webpack_require__(1116);
 
 	new Vue({
 	    el: "#noFindGoods",
@@ -65,17 +65,17 @@
 
 /***/ },
 
-/***/ 1106:
+/***/ 1116:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1107)
+	__vue_script__ = __webpack_require__(1117)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/goodsDetail/vue/nofind_goods.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1108)
+	__vue_template__ = __webpack_require__(1118)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -101,7 +101,7 @@
 
 /***/ },
 
-/***/ 1107:
+/***/ 1117:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -191,7 +191,7 @@
 
 /***/ },
 
-/***/ 1108:
+/***/ 1118:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class = \"noGoods\">\n    <div v-if = \"!isapp\" class = \"top0 top_h_t top_show\">\n        <div class=\"top_container\">\n            <div class=\"top_left\">\n                <a class=\"top_back\" href=\"javascript:history.back();\" data-dav-tj=\"detail|back|back|1|back@detail\">\n                    <span class=\"home_arrow_back\"></span>\n                </a>\n            </div>\n            <div class=\"title_container\">\n            </div>\n            <div class=\"top_right\">\n                <a href=\"/\" class=\"top_home\" data-dav-tj=\"detail|home|home|1|home@detail\">\n                    <span class=\"home_icon\"></span>\n                </a>\n            </div>\n        </div>\n    </div>\n    <!---->\n    <div class = \"no_good_icon\"></div>\n    <div class = \"no_goods_text\">商品不存在</div>\n    <div class = \"no_goods_btn\">\n        <a class = \"common\" href=\"#\" @click=\"handleBack\" style = \"margin-right: 10px;\">返回上一级</a>\n        <a class = \"common\" href=\"/\" style = \"margin-left: 10px;\">首页</a>\n    </div>\n</div>\n";

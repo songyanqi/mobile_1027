@@ -47,17 +47,17 @@
 
 	'use strict';
 
-	var _Vue = __webpack_require__(449);
+	var _Vue = __webpack_require__(459);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// 全局开关
-	__webpack_require__(1114);
+	__webpack_require__(1124);
 	new _Vue2.default({
 	  components: {
-	    app: __webpack_require__(1398)
+	    app: __webpack_require__(1408)
 	  },
 	  template: '<app />',
 	  el: ".paySuccess"
@@ -6566,14 +6566,14 @@
 
 /***/ },
 
-/***/ 449:
+/***/ 459:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 1114:
+/***/ 1124:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -6605,7 +6605,7 @@
 
 /***/ },
 
-/***/ 1218:
+/***/ 1228:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -6935,19 +6935,19 @@
 
 /***/ },
 
-/***/ 1398:
+/***/ 1408:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1399)
-	__webpack_require__(1401)
-	__vue_script__ = __webpack_require__(1403)
+	__webpack_require__(1409)
+	__webpack_require__(1411)
+	__vue_script__ = __webpack_require__(1413)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/paySuccess/vue/paySuccess.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1409)
+	__vue_template__ = __webpack_require__(1419)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6973,13 +6973,13 @@
 
 /***/ },
 
-/***/ 1399:
+/***/ 1409:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1400);
+	var content = __webpack_require__(1410);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -7000,7 +7000,7 @@
 
 /***/ },
 
-/***/ 1400:
+/***/ 1410:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -7015,13 +7015,13 @@
 
 /***/ },
 
-/***/ 1401:
+/***/ 1411:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1402);
+	var content = __webpack_require__(1412);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -7042,7 +7042,7 @@
 
 /***/ },
 
-/***/ 1402:
+/***/ 1412:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -7057,7 +7057,7 @@
 
 /***/ },
 
-/***/ 1403:
+/***/ 1413:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7074,7 +7074,7 @@
 
 	var _$2 = _interopRequireDefault(_$);
 
-	var _tjAncestor = __webpack_require__(1218);
+	var _tjAncestor = __webpack_require__(1228);
 
 	var _tjAncestor2 = _interopRequireDefault(_tjAncestor);
 
@@ -7120,7 +7120,7 @@
 	__webpack_require__(308).polyfill();
 	exports.default = {
 	  components: {
-	    'com-scratch-card': __webpack_require__(1404)
+	    'com-scratch-card': __webpack_require__(1414)
 	  },
 	  props: {},
 	  data: function data() {
@@ -7281,18 +7281,18 @@
 
 /***/ },
 
-/***/ 1404:
+/***/ 1414:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1405)
-	__vue_script__ = __webpack_require__(1407)
+	__webpack_require__(1415)
+	__vue_script__ = __webpack_require__(1417)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-scratch-card.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1408)
+	__vue_template__ = __webpack_require__(1418)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7318,13 +7318,13 @@
 
 /***/ },
 
-/***/ 1405:
+/***/ 1415:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1406);
+	var content = __webpack_require__(1416);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -7345,7 +7345,7 @@
 
 /***/ },
 
-/***/ 1406:
+/***/ 1416:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -7360,7 +7360,7 @@
 
 /***/ },
 
-/***/ 1407:
+/***/ 1417:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7560,14 +7560,14 @@
 
 /***/ },
 
-/***/ 1408:
+/***/ 1418:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n<!--顶部标题-->\n<div class=\"com-scratch-card\">\n  <canvas ref=\"canvas\" v-show=\"showMask\"></canvas>\n  <slot></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 1409:
+/***/ 1419:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"activity_container\" _v-36a25056=\"\">\n  <div class=\"activity_success\" :class=\"{activity_success_app: isapp}\" _v-36a25056=\"\">\n    \n    <div class=\"container1\" v-if=\"!isapp\" _v-36a25056=\"\">\n      <img class=\"successImg\" src=\"//pic.davdian.com/free/2017/06/20/Successful.png\" _v-36a25056=\"\">\n      <div class=\"success_btn_all\" _v-36a25056=\"\">\n      <div class=\"success_btn\" @click=\"goLink(successData.orderInfo.command.content)\" _v-36a25056=\"\">订单详情</div>\n        <div class=\"success_btn\" @click=\"goLink(successData.indexInfo.command.content)\" _v-36a25056=\"\">回到首页</div>\n      </div>\n    </div>\n    <div class=\"container2\" v-if=\"!isapp\" _v-36a25056=\"\"></div>\n    <div class=\"container3\" _v-36a25056=\"\">\n      <div class=\"success_text_top\" v-if=\"state==3\" _v-36a25056=\"\">相比非会员，本次购物帮您多省<span v-if=\"successData &amp;&amp; successData.orderInfo &amp;&amp; successData.orderInfo.orderIncome\" v-text=\"successData.orderInfo.orderIncome\" _v-36a25056=\"\"></span>元</div>\n      <div class=\"success_text_top1\" v-if=\"state==3\" _v-36a25056=\"\">累计已为您节省<span v-text=\"successData.orderInfo.totalIncome\" _v-36a25056=\"\"></span>元</div>\n      <p class=\"success_text_top2\" v-if=\"state==3\" _v-36a25056=\"\">有好事别忘了朋友！</p>\n      <p class=\"success_text_top3\" v-if=\"state==3\" _v-36a25056=\"\">推荐朋友成为会员，您也能获得丰厚奖励</p>\n      <!-- <p class='success_text_top2' v-if='state==0 || state==1'>您刚刚与 <span v-text='successData.orderInfo.orderIncome'></span>元返现擦肩而过</p>\n      <p class='success_text_top3' v-if='state==0 || state==1'>立即加入会员，获得更多优惠</p> -->\n      <div class=\"success_btn1\" v-if=\"state==3\" @click=\"goLink(successData.memberInfo.command.content)\" _v-36a25056=\"\">邀请好友</div>\n      <!-- <div class='success_btn1'  v-if='state==0 || state==1' @click='goLink(successData.memberInfo.command.content)'>加入会员</div> -->\n    </div>\n    \n  </div>\n</div>\n";

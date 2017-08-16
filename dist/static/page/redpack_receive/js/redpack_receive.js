@@ -69,7 +69,7 @@
 	  router: new _VueRouter2.default({
 	    routes: [{
 	      path: '/',
-	      component: __webpack_require__(1216)
+	      component: __webpack_require__(1221)
 	    }]
 	  }),
 	  el: "router-view"
@@ -4943,346 +4943,7 @@
 
 /***/ },
 
-/***/ 295:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _md = __webpack_require__(43);
-
-	var _md2 = _interopRequireDefault(_md);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var strSign = function strSign(str, flag) {
-	    var obj = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-	    var strObj = sortObj(str, flag, obj); //字符串 传入当前的信息名称
-	    var str = ''; //重新获取编译后的字符串
-	    for (var i in strObj) {
-	        //变成键值对的形式
-	        str += i + '=' + strObj[i] + '&';
-	    }
-	    return strObj;
-	}; // var crypto = require('crypto')
-
-
-	var sortObj = function sortObj(dataVersion, flag) {
-	    var obj = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-	    //传入当前的信息名称 如feed
-	    var string = '';
-	    var strObj = {};
-	    var t = null;
-	    var tValue = null;
-	    var arrKey = ['shop_url', 'sess_key', 'device_token', 'format', 'ts', 'osv', 'wh', 'data_version']; //需要上传的参数
-
-	    /**
-	     * 获取当前的版本号信息,如果没有取0
-	     */
-	    var osv = "web_h5_*_*";
-	    if (window.Units && Units.isApp() && Units.isIOS()) {
-	        osv = "web_ios_*_*";
-	    }
-	    if (window.Units && Units.isApp() && Units.isAndroid()) {
-	        osv = "web_android_*_*";
-	    }
-	    var arrValue = [];
-	    if (flag && !window.isPrivateMode) {
-	        arrValue = [location.host, document.cookie.split(';').filter(function (x) {
-	            return x.indexOf("dvdsid") > -1;
-	        })[0] ? document.cookie.split(';').filter(function (x) {
-	            return x.indexOf("dvdsid") > -1;
-	        })[0].split("=")[1] : 0, "", 'json', new Date().getTime(), osv, '750_1334', 0];
-	    } else {
-	        // log('this is isPrivateMode or flag is false')
-	        arrValue = [location.host, document.cookie.split(';').filter(function (x) {
-	            return x.indexOf("dvdsid") > -1;
-	        })[0] ? document.cookie.split(';').filter(function (x) {
-	            return x.indexOf("dvdsid") > -1;
-	        })[0].split("=")[1] : 0, "", 'json', new Date().getTime(), osv, '750_1334', 0];
-	    }
-
-	    for (var item in obj) {
-	        arrKey.push(item.toString());
-	        arrValue.push(obj[item]);
-	    }
-
-	    for (var i = 0; i < arrKey.length; i++) {
-	        for (var j = 0; j < arrKey.length - i - 1; j++) {
-	            if (arrKey[j] > arrKey[j + 1]) {
-	                t = arrKey[j + 1];
-	                arrKey[j + 1] = arrKey[j];
-	                arrKey[j] = t;
-
-	                tValue = arrValue[j + 1];
-	                arrValue[j + 1] = arrValue[j];
-	                arrValue[j] = tValue;
-	            }
-	        }
-	    }
-	    for (var _i = 0; _i < arrKey.length; _i++) {
-	        strObj[arrKey[_i]] = arrValue[_i];
-	    }
-	    for (var p in strObj) {
-	        string += p + '=' + strObj[p];
-	    }
-	    var sign = md5(string).toUpperCase();
-	    strObj.sign = sign;
-	    return strObj;
-	};
-
-	// let md5 = (str="") => crypto.createHash('md5').update(str, 'utf8').digest('hex')
-	var md5 = function md5() {
-	    var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
-	    return (0, _md2.default)(str).toString().toUpperCase();
-	};
-
-	var dataVersion = function dataVersion(str) {
-	    var obj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-	    // 信息名称 以及该信息下的所有需要上传的信息
-	    if (obj.data_version && !window.isPrivateMode) {
-	        //如果数据版本号不为0
-	        if (sessionStorage.getItem('dataVersion')) {
-	            //如果缓存中有版本号
-	            var o = JSON.parse(sessionStorage.getItem('dataVersion'));
-	            o[str] = obj.data_version;
-	            sessionStorage.setItem('dataVersion', JSON.stringify(o)); //改变当前的所需要信息的版本号 其余的版本号不变
-	        } else {
-	            var o = {};
-	            o[str] = obj.data_version;
-	            sessionStorage.setItem('dataVersion', JSON.stringify(o));
-	        }
-	    }
-	};
-
-	var getDataWithSign = function getDataWithSign(opt) {
-	    log("get Data WithSign, opt is");
-	    log(opt);
-
-	    opt.updata = opt.updata || opt.data || {};
-
-	    if (window.isPrivateMode) {
-	        log('您现在在用隐身模式访问接口，请切换到常规模式');
-	    }
-	    var flag = opt.flag || 0;
-	    var dataurl = opt.url + "?t=" + Date.now();
-	    if (!opt.url) {
-	        console.warn('缺少必要url参数');
-	        return;
-	    }
-	    var keyName = opt.keyName || md5LocalKey(opt.url, opt.updata);
-	    var success1 = opt.success;
-	    var data = "";
-	    var error1 = opt.error;
-	    var obj = opt.updata;
-
-	    obj = obj || {};
-	    for (var i = 0, d; d = ["rp", 'rl', 'logDp', 'dp'][i++];) {
-	        var tmp_value = window.Units && Units.getQuery(d);
-	        if (tmp_value) {
-	            obj[d] = tmp_value;
-	        }
-	    }
-
-	    var updatas = strSign(keyName, flag, obj);
-	    log('ajax－>', dataurl);
-
-	    $.ajax({
-	        type: "POST",
-	        url: dataurl, //数据地址
-	        data: updatas, //获得了所有信息 店铺地址 版本号 等 flag来确定是否传入版本号
-	        dataType: 'json',
-	        success: function success(result) {
-	            // data.data = false;
-	            if (!window.isPrivateMode) {
-	                //如果不是隐身模式，能在本地存储
-	                //如果版本号相同，取本地的数据，下拉的时候每次的版本号都不一样 不走这一步
-	                // if (sessionStorage.getItem('dataVersion') && JSON.parse(sessionStorage.getItem('dataVersion'))[keyName] && (result.data_version === JSON.parse(sessionStorage.getItem('dataVersion'))[keyName])) {
-	                //     if (flag) {//如果万一 下拉数据的版本号一样 不取本地的数据 下拉false 不是下拉 true
-	                //         data = JSON.parse(localStorage.getItem(keyName))
-	                //     }else{
-	                //         data = result
-	                //     }
-	                // } else {//如果版本号不一样
-	                data = result; //取最新的数据
-	                if (flag) {
-	                    //不是下拉的时候 在本地存储
-	                    localStorage.setItem(keyName, JSON.stringify(result));
-	                }
-	                // localStorage.setItem(keyName, JSON.stringify(result))
-	                // }
-	            } else {
-	                data = result;
-	            }
-	            // dataVersion(keyName, result);//在缓存中放入最新的该链接取得数据的版本号
-	            success1(data);
-	            log("getDataWithSign " + dataurl + " success :");
-	            log(data);
-	        },
-	        error: function error(e) {
-	            error1(e);
-	            log("getDataWithSign " + dataurl + " err :");
-	            log(e);
-	        }
-	    });
-	};
-
-	var postStatisticsData = function postStatisticsData(opt, productionData, callback) {
-	    var baseStatisticsData = {
-	        "ip": "", //ip
-	        "nxtime": "", //ng时间
-	        "timestamp": Date.now(), //日志时间
-	        "production": '1', //业务线 数据字典稍后定
-	        "log_source": '1', //日志来源 数据字典稍后定
-	        "user_agent": navigator.userAgent, //浏览器UA
-	        "market": "", //来源市场
-	        "uid": getUid(), //用户id
-	        "session": getSession(), //session id
-	        "status": getVisitorStatus(), //卖家状态 (0：游客 1:买家 3:卖家)
-	        "device": "", //设备类型
-	        "device_id": "", //设备号
-	        "sys_version": "", //设备版本号
-	        "resolution": window.screen.width + '*' + window.screen.height, //分辨率
-	        "location": "", //当前位置
-	        "app_version": "", //APP版本号
-	        "action": '1', //操作action 数据字典稍后定，click，view，
-	        "action_type": "1", //操作类型（元素）
-	        "object_id": "", //操作对象id（url）
-	        "production_data": {}
-	    };
-	    for (var i in opt) {
-	        baseStatisticsData[i] = opt[i];
-	    }
-	    baseStatisticsData['production_data'] = productionData;
-	    $.ajax({
-	        url: '/appapi',
-	        type: "post",
-	        data: JSON.stringify(baseStatisticsData),
-	        success: function success(result) {
-	            if (result == "success_1") {
-	                callback && callback();
-	            }
-	        }, error: function error() {}
-	    });
-	};
-
-	var getDvdsid = function getDvdsid() {
-	    var result = "",
-	        list = document.cookie.split(";").filter(function (x) {
-	        return x.indexOf("dvdsid") > -1;
-	    });
-	    if (list.length) {
-	        result = list[0].split("=")[1];
-	    }
-	    return result;
-	};
-
-	var getSession = function getSession() {
-	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
-	    return dvdsid ? dvdsid.substr(0, 32) : dvdsid;
-	};
-
-	var getUid = function getUid() {
-	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
-	    return dvdsid ? Number('0x' + dvdsid.substr(32, 7)) + "" : dvdsid;
-	};
-
-	var getVisitorStatus = function getVisitorStatus() {
-	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
-	    return ["0", "1", "3"][dvdsid ? dvdsid.substr(39, 1) : 1];
-	};
-
-	var baseJumpUrl = function baseJumpUrl() {
-	    return {
-	        courseHomePage: "/course.html",
-	        courseIntroducePage: function courseIntroducePage(id) {
-	            return "/course-" + id + ".html";
-	        },
-	        coursePage: function coursePage(id) {
-	            return "/course_room-" + id + ".html";
-	        }
-	    };
-	};
-	var md5LocalKey = function md5LocalKey(url) {
-	    var obj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-	    var str = ''; //获取请求接口和业务参数的字符串
-	    //排除翻页游标导致的key值不一样
-	    var strObj = JSON.stringify(obj);
-	    var objStr = JSON.parse(strObj);
-
-	    if (objStr["pageIndex"]) {
-	        objStr["pageIndex"] = 0;
-	    }
-	    for (var i in objStr) {
-	        str += i + '=' + objStr[i] + '&';
-	    }
-	    str = str + url;
-	    str = md5(str);
-	    log(str);
-	    return str;
-	};
-
-	var log = function log() {
-	    var href = location.href,
-	        dev = href.indexOf("bravetime.net") > -1,
-	        prod = href.indexOf("davdian.com") > -1;
-
-	    for (var _len = arguments.length, obj = Array(_len), _key = 0; _key < _len; _key++) {
-	        obj[_key] = arguments[_key];
-	    }
-
-	    if (dev) {
-	        console.log(obj);
-	    } else if (prod) {
-	        if (window.logInfo) {
-	            window.logInfo.push(obj);
-	        } else {
-	            window.logInfo = [obj];
-	        }
-	    }
-	};
-
-	var initShare = function initShare() {
-	    var share_source = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-
-	    window.tlShareCallback = function () {
-	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "1" });
-	    };
-	    window.sendShareCallback = function () {
-	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "2" });
-	    };
-	    window.QQShareCallback = function () {
-	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "3" });
-	    };
-	    window.qZoneShareCallbackCancel = function () {
-	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "4" });
-	    };
-	};
-
-	var common = {
-	    getDataWithSign: getDataWithSign,
-	    sortObj: sortObj,
-	    strSign: strSign,
-	    dataVersion: dataVersion,
-	    baseJumpUrl: baseJumpUrl,
-	    postStatisticsData: postStatisticsData,
-	    md5: md5,
-	    md5LocalKey: md5LocalKey,
-	    getUid: getUid,
-	    getDvdsid: getDvdsid,
-	    log: log,
-	    initShare: initShare
-	};
-	exports.default = common;
-
-/***/ },
-
-/***/ 301:
+/***/ 240:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5305,7 +4966,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var common = __webpack_require__(295); // var crypto = require('crypto');
+	var common = __webpack_require__(241); // var crypto = require('crypto');
 
 
 	var config = {
@@ -5849,18 +5510,357 @@
 
 /***/ },
 
-/***/ 1216:
+/***/ 241:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _md = __webpack_require__(43);
+
+	var _md2 = _interopRequireDefault(_md);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var strSign = function strSign(str, flag) {
+	    var obj = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+	    var strObj = sortObj(str, flag, obj); //字符串 传入当前的信息名称
+	    var str = ''; //重新获取编译后的字符串
+	    for (var i in strObj) {
+	        //变成键值对的形式
+	        str += i + '=' + strObj[i] + '&';
+	    }
+	    return strObj;
+	}; // var crypto = require('crypto')
+
+
+	var sortObj = function sortObj(dataVersion, flag) {
+	    var obj = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+	    //传入当前的信息名称 如feed
+	    var string = '';
+	    var strObj = {};
+	    var t = null;
+	    var tValue = null;
+	    var arrKey = ['shop_url', 'sess_key', 'device_token', 'format', 'ts', 'osv', 'wh', 'data_version']; //需要上传的参数
+
+	    /**
+	     * 获取当前的版本号信息,如果没有取0
+	     */
+	    var osv = "web_h5_*_*";
+	    if (window.Units && Units.isApp() && Units.isIOS()) {
+	        osv = "web_ios_*_*";
+	    }
+	    if (window.Units && Units.isApp() && Units.isAndroid()) {
+	        osv = "web_android_*_*";
+	    }
+	    var arrValue = [];
+	    if (flag && !window.isPrivateMode) {
+	        arrValue = [location.host, document.cookie.split(';').filter(function (x) {
+	            return x.indexOf("dvdsid") > -1;
+	        })[0] ? document.cookie.split(';').filter(function (x) {
+	            return x.indexOf("dvdsid") > -1;
+	        })[0].split("=")[1] : 0, "", 'json', new Date().getTime(), osv, '750_1334', 0];
+	    } else {
+	        // log('this is isPrivateMode or flag is false')
+	        arrValue = [location.host, document.cookie.split(';').filter(function (x) {
+	            return x.indexOf("dvdsid") > -1;
+	        })[0] ? document.cookie.split(';').filter(function (x) {
+	            return x.indexOf("dvdsid") > -1;
+	        })[0].split("=")[1] : 0, "", 'json', new Date().getTime(), osv, '750_1334', 0];
+	    }
+
+	    for (var item in obj) {
+	        arrKey.push(item.toString());
+	        arrValue.push(obj[item]);
+	    }
+
+	    for (var i = 0; i < arrKey.length; i++) {
+	        for (var j = 0; j < arrKey.length - i - 1; j++) {
+	            if (arrKey[j] > arrKey[j + 1]) {
+	                t = arrKey[j + 1];
+	                arrKey[j + 1] = arrKey[j];
+	                arrKey[j] = t;
+
+	                tValue = arrValue[j + 1];
+	                arrValue[j + 1] = arrValue[j];
+	                arrValue[j] = tValue;
+	            }
+	        }
+	    }
+	    for (var _i = 0; _i < arrKey.length; _i++) {
+	        strObj[arrKey[_i]] = arrValue[_i];
+	    }
+	    for (var p in strObj) {
+	        string += p + '=' + strObj[p];
+	    }
+	    var sign = md5(string).toUpperCase();
+	    strObj.sign = sign;
+	    return strObj;
+	};
+
+	// let md5 = (str="") => crypto.createHash('md5').update(str, 'utf8').digest('hex')
+	var md5 = function md5() {
+	    var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
+	    return (0, _md2.default)(str).toString().toUpperCase();
+	};
+
+	var dataVersion = function dataVersion(str) {
+	    var obj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	    // 信息名称 以及该信息下的所有需要上传的信息
+	    if (obj.data_version && !window.isPrivateMode) {
+	        //如果数据版本号不为0
+	        if (sessionStorage.getItem('dataVersion')) {
+	            //如果缓存中有版本号
+	            var o = JSON.parse(sessionStorage.getItem('dataVersion'));
+	            o[str] = obj.data_version;
+	            sessionStorage.setItem('dataVersion', JSON.stringify(o)); //改变当前的所需要信息的版本号 其余的版本号不变
+	        } else {
+	            var o = {};
+	            o[str] = obj.data_version;
+	            sessionStorage.setItem('dataVersion', JSON.stringify(o));
+	        }
+	    }
+	};
+
+	var getDataWithSign = function getDataWithSign(opt) {
+	    log("get Data WithSign, opt is");
+	    log(opt);
+
+	    opt.updata = opt.updata || opt.data || {};
+
+	    if (window.isPrivateMode) {
+	        log('您现在在用隐身模式访问接口，请切换到常规模式');
+	    }
+	    var flag = opt.flag || 0;
+	    var dataurl = opt.url + "?t=" + Date.now();
+	    if (!opt.url) {
+	        console.warn('缺少必要url参数');
+	        return;
+	    }
+	    var keyName = opt.keyName || md5LocalKey(opt.url, opt.updata);
+	    var success1 = opt.success;
+	    var data = "";
+	    var error1 = opt.error;
+	    var obj = opt.updata;
+
+	    obj = obj || {};
+	    for (var i = 0, d; d = ["rp", 'rl', 'logDp', 'dp'][i++];) {
+	        var tmp_value = window.Units && Units.getQuery(d);
+	        if (tmp_value) {
+	            obj[d] = tmp_value;
+	        }
+	    }
+
+	    var updatas = strSign(keyName, flag, obj);
+	    log('ajax－>', dataurl);
+
+	    $.ajax({
+	        type: "POST",
+	        url: dataurl, //数据地址
+	        data: updatas, //获得了所有信息 店铺地址 版本号 等 flag来确定是否传入版本号
+	        dataType: 'json',
+	        success: function success(result) {
+	            // data.data = false;
+	            if (!window.isPrivateMode) {
+	                //如果不是隐身模式，能在本地存储
+	                //如果版本号相同，取本地的数据，下拉的时候每次的版本号都不一样 不走这一步
+	                // if (sessionStorage.getItem('dataVersion') && JSON.parse(sessionStorage.getItem('dataVersion'))[keyName] && (result.data_version === JSON.parse(sessionStorage.getItem('dataVersion'))[keyName])) {
+	                //     if (flag) {//如果万一 下拉数据的版本号一样 不取本地的数据 下拉false 不是下拉 true
+	                //         data = JSON.parse(localStorage.getItem(keyName))
+	                //     }else{
+	                //         data = result
+	                //     }
+	                // } else {//如果版本号不一样
+	                data = result; //取最新的数据
+	                if (flag) {
+	                    //不是下拉的时候 在本地存储
+	                    localStorage.setItem(keyName, JSON.stringify(result));
+	                }
+	                // localStorage.setItem(keyName, JSON.stringify(result))
+	                // }
+	            } else {
+	                data = result;
+	            }
+	            // dataVersion(keyName, result);//在缓存中放入最新的该链接取得数据的版本号
+	            success1(data);
+	            log("getDataWithSign " + dataurl + " success :");
+	            log(data);
+	        },
+	        error: function error(e) {
+	            error1(e);
+	            log("getDataWithSign " + dataurl + " err :");
+	            log(e);
+	        }
+	    });
+	};
+
+	var postStatisticsData = function postStatisticsData(opt, productionData, callback) {
+	    var baseStatisticsData = {
+	        "ip": "", //ip
+	        "nxtime": "", //ng时间
+	        "timestamp": Date.now(), //日志时间
+	        "production": '1', //业务线 数据字典稍后定
+	        "log_source": '1', //日志来源 数据字典稍后定
+	        "user_agent": navigator.userAgent, //浏览器UA
+	        "market": "", //来源市场
+	        "uid": getUid(), //用户id
+	        "session": getSession(), //session id
+	        "status": getVisitorStatus(), //卖家状态 (0：游客 1:买家 3:卖家)
+	        "device": "", //设备类型
+	        "device_id": "", //设备号
+	        "sys_version": "", //设备版本号
+	        "resolution": window.screen.width + '*' + window.screen.height, //分辨率
+	        "location": "", //当前位置
+	        "app_version": "", //APP版本号
+	        "action": '1', //操作action 数据字典稍后定，click，view，
+	        "action_type": "1", //操作类型（元素）
+	        "object_id": "", //操作对象id（url）
+	        "production_data": {}
+	    };
+	    for (var i in opt) {
+	        baseStatisticsData[i] = opt[i];
+	    }
+	    baseStatisticsData['production_data'] = productionData;
+	    $.ajax({
+	        url: '/appapi',
+	        type: "post",
+	        data: JSON.stringify(baseStatisticsData),
+	        success: function success(result) {
+	            if (result == "success_1") {
+	                callback && callback();
+	            }
+	        }, error: function error() {}
+	    });
+	};
+
+	var getDvdsid = function getDvdsid() {
+	    var result = "",
+	        list = document.cookie.split(";").filter(function (x) {
+	        return x.indexOf("dvdsid") > -1;
+	    });
+	    if (list.length) {
+	        result = list[0].split("=")[1];
+	    }
+	    return result;
+	};
+
+	var getSession = function getSession() {
+	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
+	    return dvdsid ? dvdsid.substr(0, 32) : dvdsid;
+	};
+
+	var getUid = function getUid() {
+	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
+	    return dvdsid ? Number('0x' + dvdsid.substr(32, 7)) + "" : dvdsid;
+	};
+
+	var getVisitorStatus = function getVisitorStatus() {
+	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
+	    return ["0", "1", "3"][dvdsid ? dvdsid.substr(39, 1) : 1];
+	};
+
+	var baseJumpUrl = function baseJumpUrl() {
+	    return {
+	        courseHomePage: "/course.html",
+	        courseIntroducePage: function courseIntroducePage(id) {
+	            return "/course-" + id + ".html";
+	        },
+	        coursePage: function coursePage(id) {
+	            return "/course_room-" + id + ".html";
+	        }
+	    };
+	};
+	var md5LocalKey = function md5LocalKey(url) {
+	    var obj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+	    var str = ''; //获取请求接口和业务参数的字符串
+	    //排除翻页游标导致的key值不一样
+	    var strObj = JSON.stringify(obj);
+	    var objStr = JSON.parse(strObj);
+
+	    if (objStr["pageIndex"]) {
+	        objStr["pageIndex"] = 0;
+	    }
+	    for (var i in objStr) {
+	        str += i + '=' + objStr[i] + '&';
+	    }
+	    str = str + url;
+	    str = md5(str);
+	    log(str);
+	    return str;
+	};
+
+	var log = function log() {
+	    var href = location.href,
+	        dev = href.indexOf("bravetime.net") > -1,
+	        prod = href.indexOf("davdian.com") > -1;
+
+	    for (var _len = arguments.length, obj = Array(_len), _key = 0; _key < _len; _key++) {
+	        obj[_key] = arguments[_key];
+	    }
+
+	    if (dev) {
+	        console.log(obj);
+	    } else if (prod) {
+	        if (window.logInfo) {
+	            window.logInfo.push(obj);
+	        } else {
+	            window.logInfo = [obj];
+	        }
+	    }
+	};
+
+	var initShare = function initShare() {
+	    var share_source = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
+	    window.tlShareCallback = function () {
+	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "1" });
+	    };
+	    window.sendShareCallback = function () {
+	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "2" });
+	    };
+	    window.QQShareCallback = function () {
+	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "3" });
+	    };
+	    window.qZoneShareCallbackCancel = function () {
+	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "4" });
+	    };
+	};
+
+	var common = {
+	    getDataWithSign: getDataWithSign,
+	    sortObj: sortObj,
+	    strSign: strSign,
+	    dataVersion: dataVersion,
+	    baseJumpUrl: baseJumpUrl,
+	    postStatisticsData: postStatisticsData,
+	    md5: md5,
+	    md5LocalKey: md5LocalKey,
+	    getUid: getUid,
+	    getDvdsid: getDvdsid,
+	    log: log,
+	    initShare: initShare
+	};
+	exports.default = common;
+
+/***/ },
+
+/***/ 1221:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1217)
-	__vue_script__ = __webpack_require__(1219)
+	__webpack_require__(1222)
+	__vue_script__ = __webpack_require__(1224)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/redpack_receive/vue/redpack_receive.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1220)
+	__vue_template__ = __webpack_require__(1225)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5886,13 +5886,13 @@
 
 /***/ },
 
-/***/ 1217:
+/***/ 1222:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1218);
+	var content = __webpack_require__(1223);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -5913,7 +5913,7 @@
 
 /***/ },
 
-/***/ 1218:
+/***/ 1223:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -5928,7 +5928,7 @@
 
 /***/ },
 
-/***/ 1219:
+/***/ 1224:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5937,7 +5937,7 @@
 	  value: true
 	});
 
-	var _layout = __webpack_require__(301);
+	var _layout = __webpack_require__(240);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -6267,7 +6267,7 @@
 
 /***/ },
 
-/***/ 1220:
+/***/ 1225:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"app\" v-if=\"response\">\n  <!--状态:正常领取-->\n  <template v-if=\"response.code === 0\">\n    <!--组合红包-->\n    <div class=\"wrapper group\" v-if=\"response.data.bonusType == '1'\">\n      <!--标题-->\n      <com-top-title home :title=\"response.data.status == '1' ? '已领取～' : '恭喜您获得大礼包～'\"></com-top-title>\n      <!--信封-->\n      <div class=\"envelope\">\n        <p>恭喜您获得</p>\n        <p><span class=\"num\">{{groupTotalMoney}}</span><span>元大礼包</span></p>\n      </div>\n      <!--红包列表-->\n      <div class=\"redpack-list\">\n        <img class=\"arrow\" src=\"http://pic.davdian.com/free/redpack_receive/group-arrow.png\">\n        <span class=\"redpack\" v-for=\"item of this.response.data.bonusList\">\n          <div class=\"name\">{{item.bonusName}}</div>\n          <div class=\"info\">\n            <span class=\"symbol\">¥</span>\n            <span class=\"money\">{{item.bonusMoney}}</span>\n            <span class=\"right-info\">\n              <p class=\"type\">{{item.content}}</p>\n              <p class=\"condition\">满{{item.minConsumePrice}}元使用</p>\n            </span>\n          </div>\n          <div class=\"time\">{{item.useBeginTime}}—{{item.useEndTime}}</div>\n        </span>\n      </div>\n      <!--按钮-->\n      <a class=\"btn\" :href=\"response.data.useUrl\"><p>立即使用</p></a>\n      <!--使用说明-->\n      <div class=\"rule\">\n        <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n        <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n      </div>\n    </div>\n\n    <!--随机、等额红包-->\n    <div class=\"wrapper random-and-equal\" v-if=\"response.data.bonusType == '0'\">\n      <!--标题-->\n      <com-top-title home :title=\"response.data.status == '1' ? '已领取～' : '恭喜您获得红包～'\"></com-top-title>\n      <!--信封-->\n      <div class=\"envelope\">\n        <p>{{this.response.data.bonusList[0].bonusName}}</p>\n        <p>\n          <span>¥</span>\n          <span>{{this.response.data.bonusList[0].bonusMoney}}</span>\n          <span>\n        <p>{{this.response.data.bonusList[0].content}}</p>\n        <p>满{{this.response.data.bonusList[0].minConsumePrice}}元使用</p>\n        </span>\n        </p>\n        <p>{{this.response.data.bonusList[0].useBeginTime}}-{{this.response.data.bonusList[0].useEndTime}}</p>\n      </div>\n      <!--按钮-->\n      <a class=\"btn\" :href=\"response.data.useUrl\"><p>立即使用</p></a>\n      <!--手气榜-->\n      <div class=\"luck-list\" v-if=\"response.data.competeList && response.data.competeList.length > 0\">\n        <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/luck-title.png\">\n        <com-scroll-list>\n          <li v-for=\"item of response.data.competeList\">\n            <span class=\"head\"><img :src=\"item.avatar\"></span>\n            <span class=\"mobile\">{{item.nickname}}</span>\n            <span class=\"money\">{{item.money}}元</span>\n          </li>\n        </com-scroll-list>\n      </div>\n      <!--使用说明-->\n      <div class=\"rule\">\n        <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n        <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n      </div>\n    </div>\n  </template>\n\n  <!--状态:未开始-->\n  <div class=\"wrapper no-begin\" v-if=\"response.code === 90005\">\n    <!--标题-->\n    <com-top-title home title=\"活动未开始～\"></com-top-title>\n    <!--信封-->\n    <div class=\"envelope\">\n      <p>活动未开始～</p>\n      <p><img src=\"http://pic.davdian.com/free/redpack_receive/begin-time.png\"></p>\n      <p>{{this.response.data.startTime}}</p>\n    </div>\n    <!--按钮-->\n    <a class=\"btn\" href=\"/\"><p>去店铺逛逛</p></a>\n    <!--使用说明-->\n    <div class=\"rule\">\n      <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n      <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n    </div>\n  </div>\n\n  <!--状态:已结束-->\n  <div class=\"wrapper end\" v-if=\"response.code === 90006\">\n    <!--标题-->\n    <com-top-title home title=\"活动已结束～\"></com-top-title>\n    <!--信封-->\n    <div class=\"envelope\">\n      <p>活动已结束～</p>\n      <p>下次活动，敬请期待～</p>\n    </div>\n    <!--按钮-->\n    <a class=\"btn\" href=\"/\"><p>去店铺逛逛</p></a>\n    <!--使用说明-->\n    <div class=\"rule\">\n      <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n      <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n    </div>\n  </div>\n\n  <!--状态:红包抢没了-->\n  <div class=\"wrapper no-remain\" v-if=\"response.code === 90001\">\n    <!--标题-->\n    <com-top-title home title=\"红包已抢光～\"></com-top-title>\n    <!--信封-->\n    <div class=\"envelope\">\n      <p>红包已抢光～</p>\n      <p>下次活动，敬请期待～</p>\n    </div>\n    <!--按钮-->\n    <a class=\"btn\" href=\"/\"><p>去店铺逛逛</p></a>\n    <!--使用说明-->\n    <div class=\"rule\">\n      <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n      <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n    </div>\n  </div>\n\n  <!--状态:未登录-->\n  <div class=\"wrapper no-login\" v-if=\"response.code === 90000\">\n    <!--标题-->\n    <com-top-title home title=\"您还未登录～\"></com-top-title>\n    <!--信封-->\n    <div class=\"envelope\">\n      <p>您还未登录～</p>\n      <p>大V店送你红包抢不停～</p>\n    </div>\n    <!--按钮-->\n    <a class=\"btn\" :href=\"'/login.html?referer=' + encodeURIComponent(location.href)\"><p>登录领取</p></a>\n    <!--使用说明-->\n    <div class=\"rule\">\n      <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n      <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n    </div>\n  </div>\n\n  <!--状态:出错了-->\n  <div class=\"wrapper error\" v-if=\"isError\">\n    <!--标题-->\n    <com-top-title home title=\"出错啦～\"></com-top-title>\n    <!--出错图标-->\n    <div class=\"error-pic\"><img src=\"http://pic.davdian.com/free/redpack_receive/error.png\"></div>\n    <!--文案-->\n    <div class=\"tip\">哎呀，出错啦...</div>\n    <!--重新加载-->\n    <a class=\"reload-btn\" href=\"\">点击重新加载</a>\n    <!--错误原因(连续两次发生错误才显示)-->\n    <div class=\"msg\" v-if=\"localStorage.getItem('error')\">\n      <p>状态码: {{response.code}}</p>\n      <p>异常原因: {{response.data && response.data.msg}}</p>\n    </div>\n  </div>\n\n  <!--至顶按钮-->\n  <!--<com-to-top-icon></com-to-top-icon>-->\n</div>\n";

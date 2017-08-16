@@ -52,6 +52,16 @@ import * as bd_course_info_series_0 from './feed/bd_course_info_series_0.vue'
 //听课笔记
 import * as bd_course_notes_0 from './feed/bd_course_notes_0.vue'
 
+
+import * as bd_album_0 from './feed/bd_album_0.vue'
+import * as bd_album_content_1 from './feed/bd_album_content_1.vue'
+import * as bd_album_01 from './feed/bd_album_01.vue'
+import * as bd_album_02 from './feed/bd_album_02.vue'
+import * as bd_album_03 from './feed/bd_album_03.vue'
+import * as bd_study_0 from './feed/bd_study_0.vue'
+
+
+
 export default{
   data(){
     return {
@@ -208,6 +218,13 @@ export default{
     bd_goods_6,
     bd_goods_7,
     'ad-banner': require('../../src/page/goodsDetail/vue/ad-banner.vue'),
+
+    bd_album_0,
+    bd_album_content_1,
+    bd_album_01,
+    bd_album_02,
+    bd_album_03,
+    bd_study_0
   }
 }
 

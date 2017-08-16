@@ -47,15 +47,15 @@
 
 	'use strict';
 
-	var _common = __webpack_require__(1112);
+	var _common = __webpack_require__(1122);
 
 	var _common2 = _interopRequireDefault(_common);
 
-	var _Vue = __webpack_require__(449);
+	var _Vue = __webpack_require__(459);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
-	var _vueLazyload = __webpack_require__(1109);
+	var _vueLazyload = __webpack_require__(1119);
 
 	var _vueLazyload2 = _interopRequireDefault(_vueLazyload);
 
@@ -70,7 +70,7 @@
 
 	new _Vue2.default({
 	  components: {
-	    app: __webpack_require__(1157)
+	    app: __webpack_require__(1167)
 	  },
 	  template: '<app />',
 	  el: ".app"
@@ -4046,7 +4046,7 @@
 
 /***/ },
 
-/***/ 415:
+/***/ 425:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4106,14 +4106,14 @@
 
 /***/ },
 
-/***/ 449:
+/***/ 459:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 975:
+/***/ 985:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4122,7 +4122,7 @@
 	  value: true
 	});
 
-	var _scriptjs = __webpack_require__(976);
+	var _scriptjs = __webpack_require__(986);
 
 	var _scriptjs2 = _interopRequireDefault(_scriptjs);
 
@@ -4134,11 +4134,11 @@
 
 	var _config2 = _interopRequireDefault(_config);
 
-	var _jsCookie = __webpack_require__(977);
+	var _jsCookie = __webpack_require__(987);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(978);
+	var _util = __webpack_require__(988);
 
 	var _util2 = _interopRequireDefault(_util);
 
@@ -4307,7 +4307,7 @@
 
 /***/ },
 
-/***/ 976:
+/***/ 986:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4437,7 +4437,7 @@
 
 /***/ },
 
-/***/ 977:
+/***/ 987:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4609,7 +4609,7 @@
 
 /***/ },
 
-/***/ 978:
+/***/ 988:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4657,7 +4657,7 @@
 
 /***/ },
 
-/***/ 1109:
+/***/ 1119:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4666,11 +4666,11 @@
 	  value: true
 	});
 
-	var _Vue = __webpack_require__(449);
+	var _Vue = __webpack_require__(459);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
-	var _VueLazyload = __webpack_require__(1110);
+	var _VueLazyload = __webpack_require__(1120);
 
 	var _VueLazyload2 = _interopRequireDefault(_VueLazyload);
 
@@ -4701,14 +4701,14 @@
 
 /***/ },
 
-/***/ 1110:
+/***/ 1120:
 /***/ function(module, exports) {
 
 	module.exports = VueLazyload;
 
 /***/ },
 
-/***/ 1112:
+/***/ 1122:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4725,26 +4725,26 @@
 
 	var _ua2 = _interopRequireDefault(_ua);
 
-	var _login = __webpack_require__(1113);
+	var _login = __webpack_require__(1123);
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _jsCookie = __webpack_require__(977);
+	var _jsCookie = __webpack_require__(987);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(978);
+	var _util = __webpack_require__(988);
 
 	var _util2 = _interopRequireDefault(_util);
 
-	var _weixin = __webpack_require__(975);
+	var _weixin = __webpack_require__(985);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import scriptjs from 'scriptjs';
-	__webpack_require__(1114);
+	__webpack_require__(1124);
 
 
 	// ios wkwebview返回上一页执行回调刷新页面
@@ -4857,7 +4857,7 @@
 
 /***/ },
 
-/***/ 1113:
+/***/ 1123:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4866,7 +4866,7 @@
 	  value: true
 	});
 
-	var _jsCookie = __webpack_require__(977);
+	var _jsCookie = __webpack_require__(987);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
@@ -4956,7 +4956,7 @@
 
 /***/ },
 
-/***/ 1114:
+/***/ 1124:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4988,7 +4988,7 @@
 
 /***/ },
 
-/***/ 1115:
+/***/ 1125:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5005,11 +5005,11 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
-	var _weixin = __webpack_require__(975);
+	var _weixin = __webpack_require__(985);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
-	var _Vue = __webpack_require__(449);
+	var _Vue = __webpack_require__(459);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
@@ -5051,7 +5051,7 @@
 	  callBrowserShare: function callBrowserShare() {
 	    new _Vue2.default({
 	      components: {
-	        'com-share-pop-tip': __webpack_require__(1116)
+	        'com-share-pop-tip': __webpack_require__(1126)
 	      },
 	      el: getEl(),
 	      data: {},
@@ -5073,18 +5073,18 @@
 
 /***/ },
 
-/***/ 1116:
+/***/ 1126:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1117)
-	__vue_script__ = __webpack_require__(1119)
+	__webpack_require__(1127)
+	__vue_script__ = __webpack_require__(1129)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-share-pop-tip.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1120)
+	__vue_template__ = __webpack_require__(1130)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5110,13 +5110,13 @@
 
 /***/ },
 
-/***/ 1117:
+/***/ 1127:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1118);
+	var content = __webpack_require__(1128);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5137,7 +5137,7 @@
 
 /***/ },
 
-/***/ 1118:
+/***/ 1128:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5152,7 +5152,7 @@
 
 /***/ },
 
-/***/ 1119:
+/***/ 1129:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5252,25 +5252,25 @@
 
 /***/ },
 
-/***/ 1120:
+/***/ 1130:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"com-share-pop-tip\" :style=\"styleObject\" @click=\"close\" @touchmove=\"touchmove\">\n  <img class=\"arrow\" src=\"http://pic.davdian.com/free/pointer.png\">\n  <div class=\"tip\">\n    <template v-if=\"isWeixin\">\n      <p>请点击右上角“分享”按钮,</p>\n      <p>然后可以选择“发送给朋友”、“分享到朋友圈”或者“复制链接”后发送链接给朋友。</p>\n    </template>\n    <template v-if=\"!isWeixin\">\n      <p>请复制地址栏链接，将链接发送给朋友</p>\n    </template>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1130:
+/***/ 1140:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1131)
-	__vue_script__ = __webpack_require__(1133)
+	__webpack_require__(1141)
+	__vue_script__ = __webpack_require__(1143)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-top-title.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1134)
+	__vue_template__ = __webpack_require__(1144)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5296,13 +5296,13 @@
 
 /***/ },
 
-/***/ 1131:
+/***/ 1141:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1132);
+	var content = __webpack_require__(1142);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5323,7 +5323,7 @@
 
 /***/ },
 
-/***/ 1132:
+/***/ 1142:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5338,7 +5338,7 @@
 
 /***/ },
 
-/***/ 1133:
+/***/ 1143:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5559,25 +5559,25 @@
 
 /***/ },
 
-/***/ 1134:
+/***/ 1144:
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--顶部标题-->\n<div class=\"com-top-title\" :class=\"classObject\" v-if=\"!isDvdApp\" :style=\"styleObject\">\n  <div class=\"back-btn\" @click=\"back\">\n    <i class=\"back-arrow\"></i>\n  </div>\n  <span class=\"title\">{{title}}</span>\n  <i class=\"home\" v-if=\"home !== undefined\" @click=\"goHome\"></i>\n  <slot></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 1145:
+/***/ 1155:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1146)
-	__vue_script__ = __webpack_require__(1148)
+	__webpack_require__(1156)
+	__vue_script__ = __webpack_require__(1158)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_detail/vue/group-head-portrait.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1149)
+	__vue_template__ = __webpack_require__(1159)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5603,13 +5603,13 @@
 
 /***/ },
 
-/***/ 1146:
+/***/ 1156:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1147);
+	var content = __webpack_require__(1157);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5630,7 +5630,7 @@
 
 /***/ },
 
-/***/ 1147:
+/***/ 1157:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5645,7 +5645,7 @@
 
 /***/ },
 
-/***/ 1148:
+/***/ 1158:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -5727,25 +5727,25 @@
 
 /***/ },
 
-/***/ 1149:
+/***/ 1159:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<span class=\"group-head-portrait\" @click=\"click\">\n  <img v-if=\"type == 'normal' || type == 'leader'\" class=\"person\" v-lazy=\"src\">\n  <img v-if=\"type == 'empty'\" v-lazy=\"'http://pic.davdian.com/free/2017/03/25/group-head-unknow.png'\">\n  <a :href=\"href\" v-if=\"type == 'more'\">\n    <img v-lazy=\"'http://pic.davdian.com/free/2017/03/25/group-head-more.png'\">\n  </a>\n  <i v-if=\"type == 'leader'\" class=\"group-leader\"></i>\n</span>\n";
 
 /***/ },
 
-/***/ 1157:
+/***/ 1167:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1158)
-	__vue_script__ = __webpack_require__(1160)
+	__webpack_require__(1168)
+	__vue_script__ = __webpack_require__(1170)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_detail_all/vue/app.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1161)
+	__vue_template__ = __webpack_require__(1171)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5771,13 +5771,13 @@
 
 /***/ },
 
-/***/ 1158:
+/***/ 1168:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1159);
+	var content = __webpack_require__(1169);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5798,7 +5798,7 @@
 
 /***/ },
 
-/***/ 1159:
+/***/ 1169:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5813,7 +5813,7 @@
 
 /***/ },
 
-/***/ 1160:
+/***/ 1170:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5830,7 +5830,7 @@
 
 	var _$2 = _interopRequireDefault(_$);
 
-	var _util = __webpack_require__(978);
+	var _util = __webpack_require__(988);
 
 	var _util2 = _interopRequireDefault(_util);
 
@@ -5838,11 +5838,11 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
-	var _share = __webpack_require__(1115);
+	var _share = __webpack_require__(1125);
 
 	var _share2 = _interopRequireDefault(_share);
 
-	var _param = __webpack_require__(415);
+	var _param = __webpack_require__(425);
 
 	var _param2 = _interopRequireDefault(_param);
 
@@ -5869,8 +5869,8 @@
 	// <script>
 	exports.default = {
 	  components: {
-	    'com-top-title': __webpack_require__(1130),
-	    'group-head-portrait': __webpack_require__(1145)
+	    'com-top-title': __webpack_require__(1140),
+	    'group-head-portrait': __webpack_require__(1155)
 	  },
 	  props: {},
 	  data: function data() {
@@ -5944,7 +5944,7 @@
 
 /***/ },
 
-/***/ 1161:
+/***/ 1171:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"app\">\n  <!--头部标题-->\n  <com-top-title title=\"团成员列表\" border-bottom home></com-top-title>\n  <!--全部成员列表-->\n  <ul class=\"all-group-people\">\n    <template v-for=\"(member, i) in memberList\">\n      <li>\n        <group-head-portrait :type=\"member.parendId === '0' ? 'leader' : 'normal'\" :src=\"member.founderAvater\"></group-head-portrait>\n        <span class=\"nickname\">{{member.founderName}}</span>\n        <span class=\"begin-time\">{{member.uTime}} {{member.parendId === '0' ? '开团' : '参团'}}</span>\n      </li>\n      <div class=\"split-line\"></div>\n    </template>\n  </ul>\n</div>\n";

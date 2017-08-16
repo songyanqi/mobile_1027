@@ -1,22 +1,32 @@
 <template>
   <div class="all">
     <div class="big_img">
-      <img src="//pic.davdian.com/free/2017/08/15/a.jpg" alt="">
+      <img :src="dataList.imageUrl" alt="">
     </div>
     <div class="content">
-      <div class="content_title">别说没时间，走路吃饭能陪孩子锻炼数理思维。做更好的自己</div>
+      <div class="content_title" v-text="dataList.album"></div>
       <div class="content_price">
         <div class="pri_left">
-          <span>￥</span><span>19.90</span>
+          <span v-text="dataList.income"></span>
         </div>
-        <div class="pri_right">会员免费听</div>
+        <div class="pri_right" v-text="dataList.memberMsg"></div>
       </div>
-      <div class="content_text">著名犹太教育专家、以色列多所高校访问学者周颖即将为您揭秘：零距离观察犹太人如何打造“最强大脑”，科学激发孩子的学习力和创造力。</div>
+      <div class="content_text" v-text="dataList.comment"></div>
     </div>
   </div>
 </template>
 <script>
-  export default {}
+  export default {
+    props:["data"],
+    created:function () {
+      this.dataList=this.data.body.dataList[0];
+    },
+    data(){
+        return{
+            dataList:[]
+        }
+    }
+  }
 </script>
 <style scoped>
   .all {

@@ -25,8 +25,6 @@ new Vue({
   components: {
     'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
     'landingPage':require('../vue/landing.vue'),
-    'bd_album_0':require('../../../../module/index/feed/bd_album_0.vue'),
-    'bd_album_content_1':require('../../../../module/index/feed/bd_album_content_1.vue'),
     'lheader':require('../vue/header.vue')
   },
   data() {

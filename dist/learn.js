@@ -45,10 +45,10 @@
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1290);
+	__webpack_require__(1300);
 	__webpack_require__(83);
 	__webpack_require__(43);
-	__webpack_require__(1292);
+	__webpack_require__(1302);
 
 
 /***/ },
@@ -4928,7 +4928,7 @@
 
 /***/ },
 
-/***/ 423:
+/***/ 433:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -4940,18 +4940,18 @@
 
 /***/ },
 
-/***/ 467:
+/***/ 477:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(468)
-	__vue_script__ = __webpack_require__(470)
+	__webpack_require__(478)
+	__vue_script__ = __webpack_require__(480)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/bottom.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(471)
+	__vue_template__ = __webpack_require__(481)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4977,13 +4977,13 @@
 
 /***/ },
 
-/***/ 468:
+/***/ 478:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(469);
+	var content = __webpack_require__(479);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5004,7 +5004,7 @@
 
 /***/ },
 
-/***/ 469:
+/***/ 479:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5019,7 +5019,7 @@
 
 /***/ },
 
-/***/ 470:
+/***/ 480:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -5114,25 +5114,25 @@
 
 /***/ },
 
-/***/ 471:
+/***/ 481:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"dav-buyer-bottom clearfix\">\n    <div class=\"bottom-menu\">\n        <a class=\"menu-item\" :class=\"{'active':active==0}\" :href=\"active==0?'javascript:void();':'./'\" data-dav-tj=\"{{page}}|index|index|1|index@{{page}}\">\n            <i class=\"icon dav_icon_home_44_40\" :class=\"{'active':active==0}\" ></i>\n            <div class=\"menu-text\">首页</div>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==1}\" :href=\"active==1?'javascript:void();':'./course.html'\" data-dav-tj=\"{{page}}|category_search|index|1|index@{{page}}\">\n            <i class=\"icon dav_icon_search_44_40\" :class=\"{'active':active==1}\" ></i>\n            <div class=\"menu-text\" style='margin-top:-1px'>学院</div>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==2}\" :href=\"active==2?'javascript:void();':'./cart.html'\" data-dav-tj=\"{{page}}|cart|cart|1|cart@{{page}}\">\n            <i class=\"icon dav_icon_cart_44_40\" :class=\"{'active':active==2}\" ></i>\n            <div class=\"menu-text\">购物车</div>\n            <b v-if='cart' v-text=\"cart\"></b>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==3}\" :href=\"active==3?'javascript:void();':'./center.html'\" data-dav-tj=\"{{page}}|user|user|1|user@{{page}}\">\n            <i class=\"icon dav_icon_me_44_40\" :class=\"{'active':active==3}\" ></i>\n            <div class=\"menu-text\">我的</div>\n        </a>\n\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 486:
+/***/ 496:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(487)
-	__vue_script__ = __webpack_require__(489)
+	__webpack_require__(497)
+	__vue_script__ = __webpack_require__(499)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/vSchoolTitle.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(490)
+	__vue_template__ = __webpack_require__(500)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5158,13 +5158,13 @@
 
 /***/ },
 
-/***/ 487:
+/***/ 497:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(488);
+	var content = __webpack_require__(498);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5185,7 +5185,7 @@
 
 /***/ },
 
-/***/ 488:
+/***/ 498:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5200,7 +5200,7 @@
 
 /***/ },
 
-/***/ 489:
+/***/ 499:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -5245,27 +5245,27 @@
 
 /***/ },
 
-/***/ 490:
+/***/ 500:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"top0\" _v-2cc27de2=\"\">\n    <div class=\"top_container\" _v-2cc27de2=\"\">\n        <div class=\"top_left\" style=\"width: 40px\" _v-2cc27de2=\"\">\n            <a class=\"top_back\" href=\"javascript:history.back();\" _v-2cc27de2=\"\">\n                <span class=\"home_arrow\" _v-2cc27de2=\"\"></span>\n            </a>\n        </div>\n        <div class=\"title_container\" _v-2cc27de2=\"\">\n            {{data||msg}}\n        </div>\n        <div class=\"top_right\" style=\"width:40px;\" v-if=\"rightshow||false\" _v-2cc27de2=\"\">\n            <a class=\"top_back\" href=\"./course.html\" _v-2cc27de2=\"\">\n                <img style=\"width:26px;margin-top:12px;\" class=\"back_home\" src=\"//pic.davdian.com/free/2017/01/17/75_60_7d48bf0ba35cf3ea029bab4d709558f3.png\" _v-2cc27de2=\"\">\n            </a>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1290:
+/***/ 1300:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1292:
+/***/ 1302:
 /***/ function(module, exports, __webpack_require__) {
 
-	var dvdBottom = __webpack_require__(467);
-	var learn = __webpack_require__(1293);
-	var VueLazyload = __webpack_require__(423);
-	var VueAwesomeSwiper = __webpack_require__(1303);
+	var dvdBottom = __webpack_require__(477);
+	var learn = __webpack_require__(1303);
+	var VueLazyload = __webpack_require__(433);
+	var VueAwesomeSwiper = __webpack_require__(1313);
 
 
 	Vue.use(VueAwesomeSwiper);
@@ -5288,18 +5288,18 @@
 
 /***/ },
 
-/***/ 1293:
+/***/ 1303:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1294)
-	__vue_script__ = __webpack_require__(1296)
+	__webpack_require__(1304)
+	__vue_script__ = __webpack_require__(1306)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/learn.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1302)
+	__vue_template__ = __webpack_require__(1312)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5325,13 +5325,13 @@
 
 /***/ },
 
-/***/ 1294:
+/***/ 1304:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1295);
+	var content = __webpack_require__(1305);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5352,7 +5352,7 @@
 
 /***/ },
 
-/***/ 1295:
+/***/ 1305:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5367,7 +5367,7 @@
 
 /***/ },
 
-/***/ 1296:
+/***/ 1306:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -5455,8 +5455,8 @@
 	// </template>
 	//
 	// <script>
-	var vSchoolTitle = __webpack_require__(486);
-	var learnList = __webpack_require__(1297);
+	var vSchoolTitle = __webpack_require__(496);
+	var learnList = __webpack_require__(1307);
 	exports.default = {
 	    data: function data() {
 	        return {
@@ -5718,18 +5718,18 @@
 
 /***/ },
 
-/***/ 1297:
+/***/ 1307:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1298)
-	__vue_script__ = __webpack_require__(1300)
+	__webpack_require__(1308)
+	__vue_script__ = __webpack_require__(1310)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/learnList.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1301)
+	__vue_template__ = __webpack_require__(1311)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5755,13 +5755,13 @@
 
 /***/ },
 
-/***/ 1298:
+/***/ 1308:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1299);
+	var content = __webpack_require__(1309);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5782,7 +5782,7 @@
 
 /***/ },
 
-/***/ 1299:
+/***/ 1309:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5797,7 +5797,7 @@
 
 /***/ },
 
-/***/ 1300:
+/***/ 1310:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -6159,21 +6159,21 @@
 
 /***/ },
 
-/***/ 1301:
+/***/ 1311:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<!--src=\"http://pic.davdian.com/free/2016/12/22/346_346_95d772212ba7dc702aaeabf7d32138cd.png\"-->\n<div class=\"good_list_con\">\n    <div class=\"good_list_2_row\" style=\"background-color: #f1f1f1\">\n\n        <div id=\"#topHeight\"></div>\n        <a :href=\"item.command.content\" v-for=\"(item, index) in list\" class=\"good_item good_list_3_row\" style=\"width:3.75rem\" :class=\"{'first':index==0}\">\n            <div class=\"good_img_container\" style=\"background-color: #f1f1f1\" :class=\"{'titleFirst':index==0}\">\n                <img class=\"newImage\"  style=\"display: inline-block;border: none;\" v-lazy=\"imgObject(item.imageUrl)\" />\n                <div class=\"linear\" v-if='parseInt(new Date().getTime()/1000) > item.startTimestamp'>\n                    <span class=\"circle\"></span><span style=\"font-size: 11px;\">直播中</span>\n                </div>\n                <div class=\"linear\" v-if='parseInt(new Date().getTime()/1000) < item.startTimestamp && item.startTimestamp-parseInt(new Date().getTime()/1000) < 60*60*2'>\n                    <span style=\"font-size: 11px;\">即将开始:</span>\n                    <span style=\"font-size: 11px;\">\n                        {{getFullTime(parseInt(item.startTimestamp-parseInt(new Date().getTime()/1000)))}}\n                    </span>\n                </div>\n                <div class=\"linear\" v-if='parseInt(new Date().getTime()/1000) < item.startTimestamp && item.startTimestamp-parseInt(new Date().getTime()/1000) > 60*60*2'>\n                    <span style=\"font-size: 11px;\">{{getFullTimeDay(parseInt(item.startTimestamp))}}</span>\n                </div>\n                <div class=\"linear\" v-if='item.endTimestamp > 0'>\n                    <span style=\"font-size: 11px;\">精彩回放</span>\n                </div>\n            </div>\n            <div class='learnList-content' :class=\"{'titleFirst':index==0}\">\n                <div class='title' v-text='item.title'></div>\n                <div class='doctor' v-text='item.teacher'></div>\n                <div class='money'>\n                    <span class='money-rmb'>¥&nbsp;<span v-text='item.course_price'></span></span>\n                    <span class='money-yj' v-if='visitor==3 &&item.share_income && item.share_income!=\"0.00\"'>&nbsp;&nbsp;分享奖励:&nbsp;¥&nbsp;<span v-text='item.share_income'></span></span>\n                </div>\n            </div>\n        </a>\n\n        <div></div>\n\n        <div style=\"clear: both\"></div>\n        <div class=\"no_more\" style=\"display: none;\">\n            商品加载中\n            <img src=\"//pic.davdian.com/free/loading_03252.svg\" />\n        </div>\n        <div class=\"no_more\" style=\"display: none;\">\n            没有更多商品了\n        </div>\n    </div>\n    <div class=\"good_list_2_row\" ng-model=\"goods\">\n        <div style=\"clear:both\"></div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1302:
+/***/ 1312:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div>\n<v-school-title v-if='!isapp'></v-school-title>\n\n<!-- <v-school-banner :list=\"bannerList\"></v-school-banner> -->\n\n<learn-list :list=\"list\" :visitor=\"visitor\" :top-heights=\"topHeights\"></learn-list>\n\n<div style=\"clear: both\"></div>\n<div v-if=\"loading\" class=\"no_more\"> 加载中 <img src=\"//pic.davdian.com/free/loading_03252.svg\"> </div>\n<div v-if=\"more=='0' && no_data == false\" class=\"no_more no_more_style\" style=\"color: #999999;font-size: 12px;\"> 没有更多了 </div>\n<div v-if = \"no_data\" style=\"text-align: center;position: relative;top: 80px;\">\n    <img style=\"width:18%;\" src=\"//pic.davdian.com/free/2016/12/19/200_298_0d6a638b6549b3dba2ab709ac72a3db1.png\" alt=\"\">\n    <div style=\"margin-top: 20px;color: #666666\">\n        <span>\n            还没有课程哦\n        </span>\n    </div>\n</div>\n<div class=\"other_info\">\n    <div class='unLoad' v-if=\"error\">\n        <div class='unLoad-img'></div>\n        <div class='unLoad-title'>网络异常，请重新加载</div>\n        <div class='unLoad-btn' @click='getData(true)'>点击重新加载</div>\n    </div>\n</div>\n</div>\n";
 
 /***/ },
 
-/***/ 1303:
+/***/ 1313:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -6181,9 +6181,9 @@
 	 * @author Surmon.me
 	 */
 
-	var Swiper = __webpack_require__(1304)
-	var SwiperComponent = __webpack_require__(1305)
-	var SlideComponent = __webpack_require__(1310)
+	var Swiper = __webpack_require__(1314)
+	var SwiperComponent = __webpack_require__(1315)
+	var SlideComponent = __webpack_require__(1320)
 	if (typeof window !== 'undefined') {
 		window.Swiper = Swiper
 	}
@@ -6203,7 +6203,7 @@
 
 /***/ },
 
-/***/ 1304:
+/***/ 1314:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11564,17 +11564,17 @@
 
 /***/ },
 
-/***/ 1305:
+/***/ 1315:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1306)
+	__vue_script__ = __webpack_require__(1316)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vue-awesome-swiper/swiper.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1309)
+	__vue_template__ = __webpack_require__(1319)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -11600,7 +11600,7 @@
 
 /***/ },
 
-/***/ 1306:
+/***/ 1316:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11624,8 +11624,8 @@
 	// <script>
 	var browser = typeof window !== 'undefined';
 	if (browser) {
-	  window.Swiper = __webpack_require__(1304);
-	  __webpack_require__(1307);
+	  window.Swiper = __webpack_require__(1314);
+	  __webpack_require__(1317);
 	}
 	exports.default = {
 	  name: 'swiper',
@@ -11689,31 +11689,31 @@
 
 /***/ },
 
-/***/ 1307:
+/***/ 1317:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1309:
+/***/ 1319:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"swiper-container\">\n  <slot name=\"parallax-bg\"></slot>\n  <div :class=\"defaultSwiperClasses.wrapperClass\">\n    <slot></slot>\n  </div>\n  <slot name=\"pagination\"></slot>\n  <slot name=\"button-prev\"></slot>\n  <slot name=\"button-next\"></slot>\n  <slot name=\"scrollbar\"></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 1310:
+/***/ 1320:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1311)
+	__vue_script__ = __webpack_require__(1321)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vue-awesome-swiper/slide.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1312)
+	__vue_template__ = __webpack_require__(1322)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -11739,7 +11739,7 @@
 
 /***/ },
 
-/***/ 1311:
+/***/ 1321:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11793,7 +11793,7 @@
 
 /***/ },
 
-/***/ 1312:
+/***/ 1322:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :class=\"slideClass\">\n  <slot></slot>\n</div>\n";

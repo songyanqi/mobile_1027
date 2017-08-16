@@ -47,11 +47,11 @@
 
 	"use strict";
 
-	var _common = __webpack_require__(1112);
+	var _common = __webpack_require__(1122);
 
 	var _common2 = _interopRequireDefault(_common);
 
-	var _share = __webpack_require__(1115);
+	var _share = __webpack_require__(1125);
 
 	var _share2 = _interopRequireDefault(_share);
 
@@ -63,7 +63,7 @@
 
 	var _common4 = _interopRequireDefault(_common3);
 
-	var _weixin = __webpack_require__(975);
+	var _weixin = __webpack_require__(985);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
@@ -71,8 +71,8 @@
 
 	var layout = __webpack_require__(91).default; // 基础模块
 
-	var dialog = __webpack_require__(959).default;
-	var base = __webpack_require__(955).default;
+	var dialog = __webpack_require__(969).default;
+	var base = __webpack_require__(965).default;
 
 
 	base.init();
@@ -7292,14 +7292,14 @@
 
 /***/ },
 
-/***/ 449:
+/***/ 459:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 485:
+/***/ 495:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -9157,18 +9157,18 @@
 
 /***/ },
 
-/***/ 933:
+/***/ 943:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(934)
-	__vue_script__ = __webpack_require__(936)
+	__webpack_require__(944)
+	__vue_script__ = __webpack_require__(946)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/alert/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(942)
+	__vue_template__ = __webpack_require__(952)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -9194,13 +9194,13 @@
 
 /***/ },
 
-/***/ 934:
+/***/ 944:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(935);
+	var content = __webpack_require__(945);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -9221,7 +9221,7 @@
 
 /***/ },
 
-/***/ 935:
+/***/ 945:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -9236,7 +9236,7 @@
 
 /***/ },
 
-/***/ 936:
+/***/ 946:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9245,7 +9245,7 @@
 	  value: true
 	});
 
-	var _xDialog = __webpack_require__(937);
+	var _xDialog = __webpack_require__(947);
 
 	var _xDialog2 = _interopRequireDefault(_xDialog);
 
@@ -9338,18 +9338,18 @@
 
 /***/ },
 
-/***/ 937:
+/***/ 947:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(938)
-	__vue_script__ = __webpack_require__(940)
+	__webpack_require__(948)
+	__vue_script__ = __webpack_require__(950)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/x-dialog/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(941)
+	__vue_template__ = __webpack_require__(951)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -9375,13 +9375,13 @@
 
 /***/ },
 
-/***/ 938:
+/***/ 948:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(939);
+	var content = __webpack_require__(949);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -9402,7 +9402,7 @@
 
 /***/ },
 
-/***/ 939:
+/***/ 949:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -9417,7 +9417,7 @@
 
 /***/ },
 
-/***/ 940:
+/***/ 950:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9500,21 +9500,21 @@
 
 /***/ },
 
-/***/ 941:
+/***/ 951:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-x-dialog\" @touchmove=\"onTouchMove\">\n  <transition :name=\"maskTransition\">\n    <div class=\"weui-mask\" @click=\"hideOnBlur && (currentValue = false)\" v-show=\"currentValue\"></div>\n  </transition>\n  <transition :name=\"dialogTransition\">\n    <div :class=\"dialogClass\" v-show=\"currentValue\" :style=\"dialogStyle\">\n      <slot></slot>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ },
 
-/***/ 942:
+/***/ 952:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-alert\">\n  <x-dialog\n  v-model=\"showValue\"\n  :mask-transition=\"maskTransition\"\n  :dialog-transition=\"dialogTransition\"\n  @on-hide=\"$emit('on-hide')\"\n  @on-show=\"$emit('on-show')\">\n    <div class=\"weui-dialog__hd\">\n      <strong class=\"weui-dialog__title\">{{title}}</strong>\n    </div>\n    <div class=\"weui-dialog__bd\">\n      <slot>\n        <div v-html=\"content\"></div>\n      </slot>\n    </div>\n    <div class=\"weui-dialog__ft\">\n      <a href=\"javascript:;\"\n      class=\"weui-dialog__btn weui-dialog__btn_primary\"\n      @click=\"_onHide\">{{buttonText || '确定'}}</a>\n    </div>\n  </x-dialog>\n</div>\n";
 
 /***/ },
 
-/***/ 955:
+/***/ 965:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9523,15 +9523,15 @@
 	    value: true
 	});
 
-	var _WXShare = __webpack_require__(956);
+	var _WXShare = __webpack_require__(966);
 
 	var _WXShare2 = _interopRequireDefault(_WXShare);
 
-	var _pathHistory = __webpack_require__(957);
+	var _pathHistory = __webpack_require__(967);
 
 	var _pathHistory2 = _interopRequireDefault(_pathHistory);
 
-	var _appInterface = __webpack_require__(958);
+	var _appInterface = __webpack_require__(968);
 
 	var _appInterface2 = _interopRequireDefault(_appInterface);
 
@@ -9576,7 +9576,7 @@
 
 /***/ },
 
-/***/ 956:
+/***/ 966:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9865,7 +9865,7 @@
 
 /***/ },
 
-/***/ 957:
+/***/ 967:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9936,7 +9936,7 @@
 
 /***/ },
 
-/***/ 958:
+/***/ 968:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9949,11 +9949,11 @@
 
 	var _utils2 = _interopRequireDefault(_utils);
 
-	var _WXShare = __webpack_require__(956);
+	var _WXShare = __webpack_require__(966);
 
 	var _WXShare2 = _interopRequireDefault(_WXShare);
 
-	var _dialog = __webpack_require__(959);
+	var _dialog = __webpack_require__(969);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -10388,7 +10388,7 @@
 
 /***/ },
 
-/***/ 959:
+/***/ 969:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10399,15 +10399,15 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _index = __webpack_require__(960);
+	var _index = __webpack_require__(970);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(963);
+	var _index3 = __webpack_require__(973);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _vue = __webpack_require__(485);
+	var _vue = __webpack_require__(495);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
@@ -10462,7 +10462,7 @@
 
 /***/ },
 
-/***/ 960:
+/***/ 970:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10474,11 +10474,11 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _alert = __webpack_require__(933);
+	var _alert = __webpack_require__(943);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
-	var _plugin_helper = __webpack_require__(961);
+	var _plugin_helper = __webpack_require__(971);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10543,7 +10543,7 @@
 
 /***/ },
 
-/***/ 961:
+/***/ 971:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10553,7 +10553,7 @@
 	});
 	exports.mergeOptions = undefined;
 
-	var _objectAssign = __webpack_require__(962);
+	var _objectAssign = __webpack_require__(972);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -10576,7 +10576,7 @@
 
 /***/ },
 
-/***/ 962:
+/***/ 972:
 /***/ function(module, exports) {
 
 	/*
@@ -10673,7 +10673,7 @@
 
 /***/ },
 
-/***/ 963:
+/***/ 973:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10685,11 +10685,11 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _toast = __webpack_require__(964);
+	var _toast = __webpack_require__(974);
 
 	var _toast2 = _interopRequireDefault(_toast);
 
-	var _plugin_helper = __webpack_require__(961);
+	var _plugin_helper = __webpack_require__(971);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -10772,18 +10772,18 @@
 
 /***/ },
 
-/***/ 964:
+/***/ 974:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(965)
-	__vue_script__ = __webpack_require__(967)
+	__webpack_require__(975)
+	__vue_script__ = __webpack_require__(977)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/toast/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(969)
+	__vue_template__ = __webpack_require__(979)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -10809,13 +10809,13 @@
 
 /***/ },
 
-/***/ 965:
+/***/ 975:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(966);
+	var content = __webpack_require__(976);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -10836,7 +10836,7 @@
 
 /***/ },
 
-/***/ 966:
+/***/ 976:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -10851,7 +10851,7 @@
 
 /***/ },
 
-/***/ 967:
+/***/ 977:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10860,7 +10860,7 @@
 	  value: true
 	});
 
-	var _safariFix = __webpack_require__(968);
+	var _safariFix = __webpack_require__(978);
 
 	var _safariFix2 = _interopRequireDefault(_safariFix);
 
@@ -11042,7 +11042,7 @@
 
 /***/ },
 
-/***/ 968:
+/***/ 978:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11068,14 +11068,14 @@
 
 /***/ },
 
-/***/ 969:
+/***/ 979:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-toast\">\n  <div class=\"weui-mask_transparent\" v-show=\"isShowMask && show\"></div>\n  <transition :name=\"currentTransition\">\n    <div class=\"weui-toast\" :style=\"{width: width}\" :class=\"toastClass\" v-show=\"show\">\n      <i class=\"weui-icon-success-no-circle weui-icon_toast\" v-show=\"type !== 'text'\"></i>\n      <p class=\"weui-toast__content\" v-if=\"text\" :style=\"style\" v-html=\"text\"></p>\n      <p class=\"weui-toast__content\" v-else><slot></slot></p>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ },
 
-/***/ 975:
+/***/ 985:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11084,7 +11084,7 @@
 	  value: true
 	});
 
-	var _scriptjs = __webpack_require__(976);
+	var _scriptjs = __webpack_require__(986);
 
 	var _scriptjs2 = _interopRequireDefault(_scriptjs);
 
@@ -11096,11 +11096,11 @@
 
 	var _config2 = _interopRequireDefault(_config);
 
-	var _jsCookie = __webpack_require__(977);
+	var _jsCookie = __webpack_require__(987);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(978);
+	var _util = __webpack_require__(988);
 
 	var _util2 = _interopRequireDefault(_util);
 
@@ -11269,7 +11269,7 @@
 
 /***/ },
 
-/***/ 976:
+/***/ 986:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11399,7 +11399,7 @@
 
 /***/ },
 
-/***/ 977:
+/***/ 987:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -11571,7 +11571,7 @@
 
 /***/ },
 
-/***/ 978:
+/***/ 988:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11619,7 +11619,7 @@
 
 /***/ },
 
-/***/ 1112:
+/***/ 1122:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11636,26 +11636,26 @@
 
 	var _ua2 = _interopRequireDefault(_ua);
 
-	var _login = __webpack_require__(1113);
+	var _login = __webpack_require__(1123);
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _jsCookie = __webpack_require__(977);
+	var _jsCookie = __webpack_require__(987);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(978);
+	var _util = __webpack_require__(988);
 
 	var _util2 = _interopRequireDefault(_util);
 
-	var _weixin = __webpack_require__(975);
+	var _weixin = __webpack_require__(985);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import scriptjs from 'scriptjs';
-	__webpack_require__(1114);
+	__webpack_require__(1124);
 
 
 	// ios wkwebview返回上一页执行回调刷新页面
@@ -11768,7 +11768,7 @@
 
 /***/ },
 
-/***/ 1113:
+/***/ 1123:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11777,7 +11777,7 @@
 	  value: true
 	});
 
-	var _jsCookie = __webpack_require__(977);
+	var _jsCookie = __webpack_require__(987);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
@@ -11867,7 +11867,7 @@
 
 /***/ },
 
-/***/ 1114:
+/***/ 1124:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -11899,7 +11899,7 @@
 
 /***/ },
 
-/***/ 1115:
+/***/ 1125:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11916,11 +11916,11 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
-	var _weixin = __webpack_require__(975);
+	var _weixin = __webpack_require__(985);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
-	var _Vue = __webpack_require__(449);
+	var _Vue = __webpack_require__(459);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
@@ -11962,7 +11962,7 @@
 	  callBrowserShare: function callBrowserShare() {
 	    new _Vue2.default({
 	      components: {
-	        'com-share-pop-tip': __webpack_require__(1116)
+	        'com-share-pop-tip': __webpack_require__(1126)
 	      },
 	      el: getEl(),
 	      data: {},
@@ -11984,18 +11984,18 @@
 
 /***/ },
 
-/***/ 1116:
+/***/ 1126:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1117)
-	__vue_script__ = __webpack_require__(1119)
+	__webpack_require__(1127)
+	__vue_script__ = __webpack_require__(1129)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-share-pop-tip.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1120)
+	__vue_template__ = __webpack_require__(1130)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -12021,13 +12021,13 @@
 
 /***/ },
 
-/***/ 1117:
+/***/ 1127:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1118);
+	var content = __webpack_require__(1128);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -12048,7 +12048,7 @@
 
 /***/ },
 
-/***/ 1118:
+/***/ 1128:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -12063,7 +12063,7 @@
 
 /***/ },
 
-/***/ 1119:
+/***/ 1129:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12163,7 +12163,7 @@
 
 /***/ },
 
-/***/ 1120:
+/***/ 1130:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"com-share-pop-tip\" :style=\"styleObject\" @click=\"close\" @touchmove=\"touchmove\">\n  <img class=\"arrow\" src=\"http://pic.davdian.com/free/pointer.png\">\n  <div class=\"tip\">\n    <template v-if=\"isWeixin\">\n      <p>请点击右上角“分享”按钮,</p>\n      <p>然后可以选择“发送给朋友”、“分享到朋友圈”或者“复制链接”后发送链接给朋友。</p>\n    </template>\n    <template v-if=\"!isWeixin\">\n      <p>请复制地址栏链接，将链接发送给朋友</p>\n    </template>\n  </div>\n</div>\n";

@@ -50,12 +50,12 @@
 	 */
 	__webpack_require__(33);
 	__webpack_require__(37);
-	__webpack_require__(502);
+	__webpack_require__(512);
 
 	__webpack_require__(41);
 	__webpack_require__(42);
 	__webpack_require__(43);
-	__webpack_require__(504);
+	__webpack_require__(514);
 
 /***/ },
 
@@ -3750,20 +3750,20 @@
 
 /***/ },
 
-/***/ 502:
+/***/ 512:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 504:
+/***/ 514:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by xuzelian on 17/3/30.
 	 */
-	var commentDetail = __webpack_require__(505);
+	var commentDetail = __webpack_require__(515);
 
 	new Vue({
 	    el: "#commentDetail",
@@ -3775,18 +3775,18 @@
 
 /***/ },
 
-/***/ 505:
+/***/ 515:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(506)
-	__vue_script__ = __webpack_require__(508)
+	__webpack_require__(516)
+	__vue_script__ = __webpack_require__(518)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/commentDetail.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(514)
+	__vue_template__ = __webpack_require__(524)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -3812,13 +3812,13 @@
 
 /***/ },
 
-/***/ 506:
+/***/ 516:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(507);
+	var content = __webpack_require__(517);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -3839,7 +3839,7 @@
 
 /***/ },
 
-/***/ 507:
+/***/ 517:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -3854,7 +3854,7 @@
 
 /***/ },
 
-/***/ 508:
+/***/ 518:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3863,7 +3863,7 @@
 	    value: true
 	});
 
-	var _orderList_comment_list = __webpack_require__(509);
+	var _orderList_comment_list = __webpack_require__(519);
 
 	var _orderList_comment_list2 = _interopRequireDefault(_orderList_comment_list);
 
@@ -3904,18 +3904,18 @@
 
 /***/ },
 
-/***/ 509:
+/***/ 519:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(510)
-	__vue_script__ = __webpack_require__(512)
+	__webpack_require__(520)
+	__vue_script__ = __webpack_require__(522)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/orderList_comment_list.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(513)
+	__vue_template__ = __webpack_require__(523)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -3941,13 +3941,13 @@
 
 /***/ },
 
-/***/ 510:
+/***/ 520:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(511);
+	var content = __webpack_require__(521);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -3968,7 +3968,7 @@
 
 /***/ },
 
-/***/ 511:
+/***/ 521:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -3983,7 +3983,7 @@
 
 /***/ },
 
-/***/ 512:
+/***/ 522:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4204,14 +4204,14 @@
 
 /***/ },
 
-/***/ 513:
+/***/ 523:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n    <div class=\"orderList_comment_list_con\">\n        <div v-for=\"item in list\" class=\"list clearfix\">\n            <div class=\"top\">\n                <div class=\"head\"><img :src=\"item.img.length ? item.img:'//pic.davdian.com/free/default_head_icon_0419.png'\"></div>\n                <div class=\"clearfix\"><span class=\"shopname\">{{item.name}}</span><span class=\"comment_date\">{{item.date}}</span>\n\n                    <ul>\n                        <li v-for=\"star in [1,2,3,4,5]\" :class=\"{hover:star<= +item.grade}\"></li>\n                    </ul>\n                </div>\n            </div>\n            <div class=\"comment_con\">{{item.comment}}</div>\n            <div v-if=\"item.categoryInfo && item.categoryInfo.length\" class=\"goods_property\">{{item.categoryInfo||\"\"}}</div>\n            <div v-if=\"item.comment_img && item.comment_img.length\" class=\"add_comment_con clearfix\">\n                <ul>\n                    <li v-for=\"(imgItem, imgIndex) in item.comment_img\"><img @click=\"imgClick( $event,imgIndex)\" :src=\"imgItem.img\" :data-show-src=\"imgItem.big_img\"></li>\n                </ul>\n            </div>\n            <div v-if=\"item.comment_reply && item.comment_reply.length\" class=\"ustomer_service_reply\"><i class=\"up_arrow\"></i>大V店客服回复：{{item.comment_reply}}</div>\n            <div v-if=\"item.comment_append && item.comment_append.length\">\n                <div class=\"additionalDate_line\"></div>\n                <div v-if=\"item.comment_append_datediff\" class=\"additionalDate\">\n                    {{item.comment_append_datediff}}天后追加评价\n                </div>\n                <div v-if=\"item.comment_append_datediff==0\" class=\"additionalDate\">\n                    当日追加评价\n                </div>\n                <div class=\"comment_con\">{{item.comment_append}}</div>\n                <div v-if=\"item.comment_append_img && item.comment_append_img.length\"\n                     class=\"add_comment_con clearfix\">\n                    <ul>\n                        <li v-for=\"(imgItem, imgIndex) in item.comment_append_img\"><img\n                                @click=\"imgClick( $event,imgIndex)\" :src=\"imgItem.img\"\n                                :data-show-src=\"imgItem.big_img\"></li>\n                    </ul>\n                </div>\n                <div v-if=\"item.comment_append_reply && item.comment_append_reply.length\"\n                     class=\"ustomer_service_reply\"><i class=\"up_arrow\"></i>大V店客服回复：{{item.comment_append_reply}}\n                </div>\n            </div>\n        </div>\n    </div>\n\n    <div v-show = 'loading' class=\"refresh\">\n        <div class=\"uil-default-css-normal\" style=\"-webkit-transform:scale(0.15);-moz-transform:scale(0.15);-webkit-transform-origin: 0 0;-moz-transform-origin: 0 0;width:30px;height: 30px;display: inline-block;\"><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div></div>\n        <div>数据加载中...</div>\n    </div>\n    <div v-show = 'no_more' class=\"refresh\">没有更多评论</div>\n\n    <div class=\"publish_pic_view hide\">\n        <div class=\"publish_pic_preview\">\n            <div class=\"swiper-wrapper\">\n            </div>\n        </div>\n        <div class=\"publish_pic_preview_bottom\">\n            <span class=\"back\"><i class=\"back_arrow\"></i>返回</span>\n            <span class=\"num\"></span>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 514:
+/***/ 524:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-625df6bf=\"\">\n    <div class=\"top0\" _v-625df6bf=\"\">\n        <div class=\"top_container\" _v-625df6bf=\"\">\n            <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->\n            <div class=\"top_left\" _v-625df6bf=\"\">\n                <a class=\"top_back\" href=\"javascript:history.back();\" _v-625df6bf=\"\">\n                    <span class=\"home_arrow\" _v-625df6bf=\"\"></span>\n                </a>\n            </div>\n            <div class=\"title_container\" _v-625df6bf=\"\">\n                评价详情\n            </div>\n        </div>\n    </div>\n    <comment-detail-data _v-625df6bf=\"\"></comment-detail-data>\n</div>\n";

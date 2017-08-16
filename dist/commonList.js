@@ -48,20 +48,20 @@
 	/**
 	 * Created by myy on 16/12/19.
 	 */
-	__webpack_require__(526);
+	__webpack_require__(536);
 
-	__webpack_require__(528);
+	__webpack_require__(538);
 
 /***/ },
 
-/***/ 449:
+/***/ 459:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 485:
+/***/ 495:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -1919,21 +1919,21 @@
 
 /***/ },
 
-/***/ 526:
+/***/ 536:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 528:
+/***/ 538:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by myy on 16/12/19.
 	 */
-	var Vue = __webpack_require__(449);
-	var commonList = __webpack_require__(529);
+	var Vue = __webpack_require__(459);
+	var commonList = __webpack_require__(539);
 
 	new Vue({
 	    el: "body",
@@ -1951,17 +1951,17 @@
 
 /***/ },
 
-/***/ 529:
+/***/ 539:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(530)
+	__vue_script__ = __webpack_require__(540)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/commonList.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(531)
+	__vue_template__ = __webpack_require__(541)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -1987,7 +1987,7 @@
 
 /***/ },
 
-/***/ 530:
+/***/ 540:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1996,7 +1996,7 @@
 	    value: true
 	});
 
-	var _vue = __webpack_require__(485);
+	var _vue = __webpack_require__(495);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
@@ -2061,7 +2061,7 @@
 
 /***/ },
 
-/***/ 531:
+/***/ 541:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"commonList-container\">\n    <div class=\"class_introduce_con\" v-for=\"common in commonList\">\n        <div class=\"comment_tit\">\n            <img  class=\"img\" :src=\"common.speaker.avatar\" alt=\"\">\n            <div class=\"comment_dis\">\n                <span class=\"commentname\">{{common.speaker.name}}</span>\n                <span>{{common.msg.time}}</span>\n            </div>\n        </div>\n        <div class=\"class_introduce_text\">\n            <p>{{common.msg.content}}</p>\n        </div>\n    </div>\n</div>\n";

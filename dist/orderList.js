@@ -47,14 +47,14 @@
 
 	__webpack_require__(33);
 	__webpack_require__(37);
-	__webpack_require__(502);
-	__webpack_require__(892);
+	__webpack_require__(512);
+	__webpack_require__(902);
 
 	__webpack_require__(42);
 	__webpack_require__(41);
 	__webpack_require__(43);
 	__webpack_require__(83);
-	__webpack_require__(1365);
+	__webpack_require__(1375);
 
 /***/ },
 
@@ -4000,21 +4000,21 @@
 
 /***/ },
 
-/***/ 502:
+/***/ 512:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 892:
+/***/ 902:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1365:
+/***/ 1375:
 /***/ function(module, exports, __webpack_require__) {
 
 	$(function () {
@@ -4042,7 +4042,7 @@
 	        return false
 	    }
 
-	    var orderList = __webpack_require__(1366);
+	    var orderList = __webpack_require__(1376);
 
 	    new Vue({
 	        el: "body",
@@ -4054,17 +4054,17 @@
 
 /***/ },
 
-/***/ 1366:
+/***/ 1376:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1367)
+	__vue_script__ = __webpack_require__(1377)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/orderList.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1374)
+	__vue_template__ = __webpack_require__(1384)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4090,7 +4090,7 @@
 
 /***/ },
 
-/***/ 1367:
+/***/ 1377:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4123,7 +4123,7 @@
 	// </template>
 	//
 	// <script>
-	var orderlistswitcher = __webpack_require__(1368);
+	var orderlistswitcher = __webpack_require__(1378);
 	exports.default = {
 	    components: {
 	        orderlistswitcher: orderlistswitcher
@@ -4134,17 +4134,17 @@
 
 /***/ },
 
-/***/ 1368:
+/***/ 1378:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1369)
+	__vue_script__ = __webpack_require__(1379)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/orderlistswitcher.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1373)
+	__vue_template__ = __webpack_require__(1383)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4170,7 +4170,7 @@
 
 /***/ },
 
-/***/ 1369:
+/***/ 1379:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4195,7 +4195,7 @@
 	// </template>
 	//
 	// <script>
-	var orderlistitem = __webpack_require__(1370);
+	var orderlistitem = __webpack_require__(1380);
 	exports.default = {
 	    data: function data() {
 	        return {
@@ -4279,17 +4279,17 @@
 
 /***/ },
 
-/***/ 1370:
+/***/ 1380:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1371)
+	__vue_script__ = __webpack_require__(1381)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/orderlistitem.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1372)
+	__vue_template__ = __webpack_require__(1382)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4315,7 +4315,7 @@
 
 /***/ },
 
-/***/ 1371:
+/***/ 1381:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4945,21 +4945,21 @@
 
 /***/ },
 
-/***/ 1372:
+/***/ 1382:
 /***/ function(module, exports) {
 
 	module.exports = "\n    <div v-if = 'allkind' class=\"order_list_item dav-shadow\" v-for=\"item in list_type\" data-for-id=\"{{ item.id }}\" data-for = '11' data-for-delivery-id=\"{{item.delivery_id}}\">\n        <div class=\"order_name\"><a href=\"{{ item.shop_url }}\"><span class=\"shop_icon\"></span><span\n                class=\"shop_title\">{{ item.shop_name }}</span><span class=\"shop_arrow\"></span></a>\n            <!--订单状态-->\n            <span class=\"pull-right dav-red\" v-show = \"item.type == 2 && item.cancel_type != 1 && !item.is_new_seller_order\">待发货</span>\n            <span class=\"pull-right dav-red\" v-show = \"item.type == 2 && item.cancel_type != 1 && item.is_new_seller_order && item.is_expire != 1\">赠品待领取</span>\n            <span class=\"pull-right dav-red\" v-show = \"item.type == 4\">已关闭</span>\n            <span class=\"pull-right dav-red\" v-show = \"item.type == 1 && item.complete_status == 1 && !item.is_new_seller_order\">已完成</span>\n            <span class=\"pull-right dav-red\" v-show = \"item.type == 1 && item.complete_status == 1  && item.is_new_seller_order && item.is_expire != 1\">赠品待领取</span>\n            <span class=\"pull-right dav-red\" v-show = \"item.type == 2 && item.cancel_type == 1\">已冻结</span>\n\n            <span class=\"pull-right dav-red\" v-show = \"item.type == 3\">待付款</span>\n            <span class=\"pull-right dav-red\" v-show = \"item.type == 1 && item.shipping_status == 4\">部分发货</span>\n            <span class=\"pull-right dav-red\" v-show = \"item.type == 1 && item.shipping_status == 1 && item.complete_status == 0  && !item.is_new_seller_order\">待收货</span>\n            <span class=\"pull-right dav-red\" v-show = \"item.type == 1 && item.shipping_status == 1 && item.complete_status == 0  && item.is_new_seller_order && item.is_expire != 1\">赠品待领取</span>\n            <span class=\"pull-right dav-red\" v-show = \"item.is_expire && item.is_new_seller_order\">已关闭</span>\n        </div>\n        <a class=\"order_good_list\" href=\"/o-{{item.order_id}}.html\" v-if = '!item.is_delivery' v-bind = 'handleCurrentPage'>\n            <div class=\"img_container\">\n                <div class=\"img_container_inner\">\n                    <img v-for = 'items in item.goods'\n                         :src=\"items.goods_pic\"\n                         style=\"display: inline;\">\n                </div>\n                <div class=\"order_good_info_container dav-small\" v-if = \"item.goods | last\">\n                    <div class=\"order_good_name\" style = \"word-break: break-all \">{{item.goods[0].goods_name}}</div>\n                    <div class=\"order_good_price\">￥{{ item.goods[0].goods_price }} X {{ item.goods[0].amount }}</div>\n                </div>\n            </div>\n        </a>\n        <a class=\"order_good_list\" href=\"/o-{{item.order_id}}.html?did={{item.delivery_id}}\" v-if = 'item.is_delivery' v-bind = 'handleCurrentPage'>\n            <div class=\"img_container\">\n                <div class=\"img_container_inner\">\n                    <img v-for = 'items in item.goods'\n                         :src=\"items.goods_pic\"\n                         style=\"display: inline;\">\n                </div>\n                <div class=\"order_good_info_container dav-small\" v-if = \"item.goods | last\">\n                    <div class=\"order_good_name\" style = \"word-break: break-all \">{{item.goods[0].goods_name}}</div>\n                    <div class=\"order_good_price\">￥{{ item.goods[0].goods_price }} X {{ item.goods[0].amount }}</div>\n                </div>\n            </div>\n        </a>\n        <div class=\"sum\">金额：<span class=\"payment\"><span class=\"fz_12\">￥</span>{{item.payment}}</span></div>\n        <div class=\"order_buttons order_list_buttons clearfix\">\n            <!--该显示哪些信息-->\n            <a v-show = \"item | close\" v-if='item.order_type !=1 && item.order_type !=2' class=\"dav-btn btn-white order-btn-red pull-right  order-buy-once-more\" href=\"/cart.html?rebuy_order_id={{item.id}}\">再次购买</a>\n            <a v-show = \"item | again\" v-if='item.order_type !=1 && item.order_type !=2' class=\"dav-btn btn-white order-btn-red pull-right  order-buy-once-more\" href=\"/cart.html?rebuy_order_id={{item.id}}\">再次购买</a>\n            <a v-show = \"item.can_comment==1&&item.goods_list_num!=1\" class=\"dav-btn btn-white pull-right\" data-href=\"{{item.comment_link}}\" @click=\"evaluatelist\">评价</a>\n            <a v-show = \"item.can_comment==2&&item.goods_list_num!=1\" class=\"dav-btn btn-white pull-right\" data-href=\"{{item.comment_link}}\" @click=\"evaluatelist\">追加评价</a>\n            <a v-show = \"item.can_comment==1&&item.goods_list_num==1\" class=\"dav-btn btn-white pull-right\" data-href=\"{{item.comment_link}}\" @click=\"evaluate\">评价</a>\n            <a v-show = \"item.can_comment==2&&item.goods_list_num==1\" class=\"dav-btn btn-white pull-right\" data-href=\"{{item.comment_link}}\" @click=\"evaluate\">追加评价</a>\n            <!--<a v-show = \"item | confirm\" class=\"dav-btn btn-white order-btn-red pull-right order-buy-once-more\" href=\"/o-{{item.id}}.html?did={{item.delivery_id}}\">确认收货</a>-->\n            <a v-show = \"item | confirm\" class=\"dav-btn btn-white order-btn-red pull-right order-buy-once-more\" @click=\"orderArrive\">确认收货</a>\n            <a v-show = \"item | pay\" class=\"dav-btn btn-white order-btn-red pull-right order-btn-pay\" href=\"/checkout.html?order_id={{item.id}}\">立即支付</a>\n            <a v-show = \"item | receive\" class=\"dav-btn btn-white order-btn-red pull-right\" href=\"/change_address.html?order_id={{item.id}}&goal=get\" v-if='item.is_expire==0'>领取会员赠品</a>\n            <a v-show = \"item | checkship\" class=\"dav-btn btn-white pull-right order-check-wl\" href=\"/o-shipping-{{item.id}}.html?did={{item.delivery_id\n}}\">查看物流</a>\n            <a v-show = \"item | shipping\" class=\"dav-btn btn-white pull-right order-check-wl\" href=\"/o-shipping-{{item.id}}.html?did={{item.delivery_id\n}}\">查看物流</a>\n\n\n            <a class=\"dav-btn btn-white pull-right order-delete-order\" v-if='(item.is_expire==1 && item.is_new_seller_order==1 && item.no_address==1)|| item.type == 4' @click = \"deleteOrder\">删除订单</a>\n            <!-- <a v-show = \"item | deleted\" class=\"dav-btn btn-white pull-right order-delete-order\" @click = \"deleteOrder\">删除订单</a> -->\n            <!-- <a v-show = \"item | close\" class=\"dav-btn btn-white pull-right order-delete-order\" @click = \"deleteOrder\">删除订单</a> -->\n            <a v-show = \"item | pay1\" class=\"dav-btn btn-white pull-right\" href=\"/index.php?c=AgentPay&a=index&order_id={{item.id}}\">找人代付</a>\n            <a v-show = \"item | cancel\" class=\"dav-btn btn-white order-btn-red pull-right  order-cancel\" @click = \"cancelOrder\">取消订单</a>\n            <a v-show = \"item | cancel1\" class=\"dav-btn btn-white pull-right  btn-disable\">取消审核中</a>\n            <a v-show = \"item | cancel2\" class=\"dav-btn btn-white pull-right  btn-disable\">取消成功</a>\n            <a v-show = \"item | cancel3\" class=\"dav-btn btn-white pull-right  btn-disable\">取消失败</a>\n        </div>\n    </div>\n    <div class=\"order_list_item type_4 dav-shadow\" v-if = 'other'>\n        <ul class=\"be_evaluated_list\">\n            <li v-for = 'item in list_type' data-goods_id=\"{{item.goods_id}}\">\n                <a href=\"/{{item.goods_id}}.html\" class=\"goods_pic\">\n                    <img :src = 'item.goods_img'>\n                </a>\n                <div class=\"goods_con\">\n                    <a  href=\"/{{item.goods_id}}.html\"  class=\"goods_title\">{{ item.goods_name }}</a>\n                    <a data-href=\"/grade-{{item.delivery_id}}-{{item.goods_id}}.html\" @click=\"evaluate\" class=\"evaluate_btn pull-right\" data-dav-tj=\"order_list|grade|grade|1|grade@order_list\">评价</a>\n                </div>\n            </li>\n        </ul>\n    </div>\n    <div v-show = 'loading' class=\"refresh\">\n        <div class=\"uil-default-css-normal\" style=\"-webkit-transform:scale(0.15);-moz-transform:scale(0.15);-webkit-transform-origin: 0 0;-moz-transform-origin: 0 0;width:30px;height: 30px;display: inline-block;\"><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div></div>\n        <div>数据加载中...</div>\n    </div>\n    <div v-show = 'no_more' class=\"refresh\">没有更多{{word}}</div>\n";
 
 /***/ },
 
-/***/ 1373:
+/***/ 1383:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"order_list_container\">\n    <div class=\"order_list_switcher dav-shadow\">\n        <div :class=\"{'selected':selected==0}\" @click = 'all' class=\"switcher_item\" data-type=\"0\"><span>全部</span></div>\n        <div :class=\"{'selected':selected==3}\" @click = 'unpaid' class=\"switcher_item\" data-type=\"3\"><span>待付款</span></div>\n        <div :class=\"{'selected':selected==2}\" @click = 'delivery' class=\"switcher_item\" data-type=\"2\"><span>待发货</span></div>\n        <div :class=\"{'selected':selected==1}\" @click = 'unget' class=\"switcher_item\" data-type=\"1\"><span>待收货</span></div>\n        <div :class=\"{'selected':selected==4}\" @click = 'completed' class=\"switcher_item\" data-type=\"4\"><span>待评价</span></div>\n    </div>\n    <div class=\"no-order hide\">\n        没有此类型订单\n    </div>\n    <orderlistitem></orderlistitem>\n</div>\n";
 
 /***/ },
 
-/***/ 1374:
+/***/ 1384:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"top0\">\n    <div class=\"top_container\">\n        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->\n        <div class=\"top_left\">\n            <a class=\"top_back\" href=\"javascript:history.back();\">\n                <span class=\"home_arrow\"></span>\n            </a>\n        </div>\n        <div class=\"title_container\">\n            订单列表\n        </div>\n        <div class=\"top_right\">\n            <a href=\"/\" class=\"top_home\">\n                <span class=\"home_icon\"></span>\n            </a>\n        </div>\n    </div>\n</div>\n<orderlistswitcher>\n\n</orderlistswitcher>\n";

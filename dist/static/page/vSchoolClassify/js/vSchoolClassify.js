@@ -110,7 +110,7 @@
 	new _Vue2.default({
 	  el: ".app",
 	  components: {
-	    'v-school-classify': __webpack_require__(1228)
+	    'v-school-classify': __webpack_require__(1233)
 	  },
 	  data: function data() {
 	    return {
@@ -15993,19 +15993,19 @@
 
 /***/ },
 
-/***/ 1228:
+/***/ 1233:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1229)
-	__webpack_require__(1231)
-	__vue_script__ = __webpack_require__(1233)
+	__webpack_require__(1234)
+	__webpack_require__(1236)
+	__vue_script__ = __webpack_require__(1238)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/vSchoolClassify/vue/vSchoolClassIfy.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1234)
+	__vue_template__ = __webpack_require__(1239)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -16031,13 +16031,13 @@
 
 /***/ },
 
-/***/ 1229:
+/***/ 1234:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1230);
+	var content = __webpack_require__(1235);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -16058,7 +16058,7 @@
 
 /***/ },
 
-/***/ 1230:
+/***/ 1235:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -16073,13 +16073,13 @@
 
 /***/ },
 
-/***/ 1231:
+/***/ 1236:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1232);
+	var content = __webpack_require__(1237);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -16100,7 +16100,7 @@
 
 /***/ },
 
-/***/ 1232:
+/***/ 1237:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -16115,7 +16115,7 @@
 
 /***/ },
 
-/***/ 1233:
+/***/ 1238:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -16761,7 +16761,7 @@
 
 /***/ },
 
-/***/ 1234:
+/***/ 1239:
 /***/ function(module, exports) {
 
 <<<<<<< HEAD

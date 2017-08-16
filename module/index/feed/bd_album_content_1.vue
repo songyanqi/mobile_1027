@@ -1,60 +1,24 @@
 <template>
   <div>
     <div class="list1">
-      <div class="big_img"><img src="//pic.davdian.com/free/2017/08/16/today.png" alt=""></div>
-      <div class="list">
-        <div class="left_img">
-          <img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt="">
-        </div>
-        <div class="list_content">
-          <div class="list_title">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>
-          <div class="list_name">《搞笑西游记》</div>
-          <div class="list_time">04:19</div>
-        </div>
-        <div class="right_img">
-          <img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt="">
-        </div>
+      <div class="big_img">
+        <div class="list_line"></div>
+        <div class="list_date">今日更新</div>
+        <div class="list_line"></div>
       </div>
-      <div class="list">
+      <div class="list" v-for="item in dataList">
         <div class="left_img">
-          <img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt="">
+          <img :src="item.imageUrl" alt="">
         </div>
         <div class="list_content">
-          <div class="list_title">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>
-          <div class="list_name">《搞笑西游记》</div>
-          <div class="list_time">04:19</div>
+          <div class="list_title" v-text="item.music"></div>
+          <div class="list_name" v-text="item.album"></div>
+          <div class="list_time" v-text="item.time"></div>
         </div>
         <div class="right_img">
-          <img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt="">
-        </div>
-      </div>
-    </div>
-    <div class="list2">
-      <div class="big_img"><img src="//pic.davdian.com/free/2017/08/16/no_today.png" alt=""></div>
-      <div class="list">
-        <div class="left_img">
-          <img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt="">
-        </div>
-        <div class="list_content">
-          <div class="list_title">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>
-          <div class="list_name">《搞笑西游记》</div>
-          <div class="list_time">04:19</div>
-        </div>
-        <div class="right_img">
-          <img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt="">
-        </div>
-      </div>
-      <div class="list">
-        <div class="left_img">
-          <img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt="">
-        </div>
-        <div class="list_content">
-          <div class="list_title">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>
-          <div class="list_name">《搞笑西游记》</div>
-          <div class="list_time">04:19</div>
-        </div>
-        <div class="right_img">
-          <img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt="">
+          <a :href="item.command.content">
+            <img :src="item.imageUrl" alt="">
+          </a>
         </div>
       </div>
     </div>
@@ -62,7 +26,17 @@
 
 </template>
 <script>
-  export default {}
+  export default {
+      props:["data"],
+      data(){
+          return {
+              dataList:[]
+          }
+      },
+      created:function () {
+        this.dataList=this.data.body.dataList;
+      }
+  }
 </script>
 <style scoped>
   .big_img{
@@ -70,11 +44,25 @@
     height: 0.2rem;
     padding-top:0.13rem;
     padding-bottom:0.15rem;
+    font-size: 0;
   }
-  .list1 .big_img img{
-    width: 1.14rem;
-    height: 0.16rem;
+  .big_img>div{
+    display:inline-block;
+    vertical-align: top;
   }
+  .list_date{
+    color:#333333;
+    font-size:16px;
+    padding-left: 0.1rem;
+    padding-right: 0.1rem;
+  }
+  .list_line{
+    height: 0.01rem;
+    background: #333333;
+    width: 0.15rem;
+    margin-top: 0.1rem;
+  }
+
   .list1{
     border-bottom: 1px solid #E1E1E1;
     background: #ffffff;
@@ -89,6 +77,7 @@
     height: 0.76rem;
     padding:0 0.1rem;
     margin-bottom:0.27rem;
+    position: relative;
   }
 
   .list>div{
@@ -130,17 +119,8 @@
     margin-left:0.2rem;
     margin-top: 0.24rem;
   }
-
-
-  .list2{
-    border-bottom: 1px solid #E1E1E1;
-    background: #ffffff;
-  }
-  .list2 .big_img img{
-    width: 1.75rem;
-    height: 0.16rem;
-  }
-  .list2 .list:nth-child(2){
-    margin-bottom: 0.2rem;
+  .right_img{
+    position: absolute;
+    right: 0.1rem;
   }
 </style>

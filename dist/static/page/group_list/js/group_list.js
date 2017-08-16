@@ -70,7 +70,7 @@
 
 	new _Vue2.default({
 	  components: {
-	    app: __webpack_require__(813)
+	    app: __webpack_require__(1089)
 	  },
 	  template: '<app />',
 	  el: ".app"
@@ -4914,346 +4914,7 @@
 
 /***/ },
 
-/***/ 295:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _md = __webpack_require__(43);
-
-	var _md2 = _interopRequireDefault(_md);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var strSign = function strSign(str, flag) {
-	    var obj = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-	    var strObj = sortObj(str, flag, obj); //字符串 传入当前的信息名称
-	    var str = ''; //重新获取编译后的字符串
-	    for (var i in strObj) {
-	        //变成键值对的形式
-	        str += i + '=' + strObj[i] + '&';
-	    }
-	    return strObj;
-	}; // var crypto = require('crypto')
-
-
-	var sortObj = function sortObj(dataVersion, flag) {
-	    var obj = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-	    //传入当前的信息名称 如feed
-	    var string = '';
-	    var strObj = {};
-	    var t = null;
-	    var tValue = null;
-	    var arrKey = ['shop_url', 'sess_key', 'device_token', 'format', 'ts', 'osv', 'wh', 'data_version']; //需要上传的参数
-
-	    /**
-	     * 获取当前的版本号信息,如果没有取0
-	     */
-	    var osv = "web_h5_*_*";
-	    if (window.Units && Units.isApp() && Units.isIOS()) {
-	        osv = "web_ios_*_*";
-	    }
-	    if (window.Units && Units.isApp() && Units.isAndroid()) {
-	        osv = "web_android_*_*";
-	    }
-	    var arrValue = [];
-	    if (flag && !window.isPrivateMode) {
-	        arrValue = [location.host, document.cookie.split(';').filter(function (x) {
-	            return x.indexOf("dvdsid") > -1;
-	        })[0] ? document.cookie.split(';').filter(function (x) {
-	            return x.indexOf("dvdsid") > -1;
-	        })[0].split("=")[1] : 0, "", 'json', new Date().getTime(), osv, '750_1334', 0];
-	    } else {
-	        // log('this is isPrivateMode or flag is false')
-	        arrValue = [location.host, document.cookie.split(';').filter(function (x) {
-	            return x.indexOf("dvdsid") > -1;
-	        })[0] ? document.cookie.split(';').filter(function (x) {
-	            return x.indexOf("dvdsid") > -1;
-	        })[0].split("=")[1] : 0, "", 'json', new Date().getTime(), osv, '750_1334', 0];
-	    }
-
-	    for (var item in obj) {
-	        arrKey.push(item.toString());
-	        arrValue.push(obj[item]);
-	    }
-
-	    for (var i = 0; i < arrKey.length; i++) {
-	        for (var j = 0; j < arrKey.length - i - 1; j++) {
-	            if (arrKey[j] > arrKey[j + 1]) {
-	                t = arrKey[j + 1];
-	                arrKey[j + 1] = arrKey[j];
-	                arrKey[j] = t;
-
-	                tValue = arrValue[j + 1];
-	                arrValue[j + 1] = arrValue[j];
-	                arrValue[j] = tValue;
-	            }
-	        }
-	    }
-	    for (var _i = 0; _i < arrKey.length; _i++) {
-	        strObj[arrKey[_i]] = arrValue[_i];
-	    }
-	    for (var p in strObj) {
-	        string += p + '=' + strObj[p];
-	    }
-	    var sign = md5(string).toUpperCase();
-	    strObj.sign = sign;
-	    return strObj;
-	};
-
-	// let md5 = (str="") => crypto.createHash('md5').update(str, 'utf8').digest('hex')
-	var md5 = function md5() {
-	    var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
-	    return (0, _md2.default)(str).toString().toUpperCase();
-	};
-
-	var dataVersion = function dataVersion(str) {
-	    var obj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-	    // 信息名称 以及该信息下的所有需要上传的信息
-	    if (obj.data_version && !window.isPrivateMode) {
-	        //如果数据版本号不为0
-	        if (sessionStorage.getItem('dataVersion')) {
-	            //如果缓存中有版本号
-	            var o = JSON.parse(sessionStorage.getItem('dataVersion'));
-	            o[str] = obj.data_version;
-	            sessionStorage.setItem('dataVersion', JSON.stringify(o)); //改变当前的所需要信息的版本号 其余的版本号不变
-	        } else {
-	            var o = {};
-	            o[str] = obj.data_version;
-	            sessionStorage.setItem('dataVersion', JSON.stringify(o));
-	        }
-	    }
-	};
-
-	var getDataWithSign = function getDataWithSign(opt) {
-	    log("get Data WithSign, opt is");
-	    log(opt);
-
-	    opt.updata = opt.updata || opt.data || {};
-
-	    if (window.isPrivateMode) {
-	        log('您现在在用隐身模式访问接口，请切换到常规模式');
-	    }
-	    var flag = opt.flag || 0;
-	    var dataurl = opt.url + "?t=" + Date.now();
-	    if (!opt.url) {
-	        console.warn('缺少必要url参数');
-	        return;
-	    }
-	    var keyName = opt.keyName || md5LocalKey(opt.url, opt.updata);
-	    var success1 = opt.success;
-	    var data = "";
-	    var error1 = opt.error;
-	    var obj = opt.updata;
-
-	    obj = obj || {};
-	    for (var i = 0, d; d = ["rp", 'rl', 'logDp', 'dp'][i++];) {
-	        var tmp_value = window.Units && Units.getQuery(d);
-	        if (tmp_value) {
-	            obj[d] = tmp_value;
-	        }
-	    }
-
-	    var updatas = strSign(keyName, flag, obj);
-	    log('ajax－>', dataurl);
-
-	    $.ajax({
-	        type: "POST",
-	        url: dataurl, //数据地址
-	        data: updatas, //获得了所有信息 店铺地址 版本号 等 flag来确定是否传入版本号
-	        dataType: 'json',
-	        success: function success(result) {
-	            // data.data = false;
-	            if (!window.isPrivateMode) {
-	                //如果不是隐身模式，能在本地存储
-	                //如果版本号相同，取本地的数据，下拉的时候每次的版本号都不一样 不走这一步
-	                // if (sessionStorage.getItem('dataVersion') && JSON.parse(sessionStorage.getItem('dataVersion'))[keyName] && (result.data_version === JSON.parse(sessionStorage.getItem('dataVersion'))[keyName])) {
-	                //     if (flag) {//如果万一 下拉数据的版本号一样 不取本地的数据 下拉false 不是下拉 true
-	                //         data = JSON.parse(localStorage.getItem(keyName))
-	                //     }else{
-	                //         data = result
-	                //     }
-	                // } else {//如果版本号不一样
-	                data = result; //取最新的数据
-	                if (flag) {
-	                    //不是下拉的时候 在本地存储
-	                    localStorage.setItem(keyName, JSON.stringify(result));
-	                }
-	                // localStorage.setItem(keyName, JSON.stringify(result))
-	                // }
-	            } else {
-	                data = result;
-	            }
-	            // dataVersion(keyName, result);//在缓存中放入最新的该链接取得数据的版本号
-	            success1(data);
-	            log("getDataWithSign " + dataurl + " success :");
-	            log(data);
-	        },
-	        error: function error(e) {
-	            error1(e);
-	            log("getDataWithSign " + dataurl + " err :");
-	            log(e);
-	        }
-	    });
-	};
-
-	var postStatisticsData = function postStatisticsData(opt, productionData, callback) {
-	    var baseStatisticsData = {
-	        "ip": "", //ip
-	        "nxtime": "", //ng时间
-	        "timestamp": Date.now(), //日志时间
-	        "production": '1', //业务线 数据字典稍后定
-	        "log_source": '1', //日志来源 数据字典稍后定
-	        "user_agent": navigator.userAgent, //浏览器UA
-	        "market": "", //来源市场
-	        "uid": getUid(), //用户id
-	        "session": getSession(), //session id
-	        "status": getVisitorStatus(), //卖家状态 (0：游客 1:买家 3:卖家)
-	        "device": "", //设备类型
-	        "device_id": "", //设备号
-	        "sys_version": "", //设备版本号
-	        "resolution": window.screen.width + '*' + window.screen.height, //分辨率
-	        "location": "", //当前位置
-	        "app_version": "", //APP版本号
-	        "action": '1', //操作action 数据字典稍后定，click，view，
-	        "action_type": "1", //操作类型（元素）
-	        "object_id": "", //操作对象id（url）
-	        "production_data": {}
-	    };
-	    for (var i in opt) {
-	        baseStatisticsData[i] = opt[i];
-	    }
-	    baseStatisticsData['production_data'] = productionData;
-	    $.ajax({
-	        url: '/appapi',
-	        type: "post",
-	        data: JSON.stringify(baseStatisticsData),
-	        success: function success(result) {
-	            if (result == "success_1") {
-	                callback && callback();
-	            }
-	        }, error: function error() {}
-	    });
-	};
-
-	var getDvdsid = function getDvdsid() {
-	    var result = "",
-	        list = document.cookie.split(";").filter(function (x) {
-	        return x.indexOf("dvdsid") > -1;
-	    });
-	    if (list.length) {
-	        result = list[0].split("=")[1];
-	    }
-	    return result;
-	};
-
-	var getSession = function getSession() {
-	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
-	    return dvdsid ? dvdsid.substr(0, 32) : dvdsid;
-	};
-
-	var getUid = function getUid() {
-	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
-	    return dvdsid ? Number('0x' + dvdsid.substr(32, 7)) + "" : dvdsid;
-	};
-
-	var getVisitorStatus = function getVisitorStatus() {
-	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
-	    return ["0", "1", "3"][dvdsid ? dvdsid.substr(39, 1) : 1];
-	};
-
-	var baseJumpUrl = function baseJumpUrl() {
-	    return {
-	        courseHomePage: "/course.html",
-	        courseIntroducePage: function courseIntroducePage(id) {
-	            return "/course-" + id + ".html";
-	        },
-	        coursePage: function coursePage(id) {
-	            return "/course_room-" + id + ".html";
-	        }
-	    };
-	};
-	var md5LocalKey = function md5LocalKey(url) {
-	    var obj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-	    var str = ''; //获取请求接口和业务参数的字符串
-	    //排除翻页游标导致的key值不一样
-	    var strObj = JSON.stringify(obj);
-	    var objStr = JSON.parse(strObj);
-
-	    if (objStr["pageIndex"]) {
-	        objStr["pageIndex"] = 0;
-	    }
-	    for (var i in objStr) {
-	        str += i + '=' + objStr[i] + '&';
-	    }
-	    str = str + url;
-	    str = md5(str);
-	    log(str);
-	    return str;
-	};
-
-	var log = function log() {
-	    var href = location.href,
-	        dev = href.indexOf("bravetime.net") > -1,
-	        prod = href.indexOf("davdian.com") > -1;
-
-	    for (var _len = arguments.length, obj = Array(_len), _key = 0; _key < _len; _key++) {
-	        obj[_key] = arguments[_key];
-	    }
-
-	    if (dev) {
-	        console.log(obj);
-	    } else if (prod) {
-	        if (window.logInfo) {
-	            window.logInfo.push(obj);
-	        } else {
-	            window.logInfo = [obj];
-	        }
-	    }
-	};
-
-	var initShare = function initShare() {
-	    var share_source = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-
-	    window.tlShareCallback = function () {
-	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "1" });
-	    };
-	    window.sendShareCallback = function () {
-	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "2" });
-	    };
-	    window.QQShareCallback = function () {
-	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "3" });
-	    };
-	    window.qZoneShareCallbackCancel = function () {
-	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "4" });
-	    };
-	};
-
-	var common = {
-	    getDataWithSign: getDataWithSign,
-	    sortObj: sortObj,
-	    strSign: strSign,
-	    dataVersion: dataVersion,
-	    baseJumpUrl: baseJumpUrl,
-	    postStatisticsData: postStatisticsData,
-	    md5: md5,
-	    md5LocalKey: md5LocalKey,
-	    getUid: getUid,
-	    getDvdsid: getDvdsid,
-	    log: log,
-	    initShare: initShare
-	};
-	exports.default = common;
-
-/***/ },
-
-/***/ 301:
+/***/ 240:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5276,7 +4937,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var common = __webpack_require__(295); // var crypto = require('crypto');
+	var common = __webpack_require__(241); // var crypto = require('crypto');
 
 
 	var config = {
@@ -5820,18 +5481,357 @@
 
 /***/ },
 
-/***/ 813:
+/***/ 241:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _md = __webpack_require__(43);
+
+	var _md2 = _interopRequireDefault(_md);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var strSign = function strSign(str, flag) {
+	    var obj = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+	    var strObj = sortObj(str, flag, obj); //字符串 传入当前的信息名称
+	    var str = ''; //重新获取编译后的字符串
+	    for (var i in strObj) {
+	        //变成键值对的形式
+	        str += i + '=' + strObj[i] + '&';
+	    }
+	    return strObj;
+	}; // var crypto = require('crypto')
+
+
+	var sortObj = function sortObj(dataVersion, flag) {
+	    var obj = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+	    //传入当前的信息名称 如feed
+	    var string = '';
+	    var strObj = {};
+	    var t = null;
+	    var tValue = null;
+	    var arrKey = ['shop_url', 'sess_key', 'device_token', 'format', 'ts', 'osv', 'wh', 'data_version']; //需要上传的参数
+
+	    /**
+	     * 获取当前的版本号信息,如果没有取0
+	     */
+	    var osv = "web_h5_*_*";
+	    if (window.Units && Units.isApp() && Units.isIOS()) {
+	        osv = "web_ios_*_*";
+	    }
+	    if (window.Units && Units.isApp() && Units.isAndroid()) {
+	        osv = "web_android_*_*";
+	    }
+	    var arrValue = [];
+	    if (flag && !window.isPrivateMode) {
+	        arrValue = [location.host, document.cookie.split(';').filter(function (x) {
+	            return x.indexOf("dvdsid") > -1;
+	        })[0] ? document.cookie.split(';').filter(function (x) {
+	            return x.indexOf("dvdsid") > -1;
+	        })[0].split("=")[1] : 0, "", 'json', new Date().getTime(), osv, '750_1334', 0];
+	    } else {
+	        // log('this is isPrivateMode or flag is false')
+	        arrValue = [location.host, document.cookie.split(';').filter(function (x) {
+	            return x.indexOf("dvdsid") > -1;
+	        })[0] ? document.cookie.split(';').filter(function (x) {
+	            return x.indexOf("dvdsid") > -1;
+	        })[0].split("=")[1] : 0, "", 'json', new Date().getTime(), osv, '750_1334', 0];
+	    }
+
+	    for (var item in obj) {
+	        arrKey.push(item.toString());
+	        arrValue.push(obj[item]);
+	    }
+
+	    for (var i = 0; i < arrKey.length; i++) {
+	        for (var j = 0; j < arrKey.length - i - 1; j++) {
+	            if (arrKey[j] > arrKey[j + 1]) {
+	                t = arrKey[j + 1];
+	                arrKey[j + 1] = arrKey[j];
+	                arrKey[j] = t;
+
+	                tValue = arrValue[j + 1];
+	                arrValue[j + 1] = arrValue[j];
+	                arrValue[j] = tValue;
+	            }
+	        }
+	    }
+	    for (var _i = 0; _i < arrKey.length; _i++) {
+	        strObj[arrKey[_i]] = arrValue[_i];
+	    }
+	    for (var p in strObj) {
+	        string += p + '=' + strObj[p];
+	    }
+	    var sign = md5(string).toUpperCase();
+	    strObj.sign = sign;
+	    return strObj;
+	};
+
+	// let md5 = (str="") => crypto.createHash('md5').update(str, 'utf8').digest('hex')
+	var md5 = function md5() {
+	    var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
+	    return (0, _md2.default)(str).toString().toUpperCase();
+	};
+
+	var dataVersion = function dataVersion(str) {
+	    var obj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	    // 信息名称 以及该信息下的所有需要上传的信息
+	    if (obj.data_version && !window.isPrivateMode) {
+	        //如果数据版本号不为0
+	        if (sessionStorage.getItem('dataVersion')) {
+	            //如果缓存中有版本号
+	            var o = JSON.parse(sessionStorage.getItem('dataVersion'));
+	            o[str] = obj.data_version;
+	            sessionStorage.setItem('dataVersion', JSON.stringify(o)); //改变当前的所需要信息的版本号 其余的版本号不变
+	        } else {
+	            var o = {};
+	            o[str] = obj.data_version;
+	            sessionStorage.setItem('dataVersion', JSON.stringify(o));
+	        }
+	    }
+	};
+
+	var getDataWithSign = function getDataWithSign(opt) {
+	    log("get Data WithSign, opt is");
+	    log(opt);
+
+	    opt.updata = opt.updata || opt.data || {};
+
+	    if (window.isPrivateMode) {
+	        log('您现在在用隐身模式访问接口，请切换到常规模式');
+	    }
+	    var flag = opt.flag || 0;
+	    var dataurl = opt.url + "?t=" + Date.now();
+	    if (!opt.url) {
+	        console.warn('缺少必要url参数');
+	        return;
+	    }
+	    var keyName = opt.keyName || md5LocalKey(opt.url, opt.updata);
+	    var success1 = opt.success;
+	    var data = "";
+	    var error1 = opt.error;
+	    var obj = opt.updata;
+
+	    obj = obj || {};
+	    for (var i = 0, d; d = ["rp", 'rl', 'logDp', 'dp'][i++];) {
+	        var tmp_value = window.Units && Units.getQuery(d);
+	        if (tmp_value) {
+	            obj[d] = tmp_value;
+	        }
+	    }
+
+	    var updatas = strSign(keyName, flag, obj);
+	    log('ajax－>', dataurl);
+
+	    $.ajax({
+	        type: "POST",
+	        url: dataurl, //数据地址
+	        data: updatas, //获得了所有信息 店铺地址 版本号 等 flag来确定是否传入版本号
+	        dataType: 'json',
+	        success: function success(result) {
+	            // data.data = false;
+	            if (!window.isPrivateMode) {
+	                //如果不是隐身模式，能在本地存储
+	                //如果版本号相同，取本地的数据，下拉的时候每次的版本号都不一样 不走这一步
+	                // if (sessionStorage.getItem('dataVersion') && JSON.parse(sessionStorage.getItem('dataVersion'))[keyName] && (result.data_version === JSON.parse(sessionStorage.getItem('dataVersion'))[keyName])) {
+	                //     if (flag) {//如果万一 下拉数据的版本号一样 不取本地的数据 下拉false 不是下拉 true
+	                //         data = JSON.parse(localStorage.getItem(keyName))
+	                //     }else{
+	                //         data = result
+	                //     }
+	                // } else {//如果版本号不一样
+	                data = result; //取最新的数据
+	                if (flag) {
+	                    //不是下拉的时候 在本地存储
+	                    localStorage.setItem(keyName, JSON.stringify(result));
+	                }
+	                // localStorage.setItem(keyName, JSON.stringify(result))
+	                // }
+	            } else {
+	                data = result;
+	            }
+	            // dataVersion(keyName, result);//在缓存中放入最新的该链接取得数据的版本号
+	            success1(data);
+	            log("getDataWithSign " + dataurl + " success :");
+	            log(data);
+	        },
+	        error: function error(e) {
+	            error1(e);
+	            log("getDataWithSign " + dataurl + " err :");
+	            log(e);
+	        }
+	    });
+	};
+
+	var postStatisticsData = function postStatisticsData(opt, productionData, callback) {
+	    var baseStatisticsData = {
+	        "ip": "", //ip
+	        "nxtime": "", //ng时间
+	        "timestamp": Date.now(), //日志时间
+	        "production": '1', //业务线 数据字典稍后定
+	        "log_source": '1', //日志来源 数据字典稍后定
+	        "user_agent": navigator.userAgent, //浏览器UA
+	        "market": "", //来源市场
+	        "uid": getUid(), //用户id
+	        "session": getSession(), //session id
+	        "status": getVisitorStatus(), //卖家状态 (0：游客 1:买家 3:卖家)
+	        "device": "", //设备类型
+	        "device_id": "", //设备号
+	        "sys_version": "", //设备版本号
+	        "resolution": window.screen.width + '*' + window.screen.height, //分辨率
+	        "location": "", //当前位置
+	        "app_version": "", //APP版本号
+	        "action": '1', //操作action 数据字典稍后定，click，view，
+	        "action_type": "1", //操作类型（元素）
+	        "object_id": "", //操作对象id（url）
+	        "production_data": {}
+	    };
+	    for (var i in opt) {
+	        baseStatisticsData[i] = opt[i];
+	    }
+	    baseStatisticsData['production_data'] = productionData;
+	    $.ajax({
+	        url: '/appapi',
+	        type: "post",
+	        data: JSON.stringify(baseStatisticsData),
+	        success: function success(result) {
+	            if (result == "success_1") {
+	                callback && callback();
+	            }
+	        }, error: function error() {}
+	    });
+	};
+
+	var getDvdsid = function getDvdsid() {
+	    var result = "",
+	        list = document.cookie.split(";").filter(function (x) {
+	        return x.indexOf("dvdsid") > -1;
+	    });
+	    if (list.length) {
+	        result = list[0].split("=")[1];
+	    }
+	    return result;
+	};
+
+	var getSession = function getSession() {
+	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
+	    return dvdsid ? dvdsid.substr(0, 32) : dvdsid;
+	};
+
+	var getUid = function getUid() {
+	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
+	    return dvdsid ? Number('0x' + dvdsid.substr(32, 7)) + "" : dvdsid;
+	};
+
+	var getVisitorStatus = function getVisitorStatus() {
+	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
+	    return ["0", "1", "3"][dvdsid ? dvdsid.substr(39, 1) : 1];
+	};
+
+	var baseJumpUrl = function baseJumpUrl() {
+	    return {
+	        courseHomePage: "/course.html",
+	        courseIntroducePage: function courseIntroducePage(id) {
+	            return "/course-" + id + ".html";
+	        },
+	        coursePage: function coursePage(id) {
+	            return "/course_room-" + id + ".html";
+	        }
+	    };
+	};
+	var md5LocalKey = function md5LocalKey(url) {
+	    var obj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+	    var str = ''; //获取请求接口和业务参数的字符串
+	    //排除翻页游标导致的key值不一样
+	    var strObj = JSON.stringify(obj);
+	    var objStr = JSON.parse(strObj);
+
+	    if (objStr["pageIndex"]) {
+	        objStr["pageIndex"] = 0;
+	    }
+	    for (var i in objStr) {
+	        str += i + '=' + objStr[i] + '&';
+	    }
+	    str = str + url;
+	    str = md5(str);
+	    log(str);
+	    return str;
+	};
+
+	var log = function log() {
+	    var href = location.href,
+	        dev = href.indexOf("bravetime.net") > -1,
+	        prod = href.indexOf("davdian.com") > -1;
+
+	    for (var _len = arguments.length, obj = Array(_len), _key = 0; _key < _len; _key++) {
+	        obj[_key] = arguments[_key];
+	    }
+
+	    if (dev) {
+	        console.log(obj);
+	    } else if (prod) {
+	        if (window.logInfo) {
+	            window.logInfo.push(obj);
+	        } else {
+	            window.logInfo = [obj];
+	        }
+	    }
+	};
+
+	var initShare = function initShare() {
+	    var share_source = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
+	    window.tlShareCallback = function () {
+	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "1" });
+	    };
+	    window.sendShareCallback = function () {
+	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "2" });
+	    };
+	    window.QQShareCallback = function () {
+	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "3" });
+	    };
+	    window.qZoneShareCallbackCancel = function () {
+	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "4" });
+	    };
+	};
+
+	var common = {
+	    getDataWithSign: getDataWithSign,
+	    sortObj: sortObj,
+	    strSign: strSign,
+	    dataVersion: dataVersion,
+	    baseJumpUrl: baseJumpUrl,
+	    postStatisticsData: postStatisticsData,
+	    md5: md5,
+	    md5LocalKey: md5LocalKey,
+	    getUid: getUid,
+	    getDvdsid: getDvdsid,
+	    log: log,
+	    initShare: initShare
+	};
+	exports.default = common;
+
+/***/ },
+
+/***/ 1089:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(814)
-	__vue_script__ = __webpack_require__(816)
+	__webpack_require__(1090)
+	__vue_script__ = __webpack_require__(1092)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_list/vue/app.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(834)
+	__vue_template__ = __webpack_require__(1110)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5857,13 +5857,13 @@
 
 /***/ },
 
-/***/ 814:
+/***/ 1090:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(815);
+	var content = __webpack_require__(1091);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -5884,7 +5884,7 @@
 
 /***/ },
 
-/***/ 815:
+/***/ 1091:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -5899,7 +5899,7 @@
 
 /***/ },
 
-/***/ 816:
+/***/ 1092:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5908,7 +5908,7 @@
 	  value: true
 	});
 
-	var _layout = __webpack_require__(301);
+	var _layout = __webpack_require__(240);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -5932,7 +5932,7 @@
 
 	var _util2 = _interopRequireDefault(_util);
 
-	var _units = __webpack_require__(817);
+	var _units = __webpack_require__(1093);
 
 	var _units2 = _interopRequireDefault(_units);
 
@@ -5942,9 +5942,9 @@
 	  components: {
 	    'com-to-top-icon': __webpack_require__(82),
 	    'com-top-title': __webpack_require__(77),
-	    'com-pic-display-box': __webpack_require__(818),
-	    'goods-list': __webpack_require__(823),
-	    'mine-list': __webpack_require__(829)
+	    'com-pic-display-box': __webpack_require__(1094),
+	    'goods-list': __webpack_require__(1099),
+	    'mine-list': __webpack_require__(1105)
 	  },
 	  props: {},
 	  data: function data() {
@@ -6088,7 +6088,7 @@
 
 /***/ },
 
-/***/ 817:
+/***/ 1093:
 /***/ function(module, exports) {
 
 	(function(){
@@ -6244,18 +6244,18 @@
 
 /***/ },
 
-/***/ 818:
+/***/ 1094:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(819)
-	__vue_script__ = __webpack_require__(821)
+	__webpack_require__(1095)
+	__vue_script__ = __webpack_require__(1097)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-pic-display-box.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(822)
+	__vue_template__ = __webpack_require__(1098)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6281,13 +6281,13 @@
 
 /***/ },
 
-/***/ 819:
+/***/ 1095:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(820);
+	var content = __webpack_require__(1096);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -6308,7 +6308,7 @@
 
 /***/ },
 
-/***/ 820:
+/***/ 1096:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -6323,7 +6323,7 @@
 
 /***/ },
 
-/***/ 821:
+/***/ 1097:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -6457,25 +6457,25 @@
 
 /***/ },
 
-/***/ 822:
+/***/ 1098:
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--顶部标题-->\n<div class=\"pic-display-box\" :class=\"{show: isShow, hide: !isShow}\">\n  <div class=\"cell\">\n    <div class=\"mask\" @click=\"close\"></div>\n    <div class=\"content\">\n      <img :src=\"src\">\n      <div class=\"close-btn\" @click=\"close\">\n        <div class=\"line\"></div>\n        <div class=\"line\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 823:
+/***/ 1099:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(824)
-	__vue_script__ = __webpack_require__(826)
+	__webpack_require__(1100)
+	__vue_script__ = __webpack_require__(1102)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_list/vue/group-goods-list.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(828)
+	__vue_template__ = __webpack_require__(1104)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6501,13 +6501,13 @@
 
 /***/ },
 
-/***/ 824:
+/***/ 1100:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(825);
+	var content = __webpack_require__(1101);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -6528,7 +6528,7 @@
 
 /***/ },
 
-/***/ 825:
+/***/ 1101:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -6543,7 +6543,7 @@
 
 /***/ },
 
-/***/ 826:
+/***/ 1102:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6552,7 +6552,7 @@
 	  value: true
 	});
 
-	var _list = __webpack_require__(827);
+	var _list = __webpack_require__(1103);
 
 	var _list2 = _interopRequireDefault(_list);
 
@@ -6883,7 +6883,7 @@
 
 /***/ },
 
-/***/ 827:
+/***/ 1103:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -7129,25 +7129,25 @@
 
 /***/ },
 
-/***/ 828:
+/***/ 1104:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"wrapper\" v-if=\"response\">\n  <template v-if=\"list.length > 0\">\n    <ul class=\"group-goods-list\">\n      <li v-for=\"data in list\">\n        <a @click=\"listItemClick(data.command.content, $event)\">\n          <div class=\"pic\">\n            <img v-lazy=\"data.imgUrl\">\n            <div class=\"sold-out\" v-if=\"parseInt(data.goodsStock) <= 0\">\n              <p class=\"top\">售罄</p>\n              <div class=\"split-line\"></div>\n              <p class=\"bottom\">SOLD OUT</p>\n            </div>\n            <div class=\"box-info\">\n              <div class=\"num\">{{data.pepoleNumber}}人团</div>\n              <div class=\"privilege\">省{{data.discount}}元</div>\n            </div>\n          </div>\n          <div class=\"desc\">{{data.goodsName}}</div>\n          <div class=\"info\">\n          <span class=\"left-info\">\n            <div class=\"top\">\n              <span class=\"group-price\">¥<span class=\"num\">{{data.goodsPrice}}</span></span>\n              <span class=\"income\" v-if=\"response.visitor_status == '3' && data.sellerIncome\">\n                  团长返: ¥ {{data.sellerIncome}}\n                <span class=\"times\" v-if=\"data.radioIncome && data.radioIncome != '0'\">*{{data.radioIncome}}倍</span>\n              </span>\n              <span class=\"post\" v-for=\"item in data.actLabels\">{{item}}</span>\n            </div>\n            <div class=\"bottom\">\n              <span class=\"price\">单价买: ￥{{data.realShopPrice}}</span>\n            </div>\n          </span>\n            <span class=\"go-group\">\n            <span>去组团</span>\n            <i class=\"arrow\"></i>\n          </span>\n          </div>\n        </a>\n      </li>\n    </ul>\n\n    <!--列表加载结束-->\n    <div class=\"no-more\" v-if=\"response && response.data.reverseGroup.more == '0'\">没有更多啦!</div>\n  </template>\n\n  <template v-if=\"list.length == 0\">\n    <!--没有任何组团-->\n    <div class=\"no-goods\">\n      <a class=\"a\" href=\"/\">暂无组团,去首页看看</a>\n    </div>\n  </template>\n</div>\n";
 
 /***/ },
 
-/***/ 829:
+/***/ 1105:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(830)
-	__vue_script__ = __webpack_require__(832)
+	__webpack_require__(1106)
+	__vue_script__ = __webpack_require__(1108)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_list/vue/group-detail-list.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(833)
+	__vue_template__ = __webpack_require__(1109)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7173,13 +7173,13 @@
 
 /***/ },
 
-/***/ 830:
+/***/ 1106:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(831);
+	var content = __webpack_require__(1107);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -7200,7 +7200,7 @@
 
 /***/ },
 
-/***/ 831:
+/***/ 1107:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -7215,7 +7215,7 @@
 
 /***/ },
 
-/***/ 832:
+/***/ 1108:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7224,7 +7224,7 @@
 	  value: true
 	});
 
-	var _list = __webpack_require__(827);
+	var _list = __webpack_require__(1103);
 
 	var _list2 = _interopRequireDefault(_list);
 
@@ -7587,14 +7587,14 @@
 
 /***/ },
 
-/***/ 833:
+/***/ 1109:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<!--我的团购列表-->\n<div class=\"wrapper\" v-if=\"response\">\n  <template v-if=\"list.length > 0\">\n    <!--列表-->\n    <ul class=\"group-detail-list\">\n      <li v-for=\"data in list\">\n        <a @click=\"listItemClick(data.command.content, $event)\">\n          <div class=\"pic\">\n            <img v-lazy=\"data.imgUrl\">\n            <div class=\"sold-out\" v-if=\"parseInt(data.goodsStock) <= 0\">\n              <p class=\"top\">售罄</p>\n              <div class=\"split-line\"></div>\n              <p class=\"bottom\">SOLD OUT</p>\n            </div>\n            <div class=\"box-info\">\n              <div class=\"num\">{{data.pepoleNumber}}人团</div>\n              <div class=\"privilege\">省{{data.discount}}元</div>\n            </div>\n          </div>\n          <div class=\"desc\">{{data.goodsName}}</div>\n          <div class=\"info\">\n          <span class=\"left-info\">\n            <div v-if=\"data.groupStatus == '0'\">还差 {{data.leaveNumber}} 人成团</div>\n            <div v-if=\"data.groupStatus == '1'\">组团成功</div>\n            <div v-if=\"data.groupStatus == '2'\">组团失败</div>\n            <div>{{formatRemainTime(data.remainSecond)}}</div>\n          </span>\n          <span class=\"right-info\">\n            <div v-if=\"response.visitor_status == '3' && data.sellerIncome\">\n              预计成团返现:<span class=\"light\"> {{data.sellerIncome}} 元</span>\n              <span v-if=\"data.radioIncome && data.radioIncome != '0'\">*{{data.radioIncome}}倍</span>\n            </div>\n            <div>团长: {{data.consignee}}</div>\n          </span>\n          </div>\n        </a>\n      </li>\n    </ul>\n\n    <!--列表加载结束-->\n    <div class=\"no-more\" v-if=\"response && response.data.reverseGroup.more == '0'\">没有更多啦!</div>\n  </template>\n\n  <template v-if=\"list.length == 0\">\n    <!--没有任何组团-->\n    <div class=\"no-group\">\n      您还未发起组团\n      <div class=\"btn\" @click=\"$emit('go-goods-tab')\">马上发起组团</div>\n    </div>\n  </template>\n</div>\n";
 
 /***/ },
 
-/***/ 834:
+/***/ 1110:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"app\" v-if=\"response\">\n  <!--头部标题-->\n  <com-top-title title=\"大V店组团\" border-bottom home></com-top-title>\n  <!--广告-->\n  <div class=\"group_ad\">\n    <template v-for=\"ad in response.data.banner\">\n      <a v-if=\"ad.isClick == '0'\" :href=\"ad.command.content\">\n        <img class=\"adPic\" v-lazy=\"ad.imageUrl\" v-if=\"ad.imageUrl\" @click=\"adClick(ad)\">\n      </a>\n      <img class=\"adPic\" v-lazy=\"ad.imageUrl\" v-if=\"ad.isClick == '1'\" @click=\"showPopPic(ad.smallImageUrl)\">\n    </template>\n    <com-pic-display-box ref=\"com-pic-display-box\"></com-pic-display-box>\n  </div>\n  <!--tab按钮-->\n  <div class=\"tab-btn\">\n    <span class=\"btn group\" :class=\"{active: currentList == 1}\" @click=\"tabBtnClick(1)\">\n      <span class=\"word\">团购精选</span>\n    </span>\n    <i class=\"btn-split\"></i>\n    <span class=\"btn mine\" :class=\"{active: currentList == 2}\" @click=\"tabBtnClick(2)\">\n      <span class=\"word\">\n      <template v-if=\"response.visitor_status == '3'\">我的店铺组团</template>\n      <template v-if=\"response.visitor_status != '3'\">我的组团</template>\n      </span>\n    </span>\n  </div>\n\n  <!--列表-->\n  <keep-alive>\n    <!--组团商品-->\n    <goods-list v-if=\"currentList == 1\" ref=\"goods-list\" :prop-response=\"response\"></goods-list>\n    <!--我的(店铺)组团-->\n    <mine-list v-if=\"currentList == 2\" ref=\"mine-list\"\n               :is-seller=\"response.visitor_status == '3' ? true : false\"\n               @go-goods-tab=\"tabBtnClick(1)\"></mine-list>\n  </keep-alive>\n\n  <!--至顶按钮-->\n  <com-to-top-icon></com-to-top-icon>\n\n  <!--浮动活动-->\n  <div class=\"float-act\" v-if=\"window.float_act_img_url\">\n    <a :href=\"window.float_act_jump_url\">\n      <img :src=\"window.float_act_img_url\">\n    </a>\n  </div>\n</div>\n";

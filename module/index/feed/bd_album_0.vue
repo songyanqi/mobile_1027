@@ -1,17 +1,20 @@
 <template>
   <div class="box">
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
-    <div class="item"></div>
+    <a :href="item.command.content" v-for="item in dataList"><div class="item"><img :src="item.imageUrl" alt=""></div></a>
   </div>
 </template>
 <script>
-  export default {}
+  export default {
+      props:["data"],
+      created:function () {
+        this.dataList=this.data.body.dataList;
+      },
+      data(){
+          return {
+              dataList:[]
+          }
+      }
+  }
 </script>
 <style>
   .box{
@@ -21,7 +24,7 @@
     padding-left: 0.3rem;
     padding-top:0.02rem;
   }
-  .box>div{
+  .box>a>div{
     display: inline-block;
     vertical-align: top;
     margin-top:0.12rem;
@@ -31,5 +34,9 @@
     width: 0.72rem;
     height: 0.35rem;
     box-sizing: border-box;
+  }
+  .item img{
+    width: 0.72rem;
+    height: 0.35rem;
   }
 </style>

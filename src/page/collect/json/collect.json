@@ -1,3 +1,138 @@
 {
+  "code":"0",
+  "shop_url":"https://15201663952.davdian.com",
+  "visitor_status":"3",
+  "sess_key":"48a275a991a0a6295706e6d9f8c3a784b62a4bbc",
+  "data_version":"xxxxxx",
+  "data": {
+    "webUrl":"https://15201663952.davdian.com",
+    "feedList":[
+      {
+        "body":{
+          "tplId":"bd_album_01",
+          "bgColor":"0x333333",
+          "isFree":"1",
+          "dataList":[
+            {
+              "album":"专辑名",
+              "income":"￥10",
+              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "fileLink":"http://haba.davdian.com/aaaa/01.mp3",
+              "price":"￥99",
+              "memberMsg":"会员免费试听",
+              "comment":"推荐语推荐语推荐语推荐语推荐语推荐语推荐语推荐语推荐语推荐语推荐语推荐语推荐语",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            }
+          ]
+        }
+      },
 
+      {
+        "body":{
+          "tplId":"bd_album_02",
+          "bgColor":"0x333333",
+          "purchase":"1999",
+          "isFree":"1",
+          "dataList":[
+            {
+              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "body":{
+          "tplId":"bd_album_03",
+          "bgColor":"0x333333",
+          "isFree":"1",
+          "dataList":[
+            {
+              "content":"内容",
+              "recommend":"简介",
+              "ex":"300",
+              "up":"100",
+              "command": {
+                "content" : "点击时的动作"
+              },
+
+              "contentList":[{
+                "albumId": "0",
+                "musicId": "0",
+                "music": "音频名称",
+                "number": "播放量",
+                "isFree": "0",
+                "isPlay":"0",
+                "imageUrl": "http://haba.davdian.com/aaaa/01.jpg",
+                "fileLink": "http://haba.davdian.com/aaaa/01.mp3",
+                "time":"240",
+                "command": {
+                  "content": "点击时的动作"
+                }
+              },
+                {
+                  "albumId": "0",
+                  "musicId": "0",
+                  "music": "音频名称",
+                  "number": "播放量",
+                  "isFree": "0",
+                  "isPlay":"0",
+                  "imageUrl": "http://haba.davdian.com/aaaa/01.jpg",
+                  "fileLink": "http://haba.davdian.com/aaaa/01.mp3",
+                  "time":"240",
+                  "command": {
+                    "content": "点击时的动作"
+                  }
+                },
+                {
+                  "albumId": "0",
+                  "musicId": "0",
+                  "music": "音频名称",
+                  "number": "播放量",
+                  "isFree": "0",
+                  "isPlay":"0",
+                  "imageUrl": "http://haba.davdian.com/aaaa/01.jpg",
+                  "fileLink": "http://haba.davdian.com/aaaa/01.mp3",
+                  "time":"240",
+                  "command": {
+                    "content": "点击时的动作"
+                  }
+                },
+                {
+                  "albumId": "0",
+                  "musicId": "0",
+                  "music": "音频名称",
+                  "number": "播放量",
+                  "isFree": "0",
+                  "isPlay":"0",
+                  "imageUrl": "http://haba.davdian.com/aaaa/01.jpg",
+                  "fileLink": "http://haba.davdian.com/aaaa/01.mp3",
+                  "time":"240",
+                  "command": {
+                    "content": "点击时的动作"
+                  }
+                }],
+              "recommendData":""
+            }
+          ]
+        }
+      }
+    ]
+  }
 }

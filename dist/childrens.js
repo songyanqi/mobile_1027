@@ -50,7 +50,7 @@
 	 */
 	__webpack_require__(43);
 	__webpack_require__(42);
-	__webpack_require__(472);
+	__webpack_require__(482);
 
 
 
@@ -5858,13 +5858,13 @@
 
 /***/ },
 
-/***/ 472:
+/***/ 482:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by Murphy.lee on 17/5/13.
 	 */
-	var childrens = __webpack_require__(473);
+	var childrens = __webpack_require__(483);
 	new Vue({
 	  el: "#container",
 	  data:{
@@ -5881,18 +5881,18 @@
 
 /***/ },
 
-/***/ 473:
+/***/ 483:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(474)
-	__vue_script__ = __webpack_require__(476)
+	__webpack_require__(484)
+	__vue_script__ = __webpack_require__(486)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/childrens.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(477)
+	__vue_template__ = __webpack_require__(487)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5918,13 +5918,13 @@
 
 /***/ },
 
-/***/ 474:
+/***/ 484:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(475);
+	var content = __webpack_require__(485);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5945,7 +5945,7 @@
 
 /***/ },
 
-/***/ 475:
+/***/ 485:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5960,7 +5960,7 @@
 
 /***/ },
 
-/***/ 476:
+/***/ 486:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -6700,7 +6700,7 @@
 
 /***/ },
 
-/***/ 477:
+/***/ 487:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-33c1cb03=\"\">\n  <div class=\"mian_bg\" _v-33c1cb03=\"\">\n    <a class=\"check_rule\" href=\"/t-11674.html\" _v-33c1cb03=\"\"></a>\n    <img src=\"//pic.davdian.com/free/2017/05/17/main_pic.png\" alt=\"\" _v-33c1cb03=\"\">\n    <!--<img src=\"//pic.davdian.com/free/2017/05/17/main_pic.jpg\" alt=\"\">-->\n    <div class=\"start_play\" v-on:click=\"init_play(1)\" style=\"right:12.1%;\" _v-33c1cb03=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/18/dot_shank_tran.png\" alt=\"\" _v-33c1cb03=\"\">\n    </div>\n    <div class=\"start_play\" v-on:click=\"play_rule\" style=\"left:12.1%;\" _v-33c1cb03=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/18/dot_shank_tran.png\" alt=\"\" _v-33c1cb03=\"\">\n    </div>\n  </div>\n  <div @touchmove.prevent=\"prevent_move\" v-if=\"shows\" class=\"playchildren_wrap\" _v-33c1cb03=\"\">\n    <div class=\"playchildren\" _v-33c1cb03=\"\">\n      <img class=\"play\" v-if=\"accessrun&amp;&amp;canPlay\" v-on:click=\"begin\" src=\"//pic.davdian.com/free/2017/05/15/start.png\" alt=\"\" _v-33c1cb03=\"\">\n      <img class=\"play\" v-show=\"accessrun&amp;&amp;!canPlay\" @click=\"close\" src=\"//pic.davdian.com/free/2017/05/18/fivetimeover.png\" alt=\"\" _v-33c1cb03=\"\">\n      <div class=\"title_bottom\" _v-33c1cb03=\"\">\n        <img src=\"//pic.davdian.com/free/2017/05/15/caicaikan_title.png\" alt=\"\" _v-33c1cb03=\"\">\n        <div class=\"closes\" @click=\"close\" _v-33c1cb03=\"\"></div>\n      </div>\n      <transition-group v-if=\"shows\" :name=\"'flip-list'+flips\" tag=\"ul\" _v-33c1cb03=\"\">\n        <li class=\"card\" v-for=\"(item,index) in items\" v-bind:key=\"item\" _v-33c1cb03=\"\">\n          <!--//中奖的-->\n          <div v-if=\"item == rewardNum\" class=\"card_img\" :class=\"{shank_redss:!not_started}\" @click=\"reward\" alt=\"1\" _v-33c1cb03=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/18/tran_door.png\" alt=\"\" _v-33c1cb03=\"\">\n          </div>\n          <!--//未中奖的-->\n          <div v-else=\"\" class=\"card_img\" :class=\"{card_img2:!noreword[item-1]}\" @click=\"select_no(item-1)\" _v-33c1cb03=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/18/tran_door.png\" alt=\"\" _v-33c1cb03=\"\">\n          </div>\n        </li>\n      </transition-group>\n      <div class=\"title_bottom\" _v-33c1cb03=\"\">\n        <img class=\"title_bottom\" src=\"//pic.davdian.com/free/2017/05/15/trans.png\" alt=\"\" _v-33c1cb03=\"\">\n        <div class=\"tips\" _v-33c1cb03=\"\">{{tips}}</div>\n      </div>\n    </div>\n  </div>\n  <!--游戏规则-->\n  <div @touchmove.prevent=\"prevent_move\" v-if=\"show_rule\" class=\"playchildren_wrap\" _v-33c1cb03=\"\">\n    <div class=\"playchildren\" _v-33c1cb03=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/18/rule_new.png\" alt=\"\" _v-33c1cb03=\"\">\n      <div style=\"height: 15%;\" class=\"closes\" @click=\"close2\" _v-33c1cb03=\"\"></div>\n    </div>\n  </div>\n  <div @touchmove.prevent=\"prevent_move\" v-if=\"result\" class=\"result_wrap\" _v-33c1cb03=\"\">\n    <div v-if=\"flips < 5\" class=\"result_in\" _v-33c1cb03=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/15/regret1.png\" alt=\"\" _v-33c1cb03=\"\">\n      <img @click=\"init_play(2)\" class=\"tips_btn\" src=\"//pic.davdian.com/free/2017/05/15/regret_tips1.png\" alt=\"\" _v-33c1cb03=\"\">\n    </div>\n    <div v-else=\"\" class=\"result_in\" _v-33c1cb03=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/15/regret1.png\" alt=\"\" _v-33c1cb03=\"\">\n      <img @click=\"close\" class=\"tips_btn2\" src=\"//pic.davdian.com/free/2017/05/15/regret_tips2.png\" alt=\"\" _v-33c1cb03=\"\">\n    </div>\n  </div>\n  <div @touchmove.prevent=\"prevent_move\" v-show=\"result2\" class=\"result_wrap\" _v-33c1cb03=\"\">\n    <div class=\"result_in\" _v-33c1cb03=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/18/get_red3.png\" alt=\"\" _v-33c1cb03=\"\">\n      <div @click=\"get_red_con\" class=\"get_continue\" :class=\"{over:flips == 5}\" _v-33c1cb03=\"\"></div>\n      <div class=\"red_desc\" _v-33c1cb03=\"\">\n        <div _v-33c1cb03=\"\">\n          <div _v-33c1cb03=\"\"><em _v-33c1cb03=\"\">¥</em><span _v-33c1cb03=\"\">{{bonusMoney}}</span></div>\n        </div>\n        <div _v-33c1cb03=\"\">\n          {{bonusName}}满{{minConsumePrice}}元可用 <br _v-33c1cb03=\"\">\n          有效期限： <br _v-33c1cb03=\"\">\n          {{timeline}}\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
