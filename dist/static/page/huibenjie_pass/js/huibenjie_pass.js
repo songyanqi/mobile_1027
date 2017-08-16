@@ -88,7 +88,7 @@
 
 	new _Vue2.default({
 	  components: {
-	    app: __webpack_require__(832)
+	    app: __webpack_require__(847)
 	  },
 	  template: '<app />',
 	  el: ".app"
@@ -4572,7 +4572,7 @@
 
 /***/ },
 
-/***/ 280:
+/***/ 295:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4911,7 +4911,7 @@
 
 /***/ },
 
-/***/ 286:
+/***/ 301:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4934,7 +4934,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var common = __webpack_require__(280); // var crypto = require('crypto');
+	var common = __webpack_require__(295); // var crypto = require('crypto');
 
 
 	var config = {
@@ -5478,18 +5478,18 @@
 
 /***/ },
 
-/***/ 803:
+/***/ 818:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(804)
-	__vue_script__ = __webpack_require__(806)
+	__webpack_require__(819)
+	__vue_script__ = __webpack_require__(821)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-pic-display-box.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(807)
+	__vue_template__ = __webpack_require__(822)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5515,13 +5515,13 @@
 
 /***/ },
 
-/***/ 804:
+/***/ 819:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(805);
+	var content = __webpack_require__(820);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -5542,7 +5542,7 @@
 
 /***/ },
 
-/***/ 805:
+/***/ 820:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -5557,7 +5557,7 @@
 
 /***/ },
 
-/***/ 806:
+/***/ 821:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -5691,25 +5691,25 @@
 
 /***/ },
 
-/***/ 807:
+/***/ 822:
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--顶部标题-->\n<div class=\"pic-display-box\" :class=\"{show: isShow, hide: !isShow}\">\n  <div class=\"cell\">\n    <div class=\"mask\" @click=\"close\"></div>\n    <div class=\"content\">\n      <img :src=\"src\">\n      <div class=\"close-btn\" @click=\"close\">\n        <div class=\"line\"></div>\n        <div class=\"line\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 832:
+/***/ 847:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(833)
-	__vue_script__ = __webpack_require__(835)
+	__webpack_require__(848)
+	__vue_script__ = __webpack_require__(850)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/huibenjie_pass/vue/app.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(836)
+	__vue_template__ = __webpack_require__(851)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5735,13 +5735,13 @@
 
 /***/ },
 
-/***/ 833:
+/***/ 848:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(834);
+	var content = __webpack_require__(849);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -5762,7 +5762,7 @@
 
 /***/ },
 
-/***/ 834:
+/***/ 849:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -5777,7 +5777,7 @@
 
 /***/ },
 
-/***/ 835:
+/***/ 850:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5786,7 +5786,7 @@
 	  value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -5879,7 +5879,7 @@
 	exports.default = {
 	  components: {
 	    'com-top-title': __webpack_require__(77),
-	    'com-pic-display-box': __webpack_require__(803)
+	    'com-pic-display-box': __webpack_require__(818)
 	  },
 	  props: {},
 	  data: function data() {
@@ -6186,7 +6186,7 @@
 
 /***/ },
 
-/***/ 836:
+/***/ 851:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"app\">\n  <!--头部标题-->\n  <com-top-title title=\"绘本知识大比拼\" home v-show=\"isShowTitleBar\"></com-top-title>\n\n  <!--容器-->\n  <div class=\"page\">\n    <!--背景-->\n    <div class=\"bg\">\n      <img :src=\"'http://pic.davdian.com/free/huibenjie/huibenjie_pass/bg.jpg'\" @load=\"bgPicOnLoad\">\n    </div>\n\n    <!--内容-->\n    <div class=\"content\">\n      <!--关卡-->\n      <div class=\"pass\" v-for=\"(pass, i) in passList\"\n           :class=\"['pass' + (i + 1), (pass.status == '1' || pass.status == '3' || pass.status == '5' ? 'over' : '')]\"\n           @click=\"passClick(i + 1, pass.status)\">\n        <div class=\"circle\">\n          <div class=\"point\"></div>\n        </div>\n        <img v-show=\"!isOpenEye\" class=\"head\" :src=\"'http://pic.davdian.com/free/huibenjie/huibenjie_pass/head.png'\">\n        <img v-show=\"isOpenEye\" class=\"head\" :src=\"'http://pic.davdian.com/free/huibenjie/huibenjie_pass/head-1.png'\">\n        <!--<div class=\"title\">好饿的毛毛虫</div>-->\n      </div>\n\n      <!--云彩-->\n      <div ref=\"clouds\">\n        <img class=\"cloud\" v-for=\"(pass, i) in passList\" v-if=\"i !== 0\"\n             :class=\"['cloud'+(i+1)]\"\n             :src=\"'http://pic.davdian.com/free/huibenjie/huibenjie_pass/cloud-' + ((i+1) >= 10 ? (i+1) : ('0'+(i+1))) + '.png'\">\n      </div>\n\n      <!--游戏规则按钮-->\n      <img class=\"rule-btn\" :src=\"'http://pic.davdian.com/free/huibenjie/huibenjie_pass/rule-btn.png'\" @click=\"showPopRule(true)\">\n\n      <!--音乐开关-->\n      <img class=\"music-btn-open\" :src=\"'http://pic.davdian.com/free/huibenjie/huibenjie_pass/music-btn-open.png'\" v-if=\"musicOpen\" @click=\"closeMusic\">\n      <img class=\"music-btn-close\" :src=\"'http://pic.davdian.com/free/huibenjie/huibenjie_pass/music-btn-close.png'\" v-if=\"!musicOpen\" @click=\"openMusic\">\n      <audio ref=\"music\" :src=\"'http://pic.davdian.com/free/huibenjie/huibenjie_pass/music.mp3'\" loop></audio>\n\n      <!--游戏规则浮层-->\n      <div class=\"pop-rule\" :class=\"{show: isPopRuleShow}\" @click=\"showPopRule(false)\">\n        <div class=\"rule-pic\" @click=\"$event.stopPropagation()\">\n          <span>\n            <img :src=\"'http://pic.davdian.com/free/huibenjie/huibenjie_pass/pop-rule.png'\">\n            <div class=\"close-btn\" @click=\"showPopRule(false)\"></div>\n          </span>\n        </div>\n      </div>\n\n      <!--各种弹窗-->\n      <com-pic-display-box ref=\"pop-begin\" id=\"pop-begin\" :src=\"'http://pic.davdian.com/free/huibenjie/huibenjie_pass/pop-begin.png'\"></com-pic-display-box>\n      <com-pic-display-box ref=\"pop-miss-pass\" id=\"pop-miss-pass\" :src=\"'http://pic.davdian.com/free/huibenjie/huibenjie_pass/pop-miss-pass.png'\"></com-pic-display-box>\n      <com-pic-display-box ref=\"pop-miss-day\" id=\"pop-miss-day\" :src=\"'http://pic.davdian.com/free/huibenjie/huibenjie_pass/pop-miss-day.png'\"></com-pic-display-box>\n      <com-pic-display-box ref=\"pop-all-over\" id=\"pop-all-over\" :src=\"'http://pic.davdian.com/free/huibenjie/huibenjie_pass/pop-all-over.png'\"></com-pic-display-box>\n    </div>\n  </div>\n</div>\n";
