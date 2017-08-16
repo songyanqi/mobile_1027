@@ -2384,7 +2384,7 @@ $crossBord: #FF4A7D;
     }
     @media screen and(max-width: 320px) {
       .vux-popup-dialog {
-        min-height: 340px!important;
+        min-height: 320px!important;
       }
     }
   }
@@ -2843,8 +2843,10 @@ $crossBord: #FF4A7D;
       .titlePic {
         position: absolute;
         width: 100px;
+        border-radius: 5px;
         height: 100px;
         bottom: 12px;
+        background: #fff;
         img {
           width: 100%;
           border-radius: 5px;
@@ -3408,9 +3410,9 @@ $crossBord: #FF4A7D;
     transform: rotate(45deg);;
   }
 }
-#goodsDetail .goodsTypeModal .sku-control {
-  height: 330px;
-}
+// #goodsDetail .goodsTypeModal .sku-control {
+//   height: 309px;
+// }
 @media screen and(max-width: 320px) {
   #goodsDetail .goodsTypeModal .sku-control {
     height: 200px;
