@@ -211,6 +211,7 @@ export default {
           //分享卡id
           sellerId: "",
           goodsId: "",
+          goodsDataBasis: null,
         }
     },
     created () {
@@ -572,6 +573,7 @@ export default {
                               goodsStockSales = data.extra.parent,
                               dataBasis = data.basis;
 
+                          that.goodsDataBasis = data.basis;
                           //分享卡
                           that.sellerId = data.shop.sellerId.toString();
                           // that.goodsId = dataBasis.goodsId;
@@ -992,11 +994,12 @@ export default {
               if (dataExtra.goodsId == item.goodsId) {
                 if (item.image) {
                   that.infoObj.goodsShortPic = item.image;
+                } else {
+                  that.infoObj.goodsShortPic = that.goodsDataBasis.goodsImg;
                 }
               }
             })
           }
-          console.log("goodsShortPic",that.infoObj.goodsShortPic);
 
           //判断是否有活动
           if (dataExtra.activity.length || dataExtra.labels.length) {

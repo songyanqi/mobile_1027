@@ -85,6 +85,8 @@ function renderData(res) {
             goodsStockSales = data.extra.parent,
             dataBasis = data.basis;
 
+        that.goodsDataBasis = data.basis;
+
         that.sellerId = data.shop.sellerId.toString();
         // that.goodsId = dataBasis.goodsId;
         that.goodsId = data.representId == '0' ? dataBasis.goodsId : data.representId;
