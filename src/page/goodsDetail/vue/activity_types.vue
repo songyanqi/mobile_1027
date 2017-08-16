@@ -281,7 +281,7 @@
             <div class = "goodsTypeModal">
                 <i class="dav_icon_detail_close_btn"></i>
                 <div class="summary modalPicCont">
-                  <div class = "titlePic" :class = "{ titlePicSingle: !relativegoodslist.length && !goodstags.length }">
+                  <div class = "titlePic" :class = "{ titlePicSingle: !goodstags.length }">
                     <img :src="infoobj.goodsShortPic" alt="">
                   </div>
                   <div class = "titleInfo">
