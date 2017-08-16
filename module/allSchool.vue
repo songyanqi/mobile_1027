@@ -38,6 +38,7 @@
         mounted:function () {
             this.init()
         },
+
         methods:{
             init(){
               var that = this
@@ -83,7 +84,7 @@
             indexFeed:indexFeed,
             coursetitle:coursetitle,
             indexFoot:indexFoot,
-            study:study
+            bd_study_0:bd_study_0
         }
     }
 </script>
