@@ -3744,7 +3744,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-57b26686/com-share-pop-tip.vue"
+	  var id = "_v-7718a21b/com-share-pop-tip.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4343,7 +4343,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1a34eddb/com-popup-toast.vue"
+	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4544,7 +4544,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-993d82e0/com-popup-alert.vue"
+	  var id = "_v-48db5b65/com-popup-alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4769,7 +4769,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-27dcda18/com-popup-confirm.vue"
+	  var id = "_v-0b77ce89/com-popup-confirm.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5022,7 +5022,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6c902120/com-popup-loading.vue"
+	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5327,7 +5327,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3c5cd698/com-to-top-icon.vue"
+	  var id = "_v-5c521926/com-to-top-icon.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5603,7 +5603,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-f53c15bc/landing.vue"
+	  var id = "_v-52c32c2d/landing.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5628,8 +5628,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f53c15bc&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./landing.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f53c15bc&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./landing.vue");
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-52c32c2d&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./landing.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-52c32c2d&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./landing.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -5648,11 +5648,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*.box{*/\n  /*font-size: 0;*/\n  /*padding-bottom: 0.22rem;*/\n  /*padding-right: 0.21rem;*/\n  /*padding-left: 0.3rem;*/\n  /*padding-top:0.02rem;*/\n/*}*/\n/*.box>div{*/\n  /*display: inline-block;*/\n  /*vertical-align: top;*/\n  /*margin-top:0.12rem;*/\n  /*margin-right:0.09rem;*/\n  /*background: #D8D8D8;*/\n  /*border:1px solid #979797;*/\n  /*width: 0.72rem;*/\n  /*height: 0.35rem;*/\n  /*box-sizing: border-box;*/\n/*}*/\n\n\n\n\n/*.big_img{*/\n  /*text-align: center;*/\n  /*height: 0.2rem;*/\n  /*padding-top:0.13rem;*/\n  /*padding-bottom:0.15rem;*/\n/*}*/\n/*.list1 .big_img img{*/\n  /*width: 1.14rem;*/\n  /*height: 0.16rem;*/\n/*}*/\n/*.list1{*/\n  /*border-bottom: 1px solid #E1E1E1;*/\n  /*background: #ffffff;*/\n/*}*/\n/*.list1 .list:nth-child(2){*/\n  /*margin-bottom: 0.2rem;*/\n/*}*/\n\n\n/*.list{*/\n  /*font-size: 0;*/\n  /*height: 0.76rem;*/\n  /*padding:0 0.1rem;*/\n  /*margin-bottom:0.27rem;*/\n/*}*/\n\n/*.list>div{*/\n  /*display: inline-block;*/\n  /*vertical-align: top;*/\n/*}*/\n/*.left_img img{*/\n  /*width:0.76rem;*/\n  /*height: 0.76rem;*/\n  /*border-radius:4px;*/\n/*}*/\n/*.list_content{*/\n  /*margin-left: 0.1rem;*/\n  /*height: 0.76rem;*/\n/*}*/\n/*.list_title{*/\n  /*font-size:14px;*/\n  /*line-height:0.2rem;*/\n  /*color:#333333;*/\n  /*max-width:2.15rem;*/\n  /*overflow: hidden;*/\n  /*text-overflow: ellipsis;*/\n  /*-webkit-box-orient: vertical;*/\n  /*-webkit-line-clamp: 2;*/\n  /*display: -webkit-box;*/\n/*}*/\n/*.list_name,.list_time{*/\n  /*font-size:11px;*/\n  /*line-height:0.16rem;*/\n  /*color:#999999;*/\n/*}*/\n/*.list_name{*/\n  /*margin-bottom:0.07rem;*/\n/*}*/\n/*.right_img img{*/\n  /*width: 0.34rem;*/\n  /*height: 0.34rem;*/\n  /*border-radius:50%;*/\n  /*margin-left:0.2rem;*/\n  /*margin-top: 0.24rem;*/\n/*}*/\n\n\n/*.list2{*/\n  /*border-bottom: 1px solid #E1E1E1;*/\n  /*background: #ffffff;*/\n/*}*/\n/*.list2 .big_img img{*/\n  /*width: 1.75rem;*/\n  /*height: 0.16rem;*/\n/*}*/\n/*.list2 .list:nth-child(2){*/\n  /*margin-bottom: 0.2rem;*/\n/*}*/\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.box[_v-52c32c2d]{\n  font-size: 0;\n  padding-bottom: 0.22rem;\n  padding-right: 0.21rem;\n  padding-left: 0.3rem;\n  padding-top:0.02rem;\n}\n.box>div[_v-52c32c2d]{\n  display: inline-block;\n  vertical-align: top;\n  margin-top:0.12rem;\n  margin-right:0.09rem;\n  background: #D8D8D8;\n  border:1px solid #979797;\n  width: 0.72rem;\n  height: 0.35rem;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n\n\n\n.big_img[_v-52c32c2d]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n}\n.list1 .big_img img[_v-52c32c2d]{\n  width: 1.14rem;\n  height: 0.16rem;\n}\n.list1[_v-52c32c2d]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-52c32c2d]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-52c32c2d]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n}\n\n.list>div[_v-52c32c2d]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-52c32c2d]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-52c32c2d]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n}\n.list_title[_v-52c32c2d]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-52c32c2d],.list_time[_v-52c32c2d]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-52c32c2d]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-52c32c2d]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  margin-left:0.2rem;\n  margin-top: 0.24rem;\n}\n\n\n.list2[_v-52c32c2d]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list2 .big_img img[_v-52c32c2d]{\n  width: 1.75rem;\n  height: 0.16rem;\n}\n.list2 .list[_v-52c32c2d]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n", ""]);
->>>>>>> cee7daca002ab722d81cf1953d6cd3e904bb9ceb
 
 	// exports
 
@@ -5850,11 +5846,7 @@
 /***/ 1130:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div _v-f53c15bc=\"\">\n  <!--<div class=\"box\">-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n  <!--</div>-->\n  <!--<div class=\"list1\">-->\n    <!--<div class=\"big_img\"><img src=\"//pic.davdian.com/free/2017/08/16/today.png\" alt=\"\"></div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n  <!--</div>-->\n  <!--<div class=\"list2\">-->\n    <!--<div class=\"big_img\"><img src=\"//pic.davdian.com/free/2017/08/16/no_today.png\" alt=\"\"></div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n  <!--</div>-->\n</div>\n";
-=======
-	module.exports = "\n<div _v-52c32c2d=\"\">\n  <div class=\"box\" _v-52c32c2d=\"\">\n    <div class=\"item\" _v-52c32c2d=\"\"></div>\n    <div class=\"item\" _v-52c32c2d=\"\"></div>\n    <div class=\"item\" _v-52c32c2d=\"\"></div>\n    <div class=\"item\" _v-52c32c2d=\"\"></div>\n    <div class=\"item\" _v-52c32c2d=\"\"></div>\n    <div class=\"item\" _v-52c32c2d=\"\"></div>\n    <div class=\"item\" _v-52c32c2d=\"\"></div>\n    <div class=\"item\" _v-52c32c2d=\"\"></div>\n  </div>\n  <div class=\"list1\" _v-52c32c2d=\"\">\n    <div class=\"big_img\" _v-52c32c2d=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/today.png\" alt=\"\" _v-52c32c2d=\"\"></div>\n    <div class=\"list\" _v-52c32c2d=\"\">\n      <div class=\"left_img\" _v-52c32c2d=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-52c32c2d=\"\">\n      </div>\n      <div class=\"list_content\" _v-52c32c2d=\"\">\n        <div class=\"list_title\" _v-52c32c2d=\"\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>\n        <div class=\"list_name\" _v-52c32c2d=\"\">《搞笑西游记》</div>\n        <div class=\"list_time\" _v-52c32c2d=\"\">04:19</div>\n      </div>\n      <div class=\"right_img\" _v-52c32c2d=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-52c32c2d=\"\">\n      </div>\n    </div>\n    <div class=\"list\" _v-52c32c2d=\"\">\n      <div class=\"left_img\" _v-52c32c2d=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-52c32c2d=\"\">\n      </div>\n      <div class=\"list_content\" _v-52c32c2d=\"\">\n        <div class=\"list_title\" _v-52c32c2d=\"\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>\n        <div class=\"list_name\" _v-52c32c2d=\"\">《搞笑西游记》</div>\n        <div class=\"list_time\" _v-52c32c2d=\"\">04:19</div>\n      </div>\n      <div class=\"right_img\" _v-52c32c2d=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-52c32c2d=\"\">\n      </div>\n    </div>\n  </div>\n  <div class=\"list2\" _v-52c32c2d=\"\">\n    <div class=\"big_img\" _v-52c32c2d=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/no_today.png\" alt=\"\" _v-52c32c2d=\"\"></div>\n    <div class=\"list\" _v-52c32c2d=\"\">\n      <div class=\"left_img\" _v-52c32c2d=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-52c32c2d=\"\">\n      </div>\n      <div class=\"list_content\" _v-52c32c2d=\"\">\n        <div class=\"list_title\" _v-52c32c2d=\"\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>\n        <div class=\"list_name\" _v-52c32c2d=\"\">《搞笑西游记》</div>\n        <div class=\"list_time\" _v-52c32c2d=\"\">04:19</div>\n      </div>\n      <div class=\"right_img\" _v-52c32c2d=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-52c32c2d=\"\">\n      </div>\n    </div>\n    <div class=\"list\" _v-52c32c2d=\"\">\n      <div class=\"left_img\" _v-52c32c2d=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-52c32c2d=\"\">\n      </div>\n      <div class=\"list_content\" _v-52c32c2d=\"\">\n        <div class=\"list_title\" _v-52c32c2d=\"\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>\n        <div class=\"list_name\" _v-52c32c2d=\"\">《搞笑西游记》</div>\n        <div class=\"list_time\" _v-52c32c2d=\"\">04:19</div>\n      </div>\n      <div class=\"right_img\" _v-52c32c2d=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-52c32c2d=\"\">\n      </div>\n    </div>\n  </div>\n</div>\n";
->>>>>>> cee7daca002ab722d81cf1953d6cd3e904bb9ceb
+	module.exports = "\n<div _v-52c32c2d=\"\">\n  <!--<div class=\"box\">-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n  <!--</div>-->\n  <!--<div class=\"list1\">-->\n    <!--<div class=\"big_img\"><img src=\"//pic.davdian.com/free/2017/08/16/today.png\" alt=\"\"></div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n  <!--</div>-->\n  <!--<div class=\"list2\">-->\n    <!--<div class=\"big_img\"><img src=\"//pic.davdian.com/free/2017/08/16/no_today.png\" alt=\"\"></div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n  <!--</div>-->\n</div>\n";
 
 /***/ },
 
@@ -5997,11 +5989,7 @@
 /***/ 1135:
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div class=\"header\" _v-7926d052=\"\">\n  <div class=\"head_img\" _v-7926d052=\"\">\n    <i class=\"back-arrow\" _v-7926d052=\"\"></i>\n  </div>\n  <div class=\"head_title\" _v-7926d052=\"\">标题标题</div>\n</div>\n";
-=======
 	module.exports = "\n<div class=\"header\" _v-cee5e832=\"\">\n  <div class=\"head_img\" _v-cee5e832=\"\">\n    <i class=\"back-arrow\" _v-cee5e832=\"\"></i>\n  </div>\n  <div class=\"head_title\" _v-cee5e832=\"\">标题标题</div>\n</div>\n";
->>>>>>> cee7daca002ab722d81cf1953d6cd3e904bb9ceb
 
 /***/ },
 

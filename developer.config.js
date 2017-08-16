@@ -15,6 +15,6 @@
 export default {
   // env_stage: 'prod',
   // env_num: '',
-  // page: 'noteDetail',
-   // webpack: false
+  page: 'collect',
+   webpack: false
 };
