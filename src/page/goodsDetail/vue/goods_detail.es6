@@ -990,7 +990,7 @@ export default {
           if (that.goodsList.length) {
             that.goodsList.map((item,index) => {
               if (dataExtra.goodsId == item.goodsId) {
-                if (!item.image) {
+                if (item.image) {
                   that.infoObj.goodsShortPic = item.image;
                 }
               }
