@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--<script>window.designWidth = 750;</script>-->
+  @@include('meta.include')
+  <link rel="stylesheet" href="[[static]]/page/act_818/css/act_818.css[[v]]">
+</head>
+<body>
+<div class="app">
+  <!--标题-->
+  <com-top-title title="会员购物返120万无门槛红包" home></com-top-title>
+
+  <!--活动区域-->
+  <div class="g-act">
+    <template v-if="response">
+      <!--活动未开始-->
+      <template v-if="response.data.actStatus == '0'">
+        <div class="act-result">
+          <div class="title">活动还未开始，稍后更多精彩~</div>
+        </div>
+      </template>
+
+      <!--未登录-->
+      <template v-else-if="!isLogined">
+        <div class="act-result">
+          <act-info :response="response" :today-info="todayInfo"></act-info>
+          <p>登录后才可参与活动~</p>
+          <act-btn type="login"></act-btn>
+        </div>
+      </template>
+
+      <!--买家-->
+      <template v-else-if="isBuyer">
+        <!---买家-活动中-->
+        <template v-if="response.data.actStatus == '1'">
+          <div class="act-result">
+            <act-info :response="response" :today-info="todayInfo"></act-info>
+            <p>您当前为非会员用户</p>
+            <p>只有会员才可以获得此红包哦</p>
+            <act-btn type="member"></act-btn>
+          </div>
+        </template>
+
+        <!--买家-活动结束-->
+        <template v-else-if="response.data.actStatus == '2'">
+          <div class="act-result">
+            <div class="title">活动结束啦~</div>
+            <p>成为会员享受更多福利</p>
+            <act-btn type="member"></act-btn>
+          </div>
+        </template>
+      </template>
+
+      <!--卖家-->
+      <template v-else-if="isSeller">
+        <!--卖家-活动中-->
+        <template v-if="response.data.actStatus == '1'">
+          <!--卖家-活动中-中奖-->
+          <template v-if="response.data.prize == '1'">
+            <!--卖家-活动中-中奖-有名额-->
+            <template v-if="response.data.surplus > 0">
+              <div class="act-result">
+                <act-info :response="response" :today-info="todayInfo"></act-info>
+                <div class="title">您累计支付为<span class="num">￥{{response.data.shopPrice}}</span>，获得 {{response.data.sendBonusAmount}}元红包</div>
+                <p>继续购物{{response.data.lessPrice}}元，可再获得60元红包</p>
+                <act-btn></act-btn>
+                <p class="send-tip">* 红包将会在 2017年9月18日 发放到您的账户中</p>
+              </div>
+            </template>
+
+            <!--卖家-活动中-中奖-无名额-->
+            <template v-else>
+              <div class="act-result">
+                <act-info :response="response" :today-info="todayInfo"></act-info>
+                <div class="title">您累计支付为<span class="num">￥{{response.data.shopPrice}}</span>，获得 {{response.data.sendBonusAmount}}元红包</div>
+                <p>很遗憾没有活动名额啦~</p>
+                <p v-if="response.data.bonusAmount > response.data.sendBonusAmount">
+                  由于没有活动名额，您不能获得{{response.data.bonusAmount - response.data.sendBonusAmount}}元红包
+                </p>
+                <act-btn></act-btn>
+                <p class="send-tip">* 红包将会在 2017年9月18日 发放到您的账户中</p>
+              </div>
+            </template>
+          </template>
+
+          <!--卖家-活动中-未中奖-->
+          <template v-else-if="response.data.prize == '0'">
+            <!--卖家-活动中-未中奖-钱不够-->
+            <template v-if="response.data.shopPrice < 359">
+              <div class="act-result">
+                <act-info :response="response" :today-info="todayInfo"></act-info>
+                <div class="title">您累计实际支付为<span class="num">￥{{response.data.shopPrice}}</span></div>
+                <template v-if="response.data.surplus > 0">
+                  <p>还差{{response.data.lessPrice}}元，即可获得60元红包哦~</p>
+                </template>
+                <template v-else>
+                  <p>很遗憾没有活动名额啦~</p>
+                </template>
+                <act-btn></act-btn>
+              </div>
+            </template>
+
+            <!--卖家-活动中-未中奖-钱够了-名额没了-->
+            <template v-else-if="parseInt(response.data.surplus) <= 0">
+              <div class="act-result">
+                <act-info :response="response" :today-info="todayInfo"></act-info>
+                <div class="title">您累计实际支付为<span class="num">￥{{response.data.shopPrice}}</span></div>
+                <p>很遗憾您与奖励擦肩而过</p>
+                <act-btn></act-btn>
+              </div>
+            </template>
+          </template>
+        </template>
+
+        <!--卖家-活动结束-->
+        <template v-if="response.data.actStatus == '2'">
+          <!--卖家-活动结束-中奖-->
+          <template v-if="response.data.prize == '1'">
+            <div class="act-result">
+              <div class="title">活动结束啦~</div>
+              <div class="title">您累计支付为 ￥{{response.data.shopPrice}}，获得 {{response.data.sendBonusAmount}}元红包</div>
+              <p v-if="response.data.bonusAmount > response.data.sendBonusAmount">
+                由于没有活动名额，您不能获得{{response.data.bonusAmount > response.data.sendBonusAmount}}元红包
+              </p>
+              <act-btn></act-btn>
+              <p class="send-tip">* 红包将会在 2017年9月18日 发放到您的账户中</p>
+            </div>
+          </template>
+
+          <!--卖家-活动结束-未中奖-->
+          <template v-if="response.data.prize == '0'">
+            <div class="act-result">
+              <div class="title">活动结束啦~</div>
+              <p>很遗憾您错过了这次活动</p>
+              <act-btn></act-btn>
+            </div>
+          </template>
+        </template>
+      </template>
+    </template>
+  </div>
+
+  <!--活动规则-->
+  <div class="g-rule">
+    <div class="panel">
+      <div class="content">
+        <div class="title">活动规则</div>
+        <p class="word-1">1. 活动时间：2017年8月18日0:00:00-2017年8月23日23:59:59；</p>
+        <p class="word-1">2. 本活动仅限大V店会员参与。</p>
+        <p class="word-1">3. 活动期间，会员购物累计支付金额（包含佣金支付部分）每满359元（人民币）可返60元无门槛红包（两个30元无门槛红包）；</p>
+        <p class="word-1">4. 累计实际支付金额指会员在活动期间内完成支付并且没有进行订单退换的累计实际支付订单金额；</p>
+        <p class="word-1">5.活动仅20000个名额，数量有限，用完即止；例如：明明妈在活动期间内购物累计支付金额765元，那么明明妈会有2个60元无门槛红包返到她的账户，同时她也消耗了两个名额；</p>
+        <!--<p class="word-2"></p>-->
+        <p class="word-1">6. 因退货、换货等原因导致购物累计实际支付金额不满足359元（人民币），视为会员主动放弃该活动；</p>
+        <p class="word-1">7.获得的60元无门槛红包分两次返完，将于9月18日、10月18日发放到满足条件的会员账户中，每次返30元无门槛红包，9月18日发放的红包请于10月17日前使用，10月18日发放的红包请于11月17日前使用；</p>
+        <p class="word-1">8. 支付会员费用不参与该活动；</p>
+        <p class="word-1">9. 详情可咨询大V店客服。</p>
+      </div>
+    </div>
+  </div>
+
+  <!--返回顶部-->
+  <!--<com-to-top-icon></com-to-top-icon>-->
+</div>
+
+@@include('vendor.include')
+<script src="[[static]]/page/act_818/js/act_818.js[[v]]"></script>
+</body>
+</html>
