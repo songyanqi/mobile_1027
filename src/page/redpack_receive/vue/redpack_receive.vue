@@ -147,7 +147,7 @@
     </div>
 
     <!--状态:非会员领取【会员专享红包活动】的时候触发-->
-    <div class="wrapper no-remain" v-if="response.code === 90010">
+    <div class="wrapper no-remain" v-if="response.code === 90010">1
       <!--标题-->
       <com-top-title home title="会员专享红包"></com-top-title>
       <!--信封-->
