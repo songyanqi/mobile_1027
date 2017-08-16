@@ -281,11 +281,11 @@
             <div class = "goodsTypeModal">
                 <i class="dav_icon_detail_close_btn"></i>
                 <div class="summary modalPicCont">
-                  <div class = "titlePic" :class = "{ titlePicSingle: !relativegoodslist.length }">
+                  <div class = "titlePic">
                     <img :src="infoobj.goodsShortPic" alt="">
                   </div>
                   <div class = "titleInfo">
-                    <div>
+                    <div class = "titleInfo">
                         <span v-if = "infoobj.memberGoods == '0'">
                             <span v-if = "isshowactive == 1">
                                 <span v-if = "actendtime != 0" class = "summary_price">

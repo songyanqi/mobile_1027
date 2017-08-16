@@ -2837,11 +2837,14 @@ $crossBord: #FF4A7D;
         margin-left: 107px;
         vertical-align: middle;
       }
+      .titleM5 {
+        margin-right: 15px;
+      }
       .titlePic {
         position: absolute;
         width: 100px;
         height: 100px;
-        margin-top: -57px;
+        bottom: 12px;
         img {
           width: 100%;
           border-radius: 5px;
@@ -2862,9 +2865,6 @@ $crossBord: #FF4A7D;
         transform: scale(.5,.5);
         -webkit-transform-origin: left top;
         transform-origin: left top;
-      }
-      .titlePicSingle {
-        margin-top: -75px;
       }
     }
 
@@ -3408,10 +3408,15 @@ $crossBord: #FF4A7D;
     transform: rotate(45deg);;
   }
 }
-
+#goodsDetail .goodsTypeModal .sku-control {
+  height: 330px;
+}
 @media screen and(max-width: 320px) {
   #goodsDetail .goodsTypeModal .sku-control {
     height: 200px;
+  }
+  #goodsDetail .goodsTypeModal .singleSkuControl {
+    height: 242px;
   }
 }
 
