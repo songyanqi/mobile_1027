@@ -47,7 +47,7 @@
 
 	"use strict";
 
-	var _Vue = __webpack_require__(444);
+	var _Vue = __webpack_require__(449);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
@@ -56,7 +56,7 @@
 	new _Vue2.default({
 	    el: "#guide",
 	    components: {
-	        guide: __webpack_require__(1184)
+	        guide: __webpack_require__(1189)
 	    }
 	}); /**
 	     * Created by jianchep on 17/06/07.
@@ -4599,14 +4599,14 @@
 
 /***/ },
 
-/***/ 444:
+/***/ 449:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 480:
+/***/ 485:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -6464,18 +6464,18 @@
 
 /***/ },
 
-/***/ 928:
+/***/ 933:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(929)
-	__vue_script__ = __webpack_require__(931)
+	__webpack_require__(934)
+	__vue_script__ = __webpack_require__(936)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/alert/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(937)
+	__vue_template__ = __webpack_require__(942)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6491,7 +6491,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-81e18c02/index.vue"
+	  var id = "_v-f832942c/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -6501,13 +6501,13 @@
 
 /***/ },
 
-/***/ 929:
+/***/ 934:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(930);
+	var content = __webpack_require__(935);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6528,7 +6528,7 @@
 
 /***/ },
 
-/***/ 930:
+/***/ 935:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6543,7 +6543,7 @@
 
 /***/ },
 
-/***/ 931:
+/***/ 936:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6552,7 +6552,7 @@
 	  value: true
 	});
 
-	var _xDialog = __webpack_require__(932);
+	var _xDialog = __webpack_require__(937);
 
 	var _xDialog2 = _interopRequireDefault(_xDialog);
 
@@ -6645,18 +6645,18 @@
 
 /***/ },
 
-/***/ 932:
+/***/ 937:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(933)
-	__vue_script__ = __webpack_require__(935)
+	__webpack_require__(938)
+	__vue_script__ = __webpack_require__(940)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/x-dialog/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(936)
+	__vue_template__ = __webpack_require__(941)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6672,7 +6672,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7a517590/index.vue"
+	  var id = "_v-2a6eedc5/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -6682,13 +6682,13 @@
 
 /***/ },
 
-/***/ 933:
+/***/ 938:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(934);
+	var content = __webpack_require__(939);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6709,7 +6709,7 @@
 
 /***/ },
 
-/***/ 934:
+/***/ 939:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6724,7 +6724,7 @@
 
 /***/ },
 
-/***/ 935:
+/***/ 940:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -6807,21 +6807,21 @@
 
 /***/ },
 
-/***/ 936:
+/***/ 941:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-x-dialog\" @touchmove=\"onTouchMove\">\n  <transition :name=\"maskTransition\">\n    <div class=\"weui-mask\" @click=\"hideOnBlur && (currentValue = false)\" v-show=\"currentValue\"></div>\n  </transition>\n  <transition :name=\"dialogTransition\">\n    <div :class=\"dialogClass\" v-show=\"currentValue\" :style=\"dialogStyle\">\n      <slot></slot>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ },
 
-/***/ 937:
+/***/ 942:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-alert\">\n  <x-dialog\n  v-model=\"showValue\"\n  :mask-transition=\"maskTransition\"\n  :dialog-transition=\"dialogTransition\"\n  @on-hide=\"$emit('on-hide')\"\n  @on-show=\"$emit('on-show')\">\n    <div class=\"weui-dialog__hd\">\n      <strong class=\"weui-dialog__title\">{{title}}</strong>\n    </div>\n    <div class=\"weui-dialog__bd\">\n      <slot>\n        <div v-html=\"content\"></div>\n      </slot>\n    </div>\n    <div class=\"weui-dialog__ft\">\n      <a href=\"javascript:;\"\n      class=\"weui-dialog__btn weui-dialog__btn_primary\"\n      @click=\"_onHide\">{{buttonText || '确定'}}</a>\n    </div>\n  </x-dialog>\n</div>\n";
 
 /***/ },
 
-/***/ 951:
+/***/ 956:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7110,7 +7110,7 @@
 
 /***/ },
 
-/***/ 953:
+/***/ 958:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7123,11 +7123,11 @@
 
 	var _utils2 = _interopRequireDefault(_utils);
 
-	var _WXShare = __webpack_require__(951);
+	var _WXShare = __webpack_require__(956);
 
 	var _WXShare2 = _interopRequireDefault(_WXShare);
 
-	var _dialog = __webpack_require__(954);
+	var _dialog = __webpack_require__(959);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -7562,7 +7562,7 @@
 
 /***/ },
 
-/***/ 954:
+/***/ 959:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7573,15 +7573,15 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _index = __webpack_require__(955);
+	var _index = __webpack_require__(960);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(958);
+	var _index3 = __webpack_require__(963);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _vue = __webpack_require__(480);
+	var _vue = __webpack_require__(485);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
@@ -7636,7 +7636,7 @@
 
 /***/ },
 
-/***/ 955:
+/***/ 960:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7648,11 +7648,11 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _alert = __webpack_require__(928);
+	var _alert = __webpack_require__(933);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
-	var _plugin_helper = __webpack_require__(956);
+	var _plugin_helper = __webpack_require__(961);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -7717,7 +7717,7 @@
 
 /***/ },
 
-/***/ 956:
+/***/ 961:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7727,7 +7727,7 @@
 	});
 	exports.mergeOptions = undefined;
 
-	var _objectAssign = __webpack_require__(957);
+	var _objectAssign = __webpack_require__(962);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -7750,7 +7750,7 @@
 
 /***/ },
 
-/***/ 957:
+/***/ 962:
 /***/ function(module, exports) {
 
 	/*
@@ -7847,7 +7847,7 @@
 
 /***/ },
 
-/***/ 958:
+/***/ 963:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7859,11 +7859,11 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _toast = __webpack_require__(959);
+	var _toast = __webpack_require__(964);
 
 	var _toast2 = _interopRequireDefault(_toast);
 
-	var _plugin_helper = __webpack_require__(956);
+	var _plugin_helper = __webpack_require__(961);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -7946,18 +7946,18 @@
 
 /***/ },
 
-/***/ 959:
+/***/ 964:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(960)
-	__vue_script__ = __webpack_require__(962)
+	__webpack_require__(965)
+	__vue_script__ = __webpack_require__(967)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/toast/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(964)
+	__vue_template__ = __webpack_require__(969)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7973,7 +7973,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5d97050a/index.vue"
+	  var id = "_v-226e80f5/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7983,13 +7983,13 @@
 
 /***/ },
 
-/***/ 960:
+/***/ 965:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(961);
+	var content = __webpack_require__(966);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8010,7 +8010,7 @@
 
 /***/ },
 
-/***/ 961:
+/***/ 966:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8025,7 +8025,7 @@
 
 /***/ },
 
-/***/ 962:
+/***/ 967:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8034,7 +8034,7 @@
 	  value: true
 	});
 
-	var _safariFix = __webpack_require__(963);
+	var _safariFix = __webpack_require__(968);
 
 	var _safariFix2 = _interopRequireDefault(_safariFix);
 
@@ -8216,7 +8216,7 @@
 
 /***/ },
 
-/***/ 963:
+/***/ 968:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8242,26 +8242,26 @@
 
 /***/ },
 
-/***/ 964:
+/***/ 969:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-toast\">\n  <div class=\"weui-mask_transparent\" v-show=\"isShowMask && show\"></div>\n  <transition :name=\"currentTransition\">\n    <div class=\"weui-toast\" :style=\"{width: width}\" :class=\"toastClass\" v-show=\"show\">\n      <i class=\"weui-icon-success-no-circle weui-icon_toast\" v-show=\"type !== 'text'\"></i>\n      <p class=\"weui-toast__content\" v-if=\"text\" :style=\"style\" v-html=\"text\"></p>\n      <p class=\"weui-toast__content\" v-else><slot></slot></p>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ },
 
-/***/ 1184:
+/***/ 1189:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1185)
-	__webpack_require__(1187)
-	__vue_script__ = __webpack_require__(1189)
+	__webpack_require__(1190)
+	__webpack_require__(1192)
+	__vue_script__ = __webpack_require__(1194)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/setShop/vue/guide.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1190)
+	__vue_template__ = __webpack_require__(1195)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8277,7 +8277,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-f682c078/guide.vue"
+	  var id = "_v-24908479/guide.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -8287,13 +8287,13 @@
 
 /***/ },
 
-/***/ 1185:
+/***/ 1190:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1186);
+	var content = __webpack_require__(1191);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8314,7 +8314,7 @@
 
 /***/ },
 
-/***/ 1186:
+/***/ 1191:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8329,13 +8329,13 @@
 
 /***/ },
 
-/***/ 1187:
+/***/ 1192:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1188);
+	var content = __webpack_require__(1193);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8344,8 +8344,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f682c078&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./guide.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f682c078&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./guide.vue");
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-24908479&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./guide.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-24908479&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./guide.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -8356,7 +8356,7 @@
 
 /***/ },
 
-/***/ 1188:
+/***/ 1193:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8364,14 +8364,14 @@
 
 
 	// module
-	exports.push([module.id, ".container[_v-f682c078] {\n  width: 100%; }\n  .container .guide3Container1[_v-f682c078] {\n    width: 100%;\n    height: 0.7rem;\n    background: #fff; }\n  .container .bottomImg[_v-f682c078] {\n    position: absolute;\n    top: 4.65rem;\n    width: 85%;\n    height: 0.7rem;\n    max-width: 384px;\n    left: 50%;\n    -webkit-transform: translate(-50%, 0);\n        -ms-transform: translate(-50%, 0);\n            transform: translate(-50%, 0);\n    border-radius: 4px; }\n  .container .exit[_v-f682c078] {\n    position: absolute;\n    width: 0.3rem;\n    height: 0.3rem;\n    top: 0.05rem;\n    left: 0.05rem; }\n  .container .guide1[_v-f682c078] {\n    width: 100%;\n    vertical-align: center; }\n    .container .guide1 .guide1all[_v-f682c078] {\n      position: absolute; }\n    .container .guide1 .guide1Bg[_v-f682c078] {\n      width: 100%;\n      vertical-align: top; }\n    .container .guide1 .guide1Title[_v-f682c078] {\n      width: 100%;\n      max-width: 640px;\n      color: #BF9D51;\n      font-size: 0.25rem;\n      top: 1.3rem;\n      text-align: center;\n      font-weight: bolder; }\n    .container .guide1 .guide1Content[_v-f682c078] {\n      width: 100%;\n      max-width: 640px;\n      color: #FF4A7D;\n      font-size: 0.18rem;\n      text-align: center;\n      top: 2.01rem; }\n      .container .guide1 .guide1Content span[_v-f682c078] {\n        color: #333333; }\n    .container .guide1 .guide1Img[_v-f682c078] {\n      width: 100%;\n      max-width: 640px;\n      height: 0.99rem;\n      top: 2.5rem; }\n      .container .guide1 .guide1Img img[_v-f682c078] {\n        width: 3.15rem;\n        height: 0.99rem;\n        left: 50%;\n        -webkit-transform: translate(-50%, 0);\n            -ms-transform: translate(-50%, 0);\n                transform: translate(-50%, 0); }\n      .container .guide1 .guide1Img .guide1Img1[_v-f682c078] {\n        top: 0.20rem;\n        left: 0.40rem;\n        width: 0.8rem;\n        text-align: center;\n        color: #fff;\n        font-size: 0.3rem; }\n        .container .guide1 .guide1Img .guide1Img1 span[_v-f682c078] {\n          font-size: 0.2rem; }\n      .container .guide1 .guide1Img .guide1Img2[_v-f682c078] {\n        top: 0.20rem;\n        left: 1.55rem;\n        color: #333333;\n        font-size: 0.16rem;\n        width: 1.5rem;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        -webkit-box-orient: vertical;\n        -webkit-line-clamp: 1;\n        display: -webkit-box; }\n      .container .guide1 .guide1Img .guide1Img3[_v-f682c078] {\n        top: 0.65rem;\n        left: 0.43rem;\n        color: #fff;\n        font-size: 0.12rem; }\n      .container .guide1 .guide1Img .guide1Img4[_v-f682c078] {\n        top: 0.42rem;\n        left: 1.55rem;\n        color: #666666;\n        font-size: 0.12rem;\n        width: 1.5rem;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        -webkit-box-orient: vertical;\n        -webkit-line-clamp: 1;\n        display: -webkit-box; }\n      .container .guide1 .guide1Img .guide1Img5[_v-f682c078] {\n        top: 0.66rem;\n        left: 1.55rem;\n        color: #FF4A7D;\n        font-size: 0.11rem; }\n        .container .guide1 .guide1Img .guide1Img5 span[_v-f682c078] {\n          font-weight: bolder; }\n    .container .guide1 .guide1Text[_v-f682c078] {\n      color: #666666;\n      font-size: 0.12rem;\n      top: 3.55rem;\n      width: 100%;\n      max-width: 640px;\n      text-align: center; }\n    .container .guide1 .guide1Btn[_v-f682c078] {\n      width: 2.75rem;\n      height: 0.4rem;\n      line-height: 0.4rem;\n      border-radius: 200px;\n      background: -webkit-linear-gradient(left, #FF5B5B, #FB1C62);\n      top: 4.02rem;\n      left: 50%;\n      -webkit-transform: translate(-50%, 0);\n          -ms-transform: translate(-50%, 0);\n              transform: translate(-50%, 0);\n      color: #FFFFFF;\n      font-size: 0.14rem;\n      text-align: center;\n      -webkit-box-shadow: 0px 3px 8px #FEC2CE;\n              box-shadow: 0px 3px 8px #FEC2CE;\n      font-weight: bolder; }\n  .container .guide2[_v-f682c078] {\n    color: #333333;\n    font-size: 0.14rem;\n    text-align: center;\n    width: 100%;\n    background: #fff;\n    height: 0.4rem;\n    line-height: 0.4rem; }\n  .container .guide3[_v-f682c078] {\n    width: 3.55rem;\n    margin-left: 0.1rem;\n    font-size: 0;\n    margin-top: 0.1rem;\n    margin-bottom: 0.2rem;\n    /*.left{\n            float: left;\n        }\n        .right{\n            float: right;\n        }*/ }\n    .container .guide3 .guide3Container[_v-f682c078] {\n      position: relative;\n      width: 1.73rem;\n      height: 2.43rem;\n      font-size: 0.14rem;\n      float: left;\n      overflow: hidden;\n      margin-bottom: 0.1rem; }\n      .container .guide3 .guide3Container .guide3img[_v-f682c078] {\n        width: 1.73rem;\n        height: 1.73rem;\n        vertical-align: top; }\n      .container .guide3 .guide3Container .guide3price[_v-f682c078] {\n        position: absolute;\n        left: 0;\n        top: 1.55rem;\n        color: #fff;\n        height: 0.18rem;\n        line-height: 0.18rem;\n        border-top-right-radius: 16px;\n        font-size: 0;\n        background-size: inherit; }\n        .container .guide3 .guide3Container .guide3price span[_v-f682c078] {\n          vertical-align: top;\n          background: -webkit-linear-gradient(left, #FF7477, #FF5589);\n          display: inline-block;\n          height: 100%;\n          font-size: 0.1rem;\n          padding-left: 0.05rem;\n          line-height: 0.2rem;\n          font-weight: bold; }\n        .container .guide3 .guide3Container .guide3price img[_v-f682c078] {\n          vertical-align: top;\n          height: 100%; }\n      .container .guide3 .guide3Container .guide3title[_v-f682c078] {\n        color: #666666;\n        font-size: 0.12rem;\n        padding-left: 0.1rem;\n        padding-right: 0.07rem;\n        padding-top: 0.02rem;\n        text-overflow: ellipsis;\n        -webkit-box-orient: vertical;\n        -webkit-line-clamp: 2;\n        display: -webkit-box;\n        overflow: hidden; }\n      .container .guide3 .guide3Container .guide3money[_v-f682c078] {\n        color: #FF4A7D;\n        font-size: 0.16rem;\n        padding-left: 0.1rem;\n        margin-top: 0.07rem;\n        display: inline-block;\n        vertical-align: top;\n        font-weight: 400; }\n        .container .guide3 .guide3Container .guide3money span[_v-f682c078] {\n          font-size: 0.12rem; }\n      .container .guide3 .guide3Container .guide3inComeMoney[_v-f682c078] {\n        display: inline-block;\n        vertical-align: top;\n        margin-top: 0.11rem;\n        font-size: 0.11rem;\n        /*margin-left: 0.06rem;*/\n        color: #BF9D51; }\n    .container .guide3 .guide3Container[_v-f682c078]:nth-child(2n) {\n      float: right; }\n  .container .guide3[_v-f682c078]:after {\n    content: \".\";\n    display: block;\n    height: 0;\n    clear: both;\n    visibility: hidden; }\n", ""]);
+	exports.push([module.id, ".container[_v-24908479] {\n  width: 100%; }\n  .container .guide3Container1[_v-24908479] {\n    width: 100%;\n    height: 0.7rem;\n    background: #fff; }\n  .container .bottomImg[_v-24908479] {\n    position: absolute;\n    top: 4.65rem;\n    width: 85%;\n    height: 0.7rem;\n    max-width: 384px;\n    left: 50%;\n    -webkit-transform: translate(-50%, 0);\n        -ms-transform: translate(-50%, 0);\n            transform: translate(-50%, 0);\n    border-radius: 4px; }\n  .container .exit[_v-24908479] {\n    position: absolute;\n    width: 0.3rem;\n    height: 0.3rem;\n    top: 0.05rem;\n    left: 0.05rem; }\n  .container .guide1[_v-24908479] {\n    width: 100%;\n    vertical-align: center; }\n    .container .guide1 .guide1all[_v-24908479] {\n      position: absolute; }\n    .container .guide1 .guide1Bg[_v-24908479] {\n      width: 100%;\n      vertical-align: top; }\n    .container .guide1 .guide1Title[_v-24908479] {\n      width: 100%;\n      max-width: 640px;\n      color: #BF9D51;\n      font-size: 0.25rem;\n      top: 1.3rem;\n      text-align: center;\n      font-weight: bolder; }\n    .container .guide1 .guide1Content[_v-24908479] {\n      width: 100%;\n      max-width: 640px;\n      color: #FF4A7D;\n      font-size: 0.18rem;\n      text-align: center;\n      top: 2.01rem; }\n      .container .guide1 .guide1Content span[_v-24908479] {\n        color: #333333; }\n    .container .guide1 .guide1Img[_v-24908479] {\n      width: 100%;\n      max-width: 640px;\n      height: 0.99rem;\n      top: 2.5rem; }\n      .container .guide1 .guide1Img img[_v-24908479] {\n        width: 3.15rem;\n        height: 0.99rem;\n        left: 50%;\n        -webkit-transform: translate(-50%, 0);\n            -ms-transform: translate(-50%, 0);\n                transform: translate(-50%, 0); }\n      .container .guide1 .guide1Img .guide1Img1[_v-24908479] {\n        top: 0.20rem;\n        left: 0.40rem;\n        width: 0.8rem;\n        text-align: center;\n        color: #fff;\n        font-size: 0.3rem; }\n        .container .guide1 .guide1Img .guide1Img1 span[_v-24908479] {\n          font-size: 0.2rem; }\n      .container .guide1 .guide1Img .guide1Img2[_v-24908479] {\n        top: 0.20rem;\n        left: 1.55rem;\n        color: #333333;\n        font-size: 0.16rem;\n        width: 1.5rem;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        -webkit-box-orient: vertical;\n        -webkit-line-clamp: 1;\n        display: -webkit-box; }\n      .container .guide1 .guide1Img .guide1Img3[_v-24908479] {\n        top: 0.65rem;\n        left: 0.43rem;\n        color: #fff;\n        font-size: 0.12rem; }\n      .container .guide1 .guide1Img .guide1Img4[_v-24908479] {\n        top: 0.42rem;\n        left: 1.55rem;\n        color: #666666;\n        font-size: 0.12rem;\n        width: 1.5rem;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        -webkit-box-orient: vertical;\n        -webkit-line-clamp: 1;\n        display: -webkit-box; }\n      .container .guide1 .guide1Img .guide1Img5[_v-24908479] {\n        top: 0.66rem;\n        left: 1.55rem;\n        color: #FF4A7D;\n        font-size: 0.11rem; }\n        .container .guide1 .guide1Img .guide1Img5 span[_v-24908479] {\n          font-weight: bolder; }\n    .container .guide1 .guide1Text[_v-24908479] {\n      color: #666666;\n      font-size: 0.12rem;\n      top: 3.55rem;\n      width: 100%;\n      max-width: 640px;\n      text-align: center; }\n    .container .guide1 .guide1Btn[_v-24908479] {\n      width: 2.75rem;\n      height: 0.4rem;\n      line-height: 0.4rem;\n      border-radius: 200px;\n      background: -webkit-linear-gradient(left, #FF5B5B, #FB1C62);\n      top: 4.02rem;\n      left: 50%;\n      -webkit-transform: translate(-50%, 0);\n          -ms-transform: translate(-50%, 0);\n              transform: translate(-50%, 0);\n      color: #FFFFFF;\n      font-size: 0.14rem;\n      text-align: center;\n      -webkit-box-shadow: 0px 3px 8px #FEC2CE;\n              box-shadow: 0px 3px 8px #FEC2CE;\n      font-weight: bolder; }\n  .container .guide2[_v-24908479] {\n    color: #333333;\n    font-size: 0.14rem;\n    text-align: center;\n    width: 100%;\n    background: #fff;\n    height: 0.4rem;\n    line-height: 0.4rem; }\n  .container .guide3[_v-24908479] {\n    width: 3.55rem;\n    margin-left: 0.1rem;\n    font-size: 0;\n    margin-top: 0.1rem;\n    margin-bottom: 0.2rem;\n    /*.left{\n            float: left;\n        }\n        .right{\n            float: right;\n        }*/ }\n    .container .guide3 .guide3Container[_v-24908479] {\n      position: relative;\n      width: 1.73rem;\n      height: 2.43rem;\n      font-size: 0.14rem;\n      float: left;\n      overflow: hidden;\n      margin-bottom: 0.1rem; }\n      .container .guide3 .guide3Container .guide3img[_v-24908479] {\n        width: 1.73rem;\n        height: 1.73rem;\n        vertical-align: top; }\n      .container .guide3 .guide3Container .guide3price[_v-24908479] {\n        position: absolute;\n        left: 0;\n        top: 1.55rem;\n        color: #fff;\n        height: 0.18rem;\n        line-height: 0.18rem;\n        border-top-right-radius: 16px;\n        font-size: 0;\n        background-size: inherit; }\n        .container .guide3 .guide3Container .guide3price span[_v-24908479] {\n          vertical-align: top;\n          background: -webkit-linear-gradient(left, #FF7477, #FF5589);\n          display: inline-block;\n          height: 100%;\n          font-size: 0.1rem;\n          padding-left: 0.05rem;\n          line-height: 0.2rem;\n          font-weight: bold; }\n        .container .guide3 .guide3Container .guide3price img[_v-24908479] {\n          vertical-align: top;\n          height: 100%; }\n      .container .guide3 .guide3Container .guide3title[_v-24908479] {\n        color: #666666;\n        font-size: 0.12rem;\n        padding-left: 0.1rem;\n        padding-right: 0.07rem;\n        padding-top: 0.02rem;\n        text-overflow: ellipsis;\n        -webkit-box-orient: vertical;\n        -webkit-line-clamp: 2;\n        display: -webkit-box;\n        overflow: hidden; }\n      .container .guide3 .guide3Container .guide3money[_v-24908479] {\n        color: #FF4A7D;\n        font-size: 0.16rem;\n        padding-left: 0.1rem;\n        margin-top: 0.07rem;\n        display: inline-block;\n        vertical-align: top;\n        font-weight: 400; }\n        .container .guide3 .guide3Container .guide3money span[_v-24908479] {\n          font-size: 0.12rem; }\n      .container .guide3 .guide3Container .guide3inComeMoney[_v-24908479] {\n        display: inline-block;\n        vertical-align: top;\n        margin-top: 0.11rem;\n        font-size: 0.11rem;\n        /*margin-left: 0.06rem;*/\n        color: #BF9D51; }\n    .container .guide3 .guide3Container[_v-24908479]:nth-child(2n) {\n      float: right; }\n  .container .guide3[_v-24908479]:after {\n    content: \".\";\n    display: block;\n    height: 0;\n    clear: both;\n    visibility: hidden; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 1189:
+/***/ 1194:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -8382,11 +8382,11 @@
 
 	var _utils = __webpack_require__(94);
 
-	var _appInterface = __webpack_require__(953);
+	var _appInterface = __webpack_require__(958);
 
 	var _appInterface2 = _interopRequireDefault(_appInterface);
 
-	var _WXShare = __webpack_require__(951);
+	var _WXShare = __webpack_require__(956);
 
 	var _WXShare2 = _interopRequireDefault(_WXShare);
 
@@ -8820,10 +8820,10 @@
 
 /***/ },
 
-/***/ 1190:
+/***/ 1195:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"container\" _v-f682c078=\"\">\n    <div class=\"guide1\" _v-f682c078=\"\">\n        <img src=\"//pic.davdian.com/free/2017/06/07/guideBg.png\" v-if=\"!giftButton\" class=\"guide1Bg\" _v-f682c078=\"\">\n        <img src=\"//pic.davdian.com/free/2017/06/22/success_bg1.png\" v-if=\"giftButton\" class=\"guide1Bg\" _v-f682c078=\"\">\n        <div class=\"exit\" @click=\"goProfile\" _v-f682c078=\"\"></div>\n        <div class=\"guide1Title guide1all\" _v-f682c078=\"\">您已成功开通大V店会员</div>\n        <div class=\"guide1Content guide1all\" v-if=\"bonusFlag\" _v-f682c078=\"\">{{bonus.bonusCountMoney}}元红包<span _v-f682c078=\"\">已到账</span></div>\n        <div class=\"guide1Img guide1all\" v-if=\"bonusFlag\" _v-f682c078=\"\">\n            <img src=\"//pic.davdian.com/free/2017/06/07/ticket.png\" class=\"guide1all\" @click=\"linkUrl(bonus.linkUrl)\" _v-f682c078=\"\">\n            <div class=\"guide1Img1 guide1all\" _v-f682c078=\"\"><span _v-f682c078=\"\">¥&nbsp;</span>{{bonus.bonusMoney}}</div>\n            <div class=\"guide1Img3 guide1all\" _v-f682c078=\"\">满{{bonus.limit}}元可用</div>\n            <div class=\"guide1Img2 guide1all\" v-text=\"bonus.bonusName\" _v-f682c078=\"\"></div>\n            <div class=\"guide1Img4 guide1all\" v-text=\"bonus.useCat\" _v-f682c078=\"\"></div>\n            <div class=\"guide1Img5 guide1all\" _v-f682c078=\"\">有效期倒计时：<span _v-f682c078=\"\">{{time}}</span></div>\n        </div>\n        <div class=\"guide1Text guide1all\" v-if=\"bonusFlag\" _v-f682c078=\"\">240邮费抵用券正在路上～</div>\n        <div class=\"guide1Btn guide1all\" @click=\"goProfile\" _v-f682c078=\"\">马上开始购物</div>\n        <div class=\"bottomImg\" v-if=\"giftButton\" @click=\"linkUrl(giftButton.linkUrl)\" :style=\"{'background': 'url(' + giftButton.imageUrl + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-f682c078=\"\"></div>\n        <!-- <img v-if='giftButton' :src=\"giftButton.imageUrl\" class='bottomImg' @click='linkUrl(giftButton.linkUrl)'> -->\n    </div>\n    <div class=\"guide2\" v-if=\"goodsList\" _v-f682c078=\"\">会员专享，限时抢购中</div>\n    <div class=\"guide3\" v-if=\"goodsList\" _v-f682c078=\"\">\n        <div v-if=\"goodsList\" class=\"guide3Container\" @click=\"linkUrl(goods.linkUrl)\" v-for=\"goods in goodsList\" _v-f682c078=\"\">\n            <img :src=\"goods.imageUrl\" class=\"guide3img\" _v-f682c078=\"\">\n\n            <div class=\"guide3price\" _v-f682c078=\"\">\n                <span v-text=\"goods.actInfo\" _v-f682c078=\"\"></span>\n                <img src=\"//pic.davdian.com/free/2017/06/22/activityBg1.png\" _v-f682c078=\"\">\n            </div>\n            <div class=\"guide3Container1\" _v-f682c078=\"\">\n                <div class=\"guide3title\" v-text=\"goods.title\" _v-f682c078=\"\"></div>\n                <div class=\"guide3money\" _v-f682c078=\"\"><span _v-f682c078=\"\">¥&nbsp;</span>{{goods.price}}</div>\n                <div class=\"guide3inComeMoney\" _v-f682c078=\"\">会员返{{goods.saveMoney}}</div>\n            </div>\n            \n        </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div class=\"container\" _v-24908479=\"\">\n    <div class=\"guide1\" _v-24908479=\"\">\n        <img src=\"//pic.davdian.com/free/2017/06/07/guideBg.png\" v-if=\"!giftButton\" class=\"guide1Bg\" _v-24908479=\"\">\n        <img src=\"//pic.davdian.com/free/2017/06/22/success_bg1.png\" v-if=\"giftButton\" class=\"guide1Bg\" _v-24908479=\"\">\n        <div class=\"exit\" @click=\"goProfile\" _v-24908479=\"\"></div>\n        <div class=\"guide1Title guide1all\" _v-24908479=\"\">您已成功开通大V店会员</div>\n        <div class=\"guide1Content guide1all\" v-if=\"bonusFlag\" _v-24908479=\"\">{{bonus.bonusCountMoney}}元红包<span _v-24908479=\"\">已到账</span></div>\n        <div class=\"guide1Img guide1all\" v-if=\"bonusFlag\" _v-24908479=\"\">\n            <img src=\"//pic.davdian.com/free/2017/06/07/ticket.png\" class=\"guide1all\" @click=\"linkUrl(bonus.linkUrl)\" _v-24908479=\"\">\n            <div class=\"guide1Img1 guide1all\" _v-24908479=\"\"><span _v-24908479=\"\">¥&nbsp;</span>{{bonus.bonusMoney}}</div>\n            <div class=\"guide1Img3 guide1all\" _v-24908479=\"\">满{{bonus.limit}}元可用</div>\n            <div class=\"guide1Img2 guide1all\" v-text=\"bonus.bonusName\" _v-24908479=\"\"></div>\n            <div class=\"guide1Img4 guide1all\" v-text=\"bonus.useCat\" _v-24908479=\"\"></div>\n            <div class=\"guide1Img5 guide1all\" _v-24908479=\"\">有效期倒计时：<span _v-24908479=\"\">{{time}}</span></div>\n        </div>\n        <div class=\"guide1Text guide1all\" v-if=\"bonusFlag\" _v-24908479=\"\">240邮费抵用券正在路上～</div>\n        <div class=\"guide1Btn guide1all\" @click=\"goProfile\" _v-24908479=\"\">马上开始购物</div>\n        <div class=\"bottomImg\" v-if=\"giftButton\" @click=\"linkUrl(giftButton.linkUrl)\" :style=\"{'background': 'url(' + giftButton.imageUrl + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-24908479=\"\"></div>\n        <!-- <img v-if='giftButton' :src=\"giftButton.imageUrl\" class='bottomImg' @click='linkUrl(giftButton.linkUrl)'> -->\n    </div>\n    <div class=\"guide2\" v-if=\"goodsList\" _v-24908479=\"\">会员专享，限时抢购中</div>\n    <div class=\"guide3\" v-if=\"goodsList\" _v-24908479=\"\">\n        <div v-if=\"goodsList\" class=\"guide3Container\" @click=\"linkUrl(goods.linkUrl)\" v-for=\"goods in goodsList\" _v-24908479=\"\">\n            <img :src=\"goods.imageUrl\" class=\"guide3img\" _v-24908479=\"\">\n\n            <div class=\"guide3price\" _v-24908479=\"\">\n                <span v-text=\"goods.actInfo\" _v-24908479=\"\"></span>\n                <img src=\"//pic.davdian.com/free/2017/06/22/activityBg1.png\" _v-24908479=\"\">\n            </div>\n            <div class=\"guide3Container1\" _v-24908479=\"\">\n                <div class=\"guide3title\" v-text=\"goods.title\" _v-24908479=\"\"></div>\n                <div class=\"guide3money\" _v-24908479=\"\"><span _v-24908479=\"\">¥&nbsp;</span>{{goods.price}}</div>\n                <div class=\"guide3inComeMoney\" _v-24908479=\"\">会员返{{goods.saveMoney}}</div>\n            </div>\n            \n        </div>\n    </div>\n</div>\n";
 
 /***/ }
 

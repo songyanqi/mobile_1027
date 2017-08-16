@@ -45,9 +45,9 @@
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1464);
+	__webpack_require__(1469);
 	// require('../../javascript/base.js');
-	__webpack_require__(1466);
+	__webpack_require__(1471);
 
 
 /***/ },
@@ -5500,7 +5500,7 @@
 
 /***/ },
 
-/***/ 480:
+/***/ 485:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -7358,137 +7358,6 @@
 
 /***/ },
 
-/***/ 902:
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(903)
-	__vue_script__ = __webpack_require__(905)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] node_modules/vux/src/components/group/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(906)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-3a06d762/index.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-
-/***/ 903:
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(904);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(48)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
-				var newContent = require("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-
-/***/ 904:
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(35)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "/**\n* actionsheet\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/* alias */\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* form-preview\n*/\n/**\n* load-more\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* toast\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* search\n*/\n/**\n* radio\n*/\n.weui-cell_access {\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  color: inherit;\n}\n.weui-cell_access:active {\n  background-color: #ECECEC;\n}\n.weui-cell_access .weui-cell__ft {\n  padding-right: 13px;\n  position: relative;\n}\n.weui-cell_access .weui-cell__ft:after {\n  content: \" \";\n  display: inline-block;\n  height: 6px;\n  width: 6px;\n  border-width: 2px 2px 0 0;\n  border-color: #C8C8CD;\n  border-style: solid;\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n  position: relative;\n  top: -2px;\n  position: absolute;\n  top: 50%;\n  margin-top: -4px;\n  right: 2px;\n}\n.weui-cell_link {\n  color: #586C94;\n  font-size: 14px;\n}\n.weui-cell_link:first-child:before {\n  display: block;\n}\n.weui-cell_access.vux-cell-box {\n  padding-right: 13px;\n  position: relative;\n}\n.weui-cell_access.vux-cell-box:after {\n  content: \" \";\n  display: inline-block;\n  height: 6px;\n  width: 6px;\n  border-width: 2px 2px 0 0;\n  border-color: #C8C8CD;\n  border-style: solid;\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n  position: relative;\n  top: -2px;\n  position: absolute;\n  top: 50%;\n  margin-top: -4px;\n  right: 17px;\n}\n.weui-cells {\n  margin-top: 1.17647059em;\n  background-color: #FFFFFF;\n  line-height: 1.41176471;\n  font-size: 17px;\n  overflow: hidden;\n  position: relative;\n}\n.weui-cells:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  height: 1px;\n  border-bottom: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 100%;\n      -ms-transform-origin: 0 100%;\n          transform-origin: 0 100%;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells__title {\n  margin-top: 0.77em;\n  margin-bottom: 0.3em;\n  padding-left: 15px;\n  padding-right: 15px;\n  color: #999999;\n  font-size: 14px;\n}\n.weui-cells__title + .weui-cells {\n  margin-top: 0;\n}\n.weui-cells__tips {\n  margin-top: .3em;\n  color: #999999;\n  padding-left: 15px;\n  padding-right: 15px;\n  font-size: 14px;\n}\n.weui-cell {\n  padding: 10px 15px;\n  position: relative;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.weui-cell:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n  left: 15px;\n}\n.weui-cell:first-child:before {\n  display: none;\n}\n.weui-cell_primary {\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n     -moz-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n.weui-cell__bd {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.weui-cell__ft {\n  text-align: right;\n  color: #999999;\n}\n/**\n* http://www.zhangxinxu.com/wordpress/2015/01/tips-blank-character-chinese-align/\n*/\n.vux-blank-half:before {\n  content: '\\2002';\n  speak: none;\n}\n.vux-blank-full:before {\n  content: '\\2003';\n  speak: none;\n}\n.vux-no-group-title {\n  margin-top: 0.77em;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-
-/***/ 905:
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	// <template>
-	//   <div>
-	//     <div class="weui-cells__title" v-if="title" :style="{color:titleColor}" v-html="title"></div>
-	//     <div class="weui-cells" :class="{'vux-no-group-title':!title}" :style="{marginTop: typeof gutter === 'number' ? (gutter + 'px') : gutter}">
-	//       <slot name="after-title"></slot>
-	//       <slot></slot>
-	//     </div>
-	//   </div>
-	// </template>
-	//
-	// <script>
-	exports.default = {
-	  name: 'group',
-	  props: {
-	    title: String,
-	    titleColor: String,
-	    labelWidth: String,
-	    labelAlign: String,
-	    labelMarginRight: String,
-	    gutter: [String, Number]
-	  }
-	  // </script>
-	  //
-	  // <style lang="less">
-	  // @import '../../styles/weui/widget/weui_cell/weui_access';
-	  // @import '../../styles/weui/widget/weui_cell/weui_cell_global';
-	  // @import '../../styles/blank.less';
-	  //
-	  // .vux-no-group-title {
-	  //   margin-top: @group-title-margin-top;
-	  // }
-	  // </style>
-
-	};
-
-/***/ },
-
-/***/ 906:
-/***/ function(module, exports) {
-
-	module.exports = "\n<div>\n  <div class=\"weui-cells__title\" v-if=\"title\" :style=\"{color:titleColor}\" v-html=\"title\"></div>\n  <div class=\"weui-cells\" :class=\"{'vux-no-group-title':!title}\" :style=\"{marginTop: typeof gutter === 'number' ? (gutter + 'px') : gutter}\">\n    <slot name=\"after-title\"></slot>\n    <slot></slot>\n  </div>\n</div>\n";
-
-/***/ },
-
 /***/ 907:
 /***/ function(module, exports, __webpack_require__) {
 
@@ -7499,8 +7368,8 @@
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] node_modules/vux/src/components/cell/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(918)
+	  console.warn("[vue-loader] node_modules/vux/src/components/group/index.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(911)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7516,7 +7385,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-31cdbf16/index.vue"
+	  var id = "_v-02435966/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7561,7 +7430,7 @@
 
 
 	// module
-	exports.push([module.id, "/**\n* actionsheet\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/* alias */\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* form-preview\n*/\n/**\n* load-more\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* toast\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* search\n*/\n/**\n* radio\n*/\n.vux-tap-active {\n  tap-highlight-color: rgba(0, 0, 0, 0);\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.vux-tap-active:active {\n  background-color: #ECECEC;\n}\n.weui-cells {\n  margin-top: 1.17647059em;\n  background-color: #FFFFFF;\n  line-height: 1.41176471;\n  font-size: 17px;\n  overflow: hidden;\n  position: relative;\n}\n.weui-cells:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  height: 1px;\n  border-bottom: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 100%;\n      -ms-transform-origin: 0 100%;\n          transform-origin: 0 100%;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells__title {\n  margin-top: 0.77em;\n  margin-bottom: 0.3em;\n  padding-left: 15px;\n  padding-right: 15px;\n  color: #999999;\n  font-size: 14px;\n}\n.weui-cells__title + .weui-cells {\n  margin-top: 0;\n}\n.weui-cells__tips {\n  margin-top: .3em;\n  color: #999999;\n  padding-left: 15px;\n  padding-right: 15px;\n  font-size: 14px;\n}\n.weui-cell {\n  padding: 10px 15px;\n  position: relative;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.weui-cell:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n  left: 15px;\n}\n.weui-cell:first-child:before {\n  display: none;\n}\n.weui-cell_primary {\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n     -moz-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n.weui-cell__bd {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.weui-cell__ft {\n  text-align: right;\n  color: #999999;\n}\n.weui-loading {\n  width: 20px;\n  height: 20px;\n  display: inline-block;\n  vertical-align: middle;\n  -webkit-animation: weuiLoading 1s steps(12, end) infinite;\n          animation: weuiLoading 1s steps(12, end) infinite;\n  background: transparent url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=\") no-repeat;\n  background-size: 100%;\n}\n.weui-loading.weui-loading_transparent {\n  background-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMjAnIGhlaWdodD0nMTIwJyB2aWV3Qm94PScwIDAgMTAwIDEwMCc+PHBhdGggZmlsbD0nbm9uZScgZD0nTTAgMGgxMDB2MTAwSDB6Jy8+PHJlY3QgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjU2KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgwIC0zMCknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjUpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKDMwIDEwNS45OCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjQzKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSg2MCA3NS45OCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjM4KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSg5MCA2NSA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjMyKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgxMjAgNTguNjYgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4yOCknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoMTUwIDU0LjAyIDY1KScvPjxyZWN0IHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyB4PSc0Ni41JyB5PSc0MCcgZmlsbD0ncmdiYSgyNTUsMjU1LDI1NSwuMjUpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKDE4MCA1MCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjIpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKC0xNTAgNDUuOTggNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4xNyknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoLTEyMCA0MS4zNCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjE0KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgtOTAgMzUgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4xKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgtNjAgMjQuMDIgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4wMyknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoLTMwIC01Ljk4IDY1KScvPjwvc3ZnPgo=\");\n}\n@-webkit-keyframes weuiLoading {\n  0% {\n    -webkit-transform: rotate3d(0, 0, 1, 0deg);\n            transform: rotate3d(0, 0, 1, 0deg);\n  }\n  100% {\n    -webkit-transform: rotate3d(0, 0, 1, 360deg);\n            transform: rotate3d(0, 0, 1, 360deg);\n  }\n}\n@keyframes weuiLoading {\n  0% {\n    -webkit-transform: rotate3d(0, 0, 1, 0deg);\n            transform: rotate3d(0, 0, 1, 0deg);\n  }\n  100% {\n    -webkit-transform: rotate3d(0, 0, 1, 360deg);\n            transform: rotate3d(0, 0, 1, 360deg);\n  }\n}\n.vux-cell-primary {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.vux-label {\n  display: block;\n  word-wrap: break-word;\n  word-break: break-all;\n}\n.weui-cell__ft .weui-loading {\n  display: block;\n}\n.weui-cell__ft.vux-cell-align-left {\n  text-align: left;\n}\n.weui-cell.vux-cell-no-border-intent:before {\n  left: 0;\n}\n.weui-cell_access .weui-cell__ft.vux-cell-arrow-down:after {\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(90deg);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(90deg);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(90deg);\n}\n.weui-cell_access .weui-cell__ft.vux-cell-arrow-up:after {\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(-90deg);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(-90deg);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(-90deg);\n}\n.vux-cell-arrow-transition:after {\n  -webkit-transition: -webkit-transform 300ms;\n  transition: -webkit-transform 300ms;\n  transition: transform 300ms;\n  transition: transform 300ms, -webkit-transform 300ms;\n}\n.vux-cell-disabled .vux-label {\n  color: #b2b2b2;\n}\n.vux-cell-disabled.weui-cell_access .weui-cell__ft:after {\n  border-color: #e2e2e2;\n}\n", ""]);
+	exports.push([module.id, "/**\n* actionsheet\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/* alias */\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* form-preview\n*/\n/**\n* load-more\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* toast\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* search\n*/\n/**\n* radio\n*/\n.weui-cell_access {\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  color: inherit;\n}\n.weui-cell_access:active {\n  background-color: #ECECEC;\n}\n.weui-cell_access .weui-cell__ft {\n  padding-right: 13px;\n  position: relative;\n}\n.weui-cell_access .weui-cell__ft:after {\n  content: \" \";\n  display: inline-block;\n  height: 6px;\n  width: 6px;\n  border-width: 2px 2px 0 0;\n  border-color: #C8C8CD;\n  border-style: solid;\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n  position: relative;\n  top: -2px;\n  position: absolute;\n  top: 50%;\n  margin-top: -4px;\n  right: 2px;\n}\n.weui-cell_link {\n  color: #586C94;\n  font-size: 14px;\n}\n.weui-cell_link:first-child:before {\n  display: block;\n}\n.weui-cell_access.vux-cell-box {\n  padding-right: 13px;\n  position: relative;\n}\n.weui-cell_access.vux-cell-box:after {\n  content: \" \";\n  display: inline-block;\n  height: 6px;\n  width: 6px;\n  border-width: 2px 2px 0 0;\n  border-color: #C8C8CD;\n  border-style: solid;\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);\n  position: relative;\n  top: -2px;\n  position: absolute;\n  top: 50%;\n  margin-top: -4px;\n  right: 17px;\n}\n.weui-cells {\n  margin-top: 1.17647059em;\n  background-color: #FFFFFF;\n  line-height: 1.41176471;\n  font-size: 17px;\n  overflow: hidden;\n  position: relative;\n}\n.weui-cells:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  height: 1px;\n  border-bottom: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 100%;\n      -ms-transform-origin: 0 100%;\n          transform-origin: 0 100%;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells__title {\n  margin-top: 0.77em;\n  margin-bottom: 0.3em;\n  padding-left: 15px;\n  padding-right: 15px;\n  color: #999999;\n  font-size: 14px;\n}\n.weui-cells__title + .weui-cells {\n  margin-top: 0;\n}\n.weui-cells__tips {\n  margin-top: .3em;\n  color: #999999;\n  padding-left: 15px;\n  padding-right: 15px;\n  font-size: 14px;\n}\n.weui-cell {\n  padding: 10px 15px;\n  position: relative;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.weui-cell:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n  left: 15px;\n}\n.weui-cell:first-child:before {\n  display: none;\n}\n.weui-cell_primary {\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n     -moz-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n.weui-cell__bd {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.weui-cell__ft {\n  text-align: right;\n  color: #999999;\n}\n/**\n* http://www.zhangxinxu.com/wordpress/2015/01/tips-blank-character-chinese-align/\n*/\n.vux-blank-half:before {\n  content: '\\2002';\n  speak: none;\n}\n.vux-blank-full:before {\n  content: '\\2003';\n  speak: none;\n}\n.vux-no-group-title {\n  margin-top: 0.77em;\n}\n", ""]);
 
 	// exports
 
@@ -7569,6 +7438,137 @@
 /***/ },
 
 /***/ 910:
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div>
+	//     <div class="weui-cells__title" v-if="title" :style="{color:titleColor}" v-html="title"></div>
+	//     <div class="weui-cells" :class="{'vux-no-group-title':!title}" :style="{marginTop: typeof gutter === 'number' ? (gutter + 'px') : gutter}">
+	//       <slot name="after-title"></slot>
+	//       <slot></slot>
+	//     </div>
+	//   </div>
+	// </template>
+	//
+	// <script>
+	exports.default = {
+	  name: 'group',
+	  props: {
+	    title: String,
+	    titleColor: String,
+	    labelWidth: String,
+	    labelAlign: String,
+	    labelMarginRight: String,
+	    gutter: [String, Number]
+	  }
+	  // </script>
+	  //
+	  // <style lang="less">
+	  // @import '../../styles/weui/widget/weui_cell/weui_access';
+	  // @import '../../styles/weui/widget/weui_cell/weui_cell_global';
+	  // @import '../../styles/blank.less';
+	  //
+	  // .vux-no-group-title {
+	  //   margin-top: @group-title-margin-top;
+	  // }
+	  // </style>
+
+	};
+
+/***/ },
+
+/***/ 911:
+/***/ function(module, exports) {
+
+	module.exports = "\n<div>\n  <div class=\"weui-cells__title\" v-if=\"title\" :style=\"{color:titleColor}\" v-html=\"title\"></div>\n  <div class=\"weui-cells\" :class=\"{'vux-no-group-title':!title}\" :style=\"{marginTop: typeof gutter === 'number' ? (gutter + 'px') : gutter}\">\n    <slot name=\"after-title\"></slot>\n    <slot></slot>\n  </div>\n</div>\n";
+
+/***/ },
+
+/***/ 912:
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
+	__webpack_require__(913)
+	__vue_script__ = __webpack_require__(915)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] node_modules/vux/src/components/cell/index.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(923)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+	if (__vue_template__) {
+	__vue_options__.template = __vue_template__
+	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-16bcfb2a/index.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+
+/***/ 913:
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(914);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(48)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
+				var newContent = require("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+
+/***/ 914:
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(35)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "/**\n* actionsheet\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/* alias */\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* form-preview\n*/\n/**\n* load-more\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* toast\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* search\n*/\n/**\n* radio\n*/\n.vux-tap-active {\n  tap-highlight-color: rgba(0, 0, 0, 0);\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.vux-tap-active:active {\n  background-color: #ECECEC;\n}\n.weui-cells {\n  margin-top: 1.17647059em;\n  background-color: #FFFFFF;\n  line-height: 1.41176471;\n  font-size: 17px;\n  overflow: hidden;\n  position: relative;\n}\n.weui-cells:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  height: 1px;\n  border-bottom: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 100%;\n      -ms-transform-origin: 0 100%;\n          transform-origin: 0 100%;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-cells__title {\n  margin-top: 0.77em;\n  margin-bottom: 0.3em;\n  padding-left: 15px;\n  padding-right: 15px;\n  color: #999999;\n  font-size: 14px;\n}\n.weui-cells__title + .weui-cells {\n  margin-top: 0;\n}\n.weui-cells__tips {\n  margin-top: .3em;\n  color: #999999;\n  padding-left: 15px;\n  padding-right: 15px;\n  font-size: 14px;\n}\n.weui-cell {\n  padding: 10px 15px;\n  position: relative;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n     -moz-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n}\n.weui-cell:before {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D9D9D9;\n  color: #D9D9D9;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n  left: 15px;\n}\n.weui-cell:first-child:before {\n  display: none;\n}\n.weui-cell_primary {\n  -webkit-box-align: start;\n  -webkit-align-items: flex-start;\n     -moz-box-align: start;\n      -ms-flex-align: start;\n          align-items: flex-start;\n}\n.weui-cell__bd {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.weui-cell__ft {\n  text-align: right;\n  color: #999999;\n}\n.weui-loading {\n  width: 20px;\n  height: 20px;\n  display: inline-block;\n  vertical-align: middle;\n  -webkit-animation: weuiLoading 1s steps(12, end) infinite;\n          animation: weuiLoading 1s steps(12, end) infinite;\n  background: transparent url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMjAiIGhlaWdodD0iMTIwIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCI+PHBhdGggZmlsbD0ibm9uZSIgZD0iTTAgMGgxMDB2MTAwSDB6Ii8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTlFOUU5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLTMwKSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iIzk4OTY5NyIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgzMCAxMDUuOTggNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjOUI5OTlBIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDYwIDc1Ljk4IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0EzQTFBMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSg5MCA2NSA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNBQkE5QUEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoMTIwIDU4LjY2IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0IyQjJCMiIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgxNTAgNTQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjQkFCOEI5IiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA1MCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDMkMwQzEiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTE1MCA0NS45OCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNDQkNCQ0IiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTEyMCA0MS4zNCA2NSkiLz48cmVjdCB3aWR0aD0iNyIgaGVpZ2h0PSIyMCIgeD0iNDYuNSIgeT0iNDAiIGZpbGw9IiNEMkQyRDIiIHJ4PSI1IiByeT0iNSIgdHJhbnNmb3JtPSJyb3RhdGUoLTkwIDM1IDY1KSIvPjxyZWN0IHdpZHRoPSI3IiBoZWlnaHQ9IjIwIiB4PSI0Ni41IiB5PSI0MCIgZmlsbD0iI0RBREFEQSIgcng9IjUiIHJ5PSI1IiB0cmFuc2Zvcm09InJvdGF0ZSgtNjAgMjQuMDIgNjUpIi8+PHJlY3Qgd2lkdGg9IjciIGhlaWdodD0iMjAiIHg9IjQ2LjUiIHk9IjQwIiBmaWxsPSIjRTJFMkUyIiByeD0iNSIgcnk9IjUiIHRyYW5zZm9ybT0icm90YXRlKC0zMCAtNS45OCA2NSkiLz48L3N2Zz4=\") no-repeat;\n  background-size: 100%;\n}\n.weui-loading.weui-loading_transparent {\n  background-image: url(\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMjAnIGhlaWdodD0nMTIwJyB2aWV3Qm94PScwIDAgMTAwIDEwMCc+PHBhdGggZmlsbD0nbm9uZScgZD0nTTAgMGgxMDB2MTAwSDB6Jy8+PHJlY3QgeG1sbnM9J2h0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnJyB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjU2KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3RyYW5zbGF0ZSgwIC0zMCknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjUpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKDMwIDEwNS45OCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjQzKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSg2MCA3NS45OCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjM4KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSg5MCA2NSA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjMyKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgxMjAgNTguNjYgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4yOCknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoMTUwIDU0LjAyIDY1KScvPjxyZWN0IHdpZHRoPSc3JyBoZWlnaHQ9JzIwJyB4PSc0Ni41JyB5PSc0MCcgZmlsbD0ncmdiYSgyNTUsMjU1LDI1NSwuMjUpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKDE4MCA1MCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjIpJyByeD0nNScgcnk9JzUnIHRyYW5zZm9ybT0ncm90YXRlKC0xNTAgNDUuOTggNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4xNyknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoLTEyMCA0MS4zNCA2NSknLz48cmVjdCB3aWR0aD0nNycgaGVpZ2h0PScyMCcgeD0nNDYuNScgeT0nNDAnIGZpbGw9J3JnYmEoMjU1LDI1NSwyNTUsLjE0KScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgtOTAgMzUgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4xKScgcng9JzUnIHJ5PSc1JyB0cmFuc2Zvcm09J3JvdGF0ZSgtNjAgMjQuMDIgNjUpJy8+PHJlY3Qgd2lkdGg9JzcnIGhlaWdodD0nMjAnIHg9JzQ2LjUnIHk9JzQwJyBmaWxsPSdyZ2JhKDI1NSwyNTUsMjU1LC4wMyknIHJ4PSc1JyByeT0nNScgdHJhbnNmb3JtPSdyb3RhdGUoLTMwIC01Ljk4IDY1KScvPjwvc3ZnPgo=\");\n}\n@-webkit-keyframes weuiLoading {\n  0% {\n    -webkit-transform: rotate3d(0, 0, 1, 0deg);\n            transform: rotate3d(0, 0, 1, 0deg);\n  }\n  100% {\n    -webkit-transform: rotate3d(0, 0, 1, 360deg);\n            transform: rotate3d(0, 0, 1, 360deg);\n  }\n}\n@keyframes weuiLoading {\n  0% {\n    -webkit-transform: rotate3d(0, 0, 1, 0deg);\n            transform: rotate3d(0, 0, 1, 0deg);\n  }\n  100% {\n    -webkit-transform: rotate3d(0, 0, 1, 360deg);\n            transform: rotate3d(0, 0, 1, 360deg);\n  }\n}\n.vux-cell-primary {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n}\n.vux-label {\n  display: block;\n  word-wrap: break-word;\n  word-break: break-all;\n}\n.weui-cell__ft .weui-loading {\n  display: block;\n}\n.weui-cell__ft.vux-cell-align-left {\n  text-align: left;\n}\n.weui-cell.vux-cell-no-border-intent:before {\n  left: 0;\n}\n.weui-cell_access .weui-cell__ft.vux-cell-arrow-down:after {\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(90deg);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(90deg);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(90deg);\n}\n.weui-cell_access .weui-cell__ft.vux-cell-arrow-up:after {\n  -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(-90deg);\n      -ms-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(-90deg);\n          transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0) rotate(-90deg);\n}\n.vux-cell-arrow-transition:after {\n  -webkit-transition: -webkit-transform 300ms;\n  transition: -webkit-transform 300ms;\n  transition: transform 300ms;\n  transition: transform 300ms, -webkit-transform 300ms;\n}\n.vux-cell-disabled .vux-label {\n  color: #b2b2b2;\n}\n.vux-cell-disabled.weui-cell_access .weui-cell__ft:after {\n  border-color: #e2e2e2;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+
+/***/ 915:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7577,13 +7577,13 @@
 	  value: true
 	});
 
-	var _inlineDesc = __webpack_require__(911);
+	var _inlineDesc = __webpack_require__(916);
 
 	var _inlineDesc2 = _interopRequireDefault(_inlineDesc);
 
-	var _router = __webpack_require__(916);
+	var _router = __webpack_require__(921);
 
-	var _props = __webpack_require__(917);
+	var _props = __webpack_require__(922);
 
 	var _props2 = _interopRequireDefault(_props);
 
@@ -7709,18 +7709,18 @@
 
 /***/ },
 
-/***/ 911:
+/***/ 916:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(912)
-	__vue_script__ = __webpack_require__(914)
+	__webpack_require__(917)
+	__vue_script__ = __webpack_require__(919)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/inline-desc/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(915)
+	__vue_template__ = __webpack_require__(920)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7736,7 +7736,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-46415eb0/index.vue"
+	  var id = "_v-db721f5a/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7746,13 +7746,13 @@
 
 /***/ },
 
-/***/ 912:
+/***/ 917:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(913);
+	var content = __webpack_require__(918);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -7773,7 +7773,7 @@
 
 /***/ },
 
-/***/ 913:
+/***/ 918:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -7788,7 +7788,7 @@
 
 /***/ },
 
-/***/ 914:
+/***/ 919:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7816,14 +7816,14 @@
 
 /***/ },
 
-/***/ 915:
+/***/ 920:
 /***/ function(module, exports) {
 
 	module.exports = "\n<span class=\"vux-label-desc\"><slot></slot></span>\n";
 
 /***/ },
 
-/***/ 916:
+/***/ 921:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7856,7 +7856,7 @@
 
 /***/ },
 
-/***/ 917:
+/***/ 922:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7889,25 +7889,25 @@
 
 /***/ },
 
-/***/ 918:
+/***/ 923:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div\n  class=\"weui-cell\"\n  :class=\"{\n    'vux-tap-active': isLink || !!link,\n    'weui-cell_access': isLink || !!link,\n    'vux-cell-no-border-intent': !borderIntent,\n    'vux-cell-disabled': disabled\n  }\"\n  @click=\"onClick\">\n  <div class=\"weui-cell__hd\">\n    <slot name=\"icon\"></slot>\n  </div>\n  <div class=\"vux-cell-bd\" :class=\"{'vux-cell-primary': primary === 'title' && valueAlign !== 'left'}\">\n    <p>\n      <label class=\"vux-label\" :style=\"getLabelStyles()\" v-if=\"title || hasTitleSlot\">\n        <slot name=\"title\">{{ title }}</slot>\n      </label>\n      <slot name=\"after-title\"></slot>\n    </p>\n    <inline-desc>\n      <slot name=\"inline-desc\">{{ inlineDesc }}</slot>\n    </inline-desc>\n  </div>\n  <div class=\"weui-cell__ft\" :class=\"valueClass\">\n    <slot name=\"value\"></slot>\n    <slot>{{ value }}</slot>\n    <i class=\"weui-loading\" v-if=\"isLoading\"></i>\n  </div>\n  <slot name=\"child\"></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 928:
+/***/ 933:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(929)
-	__vue_script__ = __webpack_require__(931)
+	__webpack_require__(934)
+	__vue_script__ = __webpack_require__(936)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/alert/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(937)
+	__vue_template__ = __webpack_require__(942)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7923,7 +7923,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-81e18c02/index.vue"
+	  var id = "_v-f832942c/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7933,13 +7933,13 @@
 
 /***/ },
 
-/***/ 929:
+/***/ 934:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(930);
+	var content = __webpack_require__(935);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -7960,7 +7960,7 @@
 
 /***/ },
 
-/***/ 930:
+/***/ 935:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -7975,7 +7975,7 @@
 
 /***/ },
 
-/***/ 931:
+/***/ 936:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7984,7 +7984,7 @@
 	  value: true
 	});
 
-	var _xDialog = __webpack_require__(932);
+	var _xDialog = __webpack_require__(937);
 
 	var _xDialog2 = _interopRequireDefault(_xDialog);
 
@@ -8077,18 +8077,18 @@
 
 /***/ },
 
-/***/ 932:
+/***/ 937:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(933)
-	__vue_script__ = __webpack_require__(935)
+	__webpack_require__(938)
+	__vue_script__ = __webpack_require__(940)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/x-dialog/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(936)
+	__vue_template__ = __webpack_require__(941)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8104,7 +8104,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7a517590/index.vue"
+	  var id = "_v-2a6eedc5/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -8114,13 +8114,13 @@
 
 /***/ },
 
-/***/ 933:
+/***/ 938:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(934);
+	var content = __webpack_require__(939);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8141,7 +8141,7 @@
 
 /***/ },
 
-/***/ 934:
+/***/ 939:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8156,7 +8156,7 @@
 
 /***/ },
 
-/***/ 935:
+/***/ 940:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8239,21 +8239,21 @@
 
 /***/ },
 
-/***/ 936:
+/***/ 941:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-x-dialog\" @touchmove=\"onTouchMove\">\n  <transition :name=\"maskTransition\">\n    <div class=\"weui-mask\" @click=\"hideOnBlur && (currentValue = false)\" v-show=\"currentValue\"></div>\n  </transition>\n  <transition :name=\"dialogTransition\">\n    <div :class=\"dialogClass\" v-show=\"currentValue\" :style=\"dialogStyle\">\n      <slot></slot>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ },
 
-/***/ 937:
+/***/ 942:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-alert\">\n  <x-dialog\n  v-model=\"showValue\"\n  :mask-transition=\"maskTransition\"\n  :dialog-transition=\"dialogTransition\"\n  @on-hide=\"$emit('on-hide')\"\n  @on-show=\"$emit('on-show')\">\n    <div class=\"weui-dialog__hd\">\n      <strong class=\"weui-dialog__title\">{{title}}</strong>\n    </div>\n    <div class=\"weui-dialog__bd\">\n      <slot>\n        <div v-html=\"content\"></div>\n      </slot>\n    </div>\n    <div class=\"weui-dialog__ft\">\n      <a href=\"javascript:;\"\n      class=\"weui-dialog__btn weui-dialog__btn_primary\"\n      @click=\"_onHide\">{{buttonText || '确定'}}</a>\n    </div>\n  </x-dialog>\n</div>\n";
 
 /***/ },
 
-/***/ 954:
+/***/ 959:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8264,15 +8264,15 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _index = __webpack_require__(955);
+	var _index = __webpack_require__(960);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(958);
+	var _index3 = __webpack_require__(963);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _vue = __webpack_require__(480);
+	var _vue = __webpack_require__(485);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
@@ -8327,7 +8327,7 @@
 
 /***/ },
 
-/***/ 955:
+/***/ 960:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8339,11 +8339,11 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _alert = __webpack_require__(928);
+	var _alert = __webpack_require__(933);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
-	var _plugin_helper = __webpack_require__(956);
+	var _plugin_helper = __webpack_require__(961);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8408,7 +8408,7 @@
 
 /***/ },
 
-/***/ 956:
+/***/ 961:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8418,7 +8418,7 @@
 	});
 	exports.mergeOptions = undefined;
 
-	var _objectAssign = __webpack_require__(957);
+	var _objectAssign = __webpack_require__(962);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -8441,7 +8441,7 @@
 
 /***/ },
 
-/***/ 957:
+/***/ 962:
 /***/ function(module, exports) {
 
 	/*
@@ -8538,7 +8538,7 @@
 
 /***/ },
 
-/***/ 958:
+/***/ 963:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8550,11 +8550,11 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _toast = __webpack_require__(959);
+	var _toast = __webpack_require__(964);
 
 	var _toast2 = _interopRequireDefault(_toast);
 
-	var _plugin_helper = __webpack_require__(956);
+	var _plugin_helper = __webpack_require__(961);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8637,18 +8637,18 @@
 
 /***/ },
 
-/***/ 959:
+/***/ 964:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(960)
-	__vue_script__ = __webpack_require__(962)
+	__webpack_require__(965)
+	__vue_script__ = __webpack_require__(967)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/toast/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(964)
+	__vue_template__ = __webpack_require__(969)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8664,7 +8664,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5d97050a/index.vue"
+	  var id = "_v-226e80f5/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -8674,13 +8674,13 @@
 
 /***/ },
 
-/***/ 960:
+/***/ 965:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(961);
+	var content = __webpack_require__(966);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8701,7 +8701,7 @@
 
 /***/ },
 
-/***/ 961:
+/***/ 966:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8716,7 +8716,7 @@
 
 /***/ },
 
-/***/ 962:
+/***/ 967:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8725,7 +8725,7 @@
 	  value: true
 	});
 
-	var _safariFix = __webpack_require__(963);
+	var _safariFix = __webpack_require__(968);
 
 	var _safariFix2 = _interopRequireDefault(_safariFix);
 
@@ -8907,7 +8907,7 @@
 
 /***/ },
 
-/***/ 963:
+/***/ 968:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8933,25 +8933,25 @@
 
 /***/ },
 
-/***/ 964:
+/***/ 969:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-toast\">\n  <div class=\"weui-mask_transparent\" v-show=\"isShowMask && show\"></div>\n  <transition :name=\"currentTransition\">\n    <div class=\"weui-toast\" :style=\"{width: width}\" :class=\"toastClass\" v-show=\"show\">\n      <i class=\"weui-icon-success-no-circle weui-icon_toast\" v-show=\"type !== 'text'\"></i>\n      <p class=\"weui-toast__content\" v-if=\"text\" :style=\"style\" v-html=\"text\"></p>\n      <p class=\"weui-toast__content\" v-else><slot></slot></p>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ },
 
-/***/ 996:
+/***/ 1001:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(997)
-	__vue_script__ = __webpack_require__(999)
+	__webpack_require__(1002)
+	__vue_script__ = __webpack_require__(1004)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/cell-box/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1000)
+	__vue_template__ = __webpack_require__(1005)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8967,7 +8967,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6aaf5f1a/index.vue"
+	  var id = "_v-7ac5c8a8/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -8977,13 +8977,13 @@
 
 /***/ },
 
-/***/ 997:
+/***/ 1002:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(998);
+	var content = __webpack_require__(1003);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -9004,7 +9004,7 @@
 
 /***/ },
 
-/***/ 998:
+/***/ 1003:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -9019,7 +9019,7 @@
 
 /***/ },
 
-/***/ 999:
+/***/ 1004:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9028,7 +9028,7 @@
 	  value: true
 	});
 
-	var _router = __webpack_require__(916);
+	var _router = __webpack_require__(921);
 
 	exports.default = {
 	  name: 'cell-box',
@@ -9074,25 +9074,25 @@
 
 /***/ },
 
-/***/ 1000:
+/***/ 1005:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-cell-box weui-cell\" :class=\"{'vux-tap-active': isLink || !!link, 'weui-cell_access': isLink || !!link, 'vux-cell-no-border-intent': !borderIntent}\" @click=\"onClick\">\n  <div><slot></slot></div>\n</div>\n";
 
 /***/ },
 
-/***/ 1058:
+/***/ 1063:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1059)
-	__vue_script__ = __webpack_require__(1061)
+	__webpack_require__(1064)
+	__vue_script__ = __webpack_require__(1066)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/scroller/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1080)
+	__vue_template__ = __webpack_require__(1085)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -9108,7 +9108,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-34533d66/index.vue"
+	  var id = "_v-d4184cfc/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -9118,13 +9118,13 @@
 
 /***/ },
 
-/***/ 1059:
+/***/ 1064:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1060);
+	var content = __webpack_require__(1065);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -9145,7 +9145,7 @@
 
 /***/ },
 
-/***/ 1060:
+/***/ 1065:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -9160,7 +9160,7 @@
 
 /***/ },
 
-/***/ 1061:
+/***/ 1066:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9169,19 +9169,19 @@
 	  value: true
 	});
 
-	var _objectAssign = __webpack_require__(957);
+	var _objectAssign = __webpack_require__(962);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
-	var _xscroll = __webpack_require__(1062);
+	var _xscroll = __webpack_require__(1067);
 
 	var _xscroll2 = _interopRequireDefault(_xscroll);
 
-	var _pulldown = __webpack_require__(1078);
+	var _pulldown = __webpack_require__(1083);
 
 	var _pulldown2 = _interopRequireDefault(_pulldown);
 
-	var _pullup = __webpack_require__(1079);
+	var _pullup = __webpack_require__(1084);
 
 	var _pullup2 = _interopRequireDefault(_pullup);
 
@@ -9532,18 +9532,18 @@
 
 /***/ },
 
-/***/ 1062:
+/***/ 1067:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063),
-		Base = __webpack_require__(1064),
-		Timer = __webpack_require__(1066),
-		Animate = __webpack_require__(1068),
-		Hammer = __webpack_require__(1069),
-		SimuScroll = __webpack_require__(1070),
-		OriginScroll = __webpack_require__(1077);
+	var Util = __webpack_require__(1068),
+		Base = __webpack_require__(1069),
+		Timer = __webpack_require__(1071),
+		Animate = __webpack_require__(1073),
+		Hammer = __webpack_require__(1074),
+		SimuScroll = __webpack_require__(1075),
+		OriginScroll = __webpack_require__(1082);
 	var XScroll = function(cfg) {
 			var _ = cfg && cfg.useOriginScroll ? OriginScroll : SimuScroll;
 			return new _(cfg);
@@ -9596,7 +9596,7 @@
 
 /***/ },
 
-/***/ 1063:
+/***/ 1068:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -9928,13 +9928,13 @@
 
 /***/ },
 
-/***/ 1064:
+/***/ 1069:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Events = __webpack_require__(1065);
+	var Util = __webpack_require__(1068);
+	var Events = __webpack_require__(1070);
 	/** 
 	      @constructor 
 	      @mixes Events
@@ -10003,12 +10003,12 @@
 
 /***/ },
 
-/***/ 1065:
+/***/ 1070:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
+	var Util = __webpack_require__(1068);
 	// Returns a function that will be executed at most one time, no matter how
 	// often you call it. Useful for lazy initialization.
 	var _once = function(func) {
@@ -10237,14 +10237,14 @@
 
 /***/ },
 
-/***/ 1066:
+/***/ 1071:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Base = __webpack_require__(1064);
-	var Easing = __webpack_require__(1067);
+	var Util = __webpack_require__(1068);
+	var Base = __webpack_require__(1069);
+	var Easing = __webpack_require__(1072);
 
 	var RAF = window.requestAnimationFrame ||
 		window.webkitRequestAnimationFrame ||
@@ -10412,7 +10412,7 @@
 
 /***/ },
 
-/***/ 1067:
+/***/ 1072:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -10449,15 +10449,15 @@
 
 /***/ },
 
-/***/ 1068:
+/***/ 1073:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Timer = __webpack_require__(1066);
-	var Easing = __webpack_require__(1067);
-	var Base = __webpack_require__(1064);
+	var Util = __webpack_require__(1068);
+	var Timer = __webpack_require__(1071);
+	var Easing = __webpack_require__(1072);
+	var Base = __webpack_require__(1069);
 	//transform
 	var vendorTransform = Util.prefixStyle("transform");
 	//transition webkitTransition MozTransition OTransition msTtransition
@@ -10804,7 +10804,7 @@
 
 /***/ },
 
-/***/ 1069:
+/***/ 1074:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -13266,18 +13266,18 @@
 
 /***/ },
 
-/***/ 1070:
+/***/ 1075:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063),
-	  Base = __webpack_require__(1064),
-	  Core = __webpack_require__(1071),
-	  Animate = __webpack_require__(1068),
-	  Hammer = __webpack_require__(1069),
-	  ScrollBar = __webpack_require__(1075),
-	  Controller = __webpack_require__(1076);
+	var Util = __webpack_require__(1068),
+	  Base = __webpack_require__(1069),
+	  Core = __webpack_require__(1076),
+	  Animate = __webpack_require__(1073),
+	  Hammer = __webpack_require__(1074),
+	  ScrollBar = __webpack_require__(1080),
+	  Controller = __webpack_require__(1081);
 	//reduced boundry pan distance
 	var PAN_RATE = 1 - 0.618;
 	//constant for scrolling acceleration
@@ -13973,18 +13973,18 @@
 
 /***/ },
 
-/***/ 1071:
+/***/ 1076:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063),
-	    Base = __webpack_require__(1064),
-	    Animate = __webpack_require__(1068),
-	    Boundry = __webpack_require__(1072),
-	    Hammer = __webpack_require__(1069),
-	    Sticky = __webpack_require__(1073),
-	    Fixed = __webpack_require__(1074);
+	var Util = __webpack_require__(1068),
+	    Base = __webpack_require__(1069),
+	    Animate = __webpack_require__(1073),
+	    Boundry = __webpack_require__(1077),
+	    Hammer = __webpack_require__(1074),
+	    Sticky = __webpack_require__(1078),
+	    Fixed = __webpack_require__(1079);
 	// boundry checked bounce effect
 	var BOUNDRY_CHECK_DURATION = 500;
 	var BOUNDRY_CHECK_EASING = "ease";
@@ -14341,12 +14341,12 @@
 
 /***/ },
 
-/***/ 1072:
+/***/ 1077:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	 var Util = __webpack_require__(1063);
+	 var Util = __webpack_require__(1068);
 
 	 function Boundry(cfg) {
 	     this.cfg = Util.mix({
@@ -14438,13 +14438,13 @@
 
 /***/ },
 
-/***/ 1073:
+/***/ 1078:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Base = __webpack_require__(1064);
+	var Util = __webpack_require__(1068);
+	var Base = __webpack_require__(1069);
 	//transform
 	var transform = Util.prefixStyle("transform");
 	// default render function for position:sticky elements
@@ -14674,13 +14674,13 @@
 
 /***/ },
 
-/***/ 1074:
+/***/ 1079:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Base = __webpack_require__(1064);
+	var Util = __webpack_require__(1068);
+	var Base = __webpack_require__(1069);
 	var transform = Util.prefixStyle("transform");
 
 	var Fixed = function(cfg) {
@@ -14815,13 +14815,13 @@
 
 /***/ },
 
-/***/ 1075:
+/***/ 1080:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Animate = __webpack_require__(1068);
+	var Util = __webpack_require__(1068);
+	var Animate = __webpack_require__(1073);
 	var MAX_BOUNCE_DISTANCE = 40;
 	var MIN_BAR_SCROLLED_SIZE = 10;
 	var MIN_BAR_SIZE = 50;
@@ -15016,7 +15016,7 @@
 
 /***/ },
 
-/***/ 1076:
+/***/ 1081:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -15024,8 +15024,8 @@
 		wrapped scroll controller
 	*/
 	"use strict";
-	var Util = __webpack_require__(1063),
-		Base = __webpack_require__(1064);
+	var Util = __webpack_require__(1068),
+		Base = __webpack_require__(1069);
 
 	var Controller = function(cfg) {
 		Controller.superclass.constructor.call(this, cfg);
@@ -15161,15 +15161,15 @@
 
 /***/ },
 
-/***/ 1077:
+/***/ 1082:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063),
-	    Base = __webpack_require__(1064),
-	    Core = __webpack_require__(1071),
-	    Animate = __webpack_require__(1068);
+	var Util = __webpack_require__(1068),
+	    Base = __webpack_require__(1069),
+	    Core = __webpack_require__(1076),
+	    Animate = __webpack_require__(1073);
 
 	var transformOrigin = Util.prefixStyle("transformOrigin");
 	/** 
@@ -15304,13 +15304,13 @@
 
 /***/ },
 
-/***/ 1078:
+/***/ 1083:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Base = __webpack_require__(1064);
+	var Util = __webpack_require__(1068);
+	var Base = __webpack_require__(1069);
 	var clsPrefix;
 	var containerCls;
 	var content = "Pull Down To Refresh";
@@ -15495,13 +15495,13 @@
 
 /***/ },
 
-/***/ 1079:
+/***/ 1084:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1063);
-	var Base = __webpack_require__(1064);
+	var Util = __webpack_require__(1068);
+	var Base = __webpack_require__(1069);
 	var clsPrefix;
 	var containerCls;
 	var loadingContent = "Loading...";
@@ -15718,30 +15718,30 @@
 
 /***/ },
 
-/***/ 1080:
+/***/ 1085:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"styles\">\n  <div class=\"xs-container\">\n    <slot></slot>\n    <slot name=\"pulldown\"></slot>\n    <slot name=\"pullup\"></slot>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1464:
+/***/ 1469:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1466:
+/***/ 1471:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by jianchep on 17/03/29.
 	 */
 
-	var social = __webpack_require__(1467);
-	var manage = __webpack_require__(1503);
-	var member = __webpack_require__(1520);
+	var social = __webpack_require__(1472);
+	var manage = __webpack_require__(1508);
+	var member = __webpack_require__(1525);
 
 	const routes = [
 	    {path: '/', redirect: '/social'},
@@ -15764,19 +15764,19 @@
 
 /***/ },
 
-/***/ 1467:
+/***/ 1472:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1468)
-	__webpack_require__(1470)
-	__vue_script__ = __webpack_require__(1472)
+	__webpack_require__(1473)
+	__webpack_require__(1475)
+	__vue_script__ = __webpack_require__(1477)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/social.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1502)
+	__vue_template__ = __webpack_require__(1507)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -15792,7 +15792,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-f3ad48ee/social.vue"
+	  var id = "_v-60c3a804/social.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -15802,13 +15802,13 @@
 
 /***/ },
 
-/***/ 1468:
+/***/ 1473:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1469);
+	var content = __webpack_require__(1474);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -15829,7 +15829,7 @@
 
 /***/ },
 
-/***/ 1469:
+/***/ 1474:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -15844,13 +15844,13 @@
 
 /***/ },
 
-/***/ 1470:
+/***/ 1475:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1471);
+	var content = __webpack_require__(1476);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -15859,8 +15859,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f3ad48ee&scoped=true!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./social.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f3ad48ee&scoped=true!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./social.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-60c3a804&scoped=true!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./social.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-60c3a804&scoped=true!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./social.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -15871,7 +15871,7 @@
 
 /***/ },
 
-/***/ 1471:
+/***/ 1476:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -15879,14 +15879,14 @@
 
 
 	// module
-	exports.push([module.id, "#socail_container[_v-f3ad48ee] {\n  width: 100%;\n  height: 100%; }\n", ""]);
+	exports.push([module.id, "#socail_container[_v-60c3a804] {\n  width: 100%;\n  height: 100%; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 1472:
+/***/ 1477:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -15895,23 +15895,23 @@
 	    value: true
 	});
 
-	var _speak = __webpack_require__(1473);
+	var _speak = __webpack_require__(1478);
 
 	var _speak2 = _interopRequireDefault(_speak);
 
-	var _social_title = __webpack_require__(1480);
+	var _social_title = __webpack_require__(1485);
 
 	var _social_title2 = _interopRequireDefault(_social_title);
 
-	var _switch = __webpack_require__(1483);
+	var _switch = __webpack_require__(1488);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _common = __webpack_require__(1490);
+	var _common = __webpack_require__(1495);
 
 	var _common2 = _interopRequireDefault(_common);
 
-	var _userCommon = __webpack_require__(1495);
+	var _userCommon = __webpack_require__(1500);
 
 	var _userCommon2 = _interopRequireDefault(_userCommon);
 
@@ -15923,7 +15923,7 @@
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _dialog = __webpack_require__(954);
+	var _dialog = __webpack_require__(959);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -16740,19 +16740,19 @@
 
 /***/ },
 
-/***/ 1473:
+/***/ 1478:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1474)
-	__webpack_require__(1476)
-	__vue_script__ = __webpack_require__(1478)
+	__webpack_require__(1479)
+	__webpack_require__(1481)
+	__vue_script__ = __webpack_require__(1483)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/speak.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1479)
+	__vue_template__ = __webpack_require__(1484)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -16768,7 +16768,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-62049158/speak.vue"
+	  var id = "_v-39839a7f/speak.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -16778,13 +16778,13 @@
 
 /***/ },
 
-/***/ 1474:
+/***/ 1479:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1475);
+	var content = __webpack_require__(1480);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -16805,7 +16805,7 @@
 
 /***/ },
 
-/***/ 1475:
+/***/ 1480:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -16820,13 +16820,13 @@
 
 /***/ },
 
-/***/ 1476:
+/***/ 1481:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1477);
+	var content = __webpack_require__(1482);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -16835,8 +16835,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-62049158&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./speak.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-62049158&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./speak.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-39839a7f&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./speak.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-39839a7f&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./speak.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -16847,7 +16847,7 @@
 
 /***/ },
 
-/***/ 1477:
+/***/ 1482:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -16855,14 +16855,14 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * lib中map使用“_”开头，本文件中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * 合并base和extra中的同类base map\r\n * 用以解决业务方升级Yo时需比base和extra的一致性\r\n * 当extra为空时，base map将以base文件里的定义作为默认值\r\n * 当extra不为空时，base map使用extra文件里的定义\r\n */\n/**\n * Yo框架全局Variables\n * Yo基础变量map，如果不想定义某属性，将其value设置为null；\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\n * variables中map使用“_”开头，本文件中不使用\"_\"\n * variables ⇌ config\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * 合并variables和config中的同类map\r\n * 用以解决业务方升级Yo时需比config和variables的一致性\r\n * 当config为空时，使用variables中的map作为默认值\r\n * 当config不为空时，使用config中的定义\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 功能\r\n * @description 给需要的属性加厂家前缀\r\n * @method _prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 定义字体图标\r\n * @method _yofont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 四则运算(iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example <div class=\"calc\">四则运算</div>\r\n * .calc { @include calc(width, \"100% - 100px\"); }\r\n */\n/**\r\n * @module 功能\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除行内级元素间间隙方案\r\n * @method killspace\r\n * @version 1.0.0\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n * .demo {@include killspace;}\r\n */\n/**\r\n * @module 功能\r\n * @description 元素在包含块中的对齐方式，默认为水平垂直对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 指定包含块布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {String} $type 指定居中元素类型，可选值：image | text | other，默认值：text <2.0.0>\r\n * @param {Keywords} $justify-content 指定元素水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keywords} $align-items 指定元素垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <img class=\"item\" alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n * .demo {@include align;}\r\n */\n/**\r\n * @module 功能\r\n * @description 定义文档根节点是否允许滚动\r\n * @method root-scroll\r\n * @version 1.4.0\r\n * @param {Boolean} $is-scroll 指定是否有滚动，默认值：false <1.8.6>\r\n */\n/**\r\n * @module 功能\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(iOS7.0+,Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(iOS7.0+,Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*[_v-62049158],[_v-62049158]\n::before,[_v-62049158]\n::after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml[_v-62049158],\nbody[_v-62049158] {\n  overflow: hidden;\n  height: 100%; }\n\n[_v-62049158]::-webkit-scrollbar {\n  display: none; }\n\nhtml[_v-62049158] {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n   -ms-user-select: text;\n       user-select: text; }\n\nbody[_v-62049158] {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul[_v-62049158],\nol[_v-62049158],\ndl[_v-62049158],\ndd[_v-62049158],\nh1[_v-62049158],\nh2[_v-62049158],\nh3[_v-62049158],\nh4[_v-62049158],\nh5[_v-62049158],\nh6[_v-62049158],\nfigure[_v-62049158],\nform[_v-62049158],\nfieldset[_v-62049158],\nlegend[_v-62049158],\ninput[_v-62049158],\ntextarea[_v-62049158],\nbutton[_v-62049158],\np[_v-62049158],\nblockquote[_v-62049158],\nth[_v-62049158],\ntd[_v-62049158],\npre[_v-62049158],\nxmp[_v-62049158] {\n  margin: 0;\n  padding: 0; }\n\ninput[_v-62049158],\ntextarea[_v-62049158],\nbutton[_v-62049158],\nselect[_v-62049158],\npre[_v-62049158],\nxmp[_v-62049158],\ntt[_v-62049158],\ncode[_v-62049158],\nkbd[_v-62049158],\nsamp[_v-62049158] {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1[_v-62049158],\nh2[_v-62049158],\nh3[_v-62049158],\nh4[_v-62049158],\nh5[_v-62049158],\nh6[_v-62049158],\nsmall[_v-62049158],\nbig[_v-62049158],\ninput[_v-62049158],\ntextarea[_v-62049158],\nbutton[_v-62049158],\nselect[_v-62049158] {\n  font-size: inherit; }\n\naddress[_v-62049158],\ncite[_v-62049158],\ndfn[_v-62049158],\nem[_v-62049158],\ni[_v-62049158],\noptgroup[_v-62049158],\nvar[_v-62049158] {\n  font-style: normal; }\n\ntable[_v-62049158] {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul[_v-62049158],\nol[_v-62049158],\nmenu[_v-62049158] {\n  list-style: none; }\n\nfieldset[_v-62049158],\nimg[_v-62049158] {\n  border: 0;\n  vertical-align: middle; }\n\narticle[_v-62049158],\naside[_v-62049158],\ndetails[_v-62049158],\nfigcaption[_v-62049158],\nfigure[_v-62049158],\nfooter[_v-62049158],\nheader[_v-62049158],\nmain[_v-62049158],\nmenu[_v-62049158],\nnav[_v-62049158],\nsection[_v-62049158],\nsummary[_v-62049158] {\n  display: block; }\n\naudio[_v-62049158],\ncanvas[_v-62049158],\nvideo[_v-62049158] {\n  display: inline-block; }\n\nblockquote[_v-62049158]:before,\nblockquote[_v-62049158]:after,\nq[_v-62049158]:before,\nq[_v-62049158]:after {\n  content: \" \"; }\n\ntextarea[_v-62049158],\npre[_v-62049158],\nxmp[_v-62049158] {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea[_v-62049158] {\n  resize: vertical; }\n\ninput[_v-62049158],\ntextarea[_v-62049158],\nbutton[_v-62049158],\nselect\na[_v-62049158] {\n  outline: 0 none; }\n\ninput[_v-62049158],\ntextarea[_v-62049158],\nbutton[_v-62049158],\nselect[_v-62049158] {\n  color: inherit; }\n  input[_v-62049158]:disabled,\n  textarea[_v-62049158]:disabled,\n  button[_v-62049158]:disabled,\n  select[_v-62049158]:disabled {\n    opacity: 1; }\n\nbutton[_v-62049158]::-moz-focus-inner,\ninput[_v-62049158]::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"][_v-62049158],\ninput[type=\"submit\"][_v-62049158],\ninput[type=\"reset\"][_v-62049158],\ninput[type=\"file\"][_v-62049158]::-webkit-file-upload-button,\ninput[type=\"search\"][_v-62049158]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\nmark[_v-62049158] {\n  background-color: transparent; }\n\na[_v-62049158],\nins[_v-62049158],\ns[_v-62049158],\nu[_v-62049158],\ndel[_v-62049158] {\n  text-decoration: none; }\n\na[_v-62049158] {\n  color: #00afc7; }\n\n.g-clear[_v-62049158]::after,\n.g-mod[_v-62049158]::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico[_v-62049158] {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * lib中map使用“_”开头，本文件中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * 合并base和extra中的同类base map\r\n * 用以解决业务方升级Yo时需比base和extra的一致性\r\n * 当extra为空时，base map将以base文件里的定义作为默认值\r\n * 当extra不为空时，base map使用extra文件里的定义\r\n */\n/**\n * Yo框架全局Variables\n * Yo基础变量map，如果不想定义某属性，将其value设置为null；\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\n * variables中map使用“_”开头，本文件中不使用\"_\"\n * variables ⇌ config\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * 合并variables和config中的同类map\r\n * 用以解决业务方升级Yo时需比config和variables的一致性\r\n * 当config为空时，使用variables中的map作为默认值\r\n * 当config不为空时，使用config中的定义\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 功能\r\n * @description 给需要的属性加厂家前缀\r\n * @method _prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 定义字体图标\r\n * @method _yofont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 四则运算(iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example <div class=\"calc\">四则运算</div>\r\n * .calc { @include calc(width, \"100% - 100px\"); }\r\n */\n/**\r\n * @module 功能\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除行内级元素间间隙方案\r\n * @method killspace\r\n * @version 1.0.0\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n * .demo {@include killspace;}\r\n */\n/**\r\n * @module 功能\r\n * @description 元素在包含块中的对齐方式，默认为水平垂直对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 指定包含块布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {String} $type 指定居中元素类型，可选值：image | text | other，默认值：text <2.0.0>\r\n * @param {Keywords} $justify-content 指定元素水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keywords} $align-items 指定元素垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <img class=\"item\" alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n * .demo {@include align;}\r\n */\n/**\r\n * @module 功能\r\n * @description 定义文档根节点是否允许滚动\r\n * @method root-scroll\r\n * @version 1.4.0\r\n * @param {Boolean} $is-scroll 指定是否有滚动，默认值：false <1.8.6>\r\n */\n/**\r\n * @module 功能\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(iOS7.0+,Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(iOS7.0+,Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*[_v-62049158],[_v-62049158]\n::before,[_v-62049158]\n::after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml[_v-62049158],\nbody[_v-62049158] {\n  overflow: hidden;\n  height: 100%; }\n\n[_v-62049158]::-webkit-scrollbar {\n  display: none; }\n\nhtml[_v-62049158] {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n   -ms-user-select: text;\n       user-select: text; }\n\nbody[_v-62049158] {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul[_v-62049158],\nol[_v-62049158],\ndl[_v-62049158],\ndd[_v-62049158],\nh1[_v-62049158],\nh2[_v-62049158],\nh3[_v-62049158],\nh4[_v-62049158],\nh5[_v-62049158],\nh6[_v-62049158],\nfigure[_v-62049158],\nform[_v-62049158],\nfieldset[_v-62049158],\nlegend[_v-62049158],\ninput[_v-62049158],\ntextarea[_v-62049158],\nbutton[_v-62049158],\np[_v-62049158],\nblockquote[_v-62049158],\nth[_v-62049158],\ntd[_v-62049158],\npre[_v-62049158],\nxmp[_v-62049158] {\n  margin: 0;\n  padding: 0; }\n\ninput[_v-62049158],\ntextarea[_v-62049158],\nbutton[_v-62049158],\nselect[_v-62049158],\npre[_v-62049158],\nxmp[_v-62049158],\ntt[_v-62049158],\ncode[_v-62049158],\nkbd[_v-62049158],\nsamp[_v-62049158] {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1[_v-62049158],\nh2[_v-62049158],\nh3[_v-62049158],\nh4[_v-62049158],\nh5[_v-62049158],\nh6[_v-62049158],\nsmall[_v-62049158],\nbig[_v-62049158],\ninput[_v-62049158],\ntextarea[_v-62049158],\nbutton[_v-62049158],\nselect[_v-62049158] {\n  font-size: inherit; }\n\naddress[_v-62049158],\ncite[_v-62049158],\ndfn[_v-62049158],\nem[_v-62049158],\ni[_v-62049158],\noptgroup[_v-62049158],\nvar[_v-62049158] {\n  font-style: normal; }\n\ntable[_v-62049158] {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul[_v-62049158],\nol[_v-62049158],\nmenu[_v-62049158] {\n  list-style: none; }\n\nfieldset[_v-62049158],\nimg[_v-62049158] {\n  border: 0;\n  vertical-align: middle; }\n\narticle[_v-62049158],\naside[_v-62049158],\ndetails[_v-62049158],\nfigcaption[_v-62049158],\nfigure[_v-62049158],\nfooter[_v-62049158],\nheader[_v-62049158],\nmain[_v-62049158],\nmenu[_v-62049158],\nnav[_v-62049158],\nsection[_v-62049158],\nsummary[_v-62049158] {\n  display: block; }\n\naudio[_v-62049158],\ncanvas[_v-62049158],\nvideo[_v-62049158] {\n  display: inline-block; }\n\nblockquote[_v-62049158]:before,\nblockquote[_v-62049158]:after,\nq[_v-62049158]:before,\nq[_v-62049158]:after {\n  content: \" \"; }\n\ntextarea[_v-62049158],\npre[_v-62049158],\nxmp[_v-62049158] {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea[_v-62049158] {\n  resize: vertical; }\n\ninput[_v-62049158],\ntextarea[_v-62049158],\nbutton[_v-62049158],\nselect\na[_v-62049158] {\n  outline: 0 none; }\n\ninput[_v-62049158],\ntextarea[_v-62049158],\nbutton[_v-62049158],\nselect[_v-62049158] {\n  color: inherit; }\n  input[_v-62049158]:disabled,\n  textarea[_v-62049158]:disabled,\n  button[_v-62049158]:disabled,\n  select[_v-62049158]:disabled {\n    opacity: 1; }\n\nbutton[_v-62049158]::-moz-focus-inner,\ninput[_v-62049158]::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"][_v-62049158],\ninput[type=\"submit\"][_v-62049158],\ninput[type=\"reset\"][_v-62049158],\ninput[type=\"file\"][_v-62049158]::-webkit-file-upload-button,\ninput[type=\"search\"][_v-62049158]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\nmark[_v-62049158] {\n  background-color: transparent; }\n\na[_v-62049158],\nins[_v-62049158],\ns[_v-62049158],\nu[_v-62049158],\ndel[_v-62049158] {\n  text-decoration: none; }\n\na[_v-62049158] {\n  color: #00afc7; }\n\n.g-clear[_v-62049158]::after,\n.g-mod[_v-62049158]::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico[_v-62049158] {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n.commonList-container[_v-62049158] {\n  padding-bottom: 40px;\n  position: relative;\n  width: 100%; }\n  .commonList-container .class_introduce_con[_v-62049158] {\n    position: relative;\n    padding: 5px 10px 0;\n    width: 100%; }\n    .commonList-container .class_introduce_con[_v-62049158]::after {\n      pointer-events: none;\n      position: absolute;\n      z-index: 999;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      content: \" \";\n      border-color: #E1E1E1;\n      border-style: solid;\n      border-width: 0 0 1px 0;\n      -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0; }\n      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.4895833333333333), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n        .commonList-container .class_introduce_con[_v-62049158]::after {\n          width: 100%;\n          height: 100%; } }\n      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.4895833333333335), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n        .commonList-container .class_introduce_con[_v-62049158]::after {\n          width: 200%;\n          height: 200%;\n          -webkit-transform: scale(0.5);\n          -ms-transform: scale(0.5);\n              transform: scale(0.5); } }\n      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n        .commonList-container .class_introduce_con[_v-62049158]::after {\n          width: 300%;\n          height: 300%;\n          -webkit-transform: scale(0.33333);\n          -ms-transform: scale(0.33333);\n              transform: scale(0.33333); } }\n    .commonList-container .class_introduce_con .comment_tit[_v-62049158] {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: -moz-box;\n      display: -ms-flexbox;\n      display: flex;\n      height: 50px; }\n      .commonList-container .class_introduce_con .comment_tit .img[_v-62049158] {\n        border-radius: 20px;\n        background-clip: padding-box !important;\n        width: 46px;\n        height: 46px;\n        background: pink;\n        margin-right: 5px;\n        margin-top: 5px;\n        -webkit-box-shadow: none !important;\n                box-shadow: none !important; }\n      .commonList-container .class_introduce_con .comment_tit .comment_dis[_v-62049158] {\n        -webkit-box-flex: 1;\n        -webkit-flex: 1;\n        -moz-box-flex: 1;\n         -ms-flex: 1;\n             flex: 1;\n        width: .1px;\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: -moz-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n        -webkit-justify-content: center;\n        -moz-box-pack: center;\n         -ms-flex-pack: center;\n             justify-content: center;\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n        -webkit-flex-direction: column;\n        -moz-box-orient: vertical;\n        -moz-box-direction: normal;\n         -ms-flex-direction: column;\n             flex-direction: column;\n        width: 100% !important;\n        padding: 5px 0; }\n        .commonList-container .class_introduce_con .comment_tit .comment_dis span[_v-62049158] {\n          display: block !important;\n          width: 80% !important;\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          -moz-box-flex: 1;\n           -ms-flex: 1;\n               flex: 1;\n          width: .1px;\n          color: #999;\n          font-size: 12px; }\n        .commonList-container .class_introduce_con .comment_tit .comment_dis .commentname[_v-62049158] {\n          font-size: 14px;\n          color: #333;\n          line-height: 30px; }\n    .commonList-container .class_introduce_con .class_introduce_text[_v-62049158] {\n      font-size: 14px;\n      color: #666;\n      padding: 5px 0;\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: -moz-box;\n      display: -ms-flexbox;\n      display: flex; }\n\n#speak_container .bottominput[_v-62049158] {\n  max-width: 640px;\n  z-index: 112;\n  border-top: .5px solid #E3DFD8;\n  background: #F9F7F8;\n  position: relative;\n  height: 45px;\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -moz-box-pack: center;\n   -ms-flex-pack: center;\n       justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -moz-box-align: center;\n   -ms-flex-align: center;\n       align-items: center;\n  position: fixed;\n  bottom: 0;\n  padding: 8px; }\n  #speak_container .bottominput[_v-62049158]::after {\n    pointer-events: none;\n    position: absolute;\n    z-index: 999;\n    top: 0;\n    left: 0;\n    overflow: hidden;\n    content: \" \";\n    border-color: #e1e1e1;\n    border-style: solid;\n    border-width: 1px 0 0 0;\n    -webkit-transform-origin: 0 0;\n    -ms-transform-origin: 0 0;\n        transform-origin: 0 0; }\n    @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.4895833333333333), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n      #speak_container .bottominput[_v-62049158]::after {\n        width: 100%;\n        height: 100%; } }\n    @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.4895833333333335), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n      #speak_container .bottominput[_v-62049158]::after {\n        width: 200%;\n        height: 200%;\n        -webkit-transform: scale(0.5);\n        -ms-transform: scale(0.5);\n            transform: scale(0.5); } }\n    @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n      #speak_container .bottominput[_v-62049158]::after {\n        width: 300%;\n        height: 300%;\n        -webkit-transform: scale(0.33333);\n        -ms-transform: scale(0.33333);\n            transform: scale(0.33333); } }\n  #speak_container .bottominput .text_talk[_v-62049158] {\n    margin-left: 0px;\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    -moz-box-flex: 1;\n     -ms-flex: 1;\n         flex: 1;\n    width: .1px;\n    height: 34px;\n    position: relative;\n    background: #FFFFFF;\n    border-radius: 5px;\n    background-clip: padding-box !important; }\n    #speak_container .bottominput .text_talk[_v-62049158]::after {\n      pointer-events: none;\n      position: absolute;\n      z-index: 999;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      content: \" \";\n      border-color: #eee;\n      border-style: solid;\n      border-width: 1px 1px 1px 1px;\n      -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0; }\n      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.4895833333333333), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n        #speak_container .bottominput .text_talk[_v-62049158]::after {\n          width: 100%;\n          height: 100%; } }\n      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.4895833333333335), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n        #speak_container .bottominput .text_talk[_v-62049158]::after {\n          width: 200%;\n          height: 200%;\n          -webkit-transform: scale(0.5);\n          -ms-transform: scale(0.5);\n              transform: scale(0.5); } }\n      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n        #speak_container .bottominput .text_talk[_v-62049158]::after {\n          width: 300%;\n          height: 300%;\n          -webkit-transform: scale(0.33333);\n          -ms-transform: scale(0.33333);\n              transform: scale(0.33333); } }\n    #speak_container .bottominput .text_talk input[_v-62049158] {\n      height: 100%;\n      width: 100%;\n      text-indent: 10px;\n      border-radius: 5px; }\n  #speak_container .bottominput .send[_v-62049158] {\n    width: 70px;\n    height: 34px;\n    line-height: 34px;\n    margin-left: 8px;\n    text-align: center;\n    color: #FFFFFF;\n    background: #FF4A7D;\n    border-radius: 3px;\n    background-clip: padding-box !important; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * lib中map使用“_”开头，本文件中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * 合并base和extra中的同类base map\r\n * 用以解决业务方升级Yo时需比base和extra的一致性\r\n * 当extra为空时，base map将以base文件里的定义作为默认值\r\n * 当extra不为空时，base map使用extra文件里的定义\r\n */\n/**\n * Yo框架全局Variables\n * Yo基础变量map，如果不想定义某属性，将其value设置为null；\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\n * variables中map使用“_”开头，本文件中不使用\"_\"\n * variables ⇌ config\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * 合并variables和config中的同类map\r\n * 用以解决业务方升级Yo时需比config和variables的一致性\r\n * 当config为空时，使用variables中的map作为默认值\r\n * 当config不为空时，使用config中的定义\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 功能\r\n * @description 给需要的属性加厂家前缀\r\n * @method _prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 定义字体图标\r\n * @method _yofont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 四则运算(iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example <div class=\"calc\">四则运算</div>\r\n * .calc { @include calc(width, \"100% - 100px\"); }\r\n */\n/**\r\n * @module 功能\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除行内级元素间间隙方案\r\n * @method killspace\r\n * @version 1.0.0\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n * .demo {@include killspace;}\r\n */\n/**\r\n * @module 功能\r\n * @description 元素在包含块中的对齐方式，默认为水平垂直对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 指定包含块布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {String} $type 指定居中元素类型，可选值：image | text | other，默认值：text <2.0.0>\r\n * @param {Keywords} $justify-content 指定元素水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keywords} $align-items 指定元素垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <img class=\"item\" alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n * .demo {@include align;}\r\n */\n/**\r\n * @module 功能\r\n * @description 定义文档根节点是否允许滚动\r\n * @method root-scroll\r\n * @version 1.4.0\r\n * @param {Boolean} $is-scroll 指定是否有滚动，默认值：false <1.8.6>\r\n */\n/**\r\n * @module 功能\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(iOS7.0+,Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(iOS7.0+,Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*[_v-39839a7f],[_v-39839a7f]\n::before,[_v-39839a7f]\n::after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml[_v-39839a7f],\nbody[_v-39839a7f] {\n  overflow: hidden;\n  height: 100%; }\n\n[_v-39839a7f]::-webkit-scrollbar {\n  display: none; }\n\nhtml[_v-39839a7f] {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n   -ms-user-select: text;\n       user-select: text; }\n\nbody[_v-39839a7f] {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul[_v-39839a7f],\nol[_v-39839a7f],\ndl[_v-39839a7f],\ndd[_v-39839a7f],\nh1[_v-39839a7f],\nh2[_v-39839a7f],\nh3[_v-39839a7f],\nh4[_v-39839a7f],\nh5[_v-39839a7f],\nh6[_v-39839a7f],\nfigure[_v-39839a7f],\nform[_v-39839a7f],\nfieldset[_v-39839a7f],\nlegend[_v-39839a7f],\ninput[_v-39839a7f],\ntextarea[_v-39839a7f],\nbutton[_v-39839a7f],\np[_v-39839a7f],\nblockquote[_v-39839a7f],\nth[_v-39839a7f],\ntd[_v-39839a7f],\npre[_v-39839a7f],\nxmp[_v-39839a7f] {\n  margin: 0;\n  padding: 0; }\n\ninput[_v-39839a7f],\ntextarea[_v-39839a7f],\nbutton[_v-39839a7f],\nselect[_v-39839a7f],\npre[_v-39839a7f],\nxmp[_v-39839a7f],\ntt[_v-39839a7f],\ncode[_v-39839a7f],\nkbd[_v-39839a7f],\nsamp[_v-39839a7f] {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1[_v-39839a7f],\nh2[_v-39839a7f],\nh3[_v-39839a7f],\nh4[_v-39839a7f],\nh5[_v-39839a7f],\nh6[_v-39839a7f],\nsmall[_v-39839a7f],\nbig[_v-39839a7f],\ninput[_v-39839a7f],\ntextarea[_v-39839a7f],\nbutton[_v-39839a7f],\nselect[_v-39839a7f] {\n  font-size: inherit; }\n\naddress[_v-39839a7f],\ncite[_v-39839a7f],\ndfn[_v-39839a7f],\nem[_v-39839a7f],\ni[_v-39839a7f],\noptgroup[_v-39839a7f],\nvar[_v-39839a7f] {\n  font-style: normal; }\n\ntable[_v-39839a7f] {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul[_v-39839a7f],\nol[_v-39839a7f],\nmenu[_v-39839a7f] {\n  list-style: none; }\n\nfieldset[_v-39839a7f],\nimg[_v-39839a7f] {\n  border: 0;\n  vertical-align: middle; }\n\narticle[_v-39839a7f],\naside[_v-39839a7f],\ndetails[_v-39839a7f],\nfigcaption[_v-39839a7f],\nfigure[_v-39839a7f],\nfooter[_v-39839a7f],\nheader[_v-39839a7f],\nmain[_v-39839a7f],\nmenu[_v-39839a7f],\nnav[_v-39839a7f],\nsection[_v-39839a7f],\nsummary[_v-39839a7f] {\n  display: block; }\n\naudio[_v-39839a7f],\ncanvas[_v-39839a7f],\nvideo[_v-39839a7f] {\n  display: inline-block; }\n\nblockquote[_v-39839a7f]:before,\nblockquote[_v-39839a7f]:after,\nq[_v-39839a7f]:before,\nq[_v-39839a7f]:after {\n  content: \" \"; }\n\ntextarea[_v-39839a7f],\npre[_v-39839a7f],\nxmp[_v-39839a7f] {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea[_v-39839a7f] {\n  resize: vertical; }\n\ninput[_v-39839a7f],\ntextarea[_v-39839a7f],\nbutton[_v-39839a7f],\nselect\na[_v-39839a7f] {\n  outline: 0 none; }\n\ninput[_v-39839a7f],\ntextarea[_v-39839a7f],\nbutton[_v-39839a7f],\nselect[_v-39839a7f] {\n  color: inherit; }\n  input[_v-39839a7f]:disabled,\n  textarea[_v-39839a7f]:disabled,\n  button[_v-39839a7f]:disabled,\n  select[_v-39839a7f]:disabled {\n    opacity: 1; }\n\nbutton[_v-39839a7f]::-moz-focus-inner,\ninput[_v-39839a7f]::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"][_v-39839a7f],\ninput[type=\"submit\"][_v-39839a7f],\ninput[type=\"reset\"][_v-39839a7f],\ninput[type=\"file\"][_v-39839a7f]::-webkit-file-upload-button,\ninput[type=\"search\"][_v-39839a7f]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\nmark[_v-39839a7f] {\n  background-color: transparent; }\n\na[_v-39839a7f],\nins[_v-39839a7f],\ns[_v-39839a7f],\nu[_v-39839a7f],\ndel[_v-39839a7f] {\n  text-decoration: none; }\n\na[_v-39839a7f] {\n  color: #00afc7; }\n\n.g-clear[_v-39839a7f]::after,\n.g-mod[_v-39839a7f]::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico[_v-39839a7f] {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * lib中map使用“_”开头，本文件中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * 合并base和extra中的同类base map\r\n * 用以解决业务方升级Yo时需比base和extra的一致性\r\n * 当extra为空时，base map将以base文件里的定义作为默认值\r\n * 当extra不为空时，base map使用extra文件里的定义\r\n */\n/**\n * Yo框架全局Variables\n * Yo基础变量map，如果不想定义某属性，将其value设置为null；\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\n * variables中map使用“_”开头，本文件中不使用\"_\"\n * variables ⇌ config\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * 合并variables和config中的同类map\r\n * 用以解决业务方升级Yo时需比config和variables的一致性\r\n * 当config为空时，使用variables中的map作为默认值\r\n * 当config不为空时，使用config中的定义\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 功能\r\n * @description 给需要的属性加厂家前缀\r\n * @method _prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 定义字体图标\r\n * @method _yofont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 四则运算(iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example <div class=\"calc\">四则运算</div>\r\n * .calc { @include calc(width, \"100% - 100px\"); }\r\n */\n/**\r\n * @module 功能\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除行内级元素间间隙方案\r\n * @method killspace\r\n * @version 1.0.0\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n * .demo {@include killspace;}\r\n */\n/**\r\n * @module 功能\r\n * @description 元素在包含块中的对齐方式，默认为水平垂直对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 指定包含块布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {String} $type 指定居中元素类型，可选值：image | text | other，默认值：text <2.0.0>\r\n * @param {Keywords} $justify-content 指定元素水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keywords} $align-items 指定元素垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <img class=\"item\" alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n * .demo {@include align;}\r\n */\n/**\r\n * @module 功能\r\n * @description 定义文档根节点是否允许滚动\r\n * @method root-scroll\r\n * @version 1.4.0\r\n * @param {Boolean} $is-scroll 指定是否有滚动，默认值：false <1.8.6>\r\n */\n/**\r\n * @module 功能\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(iOS7.0+,Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(iOS7.0+,Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*[_v-39839a7f],[_v-39839a7f]\n::before,[_v-39839a7f]\n::after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml[_v-39839a7f],\nbody[_v-39839a7f] {\n  overflow: hidden;\n  height: 100%; }\n\n[_v-39839a7f]::-webkit-scrollbar {\n  display: none; }\n\nhtml[_v-39839a7f] {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n   -ms-user-select: text;\n       user-select: text; }\n\nbody[_v-39839a7f] {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul[_v-39839a7f],\nol[_v-39839a7f],\ndl[_v-39839a7f],\ndd[_v-39839a7f],\nh1[_v-39839a7f],\nh2[_v-39839a7f],\nh3[_v-39839a7f],\nh4[_v-39839a7f],\nh5[_v-39839a7f],\nh6[_v-39839a7f],\nfigure[_v-39839a7f],\nform[_v-39839a7f],\nfieldset[_v-39839a7f],\nlegend[_v-39839a7f],\ninput[_v-39839a7f],\ntextarea[_v-39839a7f],\nbutton[_v-39839a7f],\np[_v-39839a7f],\nblockquote[_v-39839a7f],\nth[_v-39839a7f],\ntd[_v-39839a7f],\npre[_v-39839a7f],\nxmp[_v-39839a7f] {\n  margin: 0;\n  padding: 0; }\n\ninput[_v-39839a7f],\ntextarea[_v-39839a7f],\nbutton[_v-39839a7f],\nselect[_v-39839a7f],\npre[_v-39839a7f],\nxmp[_v-39839a7f],\ntt[_v-39839a7f],\ncode[_v-39839a7f],\nkbd[_v-39839a7f],\nsamp[_v-39839a7f] {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1[_v-39839a7f],\nh2[_v-39839a7f],\nh3[_v-39839a7f],\nh4[_v-39839a7f],\nh5[_v-39839a7f],\nh6[_v-39839a7f],\nsmall[_v-39839a7f],\nbig[_v-39839a7f],\ninput[_v-39839a7f],\ntextarea[_v-39839a7f],\nbutton[_v-39839a7f],\nselect[_v-39839a7f] {\n  font-size: inherit; }\n\naddress[_v-39839a7f],\ncite[_v-39839a7f],\ndfn[_v-39839a7f],\nem[_v-39839a7f],\ni[_v-39839a7f],\noptgroup[_v-39839a7f],\nvar[_v-39839a7f] {\n  font-style: normal; }\n\ntable[_v-39839a7f] {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul[_v-39839a7f],\nol[_v-39839a7f],\nmenu[_v-39839a7f] {\n  list-style: none; }\n\nfieldset[_v-39839a7f],\nimg[_v-39839a7f] {\n  border: 0;\n  vertical-align: middle; }\n\narticle[_v-39839a7f],\naside[_v-39839a7f],\ndetails[_v-39839a7f],\nfigcaption[_v-39839a7f],\nfigure[_v-39839a7f],\nfooter[_v-39839a7f],\nheader[_v-39839a7f],\nmain[_v-39839a7f],\nmenu[_v-39839a7f],\nnav[_v-39839a7f],\nsection[_v-39839a7f],\nsummary[_v-39839a7f] {\n  display: block; }\n\naudio[_v-39839a7f],\ncanvas[_v-39839a7f],\nvideo[_v-39839a7f] {\n  display: inline-block; }\n\nblockquote[_v-39839a7f]:before,\nblockquote[_v-39839a7f]:after,\nq[_v-39839a7f]:before,\nq[_v-39839a7f]:after {\n  content: \" \"; }\n\ntextarea[_v-39839a7f],\npre[_v-39839a7f],\nxmp[_v-39839a7f] {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea[_v-39839a7f] {\n  resize: vertical; }\n\ninput[_v-39839a7f],\ntextarea[_v-39839a7f],\nbutton[_v-39839a7f],\nselect\na[_v-39839a7f] {\n  outline: 0 none; }\n\ninput[_v-39839a7f],\ntextarea[_v-39839a7f],\nbutton[_v-39839a7f],\nselect[_v-39839a7f] {\n  color: inherit; }\n  input[_v-39839a7f]:disabled,\n  textarea[_v-39839a7f]:disabled,\n  button[_v-39839a7f]:disabled,\n  select[_v-39839a7f]:disabled {\n    opacity: 1; }\n\nbutton[_v-39839a7f]::-moz-focus-inner,\ninput[_v-39839a7f]::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"][_v-39839a7f],\ninput[type=\"submit\"][_v-39839a7f],\ninput[type=\"reset\"][_v-39839a7f],\ninput[type=\"file\"][_v-39839a7f]::-webkit-file-upload-button,\ninput[type=\"search\"][_v-39839a7f]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\nmark[_v-39839a7f] {\n  background-color: transparent; }\n\na[_v-39839a7f],\nins[_v-39839a7f],\ns[_v-39839a7f],\nu[_v-39839a7f],\ndel[_v-39839a7f] {\n  text-decoration: none; }\n\na[_v-39839a7f] {\n  color: #00afc7; }\n\n.g-clear[_v-39839a7f]::after,\n.g-mod[_v-39839a7f]::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico[_v-39839a7f] {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n.commonList-container[_v-39839a7f] {\n  padding-bottom: 40px;\n  position: relative;\n  width: 100%; }\n  .commonList-container .class_introduce_con[_v-39839a7f] {\n    position: relative;\n    padding: 5px 10px 0;\n    width: 100%; }\n    .commonList-container .class_introduce_con[_v-39839a7f]::after {\n      pointer-events: none;\n      position: absolute;\n      z-index: 999;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      content: \" \";\n      border-color: #E1E1E1;\n      border-style: solid;\n      border-width: 0 0 1px 0;\n      -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0; }\n      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.4895833333333333), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n        .commonList-container .class_introduce_con[_v-39839a7f]::after {\n          width: 100%;\n          height: 100%; } }\n      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.4895833333333335), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n        .commonList-container .class_introduce_con[_v-39839a7f]::after {\n          width: 200%;\n          height: 200%;\n          -webkit-transform: scale(0.5);\n          -ms-transform: scale(0.5);\n              transform: scale(0.5); } }\n      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n        .commonList-container .class_introduce_con[_v-39839a7f]::after {\n          width: 300%;\n          height: 300%;\n          -webkit-transform: scale(0.33333);\n          -ms-transform: scale(0.33333);\n              transform: scale(0.33333); } }\n    .commonList-container .class_introduce_con .comment_tit[_v-39839a7f] {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: -moz-box;\n      display: -ms-flexbox;\n      display: flex;\n      height: 50px; }\n      .commonList-container .class_introduce_con .comment_tit .img[_v-39839a7f] {\n        border-radius: 20px;\n        background-clip: padding-box !important;\n        width: 46px;\n        height: 46px;\n        background: pink;\n        margin-right: 5px;\n        margin-top: 5px;\n        -webkit-box-shadow: none !important;\n                box-shadow: none !important; }\n      .commonList-container .class_introduce_con .comment_tit .comment_dis[_v-39839a7f] {\n        -webkit-box-flex: 1;\n        -webkit-flex: 1;\n        -moz-box-flex: 1;\n         -ms-flex: 1;\n             flex: 1;\n        width: .1px;\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: -moz-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n        -webkit-justify-content: center;\n        -moz-box-pack: center;\n         -ms-flex-pack: center;\n             justify-content: center;\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n        -webkit-flex-direction: column;\n        -moz-box-orient: vertical;\n        -moz-box-direction: normal;\n         -ms-flex-direction: column;\n             flex-direction: column;\n        width: 100% !important;\n        padding: 5px 0; }\n        .commonList-container .class_introduce_con .comment_tit .comment_dis span[_v-39839a7f] {\n          display: block !important;\n          width: 80% !important;\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          -moz-box-flex: 1;\n           -ms-flex: 1;\n               flex: 1;\n          width: .1px;\n          color: #999;\n          font-size: 12px; }\n        .commonList-container .class_introduce_con .comment_tit .comment_dis .commentname[_v-39839a7f] {\n          font-size: 14px;\n          color: #333;\n          line-height: 30px; }\n    .commonList-container .class_introduce_con .class_introduce_text[_v-39839a7f] {\n      font-size: 14px;\n      color: #666;\n      padding: 5px 0;\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: -moz-box;\n      display: -ms-flexbox;\n      display: flex; }\n\n#speak_container .bottominput[_v-39839a7f] {\n  max-width: 640px;\n  z-index: 112;\n  border-top: .5px solid #E3DFD8;\n  background: #F9F7F8;\n  position: relative;\n  height: 45px;\n  width: 100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  -moz-box-pack: center;\n   -ms-flex-pack: center;\n       justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  -moz-box-align: center;\n   -ms-flex-align: center;\n       align-items: center;\n  position: fixed;\n  bottom: 0;\n  padding: 8px; }\n  #speak_container .bottominput[_v-39839a7f]::after {\n    pointer-events: none;\n    position: absolute;\n    z-index: 999;\n    top: 0;\n    left: 0;\n    overflow: hidden;\n    content: \" \";\n    border-color: #e1e1e1;\n    border-style: solid;\n    border-width: 1px 0 0 0;\n    -webkit-transform-origin: 0 0;\n    -ms-transform-origin: 0 0;\n        transform-origin: 0 0; }\n    @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.4895833333333333), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n      #speak_container .bottominput[_v-39839a7f]::after {\n        width: 100%;\n        height: 100%; } }\n    @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.4895833333333335), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n      #speak_container .bottominput[_v-39839a7f]::after {\n        width: 200%;\n        height: 200%;\n        -webkit-transform: scale(0.5);\n        -ms-transform: scale(0.5);\n            transform: scale(0.5); } }\n    @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n      #speak_container .bottominput[_v-39839a7f]::after {\n        width: 300%;\n        height: 300%;\n        -webkit-transform: scale(0.33333);\n        -ms-transform: scale(0.33333);\n            transform: scale(0.33333); } }\n  #speak_container .bottominput .text_talk[_v-39839a7f] {\n    margin-left: 0px;\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    -moz-box-flex: 1;\n     -ms-flex: 1;\n         flex: 1;\n    width: .1px;\n    height: 34px;\n    position: relative;\n    background: #FFFFFF;\n    border-radius: 5px;\n    background-clip: padding-box !important; }\n    #speak_container .bottominput .text_talk[_v-39839a7f]::after {\n      pointer-events: none;\n      position: absolute;\n      z-index: 999;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      content: \" \";\n      border-color: #eee;\n      border-style: solid;\n      border-width: 1px 1px 1px 1px;\n      -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0; }\n      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.4895833333333333), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n        #speak_container .bottominput .text_talk[_v-39839a7f]::after {\n          width: 100%;\n          height: 100%; } }\n      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.4895833333333335), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n        #speak_container .bottominput .text_talk[_v-39839a7f]::after {\n          width: 200%;\n          height: 200%;\n          -webkit-transform: scale(0.5);\n          -ms-transform: scale(0.5);\n              transform: scale(0.5); } }\n      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n        #speak_container .bottominput .text_talk[_v-39839a7f]::after {\n          width: 300%;\n          height: 300%;\n          -webkit-transform: scale(0.33333);\n          -ms-transform: scale(0.33333);\n              transform: scale(0.33333); } }\n    #speak_container .bottominput .text_talk input[_v-39839a7f] {\n      height: 100%;\n      width: 100%;\n      text-indent: 10px;\n      border-radius: 5px; }\n  #speak_container .bottominput .send[_v-39839a7f] {\n    width: 70px;\n    height: 34px;\n    line-height: 34px;\n    margin-left: 8px;\n    text-align: center;\n    color: #FFFFFF;\n    background: #FF4A7D;\n    border-radius: 3px;\n    background-clip: padding-box !important; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 1478:
+/***/ 1483:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -16970,24 +16970,24 @@
 
 /***/ },
 
-/***/ 1479:
+/***/ 1484:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div id=\"speak_container\" _v-62049158=\"\">\n    <div class=\"bottominput\" _v-62049158=\"\">\n        <div class=\"text_talk\" _v-62049158=\"\">\n            <input v-if=\"discussStatus\" class=\"text_talk_input\" v-model=\"sentmassagetext\" type=\"text\" placeholder=\"向群主提问或参与讨论\" _v-62049158=\"\">\n            <input v-if=\"!discussStatus\" type=\"text\" placeholder=\"评论关闭\" disabled=\"\" _v-62049158=\"\">\n        </div>\n        <div class=\"send\" @click=\"sendMessage\" _v-62049158=\"\">\n            <span _v-62049158=\"\">发送</span>\n        </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div id=\"speak_container\" _v-39839a7f=\"\">\n    <div class=\"bottominput\" _v-39839a7f=\"\">\n        <div class=\"text_talk\" _v-39839a7f=\"\">\n            <input v-if=\"discussStatus\" class=\"text_talk_input\" v-model=\"sentmassagetext\" type=\"text\" placeholder=\"向群主提问或参与讨论\" _v-39839a7f=\"\">\n            <input v-if=\"!discussStatus\" type=\"text\" placeholder=\"评论关闭\" disabled=\"\" _v-39839a7f=\"\">\n        </div>\n        <div class=\"send\" @click=\"sendMessage\" _v-39839a7f=\"\">\n            <span _v-39839a7f=\"\">发送</span>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1480:
+/***/ 1485:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1481)
+	__vue_script__ = __webpack_require__(1486)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/social_title.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1482)
+	__vue_template__ = __webpack_require__(1487)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -17003,7 +17003,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-818f0518/social_title.vue"
+	  var id = "_v-faa0782e/social_title.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -17013,7 +17013,7 @@
 
 /***/ },
 
-/***/ 1481:
+/***/ 1486:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17062,26 +17062,26 @@
 
 /***/ },
 
-/***/ 1482:
+/***/ 1487:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"top0\">\n    <div class=\"top_container\">\n        <div class=\"top_left\" style=\"width: 40px\">\n            <a class=\"top_back\" href=\"javascript:history.back();\">\n                <span class=\"home_arrow\"></span>\n            </a>\n        </div>\n        <div class=\"title_container\">\n            {{data||msg}}\n        </div>\n        <div class=\"top_right\" style=\"width:40px;right:10px\" v-if=\"rightshow||false\" @click='manage'>\n            <a class=\"top_back\">\n                <img style=\"width:26px;margin-top:12px;\" class=\"back_home\" src=\"http://pic.davdian.com/free/2017/04/06/social_title.png\"/>\n            </a>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1483:
+/***/ 1488:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1484)
-	__webpack_require__(1486)
-	__vue_script__ = __webpack_require__(1488)
+	__webpack_require__(1489)
+	__webpack_require__(1491)
+	__vue_script__ = __webpack_require__(1493)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/switch.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1489)
+	__vue_template__ = __webpack_require__(1494)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -17097,7 +17097,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-bec5a1bc/switch.vue"
+	  var id = "_v-f2589d52/switch.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -17107,13 +17107,13 @@
 
 /***/ },
 
-/***/ 1484:
+/***/ 1489:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1485);
+	var content = __webpack_require__(1490);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -17134,7 +17134,7 @@
 
 /***/ },
 
-/***/ 1485:
+/***/ 1490:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -17149,13 +17149,13 @@
 
 /***/ },
 
-/***/ 1486:
+/***/ 1491:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1487);
+	var content = __webpack_require__(1492);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -17164,8 +17164,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-bec5a1bc&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./switch.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-bec5a1bc&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./switch.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f2589d52&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./switch.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f2589d52&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./switch.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -17176,7 +17176,7 @@
 
 /***/ },
 
-/***/ 1487:
+/***/ 1492:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -17184,14 +17184,14 @@
 
 
 	// module
-	exports.push([module.id, ".flag[_v-bec5a1bc] {\n  z-index: 105;\n  position: fixed;\n  top: 54px;\n  width: 100%;\n  max-width: 640px;\n  text-align: right;\n  margin: 0 auto; }\n\n.flag span[_v-bec5a1bc] {\n  margin-right: 10px;\n  color: #ffffff;\n  width: 28px;\n  height: 28px;\n  line-height: 28px;\n  font-size: 14px;\n  font-weight: bold;\n  text-align: center;\n  background: #FF4A7D;\n  display: inline-block;\n  position: relative;\n  border-radius: 14px; }\n\n.flag span[_v-bec5a1bc]:after {\n  content: '';\n  position: absolute;\n  top: -1px;\n  left: 0;\n  border: 1px solid #fff;\n  width: 100%;\n  height: 100%;\n  border-radius: 14px; }\n\n.commen_num[_v-bec5a1bc] {\n  position: fixed;\n  top: 57px;\n  width: 100%;\n  max-width: 640px;\n  margin: 0 auto;\n  text-align: right;\n  z-index: 99; }\n\n.commen_num span[_v-bec5a1bc] {\n  display: inline-block;\n  margin-right: 24px;\n  padding: 0 19px 0 10px;\n  color: #fff;\n  height: 21px;\n  line-height: 21px;\n  font-size: 12px;\n  background: rgba(0, 0, 0, 0.6);\n  border-radius: 10px;\n  background-clip: padding-box !important; }\n\n.flexd[_v-bec5a1bc] {\n  width: 100%;\n  position: fixed;\n  z-index: 105;\n  max-width: 640px;\n  margin: 0 auto;\n  text-align: right;\n  padding: 10px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  top: 80px; }\n  .flexd .common_position[_v-bec5a1bc] {\n    position: relative;\n    height: 35px;\n    margin-bottom: 5px; }\n    .flexd .common_position img[_v-bec5a1bc] {\n      position: absolute;\n      top: 5px;\n      right: 5px;\n      width: 25px !important;\n      height: 25px !important;\n      border-radius: 25px; }\n    .flexd .common_position .common_box[_v-bec5a1bc] {\n      padding: 0 40px 0 10px;\n      color: #fff;\n      display: inline-block;\n      height: 35px;\n      line-height: 35px;\n      font-size: 12px;\n      background: rgba(0, 0, 0, 0.6);\n      border-radius: 35px;\n      max-width: 100%;\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      text-align: left; }\n", ""]);
+	exports.push([module.id, ".flag[_v-f2589d52] {\n  z-index: 105;\n  position: fixed;\n  top: 54px;\n  width: 100%;\n  max-width: 640px;\n  text-align: right;\n  margin: 0 auto; }\n\n.flag span[_v-f2589d52] {\n  margin-right: 10px;\n  color: #ffffff;\n  width: 28px;\n  height: 28px;\n  line-height: 28px;\n  font-size: 14px;\n  font-weight: bold;\n  text-align: center;\n  background: #FF4A7D;\n  display: inline-block;\n  position: relative;\n  border-radius: 14px; }\n\n.flag span[_v-f2589d52]:after {\n  content: '';\n  position: absolute;\n  top: -1px;\n  left: 0;\n  border: 1px solid #fff;\n  width: 100%;\n  height: 100%;\n  border-radius: 14px; }\n\n.commen_num[_v-f2589d52] {\n  position: fixed;\n  top: 57px;\n  width: 100%;\n  max-width: 640px;\n  margin: 0 auto;\n  text-align: right;\n  z-index: 99; }\n\n.commen_num span[_v-f2589d52] {\n  display: inline-block;\n  margin-right: 24px;\n  padding: 0 19px 0 10px;\n  color: #fff;\n  height: 21px;\n  line-height: 21px;\n  font-size: 12px;\n  background: rgba(0, 0, 0, 0.6);\n  border-radius: 10px;\n  background-clip: padding-box !important; }\n\n.flexd[_v-f2589d52] {\n  width: 100%;\n  position: fixed;\n  z-index: 105;\n  max-width: 640px;\n  margin: 0 auto;\n  text-align: right;\n  padding: 10px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  top: 80px; }\n  .flexd .common_position[_v-f2589d52] {\n    position: relative;\n    height: 35px;\n    margin-bottom: 5px; }\n    .flexd .common_position img[_v-f2589d52] {\n      position: absolute;\n      top: 5px;\n      right: 5px;\n      width: 25px !important;\n      height: 25px !important;\n      border-radius: 25px; }\n    .flexd .common_position .common_box[_v-f2589d52] {\n      padding: 0 40px 0 10px;\n      color: #fff;\n      display: inline-block;\n      height: 35px;\n      line-height: 35px;\n      font-size: 12px;\n      background: rgba(0, 0, 0, 0.6);\n      border-radius: 35px;\n      max-width: 100%;\n      white-space: nowrap;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      text-align: left; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 1488:
+/***/ 1493:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17356,25 +17356,25 @@
 
 /***/ },
 
-/***/ 1489:
+/***/ 1494:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div id=\"switch\" _v-bec5a1bc=\"\">\n    <!--fiexd定位的弹幕-->\n    <div v-if=\"commonflag &amp;&amp; discussStatus\" class=\"flexd\" @click=\"open_comment\" _v-bec5a1bc=\"\">\n        <div class=\"common_position\" v-if=\"commonList[commonList.length-2] &amp;&amp; commonList[commonList.length-2].msg.content\" _v-bec5a1bc=\"\">\n            <span class=\"common_box\" v-text=\"decodeURIComponent(commonList[commonList.length-2].msg.content)\" _v-bec5a1bc=\"\"></span>\n            <img :src=\"commonList[commonList.length-2].speaker.avatar || defaultAvatar\" _v-bec5a1bc=\"\">\n        </div>\n\n        <div class=\"common_position\" v-if=\"commonList[commonList.length-1] &amp;&amp; commonList[commonList.length-1].msg.content\" _v-bec5a1bc=\"\">\n            <span class=\"common_box\" v-text=\"decodeURIComponent(commonList[commonList.length-1].msg.content)\" _v-bec5a1bc=\"\"></span>\n            <img :src=\"commonList[commonList.length-1].speaker.avatar || defaultAvatar\" _v-bec5a1bc=\"\">\n        </div>\n    </div>\n    <!--开关按钮-->\n    <div v-if=\"commonflag &amp;&amp; discussStatus\" class=\"flag\" _v-bec5a1bc=\"\">\n        <span @click=\"switchflag\" _v-bec5a1bc=\"\">关</span>\n    </div>\n    <div v-if=\"!commonflag &amp;&amp; discussStatus\" class=\"flag\" _v-bec5a1bc=\"\">\n        <span @click=\"switchflag\" _v-bec5a1bc=\"\">开</span>\n    </div>\n    <div class=\"commen_num\" v-if=\"discussStatus\" _v-bec5a1bc=\"\"><span _v-bec5a1bc=\"\">讨论：{{total}}</span></div>\n</div>\n";
+	module.exports = "\n<div id=\"switch\" _v-f2589d52=\"\">\n    <!--fiexd定位的弹幕-->\n    <div v-if=\"commonflag &amp;&amp; discussStatus\" class=\"flexd\" @click=\"open_comment\" _v-f2589d52=\"\">\n        <div class=\"common_position\" v-if=\"commonList[commonList.length-2] &amp;&amp; commonList[commonList.length-2].msg.content\" _v-f2589d52=\"\">\n            <span class=\"common_box\" v-text=\"decodeURIComponent(commonList[commonList.length-2].msg.content)\" _v-f2589d52=\"\"></span>\n            <img :src=\"commonList[commonList.length-2].speaker.avatar || defaultAvatar\" _v-f2589d52=\"\">\n        </div>\n\n        <div class=\"common_position\" v-if=\"commonList[commonList.length-1] &amp;&amp; commonList[commonList.length-1].msg.content\" _v-f2589d52=\"\">\n            <span class=\"common_box\" v-text=\"decodeURIComponent(commonList[commonList.length-1].msg.content)\" _v-f2589d52=\"\"></span>\n            <img :src=\"commonList[commonList.length-1].speaker.avatar || defaultAvatar\" _v-f2589d52=\"\">\n        </div>\n    </div>\n    <!--开关按钮-->\n    <div v-if=\"commonflag &amp;&amp; discussStatus\" class=\"flag\" _v-f2589d52=\"\">\n        <span @click=\"switchflag\" _v-f2589d52=\"\">关</span>\n    </div>\n    <div v-if=\"!commonflag &amp;&amp; discussStatus\" class=\"flag\" _v-f2589d52=\"\">\n        <span @click=\"switchflag\" _v-f2589d52=\"\">开</span>\n    </div>\n    <div class=\"commen_num\" v-if=\"discussStatus\" _v-f2589d52=\"\"><span _v-f2589d52=\"\">讨论：{{total}}</span></div>\n</div>\n";
 
 /***/ },
 
-/***/ 1490:
+/***/ 1495:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1491)
-	__vue_script__ = __webpack_require__(1493)
+	__webpack_require__(1496)
+	__vue_script__ = __webpack_require__(1498)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/common.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1494)
+	__vue_template__ = __webpack_require__(1499)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -17390,7 +17390,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-082b234e/common.vue"
+	  var id = "_v-3bbe1ee4/common.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -17400,13 +17400,13 @@
 
 /***/ },
 
-/***/ 1491:
+/***/ 1496:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1492);
+	var content = __webpack_require__(1497);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -17415,8 +17415,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-082b234e&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./common.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-082b234e&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./common.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3bbe1ee4&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./common.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3bbe1ee4&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./common.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -17427,7 +17427,7 @@
 
 /***/ },
 
-/***/ 1492:
+/***/ 1497:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -17435,14 +17435,14 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * lib中map使用“_”开头，本文件中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * 合并base和extra中的同类base map\r\n * 用以解决业务方升级Yo时需比base和extra的一致性\r\n * 当extra为空时，base map将以base文件里的定义作为默认值\r\n * 当extra不为空时，base map使用extra文件里的定义\r\n */\n/**\n * Yo框架全局Variables\n * Yo基础变量map，如果不想定义某属性，将其value设置为null；\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\n * variables中map使用“_”开头，本文件中不使用\"_\"\n * variables ⇌ config\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * 合并variables和config中的同类map\r\n * 用以解决业务方升级Yo时需比config和variables的一致性\r\n * 当config为空时，使用variables中的map作为默认值\r\n * 当config不为空时，使用config中的定义\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 功能\r\n * @description 给需要的属性加厂家前缀\r\n * @method _prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 定义字体图标\r\n * @method _yofont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 四则运算(iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example <div class=\"calc\">四则运算</div>\r\n * .calc { @include calc(width, \"100% - 100px\"); }\r\n */\n/**\r\n * @module 功能\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除行内级元素间间隙方案\r\n * @method killspace\r\n * @version 1.0.0\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n * .demo {@include killspace;}\r\n */\n/**\r\n * @module 功能\r\n * @description 元素在包含块中的对齐方式，默认为水平垂直对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 指定包含块布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {String} $type 指定居中元素类型，可选值：image | text | other，默认值：text <2.0.0>\r\n * @param {Keywords} $justify-content 指定元素水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keywords} $align-items 指定元素垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <img class=\"item\" alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n * .demo {@include align;}\r\n */\n/**\r\n * @module 功能\r\n * @description 定义文档根节点是否允许滚动\r\n * @method root-scroll\r\n * @version 1.4.0\r\n * @param {Boolean} $is-scroll 指定是否有滚动，默认值：false <1.8.6>\r\n */\n/**\r\n * @module 功能\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(iOS7.0+,Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(iOS7.0+,Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*[_v-082b234e],[_v-082b234e]\n::before,[_v-082b234e]\n::after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml[_v-082b234e],\nbody[_v-082b234e] {\n  overflow: hidden;\n  height: 100%; }\n\n[_v-082b234e]::-webkit-scrollbar {\n  display: none; }\n\nhtml[_v-082b234e] {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n   -ms-user-select: text;\n       user-select: text; }\n\nbody[_v-082b234e] {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul[_v-082b234e],\nol[_v-082b234e],\ndl[_v-082b234e],\ndd[_v-082b234e],\nh1[_v-082b234e],\nh2[_v-082b234e],\nh3[_v-082b234e],\nh4[_v-082b234e],\nh5[_v-082b234e],\nh6[_v-082b234e],\nfigure[_v-082b234e],\nform[_v-082b234e],\nfieldset[_v-082b234e],\nlegend[_v-082b234e],\ninput[_v-082b234e],\ntextarea[_v-082b234e],\nbutton[_v-082b234e],\np[_v-082b234e],\nblockquote[_v-082b234e],\nth[_v-082b234e],\ntd[_v-082b234e],\npre[_v-082b234e],\nxmp[_v-082b234e] {\n  margin: 0;\n  padding: 0; }\n\ninput[_v-082b234e],\ntextarea[_v-082b234e],\nbutton[_v-082b234e],\nselect[_v-082b234e],\npre[_v-082b234e],\nxmp[_v-082b234e],\ntt[_v-082b234e],\ncode[_v-082b234e],\nkbd[_v-082b234e],\nsamp[_v-082b234e] {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1[_v-082b234e],\nh2[_v-082b234e],\nh3[_v-082b234e],\nh4[_v-082b234e],\nh5[_v-082b234e],\nh6[_v-082b234e],\nsmall[_v-082b234e],\nbig[_v-082b234e],\ninput[_v-082b234e],\ntextarea[_v-082b234e],\nbutton[_v-082b234e],\nselect[_v-082b234e] {\n  font-size: inherit; }\n\naddress[_v-082b234e],\ncite[_v-082b234e],\ndfn[_v-082b234e],\nem[_v-082b234e],\ni[_v-082b234e],\noptgroup[_v-082b234e],\nvar[_v-082b234e] {\n  font-style: normal; }\n\ntable[_v-082b234e] {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul[_v-082b234e],\nol[_v-082b234e],\nmenu[_v-082b234e] {\n  list-style: none; }\n\nfieldset[_v-082b234e],\nimg[_v-082b234e] {\n  border: 0;\n  vertical-align: middle; }\n\narticle[_v-082b234e],\naside[_v-082b234e],\ndetails[_v-082b234e],\nfigcaption[_v-082b234e],\nfigure[_v-082b234e],\nfooter[_v-082b234e],\nheader[_v-082b234e],\nmain[_v-082b234e],\nmenu[_v-082b234e],\nnav[_v-082b234e],\nsection[_v-082b234e],\nsummary[_v-082b234e] {\n  display: block; }\n\naudio[_v-082b234e],\ncanvas[_v-082b234e],\nvideo[_v-082b234e] {\n  display: inline-block; }\n\nblockquote[_v-082b234e]:before,\nblockquote[_v-082b234e]:after,\nq[_v-082b234e]:before,\nq[_v-082b234e]:after {\n  content: \" \"; }\n\ntextarea[_v-082b234e],\npre[_v-082b234e],\nxmp[_v-082b234e] {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea[_v-082b234e] {\n  resize: vertical; }\n\ninput[_v-082b234e],\ntextarea[_v-082b234e],\nbutton[_v-082b234e],\nselect\na[_v-082b234e] {\n  outline: 0 none; }\n\ninput[_v-082b234e],\ntextarea[_v-082b234e],\nbutton[_v-082b234e],\nselect[_v-082b234e] {\n  color: inherit; }\n  input[_v-082b234e]:disabled,\n  textarea[_v-082b234e]:disabled,\n  button[_v-082b234e]:disabled,\n  select[_v-082b234e]:disabled {\n    opacity: 1; }\n\nbutton[_v-082b234e]::-moz-focus-inner,\ninput[_v-082b234e]::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"][_v-082b234e],\ninput[type=\"submit\"][_v-082b234e],\ninput[type=\"reset\"][_v-082b234e],\ninput[type=\"file\"][_v-082b234e]::-webkit-file-upload-button,\ninput[type=\"search\"][_v-082b234e]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\nmark[_v-082b234e] {\n  background-color: transparent; }\n\na[_v-082b234e],\nins[_v-082b234e],\ns[_v-082b234e],\nu[_v-082b234e],\ndel[_v-082b234e] {\n  text-decoration: none; }\n\na[_v-082b234e] {\n  color: #00afc7; }\n\n.g-clear[_v-082b234e]::after,\n.g-mod[_v-082b234e]::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico[_v-082b234e] {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * lib中map使用“_”开头，本文件中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * 合并base和extra中的同类base map\r\n * 用以解决业务方升级Yo时需比base和extra的一致性\r\n * 当extra为空时，base map将以base文件里的定义作为默认值\r\n * 当extra不为空时，base map使用extra文件里的定义\r\n */\n/**\n * Yo框架全局Variables\n * Yo基础变量map，如果不想定义某属性，将其value设置为null；\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\n * variables中map使用“_”开头，本文件中不使用\"_\"\n * variables ⇌ config\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * 合并variables和config中的同类map\r\n * 用以解决业务方升级Yo时需比config和variables的一致性\r\n * 当config为空时，使用variables中的map作为默认值\r\n * 当config不为空时，使用config中的定义\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 功能\r\n * @description 给需要的属性加厂家前缀\r\n * @method _prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 定义字体图标\r\n * @method _yofont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 四则运算(iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example <div class=\"calc\">四则运算</div>\r\n * .calc { @include calc(width, \"100% - 100px\"); }\r\n */\n/**\r\n * @module 功能\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除行内级元素间间隙方案\r\n * @method killspace\r\n * @version 1.0.0\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n * .demo {@include killspace;}\r\n */\n/**\r\n * @module 功能\r\n * @description 元素在包含块中的对齐方式，默认为水平垂直对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 指定包含块布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {String} $type 指定居中元素类型，可选值：image | text | other，默认值：text <2.0.0>\r\n * @param {Keywords} $justify-content 指定元素水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keywords} $align-items 指定元素垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <img class=\"item\" alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n * .demo {@include align;}\r\n */\n/**\r\n * @module 功能\r\n * @description 定义文档根节点是否允许滚动\r\n * @method root-scroll\r\n * @version 1.4.0\r\n * @param {Boolean} $is-scroll 指定是否有滚动，默认值：false <1.8.6>\r\n */\n/**\r\n * @module 功能\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(iOS7.0+,Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(iOS7.0+,Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*[_v-082b234e],[_v-082b234e]\n::before,[_v-082b234e]\n::after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml[_v-082b234e],\nbody[_v-082b234e] {\n  overflow: hidden;\n  height: 100%; }\n\n[_v-082b234e]::-webkit-scrollbar {\n  display: none; }\n\nhtml[_v-082b234e] {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n   -ms-user-select: text;\n       user-select: text; }\n\nbody[_v-082b234e] {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul[_v-082b234e],\nol[_v-082b234e],\ndl[_v-082b234e],\ndd[_v-082b234e],\nh1[_v-082b234e],\nh2[_v-082b234e],\nh3[_v-082b234e],\nh4[_v-082b234e],\nh5[_v-082b234e],\nh6[_v-082b234e],\nfigure[_v-082b234e],\nform[_v-082b234e],\nfieldset[_v-082b234e],\nlegend[_v-082b234e],\ninput[_v-082b234e],\ntextarea[_v-082b234e],\nbutton[_v-082b234e],\np[_v-082b234e],\nblockquote[_v-082b234e],\nth[_v-082b234e],\ntd[_v-082b234e],\npre[_v-082b234e],\nxmp[_v-082b234e] {\n  margin: 0;\n  padding: 0; }\n\ninput[_v-082b234e],\ntextarea[_v-082b234e],\nbutton[_v-082b234e],\nselect[_v-082b234e],\npre[_v-082b234e],\nxmp[_v-082b234e],\ntt[_v-082b234e],\ncode[_v-082b234e],\nkbd[_v-082b234e],\nsamp[_v-082b234e] {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1[_v-082b234e],\nh2[_v-082b234e],\nh3[_v-082b234e],\nh4[_v-082b234e],\nh5[_v-082b234e],\nh6[_v-082b234e],\nsmall[_v-082b234e],\nbig[_v-082b234e],\ninput[_v-082b234e],\ntextarea[_v-082b234e],\nbutton[_v-082b234e],\nselect[_v-082b234e] {\n  font-size: inherit; }\n\naddress[_v-082b234e],\ncite[_v-082b234e],\ndfn[_v-082b234e],\nem[_v-082b234e],\ni[_v-082b234e],\noptgroup[_v-082b234e],\nvar[_v-082b234e] {\n  font-style: normal; }\n\ntable[_v-082b234e] {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul[_v-082b234e],\nol[_v-082b234e],\nmenu[_v-082b234e] {\n  list-style: none; }\n\nfieldset[_v-082b234e],\nimg[_v-082b234e] {\n  border: 0;\n  vertical-align: middle; }\n\narticle[_v-082b234e],\naside[_v-082b234e],\ndetails[_v-082b234e],\nfigcaption[_v-082b234e],\nfigure[_v-082b234e],\nfooter[_v-082b234e],\nheader[_v-082b234e],\nmain[_v-082b234e],\nmenu[_v-082b234e],\nnav[_v-082b234e],\nsection[_v-082b234e],\nsummary[_v-082b234e] {\n  display: block; }\n\naudio[_v-082b234e],\ncanvas[_v-082b234e],\nvideo[_v-082b234e] {\n  display: inline-block; }\n\nblockquote[_v-082b234e]:before,\nblockquote[_v-082b234e]:after,\nq[_v-082b234e]:before,\nq[_v-082b234e]:after {\n  content: \" \"; }\n\ntextarea[_v-082b234e],\npre[_v-082b234e],\nxmp[_v-082b234e] {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea[_v-082b234e] {\n  resize: vertical; }\n\ninput[_v-082b234e],\ntextarea[_v-082b234e],\nbutton[_v-082b234e],\nselect\na[_v-082b234e] {\n  outline: 0 none; }\n\ninput[_v-082b234e],\ntextarea[_v-082b234e],\nbutton[_v-082b234e],\nselect[_v-082b234e] {\n  color: inherit; }\n  input[_v-082b234e]:disabled,\n  textarea[_v-082b234e]:disabled,\n  button[_v-082b234e]:disabled,\n  select[_v-082b234e]:disabled {\n    opacity: 1; }\n\nbutton[_v-082b234e]::-moz-focus-inner,\ninput[_v-082b234e]::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"][_v-082b234e],\ninput[type=\"submit\"][_v-082b234e],\ninput[type=\"reset\"][_v-082b234e],\ninput[type=\"file\"][_v-082b234e]::-webkit-file-upload-button,\ninput[type=\"search\"][_v-082b234e]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\nmark[_v-082b234e] {\n  background-color: transparent; }\n\na[_v-082b234e],\nins[_v-082b234e],\ns[_v-082b234e],\nu[_v-082b234e],\ndel[_v-082b234e] {\n  text-decoration: none; }\n\na[_v-082b234e] {\n  color: #00afc7; }\n\n.g-clear[_v-082b234e]::after,\n.g-mod[_v-082b234e]::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico[_v-082b234e] {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n.commonList-container[_v-082b234e] {\n  padding-bottom: 40px;\n  position: relative;\n  width: 100%; }\n  .commonList-container .class_introduce_con[_v-082b234e] {\n    position: relative;\n    padding: 5px 10px 0;\n    width: 100%; }\n    .commonList-container .class_introduce_con[_v-082b234e]::after {\n      pointer-events: none;\n      position: absolute;\n      z-index: 999;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      content: \" \";\n      border-color: #E1E1E1;\n      border-style: solid;\n      border-width: 0 0 1px 0;\n      -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0; }\n      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.4895833333333333), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n        .commonList-container .class_introduce_con[_v-082b234e]::after {\n          width: 100%;\n          height: 100%; } }\n      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.4895833333333335), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n        .commonList-container .class_introduce_con[_v-082b234e]::after {\n          width: 200%;\n          height: 200%;\n          -webkit-transform: scale(0.5);\n          -ms-transform: scale(0.5);\n              transform: scale(0.5); } }\n      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n        .commonList-container .class_introduce_con[_v-082b234e]::after {\n          width: 300%;\n          height: 300%;\n          -webkit-transform: scale(0.33333);\n          -ms-transform: scale(0.33333);\n              transform: scale(0.33333); } }\n    .commonList-container .class_introduce_con .comment_tit[_v-082b234e] {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: -moz-box;\n      display: -ms-flexbox;\n      display: flex;\n      height: 50px; }\n      .commonList-container .class_introduce_con .comment_tit .img[_v-082b234e] {\n        border-radius: 20px;\n        background-clip: padding-box !important;\n        width: 46px;\n        height: 46px;\n        background: pink;\n        margin-right: 5px;\n        margin-top: 5px;\n        -webkit-box-shadow: none !important;\n                box-shadow: none !important; }\n      .commonList-container .class_introduce_con .comment_tit .comment_dis[_v-082b234e] {\n        -webkit-box-flex: 1;\n        -webkit-flex: 1;\n        -moz-box-flex: 1;\n         -ms-flex: 1;\n             flex: 1;\n        width: .1px;\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: -moz-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n        -webkit-justify-content: center;\n        -moz-box-pack: center;\n         -ms-flex-pack: center;\n             justify-content: center;\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n        -webkit-flex-direction: column;\n        -moz-box-orient: vertical;\n        -moz-box-direction: normal;\n         -ms-flex-direction: column;\n             flex-direction: column;\n        width: 100% !important;\n        padding: 5px 0; }\n        .commonList-container .class_introduce_con .comment_tit .comment_dis span[_v-082b234e] {\n          display: block !important;\n          width: 80% !important;\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          -moz-box-flex: 1;\n           -ms-flex: 1;\n               flex: 1;\n          width: .1px;\n          color: #999;\n          font-size: 12px; }\n        .commonList-container .class_introduce_con .comment_tit .comment_dis .commentname[_v-082b234e] {\n          font-size: 14px;\n          color: #333;\n          line-height: 30px; }\n    .commonList-container .class_introduce_con .class_introduce_text[_v-082b234e] {\n      font-size: 14px;\n      color: #666;\n      padding: 5px 0;\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: -moz-box;\n      display: -ms-flexbox;\n      display: flex; }\n\n.remindNews[_v-082b234e] {\n  margin-left: 25px !important;\n  margin-right: 25px !important;\n  margin-top: 10px !important;\n  margin-bottom: 10px !important;\n  padding-left: 20px !important;\n  padding-right: 20px !important;\n  padding-top: 6px !important;\n  padding-bottom: 7px !important; }\n\n#common[_v-082b234e] {\n  position: fixed;\n  overflow: scroll;\n  -webkit-overflow-scrolling: touch;\n  width: 100%;\n  height: 87%;\n  z-index: 1;\n  background: #f0f0f0; }\n\n.commonroom[_v-082b234e] {\n  width: 100% !important;\n  padding: 0 10px; }\n  .commonroom ul[_v-082b234e] {\n    padding-bottom: 10px;\n    width: 100%;\n    min-height: 480px; }\n    .commonroom ul li[_v-082b234e] {\n      min-height: 70px;\n      padding-bottom: 20px; }\n      .commonroom ul li .timebox[_v-082b234e] {\n        text-align: center;\n        width: 100%;\n        max-width: 640px;\n        /*height:30px;*/ }\n        .commonroom ul li .timebox .talk_time[_v-082b234e] {\n          display: inline-block;\n          /*height:20px;*/\n          color: #FFFFFF;\n          line-height: 20px;\n          padding: 0 10px;\n          font-size: 11px;\n          background: #cccccc;\n          border-radius: 4px;\n          background-clip: padding-box !important; }\n      .commonroom ul li .right[_v-082b234e] {\n        margin-left: 30px; }\n        .commonroom ul li .right .mainPic[_v-082b234e] {\n          max-height: 230px;\n          max-width: 230px;\n          margin-top: 5px;\n          margin-left: 5px;\n          position: relative; }\n          .commonroom ul li .right .mainPic .picBox[_v-082b234e] {\n            max-height: 230px;\n            max-width: 230px; }\n            .commonroom ul li .right .mainPic .picBox .picBox_icon[_v-082b234e] {\n              width: 0;\n              height: 0;\n              border-left: 10px solid transparent;\n              border-right: 10px solid transparent;\n              border-top: 10px solid #fff;\n              border-bottom: transparent;\n              position: absolute;\n              left: 0;\n              top: 8px;\n              overflow: hidden; }\n            .commonroom ul li .right .mainPic .picBox .picBox_icon1_container[_v-082b234e] {\n              position: absolute;\n              left: 1;\n              top: 8px;\n              width: 10px;\n              height: 20px;\n              overflow: hidden; }\n              .commonroom ul li .right .mainPic .picBox .picBox_icon1_container img[_v-082b234e] {\n                max-height: 230px;\n                max-width: 230px;\n                opacity: 1;\n                margin-top: -8px; }\n            .commonroom ul li .right .mainPic .picBox .picBox_icon1[_v-082b234e] {\n              position: absolute;\n              border-right: 10px solid transparent;\n              border-bottom: 20px solid #f0f0f0;\n              border-top: transparent;\n              width: 10px;\n              height: 20px; }\n            .commonroom ul li .right .mainPic .picBox .picBox_icon2[_v-082b234e] {\n              position: absolute;\n              border-right: 10px solid #f0f0f0;\n              border-bottom: 3px solid transparent; }\n            .commonroom ul li .right .mainPic .picBox img[_v-082b234e] {\n              max-height: 230px;\n              max-width: 230px;\n              opacity: 0; }\n          .commonroom ul li .right .mainPic .picBox_container[_v-082b234e] {\n            max-height: 230px;\n            max-width: 220px;\n            position: absolute;\n            border-radius: 4px;\n            top: 0;\n            left: 10px;\n            overflow: hidden; }\n            .commonroom ul li .right .mainPic .picBox_container img[_v-082b234e] {\n              max-height: 230px;\n              max-width: 230px;\n              margin-left: -10px; }\n        .commonroom ul li .right h2[_v-082b234e] {\n          font-size: 12px;\n          font-weight: normal;\n          min-height: 20px;\n          margin-left: 5px;\n          color: #666; }\n        .commonroom ul li .right .audiomain[_v-082b234e] {\n          height: 30px;\n          display: inline-block; }\n          .commonroom ul li .right .audiomain .main[_v-082b234e] {\n            text-indent: 30px;\n            color: #333; }\n          .commonroom ul li .right .audiomain .voice[_v-082b234e] {\n            height: 40px; }\n            .commonroom ul li .right .audiomain .voice .fa[_v-082b234e] {\n              position: relative;\n              display: inline-block; }\n            .commonroom ul li .right .audiomain .voice .min[_v-082b234e] {\n              position: absolute;\n              right: -53px;\n              top: 8px;\n              width: 40px;\n              color: #666;\n              font-size: 12px; }\n        .commonroom ul li .right .main[_v-082b234e] {\n          min-width: 40px;\n          min-height: 40px;\n          font-size: 14px;\n          color: #333;\n          background-color: #fff;\n          border-radius: 3px;\n          padding: 7px 10px 6px;\n          position: relative;\n          display: inline-block;\n          line-height: 27px;\n          word-break: break-all;\n          word-wrap: break-word;\n          max-width: 80%;\n          margin-left: 15px;\n          margin-top: 5px;\n          padding-left: 12px; }\n          .commonroom ul li .right .main span[_v-082b234e] {\n            display: block;\n            word-break: keep-all;\n            word-wrap: break-word;\n            overflow: hidden;\n            max-width: 500px; }\n        .commonroom ul li .right .noPlay .fa[_v-082b234e]:after {\n          content: \"\";\n          position: absolute;\n          top: -14px;\n          left: 35px;\n          width: 12px;\n          z-index: 100;\n          height: 17px;\n          background: url(\"//pic.davdian.com/free/2016/12/24/22_32_16dffc36683debdbbf6a813306594422.png\") no-repeat;\n          background-size: 12px; }\n        .commonroom ul li .right .play .fa[_v-082b234e]:after {\n          content: \"\";\n          position: absolute;\n          left: 31px;\n          width: 20px;\n          top: -15px;\n          z-index: 100;\n          height: 20px;\n          background: url(\"//pic.davdian.com/free/2017/02/27/playVoice.gif\") no-repeat;\n          background-size: 20px; }\n        .commonroom ul li .right .main[_v-082b234e]:before {\n          width: 0;\n          height: 0;\n          border-left: 10px solid transparent;\n          border-right: 10px solid transparent;\n          border-top: 20px solid #fff;\n          border-bottom: transparent;\n          content: \"\";\n          position: absolute;\n          left: -10px;\n          top: 8px; }\n        .commonroom ul li .right .main_picBox_icon2[_v-082b234e] {\n          position: absolute;\n          left: -15px;\n          border-right: 15px solid #f0f0f0;\n          border-bottom: 3px solid transparent; }\n      .commonroom ul li .head[_v-082b234e] {\n        width: 30px;\n        height: 30px;\n        float: left;\n        overflow: hidden; }\n        .commonroom ul li .head img[_v-082b234e] {\n          width: 30px;\n          height: 30px;\n          border-radius: 15px;\n          background-clip: padding-box !important; }\n    .commonroom ul .myself[_v-082b234e] {\n      padding-bottom: 20px;\n      overflow: hidden; }\n      .commonroom ul .myself .timebox[_v-082b234e] {\n        text-align: center;\n        width: 100%;\n        height: 30px; }\n        .commonroom ul .myself .timebox .talk_time[_v-082b234e] {\n          display: inline-block;\n          height: 20px;\n          color: #FFFFFF;\n          line-height: 20px;\n          padding: 0 5px;\n          background: #cccccc;\n          border-radius: 3px;\n          background-clip: padding-box !important; }\n      .commonroom ul .myself .right[_v-082b234e] {\n        float: right;\n        padding-right: 35px; }\n        .commonroom ul .myself .right h2[_v-082b234e] {\n          position: absolute;\n          font-size: 12px;\n          font-weight: normal;\n          margin-bottom: 5px; }\n        .commonroom ul .myself .right .audiomain[_v-082b234e] {\n          height: 30px; }\n          .commonroom ul .myself .right .audiomain .voice[_v-082b234e] {\n            width: 80px;\n            background: #FFFFFF;\n            border-radius: 5px;\n            background-clip: padding-box !important; }\n            .commonroom ul .myself .right .audiomain .voice .fa[_v-082b234e] {\n              position: relative;\n              display: inline-block; }\n            .commonroom ul .myself .right .audiomain .voice .min[_v-082b234e] {\n              position: absolute;\n              right: -53px;\n              top: 8px;\n              width: 40px;\n              color: #666;\n              font-size: 12px; }\n        .commonroom ul .myself .right .main[_v-082b234e] {\n          float: right;\n          font-size: 14px;\n          background-color: #fff;\n          color: #666;\n          border-radius: 3px;\n          padding: 7px 10px 6px;\n          position: relative;\n          display: inline-block;\n          line-height: 17px;\n          word-break: break-all;\n          word-wrap: break-word;\n          max-width: 70%;\n          margin-left: 4px;\n          word-wrap: break-word;\n          word-break: break-all; }\n        .commonroom ul .myself .right .play .fa[_v-082b234e]:after {\n          content: \"\";\n          position: absolute;\n          top: -11px;\n          left: 39px;\n          width: 12px;\n          z-index: 100;\n          height: 13px;\n          background: url(\"//pic.davdian.com/free/voice_img_311.gif\") no-repeat;\n          background-size: 12px; }\n        .commonroom ul .myself .right .main[_v-082b234e]:before {\n          width: 0;\n          height: 0;\n          border-left: 0px solid transparent;\n          border-right: 0px solid transparent;\n          border-top: 0px solid #fff;\n          border-bottom: transparent;\n          content: \"\";\n          position: absolute;\n          left: 0px;\n          top: 0px; }\n        .commonroom ul .myself .right .main[_v-082b234e]:after {\n          width: 0;\n          height: 0;\n          border-left: 10px solid transparent;\n          border-right: 10px solid transparent;\n          border-top: 10px solid #fff;\n          border-bottom: transparent;\n          content: \"\";\n          position: absolute;\n          right: -10px;\n          top: 8px; }\n      .commonroom ul .myself .head[_v-082b234e] {\n        position: absolute;\n        right: 0;\n        width: 25px;\n        height: 25px;\n        float: left;\n        overflow: hidden;\n        border-radius: 25px;\n        background-clip: padding-box !important; }\n        .commonroom ul .myself .head img[_v-082b234e] {\n          width: 25px;\n          height: 25px; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * lib中map使用“_”开头，本文件中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * 合并base和extra中的同类base map\r\n * 用以解决业务方升级Yo时需比base和extra的一致性\r\n * 当extra为空时，base map将以base文件里的定义作为默认值\r\n * 当extra不为空时，base map使用extra文件里的定义\r\n */\n/**\n * Yo框架全局Variables\n * Yo基础变量map，如果不想定义某属性，将其value设置为null；\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\n * variables中map使用“_”开头，本文件中不使用\"_\"\n * variables ⇌ config\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * 合并variables和config中的同类map\r\n * 用以解决业务方升级Yo时需比config和variables的一致性\r\n * 当config为空时，使用variables中的map作为默认值\r\n * 当config不为空时，使用config中的定义\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 功能\r\n * @description 给需要的属性加厂家前缀\r\n * @method _prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 定义字体图标\r\n * @method _yofont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 四则运算(iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example <div class=\"calc\">四则运算</div>\r\n * .calc { @include calc(width, \"100% - 100px\"); }\r\n */\n/**\r\n * @module 功能\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除行内级元素间间隙方案\r\n * @method killspace\r\n * @version 1.0.0\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n * .demo {@include killspace;}\r\n */\n/**\r\n * @module 功能\r\n * @description 元素在包含块中的对齐方式，默认为水平垂直对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 指定包含块布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {String} $type 指定居中元素类型，可选值：image | text | other，默认值：text <2.0.0>\r\n * @param {Keywords} $justify-content 指定元素水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keywords} $align-items 指定元素垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <img class=\"item\" alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n * .demo {@include align;}\r\n */\n/**\r\n * @module 功能\r\n * @description 定义文档根节点是否允许滚动\r\n * @method root-scroll\r\n * @version 1.4.0\r\n * @param {Boolean} $is-scroll 指定是否有滚动，默认值：false <1.8.6>\r\n */\n/**\r\n * @module 功能\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(iOS7.0+,Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(iOS7.0+,Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*[_v-3bbe1ee4],[_v-3bbe1ee4]\n::before,[_v-3bbe1ee4]\n::after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml[_v-3bbe1ee4],\nbody[_v-3bbe1ee4] {\n  overflow: hidden;\n  height: 100%; }\n\n[_v-3bbe1ee4]::-webkit-scrollbar {\n  display: none; }\n\nhtml[_v-3bbe1ee4] {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n   -ms-user-select: text;\n       user-select: text; }\n\nbody[_v-3bbe1ee4] {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul[_v-3bbe1ee4],\nol[_v-3bbe1ee4],\ndl[_v-3bbe1ee4],\ndd[_v-3bbe1ee4],\nh1[_v-3bbe1ee4],\nh2[_v-3bbe1ee4],\nh3[_v-3bbe1ee4],\nh4[_v-3bbe1ee4],\nh5[_v-3bbe1ee4],\nh6[_v-3bbe1ee4],\nfigure[_v-3bbe1ee4],\nform[_v-3bbe1ee4],\nfieldset[_v-3bbe1ee4],\nlegend[_v-3bbe1ee4],\ninput[_v-3bbe1ee4],\ntextarea[_v-3bbe1ee4],\nbutton[_v-3bbe1ee4],\np[_v-3bbe1ee4],\nblockquote[_v-3bbe1ee4],\nth[_v-3bbe1ee4],\ntd[_v-3bbe1ee4],\npre[_v-3bbe1ee4],\nxmp[_v-3bbe1ee4] {\n  margin: 0;\n  padding: 0; }\n\ninput[_v-3bbe1ee4],\ntextarea[_v-3bbe1ee4],\nbutton[_v-3bbe1ee4],\nselect[_v-3bbe1ee4],\npre[_v-3bbe1ee4],\nxmp[_v-3bbe1ee4],\ntt[_v-3bbe1ee4],\ncode[_v-3bbe1ee4],\nkbd[_v-3bbe1ee4],\nsamp[_v-3bbe1ee4] {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1[_v-3bbe1ee4],\nh2[_v-3bbe1ee4],\nh3[_v-3bbe1ee4],\nh4[_v-3bbe1ee4],\nh5[_v-3bbe1ee4],\nh6[_v-3bbe1ee4],\nsmall[_v-3bbe1ee4],\nbig[_v-3bbe1ee4],\ninput[_v-3bbe1ee4],\ntextarea[_v-3bbe1ee4],\nbutton[_v-3bbe1ee4],\nselect[_v-3bbe1ee4] {\n  font-size: inherit; }\n\naddress[_v-3bbe1ee4],\ncite[_v-3bbe1ee4],\ndfn[_v-3bbe1ee4],\nem[_v-3bbe1ee4],\ni[_v-3bbe1ee4],\noptgroup[_v-3bbe1ee4],\nvar[_v-3bbe1ee4] {\n  font-style: normal; }\n\ntable[_v-3bbe1ee4] {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul[_v-3bbe1ee4],\nol[_v-3bbe1ee4],\nmenu[_v-3bbe1ee4] {\n  list-style: none; }\n\nfieldset[_v-3bbe1ee4],\nimg[_v-3bbe1ee4] {\n  border: 0;\n  vertical-align: middle; }\n\narticle[_v-3bbe1ee4],\naside[_v-3bbe1ee4],\ndetails[_v-3bbe1ee4],\nfigcaption[_v-3bbe1ee4],\nfigure[_v-3bbe1ee4],\nfooter[_v-3bbe1ee4],\nheader[_v-3bbe1ee4],\nmain[_v-3bbe1ee4],\nmenu[_v-3bbe1ee4],\nnav[_v-3bbe1ee4],\nsection[_v-3bbe1ee4],\nsummary[_v-3bbe1ee4] {\n  display: block; }\n\naudio[_v-3bbe1ee4],\ncanvas[_v-3bbe1ee4],\nvideo[_v-3bbe1ee4] {\n  display: inline-block; }\n\nblockquote[_v-3bbe1ee4]:before,\nblockquote[_v-3bbe1ee4]:after,\nq[_v-3bbe1ee4]:before,\nq[_v-3bbe1ee4]:after {\n  content: \" \"; }\n\ntextarea[_v-3bbe1ee4],\npre[_v-3bbe1ee4],\nxmp[_v-3bbe1ee4] {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea[_v-3bbe1ee4] {\n  resize: vertical; }\n\ninput[_v-3bbe1ee4],\ntextarea[_v-3bbe1ee4],\nbutton[_v-3bbe1ee4],\nselect\na[_v-3bbe1ee4] {\n  outline: 0 none; }\n\ninput[_v-3bbe1ee4],\ntextarea[_v-3bbe1ee4],\nbutton[_v-3bbe1ee4],\nselect[_v-3bbe1ee4] {\n  color: inherit; }\n  input[_v-3bbe1ee4]:disabled,\n  textarea[_v-3bbe1ee4]:disabled,\n  button[_v-3bbe1ee4]:disabled,\n  select[_v-3bbe1ee4]:disabled {\n    opacity: 1; }\n\nbutton[_v-3bbe1ee4]::-moz-focus-inner,\ninput[_v-3bbe1ee4]::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"][_v-3bbe1ee4],\ninput[type=\"submit\"][_v-3bbe1ee4],\ninput[type=\"reset\"][_v-3bbe1ee4],\ninput[type=\"file\"][_v-3bbe1ee4]::-webkit-file-upload-button,\ninput[type=\"search\"][_v-3bbe1ee4]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\nmark[_v-3bbe1ee4] {\n  background-color: transparent; }\n\na[_v-3bbe1ee4],\nins[_v-3bbe1ee4],\ns[_v-3bbe1ee4],\nu[_v-3bbe1ee4],\ndel[_v-3bbe1ee4] {\n  text-decoration: none; }\n\na[_v-3bbe1ee4] {\n  color: #00afc7; }\n\n.g-clear[_v-3bbe1ee4]::after,\n.g-mod[_v-3bbe1ee4]::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico[_v-3bbe1ee4] {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * lib中map使用“_”开头，本文件中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * 合并base和extra中的同类base map\r\n * 用以解决业务方升级Yo时需比base和extra的一致性\r\n * 当extra为空时，base map将以base文件里的定义作为默认值\r\n * 当extra不为空时，base map使用extra文件里的定义\r\n */\n/**\n * Yo框架全局Variables\n * Yo基础变量map，如果不想定义某属性，将其value设置为null；\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\n * variables中map使用“_”开头，本文件中不使用\"_\"\n * variables ⇌ config\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * 合并variables和config中的同类map\r\n * 用以解决业务方升级Yo时需比config和variables的一致性\r\n * 当config为空时，使用variables中的map作为默认值\r\n * 当config不为空时，使用config中的定义\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 功能\r\n * @description 给需要的属性加厂家前缀\r\n * @method _prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 定义字体图标\r\n * @method _yofont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 四则运算(iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example <div class=\"calc\">四则运算</div>\r\n * .calc { @include calc(width, \"100% - 100px\"); }\r\n */\n/**\r\n * @module 功能\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除行内级元素间间隙方案\r\n * @method killspace\r\n * @version 1.0.0\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n * .demo {@include killspace;}\r\n */\n/**\r\n * @module 功能\r\n * @description 元素在包含块中的对齐方式，默认为水平垂直对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 指定包含块布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {String} $type 指定居中元素类型，可选值：image | text | other，默认值：text <2.0.0>\r\n * @param {Keywords} $justify-content 指定元素水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keywords} $align-items 指定元素垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <img class=\"item\" alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n * .demo {@include align;}\r\n */\n/**\r\n * @module 功能\r\n * @description 定义文档根节点是否允许滚动\r\n * @method root-scroll\r\n * @version 1.4.0\r\n * @param {Boolean} $is-scroll 指定是否有滚动，默认值：false <1.8.6>\r\n */\n/**\r\n * @module 功能\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(iOS7.0+,Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(iOS7.0+,Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*[_v-3bbe1ee4],[_v-3bbe1ee4]\n::before,[_v-3bbe1ee4]\n::after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml[_v-3bbe1ee4],\nbody[_v-3bbe1ee4] {\n  overflow: hidden;\n  height: 100%; }\n\n[_v-3bbe1ee4]::-webkit-scrollbar {\n  display: none; }\n\nhtml[_v-3bbe1ee4] {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n   -ms-user-select: text;\n       user-select: text; }\n\nbody[_v-3bbe1ee4] {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul[_v-3bbe1ee4],\nol[_v-3bbe1ee4],\ndl[_v-3bbe1ee4],\ndd[_v-3bbe1ee4],\nh1[_v-3bbe1ee4],\nh2[_v-3bbe1ee4],\nh3[_v-3bbe1ee4],\nh4[_v-3bbe1ee4],\nh5[_v-3bbe1ee4],\nh6[_v-3bbe1ee4],\nfigure[_v-3bbe1ee4],\nform[_v-3bbe1ee4],\nfieldset[_v-3bbe1ee4],\nlegend[_v-3bbe1ee4],\ninput[_v-3bbe1ee4],\ntextarea[_v-3bbe1ee4],\nbutton[_v-3bbe1ee4],\np[_v-3bbe1ee4],\nblockquote[_v-3bbe1ee4],\nth[_v-3bbe1ee4],\ntd[_v-3bbe1ee4],\npre[_v-3bbe1ee4],\nxmp[_v-3bbe1ee4] {\n  margin: 0;\n  padding: 0; }\n\ninput[_v-3bbe1ee4],\ntextarea[_v-3bbe1ee4],\nbutton[_v-3bbe1ee4],\nselect[_v-3bbe1ee4],\npre[_v-3bbe1ee4],\nxmp[_v-3bbe1ee4],\ntt[_v-3bbe1ee4],\ncode[_v-3bbe1ee4],\nkbd[_v-3bbe1ee4],\nsamp[_v-3bbe1ee4] {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1[_v-3bbe1ee4],\nh2[_v-3bbe1ee4],\nh3[_v-3bbe1ee4],\nh4[_v-3bbe1ee4],\nh5[_v-3bbe1ee4],\nh6[_v-3bbe1ee4],\nsmall[_v-3bbe1ee4],\nbig[_v-3bbe1ee4],\ninput[_v-3bbe1ee4],\ntextarea[_v-3bbe1ee4],\nbutton[_v-3bbe1ee4],\nselect[_v-3bbe1ee4] {\n  font-size: inherit; }\n\naddress[_v-3bbe1ee4],\ncite[_v-3bbe1ee4],\ndfn[_v-3bbe1ee4],\nem[_v-3bbe1ee4],\ni[_v-3bbe1ee4],\noptgroup[_v-3bbe1ee4],\nvar[_v-3bbe1ee4] {\n  font-style: normal; }\n\ntable[_v-3bbe1ee4] {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul[_v-3bbe1ee4],\nol[_v-3bbe1ee4],\nmenu[_v-3bbe1ee4] {\n  list-style: none; }\n\nfieldset[_v-3bbe1ee4],\nimg[_v-3bbe1ee4] {\n  border: 0;\n  vertical-align: middle; }\n\narticle[_v-3bbe1ee4],\naside[_v-3bbe1ee4],\ndetails[_v-3bbe1ee4],\nfigcaption[_v-3bbe1ee4],\nfigure[_v-3bbe1ee4],\nfooter[_v-3bbe1ee4],\nheader[_v-3bbe1ee4],\nmain[_v-3bbe1ee4],\nmenu[_v-3bbe1ee4],\nnav[_v-3bbe1ee4],\nsection[_v-3bbe1ee4],\nsummary[_v-3bbe1ee4] {\n  display: block; }\n\naudio[_v-3bbe1ee4],\ncanvas[_v-3bbe1ee4],\nvideo[_v-3bbe1ee4] {\n  display: inline-block; }\n\nblockquote[_v-3bbe1ee4]:before,\nblockquote[_v-3bbe1ee4]:after,\nq[_v-3bbe1ee4]:before,\nq[_v-3bbe1ee4]:after {\n  content: \" \"; }\n\ntextarea[_v-3bbe1ee4],\npre[_v-3bbe1ee4],\nxmp[_v-3bbe1ee4] {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea[_v-3bbe1ee4] {\n  resize: vertical; }\n\ninput[_v-3bbe1ee4],\ntextarea[_v-3bbe1ee4],\nbutton[_v-3bbe1ee4],\nselect\na[_v-3bbe1ee4] {\n  outline: 0 none; }\n\ninput[_v-3bbe1ee4],\ntextarea[_v-3bbe1ee4],\nbutton[_v-3bbe1ee4],\nselect[_v-3bbe1ee4] {\n  color: inherit; }\n  input[_v-3bbe1ee4]:disabled,\n  textarea[_v-3bbe1ee4]:disabled,\n  button[_v-3bbe1ee4]:disabled,\n  select[_v-3bbe1ee4]:disabled {\n    opacity: 1; }\n\nbutton[_v-3bbe1ee4]::-moz-focus-inner,\ninput[_v-3bbe1ee4]::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"][_v-3bbe1ee4],\ninput[type=\"submit\"][_v-3bbe1ee4],\ninput[type=\"reset\"][_v-3bbe1ee4],\ninput[type=\"file\"][_v-3bbe1ee4]::-webkit-file-upload-button,\ninput[type=\"search\"][_v-3bbe1ee4]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\nmark[_v-3bbe1ee4] {\n  background-color: transparent; }\n\na[_v-3bbe1ee4],\nins[_v-3bbe1ee4],\ns[_v-3bbe1ee4],\nu[_v-3bbe1ee4],\ndel[_v-3bbe1ee4] {\n  text-decoration: none; }\n\na[_v-3bbe1ee4] {\n  color: #00afc7; }\n\n.g-clear[_v-3bbe1ee4]::after,\n.g-mod[_v-3bbe1ee4]::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico[_v-3bbe1ee4] {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n.commonList-container[_v-3bbe1ee4] {\n  padding-bottom: 40px;\n  position: relative;\n  width: 100%; }\n  .commonList-container .class_introduce_con[_v-3bbe1ee4] {\n    position: relative;\n    padding: 5px 10px 0;\n    width: 100%; }\n    .commonList-container .class_introduce_con[_v-3bbe1ee4]::after {\n      pointer-events: none;\n      position: absolute;\n      z-index: 999;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      content: \" \";\n      border-color: #E1E1E1;\n      border-style: solid;\n      border-width: 0 0 1px 0;\n      -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0; }\n      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.4895833333333333), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n        .commonList-container .class_introduce_con[_v-3bbe1ee4]::after {\n          width: 100%;\n          height: 100%; } }\n      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.4895833333333335), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n        .commonList-container .class_introduce_con[_v-3bbe1ee4]::after {\n          width: 200%;\n          height: 200%;\n          -webkit-transform: scale(0.5);\n          -ms-transform: scale(0.5);\n              transform: scale(0.5); } }\n      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n        .commonList-container .class_introduce_con[_v-3bbe1ee4]::after {\n          width: 300%;\n          height: 300%;\n          -webkit-transform: scale(0.33333);\n          -ms-transform: scale(0.33333);\n              transform: scale(0.33333); } }\n    .commonList-container .class_introduce_con .comment_tit[_v-3bbe1ee4] {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: -moz-box;\n      display: -ms-flexbox;\n      display: flex;\n      height: 50px; }\n      .commonList-container .class_introduce_con .comment_tit .img[_v-3bbe1ee4] {\n        border-radius: 20px;\n        background-clip: padding-box !important;\n        width: 46px;\n        height: 46px;\n        background: pink;\n        margin-right: 5px;\n        margin-top: 5px;\n        -webkit-box-shadow: none !important;\n                box-shadow: none !important; }\n      .commonList-container .class_introduce_con .comment_tit .comment_dis[_v-3bbe1ee4] {\n        -webkit-box-flex: 1;\n        -webkit-flex: 1;\n        -moz-box-flex: 1;\n         -ms-flex: 1;\n             flex: 1;\n        width: .1px;\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: -moz-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n        -webkit-justify-content: center;\n        -moz-box-pack: center;\n         -ms-flex-pack: center;\n             justify-content: center;\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n        -webkit-flex-direction: column;\n        -moz-box-orient: vertical;\n        -moz-box-direction: normal;\n         -ms-flex-direction: column;\n             flex-direction: column;\n        width: 100% !important;\n        padding: 5px 0; }\n        .commonList-container .class_introduce_con .comment_tit .comment_dis span[_v-3bbe1ee4] {\n          display: block !important;\n          width: 80% !important;\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          -moz-box-flex: 1;\n           -ms-flex: 1;\n               flex: 1;\n          width: .1px;\n          color: #999;\n          font-size: 12px; }\n        .commonList-container .class_introduce_con .comment_tit .comment_dis .commentname[_v-3bbe1ee4] {\n          font-size: 14px;\n          color: #333;\n          line-height: 30px; }\n    .commonList-container .class_introduce_con .class_introduce_text[_v-3bbe1ee4] {\n      font-size: 14px;\n      color: #666;\n      padding: 5px 0;\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: -moz-box;\n      display: -ms-flexbox;\n      display: flex; }\n\n.remindNews[_v-3bbe1ee4] {\n  margin-left: 25px !important;\n  margin-right: 25px !important;\n  margin-top: 10px !important;\n  margin-bottom: 10px !important;\n  padding-left: 20px !important;\n  padding-right: 20px !important;\n  padding-top: 6px !important;\n  padding-bottom: 7px !important; }\n\n#common[_v-3bbe1ee4] {\n  position: fixed;\n  overflow: scroll;\n  -webkit-overflow-scrolling: touch;\n  width: 100%;\n  height: 87%;\n  z-index: 1;\n  background: #f0f0f0; }\n\n.commonroom[_v-3bbe1ee4] {\n  width: 100% !important;\n  padding: 0 10px; }\n  .commonroom ul[_v-3bbe1ee4] {\n    padding-bottom: 10px;\n    width: 100%;\n    min-height: 480px; }\n    .commonroom ul li[_v-3bbe1ee4] {\n      min-height: 70px;\n      padding-bottom: 20px; }\n      .commonroom ul li .timebox[_v-3bbe1ee4] {\n        text-align: center;\n        width: 100%;\n        max-width: 640px;\n        /*height:30px;*/ }\n        .commonroom ul li .timebox .talk_time[_v-3bbe1ee4] {\n          display: inline-block;\n          /*height:20px;*/\n          color: #FFFFFF;\n          line-height: 20px;\n          padding: 0 10px;\n          font-size: 11px;\n          background: #cccccc;\n          border-radius: 4px;\n          background-clip: padding-box !important; }\n      .commonroom ul li .right[_v-3bbe1ee4] {\n        margin-left: 30px; }\n        .commonroom ul li .right .mainPic[_v-3bbe1ee4] {\n          max-height: 230px;\n          max-width: 230px;\n          margin-top: 5px;\n          margin-left: 5px;\n          position: relative; }\n          .commonroom ul li .right .mainPic .picBox[_v-3bbe1ee4] {\n            max-height: 230px;\n            max-width: 230px; }\n            .commonroom ul li .right .mainPic .picBox .picBox_icon[_v-3bbe1ee4] {\n              width: 0;\n              height: 0;\n              border-left: 10px solid transparent;\n              border-right: 10px solid transparent;\n              border-top: 10px solid #fff;\n              border-bottom: transparent;\n              position: absolute;\n              left: 0;\n              top: 8px;\n              overflow: hidden; }\n            .commonroom ul li .right .mainPic .picBox .picBox_icon1_container[_v-3bbe1ee4] {\n              position: absolute;\n              left: 1;\n              top: 8px;\n              width: 10px;\n              height: 20px;\n              overflow: hidden; }\n              .commonroom ul li .right .mainPic .picBox .picBox_icon1_container img[_v-3bbe1ee4] {\n                max-height: 230px;\n                max-width: 230px;\n                opacity: 1;\n                margin-top: -8px; }\n            .commonroom ul li .right .mainPic .picBox .picBox_icon1[_v-3bbe1ee4] {\n              position: absolute;\n              border-right: 10px solid transparent;\n              border-bottom: 20px solid #f0f0f0;\n              border-top: transparent;\n              width: 10px;\n              height: 20px; }\n            .commonroom ul li .right .mainPic .picBox .picBox_icon2[_v-3bbe1ee4] {\n              position: absolute;\n              border-right: 10px solid #f0f0f0;\n              border-bottom: 3px solid transparent; }\n            .commonroom ul li .right .mainPic .picBox img[_v-3bbe1ee4] {\n              max-height: 230px;\n              max-width: 230px;\n              opacity: 0; }\n          .commonroom ul li .right .mainPic .picBox_container[_v-3bbe1ee4] {\n            max-height: 230px;\n            max-width: 220px;\n            position: absolute;\n            border-radius: 4px;\n            top: 0;\n            left: 10px;\n            overflow: hidden; }\n            .commonroom ul li .right .mainPic .picBox_container img[_v-3bbe1ee4] {\n              max-height: 230px;\n              max-width: 230px;\n              margin-left: -10px; }\n        .commonroom ul li .right h2[_v-3bbe1ee4] {\n          font-size: 12px;\n          font-weight: normal;\n          min-height: 20px;\n          margin-left: 5px;\n          color: #666; }\n        .commonroom ul li .right .audiomain[_v-3bbe1ee4] {\n          height: 30px;\n          display: inline-block; }\n          .commonroom ul li .right .audiomain .main[_v-3bbe1ee4] {\n            text-indent: 30px;\n            color: #333; }\n          .commonroom ul li .right .audiomain .voice[_v-3bbe1ee4] {\n            height: 40px; }\n            .commonroom ul li .right .audiomain .voice .fa[_v-3bbe1ee4] {\n              position: relative;\n              display: inline-block; }\n            .commonroom ul li .right .audiomain .voice .min[_v-3bbe1ee4] {\n              position: absolute;\n              right: -53px;\n              top: 8px;\n              width: 40px;\n              color: #666;\n              font-size: 12px; }\n        .commonroom ul li .right .main[_v-3bbe1ee4] {\n          min-width: 40px;\n          min-height: 40px;\n          font-size: 14px;\n          color: #333;\n          background-color: #fff;\n          border-radius: 3px;\n          padding: 7px 10px 6px;\n          position: relative;\n          display: inline-block;\n          line-height: 27px;\n          word-break: break-all;\n          word-wrap: break-word;\n          max-width: 80%;\n          margin-left: 15px;\n          margin-top: 5px;\n          padding-left: 12px; }\n          .commonroom ul li .right .main span[_v-3bbe1ee4] {\n            display: block;\n            word-break: keep-all;\n            word-wrap: break-word;\n            overflow: hidden;\n            max-width: 500px; }\n        .commonroom ul li .right .noPlay .fa[_v-3bbe1ee4]:after {\n          content: \"\";\n          position: absolute;\n          top: -14px;\n          left: 35px;\n          width: 12px;\n          z-index: 100;\n          height: 17px;\n          background: url(\"//pic.davdian.com/free/2016/12/24/22_32_16dffc36683debdbbf6a813306594422.png\") no-repeat;\n          background-size: 12px; }\n        .commonroom ul li .right .play .fa[_v-3bbe1ee4]:after {\n          content: \"\";\n          position: absolute;\n          left: 31px;\n          width: 20px;\n          top: -15px;\n          z-index: 100;\n          height: 20px;\n          background: url(\"//pic.davdian.com/free/2017/02/27/playVoice.gif\") no-repeat;\n          background-size: 20px; }\n        .commonroom ul li .right .main[_v-3bbe1ee4]:before {\n          width: 0;\n          height: 0;\n          border-left: 10px solid transparent;\n          border-right: 10px solid transparent;\n          border-top: 20px solid #fff;\n          border-bottom: transparent;\n          content: \"\";\n          position: absolute;\n          left: -10px;\n          top: 8px; }\n        .commonroom ul li .right .main_picBox_icon2[_v-3bbe1ee4] {\n          position: absolute;\n          left: -15px;\n          border-right: 15px solid #f0f0f0;\n          border-bottom: 3px solid transparent; }\n      .commonroom ul li .head[_v-3bbe1ee4] {\n        width: 30px;\n        height: 30px;\n        float: left;\n        overflow: hidden; }\n        .commonroom ul li .head img[_v-3bbe1ee4] {\n          width: 30px;\n          height: 30px;\n          border-radius: 15px;\n          background-clip: padding-box !important; }\n    .commonroom ul .myself[_v-3bbe1ee4] {\n      padding-bottom: 20px;\n      overflow: hidden; }\n      .commonroom ul .myself .timebox[_v-3bbe1ee4] {\n        text-align: center;\n        width: 100%;\n        height: 30px; }\n        .commonroom ul .myself .timebox .talk_time[_v-3bbe1ee4] {\n          display: inline-block;\n          height: 20px;\n          color: #FFFFFF;\n          line-height: 20px;\n          padding: 0 5px;\n          background: #cccccc;\n          border-radius: 3px;\n          background-clip: padding-box !important; }\n      .commonroom ul .myself .right[_v-3bbe1ee4] {\n        float: right;\n        padding-right: 35px; }\n        .commonroom ul .myself .right h2[_v-3bbe1ee4] {\n          position: absolute;\n          font-size: 12px;\n          font-weight: normal;\n          margin-bottom: 5px; }\n        .commonroom ul .myself .right .audiomain[_v-3bbe1ee4] {\n          height: 30px; }\n          .commonroom ul .myself .right .audiomain .voice[_v-3bbe1ee4] {\n            width: 80px;\n            background: #FFFFFF;\n            border-radius: 5px;\n            background-clip: padding-box !important; }\n            .commonroom ul .myself .right .audiomain .voice .fa[_v-3bbe1ee4] {\n              position: relative;\n              display: inline-block; }\n            .commonroom ul .myself .right .audiomain .voice .min[_v-3bbe1ee4] {\n              position: absolute;\n              right: -53px;\n              top: 8px;\n              width: 40px;\n              color: #666;\n              font-size: 12px; }\n        .commonroom ul .myself .right .main[_v-3bbe1ee4] {\n          float: right;\n          font-size: 14px;\n          background-color: #fff;\n          color: #666;\n          border-radius: 3px;\n          padding: 7px 10px 6px;\n          position: relative;\n          display: inline-block;\n          line-height: 17px;\n          word-break: break-all;\n          word-wrap: break-word;\n          max-width: 70%;\n          margin-left: 4px;\n          word-wrap: break-word;\n          word-break: break-all; }\n        .commonroom ul .myself .right .play .fa[_v-3bbe1ee4]:after {\n          content: \"\";\n          position: absolute;\n          top: -11px;\n          left: 39px;\n          width: 12px;\n          z-index: 100;\n          height: 13px;\n          background: url(\"//pic.davdian.com/free/voice_img_311.gif\") no-repeat;\n          background-size: 12px; }\n        .commonroom ul .myself .right .main[_v-3bbe1ee4]:before {\n          width: 0;\n          height: 0;\n          border-left: 0px solid transparent;\n          border-right: 0px solid transparent;\n          border-top: 0px solid #fff;\n          border-bottom: transparent;\n          content: \"\";\n          position: absolute;\n          left: 0px;\n          top: 0px; }\n        .commonroom ul .myself .right .main[_v-3bbe1ee4]:after {\n          width: 0;\n          height: 0;\n          border-left: 10px solid transparent;\n          border-right: 10px solid transparent;\n          border-top: 10px solid #fff;\n          border-bottom: transparent;\n          content: \"\";\n          position: absolute;\n          right: -10px;\n          top: 8px; }\n      .commonroom ul .myself .head[_v-3bbe1ee4] {\n        position: absolute;\n        right: 0;\n        width: 25px;\n        height: 25px;\n        float: left;\n        overflow: hidden;\n        border-radius: 25px;\n        background-clip: padding-box !important; }\n        .commonroom ul .myself .head img[_v-3bbe1ee4] {\n          width: 25px;\n          height: 25px; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 1493:
+/***/ 1498:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18077,26 +18077,26 @@
 
 /***/ },
 
-/***/ 1494:
+/***/ 1499:
 /***/ function(module, exports) {
 
-	module.exports = "\n    <div id=\"common\" _v-082b234e=\"\">\n        <div class=\"commonroom\" _v-082b234e=\"\">\n\t        <ul id=\"ulList\" _v-082b234e=\"\">\n\t            <audio preload=\"auto\" class=\"allAudio\" _v-082b234e=\"\"></audio>\n\t            <li class=\"teacherChatData\" v-for=\"(common,index) in barrageList\" :key=\"common.uuid\" msg_id=\"{{decodeURIComponent(common.speake.name)}}\" _v-082b234e=\"\">\n\t                <div class=\"timebox\" v-if=\"index == 0 || (common.msg.time - barrageList[index - 1].msg.time) > 5*60*1000\" _v-082b234e=\"\">\n\t                    <span class=\"talk_time\" v-if=\"new Date()-common.msg.time < 60*60*12*1000\" _v-082b234e=\"\">{{getTime(parseInt(common.msg.time))}}</span>\n\t                    <span class=\"talk_time\" v-if=\"new Date()-common.msg.time >= 60*60*12*1000\" _v-082b234e=\"\">{{getFullTime(parseInt(common.msg.time))}}</span>\n\t                </div>\n\t                <div class=\"timebox\" _v-082b234e=\"\">\n\t                \t<div class=\"talk_time remindNews\" v-if=\"common.isTips || common.allMsg &amp;&amp; JSON.parse(common.allMsg) &amp;&amp; JSON.parse(JSON.parse(JSON.parse(common.allMsg).content).extra).info.isTips==1\" _v-082b234e=\"\">{{decodeURIComponent(common.msg.content)}}</div>\n\t                </div>\n\t                \n\n\t                <span class=\"head\" v-if=\"!(common.isTips || common.allMsg &amp;&amp; JSON.parse(common.allMsg) &amp;&amp; JSON.parse(JSON.parse(JSON.parse(common.allMsg).content).extra).info.isTips==1)\" _v-082b234e=\"\">\n\t                    <img :src=\"common.speaker.avatar || defaultAvatar\" _v-082b234e=\"\">\n\t                </span>\n\t                <div class=\"right\" v-if=\"!(common.isTips || common.allMsg &amp;&amp; JSON.parse(common.allMsg) &amp;&amp; JSON.parse(JSON.parse(JSON.parse(common.allMsg).content).extra).info.isTips==1)\" _v-082b234e=\"\">\n\t                    <h2 _v-082b234e=\"\">{{decodeURIComponent(common.speaker.name)}}</h2>\n\t                    <!--text类型的信息-->\n\t                    <div v-if=\"common.msg.type==0\" class=\"main\" :class=\"{'blue':common.is_answer}\" _v-082b234e=\"\">\n\t                        <i class=\"main_picBox_icon2\" _v-082b234e=\"\"></i>\n\t                        <span class=\"TextMessageSpan formfield\" _v-082b234e=\"\">{{decodeURIComponent(common.msg.content)}}</span>\n\t                    </div>\n\t                    <!--语音类型的信息-->\n\t                    <div class=\"audiomain\" @click=\"playVoiceFlag(index, common)\" v-if=\"common.msg.type==2||common.msg.type==91\" :class=\"{'replied':common.replied}\" _v-082b234e=\"\">\n\t                        <div class=\"voice\" :class=\"{ 'play': isPlay[index], 'noPlay': !isPlay[index] }\" _v-082b234e=\"\">\n\t                            <i class=\"fa fa-rss\" v-if=\"common.msg.duration>0\" _v-082b234e=\"\"></i>\n\t                            <!-- <p :style=\"{width:(common.msg.voicewidth + 40)+'px'}\" class=\"main\">{{common.msg.duration}}''</p> -->\n\t                            <p :style=\"{width:( getWidth(common.msg.duration) + 40)+'px'}\" class=\"main\" _v-082b234e=\"\">{{common.msg.duration}}''</p>\n\t                            <i class=\"curcle-full\" v-if=\"!curcleFullHash[common.uuid] &amp;&amp; !common.msg.curcleFullHash\" _v-082b234e=\"\"></i>\n\t                        </div>\n\t                        <div class=\"audio\" :data-src=\"common.msg.url\" preload=\"auto\" :data-type=\"1\" :data-index=\"index\" v-if=\"common.msg.type==2\" _v-082b234e=\"\"></div>\n\t                        <div class=\"audio\" :data-src=\"common.msg.url\" preload=\"auto\" :data-type=\"91\" :data-index=\"index\" v-if=\"common.msg.type==91\" _v-082b234e=\"\"></div>\n\t                    </div>\n\t                    <!--图片类型的信息-->\n\t                    <div v-if=\"common.msg.type==1\" class=\"mainPic\" _v-082b234e=\"\">\n\t                        <div class=\"picBox\" _v-082b234e=\"\">\n\t                            <div class=\"picBox_icon1_container\" _v-082b234e=\"\">\n\t                                <i class=\"picBox_icon1\" _v-082b234e=\"\"></i>\n\t                                <i class=\"picBox_icon2\" _v-082b234e=\"\"></i>\n\t                                <img :src=\"common.msg.url\" alt=\"\" _v-082b234e=\"\">\n\t                            </div>\n\t                            <img :src=\"common.msg.url\" alt=\"\" _v-082b234e=\"\">\n\t                        </div>\n\t                        <div class=\"picBox_container\" @click=\"previewImage(common.uuid)\" _v-082b234e=\"\">\n\t                            <img :style=\"getImageStyle(common)\" :src=\"common.msg.url\" alt=\"\" _v-082b234e=\"\">\n\t                        </div>\n\t                    </div>\n\t                </div>\n\t            </li>\n\t        </ul>\n\t        <div class=\"bottom\" _v-082b234e=\"\"></div>\n\t    </div>\n    </div>\n";
+	module.exports = "\n    <div id=\"common\" _v-3bbe1ee4=\"\">\n        <div class=\"commonroom\" _v-3bbe1ee4=\"\">\n\t        <ul id=\"ulList\" _v-3bbe1ee4=\"\">\n\t            <audio preload=\"auto\" class=\"allAudio\" _v-3bbe1ee4=\"\"></audio>\n\t            <li class=\"teacherChatData\" v-for=\"(common,index) in barrageList\" :key=\"common.uuid\" msg_id=\"{{decodeURIComponent(common.speake.name)}}\" _v-3bbe1ee4=\"\">\n\t                <div class=\"timebox\" v-if=\"index == 0 || (common.msg.time - barrageList[index - 1].msg.time) > 5*60*1000\" _v-3bbe1ee4=\"\">\n\t                    <span class=\"talk_time\" v-if=\"new Date()-common.msg.time < 60*60*12*1000\" _v-3bbe1ee4=\"\">{{getTime(parseInt(common.msg.time))}}</span>\n\t                    <span class=\"talk_time\" v-if=\"new Date()-common.msg.time >= 60*60*12*1000\" _v-3bbe1ee4=\"\">{{getFullTime(parseInt(common.msg.time))}}</span>\n\t                </div>\n\t                <div class=\"timebox\" _v-3bbe1ee4=\"\">\n\t                \t<div class=\"talk_time remindNews\" v-if=\"common.isTips || common.allMsg &amp;&amp; JSON.parse(common.allMsg) &amp;&amp; JSON.parse(JSON.parse(JSON.parse(common.allMsg).content).extra).info.isTips==1\" _v-3bbe1ee4=\"\">{{decodeURIComponent(common.msg.content)}}</div>\n\t                </div>\n\t                \n\n\t                <span class=\"head\" v-if=\"!(common.isTips || common.allMsg &amp;&amp; JSON.parse(common.allMsg) &amp;&amp; JSON.parse(JSON.parse(JSON.parse(common.allMsg).content).extra).info.isTips==1)\" _v-3bbe1ee4=\"\">\n\t                    <img :src=\"common.speaker.avatar || defaultAvatar\" _v-3bbe1ee4=\"\">\n\t                </span>\n\t                <div class=\"right\" v-if=\"!(common.isTips || common.allMsg &amp;&amp; JSON.parse(common.allMsg) &amp;&amp; JSON.parse(JSON.parse(JSON.parse(common.allMsg).content).extra).info.isTips==1)\" _v-3bbe1ee4=\"\">\n\t                    <h2 _v-3bbe1ee4=\"\">{{decodeURIComponent(common.speaker.name)}}</h2>\n\t                    <!--text类型的信息-->\n\t                    <div v-if=\"common.msg.type==0\" class=\"main\" :class=\"{'blue':common.is_answer}\" _v-3bbe1ee4=\"\">\n\t                        <i class=\"main_picBox_icon2\" _v-3bbe1ee4=\"\"></i>\n\t                        <span class=\"TextMessageSpan formfield\" _v-3bbe1ee4=\"\">{{decodeURIComponent(common.msg.content)}}</span>\n\t                    </div>\n\t                    <!--语音类型的信息-->\n\t                    <div class=\"audiomain\" @click=\"playVoiceFlag(index, common)\" v-if=\"common.msg.type==2||common.msg.type==91\" :class=\"{'replied':common.replied}\" _v-3bbe1ee4=\"\">\n\t                        <div class=\"voice\" :class=\"{ 'play': isPlay[index], 'noPlay': !isPlay[index] }\" _v-3bbe1ee4=\"\">\n\t                            <i class=\"fa fa-rss\" v-if=\"common.msg.duration>0\" _v-3bbe1ee4=\"\"></i>\n\t                            <!-- <p :style=\"{width:(common.msg.voicewidth + 40)+'px'}\" class=\"main\">{{common.msg.duration}}''</p> -->\n\t                            <p :style=\"{width:( getWidth(common.msg.duration) + 40)+'px'}\" class=\"main\" _v-3bbe1ee4=\"\">{{common.msg.duration}}''</p>\n\t                            <i class=\"curcle-full\" v-if=\"!curcleFullHash[common.uuid] &amp;&amp; !common.msg.curcleFullHash\" _v-3bbe1ee4=\"\"></i>\n\t                        </div>\n\t                        <div class=\"audio\" :data-src=\"common.msg.url\" preload=\"auto\" :data-type=\"1\" :data-index=\"index\" v-if=\"common.msg.type==2\" _v-3bbe1ee4=\"\"></div>\n\t                        <div class=\"audio\" :data-src=\"common.msg.url\" preload=\"auto\" :data-type=\"91\" :data-index=\"index\" v-if=\"common.msg.type==91\" _v-3bbe1ee4=\"\"></div>\n\t                    </div>\n\t                    <!--图片类型的信息-->\n\t                    <div v-if=\"common.msg.type==1\" class=\"mainPic\" _v-3bbe1ee4=\"\">\n\t                        <div class=\"picBox\" _v-3bbe1ee4=\"\">\n\t                            <div class=\"picBox_icon1_container\" _v-3bbe1ee4=\"\">\n\t                                <i class=\"picBox_icon1\" _v-3bbe1ee4=\"\"></i>\n\t                                <i class=\"picBox_icon2\" _v-3bbe1ee4=\"\"></i>\n\t                                <img :src=\"common.msg.url\" alt=\"\" _v-3bbe1ee4=\"\">\n\t                            </div>\n\t                            <img :src=\"common.msg.url\" alt=\"\" _v-3bbe1ee4=\"\">\n\t                        </div>\n\t                        <div class=\"picBox_container\" @click=\"previewImage(common.uuid)\" _v-3bbe1ee4=\"\">\n\t                            <img :style=\"getImageStyle(common)\" :src=\"common.msg.url\" alt=\"\" _v-3bbe1ee4=\"\">\n\t                        </div>\n\t                    </div>\n\t                </div>\n\t            </li>\n\t        </ul>\n\t        <div class=\"bottom\" _v-3bbe1ee4=\"\"></div>\n\t    </div>\n    </div>\n";
 
 /***/ },
 
-/***/ 1495:
+/***/ 1500:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1496)
-	__webpack_require__(1498)
-	__vue_script__ = __webpack_require__(1500)
+	__webpack_require__(1501)
+	__webpack_require__(1503)
+	__vue_script__ = __webpack_require__(1505)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/userCommon.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1501)
+	__vue_template__ = __webpack_require__(1506)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18112,7 +18112,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-da70ccf8/userCommon.vue"
+	  var id = "_v-ce500d8e/userCommon.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18122,13 +18122,13 @@
 
 /***/ },
 
-/***/ 1496:
+/***/ 1501:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1497);
+	var content = __webpack_require__(1502);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18149,7 +18149,7 @@
 
 /***/ },
 
-/***/ 1497:
+/***/ 1502:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18164,13 +18164,13 @@
 
 /***/ },
 
-/***/ 1498:
+/***/ 1503:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1499);
+	var content = __webpack_require__(1504);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18179,8 +18179,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-da70ccf8&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./userCommon.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-da70ccf8&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./userCommon.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ce500d8e&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./userCommon.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ce500d8e&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./userCommon.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -18191,7 +18191,7 @@
 
 /***/ },
 
-/***/ 1499:
+/***/ 1504:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18199,14 +18199,14 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * lib中map使用“_”开头，本文件中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * 合并base和extra中的同类base map\r\n * 用以解决业务方升级Yo时需比base和extra的一致性\r\n * 当extra为空时，base map将以base文件里的定义作为默认值\r\n * 当extra不为空时，base map使用extra文件里的定义\r\n */\n/**\n * Yo框架全局Variables\n * Yo基础变量map，如果不想定义某属性，将其value设置为null；\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\n * variables中map使用“_”开头，本文件中不使用\"_\"\n * variables ⇌ config\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * 合并variables和config中的同类map\r\n * 用以解决业务方升级Yo时需比config和variables的一致性\r\n * 当config为空时，使用variables中的map作为默认值\r\n * 当config不为空时，使用config中的定义\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 功能\r\n * @description 给需要的属性加厂家前缀\r\n * @method _prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 定义字体图标\r\n * @method _yofont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 四则运算(iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example <div class=\"calc\">四则运算</div>\r\n * .calc { @include calc(width, \"100% - 100px\"); }\r\n */\n/**\r\n * @module 功能\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除行内级元素间间隙方案\r\n * @method killspace\r\n * @version 1.0.0\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n * .demo {@include killspace;}\r\n */\n/**\r\n * @module 功能\r\n * @description 元素在包含块中的对齐方式，默认为水平垂直对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 指定包含块布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {String} $type 指定居中元素类型，可选值：image | text | other，默认值：text <2.0.0>\r\n * @param {Keywords} $justify-content 指定元素水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keywords} $align-items 指定元素垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <img class=\"item\" alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n * .demo {@include align;}\r\n */\n/**\r\n * @module 功能\r\n * @description 定义文档根节点是否允许滚动\r\n * @method root-scroll\r\n * @version 1.4.0\r\n * @param {Boolean} $is-scroll 指定是否有滚动，默认值：false <1.8.6>\r\n */\n/**\r\n * @module 功能\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(iOS7.0+,Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(iOS7.0+,Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*[_v-da70ccf8],[_v-da70ccf8]\n::before,[_v-da70ccf8]\n::after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml[_v-da70ccf8],\nbody[_v-da70ccf8] {\n  overflow: hidden;\n  height: 100%; }\n\n[_v-da70ccf8]::-webkit-scrollbar {\n  display: none; }\n\nhtml[_v-da70ccf8] {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n   -ms-user-select: text;\n       user-select: text; }\n\nbody[_v-da70ccf8] {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul[_v-da70ccf8],\nol[_v-da70ccf8],\ndl[_v-da70ccf8],\ndd[_v-da70ccf8],\nh1[_v-da70ccf8],\nh2[_v-da70ccf8],\nh3[_v-da70ccf8],\nh4[_v-da70ccf8],\nh5[_v-da70ccf8],\nh6[_v-da70ccf8],\nfigure[_v-da70ccf8],\nform[_v-da70ccf8],\nfieldset[_v-da70ccf8],\nlegend[_v-da70ccf8],\ninput[_v-da70ccf8],\ntextarea[_v-da70ccf8],\nbutton[_v-da70ccf8],\np[_v-da70ccf8],\nblockquote[_v-da70ccf8],\nth[_v-da70ccf8],\ntd[_v-da70ccf8],\npre[_v-da70ccf8],\nxmp[_v-da70ccf8] {\n  margin: 0;\n  padding: 0; }\n\ninput[_v-da70ccf8],\ntextarea[_v-da70ccf8],\nbutton[_v-da70ccf8],\nselect[_v-da70ccf8],\npre[_v-da70ccf8],\nxmp[_v-da70ccf8],\ntt[_v-da70ccf8],\ncode[_v-da70ccf8],\nkbd[_v-da70ccf8],\nsamp[_v-da70ccf8] {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1[_v-da70ccf8],\nh2[_v-da70ccf8],\nh3[_v-da70ccf8],\nh4[_v-da70ccf8],\nh5[_v-da70ccf8],\nh6[_v-da70ccf8],\nsmall[_v-da70ccf8],\nbig[_v-da70ccf8],\ninput[_v-da70ccf8],\ntextarea[_v-da70ccf8],\nbutton[_v-da70ccf8],\nselect[_v-da70ccf8] {\n  font-size: inherit; }\n\naddress[_v-da70ccf8],\ncite[_v-da70ccf8],\ndfn[_v-da70ccf8],\nem[_v-da70ccf8],\ni[_v-da70ccf8],\noptgroup[_v-da70ccf8],\nvar[_v-da70ccf8] {\n  font-style: normal; }\n\ntable[_v-da70ccf8] {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul[_v-da70ccf8],\nol[_v-da70ccf8],\nmenu[_v-da70ccf8] {\n  list-style: none; }\n\nfieldset[_v-da70ccf8],\nimg[_v-da70ccf8] {\n  border: 0;\n  vertical-align: middle; }\n\narticle[_v-da70ccf8],\naside[_v-da70ccf8],\ndetails[_v-da70ccf8],\nfigcaption[_v-da70ccf8],\nfigure[_v-da70ccf8],\nfooter[_v-da70ccf8],\nheader[_v-da70ccf8],\nmain[_v-da70ccf8],\nmenu[_v-da70ccf8],\nnav[_v-da70ccf8],\nsection[_v-da70ccf8],\nsummary[_v-da70ccf8] {\n  display: block; }\n\naudio[_v-da70ccf8],\ncanvas[_v-da70ccf8],\nvideo[_v-da70ccf8] {\n  display: inline-block; }\n\nblockquote[_v-da70ccf8]:before,\nblockquote[_v-da70ccf8]:after,\nq[_v-da70ccf8]:before,\nq[_v-da70ccf8]:after {\n  content: \" \"; }\n\ntextarea[_v-da70ccf8],\npre[_v-da70ccf8],\nxmp[_v-da70ccf8] {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea[_v-da70ccf8] {\n  resize: vertical; }\n\ninput[_v-da70ccf8],\ntextarea[_v-da70ccf8],\nbutton[_v-da70ccf8],\nselect\na[_v-da70ccf8] {\n  outline: 0 none; }\n\ninput[_v-da70ccf8],\ntextarea[_v-da70ccf8],\nbutton[_v-da70ccf8],\nselect[_v-da70ccf8] {\n  color: inherit; }\n  input[_v-da70ccf8]:disabled,\n  textarea[_v-da70ccf8]:disabled,\n  button[_v-da70ccf8]:disabled,\n  select[_v-da70ccf8]:disabled {\n    opacity: 1; }\n\nbutton[_v-da70ccf8]::-moz-focus-inner,\ninput[_v-da70ccf8]::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"][_v-da70ccf8],\ninput[type=\"submit\"][_v-da70ccf8],\ninput[type=\"reset\"][_v-da70ccf8],\ninput[type=\"file\"][_v-da70ccf8]::-webkit-file-upload-button,\ninput[type=\"search\"][_v-da70ccf8]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\nmark[_v-da70ccf8] {\n  background-color: transparent; }\n\na[_v-da70ccf8],\nins[_v-da70ccf8],\ns[_v-da70ccf8],\nu[_v-da70ccf8],\ndel[_v-da70ccf8] {\n  text-decoration: none; }\n\na[_v-da70ccf8] {\n  color: #00afc7; }\n\n.g-clear[_v-da70ccf8]::after,\n.g-mod[_v-da70ccf8]::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico[_v-da70ccf8] {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * lib中map使用“_”开头，本文件中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * 合并base和extra中的同类base map\r\n * 用以解决业务方升级Yo时需比base和extra的一致性\r\n * 当extra为空时，base map将以base文件里的定义作为默认值\r\n * 当extra不为空时，base map使用extra文件里的定义\r\n */\n/**\n * Yo框架全局Variables\n * Yo基础变量map，如果不想定义某属性，将其value设置为null；\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\n * variables中map使用“_”开头，本文件中不使用\"_\"\n * variables ⇌ config\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * 合并variables和config中的同类map\r\n * 用以解决业务方升级Yo时需比config和variables的一致性\r\n * 当config为空时，使用variables中的map作为默认值\r\n * 当config不为空时，使用config中的定义\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 功能\r\n * @description 给需要的属性加厂家前缀\r\n * @method _prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 定义字体图标\r\n * @method _yofont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 四则运算(iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example <div class=\"calc\">四则运算</div>\r\n * .calc { @include calc(width, \"100% - 100px\"); }\r\n */\n/**\r\n * @module 功能\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除行内级元素间间隙方案\r\n * @method killspace\r\n * @version 1.0.0\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n * .demo {@include killspace;}\r\n */\n/**\r\n * @module 功能\r\n * @description 元素在包含块中的对齐方式，默认为水平垂直对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 指定包含块布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {String} $type 指定居中元素类型，可选值：image | text | other，默认值：text <2.0.0>\r\n * @param {Keywords} $justify-content 指定元素水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keywords} $align-items 指定元素垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <img class=\"item\" alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n * .demo {@include align;}\r\n */\n/**\r\n * @module 功能\r\n * @description 定义文档根节点是否允许滚动\r\n * @method root-scroll\r\n * @version 1.4.0\r\n * @param {Boolean} $is-scroll 指定是否有滚动，默认值：false <1.8.6>\r\n */\n/**\r\n * @module 功能\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(iOS7.0+,Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(iOS7.0+,Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*[_v-da70ccf8],[_v-da70ccf8]\n::before,[_v-da70ccf8]\n::after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml[_v-da70ccf8],\nbody[_v-da70ccf8] {\n  overflow: hidden;\n  height: 100%; }\n\n[_v-da70ccf8]::-webkit-scrollbar {\n  display: none; }\n\nhtml[_v-da70ccf8] {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n   -ms-user-select: text;\n       user-select: text; }\n\nbody[_v-da70ccf8] {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul[_v-da70ccf8],\nol[_v-da70ccf8],\ndl[_v-da70ccf8],\ndd[_v-da70ccf8],\nh1[_v-da70ccf8],\nh2[_v-da70ccf8],\nh3[_v-da70ccf8],\nh4[_v-da70ccf8],\nh5[_v-da70ccf8],\nh6[_v-da70ccf8],\nfigure[_v-da70ccf8],\nform[_v-da70ccf8],\nfieldset[_v-da70ccf8],\nlegend[_v-da70ccf8],\ninput[_v-da70ccf8],\ntextarea[_v-da70ccf8],\nbutton[_v-da70ccf8],\np[_v-da70ccf8],\nblockquote[_v-da70ccf8],\nth[_v-da70ccf8],\ntd[_v-da70ccf8],\npre[_v-da70ccf8],\nxmp[_v-da70ccf8] {\n  margin: 0;\n  padding: 0; }\n\ninput[_v-da70ccf8],\ntextarea[_v-da70ccf8],\nbutton[_v-da70ccf8],\nselect[_v-da70ccf8],\npre[_v-da70ccf8],\nxmp[_v-da70ccf8],\ntt[_v-da70ccf8],\ncode[_v-da70ccf8],\nkbd[_v-da70ccf8],\nsamp[_v-da70ccf8] {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1[_v-da70ccf8],\nh2[_v-da70ccf8],\nh3[_v-da70ccf8],\nh4[_v-da70ccf8],\nh5[_v-da70ccf8],\nh6[_v-da70ccf8],\nsmall[_v-da70ccf8],\nbig[_v-da70ccf8],\ninput[_v-da70ccf8],\ntextarea[_v-da70ccf8],\nbutton[_v-da70ccf8],\nselect[_v-da70ccf8] {\n  font-size: inherit; }\n\naddress[_v-da70ccf8],\ncite[_v-da70ccf8],\ndfn[_v-da70ccf8],\nem[_v-da70ccf8],\ni[_v-da70ccf8],\noptgroup[_v-da70ccf8],\nvar[_v-da70ccf8] {\n  font-style: normal; }\n\ntable[_v-da70ccf8] {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul[_v-da70ccf8],\nol[_v-da70ccf8],\nmenu[_v-da70ccf8] {\n  list-style: none; }\n\nfieldset[_v-da70ccf8],\nimg[_v-da70ccf8] {\n  border: 0;\n  vertical-align: middle; }\n\narticle[_v-da70ccf8],\naside[_v-da70ccf8],\ndetails[_v-da70ccf8],\nfigcaption[_v-da70ccf8],\nfigure[_v-da70ccf8],\nfooter[_v-da70ccf8],\nheader[_v-da70ccf8],\nmain[_v-da70ccf8],\nmenu[_v-da70ccf8],\nnav[_v-da70ccf8],\nsection[_v-da70ccf8],\nsummary[_v-da70ccf8] {\n  display: block; }\n\naudio[_v-da70ccf8],\ncanvas[_v-da70ccf8],\nvideo[_v-da70ccf8] {\n  display: inline-block; }\n\nblockquote[_v-da70ccf8]:before,\nblockquote[_v-da70ccf8]:after,\nq[_v-da70ccf8]:before,\nq[_v-da70ccf8]:after {\n  content: \" \"; }\n\ntextarea[_v-da70ccf8],\npre[_v-da70ccf8],\nxmp[_v-da70ccf8] {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea[_v-da70ccf8] {\n  resize: vertical; }\n\ninput[_v-da70ccf8],\ntextarea[_v-da70ccf8],\nbutton[_v-da70ccf8],\nselect\na[_v-da70ccf8] {\n  outline: 0 none; }\n\ninput[_v-da70ccf8],\ntextarea[_v-da70ccf8],\nbutton[_v-da70ccf8],\nselect[_v-da70ccf8] {\n  color: inherit; }\n  input[_v-da70ccf8]:disabled,\n  textarea[_v-da70ccf8]:disabled,\n  button[_v-da70ccf8]:disabled,\n  select[_v-da70ccf8]:disabled {\n    opacity: 1; }\n\nbutton[_v-da70ccf8]::-moz-focus-inner,\ninput[_v-da70ccf8]::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"][_v-da70ccf8],\ninput[type=\"submit\"][_v-da70ccf8],\ninput[type=\"reset\"][_v-da70ccf8],\ninput[type=\"file\"][_v-da70ccf8]::-webkit-file-upload-button,\ninput[type=\"search\"][_v-da70ccf8]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\nmark[_v-da70ccf8] {\n  background-color: transparent; }\n\na[_v-da70ccf8],\nins[_v-da70ccf8],\ns[_v-da70ccf8],\nu[_v-da70ccf8],\ndel[_v-da70ccf8] {\n  text-decoration: none; }\n\na[_v-da70ccf8] {\n  color: #00afc7; }\n\n.g-clear[_v-da70ccf8]::after,\n.g-mod[_v-da70ccf8]::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico[_v-da70ccf8] {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n.commonList-container[_v-da70ccf8] {\n  padding-bottom: 40px;\n  position: relative;\n  width: 100%; }\n  .commonList-container .class_introduce_con[_v-da70ccf8] {\n    position: relative;\n    padding: 5px 10px 0;\n    width: 100%; }\n    .commonList-container .class_introduce_con[_v-da70ccf8]::after {\n      pointer-events: none;\n      position: absolute;\n      z-index: 999;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      content: \" \";\n      border-color: #E1E1E1;\n      border-style: solid;\n      border-width: 0 0 1px 0;\n      -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0; }\n      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.4895833333333333), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n        .commonList-container .class_introduce_con[_v-da70ccf8]::after {\n          width: 100%;\n          height: 100%; } }\n      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.4895833333333335), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n        .commonList-container .class_introduce_con[_v-da70ccf8]::after {\n          width: 200%;\n          height: 200%;\n          -webkit-transform: scale(0.5);\n          -ms-transform: scale(0.5);\n              transform: scale(0.5); } }\n      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n        .commonList-container .class_introduce_con[_v-da70ccf8]::after {\n          width: 300%;\n          height: 300%;\n          -webkit-transform: scale(0.33333);\n          -ms-transform: scale(0.33333);\n              transform: scale(0.33333); } }\n    .commonList-container .class_introduce_con .comment_tit[_v-da70ccf8] {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: -moz-box;\n      display: -ms-flexbox;\n      display: flex;\n      height: 50px; }\n      .commonList-container .class_introduce_con .comment_tit .img[_v-da70ccf8] {\n        border-radius: 20px;\n        background-clip: padding-box !important;\n        width: 46px;\n        height: 46px;\n        background: pink;\n        margin-right: 5px;\n        margin-top: 5px;\n        -webkit-box-shadow: none !important;\n                box-shadow: none !important; }\n      .commonList-container .class_introduce_con .comment_tit .comment_dis[_v-da70ccf8] {\n        -webkit-box-flex: 1;\n        -webkit-flex: 1;\n        -moz-box-flex: 1;\n         -ms-flex: 1;\n             flex: 1;\n        width: .1px;\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: -moz-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n        -webkit-justify-content: center;\n        -moz-box-pack: center;\n         -ms-flex-pack: center;\n             justify-content: center;\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n        -webkit-flex-direction: column;\n        -moz-box-orient: vertical;\n        -moz-box-direction: normal;\n         -ms-flex-direction: column;\n             flex-direction: column;\n        width: 100% !important;\n        padding: 5px 0; }\n        .commonList-container .class_introduce_con .comment_tit .comment_dis span[_v-da70ccf8] {\n          display: block !important;\n          width: 80% !important;\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          -moz-box-flex: 1;\n           -ms-flex: 1;\n               flex: 1;\n          width: .1px;\n          color: #999;\n          font-size: 12px; }\n        .commonList-container .class_introduce_con .comment_tit .comment_dis .commentname[_v-da70ccf8] {\n          font-size: 14px;\n          color: #333;\n          line-height: 30px; }\n    .commonList-container .class_introduce_con .class_introduce_text[_v-da70ccf8] {\n      font-size: 14px;\n      color: #666;\n      padding: 5px 0;\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: -moz-box;\n      display: -ms-flexbox;\n      display: flex; }\n\n.mask[_v-da70ccf8] {\n  width: 100%;\n  height: 100%;\n  /*left: 50%;*/\n  max-width: 640px;\n  margin: 0 auto;\n  position: fixed;\n  z-index: 106;\n  background: rgba(0, 0, 0, 0.5); }\n  .mask .mask_con[_v-da70ccf8] {\n    position: fixed;\n    bottom: 0;\n    width: 100%;\n    z-index: 100;\n    height: 73%;\n    background: #fff; }\n    .mask .mask_con .close[_v-da70ccf8] {\n      position: absolute;\n      height: 30px;\n      width: 30px;\n      right: 0;\n      z-index: 105;\n      top: -40px; }\n      .mask .mask_con .close img[_v-da70ccf8] {\n        width: 30px;\n        height: 40px; }\n    .mask .mask_con .common[_v-da70ccf8] {\n      height: 100%;\n      overflow: hidden; }\n      .mask .mask_con .common .scrollcon[_v-da70ccf8] {\n        width: 100%;\n        height: 100%;\n        overflow: scroll;\n        -webkit-overflow-scrolling: touch; }\n\n.mask_con_mask[_v-da70ccf8] {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  height: 160px;\n  z-index: 100; }\n\n.commonbottom[_v-da70ccf8] {\n  width: 100%;\n  height: 10px; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * lib中map使用“_”开头，本文件中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * 合并base和extra中的同类base map\r\n * 用以解决业务方升级Yo时需比base和extra的一致性\r\n * 当extra为空时，base map将以base文件里的定义作为默认值\r\n * 当extra不为空时，base map使用extra文件里的定义\r\n */\n/**\n * Yo框架全局Variables\n * Yo基础变量map，如果不想定义某属性，将其value设置为null；\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\n * variables中map使用“_”开头，本文件中不使用\"_\"\n * variables ⇌ config\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * 合并variables和config中的同类map\r\n * 用以解决业务方升级Yo时需比config和variables的一致性\r\n * 当config为空时，使用variables中的map作为默认值\r\n * 当config不为空时，使用config中的定义\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 功能\r\n * @description 给需要的属性加厂家前缀\r\n * @method _prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 定义字体图标\r\n * @method _yofont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 四则运算(iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example <div class=\"calc\">四则运算</div>\r\n * .calc { @include calc(width, \"100% - 100px\"); }\r\n */\n/**\r\n * @module 功能\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除行内级元素间间隙方案\r\n * @method killspace\r\n * @version 1.0.0\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n * .demo {@include killspace;}\r\n */\n/**\r\n * @module 功能\r\n * @description 元素在包含块中的对齐方式，默认为水平垂直对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 指定包含块布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {String} $type 指定居中元素类型，可选值：image | text | other，默认值：text <2.0.0>\r\n * @param {Keywords} $justify-content 指定元素水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keywords} $align-items 指定元素垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <img class=\"item\" alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n * .demo {@include align;}\r\n */\n/**\r\n * @module 功能\r\n * @description 定义文档根节点是否允许滚动\r\n * @method root-scroll\r\n * @version 1.4.0\r\n * @param {Boolean} $is-scroll 指定是否有滚动，默认值：false <1.8.6>\r\n */\n/**\r\n * @module 功能\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(iOS7.0+,Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(iOS7.0+,Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*[_v-ce500d8e],[_v-ce500d8e]\n::before,[_v-ce500d8e]\n::after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml[_v-ce500d8e],\nbody[_v-ce500d8e] {\n  overflow: hidden;\n  height: 100%; }\n\n[_v-ce500d8e]::-webkit-scrollbar {\n  display: none; }\n\nhtml[_v-ce500d8e] {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n   -ms-user-select: text;\n       user-select: text; }\n\nbody[_v-ce500d8e] {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul[_v-ce500d8e],\nol[_v-ce500d8e],\ndl[_v-ce500d8e],\ndd[_v-ce500d8e],\nh1[_v-ce500d8e],\nh2[_v-ce500d8e],\nh3[_v-ce500d8e],\nh4[_v-ce500d8e],\nh5[_v-ce500d8e],\nh6[_v-ce500d8e],\nfigure[_v-ce500d8e],\nform[_v-ce500d8e],\nfieldset[_v-ce500d8e],\nlegend[_v-ce500d8e],\ninput[_v-ce500d8e],\ntextarea[_v-ce500d8e],\nbutton[_v-ce500d8e],\np[_v-ce500d8e],\nblockquote[_v-ce500d8e],\nth[_v-ce500d8e],\ntd[_v-ce500d8e],\npre[_v-ce500d8e],\nxmp[_v-ce500d8e] {\n  margin: 0;\n  padding: 0; }\n\ninput[_v-ce500d8e],\ntextarea[_v-ce500d8e],\nbutton[_v-ce500d8e],\nselect[_v-ce500d8e],\npre[_v-ce500d8e],\nxmp[_v-ce500d8e],\ntt[_v-ce500d8e],\ncode[_v-ce500d8e],\nkbd[_v-ce500d8e],\nsamp[_v-ce500d8e] {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1[_v-ce500d8e],\nh2[_v-ce500d8e],\nh3[_v-ce500d8e],\nh4[_v-ce500d8e],\nh5[_v-ce500d8e],\nh6[_v-ce500d8e],\nsmall[_v-ce500d8e],\nbig[_v-ce500d8e],\ninput[_v-ce500d8e],\ntextarea[_v-ce500d8e],\nbutton[_v-ce500d8e],\nselect[_v-ce500d8e] {\n  font-size: inherit; }\n\naddress[_v-ce500d8e],\ncite[_v-ce500d8e],\ndfn[_v-ce500d8e],\nem[_v-ce500d8e],\ni[_v-ce500d8e],\noptgroup[_v-ce500d8e],\nvar[_v-ce500d8e] {\n  font-style: normal; }\n\ntable[_v-ce500d8e] {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul[_v-ce500d8e],\nol[_v-ce500d8e],\nmenu[_v-ce500d8e] {\n  list-style: none; }\n\nfieldset[_v-ce500d8e],\nimg[_v-ce500d8e] {\n  border: 0;\n  vertical-align: middle; }\n\narticle[_v-ce500d8e],\naside[_v-ce500d8e],\ndetails[_v-ce500d8e],\nfigcaption[_v-ce500d8e],\nfigure[_v-ce500d8e],\nfooter[_v-ce500d8e],\nheader[_v-ce500d8e],\nmain[_v-ce500d8e],\nmenu[_v-ce500d8e],\nnav[_v-ce500d8e],\nsection[_v-ce500d8e],\nsummary[_v-ce500d8e] {\n  display: block; }\n\naudio[_v-ce500d8e],\ncanvas[_v-ce500d8e],\nvideo[_v-ce500d8e] {\n  display: inline-block; }\n\nblockquote[_v-ce500d8e]:before,\nblockquote[_v-ce500d8e]:after,\nq[_v-ce500d8e]:before,\nq[_v-ce500d8e]:after {\n  content: \" \"; }\n\ntextarea[_v-ce500d8e],\npre[_v-ce500d8e],\nxmp[_v-ce500d8e] {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea[_v-ce500d8e] {\n  resize: vertical; }\n\ninput[_v-ce500d8e],\ntextarea[_v-ce500d8e],\nbutton[_v-ce500d8e],\nselect\na[_v-ce500d8e] {\n  outline: 0 none; }\n\ninput[_v-ce500d8e],\ntextarea[_v-ce500d8e],\nbutton[_v-ce500d8e],\nselect[_v-ce500d8e] {\n  color: inherit; }\n  input[_v-ce500d8e]:disabled,\n  textarea[_v-ce500d8e]:disabled,\n  button[_v-ce500d8e]:disabled,\n  select[_v-ce500d8e]:disabled {\n    opacity: 1; }\n\nbutton[_v-ce500d8e]::-moz-focus-inner,\ninput[_v-ce500d8e]::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"][_v-ce500d8e],\ninput[type=\"submit\"][_v-ce500d8e],\ninput[type=\"reset\"][_v-ce500d8e],\ninput[type=\"file\"][_v-ce500d8e]::-webkit-file-upload-button,\ninput[type=\"search\"][_v-ce500d8e]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\nmark[_v-ce500d8e] {\n  background-color: transparent; }\n\na[_v-ce500d8e],\nins[_v-ce500d8e],\ns[_v-ce500d8e],\nu[_v-ce500d8e],\ndel[_v-ce500d8e] {\n  text-decoration: none; }\n\na[_v-ce500d8e] {\n  color: #00afc7; }\n\n.g-clear[_v-ce500d8e]::after,\n.g-mod[_v-ce500d8e]::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico[_v-ce500d8e] {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * lib中map使用“_”开头，本文件中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * 合并base和extra中的同类base map\r\n * 用以解决业务方升级Yo时需比base和extra的一致性\r\n * 当extra为空时，base map将以base文件里的定义作为默认值\r\n * 当extra不为空时，base map使用extra文件里的定义\r\n */\n/**\n * Yo框架全局Variables\n * Yo基础变量map，如果不想定义某属性，将其value设置为null；\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\n * variables中map使用“_”开头，本文件中不使用\"_\"\n * variables ⇌ config\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * 合并variables和config中的同类map\r\n * 用以解决业务方升级Yo时需比config和variables的一致性\r\n * 当config为空时，使用variables中的map作为默认值\r\n * 当config不为空时，使用config中的定义\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 功能\r\n * @description 给需要的属性加厂家前缀\r\n * @method _prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 定义字体图标\r\n * @method _yofont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 功能\r\n * @description 四则运算(iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example <div class=\"calc\">四则运算</div>\r\n * .calc { @include calc(width, \"100% - 100px\"); }\r\n */\n/**\r\n * @module 功能\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 功能\r\n * @description 清除行内级元素间间隙方案\r\n * @method killspace\r\n * @version 1.0.0\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n * .demo {@include killspace;}\r\n */\n/**\r\n * @module 功能\r\n * @description 元素在包含块中的对齐方式，默认为水平垂直对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 指定包含块布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {String} $type 指定居中元素类型，可选值：image | text | other，默认值：text <2.0.0>\r\n * @param {Keywords} $justify-content 指定元素水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keywords} $align-items 指定元素垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * <div class=\"demo\">\r\n *      <img class=\"item\" alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n * .demo {@include align;}\r\n */\n/**\r\n * @module 功能\r\n * @description 定义文档根节点是否允许滚动\r\n * @method root-scroll\r\n * @version 1.4.0\r\n * @param {Boolean} $is-scroll 指定是否有滚动，默认值：false <1.8.6>\r\n */\n/**\r\n * @module 功能\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 功能\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(iOS7.0+,Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(iOS7.0+,Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*[_v-ce500d8e],[_v-ce500d8e]\n::before,[_v-ce500d8e]\n::after {\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml[_v-ce500d8e],\nbody[_v-ce500d8e] {\n  overflow: hidden;\n  height: 100%; }\n\n[_v-ce500d8e]::-webkit-scrollbar {\n  display: none; }\n\nhtml[_v-ce500d8e] {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: text;\n  -moz-user-select: text;\n   -ms-user-select: text;\n       user-select: text; }\n\nbody[_v-ce500d8e] {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul[_v-ce500d8e],\nol[_v-ce500d8e],\ndl[_v-ce500d8e],\ndd[_v-ce500d8e],\nh1[_v-ce500d8e],\nh2[_v-ce500d8e],\nh3[_v-ce500d8e],\nh4[_v-ce500d8e],\nh5[_v-ce500d8e],\nh6[_v-ce500d8e],\nfigure[_v-ce500d8e],\nform[_v-ce500d8e],\nfieldset[_v-ce500d8e],\nlegend[_v-ce500d8e],\ninput[_v-ce500d8e],\ntextarea[_v-ce500d8e],\nbutton[_v-ce500d8e],\np[_v-ce500d8e],\nblockquote[_v-ce500d8e],\nth[_v-ce500d8e],\ntd[_v-ce500d8e],\npre[_v-ce500d8e],\nxmp[_v-ce500d8e] {\n  margin: 0;\n  padding: 0; }\n\ninput[_v-ce500d8e],\ntextarea[_v-ce500d8e],\nbutton[_v-ce500d8e],\nselect[_v-ce500d8e],\npre[_v-ce500d8e],\nxmp[_v-ce500d8e],\ntt[_v-ce500d8e],\ncode[_v-ce500d8e],\nkbd[_v-ce500d8e],\nsamp[_v-ce500d8e] {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1[_v-ce500d8e],\nh2[_v-ce500d8e],\nh3[_v-ce500d8e],\nh4[_v-ce500d8e],\nh5[_v-ce500d8e],\nh6[_v-ce500d8e],\nsmall[_v-ce500d8e],\nbig[_v-ce500d8e],\ninput[_v-ce500d8e],\ntextarea[_v-ce500d8e],\nbutton[_v-ce500d8e],\nselect[_v-ce500d8e] {\n  font-size: inherit; }\n\naddress[_v-ce500d8e],\ncite[_v-ce500d8e],\ndfn[_v-ce500d8e],\nem[_v-ce500d8e],\ni[_v-ce500d8e],\noptgroup[_v-ce500d8e],\nvar[_v-ce500d8e] {\n  font-style: normal; }\n\ntable[_v-ce500d8e] {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul[_v-ce500d8e],\nol[_v-ce500d8e],\nmenu[_v-ce500d8e] {\n  list-style: none; }\n\nfieldset[_v-ce500d8e],\nimg[_v-ce500d8e] {\n  border: 0;\n  vertical-align: middle; }\n\narticle[_v-ce500d8e],\naside[_v-ce500d8e],\ndetails[_v-ce500d8e],\nfigcaption[_v-ce500d8e],\nfigure[_v-ce500d8e],\nfooter[_v-ce500d8e],\nheader[_v-ce500d8e],\nmain[_v-ce500d8e],\nmenu[_v-ce500d8e],\nnav[_v-ce500d8e],\nsection[_v-ce500d8e],\nsummary[_v-ce500d8e] {\n  display: block; }\n\naudio[_v-ce500d8e],\ncanvas[_v-ce500d8e],\nvideo[_v-ce500d8e] {\n  display: inline-block; }\n\nblockquote[_v-ce500d8e]:before,\nblockquote[_v-ce500d8e]:after,\nq[_v-ce500d8e]:before,\nq[_v-ce500d8e]:after {\n  content: \" \"; }\n\ntextarea[_v-ce500d8e],\npre[_v-ce500d8e],\nxmp[_v-ce500d8e] {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea[_v-ce500d8e] {\n  resize: vertical; }\n\ninput[_v-ce500d8e],\ntextarea[_v-ce500d8e],\nbutton[_v-ce500d8e],\nselect\na[_v-ce500d8e] {\n  outline: 0 none; }\n\ninput[_v-ce500d8e],\ntextarea[_v-ce500d8e],\nbutton[_v-ce500d8e],\nselect[_v-ce500d8e] {\n  color: inherit; }\n  input[_v-ce500d8e]:disabled,\n  textarea[_v-ce500d8e]:disabled,\n  button[_v-ce500d8e]:disabled,\n  select[_v-ce500d8e]:disabled {\n    opacity: 1; }\n\nbutton[_v-ce500d8e]::-moz-focus-inner,\ninput[_v-ce500d8e]::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"][_v-ce500d8e],\ninput[type=\"submit\"][_v-ce500d8e],\ninput[type=\"reset\"][_v-ce500d8e],\ninput[type=\"file\"][_v-ce500d8e]::-webkit-file-upload-button,\ninput[type=\"search\"][_v-ce500d8e]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\nmark[_v-ce500d8e] {\n  background-color: transparent; }\n\na[_v-ce500d8e],\nins[_v-ce500d8e],\ns[_v-ce500d8e],\nu[_v-ce500d8e],\ndel[_v-ce500d8e] {\n  text-decoration: none; }\n\na[_v-ce500d8e] {\n  color: #00afc7; }\n\n.g-clear[_v-ce500d8e]::after,\n.g-mod[_v-ce500d8e]::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico[_v-ce500d8e] {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n.commonList-container[_v-ce500d8e] {\n  padding-bottom: 40px;\n  position: relative;\n  width: 100%; }\n  .commonList-container .class_introduce_con[_v-ce500d8e] {\n    position: relative;\n    padding: 5px 10px 0;\n    width: 100%; }\n    .commonList-container .class_introduce_con[_v-ce500d8e]::after {\n      pointer-events: none;\n      position: absolute;\n      z-index: 999;\n      top: 0;\n      left: 0;\n      overflow: hidden;\n      content: \" \";\n      border-color: #E1E1E1;\n      border-style: solid;\n      border-width: 0 0 1px 0;\n      -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0; }\n      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.4895833333333333), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n        .commonList-container .class_introduce_con[_v-ce500d8e]::after {\n          width: 100%;\n          height: 100%; } }\n      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.4895833333333335), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n        .commonList-container .class_introduce_con[_v-ce500d8e]::after {\n          width: 200%;\n          height: 200%;\n          -webkit-transform: scale(0.5);\n          -ms-transform: scale(0.5);\n              transform: scale(0.5); } }\n      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n        .commonList-container .class_introduce_con[_v-ce500d8e]::after {\n          width: 300%;\n          height: 300%;\n          -webkit-transform: scale(0.33333);\n          -ms-transform: scale(0.33333);\n              transform: scale(0.33333); } }\n    .commonList-container .class_introduce_con .comment_tit[_v-ce500d8e] {\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: -moz-box;\n      display: -ms-flexbox;\n      display: flex;\n      height: 50px; }\n      .commonList-container .class_introduce_con .comment_tit .img[_v-ce500d8e] {\n        border-radius: 20px;\n        background-clip: padding-box !important;\n        width: 46px;\n        height: 46px;\n        background: pink;\n        margin-right: 5px;\n        margin-top: 5px;\n        -webkit-box-shadow: none !important;\n                box-shadow: none !important; }\n      .commonList-container .class_introduce_con .comment_tit .comment_dis[_v-ce500d8e] {\n        -webkit-box-flex: 1;\n        -webkit-flex: 1;\n        -moz-box-flex: 1;\n         -ms-flex: 1;\n             flex: 1;\n        width: .1px;\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: -moz-box;\n        display: -ms-flexbox;\n        display: flex;\n        -webkit-box-pack: center;\n        -webkit-justify-content: center;\n        -moz-box-pack: center;\n         -ms-flex-pack: center;\n             justify-content: center;\n        -webkit-box-orient: vertical;\n        -webkit-box-direction: normal;\n        -webkit-flex-direction: column;\n        -moz-box-orient: vertical;\n        -moz-box-direction: normal;\n         -ms-flex-direction: column;\n             flex-direction: column;\n        width: 100% !important;\n        padding: 5px 0; }\n        .commonList-container .class_introduce_con .comment_tit .comment_dis span[_v-ce500d8e] {\n          display: block !important;\n          width: 80% !important;\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          -moz-box-flex: 1;\n           -ms-flex: 1;\n               flex: 1;\n          width: .1px;\n          color: #999;\n          font-size: 12px; }\n        .commonList-container .class_introduce_con .comment_tit .comment_dis .commentname[_v-ce500d8e] {\n          font-size: 14px;\n          color: #333;\n          line-height: 30px; }\n    .commonList-container .class_introduce_con .class_introduce_text[_v-ce500d8e] {\n      font-size: 14px;\n      color: #666;\n      padding: 5px 0;\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: -moz-box;\n      display: -ms-flexbox;\n      display: flex; }\n\n.mask[_v-ce500d8e] {\n  width: 100%;\n  height: 100%;\n  /*left: 50%;*/\n  max-width: 640px;\n  margin: 0 auto;\n  position: fixed;\n  z-index: 106;\n  background: rgba(0, 0, 0, 0.5); }\n  .mask .mask_con[_v-ce500d8e] {\n    position: fixed;\n    bottom: 0;\n    width: 100%;\n    z-index: 100;\n    height: 73%;\n    background: #fff; }\n    .mask .mask_con .close[_v-ce500d8e] {\n      position: absolute;\n      height: 30px;\n      width: 30px;\n      right: 0;\n      z-index: 105;\n      top: -40px; }\n      .mask .mask_con .close img[_v-ce500d8e] {\n        width: 30px;\n        height: 40px; }\n    .mask .mask_con .common[_v-ce500d8e] {\n      height: 100%;\n      overflow: hidden; }\n      .mask .mask_con .common .scrollcon[_v-ce500d8e] {\n        width: 100%;\n        height: 100%;\n        overflow: scroll;\n        -webkit-overflow-scrolling: touch; }\n\n.mask_con_mask[_v-ce500d8e] {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  height: 160px;\n  z-index: 100; }\n\n.commonbottom[_v-ce500d8e] {\n  width: 100%;\n  height: 10px; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 1500:
+/***/ 1505:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18419,33 +18419,33 @@
 
 /***/ },
 
-/***/ 1501:
+/***/ 1506:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div id=\"userCommon\" _v-da70ccf8=\"\">\n    <div class=\"mask\" v-if=\"commonShow\" _v-da70ccf8=\"\">\n        <div class=\"mask_con_mask\" @click=\"close_comment\" _v-da70ccf8=\"\"></div>\n        <div class=\"mask_con\" _v-da70ccf8=\"\">\n            <!--关闭按钮-->\n            <div class=\"close\" @click=\"close_comment\" _v-da70ccf8=\"\">\n                <img src=\"//pic.davdian.com/free/2016/12/22/60_80_543e7ae3b77c0ce52ebeee2a210dbdf6.png\" alt=\"\" _v-da70ccf8=\"\">\n            </div>\n            <!--弹出层列表-->\n            <div class=\"common\" id=\"common\" _v-da70ccf8=\"\">\n                <div class=\"scrollcon\" id=\"scrollcon\" _v-da70ccf8=\"\">\n                    <div class=\"commonList-container\" _v-da70ccf8=\"\">\n                        <div class=\"end\" v-if=\"refreshtxt\" _v-da70ccf8=\"\">拉取更多</div>\n                        <div class=\"class_introduce_con\" v-for=\"(common, index) in commonList\" :key=\"common.uuid\" _v-da70ccf8=\"\">\n                            <div class=\"comment_tit\" _v-da70ccf8=\"\">\n                                <img class=\"img\" :src=\"common.speaker.avatar || defaultAvatar\" alt=\"\" _v-da70ccf8=\"\">\n                                <div class=\"comment_dis\" _v-da70ccf8=\"\">\n                                    <span class=\"commentname\" _v-da70ccf8=\"\">{{decodeURIComponent(common.speaker.name)}}</span>\n                                    <span v-if=\"new Date()-common.msg.time < 60*60*12*1000\" _v-da70ccf8=\"\">{{getTime(parseInt(common.msg.time))}}</span>\n                                    <span v-if=\"new Date()-common.msg.time >= 60*60*12*1000\" _v-da70ccf8=\"\">{{getFullTime(parseInt(common.msg.time))}}</span>\n                                </div>\n                            </div>\n                            <div class=\"class_introduce_text\" _v-da70ccf8=\"\">\n                                <p _v-da70ccf8=\"\">{{decodeURIComponent(common.msg.content)}}</p>\n                            </div>\n                        </div>\n                        <div class=\"commonbottom\" _v-da70ccf8=\"\"></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div id=\"userCommon\" _v-ce500d8e=\"\">\n    <div class=\"mask\" v-if=\"commonShow\" _v-ce500d8e=\"\">\n        <div class=\"mask_con_mask\" @click=\"close_comment\" _v-ce500d8e=\"\"></div>\n        <div class=\"mask_con\" _v-ce500d8e=\"\">\n            <!--关闭按钮-->\n            <div class=\"close\" @click=\"close_comment\" _v-ce500d8e=\"\">\n                <img src=\"//pic.davdian.com/free/2016/12/22/60_80_543e7ae3b77c0ce52ebeee2a210dbdf6.png\" alt=\"\" _v-ce500d8e=\"\">\n            </div>\n            <!--弹出层列表-->\n            <div class=\"common\" id=\"common\" _v-ce500d8e=\"\">\n                <div class=\"scrollcon\" id=\"scrollcon\" _v-ce500d8e=\"\">\n                    <div class=\"commonList-container\" _v-ce500d8e=\"\">\n                        <div class=\"end\" v-if=\"refreshtxt\" _v-ce500d8e=\"\">拉取更多</div>\n                        <div class=\"class_introduce_con\" v-for=\"(common, index) in commonList\" :key=\"common.uuid\" _v-ce500d8e=\"\">\n                            <div class=\"comment_tit\" _v-ce500d8e=\"\">\n                                <img class=\"img\" :src=\"common.speaker.avatar || defaultAvatar\" alt=\"\" _v-ce500d8e=\"\">\n                                <div class=\"comment_dis\" _v-ce500d8e=\"\">\n                                    <span class=\"commentname\" _v-ce500d8e=\"\">{{decodeURIComponent(common.speaker.name)}}</span>\n                                    <span v-if=\"new Date()-common.msg.time < 60*60*12*1000\" _v-ce500d8e=\"\">{{getTime(parseInt(common.msg.time))}}</span>\n                                    <span v-if=\"new Date()-common.msg.time >= 60*60*12*1000\" _v-ce500d8e=\"\">{{getFullTime(parseInt(common.msg.time))}}</span>\n                                </div>\n                            </div>\n                            <div class=\"class_introduce_text\" _v-ce500d8e=\"\">\n                                <p _v-ce500d8e=\"\">{{decodeURIComponent(common.msg.content)}}</p>\n                            </div>\n                        </div>\n                        <div class=\"commonbottom\" _v-ce500d8e=\"\"></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1502:
+/***/ 1507:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div id=\"socail_container\" _v-f3ad48ee=\"\">\n    <social-title :rightshow=\"true\" :id=\"communityId\" :data=\"title\" _v-f3ad48ee=\"\"></social-title>\n    <speak v-on:send=\"sendMsg\" _v-f3ad48ee=\"\"></speak>\n    <social-switch :data=\"userCommonRoomData\" :total=\"total\" v-on:usercomment=\"openUserComment\" _v-f3ad48ee=\"\"></social-switch>\n    <common v-if=\"commonRoomData[0]\" :id=\"communityId\" :flag=\"updataflagteacher\" :data=\"commonRoomData\" v-on:getupdatateacher=\"getupdatateacher\" _v-f3ad48ee=\"\"></common>\n    <user-common v-if=\"userCommonFlag\" :user-common-top=\"userCommonTop\" :getupdataflag=\"getupdataflag\" :flag=\"userCommonFlag\" :data=\"userCommonRoomData\" v-on:closeusercomment=\"closeUserComment\" v-on:getupdata=\"getupdata\" _v-f3ad48ee=\"\"></user-common>\n</div>\n";
+	module.exports = "\n<div id=\"socail_container\" _v-60c3a804=\"\">\n    <social-title :rightshow=\"true\" :id=\"communityId\" :data=\"title\" _v-60c3a804=\"\"></social-title>\n    <speak v-on:send=\"sendMsg\" _v-60c3a804=\"\"></speak>\n    <social-switch :data=\"userCommonRoomData\" :total=\"total\" v-on:usercomment=\"openUserComment\" _v-60c3a804=\"\"></social-switch>\n    <common v-if=\"commonRoomData[0]\" :id=\"communityId\" :flag=\"updataflagteacher\" :data=\"commonRoomData\" v-on:getupdatateacher=\"getupdatateacher\" _v-60c3a804=\"\"></common>\n    <user-common v-if=\"userCommonFlag\" :user-common-top=\"userCommonTop\" :getupdataflag=\"getupdataflag\" :flag=\"userCommonFlag\" :data=\"userCommonRoomData\" v-on:closeusercomment=\"closeUserComment\" v-on:getupdata=\"getupdata\" _v-60c3a804=\"\"></user-common>\n</div>\n";
 
 /***/ },
 
-/***/ 1503:
+/***/ 1508:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1504)
-	__webpack_require__(1506)
-	__vue_script__ = __webpack_require__(1508)
+	__webpack_require__(1509)
+	__webpack_require__(1511)
+	__vue_script__ = __webpack_require__(1513)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/social_manage.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1519)
+	__vue_template__ = __webpack_require__(1524)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18461,7 +18461,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-4794010b/social_manage.vue"
+	  var id = "_v-bc029a14/social_manage.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18471,13 +18471,13 @@
 
 /***/ },
 
-/***/ 1504:
+/***/ 1509:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1505);
+	var content = __webpack_require__(1510);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18486,8 +18486,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4794010b&scoped=true!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./social_manage.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4794010b&scoped=true!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./social_manage.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-bc029a14&scoped=true!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./social_manage.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-bc029a14&scoped=true!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./social_manage.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -18498,7 +18498,7 @@
 
 /***/ },
 
-/***/ 1505:
+/***/ 1510:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18506,20 +18506,20 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.weui-cell__ft[_v-4794010b]:after:after{\n  height: 8px;\n  width: 8px;\n  border-width: 1px 1px 0 0;\n  color: #999;\n}\n\n.avatar_outer[_v-4794010b]{\n  height: 70px;\n}\n\n.avatar_con[_v-4794010b] {\n  width: 50px;\n  border-radius: 50px;\n}\n\n.v-middle[_v-4794010b] {\n  vertical-align: middle;\n}\n\n.mr6[_v-4794010b] {\n  margin-right: 6px;\n}\n.mr10[_v-4794010b] {\n  margin-right: 10px;\n}\n\n.avatar_list[_v-4794010b] {\n  position: absolute;\n  left: 4.5em;\n}\n\n.avatar_list .avatar_con[_v-4794010b] {\n  width: 30px;\n}\n@media screen and (max-width: 374px){\n  .avatar_list .avatar_con[_v-4794010b] {\n    width: 26px;\n  }\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.weui-cell__ft[_v-bc029a14]:after:after{\n  height: 8px;\n  width: 8px;\n  border-width: 1px 1px 0 0;\n  color: #999;\n}\n\n.avatar_outer[_v-bc029a14]{\n  height: 70px;\n}\n\n.avatar_con[_v-bc029a14] {\n  width: 50px;\n  border-radius: 50px;\n}\n\n.v-middle[_v-bc029a14] {\n  vertical-align: middle;\n}\n\n.mr6[_v-bc029a14] {\n  margin-right: 6px;\n}\n.mr10[_v-bc029a14] {\n  margin-right: 10px;\n}\n\n.avatar_list[_v-bc029a14] {\n  position: absolute;\n  left: 4.5em;\n}\n\n.avatar_list .avatar_con[_v-bc029a14] {\n  width: 30px;\n}\n@media screen and (max-width: 374px){\n  .avatar_list .avatar_con[_v-bc029a14] {\n    width: 26px;\n  }\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 1506:
+/***/ 1511:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1507);
+	var content = __webpack_require__(1512);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18540,7 +18540,7 @@
 
 /***/ },
 
-/***/ 1507:
+/***/ 1512:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18555,7 +18555,7 @@
 
 /***/ },
 
-/***/ 1508:
+/***/ 1513:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18568,31 +18568,31 @@
 
 	var _webStorageCache2 = _interopRequireDefault(_webStorageCache);
 
-	var _index = __webpack_require__(1058);
+	var _index = __webpack_require__(1063);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(902);
+	var _index3 = __webpack_require__(907);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _index5 = __webpack_require__(996);
+	var _index5 = __webpack_require__(1001);
 
 	var _index6 = _interopRequireDefault(_index5);
 
-	var _index7 = __webpack_require__(959);
+	var _index7 = __webpack_require__(964);
 
 	var _index8 = _interopRequireDefault(_index7);
 
-	var _index9 = __webpack_require__(958);
+	var _index9 = __webpack_require__(963);
 
 	var _index10 = _interopRequireDefault(_index9);
 
-	var _cell = __webpack_require__(1509);
+	var _cell = __webpack_require__(1514);
 
 	var _cell2 = _interopRequireDefault(_cell);
 
-	var _baseTitle = __webpack_require__(1514);
+	var _baseTitle = __webpack_require__(1519);
 
 	var _baseTitle2 = _interopRequireDefault(_baseTitle);
 
@@ -18608,7 +18608,7 @@
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _dialog = __webpack_require__(954);
+	var _dialog = __webpack_require__(959);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -18764,18 +18764,18 @@
 
 /***/ },
 
-/***/ 1509:
+/***/ 1514:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1510)
-	__vue_script__ = __webpack_require__(1512)
+	__webpack_require__(1515)
+	__vue_script__ = __webpack_require__(1517)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/vux-fix/cell.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1513)
+	__vue_template__ = __webpack_require__(1518)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18791,7 +18791,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-072d7b06/cell.vue"
+	  var id = "_v-225247f1/cell.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18801,13 +18801,13 @@
 
 /***/ },
 
-/***/ 1510:
+/***/ 1515:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1511);
+	var content = __webpack_require__(1516);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18828,7 +18828,7 @@
 
 /***/ },
 
-/***/ 1511:
+/***/ 1516:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18843,7 +18843,7 @@
 
 /***/ },
 
-/***/ 1512:
+/***/ 1517:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18852,11 +18852,11 @@
 	    value: true
 	});
 
-	var _inlineDesc = __webpack_require__(911);
+	var _inlineDesc = __webpack_require__(916);
 
 	var _inlineDesc2 = _interopRequireDefault(_inlineDesc);
 
-	var _router = __webpack_require__(916);
+	var _router = __webpack_require__(921);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18926,25 +18926,25 @@
 
 /***/ },
 
-/***/ 1513:
+/***/ 1518:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"weui-cell\" :class=\"{'vux-tap-active': isLink || !!link, 'weui-cell_access': isLink || !!link}\" @click=\"onClick\">\n    <div class=\"weui-cell__hd\">\n        <slot name=\"icon\"></slot>\n    </div>\n    <div class=\"vux-cell-bd\" :class=\"{'vux-cell-primary':primary==='title'}\">\n        <p>\n            <label class=\"vux-label\" :style=\"{width: $parent.labelWidth, textAlign: $parent.labelAlign, marginRight: $parent.labelMarginRight}\" v-if=\"title\">{{title}}</label>\n            <slot name=\"after-title\"></slot>\n        </p>\n        <inline-desc v-html=\"inlineDesc\"></inline-desc>\n    </div>\n    <div class=\"weui-cell__ft\" :class=\"{'vux-cell-primary':primary==='content'}\">\n        {{value}}\n  <slot name=\"value\"></slot>\n        <slot></slot>\n    </div>\n    <slot name=\"child\"></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 1514:
+/***/ 1519:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1515)
-	__vue_script__ = __webpack_require__(1517)
+	__webpack_require__(1520)
+	__vue_script__ = __webpack_require__(1522)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/baseTitle.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1518)
+	__vue_template__ = __webpack_require__(1523)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18960,7 +18960,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-79086b7e/baseTitle.vue"
+	  var id = "_v-5c6d1d36/baseTitle.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18970,13 +18970,13 @@
 
 /***/ },
 
-/***/ 1515:
+/***/ 1520:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1516);
+	var content = __webpack_require__(1521);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18997,7 +18997,7 @@
 
 /***/ },
 
-/***/ 1516:
+/***/ 1521:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -19012,7 +19012,7 @@
 
 /***/ },
 
-/***/ 1517:
+/***/ 1522:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19055,32 +19055,32 @@
 
 /***/ },
 
-/***/ 1518:
+/***/ 1523:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n<div class=\"top0\">\n    <div class=\"top_container\">\n        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->\n        <div class=\"top_left\">\n            <a class=\"top_back\" href=\"javascript:history.back();\" data-dav-tj=\"order_list|back|back|1|back@order_list\">\n                <span class=\"home_arrow\"></span>\n            </a>\n        </div>\n        <div class=\"title_container\">\n            {{title}}\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1519:
+/***/ 1524:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"social_manage\" style=\"overflow: scroll;\" :style=\"{height:document.body.clientHeight-44+'px'}\" _v-4794010b=\"\">\n  <base-title value=\"群信息\" _v-4794010b=\"\"></base-title>\n  <div _v-4794010b=\"\">\n    <group _v-4794010b=\"\">\n      <cell title=\"群主\" class=\"avatar_outer\" _v-4794010b=\"\">\n        <div slot=\"value\" _v-4794010b=\"\">\n          <span class=\"v-middle mr6\" v-text=\"communityHolderName\" _v-4794010b=\"\"></span>\n          <img class=\"avatar_con\" :src=\"communityHolderImage\" alt=\"\" _v-4794010b=\"\">\n        </div>\n      </cell>\n      <cell title=\"群名称\" :value=\"communityTitle\" _v-4794010b=\"\"></cell>\n      <cell title=\"群成员\" is-link=\"\" :link=\"{path:'/member/'+socialId}\" _v-4794010b=\"\">\n                      <span slot=\"child\" class=\"avatar_list\" _v-4794010b=\"\">\n                          <img v-for=\"(communityMemberItem,index) in communityMemberList\" class=\"avatar_con mr10\" :src=\"communityMemberItem.avatar\" v-if=\"index<avatarNum\" alt=\"\" _v-4794010b=\"\">\n                      </span>\n      </cell>\n      <cell title=\"群介绍\" :inline-desc=\"communityIntro\" :value=\"describe\" _v-4794010b=\"\">\n\n      </cell>\n    </group>\n\n    <group _v-4794010b=\"\">\n      <div @click=\"goToGroup()\" _v-4794010b=\"\">\n        <cell :title=\"momGrowUpTitle\" is-link=\"\" _v-4794010b=\"\"></cell>\n      </div>\n    </group>\n    <div style=\"height: 40px\" _v-4794010b=\"\"></div>\n  </div>\n\n\n\n</div>\n";
+	module.exports = "\n<div class=\"social_manage\" style=\"overflow: scroll;\" :style=\"{height:document.body.clientHeight-44+'px'}\" _v-bc029a14=\"\">\n  <base-title value=\"群信息\" _v-bc029a14=\"\"></base-title>\n  <div _v-bc029a14=\"\">\n    <group _v-bc029a14=\"\">\n      <cell title=\"群主\" class=\"avatar_outer\" _v-bc029a14=\"\">\n        <div slot=\"value\" _v-bc029a14=\"\">\n          <span class=\"v-middle mr6\" v-text=\"communityHolderName\" _v-bc029a14=\"\"></span>\n          <img class=\"avatar_con\" :src=\"communityHolderImage\" alt=\"\" _v-bc029a14=\"\">\n        </div>\n      </cell>\n      <cell title=\"群名称\" :value=\"communityTitle\" _v-bc029a14=\"\"></cell>\n      <cell title=\"群成员\" is-link=\"\" :link=\"{path:'/member/'+socialId}\" _v-bc029a14=\"\">\n                      <span slot=\"child\" class=\"avatar_list\" _v-bc029a14=\"\">\n                          <img v-for=\"(communityMemberItem,index) in communityMemberList\" class=\"avatar_con mr10\" :src=\"communityMemberItem.avatar\" v-if=\"index<avatarNum\" alt=\"\" _v-bc029a14=\"\">\n                      </span>\n      </cell>\n      <cell title=\"群介绍\" :inline-desc=\"communityIntro\" :value=\"describe\" _v-bc029a14=\"\">\n\n      </cell>\n    </group>\n\n    <group _v-bc029a14=\"\">\n      <div @click=\"goToGroup()\" _v-bc029a14=\"\">\n        <cell :title=\"momGrowUpTitle\" is-link=\"\" _v-bc029a14=\"\"></cell>\n      </div>\n    </group>\n    <div style=\"height: 40px\" _v-bc029a14=\"\"></div>\n  </div>\n\n\n\n</div>\n";
 
 /***/ },
 
-/***/ 1520:
+/***/ 1525:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1521)
-	__vue_script__ = __webpack_require__(1523)
+	__webpack_require__(1526)
+	__vue_script__ = __webpack_require__(1528)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/social_member.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1534)
+	__vue_template__ = __webpack_require__(1539)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -19096,7 +19096,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-62f84bc0/social_member.vue"
+	  var id = "_v-853a04aa/social_member.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19106,13 +19106,13 @@
 
 /***/ },
 
-/***/ 1521:
+/***/ 1526:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1522);
+	var content = __webpack_require__(1527);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -19121,8 +19121,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-62f84bc0&scoped=true!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./social_member.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-62f84bc0&scoped=true!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./social_member.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-853a04aa&scoped=true!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./social_member.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-853a04aa&scoped=true!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./social_member.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19133,7 +19133,7 @@
 
 /***/ },
 
-/***/ 1522:
+/***/ 1527:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -19141,14 +19141,14 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.member_container[_v-62f84bc0]{\n    background-color: #fff;\n    padding: 0 5px;\n}\n.member_item[_v-62f84bc0] {\n    padding: 10px;\n    position: relative;\n    border-bottom: 1px solid #eee;\n    line-height: 30px;\n}\n\n.avatar_con[_v-62f84bc0] {\n    width: 30px;\n    height: 30px;\n    border-radius: 30px;\n}\n\n.invite_number[_v-62f84bc0]{\n    font-size:10px;\n    position:absolute;\n    right:10px;\n    color:#999;\n}\n\n.mr6[_v-62f84bc0] {\n    margin-right: 6px;\n}\n\n.member_name[_v-62f84bc0]{\n    height: 26px;\n    overflow: hidden;\n    display: inline-block;\n    position: absolute;\n    right: 80px;\n    left: 46px;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.member_container[_v-853a04aa]{\n    background-color: #fff;\n    padding: 0 5px;\n}\n.member_item[_v-853a04aa] {\n    padding: 10px;\n    position: relative;\n    border-bottom: 1px solid #eee;\n    line-height: 30px;\n}\n\n.avatar_con[_v-853a04aa] {\n    width: 30px;\n    height: 30px;\n    border-radius: 30px;\n}\n\n.invite_number[_v-853a04aa]{\n    font-size:10px;\n    position:absolute;\n    right:10px;\n    color:#999;\n}\n\n.mr6[_v-853a04aa] {\n    margin-right: 6px;\n}\n\n.member_name[_v-853a04aa]{\n    height: 26px;\n    overflow: hidden;\n    display: inline-block;\n    position: absolute;\n    right: 80px;\n    left: 46px;\n    white-space: nowrap;\n    text-overflow: ellipsis;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 1523:
+/***/ 1528:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19157,7 +19157,7 @@
 	  value: true
 	});
 
-	var _baseTitle = __webpack_require__(1514);
+	var _baseTitle = __webpack_require__(1519);
 
 	var _baseTitle2 = _interopRequireDefault(_baseTitle);
 
@@ -19173,23 +19173,23 @@
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _index = __webpack_require__(1058);
+	var _index = __webpack_require__(1063);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(902);
+	var _index3 = __webpack_require__(907);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _index5 = __webpack_require__(907);
+	var _index5 = __webpack_require__(912);
 
 	var _index6 = _interopRequireDefault(_index5);
 
-	var _index7 = __webpack_require__(1524);
+	var _index7 = __webpack_require__(1529);
 
 	var _index8 = _interopRequireDefault(_index7);
 
-	var _index9 = __webpack_require__(1529);
+	var _index9 = __webpack_require__(1534);
 
 	var _index10 = _interopRequireDefault(_index9);
 
@@ -19197,7 +19197,7 @@
 
 	var _webStorageCache2 = _interopRequireDefault(_webStorageCache);
 
-	var _dialog = __webpack_require__(954);
+	var _dialog = __webpack_require__(959);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -19311,18 +19311,18 @@
 
 /***/ },
 
-/***/ 1524:
+/***/ 1529:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1525)
-	__vue_script__ = __webpack_require__(1527)
+	__webpack_require__(1530)
+	__vue_script__ = __webpack_require__(1532)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/load-more/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1528)
+	__vue_template__ = __webpack_require__(1533)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -19338,7 +19338,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5d43c47f/index.vue"
+	  var id = "_v-9e555a2c/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19348,13 +19348,13 @@
 
 /***/ },
 
-/***/ 1525:
+/***/ 1530:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1526);
+	var content = __webpack_require__(1531);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -19375,7 +19375,7 @@
 
 /***/ },
 
-/***/ 1526:
+/***/ 1531:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -19390,7 +19390,7 @@
 
 /***/ },
 
-/***/ 1527:
+/***/ 1532:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19436,25 +19436,25 @@
 
 /***/ },
 
-/***/ 1528:
+/***/ 1533:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"weui-loadmore\" :class=\"{'weui-loadmore_line':!showLoading, 'weui-loadmore_dot': !showLoading && !tip}\">\n  <i class=\"weui-loading\" v-if=\"showLoading\"></i>\n  <span class=\"weui-loadmore__tips\" :style=\"getStyle()\" v-show=\"tip || !showLoading\">{{tip}}</span>\n</div>\n";
 
 /***/ },
 
-/***/ 1529:
+/***/ 1534:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1530)
-	__vue_script__ = __webpack_require__(1532)
+	__webpack_require__(1535)
+	__vue_script__ = __webpack_require__(1537)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/divider/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1533)
+	__vue_template__ = __webpack_require__(1538)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -19470,7 +19470,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2991797c/index.vue"
+	  var id = "_v-1679a6a7/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19480,13 +19480,13 @@
 
 /***/ },
 
-/***/ 1530:
+/***/ 1535:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1531);
+	var content = __webpack_require__(1536);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -19507,7 +19507,7 @@
 
 /***/ },
 
-/***/ 1531:
+/***/ 1536:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -19522,7 +19522,7 @@
 
 /***/ },
 
-/***/ 1532:
+/***/ 1537:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19576,17 +19576,17 @@
 
 /***/ },
 
-/***/ 1533:
+/***/ 1538:
 /***/ function(module, exports) {
 
 	module.exports = "\n<p class=\"vux-divider\">\n  <slot></slot>\n</p>\n";
 
 /***/ },
 
-/***/ 1534:
+/***/ 1539:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-62f84bc0=\"\">\n    <base-title value=\"群成员\" _v-62f84bc0=\"\"></base-title>\n    <scroller height=\"-44\" lock-x=\"\" scrollbar-y=\"\" ref=\"scroller\" :use-pullup=\"true\" :pullup-config=\"pullConfig\" @on-pullup-loading=\"pullupCallback\" _v-62f84bc0=\"\">\n        <div _v-62f84bc0=\"\">\n            <div class=\"member_container\" _v-62f84bc0=\"\">\n                <div v-for=\"(member, index) in memberList\" class=\"member_item vux-1px-b\" :index=\"index\" _v-62f84bc0=\"\">\n                    <img slot=\"icon\" class=\"avatar_con mr6\" :src=\"member.avatar\" _v-62f84bc0=\"\">\n                    <span v-text=\"member.name\" class=\"member_name\" _v-62f84bc0=\"\"></span>\n                    <span v-text=\"'邀'+member.inviteNum+'位好友'\" class=\"invite_number\" _v-62f84bc0=\"\"></span>\n                </div>\n            </div>\n            <divider v-if=\"!more\" _v-62f84bc0=\"\">没有更多了</divider>\n        </div>\n    </scroller>\n</div>\n";
+	module.exports = "\n<div _v-853a04aa=\"\">\n    <base-title value=\"群成员\" _v-853a04aa=\"\"></base-title>\n    <scroller height=\"-44\" lock-x=\"\" scrollbar-y=\"\" ref=\"scroller\" :use-pullup=\"true\" :pullup-config=\"pullConfig\" @on-pullup-loading=\"pullupCallback\" _v-853a04aa=\"\">\n        <div _v-853a04aa=\"\">\n            <div class=\"member_container\" _v-853a04aa=\"\">\n                <div v-for=\"(member, index) in memberList\" class=\"member_item vux-1px-b\" :index=\"index\" _v-853a04aa=\"\">\n                    <img slot=\"icon\" class=\"avatar_con mr6\" :src=\"member.avatar\" _v-853a04aa=\"\">\n                    <span v-text=\"member.name\" class=\"member_name\" _v-853a04aa=\"\"></span>\n                    <span v-text=\"'邀'+member.inviteNum+'位好友'\" class=\"invite_number\" _v-853a04aa=\"\"></span>\n                </div>\n            </div>\n            <divider v-if=\"!more\" _v-853a04aa=\"\">没有更多了</divider>\n        </div>\n    </scroller>\n</div>\n";
 
 /***/ }
 

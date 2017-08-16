@@ -48,19 +48,19 @@
 	__webpack_require__(33);
 	__webpack_require__(37);
 
-	__webpack_require__(419);
+	__webpack_require__(424);
 	__webpack_require__(41);
 	__webpack_require__(43);
 	__webpack_require__(42);
 
-	var Vue = __webpack_require__(444);
-	var VueLazyload = __webpack_require__(418);
+	var Vue = __webpack_require__(449);
+	var VueLazyload = __webpack_require__(423);
 	Vue.use(VueLazyload, {
 	  try: 3,
 	  preload:2
 	});
 
-	var config = __webpack_require__(1371);
+	var config = __webpack_require__(1376);
 	new Vue(config);
 
 
@@ -2577,7 +2577,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
+	  var id = "_v-1a34eddb/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3001,7 +3001,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-48db5b65/com-popup-alert.vue"
+	  var id = "_v-993d82e0/com-popup-alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3226,7 +3226,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0b77ce89/com-popup-confirm.vue"
+	  var id = "_v-27dcda18/com-popup-confirm.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3479,7 +3479,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
+	  var id = "_v-6c902120/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4831,7 +4831,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3d91a158/com-maybeyoulike.vue"
+	  var id = "_v-71249cee/com-maybeyoulike.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7169,7 +7169,7 @@
 
 /***/ },
 
-/***/ 418:
+/***/ 423:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -7181,7 +7181,7 @@
 
 /***/ },
 
-/***/ 419:
+/***/ 424:
 /***/ function(module, exports) {
 
 	/*
@@ -7506,25 +7506,25 @@
 
 /***/ },
 
-/***/ 444:
+/***/ 449:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 1371:
+/***/ 1376:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1372)
-	__vue_script__ = __webpack_require__(1374)
+	__webpack_require__(1377)
+	__vue_script__ = __webpack_require__(1379)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] source/page/overtime.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1375)
+	__vue_template__ = __webpack_require__(1380)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7540,7 +7540,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5b51616c/overtime.vue"
+	  var id = "_v-1bcc1fbf/overtime.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7550,13 +7550,13 @@
 
 /***/ },
 
-/***/ 1372:
+/***/ 1377:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1373);
+	var content = __webpack_require__(1378);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -7577,7 +7577,7 @@
 
 /***/ },
 
-/***/ 1373:
+/***/ 1378:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -7592,7 +7592,7 @@
 
 /***/ },
 
-/***/ 1374:
+/***/ 1379:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7736,7 +7736,7 @@
 
 /***/ },
 
-/***/ 1375:
+/***/ 1380:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"top0\" v-if=\"!in_app\">\n    <div class=\"top_container\">\n\n        <div class=\"top_left\">\n            <a class=\"top_back\" href=\"/\">\n                <span class=\"home_arrow\"></span>\n            </a>\n        </div>\n        <div class=\"title_container\">\n            您来晚了\n        </div>\n        <div class=\"top_right\">\n            <a href=\"/\" class=\"top_home\">\n                <span class=\"home_icon\"></span>\n            </a>\n        </div>\n    </div>\n</div>\n\n<div class=\"activity_late\">\n    来晚了，活动已结束！\n</div>\n\n<div class=\"orange_title \">\n    <span class=\"orange_title_font\">猜你喜欢</span>\n</div>\n<category\n  :list = \"list\"\n  :no_more = \"no_more\"\n  :errors = \"errors\"\n  :loading = \"beforeFirstLoading\"></category>\n\n";

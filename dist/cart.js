@@ -47,13 +47,13 @@
 
 	__webpack_require__(33);
 	__webpack_require__(37);
-	__webpack_require__(440);
-	__webpack_require__(419);
+	__webpack_require__(445);
+	__webpack_require__(424);
 	__webpack_require__(41);
 	__webpack_require__(43);
 	__webpack_require__(42);
-	__webpack_require__(442);
-	__webpack_require__(443);
+	__webpack_require__(447);
+	__webpack_require__(448);
 
 
 
@@ -2570,7 +2570,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
+	  var id = "_v-1a34eddb/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2994,7 +2994,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-48db5b65/com-popup-alert.vue"
+	  var id = "_v-993d82e0/com-popup-alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3219,7 +3219,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0b77ce89/com-popup-confirm.vue"
+	  var id = "_v-27dcda18/com-popup-confirm.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3472,7 +3472,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
+	  var id = "_v-6c902120/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3750,7 +3750,7 @@
 
 /***/ },
 
-/***/ 419:
+/***/ 424:
 /***/ function(module, exports) {
 
 	/*
@@ -4075,14 +4075,14 @@
 
 /***/ },
 
-/***/ 440:
+/***/ 445:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 442:
+/***/ 447:
 /***/ function(module, exports) {
 
 	var loginReady = function () {
@@ -4405,34 +4405,34 @@
 
 /***/ },
 
-/***/ 443:
+/***/ 448:
 /***/ function(module, exports, __webpack_require__) {
 
-	var Vue = __webpack_require__(444);
-	var config = __webpack_require__(445);
+	var Vue = __webpack_require__(449);
+	var config = __webpack_require__(450);
 	window.cartVUE = new Vue(config);
 
 /***/ },
 
-/***/ 444:
+/***/ 449:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 445:
+/***/ 450:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(446)
-	__vue_script__ = __webpack_require__(448)
+	__webpack_require__(451)
+	__vue_script__ = __webpack_require__(453)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] page/cart.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(449)
+	__vue_template__ = __webpack_require__(454)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4448,7 +4448,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-788d9953/cart.vue"
+	  var id = "_v-7f530004/cart.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4458,13 +4458,13 @@
 
 /***/ },
 
-/***/ 446:
+/***/ 451:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(447);
+	var content = __webpack_require__(452);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -4485,7 +4485,7 @@
 
 /***/ },
 
-/***/ 447:
+/***/ 452:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -4500,7 +4500,7 @@
 
 /***/ },
 
-/***/ 448:
+/***/ 453:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4872,7 +4872,7 @@
 	//   }
 	// </style>
 	// <script>
-	var Vue = __webpack_require__(444);
+	var Vue = __webpack_require__(449);
 	var second_tip = 0;
 	exports.default = {
 	  el: "#cart",
@@ -5576,7 +5576,7 @@
 
 /***/ },
 
-/***/ 449:
+/***/ 454:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n <div class=\"top0\">\n   <div class=\"top_container\">\n     <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->\n     <div class=\"top_left\">\n       <a class=\"top_back\" href=\"javascript:history.back();\">\n         <span class=\"home_arrow\"></span>\n       </a>\n     </div>\n     <div class=\"title_container\">\n       购物车<span class=\"cart_number\" v-text=\"'('+cartInfo.sku_count_all+')'\"\n                v-if=\"cartInfo.sku_count_all\"></span>\n     </div>\n     <div class=\"top_right\" @click=\"toggleEditMode\">\n       <a v-if=\"cartInfo.isEmpty\" href=\"/\" class=\"top_home\">\n         <span class=\"home_icon\"></span>\n       </a>\n       <a v-else class=\"top_btn\">\n         <span class=\"text_btn\" v-text=\"editMode?'完成':'编辑'\">编辑</span>\n       </a>\n     </div>\n   </div>\n </div>\n\n\n <!--商品列表部分-->\n <div class=\"goods_in_cart\" v-if=\"!cartInfo.isEmpty\">\n   <!--循环输出商品组-->\n   <div class=\"reduce_item_container\"\n        v-for=\"activity in cartInfo.activitys\"\n        track-by=\"$index\"\n        :class=\"{'fail':activity.act_id==-1}\">\n\n     <!--活动标签-->\n     <a class=\"reduce_item_title\"\n        :href=\"activity.act_url||'javascript:void()'\"\n        v-if=\"activity.act_id>0\">\n       <span class=\"dav-red\">{{activity.act_type_name}}</span>\n       {{activity.act_info}}\n       <span class=\"icon_r_container\">\n               <i v-if=\"activity.act_url != undefined && activity.act_url != null && activity.act_url != 0\"\n                  class=\"icon dav_icon_dayuhao_10_22 dav-border-red dav-border-red\"></i>\n           </span>\n     </a>\n\n     <div class=\"goods_item_s\">\n\n       <div class=\"good_item checked\"\n            v-for=\"goods in activity.goods\"\n            track-by=\"$index\"\n            :class=\"{'checked':goods.checked}\"\n            goods-id=\"{{goods.goods_id}}\"\n            max-count=\"{{goods.purchase_limit||200}}\">\n         <!--图标-->\n         <div class=\"icon_container\">\n           <!--无效商品-->\n           <span class=\"invalid_lable\" v-if=\"activity.act_id==-1\">失效</span>\n           <!--非编辑模式-->\n           <i class=\"icon\" v-show=\"!editMode&&activity.act_id>=0\"\n              @click=\"toggleCheckStatus(goods,activity)\"\n              :class=\"{'dav_icon_choice_selected_40_40':goods.checked,'dav_icon_choice_no_selected_40_40':!goods.checked}\"></i>\n           <!--编辑模式-->\n           <i class=\"icon\" v-show=\"editMode&&activity.act_id>=0\"\n              @click=\"toggleEditStatus(goods)\"\n              :class=\"{'dav_icon_choice_selected_40_40':goods.edit_checked,'dav_icon_choice_no_selected_40_40':!goods.edit_checked}\"></i>\n         </div>\n         <!--商品图-->\n         <a class=\"pic_container\" href=\"/{{goods.goods_id}}.html{{refererStr}}\" @click=\"gotoGoods()\">\n           <img class=\"good_img\" :src=\"goods.goods_thumb\">\n           <div class=\"sale_prompt_text\" v-if=\"goods.pre_sale\">预售</div>\n           <span class=\"sold_out\" v-if=\"goods.goods_stocks<=0\">售罄</span>\n         </a>\n         <!--右侧-->\n         <div class=\"right_container\">\n           <a class=\"good_title\" href=\"/{{goods.goods_id}}.html{{refererStr}}\" v-text=\"goods.goods_name\"\n              @click=\"gotoGoods()\"></a>\n           <div class=\"goods_infos_wrap\">\n             <div class=\"cart_format\" :class = \"{ cart_format_h: goods.goods_tags && goods.goods_tags.length }\">\n               <span v-for=\"tag in goods.goods_tags\" v-text=\"tag.tag_name\"></span>\n             </div>\n             <!--优惠-->\n             <!--<div class=\"price_info_reduce dav-red\" v-if=\"goods.price_act_name\"-->\n                  <!--v-text=\"goods.price_act_name+'价'\"></div>-->\n             <div v-if = \"goods.price_act_name == '限时'\" class=\"price_info_reduce dav-red\" v-if=\"goods.price_act_name\"\n                  v-text=\"goods.price_act_name+'购'\"></div>\n             <div v-else class=\"price_info_reduce dav-red\" v-if=\"goods.price_act_name\"\n                  v-text=\"goods.price_act_name+'价'\"></div>\n\n             <div class=\"price_info_reduce dav-red\" v-if=\"!goods.price_act_name&&goods.purchase_limit\"\n                  v-text=\"'限购'+goods.purchase_limit+'件'\"></div>\n\n             <!--价格-->\n             <div class=\"good_price dav-color-price\">\n               <span class=\"dav-red s_price_number\"><em>￥</em>{{goods.goods_price}}</span>\n             </div>\n\n             <!--会员返返现-->\n             <div v-if=\"goods.seller_income != '0' && userStatus == 3\" class=\"income_vip\">会员返<em>￥</em>{{goods.seller_income}}</div>\n\n             <!--商品数量-->\n             <div class=\"sold_out_collect\" v-if=\"activity.act_id>=0&&!goods.goods_stocks\"\n                  @click=\"collect(goods)\">\n               转到收藏\n             </div>\n\n             <div class=\"good_number_container\" v-if=\"activity.act_id>=0&&goods.goods_stocks\">\n               <div class=\"input_control\">\n                 <div class=\"minus change_num\" @click=\"changeGoodsNumber(goods,-1,activity)\">-</div>\n                 <input type=\"tel\" v-model=\"goods.goods_number\"\n                        @change=\"changeGoodsNumber(goods,0,activity)\">\n                 <div class=\"plus change_num\" :class=\"{'disable':goods.goods_number>=goods.max_amount}\"\n                      @click=\"changeGoodsNumber(goods,1,activity)\">+\n                 </div>\n               </div>\n\n             </div>\n           </div>\n         </div>\n\n         <!--超出库存-->\n         <div class=\"seckill_countdown_right\" v-if=\"goods.goods_stocks>0&&goods.goods_number>goods.goods_stocks\"><span>商品数量超出库存</span>\n         </div>\n         <!--降价-->\n         <div class=\"price_change\" v-if=\"!(goods.sag_left_time > 0)&&!(goods.fsp_left_time > 0)&&!(goods.bkg_left_time > 0) && goods.reduce_money\">比加入时降{{goods.reduce_money}}元</div>\n\n         <!--限时购倒计时和其他信息-->\n         <!--秒杀商品-->\n         <span v-if=\"goods.sag_left_time > 0\">\n           <!--秒杀和几倍返现同事存在-->\n           <span v-if=\"goods.bkg_left_time > 0\">\n             <!--秒杀剩余时间少于翻倍返现剩余时间-->\n             <div class=\"ts_info_limit seckill_countdown\" v-if=\"goods.bkg_left_time > goods.sag_left_time\"\n                  style=\"color:#ff4a7d;\">\n               {{goods.sag_left_time|datetimeFormat}}，可享受秒杀和{{goods.act_income.ratio}}倍返利优惠<span\n               v-if=\"goods.reduce_money\">，比加入时降<span class=\"dav-red\">{{goods.reduce_money}}元</span></span>\n             </div>\n             <!--秒杀剩余时间大于翻倍返现剩余时间-->\n             <div class=\"ts_info_limit seckill_countdown\" v-else style=\"color:#ff4a7d;\">\n               {{goods.bkg_left_time|datetimeFormat}}，可享受秒杀和{{goods.act_income.ratio}}倍返利优惠<span\n               v-if=\"goods.reduce_money\">，比加入时降<span class=\"dav-red\">{{goods.reduce_money}}元</span></span>\n             </div>\n           </span>\n           <!--只有秒杀-->\n           <span v-else>\n             <div class=\"ts_info_limit seckill_countdown dav-red\" style=\"color:#ff4a7d;\">\n               {{goods.sag_left_time|datetimeFormat}}<span v-if=\"goods.reduce_money\">，比加入时降<span class=\"dav-red\">{{goods.reduce_money}}元</span></span>\n             </div>\n           </span>\n         </span>\n\n         <!--限时购商品-->\n         <span v-if=\"goods.fsp_left_time > 0\">\n           <!--限时购和几倍返现同事存在-->\n           <span v-if=\"goods.bkg_left_time > 0\">\n             <!--限时购剩余时间少于翻倍返现剩余时间-->\n             <div class=\"ts_info_limit seckill_countdown\" v-if=\"goods.bkg_left_time > goods.fsp_left_time\">\n               在<span class=\"dav-red\">{{goods.fsp_left_time|datetimeFormatNew}}</span>内<span v-if=\"userStatus == 3\">支付\n             </span><span v-else>成为会员</span>\n               ，可享受限时购和{{goods.act_income.ratio}}倍返利优惠\n               <span v-if=\"goods.reduce_money\">，比加入时降<span class=\"dav-red\">{{goods.reduce_money}}元</span></span>\n             </div>\n             <!--限时购剩余时间大于翻倍返现剩余时间-->\n             <div class=\"ts_info_limit seckill_countdown\" v-else>\n                在<span class=\"dav-red\">{{goods.bkg_left_time|datetimeFormatNew}}</span>内<span\n               v-if=\"userStatus == 3\">支付</span><span v-else>成为会员</span>，可享受限时购和{{goods.act_income.ratio}}倍返利优惠\n               <span v-if=\"goods.reduce_money\">，比加入时降<span class=\"dav-red\">{{goods.reduce_money}}元</span></span>\n             </div>\n           </span>\n           <!--只有限时购-->\n           <span v-else>\n             <div class=\"ts_info_limit seckill_countdown\">\n               在<span class=\"dav-red\">{{goods.fsp_left_time|datetimeFormatNew}}</span>内<span\n               v-if=\"userStatus == 3\">支付</span><span v-else>成为会员</span>，可享受限时购优惠<span\n               v-if=\"goods.reduce_money\">，比加入时降<span class=\"dav-red\">{{goods.reduce_money}}元</span></span>\n             </div>\n           </span>\n         </span>\n\n         <!--只有返现翻倍-->\n         <div class=\"ts_info_limit seckill_countdown\"\n              v-if=\"goods.bkg_left_time > 0 && !(goods.fsp_left_time > 0) && !(goods.sag_left_time > 0) \">\n           在<span class=\"dav-red\">{{goods.bkg_left_time|datetimeFormatNew}}</span>内<span\n           v-if=\"userStatus == 3\">支付</span><span v-else>成为会员</span>，可享受{{goods.act_income.ratio}}倍返利优惠<span\n           v-if=\"goods.reduce_money\">，比加入时降<span class=\"dav-red\">{{goods.reduce_money}}元</span></span>\n         </div>\n\n         <div class=\"ts_info_limit seckill_countdown\" v-if=\"!(goods.sag_left_time > 0)&&!(goods.fsp_left_time > 0)&&!(goods.bkg_left_time > 0)&&goods.secondsp\">\n           <span style=\"color:#ff4a7d;\">商品失效，请重新添加购物车</span>\n         </div>\n         <div class=\"buy_gift\" v-if=\"goods.buy_gift&&goods.buy_gift.length\">\n           <span class=\"dav-red\">[赠品]</span>\n           <div class=\"buy_gift_con\">\n             <a v-for=\"g in goods.buy_gift\" href=\"/{{g.gift_id}}.html\">\n               <sapn class=\"text\" v-text=\"g.goods_name\"></sapn>\n               <span class=\"number\" v-text=\"'X'+g.gift_number\"></span>\n             </a>\n           </div>\n\n         </div>\n       </div>\n\n     </div>\n     <!--商品列表-->\n\n     <!--赠品 -->\n     <div class=\"premiums\" v-if=\"activity.gifts&&activity.gifts.length\">\n       <div class=\"premiums_con\"\n            @click=\"show_gift(gift)\"\n            v-for=\"gift in activity.gifts\" v-if=\"gift.gift_stocks != 0\">\n         <span class=\"dav-red\">[满送]</span> {{gift.goods_name}}\n         <span class=\"premiums_con_number\" v-if=\"gift.gift_stocks\">X{{gift.gift_number||1}}</span>\n         <span class=\"premiums_con_number dav-red\" v-if=\"!gift.gift_stocks\">[已赠完]</span>\n       </div>\n     </div>\n     <!--清空失效-->\n     <div class=\"clear_shop april_border hairlines\" v-if=\"activity.act_id==-1\">\n       <div class=\"dav-btn btn-small border_inner\" @click=\"clearInvalidGoods\">清空失效商品</div>\n     </div>\n   </div>\n\n\n   <div class=\"price_item\">\n     <span class=\"price_text\">合计：</span>\n     <span\n       class=\"price_number\">￥{{ cartInfo.order_amount}} ＝ ￥{{ cartInfo.goods_amount}}</span>\n     <span class=\"reduce_info dav-price\" v-if=\"cartInfo.discounts\">\n               <span v-for=\"discount in cartInfo.discounts\">-￥{{discount.discount}}({{discount.act_type_name}}) </span>\n           </span>\n   </div>\n </div>\n\n <div class=\"center dav-small dav-red info59\" v-if=\"!cartInfo.isEmpty&&cartInfo.goods_amount<59\">\n   <span>温馨提示：满 59 才包邮哦~ </span><a\n   class=\"underline\" href=\"/\">再去逛逛</a></div>\n\n <!--空购物车-->\n <div class=\"cart_blank\" v-if=\"cartInfo.isEmpty&&!loading\">\n   <div class=\"cart_empty_pic\">\n     <img src=\"//pic.davdian.com/free/image_cart_empty.png\">\n   </div>\n   <div class=\"dav-color6 center\">购物车还是空的，您再去逛逛吧</div>\n   <div class=\"button_container\">\n     <a href=\"/\">\n       <div class=\"dav-btn btn-red center\">去逛逛</div>\n     </a>\n   </div>\n   <div class=\"order dav-shadow\" v-if=\"cartInfo.unpay_order.length\">\n     <div class=\"order_title\">\n       最近未支付订单\n     </div>\n     <a href=\"/o-{{cartInfo.unpay_order[0].order_id}}.html\">\n       <div class=\"order_name_state\">\n         <span class=\"order_name\">{{cartInfo.unpay_order[0].user_name}}</span>\n         <span class=\"order_state pull-right\">\n                       <span>订单状态：</span>\n                       <span class=\"dav-red\">待付款</span>\n                   </span>\n       </div>\n\n       <div class=\"good_container\">\n         <div class=\"img_container many_goods\">\n           <div class=\"img_container_inner\" style=\"height: 60px;\">\n             <img v-for=\"item in cartInfo.unpay_order[0].unpay_goods_list\" :src=\"item.goods_thumb\">\n           </div>\n           <div class=\"pull-right text-container\">共{{cartInfo.unpay_order[0].unpay_goods_list.length}}件<br>商品\n           </div>\n         </div>\n       </div>\n\n       <div class=\"order_price\">金额：￥{{cartInfo.unpay_order[0].order_amount}}</div>\n     </a>\n     <div class=\"out_button_container\">\n       <a class=\"dav-btn btn-small order-btn-red pull-right\"\n          href=\"/checkout.html?order_id={{cartInfo.unpay_order[0].order_id}}\">立即支付</a>\n       <a class=\"dav-btn btn-small pull-right\"\n          href=\"/index.php?c=AgentPay&amp;a=index&amp;order_id={{cartInfo.unpay_order[0].order_id}}\">找人代付</a>\n     </div>\n   </div>\n </div>\n <div class=\"loading\" v-if=\"loading\">购物车商品读取中</div>\n\n <!--登录部分-->\n <div class=\"account_in_cart login_container\" v-show=\"!cartInfo.isEmpty\">\n   <slot></slot>\n </div>\n\n <!--会员返现提示悬框-->\n<!--  <div v-if=\"cartInfo.total_income\" class=\"income_bottom_fixed\">\n   <span v-if=\"userStatus == 3\">本次购物可获得￥{{cartInfo.total_income}}返现，订单完成后在[我的]-[总额]中查看</span>\n   <span v-else>会员下单立返￥{{cartInfo.total_income}}</span>\n   <a v-if=\"userStatus != 3\" :href=\"kdUrl\">开通会员</a>\n </div> -->\n <div v-if=\"cartInfo.total_income && userStatus == 3\" class=\"income_bottom_fixed\">\n   <span>本次购物可获得￥{{cartInfo.total_income}}返现，订单完成后在[我的]-[总额]中查看</span>\n </div>\n <!--购物车结算低栏-->\n <div class=\"cart_bottom\" v-if=\"!cartInfo.isEmpty\">\n   <div class=\"select_all\">\n     <i class=\"icon\"\n        :class=\"[{'dav_icon_choice_no_selected_40_40':(!checkAll&&!editMode)||(!checkEditAll&&editMode)},{'dav_icon_choice_selected_40_40':(checkAll&&!editMode)||(checkEditAll&&editMode)}]\"\n        @click=\"checkAllCheck((!editMode&&!checkAll)||(editMode&&!checkEditAll))\"></i>\n     全选\n   </div>\n   <div class=\"price_con\" v-if=\"!editMode\">\n     <div v-if=\"cartInfo.saving == 0\" class=\"left_price\" style=\"margin-top: 15px;\">\n       <span class=\"price_text\" style=\"font-weight: bold\">应付:</span><span class=\"price_number price_number_after\">￥{{\n       cartInfo.order_amount}}\n     </span>\n     </div>\n     <div v-if=\"cartInfo.saving != 0\" class=\"left_price\">\n       <span class=\"price_text\" style=\"font-weight: bold\">应付:</span><span class=\"price_number price_number_after\">￥{{ cartInfo.order_amount}}  </span>\n     </div>\n     <div v-if=\"cartInfo.saving != 0\" class=\"reduce_price\">\n       <span class=\"other_info\">总额:￥{{ cartInfo.goods_amount}} <span\n         class=\"ml_10\">优惠:￥{{ cartInfo.saving}}</span></span>\n     </div>\n   </div>\n   <div class=\"pay_button_container\" @click=\"pay\" v-show=\"!editMode\">\n     <div class=\"dav-btn2\" :class=\"{'btn-disable':paying,'btn-red':!paying}\" v-if=\"isLogin\">\n       <span class=\"text\" v-if=\"paying\">结算中...</span>\n       <span class=\"text\" v-else>结算<span class=\"f11\">({{cartInfo.sku_count}})</span></span>\n     </div>\n     <div class=\"dav-btn2 btn-red\" v-else>去登录</div>\n   </div>\n   <div class=\"delete_shop_btn\" v-if=\"editMode\" @click=\"doSome('del')\">\n     <div class=\"dav-btn btn-red\">\n       <span class=\"text\">删除商品</span>\n     </div>\n   </div>\n   <div class=\"go_collect_btn\" v-if=\"editMode\" @click=\"doSome('collect')\">\n     <div class=\"dav-btn btn-yellow\">\n       <span class=\"text\">转到收藏</span>\n     </div>\n   </div>\n </div>\n";

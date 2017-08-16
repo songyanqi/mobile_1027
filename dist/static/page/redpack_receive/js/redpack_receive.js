@@ -69,7 +69,7 @@
 	  router: new _VueRouter2.default({
 	    routes: [{
 	      path: '/',
-	      component: __webpack_require__(1158)
+	      component: __webpack_require__(1164)
 	    }]
 	  }),
 	  el: "router-view"
@@ -171,7 +171,12 @@
 	/**
 	 * 功能：检测cookie是否需要强制跳转
 	 */
-	_checkRedirect(_jsCookie2.default.get('force_domain'));
+	(function () {
+	  var script = document.querySelector('script');
+	  if (script && script.src && script.src.indexOf('common/js/autoRootSize.js') !== -1) {
+	    _checkRedirect(_jsCookie2.default.get('force_domain'));
+	  }
+	})();
 
 	// fastclick
 	// iPhone; CPU iPhone OS 10_3_2 like Mac OS X
@@ -3532,7 +3537,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7718a21b/com-share-pop-tip.vue"
+	  var id = "_v-57b26686/com-share-pop-tip.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3998,7 +4003,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-8892d76c/com-top-title.vue"
+	  var id = "_v-16214635/com-top-title.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4305,7 +4310,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5c521926/com-to-top-icon.vue"
+	  var id = "_v-3c5cd698/com-to-top-icon.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4784,7 +4789,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1e68cef0/com-scroll-list.vue"
+	  var id = "_v-5b517bb3/com-scroll-list.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5844,18 +5849,18 @@
 
 /***/ },
 
-/***/ 1158:
+/***/ 1164:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1159)
-	__vue_script__ = __webpack_require__(1161)
+	__webpack_require__(1165)
+	__vue_script__ = __webpack_require__(1167)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/redpack_receive/vue/redpack_receive.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1162)
+	__vue_template__ = __webpack_require__(1168)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5871,7 +5876,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-211eb228/redpack_receive.vue"
+	  var id = "_v-74eeaf3e/redpack_receive.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5881,13 +5886,13 @@
 
 /***/ },
 
-/***/ 1159:
+/***/ 1165:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1160);
+	var content = __webpack_require__(1166);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -5908,7 +5913,7 @@
 
 /***/ },
 
-/***/ 1160:
+/***/ 1166:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -5923,7 +5928,7 @@
 
 /***/ },
 
-/***/ 1161:
+/***/ 1167:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6262,7 +6267,7 @@
 
 /***/ },
 
-/***/ 1162:
+/***/ 1168:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"app\" v-if=\"response\">\n  <!--状态:正常领取-->\n  <template v-if=\"response.code === 0\">\n    <!--组合红包-->\n    <div class=\"wrapper group\" v-if=\"response.data.bonusType == '1'\">\n      <!--标题-->\n      <com-top-title home :title=\"response.data.status == '1' ? '已领取～' : '恭喜您获得大礼包～'\"></com-top-title>\n      <!--信封-->\n      <div class=\"envelope\">\n        <p>恭喜您获得</p>\n        <p><span class=\"num\">{{groupTotalMoney}}</span><span>元大礼包</span></p>\n      </div>\n      <!--红包列表-->\n      <div class=\"redpack-list\">\n        <img class=\"arrow\" src=\"http://pic.davdian.com/free/redpack_receive/group-arrow.png\">\n        <span class=\"redpack\" v-for=\"item of this.response.data.bonusList\">\n          <div class=\"name\">{{item.bonusName}}</div>\n          <div class=\"info\">\n            <span class=\"symbol\">¥</span>\n            <span class=\"money\">{{item.bonusMoney}}</span>\n            <span class=\"right-info\">\n              <p class=\"type\">{{item.content}}</p>\n              <p class=\"condition\">满{{item.minConsumePrice}}元使用</p>\n            </span>\n          </div>\n          <div class=\"time\">{{item.useBeginTime}}—{{item.useEndTime}}</div>\n        </span>\n      </div>\n      <!--按钮-->\n      <a class=\"btn\" :href=\"response.data.useUrl\"><p>立即使用</p></a>\n      <!--使用说明-->\n      <div class=\"rule\">\n        <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n        <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n      </div>\n    </div>\n\n    <!--随机、等额红包-->\n    <div class=\"wrapper random-and-equal\" v-if=\"response.data.bonusType == '0'\">\n      <!--标题-->\n      <com-top-title home :title=\"response.data.status == '1' ? '已领取～' : '恭喜您获得红包～'\"></com-top-title>\n      <!--信封-->\n      <div class=\"envelope\">\n        <p>{{this.response.data.bonusList[0].bonusName}}</p>\n        <p>\n          <span>¥</span>\n          <span>{{this.response.data.bonusList[0].bonusMoney}}</span>\n          <span>\n        <p>{{this.response.data.bonusList[0].content}}</p>\n        <p>满{{this.response.data.bonusList[0].minConsumePrice}}元使用</p>\n        </span>\n        </p>\n        <p>{{this.response.data.bonusList[0].useBeginTime}}-{{this.response.data.bonusList[0].useEndTime}}</p>\n      </div>\n      <!--按钮-->\n      <a class=\"btn\" :href=\"response.data.useUrl\"><p>立即使用</p></a>\n      <!--手气榜-->\n      <div class=\"luck-list\" v-if=\"response.data.competeList && response.data.competeList.length > 0\">\n        <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/luck-title.png\">\n        <com-scroll-list>\n          <li v-for=\"item of response.data.competeList\">\n            <span class=\"head\"><img :src=\"item.avatar\"></span>\n            <span class=\"mobile\">{{item.nickname}}</span>\n            <span class=\"money\">{{item.money}}元</span>\n          </li>\n        </com-scroll-list>\n      </div>\n      <!--使用说明-->\n      <div class=\"rule\">\n        <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n        <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n      </div>\n    </div>\n  </template>\n\n  <!--状态:未开始-->\n  <div class=\"wrapper no-begin\" v-if=\"response.code === 90005\">\n    <!--标题-->\n    <com-top-title home title=\"活动未开始～\"></com-top-title>\n    <!--信封-->\n    <div class=\"envelope\">\n      <p>活动未开始～</p>\n      <p><img src=\"http://pic.davdian.com/free/redpack_receive/begin-time.png\"></p>\n      <p>{{this.response.data.startTime}}</p>\n    </div>\n    <!--按钮-->\n    <a class=\"btn\" href=\"/\"><p>去店铺逛逛</p></a>\n    <!--使用说明-->\n    <div class=\"rule\">\n      <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n      <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n    </div>\n  </div>\n\n  <!--状态:已结束-->\n  <div class=\"wrapper end\" v-if=\"response.code === 90006\">\n    <!--标题-->\n    <com-top-title home title=\"活动已结束～\"></com-top-title>\n    <!--信封-->\n    <div class=\"envelope\">\n      <p>活动已结束～</p>\n      <p>下次活动，敬请期待～</p>\n    </div>\n    <!--按钮-->\n    <a class=\"btn\" href=\"/\"><p>去店铺逛逛</p></a>\n    <!--使用说明-->\n    <div class=\"rule\">\n      <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n      <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n    </div>\n  </div>\n\n  <!--状态:红包抢没了-->\n  <div class=\"wrapper no-remain\" v-if=\"response.code === 90001\">\n    <!--标题-->\n    <com-top-title home title=\"红包已抢光～\"></com-top-title>\n    <!--信封-->\n    <div class=\"envelope\">\n      <p>红包已抢光～</p>\n      <p>下次活动，敬请期待～</p>\n    </div>\n    <!--按钮-->\n    <a class=\"btn\" href=\"/\"><p>去店铺逛逛</p></a>\n    <!--使用说明-->\n    <div class=\"rule\">\n      <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n      <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n    </div>\n  </div>\n\n  <!--状态:未登录-->\n  <div class=\"wrapper no-login\" v-if=\"response.code === 90000\">\n    <!--标题-->\n    <com-top-title home title=\"您还未登录～\"></com-top-title>\n    <!--信封-->\n    <div class=\"envelope\">\n      <p>您还未登录～</p>\n      <p>大V店送你红包抢不停～</p>\n    </div>\n    <!--按钮-->\n    <a class=\"btn\" :href=\"'/login.html?referer=' + encodeURIComponent(location.href)\"><p>登录领取</p></a>\n    <!--使用说明-->\n    <div class=\"rule\">\n      <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n      <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n    </div>\n  </div>\n\n  <!--状态:出错了-->\n  <div class=\"wrapper error\" v-if=\"isError\">\n    <!--标题-->\n    <com-top-title home title=\"出错啦～\"></com-top-title>\n    <!--出错图标-->\n    <div class=\"error-pic\"><img src=\"http://pic.davdian.com/free/redpack_receive/error.png\"></div>\n    <!--文案-->\n    <div class=\"tip\">哎呀，出错啦...</div>\n    <!--重新加载-->\n    <a class=\"reload-btn\" href=\"\">点击重新加载</a>\n    <!--错误原因(连续两次发生错误才显示)-->\n    <div class=\"msg\" v-if=\"localStorage.getItem('error')\">\n      <p>状态码: {{response.code}}</p>\n      <p>异常原因: {{response.data && response.data.msg}}</p>\n    </div>\n  </div>\n\n  <!--至顶按钮-->\n  <!--<com-to-top-icon></com-to-top-icon>-->\n</div>\n";

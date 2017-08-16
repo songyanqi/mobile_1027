@@ -47,15 +47,15 @@
 
 	'use strict';
 
-	var _common = __webpack_require__(1107);
+	var _common = __webpack_require__(1112);
 
 	var _common2 = _interopRequireDefault(_common);
 
-	var _Vue = __webpack_require__(444);
+	var _Vue = __webpack_require__(449);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
-	var _vueLazyload = __webpack_require__(1104);
+	var _vueLazyload = __webpack_require__(1109);
 
 	var _vueLazyload2 = _interopRequireDefault(_vueLazyload);
 
@@ -70,7 +70,7 @@
 
 	new _Vue2.default({
 	  components: {
-	    app: __webpack_require__(1152)
+	    app: __webpack_require__(1157)
 	  },
 	  template: '<app />',
 	  el: ".app"
@@ -4106,14 +4106,14 @@
 
 /***/ },
 
-/***/ 444:
+/***/ 449:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 970:
+/***/ 975:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4122,7 +4122,7 @@
 	  value: true
 	});
 
-	var _scriptjs = __webpack_require__(971);
+	var _scriptjs = __webpack_require__(976);
 
 	var _scriptjs2 = _interopRequireDefault(_scriptjs);
 
@@ -4134,11 +4134,11 @@
 
 	var _config2 = _interopRequireDefault(_config);
 
-	var _jsCookie = __webpack_require__(972);
+	var _jsCookie = __webpack_require__(977);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(973);
+	var _util = __webpack_require__(978);
 
 	var _util2 = _interopRequireDefault(_util);
 
@@ -4307,7 +4307,7 @@
 
 /***/ },
 
-/***/ 971:
+/***/ 976:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4437,7 +4437,7 @@
 
 /***/ },
 
-/***/ 972:
+/***/ 977:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4609,7 +4609,7 @@
 
 /***/ },
 
-/***/ 973:
+/***/ 978:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4657,7 +4657,7 @@
 
 /***/ },
 
-/***/ 1104:
+/***/ 1109:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4666,11 +4666,11 @@
 	  value: true
 	});
 
-	var _Vue = __webpack_require__(444);
+	var _Vue = __webpack_require__(449);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
-	var _VueLazyload = __webpack_require__(1105);
+	var _VueLazyload = __webpack_require__(1110);
 
 	var _VueLazyload2 = _interopRequireDefault(_VueLazyload);
 
@@ -4701,14 +4701,14 @@
 
 /***/ },
 
-/***/ 1105:
+/***/ 1110:
 /***/ function(module, exports) {
 
 	module.exports = VueLazyload;
 
 /***/ },
 
-/***/ 1107:
+/***/ 1112:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4725,26 +4725,26 @@
 
 	var _ua2 = _interopRequireDefault(_ua);
 
-	var _login = __webpack_require__(1108);
+	var _login = __webpack_require__(1113);
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _jsCookie = __webpack_require__(972);
+	var _jsCookie = __webpack_require__(977);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(973);
+	var _util = __webpack_require__(978);
 
 	var _util2 = _interopRequireDefault(_util);
 
-	var _weixin = __webpack_require__(970);
+	var _weixin = __webpack_require__(975);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import scriptjs from 'scriptjs';
-	__webpack_require__(1109);
+	__webpack_require__(1114);
 
 
 	// ios wkwebview返回上一页执行回调刷新页面
@@ -4802,7 +4802,12 @@
 	/**
 	 * 功能：检测cookie是否需要强制跳转
 	 */
-	_checkRedirect(_jsCookie2.default.get('force_domain'));
+	(function () {
+	  var script = document.querySelector('script');
+	  if (script && script.src && script.src.indexOf('common/js/autoRootSize.js') !== -1) {
+	    _checkRedirect(_jsCookie2.default.get('force_domain'));
+	  }
+	})();
 
 	// fastclick
 	// iPhone; CPU iPhone OS 10_3_2 like Mac OS X
@@ -4852,7 +4857,7 @@
 
 /***/ },
 
-/***/ 1108:
+/***/ 1113:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4861,7 +4866,7 @@
 	  value: true
 	});
 
-	var _jsCookie = __webpack_require__(972);
+	var _jsCookie = __webpack_require__(977);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
@@ -4951,7 +4956,7 @@
 
 /***/ },
 
-/***/ 1109:
+/***/ 1114:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4983,7 +4988,7 @@
 
 /***/ },
 
-/***/ 1110:
+/***/ 1115:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5000,11 +5005,11 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
-	var _weixin = __webpack_require__(970);
+	var _weixin = __webpack_require__(975);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
-	var _Vue = __webpack_require__(444);
+	var _Vue = __webpack_require__(449);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
@@ -5046,7 +5051,7 @@
 	  callBrowserShare: function callBrowserShare() {
 	    new _Vue2.default({
 	      components: {
-	        'com-share-pop-tip': __webpack_require__(1111)
+	        'com-share-pop-tip': __webpack_require__(1116)
 	      },
 	      el: getEl(),
 	      data: {},
@@ -5068,18 +5073,18 @@
 
 /***/ },
 
-/***/ 1111:
+/***/ 1116:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1112)
-	__vue_script__ = __webpack_require__(1114)
+	__webpack_require__(1117)
+	__vue_script__ = __webpack_require__(1119)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-share-pop-tip.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1115)
+	__vue_template__ = __webpack_require__(1120)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5095,7 +5100,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7718a21b/com-share-pop-tip.vue"
+	  var id = "_v-57b26686/com-share-pop-tip.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5105,13 +5110,13 @@
 
 /***/ },
 
-/***/ 1112:
+/***/ 1117:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1113);
+	var content = __webpack_require__(1118);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5132,7 +5137,7 @@
 
 /***/ },
 
-/***/ 1113:
+/***/ 1118:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5147,7 +5152,7 @@
 
 /***/ },
 
-/***/ 1114:
+/***/ 1119:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5247,25 +5252,25 @@
 
 /***/ },
 
-/***/ 1115:
+/***/ 1120:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"com-share-pop-tip\" :style=\"styleObject\" @click=\"close\" @touchmove=\"touchmove\">\n  <img class=\"arrow\" src=\"http://pic.davdian.com/free/pointer.png\">\n  <div class=\"tip\">\n    <template v-if=\"isWeixin\">\n      <p>请点击右上角“分享”按钮,</p>\n      <p>然后可以选择“发送给朋友”、“分享到朋友圈”或者“复制链接”后发送链接给朋友。</p>\n    </template>\n    <template v-if=\"!isWeixin\">\n      <p>请复制地址栏链接，将链接发送给朋友</p>\n    </template>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1125:
+/***/ 1130:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1126)
-	__vue_script__ = __webpack_require__(1128)
+	__webpack_require__(1131)
+	__vue_script__ = __webpack_require__(1133)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-top-title.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1129)
+	__vue_template__ = __webpack_require__(1134)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5281,7 +5286,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-8892d76c/com-top-title.vue"
+	  var id = "_v-16214635/com-top-title.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5291,13 +5296,13 @@
 
 /***/ },
 
-/***/ 1126:
+/***/ 1131:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1127);
+	var content = __webpack_require__(1132);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5318,7 +5323,7 @@
 
 /***/ },
 
-/***/ 1127:
+/***/ 1132:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5333,7 +5338,7 @@
 
 /***/ },
 
-/***/ 1128:
+/***/ 1133:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5554,25 +5559,25 @@
 
 /***/ },
 
-/***/ 1129:
+/***/ 1134:
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--顶部标题-->\n<div class=\"com-top-title\" :class=\"classObject\" v-if=\"!isDvdApp\" :style=\"styleObject\">\n  <div class=\"back-btn\" @click=\"back\">\n    <i class=\"back-arrow\"></i>\n  </div>\n  <span class=\"title\">{{title}}</span>\n  <i class=\"home\" v-if=\"home !== undefined\" @click=\"goHome\"></i>\n  <slot></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 1140:
+/***/ 1145:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1141)
-	__vue_script__ = __webpack_require__(1143)
+	__webpack_require__(1146)
+	__vue_script__ = __webpack_require__(1148)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_detail/vue/group-head-portrait.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1144)
+	__vue_template__ = __webpack_require__(1149)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5588,7 +5593,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5626d74a/group-head-portrait.vue"
+	  var id = "_v-7c567cf4/group-head-portrait.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5598,13 +5603,13 @@
 
 /***/ },
 
-/***/ 1141:
+/***/ 1146:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1142);
+	var content = __webpack_require__(1147);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5625,7 +5630,7 @@
 
 /***/ },
 
-/***/ 1142:
+/***/ 1147:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5640,7 +5645,7 @@
 
 /***/ },
 
-/***/ 1143:
+/***/ 1148:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -5722,25 +5727,25 @@
 
 /***/ },
 
-/***/ 1144:
+/***/ 1149:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<span class=\"group-head-portrait\" @click=\"click\">\n  <img v-if=\"type == 'normal' || type == 'leader'\" class=\"person\" v-lazy=\"src\">\n  <img v-if=\"type == 'empty'\" v-lazy=\"'http://pic.davdian.com/free/2017/03/25/group-head-unknow.png'\">\n  <a :href=\"href\" v-if=\"type == 'more'\">\n    <img v-lazy=\"'http://pic.davdian.com/free/2017/03/25/group-head-more.png'\">\n  </a>\n  <i v-if=\"type == 'leader'\" class=\"group-leader\"></i>\n</span>\n";
 
 /***/ },
 
-/***/ 1152:
+/***/ 1157:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1153)
-	__vue_script__ = __webpack_require__(1155)
+	__webpack_require__(1158)
+	__vue_script__ = __webpack_require__(1160)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_detail_all/vue/app.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1156)
+	__vue_template__ = __webpack_require__(1161)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5756,7 +5761,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6c6fcf78/app.vue"
+	  var id = "_v-29fb2422/app.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5766,13 +5771,13 @@
 
 /***/ },
 
-/***/ 1153:
+/***/ 1158:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1154);
+	var content = __webpack_require__(1159);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5793,7 +5798,7 @@
 
 /***/ },
 
-/***/ 1154:
+/***/ 1159:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5808,7 +5813,7 @@
 
 /***/ },
 
-/***/ 1155:
+/***/ 1160:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5825,7 +5830,7 @@
 
 	var _$2 = _interopRequireDefault(_$);
 
-	var _util = __webpack_require__(973);
+	var _util = __webpack_require__(978);
 
 	var _util2 = _interopRequireDefault(_util);
 
@@ -5833,7 +5838,7 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
-	var _share = __webpack_require__(1110);
+	var _share = __webpack_require__(1115);
 
 	var _share2 = _interopRequireDefault(_share);
 
@@ -5864,8 +5869,8 @@
 	// <script>
 	exports.default = {
 	  components: {
-	    'com-top-title': __webpack_require__(1125),
-	    'group-head-portrait': __webpack_require__(1140)
+	    'com-top-title': __webpack_require__(1130),
+	    'group-head-portrait': __webpack_require__(1145)
 	  },
 	  props: {},
 	  data: function data() {
@@ -5939,7 +5944,7 @@
 
 /***/ },
 
-/***/ 1156:
+/***/ 1161:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"app\">\n  <!--头部标题-->\n  <com-top-title title=\"团成员列表\" border-bottom home></com-top-title>\n  <!--全部成员列表-->\n  <ul class=\"all-group-people\">\n    <template v-for=\"(member, i) in memberList\">\n      <li>\n        <group-head-portrait :type=\"member.parendId === '0' ? 'leader' : 'normal'\" :src=\"member.founderAvater\"></group-head-portrait>\n        <span class=\"nickname\">{{member.founderName}}</span>\n        <span class=\"begin-time\">{{member.uTime}} {{member.parendId === '0' ? '开团' : '参团'}}</span>\n      </li>\n      <div class=\"split-line\"></div>\n    </template>\n  </ul>\n</div>\n";

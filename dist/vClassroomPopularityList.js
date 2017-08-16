@@ -47,7 +47,7 @@
 
 	__webpack_require__(83);
 	__webpack_require__(43);
-	__webpack_require__(1710);
+	__webpack_require__(1715);
 
 /***/ },
 
@@ -2116,7 +2116,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
+	  var id = "_v-1a34eddb/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2540,7 +2540,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-48db5b65/com-popup-alert.vue"
+	  var id = "_v-993d82e0/com-popup-alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2765,7 +2765,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0b77ce89/com-popup-confirm.vue"
+	  var id = "_v-27dcda18/com-popup-confirm.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3018,7 +3018,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
+	  var id = "_v-6c902120/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4926,7 +4926,7 @@
 
 /***/ },
 
-/***/ 418:
+/***/ 423:
 /***/ function(module, exports, __webpack_require__) {
 
 	/*!
@@ -4938,25 +4938,25 @@
 
 /***/ },
 
-/***/ 490:
+/***/ 495:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1278:
+/***/ 1283:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1279)
-	__vue_script__ = __webpack_require__(1281)
+	__webpack_require__(1284)
+	__vue_script__ = __webpack_require__(1286)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/inviteCard/inviteCard.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1283)
+	__vue_template__ = __webpack_require__(1288)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4972,7 +4972,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3b2bf109/inviteCard.vue"
+	  var id = "_v-2e177c7e/inviteCard.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4982,13 +4982,13 @@
 
 /***/ },
 
-/***/ 1279:
+/***/ 1284:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1280);
+	var content = __webpack_require__(1285);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5009,7 +5009,7 @@
 
 /***/ },
 
-/***/ 1280:
+/***/ 1285:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5024,7 +5024,7 @@
 
 /***/ },
 
-/***/ 1281:
+/***/ 1286:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -5033,9 +5033,9 @@
 	  value: true
 	});
 
-	__webpack_require__(490);
+	__webpack_require__(495);
 
-	var _inviteCard = __webpack_require__(1282);
+	var _inviteCard = __webpack_require__(1287);
 
 	var _inviteCard2 = _interopRequireDefault(_inviteCard);
 
@@ -5115,7 +5115,7 @@
 
 /***/ },
 
-/***/ 1282:
+/***/ 1287:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -5254,21 +5254,21 @@
 
 /***/ },
 
-/***/ 1283:
+/***/ 1288:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div class=\"inviteCart\" v-show=\"showCard\">\n    <div class=\"mask\">\n        <div class=\"container\">\n            <div class=\"close\" @click=\"closeCard\"></div>\n            <div class=\"share_top_text\">长按保存图片</div>\n            <!-- <div class=\"share_top_text\" v-if=\"type==2\">分享直播图片赚奖金</div> -->\n            <div class=\"img_container\" :style=\"styleObject\">\n                <img :src=\"imgUrl\" :style=\"styleObject\">\n            </div>\n            <div class=\"share_text\" v-if='type==2 && visitor==3 && income && income!=\"0.00\"'>当好友通过您的分享报名课程,并<span class='share_text_span'>在您的店铺下单</span>,您便可获得<span class='share_text_span'>¥{{income}}</span>奖金</div>\n            <div class=\"share_text\" v-if='type==2 && visitor!=3 && income && income!=\"0.00\"'>成为店主后,当好友在您的店铺报名该课程,您便可获得<span class='share_text_span'>¥ {{income}}<span>奖金</div>\n            <div class=\"share_text\" v-if='type!=2'>分享直播图片加人气</div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1710:
+/***/ 1715:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by luming on 2016/12/21.
 	 */
-	var popularitylist = __webpack_require__(1711);
-	var  VueLazyload = __webpack_require__(418);
+	var popularitylist = __webpack_require__(1716);
+	var  VueLazyload = __webpack_require__(423);
 
 
 	Vue.use(VueLazyload, {
@@ -5290,18 +5290,18 @@
 
 /***/ },
 
-/***/ 1711:
+/***/ 1716:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1712)
-	__vue_script__ = __webpack_require__(1714)
+	__webpack_require__(1717)
+	__vue_script__ = __webpack_require__(1719)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/vClassroomPopularityList.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1730)
+	__vue_template__ = __webpack_require__(1735)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5317,7 +5317,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1fad3af4/vClassroomPopularityList.vue"
+	  var id = "_v-5e79b21e/vClassroomPopularityList.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5327,13 +5327,13 @@
 
 /***/ },
 
-/***/ 1712:
+/***/ 1717:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1713);
+	var content = __webpack_require__(1718);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5354,7 +5354,7 @@
 
 /***/ },
 
-/***/ 1713:
+/***/ 1718:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5369,7 +5369,7 @@
 
 /***/ },
 
-/***/ 1714:
+/***/ 1719:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -5429,8 +5429,8 @@
 	// </template>
 	//
 	// <script>
-	var Mine = __webpack_require__(1715);
-	var list = __webpack_require__(1725);
+	var Mine = __webpack_require__(1720);
+	var list = __webpack_require__(1730);
 	exports.default = {
 	    data: function data() {
 	        return {
@@ -5455,18 +5455,18 @@
 
 /***/ },
 
-/***/ 1715:
+/***/ 1720:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1716)
-	__vue_script__ = __webpack_require__(1718)
+	__webpack_require__(1721)
+	__vue_script__ = __webpack_require__(1723)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/vClassroomPopularityListMine.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1724)
+	__vue_template__ = __webpack_require__(1729)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5482,7 +5482,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0e7e3b0e/vClassroomPopularityListMine.vue"
+	  var id = "_v-96870d38/vClassroomPopularityListMine.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5492,13 +5492,13 @@
 
 /***/ },
 
-/***/ 1716:
+/***/ 1721:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1717);
+	var content = __webpack_require__(1722);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5519,7 +5519,7 @@
 
 /***/ },
 
-/***/ 1717:
+/***/ 1722:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5534,7 +5534,7 @@
 
 /***/ },
 
-/***/ 1718:
+/***/ 1723:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -5613,7 +5613,7 @@
 	// <template>
 	//     <div id="main">
 	//         <top></top>
-	//         <invite-card :show="show" :id="courseId" :statistics="5" v-on:close="closeCard"></invite-card>
+	//         <invite-card :show="show" :id="courseId" :kind="0" :statistics="5" v-on:close="closeCard"></invite-card>
 	//         <!--用户信息-->
 	//         <div style="position: fixed;width:100%;max-width: 640px;z-index: 10;">
 	//             <div class="popularity">
@@ -5640,9 +5640,9 @@
 	//
 	// <script>
 
-	var inviteCard = __webpack_require__(1278);
+	var inviteCard = __webpack_require__(1283);
 
-	var title = __webpack_require__(1719);
+	var title = __webpack_require__(1724);
 
 	exports.default = {
 	    data: function data() {
@@ -5724,18 +5724,18 @@
 
 /***/ },
 
-/***/ 1719:
+/***/ 1724:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1720)
-	__vue_script__ = __webpack_require__(1722)
+	__webpack_require__(1725)
+	__vue_script__ = __webpack_require__(1727)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/vClassroomPopularityListTitle.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1723)
+	__vue_template__ = __webpack_require__(1728)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5751,7 +5751,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-79781da2/vClassroomPopularityListTitle.vue"
+	  var id = "_v-3cef6417/vClassroomPopularityListTitle.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5761,13 +5761,13 @@
 
 /***/ },
 
-/***/ 1720:
+/***/ 1725:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1721);
+	var content = __webpack_require__(1726);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5788,7 +5788,7 @@
 
 /***/ },
 
-/***/ 1721:
+/***/ 1726:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5803,7 +5803,7 @@
 
 /***/ },
 
-/***/ 1722:
+/***/ 1727:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -5845,32 +5845,32 @@
 
 /***/ },
 
-/***/ 1723:
+/***/ 1728:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n<div class=\"top0\">\n    <div class=\"top_container\">\n        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->\n        <div class=\"top_left\">\n            <a class=\"top_back\" href=\"javascript:history.back();\" data-dav-tj=\"order_list|back|back|1|back@order_list\">\n                <span class=\"home_arrow\"></span>\n            </a>\n        </div>\n        <div class=\"title_container\">\n            {{title}}\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1724:
+/***/ 1729:
 /***/ function(module, exports) {
 
-	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div id=\"main\">\n    <top></top>\n    <invite-card :show=\"show\" :id=\"courseId\" :statistics=\"5\" v-on:close=\"closeCard\"></invite-card>\n    <!--用户信息-->\n    <div style=\"position: fixed;width:100%;max-width: 640px;z-index: 10;\">\n        <div class=\"popularity\">\n            <span>{{list.course.pv}}人气&nbsp;&nbsp;</span>\n            <!-- <span>&nbsp;&nbsp;{{list.course.joinNum}}人报名</span> -->\n            <div class=\"thin_line\"></div>\n        </div>\n        <div class =\"user\">\n            <div class=\"user_image\">\n                <img class=\"popimage\" :src=\"imgObject(list.user.avatar)\" alt=\"\">\n            </div>\n            <div class=\"user_message\">\n                <span class=\"fz_15 text_hide\" style=\"color: #333333;height: 20px;display: block;\">{{ list.user.name }}(我)</span>\n                <p class=\"fz_12\" style=\"color:#999999;\">推荐了<span style=\"color:#FF4A7D \">{{ list.user.inviteNum }}</span>个朋友过来听课</p>\n            </div>\n            <div class=\"invite\">\n                <div class=\"invite_text\" @click=\"showCard\">去邀请</div>\n            </div>\n            <div class=\"thin_line\"></div>\n        </div>\n    </div>\n</div>\n";
+	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div id=\"main\">\n    <top></top>\n    <invite-card :show=\"show\" :id=\"courseId\" :kind=\"0\" :statistics=\"5\" v-on:close=\"closeCard\"></invite-card>\n    <!--用户信息-->\n    <div style=\"position: fixed;width:100%;max-width: 640px;z-index: 10;\">\n        <div class=\"popularity\">\n            <span>{{list.course.pv}}人气&nbsp;&nbsp;</span>\n            <!-- <span>&nbsp;&nbsp;{{list.course.joinNum}}人报名</span> -->\n            <div class=\"thin_line\"></div>\n        </div>\n        <div class =\"user\">\n            <div class=\"user_image\">\n                <img class=\"popimage\" :src=\"imgObject(list.user.avatar)\" alt=\"\">\n            </div>\n            <div class=\"user_message\">\n                <span class=\"fz_15 text_hide\" style=\"color: #333333;height: 20px;display: block;\">{{ list.user.name }}(我)</span>\n                <p class=\"fz_12\" style=\"color:#999999;\">推荐了<span style=\"color:#FF4A7D \">{{ list.user.inviteNum }}</span>个朋友过来听课</p>\n            </div>\n            <div class=\"invite\">\n                <div class=\"invite_text\" @click=\"showCard\">去邀请</div>\n            </div>\n            <div class=\"thin_line\"></div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1725:
+/***/ 1730:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1726)
-	__vue_script__ = __webpack_require__(1728)
+	__webpack_require__(1731)
+	__vue_script__ = __webpack_require__(1733)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/vClassroomPopularityListOther.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1729)
+	__vue_template__ = __webpack_require__(1734)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5886,7 +5886,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-f66d434c/vClassroomPopularityListOther.vue"
+	  var id = "_v-4840a4cf/vClassroomPopularityListOther.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5896,13 +5896,13 @@
 
 /***/ },
 
-/***/ 1726:
+/***/ 1731:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1727);
+	var content = __webpack_require__(1732);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5923,7 +5923,7 @@
 
 /***/ },
 
-/***/ 1727:
+/***/ 1732:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5938,7 +5938,7 @@
 
 /***/ },
 
-/***/ 1728:
+/***/ 1733:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -6348,14 +6348,14 @@
 
 /***/ },
 
-/***/ 1729:
+/***/ 1734:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div>\n    <div class=\"list_top\">\n        <div class =\"other\" v-if=\"topList[0]\">\n            <div class=\"other_image\">\n                <img class=\"popimage1\" :src=\"imgObject(topList[0].avatar)\" alt=\"\">\n                <img class=\"top_three\" src=\"//pic.davdian.com/free/2016/12/21/144_32_bd67acb047a39393a241c38737b23105.png\" alt=\"\">\n            </div>\n            <div class=\"other_message\">\n                <p class=\"fz_15 text_hide\" style=\"color: #333333;height: 20px;line-height: 20px;padding-top: 10px;\">{{topList[0].name}}</p>\n                <p class=\"fz_12\" style=\"color:#999999;height: 30px;line-height: 30px;\">推荐了<span style=\"color:#FF4A7D \">{{topList[0].inviteNum}}</span>个朋友过来听课</p>\n            </div>\n            <div class=\"thin_line\"></div>\n        </div>\n        <div class =\"other\"  v-if=\"topList[1]\">\n            <div class=\"other_image\">\n                <img class=\"popimage2\" :src=\"imgObject(topList[1].avatar)\" alt=\"\">\n                <img class=\"top_three\" src=\"//pic.davdian.com/free/2016/12/21/144_36_fcf2cf34fa22e3218d62052fe8ad63c9.png\" alt=\"\">\n            </div>\n            <div class=\"other_message\">\n                <p class=\"fz_15 text_hide\" style=\"color: #333333;height: 20px;line-height: 20px;padding-top: 10px\">{{topList[1].name}}</p>\n                <p class=\"fz_12\" style=\"color:#999999;height: 30px;line-height: 30px;\">推荐了<span style=\"color:#FF4A7D \">{{topList[1].inviteNum}}</span>个朋友过来听课</p>\n            </div>\n            <div class=\"thin_line\"></div>\n        </div>\n        <div class =\"other\"  v-if=\"topList[2]\">\n            <div class=\"other_image\">\n                <img class=\"popimage3\" :src=\"imgObject(topList[2].avatar)\" alt=\"\">\n                <img class=\"top_three\" src=\"//pic.davdian.com/free/2016/12/21/144_32_764dc74bb6b60fc1c4eddb4bad998724.png\" alt=\"\">\n            </div>\n            <div class=\"other_message\">\n                <p class=\"fz_15 text_hide\" style=\"color: #333333;height: 20px;line-height: 20px;padding-top: 10px\">{{topList[2].name}}</p>\n                <p class=\"fz_12\" style=\"color:#999999;height: 30px;line-height: 30px;\">推荐了<span style=\"color:#FF4A7D \">{{topList[2].inviteNum}}</span>个朋友过来听课</p>\n            </div>\n            <div class=\"thin_line\"></div>\n        </div>\n\n        <div id=\"#topHeight\" :style=\"{height: lineTopHeight +'px'}\"></div>\n\n\n        <div v-for=\"item in previewList\" class =\"other1\">\n            <div class=\"other_image1\">\n                <img class=\"popimage\" :src=\"imgObject(item.avatar)\" alt=\"\">\n            </div>\n            <div class=\"other_message1\">\n                <p class=\"fz_15 text_hide\" style=\"color: #333333; height: 20px;\">{{item.name}}</p>\n                <p class=\"fz_12\" style=\"color:#999999;\">推荐了<span style=\"color:#FF4A7D \">{{item.inviteNum}}</span>个朋友过来听课</p>\n            </div>\n            <div class=\"thin_line\"></div>\n        </div>\n\n\n        <div :style=\"{height: lineBottomHeight +'px'}\"></div>\n\n        <div style=\"clear: both\"></div>\n        <div v-if=\"loading\" class=\"no_more\"> 加载中 <img src=\"//pic.davdian.com/free/loading_03252.svg\"> </div>\n        <div v-if=\"more == '0' && no_data == false\" class=\"no_more\"> 没有更多了 </div>\n    </div>\n    <div v-if=\"no_data\" style=\"text-align: center;position: relative;top: 80px;\">\n        <img style=\"width:18%;\" src=\"//pic.davdian.com/free/2016/12/19/200_298_0d6a638b6549b3dba2ab709ac72a3db1.png\" alt=\"\">\n        <div style=\"margin-top: 20px;color: #666666\">\n                <span>\n                    马上分享邀请卡，占领榜单吧!\n                </span>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1730:
+/***/ 1735:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div>\n    <Mine v-on:showed=\"show\" v-if=\"showed\" :showed=\"showed\"></Mine>\n    <list v-on:showed=\"show\" v-if=\"showed\" :showed=\"showed\"></list>\n    <div class=\"other_info\">\n        <div class='unLoad' v-if=\"!showed\">\n            <div class='unLoad-img'></div>\n            <div class='unLoad-title'>网络异常，请重新加载</div>\n            <div class='unLoad-btn' @click='getData'>点击重新加载</div>\n        </div>\n    </div>\n</div>\n";

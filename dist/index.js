@@ -46,16 +46,16 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(33);
-	__webpack_require__(887);
+	__webpack_require__(892);
 
 
-	__webpack_require__(529);
+	__webpack_require__(534);
 	__webpack_require__(41);
 	__webpack_require__(43);
-	__webpack_require__(1233);
+	__webpack_require__(1238);
 	__webpack_require__(42);
-	__webpack_require__(1244);
-	__webpack_require__(1245);
+	__webpack_require__(1249);
+	__webpack_require__(1250);
 
 /***/ },
 
@@ -2563,7 +2563,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
+	  var id = "_v-1a34eddb/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2987,7 +2987,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-48db5b65/com-popup-alert.vue"
+	  var id = "_v-993d82e0/com-popup-alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3212,7 +3212,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0b77ce89/com-popup-confirm.vue"
+	  var id = "_v-27dcda18/com-popup-confirm.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3465,7 +3465,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
+	  var id = "_v-6c902120/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3743,18 +3743,18 @@
 
 /***/ },
 
-/***/ 462:
+/***/ 467:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(463)
-	__vue_script__ = __webpack_require__(465)
+	__webpack_require__(468)
+	__vue_script__ = __webpack_require__(470)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/bottom.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(466)
+	__vue_template__ = __webpack_require__(471)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -3770,7 +3770,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2df5153e/bottom.vue"
+	  var id = "_v-8155e2e8/bottom.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3780,13 +3780,13 @@
 
 /***/ },
 
-/***/ 463:
+/***/ 468:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(464);
+	var content = __webpack_require__(469);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -3807,7 +3807,7 @@
 
 /***/ },
 
-/***/ 464:
+/***/ 469:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -3822,7 +3822,7 @@
 
 /***/ },
 
-/***/ 465:
+/***/ 470:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3917,14 +3917,14 @@
 
 /***/ },
 
-/***/ 466:
+/***/ 471:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"dav-buyer-bottom clearfix\">\n    <div class=\"bottom-menu\">\n        <a class=\"menu-item\" :class=\"{'active':active==0}\" :href=\"active==0?'javascript:void();':'./'\" data-dav-tj=\"{{page}}|index|index|1|index@{{page}}\">\n            <i class=\"icon dav_icon_home_44_40\" :class=\"{'active':active==0}\" ></i>\n            <div class=\"menu-text\">首页</div>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==1}\" :href=\"active==1?'javascript:void();':'./course.html'\" data-dav-tj=\"{{page}}|category_search|index|1|index@{{page}}\">\n            <i class=\"icon dav_icon_search_44_40\" :class=\"{'active':active==1}\" ></i>\n            <div class=\"menu-text\" style='margin-top:-1px'>学院</div>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==2}\" :href=\"active==2?'javascript:void();':'./cart.html'\" data-dav-tj=\"{{page}}|cart|cart|1|cart@{{page}}\">\n            <i class=\"icon dav_icon_cart_44_40\" :class=\"{'active':active==2}\" ></i>\n            <div class=\"menu-text\">购物车</div>\n            <b v-if='cart' v-text=\"cart\"></b>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==3}\" :href=\"active==3?'javascript:void();':'./center.html'\" data-dav-tj=\"{{page}}|user|user|1|user@{{page}}\">\n            <i class=\"icon dav_icon_me_44_40\" :class=\"{'active':active==3}\" ></i>\n            <div class=\"menu-text\">我的</div>\n        </a>\n\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 529:
+/***/ 534:
 /***/ function(module, exports) {
 
 	/*
@@ -4190,17 +4190,17 @@
 
 /***/ },
 
-/***/ 531:
+/***/ 536:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(532)
+	__vue_script__ = __webpack_require__(537)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/maybeYouLike.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(538)
+	__vue_template__ = __webpack_require__(543)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4216,7 +4216,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-71517a04/maybeYouLike.vue"
+	  var id = "_v-e7137222/maybeYouLike.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4226,7 +4226,7 @@
 
 /***/ },
 
-/***/ 532:
+/***/ 537:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4255,7 +4255,7 @@
 	// </template>
 	//
 	// <script>
-	var category = __webpack_require__(533);
+	var category = __webpack_require__(538);
 	//      var category = require("../src/component/com-maybeyoulike.vue");
 	exports.default = {
 	    el: "#maybeYouLike",
@@ -4339,18 +4339,18 @@
 
 /***/ },
 
-/***/ 533:
+/***/ 538:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(534)
-	__vue_script__ = __webpack_require__(536)
+	__webpack_require__(539)
+	__vue_script__ = __webpack_require__(541)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/category.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(537)
+	__vue_template__ = __webpack_require__(542)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4366,7 +4366,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-e0fc3198/category.vue"
+	  var id = "_v-104fe19f/category.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4376,13 +4376,13 @@
 
 /***/ },
 
-/***/ 534:
+/***/ 539:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(535);
+	var content = __webpack_require__(540);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -4403,7 +4403,7 @@
 
 /***/ },
 
-/***/ 535:
+/***/ 540:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -4418,7 +4418,7 @@
 
 /***/ },
 
-/***/ 536:
+/***/ 541:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4670,28 +4670,28 @@
 
 /***/ },
 
-/***/ 537:
+/***/ 542:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"good_list_con\">\n    <div class=\"good_list_2_row\">\n        <!--单个商品模版template-->\n        <a v-for=\"item in list\" :data-id=\"item.goods_id\" :href=\"a_href(item.goods_id)\"\n                 class=\"good_item\">\n                <div class=\"good_img_container\">\n                    <div class=\"img_container\">\n                        <img :src=\"item.goods_img\" style=\"display: inline;\">\n                        <span class=\"img_label\" v-if=\"item.goods_label!=''\" v-text=\"item.goods_label\"></span>\n                        <span class=\"img_label\" v-if=\"item.goods_label==''&&item.ratio\" v-text=\"'返现'+item.ratio+'倍'\"></span>\n                    </div>\n                    <div v-if = \"item.sale_status\" class=\"good_list_sell_out ng-scope\">\n                        <span v-if = \"item.sale_status == 'soldout'\" class=\"ng-scope\">售罄</span>\n                        <span v-if = \"item.sale_status == 'presale'\" class=\"ng-scope\">预售</span>\n                        <span v-if = \"item.sale_status == 'offline'\" class=\"ng-scope\">未上架</span>\n                    </div>\n                </div>\n\n                <div class=\"good_con\">\n                  <div class=\"good_title\">{{item.goods_name}}</div>\n                  <div class=\"goods4_price_bar\">\n                    <span class=\"dav-color-price font-weight\"><em class=\"fz_14\">¥</em><span class=\"nowPrice\"><span>{{(item.shop_price+\"\").split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.shop_price+'').split('.').length == 2\">.{{(item.shop_price+\"\").split(\".\")[1]}}</span></span></span>\n                    <span class=\"vip_return\" v-if = \"(item.seller_income && item.seller_income != 0) || (item.comm_income && item.comm_income != 0)\">\n                      <span class=\"vip_return_title\">会员返</span>\n                      <span class=\"vip_return_f\">¥</span>\n                      <span class=\"vip_return_price\">{{item.seller_income||item.comm_income}}</span>\n                    </span>\n                  </div>\n                </div>\n              </a>\n        <!--不到50个商品展示这个template-->\n        <div style=\"clear: both;\"></div>\n        <div v-show = \"loading\" class=\"no_more\">\n            商品加载中 <img src=\"//pic.davdian.com/free/loading_03252.svg\">\n        </div>\n        <div v-show = \"no_more\" class=\"no_more\">\n            没有更多商品了\n        </div>\n    </div>\n    <div class=\"good_list_2_row\" ng-model=\"goods\">\n        <div style=\"clear:both\"></div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 538:
+/***/ 543:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class = \"mt_10\" id = \"comon\">\n    <div class=\"df_new_title_2\" style=\"border-bottom: none\">\n        <span class=\"df_new_font\">猜你喜欢</span>\n    </div>\n    <div class=\"logo_container\"  v-show = \"beforeFirstLoading\">\n        <div class=\"logo_left\"></div>\n        <div class=\"logo_right\"></div>\n    </div>\n    <div style=\"clear: both;\">\n    </div>\n    <category refer=\"guess_detail\" :referer=\"referer\"></category>\n    <!--<category refer=\"guess_detail\"-->\n              <!--:referer=\"referer\"-->\n              <!--:list = \"list\"-->\n              <!--:loading = \"beforeFirstLoading\"></category>-->\n\n</div>\n";
 
 /***/ },
 
-/***/ 887:
+/***/ 892:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1233:
+/***/ 1238:
 /***/ function(module, exports, __webpack_require__) {
 
 	$(document).ready(function(){
@@ -5042,11 +5042,11 @@
 
 
 
-	var dvdBottom = __webpack_require__(462);
-	var tuanList = __webpack_require__(1234);
+	var dvdBottom = __webpack_require__(467);
+	var tuanList = __webpack_require__(1239);
 
 	//引入 猜你喜欢 模块
-	var maybeYouLike = __webpack_require__(531);
+	var maybeYouLike = __webpack_require__(536);
 
 	new Vue({
 	    el: "#index",
@@ -5070,18 +5070,18 @@
 
 /***/ },
 
-/***/ 1234:
+/***/ 1239:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1235)
-	__vue_script__ = __webpack_require__(1237)
+	__webpack_require__(1240)
+	__vue_script__ = __webpack_require__(1242)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/tuanList.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1243)
+	__vue_template__ = __webpack_require__(1248)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5097,7 +5097,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-cf2cc13c/tuanList.vue"
+	  var id = "_v-193799cd/tuanList.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5107,13 +5107,13 @@
 
 /***/ },
 
-/***/ 1235:
+/***/ 1240:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1236);
+	var content = __webpack_require__(1241);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5134,7 +5134,7 @@
 
 /***/ },
 
-/***/ 1236:
+/***/ 1241:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5149,7 +5149,7 @@
 
 /***/ },
 
-/***/ 1237:
+/***/ 1242:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -5185,7 +5185,7 @@
 	//
 	// </style>
 	// <script>
-	var countdownTime = __webpack_require__(1238);
+	var countdownTime = __webpack_require__(1243);
 	exports.default = {
 	    props: {
 	        conifg: {}
@@ -5222,18 +5222,18 @@
 
 /***/ },
 
-/***/ 1238:
+/***/ 1243:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1239)
-	__vue_script__ = __webpack_require__(1241)
+	__webpack_require__(1244)
+	__vue_script__ = __webpack_require__(1246)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/countdownTime.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1242)
+	__vue_template__ = __webpack_require__(1247)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5249,7 +5249,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-206e1c58/countdownTime.vue"
+	  var id = "_v-69e2eccd/countdownTime.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5259,13 +5259,13 @@
 
 /***/ },
 
-/***/ 1239:
+/***/ 1244:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1240);
+	var content = __webpack_require__(1245);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5286,7 +5286,7 @@
 
 /***/ },
 
-/***/ 1240:
+/***/ 1245:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5301,7 +5301,7 @@
 
 /***/ },
 
-/***/ 1241:
+/***/ 1246:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -5354,21 +5354,21 @@
 
 /***/ },
 
-/***/ 1242:
+/***/ 1247:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"time\">{{timeStr}}</div>\n";
 
 /***/ },
 
-/***/ 1243:
+/***/ 1248:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"tuan_list\">\n    <a v-for=\"item in list\"\n       href=\"/{{item.goods_id}}.html\"\n       data-remain-second=\"{{item.left_second}}\">\n        <div class=\"tuan_img_container\">\n            <img data-original=\"{{item.group_img}}\"\n                 src=\"//pic.davdian.com/free/loading_750_328_v3.png\">\n        </div>\n        <div class=\"tuan_info_container\">\n            <countdown-time :time=\"item.left_second\"></countdown-time>\n            <div class=\"tuan_item_icon\"></div>\n            <div class=\"tuan-other-info\">\n                <div class=\"tuan_item_title\">{{item.goods_name}}</div>\n                <div class=\"tuan_item_price\">\n                    <span>¥</span>\n                    <span class=\"current_price\">{{item.group_price}}</span>\n                    <span class=\"market_price\">¥{{item.market_price}}</span>\n                </div>\n            </div>\n        </div>\n    </a>\n</div>\n";
 
 /***/ },
 
-/***/ 1244:
+/***/ 1249:
 /***/ function(module, exports) {
 
 	var module = window.module || {};
@@ -5506,7 +5506,7 @@
 
 /***/ },
 
-/***/ 1245:
+/***/ 1250:
 /***/ function(module, exports) {
 
 	$(function () {

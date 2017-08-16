@@ -52,7 +52,7 @@
 	__webpack_require__(37);
 
 	__webpack_require__(43);
-	__webpack_require__(434);
+	__webpack_require__(439);
 
 
 /***/ },
@@ -2136,7 +2136,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
+	  var id = "_v-1a34eddb/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2560,7 +2560,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-48db5b65/com-popup-alert.vue"
+	  var id = "_v-993d82e0/com-popup-alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2785,7 +2785,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0b77ce89/com-popup-confirm.vue"
+	  var id = "_v-27dcda18/com-popup-confirm.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3038,7 +3038,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
+	  var id = "_v-6c902120/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5594,13 +5594,13 @@
 
 /***/ },
 
-/***/ 434:
+/***/ 439:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by Murphy.lee on 17/4/24.
 	 */
-	var input_container = __webpack_require__(435);
+	var input_container = __webpack_require__(440);
 	new Vue({
 	  el: "#container",
 	  data: function () {
@@ -5624,18 +5624,18 @@
 
 /***/ },
 
-/***/ 435:
+/***/ 440:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(436)
-	__vue_script__ = __webpack_require__(438)
+	__webpack_require__(441)
+	__vue_script__ = __webpack_require__(443)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/input_container.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(439)
+	__vue_template__ = __webpack_require__(444)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5651,7 +5651,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0e8a6286/input_container.vue"
+	  var id = "_v-63e62c8a/input_container.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5661,13 +5661,13 @@
 
 /***/ },
 
-/***/ 436:
+/***/ 441:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(437);
+	var content = __webpack_require__(442);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5676,8 +5676,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0e8a6286&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./input_container.vue", function() {
-				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0e8a6286&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./input_container.vue");
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-63e62c8a&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./input_container.vue", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-63e62c8a&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./input_container.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -5688,7 +5688,7 @@
 
 /***/ },
 
-/***/ 437:
+/***/ 442:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5696,14 +5696,14 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.input-container-wrap[_v-0e8a6286] {\n  position: fixed;\n  max-width: 640px;\n  margin: auto auto;\n  top: 44px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #FFFFFF !important;\n  padding-top: 50px;\n}\n\n.input-container > div input[_v-0e8a6286] {\n  width: 100%;\n  height: 100%;\n  background-color: #F9F9F9;\n  border-radius: 20px;\n  text-indent: 20px;\n  font-size: 14px;\n}\n\n.input-container > div[_v-0e8a6286] {\n  width: 79%;\n  height: 40px;\n  margin: 0 auto;\n}\n\n.input-container .check-number[_v-0e8a6286] {\n  margin-top: 15px;\n}\n\n.input-container .check-number input[_v-0e8a6286] {\n  width: 69%;\n}\n\n.input-container .check-number div[_v-0e8a6286] {\n  width: 28%;\n  border-radius: 20px;\n  border: 1px solid #E1E1E1;\n  color: #D5D5D5;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  background-color: #FFF;\n  float: right;\n  line-height: 40px;\n  text-align: center;\n  font-size: 12px;\n}\n\n.input-container .check-number.abled div[_v-0e8a6286] {\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n}\n\n.new-button[_v-0e8a6286] {\n  width: 73%;\n  height: 40px;\n  border-radius: 20px;\n  border: 1px solid #E1E1E1;\n  color: #D5D5D5;\n  font-size: 14px;\n  line-height: 40px;\n  text-align: center;\n  margin: 25px auto;\n}\n\n.new-button.abled[_v-0e8a6286] {\n  background: -webkit-linear-gradient(left, #FF5B5B, #FA1862); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right top, from(#FF5B5B), to(#FA1862));\n  background: linear-gradient(to right, #FF5B5B, #FA1862); /* 标准的语法 */\n  -webkit-box-shadow: 0 3px 8px 0 #FF4469;\n  box-shadow: 0 3px 8px 0 #FF4469;\n  border: none;\n}\n\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.input-container-wrap[_v-63e62c8a] {\n  position: fixed;\n  max-width: 640px;\n  margin: auto auto;\n  top: 44px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #FFFFFF !important;\n  padding-top: 50px;\n}\n\n.input-container > div input[_v-63e62c8a] {\n  width: 100%;\n  height: 100%;\n  background-color: #F9F9F9;\n  border-radius: 20px;\n  text-indent: 20px;\n  font-size: 14px;\n}\n\n.input-container > div[_v-63e62c8a] {\n  width: 79%;\n  height: 40px;\n  margin: 0 auto;\n}\n\n.input-container .check-number[_v-63e62c8a] {\n  margin-top: 15px;\n}\n\n.input-container .check-number input[_v-63e62c8a] {\n  width: 69%;\n}\n\n.input-container .check-number div[_v-63e62c8a] {\n  width: 28%;\n  border-radius: 20px;\n  border: 1px solid #E1E1E1;\n  color: #D5D5D5;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  background-color: #FFF;\n  float: right;\n  line-height: 40px;\n  text-align: center;\n  font-size: 12px;\n}\n\n.input-container .check-number.abled div[_v-63e62c8a] {\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n}\n\n.new-button[_v-63e62c8a] {\n  width: 73%;\n  height: 40px;\n  border-radius: 20px;\n  border: 1px solid #E1E1E1;\n  color: #D5D5D5;\n  font-size: 14px;\n  line-height: 40px;\n  text-align: center;\n  margin: 25px auto;\n}\n\n.new-button.abled[_v-63e62c8a] {\n  background: -webkit-linear-gradient(left, #FF5B5B, #FA1862); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right top, from(#FF5B5B), to(#FA1862));\n  background: linear-gradient(to right, #FF5B5B, #FA1862); /* 标准的语法 */\n  -webkit-box-shadow: 0 3px 8px 0 #FF4469;\n  box-shadow: 0 3px 8px 0 #FF4469;\n  border: none;\n}\n\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 438:
+/***/ 443:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5906,10 +5906,10 @@
 
 /***/ },
 
-/***/ 439:
+/***/ 444:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"input-container-wrap\" _v-0e8a6286=\"\">\n  <div class=\"input-container\" _v-0e8a6286=\"\">\n    <div class=\"tel-num\" _v-0e8a6286=\"\">\n      <input v-if=\"phone_access\" placeholder=\"请填写手机号\" v-model=\"phoneNum\" oninput=\"value=value.replace(/[^\\d]/g,'')\" maxlength=\"11\" type=\"tel\" _v-0e8a6286=\"\">\n      <input v-if=\"!phone_access\" placeholder=\"请填写手机号\" v-model=\"phoneNum\" disabled=\"\" _v-0e8a6286=\"\">\n    </div>\n    <div class=\"check-number\" :class=\"{abled:(phoneNum.length == 11) &amp;&amp; phone_access}\" _v-0e8a6286=\"\">\n      <input placeholder=\"请输入验证码\" v-model=\"checkNum\" oninput=\"value=value.replace(/[^\\d]/g,'')\" type=\"tel\" _v-0e8a6286=\"\">\n      <div v-if=\"(phoneNum.length == 11) &amp;&amp; phone_access\" @click=\"checkNumber\" v-text=\"checkBttext\" alt=\"有点击事件\" _v-0e8a6286=\"\"></div>\n      <div v-else=\"\" v-text=\"checkBttext\" alt=\"无点击事件\" _v-0e8a6286=\"\"></div>\n    </div>\n  </div>\n  <div v-if=\"confirms\" class=\"new-button abled\" alt=\"yes\" @click=\"sub\" _v-0e8a6286=\"\">确定</div>\n  <div v-if=\"!confirms\" class=\"new-button\" alt=\"no\" _v-0e8a6286=\"\">确定</div>\n</div>\n";
+	module.exports = "\n<div class=\"input-container-wrap\" _v-63e62c8a=\"\">\n  <div class=\"input-container\" _v-63e62c8a=\"\">\n    <div class=\"tel-num\" _v-63e62c8a=\"\">\n      <input v-if=\"phone_access\" placeholder=\"请填写手机号\" v-model=\"phoneNum\" oninput=\"value=value.replace(/[^\\d]/g,'')\" maxlength=\"11\" type=\"tel\" _v-63e62c8a=\"\">\n      <input v-if=\"!phone_access\" placeholder=\"请填写手机号\" v-model=\"phoneNum\" disabled=\"\" _v-63e62c8a=\"\">\n    </div>\n    <div class=\"check-number\" :class=\"{abled:(phoneNum.length == 11) &amp;&amp; phone_access}\" _v-63e62c8a=\"\">\n      <input placeholder=\"请输入验证码\" v-model=\"checkNum\" oninput=\"value=value.replace(/[^\\d]/g,'')\" type=\"tel\" _v-63e62c8a=\"\">\n      <div v-if=\"(phoneNum.length == 11) &amp;&amp; phone_access\" @click=\"checkNumber\" v-text=\"checkBttext\" alt=\"有点击事件\" _v-63e62c8a=\"\"></div>\n      <div v-else=\"\" v-text=\"checkBttext\" alt=\"无点击事件\" _v-63e62c8a=\"\"></div>\n    </div>\n  </div>\n  <div v-if=\"confirms\" class=\"new-button abled\" alt=\"yes\" @click=\"sub\" _v-63e62c8a=\"\">确定</div>\n  <div v-if=\"!confirms\" class=\"new-button\" alt=\"no\" _v-63e62c8a=\"\">确定</div>\n</div>\n";
 
 /***/ }
 

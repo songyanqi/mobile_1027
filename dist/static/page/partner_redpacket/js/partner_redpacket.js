@@ -56,7 +56,7 @@
 	new _Vue2.default({
 	    el: "#guide",
 	    components: {
-	        guide: __webpack_require__(1134)
+	        guide: __webpack_require__(1140)
 	    }
 	}); /**
 	     * Created by jianchep on 17/06/07.
@@ -4775,7 +4775,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-81e18c02/index.vue"
+	  var id = "_v-f832942c/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4956,7 +4956,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7a517590/index.vue"
+	  var id = "_v-2a6eedc5/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5361,7 +5361,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5d97050a/index.vue"
+	  var id = "_v-226e80f5/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -8249,19 +8249,19 @@
 
 /***/ },
 
-/***/ 1134:
+/***/ 1140:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1135)
-	__webpack_require__(1137)
-	__vue_script__ = __webpack_require__(1139)
+	__webpack_require__(1141)
+	__webpack_require__(1143)
+	__vue_script__ = __webpack_require__(1145)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/partner_redpacket/vue/partner_redpacket.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1140)
+	__vue_template__ = __webpack_require__(1146)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8277,7 +8277,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5f622e14/partner_redpacket.vue"
+	  var id = "_v-7e026d09/partner_redpacket.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -8287,13 +8287,13 @@
 
 /***/ },
 
-/***/ 1135:
+/***/ 1141:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1136);
+	var content = __webpack_require__(1142);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -8314,7 +8314,7 @@
 
 /***/ },
 
-/***/ 1136:
+/***/ 1142:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -8329,13 +8329,13 @@
 
 /***/ },
 
-/***/ 1137:
+/***/ 1143:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1138);
+	var content = __webpack_require__(1144);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -8344,8 +8344,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5f622e14&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./partner_redpacket.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5f622e14&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./partner_redpacket.vue");
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7e026d09&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./partner_redpacket.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7e026d09&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./partner_redpacket.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -8356,7 +8356,7 @@
 
 /***/ },
 
-/***/ 1138:
+/***/ 1144:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -8364,14 +8364,14 @@
 
 
 	// module
-	exports.push([module.id, ".container[_v-5f622e14] {\n  width: 100%; }\n  .container .guide3Container1[_v-5f622e14] {\n    width: 100%;\n    height: 0.7rem;\n    background: #fff; }\n  .container .bottomImg[_v-5f622e14] {\n    position: absolute;\n    top: 4.3rem;\n    width: 85%;\n    height: 0.7rem;\n    max-width: 384px;\n    left: 50%;\n    -webkit-transform: translate(-50%, 0);\n        -ms-transform: translate(-50%, 0);\n            transform: translate(-50%, 0);\n    border-radius: 4px; }\n  .container .exit[_v-5f622e14] {\n    position: absolute;\n    width: 0.3rem;\n    height: 0.3rem;\n    top: 0.05rem;\n    left: 0.05rem; }\n  .container .guide1[_v-5f622e14] {\n    width: 100%;\n    vertical-align: center; }\n    .container .guide1 .guide1all[_v-5f622e14] {\n      position: absolute; }\n    .container .guide1 .guide1Bg[_v-5f622e14] {\n      width: 100%;\n      vertical-align: top; }\n    .container .guide1 .guide1Title[_v-5f622e14] {\n      width: 100%;\n      max-width: 640px;\n      color: #BF9D51;\n      font-size: 0.25rem;\n      top: 1.3rem;\n      text-align: center;\n      font-weight: bolder; }\n    .container .guide1 .guide1Content[_v-5f622e14] {\n      width: 100%;\n      max-width: 640px;\n      color: #FF4A7D;\n      font-size: 0.18rem;\n      text-align: center;\n      top: 2.01rem; }\n      .container .guide1 .guide1Content span[_v-5f622e14] {\n        color: #333333; }\n    .container .guide1 .guide1Img[_v-5f622e14] {\n      width: 100%;\n      max-width: 640px;\n      height: 0.99rem;\n      top: 2rem; }\n      .container .guide1 .guide1Img img[_v-5f622e14] {\n        width: 3.15rem;\n        height: 0.99rem;\n        left: 50%;\n        -webkit-transform: translate(-50%, 0);\n            -ms-transform: translate(-50%, 0);\n                transform: translate(-50%, 0); }\n      .container .guide1 .guide1Img .guide1Img1[_v-5f622e14] {\n        top: 0.20rem;\n        left: 0.40rem;\n        width: 0.8rem;\n        text-align: center;\n        color: #fff;\n        font-size: 0.3rem; }\n        .container .guide1 .guide1Img .guide1Img1 span[_v-5f622e14] {\n          font-size: 0.2rem; }\n      .container .guide1 .guide1Img .guide1Img2[_v-5f622e14] {\n        top: 0.20rem;\n        left: 1.55rem;\n        color: #333333;\n        font-size: 0.16rem;\n        width: 1.5rem;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        -webkit-box-orient: vertical;\n        -webkit-line-clamp: 1;\n        display: -webkit-box; }\n      .container .guide1 .guide1Img .guide1Img3[_v-5f622e14] {\n        top: 0.65rem;\n        left: 0.43rem;\n        color: #fff;\n        font-size: 0.12rem; }\n      .container .guide1 .guide1Img .guide1Img4[_v-5f622e14] {\n        top: 0.42rem;\n        left: 1.55rem;\n        color: #666666;\n        font-size: 0.12rem;\n        width: 1.5rem;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        -webkit-box-orient: vertical;\n        -webkit-line-clamp: 1;\n        display: -webkit-box; }\n      .container .guide1 .guide1Img .guide1Img5[_v-5f622e14] {\n        top: 0.66rem;\n        left: 1.55rem;\n        color: #FF4A7D;\n        font-size: 0.11rem; }\n        .container .guide1 .guide1Img .guide1Img5 span[_v-5f622e14] {\n          font-weight: bolder; }\n    .container .guide1 .guide1Text[_v-5f622e14] {\n      color: #666666;\n      font-size: 0.12rem;\n      top: 3.1rem;\n      width: 100%;\n      max-width: 640px;\n      text-align: center; }\n    .container .guide1 .guide1Btn[_v-5f622e14] {\n      width: 2.75rem;\n      height: 0.4rem;\n      line-height: 0.4rem;\n      border-radius: 200px;\n      background: -webkit-linear-gradient(left, #FF5B5B, #FB1C62);\n      top: 3.57rem;\n      left: 50%;\n      -webkit-transform: translate(-50%, 0);\n          -ms-transform: translate(-50%, 0);\n              transform: translate(-50%, 0);\n      color: #FFFFFF;\n      font-size: 0.14rem;\n      text-align: center;\n      -webkit-box-shadow: 0px 3px 8px #FEC2CE;\n              box-shadow: 0px 3px 8px #FEC2CE;\n      font-weight: bolder; }\n  .container .guide2[_v-5f622e14] {\n    color: #333333;\n    font-size: 0.14rem;\n    text-align: center;\n    width: 100%;\n    background: #fff;\n    height: 0.4rem;\n    line-height: 0.4rem; }\n  .container .guide3[_v-5f622e14] {\n    width: 3.55rem;\n    margin-left: 0.1rem;\n    font-size: 0;\n    margin-top: 0.1rem;\n    margin-bottom: 0.2rem;\n    /*.left{\n            float: left;\n        }\n        .right{\n            float: right;\n        }*/ }\n    .container .guide3 .guide3Container[_v-5f622e14] {\n      position: relative;\n      width: 1.73rem;\n      height: 2.43rem;\n      font-size: 0.14rem;\n      float: left;\n      overflow: hidden;\n      margin-bottom: 0.1rem; }\n      .container .guide3 .guide3Container .guide3img[_v-5f622e14] {\n        width: 1.73rem;\n        height: 1.73rem;\n        vertical-align: top; }\n      .container .guide3 .guide3Container .guide3price[_v-5f622e14] {\n        position: absolute;\n        left: 0;\n        top: 1.55rem;\n        color: #fff;\n        height: 0.18rem;\n        line-height: 0.18rem;\n        border-top-right-radius: 16px;\n        font-size: 0;\n        background-size: inherit; }\n        .container .guide3 .guide3Container .guide3price span[_v-5f622e14] {\n          vertical-align: top;\n          background: -webkit-linear-gradient(left, #FF7477, #FF5589);\n          display: inline-block;\n          height: 100%;\n          font-size: 0.1rem;\n          padding-left: 0.05rem;\n          line-height: 0.2rem;\n          font-weight: bold; }\n        .container .guide3 .guide3Container .guide3price img[_v-5f622e14] {\n          vertical-align: top;\n          height: 100%; }\n      .container .guide3 .guide3Container .guide3title[_v-5f622e14] {\n        color: #666666;\n        font-size: 0.12rem;\n        padding-left: 0.1rem;\n        padding-right: 0.07rem;\n        padding-top: 0.02rem;\n        text-overflow: ellipsis;\n        -webkit-box-orient: vertical;\n        -webkit-line-clamp: 2;\n        display: -webkit-box;\n        overflow: hidden; }\n      .container .guide3 .guide3Container .guide3money[_v-5f622e14] {\n        color: #FF4A7D;\n        font-size: 0.16rem;\n        padding-left: 0.1rem;\n        margin-top: 0.07rem;\n        display: inline-block;\n        vertical-align: top;\n        font-weight: 400; }\n        .container .guide3 .guide3Container .guide3money span[_v-5f622e14] {\n          font-size: 0.12rem; }\n      .container .guide3 .guide3Container .guide3inComeMoney[_v-5f622e14] {\n        display: inline-block;\n        vertical-align: top;\n        margin-top: 0.11rem;\n        font-size: 0.11rem;\n        /*margin-left: 0.06rem;*/\n        color: #BF9D51; }\n    .container .guide3 .guide3Container[_v-5f622e14]:nth-child(2n) {\n      float: right; }\n  .container .guide3[_v-5f622e14]:after {\n    content: \".\";\n    display: block;\n    height: 0;\n    clear: both;\n    visibility: hidden; }\n", ""]);
+	exports.push([module.id, ".container[_v-7e026d09] {\n  width: 100%; }\n  .container .guide3Container1[_v-7e026d09] {\n    width: 100%;\n    height: 0.7rem;\n    background: #fff; }\n  .container .bottomImg[_v-7e026d09] {\n    position: absolute;\n    top: 4.3rem;\n    width: 85%;\n    height: 0.7rem;\n    max-width: 384px;\n    left: 50%;\n    -webkit-transform: translate(-50%, 0);\n        -ms-transform: translate(-50%, 0);\n            transform: translate(-50%, 0);\n    border-radius: 4px; }\n  .container .exit[_v-7e026d09] {\n    position: absolute;\n    width: 0.3rem;\n    height: 0.3rem;\n    top: 0.05rem;\n    left: 0.05rem; }\n  .container .guide1[_v-7e026d09] {\n    width: 100%;\n    vertical-align: center; }\n    .container .guide1 .guide1all[_v-7e026d09] {\n      position: absolute; }\n    .container .guide1 .guide1Bg[_v-7e026d09] {\n      width: 100%;\n      vertical-align: top; }\n    .container .guide1 .guide1Title[_v-7e026d09] {\n      width: 100%;\n      max-width: 640px;\n      color: #BF9D51;\n      font-size: 0.25rem;\n      top: 1.3rem;\n      text-align: center;\n      font-weight: bolder; }\n    .container .guide1 .guide1Content[_v-7e026d09] {\n      width: 100%;\n      max-width: 640px;\n      color: #FF4A7D;\n      font-size: 0.18rem;\n      text-align: center;\n      top: 2.01rem; }\n      .container .guide1 .guide1Content span[_v-7e026d09] {\n        color: #333333; }\n    .container .guide1 .guide1Img[_v-7e026d09] {\n      width: 100%;\n      max-width: 640px;\n      height: 0.99rem;\n      top: 2rem; }\n      .container .guide1 .guide1Img img[_v-7e026d09] {\n        width: 3.15rem;\n        height: 0.99rem;\n        left: 50%;\n        -webkit-transform: translate(-50%, 0);\n            -ms-transform: translate(-50%, 0);\n                transform: translate(-50%, 0); }\n      .container .guide1 .guide1Img .guide1Img1[_v-7e026d09] {\n        top: 0.20rem;\n        left: 0.40rem;\n        width: 0.8rem;\n        text-align: center;\n        color: #fff;\n        font-size: 0.3rem; }\n        .container .guide1 .guide1Img .guide1Img1 span[_v-7e026d09] {\n          font-size: 0.2rem; }\n      .container .guide1 .guide1Img .guide1Img2[_v-7e026d09] {\n        top: 0.20rem;\n        left: 1.55rem;\n        color: #333333;\n        font-size: 0.16rem;\n        width: 1.5rem;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        -webkit-box-orient: vertical;\n        -webkit-line-clamp: 1;\n        display: -webkit-box; }\n      .container .guide1 .guide1Img .guide1Img3[_v-7e026d09] {\n        top: 0.65rem;\n        left: 0.43rem;\n        color: #fff;\n        font-size: 0.12rem; }\n      .container .guide1 .guide1Img .guide1Img4[_v-7e026d09] {\n        top: 0.42rem;\n        left: 1.55rem;\n        color: #666666;\n        font-size: 0.12rem;\n        width: 1.5rem;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        -webkit-box-orient: vertical;\n        -webkit-line-clamp: 1;\n        display: -webkit-box; }\n      .container .guide1 .guide1Img .guide1Img5[_v-7e026d09] {\n        top: 0.66rem;\n        left: 1.55rem;\n        color: #FF4A7D;\n        font-size: 0.11rem; }\n        .container .guide1 .guide1Img .guide1Img5 span[_v-7e026d09] {\n          font-weight: bolder; }\n    .container .guide1 .guide1Text[_v-7e026d09] {\n      color: #666666;\n      font-size: 0.12rem;\n      top: 3.1rem;\n      width: 100%;\n      max-width: 640px;\n      text-align: center; }\n    .container .guide1 .guide1Btn[_v-7e026d09] {\n      width: 2.75rem;\n      height: 0.4rem;\n      line-height: 0.4rem;\n      border-radius: 200px;\n      background: -webkit-linear-gradient(left, #FF5B5B, #FB1C62);\n      top: 3.57rem;\n      left: 50%;\n      -webkit-transform: translate(-50%, 0);\n          -ms-transform: translate(-50%, 0);\n              transform: translate(-50%, 0);\n      color: #FFFFFF;\n      font-size: 0.14rem;\n      text-align: center;\n      -webkit-box-shadow: 0px 3px 8px #FEC2CE;\n              box-shadow: 0px 3px 8px #FEC2CE;\n      font-weight: bolder; }\n  .container .guide2[_v-7e026d09] {\n    color: #333333;\n    font-size: 0.14rem;\n    text-align: center;\n    width: 100%;\n    background: #fff;\n    height: 0.4rem;\n    line-height: 0.4rem; }\n  .container .guide3[_v-7e026d09] {\n    width: 3.55rem;\n    margin-left: 0.1rem;\n    font-size: 0;\n    margin-top: 0.1rem;\n    margin-bottom: 0.2rem;\n    /*.left{\n            float: left;\n        }\n        .right{\n            float: right;\n        }*/ }\n    .container .guide3 .guide3Container[_v-7e026d09] {\n      position: relative;\n      width: 1.73rem;\n      height: 2.43rem;\n      font-size: 0.14rem;\n      float: left;\n      overflow: hidden;\n      margin-bottom: 0.1rem; }\n      .container .guide3 .guide3Container .guide3img[_v-7e026d09] {\n        width: 1.73rem;\n        height: 1.73rem;\n        vertical-align: top; }\n      .container .guide3 .guide3Container .guide3price[_v-7e026d09] {\n        position: absolute;\n        left: 0;\n        top: 1.55rem;\n        color: #fff;\n        height: 0.18rem;\n        line-height: 0.18rem;\n        border-top-right-radius: 16px;\n        font-size: 0;\n        background-size: inherit; }\n        .container .guide3 .guide3Container .guide3price span[_v-7e026d09] {\n          vertical-align: top;\n          background: -webkit-linear-gradient(left, #FF7477, #FF5589);\n          display: inline-block;\n          height: 100%;\n          font-size: 0.1rem;\n          padding-left: 0.05rem;\n          line-height: 0.2rem;\n          font-weight: bold; }\n        .container .guide3 .guide3Container .guide3price img[_v-7e026d09] {\n          vertical-align: top;\n          height: 100%; }\n      .container .guide3 .guide3Container .guide3title[_v-7e026d09] {\n        color: #666666;\n        font-size: 0.12rem;\n        padding-left: 0.1rem;\n        padding-right: 0.07rem;\n        padding-top: 0.02rem;\n        text-overflow: ellipsis;\n        -webkit-box-orient: vertical;\n        -webkit-line-clamp: 2;\n        display: -webkit-box;\n        overflow: hidden; }\n      .container .guide3 .guide3Container .guide3money[_v-7e026d09] {\n        color: #FF4A7D;\n        font-size: 0.16rem;\n        padding-left: 0.1rem;\n        margin-top: 0.07rem;\n        display: inline-block;\n        vertical-align: top;\n        font-weight: 400; }\n        .container .guide3 .guide3Container .guide3money span[_v-7e026d09] {\n          font-size: 0.12rem; }\n      .container .guide3 .guide3Container .guide3inComeMoney[_v-7e026d09] {\n        display: inline-block;\n        vertical-align: top;\n        margin-top: 0.11rem;\n        font-size: 0.11rem;\n        /*margin-left: 0.06rem;*/\n        color: #BF9D51; }\n    .container .guide3 .guide3Container[_v-7e026d09]:nth-child(2n) {\n      float: right; }\n  .container .guide3[_v-7e026d09]:after {\n    content: \".\";\n    display: block;\n    height: 0;\n    clear: both;\n    visibility: hidden; }\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 1139:
+/***/ 1145:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -8818,10 +8818,10 @@
 
 /***/ },
 
-/***/ 1140:
+/***/ 1146:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"container\" _v-5f622e14=\"\">\n    <div class=\"guide1\" _v-5f622e14=\"\">\n        <img src=\"//pic.davdian.com/free/2017/06/28/partner_bg2.png\" v-if=\"!giftButton\" class=\"guide1Bg\" _v-5f622e14=\"\">\n        <img src=\"//pic.davdian.com/free/2017/06/28/partner_bg1.png\" v-if=\"giftButton\" class=\"guide1Bg\" _v-5f622e14=\"\">\n        <div class=\"exit\" @click=\"goProfile\" _v-5f622e14=\"\"></div>\n        <div class=\"guide1Title guide1all\" _v-5f622e14=\"\">{{bonus.bonusCountMoney}}元红包已到账</div>\n        <div class=\"guide1Img guide1all\" v-if=\"bonusFlag\" _v-5f622e14=\"\">\n            <img src=\"//pic.davdian.com/free/2017/06/07/ticket.png\" class=\"guide1all\" @click=\"linkUrl(bonus.linkUrl)\" _v-5f622e14=\"\">\n            <div class=\"guide1Img1 guide1all\" _v-5f622e14=\"\"><span _v-5f622e14=\"\">¥&nbsp;</span>{{bonus.bonusMoney}}</div>\n            <div class=\"guide1Img3 guide1all\" _v-5f622e14=\"\">满{{bonus.limit}}元可用</div>\n            <div class=\"guide1Img2 guide1all\" v-text=\"bonus.bonusName\" _v-5f622e14=\"\"></div>\n            <div class=\"guide1Img4 guide1all\" v-text=\"bonus.useCat\" _v-5f622e14=\"\"></div>\n            <div class=\"guide1Img5 guide1all\" _v-5f622e14=\"\">有效期倒计时：<span _v-5f622e14=\"\">{{time}}</span></div>\n        </div>\n        <div class=\"guide1Text guide1all\" v-if=\"bonusFlag\" _v-5f622e14=\"\">240邮费抵用券正在路上～</div>\n        <div class=\"guide1Btn guide1all\" @click=\"goProfile\" _v-5f622e14=\"\">马上开始购物</div>\n        <div class=\"bottomImg\" v-if=\"giftButton\" @click=\"linkUrl(giftButton.linkUrl)\" :style=\"{'background': 'url(' + giftButton.imageUrl + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-5f622e14=\"\"></div>\n        <!-- <div class='bottomImg' @click='linkUrl(giftButton.linkUrl)' style='background:red'></div> -->\n    </div>\n    <div class=\"guide2\" v-if=\"goodsList\" _v-5f622e14=\"\">会员专享，限时抢购中</div>\n    <div class=\"guide3\" v-if=\"goodsList\" _v-5f622e14=\"\">\n        <div v-if=\"goodsList\" class=\"guide3Container\" @click=\"linkUrl(goods.linkUrl)\" v-for=\"goods in goodsList\" _v-5f622e14=\"\">\n            <img :src=\"goods.imageUrl\" class=\"guide3img\" _v-5f622e14=\"\">\n\n            <div class=\"guide3price\" _v-5f622e14=\"\">\n                <span v-text=\"goods.actInfo\" _v-5f622e14=\"\"></span>\n                <img src=\"//pic.davdian.com/free/2017/06/22/activityBg1.png\" _v-5f622e14=\"\">\n            </div>\n            <div class=\"guide3Container1\" _v-5f622e14=\"\">\n                <div class=\"guide3title\" v-text=\"goods.title\" _v-5f622e14=\"\"></div>\n                <div class=\"guide3money\" _v-5f622e14=\"\"><span _v-5f622e14=\"\">¥&nbsp;</span>{{goods.price}}</div>\n                <div class=\"guide3inComeMoney\" _v-5f622e14=\"\">会员返{{goods.saveMoney}}</div>\n            </div>\n            \n        </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div class=\"container\" _v-7e026d09=\"\">\n    <div class=\"guide1\" _v-7e026d09=\"\">\n        <img src=\"//pic.davdian.com/free/2017/06/28/partner_bg2.png\" v-if=\"!giftButton\" class=\"guide1Bg\" _v-7e026d09=\"\">\n        <img src=\"//pic.davdian.com/free/2017/06/28/partner_bg1.png\" v-if=\"giftButton\" class=\"guide1Bg\" _v-7e026d09=\"\">\n        <div class=\"exit\" @click=\"goProfile\" _v-7e026d09=\"\"></div>\n        <div class=\"guide1Title guide1all\" _v-7e026d09=\"\">{{bonus.bonusCountMoney}}元红包已到账</div>\n        <div class=\"guide1Img guide1all\" v-if=\"bonusFlag\" _v-7e026d09=\"\">\n            <img src=\"//pic.davdian.com/free/2017/06/07/ticket.png\" class=\"guide1all\" @click=\"linkUrl(bonus.linkUrl)\" _v-7e026d09=\"\">\n            <div class=\"guide1Img1 guide1all\" _v-7e026d09=\"\"><span _v-7e026d09=\"\">¥&nbsp;</span>{{bonus.bonusMoney}}</div>\n            <div class=\"guide1Img3 guide1all\" _v-7e026d09=\"\">满{{bonus.limit}}元可用</div>\n            <div class=\"guide1Img2 guide1all\" v-text=\"bonus.bonusName\" _v-7e026d09=\"\"></div>\n            <div class=\"guide1Img4 guide1all\" v-text=\"bonus.useCat\" _v-7e026d09=\"\"></div>\n            <div class=\"guide1Img5 guide1all\" _v-7e026d09=\"\">有效期倒计时：<span _v-7e026d09=\"\">{{time}}</span></div>\n        </div>\n        <div class=\"guide1Text guide1all\" v-if=\"bonusFlag\" _v-7e026d09=\"\">240邮费抵用券正在路上～</div>\n        <div class=\"guide1Btn guide1all\" @click=\"goProfile\" _v-7e026d09=\"\">马上开始购物</div>\n        <div class=\"bottomImg\" v-if=\"giftButton\" @click=\"linkUrl(giftButton.linkUrl)\" :style=\"{'background': 'url(' + giftButton.imageUrl + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-7e026d09=\"\"></div>\n        <!-- <div class='bottomImg' @click='linkUrl(giftButton.linkUrl)' style='background:red'></div> -->\n    </div>\n    <div class=\"guide2\" v-if=\"goodsList\" _v-7e026d09=\"\">会员专享，限时抢购中</div>\n    <div class=\"guide3\" v-if=\"goodsList\" _v-7e026d09=\"\">\n        <div v-if=\"goodsList\" class=\"guide3Container\" @click=\"linkUrl(goods.linkUrl)\" v-for=\"goods in goodsList\" _v-7e026d09=\"\">\n            <img :src=\"goods.imageUrl\" class=\"guide3img\" _v-7e026d09=\"\">\n\n            <div class=\"guide3price\" _v-7e026d09=\"\">\n                <span v-text=\"goods.actInfo\" _v-7e026d09=\"\"></span>\n                <img src=\"//pic.davdian.com/free/2017/06/22/activityBg1.png\" _v-7e026d09=\"\">\n            </div>\n            <div class=\"guide3Container1\" _v-7e026d09=\"\">\n                <div class=\"guide3title\" v-text=\"goods.title\" _v-7e026d09=\"\"></div>\n                <div class=\"guide3money\" _v-7e026d09=\"\"><span _v-7e026d09=\"\">¥&nbsp;</span>{{goods.price}}</div>\n                <div class=\"guide3inComeMoney\" _v-7e026d09=\"\">会员返{{goods.saveMoney}}</div>\n            </div>\n            \n        </div>\n    </div>\n</div>\n";
 
 /***/ }
 

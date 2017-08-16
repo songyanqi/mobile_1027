@@ -47,15 +47,15 @@
 
 	'use strict';
 
-	var _common = __webpack_require__(1107);
+	var _common = __webpack_require__(1112);
 
 	var _common2 = _interopRequireDefault(_common);
 
-	var _Vue = __webpack_require__(444);
+	var _Vue = __webpack_require__(449);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
-	var _VueRouter = __webpack_require__(1415);
+	var _VueRouter = __webpack_require__(1420);
 
 	var _VueRouter2 = _interopRequireDefault(_VueRouter);
 
@@ -69,7 +69,7 @@
 	  router: new _VueRouter2.default({
 	    routes: [{
 	      path: '/',
-	      component: __webpack_require__(1416)
+	      component: __webpack_require__(1421)
 	    }]
 	  }),
 	  el: "router-view"
@@ -4105,14 +4105,14 @@
 
 /***/ },
 
-/***/ 444:
+/***/ 449:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 970:
+/***/ 975:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4121,7 +4121,7 @@
 	  value: true
 	});
 
-	var _scriptjs = __webpack_require__(971);
+	var _scriptjs = __webpack_require__(976);
 
 	var _scriptjs2 = _interopRequireDefault(_scriptjs);
 
@@ -4133,11 +4133,11 @@
 
 	var _config2 = _interopRequireDefault(_config);
 
-	var _jsCookie = __webpack_require__(972);
+	var _jsCookie = __webpack_require__(977);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(973);
+	var _util = __webpack_require__(978);
 
 	var _util2 = _interopRequireDefault(_util);
 
@@ -4306,7 +4306,7 @@
 
 /***/ },
 
-/***/ 971:
+/***/ 976:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4436,7 +4436,7 @@
 
 /***/ },
 
-/***/ 972:
+/***/ 977:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4608,7 +4608,7 @@
 
 /***/ },
 
-/***/ 973:
+/***/ 978:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4656,7 +4656,7 @@
 
 /***/ },
 
-/***/ 1107:
+/***/ 1112:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4673,26 +4673,26 @@
 
 	var _ua2 = _interopRequireDefault(_ua);
 
-	var _login = __webpack_require__(1108);
+	var _login = __webpack_require__(1113);
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _jsCookie = __webpack_require__(972);
+	var _jsCookie = __webpack_require__(977);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(973);
+	var _util = __webpack_require__(978);
 
 	var _util2 = _interopRequireDefault(_util);
 
-	var _weixin = __webpack_require__(970);
+	var _weixin = __webpack_require__(975);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import scriptjs from 'scriptjs';
-	__webpack_require__(1109);
+	__webpack_require__(1114);
 
 
 	// ios wkwebview返回上一页执行回调刷新页面
@@ -4750,7 +4750,12 @@
 	/**
 	 * 功能：检测cookie是否需要强制跳转
 	 */
-	_checkRedirect(_jsCookie2.default.get('force_domain'));
+	(function () {
+	  var script = document.querySelector('script');
+	  if (script && script.src && script.src.indexOf('common/js/autoRootSize.js') !== -1) {
+	    _checkRedirect(_jsCookie2.default.get('force_domain'));
+	  }
+	})();
 
 	// fastclick
 	// iPhone; CPU iPhone OS 10_3_2 like Mac OS X
@@ -4800,7 +4805,7 @@
 
 /***/ },
 
-/***/ 1108:
+/***/ 1113:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4809,7 +4814,7 @@
 	  value: true
 	});
 
-	var _jsCookie = __webpack_require__(972);
+	var _jsCookie = __webpack_require__(977);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
@@ -4899,7 +4904,7 @@
 
 /***/ },
 
-/***/ 1109:
+/***/ 1114:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4931,7 +4936,7 @@
 
 /***/ },
 
-/***/ 1110:
+/***/ 1115:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4948,11 +4953,11 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
-	var _weixin = __webpack_require__(970);
+	var _weixin = __webpack_require__(975);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
-	var _Vue = __webpack_require__(444);
+	var _Vue = __webpack_require__(449);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
@@ -4994,7 +4999,7 @@
 	  callBrowserShare: function callBrowserShare() {
 	    new _Vue2.default({
 	      components: {
-	        'com-share-pop-tip': __webpack_require__(1111)
+	        'com-share-pop-tip': __webpack_require__(1116)
 	      },
 	      el: getEl(),
 	      data: {},
@@ -5016,18 +5021,18 @@
 
 /***/ },
 
-/***/ 1111:
+/***/ 1116:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1112)
-	__vue_script__ = __webpack_require__(1114)
+	__webpack_require__(1117)
+	__vue_script__ = __webpack_require__(1119)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-share-pop-tip.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1115)
+	__vue_template__ = __webpack_require__(1120)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5043,7 +5048,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7718a21b/com-share-pop-tip.vue"
+	  var id = "_v-57b26686/com-share-pop-tip.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5053,13 +5058,13 @@
 
 /***/ },
 
-/***/ 1112:
+/***/ 1117:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1113);
+	var content = __webpack_require__(1118);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5080,7 +5085,7 @@
 
 /***/ },
 
-/***/ 1113:
+/***/ 1118:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5095,7 +5100,7 @@
 
 /***/ },
 
-/***/ 1114:
+/***/ 1119:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5195,25 +5200,25 @@
 
 /***/ },
 
-/***/ 1115:
+/***/ 1120:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"com-share-pop-tip\" :style=\"styleObject\" @click=\"close\" @touchmove=\"touchmove\">\n  <img class=\"arrow\" src=\"http://pic.davdian.com/free/pointer.png\">\n  <div class=\"tip\">\n    <template v-if=\"isWeixin\">\n      <p>请点击右上角“分享”按钮,</p>\n      <p>然后可以选择“发送给朋友”、“分享到朋友圈”或者“复制链接”后发送链接给朋友。</p>\n    </template>\n    <template v-if=\"!isWeixin\">\n      <p>请复制地址栏链接，将链接发送给朋友</p>\n    </template>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1120:
+/***/ 1125:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1121)
-	__vue_script__ = __webpack_require__(1123)
+	__webpack_require__(1126)
+	__vue_script__ = __webpack_require__(1128)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-to-top-icon.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1124)
+	__vue_template__ = __webpack_require__(1129)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5229,7 +5234,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5c521926/com-to-top-icon.vue"
+	  var id = "_v-3c5cd698/com-to-top-icon.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5239,13 +5244,13 @@
 
 /***/ },
 
-/***/ 1121:
+/***/ 1126:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1122);
+	var content = __webpack_require__(1127);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5266,7 +5271,7 @@
 
 /***/ },
 
-/***/ 1122:
+/***/ 1127:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5281,7 +5286,7 @@
 
 /***/ },
 
-/***/ 1123:
+/***/ 1128:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5349,25 +5354,25 @@
 
 /***/ },
 
-/***/ 1124:
+/***/ 1129:
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--滚动至顶图标-->\n<img class=\"to-top-icon\" @click=\"toTop\" :style=\"{display: display}\"\n     :src=\"'http://pic.davdian.com/free/back_top_icon_0803.png'\">\n";
 
 /***/ },
 
-/***/ 1125:
+/***/ 1130:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1126)
-	__vue_script__ = __webpack_require__(1128)
+	__webpack_require__(1131)
+	__vue_script__ = __webpack_require__(1133)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-top-title.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1129)
+	__vue_template__ = __webpack_require__(1134)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5383,7 +5388,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-8892d76c/com-top-title.vue"
+	  var id = "_v-16214635/com-top-title.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5393,13 +5398,13 @@
 
 /***/ },
 
-/***/ 1126:
+/***/ 1131:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1127);
+	var content = __webpack_require__(1132);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5420,7 +5425,7 @@
 
 /***/ },
 
-/***/ 1127:
+/***/ 1132:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5435,7 +5440,7 @@
 
 /***/ },
 
-/***/ 1128:
+/***/ 1133:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5656,32 +5661,32 @@
 
 /***/ },
 
-/***/ 1129:
+/***/ 1134:
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--顶部标题-->\n<div class=\"com-top-title\" :class=\"classObject\" v-if=\"!isDvdApp\" :style=\"styleObject\">\n  <div class=\"back-btn\" @click=\"back\">\n    <i class=\"back-arrow\"></i>\n  </div>\n  <span class=\"title\">{{title}}</span>\n  <i class=\"home\" v-if=\"home !== undefined\" @click=\"goHome\"></i>\n  <slot></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 1415:
+/***/ 1420:
 /***/ function(module, exports) {
 
 	module.exports = VueRouter;
 
 /***/ },
 
-/***/ 1416:
+/***/ 1421:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1417)
-	__vue_script__ = __webpack_require__(1419)
+	__webpack_require__(1422)
+	__vue_script__ = __webpack_require__(1424)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/redpack_receive/vue/redpack_receive.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1425)
+	__vue_template__ = __webpack_require__(1430)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5697,7 +5702,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-211eb228/redpack_receive.vue"
+	  var id = "_v-74eeaf3e/redpack_receive.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5707,13 +5712,13 @@
 
 /***/ },
 
-/***/ 1417:
+/***/ 1422:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1418);
+	var content = __webpack_require__(1423);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5734,7 +5739,7 @@
 
 /***/ },
 
-/***/ 1418:
+/***/ 1423:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5749,7 +5754,7 @@
 
 /***/ },
 
-/***/ 1419:
+/***/ 1424:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5766,7 +5771,7 @@
 
 	var _$2 = _interopRequireDefault(_$);
 
-	var _share = __webpack_require__(1110);
+	var _share = __webpack_require__(1115);
 
 	var _share2 = _interopRequireDefault(_share);
 
@@ -5778,7 +5783,7 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
-	var _util = __webpack_require__(973);
+	var _util = __webpack_require__(978);
 
 	var _util2 = _interopRequireDefault(_util);
 
@@ -5974,9 +5979,9 @@
 	// <script>
 	exports.default = {
 	  components: {
-	    'com-top-title': __webpack_require__(1125),
-	    'com-to-top-icon': __webpack_require__(1120),
-	    'com-scroll-list': __webpack_require__(1420)
+	    'com-top-title': __webpack_require__(1130),
+	    'com-to-top-icon': __webpack_require__(1125),
+	    'com-scroll-list': __webpack_require__(1425)
 	  },
 	  props: {},
 	  data: function data() {
@@ -6088,18 +6093,18 @@
 
 /***/ },
 
-/***/ 1420:
+/***/ 1425:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1421)
-	__vue_script__ = __webpack_require__(1423)
+	__webpack_require__(1426)
+	__vue_script__ = __webpack_require__(1428)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-scroll-list.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1424)
+	__vue_template__ = __webpack_require__(1429)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6115,7 +6120,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1e68cef0/com-scroll-list.vue"
+	  var id = "_v-5b517bb3/com-scroll-list.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -6125,13 +6130,13 @@
 
 /***/ },
 
-/***/ 1421:
+/***/ 1426:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1422);
+	var content = __webpack_require__(1427);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6152,7 +6157,7 @@
 
 /***/ },
 
-/***/ 1422:
+/***/ 1427:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6167,7 +6172,7 @@
 
 /***/ },
 
-/***/ 1423:
+/***/ 1428:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -6255,14 +6260,14 @@
 
 /***/ },
 
-/***/ 1424:
+/***/ 1429:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n<div class=\"com-scroll-list\">\n  <ul ref=\"ul\">\n    <slot></slot>\n  </ul>\n</div>\n";
 
 /***/ },
 
-/***/ 1425:
+/***/ 1430:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"app\" v-if=\"response\">\n  <!--状态:正常领取-->\n  <template v-if=\"response.code === 0\">\n    <!--组合红包-->\n    <div class=\"wrapper group\" v-if=\"response.data.bonusType == '1'\">\n      <!--标题-->\n      <com-top-title home :title=\"response.data.status == '1' ? '已领取～' : '恭喜您获得大礼包～'\"></com-top-title>\n      <!--信封-->\n      <div class=\"envelope\">\n        <p>恭喜您获得</p>\n        <p><span class=\"num\">{{groupTotalMoney}}</span><span>元大礼包</span></p>\n      </div>\n      <!--红包列表-->\n      <div class=\"redpack-list\">\n        <img class=\"arrow\" src=\"http://pic.davdian.com/free/redpack_receive/group-arrow.png\">\n        <span class=\"redpack\" v-for=\"item of this.response.data.bonusList\">\n          <div class=\"name\">{{item.bonusName}}</div>\n          <div class=\"info\">\n            <span class=\"symbol\">¥</span>\n            <span class=\"money\">{{item.bonusMoney}}</span>\n            <span class=\"right-info\">\n              <p class=\"type\">{{item.content}}</p>\n              <p class=\"condition\">满{{item.minConsumePrice}}元使用</p>\n            </span>\n          </div>\n          <div class=\"time\">{{item.useBeginTime}}—{{item.useEndTime}}</div>\n        </span>\n      </div>\n      <!--按钮-->\n      <a class=\"btn\" :href=\"response.data.useUrl\"><p>立即使用</p></a>\n      <!--使用说明-->\n      <div class=\"rule\">\n        <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n        <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n      </div>\n    </div>\n\n    <!--随机、等额红包-->\n    <div class=\"wrapper random-and-equal\" v-if=\"response.data.bonusType == '0'\">\n      <!--标题-->\n      <com-top-title home :title=\"response.data.status == '1' ? '已领取～' : '恭喜您获得红包～'\"></com-top-title>\n      <!--信封-->\n      <div class=\"envelope\">\n        <p>{{this.response.data.bonusList[0].bonusName}}</p>\n        <p>\n          <span>¥</span>\n          <span>{{this.response.data.bonusList[0].bonusMoney}}</span>\n          <span>\n        <p>{{this.response.data.bonusList[0].content}}</p>\n        <p>满{{this.response.data.bonusList[0].minConsumePrice}}元使用</p>\n        </span>\n        </p>\n        <p>{{this.response.data.bonusList[0].useBeginTime}}-{{this.response.data.bonusList[0].useEndTime}}</p>\n      </div>\n      <!--按钮-->\n      <a class=\"btn\" :href=\"response.data.useUrl\"><p>立即使用</p></a>\n      <!--手气榜-->\n      <div class=\"luck-list\" v-if=\"response.data.competeList && response.data.competeList.length > 0\">\n        <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/luck-title.png\">\n        <com-scroll-list>\n          <li v-for=\"item of response.data.competeList\">\n            <span class=\"head\"><img :src=\"item.avatar\"></span>\n            <span class=\"mobile\">{{item.nickname}}</span>\n            <span class=\"money\">{{item.money}}元</span>\n          </li>\n        </com-scroll-list>\n      </div>\n      <!--使用说明-->\n      <div class=\"rule\">\n        <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n        <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n      </div>\n    </div>\n  </template>\n\n  <!--状态:未开始-->\n  <div class=\"wrapper no-begin\" v-if=\"response.code === 90005\">\n    <!--标题-->\n    <com-top-title home title=\"活动未开始～\"></com-top-title>\n    <!--信封-->\n    <div class=\"envelope\">\n      <p>活动未开始～</p>\n      <p><img src=\"http://pic.davdian.com/free/redpack_receive/begin-time.png\"></p>\n      <p>{{this.response.data.startTime}}</p>\n    </div>\n    <!--按钮-->\n    <a class=\"btn\" href=\"/\"><p>去店铺逛逛</p></a>\n    <!--使用说明-->\n    <div class=\"rule\">\n      <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n      <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n    </div>\n  </div>\n\n  <!--状态:已结束-->\n  <div class=\"wrapper end\" v-if=\"response.code === 90006\">\n    <!--标题-->\n    <com-top-title home title=\"活动已结束～\"></com-top-title>\n    <!--信封-->\n    <div class=\"envelope\">\n      <p>活动已结束～</p>\n      <p>下次活动，敬请期待～</p>\n    </div>\n    <!--按钮-->\n    <a class=\"btn\" href=\"/\"><p>去店铺逛逛</p></a>\n    <!--使用说明-->\n    <div class=\"rule\">\n      <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n      <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n    </div>\n  </div>\n\n  <!--状态:红包抢没了-->\n  <div class=\"wrapper no-remain\" v-if=\"response.code === 90001\">\n    <!--标题-->\n    <com-top-title home title=\"红包已抢光～\"></com-top-title>\n    <!--信封-->\n    <div class=\"envelope\">\n      <p>红包已抢光～</p>\n      <p>下次活动，敬请期待～</p>\n    </div>\n    <!--按钮-->\n    <a class=\"btn\" href=\"/\"><p>去店铺逛逛</p></a>\n    <!--使用说明-->\n    <div class=\"rule\">\n      <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n      <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n    </div>\n  </div>\n\n  <!--状态:未登录-->\n  <div class=\"wrapper no-login\" v-if=\"response.code === 90000\">\n    <!--标题-->\n    <com-top-title home title=\"您还未登录～\"></com-top-title>\n    <!--信封-->\n    <div class=\"envelope\">\n      <p>您还未登录～</p>\n      <p>大V店送你红包抢不停～</p>\n    </div>\n    <!--按钮-->\n    <a class=\"btn\" :href=\"'/login.html?referer=' + encodeURIComponent(location.href)\"><p>登录领取</p></a>\n    <!--使用说明-->\n    <div class=\"rule\">\n      <img class=\"title\" src=\"http://pic.davdian.com/free/redpack_receive/rule-title.png\">\n      <div class=\"rich-text\" v-html=\"response.data.bonusContent\"></div>\n    </div>\n  </div>\n\n  <!--状态:出错了-->\n  <div class=\"wrapper error\" v-if=\"isError\">\n    <!--标题-->\n    <com-top-title home title=\"出错啦～\"></com-top-title>\n    <!--出错图标-->\n    <div class=\"error-pic\"><img src=\"http://pic.davdian.com/free/redpack_receive/error.png\"></div>\n    <!--文案-->\n    <div class=\"tip\">哎呀，出错啦...</div>\n    <!--重新加载-->\n    <a class=\"reload-btn\" href=\"\">点击重新加载</a>\n    <!--错误原因(连续两次发生错误才显示)-->\n    <div class=\"msg\" v-if=\"localStorage.getItem('error')\">\n      <p>状态码: {{response.code}}</p>\n      <p>异常原因: {{response.data && response.data.msg}}</p>\n    </div>\n  </div>\n\n  <!--至顶按钮-->\n  <!--<com-to-top-icon></com-to-top-icon>-->\n</div>\n";

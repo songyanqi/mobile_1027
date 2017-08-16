@@ -54,7 +54,7 @@
 	__webpack_require__(41);
 	__webpack_require__(42);
 	__webpack_require__(43);
-	__webpack_require__(1221);
+	__webpack_require__(1226);
 
 /***/ },
 
@@ -2569,7 +2569,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
+	  var id = "_v-1a34eddb/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2993,7 +2993,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-48db5b65/com-popup-alert.vue"
+	  var id = "_v-993d82e0/com-popup-alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3218,7 +3218,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0b77ce89/com-popup-confirm.vue"
+	  var id = "_v-27dcda18/com-popup-confirm.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3471,7 +3471,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
+	  var id = "_v-6c902120/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5128,14 +5128,14 @@
 
 /***/ },
 
-/***/ 1221:
+/***/ 1226:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by xuzelian on 17/2/22.
 	 */
 
-	    var idcardAdd = __webpack_require__(1222);
+	    var idcardAdd = __webpack_require__(1227);
 
 	    new Vue({
 	        el: "#idcardAdd",
@@ -5147,18 +5147,18 @@
 
 /***/ },
 
-/***/ 1222:
+/***/ 1227:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1223)
-	__vue_script__ = __webpack_require__(1225)
+	__webpack_require__(1228)
+	__vue_script__ = __webpack_require__(1230)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/idcardAdd.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1226)
+	__vue_template__ = __webpack_require__(1231)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5174,7 +5174,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-01c16eb0/idcardAdd.vue"
+	  var id = "_v-ca9a7cb6/idcardAdd.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5184,13 +5184,13 @@
 
 /***/ },
 
-/***/ 1223:
+/***/ 1228:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1224);
+	var content = __webpack_require__(1229);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5211,7 +5211,7 @@
 
 /***/ },
 
-/***/ 1224:
+/***/ 1229:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5226,7 +5226,7 @@
 
 /***/ },
 
-/***/ 1225:
+/***/ 1230:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5590,7 +5590,7 @@
 
 /***/ },
 
-/***/ 1226:
+/***/ 1231:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"idcard_edit\">\n    <div class=\"edit_con\">\n        <div class=\"infoEnter\">收件人:<input style=\"width:80%;\"  placeholder=\"收件人姓名(需与身份证姓名保持一致)\" v-model=\"addressee\"></div>\n        <div class=\"infoEnter\">身份证号码:<input style=\"width:70%;\" placeholder=\"请输入身份证号码\" v-model=\"idcardNumber\" maxlength=\"18\"></div>\n        <div class=\"idcardImg_add\">\n            <div class=\"title\">身份证照片</div>\n            <div class=\"prompt\">\n                <p>1. 请原比例上传身份证照片</p>\n                <p>2. 请确保身份证姓名、身份证号码未被遮挡，能够清晰辨认</p>\n                <p>3. 如无法正常添加照片，请更新最新版APP或使用微信打开。</p>\n            </div>\n            <div class=\"upload_container box\">\n                <div class=\"pic_upload item\" >\n                    <img :src=\"cardHead+(uploadcardHead==1?'@200h_304w_1e_1c_2o':'')\" alt=\"身份证正面\">\n                    <span class=\"paper_text\">身份证正面</span>\n                    <input type=\"file\" @change=\"onFileChange($event,'cardHead')\" class=\"upload_input\" accept=\"image/*\">\n                </div>\n                <div class=\"pic_upload item ml10\">\n                    <img :src=\"cardTail+(uploadcardTail==1?'@200h_304w_1e_1c_2o':'')\" alt=\"身份证反面\">\n                    <span class=\"paper_text\">身份证反面</span>\n                    <input type=\"file\" @change=\"onFileChange($event,'cardTail')\" class=\"upload_input\" accept=\"image/*\">\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"idcard_edit_prompt\">根据海关规定，购买跨境商品需要提供身份信息，大V店保证您的信息仅用于商品清关，不做其他用途使用。</div>\n    <div class=\"submit_btn\" @click=\"submit\">确认提交</div>\n</div>\n";

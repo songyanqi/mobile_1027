@@ -97,7 +97,7 @@
 	  el: ".app",
 	  components: {
 	    'com-top-title': __webpack_require__(77),
-	    'noteDetail': __webpack_require__(1110)
+	    'noteDetail': __webpack_require__(1116)
 	  },
 	  data: function data() {
 	    return {
@@ -249,7 +249,12 @@
 	/**
 	 * 功能：检测cookie是否需要强制跳转
 	 */
-	_checkRedirect(_jsCookie2.default.get('force_domain'));
+	(function () {
+	  var script = document.querySelector('script');
+	  if (script && script.src && script.src.indexOf('common/js/autoRootSize.js') !== -1) {
+	    _checkRedirect(_jsCookie2.default.get('force_domain'));
+	  }
+	})();
 
 	// fastclick
 	// iPhone; CPU iPhone OS 10_3_2 like Mac OS X
@@ -3710,7 +3715,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7718a21b/com-share-pop-tip.vue"
+	  var id = "_v-57b26686/com-share-pop-tip.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4258,7 +4263,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
+	  var id = "_v-1a34eddb/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4459,7 +4464,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-48db5b65/com-popup-alert.vue"
+	  var id = "_v-993d82e0/com-popup-alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4684,7 +4689,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0b77ce89/com-popup-confirm.vue"
+	  var id = "_v-27dcda18/com-popup-confirm.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4937,7 +4942,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
+	  var id = "_v-6c902120/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5242,7 +5247,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-8892d76c/com-top-title.vue"
+	  var id = "_v-16214635/com-top-title.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13151,7 +13156,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-81e18c02/index.vue"
+	  var id = "_v-f832942c/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13332,7 +13337,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7a517590/index.vue"
+	  var id = "_v-2a6eedc5/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13737,7 +13742,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5d97050a/index.vue"
+	  var id = "_v-226e80f5/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -16200,7 +16205,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-12052192/com-wx-notopen.vue"
+	  var id = "_v-2c2e0aa8/com-wx-notopen.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -16225,8 +16230,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-12052192&scoped=true!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-wx-notopen.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-12052192&scoped=true!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-wx-notopen.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2c2e0aa8&scoped=true!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-wx-notopen.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2c2e0aa8&scoped=true!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-wx-notopen.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -16245,7 +16250,7 @@
 
 
 	// module
-	exports.push([module.id, ".com-top-notopen[_v-12052192] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #fff;\n  z-index: 2000;\n  text-align: center; }\n  .com-top-notopen img[_v-12052192] {\n    width: 240px;\n    margin-top: 100px; }\n", ""]);
+	exports.push([module.id, ".com-top-notopen[_v-2c2e0aa8] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #fff;\n  z-index: 2000;\n  text-align: center; }\n  .com-top-notopen img[_v-2c2e0aa8] {\n    width: 240px;\n    margin-top: 100px; }\n", ""]);
 
 	// exports
 
@@ -16322,23 +16327,23 @@
 /***/ 183:
 /***/ function(module, exports) {
 
-	module.exports = "\n<!--顶部标题-->\n<div class=\"com-top-notopen\" v-if=\"!inwx\" _v-12052192=\"\">\n  <img src=\"//pic.davdian.com/free/2017/02/08/488_504_e8ca7ca5713b5b9791ca85cab02e4134.png\" _v-12052192=\"\">\n</div>\n";
+	module.exports = "\n<!--顶部标题-->\n<div class=\"com-top-notopen\" v-if=\"!inwx\" _v-2c2e0aa8=\"\">\n  <img src=\"//pic.davdian.com/free/2017/02/08/488_504_e8ca7ca5713b5b9791ca85cab02e4134.png\" _v-2c2e0aa8=\"\">\n</div>\n";
 
 /***/ },
 
-/***/ 1110:
+/***/ 1116:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1111)
-	__webpack_require__(1113)
-	__vue_script__ = __webpack_require__(1115)
+	__webpack_require__(1117)
+	__webpack_require__(1119)
+	__vue_script__ = __webpack_require__(1121)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/noteDetail/vue/noteDetail.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1116)
+	__vue_template__ = __webpack_require__(1122)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -16354,7 +16359,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-651f1320/noteDetail.vue"
+	  var id = "_v-6b2f72d5/noteDetail.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -16364,13 +16369,13 @@
 
 /***/ },
 
-/***/ 1111:
+/***/ 1117:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1112);
+	var content = __webpack_require__(1118);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -16391,7 +16396,7 @@
 
 /***/ },
 
-/***/ 1112:
+/***/ 1118:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -16406,13 +16411,13 @@
 
 /***/ },
 
-/***/ 1113:
+/***/ 1119:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1114);
+	var content = __webpack_require__(1120);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -16433,7 +16438,7 @@
 
 /***/ },
 
-/***/ 1114:
+/***/ 1120:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -16448,7 +16453,7 @@
 
 /***/ },
 
-/***/ 1115:
+/***/ 1121:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -16880,7 +16885,7 @@
 
 /***/ },
 
-/***/ 1116:
+/***/ 1122:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <!--<div class=\"empty_div\" v-show=\"!isapp\"></div>-->\n  <notopen></notopen>\n  <div class=\"note_container\" v-if=\"close\">\n    <div class=\"note_title\">\n      <div class=\"header_img\">\n        <img :src=\"note_header\" alt=\"\">\n      </div>\n      <div class=\"name\">{{ note_author }}</div>\n      <div class=\"time\">{{ note_time }}</div>\n      <div class=\"star\"><img :src=\"init_star(note_score)\" alt=\"\"></div>\n    </div>\n    <p class=\"note_text\" v-html=\"note_content.replace(/\\n/g,'<br/>')\"></p>\n    <div>\n      <div class=\"note_pic1\" v-for=\"(v,index) in img_list\">\n        <img :src=\"v\" alt=\"\" @click.stop='showImg(index, img_list, v)'>\n      </div>\n    </div>\n    <div>\n      <div class=\"note_share\" v-show=\"status==1 && isapp\">\n        <div class=\"count\"><span v-if=\"shareNum!=0\">{{ shareNum }}</span></div>\n        <div class=\"icon\" @click='share(item)'><img src=\"http://pic.davdian.com/free/2017/02/07/material-share.png\" alt=\"\"></div>\n      </div>\n      <div class=\"note_share\" v-show=\"status==0\">\n        <div class=\"count2\">\n          <div class=\"ing\">(审核中，仅自己可见)</div>\n        </div>\n      </div>\n\n      <div class=\"note_share\" v-show=\"status==2\">\n        <div class=\"count2\">\n          <div>(审核未通过，还需努力哟)</div>\n          <div class=\"share_line\"></div>\n          <div class=\"delete_note\">删除笔记</div>\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"gray\" v-if=\"showFlag\"></div>\n  <div class=\"good_list_con\" v-if=\"showFlag\">\n    <div class=\"good_list_2_row\">\n      <div class=\"dvk_container\">\n        <div class=\"tab_div\">这么好的课，快来听听吧</div>\n        <div class=\"dvk4_detail\">\n          <div class='dvk4_detail_content'>\n            <div class='dvk4_detail_content_img'>\n              <img class=\"newImage\" :src=\"item.imageUrl\"/>\n            </div>\n            <div class='dvk4_detail_content_text' @click='goHref(item.command.content)'>\n              <div class='dvk4_detail_content_title' v-text='item.title'></div>\n              <div class='dvk4_detail_content_name' v-text='item.teacher'></div>\n              <div class='dvk4_detail_content_time'>\n                <span class='dvk4_detail_content_popular'><span v-text='item.pv'></span></span>\n                <span class='dvk4_detail_content_line'></span>\n                <span class='dvk4_detail_content_times'>\n                    <span>{{ item.startTime }}</span>\n                </span>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n\n</div>\n";

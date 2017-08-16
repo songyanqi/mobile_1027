@@ -50,7 +50,7 @@
 	 */
 	__webpack_require__(43);
 	__webpack_require__(42);
-	__webpack_require__(467);
+	__webpack_require__(472);
 
 
 
@@ -2400,7 +2400,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
+	  var id = "_v-1a34eddb/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2824,7 +2824,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-48db5b65/com-popup-alert.vue"
+	  var id = "_v-993d82e0/com-popup-alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3049,7 +3049,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0b77ce89/com-popup-confirm.vue"
+	  var id = "_v-27dcda18/com-popup-confirm.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3302,7 +3302,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
+	  var id = "_v-6c902120/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5858,13 +5858,13 @@
 
 /***/ },
 
-/***/ 467:
+/***/ 472:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by Murphy.lee on 17/5/13.
 	 */
-	var childrens = __webpack_require__(468);
+	var childrens = __webpack_require__(473);
 	new Vue({
 	  el: "#container",
 	  data:{
@@ -5881,18 +5881,18 @@
 
 /***/ },
 
-/***/ 468:
+/***/ 473:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(469)
-	__vue_script__ = __webpack_require__(471)
+	__webpack_require__(474)
+	__vue_script__ = __webpack_require__(476)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/childrens.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(472)
+	__vue_template__ = __webpack_require__(477)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5908,7 +5908,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-ca5f0fe4/childrens.vue"
+	  var id = "_v-33c1cb03/childrens.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5918,13 +5918,13 @@
 
 /***/ },
 
-/***/ 469:
+/***/ 474:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(470);
+	var content = __webpack_require__(475);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5933,8 +5933,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ca5f0fe4&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./childrens.vue", function() {
-				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ca5f0fe4&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./childrens.vue");
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-33c1cb03&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./childrens.vue", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-33c1cb03&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./childrens.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -5945,7 +5945,7 @@
 
 /***/ },
 
-/***/ 470:
+/***/ 475:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5953,14 +5953,14 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.flip-list1-move[_v-ca5f0fe4] {\n  -webkit-transition: -webkit-transform 1s;\n  transition: -webkit-transform 1s;\n  transition: transform 1s;\n  transition: transform 1s, -webkit-transform 1s;\n}\n\n.flip-list2-move[_v-ca5f0fe4] {\n  -webkit-transition: -webkit-transform .7s;\n  transition: -webkit-transform .7s;\n  transition: transform .7s;\n  transition: transform .7s, -webkit-transform .7s;\n}\n\n.flip-list3-move[_v-ca5f0fe4] {\n  -webkit-transition: -webkit-transform .4s;\n  transition: -webkit-transform .4s;\n  transition: transform .4s;\n  transition: transform .4s, -webkit-transform .4s;\n}\n\n.flip-list4-move[_v-ca5f0fe4] {\n  -webkit-transition: -webkit-transform .3s;\n  transition: -webkit-transform .3s;\n  transition: transform .3s;\n  transition: transform .3s, -webkit-transform .3s;\n}\n\n.flip-list5-move[_v-ca5f0fe4] {\n  -webkit-transition: -webkit-transform .2s;\n  transition: -webkit-transform .2s;\n  transition: transform .2s;\n  transition: transform .2s, -webkit-transform .2s;\n}\n\n.card[_v-ca5f0fe4] {\n  float: left;\n  list-style: none;\n  width: 24.58%;\n  margin-left: 6.51%;\n}\n\n.card img[_v-ca5f0fe4] {\n  width: 100%;\n}\n\n.playchildren[_v-ca5f0fe4] {\n  width: 79.2%;\n  min-height: 300px;\n  overflow: hidden;\n  position: absolute;\n  margin: 0 auto;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  border-radius: 2%;\n}\n\n.playchildren ul[_v-ca5f0fe4] {\n  background-color: #ffc5bb;\n  overflow: hidden;\n  background-image: url(\"//pic.davdian.com/free/2017/05/15/c_bg.png\");\n  background-size: 100% 100%;\n  padding: 5% 0;\n}\n\n.playchildren ul li[_v-ca5f0fe4]:nth-of-type(1) {\n  margin-left: 19.9%\n}\n\n.playchildren ul li[_v-ca5f0fe4]:nth-of-type(2) {\n  margin-left: 11%\n}\n\n.play[_v-ca5f0fe4] {\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  margin: auto;\n  z-index: 14;\n  height: 13.7%;\n}\n\n.title_bottom[_v-ca5f0fe4] {\n  width: 100%;\n  background-color: #b4bb4b;\n  overflow: hidden;\n  min-height: 10px;\n  position: relative;\n}\n\n.card_img[_v-ca5f0fe4] {\n  width: 100%;\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  background-position: 0 0;\n  background-image: url(\"//pic.davdian.com/free/2017/05/15/doors.png\");\n}\n\n.card_img.card_img2[_v-ca5f0fe4] {\n  background-image: url(\"//pic.davdian.com/free/2017/05/15/doorsno.png\");\n}\n\n.card_img img[_v-ca5f0fe4] {\n  width: 100%;\n}\n\n.closes[_v-ca5f0fe4] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  width: 20%;\n  height: 100%;\n  opacity: 0;\n}\n\n.tips[_v-ca5f0fe4] {\n  position: absolute;\n  width: 100%;\n  text-align: center;\n  color: #FFF;\n  font-size: 0.16rem;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n      -ms-transform: translateY(-50%);\n          transform: translateY(-50%);\n}\n\n.start_play[_v-ca5f0fe4] {\n  width: 30.26%;\n  position: absolute;\n  bottom: 3.36%;\n  -webkit-animation: myredshankss .3s infinite;\n  animation: myredshankss .3s infinite;\n  background-position: 0 0;\n  background-size: 100% 100%;\n}\n\n.start_play img[_v-ca5f0fe4] {\n  width: 100%;\n}\n\n@keyframes myredshankss {\n  from {\n    background-image: url(\"//pic.davdian.com/free/2017/05/17/shank1.png\");\n  }\n  to {\n    background-image: url(\"//pic.davdian.com/free/2017/05/17/shank2.png\");\n  }\n}\n\n@-webkit-keyframes myredshankss /* Safari 和 Chrome */\n{\n  from {\n    background-image: url(\"//pic.davdian.com/free/2017/05/17/shank1.png\");\n  }\n  to {\n    background-image: url(\"//pic.davdian.com/free/2017/05/17/shank2.png\");\n  }\n}\n\n.result_wrap[_v-ca5f0fe4] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.6);\n  bottom: 0;\n  z-index: 12;\n  max-width: 640px;\n  margin: auto;\n}\n\n.playchildren_wrap[_v-ca5f0fe4] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.6);\n  bottom: 0;\n  z-index: 12;\n  max-width: 640px;\n  margin: auto;\n}\n\n.result_in[_v-ca5f0fe4] {\n  width: 79.2%;\n  min-height: 50px;\n  overflow: hidden;\n  position: absolute;\n  margin: 0 auto;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  border-radius: 2%;\n}\n\n.tips_btn[_v-ca5f0fe4] {\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: 10%;\n  margin: auto;\n  height: 15%;\n}\n\n.tips_btn2[_v-ca5f0fe4] {\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: 8%;\n  margin: auto;\n  width: 46%;\n}\n\n.get_continue[_v-ca5f0fe4] {\n  position: absolute;\n  height: 13%;\n  z-index: 9999;\n  bottom: 4%;\n  left: 0;\n  background-size: auto 100%;\n  background-repeat: no-repeat;\n  background-position: center 0;\n  right: 0;\n  margin: auto;\n  background-image: url(\"//pic.davdian.com/free/2017/05/18/cont.png\");\n}\n\n.get_continue.over[_v-ca5f0fe4] {\n  background-image: url(\"//pic.davdian.com/free/2017/05/18/Ikonw.png\");\n}\n\n.red_desc[_v-ca5f0fe4] {\n  position: absolute;\n  width: 67%;\n  height: 22%;\n  z-index: 9999;\n  bottom: 25%;\n  left: 0;\n  right: 0;\n  margin: auto;\n  color: #FFF;\n  font-weight: 200;\n}\n\n.red_desc > div[_v-ca5f0fe4]:nth-of-type(1) {\n  width: 25%;\n  height: 100%;\n  float: left;\n  position: relative;\n}\n\n.red_desc > div:nth-of-type(1) > div[_v-ca5f0fe4] {\n  text-align: center;\n  font-size: 0.25rem;\n  height: 0.25rem;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  width: 100%;\n  margin: auto;\n}\n\n.red_desc em[_v-ca5f0fe4] {\n  font-style: normal;\n  font-size: 0.12rem;\n  font-weight: 100;\n}\n\n.red_desc > div[_v-ca5f0fe4]:nth-of-type(2) {\n  width: 73%;\n  height: 80%;\n  float: left;\n  font-size: 0.12rem;\n  line-height: 0.17rem;\n  margin-top: 4%;\n  margin-left: 2%;\n}\n\n.mian_bg[_v-ca5f0fe4] {\n  position: relative;\n}\n\n.check_rule[_v-ca5f0fe4] {\n  display: block;\n  width: 32%;\n  height: 4%;\n  position: absolute;\n  left: 0;\n  right: 0;\n  margin: auto;\n  top: 44%;\n}\n\n.shank_redss[_v-ca5f0fe4] {\n  width: 100%;\n  min-height: 10px;\n  -webkit-animation: myredshank .3s infinite;\n  animation: myredshank .3s infinite;\n  background-position: 0 0;\n  background-size: 100% 100%;\n}\n\n@keyframes myredshank {\n  from {\n    background-image: url(\"//pic.davdian.com/free/2017/05/15/doors1.png\");\n  }\n  to {\n    background-image: url(\"//pic.davdian.com/free/2017/05/15/doors2.png\");\n  }\n}\n\n@-webkit-keyframes myredshank /* Safari 和 Chrome */\n{\n  from {\n    background-image: url(\"//pic.davdian.com/free/2017/05/15/doors1.png\");\n  }\n  to {\n    background-image: url(\"//pic.davdian.com/free/2017/05/15/doors2.png\");\n  }\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.flip-list1-move[_v-33c1cb03] {\n  -webkit-transition: -webkit-transform 1s;\n  transition: -webkit-transform 1s;\n  transition: transform 1s;\n  transition: transform 1s, -webkit-transform 1s;\n}\n\n.flip-list2-move[_v-33c1cb03] {\n  -webkit-transition: -webkit-transform .7s;\n  transition: -webkit-transform .7s;\n  transition: transform .7s;\n  transition: transform .7s, -webkit-transform .7s;\n}\n\n.flip-list3-move[_v-33c1cb03] {\n  -webkit-transition: -webkit-transform .4s;\n  transition: -webkit-transform .4s;\n  transition: transform .4s;\n  transition: transform .4s, -webkit-transform .4s;\n}\n\n.flip-list4-move[_v-33c1cb03] {\n  -webkit-transition: -webkit-transform .3s;\n  transition: -webkit-transform .3s;\n  transition: transform .3s;\n  transition: transform .3s, -webkit-transform .3s;\n}\n\n.flip-list5-move[_v-33c1cb03] {\n  -webkit-transition: -webkit-transform .2s;\n  transition: -webkit-transform .2s;\n  transition: transform .2s;\n  transition: transform .2s, -webkit-transform .2s;\n}\n\n.card[_v-33c1cb03] {\n  float: left;\n  list-style: none;\n  width: 24.58%;\n  margin-left: 6.51%;\n}\n\n.card img[_v-33c1cb03] {\n  width: 100%;\n}\n\n.playchildren[_v-33c1cb03] {\n  width: 79.2%;\n  min-height: 300px;\n  overflow: hidden;\n  position: absolute;\n  margin: 0 auto;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  border-radius: 2%;\n}\n\n.playchildren ul[_v-33c1cb03] {\n  background-color: #ffc5bb;\n  overflow: hidden;\n  background-image: url(\"//pic.davdian.com/free/2017/05/15/c_bg.png\");\n  background-size: 100% 100%;\n  padding: 5% 0;\n}\n\n.playchildren ul li[_v-33c1cb03]:nth-of-type(1) {\n  margin-left: 19.9%\n}\n\n.playchildren ul li[_v-33c1cb03]:nth-of-type(2) {\n  margin-left: 11%\n}\n\n.play[_v-33c1cb03] {\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  margin: auto;\n  z-index: 14;\n  height: 13.7%;\n}\n\n.title_bottom[_v-33c1cb03] {\n  width: 100%;\n  background-color: #b4bb4b;\n  overflow: hidden;\n  min-height: 10px;\n  position: relative;\n}\n\n.card_img[_v-33c1cb03] {\n  width: 100%;\n  background-size: 100% 100%;\n  background-repeat: no-repeat;\n  background-position: 0 0;\n  background-image: url(\"//pic.davdian.com/free/2017/05/15/doors.png\");\n}\n\n.card_img.card_img2[_v-33c1cb03] {\n  background-image: url(\"//pic.davdian.com/free/2017/05/15/doorsno.png\");\n}\n\n.card_img img[_v-33c1cb03] {\n  width: 100%;\n}\n\n.closes[_v-33c1cb03] {\n  position: absolute;\n  top: 0;\n  right: 0;\n  width: 20%;\n  height: 100%;\n  opacity: 0;\n}\n\n.tips[_v-33c1cb03] {\n  position: absolute;\n  width: 100%;\n  text-align: center;\n  color: #FFF;\n  font-size: 0.16rem;\n  top: 50%;\n  -webkit-transform: translateY(-50%);\n      -ms-transform: translateY(-50%);\n          transform: translateY(-50%);\n}\n\n.start_play[_v-33c1cb03] {\n  width: 30.26%;\n  position: absolute;\n  bottom: 3.36%;\n  -webkit-animation: myredshankss .3s infinite;\n  animation: myredshankss .3s infinite;\n  background-position: 0 0;\n  background-size: 100% 100%;\n}\n\n.start_play img[_v-33c1cb03] {\n  width: 100%;\n}\n\n@keyframes myredshankss {\n  from {\n    background-image: url(\"//pic.davdian.com/free/2017/05/17/shank1.png\");\n  }\n  to {\n    background-image: url(\"//pic.davdian.com/free/2017/05/17/shank2.png\");\n  }\n}\n\n@-webkit-keyframes myredshankss /* Safari 和 Chrome */\n{\n  from {\n    background-image: url(\"//pic.davdian.com/free/2017/05/17/shank1.png\");\n  }\n  to {\n    background-image: url(\"//pic.davdian.com/free/2017/05/17/shank2.png\");\n  }\n}\n\n.result_wrap[_v-33c1cb03] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.6);\n  bottom: 0;\n  z-index: 12;\n  max-width: 640px;\n  margin: auto;\n}\n\n.playchildren_wrap[_v-33c1cb03] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  background-color: rgba(0, 0, 0, 0.6);\n  bottom: 0;\n  z-index: 12;\n  max-width: 640px;\n  margin: auto;\n}\n\n.result_in[_v-33c1cb03] {\n  width: 79.2%;\n  min-height: 50px;\n  overflow: hidden;\n  position: absolute;\n  margin: 0 auto;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n  border-radius: 2%;\n}\n\n.tips_btn[_v-33c1cb03] {\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: 10%;\n  margin: auto;\n  height: 15%;\n}\n\n.tips_btn2[_v-33c1cb03] {\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: 8%;\n  margin: auto;\n  width: 46%;\n}\n\n.get_continue[_v-33c1cb03] {\n  position: absolute;\n  height: 13%;\n  z-index: 9999;\n  bottom: 4%;\n  left: 0;\n  background-size: auto 100%;\n  background-repeat: no-repeat;\n  background-position: center 0;\n  right: 0;\n  margin: auto;\n  background-image: url(\"//pic.davdian.com/free/2017/05/18/cont.png\");\n}\n\n.get_continue.over[_v-33c1cb03] {\n  background-image: url(\"//pic.davdian.com/free/2017/05/18/Ikonw.png\");\n}\n\n.red_desc[_v-33c1cb03] {\n  position: absolute;\n  width: 67%;\n  height: 22%;\n  z-index: 9999;\n  bottom: 25%;\n  left: 0;\n  right: 0;\n  margin: auto;\n  color: #FFF;\n  font-weight: 200;\n}\n\n.red_desc > div[_v-33c1cb03]:nth-of-type(1) {\n  width: 25%;\n  height: 100%;\n  float: left;\n  position: relative;\n}\n\n.red_desc > div:nth-of-type(1) > div[_v-33c1cb03] {\n  text-align: center;\n  font-size: 0.25rem;\n  height: 0.25rem;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  width: 100%;\n  margin: auto;\n}\n\n.red_desc em[_v-33c1cb03] {\n  font-style: normal;\n  font-size: 0.12rem;\n  font-weight: 100;\n}\n\n.red_desc > div[_v-33c1cb03]:nth-of-type(2) {\n  width: 73%;\n  height: 80%;\n  float: left;\n  font-size: 0.12rem;\n  line-height: 0.17rem;\n  margin-top: 4%;\n  margin-left: 2%;\n}\n\n.mian_bg[_v-33c1cb03] {\n  position: relative;\n}\n\n.check_rule[_v-33c1cb03] {\n  display: block;\n  width: 32%;\n  height: 4%;\n  position: absolute;\n  left: 0;\n  right: 0;\n  margin: auto;\n  top: 44%;\n}\n\n.shank_redss[_v-33c1cb03] {\n  width: 100%;\n  min-height: 10px;\n  -webkit-animation: myredshank .3s infinite;\n  animation: myredshank .3s infinite;\n  background-position: 0 0;\n  background-size: 100% 100%;\n}\n\n@keyframes myredshank {\n  from {\n    background-image: url(\"//pic.davdian.com/free/2017/05/15/doors1.png\");\n  }\n  to {\n    background-image: url(\"//pic.davdian.com/free/2017/05/15/doors2.png\");\n  }\n}\n\n@-webkit-keyframes myredshank /* Safari 和 Chrome */\n{\n  from {\n    background-image: url(\"//pic.davdian.com/free/2017/05/15/doors1.png\");\n  }\n  to {\n    background-image: url(\"//pic.davdian.com/free/2017/05/15/doors2.png\");\n  }\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
 
-/***/ 471:
+/***/ 476:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -6700,10 +6700,10 @@
 
 /***/ },
 
-/***/ 472:
+/***/ 477:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-ca5f0fe4=\"\">\n  <div class=\"mian_bg\" _v-ca5f0fe4=\"\">\n    <a class=\"check_rule\" href=\"/t-11674.html\" _v-ca5f0fe4=\"\"></a>\n    <img src=\"//pic.davdian.com/free/2017/05/17/main_pic.png\" alt=\"\" _v-ca5f0fe4=\"\">\n    <!--<img src=\"//pic.davdian.com/free/2017/05/17/main_pic.jpg\" alt=\"\">-->\n    <div class=\"start_play\" v-on:click=\"init_play(1)\" style=\"right:12.1%;\" _v-ca5f0fe4=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/18/dot_shank_tran.png\" alt=\"\" _v-ca5f0fe4=\"\">\n    </div>\n    <div class=\"start_play\" v-on:click=\"play_rule\" style=\"left:12.1%;\" _v-ca5f0fe4=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/18/dot_shank_tran.png\" alt=\"\" _v-ca5f0fe4=\"\">\n    </div>\n  </div>\n  <div @touchmove.prevent=\"prevent_move\" v-if=\"shows\" class=\"playchildren_wrap\" _v-ca5f0fe4=\"\">\n    <div class=\"playchildren\" _v-ca5f0fe4=\"\">\n      <img class=\"play\" v-if=\"accessrun&amp;&amp;canPlay\" v-on:click=\"begin\" src=\"//pic.davdian.com/free/2017/05/15/start.png\" alt=\"\" _v-ca5f0fe4=\"\">\n      <img class=\"play\" v-show=\"accessrun&amp;&amp;!canPlay\" @click=\"close\" src=\"//pic.davdian.com/free/2017/05/18/fivetimeover.png\" alt=\"\" _v-ca5f0fe4=\"\">\n      <div class=\"title_bottom\" _v-ca5f0fe4=\"\">\n        <img src=\"//pic.davdian.com/free/2017/05/15/caicaikan_title.png\" alt=\"\" _v-ca5f0fe4=\"\">\n        <div class=\"closes\" @click=\"close\" _v-ca5f0fe4=\"\"></div>\n      </div>\n      <transition-group v-if=\"shows\" :name=\"'flip-list'+flips\" tag=\"ul\" _v-ca5f0fe4=\"\">\n        <li class=\"card\" v-for=\"(item,index) in items\" v-bind:key=\"item\" _v-ca5f0fe4=\"\">\n          <!--//中奖的-->\n          <div v-if=\"item == rewardNum\" class=\"card_img\" :class=\"{shank_redss:!not_started}\" @click=\"reward\" alt=\"1\" _v-ca5f0fe4=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/18/tran_door.png\" alt=\"\" _v-ca5f0fe4=\"\">\n          </div>\n          <!--//未中奖的-->\n          <div v-else=\"\" class=\"card_img\" :class=\"{card_img2:!noreword[item-1]}\" @click=\"select_no(item-1)\" _v-ca5f0fe4=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/18/tran_door.png\" alt=\"\" _v-ca5f0fe4=\"\">\n          </div>\n        </li>\n      </transition-group>\n      <div class=\"title_bottom\" _v-ca5f0fe4=\"\">\n        <img class=\"title_bottom\" src=\"//pic.davdian.com/free/2017/05/15/trans.png\" alt=\"\" _v-ca5f0fe4=\"\">\n        <div class=\"tips\" _v-ca5f0fe4=\"\">{{tips}}</div>\n      </div>\n    </div>\n  </div>\n  <!--游戏规则-->\n  <div @touchmove.prevent=\"prevent_move\" v-if=\"show_rule\" class=\"playchildren_wrap\" _v-ca5f0fe4=\"\">\n    <div class=\"playchildren\" _v-ca5f0fe4=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/18/rule_new.png\" alt=\"\" _v-ca5f0fe4=\"\">\n      <div style=\"height: 15%;\" class=\"closes\" @click=\"close2\" _v-ca5f0fe4=\"\"></div>\n    </div>\n  </div>\n  <div @touchmove.prevent=\"prevent_move\" v-if=\"result\" class=\"result_wrap\" _v-ca5f0fe4=\"\">\n    <div v-if=\"flips < 5\" class=\"result_in\" _v-ca5f0fe4=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/15/regret1.png\" alt=\"\" _v-ca5f0fe4=\"\">\n      <img @click=\"init_play(2)\" class=\"tips_btn\" src=\"//pic.davdian.com/free/2017/05/15/regret_tips1.png\" alt=\"\" _v-ca5f0fe4=\"\">\n    </div>\n    <div v-else=\"\" class=\"result_in\" _v-ca5f0fe4=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/15/regret1.png\" alt=\"\" _v-ca5f0fe4=\"\">\n      <img @click=\"close\" class=\"tips_btn2\" src=\"//pic.davdian.com/free/2017/05/15/regret_tips2.png\" alt=\"\" _v-ca5f0fe4=\"\">\n    </div>\n  </div>\n  <div @touchmove.prevent=\"prevent_move\" v-show=\"result2\" class=\"result_wrap\" _v-ca5f0fe4=\"\">\n    <div class=\"result_in\" _v-ca5f0fe4=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/18/get_red3.png\" alt=\"\" _v-ca5f0fe4=\"\">\n      <div @click=\"get_red_con\" class=\"get_continue\" :class=\"{over:flips == 5}\" _v-ca5f0fe4=\"\"></div>\n      <div class=\"red_desc\" _v-ca5f0fe4=\"\">\n        <div _v-ca5f0fe4=\"\">\n          <div _v-ca5f0fe4=\"\"><em _v-ca5f0fe4=\"\">¥</em><span _v-ca5f0fe4=\"\">{{bonusMoney}}</span></div>\n        </div>\n        <div _v-ca5f0fe4=\"\">\n          {{bonusName}}满{{minConsumePrice}}元可用 <br _v-ca5f0fe4=\"\">\n          有效期限： <br _v-ca5f0fe4=\"\">\n          {{timeline}}\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div _v-33c1cb03=\"\">\n  <div class=\"mian_bg\" _v-33c1cb03=\"\">\n    <a class=\"check_rule\" href=\"/t-11674.html\" _v-33c1cb03=\"\"></a>\n    <img src=\"//pic.davdian.com/free/2017/05/17/main_pic.png\" alt=\"\" _v-33c1cb03=\"\">\n    <!--<img src=\"//pic.davdian.com/free/2017/05/17/main_pic.jpg\" alt=\"\">-->\n    <div class=\"start_play\" v-on:click=\"init_play(1)\" style=\"right:12.1%;\" _v-33c1cb03=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/18/dot_shank_tran.png\" alt=\"\" _v-33c1cb03=\"\">\n    </div>\n    <div class=\"start_play\" v-on:click=\"play_rule\" style=\"left:12.1%;\" _v-33c1cb03=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/18/dot_shank_tran.png\" alt=\"\" _v-33c1cb03=\"\">\n    </div>\n  </div>\n  <div @touchmove.prevent=\"prevent_move\" v-if=\"shows\" class=\"playchildren_wrap\" _v-33c1cb03=\"\">\n    <div class=\"playchildren\" _v-33c1cb03=\"\">\n      <img class=\"play\" v-if=\"accessrun&amp;&amp;canPlay\" v-on:click=\"begin\" src=\"//pic.davdian.com/free/2017/05/15/start.png\" alt=\"\" _v-33c1cb03=\"\">\n      <img class=\"play\" v-show=\"accessrun&amp;&amp;!canPlay\" @click=\"close\" src=\"//pic.davdian.com/free/2017/05/18/fivetimeover.png\" alt=\"\" _v-33c1cb03=\"\">\n      <div class=\"title_bottom\" _v-33c1cb03=\"\">\n        <img src=\"//pic.davdian.com/free/2017/05/15/caicaikan_title.png\" alt=\"\" _v-33c1cb03=\"\">\n        <div class=\"closes\" @click=\"close\" _v-33c1cb03=\"\"></div>\n      </div>\n      <transition-group v-if=\"shows\" :name=\"'flip-list'+flips\" tag=\"ul\" _v-33c1cb03=\"\">\n        <li class=\"card\" v-for=\"(item,index) in items\" v-bind:key=\"item\" _v-33c1cb03=\"\">\n          <!--//中奖的-->\n          <div v-if=\"item == rewardNum\" class=\"card_img\" :class=\"{shank_redss:!not_started}\" @click=\"reward\" alt=\"1\" _v-33c1cb03=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/18/tran_door.png\" alt=\"\" _v-33c1cb03=\"\">\n          </div>\n          <!--//未中奖的-->\n          <div v-else=\"\" class=\"card_img\" :class=\"{card_img2:!noreword[item-1]}\" @click=\"select_no(item-1)\" _v-33c1cb03=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/18/tran_door.png\" alt=\"\" _v-33c1cb03=\"\">\n          </div>\n        </li>\n      </transition-group>\n      <div class=\"title_bottom\" _v-33c1cb03=\"\">\n        <img class=\"title_bottom\" src=\"//pic.davdian.com/free/2017/05/15/trans.png\" alt=\"\" _v-33c1cb03=\"\">\n        <div class=\"tips\" _v-33c1cb03=\"\">{{tips}}</div>\n      </div>\n    </div>\n  </div>\n  <!--游戏规则-->\n  <div @touchmove.prevent=\"prevent_move\" v-if=\"show_rule\" class=\"playchildren_wrap\" _v-33c1cb03=\"\">\n    <div class=\"playchildren\" _v-33c1cb03=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/18/rule_new.png\" alt=\"\" _v-33c1cb03=\"\">\n      <div style=\"height: 15%;\" class=\"closes\" @click=\"close2\" _v-33c1cb03=\"\"></div>\n    </div>\n  </div>\n  <div @touchmove.prevent=\"prevent_move\" v-if=\"result\" class=\"result_wrap\" _v-33c1cb03=\"\">\n    <div v-if=\"flips < 5\" class=\"result_in\" _v-33c1cb03=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/15/regret1.png\" alt=\"\" _v-33c1cb03=\"\">\n      <img @click=\"init_play(2)\" class=\"tips_btn\" src=\"//pic.davdian.com/free/2017/05/15/regret_tips1.png\" alt=\"\" _v-33c1cb03=\"\">\n    </div>\n    <div v-else=\"\" class=\"result_in\" _v-33c1cb03=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/15/regret1.png\" alt=\"\" _v-33c1cb03=\"\">\n      <img @click=\"close\" class=\"tips_btn2\" src=\"//pic.davdian.com/free/2017/05/15/regret_tips2.png\" alt=\"\" _v-33c1cb03=\"\">\n    </div>\n  </div>\n  <div @touchmove.prevent=\"prevent_move\" v-show=\"result2\" class=\"result_wrap\" _v-33c1cb03=\"\">\n    <div class=\"result_in\" _v-33c1cb03=\"\">\n      <img src=\"//pic.davdian.com/free/2017/05/18/get_red3.png\" alt=\"\" _v-33c1cb03=\"\">\n      <div @click=\"get_red_con\" class=\"get_continue\" :class=\"{over:flips == 5}\" _v-33c1cb03=\"\"></div>\n      <div class=\"red_desc\" _v-33c1cb03=\"\">\n        <div _v-33c1cb03=\"\">\n          <div _v-33c1cb03=\"\"><em _v-33c1cb03=\"\">¥</em><span _v-33c1cb03=\"\">{{bonusMoney}}</span></div>\n        </div>\n        <div _v-33c1cb03=\"\">\n          {{bonusName}}满{{minConsumePrice}}元可用 <br _v-33c1cb03=\"\">\n          有效期限： <br _v-33c1cb03=\"\">\n          {{timeline}}\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ }
 
