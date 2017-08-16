@@ -47,7 +47,7 @@
 
 	"use strict";
 
-	var _Vue = __webpack_require__(449);
+	var _Vue = __webpack_require__(459);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
@@ -56,7 +56,7 @@
 	new _Vue2.default({
 	    el: "#setShop",
 	    components: {
-	        setShop: __webpack_require__(1451)
+	        setShop: __webpack_require__(1461)
 	    }
 	}); /**
 	     * Created by jianchep on 17/06/04.
@@ -4586,25 +4586,25 @@
 
 /***/ },
 
-/***/ 449:
+/***/ 459:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 943:
+/***/ 953:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(944)
-	__vue_script__ = __webpack_require__(946)
+	__webpack_require__(954)
+	__vue_script__ = __webpack_require__(956)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/loading/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(947)
+	__vue_template__ = __webpack_require__(957)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4630,13 +4630,13 @@
 
 /***/ },
 
-/***/ 944:
+/***/ 954:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(945);
+	var content = __webpack_require__(955);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -4657,7 +4657,7 @@
 
 /***/ },
 
-/***/ 945:
+/***/ 955:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -4672,7 +4672,7 @@
 
 /***/ },
 
-/***/ 946:
+/***/ 956:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4759,26 +4759,26 @@
 
 /***/ },
 
-/***/ 947:
+/***/ 957:
 /***/ function(module, exports) {
 
 	module.exports = "\n<transition :name=\"transition\">\n  <div class=\"weui-loading_toast vux-loading\" v-show=\"show\">\n    <div class=\"weui-mask_transparent\"></div>\n    <div class=\"weui-toast\" :style=\"{ position: position }\">\n      <i class=\"weui-loading weui-icon_toast\"></i>\n      <p class=\"weui-toast__content\">{{ text || '加载中' }}<slot></slot></p>\n    </div>\n  </div>\n</transition>\n";
 
 /***/ },
 
-/***/ 1451:
+/***/ 1461:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1452)
-	__webpack_require__(1454)
-	__vue_script__ = __webpack_require__(1456)
+	__webpack_require__(1462)
+	__webpack_require__(1464)
+	__vue_script__ = __webpack_require__(1466)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/setShop/vue/setShop.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1457)
+	__vue_template__ = __webpack_require__(1467)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4804,13 +4804,13 @@
 
 /***/ },
 
-/***/ 1452:
+/***/ 1462:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1453);
+	var content = __webpack_require__(1463);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -4831,7 +4831,7 @@
 
 /***/ },
 
-/***/ 1453:
+/***/ 1463:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -4846,13 +4846,13 @@
 
 /***/ },
 
-/***/ 1454:
+/***/ 1464:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1455);
+	var content = __webpack_require__(1465);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -4873,7 +4873,7 @@
 
 /***/ },
 
-/***/ 1455:
+/***/ 1465:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -4888,7 +4888,7 @@
 
 /***/ },
 
-/***/ 1456:
+/***/ 1466:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4897,7 +4897,7 @@
 	  value: true
 	});
 
-	var _index = __webpack_require__(943);
+	var _index = __webpack_require__(953);
 
 	var _index2 = _interopRequireDefault(_index);
 
@@ -5028,7 +5028,7 @@
 
 /***/ },
 
-/***/ 1457:
+/***/ 1467:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"container\" _v-7ec890b5=\"\">\n    <loading v-model=\"loadingShow\" _v-7ec890b5=\"\"></loading>\n    <div class=\"top0\" _v-7ec890b5=\"\">\n        <div class=\"top_container\" _v-7ec890b5=\"\">\n            <div class=\"top_left\" style=\"width: 40px\" _v-7ec890b5=\"\">\n                <a class=\"top_back\" href=\"javascript:history.back();\" _v-7ec890b5=\"\">\n                    <span class=\"home_arrow\" _v-7ec890b5=\"\"></span>\n                </a>\n            </div>\n            <div class=\"title_container\" v-text=\"title\" _v-7ec890b5=\"\"></div>\n            <div class=\"top_right\" style=\"width:40px;\" _v-7ec890b5=\"\">\n                分享\n            </div>\n        </div>\n    </div>\n    <div class=\"topBlock\" _v-7ec890b5=\"\"></div>\n    <div class=\"swiper-container\" _v-7ec890b5=\"\">\n        <div class=\"pageIndex\" _v-7ec890b5=\"\">\n            <img src=\"//pic.davdian.com/free/2017/06/03/pageindex1.png\" v-if=\"index == 1 || index == 6\" _v-7ec890b5=\"\">\n            <img src=\"//pic.davdian.com/free/2017/06/03/pageindex2.png\" v-if=\"index == 2\" _v-7ec890b5=\"\">\n            <img src=\"//pic.davdian.com/free/2017/06/03/pageindex3.png\" v-if=\"index == 3\" _v-7ec890b5=\"\">\n            <img src=\"//pic.davdian.com/free/2017/06/03/pageindex4.png\" v-if=\"index == 4\" _v-7ec890b5=\"\">\n            <img src=\"//pic.davdian.com/free/2017/06/03/pageindex5.png\" v-if=\"index == 5 || index == 0\" _v-7ec890b5=\"\">\n        </div>\n        <div class=\"swiper-wrapper\" _v-7ec890b5=\"\">\n            <div class=\"swiper-slide slide1 slide\" v-for=\"item in sort\" v-bind:class=\"{ slide1: item=='1', slide2: item=='2', slide3: item=='3', slide4: item=='4', slide5: item=='5', }\" _v-7ec890b5=\"\">\n                <div v-if=\"item=='1'\" _v-7ec890b5=\"\">\n                    <div class=\"title\" _v-7ec890b5=\"\">购物省钱</div>\n                    <div class=\"content\" _v-7ec890b5=\"\">\n                        <p _v-7ec890b5=\"\">低到无法想象的会员价，买到就是赚！</p>\n                        <p _v-7ec890b5=\"\">每周上新多热门商品，</p>\n                        <p _v-7ec890b5=\"\">一年至少为您<span class=\"color1\" _v-7ec890b5=\"\">省</span> <span class=\"color2\" _v-7ec890b5=\"\">1497.6</span><span class=\"color1\" _v-7ec890b5=\"\">元</span></p>\n                        <p _v-7ec890b5=\"\"><span class=\"color1\" _v-7ec890b5=\"\">轻松省出会员费</span></p>\n                    </div>\n                    <div class=\"contentData\" _v-7ec890b5=\"\">\n                        <div class=\"contentDataGood\" v-for=\"(item, index) in savingMoneyList\" _v-7ec890b5=\"\">\n                            <img :src=\"item.imageUrl\" class=\"img\" _v-7ec890b5=\"\">\n                            <div class=\"goodtitle\" v-text=\"item.title\" _v-7ec890b5=\"\"></div>\n                            <div class=\"price\" _v-7ec890b5=\"\">¥ <span class=\"text\" v-text=\"item.price\" _v-7ec890b5=\"\">20.00</span></div>\n                            <div class=\"btn\" _v-7ec890b5=\"\">会员省¥ {{item.saveMoney}}</div>\n                        </div>\n                    </div>\n                </div>\n\n                <div v-if=\"item=='2'\" _v-7ec890b5=\"\">\n                    <div class=\"title\" _v-7ec890b5=\"\">学习免费</div>\n                    <div class=\"content\" _v-7ec890b5=\"\">\n                        <p _v-7ec890b5=\"\">超过 <span class=\"color2\" _v-7ec890b5=\"\">1000堂</span> 课程，会员<span class=\"color2\" _v-7ec890b5=\"\">全部免费听</span></p>\n                        <p _v-7ec890b5=\"\">内容终身有效，随时想听就听</p>\n                        <p _v-7ec890b5=\"\"><span class=\"color1\" _v-7ec890b5=\"\">课程分享奖励不止</span><span class=\"color2\" _v-7ec890b5=\"\">50%</span></p>\n                    </div>\n                    <div class=\"contentData\" _v-7ec890b5=\"\">\n                        <div class=\"textcontent\" v-for=\"(item, index) in freeStudyList\" _v-7ec890b5=\"\">\n                            <img :src=\"item.imageUrl\" class=\"img\" _v-7ec890b5=\"\">\n                            <div class=\"price\" _v-7ec890b5=\"\">¥ <span v-text=\"item.price\" _v-7ec890b5=\"\"></span></div>\n                            <div class=\"coursetitle\" v-text=\"item.title\" _v-7ec890b5=\"\"></div>\n                            <div class=\"teacher\" v-text=\"item.teacher\" _v-7ec890b5=\"\"></div>\n                            <div class=\"btn\" _v-7ec890b5=\"\"><span class=\"size\" _v-7ec890b5=\"\">会员免费</span>分享赚钱¥ {{item.shareIncome}}</div>\n                        </div>\n                    </div>\n                </div>\n\n                <div v-if=\"item=='3'\" _v-7ec890b5=\"\">\n                    <div class=\"title\" _v-7ec890b5=\"\">亲子社群</div>\n                    <div class=\"content\" _v-7ec890b5=\"\">\n                        <p _v-7ec890b5=\"\">全国共 <span class=\"color2\" _v-7ec890b5=\"\">300+</span>  妈妈社群，<span class=\"color2\" _v-7ec890b5=\"\">150000+</span> 妈妈加入</p>\n                        <p _v-7ec890b5=\"\">在社群中给您最贴心的育儿建议、和您一起</p>\n                        <p _v-7ec890b5=\"\">陪孩子亲子阅读、发现更多平台优惠</p>\n                    </div>\n                    <div class=\"contentData\" _v-7ec890b5=\"\">\n                       <div class=\"text\" v-for=\"(item, index) in communityList\" _v-7ec890b5=\"\">\n                           <div class=\"img\" _v-7ec890b5=\"\">\n                               <img :src=\"item.imageUrl\" _v-7ec890b5=\"\">\n                           </div>\n                           <div class=\"slide3content\" _v-7ec890b5=\"\">\n                               <span v-text=\"item.title\" _v-7ec890b5=\"\">哈哈哈哈哈哈哈哈哈哈</span>\n                           </div>\n                       </div>\n                    </div>\n                </div>\n\n                <div v-if=\"item=='4'\" _v-7ec890b5=\"\">\n                    <div class=\"title\" _v-7ec890b5=\"\">分享赚钱</div>\n                    <div class=\"content\" _v-7ec890b5=\"\">\n                        <p _v-7ec890b5=\"\">所有商品均参与返现，没有上限！</p>\n                        <p _v-7ec890b5=\"\">全平台超过 <span class=\"color2\" _v-7ec890b5=\"\">1000000+</span> 商品、<span class=\"color2\" _v-7ec890b5=\"\">1000+</span> 课程</p>\n                        <p _v-7ec890b5=\"\">一年轻松 <span class=\"color1\" _v-7ec890b5=\"\">返现</span>  <span class=\"color2\" _v-7ec890b5=\"\">921.53</span>元</p>\n                        <p _v-7ec890b5=\"\"> <span class=\"color1\" _v-7ec890b5=\"\">赚到会员费</span></p>\n                    </div>\n                    <div class=\"contentData\" _v-7ec890b5=\"\">\n                        <div class=\"contentDataGood\" v-for=\"(item, index) in goodsList\" _v-7ec890b5=\"\">\n                            <img :src=\"item.imageUrl\" class=\"img\" _v-7ec890b5=\"\">\n                            <div class=\"price\" _v-7ec890b5=\"\">¥ <span class=\"text\" v-text=\"item.price\" _v-7ec890b5=\"\"></span></div>\n                            <div class=\"btn\" _v-7ec890b5=\"\">分享赚¥ {{item.shareIncome}}</div>\n                        </div>\n                        <div class=\"slide4course\" _v-7ec890b5=\"\">\n                            <img :src=\"courseList.imageUrl\" class=\"slide4img\" _v-7ec890b5=\"\">\n                            <div class=\"slide4price\" _v-7ec890b5=\"\">¥ {{courseList.price}}</div>\n                            <div class=\"slide4content\" v-text=\"courseList.title\" _v-7ec890b5=\"\"></div>\n                            <div class=\"slide4btn\" _v-7ec890b5=\"\">会员免费 <span class=\"size\" _v-7ec890b5=\"\">分享赚￥ {{courseList.shareIncome}}</span></div>\n                        </div>\n                    </div>\n                </div>\n\n                <div v-if=\"item=='5'\" _v-7ec890b5=\"\">\n                    <div class=\"title\" _v-7ec890b5=\"\">会员福利</div>\n                    <div class=\"content\" _v-7ec890b5=\"\">\n                        <p _v-7ec890b5=\"\">现在加入会员，即可获得新会员大礼包</p>\n                        <p class=\"slidep\" _v-7ec890b5=\"\"><span class=\"color1 color3\" _v-7ec890b5=\"\"><span class=\"color2 color3\" _v-7ec890b5=\"\">239</span>元红包</span></p>\n                        <p class=\"slidep\" _v-7ec890b5=\"\"><span class=\"color1 color3\" _v-7ec890b5=\"\">+</span></p>\n                        <p class=\"slidep\" _v-7ec890b5=\"\"><span class=\"color1 color3\" _v-7ec890b5=\"\"><span class=\"color2 color3\" _v-7ec890b5=\"\">240</span>元运费抵用券</span></p>\n                    </div>\n                    <div class=\"contentData\" _v-7ec890b5=\"\">\n                        <h1 _v-7ec890b5=\"\">会员独享：退换无忧</h1>\n                        <div _v-7ec890b5=\"\">会员退货\n                            <span class=\"size\" _v-7ec890b5=\"\">第一时间退回货款</span>，换货则会为您\n                            <span class=\"size\" _v-7ec890b5=\"\">优先发货</span> ，商品问题将由平台承担全部退换货运费\n                        </div>\n                    </div>\n                    <div class=\"notice\" _v-7ec890b5=\"\">*购买会员后，如不满意7天内可无条件退款</div>\n                </div>\n            </div>\n        </div>\n    </div>\n    <div class=\"footer-btn\" _v-7ec890b5=\"\">\n        <div v-if=\"visitor_status=='1'\" class=\"btn1 btn\" @click=\"goShop\" _v-7ec890b5=\"\">先进店逛逛&gt;&gt;</div>\n        <div v-if=\"visitor_status=='1'\" class=\"btn2 btn\" @click=\"setShop\" _v-7ec890b5=\"\">\n            <p class=\"p1\" _v-7ec890b5=\"\">立即购买会员</p>\n            <p class=\"p2\" _v-7ec890b5=\"\"><span style=\"text-decoration:line-through;\" _v-7ec890b5=\"\">￥299</span> ￥<span v-text=\"setShopMoney\" _v-7ec890b5=\"\"></span>/年</p>\n        </div>\n        <div v-if=\"visitor_status=='3'\" class=\"btn3\" _v-7ec890b5=\"\">邀请好友开通会员 <span _v-7ec890b5=\"\">(限时特价中:¥239)</span> </div>\n    </div>\n    <img src=\"//pic.davdian.com/free/2017/06/03/arrow.png\" class=\"arrow\" _v-7ec890b5=\"\">\n</div>\n\n\n";

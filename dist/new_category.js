@@ -47,11 +47,11 @@
 
 	__webpack_require__(33);
 	__webpack_require__(37);
-	__webpack_require__(1313);
+	__webpack_require__(1323);
 	__webpack_require__(43);
 	__webpack_require__(41);
 	__webpack_require__(83);
-	__webpack_require__(1315);
+	__webpack_require__(1325);
 
 
 /***/ },
@@ -3722,18 +3722,18 @@
 
 /***/ },
 
-/***/ 467:
+/***/ 477:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(468)
-	__vue_script__ = __webpack_require__(470)
+	__webpack_require__(478)
+	__vue_script__ = __webpack_require__(480)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/bottom.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(471)
+	__vue_template__ = __webpack_require__(481)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -3759,13 +3759,13 @@
 
 /***/ },
 
-/***/ 468:
+/***/ 478:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(469);
+	var content = __webpack_require__(479);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -3786,7 +3786,7 @@
 
 /***/ },
 
-/***/ 469:
+/***/ 479:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -3801,7 +3801,7 @@
 
 /***/ },
 
-/***/ 470:
+/***/ 480:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -3896,28 +3896,28 @@
 
 /***/ },
 
-/***/ 471:
+/***/ 481:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"dav-buyer-bottom clearfix\">\n    <div class=\"bottom-menu\">\n        <a class=\"menu-item\" :class=\"{'active':active==0}\" :href=\"active==0?'javascript:void();':'./'\" data-dav-tj=\"{{page}}|index|index|1|index@{{page}}\">\n            <i class=\"icon dav_icon_home_44_40\" :class=\"{'active':active==0}\" ></i>\n            <div class=\"menu-text\">首页</div>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==1}\" :href=\"active==1?'javascript:void();':'./course.html'\" data-dav-tj=\"{{page}}|category_search|index|1|index@{{page}}\">\n            <i class=\"icon dav_icon_search_44_40\" :class=\"{'active':active==1}\" ></i>\n            <div class=\"menu-text\" style='margin-top:-1px'>学院</div>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==2}\" :href=\"active==2?'javascript:void();':'./cart.html'\" data-dav-tj=\"{{page}}|cart|cart|1|cart@{{page}}\">\n            <i class=\"icon dav_icon_cart_44_40\" :class=\"{'active':active==2}\" ></i>\n            <div class=\"menu-text\">购物车</div>\n            <b v-if='cart' v-text=\"cart\"></b>\n        </a>\n        <a class=\"menu-item\" :class=\"{'active':active==3}\" :href=\"active==3?'javascript:void();':'./center.html'\" data-dav-tj=\"{{page}}|user|user|1|user@{{page}}\">\n            <i class=\"icon dav_icon_me_44_40\" :class=\"{'active':active==3}\" ></i>\n            <div class=\"menu-text\">我的</div>\n        </a>\n\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1313:
+/***/ 1323:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1315:
+/***/ 1325:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var dvdBottom = __webpack_require__(467);
-	var kindsearch = __webpack_require__(1316);
-	var cate = __webpack_require__(1319);
+	var dvdBottom = __webpack_require__(477);
+	var kindsearch = __webpack_require__(1326);
+	var cate = __webpack_require__(1329);
 
 	var right = $(".right");
 	var left = $(".left");
@@ -3943,17 +3943,17 @@
 
 /***/ },
 
-/***/ 1316:
+/***/ 1326:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1317)
+	__vue_script__ = __webpack_require__(1327)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/new_search.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1318)
+	__vue_template__ = __webpack_require__(1328)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -3979,7 +3979,7 @@
 
 /***/ },
 
-/***/ 1317:
+/***/ 1327:
 /***/ function(module, exports) {
 
 	// <template>
@@ -4012,24 +4012,24 @@
 
 /***/ },
 
-/***/ 1318:
+/***/ 1328:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"top0\">\n    <div class=\"top_fix\"></div>\n    <div class=\"top_container\">\n        <div class=\"top_left\">\n            <a class=\"top_back\" href=\"javascript:history.back();\">\n                <span class=\"home_arrow\"></span>\n            </a>\n        </div>\n        <div class=\"title_container kind_list\">\n            <div class=\"input_container\">\n                <a class=\"search_form\" href=\"new-search.html\">\n                    <span class=\"search_icon\"></span>\n                    <input class=\"search_input\" type=\"search\" name=\"q\" placeholder=\"搜索店铺商品\" readonly>\n                    <i class=\"icon-search icon dav_icon_search_30_30\"></i>\n                    <button type=\"submit\">提</button>\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1319:
+/***/ 1329:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1320)
+	__vue_script__ = __webpack_require__(1330)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/categorymain.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1321)
+	__vue_template__ = __webpack_require__(1331)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4055,7 +4055,7 @@
 
 /***/ },
 
-/***/ 1320:
+/***/ 1330:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4255,7 +4255,7 @@
 
 /***/ },
 
-/***/ 1321:
+/***/ 1331:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"box box-h con\">\n    <div class=\"item left\" id=\"wrapper\">\n        <div class=\"box-v left_container\">\n            <div class=\"item type\"\n                 v-for=\"(i, item) in list\"\n                 v-text=\"item.title\"\n                 :class=\"{'active':i==index}\"\n                 @click=\"changeList(i,item)\">\n            </div>\n        </div>\n    </div>\n    <div class=\"item item-3 right\" id=\"right\">\n        <div class=\"right_con\">\n            <div class=\"banner\" v-if=\"category.banner&&category.banner.length\">\n                <img :src=\"category.banner[0].img\" alt=\"\" @click=\"click(category.banner[0])\">\n            </div>\n            <div class=\"category box box-warp\" v-for=\"g in Math.ceil(category.category.length/9)\">\n                <div class=\"item item-1of3 cat_block\" v-for=\"item in 9\" v-if=\"category.category[g*9+item]\"  @click=\"click(category.category[g*9+item])\">\n                    <p><img :src=\"category.category[g*9+item].img\"></p>\n                    <p v-text=\"category.category[g*9+item].text\" class=\"text\"></p>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";

@@ -97,7 +97,7 @@
 	  el: ".app",
 	  components: {
 	    'com-top-title': __webpack_require__(77),
-	    'noteDetail': __webpack_require__(1168)
+	    'noteDetail': __webpack_require__(1173)
 	  },
 	  data: function data() {
 	    return {
@@ -16331,19 +16331,19 @@
 
 /***/ },
 
-/***/ 1168:
+/***/ 1173:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1169)
-	__webpack_require__(1171)
-	__vue_script__ = __webpack_require__(1173)
+	__webpack_require__(1174)
+	__webpack_require__(1176)
+	__vue_script__ = __webpack_require__(1178)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/noteDetail/vue/noteDetail.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1174)
+	__vue_template__ = __webpack_require__(1179)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -16369,13 +16369,13 @@
 
 /***/ },
 
-/***/ 1169:
+/***/ 1174:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1170);
+	var content = __webpack_require__(1175);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -16396,7 +16396,7 @@
 
 /***/ },
 
-/***/ 1170:
+/***/ 1175:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -16411,13 +16411,13 @@
 
 /***/ },
 
-/***/ 1171:
+/***/ 1176:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1172);
+	var content = __webpack_require__(1177);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -16438,7 +16438,7 @@
 
 /***/ },
 
-/***/ 1172:
+/***/ 1177:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -16453,7 +16453,7 @@
 
 /***/ },
 
-/***/ 1173:
+/***/ 1178:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -16885,7 +16885,7 @@
 
 /***/ },
 
-/***/ 1174:
+/***/ 1179:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <!--<div class=\"empty_div\" v-show=\"!isapp\"></div>-->\n  <notopen></notopen>\n  <div class=\"note_container\" v-if=\"close\">\n    <div class=\"note_title\">\n      <div class=\"header_img\">\n        <img :src=\"note_header\" alt=\"\">\n      </div>\n      <div class=\"name\">{{ note_author }}</div>\n      <div class=\"time\">{{ note_time }}</div>\n      <div class=\"star\"><img :src=\"init_star(note_score)\" alt=\"\"></div>\n    </div>\n    <p class=\"note_text\" v-html=\"note_content.replace(/\\n/g,'<br/>')\"></p>\n    <div>\n      <div class=\"note_pic1\" v-for=\"(v,index) in img_list\">\n        <img :src=\"v\" alt=\"\" @click.stop='showImg(index, img_list, v)'>\n      </div>\n    </div>\n    <div>\n      <div class=\"note_share\" v-show=\"status==1 && isapp\">\n        <div class=\"count\"><span v-if=\"shareNum!=0\">{{ shareNum }}</span></div>\n        <div class=\"icon\" @click='share(item)'><img src=\"http://pic.davdian.com/free/2017/02/07/material-share.png\" alt=\"\"></div>\n      </div>\n      <div class=\"note_share\" v-show=\"status==0\">\n        <div class=\"count2\">\n          <div class=\"ing\">(审核中，仅自己可见)</div>\n        </div>\n      </div>\n\n      <div class=\"note_share\" v-show=\"status==2\">\n        <div class=\"count2\">\n          <div>(审核未通过，还需努力哟)</div>\n          <div class=\"share_line\"></div>\n          <div class=\"delete_note\">删除笔记</div>\n        </div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"gray\" v-if=\"showFlag\"></div>\n  <div class=\"good_list_con\" v-if=\"showFlag\">\n    <div class=\"good_list_2_row\">\n      <div class=\"dvk_container\">\n        <div class=\"tab_div\">这么好的课，快来听听吧</div>\n        <div class=\"dvk4_detail\">\n          <div class='dvk4_detail_content'>\n            <div class='dvk4_detail_content_img'>\n              <img class=\"newImage\" :src=\"item.imageUrl\"/>\n            </div>\n            <div class='dvk4_detail_content_text' @click='goHref(item.command.content)'>\n              <div class='dvk4_detail_content_title' v-text='item.title'></div>\n              <div class='dvk4_detail_content_name' v-text='item.teacher'></div>\n              <div class='dvk4_detail_content_time'>\n                <span class='dvk4_detail_content_popular'><span v-text='item.pv'></span></span>\n                <span class='dvk4_detail_content_line'></span>\n                <span class='dvk4_detail_content_times'>\n                    <span>{{ item.startTime }}</span>\n                </span>\n              </div>\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n\n</div>\n";

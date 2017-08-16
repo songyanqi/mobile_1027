@@ -1,22 +1,11 @@
 <template>
   <div class="content2">
     <div class="content_buy">
-      <div class="count"><span>2397</span><span>人订阅</span></div>
+      <div class="count"><span v-text="data.body.purchase"></span><span>人订阅</span></div>
       <div class="content_header">
-        <div><img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt=""
-        ></div>
-        <div><img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt=""
-        ></div>
-        <div><img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt=""
-        ></div>
-        <div><img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt=""
-        ></div>
-        <div><img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt=""
-        ></div>
-        <div><img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt=""
-        ></div>
-        <div><img src="//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg" alt=""
-        ></div>
+          <div v-for="item in dataList">
+            <img :src="item.imageUrl" alt="">
+          </div>
         <div><img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt=""
         ></div>
       </div>
@@ -24,7 +13,17 @@
   </div>
 </template>
 <script>
-  export default {}
+  export default {
+    props:["data"],
+    data(){
+      return{
+          dataList:[]
+      }
+    },
+    created:function () {
+      this.dataList=this.data.body.dataList;
+    }
+  }
 </script>
 <style scoped>
   .content2 {

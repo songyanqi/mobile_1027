@@ -47,15 +47,15 @@
 
 	'use strict';
 
-	var _common = __webpack_require__(1112);
+	var _common = __webpack_require__(1122);
 
 	var _common2 = _interopRequireDefault(_common);
 
-	var _Vue = __webpack_require__(449);
+	var _Vue = __webpack_require__(459);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
-	var _vueLazyload = __webpack_require__(1109);
+	var _vueLazyload = __webpack_require__(1119);
 
 	var _vueLazyload2 = _interopRequireDefault(_vueLazyload);
 
@@ -67,7 +67,7 @@
 
 	new _Vue2.default({
 	  components: {
-	    app: __webpack_require__(1540)
+	    app: __webpack_require__(1550)
 	  },
 	  template: '<app/>',
 	  el: ".app"
@@ -7452,14 +7452,14 @@
 
 /***/ },
 
-/***/ 449:
+/***/ 459:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 485:
+/***/ 495:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -9317,7 +9317,7 @@
 
 /***/ },
 
-/***/ 921:
+/***/ 931:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -9350,18 +9350,18 @@
 
 /***/ },
 
-/***/ 924:
+/***/ 934:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(925)
-	__vue_script__ = __webpack_require__(927)
+	__webpack_require__(935)
+	__vue_script__ = __webpack_require__(937)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/tab/tab.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(929)
+	__vue_template__ = __webpack_require__(939)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -9387,13 +9387,13 @@
 
 /***/ },
 
-/***/ 925:
+/***/ 935:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(926);
+	var content = __webpack_require__(936);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -9414,7 +9414,7 @@
 
 /***/ },
 
-/***/ 926:
+/***/ 936:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -9429,7 +9429,7 @@
 
 /***/ },
 
-/***/ 927:
+/***/ 937:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9438,7 +9438,7 @@
 	  value: true
 	});
 
-	var _multiItems = __webpack_require__(928);
+	var _multiItems = __webpack_require__(938);
 
 	exports.default = {
 	  name: 'tab',
@@ -9633,7 +9633,7 @@
 
 /***/ },
 
-/***/ 928:
+/***/ 938:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9643,7 +9643,7 @@
 	});
 	exports.childMixin = exports.parentMixin = undefined;
 
-	var _router = __webpack_require__(921);
+	var _router = __webpack_require__(931);
 
 	var parentMixin = {
 	  mounted: function mounted() {
@@ -9747,24 +9747,24 @@
 
 /***/ },
 
-/***/ 929:
+/***/ 939:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-tab\" :class=\"{'vux-tab-no-animate': !animate}\">\n  <slot></slot>\n  <div v-if=\"animate\" class=\"vux-tab-ink-bar\" :class=\"barClass\" :style=\"barStyle\">\n    <span class=\"vux-tab-bar-inner\" :style=\"innerBarStyle\" v-if=\"customBarWidth\"></span>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 930:
+/***/ 940:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(931)
+	__vue_script__ = __webpack_require__(941)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/tab/tab-item.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(932)
+	__vue_template__ = __webpack_require__(942)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -9790,7 +9790,7 @@
 
 /***/ },
 
-/***/ 931:
+/***/ 941:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9799,7 +9799,7 @@
 	  value: true
 	});
 
-	var _multiItems = __webpack_require__(928);
+	var _multiItems = __webpack_require__(938);
 
 	exports.default = {
 	  name: 'tab-item',
@@ -9840,25 +9840,25 @@
 
 /***/ },
 
-/***/ 932:
+/***/ 942:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-tab-item\" :class=\"[currentSelected ? activeClass : '', {'vux-tab-selected': currentSelected, 'vux-tab-disabled': disabled}]\" :style=\"style\" @click=\"onItemClick\">\n  <slot></slot>\n  <span :style=\"{background: badgeBackground, color: badgeColor}\" class=\"vux-tab-item-badge\" v-if=\"typeof badgeLabel !== 'undefined' && badgeLabel !== ''\">{{ badgeLabel }}</span>\n</div>\n";
 
 /***/ },
 
-/***/ 933:
+/***/ 943:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(934)
-	__vue_script__ = __webpack_require__(936)
+	__webpack_require__(944)
+	__vue_script__ = __webpack_require__(946)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/alert/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(942)
+	__vue_template__ = __webpack_require__(952)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -9884,13 +9884,13 @@
 
 /***/ },
 
-/***/ 934:
+/***/ 944:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(935);
+	var content = __webpack_require__(945);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -9911,7 +9911,7 @@
 
 /***/ },
 
-/***/ 935:
+/***/ 945:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -9926,7 +9926,7 @@
 
 /***/ },
 
-/***/ 936:
+/***/ 946:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9935,7 +9935,7 @@
 	  value: true
 	});
 
-	var _xDialog = __webpack_require__(937);
+	var _xDialog = __webpack_require__(947);
 
 	var _xDialog2 = _interopRequireDefault(_xDialog);
 
@@ -10028,18 +10028,18 @@
 
 /***/ },
 
-/***/ 937:
+/***/ 947:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(938)
-	__vue_script__ = __webpack_require__(940)
+	__webpack_require__(948)
+	__vue_script__ = __webpack_require__(950)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/x-dialog/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(941)
+	__vue_template__ = __webpack_require__(951)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -10065,13 +10065,13 @@
 
 /***/ },
 
-/***/ 938:
+/***/ 948:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(939);
+	var content = __webpack_require__(949);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -10092,7 +10092,7 @@
 
 /***/ },
 
-/***/ 939:
+/***/ 949:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -10107,7 +10107,7 @@
 
 /***/ },
 
-/***/ 940:
+/***/ 950:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10190,21 +10190,21 @@
 
 /***/ },
 
-/***/ 941:
+/***/ 951:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-x-dialog\" @touchmove=\"onTouchMove\">\n  <transition :name=\"maskTransition\">\n    <div class=\"weui-mask\" @click=\"hideOnBlur && (currentValue = false)\" v-show=\"currentValue\"></div>\n  </transition>\n  <transition :name=\"dialogTransition\">\n    <div :class=\"dialogClass\" v-show=\"currentValue\" :style=\"dialogStyle\">\n      <slot></slot>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ },
 
-/***/ 942:
+/***/ 952:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-alert\">\n  <x-dialog\n  v-model=\"showValue\"\n  :mask-transition=\"maskTransition\"\n  :dialog-transition=\"dialogTransition\"\n  @on-hide=\"$emit('on-hide')\"\n  @on-show=\"$emit('on-show')\">\n    <div class=\"weui-dialog__hd\">\n      <strong class=\"weui-dialog__title\">{{title}}</strong>\n    </div>\n    <div class=\"weui-dialog__bd\">\n      <slot>\n        <div v-html=\"content\"></div>\n      </slot>\n    </div>\n    <div class=\"weui-dialog__ft\">\n      <a href=\"javascript:;\"\n      class=\"weui-dialog__btn weui-dialog__btn_primary\"\n      @click=\"_onHide\">{{buttonText || '确定'}}</a>\n    </div>\n  </x-dialog>\n</div>\n";
 
 /***/ },
 
-/***/ 955:
+/***/ 965:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10213,15 +10213,15 @@
 	    value: true
 	});
 
-	var _WXShare = __webpack_require__(956);
+	var _WXShare = __webpack_require__(966);
 
 	var _WXShare2 = _interopRequireDefault(_WXShare);
 
-	var _pathHistory = __webpack_require__(957);
+	var _pathHistory = __webpack_require__(967);
 
 	var _pathHistory2 = _interopRequireDefault(_pathHistory);
 
-	var _appInterface = __webpack_require__(958);
+	var _appInterface = __webpack_require__(968);
 
 	var _appInterface2 = _interopRequireDefault(_appInterface);
 
@@ -10266,7 +10266,7 @@
 
 /***/ },
 
-/***/ 956:
+/***/ 966:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10555,7 +10555,7 @@
 
 /***/ },
 
-/***/ 957:
+/***/ 967:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10626,7 +10626,7 @@
 
 /***/ },
 
-/***/ 958:
+/***/ 968:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10639,11 +10639,11 @@
 
 	var _utils2 = _interopRequireDefault(_utils);
 
-	var _WXShare = __webpack_require__(956);
+	var _WXShare = __webpack_require__(966);
 
 	var _WXShare2 = _interopRequireDefault(_WXShare);
 
-	var _dialog = __webpack_require__(959);
+	var _dialog = __webpack_require__(969);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -11078,7 +11078,7 @@
 
 /***/ },
 
-/***/ 959:
+/***/ 969:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11089,15 +11089,15 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _index = __webpack_require__(960);
+	var _index = __webpack_require__(970);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(963);
+	var _index3 = __webpack_require__(973);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _vue = __webpack_require__(485);
+	var _vue = __webpack_require__(495);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
@@ -11152,7 +11152,7 @@
 
 /***/ },
 
-/***/ 960:
+/***/ 970:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11164,11 +11164,11 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _alert = __webpack_require__(933);
+	var _alert = __webpack_require__(943);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
-	var _plugin_helper = __webpack_require__(961);
+	var _plugin_helper = __webpack_require__(971);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11233,7 +11233,7 @@
 
 /***/ },
 
-/***/ 961:
+/***/ 971:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11243,7 +11243,7 @@
 	});
 	exports.mergeOptions = undefined;
 
-	var _objectAssign = __webpack_require__(962);
+	var _objectAssign = __webpack_require__(972);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -11266,7 +11266,7 @@
 
 /***/ },
 
-/***/ 962:
+/***/ 972:
 /***/ function(module, exports) {
 
 	/*
@@ -11363,7 +11363,7 @@
 
 /***/ },
 
-/***/ 963:
+/***/ 973:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11375,11 +11375,11 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _toast = __webpack_require__(964);
+	var _toast = __webpack_require__(974);
 
 	var _toast2 = _interopRequireDefault(_toast);
 
-	var _plugin_helper = __webpack_require__(961);
+	var _plugin_helper = __webpack_require__(971);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11462,18 +11462,18 @@
 
 /***/ },
 
-/***/ 964:
+/***/ 974:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(965)
-	__vue_script__ = __webpack_require__(967)
+	__webpack_require__(975)
+	__vue_script__ = __webpack_require__(977)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/toast/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(969)
+	__vue_template__ = __webpack_require__(979)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -11499,13 +11499,13 @@
 
 /***/ },
 
-/***/ 965:
+/***/ 975:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(966);
+	var content = __webpack_require__(976);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -11526,7 +11526,7 @@
 
 /***/ },
 
-/***/ 966:
+/***/ 976:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -11541,7 +11541,7 @@
 
 /***/ },
 
-/***/ 967:
+/***/ 977:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11550,7 +11550,7 @@
 	  value: true
 	});
 
-	var _safariFix = __webpack_require__(968);
+	var _safariFix = __webpack_require__(978);
 
 	var _safariFix2 = _interopRequireDefault(_safariFix);
 
@@ -11732,7 +11732,7 @@
 
 /***/ },
 
-/***/ 968:
+/***/ 978:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11758,14 +11758,14 @@
 
 /***/ },
 
-/***/ 969:
+/***/ 979:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-toast\">\n  <div class=\"weui-mask_transparent\" v-show=\"isShowMask && show\"></div>\n  <transition :name=\"currentTransition\">\n    <div class=\"weui-toast\" :style=\"{width: width}\" :class=\"toastClass\" v-show=\"show\">\n      <i class=\"weui-icon-success-no-circle weui-icon_toast\" v-show=\"type !== 'text'\"></i>\n      <p class=\"weui-toast__content\" v-if=\"text\" :style=\"style\" v-html=\"text\"></p>\n      <p class=\"weui-toast__content\" v-else><slot></slot></p>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ },
 
-/***/ 975:
+/***/ 985:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11774,7 +11774,7 @@
 	  value: true
 	});
 
-	var _scriptjs = __webpack_require__(976);
+	var _scriptjs = __webpack_require__(986);
 
 	var _scriptjs2 = _interopRequireDefault(_scriptjs);
 
@@ -11786,11 +11786,11 @@
 
 	var _config2 = _interopRequireDefault(_config);
 
-	var _jsCookie = __webpack_require__(977);
+	var _jsCookie = __webpack_require__(987);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(978);
+	var _util = __webpack_require__(988);
 
 	var _util2 = _interopRequireDefault(_util);
 
@@ -11959,7 +11959,7 @@
 
 /***/ },
 
-/***/ 976:
+/***/ 986:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -12089,7 +12089,7 @@
 
 /***/ },
 
-/***/ 977:
+/***/ 987:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -12261,7 +12261,7 @@
 
 /***/ },
 
-/***/ 978:
+/***/ 988:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -12309,18 +12309,18 @@
 
 /***/ },
 
-/***/ 988:
+/***/ 998:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(989)
-	__vue_script__ = __webpack_require__(991)
+	__webpack_require__(999)
+	__vue_script__ = __webpack_require__(1001)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/swiper/swiper.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(995)
+	__vue_template__ = __webpack_require__(1005)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -12346,13 +12346,13 @@
 
 /***/ },
 
-/***/ 989:
+/***/ 999:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(990);
+	var content = __webpack_require__(1000);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -12373,7 +12373,7 @@
 
 /***/ },
 
-/***/ 990:
+/***/ 1000:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -12388,7 +12388,7 @@
 
 /***/ },
 
-/***/ 991:
+/***/ 1001:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12397,11 +12397,11 @@
 	  value: true
 	});
 
-	var _swiper = __webpack_require__(992);
+	var _swiper = __webpack_require__(1002);
 
 	var _swiper2 = _interopRequireDefault(_swiper);
 
-	var _router = __webpack_require__(921);
+	var _router = __webpack_require__(931);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -12709,7 +12709,7 @@
 
 /***/ },
 
-/***/ 992:
+/***/ 1002:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12720,11 +12720,11 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _arrayFrom = __webpack_require__(993);
+	var _arrayFrom = __webpack_require__(1003);
 
 	var _arrayFrom2 = _interopRequireDefault(_arrayFrom);
 
-	var _objectAssign = __webpack_require__(962);
+	var _objectAssign = __webpack_require__(972);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -13087,18 +13087,18 @@
 
 /***/ },
 
-/***/ 993:
+/***/ 1003:
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = (typeof Array.from === 'function' ?
 	  Array.from :
-	  __webpack_require__(994)
+	  __webpack_require__(1004)
 	);
 
 
 /***/ },
 
-/***/ 994:
+/***/ 1004:
 /***/ function(module, exports) {
 
 	// Production steps of ECMA-262, Edition 6, 22.1.2.1
@@ -13317,24 +13317,24 @@
 
 /***/ },
 
-/***/ 995:
+/***/ 1005:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-slider\">\n  <div class=\"vux-swiper\" :style=\"{height: xheight}\">\n    <slot></slot>\n    <div class=\"vux-swiper-item\" v-for=\"(item, index) in list\" @click=\"clickListItem(item)\" :data-index=\"index\">\n      <a href=\"javascript:\">\n        <div class=\"vux-img\" :style=\"{backgroundImage: buildBackgroundUrl(item.img)}\"></div>\n        <p class=\"vux-swiper-desc\" v-if=\"showDescMask\">{{item.title}}</p>\n      </a>\n    </div>\n    <div v-if=\"listTwoLoopItem.length > 0\" class=\"vux-swiper-item vux-swiper-item-clone\" v-for=\"(item, index) in listTwoLoopItem\" @click=\"clickListItem(item)\" :data-index=\"index\">\n      <a href=\"javascript:\">\n        <div class=\"vux-img\" :style=\"{backgroundImage: buildBackgroundUrl(item.img)}\"></div>\n        <p class=\"vux-swiper-desc\" v-if=\"showDescMask\">{{item.title}}</p>\n      </a>\n    </div>\n  </div>\n  <div :class=\"[dotsClass, 'vux-indicator', 'vux-indicator-' + dotsPosition]\" v-show=\"showDots\">\n    <a href=\"javascript:\" v-for=\"key in length\">\n      <i class=\"vux-icon-dot\" :class=\"{'active': key - 1 === current}\"></i>\n    </a>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1006:
+/***/ 1016:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1007)
+	__vue_script__ = __webpack_require__(1017)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/swiper/swiper-item.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1008)
+	__vue_template__ = __webpack_require__(1018)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -13360,7 +13360,7 @@
 
 /***/ },
 
-/***/ 1007:
+/***/ 1017:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13393,14 +13393,14 @@
 
 /***/ },
 
-/***/ 1008:
+/***/ 1018:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-swiper-item\"><slot></slot></div>\n";
 
 /***/ },
 
-/***/ 1039:
+/***/ 1049:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -13416,18 +13416,18 @@
 
 /***/ },
 
-/***/ 1063:
+/***/ 1073:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1064)
-	__vue_script__ = __webpack_require__(1066)
+	__webpack_require__(1074)
+	__vue_script__ = __webpack_require__(1076)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/scroller/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1085)
+	__vue_template__ = __webpack_require__(1095)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -13453,13 +13453,13 @@
 
 /***/ },
 
-/***/ 1064:
+/***/ 1074:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1065);
+	var content = __webpack_require__(1075);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -13480,7 +13480,7 @@
 
 /***/ },
 
-/***/ 1065:
+/***/ 1075:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -13495,7 +13495,7 @@
 
 /***/ },
 
-/***/ 1066:
+/***/ 1076:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13504,19 +13504,19 @@
 	  value: true
 	});
 
-	var _objectAssign = __webpack_require__(962);
+	var _objectAssign = __webpack_require__(972);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
-	var _xscroll = __webpack_require__(1067);
+	var _xscroll = __webpack_require__(1077);
 
 	var _xscroll2 = _interopRequireDefault(_xscroll);
 
-	var _pulldown = __webpack_require__(1083);
+	var _pulldown = __webpack_require__(1093);
 
 	var _pulldown2 = _interopRequireDefault(_pulldown);
 
-	var _pullup = __webpack_require__(1084);
+	var _pullup = __webpack_require__(1094);
 
 	var _pullup2 = _interopRequireDefault(_pullup);
 
@@ -13867,18 +13867,18 @@
 
 /***/ },
 
-/***/ 1067:
+/***/ 1077:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068),
-		Base = __webpack_require__(1069),
-		Timer = __webpack_require__(1071),
-		Animate = __webpack_require__(1073),
-		Hammer = __webpack_require__(1074),
-		SimuScroll = __webpack_require__(1075),
-		OriginScroll = __webpack_require__(1082);
+	var Util = __webpack_require__(1078),
+		Base = __webpack_require__(1079),
+		Timer = __webpack_require__(1081),
+		Animate = __webpack_require__(1083),
+		Hammer = __webpack_require__(1084),
+		SimuScroll = __webpack_require__(1085),
+		OriginScroll = __webpack_require__(1092);
 	var XScroll = function(cfg) {
 			var _ = cfg && cfg.useOriginScroll ? OriginScroll : SimuScroll;
 			return new _(cfg);
@@ -13931,7 +13931,7 @@
 
 /***/ },
 
-/***/ 1068:
+/***/ 1078:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -14263,13 +14263,13 @@
 
 /***/ },
 
-/***/ 1069:
+/***/ 1079:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Events = __webpack_require__(1070);
+	var Util = __webpack_require__(1078);
+	var Events = __webpack_require__(1080);
 	/** 
 	      @constructor 
 	      @mixes Events
@@ -14338,12 +14338,12 @@
 
 /***/ },
 
-/***/ 1070:
+/***/ 1080:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
+	var Util = __webpack_require__(1078);
 	// Returns a function that will be executed at most one time, no matter how
 	// often you call it. Useful for lazy initialization.
 	var _once = function(func) {
@@ -14572,14 +14572,14 @@
 
 /***/ },
 
-/***/ 1071:
+/***/ 1081:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Base = __webpack_require__(1069);
-	var Easing = __webpack_require__(1072);
+	var Util = __webpack_require__(1078);
+	var Base = __webpack_require__(1079);
+	var Easing = __webpack_require__(1082);
 
 	var RAF = window.requestAnimationFrame ||
 		window.webkitRequestAnimationFrame ||
@@ -14747,7 +14747,7 @@
 
 /***/ },
 
-/***/ 1072:
+/***/ 1082:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -14784,15 +14784,15 @@
 
 /***/ },
 
-/***/ 1073:
+/***/ 1083:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Timer = __webpack_require__(1071);
-	var Easing = __webpack_require__(1072);
-	var Base = __webpack_require__(1069);
+	var Util = __webpack_require__(1078);
+	var Timer = __webpack_require__(1081);
+	var Easing = __webpack_require__(1082);
+	var Base = __webpack_require__(1079);
 	//transform
 	var vendorTransform = Util.prefixStyle("transform");
 	//transition webkitTransition MozTransition OTransition msTtransition
@@ -15139,7 +15139,7 @@
 
 /***/ },
 
-/***/ 1074:
+/***/ 1084:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -17601,18 +17601,18 @@
 
 /***/ },
 
-/***/ 1075:
+/***/ 1085:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068),
-	  Base = __webpack_require__(1069),
-	  Core = __webpack_require__(1076),
-	  Animate = __webpack_require__(1073),
-	  Hammer = __webpack_require__(1074),
-	  ScrollBar = __webpack_require__(1080),
-	  Controller = __webpack_require__(1081);
+	var Util = __webpack_require__(1078),
+	  Base = __webpack_require__(1079),
+	  Core = __webpack_require__(1086),
+	  Animate = __webpack_require__(1083),
+	  Hammer = __webpack_require__(1084),
+	  ScrollBar = __webpack_require__(1090),
+	  Controller = __webpack_require__(1091);
 	//reduced boundry pan distance
 	var PAN_RATE = 1 - 0.618;
 	//constant for scrolling acceleration
@@ -18308,18 +18308,18 @@
 
 /***/ },
 
-/***/ 1076:
+/***/ 1086:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068),
-	    Base = __webpack_require__(1069),
-	    Animate = __webpack_require__(1073),
-	    Boundry = __webpack_require__(1077),
-	    Hammer = __webpack_require__(1074),
-	    Sticky = __webpack_require__(1078),
-	    Fixed = __webpack_require__(1079);
+	var Util = __webpack_require__(1078),
+	    Base = __webpack_require__(1079),
+	    Animate = __webpack_require__(1083),
+	    Boundry = __webpack_require__(1087),
+	    Hammer = __webpack_require__(1084),
+	    Sticky = __webpack_require__(1088),
+	    Fixed = __webpack_require__(1089);
 	// boundry checked bounce effect
 	var BOUNDRY_CHECK_DURATION = 500;
 	var BOUNDRY_CHECK_EASING = "ease";
@@ -18676,12 +18676,12 @@
 
 /***/ },
 
-/***/ 1077:
+/***/ 1087:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	 var Util = __webpack_require__(1068);
+	 var Util = __webpack_require__(1078);
 
 	 function Boundry(cfg) {
 	     this.cfg = Util.mix({
@@ -18773,13 +18773,13 @@
 
 /***/ },
 
-/***/ 1078:
+/***/ 1088:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Base = __webpack_require__(1069);
+	var Util = __webpack_require__(1078);
+	var Base = __webpack_require__(1079);
 	//transform
 	var transform = Util.prefixStyle("transform");
 	// default render function for position:sticky elements
@@ -19009,13 +19009,13 @@
 
 /***/ },
 
-/***/ 1079:
+/***/ 1089:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Base = __webpack_require__(1069);
+	var Util = __webpack_require__(1078);
+	var Base = __webpack_require__(1079);
 	var transform = Util.prefixStyle("transform");
 
 	var Fixed = function(cfg) {
@@ -19150,13 +19150,13 @@
 
 /***/ },
 
-/***/ 1080:
+/***/ 1090:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Animate = __webpack_require__(1073);
+	var Util = __webpack_require__(1078);
+	var Animate = __webpack_require__(1083);
 	var MAX_BOUNCE_DISTANCE = 40;
 	var MIN_BAR_SCROLLED_SIZE = 10;
 	var MIN_BAR_SIZE = 50;
@@ -19351,7 +19351,7 @@
 
 /***/ },
 
-/***/ 1081:
+/***/ 1091:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -19359,8 +19359,8 @@
 		wrapped scroll controller
 	*/
 	"use strict";
-	var Util = __webpack_require__(1068),
-		Base = __webpack_require__(1069);
+	var Util = __webpack_require__(1078),
+		Base = __webpack_require__(1079);
 
 	var Controller = function(cfg) {
 		Controller.superclass.constructor.call(this, cfg);
@@ -19496,15 +19496,15 @@
 
 /***/ },
 
-/***/ 1082:
+/***/ 1092:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068),
-	    Base = __webpack_require__(1069),
-	    Core = __webpack_require__(1076),
-	    Animate = __webpack_require__(1073);
+	var Util = __webpack_require__(1078),
+	    Base = __webpack_require__(1079),
+	    Core = __webpack_require__(1086),
+	    Animate = __webpack_require__(1083);
 
 	var transformOrigin = Util.prefixStyle("transformOrigin");
 	/** 
@@ -19639,13 +19639,13 @@
 
 /***/ },
 
-/***/ 1083:
+/***/ 1093:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Base = __webpack_require__(1069);
+	var Util = __webpack_require__(1078);
+	var Base = __webpack_require__(1079);
 	var clsPrefix;
 	var containerCls;
 	var content = "Pull Down To Refresh";
@@ -19830,13 +19830,13 @@
 
 /***/ },
 
-/***/ 1084:
+/***/ 1094:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Base = __webpack_require__(1069);
+	var Util = __webpack_require__(1078);
+	var Base = __webpack_require__(1079);
 	var clsPrefix;
 	var containerCls;
 	var loadingContent = "Loading...";
@@ -20053,14 +20053,14 @@
 
 /***/ },
 
-/***/ 1085:
+/***/ 1095:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"styles\">\n  <div class=\"xs-container\">\n    <slot></slot>\n    <slot name=\"pulldown\"></slot>\n    <slot name=\"pullup\"></slot>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1109:
+/***/ 1119:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20069,11 +20069,11 @@
 	  value: true
 	});
 
-	var _Vue = __webpack_require__(449);
+	var _Vue = __webpack_require__(459);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
-	var _VueLazyload = __webpack_require__(1110);
+	var _VueLazyload = __webpack_require__(1120);
 
 	var _VueLazyload2 = _interopRequireDefault(_VueLazyload);
 
@@ -20104,14 +20104,14 @@
 
 /***/ },
 
-/***/ 1110:
+/***/ 1120:
 /***/ function(module, exports) {
 
 	module.exports = VueLazyload;
 
 /***/ },
 
-/***/ 1112:
+/***/ 1122:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20128,26 +20128,26 @@
 
 	var _ua2 = _interopRequireDefault(_ua);
 
-	var _login = __webpack_require__(1113);
+	var _login = __webpack_require__(1123);
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _jsCookie = __webpack_require__(977);
+	var _jsCookie = __webpack_require__(987);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(978);
+	var _util = __webpack_require__(988);
 
 	var _util2 = _interopRequireDefault(_util);
 
-	var _weixin = __webpack_require__(975);
+	var _weixin = __webpack_require__(985);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import scriptjs from 'scriptjs';
-	__webpack_require__(1114);
+	__webpack_require__(1124);
 
 
 	// ios wkwebview返回上一页执行回调刷新页面
@@ -20260,7 +20260,7 @@
 
 /***/ },
 
-/***/ 1113:
+/***/ 1123:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20269,7 +20269,7 @@
 	  value: true
 	});
 
-	var _jsCookie = __webpack_require__(977);
+	var _jsCookie = __webpack_require__(987);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
@@ -20359,7 +20359,7 @@
 
 /***/ },
 
-/***/ 1114:
+/***/ 1124:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -20391,7 +20391,7 @@
 
 /***/ },
 
-/***/ 1115:
+/***/ 1125:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20408,11 +20408,11 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
-	var _weixin = __webpack_require__(975);
+	var _weixin = __webpack_require__(985);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
-	var _Vue = __webpack_require__(449);
+	var _Vue = __webpack_require__(459);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
@@ -20454,7 +20454,7 @@
 	  callBrowserShare: function callBrowserShare() {
 	    new _Vue2.default({
 	      components: {
-	        'com-share-pop-tip': __webpack_require__(1116)
+	        'com-share-pop-tip': __webpack_require__(1126)
 	      },
 	      el: getEl(),
 	      data: {},
@@ -20476,18 +20476,18 @@
 
 /***/ },
 
-/***/ 1116:
+/***/ 1126:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1117)
-	__vue_script__ = __webpack_require__(1119)
+	__webpack_require__(1127)
+	__vue_script__ = __webpack_require__(1129)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-share-pop-tip.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1120)
+	__vue_template__ = __webpack_require__(1130)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -20513,13 +20513,13 @@
 
 /***/ },
 
-/***/ 1117:
+/***/ 1127:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1118);
+	var content = __webpack_require__(1128);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -20540,7 +20540,7 @@
 
 /***/ },
 
-/***/ 1118:
+/***/ 1128:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -20555,7 +20555,7 @@
 
 /***/ },
 
-/***/ 1119:
+/***/ 1129:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20655,25 +20655,25 @@
 
 /***/ },
 
-/***/ 1120:
+/***/ 1130:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"com-share-pop-tip\" :style=\"styleObject\" @click=\"close\" @touchmove=\"touchmove\">\n  <img class=\"arrow\" src=\"http://pic.davdian.com/free/pointer.png\">\n  <div class=\"tip\">\n    <template v-if=\"isWeixin\">\n      <p>请点击右上角“分享”按钮,</p>\n      <p>然后可以选择“发送给朋友”、“分享到朋友圈”或者“复制链接”后发送链接给朋友。</p>\n    </template>\n    <template v-if=\"!isWeixin\">\n      <p>请复制地址栏链接，将链接发送给朋友</p>\n    </template>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1130:
+/***/ 1140:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1131)
-	__vue_script__ = __webpack_require__(1133)
+	__webpack_require__(1141)
+	__vue_script__ = __webpack_require__(1143)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-top-title.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1134)
+	__vue_template__ = __webpack_require__(1144)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -20699,13 +20699,13 @@
 
 /***/ },
 
-/***/ 1131:
+/***/ 1141:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1132);
+	var content = __webpack_require__(1142);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -20726,7 +20726,7 @@
 
 /***/ },
 
-/***/ 1132:
+/***/ 1142:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -20741,7 +20741,7 @@
 
 /***/ },
 
-/***/ 1133:
+/***/ 1143:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20962,26 +20962,26 @@
 
 /***/ },
 
-/***/ 1134:
+/***/ 1144:
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--顶部标题-->\n<div class=\"com-top-title\" :class=\"classObject\" v-if=\"!isDvdApp\" :style=\"styleObject\">\n  <div class=\"back-btn\" @click=\"back\">\n    <i class=\"back-arrow\"></i>\n  </div>\n  <span class=\"title\">{{title}}</span>\n  <i class=\"home\" v-if=\"home !== undefined\" @click=\"goHome\"></i>\n  <slot></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 1540:
+/***/ 1550:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1541)
-	__webpack_require__(1543)
-	__vue_script__ = __webpack_require__(1545)
+	__webpack_require__(1551)
+	__webpack_require__(1553)
+	__vue_script__ = __webpack_require__(1555)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/vue/app.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1689)
+	__vue_template__ = __webpack_require__(1699)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -21007,13 +21007,13 @@
 
 /***/ },
 
-/***/ 1541:
+/***/ 1551:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1542);
+	var content = __webpack_require__(1552);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -21034,7 +21034,7 @@
 
 /***/ },
 
-/***/ 1542:
+/***/ 1552:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -21049,13 +21049,13 @@
 
 /***/ },
 
-/***/ 1543:
+/***/ 1553:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1544);
+	var content = __webpack_require__(1554);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -21076,7 +21076,7 @@
 
 /***/ },
 
-/***/ 1544:
+/***/ 1554:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -21091,7 +21091,7 @@
 
 /***/ },
 
-/***/ 1545:
+/***/ 1555:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21112,11 +21112,11 @@
 
 	var _$2 = _interopRequireDefault(_$);
 
-	var _share = __webpack_require__(1115);
+	var _share = __webpack_require__(1125);
 
 	var _share2 = _interopRequireDefault(_share);
 
-	var _base = __webpack_require__(955);
+	var _base = __webpack_require__(965);
 
 	var _base2 = _interopRequireDefault(_base);
 
@@ -21124,7 +21124,7 @@
 
 	var _ua2 = _interopRequireDefault(_ua);
 
-	var _bus = __webpack_require__(1546);
+	var _bus = __webpack_require__(1556);
 
 	var _bus2 = _interopRequireDefault(_bus);
 
@@ -21132,9 +21132,9 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
-	__webpack_require__(1547);
+	__webpack_require__(1557);
 
-	var _index = __webpack_require__(1684);
+	var _index = __webpack_require__(1694);
 
 	var _index2 = _interopRequireDefault(_index);
 
@@ -21154,7 +21154,7 @@
 	    };
 	  },
 	  components: {
-	    'com-top-title': __webpack_require__(1130),
+	    'com-top-title': __webpack_require__(1140),
 	    ViewBox: _index2.default
 	  },
 	  created: function created() {
@@ -21238,7 +21238,7 @@
 
 /***/ },
 
-/***/ 1546:
+/***/ 1556:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21247,7 +21247,7 @@
 	  value: true
 	});
 
-	var _vue = __webpack_require__(485);
+	var _vue = __webpack_require__(495);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
@@ -21257,14 +21257,14 @@
 
 /***/ },
 
-/***/ 1547:
+/***/ 1557:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _Vue = __webpack_require__(449);
+	var _Vue = __webpack_require__(459);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
@@ -21278,7 +21278,7 @@
 
 
 	for (var i = 1; i < 27; i++) {
-	  components["item_" + i] = __webpack_require__(1548)("./item_" + i + '.vue');
+	  components["item_" + i] = __webpack_require__(1558)("./item_" + i + '.vue');
 	}
 
 	_Vue2.default.component('feed', {
@@ -21351,36 +21351,36 @@
 
 /***/ },
 
-/***/ 1548:
+/***/ 1558:
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./item_1.vue": 1549,
-		"./item_10.vue": 1554,
-		"./item_11.vue": 1569,
-		"./item_12.vue": 1572,
-		"./item_13.vue": 1575,
-		"./item_14.vue": 1578,
-		"./item_15.vue": 1581,
-		"./item_16.vue": 1584,
-		"./item_17.vue": 1587,
-		"./item_18.vue": 1590,
-		"./item_19.vue": 1595,
-		"./item_2.vue": 1608,
-		"./item_20.vue": 1611,
-		"./item_21.vue": 1619,
-		"./item_22.vue": 1624,
-		"./item_23.vue": 1629,
-		"./item_24.vue": 1634,
-		"./item_25.vue": 1637,
-		"./item_26.vue": 1644,
-		"./item_3.vue": 1647,
-		"./item_4.vue": 1654,
-		"./item_5.vue": 1661,
-		"./item_6.vue": 1666,
-		"./item_7.vue": 1671,
-		"./item_8.vue": 1676,
-		"./item_9.vue": 1679
+		"./item_1.vue": 1559,
+		"./item_10.vue": 1564,
+		"./item_11.vue": 1579,
+		"./item_12.vue": 1582,
+		"./item_13.vue": 1585,
+		"./item_14.vue": 1588,
+		"./item_15.vue": 1591,
+		"./item_16.vue": 1594,
+		"./item_17.vue": 1597,
+		"./item_18.vue": 1600,
+		"./item_19.vue": 1605,
+		"./item_2.vue": 1618,
+		"./item_20.vue": 1621,
+		"./item_21.vue": 1629,
+		"./item_22.vue": 1634,
+		"./item_23.vue": 1639,
+		"./item_24.vue": 1644,
+		"./item_25.vue": 1647,
+		"./item_26.vue": 1654,
+		"./item_3.vue": 1657,
+		"./item_4.vue": 1664,
+		"./item_5.vue": 1671,
+		"./item_6.vue": 1676,
+		"./item_7.vue": 1681,
+		"./item_8.vue": 1686,
+		"./item_9.vue": 1689
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -21393,23 +21393,23 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 1548;
+	webpackContext.id = 1558;
 
 
 /***/ },
 
-/***/ 1549:
+/***/ 1559:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1550)
-	__vue_script__ = __webpack_require__(1552)
+	__webpack_require__(1560)
+	__vue_script__ = __webpack_require__(1562)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_1.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1553)
+	__vue_template__ = __webpack_require__(1563)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -21435,13 +21435,13 @@
 
 /***/ },
 
-/***/ 1550:
+/***/ 1560:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1551);
+	var content = __webpack_require__(1561);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -21462,7 +21462,7 @@
 
 /***/ },
 
-/***/ 1551:
+/***/ 1561:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -21477,7 +21477,7 @@
 
 /***/ },
 
-/***/ 1552:
+/***/ 1562:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21532,26 +21532,26 @@
 
 /***/ },
 
-/***/ 1553:
+/***/ 1563:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"img_item\" _v-5a653ff4=\"\">\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-5a653ff4=\"\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img1.jpg\" alt=\"\" _v-5a653ff4=\"\">\n  </div>\n  <div v-if=\"environment=='preview'\" _v-5a653ff4=\"\">\n    <img :src=\"itemData.imgUrl||'https://dummyimage.com/600x300.png&amp;text=click%20mea'\" alt=\"\" _v-5a653ff4=\"\">\n  </div>\n  <div v-if=\"environment=='show'\" style=\"position: relative\" _v-5a653ff4=\"\">\n    <a v-if=\"itemData.link&amp;&amp;itemData.link.length\" :href=\"itemData.link\" _v-5a653ff4=\"\">\n      <img :src=\"itemData.imgUrl||'https://dummyimage.com/600x300.png&amp;text=click%20mea'\" alt=\"\" _v-5a653ff4=\"\">\n    </a>\n    <img style=\"position: relative;left: 0;top: 0;\" v-else=\"\" :src=\"itemData.imgUrl||'https://dummyimage.com/600x300.png&amp;text=click%20mea'\" alt=\"\" _v-5a653ff4=\"\">\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1554:
+/***/ 1564:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1555)
-	__webpack_require__(1557)
-	__vue_script__ = __webpack_require__(1559)
+	__webpack_require__(1565)
+	__webpack_require__(1567)
+	__vue_script__ = __webpack_require__(1569)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_10.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1568)
+	__vue_template__ = __webpack_require__(1578)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -21577,13 +21577,13 @@
 
 /***/ },
 
-/***/ 1555:
+/***/ 1565:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1556);
+	var content = __webpack_require__(1566);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -21604,7 +21604,7 @@
 
 /***/ },
 
-/***/ 1556:
+/***/ 1566:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -21619,13 +21619,13 @@
 
 /***/ },
 
-/***/ 1557:
+/***/ 1567:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1558);
+	var content = __webpack_require__(1568);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -21646,7 +21646,7 @@
 
 /***/ },
 
-/***/ 1558:
+/***/ 1568:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -21661,7 +21661,7 @@
 
 /***/ },
 
-/***/ 1559:
+/***/ 1569:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21670,11 +21670,11 @@
 	  value: true
 	});
 
-	var _goodsItemHandler = __webpack_require__(1560);
+	var _goodsItemHandler = __webpack_require__(1570);
 
 	var _goodsItemHandler2 = _interopRequireDefault(_goodsItemHandler);
 
-	var _index = __webpack_require__(1561);
+	var _index = __webpack_require__(1571);
 
 	var _index2 = _interopRequireDefault(_index);
 
@@ -21727,7 +21727,7 @@
 
 /***/ },
 
-/***/ 1560:
+/***/ 1570:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -21843,18 +21843,18 @@
 
 /***/ },
 
-/***/ 1561:
+/***/ 1571:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1562)
-	__vue_script__ = __webpack_require__(1564)
+	__webpack_require__(1572)
+	__vue_script__ = __webpack_require__(1574)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/x-img/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1567)
+	__vue_template__ = __webpack_require__(1577)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -21880,13 +21880,13 @@
 
 /***/ },
 
-/***/ 1562:
+/***/ 1572:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1563);
+	var content = __webpack_require__(1573);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -21907,7 +21907,7 @@
 
 /***/ },
 
-/***/ 1563:
+/***/ 1573:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -21922,7 +21922,7 @@
 
 /***/ },
 
-/***/ 1564:
+/***/ 1574:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21931,15 +21931,15 @@
 	  value: true
 	});
 
-	var _vuxBlazy = __webpack_require__(1565);
+	var _vuxBlazy = __webpack_require__(1575);
 
 	var _vuxBlazy2 = _interopRequireDefault(_vuxBlazy);
 
-	var _webpSupport = __webpack_require__(1566);
+	var _webpSupport = __webpack_require__(1576);
 
 	var _webpSupport2 = _interopRequireDefault(_webpSupport);
 
-	var _mixin_uuid = __webpack_require__(1039);
+	var _mixin_uuid = __webpack_require__(1049);
 
 	var _mixin_uuid2 = _interopRequireDefault(_mixin_uuid);
 
@@ -22028,7 +22028,7 @@
 
 /***/ },
 
-/***/ 1565:
+/***/ 1575:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -22368,7 +22368,7 @@
 
 /***/ },
 
-/***/ 1566:
+/***/ 1576:
 /***/ function(module, exports) {
 
 	var webp_name = 'can_use_webp';
@@ -22402,31 +22402,31 @@
 
 /***/ },
 
-/***/ 1567:
+/***/ 1577:
 /***/ function(module, exports) {
 
 	module.exports = "\n<img :src=\"defaultSrc\" :data-src=\"currentSrc\" class=\"vux-x-img\"/>\n";
 
 /***/ },
 
-/***/ 1568:
+/***/ 1578:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-1b838e28=\"\">\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-1b838e28=\"\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img11.jpg\" alt=\"\" _v-1b838e28=\"\">\n  </div>\n\n  <div v-if=\"environment=='preview'\" class=\"goods_group_con\" _v-1b838e28=\"\">\n    <div v-for=\"(item, index) in previewData\" :key=\"index\" class=\"goods_item\" _v-1b838e28=\"\">\n      <img class=\"goods_img\" :src=\"item.goods_img\" _v-1b838e28=\"\">\n      <div class=\"goods_title\" v-text=\"item.goods_name\" _v-1b838e28=\"\"></div>\n      <div class=\"goods_price_outer\" _v-1b838e28=\"\">\n        <!--<span class=\"price\" v-text=\"`¥${item.shop_price}`\"></span>-->\n        <span class=\"price\" v-text=\"'¥'+item.shop_price\" _v-1b838e28=\"\"></span>\n        <span class=\"market_price\" v-text=\"'¥'+item.market_price\" _v-1b838e28=\"\"></span>\n        <span class=\"buy_btn\" _v-1b838e28=\"\">立即购买</span>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"environment=='show'\" class=\"goods_group_con\" _v-1b838e28=\"\">\n    <a :href=\"item.url\" v-for=\"(item, index) in previewData\" :key=\"index\" class=\"goods_item\" _v-1b838e28=\"\">\n      <div class=\"goods_img\" _v-1b838e28=\"\">\n        <!--<x-img v-if=\"index>3\" :src=\"item.goods_img\" default-src=\"http://pic.davdian.com/free/2017/06/08/160_160_4d0f1e2009fdfd8bb0c430cda8e22a82.png\" container=\"#vux_view_box_body\"></x-img>-->\n        <!--<img v-else  :src=\"item.goods_img\">-->\n        <img :src=\"item.goods_img\" _v-1b838e28=\"\">\n        <span class=\"img_label\" v-if=\"item.goods_label&amp;&amp;item.goods_label.length\" v-text=\"item.goods_label\" _v-1b838e28=\"\"></span>\n      </div>\n      <div class=\"goods_title\" v-text=\"item.goods_name\" _v-1b838e28=\"\"></div>\n      <div class=\"goods_price_outer\" _v-1b838e28=\"\">\n        <span v-if=\"item.price\" class=\"price\" _v-1b838e28=\"\">\n          <small _v-1b838e28=\"\">¥</small>{{item.price[0]}}<small _v-1b838e28=\"\">{{item.price[1]}}</small>\n        </span>\n        <span class=\"vip_return\" v-if=\"item.seller_income &amp;&amp; item.seller_income != '0'\" _v-1b838e28=\"\">\n          <span class=\"vip_return_title\" _v-1b838e28=\"\">会员返</span>\n          <span class=\"vip_return_f\" _v-1b838e28=\"\">¥</span>\n          <span class=\"vip_return_price\" _v-1b838e28=\"\">{{item.seller_income}}</span>\n        </span>\n      </div>\n    </a>\n  </div>\n\n</div>\n";
 
 /***/ },
 
-/***/ 1569:
+/***/ 1579:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1570)
+	__vue_script__ = __webpack_require__(1580)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_11.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1571)
+	__vue_template__ = __webpack_require__(1581)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -22452,7 +22452,7 @@
 
 /***/ },
 
-/***/ 1570:
+/***/ 1580:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22482,24 +22482,24 @@
 
 /***/ },
 
-/***/ 1571:
+/***/ 1581:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img12.jpg\" alt=\"\">\n  </div>\n\n</div>\n";
 
 /***/ },
 
-/***/ 1572:
+/***/ 1582:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1573)
+	__vue_script__ = __webpack_require__(1583)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_12.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1574)
+	__vue_template__ = __webpack_require__(1584)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -22525,7 +22525,7 @@
 
 /***/ },
 
-/***/ 1573:
+/***/ 1583:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22565,24 +22565,24 @@
 
 /***/ },
 
-/***/ 1574:
+/***/ 1584:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img13.jpg\" alt=\"\">\n  </div>\n  <!--<div class=\"video_container\" v-if=\"environment==`preview`\">-->\n  <div class=\"video_container\" v-if=\"environment=='preview'\">\n    <!--<img v-if=\"!itemData.con||itemData.con==``\" src=\"https://dummyimage.com/600x300.png&text=click%20me%20to%20input\" alt=\"\">-->\n    <img v-if=\"!itemData.con||itemData.con==''\" src=\"https://dummyimage.com/600x300.png&text=click%20me%20to%20input\" alt=\"\">\n    <div v-html=\"itemData.con\" v-else></div>\n  </div>\n\n  <!--<div v-if=\"environment==`show`&&itemData.con&&itemData.con.length\">-->\n  <div v-if=\"environment=='show'&&itemData.con&&itemData.con.length\">\n    <div v-html=\"itemData.con\"></div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1575:
+/***/ 1585:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1576)
+	__vue_script__ = __webpack_require__(1586)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_13.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1577)
+	__vue_template__ = __webpack_require__(1587)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -22608,7 +22608,7 @@
 
 /***/ },
 
-/***/ 1576:
+/***/ 1586:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22638,24 +22638,24 @@
 
 /***/ },
 
-/***/ 1577:
+/***/ 1587:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img13.jpg\" alt=\"\">\n  </div>\n\n</div>\n";
 
 /***/ },
 
-/***/ 1578:
+/***/ 1588:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1579)
+	__vue_script__ = __webpack_require__(1589)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_14.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1580)
+	__vue_template__ = __webpack_require__(1590)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -22681,7 +22681,7 @@
 
 /***/ },
 
-/***/ 1579:
+/***/ 1589:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22711,24 +22711,24 @@
 
 /***/ },
 
-/***/ 1580:
+/***/ 1590:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img14.jpg\" alt=\"\">\n  </div>\n\n</div>\n";
 
 /***/ },
 
-/***/ 1581:
+/***/ 1591:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1582)
+	__vue_script__ = __webpack_require__(1592)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_15.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1583)
+	__vue_template__ = __webpack_require__(1593)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -22754,7 +22754,7 @@
 
 /***/ },
 
-/***/ 1582:
+/***/ 1592:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22784,24 +22784,24 @@
 
 /***/ },
 
-/***/ 1583:
+/***/ 1593:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img15.jpg\" alt=\"\">\n  </div>\n\n</div>\n";
 
 /***/ },
 
-/***/ 1584:
+/***/ 1594:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1585)
+	__vue_script__ = __webpack_require__(1595)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_16.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1586)
+	__vue_template__ = __webpack_require__(1596)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -22827,7 +22827,7 @@
 
 /***/ },
 
-/***/ 1585:
+/***/ 1595:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22857,24 +22857,24 @@
 
 /***/ },
 
-/***/ 1586:
+/***/ 1596:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img16.jpg\" alt=\"\">\n  </div>\n\n</div>\n";
 
 /***/ },
 
-/***/ 1587:
+/***/ 1597:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1588)
+	__vue_script__ = __webpack_require__(1598)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_17.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1589)
+	__vue_template__ = __webpack_require__(1599)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -22900,7 +22900,7 @@
 
 /***/ },
 
-/***/ 1588:
+/***/ 1598:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22930,25 +22930,25 @@
 
 /***/ },
 
-/***/ 1589:
+/***/ 1599:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img17.jpg\" alt=\"\">\n  </div>\n\n</div>\n";
 
 /***/ },
 
-/***/ 1590:
+/***/ 1600:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1591)
-	__vue_script__ = __webpack_require__(1593)
+	__webpack_require__(1601)
+	__vue_script__ = __webpack_require__(1603)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_18.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1594)
+	__vue_template__ = __webpack_require__(1604)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -22974,13 +22974,13 @@
 
 /***/ },
 
-/***/ 1591:
+/***/ 1601:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1592);
+	var content = __webpack_require__(1602);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -23001,7 +23001,7 @@
 
 /***/ },
 
-/***/ 1592:
+/***/ 1602:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -23016,7 +23016,7 @@
 
 /***/ },
 
-/***/ 1593:
+/***/ 1603:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23025,7 +23025,7 @@
 	  value: true
 	});
 
-	var _index = __webpack_require__(1561);
+	var _index = __webpack_require__(1571);
 
 	var _index2 = _interopRequireDefault(_index);
 
@@ -23062,26 +23062,26 @@
 
 /***/ },
 
-/***/ 1594:
+/***/ 1604:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div _v-1aa21618=\"\">\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-1aa21618=\"\">\n    <img src=\"http://pic.davdian.com/free/2017/01/16/750_840_9e87809a2caf26a824c9306d3a7c6efd.png\" alt=\"\" _v-1aa21618=\"\">\n  </div>\n  <div v-if=\"environment=='preview'\" class=\"goods_group\" _v-1aa21618=\"\">\n    <div v-for=\"(item, index) in previewData\" :key=\"index\" class=\"goods_item\" _v-1aa21618=\"\">\n      <div class=\"goods_img\" _v-1aa21618=\"\">\n        <img :src=\"item.goods_img\" :alt=\"item.goods_name\" _v-1aa21618=\"\">\n        <span class=\"img_label\" v-if=\"item.goods_label&amp;&amp;item.goods_label.length\" v-text=\"item.goods_label\" _v-1aa21618=\"\"></span>\n      </div>\n      <div v-text=\"item.goods_name\" class=\"goods_name\" _v-1aa21618=\"\"></div>\n      <div class=\"goods_price\" _v-1aa21618=\"\"><small _v-1aa21618=\"\">¥</small>{{item.price[0]}}<small _v-1aa21618=\"\">{{item.price[1]}}</small></div>\n      <span class=\"vip_return\" v-if=\"item.seller_income &amp;&amp; item.seller_income != '0'\" _v-1aa21618=\"\">\n            <span class=\"vip_return_title\" _v-1aa21618=\"\">会员返</span>\n            <span class=\"vip_return_f\" _v-1aa21618=\"\">¥</span>\n            <span class=\"vip_return_price\" _v-1aa21618=\"\">{{item.seller_income}}</span>\n          </span>\n    </div>\n  </div>\n  <div v-if=\"environment=='show'\" class=\"goods_group\" _v-1aa21618=\"\">\n    <category :list=\"itemData.previewData\" :column=\"3 \" _v-1aa21618=\"\"></category>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1595:
+/***/ 1605:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1596)
-	__webpack_require__(1598)
-	__vue_script__ = __webpack_require__(1600)
+	__webpack_require__(1606)
+	__webpack_require__(1608)
+	__vue_script__ = __webpack_require__(1610)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_19.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1607)
+	__vue_template__ = __webpack_require__(1617)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -23107,13 +23107,13 @@
 
 /***/ },
 
-/***/ 1596:
+/***/ 1606:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1597);
+	var content = __webpack_require__(1607);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -23134,7 +23134,7 @@
 
 /***/ },
 
-/***/ 1597:
+/***/ 1607:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -23149,13 +23149,13 @@
 
 /***/ },
 
-/***/ 1598:
+/***/ 1608:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1599);
+	var content = __webpack_require__(1609);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -23176,7 +23176,7 @@
 
 /***/ },
 
-/***/ 1599:
+/***/ 1609:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -23191,7 +23191,7 @@
 
 /***/ },
 
-/***/ 1600:
+/***/ 1610:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23200,23 +23200,23 @@
 	  value: true
 	});
 
-	var _tab = __webpack_require__(924);
+	var _tab = __webpack_require__(934);
 
 	var _tab2 = _interopRequireDefault(_tab);
 
-	var _tabItem = __webpack_require__(930);
+	var _tabItem = __webpack_require__(940);
 
 	var _tabItem2 = _interopRequireDefault(_tabItem);
 
-	var _index = __webpack_require__(1601);
+	var _index = __webpack_require__(1611);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(1063);
+	var _index3 = __webpack_require__(1073);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _bus = __webpack_require__(1546);
+	var _bus = __webpack_require__(1556);
 
 	var _bus2 = _interopRequireDefault(_bus);
 
@@ -23284,18 +23284,18 @@
 
 /***/ },
 
-/***/ 1601:
+/***/ 1611:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1602)
-	__vue_script__ = __webpack_require__(1604)
+	__webpack_require__(1612)
+	__vue_script__ = __webpack_require__(1614)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/sticky/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1606)
+	__vue_template__ = __webpack_require__(1616)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -23321,13 +23321,13 @@
 
 /***/ },
 
-/***/ 1602:
+/***/ 1612:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1603);
+	var content = __webpack_require__(1613);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -23348,7 +23348,7 @@
 
 /***/ },
 
-/***/ 1603:
+/***/ 1613:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -23363,7 +23363,7 @@
 
 /***/ },
 
-/***/ 1604:
+/***/ 1614:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23372,7 +23372,7 @@
 	  value: true
 	});
 
-	var _sticky = __webpack_require__(1605);
+	var _sticky = __webpack_require__(1615);
 
 	var _sticky2 = _interopRequireDefault(_sticky);
 
@@ -23423,7 +23423,7 @@
 
 /***/ },
 
-/***/ 1605:
+/***/ 1615:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23502,31 +23502,31 @@
 
 /***/ },
 
-/***/ 1606:
+/***/ 1616:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-sticky-box\">\n  <slot></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 1607:
+/***/ 1617:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-1a85e716=\"\">\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-1a85e716=\"\">\n    <img src=\"http://pic.davdian.com/free/2017/01/16/750_164_29b5a5aaec2047c94c9154f3908bfdfc.png\" alt=\"\" _v-1a85e716=\"\">\n  </div>\n  <div v-if=\"environment=='preview'\" class=\"navigation_container\" _v-1a85e716=\"\">\n    <ul class=\"navigation_menu\" v-if=\"itemData.tab&amp;&amp;itemData.tab.length\" _v-1a85e716=\"\">\n      <li v-for=\"(value,index) in itemData.tab\" :key=\"index\" _v-1a85e716=\"\">\n        <span v-text=\"value\" _v-1a85e716=\"\"></span>\n      </li>\n    </ul>\n    <div v-else=\"\" _v-1a85e716=\"\">导航位置</div>\n  </div>\n\n  <div v-if=\"environment=='show'\" style=\"height:44px;max-width: 640px;\" _v-1a85e716=\"\">\n    <sticky scroll-box=\"vux_view_box_body\" :offset=\"offsetTop\" :check-sticky-support=\"false\" _v-1a85e716=\"\">\n      <tab :line-width=\"1\" active-color=\"#ff4a7d\" style=\"max-width: 640px\" _v-1a85e716=\"\">\n        <tab-item @on-item-click=\"itemClickHandle\" :selected=\" encodeURI(value).toString().replace(/%/g, '') === selectedName\" v-for=\"(value,index) in itemData.tab\" :key=\"index\" v-text=\"value\" _v-1a85e716=\"\">\n          正在\n        </tab-item>\n      </tab>\n    </sticky>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1608:
+/***/ 1618:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1609)
+	__vue_script__ = __webpack_require__(1619)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_2.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1610)
+	__vue_template__ = __webpack_require__(1620)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -23552,7 +23552,7 @@
 
 /***/ },
 
-/***/ 1609:
+/***/ 1619:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23565,7 +23565,7 @@
 
 	var _comMaybeyoulike2 = _interopRequireDefault(_comMaybeyoulike);
 
-	var _index = __webpack_require__(1561);
+	var _index = __webpack_require__(1571);
 
 	var _index2 = _interopRequireDefault(_index);
 
@@ -23609,25 +23609,25 @@
 
 /***/ },
 
-/***/ 1610:
+/***/ 1620:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div>\n  <div class=\"img_container\" v-if=\"environment=='menu'\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_image_2.jpg\" alt=\"\">\n  </div>\n\n  <div v-if=\"environment=='preview'\" class=\"goods_group\">\n    <div  v-for=\"(item, index) in itemData.previewData\" :key=\"index\" class=\"goods_item\">\n      <div class=\"goods_img\">\n        <img :src=\"item.goods_img\" :alt=\"item.goods_name\" >\n        <span class=\"img_label\" v-if=\"item.goods_label&&item.goods_label.length\" v-text=\"item.goods_label\"></span>\n      </div>\n      <div v-text=\"item.goods_name\" class=\"goods_name\"></div>\n      <div class=\"goods_price\">\n        <span class=\"price\" ><small>¥</small>{{item.shop_price}}</span>\n        <span class=\"vip_return\" v-if = \"item.seller_income && item.seller_income != '0'\">\n            <span class=\"vip_return_title\">会员返</span>\n            <span class=\"vip_return_f\">¥</span>\n            <span class=\"vip_return_price\">{{item.seller_income}}</span>\n          </span>\n      </div>\n    </div>\n  </div>\n  <div v-if=\"environment=='show'\" class=\"goods_group\">\n    <category :list = \"itemData.previewData\"></category>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1611:
+/***/ 1621:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1612)
-	__vue_script__ = __webpack_require__(1615)
+	__webpack_require__(1622)
+	__vue_script__ = __webpack_require__(1625)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_20.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1618)
+	__vue_template__ = __webpack_require__(1628)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -23653,13 +23653,13 @@
 
 /***/ },
 
-/***/ 1612:
+/***/ 1622:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1613);
+	var content = __webpack_require__(1623);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -23680,12 +23680,12 @@
 
 /***/ },
 
-/***/ 1613:
+/***/ 1623:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
 	// imports
-	exports.i(__webpack_require__(1614), "");
+	exports.i(__webpack_require__(1624), "");
 
 	// module
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.titText[_v-1819dcea] {\n  background: #FFF9E3;\n  color: #F3A100;\n}\n", ""]);
@@ -23695,7 +23695,7 @@
 
 /***/ },
 
-/***/ 1614:
+/***/ 1624:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -23710,7 +23710,7 @@
 
 /***/ },
 
-/***/ 1615:
+/***/ 1625:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23719,7 +23719,7 @@
 	  value: true
 	});
 
-	__webpack_require__(1616);
+	__webpack_require__(1626);
 
 	exports.default = {
 	  data: function data() {
@@ -23755,32 +23755,32 @@
 
 /***/ },
 
-/***/ 1616:
+/***/ 1626:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1618:
+/***/ 1628:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-1819dcea=\"\">\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-1819dcea=\"\">\n    <img src=\"http://pic.davdian.com/free/2017/01/16/750_88_abe221dc815fe2c81c4bbc34ac9c7142.png\" alt=\"\" _v-1819dcea=\"\">\n  </div>\n  <div v-if=\"environment=='preview'||environment=='show'\" _v-1819dcea=\"\">\n    <div class=\"titText\" _v-1819dcea=\"\">\n      <span class=\"title_left\" _v-1819dcea=\"\">//</span>\n      <span v-text=\"itemData.navigationTitle\" _v-1819dcea=\"\"></span>\n      <span class=\"title_right\" _v-1819dcea=\"\">//</span>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1619:
+/***/ 1629:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1620)
-	__vue_script__ = __webpack_require__(1622)
+	__webpack_require__(1630)
+	__vue_script__ = __webpack_require__(1632)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_21.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1623)
+	__vue_template__ = __webpack_require__(1633)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -23806,13 +23806,13 @@
 
 /***/ },
 
-/***/ 1620:
+/***/ 1630:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1621);
+	var content = __webpack_require__(1631);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -23833,7 +23833,7 @@
 
 /***/ },
 
-/***/ 1621:
+/***/ 1631:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -23848,7 +23848,7 @@
 
 /***/ },
 
-/***/ 1622:
+/***/ 1632:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23857,7 +23857,7 @@
 	  value: true
 	});
 
-	__webpack_require__(1616);
+	__webpack_require__(1626);
 
 	exports.default = {
 	  data: function data() {
@@ -23892,25 +23892,25 @@
 
 /***/ },
 
-/***/ 1623:
+/***/ 1633:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-17fdade8=\"\">\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-17fdade8=\"\">\n    <img src=\"http://pic.davdian.com/free/2017/01/16/750_88_b7b867f88cbbe333120de933699abefe.png\" alt=\"\" _v-17fdade8=\"\">\n  </div>\n  <div v-if=\"environment=='preview'||environment=='show'\" _v-17fdade8=\"\">\n    <div class=\"titText\" _v-17fdade8=\"\">\n      <span class=\"title_left\" _v-17fdade8=\"\">//</span>\n      <span v-text=\"itemData.navigationTitle\" _v-17fdade8=\"\"></span>\n      <span class=\"title_right\" _v-17fdade8=\"\">//</span>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1624:
+/***/ 1634:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1625)
-	__vue_script__ = __webpack_require__(1627)
+	__webpack_require__(1635)
+	__vue_script__ = __webpack_require__(1637)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_22.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1628)
+	__vue_template__ = __webpack_require__(1638)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -23936,13 +23936,13 @@
 
 /***/ },
 
-/***/ 1625:
+/***/ 1635:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1626);
+	var content = __webpack_require__(1636);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -23963,7 +23963,7 @@
 
 /***/ },
 
-/***/ 1626:
+/***/ 1636:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -23978,7 +23978,7 @@
 
 /***/ },
 
-/***/ 1627:
+/***/ 1637:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23987,7 +23987,7 @@
 	  value: true
 	});
 
-	__webpack_require__(1616);
+	__webpack_require__(1626);
 
 	exports.default = {
 	  data: function data() {
@@ -24022,25 +24022,25 @@
 
 /***/ },
 
-/***/ 1628:
+/***/ 1638:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-17e17ee6=\"\">\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-17e17ee6=\"\">\n    <img src=\"http://pic.davdian.com/free/2017/01/16/750_88_f0322789dc2ae0bdf52dc09fe4d29002.png\" alt=\"\" _v-17e17ee6=\"\">\n  </div>\n  <div v-if=\"environment=='preview'||environment=='show'\" _v-17e17ee6=\"\">\n    <div class=\"titText\" _v-17e17ee6=\"\">\n      <span class=\"title_left\" _v-17e17ee6=\"\">//</span>\n      <span v-text=\"itemData.navigationTitle\" _v-17e17ee6=\"\"></span>\n      <span class=\"title_right\" _v-17e17ee6=\"\">//</span>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1629:
+/***/ 1639:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1630)
-	__vue_script__ = __webpack_require__(1632)
+	__webpack_require__(1640)
+	__vue_script__ = __webpack_require__(1642)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_23.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1633)
+	__vue_template__ = __webpack_require__(1643)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -24066,13 +24066,13 @@
 
 /***/ },
 
-/***/ 1630:
+/***/ 1640:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1631);
+	var content = __webpack_require__(1641);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -24093,7 +24093,7 @@
 
 /***/ },
 
-/***/ 1631:
+/***/ 1641:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -24108,7 +24108,7 @@
 
 /***/ },
 
-/***/ 1632:
+/***/ 1642:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24117,7 +24117,7 @@
 	  value: true
 	});
 
-	__webpack_require__(1616);
+	__webpack_require__(1626);
 
 	exports.default = {
 	  data: function data() {
@@ -24152,24 +24152,24 @@
 
 /***/ },
 
-/***/ 1633:
+/***/ 1643:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-17c54fe4=\"\">\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-17c54fe4=\"\">\n    <img src=\"http://pic.davdian.com/free/2017/01/16/750_88_00ba53166b249f80458d6e25fd824934.png\" alt=\"\" _v-17c54fe4=\"\">\n  </div>\n  <div v-if=\"environment=='preview'||environment=='show'\" _v-17c54fe4=\"\">\n    <div class=\"titText\" _v-17c54fe4=\"\">\n      <span class=\"title_left\" _v-17c54fe4=\"\">//</span>\n      <span v-text=\"itemData.navigationTitle\" _v-17c54fe4=\"\"></span>\n      <span class=\"title_right\" _v-17c54fe4=\"\">//</span>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1634:
+/***/ 1644:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1635)
+	__vue_script__ = __webpack_require__(1645)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_24.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1636)
+	__vue_template__ = __webpack_require__(1646)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -24195,7 +24195,7 @@
 
 /***/ },
 
-/***/ 1635:
+/***/ 1645:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -24227,26 +24227,26 @@
 
 /***/ },
 
-/***/ 1636:
+/***/ 1646:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\">\n    <img src=\"http://pic.davdian.com/free/2017/01/17/750_20_9c94e8e5db15bafa28f32fcba2eb40c7.png\" alt=\"\">\n  </div>\n  <div v-if=\"environment=='preview'||environment=='show'\">\n    <div :style=\"{height:itemData.value+'px'}\"></div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1637:
+/***/ 1647:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1638)
-	__webpack_require__(1640)
-	__vue_script__ = __webpack_require__(1642)
+	__webpack_require__(1648)
+	__webpack_require__(1650)
+	__vue_script__ = __webpack_require__(1652)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_25.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1643)
+	__vue_template__ = __webpack_require__(1653)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -24272,13 +24272,13 @@
 
 /***/ },
 
-/***/ 1638:
+/***/ 1648:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1639);
+	var content = __webpack_require__(1649);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -24299,7 +24299,7 @@
 
 /***/ },
 
-/***/ 1639:
+/***/ 1649:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -24314,13 +24314,13 @@
 
 /***/ },
 
-/***/ 1640:
+/***/ 1650:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1641);
+	var content = __webpack_require__(1651);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -24341,7 +24341,7 @@
 
 /***/ },
 
-/***/ 1641:
+/***/ 1651:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -24356,7 +24356,7 @@
 
 /***/ },
 
-/***/ 1642:
+/***/ 1652:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24365,11 +24365,11 @@
 	  value: true
 	});
 
-	var _goodsItemHandler = __webpack_require__(1560);
+	var _goodsItemHandler = __webpack_require__(1570);
 
 	var _goodsItemHandler2 = _interopRequireDefault(_goodsItemHandler);
 
-	var _index = __webpack_require__(1561);
+	var _index = __webpack_require__(1571);
 
 	var _index2 = _interopRequireDefault(_index);
 
@@ -24416,24 +24416,24 @@
 
 /***/ },
 
-/***/ 1643:
+/***/ 1653:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-178cf1e0=\"\">\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-178cf1e0=\"\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img_25.png\" alt=\"\" _v-178cf1e0=\"\">\n  </div>\n\n  <div v-if=\"environment=='preview'\" class=\"goods_group_con\" _v-178cf1e0=\"\">\n    <div v-for=\"(item, index) in previewData\" :key=\"index\" class=\"cross_goods_item goods_cross goods_cross2\" _v-178cf1e0=\"\">\n      <div class=\"goods_img\" _v-178cf1e0=\"\">\n        <img :src=\"item.goods_img\" :alt=\"item.goods_name\" _v-178cf1e0=\"\">\n        <span class=\"img_label\" v-if=\"item.goods_label&amp;&amp;item.goods_label.length\" v-text=\"item.goods_label\" _v-178cf1e0=\"\"></span>\n      </div>\n      <div class=\"goods_info\" _v-178cf1e0=\"\">\n        <div v-text=\"item.goods_name\" class=\"goods_title\" _v-178cf1e0=\"\"></div>\n        <div class=\"goods_price_outer\" _v-178cf1e0=\"\">\n          <span class=\"price\" _v-178cf1e0=\"\"><small _v-178cf1e0=\"\">¥</small>{{item.shop_price}}</span>\n          <span class=\"vip_return\" v-if=\"item.seller_income &amp;&amp; item.seller_income != '0'\" _v-178cf1e0=\"\">\n            <span class=\"vip_return_title\" _v-178cf1e0=\"\">会员返</span>\n            <span class=\"vip_return_f\" _v-178cf1e0=\"\">¥</span>\n            <span class=\"vip_return_price\" _v-178cf1e0=\"\">{{item.seller_income}}</span>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"environment=='show'\" class=\"goods_group_con\" _v-178cf1e0=\"\">\n    <a :href=\"item.url\" v-for=\"(item, index) in previewData\" :key=\"index\" class=\"cross_goods_item goods_cross goods_cross2\" _v-178cf1e0=\"\">\n      <div class=\"goods_img\" _v-178cf1e0=\"\">\n        <!--<x-img v-if=\"index>6\" :src=\"item.goods_img\" default-src=\"http://pic.davdian.com/free/2017/06/08/160_160_4d0f1e2009fdfd8bb0c430cda8e22a82.png\" container=\"#vux_view_box_body\"></x-img>-->\n        <!--<img v-else  :src=\"item.goods_img\">-->\n        <img :src=\"item.goods_img\" _v-178cf1e0=\"\">\n        <span class=\"img_label\" v-if=\"item.goods_label&amp;&amp;item.goods_label.length\" v-text=\"item.goods_label\" _v-178cf1e0=\"\"></span>\n      </div>\n      <div class=\"goods_info\" _v-178cf1e0=\"\">\n        <div v-text=\"item.goods_name\" class=\"goods_title\" _v-178cf1e0=\"\"></div>\n        <div class=\"goods_price_outer\" _v-178cf1e0=\"\">\n          <span v-if=\"item.price\" class=\"price\" _v-178cf1e0=\"\"><small _v-178cf1e0=\"\">¥</small>{{item.price[0]}}<small _v-178cf1e0=\"\">{{item.price[1]}}</small></span>\n          <span class=\"vip_return\" _v-178cf1e0=\"\">\n            <span class=\"vip_return_title\" _v-178cf1e0=\"\">会员返</span>\n            <span class=\"vip_return_f\" _v-178cf1e0=\"\">¥</span>\n            <span class=\"vip_return_price\" _v-178cf1e0=\"\">{{item.seller_income}}</span>\n          </span>\n        </div>\n      </div>\n    </a>\n  </div>\n\n</div>\n";
 
 /***/ },
 
-/***/ 1644:
+/***/ 1654:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1645)
+	__vue_script__ = __webpack_require__(1655)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_26.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1646)
+	__vue_template__ = __webpack_require__(1656)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -24459,7 +24459,7 @@
 
 /***/ },
 
-/***/ 1645:
+/***/ 1655:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24468,11 +24468,11 @@
 	  value: true
 	});
 
-	var _swiper = __webpack_require__(988);
+	var _swiper = __webpack_require__(998);
 
 	var _swiper2 = _interopRequireDefault(_swiper);
 
-	var _swiperItem = __webpack_require__(1006);
+	var _swiperItem = __webpack_require__(1016);
 
 	var _swiperItem2 = _interopRequireDefault(_swiperItem);
 
@@ -24507,26 +24507,26 @@
 
 /***/ },
 
-/***/ 1646:
+/***/ 1656:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img1.jpg\" alt=\"\">\n  </div>\n  <div v-if=\"environment=='preview'\">\n    <!--<img :src=\"itemData.imgList[0].imgUrl||`https://dummyimage.com/600x300.png&text=click%20mea`\" alt=\"\">-->\n    <img :src=\"itemData.imgList[0].imgUrl||'https://dummyimage.com/600x300.png&text=click%20mea'\" alt=\"\">\n  </div>\n  <div v-if=\"environment=='show'\">\n    <swiper loop auto :aspect-ratio=\"ratio\" :list=\"list\" :show-desc-mask=\"false\" :show-dots=\"false\">\n    </swiper>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1647:
+/***/ 1657:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1648)
-	__webpack_require__(1650)
-	__vue_script__ = __webpack_require__(1652)
+	__webpack_require__(1658)
+	__webpack_require__(1660)
+	__vue_script__ = __webpack_require__(1662)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_3.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1653)
+	__vue_template__ = __webpack_require__(1663)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -24552,13 +24552,13 @@
 
 /***/ },
 
-/***/ 1648:
+/***/ 1658:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1649);
+	var content = __webpack_require__(1659);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -24579,7 +24579,7 @@
 
 /***/ },
 
-/***/ 1649:
+/***/ 1659:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -24594,13 +24594,13 @@
 
 /***/ },
 
-/***/ 1650:
+/***/ 1660:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1651);
+	var content = __webpack_require__(1661);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -24621,7 +24621,7 @@
 
 /***/ },
 
-/***/ 1651:
+/***/ 1661:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -24636,7 +24636,7 @@
 
 /***/ },
 
-/***/ 1652:
+/***/ 1662:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24645,7 +24645,7 @@
 	  value: true
 	});
 
-	var _goodsItemHandler = __webpack_require__(1560);
+	var _goodsItemHandler = __webpack_require__(1570);
 
 	var _goodsItemHandler2 = _interopRequireDefault(_goodsItemHandler);
 
@@ -24726,26 +24726,26 @@
 
 /***/ },
 
-/***/ 1653:
+/***/ 1663:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-5a816ef6=\"\">\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-5a816ef6=\"\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img10.jpg\" alt=\"\" _v-5a816ef6=\"\">\n  </div>\n  <div v-if=\"environment=='preview'\" class=\"goods_group\" _v-5a816ef6=\"\">\n    <div v-for=\"(item, index) in previewData\" :key=\"index\" class=\"goods_item\" _v-5a816ef6=\"\">\n      <img :src=\"item.goods_img\" :alt=\"item.goods_name\" class=\"goods_img\" _v-5a816ef6=\"\">\n      <div v-text=\"item.goods_name\" class=\"goods_name\" _v-5a816ef6=\"\"></div>\n      <div class=\"goods_price\" _v-5a816ef6=\"\">\n        <!--<span class=\"price\" v-text=\"`¥${item.shop_price}`\"></span>-->\n        <span class=\"price\" v-text=\"'¥'+item.shop_price\" _v-5a816ef6=\"\"></span>\n        <span class=\"buy_btn\" _v-5a816ef6=\"\">立即购买</span>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"environment=='show'\" class=\"goods_group\" _v-5a816ef6=\"\">\n    <a :href=\"item.url\" v-for=\"(item, index) in previewData\" :key=\"index\" class=\"goods_item\" _v-5a816ef6=\"\">\n      <img :src=\"item.goods_img\" :alt=\"item.goods_name\" class=\"goods_img\" _v-5a816ef6=\"\">\n      <div v-text=\"item.goods_name\" class=\"goods_name\" _v-5a816ef6=\"\"></div>\n      <div class=\"goods_price\" _v-5a816ef6=\"\">\n        <!--<span class=\"price\" v-text=\"`¥${item.shop_price}`\"></span>-->\n        <span class=\"price\" v-text=\"'¥'+item.shop_price\" _v-5a816ef6=\"\"></span>\n        <span class=\"buy_btn\" _v-5a816ef6=\"\">立即购买</span>\n      </div>\n    </a>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1654:
+/***/ 1664:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1655)
-	__webpack_require__(1657)
-	__vue_script__ = __webpack_require__(1659)
+	__webpack_require__(1665)
+	__webpack_require__(1667)
+	__vue_script__ = __webpack_require__(1669)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_4.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1660)
+	__vue_template__ = __webpack_require__(1670)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -24771,13 +24771,13 @@
 
 /***/ },
 
-/***/ 1655:
+/***/ 1665:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1656);
+	var content = __webpack_require__(1666);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -24798,7 +24798,7 @@
 
 /***/ },
 
-/***/ 1656:
+/***/ 1666:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -24813,13 +24813,13 @@
 
 /***/ },
 
-/***/ 1657:
+/***/ 1667:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1658);
+	var content = __webpack_require__(1668);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -24840,7 +24840,7 @@
 
 /***/ },
 
-/***/ 1658:
+/***/ 1668:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -24855,7 +24855,7 @@
 
 /***/ },
 
-/***/ 1659:
+/***/ 1669:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24864,11 +24864,11 @@
 	  value: true
 	});
 
-	var _goodsItemHandler = __webpack_require__(1560);
+	var _goodsItemHandler = __webpack_require__(1570);
 
 	var _goodsItemHandler2 = _interopRequireDefault(_goodsItemHandler);
 
-	var _index = __webpack_require__(1561);
+	var _index = __webpack_require__(1571);
 
 	var _index2 = _interopRequireDefault(_index);
 
@@ -24915,25 +24915,25 @@
 
 /***/ },
 
-/***/ 1660:
+/***/ 1670:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div name=\"item4\" _v-5a8f8677=\"\">\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-5a8f8677=\"\">\n    <img src=\"http://pic.davdian.com/free/2017/01/16/750_580_66b9a8876371d17f0a9509bd9b50de3a.png\" alt=\"\" _v-5a8f8677=\"\">\n  </div>\n\n  <div v-if=\"environment=='preview'\" class=\"goods_group_con\" _v-5a8f8677=\"\">\n    <div v-for=\"(item, index) in previewData\" :key=\"index\" class=\"cross_goods_item goods_cross\" _v-5a8f8677=\"\">\n      <div class=\"goods_img\" _v-5a8f8677=\"\">\n        <img :src=\"item.goods_img\" :alt=\"item.goods_name\" _v-5a8f8677=\"\">\n        <span class=\"img_label\" v-if=\"item.goods_label&amp;&amp;item.goods_label.length\" v-text=\"item.goods_label\" _v-5a8f8677=\"\"></span>\n      </div>\n      <div class=\"goods_info\" _v-5a8f8677=\"\">\n        <div v-text=\"item.goods_name\" class=\"goods_title\" _v-5a8f8677=\"\"></div>\n        <div class=\"goods_price_outer\" _v-5a8f8677=\"\">\n          <span class=\"price\" _v-5a8f8677=\"\"><small _v-5a8f8677=\"\">¥</small>{{item.shop_price}}</span>\n          <span class=\"vip_return\" v-if=\"item.seller_income &amp;&amp; item.seller_income != '0'\" _v-5a8f8677=\"\">\n            <span class=\"vip_return_title\" _v-5a8f8677=\"\">会员返</span>\n            <span class=\"vip_return_f\" _v-5a8f8677=\"\">¥</span>\n            <span class=\"vip_return_price\" _v-5a8f8677=\"\">{{item.seller_income}}</span>\n          </span>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"environment=='show'\" class=\"goods_group_con\" _v-5a8f8677=\"\">\n    <a :href=\"item.url\" v-for=\"(item, index) in previewData\" :key=\"index\" class=\"cross_goods_item goods_cross\" _v-5a8f8677=\"\">\n      <div class=\"goods_img\" _v-5a8f8677=\"\">\n      <!--<x-img v-if=\"index>6\"  :src=\"item.goods_img\" default-src=\"http://pic.davdian.com/free/2017/06/08/160_160_4d0f1e2009fdfd8bb0c430cda8e22a82.png\" container=\"#vux_view_box_body\"></x-img>-->\n        <!--<img v-else :src=\"item.goods_img\">-->\n        <img :src=\"item.goods_img\" _v-5a8f8677=\"\">\n        <span class=\"img_label\" v-if=\"item.goods_label&amp;&amp;item.goods_label.length\" v-text=\"item.goods_label\" _v-5a8f8677=\"\"></span>\n      </div>\n      <div class=\"goods_info\" _v-5a8f8677=\"\">\n        <div v-text=\"item.goods_name\" class=\"goods_title\" _v-5a8f8677=\"\"></div>\n        <div class=\"goods_price_outer\" _v-5a8f8677=\"\">\n          <span class=\"price\" v-if=\"item.price\" _v-5a8f8677=\"\"><small _v-5a8f8677=\"\">¥</small>{{item.price[0]}}<small _v-5a8f8677=\"\">{{item.price[1]}}</small></span>\n          <span class=\"vip_return\" _v-5a8f8677=\"\">\n            <span class=\"vip_return_title\" _v-5a8f8677=\"\">会员返</span>\n            <span class=\"vip_return_f\" _v-5a8f8677=\"\">¥</span>\n            <span class=\"vip_return_price\" _v-5a8f8677=\"\">{{item.seller_income}}</span>\n          </span>\n        </div>\n      </div>\n    </a>\n  </div>\n\n</div>\n";
 
 /***/ },
 
-/***/ 1661:
+/***/ 1671:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1662)
-	__vue_script__ = __webpack_require__(1664)
+	__webpack_require__(1672)
+	__vue_script__ = __webpack_require__(1674)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_5.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1665)
+	__vue_template__ = __webpack_require__(1675)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -24959,13 +24959,13 @@
 
 /***/ },
 
-/***/ 1662:
+/***/ 1672:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1663);
+	var content = __webpack_require__(1673);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -24986,7 +24986,7 @@
 
 /***/ },
 
-/***/ 1663:
+/***/ 1673:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -25001,7 +25001,7 @@
 
 /***/ },
 
-/***/ 1664:
+/***/ 1674:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25053,25 +25053,25 @@
 
 /***/ },
 
-/***/ 1665:
+/***/ 1675:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-5a9d9df8=\"\">\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-5a9d9df8=\"\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img5.jpg\" alt=\"\" _v-5a9d9df8=\"\">\n  </div>\n  <!--<div class=\"title_container\" v-if=\"environment==`preview`||environment==`show`\">-->\n  <div class=\"title_container\" v-if=\"environment=='preview'||environment=='show'\" _v-5a9d9df8=\"\">\n    <span class=\"title_left\" _v-5a9d9df8=\"\"></span>\n    <!--<span class=\"title_text\" v-html=\"itemData.con||`请输入文字`\"></span>-->\n    <span class=\"title_text\" v-html=\"itemData.con||'请输入文字'\" _v-5a9d9df8=\"\"></span>\n    <span class=\"title_right\" _v-5a9d9df8=\"\"></span>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1666:
+/***/ 1676:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1667)
-	__vue_script__ = __webpack_require__(1669)
+	__webpack_require__(1677)
+	__vue_script__ = __webpack_require__(1679)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_6.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1670)
+	__vue_template__ = __webpack_require__(1680)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -25097,13 +25097,13 @@
 
 /***/ },
 
-/***/ 1667:
+/***/ 1677:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1668);
+	var content = __webpack_require__(1678);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -25124,7 +25124,7 @@
 
 /***/ },
 
-/***/ 1668:
+/***/ 1678:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -25139,7 +25139,7 @@
 
 /***/ },
 
-/***/ 1669:
+/***/ 1679:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25191,25 +25191,25 @@
 
 /***/ },
 
-/***/ 1670:
+/***/ 1680:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-5aabb579=\"\">\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-5aabb579=\"\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img6.jpg\" alt=\"\" _v-5aabb579=\"\">\n  </div>\n  <!--<div class=\"title_container\" v-if=\"environment==`preview`||environment==`show`\">-->\n  <div class=\"title_container\" v-if=\"environment=='preview'||environment=='show'\" _v-5aabb579=\"\">\n    <span class=\"title_left\" _v-5aabb579=\"\"></span>\n    <!--<span class=\"title_text\" v-html=\"itemData.con||`请输入文字`\"></span>-->\n    <span class=\"title_text\" v-html=\"itemData.con||'请输入文字'\" _v-5aabb579=\"\"></span>\n    <span class=\"title_right\" _v-5aabb579=\"\"></span>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1671:
+/***/ 1681:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1672)
-	__vue_script__ = __webpack_require__(1674)
+	__webpack_require__(1682)
+	__vue_script__ = __webpack_require__(1684)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_7.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1675)
+	__vue_template__ = __webpack_require__(1685)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -25235,13 +25235,13 @@
 
 /***/ },
 
-/***/ 1672:
+/***/ 1682:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1673);
+	var content = __webpack_require__(1683);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -25262,7 +25262,7 @@
 
 /***/ },
 
-/***/ 1673:
+/***/ 1683:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -25277,7 +25277,7 @@
 
 /***/ },
 
-/***/ 1674:
+/***/ 1684:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25322,24 +25322,24 @@
 
 /***/ },
 
-/***/ 1675:
+/***/ 1685:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-5ab9ccfa=\"\">\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-5ab9ccfa=\"\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img7.jpg\" alt=\"\" _v-5ab9ccfa=\"\">\n  </div>\n  <!--<div class=\"title_container\" v-if=\"environment==`preview`||environment==`show`\">-->\n  <div class=\"title_container\" v-if=\"environment=='preview'||environment=='show'\" _v-5ab9ccfa=\"\">\n    <!--<span class=\"title_text\" v-html=\"itemData.con||`请输入文字`\"></span>-->\n    <span class=\"title_text\" v-html=\"itemData.con||'请输入文字'\" _v-5ab9ccfa=\"\"></span>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1676:
+/***/ 1686:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1677)
+	__vue_script__ = __webpack_require__(1687)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_8.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1678)
+	__vue_template__ = __webpack_require__(1688)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -25365,7 +25365,7 @@
 
 /***/ },
 
-/***/ 1677:
+/***/ 1687:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -25414,25 +25414,25 @@
 
 /***/ },
 
-/***/ 1678:
+/***/ 1688:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img3.jpg\" alt=\"\">\n  </div>\n  <div v-if=\"environment=='preview'\">\n    <!--<div v-text=\"itemData.con ||`请在右侧输入内容`\"></div>-->\n    <div v-text=\"itemData.con ||'请在右侧输入内容'\"></div>\n  </div>\n  <div v-if=\"environment=='show'\">\n    <div style=\"font-size: 14px;padding: 10px;line-height: 1.4;\" v-html=\"itemData.con\"></div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1679:
+/***/ 1689:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1680)
-	__vue_script__ = __webpack_require__(1682)
+	__webpack_require__(1690)
+	__vue_script__ = __webpack_require__(1692)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/new_topic/feed/item_9.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1683)
+	__vue_template__ = __webpack_require__(1693)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -25458,13 +25458,13 @@
 
 /***/ },
 
-/***/ 1680:
+/***/ 1690:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1681);
+	var content = __webpack_require__(1691);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -25485,7 +25485,7 @@
 
 /***/ },
 
-/***/ 1681:
+/***/ 1691:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -25500,7 +25500,7 @@
 
 /***/ },
 
-/***/ 1682:
+/***/ 1692:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25561,25 +25561,25 @@
 
 /***/ },
 
-/***/ 1683:
+/***/ 1693:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-5ad5fbfc=\"\">\n  <!--<div class=\"img_container\" v-if=\"environment==`menu`\">-->\n  <div class=\"img_container\" v-if=\"environment=='menu'\" _v-5ad5fbfc=\"\">\n    <img src=\"http://pic.davdian.com/free/theme_thu_img4.jpg\" alt=\"\" _v-5ad5fbfc=\"\">\n  </div>\n  <!--<div v-if=\"environment==`preview`\" class=\"btn_container\">-->\n  <div v-if=\"environment=='preview'\" class=\"btn_container\" _v-5ad5fbfc=\"\">\n    <span v-text=\"itemData.con|| '回到首页'\" class=\"btn\" _v-5ad5fbfc=\"\"></span>\n  </div>\n\n  <!--<div v-if=\"environment==`show`\" class=\"btn_container\">-->\n  <div v-if=\"environment=='show'\" class=\"btn_container\" _v-5ad5fbfc=\"\">\n    <a :href=\"itemData.link\" v-if=\"itemData.link&amp;&amp;itemData.link.length\" _v-5ad5fbfc=\"\">\n      <span v-text=\"itemData.con\" class=\"btn\" _v-5ad5fbfc=\"\"></span>\n    </a>\n    <span v-text=\"itemData.con\" class=\"btn\" v-else=\"\" _v-5ad5fbfc=\"\"></span>\n  </div>\n\n</div>\n";
 
 /***/ },
 
-/***/ 1684:
+/***/ 1694:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1685)
-	__vue_script__ = __webpack_require__(1687)
+	__webpack_require__(1695)
+	__vue_script__ = __webpack_require__(1697)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/view-box/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1688)
+	__vue_template__ = __webpack_require__(1698)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -25605,13 +25605,13 @@
 
 /***/ },
 
-/***/ 1685:
+/***/ 1695:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1686);
+	var content = __webpack_require__(1696);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -25632,7 +25632,7 @@
 
 /***/ },
 
-/***/ 1686:
+/***/ 1696:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -25647,7 +25647,7 @@
 
 /***/ },
 
-/***/ 1687:
+/***/ 1697:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25690,14 +25690,14 @@
 
 /***/ },
 
-/***/ 1688:
+/***/ 1698:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"weui-tab\">\n  <slot name=\"header\"></slot>\n  <div class=\"weui-tab__panel vux-fix-safari-overflow-scrolling\" ref=\"viewBoxBody\" id=\"vux_view_box_body\" :style='{paddingTop: bodyPaddingTop, paddingBottom: bodyPaddingBottom}'>\n    <slot></slot>\n  </div>\n  <slot name=\"bottom\"></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 1689:
+/***/ 1699:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div style=\"height:100%;\" class=\"app\">\n  <view-box ref=\"viewBox\">\n    <com-top-title slot=\"header\" :title=\"title\" border-bottom home hide-disable></com-top-title>\n    <feed environment=\"show\" :feed-list=\"list\" ></feed>\n  </view-box>\n</div>\n";

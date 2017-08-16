@@ -45,9 +45,9 @@
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1469);
+	__webpack_require__(1479);
 	// require('../../javascript/base.js');
-	__webpack_require__(1471);
+	__webpack_require__(1481);
 
 
 /***/ },
@@ -5500,7 +5500,7 @@
 
 /***/ },
 
-/***/ 485:
+/***/ 495:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -7358,18 +7358,18 @@
 
 /***/ },
 
-/***/ 907:
+/***/ 917:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(908)
-	__vue_script__ = __webpack_require__(910)
+	__webpack_require__(918)
+	__vue_script__ = __webpack_require__(920)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/group/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(911)
+	__vue_template__ = __webpack_require__(921)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7395,13 +7395,13 @@
 
 /***/ },
 
-/***/ 908:
+/***/ 918:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(909);
+	var content = __webpack_require__(919);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -7422,7 +7422,7 @@
 
 /***/ },
 
-/***/ 909:
+/***/ 919:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -7437,7 +7437,7 @@
 
 /***/ },
 
-/***/ 910:
+/***/ 920:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7482,25 +7482,25 @@
 
 /***/ },
 
-/***/ 911:
+/***/ 921:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <div class=\"weui-cells__title\" v-if=\"title\" :style=\"{color:titleColor}\" v-html=\"title\"></div>\n  <div class=\"weui-cells\" :class=\"{'vux-no-group-title':!title}\" :style=\"{marginTop: typeof gutter === 'number' ? (gutter + 'px') : gutter}\">\n    <slot name=\"after-title\"></slot>\n    <slot></slot>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 912:
+/***/ 922:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(913)
-	__vue_script__ = __webpack_require__(915)
+	__webpack_require__(923)
+	__vue_script__ = __webpack_require__(925)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/cell/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(923)
+	__vue_template__ = __webpack_require__(933)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7526,13 +7526,13 @@
 
 /***/ },
 
-/***/ 913:
+/***/ 923:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(914);
+	var content = __webpack_require__(924);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -7553,7 +7553,7 @@
 
 /***/ },
 
-/***/ 914:
+/***/ 924:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -7568,7 +7568,7 @@
 
 /***/ },
 
-/***/ 915:
+/***/ 925:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7577,13 +7577,13 @@
 	  value: true
 	});
 
-	var _inlineDesc = __webpack_require__(916);
+	var _inlineDesc = __webpack_require__(926);
 
 	var _inlineDesc2 = _interopRequireDefault(_inlineDesc);
 
-	var _router = __webpack_require__(921);
+	var _router = __webpack_require__(931);
 
-	var _props = __webpack_require__(922);
+	var _props = __webpack_require__(932);
 
 	var _props2 = _interopRequireDefault(_props);
 
@@ -7709,18 +7709,18 @@
 
 /***/ },
 
-/***/ 916:
+/***/ 926:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(917)
-	__vue_script__ = __webpack_require__(919)
+	__webpack_require__(927)
+	__vue_script__ = __webpack_require__(929)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/inline-desc/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(920)
+	__vue_template__ = __webpack_require__(930)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7746,13 +7746,13 @@
 
 /***/ },
 
-/***/ 917:
+/***/ 927:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(918);
+	var content = __webpack_require__(928);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -7773,7 +7773,7 @@
 
 /***/ },
 
-/***/ 918:
+/***/ 928:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -7788,7 +7788,7 @@
 
 /***/ },
 
-/***/ 919:
+/***/ 929:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7816,14 +7816,14 @@
 
 /***/ },
 
-/***/ 920:
+/***/ 930:
 /***/ function(module, exports) {
 
 	module.exports = "\n<span class=\"vux-label-desc\"><slot></slot></span>\n";
 
 /***/ },
 
-/***/ 921:
+/***/ 931:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7856,7 +7856,7 @@
 
 /***/ },
 
-/***/ 922:
+/***/ 932:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7889,25 +7889,25 @@
 
 /***/ },
 
-/***/ 923:
+/***/ 933:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div\n  class=\"weui-cell\"\n  :class=\"{\n    'vux-tap-active': isLink || !!link,\n    'weui-cell_access': isLink || !!link,\n    'vux-cell-no-border-intent': !borderIntent,\n    'vux-cell-disabled': disabled\n  }\"\n  @click=\"onClick\">\n  <div class=\"weui-cell__hd\">\n    <slot name=\"icon\"></slot>\n  </div>\n  <div class=\"vux-cell-bd\" :class=\"{'vux-cell-primary': primary === 'title' && valueAlign !== 'left'}\">\n    <p>\n      <label class=\"vux-label\" :style=\"getLabelStyles()\" v-if=\"title || hasTitleSlot\">\n        <slot name=\"title\">{{ title }}</slot>\n      </label>\n      <slot name=\"after-title\"></slot>\n    </p>\n    <inline-desc>\n      <slot name=\"inline-desc\">{{ inlineDesc }}</slot>\n    </inline-desc>\n  </div>\n  <div class=\"weui-cell__ft\" :class=\"valueClass\">\n    <slot name=\"value\"></slot>\n    <slot>{{ value }}</slot>\n    <i class=\"weui-loading\" v-if=\"isLoading\"></i>\n  </div>\n  <slot name=\"child\"></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 933:
+/***/ 943:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(934)
-	__vue_script__ = __webpack_require__(936)
+	__webpack_require__(944)
+	__vue_script__ = __webpack_require__(946)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/alert/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(942)
+	__vue_template__ = __webpack_require__(952)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7933,13 +7933,13 @@
 
 /***/ },
 
-/***/ 934:
+/***/ 944:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(935);
+	var content = __webpack_require__(945);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -7960,7 +7960,7 @@
 
 /***/ },
 
-/***/ 935:
+/***/ 945:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -7975,7 +7975,7 @@
 
 /***/ },
 
-/***/ 936:
+/***/ 946:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7984,7 +7984,7 @@
 	  value: true
 	});
 
-	var _xDialog = __webpack_require__(937);
+	var _xDialog = __webpack_require__(947);
 
 	var _xDialog2 = _interopRequireDefault(_xDialog);
 
@@ -8077,18 +8077,18 @@
 
 /***/ },
 
-/***/ 937:
+/***/ 947:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(938)
-	__vue_script__ = __webpack_require__(940)
+	__webpack_require__(948)
+	__vue_script__ = __webpack_require__(950)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/x-dialog/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(941)
+	__vue_template__ = __webpack_require__(951)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8114,13 +8114,13 @@
 
 /***/ },
 
-/***/ 938:
+/***/ 948:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(939);
+	var content = __webpack_require__(949);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8141,7 +8141,7 @@
 
 /***/ },
 
-/***/ 939:
+/***/ 949:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8156,7 +8156,7 @@
 
 /***/ },
 
-/***/ 940:
+/***/ 950:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8239,21 +8239,21 @@
 
 /***/ },
 
-/***/ 941:
+/***/ 951:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-x-dialog\" @touchmove=\"onTouchMove\">\n  <transition :name=\"maskTransition\">\n    <div class=\"weui-mask\" @click=\"hideOnBlur && (currentValue = false)\" v-show=\"currentValue\"></div>\n  </transition>\n  <transition :name=\"dialogTransition\">\n    <div :class=\"dialogClass\" v-show=\"currentValue\" :style=\"dialogStyle\">\n      <slot></slot>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ },
 
-/***/ 942:
+/***/ 952:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-alert\">\n  <x-dialog\n  v-model=\"showValue\"\n  :mask-transition=\"maskTransition\"\n  :dialog-transition=\"dialogTransition\"\n  @on-hide=\"$emit('on-hide')\"\n  @on-show=\"$emit('on-show')\">\n    <div class=\"weui-dialog__hd\">\n      <strong class=\"weui-dialog__title\">{{title}}</strong>\n    </div>\n    <div class=\"weui-dialog__bd\">\n      <slot>\n        <div v-html=\"content\"></div>\n      </slot>\n    </div>\n    <div class=\"weui-dialog__ft\">\n      <a href=\"javascript:;\"\n      class=\"weui-dialog__btn weui-dialog__btn_primary\"\n      @click=\"_onHide\">{{buttonText || '确定'}}</a>\n    </div>\n  </x-dialog>\n</div>\n";
 
 /***/ },
 
-/***/ 959:
+/***/ 969:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8264,15 +8264,15 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _index = __webpack_require__(960);
+	var _index = __webpack_require__(970);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(963);
+	var _index3 = __webpack_require__(973);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _vue = __webpack_require__(485);
+	var _vue = __webpack_require__(495);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
@@ -8327,7 +8327,7 @@
 
 /***/ },
 
-/***/ 960:
+/***/ 970:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8339,11 +8339,11 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _alert = __webpack_require__(933);
+	var _alert = __webpack_require__(943);
 
 	var _alert2 = _interopRequireDefault(_alert);
 
-	var _plugin_helper = __webpack_require__(961);
+	var _plugin_helper = __webpack_require__(971);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8408,7 +8408,7 @@
 
 /***/ },
 
-/***/ 961:
+/***/ 971:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8418,7 +8418,7 @@
 	});
 	exports.mergeOptions = undefined;
 
-	var _objectAssign = __webpack_require__(962);
+	var _objectAssign = __webpack_require__(972);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
@@ -8441,7 +8441,7 @@
 
 /***/ },
 
-/***/ 962:
+/***/ 972:
 /***/ function(module, exports) {
 
 	/*
@@ -8538,7 +8538,7 @@
 
 /***/ },
 
-/***/ 963:
+/***/ 973:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8550,11 +8550,11 @@
 
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-	var _toast = __webpack_require__(964);
+	var _toast = __webpack_require__(974);
 
 	var _toast2 = _interopRequireDefault(_toast);
 
-	var _plugin_helper = __webpack_require__(961);
+	var _plugin_helper = __webpack_require__(971);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8637,18 +8637,18 @@
 
 /***/ },
 
-/***/ 964:
+/***/ 974:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(965)
-	__vue_script__ = __webpack_require__(967)
+	__webpack_require__(975)
+	__vue_script__ = __webpack_require__(977)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/toast/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(969)
+	__vue_template__ = __webpack_require__(979)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8674,13 +8674,13 @@
 
 /***/ },
 
-/***/ 965:
+/***/ 975:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(966);
+	var content = __webpack_require__(976);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8701,7 +8701,7 @@
 
 /***/ },
 
-/***/ 966:
+/***/ 976:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8716,7 +8716,7 @@
 
 /***/ },
 
-/***/ 967:
+/***/ 977:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8725,7 +8725,7 @@
 	  value: true
 	});
 
-	var _safariFix = __webpack_require__(968);
+	var _safariFix = __webpack_require__(978);
 
 	var _safariFix2 = _interopRequireDefault(_safariFix);
 
@@ -8907,7 +8907,7 @@
 
 /***/ },
 
-/***/ 968:
+/***/ 978:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8933,25 +8933,25 @@
 
 /***/ },
 
-/***/ 969:
+/***/ 979:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-toast\">\n  <div class=\"weui-mask_transparent\" v-show=\"isShowMask && show\"></div>\n  <transition :name=\"currentTransition\">\n    <div class=\"weui-toast\" :style=\"{width: width}\" :class=\"toastClass\" v-show=\"show\">\n      <i class=\"weui-icon-success-no-circle weui-icon_toast\" v-show=\"type !== 'text'\"></i>\n      <p class=\"weui-toast__content\" v-if=\"text\" :style=\"style\" v-html=\"text\"></p>\n      <p class=\"weui-toast__content\" v-else><slot></slot></p>\n    </div>\n  </transition>\n</div>\n";
 
 /***/ },
 
-/***/ 1001:
+/***/ 1011:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1002)
-	__vue_script__ = __webpack_require__(1004)
+	__webpack_require__(1012)
+	__vue_script__ = __webpack_require__(1014)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/cell-box/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1005)
+	__vue_template__ = __webpack_require__(1015)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8977,13 +8977,13 @@
 
 /***/ },
 
-/***/ 1002:
+/***/ 1012:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1003);
+	var content = __webpack_require__(1013);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -9004,7 +9004,7 @@
 
 /***/ },
 
-/***/ 1003:
+/***/ 1013:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -9019,7 +9019,7 @@
 
 /***/ },
 
-/***/ 1004:
+/***/ 1014:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9028,7 +9028,7 @@
 	  value: true
 	});
 
-	var _router = __webpack_require__(921);
+	var _router = __webpack_require__(931);
 
 	exports.default = {
 	  name: 'cell-box',
@@ -9074,25 +9074,25 @@
 
 /***/ },
 
-/***/ 1005:
+/***/ 1015:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"vux-cell-box weui-cell\" :class=\"{'vux-tap-active': isLink || !!link, 'weui-cell_access': isLink || !!link, 'vux-cell-no-border-intent': !borderIntent}\" @click=\"onClick\">\n  <div><slot></slot></div>\n</div>\n";
 
 /***/ },
 
-/***/ 1063:
+/***/ 1073:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1064)
-	__vue_script__ = __webpack_require__(1066)
+	__webpack_require__(1074)
+	__vue_script__ = __webpack_require__(1076)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/scroller/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1085)
+	__vue_template__ = __webpack_require__(1095)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -9118,13 +9118,13 @@
 
 /***/ },
 
-/***/ 1064:
+/***/ 1074:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1065);
+	var content = __webpack_require__(1075);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -9145,7 +9145,7 @@
 
 /***/ },
 
-/***/ 1065:
+/***/ 1075:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -9160,7 +9160,7 @@
 
 /***/ },
 
-/***/ 1066:
+/***/ 1076:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9169,19 +9169,19 @@
 	  value: true
 	});
 
-	var _objectAssign = __webpack_require__(962);
+	var _objectAssign = __webpack_require__(972);
 
 	var _objectAssign2 = _interopRequireDefault(_objectAssign);
 
-	var _xscroll = __webpack_require__(1067);
+	var _xscroll = __webpack_require__(1077);
 
 	var _xscroll2 = _interopRequireDefault(_xscroll);
 
-	var _pulldown = __webpack_require__(1083);
+	var _pulldown = __webpack_require__(1093);
 
 	var _pulldown2 = _interopRequireDefault(_pulldown);
 
-	var _pullup = __webpack_require__(1084);
+	var _pullup = __webpack_require__(1094);
 
 	var _pullup2 = _interopRequireDefault(_pullup);
 
@@ -9532,18 +9532,18 @@
 
 /***/ },
 
-/***/ 1067:
+/***/ 1077:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068),
-		Base = __webpack_require__(1069),
-		Timer = __webpack_require__(1071),
-		Animate = __webpack_require__(1073),
-		Hammer = __webpack_require__(1074),
-		SimuScroll = __webpack_require__(1075),
-		OriginScroll = __webpack_require__(1082);
+	var Util = __webpack_require__(1078),
+		Base = __webpack_require__(1079),
+		Timer = __webpack_require__(1081),
+		Animate = __webpack_require__(1083),
+		Hammer = __webpack_require__(1084),
+		SimuScroll = __webpack_require__(1085),
+		OriginScroll = __webpack_require__(1092);
 	var XScroll = function(cfg) {
 			var _ = cfg && cfg.useOriginScroll ? OriginScroll : SimuScroll;
 			return new _(cfg);
@@ -9596,7 +9596,7 @@
 
 /***/ },
 
-/***/ 1068:
+/***/ 1078:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -9928,13 +9928,13 @@
 
 /***/ },
 
-/***/ 1069:
+/***/ 1079:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Events = __webpack_require__(1070);
+	var Util = __webpack_require__(1078);
+	var Events = __webpack_require__(1080);
 	/** 
 	      @constructor 
 	      @mixes Events
@@ -10003,12 +10003,12 @@
 
 /***/ },
 
-/***/ 1070:
+/***/ 1080:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
+	var Util = __webpack_require__(1078);
 	// Returns a function that will be executed at most one time, no matter how
 	// often you call it. Useful for lazy initialization.
 	var _once = function(func) {
@@ -10237,14 +10237,14 @@
 
 /***/ },
 
-/***/ 1071:
+/***/ 1081:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Base = __webpack_require__(1069);
-	var Easing = __webpack_require__(1072);
+	var Util = __webpack_require__(1078);
+	var Base = __webpack_require__(1079);
+	var Easing = __webpack_require__(1082);
 
 	var RAF = window.requestAnimationFrame ||
 		window.webkitRequestAnimationFrame ||
@@ -10412,7 +10412,7 @@
 
 /***/ },
 
-/***/ 1072:
+/***/ 1082:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -10449,15 +10449,15 @@
 
 /***/ },
 
-/***/ 1073:
+/***/ 1083:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Timer = __webpack_require__(1071);
-	var Easing = __webpack_require__(1072);
-	var Base = __webpack_require__(1069);
+	var Util = __webpack_require__(1078);
+	var Timer = __webpack_require__(1081);
+	var Easing = __webpack_require__(1082);
+	var Base = __webpack_require__(1079);
 	//transform
 	var vendorTransform = Util.prefixStyle("transform");
 	//transition webkitTransition MozTransition OTransition msTtransition
@@ -10804,7 +10804,7 @@
 
 /***/ },
 
-/***/ 1074:
+/***/ 1084:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -13266,18 +13266,18 @@
 
 /***/ },
 
-/***/ 1075:
+/***/ 1085:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068),
-	  Base = __webpack_require__(1069),
-	  Core = __webpack_require__(1076),
-	  Animate = __webpack_require__(1073),
-	  Hammer = __webpack_require__(1074),
-	  ScrollBar = __webpack_require__(1080),
-	  Controller = __webpack_require__(1081);
+	var Util = __webpack_require__(1078),
+	  Base = __webpack_require__(1079),
+	  Core = __webpack_require__(1086),
+	  Animate = __webpack_require__(1083),
+	  Hammer = __webpack_require__(1084),
+	  ScrollBar = __webpack_require__(1090),
+	  Controller = __webpack_require__(1091);
 	//reduced boundry pan distance
 	var PAN_RATE = 1 - 0.618;
 	//constant for scrolling acceleration
@@ -13973,18 +13973,18 @@
 
 /***/ },
 
-/***/ 1076:
+/***/ 1086:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068),
-	    Base = __webpack_require__(1069),
-	    Animate = __webpack_require__(1073),
-	    Boundry = __webpack_require__(1077),
-	    Hammer = __webpack_require__(1074),
-	    Sticky = __webpack_require__(1078),
-	    Fixed = __webpack_require__(1079);
+	var Util = __webpack_require__(1078),
+	    Base = __webpack_require__(1079),
+	    Animate = __webpack_require__(1083),
+	    Boundry = __webpack_require__(1087),
+	    Hammer = __webpack_require__(1084),
+	    Sticky = __webpack_require__(1088),
+	    Fixed = __webpack_require__(1089);
 	// boundry checked bounce effect
 	var BOUNDRY_CHECK_DURATION = 500;
 	var BOUNDRY_CHECK_EASING = "ease";
@@ -14341,12 +14341,12 @@
 
 /***/ },
 
-/***/ 1077:
+/***/ 1087:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	 var Util = __webpack_require__(1068);
+	 var Util = __webpack_require__(1078);
 
 	 function Boundry(cfg) {
 	     this.cfg = Util.mix({
@@ -14438,13 +14438,13 @@
 
 /***/ },
 
-/***/ 1078:
+/***/ 1088:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Base = __webpack_require__(1069);
+	var Util = __webpack_require__(1078);
+	var Base = __webpack_require__(1079);
 	//transform
 	var transform = Util.prefixStyle("transform");
 	// default render function for position:sticky elements
@@ -14674,13 +14674,13 @@
 
 /***/ },
 
-/***/ 1079:
+/***/ 1089:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Base = __webpack_require__(1069);
+	var Util = __webpack_require__(1078);
+	var Base = __webpack_require__(1079);
 	var transform = Util.prefixStyle("transform");
 
 	var Fixed = function(cfg) {
@@ -14815,13 +14815,13 @@
 
 /***/ },
 
-/***/ 1080:
+/***/ 1090:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Animate = __webpack_require__(1073);
+	var Util = __webpack_require__(1078);
+	var Animate = __webpack_require__(1083);
 	var MAX_BOUNCE_DISTANCE = 40;
 	var MIN_BAR_SCROLLED_SIZE = 10;
 	var MIN_BAR_SIZE = 50;
@@ -15016,7 +15016,7 @@
 
 /***/ },
 
-/***/ 1081:
+/***/ 1091:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
@@ -15024,8 +15024,8 @@
 		wrapped scroll controller
 	*/
 	"use strict";
-	var Util = __webpack_require__(1068),
-		Base = __webpack_require__(1069);
+	var Util = __webpack_require__(1078),
+		Base = __webpack_require__(1079);
 
 	var Controller = function(cfg) {
 		Controller.superclass.constructor.call(this, cfg);
@@ -15161,15 +15161,15 @@
 
 /***/ },
 
-/***/ 1082:
+/***/ 1092:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068),
-	    Base = __webpack_require__(1069),
-	    Core = __webpack_require__(1076),
-	    Animate = __webpack_require__(1073);
+	var Util = __webpack_require__(1078),
+	    Base = __webpack_require__(1079),
+	    Core = __webpack_require__(1086),
+	    Animate = __webpack_require__(1083);
 
 	var transformOrigin = Util.prefixStyle("transformOrigin");
 	/** 
@@ -15304,13 +15304,13 @@
 
 /***/ },
 
-/***/ 1083:
+/***/ 1093:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Base = __webpack_require__(1069);
+	var Util = __webpack_require__(1078);
+	var Base = __webpack_require__(1079);
 	var clsPrefix;
 	var containerCls;
 	var content = "Pull Down To Refresh";
@@ -15495,13 +15495,13 @@
 
 /***/ },
 
-/***/ 1084:
+/***/ 1094:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_RESULT__ = function(require, exports, module) {
 	"use strict";
-	var Util = __webpack_require__(1068);
-	var Base = __webpack_require__(1069);
+	var Util = __webpack_require__(1078);
+	var Base = __webpack_require__(1079);
 	var clsPrefix;
 	var containerCls;
 	var loadingContent = "Loading...";
@@ -15718,30 +15718,30 @@
 
 /***/ },
 
-/***/ 1085:
+/***/ 1095:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"styles\">\n  <div class=\"xs-container\">\n    <slot></slot>\n    <slot name=\"pulldown\"></slot>\n    <slot name=\"pullup\"></slot>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1469:
+/***/ 1479:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1471:
+/***/ 1481:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by jianchep on 17/03/29.
 	 */
 
-	var social = __webpack_require__(1472);
-	var manage = __webpack_require__(1508);
-	var member = __webpack_require__(1525);
+	var social = __webpack_require__(1482);
+	var manage = __webpack_require__(1518);
+	var member = __webpack_require__(1535);
 
 	const routes = [
 	    {path: '/', redirect: '/social'},
@@ -15764,19 +15764,19 @@
 
 /***/ },
 
-/***/ 1472:
+/***/ 1482:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1473)
-	__webpack_require__(1475)
-	__vue_script__ = __webpack_require__(1477)
+	__webpack_require__(1483)
+	__webpack_require__(1485)
+	__vue_script__ = __webpack_require__(1487)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/social.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1507)
+	__vue_template__ = __webpack_require__(1517)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -15802,13 +15802,13 @@
 
 /***/ },
 
-/***/ 1473:
+/***/ 1483:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1474);
+	var content = __webpack_require__(1484);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -15829,7 +15829,7 @@
 
 /***/ },
 
-/***/ 1474:
+/***/ 1484:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -15844,13 +15844,13 @@
 
 /***/ },
 
-/***/ 1475:
+/***/ 1485:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1476);
+	var content = __webpack_require__(1486);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -15871,7 +15871,7 @@
 
 /***/ },
 
-/***/ 1476:
+/***/ 1486:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -15886,7 +15886,7 @@
 
 /***/ },
 
-/***/ 1477:
+/***/ 1487:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -15895,23 +15895,23 @@
 	    value: true
 	});
 
-	var _speak = __webpack_require__(1478);
+	var _speak = __webpack_require__(1488);
 
 	var _speak2 = _interopRequireDefault(_speak);
 
-	var _social_title = __webpack_require__(1485);
+	var _social_title = __webpack_require__(1495);
 
 	var _social_title2 = _interopRequireDefault(_social_title);
 
-	var _switch = __webpack_require__(1488);
+	var _switch = __webpack_require__(1498);
 
 	var _switch2 = _interopRequireDefault(_switch);
 
-	var _common = __webpack_require__(1495);
+	var _common = __webpack_require__(1505);
 
 	var _common2 = _interopRequireDefault(_common);
 
-	var _userCommon = __webpack_require__(1500);
+	var _userCommon = __webpack_require__(1510);
 
 	var _userCommon2 = _interopRequireDefault(_userCommon);
 
@@ -15923,7 +15923,7 @@
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _dialog = __webpack_require__(959);
+	var _dialog = __webpack_require__(969);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -16740,19 +16740,19 @@
 
 /***/ },
 
-/***/ 1478:
+/***/ 1488:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1479)
-	__webpack_require__(1481)
-	__vue_script__ = __webpack_require__(1483)
+	__webpack_require__(1489)
+	__webpack_require__(1491)
+	__vue_script__ = __webpack_require__(1493)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/speak.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1484)
+	__vue_template__ = __webpack_require__(1494)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -16778,13 +16778,13 @@
 
 /***/ },
 
-/***/ 1479:
+/***/ 1489:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1480);
+	var content = __webpack_require__(1490);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -16805,7 +16805,7 @@
 
 /***/ },
 
-/***/ 1480:
+/***/ 1490:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -16820,13 +16820,13 @@
 
 /***/ },
 
-/***/ 1481:
+/***/ 1491:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1482);
+	var content = __webpack_require__(1492);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -16847,7 +16847,7 @@
 
 /***/ },
 
-/***/ 1482:
+/***/ 1492:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -16862,7 +16862,7 @@
 
 /***/ },
 
-/***/ 1483:
+/***/ 1493:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -16970,24 +16970,24 @@
 
 /***/ },
 
-/***/ 1484:
+/***/ 1494:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div id=\"speak_container\" _v-39839a7f=\"\">\n    <div class=\"bottominput\" _v-39839a7f=\"\">\n        <div class=\"text_talk\" _v-39839a7f=\"\">\n            <input v-if=\"discussStatus\" class=\"text_talk_input\" v-model=\"sentmassagetext\" type=\"text\" placeholder=\"向群主提问或参与讨论\" _v-39839a7f=\"\">\n            <input v-if=\"!discussStatus\" type=\"text\" placeholder=\"评论关闭\" disabled=\"\" _v-39839a7f=\"\">\n        </div>\n        <div class=\"send\" @click=\"sendMessage\" _v-39839a7f=\"\">\n            <span _v-39839a7f=\"\">发送</span>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1485:
+/***/ 1495:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1486)
+	__vue_script__ = __webpack_require__(1496)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/social_title.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1487)
+	__vue_template__ = __webpack_require__(1497)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -17013,7 +17013,7 @@
 
 /***/ },
 
-/***/ 1486:
+/***/ 1496:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17062,26 +17062,26 @@
 
 /***/ },
 
-/***/ 1487:
+/***/ 1497:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"top0\">\n    <div class=\"top_container\">\n        <div class=\"top_left\" style=\"width: 40px\">\n            <a class=\"top_back\" href=\"javascript:history.back();\">\n                <span class=\"home_arrow\"></span>\n            </a>\n        </div>\n        <div class=\"title_container\">\n            {{data||msg}}\n        </div>\n        <div class=\"top_right\" style=\"width:40px;right:10px\" v-if=\"rightshow||false\" @click='manage'>\n            <a class=\"top_back\">\n                <img style=\"width:26px;margin-top:12px;\" class=\"back_home\" src=\"http://pic.davdian.com/free/2017/04/06/social_title.png\"/>\n            </a>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1488:
+/***/ 1498:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1489)
-	__webpack_require__(1491)
-	__vue_script__ = __webpack_require__(1493)
+	__webpack_require__(1499)
+	__webpack_require__(1501)
+	__vue_script__ = __webpack_require__(1503)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/switch.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1494)
+	__vue_template__ = __webpack_require__(1504)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -17107,13 +17107,13 @@
 
 /***/ },
 
-/***/ 1489:
+/***/ 1499:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1490);
+	var content = __webpack_require__(1500);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -17134,7 +17134,7 @@
 
 /***/ },
 
-/***/ 1490:
+/***/ 1500:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -17149,13 +17149,13 @@
 
 /***/ },
 
-/***/ 1491:
+/***/ 1501:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1492);
+	var content = __webpack_require__(1502);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -17176,7 +17176,7 @@
 
 /***/ },
 
-/***/ 1492:
+/***/ 1502:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -17191,7 +17191,7 @@
 
 /***/ },
 
-/***/ 1493:
+/***/ 1503:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17356,25 +17356,25 @@
 
 /***/ },
 
-/***/ 1494:
+/***/ 1504:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div id=\"switch\" _v-f2589d52=\"\">\n    <!--fiexd定位的弹幕-->\n    <div v-if=\"commonflag &amp;&amp; discussStatus\" class=\"flexd\" @click=\"open_comment\" _v-f2589d52=\"\">\n        <div class=\"common_position\" v-if=\"commonList[commonList.length-2] &amp;&amp; commonList[commonList.length-2].msg.content\" _v-f2589d52=\"\">\n            <span class=\"common_box\" v-text=\"decodeURIComponent(commonList[commonList.length-2].msg.content)\" _v-f2589d52=\"\"></span>\n            <img :src=\"commonList[commonList.length-2].speaker.avatar || defaultAvatar\" _v-f2589d52=\"\">\n        </div>\n\n        <div class=\"common_position\" v-if=\"commonList[commonList.length-1] &amp;&amp; commonList[commonList.length-1].msg.content\" _v-f2589d52=\"\">\n            <span class=\"common_box\" v-text=\"decodeURIComponent(commonList[commonList.length-1].msg.content)\" _v-f2589d52=\"\"></span>\n            <img :src=\"commonList[commonList.length-1].speaker.avatar || defaultAvatar\" _v-f2589d52=\"\">\n        </div>\n    </div>\n    <!--开关按钮-->\n    <div v-if=\"commonflag &amp;&amp; discussStatus\" class=\"flag\" _v-f2589d52=\"\">\n        <span @click=\"switchflag\" _v-f2589d52=\"\">关</span>\n    </div>\n    <div v-if=\"!commonflag &amp;&amp; discussStatus\" class=\"flag\" _v-f2589d52=\"\">\n        <span @click=\"switchflag\" _v-f2589d52=\"\">开</span>\n    </div>\n    <div class=\"commen_num\" v-if=\"discussStatus\" _v-f2589d52=\"\"><span _v-f2589d52=\"\">讨论：{{total}}</span></div>\n</div>\n";
 
 /***/ },
 
-/***/ 1495:
+/***/ 1505:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1496)
-	__vue_script__ = __webpack_require__(1498)
+	__webpack_require__(1506)
+	__vue_script__ = __webpack_require__(1508)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/common.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1499)
+	__vue_template__ = __webpack_require__(1509)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -17400,13 +17400,13 @@
 
 /***/ },
 
-/***/ 1496:
+/***/ 1506:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1497);
+	var content = __webpack_require__(1507);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -17427,7 +17427,7 @@
 
 /***/ },
 
-/***/ 1497:
+/***/ 1507:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -17442,7 +17442,7 @@
 
 /***/ },
 
-/***/ 1498:
+/***/ 1508:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18077,26 +18077,26 @@
 
 /***/ },
 
-/***/ 1499:
+/***/ 1509:
 /***/ function(module, exports) {
 
 	module.exports = "\n    <div id=\"common\" _v-3bbe1ee4=\"\">\n        <div class=\"commonroom\" _v-3bbe1ee4=\"\">\n\t        <ul id=\"ulList\" _v-3bbe1ee4=\"\">\n\t            <audio preload=\"auto\" class=\"allAudio\" _v-3bbe1ee4=\"\"></audio>\n\t            <li class=\"teacherChatData\" v-for=\"(common,index) in barrageList\" :key=\"common.uuid\" msg_id=\"{{decodeURIComponent(common.speake.name)}}\" _v-3bbe1ee4=\"\">\n\t                <div class=\"timebox\" v-if=\"index == 0 || (common.msg.time - barrageList[index - 1].msg.time) > 5*60*1000\" _v-3bbe1ee4=\"\">\n\t                    <span class=\"talk_time\" v-if=\"new Date()-common.msg.time < 60*60*12*1000\" _v-3bbe1ee4=\"\">{{getTime(parseInt(common.msg.time))}}</span>\n\t                    <span class=\"talk_time\" v-if=\"new Date()-common.msg.time >= 60*60*12*1000\" _v-3bbe1ee4=\"\">{{getFullTime(parseInt(common.msg.time))}}</span>\n\t                </div>\n\t                <div class=\"timebox\" _v-3bbe1ee4=\"\">\n\t                \t<div class=\"talk_time remindNews\" v-if=\"common.isTips || common.allMsg &amp;&amp; JSON.parse(common.allMsg) &amp;&amp; JSON.parse(JSON.parse(JSON.parse(common.allMsg).content).extra).info.isTips==1\" _v-3bbe1ee4=\"\">{{decodeURIComponent(common.msg.content)}}</div>\n\t                </div>\n\t                \n\n\t                <span class=\"head\" v-if=\"!(common.isTips || common.allMsg &amp;&amp; JSON.parse(common.allMsg) &amp;&amp; JSON.parse(JSON.parse(JSON.parse(common.allMsg).content).extra).info.isTips==1)\" _v-3bbe1ee4=\"\">\n\t                    <img :src=\"common.speaker.avatar || defaultAvatar\" _v-3bbe1ee4=\"\">\n\t                </span>\n\t                <div class=\"right\" v-if=\"!(common.isTips || common.allMsg &amp;&amp; JSON.parse(common.allMsg) &amp;&amp; JSON.parse(JSON.parse(JSON.parse(common.allMsg).content).extra).info.isTips==1)\" _v-3bbe1ee4=\"\">\n\t                    <h2 _v-3bbe1ee4=\"\">{{decodeURIComponent(common.speaker.name)}}</h2>\n\t                    <!--text类型的信息-->\n\t                    <div v-if=\"common.msg.type==0\" class=\"main\" :class=\"{'blue':common.is_answer}\" _v-3bbe1ee4=\"\">\n\t                        <i class=\"main_picBox_icon2\" _v-3bbe1ee4=\"\"></i>\n\t                        <span class=\"TextMessageSpan formfield\" _v-3bbe1ee4=\"\">{{decodeURIComponent(common.msg.content)}}</span>\n\t                    </div>\n\t                    <!--语音类型的信息-->\n\t                    <div class=\"audiomain\" @click=\"playVoiceFlag(index, common)\" v-if=\"common.msg.type==2||common.msg.type==91\" :class=\"{'replied':common.replied}\" _v-3bbe1ee4=\"\">\n\t                        <div class=\"voice\" :class=\"{ 'play': isPlay[index], 'noPlay': !isPlay[index] }\" _v-3bbe1ee4=\"\">\n\t                            <i class=\"fa fa-rss\" v-if=\"common.msg.duration>0\" _v-3bbe1ee4=\"\"></i>\n\t                            <!-- <p :style=\"{width:(common.msg.voicewidth + 40)+'px'}\" class=\"main\">{{common.msg.duration}}''</p> -->\n\t                            <p :style=\"{width:( getWidth(common.msg.duration) + 40)+'px'}\" class=\"main\" _v-3bbe1ee4=\"\">{{common.msg.duration}}''</p>\n\t                            <i class=\"curcle-full\" v-if=\"!curcleFullHash[common.uuid] &amp;&amp; !common.msg.curcleFullHash\" _v-3bbe1ee4=\"\"></i>\n\t                        </div>\n\t                        <div class=\"audio\" :data-src=\"common.msg.url\" preload=\"auto\" :data-type=\"1\" :data-index=\"index\" v-if=\"common.msg.type==2\" _v-3bbe1ee4=\"\"></div>\n\t                        <div class=\"audio\" :data-src=\"common.msg.url\" preload=\"auto\" :data-type=\"91\" :data-index=\"index\" v-if=\"common.msg.type==91\" _v-3bbe1ee4=\"\"></div>\n\t                    </div>\n\t                    <!--图片类型的信息-->\n\t                    <div v-if=\"common.msg.type==1\" class=\"mainPic\" _v-3bbe1ee4=\"\">\n\t                        <div class=\"picBox\" _v-3bbe1ee4=\"\">\n\t                            <div class=\"picBox_icon1_container\" _v-3bbe1ee4=\"\">\n\t                                <i class=\"picBox_icon1\" _v-3bbe1ee4=\"\"></i>\n\t                                <i class=\"picBox_icon2\" _v-3bbe1ee4=\"\"></i>\n\t                                <img :src=\"common.msg.url\" alt=\"\" _v-3bbe1ee4=\"\">\n\t                            </div>\n\t                            <img :src=\"common.msg.url\" alt=\"\" _v-3bbe1ee4=\"\">\n\t                        </div>\n\t                        <div class=\"picBox_container\" @click=\"previewImage(common.uuid)\" _v-3bbe1ee4=\"\">\n\t                            <img :style=\"getImageStyle(common)\" :src=\"common.msg.url\" alt=\"\" _v-3bbe1ee4=\"\">\n\t                        </div>\n\t                    </div>\n\t                </div>\n\t            </li>\n\t        </ul>\n\t        <div class=\"bottom\" _v-3bbe1ee4=\"\"></div>\n\t    </div>\n    </div>\n";
 
 /***/ },
 
-/***/ 1500:
+/***/ 1510:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1501)
-	__webpack_require__(1503)
-	__vue_script__ = __webpack_require__(1505)
+	__webpack_require__(1511)
+	__webpack_require__(1513)
+	__vue_script__ = __webpack_require__(1515)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/component/userCommon.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1506)
+	__vue_template__ = __webpack_require__(1516)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18122,13 +18122,13 @@
 
 /***/ },
 
-/***/ 1501:
+/***/ 1511:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1502);
+	var content = __webpack_require__(1512);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18149,7 +18149,7 @@
 
 /***/ },
 
-/***/ 1502:
+/***/ 1512:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18164,13 +18164,13 @@
 
 /***/ },
 
-/***/ 1503:
+/***/ 1513:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1504);
+	var content = __webpack_require__(1514);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18191,7 +18191,7 @@
 
 /***/ },
 
-/***/ 1504:
+/***/ 1514:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18206,7 +18206,7 @@
 
 /***/ },
 
-/***/ 1505:
+/***/ 1515:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18419,33 +18419,33 @@
 
 /***/ },
 
-/***/ 1506:
+/***/ 1516:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div id=\"userCommon\" _v-ce500d8e=\"\">\n    <div class=\"mask\" v-if=\"commonShow\" _v-ce500d8e=\"\">\n        <div class=\"mask_con_mask\" @click=\"close_comment\" _v-ce500d8e=\"\"></div>\n        <div class=\"mask_con\" _v-ce500d8e=\"\">\n            <!--关闭按钮-->\n            <div class=\"close\" @click=\"close_comment\" _v-ce500d8e=\"\">\n                <img src=\"//pic.davdian.com/free/2016/12/22/60_80_543e7ae3b77c0ce52ebeee2a210dbdf6.png\" alt=\"\" _v-ce500d8e=\"\">\n            </div>\n            <!--弹出层列表-->\n            <div class=\"common\" id=\"common\" _v-ce500d8e=\"\">\n                <div class=\"scrollcon\" id=\"scrollcon\" _v-ce500d8e=\"\">\n                    <div class=\"commonList-container\" _v-ce500d8e=\"\">\n                        <div class=\"end\" v-if=\"refreshtxt\" _v-ce500d8e=\"\">拉取更多</div>\n                        <div class=\"class_introduce_con\" v-for=\"(common, index) in commonList\" :key=\"common.uuid\" _v-ce500d8e=\"\">\n                            <div class=\"comment_tit\" _v-ce500d8e=\"\">\n                                <img class=\"img\" :src=\"common.speaker.avatar || defaultAvatar\" alt=\"\" _v-ce500d8e=\"\">\n                                <div class=\"comment_dis\" _v-ce500d8e=\"\">\n                                    <span class=\"commentname\" _v-ce500d8e=\"\">{{decodeURIComponent(common.speaker.name)}}</span>\n                                    <span v-if=\"new Date()-common.msg.time < 60*60*12*1000\" _v-ce500d8e=\"\">{{getTime(parseInt(common.msg.time))}}</span>\n                                    <span v-if=\"new Date()-common.msg.time >= 60*60*12*1000\" _v-ce500d8e=\"\">{{getFullTime(parseInt(common.msg.time))}}</span>\n                                </div>\n                            </div>\n                            <div class=\"class_introduce_text\" _v-ce500d8e=\"\">\n                                <p _v-ce500d8e=\"\">{{decodeURIComponent(common.msg.content)}}</p>\n                            </div>\n                        </div>\n                        <div class=\"commonbottom\" _v-ce500d8e=\"\"></div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1507:
+/***/ 1517:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div id=\"socail_container\" _v-60c3a804=\"\">\n    <social-title :rightshow=\"true\" :id=\"communityId\" :data=\"title\" _v-60c3a804=\"\"></social-title>\n    <speak v-on:send=\"sendMsg\" _v-60c3a804=\"\"></speak>\n    <social-switch :data=\"userCommonRoomData\" :total=\"total\" v-on:usercomment=\"openUserComment\" _v-60c3a804=\"\"></social-switch>\n    <common v-if=\"commonRoomData[0]\" :id=\"communityId\" :flag=\"updataflagteacher\" :data=\"commonRoomData\" v-on:getupdatateacher=\"getupdatateacher\" _v-60c3a804=\"\"></common>\n    <user-common v-if=\"userCommonFlag\" :user-common-top=\"userCommonTop\" :getupdataflag=\"getupdataflag\" :flag=\"userCommonFlag\" :data=\"userCommonRoomData\" v-on:closeusercomment=\"closeUserComment\" v-on:getupdata=\"getupdata\" _v-60c3a804=\"\"></user-common>\n</div>\n";
 
 /***/ },
 
-/***/ 1508:
+/***/ 1518:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1509)
-	__webpack_require__(1511)
-	__vue_script__ = __webpack_require__(1513)
+	__webpack_require__(1519)
+	__webpack_require__(1521)
+	__vue_script__ = __webpack_require__(1523)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/social_manage.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1524)
+	__vue_template__ = __webpack_require__(1534)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18471,13 +18471,13 @@
 
 /***/ },
 
-/***/ 1509:
+/***/ 1519:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1510);
+	var content = __webpack_require__(1520);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18498,7 +18498,7 @@
 
 /***/ },
 
-/***/ 1510:
+/***/ 1520:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18513,13 +18513,13 @@
 
 /***/ },
 
-/***/ 1511:
+/***/ 1521:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1512);
+	var content = __webpack_require__(1522);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18540,7 +18540,7 @@
 
 /***/ },
 
-/***/ 1512:
+/***/ 1522:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18555,7 +18555,7 @@
 
 /***/ },
 
-/***/ 1513:
+/***/ 1523:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18568,31 +18568,31 @@
 
 	var _webStorageCache2 = _interopRequireDefault(_webStorageCache);
 
-	var _index = __webpack_require__(1063);
+	var _index = __webpack_require__(1073);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(907);
+	var _index3 = __webpack_require__(917);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _index5 = __webpack_require__(1001);
+	var _index5 = __webpack_require__(1011);
 
 	var _index6 = _interopRequireDefault(_index5);
 
-	var _index7 = __webpack_require__(964);
+	var _index7 = __webpack_require__(974);
 
 	var _index8 = _interopRequireDefault(_index7);
 
-	var _index9 = __webpack_require__(963);
+	var _index9 = __webpack_require__(973);
 
 	var _index10 = _interopRequireDefault(_index9);
 
-	var _cell = __webpack_require__(1514);
+	var _cell = __webpack_require__(1524);
 
 	var _cell2 = _interopRequireDefault(_cell);
 
-	var _baseTitle = __webpack_require__(1519);
+	var _baseTitle = __webpack_require__(1529);
 
 	var _baseTitle2 = _interopRequireDefault(_baseTitle);
 
@@ -18608,7 +18608,7 @@
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _dialog = __webpack_require__(959);
+	var _dialog = __webpack_require__(969);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -18764,18 +18764,18 @@
 
 /***/ },
 
-/***/ 1514:
+/***/ 1524:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1515)
-	__vue_script__ = __webpack_require__(1517)
+	__webpack_require__(1525)
+	__vue_script__ = __webpack_require__(1527)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/vux-fix/cell.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1518)
+	__vue_template__ = __webpack_require__(1528)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18801,13 +18801,13 @@
 
 /***/ },
 
-/***/ 1515:
+/***/ 1525:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1516);
+	var content = __webpack_require__(1526);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18828,7 +18828,7 @@
 
 /***/ },
 
-/***/ 1516:
+/***/ 1526:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -18843,7 +18843,7 @@
 
 /***/ },
 
-/***/ 1517:
+/***/ 1527:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18852,11 +18852,11 @@
 	    value: true
 	});
 
-	var _inlineDesc = __webpack_require__(916);
+	var _inlineDesc = __webpack_require__(926);
 
 	var _inlineDesc2 = _interopRequireDefault(_inlineDesc);
 
-	var _router = __webpack_require__(921);
+	var _router = __webpack_require__(931);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -18926,25 +18926,25 @@
 
 /***/ },
 
-/***/ 1518:
+/***/ 1528:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"weui-cell\" :class=\"{'vux-tap-active': isLink || !!link, 'weui-cell_access': isLink || !!link}\" @click=\"onClick\">\n    <div class=\"weui-cell__hd\">\n        <slot name=\"icon\"></slot>\n    </div>\n    <div class=\"vux-cell-bd\" :class=\"{'vux-cell-primary':primary==='title'}\">\n        <p>\n            <label class=\"vux-label\" :style=\"{width: $parent.labelWidth, textAlign: $parent.labelAlign, marginRight: $parent.labelMarginRight}\" v-if=\"title\">{{title}}</label>\n            <slot name=\"after-title\"></slot>\n        </p>\n        <inline-desc v-html=\"inlineDesc\"></inline-desc>\n    </div>\n    <div class=\"weui-cell__ft\" :class=\"{'vux-cell-primary':primary==='content'}\">\n        {{value}}\n  <slot name=\"value\"></slot>\n        <slot></slot>\n    </div>\n    <slot name=\"child\"></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 1519:
+/***/ 1529:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1520)
-	__vue_script__ = __webpack_require__(1522)
+	__webpack_require__(1530)
+	__vue_script__ = __webpack_require__(1532)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/baseTitle.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1523)
+	__vue_template__ = __webpack_require__(1533)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18970,13 +18970,13 @@
 
 /***/ },
 
-/***/ 1520:
+/***/ 1530:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1521);
+	var content = __webpack_require__(1531);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -18997,7 +18997,7 @@
 
 /***/ },
 
-/***/ 1521:
+/***/ 1531:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -19012,7 +19012,7 @@
 
 /***/ },
 
-/***/ 1522:
+/***/ 1532:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19055,32 +19055,32 @@
 
 /***/ },
 
-/***/ 1523:
+/***/ 1533:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n<div class=\"top0\">\n    <div class=\"top_container\">\n        <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->\n        <div class=\"top_left\">\n            <a class=\"top_back\" href=\"javascript:history.back();\" data-dav-tj=\"order_list|back|back|1|back@order_list\">\n                <span class=\"home_arrow\"></span>\n            </a>\n        </div>\n        <div class=\"title_container\">\n            {{title}}\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1524:
+/***/ 1534:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"social_manage\" style=\"overflow: scroll;\" :style=\"{height:document.body.clientHeight-44+'px'}\" _v-bc029a14=\"\">\n  <base-title value=\"群信息\" _v-bc029a14=\"\"></base-title>\n  <div _v-bc029a14=\"\">\n    <group _v-bc029a14=\"\">\n      <cell title=\"群主\" class=\"avatar_outer\" _v-bc029a14=\"\">\n        <div slot=\"value\" _v-bc029a14=\"\">\n          <span class=\"v-middle mr6\" v-text=\"communityHolderName\" _v-bc029a14=\"\"></span>\n          <img class=\"avatar_con\" :src=\"communityHolderImage\" alt=\"\" _v-bc029a14=\"\">\n        </div>\n      </cell>\n      <cell title=\"群名称\" :value=\"communityTitle\" _v-bc029a14=\"\"></cell>\n      <cell title=\"群成员\" is-link=\"\" :link=\"{path:'/member/'+socialId}\" _v-bc029a14=\"\">\n                      <span slot=\"child\" class=\"avatar_list\" _v-bc029a14=\"\">\n                          <img v-for=\"(communityMemberItem,index) in communityMemberList\" class=\"avatar_con mr10\" :src=\"communityMemberItem.avatar\" v-if=\"index<avatarNum\" alt=\"\" _v-bc029a14=\"\">\n                      </span>\n      </cell>\n      <cell title=\"群介绍\" :inline-desc=\"communityIntro\" :value=\"describe\" _v-bc029a14=\"\">\n\n      </cell>\n    </group>\n\n    <group _v-bc029a14=\"\">\n      <div @click=\"goToGroup()\" _v-bc029a14=\"\">\n        <cell :title=\"momGrowUpTitle\" is-link=\"\" _v-bc029a14=\"\"></cell>\n      </div>\n    </group>\n    <div style=\"height: 40px\" _v-bc029a14=\"\"></div>\n  </div>\n\n\n\n</div>\n";
 
 /***/ },
 
-/***/ 1525:
+/***/ 1535:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1526)
-	__vue_script__ = __webpack_require__(1528)
+	__webpack_require__(1536)
+	__vue_script__ = __webpack_require__(1538)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/social/social_member.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1539)
+	__vue_template__ = __webpack_require__(1549)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -19106,13 +19106,13 @@
 
 /***/ },
 
-/***/ 1526:
+/***/ 1536:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1527);
+	var content = __webpack_require__(1537);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -19133,7 +19133,7 @@
 
 /***/ },
 
-/***/ 1527:
+/***/ 1537:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -19148,7 +19148,7 @@
 
 /***/ },
 
-/***/ 1528:
+/***/ 1538:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19157,7 +19157,7 @@
 	  value: true
 	});
 
-	var _baseTitle = __webpack_require__(1519);
+	var _baseTitle = __webpack_require__(1529);
 
 	var _baseTitle2 = _interopRequireDefault(_baseTitle);
 
@@ -19173,23 +19173,23 @@
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _index = __webpack_require__(1063);
+	var _index = __webpack_require__(1073);
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _index3 = __webpack_require__(907);
+	var _index3 = __webpack_require__(917);
 
 	var _index4 = _interopRequireDefault(_index3);
 
-	var _index5 = __webpack_require__(912);
+	var _index5 = __webpack_require__(922);
 
 	var _index6 = _interopRequireDefault(_index5);
 
-	var _index7 = __webpack_require__(1529);
+	var _index7 = __webpack_require__(1539);
 
 	var _index8 = _interopRequireDefault(_index7);
 
-	var _index9 = __webpack_require__(1534);
+	var _index9 = __webpack_require__(1544);
 
 	var _index10 = _interopRequireDefault(_index9);
 
@@ -19197,7 +19197,7 @@
 
 	var _webStorageCache2 = _interopRequireDefault(_webStorageCache);
 
-	var _dialog = __webpack_require__(959);
+	var _dialog = __webpack_require__(969);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
@@ -19311,18 +19311,18 @@
 
 /***/ },
 
-/***/ 1529:
+/***/ 1539:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1530)
-	__vue_script__ = __webpack_require__(1532)
+	__webpack_require__(1540)
+	__vue_script__ = __webpack_require__(1542)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/load-more/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1533)
+	__vue_template__ = __webpack_require__(1543)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -19348,13 +19348,13 @@
 
 /***/ },
 
-/***/ 1530:
+/***/ 1540:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1531);
+	var content = __webpack_require__(1541);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -19375,7 +19375,7 @@
 
 /***/ },
 
-/***/ 1531:
+/***/ 1541:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -19390,7 +19390,7 @@
 
 /***/ },
 
-/***/ 1532:
+/***/ 1542:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19436,25 +19436,25 @@
 
 /***/ },
 
-/***/ 1533:
+/***/ 1543:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"weui-loadmore\" :class=\"{'weui-loadmore_line':!showLoading, 'weui-loadmore_dot': !showLoading && !tip}\">\n  <i class=\"weui-loading\" v-if=\"showLoading\"></i>\n  <span class=\"weui-loadmore__tips\" :style=\"getStyle()\" v-show=\"tip || !showLoading\">{{tip}}</span>\n</div>\n";
 
 /***/ },
 
-/***/ 1534:
+/***/ 1544:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1535)
-	__vue_script__ = __webpack_require__(1537)
+	__webpack_require__(1545)
+	__vue_script__ = __webpack_require__(1547)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] node_modules/vux/src/components/divider/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1538)
+	__vue_template__ = __webpack_require__(1548)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -19480,13 +19480,13 @@
 
 /***/ },
 
-/***/ 1535:
+/***/ 1545:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1536);
+	var content = __webpack_require__(1546);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -19507,7 +19507,7 @@
 
 /***/ },
 
-/***/ 1536:
+/***/ 1546:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -19522,7 +19522,7 @@
 
 /***/ },
 
-/***/ 1537:
+/***/ 1547:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19576,14 +19576,14 @@
 
 /***/ },
 
-/***/ 1538:
+/***/ 1548:
 /***/ function(module, exports) {
 
 	module.exports = "\n<p class=\"vux-divider\">\n  <slot></slot>\n</p>\n";
 
 /***/ },
 
-/***/ 1539:
+/***/ 1549:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-853a04aa=\"\">\n    <base-title value=\"群成员\" _v-853a04aa=\"\"></base-title>\n    <scroller height=\"-44\" lock-x=\"\" scrollbar-y=\"\" ref=\"scroller\" :use-pullup=\"true\" :pullup-config=\"pullConfig\" @on-pullup-loading=\"pullupCallback\" _v-853a04aa=\"\">\n        <div _v-853a04aa=\"\">\n            <div class=\"member_container\" _v-853a04aa=\"\">\n                <div v-for=\"(member, index) in memberList\" class=\"member_item vux-1px-b\" :index=\"index\" _v-853a04aa=\"\">\n                    <img slot=\"icon\" class=\"avatar_con mr6\" :src=\"member.avatar\" _v-853a04aa=\"\">\n                    <span v-text=\"member.name\" class=\"member_name\" _v-853a04aa=\"\"></span>\n                    <span v-text=\"'邀'+member.inviteNum+'位好友'\" class=\"invite_number\" _v-853a04aa=\"\"></span>\n                </div>\n            </div>\n            <divider v-if=\"!more\" _v-853a04aa=\"\">没有更多了</divider>\n        </div>\n    </scroller>\n</div>\n";

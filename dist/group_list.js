@@ -47,15 +47,15 @@
 
 	'use strict';
 
-	var _common = __webpack_require__(1112);
+	var _common = __webpack_require__(1122);
 
 	var _common2 = _interopRequireDefault(_common);
 
-	var _Vue = __webpack_require__(449);
+	var _Vue = __webpack_require__(459);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
-	var _vueLazyload = __webpack_require__(1109);
+	var _vueLazyload = __webpack_require__(1119);
 
 	var _vueLazyload2 = _interopRequireDefault(_vueLazyload);
 
@@ -70,7 +70,7 @@
 
 	new _Vue2.default({
 	  components: {
-	    app: __webpack_require__(1168)
+	    app: __webpack_require__(1178)
 	  },
 	  template: '<app />',
 	  el: ".app"
@@ -4202,7 +4202,7 @@
 
 /***/ },
 
-/***/ 414:
+/***/ 424:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4215,7 +4215,7 @@
 
 	var _md2 = _interopRequireDefault(_md);
 
-	var _param = __webpack_require__(415);
+	var _param = __webpack_require__(425);
 
 	var _param2 = _interopRequireDefault(_param);
 
@@ -4302,7 +4302,7 @@
 
 /***/ },
 
-/***/ 415:
+/***/ 425:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -4362,14 +4362,14 @@
 
 /***/ },
 
-/***/ 449:
+/***/ 459:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 975:
+/***/ 985:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4378,7 +4378,7 @@
 	  value: true
 	});
 
-	var _scriptjs = __webpack_require__(976);
+	var _scriptjs = __webpack_require__(986);
 
 	var _scriptjs2 = _interopRequireDefault(_scriptjs);
 
@@ -4390,11 +4390,11 @@
 
 	var _config2 = _interopRequireDefault(_config);
 
-	var _jsCookie = __webpack_require__(977);
+	var _jsCookie = __webpack_require__(987);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(978);
+	var _util = __webpack_require__(988);
 
 	var _util2 = _interopRequireDefault(_util);
 
@@ -4563,7 +4563,7 @@
 
 /***/ },
 
-/***/ 976:
+/***/ 986:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4693,7 +4693,7 @@
 
 /***/ },
 
-/***/ 977:
+/***/ 987:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -4865,7 +4865,7 @@
 
 /***/ },
 
-/***/ 978:
+/***/ 988:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4913,7 +4913,7 @@
 
 /***/ },
 
-/***/ 1109:
+/***/ 1119:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4922,11 +4922,11 @@
 	  value: true
 	});
 
-	var _Vue = __webpack_require__(449);
+	var _Vue = __webpack_require__(459);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
-	var _VueLazyload = __webpack_require__(1110);
+	var _VueLazyload = __webpack_require__(1120);
 
 	var _VueLazyload2 = _interopRequireDefault(_VueLazyload);
 
@@ -4957,14 +4957,14 @@
 
 /***/ },
 
-/***/ 1110:
+/***/ 1120:
 /***/ function(module, exports) {
 
 	module.exports = VueLazyload;
 
 /***/ },
 
-/***/ 1112:
+/***/ 1122:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4981,26 +4981,26 @@
 
 	var _ua2 = _interopRequireDefault(_ua);
 
-	var _login = __webpack_require__(1113);
+	var _login = __webpack_require__(1123);
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _jsCookie = __webpack_require__(977);
+	var _jsCookie = __webpack_require__(987);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(978);
+	var _util = __webpack_require__(988);
 
 	var _util2 = _interopRequireDefault(_util);
 
-	var _weixin = __webpack_require__(975);
+	var _weixin = __webpack_require__(985);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import scriptjs from 'scriptjs';
-	__webpack_require__(1114);
+	__webpack_require__(1124);
 
 
 	// ios wkwebview返回上一页执行回调刷新页面
@@ -5113,7 +5113,7 @@
 
 /***/ },
 
-/***/ 1113:
+/***/ 1123:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5122,7 +5122,7 @@
 	  value: true
 	});
 
-	var _jsCookie = __webpack_require__(977);
+	var _jsCookie = __webpack_require__(987);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
@@ -5212,7 +5212,7 @@
 
 /***/ },
 
-/***/ 1114:
+/***/ 1124:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -5244,7 +5244,7 @@
 
 /***/ },
 
-/***/ 1115:
+/***/ 1125:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5261,11 +5261,11 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
-	var _weixin = __webpack_require__(975);
+	var _weixin = __webpack_require__(985);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
-	var _Vue = __webpack_require__(449);
+	var _Vue = __webpack_require__(459);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
@@ -5307,7 +5307,7 @@
 	  callBrowserShare: function callBrowserShare() {
 	    new _Vue2.default({
 	      components: {
-	        'com-share-pop-tip': __webpack_require__(1116)
+	        'com-share-pop-tip': __webpack_require__(1126)
 	      },
 	      el: getEl(),
 	      data: {},
@@ -5329,18 +5329,18 @@
 
 /***/ },
 
-/***/ 1116:
+/***/ 1126:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1117)
-	__vue_script__ = __webpack_require__(1119)
+	__webpack_require__(1127)
+	__vue_script__ = __webpack_require__(1129)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-share-pop-tip.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1120)
+	__vue_template__ = __webpack_require__(1130)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5366,13 +5366,13 @@
 
 /***/ },
 
-/***/ 1117:
+/***/ 1127:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1118);
+	var content = __webpack_require__(1128);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5393,7 +5393,7 @@
 
 /***/ },
 
-/***/ 1118:
+/***/ 1128:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5408,7 +5408,7 @@
 
 /***/ },
 
-/***/ 1119:
+/***/ 1129:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5508,25 +5508,25 @@
 
 /***/ },
 
-/***/ 1120:
+/***/ 1130:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"com-share-pop-tip\" :style=\"styleObject\" @click=\"close\" @touchmove=\"touchmove\">\n  <img class=\"arrow\" src=\"http://pic.davdian.com/free/pointer.png\">\n  <div class=\"tip\">\n    <template v-if=\"isWeixin\">\n      <p>请点击右上角“分享”按钮,</p>\n      <p>然后可以选择“发送给朋友”、“分享到朋友圈”或者“复制链接”后发送链接给朋友。</p>\n    </template>\n    <template v-if=\"!isWeixin\">\n      <p>请复制地址栏链接，将链接发送给朋友</p>\n    </template>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1125:
+/***/ 1135:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1126)
-	__vue_script__ = __webpack_require__(1128)
+	__webpack_require__(1136)
+	__vue_script__ = __webpack_require__(1138)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-to-top-icon.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1129)
+	__vue_template__ = __webpack_require__(1139)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5552,13 +5552,13 @@
 
 /***/ },
 
-/***/ 1126:
+/***/ 1136:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1127);
+	var content = __webpack_require__(1137);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5579,7 +5579,7 @@
 
 /***/ },
 
-/***/ 1127:
+/***/ 1137:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5594,7 +5594,7 @@
 
 /***/ },
 
-/***/ 1128:
+/***/ 1138:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5662,25 +5662,25 @@
 
 /***/ },
 
-/***/ 1129:
+/***/ 1139:
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--滚动至顶图标-->\n<img class=\"to-top-icon\" @click=\"toTop\" :style=\"{display: display}\"\n     :src=\"'http://pic.davdian.com/free/back_top_icon_0803.png'\">\n";
 
 /***/ },
 
-/***/ 1130:
+/***/ 1140:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1131)
-	__vue_script__ = __webpack_require__(1133)
+	__webpack_require__(1141)
+	__vue_script__ = __webpack_require__(1143)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-top-title.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1134)
+	__vue_template__ = __webpack_require__(1144)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5706,13 +5706,13 @@
 
 /***/ },
 
-/***/ 1131:
+/***/ 1141:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1132);
+	var content = __webpack_require__(1142);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5733,7 +5733,7 @@
 
 /***/ },
 
-/***/ 1132:
+/***/ 1142:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5748,7 +5748,7 @@
 
 /***/ },
 
-/***/ 1133:
+/***/ 1143:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5969,25 +5969,25 @@
 
 /***/ },
 
-/***/ 1134:
+/***/ 1144:
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--顶部标题-->\n<div class=\"com-top-title\" :class=\"classObject\" v-if=\"!isDvdApp\" :style=\"styleObject\">\n  <div class=\"back-btn\" @click=\"back\">\n    <i class=\"back-arrow\"></i>\n  </div>\n  <span class=\"title\">{{title}}</span>\n  <i class=\"home\" v-if=\"home !== undefined\" @click=\"goHome\"></i>\n  <slot></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 1168:
+/***/ 1178:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1169)
-	__vue_script__ = __webpack_require__(1171)
+	__webpack_require__(1179)
+	__vue_script__ = __webpack_require__(1181)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_list/vue/app.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1188)
+	__vue_template__ = __webpack_require__(1198)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6013,13 +6013,13 @@
 
 /***/ },
 
-/***/ 1169:
+/***/ 1179:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1170);
+	var content = __webpack_require__(1180);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6040,7 +6040,7 @@
 
 /***/ },
 
-/***/ 1170:
+/***/ 1180:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6055,7 +6055,7 @@
 
 /***/ },
 
-/***/ 1171:
+/***/ 1181:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6072,7 +6072,7 @@
 
 	var _$2 = _interopRequireDefault(_$);
 
-	var _share = __webpack_require__(1115);
+	var _share = __webpack_require__(1125);
 
 	var _share2 = _interopRequireDefault(_share);
 
@@ -6084,7 +6084,7 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
-	var _util = __webpack_require__(978);
+	var _util = __webpack_require__(988);
 
 	var _util2 = _interopRequireDefault(_util);
 
@@ -6096,11 +6096,11 @@
 
 	exports.default = {
 	  components: {
-	    'com-to-top-icon': __webpack_require__(1125),
-	    'com-top-title': __webpack_require__(1130),
-	    'com-pic-display-box': __webpack_require__(1172),
-	    'goods-list': __webpack_require__(1177),
-	    'mine-list': __webpack_require__(1183)
+	    'com-to-top-icon': __webpack_require__(1135),
+	    'com-top-title': __webpack_require__(1140),
+	    'com-pic-display-box': __webpack_require__(1182),
+	    'goods-list': __webpack_require__(1187),
+	    'mine-list': __webpack_require__(1193)
 	  },
 	  props: {},
 	  data: function data() {
@@ -6244,18 +6244,18 @@
 
 /***/ },
 
-/***/ 1172:
+/***/ 1182:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1173)
-	__vue_script__ = __webpack_require__(1175)
+	__webpack_require__(1183)
+	__vue_script__ = __webpack_require__(1185)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-pic-display-box.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1176)
+	__vue_template__ = __webpack_require__(1186)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6281,13 +6281,13 @@
 
 /***/ },
 
-/***/ 1173:
+/***/ 1183:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1174);
+	var content = __webpack_require__(1184);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6308,7 +6308,7 @@
 
 /***/ },
 
-/***/ 1174:
+/***/ 1184:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6323,7 +6323,7 @@
 
 /***/ },
 
-/***/ 1175:
+/***/ 1185:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -6457,25 +6457,25 @@
 
 /***/ },
 
-/***/ 1176:
+/***/ 1186:
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--顶部标题-->\n<div class=\"pic-display-box\" :class=\"{show: isShow, hide: !isShow}\">\n  <div class=\"cell\">\n    <div class=\"mask\" @click=\"close\"></div>\n    <div class=\"content\">\n      <img :src=\"src\">\n      <div class=\"close-btn\" @click=\"close\">\n        <div class=\"line\"></div>\n        <div class=\"line\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1177:
+/***/ 1187:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1178)
-	__vue_script__ = __webpack_require__(1180)
+	__webpack_require__(1188)
+	__vue_script__ = __webpack_require__(1190)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_list/vue/group-goods-list.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1182)
+	__vue_template__ = __webpack_require__(1192)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6501,13 +6501,13 @@
 
 /***/ },
 
-/***/ 1178:
+/***/ 1188:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1179);
+	var content = __webpack_require__(1189);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6528,7 +6528,7 @@
 
 /***/ },
 
-/***/ 1179:
+/***/ 1189:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6543,7 +6543,7 @@
 
 /***/ },
 
-/***/ 1180:
+/***/ 1190:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6552,11 +6552,11 @@
 	  value: true
 	});
 
-	var _list = __webpack_require__(1181);
+	var _list = __webpack_require__(1191);
 
 	var _list2 = _interopRequireDefault(_list);
 
-	var _encrypt = __webpack_require__(414);
+	var _encrypt = __webpack_require__(424);
 
 	var _encrypt2 = _interopRequireDefault(_encrypt);
 
@@ -6883,7 +6883,7 @@
 
 /***/ },
 
-/***/ 1181:
+/***/ 1191:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -7129,25 +7129,25 @@
 
 /***/ },
 
-/***/ 1182:
+/***/ 1192:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"wrapper\" v-if=\"response\">\n  <template v-if=\"list.length > 0\">\n    <ul class=\"group-goods-list\">\n      <li v-for=\"data in list\">\n        <a @click=\"listItemClick(data.command.content, $event)\">\n          <div class=\"pic\">\n            <img v-lazy=\"data.imgUrl\">\n            <div class=\"sold-out\" v-if=\"parseInt(data.goodsStock) <= 0\">\n              <p class=\"top\">售罄</p>\n              <div class=\"split-line\"></div>\n              <p class=\"bottom\">SOLD OUT</p>\n            </div>\n            <div class=\"box-info\">\n              <div class=\"num\">{{data.pepoleNumber}}人团</div>\n              <div class=\"privilege\">省{{data.discount}}元</div>\n            </div>\n          </div>\n          <div class=\"desc\">{{data.goodsName}}</div>\n          <div class=\"info\">\n          <span class=\"left-info\">\n            <div class=\"top\">\n              <span class=\"group-price\">¥<span class=\"num\">{{data.goodsPrice}}</span></span>\n              <span class=\"income\" v-if=\"response.visitor_status == '3' && data.sellerIncome\">\n                  团长返: ¥ {{data.sellerIncome}}\n                <span class=\"times\" v-if=\"data.radioIncome && data.radioIncome != '0'\">*{{data.radioIncome}}倍</span>\n              </span>\n              <span class=\"post\" v-for=\"item in data.actLabels\">{{item}}</span>\n            </div>\n            <div class=\"bottom\">\n              <span class=\"price\">单价买: ￥{{data.realShopPrice}}</span>\n            </div>\n          </span>\n            <span class=\"go-group\">\n            <span>去组团</span>\n            <i class=\"arrow\"></i>\n          </span>\n          </div>\n        </a>\n      </li>\n    </ul>\n\n    <!--列表加载结束-->\n    <div class=\"no-more\" v-if=\"response && response.data.reverseGroup.more == '0'\">没有更多啦!</div>\n  </template>\n\n  <template v-if=\"list.length == 0\">\n    <!--没有任何组团-->\n    <div class=\"no-goods\">\n      <a class=\"a\" href=\"/\">暂无组团,去首页看看</a>\n    </div>\n  </template>\n</div>\n";
 
 /***/ },
 
-/***/ 1183:
+/***/ 1193:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1184)
-	__vue_script__ = __webpack_require__(1186)
+	__webpack_require__(1194)
+	__vue_script__ = __webpack_require__(1196)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_list/vue/group-detail-list.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1187)
+	__vue_template__ = __webpack_require__(1197)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7173,13 +7173,13 @@
 
 /***/ },
 
-/***/ 1184:
+/***/ 1194:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1185);
+	var content = __webpack_require__(1195);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -7200,7 +7200,7 @@
 
 /***/ },
 
-/***/ 1185:
+/***/ 1195:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -7215,7 +7215,7 @@
 
 /***/ },
 
-/***/ 1186:
+/***/ 1196:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7224,11 +7224,11 @@
 	  value: true
 	});
 
-	var _list = __webpack_require__(1181);
+	var _list = __webpack_require__(1191);
 
 	var _list2 = _interopRequireDefault(_list);
 
-	var _encrypt = __webpack_require__(414);
+	var _encrypt = __webpack_require__(424);
 
 	var _encrypt2 = _interopRequireDefault(_encrypt);
 
@@ -7587,14 +7587,14 @@
 
 /***/ },
 
-/***/ 1187:
+/***/ 1197:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<!--我的团购列表-->\n<div class=\"wrapper\" v-if=\"response\">\n  <template v-if=\"list.length > 0\">\n    <!--列表-->\n    <ul class=\"group-detail-list\">\n      <li v-for=\"data in list\">\n        <a @click=\"listItemClick(data.command.content, $event)\">\n          <div class=\"pic\">\n            <img v-lazy=\"data.imgUrl\">\n            <div class=\"sold-out\" v-if=\"parseInt(data.goodsStock) <= 0\">\n              <p class=\"top\">售罄</p>\n              <div class=\"split-line\"></div>\n              <p class=\"bottom\">SOLD OUT</p>\n            </div>\n            <div class=\"box-info\">\n              <div class=\"num\">{{data.pepoleNumber}}人团</div>\n              <div class=\"privilege\">省{{data.discount}}元</div>\n            </div>\n          </div>\n          <div class=\"desc\">{{data.goodsName}}</div>\n          <div class=\"info\">\n          <span class=\"left-info\">\n            <div v-if=\"data.groupStatus == '0'\">还差 {{data.leaveNumber}} 人成团</div>\n            <div v-if=\"data.groupStatus == '1'\">组团成功</div>\n            <div v-if=\"data.groupStatus == '2'\">组团失败</div>\n            <div>{{formatRemainTime(data.remainSecond)}}</div>\n          </span>\n          <span class=\"right-info\">\n            <div v-if=\"response.visitor_status == '3' && data.sellerIncome\">\n              预计成团返现:<span class=\"light\"> {{data.sellerIncome}} 元</span>\n              <span v-if=\"data.radioIncome && data.radioIncome != '0'\">*{{data.radioIncome}}倍</span>\n            </div>\n            <div>团长: {{data.consignee}}</div>\n          </span>\n          </div>\n        </a>\n      </li>\n    </ul>\n\n    <!--列表加载结束-->\n    <div class=\"no-more\" v-if=\"response && response.data.reverseGroup.more == '0'\">没有更多啦!</div>\n  </template>\n\n  <template v-if=\"list.length == 0\">\n    <!--没有任何组团-->\n    <div class=\"no-group\">\n      您还未发起组团\n      <div class=\"btn\" @click=\"$emit('go-goods-tab')\">马上发起组团</div>\n    </div>\n  </template>\n</div>\n";
 
 /***/ },
 
-/***/ 1188:
+/***/ 1198:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"app\" v-if=\"response\">\n  <!--头部标题-->\n  <com-top-title title=\"大V店组团\" border-bottom home></com-top-title>\n  <!--广告-->\n  <div class=\"group_ad\">\n    <template v-for=\"ad in response.data.banner\">\n      <a v-if=\"ad.isClick == '0'\" :href=\"ad.command.content\">\n        <img class=\"adPic\" v-lazy=\"ad.imageUrl\" v-if=\"ad.imageUrl\" @click=\"adClick(ad)\">\n      </a>\n      <img class=\"adPic\" v-lazy=\"ad.imageUrl\" v-if=\"ad.isClick == '1'\" @click=\"showPopPic(ad.smallImageUrl)\">\n    </template>\n    <com-pic-display-box ref=\"com-pic-display-box\"></com-pic-display-box>\n  </div>\n  <!--tab按钮-->\n  <div class=\"tab-btn\">\n    <span class=\"btn group\" :class=\"{active: currentList == 1}\" @click=\"tabBtnClick(1)\">\n      <span class=\"word\">团购精选</span>\n    </span>\n    <i class=\"btn-split\"></i>\n    <span class=\"btn mine\" :class=\"{active: currentList == 2}\" @click=\"tabBtnClick(2)\">\n      <span class=\"word\">\n      <template v-if=\"response.visitor_status == '3'\">我的店铺组团</template>\n      <template v-if=\"response.visitor_status != '3'\">我的组团</template>\n      </span>\n    </span>\n  </div>\n\n  <!--列表-->\n  <keep-alive>\n    <!--组团商品-->\n    <goods-list v-if=\"currentList == 1\" ref=\"goods-list\" :prop-response=\"response\"></goods-list>\n    <!--我的(店铺)组团-->\n    <mine-list v-if=\"currentList == 2\" ref=\"mine-list\"\n               :is-seller=\"response.visitor_status == '3' ? true : false\"\n               @go-goods-tab=\"tabBtnClick(1)\"></mine-list>\n  </keep-alive>\n\n  <!--至顶按钮-->\n  <com-to-top-icon></com-to-top-icon>\n\n  <!--浮动活动-->\n  <div class=\"float-act\" v-if=\"window.float_act_img_url\">\n    <a :href=\"window.float_act_jump_url\">\n      <img :src=\"window.float_act_img_url\">\n    </a>\n  </div>\n</div>\n";

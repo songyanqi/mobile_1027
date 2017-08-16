@@ -2,91 +2,55 @@
   <div>
     <div class="tab">
       <div class="tab_list">
-        <div class="border color1">内容</div>
-        <div class="b_right">简介</div>
+        <div class="border color1" v-text="dataList.content"></div>
+        <div class="b_right" v-text="dataList.recommend"></div>
         <div class="line"></div>
       </div>
       <div class="update">
         <div class="up">
-          已更新<span class="color1">191</span>期，计划更新<span class="color1">365</span>期
+          已更新<span class="color1" v-text="dataList.up"></span>期，计划更新<span class="color1" v-text="dataList.ex"></span>期
         </div>
       </div>
     </div>
     <div class="list">
-      <div class="item">
-        <div class="item_left">
-          <div class="item_title">三打白骨精没打死继续打打打打三打白骨精没打死继续打打打打三打白骨精没打死继</div>
-          <div class="item_timee">
-            <div class="item_date">2017-09-09</div>
-            <div class="item_count">88901次播放</div>
-            <div class="item_time">
-              <div class="clock"></div>
-              <div class="times">04:19</div>
-            </div>
-          </div>
-        </div>
-        <div class="item_right">
-          <img src="//pic.davdian.com/free/2017/08/15/a.jpg" alt="" style="display: none;">
-          <div class="free">免费试听</div>
-        </div>
-      </div>
-      <div class="item">
+      <div class="item" v-for="item in contentList">
         <div class="last">上次听到这里 2017-07-11 21:09</div>
-        <div class="item_left">
-          <div class="item_title">三打白骨精没打死继续打打打打三打白骨精没打死继续打打打打三打白骨精没打死继</div>
-          <div class="item_timee">
-            <div class="item_date">2017-09-09</div>
-            <div class="item_count">88901次播放</div>
-            <div class="item_time">
-              <div class="clock"></div>
-              <div class="times">04:19</div>
+        <div class="rea">
+          <div class="item_left">
+            <div class="item_title" v-text="item.music"></div>
+            <div class="item_timee">
+              <div class="item_date">2017-09-09</div>
+              <div class="item_count"><span v-text="item.number"></span>次播放</div>
+              <div class="item_time">
+                <div class="clock"></div>
+                <div class="times" v-text="item.time"></div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="item_right"><img src="//pic.davdian.com/free/2017/08/15/a.jpg" alt=""
-                                     style="display: none;">
-          <div class="free">免费试听</div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item_left">
-          <div class="item_title">三打白骨精没打死继续打打打打三打白骨精没打死继续打打打打三打白骨精没打死继</div>
-          <div class="item_timee">
-            <div class="item_date">2017-09-09</div>
-            <div class="item_count">88901次播放</div>
-            <div class="item_time">
-              <div class="clock"></div>
-              <div class="times">04:19</div>
-            </div>
+          <div class="item_right">
+            <img :src="item.imageUrl" alt="">
+            <div class="free" style="display: none;">免费试听</div>
           </div>
         </div>
-        <div class="item_right"><img src="//pic.davdian.com/free/2017/08/15/a.jpg" alt=""
-                                     style="display: none;">
-          <div class="free">免费试听</div>
-        </div>
-      </div>
-      <div class="item">
-        <div class="item_left">
-          <div class="item_title">三打白骨精没打死继续打打打打三打白骨精没打死继续打打打打三打白骨精没打死继</div>
-          <div class="item_timee">
-            <div class="item_date">2017-09-09</div>
-            <div class="item_count">88901次播放</div>
-            <div class="item_time">
-              <div class="clock"></div>
-              <div class="times">04:19</div>
-            </div>
-          </div>
-        </div>
-        <div class="item_right"><img src="//pic.davdian.com/free/2017/08/15/a.jpg" alt=""
-                                     style="display: none;">
-          <div class="free">免费试听</div>
-        </div>
+
       </div>
     </div>
   </div>
 </template>
 <script>
-  export default {}
+  export default {
+      props:["data"],
+      created:function () {
+        this.dataList=this.data.body.dataList[0];
+        this.contentList=this.data.body.dataList[0].contentList;
+      },
+      data(){
+          return {
+              dataList:[],
+              contentList:[]
+          }
+      }
+  }
 </script>
 <style scoped>
   .tab {
@@ -166,8 +130,9 @@
     padding-left: 0.1rem;
     padding-right: 0.1rem;
     border-bottom: 1px solid #E1E1E1;
+    position: relative;
   }
-  .item>div{
+  .rea>div{
     display: inline-block;
     vertical-align: top;
   }
@@ -226,12 +191,16 @@
     line-height: 0.1rem;
     vertical-align: top;
   }
+  .item_right{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -0.17rem;
+  }
   .item_right img{
     height: 0.34rem;
     width: 0.34rem;
     border-radius: 50%;
-    margin-top: 0.13rem;
-    margin-left: 0.6rem;
   }
 
   .free{
@@ -257,5 +226,8 @@
     text-align: center;
     line-height:0.2rem;
 
+  }
+  .rea{
+    position: relative;
   }
 </style>

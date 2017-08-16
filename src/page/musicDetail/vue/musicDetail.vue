@@ -24,12 +24,60 @@
       <div class="look_count">查看合辑 (5/26)</div>
       <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
     </div>
+    <div style="height: 0.1rem;background: #F8F7F7;"></div>
     <div class="bottom_text">
       父母不断重复唠叨，是因为孩子没有按自己说的去做。
       显而易见，这种无效的沟通方式，不仅无法达到父母的初衷，又会促使孩子与自己对抗。
-
       每个人都是只有内心认可，才能心甘情愿地去做事。如果父母没有足够的理由说服孩子，他也不可能完全听从。所以当孩子表现得总是不听话，父母就要想到：自己是否有足够的理由说服孩子，或者自己的要求是否真的不容质疑。
     </div>
+
+
+    <div class="mask"></div>
+    <div class="mask_div">
+      <div class="mask_top mask_padding">
+        <div class="mi_left"><img src="//pic.davdian.com/free/2017/08/16/playOrder.png" alt=""></div>
+        <div class="play">顺序播放</div>
+        <div class="sort">排序</div>
+        <div class="mi_right"><img src="//pic.davdian.com/free/2017/08/16/sorting.png" alt=""></div>
+      </div>
+      <div class="mask_banner">
+        <div class="mask_padding mask_list">
+          <div class="list_name">藏在故事里的数理化学习秘诀</div>
+          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+        </div>
+        <div class="mask_padding mask_list">
+          <div class="list_name">藏在故事里的数理化学习秘诀</div>
+          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+        </div>
+        <div class="mask_padding mask_list">
+          <div class="list_name">藏在故事里的数理化学习秘诀</div>
+          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+        </div>
+        <div class="mask_padding mask_list">
+          <div class="list_name">藏在故事里的数理化学习秘诀</div>
+          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+        </div>
+        <div class="mask_padding mask_list">
+          <div class="list_name">藏在故事里的数理化学习秘诀</div>
+          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+        </div>
+        <div class="mask_padding mask_list">
+          <div class="list_name">藏在故事里的数理化学习秘诀</div>
+          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+        </div>
+        <div class="mask_padding mask_list">
+          <div class="list_name">藏在故事里的数理化学习秘诀</div>
+          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+        </div>
+        <div class="mask_padding mask_list">
+          <div class="list_name">藏在故事里的数理化学习秘诀</div>
+          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+        </div>
+      </div>
+      <div class="mask_bottom">关闭</div>
+    </div>
+
+
   </div>
 </template>
 <script>
@@ -47,12 +95,15 @@
     text-align: center;
     color: #333333;
     font-size: 16px;
+    background: #fff;
   }
+
   .range{
     /*padding: 0.19rem 0.1rem 0 0.1rem;*/
     position:relative;
     height: 0.26rem;
     margin: 0 0.1rem;
+    background: #ffffff;
   }
   .gray{
     height: 0.04rem;
@@ -78,7 +129,8 @@
     height: 0.17rem;
     font-size: 0;
     position:relative;
-    margin:0 0.1rem;
+    padding:0 0.1rem;
+    background: #fff;
   }
   .time>div{
     display: inline-block;
@@ -91,19 +143,20 @@
   }
 
   .time>div:nth-child(1){
-    left: 0;
+    left: 0.1rem;
   }
   .time>div:nth-child(2){
-    right: 0;
+    right: 0.1rem;
   }
   .btn{
-    margin-top: 0.11rem;
-    margin-left:0.2rem;
-    margin-right:0.2rem;
-    margin-bottom:0.2rem;
+    padding-top: 0.11rem;
+    padding-left:0.2rem;
+    padding-right:0.2rem;
+    padding-bottom:0.2rem;
     width: 3.35rem;
     height: 0.46rem;
     font-size: 0;
+    background: #ffffff;
   }
   .btn>div{
     display: inline-block;
@@ -139,11 +192,11 @@
   }
   .look_more{
     height: 0.4rem;
-    margin-left:0.1rem;
-    margin-right:0.1rem;
+    padding-left:0.1rem;
+    padding-right:0.1rem;
     font-size: 0;
     position: relative;
-    margin-bottom: 0.1rem;
+    background: #ffffff;
   }
   .look_more>div{
     display: inline-block;
@@ -156,13 +209,13 @@
     color:#333333;
     font-size: 14px;
     position: absolute;
-    left: 0;
+    left: 0.1rem;
   }
   .look_icon img{
     height: 0.14rem;
     width: 0.14rem;
     position: absolute;
-    right: 0;
+    right: 0.1rem;
     margin-top:0.13rem;
   }
   .bottom_text{
@@ -170,5 +223,108 @@
     padding-right:0.1rem;
     color:#666666;
     font-size: 12px;
+    padding-top: 0.15rem;
+    background: #fff;
+    line-height: 0.18rem;
   }
+
+
+  .mask{
+    background: #000000;
+    opacity: 0.5;
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index:2;
+
+  }
+  .mask_div{
+    height: 4rem;
+    position: fixed;
+    bottom: 0;
+    z-index: 3;
+    background: #fff;
+    width: 3.75rem;
+  }
+  .mask_top,.mask_bottom{
+    height: 0.45rem;
+    width: 3.75rem;
+  }
+  .mi_left img{
+    width: 0.19rem;
+    height: 0.16rem;
+  }
+  .mi_right img{
+    width: 0.15rem;
+    height: 0.16rem;
+  }
+  .mask_top{
+    font-size: 0;
+    padding-top: 0.14rem;
+    box-sizing:border-box;
+  }
+
+  .mask_top>div{
+    display: inline-block;
+    vertical-align:top;
+  }
+  .play,.sort{
+    color:#666666;
+    font-size: 0.14rem;
+  }
+  .mask_padding{
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    border-bottom: 1px solid #DDDDDD;
+  }
+
+  .play{
+    margin-left: 0.08rem;
+  }
+  .sort{
+    margin-left: 2rem;
+  }
+  .mi_right{
+    margin-left:0.07rem;
+  }
+  .mask_list{
+    font-size: 0;
+    width: 3.75rem;
+    height: 0.45rem;
+    padding-top: 0.13rem;
+    position: relative;
+    box-sizing: border-box;
+  }
+  .mask_list>div{
+    display: inline-block;
+    vertical-align: top;
+  }
+  .mask_list img{
+    width: 0.2rem;
+    height: 0.2rem;
+  }
+  .list_name{
+    font-size: 12px;
+    color:#666666;
+    position:absolute;
+    left: 0.2rem;
+    line-height: 0.18rem;
+  }
+  .list_img{
+    position: absolute;
+    right: 0.2rem;
+  }
+  .mask_banner{
+    height: 3.15rem;
+    overflow: scroll;
+  }
+  .mask_bottom{
+    line-height: 0.45rem;
+    text-align: center;
+    color: #333333;
+    font-size: 14px;
+  }
+
 </style>

@@ -48,9 +48,9 @@
 	/**
 	 * Created by myy on 16/12/15.
 	 */
-	__webpack_require__(478);
+	__webpack_require__(488);
 	__webpack_require__(43);
-	__webpack_require__(480);
+	__webpack_require__(490);
 
 
 /***/ },
@@ -4679,21 +4679,21 @@
 
 /***/ },
 
-/***/ 449:
+/***/ 459:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 478:
+/***/ 488:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 480:
+/***/ 490:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -4703,10 +4703,10 @@
 	 * Created by myy on 16/12/15.
 	 */
 
-	var Vue = __webpack_require__(449);
-	var classroom = __webpack_require__(481);
+	var Vue = __webpack_require__(459);
+	var classroom = __webpack_require__(491);
 	// var title = require("../module/title.vue");
-	var VueTouch = __webpack_require__(500)
+	var VueTouch = __webpack_require__(510)
 	Vue.use(VueTouch)
 	new Vue({
 	    el: "#vScholl",
@@ -4722,18 +4722,18 @@
 
 /***/ },
 
-/***/ 481:
+/***/ 491:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(482)
-	__vue_script__ = __webpack_require__(484)
+	__webpack_require__(492)
+	__vue_script__ = __webpack_require__(494)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/classroom.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(499)
+	__vue_template__ = __webpack_require__(509)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4759,13 +4759,13 @@
 
 /***/ },
 
-/***/ 482:
+/***/ 492:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(483);
+	var content = __webpack_require__(493);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -4786,7 +4786,7 @@
 
 /***/ },
 
-/***/ 483:
+/***/ 493:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -4801,7 +4801,7 @@
 
 /***/ },
 
-/***/ 484:
+/***/ 494:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4810,15 +4810,15 @@
 	    value: true
 	});
 
-	var _vue = __webpack_require__(485);
+	var _vue = __webpack_require__(495);
 
 	var _vue2 = _interopRequireDefault(_vue);
 
-	var _vSchoolTitle = __webpack_require__(486);
+	var _vSchoolTitle = __webpack_require__(496);
 
 	var _vSchoolTitle2 = _interopRequireDefault(_vSchoolTitle);
 
-	var _inviteCard_v = __webpack_require__(491);
+	var _inviteCard_v = __webpack_require__(501);
 
 	var _inviteCard_v2 = _interopRequireDefault(_inviteCard_v);
 
@@ -6746,7 +6746,7 @@
 
 /***/ },
 
-/***/ 485:
+/***/ 495:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;"use strict";
@@ -8604,18 +8604,18 @@
 
 /***/ },
 
-/***/ 486:
+/***/ 496:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(487)
-	__vue_script__ = __webpack_require__(489)
+	__webpack_require__(497)
+	__vue_script__ = __webpack_require__(499)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/vSchoolTitle.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(490)
+	__vue_template__ = __webpack_require__(500)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8641,13 +8641,13 @@
 
 /***/ },
 
-/***/ 487:
+/***/ 497:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(488);
+	var content = __webpack_require__(498);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8668,7 +8668,7 @@
 
 /***/ },
 
-/***/ 488:
+/***/ 498:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8683,7 +8683,7 @@
 
 /***/ },
 
-/***/ 489:
+/***/ 499:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8728,25 +8728,25 @@
 
 /***/ },
 
-/***/ 490:
+/***/ 500:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"top0\" _v-2cc27de2=\"\">\n    <div class=\"top_container\" _v-2cc27de2=\"\">\n        <div class=\"top_left\" style=\"width: 40px\" _v-2cc27de2=\"\">\n            <a class=\"top_back\" href=\"javascript:history.back();\" _v-2cc27de2=\"\">\n                <span class=\"home_arrow\" _v-2cc27de2=\"\"></span>\n            </a>\n        </div>\n        <div class=\"title_container\" _v-2cc27de2=\"\">\n            {{data||msg}}\n        </div>\n        <div class=\"top_right\" style=\"width:40px;\" v-if=\"rightshow||false\" _v-2cc27de2=\"\">\n            <a class=\"top_back\" href=\"./course.html\" _v-2cc27de2=\"\">\n                <img style=\"width:26px;margin-top:12px;\" class=\"back_home\" src=\"//pic.davdian.com/free/2017/01/17/75_60_7d48bf0ba35cf3ea029bab4d709558f3.png\" _v-2cc27de2=\"\">\n            </a>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 491:
+/***/ 501:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(492)
-	__vue_script__ = __webpack_require__(494)
+	__webpack_require__(502)
+	__vue_script__ = __webpack_require__(504)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/inviteCard/inviteCard_v1.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(498)
+	__vue_template__ = __webpack_require__(508)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8772,13 +8772,13 @@
 
 /***/ },
 
-/***/ 492:
+/***/ 502:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(493);
+	var content = __webpack_require__(503);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8799,7 +8799,7 @@
 
 /***/ },
 
-/***/ 493:
+/***/ 503:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8814,7 +8814,7 @@
 
 /***/ },
 
-/***/ 494:
+/***/ 504:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -8823,9 +8823,9 @@
 	  value: true
 	});
 
-	__webpack_require__(495);
+	__webpack_require__(505);
 
-	var _inviteCard_v = __webpack_require__(497);
+	var _inviteCard_v = __webpack_require__(507);
 
 	var _inviteCard_v2 = _interopRequireDefault(_inviteCard_v);
 
@@ -8905,14 +8905,14 @@
 
 /***/ },
 
-/***/ 495:
+/***/ 505:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 497:
+/***/ 507:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9063,28 +9063,28 @@
 
 /***/ },
 
-/***/ 498:
+/***/ 508:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div class=\"inviteCart\" v-show=\"showCard\">\n    <div class=\"mask\">\n        <div class=\"container\">\n            <div class=\"close\" @click=\"closeCard\"></div>\n            <div class=\"share_top_text\">长按保存图片</div>\n            <!-- <div class=\"share_top_text\" v-if=\"type==2\">分享直播图片赚奖金</div> -->\n            <div class=\"img_container\" :style=\"styleObject\">\n                <img :src=\"imgUrl\" :style=\"styleObject\">\n            </div>\n            <div class=\"share_text\" v-if='type==2 && visitor==3 && income'>当好友通过您的分享报名课程,并<span class='share_text_span'>在您的店铺下单</span>,您便可获得<span class='share_text_span'>¥{{income}}</span>奖金</div>\n            <div class=\"share_text\" v-if='type==2 && visitor!=3 && income'>成为店主后,当好友在您的店铺报名该课程,您便可获得<span class='share_text_span'>¥ {{income}}<span>奖金</div>\n            <div class=\"share_text\" v-if='type!=2'>分享直播图片加人气</div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 499:
+/***/ 509:
 /***/ function(module, exports) {
 
 	module.exports = "\n    <v-school-title :rightshow=\"true\" :data='title'></v-school-title>\n    <div class=\"classroom-container\">\n        <!--点击评论列表和x消失  当评论为开时点击弹框唤起commonList-->\n        <div class=\"mask\" v-if=\"commonShow\">\n            <div class='mask_con_mask' @click=\"close_comment\"></div>\n            <div class=\"mask_con\" @click=\"keyBoard($event)\">\n                <!--关闭按钮-->\n                <div class=\"close\" @click=\"close_comment\">\n                    <img src=\"//pic.davdian.com/free/2016/12/22/60_80_543e7ae3b77c0ce52ebeee2a210dbdf6.png\" alt=\"\">\n                </div>\n                <!--弹出层列表-->\n                <div class=\"common\" id=\"common\">\n                    <div class=\"scrollcon\">\n                        <div class=\"commonList-container\">\n                            <div class=\"end\" v-if=\"refreshtxt\">拉取更多</div>\n                            <div class=\"class_introduce_con\" v-for=\"(index,common) in commonList\">\n                                <div class=\"comment_tit\">\n                                    <img class=\"img\" :src=\"common.speaker.avatar || defaultAvatar\" alt=\"\">\n                                    <div class=\"comment_dis\">\n                                        <span class=\"commentname\">{{decodeURIComponent(common.speaker.name)}}</span>\n                                        <span  v-if=\"new Date()-common.msg.time < 60*60*12*1000\">{{getTime(parseInt(common.msg.time))}}</span>\n                                        <span  v-if=\"new Date()-common.msg.time >= 60*60*12*1000\">{{getFullTime(parseInt(common.msg.time))}}</span>\n                                    </div>\n                                </div>\n                                <div class=\"class_introduce_text\">\n                                    <p>{{decodeURIComponent(common.msg.content)}}</p>\n                                    <!-- <p>：：：：：：：：{{common.uuid}}</p> -->\n                                </div>\n                            </div>\n                            <div class=\"commonbottom\"></div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n        <!--fiexd定位的弹幕-->\n        <div v-if=\"commonflag && discussStatus\" class=\"flexd\" @click=\"open_comment\">\n            <div class=\"common_position\"  v-if='commonList[commonList.length-2].msg.content'>\n                <span class=\"common_box\" v-text='decodeURIComponent(commonList[commonList.length-2].msg.content)'></span>\n                <img :src=\"commonList[commonList.length-2].speaker.avatar || defaultAvatar\">\n            </div>\n\n            <div class=\"common_position\" v-if='commonList[commonList.length-1].msg.content'>\n                <span class=\"common_box\" v-text='decodeURIComponent(commonList[commonList.length-1].msg.content)'></span>\n                <img :src=\"commonList[commonList.length-1].speaker.avatar || defaultAvatar\">\n            </div>\n        </div>\n        <div>\n\n        </div>\n        <!--开关按钮-->\n        <div v-if=\"commonflag && discussStatus\" class=\"flag\">\n            <span @click=\"switchflag\" >关</span>\n        </div>\n        <div v-if=\"!commonflag && discussStatus\" class=\"flag\">\n            <span @click=\"switchflag\">开</span>\n        </div>\n        <div  class=\"commen_num\"><span>加入讨论：{{total}}</span></div>\n       <!--我的邀请卡-->\n        <div class=\"callshare_container\">\n            <span class=\"callshare\" @click=\"shareMyCard\">我的邀请卡</span>\n        </div>\n\n        <!--倒计时-->\n        <div class=\"countdown\" v-if='timeShow != 0'>\n            <!-- 未开始 -->\n            <div class=\"counttop\" v-if='timeShow == 1'>\n                <span v-if='rage.startTimestamp'>课程将于&nbsp;{{new Date(rage.startTimestamp * 1000).getFullYear()}}年{{new Date(rage.startTimestamp * 1000).getMonth() + 1}}月{{new Date(rage.startTimestamp * 1000).getDate()}}日{{timeStart[0]}}&nbsp;:&nbsp;{{timeStart[1]}}开始</span>\n                <i>{{rage.pv}}人气</i>\n            </div>\n            <!-- 已开始 -->\n            <div class=\"counttop\" v-if='timeShow == 2'>\n                <span v-if='rage.startTimestamp'>直播开始:{{getFullTimeString(countdown[1])}}:{{getFullTimeString(countdown[2])}}:{{getFullTimeString(countdown[3])}}</span>\n                <i>{{rage.pv}}人气</i>\n            </div>\n            <!-- 已结束 -->\n            <div class=\"counttop\" v-if='timeShow == 3'>\n                <span v-if='rage.startTimestamp'>开始时间：{{new Date(rage.startTimestamp * 1000).getFullYear()}}年{{new Date(rage.startTimestamp * 1000).getMonth() + 1}}月{{new Date(rage.startTimestamp * 1000).getDate()}}日{{timeStart[0]}}:{{timeStart[1]}}</span>\n                <i>{{rage.pv}}人气</i>\n            </div>\n        </div>\n        <!--scroll-->\n        <div class=\"section\"  id=\"scroll_container\">\n            <section>\n                <!--上拉加载-->\n                <div class=\"getmore\" v-if=\"getMoreBarrage\" style=\"height:60px;text-align: center;line-height: 60px;\">加载更多...</div>\n                <!--share card-->\n                <!--课程结束倒计时和分享卡消失v-if=\"countdownflag\"-->\n                <div class=\"share_card\">\n                <!--<div class=\"share_card\" v-if=\"true\">-->\n                    <!--分享tit-->\n                    <div class=\"share_tit\">\n                        <div class=\"share_text\">分享人气榜</div>\n                    </div>\n                    <!--分享排名-->\n                    <a href=\"javascript:void(0);\">\n                        <ul class=\"rank\" @click='rankHref'>\n                            <li @click=\"updata\" v-if=\"shareList[0]\">\n                                <img src=\"//pic.davdian.com/free/2016/12/21/52_32_93c7d955bd0a5cb17bb284cfbf4c20f0.png\" alt=\"\">\n                                <p>1. {{shareList[0].content}}</p>\n                            </li>\n                            <li @click=\"updata\" v-if=\"shareList[1]\">\n                                <img src=\"//pic.davdian.com/free/2016/12/21/52_32_fcb5facd49f1ac8461fd5cfcecb2ac78.png\" alt=\"\">\n                                <p>2. {{shareList[1].content}}</p>\n                            </li>\n                            <li @click=\"updata\" v-if=\"shareList[2]\">\n                                <img src=\"//pic.davdian.com/free/2016/12/21/52_32_9d655fa16667b1ac10274e4c2f09c10b.png\" alt=\"\">\n                                <p>3. {{shareList[2].content}}</p>\n                            </li>\n                        </ul>\n                    </a>\n                    <div class=\"mycard\" @click=\"shareMyCard\">\n                        <span>我的邀请卡</span>\n                    </div>\n                </div>\n                <!--common对话-->\n                <div class=\"commonroom\">\n                    <ul id=\"ulList\" @click=\"keyBoard($event)\">\n                        <audio preload=\"auto\" class='allAudio'></audio>\n                        <li v-for=\"(index,common) in barrageList\" track-by=\"$index\" msg_id=\"{{decodeURIComponent(common.speake.name)}}\">\n                            <div class=\"timebox\" v-if='index == 0 || (common.msg.time - barrageList[index - 1].msg.time) > 5*60*1000'>\n                                <span class=\"talk_time\"  v-if=\"new Date()-common.msg.time < 60*60*12*1000\">{{getTime(parseInt(common.msg.time))}}</span>\n                                <span class=\"talk_time\"  v-if=\"new Date()-common.msg.time >= 60*60*12*1000\">{{getFullTime(parseInt(common.msg.time))}}</span>\n                            </div>\n                            <span class=\"head\">\n                                <img :src=\"common.speaker.avatar || defaultAvatar\">\n                            </span>\n                            <div class=\"right\">\n                                <h2>{{decodeURIComponent(common.speaker.name)}}</h2>\n                                <!--text类型的信息-->\n                                <div  v-if=\"common.msg.type==0\" class='main' :class=\"{'blue':common.is_answer}\" @click='setflag(index)'>\n                                    <i class='main_picBox_icon2'></i>\n                                    <span class='TextMessageSpan formfield' v-html='hrefLink(common.msg.content)'>\n                                    </span>\n                                </div>\n                                <!--语音类型的信息-->\n                                <div class=\"audiomain\" @click=\"playVoiceFlag(index)\" v-if=\"common.msg.type==2||common.msg.type==91\" :class=\"{'replied':common.replied}\">\n                                    <div class=\"voice\"  :class=\"{ 'play': isPlay[index], 'noPlay': !isPlay[index] }\">\n                                        <i class=\"fa fa-rss\" v-if=\"common.msg.duration>0\"></i>\n                                        <p :style=\"{width:(common.msg.voicewidth + 40)+'px'}\" class=\"main\">{{common.msg.duration}}''</p>\n                                        <i class='curcle-full' v-if='!curcleFullHash[common.uuid] && !common.msg.curcleFullHash'></i>\n                                    </div>\n                                    <div class='audio' :data-src=\"common.msg.url\" preload=\"auto\" :data-type=1 :data-index=\"index\" v-if=\"common.msg.type==2\"></div>\n                                    <div class='audio' :data-src=\"common.msg.url\" preload=\"auto\" :data-type=91 :data-index=\"index\" v-if=\"common.msg.type==91\"></div>\n                                </div>\n                                <!--图片类型的信息-->\n                                <div v-if=\"common.msg.type==1\" class=\"mainPic\">\n                                    <div class=\"picBox\">\n                                        <div class='picBox_icon1_container'>\n                                            <i class='picBox_icon1'></i>\n                                            <i class='picBox_icon2'></i>\n                                            <img :src=\"common.msg.url\" alt=\"\">\n                                        </div>\n                                        <!-- <i class='picBox_icon'></i> -->\n                                        <img :src=\"common.msg.url\" alt=\"\">\n                                    </div>\n                                    <div class=\"picBox_container\" @click='previewImage(common.uuid)'>\n                                        <img :style=\"getImageStyle(common)\" :src=\"common.msg.url\" alt=\"\">\n                                    </div>\n                                </div>\n                            </div>\n                        </li>\n                    </ul>\n                    <div class=\"teacherDownMore\" v-if=\"teacherDownMore\" style=\"height:40px; text-align: center;line-height: 40px;\">获取更多信息</div>\n                    <div class=\"bottom\"></div>\n                </div>\n            </section>\n        </div>\n        <div class=\"bottominput\">\n            <div class=\"text_talk\">\n                <input v-if=\"discussStatus\" class='text_talk_input' v-model.trim=\"sentmassagetext\" type=\"text\" placeholder=\"向讲师提问或参与讨论\">\n                <input v-if=\"!discussStatus\" type=\"text\" placeholder=\"评论关闭\" disabled>\n            </div>\n            <div class=\"send\" @click=\"sentMessage\">\n                <span>发送</span>\n            </div>\n        </div>\n        <div class='firstPlayAudioBtn' v-if='firstPlayAudioBtn && barrageList[0]'>\n            <span class='firstPlatAudioBtnClose' @click='firstPlayAudioBtnClose'>\n                <img src=\"//pic.davdian.com/free/2017/07/15/clearInput.png\">\n            </span>\n            <span class='firstPlatAudioBtnText' @click=\"startFirstVideo(0,1)\">点我从第一条语音开始听</span>\n        </div>\n        <div class='upAndDown' v-if='upAndDown'>\n            <div class='upAndDown1' @click=\"startFirstVideo(-1,1)\"></div>\n            <div class='upAndDown1' @click=\"startFirstVideo(1,0)\"></div>\n        </div>\n        <div class=\"maskAlertMask\" v-if='maskAlertBtn'></div>\n        <div class='maskAlert' v-if='maskAlertBtn'>\n            <img src=\"//pic.davdian.com/free/2017/07/17/maskAlertImg.png\" class='maskAlertImg'>\n            <p class='maskAlertText' v-if='rage.startTimestamp'>课程将于{{new Date(rage.startTimestamp * 1000).getFullYear()}}年{{new Date(rage.startTimestamp * 1000).getMonth() + 1}}月{{new Date(rage.startTimestamp * 1000).getDate()}}日&nbsp;&nbsp;{{timeStart[0]}}:{{timeStart[1]}}准时开始\n请耐心等待</p>\n            <p class='maskAlertBtn' @click='maskAlertBtnClick'>好</p>\n        </div>\n    </div>\n        <invite-card :show=\"cardShow\" :id=\"courseId\" statistics=\"4\" v-on:close=\"closeCard\"></invite-card>\n";
 
 /***/ },
 
-/***/ 500:
+/***/ 510:
 /***/ function(module, exports, __webpack_require__) {
 
 	;(function () {
 
 	  var vueTouch = {}
 	  var Hammer =  true
-	    ? __webpack_require__(501)
+	    ? __webpack_require__(511)
 	    : window.Hammer
 	  var gestures = ['tap', 'pan', 'pinch', 'press', 'rotate', 'swipe']
 	  var directions = ['up', 'down', 'left', 'right', 'horizontal', 'vertical', 'all']
@@ -9248,7 +9248,7 @@
 
 /***/ },
 
-/***/ 501:
+/***/ 511:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*! Hammer.JS - v2.0.7 - 2016-04-22

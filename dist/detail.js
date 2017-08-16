@@ -47,13 +47,13 @@
 
 	__webpack_require__(33);
 	__webpack_require__(37);
-	__webpack_require__(532);
+	__webpack_require__(542);
 
 
-	__webpack_require__(534);
+	__webpack_require__(544);
 	__webpack_require__(41);
 	__webpack_require__(43);
-	__webpack_require__(535);
+	__webpack_require__(545);
 	__webpack_require__(42);
 
 /***/ },
@@ -6545,14 +6545,14 @@
 
 /***/ },
 
-/***/ 532:
+/***/ 542:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 534:
+/***/ 544:
 /***/ function(module, exports) {
 
 	/*
@@ -6818,7 +6818,7 @@
 
 /***/ },
 
-/***/ 535:
+/***/ 545:
 /***/ function(module, exports, __webpack_require__) {
 
 	var native = __webpack_require__(154).default;
@@ -8467,7 +8467,7 @@
 
 
 	//引入 猜你喜欢 模块
-	var maybeYouLike = __webpack_require__(536);
+	var maybeYouLike = __webpack_require__(546);
 	var common = __webpack_require__(96);
 	common.default.initShare(5);
 
@@ -8523,17 +8523,17 @@
 
 /***/ },
 
-/***/ 536:
+/***/ 546:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(537)
+	__vue_script__ = __webpack_require__(547)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/maybeYouLike.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(543)
+	__vue_template__ = __webpack_require__(553)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8559,7 +8559,7 @@
 
 /***/ },
 
-/***/ 537:
+/***/ 547:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -8588,7 +8588,7 @@
 	// </template>
 	//
 	// <script>
-	var category = __webpack_require__(538);
+	var category = __webpack_require__(548);
 	//      var category = require("../src/component/com-maybeyoulike.vue");
 	exports.default = {
 	    el: "#maybeYouLike",
@@ -8672,18 +8672,18 @@
 
 /***/ },
 
-/***/ 538:
+/***/ 548:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(539)
-	__vue_script__ = __webpack_require__(541)
+	__webpack_require__(549)
+	__vue_script__ = __webpack_require__(551)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/category.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(542)
+	__vue_template__ = __webpack_require__(552)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -8709,13 +8709,13 @@
 
 /***/ },
 
-/***/ 539:
+/***/ 549:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(540);
+	var content = __webpack_require__(550);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -8736,7 +8736,7 @@
 
 /***/ },
 
-/***/ 540:
+/***/ 550:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -8751,7 +8751,7 @@
 
 /***/ },
 
-/***/ 541:
+/***/ 551:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -9003,14 +9003,14 @@
 
 /***/ },
 
-/***/ 542:
+/***/ 552:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"good_list_con\">\n    <div class=\"good_list_2_row\">\n        <!--单个商品模版template-->\n        <a v-for=\"item in list\" :data-id=\"item.goods_id\" :href=\"a_href(item.goods_id)\"\n                 class=\"good_item\">\n                <div class=\"good_img_container\">\n                    <div class=\"img_container\">\n                        <img :src=\"item.goods_img\" style=\"display: inline;\">\n                        <span class=\"img_label\" v-if=\"item.goods_label!=''\" v-text=\"item.goods_label\"></span>\n                        <span class=\"img_label\" v-if=\"item.goods_label==''&&item.ratio\" v-text=\"'返现'+item.ratio+'倍'\"></span>\n                    </div>\n                    <div v-if = \"item.sale_status\" class=\"good_list_sell_out ng-scope\">\n                        <span v-if = \"item.sale_status == 'soldout'\" class=\"ng-scope\">售罄</span>\n                        <span v-if = \"item.sale_status == 'presale'\" class=\"ng-scope\">预售</span>\n                        <span v-if = \"item.sale_status == 'offline'\" class=\"ng-scope\">未上架</span>\n                    </div>\n                </div>\n\n                <div class=\"good_con\">\n                  <div class=\"good_title\">{{item.goods_name}}</div>\n                  <div class=\"goods4_price_bar\">\n                    <span class=\"dav-color-price font-weight\"><em class=\"fz_14\">¥</em><span class=\"nowPrice\"><span>{{(item.shop_price+\"\").split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.shop_price+'').split('.').length == 2\">.{{(item.shop_price+\"\").split(\".\")[1]}}</span></span></span>\n                    <span class=\"vip_return\" v-if = \"(item.seller_income && item.seller_income != 0) || (item.comm_income && item.comm_income != 0)\">\n                      <span class=\"vip_return_title\">会员返</span>\n                      <span class=\"vip_return_f\">¥</span>\n                      <span class=\"vip_return_price\">{{item.seller_income||item.comm_income}}</span>\n                    </span>\n                  </div>\n                </div>\n              </a>\n        <!--不到50个商品展示这个template-->\n        <div style=\"clear: both;\"></div>\n        <div v-show = \"loading\" class=\"no_more\">\n            商品加载中 <img src=\"//pic.davdian.com/free/loading_03252.svg\">\n        </div>\n        <div v-show = \"no_more\" class=\"no_more\">\n            没有更多商品了\n        </div>\n    </div>\n    <div class=\"good_list_2_row\" ng-model=\"goods\">\n        <div style=\"clear:both\"></div>\n    </div>\n</div>\n";
 
 /***/ },
 
-/***/ 543:
+/***/ 553:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class = \"mt_10\" id = \"comon\">\n    <div class=\"df_new_title_2\" style=\"border-bottom: none\">\n        <span class=\"df_new_font\">猜你喜欢</span>\n    </div>\n    <div class=\"logo_container\"  v-show = \"beforeFirstLoading\">\n        <div class=\"logo_left\"></div>\n        <div class=\"logo_right\"></div>\n    </div>\n    <div style=\"clear: both;\">\n    </div>\n    <category refer=\"guess_detail\" :referer=\"referer\"></category>\n    <!--<category refer=\"guess_detail\"-->\n              <!--:referer=\"referer\"-->\n              <!--:list = \"list\"-->\n              <!--:loading = \"beforeFirstLoading\"></category>-->\n\n</div>\n";

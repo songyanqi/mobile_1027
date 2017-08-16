@@ -70,7 +70,7 @@
 
 	new _Vue2.default({
 	  components: {
-	    app: __webpack_require__(777)
+	    app: __webpack_require__(1053)
 	  },
 	  template: '<app />',
 	  el: ".app"
@@ -6002,346 +6002,7 @@
 
 /***/ },
 
-/***/ 295:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-
-	var _md = __webpack_require__(43);
-
-	var _md2 = _interopRequireDefault(_md);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var strSign = function strSign(str, flag) {
-	    var obj = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-
-	    var strObj = sortObj(str, flag, obj); //字符串 传入当前的信息名称
-	    var str = ''; //重新获取编译后的字符串
-	    for (var i in strObj) {
-	        //变成键值对的形式
-	        str += i + '=' + strObj[i] + '&';
-	    }
-	    return strObj;
-	}; // var crypto = require('crypto')
-
-
-	var sortObj = function sortObj(dataVersion, flag) {
-	    var obj = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-	    //传入当前的信息名称 如feed
-	    var string = '';
-	    var strObj = {};
-	    var t = null;
-	    var tValue = null;
-	    var arrKey = ['shop_url', 'sess_key', 'device_token', 'format', 'ts', 'osv', 'wh', 'data_version']; //需要上传的参数
-
-	    /**
-	     * 获取当前的版本号信息,如果没有取0
-	     */
-	    var osv = "web_h5_*_*";
-	    if (window.Units && Units.isApp() && Units.isIOS()) {
-	        osv = "web_ios_*_*";
-	    }
-	    if (window.Units && Units.isApp() && Units.isAndroid()) {
-	        osv = "web_android_*_*";
-	    }
-	    var arrValue = [];
-	    if (flag && !window.isPrivateMode) {
-	        arrValue = [location.host, document.cookie.split(';').filter(function (x) {
-	            return x.indexOf("dvdsid") > -1;
-	        })[0] ? document.cookie.split(';').filter(function (x) {
-	            return x.indexOf("dvdsid") > -1;
-	        })[0].split("=")[1] : 0, "", 'json', new Date().getTime(), osv, '750_1334', 0];
-	    } else {
-	        // log('this is isPrivateMode or flag is false')
-	        arrValue = [location.host, document.cookie.split(';').filter(function (x) {
-	            return x.indexOf("dvdsid") > -1;
-	        })[0] ? document.cookie.split(';').filter(function (x) {
-	            return x.indexOf("dvdsid") > -1;
-	        })[0].split("=")[1] : 0, "", 'json', new Date().getTime(), osv, '750_1334', 0];
-	    }
-
-	    for (var item in obj) {
-	        arrKey.push(item.toString());
-	        arrValue.push(obj[item]);
-	    }
-
-	    for (var i = 0; i < arrKey.length; i++) {
-	        for (var j = 0; j < arrKey.length - i - 1; j++) {
-	            if (arrKey[j] > arrKey[j + 1]) {
-	                t = arrKey[j + 1];
-	                arrKey[j + 1] = arrKey[j];
-	                arrKey[j] = t;
-
-	                tValue = arrValue[j + 1];
-	                arrValue[j + 1] = arrValue[j];
-	                arrValue[j] = tValue;
-	            }
-	        }
-	    }
-	    for (var _i = 0; _i < arrKey.length; _i++) {
-	        strObj[arrKey[_i]] = arrValue[_i];
-	    }
-	    for (var p in strObj) {
-	        string += p + '=' + strObj[p];
-	    }
-	    var sign = md5(string).toUpperCase();
-	    strObj.sign = sign;
-	    return strObj;
-	};
-
-	// let md5 = (str="") => crypto.createHash('md5').update(str, 'utf8').digest('hex')
-	var md5 = function md5() {
-	    var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
-	    return (0, _md2.default)(str).toString().toUpperCase();
-	};
-
-	var dataVersion = function dataVersion(str) {
-	    var obj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-	    // 信息名称 以及该信息下的所有需要上传的信息
-	    if (obj.data_version && !window.isPrivateMode) {
-	        //如果数据版本号不为0
-	        if (sessionStorage.getItem('dataVersion')) {
-	            //如果缓存中有版本号
-	            var o = JSON.parse(sessionStorage.getItem('dataVersion'));
-	            o[str] = obj.data_version;
-	            sessionStorage.setItem('dataVersion', JSON.stringify(o)); //改变当前的所需要信息的版本号 其余的版本号不变
-	        } else {
-	            var o = {};
-	            o[str] = obj.data_version;
-	            sessionStorage.setItem('dataVersion', JSON.stringify(o));
-	        }
-	    }
-	};
-
-	var getDataWithSign = function getDataWithSign(opt) {
-	    log("get Data WithSign, opt is");
-	    log(opt);
-
-	    opt.updata = opt.updata || opt.data || {};
-
-	    if (window.isPrivateMode) {
-	        log('您现在在用隐身模式访问接口，请切换到常规模式');
-	    }
-	    var flag = opt.flag || 0;
-	    var dataurl = opt.url + "?t=" + Date.now();
-	    if (!opt.url) {
-	        console.warn('缺少必要url参数');
-	        return;
-	    }
-	    var keyName = opt.keyName || md5LocalKey(opt.url, opt.updata);
-	    var success1 = opt.success;
-	    var data = "";
-	    var error1 = opt.error;
-	    var obj = opt.updata;
-
-	    obj = obj || {};
-	    for (var i = 0, d; d = ["rp", 'rl', 'logDp', 'dp'][i++];) {
-	        var tmp_value = window.Units && Units.getQuery(d);
-	        if (tmp_value) {
-	            obj[d] = tmp_value;
-	        }
-	    }
-
-	    var updatas = strSign(keyName, flag, obj);
-	    log('ajax－>', dataurl);
-
-	    $.ajax({
-	        type: "POST",
-	        url: dataurl, //数据地址
-	        data: updatas, //获得了所有信息 店铺地址 版本号 等 flag来确定是否传入版本号
-	        dataType: 'json',
-	        success: function success(result) {
-	            // data.data = false;
-	            if (!window.isPrivateMode) {
-	                //如果不是隐身模式，能在本地存储
-	                //如果版本号相同，取本地的数据，下拉的时候每次的版本号都不一样 不走这一步
-	                // if (sessionStorage.getItem('dataVersion') && JSON.parse(sessionStorage.getItem('dataVersion'))[keyName] && (result.data_version === JSON.parse(sessionStorage.getItem('dataVersion'))[keyName])) {
-	                //     if (flag) {//如果万一 下拉数据的版本号一样 不取本地的数据 下拉false 不是下拉 true
-	                //         data = JSON.parse(localStorage.getItem(keyName))
-	                //     }else{
-	                //         data = result
-	                //     }
-	                // } else {//如果版本号不一样
-	                data = result; //取最新的数据
-	                if (flag) {
-	                    //不是下拉的时候 在本地存储
-	                    localStorage.setItem(keyName, JSON.stringify(result));
-	                }
-	                // localStorage.setItem(keyName, JSON.stringify(result))
-	                // }
-	            } else {
-	                data = result;
-	            }
-	            // dataVersion(keyName, result);//在缓存中放入最新的该链接取得数据的版本号
-	            success1(data);
-	            log("getDataWithSign " + dataurl + " success :");
-	            log(data);
-	        },
-	        error: function error(e) {
-	            error1(e);
-	            log("getDataWithSign " + dataurl + " err :");
-	            log(e);
-	        }
-	    });
-	};
-
-	var postStatisticsData = function postStatisticsData(opt, productionData, callback) {
-	    var baseStatisticsData = {
-	        "ip": "", //ip
-	        "nxtime": "", //ng时间
-	        "timestamp": Date.now(), //日志时间
-	        "production": '1', //业务线 数据字典稍后定
-	        "log_source": '1', //日志来源 数据字典稍后定
-	        "user_agent": navigator.userAgent, //浏览器UA
-	        "market": "", //来源市场
-	        "uid": getUid(), //用户id
-	        "session": getSession(), //session id
-	        "status": getVisitorStatus(), //卖家状态 (0：游客 1:买家 3:卖家)
-	        "device": "", //设备类型
-	        "device_id": "", //设备号
-	        "sys_version": "", //设备版本号
-	        "resolution": window.screen.width + '*' + window.screen.height, //分辨率
-	        "location": "", //当前位置
-	        "app_version": "", //APP版本号
-	        "action": '1', //操作action 数据字典稍后定，click，view，
-	        "action_type": "1", //操作类型（元素）
-	        "object_id": "", //操作对象id（url）
-	        "production_data": {}
-	    };
-	    for (var i in opt) {
-	        baseStatisticsData[i] = opt[i];
-	    }
-	    baseStatisticsData['production_data'] = productionData;
-	    $.ajax({
-	        url: '/appapi',
-	        type: "post",
-	        data: JSON.stringify(baseStatisticsData),
-	        success: function success(result) {
-	            if (result == "success_1") {
-	                callback && callback();
-	            }
-	        }, error: function error() {}
-	    });
-	};
-
-	var getDvdsid = function getDvdsid() {
-	    var result = "",
-	        list = document.cookie.split(";").filter(function (x) {
-	        return x.indexOf("dvdsid") > -1;
-	    });
-	    if (list.length) {
-	        result = list[0].split("=")[1];
-	    }
-	    return result;
-	};
-
-	var getSession = function getSession() {
-	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
-	    return dvdsid ? dvdsid.substr(0, 32) : dvdsid;
-	};
-
-	var getUid = function getUid() {
-	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
-	    return dvdsid ? Number('0x' + dvdsid.substr(32, 7)) + "" : dvdsid;
-	};
-
-	var getVisitorStatus = function getVisitorStatus() {
-	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
-	    return ["0", "1", "3"][dvdsid ? dvdsid.substr(39, 1) : 1];
-	};
-
-	var baseJumpUrl = function baseJumpUrl() {
-	    return {
-	        courseHomePage: "/course.html",
-	        courseIntroducePage: function courseIntroducePage(id) {
-	            return "/course-" + id + ".html";
-	        },
-	        coursePage: function coursePage(id) {
-	            return "/course_room-" + id + ".html";
-	        }
-	    };
-	};
-	var md5LocalKey = function md5LocalKey(url) {
-	    var obj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-
-	    var str = ''; //获取请求接口和业务参数的字符串
-	    //排除翻页游标导致的key值不一样
-	    var strObj = JSON.stringify(obj);
-	    var objStr = JSON.parse(strObj);
-
-	    if (objStr["pageIndex"]) {
-	        objStr["pageIndex"] = 0;
-	    }
-	    for (var i in objStr) {
-	        str += i + '=' + objStr[i] + '&';
-	    }
-	    str = str + url;
-	    str = md5(str);
-	    log(str);
-	    return str;
-	};
-
-	var log = function log() {
-	    var href = location.href,
-	        dev = href.indexOf("bravetime.net") > -1,
-	        prod = href.indexOf("davdian.com") > -1;
-
-	    for (var _len = arguments.length, obj = Array(_len), _key = 0; _key < _len; _key++) {
-	        obj[_key] = arguments[_key];
-	    }
-
-	    if (dev) {
-	        console.log(obj);
-	    } else if (prod) {
-	        if (window.logInfo) {
-	            window.logInfo.push(obj);
-	        } else {
-	            window.logInfo = [obj];
-	        }
-	    }
-	};
-
-	var initShare = function initShare() {
-	    var share_source = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-
-	    window.tlShareCallback = function () {
-	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "1" });
-	    };
-	    window.sendShareCallback = function () {
-	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "2" });
-	    };
-	    window.QQShareCallback = function () {
-	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "3" });
-	    };
-	    window.qZoneShareCallbackCancel = function () {
-	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "4" });
-	    };
-	};
-
-	var common = {
-	    getDataWithSign: getDataWithSign,
-	    sortObj: sortObj,
-	    strSign: strSign,
-	    dataVersion: dataVersion,
-	    baseJumpUrl: baseJumpUrl,
-	    postStatisticsData: postStatisticsData,
-	    md5: md5,
-	    md5LocalKey: md5LocalKey,
-	    getUid: getUid,
-	    getDvdsid: getDvdsid,
-	    log: log,
-	    initShare: initShare
-	};
-	exports.default = common;
-
-/***/ },
-
-/***/ 301:
+/***/ 240:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6364,7 +6025,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var common = __webpack_require__(295); // var crypto = require('crypto');
+	var common = __webpack_require__(241); // var crypto = require('crypto');
 
 
 	var config = {
@@ -6908,18 +6569,357 @@
 
 /***/ },
 
-/***/ 777:
+/***/ 241:
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _md = __webpack_require__(43);
+
+	var _md2 = _interopRequireDefault(_md);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var strSign = function strSign(str, flag) {
+	    var obj = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+
+	    var strObj = sortObj(str, flag, obj); //字符串 传入当前的信息名称
+	    var str = ''; //重新获取编译后的字符串
+	    for (var i in strObj) {
+	        //变成键值对的形式
+	        str += i + '=' + strObj[i] + '&';
+	    }
+	    return strObj;
+	}; // var crypto = require('crypto')
+
+
+	var sortObj = function sortObj(dataVersion, flag) {
+	    var obj = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+	    //传入当前的信息名称 如feed
+	    var string = '';
+	    var strObj = {};
+	    var t = null;
+	    var tValue = null;
+	    var arrKey = ['shop_url', 'sess_key', 'device_token', 'format', 'ts', 'osv', 'wh', 'data_version']; //需要上传的参数
+
+	    /**
+	     * 获取当前的版本号信息,如果没有取0
+	     */
+	    var osv = "web_h5_*_*";
+	    if (window.Units && Units.isApp() && Units.isIOS()) {
+	        osv = "web_ios_*_*";
+	    }
+	    if (window.Units && Units.isApp() && Units.isAndroid()) {
+	        osv = "web_android_*_*";
+	    }
+	    var arrValue = [];
+	    if (flag && !window.isPrivateMode) {
+	        arrValue = [location.host, document.cookie.split(';').filter(function (x) {
+	            return x.indexOf("dvdsid") > -1;
+	        })[0] ? document.cookie.split(';').filter(function (x) {
+	            return x.indexOf("dvdsid") > -1;
+	        })[0].split("=")[1] : 0, "", 'json', new Date().getTime(), osv, '750_1334', 0];
+	    } else {
+	        // log('this is isPrivateMode or flag is false')
+	        arrValue = [location.host, document.cookie.split(';').filter(function (x) {
+	            return x.indexOf("dvdsid") > -1;
+	        })[0] ? document.cookie.split(';').filter(function (x) {
+	            return x.indexOf("dvdsid") > -1;
+	        })[0].split("=")[1] : 0, "", 'json', new Date().getTime(), osv, '750_1334', 0];
+	    }
+
+	    for (var item in obj) {
+	        arrKey.push(item.toString());
+	        arrValue.push(obj[item]);
+	    }
+
+	    for (var i = 0; i < arrKey.length; i++) {
+	        for (var j = 0; j < arrKey.length - i - 1; j++) {
+	            if (arrKey[j] > arrKey[j + 1]) {
+	                t = arrKey[j + 1];
+	                arrKey[j + 1] = arrKey[j];
+	                arrKey[j] = t;
+
+	                tValue = arrValue[j + 1];
+	                arrValue[j + 1] = arrValue[j];
+	                arrValue[j] = tValue;
+	            }
+	        }
+	    }
+	    for (var _i = 0; _i < arrKey.length; _i++) {
+	        strObj[arrKey[_i]] = arrValue[_i];
+	    }
+	    for (var p in strObj) {
+	        string += p + '=' + strObj[p];
+	    }
+	    var sign = md5(string).toUpperCase();
+	    strObj.sign = sign;
+	    return strObj;
+	};
+
+	// let md5 = (str="") => crypto.createHash('md5').update(str, 'utf8').digest('hex')
+	var md5 = function md5() {
+	    var str = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "";
+	    return (0, _md2.default)(str).toString().toUpperCase();
+	};
+
+	var dataVersion = function dataVersion(str) {
+	    var obj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+	    // 信息名称 以及该信息下的所有需要上传的信息
+	    if (obj.data_version && !window.isPrivateMode) {
+	        //如果数据版本号不为0
+	        if (sessionStorage.getItem('dataVersion')) {
+	            //如果缓存中有版本号
+	            var o = JSON.parse(sessionStorage.getItem('dataVersion'));
+	            o[str] = obj.data_version;
+	            sessionStorage.setItem('dataVersion', JSON.stringify(o)); //改变当前的所需要信息的版本号 其余的版本号不变
+	        } else {
+	            var o = {};
+	            o[str] = obj.data_version;
+	            sessionStorage.setItem('dataVersion', JSON.stringify(o));
+	        }
+	    }
+	};
+
+	var getDataWithSign = function getDataWithSign(opt) {
+	    log("get Data WithSign, opt is");
+	    log(opt);
+
+	    opt.updata = opt.updata || opt.data || {};
+
+	    if (window.isPrivateMode) {
+	        log('您现在在用隐身模式访问接口，请切换到常规模式');
+	    }
+	    var flag = opt.flag || 0;
+	    var dataurl = opt.url + "?t=" + Date.now();
+	    if (!opt.url) {
+	        console.warn('缺少必要url参数');
+	        return;
+	    }
+	    var keyName = opt.keyName || md5LocalKey(opt.url, opt.updata);
+	    var success1 = opt.success;
+	    var data = "";
+	    var error1 = opt.error;
+	    var obj = opt.updata;
+
+	    obj = obj || {};
+	    for (var i = 0, d; d = ["rp", 'rl', 'logDp', 'dp'][i++];) {
+	        var tmp_value = window.Units && Units.getQuery(d);
+	        if (tmp_value) {
+	            obj[d] = tmp_value;
+	        }
+	    }
+
+	    var updatas = strSign(keyName, flag, obj);
+	    log('ajax－>', dataurl);
+
+	    $.ajax({
+	        type: "POST",
+	        url: dataurl, //数据地址
+	        data: updatas, //获得了所有信息 店铺地址 版本号 等 flag来确定是否传入版本号
+	        dataType: 'json',
+	        success: function success(result) {
+	            // data.data = false;
+	            if (!window.isPrivateMode) {
+	                //如果不是隐身模式，能在本地存储
+	                //如果版本号相同，取本地的数据，下拉的时候每次的版本号都不一样 不走这一步
+	                // if (sessionStorage.getItem('dataVersion') && JSON.parse(sessionStorage.getItem('dataVersion'))[keyName] && (result.data_version === JSON.parse(sessionStorage.getItem('dataVersion'))[keyName])) {
+	                //     if (flag) {//如果万一 下拉数据的版本号一样 不取本地的数据 下拉false 不是下拉 true
+	                //         data = JSON.parse(localStorage.getItem(keyName))
+	                //     }else{
+	                //         data = result
+	                //     }
+	                // } else {//如果版本号不一样
+	                data = result; //取最新的数据
+	                if (flag) {
+	                    //不是下拉的时候 在本地存储
+	                    localStorage.setItem(keyName, JSON.stringify(result));
+	                }
+	                // localStorage.setItem(keyName, JSON.stringify(result))
+	                // }
+	            } else {
+	                data = result;
+	            }
+	            // dataVersion(keyName, result);//在缓存中放入最新的该链接取得数据的版本号
+	            success1(data);
+	            log("getDataWithSign " + dataurl + " success :");
+	            log(data);
+	        },
+	        error: function error(e) {
+	            error1(e);
+	            log("getDataWithSign " + dataurl + " err :");
+	            log(e);
+	        }
+	    });
+	};
+
+	var postStatisticsData = function postStatisticsData(opt, productionData, callback) {
+	    var baseStatisticsData = {
+	        "ip": "", //ip
+	        "nxtime": "", //ng时间
+	        "timestamp": Date.now(), //日志时间
+	        "production": '1', //业务线 数据字典稍后定
+	        "log_source": '1', //日志来源 数据字典稍后定
+	        "user_agent": navigator.userAgent, //浏览器UA
+	        "market": "", //来源市场
+	        "uid": getUid(), //用户id
+	        "session": getSession(), //session id
+	        "status": getVisitorStatus(), //卖家状态 (0：游客 1:买家 3:卖家)
+	        "device": "", //设备类型
+	        "device_id": "", //设备号
+	        "sys_version": "", //设备版本号
+	        "resolution": window.screen.width + '*' + window.screen.height, //分辨率
+	        "location": "", //当前位置
+	        "app_version": "", //APP版本号
+	        "action": '1', //操作action 数据字典稍后定，click，view，
+	        "action_type": "1", //操作类型（元素）
+	        "object_id": "", //操作对象id（url）
+	        "production_data": {}
+	    };
+	    for (var i in opt) {
+	        baseStatisticsData[i] = opt[i];
+	    }
+	    baseStatisticsData['production_data'] = productionData;
+	    $.ajax({
+	        url: '/appapi',
+	        type: "post",
+	        data: JSON.stringify(baseStatisticsData),
+	        success: function success(result) {
+	            if (result == "success_1") {
+	                callback && callback();
+	            }
+	        }, error: function error() {}
+	    });
+	};
+
+	var getDvdsid = function getDvdsid() {
+	    var result = "",
+	        list = document.cookie.split(";").filter(function (x) {
+	        return x.indexOf("dvdsid") > -1;
+	    });
+	    if (list.length) {
+	        result = list[0].split("=")[1];
+	    }
+	    return result;
+	};
+
+	var getSession = function getSession() {
+	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
+	    return dvdsid ? dvdsid.substr(0, 32) : dvdsid;
+	};
+
+	var getUid = function getUid() {
+	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
+	    return dvdsid ? Number('0x' + dvdsid.substr(32, 7)) + "" : dvdsid;
+	};
+
+	var getVisitorStatus = function getVisitorStatus() {
+	    var dvdsid = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : getDvdsid();
+	    return ["0", "1", "3"][dvdsid ? dvdsid.substr(39, 1) : 1];
+	};
+
+	var baseJumpUrl = function baseJumpUrl() {
+	    return {
+	        courseHomePage: "/course.html",
+	        courseIntroducePage: function courseIntroducePage(id) {
+	            return "/course-" + id + ".html";
+	        },
+	        coursePage: function coursePage(id) {
+	            return "/course_room-" + id + ".html";
+	        }
+	    };
+	};
+	var md5LocalKey = function md5LocalKey(url) {
+	    var obj = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+
+	    var str = ''; //获取请求接口和业务参数的字符串
+	    //排除翻页游标导致的key值不一样
+	    var strObj = JSON.stringify(obj);
+	    var objStr = JSON.parse(strObj);
+
+	    if (objStr["pageIndex"]) {
+	        objStr["pageIndex"] = 0;
+	    }
+	    for (var i in objStr) {
+	        str += i + '=' + objStr[i] + '&';
+	    }
+	    str = str + url;
+	    str = md5(str);
+	    log(str);
+	    return str;
+	};
+
+	var log = function log() {
+	    var href = location.href,
+	        dev = href.indexOf("bravetime.net") > -1,
+	        prod = href.indexOf("davdian.com") > -1;
+
+	    for (var _len = arguments.length, obj = Array(_len), _key = 0; _key < _len; _key++) {
+	        obj[_key] = arguments[_key];
+	    }
+
+	    if (dev) {
+	        console.log(obj);
+	    } else if (prod) {
+	        if (window.logInfo) {
+	            window.logInfo.push(obj);
+	        } else {
+	            window.logInfo = [obj];
+	        }
+	    }
+	};
+
+	var initShare = function initShare() {
+	    var share_source = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
+	    window.tlShareCallback = function () {
+	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "1" });
+	    };
+	    window.sendShareCallback = function () {
+	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "2" });
+	    };
+	    window.QQShareCallback = function () {
+	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "3" });
+	    };
+	    window.qZoneShareCallbackCancel = function () {
+	        postStatisticsData({ action_type: "0", production: "5" }, { share_source: share_source + "", source_url: location.href, share_type: "4" });
+	    };
+	};
+
+	var common = {
+	    getDataWithSign: getDataWithSign,
+	    sortObj: sortObj,
+	    strSign: strSign,
+	    dataVersion: dataVersion,
+	    baseJumpUrl: baseJumpUrl,
+	    postStatisticsData: postStatisticsData,
+	    md5: md5,
+	    md5LocalKey: md5LocalKey,
+	    getUid: getUid,
+	    getDvdsid: getDvdsid,
+	    log: log,
+	    initShare: initShare
+	};
+	exports.default = common;
+
+/***/ },
+
+/***/ 1053:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(778)
-	__vue_script__ = __webpack_require__(780)
+	__webpack_require__(1054)
+	__vue_script__ = __webpack_require__(1056)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_detail/vue/app.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(801)
+	__vue_template__ = __webpack_require__(1077)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6945,13 +6945,13 @@
 
 /***/ },
 
-/***/ 778:
+/***/ 1054:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(779);
+	var content = __webpack_require__(1055);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -6972,7 +6972,7 @@
 
 /***/ },
 
-/***/ 779:
+/***/ 1055:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -6987,7 +6987,7 @@
 
 /***/ },
 
-/***/ 780:
+/***/ 1056:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7000,7 +7000,7 @@
 
 	var _param2 = _interopRequireDefault(_param);
 
-	var _layout = __webpack_require__(301);
+	var _layout = __webpack_require__(240);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -7173,10 +7173,10 @@
 	  components: {
 	    'com-to-top-icon': __webpack_require__(82),
 	    'com-top-title': __webpack_require__(77),
-	    'com-count-down': __webpack_require__(781),
-	    'group-state-icon': __webpack_require__(786),
-	    'group-head-portrait': __webpack_require__(791),
-	    'group-bottom-btns': __webpack_require__(796)
+	    'com-count-down': __webpack_require__(1057),
+	    'group-state-icon': __webpack_require__(1062),
+	    'group-head-portrait': __webpack_require__(1067),
+	    'group-bottom-btns': __webpack_require__(1072)
 	  },
 	  props: {},
 	  data: function data() {
@@ -7267,18 +7267,18 @@
 
 /***/ },
 
-/***/ 781:
+/***/ 1057:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(782)
-	__vue_script__ = __webpack_require__(784)
+	__webpack_require__(1058)
+	__vue_script__ = __webpack_require__(1060)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_goods/vue/com-count-down.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(785)
+	__vue_template__ = __webpack_require__(1061)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7304,13 +7304,13 @@
 
 /***/ },
 
-/***/ 782:
+/***/ 1058:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(783);
+	var content = __webpack_require__(1059);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -7331,7 +7331,7 @@
 
 /***/ },
 
-/***/ 783:
+/***/ 1059:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -7346,7 +7346,7 @@
 
 /***/ },
 
-/***/ 784:
+/***/ 1060:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7493,25 +7493,25 @@
 
 /***/ },
 
-/***/ 785:
+/***/ 1061:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"time-over\">\n  <div class=\"line\"></div>\n  <div class=\"info\">\n    <div v-if=\"remainSecond > 0\">\n      距活动结束:\n      <span class=\"time\">\n        <span class=\"box\">{{remainTime.day}}</span>天<span class=\"box\">{{remainTime.hour}}</span>:<span\n        class=\"box\">{{remainTime.minute}}</span>:<span\n        class=\"box\">{{remainTime.second}}</span>\n      </span>\n    </div>\n    <div v-if=\"remainSecond <= 0\">活动已结束<template v-if=\"groupStatus == '2'\">，没能组团成功哦~</template></div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 786:
+/***/ 1062:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(787)
-	__vue_script__ = __webpack_require__(789)
+	__webpack_require__(1063)
+	__vue_script__ = __webpack_require__(1065)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_detail/vue/group-state-icon.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(790)
+	__vue_template__ = __webpack_require__(1066)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7537,13 +7537,13 @@
 
 /***/ },
 
-/***/ 787:
+/***/ 1063:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(788);
+	var content = __webpack_require__(1064);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -7564,7 +7564,7 @@
 
 /***/ },
 
-/***/ 788:
+/***/ 1064:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -7579,7 +7579,7 @@
 
 /***/ },
 
-/***/ 789:
+/***/ 1065:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -7686,25 +7686,25 @@
 
 /***/ },
 
-/***/ 790:
+/***/ 1066:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"group-state-icon\" :class=\"type\">\n  <div class=\"circle\">\n    <div class=\"text\">\n      <template v-if=\"type == 'success'\">组团</br>成功</template>\n      <template v-if=\"type == 'wait'\">等待</br>成团</template>\n      <template v-if=\"type == 'fail'\">组团</br>失败</template>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 791:
+/***/ 1067:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(792)
-	__vue_script__ = __webpack_require__(794)
+	__webpack_require__(1068)
+	__vue_script__ = __webpack_require__(1070)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_detail/vue/group-head-portrait.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(795)
+	__vue_template__ = __webpack_require__(1071)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7730,13 +7730,13 @@
 
 /***/ },
 
-/***/ 792:
+/***/ 1068:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(793);
+	var content = __webpack_require__(1069);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -7757,7 +7757,7 @@
 
 /***/ },
 
-/***/ 793:
+/***/ 1069:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -7772,7 +7772,7 @@
 
 /***/ },
 
-/***/ 794:
+/***/ 1070:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7854,25 +7854,25 @@
 
 /***/ },
 
-/***/ 795:
+/***/ 1071:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<span class=\"group-head-portrait\" @click=\"click\">\n  <img v-if=\"type == 'normal' || type == 'leader'\" class=\"person\" v-lazy=\"src\">\n  <img v-if=\"type == 'empty'\" v-lazy=\"'http://pic.davdian.com/free/2017/03/25/group-head-unknow.png'\">\n  <a :href=\"href\" v-if=\"type == 'more'\">\n    <img v-lazy=\"'http://pic.davdian.com/free/2017/03/25/group-head-more.png'\">\n  </a>\n  <i v-if=\"type == 'leader'\" class=\"group-leader\"></i>\n</span>\n";
 
 /***/ },
 
-/***/ 796:
+/***/ 1072:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(797)
-	__vue_script__ = __webpack_require__(799)
+	__webpack_require__(1073)
+	__vue_script__ = __webpack_require__(1075)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_goods/vue/group-bottom-btns.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(800)
+	__vue_template__ = __webpack_require__(1076)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7898,13 +7898,13 @@
 
 /***/ },
 
-/***/ 797:
+/***/ 1073:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(798);
+	var content = __webpack_require__(1074);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -7925,7 +7925,7 @@
 
 /***/ },
 
-/***/ 798:
+/***/ 1074:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -7940,7 +7940,7 @@
 
 /***/ },
 
-/***/ 799:
+/***/ 1075:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8080,14 +8080,14 @@
 
 /***/ },
 
-/***/ 800:
+/***/ 1076:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"group-bottom-btns\">\n  <div class=\"top-line\"></div>\n  <div class=\"btns\">\n    <template v-for=\"btn in btnArray\">\n      <a v-if=\"btn.btnUrl\" @click=\"click(event, btn)\"\n         :href=\"(btn.btnType == 'new' || btn.btnType == 'join' || btn.btnType == 'pay') && isLogin === 0 ? '/login.html?referer='+encodeURIComponent(location.href) : btn.btnUrl\">{{btn.btnTxt}}</a>\n      <a v-if=\"!btn.btnUrl\" @click=\"click(event, btn)\">{{btn.btnTxt}}</a>\n    </template>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 801:
+/***/ 1077:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"app\" v-if=\"response\">\n  <!--头部标题-->\n  <!--<com-top-title :title=\"groupInfo.goodsName\" border-bottom home></com-top-title>-->\n  <com-top-title title=\"大V店限时组团\" border-bottom home></com-top-title>\n\n  <!--PHP控制页面跳转逻辑-->\n  <div class=\"php-redirect-tip\" v-if=\"response.data.type == '3'\">\n    <img v-lazy=\"'http://pic.davdian.com/free/prompt_ico_2015918_2x.png'\">\n    <a :href=\"response.data.redirectUrl\">您已有这个商品的组团记录，点击跳转到您的组团界面!</a>\n    <i></i>\n  </div>\n\n  <!--商品信息-->\n  <a :href=\"groupInfo.goodsInfoUrl\">\n    <div class=\"goods-info\">\n        <span class=\"pic\">\n          <img class=\"goods-img\" v-lazy=\"groupInfo.goodsImgUrl\">\n            <!--<group-state-icon v-if=\"response.data.groupStatus == '1'\" type=\"success\" :src=\"groupInfo.founderAvater\"></group-state-icon>-->\n            <!--<group-state-icon v-if=\"response.data.groupStatus == '0'\" type=\"wait\" :src=\"groupInfo.founderAvater\"></group-state-icon>-->\n            <!--<group-state-icon v-if=\"response.data.groupStatus == '2'\" type=\"fail\" :src=\"groupInfo.founderAvater\"></group-state-icon>-->\n          <img class=\"group-state-img\" v-if=\"response.data.groupStatus == '1'\" src=\"http://pic.davdian.com/free/group/group-status-success.png\">\n          <img class=\"group-state-img\" v-if=\"response.data.groupStatus == '0'\" src=\"http://pic.davdian.com/free/group/group-status-wait.png\">\n          <img class=\"group-state-img\" v-if=\"response.data.groupStatus == '2'\" src=\"http://pic.davdian.com/free/group/group-status-fail.png\">\n        </span>\n        <span class=\"info\">\n          <div class=\"top\">\n            <span class=\"num\">[{{groupInfo.pepoleNumber}}人团]</span> {{groupInfo.goodsName}}\n          </div>\n          <div class=\"middle\">\n            <span class=\"group-price\">¥ <span class=\"big\">{{groupInfo.goodsPrice}}</span></span>\n            <template v-if=\"response.visitor_status == '3'\">\n              <span class=\"income\" v-if=\"groupInfo.sellerIncome && groupInfo.sellerIncome != '0'\">团长返 ¥ {{groupInfo.sellerIncome}}</span>\n              <span class=\"income-times\" v-if=\"groupInfo.sellerRadio && groupInfo.sellerRadio != '0'\">*{{groupInfo.sellerRadio}}倍</span>\n            </template>\n          </div>\n          <div class=\"bottom\">单价买: ¥ {{groupInfo.realShopPrice}}</div>\n        </span>\n    </div>\n  </a>\n\n  <!--组团信息-->\n  <div class=\"group-info\">\n    <!--组团人数-->\n    <div class=\"group\">\n      <template v-if=\"response.data.type == '8' || response.data.type == '10'\">\n        <div class=\"title\">\n          还有<span class=\"num\">{{groupInfo.leaveNumber}}</span>个名额，赶快参团吧～\n        </div>\n      </template>\n      <template v-else>\n        <div class=\"title\" v-if=\"response.data.groupStatus == '1'\">\n          {{groupInfo.pepoleNumber}}人团已组团成功，好棒哦~\n        </div>\n        <div class=\"title\" v-if=\"response.data.groupStatus == '0' || response.data.groupStatus == '2'\">\n          还差 <span class=\"num\">{{groupInfo.leaveNumber}}</span> 人，快喊小伙伴一起组团吧~\n        </div>\n      </template>\n      <div class=\"heads\">\n        <!--团长或团员(最多5个)-->\n        <group-head-portrait\n          v-for=\"(member, i) in groupInfo.tourList\"\n          v-if=\"i < 5\"\n          :type=\"member.parendId === '0' ? 'leader' : 'normal'\"\n          :src=\"member.founderAvater\"></group-head-portrait>\n        <!--空位置(算上团员最多5个)-->\n        <group-head-portrait\n          v-for=\"(value, i) in emptyGroupNum\"\n          type=\"empty\"></group-head-portrait>\n        <!--更多-->\n        <!--v-if=\"groupInfo.tourList.length > 5\"-->\n        <group-head-portrait\n          v-if=\"parseInt(groupInfo.pepoleNumber) - parseInt(groupInfo.leaveNumber) > 5\"\n          type=\"more\"\n          :href=\"'/group_detail_all.html?group_id='+(response.data.groupId||'')+'&reverse_id='+(response.data.reverseId||'')\"></group-head-portrait>\n      </div>\n    </div>\n\n    <!--倒计时-->\n    <com-count-down :remain-second=\"groupInfo.countDown\" :group-status=\"response.data.groupStatus\"></com-count-down>\n\n    <!--展开组团详情-->\n    <div class=\"detail-list\" :class=\"{show: detailIsShow}\" v-if=\"groupInfo.tourList.length > 0\">\n      <div class=\"title\" @click=\"detailIsShow = !detailIsShow\">\n        <template v-if=\"!detailIsShow\">展开组团详情</template>\n        <template v-if=\"detailIsShow\">收起组团详情</template>\n        <span class=\"arrow\"></span>\n      </div>\n      <div class=\"line\"></div>\n      <div class=\"list\">\n        <div class=\"arrow\"></div>\n        <ul>\n          <!--团员-->\n          <template v-for=\"(member, i) in groupInfo.tourList\" v-if=\"i < 5\">\n            <div class=\"split-line\" v-if=\"i !== 0\"></div>\n            <li>\n              <group-head-portrait :type=\"member.parendId === '0' ? 'leader' : 'normal'\"\n                                   :src=\"member.founderAvater\"></group-head-portrait>\n              <span class=\"nickname\">{{member.founderName}}</span>\n              <span class=\"begin-time\">{{member.uTime}} {{member.parendId === '0' ? '开团' : '参团'}}</span>\n            </li>\n          </template>\n          <!--更多-->\n          <template v-if=\"groupInfo.tourList.length >= 5\">\n            <div class=\"split-line\"></div>\n            <li class=\"more\">\n              <a :href=\"'/group_detail_all.html?group_id='+(response.data.groupId||'')+'&reverse_id='+(response.data.reverseId||'')\">查看更多</a>\n            </li>\n          </template>\n        </ul>\n      </div>\n    </div>\n  </div>\n\n  <!--热门组团-->\n  <div class=\"hot-groups\">\n    <div class=\"title\">\n      <i class=\"arrow\"></i>\n      <span class=\"text\">热门组团</span>\n    </div>\n    <ul class=\"list\">\n      <li v-for=\"(hot,i) in response.data.hotList\">\n        <a :href=\"hot.command.content\" @click=\"hotGroupsItemClick\">\n          <img class=\"pic\" v-lazy=\"hot.imgUrl\">\n          <div class=\"goods-name\">\n            <span class=\"num\">[{{hot.pepoleNumber}}人团]</span> {{hot.goodsName}}\n          </div>\n          <div class=\"goods-price\">\n            <span class=\"group-price\">￥{{hot.goodsPrice}}</span>\n            <span class=\"single-price\">单买价￥{{hot.realShopPrice}}</span>\n          </div>\n        </a>\n      </li>\n    </ul>\n  </div>\n\n  <!--底部购买按钮-->\n  <group-bottom-btns :btn-array=\"groupInfo.clickBtn\" :is-login=\"response.data.isLogin\" :is-intercept=\"groupInfo.isIntercept\"></group-bottom-btns>\n\n  <!--至顶按钮-->\n  <!--<com-to-top-icon></com-to-top-icon>-->\n</div>\n";

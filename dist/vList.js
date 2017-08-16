@@ -47,12 +47,12 @@
 
 	__webpack_require__(33);
 	__webpack_require__(37);
-	__webpack_require__(1751);
+	__webpack_require__(1761);
 
 	__webpack_require__(41);
 	__webpack_require__(42);
 	__webpack_require__(43);
-	__webpack_require__(1753);
+	__webpack_require__(1763);
 
 /***/ },
 
@@ -5441,18 +5441,18 @@
 
 /***/ },
 
-/***/ 410:
+/***/ 420:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(411)
-	__vue_script__ = __webpack_require__(413)
+	__webpack_require__(421)
+	__vue_script__ = __webpack_require__(423)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-footer.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(416)
+	__vue_template__ = __webpack_require__(426)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5478,13 +5478,13 @@
 
 /***/ },
 
-/***/ 411:
+/***/ 421:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(412);
+	var content = __webpack_require__(422);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5505,7 +5505,7 @@
 
 /***/ },
 
-/***/ 412:
+/***/ 422:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5520,7 +5520,7 @@
 
 /***/ },
 
-/***/ 413:
+/***/ 423:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5533,7 +5533,7 @@
 
 	var _ua2 = _interopRequireDefault(_ua);
 
-	var _encrypt = __webpack_require__(414);
+	var _encrypt = __webpack_require__(424);
 
 	var _encrypt2 = _interopRequireDefault(_encrypt);
 
@@ -5706,7 +5706,7 @@
 
 /***/ },
 
-/***/ 414:
+/***/ 424:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5719,7 +5719,7 @@
 
 	var _md2 = _interopRequireDefault(_md);
 
-	var _param = __webpack_require__(415);
+	var _param = __webpack_require__(425);
 
 	var _param2 = _interopRequireDefault(_param);
 
@@ -5806,7 +5806,7 @@
 
 /***/ },
 
-/***/ 415:
+/***/ 425:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -5866,24 +5866,24 @@
 
 /***/ },
 
-/***/ 416:
+/***/ 426:
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--底部菜单栏-->\n<div class=\"com-footer\" v-if=\"!isDvdApp\">\n  <div class=\"btns\">\n    <a class=\"btn\" :class=\"{active: active == 'home'}\" href=\"/\">\n      <div class=\"pic-title\">\n        <img class=\"pic\" src=\"//pic.davdian.com/free/footer-icon/home-active.png\" v-if=\"active == 'home'\">\n        <img class=\"pic\" src=\"//pic.davdian.com/free/footer-icon/home.png\" v-else>\n        <div class=\"title\">首页</div>\n      </div>\n    </a>\n    <a class=\"btn\" :class=\"{active: active == 'school'}\" href=\"/course.html\">\n      <div class=\"pic-title\">\n        <img class=\"pic\" src=\"//pic.davdian.com/free/footer-icon/school-active.png\" v-if=\"active == 'school'\">\n        <img class=\"pic\" src=\"//pic.davdian.com/free/footer-icon/school.png\" v-else>\n        <div class=\"title\">学院</div>\n      </div>\n    </a>\n    <!--<a class=\"btn\" href=\"/cart.html\">-->\n    <!--<div class=\"pic\">-->\n    <!--<i class=\"num\" v-if=\"cartNum && cartNum > 0\">{{cartNum}}</i>-->\n    <!--<img src=\"[[static]]/page/center/img/footer-cart.png\">-->\n    <!--</div>-->\n    <!--<div class=\"name\">购物车</div>-->\n    <!--</a>-->\n    <a class=\"btn\" :class=\"{active: active == 'dynamic'}\" href=\"/articles.html\">\n      <div class=\"pic-title\">\n        <img class=\"pic\" src=\"//pic.davdian.com/free/footer-icon/dynamic-active.png?2\" v-if=\"active == 'dynamic'\">\n        <img class=\"pic\" src=\"//pic.davdian.com/free/footer-icon/dynamic.png?2\" v-else>\n        <div class=\"title\">动态</div>\n      </div>\n    </a>\n    <a class=\"btn\" :class=\"{active: active == 'center'}\" href=\"/center.html\">\n      <div class=\"pic-title\">\n        <img class=\"pic\" src=\"//pic.davdian.com/free/footer-icon/center-active.png\" v-if=\"active == 'center'\">\n        <img class=\"pic\" src=\"//pic.davdian.com/free/footer-icon/center.png\" v-else>\n        <div class=\"title\">我的</div>\n      </div>\n    </a>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 1751:
+/***/ 1761:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1753:
+/***/ 1763:
 /***/ function(module, exports, __webpack_require__) {
 
-	var vList = __webpack_require__(1754);
+	var vList = __webpack_require__(1764);
 
 	new Vue({
 	    el: "#vue_con",
@@ -5894,18 +5894,18 @@
 
 /***/ },
 
-/***/ 1754:
+/***/ 1764:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1755)
-	__vue_script__ = __webpack_require__(1757)
+	__webpack_require__(1765)
+	__vue_script__ = __webpack_require__(1767)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/vList.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1777)
+	__vue_template__ = __webpack_require__(1787)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5931,13 +5931,13 @@
 
 /***/ },
 
-/***/ 1755:
+/***/ 1765:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1756);
+	var content = __webpack_require__(1766);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -5958,7 +5958,7 @@
 
 /***/ },
 
-/***/ 1756:
+/***/ 1766:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -5973,7 +5973,7 @@
 
 /***/ },
 
-/***/ 1757:
+/***/ 1767:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5982,15 +5982,15 @@
 	    value: true
 	});
 
-	var _vListSwitcher = __webpack_require__(1758);
+	var _vListSwitcher = __webpack_require__(1768);
 
 	var _vListSwitcher2 = _interopRequireDefault(_vListSwitcher);
 
-	var _vListContent = __webpack_require__(1763);
+	var _vListContent = __webpack_require__(1773);
 
 	var _vListContent2 = _interopRequireDefault(_vListContent);
 
-	var _comFooter = __webpack_require__(410);
+	var _comFooter = __webpack_require__(420);
 
 	var _comFooter2 = _interopRequireDefault(_comFooter);
 
@@ -6416,18 +6416,18 @@
 
 /***/ },
 
-/***/ 1758:
+/***/ 1768:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1759)
-	__vue_script__ = __webpack_require__(1761)
+	__webpack_require__(1769)
+	__vue_script__ = __webpack_require__(1771)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/vListSwitcher.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1762)
+	__vue_template__ = __webpack_require__(1772)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6453,13 +6453,13 @@
 
 /***/ },
 
-/***/ 1759:
+/***/ 1769:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1760);
+	var content = __webpack_require__(1770);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6480,7 +6480,7 @@
 
 /***/ },
 
-/***/ 1760:
+/***/ 1770:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6495,7 +6495,7 @@
 
 /***/ },
 
-/***/ 1761:
+/***/ 1771:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6588,20 +6588,20 @@
 
 /***/ },
 
-/***/ 1762:
+/***/ 1772:
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--v-刊头部导航-->\n<div class=\"swiper-container v_menu\" v-if=\"list.length\">\n    <ul class=\"swiper-wrapper\">\n        <li v-for=\"(item, index) in list\" :class=\"['swiper-slide',category==item.menuId?'hover':'']\" @click=\"changeCategory(item.menuId,index,$event)\">\n            <a>\n                <span>\n                    <p class=\"time_state\" v-text=\"item.title\"></p>\n                    <i class='hoverSpan'></i>\n                </span>\n            </a>\n\n        </li>\n    </ul>\n</div>\n";
 
 /***/ },
 
-/***/ 1763:
+/***/ 1773:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1764)
-	__vue_script__ = __webpack_require__(1766)
+	__webpack_require__(1774)
+	__vue_script__ = __webpack_require__(1776)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
@@ -6631,13 +6631,13 @@
 
 /***/ },
 
-/***/ 1764:
+/***/ 1774:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1765);
+	var content = __webpack_require__(1775);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6658,7 +6658,7 @@
 
 /***/ },
 
-/***/ 1765:
+/***/ 1775:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6673,7 +6673,7 @@
 
 /***/ },
 
-/***/ 1766:
+/***/ 1776:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6682,11 +6682,11 @@
 	    value: true
 	});
 
-	var _bd_articles_ = __webpack_require__(1767);
+	var _bd_articles_ = __webpack_require__(1777);
 
 	var bd_articles_1 = _interopRequireWildcard(_bd_articles_);
 
-	var _bd_articles_2 = __webpack_require__(1772);
+	var _bd_articles_2 = __webpack_require__(1782);
 
 	var bd_articles_2 = _interopRequireWildcard(_bd_articles_2);
 
@@ -6846,18 +6846,18 @@
 
 /***/ },
 
-/***/ 1767:
+/***/ 1777:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1768)
-	__vue_script__ = __webpack_require__(1770)
+	__webpack_require__(1778)
+	__vue_script__ = __webpack_require__(1780)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/component/bd_articles_1.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1771)
+	__vue_template__ = __webpack_require__(1781)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6883,13 +6883,13 @@
 
 /***/ },
 
-/***/ 1768:
+/***/ 1778:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1769);
+	var content = __webpack_require__(1779);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6910,7 +6910,7 @@
 
 /***/ },
 
-/***/ 1769:
+/***/ 1779:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6925,7 +6925,7 @@
 
 /***/ },
 
-/***/ 1770:
+/***/ 1780:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7069,25 +7069,25 @@
 
 /***/ },
 
-/***/ 1771:
+/***/ 1781:
 /***/ function(module, exports) {
 
 	module.exports = "\n    <div class='articles_1_container'>\n    <!-- <div class='articles_1_container' :style=\"{marginTop: data.marginTop +'px'}\"> -->\n\t    <a :href=\"data.body.dataList[0].command.content\" @click.stop=\"clickAnalysis\"  :position=\"data.position\">\n\t    \t<div :style=\"{'background': 'url(' + data.body.dataList[0].imageUrl + ') center center / cover no-repeat' , 'background-size': 'cover'}\" class='articles_1_img'></div>\n\t    \t<img v-if='data.body.dataList[0].pageType == 2' src=\"http://pic.davdian.com/free/2017/02/07/material-recorded.png\" class='articles_1_imgNav'>\n\t    \t<div class='articles_1_text' v-text='data.body.dataList[0].title'></div>\n\t    \t<div class='articles_1_share'>\n\t    \t\t<span v-text='data.body.dataList[0].menuName' v-if='data.body.dataList[0].isShowTime!=1'></span>\n\t    \t\t<span v-if='data.body.dataList[0].isShowTime==1'>\n\t    \t\t\t{{getFullTime(data.body.dataList[0].ctime)}}\n\t    \t\t</span>\n\t    \t\t<span class='articles_1_border'>&nbsp;&nbsp;</span>\n\t    \t\t<span><span v-text='data.body.dataList[0].readTimes'></span>&nbsp;阅读数</span>\n\t    \t</div>\n\t    </a>\n    </div>\n";
 
 /***/ },
 
-/***/ 1772:
+/***/ 1782:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1773)
-	__vue_script__ = __webpack_require__(1775)
+	__webpack_require__(1783)
+	__vue_script__ = __webpack_require__(1785)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/component/bd_articles_2.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1776)
+	__vue_template__ = __webpack_require__(1786)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7113,13 +7113,13 @@
 
 /***/ },
 
-/***/ 1773:
+/***/ 1783:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1774);
+	var content = __webpack_require__(1784);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -7140,7 +7140,7 @@
 
 /***/ },
 
-/***/ 1774:
+/***/ 1784:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -7155,7 +7155,7 @@
 
 /***/ },
 
-/***/ 1775:
+/***/ 1785:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -7289,14 +7289,14 @@
 
 /***/ },
 
-/***/ 1776:
+/***/ 1786:
 /***/ function(module, exports) {
 
 	module.exports = "\n    <div class='articles_2_container'>\n    <!-- <div class='articles_2_container' :style=\"{marginTop: data.marginTop +'px'}\"> -->\n\t    <a :href=\"data.body.dataList[0].command.content\" @click.stop=\"clickAnalysis\"  :position=\"data.position\">\n\t    \t<div :style=\"{'background': 'url(' + data.body.dataList[0].imageUrl + ') center center / cover no-repeat' , 'background-size': 'cover'}\" class='articles_2_img'></div>\n\t        <img v-if='data.body.dataList[0].pageType == 3' src=\"http://pic.davdian.com/free/2017/02/07/material-listen.png\" class='articles_2_imgNav'>\n\t        <div class='articles_2_content'>\n\t        \t<div class='articles_2_text' v-text='data.body.dataList[0].title'></div>\n\t        \t<div class='articles_2_share'>\n\t\t    \t\t<span v-text='data.body.dataList[0].menuName' v-if='data.body.dataList[0].isShowTime!=1'></span>\n\t\t    \t\t<span v-if='data.body.dataList[0].isShowTime==1'>{{getFullTime(data.body.dataList[0].ctime)}}</span>\n\t\t    \t\t<span class='articles_2_border'>&nbsp;</span>\n\t\t    \t\t<span><span v-text='data.body.dataList[0].readTimes'></span>&nbsp;阅读数</span>\n\t\t    \t</div>\n\t        </div>\n\t    </a>\n    </div>\n";
 
 /***/ },
 
-/***/ 1777:
+/***/ 1787:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"classroom_container\">\n    <div class=\"top0 true_top\" v-if='!inApp'>\n        <div class=\"top_container\">\n            <div class=\"top_left\">\n                <a class=\"top_back\" href=\"javascript:history.back();\">\n                    <span class=\"home_arrow\"></span>\n                </a>\n            </div>\n            <div class=\"title_container\" v-if='haveMenu'>\n              动态\n            </div>\n            <div class=\"title_container\" v-text='menuName' v-if='!haveMenu'></div>\n            <div class=\"top_right\" v-if='haveMenu'>\n                <a class=\"top_back\" href=\"class_category.html\"\n                   data-dav-tj=\"classroom|category|category|1|category@classroom\">\n                    <span class=\"classification_search_ico\"></span>\n                </a>\n            </div>\n        </div>\n        <v-list-switcher v-if='haveMenu' class=\"out_switch\" :list=\"switcherListDate\" :init-category=\"category\" v-on:category=\"changeCategory\"></v-list-switcher>\n    </div>\n    <div class='content-top' v-if='!inApp && haveMenu'></div>\n    <div class='content-top1' v-if='!inApp && !haveMenu'></div>\n    <v-list-switcher v-if='inApp && haveMenu' class=\"out_switch out_switch_top\" :list=\"switcherListDate\" :init-category=\"category\" v-on:category=\"changeCategory\"></v-list-switcher>\n    <div class='content-top-top' v-if='inApp && haveMenu'></div>\n    <v-list-content :init-list=\"contentListData\" :has-more=\"hasMore\" :category=\"category\" v-on:top=\"changeTop\" v-on:praise=\"praise\"></v-list-content>\n    <div class=\"refresh\" v-if='dataAllNull'>\n        <div v-if=\"hasMore\" class=\"uil-default-css-normal\"\n             style=\"-webkit-transform:scale(0.15);-moz-transform:scale(0.15);-webkit-transform-origin: 0 0;-moz-transform-origin: 0 0;width:30px;height: 30px;display: inline-block;\">\n            <div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div>\n            <div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div>\n            <div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div>\n            <div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div>\n            <div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div>\n            <div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div>\n            <div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div>\n            <div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div>\n            <div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div>\n            <div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div>\n            <div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div>\n            <div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;\"></div>\n        </div>\n        <div v-if=\"hasMore\">数据加载中...</div>\n        <div v-else>没有更多</div>\n    </div>\n  <com-footer active=\"dynamic\" v-if='haveMenu'></com-footer>\n</div>\n";

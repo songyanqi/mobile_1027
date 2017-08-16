@@ -47,7 +47,7 @@
 
 	"use strict";
 
-	var _Vue = __webpack_require__(449);
+	var _Vue = __webpack_require__(459);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
@@ -56,7 +56,7 @@
 	new _Vue2.default({
 	    el: "#privilege",
 	    components: {
-	        privilege: __webpack_require__(1415)
+	        privilege: __webpack_require__(1425)
 	    }
 	}); /**
 	     * Created by jianchep on 17/06/07.
@@ -4586,25 +4586,25 @@
 
 /***/ },
 
-/***/ 449:
+/***/ 459:
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
 
-/***/ 1415:
+/***/ 1425:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1416)
-	__vue_script__ = __webpack_require__(1418)
+	__webpack_require__(1426)
+	__vue_script__ = __webpack_require__(1428)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/setShop/vue/privilege.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1419)
+	__vue_template__ = __webpack_require__(1429)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4630,13 +4630,13 @@
 
 /***/ },
 
-/***/ 1416:
+/***/ 1426:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1417);
+	var content = __webpack_require__(1427);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -4657,7 +4657,7 @@
 
 /***/ },
 
-/***/ 1417:
+/***/ 1427:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -4672,7 +4672,7 @@
 
 /***/ },
 
-/***/ 1418:
+/***/ 1428:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -4793,7 +4793,7 @@
 
 /***/ },
 
-/***/ 1419:
+/***/ 1429:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"container\" _v-02e939a4=\"\">\n    <img src=\"//pic.davdian.com/free/2017/06/26/privile_bg.png?x-oss-process=image/quality,Q_60/format,jpg\" _v-02e939a4=\"\">\n    <div v-if=\"state!=3\" class=\"btn1\" _v-02e939a4=\"\"></div>\n    <div class=\"btn\" @click=\"beNumber\" v-if=\"state!=3\" _v-02e939a4=\"\">马上成为会员</div>\n</div>\n\n\n";

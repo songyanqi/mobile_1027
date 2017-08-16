@@ -49,12 +49,12 @@
 	 * Created by Murphy.lee on 17/4/21.
 	 */
 	__webpack_require__(33);
-	__webpack_require__(1458);
+	__webpack_require__(1468);
 	__webpack_require__(37);
 
 	__webpack_require__(42);
 	__webpack_require__(43);
-	__webpack_require__(1460);
+	__webpack_require__(1470);
 
 
 /***/ },
@@ -5872,20 +5872,20 @@
 
 /***/ },
 
-/***/ 1458:
+/***/ 1468:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
 
-/***/ 1460:
+/***/ 1470:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
 	 * Created by Murphy.lee on 17/4/21.
 	 */
-	var setting = __webpack_require__(1461);
+	var setting = __webpack_require__(1471);
 	new Vue({
 	  el: "#container",
 	  data: function () {
@@ -5908,17 +5908,17 @@
 
 /***/ },
 
-/***/ 1461:
+/***/ 1471:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1462)
+	__vue_script__ = __webpack_require__(1472)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/setting.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1468)
+	__vue_template__ = __webpack_require__(1478)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5944,7 +5944,7 @@
 
 /***/ },
 
-/***/ 1462:
+/***/ 1472:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -5970,7 +5970,7 @@
 	//   </div>
 	// </template>
 	// <script>
-	var a_setting_item = __webpack_require__(1463);
+	var a_setting_item = __webpack_require__(1473);
 	exports.default = {
 	  data: function data() {
 	    return {
@@ -6050,18 +6050,18 @@
 
 /***/ },
 
-/***/ 1463:
+/***/ 1473:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1464)
-	__vue_script__ = __webpack_require__(1466)
+	__webpack_require__(1474)
+	__vue_script__ = __webpack_require__(1476)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/setting_item.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1467)
+	__vue_template__ = __webpack_require__(1477)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6087,13 +6087,13 @@
 
 /***/ },
 
-/***/ 1464:
+/***/ 1474:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1465);
+	var content = __webpack_require__(1475);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(48)(content, {});
@@ -6114,7 +6114,7 @@
 
 /***/ },
 
-/***/ 1465:
+/***/ 1475:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(35)();
@@ -6129,7 +6129,7 @@
 
 /***/ },
 
-/***/ 1466:
+/***/ 1476:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -6202,14 +6202,14 @@
 
 /***/ },
 
-/***/ 1467:
+/***/ 1477:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-e1b1c47a=\"\">\n  <a v-for=\"item in datalist\" class=\"user_menu_item\" :href=\"item.url\" :data-dav-tj=\"'setting|'+item.tj_id+'|'+item.tj_id+'|1|'+item.tj_id+'@setting'\" _v-e1b1c47a=\"\">\n    <span _v-e1b1c47a=\"\">{{item.name}}</span>\n    <span class=\"child pull-right\" _v-e1b1c47a=\"\">\n      <i class=\"icon dav_icon_dayuhao_18_38\" _v-e1b1c47a=\"\"></i>\n    </span>\n    <span v-if=\"item.hasOwnProperty('bind')\" class=\"f12 pull-right\" _v-e1b1c47a=\"\">{{item.bind == \"\" ? '未绑定' : item.bind}}</span>\n  </a>\n</div>\n";
 
 /***/ },
 
-/***/ 1468:
+/***/ 1478:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n  <div class=\"setting_container mt_10\">\n    <a_setting_item :datalist=\"bind_data\"></a_setting_item>\n  </div>\n  <div class=\"setting_container mt_10\">\n    <a_setting_item :datalist=\"data\"></a_setting_item>\n  </div>\n</div>\n";

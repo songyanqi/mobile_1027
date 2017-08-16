@@ -28,9 +28,6 @@ new Vue({
     'banner':require('../vue/banner.vue'),
     'com-top-title': require('../../../component/com-top-title.vue'),
     'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
-    'bd_album_01':require('../../../../module/index/feed/bd_album_01.vue'),
-    'bd_album_02':require('../../../../module/index/feed/bd_album_02.vue'),
-    'bd_album_03':require('../../../../module/index/feed/bd_album_03.vue'),
   },
   data() {
     return {
