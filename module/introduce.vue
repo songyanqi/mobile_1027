@@ -10,7 +10,7 @@
     <div class="introduce_inner">
         <v-school-title></v-school-title>
         <!--内容-->
-        <div id="scroll_container" v-if="!error && deleteFlag">
+        <div id="scroll_container" v-if="!error && deleteFlag && aa!=0">
             <div class="scroll">
                 <index-feed :data="feedData"></index-feed>
             </div>
@@ -19,7 +19,7 @@
                 <div>1、本次课堂内容永久保存，可反复收听；</div>
             </div> -->
         </div>
-        <div class="invite_and_enroll" v-if="!error && deleteFlag" >
+        <div class="invite_and_enroll" v-if="!error && deleteFlag && aa!=0" >
             <div class='bottomBtn' v-if='bottomBtn'></div>
             <div class="btn_container left1">
                 <div class="invite" @click="invite1" v-if='visitor_status!=3 && type==2'>
@@ -56,6 +56,11 @@
                     进入课程中
                 </div>
             </div>
+        </div>
+        <div v-if='aa==0 && !error' class='noApply'>
+            <img src="//pic.davdian.com/free/2017/08/16/noApply.png">
+            <p>登陆后才能继续访问</p>
+            <span>立即登陆</span>
         </div>
         <invite-card :show="inviteShow" :id="courseId" statistics="3" v-on:close="closeCard" kind="0"></invite-card>
         <div class="other_info">
@@ -164,6 +169,30 @@
     }
     .invite_and_enroll:after{
         border-width: 0 0 0!important;
+    }
+    .noApply{
+        text-align: center;
+        img{
+            width: 1.2rem;
+            margin-top: 1rem;
+        }
+        p{
+            color: #666;
+            margin-top: 0.3rem;
+            text-align: center;
+        }
+        span{
+            display: inline-block;
+            height: 24px;
+            line-height: 22px;
+            width: 80px;
+            border: 1px solid #FF4A7D;
+            border-radius: 24px;
+            color: #FF4A7D;
+            background: #fff;
+            text-align: center;
+            margin-top: 0.1rem;
+        }
     }
 </style>
 <script>

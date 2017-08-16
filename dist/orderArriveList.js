@@ -2570,7 +2570,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1a34eddb/com-popup-toast.vue"
+	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2994,7 +2994,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-993d82e0/com-popup-alert.vue"
+	  var id = "_v-48db5b65/com-popup-alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3219,7 +3219,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-27dcda18/com-popup-confirm.vue"
+	  var id = "_v-0b77ce89/com-popup-confirm.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3472,7 +3472,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6c902120/com-popup-loading.vue"
+	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3784,7 +3784,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-e442ccfe/comment_common_list.vue"
+	  var id = "_v-23e69668/comment_common_list.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3809,8 +3809,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e442ccfe&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./comment_common_list.vue", function() {
-				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e442ccfe&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./comment_common_list.vue");
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-23e69668&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./comment_common_list.vue", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-23e69668&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./comment_common_list.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -3944,7 +3944,7 @@
 /***/ 524:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-e442ccfe=\"\">\n    <div class=\"order_list_item\" _v-e442ccfe=\"\">\n        <ul class=\"be_evaluated_list\" _v-e442ccfe=\"\">\n            <li v-for=\"item in list\" :data-goods_id=\"item.goods_id\" _v-e442ccfe=\"\">\n                <a :href=\"&quot;/&quot;+item.goods_id+&quot;.html&quot;\" class=\"goods_pic\" _v-e442ccfe=\"\">\n                    <img :src=\"item.img\" _v-e442ccfe=\"\">\n                </a>\n                <div class=\"goods_con\" _v-e442ccfe=\"\">\n                    <a :href=\"&quot;/&quot;+item.goods_id+&quot;.html&quot;\" class=\"goods_title\" _v-e442ccfe=\"\">{{ item.goods_name }}</a>\n                    <a v-if=\"item.comment_details &amp;&amp; item.comment_details.length\" :href=\"item.comment_details\" :class=\"item.can_comment==0 ? 'view_evaluate_btn1' : 'view_evaluate_btn'\" _v-e442ccfe=\"\">查看评价</a>\n                    <a v-show=\"item.can_comment==1\" :data-href=\"item.comment_link\" @click=\"evaluate\" class=\"evaluate_btn pull-right\" _v-e442ccfe=\"\">评价</a>\n                    <a v-show=\"item.can_comment==2\" :data-href=\"item.comment_link\" @click=\"evaluate\" class=\"evaluate_btn pull-right\" _v-e442ccfe=\"\">追加评价</a>\n                </div>\n            </li>\n        </ul>\n    </div>\n    <div v-show=\"loading\" class=\"refresh\" _v-e442ccfe=\"\">\n        <div class=\"uil-default-css-normal\" style=\"-webkit-transform:scale(0.15);-moz-transform:scale(0.15);-webkit-transform-origin: 0 0;-moz-transform-origin: 0 0;width:30px;height: 30px;display: inline-block;\" _v-e442ccfe=\"\"><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-e442ccfe=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-e442ccfe=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-e442ccfe=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-e442ccfe=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-e442ccfe=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-e442ccfe=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-e442ccfe=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-e442ccfe=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-e442ccfe=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-e442ccfe=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-e442ccfe=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-e442ccfe=\"\"></div></div>\n        <div _v-e442ccfe=\"\">数据加载中...</div>\n    </div>\n</div>\n";
+	module.exports = "\n<div _v-23e69668=\"\">\n    <div class=\"order_list_item\" _v-23e69668=\"\">\n        <ul class=\"be_evaluated_list\" _v-23e69668=\"\">\n            <li v-for=\"item in list\" :data-goods_id=\"item.goods_id\" _v-23e69668=\"\">\n                <a :href=\"&quot;/&quot;+item.goods_id+&quot;.html&quot;\" class=\"goods_pic\" _v-23e69668=\"\">\n                    <img :src=\"item.img\" _v-23e69668=\"\">\n                </a>\n                <div class=\"goods_con\" _v-23e69668=\"\">\n                    <a :href=\"&quot;/&quot;+item.goods_id+&quot;.html&quot;\" class=\"goods_title\" _v-23e69668=\"\">{{ item.goods_name }}</a>\n                    <a v-if=\"item.comment_details &amp;&amp; item.comment_details.length\" :href=\"item.comment_details\" :class=\"item.can_comment==0 ? 'view_evaluate_btn1' : 'view_evaluate_btn'\" _v-23e69668=\"\">查看评价</a>\n                    <a v-show=\"item.can_comment==1\" :data-href=\"item.comment_link\" @click=\"evaluate\" class=\"evaluate_btn pull-right\" _v-23e69668=\"\">评价</a>\n                    <a v-show=\"item.can_comment==2\" :data-href=\"item.comment_link\" @click=\"evaluate\" class=\"evaluate_btn pull-right\" _v-23e69668=\"\">追加评价</a>\n                </div>\n            </li>\n        </ul>\n    </div>\n    <div v-show=\"loading\" class=\"refresh\" _v-23e69668=\"\">\n        <div class=\"uil-default-css-normal\" style=\"-webkit-transform:scale(0.15);-moz-transform:scale(0.15);-webkit-transform-origin: 0 0;-moz-transform-origin: 0 0;width:30px;height: 30px;display: inline-block;\" _v-23e69668=\"\"><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(0deg) translate(0,-60px);transform:rotate(0deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-23e69668=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(30deg) translate(0,-60px);transform:rotate(30deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-23e69668=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(60deg) translate(0,-60px);transform:rotate(60deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-23e69668=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(90deg) translate(0,-60px);transform:rotate(90deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-23e69668=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(120deg) translate(0,-60px);transform:rotate(120deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-23e69668=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(150deg) translate(0,-60px);transform:rotate(150deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-23e69668=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(180deg) translate(0,-60px);transform:rotate(180deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-23e69668=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(210deg) translate(0,-60px);transform:rotate(210deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-23e69668=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(240deg) translate(0,-60px);transform:rotate(240deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-23e69668=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(270deg) translate(0,-60px);transform:rotate(270deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-23e69668=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(300deg) translate(0,-60px);transform:rotate(300deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-23e69668=\"\"></div><div style=\"top:80px;left:93px;width:14px;height:40px;background:#333;-webkit-transform:rotate(330deg) translate(0,-60px);transform:rotate(330deg) translate(0,-60px);border-radius:10px;position:absolute;\" _v-23e69668=\"\"></div></div>\n        <div _v-23e69668=\"\">数据加载中...</div>\n    </div>\n</div>\n";
 
 /***/ },
 
@@ -3993,7 +3993,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-52783df2/orderArriveList.vue"
+	  var id = "_v-da149286/orderArriveList.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4018,8 +4018,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-52783df2&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./orderArriveList.vue", function() {
-				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-52783df2&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./orderArriveList.vue");
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-da149286&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./orderArriveList.vue", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-da149286&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./orderArriveList.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -4102,7 +4102,7 @@
 /***/ 1364:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-52783df2=\"\">\n    <div class=\"top0\" _v-52783df2=\"\">\n        <div class=\"top_container\" _v-52783df2=\"\">\n            <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->\n            <div class=\"top_left\" _v-52783df2=\"\">\n                <a class=\"top_back\" href=\"javascript:history.back();\" _v-52783df2=\"\">\n                    <span class=\"home_arrow\" _v-52783df2=\"\"></span>\n                </a>\n            </div>\n            <div class=\"title_container\" _v-52783df2=\"\">\n                确认收货成功\n            </div>\n        </div>\n    </div>\n    <div class=\"orderArriveSuccess\" _v-52783df2=\"\">\n        <div class=\"success_con\" _v-52783df2=\"\">\n            <span class=\"title\" _v-52783df2=\"\">确认收货成功</span>\n        </div>\n    </div>\n    <comment-common-list _v-52783df2=\"\"></comment-common-list>\n</div>\n";
+	module.exports = "\n<div _v-da149286=\"\">\n    <div class=\"top0\" _v-da149286=\"\">\n        <div class=\"top_container\" _v-da149286=\"\">\n            <!--top_back改为a标签，如果有上一页链接地址改为 javascript:history.back();或者你想执行的语句，否则链接改为真正的链接-->\n            <div class=\"top_left\" _v-da149286=\"\">\n                <a class=\"top_back\" href=\"javascript:history.back();\" _v-da149286=\"\">\n                    <span class=\"home_arrow\" _v-da149286=\"\"></span>\n                </a>\n            </div>\n            <div class=\"title_container\" _v-da149286=\"\">\n                确认收货成功\n            </div>\n        </div>\n    </div>\n    <div class=\"orderArriveSuccess\" _v-da149286=\"\">\n        <div class=\"success_con\" _v-da149286=\"\">\n            <span class=\"title\" _v-da149286=\"\">确认收货成功</span>\n        </div>\n    </div>\n    <comment-common-list _v-da149286=\"\"></comment-common-list>\n</div>\n";
 
 /***/ }
 

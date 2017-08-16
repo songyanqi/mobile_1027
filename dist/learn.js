@@ -2118,7 +2118,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1a34eddb/com-popup-toast.vue"
+	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2542,7 +2542,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-993d82e0/com-popup-alert.vue"
+	  var id = "_v-48db5b65/com-popup-alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2767,7 +2767,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-27dcda18/com-popup-confirm.vue"
+	  var id = "_v-0b77ce89/com-popup-confirm.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3020,7 +3020,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6c902120/com-popup-loading.vue"
+	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4967,7 +4967,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-8155e2e8/bottom.vue"
+	  var id = "_v-2df5153e/bottom.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5148,7 +5148,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2cc27de2/vSchoolTitle.vue"
+	  var id = "_v-630c17b8/vSchoolTitle.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5173,8 +5173,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2cc27de2&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./vSchoolTitle.vue", function() {
-				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2cc27de2&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./vSchoolTitle.vue");
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-630c17b8&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./vSchoolTitle.vue", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-630c17b8&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./vSchoolTitle.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -5248,7 +5248,7 @@
 /***/ 490:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"top0\" _v-2cc27de2=\"\">\n    <div class=\"top_container\" _v-2cc27de2=\"\">\n        <div class=\"top_left\" style=\"width: 40px\" _v-2cc27de2=\"\">\n            <a class=\"top_back\" href=\"javascript:history.back();\" _v-2cc27de2=\"\">\n                <span class=\"home_arrow\" _v-2cc27de2=\"\"></span>\n            </a>\n        </div>\n        <div class=\"title_container\" _v-2cc27de2=\"\">\n            {{data||msg}}\n        </div>\n        <div class=\"top_right\" style=\"width:40px;\" v-if=\"rightshow||false\" _v-2cc27de2=\"\">\n            <a class=\"top_back\" href=\"./course.html\" _v-2cc27de2=\"\">\n                <img style=\"width:26px;margin-top:12px;\" class=\"back_home\" src=\"//pic.davdian.com/free/2017/01/17/75_60_7d48bf0ba35cf3ea029bab4d709558f3.png\" _v-2cc27de2=\"\">\n            </a>\n        </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div class=\"top0\" _v-630c17b8=\"\">\n    <div class=\"top_container\" _v-630c17b8=\"\">\n        <div class=\"top_left\" style=\"width: 40px\" _v-630c17b8=\"\">\n            <a class=\"top_back\" href=\"javascript:history.back();\" _v-630c17b8=\"\">\n                <span class=\"home_arrow\" _v-630c17b8=\"\"></span>\n            </a>\n        </div>\n        <div class=\"title_container\" _v-630c17b8=\"\">\n            {{data||msg}}\n        </div>\n        <div class=\"top_right\" style=\"width:40px;\" v-if=\"rightshow||false\" _v-630c17b8=\"\">\n            <a class=\"top_back\" href=\"./course.html\" _v-630c17b8=\"\">\n                <img style=\"width:26px;margin-top:12px;\" class=\"back_home\" src=\"//pic.davdian.com/free/2017/01/17/75_60_7d48bf0ba35cf3ea029bab4d709558f3.png\" _v-630c17b8=\"\">\n            </a>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 
@@ -5315,7 +5315,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5583e273/learn.vue"
+	  var id = "_v-ad1e6604/learn.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5745,7 +5745,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-656bda9e/learnList.vue"
+	  var id = "_v-3458bfbc/learnList.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11590,7 +11590,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-72e6ae8b/swiper.vue"
+	  var id = "_v-9fb19d54/swiper.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11729,7 +11729,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-04d304ee/slide.vue"
+	  var id = "_v-59617cc3/slide.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {

@@ -2414,7 +2414,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1a34eddb/com-popup-toast.vue"
+	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2838,7 +2838,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-993d82e0/com-popup-alert.vue"
+	  var id = "_v-48db5b65/com-popup-alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3063,7 +3063,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-27dcda18/com-popup-confirm.vue"
+	  var id = "_v-0b77ce89/com-popup-confirm.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3316,7 +3316,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6c902120/com-popup-loading.vue"
+	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5934,7 +5934,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-4af032bf/setting.vue"
+	  var id = "_v-574ca68a/setting.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -6077,7 +6077,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-e1b1c47a/setting_item.vue"
+	  var id = "_v-740250d8/setting_item.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -6102,8 +6102,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e1b1c47a&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./setting_item.vue", function() {
-				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e1b1c47a&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./setting_item.vue");
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-740250d8&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./setting_item.vue", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-740250d8&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=0!./setting_item.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -6122,7 +6122,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.user_menu_item[_v-e1b1c47a] {\n  display: block;\n  line-height: 40px;\n  padding-left: 10px;\n  margin-bottom: 1px;\n  background: #fff;\n}\n\n.user_menu_item span[_v-e1b1c47a] {\n  display: inline-block;\n  height: 41px;\n}\n.user_menu_item .f12[_v-e1b1c47a] {\n  font-size: 12px;\n  color:#999999;\n  max-width: 180px;\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n\n.user_menu_item .child[_v-e1b1c47a] {\n  overflow: hidden;\n}\n\n.user_menu_item .child i.icon[_v-e1b1c47a] {\n  display: inline-block;\n  vertical-align: 0;\n  width: 8px;\n  height: 8px;\n  border-top: 1px solid #999;\n  border-right: 1px solid #999;\n  -webkit-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n      transform: rotate(45deg);\n  margin-right: 10px;\n  background: none;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.user_menu_item[_v-740250d8] {\n  display: block;\n  line-height: 40px;\n  padding-left: 10px;\n  margin-bottom: 1px;\n  background: #fff;\n}\n\n.user_menu_item span[_v-740250d8] {\n  display: inline-block;\n  height: 41px;\n}\n.user_menu_item .f12[_v-740250d8] {\n  font-size: 12px;\n  color:#999999;\n  max-width: 180px;\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n\n.user_menu_item .child[_v-740250d8] {\n  overflow: hidden;\n}\n\n.user_menu_item .child i.icon[_v-740250d8] {\n  display: inline-block;\n  vertical-align: 0;\n  width: 8px;\n  height: 8px;\n  border-top: 1px solid #999;\n  border-right: 1px solid #999;\n  -webkit-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n      transform: rotate(45deg);\n  margin-right: 10px;\n  background: none;\n}\n", ""]);
 
 	// exports
 
@@ -6205,7 +6205,7 @@
 /***/ 1467:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-e1b1c47a=\"\">\n  <a v-for=\"item in datalist\" class=\"user_menu_item\" :href=\"item.url\" :data-dav-tj=\"'setting|'+item.tj_id+'|'+item.tj_id+'|1|'+item.tj_id+'@setting'\" _v-e1b1c47a=\"\">\n    <span _v-e1b1c47a=\"\">{{item.name}}</span>\n    <span class=\"child pull-right\" _v-e1b1c47a=\"\">\n      <i class=\"icon dav_icon_dayuhao_18_38\" _v-e1b1c47a=\"\"></i>\n    </span>\n    <span v-if=\"item.hasOwnProperty('bind')\" class=\"f12 pull-right\" _v-e1b1c47a=\"\">{{item.bind == \"\" ? '未绑定' : item.bind}}</span>\n  </a>\n</div>\n";
+	module.exports = "\n<div _v-740250d8=\"\">\n  <a v-for=\"item in datalist\" class=\"user_menu_item\" :href=\"item.url\" :data-dav-tj=\"'setting|'+item.tj_id+'|'+item.tj_id+'|1|'+item.tj_id+'@setting'\" _v-740250d8=\"\">\n    <span _v-740250d8=\"\">{{item.name}}</span>\n    <span class=\"child pull-right\" _v-740250d8=\"\">\n      <i class=\"icon dav_icon_dayuhao_18_38\" _v-740250d8=\"\"></i>\n    </span>\n    <span v-if=\"item.hasOwnProperty('bind')\" class=\"f12 pull-right\" _v-740250d8=\"\">{{item.bind == \"\" ? '未绑定' : item.bind}}</span>\n  </a>\n</div>\n";
 
 /***/ },
 

@@ -24,17 +24,17 @@ export default {
             homeLink:common.baseJumpUrl().courseHomePage,
             shareUserId:window.shareUserId||0,
             entered:0,
-            visitor_status:0,
+            visitor_status:-1,
             deleteFlag: true,
             teacherId: null,
             userId: null,
             cmd:null,
             cache:false,
-            bottomBtn: false
+            bottomBtn: false,
+            aa:0
         }
     },
     created(){
-      console.log(456);
         let that = this;
         //  用通用方法请求数据
         common.getDataWithSign({
@@ -158,7 +158,7 @@ export default {
             // }
         },
         getData(){
-            // window.location.reload();
+            window.location.reload();
         },
         invite () {
             this.inviteShow=true;

@@ -4620,7 +4620,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-02e939a4/privilege.vue"
+	  var id = "_v-1854e0f9/privilege.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4645,8 +4645,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-02e939a4&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./privilege.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-02e939a4&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./privilege.vue");
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1854e0f9&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./privilege.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1854e0f9&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./privilege.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -4665,7 +4665,7 @@
 
 
 	// module
-	exports.push([module.id, ".container[_v-02e939a4] {\n  width: 100%; }\n  .container img[_v-02e939a4] {\n    width: 100%;\n    vertical-align: top; }\n  .container .btn[_v-02e939a4] {\n    width: 100%;\n    height: 48px;\n    max-width: 640px;\n    vertical-align: top;\n    background: -webkit-linear-gradient(left, #FF5B5B, #FA1862);\n    font-size: 14px;\n    line-height: 48px;\n    text-align: center;\n    color: #fff;\n    position: fixed;\n    bottom: 0; }\n  .container .btn1[_v-02e939a4] {\n    width: 100%;\n    height: 48px;\n    vertical-align: top;\n    font-size: 14px;\n    line-height: 48px;\n    text-align: center; }\n", ""]);
+	exports.push([module.id, ".container[_v-1854e0f9] {\n  width: 100%; }\n  .container img[_v-1854e0f9] {\n    width: 100%;\n    vertical-align: top; }\n  .container .btn[_v-1854e0f9] {\n    width: 100%;\n    height: 48px;\n    max-width: 640px;\n    vertical-align: top;\n    background: -webkit-linear-gradient(left, #FF5B5B, #FA1862);\n    font-size: 14px;\n    line-height: 48px;\n    text-align: center;\n    color: #fff;\n    position: fixed;\n    bottom: 0; }\n  .container .btn1[_v-1854e0f9] {\n    width: 100%;\n    height: 48px;\n    vertical-align: top;\n    font-size: 14px;\n    line-height: 48px;\n    text-align: center; }\n", ""]);
 
 	// exports
 
@@ -4796,7 +4796,7 @@
 /***/ 1419:
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"container\" _v-02e939a4=\"\">\n    <img src=\"//pic.davdian.com/free/2017/06/26/privile_bg.png?x-oss-process=image/quality,Q_60/format,jpg\" _v-02e939a4=\"\">\n    <div v-if=\"state!=3\" class=\"btn1\" _v-02e939a4=\"\"></div>\n    <div class=\"btn\" @click=\"beNumber\" v-if=\"state!=3\" _v-02e939a4=\"\">马上成为会员</div>\n</div>\n\n\n";
+	module.exports = "\n<div class=\"container\" _v-1854e0f9=\"\">\n    <img src=\"//pic.davdian.com/free/2017/06/26/privile_bg.png?x-oss-process=image/quality,Q_60/format,jpg\" _v-1854e0f9=\"\">\n    <div v-if=\"state!=3\" class=\"btn1\" _v-1854e0f9=\"\"></div>\n    <div class=\"btn\" @click=\"beNumber\" v-if=\"state!=3\" _v-1854e0f9=\"\">马上成为会员</div>\n</div>\n\n\n";
 
 /***/ }
 
