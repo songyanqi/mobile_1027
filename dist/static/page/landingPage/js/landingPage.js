@@ -40,58 +40,57 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var _common = __webpack_require__(30);
+	var _common = __webpack_require__(1);
 
 	var _common2 = _interopRequireDefault(_common);
 
-	var _Vue = __webpack_require__(41);
+	var _Vue = __webpack_require__(12);
 
 	var _Vue2 = _interopRequireDefault(_Vue);
 
-	var _$ = __webpack_require__(33);
+	var _$ = __webpack_require__(4);
 
 	var _$2 = _interopRequireDefault(_$);
 
-	var _jsCookie = __webpack_require__(36);
+	var _jsCookie = __webpack_require__(7);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _encrypt = __webpack_require__(42);
+	var _encrypt = __webpack_require__(13);
 
 	var _encrypt2 = _interopRequireDefault(_encrypt);
 
-	var _util = __webpack_require__(37);
+	var _util = __webpack_require__(8);
 
 	var _util2 = _interopRequireDefault(_util);
 
-	var _tj = __webpack_require__(98);
+	var _tj = __webpack_require__(17);
 
 	var _tj2 = _interopRequireDefault(_tj);
 
-	var _popup = __webpack_require__(56);
+	var _popup = __webpack_require__(18);
 
 	var _popup2 = _interopRequireDefault(_popup);
 
-	var _login = __webpack_require__(35);
+	var _login = __webpack_require__(6);
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _native = __webpack_require__(31);
+	var _native = __webpack_require__(2);
 
 	var _native2 = _interopRequireDefault(_native);
 
-	var _share = __webpack_require__(46);
+	var _share = __webpack_require__(41);
 
 	var _share2 = _interopRequireDefault(_share);
 
-	var _vueLazyload = __webpack_require__(54);
+	var _vueLazyload = __webpack_require__(47);
 
 	var _vueLazyload2 = _interopRequireDefault(_vueLazyload);
 
@@ -111,11 +110,11 @@
 	new _Vue2.default({
 	  el: ".app",
 	  components: {
-	    'com-to-top-icon': __webpack_require__(82),
-	    'landingPage': __webpack_require__(1141),
-	    'bd_album_0': __webpack_require__(1146),
-	    'bd_album_content_1': __webpack_require__(1151),
-	    'lheader': __webpack_require__(1156)
+	    'com-to-top-icon': __webpack_require__(49),
+	    'landingPage': __webpack_require__(54),
+	    'bd_album_0': __webpack_require__(59),
+	    'bd_album_content_1': __webpack_require__(64),
+	    'lheader': __webpack_require__(69)
 	  },
 	  data: function data() {
 	    return {
@@ -175,7 +174,7 @@
 	          ts.response = response;
 	        },
 	        error: function error(_error) {
-	          ts.response = __webpack_require__(1161);
+	          ts.response = __webpack_require__(74);
 	          console.error('ajax error:' + _error.status + ' ' + _error.statusText);
 	        }
 	      });
@@ -185,8 +184,7 @@
 	});
 
 /***/ },
-
-/***/ 30:
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -195,34 +193,34 @@
 	  value: true
 	});
 
-	var _native = __webpack_require__(31);
+	var _native = __webpack_require__(2);
 
 	var _native2 = _interopRequireDefault(_native);
 
-	var _ua = __webpack_require__(32);
+	var _ua = __webpack_require__(3);
 
 	var _ua2 = _interopRequireDefault(_ua);
 
-	var _login = __webpack_require__(35);
+	var _login = __webpack_require__(6);
 
 	var _login2 = _interopRequireDefault(_login);
 
-	var _jsCookie = __webpack_require__(36);
+	var _jsCookie = __webpack_require__(7);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(37);
+	var _util = __webpack_require__(8);
 
 	var _util2 = _interopRequireDefault(_util);
 
-	var _weixin = __webpack_require__(38);
+	var _weixin = __webpack_require__(9);
 
 	var _weixin2 = _interopRequireDefault(_weixin);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// import scriptjs from 'scriptjs';
-	__webpack_require__(40);
+	__webpack_require__(11);
 
 
 	// ios wkwebview返回上一页执行回调刷新页面
@@ -334,8 +332,7 @@
 	};
 
 /***/ },
-
-/***/ 31:
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -346,15 +343,15 @@
 
 	var _LiveVideo;
 
-	var _ua = __webpack_require__(32);
+	var _ua = __webpack_require__(3);
 
 	var _ua2 = _interopRequireDefault(_ua);
 
-	var _$ = __webpack_require__(33);
+	var _$ = __webpack_require__(4);
 
 	var _$2 = _interopRequireDefault(_$);
 
-	var _config = __webpack_require__(34);
+	var _config = __webpack_require__(5);
 
 	var _config2 = _interopRequireDefault(_config);
 
@@ -1503,8 +1500,7 @@
 	exports.default = native;
 
 /***/ },
-
-/***/ 32:
+/* 3 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1721,15 +1717,13 @@
 	exports.default = new Ua();
 
 /***/ },
-
-/***/ 33:
+/* 4 */
 /***/ function(module, exports) {
 
 	module.exports = $;
 
 /***/ },
-
-/***/ 34:
+/* 5 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1751,8 +1745,7 @@
 	};
 
 /***/ },
-
-/***/ 35:
+/* 6 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1761,7 +1754,7 @@
 	  value: true
 	});
 
-	var _jsCookie = __webpack_require__(36);
+	var _jsCookie = __webpack_require__(7);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
@@ -1850,8 +1843,7 @@
 	};
 
 /***/ },
-
-/***/ 36:
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2022,8 +2014,7 @@
 
 
 /***/ },
-
-/***/ 37:
+/* 8 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -2070,8 +2061,7 @@
 	};
 
 /***/ },
-
-/***/ 38:
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2080,23 +2070,23 @@
 	  value: true
 	});
 
-	var _scriptjs = __webpack_require__(39);
+	var _scriptjs = __webpack_require__(10);
 
 	var _scriptjs2 = _interopRequireDefault(_scriptjs);
 
-	var _$ = __webpack_require__(33);
+	var _$ = __webpack_require__(4);
 
 	var _$2 = _interopRequireDefault(_$);
 
-	var _config = __webpack_require__(34);
+	var _config = __webpack_require__(5);
 
 	var _config2 = _interopRequireDefault(_config);
 
-	var _jsCookie = __webpack_require__(36);
+	var _jsCookie = __webpack_require__(7);
 
 	var _jsCookie2 = _interopRequireDefault(_jsCookie);
 
-	var _util = __webpack_require__(37);
+	var _util = __webpack_require__(8);
 
 	var _util2 = _interopRequireDefault(_util);
 
@@ -2264,8 +2254,7 @@
 	};
 
 /***/ },
-
-/***/ 39:
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2394,8 +2383,7 @@
 
 
 /***/ },
-
-/***/ 40:
+/* 11 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -2426,15 +2414,13 @@
 	exports.default = setRootSize;
 
 /***/ },
-
-/***/ 41:
+/* 12 */
 /***/ function(module, exports) {
 
 	module.exports = Vue;
 
 /***/ },
-
-/***/ 42:
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2443,15 +2429,15 @@
 	  value: true
 	});
 
-	var _md = __webpack_require__(43);
+	var _md = __webpack_require__(14);
 
 	var _md2 = _interopRequireDefault(_md);
 
-	var _param = __webpack_require__(45);
+	var _param = __webpack_require__(16);
 
 	var _param2 = _interopRequireDefault(_param);
 
-	var _ua = __webpack_require__(32);
+	var _ua = __webpack_require__(3);
 
 	var _ua2 = _interopRequireDefault(_ua);
 
@@ -2533,14 +2519,13 @@
 	exports.default = strSign;
 
 /***/ },
-
-/***/ 43:
+/* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;(function (root, factory) {
 		if (true) {
 			// CommonJS
-			module.exports = exports = factory(__webpack_require__(44));
+			module.exports = exports = factory(__webpack_require__(15));
 		}
 		else if (typeof define === "function" && define.amd) {
 			// AMD
@@ -2807,8 +2792,7 @@
 	}));
 
 /***/ },
-
-/***/ 44:
+/* 15 */
 /***/ function(module, exports, __webpack_require__) {
 
 	;(function (root, factory) {
@@ -3573,8 +3557,7 @@
 	}));
 
 /***/ },
-
-/***/ 45:
+/* 16 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -3633,8 +3616,7 @@
 	};
 
 /***/ },
-
-/***/ 46:
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3643,94 +3625,211 @@
 	  value: true
 	});
 
-	var _ua = __webpack_require__(32);
+	var _$ = __webpack_require__(4);
+
+	var _$2 = _interopRequireDefault(_$);
+
+	var _jsCookie = __webpack_require__(7);
+
+	var _jsCookie2 = _interopRequireDefault(_jsCookie);
+
+	var _login = __webpack_require__(6);
+
+	var _login2 = _interopRequireDefault(_login);
+
+	var _ua = __webpack_require__(3);
 
 	var _ua2 = _interopRequireDefault(_ua);
 
-	var _native = __webpack_require__(31);
-
-	var _native2 = _interopRequireDefault(_native);
-
-	var _weixin = __webpack_require__(38);
-
-	var _weixin2 = _interopRequireDefault(_weixin);
-
-	var _Vue = __webpack_require__(41);
-
-	var _Vue2 = _interopRequireDefault(_Vue);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	// 前端点击数据采集格式，具体如下：
+	var defaultParam = {
+	  // ip
+	  ip: '',
+	  // ng时间，留空，数据由nginx生成
+	  nxtime: Date.now(),
+	  // 日志时间
+	  timestamp: Date.now(),
+	  // 业务线 默认为0，首页点击为1，
+	  production: 0,
+	  // 日志来源 默认为0，首页点击为1
+	  log_source: 0,
+	  // 浏览器UA
+	  user_agent: navigator.userAgent,
+	  // 来源市场，andriod是渠道号，ios为空
+	  market: '',
+	  // 用户id
+	  uid: _login2.default.getUserId(),
+	  // session id
+	  session: _login2.default.getSessionId(),
+	  // 卖家状态 (0：游客 1:买家 3:卖家)
+	  status: _login2.default.getUserStatusCode(),
+	  // 1：点击
+	  action: 1,
+	  // 1：模板
+	  action_type: 0,
+	  // 模板id
+	  object_id: '',
+	  // 设备号
+	  device_id: '',
+	  // 设备类型
+	  device: _ua2.default.isIos() ? 'ios' : _ua2.default.isAndroid() ? 'android' : '',
+	  // 设备版本号
+	  sys_version: '',
+	  // 分辨率
+	  resolution: window.screen.width + '*' + window.screen.height,
+	  // 当前位置
+	  location: location.href,
+	  // APP版本号
+	  app_version: '',
+	  // 详细信息
+	  production_data: {
+	    feed: {
+	      // 整个feed item的位置，透传服务端下发的position
+	      itemPosition: '',
+	      // 模板Id
+	      tplId: '',
+	      // title or body
+	      type: '',
+	      // 当前点击的内容在body中的位置，透传服务端下发的position，title无此字段
+	      dataPosition: '1',
+	      // 动作：点击，来自feed中的command->content
+	      cmdContent: '',
+	      // 当前点击imgUrl，可以为空
+	      imgUrl: ''
+	    }
+	  }
+	};
+
+	exports.default = {
+	  /**
+	   * 功能：发送统计信息
+	   * 用法：
+	   * tj.send({
+	      production: 17,
+	      action: 1,
+	      action_type: action_type,
+	      production_data: {
+	        feed: {
+	          cmdContent: cmdContent || ''
+	        }
+	      }
+	    });
+	   */
+	  send: function send(param) {
+	    var newParam = _$2.default.extend(true, {}, defaultParam, param);
+	    _$2.default.ajax({
+	      cache: false,
+	      async: false,
+	      url: '//bravetime.davdian.com/appapi?_=' + Date.now(), // 这个接口值在davdian.com下存在
+	      type: 'post',
+	      dataType: 'text',
+	      data: JSON.stringify(newParam),
+	      success: function success(response) {
+	        console.log(response);
+	      },
+	      error: function error(_error) {
+	        console.error('ajax error:' + _error.status + ' ' + _error.statusText);
+	      }
+	    });
+	  }
+	};
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	var getEl = function getEl() {
 	  return (document.querySelector('.app') || document.body).appendChild(document.createElement('div'));
 	};
 
-	/**
-	 * share模块
-	 * 与分享有关的模块
-	 */
+	var _loading = null;
+
 	exports.default = {
 	  /**
-	   * 设置 微信&native 分享信息
-	   * 调用方法:
-	   share.setShareInfo({
-	      title: '大V店组团包邮', // 分享标题
-	      desc: '一件包邮！每天上新！好货低价又包邮，抢到了就赚翻啦', // 分享描述
-	      link: location.href, // 分享链接
-	      imgUrl: 'http://pic.davdian.com/free/2016/04/09/320_320_0fc3e0dbbadd249b7f1b93a525f0adf0.jpg', // 分享图标
-	    });
+	   * 功能: toast提示
+	   * @param html      toast内容，可传html
+	   * @param duration  toast存在时长，毫秒
 	   */
-	  setShareInfo: function setShareInfo() {
-	    var param = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-	    var response = arguments[1];
-
-	    if (_ua2.default.isWeiXin()) {
-	      _weixin2.default.setShareInfo(param, response);
-	    } else if (_ua2.default.isDvdApp()) {
-	      _native2.default.custom.setShareInfo(param);
-	    }
-	  },
-
-	  /**
-	   * 唤起浏览器分享(目前只支持弹出浮层引导分享)
-	   */
-	  callBrowserShare: function callBrowserShare() {
-	    new _Vue2.default({
+	  toast: function toast(html, duration) {
+	    new Vue({
 	      components: {
-	        'com-share-pop-tip': __webpack_require__(47)
+	        'com-popup-toast': __webpack_require__(19)
 	      },
 	      el: getEl(),
-	      data: {},
-	      template: '<com-share-pop-tip/>'
+	      data: { html: html, duration: duration },
+	      template: '<com-popup-toast :html="html" :duration="duration"/>'
+	    });
+	  },
+	  alert: function alert(okText, ok, title) {
+	    new Vue({
+	      components: {
+	        'com-popup-alert': __webpack_require__(26)
+	      },
+	      el: getEl(),
+	      data: { okText: okText, ok: ok, title: title },
+	      template: '<com-popup-alert :okText="okText" :ok="ok" :title="title" />'
 	    });
 	  },
 
-	  /**
-	   * 唤起 浏览器|native 分享
-	   */
-	  callShare: function callShare() {
-	    if (_ua2.default.isDvdApp()) {
-	      _native2.default.custom.share();
-	    } else {
-	      this.callBrowserShare();
+	  /*confirm(html, ok, cancel){
+	    new Vue({
+	      components: {
+	        'com-popup-confirm': require('../../../component/com-popup-confirm.vue')
+	      },
+	      el: getEl(),
+	      data: {html, ok, cancel},
+	      template: '<com-popup-confirm :html="html" :ok="ok" :cancel="cancel" />',
+	    });
+	  },*/
+	  confirm: function confirm(okContent, ok, cancel, title, okText, cancleText) {
+	    new Vue({
+	      components: {
+	        'com-popup-confirm': __webpack_require__(31)
+	      },
+	      el: getEl(),
+	      data: { title: title, okContent: okContent, okText: okText, cancleText: cancleText, ok: ok, cancel: cancel },
+	      template: '<com-popup-confirm :okContent = "okContent" :ok="ok" :cancel="cancel" :title= "title" :okText="okText" :cancleText = "cancleText" />'
+	    });
+	  },
+	  loading: function loading(show) {
+	    if (!show && !_loading) {
+	      _loading = new Vue({
+	        components: {
+	          'com-popup-loading': __webpack_require__(36)
+	        },
+	        el: getEl(),
+	        data: {},
+	        template: '<com-popup-loading />'
+	      });
+	    } else if (_loading) {
+	      // 销毁自身
+	      _loading.$destroy();
+	      _loading.$el.parentNode.removeChild(_loading.$el);
+	      _loading = null;
 	    }
 	  }
 	};
 
 /***/ },
-
-/***/ 47:
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(48)
-	__vue_script__ = __webpack_require__(52)
+	__webpack_require__(20)
+	__vue_script__ = __webpack_require__(24)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/component/com-share-pop-tip.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(53)
+	  console.warn("[vue-loader] src/component/com-popup-toast.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(25)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -3746,7 +3845,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7718a21b/com-share-pop-tip.vue"
+	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3755,24 +3854,23 @@
 	})()}
 
 /***/ },
-
-/***/ 48:
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(49);
+	var content = __webpack_require__(21);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(51)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-share-pop-tip.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-share-pop-tip.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-popup-toast.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-popup-toast.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -3782,23 +3880,21 @@
 	}
 
 /***/ },
-
-/***/ 49:
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(50)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
 	// module
-	exports.push([module.id, ".com-share-pop-tip {\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n  max-width: 640px;\n  height: 100%;\n  background-color: #000;\n  opacity: 0.8;\n  z-index: 99;\n  display: none; }\n  .com-share-pop-tip .arrow {\n    position: absolute;\n    top: 0;\n    right: 0.3rem; }\n  .com-share-pop-tip .tip {\n    margin-top: 1rem;\n    color: #ffffff;\n    font-size: 0.15rem;\n    padding: 0 0.3rem;\n    text-align: center;\n    line-height: 1.5; }\n", ""]);
+	exports.push([module.id, "@-webkit-keyframes com-alert-animation {\n  0% {\n    -webkit-transform: scale(0);\n            transform: scale(0); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n@keyframes com-alert-animation {\n  0% {\n    -webkit-transform: scale(0);\n            transform: scale(0); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n.com-popup-toast {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  max-width: 640px;\n  height: 100%;\n  display: table;\n  z-index: 9;\n  line-height: 1; }\n  .com-popup-toast .cell {\n    display: table-cell;\n    vertical-align: middle;\n    text-align: center; }\n    .com-popup-toast .cell .box {\n      display: inline-block;\n      -webkit-box-sizing: border-box;\n         -moz-box-sizing: border-box;\n              box-sizing: border-box;\n      padding: 0.1rem 0.15rem;\n      min-width: 1.2rem;\n      max-width: 2rem;\n      min-height: 0.4rem;\n      border-radius: 0.04rem;\n      background: rgba(0, 0, 0, 0.65);\n      color: #fff;\n      font-size: 0.14rem;\n      line-height: 0.2rem;\n      -webkit-animation: com-alert-animation 0.3s;\n              animation: com-alert-animation 0.3s; }\n      .com-popup-toast .cell .box .html {\n        display: inline-block;\n        text-align: left; }\n", ""]);
 
 	// exports
 
 
 /***/ },
-
-/***/ 50:
+/* 22 */
 /***/ function(module, exports) {
 
 	/*
@@ -3854,8 +3950,7 @@
 
 
 /***/ },
-
-/***/ 51:
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -4077,327 +4172,7 @@
 
 
 /***/ },
-
-/***/ 52:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _ua = __webpack_require__(32);
-
-	var _ua2 = _interopRequireDefault(_ua);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  data: function data() {
-	    return {
-	      styleObject: {
-	        display: 'block'
-	      },
-	      isWeixin: _ua2.default.isWeiXin()
-	    };
-	  },
-	  props: {
-	    classObject: {},
-	    type: String // 取值weixin
-	  },
-	  components: {},
-	  methods: {
-	    show: function show() {
-	      //        this.styleObject.display = 'block';
-	    },
-	    close: function close() {
-	      //        this.styleObject.display = 'none';
-	      this.$destroy();
-	      this.$el.parentNode.removeChild(this.$el);
-	    },
-	    touchmove: function touchmove(event) {
-	      event.preventDefault();
-	    }
-	  },
-	  filters: {},
-	  computed: {},
-	  watch: {},
-	  created: function created() {},
-	  mounted: function mounted() {}
-	  // </script>
-	  //
-	  // <style lang="sass" lang="scss" rel="stylesheet/scss">
-	  //   @import "../common/css/util/all";
-	  //
-	  //   // 分享提示浮层
-	  //   .com-share-pop-tip {
-	  //     position: fixed;
-	  //     bottom: 0;
-	  //     width: 100%;
-	  //     max-width: 640px;
-	  //     height: 100%;
-	  //     background-color: #000;
-	  //     opacity: 0.8;
-	  //     z-index: 99;
-	  //     display: none;
-	  //     .arrow {
-	  //       position: absolute;
-	  //       top: 0;
-	  //       right: ptr(30);
-	  //     }
-	  //     .tip {
-	  //       margin-top: ptr(100);
-	  //       color: #ffffff;
-	  //       font-size: ptr(15);
-	  //       padding: 0 ptr(30);
-	  //       text-align: center;
-	  //       line-height: 1.5;
-	  //     }
-	  //   }
-	  //
-	  // </style>
-
-	}; // <!--分享提示浮层-->
-	// <template>
-	//   <div class="com-share-pop-tip" :style="styleObject" @click="close" @touchmove="touchmove">
-	//     <img class="arrow" src="http://pic.davdian.com/free/pointer.png">
-	//     <div class="tip">
-	//       <template v-if="isWeixin">
-	//         <p>请点击右上角“分享”按钮,</p>
-	//         <p>然后可以选择“发送给朋友”、“分享到朋友圈”或者“复制链接”后发送链接给朋友。</p>
-	//       </template>
-	//       <template v-if="!isWeixin">
-	//         <p>请复制地址栏链接，将链接发送给朋友</p>
-	//       </template>
-	//     </div>
-	//   </div>
-	// </template>
-	//
-	// <script>
-
-/***/ },
-
-/***/ 53:
-/***/ function(module, exports) {
-
-	module.exports = "\n\n<div class=\"com-share-pop-tip\" :style=\"styleObject\" @click=\"close\" @touchmove=\"touchmove\">\n  <img class=\"arrow\" src=\"http://pic.davdian.com/free/pointer.png\">\n  <div class=\"tip\">\n    <template v-if=\"isWeixin\">\n      <p>请点击右上角“分享”按钮,</p>\n      <p>然后可以选择“发送给朋友”、“分享到朋友圈”或者“复制链接”后发送链接给朋友。</p>\n    </template>\n    <template v-if=\"!isWeixin\">\n      <p>请复制地址栏链接，将链接发送给朋友</p>\n    </template>\n  </div>\n</div>\n";
-
-/***/ },
-
-/***/ 54:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _Vue = __webpack_require__(41);
-
-	var _Vue2 = _interopRequireDefault(_Vue);
-
-	var _VueLazyload = __webpack_require__(55);
-
-	var _VueLazyload2 = _interopRequireDefault(_VueLazyload);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  init: function init(isLoading) {
-	    // 懒加载全局设置
-	    document.body.style.display = 'none';
-	    if (isLoading) {
-	      _Vue2.default.use(_VueLazyload2.default, {
-	        loading: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
-	        error: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
-	        try: 2,
-	        preLoad: 1.5
-	      });
-	    } else {
-	      _Vue2.default.use(_VueLazyload2.default, {
-	        // loading: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
-	        // error: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
-	        try: 2,
-	        preLoad: 1.5
-	      });
-	    }
-	    document.body.style.display = null;
-	  }
-	};
-
-/***/ },
-
-/***/ 55:
-/***/ function(module, exports) {
-
-	module.exports = VueLazyload;
-
-/***/ },
-
-/***/ 56:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var getEl = function getEl() {
-	  return (document.querySelector('.app') || document.body).appendChild(document.createElement('div'));
-	};
-
-	var _loading = null;
-
-	exports.default = {
-	  /**
-	   * 功能: toast提示
-	   * @param html      toast内容，可传html
-	   * @param duration  toast存在时长，毫秒
-	   */
-	  toast: function toast(html, duration) {
-	    new Vue({
-	      components: {
-	        'com-popup-toast': __webpack_require__(57)
-	      },
-	      el: getEl(),
-	      data: { html: html, duration: duration },
-	      template: '<com-popup-toast :html="html" :duration="duration"/>'
-	    });
-	  },
-	  alert: function alert(okText, ok, title) {
-	    new Vue({
-	      components: {
-	        'com-popup-alert': __webpack_require__(62)
-	      },
-	      el: getEl(),
-	      data: { okText: okText, ok: ok, title: title },
-	      template: '<com-popup-alert :okText="okText" :ok="ok" :title="title" />'
-	    });
-	  },
-
-	  /*confirm(html, ok, cancel){
-	    new Vue({
-	      components: {
-	        'com-popup-confirm': require('../../../component/com-popup-confirm.vue')
-	      },
-	      el: getEl(),
-	      data: {html, ok, cancel},
-	      template: '<com-popup-confirm :html="html" :ok="ok" :cancel="cancel" />',
-	    });
-	  },*/
-	  confirm: function confirm(okContent, ok, cancel, title, okText, cancleText) {
-	    new Vue({
-	      components: {
-	        'com-popup-confirm': __webpack_require__(67)
-	      },
-	      el: getEl(),
-	      data: { title: title, okContent: okContent, okText: okText, cancleText: cancleText, ok: ok, cancel: cancel },
-	      template: '<com-popup-confirm :okContent = "okContent" :ok="ok" :cancel="cancel" :title= "title" :okText="okText" :cancleText = "cancleText" />'
-	    });
-	  },
-	  loading: function loading(show) {
-	    if (!show && !_loading) {
-	      _loading = new Vue({
-	        components: {
-	          'com-popup-loading': __webpack_require__(72)
-	        },
-	        el: getEl(),
-	        data: {},
-	        template: '<com-popup-loading />'
-	      });
-	    } else if (_loading) {
-	      // 销毁自身
-	      _loading.$destroy();
-	      _loading.$el.parentNode.removeChild(_loading.$el);
-	      _loading = null;
-	    }
-	  }
-	};
-
-/***/ },
-
-/***/ 57:
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(58)
-	__vue_script__ = __webpack_require__(60)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/component/com-popup-toast.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(61)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-
-/***/ 58:
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(59);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(51)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-popup-toast.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-popup-toast.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-
-/***/ 59:
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(50)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "@-webkit-keyframes com-alert-animation {\n  0% {\n    -webkit-transform: scale(0);\n            transform: scale(0); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n@keyframes com-alert-animation {\n  0% {\n    -webkit-transform: scale(0);\n            transform: scale(0); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n.com-popup-toast {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  max-width: 640px;\n  height: 100%;\n  display: table;\n  z-index: 9;\n  line-height: 1; }\n  .com-popup-toast .cell {\n    display: table-cell;\n    vertical-align: middle;\n    text-align: center; }\n    .com-popup-toast .cell .box {\n      display: inline-block;\n      -webkit-box-sizing: border-box;\n         -moz-box-sizing: border-box;\n              box-sizing: border-box;\n      padding: 0.1rem 0.15rem;\n      min-width: 1.2rem;\n      max-width: 2rem;\n      min-height: 0.4rem;\n      border-radius: 0.04rem;\n      background: rgba(0, 0, 0, 0.65);\n      color: #fff;\n      font-size: 0.14rem;\n      line-height: 0.2rem;\n      -webkit-animation: com-alert-animation 0.3s;\n              animation: com-alert-animation 0.3s; }\n      .com-popup-toast .cell .box .html {\n        display: inline-block;\n        text-align: left; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-
-/***/ 60:
+/* 24 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4511,26 +4286,24 @@
 	};
 
 /***/ },
-
-/***/ 61:
+/* 25 */
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n\n<div class=\"com-popup-toast\">\n  <div class=\"cell\">\n    <div class=\"box\">\n      <div class=\"html\" v-html=\"html\"></div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-
-/***/ 62:
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(63)
-	__vue_script__ = __webpack_require__(65)
+	__webpack_require__(27)
+	__vue_script__ = __webpack_require__(29)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-popup-alert.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(66)
+	__vue_template__ = __webpack_require__(30)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4555,17 +4328,16 @@
 	})()}
 
 /***/ },
-
-/***/ 63:
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(64);
+	var content = __webpack_require__(28);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(51)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -4582,11 +4354,10 @@
 	}
 
 /***/ },
-
-/***/ 64:
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(50)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
@@ -4597,8 +4368,7 @@
 
 
 /***/ },
-
-/***/ 65:
+/* 29 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4736,26 +4506,24 @@
 	};
 
 /***/ },
-
-/***/ 66:
+/* 30 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"com-popup-alert\">\n  <!--居中容器-->\n  <div class=\"middle-wrapper\">\n    <!--alert提示框-->\n    <div class=\"alert-box\">\n      <div class=\"titleCont\">\n        <div class=\"title\" v-html=\"title\" v-if = \"!!title\"></div>\n        <div class=\"okText\" v-html=\"okText\"></div>\n      </div>\n      <div class=\"btn\" @click=\"ok(); destroy();\">确定</div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-
-/***/ 67:
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(68)
-	__vue_script__ = __webpack_require__(70)
+	__webpack_require__(32)
+	__vue_script__ = __webpack_require__(34)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-popup-confirm.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(71)
+	__vue_template__ = __webpack_require__(35)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -4780,17 +4548,16 @@
 	})()}
 
 /***/ },
-
-/***/ 68:
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(69);
+	var content = __webpack_require__(33);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(51)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -4807,11 +4574,10 @@
 	}
 
 /***/ },
-
-/***/ 69:
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(50)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
@@ -4822,8 +4588,7 @@
 
 
 /***/ },
-
-/***/ 70:
+/* 34 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -4989,26 +4754,24 @@
 	};
 
 /***/ },
-
-/***/ 71:
+/* 35 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"com-popup-confirm\">\n  <!--居中容器-->\n  <div class=\"middle-wrapper\">\n    <!--alert提示框-->\n    <div class=\"alert-box\">\n      <!--<div class=\"title\" v-html=\"html\"></div>-->\n      <div class=\"titleCont\">\n        <div class=\"title\" v-html=\"title\"></div>\n        <div class=\"okText\" v-html=\"okContent\"></div>\n      </div>\n      <div class=\"btns\">\n        <div class=\"btn\" @click=\"ok(); destroy();\" v-html = \"okText\"></div>\n        <div class=\"btn colorGray\" @click=\"cancel(); destroy();\" v-html = \"cancleText\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-
-/***/ 72:
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(73)
-	__vue_script__ = __webpack_require__(75)
+	__webpack_require__(37)
+	__vue_script__ = __webpack_require__(39)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-popup-loading.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(76)
+	__vue_template__ = __webpack_require__(40)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5033,17 +4796,16 @@
 	})()}
 
 /***/ },
-
-/***/ 73:
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(74);
+	var content = __webpack_require__(38);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(51)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -5060,11 +4822,10 @@
 	}
 
 /***/ },
-
-/***/ 74:
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(50)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
@@ -5075,8 +4836,7 @@
 
 
 /***/ },
-
-/***/ 75:
+/* 39 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -5294,26 +5054,338 @@
 	};
 
 /***/ },
-
-/***/ 76:
+/* 40 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"com-popup-loading\">\n  <!--居中容器-->\n  <div class=\"middle-wrapper\">\n    <div class=\"loadEffect\">\n      <span></span>\n      <span></span>\n      <span></span>\n      <span></span>\n      <span></span>\n      <span></span>\n      <span></span>\n      <span></span>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
+/* 41 */
+/***/ function(module, exports, __webpack_require__) {
 
-/***/ 82:
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _ua = __webpack_require__(3);
+
+	var _ua2 = _interopRequireDefault(_ua);
+
+	var _native = __webpack_require__(2);
+
+	var _native2 = _interopRequireDefault(_native);
+
+	var _weixin = __webpack_require__(9);
+
+	var _weixin2 = _interopRequireDefault(_weixin);
+
+	var _Vue = __webpack_require__(12);
+
+	var _Vue2 = _interopRequireDefault(_Vue);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var getEl = function getEl() {
+	  return (document.querySelector('.app') || document.body).appendChild(document.createElement('div'));
+	};
+
+	/**
+	 * share模块
+	 * 与分享有关的模块
+	 */
+	exports.default = {
+	  /**
+	   * 设置 微信&native 分享信息
+	   * 调用方法:
+	   share.setShareInfo({
+	      title: '大V店组团包邮', // 分享标题
+	      desc: '一件包邮！每天上新！好货低价又包邮，抢到了就赚翻啦', // 分享描述
+	      link: location.href, // 分享链接
+	      imgUrl: 'http://pic.davdian.com/free/2016/04/09/320_320_0fc3e0dbbadd249b7f1b93a525f0adf0.jpg', // 分享图标
+	    });
+	   */
+	  setShareInfo: function setShareInfo() {
+	    var param = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+	    var response = arguments[1];
+
+	    if (_ua2.default.isWeiXin()) {
+	      _weixin2.default.setShareInfo(param, response);
+	    } else if (_ua2.default.isDvdApp()) {
+	      _native2.default.custom.setShareInfo(param);
+	    }
+	  },
+
+	  /**
+	   * 唤起浏览器分享(目前只支持弹出浮层引导分享)
+	   */
+	  callBrowserShare: function callBrowserShare() {
+	    new _Vue2.default({
+	      components: {
+	        'com-share-pop-tip': __webpack_require__(42)
+	      },
+	      el: getEl(),
+	      data: {},
+	      template: '<com-share-pop-tip/>'
+	    });
+	  },
+
+	  /**
+	   * 唤起 浏览器|native 分享
+	   */
+	  callShare: function callShare() {
+	    if (_ua2.default.isDvdApp()) {
+	      _native2.default.custom.share();
+	    } else {
+	      this.callBrowserShare();
+	    }
+	  }
+	};
+
+/***/ },
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(83)
-	__vue_script__ = __webpack_require__(85)
+	__webpack_require__(43)
+	__vue_script__ = __webpack_require__(45)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/component/com-share-pop-tip.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(46)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+	if (__vue_template__) {
+	__vue_options__.template = __vue_template__
+	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-7718a21b/com-share-pop-tip.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 43 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(44);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(23)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-share-pop-tip.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-share-pop-tip.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(22)();
+	// imports
+
+
+	// module
+	exports.push([module.id, ".com-share-pop-tip {\n  position: fixed;\n  bottom: 0;\n  width: 100%;\n  max-width: 640px;\n  height: 100%;\n  background-color: #000;\n  opacity: 0.8;\n  z-index: 99;\n  display: none; }\n  .com-share-pop-tip .arrow {\n    position: absolute;\n    top: 0;\n    right: 0.3rem; }\n  .com-share-pop-tip .tip {\n    margin-top: 1rem;\n    color: #ffffff;\n    font-size: 0.15rem;\n    padding: 0 0.3rem;\n    text-align: center;\n    line-height: 1.5; }\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _ua = __webpack_require__(3);
+
+	var _ua2 = _interopRequireDefault(_ua);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  data: function data() {
+	    return {
+	      styleObject: {
+	        display: 'block'
+	      },
+	      isWeixin: _ua2.default.isWeiXin()
+	    };
+	  },
+	  props: {
+	    classObject: {},
+	    type: String // 取值weixin
+	  },
+	  components: {},
+	  methods: {
+	    show: function show() {
+	      //        this.styleObject.display = 'block';
+	    },
+	    close: function close() {
+	      //        this.styleObject.display = 'none';
+	      this.$destroy();
+	      this.$el.parentNode.removeChild(this.$el);
+	    },
+	    touchmove: function touchmove(event) {
+	      event.preventDefault();
+	    }
+	  },
+	  filters: {},
+	  computed: {},
+	  watch: {},
+	  created: function created() {},
+	  mounted: function mounted() {}
+	  // </script>
+	  //
+	  // <style lang="sass" lang="scss" rel="stylesheet/scss">
+	  //   @import "../common/css/util/all";
+	  //
+	  //   // 分享提示浮层
+	  //   .com-share-pop-tip {
+	  //     position: fixed;
+	  //     bottom: 0;
+	  //     width: 100%;
+	  //     max-width: 640px;
+	  //     height: 100%;
+	  //     background-color: #000;
+	  //     opacity: 0.8;
+	  //     z-index: 99;
+	  //     display: none;
+	  //     .arrow {
+	  //       position: absolute;
+	  //       top: 0;
+	  //       right: ptr(30);
+	  //     }
+	  //     .tip {
+	  //       margin-top: ptr(100);
+	  //       color: #ffffff;
+	  //       font-size: ptr(15);
+	  //       padding: 0 ptr(30);
+	  //       text-align: center;
+	  //       line-height: 1.5;
+	  //     }
+	  //   }
+	  //
+	  // </style>
+
+	}; // <!--分享提示浮层-->
+	// <template>
+	//   <div class="com-share-pop-tip" :style="styleObject" @click="close" @touchmove="touchmove">
+	//     <img class="arrow" src="http://pic.davdian.com/free/pointer.png">
+	//     <div class="tip">
+	//       <template v-if="isWeixin">
+	//         <p>请点击右上角“分享”按钮,</p>
+	//         <p>然后可以选择“发送给朋友”、“分享到朋友圈”或者“复制链接”后发送链接给朋友。</p>
+	//       </template>
+	//       <template v-if="!isWeixin">
+	//         <p>请复制地址栏链接，将链接发送给朋友</p>
+	//       </template>
+	//     </div>
+	//   </div>
+	// </template>
+	//
+	// <script>
+
+/***/ },
+/* 46 */
+/***/ function(module, exports) {
+
+	module.exports = "\n\n<div class=\"com-share-pop-tip\" :style=\"styleObject\" @click=\"close\" @touchmove=\"touchmove\">\n  <img class=\"arrow\" src=\"http://pic.davdian.com/free/pointer.png\">\n  <div class=\"tip\">\n    <template v-if=\"isWeixin\">\n      <p>请点击右上角“分享”按钮,</p>\n      <p>然后可以选择“发送给朋友”、“分享到朋友圈”或者“复制链接”后发送链接给朋友。</p>\n    </template>\n    <template v-if=\"!isWeixin\">\n      <p>请复制地址栏链接，将链接发送给朋友</p>\n    </template>\n  </div>\n</div>\n";
+
+/***/ },
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _Vue = __webpack_require__(12);
+
+	var _Vue2 = _interopRequireDefault(_Vue);
+
+	var _VueLazyload = __webpack_require__(48);
+
+	var _VueLazyload2 = _interopRequireDefault(_VueLazyload);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  init: function init(isLoading) {
+	    // 懒加载全局设置
+	    document.body.style.display = 'none';
+	    if (isLoading) {
+	      _Vue2.default.use(_VueLazyload2.default, {
+	        loading: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
+	        error: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
+	        try: 2,
+	        preLoad: 1.5
+	      });
+	    } else {
+	      _Vue2.default.use(_VueLazyload2.default, {
+	        // loading: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
+	        // error: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
+	        try: 2,
+	        preLoad: 1.5
+	      });
+	    }
+	    document.body.style.display = null;
+	  }
+	};
+
+/***/ },
+/* 48 */
+/***/ function(module, exports) {
+
+	module.exports = VueLazyload;
+
+/***/ },
+/* 49 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
+	__webpack_require__(50)
+	__vue_script__ = __webpack_require__(52)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-to-top-icon.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(86)
+	__vue_template__ = __webpack_require__(53)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5338,17 +5410,16 @@
 	})()}
 
 /***/ },
-
-/***/ 83:
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(84);
+	var content = __webpack_require__(51);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(51)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -5365,11 +5436,10 @@
 	}
 
 /***/ },
-
-/***/ 84:
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(50)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
@@ -5380,8 +5450,7 @@
 
 
 /***/ },
-
-/***/ 85:
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5390,7 +5459,7 @@
 	  value: true
 	});
 
-	var _$ = __webpack_require__(33);
+	var _$ = __webpack_require__(4);
 
 	var _$2 = _interopRequireDefault(_$);
 
@@ -5448,148 +5517,24 @@
 	// <script>
 
 /***/ },
-
-/***/ 86:
+/* 53 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--滚动至顶图标-->\n<img class=\"to-top-icon\" @click=\"toTop\" :style=\"{display: display}\"\n     :src=\"'http://pic.davdian.com/free/back_top_icon_0803.png'\">\n";
 
 /***/ },
-
-/***/ 98:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _$ = __webpack_require__(33);
-
-	var _$2 = _interopRequireDefault(_$);
-
-	var _jsCookie = __webpack_require__(36);
-
-	var _jsCookie2 = _interopRequireDefault(_jsCookie);
-
-	var _login = __webpack_require__(35);
-
-	var _login2 = _interopRequireDefault(_login);
-
-	var _ua = __webpack_require__(32);
-
-	var _ua2 = _interopRequireDefault(_ua);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	// 前端点击数据采集格式，具体如下：
-	var defaultParam = {
-	  // ip
-	  ip: '',
-	  // ng时间，留空，数据由nginx生成
-	  nxtime: Date.now(),
-	  // 日志时间
-	  timestamp: Date.now(),
-	  // 业务线 默认为0，首页点击为1，
-	  production: 0,
-	  // 日志来源 默认为0，首页点击为1
-	  log_source: 0,
-	  // 浏览器UA
-	  user_agent: navigator.userAgent,
-	  // 来源市场，andriod是渠道号，ios为空
-	  market: '',
-	  // 用户id
-	  uid: _login2.default.getUserId(),
-	  // session id
-	  session: _login2.default.getSessionId(),
-	  // 卖家状态 (0：游客 1:买家 3:卖家)
-	  status: _login2.default.getUserStatusCode(),
-	  // 1：点击
-	  action: 1,
-	  // 1：模板
-	  action_type: 0,
-	  // 模板id
-	  object_id: '',
-	  // 设备号
-	  device_id: '',
-	  // 设备类型
-	  device: _ua2.default.isIos() ? 'ios' : _ua2.default.isAndroid() ? 'android' : '',
-	  // 设备版本号
-	  sys_version: '',
-	  // 分辨率
-	  resolution: window.screen.width + '*' + window.screen.height,
-	  // 当前位置
-	  location: location.href,
-	  // APP版本号
-	  app_version: '',
-	  // 详细信息
-	  production_data: {
-	    feed: {
-	      // 整个feed item的位置，透传服务端下发的position
-	      itemPosition: '',
-	      // 模板Id
-	      tplId: '',
-	      // title or body
-	      type: '',
-	      // 当前点击的内容在body中的位置，透传服务端下发的position，title无此字段
-	      dataPosition: '1',
-	      // 动作：点击，来自feed中的command->content
-	      cmdContent: '',
-	      // 当前点击imgUrl，可以为空
-	      imgUrl: ''
-	    }
-	  }
-	};
-
-	exports.default = {
-	  /**
-	   * 功能：发送统计信息
-	   * 用法：
-	   * tj.send({
-	      production: 17,
-	      action: 1,
-	      action_type: action_type,
-	      production_data: {
-	        feed: {
-	          cmdContent: cmdContent || ''
-	        }
-	      }
-	    });
-	   */
-	  send: function send(param) {
-	    var newParam = _$2.default.extend(true, {}, defaultParam, param);
-	    _$2.default.ajax({
-	      cache: false,
-	      async: false,
-	      url: '//bravetime.davdian.com/appapi?_=' + Date.now(), // 这个接口值在davdian.com下存在
-	      type: 'post',
-	      dataType: 'text',
-	      data: JSON.stringify(newParam),
-	      success: function success(response) {
-	        console.log(response);
-	      },
-	      error: function error(_error) {
-	        console.error('ajax error:' + _error.status + ' ' + _error.statusText);
-	      }
-	    });
-	  }
-	};
-
-/***/ },
-
-/***/ 1141:
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1142)
-	__vue_script__ = __webpack_require__(1144)
+	__webpack_require__(55)
+	__vue_script__ = __webpack_require__(57)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/landingPage/vue/landing.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1145)
+	__vue_template__ = __webpack_require__(58)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5614,17 +5559,16 @@
 	})()}
 
 /***/ },
-
-/***/ 1142:
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1143);
+	var content = __webpack_require__(56);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(51)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -5641,11 +5585,10 @@
 	}
 
 /***/ },
-
-/***/ 1143:
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(50)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
@@ -5656,8 +5599,7 @@
 
 
 /***/ },
-
-/***/ 1144:
+/* 57 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -5844,30 +5786,24 @@
 	// </style>
 
 /***/ },
-
-/***/ 1145:
+/* 58 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div _v-52c32c2d=\"\">\n  <!--<div class=\"box\">-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n  <!--</div>-->\n  <!--<div class=\"list1\">-->\n    <!--<div class=\"big_img\"><img src=\"//pic.davdian.com/free/2017/08/16/today.png\" alt=\"\"></div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n  <!--</div>-->\n  <!--<div class=\"list2\">-->\n    <!--<div class=\"big_img\"><img src=\"//pic.davdian.com/free/2017/08/16/no_today.png\" alt=\"\"></div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n  <!--</div>-->\n</div>\n";
-=======
-	module.exports = "\n<div _v-f53c15bc=\"\">\n  <!--<div class=\"box\">-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n    <!--<div class=\"item\"></div>-->\n  <!--</div>-->\n  <!--<div class=\"list1\">-->\n    <!--<div class=\"big_img\"><img src=\"//pic.davdian.com/free/2017/08/16/today.png\" alt=\"\"></div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n  <!--</div>-->\n  <!--<div class=\"list2\">-->\n    <!--<div class=\"big_img\"><img src=\"//pic.davdian.com/free/2017/08/16/no_today.png\" alt=\"\"></div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n    <!--<div class=\"list\">-->\n      <!--<div class=\"left_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n      <!--<div class=\"list_content\">-->\n        <!--<div class=\"list_title\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>-->\n        <!--<div class=\"list_name\">《搞笑西游记》</div>-->\n        <!--<div class=\"list_time\">04:19</div>-->\n      <!--</div>-->\n      <!--<div class=\"right_img\">-->\n        <!--<img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\">-->\n      <!--</div>-->\n    <!--</div>-->\n  <!--</div>-->\n</div>\n";
->>>>>>> caa070bc076df6bb61437c5db0ee8dba4a2ea93f
 
 /***/ },
-
-/***/ 1146:
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1147)
-	__vue_script__ = __webpack_require__(1149)
+	__webpack_require__(60)
+	__vue_script__ = __webpack_require__(62)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_album_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1150)
+	__vue_template__ = __webpack_require__(63)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5883,7 +5819,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-925ea434/bd_album_0.vue"
+	  var id = "_v-7835bb1e/bd_album_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5892,17 +5828,16 @@
 	})()}
 
 /***/ },
-
-/***/ 1147:
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1148);
+	var content = __webpack_require__(61);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(51)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -5919,11 +5854,10 @@
 	}
 
 /***/ },
-
-/***/ 1148:
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(50)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
@@ -5934,8 +5868,7 @@
 
 
 /***/ },
-
-/***/ 1149:
+/* 62 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -5980,26 +5913,24 @@
 	// </style>
 
 /***/ },
-
-/***/ 1150:
+/* 63 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"box\">\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n</div>\n";
 
 /***/ },
-
-/***/ 1151:
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1152)
-	__vue_script__ = __webpack_require__(1154)
+	__webpack_require__(65)
+	__vue_script__ = __webpack_require__(67)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_album_content_1.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1155)
+	__vue_template__ = __webpack_require__(68)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6015,7 +5946,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-780f6021/bd_album_content_1.vue"
+	  var id = "_v-96cfcca8/bd_album_content_1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -6024,24 +5955,23 @@
 	})()}
 
 /***/ },
-
-/***/ 1152:
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1153);
+	var content = __webpack_require__(66);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(51)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-780f6021&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-780f6021&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-96cfcca8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-96cfcca8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -6051,23 +5981,21 @@
 	}
 
 /***/ },
-
-/***/ 1153:
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(50)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n}\n.list1 .big_img img[_v-780f6021]{\n  width: 1.14rem;\n  height: 0.16rem;\n}\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-780f6021]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  margin-left:0.2rem;\n  margin-top: 0.24rem;\n}\n\n\n.list2[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list2 .big_img img[_v-780f6021]{\n  width: 1.75rem;\n  height: 0.16rem;\n}\n.list2 .list[_v-780f6021]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-96cfcca8]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n}\n.list1 .big_img img[_v-96cfcca8]{\n  width: 1.14rem;\n  height: 0.16rem;\n}\n.list1[_v-96cfcca8]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-96cfcca8]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-96cfcca8]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n}\n\n.list>div[_v-96cfcca8]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-96cfcca8]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-96cfcca8]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n}\n.list_title[_v-96cfcca8]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-96cfcca8],.list_time[_v-96cfcca8]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-96cfcca8]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-96cfcca8]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  margin-left:0.2rem;\n  margin-top: 0.24rem;\n}\n\n\n.list2[_v-96cfcca8]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list2 .big_img img[_v-96cfcca8]{\n  width: 1.75rem;\n  height: 0.16rem;\n}\n.list2 .list[_v-96cfcca8]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-
-/***/ 1154:
+/* 67 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -6223,26 +6151,24 @@
 	// </style>
 
 /***/ },
-
-/***/ 1155:
+/* 68 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-780f6021=\"\">\n  <div class=\"list1\" _v-780f6021=\"\">\n    <div class=\"big_img\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/today.png\" alt=\"\" _v-780f6021=\"\"></div>\n    <div class=\"list\" _v-780f6021=\"\">\n      <div class=\"left_img\" _v-780f6021=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-780f6021=\"\">\n      </div>\n      <div class=\"list_content\" _v-780f6021=\"\">\n        <div class=\"list_title\" _v-780f6021=\"\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>\n        <div class=\"list_name\" _v-780f6021=\"\">《搞笑西游记》</div>\n        <div class=\"list_time\" _v-780f6021=\"\">04:19</div>\n      </div>\n      <div class=\"right_img\" _v-780f6021=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-780f6021=\"\">\n      </div>\n    </div>\n    <div class=\"list\" _v-780f6021=\"\">\n      <div class=\"left_img\" _v-780f6021=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-780f6021=\"\">\n      </div>\n      <div class=\"list_content\" _v-780f6021=\"\">\n        <div class=\"list_title\" _v-780f6021=\"\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>\n        <div class=\"list_name\" _v-780f6021=\"\">《搞笑西游记》</div>\n        <div class=\"list_time\" _v-780f6021=\"\">04:19</div>\n      </div>\n      <div class=\"right_img\" _v-780f6021=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-780f6021=\"\">\n      </div>\n    </div>\n  </div>\n  <div class=\"list2\" _v-780f6021=\"\">\n    <div class=\"big_img\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/no_today.png\" alt=\"\" _v-780f6021=\"\"></div>\n    <div class=\"list\" _v-780f6021=\"\">\n      <div class=\"left_img\" _v-780f6021=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-780f6021=\"\">\n      </div>\n      <div class=\"list_content\" _v-780f6021=\"\">\n        <div class=\"list_title\" _v-780f6021=\"\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>\n        <div class=\"list_name\" _v-780f6021=\"\">《搞笑西游记》</div>\n        <div class=\"list_time\" _v-780f6021=\"\">04:19</div>\n      </div>\n      <div class=\"right_img\" _v-780f6021=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-780f6021=\"\">\n      </div>\n    </div>\n    <div class=\"list\" _v-780f6021=\"\">\n      <div class=\"left_img\" _v-780f6021=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-780f6021=\"\">\n      </div>\n      <div class=\"list_content\" _v-780f6021=\"\">\n        <div class=\"list_title\" _v-780f6021=\"\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>\n        <div class=\"list_name\" _v-780f6021=\"\">《搞笑西游记》</div>\n        <div class=\"list_time\" _v-780f6021=\"\">04:19</div>\n      </div>\n      <div class=\"right_img\" _v-780f6021=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-780f6021=\"\">\n      </div>\n    </div>\n  </div>\n</div>\n\n";
+	module.exports = "\n<div _v-96cfcca8=\"\">\n  <div class=\"list1\" _v-96cfcca8=\"\">\n    <div class=\"big_img\" _v-96cfcca8=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/today.png\" alt=\"\" _v-96cfcca8=\"\"></div>\n    <div class=\"list\" _v-96cfcca8=\"\">\n      <div class=\"left_img\" _v-96cfcca8=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-96cfcca8=\"\">\n      </div>\n      <div class=\"list_content\" _v-96cfcca8=\"\">\n        <div class=\"list_title\" _v-96cfcca8=\"\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>\n        <div class=\"list_name\" _v-96cfcca8=\"\">《搞笑西游记》</div>\n        <div class=\"list_time\" _v-96cfcca8=\"\">04:19</div>\n      </div>\n      <div class=\"right_img\" _v-96cfcca8=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-96cfcca8=\"\">\n      </div>\n    </div>\n    <div class=\"list\" _v-96cfcca8=\"\">\n      <div class=\"left_img\" _v-96cfcca8=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-96cfcca8=\"\">\n      </div>\n      <div class=\"list_content\" _v-96cfcca8=\"\">\n        <div class=\"list_title\" _v-96cfcca8=\"\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>\n        <div class=\"list_name\" _v-96cfcca8=\"\">《搞笑西游记》</div>\n        <div class=\"list_time\" _v-96cfcca8=\"\">04:19</div>\n      </div>\n      <div class=\"right_img\" _v-96cfcca8=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-96cfcca8=\"\">\n      </div>\n    </div>\n  </div>\n  <div class=\"list2\" _v-96cfcca8=\"\">\n    <div class=\"big_img\" _v-96cfcca8=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/no_today.png\" alt=\"\" _v-96cfcca8=\"\"></div>\n    <div class=\"list\" _v-96cfcca8=\"\">\n      <div class=\"left_img\" _v-96cfcca8=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-96cfcca8=\"\">\n      </div>\n      <div class=\"list_content\" _v-96cfcca8=\"\">\n        <div class=\"list_title\" _v-96cfcca8=\"\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>\n        <div class=\"list_name\" _v-96cfcca8=\"\">《搞笑西游记》</div>\n        <div class=\"list_time\" _v-96cfcca8=\"\">04:19</div>\n      </div>\n      <div class=\"right_img\" _v-96cfcca8=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-96cfcca8=\"\">\n      </div>\n    </div>\n    <div class=\"list\" _v-96cfcca8=\"\">\n      <div class=\"left_img\" _v-96cfcca8=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-96cfcca8=\"\">\n      </div>\n      <div class=\"list_content\" _v-96cfcca8=\"\">\n        <div class=\"list_title\" _v-96cfcca8=\"\">第78回: 三打白骨精没打死继续打打打打一顿打各种打</div>\n        <div class=\"list_name\" _v-96cfcca8=\"\">《搞笑西游记》</div>\n        <div class=\"list_time\" _v-96cfcca8=\"\">04:19</div>\n      </div>\n      <div class=\"right_img\" _v-96cfcca8=\"\">\n        <img src=\"//pic.davdian.com/free/2017/08/14/5422b1ff86ed0232.jpg!200x200.jpg\" alt=\"\" _v-96cfcca8=\"\">\n      </div>\n    </div>\n  </div>\n</div>\n\n";
 
 /***/ },
-
-/***/ 1156:
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1157)
-	__vue_script__ = __webpack_require__(1159)
+	__webpack_require__(70)
+	__vue_script__ = __webpack_require__(72)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/landingPage/vue/header.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1160)
+	__vue_template__ = __webpack_require__(73)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6258,7 +6184,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7926d052/header.vue"
+	  var id = "_v-cee5e832/header.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -6267,24 +6193,23 @@
 	})()}
 
 /***/ },
-
-/***/ 1157:
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1158);
+	var content = __webpack_require__(71);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(51)(content, {});
+	var update = __webpack_require__(23)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7926d052&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7926d052&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue");
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-cee5e832&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-cee5e832&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -6294,23 +6219,21 @@
 	}
 
 /***/ },
-
-/***/ 1158:
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(50)();
+	exports = module.exports = __webpack_require__(22)();
 	// imports
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n.header[_v-7926d052]{\n  height: 44px;\n  position: relative;\n  background: #ffffff;\n}\n.head_img[_v-7926d052]{\n  position: absolute;\n  left: 0;\n  height: 100%;\n  width: 44px;\n}\n.back-arrow[_v-7926d052]{\n  position: absolute;\n  top: 15px;\n  left: 15px;\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  border-bottom: 1px solid #333;\n  border-left: 1px solid #333;\n  -webkit-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  transform: rotate(45deg);\n  cursor: pointer;\n  font-size: 16px;\n}\n.head_title[_v-7926d052]{\n  height: 100%;\n  width: 100%;\n  text-align: center;\n  line-height: 44px;\n  font-size: 16px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n.header[_v-cee5e832]{\n  height: 44px;\n  position: relative;\n  background: #ffffff;\n}\n.head_img[_v-cee5e832]{\n  position: absolute;\n  left: 0;\n  height: 100%;\n  width: 44px;\n}\n.back-arrow[_v-cee5e832]{\n  position: absolute;\n  top: 15px;\n  left: 15px;\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  border-bottom: 1px solid #333;\n  border-left: 1px solid #333;\n  -webkit-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  transform: rotate(45deg);\n  cursor: pointer;\n  font-size: 16px;\n}\n.head_title[_v-cee5e832]{\n  height: 100%;\n  width: 100%;\n  text-align: center;\n  line-height: 44px;\n  font-size: 16px;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-
-/***/ 1159:
+/* 72 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -6366,23 +6289,16 @@
 	// </style>
 
 /***/ },
-
-/***/ 1160:
+/* 73 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div class=\"header\" _v-cee5e832=\"\">\n  <div class=\"head_img\" _v-cee5e832=\"\">\n    <i class=\"back-arrow\" _v-cee5e832=\"\"></i>\n  </div>\n  <div class=\"head_title\" _v-cee5e832=\"\">标题标题</div>\n</div>\n";
-=======
-	module.exports = "\n<div class=\"header\" _v-7926d052=\"\">\n  <div class=\"head_img\" _v-7926d052=\"\">\n    <i class=\"back-arrow\" _v-7926d052=\"\"></i>\n  </div>\n  <div class=\"head_title\" _v-7926d052=\"\">标题标题</div>\n</div>\n";
->>>>>>> caa070bc076df6bb61437c5db0ee8dba4a2ea93f
 
 /***/ },
-
-/***/ 1161:
+/* 74 */
 /***/ function(module, exports) {
 
 	module.exports = {};
 
 /***/ }
-
-/******/ });
+/******/ ]);
