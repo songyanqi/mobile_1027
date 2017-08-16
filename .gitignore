@@ -1,8 +1,5 @@
 .idea/
 node_modules/
 dist/
-<<<<<<< HEAD
-=======
 npm-debug.log
 developer.config.js
->>>>>>> ba87b4bc9a7cdf633f10f94affca4e1bc7de78a7
