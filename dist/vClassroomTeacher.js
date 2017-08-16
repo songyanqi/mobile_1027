@@ -2156,7 +2156,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
+	  var id = "_v-1a34eddb/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2574,7 +2574,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-48db5b65/com-popup-alert.vue"
+	  var id = "_v-993d82e0/com-popup-alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -2794,7 +2794,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0b77ce89/com-popup-confirm.vue"
+	  var id = "_v-27dcda18/com-popup-confirm.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -3042,7 +3042,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
+	  var id = "_v-6c902120/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18426,7 +18426,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7378bafc/vSchoolList.vue"
+	  var id = "_v-2fa7e792/vSchoolList.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18918,7 +18918,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-c2754442/vClassroomTeacher.vue"
+	  var id = "_v-f07a2858/vClassroomTeacher.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19293,7 +19293,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-27a414a6/vClassroomTeacherTop.vue"
+	  var id = "_v-fbe272de/vClassroomTeacherTop.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19357,8 +19357,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-27a414a6&scoped=true!../node_modules/sass-loader/index.js!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=1!./vClassroomTeacherTop.vue", function() {
-				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-27a414a6&scoped=true!../node_modules/sass-loader/index.js!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=1!./vClassroomTeacherTop.vue");
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-fbe272de&scoped=true!../node_modules/sass-loader/index.js!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=1!./vClassroomTeacherTop.vue", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-fbe272de&scoped=true!../node_modules/sass-loader/index.js!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=1!./vClassroomTeacherTop.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19376,7 +19376,7 @@
 
 
 	// module
-	exports.push([module.id, ".attention_all[_v-27a414a6] {\n  text-align: center;\n  margin-top: 0.2rem; }\n\n.attention_all img[_v-27a414a6] {\n  width: 0.6rem; }\n\n.alert_mask[_v-27a414a6] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background: #000000;\n  opacity: 0.6;\n  z-index: 1; }\n\n.alert_yes[_v-27a414a6] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 2;\n  margin: auto;\n  background: #000;\n  width: 2.7rem;\n  opacity: 0.65;\n  border-radius: 6px;\n  color: #fff;\n  height: 0.72rem; }\n  .alert_yes h1[_v-27a414a6] {\n    width: 100%;\n    font-size: 0.14rem;\n    text-align: center;\n    margin-top: 0.15rem;\n    margin-bottom: 0.05rem; }\n  .alert_yes div[_v-27a414a6] {\n    width: 100%;\n    font-size: 0.14rem;\n    text-align: center; }\n\n.alert_no[_v-27a414a6] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 2;\n  margin: auto;\n  background: #fff;\n  width: 2.7rem;\n  color: #666;\n  opacity: 0.9;\n  border-radius: 12px;\n  height: 1.55rem; }\n  .alert_no h1[_v-27a414a6] {\n    width: 100%;\n    text-align: center;\n    font-size: 0.19rem;\n    margin-top: 0.15rem;\n    color: #333;\n    margin-bottom: 0.1rem; }\n  .alert_no .alert_content[_v-27a414a6] {\n    font-size: 0.17rem;\n    text-align: center;\n    margin: 0.15rem; }\n  .alert_no .alert_btn_all[_v-27a414a6] {\n    width: 100%;\n    font-size: 0;\n    position: absolute;\n    bottom: 0; }\n    .alert_no .alert_btn_all .alert_btn[_v-27a414a6] {\n      width: 50%;\n      display: inline-block;\n      vertical-align: top;\n      border-top: 0.5px solid #eee;\n      font-size: 0.17rem;\n      text-align: center;\n      height: 0.4rem;\n      line-height: 0.4rem;\n      -webkit-box-sizing: border-box;\n         -moz-box-sizing: border-box;\n              box-sizing: border-box; }\n    .alert_no .alert_btn_all .alert_btn[_v-27a414a6]:first-child {\n      border-right: 0.5px solid #eee; }\n    .alert_no .alert_btn_all .alert_btn_yes[_v-27a414a6] {\n      color: #FF4A7D; }\n", ""]);
+	exports.push([module.id, ".attention_all[_v-fbe272de] {\n  text-align: center;\n  margin-top: 0.2rem; }\n\n.attention_all img[_v-fbe272de] {\n  width: 0.6rem; }\n\n.alert_mask[_v-fbe272de] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  background: #000000;\n  opacity: 0.6;\n  z-index: 1; }\n\n.alert_yes[_v-fbe272de] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 2;\n  margin: auto;\n  background: #000;\n  width: 2.7rem;\n  opacity: 0.65;\n  border-radius: 6px;\n  color: #fff;\n  height: 0.72rem; }\n  .alert_yes h1[_v-fbe272de] {\n    width: 100%;\n    font-size: 0.14rem;\n    text-align: center;\n    margin-top: 0.15rem;\n    margin-bottom: 0.05rem; }\n  .alert_yes div[_v-fbe272de] {\n    width: 100%;\n    font-size: 0.14rem;\n    text-align: center; }\n\n.alert_no[_v-fbe272de] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 2;\n  margin: auto;\n  background: #fff;\n  width: 2.7rem;\n  color: #666;\n  opacity: 0.9;\n  border-radius: 12px;\n  height: 1.55rem; }\n  .alert_no h1[_v-fbe272de] {\n    width: 100%;\n    text-align: center;\n    font-size: 0.19rem;\n    margin-top: 0.15rem;\n    color: #333;\n    margin-bottom: 0.1rem; }\n  .alert_no .alert_content[_v-fbe272de] {\n    font-size: 0.17rem;\n    text-align: center;\n    margin: 0.15rem; }\n  .alert_no .alert_btn_all[_v-fbe272de] {\n    width: 100%;\n    font-size: 0;\n    position: absolute;\n    bottom: 0; }\n    .alert_no .alert_btn_all .alert_btn[_v-fbe272de] {\n      width: 50%;\n      display: inline-block;\n      vertical-align: top;\n      border-top: 0.5px solid #eee;\n      font-size: 0.17rem;\n      text-align: center;\n      height: 0.4rem;\n      line-height: 0.4rem;\n      -webkit-box-sizing: border-box;\n         -moz-box-sizing: border-box;\n              box-sizing: border-box; }\n    .alert_no .alert_btn_all .alert_btn[_v-fbe272de]:first-child {\n      border-right: 0.5px solid #eee; }\n    .alert_no .alert_btn_all .alert_btn_yes[_v-fbe272de] {\n      color: #FF4A7D; }\n", ""]);
 
 	// exports
 
@@ -19397,8 +19397,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-27a414a6&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=2!./vClassroomTeacherTop.vue", function() {
-				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-27a414a6&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=2!./vClassroomTeacherTop.vue");
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-fbe272de&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=2!./vClassroomTeacherTop.vue", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-fbe272de&scoped=true!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=2!./vClassroomTeacherTop.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19416,7 +19416,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.alert_no .alert_btn_all[_v-27a414a6]{\n  position: absolute;\n  bottom: 0;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.alert_no .alert_btn_all[_v-fbe272de]{\n  position: absolute;\n  bottom: 0;\n}\n", ""]);
 
 	// exports
 
@@ -19717,7 +19717,7 @@
 /* 1749 */
 /***/ function(module, exports) {
 
-	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div _v-27a414a6=\"\">\n    <div id=\"change_user_img\" _v-27a414a6=\"\">\n        <div class=\"top_left\" _v-27a414a6=\"\">\n            <a class=\"top_back\" href=\"javascript:history.back();\" _v-27a414a6=\"\">\n                <span class=\"home_arrow\" _v-27a414a6=\"\"></span>\n            </a>\n        </div>\n        <div class=\"user_img_phone\" _v-27a414a6=\"\">\n            <img v-lazy=\"imgObject(list.avatar)\" _v-27a414a6=\"\">\n        </div>\n        <div class=\"user_img_phone\" style=\"margin-top: 10px;\" _v-27a414a6=\"\">\n            <span class=\"fz_14\" _v-27a414a6=\"\">{{list.name}}</span>\n        </div>\n        <div class=\"user_img_phone user_text\" _v-27a414a6=\"\">\n            <span class=\"fz_12\" _v-27a414a6=\"\">{{list.desc}}</span>\n        </div>\n        <div class=\"attention_all\" _v-27a414a6=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/09/attention1.png\" v-if=\"attention==0\" @click=\"attention_yes\" _v-27a414a6=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/09/attention2.png\" v-if=\"attention==1\" @click=\"attention_no\" _v-27a414a6=\"\">\n        </div>\n    </div>\n    <div class=\"user_classroom\" _v-27a414a6=\"\">\n        <span _v-27a414a6=\"\">共{{list.courseNum}}堂课程</span>\n    </div>\n\n    <div class=\"alert_mask\" v-if=\"alert_no\" _v-27a414a6=\"\"></div>\n    <div class=\"alert_yes\" v-if=\"alert_yes\" _v-27a414a6=\"\">\n        <h1 _v-27a414a6=\"\">关注成功</h1>\n        <div _v-27a414a6=\"\">老师开讲新课，我们会悄悄告诉你呦</div>\n    </div>\n    <div class=\"alert_no\" v-if=\"alert_no\" _v-27a414a6=\"\">\n        <h1 _v-27a414a6=\"\">确定不再关注老师？</h1>\n        <div class=\"alert_content\" _v-27a414a6=\"\">取消关注后,就不能收到老师的开课提醒了哦～</div>\n        <div class=\"alert_btn_all\" _v-27a414a6=\"\">\n            <span class=\"alert_btn\" @click=\"alert_btn_no\" _v-27a414a6=\"\">取消</span>\n            <span class=\"alert_btn alert_btn_yes\" @click=\"alert_btn_yes\" _v-27a414a6=\"\">确定</span>\n        </div>\n    </div>\n</div>\n";
+	module.exports = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<div _v-fbe272de=\"\">\n    <div id=\"change_user_img\" _v-fbe272de=\"\">\n        <div class=\"top_left\" _v-fbe272de=\"\">\n            <a class=\"top_back\" href=\"javascript:history.back();\" _v-fbe272de=\"\">\n                <span class=\"home_arrow\" _v-fbe272de=\"\"></span>\n            </a>\n        </div>\n        <div class=\"user_img_phone\" _v-fbe272de=\"\">\n            <img v-lazy=\"imgObject(list.avatar)\" _v-fbe272de=\"\">\n        </div>\n        <div class=\"user_img_phone\" style=\"margin-top: 10px;\" _v-fbe272de=\"\">\n            <span class=\"fz_14\" _v-fbe272de=\"\">{{list.name}}</span>\n        </div>\n        <div class=\"user_img_phone user_text\" _v-fbe272de=\"\">\n            <span class=\"fz_12\" _v-fbe272de=\"\">{{list.desc}}</span>\n        </div>\n        <div class=\"attention_all\" _v-fbe272de=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/09/attention1.png\" v-if=\"attention==0\" @click=\"attention_yes\" _v-fbe272de=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/09/attention2.png\" v-if=\"attention==1\" @click=\"attention_no\" _v-fbe272de=\"\">\n        </div>\n    </div>\n    <div class=\"user_classroom\" _v-fbe272de=\"\">\n        <span _v-fbe272de=\"\">共{{list.courseNum}}堂课程</span>\n    </div>\n\n    <div class=\"alert_mask\" v-if=\"alert_no\" _v-fbe272de=\"\"></div>\n    <div class=\"alert_yes\" v-if=\"alert_yes\" _v-fbe272de=\"\">\n        <h1 _v-fbe272de=\"\">关注成功</h1>\n        <div _v-fbe272de=\"\">老师开讲新课，我们会悄悄告诉你呦</div>\n    </div>\n    <div class=\"alert_no\" v-if=\"alert_no\" _v-fbe272de=\"\">\n        <h1 _v-fbe272de=\"\">确定不再关注老师？</h1>\n        <div class=\"alert_content\" _v-fbe272de=\"\">取消关注后,就不能收到老师的开课提醒了哦～</div>\n        <div class=\"alert_btn_all\" _v-fbe272de=\"\">\n            <span class=\"alert_btn\" @click=\"alert_btn_no\" _v-fbe272de=\"\">取消</span>\n            <span class=\"alert_btn alert_btn_yes\" @click=\"alert_btn_yes\" _v-fbe272de=\"\">确定</span>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
 /* 1750 */

@@ -109,7 +109,7 @@
 	new _Vue2.default({
 	  el: "#index_fe_container",
 	  components: {
-	    index: __webpack_require__(837)
+	    index: __webpack_require__(852)
 	  }
 	});
 
@@ -7765,7 +7765,22 @@
 /* 234 */,
 /* 235 */,
 /* 236 */,
-/* 237 */
+/* 237 */,
+/* 238 */,
+/* 239 */,
+/* 240 */,
+/* 241 */,
+/* 242 */,
+/* 243 */,
+/* 244 */,
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -8017,21 +8032,6 @@
 
 
 /***/ },
-/* 238 */,
-/* 239 */,
-/* 240 */,
-/* 241 */,
-/* 242 */,
-/* 243 */,
-/* 244 */,
-/* 245 */,
-/* 246 */,
-/* 247 */,
-/* 248 */,
-/* 249 */,
-/* 250 */,
-/* 251 */,
-/* 252 */,
 /* 253 */,
 /* 254 */,
 /* 255 */,
@@ -8059,7 +8059,22 @@
 /* 277 */,
 /* 278 */,
 /* 279 */,
-/* 280 */
+/* 280 */,
+/* 281 */,
+/* 282 */,
+/* 283 */,
+/* 284 */,
+/* 285 */,
+/* 286 */,
+/* 287 */,
+/* 288 */,
+/* 289 */,
+/* 290 */,
+/* 291 */,
+/* 292 */,
+/* 293 */,
+/* 294 */,
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8397,12 +8412,12 @@
 	exports.default = common;
 
 /***/ },
-/* 281 */,
-/* 282 */,
-/* 283 */,
-/* 284 */,
-/* 285 */,
-/* 286 */
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */,
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8425,7 +8440,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var common = __webpack_require__(280); // var crypto = require('crypto');
+	var common = __webpack_require__(295); // var crypto = require('crypto');
 
 
 	var config = {
@@ -8968,21 +8983,6 @@
 	exports.default = layout;
 
 /***/ },
-/* 287 */,
-/* 288 */,
-/* 289 */,
-/* 290 */,
-/* 291 */,
-/* 292 */,
-/* 293 */,
-/* 294 */,
-/* 295 */,
-/* 296 */,
-/* 297 */,
-/* 298 */,
-/* 299 */,
-/* 300 */,
-/* 301 */,
 /* 302 */,
 /* 303 */,
 /* 304 */,
@@ -9085,18 +9085,33 @@
 /* 401 */,
 /* 402 */,
 /* 403 */,
-/* 404 */
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
+/* 410 */,
+/* 411 */,
+/* 412 */,
+/* 413 */,
+/* 414 */,
+/* 415 */,
+/* 416 */,
+/* 417 */,
+/* 418 */,
+/* 419 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(405)
-	__vue_script__ = __webpack_require__(407)
+	__webpack_require__(420)
+	__vue_script__ = __webpack_require__(422)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-maybeyoulike.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(408)
+	__vue_template__ = __webpack_require__(423)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -9121,13 +9136,13 @@
 	})()}
 
 /***/ },
-/* 405 */
+/* 420 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(406);
+	var content = __webpack_require__(421);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -9147,7 +9162,7 @@
 	}
 
 /***/ },
-/* 406 */
+/* 421 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -9161,7 +9176,7 @@
 
 
 /***/ },
-/* 407 */
+/* 422 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -9593,24 +9608,24 @@
 	// <script>
 
 /***/ },
-/* 408 */
+/* 423 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"good_list_con\">\n  <div class=\"good_list_2_row clearfix\">\n    <a\n       v-for = \"item of list\"\n       @click = 'handleHref(item)'\n       class=\"good_item\" :class = \"{ column3: column && column == '3' }\">\n      <div class=\"good_img_container\">\n        <div class=\"img_container good_img_container\">\n          <img v-if = \"item.goods_img\" v-lazy=\"imgObject(item.goods_img)\" style=\"display: inline;\">\n          <img v-if = \"item.imageUrl\" v-lazy=\"imgObject(item.imageUrl)\" style=\"display: inline;\">\n          <span class=\"img_label\" v-if=\"item.goods_label || item.actInfo\" v-text=\"item.goods_label || item.actInfo\"></span>\n          <span class=\"img_label\" v-if=\"item.goods_label == '' && item.ratio\" v-text=\"'返现'+item.ratio+'倍'\"></span>\n        </div>\n        <div v-if = \"item.sale_status\" class=\"good_list_sell_out ng-scope\">\n          <span v-if = \"item.sale_status == 'soldout'\" class=\"ng-scope\">售罄</span>\n          <span v-if = \"item.sale_status == 'presale'\" class=\"ng-scope\">预售</span>\n          <span v-if = \"item.sale_status == 'offline'\" class=\"ng-scope\">未上架</span>\n        </div>\n      </div>\n\n      <div class=\"good_con\" :class = \"{ column3Con: column && column == '3' }\">\n        <div class=\"good_title\">{{item.goods_name || item.title}}</div>\n        <div class=\"goods4_price_bar\" :class = \"{ column3Cont: column && column == '3' }\">\n          <span v-if = \"item.shop_price\" class=\"dav-color-price font-weight\" :class = \"{ column3Price: column && column == 3 }\"><em class=\"fz_14\">¥</em><span class=\"nowPrice\"><span>{{(item.shop_price+\"\").split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.shop_price+'').split('.').length == 2\">.{{(item.shop_price+\"\").split(\".\")[1]}}</span></span></span>\n          <span v-if = \"item.nowPrice\" class=\"dav-color-price font-weight\" :class = \"{ column3Price: column && column == 3 }\"><em class=\"fz_14\">¥</em><span class=\"nowPrice\"><span>{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.nowPrice+'').split('.').length == 2\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span></span>\n          <span class=\"vip_return\" :class = \"{ column3VipReturn: column && column == 3 }\" v-if = \"(item.seller_income && item.seller_income != '0') || (item.comm_income && item.comm_income != '0') || (item.timeshopIncome && item.timeshopIncome != '0') || (item.income && item.income != '0')\">\n            <span class=\"vip_return_title\">会员返</span>\n            <span class=\"vip_return_f\">¥</span>\n            <span class=\"vip_return_price\">{{item.seller_income || item.comm_income || item.timeshopIncome || item.income}}</span>\n          </span>\n        </div>\n      </div>\n    </a>\n  </div>\n  <div class=\"logo_container\" v-if=\"loading\">\n    <div class=\"logo_left\"></div>\n    <div class=\"logo_right\"></div>\n  </div>\n  <div class=\"no_more\" v-if=\"errors\">\n    <span>（ &gt;_&lt; ）加载失败了</span>\n  </div>\n  <div v-if = \"no_more\" class=\"no_more\">\n    没有更多商品了\n  </div>\n</div>\n";
 
 /***/ },
-/* 409 */
+/* 424 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(410)
-	__vue_script__ = __webpack_require__(412)
+	__webpack_require__(425)
+	__vue_script__ = __webpack_require__(427)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/tt_com_1.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(413)
+	__vue_template__ = __webpack_require__(428)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -9635,13 +9650,13 @@
 	})()}
 
 /***/ },
-/* 410 */
+/* 425 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(411);
+	var content = __webpack_require__(426);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -9661,7 +9676,7 @@
 	}
 
 /***/ },
-/* 411 */
+/* 426 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -9675,7 +9690,7 @@
 
 
 /***/ },
-/* 412 */
+/* 427 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9684,7 +9699,7 @@
 	  value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -9789,27 +9804,12 @@
 	// <script>
 
 /***/ },
-/* 413 */
+/* 428 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div id=\"tt_com_1_wrap\" :style=\"[styleObject,styleTop]\">\n  <div id=\"tt_com_1\" class=\"tt_com_1\">\n    <div>\n      <span>\n        {{data.title.name}}\n        <!--为你推荐-->\n      </span>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 414 */,
-/* 415 */,
-/* 416 */,
-/* 417 */,
-/* 418 */,
-/* 419 */,
-/* 420 */,
-/* 421 */,
-/* 422 */,
-/* 423 */,
-/* 424 */,
-/* 425 */,
-/* 426 */,
-/* 427 */,
-/* 428 */,
 /* 429 */,
 /* 430 */,
 /* 431 */,
@@ -10136,18 +10136,33 @@
 /* 752 */,
 /* 753 */,
 /* 754 */,
-/* 755 */
+/* 755 */,
+/* 756 */,
+/* 757 */,
+/* 758 */,
+/* 759 */,
+/* 760 */,
+/* 761 */,
+/* 762 */,
+/* 763 */,
+/* 764 */,
+/* 765 */,
+/* 766 */,
+/* 767 */,
+/* 768 */,
+/* 769 */,
+/* 770 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(756)
-	__vue_script__ = __webpack_require__(758)
+	__webpack_require__(771)
+	__vue_script__ = __webpack_require__(773)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/goodsDetail/vue/ad-banner.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(759)
+	__vue_template__ = __webpack_require__(774)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -10172,13 +10187,13 @@
 	})()}
 
 /***/ },
-/* 756 */
+/* 771 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(757);
+	var content = __webpack_require__(772);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -10198,7 +10213,7 @@
 	}
 
 /***/ },
-/* 757 */
+/* 772 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -10212,7 +10227,7 @@
 
 
 /***/ },
-/* 758 */
+/* 773 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10291,27 +10306,12 @@
 	};
 
 /***/ },
-/* 759 */
+/* 774 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"ad-banner\">\n  <a :href=\"adUrl || data.body.dataList.command.content\" @click=\"jump\">\n    <img :src=\"adImg || data.body.dataList.imageUrl\">\n  </a>\n</div>\n";
 
 /***/ },
-/* 760 */,
-/* 761 */,
-/* 762 */,
-/* 763 */,
-/* 764 */,
-/* 765 */,
-/* 766 */,
-/* 767 */,
-/* 768 */,
-/* 769 */,
-/* 770 */,
-/* 771 */,
-/* 772 */,
-/* 773 */,
-/* 774 */,
 /* 775 */,
 /* 776 */,
 /* 777 */,
@@ -10374,18 +10374,33 @@
 /* 834 */,
 /* 835 */,
 /* 836 */,
-/* 837 */
+/* 837 */,
+/* 838 */,
+/* 839 */,
+/* 840 */,
+/* 841 */,
+/* 842 */,
+/* 843 */,
+/* 844 */,
+/* 845 */,
+/* 846 */,
+/* 847 */,
+/* 848 */,
+/* 849 */,
+/* 850 */,
+/* 851 */,
+/* 852 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(838)
-	__vue_script__ = __webpack_require__(842)
+	__webpack_require__(853)
+	__vue_script__ = __webpack_require__(857)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1125)
+	__vue_template__ = __webpack_require__(1140)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -10410,13 +10425,13 @@
 	})()}
 
 /***/ },
-/* 838 */
+/* 853 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(839);
+	var content = __webpack_require__(854);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -10436,13 +10451,13 @@
 	}
 
 /***/ },
-/* 839 */
+/* 854 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
 	// imports
-	exports.i(__webpack_require__(840), "");
-	exports.i(__webpack_require__(841), "");
+	exports.i(__webpack_require__(855), "");
+	exports.i(__webpack_require__(856), "");
 
 	// module
 	exports.push([module.id, "#nprogress .spinner {\n  display: none !important; }\n", ""]);
@@ -10451,7 +10466,7 @@
 
 
 /***/ },
-/* 840 */
+/* 855 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -10465,7 +10480,7 @@
 
 
 /***/ },
-/* 841 */
+/* 856 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -10479,7 +10494,7 @@
 
 
 /***/ },
-/* 842 */
+/* 857 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10488,7 +10503,7 @@
 	  value: true
 	});
 
-	var _index = __webpack_require__(843);
+	var _index = __webpack_require__(858);
 
 	var _index2 = _interopRequireDefault(_index);
 
@@ -10573,7 +10588,7 @@
 	//  import "./index.css"
 
 /***/ },
-/* 843 */
+/* 858 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10586,21 +10601,21 @@
 
 	var _common2 = _interopRequireDefault(_common);
 
-	__webpack_require__(844);
+	__webpack_require__(859);
 
-	var _index_header = __webpack_require__(848);
+	var _index_header = __webpack_require__(863);
 
 	var _index_header2 = _interopRequireDefault(_index_header);
 
-	var _maybeYouLike = __webpack_require__(855);
+	var _maybeYouLike = __webpack_require__(870);
 
 	var _maybeYouLike2 = _interopRequireDefault(_maybeYouLike);
 
-	var _bd_goods_ = __webpack_require__(863);
+	var _bd_goods_ = __webpack_require__(878);
 
 	var _bd_goods_2 = _interopRequireDefault(_bd_goods_);
 
-	var _index_feed = __webpack_require__(875);
+	var _index_feed = __webpack_require__(890);
 
 	var _index_feed2 = _interopRequireDefault(_index_feed);
 
@@ -10608,13 +10623,13 @@
 
 	var _comFooter2 = _interopRequireDefault(_comFooter);
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
 	var _utils = __webpack_require__(154);
 
-	var _nprogress = __webpack_require__(1124);
+	var _nprogress = __webpack_require__(1139);
 
 	var _nprogress2 = _interopRequireDefault(_nprogress);
 
@@ -11475,12 +11490,12 @@
 	}; // 基础模块
 
 /***/ },
-/* 844 */
+/* 859 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(845)
+	__webpack_require__(860)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -11495,13 +11510,13 @@
 
 
 /***/ },
-/* 845 */
+/* 860 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(846);
+	var content = __webpack_require__(861);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -11521,12 +11536,12 @@
 	}
 
 /***/ },
-/* 846 */
+/* 861 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
 	// imports
-	exports.i(__webpack_require__(847), "");
+	exports.i(__webpack_require__(862), "");
 
 	// module
 	exports.push([module.id, "\n", ""]);
@@ -11535,7 +11550,7 @@
 
 
 /***/ },
-/* 847 */
+/* 862 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -11549,18 +11564,18 @@
 
 
 /***/ },
-/* 848 */
+/* 863 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(849)
-	__vue_script__ = __webpack_require__(852)
+	__webpack_require__(864)
+	__vue_script__ = __webpack_require__(867)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/index_header.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(854)
+	__vue_template__ = __webpack_require__(869)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -11585,13 +11600,13 @@
 	})()}
 
 /***/ },
-/* 849 */
+/* 864 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(850);
+	var content = __webpack_require__(865);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -11611,12 +11626,12 @@
 	}
 
 /***/ },
-/* 850 */
+/* 865 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
 	// imports
-	exports.i(__webpack_require__(851), "");
+	exports.i(__webpack_require__(866), "");
 
 	// module
 	exports.push([module.id, "@charset \"UTF-8\";\n.v_menu[_v-75df2626] {\n  background: #fff;\n  width: 100%; }\n\n.cart_icon[_v-75df2626] {\n  display: block;\n  width: 42px;\n  height: 44px;\n  background-position: center;\n  background-size: 100%;\n  background-image: url(//pic.davdian.com/free/2017/07/20/shoppingCart.png); }\n\n.cart_icon.classification_icon[_v-75df2626] {\n  background-image: url(//pic.davdian.com/free/2017/07/20/classification.png); }\n\n.head_index_top .shop_name[_v-75df2626] {\n  padding-right: 88px; }\n\n.index_con_menu[_v-75df2626] {\n  width: 100%;\n  font-size: 13px;\n  padding-top: 5px;\n  line-height: 8px;\n  position: relative;\n  top: 0;\n  z-index: 11;\n  margin-top: 0;\n  max-width: 640px;\n  overflow: hidden; }\n\n.index_con_menu li[_v-75df2626] {\n  background: #fff;\n  color: #333;\n  text-align: center;\n  cursor: pointer;\n  padding-top: 9px;\n  padding-bottom: 10px;\n  word-break: keep-all;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  position: relative; }\n\n.time_state_span[_v-75df2626] {\n  position: relative; }\n\n.hoverSpan[_v-75df2626] {\n  display: block;\n  position: absolute;\n  top: 20px;\n  left: 0;\n  width: 100%;\n  border-bottom: 2px solid #ff4a7d; }\n\n.time_state_span_active[_v-75df2626] {\n  color: #ff4a7d; }\n\n.head_index_top .search_con[_v-75df2626] {\n  padding-right: 82px; }\n\n/*新加部分 首页头部 透明*/\n/*#index_fe_container .top0 .top_container,#index_fe_container .v_menu,#index_fe_container .index_con_menu li{*/\n/*background: none;*/\n/*}*/\n", ""]);
@@ -11625,7 +11640,7 @@
 
 
 /***/ },
-/* 851 */
+/* 866 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -11639,7 +11654,7 @@
 
 
 /***/ },
-/* 852 */
+/* 867 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -11648,7 +11663,7 @@
 	  value: true
 	});
 
-	var _index_header = __webpack_require__(853);
+	var _index_header = __webpack_require__(868);
 
 	var _index_header2 = _interopRequireDefault(_index_header);
 
@@ -11789,7 +11804,7 @@
 	//  import "./index_header.css"
 
 /***/ },
-/* 853 */
+/* 868 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -11897,23 +11912,23 @@
 	};
 
 /***/ },
-/* 854 */
+/* 869 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<header _v-75df2626=\"\">\n  <div class=\"top0\" :style=\"{ top: - data.top + 'px' }\" _v-75df2626=\"\">\n    <div class=\"top_container\" id=\"top_container\" _v-75df2626=\"\">\n      <div class=\"head_index_top clearfix\" :style=\"{'background': head.bgColor}\" _v-75df2626=\"\">\n        <a :href=\"head.image &amp;&amp; head.image.command.content\" class=\"left_icon_container\" _v-75df2626=\"\">\n          <span v-if=\"usersta == 3\" class=\"shop_icon\" _v-75df2626=\"\"></span>\n          <img v-if=\"usersta != 0\" :src=\"head.image &amp;&amp; head.image.url\" class=\"shop_img\" _v-75df2626=\"\">\n          <img v-if=\"usersta == 0\" class=\"shop_img\" src=\"http://pic.davdian.com/shop_logo/2016/06/13/80_80_f81f91d7ef5e31fa354fa935124dab20.png\" _v-75df2626=\"\">\n        </a>\n        <a :href=\"head.search &amp;&amp; head.search.command.content\" _v-75df2626=\"\">\n          <div class=\"search_con search_button\" v-on:click=\"turn\" _v-75df2626=\"\">\n            <span class=\"search_icon\" _v-75df2626=\"\"></span>\n            <input type=\"text\" class=\"search_input\" readonly=\"\" _v-75df2626=\"\">\n          </div>\n          <div class=\"shop_name\" v-on:click=\"turn\" _v-75df2626=\"\">在\n            <span v-if=\"head&amp;&amp;head.search&amp;&amp;head.search.title\" class=\"dav_base_red_color\" v-text=\"head.search.title\" _v-75df2626=\"\"></span>中搜索...\n          </div>\n        </a>\n        <a class=\"right_icon_container\" style=\"right:40px;\" href=\"/category_search.html\" _v-75df2626=\"\">\n          <i class=\"cart_icon classification_icon\" _v-75df2626=\"\"></i>\n        </a>\n        <a class=\"right_icon_container\" href=\"/cart.html\" _v-75df2626=\"\">\n          <i class=\"cart_icon\" _v-75df2626=\"\"></i>\n          <b v-if=\"cart\" v-text=\"cart\" _v-75df2626=\"\"></b>\n        </a>\n      </div>\n      <div v-if=\"menudata\" class=\"swiper-container v_menu index_con_menu\" id=\"v_menu\" _v-75df2626=\"\">\n        <ul class=\"swiper-wrapper\" _v-75df2626=\"\">\n          <li class=\"swiper-slide\" v-for=\"(item, index) in menudata.menuList\" @click=\"changeCategory(item.id,index,$event)\" _v-75df2626=\"\">\n            <p class=\"time_state\" v-if=\"item &amp;&amp; item.title\" _v-75df2626=\"\">\n              <span class=\"time_state_span\" :class=\"{time_state_span_active:item.id == cate}\" _v-75df2626=\"\">{{item.title}}\n                <i class=\"hoverSpan\" v-if=\"item.id == cate\" _v-75df2626=\"\"></i>\n              </span>\n            </p>\n          </li>\n          <!--<li v-if=\"menudata.menuMore\" class=\"swiper-slide\" @click=\"javascript:location.href=menudata.menuMore.command.content\">-->\n            <!--<p class=\"time_state\">-->\n              <!--<span class=\"time_state_span\" v-text=\"menudata.menuMore.title\"></span>-->\n            <!--</p>-->\n          <!--</li>-->\n        </ul>\n      </div>\n    </div>\n  </div>\n</header>\n";
 
 /***/ },
-/* 855 */
+/* 870 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(856)
+	__vue_script__ = __webpack_require__(871)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/maybeYouLike.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(862)
+	__vue_template__ = __webpack_require__(877)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -11938,7 +11953,7 @@
 	})()}
 
 /***/ },
-/* 856 */
+/* 871 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -11967,7 +11982,7 @@
 	// </template>
 	//
 	// <script>
-	var category = __webpack_require__(857);
+	var category = __webpack_require__(872);
 	//      var category = require("../src/component/com-maybeyoulike.vue");
 	exports.default = {
 	    el: "#maybeYouLike",
@@ -12050,18 +12065,18 @@
 	};
 
 /***/ },
-/* 857 */
+/* 872 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(858)
-	__vue_script__ = __webpack_require__(860)
+	__webpack_require__(873)
+	__vue_script__ = __webpack_require__(875)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/category.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(861)
+	__vue_template__ = __webpack_require__(876)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -12086,13 +12101,13 @@
 	})()}
 
 /***/ },
-/* 858 */
+/* 873 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(859);
+	var content = __webpack_require__(874);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -12112,7 +12127,7 @@
 	}
 
 /***/ },
-/* 859 */
+/* 874 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -12126,7 +12141,7 @@
 
 
 /***/ },
-/* 860 */
+/* 875 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -12377,30 +12392,30 @@
 	};
 
 /***/ },
-/* 861 */
+/* 876 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"good_list_con\">\n    <div class=\"good_list_2_row\">\n        <!--单个商品模版template-->\n        <a v-for=\"item in list\" :data-id=\"item.goods_id\" :href=\"a_href(item.goods_id)\"\n                 class=\"good_item\">\n                <div class=\"good_img_container\">\n                    <div class=\"img_container\">\n                        <img :src=\"item.goods_img\" style=\"display: inline;\">\n                        <span class=\"img_label\" v-if=\"item.goods_label!=''\" v-text=\"item.goods_label\"></span>\n                        <span class=\"img_label\" v-if=\"item.goods_label==''&&item.ratio\" v-text=\"'返现'+item.ratio+'倍'\"></span>\n                    </div>\n                    <div v-if = \"item.sale_status\" class=\"good_list_sell_out ng-scope\">\n                        <span v-if = \"item.sale_status == 'soldout'\" class=\"ng-scope\">售罄</span>\n                        <span v-if = \"item.sale_status == 'presale'\" class=\"ng-scope\">预售</span>\n                        <span v-if = \"item.sale_status == 'offline'\" class=\"ng-scope\">未上架</span>\n                    </div>\n                </div>\n\n                <div class=\"good_con\">\n                  <div class=\"good_title\">{{item.goods_name}}</div>\n                  <div class=\"goods4_price_bar\">\n                    <span class=\"dav-color-price font-weight\"><em class=\"fz_14\">¥</em><span class=\"nowPrice\"><span>{{(item.shop_price+\"\").split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.shop_price+'').split('.').length == 2\">.{{(item.shop_price+\"\").split(\".\")[1]}}</span></span></span>\n                    <span class=\"vip_return\" v-if = \"(item.seller_income && item.seller_income != 0) || (item.comm_income && item.comm_income != 0)\">\n                      <span class=\"vip_return_title\">会员返</span>\n                      <span class=\"vip_return_f\">¥</span>\n                      <span class=\"vip_return_price\">{{item.seller_income||item.comm_income}}</span>\n                    </span>\n                  </div>\n                </div>\n              </a>\n        <!--不到50个商品展示这个template-->\n        <div style=\"clear: both;\"></div>\n        <div v-show = \"loading\" class=\"no_more\">\n            商品加载中 <img src=\"//pic.davdian.com/free/loading_03252.svg\">\n        </div>\n        <div v-show = \"no_more\" class=\"no_more\">\n            没有更多商品了\n        </div>\n    </div>\n    <div class=\"good_list_2_row\" ng-model=\"goods\">\n        <div style=\"clear:both\"></div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 862 */
+/* 877 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class = \"mt_10\" id = \"comon\">\n    <div class=\"df_new_title_2\" style=\"border-bottom: none\">\n        <span class=\"df_new_font\">猜你喜欢</span>\n    </div>\n    <div class=\"logo_container\"  v-show = \"beforeFirstLoading\">\n        <div class=\"logo_left\"></div>\n        <div class=\"logo_right\"></div>\n    </div>\n    <div style=\"clear: both;\">\n    </div>\n    <category refer=\"guess_detail\" :referer=\"referer\"></category>\n    <!--<category refer=\"guess_detail\"-->\n              <!--:referer=\"referer\"-->\n              <!--:list = \"list\"-->\n              <!--:loading = \"beforeFirstLoading\"></category>-->\n\n</div>\n";
 
 /***/ },
-/* 863 */
+/* 878 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(864)
-	__vue_script__ = __webpack_require__(866)
+	__webpack_require__(879)
+	__vue_script__ = __webpack_require__(881)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_goods_1.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(874)
+	__vue_template__ = __webpack_require__(889)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -12425,13 +12440,13 @@
 	})()}
 
 /***/ },
-/* 864 */
+/* 879 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(865);
+	var content = __webpack_require__(880);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -12451,7 +12466,7 @@
 	}
 
 /***/ },
-/* 865 */
+/* 880 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -12465,7 +12480,7 @@
 
 
 /***/ },
-/* 866 */
+/* 881 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12474,7 +12489,7 @@
 	  value: true
 	});
 
-	var _bd_goods_ = __webpack_require__(867);
+	var _bd_goods_ = __webpack_require__(882);
 
 	var _bd_goods_2 = _interopRequireDefault(_bd_goods_);
 
@@ -12546,7 +12561,7 @@
 	//  import './bd_goods_1.scss'
 
 /***/ },
-/* 867 */
+/* 882 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -12555,15 +12570,15 @@
 	  value: true
 	});
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _comMaybeyoulike = __webpack_require__(404);
+	var _comMaybeyoulike = __webpack_require__(419);
 
 	var _comMaybeyoulike2 = _interopRequireDefault(_comMaybeyoulike);
 
@@ -12861,18 +12876,18 @@
 	};
 
 /***/ },
-/* 868 */
+/* 883 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(869)
-	__vue_script__ = __webpack_require__(871)
+	__webpack_require__(884)
+	__vue_script__ = __webpack_require__(886)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/tt_com_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(873)
+	__vue_template__ = __webpack_require__(888)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -12897,13 +12912,13 @@
 	})()}
 
 /***/ },
-/* 869 */
+/* 884 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(870);
+	var content = __webpack_require__(885);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -12923,7 +12938,7 @@
 	}
 
 /***/ },
-/* 870 */
+/* 885 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -12937,7 +12952,7 @@
 
 
 /***/ },
-/* 871 */
+/* 886 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12946,7 +12961,7 @@
 	    value: true
 	});
 
-	var _tt_com_ = __webpack_require__(872);
+	var _tt_com_ = __webpack_require__(887);
 
 	var _tt_com_2 = _interopRequireDefault(_tt_com_);
 
@@ -12989,7 +13004,7 @@
 	//    import './tt_com_0.scss'
 
 /***/ },
-/* 872 */
+/* 887 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12998,7 +13013,7 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -13072,25 +13087,25 @@
 	};
 
 /***/ },
-/* 873 */
+/* 888 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n    <span v-if='data.title && data.title.name && data.title.name == \"猜你喜欢\"' id='tt_com_0_like'></span>\n    <a v-if=\"show\" :href=\"data.title.command.content\" @click=\"clickAnalysis\" position=\"0\">\n        <div  v-if = \"data.title != undefined\" class=\"df_new_title_2\" :style=\"[styleObject,styleTop]\">\n            <span class=\"df_new_font new_span\" v-if='data.title && data.title.name' v-text='data.title.name'></span>\n            <!--<a  :href=\"data.title.btn.command.content\">-->\n                <span class=\"more\" v-if = \"data.title.btn != undefined\" style=\"width: 40px;display: inline-block;margin-top: -44px;\">\n                    <!-- <a  :href=\"data.title.btn.command.content\" @click=\"clickAnalysis\"> -->\n                    <span v-if='data.title && data.title.btn && data.title.btn.name' v-text='data.title.btn.name'></span> <i class=\"dav_icon_arrow\"></i>\n                    <!-- </a> -->\n                </span>\n        </div>\n    </a>\n\n\n    <div  v-if = \"data.title != undefined && !show\" class=\"df_new_title_2\" :style=\"[styleObject,styleTop]\">\n        <span class=\"df_new_font new_span\" v-if='data.title && data.title.name' v-text='data.title.name'></span>\n        <span class=\"more\" v-if = \"data.title.btn != undefined\" style=\"width: 40px;display: inline-block;margin-top: -44px;\">\n            <a  :href=\"data.title.btn.command.content\" @click=\"clickAnalysis\" position=\"0\">\n                <span v-if='data.title && data.title.btn && data.title.btn.name' v-text='data.title.btn.name'></span> <i class=\"dav_icon_arrow\"></i>\n            </a>\n        </span>\n    </div>\n</div>\n";
 
 /***/ },
-/* 874 */
+/* 889 */
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div id=\"comon\" @click=\"periodtj\">\n\n  <!--<div class=\"good_list_con\">-->\n    <!--<div class=\"good_list_2_row\">-->\n      <!--&lt;!&ndash;单个商品模版&ndash;&gt;-->\n      <!--<a v-for=\"item in list\" @click=\"clickAnalysis\" :position=\"item.position\" data-id=\"item.goodsId\"-->\n         <!--:href=\"item.command.content\" class=\"good_item\">-->\n        <!--<div class=\"good_img_container\">-->\n          <!--<div class=\"img_container\">-->\n            <!--<img :src=\"item.imageUrl\" style=\"display: inline;\">-->\n            <!--<span class=\"img_label\" v-if=\"item.actInfo!=''\" v-text=\"item.actInfo\"></span>-->\n            <!--<span class=\"img_label\" v-if=\"item.actInfo==''&&item.incomeInfo!=''\" v-text=\"item.incomeInfo\"></span>-->\n          <!--</div>-->\n          <!--<div v-if=\"item.sale_status\" class=\"good_list_sell_out ng-scope\">-->\n            <!--<span v-if=\"item.statusInfo\" class=\"ng-scope\">{{ item.statusInfo }}</span>-->\n          <!--</div>-->\n        <!--</div>-->\n        <!--<div class=\"good_con\">-->\n          <!--<div class=\"good_title\">{{item.title}}</div>-->\n          <!--<div class=\"goods4_price_bar\">-->\n            <!--<span class=\"dav-color-price font-weight\"><em class=\"fz_14\">¥</em><span-->\n              <!--class=\"nowPrice\"><span>{{(item.nowPrice+'').split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.nowPrice+'').split('.').length == 2\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span></span>-->\n            <!--<span class=\"vip_return\" v-if = \"item.timeshopIncome != 0\">-->\n            <!--<span class=\"vip_return_title\">会员返</span>-->\n            <!--<span class=\"vip_return_f\">¥</span>-->\n            <!--<span class=\"vip_return_price\">{{item.timeshopIncome}}</span>-->\n          <!--</span>-->\n          <!--</div>-->\n        <!--</div>-->\n      <!--</a>-->\n      <!--<div style=\"clear: both;\">-->\n      <!--</div>-->\n      <!--<div class=\"logo_container\" v-if=\"beforeFirstLoading\">-->\n        <!--<div class=\"logo_left\"></div>-->\n        <!--<div class=\"logo_right\"></div>-->\n      <!--</div>-->\n      <!--<div class=\"no_more\" v-if=\"errors\">-->\n        <!--<span>（ &gt;_&lt; ）加载失败了</span>-->\n      <!--</div>-->\n      <!--<div v-if=\"no_more\" class=\"no_more\">-->\n        <!--没有更多商品了-->\n      <!--</div>-->\n    <!--</div>-->\n\n  <!--</div>-->\n  <category\n            :list = \"list\"\n            :no_more = \"no_more\"\n            :errors = \"errors\"\n            :loading = \"beforeFirstLoading\"></category>\n</div>\n";
 
 /***/ },
-/* 875 */
+/* 890 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(876)
-	__vue_script__ = __webpack_require__(879)
+	__webpack_require__(891)
+	__vue_script__ = __webpack_require__(894)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
@@ -13119,13 +13134,13 @@
 	})()}
 
 /***/ },
-/* 876 */
+/* 891 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(877);
+	var content = __webpack_require__(892);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -13145,12 +13160,12 @@
 	}
 
 /***/ },
-/* 877 */
+/* 892 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
 	// imports
-	exports.i(__webpack_require__(878), "");
+	exports.i(__webpack_require__(893), "");
 
 	// module
 	exports.push([module.id, "em {\n  font-style: normal; }\n", ""]);
@@ -13159,7 +13174,7 @@
 
 
 /***/ },
-/* 878 */
+/* 893 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -13173,7 +13188,7 @@
 
 
 /***/ },
-/* 879 */
+/* 894 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -13182,7 +13197,7 @@
 	    value: true
 	});
 
-	var _index_feed = __webpack_require__(880);
+	var _index_feed = __webpack_require__(895);
 
 	var _index_feed2 = _interopRequireDefault(_index_feed);
 
@@ -13200,7 +13215,7 @@
 	//    import "./index_feed.css"
 
 /***/ },
-/* 880 */
+/* 895 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13209,193 +13224,193 @@
 	  value: true
 	});
 
-	var _bd_slide_ = __webpack_require__(881);
+	var _bd_slide_ = __webpack_require__(896);
 
 	var bd_slide_0 = _interopRequireWildcard(_bd_slide_);
 
-	var _bd_icon_ = __webpack_require__(887);
+	var _bd_icon_ = __webpack_require__(902);
 
 	var bd_icon_0 = _interopRequireWildcard(_bd_icon_);
 
-	var _bd_broadcast_ = __webpack_require__(893);
+	var _bd_broadcast_ = __webpack_require__(908);
 
 	var bd_broadcast_0 = _interopRequireWildcard(_bd_broadcast_);
 
-	var _bd_timer_ = __webpack_require__(899);
+	var _bd_timer_ = __webpack_require__(914);
 
 	var bd_timer_0 = _interopRequireWildcard(_bd_timer_);
 
-	var _bd_timer_2 = __webpack_require__(905);
+	var _bd_timer_2 = __webpack_require__(920);
 
 	var bd_timer_1 = _interopRequireWildcard(_bd_timer_2);
 
-	var _bd_goods_ = __webpack_require__(911);
+	var _bd_goods_ = __webpack_require__(926);
 
 	var bd_goods_0 = _interopRequireWildcard(_bd_goods_);
 
-	var _bd_goods_2 = __webpack_require__(863);
+	var _bd_goods_2 = __webpack_require__(878);
 
 	var bd_goods_1 = _interopRequireWildcard(_bd_goods_2);
 
-	var _bd_image_ = __webpack_require__(917);
+	var _bd_image_ = __webpack_require__(932);
 
 	var bd_image_0 = _interopRequireWildcard(_bd_image_);
 
-	var _bd_image_2 = __webpack_require__(923);
+	var _bd_image_2 = __webpack_require__(938);
 
 	var bd_image_1 = _interopRequireWildcard(_bd_image_2);
 
-	var _bd_image_3 = __webpack_require__(929);
+	var _bd_image_3 = __webpack_require__(944);
 
 	var bd_image_2 = _interopRequireWildcard(_bd_image_3);
 
-	var _bd_image_4 = __webpack_require__(935);
+	var _bd_image_4 = __webpack_require__(950);
 
 	var bd_image_3 = _interopRequireWildcard(_bd_image_4);
 
-	var _bd_image_5 = __webpack_require__(941);
+	var _bd_image_5 = __webpack_require__(956);
 
 	var bd_image_4 = _interopRequireWildcard(_bd_image_5);
 
-	var _bd_image_6 = __webpack_require__(947);
+	var _bd_image_6 = __webpack_require__(962);
 
 	var bd_image_5 = _interopRequireWildcard(_bd_image_6);
 
-	var _bd_image_7 = __webpack_require__(953);
+	var _bd_image_7 = __webpack_require__(968);
 
 	var bd_image_6 = _interopRequireWildcard(_bd_image_7);
 
-	var _bd_image_8 = __webpack_require__(959);
+	var _bd_image_8 = __webpack_require__(974);
 
 	var bd_image_7 = _interopRequireWildcard(_bd_image_8);
 
-	var _bd_image_9 = __webpack_require__(965);
+	var _bd_image_9 = __webpack_require__(980);
 
 	var bd_image_8 = _interopRequireWildcard(_bd_image_9);
 
-	var _bd_image_10 = __webpack_require__(971);
+	var _bd_image_10 = __webpack_require__(986);
 
 	var bd_image_9 = _interopRequireWildcard(_bd_image_10);
 
-	var _bd_image_11 = __webpack_require__(977);
+	var _bd_image_11 = __webpack_require__(992);
 
 	var bd_image_10 = _interopRequireWildcard(_bd_image_11);
 
-	var _bd_goods_3 = __webpack_require__(983);
+	var _bd_goods_3 = __webpack_require__(998);
 
 	var bd_goods_2 = _interopRequireWildcard(_bd_goods_3);
 
-	var _bd_goods_4 = __webpack_require__(989);
+	var _bd_goods_4 = __webpack_require__(1004);
 
 	var bd_goods_6 = _interopRequireWildcard(_bd_goods_4);
 
-	var _bd_goods_5 = __webpack_require__(994);
+	var _bd_goods_5 = __webpack_require__(1009);
 
 	var bd_goods_5 = _interopRequireWildcard(_bd_goods_5);
 
-	var _bd_goods_6 = __webpack_require__(999);
+	var _bd_goods_6 = __webpack_require__(1014);
 
 	var bd_goods_7 = _interopRequireWildcard(_bd_goods_6);
 
-	var _bd_menu_ = __webpack_require__(1004);
+	var _bd_menu_ = __webpack_require__(1019);
 
 	var bd_menu_0 = _interopRequireWildcard(_bd_menu_);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
-	var _tt_com_2 = __webpack_require__(409);
+	var _tt_com_2 = __webpack_require__(424);
 
 	var tt_com_1 = _interopRequireWildcard(_tt_com_2);
 
-	var _bd_web_ = __webpack_require__(1006);
+	var _bd_web_ = __webpack_require__(1021);
 
 	var bd_web_0 = _interopRequireWildcard(_bd_web_);
 
-	var _cover_ = __webpack_require__(1012);
+	var _cover_ = __webpack_require__(1027);
 
 	var cover_0 = _interopRequireWildcard(_cover_);
 
-	var _title_ = __webpack_require__(1017);
+	var _title_ = __webpack_require__(1032);
 
 	var title_0 = _interopRequireWildcard(_title_);
 
-	var _popularity_ = __webpack_require__(1022);
+	var _popularity_ = __webpack_require__(1037);
 
 	var popularity_0 = _interopRequireWildcard(_popularity_);
 
-	var _course_desc_ = __webpack_require__(1027);
+	var _course_desc_ = __webpack_require__(1042);
 
 	var course_desc_0 = _interopRequireWildcard(_course_desc_);
 
-	var _fire_work = __webpack_require__(1036);
+	var _fire_work = __webpack_require__(1051);
 
 	var fire_work = _interopRequireWildcard(_fire_work);
 
-	var _dvk = __webpack_require__(1042);
+	var _dvk = __webpack_require__(1057);
 
 	var bd_course_1 = _interopRequireWildcard(_dvk);
 
-	var _dvk2 = __webpack_require__(1047);
+	var _dvk2 = __webpack_require__(1062);
 
 	var bd_course_1_1 = _interopRequireWildcard(_dvk2);
 
-	var _dvk3 = __webpack_require__(1052);
+	var _dvk3 = __webpack_require__(1067);
 
 	var bd_course_2 = _interopRequireWildcard(_dvk3);
 
-	var _dvk4 = __webpack_require__(1057);
+	var _dvk4 = __webpack_require__(1072);
 
 	var bd_course_6 = _interopRequireWildcard(_dvk4);
 
-	var _dvk5 = __webpack_require__(1062);
+	var _dvk5 = __webpack_require__(1077);
 
 	var bd_vlive_2 = _interopRequireWildcard(_dvk5);
 
-	var _dvk6 = __webpack_require__(1067);
+	var _dvk6 = __webpack_require__(1082);
 
 	var bd_mama_course_2 = _interopRequireWildcard(_dvk6);
 
-	var _bd_goods_7 = __webpack_require__(1072);
+	var _bd_goods_7 = __webpack_require__(1087);
 
 	var bd_goods_3 = _interopRequireWildcard(_bd_goods_7);
 
-	var _bd_ts_ = __webpack_require__(1077);
+	var _bd_ts_ = __webpack_require__(1092);
 
 	var bd_ts_0 = _interopRequireWildcard(_bd_ts_);
 
-	var _bd_ts_prod_ = __webpack_require__(1084);
+	var _bd_ts_prod_ = __webpack_require__(1099);
 
 	var bd_ts_prod_0 = _interopRequireWildcard(_bd_ts_prod_);
 
-	var _bd_ts_goods_ = __webpack_require__(1089);
+	var _bd_ts_goods_ = __webpack_require__(1104);
 
 	var bd_ts_goods_0 = _interopRequireWildcard(_bd_ts_goods_);
 
-	var _bd_ts_title_ = __webpack_require__(1094);
+	var _bd_ts_title_ = __webpack_require__(1109);
 
 	var bd_ts_title_0 = _interopRequireWildcard(_bd_ts_title_);
 
-	var _bd_image_1_ = __webpack_require__(1099);
+	var _bd_image_1_ = __webpack_require__(1114);
 
 	var bd_image_1_2 = _interopRequireWildcard(_bd_image_1_);
 
 	var bd_image_1_3 = _interopRequireWildcard(_bd_image_1_);
 
-	var _bd_image_4_ = __webpack_require__(1104);
+	var _bd_image_4_ = __webpack_require__(1119);
 
 	var bd_image_4_2 = _interopRequireWildcard(_bd_image_4_);
 
-	var _bd_goods_8 = __webpack_require__(1109);
+	var _bd_goods_8 = __webpack_require__(1124);
 
 	var bd_goods_4 = _interopRequireWildcard(_bd_goods_8);
 
-	var _bd_course_info_series_ = __webpack_require__(1114);
+	var _bd_course_info_series_ = __webpack_require__(1129);
 
 	var bd_course_info_series_0 = _interopRequireWildcard(_bd_course_info_series_);
 
-	var _bd_course_notes_ = __webpack_require__(1119);
+	var _bd_course_notes_ = __webpack_require__(1134);
 
 	var bd_course_notes_0 = _interopRequireWildcard(_bd_course_notes_);
 
@@ -13558,24 +13573,24 @@
 	    bd_goods_5: bd_goods_5,
 	    bd_goods_6: bd_goods_6,
 	    bd_goods_7: bd_goods_7,
-	    'ad-banner': __webpack_require__(755)
+	    'ad-banner': __webpack_require__(770)
 	  }
 	};
 	//听课笔记
 
 /***/ },
-/* 881 */
+/* 896 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(882)
-	__vue_script__ = __webpack_require__(884)
+	__webpack_require__(897)
+	__vue_script__ = __webpack_require__(899)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_slide_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(886)
+	__vue_template__ = __webpack_require__(901)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -13600,13 +13615,13 @@
 	})()}
 
 /***/ },
-/* 882 */
+/* 897 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(883);
+	var content = __webpack_require__(898);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -13626,7 +13641,7 @@
 	}
 
 /***/ },
-/* 883 */
+/* 898 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -13640,7 +13655,7 @@
 
 
 /***/ },
-/* 884 */
+/* 899 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13649,7 +13664,7 @@
 	    value: true
 	});
 
-	var _bd_slide_ = __webpack_require__(885);
+	var _bd_slide_ = __webpack_require__(900);
 
 	var _bd_slide_2 = _interopRequireDefault(_bd_slide_);
 
@@ -13681,7 +13696,7 @@
 	//    import './bd_slide_0.scss'
 
 /***/ },
-/* 885 */
+/* 900 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13690,7 +13705,7 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -13746,24 +13761,24 @@
 	};
 
 /***/ },
-/* 886 */
+/* 901 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"bd_slide_0 swiper-container\"  v-if='data && data.body && data.body.dataList && data.body.dataList[0]'>\n    <div class=\"swiper-wrapper\">\n        <div class=\"swiper-slide\" v-for=\"item in data.body.dataList\">\n            <a :href=\"item.command.content\" @click.stop=\"clickAnalysis\" :position=\"item.position\">\n                <img class=\"swiper-lazy newImage\" :src=\"item.imageUrl\">\n            </a>\n        </div>\n    </div>\n    <div class=\"swiper-pagination\"></div>\n</div>\n";
 
 /***/ },
-/* 887 */
+/* 902 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(888)
-	__vue_script__ = __webpack_require__(890)
+	__webpack_require__(903)
+	__vue_script__ = __webpack_require__(905)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_icon_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(892)
+	__vue_template__ = __webpack_require__(907)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -13788,13 +13803,13 @@
 	})()}
 
 /***/ },
-/* 888 */
+/* 903 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(889);
+	var content = __webpack_require__(904);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -13814,7 +13829,7 @@
 	}
 
 /***/ },
-/* 889 */
+/* 904 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -13828,7 +13843,7 @@
 
 
 /***/ },
-/* 890 */
+/* 905 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13837,7 +13852,7 @@
 	    value: true
 	});
 
-	var _bd_icon_ = __webpack_require__(891);
+	var _bd_icon_ = __webpack_require__(906);
 
 	var _bd_icon_2 = _interopRequireDefault(_bd_icon_);
 
@@ -13863,7 +13878,7 @@
 	//    import './bd_icon_0.scss'
 
 /***/ },
-/* 891 */
+/* 906 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -13872,11 +13887,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -13929,24 +13944,24 @@
 	};
 
 /***/ },
-/* 892 */
+/* 907 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div v-if=\"show\" class=\"bd_icon_0 index_links\" :style=\"styleObject\">\n    <a class=\"link_item\" v-for=\"item in data.body.dataList\" :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" style=\"height: 72px;\">\n        <div style=\"height: 46px;\">\n            <img class=\"link_img newImage\" :src=\"item.imageUrl\">\n        </div>\n        <div class=\"link_text\" v-text=\"item.title\"></div>\n    </a>\n</div>\n";
 
 /***/ },
-/* 893 */
+/* 908 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(894)
-	__vue_script__ = __webpack_require__(896)
+	__webpack_require__(909)
+	__vue_script__ = __webpack_require__(911)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_broadcast_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(898)
+	__vue_template__ = __webpack_require__(913)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -13971,13 +13986,13 @@
 	})()}
 
 /***/ },
-/* 894 */
+/* 909 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(895);
+	var content = __webpack_require__(910);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -13997,7 +14012,7 @@
 	}
 
 /***/ },
-/* 895 */
+/* 910 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -14011,7 +14026,7 @@
 
 
 /***/ },
-/* 896 */
+/* 911 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14020,7 +14035,7 @@
 	    value: true
 	});
 
-	var _bd_broadcast_ = __webpack_require__(897);
+	var _bd_broadcast_ = __webpack_require__(912);
 
 	var _bd_broadcast_2 = _interopRequireDefault(_bd_broadcast_);
 
@@ -14056,7 +14071,7 @@
 	//    import './bd_broadcast_0.scss'
 
 /***/ },
-/* 897 */
+/* 912 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -14067,7 +14082,7 @@
 
 	var _data$props$computed$;
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -14161,24 +14176,24 @@
 	}), _data$props$computed$);
 
 /***/ },
-/* 898 */
+/* 913 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"broadcast\" style=\"height: 64px;\">\n    <div class=\"broadcast_img\">\n        <img :src = \"data.body.titleImageUrl\">\n        <span class=\"broadcast_string\"></span>\n    </div>\n    <div class=\"broadcast_title swiper-container swiper-container-vertical\">\n        <div class=\"swiper_wrap swiper-wrapper\">\n            <div v-for = \"item in data.body.dataList\" class=\"swiper-slide swiper-no-swiping\" style=\"height: 64px;\">\n                <a :href=\"item.command.content\" class=\"swiper\" @click=\"clickAnalysis\" :position=\"item.position\">\n                    <div class = \"broadcast_title_top\">\n                        <span class=\"headline\">{{item.noticeText}}</span><span class=\"broadcast_title_txt\">{{ item.title }}</span>\n                    </div>\n                    <p class=\"broadcast_title_bottom text_ellipsis\">{{ item.subTitle }}</p>\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 899 */
+/* 914 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(900)
-	__vue_script__ = __webpack_require__(902)
+	__webpack_require__(915)
+	__vue_script__ = __webpack_require__(917)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_timer_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(904)
+	__vue_template__ = __webpack_require__(919)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -14203,13 +14218,13 @@
 	})()}
 
 /***/ },
-/* 900 */
+/* 915 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(901);
+	var content = __webpack_require__(916);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -14229,7 +14244,7 @@
 	}
 
 /***/ },
-/* 901 */
+/* 916 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -14243,7 +14258,7 @@
 
 
 /***/ },
-/* 902 */
+/* 917 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14252,7 +14267,7 @@
 	    value: true
 	});
 
-	var _bd_timer_ = __webpack_require__(903);
+	var _bd_timer_ = __webpack_require__(918);
 
 	var _bd_timer_2 = _interopRequireDefault(_bd_timer_);
 
@@ -14340,7 +14355,7 @@
 	//    import './bd_timer_0.scss'
 
 /***/ },
-/* 903 */
+/* 918 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14349,11 +14364,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -14437,24 +14452,24 @@
 	};
 
 /***/ },
-/* 904 */
+/* 919 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\">\n\n    <tt_com_0 :data=\"data\"></tt_com_0>\n\n    <div class=\"df_new_model_con\">\n        <div class=\"clearfix\">\n            <div class=\"dvd-col-12\" style=\"height: 2rem; overflow: hidden;\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 2rem;overflow: hidden;\" >\n                    <a  @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\"  style=\"height: 2rem;\" position=\"0\">\n                        <div class=\"seckillCountdown\" v-if=\"seckillTime >= -1\">\n                            <span class=\"seckill_bg\">{{ hours }}</span>\n                            <span class=\"seckill_semicolon\">:</span>\n                            <span class=\"seckill_bg\">{{ minutes }}</span>\n                            <span class=\"seckill_semicolon\">:</span>\n                            <span class=\"seckill_bg\">{{ seconds }}</span></div>\n                        <!-- <img class=\"newImage\" style=\"height: 2rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/374_400_9dd7740d145f63fcc1bb45acd3ca5562.png\" :data-original=\"data.body.dataList[0].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 2rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\">\n\n                        <div class=\"right_border\"  :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"dvd-new-index-module-child dvd-col-6\">\n                    <div class=\"dvd-col-12 \" style=\"height:1rem;overflow: hidden;\" :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[1].command.content\" @click.stop=\"clickAnalysis\"  style=\"height: 1rem;\"  position=\"1\">\n                            <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/374_200_8f1bcdbd06f1e4345047fb3bfad2741d.png\" :data-original=\"data.body.dataList[1].imageUrl\"> -->\n                            <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\">\n                        </a>\n                    </div>\n                    <div class=\"dvd-col-12\" style=\"height:1rem;overflow: hidden;\">\n                        <div class=\"dvd-new-index-module-child dvd-col-6\" :style=\"styleObject\">\n                            <a :href=\"data.body.dataList[2].command.content\" @click.stop=\"clickAnalysis\"  style=\"height: 1rem;\" position=\"2\">\n                                <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/186_200_fbaa0fc666e72f32a471934ce7621324.png\" :data-original=\"data.body.dataList[2].imageUrl\"> -->\n                                <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\"\n                                     v-lazy=\"imgObject(data.body.dataList[2].imageUrl)\">\n                                <div class=\"right_border\"  :style=\"styleObject\"></div>\n                                <div class=\"top_border\"  :style=\"styleObject\"></div>\n                            </a>\n                        </div>\n                        <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height:1rem;overflow: hidden;\" :style=\"styleObject\">\n                            <a :href=\"data.body.dataList[3].command.content\" @click.stop=\"clickAnalysis\"  style=\"height: 1rem;\" position=\"3\">\n                                <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/186_200_fbaa0fc666e72f32a471934ce7621324.png\" :data-original=\"data.body.dataList[3].imageUrl\"> -->\n                                <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\"\n                                     v-lazy=\"imgObject(data.body.dataList[3].imageUrl)\">\n                                <div class=\"top_border\"  :style=\"styleObject\"></div>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"dvd-col-12\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\"  style=\"height:1rem;overflow: hidden;\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[4].command.content\" @click.stop=\"clickAnalysis\" position=\"4\" style=\"height: 1rem;\">\n                        <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/374_200_8f1bcdbd06f1e4345047fb3bfad2741d.png\" :data-original=\"data.body.dataList[4].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[4].imageUrl)\">\n                        <div class=\"top_border\"  :style=\"styleObject\"></div>\n                        <div class=\"right_border\"  :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height:1rem;overflow: hidden;\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[5].command.content\" @click.stop=\"clickAnalysis\" position=\"5\" style=\"height: 1rem;\">\n                        <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/374_200_8f1bcdbd06f1e4345047fb3bfad2741d.png\" :data-original=\"data.body.dataList[5].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[5].imageUrl)\">\n                        <div class=\"top_border\"  :style=\"styleObject\"></div>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 905 */
+/* 920 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(906)
-	__vue_script__ = __webpack_require__(908)
+	__webpack_require__(921)
+	__vue_script__ = __webpack_require__(923)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_timer_1.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(910)
+	__vue_template__ = __webpack_require__(925)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -14479,13 +14494,13 @@
 	})()}
 
 /***/ },
-/* 906 */
+/* 921 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(907);
+	var content = __webpack_require__(922);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -14505,7 +14520,7 @@
 	}
 
 /***/ },
-/* 907 */
+/* 922 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -14519,7 +14534,7 @@
 
 
 /***/ },
-/* 908 */
+/* 923 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14528,7 +14543,7 @@
 	    value: true
 	});
 
-	var _bd_timer_ = __webpack_require__(909);
+	var _bd_timer_ = __webpack_require__(924);
 
 	var _bd_timer_2 = _interopRequireDefault(_bd_timer_);
 
@@ -14593,7 +14608,7 @@
 	//    import './bd_timer_1.scss'
 
 /***/ },
-/* 909 */
+/* 924 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14602,11 +14617,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -14705,24 +14720,24 @@
 	};
 
 /***/ },
-/* 910 */
+/* 925 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop}\">\n\n    <tt_com_0 :data=\"data\"></tt_com_0>\n\n    <div class=\"df_new_model_con\" :style=\"styleObject\">\n        <div class=\"clearfix\" style=\"padding:10px 7.5px 7.5px 7.5px;\">\n            <div class=\"dvd-col-12 need_js_height_seckill\" style=\"overflow: hidden;\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"padding: 0 0.025rem 0 2.5px;box-sizing: border-box;height: 1.81rem;overflow: hidden;\">\n                    <a :href=\"data.body.dataList[0].command.content\" @click.stop=\"clickAnalysis\" position=\"0\" style=\"height: 1.81rem;\">\n                        <div class=\"seckillCountdown seckill2\" v-if = \"seckillTime >= -1\">\n                            <span class=\"seckill_bg\">{{ hours }}</span>\n                            <span class=\"seckill_semicolon\">:</span>\n                            <span class=\"seckill_bg\">{{ minutes }}</span>\n                            <span class=\"seckill_semicolon\">:</span>\n                            <span class=\"seckill_bg\">{{ seconds }}</span>\n                        </div>\n                        <img class=\"newImage\" style=\"height: 1.81rem;border-radius: 3px;\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\">\n                    </a>\n                </div>\n\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"margin-bottom:0.05rem;padding: 0 0.025rem;box-sizing: border-box;height: 0.88rem;overflow: hidden;\">\n                    <a :href=\"data.body.dataList[1].command.content\" @click.stop=\"clickAnalysis\" position=\"1\"  style=\"height: 0.88rem;\">\n                        <img class=\"newImage\" style=\"height: 0.88rem;\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\">\n                    </a>\n                </div>\n\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"padding: 0 0.025rem;box-sizing: border-box;height: 0.88rem;overflow: hidden;\">\n                    <a :href=\"data.body.dataList[2].command.content\" @click.stop=\"clickAnalysis\" position=\"2\" style=\"height: 0.88rem;\">\n                        <img class=\"newImage\" style=\"height: 0.88rem;\" v-lazy=\"imgObject(data.body.dataList[2].imageUrl)\">\n                    </a>\n                </div>\n            </div>\n\n            <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"margin: 0.05rem 0 2.5px 0;padding: 0 0.025rem 0px 2.5px;box-sizing: border-box;height: 0.88rem;overflow: hidden;\">\n                <a :href=\"data.body.dataList[3].command.content\" @click.stop=\"clickAnalysis\" position=\"3\" style=\"height: 0.88rem;\">\n                    <img class=\"newImage\" style=\"height: 0.88rem;\" v-lazy=\"imgObject(data.body.dataList[3].imageUrl)\">\n                </a>\n            </div>\n            <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"margin: 0.05rem 0 2.5px 0;padding: 0 0.025rem 0px 0.025rem;box-sizing: border-box;height: 0.88rem;overflow: hidden;\">\n                <a :href=\"data.body.dataList[4].command.content\" @click.stop=\"clickAnalysis\" position=\"4\" style=\"height: 0.88rem;\">\n                    <img class=\"newImage\" style=\"height: 0.88rem;\" v-lazy=\"imgObject(data.body.dataList[4].imageUrl)\">\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 911 */
+/* 926 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(912)
-	__vue_script__ = __webpack_require__(914)
+	__webpack_require__(927)
+	__vue_script__ = __webpack_require__(929)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_goods_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(916)
+	__vue_template__ = __webpack_require__(931)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -14747,13 +14762,13 @@
 	})()}
 
 /***/ },
-/* 912 */
+/* 927 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(913);
+	var content = __webpack_require__(928);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -14773,7 +14788,7 @@
 	}
 
 /***/ },
-/* 913 */
+/* 928 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -14787,7 +14802,7 @@
 
 
 /***/ },
-/* 914 */
+/* 929 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14796,7 +14811,7 @@
 	  value: true
 	});
 
-	var _bd_goods_ = __webpack_require__(915);
+	var _bd_goods_ = __webpack_require__(930);
 
 	var _bd_goods_2 = _interopRequireDefault(_bd_goods_);
 
@@ -14896,7 +14911,7 @@
 	//  import './bd_goods_0.scss'
 
 /***/ },
-/* 915 */
+/* 930 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14905,11 +14920,11 @@
 	  value: true
 	});
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -15015,24 +15030,24 @@
 	};
 
 /***/ },
-/* 916 */
+/* 931 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"styleObject\">\n  <a v-if=\"data.body.tplId == 'bd_goods_0'\" href=\"javascript:void(0)\" class=\"index_group_buy\" style=\"margin-top: 0px;\"\n     :style=\"styleTop\">\n    <tt_com_0 :data=\"data\"></tt_com_0>\n    <div class=\"df_new_model_con\" :style=\"styleObject\">\n      <div class=\"swiper-container related-item-list swiper-container-horizontal swiper-container-free-mode\">\n        <div class=\"swiper-wrapper\" style=\"transform: translate3d(10px, 0px, 0px); transition-duration: 0ms;\">\n          <div v-for=\"item in data.body.dataList\" class=\"detail swiper-slide\" style=\"width: 124.382px;\">\n            <a :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\">\n              <div class=\"goods_img_size\">\n                <img :src=\"item.imageUrl\">\n              </div>\n              <div class=\"name1\" :class=\"{'he36':(wrapline == 1)}\">{{ item.title }}</div>\n              <div class=\"price1\">\n                <span class=\"current-price1\">¥{{item.nowPrice}}</span><span\n                class=\"original-price1\">¥{{item.prePrice}}</span>\n              </div>\n            </a>\n\n          </div>\n        </div>\n      </div>\n    </div>\n  </a>\n\n  <div v-if=\"data.body.tplId == 'bd_goods_2'\" class=\"df_new_model_con\" :style=\"styleObject\">\n    <div class=\"swiper-container related-item-list swiper-container-horizontal swiper-container-free-mode\">\n      <div class=\"swiper-wrapper\" style=\"transform: translate3d(10px, 0px, 0px); transition-duration: 0ms;\">\n        <div v-for=\"item in data.body.dataList\" class=\"detail swiper-slide\" style=\"width: 124.382px;\">\n          <a :href=\"item.command.content\" @click.stop=\"clickAnalysis\" :position=\"item.position\">\n            <div class=\"goods_img_size\">\n              <img :src=\"item.imageUrl\">\n            </div>\n            <!-- <div class=\"name\" :class=\"{'he36':(wrapline == 1)}\">{{ item.title </div> -->\n            <div class=\"name1\">{{ item.title }}</div>\n            <div class=\"price1\">\n              <span class=\"current-price1\">¥{{ item.nowPrice }}</span>\n              <span class=\"original-price1\">¥{{ item.prePrice }}</span>\n            </div>\n          </a>\n        </div>\n\n\n        <div class=\"detail swiper-slide\" style=\"width: 124.382px;\">\n          <a :href=\"data.body.command.content\" @click.stop=\"clickAnalysis\" position=\"more\">\n            <div class=\"goods_img_size\">\n              <img src=\"//pic.davdian.com/free/2016/12/20/300_300_2f12c4229c5444864431d2cd8cd1bdb3.jpg\">\n            </div>\n          </a>\n        </div>\n\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"data.body.tplId == 'bd_ts_goods_0'\" class=\"df_new_model_con\" :style=\"styleObject\">\n    <div\n      class=\"swiper-container related-item-list2 swiper-container-horizontal swiper-container-free-mode\">\n      <div class=\"swiper-wrapper\" style=\"transform: translate3d(10px, 0px, 0px); transition-duration: 0ms;\">\n        <div v-for=\"item in data.body.dataList\" class=\"detail swiper-slide\" style=\"width: 124.382px;\">\n          <a :href=\"item.command.content\" @click.stop=\"clickAnalysis\" :position=\"item.position\">\n            <div class=\"goods_img_size\">\n              <img :src=\"item.imageUrl\">\n              <div v-if=\"item.limitTag\" class=\"limitTag\">{{item.limitTag}}</div>\n            </div>\n            <div class=\"name1\">{{ item.title }}</div>\n            <div class=\"price1\">\n              <span class=\"current-price1\"><em>¥</em><span>{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.nowPrice+'').split('.').length == 2\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span>\n            </div>\n            <div class=\"membership_crown\">会员返 <em _v-e9830e04=\"\">￥</em>{{item.timeshopIncome}}</div>\n          </a>\n        </div>\n        <div class=\"detail swiper-slide\" style=\"width: 124.382px;\">\n          <a :href=\"data.body.command.content\" @click.stop=\"clickAnalysis\" position=\"more\">\n            <div class=\"goods_img_size\">\n              <img src=\"//pic.davdian.com/free/2016/12/20/300_300_2f12c4229c5444864431d2cd8cd1bdb3.jpg\">\n            </div>\n          </a>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 917 */
+/* 932 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(918)
-	__vue_script__ = __webpack_require__(920)
+	__webpack_require__(933)
+	__vue_script__ = __webpack_require__(935)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_image_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(922)
+	__vue_template__ = __webpack_require__(937)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -15057,13 +15072,13 @@
 	})()}
 
 /***/ },
-/* 918 */
+/* 933 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(919);
+	var content = __webpack_require__(934);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -15083,7 +15098,7 @@
 	}
 
 /***/ },
-/* 919 */
+/* 934 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -15097,7 +15112,7 @@
 
 
 /***/ },
-/* 920 */
+/* 935 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15106,7 +15121,7 @@
 	    value: true
 	});
 
-	var _bd_image_ = __webpack_require__(921);
+	var _bd_image_ = __webpack_require__(936);
 
 	var _bd_image_2 = _interopRequireDefault(_bd_image_);
 
@@ -15144,7 +15159,7 @@
 	//    import './bd_image_0.scss'
 
 /***/ },
-/* 921 */
+/* 936 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15153,11 +15168,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -15197,24 +15212,24 @@
 	};
 
 /***/ },
-/* 922 */
+/* 937 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"[{ marginTop:data.marginTop },styleObject]\">\n\n    <tt_com_0 :data=\"data\"></tt_com_0>\n\n    <div class=\"model_con\">\n        <div class=\"dvd-index-module clearfix\">\n            <!-- <div class=\"index_activity\" style=\"padding:0;margin:0;height:1.4rem;overflow:hidden;\">\n                <a :href=\"data.body.dataList[0].command.content\" style=\"height: 1.4rem;padding:0;margin:0;\" @click=\"clickAnalysis\" position=\"0\">\n                    <img class = \"newImage\" :src=\"data.body.dataList[0].imageUrl\" style=\"width:100%;height: 1.4rem;\">\n                </a>\n            </div> -->\n            <div class=\"index_activity\" style=\"padding:0;margin:0;overflow:hidden;\">\n                <a :href=\"data.body.dataList[0].command.content\" style=\"padding:0;margin:0;\" @click=\"clickAnalysis\" position=\"0\">\n                    <img class = \"newImage\" :src=\"data.body.dataList[0].imageUrl\" style=\"width:100%;\">\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 923 */
+/* 938 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(924)
-	__vue_script__ = __webpack_require__(926)
+	__webpack_require__(939)
+	__vue_script__ = __webpack_require__(941)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_image_1.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(928)
+	__vue_template__ = __webpack_require__(943)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -15239,13 +15254,13 @@
 	})()}
 
 /***/ },
-/* 924 */
+/* 939 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(925);
+	var content = __webpack_require__(940);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -15265,7 +15280,7 @@
 	}
 
 /***/ },
-/* 925 */
+/* 940 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -15279,7 +15294,7 @@
 
 
 /***/ },
-/* 926 */
+/* 941 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15288,7 +15303,7 @@
 	    value: true
 	});
 
-	var _bd_image_ = __webpack_require__(927);
+	var _bd_image_ = __webpack_require__(942);
 
 	var _bd_image_2 = _interopRequireDefault(_bd_image_);
 
@@ -15325,7 +15340,7 @@
 	//    import './bd_image_1.scss'
 
 /***/ },
-/* 927 */
+/* 942 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15334,11 +15349,11 @@
 	    value: true
 	});
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -15384,24 +15399,24 @@
 	};
 
 /***/ },
-/* 928 */
+/* 943 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"[{ marginTop:data.marginTop },styleObject]\">\n\n    <tt_com_0 :data = \"data\"></tt_com_0>\n\n    <div class=\"model_con\">\n        <div class=\"dvd-index-module clearfix\">\n            <div class=\"dvd-index-module clearfix\" style=\"padding:6px 3px;\" :style=\"styleObject\">\n                <div v-for = \"item in data.body.dataList\" class=\"pull-left\" style=\" width: calc(33.3333333% - 8px);overflow: hidden;padding: 4px;\">\n                    <a :href=\"item.command.content\" target=\"_self\" @click=\"clickAnalysis\" :position=\"item.position\">\n                        <!-- <img class=\"newImage\" src=\"//pic.davdian.com/free/2016/12/07/246_246_06ffdb6b71c128464a35bae721bedae7.png\" :data-original=\"item.imageUrl\" style=\"width: 100%;display: inline;\"> -->\n                        <img class=\"newImage\" v-lazy=\"imgObject(item.imageUrl)\" style=\"width: 100%;display: inline;\">\n                    </a>\n                </div>\n\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 929 */
+/* 944 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(930)
-	__vue_script__ = __webpack_require__(932)
+	__webpack_require__(945)
+	__vue_script__ = __webpack_require__(947)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_image_2.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(934)
+	__vue_template__ = __webpack_require__(949)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -15426,13 +15441,13 @@
 	})()}
 
 /***/ },
-/* 930 */
+/* 945 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(931);
+	var content = __webpack_require__(946);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -15452,7 +15467,7 @@
 	}
 
 /***/ },
-/* 931 */
+/* 946 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -15466,7 +15481,7 @@
 
 
 /***/ },
-/* 932 */
+/* 947 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15475,7 +15490,7 @@
 	    value: true
 	});
 
-	var _bd_image_ = __webpack_require__(933);
+	var _bd_image_ = __webpack_require__(948);
 
 	var _bd_image_2 = _interopRequireDefault(_bd_image_);
 
@@ -15524,7 +15539,7 @@
 	//    import './bd_image_2.scss'
 
 /***/ },
-/* 933 */
+/* 948 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15533,11 +15548,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -15578,24 +15593,24 @@
 	};
 
 /***/ },
-/* 934 */
+/* 949 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\">\n\n    <tt_com_0 :data=\"data\"></tt_com_0>\n\n    <div class=\"df_new_model_con\">\n        <div class=\"clearfix\">\n            <div class=\"dvd-col-12\" style=\"height: 2rem; overflow: hidden;\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 2rem; overflow: hidden;\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[0].command.content\" @click=\"clickAnalysis\" style=\"height: 2rem;\" position=\"0\">\n                        <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" style=\"height: 2rem; overflow: hidden;\" >\n                        <div class=\"right_border\" :style=\"styleObject\" ></div>\n                    </a>\n                </div>\n                <div class=\"dvd-new-index-module-child dvd-col-6\">\n                    <div class=\"dvd-col-12\" style=\"height: 1rem; overflow: hidden;\" :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[1].command.content\" @click=\"clickAnalysis\" style=\"height: 1rem;\" position=\"1\">\n                            <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" style=\"height: 1rem; overflow: hidden;\">\n                        </a>\n                    </div>\n                    <div class=\"dvd-col-12\" style=\"height: 1rem; overflow: hidden;\" :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[2].command.content\" @click=\"clickAnalysis\" style=\"height: 1rem;\" position=\"2\">\n                            <div class=\"top_border\" :style=\"styleObject\"></div>\n                            <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[2].imageUrl)\"  style=\"height: 1rem; overflow: hidden;\">\n                        </a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 935 */
+/* 950 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(936)
-	__vue_script__ = __webpack_require__(938)
+	__webpack_require__(951)
+	__vue_script__ = __webpack_require__(953)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_image_3.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(940)
+	__vue_template__ = __webpack_require__(955)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -15620,13 +15635,13 @@
 	})()}
 
 /***/ },
-/* 936 */
+/* 951 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(937);
+	var content = __webpack_require__(952);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -15646,7 +15661,7 @@
 	}
 
 /***/ },
-/* 937 */
+/* 952 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -15660,7 +15675,7 @@
 
 
 /***/ },
-/* 938 */
+/* 953 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15669,7 +15684,7 @@
 	    value: true
 	});
 
-	var _bd_image_ = __webpack_require__(939);
+	var _bd_image_ = __webpack_require__(954);
 
 	var _bd_image_2 = _interopRequireDefault(_bd_image_);
 
@@ -15731,7 +15746,7 @@
 	//    import './bd_image_3.scss'
 
 /***/ },
-/* 939 */
+/* 954 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15740,11 +15755,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -15797,24 +15812,24 @@
 	};
 
 /***/ },
-/* 940 */
+/* 955 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\">\n\n    <tt_com_0 :data = 'data'></tt_com_0>\n\n    <div class=\"df_new_model_con\">\n        <div class=\"clearfix\">\n            <div class=\"dvd-col-12\" style=\"height: 2rem; overflow: hidden;\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 2rem;overflow: hidden;\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[0].command.content\" @click=\"clickAnalysis\" position = \"0\" style=\"height: 2rem;\">\n                        <!-- <img class=\"newImage\" style=\"height: 2rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/374_400_9dd7740d145f63fcc1bb45acd3ca5562.png\" :data-original=\"data.body.dataList[0].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 2rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\">\n                        <div class=\"right_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"dvd-new-index-module-child dvd-col-6\">\n                    <div class=\"dvd-col-12\" style=\"height: 1rem;overflow: hidden;\" :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[1].command.content\" @click=\"clickAnalysis\" position = \"1\" style=\"height: 1rem;\">\n                            <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/374_200_8f1bcdbd06f1e4345047fb3bfad2741d.png\" :data-original=\"data.body.dataList[1].imageUrl\"> -->\n                            <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\">\n                        </a>\n                    </div>\n                    <div class=\"dvd-col-12\">\n                        <div class=\"dvd-new-index-module-child dvd-col-6\"  style=\"height: 1rem;overflow: hidden;\" :style=\"styleObject\">\n                            <a :href=\"data.body.dataList[2].command.content\" @click=\"clickAnalysis\" position=\"2\"  style=\"height: 1rem;\">\n                                <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/186_200_fbaa0fc666e72f32a471934ce7621324.png\" :data-original=\"data.body.dataList[2].imageUrl\"> -->\n                                <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[2].imageUrl)\">\n                                <div class=\"right_border\" :style=\"styleObject\"></div>\n                                <div class=\"top_border\" :style=\"styleObject\"></div>\n                            </a>\n                        </div>\n                        <div class=\"dvd-new-index-module-child dvd-col-6\"  style=\"height: 1rem;overflow: hidden;\" :style=\"styleObject\">\n                            <a :href=\"data.body.dataList[3].command.content\" @click=\"clickAnalysis\" position=\"3\" style=\"height: 1rem;\">\n                                <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/186_200_fbaa0fc666e72f32a471934ce7621324.png\" :data-original=\"data.body.dataList[3].imageUrl\"> -->\n                                <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[3].imageUrl)\">\n                                <div class=\"top_border\" :style=\"styleObject\"></div>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 941 */
+/* 956 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(942)
-	__vue_script__ = __webpack_require__(944)
+	__webpack_require__(957)
+	__vue_script__ = __webpack_require__(959)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_image_4.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(946)
+	__vue_template__ = __webpack_require__(961)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -15839,13 +15854,13 @@
 	})()}
 
 /***/ },
-/* 942 */
+/* 957 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(943);
+	var content = __webpack_require__(958);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -15865,7 +15880,7 @@
 	}
 
 /***/ },
-/* 943 */
+/* 958 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -15879,7 +15894,7 @@
 
 
 /***/ },
-/* 944 */
+/* 959 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15888,7 +15903,7 @@
 	    value: true
 	});
 
-	var _bd_image_ = __webpack_require__(945);
+	var _bd_image_ = __webpack_require__(960);
 
 	var _bd_image_2 = _interopRequireDefault(_bd_image_);
 
@@ -15926,7 +15941,7 @@
 	//    import './bd_image_4.scss'
 
 /***/ },
-/* 945 */
+/* 960 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15935,11 +15950,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -15992,24 +16007,24 @@
 	};
 
 /***/ },
-/* 946 */
+/* 961 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\">\n    <tt_com_0 :data = 'data'></tt_com_0>\n    <div class=\"df_new_model_con\">\n        <div class=\"clearfix\">\n            <div class=\"dvd-col-12\">\n\n                <div v-for = \"item in data.body.dataList\" class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 1rem;overflow: hidden;\" :style=\"styleObject\">\n                    <a :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" style=\"height: 1rem;\">\n                        <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/374_200_8f1bcdbd06f1e4345047fb3bfad2741d.png\" :data-original=\"item.imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(item.imageUrl)\">\n                        <div v-if = \"item.position == 0 || item.position == 2\" class=\"right_border\"  :style=\"styleObject\"></div>\n                        <div v-if = \"item.position == 3 || item.position == 2\" class=\"top_border\"  :style=\"styleObject\"></div>\n                    </a>\n                </div>\n\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 947 */
+/* 962 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(948)
-	__vue_script__ = __webpack_require__(950)
+	__webpack_require__(963)
+	__vue_script__ = __webpack_require__(965)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_image_5.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(952)
+	__vue_template__ = __webpack_require__(967)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -16034,13 +16049,13 @@
 	})()}
 
 /***/ },
-/* 948 */
+/* 963 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(949);
+	var content = __webpack_require__(964);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -16060,7 +16075,7 @@
 	}
 
 /***/ },
-/* 949 */
+/* 964 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -16074,7 +16089,7 @@
 
 
 /***/ },
-/* 950 */
+/* 965 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16083,7 +16098,7 @@
 	    value: true
 	});
 
-	var _bd_image_ = __webpack_require__(951);
+	var _bd_image_ = __webpack_require__(966);
 
 	var _bd_image_2 = _interopRequireDefault(_bd_image_);
 
@@ -16142,7 +16157,7 @@
 	//    import './bd_image_5.scss'
 
 /***/ },
-/* 951 */
+/* 966 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16151,11 +16166,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -16208,24 +16223,24 @@
 	};
 
 /***/ },
-/* 952 */
+/* 967 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" style=\"position: relative\" :style=\"{ marginTop:data.marginTop }\">\n\n    <tt_com_0 :data = 'data'></tt_com_0>\n\n    <div class=\"model_con\">\n        <div class=\"dvd-index-module clearfix\">\n            <div class=\"index_activity\" style=\"padding:0;margin:0;\" :style=\"styleObject\">\n                <a :href=\"data.body.dataList[0].command.content\" style=\"padding:0;margin:0;\" @click=\"clickAnalysis\" position = \"0\">\n                    <!-- <img class=\"newImage\" src=\"//pic.davdian.com/free/2016/12/02/750_562_a0376febab4bafa94a6e0e4c3b6c87b4.png\" :data-original=\"data.body.dataList[0].imageUrl\" style=\"width:100%;height: 2.81rem; overflow: hidden;\"> -->\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" style=\"width:100%;height: 2.81rem; overflow: hidden;\">\n                </a>\n\n                <div class=\"df_new_model_con\" style=\"position: absolute;bottom: 0;width:100%;\">\n                    <div class=\"clearfix\" style=\"padding:0px 7.5px 5px 7.5px;\">\n                        <div class=\"dvd-new-index-module-child dvd-col-4\" style=\"padding: 0 2.5px;box-sizing: border-box;height: 1.31rem; overflow: hidden;\">\n                            <a :href=\"data.body.dataList[1].command.content\" @click=\"clickAnalysis\" position = \"1\">\n                                <!-- <img class=\"newImage\" src=\"//pic.davdian.com/free/2016/12/12/346_346_95d772212ba7dc702aaeabf7d32138cd.png\" :data-original=\"data.body.dataList[1].imageUrl\" style=\"height: 1.31rem;\"> -->\n                                <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" style=\"height: 1.31rem;\">\n                            </a>\n                        </div>\n                        <div class=\"dvd-new-index-module-child dvd-col-4\" style=\"padding: 0 2.5px;box-sizing: border-box;height: 1.31rem; overflow: hidden;\">\n                            <a :href=\"data.body.dataList[2].command.content\" @click=\"clickAnalysis\" position = \"2\">\n                                <!-- <img class=\"newImage\" src=\"//pic.davdian.com/free/2016/12/12/346_346_95d772212ba7dc702aaeabf7d32138cd.png\" :data-original=\"data.body.dataList[2].imageUrl\" style=\"height: 1.31rem;\"> -->\n                                <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[2].imageUrl)\" style=\"height: 1.31rem;\">\n                            </a>\n                        </div>\n                        <div class=\"dvd-new-index-module-child dvd-col-4\" style=\"padding: 0 2.5px;box-sizing: border-box;height: 1.31rem; overflow: hidden;\">\n                            <a :href=\"data.body.dataList[3].command.content\" @click=\"clickAnalysis\" position = \"3\">\n                                <!-- <img class=\"newImage\" src=\"//pic.davdian.com/free/2016/12/12/346_346_95d772212ba7dc702aaeabf7d32138cd.png\" :data-original=\"data.body.dataList[3].imageUrl\" style=\"height: 1.31rem;\"> -->\n                                <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[3].imageUrl)\" style=\"height: 1.31rem;\">\n                            </a>\n                        </div>\n                    </div>\n                </div>\n\n\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 953 */
+/* 968 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(954)
-	__vue_script__ = __webpack_require__(956)
+	__webpack_require__(969)
+	__vue_script__ = __webpack_require__(971)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_image_6.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(958)
+	__vue_template__ = __webpack_require__(973)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -16250,13 +16265,13 @@
 	})()}
 
 /***/ },
-/* 954 */
+/* 969 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(955);
+	var content = __webpack_require__(970);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -16276,7 +16291,7 @@
 	}
 
 /***/ },
-/* 955 */
+/* 970 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -16290,7 +16305,7 @@
 
 
 /***/ },
-/* 956 */
+/* 971 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16299,7 +16314,7 @@
 	    value: true
 	});
 
-	var _bd_image_ = __webpack_require__(957);
+	var _bd_image_ = __webpack_require__(972);
 
 	var _bd_image_2 = _interopRequireDefault(_bd_image_);
 
@@ -16338,7 +16353,7 @@
 	//    import './bd_image_6.scss'
 
 /***/ },
-/* 957 */
+/* 972 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16347,11 +16362,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -16404,24 +16419,24 @@
 	};
 
 /***/ },
-/* 958 */
+/* 973 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\">\n\n    <tt_com_0 :data = 'data'></tt_com_0>\n\n    <div class=\"df_new_model_con\">\n        <div class=\"clearfix\">\n\n\n            <div v-for = 'item in data.body.dataList' class=\"dvd-new-index-module-child dvd-col-3\"  style=\"height: 1rem;overflow: hidden;\" :style=\"styleObject\">\n                <a :href=\"item.command.content\" @click.stop=\"clickAnalysis\" :position=\"item.position\" style=\"height: 1rem;\">\n                    <!-- <img src=\"//pic.davdian.com/free/2016/12/12/186_200_a6669de09ca5ea05bbb83d30293165b5.png\" class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" :data-original=\"item.imageUrl\"> -->\n                    <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(item.imageUrl)\">\n                    <div v-if = \"item.position !=3\" class=\"right_border\" :style=\"styleObject\"></div>\n                </a>\n            </div>\n\n\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 959 */
+/* 974 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(960)
-	__vue_script__ = __webpack_require__(962)
+	__webpack_require__(975)
+	__vue_script__ = __webpack_require__(977)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_image_7.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(964)
+	__vue_template__ = __webpack_require__(979)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -16446,13 +16461,13 @@
 	})()}
 
 /***/ },
-/* 960 */
+/* 975 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(961);
+	var content = __webpack_require__(976);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -16472,7 +16487,7 @@
 	}
 
 /***/ },
-/* 961 */
+/* 976 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -16486,7 +16501,7 @@
 
 
 /***/ },
-/* 962 */
+/* 977 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16495,7 +16510,7 @@
 	    value: true
 	});
 
-	var _bd_image_ = __webpack_require__(963);
+	var _bd_image_ = __webpack_require__(978);
 
 	var _bd_image_2 = _interopRequireDefault(_bd_image_);
 
@@ -16562,7 +16577,7 @@
 	//    import './bd_image_7.scss'
 
 /***/ },
-/* 963 */
+/* 978 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16571,11 +16586,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -16627,24 +16642,24 @@
 	};
 
 /***/ },
-/* 964 */
+/* 979 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\">\n    <tt_com_0 :data=\"data\"></tt_com_0>\n    <div class=\"df_new_model_con\">\n        <div class=\"clearfix\">\n            <div class=\"dvd-col-12\" style=\"overflow: hidden;\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 2rem;overflow: hidden;\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[0].command.content\" @click.stop=\"clickAnalysis\" position=\"0\" style=\"height: 2rem;\">\n                        <!-- <img class=\"newImage\" style=\"height: 2rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_320_400_1216.png\" :data-original=\"data.body.dataList[0].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 2rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\">\n                        <div class=\"right_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"dvd-new-index-module-child dvd-col-6\">\n                    <div class=\"dvd-col-12\" style=\"height: 1rem;overflow: hidden;\" :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[1].command.content\" @click.stop=\"clickAnalysis\" position=\"1\" style=\"height: 1rem;\">\n                            <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_320_200_1216.png\" :data-original=\"data.body.dataList[1].imageUrl\"> -->\n                            <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\">\n                        </a>\n                    </div>\n                    <div class=\"dvd-col-12\" style=\"height: 1rem;overflow: hidden;\" :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[2].command.content\" @click.stop=\"clickAnalysis\" position=\"2\" style=\"height: 1rem;\">\n                            <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_320_200_1216.png\" :data-original=\"data.body.dataList[2].imageUrl\"> -->\n                            <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[2].imageUrl)\">\n                            <div class=\"top_border\" :style=\"styleObject\"></div>\n                        </a>\n                    </div>\n                </div>\n            </div>\n            <div class=\"dvd-col-12\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 1rem;overflow: hidden;\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[3].command.content\" @click.stop=\"clickAnalysis\" position=\"3\" style=\"height: 1rem;\">\n                        <!-- <img class=\"newImage\" style=\"height:1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_320_200_1216.png\" :data-original=\"data.body.dataList[3].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[3].imageUrl)\">\n                        <div class=\"top_border\" :style=\"styleObject\"></div>\n                        <div class=\"right_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 1rem;overflow: hidden;\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[4].command.content\" @click.stop=\"clickAnalysis\" position=\"4\" style=\"height: 1rem;\">\n                        <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_320_200_1216.png\" :data-original=\"data.body.dataList[4].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[4].imageUrl)\">\n                        <div class=\"top_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 965 */
+/* 980 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(966)
-	__vue_script__ = __webpack_require__(968)
+	__webpack_require__(981)
+	__vue_script__ = __webpack_require__(983)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_image_8.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(970)
+	__vue_template__ = __webpack_require__(985)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -16669,13 +16684,13 @@
 	})()}
 
 /***/ },
-/* 966 */
+/* 981 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(967);
+	var content = __webpack_require__(982);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -16695,7 +16710,7 @@
 	}
 
 /***/ },
-/* 967 */
+/* 982 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -16709,7 +16724,7 @@
 
 
 /***/ },
-/* 968 */
+/* 983 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16718,7 +16733,7 @@
 	    value: true
 	});
 
-	var _bd_image_ = __webpack_require__(969);
+	var _bd_image_ = __webpack_require__(984);
 
 	var _bd_image_2 = _interopRequireDefault(_bd_image_);
 
@@ -16785,7 +16800,7 @@
 	//    import './bd_image_8.scss'
 
 /***/ },
-/* 969 */
+/* 984 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16794,11 +16809,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -16850,24 +16865,24 @@
 	};
 
 /***/ },
-/* 970 */
+/* 985 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\">\n    <tt_com_0 :data=\"data\"></tt_com_0>\n    <div class=\"df_new_model_con\">\n        <div class=\"clearfix\">\n            <div class=\"dvd-col-12\" style=\"overflow: hidden;\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 2.34rem;overflow: hidden;\"  :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[0].command.content\" @click.stop=\"clickAnalysis\" position=\"0\" style=\"height: 2.34rem;\">\n                        <!-- <img class=\"newImage\" style=\"height: 2.34rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_320_400_1216.png\" :data-original=\"data.body.dataList[0].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 2.34rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\">\n                        <div class=\"right_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n\n                <div class=\"dvd-new-index-module-child dvd-col-6\">\n                    <div class=\"dvd-col-6 dvd-new-index-module-child\"  style=\"height: 1.17rem;overflow: hidden;\"  :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[1].command.content\" @click.stop=\"clickAnalysis\" position=\"1\" style=\"height: 1.17rem;\">\n                            <!-- <img class=\"newImage\" style=\"height: 1.17rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_160_200_1216.png\" :data-original=\"data.body.dataList[1].imageUrl\"> -->\n                            <img class=\"newImage\" style=\"height: 1.17rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\">\n                            <div class=\"right_border\" :style=\"styleObject\"></div>\n                        </a>\n                    </div>\n                    <div class=\"dvd-col-6 dvd-new-index-module-child\" style=\"height: 1.17rem;overflow: hidden;\"  :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[2].command.content\" @click.stop=\"clickAnalysis\" position=\"2\" style=\"height: 1.17rem;\" >\n                            <!-- <img class=\"newImage\" style=\"height: 1.17rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_160_200_1216.png\" :data-original=\"data.body.dataList[2].imageUrl\"> -->\n                            <img class=\"newImage\" style=\"height: 1.17rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[2].imageUrl)\">\n                        </a>\n                    </div>\n                    <div class=\"dvd-col-6 dvd-new-index-module-child\" style=\"height: 1.17rem;overflow: hidden;\"  :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[3].command.content\" @click.stop=\"clickAnalysis\" position=\"3\" style=\"height: 1.17rem;\">\n                            <!-- <img class=\"newImage\" style=\"height: 1.17rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_160_200_1216.png\" :data-original=\"data.body.dataList[3].imageUrl\"> -->\n                            <img class=\"newImage\" style=\"height: 1.17rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[3].imageUrl)\">\n                            <div class=\"right_border\" :style=\"styleObject\"></div>\n                            <div class=\"top_border\" :style=\"styleObject\"></div>\n                        </a>\n                    </div>\n                    <div class=\"dvd-col-6 dvd-new-index-module-child\" style=\"height: 1.17rem;overflow: hidden;\" :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[4].command.content\" @click.stop=\"clickAnalysis\"  style=\"height: 1.17rem;\">\n                            <!-- <img class=\"newImage\" style=\"height: 1.17rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_160_200_1216.png\" :data-original=\"data.body.dataList[4].imageUrl\"> -->\n                            <img class=\"newImage\" style=\"height: 1.17rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[4].imageUrl)\">\n                            <div class=\"top_border\" :style=\"styleObject\"></div>\n                        </a>\n                    </div>\n                </div>\n            </div>\n\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 971 */
+/* 986 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(972)
-	__vue_script__ = __webpack_require__(974)
+	__webpack_require__(987)
+	__vue_script__ = __webpack_require__(989)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_image_9.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(976)
+	__vue_template__ = __webpack_require__(991)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -16892,13 +16907,13 @@
 	})()}
 
 /***/ },
-/* 972 */
+/* 987 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(973);
+	var content = __webpack_require__(988);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -16918,7 +16933,7 @@
 	}
 
 /***/ },
-/* 973 */
+/* 988 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -16932,7 +16947,7 @@
 
 
 /***/ },
-/* 974 */
+/* 989 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16941,7 +16956,7 @@
 	    value: true
 	});
 
-	var _bd_image_ = __webpack_require__(975);
+	var _bd_image_ = __webpack_require__(990);
 
 	var _bd_image_2 = _interopRequireDefault(_bd_image_);
 
@@ -17015,7 +17030,7 @@
 	//    import './bd_image_9.scss'
 
 /***/ },
-/* 975 */
+/* 990 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17024,11 +17039,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -17079,24 +17094,24 @@
 	};
 
 /***/ },
-/* 976 */
+/* 991 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"styleTop\">\n    <tt_com_0 :data=\"data\"></tt_com_0>\n    <div class=\"df_new_model_con\">\n        <div class=\"box box-v\">\n            <div class=\"item box box-h\">\n                <div class=\"item item-2 new_image\" style=\"height: 1rem;\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[0].command.content\" @click.stop=\"clickAnalysis\" position=\"0\" style=\"height: 1rem;\">\n                        <!-- <img src=\"//pic.davdian.com/free/2016/12/12/374_200_73e4474b312a5d48acd31782b2f4c3a6.png\" class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" :data-original=\"data.body.dataList[0].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\">\n                        <div class=\"right_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"item item-2\" style=\"height: 1rem;overflow: hidden\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[1].command.content\" @click.stop=\"clickAnalysis\" position=\"1\" style=\"height: 1rem;\">\n                        <!-- <img src=\"//pic.davdian.com/free/2016/12/12/374_200_73e4474b312a5d48acd31782b2f4c3a6.png\" class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" :data-original=\"data.body.dataList[1].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\">\n                    </a>\n                </div>\n            </div>\n            <div class=\"item box box-h\" style=\"height: 1rem;overflow: hidden\">\n                <div class=\"item\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[2].command.content\" @click.stop=\"clickAnalysis\" position=\"2\" style=\"height: 1rem;\">\n                        <!-- <img src=\"//pic.davdian.com/free/2016/12/12/186_200_a6669de09ca5ea05bbb83d30293165b5.png\" class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" :data-original=\"data.body.dataList[2].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[2].imageUrl)\">\n                        <div class=\"right_border\" :style=\"styleObject\"></div>\n                        <div class=\"top_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"item\" style=\"height: 1rem;overflow: hidden\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[3].command.content\" @click.stop=\"clickAnalysis\" position=\"3\" style=\"height: 1rem;\">\n                        <!-- <img src=\"//pic.davdian.com/free/2016/12/12/186_200_a6669de09ca5ea05bbb83d30293165b5.png\" class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" :data-original=\"data.body.dataList[3].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[3].imageUrl)\">\n                        <div class=\"right_border\" :style=\"styleObject\"></div>\n                        <div class=\"top_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"item\" style=\"height: 1rem;overflow: hidden\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[4].command.content\" @click.stop=\"clickAnalysis\" position=\"4\" style=\"height: 1rem;\">\n                        <!-- <img src=\"//pic.davdian.com/free/2016/12/12/186_200_a6669de09ca5ea05bbb83d30293165b5.png\" class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" :data-original=\"data.body.dataList[4].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[4].imageUrl)\">\n                        <div class=\"right_border\" :style=\"styleObject\"></div>\n                        <div class=\"top_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"item\" style=\"height: 1rem;overflow: hidden\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[5].command.content\" @click.stop=\"clickAnalysis\" position=\"5\" style=\"height: 1rem;\">\n                        <!-- <img src=\"//pic.davdian.com/free/2016/12/12/186_200_a6669de09ca5ea05bbb83d30293165b5.png\" class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" :data-original=\"data.body.dataList[5].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[5].imageUrl)\">\n                        <div class=\"top_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 977 */
+/* 992 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(978)
-	__vue_script__ = __webpack_require__(980)
+	__webpack_require__(993)
+	__vue_script__ = __webpack_require__(995)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_image_10.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(982)
+	__vue_template__ = __webpack_require__(997)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -17121,13 +17136,13 @@
 	})()}
 
 /***/ },
-/* 978 */
+/* 993 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(979);
+	var content = __webpack_require__(994);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -17147,7 +17162,7 @@
 	}
 
 /***/ },
-/* 979 */
+/* 994 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -17161,7 +17176,7 @@
 
 
 /***/ },
-/* 980 */
+/* 995 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17170,7 +17185,7 @@
 	    value: true
 	});
 
-	var _bd_image_ = __webpack_require__(981);
+	var _bd_image_ = __webpack_require__(996);
 
 	var _bd_image_2 = _interopRequireDefault(_bd_image_);
 
@@ -17248,7 +17263,7 @@
 	//    import './bd_image_10.scss'
 
 /***/ },
-/* 981 */
+/* 996 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17257,11 +17272,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -17321,24 +17336,24 @@
 	};
 
 /***/ },
-/* 982 */
+/* 997 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\">\n\n    <tt_com_0 :data=\"data\"></tt_com_0>\n\n    <div class=\"df_new_model_con\">\n        <div class=\"clearfix\">\n            <div class=\"dvd-col-12\">\n                <div class=\"dvd-new-index-module-child dvd-col-12\" style=\"height: 0.44rem;overflow: hidden\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[0].command.content\" @click.stop=\"clickAnalysis\" position=\"0\" style=\"height: 0.44rem;\">\n                        <!-- <img class=\"newImage\" style=\"height: 0.44rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/12/750_88_3a6da1d75a2ba5d1997647406a120450.png\" :data-original=\"data.body.dataList[0].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 0.44rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\">\n                    </a>\n                </div>\n            </div>\n            <div class=\"dvd-col-12\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 2rem;overflow: hidden\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[1].command.content\" @click.stop=\"clickAnalysis\" position=\"1\" style=\"height: 2rem;\">\n                        <!-- <img src=\"//pic.davdian.com/free/2016/12/12/374_400_78523437ab1a46593dc1e566d90bdfb9.png\" class=\"newImage\" style=\"height: 2rem;overflow: hidden;\" :data-original=\"data.body.dataList[1].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 2rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\">\n                        <div class=\"right_border\" :style=\"styleObject\"></div>\n                        <div class=\"top_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 2rem;overflow: hidden\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[2].command.content\" @click.stop=\"clickAnalysis\" position=\"2\" style=\"height: 2rem;\">\n                        <!-- <img src=\"//pic.davdian.com/free/2016/12/12/374_400_78523437ab1a46593dc1e566d90bdfb9.png\" class=\"newImage\" style=\"height: 2rem;overflow: hidden;\" :data-original=\"data.body.dataList[2].imageUrl\"> -->\n                       <img class=\"newImage\" style=\"height: 2rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[2].imageUrl)\">\n                        <div class=\"top_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n            </div>\n            <div class=\"dvd-col-12\">\n                <div class=\"dvd-new-index-module-child dvd-col-4\" style=\"height: 1.3rem;overflow: hidden\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[3].command.content\" @click.stop=\"clickAnalysis\" position=\"3\" style=\"height: 1.3rem;\">\n                        <!-- <img src=\"//pic.davdian.com/free/2016/12/12/250_260_83693415b776ca1e63240ba7aaf6fc96.png\" class=\"newImage\" style=\"height: 1.3rem;overflow: hidden;\" :data-original=\"data.body.dataList[3].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1.3rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[3].imageUrl)\">\n                        <div class=\"right_border\" :style=\"styleObject\"></div>\n                        <div class=\"top_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"dvd-new-index-module-child dvd-col-4\" style=\"height: 1.3rem;overflow: hidden\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[4].command.content\" @click.stop=\"clickAnalysis\" position=\"4\" style=\"height: 1.3rem;\">\n                        <!-- <img src=\"//pic.davdian.com/free/2016/12/12/250_260_83693415b776ca1e63240ba7aaf6fc96.png\" class=\"newImage\" style=\"height: 1.3rem;overflow: hidden;\" :data-original=\"data.body.dataList[4].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1.3rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[4].imageUrl)\">\n                        <div class=\"right_border\" :style=\"styleObject\"></div>\n                        <div class=\"top_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"dvd-new-index-module-child dvd-col-4\" style=\"height: 1.3rem;overflow: hidden\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[5].command.content\" @click.stop=\"clickAnalysis\" position=\"5\" style=\"height: 1.3rem;\">\n                        <!-- <img src=\"//pic.davdian.com/free/2016/12/12/250_260_83693415b776ca1e63240ba7aaf6fc96.png\" class=\"newImage\" style=\"height: 1.3rem;overflow: hidden;\" :data-original=\"data.body.dataList[5].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1.3rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[5].imageUrl)\">\n                        <div class=\"top_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 983 */
+/* 998 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(984)
-	__vue_script__ = __webpack_require__(986)
+	__webpack_require__(999)
+	__vue_script__ = __webpack_require__(1001)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_goods_2.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(988)
+	__vue_template__ = __webpack_require__(1003)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -17363,13 +17378,13 @@
 	})()}
 
 /***/ },
-/* 984 */
+/* 999 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(985);
+	var content = __webpack_require__(1000);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -17389,7 +17404,7 @@
 	}
 
 /***/ },
-/* 985 */
+/* 1000 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -17403,7 +17418,7 @@
 
 
 /***/ },
-/* 986 */
+/* 1001 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17412,7 +17427,7 @@
 	    value: true
 	});
 
-	var _bd_goods_ = __webpack_require__(987);
+	var _bd_goods_ = __webpack_require__(1002);
 
 	var _bd_goods_2 = _interopRequireDefault(_bd_goods_);
 
@@ -17447,7 +17462,7 @@
 	//    import './bd_goods_2.scss'
 
 /***/ },
-/* 987 */
+/* 1002 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17456,15 +17471,15 @@
 	    value: true
 	});
 
-	var _bd_goods_ = __webpack_require__(911);
+	var _bd_goods_ = __webpack_require__(926);
 
 	var bd_goods_0 = _interopRequireWildcard(_bd_goods_);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -17512,24 +17527,24 @@
 	};
 
 /***/ },
-/* 988 */
+/* 1003 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\">\n\n    <tt_com_0 :data = 'data'></tt_com_0>\n\n    <div class=\"df_new_model_con\" :style=\"styleObject\">\n        <div class=\"df_new_model_con\">\n            <div class=\"df_new_title_3\" style=\"height:1.8rem;overflow: hidden;\">\n                <a :href=\"data.body.command.content\" @click=\"clickAnalysis\" style=\"height: 1.8rem;\" position=\"0\">\n                    <img class=\"newImage\" style=\"display: inline;height: 1.8rem\" v-lazy=\"imgObject(data.body.imageUrl)\">\n                </a>\n                <span class=\"up_arrow\" :style=\"styleSpan\"></span>\n            </div>\n            <bd_goods_0 :data = 'data'></bd_goods_0>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 989 */
+/* 1004 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(990)
-	__vue_script__ = __webpack_require__(992)
+	__webpack_require__(1005)
+	__vue_script__ = __webpack_require__(1007)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_goods_6.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(993)
+	__vue_template__ = __webpack_require__(1008)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -17554,13 +17569,13 @@
 	})()}
 
 /***/ },
-/* 990 */
+/* 1005 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(991);
+	var content = __webpack_require__(1006);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -17580,7 +17595,7 @@
 	}
 
 /***/ },
-/* 991 */
+/* 1006 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -17594,7 +17609,7 @@
 
 
 /***/ },
-/* 992 */
+/* 1007 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17603,11 +17618,11 @@
 	  value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -17824,24 +17839,24 @@
 	};
 
 /***/ },
-/* 993 */
+/* 1008 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-054581c4=\"\">\n  <tt_com_0 :data=\"data\" _v-054581c4=\"\"></tt_com_0>\n  <a :href=\"item.command.content\" v-for=\"item in data.body.dataList\" _v-054581c4=\"\">\n    <div class=\"hot_goods_index_md\" _v-054581c4=\"\">\n      <div class=\"goods_desc\" _v-054581c4=\"\">\n        <div class=\"img_left\" _v-054581c4=\"\">\n          <img :src=\"item.imageUrl\" alt=\"\" _v-054581c4=\"\">\n          <img v-if=\"item.topImageUrl\" class=\"topImageUrl\" :src=\"item.topImageUrl\" alt=\"\" _v-054581c4=\"\">\n        </div>\n        <div class=\"goods_info_box\" _v-054581c4=\"\">\n          <div _v-5ed5d0b8=\"\" class=\"order_good_name\" _v-054581c4=\"\">{{item.title}}</div>\n          <div class=\"goods_praice\" _v-054581c4=\"\">\n            <span _v-054581c4=\"\"><em class=\"price_symbol\" _v-054581c4=\"\">￥</em><span _v-054581c4=\"\">{{item.nowPrice}}</span></span>\n          </div>\n          <div class=\"comment_star\" _v-054581c4=\"\">\n            <span _v-054581c4=\"\">好评度：{{item.rating*100 || 0}}% </span>\n            <img v-for=\"item in parseInt((item.rating*100)/20)\" src=\"//pic.davdian.com/free/2017/07/24/%20starSelected.png\" alt=\"\" _v-054581c4=\"\">\n          </div>\n        </div>\n      </div>\n      <div v-if=\"item.comments.content\" class=\"goods_comment\" _v-054581c4=\"\">\n        <div class=\"box_arrow\" _v-054581c4=\"\"></div>\n        <div class=\"user_img\" _v-054581c4=\"\">\n          <img :src=\"item.comments.avatar\" alt=\"\" _v-054581c4=\"\">\n        </div>\n        <div class=\"comment_txt\" _v-054581c4=\"\">\n          <span class=\"user_name\" _v-054581c4=\"\">{{item.comments.nickName}}：</span>\n          <span _v-054581c4=\"\">{{item.comments.content}}</span>\n        </div>\n      </div>\n    </div>\n  </a>\n</div>\n";
 
 /***/ },
-/* 994 */
+/* 1009 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(995)
-	__vue_script__ = __webpack_require__(997)
+	__webpack_require__(1010)
+	__vue_script__ = __webpack_require__(1012)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_goods_5.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(998)
+	__vue_template__ = __webpack_require__(1013)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -17866,13 +17881,13 @@
 	})()}
 
 /***/ },
-/* 995 */
+/* 1010 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(996);
+	var content = __webpack_require__(1011);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -17892,7 +17907,7 @@
 	}
 
 /***/ },
-/* 996 */
+/* 1011 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -17906,7 +17921,7 @@
 
 
 /***/ },
-/* 997 */
+/* 1012 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17915,11 +17930,11 @@
 	  value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -18237,24 +18252,24 @@
 	};
 
 /***/ },
-/* 998 */
+/* 1013 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-0561b0c6=\"\">\n  <tt_com_0 :data=\"data\" _v-0561b0c6=\"\"></tt_com_0>\n  <div _v-0561b0c6=\"\">\n      <div class=\"swiper-container related-item-list-new swiper-container-horizontal swiper-container-free-mode\" _v-0561b0c6=\"\">\n        <div class=\"swiper-wrapper\" _v-0561b0c6=\"\">\n          <div v-for=\"item in data.body.dataList\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-0561b0c6=\"\">\n            <a :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-0561b0c6=\"\">\n              <div class=\"goods_img_size\" _v-0561b0c6=\"\">\n                <img :src=\"item.imageUrl\" _v-0561b0c6=\"\">\n                <div v-if=\"item.promotionLabel\" class=\"limitTag\" _v-0561b0c6=\"\">{{item.promotionLabel}}</div>\n              </div>\n              <div class=\"new_name1\" _v-0561b0c6=\"\">{{ item.title }}</div>\n              <div class=\"price1\" _v-0561b0c6=\"\">\n                <span class=\"current-price1\" _v-0561b0c6=\"\"><span style=\"font-size: 12px;\" _v-0561b0c6=\"\">¥ </span>{{item.nowPrice}}</span>\n              </div>\n            </a>\n          </div>\n          <div v-if=\"data.body.more\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-0561b0c6=\"\">\n            <a :href=\"data.body.command.content\" position=\"more\" _v-0561b0c6=\"\">\n              <div class=\"goods_img_size\" _v-0561b0c6=\"\">\n                <img src=\"//pic.davdian.com/free/2016/12/20/300_300_2f12c4229c5444864431d2cd8cd1bdb3.jpg\" _v-0561b0c6=\"\">\n              </div>\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 999 */
+/* 1014 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1000)
-	__vue_script__ = __webpack_require__(1002)
+	__webpack_require__(1015)
+	__vue_script__ = __webpack_require__(1017)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_goods_7.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1003)
+	__vue_template__ = __webpack_require__(1018)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18279,13 +18294,13 @@
 	})()}
 
 /***/ },
-/* 1000 */
+/* 1015 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1001);
+	var content = __webpack_require__(1016);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -18305,7 +18320,7 @@
 	}
 
 /***/ },
-/* 1001 */
+/* 1016 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -18319,7 +18334,7 @@
 
 
 /***/ },
-/* 1002 */
+/* 1017 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -18328,11 +18343,11 @@
 	  value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -18671,18 +18686,18 @@
 	};
 
 /***/ },
-/* 1003 */
+/* 1018 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-052952c2=\"\">\n  <tt_com_0 :data=\"data\" _v-052952c2=\"\"></tt_com_0>\n  <ul _v-052952c2=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-052952c2=\"\">\n      <a :href=\"item.command.content\" _v-052952c2=\"\">\n        <div class=\"img_container\" _v-052952c2=\"\">\n          <div class=\"img_container_inner\" _v-052952c2=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-052952c2=\"\">\n          </div>\n          <div class=\"order_good_info_container\" _v-052952c2=\"\">\n            <div class=\"order_good_name\" _v-052952c2=\"\">{{item.title}}</div>\n            <div class=\"order_good_name_in\" _v-052952c2=\"\">{{item.msg}}</div>\n            <div class=\"order_good_price\" _v-052952c2=\"\">\n              <span _v-052952c2=\"\"><em class=\"price_symbol\" _v-052952c2=\"\">￥</em><span _v-052952c2=\"\">{{item.nowPrice}}</span></span><span v-if=\"item.memReturn\" class=\"membership_crown\" _v-052952c2=\"\">会员返<em _v-052952c2=\"\">￥</em>{{item.memReturn}}</span><span v-if=\"item.prePrice\" class=\"membership_crown_pre\" _v-052952c2=\"\">\n            市场价<em _v-052952c2=\"\">￥</em>{{item.prePrice}}</span>\n            </div>\n          </div>\n        </div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-052952c2=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-052952c2=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-052952c2=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-052952c2=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-052952c2=\"\"></div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 1004 */
+/* 1019 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_template__ = __webpack_require__(1005)
+	__vue_template__ = __webpack_require__(1020)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18707,24 +18722,24 @@
 	})()}
 
 /***/ },
-/* 1005 */
+/* 1020 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div></div>\n";
 
 /***/ },
-/* 1006 */
+/* 1021 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1007)
-	__vue_script__ = __webpack_require__(1009)
+	__webpack_require__(1022)
+	__vue_script__ = __webpack_require__(1024)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_web_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1011)
+	__vue_template__ = __webpack_require__(1026)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18749,13 +18764,13 @@
 	})()}
 
 /***/ },
-/* 1007 */
+/* 1022 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1008);
+	var content = __webpack_require__(1023);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -18775,7 +18790,7 @@
 	}
 
 /***/ },
-/* 1008 */
+/* 1023 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -18789,7 +18804,7 @@
 
 
 /***/ },
-/* 1009 */
+/* 1024 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18798,7 +18813,7 @@
 	    value: true
 	});
 
-	var _bd_web_ = __webpack_require__(1010);
+	var _bd_web_ = __webpack_require__(1025);
 
 	var _bd_web_2 = _interopRequireDefault(_bd_web_);
 
@@ -18819,7 +18834,7 @@
 	//    import './bd_web_0.scss'
 
 /***/ },
-/* 1010 */
+/* 1025 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18828,7 +18843,7 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -18867,24 +18882,24 @@
 	};
 
 /***/ },
-/* 1011 */
+/* 1026 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"only_html\" :style=\"styleObject\" @click=\"clickAnalysis\">\n        <div v-html=\"data.body.html\"></div>\n</div>\n";
 
 /***/ },
-/* 1012 */
+/* 1027 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1013)
-	__vue_script__ = __webpack_require__(1015)
+	__webpack_require__(1028)
+	__vue_script__ = __webpack_require__(1030)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/cover_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1016)
+	__vue_template__ = __webpack_require__(1031)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -18909,13 +18924,13 @@
 	})()}
 
 /***/ },
-/* 1013 */
+/* 1028 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1014);
+	var content = __webpack_require__(1029);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -18935,7 +18950,7 @@
 	}
 
 /***/ },
-/* 1014 */
+/* 1029 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -18949,7 +18964,7 @@
 
 
 /***/ },
-/* 1015 */
+/* 1030 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18990,24 +19005,24 @@
 	};
 
 /***/ },
-/* 1016 */
+/* 1031 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"cover_0\" :style=\"styleObject\" >\n    <img :src=\"data.body.imgUrl\">\n</div>\n";
 
 /***/ },
-/* 1017 */
+/* 1032 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1018)
-	__vue_script__ = __webpack_require__(1020)
+	__webpack_require__(1033)
+	__vue_script__ = __webpack_require__(1035)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/title_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1021)
+	__vue_template__ = __webpack_require__(1036)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -19032,13 +19047,13 @@
 	})()}
 
 /***/ },
-/* 1018 */
+/* 1033 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1019);
+	var content = __webpack_require__(1034);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -19058,7 +19073,7 @@
 	}
 
 /***/ },
-/* 1019 */
+/* 1034 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -19072,7 +19087,7 @@
 
 
 /***/ },
-/* 1020 */
+/* 1035 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19125,24 +19140,24 @@
 	};
 
 /***/ },
-/* 1021 */
+/* 1036 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"title_0\" :style=\"styleObject\">\n    <div v-text='data.body.title'></div>\n    <div v-if='data.body.come && data.body.come != 0.00' class='title_o_come'>\n        <i class='mui-price-rmb'>￥</i><span v-text='data.body.come'></span>\n    </div>\n</div>\n";
 
 /***/ },
-/* 1022 */
+/* 1037 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1023)
-	__vue_script__ = __webpack_require__(1025)
+	__webpack_require__(1038)
+	__vue_script__ = __webpack_require__(1040)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/popularity_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1026)
+	__vue_template__ = __webpack_require__(1041)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -19167,13 +19182,13 @@
 	})()}
 
 /***/ },
-/* 1023 */
+/* 1038 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1024);
+	var content = __webpack_require__(1039);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -19193,7 +19208,7 @@
 	}
 
 /***/ },
-/* 1024 */
+/* 1039 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -19207,7 +19222,7 @@
 
 
 /***/ },
-/* 1025 */
+/* 1040 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19267,24 +19282,24 @@
 	};
 
 /***/ },
-/* 1026 */
+/* 1041 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<a class=\"popularity_0\" :style=\"styleObject\" :href=\"data.body.command.content\">\n    <div class=\"date\">\n        <span>{{data.body.startTime}}</span>\n    </div>\n    <div class=\"hot\">\n        <i class=\"heart\">\n            <img src=\"//pic.davdian.com/free/2016/12/22/30_28_d3f6958c35fed5bc31b976f8cddb8244.png\" alt=\"\">\n        </i>\n        <span class=\"pv\">{{data.body.pv}}人气</span>\n        <div class=\"headpic\">\n            <div class=\"img\" v-for=\"item in data.body.dataList\">\n                <img :src=\"item.avatar\" alt=\"\">\n            </div>\n            </div>\n\n    </div>\n    <div class=\"getmore\">\n        <i class=\"icon\"></i>\n    </div>\n\n\n</a>\n";
 
 /***/ },
-/* 1027 */
+/* 1042 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1028)
-	__vue_script__ = __webpack_require__(1030)
+	__webpack_require__(1043)
+	__vue_script__ = __webpack_require__(1045)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/course_desc_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1035)
+	__vue_template__ = __webpack_require__(1050)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -19309,13 +19324,13 @@
 	})()}
 
 /***/ },
-/* 1028 */
+/* 1043 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1029);
+	var content = __webpack_require__(1044);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -19335,7 +19350,7 @@
 	}
 
 /***/ },
-/* 1029 */
+/* 1044 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -19343,13 +19358,17 @@
 
 
 	// module
+<<<<<<< HEAD
 	exports.push([module.id, ".no_discuss[_v-26b56ef0] {\n  padding-bottom: 20px;\n  text-align: center;\n  /*margin-top: -15px;*/ }\n  .no_discuss img[_v-26b56ef0] {\n    width: 120px;\n    display: inline-block; }\n  .no_discuss p[_v-26b56ef0] {\n    color: #666;\n    margin-top: .3rem;\n    padding-bottom: .1rem;\n    width: 100%;\n    text-align: center;\n    font-size: .14rem;\n    display: inline-block; }\n  .no_discuss .discuss_top_write[_v-26b56ef0] {\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n    .no_discuss .discuss_top_write img[_v-26b56ef0] {\n      width: 11px;\n      margin-left: 0; }\n  .no_discuss .discuss_top_no_write[_v-26b56ef0] {\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n\n.discuss_top[_v-26b56ef0] {\n  padding: 10px;\n  padding-top: 15px;\n  position: relative; }\n  .discuss_top .discuss_top_write[_v-26b56ef0] {\n    float: left;\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 130px;\n    font-size: 12px; }\n    .discuss_top .discuss_top_write img[_v-26b56ef0] {\n      width: 11px; }\n  .discuss_top .discuss_top_no_write[_v-26b56ef0] {\n    float: left;\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 139px;\n    font-size: 12px; }\n  .discuss_top .discuss_top_alldiscuss[_v-26b56ef0] {\n    float: right;\n    color: #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-right: 10px;\n    font-size: 12px; }\n  .discuss_top .icon[_v-26b56ef0] {\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n    transform: rotate(45deg);\n    background: none;\n    top: 22px;\n    position: absolute;\n    right: 11px; }\n\n.discuss_top[_v-26b56ef0]:after {\n  content: \"\";\n  height: 0;\n  clear: both;\n  display: table; }\n\n.discuss_container[_v-26b56ef0] {\n  padding-top: 0.21rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  padding-bottom: 0.15rem;\n  font-size: 0;\n  background: #fff;\n  border-bottom: 0.5px solid #F1F1F1; }\n\n.discuss_container_noborder[_v-26b56ef0] {\n  border-bottom: 0px; }\n\n.discuss_title .title_all[_v-26b56ef0] {\n  display: inline-block;\n  vertical-align: middle; }\n\n.discuss_title .title_img[_v-26b56ef0] {\n  width: 0.24rem;\n  height: 0.24rem;\n  border-radius: 50%;\n  background: red; }\n\n.discuss_title .title_name[_v-26b56ef0] {\n  font-size: 0.14rem;\n  color: #666666;\n  margin-left: 0.05rem; }\n\n.discuss_title .title_time[_v-26b56ef0] {\n  font-size: 0.12rem;\n  margin-left: 0.03rem;\n  color: #999999; }\n\n.discuss_title .title_star[_v-26b56ef0] {\n  width: 0.59rem;\n  float: right;\n  margin-top: 0.06rem; }\n\n.discuss_content[_v-26b56ef0] {\n  font-size: 0.13rem;\n  color: #333333;\n  margin-top: 0.1rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 5;\n  display: -webkit-box; }\n\n.discuss_seeAll[_v-26b56ef0] {\n  width: 0.8rem;\n  font-size: 0.13rem;\n  color: #FF4A7D;\n  padding-top: 0.1rem; }\n\n.discuss_imgContainer[_v-26b56ef0] {\n  font-size: 0;\n  width: 3.1rem;\n  /*min-height: 1rem;*/\n  margin-top: 0.1rem; }\n  .discuss_imgContainer .discuss_img[_v-26b56ef0] {\n    width: 0.9rem;\n    height: 0.9rem;\n    background: red;\n    display: inline-block;\n    vertical-align: top;\n    margin-right: 0.1rem;\n    margin-bottom: 0.1rem;\n    border-radius: 3px; }\n\n.discuss_share[_v-26b56ef0] {\n  width: 100%;\n  height: 0.16rem; }\n  .discuss_share .discuss_share_container[_v-26b56ef0] {\n    height: 0.16rem;\n    float: right;\n    font-size: 0.11rem;\n    color: #999999; }\n    .discuss_share .discuss_share_container img[_v-26b56ef0] {\n      width: 0.15rem; }\n\n.discuss_all[_v-26b56ef0] {\n  width: 100%;\n  color: #999999;\n  text-align: center;\n  height: 0.5rem; }\n  .discuss_all .discuss_all_content[_v-26b56ef0] {\n    display: inline-block;\n    border-bottom: 1px solid #999;\n    height: 19px; }\n\n.attention_all[_v-26b56ef0] {\n  font-size: 0;\n  display: inline-block;\n  vertical-align: middle; }\n\n.attention_yes[_v-26b56ef0] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  /*border: 0.5px solid #FF4A7D;*/\n  border-radius: 13px; }\n\n.attention_yes1[_v-26b56ef0] {\n  width: 0.45rem !important;\n  height: 0.18rem !important;\n  display: inline-block;\n  vertical-align: top; }\n\n.attention_no[_v-26b56ef0] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #fff;\n  background: #D8D8D8;\n  border: 0.5px solid #D8D8D8;\n  border-radius: 13px; }\n\n.maskAttention[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background: #000;\n  opacity: 0.4;\n  z-index: 1001; }\n\n.contentAttention[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 1202;\n  margin: auto;\n  background: #000;\n  width: 2.7rem;\n  opacity: 0.65;\n  border-radius: 6px;\n  color: #fff;\n  height: 0.72rem; }\n\n.contentAttention h1[_v-26b56ef0] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center;\n  margin-top: 0.15rem; }\n\n.contentAttention p[_v-26b56ef0] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center; }\n\n.course_desc_0 .class_introduce_tit[_v-26b56ef0] {\n  text-align: center !important;\n  line-height: 15px; }\n\n.course_desc_0 .class_introduce_tit .class_dis[_v-26b56ef0], .course_desc_0 .class_introduce_tit .theater_dis[_v-26b56ef0] {\n  display: inline-block !important; }\n\n.course_desc_0 .class_introduce_tit .class_dis .active[_v-26b56ef0] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .theater_dis .active[_v-26b56ef0] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .class_dis span[_v-26b56ef0] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .class_introduce_tit .theater_dis span[_v-26b56ef0] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .fixStyle[_v-26b56ef0] {\n  position: fixed;\n  top: 44px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0 .fixStyle1[_v-26b56ef0] {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0[_v-26b56ef0] {\n  position: relative; }\n\n.introduceGuide[_v-26b56ef0] {\n  position: absolute;\n  top: -14px;\n  width: 3.2rem;\n  right: 21px;\n  z-index: 1000; }\n\n.introduceGuide1[_v-26b56ef0] {\n  position: absolute;\n  left: 0;\n  width: 248px;\n  z-index: 1000;\n  bottom: -10px; }\n\n.introduceGuideMask[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background: #000000;\n  opacity: 0.6;\n  z-index: 999; }\n\n.introduceGuidebtn[_v-26b56ef0] {\n  width: 120px;\n  height: 40px;\n  position: fixed;\n  left: 50%;\n  margin-left: -60px;\n  bottom: 60px;\n  z-index: 1000;\n  background: -webkit-linear-gradient(left, #FF7C7C, #FF6A8B);\n  border-radius: 100px;\n  text-align: center;\n  line-height: 40px;\n  color: #fff; }\n", ""]);
+=======
+	exports.push([module.id, ".no_discuss[_v-6581e61a] {\n  padding-bottom: 20px;\n  text-align: center;\n  /*margin-top: -15px;*/ }\n  .no_discuss img[_v-6581e61a] {\n    width: 120px;\n    display: inline-block; }\n  .no_discuss p[_v-6581e61a] {\n    color: #666;\n    margin-top: .3rem;\n    padding-bottom: .1rem;\n    width: 100%;\n    text-align: center;\n    font-size: .14rem;\n    display: inline-block; }\n  .no_discuss .discuss_top_write[_v-6581e61a] {\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n    .no_discuss .discuss_top_write img[_v-6581e61a] {\n      width: 11px;\n      margin-left: 0; }\n  .no_discuss .discuss_top_no_write[_v-6581e61a] {\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n\n.discuss_top[_v-6581e61a] {\n  padding: 10px;\n  padding-top: 15px;\n  position: relative; }\n  .discuss_top .discuss_top_write[_v-6581e61a] {\n    float: left;\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 130px;\n    font-size: 12px; }\n    .discuss_top .discuss_top_write img[_v-6581e61a] {\n      width: 11px; }\n  .discuss_top .discuss_top_no_write[_v-6581e61a] {\n    float: left;\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 139px;\n    font-size: 12px; }\n  .discuss_top .discuss_top_alldiscuss[_v-6581e61a] {\n    float: right;\n    color: #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-right: 10px;\n    font-size: 12px; }\n  .discuss_top .icon[_v-6581e61a] {\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n    transform: rotate(45deg);\n    background: none;\n    top: 22px;\n    position: absolute;\n    right: 11px; }\n\n.discuss_top[_v-6581e61a]:after {\n  content: \"\";\n  height: 0;\n  clear: both;\n  display: table; }\n\n.discuss_container[_v-6581e61a] {\n  padding-top: 0.21rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  padding-bottom: 0.15rem;\n  font-size: 0;\n  background: #fff;\n  border-bottom: 0.5px solid #F1F1F1; }\n\n.discuss_container_noborder[_v-6581e61a] {\n  border-bottom: 0px; }\n\n.discuss_title .title_all[_v-6581e61a] {\n  display: inline-block;\n  vertical-align: middle; }\n\n.discuss_title .title_img[_v-6581e61a] {\n  width: 0.24rem;\n  height: 0.24rem;\n  border-radius: 50%;\n  background: red; }\n\n.discuss_title .title_name[_v-6581e61a] {\n  font-size: 0.14rem;\n  color: #666666;\n  margin-left: 0.05rem; }\n\n.discuss_title .title_time[_v-6581e61a] {\n  font-size: 0.12rem;\n  margin-left: 0.03rem;\n  color: #999999; }\n\n.discuss_title .title_star[_v-6581e61a] {\n  width: 0.59rem;\n  float: right;\n  margin-top: 0.06rem; }\n\n.discuss_content[_v-6581e61a] {\n  font-size: 0.13rem;\n  color: #333333;\n  margin-top: 0.1rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 5;\n  display: -webkit-box; }\n\n.discuss_seeAll[_v-6581e61a] {\n  width: 0.8rem;\n  font-size: 0.13rem;\n  color: #FF4A7D;\n  padding-top: 0.1rem; }\n\n.discuss_imgContainer[_v-6581e61a] {\n  font-size: 0;\n  width: 3.1rem;\n  /*min-height: 1rem;*/\n  margin-top: 0.1rem; }\n  .discuss_imgContainer .discuss_img[_v-6581e61a] {\n    width: 0.9rem;\n    height: 0.9rem;\n    background: red;\n    display: inline-block;\n    vertical-align: top;\n    margin-right: 0.1rem;\n    margin-bottom: 0.1rem;\n    border-radius: 3px; }\n\n.discuss_share[_v-6581e61a] {\n  width: 100%;\n  height: 0.16rem; }\n  .discuss_share .discuss_share_container[_v-6581e61a] {\n    height: 0.16rem;\n    float: right;\n    font-size: 0.11rem;\n    color: #999999; }\n    .discuss_share .discuss_share_container img[_v-6581e61a] {\n      width: 0.15rem; }\n\n.discuss_all[_v-6581e61a] {\n  width: 100%;\n  color: #999999;\n  text-align: center;\n  height: 0.5rem; }\n  .discuss_all .discuss_all_content[_v-6581e61a] {\n    display: inline-block;\n    border-bottom: 1px solid #999;\n    height: 19px; }\n\n.attention_all[_v-6581e61a] {\n  font-size: 0;\n  display: inline-block;\n  vertical-align: middle; }\n\n.attention_yes[_v-6581e61a] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  /*border: 0.5px solid #FF4A7D;*/\n  border-radius: 13px; }\n\n.attention_yes1[_v-6581e61a] {\n  width: 0.45rem !important;\n  height: 0.18rem !important;\n  display: inline-block;\n  vertical-align: top; }\n\n.attention_no[_v-6581e61a] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #fff;\n  background: #D8D8D8;\n  border: 0.5px solid #D8D8D8;\n  border-radius: 13px; }\n\n.maskAttention[_v-6581e61a] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background: #000;\n  opacity: 0.4;\n  z-index: 1001; }\n\n.contentAttention[_v-6581e61a] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 1202;\n  margin: auto;\n  background: #000;\n  width: 2.7rem;\n  opacity: 0.65;\n  border-radius: 6px;\n  color: #fff;\n  height: 0.72rem; }\n\n.contentAttention h1[_v-6581e61a] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center;\n  margin-top: 0.15rem; }\n\n.contentAttention p[_v-6581e61a] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center; }\n\n.course_desc_0 .class_introduce_tit[_v-6581e61a] {\n  text-align: center !important;\n  line-height: 15px; }\n\n.course_desc_0 .class_introduce_tit .class_dis[_v-6581e61a], .course_desc_0 .class_introduce_tit .theater_dis[_v-6581e61a] {\n  display: inline-block !important; }\n\n.course_desc_0 .class_introduce_tit .class_dis .active[_v-6581e61a] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .theater_dis .active[_v-6581e61a] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .class_dis span[_v-6581e61a] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .class_introduce_tit .theater_dis span[_v-6581e61a] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .fixStyle[_v-6581e61a] {\n  position: fixed;\n  top: 44px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0 .fixStyle1[_v-6581e61a] {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0[_v-6581e61a] {\n  position: relative; }\n\n.introduceGuide[_v-6581e61a] {\n  position: absolute;\n  top: -14px;\n  width: 3.2rem;\n  right: 21px;\n  z-index: 1000; }\n\n.introduceGuide1[_v-6581e61a] {\n  position: absolute;\n  left: 0;\n  width: 248px;\n  z-index: 1000;\n  bottom: -10px; }\n\n.introduceGuideMask[_v-6581e61a] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  background: #000000;\n  opacity: 0.6;\n  z-index: 999; }\n\n.introduceGuidebtn[_v-6581e61a] {\n  width: 120px;\n  height: 40px;\n  position: fixed;\n  left: 50%;\n  margin-left: -60px;\n  bottom: 60px;\n  z-index: 1000;\n  background: -webkit-linear-gradient(left, #FF7C7C, #FF6A8B);\n  border-radius: 100px;\n  text-align: center;\n  line-height: 40px;\n  color: #fff; }\n", ""]);
+>>>>>>> caa070bc076df6bb61437c5db0ee8dba4a2ea93f
 
 	// exports
 
 
 /***/ },
-/* 1030 */
+/* 1045 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19358,9 +19377,9 @@
 	  value: true
 	});
 
-	__webpack_require__(1031);
+	__webpack_require__(1046);
 
-	var _course_desc_ = __webpack_require__(1033);
+	var _course_desc_ = __webpack_require__(1048);
 
 	var _course_desc_2 = _interopRequireDefault(_course_desc_);
 
@@ -19871,16 +19890,16 @@
 	// </style>
 
 /***/ },
-/* 1031 */
+/* 1046 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1032);
+	var content = __webpack_require__(1047);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(237)(content, {});
+	var update = __webpack_require__(252)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -19897,7 +19916,7 @@
 	}
 
 /***/ },
-/* 1032 */
+/* 1047 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -19911,7 +19930,7 @@
 
 
 /***/ },
-/* 1033 */
+/* 1048 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -19920,7 +19939,7 @@
 	    value: true
 	});
 
-	var _api = __webpack_require__(1034);
+	var _api = __webpack_require__(1049);
 
 	var _api2 = _interopRequireDefault(_api);
 
@@ -20219,7 +20238,7 @@
 	};
 
 /***/ },
-/* 1034 */
+/* 1049 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20654,24 +20673,28 @@
 	exports.default = layout;
 
 /***/ },
-/* 1035 */
+/* 1050 */
 /***/ function(module, exports) {
 
+<<<<<<< HEAD
 	module.exports = "\n<div class=\"course_desc_0\" :style=\"styleObject\" _v-26b56ef0=\"\">\n    <div class=\"block\" style=\"width: 100%;height: 47px;\" v-if=\"fixFlag\" _v-26b56ef0=\"\"></div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle: fixFlag}\" v-if=\"!isApp\" _v-26b56ef0=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-26b56ef0=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-26b56ef0=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-26b56ef0=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle1: fixFlag}\" v-if=\"isApp\" _v-26b56ef0=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-26b56ef0=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-26b56ef0=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-26b56ef0=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_intrduce_success\" _v-26b56ef0=\"\"></div>\n    <div v-if=\"class_introduce_left==1\" class=\"class_intrduce_left\" _v-26b56ef0=\"\">\n        <div v-if=\"courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_div\" _v-26b56ef0=\"\">\n            <img :src=\"item.imgUri\" v-for=\"(item,index) in courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_img\" _v-26b56ef0=\"\">\n        </div>\n        <div class=\"left_introduce_text\" _v-26b56ef0=\"\">\n            <p v-html=\"courseDescInfo.courseDesc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==0\" class=\"class_introduce_right\" _v-26b56ef0=\"\">\n        <div class=\"class_introduce_con\" _v-26b56ef0=\"\">\n            <a _v-26b56ef0=\"\">\n                <div class=\"teacher_tit\" _v-26b56ef0=\"\">\n                    <img @click=\"goTeacher(teacherDescInfo.command.content)\" class=\"img\" :src=\"teacherDescInfo.teacherAvatar\" alt=\"\" _v-26b56ef0=\"\">\n                    <div class=\"teacher_dis\" _v-26b56ef0=\"\">\n                        <span class=\"techer\" _v-26b56ef0=\"\">{{teacherDescInfo.teacherName}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != teacherDescInfo.teacherId\" _v-26b56ef0=\"\">\n                        <!-- <div class='attention_yes' v-if='attention==0' @click='attention_yes'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"attention==0\" @click=\"attention_yes\" _v-26b56ef0=\"\">\n                        <div class=\"attention_no\" v-if=\"attention==1\" _v-26b56ef0=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-26b56ef0=\"\">\n                <p v-html=\"teacherDescInfo.teacherDesc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n            </div>\n        </div>\n        <div class=\"class_introduce_con guest_introduce_con\" v-for=\"item in guestList\" _v-26b56ef0=\"\">\n            <a _v-26b56ef0=\"\">\n                <div class=\"teacher_tit\" _v-26b56ef0=\"\">\n                    <img @click=\"goTeacher(item.command.content)\" class=\"img\" :src=\"item.avatar\" alt=\"\" _v-26b56ef0=\"\">\n                    <div class=\"teacher_dis\" _v-26b56ef0=\"\">\n                        <span class=\"techer\" _v-26b56ef0=\"\">{{item.name}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != item.teacherId\" _v-26b56ef0=\"\">\n                        <!-- <div class='attention_yes' v-if='item.followStatus==0' @click='attention_yes_guest(item.teacherId)'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"item.followStatus==0\" @click=\"attention_yes_guest(item.teacherId)\" _v-26b56ef0=\"\">\n                        <div class=\"attention_no\" v-if=\"item.followStatus==1\" _v-26b56ef0=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-26b56ef0=\"\">\n                <p v-html=\"item.desc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n            </div>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==2\" _v-26b56ef0=\"\">\n        <div class=\"discuss_top\" _v-26b56ef0=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==1\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllSignUp.png\" _v-26b56ef0=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==0\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png\" _v-26b56ef0=\"\">\n            <div class=\"discuss_top_write\" @click=\"writeNote\" v-if=\"userTicket==1 &amp;&amp; AppVersionFlag\" _v-26b56ef0=\"\">\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\" _v-26b56ef0=\"\">\n\n            </div>\n            <div class=\"discuss_top_no_write\" v-if=\"userTicket==0 &amp;&amp; AppVersionFlag\" _v-26b56ef0=\"\">\n                报名后才能写笔记哦\n            </div>\n            <div class=\"discuss_top_alldiscuss\" @click=\"allNote\" _v-26b56ef0=\"\">\n                全部笔记\n                <!-- <img src=\"//pic.davdian.com/free/2017/07/26/entry.png\"> -->\n            </div>\n            <i class=\"icon\" _v-26b56ef0=\"\"></i>\n        </div>\n        <div class=\"discuss_container\" v-if=\"notesList.length!=0\" :class=\"{discuss_container_noborder: index == notesList.length-1}\" v-for=\"(item, index) in notesList\" @click.stop=\"show_all(item)\" _v-26b56ef0=\"\">\n            <div class=\"discuss_title\" _v-26b56ef0=\"\">\n                <div class=\"title_img title_all\" :style=\"{'background': 'url(' + item.headImg + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-26b56ef0=\"\"></div>    \n                <div class=\"title_name title_all\" v-text=\"item.userName\" _v-26b56ef0=\"\"></div>\n                <div class=\"title_time title_all\" v-text=\"item.createTime\" _v-26b56ef0=\"\"></div>\n                <img class=\"title_star title_all\" v-if=\"item.score == 1\" src=\"//pic.davdian.com/free/2017/05/09/star_1.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 2\" src=\"//pic.davdian.com/free/2017/05/09/star_2.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 3\" src=\"//pic.davdian.com/free/2017/05/09/star_3.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 4\" src=\"//pic.davdian.com/free/2017/05/09/star_4.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 5\" src=\"//pic.davdian.com/free/2017/05/09/star_5.png\" _v-26b56ef0=\"\">\n            </div>\n            <div class=\"discuss_content\" v-html=\"item.content.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==1\" @click.stop=\"showAll(index)\" _v-26b56ef0=\"\">查看全部</div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==2\" @click.stop=\"showAll1(index)\" _v-26b56ef0=\"\">收起</div>\n            <div class=\"discuss_imgContainer\" _v-26b56ef0=\"\">\n                <div class=\"discuss_img\" :style=\"{'background': 'url(' + item1 + ') center center / cover no-repeat' , 'background-size': 'cover'}\" v-for=\"(item1, index) in item.imgList\" @click=\"showImg(index,item.imgList, item1)\" _v-26b56ef0=\"\"></div>\n            </div>\n            <div class=\"discuss_share\" v-if=\"isApp\" _v-26b56ef0=\"\">\n                <div class=\"discuss_share_container\" @click.stop=\"share(item)\" v-if=\"isApp\" _v-26b56ef0=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/02/07/material-share.png\" _v-26b56ef0=\"\">\n                    <span v-text=\"item.shareNum\" v-if=\"item.shareNum !=0\" _v-26b56ef0=\"\"></span>\n                </div>\n            </div>\n        </div>\n        <!-- <div class='discuss_all'>\n            <div class=\"discuss_all_content\" @click='allNote' v-if='notesList.length!=0'>\n                查看全部{{notesNum}}条听课笔记\n            </div>\n        </div> -->\n        <div class=\"no_discuss\" v-if=\"notesList.length==0\" _v-26b56ef0=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/10/error_img.png\" _v-26b56ef0=\"\">\n            <p _v-26b56ef0=\"\">快来写笔记吧</p>\n            <!-- <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\">\n            </div>\n            <div class='discuss_top_no_write' v-if='userTicket==0 && AppVersionFlag'>\n                报名后才能写笔记哦\n            </div> -->\n        </div>\n    </div>\n    <!-- <div class='maskAttention' v-if='maskAttention'></div> -->\n    <div class=\"contentAttention\" v-if=\"maskAttention\" _v-26b56ef0=\"\">\n        <h1 _v-26b56ef0=\"\">关注成功</h1>\n        <p _v-26b56ef0=\"\">老师开讲新课，我们会悄悄告诉你呦</p>\n    </div>\n\n    <img v-if=\"introduceGuide &amp;&amp; guide==1\" class=\"introduceGuide\" src=\"//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png\" _v-26b56ef0=\"\">\n\n    <div v-if=\"introduceGuide\" class=\"introduceGuideMask\" _v-26b56ef0=\"\"></div>\n    <div v-if=\"introduceGuide\" class=\"introduceGuidebtn\" @click=\"know\" _v-26b56ef0=\"\">知道了</div>\n\n</div>\n";
+=======
+	module.exports = "\n<div class=\"course_desc_0\" :style=\"styleObject\" _v-6581e61a=\"\">\n    <div class=\"block\" style=\"width: 100%;height: 47px;\" v-if=\"fixFlag\" _v-6581e61a=\"\"></div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle: fixFlag}\" v-if=\"!isApp\" _v-6581e61a=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-6581e61a=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-6581e61a=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-6581e61a=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle1: fixFlag}\" v-if=\"isApp\" _v-6581e61a=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-6581e61a=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-6581e61a=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-6581e61a=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_intrduce_success\" _v-6581e61a=\"\"></div>\n    <div v-if=\"class_introduce_left==1\" class=\"class_intrduce_left\" _v-6581e61a=\"\">\n        <div v-if=\"courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_div\" _v-6581e61a=\"\">\n            <img :src=\"item.imgUri\" v-for=\"(item,index) in courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_img\" _v-6581e61a=\"\">\n        </div>\n        <div class=\"left_introduce_text\" _v-6581e61a=\"\">\n            <p v-html=\"courseDescInfo.courseDesc.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></p>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==0\" class=\"class_introduce_right\" _v-6581e61a=\"\">\n        <div class=\"class_introduce_con\" _v-6581e61a=\"\">\n            <a _v-6581e61a=\"\">\n                <div class=\"teacher_tit\" _v-6581e61a=\"\">\n                    <img @click=\"goTeacher(teacherDescInfo.command.content)\" class=\"img\" :src=\"teacherDescInfo.teacherAvatar\" alt=\"\" _v-6581e61a=\"\">\n                    <div class=\"teacher_dis\" _v-6581e61a=\"\">\n                        <span class=\"techer\" _v-6581e61a=\"\">{{teacherDescInfo.teacherName}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != teacherDescInfo.teacherId\" _v-6581e61a=\"\">\n                        <!-- <div class='attention_yes' v-if='attention==0' @click='attention_yes'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"attention==0\" @click=\"attention_yes\" _v-6581e61a=\"\">\n                        <div class=\"attention_no\" v-if=\"attention==1\" _v-6581e61a=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-6581e61a=\"\">\n                <p v-html=\"teacherDescInfo.teacherDesc.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></p>\n            </div>\n        </div>\n        <div class=\"class_introduce_con guest_introduce_con\" v-for=\"item in guestList\" _v-6581e61a=\"\">\n            <a _v-6581e61a=\"\">\n                <div class=\"teacher_tit\" _v-6581e61a=\"\">\n                    <img @click=\"goTeacher(item.command.content)\" class=\"img\" :src=\"item.avatar\" alt=\"\" _v-6581e61a=\"\">\n                    <div class=\"teacher_dis\" _v-6581e61a=\"\">\n                        <span class=\"techer\" _v-6581e61a=\"\">{{item.name}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != item.teacherId\" _v-6581e61a=\"\">\n                        <!-- <div class='attention_yes' v-if='item.followStatus==0' @click='attention_yes_guest(item.teacherId)'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"item.followStatus==0\" @click=\"attention_yes_guest(item.teacherId)\" _v-6581e61a=\"\">\n                        <div class=\"attention_no\" v-if=\"item.followStatus==1\" _v-6581e61a=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-6581e61a=\"\">\n                <p v-html=\"item.desc.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></p>\n            </div>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==2\" _v-6581e61a=\"\">\n        <div class=\"discuss_top\" _v-6581e61a=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==1\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllSignUp.png\" _v-6581e61a=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==0\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png\" _v-6581e61a=\"\">\n            <div class=\"discuss_top_write\" @click=\"writeNote\" v-if=\"userTicket==1 &amp;&amp; AppVersionFlag\" _v-6581e61a=\"\">\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\" _v-6581e61a=\"\">\n\n            </div>\n            <div class=\"discuss_top_no_write\" v-if=\"userTicket==0 &amp;&amp; AppVersionFlag\" _v-6581e61a=\"\">\n                报名后才能写笔记哦\n            </div>\n            <div class=\"discuss_top_alldiscuss\" @click=\"allNote\" _v-6581e61a=\"\">\n                全部笔记\n                <!-- <img src=\"//pic.davdian.com/free/2017/07/26/entry.png\"> -->\n            </div>\n            <i class=\"icon\" _v-6581e61a=\"\"></i>\n        </div>\n        <div class=\"discuss_container\" v-if=\"notesList.length!=0\" :class=\"{discuss_container_noborder: index == notesList.length-1}\" v-for=\"(item, index) in notesList\" @click.stop=\"show_all(item)\" _v-6581e61a=\"\">\n            <div class=\"discuss_title\" _v-6581e61a=\"\">\n                <div class=\"title_img title_all\" :style=\"{'background': 'url(' + item.headImg + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-6581e61a=\"\"></div>    \n                <div class=\"title_name title_all\" v-text=\"item.userName\" _v-6581e61a=\"\"></div>\n                <div class=\"title_time title_all\" v-text=\"item.createTime\" _v-6581e61a=\"\"></div>\n                <img class=\"title_star title_all\" v-if=\"item.score == 1\" src=\"//pic.davdian.com/free/2017/05/09/star_1.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 2\" src=\"//pic.davdian.com/free/2017/05/09/star_2.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 3\" src=\"//pic.davdian.com/free/2017/05/09/star_3.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 4\" src=\"//pic.davdian.com/free/2017/05/09/star_4.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 5\" src=\"//pic.davdian.com/free/2017/05/09/star_5.png\" _v-6581e61a=\"\">\n            </div>\n            <div class=\"discuss_content\" v-html=\"item.content.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==1\" @click.stop=\"showAll(index)\" _v-6581e61a=\"\">查看全部</div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==2\" @click.stop=\"showAll1(index)\" _v-6581e61a=\"\">收起</div>\n            <div class=\"discuss_imgContainer\" _v-6581e61a=\"\">\n                <div class=\"discuss_img\" :style=\"{'background': 'url(' + item1 + ') center center / cover no-repeat' , 'background-size': 'cover'}\" v-for=\"(item1, index) in item.imgList\" @click=\"showImg(index,item.imgList, item1)\" _v-6581e61a=\"\"></div>\n            </div>\n            <div class=\"discuss_share\" v-if=\"isApp\" _v-6581e61a=\"\">\n                <div class=\"discuss_share_container\" @click.stop=\"share(item)\" v-if=\"isApp\" _v-6581e61a=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/02/07/material-share.png\" _v-6581e61a=\"\">\n                    <span v-text=\"item.shareNum\" v-if=\"item.shareNum !=0\" _v-6581e61a=\"\"></span>\n                </div>\n            </div>\n        </div>\n        <!-- <div class='discuss_all'>\n            <div class=\"discuss_all_content\" @click='allNote' v-if='notesList.length!=0'>\n                查看全部{{notesNum}}条听课笔记\n            </div>\n        </div> -->\n        <div class=\"no_discuss\" v-if=\"notesList.length==0\" _v-6581e61a=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/10/error_img.png\" _v-6581e61a=\"\">\n            <p _v-6581e61a=\"\">快来写笔记吧</p>\n            <!-- <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\">\n            </div>\n            <div class='discuss_top_no_write' v-if='userTicket==0 && AppVersionFlag'>\n                报名后才能写笔记哦\n            </div> -->\n        </div>\n    </div>\n    <!-- <div class='maskAttention' v-if='maskAttention'></div> -->\n    <div class=\"contentAttention\" v-if=\"maskAttention\" _v-6581e61a=\"\">\n        <h1 _v-6581e61a=\"\">关注成功</h1>\n        <p _v-6581e61a=\"\">老师开讲新课，我们会悄悄告诉你呦</p>\n    </div>\n\n    <img v-if=\"introduceGuide &amp;&amp; guide==1\" class=\"introduceGuide\" src=\"//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png\" _v-6581e61a=\"\">\n\n    <div v-if=\"introduceGuide\" class=\"introduceGuideMask\" _v-6581e61a=\"\"></div>\n    <div v-if=\"introduceGuide\" class=\"introduceGuidebtn\" @click=\"know\" _v-6581e61a=\"\">知道了</div>\n\n</div>\n";
+>>>>>>> caa070bc076df6bb61437c5db0ee8dba4a2ea93f
 
 /***/ },
-/* 1036 */
+/* 1051 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1037)
-	__vue_script__ = __webpack_require__(1039)
+	__webpack_require__(1052)
+	__vue_script__ = __webpack_require__(1054)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/fire_work.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1041)
+	__vue_template__ = __webpack_require__(1056)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -20696,13 +20719,13 @@
 	})()}
 
 /***/ },
-/* 1037 */
+/* 1052 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1038);
+	var content = __webpack_require__(1053);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -20722,7 +20745,7 @@
 	}
 
 /***/ },
-/* 1038 */
+/* 1053 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -20736,7 +20759,7 @@
 
 
 /***/ },
-/* 1039 */
+/* 1054 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20745,7 +20768,7 @@
 	    value: true
 	});
 
-	var _fire_work = __webpack_require__(1040);
+	var _fire_work = __webpack_require__(1055);
 
 	var _fire_work2 = _interopRequireDefault(_fire_work);
 
@@ -20775,7 +20798,7 @@
 	//    import './fire_work.scss'
 
 /***/ },
-/* 1040 */
+/* 1055 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21108,24 +21131,24 @@
 	};
 
 /***/ },
-/* 1041 */
+/* 1056 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div>\n    <div id='fireWord' style='width: 100%; position: relative;'>\n    \t<img v-on:click='fireWordHref' class='fire_work_img' src=\"//pic.davdian.com/free/2016/12/27/yanhua_publish3.gif\">\n    \t<!-- <canvas id=\"canvas\" style='width: 100%; height: 100%;'></canvas> -->\n    \t<!-- <img id=\"gif\" src=\"http://pic.davdian.com/free/2016/12/27/yanhua_publish2.gif\"> -->\n    \t<span class='dayShow' v-text='dayShow'></span>\n    \t<span class='hourShow' v-text='hourShow'></span>\n    \t<span class='minuteShow' v-text='minuteShow'></span>\n    \t<span class='secondShow' v-text='secondShow'></span>\n    </div>\n</div>\n";
 
 /***/ },
-/* 1042 */
+/* 1057 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1043)
-	__vue_script__ = __webpack_require__(1045)
+	__webpack_require__(1058)
+	__vue_script__ = __webpack_require__(1060)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/dvk1.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1046)
+	__vue_template__ = __webpack_require__(1061)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -21150,13 +21173,13 @@
 	})()}
 
 /***/ },
-/* 1043 */
+/* 1058 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1044);
+	var content = __webpack_require__(1059);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -21176,7 +21199,7 @@
 	}
 
 /***/ },
-/* 1044 */
+/* 1059 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -21190,7 +21213,7 @@
 
 
 /***/ },
-/* 1045 */
+/* 1060 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21199,11 +21222,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -21430,24 +21453,24 @@
 	};
 
 /***/ },
-/* 1046 */
+/* 1061 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b46bb74=\"\">\n    <tt_com_0 :data=\"data\" _v-2b46bb74=\"\"></tt_com_0>\n    <div class=\"dvk1_container\" :style=\"styleObject\" _v-2b46bb74=\"\">\n      <div class=\"dvk1_mask\" _v-2b46bb74=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b46bb74=\"\">\n          <div class=\"dvk1_img\" _v-2b46bb74=\"\">\n            <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b46bb74=\"\">\n            <div class=\"dvk1_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b46bb74=\"\"></div>\n          </div>\n          <div class=\"dvk1_content\" _v-2b46bb74=\"\">\n            <div class=\"dvk1_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b46bb74=\"\"></div>\n            <div class=\"dvk1_name\" _v-2b46bb74=\"\">\n              <span v-text=\"data.body.dataList[0].teacherName\" _v-2b46bb74=\"\"></span>\n            </div>\n            <div class=\"dvk1_share\" _v-2b46bb74=\"\">\n              <span class=\"dvk1_share_right\" _v-2b46bb74=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b46bb74=\"\"></span></span>\n              <span class=\"dvk1_line\" _v-2b46bb74=\"\"></span>\n              <span class=\"dvk1_share_left\" _v-2b46bb74=\"\">\n                <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b46bb74=\"\"></span>\n                <span v-if=\"livetext(data.body.dataList[0])\" _v-2b46bb74=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b46bb74=\"\"></span>\n              </span>\n            </div>\n          </div>\n        </a>\n      </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 1047 */
+/* 1062 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1048)
-	__vue_script__ = __webpack_require__(1050)
+	__webpack_require__(1063)
+	__vue_script__ = __webpack_require__(1065)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/dvk2.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1051)
+	__vue_template__ = __webpack_require__(1066)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -21472,13 +21495,13 @@
 	})()}
 
 /***/ },
-/* 1048 */
+/* 1063 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1049);
+	var content = __webpack_require__(1064);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -21498,7 +21521,7 @@
 	}
 
 /***/ },
-/* 1049 */
+/* 1064 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -21512,7 +21535,7 @@
 
 
 /***/ },
-/* 1050 */
+/* 1065 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21523,11 +21546,11 @@
 
 	var _data$props$computed$;
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -21714,24 +21737,24 @@
 	// </style>
 
 /***/ },
-/* 1051 */
+/* 1066 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b2a8c72=\"\">\n    <tt_com_0 :data=\"data\" _v-2b2a8c72=\"\"></tt_com_0>\n    <div class=\"dvk2_container\" :style=\"styleObject\" _v-2b2a8c72=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b2a8c72=\"\">\n           <div class=\"dvk2_img\" _v-2b2a8c72=\"\">\n                <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b2a8c72=\"\">\n               <div class=\"dvk2_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b2a8c72=\"\"></div>\n               <div class=\"dvk2_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-2b2a8c72=\"\">\n                   <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b2a8c72=\"\"></span> \n                    <span v-if=\"livetext(data.body.dataList[0])\" _v-2b2a8c72=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                    <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b2a8c72=\"\"></span>\n               </div>\n           </div>\n           <div class=\"dvk2_text\" _v-2b2a8c72=\"\">\n               <div class=\"dvk2_text_title\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b2a8c72=\"\"></div>\n               <div class=\"dvk2_text_content\" _v-2b2a8c72=\"\">\n                   <span class=\"dvk2_text_name\" v-text=\"data.body.dataList[0].teacherName\" _v-2b2a8c72=\"\"></span>\n                   <span class=\"dvk2_text_popular\" _v-2b2a8c72=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b2a8c72=\"\"></span></span>\n               </div>\n           </div>\n        </a>\n    </div>\n</div>\n";
 
 /***/ },
-/* 1052 */
+/* 1067 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1053)
-	__vue_script__ = __webpack_require__(1055)
+	__webpack_require__(1068)
+	__vue_script__ = __webpack_require__(1070)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/dvk3.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1056)
+	__vue_template__ = __webpack_require__(1071)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -21756,13 +21779,13 @@
 	})()}
 
 /***/ },
-/* 1053 */
+/* 1068 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1054);
+	var content = __webpack_require__(1069);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -21782,7 +21805,7 @@
 	}
 
 /***/ },
-/* 1054 */
+/* 1069 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -21796,7 +21819,7 @@
 
 
 /***/ },
-/* 1055 */
+/* 1070 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21807,11 +21830,11 @@
 
 	var _data$props$computed$;
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -22055,24 +22078,24 @@
 	// </style>
 
 /***/ },
-/* 1056 */
+/* 1071 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b0e5d70=\"\">\n    <tt_com_0 :data=\"data\" _v-2b0e5d70=\"\"></tt_com_0>\n    <div class=\"dvk3_container\" :style=\"styleObject\" _v-2b0e5d70=\"\">\n           <div class=\"dvk3_content1\" _v-2b0e5d70=\"\">\n                <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b0e5d70=\"\">\n                   <div class=\"dvk3_img\" _v-2b0e5d70=\"\">\n                         <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b0e5d70=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b0e5d70=\"\"></div>\n                        <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-2b0e5d70=\"\">\n                            <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b0e5d70=\"\"></span> \n                            <span v-if=\"livetext(data.body.dataList[0])\" _v-2b0e5d70=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                            <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b0e5d70=\"\"></span>\n                        </div>\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b0e5d70=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-2b0e5d70=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[0].teacherName\" _v-2b0e5d70=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-2b0e5d70=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-2b0e5d70=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b0e5d70=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n           <div class=\"dvk3_content2\" _v-2b0e5d70=\"\">\n               <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2b0e5d70=\"\">\n                   <div class=\"dvk3_img\" _v-2b0e5d70=\"\">\n                        <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].courseCover)\" _v-2b0e5d70=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[1].price &amp;&amp; data.body.dataList[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[1].price\" _v-2b0e5d70=\"\"></div>\n                        <!-- <div class='dvk3_startTime'> -->\n                            <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[1])\" _v-2b0e5d70=\"\">\n                                <span v-if=\"livenow(data.body.dataList[1])\" class=\"circle\" _v-2b0e5d70=\"\"></span> \n                                <span v-if=\"livetext(data.body.dataList[1])\" _v-2b0e5d70=\"\">{{ livetext(data.body.dataList[1]) }}</span>\n                                <span v-if=\"!livetext(data.body.dataList[1])\" v-text=\"data.body.dataList[1].startTimestamp\" _v-2b0e5d70=\"\"></span>\n                            </div>\n                        <!-- </div> -->\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[1].courseTitle\" _v-2b0e5d70=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-2b0e5d70=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[1].teacherName\" _v-2b0e5d70=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-2b0e5d70=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-2b0e5d70=\"\"><span v-text=\"data.body.dataList[1].readTimes\" _v-2b0e5d70=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n       \n    </div>\n</div>\n";
 
 /***/ },
-/* 1057 */
+/* 1072 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1058)
-	__vue_script__ = __webpack_require__(1060)
+	__webpack_require__(1073)
+	__vue_script__ = __webpack_require__(1075)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/dvk4.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1061)
+	__vue_template__ = __webpack_require__(1076)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -22097,13 +22120,13 @@
 	})()}
 
 /***/ },
-/* 1058 */
+/* 1073 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1059);
+	var content = __webpack_require__(1074);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -22123,7 +22146,7 @@
 	}
 
 /***/ },
-/* 1059 */
+/* 1074 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -22137,7 +22160,7 @@
 
 
 /***/ },
-/* 1060 */
+/* 1075 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22146,11 +22169,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -22567,24 +22590,24 @@
 	};
 
 /***/ },
-/* 1061 */
+/* 1076 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2af22e6e=\"\">\n  <tt_com_0 :data=\"data\" _v-2af22e6e=\"\"></tt_com_0>\n  <div class=\"dvk4_container\" :style=\"styleObject\" _v-2af22e6e=\"\">\n     <div class=\"dvk4_title\" v-if=\"flag\" _v-2af22e6e=\"\">\n         <span class=\"dvk4_title_now active\" v-text=\"data.body.leftTitle\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_bottom\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_tomorrow\" @click=\"tomorrow\" v-text=\"data.body.rightTitle\" _v-2af22e6e=\"\"></span>\n     </div>\n     <div class=\"dvk4_title\" v-if=\"!flag\" _v-2af22e6e=\"\">\n         <span class=\"dvk4_title_now\" @click=\"now\" v-text=\"data.body.leftTitle\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_bottom1\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_tomorrow active\" v-text=\"data.body.rightTitle\" _v-2af22e6e=\"\"></span>\n     </div>\n     <!--  -->\n     <div class=\"dvk4_content\" v-if=\"flag\" _v-2af22e6e=\"\">\n\n         <div class=\"dvk4_detail first\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[0].command.content\" :position=\"data.body.leftContent[0].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                  <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[0].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[0].price &amp;&amp; data.body.leftContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[0].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[0].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[0].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n\n                         <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.leftContent[0].readTimes\" _v-2af22e6e=\"\"></span></span>\n                         <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[0])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[0])\" v-text=\"livetext(data.body.leftContent[0])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[0])\" v-text=\"data.body.leftContent[0].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n              <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[1].command.content\" :position=\"data.body.leftContent[1].position\" _v-2af22e6e=\"\">\n                <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                      <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[1].courseCover)\" _v-2af22e6e=\"\">\n                      <div class=\"dvk4_money\" v-if=\"data.body.leftContent[1].price &amp;&amp; data.body.leftContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[1].price\" _v-2af22e6e=\"\"></div>\n                   </div>\n                   <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                       <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[1].courseTitle\" _v-2af22e6e=\"\"></div>\n                       <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[1].teacherName\" _v-2af22e6e=\"\"></div>\n                       <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                         <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\">\n                          <span v-text=\"data.body.leftContent[1].readTimes\" _v-2af22e6e=\"\"></span>\n                         </span>\n                         <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[1])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[1])\" v-text=\"livetext(data.body.leftContent[1])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[1])\" v-text=\"data.body.leftContent[1].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                       </div>\n                   </div>\n                </div>\n              </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[2].command.content\" :position=\"data.body.leftContent[2].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[2].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[2].price &amp;&amp; data.body.leftContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[2].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[2].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[2].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                          <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.leftContent[2].readTimes\" _v-2af22e6e=\"\"></span></span>\n                          <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[2])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[2])\" v-text=\"livetext(data.body.leftContent[2])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[2])\" v-text=\"data.body.leftContent[2].startTimestamp\" _v-2af22e6e=\"\"></span>\n                          </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n     <div class=\"dvk4_content\" v-if=\"!flag\" _v-2af22e6e=\"\">\n         <div class=\"dvk4_detail first\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[0].command.content\" :position=\"data.body.rightContent[0].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[0].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[0].price &amp;&amp; data.body.rightContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[0].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[0].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[0].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[0].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[0])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[0])\" v-text=\"livetext(data.body.rightContent[0])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[0])\" v-text=\"data.body.rightContent[0].startTimestamp\" _v-2af22e6e=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[1].command.content\" :position=\"data.body.rightContent[1].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[1].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[1].price &amp;&amp; data.body.rightContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[1].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[1].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[1].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[1].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[1])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[1])\" v-text=\"livetext(data.body.rightContent[1])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[1])\" v-text=\"data.body.rightContent[1].startTimestamp\" _v-2af22e6e=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n          <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[2].command.content\" :position=\"data.body.rightContent[2].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[2].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[2].price &amp;&amp; data.body.rightContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[2].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[2].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[2].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[2].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[2])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[2])\" v-text=\"livetext(data.body.rightContent[2])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[2])\" v-text=\"data.body.rightContent[2].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 1062 */
+/* 1077 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1063)
-	__vue_script__ = __webpack_require__(1065)
+	__webpack_require__(1078)
+	__vue_script__ = __webpack_require__(1080)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/dvk5.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1066)
+	__vue_template__ = __webpack_require__(1081)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -22609,13 +22632,13 @@
 	})()}
 
 /***/ },
-/* 1063 */
+/* 1078 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1064);
+	var content = __webpack_require__(1079);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -22635,7 +22658,7 @@
 	}
 
 /***/ },
-/* 1064 */
+/* 1079 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -22649,7 +22672,7 @@
 
 
 /***/ },
-/* 1065 */
+/* 1080 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22660,11 +22683,11 @@
 
 	var _data$props$computed$;
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -22889,24 +22912,24 @@
 	// </style>
 
 /***/ },
-/* 1066 */
+/* 1081 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2ad5ff6c=\"\">\n    <tt_com_0 :data=\"data\" _v-2ad5ff6c=\"\"></tt_com_0>\n    <div class=\"dvk5_container\" :style=\"styleObject\" _v-2ad5ff6c=\"\">\n       <div class=\"dvk5_content1\" _v-2ad5ff6c=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2ad5ff6c=\"\">\n               <div class=\"dvk5_img\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-2ad5ff6c=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-2ad5ff6c=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[0].category==2\" _v-2ad5ff6c=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[0].category==2\" _v-2ad5ff6c=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-2ad5ff6c=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-2ad5ff6c=\"\"> \n                        <span v-if=\"data.body.dataList[0].address\" v-text=\"data.body.dataList[0].address\" _v-2ad5ff6c=\"\"></span>\n                        <span v-else=\"data.body.dataList[0].address\" _v-2ad5ff6c=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==1\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==2 || data.body.dataList[0].status==3\" _v-2ad5ff6c=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[0].title\" _v-2ad5ff6c=\"\"></div>\n               <div class=\"dvk5_detail\" _v-2ad5ff6c=\"\">\n                    <span class=\"dvk5_name\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_spanContainer\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[0].teacherName\" _v-2ad5ff6c=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[0].verify==1\" _v-2ad5ff6c=\"\"> </span>\n                    <span class=\"dvk5_popular\" _v-2ad5ff6c=\"\"><span v-text=\"data.body.dataList[0].pv\" _v-2ad5ff6c=\"\"></span></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk5_content2\" _v-2ad5ff6c=\"\">\n           <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2ad5ff6c=\"\">\n               <div class=\"dvk5_img\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-2ad5ff6c=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-2ad5ff6c=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[1].category==2\" _v-2ad5ff6c=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[1].category==2\" _v-2ad5ff6c=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-2ad5ff6c=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-2ad5ff6c=\"\"> \n                        <span v-if=\"data.body.dataList[1].address\" v-text=\"data.body.dataList[1].address\" _v-2ad5ff6c=\"\"></span>\n                        <span v-else=\"data.body.dataList[1].address\" _v-2ad5ff6c=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==1\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==2 || data.body.dataList[1].status==3\" _v-2ad5ff6c=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[1].title\" _v-2ad5ff6c=\"\"></div>\n               <div class=\"dvk5_detail\" _v-2ad5ff6c=\"\">\n                    <span class=\"dvk5_name\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_spanContainer\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[1].teacherName\" _v-2ad5ff6c=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[1].verify==1\" _v-2ad5ff6c=\"\"></span>\n                    <span class=\"dvk5_popular\" _v-2ad5ff6c=\"\"><span v-text=\"data.body.dataList[1].pv\" _v-2ad5ff6c=\"\"></span></span>\n                </div>\n           </a>\n       </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 1067 */
+/* 1082 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1068)
-	__vue_script__ = __webpack_require__(1070)
+	__webpack_require__(1083)
+	__vue_script__ = __webpack_require__(1085)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/dvk6.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1071)
+	__vue_template__ = __webpack_require__(1086)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -22931,13 +22954,13 @@
 	})()}
 
 /***/ },
-/* 1068 */
+/* 1083 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1069);
+	var content = __webpack_require__(1084);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -22957,7 +22980,7 @@
 	}
 
 /***/ },
-/* 1069 */
+/* 1084 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -22971,7 +22994,7 @@
 
 
 /***/ },
-/* 1070 */
+/* 1085 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22982,11 +23005,11 @@
 
 	var _data$props$computed$;
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -23145,24 +23168,24 @@
 	// </style>
 
 /***/ },
-/* 1071 */
+/* 1086 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2ab9d06a=\"\">\n    <tt_com_0 :data=\"data\" _v-2ab9d06a=\"\"></tt_com_0>\n    <div class=\"dvk6_container\" :style=\"styleObject\" _v-2ab9d06a=\"\">\n       <div class=\"dvk6_content1\" _v-2ab9d06a=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2ab9d06a=\"\">\n               <div class=\"dvk6_img\" _v-2ab9d06a=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-2ab9d06a=\"\">\n                    <div class=\"dvk6_startTime\" _v-2ab9d06a=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-2ab9d06a=\"\"><span v-text=\"data.body.dataList[0].time\" _v-2ab9d06a=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[0].title\" _v-2ab9d06a=\"\"></div>\n               <div class=\"dvk6_detail\" _v-2ab9d06a=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[0].pv\" _v-2ab9d06a=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[0].type\" _v-2ab9d06a=\"\"></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk6_content2\" _v-2ab9d06a=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2ab9d06a=\"\">\n               <div class=\"dvk6_img\" _v-2ab9d06a=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-2ab9d06a=\"\">\n                    <div class=\"dvk6_startTime\" _v-2ab9d06a=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-2ab9d06a=\"\"><span v-text=\"data.body.dataList[1].time\" _v-2ab9d06a=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[1].title\" _v-2ab9d06a=\"\"></div>\n               <div class=\"dvk6_detail\" _v-2ab9d06a=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[1].pv\" _v-2ab9d06a=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[1].type\" _v-2ab9d06a=\"\">\n                </span></div>\n            </a>\n       </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 1072 */
+/* 1087 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1073)
-	__vue_script__ = __webpack_require__(1075)
+	__webpack_require__(1088)
+	__vue_script__ = __webpack_require__(1090)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_goods_3.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1076)
+	__vue_template__ = __webpack_require__(1091)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -23187,13 +23210,13 @@
 	})()}
 
 /***/ },
-/* 1073 */
+/* 1088 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1074);
+	var content = __webpack_require__(1089);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -23213,7 +23236,7 @@
 	}
 
 /***/ },
-/* 1074 */
+/* 1089 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -23227,7 +23250,7 @@
 
 
 /***/ },
-/* 1075 */
+/* 1090 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23236,11 +23259,11 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _tt_com_ = __webpack_require__(868);
+	var _tt_com_ = __webpack_require__(883);
 
 	var tt_com_0 = _interopRequireWildcard(_tt_com_);
 
@@ -23451,25 +23474,25 @@
 	};
 
 /***/ },
-/* 1076 */
+/* 1091 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-059a0eca=\"\">\n    <tt_com_0 :data=\"data\" _v-059a0eca=\"\"></tt_com_0>\n    <div class=\"tuan_list\" _v-059a0eca=\"\">\n        <a :href=\"data.body.dataList[0].command.content\" :data-remain-second2=\"remainsecond\" data-dav-tj=\"goods_group|good|good|1|good@goods_group\" _v-059a0eca=\"\">\n            <div class=\"tuan_img_container\" _v-059a0eca=\"\">\n                <img v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" style=\"display: block;\" _v-059a0eca=\"\">\n            </div>\n            <div class=\"tuan_info_container\" _v-059a0eca=\"\">\n                <div class=\"time1\" v-if=\"remainsecond > 0\" _v-059a0eca=\"\">{{remainsecond | timeday}} </div>\n                <div class=\"time\" v-if=\"remainsecond < 1\" _v-059a0eca=\"\">团购已结束</div>\n                <div class=\"tuan_item_icon\" _v-059a0eca=\"\"></div>\n                <div class=\"tuan-other-info\" _v-059a0eca=\"\">\n                    <div class=\"tuan_item_title\" _v-059a0eca=\"\">\n                        {{data.body.dataList[0].title}}\n                    </div>\n                    <div class=\"tuan_item_price\" _v-059a0eca=\"\">\n                        <span class=\"current_price\" _v-059a0eca=\"\"><em _v-059a0eca=\"\">￥</em>{{data.body.dataList[0].nowPrice}}</span>\n                        <span class=\"market_price\" _v-059a0eca=\"\"><em _v-059a0eca=\"\">￥</em>{{data.body.dataList[0].prePrice}}</span>\n                    </div>\n                </div>\n            </div>\n        </a>\n    </div>\n</div>\n";
 
 /***/ },
-/* 1077 */
+/* 1092 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1078)
-	__webpack_require__(1080)
-	__vue_script__ = __webpack_require__(1082)
+	__webpack_require__(1093)
+	__webpack_require__(1095)
+	__vue_script__ = __webpack_require__(1097)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_ts_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1083)
+	__vue_template__ = __webpack_require__(1098)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -23494,13 +23517,13 @@
 	})()}
 
 /***/ },
-/* 1078 */
+/* 1093 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1079);
+	var content = __webpack_require__(1094);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -23520,7 +23543,7 @@
 	}
 
 /***/ },
-/* 1079 */
+/* 1094 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -23534,13 +23557,13 @@
 
 
 /***/ },
-/* 1080 */
+/* 1095 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1081);
+	var content = __webpack_require__(1096);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -23560,7 +23583,7 @@
 	}
 
 /***/ },
-/* 1081 */
+/* 1096 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -23574,7 +23597,7 @@
 
 
 /***/ },
-/* 1082 */
+/* 1097 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23583,7 +23606,7 @@
 	  value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -23857,24 +23880,24 @@
 	};
 
 /***/ },
-/* 1083 */
+/* 1098 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"ts_feeds\" :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-22cdd3a2=\"\">\n  <div id=\"ts_menu_wrap\" _v-22cdd3a2=\"\">\n    <div :style=\"styleObject\" class=\"swiper-container ts_menu\" id=\"ts_menu\" _v-22cdd3a2=\"\">\n      <ul class=\"swiper-wrapper\" _v-22cdd3a2=\"\">\n        <li class=\"swiper-slide\" v-for=\"(item, index) in dataList\" :class=\"{pitch_on:item.selected == 1}\" @click=\"ts_tab(item,index)\" :data=\"item.timeshopActId\" _v-22cdd3a2=\"\">\n          <div class=\"\" v-if=\"item &amp;&amp; item.title\" _v-22cdd3a2=\"\">\n            <div class=\"time_state_span\" _v-22cdd3a2=\"\">{{item.title}}</div>\n            <div class=\"statusInfo\" _v-22cdd3a2=\"\">{{item.statusInfo}}</div>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 1084 */
+/* 1099 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1085)
-	__vue_script__ = __webpack_require__(1087)
+	__webpack_require__(1100)
+	__vue_script__ = __webpack_require__(1102)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_ts_prod_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1088)
+	__vue_template__ = __webpack_require__(1103)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -23899,13 +23922,13 @@
 	})()}
 
 /***/ },
-/* 1085 */
+/* 1100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1086);
+	var content = __webpack_require__(1101);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -23925,7 +23948,7 @@
 	}
 
 /***/ },
-/* 1086 */
+/* 1101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -23939,7 +23962,7 @@
 
 
 /***/ },
-/* 1087 */
+/* 1102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -23948,7 +23971,7 @@
 	  value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -24387,24 +24410,28 @@
 	// <script>
 
 /***/ },
-/* 1088 */
+/* 1103 */
 /***/ function(module, exports) {
 
+<<<<<<< HEAD
 	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-366e10d9=\"\">\n  <ul _v-366e10d9=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-366e10d9=\"\">\n      <a :href=\"item.command.content\" _v-366e10d9=\"\">\n        <div class=\"img_container\" _v-366e10d9=\"\">\n          <div class=\"img_container_inner\" _v-366e10d9=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-366e10d9=\"\">\n            <div v-if=\"item.buttonStatus == 3\" _v-366e10d9=\"\">已抢光</div>\n          </div>\n          <div class=\"order_good_info_container\" _v-366e10d9=\"\">\n            <div class=\"order_good_name\" _v-366e10d9=\"\">{{item.title}}</div>\n            <div class=\"order_good_name order_good_name_in\" _v-366e10d9=\"\">{{item.recomWord.split(\"\\n\")[0]}}</div>\n            <div class=\"order_good_price\" _v-366e10d9=\"\">\n              <span class=\"f_l\" _v-366e10d9=\"\"><em class=\"price_symbol\" _v-366e10d9=\"\">￥</em><span _v-366e10d9=\"\">{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span v-if=\"(item.nowPrice+'').split('.').length == 2\" class=\"newOriginal_price\" _v-366e10d9=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span><span v-if=\"item.timeshopIncome != '0'\" class=\"membership_crown\" _v-366e10d9=\"\">限时返 <em _v-366e10d9=\"\">￥</em>{{item.timeshopIncome}}\n              <span v-if=\"item.income\" class=\"membership_crown_pre\" _v-366e10d9=\"\">平日返<em _v-366e10d9=\"\">￥</em>{{item.income}}</span></span>\n            </div>\n            <div v-if=\"item.buttonStatus != 3 &amp;&amp; item.timeshopGoodsNum\" class=\"progress_info\" _v-366e10d9=\"\">\n              仅剩 {{item.timeshopGoodsNum}} 件\n            </div>\n            <!--<div class=\"progress_bar\" v-if=\"(item.buttonStatus != 0)&&(item.buttonStatus != 1)\">-->\n            <!--<div class=\"progress_bar_bg\">-->\n            <!--<div class=\"progress_container\" :style=\"{width:item.percentage+'%'}\">-->\n            <!--</div>-->\n            <!--</div>-->\n            <!--<div class=\"finish_percentage\">已售{{item.percentage}}%</div>-->\n            <!--</div>-->\n          </div>\n        </div>\n      </a>\n      <a class=\"remain_btns\" _v-366e10d9=\"\">\n        <div class=\"panic_buying_btn\" :class=\"{panic_buying_btn2:item.buttonStatus < 2,buy_gray:item.buttonStatus == '3',seteds:item.buttonStatus == '0'}\" _v-366e10d9=\"\">{{item.buttonName}}\n        </div>\n        <div @click=\"Panicbuying(item,index)\" class=\"remain_btns_click\" _v-366e10d9=\"\"></div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-366e10d9=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-366e10d9=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-366e10d9=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-366e10d9=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-366e10d9=\"\"></div>\n    </div>\n  </div>\n</div>\n";
+=======
+	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-1ca4930e=\"\">\n  <ul _v-1ca4930e=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-1ca4930e=\"\">\n      <a :href=\"item.command.content\" _v-1ca4930e=\"\">\n        <div class=\"img_container\" _v-1ca4930e=\"\">\n          <div class=\"img_container_inner\" _v-1ca4930e=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-1ca4930e=\"\">\n            <div v-if=\"item.buttonStatus == 3\" _v-1ca4930e=\"\">已抢光</div>\n          </div>\n          <div class=\"order_good_info_container\" _v-1ca4930e=\"\">\n            <div class=\"order_good_name\" _v-1ca4930e=\"\">{{item.title}}</div>\n            <div class=\"order_good_name order_good_name_in\" _v-1ca4930e=\"\">{{item.recomWord.split(\"\\n\")[0]}}</div>\n            <div class=\"order_good_price\" _v-1ca4930e=\"\">\n              <span class=\"f_l\" _v-1ca4930e=\"\"><em class=\"price_symbol\" _v-1ca4930e=\"\">￥</em><span _v-1ca4930e=\"\">{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span v-if=\"(item.nowPrice+'').split('.').length == 2\" class=\"newOriginal_price\" _v-1ca4930e=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span><span v-if=\"item.timeshopIncome != '0'\" class=\"membership_crown\" _v-1ca4930e=\"\">限时返 <em _v-1ca4930e=\"\">￥</em>{{item.timeshopIncome}}\n              <span v-if=\"item.income\" class=\"membership_crown_pre\" _v-1ca4930e=\"\">平日返<em _v-1ca4930e=\"\">￥</em>{{item.income}}</span></span>\n            </div>\n            <div v-if=\"item.buttonStatus != 3 &amp;&amp; item.timeshopGoodsNum\" class=\"progress_info\" _v-1ca4930e=\"\">\n              仅剩 {{item.timeshopGoodsNum}} 件\n            </div>\n            <!--<div class=\"progress_bar\" v-if=\"(item.buttonStatus != 0)&&(item.buttonStatus != 1)\">-->\n            <!--<div class=\"progress_bar_bg\">-->\n            <!--<div class=\"progress_container\" :style=\"{width:item.percentage+'%'}\">-->\n            <!--</div>-->\n            <!--</div>-->\n            <!--<div class=\"finish_percentage\">已售{{item.percentage}}%</div>-->\n            <!--</div>-->\n          </div>\n        </div>\n      </a>\n      <a class=\"remain_btns\" _v-1ca4930e=\"\">\n        <div class=\"panic_buying_btn\" :class=\"{panic_buying_btn2:item.buttonStatus < 2,buy_gray:item.buttonStatus == '3',seteds:item.buttonStatus == '0'}\" _v-1ca4930e=\"\">{{item.buttonName}}\n        </div>\n        <div @click=\"Panicbuying(item,index)\" class=\"remain_btns_click\" _v-1ca4930e=\"\"></div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-1ca4930e=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-1ca4930e=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-1ca4930e=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-1ca4930e=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-1ca4930e=\"\"></div>\n    </div>\n  </div>\n</div>\n";
+>>>>>>> caa070bc076df6bb61437c5db0ee8dba4a2ea93f
 
 /***/ },
-/* 1089 */
+/* 1104 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1090)
-	__vue_script__ = __webpack_require__(1092)
+	__webpack_require__(1105)
+	__vue_script__ = __webpack_require__(1107)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_ts_goods_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1093)
+	__vue_template__ = __webpack_require__(1108)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -24429,13 +24456,13 @@
 	})()}
 
 /***/ },
-/* 1090 */
+/* 1105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1091);
+	var content = __webpack_require__(1106);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -24455,7 +24482,7 @@
 	}
 
 /***/ },
-/* 1091 */
+/* 1106 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -24469,7 +24496,7 @@
 
 
 /***/ },
-/* 1092 */
+/* 1107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24478,7 +24505,7 @@
 	  value: true
 	});
 
-	var _bd_goods_ = __webpack_require__(987);
+	var _bd_goods_ = __webpack_require__(1002);
 
 	var _bd_goods_2 = _interopRequireDefault(_bd_goods_);
 
@@ -24515,24 +24542,24 @@
 	//  import './bd_goods_2.scss'
 
 /***/ },
-/* 1093 */
+/* 1108 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\" _v-1ecd6274=\"\">\n\n  <tt_com_0 :data=\"data\" _v-1ecd6274=\"\"></tt_com_0>\n\n  <div class=\"df_new_model_con\" :style=\"styleObject\" _v-1ecd6274=\"\">\n    <div class=\"df_new_model_con\" _v-1ecd6274=\"\">\n      <div class=\"df_new_title_3\" style=\"height:1.8rem;overflow: hidden;\" _v-1ecd6274=\"\">\n        <a :href=\"data.body.command.content\" @click=\"clickAnalysis\" style=\"height: 1.8rem;\" position=\"0\" _v-1ecd6274=\"\">\n          <img class=\"newImage\" style=\"display: inline;height: 1.8rem\" v-lazy=\"imgObject(data.body.imageUrl)\" _v-1ecd6274=\"\">\n        </a>\n        <span class=\"up_arrow\" :style=\"styleSpan\" _v-1ecd6274=\"\"></span>\n      </div>\n      <bd_goods_0 :data=\"data\" _v-1ecd6274=\"\"></bd_goods_0>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 1094 */
+/* 1109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1095)
-	__vue_script__ = __webpack_require__(1097)
+	__webpack_require__(1110)
+	__vue_script__ = __webpack_require__(1112)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_ts_title_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1098)
+	__vue_template__ = __webpack_require__(1113)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -24557,13 +24584,13 @@
 	})()}
 
 /***/ },
-/* 1095 */
+/* 1110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1096);
+	var content = __webpack_require__(1111);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -24583,7 +24610,7 @@
 	}
 
 /***/ },
-/* 1096 */
+/* 1111 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -24597,7 +24624,7 @@
 
 
 /***/ },
-/* 1097 */
+/* 1112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24606,7 +24633,7 @@
 	  value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -24669,23 +24696,23 @@
 	//  import './bd_image_0.scss'
 
 /***/ },
-/* 1098 */
+/* 1113 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"[{ marginTop:data.marginTop },styleObject]\">\n\n  <div class=\"model_con\">\n    <div class=\"dvd-index-module clearfix\">\n      <!-- <div class=\"index_activity\" style=\"padding:0;margin:0;height:1.4rem;overflow:hidden;\">\n          <a :href=\"data.body.dataList[0].command.content\" style=\"height: 1.4rem;padding:0;margin:0;\" @click=\"clickAnalysis\" position=\"0\">\n              <img class = \"newImage\" :src=\"data.body.dataList[0].imageUrl\" style=\"width:100%;height: 1.4rem;\">\n          </a>\n      </div> -->\n      <div class=\"index_activity\" style=\"padding:0;margin:0;overflow:hidden;\">\n        <div style=\"padding:0;margin:0;\" @click=\"clickAnalysis\" position=\"0\">\n          <img class = \"newImage\" :src=\"data.body.dataList[0].imageUrl\" style=\"width:100%;\">\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 1099 */
+/* 1114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__vue_script__ = __webpack_require__(1100)
+	__vue_script__ = __webpack_require__(1115)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_image_1_2.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1103)
+	__vue_template__ = __webpack_require__(1118)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -24710,7 +24737,7 @@
 	})()}
 
 /***/ },
-/* 1100 */
+/* 1115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24719,9 +24746,9 @@
 	  value: true
 	});
 
-	__webpack_require__(1101);
+	__webpack_require__(1116);
 
-	var _bd_image_ = __webpack_require__(921);
+	var _bd_image_ = __webpack_require__(936);
 
 	var _bd_image_2 = _interopRequireDefault(_bd_image_);
 
@@ -24750,16 +24777,16 @@
 	// </script>
 
 /***/ },
-/* 1101 */
+/* 1116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1102);
+	var content = __webpack_require__(1117);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(237)(content, {});
+	var update = __webpack_require__(252)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -24776,7 +24803,7 @@
 	}
 
 /***/ },
-/* 1102 */
+/* 1117 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -24790,24 +24817,24 @@
 
 
 /***/ },
-/* 1103 */
+/* 1118 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"[{ marginTop:data.marginTop },styleObject]\">\n\n    <tt_com_0 :data=\"data\"></tt_com_0>\n\n    <div class=\"model_con\">\n        <div class=\"dvd-index-module clearfix\">\n            <div class=\"index_activity\" style=\"padding:0;margin:0;overflow:hidden;\">\n                <a :href=\"data.body.dataList[0].command.content\" style=\"padding:0;margin:0;\" @click=\"clickAnalysis\" position=\"0\">\n                    <!-- <img :src=\"data.body.dataList[0].imageUrl\" :style=\"{width:'100%', height:data.body.height + 'px'}\"> -->\n                    <img class = \"newImage\" :src=\"data.body.dataList[0].imageUrl\" style=\"width:100%;\">\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n";
 
 /***/ },
-/* 1104 */
+/* 1119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1105)
-	__vue_script__ = __webpack_require__(1107)
+	__webpack_require__(1120)
+	__vue_script__ = __webpack_require__(1122)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_image_4_2.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1108)
+	__vue_template__ = __webpack_require__(1123)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -24832,13 +24859,13 @@
 	})()}
 
 /***/ },
-/* 1105 */
+/* 1120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1106);
+	var content = __webpack_require__(1121);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -24858,7 +24885,7 @@
 	}
 
 /***/ },
-/* 1106 */
+/* 1121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -24872,7 +24899,7 @@
 
 
 /***/ },
-/* 1107 */
+/* 1122 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24881,7 +24908,7 @@
 	  value: true
 	});
 
-	var _bd_icon_ = __webpack_require__(891);
+	var _bd_icon_ = __webpack_require__(906);
 
 	var _bd_icon_2 = _interopRequireDefault(_bd_icon_);
 
@@ -24933,24 +24960,24 @@
 	// <script>
 
 /***/ },
-/* 1108 */
+/* 1123 */
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-6b3bf654=\"\">\n    <tt_com_0 :data=\"data\" _v-6b3bf654=\"\"></tt_com_0>\n    <div v-if=\"show\" class=\"bd_icon_0 index_links\" :style=\"styleObject\" _v-6b3bf654=\"\">\n        <a class=\"link_item\" v-for=\"item in data.body.dataList\" :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-6b3bf654=\"\">\n            <img class=\"link_img newImage\" :src=\"item.imageUrl\" _v-6b3bf654=\"\">\n        </a>\n    </div>\n</div>\n\n";
 
 /***/ },
-/* 1109 */
+/* 1124 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1110)
-	__vue_script__ = __webpack_require__(1112)
+	__webpack_require__(1125)
+	__vue_script__ = __webpack_require__(1127)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_goods_4.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1113)
+	__vue_template__ = __webpack_require__(1128)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -24975,13 +25002,13 @@
 	})()}
 
 /***/ },
-/* 1110 */
+/* 1125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1111);
+	var content = __webpack_require__(1126);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -25001,7 +25028,7 @@
 	}
 
 /***/ },
-/* 1111 */
+/* 1126 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -25015,7 +25042,7 @@
 
 
 /***/ },
-/* 1112 */
+/* 1127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -25024,11 +25051,11 @@
 	  value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
-	var _comMaybeyoulike = __webpack_require__(404);
+	var _comMaybeyoulike = __webpack_require__(419);
 
 	var _comMaybeyoulike2 = _interopRequireDefault(_comMaybeyoulike);
 
@@ -25271,24 +25298,24 @@
 	};
 
 /***/ },
-/* 1113 */
+/* 1128 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"good_list_con\" :style=\"{ marginTop:data.marginTop + 'px' }\" _v-057ddfc8=\"\">\n  <div class=\"good_list_2_row\" _v-057ddfc8=\"\">\n    <a v-for=\"item in data.body.dataList\" data-id=\"item.goods_id\" :href=\"item.command.content\" class=\"good_item\" _v-057ddfc8=\"\">\n      <div class=\"good_img_container\" _v-057ddfc8=\"\">\n        <div class=\"img_container\" _v-057ddfc8=\"\">\n          <img v-lazy=\"imgObject(item.imageUrl)\" style=\"display: inline;\" _v-057ddfc8=\"\">\n          <span class=\"img_label\" v-if=\"item.actInfo!=''\" v-text=\"item.actInfo\" _v-057ddfc8=\"\"></span>\n           <span class=\"img_label\" v-if=\"item.actInfo==''&amp;&amp;+item.ratio\" v-text=\"'返现'+item.ratio+'倍'\" _v-057ddfc8=\"\"></span>\n        </div>\n        <div v-if=\"item.statusInfo&amp;&amp;item.statusInfo != ''\" class=\"good_list_sell_out\" _v-057ddfc8=\"\"><span _v-057ddfc8=\"\">{{item.statusInfo}}</span></div>\n        <div v-if=\"item.pic_info &amp;&amp; item.ratio != 0\" class=\"pic_info\" _v-057ddfc8=\"\">{{item.ratio}}</div>\n      </div>\n      <div class=\"good_con\" _v-057ddfc8=\"\">\n        <div class=\"good_title\" _v-057ddfc8=\"\">{{item.title}}</div>\n        <div class=\"goods4_price_bar\" _v-057ddfc8=\"\">\n          <span class=\"dav-color-price font-weight\" _v-057ddfc8=\"\"><em class=\"fz_14\" _v-057ddfc8=\"\">￥</em><span class=\"nowPriceCont\" _v-057ddfc8=\"\"><span class=\"nowPrice\" _v-057ddfc8=\"\">{{(item.nowPrice+'').split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.nowPrice+'').split('.').length == 2\" _v-057ddfc8=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span></span>\n          <span class=\"vip_return\" v-if=\"item.income &amp;&amp; item.income != 0\" _v-057ddfc8=\"\">\n            <span class=\"vip_return_title\" _v-057ddfc8=\"\">会员返</span>\n            <span class=\"vip_return_f\" _v-057ddfc8=\"\">¥</span>\n            <span class=\"vip_return_price\" _v-057ddfc8=\"\">{{item.income}}</span>\n          </span>\n        </div>\n      </div>\n    </a>\n  </div>\n</div>\n<!--<category :list = \"data.body.dataList\"></category>-->\n";
 
 /***/ },
-/* 1114 */
+/* 1129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1115)
-	__vue_script__ = __webpack_require__(1117)
+	__webpack_require__(1130)
+	__vue_script__ = __webpack_require__(1132)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_course_info_series_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1118)
+	__vue_template__ = __webpack_require__(1133)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -25313,13 +25340,13 @@
 	})()}
 
 /***/ },
-/* 1115 */
+/* 1130 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1116);
+	var content = __webpack_require__(1131);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -25339,7 +25366,7 @@
 	}
 
 /***/ },
-/* 1116 */
+/* 1131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -25353,7 +25380,7 @@
 
 
 /***/ },
-/* 1117 */
+/* 1132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25362,7 +25389,7 @@
 	    value: true
 	});
 
-	var _layout = __webpack_require__(286);
+	var _layout = __webpack_require__(301);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -25464,24 +25491,24 @@
 	// <script>
 
 /***/ },
-/* 1118 */
+/* 1133 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div id=\"series_course\" :style=\"{'marginTop':dataList.marginTop + 'px'}\" _v-6f21a6f4=\"\">\n    <a :href=\"dataList.body.command.content\" @click.stop=\"clickAnalysis\" :position=\"dataList.position\" _v-6f21a6f4=\"\">\n        <div class=\"series_title\" _v-6f21a6f4=\"\">所属系列课 <span _v-6f21a6f4=\"\">（第{{dataList.body.nowNo}}节 共{{dataList.body.courseNum}}节课）</span></div>\n        <div class=\"series_container\" _v-6f21a6f4=\"\">\n            <img src=\"//pic.davdian.com/free/2017/08/01/seriesicon.png\" class=\"icon\" _v-6f21a6f4=\"\">\n            <span v-text=\"dataList.body.seriesTitle\" _v-6f21a6f4=\"\"></span>\n        </div>\n        <div class=\"series_content_img1\" _v-6f21a6f4=\"\">进入系列</div>\n        <!-- <img class='series_content_img' src=\"//pic.davdian.com/free/2017/07/28/goSeriesCourse1.png\"> -->\n    </a>\n</div>\n";
 
 /***/ },
-/* 1119 */
+/* 1134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1120)
-	__vue_script__ = __webpack_require__(1122)
+	__webpack_require__(1135)
+	__vue_script__ = __webpack_require__(1137)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] module/index/feed/bd_course_notes_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1123)
+	__vue_template__ = __webpack_require__(1138)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -25506,13 +25533,13 @@
 	})()}
 
 /***/ },
-/* 1120 */
+/* 1135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1121);
+	var content = __webpack_require__(1136);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -25532,7 +25559,7 @@
 	}
 
 /***/ },
-/* 1121 */
+/* 1136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -25546,7 +25573,7 @@
 
 
 /***/ },
-/* 1122 */
+/* 1137 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -25617,13 +25644,13 @@
 	};
 
 /***/ },
-/* 1123 */
+/* 1138 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"seriesCommentContainer\" @click=\"gohref\" :style=\"{'marginTop':data.marginTop + 'px'}\" _v-cd76f3e6=\"\">\n    <span _v-cd76f3e6=\"\">听课笔记 <span v-if=\"data.body.notesNum\" _v-cd76f3e6=\"\">（ <span v-text=\"data.body.notesNum\" _v-cd76f3e6=\"\"></span>  ）</span></span>\n    <i class=\"icon\" _v-cd76f3e6=\"\"></i>\n</div>\n";
 
 /***/ },
-/* 1124 */
+/* 1139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* NProgress, (c) 2013, 2014 Rico Sta. Cruz - http://ricostacruz.com/nprogress
@@ -26105,7 +26132,7 @@
 
 
 /***/ },
-/* 1125 */
+/* 1140 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"index_inner\">\n  <!--头部-->\n  <index-head :usersta=\"usersta\" :menudata='menudata' :data='headData' :init-category='initCategory' :initcate='initcate' v-if='!app' v-on:categorya=\"changeCategory\"></index-head>\n  <div style='height: 80px' v-if='!app'></div>\n  <n-progress></n-progress>\n  <!--内容-->\n  <index-feed :data=\"feedData\" v-if='!loadFlag && !unLoadFlag'></index-feed>\n\n  <bd_goods_1 :tableindex=\"page_index\" :menuid=\"menuId\" :likenum=\"likeNum\"></bd_goods_1>\n  <!--底部-->\n  <!--<index-foot :data='footData' v-if='!app'></index-foot>-->\n  <index-foot active=\"home\" v-if='!app' style=\"z-index: 13;\"></index-foot>\n\n  <!--其他展示信息：签到 弹红包等-->\n  <div class=\"other_info\">\n    <div class='unLoad' v-if='unLoadFlag'>\n      <div class='unLoad-img'></div>\n      <div class='unLoad-title'>无法连接网络啦</div>\n      <div class='unLoad-btn' v-on:click='loadBtn'>点击重新加载</div>\n    </div>\n    <div v-on:click='clickAdvert1' class='mask_activity1' v-if='advertFlag[0] && advert.topBar'\n         :style=\"{'background': 'url(' + advert.topBar.imageUrl + ') no-repeat center' , 'background-size': 'cover'}\"></div>\n\n    <div class='mask_activity2_f' v-if='advertFlag[1] && advert.layer'>\n      <div class='mask_activity2' v-on:click='clickAdvert2'\n           :style=\"{'background': 'url(' + advert.layer.imageUrl + ') no-repeat center' , 'background-size': 'contain'}\">\n        <div class=\"exit\" v-on:click='exit($event)'>X</div>\n      </div>\n      <div class='mask_activity2_mask' v-on:click='exit($event)' v-if='advertFlag[1] && advert.layer'></div>\n    </div>\n\n\n    <div class='mask_sign' v-if='advertFlag[2]'\n         :style=\"{'background': 'url(' + signData.sign.imageUrl + ') no-repeat' , 'background-size': 'cover'}\">\n      <div class='mask_sign_title'>签到成功</div>\n      <div class='mask_sign_content' v-if='signData.sign'>\n        <span v-text='signData.sign.msgArr[0]'></span><br/>\n        <span v-text='signData.sign.msgArr[1]'></span>\n      </div>\n    </div>\n\n    <!--单次提示用户下载APP和关注公众号-->\n    <div class=\"downAppWrap\" v-if=\"iftips&&!app\" v-on:click=\"closeTips\">\n      <div class=\"downApp\" v-on:click.stop=\"events\">\n        <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/13/index_erweima.png\">\n        <img v-else src=\"//pic.davdian.com/free/2017/06/13/index_erweima.png\" alt=\"\" @touchstart=\"tipstouchstart\"\n             @touchmove=\"tipstouchmove\" @touchend=\"tipstouchend\">\n        <a href=\"https://itunes.apple.com/cn/app/dav-dian-rang-ma-ma-qing-song/id1042582462?l=en&mt=8\"></a>\n        <a href=\"http://a.app.qq.com/o/simple.jsp?pkgname=com.davdian.seller\"></a>\n        <div class=\"close8\" @click=\"closeTips\"></div>\n      </div>\n    </div>\n    <!--领取赠品弹窗-->\n    <div class=\"getReward\" v-if=\"getRewardtips && rewardData.imgUrl != ''\">\n      <a :href=\"rewardData.command.content\">\n        <img :src=\"rewardData.imgUrl\" alt=\"\">\n        <!--<img src=\"http://pic.davdian.com/goods/2017/06/06/800_384_b7862b07fef7e7dcd0c806e5e648f542.jpg\" alt=\"\">-->\n        <div class=\"rewardiv_close\" @click=\"close_rewardtip\"></div>\n      </a>\n    </div>\n  </div>\n</div>\n";
