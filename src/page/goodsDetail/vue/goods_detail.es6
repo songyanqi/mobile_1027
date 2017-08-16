@@ -989,7 +989,7 @@ export default {
           that.memberCont.memberGoods = dataExtra.price.memberGoods;
           that.memberCont.memberPrice = dataExtra.price.memberPrice;
           //多规格modal添加图片
-          if (that.goodsList.length) {
+          if (that.goodsList && that.goodsList.length) {
             that.goodsList.map((item,index) => {
               if (dataExtra.goodsId == item.goodsId) {
                 if (item.image) {
