@@ -2826,11 +2826,6 @@ $crossBord: #FF4A7D;
         }
       }
     }
-    @media screen and(max-width: 320px) {
-      .sku-control {
-        height:: 261px;
-      }
-    }
     .summary {
       padding: 0 10px 10px 10px;
       color: $crossBord;
@@ -2867,7 +2862,10 @@ $crossBord: #FF4A7D;
         transform: scale(.5,.5);
         -webkit-transform-origin: left top;
         transform-origin: left top;
-       }
+      }
+      .titlePicSingle {
+        margin-top: -75px;
+      }
     }
 
     .singleSkuControl {
@@ -3408,6 +3406,12 @@ $crossBord: #FF4A7D;
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);;
+  }
+}
+
+@media screen and(max-width: 320px) {
+  #goodsDetail .goodsTypeModal .sku-control {
+    height: 265px;
   }
 }
 
