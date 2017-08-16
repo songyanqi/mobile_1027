@@ -15,7 +15,7 @@
       <!--商品名下方文案，818需求-->
       <!--预热-->
       <div class = "partys" v-if="Date.now() >= new Date(2017,7,17) && Date.now() < new Date(2017,7,18)">
-        <a href="/class_detail-11165.html?preview=1">开学季省钱有招，最强攻略来袭>></a>
+        <a href="/class_detail-11165.html">开学季省钱有招，最强攻略来袭>></a>
       </div>
       <!--正式-->
       <div class = "partys" v-if="Date.now() >= new Date(2017,7,18) && Date.now() < new Date(2017,7,24)">
