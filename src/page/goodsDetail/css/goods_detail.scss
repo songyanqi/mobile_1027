@@ -2382,6 +2382,11 @@ $crossBord: #FF4A7D;
     .b_relative_items:nth-child(even) {
       margin-right: 1%;
     }
+    @media screen and(max-width: 320px) {
+      .vux-popup-dialog {
+        min-height: 363px!important;
+      }
+    }
   }
   //底部导航
   .goods_bottom {
@@ -2819,6 +2824,11 @@ $crossBord: #FF4A7D;
           width: 200%;
           z-index: 10;
         }
+      }
+    }
+    @media screen and(max-width: 320px) {
+      .sku-control {
+        height:: 261px;
       }
     }
     .summary {
