@@ -57,7 +57,7 @@
 	__webpack_require__(40);
 	new _Vue2.default({
 	  components: {
-	    app: __webpack_require__(1147)
+	    app: __webpack_require__(1174)
 	  },
 	  template: '<app />',
 	  el: ".paySuccess"
@@ -5699,7 +5699,7 @@
 
 /***/ },
 
-/***/ 264:
+/***/ 280:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6038,7 +6038,7 @@
 
 /***/ },
 
-/***/ 270:
+/***/ 286:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6061,7 +6061,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var common = __webpack_require__(264); // var crypto = require('crypto');
+	var common = __webpack_require__(280); // var crypto = require('crypto');
 
 
 	var config = {
@@ -6605,7 +6605,7 @@
 
 /***/ },
 
-/***/ 813:
+/***/ 829:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -6935,19 +6935,19 @@
 
 /***/ },
 
-/***/ 1147:
+/***/ 1174:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1148)
-	__webpack_require__(1150)
-	__vue_script__ = __webpack_require__(1152)
+	__webpack_require__(1175)
+	__webpack_require__(1177)
+	__vue_script__ = __webpack_require__(1179)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/paySuccess/vue/paySuccess.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1158)
+	__vue_template__ = __webpack_require__(1185)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6973,13 +6973,13 @@
 
 /***/ },
 
-/***/ 1148:
+/***/ 1175:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1149);
+	var content = __webpack_require__(1176);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -7000,7 +7000,7 @@
 
 /***/ },
 
-/***/ 1149:
+/***/ 1176:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -7015,13 +7015,13 @@
 
 /***/ },
 
-/***/ 1150:
+/***/ 1177:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1151);
+	var content = __webpack_require__(1178);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -7042,7 +7042,7 @@
 
 /***/ },
 
-/***/ 1151:
+/***/ 1178:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -7057,7 +7057,7 @@
 
 /***/ },
 
-/***/ 1152:
+/***/ 1179:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7066,7 +7066,7 @@
 	  value: true
 	});
 
-	var _layout = __webpack_require__(270);
+	var _layout = __webpack_require__(286);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -7074,7 +7074,7 @@
 
 	var _$2 = _interopRequireDefault(_$);
 
-	var _tjAncestor = __webpack_require__(813);
+	var _tjAncestor = __webpack_require__(829);
 
 	var _tjAncestor2 = _interopRequireDefault(_tjAncestor);
 
@@ -7120,7 +7120,7 @@
 	__webpack_require__(152).polyfill();
 	exports.default = {
 	  components: {
-	    'com-scratch-card': __webpack_require__(1153)
+	    'com-scratch-card': __webpack_require__(1180)
 	  },
 	  props: {},
 	  data: function data() {
@@ -7281,18 +7281,18 @@
 
 /***/ },
 
-/***/ 1153:
+/***/ 1180:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(1154)
-	__vue_script__ = __webpack_require__(1156)
+	__webpack_require__(1181)
+	__vue_script__ = __webpack_require__(1183)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-scratch-card.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1157)
+	__vue_template__ = __webpack_require__(1184)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7318,13 +7318,13 @@
 
 /***/ },
 
-/***/ 1154:
+/***/ 1181:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(1155);
+	var content = __webpack_require__(1182);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -7345,7 +7345,7 @@
 
 /***/ },
 
-/***/ 1155:
+/***/ 1182:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -7360,7 +7360,7 @@
 
 /***/ },
 
-/***/ 1156:
+/***/ 1183:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7560,14 +7560,14 @@
 
 /***/ },
 
-/***/ 1157:
+/***/ 1184:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n\n\n\n\n<!--顶部标题-->\n<div class=\"com-scratch-card\">\n  <canvas ref=\"canvas\" v-show=\"showMask\"></canvas>\n  <slot></slot>\n</div>\n";
 
 /***/ },
 
-/***/ 1158:
+/***/ 1185:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"activity_container\" _v-36a25056=\"\">\n  <div class=\"activity_success\" :class=\"{activity_success_app: isapp}\" _v-36a25056=\"\">\n    \n    <div class=\"container1\" v-if=\"!isapp\" _v-36a25056=\"\">\n      <img class=\"successImg\" src=\"//pic.davdian.com/free/2017/06/20/Successful.png\" _v-36a25056=\"\">\n      <div class=\"success_btn_all\" _v-36a25056=\"\">\n      <div class=\"success_btn\" @click=\"goLink(successData.orderInfo.command.content)\" _v-36a25056=\"\">订单详情</div>\n        <div class=\"success_btn\" @click=\"goLink(successData.indexInfo.command.content)\" _v-36a25056=\"\">回到首页</div>\n      </div>\n    </div>\n    <div class=\"container2\" v-if=\"!isapp\" _v-36a25056=\"\"></div>\n    <div class=\"container3\" _v-36a25056=\"\">\n      <div class=\"success_text_top\" v-if=\"state==3\" _v-36a25056=\"\">相比非会员，本次购物帮您多省<span v-if=\"successData &amp;&amp; successData.orderInfo &amp;&amp; successData.orderInfo.orderIncome\" v-text=\"successData.orderInfo.orderIncome\" _v-36a25056=\"\"></span>元</div>\n      <div class=\"success_text_top1\" v-if=\"state==3\" _v-36a25056=\"\">累计已为您节省<span v-text=\"successData.orderInfo.totalIncome\" _v-36a25056=\"\"></span>元</div>\n      <p class=\"success_text_top2\" v-if=\"state==3\" _v-36a25056=\"\">有好事别忘了朋友！</p>\n      <p class=\"success_text_top3\" v-if=\"state==3\" _v-36a25056=\"\">推荐朋友成为会员，您也能获得丰厚奖励</p>\n      <!-- <p class='success_text_top2' v-if='state==0 || state==1'>您刚刚与 <span v-text='successData.orderInfo.orderIncome'></span>元返现擦肩而过</p>\n      <p class='success_text_top3' v-if='state==0 || state==1'>立即加入会员，获得更多优惠</p> -->\n      <div class=\"success_btn1\" v-if=\"state==3\" @click=\"goLink(successData.memberInfo.command.content)\" _v-36a25056=\"\">邀请好友</div>\n      <!-- <div class='success_btn1'  v-if='state==0 || state==1' @click='goLink(successData.memberInfo.command.content)'>加入会员</div> -->\n    </div>\n    \n  </div>\n</div>\n";

@@ -70,7 +70,7 @@
 
 	new _Vue2.default({
 	  components: {
-	    app: __webpack_require__(776)
+	    app: __webpack_require__(792)
 	  },
 	  template: '<app />',
 	  el: ".app"
@@ -6002,7 +6002,7 @@
 
 /***/ },
 
-/***/ 264:
+/***/ 280:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6341,7 +6341,7 @@
 
 /***/ },
 
-/***/ 270:
+/***/ 286:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6364,7 +6364,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var common = __webpack_require__(264); // var crypto = require('crypto');
+	var common = __webpack_require__(280); // var crypto = require('crypto');
 
 
 	var config = {
@@ -6908,18 +6908,18 @@
 
 /***/ },
 
-/***/ 750:
+/***/ 766:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(751)
-	__vue_script__ = __webpack_require__(753)
+	__webpack_require__(767)
+	__vue_script__ = __webpack_require__(769)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_goods/vue/com-count-down.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(754)
+	__vue_template__ = __webpack_require__(770)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6945,13 +6945,13 @@
 
 /***/ },
 
-/***/ 751:
+/***/ 767:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(752);
+	var content = __webpack_require__(768);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -6972,7 +6972,7 @@
 
 /***/ },
 
-/***/ 752:
+/***/ 768:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -6987,7 +6987,7 @@
 
 /***/ },
 
-/***/ 753:
+/***/ 769:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7134,25 +7134,25 @@
 
 /***/ },
 
-/***/ 754:
+/***/ 770:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"time-over\">\n  <div class=\"line\"></div>\n  <div class=\"info\">\n    <div v-if=\"remainSecond > 0\">\n      距活动结束:\n      <span class=\"time\">\n        <span class=\"box\">{{remainTime.day}}</span>天<span class=\"box\">{{remainTime.hour}}</span>:<span\n        class=\"box\">{{remainTime.minute}}</span>:<span\n        class=\"box\">{{remainTime.second}}</span>\n      </span>\n    </div>\n    <div v-if=\"remainSecond <= 0\">活动已结束<template v-if=\"groupStatus == '2'\">，没能组团成功哦~</template></div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 765:
+/***/ 781:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(766)
-	__vue_script__ = __webpack_require__(768)
+	__webpack_require__(782)
+	__vue_script__ = __webpack_require__(784)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_goods/vue/group-bottom-btns.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(769)
+	__vue_template__ = __webpack_require__(785)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7178,13 +7178,13 @@
 
 /***/ },
 
-/***/ 766:
+/***/ 782:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(767);
+	var content = __webpack_require__(783);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -7205,7 +7205,7 @@
 
 /***/ },
 
-/***/ 767:
+/***/ 783:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -7220,7 +7220,7 @@
 
 /***/ },
 
-/***/ 768:
+/***/ 784:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7360,25 +7360,25 @@
 
 /***/ },
 
-/***/ 769:
+/***/ 785:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"group-bottom-btns\">\n  <div class=\"top-line\"></div>\n  <div class=\"btns\">\n    <template v-for=\"btn in btnArray\">\n      <a v-if=\"btn.btnUrl\" @click=\"click(event, btn)\"\n         :href=\"(btn.btnType == 'new' || btn.btnType == 'join' || btn.btnType == 'pay') && isLogin === 0 ? '/login.html?referer='+encodeURIComponent(location.href) : btn.btnUrl\">{{btn.btnTxt}}</a>\n      <a v-if=\"!btn.btnUrl\" @click=\"click(event, btn)\">{{btn.btnTxt}}</a>\n    </template>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 776:
+/***/ 792:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(777)
-	__vue_script__ = __webpack_require__(779)
+	__webpack_require__(793)
+	__vue_script__ = __webpack_require__(795)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_goods/vue/app.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(781)
+	__vue_template__ = __webpack_require__(797)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7404,13 +7404,13 @@
 
 /***/ },
 
-/***/ 777:
+/***/ 793:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(778);
+	var content = __webpack_require__(794);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -7431,7 +7431,7 @@
 
 /***/ },
 
-/***/ 778:
+/***/ 794:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -7446,7 +7446,7 @@
 
 /***/ },
 
-/***/ 779:
+/***/ 795:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7459,11 +7459,11 @@
 
 	var _param2 = _interopRequireDefault(_param);
 
-	var _goods = __webpack_require__(780);
+	var _goods = __webpack_require__(796);
 
 	var _goods2 = _interopRequireDefault(_goods);
 
-	var _layout = __webpack_require__(270);
+	var _layout = __webpack_require__(286);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -7588,8 +7588,8 @@
 	  components: {
 	    'com-to-top-icon': __webpack_require__(82),
 	    'com-top-title': __webpack_require__(77),
-	    'com-count-down': __webpack_require__(750),
-	    'group-bottom-btns': __webpack_require__(765)
+	    'com-count-down': __webpack_require__(766),
+	    'group-bottom-btns': __webpack_require__(781)
 	  },
 	  props: {},
 	  data: function data() {
@@ -7671,7 +7671,7 @@
 
 /***/ },
 
-/***/ 780:
+/***/ 796:
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -7712,7 +7712,7 @@
 
 /***/ },
 
-/***/ 781:
+/***/ 797:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"app\" v-if=\"response\">\n  <!--头部标题-->\n  <com-top-title title=\"大V店限时组团\" home></com-top-title>\n\n  <template v-if=\"response.data.goodsInfo\">\n    <!--商品信息-->\n    <div class=\"goods-info\">\n      <div class=\"pic\">\n        <img v-lazy=\"goodsInfo.goodsImgUrl\">>\n        <div class=\"sold-out\" v-if=\"parseInt(goodsInfo.goodsStock) <= 0\">\n          <p class=\"top\">售罄</p>\n          <div class=\"split-line\"></div>\n          <p class=\"bottom\">SOLD OUT</p>\n        </div>\n        <div class=\"box-info\">\n          <div class=\"num\">{{goodsInfo.pepoleNumber}}人团</div>\n          <div class=\"privilege\">省{{goodsInfo.discount}}元</div>\n        </div>\n      </div>\n      <div class=\"info\">\n        <div class=\"top\">\n          <span class=\"group-price\">¥<span class=\"num\">{{goodsInfo.goodsPrice}}</span></span>\n          <span class=\"price\">单价买: ￥{{goodsInfo.realShopPrice}}</span>\n          <span class=\"post\" v-for=\"item in goodsInfo.actLabels\">{{item}}</span>\n        <span class=\"income\" v-if=\"response.visitor_status == '3' && goodsInfo.sellerIncome\">\n          团长返: ¥ {{goodsInfo.sellerIncome}}\n          <span class=\"times\"\n                v-if=\"goodsInfo.sellerRadio && goodsInfo.sellerRadio != '0'\">*{{goodsInfo.sellerRadio}}倍</span>\n        </span>\n        </div>\n      </div>\n      <div class=\"desc\">{{goodsInfo.goodsName}}</div>\n    </div>\n\n    <!--团购信息-->\n    <div class=\"group-info\">\n      <template v-if=\"goodsInfo.earliestList.length > 0\">\n        <div class=\"tip\">有小伙伴正在发起组团，可以直接参加购买~</div>\n        <div class=\"groups-wrapper\">\n          <ul class=\"groups\">\n            <li v-for=\"item in goodsInfo.earliestList\">\n              <a :href=\"item.command.content\" @click=\"joinOtherGroupClick\">\n                <img class=\"head\" v-lazy=\"item.founderAvater\">\n                <span class=\"nickname\">{{item.founderName}}</span>\n                <span class=\"go-group\">去参团</span>\n                <span class=\"remain-place\">还差 <span class=\"num\">{{item.leaveNumber}}</span> 人成团</span>\n              </a>\n            </li>\n          </ul>\n        </div>\n      </template>\n      <com-count-down :remain-second=\"goodsInfo.countDown\"></com-count-down>\n    </div>\n\n    <!--tab按钮-->\n    <div class=\"tab-btn\">\n    <span class=\"btn group\" :class=\"{active: currentTab == 1}\" @click=\"currentTab = 1\">\n      <span class=\"word\">商品详情</span>\n    </span>\n      <i class=\"btn-split\"></i>\n    <span class=\"btn mine\" :class=\"{active: currentTab == 2}\" @click=\"currentTab = 2\">\n      <span class=\"word\">活动须知</span>\n    </span>\n    </div>\n\n    <div class=\"split-line\"></div>\n\n    <!--商品详情-->\n    <div class=\"goods-detail\" v-show=\"currentTab == 1\" v-html=\"goodsInfo.goodsDesc\"></div>\n\n    <!--活动须知-->\n    <div class=\"act-rule\" v-show=\"currentTab == 2\">\n      <img v-for=\"(value,index) in goodsInfo.notice\" v-lazy=\"value\">\n    </div>\n\n    <!--底部购买按钮-->\n    <group-bottom-btns :btn-array=\"goodsInfo.clickBtn\" :is-login=\"response.data.isLogin\" :is-intercept=\"goodsInfo.isIntercept\"></group-bottom-btns>\n\n    <!--至顶按钮-->\n    <com-to-top-icon></com-to-top-icon>\n  </template>\n\n</div>\n";

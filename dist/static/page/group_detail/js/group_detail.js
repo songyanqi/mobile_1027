@@ -70,7 +70,7 @@
 
 	new _Vue2.default({
 	  components: {
-	    app: __webpack_require__(746)
+	    app: __webpack_require__(762)
 	  },
 	  template: '<app />',
 	  el: ".app"
@@ -6002,7 +6002,7 @@
 
 /***/ },
 
-/***/ 264:
+/***/ 280:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6341,7 +6341,7 @@
 
 /***/ },
 
-/***/ 270:
+/***/ 286:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -6364,7 +6364,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var common = __webpack_require__(264); // var crypto = require('crypto');
+	var common = __webpack_require__(280); // var crypto = require('crypto');
 
 
 	var config = {
@@ -6908,18 +6908,18 @@
 
 /***/ },
 
-/***/ 746:
+/***/ 762:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(747)
-	__vue_script__ = __webpack_require__(749)
+	__webpack_require__(763)
+	__vue_script__ = __webpack_require__(765)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_detail/vue/app.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(770)
+	__vue_template__ = __webpack_require__(786)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -6945,13 +6945,13 @@
 
 /***/ },
 
-/***/ 747:
+/***/ 763:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(748);
+	var content = __webpack_require__(764);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -6972,7 +6972,7 @@
 
 /***/ },
 
-/***/ 748:
+/***/ 764:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -6987,7 +6987,7 @@
 
 /***/ },
 
-/***/ 749:
+/***/ 765:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7000,7 +7000,7 @@
 
 	var _param2 = _interopRequireDefault(_param);
 
-	var _layout = __webpack_require__(270);
+	var _layout = __webpack_require__(286);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -7173,10 +7173,10 @@
 	  components: {
 	    'com-to-top-icon': __webpack_require__(82),
 	    'com-top-title': __webpack_require__(77),
-	    'com-count-down': __webpack_require__(750),
-	    'group-state-icon': __webpack_require__(755),
-	    'group-head-portrait': __webpack_require__(760),
-	    'group-bottom-btns': __webpack_require__(765)
+	    'com-count-down': __webpack_require__(766),
+	    'group-state-icon': __webpack_require__(771),
+	    'group-head-portrait': __webpack_require__(776),
+	    'group-bottom-btns': __webpack_require__(781)
 	  },
 	  props: {},
 	  data: function data() {
@@ -7267,18 +7267,18 @@
 
 /***/ },
 
-/***/ 750:
+/***/ 766:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(751)
-	__vue_script__ = __webpack_require__(753)
+	__webpack_require__(767)
+	__vue_script__ = __webpack_require__(769)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_goods/vue/com-count-down.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(754)
+	__vue_template__ = __webpack_require__(770)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7304,13 +7304,13 @@
 
 /***/ },
 
-/***/ 751:
+/***/ 767:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(752);
+	var content = __webpack_require__(768);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -7331,7 +7331,7 @@
 
 /***/ },
 
-/***/ 752:
+/***/ 768:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -7346,7 +7346,7 @@
 
 /***/ },
 
-/***/ 753:
+/***/ 769:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7493,25 +7493,25 @@
 
 /***/ },
 
-/***/ 754:
+/***/ 770:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"time-over\">\n  <div class=\"line\"></div>\n  <div class=\"info\">\n    <div v-if=\"remainSecond > 0\">\n      距活动结束:\n      <span class=\"time\">\n        <span class=\"box\">{{remainTime.day}}</span>天<span class=\"box\">{{remainTime.hour}}</span>:<span\n        class=\"box\">{{remainTime.minute}}</span>:<span\n        class=\"box\">{{remainTime.second}}</span>\n      </span>\n    </div>\n    <div v-if=\"remainSecond <= 0\">活动已结束<template v-if=\"groupStatus == '2'\">，没能组团成功哦~</template></div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 755:
+/***/ 771:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(756)
-	__vue_script__ = __webpack_require__(758)
+	__webpack_require__(772)
+	__vue_script__ = __webpack_require__(774)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_detail/vue/group-state-icon.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(759)
+	__vue_template__ = __webpack_require__(775)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7537,13 +7537,13 @@
 
 /***/ },
 
-/***/ 756:
+/***/ 772:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(757);
+	var content = __webpack_require__(773);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -7564,7 +7564,7 @@
 
 /***/ },
 
-/***/ 757:
+/***/ 773:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -7579,7 +7579,7 @@
 
 /***/ },
 
-/***/ 758:
+/***/ 774:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -7686,25 +7686,25 @@
 
 /***/ },
 
-/***/ 759:
+/***/ 775:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"group-state-icon\" :class=\"type\">\n  <div class=\"circle\">\n    <div class=\"text\">\n      <template v-if=\"type == 'success'\">组团</br>成功</template>\n      <template v-if=\"type == 'wait'\">等待</br>成团</template>\n      <template v-if=\"type == 'fail'\">组团</br>失败</template>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 760:
+/***/ 776:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(761)
-	__vue_script__ = __webpack_require__(763)
+	__webpack_require__(777)
+	__vue_script__ = __webpack_require__(779)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_detail/vue/group-head-portrait.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(764)
+	__vue_template__ = __webpack_require__(780)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7730,13 +7730,13 @@
 
 /***/ },
 
-/***/ 761:
+/***/ 777:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(762);
+	var content = __webpack_require__(778);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -7757,7 +7757,7 @@
 
 /***/ },
 
-/***/ 762:
+/***/ 778:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -7772,7 +7772,7 @@
 
 /***/ },
 
-/***/ 763:
+/***/ 779:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -7854,25 +7854,25 @@
 
 /***/ },
 
-/***/ 764:
+/***/ 780:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<span class=\"group-head-portrait\" @click=\"click\">\n  <img v-if=\"type == 'normal' || type == 'leader'\" class=\"person\" v-lazy=\"src\">\n  <img v-if=\"type == 'empty'\" v-lazy=\"'http://pic.davdian.com/free/2017/03/25/group-head-unknow.png'\">\n  <a :href=\"href\" v-if=\"type == 'more'\">\n    <img v-lazy=\"'http://pic.davdian.com/free/2017/03/25/group-head-more.png'\">\n  </a>\n  <i v-if=\"type == 'leader'\" class=\"group-leader\"></i>\n</span>\n";
 
 /***/ },
 
-/***/ 765:
+/***/ 781:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(766)
-	__vue_script__ = __webpack_require__(768)
+	__webpack_require__(782)
+	__vue_script__ = __webpack_require__(784)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_goods/vue/group-bottom-btns.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(769)
+	__vue_template__ = __webpack_require__(785)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -7898,13 +7898,13 @@
 
 /***/ },
 
-/***/ 766:
+/***/ 782:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(767);
+	var content = __webpack_require__(783);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -7925,7 +7925,7 @@
 
 /***/ },
 
-/***/ 767:
+/***/ 783:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -7940,7 +7940,7 @@
 
 /***/ },
 
-/***/ 768:
+/***/ 784:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8080,14 +8080,14 @@
 
 /***/ },
 
-/***/ 769:
+/***/ 785:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"group-bottom-btns\">\n  <div class=\"top-line\"></div>\n  <div class=\"btns\">\n    <template v-for=\"btn in btnArray\">\n      <a v-if=\"btn.btnUrl\" @click=\"click(event, btn)\"\n         :href=\"(btn.btnType == 'new' || btn.btnType == 'join' || btn.btnType == 'pay') && isLogin === 0 ? '/login.html?referer='+encodeURIComponent(location.href) : btn.btnUrl\">{{btn.btnTxt}}</a>\n      <a v-if=\"!btn.btnUrl\" @click=\"click(event, btn)\">{{btn.btnTxt}}</a>\n    </template>\n  </div>\n</div>\n";
 
 /***/ },
 
-/***/ 770:
+/***/ 786:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<div class=\"app\" v-if=\"response\">\n  <!--头部标题-->\n  <!--<com-top-title :title=\"groupInfo.goodsName\" border-bottom home></com-top-title>-->\n  <com-top-title title=\"大V店限时组团\" border-bottom home></com-top-title>\n\n  <!--PHP控制页面跳转逻辑-->\n  <div class=\"php-redirect-tip\" v-if=\"response.data.type == '3'\">\n    <img v-lazy=\"'http://pic.davdian.com/free/prompt_ico_2015918_2x.png'\">\n    <a :href=\"response.data.redirectUrl\">您已有这个商品的组团记录，点击跳转到您的组团界面!</a>\n    <i></i>\n  </div>\n\n  <!--商品信息-->\n  <a :href=\"groupInfo.goodsInfoUrl\">\n    <div class=\"goods-info\">\n        <span class=\"pic\">\n          <img class=\"goods-img\" v-lazy=\"groupInfo.goodsImgUrl\">\n            <!--<group-state-icon v-if=\"response.data.groupStatus == '1'\" type=\"success\" :src=\"groupInfo.founderAvater\"></group-state-icon>-->\n            <!--<group-state-icon v-if=\"response.data.groupStatus == '0'\" type=\"wait\" :src=\"groupInfo.founderAvater\"></group-state-icon>-->\n            <!--<group-state-icon v-if=\"response.data.groupStatus == '2'\" type=\"fail\" :src=\"groupInfo.founderAvater\"></group-state-icon>-->\n          <img class=\"group-state-img\" v-if=\"response.data.groupStatus == '1'\" src=\"http://pic.davdian.com/free/group/group-status-success.png\">\n          <img class=\"group-state-img\" v-if=\"response.data.groupStatus == '0'\" src=\"http://pic.davdian.com/free/group/group-status-wait.png\">\n          <img class=\"group-state-img\" v-if=\"response.data.groupStatus == '2'\" src=\"http://pic.davdian.com/free/group/group-status-fail.png\">\n        </span>\n        <span class=\"info\">\n          <div class=\"top\">\n            <span class=\"num\">[{{groupInfo.pepoleNumber}}人团]</span> {{groupInfo.goodsName}}\n          </div>\n          <div class=\"middle\">\n            <span class=\"group-price\">¥ <span class=\"big\">{{groupInfo.goodsPrice}}</span></span>\n            <template v-if=\"response.visitor_status == '3'\">\n              <span class=\"income\" v-if=\"groupInfo.sellerIncome && groupInfo.sellerIncome != '0'\">团长返 ¥ {{groupInfo.sellerIncome}}</span>\n              <span class=\"income-times\" v-if=\"groupInfo.sellerRadio && groupInfo.sellerRadio != '0'\">*{{groupInfo.sellerRadio}}倍</span>\n            </template>\n          </div>\n          <div class=\"bottom\">单价买: ¥ {{groupInfo.realShopPrice}}</div>\n        </span>\n    </div>\n  </a>\n\n  <!--组团信息-->\n  <div class=\"group-info\">\n    <!--组团人数-->\n    <div class=\"group\">\n      <template v-if=\"response.data.type == '8' || response.data.type == '10'\">\n        <div class=\"title\">\n          还有<span class=\"num\">{{groupInfo.leaveNumber}}</span>个名额，赶快参团吧～\n        </div>\n      </template>\n      <template v-else>\n        <div class=\"title\" v-if=\"response.data.groupStatus == '1'\">\n          {{groupInfo.pepoleNumber}}人团已组团成功，好棒哦~\n        </div>\n        <div class=\"title\" v-if=\"response.data.groupStatus == '0' || response.data.groupStatus == '2'\">\n          还差 <span class=\"num\">{{groupInfo.leaveNumber}}</span> 人，快喊小伙伴一起组团吧~\n        </div>\n      </template>\n      <div class=\"heads\">\n        <!--团长或团员(最多5个)-->\n        <group-head-portrait\n          v-for=\"(member, i) in groupInfo.tourList\"\n          v-if=\"i < 5\"\n          :type=\"member.parendId === '0' ? 'leader' : 'normal'\"\n          :src=\"member.founderAvater\"></group-head-portrait>\n        <!--空位置(算上团员最多5个)-->\n        <group-head-portrait\n          v-for=\"(value, i) in emptyGroupNum\"\n          type=\"empty\"></group-head-portrait>\n        <!--更多-->\n        <!--v-if=\"groupInfo.tourList.length > 5\"-->\n        <group-head-portrait\n          v-if=\"parseInt(groupInfo.pepoleNumber) - parseInt(groupInfo.leaveNumber) > 5\"\n          type=\"more\"\n          :href=\"'/group_detail_all.html?group_id='+(response.data.groupId||'')+'&reverse_id='+(response.data.reverseId||'')\"></group-head-portrait>\n      </div>\n    </div>\n\n    <!--倒计时-->\n    <com-count-down :remain-second=\"groupInfo.countDown\" :group-status=\"response.data.groupStatus\"></com-count-down>\n\n    <!--展开组团详情-->\n    <div class=\"detail-list\" :class=\"{show: detailIsShow}\" v-if=\"groupInfo.tourList.length > 0\">\n      <div class=\"title\" @click=\"detailIsShow = !detailIsShow\">\n        <template v-if=\"!detailIsShow\">展开组团详情</template>\n        <template v-if=\"detailIsShow\">收起组团详情</template>\n        <span class=\"arrow\"></span>\n      </div>\n      <div class=\"line\"></div>\n      <div class=\"list\">\n        <div class=\"arrow\"></div>\n        <ul>\n          <!--团员-->\n          <template v-for=\"(member, i) in groupInfo.tourList\" v-if=\"i < 5\">\n            <div class=\"split-line\" v-if=\"i !== 0\"></div>\n            <li>\n              <group-head-portrait :type=\"member.parendId === '0' ? 'leader' : 'normal'\"\n                                   :src=\"member.founderAvater\"></group-head-portrait>\n              <span class=\"nickname\">{{member.founderName}}</span>\n              <span class=\"begin-time\">{{member.uTime}} {{member.parendId === '0' ? '开团' : '参团'}}</span>\n            </li>\n          </template>\n          <!--更多-->\n          <template v-if=\"groupInfo.tourList.length >= 5\">\n            <div class=\"split-line\"></div>\n            <li class=\"more\">\n              <a :href=\"'/group_detail_all.html?group_id='+(response.data.groupId||'')+'&reverse_id='+(response.data.reverseId||'')\">查看更多</a>\n            </li>\n          </template>\n        </ul>\n      </div>\n    </div>\n  </div>\n\n  <!--热门组团-->\n  <div class=\"hot-groups\">\n    <div class=\"title\">\n      <i class=\"arrow\"></i>\n      <span class=\"text\">热门组团</span>\n    </div>\n    <ul class=\"list\">\n      <li v-for=\"(hot,i) in response.data.hotList\">\n        <a :href=\"hot.command.content\" @click=\"hotGroupsItemClick\">\n          <img class=\"pic\" v-lazy=\"hot.imgUrl\">\n          <div class=\"goods-name\">\n            <span class=\"num\">[{{hot.pepoleNumber}}人团]</span> {{hot.goodsName}}\n          </div>\n          <div class=\"goods-price\">\n            <span class=\"group-price\">￥{{hot.goodsPrice}}</span>\n            <span class=\"single-price\">单买价￥{{hot.realShopPrice}}</span>\n          </div>\n        </a>\n      </li>\n    </ul>\n  </div>\n\n  <!--底部购买按钮-->\n  <group-bottom-btns :btn-array=\"groupInfo.clickBtn\" :is-login=\"response.data.isLogin\" :is-intercept=\"groupInfo.isIntercept\"></group-bottom-btns>\n\n  <!--至顶按钮-->\n  <!--<com-to-top-icon></com-to-top-icon>-->\n</div>\n";

@@ -3752,11 +3752,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-57b26686/com-share-pop-tip.vue"
-=======
-	  var id = "_v-7718a21b/com-share-pop-tip.vue"
->>>>>>> ba87b4bc9a7cdf633f10f94affca4e1bc7de78a7
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4345,11 +4341,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-1a34eddb/com-popup-toast.vue"
-=======
-	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
->>>>>>> ba87b4bc9a7cdf633f10f94affca4e1bc7de78a7
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4545,11 +4537,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-993d82e0/com-popup-alert.vue"
-=======
-	  var id = "_v-48db5b65/com-popup-alert.vue"
->>>>>>> ba87b4bc9a7cdf633f10f94affca4e1bc7de78a7
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4710,7 +4698,6 @@
 	  //       .title {
 	  //         color: #333;
 	  //         font-size: ptr(16);
-<<<<<<< HEAD
 	  //       }
 	  //       .titleCont {
 	  //         padding: ptr(15) ptr(15);
@@ -4723,20 +4710,6 @@
 	  //       .okText {
 	  //         padding-top: ptr(10);
 	  //       }
-=======
-	  //       }
-	  //       .titleCont {
-	  //         padding: ptr(15) ptr(15);
-	  //         border-top-left-radius: $radius;
-	  //         border-top-right-radius: $radius;
-	  //         font-size: ptr(14);
-	  //         line-height: 1.5;
-	  //         color: #666;
-	  //       }
-	  //       .okText {
-	  //         padding-top: ptr(10);
-	  //       }
->>>>>>> ba87b4bc9a7cdf633f10f94affca4e1bc7de78a7
 	  //       .btn {
 	  //         /*padding: ptr(7);*/
 	  //         @include height(ptr(44));
@@ -4784,11 +4757,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-27dcda18/com-popup-confirm.vue"
-=======
-	  var id = "_v-0b77ce89/com-popup-confirm.vue"
->>>>>>> ba87b4bc9a7cdf633f10f94affca4e1bc7de78a7
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4898,7 +4867,6 @@
 	    cancel: {
 	      type: Function,
 	      default: function _default() {}
-<<<<<<< HEAD
 	    }
 	  },
 	  data: function data() {
@@ -4916,25 +4884,6 @@
 	      this.$el.parentNode.removeChild(this.$el);
 	    }
 	  },
-=======
-	    }
-	  },
-	  data: function data() {
-	    return {};
-	  },
-
-	  computed: {},
-	  created: function created() {},
-	  mounted: function mounted() {},
-
-	  methods: {
-	    // 销毁自身
-	    destroy: function destroy() {
-	      this.$destroy();
-	      this.$el.parentNode.removeChild(this.$el);
-	    }
-	  },
->>>>>>> ba87b4bc9a7cdf633f10f94affca4e1bc7de78a7
 	  filters: {},
 	  watch: {}
 	  // </script>
@@ -5056,11 +5005,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-6c902120/com-popup-loading.vue"
-=======
-	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
->>>>>>> ba87b4bc9a7cdf633f10f94affca4e1bc7de78a7
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {

@@ -70,7 +70,7 @@
 
 	new _Vue2.default({
 	  components: {
-	    app: __webpack_require__(771)
+	    app: __webpack_require__(787)
 	  },
 	  template: '<app />',
 	  el: ".app"
@@ -4660,7 +4660,7 @@
 
 /***/ },
 
-/***/ 264:
+/***/ 280:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4999,7 +4999,7 @@
 
 /***/ },
 
-/***/ 270:
+/***/ 286:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5022,7 +5022,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var common = __webpack_require__(264); // var crypto = require('crypto');
+	var common = __webpack_require__(280); // var crypto = require('crypto');
 
 
 	var config = {
@@ -5566,18 +5566,18 @@
 
 /***/ },
 
-/***/ 760:
+/***/ 776:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(761)
-	__vue_script__ = __webpack_require__(763)
+	__webpack_require__(777)
+	__vue_script__ = __webpack_require__(779)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_detail/vue/group-head-portrait.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(764)
+	__vue_template__ = __webpack_require__(780)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5603,13 +5603,13 @@
 
 /***/ },
 
-/***/ 761:
+/***/ 777:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(762);
+	var content = __webpack_require__(778);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -5630,7 +5630,7 @@
 
 /***/ },
 
-/***/ 762:
+/***/ 778:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -5645,7 +5645,7 @@
 
 /***/ },
 
-/***/ 763:
+/***/ 779:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -5727,25 +5727,25 @@
 
 /***/ },
 
-/***/ 764:
+/***/ 780:
 /***/ function(module, exports) {
 
 	module.exports = "\n\n<span class=\"group-head-portrait\" @click=\"click\">\n  <img v-if=\"type == 'normal' || type == 'leader'\" class=\"person\" v-lazy=\"src\">\n  <img v-if=\"type == 'empty'\" v-lazy=\"'http://pic.davdian.com/free/2017/03/25/group-head-unknow.png'\">\n  <a :href=\"href\" v-if=\"type == 'more'\">\n    <img v-lazy=\"'http://pic.davdian.com/free/2017/03/25/group-head-more.png'\">\n  </a>\n  <i v-if=\"type == 'leader'\" class=\"group-leader\"></i>\n</span>\n";
 
 /***/ },
 
-/***/ 771:
+/***/ 787:
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(772)
-	__vue_script__ = __webpack_require__(774)
+	__webpack_require__(788)
+	__vue_script__ = __webpack_require__(790)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/group_detail_all/vue/app.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(775)
+	__vue_template__ = __webpack_require__(791)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -5771,13 +5771,13 @@
 
 /***/ },
 
-/***/ 772:
+/***/ 788:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(773);
+	var content = __webpack_require__(789);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(51)(content, {});
@@ -5798,7 +5798,7 @@
 
 /***/ },
 
-/***/ 773:
+/***/ 789:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(50)();
@@ -5813,7 +5813,7 @@
 
 /***/ },
 
-/***/ 774:
+/***/ 790:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5822,7 +5822,7 @@
 	  value: true
 	});
 
-	var _layout = __webpack_require__(270);
+	var _layout = __webpack_require__(286);
 
 	var _layout2 = _interopRequireDefault(_layout);
 
@@ -5870,7 +5870,7 @@
 	exports.default = {
 	  components: {
 	    'com-top-title': __webpack_require__(77),
-	    'group-head-portrait': __webpack_require__(760)
+	    'group-head-portrait': __webpack_require__(776)
 	  },
 	  props: {},
 	  data: function data() {
@@ -5944,7 +5944,7 @@
 
 /***/ },
 
-/***/ 775:
+/***/ 791:
 /***/ function(module, exports) {
 
 	module.exports = "\n<div class=\"app\">\n  <!--头部标题-->\n  <com-top-title title=\"团成员列表\" border-bottom home></com-top-title>\n  <!--全部成员列表-->\n  <ul class=\"all-group-people\">\n    <template v-for=\"(member, i) in memberList\">\n      <li>\n        <group-head-portrait :type=\"member.parendId === '0' ? 'leader' : 'normal'\" :src=\"member.founderAvater\"></group-head-portrait>\n        <span class=\"nickname\">{{member.founderName}}</span>\n        <span class=\"begin-time\">{{member.uTime}} {{member.parendId === '0' ? '开团' : '参团'}}</span>\n      </li>\n      <div class=\"split-line\"></div>\n    </template>\n  </ul>\n</div>\n";
