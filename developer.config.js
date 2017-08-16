@@ -15,6 +15,6 @@
 export default {
   // env_stage: 'prod',
   // env_num: '',
-  // page: 'allDiscuss',
-  // webpack: false,
+  page: 'act_818',
+  webpack: false,
 };
