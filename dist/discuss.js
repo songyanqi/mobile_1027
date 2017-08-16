@@ -6434,7 +6434,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6c73304f/discuss.vue"
+	  var id = "_v-78cfa41a/discuss.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -6498,8 +6498,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6c73304f&scoped=true!../node_modules/sass-loader/index.js!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=1!./discuss.vue", function() {
-				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6c73304f&scoped=true!../node_modules/sass-loader/index.js!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=1!./discuss.vue");
+			module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-78cfa41a&scoped=true!../node_modules/sass-loader/index.js!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=1!./discuss.vue", function() {
+				var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/vue-loader/lib/style-rewriter.js?id=_v-78cfa41a&scoped=true!../node_modules/sass-loader/index.js!../node_modules/vux-loader/src/style-loader.js!../node_modules/vue-loader/lib/selector.js?type=style&index=1!./discuss.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -6517,7 +6517,7 @@
 
 
 	// module
-	exports.push([module.id, ".container[_v-6c73304f] {\n  padding-top: 0.21rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  padding-bottom: 0.15rem;\n  font-size: 0;\n  background: #fff;\n  border-bottom: 0.5px solid #F1F1F1; }\n\n.title .title_all[_v-6c73304f] {\n  display: inline-block;\n  vertical-align: middle; }\n\n.title .title_img[_v-6c73304f] {\n  width: 0.24rem;\n  height: 0.24rem;\n  border-radius: 50%;\n  background: red; }\n\n.title .title_name[_v-6c73304f] {\n  font-size: 0.14rem;\n  color: #666666;\n  margin-left: 0.05rem; }\n\n.title .title_time[_v-6c73304f] {\n  font-size: 0.12rem;\n  margin-left: 0.03rem;\n  color: #999999; }\n\n.title .title_star[_v-6c73304f] {\n  width: 0.59rem;\n  float: right;\n  margin-top: 0.06rem; }\n\n.content[_v-6c73304f] {\n  font-size: 0.13rem;\n  color: #333333;\n  margin-top: 0.1rem; }\n\n.error img[_v-6c73304f] {\n  width: 1.2rem;\n  margin-top: 1rem;\n  margin-left: 1.28rem; }\n\n.error div[_v-6c73304f] {\n  color: #666666;\n  margin-top: 0.3rem;\n  width: 100%;\n  text-align: center;\n  font-size: 0.14rem; }\n\n.discuss_no[_v-6c73304f] {\n  position: fixed;\n  width: 100%;\n  max-width: 640px;\n  height: 0.3rem;\n  line-height: 0.3rem;\n  background: #000;\n  opacity: 0.6;\n  color: #fff;\n  text-align: center;\n  font-size: 0.14rem; }\n\n.inAppBlock[_v-6c73304f] {\n  height: 44px;\n  width: 100%; }\n", ""]);
+	exports.push([module.id, ".container[_v-78cfa41a] {\n  padding-top: 0.21rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  padding-bottom: 0.15rem;\n  font-size: 0;\n  background: #fff;\n  border-bottom: 0.5px solid #F1F1F1; }\n\n.title .title_all[_v-78cfa41a] {\n  display: inline-block;\n  vertical-align: middle; }\n\n.title .title_img[_v-78cfa41a] {\n  width: 0.24rem;\n  height: 0.24rem;\n  border-radius: 50%;\n  background: red; }\n\n.title .title_name[_v-78cfa41a] {\n  font-size: 0.14rem;\n  color: #666666;\n  margin-left: 0.05rem; }\n\n.title .title_time[_v-78cfa41a] {\n  font-size: 0.12rem;\n  margin-left: 0.03rem;\n  color: #999999; }\n\n.title .title_star[_v-78cfa41a] {\n  width: 0.59rem;\n  float: right;\n  margin-top: 0.06rem; }\n\n.content[_v-78cfa41a] {\n  font-size: 0.13rem;\n  color: #333333;\n  margin-top: 0.1rem; }\n\n.error img[_v-78cfa41a] {\n  width: 1.2rem;\n  margin-top: 1rem;\n  margin-left: 1.28rem; }\n\n.error div[_v-78cfa41a] {\n  color: #666666;\n  margin-top: 0.3rem;\n  width: 100%;\n  text-align: center;\n  font-size: 0.14rem; }\n\n.discuss_no[_v-78cfa41a] {\n  position: fixed;\n  width: 100%;\n  max-width: 640px;\n  height: 0.3rem;\n  line-height: 0.3rem;\n  background: #000;\n  opacity: 0.6;\n  color: #fff;\n  text-align: center;\n  font-size: 0.14rem; }\n\n.inAppBlock[_v-78cfa41a] {\n  height: 44px;\n  width: 100%; }\n", ""]);
 
 	// exports
 
@@ -6802,7 +6802,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6b448579/discussTitle.vue"
+	  var id = "_v-501fb88e/discussTitle.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -15753,7 +15753,7 @@
 /* 882 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div id=\"discuss\" _v-6c73304f=\"\">\n    <discuss-title :rightshow=\"rightshow\" v-if=\"!inApp\" _v-6c73304f=\"\"></discuss-title>\n    <div class=\"inAppBlock\" v-if=\"!inApp\" _v-6c73304f=\"\"></div>\n    <div class=\"discuss_no\" v-if=\"rightshow==1\" _v-6c73304f=\"\">报名后才能评论哦</div>\n    <div class=\"container\" v-for=\"item in feedList\" _v-6c73304f=\"\">\n        <div class=\"title\" _v-6c73304f=\"\">\n            <div class=\"title_img title_all\" :style=\"{'background': 'url(' + item.headImg + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-6c73304f=\"\"></div>    \n            <div class=\"title_name title_all\" v-text=\"item.userName\" _v-6c73304f=\"\"></div>\n            <div class=\"title_time title_all\" v-text=\"item.createTime\" _v-6c73304f=\"\"></div>\n            <img class=\"title_star title_all\" v-if=\"item.score == 1\" src=\"//pic.davdian.com/free/2017/05/09/star_1.png\" _v-6c73304f=\"\">\n            <img class=\"title_star title_all\" v-if=\"item.score == 2\" src=\"//pic.davdian.com/free/2017/05/09/star_2.png\" _v-6c73304f=\"\">\n            <img class=\"title_star title_all\" v-if=\"item.score == 3\" src=\"//pic.davdian.com/free/2017/05/09/star_3.png\" _v-6c73304f=\"\">\n            <img class=\"title_star title_all\" v-if=\"item.score == 4\" src=\"//pic.davdian.com/free/2017/05/09/star_4.png\" _v-6c73304f=\"\">\n            <img class=\"title_star title_all\" v-if=\"item.score == 5\" src=\"//pic.davdian.com/free/2017/05/09/star_5.png\" _v-6c73304f=\"\">\n        </div>\n        <div class=\"content\" v-html=\"item.content.replace(/\\n/g,'<br/>')\" _v-6c73304f=\"\"></div>\n    </div>\n    <div class=\"error\" v-if=\"noDataFlag\" _v-6c73304f=\"\">\n        <img src=\"//pic.davdian.com/free/2017/05/10/error_img.png\" _v-6c73304f=\"\">\n        <div _v-6c73304f=\"\">还没有笔记</div>\n    </div>\n</div>\n";
+	module.exports = "\n<div id=\"discuss\" _v-78cfa41a=\"\">\n    <discuss-title :rightshow=\"rightshow\" v-if=\"!inApp\" _v-78cfa41a=\"\"></discuss-title>\n    <div class=\"inAppBlock\" v-if=\"!inApp\" _v-78cfa41a=\"\"></div>\n    <div class=\"discuss_no\" v-if=\"rightshow==1\" _v-78cfa41a=\"\">报名后才能评论哦</div>\n    <div class=\"container\" v-for=\"item in feedList\" _v-78cfa41a=\"\">\n        <div class=\"title\" _v-78cfa41a=\"\">\n            <div class=\"title_img title_all\" :style=\"{'background': 'url(' + item.headImg + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-78cfa41a=\"\"></div>    \n            <div class=\"title_name title_all\" v-text=\"item.userName\" _v-78cfa41a=\"\"></div>\n            <div class=\"title_time title_all\" v-text=\"item.createTime\" _v-78cfa41a=\"\"></div>\n            <img class=\"title_star title_all\" v-if=\"item.score == 1\" src=\"//pic.davdian.com/free/2017/05/09/star_1.png\" _v-78cfa41a=\"\">\n            <img class=\"title_star title_all\" v-if=\"item.score == 2\" src=\"//pic.davdian.com/free/2017/05/09/star_2.png\" _v-78cfa41a=\"\">\n            <img class=\"title_star title_all\" v-if=\"item.score == 3\" src=\"//pic.davdian.com/free/2017/05/09/star_3.png\" _v-78cfa41a=\"\">\n            <img class=\"title_star title_all\" v-if=\"item.score == 4\" src=\"//pic.davdian.com/free/2017/05/09/star_4.png\" _v-78cfa41a=\"\">\n            <img class=\"title_star title_all\" v-if=\"item.score == 5\" src=\"//pic.davdian.com/free/2017/05/09/star_5.png\" _v-78cfa41a=\"\">\n        </div>\n        <div class=\"content\" v-html=\"item.content.replace(/\\n/g,'<br/>')\" _v-78cfa41a=\"\"></div>\n    </div>\n    <div class=\"error\" v-if=\"noDataFlag\" _v-78cfa41a=\"\">\n        <img src=\"//pic.davdian.com/free/2017/05/10/error_img.png\" _v-78cfa41a=\"\">\n        <div _v-78cfa41a=\"\">还没有笔记</div>\n    </div>\n</div>\n";
 
 /***/ }
 /******/ ]);
