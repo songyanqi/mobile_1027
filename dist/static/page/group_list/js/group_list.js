@@ -3638,7 +3638,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7718a21b/com-share-pop-tip.vue"
+	  var id = "_v-57b26686/com-share-pop-tip.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4155,7 +4155,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-8892d76c/com-top-title.vue"
+	  var id = "_v-16214635/com-top-title.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4462,7 +4462,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5c521926/com-to-top-icon.vue"
+	  var id = "_v-3c5cd698/com-to-top-icon.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5847,7 +5847,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-409203af/app.vue"
+	  var id = "_v-ca0694cc/app.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -6271,7 +6271,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0fa092e7/com-pic-display-box.vue"
+	  var id = "_v-30dae892/com-pic-display-box.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -6491,7 +6491,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-c77b8bb6/group-goods-list.vue"
+	  var id = "_v-a5d183cc/group-goods-list.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7163,7 +7163,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-d38c884c/group-detail-list.vue"
+	  var id = "_v-bff592f6/group-detail-list.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
