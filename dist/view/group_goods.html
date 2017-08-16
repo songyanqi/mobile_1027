@@ -1,0 +1,117 @@
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<<<<<<< HEAD
+  <script src="//fe-ws.davdian.com/wap/static/dist/static/common/js/autoRootSize.js?v=2017-08-16_17:04:30"></script>
+
+  <link rel="stylesheet" href="//fe-ws.davdian.com/wap/static/dist/static/page/group_goods/css/group_goods.css?v=2017-08-16_17:04:30">
+=======
+  <script src="//fe-ws.davdian.com/wap/static/dist/static/common/js/autoRootSize.js?v=2017-08-16_17:05:43"></script>
+
+  <link rel="stylesheet" href="//fe-ws.davdian.com/wap/static/dist/static/page/group_goods/css/group_goods.css?v=2017-08-16_17:05:43">
+>>>>>>> caa070bc076df6bb61437c5db0ee8dba4a2ea93f
+</head>
+<body>
+  <div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
+    <!--头部标题-->
+    <com-top-title title="大V店限时组团" home></com-top-title>
+
+    <template v-if="response.data.goodsInfo">
+      <!--商品信息-->
+      <div class="goods-info">
+        <div class="pic">
+          <img v-lazy="goodsInfo.goodsImgUrl">>
+          <div class="sold-out" v-if="parseInt(goodsInfo.goodsStock) <= 0">
+            <p class="top">售罄</p>
+            <div class="split-line"></div>
+            <p class="bottom">SOLD OUT</p>
+          </div>
+          <div class="box-info">
+            <div class="num">{{goodsInfo.pepoleNumber}}人团</div>
+            <div class="privilege">省{{goodsInfo.discount}}元</div>
+          </div>
+        </div>
+        <div class="info">
+          <div class="top">
+            <span class="group-price">¥<span class="num">{{goodsInfo.goodsPrice}}</span></span>
+            <span class="price">单价买: ￥{{goodsInfo.realShopPrice}}</span>
+            <span class="post" v-for="item in goodsInfo.actLabels">{{item}}</span>
+            <span class="income" v-if="response.visitor_status == '3' && goodsInfo.sellerIncome">
+              团长返: ¥ {{goodsInfo.sellerIncome}}
+              <span class="times"
+                    v-if="goodsInfo.sellerRadio && goodsInfo.sellerRadio != '0'">*{{goodsInfo.sellerRadio}}倍</span>
+            </span>
+          </div>
+        </div>
+        <div class="desc">{{goodsInfo.goodsName}}</div>
+      </div>
+
+      <!--团购信息-->
+      <div class="group-info">
+        <template v-if="goodsInfo.earliestList.length > 0">
+          <div class="tip">有小伙伴正在发起组团，可以直接参加购买~</div>
+          <div class="groups-wrapper">
+            <ul class="groups">
+              <li v-for="item in goodsInfo.earliestList">
+                <a :href="item.command.content" @click="joinOtherGroupClick">
+                  <img class="head" v-lazy="item.founderAvater">
+                  <span class="nickname">{{item.founderName}}</span>
+                  <span class="go-group">去参团</span>
+                  <span class="remain-place">还差 <span class="num">{{item.leaveNumber}}</span> 人成团</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </template>
+        <com-count-down :remain-second="goodsInfo.countDown"></com-count-down>
+      </div>
+
+      <!--tab按钮-->
+      <div class="tab-btn">
+        <span class="btn group" :class="{active: currentTab == 1}" @click="currentTab = 1">
+          <span class="word">商品详情</span>
+        </span>
+        <i class="btn-split"></i>
+        <span class="btn mine" :class="{active: currentTab == 2}" @click="currentTab = 2">
+          <span class="word">活动须知</span>
+        </span>
+      </div>
+
+      <div class="split-line"></div>
+
+      <!--商品详情-->
+      <div class="goods-detail" v-show="currentTab == 1" v-html="goodsInfo.goodsDesc"></div>
+
+      <!--活动须知-->
+      <div class="act-rule" v-show="currentTab == 2">
+        <img v-for="(value,index) in goodsInfo.notice" v-lazy="value">
+      </div>
+
+      <!--底部购买按钮-->
+      <group-bottom-btns :btn-array="goodsInfo.clickBtn" :is-login="response.data.isLogin" :is-intercept="goodsInfo.isIntercept"></group-bottom-btns>
+
+      <!--至顶按钮-->
+      <com-to-top-icon></com-to-top-icon>
+    </template>
+  </div>
+
+    <script src="//cdn-ws.davdian.com/vue/2.4.2/vue.min.js"></script>
+  <script src="//cdn-ws.davdian.com/vue-lazyload/1.0.3/vue-lazyload.js"></script>
+  <script src="//cdn-ws.davdian.com/jquery/3.2.0/jquery.min.js"></script>
+<<<<<<< HEAD
+  <!--<script src="//fe-ws.davdian.com/wap/static/dist/static/common/js/common.js?v=2017-08-16_17:04:30"></script>-->
+
+  <script src="//fe-ws.davdian.com/wap/static/dist/static/page/group_goods/js/group_goods.js?v=2017-08-16_17:04:30"></script>
+=======
+  <!--<script src="//fe-ws.davdian.com/wap/static/dist/static/common/js/common.js?v=2017-08-16_17:05:43"></script>-->
+
+  <script src="//fe-ws.davdian.com/wap/static/dist/static/page/group_goods/js/group_goods.js?v=2017-08-16_17:05:43"></script>
+>>>>>>> caa070bc076df6bb61437c5db0ee8dba4a2ea93f
+</body>
+</html>
+>>>>>>> 9a6e73bd00c64232521f23c55109abe28cd0a0b1

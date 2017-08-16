@@ -3684,7 +3684,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-57b26686/com-share-pop-tip.vue"
+	  var id = "_v-7718a21b/com-share-pop-tip.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4232,7 +4232,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1a34eddb/com-popup-toast.vue"
+	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4433,7 +4433,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-993d82e0/com-popup-alert.vue"
+	  var id = "_v-48db5b65/com-popup-alert.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4658,7 +4658,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-27dcda18/com-popup-confirm.vue"
+	  var id = "_v-0b77ce89/com-popup-confirm.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4911,7 +4911,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6c902120/com-popup-loading.vue"
+	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12818,7 +12818,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-f832942c/index.vue"
+	  var id = "_v-81e18c02/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12999,7 +12999,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2a6eedc5/index.vue"
+	  var id = "_v-7a517590/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13404,7 +13404,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-226e80f5/index.vue"
+	  var id = "_v-5d97050a/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -15867,7 +15867,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2c2e0aa8/com-wx-notopen.vue"
+	  var id = "_v-12052192/com-wx-notopen.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -15892,8 +15892,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2c2e0aa8&scoped=true!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-wx-notopen.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2c2e0aa8&scoped=true!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-wx-notopen.vue");
+			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-12052192&scoped=true!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-wx-notopen.vue", function() {
+				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-12052192&scoped=true!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-wx-notopen.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -15912,7 +15912,7 @@
 
 
 	// module
-	exports.push([module.id, ".com-top-notopen[_v-2c2e0aa8] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #fff;\n  z-index: 2000;\n  text-align: center; }\n  .com-top-notopen img[_v-2c2e0aa8] {\n    width: 240px;\n    margin-top: 100px; }\n", ""]);
+	exports.push([module.id, ".com-top-notopen[_v-12052192] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #fff;\n  z-index: 2000;\n  text-align: center; }\n  .com-top-notopen img[_v-12052192] {\n    width: 240px;\n    margin-top: 100px; }\n", ""]);
 
 	// exports
 
@@ -15989,7 +15989,7 @@
 /***/ 183:
 /***/ function(module, exports) {
 
-	module.exports = "\n<!--顶部标题-->\n<div class=\"com-top-notopen\" v-if=\"!inwx\" _v-2c2e0aa8=\"\">\n  <img src=\"//pic.davdian.com/free/2017/02/08/488_504_e8ca7ca5713b5b9791ca85cab02e4134.png\" _v-2c2e0aa8=\"\">\n</div>\n";
+	module.exports = "\n<!--顶部标题-->\n<div class=\"com-top-notopen\" v-if=\"!inwx\" _v-12052192=\"\">\n  <img src=\"//pic.davdian.com/free/2017/02/08/488_504_e8ca7ca5713b5b9791ca85cab02e4134.png\" _v-12052192=\"\">\n</div>\n";
 
 /***/ },
 
@@ -16021,7 +16021,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-743dd501/vSchoolClassIfy.vue"
+	  var id = "_v-c3b458e8/vSchoolClassIfy.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -16088,8 +16088,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-743dd501&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./vSchoolClassIfy.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-743dd501&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./vSchoolClassIfy.vue");
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c3b458e8&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./vSchoolClassIfy.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-c3b458e8&scoped=true!../../../../node_modules/sass-loader/index.js!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=1!./vSchoolClassIfy.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -16108,7 +16108,7 @@
 
 
 	// module
-	exports.push([module.id, ".borderRight[_v-743dd501] {\n  margin-left: 0.1rem;\n  margin-right: 0.1rem;\n  border-right: 1px solid #e1e1e1; }\n\n.circle[_v-743dd501] {\n  background-color: #92FDE0;\n  display: inline-block;\n  margin-right: 2px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%; }\n\n.activity_container[_v-743dd501] {\n  max-width: 640px; }\n\n.uptitle[_v-743dd501] {\n  height: 40px;\n  border-bottom: 1px solid #eee;\n  background: #fff;\n  font-size: 0; }\n  .uptitle .classifyOne[_v-743dd501] {\n    width: 1.25rem;\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n    /*float: left;*/\n    display: inline-block;\n    vertical-align: top;\n    color: #333333;\n    height: 40px;\n    text-align: center; }\n    .uptitle .classifyOne .classifyOneTag[_v-743dd501] {\n      display: inline-block;\n      vertical-align: top;\n      height: 20px;\n      margin-top: 10px;\n      width: 100%;\n      border-right: 1px solid #eee;\n      font-size: 0; }\n      .uptitle .classifyOne .classifyOneTag .classifyOneTagText[_v-743dd501] {\n        font-size: 14px;\n        height: 20px;\n        display: inline-block;\n        vertical-align: top; }\n      .uptitle .classifyOne .classifyOneTag .classifyOneTagImg[_v-743dd501] {\n        width: 20px;\n        display: inline-block;\n        vertical-align: top; }\n      .uptitle .classifyOne .classifyOneTag .titleFirstStyle[_v-743dd501] {\n        color: #FF4A7D; }\n    .uptitle .classifyOne .classifyOneTagLast[_v-743dd501] {\n      border-right: 0; }\n\n.uptitle2[_v-743dd501] {\n  font-size: 0;\n  background: #fff;\n  position: relative; }\n  .uptitle2 .uptitle2_left[_v-743dd501] {\n    width: 0.98rem;\n    display: inline-block;\n    vertical-align: top;\n    max-height: 3.5rem;\n    overflow: scroll;\n    -webkit-overflow-scrolling: touch; }\n    .uptitle2 .uptitle2_left .uptitle2_left_classify[_v-743dd501] {\n      width: 100%;\n      height: 50px;\n      line-height: 50px;\n      text-align: center;\n      font-size: 14px;\n      border-right: 1px solid #eee;\n      border-bottom: 1px solid #eee;\n      overflow: hidden;\n      -webkit-box-sizing: border-box;\n         -moz-box-sizing: border-box;\n              box-sizing: border-box; }\n    .uptitle2 .uptitle2_left .select[_v-743dd501] {\n      border-right: 0;\n      color: #FF4A7D; }\n  .uptitle2 .uptitle2_right[_v-743dd501] {\n    width: 2.75rem;\n    vertical-align: top;\n    display: inline-block;\n    font-size: 12px;\n    height: 100%;\n    position: absolute;\n    left: 1rem;\n    top: 0;\n    bottom: 0;\n    overflow: scroll;\n    -webkit-overflow-scrolling: touch; }\n    .uptitle2 .uptitle2_right .right_containerAll[_v-743dd501] {\n      width: 2.4rem;\n      font-size: 0;\n      margin-left: 20px;\n      margin-top: 10px; }\n      .uptitle2 .uptitle2_right .right_containerAll .div[_v-743dd501] {\n        background: #F2F2F2;\n        height: 33px;\n        line-height: 33px;\n        width: 0.98rem;\n        color: #333333;\n        display: inline-block;\n        vertical-align: top;\n        text-align: center;\n        font-size: 12px;\n        margin-right: 10px;\n        margin-bottom: 10px;\n        border-radius: 5px; }\n      .uptitle2 .uptitle2_right .right_containerAll .div[_v-743dd501]:first-child {\n        margin-right: 1.5rem; }\n      .uptitle2 .uptitle2_right .right_containerAll .divSelect[_v-743dd501] {\n        background: #FFE7EE;\n        color: #FF4A7D;\n        position: relative; }\n        .uptitle2 .uptitle2_right .right_containerAll .divSelect img[_v-743dd501] {\n          position: absolute;\n          bottom: 0;\n          right: 0;\n          width: 18px; }\n\n.containerAll[_v-743dd501] {\n  padding-bottom: 0.2rem; }\n\n.container[_v-743dd501] {\n  width: 3.5rem;\n  height: 0.77rem;\n  margin-left: 0.1rem;\n  margin-right: 0.15rem;\n  margin-top: 0.2rem;\n  font-size: 0; }\n  .container .containerImg[_v-743dd501] {\n    width: 1.1rem;\n    height: 0.77rem;\n    display: inline-block;\n    vertical-align: top;\n    border-radius: 4px; }\n  .container .content[_v-743dd501] {\n    width: 2.3rem;\n    margin-left: 0.1rem;\n    display: inline-block;\n    vertical-align: top;\n    font-size: 14px; }\n    .container .content .contentTitle[_v-743dd501] {\n      color: #333333;\n      line-height: 0.18rem;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      -webkit-box-orient: vertical;\n      -webkit-line-clamp: 2;\n      display: -webkit-box; }\n    .container .content .contentTeacher[_v-743dd501] {\n      color: #999999;\n      font-size: 12px;\n      line-height: 0.12rem;\n      margin-top: 0.08rem;\n      margin-bottom: 0.08rem; }\n    .container .content .contentPv[_v-743dd501] {\n      color: #999999;\n      font-size: 12px;\n      line-height: 0.12rem; }\n\n.mask[_v-743dd501] {\n  position: fixed;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  background: #000;\n  opacity: 0.4;\n  z-index: 1; }\n\n.serach_black[_v-743dd501] {\n  width: 100%;\n  height: 84px; }\n\n.noData[_v-743dd501] {\n  text-align: center;\n  margin-top: 100px; }\n  .noData img[_v-743dd501] {\n    width: 120px;\n    margin-bottom: 30px; }\n  .noData p[_v-743dd501] {\n    width: 100%;\n    color: #666; }\n", ""]);
+	exports.push([module.id, ".borderRight[_v-c3b458e8] {\n  margin-left: 0.1rem;\n  margin-right: 0.1rem;\n  border-right: 1px solid #e1e1e1; }\n\n.circle[_v-c3b458e8] {\n  background-color: #92FDE0;\n  display: inline-block;\n  margin-right: 2px;\n  width: 8px;\n  height: 8px;\n  border-radius: 50%; }\n\n.activity_container[_v-c3b458e8] {\n  max-width: 640px; }\n\n.uptitle[_v-c3b458e8] {\n  height: 40px;\n  border-bottom: 1px solid #eee;\n  background: #fff;\n  font-size: 0; }\n  .uptitle .classifyOne[_v-c3b458e8] {\n    width: 1.25rem;\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n    /*float: left;*/\n    display: inline-block;\n    vertical-align: top;\n    color: #333333;\n    height: 40px;\n    text-align: center; }\n    .uptitle .classifyOne .classifyOneTag[_v-c3b458e8] {\n      display: inline-block;\n      vertical-align: top;\n      height: 20px;\n      margin-top: 10px;\n      width: 100%;\n      border-right: 1px solid #eee;\n      font-size: 0; }\n      .uptitle .classifyOne .classifyOneTag .classifyOneTagText[_v-c3b458e8] {\n        font-size: 14px;\n        height: 20px;\n        display: inline-block;\n        vertical-align: top; }\n      .uptitle .classifyOne .classifyOneTag .classifyOneTagImg[_v-c3b458e8] {\n        width: 20px;\n        display: inline-block;\n        vertical-align: top; }\n      .uptitle .classifyOne .classifyOneTag .titleFirstStyle[_v-c3b458e8] {\n        color: #FF4A7D; }\n    .uptitle .classifyOne .classifyOneTagLast[_v-c3b458e8] {\n      border-right: 0; }\n\n.uptitle2[_v-c3b458e8] {\n  font-size: 0;\n  background: #fff;\n  position: relative; }\n  .uptitle2 .uptitle2_left[_v-c3b458e8] {\n    width: 0.98rem;\n    display: inline-block;\n    vertical-align: top;\n    max-height: 3.5rem;\n    overflow: scroll;\n    -webkit-overflow-scrolling: touch; }\n    .uptitle2 .uptitle2_left .uptitle2_left_classify[_v-c3b458e8] {\n      width: 100%;\n      height: 50px;\n      line-height: 50px;\n      text-align: center;\n      font-size: 14px;\n      border-right: 1px solid #eee;\n      border-bottom: 1px solid #eee;\n      overflow: hidden;\n      -webkit-box-sizing: border-box;\n         -moz-box-sizing: border-box;\n              box-sizing: border-box; }\n    .uptitle2 .uptitle2_left .select[_v-c3b458e8] {\n      border-right: 0;\n      color: #FF4A7D; }\n  .uptitle2 .uptitle2_right[_v-c3b458e8] {\n    width: 2.75rem;\n    vertical-align: top;\n    display: inline-block;\n    font-size: 12px;\n    height: 100%;\n    position: absolute;\n    left: 1rem;\n    top: 0;\n    bottom: 0;\n    overflow: scroll;\n    -webkit-overflow-scrolling: touch; }\n    .uptitle2 .uptitle2_right .right_containerAll[_v-c3b458e8] {\n      width: 2.4rem;\n      font-size: 0;\n      margin-left: 20px;\n      margin-top: 10px; }\n      .uptitle2 .uptitle2_right .right_containerAll .div[_v-c3b458e8] {\n        background: #F2F2F2;\n        height: 33px;\n        line-height: 33px;\n        width: 0.98rem;\n        color: #333333;\n        display: inline-block;\n        vertical-align: top;\n        text-align: center;\n        font-size: 12px;\n        margin-right: 10px;\n        margin-bottom: 10px;\n        border-radius: 5px; }\n      .uptitle2 .uptitle2_right .right_containerAll .div[_v-c3b458e8]:first-child {\n        margin-right: 1.5rem; }\n      .uptitle2 .uptitle2_right .right_containerAll .divSelect[_v-c3b458e8] {\n        background: #FFE7EE;\n        color: #FF4A7D;\n        position: relative; }\n        .uptitle2 .uptitle2_right .right_containerAll .divSelect img[_v-c3b458e8] {\n          position: absolute;\n          bottom: 0;\n          right: 0;\n          width: 18px; }\n\n.containerAll[_v-c3b458e8] {\n  padding-bottom: 0.2rem; }\n\n.container[_v-c3b458e8] {\n  width: 3.5rem;\n  height: 0.77rem;\n  margin-left: 0.1rem;\n  margin-right: 0.15rem;\n  margin-top: 0.2rem;\n  font-size: 0; }\n  .container .containerImg[_v-c3b458e8] {\n    width: 1.1rem;\n    height: 0.77rem;\n    display: inline-block;\n    vertical-align: top;\n    border-radius: 4px; }\n  .container .content[_v-c3b458e8] {\n    width: 2.3rem;\n    margin-left: 0.1rem;\n    display: inline-block;\n    vertical-align: top;\n    font-size: 14px; }\n    .container .content .contentTitle[_v-c3b458e8] {\n      color: #333333;\n      line-height: 0.18rem;\n      overflow: hidden;\n      text-overflow: ellipsis;\n      -webkit-box-orient: vertical;\n      -webkit-line-clamp: 2;\n      display: -webkit-box; }\n    .container .content .contentTeacher[_v-c3b458e8] {\n      color: #999999;\n      font-size: 12px;\n      line-height: 0.12rem;\n      margin-top: 0.08rem;\n      margin-bottom: 0.08rem; }\n    .container .content .contentPv[_v-c3b458e8] {\n      color: #999999;\n      font-size: 12px;\n      line-height: 0.12rem; }\n\n.mask[_v-c3b458e8] {\n  position: fixed;\n  left: 0;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  background: #000;\n  opacity: 0.4;\n  z-index: 1; }\n\n.serach_black[_v-c3b458e8] {\n  width: 100%;\n  height: 84px; }\n\n.noData[_v-c3b458e8] {\n  text-align: center;\n  margin-top: 100px; }\n  .noData img[_v-c3b458e8] {\n    width: 120px;\n    margin-bottom: 30px; }\n  .noData p[_v-c3b458e8] {\n    width: 100%;\n    color: #666; }\n", ""]);
 
 	// exports
 
@@ -16764,7 +16764,11 @@
 /***/ 1239:
 /***/ function(module, exports) {
 
+<<<<<<< HEAD
+	module.exports = "\n\n<div _v-c3b458e8=\"\">\n  <com-wx-notopen _v-c3b458e8=\"\"></com-wx-notopen>\n  <div class=\"activity_container\" v-if=\"isInisWechatOrAppFlag\" _v-c3b458e8=\"\">\n    <div class=\"activity_container_search\" v-bind:style=\"{ top: upTop + 'px' }\" _v-c3b458e8=\"\">\n      <!-- 搜索框 -->\n      <div class=\"search_top clearfix\" _v-c3b458e8=\"\">\n        <a class=\"left_icon_container\" href=\"javascript:history.back();\" _v-c3b458e8=\"\">\n          <span class=\"home_arrow\" _v-c3b458e8=\"\"></span>\n        </a>\n        <form type=\"search\" action=\"\" class=\"ng-pristine ng-valid\" _v-c3b458e8=\"\">\n          <div class=\"search_con search_button april_border hairlines \" _v-c3b458e8=\"\">\n            <div class=\"border_inner\" _v-c3b458e8=\"\"></div>\n            <div class=\"search_input_con\" _v-c3b458e8=\"\">\n              <span class=\"search_icon\" _v-c3b458e8=\"\"></span>\n              <input type=\"search\" v-model=\"kewwords\" @click=\"goSerach\" name=\"q\" placeholder=\"请输入课程名称\" class=\"search_input\" autocomplete=\"off\" _v-c3b458e8=\"\">\n            </div>\n          </div>\n        </form>\n      </div>\n      <!-- 一级菜单 -->\n      <div class=\"uptitle\" _v-c3b458e8=\"\">\n        <div class=\"classifyOne\" @click=\"classIfyAll\" _v-c3b458e8=\"\">\n          <div class=\"classifyOneTag\" _v-c3b458e8=\"\">\n            <span class=\"classifyOneTagText\" :class=\"{titleFirstStyle : titleFirst != &quot;课程&quot;}\" _v-c3b458e8=\"\">{{titleFirst}}</span>\n            <img class=\"classifyOneTagImg\" v-if=\"!classIfyAllFlag\" src=\"//pic.davdian.com/free/2017/07/20/arrowdown1.png\" _v-c3b458e8=\"\">\n            <img class=\"classifyOneTagImg\" v-if=\"classIfyAllFlag\" src=\"//pic.davdian.com/free/2017/07/20/arrowup1.png\" _v-c3b458e8=\"\">\n          </div>\n        </div>\n        <div class=\"classifyOne\" @click=\"timeSortF\" _v-c3b458e8=\"\">\n          <div class=\"classifyOneTag\" _v-c3b458e8=\"\">\n            <span class=\"classifyOneTagText\" _v-c3b458e8=\"\">时间</span>\n            <img class=\"classifyOneTagImg\" v-if=\"timeSort == 2\" src=\"//pic.davdian.com/free/2017/07/20/arrowdown2.png\" _v-c3b458e8=\"\">\n            <img class=\"classifyOneTagImg\" v-if=\"timeSort == 1\" src=\"//pic.davdian.com/free/2017/07/20/arrowup2.png\" _v-c3b458e8=\"\">\n            <img class=\"classifyOneTagImg\" v-if=\"timeSort == 0\" src=\"//pic.davdian.com/free/2017/07/20/arrowno2.png\" _v-c3b458e8=\"\">\n          </div>\n        </div>\n        <div class=\"classifyOne\" @click=\"pvSortF\" _v-c3b458e8=\"\">\n          <div class=\"classifyOneTag\" _v-c3b458e8=\"\">\n            <span class=\"classifyOneTagText\" _v-c3b458e8=\"\">人气</span>\n            <img class=\"classifyOneTagImg\" v-if=\"pvSort==2\" src=\"//pic.davdian.com/free/2017/07/20/arrowdown3.png\" _v-c3b458e8=\"\">\n            <img class=\"classifyOneTagImg\" v-if=\"pvSort==0\" src=\"//pic.davdian.com/free/2017/07/20/arrowno3.png\" _v-c3b458e8=\"\">\n          </div>\n        </div>\n      </div>\n      <div class=\"uptitle2\" v-if=\"classIfyAllFlag\" _v-c3b458e8=\"\">\n        <div class=\"uptitle2_left\" _v-c3b458e8=\"\">\n          <div :class=\"{select: fId == item1.fId}\" class=\"uptitle2_left_classify\" @click=\"classIfyAll2(index, item1.fId)\" v-for=\"(item1, index) in dataList\" _v-c3b458e8=\"\">{{item1.fTitle}}</div>\n        </div>\n        <div class=\"uptitle2_right\" _v-c3b458e8=\"\">\n          <div class=\"right_containerAll\" _v-c3b458e8=\"\">\n            <div :class=\"{divSelect: item.cId == cId}\" class=\"div\" v-for=\"(item, index) in dataList[selectIndex].list\" @click=\"classIfyAll3(item.cId, item.cTitle, dataList[selectIndex].fTitle)\" _v-c3b458e8=\"\">\n              <span v-text=\"item.cTitle\" _v-c3b458e8=\"\"></span>\n              <img v-if=\"item.cId == cId\" src=\"//pic.davdian.com/free/2017/07/20/selectCid.png\" _v-c3b458e8=\"\">\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"serach_black\" _v-c3b458e8=\"\"></div>\n      <div class=\"containerAll\" v-if=\"data\" _v-c3b458e8=\"\">\n        <div class=\"container\" v-for=\"(item, index) in data\" @click=\"goHref(item.command.content)\" _v-c3b458e8=\"\">\n          <div class=\"containerImg\" :style=\"{'background': 'url(' + item.imageUrl + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-c3b458e8=\"\"></div>\n          <div class=\"content\" _v-c3b458e8=\"\">\n            <p class=\"contentTitle\" v-text=\"item.title\" _v-c3b458e8=\"\"></p>\n            <p class=\"contentTeacher\" v-text=\"item.teacher\" _v-c3b458e8=\"\"></p>\n            <p class=\"contentPv\" _v-c3b458e8=\"\">{{item.pv}}人气\n              <span class=\"borderRight\" v-if=\"livetext(item)\" _v-c3b458e8=\"\"></span>\n              <span v-if=\"livenow(item)\" class=\"circle\" _v-c3b458e8=\"\"></span>\n              <span v-if=\"livetext(item)\" _v-c3b458e8=\"\">{{ livetext(item) }}</span>\n              <!-- <span v-if='!livetext(item)' v-text='startTimestamp(item.startTime)'></span> -->\n            </p>\n          </div>\n        </div>\n      </div>\n      <div class=\"mask\" v-if=\"classIfyAllFlag\" _v-c3b458e8=\"\"></div>\n    </div>\n    <div class=\"noData\" v-if=\"isNoData\" _v-c3b458e8=\"\">\n      <img src=\"//pic.davdian.com/free/2017/08/08/noDataClassify.png\" _v-c3b458e8=\"\">\n      <p _v-c3b458e8=\"\">没找到呦，换个关键词试试吧～</p>\n    </div>\n</div>\n\n\n";
+=======
 	module.exports = "\n\n<div _v-743dd501=\"\">\n  <com-wx-notopen _v-743dd501=\"\"></com-wx-notopen>\n  <div class=\"activity_container\" v-if=\"isInisWechatOrAppFlag\" _v-743dd501=\"\">\n    <div class=\"activity_container_search\" v-bind:style=\"{ top: upTop + 'px' }\" _v-743dd501=\"\">\n      <!-- 搜索框 -->\n      <div class=\"search_top clearfix\" _v-743dd501=\"\">\n        <a class=\"left_icon_container\" href=\"javascript:history.back();\" _v-743dd501=\"\">\n          <span class=\"home_arrow\" _v-743dd501=\"\"></span>\n        </a>\n        <form type=\"search\" action=\"\" class=\"ng-pristine ng-valid\" _v-743dd501=\"\">\n          <div class=\"search_con search_button april_border hairlines \" _v-743dd501=\"\">\n            <div class=\"border_inner\" _v-743dd501=\"\"></div>\n            <div class=\"search_input_con\" _v-743dd501=\"\">\n              <span class=\"search_icon\" _v-743dd501=\"\"></span>\n              <input type=\"search\" v-model=\"kewwords\" @click=\"goSerach\" name=\"q\" placeholder=\"请输入课程名称\" class=\"search_input\" autocomplete=\"off\" _v-743dd501=\"\">\n            </div>\n          </div>\n        </form>\n      </div>\n      <!-- 一级菜单 -->\n      <div class=\"uptitle\" _v-743dd501=\"\">\n        <div class=\"classifyOne\" @click=\"classIfyAll\" _v-743dd501=\"\">\n          <div class=\"classifyOneTag\" _v-743dd501=\"\">\n            <span class=\"classifyOneTagText\" :class=\"{titleFirstStyle : titleFirst != &quot;课程&quot;}\" _v-743dd501=\"\">{{titleFirst}}</span>\n            <img class=\"classifyOneTagImg\" v-if=\"!classIfyAllFlag\" src=\"//pic.davdian.com/free/2017/07/20/arrowdown1.png\" _v-743dd501=\"\">\n            <img class=\"classifyOneTagImg\" v-if=\"classIfyAllFlag\" src=\"//pic.davdian.com/free/2017/07/20/arrowup1.png\" _v-743dd501=\"\">\n          </div>\n        </div>\n        <div class=\"classifyOne\" @click=\"timeSortF\" _v-743dd501=\"\">\n          <div class=\"classifyOneTag\" _v-743dd501=\"\">\n            <span class=\"classifyOneTagText\" _v-743dd501=\"\">时间</span>\n            <img class=\"classifyOneTagImg\" v-if=\"timeSort == 2\" src=\"//pic.davdian.com/free/2017/07/20/arrowdown2.png\" _v-743dd501=\"\">\n            <img class=\"classifyOneTagImg\" v-if=\"timeSort == 1\" src=\"//pic.davdian.com/free/2017/07/20/arrowup2.png\" _v-743dd501=\"\">\n            <img class=\"classifyOneTagImg\" v-if=\"timeSort == 0\" src=\"//pic.davdian.com/free/2017/07/20/arrowno2.png\" _v-743dd501=\"\">\n          </div>\n        </div>\n        <div class=\"classifyOne\" @click=\"pvSortF\" _v-743dd501=\"\">\n          <div class=\"classifyOneTag\" _v-743dd501=\"\">\n            <span class=\"classifyOneTagText\" _v-743dd501=\"\">人气</span>\n            <img class=\"classifyOneTagImg\" v-if=\"pvSort==2\" src=\"//pic.davdian.com/free/2017/07/20/arrowdown3.png\" _v-743dd501=\"\">\n            <img class=\"classifyOneTagImg\" v-if=\"pvSort==0\" src=\"//pic.davdian.com/free/2017/07/20/arrowno3.png\" _v-743dd501=\"\">\n          </div>\n        </div>\n      </div>\n      <div class=\"uptitle2\" v-if=\"classIfyAllFlag\" _v-743dd501=\"\">\n        <div class=\"uptitle2_left\" _v-743dd501=\"\">\n          <div :class=\"{select: fId == item1.fId}\" class=\"uptitle2_left_classify\" @click=\"classIfyAll2(index, item1.fId)\" v-for=\"(item1, index) in dataList\" _v-743dd501=\"\">{{item1.fTitle}}</div>\n        </div>\n        <div class=\"uptitle2_right\" _v-743dd501=\"\">\n          <div class=\"right_containerAll\" _v-743dd501=\"\">\n            <div :class=\"{divSelect: item.cId == cId}\" class=\"div\" v-for=\"(item, index) in dataList[selectIndex].list\" @click=\"classIfyAll3(item.cId, item.cTitle, dataList[selectIndex].fTitle)\" _v-743dd501=\"\">\n              <span v-text=\"item.cTitle\" _v-743dd501=\"\"></span>\n              <img v-if=\"item.cId == cId\" src=\"//pic.davdian.com/free/2017/07/20/selectCid.png\" _v-743dd501=\"\">\n            </div>\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"serach_black\" _v-743dd501=\"\"></div>\n      <div class=\"containerAll\" v-if=\"data\" _v-743dd501=\"\">\n        <div class=\"container\" v-for=\"(item, index) in data\" @click=\"goHref(item.command.content)\" _v-743dd501=\"\">\n          <div class=\"containerImg\" :style=\"{'background': 'url(' + item.imageUrl + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-743dd501=\"\"></div>\n          <div class=\"content\" _v-743dd501=\"\">\n            <p class=\"contentTitle\" v-text=\"item.title\" _v-743dd501=\"\"></p>\n            <p class=\"contentTeacher\" v-text=\"item.teacher\" _v-743dd501=\"\"></p>\n            <p class=\"contentPv\" _v-743dd501=\"\">{{item.pv}}人气\n              <span class=\"borderRight\" v-if=\"livetext(item)\" _v-743dd501=\"\"></span>\n              <span v-if=\"livenow(item)\" class=\"circle\" _v-743dd501=\"\"></span>\n              <span v-if=\"livetext(item)\" _v-743dd501=\"\">{{ livetext(item) }}</span>\n              <!-- <span v-if='!livetext(item)' v-text='startTimestamp(item.startTime)'></span> -->\n            </p>\n          </div>\n        </div>\n      </div>\n      <div class=\"mask\" v-if=\"classIfyAllFlag\" _v-743dd501=\"\"></div>\n    </div>\n    <div class=\"noData\" v-if=\"isNoData\" _v-743dd501=\"\">\n      <img src=\"//pic.davdian.com/free/2017/08/08/noDataClassify.png\" _v-743dd501=\"\">\n      <p _v-743dd501=\"\">没找到呦，换个关键词试试吧～</p>\n    </div>\n</div>\n\n\n";
+>>>>>>> caa070bc076df6bb61437c5db0ee8dba4a2ea93f
 
 /***/ }
 
