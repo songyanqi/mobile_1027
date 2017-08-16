@@ -1,0 +1,49 @@
+{
+    "code": 0,
+    "shop_url": "https://15522634982.davdian.com",
+    "visitor_status": 3,
+    "sess_key": "42df8bf6e510c97c11afe81a96569014027bf803",
+    "data": {
+        "cancelId": 2233,
+        "cancelSn": 44555,
+        "orderSn": 1111,
+        "reasonName": "啥是原因",
+        "issueDescription": "描述可能为空",
+        "status": "等待确认",
+        "refundMoney": 234,
+        "goods": [
+          {
+            "title": "商品名称商品名称商品名称",
+            "imageUrl": "http://pic.davdian.com/goods/2016/10/25/640_640_98eb5a6cddc28504aa0f3b8c66f78fa1.png@!1e_1c_0o_0l_160h_160w.webp",
+            "nowPrice": "213",
+            "goodsNum": "23"
+          }
+        ],
+        "statusList": [
+           {
+            "desc": "提交申请",
+            "time": "2017年7月18日",
+            "status": "history",
+            "showType": 2
+           },
+           {
+            "desc": "提交申请",
+            "time": "2017年7月18日",
+            "status": "history",
+            "showType": 1
+           },
+           {
+            "desc": "客服确认",
+            "time": "2017年7月18日",
+            "status": "now",
+            "showType": 1
+           },
+           {
+            "desc": "审核通过后退款",
+            "time": "2017年7月18日",
+            "status": "future",
+            "showType": 3
+           }
+        ]
+    }
+}

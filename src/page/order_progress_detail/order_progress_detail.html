@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('meta.include')
+	<title>进度详情</title>
+	<link rel="stylesheet" href="[[static]]/page/order_progress_detail/css/order_progress_detail.css[[v]]">
+</head>
+<body>
+	<div class = "app" :class = "{bodypd0: isapp}">
+		<order-top-title v-if = "!isapp" titletext = "进度详情"></order-top-title>
+		<order-top :data = "progressList"></order-top>
+		<order-detail-goods :progresslist = "progressList" :response = "response"></order-detail-goods>
+	</div>
+	
+	@@include('vendor.include')
+  <script src="[[static]]/page/order_progress_detail/js/order_progress_detail.js[[v]]"></script>
+</body>
+</html>
