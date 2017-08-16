@@ -167,7 +167,7 @@
                     <div class = "titlePic">
                       <img :src="infoobj.goodsShortPic" alt="">
                     </div>
-                    <div>
+                    <div class = "titleInfo">
                       <div>
                         <span v-if = "infoobj.memberGoods == '0'">
                             <span v-if = "isshowactive == 1">

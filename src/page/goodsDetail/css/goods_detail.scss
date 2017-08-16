@@ -2825,15 +2825,16 @@ $crossBord: #FF4A7D;
       position: relative;
     }
     .modalPicCont {
-      display: -webkit-box-flex;
-      display: -webkit-flex;
-      display: flex;
+      .modalPicCont {
+        display: inline-block;
+        margin-left: 107px;
+        vertical-align: middle;
+      }
       .titlePic {
-        position: relative;
+        position: absolute;
         width: 100px;
         height: 100px;
         margin-top: -57px;
-        margin-right: 10px;
         img {
           width: 100%;
           border-radius: 5px;
