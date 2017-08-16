@@ -16,9 +16,5 @@ export default {
   // env_stage: 'prod',
   // env_num: '',
   // page: 'noteDetail',
-<<<<<<< HEAD
-  // webpack: false,
-=======
-   // webpack: false,
->>>>>>> ba87b4bc9a7cdf633f10f94a
+   // webpack: false
 };
