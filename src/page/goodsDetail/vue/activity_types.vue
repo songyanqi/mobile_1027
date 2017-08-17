@@ -285,7 +285,7 @@
                     <img :src="infoobj.goodsShortPic" alt="">
                   </div>
                   <div class = "titleInfo">
-                    <div class = "titleInfo">
+                    <div class = "titleM5">
                         <span v-if = "infoobj.memberGoods == '0'">
                             <span v-if = "isshowactive == 1">
                                 <span v-if = "actendtime != 0" class = "summary_price">
