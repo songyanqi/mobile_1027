@@ -7,8 +7,8 @@ const vuxLoader = require('vux-loader')
 
 var webpackConfig = {
   entry: {
-    goodsDetailData: './src/page/goodsDetail/js/goods_detail_data.js',
-    goodsDetail: './src/page/goodsDetail/js/goods_detail.js',
+    // goodsDetailData: './src/page/goodsDetail/js/goods_detail_data.js',   // 完成前后端分离，已弃用
+    // goodsDetail: './src/page/goodsDetail/js/goods_detail.js',    // 完成前后端分离，已弃用
     noFindGoods: './src/page/goodsDetail/js/nofind_goods.js',
     home: './source/javascript/home.config.js',
     cartConfirm: './source/javascript/cartConfirm.config.js',
@@ -24,10 +24,10 @@ var webpackConfig = {
     classroom: './source/javascript/classroom.config.js',
     social: './source/javascript/social.config.js',
     commonList: './source/javascript/commonList.config.js',
-    index: './source/page/index.config.js',
+    // index: './source/page/index.config.js',   // 完成前后端分离，已弃用
     new_category: './source/javascript/new_category.config.js',
     cart: './page/cart.config.js',
-    index_fe: './source/javascript/index_fe.config.js',
+    // index_fe: './source/javascript/index_fe.config.js',   // 完成前后端分离，已弃用
     detail: './source/javascript/detail.config.js',
     category: './source/javascript/category.config.js',
     user: './source/javascript/user.config.js',
