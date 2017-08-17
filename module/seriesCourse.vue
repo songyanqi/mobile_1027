@@ -257,55 +257,59 @@
                             }
                             
                         } else {
-                            if (respone.data.data && respone.data.code==0){
-                            if (respone.data){
-                                    that.haveShareCard = respone.data.data.haveShareCard;
-                                    console.log("response",respone.data);
-                                    that.seriesCover = respone.data.data.seriesCover
-                                    that.dataList = respone.data.data
-                                    that.state = respone.data.visitor_status
-                                    if (that.state == 0){
-                                        native.Browser.setHead({shareBtn:'0'})
-                                    }
-                                    that.userTicket = respone.data.data.userTicket
-                                    that.courseTypeSwitch = respone.data.data.courseTypeSwitch
-                                    that.coursePriceSwitch = respone.data.data.coursePriceSwitch
-                                    that.seriesType = respone.data.data.seriesType
-                                    that.seriesPrice = respone.data.data.seriesPrice
-                                    that.seriesShareIncome = respone.data.data.seriesShareIncome
-//                                    window.imgUrl = that.seriesCover
-//                                    window.descContent = respone.data.data.seriesDesc
-//                                    window.shareTitle = respone.data.data.seriesTitle
-                                    that.setTitle(that.seriesShareIncome)
-                                    console.log(that.haveShareCard, that.haveShareCard !='0')
-                                    if (that.haveShareCard && that.haveShareCard !='0' && that.haveShareCard !=0)
-                                    window.moreShareInfo = {seriesId:that.seriesId}
-                                    var shareInfo = {
-                                        successTimelineShare: function () {
-                                            layout.statisticsShare({shareType:1,shareSource:18})
-                                        },
-                                        successAppMessageShare: function () {
-                                            layout.statistics({shareType:2,shareSource:18})
-                                        },
-                                        successQqMessageShare: function () {
-                                            layout.statistics({shareType:4,shareSource:18})
-                                        },
-                                        successWeiboMessageShare: function (){
-                                            layout.statistics({shareType:7,shareSource:18})
+                            if (respone.data.code==30000){
+                                that.state=0
+                                native.Browser.setHead({shareBtn:'0'})
+                            }else {
+                                if (respone.data.data && respone.data.code==0){
+                                    if (respone.data){
+                                            that.haveShareCard = respone.data.data.haveShareCard;
+                                            console.log("response",respone.data);
+                                            that.seriesCover = respone.data.data.seriesCover
+                                            that.dataList = respone.data.data
+                                            that.state = respone.data.visitor_status
+                                            if (that.state == 0){
+                                                native.Browser.setHead({shareBtn:'0'})
+                                            }
+                                            that.userTicket = respone.data.data.userTicket
+                                            that.courseTypeSwitch = respone.data.data.courseTypeSwitch
+                                            that.coursePriceSwitch = respone.data.data.coursePriceSwitch
+                                            that.seriesType = respone.data.data.seriesType
+                                            that.seriesPrice = respone.data.data.seriesPrice
+                                            that.seriesShareIncome = respone.data.data.seriesShareIncome
+        //                                    window.imgUrl = that.seriesCover
+        //                                    window.descContent = respone.data.data.seriesDesc
+        //                                    window.shareTitle = respone.data.data.seriesTitle
+                                            that.setTitle(that.seriesShareIncome)
+                                            console.log(that.haveShareCard, that.haveShareCard !='0')
+                                            if (that.haveShareCard && that.haveShareCard !='0' && that.haveShareCard !=0)
+                                            window.moreShareInfo = {seriesId:that.seriesId}
+                                            var shareInfo = {
+                                                successTimelineShare: function () {
+                                                    layout.statisticsShare({shareType:1,shareSource:18})
+                                                },
+                                                successAppMessageShare: function () {
+                                                    layout.statistics({shareType:2,shareSource:18})
+                                                },
+                                                successQqMessageShare: function () {
+                                                    layout.statistics({shareType:4,shareSource:18})
+                                                },
+                                                successWeiboMessageShare: function (){
+                                                    layout.statistics({shareType:7,shareSource:18})
+                                                }
+                                            }
+                                            wx.init(shareInfo)
                                         }
+                                    } else {
+                                        if (respone.data){
+                                            dialog.alert('detail code:'+ respone.data.code);
+                                        } else {
+                                            dialog.alert('detail接口无data')
+                                        }
+                                        
                                     }
-                                    wx.init(shareInfo)
                                 }
-                            } else {
-                                if (respone.data){
-                                    dialog.alert('detail code:'+ respone.data.code);
-                                } else {
-                                    dialog.alert('detail接口无data')
-                                }
-                                
                             }
-                        }
-                        
                     })
                     .catch(function (error) {
                         console.log(error,11111111)
@@ -345,51 +349,56 @@
                             }
                             
                         } else {
-                            if (respone.data.data && respone.data.code==0){
-                            if (respone.data){
-                                    that.haveShareCard = respone.data.data.haveShareCard;
-                                    console.log("response",respone.data);
-                                    that.seriesCover = respone.data.data.seriesCover
-                                    that.dataList = respone.data.data
-                                    that.state = respone.data.visitor_status
-                                    if (that.state == 0){
-                                        native.Browser.setHead({shareBtn:'0'})
-                                    }
-                                    that.userTicket = respone.data.data.userTicket
-                                    that.courseTypeSwitch = respone.data.data.courseTypeSwitch
-                                    that.coursePriceSwitch = respone.data.data.coursePriceSwitch
-                                    that.seriesType = respone.data.data.seriesType
-                                    that.seriesPrice = respone.data.data.seriesPrice
-                                    that.seriesShareIncome = respone.data.data.seriesShareIncome
-//                                    window.imgUrl = that.seriesCover
-//                                    window.descContent = respone.data.data.seriesDesc
-//                                    window.shareTitle = respone.data.data.seriesTitle
-                                    that.setTitle(that.seriesShareIncome)
-                                    if (that.haveShareCard && that.haveShareCard !='0' && that.haveShareCard !=0)
-                                    window.moreShareInfo = {seriesId:that.seriesId}
-                                    var shareInfo = {
-                                        successTimelineShare: function () {
-                                            layout.statisticsShare({shareType:1,shareSource:18})
-                                        },
-                                        successAppMessageShare: function () {
-                                            layout.statistics({shareType:2,shareSource:18})
-                                        },
-                                        successQqMessageShare: function () {
-                                            layout.statistics({shareType:4,shareSource:18})
-                                        },
-                                        successWeiboMessageShare: function (){
-                                            layout.statistics({shareType:7,shareSource:18})
-                                        }
-                                    }
-                                    wx.init(shareInfo)
-                                }
-                            } else {
+                            if (respone.data.code==30000){
+                                that.state=0
+                                native.Browser.setHead({shareBtn:'0'})
+                            }else {
+                                if (respone.data.data && respone.data.code==0){
                                 if (respone.data){
-                                    dialog.alert('detail code:'+ respone.data.code);
+                                        that.haveShareCard = respone.data.data.haveShareCard;
+                                        console.log("response",respone.data);
+                                        that.seriesCover = respone.data.data.seriesCover
+                                        that.dataList = respone.data.data
+                                        that.state = respone.data.visitor_status
+                                        if (that.state == 0){
+                                            native.Browser.setHead({shareBtn:'0'})
+                                        }
+                                        that.userTicket = respone.data.data.userTicket
+                                        that.courseTypeSwitch = respone.data.data.courseTypeSwitch
+                                        that.coursePriceSwitch = respone.data.data.coursePriceSwitch
+                                        that.seriesType = respone.data.data.seriesType
+                                        that.seriesPrice = respone.data.data.seriesPrice
+                                        that.seriesShareIncome = respone.data.data.seriesShareIncome
+    //                                    window.imgUrl = that.seriesCover
+    //                                    window.descContent = respone.data.data.seriesDesc
+    //                                    window.shareTitle = respone.data.data.seriesTitle
+                                        that.setTitle(that.seriesShareIncome)
+                                        if (that.haveShareCard && that.haveShareCard !='0' && that.haveShareCard !=0)
+                                        window.moreShareInfo = {seriesId:that.seriesId}
+                                        var shareInfo = {
+                                            successTimelineShare: function () {
+                                                layout.statisticsShare({shareType:1,shareSource:18})
+                                            },
+                                            successAppMessageShare: function () {
+                                                layout.statistics({shareType:2,shareSource:18})
+                                            },
+                                            successQqMessageShare: function () {
+                                                layout.statistics({shareType:4,shareSource:18})
+                                            },
+                                            successWeiboMessageShare: function (){
+                                                layout.statistics({shareType:7,shareSource:18})
+                                            }
+                                        }
+                                        wx.init(shareInfo)
+                                    }
                                 } else {
-                                    dialog.alert('detail接口无data')
+                                    if (respone.data){
+                                        dialog.alert('detail code:'+ respone.data.code);
+                                    } else {
+                                        dialog.alert('detail接口无data')
+                                    }
+                                    
                                 }
-                                
                             }
                         }
                         
