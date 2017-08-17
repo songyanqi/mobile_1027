@@ -2,13 +2,13 @@
   <div>
     <com-wx-notopen></com-wx-notopen>
     <div v-if='isInisWechatOrAppFlag'>
-      <div class="big_img">
+      <div class="big_img" v-if='musicList[index] && musicList[index].imageUrl'>
         <img :src="musicList[index].imageUrl" alt="">
       </div>
       <div class="text" v-if='musicList[index] && musicList[index].music' v-text='musicList[index].music'></div>
       <div class="range">
         <div class="gray"></div>
-        <div class="red" :style='{width: playTime/musicList[index].time*100 + "%"}'></div>
+        <div v-if='musicList[index] && musicList[index].time' class="red" :style='{width: playTime/musicList[index].time*100 + "%"}'></div>
       </div>
       <div class="time">
         <div v-text='timeFormat(playTime)'></div>

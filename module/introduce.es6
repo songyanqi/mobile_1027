@@ -32,10 +32,7 @@ export default {
             cmd:null,
             cache:false,
             bottomBtn: false,
-<<<<<<< HEAD
-=======
             enterClassroomFlag: true,
->>>>>>> master
         }
     },
     created(){
