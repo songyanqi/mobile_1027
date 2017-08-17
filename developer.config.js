@@ -15,11 +15,6 @@
 export default {
   // env_stage: 'prod',
   // env_num: '',
-<<<<<<< HEAD
   // page: 'collect',
   // webpack: false
-=======
-  page: 'musicDetail',
-   webpack: false
->>>>>>> f9bc48c6c66307bf66a15954e4a11ac029263cf3
 };
