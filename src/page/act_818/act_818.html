@@ -25,7 +25,7 @@
         <div class="act-result">
           <act-info :response="response" :today-info="todayInfo"></act-info>
           <p>登录后才可参与活动~</p>
-          <act-btn type="login"></act-btn>
+          <act-btn :response="response" type="login"></act-btn>
         </div>
       </template>
 
@@ -37,7 +37,7 @@
             <act-info :response="response" :today-info="todayInfo"></act-info>
             <p>您当前为非会员用户</p>
             <p>只有会员才可以获得此红包哦</p>
-            <act-btn type="member"></act-btn>
+            <act-btn :response="response" type="member"></act-btn>
           </div>
         </template>
 
@@ -46,7 +46,7 @@
           <div class="act-result">
             <div class="title">活动结束啦~</div>
             <p>成为会员享受更多福利</p>
-            <act-btn type="member"></act-btn>
+            <act-btn :response="response" type="member"></act-btn>
           </div>
         </template>
       </template>
@@ -63,7 +63,7 @@
                 <act-info :response="response" :today-info="todayInfo"></act-info>
                 <div class="title">您累计支付为<span class="num">￥{{response.data.shopPrice}}</span>，获得 {{response.data.sendBonusAmount}}元红包</div>
                 <p>继续购物{{response.data.lessPrice}}元，可再获得60元红包</p>
-                <act-btn></act-btn>
+                <act-btn :response="response"></act-btn>
                 <p class="send-tip">* 红包将会在 2017年9月18日 发放到您的账户中</p>
               </div>
             </template>
@@ -74,10 +74,10 @@
                 <act-info :response="response" :today-info="todayInfo"></act-info>
                 <div class="title">您累计支付为<span class="num">￥{{response.data.shopPrice}}</span>，获得 {{response.data.sendBonusAmount}}元红包</div>
                 <p>很遗憾没有活动名额啦~</p>
-                <p v-if="response.data.bonusAmount > response.data.sendBonusAmount">
+                <p v-if="response.data.bonusAmount * 1 > response.data.sendBonusAmount * 1">
                   由于没有活动名额，您不能获得{{response.data.bonusAmount - response.data.sendBonusAmount}}元红包
                 </p>
-                <act-btn></act-btn>
+                <act-btn :response="response"></act-btn>
                 <p class="send-tip">* 红包将会在 2017年9月18日 发放到您的账户中</p>
               </div>
             </template>
@@ -96,7 +96,7 @@
                 <template v-else>
                   <p>很遗憾没有活动名额啦~</p>
                 </template>
-                <act-btn></act-btn>
+                <act-btn :response="response"></act-btn>
               </div>
             </template>
 
@@ -106,7 +106,7 @@
                 <act-info :response="response" :today-info="todayInfo"></act-info>
                 <div class="title">您累计实际支付为<span class="num">￥{{response.data.shopPrice}}</span></div>
                 <p>很遗憾您与奖励擦肩而过</p>
-                <act-btn></act-btn>
+                <act-btn :response="response"></act-btn>
               </div>
             </template>
           </template>
@@ -119,10 +119,10 @@
             <div class="act-result">
               <div class="title">活动结束啦~</div>
               <div class="title">您累计支付为 ￥{{response.data.shopPrice}}，获得 {{response.data.sendBonusAmount}}元红包</div>
-              <p v-if="response.data.bonusAmount > response.data.sendBonusAmount">
-                由于没有活动名额，您不能获得{{response.data.bonusAmount > response.data.sendBonusAmount}}元红包
+              <p v-if="response.data.bonusAmount * 1 > response.data.sendBonusAmount * 1">
+                由于没有活动名额，您不能获得{{response.data.bonusAmount - response.data.sendBonusAmount}}元红包
               </p>
-              <act-btn></act-btn>
+              <act-btn :response="response"></act-btn>
               <p class="send-tip">* 红包将会在 2017年9月18日 发放到您的账户中</p>
             </div>
           </template>
@@ -132,7 +132,7 @@
             <div class="act-result">
               <div class="title">活动结束啦~</div>
               <p>很遗憾您错过了这次活动</p>
-              <act-btn></act-btn>
+              <act-btn :response="response"></act-btn>
             </div>
           </template>
         </template>
