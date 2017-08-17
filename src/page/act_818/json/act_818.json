@@ -1,0 +1,17 @@
+{
+  "code": "0",
+  "data_version": "0d7999964ba7a1e0ca417626f7dc9720",
+  "shop_url": "http:\\/\\/13269099242.vyohui.cn",
+  "visitor_status": "3",
+  "sys_time": "1500861119",
+  "sess_key": "9f77e015508eb71179aef79906a60d0303341cd3",
+  "data": {
+    "actStatus": "1",
+    "surplus": "10",
+    "shop_price": "100",
+    "prize": "1",
+    "lessPrice": 30,
+    "sendBonusAmount": 60,
+    "bonusAmount": 120
+  }
+}

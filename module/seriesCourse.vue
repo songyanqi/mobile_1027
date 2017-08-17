@@ -169,7 +169,7 @@
         <div v-if='state==0' class='noApply'>
             <img src="//pic.davdian.com/free/2017/08/16/noApply.png">
             <p>登陆后才能继续访问</p>
-            <span>立即登陆</span>
+            <span @click='login'>立即登陆</span>
         </div>
     </div>
 </template>
@@ -277,7 +277,8 @@
 //                                    window.descContent = respone.data.data.seriesDesc
 //                                    window.shareTitle = respone.data.data.seriesTitle
                                     that.setTitle(that.seriesShareIncome)
-                                    if (that.haveShareCard)
+                                    console.log(that.haveShareCard, that.haveShareCard !='0')
+                                    if (that.haveShareCard && that.haveShareCard !='0' && that.haveShareCard !=0)
                                     window.moreShareInfo = {seriesId:that.seriesId}
                                     var shareInfo = {
                                         successTimelineShare: function () {
@@ -327,6 +328,9 @@
                     alert('cmd为:', this.cmd)
                 }
             },
+            login(){
+                native.Account.login()
+            },
             init(){
                 var that = this
                 var obj = {seriesId:this.seriesId};
@@ -361,7 +365,7 @@
 //                                    window.descContent = respone.data.data.seriesDesc
 //                                    window.shareTitle = respone.data.data.seriesTitle
                                     that.setTitle(that.seriesShareIncome)
-                                    if (that.haveShareCard)
+                                    if (that.haveShareCard && that.haveShareCard !='0' && that.haveShareCard !=0)
                                     window.moreShareInfo = {seriesId:that.seriesId}
                                     var shareInfo = {
                                         successTimelineShare: function () {

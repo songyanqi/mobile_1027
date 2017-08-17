@@ -60,7 +60,7 @@
         <div v-if='visitor_status==0 && !error' class='noApply'>
             <img src="//pic.davdian.com/free/2017/08/16/noApply.png">
             <p>登陆后才能继续访问</p>
-            <span>立即登陆</span>
+            <span  @click='login'>立即登陆</span>
         </div>
         <invite-card :show="inviteShow" :id="courseId" statistics="3" v-on:close="closeCard" kind="0"></invite-card>
         <div class="other_info">
@@ -118,7 +118,7 @@
 <style lang='sass' scoped>
     .bottomBtn{
         position: absolute;
-        top: 0;
+        height: 60px;
         left: 0;
         right: 0;
         bottom: 0;

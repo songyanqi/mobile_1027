@@ -1,0 +1,96 @@
+{
+    "code": 0,
+    "shop_url": "https://15522634982.davdian.com",
+    "visitor_status": 3,
+    "sess_key": "42df8bf6e510c97c11afe81a96569014027bf803",
+    "data": {
+        "orderId": "num",
+        "orderSn": "num",
+        "refundMoney": 200,
+        "moneyPaid":20,
+        "income": 20,
+        "shipFee": 20,
+        "useCoupon": "used",
+        "goodsList": [ 
+          {
+            "title": "贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长123",
+            "imageUrl": "http//pic.davdian.com/free/good_pic_demo_800_800.jpg",
+            "nowPrice": "123",
+            "goodsNum": "2"
+          },
+          {
+            "title": "贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长123",
+            "imageUrl": "http//pic.davdian.com/free/good_pic_demo_800_800.jpg",
+            "nowPrice": "123",
+            "goodsNum": "2"
+          },{
+            "title": "贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长123",
+            "imageUrl": "http//pic.davdian.com/free/good_pic_demo_800_800.jpg",
+            "nowPrice": "123",
+            "goodsNum": "2"
+          },
+          {
+            "title": "贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长123",
+            "imageUrl": "http//pic.davdian.com/free/good_pic_demo_800_800.jpg",
+            "nowPrice": "123",
+            "goodsNum": "2"
+          },
+          {
+            "title": "贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长123",
+            "imageUrl": "http//pic.davdian.com/free/good_pic_demo_800_800.jpg",
+            "nowPrice": "123",
+            "goodsNum": "2"
+          },
+          {
+            "title": "贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长123",
+            "imageUrl": "http//pic.davdian.com/free/good_pic_demo_800_800.jpg",
+            "nowPrice": "123",
+            "goodsNum": "2"
+          },
+          {
+            "title": "贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长123",
+            "imageUrl": "http//pic.davdian.com/free/good_pic_demo_800_800.jpg",
+            "nowPrice": "123",
+            "goodsNum": "2"
+          },
+          {
+            "title": "贝亲 (Pigeon)食物研磨食物磨食物研磨物研磨名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长名字特别长123",
+            "imageUrl": "http//pic.davdian.com/free/good_pic_demo_800_800.jpg",
+            "nowPrice": "123",
+            "goodsNum": "2"
+          }
+        ],
+        "statusList": [ 
+           {
+            "desc": "提交申请",
+            "isNow":"isNow"
+           },
+           {
+            "desc": "客服确认",
+            "isFuture": "isFuture"
+           },
+           {
+            "desc": "审核通过后退款",
+            "isFuture": "isFuture"
+           }
+        ],
+        "reasonList": [
+            {
+                "reasonId": 1,
+                "reasonName": "取消订单"
+            },
+            {
+                "reasonId": 2,
+                "reasonName": "不想买了"
+            },
+            {
+                "reasonId": 3,
+                "reasonName": "想不想了"
+            },
+            {
+                "reasonId": 4,
+                "reasonName": "天知道啊"
+            }
+        ]
+    }
+}

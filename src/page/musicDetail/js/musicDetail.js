@@ -62,33 +62,12 @@ new Vue({
   beforeCreate() {
   },
   created() {
-    this.getData();
   },
   methods: {
     /**
      * 接口名称:
      * 接口文档:
      */
-    getData(){
-      let ts = this;
-      $.ajax({
-        cache: false,
-        async: true,
-        url: '?_=' + Date.now(),
-        type: 'post',
-        dataType: 'json',
-        data: encrypt({
-          js_wx_info: 1,
-        }),
-        success(response) {
-          ts.response = response;
-        },
-        error(error) {
-          ts.response = require('../json/musicDetail.json');
-          console.error('ajax error:' + error.status + ' ' + error.statusText);
-        }
-      });
-    },
   },
   filters: {},
 });

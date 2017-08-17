@@ -1,7 +1,7 @@
 <template>
   <div class="ad-banner">
-    <a :href="adUrl || data.body.dataList.command.content" @click="jump">
-      <img :src="adImg || data.body.dataList.imageUrl">
+    <a :href="adUrl || data && data.body.dataList.command.content" @click="jump">
+      <img :src="adImg || data && data.body.dataList.imageUrl">
     </a>
   </div>
 </template>
@@ -22,7 +22,7 @@
       },
       data: {
         type: Object,
-        default: {}
+        default: null
       },
     },
     data() {

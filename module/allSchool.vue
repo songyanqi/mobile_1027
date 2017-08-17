@@ -1,7 +1,6 @@
 <template>
     <div>
         <coursetitle v-if="!inApp"></coursetitle>
-        <bd_study_0></bd_study_0>
         <index-feed :data="feedList"></index-feed>
         
         <div class='footerBlock'></div>
@@ -18,7 +17,6 @@
 //    import indexFoot from '../module/index/index_footer.vue'
     import indexFoot from '../src/component/com-footer.vue'
     import common from "./common/common.es6";
-    import bd_study_0 from "./index/feed/bd_study_0.vue";
 
     export default{
         data:function(){
@@ -83,8 +81,7 @@
         components:{
             indexFeed:indexFeed,
             coursetitle:coursetitle,
-            indexFoot:indexFoot,
-            bd_study_0:bd_study_0
+            indexFoot:indexFoot
         }
     }
 </script>
