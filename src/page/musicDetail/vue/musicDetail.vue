@@ -1,6 +1,5 @@
 <template>
   <div>
-<<<<<<< HEAD
     <notopen></notopen>
     <div class="big_img">
       <img src="//pic.davdian.com/free/2017/08/16/a.jpg" alt="">
@@ -32,7 +31,6 @@
       显而易见，这种无效的沟通方式，不仅无法达到父母的初衷，又会促使孩子与自己对抗。
       每个人都是只有内心认可，才能心甘情愿地去做事。如果父母没有足够的理由说服孩子，他也不可能完全听从。所以当孩子表现得总是不听话，父母就要想到：自己是否有足够的理由说服孩子，或者自己的要求是否真的不容质疑。
     </div>
-=======
     <com-wx-notopen></com-wx-notopen>
     <div v-if='isInisWechatOrAppFlag'>
       <div class="big_img">
@@ -64,7 +62,6 @@
         显而易见，这种无效的沟通方式，不仅无法达到父母的初衷，又会促使孩子与自己对抗。
         每个人都是只有内心认可，才能心甘情愿地去做事。如果父母没有足够的理由说服孩子，他也不可能完全听从。所以当孩子表现得总是不听话，父母就要想到：自己是否有足够的理由说服孩子，或者自己的要求是否真的不容质疑。
       </div>
->>>>>>> 1063c31f71ff584a116a7a16d89e3c6b49af3710
 
 
       <div class="mask" v-if='audioListFlag'></div>
@@ -115,13 +112,11 @@
   </div>
 </template>
 <script>
-<<<<<<< HEAD
   import notopen from "../../../component/com-wx-notopen.vue"
   export default {
       components:{
         notopen:notopen
       }
-=======
   import { getQuery, isInisWechatOrApp } from "../../../../utils/utils.es6";
   import api from "../../../../utils/api.es6"
   import dialog from "../../../../utils/dialog.es6";

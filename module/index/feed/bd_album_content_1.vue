@@ -15,10 +15,9 @@
           <div class="list_name" v-text="item.album"></div>
           <div class="list_time" v-text="item.time"></div>
         </div>
-        <div class="right_img">
-          <a :href="item.command.content">
+        <div class="right_img" @click="">
+            <div @click="go_href(item.command.content)"></div>
             <img :src="item.imageUrl" alt="">
-          </a>
         </div>
       </div>
     </div>
@@ -60,6 +59,9 @@
           }else {
               return m + "月" + d + "日" + " " + weekDay[week];
           }
+        },
+        go_href(href){
+            window.location.href=href;
         }
       }
   }
@@ -142,11 +144,11 @@
     width: 0.34rem;
     height: 0.34rem;
     border-radius:50%;
-    margin-left:0.2rem;
-    margin-top: 0.24rem;
+
   }
   .right_img{
     position: absolute;
     right: 0.1rem;
+    margin-top: 0.24rem;
   }
 </style>
