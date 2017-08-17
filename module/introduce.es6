@@ -164,7 +164,7 @@ export default {
             // }
         },
         login(){
-            window.location.href = '/login.html'
+            native.Account.login()
         },
         getData(){
             window.location.reload();

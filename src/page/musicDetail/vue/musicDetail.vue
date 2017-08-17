@@ -1,87 +1,170 @@
 <template>
   <div>
-    <div class="big_img">
-      <img src="//pic.davdian.com/free/2017/08/16/a.jpg" alt="">
-    </div>
-    <div class="text">家庭幸福系统课程，接纳自己</div>
-    <div class="range">
-      <div class="gray"></div>
-      <div class="red"></div>
-      <div class="icon"><img src="//pic.davdian.com/free/2017/08/16/progressBarStatus.png" alt=""></div>
-    </div>
-    <div class="time">
-      <div>0:00</div>
-      <div>15:56</div>
-    </div>
-    <div class="btn">
-      <div class="btn1"><img src="//pic.davdian.com/free/2017/08/16/time.png" alt=""></div>
-      <div class="btn2"><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt=""></div>
-      <div class="btn3"><img src="//pic.davdian.com/free/2017/08/16/playBtn.png" alt=""></div>
-      <div class="btn4"><img src="//pic.davdian.com/free/2017/08/16/combinedShape.png" alt=""></div>
-      <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt=""></div>
-    </div>
-    <div class="look_more">
-      <div class="look_count">查看合辑 (5/26)</div>
-      <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
-    </div>
-    <div style="height: 0.1rem;background: #F8F7F7;"></div>
-    <div class="bottom_text">
-      父母不断重复唠叨，是因为孩子没有按自己说的去做。
-      显而易见，这种无效的沟通方式，不仅无法达到父母的初衷，又会促使孩子与自己对抗。
-      每个人都是只有内心认可，才能心甘情愿地去做事。如果父母没有足够的理由说服孩子，他也不可能完全听从。所以当孩子表现得总是不听话，父母就要想到：自己是否有足够的理由说服孩子，或者自己的要求是否真的不容质疑。
-    </div>
-
-
-    <div class="mask"></div>
-    <div class="mask_div">
-      <div class="mask_top mask_padding">
-        <div class="mi_left"><img src="//pic.davdian.com/free/2017/08/16/playOrder.png" alt=""></div>
-        <div class="play">顺序播放</div>
-        <div class="sort">排序</div>
-        <div class="mi_right"><img src="//pic.davdian.com/free/2017/08/16/sorting.png" alt=""></div>
+    <com-wx-notopen></com-wx-notopen>
+    <div v-if='isInisWechatOrAppFlag'>
+      <div class="big_img">
+        <img :src="musicList[index].imageUrl" alt="">
       </div>
-      <div class="mask_banner">
-        <div class="mask_padding mask_list">
-          <div class="list_name">藏在故事里的数理化学习秘诀</div>
-          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-        </div>
-        <div class="mask_padding mask_list">
-          <div class="list_name">藏在故事里的数理化学习秘诀</div>
-          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-        </div>
-        <div class="mask_padding mask_list">
-          <div class="list_name">藏在故事里的数理化学习秘诀</div>
-          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-        </div>
-        <div class="mask_padding mask_list">
-          <div class="list_name">藏在故事里的数理化学习秘诀</div>
-          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-        </div>
-        <div class="mask_padding mask_list">
-          <div class="list_name">藏在故事里的数理化学习秘诀</div>
-          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-        </div>
-        <div class="mask_padding mask_list">
-          <div class="list_name">藏在故事里的数理化学习秘诀</div>
-          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-        </div>
-        <div class="mask_padding mask_list">
-          <div class="list_name">藏在故事里的数理化学习秘诀</div>
-          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-        </div>
-        <div class="mask_padding mask_list">
-          <div class="list_name">藏在故事里的数理化学习秘诀</div>
-          <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-        </div>
+      <div class="text" v-if='musicList[index] && musicList[index].music' v-text='musicList[index].music'></div>
+      <div class="range">
+        <div class="gray"></div>
+        <div class="red" :style='{width: playTime/musicList[index].time*100 + "%"}'></div>
       </div>
-      <div class="mask_bottom">关闭</div>
+      <div class="time">
+        <div v-text='timeFormat(playTime)'></div>
+        <div v-if='musicList[index] && musicList[index].time' v-text='timeFormat(musicList[index].time)'></div>
+      </div>
+      <div class="btn">
+        <div class="btn1"><img src="//pic.davdian.com/free/2017/08/16/time.png" alt="" @click='dialog'></div>
+        <div class="btn2"><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt=""></div>
+        <div class="btn3"><img src="//pic.davdian.com/free/2017/08/16/playBtn.png" alt=""></div>
+        <div class="btn4"><img src="//pic.davdian.com/free/2017/08/16/combinedShape.png" alt=""></div>
+        <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
+      </div>
+      <div class="look_more">
+        <div class="look_count">查看合辑 ({{index}}/26)</div>
+        <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
+      </div>
+      <div style="height: 0.1rem;background: #F8F7F7;"></div>
+      <div class="bottom_text">
+        父母不断重复唠叨，是因为孩子没有按自己说的去做。
+        显而易见，这种无效的沟通方式，不仅无法达到父母的初衷，又会促使孩子与自己对抗。
+        每个人都是只有内心认可，才能心甘情愿地去做事。如果父母没有足够的理由说服孩子，他也不可能完全听从。所以当孩子表现得总是不听话，父母就要想到：自己是否有足够的理由说服孩子，或者自己的要求是否真的不容质疑。
+      </div>
+
+
+      <div class="mask" v-if='audioListFlag'></div>
+      <div class="mask_div" v-if='audioListFlag'>
+        <div class="mask_top mask_padding">
+          <div class="mi_left" @click='dialog'><img src="//pic.davdian.com/free/2017/08/16/playOrder.png" alt=""></div>
+          <div class="play" @click='dialog'>顺序播放</div>
+          <div class="sort" @click='dialog'>排序</div>
+          <div class="mi_right" @click='dialog'><img src="//pic.davdian.com/free/2017/08/16/sorting.png" alt=""></div>
+        </div>
+        <div class="mask_banner">
+          <div class="mask_padding mask_list">
+            <div class="list_name">藏在故事里的数理化学习秘诀</div>
+            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+          </div>
+          <div class="mask_padding mask_list">
+            <div class="list_name">藏在故事里的数理化学习秘诀</div>
+            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+          </div>
+          <div class="mask_padding mask_list">
+            <div class="list_name">藏在故事里的数理化学习秘诀</div>
+            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+          </div>
+          <div class="mask_padding mask_list">
+            <div class="list_name">藏在故事里的数理化学习秘诀</div>
+            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+          </div>
+          <div class="mask_padding mask_list">
+            <div class="list_name">藏在故事里的数理化学习秘诀</div>
+            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+          </div>
+          <div class="mask_padding mask_list">
+            <div class="list_name">藏在故事里的数理化学习秘诀</div>
+            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+          </div>
+          <div class="mask_padding mask_list">
+            <div class="list_name">藏在故事里的数理化学习秘诀</div>
+            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+          </div>
+          <div class="mask_padding mask_list">
+            <div class="list_name">藏在故事里的数理化学习秘诀</div>
+            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+          </div>
+        </div>
+        <div class="mask_bottom" @click='closeAudioList'>关闭</div>
+      </div>
     </div>
-
-
   </div>
 </template>
 <script>
-  export default {}
+  import { getQuery, isInisWechatOrApp } from "../../../../utils/utils.es6";
+  import api from "../../../../utils/api.es6"
+  import dialog from "../../../../utils/dialog.es6";
+  // import wx from "../../../../utils/WXShare.es6"
+  import comWxNotopen from '../../../component/com-wx-notopen.vue'
+  // import common from '../../../common/js/common.js'
+  export default {
+    data: function () {
+      return {
+        isInisWechatOrAppFlag:isInisWechatOrApp(),
+        audioListFlag: false,
+        index: 0,
+        musicList:[],
+        playTime:0,
+
+      }
+    },
+    computed: {},
+    created: function () {
+
+    },
+    mounted: function () {
+      var that =  this
+      this.$nextTick(function(){
+        if (that.isInisWechatOrAppFlag){
+          that.musicList = require('../json/musicDetail.json').data.dataList
+          console.log(that.musicList)
+          // setInterval(function(){that.playTime = that.playTime + 1},1000)
+        }else {
+          console.log(456)
+        }
+      })
+    },
+    methods: {
+      closeAudioList(){
+        this.audioListFlag = false
+      },
+      openAudioList(){
+        this.audioListFlag = true
+      },
+      dialog(){
+        dialog.alert('打开大V店APP，体验更佳')
+      },
+      timeFormat(t){
+        let time = parseInt(t)
+        if (time<60){
+          if (time<10){
+            time = '0' + time
+          }
+          return '00:'+time
+        }else {
+          if (time<3600){
+            let minutes = parseInt(time/60)
+            let seconds = time - minutes*60
+            if (minutes<10){
+              minutes = '0' + minutes
+            }
+            if (seconds<10){
+              seconds = '0' + seconds
+            }
+            console.log(minutes)
+            return minutes + ':' + seconds
+          }else {
+            let hours = parseInt(time/3600)
+            let minutes = parseInt((time-hours*3600)/60)
+            let seconds = time - hours*3600 - minutes*60
+            if (hours<10){
+              hours = '0' + hours
+            }
+            if (minutes<10){
+              minutes = '0' + minutes
+            }
+            if (seconds<10){
+              seconds = '0' + seconds
+            }
+            return hours + ':' + minutes + ':' + seconds
+          }
+        }
+      },
+    },
+    components:{
+      comWxNotopen
+    }
+  }
 </script>
 <style scoped>
   .big_img img{

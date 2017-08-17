@@ -328,7 +328,7 @@
                 }
             },
             login(){
-                window.location.href = '/login.html'
+                native.Account.login()
             },
             init(){
                 var that = this
