@@ -14,19 +14,6 @@
             <div class="scroll">
                 <index-feed :data="feedData"></index-feed>
             </div>
-
-            <!--课程介绍页广告banner, 818需求-->
-            <!--预热-->
-            <ad-banner ad-img="//pic.davdian.com/goods/2017/08/14/1125_200_a29c5542a83a6641f4dd51d807108dec.jpg" ad-url="/class_detail-11165.html?preview=1"
-                v-if="false && Date.now() >= new Date(2017,7,17) && Date.now() < new Date(2017,7,18)"></ad-banner>
-            <!--正式-->
-            <ad-banner ad-img="//pic.davdian.com/goods/2017/08/14/1125_200_612f2fd66f37092fd9a9b7111faaf509.jpg" ad-url="/class_detail-11165.html?preview=1"
-                v-if="false && Date.now() >= new Date(2017,7,18) && Date.now() < new Date(2017,7,24)"></ad-banner>
-
-            <!-- <div class="other_info">
-                <div>课程须知：</div>
-                <div>1、本次课堂内容永久保存，可反复收听；</div>
-            </div> -->
         </div>
         <div class="invite_and_enroll" v-if="!error && deleteFlag" >
             <div class='bottomBtn' v-if='bottomBtn'></div>

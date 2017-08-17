@@ -341,7 +341,6 @@ export default {
         vSchoolTitle:vSchoolTitle,
         inviteCard:inviteCard,
         indexFeed:indexFeed,
-      'ad-banner': require('../src/page/goodsDetail/vue/ad-banner.vue')
 
     }
 }
