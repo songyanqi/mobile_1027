@@ -14,11 +14,11 @@
             <div class="scroll">
                 <index-feed :data="feedData"></index-feed>
             </div>
-        </div>
-        <!-- <div class="other_info">
+            <!-- <div class="other_info">
                 <div>课程须知：</div>
                 <div>1、本次课堂内容永久保存，可反复收听；</div>
             </div> -->
+        </div>
         <div class="invite_and_enroll" v-if="!error && deleteFlag" >
             <div class='bottomBtn' v-if='bottomBtn'></div>
             <div class="btn_container left1">
