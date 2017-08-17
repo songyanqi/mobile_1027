@@ -5,7 +5,7 @@
     </div>
     <div class="content">
       <div class="content_title" v-text="dataList.album"></div>
-      <div class="content_price">
+      <div class="content_price" v-if="isFree==1">
         <div class="pri_left">
           <span v-text="dataList.income"></span>
         </div>
@@ -20,10 +20,12 @@
     props:["data"],
     created:function () {
       this.dataList=this.data.body.dataList[0];
+      this.isFree=this.data.body.isFree;
     },
     data(){
         return{
-            dataList:[]
+            dataList:[],
+            isFree:0
         }
     }
   }

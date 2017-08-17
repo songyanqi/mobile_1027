@@ -2,10 +2,10 @@
     <div>
         <coursetitle v-if="!inApp"></coursetitle>
         <index-feed :data="feedList"></index-feed>
-        
+        <study :data="data"></study>
         <div class='footerBlock'></div>
         <!--<index-foot :data='footData' v-if='!app'></index-foot>-->
-        <index-foot active="school" v-if='!app'></index-foot>
+        <index-foot active="school" v-if='!app' class="footer"></index-foot>
     </div>
 </template>
 
@@ -17,6 +17,8 @@
 //    import indexFoot from '../module/index/index_footer.vue'
     import indexFoot from '../src/component/com-footer.vue'
     import common from "./common/common.es6";
+    import study from "./index/feed/bd_study_0.vue";
+
 
     export default{
         data:function(){
@@ -27,7 +29,30 @@
                     cart: 0
                 },
                 app: !!navigator.userAgent.match(/davdian|bravetime|vyohui/),
-                inApp:window.Units&&Units.isApp()
+                inApp:window.Units&&Units.isApp(),
+                data: {
+                    "body":{
+                      "tplId":"bd_study_0",
+                      "bgColor":"0x333333",
+                      "dataList":[
+                        {
+                          "albumId":"0", // 专辑id
+                          "musicId":"0", // 音频id
+                          "isFree":"0",//0免费 1:付费
+                          "title":"第78级 小猪佩奇",
+                          "time":"240",//秒数
+                          "album":"<小猪佩奇>",
+                          "isPlay":"0",//0:不可播 1:可播
+                          "fileLink":"http://haba.davdian.com/aaaa/01.mp3",
+                          "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+                          "command": {
+                            "albumContent" : "专辑详情",
+                            "musicContent" : "音乐详情",
+                          }
+                        },
+                      ]
+                    }
+                  }
             }
         },
         created:function () {
@@ -81,7 +106,8 @@
         components:{
             indexFeed:indexFeed,
             coursetitle:coursetitle,
-            indexFoot:indexFoot
+            indexFoot:indexFoot,
+             study:study
         }
     }
 </script>
@@ -95,4 +121,7 @@
         width: 100%;
         height: 50px;
     }
+  .footer{
+    z-index: 4;
+  }
 </style>

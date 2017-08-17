@@ -1,40 +1,55 @@
 <template>
   <div>
     <div class="tab">
-      <div class="tab_list">
+      <div class="tab_list" v-if="flag" @click="fn">
         <div class="border color1" v-text="dataList.content"></div>
         <div class="b_right" v-text="dataList.recommend"></div>
         <div class="line"></div>
       </div>
+      <div class="tab_list" v-if="!flag" @click="fn">
+        <div class="border" v-text="dataList.content"></div>
+        <div class="b_right color1" v-text="dataList.recommend"></div>
+        <div class="line2"></div>
+      </div>
+    </div>
+
+    <div v-if="flag">
       <div class="update">
         <div class="up">
           已更新<span class="color1" v-text="dataList.up"></span>期，计划更新<span class="color1" v-text="dataList.ex"></span>期
         </div>
       </div>
-    </div>
-    <div class="list">
-      <div class="item" v-for="item in contentList">
-        <div class="last">上次听到这里 2017-07-11 21:09</div>
-        <div class="rea">
-          <div class="item_left">
-            <div class="item_title" v-text="item.music"></div>
-            <div class="item_timee">
-              <div class="item_date">2017-09-09</div>
-              <div class="item_count"><span v-text="item.number"></span>次播放</div>
-              <div class="item_time">
-                <div class="clock"></div>
-                <div class="times" v-text="item.time"></div>
+      <div class="list">
+        <div class="item" v-for="item in contentList">
+          <div class="last">上次听到这里 2017-07-11 21:09</div>
+          <div class="rea">
+            <div class="item_left">
+              <div class="item_title" v-text="item.music"></div>
+              <div class="item_timee">
+                <div class="item_date" v-text="getLocalTime(item.update_time)"></div>
+                <div class="item_count"><span v-text="item.number"></span>次播放</div>
+                <div class="item_time">
+                  <div class="clock"></div>
+                  <div class="times" v-text="item.time"></div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="item_right">
-            <img :src="item.imageUrl" alt="">
-            <div class="free" style="display: none;">免费试听</div>
+            <div class="item_right">
+              <div class="disable"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+              <div class="mask_stop"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+              <div class="mask_play"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+              <div class="circle_mask"></div>
+              <div><img :src="item.imageUrl" alt=""></div>
+              <div class="free" style="display: none;">免费试听</div>
+            </div>
           </div>
         </div>
-
       </div>
     </div>
+    <div v-if="!flag">
+
+    </div>
+
   </div>
 </template>
 <script>
@@ -47,7 +62,21 @@
       data(){
           return {
               dataList:[],
-              contentList:[]
+              contentList:[],
+              flag:true
+          }
+      },
+      methods:{
+          fn(){
+              this.flag=!this.flag;
+          },
+          getLocalTime(nS) {
+            let time= new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
+            let timestamp=time.split(" ")[0].split("/");
+            let y=parseInt(timestamp[0]);
+            let m=parseInt(timestamp[1]);
+            let d=parseInt(timestamp[2]);
+            return y + "-" + m + "-" + d;
           }
       }
   }
@@ -55,8 +84,7 @@
 <style scoped>
   .tab {
     padding-top: 0.14rem;
-    height: 0.72rem;
-    padding-bottom: 0.1rem;
+    height: 0.36rem;
     background: white;
   }
 
@@ -70,15 +98,15 @@
     position: relative;
   }
 
-  .tab .update {
+
+  .update {
     padding-left: 0.1rem;
     padding-right: 0.1rem;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     height: 0.36rem;
-  }
-
-  .update {
     position: relative;
+    padding-bottom: 0.1rem;
+    background: #fff;
   }
 
   .tab_list .border {
@@ -91,7 +119,7 @@
 
   .tab_list .border, .b_right {
     display: inline-block;
-    height: 0.2rem;
+    height: 0.3rem;
     width: 1.87rem;
     line-height: 0.2rem;
     text-align: center;
@@ -109,9 +137,17 @@
     bottom: 0;
     left: 0.66rem;
   }
-  .up {
+  .line2 {
+    height: 0.0365rem;
+    width: 0.58rem;
+    background: #FF4A7D;
     position: absolute;
     bottom: 0;
+    right: 0.64rem;
+  }
+  .up {
+    position: absolute;
+    bottom: 0.1rem;
     left: 0.1rem;
   }
   .color1 {
@@ -195,6 +231,8 @@
     position: absolute;
     right: 0;
     top: 50%;
+    width: 0.34rem;
+    height: 0.34rem;
     margin-top: -0.17rem;
   }
   .item_right img{
@@ -202,6 +240,26 @@
     width: 0.34rem;
     border-radius: 50%;
   }
+  .item_right>div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.34rem;
+    height: 0.34rem;
+  }
+  .circle_mask{
+    width: 0.34rem;
+    height: 0.34rem;
+    border-radius:50%;
+    background: #000000;
+    opacity:0.3;
+    z-index:2;
+  }
+  .mask_play,.mask_stop,.disable{
+    z-index:3;
+  }
+
+
 
   .free{
     width: 0.64rem;

@@ -3,11 +3,12 @@
     <div class="content_buy">
       <div class="count"><span v-text="data.body.purchase"></span><span>人订阅</span></div>
       <div class="content_header">
-          <div v-for="item in dataList">
+          <div v-for="item in dataList" @click="go_href(item.command.content)">
             <img :src="item.imageUrl" alt="">
           </div>
-        <div><img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt=""
-        ></div>
+          <div>
+            <img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt="">
+          </div>
       </div>
     </div>
   </div>
@@ -22,6 +23,11 @@
     },
     created:function () {
       this.dataList=this.data.body.dataList;
+    },
+    methods:{
+      go_href(href){
+          window.location.href=href;
+      }
     }
   }
 </script>
