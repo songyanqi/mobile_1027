@@ -444,7 +444,7 @@
                                     // window.location = 'http://open.vyohui.cn/wxpay_t3/davke_pay.php?info='+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
                                 }else if (respone.data.data.payUrl){
                                     // window.location.href = respone.data.data.payUrl
-                                    bravetime.nativePay(payUrl,function (flag) {
+                                    bravetime.nativePay(respone.data.data.payUrl,function (flag) {
                                         if(flag){
                                             // 先改状态
                                             that.userTicket = 1;
