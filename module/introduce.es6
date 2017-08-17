@@ -163,6 +163,9 @@ export default {
             //     alert('teacherId数据为:', this.teacherId)
             // }
         },
+        login(){
+            window.location.href = '/login.html'
+        },
         getData(){
             window.location.reload();
         },

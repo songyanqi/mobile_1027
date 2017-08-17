@@ -169,7 +169,7 @@
         <div v-if='state==0' class='noApply'>
             <img src="//pic.davdian.com/free/2017/08/16/noApply.png">
             <p>登陆后才能继续访问</p>
-            <span>立即登陆</span>
+            <span @click='login'>立即登陆</span>
         </div>
     </div>
 </template>
@@ -326,6 +326,9 @@
                 } else {
                     alert('cmd为:', this.cmd)
                 }
+            },
+            login(){
+                window.location.href = '/login.html'
             },
             init(){
                 var that = this
