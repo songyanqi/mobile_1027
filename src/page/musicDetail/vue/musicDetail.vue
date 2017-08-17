@@ -2,6 +2,7 @@
   <div>
     <com-wx-notopen></com-wx-notopen>
     <div v-if='isInisWechatOrAppFlag'>
+      <audio preload="auto" class='allAudio'></audio>
       <div class="big_img" v-if='musicList[index] && musicList[index].imageUrl'>
         <img :src="musicList[index].imageUrl" alt="">
       </div>
@@ -407,5 +408,7 @@
     color: #333333;
     font-size: 14px;
   }
-
+  .allAudio{
+    height: 0;
+  }
 </style>
