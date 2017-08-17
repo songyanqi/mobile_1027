@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 .idea/
 node_modules/
 dist/
 npm-debug.log
 developer.config.js
-=======
-/.idea/
-/node_modules/
-/npm-debug.log
-/dist/
->>>>>>> master
