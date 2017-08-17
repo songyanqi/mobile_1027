@@ -227,7 +227,8 @@ export default {
                             bravetime.nativePay(payUrl,function (flag) {
                                 if(flag){
                                     // 先改状态
-                                    that.userTicket = 0;
+                                    that.userTicket = 1;
+                                    // that.userTicket = 0;
                                     goCourse();
                                 }
                             });
