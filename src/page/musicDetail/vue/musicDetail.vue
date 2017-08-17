@@ -1,5 +1,6 @@
 <template>
   <div>
+    <notopen></notopen>
     <div class="big_img">
       <img src="//pic.davdian.com/free/2017/08/16/a.jpg" alt="">
     </div>
@@ -81,7 +82,12 @@
   </div>
 </template>
 <script>
-  export default {}
+  import notopen from "../../../component/com-wx-notopen.vue"
+  export default {
+      components:{
+        notopen:notopen
+      }
+  }
 </script>
 <style scoped>
   .big_img img{

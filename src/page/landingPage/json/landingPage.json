@@ -14,85 +14,85 @@
           "bgColor":"0x333333",
           "dataList":[
             {
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "15776832314.davdian.com"
+              }
+            },
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "command": {
                 "content" : "点击时的动作"
               }
             },
             {
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "command": {
                 "content" : "点击时的动作"
               }
             },
             {
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "command": {
                 "content" : "点击时的动作"
               }
             },
             {
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "command": {
                 "content" : "点击时的动作"
               }
             },
             {
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "command": {
                 "content" : "点击时的动作"
               }
             },
             {
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "command": {
                 "content" : "点击时的动作"
               }
             },
             {
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "command": {
                 "content" : "点击时的动作"
               }
             },
             {
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "command": {
                 "content" : "点击时的动作"
               }
             },
             {
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "command": {
                 "content" : "点击时的动作"
               }
             },
             {
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "command": {
                 "content" : "点击时的动作"
               }
             },
             {
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "command": {
                 "content" : "点击时的动作"
               }
             },
             {
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "command": {
                 "content" : "点击时的动作"
               }
             },
             {
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
-              "command": {
-                "content" : "点击时的动作"
-              }
-            },
-            {
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "command": {
                 "content" : "点击时的动作"
               }
@@ -114,7 +114,7 @@
               "music":"音频名",
               "album":"专辑名",
               "time":"240",
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "fileLink":"http://haba.davdian.com/aaaa/01.mp3",
               "command": {
                 "content" : "点击时的动作"
@@ -127,7 +127,7 @@
               "music":"音频名",
               "album":"专辑名",
               "time":"240",
-              "imageUrl":"http://haba.davdian.com/aaaa/01.jpg",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
               "fileLink":"http://haba.davdian.com/aaaa/01.mp3",
               "command": {
                 "content" : "点击时的动作"

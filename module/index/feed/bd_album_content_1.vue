@@ -3,7 +3,7 @@
     <div class="list1">
       <div class="big_img">
         <div class="list_line"></div>
-        <div class="list_date">今日更新</div>
+        <div class="list_date" v-text="week"></div>
         <div class="list_line"></div>
       </div>
       <div class="list" v-for="item in dataList">
@@ -30,11 +30,37 @@
       props:["data"],
       data(){
           return {
-              dataList:[]
+              dataList:[],
+              upTime:"",
+              week:""
           }
       },
       created:function () {
         this.dataList=this.data.body.dataList;
+        this.upTime=this.data.body.upTime;
+        this.week=this.getLocalTime(this.upTime);
+//         console.log(this.getLocalTime(this.upTime));
+//         console.log(new Date(parseInt(this.upTime) * 1000).toLocaleString().replace(/:\d{1,2}$/,' '));
+//         console.log(new Date(2017,7,11).getDay());
+      },
+      methods:{
+        getLocalTime(nS){
+          let time= new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
+          let timestamp=time.split(" ")[0].split("/");
+          let y=parseInt(timestamp[0]);
+          let m=parseInt(timestamp[1]);
+          let d=parseInt(timestamp[2]);
+          let year=new Date().getFullYear();
+          let month=new Date().getMonth()+1;
+          let day=new Date().getDate();
+          let weekDay = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+          let week=new Date(y,m-1,d).getDay();
+          if(y === year && m === month && d === day){
+              return "今日更新";
+          }else {
+              return m + "月" + d + "日" + " " + weekDay[week];
+          }
+        }
       }
   }
 </script>
