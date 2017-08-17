@@ -15,6 +15,6 @@
 export default {
   // env_stage: 'prod',
   // env_num: '',
-  // page: 'noteDetail',
-  // webpack: false,
+  page: '{center,login,my_invitation_code,my_Inviter}',
+  webpack: true,
 };

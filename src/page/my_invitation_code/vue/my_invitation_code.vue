@@ -1,0 +1,114 @@
+<template>
+  <div>
+    <!--我的邀请码-->
+    <div class="sharImg">
+      <img src="../img/codeImg.png" alt="">
+    </div>
+    <div class="share_to_btn">
+      分享给好友
+    </div>
+    <div class="my_code_text">
+      我的邀请码：<span>98789</span> <span>复制邀请码</span>
+    </div>
+    <div class="other-info">
+      *您的大V店账号（手机号）也可以作为邀请码使用
+    </div>
+  </div>
+</template>
+<script>
+  import native from '../../../common/js/module/native.js';
+  export default {
+    props: {},
+    data() {
+      return {
+        login_form: true,  //登录显示
+      }
+    },
+    computed: {},
+    created() {
+    },
+    mounted() {
+      var that = this;
+    },
+    methods: {
+
+    }
+  }
+</script>
+<style lang="sass" lang="scss" rel="stylesheet/scss" scoped>
+ .sharImg{
+   width: 78.6666%;
+   min-height: 100px;
+   margin: 22px auto 0;
+ }
+  .sharImg img{
+    width: 100%;
+  }
+  .share_to_btn{
+    width: 73.3333%;
+    height: 40px;
+    margin: 20px auto 0;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    color: #FFFFFF;
+    background: -webkit-linear-gradient(left, #FF5C5C, #FA1862);
+    background: -webkit-gradient(linear, left top, right top, from(#FF5C5C), to(#FA1862));
+    background: linear-gradient(to right, #FF5C5C, #FA1862);
+    border-radius: 20px;
+    font-weight: 300;
+  }
+  .my_code_text{
+    text-align: center;
+    font-size: 14px;
+    color: #666666;
+    height: 24px;
+    line-height: 24px;
+    margin-top: 20px;
+  }
+  .my_code_text span:nth-of-type(1){
+    font-size: 16px;
+    color:#FF4A7D;
+  }
+  .my_code_text span:nth-of-type(2){
+    height: 24px;
+    width: 91px;
+    color: #FF4A7D;
+    font-size: 12px;
+    position: relative;
+    display: inline-block;
+    line-height: 24px;
+    text-align: center;
+    top: -2px;
+    left: 10px;
+  }
+ .my_code_text span:nth-of-type(2):after{
+   content: "";
+   -webkit-transform: scale(0.5);
+   -ms-transform: scale(0.5);
+   transform: scale(0.5);
+   width: 200%;
+   height: 200%;
+   border: 1px solid;
+   border-color: #FF4A7D;
+   display: block;
+   position: absolute;
+   left: 0;
+   top: 0;
+   -webkit-transform-origin: 0 0;
+   -ms-transform-origin: 0 0;
+   transform-origin: 0 0;
+   border-radius: 24px;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+ }
+  .other-info{
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+    margin-top: 5px;
+  }
+
+</style>
+

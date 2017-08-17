@@ -13,7 +13,7 @@
         <img src="../img/clearInput.png" v-if="password != ''" v-on:click="password = ''">
       </div>
       <!--登录或注册按钮-->
-      <div v-if="mobile == '' || password == ''" class="loginbtn" style="opacity: 0.4">登录</div>
+      <div v-if="mobile == '' || password == '' || password.length < 6" class="loginbtn" style="opacity: 0.4">登录</div>
       <div v-else class="loginbtn" v-on:click="login">登录</div>
       <!--忘记密码和注册账号按钮-->
       <div class="forget_sign">
@@ -35,21 +35,21 @@
           <img src="../img/clearInput.png" v-if="check_code != ''" v-on:click="check_code = ''">
         </div>
         <div v-if="mobile=='' || get_check" class="get_check_code disable">{{get_checkbtnname}}</div>
-        <div v-else class="get_check_code" @click="get_check_codes(1,1)">{{get_checkbtnname}}</div>
+        <div v-else class="get_check_code" @click="get_check_codes(1,1,function() {})">{{get_checkbtnname}}</div>
       </div>
       <div class="inputbox">
-        <input type="password" placeholder="设置密码，不少于6位" v-model="password" name="password">
+        <input type="password" placeholder="设置密码，不少于6位" v-model="password" name="password" autocomplete="new-password">
         <img src="../img/clearInput.png" v-if="password != ''" v-on:click="password = ''">
       </div>
-      <div class="inputbox">
-        <input type="password" placeholder="请输入邀请码" v-model="invitation_code" name="password">
+      <div v-if="Invite" class="inputbox">
+        <input type="password" placeholder="请输入邀请码" v-model="invitation_code" name="password" autocomplete="new-password">
         <img src="../img/clearInput.png" v-if="invitation_code != ''" v-on:click="invitation_code = ''">
       </div>
       <div class="what_invitation_code">
         <a @click="what_invite_code">什么是邀请码?</a>
       </div>
       <!--注册-->
-      <div v-if="mobile=='' || check_code == '' || password == '' || invitation_code == ''"
+      <div v-if="mobile=='' || check_code == '' || password == '' || password.length < 6 || invitation_code == ''"
            class="loginbtn" style="opacity: 0.4">注册
       </div>
       <div v-else class="loginbtn" @click="registers">注册</div>
@@ -109,24 +109,25 @@
           <img src="../img/clearInput.png" v-if="check_code != ''" v-on:click="check_code = ''">
         </div>
         <div v-if="get_check" class="get_check_code disable">{{get_checkbtnname}}</div>
-        <div v-else class="get_check_code" @click="get_check_codes(1,2)">{{get_checkbtnname}}</div>
+        <div v-else class="get_check_code" @click="get_check_codes(1,2,function() {})">{{get_checkbtnname}}</div>
       </div>
       <div class="inputbox">
-        <input type="password" placeholder="设置密码，不少于6位" v-model="password" name="password">
+        <input type="password" placeholder="设置密码，不少于6位" v-model="password" name="password" autocomplete="new-password">
         <img src="../img/clearInput.png" v-if="password != ''" v-on:click="password = ''">
       </div>
       <!--确定-->
-      <div v-if="check_code == '' || password == ''" class="loginbtn" style="opacity: 0.4">确定</div>
+      <div v-if="check_code == '' || password == '' || password < 6" class="loginbtn" style="opacity: 0.4">确定</div>
       <div v-else class="loginbtn" @click="reset_password">确定</div>
       <!--语音验证-->
       <div class="forget_sign voice_check">
-        <a @click="get_check_codes(2,2)">短信收不到？试试语音验证</a>
+        <a @click="get_check_codes(2,2,function() {})">短信收不到？试试语音验证</a>
       </div>
     </div>
   </div>
 </template>
 <script>
-  import layout from "../../../../module/index/layout.es6";
+  import popup from '../../../common/js/module/popup.js';
+  import strSign from '../../../common/js/module/encrypt.js';
 
   export default {
     props: {},
@@ -142,7 +143,9 @@
         invitation_code: '',
         check_code: '',
         get_check: false, /*正在获取验证码中......*/
-        get_checkbtnname: '获取验证码'
+        Invite: true, /*不展示邀请码*/
+        get_checkbtnname: '获取验证码',
+        response:null
       }
     },
     computed: {},
@@ -156,43 +159,131 @@
       login: function () {
         var that = this;
         if (!that.isTel(that.mobile)) {
-          bravetime.info("请输入正确的手机号");
+          popup.toast("请输入正确的手机号");
         } else {
           var tData = {
             mobile: that.mobile,
             password: that.password
           };
-
-          console.log(layout.strSign("login", tData));
+          $.ajax({
+            cache: false,
+            async: true,
+            url: '/api/mg/auth/user/login?_=' + Date.now(),
+            type: 'post',
+            dataType: 'json',
+            data: strSign(tData),
+            success(response) {
+              that.response = response;
+              if (response.code) {
+                popup.toast(response.msg);
+              } else {
+                /*登录成功后跳转到refer页*/
+                var referer = that.getQueryString("referer");
+                location.href = referer;
+              }
+            },
+            error(error) {
+              console.error('ajax error:' + error.status + ' ' + error.statusText);
+              that.response = require('../json/login.json');
+              if (that.response.code) {
+                popup.toast(that.response.msg);
+              } else {
+                /*登录成功后跳转到refer页*/
+                var referer = that.getQueryString("referer");
+                location.href = referer;
+              }
+            }
+          });
         }
       },
       /*注册*/
       registers: function () {
         var that = this;
         if (!that.isTel(that.mobile)) {
-          bravetime.info("请输入正确的手机号");
+          popup.toast("请输入正确的手机号");
           return false;
         }
         if (that.password.length < 6) {
-          bravetime.info("密码不少于6位");
+          popup.toast("密码不少于6位");
           return false;
         }
         var regiserData = {
           mobile: that.mobile,
           captcha: that.check_code,
-          password: that.password,
-          inviteCode: that.invitation_code
+          password: that.password
         };
+        if (that.Invite) {
+          regiserData.inviteCode = that.invitation_code
+        }
         console.log(regiserData);
+        /*发送注册请求*/
+        $.ajax({
+          cache: false,
+          async: true,
+          url: '/api/mg/auth/user/register?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: strSign(regiserData),
+          success(response) {
+            that.response = response;
+            if (response.code) {
+              popup.toast(response.msg);
+            } else {
+              /*注册*/
+              var referer = that.getQueryString("referer");
+              location.href = referer;
+            }
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+            that.response = require('../json/login.json');
+            if (that.response.code) {
+              popup.toast(that.response.msg);
+            } else {
+              /*注册成功进入店铺*/
+              var referer = that.getQueryString("referer");
+              location.href = referer;
+            }
+          }
+        });
       },
       /*重置密码*/
       reset_password: function () {
         var that = this;
         var tData = {
           mobile: that.mobile,
-          password: that.password
+          password: that.password,
+          captcha: that.check_code,
         };
-        console.log(layout.strSign("login", tData));
+        $.ajax({
+          cache: false,
+          async: true,
+          url: '/api/mg/auth/user/resetPassword?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: strSign(tData),
+          success(response) {
+            that.response = response;
+            if (response.code) {
+              popup.toast(response.msg);
+            } else {
+              /*密码重置成功相当于登录*/
+              var referer = that.getQueryString("referer");
+              location.href = referer;
+            }
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+            that.response = require('../json/login.json');
+            if (that.response.code) {
+              popup.toast(that.response.msg);
+            } else {
+              /*注册成功进入店铺*/
+              var referer = that.getQueryString("referer");
+              location.href = referer;
+            }
+          }
+        });
       },
       /*去注册*/
       go_sign: function () {
@@ -200,7 +291,12 @@
         that.sign_form = true;
         that.login_form = false;
         /*如果不是微信不是APP的话，不展现邀请码框*/
-
+        if (!that.isWechat) {
+          var hname = location.hostname.split(".");
+          if (hname[0] != "bravetime") {
+            that.Invite = false;
+          }
+        }
         /*初始化数据*/
         that.password = '';
         that.invitation_code = '';
@@ -221,19 +317,26 @@
       /*忘记密码*/
       go_forget: function () {
         var that = this;
-        if (that.isTel(that.mobile)) {
-
-        }else{
-          bravetime.info("请输入正确的手机号");
+        if (that.mobile == '') {
+          popup.toast("请输入手机号");
           return false;
         }
-        /*再验证手机号是否注册*/
-        that.login_form = false;
-        that.forget_form = true;
-        that.get_check = true;
-        that.check_code = '';
-        that.password = '';
-        that.sendLock();
+        if (that.isTel(that.mobile)) {
+
+        } else {
+          popup.toast("请输入正确的手机号");
+          return false;
+        }
+        /*发送验证码成功后跳转到修改密码页*/
+        /*发送验证码*/
+        that.get_check_codes(1,2,function () {
+          /*初始化数据*/
+          that.login_form = false;
+          that.forget_form = true;
+          that.get_check = true;
+          that.check_code = '';
+          that.password = '';
+        });
       },
       /*什么是邀请码*/
       what_invite_code: function () {
@@ -246,18 +349,49 @@
         that.rule_form = false;
       },
       /*获取验证码*/
-      get_check_codes: function (smsType,sendType) {
+      get_check_codes: function (smsType, sendType,callback) {
         var that = this;
         if (that.isTel(that.mobile)) {
+          if(that.get_check){
+            popup.toast("获取验证码过于频繁，一分钟内只能获取一次");
+            return false;
+          }
           let sData = {
-            monile:that.mobile,
-            smsType:smsType,
-            sendType:sendType
+            monile: that.mobile,
+            smsType: smsType,
+            sendType: sendType
           };
-          that.get_check = true;
-          that.sendLock()
+          $.ajax({
+            cache: false,
+            async: true,
+            url: '/api/mg/auth/user/sendSms?_=' + Date.now(),
+            type: 'post',
+            dataType: 'json',
+            data: strSign(sData),
+            success(response) {
+              that.response = response;
+              if (that.response.code) {
+                popup.toast(that.response.msg);
+              } else {
+                callback();
+                that.get_check = true;
+                that.sendLock();
+              }
+            },
+            error(error) {
+              console.error('ajax error:' + error.status + ' ' + error.statusText);
+              that.response = require('../json/login.json');
+              if (that.response.code) {
+                popup.toast(that.response.msg);
+              } else {
+                callback();
+                that.get_check = true;
+                that.sendLock()
+              }
+            }
+          });
         } else {
-          bravetime.info("请输入正确的手机号");
+          popup.toast("请输入正确的手机号");
         }
       },
       sendLock: function () {
@@ -283,6 +417,20 @@
         var tel = $.trim(t);
         var reg = /^1\d{10}$/;
         return reg.test(tel);
+      },
+      isWechat: function () {
+        var ua = window.navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      getQueryString: function (name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
       }
     }
   }
