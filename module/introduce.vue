@@ -118,7 +118,7 @@
 <style lang='sass' scoped>
     .bottomBtn{
         position: absolute;
-        top: 0;
+        height: 60px;
         left: 0;
         right: 0;
         bottom: 0;

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="../../../stylesheet/base.css" rel="stylesheet">
+    <link href="../../../stylesheet/model.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../stylesheet/order.css">
+    <!-- <link rel="stylesheet" href="../stylesheet/csshake.min.css"> -->
+    <title>订单列表</title>
+    <script type="text/javascript">
+
+        var tj_path = 'order_list';
+        /////////////////////给app提供接口数据////////////
+        var appData = {
+            showHead:1,     // 是否展示头部
+            showFoot:0,     // 是否展示底部
+            backOnHead:1,   // 头部返回按钮
+            homeOnHead:0,   // 头部首页按钮
+            shareOnHead:0
+        };
+        var deleteOrderUrl = "../../../data/deleteOrder.json";
+        var closeOrderUrl = "../../../data/closeOrder.json";
+        var cancelOrderUrl = "../../../data/cancelOrder.json";
+        var orderListUrl = "../../../data/orderListData.json";
+        var gradeUrl = '../../../data/gradeGoods.json';
+        var userId = "ccc";
+        var arriveUrl = '../../../data/orderArrive_success.json'; // 确认收货地址
+        window.debug = true; // 这个写false
+    </script>
+</head>
+<body class="scroll_flag" >
+<order-list>
+
+</order-list>
+
+
+
+<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<!--下面这个jquery要带着version哈-->
+<script type="text/javascript">
+    !window.jQuery && document.write('<script type="text/javascript" src="../cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
+</script>
+<script src="http://cdn.davdian.com/vue/1.0.26/vue.js"></script>
+<script src="//cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+<script src="../../../dist/orderList.js"></script>
+</body>
+</html>

@@ -15,6 +15,11 @@
 export default {
   // env_stage: 'prod',
   // env_num: '',
+<<<<<<< HEAD
   page: 'musicDetail',
    webpack: false
+=======
+  // page: 'allDiscuss',
+  // webpack: false,
+>>>>>>> master
 };
