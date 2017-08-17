@@ -183,7 +183,7 @@
 <template>
     <div class = "good_top_wraper">
       <!--商品图左下角开学季icon，818需求-->
-      <img class="left-bottom-logo" src="//pic.davdian.com/activity/2017/08/15/282_150_1aefb7e936ed666bf77e8303f8ba7d46.png?x-oss-process=image/resize,m_fill,w_320,h_320/format,webp"
+      <img class="left-bottom-logo" src="//pic.davdian.com/activity/2017/08/15/282_150_1aefb7e936ed666bf77e8303f8ba7d46.png"
            v-if="Date.now() >= new Date(2017,7,17) && Date.now() < new Date(2017,7,24)">
 
       <!--跨境标志-->
