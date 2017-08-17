@@ -30,7 +30,8 @@ export default {
             userId: null,
             cmd:null,
             cache:false,
-            bottomBtn: false
+            bottomBtn: false,
+            enterClassroomFlag: true,
         }
     },
     created(){
@@ -165,7 +166,7 @@ export default {
         },
         invite1 () {
             // window.location.href = '/t-10838.html?rp=course_detail&rl=inv_button'
-            window.location.href = '/index.php?c=ShopGoods&a=index&id=348&kd_type=2'
+            window.location.href = '/join_vip.html?id=348&kd_type=2&rp=course_detail&rl=inv_button'
         },
         closeCard() {
             this.inviteShow = false;
@@ -270,6 +271,12 @@ export default {
         // 进入课堂
         enterClassroom(){
             let that = this;
+            if (!that.enterClassroomFlag)
+                return
+            that.enterClassroomFlag = false
+            setTimeout(function(){
+                that.enterClassroomFlag = true
+            },5000)
             if(this.inApp){
                 // app的话进入app指定课堂
                 that.enterAppCourse();
