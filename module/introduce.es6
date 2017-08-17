@@ -340,7 +340,7 @@ export default {
     components: {
         vSchoolTitle:vSchoolTitle,
         inviteCard:inviteCard,
-        indexFeed:indexFeed,
+        indexFeed:indexFeed
 
     }
 }

@@ -157,6 +157,7 @@
             <brand-type v-if="firstScreenFinish" :brandlist = "brandList"
             ></brand-type>
 
+            <!--广告banner-->
             <ad-banner :ad-img="response.data.ADBanner.imageUrl" :ad-url="response.data.ADBanner.content"
                        v-if="response && response.data && response.data.ADBanner && response.data.ADBanner.imageUrl">
             </ad-banner>
