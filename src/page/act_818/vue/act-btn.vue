@@ -41,7 +41,7 @@
           if (this.response && this.response.data.actStatus == '2') {
             location.href = '/';
           } else {
-            location.href = '/t-13295.html';
+            location.href = '/t-13685.html';
           }
         }
       }
