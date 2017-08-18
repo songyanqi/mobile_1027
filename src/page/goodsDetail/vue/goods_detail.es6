@@ -1088,8 +1088,10 @@ export default {
           //判断限时购是否抢光提示。
 
           if (dataExtra.status.onSale == '1' && dataExtra.sales.goodsStocks > '0' && dataExtra.hints.hintsInfo && dataExtra.hints.hintsInfo.length) {
-            popup.alert("会员返现已恢复平日金额，返现金额以当前页面为准", () => {
-            }, "该商品限时购活动库存售罄");
+            popup.alert({
+              title: '该商品限时购活动库存售罄',        // 标题（支持传入html。有则显示。）
+              text: '会员返现已恢复平日金额，返现金额以当前页面为准',         // 文本（支持传入html。有则显示。）
+            });
           }
         },
         //dataExtra为空的时候

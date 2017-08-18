@@ -15,6 +15,6 @@
 export default {
   // env_stage: 'prod',
   // env_num: '',
-  page: 'act_818',
-  webpack: false,
+  // page: 'center',
+  // webpack: false,
 };
