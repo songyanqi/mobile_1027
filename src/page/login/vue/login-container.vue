@@ -14,7 +14,7 @@
       </div>
       <!--登录或注册按钮-->
       <div v-if="mobile == '' || password == '' || password.length < 6" class="loginbtn" style="opacity: 0.4">登录</div>
-      <div v-else class="loginbtn" v-on:click="login">登录</div>
+      <div v-else class="loginbtn" v-on:click="login">{{loginBtn}}</div>
       <!--忘记密码和注册账号按钮-->
       <div class="forget_sign">
         <a class="forgets" @click="go_forget">忘记密码</a>
@@ -42,15 +42,16 @@
         <img src="../img/clearInput.png" v-if="password != ''" v-on:click="password = ''">
       </div>
       <div v-if="Invite" class="inputbox">
-        <input type="password" placeholder="请输入邀请码" v-model="invitation_code" name="password" autocomplete="new-password">
+        <input type="password" placeholder="请输入邀请码（非必填）" v-model="invitation_code" name="password"
+               autocomplete="new-password">
         <img src="../img/clearInput.png" v-if="invitation_code != ''" v-on:click="invitation_code = ''">
       </div>
       <div class="what_invitation_code">
         <a @click="what_invite_code">什么是邀请码?</a>
       </div>
       <!--注册-->
-      <div v-if="mobile=='' || check_code == '' || password == '' || password.length < 6 || invitation_code == ''"
-           class="loginbtn" style="opacity: 0.4">注册
+      <div v-if="mobile=='' || check_code == '' || password == '' || password.length < 6" class="loginbtn"
+           style="opacity: 0.4">注册
       </div>
       <div v-else class="loginbtn" @click="registers">注册</div>
       <!--已有账号登录-->
@@ -101,7 +102,7 @@
     <!--忘记密码-->
     <div v-if="forget_form">
       <div class="login_text">
-        验证码已发送到 <span style="color: #FF4A7D">17737701050</span>
+        验证码已发送到 <span style="color: #FF4A7D">{{mobile}}</span>
       </div>
       <div class="inputbox check_input">
         <div>
@@ -127,6 +128,7 @@
 </template>
 <script>
   import popup from '../../../common/js/module/popup.js';
+  import ua from '../../../common/js/module/ua.js';
   import strSign from '../../../common/js/module/encrypt.js';
 
   export default {
@@ -145,7 +147,8 @@
         get_check: false, /*正在获取验证码中......*/
         Invite: true, /*不展示邀请码*/
         get_checkbtnname: '获取验证码',
-        response:null
+        response: null,
+        loginBtn: "登录"
       }
     },
     computed: {},
@@ -165,9 +168,10 @@
             mobile: that.mobile,
             password: that.password
           };
+          that.loginBtn = "正在登录...";
           $.ajax({
             cache: false,
-            async: true,
+            async: false,
             url: '/api/mg/auth/user/login?_=' + Date.now(),
             type: 'post',
             dataType: 'json',
@@ -175,7 +179,8 @@
             success(response) {
               that.response = response;
               if (response.code) {
-                popup.toast(response.msg);
+                popup.toast(response.data.msg);
+                that.loginBtn = "登录";
               } else {
                 /*登录成功后跳转到refer页*/
                 var referer = that.getQueryString("referer");
@@ -184,14 +189,6 @@
             },
             error(error) {
               console.error('ajax error:' + error.status + ' ' + error.statusText);
-              that.response = require('../json/login.json');
-              if (that.response.code) {
-                popup.toast(that.response.msg);
-              } else {
-                /*登录成功后跳转到refer页*/
-                var referer = that.getQueryString("referer");
-                location.href = referer;
-              }
             }
           });
         }
@@ -227,7 +224,7 @@
           success(response) {
             that.response = response;
             if (response.code) {
-              popup.toast(response.msg);
+              popup.toast(response.data.msg);
             } else {
               /*注册*/
               var referer = that.getQueryString("referer");
@@ -236,14 +233,6 @@
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);
-            that.response = require('../json/login.json');
-            if (that.response.code) {
-              popup.toast(that.response.msg);
-            } else {
-              /*注册成功进入店铺*/
-              var referer = that.getQueryString("referer");
-              location.href = referer;
-            }
           }
         });
       },
@@ -265,7 +254,7 @@
           success(response) {
             that.response = response;
             if (response.code) {
-              popup.toast(response.msg);
+              popup.toast(response.data.msg);
             } else {
               /*密码重置成功相当于登录*/
               var referer = that.getQueryString("referer");
@@ -274,14 +263,6 @@
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);
-            that.response = require('../json/login.json');
-            if (that.response.code) {
-              popup.toast(that.response.msg);
-            } else {
-              /*注册成功进入店铺*/
-              var referer = that.getQueryString("referer");
-              location.href = referer;
-            }
           }
         });
       },
@@ -291,7 +272,9 @@
         that.sign_form = true;
         that.login_form = false;
         /*如果不是微信不是APP的话，不展现邀请码框*/
-        if (!that.isWechat) {
+        console.log(ua.isWeiXin());
+        if (!ua.isWeiXin()) {
+          console.log("不是微信");
           var hname = location.hostname.split(".");
           if (hname[0] != "bravetime") {
             that.Invite = false;
@@ -329,7 +312,7 @@
         }
         /*发送验证码成功后跳转到修改密码页*/
         /*发送验证码*/
-        that.get_check_codes(1,2,function () {
+        that.get_check_codes(1, 2, function () {
           /*初始化数据*/
           that.login_form = false;
           that.forget_form = true;
@@ -349,15 +332,15 @@
         that.rule_form = false;
       },
       /*获取验证码*/
-      get_check_codes: function (smsType, sendType,callback) {
+      get_check_codes: function (smsType, sendType, callback) {
         var that = this;
         if (that.isTel(that.mobile)) {
-          if(that.get_check){
+          if (that.get_check) {
             popup.toast("获取验证码过于频繁，一分钟内只能获取一次");
             return false;
           }
           let sData = {
-            monile: that.mobile,
+            mobile: that.mobile,
             smsType: smsType,
             sendType: sendType
           };
@@ -371,7 +354,7 @@
             success(response) {
               that.response = response;
               if (that.response.code) {
-                popup.toast(that.response.msg);
+                popup.toast(that.response.data.msg);
               } else {
                 callback();
                 that.get_check = true;
@@ -380,14 +363,6 @@
             },
             error(error) {
               console.error('ajax error:' + error.status + ' ' + error.statusText);
-              that.response = require('../json/login.json');
-              if (that.response.code) {
-                popup.toast(that.response.msg);
-              } else {
-                callback();
-                that.get_check = true;
-                that.sendLock()
-              }
             }
           });
         } else {
@@ -417,14 +392,6 @@
         var tel = $.trim(t);
         var reg = /^1\d{10}$/;
         return reg.test(tel);
-      },
-      isWechat: function () {
-        var ua = window.navigator.userAgent.toLowerCase();
-        if (ua.match(/MicroMessenger/i) == "micromessenger") {
-          return true;
-        } else {
-          return false;
-        }
       },
       getQueryString: function (name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
