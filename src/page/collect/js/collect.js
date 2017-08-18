@@ -23,9 +23,7 @@ vueLazyload.init();
 new Vue({
   el: ".app",
   components: {
-    'lheader':require('../vue/header.vue'),
-    'lfooter':require('../vue/footer.vue'),
-    'banner':require('../vue/banner.vue'),
+    'collect':require('../vue/collect.vue'),
     'com-top-title': require('../../../component/com-top-title.vue'),
     'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
   },

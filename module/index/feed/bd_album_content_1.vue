@@ -6,7 +6,7 @@
         <div class="list_date" v-text="week"></div>
         <div class="list_line"></div>
       </div>
-      <div class="list" v-for="item in dataList">
+      <div class="list" v-for="item in dataList" @click="go_href(item.command.content)">
         <div class="left_img">
           <img :src="item.imageUrl" alt="">
         </div>
@@ -15,7 +15,7 @@
           <div class="list_name" v-text="item.album"></div>
           <div class="list_time" v-text="item.time"></div>
         </div>
-        <div class="right_img" @click="go_href(item.command.content)">>
+        <div class="right_img">
             <div class="mask_stop"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
             <div class="mask_play"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
             <div class="circle_mask"></div>
@@ -27,13 +27,16 @@
 
 </template>
 <script>
+  import util from "../../../utils/utils.es6";
+  import native from "../../../src/common/js/module/native.js";
   export default {
       props:["data"],
       data(){
           return {
               dataList:[],
               upTime:"",
-              week:""
+              week:"",
+              isApp:util.utils.isApp()
           }
       },
       created:function () {
@@ -63,8 +66,14 @@
           }
         },
         go_href(href){
-            window.location.href=href;
-        }
+            if(this.isApp){
+
+            }else {
+              window.location.href=href;
+            }
+
+        },
+
       }
   }
 </script>

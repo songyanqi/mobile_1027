@@ -6,6 +6,7 @@
   "data_version":"xxxxxx",
   "data": {
     "webUrl":"https://15201663952.davdian.com",
+    "isFree":"1",
     "feedList":[
       {
         "body":{
@@ -77,8 +78,8 @@
                 "musicId": "0",
                 "music": "音频名称",
                 "number": "播放量",
-                "isFree": "0",
-                "isPlay":"0",
+                "isFree": "1",
+                "isPlay":"1",
                 "imageUrl": "//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
                 "fileLink": "http://haba.davdian.com/aaaa/01.mp3",
                 "time":"240",
@@ -92,7 +93,7 @@
                   "musicId": "0",
                   "music": "音频名称",
                   "number": "播放量",
-                  "isFree": "0",
+                  "isFree": "1",
                   "isPlay":"0",
                   "imageUrl": "//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
                   "fileLink": "http://haba.davdian.com/aaaa/01.mp3",

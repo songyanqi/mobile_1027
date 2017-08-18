@@ -4,7 +4,7 @@
       <div class="list_line"></div>
       <div class="list_date">免费学习专区</div>
       <div class="list_line"></div>
-      <div class="fixed"><div style="color:#333333;font-size: 12px;">更多</div><div class="arrow"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div></div>
+      <div class="fixed" @click=""><div style="color:#333333;font-size: 12px;">更多</div><div class="arrow"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div></div>
     </div>
     <div class="all">
       <div class="list_all" v-for="item in dataList">
@@ -16,7 +16,7 @@
               <div class="name" v-text="item.album"></div>
             </div>
           </div>
-          <div class="list_right" @click="music_detail(item.musicContent)">
+          <div class="list_right" @click="music_detail(item.command.musicContent)">
             <div class="mask_stop"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
             <div class="mask_play"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
             <div class="circle_mask"></div>
@@ -28,6 +28,8 @@
   </div>
 </template>
 <script>
+  import util from "../../../utils/utils.es6";
+  import native from "../../../src/common/js/module/native";
   export default{
     props:["data"],
     created:function () {
@@ -35,12 +37,17 @@
     },
     data(){
      return{
-         dataList:[]
+         dataList:[],
+         isApp:util.utils.isApp()
      }
     },
     methods:{
       music_detail(link){
-          window.location.href=link;
+          if(this.isApp){
+
+          }else{
+            window.location.href=link;
+          }
       }
     }
   }
