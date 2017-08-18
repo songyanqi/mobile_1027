@@ -10,7 +10,21 @@
     <com-top-title title="邀请好友安装大V店APP"></com-top-title>
 
     <!--主体内容-->
-    <my_invitation_code></my_invitation_code>
+    <div>
+      <!--我的邀请码-->
+      <div class="sharImg">
+        <img :src="response.data.imgUrl" alt="">
+      </div>
+      <div class="share_to_btn" @click="shareto">
+        分享给好友
+      </div>
+      <div class="my_code_text">
+        我的邀请码：<span>{{response.data.inviteCode}}</span><span v-if="isApp" @click="copyText(response.data.inviteCode)">复制邀请码</span>
+      </div>
+      <div class="other-info">
+        *您的大V店账号（手机号）也可以作为邀请码使用
+      </div>
+    </div>
 
     <!--返回顶部-->
     <com-to-top-icon></com-to-top-icon>

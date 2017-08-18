@@ -25,6 +25,7 @@ new Vue({
   computed: {},
   watch: {},
   beforeCreate() {
+    var that = this;
     /*如果是APP，跳转到原生登陆*/
     if (!!navigator.userAgent.match(/davdian|bravetime|vyohui/)) {
       native.Account.login({
@@ -35,10 +36,15 @@ new Vue({
             alert(code);
             if (code === 0) {
 
-            } else if (code === 1) {
-
-            } else {
-
+            } else if (code === 1 || code === 2) {
+              var getQueryString = function (name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null) return unescape(r[2]);
+                return null;
+              };
+              var referer = getQueryString("referer");
+              location.href = referer;
             }
           }
         }

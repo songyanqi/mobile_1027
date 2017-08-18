@@ -770,6 +770,19 @@ const native = {
         param: param
       });
     },
+    /**
+     * 功能: H5触发cmd客户端复制文案到剪切板
+     * 用法:
+     * native.BrowserTouch.copyText();
+     */
+    copyText(param = {}){
+      call({
+        v: '4.2.0',
+        host: 'BrowserTouch',
+        action: 'copyText',
+        param: param
+      })
+    }
   },
   /****************************** 12、H5触发cmd命令 ******************************/
   Common: {

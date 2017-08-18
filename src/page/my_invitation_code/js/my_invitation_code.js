@@ -14,33 +14,32 @@ new Vue({
   el: ".app",
   components: {
     'com-top-title': require('../../../component/com-top-title.vue'),
-    'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
-    'my_invitation_code': require('../vue/my_invitation_code.vue'),
+    'com-to-top-icon': require('../../../component/com-to-top-icon.vue')
   },
   data() {
     return {
       response: null,
+      login_form: true,  //登录显示
+      isApp: !!navigator.userAgent.match(/davdian|bravetime|vyohui/)
     }
   },
   computed: {},
   watch: {
     // 监听response变化
-    response(){
+    response() {
       // response变化后并渲染完dom,设置其他事项
       this.$nextTick(function () {
-        let ts = this;
+        let that = this;
         // 设置app头部标题栏
         native.custom.initHead({
-          shareOnHead: 1,
+          showHead: 1,    // 是否展示头部
+          backOnHead: 1,  // 头部返回按钮
         });
 
         // 设置分享信息
         try {
           share.setShareInfo({
-            title: ts.response.data.shareTitle,
-            desc: ts.response.data.shareDesc,
-            link: location.href,
-            imgUrl: ts.response.data.shareImg
+            imgUrl: that.response.data.imgUrl
           });
         } catch (err) {
           console.error(err);
@@ -58,26 +57,51 @@ new Vue({
      * 接口名称:
      * 接口文档:
      */
-    getData(){
-      // let ts = this;
-      // $.ajax({
-      //   cache: false,
-      //   async: true,
-      //   url: '?_=' + Date.now(),
-      //   type: 'post',
-      //   dataType: 'json',
-      //   data: encrypt({
-      //     js_wx_info: 1,
-      //   }),
-      //   success(response) {
-      //     ts.response = response;
-      //   },
-      //   error(error) {
-      //     ts.response = require('../json/my_invitation_code.json');
-      //     console.error('ajax error:' + error.status + ' ' + error.statusText);
-      //   }
-      // });
+    getData() {
+      let that = this;
+      $.ajax({
+        cache: false,
+        async: true,
+        url: '99999?_=' + Date.now(),
+        type: 'post',
+        dataType: 'json',
+        data: encrypt({
+          js_wx_info: 1,
+        }),
+        success(response) {
+          that.response = response;
+        },
+        error(error) {
+          that.response = require('../json/my_invitation_code.json');
+          console.error('ajax error:' + error.status + ' ' + error.statusText);
+        }
+      });
     },
+    /*原生复制*/
+    copyText: function (text) {
+      native.BrowserTouch.copyText({
+        "text": text,
+        success: function (result) {
+          if (typeof result === "string") {
+            result = JSON.parse(result);
+            const code = +result.code;
+            if (code === 0) {
+              popup.toast("复制到剪切板失败，请手动复制")
+            } else if (code === 1) {
+              /*复制成功*/
+              popup.toast("已复制到剪切板");
+            } else {
+
+            }
+          }
+        }
+      })
+    },
+    /*分享*/
+    shareto:function () {
+      var that = this;
+      native.custom.shareImg({"bigImageUrl":that.response.data.imgUrl})
+    }
   },
   filters: {},
 });
