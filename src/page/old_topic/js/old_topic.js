@@ -541,6 +541,9 @@ $(function () {
           }else{
             d.shop_price2 = '';
           }
+          if(d.ratio&&d.goods_label==""){
+              d.goods_label = "返现"+d.ratio+'倍';
+          }
           str += '<div class="goods_item">' +
             '<a href="/'+d.goods_id+'.html?rl='+res.referer.rl+'&rp='+res.referer.rp+'">'+
             '<div class="goods_img">' +
