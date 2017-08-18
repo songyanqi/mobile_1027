@@ -207,7 +207,6 @@ export default {
                 type:"post",
                 success:function (result) {
                     let {code,data:{msg,payUrl,jsApi}}=result;
-                    that.appUpData()
                     if(+code){
                         if (code==30024){
                             bravetime.info("课程已删除");
@@ -263,7 +262,6 @@ export default {
                 bravetime.info("报名成功");
                 setTimeout(function () {
                     that.enterClassroom();
-                    that.appUpData()
                 },1800);
             }
         },

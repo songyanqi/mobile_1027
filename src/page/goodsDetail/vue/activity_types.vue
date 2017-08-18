@@ -280,8 +280,12 @@
             <div class = "modalCloseWrapper" @click = "handleTypeClose"><span class = "modal-close"></span></div>
             <div class = "goodsTypeModal">
                 <i class="dav_icon_detail_close_btn"></i>
-                <div class="summary">
-                    <div>
+                <div class="summary modalPicCont">
+                  <div class = "titlePic">
+                    <img :src="infoobj.goodsShortPic" alt="">
+                  </div>
+                  <div class = "titleInfo">
+                    <div class = "titleM5">
                         <span v-if = "infoobj.memberGoods == '0'">
                             <span v-if = "isshowactive == 1">
                                 <span v-if = "actendtime != 0" class = "summary_price">
@@ -341,6 +345,7 @@
                           </span>
                       </span>
                     </div>
+                  </div>
                 </div>
                 <div class="sku-control">
                     <div class = "clearfix s-title-cont" v-if = "relativegoodslist.length">

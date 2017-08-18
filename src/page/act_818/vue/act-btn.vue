@@ -17,7 +17,11 @@
       type: {
         type: String,
         default: ''
-      }
+      },
+      response: {
+        type: Object,
+        default: null
+      },
     },
     data() {
       return {}
@@ -34,7 +38,11 @@
         } else if (this.type === 'member') {
           location.href = '/index.php?c=ShopGoods&a=index&id=348';
         } else {
-          location.href = '/t-13295.html';
+          if (this.response && this.response.data.actStatus == '2') {
+            location.href = '/';
+          } else {
+            location.href = '/t-13685.html';
+          }
         }
       }
     },

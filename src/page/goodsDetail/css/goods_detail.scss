@@ -1218,8 +1218,10 @@ $crossBord: #FF4A7D;
     background-size: 100%;
   }
   .question_icon_m {
-    // margin-left: 5px;
     margin-left: 0;
+  }
+  .question_icon_m5 {
+    margin-left: 4px;
   }
   .salesCount {
     margin-top: 5px;
@@ -2380,6 +2382,11 @@ $crossBord: #FF4A7D;
     .b_relative_items:nth-child(even) {
       margin-right: 1%;
     }
+    @media screen and(max-width: 320px) {
+      .vux-popup-dialog {
+        min-height: 320px!important;
+      }
+    }
   }
   //底部导航
   .goods_bottom {
@@ -2823,8 +2830,46 @@ $crossBord: #FF4A7D;
       padding: 0 10px 10px 10px;
       color: $crossBord;
       position: relative;
-      //border-bottom: 1px solid #E1E1E1;
     }
+    .modalPicCont {
+      .titleInfo {
+        display: inline-block;
+        margin-left: 107px;
+        vertical-align: middle;
+      }
+      .titleM5 {
+        margin-right: 15px;
+      }
+      .titlePic {
+        position: absolute;
+        width: 100px;
+        border-radius: 5px;
+        height: 100px;
+        bottom: 12px;
+        background: #fff;
+        img {
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+      .titlePic:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        border-radius: 10px;
+        width: 200%;
+        height: 200%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid #E1E1E1;
+        -webkit-transform: scale(.5,.5);
+        transform: scale(.5,.5);
+        -webkit-transform-origin: left top;
+        transform-origin: left top;
+      }
+    }
+
     .singleSkuControl {
       height: 330px;
     }
@@ -3363,6 +3408,17 @@ $crossBord: #FF4A7D;
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);;
+  }
+}
+// #goodsDetail .goodsTypeModal .sku-control {
+//   height: 309px;
+// }
+@media screen and(max-width: 320px) {
+  #goodsDetail .goodsTypeModal .sku-control {
+    height: 200px;
+  }
+  #goodsDetail .goodsTypeModal .singleSkuControl {
+    height: 242px;
   }
 }
 
