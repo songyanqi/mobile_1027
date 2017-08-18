@@ -250,6 +250,11 @@
             shareOnHead: 1,
           });
 
+          // 设置app头部标题栏title
+          native.Browser.setHead({
+            'title' : document.title,
+          });
+
           /*// 设置分享信息
           try {
             share.setShareInfo({
@@ -274,6 +279,7 @@
           if($('.com-top-title').length > 0) {
             $('.wrapper').css('background-position', '0 44px');
           }
+
         });
       }
     },
