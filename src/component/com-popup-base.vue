@@ -1,7 +1,7 @@
 <!--公共确认框-->
 <template>
   <!--满屏容器-->
-  <div class="com-popup-confirm">
+  <div class="com-popup-base">
     <!--居中容器-->
     <div class="table-cell">
       <!--弹窗-->
@@ -21,6 +21,8 @@
         <div class="btns">
           <!--取消按钮-->
           <div class="btn cancel" v-html="cancelBtnTitle" @click="cancelBtnClick" v-if="type == 'confirm'"></div>
+          <!--垂直分割线-->
+          <div class="v-split"></div>
           <!--确定按钮-->
           <div class="btn ok" v-html="okBtnTitle" @click="okBtnClick"></div>
         </div>
@@ -115,7 +117,7 @@
 <style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../common/css/util/all";
 
-  @keyframes com-popup-confirm-animation {
+  @keyframes com-popup-base-animation {
     0% {
       transform: scale(0);
     }
@@ -124,7 +126,7 @@
     }
   }
 
-  .com-popup-confirm {
+  .com-popup-base {
     position: fixed;
     top: 0;
     width: 100%;
@@ -134,6 +136,9 @@
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 9;
     line-height: 1;
+    * {
+      background: transparent;
+    }
     .table-cell {
       display: table-cell;
       vertical-align: middle;
@@ -143,7 +148,7 @@
         width: ptr(270);
         background: white;
         border-radius: ptr(4);
-        animation: com-popup-confirm-animation 0.5s;
+        animation: com-popup-base-animation 0.5s;
         .tip {
           display: flex;
           align-items: center;
@@ -183,12 +188,19 @@
         }
         .btns {
           display: flex;
+          /*align-items: center;*/
           line-height: ptr(44);
+          .v-split {
+            width: 1px;
+            background: #E1E1E1;
+            transform: scaleX(0.5);
+          }
           .btn {
             flex: 1;
             color: #FF4A7D;
             font-size: ptr(16);
             text-align: center;
+            line-height: ptr(44);
             &.cancel {
               color: #666;
             }
