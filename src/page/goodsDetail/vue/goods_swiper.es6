@@ -119,6 +119,8 @@ export default {
         this.isLongTabTime = setTimeout(() => {
           if (this.isLongTap) {
             let picSrc = e.target.getAttribute('src');
+            let idx = picSrc.indexOf("?");
+            picSrc = picSrc.substr(0,idx);
             nativeAncestry.savePic(picSrc);
           }
         },500);

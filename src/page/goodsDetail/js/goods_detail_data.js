@@ -85,8 +85,11 @@ function renderData(res) {
             goodsStockSales = data.extra.parent,
             dataBasis = data.basis;
 
+        that.goodsDataBasis = data.basis;
+
         that.sellerId = data.shop.sellerId.toString();
-        that.goodsId = dataBasis.goodsId;
+        // that.goodsId = dataBasis.goodsId;
+        that.goodsId = data.representId == '0' ? dataBasis.goodsId : data.representId;
 
         //六一
         if (Number(res.sys_time) * 1000 > 1497369600000 && Number(res.sys_time) * 1000 < 1497456000000) {
@@ -109,6 +112,8 @@ function renderData(res) {
             img: item.imgUrl,
           });
         });
+
+        that.infoObj.goodsShortPic = dataBasis.goodsImg;
 
         //收藏Id
         if (dataBasis.parentId == '0') {
