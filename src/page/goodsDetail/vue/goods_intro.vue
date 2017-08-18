@@ -11,6 +11,17 @@
       <div v-if = "isshowb" class = "partys">
         <a href="/t-12091.html?dp=goods_detail_618">618年中会员狂欢！领取45元红包>></a>
       </div> -->
+
+      <!--商品名下方文案，818需求-->
+      <!--预热-->
+      <div class = "partys" v-if="Date.now() >= new Date(2017,7,17) && Date.now() < new Date(2017,7,18)">
+        <a href="/class_detail-11165.html">开学季省钱有招，最强攻略来袭>></a>
+      </div>
+      <!--正式-->
+      <div class = "partys" v-if="Date.now() >= new Date(2017,7,18) && Date.now() < new Date(2017,7,24)">
+        <a href="/t-13685.html">开学季满359返60元无门槛红包，全场返现翻倍>></a>
+      </div>
+
       <div class = "clearfix introPrice">
         <div style = "display: none">{{ membercont }}</div>
         <div>
@@ -22,7 +33,7 @@
         </div>
       </div>
       <div class = "commission" v-if = "visitorstatus == 3 && !isLimitBuy">
-        <div class = "memBack"><span v-if = "infoobj.memberGoods == '0'">会员返：¥ {{ infoobj.sellerIncome }}</span><span class = "memColor" v-else>分享奖励：¥ {{ infoobj.normalIncome }}</span><span class = "sellerTiems" v-if = "infoobj.activityRatio != 0"><span style = "display:inline-block; margin:0 3px;">*</span>{{ infoobj.activityRatio }}倍</span><span v-if = "infoobj.memberGoods == '0'" class = "member_iconCont"><span class = "question_ico question_icon_m" @click = " showMember('middle')"></span></span></div>
+        <div class = "memBack"><span v-if = "infoobj.memberGoods == '0'">会员返：¥ {{ infoobj.sellerIncome }}</span><span class = "memColor" v-else>分享奖励：¥ {{ infoobj.normalIncome }}</span><span class = "sellerTiems" v-if = "infoobj.activityRatio != 0"><span style = "display:inline-block; margin:0 3px;">*</span>{{ infoobj.activityRatio }}倍</span><span v-if = "infoobj.memberGoods == '0'" class = "member_iconCont"><span class = "question_ico question_icon_m question_icon_m5" @click = " showMember('middle')"></span></span></div>
       </div>
       
       <!--预告开始-->

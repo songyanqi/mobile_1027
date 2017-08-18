@@ -1,0 +1,266 @@
+@import "../../../common/css/common.scss";
+
+$themeColor: #FF4A7D;
+
+body {
+  background: #f1f1f1;
+}
+.app {
+	padding-top: 45px;
+}
+.bodypd0 {
+  padding-top: 0;
+}
+
+a, a:focus, a:hover, a:active, a:visited {
+  text-decoration: none;
+  color: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.order_list_container {
+	padding-bottom: 0;
+	font-size: 14px;
+	.order_list_item {
+		background-color: #fff;
+    margin-top: 10px;
+	}
+	.order_name {
+		padding: 0px 10px;
+    line-height: 40px;
+    color: #666;
+    height: 40px;
+    position: relative;
+    a {
+    	display: inline-block;
+    }
+	}
+	.order_name:after {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-bottom: #f1f1f1 solid 1px;
+		color: #f1f1f1;
+		height: 1px;
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5);
+		-webkit-transform-origin: left top;
+		transform-origin: left top;
+	}
+	.img_container {
+		position: relative;
+    overflow: hidden;
+	}
+	.pull-right {
+    float: right;
+	}
+	.m5 {
+		margin-right: 5px;
+	}
+	.dav-red {
+    color: #FF4A7D;
+	}
+	.shop_icon {
+		// background-image: url(//pic.davdian.com/free/shop_icon_40_36.png);
+  //   background-size: 100%;
+  //   display: inline-block;
+  //   width: 20px;
+  //   height: 18px;
+  //   vertical-align: middle;
+  //   margin-right: 10px;
+  //   float: left;
+  //   margin-top: 11px;
+  background-image: url(//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/advanced/newshop_icon.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: 5px;
+  float: left;
+  margin-top: 14px;
+	}
+	.shop_arrow {
+		display: inline-block;
+    vertical-align: 0;
+    margin-left: 2px;
+    width: 9px;
+    height: 9px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+	}
+	.order_good_list {
+		position: relative;
+    padding: 14px 76px 14px 10px;
+    display: block;
+    background-color: #fff;
+	}
+	.order_good_list:after {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-bottom: #f1f1f1 solid 1px;
+		color: #f1f1f1;
+		height: 1px;
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5);
+		-webkit-transform-origin: left top;
+		transform-origin: left top;
+	}
+	.order_good_list.single_good {
+		padding-right: 10px;
+	}
+	.single_good .img_container_inner {
+		width: 72px;
+		span {
+			position: relative;
+			display: inline-block;
+			width: 60px;
+	    height: 60px;
+		}
+		img {
+	    margin-right: 5px;
+      max-width: 100%;
+    	vertical-align: middle;
+		}
+		span:after {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			border: #eee solid 1px;
+			width: 200%;
+			height: 200%;
+			-webkit-transform: scale(.5,.5);
+			transform: scale(.5,.5);
+			-webkit-transform-origin: left top;
+			transform-origin: left top;
+		}
+	}
+	.color3 {
+		color: #333;
+	}
+	// 实现横向滚动,宽度为屏幕的宽度，再加上white-space: nowrap，
+	.orderImgList {
+		position: relative;
+		display: inline-block;
+		// display: -webkit-box;
+		// white-space: nowrap;
+		white-space: nowrap;
+		overflow: auto;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		padding:10px;
+	}
+	.orderImgList:after {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-bottom: #f1f1f1 solid 1px;
+		color: #f1f1f1;
+		height: 1px;
+		-webkit-transform: scaleY(.5);
+		transform: scaleY(.5);
+		-webkit-transform-origin: left top;
+		transform-origin: left top;
+	}
+	.imgList {
+		display: inline-block;
+		width: 60px;
+		height: 60px;
+		position: relative;
+		margin-right: 5px;
+		img {
+			width: 100%;
+		}
+	}
+	.imgList:after {
+		position: absolute;
+		content: "";
+		top: 0;
+		left: 0;
+		border: #eee solid 1px;
+		width: 200%;
+		height: 200%;
+		-webkit-transform: scale(.5,.5);
+		transform: scale(.5,.5);
+		-webkit-transform-origin: left top;
+		transform-origin: left top;
+	}
+	.order_good_info_container {
+		position: absolute;
+    left: 68px;
+    top: 0;
+    font-size: 12px;
+    .order_good_name {
+    	// height: 33px;
+	    overflow: hidden;
+	    line-height: 18px;
+	    text-overflow: ellipsis;
+	    -webkit-box-orient: vertical;
+	    -webkit-line-clamp: 2;
+	    display: -webkit-box;
+	    word-break: break-all;
+    }
+	}
+	.order_good_price {
+		margin-top: 10px;
+	}
+	.order_buttons {
+		padding: 0px 10px;
+    height: 44px;
+    line-height: 44px;
+    color: #333;
+    span {
+    	line-height: 24px;
+    }
+	}
+}
+.mg5 {
+	margin-right: 5px;
+}
+.noMore {
+	margin: 12px 0;
+	text-align: center;
+	font-size: 14px;
+	color: #333;
+}
+
+.center {
+	text-align: center;
+  width: 100%;
+}
+.theEndPageWoman {
+	margin: 80px auto 0;
+  width: 101px;
+  height: 149px;
+  background-image: url(//pic.davdian.com/activity/2016/11/02/200_294_8962f43ad6785baa4f7e4c40de18350c.png);
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.mt_10 {
+	margin-top: 10px;
+}
+.c6 {
+	color: #666;
+}
+.no_more {
+	padding: 10px 0;
+	text-align: center;
+	img {
+		vertical-align: middle;
+	}
+}
