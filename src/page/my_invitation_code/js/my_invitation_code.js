@@ -6,8 +6,11 @@ import Vue from 'Vue';
 // 业务模块
 import encrypt from '../../../common/js/module/encrypt.js';
 import popup from '../../../common/js/module/popup.js';
+import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
+
+login.needLogin();
 
 // 渲染页面
 new Vue({
@@ -48,6 +51,7 @@ new Vue({
     }
   },
   beforeCreate() {
+
   },
   created() {
     this.getData();
@@ -60,19 +64,14 @@ new Vue({
     getData() {
       let that = this;
       $.ajax({
-        cache: false,
-        async: true,
-        url: '99999?_=' + Date.now(),
+        url: '/api/mg/auth/inviter/shareInviteCode?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
-        data: encrypt({
-          js_wx_info: 1,
-        }),
+        data: encrypt({}),
         success(response) {
           that.response = response;
         },
         error(error) {
-          that.response = require('../json/my_invitation_code.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });

@@ -170,8 +170,6 @@
           };
           that.loginBtn = "正在登录...";
           $.ajax({
-            cache: false,
-            async: false,
             url: '/api/mg/auth/user/login?_=' + Date.now(),
             type: 'post',
             dataType: 'json',
@@ -189,6 +187,7 @@
             },
             error(error) {
               console.error('ajax error:' + error.status + ' ' + error.statusText);
+              that.loginBtn = "登录";
             }
           });
         }
@@ -215,8 +214,6 @@
         console.log(regiserData);
         /*发送注册请求*/
         $.ajax({
-          cache: false,
-          async: true,
           url: '/api/mg/auth/user/register?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
@@ -245,8 +242,6 @@
           captcha: that.check_code,
         };
         $.ajax({
-          cache: false,
-          async: true,
           url: '/api/mg/auth/user/resetPassword?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
@@ -345,8 +340,6 @@
             sendType: sendType
           };
           $.ajax({
-            cache: false,
-            async: true,
             url: '/api/mg/auth/user/sendSms?_=' + Date.now(),
             type: 'post',
             dataType: 'json',
