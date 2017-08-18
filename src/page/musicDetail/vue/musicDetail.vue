@@ -9,7 +9,7 @@
       <div class="text" v-if='musicList[index] && musicList[index].music' v-text='musicList[index].music'></div>
       <div class="range">
         <div class="gray"></div>
-        <div v-if='musicList[index] && musicList[index].time' class="red" :style='{width: playTime/musicList[index].time*100 + "%"}'></div>
+        <div v-if='musicList[index] && musicList[index].time' class="red" :style='{width: (playTime/musicList[index].time*100).toFixed(2) + "%"}'></div>
       </div>
       <div class="time">
         <div v-text='timeFormat(playTime)'></div>
@@ -17,13 +17,16 @@
       </div>
       <div class="btn">
         <div class="btn1"><img src="//pic.davdian.com/free/2017/08/16/time.png" alt="" @click='dialog'></div>
-        <div class="btn2"><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt=""></div>
-        <div class="btn3"><img src="//pic.davdian.com/free/2017/08/16/playBtn.png" alt=""></div>
-        <div class="btn4"><img src="//pic.davdian.com/free/2017/08/16/combinedShape.png" alt=""></div>
+        <div class="btn2"><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt="" @click='playAudio(index-1)'></div>
+        <div class="btn3" >
+          <img v-if='!isPlay' src="//pic.davdian.com/free/2017/08/16/playBtn.png" alt="" @click='playAudio(-100)'>
+          <img v-if='isPlay' src="//pic.davdian.com/free/2017/08/18/timeOut.png" alt="" @click='playAudio(-100)'>
+        </div>
+        <div class="btn4"><img src="//pic.davdian.com/free/2017/08/16/combinedShape.png" alt="" @click='playAudio(index+1)'></div>
         <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
       </div>
       <div class="look_more">
-        <div class="look_count">查看合辑 ({{index}}/26)</div>
+        <div class="look_count">查看合辑 ({{index + 1}}/<span v-text='allAudio'></span>)</div>
         <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
       </div>
       <div style="height: 0.1rem;background: #F8F7F7;"></div>
@@ -41,38 +44,15 @@
           <div class="mi_right" @click='dialog'><img src="//pic.davdian.com/free/2017/08/16/sorting.png" alt=""></div>
         </div>
         <div class="mask_banner">
-          <div class="mask_padding mask_list">
-            <div class="list_name">藏在故事里的数理化学习秘诀</div>
-            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
+
+          <div class="mask_padding mask_list" v-for='(item, i) in musicList' @click='playAudio(i)'>
+            <div class="list_name" v-text='item.music' :class='{list_name_select: i==index}'></div>
+            <div class="list_img">
+              <img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt="" v-if='i!=index'>
+              <img src="//pic.davdian.com/free/2017/08/18/playing.png" alt="" v-if='i==index' class='list_img_select'>
+            </div>
           </div>
-          <div class="mask_padding mask_list">
-            <div class="list_name">藏在故事里的数理化学习秘诀</div>
-            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-          </div>
-          <div class="mask_padding mask_list">
-            <div class="list_name">藏在故事里的数理化学习秘诀</div>
-            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-          </div>
-          <div class="mask_padding mask_list">
-            <div class="list_name">藏在故事里的数理化学习秘诀</div>
-            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-          </div>
-          <div class="mask_padding mask_list">
-            <div class="list_name">藏在故事里的数理化学习秘诀</div>
-            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-          </div>
-          <div class="mask_padding mask_list">
-            <div class="list_name">藏在故事里的数理化学习秘诀</div>
-            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-          </div>
-          <div class="mask_padding mask_list">
-            <div class="list_name">藏在故事里的数理化学习秘诀</div>
-            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-          </div>
-          <div class="mask_padding mask_list">
-            <div class="list_name">藏在故事里的数理化学习秘诀</div>
-            <div class="list_img"><img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt=""></div>
-          </div>
+          
         </div>
         <div class="mask_bottom" @click='closeAudioList'>关闭</div>
       </div>
@@ -94,7 +74,9 @@
         index: 0,
         musicList:[],
         playTime:0,
-
+        isPlay:false,
+        playTimer: null,
+        allAudio: null,
       }
     },
     computed: {},
@@ -105,9 +87,17 @@
       var that =  this
       this.$nextTick(function(){
         if (that.isInisWechatOrAppFlag){
-          that.musicList = require('../json/musicDetail.json').data.dataList
-          console.log(that.musicList)
-          // setInterval(function(){that.playTime = that.playTime + 1},1000)
+          let obj = {
+            albumId:getQuery('albumId'),
+            pageIndex:'1',
+            // musicId:'',
+            // pageSize:'20'
+          }
+          api('/api/mg/content/music/getListData', obj).then(function(data){
+            console.log('data-->', data)
+            that.musicList = data.data.dataList
+            that.allAudio = data.data.page.count
+          })
         }else {
           console.log(456)
         }
@@ -122,6 +112,65 @@
       },
       dialog(){
         dialog.alert('打开大V店APP，体验更佳')
+      },
+      loadAudio(src, callback) {
+          var audio = new Audio(src);
+          audio.onloadedmetadata = callback;
+          audio.src = src;
+      },
+      playAudio(index){
+        var that = this
+        
+        //不传index代表点击当前歌曲
+        console.log(index)
+        if (index == -1){
+          dialog.info('已经是第一首了')
+          return
+        } 
+        if (index == that.allAudio){
+          dialog.info('已经是最后一首了')
+          return
+        }
+        if (that.playTimer){
+          clearInterval(that.playTimer)
+        }
+        if (index >= 0){
+          that.playTime = 0
+          that.index = index
+          //传index代表播放别的歌
+          that.isPlay = true
+          $('.allAudio').get(0).src = that.musicList[that.index].fileLink
+          $('.allAudio').get(0).play()
+          $('.allAudio').get(0).onloadedmetadata = function(){
+            that.playTimer = setInterval(function(){
+              that.playTime = parseInt(that.playTime) + 1
+            },1000)
+          }
+          $('.allAudio').get(0).onended = function () {
+            that.isPlay = false
+            that.playAudio(that.index + 1)
+          }
+        } else {
+          if (that.isPlay){
+            that.isPlay = false
+            $('.allAudio').get(0).pause()
+          }else {
+            that.isPlay = true
+            $('.allAudio').get(0).src = that.musicList[that.index].fileLink
+            $('.allAudio').get(0).currentTime = that.playTime;
+            $('.allAudio').get(0).play()
+            $('.allAudio').get(0).onloadedmetadata = function(){
+              that.playTimer = setInterval(function(){
+                that.playTime = parseInt(that.playTime) + 1
+                console.log(that.playTime, 1, that.playTime+1)
+              },1000)
+            }
+            $('.allAudio').get(0).onended = function () {
+              that.isPlay = false
+              that.playAudio(that.index + 1)
+            }
+          }
+        }
       },
       timeFormat(t){
         let time = parseInt(t)
@@ -140,7 +189,6 @@
             if (seconds<10){
               seconds = '0' + seconds
             }
-            console.log(minutes)
             return minutes + ':' + seconds
           }else {
             let hours = parseInt(time/3600)
@@ -394,9 +442,18 @@
     left: 0.2rem;
     line-height: 0.18rem;
   }
+  .list_name_select{
+    color: #FF4A7D;
+  }
   .list_img{
     position: absolute;
     right: 0.2rem;
+    .list_img_select{
+      width: 0.15rem;
+      height: 0.15rem;
+      margin-right: 0.03rem;
+      margin-top: 0.03rem;
+    }
   }
   .mask_banner{
     height: 3.15rem;
