@@ -6,7 +6,7 @@
         <div class="list_date" v-text="week"></div>
         <div class="list_line"></div>
       </div>
-      <div class="list" v-for="item in dataList">
+      <div class="list" v-for="item in dataList" @click="go_href(item.command.content)">
         <div class="left_img">
           <img :src="item.imageUrl" alt="">
         </div>
@@ -15,9 +15,11 @@
           <div class="list_name" v-text="item.album"></div>
           <div class="list_time" v-text="item.time"></div>
         </div>
-        <div class="right_img" @click="">
-            <div @click="go_href(item.command.content)"></div>
-            <img :src="item.imageUrl" alt="">
+        <div class="right_img">
+            <div class="mask_stop"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+            <div class="mask_play"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+            <div class="circle_mask"></div>
+            <div><img :src="item.imageUrl" alt=""></div>
         </div>
       </div>
     </div>
@@ -25,13 +27,16 @@
 
 </template>
 <script>
+  import util from "../../../utils/utils.es6";
+  import native from "../../../src/common/js/module/native.js";
   export default {
       props:["data"],
       data(){
           return {
               dataList:[],
               upTime:"",
-              week:""
+              week:"",
+              isApp:util.utils.isApp()
           }
       },
       created:function () {
@@ -61,8 +66,14 @@
           }
         },
         go_href(href){
-            window.location.href=href;
-        }
+            if(this.isApp){
+
+            }else {
+              window.location.href=href;
+            }
+
+        },
+
       }
   }
 </script>
@@ -88,7 +99,7 @@
     height: 0.01rem;
     background: #333333;
     width: 0.15rem;
-    margin-top: 0.1rem;
+    margin-top: 0.08rem;
   }
 
   .list1{
@@ -144,11 +155,30 @@
     width: 0.34rem;
     height: 0.34rem;
     border-radius:50%;
-
   }
   .right_img{
     position: absolute;
     right: 0.1rem;
     margin-top: 0.24rem;
+    width: 0.34rem;
+    height: 0.34rem;
+  }
+  .right_img > div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.34rem;
+    height: 0.34rem;
+  }
+  .circle_mask{
+    width: 0.34rem;
+    height: 0.34rem;
+    border-radius:50%;
+    background: #000000;
+    opacity:0.3;
+    z-index:2;
+  }
+  .mask_play,.mask_stop{
+    z-index:3;
   }
 </style>

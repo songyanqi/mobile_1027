@@ -2,8 +2,11 @@
   <div class="btn">
     <div class="btn_left">成为会员免费听</div>
     <div class="btn_right">
-      <span>订阅合辑:</span>
-      <span>¥4.9</span>
+      <img src="//pic.davdian.com/free/2017/08/16/Rectangle.png" alt="">
+      <div class="btn_text">
+        <span>订阅合辑:</span>
+        <span>¥4.9</span>
+      </div>
     </div>
   </div>
 </template>
@@ -16,6 +19,7 @@
     height: 0.49rem;
     position: fixed;
     bottom: 0;
+    z-index:10;
   }
   .btn>div{
     display: inline-block;
@@ -34,5 +38,24 @@
     font-size: 14px;
     background: red;
     color: white;
+    position: relative;
   }
+  .btn_right img{
+    width: 2.15rem;
+    height: 0.49rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .btn_text{
+    text-align: center;
+    width: 2.15rem;
+    height: 0.49rem;
+    line-height: 0.49rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+  }
+
 </style>

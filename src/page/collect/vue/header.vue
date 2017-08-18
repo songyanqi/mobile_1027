@@ -1,13 +1,19 @@
 <template>
   <div class="header">
-    <div class="head_img">
+    <div class="head_img" @click="history">
       <i class="back-arrow"></i>
     </div>
     <div class="head_title">合辑页</div>
   </div>
 </template>
 <script>
- export default {}
+ export default {
+     methods:{
+       history(){
+           history.back();
+       }
+     }
+ }
 </script>
 <style scoped>
   .header{
