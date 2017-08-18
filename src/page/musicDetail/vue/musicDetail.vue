@@ -9,7 +9,7 @@
       <div class="text" v-if='musicList[index] && musicList[index].music' v-text='musicList[index].music'></div>
       <div class="range">
         <div class="gray"></div>
-        <div v-if='musicList[index] && musicList[index].time' class="red" :style='{width: (playTime/musicList[index].time*100).toFixed(2) + "%"}'></div>
+        <div v-if='musicList[index] && musicList[index].time' class="red" :style='{width: playTime/musicList[index].time*100 + "%"}'></div>
       </div>
       <div class="time">
         <div v-text='timeFormat(playTime)'></div>
@@ -89,14 +89,13 @@
         if (that.isInisWechatOrAppFlag){
           let obj = {
             albumId:getQuery('albumId'),
-            pageIndex:'1',
-            // musicId:'',
-            // pageSize:'20'
+            sort:'0',
+            sortNo:'0'
           }
           api('/api/mg/content/music/getListData', obj).then(function(data){
             console.log('data-->', data)
-            that.musicList = data.data.dataList
-            that.allAudio = data.data.page.count
+            that.musicList = that.musicList.concat(data.data.dataList)
+            that.allAudio = data.data.attr.count
           })
         }else {
           console.log(456)
@@ -120,16 +119,27 @@
       },
       playAudio(index){
         var that = this
-        
-        //不传index代表点击当前歌曲
         console.log(index)
-        if (index == -1){
-          dialog.info('已经是第一首了')
-          return
-        } 
-        if (index == that.allAudio){
-          dialog.info('已经是最后一首了')
-          return
+        //不传index代表点击当前歌曲
+        if (index !=-100){
+          if (index==-1){
+            if (that.musicList[0].sortNo == 0){
+              dialog.info('已经是第一首了')
+              return
+            }else {
+              that.getData(-1,that.musicList[that.index].sortNo)
+              return
+            }
+          }
+          if (index==that.musicList.length){
+            if (that.musicList[that.musicList.length-1].sortNo == that.allAudio-1){
+              dialog.info('已经是最后一首了')
+              return
+            } else {
+              that.getData(1,that.musicList[that.index].sortNo)
+              return
+            }
+          }
         }
         if (that.playTimer){
           clearInterval(that.playTimer)
@@ -170,6 +180,23 @@
               that.playAudio(that.index + 1)
             }
           }
+        }
+      },
+      getData(sort,sortNo){
+        var that = this
+        if (that.isInisWechatOrAppFlag){
+          let obj = {
+            albumId:getQuery('albumId'),
+            sort:sort,
+            sortNo:sortNo
+          }
+          api('/api/mg/content/music/getListData', obj).then(function(data){
+            console.log('data-->', data)
+            that.musicList = that.musicList.concat(data.data.dataList)
+            that.playAudio(that.index + 1)
+          })
+        }else {
+          console.log(456)
         }
       },
       timeFormat(t){
