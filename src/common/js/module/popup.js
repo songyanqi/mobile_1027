@@ -78,7 +78,7 @@ export default {
         text: '',             // 文本（支持传入html。有则显示。）
         placeholder: '',      // 输入框占位符（有则显示。）
         btnTitle: '',         // 按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-        btnCallback(result) { // 按钮点击回调（有则执行该回调）
+        btnCallback(result) { // 按钮点击回调（有则执行该回调，result是输入框输入的值）
 
         },
       });

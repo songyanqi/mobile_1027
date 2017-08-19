@@ -22,7 +22,7 @@
           <!--取消按钮-->
           <div class="btn cancel" v-html="cancelBtnTitle" @click="cancelBtnClick" v-if="type == 'confirm'"></div>
           <!--垂直分割线-->
-          <div class="v-split"></div>
+          <div class="v-split" v-if="type == 'confirm'"></div>
           <!--确定按钮-->
           <div class="btn ok" v-html="okBtnTitle" @click="okBtnClick"></div>
         </div>
@@ -159,9 +159,11 @@
           font-size: ptr(14);
           line-height: ptr(21);
           color: #666;
+          > *:not(:first-child) {
+            margin-top: ptr(10);
+          }
           .title {
             width: 100%;
-            margin-bottom: ptr(10);
             color: #333;
             font-size: ptr(16);
           }
@@ -170,7 +172,6 @@
             color: #666;
           }
           .input {
-            margin-top: ptr(10);
             box-sizing: border-box;
             padding-left: ptr(10);
             width: ptr(250);
@@ -179,6 +180,7 @@
             font-size: ptr(12);
             line-height: ptr(17);
             border: none;
+            outline: none;
           }
         }
         .h-split {
