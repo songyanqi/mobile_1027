@@ -770,6 +770,17 @@ const native = {
         param: param
       });
     },
+
+  },
+  AudioPlayClick:{
+    audioPlay(param = {}){
+      call({
+        v:'4.2.0',
+        host: 'AudioPlayClick',
+        action: 'audioPlay',
+        param: param
+      })
+    },
   },
   /****************************** 12、H5触发cmd命令 ******************************/
   Common: {

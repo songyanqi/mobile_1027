@@ -26,7 +26,7 @@
         <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
       </div>
       <div class="look_more" @click='goAlbumId'>
-        <div class="look_count">查看合辑 ({{index + 1}}/<span v-text='allAudio'></span>)</div>
+        <div class="look_count">查看合辑 (<span v-if='musicList[index]  && musicList[index].sortNo' v-text='parseInt(musicList[index].sortNo) + 1'></span>/<span v-text='allAudio'></span>)</div>
         <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
       </div>
       <div style="height: 0.1rem;background: #F8F7F7;"></div>
@@ -71,7 +71,7 @@
       return {
         isInisWechatOrAppFlag:isInisWechatOrApp(),
         audioListFlag: false,
-        index: parseInt(getQuery('sortNo')) || 0,
+        index: 0,
         musicList:[],
         playTime:0,
         isPlay:false,
@@ -236,7 +236,12 @@
               if (sort == -1){
                 that.musicList = data.data.dataList.concat(that.musicList)
                 // console.log(that.musicList, data.data.dataList)
-                that.index = that.index + data.data.dataList.length
+                if (flag){
+                  that.index = that.index + data.data.dataList.length-2
+                }else {
+                  that.index = that.index + data.data.dataList.length
+                }
+                
               }else {
                 that.musicList = that.musicList.concat(data.data.dataList)
                 // console.log(that.musicList, data.data.dataList)
