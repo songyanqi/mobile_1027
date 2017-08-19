@@ -3,7 +3,7 @@
 
 .sharImg{
   width: 78.6666%;
-  min-height: 100px;
+  min-height: 300px;
   margin: 22px auto 0;
   box-shadow: 0 4px 6px rgba(255, 74, 125,.13);
   overflow: hidden;
@@ -24,6 +24,7 @@
   background: -webkit-linear-gradient(left, #FF5C5C, #FA1862);
   background: -webkit-gradient(linear, left top, right top, from(#FF5C5C), to(#FA1862));
   background: linear-gradient(to right, #FF5C5C, #FA1862);
+  box-shadow: 0 3px 8px rgba(255, 68, 105,.4);
   border-radius: 20px;
   font-weight: 300;
 }
@@ -77,7 +78,80 @@
   font-size: 12px;
   color: #666666;
   margin-top: 5px;
+  text-decoration: underline;
+}
+.invit_rule_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.51);
+  max-width: 640px;
+  margin: 0 auto;
 }
 
+.invit_rule {
+  width: 73.333%;
+  min-height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  padding: 0 10px 15px;
+}
+
+.invit_rule div:nth-of-type(1) {
+  font-size: 14px;
+  color: #666666;
+  text-align: center;
+  padding: 12px 0;
+  position: relative;
+}
+
+.invit_rule div:nth-of-type(2) {
+  font-size: 14px;
+  color: #333333;
+  text-align: left;
+  line-height: 20px;
+  padding-top: 5px;
+}
+
+.invit_rule div:nth-of-type(3) {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  width: 36px;
+  height: 36px;
+  background-image: url("../img/clearInput.png");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+}
+
+.invit_rule div:nth-of-type(2) p {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.invit_rule div:nth-of-type(1):after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -50%;
+  width: 200%;
+  height: 1px;
+  background: rgba(216, 216, 216, 0.51);
+  -webkit-transform: scale(0.5);
+  bottom: 0;
+  z-index: 1;
+}
+.body{
+  padding-bottom: 90px;
+}
 
 

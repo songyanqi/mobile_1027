@@ -9,6 +9,7 @@ import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
+import ua from '../../../common/js/module/ua.js';
 
 login.needLogin();
 
@@ -16,14 +17,14 @@ login.needLogin();
 new Vue({
   el: ".app",
   components: {
-    'com-top-title': require('../../../component/com-top-title.vue'),
-    'com-to-top-icon': require('../../../component/com-to-top-icon.vue')
+    'com-top-title': require('../../../component/com-top-title.vue')
   },
   data() {
     return {
       response: null,
       login_form: true,  //登录显示
-      isApp: !!navigator.userAgent.match(/davdian|bravetime|vyohui/)
+      isApp: ua.isDvdApp(),
+      rule_form:false
     }
   },
   computed: {},
@@ -99,8 +100,18 @@ new Vue({
     /*分享*/
     shareto:function () {
       var that = this;
-      native.custom.shareImg({"bigImageUrl":that.response.data.imgUrl})
-    }
+      native.custom.shareImg({"bigImageUrl":that.response.data.shareUrl})
+    },
+    /*什么是邀请码*/
+    what_invite_code: function () {
+      var that = this;
+      that.rule_form = true;
+    },
+    /*关闭邀请码介绍*/
+    close_what_invite: function () {
+      var that = this;
+      that.rule_form = false;
+    },
   },
   filters: {},
 });

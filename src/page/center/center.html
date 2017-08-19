@@ -66,7 +66,7 @@
         <a class="btns" :href="(feed.title.command && feed.title.command.content) ? feed.title.command.content : '#'" @click="tj(1, feed.title.command.log);">
           <span class="name">{{feed.title.leftTitle || feed.title.title}}</span>
           <span class="more">
-            <span v-if="feed.title.rightTitle || feed.title.oneKd == '1'">{{feed.title.rightTitle}}<img v-if="feed.title.command && feed.title.command.content" class="arrow" src="[[static]]/page/center/img/arrow-right.png"></span>
+            <span>{{feed.title.rightTitle}}<img v-if="feed.title.command && feed.title.command.content" class="arrow" src="[[static]]/page/center/img/arrow-right.png"></span>
           </span>
         </a>
       </div>

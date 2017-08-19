@@ -182,6 +182,7 @@
               } else {
                 /*登录成功后跳转到refer页*/
                 var referer = that.getQueryString("referer");
+                debugger;
                 location.href = referer;
               }
             },
@@ -225,6 +226,7 @@
             } else {
               /*注册*/
               var referer = that.getQueryString("referer");
+              debugger;
               location.href = referer;
             }
           },
@@ -350,6 +352,7 @@
                 popup.toast(that.response.data.msg);
               } else {
                 callback();
+                popup.toast("发送成功");
                 that.get_check = true;
                 that.sendLock();
               }
@@ -364,7 +367,7 @@
       },
       sendLock: function () {
         var that = this;
-        var t = 10;
+        var t = 60;
         t--;
         // 倒计时
         if (window.interval) {
@@ -483,27 +486,6 @@
   .inputbox.check_input .get_check_code.disable {
     color: #D5D5D5;
   }
-
-  *:focus {
-    outline: none;
-  }
-
-  ::-webkit-input-placeholder {
-    color: #999;
-  }
-
-  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color: #999;
-  }
-
-  ::-moz-placeholder { /* Mozilla Firefox 19+ */
-    color: #999;
-  }
-
-  :-ms-input-placeholder { /* Internet Explorer 10+ */
-    color: #999;
-  }
-
   .loginbtn {
     width: 73.3333%;
     height: 40px;

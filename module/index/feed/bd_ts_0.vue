@@ -31,7 +31,6 @@
         timestamp2: Date.parse(new Date()) / 1000,
         index_ts_data: "/api/mg/sale/index/getTimeshop",
         dataList: this.data.body.dataList
-//        index_ts_data: "../data/index_ts_data.json"
       }
     },
     props: ['data'],

@@ -13,21 +13,31 @@
     <div>
       <!--我的邀请码-->
       <div class="sharImg">
-        <img :src="response.data.imgUrl" alt="">
+        <img :src="response.data.shareUrl" alt="">
       </div>
-      <div class="share_to_btn" @click="shareto">
+      <div v-if="isApp" :class="{'share_to_btn':isApp}" @click="shareto">
         分享给好友
       </div>
       <div class="my_code_text">
-        我的邀请码：<span>{{response.data.inviteCode}}</span><span v-if="isApp" @click="copyText(response.data.inviteCode)">复制邀请码</span>
+        我的邀请码：<span>{{response.data.inviteCode}}</span><span v-if="isApp" @click="copyText()">复制邀请码</span>
       </div>
-      <div class="other-info">
-        *您的大V店账号（手机号）也可以作为邀请码使用
+      <div class="other-info" @click="what_invite_code">
+        什么是邀请码？
       </div>
     </div>
-
-    <!--返回顶部-->
-    <com-to-top-icon></com-to-top-icon>
+    <!--邀请码规则-->
+    <div v-if="rule_form" class="invit_rule_wrap">
+      <div class="invit_rule">
+        <div>邀请码规则</div>
+        <div>
+          <p>1. 每个大V店会员都有一个专属邀请码，您可以向身边的大V店会员索取邀请码；</p>
+          <p>2. 邀请码为6位数字+字母组合，或邀请人大V店账户手机号；</p>
+          <p>3. 绑定邀请人后，您在大V店APP及果敢时代大V店公众号内都将访问邀请人店铺；</p>
+          <p>4. 一个用户只能有一个邀请人，在您绑定邀请人后，可在7天内更换一次邀请人。</p>
+        </div>
+        <div v-on:click="close_what_invite"></div>
+      </div>
+    </div>
   </div>
 
   @@include('vendor.include')
