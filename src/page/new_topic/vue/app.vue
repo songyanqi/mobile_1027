@@ -187,7 +187,7 @@
         
         // 加上后ios微信有bug 暂时去掉
         if (ua.isIos() && ua.isWeiXin()) {
-          document.querySelector(".app").style.height = window.innerHeight + "px";
+          document.querySelector(".app").style.paddingBottom = "40px";
         }
         
 
