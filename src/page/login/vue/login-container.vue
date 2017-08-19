@@ -46,7 +46,7 @@
                autocomplete="new-password">
         <img src="../img/clearInput.png" v-if="invitation_code != ''" v-on:click="invitation_code = ''">
       </div>
-      <div class="what_invitation_code">
+      <div v-if="Invite" class="what_invitation_code">
         <a @click="what_invite_code">什么是邀请码?</a>
       </div>
       <!--注册-->
@@ -283,7 +283,7 @@
         that.check_code = '';
         that.get_check = false;
         that.get_checkbtnname = '获取验证码';
-        this.$emit("titlename", "注册");
+        that.$emit("titlename", "注册");
       },
       /*去登陆*/
       go_login: function () {
@@ -292,7 +292,7 @@
         that.login_form = true;
         /*初始化数据*/
         that.password = '';
-        this.$emit("titlename", "登录");
+        that.$emit("titlename", "登录");
       },
       /*忘记密码*/
       go_forget: function () {
@@ -307,6 +307,7 @@
           popup.toast("请输入正确的手机号");
           return false;
         }
+        that.$emit("titlename", "忘记密码");
         /*发送验证码成功后跳转到修改密码页*/
         /*发送验证码*/
         that.get_check_codes(1, 2, function () {

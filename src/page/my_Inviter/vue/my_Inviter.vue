@@ -1,15 +1,15 @@
 <template>
   <div class="myInviter_wrap">
-    <div v-if="modify_show || add_show">
+    <div v-if="show_code_input">
       <div class="login_text">请输入邀请码</div>
       <div class="inputbox check_input">
         <div><input type="tel" placeholder="请输入验证码" v-model="mobile" name="mobile"></div>
-        <div class="get_check_code" v-if="mobile" @click="verification">验证</div>
+        <div class="get_check_code" v-if="mobile != ''" @click="verification">验证</div>
         <div class="get_check_code greybtn" v-else>验证</div>
       </div>
     </div>
     <!--我的邀请人-->
-    <div v-if-="checked || response.data" class="myInviter">
+    <div v-if="my_inviterPage" class="myInviter">
       <div class="myInviter_img">
         <img :src="response.data.headImage" alt="">
       </div>
@@ -17,29 +17,11 @@
         {{response.data.shopName}}
       </div>
     </div>
-    <!--修改提示-->
-    <div v-if="modify_show" class="changeTip">
-      提示：邀请人只能修改一次，本次修改后，
-      TA将作为您的终身邀请人，不可再更改
-    </div>
-    <div v-if="false" class="changeTip">
-      提示：邀请人添加后，您在大V店APP及公众号内，
-      将固定访问TA的店铺，7天内您可以再修改一次。
-    </div>
     <!--修改邀请人-->
     <div class="bottoms">
-        <span v-if="modify_show || add_show">
-          <span v-if="modify_show">
-            <div v-if="checked" class="changeBtn" @click="modify_inviter">确认修改</div>
-            <div v-if="!checked" class="greybtn changeBtn">确认修改</div>
-          </span>
-          <span v-if="add_show">
-            <div v-if="checked" class="changeBtn">确认添加</div>
-            <div class="changeBtn greybtn">确认添加</div>
-          </span>
-        </span>
-      <div v-else class="changeBtn" @click="to_modify">修改邀请人</div>
-      <div class="change_time" v-if="response.data.editTime">{{response.data.editTime}}后不可再修改</div>
+      <div v-if="trun_grey" class="changeBtn greybtn">{{btnName}}</div>
+      <div v-else class="changeBtn" @click="modify_inviter">{{btnName}}</div>
+      <div class="change_time" v-if="response.data && response.data.editTime && show_edntime">{{response.data.editTime}}后不可再修改</div>
     </div>
   </div>
 </template>
@@ -51,14 +33,14 @@
     props: {},
     data() {
       return {
-        response:null,
-        login_form: true,  //登录显示
+        response: null,
+        my_inviterPage: false, //显示我的邀请人页
+        show_code_input: false,  //显示邀请码输入框
+        trun_grey: false,   //按钮置灰
+        btnName: '',
+        show_edntime: true,
         mobile: '',
-        modify_show: false, //修改邀请人展示
-        add_show: false, //添加邀请人展示
-        de_time: '',  //修改截止时间
-        checked: false, //是否验证过
-        invite_code: ''
+        inviteCode: ''
       }
     },
     computed: {},
@@ -79,6 +61,20 @@
           data: encrypt({}),
           success(response) {
             that.response = response;
+            if (response.code) {
+              popup.toast(response.data.msg);
+            }
+            if (response.data) {
+              that.$emit("titlename", "我的邀请人");
+              that.my_inviterPage = true;
+              that.btnName = '修改邀请人';
+            } else {
+              that.$emit("titlename", "添加邀请人");
+              that.show_code_input = true;
+              that.add_inviterPage = true;
+              that.btnName = '添加邀请人';
+              that.trun_grey = true;
+            }
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);
@@ -88,17 +84,65 @@
       /*去修改邀请人*/
       to_modify: function () {
         var that = this;
-        that.modify_show = true;
+        that.show_code_input = true;  //显示邀请码输入框
+        that.my_inviterPage = false; //隐藏我的邀请人
+        that.show_edntime = false; //不显示截至修改时间
+        that.trun_grey = true;  //置灰按钮
+        that.btnName = '确认修改';
+        that.$emit("titlename", "修改邀请人");
+        that.mobile = '';
       },
       /*验证*/
       verification: function () {
         var that = this;
-        that.checked = true;
-        that.invite_code = that.mobile;
+        $.ajax({
+          url: 'api/mg/auth/inviter/check?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: encrypt({"inviteCode": that.mobile}),
+          success(response) {
+            that.response = response;
+            if (response.code) {
+              popup.toast(response.data.msg);
+            } else {
+              that.my_inviterPage = true; //显示我的邀请人
+              that.trun_grey = false;  //按钮可用
+            }
+            that.inviteCode = that.mobile;
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+          }
+        });
       },
       /*修改邀请人*/
       modify_inviter: function () {
-        console.log(this.invite_code);
+        var that = this;
+        if (!that.show_code_input) {
+          that.to_modify()
+        } else {
+          $.ajax({
+            url: '/api/mg/auth/inviter/edit?_=' + Date.now(),
+            type: 'post',
+            dataType: 'json',
+            data: encrypt({"inviteCode": that.mobile}),
+            success(response) {
+              if (response.code) {
+                popup.toast(response.data.msg);
+                return false;
+              }
+              that.show_code_input = false;  //显示邀请码输入框
+              that.my_inviterPage = true; //隐藏我的邀请人
+              that.show_edntime = false; //不显示截至修改时间
+              that.trun_grey = false;  //置灰按钮
+              that.btnName = '修改邀请人';
+              that.$emit("titlename", "我的邀请人");
+            },
+            error(error) {
+              console.error('ajax error:' + error.status + ' ' + error.statusText);
+            }
+          });
+        }
       },
       isTel: function (t) {
         var tel = $.trim(t);
@@ -206,7 +250,6 @@
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    margin-bottom: 15%;
   }
 
   .inputbox.check_input div:nth-of-type(1) {

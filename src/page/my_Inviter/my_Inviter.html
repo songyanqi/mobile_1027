@@ -2,16 +2,15 @@
 <html>
 <head>
   @@include('meta.include')
+  <title>邀请人信息</title>
   <link rel="stylesheet" href="[[static]]/page/my_Inviter/css/my_Inviter.css[[v]]">
 </head>
 <body>
   <div class="app">
     <!--标题-->
-    <com-top-title title="我的邀请人"></com-top-title>
+    <com-top-title :title="title"></com-top-title>
 
-    <myinviter></myinviter>
-    <!--返回顶部-->
-    <com-to-top-icon></com-to-top-icon>
+    <myinviter @titlename="titlename"></myinviter>
   </div>
 
   @@include('vendor.include')
