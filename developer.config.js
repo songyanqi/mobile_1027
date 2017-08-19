@@ -15,6 +15,6 @@
 export default {
   // env_stage: 'prod',
   // env_num: '',
-  // page: '{cancle_order,return_progress,return_order_list,order_progress_detail}',
+  // page: 'center',
   // webpack: false,
 };
