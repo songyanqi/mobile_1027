@@ -18,12 +18,12 @@
         return {
             data:[],
             pageFlag:true,
-            musicId:0
+            upTime:0
         }
     },
     mounted:function () {
-        var result=require('../json/landingPage.json');
-        this.data=result.data.feedList;
+//        var result=require('../json/landingPage.json');
+//        this.data=result.data.feedList;
         this.getinitData();
         this.scrol();
     },
@@ -33,12 +33,10 @@
           api("/api/mg/content/indexAlbum/getContent")
             .then(function (result) {
               if(result.code==0){
-                this.data=this.data.concat(result.data.feedList);
+                that.data=that.data.concat(result.data.feedList);
                 result.data.feedList.map(function (item,index) {
                   if(item.body.upTime){
-                      item.body.dataList.map(function (item2,index2) {
-                          that.musicId=item2.musicId;
-                      })
+                    that.upTime=item.body.upTime;
                   }
                 })
               }else{
@@ -53,14 +51,16 @@
           if(that.pageFlag){
             that.pageFlag=false;
             var obj={
-                "musicId":that.musicId
-              };
+                "upTime":that.upTime
+            };
             api("/api/mg/content/indexAlbum/getMoreContent",obj)
               .then(function (result) {
                 if(result.code==0){
-                  this.data.push(result);
-                  result.body.dataList.map(function (item,index) {
-                    that.musicId=item.musicId;
+                  this.data=this.data.concat(result);
+                  result.map(function (item,index) {
+                    if(item.body.upTime){
+                      that.upTime=item.body.upTime;
+                    }
                   })
                   if (result.data.feedList.length>0){
                     that.pageFlag=true;

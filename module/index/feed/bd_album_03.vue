@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="top">
     <div class="tab">
       <div class="tab_list" v-if="flag" @click="fn">
         <div class="border color1" v-text="dataList.content"></div>
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="list">
-        <div class="item" v-for="item in contentList">
+        <div class="item" v-for="(item,index) in contentList">
           <div class="last">上次听到这里 2017-07-11 21:09</div>
           <div class="rea">
             <div class="item_left">
@@ -35,9 +35,9 @@
               </div>
             </div>
             <div class="item_right" v-if="item.isFree==1" @click="go_href(item.command.content)">
-              <div class="disable" v-if="item.isPlay==0"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-              <div class="mask_stop" v-if="item.isPlay==1"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-              <div class="mask_play" v-if="item.isPlay==1"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+              <div class="disable" v-if="btnStatus[index]==0" @click="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+              <div class="mask_stop" v-if="btnStatus[index]==2" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+              <div class="mask_play" v-if="btnStatus[index]==1" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
@@ -57,21 +57,53 @@
 <script>
   import util from "../../../utils/utils.es6";
   import native from "../../../src/common/js/module/native.js"
+  import dialog from '../../../utils/dialog.es6';
   export default {
       props:["data"],
-      created:function () {
+      mounted:function () {
         this.dataList=this.data.body.dataList[0];
-        this.contentList=this.data.body.dataList[0].contentList;
+        this.initBtnStatus();
+      },
+      computed:{
+        contentList:function () {
+          return this.data.body.dataList[0].contentList;
+        }
+      },
+      watch:{
+        contentList:function () {
+          this.initBtnStatus();
+        }
       },
       data(){
           return {
-              dataList:[],
-              contentList:[],
+              dataList:{},
               flag:true,
-              isApp:util.utils.isApp()
+              isApp:util.utils.isApp(),
+              btnStatus:[]
           }
       },
       methods:{
+          stop_info(){
+            dialog.alert("订阅后才可收听");
+          },
+          change_play(index){
+              if(this.btnStatus[index]==1){
+                Vue.set(this.btnStatus,index,2);
+              }else if(this.btnStatus[index]==2){
+                Vue.set(this.btnStatus,index,1);
+              }
+          },
+          initBtnStatus(){
+              var that=this;
+              this.contentList.map(function(item,index){
+                if(item.isPlay=="1"){
+                  Vue.set(that.btnStatus,index,1);
+                }else if(item.isPlay=="0"){
+                  Vue.set(that.btnStatus,index,0);
+                }
+
+              })
+          },
           fn(){
               this.flag=!this.flag;
           },
@@ -89,7 +121,8 @@
               }else{
                 window.location.href=href;
               }
-          }
+          },
+
       }
   }
 </script>
@@ -303,5 +336,10 @@
   }
   .rea{
     position: relative;
+  }
+
+
+  .top{
+    margin-top: 0.12rem;
   }
 </style>

@@ -6,7 +6,7 @@
         <div class="list_date" v-text="week"></div>
         <div class="list_line"></div>
       </div>
-      <div class="list" v-for="item in dataList" @click="go_href(item.command.content)">
+      <div class="list" v-for="(item,index) in dataList">
         <div class="left_img">
           <img :src="item.imageUrl" alt="">
         </div>
@@ -15,9 +15,10 @@
           <div class="list_name" v-text="item.album"></div>
           <div class="list_time" v-text="item.time"></div>
         </div>
-        <div class="right_img">
-            <div class="mask_stop"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-            <div class="mask_play"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+        <div class="right_img" @click="go_href(item.command.content)">
+            <div class="disable" v-if="btnStatus[index]==0" @click="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+            <div class="mask_stop" v-if="btnStatus[index]==2" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+            <div class="mask_play" v-if="btnStatus[index]==1" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
             <div class="circle_mask"></div>
             <div><img :src="item.imageUrl" alt=""></div>
         </div>
@@ -29,25 +30,47 @@
 <script>
   import util from "../../../utils/utils.es6";
   import native from "../../../src/common/js/module/native.js";
+  import dialog from '../../../utils/dialog.es6';
+
   export default {
       props:["data"],
       data(){
           return {
-              dataList:[],
               upTime:"",
               week:"",
-              isApp:util.utils.isApp()
+              isApp:util.utils.isApp(),
+              btnStatus:[],
+              dataList:[]
           }
       },
-      created:function () {
+      mounted:function () {
         this.dataList=this.data.body.dataList;
+        this.initBtnStatus();
         this.upTime=this.data.body.upTime;
         this.week=this.getLocalTime(this.upTime);
-//         console.log(this.getLocalTime(this.upTime));
-//         console.log(new Date(parseInt(this.upTime) * 1000).toLocaleString().replace(/:\d{1,2}$/,' '));
-//         console.log(new Date(2017,7,11).getDay());
       },
       methods:{
+        stop_info(){
+          dialog.alert("订阅后才可收听");
+        },
+        change_play(index){
+          if(this.btnStatus[index]==1){
+            Vue.set(this.btnStatus,index,2);
+          }else if(this.btnStatus[index]==2){
+            Vue.set(this.btnStatus,index,1);
+          }
+        },
+        initBtnStatus(){
+          var that=this;
+          this.dataList.map(function(item,index){
+            if(item.isPlay=="1"){
+              Vue.set(that.btnStatus,index,1);
+            }else if(item.isPlay=="0"){
+              Vue.set(that.btnStatus,index,0);
+            }
+
+          })
+        },
         getLocalTime(nS){
           let time= new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
           let timestamp=time.split(" ")[0].split("/");
@@ -178,7 +201,7 @@
     opacity:0.3;
     z-index:2;
   }
-  .mask_play,.mask_stop{
+  .mask_play,.mask_stop,.disable{
     z-index:3;
   }
 </style>

@@ -112,7 +112,7 @@
 	  components: {
 	    'com-to-top-icon': __webpack_require__(62),
 	    'landingPage': __webpack_require__(1184),
-	    'lheader': __webpack_require__(1190)
+	    'lheader': __webpack_require__(1189)
 	  },
 	  data: function data() {
 	    return {
@@ -172,7 +172,7 @@
 	          ts.response = response;
 	        },
 	        error: function error(_error) {
-	          ts.response = __webpack_require__(1188);
+	          ts.response = __webpack_require__(1194);
 	          console.error('ajax error:' + _error.status + ' ' + _error.statusText);
 	        }
 	      });
@@ -31303,7 +31303,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-780f6021]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-780f6021]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-780f6021]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-780f6021]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-780f6021]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-780f6021]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-780f6021],.mask_stop[_v-780f6021]{\n  z-index:3;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-780f6021]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-780f6021]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-780f6021]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-780f6021]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-780f6021]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-780f6021]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-780f6021],.mask_stop[_v-780f6021],.disable[_v-780f6021]{\n  z-index:3;\n}\n", ""]);
 
 	// exports
 
@@ -31315,7 +31315,7 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _utils = __webpack_require__(164);
@@ -31326,9 +31326,182 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
+	var _dialog = __webpack_require__(165);
+
+	var _dialog2 = _interopRequireDefault(_dialog);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// <template>
+	exports.default = {
+	  props: ["data"],
+	  data: function data() {
+	    return {
+	      upTime: "",
+	      week: "",
+	      isApp: _utils2.default.utils.isApp(),
+	      btnStatus: [],
+	      dataList: []
+	    };
+	  },
+
+	  mounted: function mounted() {
+	    this.dataList = this.data.body.dataList;
+	    this.initBtnStatus();
+	    this.upTime = this.data.body.upTime;
+	    this.week = this.getLocalTime(this.upTime);
+	  },
+	  methods: {
+	    stop_info: function stop_info() {
+	      _dialog2.default.alert("订阅后才可收听");
+	    },
+	    change_play: function change_play(index) {
+	      if (this.btnStatus[index] == 1) {
+	        Vue.set(this.btnStatus, index, 2);
+	      } else if (this.btnStatus[index] == 2) {
+	        Vue.set(this.btnStatus, index, 1);
+	      }
+	    },
+	    initBtnStatus: function initBtnStatus() {
+	      var that = this;
+	      this.dataList.map(function (item, index) {
+	        if (item.isPlay == "1") {
+	          Vue.set(that.btnStatus, index, 1);
+	        } else if (item.isPlay == "0") {
+	          Vue.set(that.btnStatus, index, 0);
+	        }
+	      });
+	    },
+	    getLocalTime: function getLocalTime(nS) {
+	      var time = new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
+	      var timestamp = time.split(" ")[0].split("/");
+	      var y = parseInt(timestamp[0]);
+	      var m = parseInt(timestamp[1]);
+	      var d = parseInt(timestamp[2]);
+	      var year = new Date().getFullYear();
+	      var month = new Date().getMonth() + 1;
+	      var day = new Date().getDate();
+	      var weekDay = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+	      var week = new Date(y, m - 1, d).getDay();
+	      if (y === year && m === month && d === day) {
+	        return "今日更新";
+	      } else {
+	        return m + "月" + d + "日" + " " + weekDay[week];
+	      }
+	    },
+	    go_href: function go_href(href) {
+	      if (this.isApp) {} else {
+	        window.location.href = href;
+	      }
+	    }
+	  }
+	  // </script>
+	  // <style scoped>
+	  //   .big_img{
+	  //     text-align: center;
+	  //     height: 0.2rem;
+	  //     padding-top:0.13rem;
+	  //     padding-bottom:0.15rem;
+	  //     font-size: 0;
+	  //   }
+	  //   .big_img>div{
+	  //     display:inline-block;
+	  //     vertical-align: top;
+	  //   }
+	  //   .list_date{
+	  //     color:#333333;
+	  //     font-size:16px;
+	  //     padding-left: 0.1rem;
+	  //     padding-right: 0.1rem;
+	  //   }
+	  //   .list_line{
+	  //     height: 0.01rem;
+	  //     background: #333333;
+	  //     width: 0.15rem;
+	  //     margin-top: 0.08rem;
+	  //   }
+	  //
+	  //   .list1{
+	  //     border-bottom: 1px solid #E1E1E1;
+	  //     background: #ffffff;
+	  //   }
+	  //   .list1 .list:nth-child(2){
+	  //     margin-bottom: 0.2rem;
+	  //   }
+	  //
+	  //
+	  //   .list{
+	  //     font-size: 0;
+	  //     height: 0.76rem;
+	  //     padding:0 0.1rem;
+	  //     margin-bottom:0.27rem;
+	  //     position: relative;
+	  //   }
+	  //
+	  //   .list>div{
+	  //     display: inline-block;
+	  //     vertical-align: top;
+	  //   }
+	  //   .left_img img{
+	  //     width:0.76rem;
+	  //     height: 0.76rem;
+	  //     border-radius:4px;
+	  //   }
+	  //   .list_content{
+	  //     margin-left: 0.1rem;
+	  //     height: 0.76rem;
+	  //   }
+	  //   .list_title{
+	  //     font-size:14px;
+	  //     line-height:0.2rem;
+	  //     color:#333333;
+	  //     max-width:2.15rem;
+	  //     overflow: hidden;
+	  //     text-overflow: ellipsis;
+	  //     -webkit-box-orient: vertical;
+	  //     -webkit-line-clamp: 2;
+	  //     display: -webkit-box;
+	  //   }
+	  //   .list_name,.list_time{
+	  //     font-size:11px;
+	  //     line-height:0.16rem;
+	  //     color:#999999;
+	  //   }
+	  //   .list_name{
+	  //     margin-bottom:0.07rem;
+	  //   }
+	  //   .right_img img{
+	  //     width: 0.34rem;
+	  //     height: 0.34rem;
+	  //     border-radius:50%;
+	  //   }
+	  //   .right_img{
+	  //     position: absolute;
+	  //     right: 0.1rem;
+	  //     margin-top: 0.24rem;
+	  //     width: 0.34rem;
+	  //     height: 0.34rem;
+	  //   }
+	  //   .right_img > div{
+	  //     position: absolute;
+	  //     top: 0;
+	  //     left: 0;
+	  //     width: 0.34rem;
+	  //     height: 0.34rem;
+	  //   }
+	  //   .circle_mask{
+	  //     width: 0.34rem;
+	  //     height: 0.34rem;
+	  //     border-radius:50%;
+	  //     background: #000000;
+	  //     opacity:0.3;
+	  //     z-index:2;
+	  //   }
+	  //   .mask_play,.mask_stop,.disable{
+	  //     z-index:3;
+	  //   }
+	  // </style>
+
+	}; // <template>
 	//   <div>
 	//     <div class="list1">
 	//       <div class="big_img">
@@ -31336,7 +31509,7 @@
 	//         <div class="list_date" v-text="week"></div>
 	//         <div class="list_line"></div>
 	//       </div>
-	//       <div class="list" v-for="item in dataList" @click="go_href(item.command.content)">
+	//       <div class="list" v-for="(item,index) in dataList">
 	//         <div class="left_img">
 	//           <img :src="item.imageUrl" alt="">
 	//         </div>
@@ -31345,9 +31518,10 @@
 	//           <div class="list_name" v-text="item.album"></div>
 	//           <div class="list_time" v-text="item.time"></div>
 	//         </div>
-	//         <div class="right_img">
-	//             <div class="mask_stop"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-	//             <div class="mask_play"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+	//         <div class="right_img" @click="go_href(item.command.content)">
+	//             <div class="disable" v-if="btnStatus[index]==0" @click="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+	//             <div class="mask_stop" v-if="btnStatus[index]==2" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+	//             <div class="mask_play" v-if="btnStatus[index]==1" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
 	//             <div class="circle_mask"></div>
 	//             <div><img :src="item.imageUrl" alt=""></div>
 	//         </div>
@@ -31357,163 +31531,12 @@
 	//
 	// </template>
 	// <script>
-	exports.default = {
-	    props: ["data"],
-	    data: function data() {
-	        return {
-	            dataList: [],
-	            upTime: "",
-	            week: "",
-	            isApp: _utils2.default.utils.isApp()
-	        };
-	    },
-
-	    created: function created() {
-	        this.dataList = this.data.body.dataList;
-	        this.upTime = this.data.body.upTime;
-	        this.week = this.getLocalTime(this.upTime);
-	        //         console.log(this.getLocalTime(this.upTime));
-	        //         console.log(new Date(parseInt(this.upTime) * 1000).toLocaleString().replace(/:\d{1,2}$/,' '));
-	        //         console.log(new Date(2017,7,11).getDay());
-	    },
-	    methods: {
-	        getLocalTime: function getLocalTime(nS) {
-	            var time = new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
-	            var timestamp = time.split(" ")[0].split("/");
-	            var y = parseInt(timestamp[0]);
-	            var m = parseInt(timestamp[1]);
-	            var d = parseInt(timestamp[2]);
-	            var year = new Date().getFullYear();
-	            var month = new Date().getMonth() + 1;
-	            var day = new Date().getDate();
-	            var weekDay = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
-	            var week = new Date(y, m - 1, d).getDay();
-	            if (y === year && m === month && d === day) {
-	                return "今日更新";
-	            } else {
-	                return m + "月" + d + "日" + " " + weekDay[week];
-	            }
-	        },
-	        go_href: function go_href(href) {
-	            if (this.isApp) {} else {
-	                window.location.href = href;
-	            }
-	        }
-	    }
-	    // </script>
-	    // <style scoped>
-	    //   .big_img{
-	    //     text-align: center;
-	    //     height: 0.2rem;
-	    //     padding-top:0.13rem;
-	    //     padding-bottom:0.15rem;
-	    //     font-size: 0;
-	    //   }
-	    //   .big_img>div{
-	    //     display:inline-block;
-	    //     vertical-align: top;
-	    //   }
-	    //   .list_date{
-	    //     color:#333333;
-	    //     font-size:16px;
-	    //     padding-left: 0.1rem;
-	    //     padding-right: 0.1rem;
-	    //   }
-	    //   .list_line{
-	    //     height: 0.01rem;
-	    //     background: #333333;
-	    //     width: 0.15rem;
-	    //     margin-top: 0.08rem;
-	    //   }
-	    //
-	    //   .list1{
-	    //     border-bottom: 1px solid #E1E1E1;
-	    //     background: #ffffff;
-	    //   }
-	    //   .list1 .list:nth-child(2){
-	    //     margin-bottom: 0.2rem;
-	    //   }
-	    //
-	    //
-	    //   .list{
-	    //     font-size: 0;
-	    //     height: 0.76rem;
-	    //     padding:0 0.1rem;
-	    //     margin-bottom:0.27rem;
-	    //     position: relative;
-	    //   }
-	    //
-	    //   .list>div{
-	    //     display: inline-block;
-	    //     vertical-align: top;
-	    //   }
-	    //   .left_img img{
-	    //     width:0.76rem;
-	    //     height: 0.76rem;
-	    //     border-radius:4px;
-	    //   }
-	    //   .list_content{
-	    //     margin-left: 0.1rem;
-	    //     height: 0.76rem;
-	    //   }
-	    //   .list_title{
-	    //     font-size:14px;
-	    //     line-height:0.2rem;
-	    //     color:#333333;
-	    //     max-width:2.15rem;
-	    //     overflow: hidden;
-	    //     text-overflow: ellipsis;
-	    //     -webkit-box-orient: vertical;
-	    //     -webkit-line-clamp: 2;
-	    //     display: -webkit-box;
-	    //   }
-	    //   .list_name,.list_time{
-	    //     font-size:11px;
-	    //     line-height:0.16rem;
-	    //     color:#999999;
-	    //   }
-	    //   .list_name{
-	    //     margin-bottom:0.07rem;
-	    //   }
-	    //   .right_img img{
-	    //     width: 0.34rem;
-	    //     height: 0.34rem;
-	    //     border-radius:50%;
-	    //   }
-	    //   .right_img{
-	    //     position: absolute;
-	    //     right: 0.1rem;
-	    //     margin-top: 0.24rem;
-	    //     width: 0.34rem;
-	    //     height: 0.34rem;
-	    //   }
-	    //   .right_img > div{
-	    //     position: absolute;
-	    //     top: 0;
-	    //     left: 0;
-	    //     width: 0.34rem;
-	    //     height: 0.34rem;
-	    //   }
-	    //   .circle_mask{
-	    //     width: 0.34rem;
-	    //     height: 0.34rem;
-	    //     border-radius:50%;
-	    //     background: #000000;
-	    //     opacity:0.3;
-	    //     z-index:2;
-	    //   }
-	    //   .mask_play,.mask_stop{
-	    //     z-index:3;
-	    //   }
-	    // </style>
-
-	};
 
 /***/ },
 /* 530 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-780f6021=\"\">\n  <div class=\"list1\" _v-780f6021=\"\">\n    <div class=\"big_img\" _v-780f6021=\"\">\n      <div class=\"list_line\" _v-780f6021=\"\"></div>\n      <div class=\"list_date\" v-text=\"week\" _v-780f6021=\"\"></div>\n      <div class=\"list_line\" _v-780f6021=\"\"></div>\n    </div>\n    <div class=\"list\" v-for=\"item in dataList\" @click=\"go_href(item.command.content)\" _v-780f6021=\"\">\n      <div class=\"left_img\" _v-780f6021=\"\">\n        <img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\">\n      </div>\n      <div class=\"list_content\" _v-780f6021=\"\">\n        <div class=\"list_title\" v-text=\"item.music\" _v-780f6021=\"\"></div>\n        <div class=\"list_name\" v-text=\"item.album\" _v-780f6021=\"\"></div>\n        <div class=\"list_time\" v-text=\"item.time\" _v-780f6021=\"\"></div>\n      </div>\n      <div class=\"right_img\" _v-780f6021=\"\">\n          <div class=\"mask_stop\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-780f6021=\"\"></div>\n          <div class=\"mask_play\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-780f6021=\"\"></div>\n          <div class=\"circle_mask\" _v-780f6021=\"\"></div>\n          <div _v-780f6021=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
+	module.exports = "\n<div _v-780f6021=\"\">\n  <div class=\"list1\" _v-780f6021=\"\">\n    <div class=\"big_img\" _v-780f6021=\"\">\n      <div class=\"list_line\" _v-780f6021=\"\"></div>\n      <div class=\"list_date\" v-text=\"week\" _v-780f6021=\"\"></div>\n      <div class=\"list_line\" _v-780f6021=\"\"></div>\n    </div>\n    <div class=\"list\" v-for=\"(item,index) in dataList\" _v-780f6021=\"\">\n      <div class=\"left_img\" _v-780f6021=\"\">\n        <img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\">\n      </div>\n      <div class=\"list_content\" _v-780f6021=\"\">\n        <div class=\"list_title\" v-text=\"item.music\" _v-780f6021=\"\"></div>\n        <div class=\"list_name\" v-text=\"item.album\" _v-780f6021=\"\"></div>\n        <div class=\"list_time\" v-text=\"item.time\" _v-780f6021=\"\"></div>\n      </div>\n      <div class=\"right_img\" @click=\"go_href(item.command.content)\" _v-780f6021=\"\">\n          <div class=\"disable\" v-if=\"btnStatus[index]==0\" @click=\"stop_info\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-780f6021=\"\"></div>\n          <div class=\"mask_stop\" v-if=\"btnStatus[index]==2\" @click=\"change_play(index)\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-780f6021=\"\"></div>\n          <div class=\"mask_play\" v-if=\"btnStatus[index]==1\" @click=\"change_play(index)\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-780f6021=\"\"></div>\n          <div class=\"circle_mask\" _v-780f6021=\"\"></div>\n          <div _v-780f6021=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
 
 /***/ },
 /* 531 */
@@ -31929,7 +31952,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-236acfbd] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-236acfbd] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-236acfbd] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-236acfbd] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-236acfbd], .b_right[_v-236acfbd] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-236acfbd] {\n  font-size: 14px;\n}\n\n.line[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-236acfbd] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-236acfbd] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-236acfbd]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-236acfbd]{\n  font-size: 0;\n}\n.item_timee>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-236acfbd]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-236acfbd]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-236acfbd]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-236acfbd],.mask_stop[_v-236acfbd],.disable[_v-236acfbd]{\n  z-index:3;\n}\n\n\n\n.free[_v-236acfbd]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.last[_v-236acfbd]{\n  width: 3.55rem;\n  height: 0.2rem;\n  border-radius:4px;\n  background: #FFF2E1;\n  color:#CC8B3F;\n  font-size:10px;\n  margin-bottom: 0.1rem;\n  text-align: center;\n  line-height:0.2rem;\n\n}\n.rea[_v-236acfbd]{\n  position: relative;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-236acfbd] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-236acfbd] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-236acfbd] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-236acfbd] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-236acfbd], .b_right[_v-236acfbd] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-236acfbd] {\n  font-size: 14px;\n}\n\n.line[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-236acfbd] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-236acfbd] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-236acfbd]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-236acfbd]{\n  font-size: 0;\n}\n.item_timee>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-236acfbd]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-236acfbd]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-236acfbd]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-236acfbd],.mask_stop[_v-236acfbd],.disable[_v-236acfbd]{\n  z-index:3;\n}\n\n\n\n.free[_v-236acfbd]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.last[_v-236acfbd]{\n  width: 3.55rem;\n  height: 0.2rem;\n  border-radius:4px;\n  background: #FFF2E1;\n  color:#CC8B3F;\n  font-size:10px;\n  margin-bottom: 0.1rem;\n  text-align: center;\n  line-height:0.2rem;\n\n}\n.rea[_v-236acfbd]{\n  position: relative;\n}\n\n\n.top[_v-236acfbd]{\n  margin-top: 0.12rem;\n}\n", ""]);
 
 	// exports
 
@@ -31941,7 +31964,7 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
 
 	var _utils = __webpack_require__(164);
@@ -31952,10 +31975,296 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
+	var _dialog = __webpack_require__(165);
+
+	var _dialog2 = _interopRequireDefault(_dialog);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// <template>
-	//   <div>
+	exports.default = {
+	  props: ["data"],
+	  mounted: function mounted() {
+	    this.dataList = this.data.body.dataList[0];
+	    this.initBtnStatus();
+	  },
+	  computed: {
+	    contentList: function contentList() {
+	      return this.data.body.dataList[0].contentList;
+	    }
+	  },
+	  watch: {
+	    contentList: function contentList() {
+	      this.initBtnStatus();
+	    }
+	  },
+	  data: function data() {
+	    return {
+	      dataList: {},
+	      flag: true,
+	      isApp: _utils2.default.utils.isApp(),
+	      btnStatus: []
+	    };
+	  },
+
+	  methods: {
+	    stop_info: function stop_info() {
+	      _dialog2.default.alert("订阅后才可收听");
+	    },
+	    change_play: function change_play(index) {
+	      if (this.btnStatus[index] == 1) {
+	        Vue.set(this.btnStatus, index, 2);
+	      } else if (this.btnStatus[index] == 2) {
+	        Vue.set(this.btnStatus, index, 1);
+	      }
+	    },
+	    initBtnStatus: function initBtnStatus() {
+	      var that = this;
+	      this.contentList.map(function (item, index) {
+	        if (item.isPlay == "1") {
+	          Vue.set(that.btnStatus, index, 1);
+	        } else if (item.isPlay == "0") {
+	          Vue.set(that.btnStatus, index, 0);
+	        }
+	      });
+	    },
+	    fn: function fn() {
+	      this.flag = !this.flag;
+	    },
+	    getLocalTime: function getLocalTime(nS) {
+	      var time = new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
+	      var timestamp = time.split(" ")[0].split("/");
+	      var y = parseInt(timestamp[0]);
+	      var m = parseInt(timestamp[1]);
+	      var d = parseInt(timestamp[2]);
+	      return y + "-" + m + "-" + d;
+	    },
+	    go_href: function go_href(href) {
+	      if (this.isApp) {} else {
+	        window.location.href = href;
+	      }
+	    }
+	  }
+	  // </script>
+	  // <style scoped>
+	  //   .tab {
+	  //     padding-top: 0.14rem;
+	  //     height: 0.36rem;
+	  //     background: white;
+	  //   }
+	  //
+	  //   .tab .tab_list {
+	  //     height: 0.36rem;
+	  //   }
+	  //
+	  //   .tab_list {
+	  //     font-size: 0;
+	  //     vertical-align: top;
+	  //     position: relative;
+	  //   }
+	  //
+	  //
+	  //   .update {
+	  //     padding-left: 0.1rem;
+	  //     padding-right: 0.1rem;
+	  //     border-top: 1px solid rgba(0, 0, 0, 0.1);
+	  //     height: 0.36rem;
+	  //     position: relative;
+	  //     padding-bottom: 0.1rem;
+	  //     background: #fff;
+	  //   }
+	  //
+	  //   .tab_list .border {
+	  //     border-right: 0.01rem solid rgba(0, 0, 0, 0.1);
+	  //     font-size: 14px;
+	  //     -webkit-box-sizing: border-box;
+	  //     -moz-box-sizing: border-box;
+	  //     box-sizing: border-box;
+	  //   }
+	  //
+	  //   .tab_list .border, .b_right {
+	  //     display: inline-block;
+	  //     height: 0.3rem;
+	  //     width: 1.87rem;
+	  //     line-height: 0.2rem;
+	  //     text-align: center;
+	  //   }
+	  //
+	  //   .tab_list .b_right {
+	  //     font-size: 14px;
+	  //   }
+	  //
+	  //   .line {
+	  //     height: 0.0365rem;
+	  //     width: 0.58rem;
+	  //     background: #FF4A7D;
+	  //     position: absolute;
+	  //     bottom: 0;
+	  //     left: 0.66rem;
+	  //   }
+	  //   .line2 {
+	  //     height: 0.0365rem;
+	  //     width: 0.58rem;
+	  //     background: #FF4A7D;
+	  //     position: absolute;
+	  //     bottom: 0;
+	  //     right: 0.64rem;
+	  //   }
+	  //   .up {
+	  //     position: absolute;
+	  //     bottom: 0.1rem;
+	  //     left: 0.1rem;
+	  //   }
+	  //   .color1 {
+	  //     color: #FF4A7D;
+	  //   }
+	  //
+	  //
+	  //
+	  //
+	  //   .item {
+	  //     font-size: 0;
+	  //     vertical-align: top;
+	  //     background: white;
+	  //     padding-top: 0.1rem;
+	  //     padding-bottom: 0.1rem;
+	  //     padding-left: 0.1rem;
+	  //     padding-right: 0.1rem;
+	  //     border-bottom: 1px solid #E1E1E1;
+	  //     position: relative;
+	  //   }
+	  //   .rea>div{
+	  //     display: inline-block;
+	  //     vertical-align: top;
+	  //   }
+	  //   .item_title{
+	  //     color: #333333;
+	  //     font-size: 14px;
+	  //     overflow: hidden;
+	  //     text-overflow: ellipsis;
+	  //     -webkit-box-orient: vertical;
+	  //     -webkit-line-clamp: 2;
+	  //     display: -webkit-box;
+	  //     max-width: 2.6rem;
+	  //     margin-bottom: 0.08rem;
+	  //     line-height: 0.2rem;
+	  //   }
+	  //   .item_timee{
+	  //     font-size: 0;
+	  //   }
+	  //   .item_timee>div{
+	  //     display: inline-block;
+	  //     vertical-align: top;
+	  //   }
+	  //   .item_date{
+	  //     color: #999999;
+	  //     font-size: 11px;
+	  //     line-height: 0.1rem;
+	  //     padding-right: 0.1rem;
+	  //     border-right: 1px solid #999999;
+	  //     margin-right: 0.1rem;
+	  //   }
+	  //   .item_count{
+	  //     color: #999999;
+	  //     font-size: 11px;
+	  //     line-height: 0.1rem;
+	  //     padding-right: 0.1rem;
+	  //     border-right: 1px solid #999999;
+	  //     margin-right: 0.1rem;
+	  //   }
+	  //   .item_time{
+	  //     color: #999999;
+	  //     font-size: 11px;
+	  //     height: 0.1rem;
+	  //   }
+	  //   .clock{
+	  //     display: inline-block;
+	  //     height: 0.1rem;
+	  //     width: 0.1rem;
+	  //     background-image: url(//pic.davdian.com/free/2017/05/04/history.png);
+	  //     background-size: 0.1rem 0.1rem;
+	  //     background-repeat: no-repeat;
+	  //     vertical-align: top;
+	  //   }
+	  //   .times{
+	  //     display: inline-block;
+	  //     height: 0.1rem;
+	  //     line-height: 0.1rem;
+	  //     vertical-align: top;
+	  //   }
+	  //   .item_right{
+	  //     position: absolute;
+	  //     right: 0;
+	  //     top: 50%;
+	  //     width: 0.34rem;
+	  //     height: 0.34rem;
+	  //     margin-top: -0.17rem;
+	  //   }
+	  //   .item_right2{
+	  //     position: absolute;
+	  //     right: 0;
+	  //     top: 50%;
+	  //     margin-top: -0.12rem;
+	  //   }
+	  //   .item_right img{
+	  //     height: 0.34rem;
+	  //     width: 0.34rem;
+	  //     border-radius: 50%;
+	  //   }
+	  //   .item_right>div{
+	  //     position: absolute;
+	  //     top: 0;
+	  //     left: 0;
+	  //     width: 0.34rem;
+	  //     height: 0.34rem;
+	  //   }
+	  //   .circle_mask{
+	  //     width: 0.34rem;
+	  //     height: 0.34rem;
+	  //     border-radius:50%;
+	  //     background: #000000;
+	  //     opacity:0.3;
+	  //     z-index:2;
+	  //   }
+	  //   .mask_play,.mask_stop,.disable{
+	  //     z-index:3;
+	  //   }
+	  //
+	  //
+	  //
+	  //   .free{
+	  //     width: 0.64rem;
+	  //     height: 0.22rem;
+	  //     border-radius: 37px;
+	  //     color: #FF4A7D;
+	  //     border: 0.5px solid #FF4A7D;
+	  //     font-size: 12px;
+	  //     text-align: center;
+	  //     line-height: 0.22rem;
+	  //   }
+	  //   .last{
+	  //     width: 3.55rem;
+	  //     height: 0.2rem;
+	  //     border-radius:4px;
+	  //     background: #FFF2E1;
+	  //     color:#CC8B3F;
+	  //     font-size:10px;
+	  //     margin-bottom: 0.1rem;
+	  //     text-align: center;
+	  //     line-height:0.2rem;
+	  //
+	  //   }
+	  //   .rea{
+	  //     position: relative;
+	  //   }
+	  //
+	  //
+	  //   .top{
+	  //     margin-top: 0.12rem;
+	  //   }
+	  // </style>
+
+	}; // <template>
+	//   <div class="top">
 	//     <div class="tab">
 	//       <div class="tab_list" v-if="flag" @click="fn">
 	//         <div class="border color1" v-text="dataList.content"></div>
@@ -31976,7 +32285,7 @@
 	//         </div>
 	//       </div>
 	//       <div class="list">
-	//         <div class="item" v-for="item in contentList">
+	//         <div class="item" v-for="(item,index) in contentList">
 	//           <div class="last">上次听到这里 2017-07-11 21:09</div>
 	//           <div class="rea">
 	//             <div class="item_left">
@@ -31991,9 +32300,9 @@
 	//               </div>
 	//             </div>
 	//             <div class="item_right" v-if="item.isFree==1" @click="go_href(item.command.content)">
-	//               <div class="disable" v-if="item.isPlay==0"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-	//               <div class="mask_stop" v-if="item.isPlay==1"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-	//               <div class="mask_play" v-if="item.isPlay==1"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+	//               <div class="disable" v-if="btnStatus[index]==0" @click="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+	//               <div class="mask_stop" v-if="btnStatus[index]==2" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+	//               <div class="mask_play" v-if="btnStatus[index]==1" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
 	//               <div class="circle_mask"></div>
 	//               <div><img :src="item.imageUrl" alt=""></div>
 	//             </div>
@@ -32011,260 +32320,12 @@
 	//   </div>
 	// </template>
 	// <script>
-	exports.default = {
-	    props: ["data"],
-	    created: function created() {
-	        this.dataList = this.data.body.dataList[0];
-	        this.contentList = this.data.body.dataList[0].contentList;
-	    },
-	    data: function data() {
-	        return {
-	            dataList: [],
-	            contentList: [],
-	            flag: true,
-	            isApp: _utils2.default.utils.isApp()
-	        };
-	    },
-
-	    methods: {
-	        fn: function fn() {
-	            this.flag = !this.flag;
-	        },
-	        getLocalTime: function getLocalTime(nS) {
-	            var time = new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
-	            var timestamp = time.split(" ")[0].split("/");
-	            var y = parseInt(timestamp[0]);
-	            var m = parseInt(timestamp[1]);
-	            var d = parseInt(timestamp[2]);
-	            return y + "-" + m + "-" + d;
-	        },
-	        go_href: function go_href(href) {
-	            if (this.isApp) {} else {
-	                window.location.href = href;
-	            }
-	        }
-	    }
-	    // </script>
-	    // <style scoped>
-	    //   .tab {
-	    //     padding-top: 0.14rem;
-	    //     height: 0.36rem;
-	    //     background: white;
-	    //   }
-	    //
-	    //   .tab .tab_list {
-	    //     height: 0.36rem;
-	    //   }
-	    //
-	    //   .tab_list {
-	    //     font-size: 0;
-	    //     vertical-align: top;
-	    //     position: relative;
-	    //   }
-	    //
-	    //
-	    //   .update {
-	    //     padding-left: 0.1rem;
-	    //     padding-right: 0.1rem;
-	    //     border-top: 1px solid rgba(0, 0, 0, 0.1);
-	    //     height: 0.36rem;
-	    //     position: relative;
-	    //     padding-bottom: 0.1rem;
-	    //     background: #fff;
-	    //   }
-	    //
-	    //   .tab_list .border {
-	    //     border-right: 0.01rem solid rgba(0, 0, 0, 0.1);
-	    //     font-size: 14px;
-	    //     -webkit-box-sizing: border-box;
-	    //     -moz-box-sizing: border-box;
-	    //     box-sizing: border-box;
-	    //   }
-	    //
-	    //   .tab_list .border, .b_right {
-	    //     display: inline-block;
-	    //     height: 0.3rem;
-	    //     width: 1.87rem;
-	    //     line-height: 0.2rem;
-	    //     text-align: center;
-	    //   }
-	    //
-	    //   .tab_list .b_right {
-	    //     font-size: 14px;
-	    //   }
-	    //
-	    //   .line {
-	    //     height: 0.0365rem;
-	    //     width: 0.58rem;
-	    //     background: #FF4A7D;
-	    //     position: absolute;
-	    //     bottom: 0;
-	    //     left: 0.66rem;
-	    //   }
-	    //   .line2 {
-	    //     height: 0.0365rem;
-	    //     width: 0.58rem;
-	    //     background: #FF4A7D;
-	    //     position: absolute;
-	    //     bottom: 0;
-	    //     right: 0.64rem;
-	    //   }
-	    //   .up {
-	    //     position: absolute;
-	    //     bottom: 0.1rem;
-	    //     left: 0.1rem;
-	    //   }
-	    //   .color1 {
-	    //     color: #FF4A7D;
-	    //   }
-	    //
-	    //
-	    //
-	    //
-	    //   .item {
-	    //     font-size: 0;
-	    //     vertical-align: top;
-	    //     background: white;
-	    //     padding-top: 0.1rem;
-	    //     padding-bottom: 0.1rem;
-	    //     padding-left: 0.1rem;
-	    //     padding-right: 0.1rem;
-	    //     border-bottom: 1px solid #E1E1E1;
-	    //     position: relative;
-	    //   }
-	    //   .rea>div{
-	    //     display: inline-block;
-	    //     vertical-align: top;
-	    //   }
-	    //   .item_title{
-	    //     color: #333333;
-	    //     font-size: 14px;
-	    //     overflow: hidden;
-	    //     text-overflow: ellipsis;
-	    //     -webkit-box-orient: vertical;
-	    //     -webkit-line-clamp: 2;
-	    //     display: -webkit-box;
-	    //     max-width: 2.6rem;
-	    //     margin-bottom: 0.08rem;
-	    //     line-height: 0.2rem;
-	    //   }
-	    //   .item_timee{
-	    //     font-size: 0;
-	    //   }
-	    //   .item_timee>div{
-	    //     display: inline-block;
-	    //     vertical-align: top;
-	    //   }
-	    //   .item_date{
-	    //     color: #999999;
-	    //     font-size: 11px;
-	    //     line-height: 0.1rem;
-	    //     padding-right: 0.1rem;
-	    //     border-right: 1px solid #999999;
-	    //     margin-right: 0.1rem;
-	    //   }
-	    //   .item_count{
-	    //     color: #999999;
-	    //     font-size: 11px;
-	    //     line-height: 0.1rem;
-	    //     padding-right: 0.1rem;
-	    //     border-right: 1px solid #999999;
-	    //     margin-right: 0.1rem;
-	    //   }
-	    //   .item_time{
-	    //     color: #999999;
-	    //     font-size: 11px;
-	    //     height: 0.1rem;
-	    //   }
-	    //   .clock{
-	    //     display: inline-block;
-	    //     height: 0.1rem;
-	    //     width: 0.1rem;
-	    //     background-image: url(//pic.davdian.com/free/2017/05/04/history.png);
-	    //     background-size: 0.1rem 0.1rem;
-	    //     background-repeat: no-repeat;
-	    //     vertical-align: top;
-	    //   }
-	    //   .times{
-	    //     display: inline-block;
-	    //     height: 0.1rem;
-	    //     line-height: 0.1rem;
-	    //     vertical-align: top;
-	    //   }
-	    //   .item_right{
-	    //     position: absolute;
-	    //     right: 0;
-	    //     top: 50%;
-	    //     width: 0.34rem;
-	    //     height: 0.34rem;
-	    //     margin-top: -0.17rem;
-	    //   }
-	    //   .item_right2{
-	    //     position: absolute;
-	    //     right: 0;
-	    //     top: 50%;
-	    //     margin-top: -0.12rem;
-	    //   }
-	    //   .item_right img{
-	    //     height: 0.34rem;
-	    //     width: 0.34rem;
-	    //     border-radius: 50%;
-	    //   }
-	    //   .item_right>div{
-	    //     position: absolute;
-	    //     top: 0;
-	    //     left: 0;
-	    //     width: 0.34rem;
-	    //     height: 0.34rem;
-	    //   }
-	    //   .circle_mask{
-	    //     width: 0.34rem;
-	    //     height: 0.34rem;
-	    //     border-radius:50%;
-	    //     background: #000000;
-	    //     opacity:0.3;
-	    //     z-index:2;
-	    //   }
-	    //   .mask_play,.mask_stop,.disable{
-	    //     z-index:3;
-	    //   }
-	    //
-	    //
-	    //
-	    //   .free{
-	    //     width: 0.64rem;
-	    //     height: 0.22rem;
-	    //     border-radius: 37px;
-	    //     color: #FF4A7D;
-	    //     border: 0.5px solid #FF4A7D;
-	    //     font-size: 12px;
-	    //     text-align: center;
-	    //     line-height: 0.22rem;
-	    //   }
-	    //   .last{
-	    //     width: 3.55rem;
-	    //     height: 0.2rem;
-	    //     border-radius:4px;
-	    //     background: #FFF2E1;
-	    //     color:#CC8B3F;
-	    //     font-size:10px;
-	    //     margin-bottom: 0.1rem;
-	    //     text-align: center;
-	    //     line-height:0.2rem;
-	    //
-	    //   }
-	    //   .rea{
-	    //     position: relative;
-	    //   }
-	    // </style>
-
-	};
 
 /***/ },
 /* 545 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-236acfbd=\"\">\n  <div class=\"tab\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n\n  <div v-if=\"flag\" _v-236acfbd=\"\">\n    <div class=\"update\" _v-236acfbd=\"\">\n      <div class=\"up\" _v-236acfbd=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-236acfbd=\"\"></span>期，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-236acfbd=\"\"></span>期\n      </div>\n    </div>\n    <div class=\"list\" _v-236acfbd=\"\">\n      <div class=\"item\" v-for=\"item in contentList\" _v-236acfbd=\"\">\n        <div class=\"last\" _v-236acfbd=\"\">上次听到这里 2017-07-11 21:09</div>\n        <div class=\"rea\" _v-236acfbd=\"\">\n          <div class=\"item_left\" _v-236acfbd=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-236acfbd=\"\"></div>\n            <div class=\"item_timee\" _v-236acfbd=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-236acfbd=\"\"></div>\n              <div class=\"item_count\" _v-236acfbd=\"\"><span v-text=\"item.number\" _v-236acfbd=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-236acfbd=\"\">\n                <div class=\"clock\" _v-236acfbd=\"\"></div>\n                <div class=\"times\" v-text=\"item.time\" _v-236acfbd=\"\"></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==1\" @click=\"go_href(item.command.content)\" _v-236acfbd=\"\">\n            <div class=\"disable\" v-if=\"item.isPlay==0\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_stop\" v-if=\"item.isPlay==1\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_play\" v-if=\"item.isPlay==1\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"item.isFree==0\" @click=\"go_href(item.command.content)\" _v-236acfbd=\"\">\n            <div class=\"free\" _v-236acfbd=\"\">免费试听</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div v-if=\"!flag\" _v-236acfbd=\"\">\n\n  </div>\n\n</div>\n";
+	module.exports = "\n<div class=\"top\" _v-236acfbd=\"\">\n  <div class=\"tab\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n\n  <div v-if=\"flag\" _v-236acfbd=\"\">\n    <div class=\"update\" _v-236acfbd=\"\">\n      <div class=\"up\" _v-236acfbd=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-236acfbd=\"\"></span>期，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-236acfbd=\"\"></span>期\n      </div>\n    </div>\n    <div class=\"list\" _v-236acfbd=\"\">\n      <div class=\"item\" v-for=\"(item,index) in contentList\" _v-236acfbd=\"\">\n        <div class=\"last\" _v-236acfbd=\"\">上次听到这里 2017-07-11 21:09</div>\n        <div class=\"rea\" _v-236acfbd=\"\">\n          <div class=\"item_left\" _v-236acfbd=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-236acfbd=\"\"></div>\n            <div class=\"item_timee\" _v-236acfbd=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-236acfbd=\"\"></div>\n              <div class=\"item_count\" _v-236acfbd=\"\"><span v-text=\"item.number\" _v-236acfbd=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-236acfbd=\"\">\n                <div class=\"clock\" _v-236acfbd=\"\"></div>\n                <div class=\"times\" v-text=\"item.time\" _v-236acfbd=\"\"></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==1\" @click=\"go_href(item.command.content)\" _v-236acfbd=\"\">\n            <div class=\"disable\" v-if=\"btnStatus[index]==0\" @click=\"stop_info\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_stop\" v-if=\"btnStatus[index]==2\" @click=\"change_play(index)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_play\" v-if=\"btnStatus[index]==1\" @click=\"change_play(index)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"item.isFree==0\" @click=\"go_href(item.command.content)\" _v-236acfbd=\"\">\n            <div class=\"free\" _v-236acfbd=\"\">免费试听</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div v-if=\"!flag\" _v-236acfbd=\"\">\n\n  </div>\n\n</div>\n";
 
 /***/ },
 /* 546 */
@@ -33355,7 +33416,7 @@
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/landingPage/vue/landing.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1189)
+	__vue_template__ = __webpack_require__(1188)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -33463,13 +33524,13 @@
 	    return {
 	      data: [],
 	      pageFlag: true,
-	      musicId: 0
+	      upTime: 0
 	    };
 	  },
 
 	  mounted: function mounted() {
-	    var result = __webpack_require__(1188);
-	    this.data = result.data.feedList;
+	    //        var result=require('../json/landingPage.json');
+	    //        this.data=result.data.feedList;
 	    this.getinitData();
 	    this.scrol();
 	  },
@@ -33478,12 +33539,10 @@
 	      var that = this;
 	      (0, _api2.default)("/api/mg/content/indexAlbum/getContent").then(function (result) {
 	        if (result.code == 0) {
-	          this.data = this.data.concat(result.data.feedList);
+	          that.data = that.data.concat(result.data.feedList);
 	          result.data.feedList.map(function (item, index) {
 	            if (item.body.upTime) {
-	              item.body.dataList.map(function (item2, index2) {
-	                that.musicId = item2.musicId;
-	              });
+	              that.upTime = item.body.upTime;
 	            }
 	          });
 	        } else {
@@ -33498,13 +33557,15 @@
 	      if (that.pageFlag) {
 	        that.pageFlag = false;
 	        var obj = {
-	          "musicId": that.musicId
+	          "upTime": that.upTime
 	        };
 	        (0, _api2.default)("/api/mg/content/indexAlbum/getMoreContent", obj).then(function (result) {
 	          if (result.code == 0) {
-	            this.data.push(result);
-	            result.body.dataList.map(function (item, index) {
-	              that.musicId = item.musicId;
+	            this.data = this.data.concat(result);
+	            result.map(function (item, index) {
+	              if (item.body.upTime) {
+	                that.upTime = item.body.upTime;
+	              }
 	            });
 	            if (result.data.feedList.length > 0) {
 	              that.pageFlag = true;
@@ -33538,6 +33599,167 @@
 
 /***/ },
 /* 1188 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div _v-f53c15bc=\"\">\n  <notopen _v-f53c15bc=\"\"></notopen>\n  <index_feed :data=\"data\" _v-f53c15bc=\"\"></index_feed>\n</div>\n";
+
+/***/ },
+/* 1189 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
+	__webpack_require__(1190)
+	__vue_script__ = __webpack_require__(1192)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/page/landingPage/vue/header.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(1193)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+	if (__vue_template__) {
+	__vue_options__.template = __vue_template__
+	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-7926d052/header.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 1190 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(1191);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(51)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7926d052&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7926d052&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 1191 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(50)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.header[_v-7926d052]{\n  height: 44px;\n  position: relative;\n  background: #ffffff;\n}\n.head_img[_v-7926d052]{\n  position: absolute;\n  left: 0;\n  height: 100%;\n  width: 44px;\n}\n.back-arrow[_v-7926d052]{\n  position: absolute;\n  top: 15px;\n  left: 15px;\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  border-bottom: 1px solid #333;\n  border-left: 1px solid #333;\n  -webkit-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  transform: rotate(45deg);\n  cursor: pointer;\n  font-size: 16px;\n}\n.head_title[_v-7926d052]{\n  height: 100%;\n  width: 100%;\n  text-align: center;\n  line-height: 44px;\n  font-size: 16px;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 1192 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	// <template>
+	//   <div class="header">
+	//     <div class="head_img" @click="history">
+	//       <i class="back-arrow"></i>
+	//     </div>
+	//     <div class="head_title">标题标题</div>
+	//   </div>
+	// </template>
+	// <script>
+	exports.default = {
+	    methods: {
+	        history: function (_history) {
+	            function history() {
+	                return _history.apply(this, arguments);
+	            }
+
+	            history.toString = function () {
+	                return _history.toString();
+	            };
+
+	            return history;
+	        }(function () {
+	            history.back();
+	        })
+	    }
+	    // </script>
+	    // <style scoped>
+	    //   .header{
+	    //     height: 44px;
+	    //     position: relative;
+	    //     background: #ffffff;
+	    //   }
+	    //   .head_img{
+	    //     position: absolute;
+	    //     left: 0;
+	    //     height: 100%;
+	    //     width: 44px;
+	    //   }
+	    //   .back-arrow{
+	    //     position: absolute;
+	    //     top: 15px;
+	    //     left: 15px;
+	    //     display: inline-block;
+	    //     width: 12px;
+	    //     height: 12px;
+	    //     border-bottom: 1px solid #333;
+	    //     border-left: 1px solid #333;
+	    //     -webkit-transform: rotate(45deg);
+	    //     -ms-transform: rotate(45deg);
+	    //     transform: rotate(45deg);
+	    //     cursor: pointer;
+	    //     font-size: 16px;
+	    //   }
+	    //   .head_title{
+	    //     height: 100%;
+	    //     width: 100%;
+	    //     text-align: center;
+	    //     line-height: 44px;
+	    //     font-size: 16px;
+	    //   }
+	    // </style>
+
+	};
+
+/***/ },
+/* 1193 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div class=\"header\" _v-7926d052=\"\">\n  <div class=\"head_img\" @click=\"history\" _v-7926d052=\"\">\n    <i class=\"back-arrow\" _v-7926d052=\"\"></i>\n  </div>\n  <div class=\"head_title\" _v-7926d052=\"\">标题标题</div>\n</div>\n";
+
+/***/ },
+/* 1194 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -33716,167 +33938,6 @@
 			]
 		}
 	};
-
-/***/ },
-/* 1189 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div _v-f53c15bc=\"\">\n  <notopen _v-f53c15bc=\"\"></notopen>\n  <index_feed :data=\"data\" _v-f53c15bc=\"\"></index_feed>\n</div>\n";
-
-/***/ },
-/* 1190 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(1191)
-	__vue_script__ = __webpack_require__(1193)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/page/landingPage/vue/header.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(1194)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-7926d052/header.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 1191 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(1192);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(51)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7926d052&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7926d052&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 1192 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(50)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.header[_v-7926d052]{\n  height: 44px;\n  position: relative;\n  background: #ffffff;\n}\n.head_img[_v-7926d052]{\n  position: absolute;\n  left: 0;\n  height: 100%;\n  width: 44px;\n}\n.back-arrow[_v-7926d052]{\n  position: absolute;\n  top: 15px;\n  left: 15px;\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  border-bottom: 1px solid #333;\n  border-left: 1px solid #333;\n  -webkit-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  transform: rotate(45deg);\n  cursor: pointer;\n  font-size: 16px;\n}\n.head_title[_v-7926d052]{\n  height: 100%;\n  width: 100%;\n  text-align: center;\n  line-height: 44px;\n  font-size: 16px;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 1193 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	// <template>
-	//   <div class="header">
-	//     <div class="head_img" @click="history">
-	//       <i class="back-arrow"></i>
-	//     </div>
-	//     <div class="head_title">标题标题</div>
-	//   </div>
-	// </template>
-	// <script>
-	exports.default = {
-	    methods: {
-	        history: function (_history) {
-	            function history() {
-	                return _history.apply(this, arguments);
-	            }
-
-	            history.toString = function () {
-	                return _history.toString();
-	            };
-
-	            return history;
-	        }(function () {
-	            history.back();
-	        })
-	    }
-	    // </script>
-	    // <style scoped>
-	    //   .header{
-	    //     height: 44px;
-	    //     position: relative;
-	    //     background: #ffffff;
-	    //   }
-	    //   .head_img{
-	    //     position: absolute;
-	    //     left: 0;
-	    //     height: 100%;
-	    //     width: 44px;
-	    //   }
-	    //   .back-arrow{
-	    //     position: absolute;
-	    //     top: 15px;
-	    //     left: 15px;
-	    //     display: inline-block;
-	    //     width: 12px;
-	    //     height: 12px;
-	    //     border-bottom: 1px solid #333;
-	    //     border-left: 1px solid #333;
-	    //     -webkit-transform: rotate(45deg);
-	    //     -ms-transform: rotate(45deg);
-	    //     transform: rotate(45deg);
-	    //     cursor: pointer;
-	    //     font-size: 16px;
-	    //   }
-	    //   .head_title{
-	    //     height: 100%;
-	    //     width: 100%;
-	    //     text-align: center;
-	    //     line-height: 44px;
-	    //     font-size: 16px;
-	    //   }
-	    // </style>
-
-	};
-
-/***/ },
-/* 1194 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"header\" _v-7926d052=\"\">\n  <div class=\"head_img\" @click=\"history\" _v-7926d052=\"\">\n    <i class=\"back-arrow\" _v-7926d052=\"\"></i>\n  </div>\n  <div class=\"head_title\" _v-7926d052=\"\">标题标题</div>\n</div>\n";
 
 /***/ }
 /******/ ]);

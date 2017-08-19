@@ -1,12 +1,18 @@
 {
   "code":"0",
   "shop_url":"https://15201663952.davdian.com",
-  "visitor_status":"3",
+  "visitor_status":"1",
   "sess_key":"48a275a991a0a6295706e6d9f8c3a784b62a4bbc",
   "data_version":"xxxxxx",
   "data": {
     "webUrl":"https://15201663952.davdian.com",
-    "isFree":"1",
+    "attr":{
+      "isFree": "0",
+      "isPlay":"0",
+      "income":"￥10",
+      "price":"￥99",
+      "isSub":"0"
+    },
     "feedList":[
       {
         "body":{
