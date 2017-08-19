@@ -250,6 +250,11 @@
             shareOnHead: 1,
           });
 
+          // 设置app头部标题栏title
+          native.Browser.setHead({
+            'title' : document.title,
+          });
+
           /*// 设置分享信息
           try {
             share.setShareInfo({
@@ -269,6 +274,12 @@
             // 如果本次领取红包未发生错误,去掉之前在本地存储的记录
             localStorage.removeItem('error');
           }
+
+          // 设置背景图位置
+          if($('.com-top-title').length > 0) {
+            $('.wrapper').css('background-position', '0 44px');
+          }
+
         });
       }
     },
