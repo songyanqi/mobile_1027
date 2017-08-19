@@ -25,7 +25,7 @@
         <div class="btn4"><img src="//pic.davdian.com/free/2017/08/16/combinedShape.png" alt="" @click='playAudio(index+1)'></div>
         <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
       </div>
-      <div class="look_more">
+      <div class="look_more" @click='goAlbumId'>
         <div class="look_count">查看合辑 ({{index + 1}}/<span v-text='allAudio'></span>)</div>
         <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
       </div>
@@ -71,14 +71,14 @@
       return {
         isInisWechatOrAppFlag:isInisWechatOrApp(),
         audioListFlag: false,
-        index: getQuery('sortNo') || 0,
+        index: parseInt(getQuery('sortNo')) || 0,
         musicList:[],
         playTime:0,
         isPlay:false,
         playTimer: null,
         allAudio: null,
         getDataFlag:true,
-        scrollTop:0,
+        scrollTop:0
       }
     },
     computed: {},
@@ -89,7 +89,7 @@
       this.$nextTick(function(){
         if (that.isInisWechatOrAppFlag){
           let obj = {
-            albumId:getQuery('albumId'),
+            albumId:getQuery('albumId')|| 0,
             sort:'0',
             sortNo:getQuery('sortNo') || '0'
           }
@@ -103,6 +103,9 @@
       })
     },
     methods: {
+      goAlbumId(){
+        window.location.href = '/collect.html?albumId=' + getQuery('albumId') || 0
+      },
       closeAudioList(){
         this.audioListFlag = false
         $('body').css({

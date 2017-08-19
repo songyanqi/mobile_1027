@@ -40,6 +40,16 @@ iosInterface.getShareInfo = function () {
 iosInterface.refreshPreviousPageData = function () {
     backNewData.$children[0].appUpData()
 };
+//state 0表示暂停，1表示播放
+iosInterface.getAudioState = function(index,albumId,state) {
+    if (window.musicDetail){
+        window.musicDetail.$children.map(function(i) {
+            if (i.childrenName =='musicDetail') {
+                i.index=index
+            }
+        })
+    }
+}
 /**
  * 初始化头部
  */
