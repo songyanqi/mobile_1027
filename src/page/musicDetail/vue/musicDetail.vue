@@ -9,7 +9,7 @@
       <div class="text" v-if='musicList[index] && musicList[index].music' v-text='musicList[index].music'></div>
       <div class="range">
         <div class="gray"></div>
-        <div v-if='musicList[index] && musicList[index].time' class="red" :style='{width: (playTime/musicList[index].time*100).toFixed(2) + "%"}'></div>
+        <div v-if='musicList[index] && musicList[index].time' class="red" :style='{width: playTime/musicList[index].time*100 + "%"}'></div>
       </div>
       <div class="time">
         <div v-text='timeFormat(playTime)'></div>
@@ -44,15 +44,15 @@
           <div class="mi_right" @click='dialog'><img src="//pic.davdian.com/free/2017/08/16/sorting.png" alt=""></div>
         </div>
         <div class="mask_banner">
-
-          <div class="mask_padding mask_list" v-for='(item, i) in musicList' @click='playAudio(i)'>
-            <div class="list_name" v-text='item.music' :class='{list_name_select: i==index}'></div>
-            <div class="list_img">
-              <img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt="" v-if='i!=index'>
-              <img src="//pic.davdian.com/free/2017/08/18/playing.png" alt="" v-if='i==index' class='list_img_select'>
+          <div class='mask_banner_content'>
+            <div class="mask_padding mask_list" v-for='(item, i) in musicList' @click='playAudio(i)'>
+              <div class="list_name" v-text='item.music' :class='{list_name_select: i==index}'></div>
+              <div class="list_img">
+                <img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt="" v-if='i!=index'>
+                <img src="//pic.davdian.com/free/2017/08/18/playing.png" alt="" v-if='i==index' class='list_img_select'>
+              </div>
             </div>
           </div>
-          
         </div>
         <div class="mask_bottom" @click='closeAudioList'>关闭</div>
       </div>
@@ -71,17 +71,18 @@
       return {
         isInisWechatOrAppFlag:isInisWechatOrApp(),
         audioListFlag: false,
-        index: 0,
+        index: getQuery('sortNo') || 0,
         musicList:[],
         playTime:0,
         isPlay:false,
         playTimer: null,
         allAudio: null,
+        getDataFlag:true,
+        scrollTop:0,
       }
     },
     computed: {},
     created: function () {
-
     },
     mounted: function () {
       var that =  this
@@ -89,14 +90,12 @@
         if (that.isInisWechatOrAppFlag){
           let obj = {
             albumId:getQuery('albumId'),
-            pageIndex:'1',
-            // musicId:'',
-            // pageSize:'20'
+            sort:'0',
+            sortNo:getQuery('sortNo') || '0'
           }
           api('/api/mg/content/music/getListData', obj).then(function(data){
-            console.log('data-->', data)
-            that.musicList = data.data.dataList
-            that.allAudio = data.data.page.count
+            that.musicList = that.musicList.concat(data.data.dataList)
+            that.allAudio = data.data.attr.count
           })
         }else {
           console.log(456)
@@ -106,9 +105,42 @@
     methods: {
       closeAudioList(){
         this.audioListFlag = false
+        $('body').css({
+          'height':'auto',
+          "overflow":"hidden"
+        });
       },
       openAudioList(){
+        var that = this
         this.audioListFlag = true
+        $('body').css({
+          'height':document.documentElement.clientHeight - 105 + "px",
+          "overflow":"hidden"
+        });
+        setTimeout(function(){
+          $('.mask_banner').get(0).scrollTop = that.scrollTop
+          $('.mask_banner').scroll(function(e){
+            that.scrollTop = $('.mask_banner').get(0).scrollTop
+            if ($('.mask_banner').get(0).scrollTop<1){
+              $('.mask_banner').get(0).scrollTop = 1
+              if (that.musicList[0].sortNo == 0){
+                // dialog.info('已经是第一首了')
+              }else {
+                that.getData(-1,that.musicList[0].sortNo, false)
+              }
+            }
+            if ($('.mask_banner').get(0).scrollTop > $('.mask_banner_content').height()-$('.mask_banner').height()-1){
+              $('.mask_banner').get(0).scrollTop = $('.mask_banner_content').height()-$('.mask_banner').height()-1
+
+              if (that.musicList[that.musicList.length-1].sortNo == that.allAudio-1){
+                // dialog.info('已经是最后一首了')
+              } else {
+                that.getData(1,that.musicList[that.musicList.length-1].sortNo, false)
+              }
+            }
+            console.log(that.scrollTop)
+          })
+        },300)
       },
       dialog(){
         dialog.alert('打开大V店APP，体验更佳')
@@ -120,16 +152,27 @@
       },
       playAudio(index){
         var that = this
-        
-        //不传index代表点击当前歌曲
         console.log(index)
-        if (index == -1){
-          dialog.info('已经是第一首了')
-          return
-        } 
-        if (index == that.allAudio){
-          dialog.info('已经是最后一首了')
-          return
+        //不传index代表点击当前歌曲
+        if (index !=-100){
+          if (index==-1){
+            if (that.musicList[0].sortNo == 0){
+              dialog.info('已经是第一首了')
+              return
+            }else {
+              that.getData(-1,that.musicList[that.index].sortNo, true)
+              return
+            }
+          }
+          if (index==that.musicList.length){
+            if (that.musicList[that.musicList.length-1].sortNo == that.allAudio-1){
+              dialog.info('已经是最后一首了')
+              return
+            } else {
+              that.getData(1,that.musicList[that.index].sortNo, true)
+              return
+            }
+          }
         }
         if (that.playTimer){
           clearInterval(that.playTimer)
@@ -142,6 +185,8 @@
           $('.allAudio').get(0).src = that.musicList[that.index].fileLink
           $('.allAudio').get(0).play()
           $('.allAudio').get(0).onloadedmetadata = function(){
+            that.musicList[that.index].time = $('.allAudio').get(0).duration
+            console.log(that.musicList[that.index].time)
             that.playTimer = setInterval(function(){
               that.playTime = parseInt(that.playTime) + 1
             },1000)
@@ -160,9 +205,10 @@
             $('.allAudio').get(0).currentTime = that.playTime;
             $('.allAudio').get(0).play()
             $('.allAudio').get(0).onloadedmetadata = function(){
+              that.musicList[that.index].time = $('.allAudio').get(0).duration
+              console.log(that.musicList[that.index].time)
               that.playTimer = setInterval(function(){
                 that.playTime = parseInt(that.playTime) + 1
-                console.log(that.playTime, 1, that.playTime+1)
               },1000)
             }
             $('.allAudio').get(0).onended = function () {
@@ -172,8 +218,37 @@
           }
         }
       },
+      getData(sort,sortNo, flag){
+        var that = this
+        if (that.isInisWechatOrAppFlag && that.getDataFlag){
+          that.getDataFlag = false
+          let obj = {
+            albumId:getQuery('albumId'),
+            sort:sort,
+            sortNo:sortNo
+          }
+          api('/api/mg/content/music/getListData', obj).then(function(data){
+            that.getDataFlag = true
+            if (data && data.data && data.data.dataList){
+              if (sort == -1){
+                that.musicList = data.data.dataList.concat(that.musicList)
+                // console.log(that.musicList, data.data.dataList)
+                that.index = that.index + data.data.dataList.length
+              }else {
+                that.musicList = that.musicList.concat(data.data.dataList)
+                // console.log(that.musicList, data.data.dataList)
+              }
+              if (flag){
+                that.playAudio(that.index + 1)
+              }
+            }
+          })
+        }else {
+          console.log(456)
+        }
+      },
       timeFormat(t){
-        let time = parseInt(t)
+        let time = parseInt(t) + 1
         if (time<60){
           if (time<10){
             time = '0' + time
@@ -213,11 +288,10 @@
     }
   }
 </script>
-<style scoped>
+<style scoped lang='sass'>
   .big_img img{
     width: 3.75rem;
     height: 3.75rem;
-
   }
   .text{
     height: 0.51rem;
