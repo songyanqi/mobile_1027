@@ -37,8 +37,13 @@
       }
     },
     mounted:function () {
-//      var result=require('../json/collect.json');
-//      this.data=result.data.feedList;
+      var result=require('../json/collect.json');
+      this.data=result.data.feedList;
+      this.isFree=result.data.attr.isFree;
+      this.income=result.data.attr.income;
+      this.price=result.data.attr.price;
+      this.isSub=result.data.attr.isSub;
+      this.userStatus=result.visitor_status;
       this.getData();
       this.scro();
     },

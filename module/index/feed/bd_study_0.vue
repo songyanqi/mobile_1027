@@ -1,10 +1,10 @@
 <template>
-  <div class="con">
+  <div class="con" @click="go_landing">
     <div class="big_img">
       <div class="list_line"></div>
       <div class="list_date">免费学习专区</div>
       <div class="list_line"></div>
-      <div class="fixed" @click=""><div style="color:#333333;font-size: 12px;">更多</div><div class="arrow"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div></div>
+      <div class="fixed"><div style="color:#333333;font-size: 12px;">更多</div><div class="arrow"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div></div>
     </div>
     <div class="all">
       <div class="list_all" v-for="item in dataList">
@@ -16,7 +16,8 @@
               <div class="name" v-text="item.album"></div>
             </div>
           </div>
-          <div class="list_right" @click="music_detail(item.command.musicContent)">
+          <div class="list_right" @click.stop="music_detail(item.albumId,item.sortNo)">
+            <div class="disable" @click="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
             <div class="mask_stop"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
             <div class="mask_play"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
             <div class="circle_mask"></div>
@@ -42,11 +43,18 @@
      }
     },
     methods:{
-      music_detail(link){
+      go_landing(){
+        if(this.isApp){
+
+        }else{
+          window.location.href="/landingPage.html";
+        }
+      },
+      music_detail(albumId,sortNo){
           if(this.isApp){
 
           }else{
-            window.location.href=link;
+            window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
           }
       }
     }
