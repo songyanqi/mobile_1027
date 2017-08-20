@@ -380,7 +380,9 @@ new Vue({
       if (ua.isWeiXin() || ua.isDvdApp()) {
         share.callShare();
       } else {
-        popup.alert('请在微信环境下分享');
+        popup.alert({
+          text: '请在微信环境下分享',         // 文本（支持传入html。有则显示。）
+        });
       }
     }
   },
