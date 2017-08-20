@@ -21,10 +21,10 @@ new Vue({
   },
   data() {
     return {
+      rule_form:false,
       response: null,
       login_form: true,  //登录显示
-      isApp: ua.isDvdApp(),
-      rule_form:false
+      isApp: ua.isDvdApp()
     }
   },
   computed: {},
