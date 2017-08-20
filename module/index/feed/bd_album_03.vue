@@ -48,7 +48,8 @@
         </div>
       </div>
     </div>
-    <div v-if="!flag">
+
+    <div v-if="!flag" v-html="dataList.recommendData">
 
     </div>
 
