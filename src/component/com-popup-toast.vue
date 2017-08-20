@@ -73,7 +73,7 @@
     max-width: $pageMaxWidth;
     height: 100%;
     display: table;
-    z-index: 9;
+    z-index: 99;
     line-height: 1;
     .cell {
       display: table-cell;

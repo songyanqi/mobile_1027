@@ -26,17 +26,19 @@
       </div>
     </div>
     <!--邀请码规则-->
-    <div v-show="rule_form" class="invit_rule_wrap">
-      <div class="invit_rule">
-        <div>邀请码规则</div>
-        <div>
-          <p>1. 每个大V店会员都有一个专属邀请码，您可以向身边的大V店会员索取邀请码；</p>
-          <p>2. 邀请码为6位数字+字母组合，或邀请人大V店账户手机号；</p>
-          <p>3. 绑定邀请人后，您在大V店APP及果敢时代大V店公众号内都将访问邀请人店铺；</p>
-          <p>4. 一个用户只能有一个邀请人，在您绑定邀请人后，可在7天内更换一次邀请人。</p>
+      <div v-if="rule_form" class="com-popup-base">
+        <div class="table-cell">
+          <div v-show="rule_form" class="box">
+            <div>邀请码规则</div>
+            <div>
+              <p>1. 每个大V店会员都有一个专属邀请码，您可以向身边的大V店会员索取邀请码；</p>
+              <p>2. 邀请码为6位数字+字母组合，或邀请人大V店账户手机号；</p>
+              <p>3. 绑定邀请人后，您在大V店APP及果敢时代大V店公众号内都将访问邀请人店铺；</p>
+              <p>4. 一个用户只能有一个邀请人，在您绑定邀请人后，可在7天内更换一次邀请人。</p>
+            </div>
+            <div v-on:click="close_what_invite"></div>
+          </div>
         </div>
-        <div v-on:click="close_what_invite"></div>
-      </div>
     </div>
   </div>
 

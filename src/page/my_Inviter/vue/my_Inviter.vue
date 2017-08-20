@@ -23,6 +23,21 @@
       <div v-else class="changeBtn" @click="modify_inviter">{{btnName}}</div>
       <div class="change_time" v-if="response.data && response.data.editTime && show_edntime">{{response.data.editTime}}后不可再修改</div>
     </div>
+
+    <!--什么是邀请码-->
+    <div v-if="show_code_input" class="invitation_info" :class="{'bottom':info_bottom}">
+      <div>
+        <span>-</span>
+        什么是邀请码？
+        <span>-</span>
+      </div>
+      <div>
+        <p>1. 每个大V店会员都有一个专属邀请码，您可以向身边的大V店会员索取邀请码；</p>
+        <p>2. 邀请码为6位数字+字母组合，或邀请人大V店账户手机号；</p>
+        <p>3. 绑定邀请人后，您在大V店APP及果敢时代大V店公众号内都将访问邀请人店铺；</p>
+        <p>4. 一个用户只能有一个邀请人，在您绑定邀请人后，可在7天内更换一次邀请人。</p>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -40,7 +55,8 @@
         btnName: '',
         show_edntime: true,
         mobile: '',
-        inviteCode: ''
+        inviteCode: '',
+        info_bottom:false
       }
     },
     computed: {},
@@ -91,6 +107,7 @@
         that.btnName = '确认修改';
         that.$emit("titlename", "修改邀请人");
         that.mobile = '';
+        that.info_bottom = false;
       },
       /*验证*/
       verification: function () {
@@ -107,6 +124,9 @@
             } else {
               that.my_inviterPage = true; //显示我的邀请人
               that.trun_grey = false;  //按钮可用
+              if(window.screen.height < 580){
+                that.info_bottom = true;
+              }
             }
             that.inviteCode = that.mobile;
           },
@@ -337,6 +357,49 @@
     width: 228px;
     margin: 20px auto 0;
     line-height: 17px;
+  }
+
+  .invitation_info {
+    font-size: 12px;
+    font-weight: 300;
+    padding: 0 20px;
+    color: #999999;
+    line-height: 17px;
+    position: fixed;
+    bottom: 15px;
+    margin: 50px auto 0;
+    left:0;
+    right:0;
+    max-width: 467px;
+  }
+  .invitation_info.bottom{
+    position: static;
+  }
+
+  .invitation_info div:nth-of-type(1) {
+    text-align: center;
+  }
+
+  .invitation_info div:nth-of-type(1) span:nth-of-type(1) {
+    transform: scale(30, 0.5);
+    display: inline-block;
+    position: relative;
+    right: 45px;
+  }
+
+  .invitation_info div:nth-of-type(1) span:nth-of-type(2) {
+    transform: scale(30, 0.5);
+    display: inline-block;
+    position: relative;
+    left: 37px;
+  }
+
+  .invitation_info p {
+    margin-top: 8px;
+  }
+
+  .invitation_info p:nth-of-type(1) {
+    margin-top: 16px;
   }
 </style>
 

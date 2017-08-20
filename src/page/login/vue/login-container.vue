@@ -60,17 +60,20 @@
       </div>
 
       <!--邀请码规则-->
-      <div v-if="rule_form" class="invit_rule_wrap">
-        <div class="invit_rule">
-          <div>邀请码规则</div>
-          <div>
-            <p>1. 每个大V店会员都有一个专属邀请码，您可以向身边的大V店会员索取邀请码；</p>
-            <p>2. 邀请码为6位数字+字母组合，或邀请人大V店账户手机号；</p>
-            <p>3. 绑定邀请人后，您在大V店APP及果敢时代大V店公众号内都将访问邀请人店铺；</p>
-            <p>4. 一个用户只能有一个邀请人，在您绑定邀请人后，可在7天内更换一次邀请人。</p>
-          </div>
-          <div v-on:click="close_what_invite"></div>
-        </div>
+    </div>
+
+    <div v-if="rule_form" class="com-popup-base">
+      <div class="table-cell">
+        <div v-show="rule_form" class="box">
+              <div>邀请码规则</div>
+              <div>
+                <p>1. 每个大V店会员都有一个专属邀请码，您可以向身边的大V店会员索取邀请码；</p>
+                <p>2. 邀请码为6位数字+字母组合，或邀请人大V店账户手机号；</p>
+                <p>3. 绑定邀请人后，您在大V店APP及果敢时代大V店公众号内都将访问邀请人店铺；</p>
+                <p>4. 一个用户只能有一个邀请人，在您绑定邀请人后，可在7天内更换一次邀请人。</p>
+              </div>
+              <div v-on:click="close_what_invite"></div>
+            </div>
       </div>
     </div>
 
@@ -180,10 +183,13 @@
                 popup.toast(response.data.msg);
                 that.loginBtn = "登录";
               } else {
-                /*登录成功后跳转到refer页*/
                 var referer = that.getQueryString("referer");
-                debugger;
-                location.href = referer;
+                if (response.data.hasSellerRel || response.visitor_status == 3) {
+                  /*登录成功后跳转到refer页*/
+                  location.href = referer;
+                } else {
+                  that.promptconfirm();
+                }
               }
             },
             error(error) {
@@ -319,6 +325,27 @@
           that.password = '';
         });
       },
+      /*修改邀请人*/
+      modify_inviter: function (code) {
+        var that = this;
+        $.ajax({
+          url: '/api/mg/auth/inviter/edit?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: strSign({"inviteCode": code}),
+          success(response) {
+            if (response.code) {
+              popup.toast(response.data.msg);
+              that.promptconfirm();
+            } else {
+              location.href = response.shop_url;
+            }
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+          }
+        });
+      },
       /*什么是邀请码*/
       what_invite_code: function () {
         var that = this;
@@ -395,9 +422,45 @@
         var r = window.location.search.substr(1).match(reg);
         if (r != null) return unescape(r[2]);
         return null;
+      },
+      /*没有绑定关系的邀请码弹框*/
+      promptconfirm: function () {
+        var that = this;
+        var input_html = '<div class="text">\n' +
+          '<input type="text" placeholder="请输入邀请码" id="inviteCode" class="input" style="width: 2.4rem;"><div id="invite_boxs" class="invite_boxs top"><div class="invite_title" onclick="stren_invite_boxs()">什么是邀请码？<i class="icon"></i></div><div class="invite_info"><p>1. 每个大V店会员都有一个专属邀请码，您可以向身边的大V店会员索取邀请码；</p>\n' +
+          '<p>2. 邀请码为6位数字+字母组合，或邀请人大V店账户手机号；</p>\n' +
+          '<p>3. 绑定邀请人后，您在大V店APP及果敢时代大V店公众号内都将访问邀请人店铺；</p>\n' +
+          '<p>4. 一个用户只能有一个邀请人，在您绑定邀请人后，可在7天内更换一次邀请人。</p></div></div></div>';
+        popup.confirm({
+          title: '<span style="color:#666666;font-size: 14px;">邀请码</span>',            // 标题（支持传入html。有则显示。）
+          text: input_html,             // 文本（支持传入html。有则显示。）
+          okBtnTitle: '提交',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+          cancelBtnTitle: '跳过',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+          placeholder: '请输入邀请码',
+          okBtnCallback() {     // 确定按钮点击回调（有则执行该回调）
+            that.modify_inviter(document.getElementById('inviteCode').value);
+          },
+          cancelBtnCallback() {    // 取消按钮点击回调（有则执行该回调）
+            var referer = that.getQueryString("referer");
+            /*登录成功后跳转到refer页*/
+            location.href = referer;
+          },
+        });
       }
     }
   }
+
+  function stren_invite_boxs() {
+    var invite_boxs = document.getElementById('invite_boxs');
+    if (invite_boxs.className.match(new RegExp('(\\s|^)' + 'top' + '(\\s|$)'))) {
+      var reg = new RegExp('(\\s|^)' + 'top' + '(\\s|$)');
+      invite_boxs.className = invite_boxs.className.replace(reg, ' ');
+    } else {
+      invite_boxs.className += " " + "top";
+    }
+  }
+
+  window.stren_invite_boxs = stren_invite_boxs;
 </script>
 <style lang="sass" lang="scss" rel="stylesheet/scss" scoped>
   .inputbox {
@@ -487,6 +550,7 @@
   .inputbox.check_input .get_check_code.disable {
     color: #D5D5D5;
   }
+
   .loginbtn {
     width: 73.3333%;
     height: 40px;
@@ -589,31 +653,46 @@
     padding-top: 20px;
   }
 
-  .invit_rule_wrap {
+  // 动画
+  @keyframes com-alert-animation {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .com-popup-base {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 99;
-    background-color: rgba(0, 0, 0, 0.51);
+    width: 100%;
     max-width: 640px;
-    margin: 0 auto;
+    height: 100%;
+    display: table;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    line-height: 1;
   }
-
-  .invit_rule {
+  .com-popup-base .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .com-popup-base .table-cell .box {
+    display: inline-block;
+    border-radius: 0.04rem;
+    animation: com-alert-animation 0.5s;
     width: 73.333%;
     min-height: 200px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    text-align: center;
     background-color: #FFFFFF;
-    border-radius: 5px;
     padding: 0 10px 15px;
   }
 
-  .invit_rule div:nth-of-type(1) {
+
+
+  .com-popup-base .table-cell .box div:nth-of-type(1) {
     font-size: 14px;
     color: #666666;
     text-align: center;
@@ -621,7 +700,7 @@
     position: relative;
   }
 
-  .invit_rule div:nth-of-type(2) {
+  .com-popup-base .table-cell .box div:nth-of-type(2) {
     font-size: 14px;
     color: #333333;
     text-align: left;
@@ -629,7 +708,7 @@
     padding-top: 5px;
   }
 
-  .invit_rule div:nth-of-type(3) {
+  .com-popup-base .table-cell .box div:nth-of-type(3) {
     position: absolute;
     right: 0;
     top: 0;
@@ -642,12 +721,12 @@
     background-position: 10px 10px;
   }
 
-  .invit_rule div:nth-of-type(2) p {
+  .com-popup-base .table-cell .box div:nth-of-type(2) p {
     display: inline-block;
     margin-top: 10px;
   }
 
-  .invit_rule div:nth-of-type(1):after {
+  .com-popup-base .table-cell .box div:nth-of-type(1):after {
     content: "";
     display: block;
     position: absolute;
@@ -664,5 +743,56 @@
 <style>
   body, html {
     background-color: #FFFFFF;
+  }
+
+  .invite_boxs .invite_title {
+    font-size: 12px;
+    color: #666666;
+    margin-top: 5px;
+  }
+
+  .invite_boxs .invite_title .icon {
+    display: inline-block;
+    vertical-align: 0;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid #999;
+    border-right: 1px solid #999;
+    margin-right: 10px;
+    background: none;
+    position: relative;
+    left: 2px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    bottom: -2px;
+  }
+
+  .invite_boxs.top .invite_title .icon {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    bottom: 2px;
+  }
+
+  .invite_boxs .invite_info {
+    font-size: 12px;
+    color: #999999;
+    text-align: left;
+    overflow: hidden;
+    font-weight: 300;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    max-height: 300px;
+  }
+
+  .invite_boxs.top .invite_info {
+    max-height: 0;
+  }
+
+  .invite_boxs .invite_info p {
+    line-height: 17px;
+    margin-top: 8px;
   }
 </style>

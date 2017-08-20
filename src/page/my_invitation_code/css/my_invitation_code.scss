@@ -153,5 +153,89 @@
 .body{
   padding-bottom: 90px;
 }
+// 动画
+@keyframes com-alert-animation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.com-popup-base {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 640px;
+  height: 100%;
+  display: table;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+  line-height: 1;
+}
+.com-popup-base .table-cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.com-popup-base .table-cell .box {
+  display: inline-block;
+  border-radius: 0.04rem;
+  animation: com-alert-animation 0.5s;
+  width: 73.333%;
+  min-height: 200px;
+  position: relative;
+  text-align: center;
+  background-color: #FFFFFF;
+  padding: 0 10px 15px;
+}
 
+
+
+.com-popup-base .table-cell .box div:nth-of-type(1) {
+  font-size: 14px;
+  color: #666666;
+  text-align: center;
+  padding: 12px 0;
+  position: relative;
+}
+
+.com-popup-base .table-cell .box div:nth-of-type(2) {
+  font-size: 14px;
+  color: #333333;
+  text-align: left;
+  line-height: 20px;
+  padding-top: 5px;
+}
+
+.com-popup-base .table-cell .box div:nth-of-type(3) {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  width: 36px;
+  height: 36px;
+  background-image: url("../img/clearInput.png");
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+}
+
+.com-popup-base .table-cell .box div:nth-of-type(2) p {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.com-popup-base .table-cell .box div:nth-of-type(1):after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -50%;
+  width: 200%;
+  height: 1px;
+  background: rgba(216, 216, 216, 0.51);
+  -webkit-transform: scale(0.5);
+  bottom: 0;
+  z-index: 1;
+}
 
