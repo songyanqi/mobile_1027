@@ -1,80 +1,75 @@
 <template>
   <div>
-    <com-wx-notopen></com-wx-notopen>
-    <div v-if='isInisWechatOrAppFlag'>
-      <audio preload="auto" class='allAudio'></audio>
-      <div class="big_img" v-if='musicList[index] && musicList[index].imageUrl'>
-        <img :src="musicList[index].imageUrl" alt="">
+    <audio preload="auto" class='allAudio'></audio>
+    <div class="big_img" v-if='musicList[index] && musicList[index].imageUrl'>
+      <img :src="musicList[index].imageUrl" alt="">
+    </div>
+    <div class="text" v-if='musicList[index] && musicList[index].music' v-text='musicList[index].music'></div>
+    <div class="range">
+      <div class="gray"></div>
+      <div v-if='musicList[index] && musicList[index].time' class="red" :style='{width: playTime/musicList[index].time*100 + "%"}'></div>
+    </div>
+    <div class="time">
+      <div v-text='timeFormat(playTime)'></div>
+      <div v-if='musicList[index] && musicList[index].time' v-text='timeFormat(musicList[index].time)'></div>
+    </div>
+    <div class="btn">
+      <div class="btn1"><img src="//pic.davdian.com/free/2017/08/16/time.png" alt="" @click='dialog'></div>
+      <div class="btn2"><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt="" @click='playAudio(index-1)'></div>
+      <div class="btn3" >
+        <img v-if='!isPlay' src="//pic.davdian.com/free/2017/08/16/playBtn.png" alt="" @click='playAudio(-100)'>
+        <img v-if='isPlay' src="//pic.davdian.com/free/2017/08/18/timeOut.png" alt="" @click='playAudio(-100)'>
       </div>
-      <div class="text" v-if='musicList[index] && musicList[index].music' v-text='musicList[index].music'></div>
-      <div class="range">
-        <div class="gray"></div>
-        <div v-if='musicList[index] && musicList[index].time' class="red" :style='{width: playTime/musicList[index].time*100 + "%"}'></div>
+      <div class="btn4"><img src="//pic.davdian.com/free/2017/08/16/combinedShape.png" alt="" @click='playAudio(index+1)'></div>
+      <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
+    </div>
+    <div class="look_more" @click='goAlbumId'>
+      <div class="look_count">查看合辑 (<span v-if='musicList[index]  && musicList[index].sortNo' v-text='parseInt(musicList[index].sortNo) + 1'></span>/<span v-text='allAudio'></span>)</div>
+      <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
+    </div>
+    <div style="height: 0.1rem;background: #F8F7F7;"></div>
+    <div class="bottom_text">
+      父母不断重复唠叨，是因为孩子没有按自己说的去做。
+      显而易见，这种无效的沟通方式，不仅无法达到父母的初衷，又会促使孩子与自己对抗。
+      每个人都是只有内心认可，才能心甘情愿地去做事。如果父母没有足够的理由说服孩子，他也不可能完全听从。所以当孩子表现得总是不听话，父母就要想到：自己是否有足够的理由说服孩子，或者自己的要求是否真的不容质疑。
+    </div>
+    <div class="mask" v-if='audioListFlag'></div>
+    <div class="mask_div" v-if='audioListFlag'>
+      <div class="mask_top mask_padding">
+        <div class="mi_left" @click='dialog'><img src="//pic.davdian.com/free/2017/08/16/playOrder.png" alt=""></div>
+        <div class="play" @click='dialog'>顺序播放</div>
+        <div class="sort" @click='dialog'>排序</div>
+        <div class="mi_right" @click='dialog'><img src="//pic.davdian.com/free/2017/08/16/sorting.png" alt=""></div>
       </div>
-      <div class="time">
-        <div v-text='timeFormat(playTime)'></div>
-        <div v-if='musicList[index] && musicList[index].time' v-text='timeFormat(musicList[index].time)'></div>
-      </div>
-      <div class="btn">
-        <div class="btn1"><img src="//pic.davdian.com/free/2017/08/16/time.png" alt="" @click='dialog'></div>
-        <div class="btn2"><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt="" @click='playAudio(index-1)'></div>
-        <div class="btn3" >
-          <img v-if='!isPlay' src="//pic.davdian.com/free/2017/08/16/playBtn.png" alt="" @click='playAudio(-100)'>
-          <img v-if='isPlay' src="//pic.davdian.com/free/2017/08/18/timeOut.png" alt="" @click='playAudio(-100)'>
-        </div>
-        <div class="btn4"><img src="//pic.davdian.com/free/2017/08/16/combinedShape.png" alt="" @click='playAudio(index+1)'></div>
-        <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
-      </div>
-      <div class="look_more" @click='goAlbumId'>
-        <div class="look_count">查看合辑 (<span v-if='musicList[index]  && musicList[index].sortNo' v-text='parseInt(musicList[index].sortNo) + 1'></span>/<span v-text='allAudio'></span>)</div>
-        <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
-      </div>
-      <div style="height: 0.1rem;background: #F8F7F7;"></div>
-      <div class="bottom_text">
-        父母不断重复唠叨，是因为孩子没有按自己说的去做。
-        显而易见，这种无效的沟通方式，不仅无法达到父母的初衷，又会促使孩子与自己对抗。
-        每个人都是只有内心认可，才能心甘情愿地去做事。如果父母没有足够的理由说服孩子，他也不可能完全听从。所以当孩子表现得总是不听话，父母就要想到：自己是否有足够的理由说服孩子，或者自己的要求是否真的不容质疑。
-      </div>
-      <div class="mask" v-if='audioListFlag'></div>
-      <div class="mask_div" v-if='audioListFlag'>
-        <div class="mask_top mask_padding">
-          <div class="mi_left" @click='dialog'><img src="//pic.davdian.com/free/2017/08/16/playOrder.png" alt=""></div>
-          <div class="play" @click='dialog'>顺序播放</div>
-          <div class="sort" @click='dialog'>排序</div>
-          <div class="mi_right" @click='dialog'><img src="//pic.davdian.com/free/2017/08/16/sorting.png" alt=""></div>
-        </div>
-        <div class="mask_banner">
-          <div class='mask_banner_content'>
-            <div class="mask_padding mask_list" v-for='(item, i) in musicList' @click='playAudio(i)'>
-              <div class="list_name" v-text='item.music' :class='{list_name_select: i==index}'></div>
-              <div class="list_img">
-                <img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt="" v-if='i!=index'>
-                <img src="//pic.davdian.com/free/2017/08/18/playing.png" alt="" v-if='i==index' class='list_img_select'>
-              </div>
-            </div>
-            <div v-if='musicListBlock'>
-              <div class="mask_padding1 mask_list1"  v-for='(item, i) in musicListBlock'></div>
+      <div class="mask_banner">
+        <div class='mask_banner_content'>
+          <div class="mask_padding mask_list" v-for='(item, i) in musicList' @click='playAudio(i)'>
+            <div class="list_name" v-text='item.music' :class='{list_name_select: i==index}'></div>
+            <div class="list_img">
+              <img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt="" v-if='i!=index'>
+              <img src="//pic.davdian.com/free/2017/08/18/playing.png" alt="" v-if='i==index' class='list_img_select'>
             </div>
           </div>
+          <div v-if='musicListBlock'>
+            <div class="mask_padding1 mask_list1"  v-for='(item, i) in musicListBlock'></div>
+          </div>
         </div>
-        <div class="mask_bottom" @click='closeAudioList'>关闭</div>
       </div>
+      <div class="mask_bottom" @click='closeAudioList'>关闭</div>
     </div>
   </div>
 </template>
 <script>
-  import { getQuery, isInisWechatOrApp } from "../../../../utils/utils.es6";
+  import { getQuery } from "../../../../utils/utils.es6";
   import api from "../../../../utils/api.es6"
   import util from "../../../../utils/utils.es6";
   import dialog from "../../../../utils/dialog.es6";
   // import wx from "../../../../utils/WXShare.es6"
-  import comWxNotopen from '../../../component/com-wx-notopen.vue'
   import native from '../../../common/js/module/native.js'
   // import common from '../../../common/js/common.js'
   export default {
     data: function () {
       return {
-        isInisWechatOrAppFlag:isInisWechatOrApp(),
         audioListFlag: false,
         index: 0,
         musicList:[],
@@ -107,31 +102,27 @@
     mounted: function () {
       var that =  this
       this.$nextTick(function(){
-        if (that.isInisWechatOrAppFlag){
-          let obj = {
-            albumId:getQuery('albumId')|| 0,
-            sort:'0',
-            sortNo:getQuery('sortNo') || '0'
-          }
-          api('/api/mg/content/music/getListData', obj).then(function(data){
-            if (data.code ==0){
-              if (data.data && data.data.dataList){
-                that.musicList = that.musicList.concat(data.data.dataList)
-                that.allAudio = data.data.attr.count
-              } else {
-                dialog.alert('接口返回feedlist数据为null')
-              }
-            } else {
-              if (data.data && data.data.msg){
-                dialog.alert('code='+data.code + ';msg='+data.data.msg)
-              } else {
-                dialog.alert('code='+data.code)
-              }
-            }
-          })
-        }else {
-          console.log(456)
+        let obj = {
+          albumId:getQuery('albumId')|| 0,
+          sort:'0',
+          sortNo:getQuery('sortNo') || '0'
         }
+        api('/api/mg/content/music/getListData', obj).then(function(data){
+          if (data.code ==0){
+            if (data.data && data.data.dataList){
+              that.musicList = that.musicList.concat(data.data.dataList)
+              that.allAudio = data.data.attr.count
+            } else {
+              dialog.alert('接口返回feedlist数据为null')
+            }
+          } else {
+            if (data.data && data.data.msg){
+              dialog.alert('code='+data.code + ';msg='+data.data.msg)
+            } else {
+              dialog.alert('code='+data.code)
+            }
+          }
+        })
       })
     },
     methods: {
@@ -260,7 +251,7 @@
       },
       getData(sort,sortNo, flag){
         var that = this
-        if (that.isInisWechatOrAppFlag && that.getDataFlag){
+        if (that.getDataFlag){
           console.log('hello')
           that.getDataFlag = false
           let obj = {
@@ -338,7 +329,6 @@
       },
     },
     components:{
-      comWxNotopen
     }
   }
 </script>
