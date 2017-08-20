@@ -163,7 +163,6 @@
                 that.getData(1,that.musicList[that.musicList.length-1].sortNo, false)
               }
             }
-            console.log(that.scrollTop)
           })
         },300)
       },
@@ -177,7 +176,6 @@
       },
       playAudio(index){
         var that = this
-        console.log(index)
         //不传index代表点击当前歌曲
         if (index !=-100){
           if (index==-1){
@@ -211,7 +209,6 @@
           $('.allAudio').get(0).play()
           $('.allAudio').get(0).onloadedmetadata = function(){
             that.musicList[that.index].time = $('.allAudio').get(0).duration
-            console.log(that.musicList[that.index].time)
             that.playTimer = setInterval(function(){
               that.playTime = parseInt(that.playTime) + 1
             },1000)
@@ -231,7 +228,6 @@
             $('.allAudio').get(0).play()
             $('.allAudio').get(0).onloadedmetadata = function(){
               that.musicList[that.index].time = $('.allAudio').get(0).duration
-              console.log(that.musicList[that.index].time)
               that.playTimer = setInterval(function(){
                 that.playTime = parseInt(that.playTime) + 1
               },1000)
@@ -246,6 +242,7 @@
       getData(sort,sortNo, flag){
         var that = this
         if (that.isInisWechatOrAppFlag && that.getDataFlag){
+          console.log('hello')
           that.getDataFlag = false
           let obj = {
             albumId:getQuery('albumId'),
@@ -253,12 +250,10 @@
             sortNo:sortNo
           }
           api('/api/mg/content/music/getListData', obj).then(function(data){
-            that.getDataFlag = true
             if (data.code ==0){
               if (data && data.data && data.data.dataList){
                 if (sort == -1){
                   that.musicList = data.data.dataList.concat(that.musicList)
-                  // console.log(that.musicList, data.data.dataList)
                   if (flag){
                     that.index = that.index + data.data.dataList.length-2
                   }else {
@@ -267,22 +262,23 @@
                   
                 }else {
                   that.musicList = that.musicList.concat(data.data.dataList)
-                  // console.log(that.musicList, data.data.dataList)
                 }
                 if (flag){
                   that.playAudio(that.index + 1)
                 }
               }
-            } else {
+            } else { 
               if (data.data && data.data.msg){
                 dialog.alert('code='+data.code + ';msg='+data.data.msg)
               } else {
                 dialog.alert('code='+data.code)
               }
             }
+            setTimeout(function(){
+              that.getDataFlag = true
+            },1000)
           })
         }else {
-          that.getDataFlag = true
           console.log(456)
         }
       },

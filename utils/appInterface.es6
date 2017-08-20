@@ -41,14 +41,7 @@ iosInterface.refreshPreviousPageData = function () {
   backNewData.$children[0].appUpData()
 };
 //state 0表示暂停，1表示播放
-iosInterface.getAudioState = function (index, albumId, state) {
-  if (window.musicDetail) {
-    window.musicDetail.$children.map(function (i) {
-      if (i.childrenName == 'musicDetail') {
-        i.index = index
-      }
-    })
-  }
+iosInterface.getAudioState = function (obj) {
   if (window.landingPage) {
     window.landingPage.$children.map(function (item) {
       if (item.name == 'landingPage') {
@@ -56,9 +49,9 @@ iosInterface.getAudioState = function (index, albumId, state) {
           if (item2.childrenName == "feedList") {
             item2.$children.map(function (item3) {
               if (item3.name == "bd_album_content_1") {
-                item3.albumId = albumId;
-                item3.sortNo = index;
-                item3.btnStatus = state;
+                item3.albumId = obj.albumId;
+                item3.sortNo = obj.sortNo;
+                item3.btnStatus = obj.state;
               }
             })
           }
@@ -73,9 +66,9 @@ iosInterface.getAudioState = function (index, albumId, state) {
           if (item2.childrenName == "feedList") {
             item2.$children.map(function (item3) {
               if (item3.name == "bd_album_03") {
-                item3.albumId = albumId;
-                item3.sortNo = index;
-                item3.btnStatus = state;
+                item3.albumId = obj.albumId;
+                item3.sortNo = obj.sortNo;
+                item3.btnStatus = obj.state;
               }
             })
           }
