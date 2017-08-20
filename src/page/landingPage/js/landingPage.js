@@ -24,8 +24,7 @@ window.landingPage=new Vue({
   el: ".app",
   components: {
     'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
-    'landingPage':require('../vue/landing.vue'),
-    'lheader':require('../vue/header.vue')
+    'landingPage':require('../vue/landing.vue')
   },
   data() {
     return {
