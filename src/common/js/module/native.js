@@ -80,7 +80,7 @@ function innerCall(param = {}) {
   if (!param.host || !param.action || !param.v) {
     throw new Error('参数不全');
   }
-
+  console.log(JSON.stringify(param), 1111111)
   // 参数默认值
   param.invalid = param.invalid || function () {
       alert("请升级您的APP");
