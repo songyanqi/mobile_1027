@@ -1,7 +1,7 @@
 <template>
   <div>
     <notopen></notopen>
-    <lheader></lheader>
+    <lheader title="标题" class="top"></lheader>
     <index_feed :data="data"></index_feed>
     <div class="empty"></div>
     <lfooter :income="income" :issub="isSub" :userstatus="userStatus" :albumid="albumId" :price="price"></lfooter>
@@ -14,6 +14,7 @@
   import api from "../../../../utils/api.es6"
   import {getQuery} from '../../../../utils/utils.es6';
   import dialog from '../../../../utils/dialog.es6';
+//  import lheader from '../../../component/com-top-title.vue'
   import lheader from './header.vue'
   import lfooter from'./footer.vue'
   import appInterface from "../../../../utils/appInterface.es6"
@@ -83,5 +84,10 @@
 <style scoped>
   .empty{
     height: 0.49rem;
+  }
+  .top{
+    position: fixed;
+    top: 0;
+    z-index: 999;
   }
 </style>

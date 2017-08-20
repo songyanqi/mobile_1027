@@ -1,9 +1,11 @@
 <template>
-  <div class="header">
-    <div class="head_img" @click="history">
-      <i class="back-arrow"></i>
+  <div class="top">
+    <div class="header">
+      <div class="head_img" @click="history">
+        <i class="back-arrow"></i>
+      </div>
+      <div class="head_title">合辑页</div>
     </div>
-    <div class="head_title">合辑页</div>
   </div>
 </template>
 <script>
@@ -16,9 +18,16 @@
  }
 </script>
 <style scoped>
+  .top{
+    position: fixed;
+    top: 0;
+  }
   .header{
     height: 44px;
     position: relative;
+    width: 3.75rem;
+    background: #fff;
+    z-index: 999;
   }
   .head_img{
     position: absolute;

@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="list">
-        <div class="item" v-for="(item,index) in contentList" @click="go_href(item.albumId,item.sortNo)" >
+        <div class="item" v-for="(item,index) in contentList" @click="go_href.stop(item.albumId,item.sortNo)" >
           <div class="last">上次听到这里 2017-07-11 21:09</div>
           <div class="rea">
             <div class="item_left">
@@ -36,8 +36,8 @@
             </div>
             <div class="item_right" v-if="item.isFree==1">
               <div class="disable" v-if="item.isPlay==0 && isSub==0" @click.stop="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-              <div class="mask_stop" v-if="isSub==1 && item.isPlay==1 && !(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-              <div class="mask_play" v-if="isSub==1 && item.isPlay==1 && (item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+              <div class="mask_stop" v-if="isSub==1 && item.isPlay==1 && !(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+              <div class="mask_play" v-if="isSub==1 && item.isPlay==1 && (item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
@@ -64,11 +64,26 @@
   export default {
       props:["data"],
       mounted:function () {
+        var that = this
         this.dataList=this.data.body.dataList;
         this.contentList=this.data.body.dataList.contentList;
         this.isSub=this.data.body.isSub;
         this.initSortNoIndex();
         this.scro();
+        this.tab_scroll();
+        window.audioPlayHistoryFn = function(obj){
+          console.log(obj.sortNo, obj.date)
+          console.log(that.name);
+        }
+        ////////todo
+
+
+        this.$nextTick(function () {
+          native.Audio.audioPlayHistory({
+            "albumId":this.pageAlbumId,
+            "result":'audioPlayHistoryFn'
+          })
+        });
       },
       data(){
           return {
@@ -87,6 +102,23 @@
           }
       },
       methods:{
+          tab_scroll(){
+
+              var tab=$(".top").offset().top;
+              console.log(tab);
+
+          },
+          go_play(albumId,sortNo){
+            if(this.isApp){
+              //调用app播放器
+                native.Audio.audioPlay({
+                  "sortNo":sortNo,
+                  "albumId":albumId
+                })
+            }else{
+              window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
+            }
+          },
           initSortNoIndex(){
               var that=this;
               this.contentList.map(function (item,index) {
@@ -112,6 +144,10 @@
           go_href(albumId,sortNo){
               if(this.isApp){
                 //调用app播放器
+                native.Audio.goAudioDetail({
+                  "sortNo":sortNo,
+                  "albumId":albumId
+                })
               }else{
                 window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
               }

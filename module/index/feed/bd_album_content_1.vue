@@ -50,8 +50,21 @@
         this.dataList=this.data.body.dataList;
         this.upTime=this.data.body.upTime;
         this.week=this.getLocalTime(this.upTime);
+        this.$nextTick(function () {
+          this.audioLocation();
+        });
       },
       methods:{
+        audioLocation(){
+          if(this.isApp){
+            window.audioLocationFn=function (obj) {
+                window.iosInterface.getAudioState(obj);
+            };
+            native.Audio.audioLocation({
+              "result":audioLocationFn
+            })
+          }
+        },
         stop_info(){
           dialog.alert("订阅后才可收听");
         },
@@ -75,6 +88,10 @@
         go_href(albumId,sortNo){
             if(this.isApp){
               //调app播放器
+              native.Audio.audioPlay({
+                "sortNo":sortNo,
+                "albumId":albumId
+              })
             }else {
               window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
             }
