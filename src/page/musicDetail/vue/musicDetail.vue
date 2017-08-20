@@ -405,38 +405,54 @@
     height: 0.46rem;
     font-size: 0;
     background: #ffffff;
+    position: relative;
   }
   .btn>div{
     display: inline-block;
     vertical-align: top;
+    position: absolute;
+  }
+  .btn1{
+    top: 0.1rem;
+    left: 0.2rem;
   }
   .btn1 img{
     width: 0.26rem;
     height: 0.26rem;
     margin-top:0.1rem;
   }
+  .btn2{
+    top: 0.25rem;
+    left: 0.93rem;
+  }
   .btn2 img{
     width: 0.31rem;
     height: 0.21rem;
-    margin-left:0.47rem;
-    margin-top: 0.13rem;
+  }
+  .btn3{
+    top: 0.11rem;
+    left: 50%;
+    margin-left: -0.23rem;
   }
   .btn3 img{
     height: 0.46rem;
     width: 0.46rem;
-    margin-left: 0.41rem;
+  }
+  .btn4{
+    top: 0.25rem;
+    right: 0.92rem;
   }
   .btn4 img{
     width: 0.3rem;
     height: 0.2rem;
-    margin-left:0.42rem;
-    margin-top: 0.14rem;
+  }
+  .btn5{
+    top: 0.26rem;
+    right: 0.2rem;
   }
   .btn5 img{
     width: 0.23rem;
     height: 0.18rem;
-    margin-left:0.49rem;
-    margin-top: 0.15rem;
   }
   .look_more{
     height: 0.4rem;
