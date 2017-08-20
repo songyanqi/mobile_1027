@@ -62,9 +62,11 @@
 <script>
   import { getQuery, isInisWechatOrApp } from "../../../../utils/utils.es6";
   import api from "../../../../utils/api.es6"
+  import util from "../../../../utils/utils.es6";
   import dialog from "../../../../utils/dialog.es6";
   // import wx from "../../../../utils/WXShare.es6"
   import comWxNotopen from '../../../component/com-wx-notopen.vue'
+  import native from '../../../common/js/module/native.js'
   // import common from '../../../common/js/common.js'
   export default {
     data: function () {
@@ -78,7 +80,8 @@
         playTimer: null,
         allAudio: null,
         getDataFlag:true,
-        scrollTop:0
+        scrollTop:0,
+        isapp: util.utils.isApp()
       }
     },
     computed: {},
@@ -94,8 +97,20 @@
             sortNo:getQuery('sortNo') || '0'
           }
           api('/api/mg/content/music/getListData', obj).then(function(data){
-            that.musicList = that.musicList.concat(data.data.dataList)
-            that.allAudio = data.data.attr.count
+            if (data.code ==0){
+              if (data.data && data.data.dataList){
+                that.musicList = that.musicList.concat(data.data.dataList)
+                that.allAudio = data.data.attr.count
+              } else {
+                dialog.alert('接口返回feedlist数据为null')
+              }
+            } else {
+              if (data.data && data.data.msg){
+                dialog.alert('code='+data.code + ';msg='+data.data.msg)
+              } else {
+                dialog.alert('code='+data.code)
+              }
+            }
           })
         }else {
           console.log(456)
@@ -104,7 +119,14 @@
     },
     methods: {
       goAlbumId(){
-        window.location.href = '/collect.html?albumId=' + getQuery('albumId') || 0
+        if (this.isapp){
+          native.Browser.open({
+            'url': '/collect.html?albumId=' + getQuery('albumId') || 0
+          })
+        } else {
+          window.location.href = '/collect.html?albumId=' + getQuery('albumId') || 0
+        }
+        
       },
       closeAudioList(){
         this.audioListFlag = false
@@ -232,26 +254,35 @@
           }
           api('/api/mg/content/music/getListData', obj).then(function(data){
             that.getDataFlag = true
-            if (data && data.data && data.data.dataList){
-              if (sort == -1){
-                that.musicList = data.data.dataList.concat(that.musicList)
-                // console.log(that.musicList, data.data.dataList)
-                if (flag){
-                  that.index = that.index + data.data.dataList.length-2
+            if (data.code ==0){
+              if (data && data.data && data.data.dataList){
+                if (sort == -1){
+                  that.musicList = data.data.dataList.concat(that.musicList)
+                  // console.log(that.musicList, data.data.dataList)
+                  if (flag){
+                    that.index = that.index + data.data.dataList.length-2
+                  }else {
+                    that.index = that.index + data.data.dataList.length
+                  }
+                  
                 }else {
-                  that.index = that.index + data.data.dataList.length
+                  that.musicList = that.musicList.concat(data.data.dataList)
+                  // console.log(that.musicList, data.data.dataList)
                 }
-                
-              }else {
-                that.musicList = that.musicList.concat(data.data.dataList)
-                // console.log(that.musicList, data.data.dataList)
+                if (flag){
+                  that.playAudio(that.index + 1)
+                }
               }
-              if (flag){
-                that.playAudio(that.index + 1)
+            } else {
+              if (data.data && data.data.msg){
+                dialog.alert('code='+data.code + ';msg='+data.data.msg)
+              } else {
+                dialog.alert('code='+data.code)
               }
             }
           })
         }else {
+          that.getDataFlag = true
           console.log(456)
         }
       },
