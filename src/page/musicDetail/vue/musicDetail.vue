@@ -1,5 +1,7 @@
 <template>
   <div>
+    <lheader class="top" v-if="!isapp"></lheader>
+    <div class="empty" v-if="!isapp"></div>
     <audio preload="auto" class='allAudio'></audio>
     <div class="big_img" v-if='musicList[index] && musicList[index].imageUrl'>
       <img :src="musicList[index].imageUrl" alt="">
@@ -67,6 +69,7 @@
   // import wx from "../../../../utils/WXShare.es6"
   import native from '../../../common/js/module/native.js'
   // import common from '../../../common/js/common.js'
+  import lheader from "./header.vue";
   export default {
     data: function () {
       return {
@@ -330,6 +333,7 @@
       },
     },
     components:{
+      lheader:lheader
     }
   }
 </script>
@@ -609,8 +613,21 @@
     text-align: center;
     color: #333333;
     font-size: 14px;
+    border-top:1px solid #DDDDDD;
   }
   .allAudio{
     height: 0;
+  }
+
+
+  .top{
+    height: 44px;
+    position: fixed;
+    top: 0;
+    background: #fff;
+    z-index: 999;
+  }
+  .empty{
+    height: 44px;
   }
 </style>

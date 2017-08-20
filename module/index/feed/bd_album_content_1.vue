@@ -17,8 +17,8 @@
         </div>
         <div class="right_img">
             <div class="disable" v-if="item.isPlay==0" @click.stop="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-            <div class="mask_stop" v-if="item.isPlay==1 && !(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-            <div class="mask_play" v-if="item.isPlay==1 &&(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+            <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 && !(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+            <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 &&(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
             <div class="circle_mask"></div>
             <div><img :src="item.imageUrl" alt=""></div>
         </div>
@@ -88,7 +88,7 @@
         go_href(albumId,sortNo){
             if(this.isApp){
               //调app播放器
-              native.Audio.audioPlay({
+              native.Audio.goAudioDetail({
                 "sortNo":sortNo,
                 "albumId":albumId
               })
@@ -97,7 +97,17 @@
             }
 
         },
-
+        go_play(albumId,sortNo){
+          if(this.isApp){
+            //调用app播放器
+            native.Audio.audioPlay({
+              "sortNo":sortNo,
+              "albumId":albumId
+            })
+          }else{
+            window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
+          }
+        }
       }
   }
 </script>
