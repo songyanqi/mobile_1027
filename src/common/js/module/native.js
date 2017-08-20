@@ -770,19 +770,62 @@ const native = {
         param: param
       });
     },
+    /**
+     * 功能: H5触发cmd客户端播放暂停音频
+     * 用法:
+     * native.BrowserTouch.audioPlay();
+     */
+    audioPlay(param = {}){
+      call({
+        v:'4.2.0',
+        host: 'AudioPlayClick',
+        action: 'audioPlay',
+        param: param
+      })
+    },
+    /**
+     * 功能: H5触发cmd客户端回调js告诉我们正在播放是哪一条
+     * 用法:
+     * native.BrowserTouch.audioLocation();
+     */
+    audioLocation(param = {}){
+      call({
+        v:'4.2.0',
+        host: 'getPlayAudioLocation',
+        action: 'audioLocation',
+        param: param
+      })
+    },
   },
   /****************************** 12、H5触发cmd命令 ******************************/
   Common: {
     /**
      * 功能: H5触发cmd客户端实现回到上一级页面
      * 用法:
-     * native.BrowserTouch.goBackToRootPage();
+     * native.Common.log();
      */
     log(param = {}) {
       call({
         v: '4.1.0',
         host: 'Common',
         action: 'log',
+        param: param
+      });
+    },
+  },
+
+  /****************************** 12、音频command命令 ****************************/
+  Audio: {
+    /**
+     * 功能: H5触发cmd客户端实现回到上一级页面
+     * 用法:
+     * native.Audio.goAudioDetail();
+     */
+    goAudioDetail(param = {}) {
+      call({
+        v: '4.2.0',
+        host: 'Audio',
+        action: 'goAudioDetail',
         param: param
       });
     },
