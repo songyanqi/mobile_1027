@@ -1,9 +1,11 @@
 <template>
-  <div class="header">
-    <div class="head_img" @click="history">
-      <i class="back-arrow"></i>
+  <div>
+    <div class="header">
+      <div class="head_img" @click="history">
+        <i class="back-arrow"></i>
+      </div>
+      <div class="head_title">标题标题</div>
     </div>
-    <div class="head_title">标题标题</div>
   </div>
 </template>
 <script>
@@ -20,6 +22,7 @@
     height: 44px;
     position: relative;
     background: #ffffff;
+    width: 3.75rem;
   }
   .head_img{
     position: absolute;

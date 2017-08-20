@@ -110,9 +110,8 @@
 	window.landingPage = new _Vue2.default({
 	  el: ".app",
 	  components: {
-	    'com-to-top-icon': __webpack_require__(475),
-	    'landingPage': __webpack_require__(481),
-	    'lheader': __webpack_require__(486)
+	    'com-to-top-icon': __webpack_require__(470),
+	    'landingPage': __webpack_require__(476)
 	  },
 	  data: function data() {
 	    return {
@@ -172,7 +171,7 @@
 	          ts.response = response;
 	        },
 	        error: function error(_error) {
-	          ts.response = __webpack_require__(491);
+	          ts.response = __webpack_require__(486);
 	          console.error('ajax error:' + _error.status + ' ' + _error.statusText);
 	        }
 	      });
@@ -27566,7 +27565,11 @@
 
 
 	// module
+<<<<<<< HEAD
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-236acfbd] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-236acfbd] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-236acfbd] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-236acfbd] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-236acfbd], .b_right[_v-236acfbd] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-236acfbd] {\n  font-size: 14px;\n}\n\n.line[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-236acfbd] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-236acfbd] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-236acfbd]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-236acfbd]{\n  font-size: 0;\n}\n.item_timee>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-236acfbd]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-236acfbd]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-236acfbd]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-236acfbd],.mask_stop[_v-236acfbd],.disable[_v-236acfbd]{\n  z-index:3;\n}\n\n\n\n.free[_v-236acfbd]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.last[_v-236acfbd]{\n  width: 3.55rem;\n  height: 0.2rem;\n  border-radius:4px;\n  background: #FFF2E1;\n  color:#CC8B3F;\n  font-size:10px;\n  margin-bottom: 0.1rem;\n  text-align: center;\n  line-height:0.2rem;\n\n}\n.rea[_v-236acfbd]{\n  position: relative;\n}\n\n\n.top[_v-236acfbd]{\n  margin-top: 0.12rem;\n}\n", ""]);
+=======
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-8e3626dc] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-8e3626dc] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-8e3626dc] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-8e3626dc] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-8e3626dc] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-8e3626dc], .b_right[_v-8e3626dc] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-8e3626dc] {\n  font-size: 14px;\n}\n\n.line[_v-8e3626dc] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-8e3626dc] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-8e3626dc] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-8e3626dc] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-8e3626dc] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-8e3626dc]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-8e3626dc]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-8e3626dc]{\n  font-size: 0;\n}\n.item_timee>div[_v-8e3626dc]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-8e3626dc]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-8e3626dc]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-8e3626dc]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-8e3626dc]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-8e3626dc]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-8e3626dc]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-8e3626dc]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-8e3626dc],.mask_stop[_v-8e3626dc],.disable[_v-8e3626dc]{\n  z-index:3;\n}\n\n\n\n.free[_v-8e3626dc]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.last[_v-8e3626dc]{\n  width: 3.55rem;\n  height: 0.2rem;\n  border-radius:4px;\n  background: #FFF2E1;\n  color:#CC8B3F;\n  font-size:10px;\n  margin-bottom: 0.1rem;\n  text-align: center;\n  line-height:0.2rem;\n\n}\n.rea[_v-8e3626dc]{\n  position: relative;\n}\n\n\n.top[_v-8e3626dc]{\n  margin-top: 0.12rem;\n}\n", ""]);
+>>>>>>> 6dbcad79d173c45a78d599f4d1b5314a759cd038
 
 	// exports
 
@@ -32121,7 +32124,11 @@
 /* 446 */
 /***/ function(module, exports) {
 
+<<<<<<< HEAD
+	module.exports = "\n<div class=\"top\" id=\"top\" _v-236acfbd=\"\">\n  <div class=\"tab\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n\n  <div v-if=\"flag\" _v-236acfbd=\"\">\n    <div class=\"update\" _v-236acfbd=\"\">\n      <div class=\"up\" _v-236acfbd=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-236acfbd=\"\"></span>期，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-236acfbd=\"\"></span>期\n      </div>\n    </div>\n    <div class=\"list\" _v-236acfbd=\"\">\n      <div class=\"item\" v-for=\"(item,index) in contentList\" @click=\"go_href.stop(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n        <div class=\"last\" _v-236acfbd=\"\">上次听到这里 2017-07-11 21:09</div>\n        <div class=\"rea\" _v-236acfbd=\"\">\n          <div class=\"item_left\" _v-236acfbd=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-236acfbd=\"\"></div>\n            <div class=\"item_timee\" _v-236acfbd=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-236acfbd=\"\"></div>\n              <div class=\"item_count\" _v-236acfbd=\"\"><span v-text=\"item.number\" _v-236acfbd=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-236acfbd=\"\">\n                <div class=\"clock\" _v-236acfbd=\"\"></div>\n                <div class=\"times\" v-text=\"item.time\" _v-236acfbd=\"\"></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==1\" _v-236acfbd=\"\">\n            <div class=\"disable\" v-if=\"item.isPlay==0 &amp;&amp; isSub==0\" @click.stop=\"stop_info\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_stop\" v-if=\"isSub==1 &amp;&amp; item.isPlay==1 &amp;&amp; !(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_play\" v-if=\"isSub==1 &amp;&amp; item.isPlay==1 &amp;&amp; (item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"item.isFree==0 &amp;&amp; isSub==0\" @click=\"go_href(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n            <div class=\"free\" _v-236acfbd=\"\">免费试听</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"!flag\" v-html=\"dataList.recommendData\" _v-236acfbd=\"\">\n\n  </div>\n\n</div>\n";
+=======
 	module.exports = "\n<div class=\"top\" id=\"top\" _v-8e3626dc=\"\">\n  <div class=\"tab\" _v-8e3626dc=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-8e3626dc=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-8e3626dc=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-8e3626dc=\"\"></div>\n      <div class=\"line\" _v-8e3626dc=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-8e3626dc=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-8e3626dc=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-8e3626dc=\"\"></div>\n      <div class=\"line2\" _v-8e3626dc=\"\"></div>\n    </div>\n  </div>\n\n  <div v-if=\"flag\" _v-8e3626dc=\"\">\n    <div class=\"update\" _v-8e3626dc=\"\">\n      <div class=\"up\" _v-8e3626dc=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-8e3626dc=\"\"></span>期，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-8e3626dc=\"\"></span>期\n      </div>\n    </div>\n    <div class=\"list\" _v-8e3626dc=\"\">\n      <div class=\"item\" v-for=\"(item,index) in contentList\" @click=\"go_href.stop(item.albumId,item.sortNo)\" _v-8e3626dc=\"\">\n        <div class=\"last\" _v-8e3626dc=\"\">上次听到这里 2017-07-11 21:09</div>\n        <div class=\"rea\" _v-8e3626dc=\"\">\n          <div class=\"item_left\" _v-8e3626dc=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-8e3626dc=\"\"></div>\n            <div class=\"item_timee\" _v-8e3626dc=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-8e3626dc=\"\"></div>\n              <div class=\"item_count\" _v-8e3626dc=\"\"><span v-text=\"item.number\" _v-8e3626dc=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-8e3626dc=\"\">\n                <div class=\"clock\" _v-8e3626dc=\"\"></div>\n                <div class=\"times\" v-text=\"item.time\" _v-8e3626dc=\"\"></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==1\" _v-8e3626dc=\"\">\n            <div class=\"disable\" v-if=\"item.isPlay==0 &amp;&amp; isSub==0\" @click.stop=\"stop_info\" _v-8e3626dc=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-8e3626dc=\"\"></div>\n            <div class=\"mask_stop\" v-if=\"isSub==1 &amp;&amp; item.isPlay==1 &amp;&amp; !(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-8e3626dc=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-8e3626dc=\"\"></div>\n            <div class=\"mask_play\" v-if=\"isSub==1 &amp;&amp; item.isPlay==1 &amp;&amp; (item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-8e3626dc=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-8e3626dc=\"\"></div>\n            <div class=\"circle_mask\" _v-8e3626dc=\"\"></div>\n            <div _v-8e3626dc=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-8e3626dc=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"item.isFree==0 &amp;&amp; isSub==0\" @click=\"go_href(item.albumId,item.sortNo)\" _v-8e3626dc=\"\">\n            <div class=\"free\" _v-8e3626dc=\"\">免费试听</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"!flag\" v-html=\"dataList.recommendData\" _v-8e3626dc=\"\">\n\n  </div>\n\n</div>\n";
+>>>>>>> 6dbcad79d173c45a78d599f4d1b5314a759cd038
 
 /***/ },
 /* 447 */
@@ -32587,6 +32594,13 @@
 	module.exports = "\n<div class=\"ad-banner\">\n  <a :href=\"adUrl || data && data.body.dataList.command.content\" @click=\"jump\">\n    <img :src=\"adImg || data && data.body.dataList.imageUrl\">\n  </a>\n</div>\n";
 
 /***/ },
+<<<<<<< HEAD
+/* 457 */,
+/* 458 */,
+/* 459 */,
+/* 460 */,
+/* 461 */,
+=======
 /* 457 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -32735,17 +32749,13 @@
 	module.exports = "\n<!--顶部标题-->\n<div class=\"com-top-notopen\" v-if=\"!inwx\" _v-12052192=\"\">\n  <img src=\"//pic.davdian.com/free/2017/02/08/488_504_e8ca7ca5713b5b9791ca85cab02e4134.png\" _v-12052192=\"\">\n</div>\n";
 
 /***/ },
+>>>>>>> 6dbcad79d173c45a78d599f4d1b5314a759cd038
 /* 462 */,
 /* 463 */,
 /* 464 */,
 /* 465 */,
 /* 466 */,
-/* 467 */,
-/* 468 */,
-/* 469 */,
-/* 470 */,
-/* 471 */,
-/* 472 */
+/* 467 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32758,7 +32768,7 @@
 
 	var _utils2 = _interopRequireDefault(_utils);
 
-	var _WXShare = __webpack_require__(473);
+	var _WXShare = __webpack_require__(468);
 
 	var _WXShare2 = _interopRequireDefault(_WXShare);
 
@@ -33233,7 +33243,7 @@
 	};
 
 /***/ },
-/* 473 */
+/* 468 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -33521,19 +33531,19 @@
 	};
 
 /***/ },
-/* 474 */,
-/* 475 */
+/* 469 */,
+/* 470 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(476)
-	__vue_script__ = __webpack_require__(478)
+	__webpack_require__(471)
+	__vue_script__ = __webpack_require__(473)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-to-top-icon.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(479)
+	__vue_template__ = __webpack_require__(474)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -33558,13 +33568,13 @@
 	})()}
 
 /***/ },
-/* 476 */
+/* 471 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(477);
+	var content = __webpack_require__(472);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(43)(content, {});
@@ -33584,7 +33594,7 @@
 	}
 
 /***/ },
-/* 477 */
+/* 472 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(42)();
@@ -33598,7 +33608,7 @@
 
 
 /***/ },
-/* 478 */
+/* 473 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33665,20 +33675,20 @@
 	// <script>
 
 /***/ },
-/* 479 */
+/* 474 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--滚动至顶图标-->\n<img class=\"to-top-icon\" @click=\"toTop\" :style=\"{display: display}\"\n     :src=\"'http://pic.davdian.com/free/back_top_icon_0803.png'\">\n";
 
 /***/ },
-/* 480 */,
-/* 481 */
+/* 475 */,
+/* 476 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(482)
-	__vue_script__ = __webpack_require__(484)
+	__webpack_require__(477)
+	__vue_script__ = __webpack_require__(479)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
@@ -33708,13 +33718,13 @@
 	})()}
 
 /***/ },
-/* 482 */
+/* 477 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(483);
+	var content = __webpack_require__(478);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(43)(content, {});
@@ -33734,7 +33744,7 @@
 	}
 
 /***/ },
-/* 483 */
+/* 478 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(42)();
@@ -33742,13 +33752,13 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-f53c15bc]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-f53c15bc]{\n  height: 44px;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 484 */
+/* 479 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33761,10 +33771,6 @@
 
 	var _index_feed2 = _interopRequireDefault(_index_feed);
 
-	var _comWxNotopen = __webpack_require__(457);
-
-	var _comWxNotopen2 = _interopRequireDefault(_comWxNotopen);
-
 	var _dialog = __webpack_require__(386);
 
 	var _dialog2 = _interopRequireDefault(_dialog);
@@ -33773,16 +33779,20 @@
 
 	var _api2 = _interopRequireDefault(_api);
 
-	var _appInterface = __webpack_require__(472);
+	var _appInterface = __webpack_require__(467);
 
 	var _appInterface2 = _interopRequireDefault(_appInterface);
+
+	var _header = __webpack_require__(480);
+
+	var _header2 = _interopRequireDefault(_header);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
 	  components: {
 	    index_feed: _index_feed2.default,
-	    notopen: _comWxNotopen2.default
+	    lheader: _header2.default
 	  },
 	  data: function data() {
 	    return {
@@ -33874,18 +33884,30 @@
 	  }
 	  // </script>
 	  // <style scoped>
-	  //
+	  //   .top{
+	  //     position: fixed;
+	  //     top: 0;
+	  //     background: #fff;
+	  //     z-index:999;
+	  //   }
+	  //   .empty_div{
+	  //     height: 44px;
+	  //   }
 	  // </style>
 
 	}; // <template>
 	//   <div>
-	//     <notopen></notopen>
+	//     <lheader class="top"></lheader>
+	//     <div class="empty_div"></div>
 	//     <index_feed :data="data"></index_feed>
 	//   </div>
 	// </template>
 	// <script>
 
 /***/ },
+<<<<<<< HEAD
+/* 480 */
+=======
 /* 485 */
 /***/ function(module, exports) {
 
@@ -33893,17 +33915,18 @@
 
 /***/ },
 /* 486 */
+>>>>>>> 6dbcad79d173c45a78d599f4d1b5314a759cd038
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(487)
-	__vue_script__ = __webpack_require__(489)
+	__webpack_require__(481)
+	__vue_script__ = __webpack_require__(483)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/landingPage/vue/header.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(490)
+	__vue_template__ = __webpack_require__(484)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -33928,13 +33951,13 @@
 	})()}
 
 /***/ },
-/* 487 */
+/* 481 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(488);
+	var content = __webpack_require__(482);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(43)(content, {});
@@ -33954,7 +33977,7 @@
 	}
 
 /***/ },
-/* 488 */
+/* 482 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(42)();
@@ -33962,13 +33985,17 @@
 
 
 	// module
+<<<<<<< HEAD
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.header[_v-7926d052]{\n  height: 44px;\n  position: relative;\n  background: #ffffff;\n  width: 3.75rem;\n}\n.head_img[_v-7926d052]{\n  position: absolute;\n  left: 0;\n  height: 100%;\n  width: 44px;\n}\n.back-arrow[_v-7926d052]{\n  position: absolute;\n  top: 15px;\n  left: 15px;\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  border-bottom: 1px solid #333;\n  border-left: 1px solid #333;\n  -webkit-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  transform: rotate(45deg);\n  cursor: pointer;\n  font-size: 16px;\n}\n.head_title[_v-7926d052]{\n  height: 100%;\n  width: 100%;\n  text-align: center;\n  line-height: 44px;\n  font-size: 16px;\n}\n", ""]);
+=======
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.header[_v-cee5e832]{\n  height: 44px;\n  position: relative;\n  background: #ffffff;\n}\n.head_img[_v-cee5e832]{\n  position: absolute;\n  left: 0;\n  height: 100%;\n  width: 44px;\n}\n.back-arrow[_v-cee5e832]{\n  position: absolute;\n  top: 15px;\n  left: 15px;\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  border-bottom: 1px solid #333;\n  border-left: 1px solid #333;\n  -webkit-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  transform: rotate(45deg);\n  cursor: pointer;\n  font-size: 16px;\n}\n.head_title[_v-cee5e832]{\n  height: 100%;\n  width: 100%;\n  text-align: center;\n  line-height: 44px;\n  font-size: 16px;\n}\n", ""]);
+>>>>>>> 6dbcad79d173c45a78d599f4d1b5314a759cd038
 
 	// exports
 
 
 /***/ },
-/* 489 */
+/* 483 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -33977,11 +34004,13 @@
 	    value: true
 	});
 	// <template>
-	//   <div class="header">
-	//     <div class="head_img" @click="history">
-	//       <i class="back-arrow"></i>
+	//   <div>
+	//     <div class="header">
+	//       <div class="head_img" @click="history">
+	//         <i class="back-arrow"></i>
+	//       </div>
+	//       <div class="head_title">标题标题</div>
 	//     </div>
-	//     <div class="head_title">标题标题</div>
 	//   </div>
 	// </template>
 	// <script>
@@ -34007,6 +34036,7 @@
 	    //     height: 44px;
 	    //     position: relative;
 	    //     background: #ffffff;
+	    //     width: 3.75rem;
 	    //   }
 	    //   .head_img{
 	    //     position: absolute;
@@ -34041,13 +34071,23 @@
 	};
 
 /***/ },
-/* 490 */
+/* 484 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"header\" _v-cee5e832=\"\">\n  <div class=\"head_img\" @click=\"history\" _v-cee5e832=\"\">\n    <i class=\"back-arrow\" _v-cee5e832=\"\"></i>\n  </div>\n  <div class=\"head_title\" _v-cee5e832=\"\">标题标题</div>\n</div>\n";
+	module.exports = "\n<div _v-7926d052=\"\">\n  <div class=\"header\" _v-7926d052=\"\">\n    <div class=\"head_img\" @click=\"history\" _v-7926d052=\"\">\n      <i class=\"back-arrow\" _v-7926d052=\"\"></i>\n    </div>\n    <div class=\"head_title\" _v-7926d052=\"\">标题标题</div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 491 */
+/* 485 */
+/***/ function(module, exports) {
+
+<<<<<<< HEAD
+	module.exports = "\n<div _v-f53c15bc=\"\">\n  <lheader class=\"top\" _v-f53c15bc=\"\"></lheader>\n  <div class=\"empty_div\" _v-f53c15bc=\"\"></div>\n  <index_feed :data=\"data\" _v-f53c15bc=\"\"></index_feed>\n</div>\n";
+=======
+	module.exports = "\n<div class=\"header\" _v-cee5e832=\"\">\n  <div class=\"head_img\" @click=\"history\" _v-cee5e832=\"\">\n    <i class=\"back-arrow\" _v-cee5e832=\"\"></i>\n  </div>\n  <div class=\"head_title\" _v-cee5e832=\"\">标题标题</div>\n</div>\n";
+>>>>>>> 6dbcad79d173c45a78d599f4d1b5314a759cd038
+
+/***/ },
+/* 486 */
 /***/ function(module, exports) {
 
 	module.exports = {

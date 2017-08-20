@@ -1,19 +1,20 @@
 <template>
   <div>
-    <notopen></notopen>
+    <lheader class="top"></lheader>
+    <div class="empty_div"></div>
     <index_feed :data="data"></index_feed>
   </div>
 </template>
 <script>
   import index_feed from '../../../../module/index/index_feed.vue'
-  import notopen from "../../../component/com-wx-notopen.vue"
   import dialog from '../../../../utils/dialog.es6';
   import api from "../../../../utils/api.es6"
   import appInterface from "../../../../utils/appInterface.es6"
+  import lheader from './header.vue'
   export default {
     components:{
       index_feed:index_feed,
-      notopen:notopen
+      lheader:lheader
     },
     data(){
         return {
@@ -109,5 +110,13 @@
   }
 </script>
 <style scoped>
-
+  .top{
+    position: fixed;
+    top: 0;
+    background: #fff;
+    z-index:999;
+  }
+  .empty_div{
+    height: 44px;
+  }
 </style>

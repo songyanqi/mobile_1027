@@ -1,7 +1,7 @@
 <template>
   <div>
-    <notopen></notopen>
-    <lheader title="标题" class="top"></lheader>
+    <lheader title="标题" class="top" v-if="!isApp"></lheader>
+    <div class="ndiv" v-if="!isApp"></div>
     <index_feed :data="data"></index_feed>
     <div class="empty"></div>
     <lfooter :income="income" :issub="isSub" :userstatus="userStatus" :albumid="albumId" :price="price"></lfooter>
@@ -10,7 +10,6 @@
 </template>
 <script>
   import index_feed from '../../../../module/index/index_feed.vue'
-  import notopen from "../../../component/com-wx-notopen.vue"
   import api from "../../../../utils/api.es6"
   import {getQuery} from '../../../../utils/utils.es6';
   import dialog from '../../../../utils/dialog.es6';
@@ -18,10 +17,10 @@
   import lheader from './header.vue'
   import lfooter from'./footer.vue'
   import appInterface from "../../../../utils/appInterface.es6"
+  import util from "../../../../utils/utils.es6"
   export default {
     components:{
       index_feed:index_feed,
-      notopen:notopen,
       lheader:lheader,
       lfooter:lfooter
     },
@@ -34,7 +33,8 @@
         income:0,
         isSub:0,
         price:0,
-        name:"collect"
+        name:"collect",
+        isApp:util.utils.isApp()
       }
     },
     mounted:function () {
@@ -89,5 +89,8 @@
     position: fixed;
     top: 0;
     z-index: 999;
+  }
+  .ndiv{
+    height: 44px;
   }
 </style>
