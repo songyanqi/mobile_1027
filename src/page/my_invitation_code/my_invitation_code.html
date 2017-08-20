@@ -19,7 +19,7 @@
         分享给好友
       </div>
       <div class="my_code_text">
-        我的邀请码：<span>{{response.data.inviteCode}}</span><span v-if="isApp" @click="copyText()">复制邀请码</span>
+        我的邀请码：<span>{{response.data.inviteCode}}</span><span v-if="isApp" @click="copyText(response.data.inviteCode)">复制邀请码</span>
       </div>
       <div class="other-info" @click="what_invite_code">
         什么是邀请码？
