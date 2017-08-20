@@ -235,13 +235,10 @@
           }else {
             that.isPlay = true
             $('.allAudio').get(0).src = that.musicList[that.index].fileLink
-            $('.allAudio').get(0).play()
-            $('.allAudio').get(0).pause()
-            $('.allAudio').get(0).currentTime = that.playTime;
-            $('.allAudio').get(0).play()
-            $('.allAudio').get(0).currentTime = that.playTime;
             $('.allAudio').get(0).onloadedmetadata = function(){
               that.musicList[that.index].time = $('.allAudio').get(0).duration
+              $('.allAudio').get(0).currentTime = that.playTime;
+              $('.allAudio').get(0).play()
               that.playTimer = setInterval(function(){
                 that.playTime = parseInt(that.playTime) + 1
               },1000)
@@ -606,6 +603,7 @@
   }
   .mask_banner{
     height: 3.15rem;
+    -webkit-overflow-scrolling: touch;
     overflow: scroll;
   }
   .mask_bottom{
