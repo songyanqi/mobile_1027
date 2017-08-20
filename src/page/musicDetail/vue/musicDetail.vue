@@ -52,6 +52,9 @@
                 <img src="//pic.davdian.com/free/2017/08/18/playing.png" alt="" v-if='i==index' class='list_img_select'>
               </div>
             </div>
+            <div v-if='musicListBlock'>
+              <div class="mask_padding1 mask_list1"  v-for='(item, i) in musicListBlock'></div>
+            </div>
           </div>
         </div>
         <div class="mask_bottom" @click='closeAudioList'>关闭</div>
@@ -80,11 +83,25 @@
         playTimer: null,
         allAudio: null,
         getDataFlag:true,
-        scrollTop:0,
+        scrollTop:1,
         isapp: util.utils.isApp()
       }
     },
-    computed: {},
+    computed: {
+      musicListBlock(){
+        let arr = []
+        if (this.musicList>=7){
+          return null
+        }else {
+          if (7-this.musicList.length<1){
+            return null
+          }else {
+            arr.length = 7-this.musicList.length
+          }
+        }
+        return arr
+      }
+    },
     created: function () {
     },
     mounted: function () {
@@ -518,6 +535,10 @@
     padding-right: 0.2rem;
     border-bottom: 1px solid #DDDDDD;
   }
+  .mask_padding1{
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
 
   .play{
     margin-left: 0.08rem;
@@ -534,6 +555,12 @@
     height: 0.45rem;
     padding-top: 0.13rem;
     position: relative;
+    box-sizing: border-box;
+  }
+  .mask_list1{
+    width: 3.75rem;
+    height: 0.46rem;
+    padding-top: 0.13rem;
     box-sizing: border-box;
   }
   .mask_list>div{
