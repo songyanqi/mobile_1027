@@ -71,19 +71,20 @@
         this.initSortNoIndex();
         this.scro();
         this.tab_scroll();
-        window.audioPlayHistoryFn = function(obj){
-          console.log(obj.sortNo, obj.date)
-          console.log(that.name);
-        }
-        ////////todo
 
-
-        this.$nextTick(function () {
-          native.Audio.audioPlayHistory({
-            "albumId":this.pageAlbumId,
-            "result":'audioPlayHistoryFn'
-          })
-        });
+//        window.audioPlayHistoryFn = function(obj){
+//          console.log(obj.sortNo, obj.date)
+//          console.log(that.name);
+//        }
+//        ////////todo
+//
+//
+//        this.$nextTick(function () {
+//          native.Audio.audioPlayHistory({
+//            "albumId":this.pageAlbumId,
+//            "result":'audioPlayHistoryFn'
+//          })
+//        });
 
         this.$nextTick(function () {
           this.audioLocation();
@@ -112,7 +113,7 @@
                 window.iosInterface.getAudioState(obj);
               };
               native.Audio.audioLocation({
-                "result":audioLocationFn
+                "callback":audioLocationFn
               })
             }
           },
