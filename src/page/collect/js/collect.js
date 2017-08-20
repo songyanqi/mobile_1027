@@ -20,11 +20,10 @@ import vueLazyload from '../../../common/js/module/vueLazyload.js';
 vueLazyload.init();
 
 // 渲染页面
-new Vue({
+window.collect=new Vue({
   el: ".app",
   components: {
     'collect':require('../vue/collect.vue'),
-    'com-top-title': require('../../../component/com-top-title.vue'),
     'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
   },
   data() {

@@ -66,7 +66,9 @@ export default{
   data(){
     return {
       m: "m",
-      tsfeedsData: []
+      tsfeedsData: [],
+      childrenName:'feedList'
+
     }
   },
   props: ['data'],

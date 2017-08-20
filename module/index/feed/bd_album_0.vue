@@ -1,9 +1,13 @@
 <template>
   <div class="box">
-    <a :href="item.command.content" v-for="item in dataList"><div class="item"><img :src="item.imageUrl" alt=""></div></a>
+    <div class="item" v-for="item in dataList" @click.stop="go_collect(item.albumId)">
+      <img :src="item.imageUrl" alt="">
+    </div>
   </div>
 </template>
 <script>
+  import util from "../../../utils/utils.es6";
+  import native from "../../../src/common/js/module/native";
   export default {
       props:["data"],
       created:function () {
@@ -11,8 +15,20 @@
       },
       data(){
           return {
-              dataList:[]
+              dataList:[],
+              isApp:util.utils.isApp()
           }
+      },
+      methods:{
+        go_collect(albumId){
+          if(this.isApp){
+            native.Browser.open({
+              "url":"/collect.html?albumId"+albumId
+            });
+          }else{
+            window.location.href="/collect.html?albumId="+albumId;
+          }
+        }
       }
   }
 </script>
@@ -24,7 +40,7 @@
     padding-left: 0.3rem;
     padding-top:0.02rem;
   }
-  .box>a>div{
+  .box>div{
     display: inline-block;
     vertical-align: top;
     margin-top:0.12rem;

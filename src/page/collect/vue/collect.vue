@@ -16,6 +16,7 @@
   import dialog from '../../../../utils/dialog.es6';
   import lheader from './header.vue'
   import lfooter from'./footer.vue'
+  import appInterface from "../../../../utils/appInterface.es6"
   export default {
     components:{
       index_feed:index_feed,
@@ -28,24 +29,15 @@
         data:[],
         albumId:getQuery("albumId"),
         pageFlag:true,
-        isFree:0,
         userStatus:0,
         income:0,
         isSub:0,
         price:0,
-        sortNo:0
+        name:"collect"
       }
     },
     mounted:function () {
-      var result=require('../json/collect.json');
-      this.data=result.data.feedList;
-      this.isFree=result.data.attr.isFree;
-      this.income=result.data.attr.income;
-      this.price=result.data.attr.price;
-      this.isSub=result.data.attr.isSub;
-      this.userStatus=result.visitor_status;
       this.getData();
-      this.scro();
     },
     methods:{
         getData(){
@@ -58,71 +50,32 @@
             api("/api/mg/content/album/getAlbumData",obj)
               .then(function (result) {
                 if(result.code==0){
-                  this.data=this.data.concat(result.data.feedList);
-                  this.isFree=result.data.attr.isFree;
-                  this.income=result.data.attr.income;
-                  this.price=result.data.attr.price;
-                  this.isSub=result.data.attr.isSub;
-                  this.userStatus=result.visitor_status;
-                  //取最后一套
-                  result.data.feedList.map(function (item,index) {
-                    if(item.body.dataList[0].contentList){
-                      item.body.dataList[0].contentList.map(function (item2,index2) {
-                        that.sortNo=item2.sortNo;
-                      });
+                  if(result.data && result.data.feedList){
+                    that.income=result.data.attr.income;
+                    that.price=result.data.attr.price;
+                    that.isSub=result.data.attr.isSub;
+                    that.userStatus=result.visitor_status;
+                    that.data=that.data.concat(result.data.feedList);
+                    if (result.data.feedList.length >0){
+                      that.pageFlag=true
                     }
-                  });
-                  if (result.data.feedList.length >0){
-                    that.pageFlag=true
+                  }else{
+                    //显示错误页面
                   }
+
                 }else{
-                  dialog.alert('code:'+result.code);
+                  if(result.data.msg){
+                    dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                  }else{
+                    dialog.alert('code:'+result.code);
+                  }
                 }
               }).catch(function(e){
+                 //显示错误页面
                 that.pageFlag = true;
                 console.log('e:', e)
             });
           }
-        },
-        getMoreList(){
-          var that=this;
-          if(this.pageFlag){
-            this.pageFlag=false;
-            var obj={
-              "albumId":that.albumId,
-              "sort":1,
-              "sortNo":this.sortNo
-            };
-            api("/api/mg/content/music/getListData",obj)
-              .then(function (result) {
-                if(result.code==0){
-                  this.contentList=this.contentList.concat(result.data.dataList);
-                  result.data.dataList.map(function (item,index) {
-                    if(item.sortNo){
-                        that.sortNo=item.sortNo;
-                    }
-                  });
-                  if (result.data.feedList.length >0){
-                    that.pageFlag=true;
-                  }
-                }else{
-                  dialog.alert('code:'+result.code);
-                }
-              }).catch(function(e){
-              that.pageFlag = true;
-              console.log('e:', e)
-            });
-          }
-        },
-        scro(){
-          var _this=this;
-          $(window).scroll(function(){
-            var el = $("body").get(0);
-            var bottom = el.offsetHeight + el.offsetTop - (window.screen.availHeight + window.scrollY);
-            if (bottom<100){
-              _this.getMoreList();
-            }
-          });
         }
     }
   }

@@ -20,7 +20,7 @@ import vueLazyload from '../../../common/js/module/vueLazyload.js';
 vueLazyload.init();
 
 // 渲染页面
-new Vue({
+window.landingPage=new Vue({
   el: ".app",
   components: {
     'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),

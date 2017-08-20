@@ -107,7 +107,7 @@
 
 
 	// 第三方模块
-	new _Vue2.default({
+	window.landingPage = new _Vue2.default({
 	  el: ".app",
 	  components: {
 	    'com-to-top-icon': __webpack_require__(62),
@@ -15741,7 +15741,294 @@
 	});
 
 /***/ },
-/* 187 */,
+/* 187 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	var axios = __webpack_require__(114);
+	__webpack_require__(162).polyfill();
+	var WebStorageCache = __webpack_require__(188);
+	var WXShareCache = new WebStorageCache({ storage: 'sessionStorage' });
+	var _initShareInfo = void 0;
+
+	/**
+	 * 获取token
+	 * @param {boolean} forcedNetwork
+	 */
+	var getToken = function getToken(forcedNetwork) {
+	    var tokenInfo = getTokenFromSession();
+	    if (!tokenInfo || forcedNetwork) {
+	        getTokenFromNetwork().then(function (data) {
+	            tokenInfo = data.data;
+	            if (!tokenInfo.error) {
+	                initWXShare(tokenInfo);
+	                setTokenToSession(tokenInfo);
+	            } else {
+	                console.log("get token error");
+	            }
+	        }).catch(function () {
+	            retry();
+	        });
+	    } else {
+	        initWXShare(tokenInfo);
+	    }
+	};
+
+	var retry = function retry() {
+	    var timesKey = "init_wx_share_error_times";
+	    var times = +WXShareCache.get(timesKey) || 0;
+	    // 签名失败更新签名 5秒内不超过5次
+	    if (times < 5) {
+	        WXShareCache.set(timesKey, times + 1, { exp: 5 });
+	        getToken(true);
+	    }
+	};
+
+	var wxError = function wxError(res) {
+	    if (res.errMsg == "config:invalid signature") {
+	        retry();
+	    } else {
+	        console.log("wx error: " + res.errMsg);
+	    }
+	};
+
+	var wxReady = function wxReady() {
+	    var shareInfo = getShareInfo();
+	    timelineShare(shareInfo);
+	    appMessageShare(shareInfo);
+	    qqMessageShare(shareInfo);
+	    onMenuShareQZone(shareInfo);
+	    weiboMessageShare(shareInfo);
+	};
+
+	/**
+	 * 分享到朋友圈
+	 */
+	var timelineShare = function timelineShare(shareInfo) {
+	    wx.onMenuShareTimeline({
+	        title: shareInfo.title, // 分享标题
+	        link: shareInfo.link, // 分享链接
+	        imgUrl: shareInfo.imgUrl, // 分享图标
+	        desc: shareInfo.desc,
+	        success: function success() {
+	            // 用户确认分享后执行的回调函数
+	            if (shareInfo.successTimelineShare && typeof shareInfo.successTimelineShare == "function") {
+	                shareInfo.successTimelineShare();
+	            }
+	            if (shareInfo.alwaysTimelineShare && typeof shareInfo.alwaysTimelineShare == "function") {
+	                shareInfo.alwaysTimelineShare();
+	            }
+	            if (window.tlShareCallback) {
+	                window.tlShareCallback();
+	            }
+	        },
+	        cancel: function cancel() {
+	            // 用户取消分享后执行的回调函数
+	            if (shareInfo.cancelTimelineShare && typeof shareInfo.cancelTimelineShare == "function") {
+	                shareInfo.cancelTimelineShare();
+	            }
+	            if (shareInfo.alwaysTimelineShare && typeof shareInfo.alwaysTimelineShare == "function") {
+	                shareInfo.alwaysTimelineShare();
+	            }
+	        }
+	    });
+	};
+	var getNewLineLink = function getNewLineLink(href) {
+	    if (href && href.length > 5 && href.substring(0, 4) && href.substring(0, 5)) {
+	        var str = href.substring(0, 4);
+	        var str1 = href.substring(0, 5);
+	        // console.log(str =='http' && str1 != 'https')
+	        if (str == 'http' && str1 != 'https') {
+	            return href.replace('http', 'https');
+	        } else {
+	            return href;
+	        }
+	    }
+	};
+	var appMessageShare = function appMessageShare(shareInfo) {
+	    wx.onMenuShareAppMessage({
+	        title: shareInfo.title, // 分享标题
+	        link: shareInfo.link, // 分享链接
+	        imgUrl: shareInfo.imgUrl, // 分享图标
+	        desc: shareInfo.desc,
+	        success: function success() {
+	            // 用户确认分享后执行的回调函数
+	            if (shareInfo.successAppMessageShare && typeof shareInfo.successAppMessageShare == "function") {
+	                shareInfo.successAppMessageShare();
+	            }
+	            if (shareInfo.alwaysAppMessageShare && typeof shareInfo.alwaysAppMessageShare == "function") {
+	                shareInfo.alwaysAppMessageShare();
+	            }
+	            if (window.sendShareCallback) {
+	                window.sendShareCallback();
+	            }
+	        },
+	        cancel: function cancel() {
+	            // 用户取消分享后执行的回调函数
+	            if (shareInfo.cancelAppMessageShare && typeof shareInfo.cancelAppMessageShare == "function") {
+	                shareInfo.cancelAppMessageShare();
+	            }
+	            if (shareInfo.alwaysAppMessageShare && typeof shareInfo.alwaysAppMessageShare == "function") {
+	                shareInfo.alwaysAppMessageShare();
+	            }
+	        }
+	    });
+	};
+
+	var qqMessageShare = function qqMessageShare(shareInfo) {
+	    wx.onMenuShareQQ({
+	        title: shareInfo.title, // 分享标题
+	        link: shareInfo.link, // 分享链接
+	        imgUrl: shareInfo.imgUrl, // 分享图标
+	        desc: shareInfo.desc,
+	        success: function success() {
+	            // 用户确认分享后执行的回调函数
+	            if (shareInfo.successQqMessageShare && typeof shareInfo.successQqMessageShare == "function") {
+	                shareInfo.successQqMessageShare();
+	            }
+	            if (shareInfo.alwaysQqMessageShare && typeof shareInfo.alwaysQqMessageShare == "function") {
+	                shareInfo.alwaysQqMessageShare();
+	            }
+	        },
+	        cancel: function cancel() {
+	            // 用户取消分享后执行的回调函数
+	            if (shareInfo.cancelQqMessageShare && typeof shareInfo.cancelQqMessageShare == "function") {
+	                shareInfo.cancelQqMessageShare();
+	            }
+	            if (shareInfo.alwaysQqMessageShare && typeof shareInfo.alwaysQqMessageShare == "function") {
+	                shareInfo.alwaysQqMessageShare();
+	            }
+	        }
+	    });
+	};
+
+	var onMenuShareQZone = function onMenuShareQZone(shareInfo) {
+	    wx.onMenuShareQZone({
+	        title: shareInfo.title, // 分享标题
+	        link: shareInfo.link, // 分享链接
+	        imgUrl: shareInfo.imgUrl, // 分享图标
+	        desc: shareInfo.desc,
+	        success: function success() {
+	            if (shareInfo.successOnMenuShareQZone && typeof shareInfo.successOnMenuShareQZone == "function") {
+	                shareInfo.successOnMenuShareQZone();
+	            }
+	            if (shareInfo.successOnMenuShareQZone && typeof shareInfo.successOnMenuShareQZone == "function") {
+	                shareInfo.successOnMenuShareQZone();
+	            }
+	            if (window.QQShareCallback) {
+	                window.QQShareCallback();
+	            }
+	        },
+	        cancel: function cancel() {
+	            // 用户取消分享后执行的回调函数
+	            if (shareInfo.cancelOnMenuShareQZone && typeof shareInfo.cancelOnMenuShareQZone == "function") {
+	                shareInfo.cancelOnMenuShareQZone();
+	            }
+	            if (shareInfo.cancelOnMenuShareQZone && typeof shareInfo.cancelOnMenuShareQZone == "function") {
+	                shareInfo.cancelOnMenuShareQZone();
+	            }
+	        }
+	    });
+	};
+
+	var weiboMessageShare = function weiboMessageShare(shareInfo) {
+	    wx.onMenuShareWeibo({
+	        title: shareInfo.title, // 分享标题
+	        link: shareInfo.link, // 分享链接
+	        imgUrl: shareInfo.imgUrl, // 分享图标
+	        desc: shareInfo.desc,
+	        success: function success() {
+	            // 用户确认分享后执行的回调函数
+	            if (shareInfo.successWeiboMessageShare && typeof shareInfo.successWeiboMessageShare == "function") {
+	                shareInfo.successWeiboMessageShare();
+	            }
+	            if (shareInfo.alwaysWeiboMessageShare && typeof shareInfo.alwaysWeiboMessageShare == "function") {
+	                shareInfo.alwaysWeiboMessageShare();
+	            }
+	        },
+	        cancel: function cancel() {
+	            // 用户取消分享后执行的回调函数
+	            if (shareInfo.cancelWeiboMessageShare && typeof shareInfo.cancelWeiboMessageShare == "function") {
+	                shareInfo.cancelWeiboMessageShare();
+	            }
+	            if (shareInfo.alwaysWeiboMessageShare && typeof shareInfo.alwaysWeiboMessageShare == "function") {
+	                shareInfo.alwaysWeiboMessageShare();
+	            }
+	        }
+	    });
+	};
+
+	var initWXShare = function initWXShare(result) {
+	    if (window.wx) {
+	        var _wx = window.wx;
+	        _wx.error(wxError);
+	        _wx.ready(wxReady);
+	        _wx.config({
+	            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+	            appId: result["data"]["appId"], // 必填，公众号的唯一标识
+	            timestamp: result["data"]["timestamp"], // 必填，生成签名的时间戳
+	            nonceStr: result["data"]["nonceStr"], // 必填，生成签名的随机串
+	            signature: result["data"]["signature"], // 必填，签名，见附录1
+	            jsApiList: ["onMenuShareTimeline", "onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareQZone", "onMenuShareWeibo"] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+	        });
+	    }
+	};
+
+	/**
+	 * 从缓存中获取token
+	 */
+	var getTokenFromSession = function getTokenFromSession() {
+	    return WXShareCache.get("dvd_wx_token");
+	};
+
+	/**
+	 * 向缓存中设置token
+	 * @param {object} info
+	 */
+	var setTokenToSession = function setTokenToSession(info) {
+	    return WXShareCache.set("dvd_wx_token", info);
+	};
+
+	/**
+	 * 从网络上获取token
+	 */
+	var getTokenFromNetwork = function getTokenFromNetwork() {
+	    return new Promise(function (resolve, reject) {
+	        axios.get('/wechatJsToken', { params: { url: encodeURIComponent(location.href) } }).then(function (respone) {
+	            resolve(respone);
+	        }).catch(function (error) {
+	            reject(error);
+	        });
+	    });
+	};
+
+	var init = function init(shareInfo) {
+	    _initShareInfo = shareInfo || {};
+	    getToken(false);
+	};
+
+	var getShareInfo = function getShareInfo() {
+	    // 设置默认值，部分从window中取到
+	    var newShareInfo = {
+	        title: window.shareTitle || window.title || "大V店",
+	        link: getNewLineLink(window.lineLink || window.link || location.href),
+	        imgUrl: window.imgUrl || "http://pic.davdian.com/free/index0925_icon1.png?x-oss-process=image/resize,m_fill,w_80",
+	        desc: window.descContent || window.desc || "大V店"
+	    };
+	    Object.assign(newShareInfo, _initShareInfo);
+	    return newShareInfo;
+	};
+
+	exports.default = {
+	    init: init,
+	    getShareInfo: getShareInfo
+	};
+
+/***/ },
 /* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -17210,7 +17497,9 @@
 	  data: function data() {
 	    return {
 	      m: "m",
-	      tsfeedsData: []
+	      tsfeedsData: [],
+	      childrenName: 'feedList'
+
 	    };
 	  },
 
@@ -31169,68 +31458,95 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.box{\n  font-size: 0;\n  padding-bottom: 0.22rem;\n  padding-right: 0.21rem;\n  padding-left: 0.3rem;\n  padding-top:0.02rem;\n}\n.box>a>div{\n  display: inline-block;\n  vertical-align: top;\n  margin-top:0.12rem;\n  margin-right:0.09rem;\n  background: #D8D8D8;\n  border:1px solid #979797;\n  width: 0.72rem;\n  height: 0.35rem;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.item img{\n  width: 0.72rem;\n  height: 0.35rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.box{\n  font-size: 0;\n  padding-bottom: 0.22rem;\n  padding-right: 0.21rem;\n  padding-left: 0.3rem;\n  padding-top:0.02rem;\n}\n.box>div{\n  display: inline-block;\n  vertical-align: top;\n  margin-top:0.12rem;\n  margin-right:0.09rem;\n  background: #D8D8D8;\n  border:1px solid #979797;\n  width: 0.72rem;\n  height: 0.35rem;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.item img{\n  width: 0.72rem;\n  height: 0.35rem;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
 /* 524 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	  value: true
 	});
+
+	var _utils = __webpack_require__(164);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	var _native = __webpack_require__(31);
+
+	var _native2 = _interopRequireDefault(_native);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 	// <template>
 	//   <div class="box">
-	//     <a :href="item.command.content" v-for="item in dataList"><div class="item"><img :src="item.imageUrl" alt=""></div></a>
+	//     <div class="item" v-for="item in dataList" @click.stop="go_collect(item.albumId)">
+	//       <img :src="item.imageUrl" alt="">
+	//     </div>
 	//   </div>
 	// </template>
 	// <script>
 	exports.default = {
-	    props: ["data"],
-	    created: function created() {
-	        this.dataList = this.data.body.dataList;
-	    },
-	    data: function data() {
-	        return {
-	            dataList: []
-	        };
+	  props: ["data"],
+	  created: function created() {
+	    this.dataList = this.data.body.dataList;
+	  },
+	  data: function data() {
+	    return {
+	      dataList: [],
+	      isApp: _utils2.default.utils.isApp()
+	    };
+	  },
+
+	  methods: {
+	    go_collect: function go_collect(albumId) {
+	      if (this.isApp) {
+	        _native2.default.Browser.open({
+	          "url": "/collect.html?albumId" + albumId
+	        });
+	      } else {
+	        window.location.href = "/collect.html?albumId=" + albumId;
+	      }
 	    }
+	  }
+	  // </script>
+	  // <style>
+	  //   .box{
+	  //     font-size: 0;
+	  //     padding-bottom: 0.22rem;
+	  //     padding-right: 0.21rem;
+	  //     padding-left: 0.3rem;
+	  //     padding-top:0.02rem;
+	  //   }
+	  //   .box>div{
+	  //     display: inline-block;
+	  //     vertical-align: top;
+	  //     margin-top:0.12rem;
+	  //     margin-right:0.09rem;
+	  //     background: #D8D8D8;
+	  //     border:1px solid #979797;
+	  //     width: 0.72rem;
+	  //     height: 0.35rem;
+	  //     box-sizing: border-box;
+	  //   }
+	  //   .item img{
+	  //     width: 0.72rem;
+	  //     height: 0.35rem;
+	  //   }
+	  // </style>
+
 	};
-	// </script>
-	// <style>
-	//   .box{
-	//     font-size: 0;
-	//     padding-bottom: 0.22rem;
-	//     padding-right: 0.21rem;
-	//     padding-left: 0.3rem;
-	//     padding-top:0.02rem;
-	//   }
-	//   .box>a>div{
-	//     display: inline-block;
-	//     vertical-align: top;
-	//     margin-top:0.12rem;
-	//     margin-right:0.09rem;
-	//     background: #D8D8D8;
-	//     border:1px solid #979797;
-	//     width: 0.72rem;
-	//     height: 0.35rem;
-	//     box-sizing: border-box;
-	//   }
-	//   .item img{
-	//     width: 0.72rem;
-	//     height: 0.35rem;
-	//   }
-	// </style>
 
 /***/ },
 /* 525 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"box\">\n  <a :href=\"item.command.content\" v-for=\"item in dataList\"><div class=\"item\"><img :src=\"item.imageUrl\" alt=\"\"></div></a>\n</div>\n";
+	module.exports = "\n<div class=\"box\">\n  <div class=\"item\" v-for=\"item in dataList\" @click.stop=\"go_collect(item.albumId)\">\n    <img :src=\"item.imageUrl\" alt=\"\">\n  </div>\n</div>\n";
 
 /***/ },
 /* 526 */
@@ -31303,7 +31619,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-780f6021]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-780f6021]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-780f6021]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-780f6021]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-780f6021]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-780f6021]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-780f6021],.mask_stop[_v-780f6021],.disable[_v-780f6021]{\n  z-index:3;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-780f6021]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-780f6021]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-780f6021]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-780f6021]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-780f6021]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-780f6021]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-780f6021],.mask_stop[_v-780f6021],.disable[_v-780f6021]{\n  z-index:3;\n}\n", ""]);
 
 	// exports
 
@@ -31339,37 +31655,22 @@
 	      upTime: "",
 	      week: "",
 	      isApp: _utils2.default.utils.isApp(),
-	      btnStatus: [],
-	      dataList: []
+	      btnStatus: null,
+	      dataList: [],
+	      albumId: null,
+	      sortNo: null,
+	      name: "bd_album_content_1"
 	    };
 	  },
 
 	  mounted: function mounted() {
 	    this.dataList = this.data.body.dataList;
-	    this.initBtnStatus();
 	    this.upTime = this.data.body.upTime;
 	    this.week = this.getLocalTime(this.upTime);
 	  },
 	  methods: {
 	    stop_info: function stop_info() {
 	      _dialog2.default.alert("订阅后才可收听");
-	    },
-	    change_play: function change_play(index) {
-	      if (this.btnStatus[index] == 1) {
-	        Vue.set(this.btnStatus, index, 2);
-	      } else if (this.btnStatus[index] == 2) {
-	        Vue.set(this.btnStatus, index, 1);
-	      }
-	    },
-	    initBtnStatus: function initBtnStatus() {
-	      var that = this;
-	      this.dataList.map(function (item, index) {
-	        if (item.isPlay == "1") {
-	          Vue.set(that.btnStatus, index, 1);
-	        } else if (item.isPlay == "0") {
-	          Vue.set(that.btnStatus, index, 0);
-	        }
-	      });
 	    },
 	    getLocalTime: function getLocalTime(nS) {
 	      var time = new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
@@ -31388,9 +31689,11 @@
 	        return m + "月" + d + "日" + " " + weekDay[week];
 	      }
 	    },
-	    go_href: function go_href(href) {
-	      if (this.isApp) {} else {
-	        window.location.href = href;
+	    go_href: function go_href(albumId, sortNo) {
+	      if (this.isApp) {
+	        //调app播放器
+	      } else {
+	        window.location.href = "/musicDetail.html?albumId=" + albumId + "&sortNo=" + sortNo;
 	      }
 	    }
 	  }
@@ -31509,7 +31812,7 @@
 	//         <div class="list_date" v-text="week"></div>
 	//         <div class="list_line"></div>
 	//       </div>
-	//       <div class="list" v-for="(item,index) in dataList">
+	//       <div class="list" v-for="(item,index) in dataList" @click.stop="go_href(item.albumId,item.sortNo)">
 	//         <div class="left_img">
 	//           <img :src="item.imageUrl" alt="">
 	//         </div>
@@ -31518,10 +31821,10 @@
 	//           <div class="list_name" v-text="item.album"></div>
 	//           <div class="list_time" v-text="item.time"></div>
 	//         </div>
-	//         <div class="right_img" @click="go_href(item.command.content)">
-	//             <div class="disable" v-if="btnStatus[index]==0" @click="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-	//             <div class="mask_stop" v-if="btnStatus[index]==2" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-	//             <div class="mask_play" v-if="btnStatus[index]==1" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+	//         <div class="right_img">
+	//             <div class="disable" v-if="item.isPlay==0" @click.stop="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+	//             <div class="mask_stop" v-if="item.isPlay==1 && !(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+	//             <div class="mask_play" v-if="item.isPlay==1 &&(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
 	//             <div class="circle_mask"></div>
 	//             <div><img :src="item.imageUrl" alt=""></div>
 	//         </div>
@@ -31536,7 +31839,7 @@
 /* 530 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-780f6021=\"\">\n  <div class=\"list1\" _v-780f6021=\"\">\n    <div class=\"big_img\" _v-780f6021=\"\">\n      <div class=\"list_line\" _v-780f6021=\"\"></div>\n      <div class=\"list_date\" v-text=\"week\" _v-780f6021=\"\"></div>\n      <div class=\"list_line\" _v-780f6021=\"\"></div>\n    </div>\n    <div class=\"list\" v-for=\"(item,index) in dataList\" _v-780f6021=\"\">\n      <div class=\"left_img\" _v-780f6021=\"\">\n        <img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\">\n      </div>\n      <div class=\"list_content\" _v-780f6021=\"\">\n        <div class=\"list_title\" v-text=\"item.music\" _v-780f6021=\"\"></div>\n        <div class=\"list_name\" v-text=\"item.album\" _v-780f6021=\"\"></div>\n        <div class=\"list_time\" v-text=\"item.time\" _v-780f6021=\"\"></div>\n      </div>\n      <div class=\"right_img\" @click=\"go_href(item.command.content)\" _v-780f6021=\"\">\n          <div class=\"disable\" v-if=\"btnStatus[index]==0\" @click=\"stop_info\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-780f6021=\"\"></div>\n          <div class=\"mask_stop\" v-if=\"btnStatus[index]==2\" @click=\"change_play(index)\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-780f6021=\"\"></div>\n          <div class=\"mask_play\" v-if=\"btnStatus[index]==1\" @click=\"change_play(index)\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-780f6021=\"\"></div>\n          <div class=\"circle_mask\" _v-780f6021=\"\"></div>\n          <div _v-780f6021=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
+	module.exports = "\n<div _v-780f6021=\"\">\n  <div class=\"list1\" _v-780f6021=\"\">\n    <div class=\"big_img\" _v-780f6021=\"\">\n      <div class=\"list_line\" _v-780f6021=\"\"></div>\n      <div class=\"list_date\" v-text=\"week\" _v-780f6021=\"\"></div>\n      <div class=\"list_line\" _v-780f6021=\"\"></div>\n    </div>\n    <div class=\"list\" v-for=\"(item,index) in dataList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-780f6021=\"\">\n      <div class=\"left_img\" _v-780f6021=\"\">\n        <img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\">\n      </div>\n      <div class=\"list_content\" _v-780f6021=\"\">\n        <div class=\"list_title\" v-text=\"item.music\" _v-780f6021=\"\"></div>\n        <div class=\"list_name\" v-text=\"item.album\" _v-780f6021=\"\"></div>\n        <div class=\"list_time\" v-text=\"item.time\" _v-780f6021=\"\"></div>\n      </div>\n      <div class=\"right_img\" _v-780f6021=\"\">\n          <div class=\"disable\" v-if=\"item.isPlay==0\" @click.stop=\"stop_info\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-780f6021=\"\"></div>\n          <div class=\"mask_stop\" v-if=\"item.isPlay==1 &amp;&amp; !(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-780f6021=\"\"></div>\n          <div class=\"mask_play\" v-if=\"item.isPlay==1 &amp;&amp;(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-780f6021=\"\"></div>\n          <div class=\"circle_mask\" _v-780f6021=\"\"></div>\n          <div _v-780f6021=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
 
 /***/ },
 /* 531 */
@@ -31952,7 +32255,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-236acfbd] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-236acfbd] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-236acfbd] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-236acfbd] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-236acfbd], .b_right[_v-236acfbd] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-236acfbd] {\n  font-size: 14px;\n}\n\n.line[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-236acfbd] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-236acfbd] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-236acfbd]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-236acfbd]{\n  font-size: 0;\n}\n.item_timee>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-236acfbd]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-236acfbd]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-236acfbd]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-236acfbd],.mask_stop[_v-236acfbd],.disable[_v-236acfbd]{\n  z-index:3;\n}\n\n\n\n.free[_v-236acfbd]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.last[_v-236acfbd]{\n  width: 3.55rem;\n  height: 0.2rem;\n  border-radius:4px;\n  background: #FFF2E1;\n  color:#CC8B3F;\n  font-size:10px;\n  margin-bottom: 0.1rem;\n  text-align: center;\n  line-height:0.2rem;\n\n}\n.rea[_v-236acfbd]{\n  position: relative;\n}\n\n\n.top[_v-236acfbd]{\n  margin-top: 0.12rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-236acfbd] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-236acfbd] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-236acfbd] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-236acfbd] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-236acfbd], .b_right[_v-236acfbd] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-236acfbd] {\n  font-size: 14px;\n}\n\n.line[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-236acfbd] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-236acfbd] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-236acfbd]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-236acfbd]{\n  font-size: 0;\n}\n.item_timee>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-236acfbd]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-236acfbd]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-236acfbd]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-236acfbd],.mask_stop[_v-236acfbd],.disable[_v-236acfbd]{\n  z-index:3;\n}\n\n\n\n.free[_v-236acfbd]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.last[_v-236acfbd]{\n  width: 3.55rem;\n  height: 0.2rem;\n  border-radius:4px;\n  background: #FFF2E1;\n  color:#CC8B3F;\n  font-size:10px;\n  margin-bottom: 0.1rem;\n  text-align: center;\n  line-height:0.2rem;\n\n}\n.rea[_v-236acfbd]{\n  position: relative;\n}\n\n\n.top[_v-236acfbd]{\n  margin-top: 0.12rem;\n}\n", ""]);
 
 	// exports
 
@@ -31979,53 +32282,49 @@
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
+	var _api = __webpack_require__(113);
+
+	var _api2 = _interopRequireDefault(_api);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	exports.default = {
 	  props: ["data"],
 	  mounted: function mounted() {
-	    this.dataList = this.data.body.dataList[0];
-	    this.initBtnStatus();
-	  },
-	  computed: {
-	    contentList: function contentList() {
-	      return this.data.body.dataList[0].contentList;
-	    }
-	  },
-	  watch: {
-	    contentList: function contentList() {
-	      this.initBtnStatus();
-	    }
+	    this.dataList = this.data.body.dataList;
+	    this.contentList = this.data.body.dataList.contentList;
+	    this.isSub = this.data.body.isSub;
+	    this.initSortNoIndex();
+	    this.scro();
 	  },
 	  data: function data() {
 	    return {
 	      dataList: {},
+	      contentList: [],
 	      flag: true,
 	      isApp: _utils2.default.utils.isApp(),
-	      btnStatus: []
+	      btnStatus: null,
+	      name: "bd_album_03",
+	      albumId: null,
+	      sortNo: null,
+	      sortNoIndex: 0,
+	      pageFlag: true,
+	      isSub: 0,
+	      pageAlbumId: (0, _utils.getQuery)("albumId")
 	    };
 	  },
 
 	  methods: {
-	    stop_info: function stop_info() {
-	      _dialog2.default.alert("订阅后才可收听");
-	    },
-	    change_play: function change_play(index) {
-	      if (this.btnStatus[index] == 1) {
-	        Vue.set(this.btnStatus, index, 2);
-	      } else if (this.btnStatus[index] == 2) {
-	        Vue.set(this.btnStatus, index, 1);
-	      }
-	    },
-	    initBtnStatus: function initBtnStatus() {
+	    initSortNoIndex: function initSortNoIndex() {
 	      var that = this;
 	      this.contentList.map(function (item, index) {
-	        if (item.isPlay == "1") {
-	          Vue.set(that.btnStatus, index, 1);
-	        } else if (item.isPlay == "0") {
-	          Vue.set(that.btnStatus, index, 0);
+	        if (item.sortNo) {
+	          that.sortNoIndex = item.sortNo;
 	        }
 	      });
+	    },
+	    stop_info: function stop_info() {
+	      _dialog2.default.alert("订阅后才可收听");
 	    },
 	    fn: function fn() {
 	      this.flag = !this.flag;
@@ -32038,10 +32337,60 @@
 	      var d = parseInt(timestamp[2]);
 	      return y + "-" + m + "-" + d;
 	    },
-	    go_href: function go_href(href) {
-	      if (this.isApp) {} else {
-	        window.location.href = href;
+	    go_href: function go_href(albumId, sortNo) {
+	      if (this.isApp) {
+	        //调用app播放器
+	      } else {
+	        window.location.href = "/musicDetail.html?albumId=" + albumId + "&sortNo=" + sortNo;
 	      }
+	    },
+	    getMoreList: function getMoreList() {
+	      var that = this;
+	      if (this.pageFlag) {
+	        this.pageFlag = false;
+	        var obj = {
+	          "albumId": that.pageAlbumId,
+	          "sort": -1,
+	          "sortNo": that.sortNoIndex
+	        };
+	        (0, _api2.default)("/api/mg/content/music/getListData", obj).then(function (result) {
+	          if (result.code == 0) {
+	            if (result.data && result.data.dataList) {
+	              that.contentList = that.contentList.concat(result.data.dataList.reverse());
+	              result.data.dataList.map(function (item, index) {
+	                if (item.sortNo) {
+	                  that.sortNoIndex = item.sortNo;
+	                }
+	              });
+	              if (result.data.dataList.length > 0) {
+	                that.pageFlag = true;
+	              }
+	            } else {
+	              //显示请求接口错误页
+	            }
+	          } else {
+	            if (result.data.msg) {
+	              _dialog2.default.alert('code:' + result.code + ":msg" + result.data.msg);
+	            } else {
+	              _dialog2.default.alert('code:' + result.code);
+	            }
+	          }
+	        }).catch(function (e) {
+	          console.log('e:', e);
+	          //显示请求接口错误页
+	        });
+	      }
+	    },
+	    scro: function scro() {
+	      var _this = this;
+	      $(window).scroll(function () {
+	        console.log(66666);
+	        var el = $("#top").get(0);
+	        var bottom = el.offsetHeight + el.offsetTop - (window.screen.availHeight + window.scrollY);
+	        if (bottom < 100) {
+	          _this.getMoreList();
+	        }
+	      });
 	    }
 	  }
 	  // </script>
@@ -32264,7 +32613,7 @@
 	  // </style>
 
 	}; // <template>
-	//   <div class="top">
+	//   <div class="top" id="top">
 	//     <div class="tab">
 	//       <div class="tab_list" v-if="flag" @click="fn">
 	//         <div class="border color1" v-text="dataList.content"></div>
@@ -32285,7 +32634,7 @@
 	//         </div>
 	//       </div>
 	//       <div class="list">
-	//         <div class="item" v-for="(item,index) in contentList">
+	//         <div class="item" v-for="(item,index) in contentList" @click="go_href(item.albumId,item.sortNo)" >
 	//           <div class="last">上次听到这里 2017-07-11 21:09</div>
 	//           <div class="rea">
 	//             <div class="item_left">
@@ -32299,14 +32648,14 @@
 	//                 </div>
 	//               </div>
 	//             </div>
-	//             <div class="item_right" v-if="item.isFree==1" @click="go_href(item.command.content)">
-	//               <div class="disable" v-if="btnStatus[index]==0" @click="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-	//               <div class="mask_stop" v-if="btnStatus[index]==2" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-	//               <div class="mask_play" v-if="btnStatus[index]==1" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+	//             <div class="item_right" v-if="item.isFree==1">
+	//               <div class="disable" v-if="item.isPlay==0 && isSub==0" @click.stop="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+	//               <div class="mask_stop" v-if="isSub==1 && item.isPlay==1 && !(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+	//               <div class="mask_play" v-if="isSub==1 && item.isPlay==1 && (item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
 	//               <div class="circle_mask"></div>
 	//               <div><img :src="item.imageUrl" alt=""></div>
 	//             </div>
-	//             <div class="item_right2" v-if="item.isFree==0" @click="go_href(item.command.content)">
+	//             <div class="item_right2" v-if="item.isFree==0 && isSub==0" @click="go_href(item.albumId,item.sortNo)">
 	//               <div class="free">免费试听</div>
 	//             </div>
 	//           </div>
@@ -32325,7 +32674,7 @@
 /* 545 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"top\" _v-236acfbd=\"\">\n  <div class=\"tab\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n\n  <div v-if=\"flag\" _v-236acfbd=\"\">\n    <div class=\"update\" _v-236acfbd=\"\">\n      <div class=\"up\" _v-236acfbd=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-236acfbd=\"\"></span>期，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-236acfbd=\"\"></span>期\n      </div>\n    </div>\n    <div class=\"list\" _v-236acfbd=\"\">\n      <div class=\"item\" v-for=\"(item,index) in contentList\" _v-236acfbd=\"\">\n        <div class=\"last\" _v-236acfbd=\"\">上次听到这里 2017-07-11 21:09</div>\n        <div class=\"rea\" _v-236acfbd=\"\">\n          <div class=\"item_left\" _v-236acfbd=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-236acfbd=\"\"></div>\n            <div class=\"item_timee\" _v-236acfbd=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-236acfbd=\"\"></div>\n              <div class=\"item_count\" _v-236acfbd=\"\"><span v-text=\"item.number\" _v-236acfbd=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-236acfbd=\"\">\n                <div class=\"clock\" _v-236acfbd=\"\"></div>\n                <div class=\"times\" v-text=\"item.time\" _v-236acfbd=\"\"></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==1\" @click=\"go_href(item.command.content)\" _v-236acfbd=\"\">\n            <div class=\"disable\" v-if=\"btnStatus[index]==0\" @click=\"stop_info\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_stop\" v-if=\"btnStatus[index]==2\" @click=\"change_play(index)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_play\" v-if=\"btnStatus[index]==1\" @click=\"change_play(index)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"item.isFree==0\" @click=\"go_href(item.command.content)\" _v-236acfbd=\"\">\n            <div class=\"free\" _v-236acfbd=\"\">免费试听</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div v-if=\"!flag\" _v-236acfbd=\"\">\n\n  </div>\n\n</div>\n";
+	module.exports = "\n<div class=\"top\" id=\"top\" _v-236acfbd=\"\">\n  <div class=\"tab\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n\n  <div v-if=\"flag\" _v-236acfbd=\"\">\n    <div class=\"update\" _v-236acfbd=\"\">\n      <div class=\"up\" _v-236acfbd=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-236acfbd=\"\"></span>期，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-236acfbd=\"\"></span>期\n      </div>\n    </div>\n    <div class=\"list\" _v-236acfbd=\"\">\n      <div class=\"item\" v-for=\"(item,index) in contentList\" @click=\"go_href(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n        <div class=\"last\" _v-236acfbd=\"\">上次听到这里 2017-07-11 21:09</div>\n        <div class=\"rea\" _v-236acfbd=\"\">\n          <div class=\"item_left\" _v-236acfbd=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-236acfbd=\"\"></div>\n            <div class=\"item_timee\" _v-236acfbd=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-236acfbd=\"\"></div>\n              <div class=\"item_count\" _v-236acfbd=\"\"><span v-text=\"item.number\" _v-236acfbd=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-236acfbd=\"\">\n                <div class=\"clock\" _v-236acfbd=\"\"></div>\n                <div class=\"times\" v-text=\"item.time\" _v-236acfbd=\"\"></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==1\" _v-236acfbd=\"\">\n            <div class=\"disable\" v-if=\"item.isPlay==0 &amp;&amp; isSub==0\" @click.stop=\"stop_info\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_stop\" v-if=\"isSub==1 &amp;&amp; item.isPlay==1 &amp;&amp; !(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click=\"change_play(index)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_play\" v-if=\"isSub==1 &amp;&amp; item.isPlay==1 &amp;&amp; (item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click=\"change_play(index)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"item.isFree==0 &amp;&amp; isSub==0\" @click=\"go_href(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n            <div class=\"free\" _v-236acfbd=\"\">免费试听</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <div v-if=\"!flag\" _v-236acfbd=\"\">\n\n  </div>\n\n</div>\n";
 
 /***/ },
 /* 546 */
@@ -32398,7 +32747,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.con[_v-671bd1c0]{\n  background: white;\n}\n.title img[_v-671bd1c0]{\n  margin-top: 0.02rem;\n  width: 2.5rem;\n  height: 0.16rem;\n}\n.list[_v-671bd1c0]{\n  padding-top:0.1rem;\n  padding-bottom:0.1rem;\n  font-size: 0;\n  position: relative;\n}\n.list>div[_v-671bd1c0]{\n  display:inline-block;\n}\n.list_left[_v-671bd1c0]{\n  font-size: 0.14rem;\n}\n.list_right[_v-671bd1c0]{\n  font-size:0.11rem;\n  position: absolute;\n  right: 0;\n  margin-top: 0.05rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n\n.list_content[_v-671bd1c0]{\n  max-width: 3rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  margin-bottom: 0.05rem;\n}\n.list_right img[_v-671bd1c0]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 47px;\n}\n\n.list_right>div[_v-671bd1c0]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-671bd1c0]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-671bd1c0],.mask_stop[_v-671bd1c0]{\n  z-index:3;\n}\n\n\n.list_all[_v-671bd1c0]{\n  padding: 0 0.1rem;\n  border-top: 1px solid #E1E1E1;\n}\n.times>div[_v-671bd1c0]{\n  display: inline-block;\n  font-size: 0;\n  line-height:0.16rem;\n}\n.times .time[_v-671bd1c0]{\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  font-size:11px;\n  margin-right:0.05rem;\n}\n.times .name[_v-671bd1c0]{\n  font-size: 11px;\n}\n.all .list_all[_v-671bd1c0]:nth-child(1){\n  border: 0;\n}\n\n\n\n.big_img[_v-671bd1c0]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.15rem;\n  padding-bottom:0.05rem;\n  font-size: 0;\n  position:relative;\n}\n.big_img>div[_v-671bd1c0]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-671bd1c0]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-671bd1c0]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n.fixed[_v-671bd1c0]{\n  position: absolute;\n  right: 0.1rem;\n  font-size: 0;\n}\n.fixed>div[_v-671bd1c0]{\n  display: inline-block;\n  vertical-align: top;\n}\n.arrow[_v-671bd1c0]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n.arrow img[_v-671bd1c0]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n\n\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.con[_v-671bd1c0]{\n  background: white;\n}\n.title img[_v-671bd1c0]{\n  margin-top: 0.02rem;\n  width: 2.5rem;\n  height: 0.16rem;\n}\n.list[_v-671bd1c0]{\n  padding-top:0.1rem;\n  padding-bottom:0.1rem;\n  font-size: 0;\n  position: relative;\n}\n.list>div[_v-671bd1c0]{\n  display:inline-block;\n}\n.list_left[_v-671bd1c0]{\n  font-size: 0.14rem;\n}\n.list_right[_v-671bd1c0]{\n  font-size:0.11rem;\n  position: absolute;\n  right: 0;\n  margin-top: 0.05rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n\n.list_content[_v-671bd1c0]{\n  max-width: 3rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  margin-bottom: 0.05rem;\n}\n.list_right img[_v-671bd1c0]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 47px;\n}\n\n.list_right>div[_v-671bd1c0]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-671bd1c0]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-671bd1c0],.mask_stop[_v-671bd1c0]{\n  z-index:3;\n}\n\n\n.list_all[_v-671bd1c0]{\n  padding: 0 0.1rem;\n  border-top: 1px solid #E1E1E1;\n}\n.times>div[_v-671bd1c0]{\n  display: inline-block;\n  font-size: 0;\n  line-height:0.16rem;\n}\n.times .time[_v-671bd1c0]{\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  font-size:11px;\n  margin-right:0.05rem;\n}\n.times .name[_v-671bd1c0]{\n  font-size: 11px;\n}\n.all .list_all[_v-671bd1c0]:nth-child(1){\n  border: 0;\n}\n\n\n\n.big_img[_v-671bd1c0]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.15rem;\n  padding-bottom:0.05rem;\n  font-size: 0;\n  position:relative;\n}\n.big_img>div[_v-671bd1c0]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-671bd1c0]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-671bd1c0]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n.fixed[_v-671bd1c0]{\n  position: absolute;\n  right: 0.1rem;\n  font-size: 0;\n}\n.fixed>div[_v-671bd1c0]{\n  display: inline-block;\n  vertical-align: top;\n}\n.arrow[_v-671bd1c0]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n.arrow img[_v-671bd1c0]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n\n\n", ""]);
 
 	// exports
 
@@ -32441,9 +32790,10 @@
 	//               <div class="name" v-text="item.album"></div>
 	//             </div>
 	//           </div>
-	//           <div class="list_right" @click.stop="music_detail(item.command.musicContent)">
-	//             <div class="mask_stop"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-	//             <div class="mask_play"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+	//           <div class="list_right" @click.stop="music_detail(item.albumId,item.sortNo)">
+	//             <div class="disable" @click="stop_info" v-if="item.isPlay==0"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+	//             <div class="mask_stop" v-if="item.isPlay==1"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+	//             <div class="mask_play" v-if="item.isPlay==1"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
 	//             <div class="circle_mask"></div>
 	//             <div><img :src="item.imageUrl" alt=""></div>
 	//           </div>
@@ -32467,13 +32817,21 @@
 
 	  methods: {
 	    go_landing: function go_landing() {
-	      if (this.isApp) {} else {
+	      if (this.isApp) {
+	        _native2.default.Browser.open({
+	          "url": "/landingPage.html"
+	        });
+	      } else {
 	        window.location.href = "/landingPage.html";
 	      }
 	    },
-	    music_detail: function music_detail(link) {
-	      if (this.isApp) {} else {
-	        window.location.href = "/musicDetail";
+	    music_detail: function music_detail(albumId, sortNo) {
+	      if (this.isApp) {
+	        _native2.default.Browser.open({
+	          "url": "/musicDetail.html?albumId=" + albumId + "&sortNo=" + sortNo
+	        });
+	      } else {
+	        window.location.href = "/musicDetail.html?albumId=" + albumId + "&sortNo=" + sortNo;
 	      }
 	    }
 	  }
@@ -32618,7 +32976,7 @@
 /* 550 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"con\" @click=\"go_landing\" _v-671bd1c0=\"\">\n  <div class=\"big_img\" _v-671bd1c0=\"\">\n    <div class=\"list_line\" _v-671bd1c0=\"\"></div>\n    <div class=\"list_date\" _v-671bd1c0=\"\">免费学习专区</div>\n    <div class=\"list_line\" _v-671bd1c0=\"\"></div>\n    <div class=\"fixed\" _v-671bd1c0=\"\"><div style=\"color:#333333;font-size: 12px;\" _v-671bd1c0=\"\">更多</div><div class=\"arrow\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/entry.png\" alt=\"\" _v-671bd1c0=\"\"></div></div>\n  </div>\n  <div class=\"all\" _v-671bd1c0=\"\">\n    <div class=\"list_all\" v-for=\"item in dataList\" _v-671bd1c0=\"\">\n      <div class=\"list\" _v-671bd1c0=\"\">\n        <div class=\"list_left\" _v-671bd1c0=\"\">\n          <div class=\"list_content\" v-text=\"item.title\" _v-671bd1c0=\"\"></div>\n          <div class=\"times\" _v-671bd1c0=\"\">\n            <div class=\"time\" v-text=\"item.time\" _v-671bd1c0=\"\"></div>\n            <div class=\"name\" v-text=\"item.album\" _v-671bd1c0=\"\"></div>\n          </div>\n        </div>\n        <div class=\"list_right\" @click.stop=\"music_detail(item.command.musicContent)\" _v-671bd1c0=\"\">\n          <div class=\"mask_stop\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-671bd1c0=\"\"></div>\n          <div class=\"mask_play\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-671bd1c0=\"\"></div>\n          <div class=\"circle_mask\" _v-671bd1c0=\"\"></div>\n          <div _v-671bd1c0=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-671bd1c0=\"\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"con\" @click=\"go_landing\" _v-671bd1c0=\"\">\n  <div class=\"big_img\" _v-671bd1c0=\"\">\n    <div class=\"list_line\" _v-671bd1c0=\"\"></div>\n    <div class=\"list_date\" _v-671bd1c0=\"\">免费学习专区</div>\n    <div class=\"list_line\" _v-671bd1c0=\"\"></div>\n    <div class=\"fixed\" _v-671bd1c0=\"\"><div style=\"color:#333333;font-size: 12px;\" _v-671bd1c0=\"\">更多</div><div class=\"arrow\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/entry.png\" alt=\"\" _v-671bd1c0=\"\"></div></div>\n  </div>\n  <div class=\"all\" _v-671bd1c0=\"\">\n    <div class=\"list_all\" v-for=\"item in dataList\" _v-671bd1c0=\"\">\n      <div class=\"list\" _v-671bd1c0=\"\">\n        <div class=\"list_left\" _v-671bd1c0=\"\">\n          <div class=\"list_content\" v-text=\"item.title\" _v-671bd1c0=\"\"></div>\n          <div class=\"times\" _v-671bd1c0=\"\">\n            <div class=\"time\" v-text=\"item.time\" _v-671bd1c0=\"\"></div>\n            <div class=\"name\" v-text=\"item.album\" _v-671bd1c0=\"\"></div>\n          </div>\n        </div>\n        <div class=\"list_right\" @click.stop=\"music_detail(item.albumId,item.sortNo)\" _v-671bd1c0=\"\">\n          <div class=\"disable\" @click=\"stop_info\" v-if=\"item.isPlay==0\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-671bd1c0=\"\"></div>\n          <div class=\"mask_stop\" v-if=\"item.isPlay==1\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-671bd1c0=\"\"></div>\n          <div class=\"mask_play\" v-if=\"item.isPlay==1\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-671bd1c0=\"\"></div>\n          <div class=\"circle_mask\" _v-671bd1c0=\"\"></div>\n          <div _v-671bd1c0=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-671bd1c0=\"\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 551 */
@@ -32792,7 +33150,501 @@
 /* 563 */,
 /* 564 */,
 /* 565 */,
-/* 566 */,
+/* 566 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _utils = __webpack_require__(164);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	var _WXShare = __webpack_require__(187);
+
+	var _WXShare2 = _interopRequireDefault(_WXShare);
+
+	var _dialog = __webpack_require__(165);
+
+	var _dialog2 = _interopRequireDefault(_dialog);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var utils = _utils2.default.utils;
+	var iosInterface = window.iosInterface = {};
+
+	iosInterface.getHeadAndFootData = function () {
+	  var defaultData = {
+	    showHead: 1, // 是否展示头部
+	    showFoot: 0, // 是否展示底部
+	    backOnHead: 1, // 头部返回按钮
+	    homeOnHead: 0, // 头部首页按钮
+	    shareOnHead: 0, // 头部分享按钮
+	    btnOnHead: 0, // 头部文字按钮
+	    btnText: "", // 头部文字按钮文字
+	    btnLink: "" // 头部文字按钮链接
+	  };
+	  var formatData = {
+	    showHead: 0, // 是否展示头部
+	    showFoot: 0, // 是否展示底部
+	    backOnHead: 0, // 头部返回按钮
+	    homeOnHead: 0, // 头部首页按钮
+	    shareOnHead: 0, // 头部分享按钮
+	    btnOnHead: 0, // 头部文字按钮
+	    btnText: "", // 头部文字按钮文字
+	    btnLink: "" // 头部文字按钮链接
+	  };
+	  if (window.appData) {
+	    return JSON.stringify(Object.assign(formatData, window.appData));
+	  } else {
+	    return JSON.stringify(defaultData);
+	  }
+	};
+
+	iosInterface.getShareInfo = function () {
+	  var shareInfo = _WXShare2.default.getShareInfo();
+	  return JSON.stringify(Object.assign(shareInfo, window.moreShareInfo));
+	};
+	iosInterface.refreshPreviousPageData = function () {
+	  backNewData.$children[0].appUpData();
+	};
+	//state 0表示暂停，1表示播放
+	iosInterface.getAudioState = function (index, albumId, state) {
+	  if (window.musicDetail) {
+	    window.musicDetail.$children.map(function (i) {
+	      if (i.childrenName == 'musicDetail') {
+	        i.index = index;
+	      }
+	    });
+	  }
+	  if (window.landingPage) {
+	    window.landingPage.$children.map(function (item) {
+	      if (item.name == 'landingPage') {
+	        item.$children.map(function (item2) {
+	          if (item2.childrenName == "feedList") {
+	            item2.$children.map(function (item3) {
+	              if (item3.name == "bd_album_content_1") {
+	                item3.albumId = albumId;
+	                item3.sortNo = index;
+	                item3.btnStatus = state;
+	              }
+	            });
+	          }
+	        });
+	      }
+	    });
+	  }
+	  if (window.collect) {
+	    window.collect.$children.map(function (item) {
+	      if (item.name == 'collect') {
+	        item.$children.map(function (item2) {
+	          if (item2.childrenName == "feedList") {
+	            item2.$children.map(function (item3) {
+	              if (item3.name == "bd_album_03") {
+	                item3.albumId = albumId;
+	                item3.sortNo = index;
+	                item3.btnStatus = state;
+	              }
+	            });
+	          }
+	        });
+	      }
+	    });
+	  }
+	};
+	/**
+	 * 初始化头部
+	 */
+	var initHead = function initHead(callback) {
+	  callApp('Browser', 'initHead', { content: JSON.parse(iosInterface.getHeadAndFootData()) }, callback, '3.4.0', nullFunction);
+	};
+
+	/**
+	 * 空函数
+	 */
+	var nullFunction = function nullFunction() {};
+
+	/**
+	 * 调用2.4.0以前
+	 * @param callback
+	 * @param error
+	 * @param className
+	 * @param method
+	 * @param argumentsList
+	 */
+	var callAppOld = function callAppOld(callback, error, className, method, argumentsList) {
+	  var t = Date.now();
+	  window["callback_" + t] = callback;
+	  window["error_" + t] = error;
+	  var str = "neng:\/\/call.app.com?v=" + [encodeURIComponent("callback_" + t), encodeURIComponent("error_" + t), className, method, JSON.stringify(argumentsList)].join("|||").replace(/"/g, "'");
+	  utils.goTo(str);
+	};
+
+	/**
+	 * app外调用app
+	 * @param host
+	 * @param action
+	 * @param para
+	 */
+	var callAppNative = function callAppNative(host, action, para) {
+	  var baseHref = getBaseHost(),
+	      url = void 0;
+	  window.d_callback = nullFunction;
+	  if (utils.isIOS()) {
+	    url = "https://invoke." + baseHref + "?cmd=" + encodeURIComponent('davdian://call.' + host + '.com?action=' + action + '&params=' + encodeURIComponent(JSON.stringify(para)) + '&callback=d_callback&minv=2.5.0');
+	  } else if (utils.isAndroid() && !utils.isWechat()) {
+	    url = "davdian://invoke." + baseHref + "?cmd=" + encodeURIComponent('davdian://call.' + host + '.com?action=' + action + '&params=' + encodeURIComponent(JSON.stringify(para)) + '&callback=d_callback&minv=2.5.0');
+	    setTimeout(function () {
+	      url = '//open.davdian.com/httpurl?url=http://a.app.qq.com/o/simple.jsp?pkgname=com.davdian.seller';
+	      utils.goTo(url);
+	    }, 1500);
+	  } else {
+	    url = '//open.davdian.com/httpurl?url=http://a.app.qq.com/o/simple.jsp?pkgname=com.davdian.seller';
+	  }
+	  utils.goTo(url);
+	};
+
+	/**
+	 * 打开app并进入大V课
+	 * @param courseId
+	 */
+	var callAppEnteroom = function callAppEnteroom(courseId) {
+	  callAppNative("VoiceLive", "enterRoom", { courseId: courseId });
+	};
+
+	/**
+	 * 打开app并进入直播
+	 * @param liveId
+	 */
+	var callAppLive = function callAppLive(liveId) {
+	  var para = {
+	    "liveId": liveId || window["liveId"],
+	    "isPlaying": "1", // 1表示直播中，2是回放，3是整理中
+	    "fromPush": "0" // 0表示不来自于推送，1表示来自推送
+	  };
+	  callAppNative('LiveVideo', 'enterRoom', para);
+	};
+
+	/**
+	 * 得到基础host
+	 * @returns {null}
+	 */
+	var getBaseHost = function getBaseHost() {
+	  var result = location.href.match("davdian.com|bravetime.net|vyohui.cn");
+	  if (result && result.length) {
+	    return result[0];
+	  } else {
+	    return null;
+	  }
+	};
+
+	/**
+	 * 调用app2.4.0以后
+	 */
+	var callApp = function callApp(host, action, params) {
+	  var callback = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : nullFunction;
+	  var minv = arguments[4];
+	  var minCallback = arguments[5];
+
+
+	  if (utils.getAppVersion() >= minv.split(".").reduce(function (a, b) {
+	    return +a * 10 + +b;
+	  })) {
+	    var t = Date.now() + "_" + Math.round(Math.random() * 10000);
+	    window["callback_" + t] = callback;
+	    var url = "davdian:\/\/call." + host + ".com?" + "action=" + encodeURIComponent(action) + "&" + "params=" + encodeURIComponent(JSON.stringify(params)) + "&" + "callback=" + encodeURIComponent("callback_" + t) + "&" + "minv=" + encodeURIComponent(minv);
+	    utils.goTo(url);
+	  } else {
+	    if (minCallback) {
+	      minCallback();
+	    } else {
+	      alert("请升级您的APP");
+	    }
+	  }
+	};
+
+	/**
+	 * 设置app头部
+	 * @param opt
+	 * @param callback
+	 */
+	var setHead = function setHead(opt, callback) {
+	  setTimeout(function () {
+	    callApp("Browser", "setHead", opt, callback, '2.6.0');
+	  }, 100);
+	};
+
+	/**
+	 * 选取身份证
+	 * @param callback
+	 * @param minCallback
+	 */
+	var selectIdentity = function selectIdentity(callback, minCallback) {
+	  var cardName = {
+	    "cardName": sessionStorage.getItem("Addressee")
+	  };
+	  callApp("Browser", "selectIdentity", cardName, callback, '3.7.0', minCallback);
+	};
+
+	/**
+	 * 调用app进入语音课程
+	 * @param courseId
+	 */
+	var enterVoiceRoom = function enterVoiceRoom(courseId) {
+	  if (!window.enterVoiceRoomFlag) {
+	    window.enterVoiceRoomFlag = true;
+	    callApp("VoiceLive", "enterRoom", { courseId: courseId }, function () {
+	      location.reload();
+	    }, "3.4.0");
+	  }
+	};
+
+	/**
+	 * 调用app登录
+	 * @param callback
+	 * @param minCallback
+	 */
+	var nativeLogin = function nativeLogin(callback, minCallback) {
+	  callApp("Account", "login", {}, callback, '2.4.0', minCallback);
+	};
+
+	/**
+	 * app支付
+	 */
+	var nativePay = function nativePay(url, callback) {
+	  var option = {};
+	  option.url = encodeURIComponent(url);
+	  if (url.split("app_pay/").length > 1) {
+	    var list = url.split("app_pay/")[1].split("&");
+	    for (var i = 0; i < list.length; i++) {
+	      var key = list[i].split("=")[0];
+	      option[key] = list[i].split("=")[1];
+	    }
+	  }
+
+	  var callFunction = function callFunction(result) {
+	    if (typeof result === "string") {
+	      result = JSON.parse(result);
+	    }
+	    callback(+result.code, result.order_id);
+	  };
+	  callApp('Browser', 'pay', option, callFunction, '3.1.0', function () {
+	    utils.goTo(url);
+	  });
+	};
+
+	/**
+	 * 回到app首页
+	 */
+	var goAppHome = function goAppHome() {
+	  callAppOld(nullFunction, function () {
+	    alert("系统异常，请退出app重试");
+	  }, "base", "home", []);
+	};
+
+	/**
+	 * 在新标签打开页面
+	 * @param opt
+	 * @param callback
+	 */
+	var openNewPage = function openNewPage(opt, callback) {
+	  callApp('Browser', 'open', opt, callback, '3.1.0', function () {
+	    utils.goTo(opt.url);
+	  });
+	};
+
+	/**
+	 * 旧版分享
+	 */
+	var callAppShare = function callAppShare() {
+	  callAppOld(function (r) {
+	    var result = JSON.parse(r);
+	    var code = +result["code"];
+	    if (code === 0) {
+	      // 分享成功
+	      _dialog2.default.info("分享成功");
+	    } else if (code === 1) {
+	      _dialog2.default.info("分享失败");
+	    } else {
+	      alert("系统异常，请重试");
+	    }
+	  }, function () {
+	    alert("系统异常，请退出app重试");
+	  }, "base", "share", []);
+	};
+
+	/**
+	 * 新版分享
+	 * @param type
+	 * @param info
+	 * @param callback
+	 * @param errorCallback
+	 */
+	var callAppShareInfo = function callAppShareInfo(type, info, callback, errorCallback) {
+	  var shartInfo = window.iosInterface.netWorkGetShareInfo();
+	  var option = info || JSON.parse(shartInfo);
+
+	  option.shareType = '0';
+	  if (+type === -1) {
+	    option.show = '1';
+	  } else {
+	    option.show = '0';
+	    option.sharePlatform = type + "";
+	  }
+
+	  var callFunction = function callFunction(code) {
+	    if (+code === 0) {
+	      errorCallback && errorCallback();
+	    } else {
+	      callback && callback();
+	    }
+	  };
+
+	  callApp('Share', 'shareInfo', option, callFunction, '3.3.0');
+	};
+
+	/**
+	 * 唤起app分享图片
+	 */
+	var callAppShareImg = function callAppShareImg(type, imgUrl, callback, errorCallback) {
+
+	  var shartInfo = window.iosInterface.netWorkGetShareInfo();
+
+	  var option = JSON.parse(shartInfo);
+	  option.bigImageUrl = imgUrl;
+	  option.shareType = "1";
+
+	  if (type === -1) {
+	    option.show = "1";
+	  } else {
+	    option.show = "0";
+	    option.sharePlatform = type + "";
+	  }
+
+	  var callFunction = function callFunction(result) {
+	    var code = +result.code,
+	        msg = result.msg;
+	    if (code === 0) {
+	      errorCallback && errorCallback(msg);
+	    } else {
+	      callback && callback();
+	    }
+	  };
+
+	  callApp('Share', 'shareInfo', option, callFunction, '3.3.0', function () {
+	    bravetime.newAlert('当前版本过低不支持此功能，请尽快升级，或长按保存图片');
+	  });
+	};
+
+	/**
+	 * 唤起app分享到朋友圈
+	 */
+	var callAppShareToTimeline = function callAppShareToTimeline() {
+	  callAppOld(function () {
+	    var result = JSON.parse(r);
+	    var code = +result["code"];
+	    if (code === 0) {
+	      // 分享成功
+	      _dialog2.default.info("分享成功");
+	    } else if (code === 1) {
+	      _dialog2.default.info("分享失败");
+	    } else {
+	      alert("系统异常，请重试");
+	    }
+	  }, function () {
+	    alert("系统异常，请退出app重试");
+	  }, "base", "share_to_wechat_timeline", []);
+	};
+
+	/**
+	 * 唤起app分享给好友
+	 */
+	var callAppShareToFriend = function callAppShareToFriend() {
+	  callAppOld(function () {
+	    var result = JSON.parse(r);
+	    var code = +result["code"];
+	    if (code === 0) {
+	      _dialog2.default.info("分享成功");
+	    } else if (code === 1) {
+	      _dialog2.default.info("分享失败");
+	    } else {
+	      alert("系统异常，请重试");
+	    }
+	  }, function () {
+	    alert("系统异常，请退出app重试");
+	  }, "base", "share_to_wechat_friend", []);
+	};
+
+	/**
+	 * 唤起原生保存图片
+	 * @param src
+	 */
+	var callNativeHoldPic = function callNativeHoldPic(src) {
+	  callAppOld(nullFunction, nullFunction, "base", "savePic", [src]);
+	};
+
+	/**
+	 * app分享卡
+	 */
+	var callCardShare = function callCardShare(courseId) {
+	  callApp("Share", "cardShare", { courseId: courseId }, nullFunction, '3.4.0');
+	};
+
+	/**
+	 * 告知app页面打开成功
+	 * @returns {boolean}
+	 */
+	var callNativeReady = function callNativeReady() {
+	  // 如果是订单确认页,而且是等待刷新的,就不发这个了
+	  if (window["tj_id"] === 21 && $ && $.cookie && $.cookie("no_refresh")) {
+	    $.removeCookie("no_refresh");
+	    return false;
+	  }
+	  callAppOld(function () {}, function () {}, "base", "ready", []);
+	};
+
+	/**
+	 * 调用原生确认框
+	 * @param msg
+	 * @param opt
+	 */
+	var callNativeConfirm = function callNativeConfirm(msg, opt) {
+	  callAppOld(opt.okLink, opt.cancelLink, "base", "confirm", [msg, JSON.stringify(opt)]);
+	};
+
+	/**
+	 * 初始化
+	 */
+	var init = function init() {
+	  initHead();
+	};
+
+	exports.default = {
+	  init: init,
+	  callNativeConfirm: callNativeConfirm,
+	  callNativeReady: callNativeReady,
+	  callCardShare: callCardShare,
+	  callNativeHoldPic: callNativeHoldPic,
+	  callAppShareToFriend: callAppShareToFriend,
+	  callAppShareToTimeline: callAppShareToTimeline,
+	  callAppShare: callAppShare,
+	  callAppShareImg: callAppShareImg,
+	  callAppEnteroom: callAppEnteroom,
+	  callAppShareInfo: callAppShareInfo,
+	  callAppLive: callAppLive,
+	  setHead: setHead,
+	  selectIdentity: selectIdentity,
+	  enterVoiceRoom: enterVoiceRoom,
+	  nativeLogin: nativeLogin,
+	  nativePay: nativePay,
+	  goAppHome: goAppHome,
+	  openNewPage: openNewPage
+	};
+
+/***/ },
 /* 567 */,
 /* 568 */,
 /* 569 */,
@@ -33480,7 +34332,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 	// exports
 
@@ -33511,15 +34363,12 @@
 
 	var _api2 = _interopRequireDefault(_api);
 
+	var _appInterface = __webpack_require__(566);
+
+	var _appInterface2 = _interopRequireDefault(_appInterface);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	// <template>
-	//   <div>
-	//     <notopen></notopen>
-	//     <index_feed :data="data"></index_feed>
-	//   </div>
-	// </template>
-	// <script>
 	exports.default = {
 	  components: {
 	    index_feed: _index_feed2.default,
@@ -33529,13 +34378,13 @@
 	    return {
 	      data: [],
 	      pageFlag: true,
-	      upTime: 0
+	      upTime: 0,
+	      name: "landingPage"
 	    };
 	  },
 
+
 	  mounted: function mounted() {
-	    //        var result=require('../json/landingPage.json');
-	    //        this.data=result.data.feedList;
 	    this.getinitData();
 	    this.scrol();
 	  },
@@ -33544,42 +34393,60 @@
 	      var that = this;
 	      (0, _api2.default)("/api/mg/content/indexAlbum/getContent").then(function (result) {
 	        if (result.code == 0) {
-	          that.data = that.data.concat(result.data.feedList);
-	          result.data.feedList.map(function (item, index) {
-	            if (item.body.upTime) {
-	              that.upTime = item.body.upTime;
-	            }
-	          });
+	          if (result.data && result.data.feedList) {
+	            that.data = that.data.concat(result.data.feedList);
+	            result.data.feedList.map(function (item, index) {
+	              if (item.body.upTime) {
+	                that.upTime = item.body.upTime;
+	              }
+	            });
+	          } else {
+	            //显示错误页
+	          }
 	        } else {
-	          _dialog2.default.alert('code:' + result.code);
+	          if (result.data.msg) {
+	            _dialog2.default.alert('code:' + result.code + ":msg" + result.data.msg);
+	          } else {
+	            _dialog2.default.alert('code:' + result.code);
+	          }
 	        }
 	      }).catch(function (e) {
+	        //显示错误页
 	        console.log('e:', e);
 	      });
 	    },
 	    getData: function getData() {
 	      var that = this;
 	      if (that.pageFlag) {
+	        console.log(that.pageFlag);
 	        that.pageFlag = false;
 	        var obj = {
 	          "upTime": that.upTime
 	        };
 	        (0, _api2.default)("/api/mg/content/indexAlbum/getMoreContent", obj).then(function (result) {
 	          if (result.code == 0) {
-	            this.data = this.data.concat(result);
-	            result.map(function (item, index) {
-	              if (item.body.upTime) {
-	                that.upTime = item.body.upTime;
+	            if (result.data && result.data.feedList) {
+	              that.data = that.data.concat(result.data.feedList);
+	              result.data.feedList.map(function (item, index) {
+	                if (item.body.upTime) {
+	                  that.upTime = item.body.upTime;
+	                }
+	              });
+	              if (result.data) {
+	                that.pageFlag = true;
 	              }
-	            });
-	            if (result.data.feedList.length > 0) {
-	              that.pageFlag = true;
+	            } else {
+	              //显示错误页面
 	            }
 	          } else {
-	            _dialog2.default.alert('code:' + result.code);
+	            if (result.data.msg) {
+	              _dialog2.default.alert('code:' + result.code + ":msg" + result.data.msg);
+	            } else {
+	              _dialog2.default.alert('code:' + result.code);
+	            }
 	          }
 	        }).catch(function (e) {
-	          that.pageFlag = true;
+	          //显示错误页面
 	          console.log('e:', e);
 	        });
 	      }
@@ -33600,7 +34467,13 @@
 	  //
 	  // </style>
 
-	};
+	}; // <template>
+	//   <div>
+	//     <notopen></notopen>
+	//     <index_feed :data="data"></index_feed>
+	//   </div>
+	// </template>
+	// <script>
 
 /***/ },
 /* 1188 */

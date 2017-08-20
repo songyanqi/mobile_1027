@@ -6,7 +6,7 @@
         <div class="list_date" v-text="week"></div>
         <div class="list_line"></div>
       </div>
-      <div class="list" v-for="(item,index) in dataList">
+      <div class="list" v-for="(item,index) in dataList" @click.stop="go_href(item.albumId,item.sortNo)">
         <div class="left_img">
           <img :src="item.imageUrl" alt="">
         </div>
@@ -15,10 +15,10 @@
           <div class="list_name" v-text="item.album"></div>
           <div class="list_time" v-text="item.time"></div>
         </div>
-        <div class="right_img" @click="go_href(item.command.content)">
-            <div class="disable" v-if="btnStatus[index]==0" @click="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-            <div class="mask_stop" v-if="btnStatus[index]==2" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-            <div class="mask_play" v-if="btnStatus[index]==1" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+        <div class="right_img">
+            <div class="disable" v-if="item.isPlay==0" @click.stop="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+            <div class="mask_stop" v-if="item.isPlay==1 && !(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+            <div class="mask_play" v-if="item.isPlay==1 &&(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
             <div class="circle_mask"></div>
             <div><img :src="item.imageUrl" alt=""></div>
         </div>
@@ -39,37 +39,21 @@
               upTime:"",
               week:"",
               isApp:util.utils.isApp(),
-              btnStatus:[],
-              dataList:[]
+              btnStatus:null,
+              dataList:[],
+              albumId:null,
+              sortNo:null,
+              name:"bd_album_content_1"
           }
       },
       mounted:function () {
         this.dataList=this.data.body.dataList;
-        this.initBtnStatus();
         this.upTime=this.data.body.upTime;
         this.week=this.getLocalTime(this.upTime);
       },
       methods:{
         stop_info(){
           dialog.alert("订阅后才可收听");
-        },
-        change_play(index){
-          if(this.btnStatus[index]==1){
-            Vue.set(this.btnStatus,index,2);
-          }else if(this.btnStatus[index]==2){
-            Vue.set(this.btnStatus,index,1);
-          }
-        },
-        initBtnStatus(){
-          var that=this;
-          this.dataList.map(function(item,index){
-            if(item.isPlay=="1"){
-              Vue.set(that.btnStatus,index,1);
-            }else if(item.isPlay=="0"){
-              Vue.set(that.btnStatus,index,0);
-            }
-
-          })
         },
         getLocalTime(nS){
           let time= new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
@@ -88,11 +72,11 @@
               return m + "月" + d + "日" + " " + weekDay[week];
           }
         },
-        go_href(href){
+        go_href(albumId,sortNo){
             if(this.isApp){
-
+              //调app播放器
             }else {
-              window.location.href=href;
+              window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
             }
 
         },

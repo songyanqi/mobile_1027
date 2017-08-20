@@ -1,10 +1,10 @@
 <template>
   <div class="btn">
-    <div class="btn_left" v-if="userstatus==1">成为会员免费听</div>
+    <div class="btn_left" v-if="userstatus==1 || userstatus==0">成为会员免费听</div>
     <div class="btn_left" v-if="userstatus==3"><span>邀请赚</span><span v-text="price"></span></div>
     <div class="btn_right">
       <img src="//pic.davdian.com/free/2017/08/16/Rectangle.png" alt="">
-      <div class="btn_text" @click="Subscribe" v-if="issub==0 && userstatus==1">
+      <div class="btn_text" @click="Subscribe" v-if="issub==0 && (userstatus==1 || userstatus==0)">
         <span><span>订阅合辑:</span><span v-text="price"></span></span>
       </div>
       <div class="btn_text" @click="Subscribe" v-if="issub==0 && userstatus==3">

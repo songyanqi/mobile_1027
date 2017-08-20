@@ -9,6 +9,7 @@
   import notopen from "../../../component/com-wx-notopen.vue"
   import dialog from '../../../../utils/dialog.es6';
   import api from "../../../../utils/api.es6"
+  import appInterface from "../../../../utils/appInterface.es6"
   export default {
     components:{
       index_feed:index_feed,
@@ -18,12 +19,12 @@
         return {
             data:[],
             pageFlag:true,
-            upTime:0
+            upTime:0,
+            name:"landingPage"
         }
     },
+
     mounted:function () {
-//        var result=require('../json/landingPage.json');
-//        this.data=result.data.feedList;
         this.getinitData();
         this.scrol();
     },
@@ -33,22 +34,32 @@
           api("/api/mg/content/indexAlbum/getContent")
             .then(function (result) {
               if(result.code==0){
-                that.data=that.data.concat(result.data.feedList);
-                result.data.feedList.map(function (item,index) {
-                  if(item.body.upTime){
-                    that.upTime=item.body.upTime;
-                  }
-                })
+                if(result.data && result.data.feedList){
+                  that.data=that.data.concat(result.data.feedList);
+                  result.data.feedList.map(function (item,index) {
+                    if(item.body.upTime){
+                      that.upTime=item.body.upTime;
+                    }
+                  })
+                }else{
+                  //显示错误页
+                }
               }else{
-                dialog.alert('code:'+result.code);
+                if(result.data.msg){
+                  dialog.alert('code:'+result.code+ ":msg"+result.data.msg);
+                }else{
+                  dialog.alert('code:'+result.code);
+                }
               }
             }).catch(function(e){
+              //显示错误页
               console.log('e:', e)
           });
         },
         getData(){
           var that=this;
           if(that.pageFlag){
+            console.log(that.pageFlag);
             that.pageFlag=false;
             var obj={
                 "upTime":that.upTime
@@ -56,20 +67,30 @@
             api("/api/mg/content/indexAlbum/getMoreContent",obj)
               .then(function (result) {
                 if(result.code==0){
-                  this.data=this.data.concat(result);
-                  result.map(function (item,index) {
-                    if(item.body.upTime){
-                      that.upTime=item.body.upTime;
+                  if(result.data && result.data.feedList){
+                    that.data=that.data.concat(result.data.feedList);
+                    result.data.feedList.map(function (item,index) {
+                      if(item.body.upTime){
+                        that.upTime=item.body.upTime;
+                      }
+                    })
+                    if (result.data){
+                      that.pageFlag=true;
                     }
-                  })
-                  if (result.data.feedList.length>0){
-                    that.pageFlag=true;
+                  }else{
+                    //显示错误页面
                   }
+
                 }else{
-                  dialog.alert('code:'+result.code);
+                  if(result.data.msg){
+                    dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                  }else{
+                    dialog.alert('code:'+result.code);
+                  }
+
                 }
               }).catch(function(e){
-                that.pageFlag = true;
+                  //显示错误页面
                 console.log('e:', e)
             });
           }

@@ -1,5 +1,5 @@
 <template>
-  <div class="top">
+  <div class="top" id="top">
     <div class="tab">
       <div class="tab_list" v-if="flag" @click="fn">
         <div class="border color1" v-text="dataList.content"></div>
@@ -20,7 +20,7 @@
         </div>
       </div>
       <div class="list">
-        <div class="item" v-for="(item,index) in contentList">
+        <div class="item" v-for="(item,index) in contentList" @click="go_href(item.albumId,item.sortNo)" >
           <div class="last">上次听到这里 2017-07-11 21:09</div>
           <div class="rea">
             <div class="item_left">
@@ -34,14 +34,14 @@
                 </div>
               </div>
             </div>
-            <div class="item_right" v-if="item.isFree==1" @click="go_href(item.command.content)">
-              <div class="disable" v-if="btnStatus[index]==0" @click="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-              <div class="mask_stop" v-if="btnStatus[index]==2" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-              <div class="mask_play" v-if="btnStatus[index]==1" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+            <div class="item_right" v-if="item.isFree==1">
+              <div class="disable" v-if="item.isPlay==0 && isSub==0" @click.stop="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+              <div class="mask_stop" v-if="isSub==1 && item.isPlay==1 && !(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+              <div class="mask_play" v-if="isSub==1 && item.isPlay==1 && (item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click="change_play(index)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
-            <div class="item_right2" v-if="item.isFree==0" @click="go_href(item.command.content)">
+            <div class="item_right2" v-if="item.isFree==0 && isSub==0" @click="go_href(item.albumId,item.sortNo)">
               <div class="free">免费试听</div>
             </div>
           </div>
@@ -58,51 +58,44 @@
   import util from "../../../utils/utils.es6";
   import native from "../../../src/common/js/module/native.js"
   import dialog from '../../../utils/dialog.es6';
+  import api from "../../../utils/api.es6"
+  import {getQuery} from '../../../utils/utils.es6';
   export default {
       props:["data"],
       mounted:function () {
-        this.dataList=this.data.body.dataList[0];
-        this.initBtnStatus();
-      },
-      computed:{
-        contentList:function () {
-          return this.data.body.dataList[0].contentList;
-        }
-      },
-      watch:{
-        contentList:function () {
-          this.initBtnStatus();
-        }
+        this.dataList=this.data.body.dataList;
+        this.contentList=this.data.body.dataList.contentList;
+        this.isSub=this.data.body.isSub;
+        this.initSortNoIndex();
+        this.scro();
       },
       data(){
           return {
               dataList:{},
+              contentList:[],
               flag:true,
               isApp:util.utils.isApp(),
-              btnStatus:[]
+              btnStatus:null,
+              name:"bd_album_03",
+              albumId:null,
+              sortNo:null,
+              sortNoIndex:0,
+              pageFlag:true,
+              isSub:0,
+              pageAlbumId:getQuery("albumId"),
           }
       },
       methods:{
+          initSortNoIndex(){
+              var that=this;
+              this.contentList.map(function (item,index) {
+                if(item.sortNo){
+                  that.sortNoIndex=item.sortNo;
+                }
+              });
+          },
           stop_info(){
             dialog.alert("订阅后才可收听");
-          },
-          change_play(index){
-              if(this.btnStatus[index]==1){
-                Vue.set(this.btnStatus,index,2);
-              }else if(this.btnStatus[index]==2){
-                Vue.set(this.btnStatus,index,1);
-              }
-          },
-          initBtnStatus(){
-              var that=this;
-              this.contentList.map(function(item,index){
-                if(item.isPlay=="1"){
-                  Vue.set(that.btnStatus,index,1);
-                }else if(item.isPlay=="0"){
-                  Vue.set(that.btnStatus,index,0);
-                }
-
-              })
           },
           fn(){
               this.flag=!this.flag;
@@ -115,13 +108,63 @@
             let d=parseInt(timestamp[2]);
             return y + "-" + m + "-" + d;
           },
-          go_href(href){
+          go_href(albumId,sortNo){
               if(this.isApp){
-
+                //调用app播放器
               }else{
-                window.location.href=href;
+                window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
               }
+
           },
+          getMoreList(){
+            var that=this;
+            if(this.pageFlag){
+              this.pageFlag=false;
+              var obj={
+                "albumId":that.pageAlbumId,
+                "sort":-1,
+                "sortNo":that.sortNoIndex
+              };
+              api("/api/mg/content/music/getListData",obj)
+                .then(function (result) {
+                  if(result.code==0){
+                    if(result.data && result.data.dataList){
+                      that.contentList=that.contentList.concat((result.data.dataList).reverse());
+                      result.data.dataList.map(function (item,index) {
+                        if(item.sortNo){
+                          that.sortNoIndex=item.sortNo;
+                        }
+                      });
+                      if (result.data.dataList.length >0){
+                        that.pageFlag=true;
+                      }
+                    }else{
+                        //显示请求接口错误页
+                    }
+                  }else{
+                    if(result.data.msg){
+                      dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                    }else{
+                      dialog.alert('code:'+result.code);
+                    }
+                  }
+                }).catch(function(e){
+                  console.log('e:', e)
+                  //显示请求接口错误页
+              });
+            }
+          },
+          scro(){
+            var _this=this;
+            $(window).scroll(function(){
+              console.log(66666);
+              var el = $("#top").get(0);
+              var bottom = el.offsetHeight + el.offsetTop - (window.screen.availHeight + window.scrollY);
+              if (bottom<100){
+                _this.getMoreList();
+              }
+            });
+          }
 
       }
   }
