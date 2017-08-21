@@ -41,7 +41,6 @@ function getProtocal(param = {}) {
 
   // 设置全局回调
   window[callbackName] = function (response) {
-    alert(123123123123123);
     // 多数native接口执行成功时response.code就会返回'1',执行失败时就会返回'0'。
     // 此处返回'1'时候正常回调success,但返回不等于'1'时一律执行error。
     // 如此一来,诸如Account.login这样的返回'0'|'1'|'2'的接口就可以处理'0'|'1'以外的情况了(在error中判断response === '0'|'2'|'3'|'4'|...)。
