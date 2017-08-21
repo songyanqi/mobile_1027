@@ -27148,7 +27148,7 @@
 	// <template>
 	//   <div class="all">
 	//     <div class="big_img">
-	//       <img :src="dataList.imageUrl" alt="">
+	//       <img id="onloadimg" :src="dataList.imageUrl" alt="">
 	//     </div>
 	//     <div class="content">
 	//       <div class="content_title" v-text="dataList.album"></div>
@@ -27232,7 +27232,11 @@
 /* 408 */
 /***/ function(module, exports) {
 
+<<<<<<< HEAD
+	module.exports = "\n<div class=\"all\" _v-234ea0bb=\"\">\n  <div class=\"big_img\" _v-234ea0bb=\"\">\n    <img id=\"onloadimg\" :src=\"dataList.imageUrl\" alt=\"\" _v-234ea0bb=\"\">\n  </div>\n  <div class=\"content\" _v-234ea0bb=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-234ea0bb=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-234ea0bb=\"\">\n      <div class=\"pri_left\" _v-234ea0bb=\"\">\n        <span v-text=\"dataList.income\" _v-234ea0bb=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-234ea0bb=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-234ea0bb=\"\"></div>\n  </div>\n</div>\n";
+=======
 	module.exports = "\n<div class=\"all\" _v-8e6e84e0=\"\">\n  <div class=\"big_img\" _v-8e6e84e0=\"\">\n    <img :src=\"dataList.imageUrl\" alt=\"\" _v-8e6e84e0=\"\">\n  </div>\n  <div class=\"content\" _v-8e6e84e0=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-8e6e84e0=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-8e6e84e0=\"\">\n      <div class=\"pri_left\" _v-8e6e84e0=\"\">\n        <span v-text=\"dataList.income\" _v-8e6e84e0=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-8e6e84e0=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-8e6e84e0=\"\"></div>\n  </div>\n</div>\n";
+>>>>>>> 22ca1df0b594135e7ff94fc6485c9fd4231a908b
 
 /***/ },
 /* 409 */
@@ -27474,7 +27478,11 @@
 
 
 	// module
+<<<<<<< HEAD
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-236acfbd] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-236acfbd] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-236acfbd] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-236acfbd] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-236acfbd], .b_right[_v-236acfbd] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-236acfbd] {\n  font-size: 14px;\n}\n\n.line[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-236acfbd] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-236acfbd] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-236acfbd]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-236acfbd]{\n  font-size: 0;\n}\n.item_timee>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-236acfbd]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-236acfbd]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-236acfbd]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-236acfbd],.mask_stop[_v-236acfbd],.disable[_v-236acfbd]{\n  z-index:3;\n}\n\n\n\n.free[_v-236acfbd]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.last[_v-236acfbd]{\n  width: 3.55rem;\n  height: 0.2rem;\n  border-radius:4px;\n  background: #FFF2E1;\n  color:#CC8B3F;\n  font-size:10px;\n  margin-bottom: 0.1rem;\n  text-align: center;\n  line-height:0.2rem;\n\n}\n.rea[_v-236acfbd]{\n  position: relative;\n}\n\n\n.top[_v-236acfbd]{\n  margin-top: 0.12rem;\n  height: 10rem;\n}\n", ""]);
+=======
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-8e3626dc] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-8e3626dc] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-8e3626dc] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-8e3626dc] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-8e3626dc] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-8e3626dc], .b_right[_v-8e3626dc] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-8e3626dc] {\n  font-size: 14px;\n}\n\n.line[_v-8e3626dc] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-8e3626dc] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-8e3626dc] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-8e3626dc] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-8e3626dc] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-8e3626dc]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-8e3626dc]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-8e3626dc]{\n  font-size: 0;\n}\n.item_timee>div[_v-8e3626dc]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-8e3626dc]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-8e3626dc]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-8e3626dc]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-8e3626dc]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-8e3626dc]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-8e3626dc]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-8e3626dc]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-8e3626dc],.mask_stop[_v-8e3626dc],.disable[_v-8e3626dc]{\n  z-index:3;\n}\n\n\n\n.free[_v-8e3626dc]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.last[_v-8e3626dc]{\n  width: 3.55rem;\n  height: 0.2rem;\n  border-radius:4px;\n  background: #FFF2E1;\n  color:#CC8B3F;\n  font-size:10px;\n  margin-bottom: 0.1rem;\n  text-align: center;\n  line-height:0.2rem;\n\n}\n.rea[_v-8e3626dc]{\n  position: relative;\n}\n\n\n.top[_v-8e3626dc]{\n  margin-top: 0.12rem;\n}\n", ""]);
+>>>>>>> 22ca1df0b594135e7ff94fc6485c9fd4231a908b
 
 	// exports
 
@@ -27515,9 +27523,9 @@
 	    this.contentList = this.data.body.dataList.contentList;
 	    this.isSub = this.data.body.isSub;
 	    this.initSortNoIndex();
-	    this.scro();
-	    this.tab_scroll();
-
+	    this.$nextTick(function () {
+	      this.scro();
+	    });
 	    //        window.audioPlayHistoryFn = function(obj){
 	    //          console.log(obj.sortNo, obj.date)
 	    //          console.log(that.name);
@@ -27563,11 +27571,6 @@
 	          "success": "audioLocationFn"
 	        });
 	      }
-	    },
-	    tab_scroll: function tab_scroll() {
-
-	      var tab = $(".top").offset().top;
-	      console.log(tab);
 	    },
 	    go_play: function go_play(albumId, sortNo) {
 	      if (this.isApp) {
@@ -27652,8 +27655,14 @@
 	    },
 	    scro: function scro() {
 	      var _this = this;
+	      var tab = $("#top")[0];
+
+	      $("#onloadimg").load = function () {
+	        console.log("tab==>>>", tab.offsetTop);
+	      };
 	      $(window).scroll(function () {
-	        console.log(66666);
+	        console.log("tab==>>>", tab.offsetTop);
+	        if ($("body").scrollTop() >= tab) {}
 	        var el = $("#top").get(0);
 	        var bottom = el.offsetHeight + el.offsetTop - (window.screen.availHeight + window.scrollY);
 	        if (bottom < 100) {
@@ -27878,6 +27887,7 @@
 	  //
 	  //   .top{
 	  //     margin-top: 0.12rem;
+	  //     height: 10rem;
 	  //   }
 	  // </style>
 
@@ -33517,7 +33527,11 @@
 
 
 	// module
+<<<<<<< HEAD
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-f53c15bc]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-f53c15bc]{\n  height: 44px;\n}\n", ""]);
+=======
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-52c32c2d]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-52c32c2d]{\n  height: 44px;\n}\n", ""]);
+>>>>>>> 22ca1df0b594135e7ff94fc6485c9fd4231a908b
 
 	// exports
 
@@ -33552,7 +33566,11 @@
 
 	var _header2 = _interopRequireDefault(_header);
 
+<<<<<<< HEAD
+	var _utils = __webpack_require__(85);
+=======
 	var _utils = __webpack_require__(80);
+>>>>>>> 22ca1df0b594135e7ff94fc6485c9fd4231a908b
 
 	var _utils2 = _interopRequireDefault(_utils);
 
@@ -33837,7 +33855,11 @@
 /* 480 */
 /***/ function(module, exports) {
 
+<<<<<<< HEAD
+	module.exports = "\n<div _v-f53c15bc=\"\">\n  <lheader class=\"top\" v-if=\"!isApp\" _v-f53c15bc=\"\"></lheader>\n  <div class=\"empty_div\" v-if=\"!isApp\" _v-f53c15bc=\"\"></div>\n  <index_feed :data=\"data\" _v-f53c15bc=\"\"></index_feed>\n</div>\n";
+=======
 	module.exports = "\n<div _v-52c32c2d=\"\">\n  <lheader class=\"top\" v-if=\"!isApp\" _v-52c32c2d=\"\"></lheader>\n  <div class=\"empty_div\" v-if=\"!isApp\" _v-52c32c2d=\"\"></div>\n  <index_feed :data=\"data\" _v-52c32c2d=\"\"></index_feed>\n</div>\n";
+>>>>>>> 22ca1df0b594135e7ff94fc6485c9fd4231a908b
 
 /***/ },
 /* 481 */

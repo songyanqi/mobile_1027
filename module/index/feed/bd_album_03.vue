@@ -69,9 +69,9 @@
         this.contentList=this.data.body.dataList.contentList;
         this.isSub=this.data.body.isSub;
         this.initSortNoIndex();
-        this.scro();
-        this.tab_scroll();
-
+        this.$nextTick(function () {
+          this.scro();
+        })
 //        window.audioPlayHistoryFn = function(obj){
 //          console.log(obj.sortNo, obj.date)
 //          console.log(that.name);
@@ -109,19 +109,12 @@
       methods:{
           audioLocation(){
             if(this.isApp){
-              window.audioLocationFn=function (obj) {
-                window.iosInterface.getAudioState(obj);
-              };
               native.Audio.audioLocation({
-                "success":"audioLocationFn"
+                "success":function (obj) {
+                  window.iosInterface.getAudioState(obj);
+                }
               })
             }
-          },
-          tab_scroll(){
-
-              var tab=$(".top").offset().top;
-              console.log(tab);
-
           },
           go_play(albumId,sortNo){
             if(this.isApp){
@@ -208,8 +201,16 @@
           },
           scro(){
             var _this=this;
+            var tab=$("#top")[0];
+
+            $("#onloadimg").load=function () {
+              console.log("tab==>>>",tab.offsetTop);
+            };
             $(window).scroll(function(){
-              console.log(66666);
+              console.log("tab==>>>",tab.offsetTop);
+              if($("body").scrollTop()>=tab){
+
+              }
               var el = $("#top").get(0);
               var bottom = el.offsetHeight + el.offsetTop - (window.screen.availHeight + window.scrollY);
               if (bottom<100){
@@ -436,5 +437,6 @@
 
   .top{
     margin-top: 0.12rem;
+    height: 10rem;
   }
 </style>

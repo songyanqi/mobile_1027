@@ -57,11 +57,10 @@
       methods:{
         audioLocation(){
           if(this.isApp){
-            window.audioLocationFn=function (obj) {
-                window.iosInterface.getAudioState(obj);
-            };
             native.Audio.audioLocation({
-              "success": 'audioLocationFn'
+              "success": function (obj) {
+                window.iosInterface.getAudioState(obj);
+              }
             })
           }
         },
