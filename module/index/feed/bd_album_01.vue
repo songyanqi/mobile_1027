@@ -4,7 +4,7 @@
       <div class="big_img">
         <img id="uuu" :src="dataList.imageUrl" alt="">
       </div>
-      <div class="history_mask"></div>
+      <div class="history_mask" v-if="isApp"></div>
       <div class="history" @click.stop="go_history" v-if="isApp">
         <div>
           <div>上次听到</div>

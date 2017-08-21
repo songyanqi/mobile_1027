@@ -110,8 +110,8 @@
 	window.landingPage = new _Vue2.default({
 	  el: ".app",
 	  components: {
-	    'com-to-top-icon': __webpack_require__(475),
-	    'landingPage': __webpack_require__(481)
+	    'com-to-top-icon': __webpack_require__(485),
+	    'landingPage': __webpack_require__(491)
 	  },
 	  data: function data() {
 	    return {
@@ -171,7 +171,7 @@
 	          ts.response = response;
 	        },
 	        error: function error(_error) {
-	          ts.response = __webpack_require__(501);
+	          ts.response = __webpack_require__(511);
 	          console.error('ajax error:' + _error.status + ' ' + _error.statusText);
 	        }
 	      });
@@ -23777,7 +23777,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.box{\n  font-size: 0;\n  padding-bottom: 0.22rem;\n  padding-right: 0.21rem;\n  padding-left: 0.3rem;\n  padding-top:0.02rem;\n}\n.box>div{\n  display: inline-block;\n  vertical-align: top;\n  margin-top:0.12rem;\n  margin-right:0.09rem;\n  background: #D8D8D8;\n  border:1px solid #979797;\n  width: 0.72rem;\n  height: 0.35rem;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n.item img{\n  width: 0.72rem;\n  height: 0.35rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.box{\n  font-size: 0;\n  padding-bottom: 0.22rem;\n  padding-right: 0.21rem;\n  padding-left: 0.3rem;\n  padding-top:0.02rem;\n}\n.box>div{\n  display: inline-block;\n  vertical-align: top;\n  margin-top:0.12rem;\n  margin-right:0.09rem;\n  background: #D8D8D8;\n  border:1px solid #979797;\n  width: 0.72rem;\n  height: 0.35rem;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  background-size: cover;\n  background-position: center center;\n  background-repeat: no-repeat;\n}\n.item img{\n  width: 0.72rem;\n  height: 0.35rem;\n}\n", ""]);
 
 	// exports
 
@@ -23804,8 +23804,9 @@
 
 	// <template>
 	//   <div class="box">
-	//     <div class="item" v-for="item in dataList" @click.stop="go_collect(item.albumId)">
-	//       <img :src="item.imageUrl" alt="">
+	//     <div class="item" v-for="item in dataList"
+	//          @click.stop="go_collect(item.albumId)" :style="{'background-image':styleObject(item.imageUrl)}">
+	//       <!--<img :src="item.imageUrl" alt="">-->
 	//     </div>
 	//   </div>
 	// </template>
@@ -23823,6 +23824,9 @@
 	  },
 
 	  methods: {
+	    styleObject: function styleObject(item) {
+	      return "url(" + item + ")";
+	    },
 	    go_collect: function go_collect(albumId) {
 	      if (this.isApp) {
 	        _native2.default.Browser.open({
@@ -23852,6 +23856,9 @@
 	  //     width: 0.72rem;
 	  //     height: 0.35rem;
 	  //     box-sizing: border-box;
+	  //     background-size: cover;
+	  //     background-position: center center;
+	  //     background-repeat: no-repeat;
 	  //   }
 	  //   .item img{
 	  //     width: 0.72rem;
@@ -23865,7 +23872,7 @@
 /* 376 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"box\">\n  <div class=\"item\" v-for=\"item in dataList\" @click.stop=\"go_collect(item.albumId)\">\n    <img :src=\"item.imageUrl\" alt=\"\">\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"box\">\n  <div class=\"item\" v-for=\"item in dataList\"\n       @click.stop=\"go_collect(item.albumId)\" :style=\"{'background-image':styleObject(item.imageUrl)}\">\n    <!--<img :src=\"item.imageUrl\" alt=\"\">-->\n  </div>\n</div>\n";
 
 /***/ },
 /* 377 */
@@ -27305,7 +27312,7 @@
 	//       <div class="big_img">
 	//         <img id="uuu" :src="dataList.imageUrl" alt="">
 	//       </div>
-	//       <div class="history_mask"></div>
+	//       <div class="history_mask" v-if="isApp"></div>
 	//       <div class="history" @click.stop="go_history" v-if="isApp">
 	//         <div>
 	//           <div>上次听到</div>
@@ -27334,7 +27341,7 @@
 /* 408 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"all\" _v-234ea0bb=\"\">\n  <div class=\"big_top\" _v-234ea0bb=\"\">\n    <div class=\"big_img\" _v-234ea0bb=\"\">\n      <img id=\"uuu\" :src=\"dataList.imageUrl\" alt=\"\" _v-234ea0bb=\"\">\n    </div>\n    <div class=\"history_mask\" _v-234ea0bb=\"\"></div>\n    <div class=\"history\" @click.stop=\"go_history\" v-if=\"isApp\" _v-234ea0bb=\"\">\n      <div _v-234ea0bb=\"\">\n        <div _v-234ea0bb=\"\">上次听到</div>\n        <div style=\"overflow: hidden;max-width: 96px;\" _v-234ea0bb=\"\">{{ historyName }}</div>\n        <div _v-234ea0bb=\"\">...,点我继续收听</div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"content\" _v-234ea0bb=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-234ea0bb=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-234ea0bb=\"\">\n      <div class=\"pri_left\" _v-234ea0bb=\"\">\n        <span v-text=\"dataList.income\" _v-234ea0bb=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-234ea0bb=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-234ea0bb=\"\"></div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"all\" _v-234ea0bb=\"\">\n  <div class=\"big_top\" _v-234ea0bb=\"\">\n    <div class=\"big_img\" _v-234ea0bb=\"\">\n      <img id=\"uuu\" :src=\"dataList.imageUrl\" alt=\"\" _v-234ea0bb=\"\">\n    </div>\n    <div class=\"history_mask\" v-if=\"isApp\" _v-234ea0bb=\"\"></div>\n    <div class=\"history\" @click.stop=\"go_history\" v-if=\"isApp\" _v-234ea0bb=\"\">\n      <div _v-234ea0bb=\"\">\n        <div _v-234ea0bb=\"\">上次听到</div>\n        <div style=\"overflow: hidden;max-width: 96px;\" _v-234ea0bb=\"\">{{ historyName }}</div>\n        <div _v-234ea0bb=\"\">...,点我继续收听</div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"content\" _v-234ea0bb=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-234ea0bb=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-234ea0bb=\"\">\n      <div class=\"pri_left\" _v-234ea0bb=\"\">\n        <span v-text=\"dataList.income\" _v-234ea0bb=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-234ea0bb=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-234ea0bb=\"\"></div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 409 */
@@ -33474,18 +33481,28 @@
 /* 472 */,
 /* 473 */,
 /* 474 */,
-/* 475 */
+/* 475 */,
+/* 476 */,
+/* 477 */,
+/* 478 */,
+/* 479 */,
+/* 480 */,
+/* 481 */,
+/* 482 */,
+/* 483 */,
+/* 484 */,
+/* 485 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(476)
-	__vue_script__ = __webpack_require__(478)
+	__webpack_require__(486)
+	__vue_script__ = __webpack_require__(488)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-to-top-icon.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(479)
+	__vue_template__ = __webpack_require__(489)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -33510,13 +33527,13 @@
 	})()}
 
 /***/ },
-/* 476 */
+/* 486 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(477);
+	var content = __webpack_require__(487);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(43)(content, {});
@@ -33536,7 +33553,7 @@
 	}
 
 /***/ },
-/* 477 */
+/* 487 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(42)();
@@ -33550,7 +33567,7 @@
 
 
 /***/ },
-/* 478 */
+/* 488 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33617,25 +33634,25 @@
 	// <script>
 
 /***/ },
-/* 479 */
+/* 489 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--滚动至顶图标-->\n<img class=\"to-top-icon\" @click=\"toTop\" :style=\"{display: display}\"\n     :src=\"'http://pic.davdian.com/free/back_top_icon_0803.png'\">\n";
 
 /***/ },
-/* 480 */,
-/* 481 */
+/* 490 */,
+/* 491 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(482)
-	__vue_script__ = __webpack_require__(484)
+	__webpack_require__(492)
+	__vue_script__ = __webpack_require__(494)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/landingPage/vue/landing.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(500)
+	__vue_template__ = __webpack_require__(510)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -33660,13 +33677,13 @@
 	})()}
 
 /***/ },
-/* 482 */
+/* 492 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(483);
+	var content = __webpack_require__(493);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(43)(content, {});
@@ -33686,7 +33703,7 @@
 	}
 
 /***/ },
-/* 483 */
+/* 493 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(42)();
@@ -33700,7 +33717,7 @@
 
 
 /***/ },
-/* 484 */
+/* 494 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33729,7 +33746,7 @@
 
 	var _native2 = _interopRequireDefault(_native);
 
-	var _header = __webpack_require__(485);
+	var _header = __webpack_require__(495);
 
 	var _header2 = _interopRequireDefault(_header);
 
@@ -33737,11 +33754,11 @@
 
 	var _utils2 = _interopRequireDefault(_utils);
 
-	var _mask = __webpack_require__(490);
+	var _mask = __webpack_require__(500);
 
 	var _mask2 = _interopRequireDefault(_mask);
 
-	var _mask3 = __webpack_require__(495);
+	var _mask3 = __webpack_require__(505);
 
 	var _mask4 = _interopRequireDefault(_mask3);
 
@@ -33877,18 +33894,18 @@
 	// <script>
 
 /***/ },
-/* 485 */
+/* 495 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(486)
-	__vue_script__ = __webpack_require__(488)
+	__webpack_require__(496)
+	__vue_script__ = __webpack_require__(498)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/landingPage/vue/header.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(489)
+	__vue_template__ = __webpack_require__(499)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -33913,13 +33930,13 @@
 	})()}
 
 /***/ },
-/* 486 */
+/* 496 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(487);
+	var content = __webpack_require__(497);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(43)(content, {});
@@ -33939,7 +33956,7 @@
 	}
 
 /***/ },
-/* 487 */
+/* 497 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(42)();
@@ -33953,7 +33970,7 @@
 
 
 /***/ },
-/* 488 */
+/* 498 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -34029,24 +34046,24 @@
 	};
 
 /***/ },
-/* 489 */
+/* 499 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-7926d052=\"\">\n  <div class=\"header\" _v-7926d052=\"\">\n    <div class=\"head_img\" @click=\"history\" _v-7926d052=\"\">\n      <i class=\"back-arrow\" _v-7926d052=\"\"></i>\n    </div>\n    <div class=\"head_title\" _v-7926d052=\"\">标题标题</div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 490 */
+/* 500 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(491)
-	__vue_script__ = __webpack_require__(493)
+	__webpack_require__(501)
+	__vue_script__ = __webpack_require__(503)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/landingPage/vue/mask.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(494)
+	__vue_template__ = __webpack_require__(504)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -34071,13 +34088,13 @@
 	})()}
 
 /***/ },
-/* 491 */
+/* 501 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(492);
+	var content = __webpack_require__(502);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(43)(content, {});
@@ -34097,7 +34114,7 @@
 	}
 
 /***/ },
-/* 492 */
+/* 502 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(42)();
@@ -34111,7 +34128,7 @@
 
 
 /***/ },
-/* 493 */
+/* 503 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -34184,24 +34201,24 @@
 	};
 
 /***/ },
-/* 494 */
+/* 504 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-e243971e=\"\">\n  <div class=\"mask\" _v-e243971e=\"\"></div>\n  <div class=\"banner\" _v-e243971e=\"\">\n    <div class=\"big_img\" _v-e243971e=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-e243971e=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-e243971e=\"\">无法连接网络啦</div>\n    <div class=\"btn\" style=\"margin-top: 0.2rem;\" @click=\"reload\" _v-e243971e=\"\">点击重新加载</div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 495 */
+/* 505 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(496)
-	__vue_script__ = __webpack_require__(498)
+	__webpack_require__(506)
+	__vue_script__ = __webpack_require__(508)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/landingPage/vue/mask2.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(499)
+	__vue_template__ = __webpack_require__(509)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -34226,13 +34243,13 @@
 	})()}
 
 /***/ },
-/* 496 */
+/* 506 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(497);
+	var content = __webpack_require__(507);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(43)(content, {});
@@ -34252,7 +34269,7 @@
 	}
 
 /***/ },
-/* 497 */
+/* 507 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(42)();
@@ -34266,7 +34283,7 @@
 
 
 /***/ },
-/* 498 */
+/* 508 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -34339,19 +34356,19 @@
 	};
 
 /***/ },
-/* 499 */
+/* 509 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-4d000311=\"\">\n  <div class=\"mask\" _v-4d000311=\"\"></div>\n  <div class=\"banner\" _v-4d000311=\"\">\n    <div class=\"big_img\" _v-4d000311=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-4d000311=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-4d000311=\"\">无法连接网络啦</div>\n    <div class=\"btn\" style=\"margin-top: 0.2rem;\" @click=\"reload\" _v-4d000311=\"\">点击重新加载</div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 500 */
+/* 510 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-f53c15bc=\"\">\n  <lheader class=\"top\" v-if=\"!isApp\" _v-f53c15bc=\"\"></lheader>\n  <div class=\"empty_div\" v-if=\"!isApp\" _v-f53c15bc=\"\"></div>\n  <index_feed :data=\"data\" _v-f53c15bc=\"\"></index_feed>\n  <maskk v-if=\"isApp &amp;&amp; maskFlag\" _v-f53c15bc=\"\"></maskk>\n  <maskk2 v-if=\"!isApp &amp;&amp; maskFlag\" _v-f53c15bc=\"\"></maskk2>\n</div>\n";
 
 /***/ },
-/* 501 */
+/* 511 */
 /***/ function(module, exports) {
 
 	module.exports = {

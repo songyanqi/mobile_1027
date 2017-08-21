@@ -7,6 +7,8 @@
     <lfooter :income="income" :sub="isSub" :userstatus="userStatus" :albumid="albumId" :price="price"></lfooter>
     <maskk v-if="isApp && maskFlag"></maskk>
     <maskk2 v-if="!isApp && maskFlag"></maskk2>
+    <data_mask></data_mask>
+    <data_mask2></data_mask2>
   </div>
 
 </template>
@@ -23,13 +25,17 @@
   import native from "../../../../src/common/js/module/native.js"
   import maskk from "./mask.vue"
   import maskk2 from "./mask2.vue"
+  import data_mask from "./data_mask.vue"
+  import data_mask2 from "./data_mask2.vue"
   export default {
     components:{
       index_feed:index_feed,
       lheader:lheader,
       lfooter:lfooter,
       maskk:maskk,
-      maskk2:maskk2
+      maskk2:maskk2,
+      data_mask:data_mask,
+      data_mask2:data_mask2
     },
     data(){
       return {
@@ -98,7 +104,7 @@
 </script>
 <style scoped>
   .empty{
-    height: 0.49rem;
+    height:50px;
   }
   .top{
     position: fixed;
