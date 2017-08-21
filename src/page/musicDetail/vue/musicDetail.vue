@@ -12,7 +12,7 @@
           <div class="mask_content">付费内容</div>
           <div class="mask_content2"><span>99</span>订阅即可收听本专辑全部内容</div>
           <div class="mask_free">会员免费订阅</div>
-          <div class="mask_btn">立即订阅</div>
+          <div class="mask_btn" @click='subscription'>立即订阅</div>
         </div>
       </div>
     </div>
@@ -40,7 +40,7 @@
       <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
     </div>
     <div style="height: 0.1rem;background: #F8F7F7;"></div>
-    <div class="bottom_text" v-if='musicList[index] && musicList[index].introduction' v-text='musicList[index].introduction'></div>
+    <div class="bottom_text" v-if='introduction || introduction==0' v-html='introduction'></div>
     <div class="mask" v-if='audioListFlag'></div>
     <div class="mask_div" v-if='audioListFlag'>
       <div class="mask_top mask_padding">
@@ -104,6 +104,28 @@
           }
         }
         return arr
+      },
+      introduction(){
+        if (this.isapp){
+          if ($('.bottom_text img').length ==0){
+            if (this.musicList && this.musicList[this.index] && this.musicList[this.index].introduction){
+              native.Browser.showWebHeight({
+                "webHeight": $('.bottom_text').height()+30
+              })
+              console.log($('.bottom_text').height()+30)
+            } else {
+              console.log('introduction is null')
+            }
+          } else {
+            setTimeout(function(){
+              native.Browser.showWebHeight({
+                "webHeight": $('.bottom_text').height()+30
+              })
+              console.log($('.bottom_text').height()+30)
+            },1000)
+          }
+        }
+        return this.musicList && this.musicList[this.index] && this.musicList[this.index].introduction || null
       }
     },
     created: function () {
@@ -145,6 +167,9 @@
       })
     },
     methods: {
+      subscription(){
+        alert('订阅')
+      },
       goback(){
         window.history.back()
       },
@@ -557,12 +582,11 @@
     padding-right:0.1rem;
     color:#666666;
     font-size: 12px;
-    padding-top: 0.15rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background: #fff;
     line-height: 0.18rem;
   }
-
-
   .mask{
     background: #000000;
     opacity: 0.5;
