@@ -40,11 +40,7 @@
       <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
     </div>
     <div style="height: 0.1rem;background: #F8F7F7;"></div>
-    <div class="bottom_text">
-      父母不断重复唠叨，是因为孩子没有按自己说的去做。
-      显而易见，这种无效的沟通方式，不仅无法达到父母的初衷，又会促使孩子与自己对抗。
-      每个人都是只有内心认可，才能心甘情愿地去做事。如果父母没有足够的理由说服孩子，他也不可能完全听从。所以当孩子表现得总是不听话，父母就要想到：自己是否有足够的理由说服孩子，或者自己的要求是否真的不容质疑。
-    </div>
+    <div class="bottom_text" v-if='musicList[index] && musicList[index].introduction' v-text='musicList[index].introduction'></div>
     <div class="mask" v-if='audioListFlag'></div>
     <div class="mask_div" v-if='audioListFlag'>
       <div class="mask_top mask_padding">
@@ -379,6 +375,11 @@
     }
   }
 </script>
+<style>
+  html,body{
+    background: rgb(248, 247, 247);
+  }
+</style>
 <style scoped lang='sass'>
   .top_img{
     position: relative;
