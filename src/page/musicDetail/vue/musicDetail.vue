@@ -109,10 +109,11 @@
         if (this.isapp){
           if ($('.bottom_text img').length ==0){
             if (this.musicList && this.musicList[this.index] && this.musicList[this.index].introduction){
-              native.Browser.showWebHeight({
-                "webHeight": $('.bottom_text').height()+30
-              })
-              console.log($('.bottom_text').height()+30)
+              setTimeout(function(){
+                native.Browser.showWebHeight({
+                  "webHeight": $('.bottom_text').height()+30
+                })
+              },200)
             } else {
               console.log('introduction is null')
             }
@@ -121,8 +122,7 @@
               native.Browser.showWebHeight({
                 "webHeight": $('.bottom_text').height()+30
               })
-              console.log($('.bottom_text').height()+30)
-            },1000)
+            },1200)
           }
         }
         return this.musicList && this.musicList[this.index] && this.musicList[this.index].introduction || null
