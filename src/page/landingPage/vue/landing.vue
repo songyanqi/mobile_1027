@@ -92,7 +92,7 @@
                       that.pageFlag=true;
                     }
                   }else{
-                    that.maskFlag=true;
+                    //是显示错误页么？
                   }
 
                 }else{
