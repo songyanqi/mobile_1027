@@ -3,7 +3,6 @@
     <lheader class="top" v-if="!isApp"></lheader>
     <div class="empty_div" v-if="!isApp"></div>
     <index_feed :data="data"></index_feed>
-    <maskk></maskk>
   </div>
 </template>
 <script>
