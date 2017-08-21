@@ -42,15 +42,13 @@
     mounted:function () {
         this.getinitData();
         this.scrol();
-<<<<<<< HEAD
 
-=======
         native.Browser.setHead({
           'title':'标题',
           'backBtn':'1',
           'shareBtn':"1"
         })
->>>>>>> 217f364c2aee167147ae63d22bf1ad0ffb9268bf
+
     },
     methods:{
         getinitData(){
