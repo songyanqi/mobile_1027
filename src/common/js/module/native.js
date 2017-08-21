@@ -841,6 +841,7 @@ const native = {
      * native.Audio.audioLocation();
      */
     audioPlayHistory(param = {}){
+      alert(2)
       call({
         v:'4.2.0',
         host: 'Audio',
