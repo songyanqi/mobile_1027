@@ -91,14 +91,12 @@ const DetailPic = {
             if (offtop < 50) {
               if (!scope.begin_time) {
                 scope.begin_time = (new Date()).valueOf();
-                console.log("开始计算时间：",scope.begin_time);
               }
             }
             if (offtop > 50) {
               if (scope.begin_time) {
                 if(!scope.end_time){
                   scope.end_time = (new Date()).valueOf();
-                  console.log("结束计算时间：",scope.end_time);
                   var laytime = scope.end_time - scope.begin_time;
                   if(laytime < 500){
                     scope.begin_time = 0;
@@ -106,6 +104,7 @@ const DetailPic = {
                     return false;
                   }
                   let tiData = {
+                    "production":22,
                     "period":laytime,
                     "page":2,
                     "goods_id": scope.goodsid
@@ -391,7 +390,6 @@ const DetailPic = {
       if (scope.begin_time) {
         if(!scope.end_time){
           scope.end_time = (new Date()).valueOf();
-          console.log("结束计算时间：",scope.end_time);
           let laytime = scope.end_time - scope.begin_time;
           if(laytime < 500){
             scope.begin_time = 0;
@@ -399,6 +397,7 @@ const DetailPic = {
             return false;
           }
           let tiData = {
+            "production":22,
             "period":laytime,
             "page":2,
             "goods_id": scope.goodsid

@@ -82,10 +82,12 @@
             }
             if (response.data) {
               that.$emit("titlename", "我的邀请人");
+              document.title = "我的邀请人";
               that.my_inviterPage = true;
               that.btnName = '修改邀请人';
             } else {
               that.$emit("titlename", "添加邀请人");
+              document.title = "添加邀请人";
               that.show_code_input = true;
               that.add_inviterPage = true;
               that.btnName = '添加邀请人';
@@ -106,6 +108,7 @@
         that.trun_grey = true;  //置灰按钮
         that.btnName = '确认修改';
         that.$emit("titlename", "修改邀请人");
+        document.title = "修改邀请人";
         that.mobile = '';
         that.info_bottom = false;
       },
@@ -157,6 +160,7 @@
               that.trun_grey = false;  //置灰按钮
               that.btnName = '修改邀请人';
               that.$emit("titlename", "我的邀请人");
+              document.title = "我的邀请人";
             },
             error(error) {
               console.error('ajax error:' + error.status + ' ' + error.statusText);

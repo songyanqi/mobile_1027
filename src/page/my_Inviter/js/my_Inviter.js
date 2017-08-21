@@ -9,7 +9,6 @@ import Cookies from 'js-cookie';
 // 业务模块
 import login from '../../../common/js/module/login.js';
 login.needLogin();
-
 // 渲染页面
 new Vue({
   el: ".app",
@@ -20,7 +19,7 @@ new Vue({
   data() {
     return {
       response: null,
-      title:""
+      title:"邀请人信息"
     }
   },
   computed: {},
@@ -28,8 +27,12 @@ new Vue({
 
   },
   beforeCreate() {
+
   },
   created() {
+
+  },
+  mounted:function () {
 
   },
   methods: {
