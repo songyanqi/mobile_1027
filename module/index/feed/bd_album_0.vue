@@ -23,7 +23,7 @@
         go_collect(albumId){
           if(this.isApp){
             native.Browser.open({
-              "url":"/collect.html?albumId"+albumId
+              "url":"/collect.html?albumId="+albumId
             });
           }else{
             window.location.href="/collect.html?albumId="+albumId;
