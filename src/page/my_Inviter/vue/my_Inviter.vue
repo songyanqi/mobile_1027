@@ -121,12 +121,12 @@
           dataType: 'json',
           data: encrypt({"inviteCode": that.mobile}),
           success(response) {
-            that.response = response;
             if (response.code) {
               popup.toast(response.data.msg);
             } else {
               that.my_inviterPage = true; //显示我的邀请人
               that.trun_grey = false;  //按钮可用
+              that.response = response;
               if(window.screen.height < 580){
                 that.info_bottom = true;
               }

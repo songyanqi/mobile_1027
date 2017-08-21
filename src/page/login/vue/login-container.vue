@@ -218,7 +218,6 @@
         if (that.Invite) {
           regiserData.inviteCode = that.invitation_code
         }
-        console.log(regiserData);
         /*发送注册请求*/
         $.ajax({
           url: '/api/mg/auth/user/register?_=' + Date.now(),
@@ -232,8 +231,7 @@
             } else {
               /*注册*/
               var referer = that.getQueryString("referer");
-              debugger;
-              location.href = referer;
+              location.href = referer || "/";
             }
           },
           error(error) {
