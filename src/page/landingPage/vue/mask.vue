@@ -21,7 +21,7 @@
     right: 0;
     bottom: 0;
     background: #F1F1F1;
-    z-index: 2;
+    z-index: 4;
   }
   .banner{
     margin-top: 1rem;
@@ -30,5 +30,15 @@
   .btn{
     width: 1.44rem;
     height: 0.33rem;
+    border-radius: 100px;
+    border:1px solid #999999;
+    color: #333333;
+    font-size: 12px;
+    text-align: center;
+    line-height: 0.33rem;
+  }
+  .banner{
+    z-index: 5;
+
   }
 </style>

@@ -3,20 +3,25 @@
     <lheader class="top" v-if="!isApp"></lheader>
     <div class="empty_div" v-if="!isApp"></div>
     <index_feed :data="data"></index_feed>
-
+    <maskk></maskk>
   </div>
 </template>
 <script>
+
+
   import index_feed from '../../../../module/index/index_feed.vue'
   import dialog from '../../../../utils/dialog.es6';
   import api from "../../../../utils/api.es6"
   import appInterface from "../../../../utils/appInterface.es6"
   import lheader from './header.vue'
   import util from "../../../../utils/utils.es6"
+  import maskk from "./mask.vue"
   export default {
     components:{
       index_feed:index_feed,
-      lheader:lheader
+      lheader:lheader,
+      maskk:maskk
+
     },
     data(){
         return {
