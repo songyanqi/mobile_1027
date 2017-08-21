@@ -45,6 +45,9 @@ window.collect=new Vue({
           isAudioAbsorb:1
         });
 
+
+
+
         // 设置分享信息
         // try {
         //   share.setShareInfo({

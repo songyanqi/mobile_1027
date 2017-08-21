@@ -47,6 +47,9 @@
     },
     mounted:function () {
       this.getData();
+      native.Browser.initHead({
+
+      })
     },
     methods:{
         getData(){

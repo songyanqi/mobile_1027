@@ -66,7 +66,7 @@
       },
       audioPlayHistory(){
         var _this=this;
-        if(this.isApp){
+        if(_this.isApp){
           native.Audio.audioPlayHistory({
             "albumId":_this.albumId,
             "success": function (obj) {

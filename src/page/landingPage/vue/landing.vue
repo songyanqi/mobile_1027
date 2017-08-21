@@ -41,6 +41,7 @@
     mounted:function () {
         this.getinitData();
         this.scrol();
+
     },
     methods:{
         getinitData(){
