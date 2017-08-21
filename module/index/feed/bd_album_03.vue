@@ -455,7 +455,6 @@
 
   .top{
     margin-top: 0.12rem;
-    height: 10rem;
   }
   .empty_tab{
     height: 0.5rem;
