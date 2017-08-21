@@ -14,6 +14,7 @@
   import dialog from '../../../../utils/dialog.es6';
   import api from "../../../../utils/api.es6"
   import appInterface from "../../../../utils/appInterface.es6"
+  import native from '../../../common/js/module/native.js';
   import lheader from './header.vue'
   import util from "../../../../utils/utils.es6"
   import maskk from "./mask.vue"
@@ -41,7 +42,15 @@
     mounted:function () {
         this.getinitData();
         this.scrol();
+<<<<<<< HEAD
 
+=======
+        native.Browser.setHead({
+          'title':'标题',
+          'backBtn':'1',
+          'shareBtn':"1"
+        })
+>>>>>>> 217f364c2aee167147ae63d22bf1ad0ffb9268bf
     },
     methods:{
         getinitData(){

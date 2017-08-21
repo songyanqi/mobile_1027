@@ -35,7 +35,6 @@ function getProtocal(param = {}) {
     };
   param.param.error = param.param.error || function () {
     };
-
   // 回调名称
   let callbackName = `native_callback_${Math.random().toString().split('.')[1]}`;
   // 设置全局回调

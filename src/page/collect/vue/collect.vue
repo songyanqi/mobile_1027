@@ -71,6 +71,12 @@
                     if (result.data.feedList.length >0){
                       that.pageFlag=true
                     }
+                    native.Browser.setHead({
+                      'title':'合辑页',
+                      'backBtn':'1',
+                      'shareBtn':"1",
+                      'shareMoney':result.data.attr.income,
+                    })
                   }else{
                     that.maskFlag=true;
                   }
