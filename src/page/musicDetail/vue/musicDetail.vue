@@ -200,7 +200,7 @@
         api('/api/mg/content/album/subscription', obj).then(function(result){
           let {code,data:{msg,payUrl,jsApi}}=result;
           if (code == 0){
-            if (result.data.code ==0){
+            if (result.data.code == 300){
               if(jsApi){
                   jsApi.jsApiParameters.dvdhref=location.href;
                   window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
@@ -208,7 +208,7 @@
               }else if(payUrl){
                 that.nativePay(payUrl,function (flag) {
                   if(flag){
-                    // 报名成功
+                    // 报名成功(进不来)
                   }
                 });
               }else{
