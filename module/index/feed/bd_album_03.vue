@@ -184,6 +184,7 @@
                 "sort":-1,
                 "sortNo":that.sortNoIndex
               };
+              localS
               api("/api/mg/content/music/getListData",obj)
                 .then(function (result) {
                   if(result.code==0){
