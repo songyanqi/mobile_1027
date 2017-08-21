@@ -1,8 +1,8 @@
 <template>
   <div>
     <audio preload="auto" class='allAudio'></audio>
-    <div class="tab2" @click='goback'><img src="//pic.davdian.com/free/2017/08/21/backRound.png" alt=""></div>
-    <div class="top_img" >
+    <div v-if='!isapp' class="tab2" @click='goback'><img src="//pic.davdian.com/free/2017/08/21/backRound.png" alt=""></div>
+    <div class="top_img" v-if='!isapp'>
       <div class="big_img" v-if='musicList[index] && musicList[index].imageUrl'>
         <img :src="musicList[index].imageUrl" alt="">
       </div>
@@ -16,16 +16,16 @@
         </div>
       </div>
     </div>
-    <div class="text" v-if='musicList[index] && musicList[index].music' v-text='musicList[index].music'></div>
-    <div class="range">
+    <div class="text" v-if='!isapp && musicList[index] && musicList[index].music' v-text='musicList[index].music'></div>
+    <div class="range" v-if='!isapp'>
       <div class="gray"></div>
       <div v-if='musicList[index] && musicList[index].time' class="red" :style='{width: playTime/musicList[index].time*100 + "%"}'></div>
     </div>
-    <div class="time">
+    <div class="time" v-if='!isapp'>
       <div v-text='timeFormat(playTime)'></div>
       <div v-if='musicList[index] && musicList[index].time' v-text='timeFormat(musicList[index].time)'></div>
     </div>
-    <div class="btn">
+    <div class="btn" v-if='!isapp'>
       <div class="btn1"><img src="//pic.davdian.com/free/2017/08/16/time.png" alt="" @click='dialog'></div>
       <div class="btn2"><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt="" @click='playAudio(index-1)'></div>
       <div class="btn3" >
@@ -35,11 +35,11 @@
       <div class="btn4"><img src="//pic.davdian.com/free/2017/08/16/combinedShape.png" alt="" @click='playAudio(index+1)'></div>
       <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
     </div>
-    <div class="look_more" @click='goAlbumId'>
+    <div class="look_more" @click='goAlbumId' v-if='!isapp'>
       <div class="look_count">查看合辑 (<span v-if='musicList[index]  && musicList[index].sortNo' v-text='parseInt(musicList[index].sortNo) + 1'></span>/<span v-text='allAudio'></span>)</div>
       <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
     </div>
-    <div style="height: 0.1rem;background: #F8F7F7;"></div>
+    <div style="height: 0.1rem;background: #F8F7F7;" v-if='!isapp'></div>
     <div class="bottom_text" v-if='introduction || introduction==0' v-html='introduction'></div>
     <div class="mask" v-if='audioListFlag'></div>
     <div class="mask_div" v-if='audioListFlag'>
