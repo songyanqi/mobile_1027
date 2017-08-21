@@ -1,5 +1,5 @@
 <template>
-  <div class="myInviter_wrap">
+  <div class="myInviter_wrap" v-if="response">
     <div v-if="show_code_input">
       <div class="login_text">请输入邀请码</div>
       <div class="inputbox check_input">
@@ -76,6 +76,7 @@
           dataType: 'json',
           data: encrypt({}),
           success(response) {
+            debugger
             that.response = response;
             if (response.code) {
               popup.toast(response.data.msg);

@@ -10,7 +10,7 @@
     <com-top-title title="邀请好友安装大V店APP"></com-top-title>
 
     <!--主体内容-->
-    <div>
+    <div v-if-="response">
       <!--我的邀请码-->
       <div class="sharImg">
         <img :src="response.data.shareUrl" alt="">
