@@ -124,7 +124,7 @@
             if(this.isApp){
               native.Audio.audioLocation({
                 "success":function (obj) {
-                  alert(obj);
+                  alert(11123123123);
                   window.iosInterface.getAudioState(obj);
                 }
               })
