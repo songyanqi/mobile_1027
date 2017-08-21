@@ -34,6 +34,7 @@
   export default {
     props:["data"],
     mounted:function () {
+      var that = this
       this.dataList=this.data.body.dataList[0];
       this.isFree=this.data.body.isFree;
       this.$nextTick(function () {
@@ -67,6 +68,7 @@
       audioPlayHistory(){
         var _this=this;
         if(_this.isApp){
+          alert(1)
           native.Audio.audioPlayHistory({
             "albumId":_this.albumId,
             success: function (obj) {

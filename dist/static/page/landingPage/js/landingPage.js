@@ -1305,6 +1305,7 @@
 	    audioPlayHistory: function audioPlayHistory() {
 	      var param = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
+	      alert(2);
 	      call({
 	        v: '4.2.0',
 	        host: 'Audio',
@@ -27145,7 +27146,11 @@
 
 
 	// module
+<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-234ea0bb] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-234ea0bb] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-234ea0bb] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-234ea0bb] {\n  width: 3.75rem;\n}\n\n.content_title[_v-234ea0bb] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-234ea0bb] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-234ea0bb] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-234ea0bb] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-234ea0bb] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-234ea0bb] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-234ea0bb]{\n  position: relative;\n}\n.history_mask[_v-234ea0bb]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-234ea0bb]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-234ea0bb] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-234ea0bb]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
+=======
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-8e6e84e0] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-8e6e84e0] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-8e6e84e0] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-8e6e84e0] {\n  width: 3.75rem;\n}\n\n.content_title[_v-8e6e84e0] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-8e6e84e0] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-8e6e84e0] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-8e6e84e0] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-8e6e84e0] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-8e6e84e0] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-8e6e84e0]{\n  position: relative;\n}\n.history_mask[_v-8e6e84e0]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-8e6e84e0]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-8e6e84e0] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-8e6e84e0]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
+>>>>>>> 906c97c79fefbfef60415bbec47e741451c5fe54
 
 	// exports
 
@@ -27173,6 +27178,7 @@
 	exports.default = {
 	  props: ["data"],
 	  mounted: function mounted() {
+	    var that = this;
 	    this.dataList = this.data.body.dataList[0];
 	    this.isFree = this.data.body.isFree;
 	    this.$nextTick(function () {
