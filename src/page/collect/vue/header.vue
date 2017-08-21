@@ -1,10 +1,12 @@
 <template>
-  <div class="top">
-    <div class="header">
-      <div class="head_img" @click="history">
-        <i class="back-arrow"></i>
+  <div>
+    <div class="top">
+      <div class="header">
+        <div class="head_img" @click="history">
+          <i class="back-arrow"></i>
+        </div>
+        <div class="head_title">合辑页</div>
       </div>
-      <div class="head_title">合辑页</div>
     </div>
   </div>
 </template>
