@@ -69,7 +69,7 @@
         if(this.isApp){
           native.Audio.audioPlayHistory({
             "albumId":_this.albumId,
-            "success": function (obj) {
+            success: function (obj) {
               alert(obj.name +":"+ obj.sortNo+ ":" +obj.date );
               _this.historyName=obj.name;
               _this.sortNo=obj.sortNo;

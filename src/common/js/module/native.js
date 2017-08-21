@@ -35,7 +35,7 @@ function getProtocal(param = {}) {
     };
   param.param.error = param.param.error || function () {
     };
-
+    alert(2)
   // 回调名称
   let callbackName = `native_callback_${Math.random().toString().split('.')[1]}`;
   // 设置全局回调
@@ -44,7 +44,7 @@ function getProtocal(param = {}) {
     // 此处返回'1'时候正常回调success,但返回不等于'1'时一律执行error。
     // 如此一来,诸如Account.login这样的返回'0'|'1'|'2'的接口就可以处理'0'|'1'以外的情况了(在error中判断response === '0'|'2'|'3'|'4'|...)。
     if (response.code == '1') {
-      alert(response.code);
+      alert(response.code+ ';;;111');
       param.param.success(response)
     } else {
       param.param.error(response)
@@ -843,6 +843,7 @@ const native = {
      * native.Audio.audioLocation();
      */
     audioPlayHistory(param = {}){
+      alert(1)
       call({
         v:'4.2.0',
         host: 'Audio',

@@ -102,7 +102,7 @@
 //        });
 
         this.$nextTick(function () {
-          this.audioLocation();
+          // this.audioLocation();
         });
       },
       data(){
