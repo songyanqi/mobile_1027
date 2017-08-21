@@ -10,6 +10,7 @@ if ($(".kd_prompt_con").length) {
   });
 }
 
+
 var js = document.scripts;
 for (var i = 0; i < js.length; i++) {
   var src = js[i].src;
@@ -170,6 +171,26 @@ $(document).ready(function () {
   }
   window.iosInterface.alreadyCached = function(){
     window.backNewData.$children[0].cache = true
+  }
+  window.iosInterface.getAudioState=function (obj) {
+    if(window.allsclool){
+      window.allsclool.$children.map(function (item) {
+        if (item.name == 'allSchool') {
+          item.$children.map(function (item2) {
+            if (item2.childrenName == "feedList") {
+              item2.$children.map(function (item3) {
+                if (item3.childrenName == "bd_study_0") {
+                  item3.albumId = obj.albumId;
+                  item3.sortNo = obj.sortNo;
+                  item3.btnStatus = obj.state;
+                }
+              })
+            }
+          })
+        }
+      })
+    }
+
   }
 
   window.iosInterface.setCookie = function (_name, _value) {

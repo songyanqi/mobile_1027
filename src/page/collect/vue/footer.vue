@@ -4,13 +4,13 @@
     <div class="btn_left" v-if="userstatus==3"><span>邀请赚</span><span v-text="price"></span></div>
     <div class="btn_right">
       <img src="//pic.davdian.com/free/2017/08/16/Rectangle.png" alt="">
-      <div class="btn_text" @click="Subscribe" v-if="issub==0 && (userstatus==1 || userstatus==0)">
+      <div class="btn_text" @click="Subscribe" v-if="isSub==0 && (userstatus==1 || userstatus==0)">
         <span><span>订阅合辑:</span><span v-text="price"></span></span>
       </div>
-      <div class="btn_text" @click="Subscribe" v-if="issub==0 && userstatus==3">
+      <div class="btn_text" @click="Subscribe" v-if="isSub==0 && userstatus==3">
         <span>会员免费订阅</span>
       </div>
-      <div class="btn_text2" v-if="issub==1">
+      <div class="btn_text2" v-if="isSub==1">
         <span>已订阅</span>
       </div>
     </div>
@@ -18,37 +18,63 @@
 </template>
 <script>
   import api from "../../../../utils/api.es6"
+  import native from "../../../../src/common/js/module/native.js"
+  import dialog from "../../../../utils/dialog.es6";
   export default {
     props:["income","issub","userstatus","albumid","price"],
+    computed:{
+        isSub:function () {
+          return this.issub;
+        }
+    },
     methods:{
+      nativePay(url, callback){
+        var option = {};
+        option.url = encodeURIComponent(url);
+        if (url.split("app_pay/").length > 1) {
+          var list = url.split("app_pay/")[1].split("&");
+          for (var i = 0; i < list.length; i++) {
+            var key = list[i].split("=")[0];
+            var value = list[i].split("=")[1];
+            option[key] = value;
+          }
+        }
+        option.success = callback;
+        native.Browser.pay(option)
+      },
       Subscribe(){
         var that=this;
         var obj={
-            "albumId":that.albumid
+            albumId:that.albumid,
+            shareUserId:getQuery('shareUserId') || ''
         };
         api("/api/mg/content/album/subscription",obj)
-          .then(function(result){
-            let {data:{payUrl,jsApi}}=result;
-            if(this.userStatus==3){
-                this.issub=1;
-                bravetime.info("订阅成功");
-            }else if(this.userStatus==1){
-              if(jsApi){
-                jsApi.jsApiParameters.dvdhref=location.href;
-                bravetime.goto("http://open.davdian.com/wxpay_t2/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters)));
-              }else if(payUrl){
-                bravetime.nativePay(payUrl,function (flag) {
-                  if(flag){
-                    that.issub = 1;
-                    bravetime.info("订阅成功");
-                  }
-                });
+          .then(function(result) {
+            let {code, data: {msg, payUrl, jsApi}} = result;
+            if (code == 0) {
+              if (result.data.code == 300) {
+                if (jsApi) {
+                  jsApi.jsApiParameters.dvdhref = location.href;
+                  window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                  // bravetime.goto("http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters)));
+                } else if (payUrl) {
+                  that.nativePay(payUrl, function (flag) {
+                    if (flag) {
+                      that.isSub=1;
+                      // 报名成功(进不来)
+                    }
+                  });
+                } else {
+                  that.isSub=1;
+                  // 报名成功
+                }
+              } else {
+                dialog.alert(result.data.msg)
               }
+            }else {
+              dialog.alert('code:' + code + 'msg:'+ result.data.msg)
             }
-          }).catch(function(){
-
           })
-
       }
     }
   }

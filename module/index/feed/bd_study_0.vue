@@ -18,8 +18,8 @@
           </div>
           <div class="list_right" @click.stop="music_detail(item.albumId,item.sortNo)">
             <div class="disable" @click="stop_info" v-if="item.isPlay==0"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-            <div class="mask_stop" v-if="item.isPlay==1"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-            <div class="mask_play" v-if="item.isPlay==1"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+            <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 && ( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+            <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 &&  !( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" ><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
             <div class="circle_mask"></div>
             <div><img :src="item.imageUrl" alt=""></div>
           </div>
@@ -33,16 +33,43 @@
   import native from "../../../src/common/js/module/native";
   export default{
     props:["data"],
-    created:function () {
+    mounted:function () {
       this.dataList=this.data.body.dataList;
+      this.$nextTick(function () {
+        this.audioLocation();
+      });
     },
     data(){
      return{
          dataList:[],
-         isApp:util.utils.isApp()
+         isApp:util.utils.isApp(),
+         childrenName:"bd_study_0",
+         albumId:null,
+         sortNo:null,
+         btnStatus:0
      }
     },
     methods:{
+      audioLocation(){
+        if(this.isApp){
+          native.Audio.audioLocation({
+            "success":function (obj) {
+              window.iosInterface.getAudioState(obj);
+            }
+          })
+        }
+      },
+      go_play(albumId,sortNo){
+        if(this.isApp){
+          //调用app播放器
+          native.Audio.audioPlay({
+            "sortNo":sortNo,
+            "albumId":albumId
+          })
+        }else{
+          window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
+        }
+      },
       go_landing(){
         if(this.isApp){
           native.Browser.open({
