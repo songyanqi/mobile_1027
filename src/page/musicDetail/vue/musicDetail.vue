@@ -1,8 +1,8 @@
 <template>
   <div>
     <audio preload="auto" class='allAudio'></audio>
-    <div class="tab2" @click='goback'><img src="//pic.davdian.com/free/2017/08/21/backRound.png" alt=""></div>
-    <div class="top_img" >
+    <div v-if='!isapp' class="tab2" @click='goback'><img src="//pic.davdian.com/free/2017/08/21/backRound.png" alt=""></div>
+    <div class="top_img" v-if='!isapp'>
       <div class="big_img" v-if='musicList[index] && musicList[index].imageUrl'>
         <img :src="musicList[index].imageUrl" alt="">
       </div>
@@ -12,20 +12,20 @@
           <div class="mask_content">付费内容</div>
           <div class="mask_content2"><span>99</span>订阅即可收听本专辑全部内容</div>
           <div class="mask_free">会员免费订阅</div>
-          <div class="mask_btn">立即订阅</div>
+          <div class="mask_btn" @click='subscription'>立即订阅</div>
         </div>
       </div>
     </div>
-    <div class="text" v-if='musicList[index] && musicList[index].music' v-text='musicList[index].music'></div>
-    <div class="range">
+    <div class="text" v-if='!isapp && musicList[index] && musicList[index].music' v-text='musicList[index].music'></div>
+    <div class="range" v-if='!isapp'>
       <div class="gray"></div>
       <div v-if='musicList[index] && musicList[index].time' class="red" :style='{width: playTime/musicList[index].time*100 + "%"}'></div>
     </div>
-    <div class="time">
+    <div class="time" v-if='!isapp'>
       <div v-text='timeFormat(playTime)'></div>
       <div v-if='musicList[index] && musicList[index].time' v-text='timeFormat(musicList[index].time)'></div>
     </div>
-    <div class="btn">
+    <div class="btn" v-if='!isapp'>
       <div class="btn1"><img src="//pic.davdian.com/free/2017/08/16/time.png" alt="" @click='dialog'></div>
       <div class="btn2"><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt="" @click='playAudio(index-1)'></div>
       <div class="btn3" >
@@ -35,12 +35,12 @@
       <div class="btn4"><img src="//pic.davdian.com/free/2017/08/16/combinedShape.png" alt="" @click='playAudio(index+1)'></div>
       <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
     </div>
-    <div class="look_more" @click='goAlbumId'>
+    <div class="look_more" @click='goAlbumId' v-if='!isapp'>
       <div class="look_count">查看合辑 (<span v-if='musicList[index]  && musicList[index].sortNo' v-text='parseInt(musicList[index].sortNo) + 1'></span>/<span v-text='allAudio'></span>)</div>
       <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
     </div>
-    <div style="height: 0.1rem;background: #F8F7F7;"></div>
-    <div class="bottom_text" v-if='musicList[index] && musicList[index].introduction' v-text='musicList[index].introduction'></div>
+    <div style="height: 0.1rem;background: #F8F7F7;" v-if='!isapp'></div>
+    <div class="bottom_text" v-if='introduction || introduction==0' v-html='introduction'></div>
     <div class="mask" v-if='audioListFlag'></div>
     <div class="mask_div" v-if='audioListFlag'>
       <div class="mask_top mask_padding">
@@ -104,6 +104,28 @@
           }
         }
         return arr
+      },
+      introduction(){
+        if (this.isapp){
+          if ($('.bottom_text img').length ==0){
+            if (this.musicList && this.musicList[this.index] && this.musicList[this.index].introduction){
+              setTimeout(function(){
+                native.Browser.showWebHeight({
+                  "webHeight": $('.bottom_text').height()+30
+                })
+              },200)
+            } else {
+              console.log('introduction is null')
+            }
+          } else {
+            setTimeout(function(){
+              native.Browser.showWebHeight({
+                "webHeight": $('.bottom_text').height()+30
+              })
+            },1200)
+          }
+        }
+        return this.musicList && this.musicList[this.index] && this.musicList[this.index].introduction || null
       }
     },
     created: function () {
@@ -145,6 +167,9 @@
       })
     },
     methods: {
+      subscription(){
+        alert('订阅')
+      },
       goback(){
         window.history.back()
       },
@@ -557,12 +582,11 @@
     padding-right:0.1rem;
     color:#666666;
     font-size: 12px;
-    padding-top: 0.15rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
     background: #fff;
     line-height: 0.18rem;
   }
-
-
   .mask{
     background: #000000;
     opacity: 0.5;
