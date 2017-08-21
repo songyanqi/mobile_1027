@@ -174,16 +174,53 @@
           }
         })
       })
-      that.subscription()
+      // that.subscription()
     },
     methods: {
+      nativePay(url, callback){
+        var option = {};
+        option.url = encodeURIComponent(url);
+        if (url.split("app_pay/").length > 1) {
+          var list = url.split("app_pay/")[1].split("&");
+          for (var i = 0; i < list.length; i++) {
+            var key = list[i].split("=")[0];
+            var value = list[i].split("=")[1];
+            option[key] = value;
+          }
+        }
+
+        var callFunction = function (result) {
+          if (typeof result == "string") {
+            result = JSON.parse(result);
+          }
+          callback(+result.code, result.order_id);
+        };
+        // bravetime.callNative2('Browser', 'pay', option, callFunction, '3.1.0', function () {
+        //   bravetime.goto(url);
+        // });
+      },
       subscription(){
+        var that = this
         let obj = {
           albumId:getQuery('albumId'),
           shareUserId:getQuery('shareUserId') || ''
         }
         api('/api/mg/content/album/subscription', obj).then(function(data){
           console.log(data)
+          let {code,data:{msg,payUrl,jsApi}}=result;
+          if(jsApi){
+              jsApi.jsApiParameters.dvdhref=location.href;
+              window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+              // bravetime.goto("http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters)));
+          }else if(payUrl){
+            that.nativePay(payUrl,function (flag) {
+              if(flag){
+                // 报名成功
+              }
+            });
+          }else{
+            // 报名成功
+          }
         })
       },
       goback(){
