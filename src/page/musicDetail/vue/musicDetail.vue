@@ -338,6 +338,8 @@
           }
           $('.allAudio').get(0).onended = function () {
             that.isPlay = false
+            that.playTime = 0
+            clearInterval(that.playTimer)
             that.playAudio(that.index + 1)
           }
         } else {
@@ -357,6 +359,8 @@
             }
             $('.allAudio').get(0).onended = function () {
               that.isPlay = false
+              that.playTime = 0
+              clearInterval(that.playTimer)
               that.playAudio(that.index + 1)
             }
           }
