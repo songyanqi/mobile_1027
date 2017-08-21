@@ -58,7 +58,7 @@
         audioLocation(){
           if(this.isApp){
             native.Audio.audioLocation({
-              "success": function (obj) {
+              success: function (obj) {
                 window.iosInterface.getAudioState(obj);
               }
             })
@@ -73,9 +73,9 @@
           let y=parseInt(timestamp[0]);
           let m=parseInt(timestamp[1]);
           let d=parseInt(timestamp[2]);
-          let year=new Date().getFullYear();
-          let month=new Date().getMonth()+1;
-          let day=new Date().getDate();
+          let year=parseInt(new Date().getFullYear());
+          let month=parseInt(new Date().getMonth()+1);
+          let day=parseInt(new Date().getDate());
           let weekDay = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
           let week=new Date(y,m-1,d).getDay();
           if(y === year && m === month && d === day){

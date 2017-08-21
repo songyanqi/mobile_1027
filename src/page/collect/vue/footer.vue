@@ -56,7 +56,7 @@
 <style scoped>
   .btn{
     font-size: 0;
-    height: 0.49rem;
+    height: 50px;
     position: fixed;
     bottom: 0;
     z-index:10;
@@ -64,9 +64,9 @@
   .btn>div{
     display: inline-block;
     vertical-align: top;
-    height: 0.49rem;
+    height: 50px;
     text-align: center;
-    line-height: 0.49rem;
+    line-height: 50px;
   }
   .btn_left{
     width: 1.6rem;
@@ -82,7 +82,7 @@
   }
   .btn_right img{
     width: 2.15rem;
-    height: 0.49rem;
+    height: 50px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -90,8 +90,8 @@
   .btn_text{
     text-align: center;
     width: 2.15rem;
-    height: 0.49rem;
-    line-height: 0.49rem;
+    height: 50px;
+    line-height: 50px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -100,8 +100,8 @@
   .btn_text2{
     text-align: center;
     width: 2.15rem;
-    height: 0.49rem;
-    line-height: 0.49rem;
+    height: 50px;
+    line-height: 50px;
     position: absolute;
     bottom: 0;
     right: 0;

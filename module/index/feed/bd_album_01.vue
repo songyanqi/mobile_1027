@@ -1,8 +1,12 @@
 <template>
   <div class="all">
-    <div class="big_img">
-      <img id="onloadimg" :src="dataList.imageUrl" alt="">
+    <div>
+      <div class="big_img">
+        <img id="uuu" :src="dataList.imageUrl" alt="">
+      </div>
+      <div class=""></div>
     </div>
+
     <div class="content">
       <div class="content_title" v-text="dataList.album"></div>
       <div class="content_price" v-if="isFree==1">

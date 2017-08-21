@@ -38,7 +38,6 @@ function getProtocal(param = {}) {
 
   // 回调名称
   let callbackName = `native_callback_${Math.random().toString().split('.')[1]}`;
-
   // 设置全局回调
   window[callbackName] = function (response) {
     // 多数native接口执行成功时response.code就会返回'1',执行失败时就会返回'0'。

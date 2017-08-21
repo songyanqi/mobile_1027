@@ -1,6 +1,6 @@
 <template>
   <div class="top" id="top">
-    <div class="tab">
+    <div class="tab" id="tab2" :class="{ tab_fixed2 :empty_tab }" v-if="isApp">
       <div class="tab_list" v-if="flag" @click="fn">
         <div class="border color1" v-text="dataList.content"></div>
         <div class="b_right" v-text="dataList.recommend"></div>
@@ -12,7 +12,19 @@
         <div class="line2"></div>
       </div>
     </div>
-
+    <div class="tab" id="tab" :class="{ tab_fixed :empty_tab }" v-if="!isApp">
+      <div class="tab_list" v-if="flag" @click="fn">
+        <div class="border color1" v-text="dataList.content"></div>
+        <div class="b_right" v-text="dataList.recommend"></div>
+        <div class="line"></div>
+      </div>
+      <div class="tab_list" v-if="!flag" @click="fn">
+        <div class="border" v-text="dataList.content"></div>
+        <div class="b_right color1" v-text="dataList.recommend"></div>
+        <div class="line2"></div>
+      </div>
+    </div>
+    <div class="empty_tab" v-if="empty_tab"></div>
     <div v-if="flag">
       <div class="update">
         <div class="up">
@@ -21,7 +33,6 @@
       </div>
       <div class="list">
         <div class="item" v-for="(item,index) in contentList" @click="go_href.stop(item.albumId,item.sortNo)" >
-          <div class="last">上次听到这里 2017-07-11 21:09</div>
           <div class="rea">
             <div class="item_left">
               <div class="item_title" v-text="item.music"></div>
@@ -104,6 +115,7 @@
               pageFlag:true,
               isSub:0,
               pageAlbumId:getQuery("albumId"),
+              empty_tab:false
           }
       },
       methods:{
@@ -111,6 +123,7 @@
             if(this.isApp){
               native.Audio.audioLocation({
                 "success":function (obj) {
+                  alert(11123123123);
                   window.iosInterface.getAudioState(obj);
                 }
               })
@@ -201,16 +214,23 @@
           },
           scro(){
             var _this=this;
-            var tab=$("#top")[0];
-
-            $("#onloadimg").load=function () {
-              console.log("tab==>>>",tab.offsetTop);
+            var top=0;
+            document.getElementById('uuu').onload = function () {
+              if(_this.isApp){
+                top=document.getElementById('tab2').offsetTop;
+              }else{
+                top=document.getElementById('tab').offsetTop-44;
+              }
+              console.log(top);
             };
             $(window).scroll(function(){
-              console.log("tab==>>>",tab.offsetTop);
-              if($("body").scrollTop()>=tab){
-
+              console.log($("body").scrollTop())
+              if($("body").scrollTop()>=top){
+                _this.empty_tab=true;
+              }else{
+                _this.empty_tab=false;
               }
+
               var el = $("#top").get(0);
               var bottom = el.offsetHeight + el.offsetTop - (window.screen.availHeight + window.scrollY);
               if (bottom<100){
@@ -418,18 +438,6 @@
     text-align: center;
     line-height: 0.22rem;
   }
-  .last{
-    width: 3.55rem;
-    height: 0.2rem;
-    border-radius:4px;
-    background: #FFF2E1;
-    color:#CC8B3F;
-    font-size:10px;
-    margin-bottom: 0.1rem;
-    text-align: center;
-    line-height:0.2rem;
-
-  }
   .rea{
     position: relative;
   }
@@ -438,5 +446,18 @@
   .top{
     margin-top: 0.12rem;
     height: 10rem;
+  }
+  .empty_tab{
+    height: 0.5rem;
+  }
+  .tab_fixed{
+    position: fixed;
+    top: 44px;
+    z-index:999;
+  }
+  .tab_fixed2{
+    position: fixed;
+    top:0;
+    z-index:999;
   }
 </style>
