@@ -56,7 +56,7 @@
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
-            <div class="item_right2" v-if="item.isFree==0 && item.isSub==0" @click="go_href(item.albumId,item.sortNo)">
+            <div class="item_right2" v-if="item.isFree==0 && isSub==0" @click="go_href(item.albumId,item.sortNo)">
               <div class="free">免费试听</div>
             </div>
           </div>

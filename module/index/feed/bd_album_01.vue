@@ -56,6 +56,7 @@
         var _this=this;
         if(this.isApp){
           //调用app播放器
+          alert("马赫男");
           native.Audio.audioPlay({
             "sortNo":_this.sortNo,
             "albumId":_this.albumId

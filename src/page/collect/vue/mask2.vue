@@ -12,7 +12,7 @@
   export default {
     methods:{
       reload(){
-          window.location.reload();
+        window.location.reload();
       }
     }
   }
@@ -28,7 +28,7 @@
     z-index: 12;
   }
   .banner{
-    margin-top: 1rem;
+    margin-top: 1.44rem;
 
   }
   .btn{

@@ -3,6 +3,8 @@
     <lheader class="top" v-if="!isApp"></lheader>
     <div class="empty_div" v-if="!isApp"></div>
     <index_feed :data="data"></index_feed>
+    <maskk v-if="isApp && maskFlag"></maskk>
+    <maskk2 v-if="!isApp && maskFlag"></maskk2>
   </div>
 </template>
 <script>
@@ -15,11 +17,14 @@
   import lheader from './header.vue'
   import util from "../../../../utils/utils.es6"
   import maskk from "./mask.vue"
+  import maskk2 from "./mask2.vue"
   export default {
     components:{
       index_feed:index_feed,
       lheader:lheader,
-      maskk:maskk
+      maskk:maskk,
+      maskk2:maskk2,
+      maskFlag:false
 
     },
     data(){
@@ -28,7 +33,8 @@
             pageFlag:true,
             upTime:0,
             name:"landingPage",
-            isApp:util.utils.isApp()
+            isApp:util.utils.isApp(),
+            maskFlag:false
         }
     },
 
@@ -50,7 +56,7 @@
                     }
                   })
                 }else{
-                  //显示错误页
+                  that.maskFlag=true;
                 }
               }else{
                 if(result.data.msg){
@@ -60,7 +66,7 @@
                 }
               }
             }).catch(function(e){
-              //显示错误页
+              that.maskFlag=true;
               console.log('e:', e)
           });
         },
@@ -86,7 +92,7 @@
                       that.pageFlag=true;
                     }
                   }else{
-                    //显示错误页面
+                    that.maskFlag=true;
                   }
 
                 }else{
@@ -98,7 +104,7 @@
 
                 }
               }).catch(function(e){
-                  //显示错误页面
+                that.maskFlag=true;
                 console.log('e:', e)
             });
           }

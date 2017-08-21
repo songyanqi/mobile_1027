@@ -5,6 +5,8 @@
     <index_feed :data="data"></index_feed>
     <div class="empty"></div>
     <lfooter :income="income" :issub="isSub" :userstatus="userStatus" :albumid="albumId" :price="price"></lfooter>
+    <maskk v-if="isApp && maskFlag"></maskk>
+    <maskk2 v-if="!isApp && maskFlag"></maskk2>
   </div>
 
 </template>
@@ -19,11 +21,15 @@
   import appInterface from "../../../../utils/appInterface.es6"
   import util from "../../../../utils/utils.es6"
   import native from "../../../../src/common/js/module/native.js"
+  import maskk from "./mask.vue"
+  import maskk2 from "./mask2.vue"
   export default {
     components:{
       index_feed:index_feed,
       lheader:lheader,
-      lfooter:lfooter
+      lfooter:lfooter,
+      maskk:maskk,
+      maskk2:maskk2
     },
     data(){
       return {
@@ -35,7 +41,8 @@
         isSub:0,
         price:0,
         name:"collect",
-        isApp:util.utils.isApp()
+        isApp:util.utils.isApp(),
+        maskFlag:false
       }
     },
     mounted:function () {
@@ -62,7 +69,7 @@
                       that.pageFlag=true
                     }
                   }else{
-                    //显示错误页面
+                    that.maskFlag=true;
                   }
 
                 }else{
@@ -73,7 +80,7 @@
                   }
                 }
               }).catch(function(e){
-                 //显示错误页面
+                that.maskFlag=true;
                 that.pageFlag = true;
                 console.log('e:', e)
             });

@@ -110,8 +110,8 @@
 	window.landingPage = new _Vue2.default({
 	  el: ".app",
 	  components: {
-	    'com-to-top-icon': __webpack_require__(465),
-	    'landingPage': __webpack_require__(471)
+	    'com-to-top-icon': __webpack_require__(475),
+	    'landingPage': __webpack_require__(481)
 	  },
 	  data: function data() {
 	    return {
@@ -171,7 +171,7 @@
 	          ts.response = response;
 	        },
 	        error: function error(_error) {
-	          ts.response = __webpack_require__(486);
+	          ts.response = __webpack_require__(501);
 	          console.error('ajax error:' + _error.status + ' ' + _error.statusText);
 	        }
 	      });
@@ -28062,7 +28062,7 @@
 	//               <div class="circle_mask"></div>
 	//               <div><img :src="item.imageUrl" alt=""></div>
 	//             </div>
-	//             <div class="item_right2" v-if="item.isFree==0 && item.isSub==0" @click="go_href(item.albumId,item.sortNo)">
+	//             <div class="item_right2" v-if="item.isFree==0 && isSub==0" @click="go_href(item.albumId,item.sortNo)">
 	//               <div class="free">免费试听</div>
 	//             </div>
 	//           </div>
@@ -32183,7 +32183,7 @@
 /* 441 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"top\" id=\"top\" _v-236acfbd=\"\">\n  <div class=\"tab\" id=\"tab2\" :class=\"{ tab_fixed2 :empty_tab }\" v-if=\"isApp\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n  <div class=\"tab\" id=\"tab\" :class=\"{ tab_fixed :empty_tab }\" v-if=\"!isApp\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n  <div class=\"empty_tab\" v-if=\"empty_tab\" _v-236acfbd=\"\"></div>\n  <div v-if=\"flag\" _v-236acfbd=\"\">\n    <div class=\"update\" _v-236acfbd=\"\">\n      <div class=\"up\" _v-236acfbd=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-236acfbd=\"\"></span>期，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-236acfbd=\"\"></span>期\n      </div>\n    </div>\n    <div class=\"list\" _v-236acfbd=\"\">\n      <div class=\"item\" v-for=\"(item,index) in contentList\" @click=\"go_href.stop(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n        <div class=\"rea\" _v-236acfbd=\"\">\n          <div class=\"item_left\" _v-236acfbd=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-236acfbd=\"\"></div>\n            <div class=\"item_timee\" _v-236acfbd=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-236acfbd=\"\"></div>\n              <div class=\"item_count\" _v-236acfbd=\"\"><span v-text=\"item.number\" _v-236acfbd=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-236acfbd=\"\">\n                <div class=\"clock\" _v-236acfbd=\"\"></div>\n                <div class=\"times\" v-text=\"item.time\" _v-236acfbd=\"\"></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isSub==1\" _v-236acfbd=\"\">\n            <div class=\"mask_stop\" v-if=\"(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_play\" v-if=\"!(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0\" _v-236acfbd=\"\">\n            <div class=\"disable\" @click.stop=\"stop_info\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"item.isFree==0 &amp;&amp; item.isSub==0\" @click=\"go_href(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n            <div class=\"free\" _v-236acfbd=\"\">免费试听</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"!flag\" v-html=\"dataList.recommendData\" _v-236acfbd=\"\">\n\n  </div>\n\n</div>\n";
+	module.exports = "\n<div class=\"top\" id=\"top\" _v-236acfbd=\"\">\n  <div class=\"tab\" id=\"tab2\" :class=\"{ tab_fixed2 :empty_tab }\" v-if=\"isApp\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n  <div class=\"tab\" id=\"tab\" :class=\"{ tab_fixed :empty_tab }\" v-if=\"!isApp\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n  <div class=\"empty_tab\" v-if=\"empty_tab\" _v-236acfbd=\"\"></div>\n  <div v-if=\"flag\" _v-236acfbd=\"\">\n    <div class=\"update\" _v-236acfbd=\"\">\n      <div class=\"up\" _v-236acfbd=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-236acfbd=\"\"></span>期，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-236acfbd=\"\"></span>期\n      </div>\n    </div>\n    <div class=\"list\" _v-236acfbd=\"\">\n      <div class=\"item\" v-for=\"(item,index) in contentList\" @click=\"go_href.stop(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n        <div class=\"rea\" _v-236acfbd=\"\">\n          <div class=\"item_left\" _v-236acfbd=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-236acfbd=\"\"></div>\n            <div class=\"item_timee\" _v-236acfbd=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-236acfbd=\"\"></div>\n              <div class=\"item_count\" _v-236acfbd=\"\"><span v-text=\"item.number\" _v-236acfbd=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-236acfbd=\"\">\n                <div class=\"clock\" _v-236acfbd=\"\"></div>\n                <div class=\"times\" v-text=\"item.time\" _v-236acfbd=\"\"></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isSub==1\" _v-236acfbd=\"\">\n            <div class=\"mask_stop\" v-if=\"(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_play\" v-if=\"!(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0\" _v-236acfbd=\"\">\n            <div class=\"disable\" @click.stop=\"stop_info\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"item.isFree==0 &amp;&amp; isSub==0\" @click=\"go_href(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n            <div class=\"free\" _v-236acfbd=\"\">免费试听</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"!flag\" v-html=\"dataList.recommendData\" _v-236acfbd=\"\">\n\n  </div>\n\n</div>\n";
 
 /***/ },
 /* 442 */
@@ -33436,18 +33436,28 @@
 
 /***/ },
 /* 464 */,
-/* 465 */
+/* 465 */,
+/* 466 */,
+/* 467 */,
+/* 468 */,
+/* 469 */,
+/* 470 */,
+/* 471 */,
+/* 472 */,
+/* 473 */,
+/* 474 */,
+/* 475 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(466)
-	__vue_script__ = __webpack_require__(468)
+	__webpack_require__(476)
+	__vue_script__ = __webpack_require__(478)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/component/com-to-top-icon.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(469)
+	__vue_template__ = __webpack_require__(479)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -33472,13 +33482,13 @@
 	})()}
 
 /***/ },
-/* 466 */
+/* 476 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(467);
+	var content = __webpack_require__(477);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(43)(content, {});
@@ -33498,7 +33508,7 @@
 	}
 
 /***/ },
-/* 467 */
+/* 477 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(42)();
@@ -33512,7 +33522,7 @@
 
 
 /***/ },
-/* 468 */
+/* 478 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33579,25 +33589,25 @@
 	// <script>
 
 /***/ },
-/* 469 */
+/* 479 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<!--滚动至顶图标-->\n<img class=\"to-top-icon\" @click=\"toTop\" :style=\"{display: display}\"\n     :src=\"'http://pic.davdian.com/free/back_top_icon_0803.png'\">\n";
 
 /***/ },
-/* 470 */,
-/* 471 */
+/* 480 */,
+/* 481 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(472)
-	__vue_script__ = __webpack_require__(474)
+	__webpack_require__(482)
+	__vue_script__ = __webpack_require__(484)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/landingPage/vue/landing.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(485)
+	__vue_template__ = __webpack_require__(500)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -33622,13 +33632,13 @@
 	})()}
 
 /***/ },
-/* 472 */
+/* 482 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(473);
+	var content = __webpack_require__(483);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(43)(content, {});
@@ -33648,7 +33658,7 @@
 	}
 
 /***/ },
-/* 473 */
+/* 483 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(42)();
@@ -33656,13 +33666,13 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-f53c15bc]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-f53c15bc]{\n  height: 44px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-f53c15bc]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-f53c15bc]{\n  height: 44px;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 474 */
+/* 484 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33687,7 +33697,7 @@
 
 	var _appInterface2 = _interopRequireDefault(_appInterface);
 
-	var _header = __webpack_require__(475);
+	var _header = __webpack_require__(485);
 
 	var _header2 = _interopRequireDefault(_header);
 
@@ -33695,17 +33705,35 @@
 
 	var _utils2 = _interopRequireDefault(_utils);
 
-	var _mask = __webpack_require__(480);
+	var _mask = __webpack_require__(490);
 
 	var _mask2 = _interopRequireDefault(_mask);
 
+	var _mask3 = __webpack_require__(495);
+
+	var _mask4 = _interopRequireDefault(_mask3);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	// <template>
+	//   <div>
+	//     <lheader class="top" v-if="!isApp"></lheader>
+	//     <div class="empty_div" v-if="!isApp"></div>
+	//     <index_feed :data="data"></index_feed>
+	//     <maskk v-if="isApp && maskFlag"></maskk>
+	//     <maskk2 v-if="!isApp && maskFlag"></maskk2>
+	//   </div>
+	// </template>
+	// <script>
+
 
 	exports.default = {
 	  components: {
 	    index_feed: _index_feed2.default,
 	    lheader: _header2.default,
-	    maskk: _mask2.default
+	    maskk: _mask2.default,
+	    maskk2: _mask4.default,
+	    maskFlag: false
 
 	  },
 	  data: function data() {
@@ -33714,7 +33742,8 @@
 	      pageFlag: true,
 	      upTime: 0,
 	      name: "landingPage",
-	      isApp: _utils2.default.utils.isApp()
+	      isApp: _utils2.default.utils.isApp(),
+	      maskFlag: false
 	    };
 	  },
 
@@ -33736,7 +33765,7 @@
 	              }
 	            });
 	          } else {
-	            //显示错误页
+	            that.maskFlag = true;
 	          }
 	        } else {
 	          if (result.data.msg) {
@@ -33746,7 +33775,7 @@
 	          }
 	        }
 	      }).catch(function (e) {
-	        //显示错误页
+	        that.maskFlag = true;
 	        console.log('e:', e);
 	      });
 	    },
@@ -33771,7 +33800,7 @@
 	                that.pageFlag = true;
 	              }
 	            } else {
-	              //显示错误页面
+	              that.maskFlag = true;
 	            }
 	          } else {
 	            if (result.data.msg) {
@@ -33781,7 +33810,7 @@
 	            }
 	          }
 	        }).catch(function (e) {
-	          //显示错误页面
+	          that.maskFlag = true;
 	          console.log('e:', e);
 	        });
 	      }
@@ -33810,29 +33839,21 @@
 	  //   }
 	  // </style>
 
-	}; // <template>
-	//   <div>
-	//     <lheader class="top" v-if="!isApp"></lheader>
-	//     <div class="empty_div" v-if="!isApp"></div>
-	//     <index_feed :data="data"></index_feed>
-	//     <maskk></maskk>
-	//   </div>
-	// </template>
-	// <script>
+	};
 
 /***/ },
-/* 475 */
+/* 485 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(476)
-	__vue_script__ = __webpack_require__(478)
+	__webpack_require__(486)
+	__vue_script__ = __webpack_require__(488)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/landingPage/vue/header.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(479)
+	__vue_template__ = __webpack_require__(489)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -33857,13 +33878,13 @@
 	})()}
 
 /***/ },
-/* 476 */
+/* 486 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(477);
+	var content = __webpack_require__(487);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(43)(content, {});
@@ -33883,7 +33904,7 @@
 	}
 
 /***/ },
-/* 477 */
+/* 487 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(42)();
@@ -33897,7 +33918,7 @@
 
 
 /***/ },
-/* 478 */
+/* 488 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -33973,24 +33994,24 @@
 	};
 
 /***/ },
-/* 479 */
+/* 489 */
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-7926d052=\"\">\n  <div class=\"header\" _v-7926d052=\"\">\n    <div class=\"head_img\" @click=\"history\" _v-7926d052=\"\">\n      <i class=\"back-arrow\" _v-7926d052=\"\"></i>\n    </div>\n    <div class=\"head_title\" _v-7926d052=\"\">标题标题</div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 480 */
+/* 490 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
 	var __vue_styles__ = {}
-	__webpack_require__(481)
-	__vue_script__ = __webpack_require__(483)
+	__webpack_require__(491)
+	__vue_script__ = __webpack_require__(493)
 	if (__vue_script__ &&
 	    __vue_script__.__esModule &&
 	    Object.keys(__vue_script__).length > 1) {
 	  console.warn("[vue-loader] src/page/landingPage/vue/mask.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(484)
+	__vue_template__ = __webpack_require__(494)
 	module.exports = __vue_script__ || {}
 	if (module.exports.__esModule) module.exports = module.exports.default
 	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
@@ -34015,13 +34036,13 @@
 	})()}
 
 /***/ },
-/* 481 */
+/* 491 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(482);
+	var content = __webpack_require__(492);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(43)(content, {});
@@ -34041,7 +34062,7 @@
 	}
 
 /***/ },
-/* 482 */
+/* 492 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(42)();
@@ -34049,13 +34070,13 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mask[_v-e243971e]{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #F1F1F1;\n  z-index: 4;\n}\n.banner[_v-e243971e]{\n  margin-top: 1rem;\n\n}\n.btn[_v-e243971e]{\n  width: 1.44rem;\n  height: 0.33rem;\n  border-radius: 100px;\n  border:1px solid #999999;\n  color: #333333;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.33rem;\n}\n.banner[_v-e243971e]{\n  position: fixed;\n  top: 0;\n  z-index: 5;\n  text-align: center;\n}\n.big_img img[_v-e243971e]{\n  height: 1.2rem;\n  width: 1.2rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mask[_v-e243971e]{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #F1F1F1;\n  z-index: 12;\n}\n.banner[_v-e243971e]{\n  margin-top: 1rem;\n\n}\n.btn[_v-e243971e]{\n  width: 1.44rem;\n  height: 0.33rem;\n  border-radius: 100px;\n  border:1px solid #999999;\n  color: #333333;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.33rem;\n  margin: 0 auto;\n}\n\n.banner[_v-e243971e]{\n  position: fixed;\n  top: 0;\n  z-index: 13;\n  text-align: center;\n  width: 3.75rem;\n}\n.big_img[_v-e243971e]{\n  height: 1.2rem;\n  width: 1.2rem;\n  margin: 0 auto;\n}\n.big_img img[_v-e243971e]{\n  height: 1.2rem;\n  width: 1.2rem;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
-/* 483 */
+/* 493 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -34068,64 +34089,234 @@
 	//     <div class="mask"></div>
 	//     <div class="banner">
 	//       <div class="big_img"><img src="//pic.davdian.com/free/2017/08/21/Group5.png" alt=""></div>
-	//       <div style="text-align: center;">无法连接网络啦</div>
-	//       <div class="btn">点击重新加载</div>
+	//       <div style="text-align: center;margin-top: 0.3rem;">无法连接网络啦</div>
+	//       <div class="btn" style="margin-top: 0.2rem;" @click="reload">点击重新加载</div>
 	//     </div>
 	//   </div>
 	// </template>
 	// <script>
-	exports.default = {};
-	// </script>
-	// <style scoped>
-	//   .mask{
-	//     position: fixed;
-	//     top: 0;
-	//     left: 0;
-	//     right: 0;
-	//     bottom: 0;
-	//     background: #F1F1F1;
-	//     z-index: 4;
-	//   }
-	//   .banner{
-	//     margin-top: 1rem;
-	//
-	//   }
-	//   .btn{
-	//     width: 1.44rem;
-	//     height: 0.33rem;
-	//     border-radius: 100px;
-	//     border:1px solid #999999;
-	//     color: #333333;
-	//     font-size: 12px;
-	//     text-align: center;
-	//     line-height: 0.33rem;
-	//   }
-	//   .banner{
-	//     position: fixed;
-	//     top: 0;
-	//     z-index: 5;
-	//     text-align: center;
-	//   }
-	//   .big_img img{
-	//     height: 1.2rem;
-	//     width: 1.2rem;
-	//   }
-	// </style>
+	exports.default = {
+	  methods: {
+	    reload: function reload() {
+	      window.location.reload();
+	    }
+	  }
+	  // </script>
+	  // <style scoped>
+	  //   .mask{
+	  //     position: fixed;
+	  //     top: 0;
+	  //     left: 0;
+	  //     right: 0;
+	  //     bottom: 0;
+	  //     background: #F1F1F1;
+	  //     z-index: 12;
+	  //   }
+	  //   .banner{
+	  //     margin-top: 1rem;
+	  //
+	  //   }
+	  //   .btn{
+	  //     width: 1.44rem;
+	  //     height: 0.33rem;
+	  //     border-radius: 100px;
+	  //     border:1px solid #999999;
+	  //     color: #333333;
+	  //     font-size: 12px;
+	  //     text-align: center;
+	  //     line-height: 0.33rem;
+	  //     margin: 0 auto;
+	  //   }
+	  //
+	  //   .banner{
+	  //     position: fixed;
+	  //     top: 0;
+	  //     z-index: 13;
+	  //     text-align: center;
+	  //     width: 3.75rem;
+	  //   }
+	  //   .big_img{
+	  //     height: 1.2rem;
+	  //     width: 1.2rem;
+	  //     margin: 0 auto;
+	  //   }
+	  //   .big_img img{
+	  //     height: 1.2rem;
+	  //     width: 1.2rem;
+	  //   }
+	  // </style>
+
+	};
 
 /***/ },
-/* 484 */
+/* 494 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-e243971e=\"\">\n  <div class=\"mask\" _v-e243971e=\"\"></div>\n  <div class=\"banner\" _v-e243971e=\"\">\n    <div class=\"big_img\" _v-e243971e=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-e243971e=\"\"></div>\n    <div style=\"text-align: center;\" _v-e243971e=\"\">无法连接网络啦</div>\n    <div class=\"btn\" _v-e243971e=\"\">点击重新加载</div>\n  </div>\n</div>\n";
+	module.exports = "\n<div _v-e243971e=\"\">\n  <div class=\"mask\" _v-e243971e=\"\"></div>\n  <div class=\"banner\" _v-e243971e=\"\">\n    <div class=\"big_img\" _v-e243971e=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-e243971e=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-e243971e=\"\">无法连接网络啦</div>\n    <div class=\"btn\" style=\"margin-top: 0.2rem;\" @click=\"reload\" _v-e243971e=\"\">点击重新加载</div>\n  </div>\n</div>\n";
 
 /***/ },
-/* 485 */
+/* 495 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __vue_script__, __vue_template__
+	var __vue_styles__ = {}
+	__webpack_require__(496)
+	__vue_script__ = __webpack_require__(498)
+	if (__vue_script__ &&
+	    __vue_script__.__esModule &&
+	    Object.keys(__vue_script__).length > 1) {
+	  console.warn("[vue-loader] src/page/landingPage/vue/mask2.vue: named exports in *.vue files are ignored.")}
+	__vue_template__ = __webpack_require__(499)
+	module.exports = __vue_script__ || {}
+	if (module.exports.__esModule) module.exports = module.exports.default
+	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
+	if (__vue_template__) {
+	__vue_options__.template = __vue_template__
+	}
+	if (!__vue_options__.computed) __vue_options__.computed = {}
+	Object.keys(__vue_styles__).forEach(function (key) {
+	var module = __vue_styles__[key]
+	__vue_options__.computed[key] = function () { return module }
+	})
+	if (false) {(function () {  module.hot.accept()
+	  var hotAPI = require("vue-hot-reload-api")
+	  hotAPI.install(require("vue"), false)
+	  if (!hotAPI.compatible) return
+	  var id = "_v-4d000311/mask2.vue"
+	  if (!module.hot.data) {
+	    hotAPI.createRecord(id, module.exports)
+	  } else {
+	    hotAPI.update(id, module.exports, __vue_template__)
+	  }
+	})()}
+
+/***/ },
+/* 496 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(497);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(43)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4d000311&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask2.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4d000311&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask2.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 497 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(42)();
+	// imports
+
+
+	// module
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mask[_v-4d000311]{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #F1F1F1;\n  z-index: 12;\n}\n.banner[_v-4d000311]{\n  margin-top: 1.44rem;\n\n}\n.btn[_v-4d000311]{\n  width: 1.44rem;\n  height: 0.33rem;\n  border-radius: 100px;\n  border:1px solid #999999;\n  color: #333333;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.33rem;\n  margin: 0 auto;\n}\n\n.banner[_v-4d000311]{\n  position: fixed;\n  top: 0;\n  z-index: 13;\n  text-align: center;\n  width: 3.75rem;\n}\n.big_img[_v-4d000311]{\n  height: 1.2rem;\n  width: 1.2rem;\n  margin: 0 auto;\n}\n.big_img img[_v-4d000311]{\n  height: 1.2rem;\n  width: 1.2rem;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
+/* 498 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-f53c15bc=\"\">\n  <lheader class=\"top\" v-if=\"!isApp\" _v-f53c15bc=\"\"></lheader>\n  <div class=\"empty_div\" v-if=\"!isApp\" _v-f53c15bc=\"\"></div>\n  <index_feed :data=\"data\" _v-f53c15bc=\"\"></index_feed>\n  <maskk _v-f53c15bc=\"\"></maskk>\n</div>\n";
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	// <template>
+	//   <div>
+	//     <div class="mask"></div>
+	//     <div class="banner">
+	//       <div class="big_img"><img src="//pic.davdian.com/free/2017/08/21/Group5.png" alt=""></div>
+	//       <div style="text-align: center;margin-top: 0.3rem;">无法连接网络啦</div>
+	//       <div class="btn" style="margin-top: 0.2rem;" @click="reload">点击重新加载</div>
+	//     </div>
+	//   </div>
+	// </template>
+	// <script>
+	exports.default = {
+	  methods: {
+	    reload: function reload() {
+	      window.location.reload();
+	    }
+	  }
+	  // </script>
+	  // <style scoped>
+	  //   .mask{
+	  //     position: fixed;
+	  //     top: 0;
+	  //     left: 0;
+	  //     right: 0;
+	  //     bottom: 0;
+	  //     background: #F1F1F1;
+	  //     z-index: 12;
+	  //   }
+	  //   .banner{
+	  //     margin-top: 1.44rem;
+	  //
+	  //   }
+	  //   .btn{
+	  //     width: 1.44rem;
+	  //     height: 0.33rem;
+	  //     border-radius: 100px;
+	  //     border:1px solid #999999;
+	  //     color: #333333;
+	  //     font-size: 12px;
+	  //     text-align: center;
+	  //     line-height: 0.33rem;
+	  //     margin: 0 auto;
+	  //   }
+	  //
+	  //   .banner{
+	  //     position: fixed;
+	  //     top: 0;
+	  //     z-index: 13;
+	  //     text-align: center;
+	  //     width: 3.75rem;
+	  //   }
+	  //   .big_img{
+	  //     height: 1.2rem;
+	  //     width: 1.2rem;
+	  //     margin: 0 auto;
+	  //   }
+	  //   .big_img img{
+	  //     height: 1.2rem;
+	  //     width: 1.2rem;
+	  //   }
+	  // </style>
+
+	};
 
 /***/ },
-/* 486 */
+/* 499 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div _v-4d000311=\"\">\n  <div class=\"mask\" _v-4d000311=\"\"></div>\n  <div class=\"banner\" _v-4d000311=\"\">\n    <div class=\"big_img\" _v-4d000311=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-4d000311=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-4d000311=\"\">无法连接网络啦</div>\n    <div class=\"btn\" style=\"margin-top: 0.2rem;\" @click=\"reload\" _v-4d000311=\"\">点击重新加载</div>\n  </div>\n</div>\n";
+
+/***/ },
+/* 500 */
+/***/ function(module, exports) {
+
+	module.exports = "\n<div _v-f53c15bc=\"\">\n  <lheader class=\"top\" v-if=\"!isApp\" _v-f53c15bc=\"\"></lheader>\n  <div class=\"empty_div\" v-if=\"!isApp\" _v-f53c15bc=\"\"></div>\n  <index_feed :data=\"data\" _v-f53c15bc=\"\"></index_feed>\n  <maskk v-if=\"isApp &amp;&amp; maskFlag\" _v-f53c15bc=\"\"></maskk>\n  <maskk2 v-if=\"!isApp &amp;&amp; maskFlag\" _v-f53c15bc=\"\"></maskk2>\n</div>\n";
+
+/***/ },
+/* 501 */
 /***/ function(module, exports) {
 
 	module.exports = {
