@@ -68,15 +68,17 @@
       audioPlayHistory(){
         var _this=this;
         if(_this.isApp){
-          native.Audio.audioPlayHistory({
-            "albumId":_this.albumId,
-            success: function (obj) {
-              alert(obj.name +":"+ obj.sortNo+ ":" +obj.date );
-              _this.historyName=obj.name;
-              _this.sortNo=obj.sortNo;
-              _this.timestamp=obj.date;
-            }
-          })
+          setTimeout(function(){
+            native.Audio.audioPlayHistory({
+              "albumId":_this.albumId,
+              success: function (obj) {
+                alert(obj.name +":"+ obj.sortNo+ ":" +obj.date );
+                _this.historyName=obj.name;
+                _this.sortNo=obj.sortNo;
+                _this.timestamp=obj.date;
+              }
+            })
+          },1200)
         }
       },
     }
