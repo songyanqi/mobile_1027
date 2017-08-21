@@ -7,8 +7,8 @@
     <lfooter :income="income" :sub="isSub" :userstatus="userStatus" :albumid="albumId" :price="price"></lfooter>
     <maskk v-if="isApp && maskFlag"></maskk>
     <maskk2 v-if="!isApp && maskFlag"></maskk2>
-    <data_mask></data_mask>
-    <data_mask2></data_mask2>
+    <data_mask v-if="isApp && maskFlag2"></data_mask>
+    <data_mask2 v-if="!isApp && maskFlag2"></data_mask2>
   </div>
 
 </template>
@@ -48,7 +48,8 @@
         price:0,
         name:"collect",
         isApp:util.utils.isApp(),
-        maskFlag:false
+        maskFlag:false,
+        maskFlag2:false
       }
     },
     mounted:function () {
@@ -82,7 +83,7 @@
                       'shareMoney':result.data.attr.income,
                     })
                   }else{
-                    that.maskFlag=true;
+                    that.maskFlag2=true;
                   }
 
                 }else{
