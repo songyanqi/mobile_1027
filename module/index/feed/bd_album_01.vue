@@ -37,7 +37,6 @@
       this.dataList=this.data.body.dataList[0];
       this.isFree=this.data.body.isFree;
       this.$nextTick(function () {
-        alert(123456789);
         this.audioPlayHistory();
       });
     },
@@ -57,7 +56,6 @@
         var _this=this;
         if(this.isApp){
           //调用app播放器
-          alert("马赫男");
           native.Audio.audioPlay({
             "sortNo":_this.sortNo,
             "albumId":_this.albumId
@@ -67,6 +65,7 @@
         }
       },
       audioPlayHistory(){
+        alert(44444);
         var _this=this;
         if(this.isApp){
           native.Audio.audioPlayHistory({
