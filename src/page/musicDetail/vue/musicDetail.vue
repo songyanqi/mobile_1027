@@ -84,7 +84,6 @@
   import dialog from "../../../../utils/dialog.es6";
   // import wx from "../../../../utils/WXShare.es6"
   import native from '../../../common/js/module/native.js'
-  import popup from '../../../common/js/module/popup.js';
   // import common from '../../../common/js/common.js'
   import lheader from "./header.vue";
   export default {
@@ -223,13 +222,6 @@
               that.getData(1,that.musicList[that.index].sortNo, true)
               return
             }
-          }
-          if (that.musicList[index].isPlay!=-1){
-            popup.confirm('订阅后才能继续收听哦',
-              function(){
-                console.log(123)
-            }, function(){},'','马上订阅','取消');
-            return
           }
         }
         if (that.playTimer){
