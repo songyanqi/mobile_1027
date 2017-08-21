@@ -434,3 +434,7 @@ footer div {
   background-size: 16px 16px;
   background-position: center center;
 }
+.dump_to_mama_adviser_mask{
+  width: 100%;
+  position: absolute;
+}

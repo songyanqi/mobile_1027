@@ -8,9 +8,10 @@ import bd_goods_1 from '../index/feed/bd_goods_1.vue'
 import indexFeed from './index_feed.vue'
 import indexFoot from '../../src/component/com-footer.vue'
 import layout from "./layout.es6"
-import {savebackData, getbackData} from "../../utils/utils.es6"
+import {savebackData, getbackData,isTryShop} from "../../utils/utils.es6"
 import NProgress from 'nprogress'
 import share from '../../src/common/js/module/share.js'
+import popup from '../../src/common/js/module/popup.js'
 
 export default{
   data(){
@@ -396,6 +397,26 @@ export default{
         }
       }
     },
+    /**
+     *  跳转到妈妈顾问
+     */
+    dumpToMamaAdviser:function (url) {
+      if(isTryShop()){
+        popup.alert({
+          text:"请您先选择妈妈顾问",
+          btnCallback(){
+            location.href=url;
+          }
+        });
+      }else{
+        // 插入遮罩div
+        let dom = document.querySelector(".app")||document.body;
+        let mask = document.createElement("div");
+        mask.className="dump_to_mama_adviser_mask";
+        dom.appendChild(mask);
+        mask.style.height=document.body.offsetHeight+"px";
+      }
+    },
     changeCategory: function (category, index) {
       this.page_index = index;
       this.menuId = category;
@@ -449,6 +470,12 @@ export default{
               NProgress.done();
               if (!data.code) {
                 that.contentData = data.data;
+                that.$nextTick(function () {
+                  //TODO 需要替换跳转条件
+                  if(!data.code){
+                    that.dumpToMamaAdviser(data.url);
+                  }
+                });
                 let objData = {
                   top: 0,
                   data: that.contentData
