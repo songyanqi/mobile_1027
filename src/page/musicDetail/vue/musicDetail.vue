@@ -188,16 +188,8 @@
             option[key] = value;
           }
         }
-
-        var callFunction = function (result) {
-          if (typeof result == "string") {
-            result = JSON.parse(result);
-          }
-          callback(+result.code, result.order_id);
-        };
-        // bravetime.callNative2('Browser', 'pay', option, callFunction, '3.1.0', function () {
-        //   bravetime.goto(url);
-        // });
+        option.success = callback
+        native.Browser.pay(option)
       },
       subscription(){
         var that = this
@@ -222,7 +214,7 @@
               }else{
                 // 报名成功
               }
-              
+
             }else {
               dialog.alert(result.data.msg)
             }
