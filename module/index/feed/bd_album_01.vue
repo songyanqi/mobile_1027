@@ -1,7 +1,7 @@
 <template>
   <div class="all">
     <div class="big_img">
-      <img id="onloadimg" :src="dataList.imageUrl" alt="">
+      <img id="uuu" :src="dataList.imageUrl" alt="">
     </div>
     <div class="content">
       <div class="content_title" v-text="dataList.album"></div>
