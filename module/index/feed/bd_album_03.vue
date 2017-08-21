@@ -183,10 +183,20 @@
                 "sort":-1,
                 "sortNo":that.sortNoIndex
               };
+              if(localStorage.getItem("access_token")){
+                  obj[access_token]=localStorage.getItem("access_token");
+              }
+              if(localStorage.getItem("expires_in")){
+                obj[expires_in]=localStorage.getItem("expires_in");
+              }
               api("/api/mg/content/music/getListData",obj)
                 .then(function (result) {
                   if(result.code==0){
                     if(result.data && result.data.dataList){
+
+                      localStorage.setItem("access_token",result.data.xmlyToken.access_token)
+                      localStorage.setItem("expires_in",result.data.xmlyToken.expires_in)
+
                       that.contentList=that.contentList.concat((result.data.dataList).reverse());
                       result.data.dataList.map(function (item,index) {
                         if(item.sortNo){

@@ -8,7 +8,7 @@
       <div class="history" @click.stop="go_history">
         <div>
           <div>上次听到</div>
-          <div style="overflow: hidden;max-width: 96px;">我的哈哈哈哈哈哈</div>
+          <div style="overflow: hidden;max-width: 96px;">{{ historyName }}</div>
           <div>...,点我继续收听</div>
         </div>
       </div>

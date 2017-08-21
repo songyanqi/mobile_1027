@@ -1,0 +1,34 @@
+<template>
+  <div>
+    <div class="mask"></div>
+    <div class="banner">
+      <div><img src="" alt=""></div>
+      <div>无法连接网络啦</div>
+      <div class="btn">点击重新加载</div>
+    </div>
+  </div>
+</template>
+<script>
+  export default {
+
+  }
+</script>
+<style scoped>
+  .mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #F1F1F1;
+    z-index: 2;
+  }
+  .banner{
+    margin-top: 1rem;
+
+  }
+  .btn{
+    width: 1.44rem;
+    height: 0.33rem;
+  }
+</style>
