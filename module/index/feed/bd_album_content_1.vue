@@ -59,7 +59,6 @@
           if(this.isApp){
             native.Audio.audioLocation({
               success: function (obj) {
-                alert(obj.sortNo + ':' + obj.albumId + ":" + obj.state);
                 window.iosInterface.getAudioState(obj);
               }
             })
