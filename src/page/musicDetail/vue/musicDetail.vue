@@ -174,7 +174,6 @@
           }
         })
       })
-      alert(2)
       // that.subscription()
     },
     methods: {
