@@ -174,7 +174,6 @@
           }
         })
       })
-      that.subscription()
     },
     methods: {
       nativePay(url, callback){
@@ -206,11 +205,11 @@
                   window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
                   // bravetime.goto("http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters)));
               }else if(payUrl){
-                that.nativePay(payUrl,function (flag) {
-                  if(flag){
-                    // 报名成功(进不来)
-                  }
-                });
+                // that.nativePay(payUrl,function (flag) {
+                //   if(flag){
+                //     // 报名成功(进不来)
+                //   }
+                // });
               }else{
                 // 报名成功
                 window.location.href = '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.index
