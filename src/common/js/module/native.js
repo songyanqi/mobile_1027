@@ -35,7 +35,6 @@ function getProtocal(param = {}) {
     };
   param.param.error = param.param.error || function () {
     };
-  alert(param.host+';' + param.action)
   // 回调名称
   let callbackName = `native_callback_${Math.random().toString().split('.')[1]}`;
   // 设置全局回调
@@ -51,7 +50,7 @@ function getProtocal(param = {}) {
     // 执行完回收
     window[callbackName] = null;
   };
-
+  alert(protocal)
   // 拼接唤起native协议
   let protocal = `davdian:\/\/call.${param.host}.com?action=${param.action}&params=${encodeURIComponent(JSON.stringify(param.param))}&callback=${callbackName}&minv=${param.v}`;
 
