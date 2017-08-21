@@ -18,6 +18,7 @@
   import lfooter from'./footer.vue'
   import appInterface from "../../../../utils/appInterface.es6"
   import util from "../../../../utils/utils.es6"
+  import native from "../../../../src/common/js/module/native.js"
   export default {
     components:{
       index_feed:index_feed,

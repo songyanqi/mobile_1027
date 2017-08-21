@@ -10,7 +10,7 @@
   import native from "../../../src/common/js/module/native";
   export default {
       props:["data"],
-      created:function () {
+      mounted:function () {
         this.dataList=this.data.body.dataList;
       },
       data(){

@@ -1,10 +1,18 @@
 <template>
   <div class="all">
-    <div>
+    <div class="big_top">
       <div class="big_img">
         <img id="uuu" :src="dataList.imageUrl" alt="">
       </div>
-      <div class=""></div>
+      <div class="history_mask"></div>
+      <div class="history" @click.stop="go_history">
+        <div>
+          <div>上次听到</div>
+          <div style="overflow: hidden;max-width: 96px;">我的哈哈哈哈哈哈</div>
+          <div>...,点我继续收听</div>
+        </div>
+      </div>
+
     </div>
 
     <div class="content">
@@ -20,17 +28,55 @@
   </div>
 </template>
 <script>
+  import native from "../../../src/common/js/module/native.js"
+  import util from "../../../utils/utils.es6";
+  import {getQuery} from '../../../utils/utils.es6';
   export default {
     props:["data"],
-    created:function () {
+    mounted:function () {
       this.dataList=this.data.body.dataList[0];
       this.isFree=this.data.body.isFree;
+      this.$nextTick(function () {
+        this.audioPlayHistory();
+      });
     },
     data(){
         return{
             dataList:[],
-            isFree:0
+            isFree:0,
+            historyName:"",
+            sortNo:null,
+            timestamp:null,
+            isApp:util.utils.isApp(),
+            albumId:getQuery("albumId")
         }
+    },
+    methods:{
+      go_history(){
+        var _this=this;
+        if(this.isApp){
+          //调用app播放器
+          native.Audio.audioPlay({
+            "sortNo":_this.sortNo,
+            "albumId":_this.albumId
+          })
+        }else{
+          window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
+        }
+      },
+      audioPlayHistory(){
+        var _this=this;
+        if(this.isApp){
+          native.Audio.audioPlayHistory({
+            "albumId":_this.albumId,
+            success: function (obj) {
+              _this.historyName=obj.name;
+              _this.sortNo=obj.sortNo;
+              _this.timestamp=obj.date;
+            }
+          })
+        }
+      },
     }
   }
 </script>
@@ -82,5 +128,40 @@
     color: #BF9D51;
     font-size: 11px;
     margin-top: 0.04rem;
+  }
+
+
+  .big_top{
+    position: relative;
+  }
+  .history_mask{
+    height: 35px;
+    background: #000000;
+    opacity:0.6;
+    position: absolute;
+    bottom: 0;
+    z-index:2;
+    width:3.75rem;
+  }
+  .history{
+    position: absolute;
+    bottom: 0;
+    height: 35px;
+    z-index:3;
+    line-height: 35px;
+    font-size: 0;
+    width: 3.75rem;
+    text-align: center;
+  }
+  .history>div {
+    display: inline-block;
+    height: 35px;
+  }
+  .history div>div{
+    color:#FFFFFF;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: top;
+    height: 35px;
   }
 </style>

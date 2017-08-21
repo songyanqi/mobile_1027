@@ -426,7 +426,6 @@
 	    // 此处返回'1'时候正常回调success,但返回不等于'1'时一律执行error。
 	    // 如此一来,诸如Account.login这样的返回'0'|'1'|'2'的接口就可以处理'0'|'1'以外的情况了(在error中判断response === '0'|'2'|'3'|'4'|...)。
 	    if (response.code == '1') {
-	      alert(3);
 	      param.param.success(response);
 	    } else {
 	      param.param.error(response);
@@ -23804,7 +23803,7 @@
 	// <script>
 	exports.default = {
 	  props: ["data"],
-	  created: function created() {
+	  mounted: function mounted() {
 	    this.dataList = this.data.body.dataList;
 	  },
 	  data: function data() {
@@ -23930,7 +23929,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-780f6021]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-780f6021]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-780f6021]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-780f6021]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-780f6021]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-780f6021]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-780f6021],.mask_stop[_v-780f6021],.disable[_v-780f6021]{\n  z-index:3;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-780f6021]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-780f6021]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-780f6021]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-780f6021]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-780f6021]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-780f6021]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-780f6021],.mask_stop[_v-780f6021],.disable[_v-780f6021]{\n  z-index:3;\n}\n", ""]);
 
 	// exports
 
@@ -23987,9 +23986,7 @@
 	      if (this.isApp) {
 	        _native2.default.Audio.audioLocation({
 	          success: function success(obj) {
-	            alert(10);
-	            //                alert(obj.sortNo + ':' + obj.albumId + ":" + obj.state);
-	            //                window.iosInterface.getAudioState(obj);
+	            window.iosInterface.getAudioState(obj);
 	          }
 	        });
 	      }
@@ -27132,25 +27129,183 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-234ea0bb] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-234ea0bb] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-234ea0bb] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-234ea0bb] {\n  width: 3.75rem;\n}\n\n.content_title[_v-234ea0bb] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-234ea0bb] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-234ea0bb] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-234ea0bb] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-234ea0bb] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-234ea0bb] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-234ea0bb] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-234ea0bb] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-234ea0bb] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-234ea0bb] {\n  width: 3.75rem;\n}\n\n.content_title[_v-234ea0bb] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-234ea0bb] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-234ea0bb] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-234ea0bb] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-234ea0bb] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-234ea0bb] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-234ea0bb]{\n  position: relative;\n}\n.history_mask[_v-234ea0bb]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-234ea0bb]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-234ea0bb] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-234ea0bb]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
 
 	// exports
 
 
 /***/ },
 /* 407 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	// <template>
+
+	var _native = __webpack_require__(22);
+
+	var _native2 = _interopRequireDefault(_native);
+
+	var _utils = __webpack_require__(80);
+
+	var _utils2 = _interopRequireDefault(_utils);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	exports.default = {
+	  props: ["data"],
+	  mounted: function mounted() {
+	    this.dataList = this.data.body.dataList[0];
+	    this.isFree = this.data.body.isFree;
+	    this.$nextTick(function () {
+	      this.audioPlayHistory();
+	    });
+	  },
+	  data: function data() {
+	    return {
+	      dataList: [],
+	      isFree: 0,
+	      historyName: "",
+	      sortNo: null,
+	      timestamp: null,
+	      isApp: _utils2.default.utils.isApp(),
+	      albumId: (0, _utils.getQuery)("albumId")
+	    };
+	  },
+
+	  methods: {
+	    go_history: function go_history() {
+	      var _this = this;
+	      if (this.isApp) {
+	        //调用app播放器
+	        _native2.default.Audio.audioPlay({
+	          "sortNo": _this.sortNo,
+	          "albumId": _this.albumId
+	        });
+	      } else {
+	        window.location.href = "/musicDetail.html?albumId=" + albumId + "&sortNo=" + sortNo;
+	      }
+	    },
+	    audioPlayHistory: function audioPlayHistory() {
+	      var _this = this;
+	      if (this.isApp) {
+	        _native2.default.Audio.audioPlayHistory({
+	          "albumId": _this.albumId,
+	          success: function success(obj) {
+	            _this.historyName = obj.name;
+	            _this.sortNo = obj.sortNo;
+	            _this.timestamp = obj.date;
+	          }
+	        });
+	      }
+	    }
+	  }
+	  // </script>
+	  // <style scoped>
+	  //   .all {
+	  //     padding-bottom: 0.12rem;
+	  //     background: white;
+	  //   }
+	  //
+	  //   .big_img {
+	  //     margin-bottom: 0.1rem;
+	  //   }
+	  //
+	  //   .content {
+	  //     padding: 0.1rem 0.1rem 0 0.1rem;
+	  //   }
+	  //
+	  //   .big_img img {
+	  //     width: 3.75rem;
+	  //   }
+	  //
+	  //   .content_title {
+	  //     font-size: 14px;
+	  //     color: #333333;
+	  //     margin-bottom: 0.15rem;
+	  //   }
+	  //
+	  //   .content_price {
+	  //     margin-bottom: 0.15rem;
+	  //   }
+	  //
+	  //   .content_text {
+	  //     color: #999999;
+	  //     font-size: 12px;
+	  //   }
+	  //
+	  //   .content_price .pri_left {
+	  //     color: #FF4A7D;
+	  //     font-size: 18px;
+	  //   }
+	  //
+	  //   .content_price > div {
+	  //     display: inline-block;
+	  //     font-size: 0;
+	  //     vertical-align: top;
+	  //   }
+	  //
+	  //   .content_price .pri_right {
+	  //     color: #BF9D51;
+	  //     font-size: 11px;
+	  //     margin-top: 0.04rem;
+	  //   }
+	  //
+	  //
+	  //   .big_top{
+	  //     position: relative;
+	  //   }
+	  //   .history_mask{
+	  //     height: 35px;
+	  //     background: #000000;
+	  //     opacity:0.6;
+	  //     position: absolute;
+	  //     bottom: 0;
+	  //     z-index:2;
+	  //     width:3.75rem;
+	  //   }
+	  //   .history{
+	  //     position: absolute;
+	  //     bottom: 0;
+	  //     height: 35px;
+	  //     z-index:3;
+	  //     line-height: 35px;
+	  //     font-size: 0;
+	  //     width: 3.75rem;
+	  //     text-align: center;
+	  //   }
+	  //   .history>div {
+	  //     display: inline-block;
+	  //     height: 35px;
+	  //   }
+	  //   .history div>div{
+	  //     color:#FFFFFF;
+	  //     font-size: 12px;
+	  //     display: inline-block;
+	  //     vertical-align: top;
+	  //     height: 35px;
+	  //   }
+	  // </style>
+
+	}; // <template>
 	//   <div class="all">
-	//     <div class="big_img">
-	//       <img id="uuu" :src="dataList.imageUrl" alt="">
+	//     <div class="big_top">
+	//       <div class="big_img">
+	//         <img id="uuu" :src="dataList.imageUrl" alt="">
+	//       </div>
+	//       <div class="history_mask"></div>
+	//       <div class="history" @click.stop="go_history">
+	//         <div>
+	//           <div>上次听到</div>
+	//           <div style="overflow: hidden;max-width: 96px;">我的哈哈哈哈哈哈</div>
+	//           <div>...,点我继续收听</div>
+	//         </div>
+	//       </div>
+	//
 	//     </div>
+	//
 	//     <div class="content">
 	//       <div class="content_title" v-text="dataList.album"></div>
 	//       <div class="content_price" v-if="isFree==1">
@@ -27164,76 +27319,12 @@
 	//   </div>
 	// </template>
 	// <script>
-	exports.default = {
-	  props: ["data"],
-	  created: function created() {
-	    this.dataList = this.data.body.dataList[0];
-	    this.isFree = this.data.body.isFree;
-	  },
-	  data: function data() {
-	    return {
-	      dataList: [],
-	      isFree: 0
-	    };
-	  }
-	};
-	// </script>
-	// <style scoped>
-	//   .all {
-	//     padding-bottom: 0.12rem;
-	//     background: white;
-	//   }
-	//
-	//   .big_img {
-	//     margin-bottom: 0.1rem;
-	//   }
-	//
-	//   .content {
-	//     padding: 0.1rem 0.1rem 0 0.1rem;
-	//   }
-	//
-	//   .big_img img {
-	//     width: 3.75rem;
-	//   }
-	//
-	//   .content_title {
-	//     font-size: 14px;
-	//     color: #333333;
-	//     margin-bottom: 0.15rem;
-	//   }
-	//
-	//   .content_price {
-	//     margin-bottom: 0.15rem;
-	//   }
-	//
-	//   .content_text {
-	//     color: #999999;
-	//     font-size: 12px;
-	//   }
-	//
-	//   .content_price .pri_left {
-	//     color: #FF4A7D;
-	//     font-size: 18px;
-	//   }
-	//
-	//   .content_price > div {
-	//     display: inline-block;
-	//     font-size: 0;
-	//     vertical-align: top;
-	//   }
-	//
-	//   .content_price .pri_right {
-	//     color: #BF9D51;
-	//     font-size: 11px;
-	//     margin-top: 0.04rem;
-	//   }
-	// </style>
 
 /***/ },
 /* 408 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"all\" _v-234ea0bb=\"\">\n  <div class=\"big_img\" _v-234ea0bb=\"\">\n    <img id=\"uuu\" :src=\"dataList.imageUrl\" alt=\"\" _v-234ea0bb=\"\">\n  </div>\n  <div class=\"content\" _v-234ea0bb=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-234ea0bb=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-234ea0bb=\"\">\n      <div class=\"pri_left\" _v-234ea0bb=\"\">\n        <span v-text=\"dataList.income\" _v-234ea0bb=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-234ea0bb=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-234ea0bb=\"\"></div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"all\" _v-234ea0bb=\"\">\n  <div class=\"big_top\" _v-234ea0bb=\"\">\n    <div class=\"big_img\" _v-234ea0bb=\"\">\n      <img id=\"uuu\" :src=\"dataList.imageUrl\" alt=\"\" _v-234ea0bb=\"\">\n    </div>\n    <div class=\"history_mask\" _v-234ea0bb=\"\"></div>\n    <div class=\"history\" @click.stop=\"go_history\" _v-234ea0bb=\"\">\n      <div _v-234ea0bb=\"\">\n        <div _v-234ea0bb=\"\">上次听到</div>\n        <div style=\"overflow: hidden;max-width: 96px;\" _v-234ea0bb=\"\">我的哈哈哈哈哈哈</div>\n        <div _v-234ea0bb=\"\">...,点我继续收听</div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"content\" _v-234ea0bb=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-234ea0bb=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-234ea0bb=\"\">\n      <div class=\"pri_left\" _v-234ea0bb=\"\">\n        <span v-text=\"dataList.income\" _v-234ea0bb=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-234ea0bb=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-234ea0bb=\"\"></div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 409 */
