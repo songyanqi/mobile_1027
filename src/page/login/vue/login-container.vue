@@ -474,7 +474,7 @@
   }
 
   .inputbox input {
-    background-color: #F8F8F8F8;
+    background-color: #F8F8F8;
     font-size: 14px;
     line-height: 20px;
     color: #333333;

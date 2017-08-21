@@ -82,12 +82,13 @@ new Vue({
       native.BrowserTouch.copyText({
         "text": text,
         success: function (result) {
-          if (typeof result === "string") {
+          console.log("0",result);
+          if (typeof result == "string") {
             result = JSON.parse(result);
             const code = +result.code;
-            if (code === 0) {
+            if (code == 0) {
               popup.toast("复制到剪切板失败，请手动复制")
-            } else if (code === 1) {
+            } else if (code == 1) {
               /*复制成功*/
               popup.toast("已复制到剪切板");
             } else {
