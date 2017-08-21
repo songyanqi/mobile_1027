@@ -1,17 +1,13 @@
 <template>
   <div>
-    <lheader class="top" v-if="!isapp"></lheader>
-    <div class="empty" v-if="!isapp"></div>
     <audio preload="auto" class='allAudio'></audio>
-    <div class="top_img">
+    <div class="tab2" @click='goback'><img src="//pic.davdian.com/free/2017/08/21/backRound.png" alt=""></div>
+    <div class="top_img" >
       <div class="big_img" v-if='musicList[index] && musicList[index].imageUrl'>
         <img :src="musicList[index].imageUrl" alt="">
       </div>
-      <div class="big_mask"></div>
-      <div class="mask_tab">
-        <div class="sub_tab">
-          <div class="tab2"><img src="//pic.davdian.com/free/2017/08/21/closePlayerWhiteWithBkg.png" alt=""></div>
-        </div>
+      <div class="big_mask" v-if='musicList[index] && musicList[index].isPlay != 1'></div>
+      <div class="mask_tab" v-if='musicList[index] && musicList[index].isPlay != 1'>
         <div class="mask_text">
           <div class="mask_content">付费内容</div>
           <div class="mask_content2"><span>99</span>订阅即可收听本专辑全部内容</div>
@@ -20,8 +16,6 @@
         </div>
       </div>
     </div>
-
-    
     <div class="text" v-if='musicList[index] && musicList[index].music' v-text='musicList[index].music'></div>
     <div class="range">
       <div class="gray"></div>
@@ -84,8 +78,8 @@
   import dialog from "../../../../utils/dialog.es6";
   // import wx from "../../../../utils/WXShare.es6"
   import native from '../../../common/js/module/native.js'
+  import popup from '../../../common/js/module/popup.js'
   // import common from '../../../common/js/common.js'
-  import lheader from "./header.vue";
   export default {
     data: function () {
       return {
@@ -126,6 +120,12 @@
           sort:'0',
           sortNo:getQuery('sortNo') || '0'
         }
+        if (localStorage.getItem('access_token')){
+          obj['access_token'] = localStorage.getItem('access_token')
+        }
+        if (localStorage.getItem('expires_in')){
+          obj['expires_in'] = localStorage.getItem('expires_in')
+        }
         api('/api/mg/content/music/getListData', obj).then(function(data){
           if (data.code ==0){
             if (data.data && data.data.dataList){
@@ -141,10 +141,17 @@
               dialog.alert('code='+data.code)
             }
           }
+          if (data && data.data && data.data.xmlyToken && data.data.xmlyToken.access_token){
+            localStorage.setItem('access_token', data.data.xmlyToken.access_token)
+            localStorage.setItem('expires_in', data.data.xmlyToken.expires_in)
+          }
         })
       })
     },
     methods: {
+      goback(){
+        window.history.back()
+      },
       goAlbumId(){
         if (this.isapp){
           native.Browser.open({
@@ -223,6 +230,19 @@
               return
             }
           }
+          if (that.musicList[index].isPlay != 1){
+            popup.confirm({
+              title: '提示',            // 标题（支持传入html。有则显示。）
+              text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
+              okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+              cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+              okBtnCallback: function(){
+                console.log(123)
+              },
+              cancelBtnCallback: function(){}
+            });
+            return
+          }
         }
         if (that.playTimer){
           clearInterval(that.playTimer)
@@ -276,6 +296,12 @@
             sort:sort,
             sortNo:sortNo
           }
+          if (localStorage.getItem('access_token')){
+            obj['access_token'] = localStorage.getItem('access_token')
+          }
+          if (localStorage.getItem('expires_in')){
+            obj['expires_in'] = localStorage.getItem('expires_in')
+          }
           api('/api/mg/content/music/getListData', obj).then(function(data){
             if (data.code ==0){
               if (data && data.data && data.data.dataList){
@@ -300,6 +326,10 @@
               } else {
                 dialog.alert('code='+data.code)
               }
+            }
+            if (data && data.data && data.data.xmlyToken && data.data.xmlyToken.access_token){
+              localStorage.setItem('access_token', data.data.xmlyToken.access_token)
+              localStorage.setItem('expires_in', data.data.xmlyToken.expires_in)
             }
             setTimeout(function(){
               that.getDataFlag = true
@@ -346,7 +376,6 @@
       },
     },
     components:{
-      lheader:lheader
     }
   }
 </script>
@@ -678,9 +707,12 @@
   .sub_tab>div{
     display: inline-block;
   }
-  .tab1,.tab2{
+  .tab2{
+    position: absolute;
+    top: 20px;
     width: 0.4rem;
     height: 0.44rem;
+    z-index: 100;
   }
   .tab1{
     margin-left: 0.04rem;
@@ -717,7 +749,7 @@
     top: 0;
     z-index: 3;
   }
-  .tab1 img,.tab2 img{
+  .tab2 img{
     width: 0.4rem;
     height: 0.44rem;
   }

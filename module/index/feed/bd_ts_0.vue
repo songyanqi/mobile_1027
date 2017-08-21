@@ -29,8 +29,7 @@
         swiperIndex: 0,
         tsmenu: '',
         timestamp2: Date.parse(new Date()) / 1000,
-        index_ts_data: "/api/mg/sale/index/getTimeshop",
-        dataList: this.data.body.dataList
+        index_ts_data: "/api/mg/sale/index/getTimeshop"
 //        index_ts_data: "../data/index_ts_data.json"
       }
     },
@@ -49,6 +48,9 @@
       styleObject: function () {
         let scope = this;
         return layout.styleObject(scope.data);
+      },
+      dataList:function(){
+        return this.data.body.dataList
       }
     },
     components: {},

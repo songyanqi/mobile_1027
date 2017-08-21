@@ -114,7 +114,15 @@ const GoodsBottom = {
 
             };
             let Title = "限时购活动预告", okText = '任性买',cancleText = "再等等";
-            popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+            // popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+            popup.confirm({
+              title: Title,            // 标题（支持传入html。有则显示。）
+              text: contText,             // 文本（支持传入html。有则显示。）
+              okBtnTitle: okText,       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+              cancelBtnTitle: cancleText,   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+              okBtnCallback: okFun,
+              cancelBtnCallback: cancleFun,
+            });
           } else {
             //立即购买是否跳出弹框
             this.isBuyModal = false;
@@ -143,7 +151,15 @@ const GoodsBottom = {
 
             };
             let Title = "限时购活动预告", okText = '任性买',cancleText = "再等等";
-            popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+            // popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+            popup.confirm({
+              title: Title,            // 标题（支持传入html。有则显示。）
+              text: contText,             // 文本（支持传入html。有则显示。）
+              okBtnTitle: okText,       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+              cancelBtnTitle: cancleText,   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+              okBtnCallback: okFun,
+              cancelBtnCallback: cancleFun,
+            });
           } else {
             //立即购买是否跳出弹框
             this.isBuyModal = true;
@@ -173,7 +189,15 @@ const GoodsBottom = {
 
             };
             let Title = "限时购活动预告", okText = '任性买',cancleText = "再等等";
-            popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+            // popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+            popup.confirm({
+              title: Title,            // 标题（支持传入html。有则显示。）
+              text: contText,             // 文本（支持传入html。有则显示。）
+              okBtnTitle: okText,       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+              cancelBtnTitle: cancleText,   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+              okBtnCallback: okFun,
+              cancelBtnCallback: cancleFun,
+            });
           } else {
             //立即购买是否跳出弹框
             this.$emit('confirm-id','', 0);
@@ -259,7 +283,15 @@ const GoodsBottom = {
 
             };
             let Title = "限时购活动预告", okText = '任性买',cancleText = "再等等";
-            popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+            // popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+            popup.confirm({
+              title: Title,            // 标题（支持传入html。有则显示。）
+              text: contText,             // 文本（支持传入html。有则显示。）
+              okBtnTitle: okText,       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+              cancelBtnTitle: cancleText,   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+              okBtnCallback: okFun,
+              cancelBtnCallback: cancleFun,
+            });
           } else {
             if (this.seckill) {
               if (this.ismultigoods) {
