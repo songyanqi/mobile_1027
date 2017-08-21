@@ -213,6 +213,7 @@
                 });
               }else{
                 // 报名成功
+                window.location.href = '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.index
               }
 
             }else {
