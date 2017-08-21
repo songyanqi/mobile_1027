@@ -1,7 +1,8 @@
 <template>
   <div class="box">
-    <div class="item" v-for="item in dataList" @click.stop="go_collect(item.albumId)">
-      <img :src="item.imageUrl" alt="">
+    <div class="item" v-for="item in dataList"
+         @click.stop="go_collect(item.albumId)" :style="{'background-image':styleObject(item.imageUrl)}">
+      <!--<img :src="item.imageUrl" alt="">-->
     </div>
   </div>
 </template>
@@ -20,6 +21,9 @@
           }
       },
       methods:{
+        styleObject(item){
+            return "url("+ item +")";
+        },
         go_collect(albumId){
           if(this.isApp){
             native.Browser.open({
@@ -50,6 +54,9 @@
     width: 0.72rem;
     height: 0.35rem;
     box-sizing: border-box;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
   .item img{
     width: 0.72rem;

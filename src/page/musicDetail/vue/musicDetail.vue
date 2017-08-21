@@ -615,6 +615,7 @@
     font-size: 0;
     position: relative;
     background: #ffffff;
+    border-top:1px solid #DDDDDD;
   }
   .look_more>div{
     display: inline-block;
@@ -763,6 +764,7 @@
     color: #333333;
     font-size: 14px;
     border-top:1px solid #DDDDDD;
+    box-sizing: border-box;
   }
   .allAudio{
     height: 0;

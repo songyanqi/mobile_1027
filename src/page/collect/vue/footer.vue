@@ -2,11 +2,11 @@
   <div class="btn">
     ::{{ isSub }}::
     <div class="btn_left" v-if="userstatus==1 || userstatus==0">成为会员免费听</div>
-    <div class="btn_left" v-if="userstatus==3"><span>邀请赚</span><span v-text="price"></span></div>
+    <div class="btn_left" v-if="userstatus==3"><span>邀请赚¥</span><span v-text="price"></span></div>
     <div class="btn_right">
       <img src="//pic.davdian.com/free/2017/08/16/Rectangle.png" alt="">
       <div class="btn_text" @click="Subscribe" v-if="isSub==0 && (userstatus==1 || userstatus==0)">
-        <span><span>订阅合辑:</span><span v-text="price"></span></span>
+        <span><span>订阅合辑</span><span v-if="priceFlag">:¥</span><span v-text="doprice"></span></span>
       </div>
       <div class="btn_text" @click="Subscribe" v-if="isSub==0 && userstatus==3">
         <span>会员免费订阅</span>
@@ -29,7 +29,19 @@
         return this.sub;
       }
     },
+    data(){
+      return {
+        priceFlag:true
+      }
+    },
     methods:{
+      doprice(){
+          if(this.price=="0.00"){
+            this.priceFlag=false;
+            return "";
+          }
+          return this.price;
+      },
       nativePay(url, callback){
         var option = {};
         option.url = encodeURIComponent(url);
