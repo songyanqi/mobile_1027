@@ -37,6 +37,7 @@
       this.dataList=this.data.body.dataList[0];
       this.isFree=this.data.body.isFree;
       this.$nextTick(function () {
+        alert(123456789);
         this.audioPlayHistory();
       });
     },
