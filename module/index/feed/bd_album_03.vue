@@ -36,8 +36,8 @@
             </div>
             <div class="item_right" v-if="item.isFree==1">
               <div class="disable" v-if="item.isPlay==0 && isSub==0" @click.stop="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-              <div class="mask_stop" v-if="isSub==1 && item.isPlay==1 && !(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-              <div class="mask_play" v-if="isSub==1 && item.isPlay==1 && (item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+              <div class="mask_stop" v-if="isSub==1 && item.isPlay==1 && (item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+              <div class="mask_play" v-if="isSub==1 && item.isPlay==1 && !(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
@@ -71,18 +71,23 @@
         this.initSortNoIndex();
         this.scro();
         this.tab_scroll();
-        window.audioPlayHistoryFn = function(obj){
-          console.log(obj.sortNo, obj.date)
-          console.log(that.name);
-        }
-        ////////todo
 
+//        window.audioPlayHistoryFn = function(obj){
+//          console.log(obj.sortNo, obj.date)
+//          console.log(that.name);
+//        }
+//        ////////todo
+//
+//
+//        this.$nextTick(function () {
+//          native.Audio.audioPlayHistory({
+//            "albumId":this.pageAlbumId,
+//            "result":'audioPlayHistoryFn'
+//          })
+//        });
 
         this.$nextTick(function () {
-          native.Audio.audioPlayHistory({
-            "albumId":this.pageAlbumId,
-            "result":'audioPlayHistoryFn'
-          })
+          this.audioLocation();
         });
       },
       data(){
@@ -102,6 +107,16 @@
           }
       },
       methods:{
+          audioLocation(){
+            if(this.isApp){
+              window.audioLocationFn=function (obj) {
+                window.iosInterface.getAudioState(obj);
+              };
+              native.Audio.audioLocation({
+                "success":"audioLocationFn"
+              })
+            }
+          },
           tab_scroll(){
 
               var tab=$(".top").offset().top;

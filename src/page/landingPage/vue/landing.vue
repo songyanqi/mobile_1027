@@ -1,7 +1,7 @@
 <template>
   <div>
-    <lheader class="top"></lheader>
-    <div class="empty_div"></div>
+    <lheader class="top" v-if="!isApp"></lheader>
+    <div class="empty_div" v-if="!isApp"></div>
     <index_feed :data="data"></index_feed>
   </div>
 </template>
@@ -11,6 +11,7 @@
   import api from "../../../../utils/api.es6"
   import appInterface from "../../../../utils/appInterface.es6"
   import lheader from './header.vue'
+  import util from "../../../../utils/utils.es6"
   export default {
     components:{
       index_feed:index_feed,
@@ -21,7 +22,8 @@
             data:[],
             pageFlag:true,
             upTime:0,
-            name:"landingPage"
+            name:"landingPage",
+            isApp:util.utils.isApp()
         }
     },
 
