@@ -1,5 +1,6 @@
 <template>
   <div class="btn">
+    ::{{ isSub }}::
     <div class="btn_left" v-if="userstatus==1 || userstatus==0">成为会员免费听</div>
     <div class="btn_left" v-if="userstatus==3"><span>邀请赚</span><span v-text="price"></span></div>
     <div class="btn_right">
@@ -20,12 +21,13 @@
   import api from "../../../../utils/api.es6"
   import native from "../../../../src/common/js/module/native.js"
   import dialog from "../../../../utils/dialog.es6";
+  import {getQuery} from "../../../../utils/utils.es6";
   export default {
-    props:["income","issub","userstatus","albumid","price"],
+    props:["income","sub","userstatus","albumid","price"],
     computed:{
-        isSub:function () {
-          return this.issub;
-        }
+      isSub:function () {
+        return this.sub;
+      }
     },
     methods:{
       nativePay(url, callback){
@@ -43,6 +45,7 @@
         native.Browser.pay(option)
       },
       Subscribe(){
+
         var that=this;
         var obj={
             albumId:that.albumid,
@@ -60,16 +63,17 @@
                 } else if (payUrl) {
                   that.nativePay(payUrl, function (flag) {
                     if (flag) {
-                      that.isSub=1;
+                      that.sub=1;
                       // 报名成功(进不来)
                     }
                   });
                 } else {
-                  that.isSub=1;
+                  that.sub=1;
                   // 报名成功
                 }
               } else {
-                dialog.alert(result.data.msg)
+                that.sub=1;
+                dialog.alert(result.data.msg);
               }
             }else {
               dialog.alert('code:' + code + 'msg:'+ result.data.msg)
