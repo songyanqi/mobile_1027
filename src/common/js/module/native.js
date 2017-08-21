@@ -52,10 +52,7 @@ function getProtocal(param = {}) {
     // 执行完回收
     window[callbackName] = null;
   };
-  if (param.callback){
-    let protocal = `davdian:\/\/call.${param.host}.com?action=${param.action}&params=${encodeURIComponent(JSON.stringify(param.param))}&callback=${param.callback}&minv=${param.v}`;
-    return protocal
-  }
+
   // 拼接唤起native协议
   let protocal = `davdian:\/\/call.${param.host}.com?action=${param.action}&params=${encodeURIComponent(JSON.stringify(param.param))}&callback=${callbackName}&minv=${param.v}`;
 
@@ -80,7 +77,7 @@ function innerCall(param = {}) {
   if (!param.host || !param.action || !param.v) {
     throw new Error('参数不全');
   }
-  console.log(JSON.stringify(param), 1111111)
+
   // 参数默认值
   param.invalid = param.invalid || function () {
       alert("请升级您的APP");

@@ -434,10 +434,7 @@
 	    // 执行完回收
 	    window[callbackName] = null;
 	  };
-	  if (param.callback) {
-	    var _protocal = 'davdian://call.' + param.host + '.com?action=' + param.action + '&params=' + encodeURIComponent(JSON.stringify(param.param)) + '&callback=' + param.callback + '&minv=' + param.v;
-	    return _protocal;
-	  }
+
 	  // 拼接唤起native协议
 	  var protocal = 'davdian://call.' + param.host + '.com?action=' + param.action + '&params=' + encodeURIComponent(JSON.stringify(param.param)) + '&callback=' + callbackName + '&minv=' + param.v;
 
@@ -464,7 +461,7 @@
 	  if (!param.host || !param.action || !param.v) {
 	    throw new Error('参数不全');
 	  }
-	  console.log(JSON.stringify(param), 1111111);
+
 	  // 参数默认值
 	  param.invalid = param.invalid || function () {
 	    alert("请升级您的APP");
@@ -24094,7 +24091,7 @@
 	          window.iosInterface.getAudioState(obj);
 	        };
 	        _native2.default.Audio.audioLocation({
-	          "callback": 'audioLocationFn'
+	          "success": 'audioLocationFn'
 	        });
 	      }
 	    },
@@ -27665,7 +27662,7 @@
 	          window.iosInterface.getAudioState(obj);
 	        };
 	        _native2.default.Audio.audioLocation({
-	          "callback": audioLocationFn
+	          "success": "audioLocationFn"
 	        });
 	      }
 	    },

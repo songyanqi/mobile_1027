@@ -3,9 +3,25 @@
     <lheader class="top" v-if="!isapp"></lheader>
     <div class="empty" v-if="!isapp"></div>
     <audio preload="auto" class='allAudio'></audio>
-    <div class="big_img" v-if='musicList[index] && musicList[index].imageUrl'>
-      <img :src="musicList[index].imageUrl" alt="">
+    <div class="top_img">
+      <div class="big_img" v-if='musicList[index] && musicList[index].imageUrl'>
+        <img :src="musicList[index].imageUrl" alt="">
+      </div>
+      <div class="big_mask"></div>
+      <div class="mask_tab">
+        <div class="sub_tab">
+          <div class="tab2"><img src="//pic.davdian.com/free/2017/08/21/closePlayerWhiteWithBkg.png" alt=""></div>
+        </div>
+        <div class="mask_text">
+          <div class="mask_content">付费内容</div>
+          <div class="mask_content2"><span>99</span>订阅即可收听本专辑全部内容</div>
+          <div class="mask_free">会员免费订阅</div>
+          <div class="mask_btn">立即订阅</div>
+        </div>
+      </div>
     </div>
+
+    
     <div class="text" v-if='musicList[index] && musicList[index].music' v-text='musicList[index].music'></div>
     <div class="range">
       <div class="gray"></div>
@@ -335,9 +351,31 @@
   }
 </script>
 <style scoped lang='sass'>
+  .top_img{
+    position: relative;
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+  .big_img{
+    position: absolute;
+    width: 3.75rem;
+    height: 3.75rem;
+    top: 0;
+    left:0;
+  }
   .big_img img{
     width: 3.75rem;
     height: 3.75rem;
+  }
+  .big_mask{
+    width: 3.75rem;
+    height: 3.75rem;
+    background: #000000;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
   }
   .text{
     height: 0.51rem;
@@ -627,5 +665,70 @@
   }
   .empty{
     height: 44px;
+  }
+
+  .big_mask img{
+    width: 0.4rem;
+    height: 0.44rem;
+  }
+  .sub_tab{
+    height: 0.44rem;
+    margin-top: 0.2rem;
+  }
+  .sub_tab>div{
+    display: inline-block;
+  }
+  .tab1,.tab2{
+    width: 0.4rem;
+    height: 0.44rem;
+  }
+  .tab1{
+    margin-left: 0.04rem;
+  }
+  .mask_content{
+    font-size: 16px;
+    text-align: center;
+    height: 0.22rem;
+    line-height:0.22rem;
+    margin-bottom: 0.15rem;
+  }
+  .mask_content2{
+    font-size: 16px;
+    text-align: center;
+    height: 0.22rem;
+    line-height:0.22rem;
+  }
+  .mask_free{
+    font-size: 14px;
+    line-height: 0.22rem;
+    height: 0.22rem;
+    text-align: center;
+  }
+  .mask_text{
+    color:#FFFFFF;
+    margin-top: 0.6rem;
+  }
+  .mask_tab{
+    display: inline-block;
+    height: 3.75rem;
+    width: 3.75rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 3;
+  }
+  .tab1 img,.tab2 img{
+    width: 0.4rem;
+    height: 0.44rem;
+  }
+  .mask_btn{
+    width: 1.8rem;
+    height: 0.36rem;
+    margin:0 auto;
+    margin-top: 0.25rem;
+    background:url("//pic.davdian.com/free/2017/08/21/Rectangle6.png");
+    background-size: 1.8rem 0.36rem;
+    text-align: center;
+    line-height: 0.36rem;
   }
 </style>

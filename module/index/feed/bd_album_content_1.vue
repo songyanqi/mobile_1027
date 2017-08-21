@@ -61,7 +61,7 @@
                 window.iosInterface.getAudioState(obj);
             };
             native.Audio.audioLocation({
-              "callback": 'audioLocationFn'
+              "success": 'audioLocationFn'
             })
           }
         },
