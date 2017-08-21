@@ -423,7 +423,7 @@
         let time = parseInt(t) + 1
         if (time<60){
           if (time<10){
-            time = '0' + time
+            time = '0' + parseInt(t)
           }
           return '00:'+time
         }else {
