@@ -78,7 +78,7 @@
                 _this.timestamp=obj.date;
               }
             })
-          },1200)
+          },2000)
         }
       },
     }
