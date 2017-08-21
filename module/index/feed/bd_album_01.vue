@@ -65,7 +65,6 @@
         }
       },
       audioPlayHistory(){
-        alert(44444);
         var _this=this;
         if(this.isApp){
           native.Audio.audioPlayHistory({
