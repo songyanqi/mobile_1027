@@ -14,7 +14,7 @@
         <img :src="response.data.headImage" alt="">
       </div>
       <div class="myInviter_name">
-        {{response.data.shopName}}
+        {{response.data.mobile.substr(0,3)+"****"+response.data.mobile.substr(7)}}
       </div>
     </div>
     <!--修改邀请人-->
