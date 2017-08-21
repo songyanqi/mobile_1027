@@ -338,6 +338,8 @@
           }
           $('.allAudio').get(0).onended = function () {
             that.isPlay = false
+            that.playTime = 0
+            clearInterval(that.playTimer)
             that.playAudio(that.index + 1)
           }
         } else {
@@ -357,6 +359,8 @@
             }
             $('.allAudio').get(0).onended = function () {
               that.isPlay = false
+              that.playTime = 0
+              clearInterval(that.playTimer)
               that.playAudio(that.index + 1)
             }
           }
@@ -419,7 +423,7 @@
         let time = parseInt(t) + 1
         if (time<60){
           if (time<10){
-            time = '0' + time
+            time = '0' + parseInt(t)
           }
           return '00:'+time
         }else {
