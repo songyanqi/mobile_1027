@@ -16,7 +16,7 @@
               <div class="name" v-text="item.album"></div>
             </div>
           </div>
-          <div class="list_right" @click.stop="music_detail(item.albumId,item.sortNo)">
+          <div class="list_right">
             <div class="disable" @click="stop_info" v-if="item.isPlay==0"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
             <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 && ( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
             <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 &&  !( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" ><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
@@ -78,16 +78,16 @@
         }else{
           window.location.href="/landingPage.html";
         }
-      },
-      music_detail(albumId,sortNo){
-          if(this.isApp){
-            native.Browser.open({
-              "url":"/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo
-            });
-          }else{
-            window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
-          }
       }
+//      music_detail(albumId,sortNo){
+//          if(this.isApp){
+//            native.Browser.open({
+//              "url":"/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo
+//            });
+//          }else{
+//            window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
+//          }
+//      }
     }
   }
 </script>
