@@ -21,7 +21,7 @@ new Vue({
   },
   data() {
     return {
-      rule_form:false,
+      rule_form: false,
       response: null,
       login_form: true,  //登录显示
       isApp: ua.isDvdApp()
@@ -79,29 +79,21 @@ new Vue({
     },
     /*原生复制*/
     copyText: function (text) {
+      debugger
       native.BrowserTouch.copyText({
         "text": text,
         success: function (result) {
-          console.log("0",result);
-          if (typeof result == "string") {
-            result = JSON.parse(result);
-            const code = +result.code;
-            if (code == 0) {
-              popup.toast("复制到剪切板失败，请手动复制")
-            } else if (code == 1) {
-              /*复制成功*/
-              popup.toast("已复制到剪切板");
-            } else {
-
-            }
-          }
+          popup.toast("邀请码已复制到剪切板");
+        },
+        error:function (result) {
+          popup.toast("复制失败，请手动复制");
         }
       })
     },
     /*分享*/
-    shareto:function () {
+    shareto: function () {
       var that = this;
-      native.custom.shareImg({"bigImageUrl":that.response.data.shareUrl})
+      native.custom.shareImg({"bigImageUrl": that.response.data.shareUrl})
     },
     /*什么是邀请码*/
     what_invite_code: function () {
