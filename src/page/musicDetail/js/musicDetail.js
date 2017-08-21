@@ -5,7 +5,7 @@ import common from '../../../common/js/common.js';
 import Vue from 'Vue';
 import $ from '$';
 import Cookies from 'js-cookie';
-
+alert(1)
 // 业务模块
 import encrypt from '../../../common/js/module/encrypt.js';
 import util from '../../../common/js/module/util.js';
