@@ -75,6 +75,7 @@
   // import wx from "../../../../utils/WXShare.es6"
   import native from '../../../common/js/module/native.js'
   import popup from '../../../common/js/module/popup.js'
+  import share from '../../../common/js/module/share.js';
   // import common from '../../../common/js/common.js'
   export default {
     data: function () {
@@ -111,7 +112,7 @@
             if (this.musicList && this.musicList[this.index] && this.musicList[this.index].introduction){
               setTimeout(function(){
                 native.Browser.showWebHeight({
-                  "webHeight": $('.bottom_text').height()+30
+                  "webHeight": ($('.bottom_text').height()+30).toString()
                 })
               },200)
             } else {
@@ -120,7 +121,7 @@
           } else {
             setTimeout(function(){
               native.Browser.showWebHeight({
-                "webHeight": $('.bottom_text').height()+30
+                "webHeight": ($('.bottom_text').height()+30).toString()
               })
             },1200)
           }
@@ -163,12 +164,27 @@
             localStorage.setItem('access_token', data.data.xmlyToken.access_token)
             localStorage.setItem('expires_in', data.data.xmlyToken.expires_in)
           }
+          if (data && data.data && data.data.shareInfo){
+            share.setShareInfo({
+              title: data.data.shareInfo.title,
+              desc: data.data.shareInfo.desc,
+              link: data.data.shareInfo.link,
+              imgUrl: data.data.shareInfo.imgUrl
+            });
+          }
         })
       })
+      that.subscription()
     },
     methods: {
       subscription(){
-        alert('订阅')
+        let obj = {
+          albumId:getQuery('albumId'),
+          shareUserId:getQuery('shareUserId') || ''
+        }
+        api('/api/mg/content/album/subscription', obj).then(function(data){
+          console.log(data)
+        })
       },
       goback(){
         window.history.back()
