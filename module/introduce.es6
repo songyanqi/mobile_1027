@@ -126,8 +126,13 @@ export default {
                         that.cmd = result.data.cmd
                         // that.teacherId = result.data.teacherId
                     } else {
-                        that.error = true;
-                        bravetime.info("数据获取异常"+code);
+                        if (code==30000){
+                            that.visitor_status = 0
+                            native.Browser.setHead({shareBtn:'0'})
+                        }else {
+                            that.error = true;
+                            bravetime.info("数据获取异常"+code);
+                        }
                     }
                 }else{
                     let {userRole, userTicket, course:{type,money,income},feedList}= data;
