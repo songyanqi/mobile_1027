@@ -31,9 +31,9 @@ const defaultTitleBar = {
  */
 function getProtocal(param = {}) {
   // 参数默认值
-  param.success = param.success || function () {
+  param.param.success = param.param.success || function () {
     };
-  param.error = param.error || function () {
+  param.param.error = param.param.error || function () {
     };
 
   // 回调名称
@@ -45,9 +45,9 @@ function getProtocal(param = {}) {
     // 如此一来,诸如Account.login这样的返回'0'|'1'|'2'的接口就可以处理'0'|'1'以外的情况了(在error中判断response === '0'|'2'|'3'|'4'|...)。
     if (response.code == '1') {
       alert(3)
-      param.success(response)
+      param.param.success(response)
     } else {
-      param.error(response)
+      param.param.error(response)
     }
     // 执行完回收
     window[callbackName] = null;

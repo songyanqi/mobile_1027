@@ -33,7 +33,6 @@
       </div>
       <div class="list">
         <div class="item" v-for="(item,index) in contentList" @click="go_href.stop(item.albumId,item.sortNo)" >
-          <div class="last">上次听到这里 2017-07-11 21:09</div>
           <div class="rea">
             <div class="item_left">
               <div class="item_title" v-text="item.music"></div>
@@ -438,18 +437,6 @@
     font-size: 12px;
     text-align: center;
     line-height: 0.22rem;
-  }
-  .last{
-    width: 3.55rem;
-    height: 0.2rem;
-    border-radius:4px;
-    background: #FFF2E1;
-    color:#CC8B3F;
-    font-size:10px;
-    margin-bottom: 0.1rem;
-    text-align: center;
-    line-height:0.2rem;
-
   }
   .rea{
     position: relative;
