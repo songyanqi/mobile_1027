@@ -36,6 +36,7 @@
       就在某一天 你忽然出现
       你清澈又神秘 在贝加尔湖畔
       你清澈又神秘 像贝加尔湖畔
+      <div class="talk_tringle"></div>
     </div>
     <div class="advisMark">
       <div class="advisMark_wrap">
@@ -46,13 +47,36 @@
     </div>
     <div class="adviserTip">与顾问建立联系，可获得精准服务</div>
     <div class="my_code_text">
-      顾问微信号：<span>lijinlong5200</span><span>复制微信号</span>
+      顾问微信号：<span>lijinlong5200</span><span @click="show_wx = true">复制微信号</span>
     </div>
     <div class="my_code_text">
-      顾问手机号：<span>17737701050</span><span>复制手机号</span>
+      顾问手机号：<span>17737701050</span><span @click="show_tel = true">复制手机号</span>
+    </div>
+    <div v-show="show_tel" class="g-pop mobile active">
+      <ul>
+        <li class="number">18235589651</li>
+        <li class="copy">复制电话号码（可在微信中尝试添加好友）</li>
+        <a class="sms" href=" ">
+          <li>发送短信</li>
+        </a>
+        <a class="tel" href="tel:18235589651">
+          <li>拨打电话</li>
+        </a>
+        <li class="cancel" @click="show_tel = false">取消</li>
+      </ul>
+    </div>
+    <div v-show="show_wx" class="g-pop mobile active">
+      <ul>
+        <li class="number">18235589651</li>
+        <li class="copy">长按上方微信号可选择复制</li>
+        <li class="cancel" @click="show_wx = false">取消</li>
+      </ul>
     </div>
   </div>
   <div class="adviserBottom">*2017-08-21 21:56后可更改顾问</div>
+  <div style="width: 100%">
+  <div class="replaceAdviser">更换顾问</div>
+  </div>
 </div>
 @@include('vendor.include')
 <script src="[[static]]/page/my_adviser/js/my_adviser.js[[v]]"></script>

@@ -22,12 +22,14 @@ new Vue({
   data() {
     return {
       response: null,
+      show_tel: false,
+      show_wx: false
     }
   },
   computed: {},
   watch: {
     // 监听response变化
-    response(){
+    response() {
       // response变化后并渲染完dom,设置其他事项
       this.$nextTick(function () {
         let ts = this;
@@ -50,7 +52,7 @@ new Vue({
      * 接口名称:
      * 接口文档:
      */
-    getData(){
+    getData() {
       let ts = this;
       $.ajax({
         cache: false,
