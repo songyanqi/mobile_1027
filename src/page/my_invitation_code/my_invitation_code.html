@@ -19,7 +19,7 @@
         分享给好友
       </div>
       <div class="my_code_text">
-        我的邀请码：<span>{{response.data.inviteCode}}</span><span v-if="isApp" @click="copyText(response.data.inviteCode)">复制邀请码2</span>
+        我的邀请码：<span @click="show_pop = true" v-on:touchstart="show_pop = true">{{response.data.inviteCode}}</span><span v-if="isApp" @click="copyText(response.data.inviteCode)">复制邀请码</span>
       </div>
       <div class="other-info" @click="what_invite_code">
         什么是邀请码？
@@ -39,6 +39,14 @@
             <div v-on:click="close_what_invite"></div>
           </div>
         </div>
+    </div>
+    <!--电话操作面板-->
+    <div v-if="!isApp" class="g-pop mobile" :class="{'active':show_pop}">
+      <ul>
+        <li class="number" style="display: block;">{{response.data.inviteCode}}</li>
+        <li class="copy">长按上方邀请码可选择复制</li>
+        <li class="cancel" @click="show_pop = false">取消</li>
+      </ul>
     </div>
   </div>
 

@@ -24,7 +24,8 @@ new Vue({
       rule_form: false,
       response: null,
       login_form: true,  //登录显示
-      isApp: ua.isDvdApp()
+      isApp: ua.isDvdApp(),
+      show_pop:false
     }
   },
   computed: {},
