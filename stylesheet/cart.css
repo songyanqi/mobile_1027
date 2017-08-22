@@ -1534,3 +1534,8 @@ body.in_app .top0 {
   font-size: 11px !important;
   font-weight: 500;
 }
+
+
+.com-popup-base{
+  z-index: 990 !important;
+}
