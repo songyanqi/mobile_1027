@@ -104,7 +104,7 @@
         this.$nextTick(function () {
           setTimeout(function(){
             that.audioLocation();
-          },1000)
+          },2000)
           
         });
       },

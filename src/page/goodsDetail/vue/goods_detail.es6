@@ -1023,6 +1023,7 @@ export default {
               native.Browser.setHead({
                 shareMoney: shareMoney + "",
                 shareMoneyStr: '赚' + shareMoney + '元',
+                isAudioAbsorb:'1'
               });
               window.moreShareInfo = {
                 shareTitle: "分享至少赚" + shareMoney + "元",

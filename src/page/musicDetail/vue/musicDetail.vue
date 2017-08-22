@@ -55,7 +55,7 @@
             <div class="list_name" v-text='item.music' :class='{list_name_select: i==index}'></div>
             <div class="list_img">
               <img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt="" v-if='i!=index'>
-              <img src="//pic.davdian.com/free/2017/08/18/playing.png" alt="" v-if='i==index' class='list_img_select'>
+              <img src="//pic.davdian.com/free/2017/08/22/audioIcon.gif" alt="" v-if='i==index' class='list_img_select'>
             </div>
           </div>
           <div v-if='musicListBlock'>
