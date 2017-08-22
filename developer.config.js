@@ -15,6 +15,6 @@
 export default {
   // env_stage: 'prod',
   // env_num: '',
-  page: 'my_adviser',
+  // page: 'my_adviser',
   // webpack: false,
 };

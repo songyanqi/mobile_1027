@@ -1,5 +1,128 @@
 @import "../../../common/css/common.scss";
 
-.app {
-
+.adviser_box{
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+.adviserImg{
+  width: 80px;
+  height:80px;
+  margin: 30px auto 0;
+  position: relative;
+}
+.adviserImg img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.adviserImg div{
+  position: absolute;
+  width: 50px;
+  height: 14px;
+  background-color: #FF4F4F;
+  background: -webkit-linear-gradient(left, #FF4F4F, #F78B1C);
+  background: -webkit-gradient(linear, left left, right right, from(#FF4F4F), to(#F78B1C));
+  background: linear-gradient(to right, #FF4F4F, #F78B1C);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 10px;
+  text-align: center;
+  line-height: 14px;
+  color: #FFFFFF;
+  font-weight: 300;
+  border-radius: 7px;
+}
+.adviserName{
+  font-size: 14px;
+  color:#666666;
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+  overflow: hidden;
+}
+.adviserName > span{
+  font-size: 12px;
+  color: #999999;
+  text-align: center;
+  display: block;
+  margin-top: 8px;
+}
+.declaration{
+  width: 83%;
+  margin: 20px auto 0;
+  background-color: #FAFAFA;
+  position: relative;
+  padding: 10px;
+  color: #999999;
+  line-height: 17px;
+  font-size: 12px;
+}
+.declaration:after{
+  content: "";
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  width: 200%;
+  height: 200%;
+  border: 1px solid;
+  border-color: #E4E4E4;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  border-radius: 16px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.advisMark{
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+}
+.advisMark:after{
+  content: "";
+  height: 1px;
+  width: 200%;
+  display: block;
+  position: absolute;
+  left: -50%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+}
+.advisMark_wrap{
+  width: 83%;
+  margin: 0 auto;
+  font-size: 14px;
+  color:#666666;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 15px;
+}
+.advisMark_wrap div{
+  display: inline-block;
+  padding-left: 19px;
+  background-repeat:no-repeat;
+  background-position:0 3px;
+  background-size: 14px 14px;
+}
+.advisMark_wrap div:nth-of-type(1){
+  float: left;
+  background-image: url("../img/matching.png");
+}
+.advisMark_wrap div:nth-of-type(2){
+  background-image: url("../img/sharers.png");
+}
+.advisMark_wrap div:nth-of-type(3){
+  float: right;
+  background-image: url("../img/commonfriend.png");
 }
