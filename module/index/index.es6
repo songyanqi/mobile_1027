@@ -8,13 +8,14 @@ import bd_goods_1 from '../index/feed/bd_goods_1.vue'
 import indexFeed from './index_feed.vue'
 import indexFoot from '../../src/component/com-footer.vue'
 import layout from "./layout.es6"
-import {savebackData, getbackData,isTryShop} from "../../utils/utils.es6"
+import {savebackData, getbackData, isTryShop} from "../../utils/utils.es6"
 import NProgress from 'nprogress'
 import share from '../../src/common/js/module/share.js'
 import popup from '../../src/common/js/module/popup.js'
+import api from '../../utils/api.es6';
 
-export default{
-  data(){
+export default {
+  data() {
     return {
       dataUrl: '../data/index/index.json',
       contentData: {feedList: []},
@@ -49,14 +50,14 @@ export default{
       getRewardtips: false,
       usersta: '',
       backTop: 0,
-      menudata:{},
-      page_index:0,
-      menuId:8,
-      likeNum:0
+      menudata: {},
+      page_index: 0,
+      menuId: 8,
+      likeNum: 0
     }
   },
   computed: {
-    feedData(){
+    feedData() {
       return this.contentData.feedList
     },
     isWechart: function () {
@@ -99,7 +100,7 @@ export default{
     //         }
     //     }
     // },
-    sessionHistory(){
+    sessionHistory() {
       if (window.Units.isMobileIOS() || window.Units.isAndroid()) {
         if (sessionStorage.getItem('history') && JSON.parse(sessionStorage.getItem('history')).length > 1) {
           if (JSON.parse(sessionStorage.getItem('history'))[JSON.parse(sessionStorage.getItem('history')).length - 1].path != JSON.parse(sessionStorage.getItem('history'))[JSON.parse(sessionStorage.getItem('history')).length - 2].path) {
@@ -110,7 +111,7 @@ export default{
         }
       }
     },
-    initHistory(){
+    initHistory() {
       if (layout.sStorageGet('v_index', 'category') && (layout.sStorageGet('v_index', 'index') || layout.sStorageGet('v_index', 'index') == 0)) {
         if (layout.sStorageGet('v_index', 'index') == 0) {
           var str = "index_first"
@@ -121,12 +122,12 @@ export default{
           this.contentData = layout.sStorageGet(str, 'data')
           this.initcate = layout.sStorageGet('v_index', 'category')
           this.initCategory = layout.sStorageGet('v_index', 'index')
-          if(+this.initCategory){
+          if (+this.initCategory) {
             this.channel(this.initcate)
-          }else{
+          } else {
             this.getPageFirst();
           }
-          
+
         } else {
           this.init()
         }
@@ -134,7 +135,13 @@ export default{
         this.init()
       }
     },
-    init(){
+    afterHandle() {
+      let that = this;
+      this.$nextTick(function () {
+        that.dumpToMamaAdviser();
+      });
+    },
+    init() {
       let that = this
       let start = null
       if (localStorage.getItem('feedList') && JSON.parse(localStorage.getItem('feedList')) && JSON.parse(localStorage.getItem('feedList')).data && this.queryPathType) {
@@ -189,6 +196,7 @@ export default{
                 data.data.feedList.splice(feedIndex, 0, that.fireWordData())
               }
               that.contentData = data.data
+              that.afterHandle();
             } else {
               let data = JSON.parse(localStorage.getItem('feedList')).data
               let feedIndex = 3
@@ -201,6 +209,7 @@ export default{
                 data.feedList.splice(feedIndex, 0, that.fireWordData())
               }
               that.contentData = data
+              that.afterHandle();
             }
             if (typeof that.advert == 'function') {
               that.advert()
@@ -338,6 +347,7 @@ export default{
         success: function (data) {
           if (!data.code) {
             that.contentData = data.data
+            that.afterHandle();
             let objData = {
               top: 0,
               data: that.contentData
@@ -400,22 +410,40 @@ export default{
     /**
      *  跳转到妈妈顾问
      */
-    dumpToMamaAdviser:function (url) {
-      if(isTryShop()){
-        popup.alert({
-          text:"请您先选择妈妈顾问",
-          btnCallback(){
-            location.href=url;
+    dumpToMamaAdviser: function (url) {
+      api('/api/mg/auth/inviter/checkAdviser', {
+        dataType: "json",
+        type: "post"
+      }).then(function (result) {
+        if (!result.code && result.data.needPop) {
+          if (isTryShop()) {
+            popup.alert({
+              title: "请您先选择妈妈顾问",
+              btnCallback() {
+                location.href = result.data.url;
+              }
+            });
+          } else {
+            // 插入遮罩div
+            let dom = document.querySelector(".app") || document.body;
+            let mask = document.createElement("div");
+            mask.className = "dump_to_mama_adviser_mask";
+            dom.appendChild(mask);
+            mask.style.height = document.body.offsetHeight + "px";
+            mask.addEventListener("click", function () {
+              popup.confirm({
+                title: "请您先选择妈妈顾问",
+                okBtnCallback() {
+                  location.href = result.data.url;
+                }
+              })
+            })
           }
-        });
-      }else{
-        // 插入遮罩div
-        let dom = document.querySelector(".app")||document.body;
-        let mask = document.createElement("div");
-        mask.className="dump_to_mama_adviser_mask";
-        dom.appendChild(mask);
-        mask.style.height=document.body.offsetHeight+"px";
-      }
+        }
+      })
+        .catch(function (error) {
+          console.log('error:', error)
+        })
     },
     changeCategory: function (category, index) {
       this.page_index = index;
@@ -470,12 +498,6 @@ export default{
               NProgress.done();
               if (!data.code) {
                 that.contentData = data.data;
-                that.$nextTick(function () {
-                  //TODO 需要替换跳转条件
-                  if(!data.code){
-                    that.dumpToMamaAdviser(data.url);
-                  }
-                });
                 let objData = {
                   top: 0,
                   data: that.contentData
@@ -902,7 +924,7 @@ export default{
     }
   },
   watch: {
-    menuId:function () {
+    menuId: function () {
       var scope = this;
       this.likeNum++;
     }

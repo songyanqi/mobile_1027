@@ -437,4 +437,10 @@ footer div {
 .dump_to_mama_adviser_mask{
   width: 100%;
   position: absolute;
+  top: 0;
+  z-index: 8;
+}
+
+.com-popup-base{
+  z-index: 990 !important;
 }
