@@ -131,8 +131,8 @@
               if(window.screen.height < 580){
                 that.info_bottom = true;
               }
+              that.inviteCode = JSON.parse(JSON.stringify(that.mobile));
             }
-            that.inviteCode = that.mobile;
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);
