@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @@include('meta.include')
+  <link rel="stylesheet" href="[[static]]/page/my_adviser/css/my_adviser.css[[v]]">
+</head>
+<body>
+  <div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
+    <!--标题-->
+    <com-top-title title="我的顾问"></com-top-title>
+    <!--主题部分-->
+    <div>
+      <div class="adviserImg">
+        <img src="" alt="">
+        <div>官方顾问</div>
+      </div>
+      <div class="adviserName">这里苹果甜</div>
+    </div>
+  </div>
+  @@include('vendor.include')
+  <script src="[[static]]/page/my_adviser/js/my_adviser.js[[v]]"></script>
+</body>
+</html>
