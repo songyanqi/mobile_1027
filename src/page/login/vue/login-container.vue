@@ -42,8 +42,7 @@
         <img src="../img/clearInput.png" v-if="password != ''" v-on:click="password = ''">
       </div>
       <div v-if="Invite" class="inputbox">
-        <input type="password" placeholder="请输入邀请码（非必填）" v-model="invitation_code" name="password"
-               autocomplete="new-password">
+        <input type="text" placeholder="请输入邀请码（非必填）" v-model="invitation_code">
         <img src="../img/clearInput.png" v-if="invitation_code != ''" v-on:click="invitation_code = ''">
       </div>
       <div v-if="Invite" class="what_invitation_code">
