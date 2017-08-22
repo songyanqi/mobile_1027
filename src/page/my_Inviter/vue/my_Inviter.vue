@@ -11,7 +11,7 @@
     <!--我的邀请人-->
     <div v-if="my_inviterPage" class="myInviter">
       <div class="myInviter_img">
-        <img :src="response.data.headImage || 'pic.davdian.com/wap/static/dist/static/page/center/img/default-head.png'" alt="">
+        <img :src="response.data.headImage || 'fe.davdian.com/wap/static/dist/static/page/center/img/default-head.png'" alt="">
       </div>
       <div class="myInviter_name">
         {{response.data.nickName || response.data.mobile.substr(0,3)+"****"+response.data.mobile.substr(7)}}
@@ -124,6 +124,8 @@
           success(response) {
             if (response.code) {
               popup.toast(response.data.msg || response.msg);
+              that.my_inviterPage = false; //显示我的邀请人
+              that.trun_grey = true;  //置灰
             } else {
               that.my_inviterPage = true; //显示我的邀请人
               that.trun_grey = false;  //按钮可用
