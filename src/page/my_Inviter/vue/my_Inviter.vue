@@ -79,7 +79,7 @@
             debugger
             that.response = response;
             if (response.code) {
-              popup.toast(response.data.msg);
+              popup.toast(response.data.msg || response.msg);
             }
             if (response.data) {
               that.$emit("titlename", "我的邀请人");
@@ -123,7 +123,7 @@
           data: encrypt({"inviteCode": that.mobile}),
           success(response) {
             if (response.code) {
-              popup.toast(response.data.msg);
+              popup.toast(response.data.msg || response.msg);
             } else {
               that.my_inviterPage = true; //显示我的邀请人
               that.trun_grey = false;  //按钮可用
@@ -152,7 +152,7 @@
             data: encrypt({"inviteCode": that.mobile}),
             success(response) {
               if (response.code) {
-                popup.toast(response.data.msg);
+                popup.toast(response.data.msg || response.msg);
                 return false;
               }
               that.show_code_input = false;  //显示邀请码输入框

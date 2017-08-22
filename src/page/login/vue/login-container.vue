@@ -65,15 +65,15 @@
     <div v-if="rule_form" class="com-popup-base">
       <div class="table-cell">
         <div v-show="rule_form" class="box">
-              <div>邀请码规则</div>
-              <div>
-                <p>1. 每个大V店会员都有一个专属邀请码，您可以向身边的大V店会员索取邀请码；</p>
-                <p>2. 邀请码为6位数字+字母组合，或邀请人大V店账户手机号；</p>
-                <p>3. 绑定邀请人后，您在大V店APP及果敢时代大V店公众号内都将访问邀请人店铺；</p>
-                <p>4. 一个用户只能有一个邀请人，在您绑定邀请人后，可在7天内更换一次邀请人。</p>
-              </div>
-              <div v-on:click="close_what_invite"></div>
-            </div>
+          <div>邀请码规则</div>
+          <div>
+            <p>1. 每个大V店会员都有一个专属邀请码，您可以向身边的大V店会员索取邀请码；</p>
+            <p>2. 邀请码为6位数字+字母组合，或邀请人大V店账户手机号；</p>
+            <p>3. 绑定邀请人后，您在大V店APP及果敢时代大V店公众号内都将访问邀请人店铺；</p>
+            <p>4. 一个用户只能有一个邀请人，在您绑定邀请人后，可在7天内更换一次邀请人。</p>
+          </div>
+          <div v-on:click="close_what_invite"></div>
+        </div>
       </div>
     </div>
 
@@ -180,13 +180,13 @@
             success(response) {
               that.response = response;
               if (response.code) {
-                popup.toast(response.data.msg);
+                popup.toast(response.data.msg || response.msg);
                 that.loginBtn = "登录";
               } else {
                 var referer = that.getQueryString("referer");
                 if (response.data.hasSellerRel || response.visitor_status == 3) {
                   /*登录成功后跳转到refer页*/
-                  location.href = referer;
+                  location.href = referer || "/";
                 } else {
                   that.promptconfirm();
                 }
@@ -227,7 +227,7 @@
           success(response) {
             that.response = response;
             if (response.code) {
-              popup.toast(response.data.msg);
+              popup.toast(response.data.msg || response.msg);
             } else {
               /*注册*/
               var referer = that.getQueryString("referer");
@@ -255,11 +255,11 @@
           success(response) {
             that.response = response;
             if (response.code) {
-              popup.toast(response.data.msg);
+              popup.toast(response.data.msg || response.msg);
             } else {
               /*密码重置成功相当于登录*/
               var referer = that.getQueryString("referer");
-              location.href = referer;
+              location.href = referer || "/";
             }
           },
           error(error) {
@@ -272,14 +272,10 @@
         var that = this;
         that.sign_form = true;
         that.login_form = false;
-        /*如果不是微信不是APP的话，不展现邀请码框*/
-        console.log(ua.isWeiXin());
-        if (!ua.isWeiXin()) {
-          console.log("不是微信");
-          var hname = location.hostname.split(".");
-          if (hname[0] != "bravetime") {
-            that.Invite = false;
-          }
+        /*只要是体验店地址，展示邀请码*/
+        var hname = location.hostname.split(".");
+        if (hname[0] != "bravetime") {
+          that.Invite = false;
         }
         /*初始化数据*/
         that.password = '';
@@ -336,7 +332,7 @@
           data: strSign({"inviteCode": code}),
           success(response) {
             if (response.code) {
-              popup.toast(response.data.msg);
+              popup.toast(response.data.msg || response.msg);
               that.promptconfirm();
             } else {
               location.href = response.shop_url;
@@ -663,6 +659,7 @@
       transform: scale(1);
     }
   }
+
   .com-popup-base {
     position: fixed;
     top: 0;
@@ -674,11 +671,13 @@
     z-index: 9;
     line-height: 1;
   }
+
   .com-popup-base .table-cell {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
   }
+
   .com-popup-base .table-cell .box {
     display: inline-block;
     border-radius: 0.04rem;
@@ -690,8 +689,6 @@
     background-color: #FFFFFF;
     padding: 0 10px 15px;
   }
-
-
 
   .com-popup-base .table-cell .box div:nth-of-type(1) {
     font-size: 14px;
