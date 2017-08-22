@@ -154,13 +154,13 @@
       }
     },
     computed: {
-      referer:function () {
+      referer: function () {
         return this.getQueryString("referer");
       },
-      hname:function(){
+      hname: function () {
         return location.hostname.split(".")[0];
       },
-      origin:function () {
+      origin: function () {
         return location.origin;
       }
     },
@@ -187,11 +187,11 @@
             dataType: 'json',
             data: strSign(tData),
             success(response) {
-              that.response = response;
               if (response.code) {
                 popup.toast(response.data.msg || response.msg);
                 that.loginBtn = "登录";
               } else {
+                that.response = response;
                 if (response.data.hasSellerRel || response.visitor_status == 3) {
                   that.go_shop();
                 } else {
@@ -245,17 +245,17 @@
           }
         });
       },
-      go_shop:function () {
+      go_shop: function () {
         var that = this;
         /*如果是体验店*/
-        if(that.hname == 'bravetime'){
+        if (that.hname == 'bravetime' && response.visitor_status != 3) {
           /*登录成功后跳转到refer页*/
-          if(that.referer){
-            location.href = that.referer.replace(that.origin,response.shop_url);
-          }else{
+          if (that.referer) {
+            location.href = that.referer.replace(that.origin, that.response.shop_url);
+          } else {
             location.href = response.shop_url
           }
-        }else{
+        } else {
           location.href = that.referer || '/';
         }
       },

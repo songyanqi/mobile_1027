@@ -17,7 +17,6 @@ new Vue({
     return {
       title: "登录",
       btn: {
-        "name": "会员介绍",
         "href": "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button"
       }
     }
