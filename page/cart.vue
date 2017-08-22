@@ -362,6 +362,9 @@
   }
 </style>
 <script>
+  import {isTryShop} from '../utils/utils.es6';
+  import popup from '../src/common/js/module/popup.js';
+  import api from '../utils/api.es6';
   var Vue = require('Vue');
   var second_tip = 0;
   export default{
@@ -385,6 +388,9 @@
       'cartInfo.isEmpty': 'cartIsEmpty',
       'cartInfo.sku_count_all': 'changeCount',
       'cartInfo.total_income': 'cartIncome'
+    },
+    ready() {
+      this.dumpToMamaAdviser();
     },
     methods: {
       changeCount: function (val) {
@@ -559,6 +565,26 @@
         } else {
           settlement(this);
         }
+      },
+      dumpToMamaAdviser(){
+        api('/api/mg/auth/inviter/checkAdviser', {
+          dataType: "json",
+          type: "post"
+        }).then(function (result) {
+          if (!result.code && result.data.needPop) {
+            popup.alert({
+              title: "请选择妈妈顾问",
+              text: "选择妈妈顾问，购物学习更轻松",
+              btnTitle: "好的",
+              btnCallback() {
+                location.href = result.data.url;
+              }
+            })
+          }
+        })
+          .catch(function (error) {
+            console.log('error:', error)
+          })
       },
       collect: function (goods) {
         var data = [{
