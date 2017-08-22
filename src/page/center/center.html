@@ -52,7 +52,7 @@
           <!--<div class="split-line-h" v-if="feed.title.luminance == '1' || feed.title.oneKd == '1'"></div>-->
           <div class="btns">
             <span class="name">{{feed.title.leftTitle || feed.title.title}}</span>
-            <span class="more" v-if="feed.title.rightTitle || feed.title.oneKd == '1' || feed.title.oneKd == '妈妈顾问'">
+            <span class="more" v-if="feed.title.rightTitle || feed.title.oneKd == '1' || feed.title.leftTitle.indexOf('妈妈顾问') !== -1 ">
             <a :href="(feed.title.command && feed.title.command.content) ? feed.title.command.content : '#'"
                @click="tj(1, feed.title.command.log);">
             {{feed.title.rightTitle}}<img class="arrow" src="[[static]]/page/center/img/arrow-right.png">
