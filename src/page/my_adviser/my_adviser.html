@@ -5,49 +5,57 @@
   <link rel="stylesheet" href="[[static]]/page/my_adviser/css/my_adviser.css[[v]]">
 </head>
 <body>
-  <div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
-    <!--标题-->
-    <com-top-title title="我的顾问"></com-top-title>
-    <!--主题部分-->
-    <div class="adviser_box">
-      <div class="adviserImg">
-        <img src="http://pic.davdian.com/shop_logo/2017/08/19/80_80_3a28a9c59bdd09a84d34fef0958fabcf.gif" alt="">
-        <div>官方顾问</div>
-      </div>
-      <div class="adviserName">
-        这里苹果甜
-        <span>成为我的顾问<span style="color:#FF4A7D">69天</span></span>
-      </div>
-      <div class="declaration">
-        TA的宣言：在我的怀里 在你的眼里
-        那里春风沉醉 那里绿草如茵
-        月光把爱恋 洒满了湖面
-        两个人的篝火 照亮整个夜晚
-        多少年以后 如云般游走
-        那变换的脚步 让我们难牵手
-        这一生一世 有多少你我
-        被吞没在月光如水的夜里
-        多想某一天 往日又重现
-        我们流连忘返 在贝加尔湖畔
-        多少年以后 往事随云走
-        那纷飞的冰雪容不下那温柔
-        这一生一世 这时间太少
-        不够证明融化冰雪的深情
-        就在某一天 你忽然出现
-        你清澈又神秘 在贝加尔湖畔
-        你清澈又神秘 像贝加尔湖畔
-      </div>
-      <div class="advisMark">
-        <div class="advisMark_wrap">
-          <div>匹配度80%</div>
-          <div>分享达人</div>
-          <div>有共同好友</div>
-        </div>
+<div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
+  <!--标题-->
+  <com-top-title title="我的顾问"></com-top-title>
+  <!--主题部分-->
+  <div class="adviser_box">
+    <div class="adviserImg">
+      <img src="http://pic.davdian.com/shop_logo/2017/08/19/80_80_3a28a9c59bdd09a84d34fef0958fabcf.gif" alt="">
+      <div>官方顾问</div>
+    </div>
+    <div class="adviserName">
+      这里苹果甜
+      <span>成为我的顾问<span style="color:#FF4A7D">69天</span></span>
+    </div>
+    <div class="declaration">
+      TA的宣言：在我的怀里 在你的眼里
+      那里春风沉醉 那里绿草如茵
+      月光把爱恋 洒满了湖面
+      两个人的篝火 照亮整个夜晚
+      多少年以后 如云般游走
+      那变换的脚步 让我们难牵手
+      这一生一世 有多少你我
+      被吞没在月光如水的夜里
+      多想某一天 往日又重现
+      我们流连忘返 在贝加尔湖畔
+      多少年以后 往事随云走
+      那纷飞的冰雪容不下那温柔
+      这一生一世 这时间太少
+      不够证明融化冰雪的深情
+      就在某一天 你忽然出现
+      你清澈又神秘 在贝加尔湖畔
+      你清澈又神秘 像贝加尔湖畔
+    </div>
+    <div class="advisMark">
+      <div class="advisMark_wrap">
+        <div>匹配度80%</div>
+        <div>分享达人</div>
+        <div>有共同好友</div>
       </div>
     </div>
+    <div class="adviserTip">与顾问建立联系，可获得精准服务</div>
+    <div class="my_code_text">
+      顾问微信号：<span>lijinlong5200</span><span>复制微信号</span>
+    </div>
+    <div class="my_code_text">
+      顾问手机号：<span>17737701050</span><span>复制手机号</span>
+    </div>
   </div>
-  @@include('vendor.include')
-  <script src="[[static]]/page/my_adviser/js/my_adviser.js[[v]]"></script>
+  <div class="adviserBottom">*2017-08-21 21:56后可更改顾问</div>
+</div>
+@@include('vendor.include')
+<script src="[[static]]/page/my_adviser/js/my_adviser.js[[v]]"></script>
 </body>
 <style>
 
