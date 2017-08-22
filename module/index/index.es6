@@ -416,29 +416,28 @@ export default {
         type: "post"
       }).then(function (result) {
         if (!result.code && result.data.needPop) {
-          if (isTryShop()) {
-            popup.alert({
-              title: "请您先选择妈妈顾问",
-              btnCallback() {
+          // 插入遮罩div
+          let dom = document.querySelector(".app") || document.body;
+          let mask = document.createElement("div");
+          mask.className = "dump_to_mama_adviser_mask";
+          dom.appendChild(mask);
+          mask.style.height = document.body.offsetHeight + "px";
+          mask.addEventListener("click", function () {
+            popup.confirm({
+              title: "请选择妈妈顾问",
+              text:"选择妈妈顾问，购物学习更轻松",
+              okBtnTitle:"我要选",
+              cancelBtnTitle:"我不选",
+              okBtnCallback() {
                 location.href = result.data.url;
-              }
-            });
-          } else {
-            // 插入遮罩div
-            let dom = document.querySelector(".app") || document.body;
-            let mask = document.createElement("div");
-            mask.className = "dump_to_mama_adviser_mask";
-            dom.appendChild(mask);
-            mask.style.height = document.body.offsetHeight + "px";
-            mask.addEventListener("click", function () {
-              popup.confirm({
-                title: "请您先选择妈妈顾问",
-                okBtnCallback() {
-                  location.href = result.data.url;
+              },
+              cancelBtnCallback() {
+                if(!isTryShop()){
+                  dom.removeChild(mask);
                 }
-              })
+              }
             })
-          }
+          })
         }
       })
         .catch(function (error) {
