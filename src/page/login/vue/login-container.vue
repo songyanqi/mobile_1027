@@ -154,7 +154,17 @@
         loginBtn: "登录"
       }
     },
-    computed: {},
+    computed: {
+      referer:function () {
+        return this.getQueryString("referer");
+      },
+      hname:function(){
+        return location.hostname.split(".")[0];
+      },
+      origin:function () {
+        return location.origin;
+      }
+    },
     created() {
     },
     mounted() {
@@ -183,10 +193,8 @@
                 popup.toast(response.data.msg || response.msg);
                 that.loginBtn = "登录";
               } else {
-                var referer = that.getQueryString("referer");
                 if (response.data.hasSellerRel || response.visitor_status == 3) {
-                  /*登录成功后跳转到refer页*/
-                  location.href = referer || "/";
+                  that.go_shop();
                 } else {
                   that.promptconfirm();
                 }
@@ -230,14 +238,27 @@
               popup.toast(response.data.msg || response.msg);
             } else {
               /*注册*/
-              var referer = that.getQueryString("referer");
-              location.href = referer || "/";
+              that.go_shop();
             }
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);
           }
         });
+      },
+      go_shop:function () {
+        var that = this;
+        /*如果是体验店*/
+        if(that.hname == 'bravetime'){
+          /*登录成功后跳转到refer页*/
+          if(that.referer){
+            location.href = that.referer.replace(that.origin,response.shop_url);
+          }else{
+            location.href = response.shop_url
+          }
+        }else{
+          location.href = that.referer || '/';
+        }
       },
       /*重置密码*/
       reset_password: function () {
@@ -258,8 +279,7 @@
               popup.toast(response.data.msg || response.msg);
             } else {
               /*密码重置成功相当于登录*/
-              var referer = that.getQueryString("referer");
-              location.href = referer || "/";
+              that.go_shop();
             }
           },
           error(error) {
@@ -440,7 +460,7 @@
           cancelBtnCallback() {    // 取消按钮点击回调（有则执行该回调）
             var referer = that.getQueryString("referer");
             /*登录成功后跳转到refer页*/
-            location.href = referer;
+            that.go_shop();
           },
         });
       }
