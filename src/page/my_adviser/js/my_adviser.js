@@ -11,7 +11,7 @@ import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
 
-login.needLogin();
+// login.needLogin();
 
 // 渲染页面
 new Vue({

@@ -9,15 +9,94 @@
     <!--标题-->
     <com-top-title title="我的顾问"></com-top-title>
     <!--主题部分-->
-    <div>
+    <div class="adviser_box">
       <div class="adviserImg">
-        <img src="" alt="">
+        <img src="http://pic.davdian.com/shop_logo/2017/08/19/80_80_3a28a9c59bdd09a84d34fef0958fabcf.gif" alt="">
         <div>官方顾问</div>
       </div>
-      <div class="adviserName">这里苹果甜</div>
+      <div class="adviserName">
+        这里苹果甜
+        <span>成为我的顾问<span style="color:#FF4A7D">69天</span></span>
+      </div>
+      <div class="declaration">
+        TA的宣言：在我的怀里 在你的眼里
+        那里春风沉醉 那里绿草如茵
+        月光把爱恋 洒满了湖面
+        两个人的篝火 照亮整个夜晚
+        多少年以后 如云般游走
+        那变换的脚步 让我们难牵手
+        这一生一世 有多少你我
+        被吞没在月光如水的夜里
+        多想某一天 往日又重现
+        我们流连忘返 在贝加尔湖畔
+        多少年以后 往事随云走
+        那纷飞的冰雪容不下那温柔
+        这一生一世 这时间太少
+        不够证明融化冰雪的深情
+        就在某一天 你忽然出现
+        你清澈又神秘 在贝加尔湖畔
+        你清澈又神秘 像贝加尔湖畔
+      </div>
     </div>
   </div>
   @@include('vendor.include')
   <script src="[[static]]/page/my_adviser/js/my_adviser.js[[v]]"></script>
 </body>
+<style>
+  .adviser_box{
+    background-color: #FFFFFF;
+    overflow: hidden;
+  }
+  .adviserImg{
+    width: 80px;
+    height:80px;
+    margin: 30px auto 0;
+    position: relative;
+  }
+  .adviserImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+  .adviserImg div{
+    position: absolute;
+    width: 50px;
+    height: 14px;
+    background-color: #FF4F4F;
+    background: -webkit-linear-gradient(left, #FF4F4F, #F78B1C);
+    background: -webkit-gradient(linear, left left, right right, from(#FF4F4F), to(#F78B1C));
+    background: linear-gradient(to right, #FF4F4F, #F78B1C);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 10px;
+    text-align: center;
+    line-height: 14px;
+    color: #FFFFFF;
+    font-weight: 300;
+    border-radius: 7px;
+  }
+  .adviserName{
+    font-size: 14px;
+    color:#666666;
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+    overflow: hidden;
+  }
+  .adviserName > span{
+    font-size: 12px;
+    color: #999999;
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+  }
+  .declaration{
+    width: 83%;
+    margin: 20px auto;
+    background-color: #FAFAFA;
+    position: relative;
+  }
+</style>
 </html>
