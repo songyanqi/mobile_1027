@@ -1,10 +1,10 @@
 <template>
   <div>
-    <lheader title="标题" class="top" v-if="!isApp"></lheader>
+    <lheader :title="title" class="top" v-if="!isApp"></lheader>
     <div class="ndiv" v-if="!isApp"></div>
     <index_feed :data="data"></index_feed>
-    <div class="empty"></div>
-    <lfooter :income="income" :sub="isSub" :userstatus="userStatus" :albumid="albumId" :price="price"></lfooter>
+    <div class="empty" v-if="isFree==1" ></div>
+    <lfooter v-if="isFree==1" :income="income" :sub="isSub" :userstatus="userStatus" :albumid="albumId" :price="price"></lfooter>
     <maskk v-if="isApp && maskFlag"></maskk>
     <maskk2 v-if="!isApp && maskFlag"></maskk2>
     <data_mask v-if="isApp && maskFlag2"></data_mask>
@@ -49,7 +49,9 @@
         name:"collect",
         isApp:util.utils.isApp(),
         maskFlag:false,
-        maskFlag2:false
+        maskFlag2:false,
+        title:"",
+        isFree:null
       }
     },
     mounted:function () {
@@ -70,6 +72,9 @@
                     that.income=result.data.attr.income;
                     that.price=result.data.attr.price;
                     that.isSub=result.data.attr.isSub;
+                    that.title=result.data.shareInfo.title;
+                    that.isFree=result.data.attr.isFree;
+
                     console.log("new=>>",that.isSub);
                     that.userStatus=result.visitor_status;
                     that.data=that.data.concat(result.data.feedList);

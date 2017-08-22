@@ -5,13 +5,14 @@
         <div class="head_img" @click="history">
           <i class="back-arrow"></i>
         </div>
-        <div class="head_title">合辑页</div>
+        <div class="head_title" v-text="title"></div>
       </div>
     </div>
   </div>
 </template>
 <script>
  export default {
+     props:["title"],
      methods:{
        history(){
            history.back();

@@ -13,14 +13,18 @@
         <div class="list_content">
           <div class="list_title" v-text="item.music"></div>
           <div class="list_name" v-text="item.album"></div>
-          <div class="list_time" v-text="item.time"></div>
+          <div class="list_time" v-text="timeFormat(item.time)"></div>
         </div>
-        <div class="right_img">
-            <div class="disable" v-if="item.isPlay==0" @click.stop="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-            <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 && (item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-            <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 && !(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
-            <div class="circle_mask"></div>
-            <div><img :src="item.imageUrl" alt=""></div>
+        <div class="right_img" v-if="(item.isFree==0 || (item.isFree==1 && item.isSub==1)) && item.isPlay==1">
+          <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
+          <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="!(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+          <div class="circle_mask"></div>
+          <div><img :src="item.imageUrl" alt=""></div>
+        </div>
+        <div class="right_img" v-if="item.isFree==1 && item.isSub==0 && item.isPlay==0">
+          <div class="disable" @click.stop="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+          <div class="circle_mask"></div>
+          <div><img :src="item.imageUrl" alt=""></div>
         </div>
       </div>
     </div>
@@ -55,6 +59,41 @@
         });
       },
       methods:{
+        timeFormat(t){
+          let time = parseInt(t) + 1
+          if (time<60){
+            if (time<10){
+              time = '0' + parseInt(t)
+            }
+            return '00:'+time
+          }else {
+            if (time<3600){
+              let minutes = parseInt(time/60)
+              let seconds = time - minutes*60
+              if (minutes<10){
+                minutes = '0' + minutes
+              }
+              if (seconds<10){
+                seconds = '0' + seconds
+              }
+              return minutes + ':' + seconds
+            }else {
+              let hours = parseInt(time/3600)
+              let minutes = parseInt((time-hours*3600)/60)
+              let seconds = time - hours*3600 - minutes*60
+              if (hours<10){
+                hours = '0' + hours
+              }
+              if (minutes<10){
+                minutes = '0' + minutes
+              }
+              if (seconds<10){
+                seconds = '0' + seconds
+              }
+              return hours + ':' + minutes + ':' + seconds
+            }
+          }
+        },
         audioLocation(){
           if(this.isApp){
             native.Audio.audioLocation({
