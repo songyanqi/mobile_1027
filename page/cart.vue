@@ -76,13 +76,13 @@
             <a class="good_title" href="/{{goods.goods_id}}.html{{refererStr}}" v-text="goods.goods_name"
                @click="gotoGoods()"></a>
             <div class="goods_infos_wrap">
-              <div class="cart_format" :class = "{ cart_format_h: goods.goods_tags && goods.goods_tags.length }">
+              <div class="cart_format" :class="{ cart_format_h: goods.goods_tags && goods.goods_tags.length }">
                 <span v-for="tag in goods.goods_tags" v-text="tag.tag_name"></span>
               </div>
               <!--优惠-->
               <!--<div class="price_info_reduce dav-red" v-if="goods.price_act_name"-->
-                   <!--v-text="goods.price_act_name+'价'"></div>-->
-              <div v-if = "goods.price_act_name == '限时'" class="price_info_reduce dav-red" v-if="goods.price_act_name"
+              <!--v-text="goods.price_act_name+'价'"></div>-->
+              <div v-if="goods.price_act_name == '限时'" class="price_info_reduce dav-red" v-if="goods.price_act_name"
                    v-text="goods.price_act_name+'购'"></div>
               <div v-else class="price_info_reduce dav-red" v-if="goods.price_act_name"
                    v-text="goods.price_act_name+'价'"></div>
@@ -96,7 +96,9 @@
               </div>
 
               <!--会员返返现-->
-              <div v-if="goods.seller_income != '0' && userStatus == 3" class="income_vip">会员返<em>￥</em>{{goods.seller_income}}</div>
+              <div v-if="goods.seller_income != '0' && userStatus == 3" class="income_vip">
+                会员返<em>￥</em>{{goods.seller_income}}
+              </div>
 
               <!--商品数量-->
               <div class="sold_out_collect" v-if="activity.act_id>=0&&!goods.goods_stocks"
@@ -122,7 +124,10 @@
           <div class="seckill_countdown_right" v-if="goods.goods_stocks>0&&goods.goods_number>goods.goods_stocks"><span>商品数量超出库存</span>
           </div>
           <!--降价-->
-          <div class="price_change" v-if="!(goods.sag_left_time > 0)&&!(goods.fsp_left_time > 0)&&!(goods.bkg_left_time > 0) && goods.reduce_money">比加入时降{{goods.reduce_money}}元</div>
+          <div class="price_change"
+               v-if="!(goods.sag_left_time > 0)&&!(goods.fsp_left_time > 0)&&!(goods.bkg_left_time > 0) && goods.reduce_money">
+            比加入时降{{goods.reduce_money}}元
+          </div>
 
           <!--限时购倒计时和其他信息-->
           <!--秒杀商品-->
@@ -132,19 +137,20 @@
               <!--秒杀剩余时间少于翻倍返现剩余时间-->
               <div class="ts_info_limit seckill_countdown" v-if="goods.bkg_left_time > goods.sag_left_time"
                    style="color:#ff4a7d;">
-                {{goods.sag_left_time|datetimeFormat}}，可享受秒杀和{{goods.act_income.ratio}}倍返利优惠<span
+                {{goods.sag_left_time | datetimeFormat}}，可享受秒杀和{{goods.act_income.ratio}}倍返利优惠<span
                 v-if="goods.reduce_money">，比加入时降<span class="dav-red">{{goods.reduce_money}}元</span></span>
               </div>
               <!--秒杀剩余时间大于翻倍返现剩余时间-->
               <div class="ts_info_limit seckill_countdown" v-else style="color:#ff4a7d;">
-                {{goods.bkg_left_time|datetimeFormat}}，可享受秒杀和{{goods.act_income.ratio}}倍返利优惠<span
+                {{goods.bkg_left_time | datetimeFormat}}，可享受秒杀和{{goods.act_income.ratio}}倍返利优惠<span
                 v-if="goods.reduce_money">，比加入时降<span class="dav-red">{{goods.reduce_money}}元</span></span>
               </div>
             </span>
             <!--只有秒杀-->
             <span v-else>
               <div class="ts_info_limit seckill_countdown dav-red" style="color:#ff4a7d;">
-                {{goods.sag_left_time|datetimeFormat}}<span v-if="goods.reduce_money">，比加入时降<span class="dav-red">{{goods.reduce_money}}元</span></span>
+                {{goods.sag_left_time | datetimeFormat}}<span v-if="goods.reduce_money">，比加入时降<span
+                class="dav-red">{{goods.reduce_money}}元</span></span>
               </div>
             </span>
           </span>
@@ -155,14 +161,14 @@
             <span v-if="goods.bkg_left_time > 0">
               <!--限时购剩余时间少于翻倍返现剩余时间-->
               <div class="ts_info_limit seckill_countdown" v-if="goods.bkg_left_time > goods.fsp_left_time">
-                在<span class="dav-red">{{goods.fsp_left_time|datetimeFormatNew}}</span>内<span v-if="userStatus == 3">支付
+                在<span class="dav-red">{{goods.fsp_left_time | datetimeFormatNew}}</span>内<span v-if="userStatus == 3">支付
               </span><span v-else>成为会员</span>
                 ，可享受限时购和{{goods.act_income.ratio}}倍返利优惠
                 <span v-if="goods.reduce_money">，比加入时降<span class="dav-red">{{goods.reduce_money}}元</span></span>
               </div>
               <!--限时购剩余时间大于翻倍返现剩余时间-->
               <div class="ts_info_limit seckill_countdown" v-else>
-                 在<span class="dav-red">{{goods.bkg_left_time|datetimeFormatNew}}</span>内<span
+                 在<span class="dav-red">{{goods.bkg_left_time | datetimeFormatNew}}</span>内<span
                 v-if="userStatus == 3">支付</span><span v-else>成为会员</span>，可享受限时购和{{goods.act_income.ratio}}倍返利优惠
                 <span v-if="goods.reduce_money">，比加入时降<span class="dav-red">{{goods.reduce_money}}元</span></span>
               </div>
@@ -170,7 +176,7 @@
             <!--只有限时购-->
             <span v-else>
               <div class="ts_info_limit seckill_countdown">
-                在<span class="dav-red">{{goods.fsp_left_time|datetimeFormatNew}}</span>内<span
+                在<span class="dav-red">{{goods.fsp_left_time | datetimeFormatNew}}</span>内<span
                 v-if="userStatus == 3">支付</span><span v-else>成为会员</span>，可享受限时购优惠<span
                 v-if="goods.reduce_money">，比加入时降<span class="dav-red">{{goods.reduce_money}}元</span></span>
               </div>
@@ -180,12 +186,13 @@
           <!--只有返现翻倍-->
           <div class="ts_info_limit seckill_countdown"
                v-if="goods.bkg_left_time > 0 && !(goods.fsp_left_time > 0) && !(goods.sag_left_time > 0) ">
-            在<span class="dav-red">{{goods.bkg_left_time|datetimeFormatNew}}</span>内<span
+            在<span class="dav-red">{{goods.bkg_left_time | datetimeFormatNew}}</span>内<span
             v-if="userStatus == 3">支付</span><span v-else>成为会员</span>，可享受{{goods.act_income.ratio}}倍返利优惠<span
             v-if="goods.reduce_money">，比加入时降<span class="dav-red">{{goods.reduce_money}}元</span></span>
           </div>
 
-          <div class="ts_info_limit seckill_countdown" v-if="!(goods.sag_left_time > 0)&&!(goods.fsp_left_time > 0)&&!(goods.bkg_left_time > 0)&&goods.secondsp">
+          <div class="ts_info_limit seckill_countdown"
+               v-if="!(goods.sag_left_time > 0)&&!(goods.fsp_left_time > 0)&&!(goods.bkg_left_time > 0)&&goods.secondsp">
             <span style="color:#ff4a7d;">商品失效，请重新添加购物车</span>
           </div>
           <div class="buy_gift" v-if="goods.buy_gift&&goods.buy_gift.length">
@@ -209,7 +216,7 @@
              @click="show_gift(gift)"
              v-for="gift in activity.gifts" v-if="gift.gift_stocks != 0">
           <span class="dav-red">[满送]</span> {{gift.goods_name}}
-          <span class="premiums_con_number" v-if="gift.gift_stocks">X{{gift.gift_number||1}}</span>
+          <span class="premiums_con_number" v-if="gift.gift_stocks">X{{gift.gift_number || 1}}</span>
           <span class="premiums_con_number dav-red" v-if="!gift.gift_stocks">[已赠完]</span>
         </div>
       </div>
@@ -286,11 +293,11 @@
   </div>
 
   <!--会员返现提示悬框-->
- <!--  <div v-if="cartInfo.total_income" class="income_bottom_fixed">
-    <span v-if="userStatus == 3">本次购物可获得￥{{cartInfo.total_income}}返现，订单完成后在[我的]-[总额]中查看</span>
-    <span v-else>会员下单立返￥{{cartInfo.total_income}}</span>
-    <a v-if="userStatus != 3" :href="kdUrl">开通会员</a>
-  </div> -->
+  <!--  <div v-if="cartInfo.total_income" class="income_bottom_fixed">
+     <span v-if="userStatus == 3">本次购物可获得￥{{cartInfo.total_income}}返现，订单完成后在[我的]-[总额]中查看</span>
+     <span v-else>会员下单立返￥{{cartInfo.total_income}}</span>
+     <a v-if="userStatus != 3" :href="kdUrl">开通会员</a>
+   </div> -->
   <div v-if="cartInfo.total_income && userStatus == 3" class="income_bottom_fixed">
     <span>本次购物可获得￥{{cartInfo.total_income}}返现，订单完成后在[我的]-[总额]中查看</span>
   </div>
@@ -309,7 +316,8 @@
       </span>
       </div>
       <div v-if="cartInfo.saving != 0" class="left_price">
-        <span class="price_text" style="font-weight: bold">应付:</span><span class="price_number price_number_after">￥{{ cartInfo.order_amount}}  </span>
+        <span class="price_text" style="font-weight: bold">应付:</span><span
+        class="price_number price_number_after">￥{{ cartInfo.order_amount}}  </span>
       </div>
       <div v-if="cartInfo.saving != 0" class="reduce_price">
         <span class="other_info">总额:￥{{ cartInfo.goods_amount}} <span
@@ -341,6 +349,7 @@
     height: 36px;
     background-position: center;
   }
+
   .dav_icon_choice_selected_40_40 {
     background-image: url("//pic.davdian.com/free/dav_icon_choice_selected_32_32_0822.png");
   }
@@ -350,6 +359,7 @@
     background-size: 16px;
     margin-right: 5px;
   }
+
   .loading {
     text-align: center;
     font-size: 16px;
@@ -365,11 +375,12 @@
   import {isTryShop} from '../utils/utils.es6';
   import popup from '../src/common/js/module/popup.js';
   import api from '../utils/api.es6';
+
   var Vue = require('Vue');
   var second_tip = 0;
-  export default{
+  export default {
     el: "#cart",
-    data(){
+    data() {
       return {
         cartInfo: {isEmpty: true},
         editMode: false,
@@ -381,16 +392,13 @@
         isLogin: false,
         referer: {},
         userStatus: window.userStatus,
-        kdUrl:window.kdUrl
+        kdUrl: window.kdUrl
       }
     },
     watch: {
       'cartInfo.isEmpty': 'cartIsEmpty',
       'cartInfo.sku_count_all': 'changeCount',
       'cartInfo.total_income': 'cartIncome'
-    },
-    ready() {
-      this.dumpToMamaAdviser();
     },
     methods: {
       changeCount: function (val) {
@@ -566,25 +574,27 @@
           settlement(this);
         }
       },
-      dumpToMamaAdviser(){
-        api('/api/mg/auth/inviter/checkAdviser', {
-          dataType: "json",
-          type: "post"
-        }).then(function (result) {
-          if (!result.code && result.data.needPop) {
-            popup.alert({
-              title: "请选择妈妈顾问",
-              text: "选择妈妈顾问，购物学习更轻松",
-              btnTitle: "好的",
-              btnCallback() {
-                location.href = result.data.url;
-              }
-            })
-          }
-        })
-          .catch(function (error) {
-            console.log('error:', error)
+      dumpToMamaAdviser() {
+        if (isTryShop()) {
+          api('/api/mg/auth/inviter/checkAdviser', {
+            dataType: "json",
+            type: "post"
+          }).then(function (result) {
+            if (!result.code && result.data.needPop) {
+              popup.alert({
+                title: "请选择妈妈顾问",
+                text: "选择妈妈顾问，购物学习更轻松",
+                btnTitle: "好的",
+                btnCallback() {
+                  location.href = result.data.url;
+                }
+              })
+            }
           })
+            .catch(function (error) {
+              console.log('error:', error)
+            })
+        }
       },
       collect: function (goods) {
         var data = [{
@@ -617,7 +627,7 @@
         bravetime.newAlert('<div style="text-align:center"><p style="font-size:20px">赠品信息</p><img style="max-width:200px;margin-top: 4px;" src="' + gift.goods_thumb + '" alt=""><div style="text-align:left"><p style="-webkit-box-orient:vertical;-webkit-line-clamp:2;display:-webkit-box;overflow:hidden;font-size:14px;line-height:20px;max-height:40px;margin-top: 6px;">' + gift.goods_name + '</p><div class="dav-red" style="margin-top: 4px;font-size: 12px;">剩余数量：' + gift.gift_stocks + '</div><div style="margin-top: 4px;font-size: 12px;">' + gift.hint_info + '</div></div></div>')
       }
     },
-    ready () {
+    ready() {
       var that = this;
       if (window.logined > 0) {
         this.isLogin = true;
@@ -703,6 +713,8 @@
           bravetime.info("网络异常,请稍后重试");
         }
       })
+
+      this.dumpToMamaAdviser();
     }
   }
   Vue.filter("formatSmallPrice", function (va) {
@@ -741,8 +753,8 @@
     }
     var s = second % 60, m = Math.floor(second / 60) % 60,
       h = Math.floor(second / 60 / 60);
-    if(h<10){
-        h="0"+h;
+    if (h < 10) {
+      h = "0" + h;
     }
     var str = '';
     if (h) {
