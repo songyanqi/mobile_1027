@@ -248,12 +248,12 @@
       go_shop: function () {
         var that = this;
         /*如果是体验店*/
-        if (that.hname == 'bravetime' && response.visitor_status != 3) {
+        if (that.hname == 'bravetime' && that.response.visitor_status != 3) {
           /*登录成功后跳转到refer页*/
           if (that.referer) {
             location.href = that.referer.replace(that.origin, that.response.shop_url);
           } else {
-            location.href = response.shop_url
+            location.href = that.response.shop_url
           }
         } else {
           location.href = that.referer || '/';
