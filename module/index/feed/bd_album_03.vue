@@ -103,7 +103,10 @@
 //        });
 
         this.$nextTick(function () {
-          this.audioLocation();
+          setTimeout(function(){
+            that.audioLocation();
+          },2000)
+          
         });
       },
       data(){

@@ -54,7 +54,7 @@ export default {
                     return false;
                 }
                 if (result.visitor_status == 0){
-                    native.Browser.setHead({shareBtn:'0'})
+                    native.Browser.setHead({shareBtn:'0',isAudioAbsorb:'1'})
                 }
                 let {code, data, visitor_status}=result;
                 if(+code){

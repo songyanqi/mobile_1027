@@ -435,7 +435,6 @@
 
 	  // 拼接唤起native协议
 	  var protocal = 'davdian://call.' + param.host + '.com?action=' + param.action + '&params=' + encodeURIComponent(JSON.stringify(param.param)) + '&callback=' + callbackName + '&minv=' + param.v;
-
 	  return protocal;
 	}
 
@@ -1305,7 +1304,6 @@
 	    audioPlayHistory: function audioPlayHistory() {
 	      var param = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-	      alert(2);
 	      call({
 	        v: '4.2.0',
 	        host: 'Audio',
@@ -27185,7 +27183,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-234ea0bb] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-234ea0bb] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-234ea0bb] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-234ea0bb] {\n  width: 3.75rem;\n}\n\n.content_title[_v-234ea0bb] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-234ea0bb] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-234ea0bb] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-234ea0bb] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-234ea0bb] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-234ea0bb] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-234ea0bb]{\n  position: relative;\n}\n.history_mask[_v-234ea0bb]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-234ea0bb]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-234ea0bb] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-234ea0bb]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-234ea0bb] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-234ea0bb] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-234ea0bb] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-234ea0bb] {\n  width: 3.75rem;\n}\n\n.content_title[_v-234ea0bb] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-234ea0bb] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-234ea0bb] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-234ea0bb] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-234ea0bb] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-234ea0bb] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-234ea0bb]{\n  position: relative;\n}\n.history_mask[_v-234ea0bb]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-234ea0bb]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-234ea0bb] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-234ea0bb]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
 
 	// exports
 
@@ -27248,16 +27246,17 @@
 	    audioPlayHistory: function audioPlayHistory() {
 	      var _this = this;
 	      if (_this.isApp) {
-	        alert(1);
-	        _native2.default.Audio.audioPlayHistory({
-	          "albumId": _this.albumId,
-	          success: function success(obj) {
-	            alert(obj.name + ":" + obj.sortNo + ":" + obj.date);
-	            _this.historyName = obj.name;
-	            _this.sortNo = obj.sortNo;
-	            _this.timestamp = obj.date;
-	          }
-	        });
+	        setTimeout(function () {
+	          _native2.default.Audio.audioPlayHistory({
+	            "albumId": _this.albumId,
+	            success: function success(obj) {
+	              alert(obj.name + ":" + obj.sortNo + ":" + obj.date);
+	              _this.historyName = obj.name;
+	              _this.sortNo = obj.sortNo;
+	              _this.timestamp = obj.date;
+	            }
+	          });
+	        }, 4000);
 	      }
 	    }
 	  }
@@ -27625,7 +27624,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-236acfbd] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-236acfbd] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-236acfbd] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-236acfbd] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-236acfbd], .b_right[_v-236acfbd] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-236acfbd] {\n  font-size: 14px;\n}\n\n.line[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-236acfbd] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-236acfbd] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-236acfbd]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-236acfbd]{\n  font-size: 0;\n}\n.item_timee>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-236acfbd]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-236acfbd]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-236acfbd]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-236acfbd],.mask_stop[_v-236acfbd],.disable[_v-236acfbd]{\n  z-index:3;\n}\n\n\n\n.free[_v-236acfbd]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.rea[_v-236acfbd]{\n  position: relative;\n}\n\n\n.top[_v-236acfbd]{\n  margin-top: 0.12rem;\n}\n.empty_tab[_v-236acfbd]{\n  height: 0.5rem;\n}\n.tab_fixed[_v-236acfbd]{\n  position: fixed;\n  top: 44px;\n  z-index:999;\n}\n.tab_fixed2[_v-236acfbd]{\n  position: fixed;\n  top:0;\n  z-index:999;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-236acfbd] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-236acfbd] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-236acfbd] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-236acfbd] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-236acfbd], .b_right[_v-236acfbd] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-236acfbd] {\n  font-size: 14px;\n}\n\n.line[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-236acfbd] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-236acfbd] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-236acfbd]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-236acfbd]{\n  font-size: 0;\n}\n.item_timee>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-236acfbd]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-236acfbd]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-236acfbd]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-236acfbd],.mask_stop[_v-236acfbd],.disable[_v-236acfbd]{\n  z-index:3;\n}\n\n\n\n.free[_v-236acfbd]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.rea[_v-236acfbd]{\n  position: relative;\n}\n\n\n.top[_v-236acfbd]{\n  margin-top: 0.12rem;\n}\n.empty_tab[_v-236acfbd]{\n  height: 0.5rem;\n}\n.tab_fixed[_v-236acfbd]{\n  position: fixed;\n  top: 44px;\n  z-index:999;\n}\n.tab_fixed2[_v-236acfbd]{\n  position: fixed;\n  top:0;\n  z-index:999;\n}\n", ""]);
 
 	// exports
 
@@ -27684,7 +27683,9 @@
 	    //        });
 
 	    this.$nextTick(function () {
-	      this.audioLocation();
+	      setTimeout(function () {
+	        that.audioLocation();
+	      }, 2000);
 	    });
 	  },
 	  data: function data() {
