@@ -1,6 +1,5 @@
 <template>
   <div>
-    ::{{  maskFlag  }}::
     <lheader :title="title" class="top" v-if="!isApp"></lheader>
     <div class="ndiv" v-if="!isApp"></div>
     <index_feed :data="data"></index_feed>

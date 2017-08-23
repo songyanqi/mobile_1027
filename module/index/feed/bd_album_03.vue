@@ -1,6 +1,5 @@
 <template>
   <div class="top" id="top">
-    ::{{ maskFlag }}::
     <div class="tab" id="tab2" :class="{ tab_fixed2 :empty_tab }" v-if="isApp">
       <div class="tab_list" v-if="flag" @click="fn">
         <div class="border color1" v-text="dataList.content"></div>
