@@ -236,6 +236,9 @@ export default {
           $(".top_h_s").css({"background": "rgba(250,250,250,"+ 0.01 * scrollTop +")"})
           sessionStorage['goodsPagePos'] = scrollTop;
         });
+        native.Browser.initHead({
+          isAudioAbsorb:'1'
+        });
       this.getCartNum();
       // this.getUrl();
       this.getIsApp();
