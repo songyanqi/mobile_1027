@@ -1,12 +1,13 @@
 <template>
   <div class="content2">
+    ::{{ dataList.length }}::
     <div class="content_buy">
       <div class="count"><span v-text="data.body.purchase"></span><span>人</span><span v-if="isFree==1">订阅</span><span v-if="isFree==0">听过</span></div>
       <div class="content_header">
           <div v-for="item in dataList">
             <img :src="doImg(item.imageUrl)" alt="">
           </div>
-          <div>
+          <div v-if="head_count < 8">
             <img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt="">
           </div>
       </div>
@@ -22,11 +23,14 @@
           isFree:-1
       }
     },
-    created:function () {
+    mounted:function () {
       this.dataList=this.data.body.dataList;
       this.isFree=this.data.body.isFree;
     },
     methods:{
+      head_count(){
+          return this.dataList.length;
+      },
       doImg(img){
           if(img)return img;
           return "//pic.davdian.com/free/2017/08/22/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.png"
@@ -59,6 +63,10 @@
   }
 
   .content_header {
+    max-width: 2.4rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     position: absolute;
     right: 0;
   }

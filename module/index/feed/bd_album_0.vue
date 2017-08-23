@@ -36,7 +36,7 @@
       }
   }
 </script>
-<style>
+<style scoped lang="sass">
   .box{
     font-size: 0;
     padding-bottom: 0.22rem;

@@ -51,11 +51,14 @@
         this.getinitData();
         this.scrol();
 
-        native.Browser.setHead({
-          'title':'免费学习专区',
-          'backBtn':'1',
-          'shareBtn':"1"
-        })
+        setTimeout(function () {
+          native.Browser.setHead({
+            'title':'免费学习专区',
+            'backBtn':'1',
+            'shareBtn':"1"
+          })
+        },3000)
+
 
     },
     methods:{

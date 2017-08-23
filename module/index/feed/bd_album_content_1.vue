@@ -35,6 +35,7 @@
   import util from "../../../utils/utils.es6";
   import native from "../../../src/common/js/module/native.js";
   import dialog from '../../../utils/dialog.es6';
+  import popup from "../../../src/common/js/module/popup"
 
   export default {
       props:["data"],
@@ -107,7 +108,16 @@
           }
         },
         stop_info(){
-          dialog.alert("订阅后才可收听");
+          popup.confirm({
+            title: '提示',            // 标题（支持传入html。有则显示。）
+            text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
+            okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+            cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+            okBtnCallback: function(){
+
+            },
+            cancelBtnCallback: function(){}
+          });
         },
         getLocalTime(nS){
           let time= new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
