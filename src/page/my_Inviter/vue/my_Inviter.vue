@@ -18,10 +18,10 @@
       </div>
     </div>
     <!--修改邀请人-->
-    <div class="bottoms">
+    <div class="bottoms" v-if="response.data.editable == 1">
       <div v-if="trun_grey" class="changeBtn greybtn">{{btnName}}</div>
       <div v-else class="changeBtn" @click="modify_inviter">{{btnName}}</div>
-      <div class="change_time" v-if="response.data && response.data.editTime && show_edntime">{{response.data.editTime}}后不可再修改</div>
+      <div class="change_time" v-if="response.data && response.data.endTime && show_edntime">{{response.data.endTime*1000 | getFullTime}}后不可再修改</div>
     </div>
 
     <!--什么是邀请码-->
@@ -175,6 +175,28 @@
         var tel = $.trim(t);
         var reg = /^1\d{10}$/;
         return reg.test(tel);
+      },
+    },
+    filters:{
+      getFullTime: function (second) {
+        var y = new Date(second).getFullYear();
+        var monthtime = new Date(second).getMonth();
+        var daytime = new Date(second).getDate();
+        var s = new Date(second).getSeconds();
+        var m = new Date(second).getMinutes();
+        var h = new Date(second).getHours();
+        var str;
+        var fullTime;
+        if (h) {
+          str = (h < 10 ? "0" : "") + h + ":" + (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+        } else if (m) {
+          str = (h < 10 ? "0" : "") + h + ":" + (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+        } else {
+          str = (h < 10 ? "0" : "") + h + ":" + (m < 10 ? "0" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+        }
+        fullTime = y + '年' + (monthtime + 1) + '月' + daytime + '日' + str;
+
+        return fullTime;
       },
     }
   }

@@ -34,7 +34,7 @@
           <input type="tel" placeholder="请输入验证码" v-model="check_code" name="mobile">
           <img src="../img/clearInput.png" v-if="check_code != ''" v-on:click="check_code = ''">
         </div>
-        <div v-if="mobile=='' || get_check" class="get_check_code disable">{{get_checkbtnname}}</div>
+        <div v-if="mobile=='' || get_check || mobile.length < 11" class="get_check_code disable">{{get_checkbtnname}}</div>
         <div v-else class="get_check_code" @click="get_check_codes(1,1,function() {})">{{get_checkbtnname}}</div>
       </div>
       <div class="inputbox">
@@ -393,7 +393,7 @@
             success(response) {
               that.response = response;
               if (that.response.code) {
-                popup.toast(that.response.data.msg);
+                popup.toast(that.response.data.msg || response.msg);
               } else {
                 callback();
                 popup.toast("发送成功");
@@ -577,8 +577,9 @@
     color: #FFFFFF;
     background: -webkit-linear-gradient(left, #FF5C5C, #FA1862);
     background: linear-gradient(to right, #FF5C5C, #FA1862);
+    box-shadow: 0 3px 8px rgba(255, 68, 105, 0.4);
     border-radius: 20px;
-    font-weight: 300;
+    font-weight: normal;
   }
 
   .disablebtn {
@@ -612,7 +613,7 @@
 
   .invitation_info {
     font-size: 12px;
-    font-weight: 300;
+    font-weight: normal;
     padding: 0 20px;
     color: #999999;
     line-height: 17px;
@@ -651,8 +652,9 @@
     height: 14px;
     text-align: left;
     font-size: 14px;
-    padding-left: 10px;
+    padding-left: 8px;
     margin: 50px auto 0;
+    color:#666666;
   }
 
   .what_invitation_code {
@@ -795,7 +797,7 @@
     color: #999999;
     text-align: left;
     overflow: hidden;
-    font-weight: 300;
+    font-weight: normal;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
     -ms-transition: all 1s ease;
