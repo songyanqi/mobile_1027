@@ -256,15 +256,16 @@
                 }else {
                   window.location.href = '/login.html'
                 }
+              } else {
+                popup.confirm({
+                  title: '提示',
+                  text: result.data.msg,
+                  okBtnTitle: '确定',
+                  cancelBtnTitle: '取消',
+                  okBtnCallback: function(){},
+                  cancelBtnCallback: function(){}
+                });
               }
-              popup.confirm({
-                title: '提示',
-                text: result.data.msg,
-                okBtnTitle: '确定',
-                cancelBtnTitle: '取消',
-                okBtnCallback: function(){},
-                cancelBtnCallback: function(){}
-              });
             }
           } else {
             popup.confirm({

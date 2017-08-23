@@ -22,7 +22,7 @@
           <div><img :src="item.imageUrl" alt=""></div>
         </div>
         <div class="right_img" v-if="item.isFree==1 && item.isSub==0 && item.isPlay==0">
-          <div class="disable" @click.stop="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+          <div class="disable" @click.stop="stop_info(item.albumId)"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
           <div class="circle_mask"></div>
           <div><img :src="item.imageUrl" alt=""></div>
         </div>
@@ -34,8 +34,8 @@
 <script>
   import util from "../../../utils/utils.es6";
   import native from "../../../src/common/js/module/native.js";
-  import dialog from '../../../utils/dialog.es6';
   import popup from "../../../src/common/js/module/popup"
+  import {getQuery} from "../../../utils/utils.es6";
 
   export default {
       props:["data"],
@@ -107,17 +107,62 @@
             })
           }
         },
-        stop_info(){
+        stop_info(albumId){
+          var that=this;
           popup.confirm({
             title: '提示',            // 标题（支持传入html。有则显示。）
             text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
             okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
             cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
             okBtnCallback: function(){
-
+              that.Subscribe(albumId);
             },
             cancelBtnCallback: function(){}
           });
+        },
+        Subscribe(albumId){
+
+          var that=this;
+          var obj={
+            albumId:albumId,
+            shareUserId:getQuery('shareUserId') || ''
+          };
+          api("/api/mg/content/album/subscription",obj)
+            .then(function(result) {
+              let {code, data: {msg, payUrl, jsApi}} = result;
+              if (code == 0) {
+                if (result.data.code == 300) {
+                  if (jsApi) {
+                    jsApi.jsApiParameters.dvdhref = location.href;
+                    // window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                    window.location.href = "http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                  } else if (payUrl) {
+                    that.nativePay(payUrl, function (flag) {
+                      if (flag) {
+                        that.sub=1;
+                      }
+                    });
+                  } else {
+                    that.sub=1;
+                    setTimeout(function(){
+                      that.$emit("re");
+                    },500)
+                  }
+                } else {
+                  if (result.data.code == 400){
+                    if (that.isapp){
+                      native.Account.login()
+                    }else {
+                      window.location.href = '/login.html'
+                    }
+                  }else {
+                    dialog.alert(result.data.msg);
+                  }
+                }
+              }else {
+                dialog.alert('code:' + code + 'msg:'+ result.data.msg)
+              }
+            })
         },
         getLocalTime(nS){
           let time= new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
