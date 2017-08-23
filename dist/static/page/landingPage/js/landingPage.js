@@ -27455,7 +27455,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.content2[_v-235cb83c] {\n  padding: 0 0.1rem 0.12rem 0.1rem;\n  background: white;\n}\n\n.content_buy[_v-235cb83c] {\n  position: relative;\n  height: 0.25rem;\n}\n\n.content_buy .count[_v-235cb83c] {\n  color: #666666;\n  font-size: 14px;\n  margin-top: 0.03rem;\n  line-height: 0.2rem;\n}\n\n.content_buy > div[_v-235cb83c] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_header[_v-235cb83c] {\n  position: absolute;\n  right: 0;\n}\n\n.content_header > div[_v-235cb83c] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n  margin-left: 0.05rem;\n}\n\n.content_header img[_v-235cb83c] {\n  border-radius: 50%;\n  height: 0.25rem;\n  width: 0.25rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.content2[_v-235cb83c] {\n  padding: 0 0.1rem 0.12rem 0.1rem;\n  background: white;\n}\n\n.content_buy[_v-235cb83c] {\n  position: relative;\n  height: 0.25rem;\n}\n\n.content_buy .count[_v-235cb83c] {\n  color: #666666;\n  font-size: 14px;\n  margin-top: 0.03rem;\n  line-height: 0.2rem;\n}\n\n.content_buy > div[_v-235cb83c] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_header[_v-235cb83c] {\n  position: absolute;\n  right: 0;\n}\n\n.content_header > div[_v-235cb83c] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n  margin-left: 0.05rem;\n}\n\n.content_header img[_v-235cb83c] {\n  border-radius: 50%;\n  height: 0.25rem;\n  width: 0.25rem;\n}\n", ""]);
 
 	// exports
 
@@ -27475,7 +27475,8 @@
 	//       <div class="count"><span v-text="data.body.purchase"></span><span>人订阅</span></div>
 	//       <div class="content_header">
 	//           <div v-for="item in dataList" @click="go_href(item.command.content)">
-	//             <img :src="item.imageUrl" alt="">
+	//             <img :src="doImg(item.imageUrl)" alt="">
+	//
 	//           </div>
 	//           <div>
 	//             <img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt="">
@@ -27499,6 +27500,10 @@
 	  methods: {
 	    go_href: function go_href(href) {
 	      window.location.href = href;
+	    },
+	    doImg: function doImg(img) {
+	      if (img) return img;
+	      return "//pic.davdian.com/free/2017/08/22/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.png";
 	    }
 	  }
 	  // </script>
@@ -27551,7 +27556,7 @@
 /* 413 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"content2\" _v-235cb83c=\"\">\n  <div class=\"content_buy\" _v-235cb83c=\"\">\n    <div class=\"count\" _v-235cb83c=\"\"><span v-text=\"data.body.purchase\" _v-235cb83c=\"\"></span><span _v-235cb83c=\"\">人订阅</span></div>\n    <div class=\"content_header\" _v-235cb83c=\"\">\n        <div v-for=\"item in dataList\" @click=\"go_href(item.command.content)\" _v-235cb83c=\"\">\n          <img :src=\"item.imageUrl\" alt=\"\" _v-235cb83c=\"\">\n        </div>\n        <div _v-235cb83c=\"\">\n          <img src=\"//pic.davdian.com/free/2017/08/16/Group4.png\" alt=\"\" _v-235cb83c=\"\">\n        </div>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"content2\" _v-235cb83c=\"\">\n  <div class=\"content_buy\" _v-235cb83c=\"\">\n    <div class=\"count\" _v-235cb83c=\"\"><span v-text=\"data.body.purchase\" _v-235cb83c=\"\"></span><span _v-235cb83c=\"\">人订阅</span></div>\n    <div class=\"content_header\" _v-235cb83c=\"\">\n        <div v-for=\"item in dataList\" @click=\"go_href(item.command.content)\" _v-235cb83c=\"\">\n          <img :src=\"doImg(item.imageUrl)\" alt=\"\" _v-235cb83c=\"\">\n\n        </div>\n        <div _v-235cb83c=\"\">\n          <img src=\"//pic.davdian.com/free/2017/08/16/Group4.png\" alt=\"\" _v-235cb83c=\"\">\n        </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 414 */

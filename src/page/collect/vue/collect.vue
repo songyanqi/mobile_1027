@@ -4,7 +4,7 @@
     <div class="ndiv" v-if="!isApp"></div>
     <index_feed :data="data"></index_feed>
     <div class="empty" v-if="isFree==1" ></div>
-    <lfooter v-if="isFree==1" :income="income" :sub="isSub" :userstatus="userStatus" :albumid="albumId" :price="price"></lfooter>
+    <lfooter @re="reGetData" v-if="isFree==1" :income="income" :sub="isSub" :userstatus="userStatus" :albumid="albumId" :price="price"></lfooter>
     <maskk v-if="isApp && maskFlag"></maskk>
     <maskk2 v-if="!isApp && maskFlag"></maskk2>
     <data_mask v-if="isApp && maskFlag2"></data_mask>
@@ -58,6 +58,9 @@
       this.getData();
     },
     methods:{
+        reGetData(){
+          window.location.reload();
+        },
         getData(){
           var that=this;
           if(this.pageFlag){

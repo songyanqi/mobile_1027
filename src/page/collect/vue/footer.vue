@@ -87,11 +87,13 @@
                   });
                 } else {
                   that.sub=1;
+                  alert(123456);
                   // 报名成功
                 }
               } else {
                 that.sub=1;
                 dialog.alert(result.data.msg);
+                that.$emit("re");
               }
             }else {
               dialog.alert('code:' + code + 'msg:'+ result.data.msg)
