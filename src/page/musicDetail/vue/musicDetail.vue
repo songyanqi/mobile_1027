@@ -205,13 +205,13 @@
           albumId:getQuery('albumId'),
           shareUserId:getQuery('shareUserId') || ''
         }
-        alert('hah')
         api('/api/mg/content/album/subscription', obj).then(function(result){
           let {code,data:{msg,payUrl,jsApi}}=result;
-          alert(code)
+          alert(0)
           if (code == 0){
             if (result.data.code == 300){
               if(jsApi){
+                  alert(jsApi)
                   jsApi.jsApiParameters.dvdhref=location.href;
                   // window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
                   window.location.href = "http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
@@ -330,7 +330,7 @@
               return
             }
           }
-          if (that.musicList[index].isPlay != 1){
+          if (that.musicList[that.musicList.length-index-1].isPlay != 1){
             popup.confirm({
               title: '提示',            // 标题（支持传入html。有则显示。）
               text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
@@ -345,7 +345,7 @@
           }
         } else {
           // alert(that.index)
-          if (that.musicList[that.index].isPlay != 1){
+          if (that.musicList[that.musicList.length-that.index-1].isPlay != 1){
             popup.confirm({
               title: '提示',            // 标题（支持传入html。有则显示。）
               text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）

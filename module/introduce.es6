@@ -91,7 +91,7 @@ export default {
                         })
                     });
                     window.appData={
-                        isAudioAbsorb:'1'
+                        isAudioAbsorb:1
                     }
                     if (!error && deleteFlag){
                         

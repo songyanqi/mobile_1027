@@ -29,7 +29,8 @@ native.custom.initHead({
   showFoot: 0,     // 是否展示底部
   backOnHead: 1,   // 头部返回按钮
   homeOnHead: 1,   // 头部首页按钮
-  shareOnHead: 1
+  shareOnHead: 1,
+  isAudioAbsorb:1
 });
 
 window.vm = new Vue({
