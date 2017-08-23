@@ -1,6 +1,5 @@
 <template>
   <div>
-    ::{{ getLocalTime(1503331200) }}::
     <div class="list1">
       <div class="big_img">
         <div class="list_line"></div>
@@ -123,7 +122,7 @@
           if(y === year && m === month && d === day){
               return "今日更新";
           }else {
-              return timestamp[1] + "月" + timestamp[2] + "日" + " " + weekDay[week];
+              return m + "月" + d + "日" + " " + weekDay[week];
           }
         },
 //        getLocalTime(nS){
