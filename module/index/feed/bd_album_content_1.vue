@@ -203,6 +203,7 @@
   .list_content{
     margin-left: 0.1rem;
     height: 0.76rem;
+    max-width: 2.15rem;
   }
   .list_title{
     font-size:14px;
