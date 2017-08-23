@@ -134,6 +134,9 @@
     mounted: function () {
       var that =  this
       this.$nextTick(function(){
+        $('a').on('click',function(event){
+          event.preventDefault();
+        })
         let obj = {
           albumId:getQuery('albumId')|| 0,
           sort:'0',
@@ -242,7 +245,7 @@
         this.audioListFlag = false
         $('body').css({
           'height':'auto',
-          "overflow":"hidden"
+          "overflow":"visible"
         });
       },
       openAudioList(){
@@ -420,10 +423,10 @@
         }
       },
       timeFormat(t){
-        let time = parseInt(t) + 1
+        let time = Math.ceil(t)
         if (time<60){
           if (time<10){
-            time = '0' + parseInt(t)
+            time = '0' + time
           }
           return '00:'+time
         }else {
