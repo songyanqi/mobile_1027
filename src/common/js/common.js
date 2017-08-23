@@ -51,6 +51,9 @@ native.custom.onWebviewBack();
  */
 function checkRedirect(domain) {
   // 当前域名与强制域名和小写强制域名都不符时，跳转到强制域名
+  alert(domain && domain !== location.host && ''.toLowerCase && new String(domain).toLowerCase() !== location.host)
+  alert(domain)
+  alert(location.host)
   if (domain && domain !== location.host && ''.toLowerCase && new String(domain).toLowerCase() !== location.host) {
     // nemo逻辑，设置临时跳转路径
     // sessionStorage.setItem('temp_domain', location.hostname);

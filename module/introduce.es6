@@ -54,7 +54,7 @@ export default {
                     return false;
                 }
                 if (result.visitor_status == 0){
-                    native.Browser.setHead({shareBtn:'0',isAudioAbsorb:'1'})
+                    native.Browser.setHead({shareBtn:'0'})
                 }
                 let {code, data, visitor_status}=result;
                 if(+code){
@@ -65,7 +65,7 @@ export default {
                     } else {
                         if (code==30000){
                             that.visitor_status = 0
-                            native.Browser.setHead({shareBtn:'0',isAudioAbsorb:'1'})
+                            native.Browser.setHead({shareBtn:'0'})
                         }else {
                             that.error = true;
                             bravetime.info("数据获取异常"+code);
@@ -90,6 +90,11 @@ export default {
                             window.singlePicHold(ele);
                         })
                     });
+                    if (!error && deleteFlag && visitor_status!=0){
+                        native.Browser.initHead({
+                          isAudioAbsorb:'1'
+                        });
+                    }
                 }
                 console.log(that.userId, window.teacherId)
             },
@@ -117,7 +122,7 @@ export default {
                     return false;
                 }
                 if (result.visitor_status == 0){
-                    native.Browser.setHead({shareBtn:'0',isAudioAbsorb:'1'})
+                    native.Browser.setHead({shareBtn:'0'})
                 }
                 let {code, data, visitor_status}=result;
                 if(+code){
@@ -128,7 +133,7 @@ export default {
                     } else {
                         if (code==30000){
                             that.visitor_status = 0
-                            native.Browser.setHead({shareBtn:'0',isAudioAbsorb:'1'})
+                            native.Browser.setHead({shareBtn:'0'})
                         }else {
                             that.error = true;
                             bravetime.info("数据获取异常"+code);
