@@ -288,7 +288,13 @@
 	 * 功能：检测是否需要domain跳转
 	 */
 	function _checkRedirect(domain) {
+	  alrt(123);
 	  // 当前域名与强制域名和小写强制域名都不符时，跳转到强制域名
+	  alert(domain && domain !== location.host && ''.toLowerCase && new String(domain).toLowerCase() !== location.host);
+
+	  alert(domain && domain !== location.host && ''.toLowerCase && new String(domain).toLowerCase() !== location.host);
+	  alert(domain);
+	  alert(location.host);
 	  if (domain && domain !== location.host && ''.toLowerCase && new String(domain).toLowerCase() !== location.host) {
 	    // nemo逻辑，设置临时跳转路径
 	    // sessionStorage.setItem('temp_domain', location.hostname);
@@ -328,6 +334,7 @@
 	   * 说明：每个接口公参会返回强制跳转字段，如果这个字段有值并且与当前域名不同则跳转
 	   */
 	  checkRedirect: function checkRedirect(response) {
+	    alert(44);
 	    // nemo逻辑 //
 	    // 百度脑图：http://naotu.baidu.com/file/845581a94947715ba1c8cf832d46eb37?token=bb2bd462d2f5f75f
 	    // if (response.code === 0 || response.code === '11012' || response.code === '11013') {
@@ -3834,11 +3841,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
-=======
-	  var id = "_v-57b26686/com-share-pop-tip.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-7718a21b/com-share-pop-tip.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4352,7 +4355,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3c5cd698/com-to-top-icon.vue"
+	  var id = "_v-5c521926/com-to-top-icon.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4646,7 +4649,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1a34eddb/com-popup-toast.vue"
+	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5563,35 +5566,6 @@
 /* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(58)
-	__vue_script__ = __webpack_require__(60)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/component/com-share-pop-tip.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(61)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-7718a21b/com-share-pop-tip.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-=======
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -5672,7 +5646,6 @@
 	    return new Promise(function (resolve, reject) {
 	      resolve(JSON.parse(sessionStorage.getItem(key)));
 	    });
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  } else {
 	    var urlT = url + '?' + new Date().getTime();
 	    return axios.post(urlT, strSign(obj)).then(function (respone) {
@@ -5836,25 +5809,6 @@
 	function isUndefined(val) {
 	  return typeof val === 'undefined';
 	}
-<<<<<<< HEAD
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-5a56717e/index_feed.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-=======
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	/**
 	 * Determine if a value is an Object
@@ -6675,35 +6629,6 @@
 /* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(75)
-	__vue_script__ = __webpack_require__(77)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_slide_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(82)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-869a2f9a/bd_slide_0.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-=======
 	'use strict';
 
 	var createError = __webpack_require__(119);
@@ -6720,7 +6645,6 @@
 	  // Note: status is not exposed by XDomainRequest
 	  if (!response.status || !validateStatus || validateStatus(response.status)) {
 	    resolve(response);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  } else {
 	    reject(createError(
 	      'Request failed with status code ' + response.status,
@@ -7454,37 +7378,6 @@
 	exports.pbkdf2Sync = p.pbkdf2Sync
 
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(84)
-	__vue_script__ = __webpack_require__(86)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_icon_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(94)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-f2949a2e/bd_icon_0.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 	// the least I can do is make error messages for the rest of the node.js/crypto api.
 	each(['createCredentials'
 	, 'createCipher'
@@ -7497,7 +7390,6 @@
 	], function (name) {
 	  exports[name] = function () {
 	    error('sorry,', name, 'is not implemented yet')
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 	})
 
@@ -7671,83 +7563,11 @@
 	  }
 	}
 
-<<<<<<< HEAD
-	    props: ['data'],
-	    created: function created() {
-	        var scope = this;
-	        if (scope.data.body.dataList.length < 4) {
-	            scope.show = false;
-	        } else if (scope.data.body.dataList.length > 4 && scope.data.body.dataList.length < 8) {
-	            scope.data.body.dataList = scope.data.body.dataList.slice(0, 4);
-	        } else if (scope.data.body.dataList.length > 8) {
-	            scope.data.body.dataList = scope.data.body.dataList.slice(0, 8);
-	        }
-	    },
-	    computed: {
-	        styleObject: function styleObject() {
-	            var bgColor = this.data.body.bgColor;
-	            return {
-	                backgroundColor: "rgba(" + parseInt('0x' + bgColor.slice(2, 4)) + "," + parseInt('0x' + bgColor.slice(4, 6)) + "," + parseInt('0x' + bgColor.slice(6, 8)) + "," + parseInt('0x' + bgColor.slice(8, 10)) / 255 + ")"
-	            };
-	        }
-	    },
-	    components: {
-	        tt_com_0: tt_com_0
-	    },
-	    methods: {
-	        imgObject: function imgObject(imgSrc) {
-	            return {
-	                src: imgSrc || '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
-	                error: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
-	                loading: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png'
-	            };
-	        },
-	        clickAnalysis: function clickAnalysis(item) {
-	            _layout2.default.clickAnalysis(item, this, 'body');
-	        }
-	    }
-	};
-
-/***/ },
-/* 88 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(89)
-	__vue_script__ = __webpack_require__(91)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/tt_com_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(93)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-7a08e701/tt_com_0.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 	function assertSize (size) {
 	  if (typeof size !== 'number') {
 	    throw new TypeError('"size" argument must be a number')
 	  } else if (size < 0) {
 	    throw new RangeError('"size" argument must not be negative')
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 	}
 
@@ -7891,25 +7711,6 @@
 
 	  throw new TypeError('First argument must be a string, Buffer, ArrayBuffer, Array, or array-like object.')
 	}
-<<<<<<< HEAD
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-8b68ba7a/bd_broadcast_0.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-=======
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	function checked (length) {
 	  // Note: cannot use `length < kMaxLength()` here because that fails when
@@ -8098,43 +7899,9 @@
 	      case 'ascii':
 	        return asciiSlice(this, start, end)
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(102)
-	__vue_script__ = __webpack_require__(104)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_timer_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(106)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-45419a72/bd_timer_0.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-=======
 	      case 'latin1':
 	      case 'binary':
 	        return latin1Slice(this, start, end)
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	      case 'base64':
 	        return base64Slice(this, start, end)
@@ -8415,27 +8182,12 @@
 	Buffer.prototype.lastIndexOf = function lastIndexOf (val, byteOffset, encoding) {
 	  return bidirectionalIndexOf(this, val, byteOffset, encoding, false)
 	}
-<<<<<<< HEAD
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-45256b70/bd_timer_1.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-=======
 
 	function hexWrite (buf, string, offset, length) {
 	  offset = Number(offset) || 0
 	  var remaining = buf.length - offset
 	  if (!length) {
 	    length = remaining
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  } else {
 	    length = Number(length)
 	    if (length > remaining) {
@@ -8649,37 +8401,6 @@
 	    return String.fromCharCode.apply(String, codePoints) // avoid extra slice()
 	  }
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(114)
-	__vue_script__ = __webpack_require__(116)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_goods_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(118)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-05ee9bd0/bd_goods_0.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 	  // Decode in chunks to avoid "call stack size exceeded".
 	  var res = ''
 	  var i = 0
@@ -8688,7 +8409,6 @@
 	      String,
 	      codePoints.slice(i, i += MAX_ARGUMENTS_LENGTH)
 	    )
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 	  return res
 	}
@@ -8866,43 +8586,11 @@
 	  byteLength = byteLength | 0
 	  if (!noAssert) checkOffset(offset, byteLength, this.length)
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(120)
-	__vue_script__ = __webpack_require__(122)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_goods_1.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(129)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-05d26cce/bd_goods_1.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 	  var i = byteLength
 	  var mul = 1
 	  var val = this[offset + --i]
 	  while (i > 0 && (mul *= 0x100)) {
 	    val += this[offset + --i] * mul
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 	  mul *= 0x80
 
@@ -9187,20 +8875,6 @@
 	  }
 	  return offset + 4
 	}
-<<<<<<< HEAD
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-3d91a158/com-maybeyoulike.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-=======
 
 	Buffer.prototype.writeInt32BE = function writeInt32BE (value, offset, noAssert) {
 	  value = +value
@@ -9212,7 +8886,6 @@
 	    this[offset + 1] = (value >>> 16)
 	    this[offset + 2] = (value >>> 8)
 	    this[offset + 3] = (value & 0xff)
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  } else {
 	    objectWriteUInt32(this, value, offset, false)
 	  }
@@ -9474,29 +9147,12 @@
 
 	  return bytes
 	}
-<<<<<<< HEAD
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-758d6c5d/bd_image_0.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 
 	function asciiToBytes (str) {
 	  var byteArray = []
 	  for (var i = 0; i < str.length; ++i) {
 	    // Node's code seems to be doing this and not & 0x7F..
 	    byteArray.push(str.charCodeAt(i) & 0xFF)
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 	  return byteArray
 	}
@@ -9630,41 +9286,9 @@
 	  var parts = []
 	  var maxChunkLength = 16383 // must be multiple of 3
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(137)
-	__vue_script__ = __webpack_require__(139)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_image_1.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(141)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-759b83de/bd_image_1.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 	  // go through the array every three bytes, we'll deal with trailing stuff later
 	  for (var i = 0, len2 = len - extraBytes; i < len2; i += maxChunkLength) {
 	    parts.push(encodeChunk(uint8, i, (i + maxChunkLength) > len2 ? len2 : (i + maxChunkLength)))
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 
 	  // pad the end with zeros, but make sure to not forget the extra bytes
@@ -9831,41 +9455,7 @@
 /* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(143)
-	__vue_script__ = __webpack_require__(145)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_image_2.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(147)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-75a99b5f/bd_image_2.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-=======
 	/* WEBPACK VAR INJECTION */(function(Buffer) {var createHash = __webpack_require__(143)
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	var md5 = toConstructor(__webpack_require__(151))
 	var rmd160 = toConstructor(__webpack_require__(153))
@@ -9988,39 +9578,7 @@
 
 	    var hash = this._update(this._block) || this._hash()
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(149)
-	__vue_script__ = __webpack_require__(151)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_image_3.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(153)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-75b7b2e0/bd_image_3.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 	    return enc ? hash.toString(enc) : hash
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 
 	  Hash.prototype._update = function () {
@@ -10142,44 +9700,12 @@
 	    return b ^ c ^ d;
 	  }
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(155)
-	__vue_script__ = __webpack_require__(157)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_image_4.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(159)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-75c5ca61/bd_image_4.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 	  /*
 	   * Determine the appropriate additive constant for the current iteration
 	   */
 	  function sha1_kt(t) {
 	    return (t < 20) ?  1518500249 : (t < 40) ?  1859775393 :
 	           (t < 60) ? -1894007588 : -899497514;
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 
 	  /*
@@ -10438,42 +9964,10 @@
 	    return ret;
 	  }
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(161)
-	__vue_script__ = __webpack_require__(163)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_image_5.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(165)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-75d3e1e2/bd_image_5.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 	  // Primitive types cannot have properties
 	  var primitive = formatPrimitive(ctx, value);
 	  if (primitive) {
 	    return primitive;
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 
 	  // Look up the keys of the object.
@@ -10695,30 +10189,7 @@
 	function isArray(ar) {
 	  return Array.isArray(ar);
 	}
-<<<<<<< HEAD
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-75e1f963/bd_image_6.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 167 */
-/***/ function(module, exports, __webpack_require__) {
-=======
 	exports.isArray = isArray;
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	function isBoolean(arg) {
 	  return typeof arg === 'boolean';
@@ -10870,37 +10341,6 @@
 /* 148 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(173)
-	__vue_script__ = __webpack_require__(175)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_image_7.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(177)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-75f010e4/bd_image_7.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 	if (typeof Object.create === 'function') {
 	  // implementation from standard node.js 'util' module
 	  module.exports = function inherits(ctor, superCtor) {
@@ -10922,7 +10362,6 @@
 	    TempCtor.prototype = superCtor.prototype
 	    ctor.prototype = new TempCtor()
 	    ctor.prototype.constructor = ctor
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 	}
 
@@ -11063,39 +10502,6 @@
 	  Sha256.prototype._hash = function () {
 	    var H = new Buffer(32)
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(179)
-	__vue_script__ = __webpack_require__(181)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_image_8.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(183)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-75fe2865/bd_image_8.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-=======
 	    H.writeInt32BE(this._a,  0)
 	    H.writeInt32BE(this._b,  4)
 	    H.writeInt32BE(this._c,  8)
@@ -11104,7 +10510,6 @@
 	    H.writeInt32BE(this._f, 20)
 	    H.writeInt32BE(this._g, 24)
 	    H.writeInt32BE(this._h, 28)
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	    return H
 	  }
@@ -11263,46 +10668,12 @@
 	        var Wi16  = W[j - 16*2]
 	        var Wi16l = W[j - 16*2 + 1]
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(185)
-	__vue_script__ = __webpack_require__(187)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_image_9.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(189)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-760c3fe6/bd_image_9.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-=======
 	        Wil = gamma0l + Wi7l
 	        Wi  = gamma0  + Wi7 + ((Wil >>> 0) < (gamma0l >>> 0) ? 1 : 0)
 	        Wil = Wil + gamma1l
 	        Wi  = Wi  + gamma1  + ((Wil >>> 0) < (gamma1l >>> 0) ? 1 : 0)
 	        Wil = Wil + Wi16l
 	        Wi  = Wi  + Wi16 + ((Wil >>> 0) < (Wi16l >>> 0) ? 1 : 0)
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	        W[j] = Wi
 	        W[j + 1] = Wil
@@ -11553,30 +10924,11 @@
 	{
 	  return (num << cnt) | (num >>> (32 - cnt));
 	}
-<<<<<<< HEAD
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-3dd07242/bd_image_10.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-=======
 
 	module.exports = function md5(buf) {
 	  return helpers.hash(buf, core_md5, 16);
 	};
 
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 152 */
@@ -11774,25 +11126,6 @@
 	function f2(x, y, z) {
 	  return (((x)&(y)) | ((~x)&(z)));
 	}
-<<<<<<< HEAD
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-05b63dcc/bd_goods_2.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-=======
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	function f3(x, y, z) {
 	  return (((x) | (~(y))) ^ (z));
@@ -11904,72 +11237,17 @@
 /* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(203)
-	__vue_script__ = __webpack_require__(205)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_goods_6.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(206)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-054581c4/bd_goods_6.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-=======
 	var pbkdf2Export = __webpack_require__(156)
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	module.exports = function (crypto, exports) {
 	  exports = exports || {}
 
 	  var exported = pbkdf2Export(crypto)
 
-<<<<<<< HEAD
-	// load the styles
-	var content = __webpack_require__(204);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-054581c4&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_6.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-054581c4&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_6.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-=======
 	  exports.pbkdf2 = exported.pbkdf2
 	  exports.pbkdf2Sync = exported.pbkdf2Sync
 
 	  return exports
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	}
 
 
@@ -11987,13 +11265,8 @@
 	    if ('function' !== typeof callback)
 	      throw new Error('No callback provided to pbkdf2')
 
-<<<<<<< HEAD
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.hot_goods_index_md[_v-054581c4] {\n  min-height: 130px;\n  position: relative;\n  padding: 15px 10px;\n  /*background-color: #FFFFFF;*/\n}\n\n.hot_goods_index_md .goods_desc[_v-054581c4] {\n  position: relative;\n}\n\n.goods_desc .img_left[_v-054581c4] {\n  width: 120px;\n  position: relative;\n}\n\n.goods_desc .goods_info_box[_v-054581c4] {\n  position: absolute;\n  padding-left: 130px;\n  top: 0;\n  padding-top: 5px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.order_good_name[_v-054581c4] {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n  line-height: 20px;\n  height: 40px;\n  color: #666666;\n}\n\n.goods_info_box .goods_praice[_v-054581c4] {\n  height: 20px;\n  line-height: 20px;\n  color: #FF4A7D;\n  margin-top: 15px;\n  font-size: 20px;\n}\n\n.goods_info_box .goods_praice .price_symbol[_v-054581c4] {\n  font-size: 14px;\n}\n\n.comment_star[_v-054581c4] {\n  height: 12px;\n  font-size: 12px;\n  color: #FF4A7D;\n  line-height: 12px;\n  margin-top: 20px;\n}\n\n.comment_star img[_v-054581c4] {\n  height: 11px;\n  width: 11px;\n  position: relative;\n  bottom: 1px;\n  left: 2px;\n  margin-left: 2px;\n}\n\n.goods_comment[_v-054581c4] {\n  margin-top: 10px;\n  background-color: #f9f9f9;\n  position: relative;\n  padding: 10px 20px 10px 48px;\n}\n\n.goods_comment[_v-054581c4]:after {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  border-radius: 10px;\n  width: 200%;\n  height: 200%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transform: scale(0.5) translateX(-50%) translateY(-50%);\n      -ms-transform: scale(0.5) translateX(-50%) translateY(-50%);\n          transform: scale(0.5) translateX(-50%) translateY(-50%);\n}\n\n.box_arrow[_v-054581c4] {\n  width: 10px;\n  height: 5px;\n  background: url(\"//pic.davdian.com/free/2017/07/24/commentBox_arrow.png\");\n  background-size: 100%;\n  position: absolute;\n  top: -4px;\n  left: 22px;\n  z-index: 10;\n}\n\n.user_img[_v-054581c4] {\n  height: 28px;\n  width: 28px;\n  position: absolute;\n  left: 10px;\n  top: 6px;\n  overflow: hidden;\n  border-radius: 50%;\n}\n\n.comment_txt[_v-054581c4] {\n  font-size: 12px;\n  color: #151515;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  max-height: 60px;\n  -webkit-box-orient: vertical;\n  display: -webkit-box;\n  overflow: hidden;\n  -webkit-line-clamp: 3;\n}\n\n.comment_txt .user_name[_v-054581c4] {\n  color: #999999;\n}\n.img_left .topImageUrl[_v-054581c4]{\n  position: absolute;\n  width: 52px;\n  top:2px;\n  left:2px;\n}\n", ""]);
-=======
 	    setTimeout(function() {
 	      var result
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	      try {
 	        result = pbkdf2Sync(password, salt, iterations, keylen, digest)
@@ -12073,9 +11346,6 @@
 /* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-054581c4=\"\">\n  <tt_com_0 :data=\"data\" _v-054581c4=\"\"></tt_com_0>\n  <a :href=\"item.command.content\" v-for=\"item in data.body.dataList\" _v-054581c4=\"\">\n    <div class=\"hot_goods_index_md\" _v-054581c4=\"\">\n      <div class=\"goods_desc\" _v-054581c4=\"\">\n        <div class=\"img_left\" _v-054581c4=\"\">\n          <img :src=\"item.imageUrl\" alt=\"\" _v-054581c4=\"\">\n          <img v-if=\"item.topImageUrl\" class=\"topImageUrl\" :src=\"item.topImageUrl\" alt=\"\" _v-054581c4=\"\">\n        </div>\n        <div class=\"goods_info_box\" _v-054581c4=\"\">\n          <div _v-5ed5d0b8=\"\" class=\"order_good_name\" _v-054581c4=\"\">{{item.title}}</div>\n          <div class=\"goods_praice\" _v-054581c4=\"\">\n            <span _v-054581c4=\"\"><em class=\"price_symbol\" _v-054581c4=\"\">￥</em><span _v-054581c4=\"\">{{item.nowPrice}}</span></span>\n          </div>\n          <div class=\"comment_star\" _v-054581c4=\"\">\n            <span _v-054581c4=\"\">好评度：{{item.rating*100 || 0}}% </span>\n            <img v-for=\"item in parseInt((item.rating*100)/20)\" src=\"//pic.davdian.com/free/2017/07/24/%20starSelected.png\" alt=\"\" _v-054581c4=\"\">\n          </div>\n        </div>\n      </div>\n      <div v-if=\"item.comments.content\" class=\"goods_comment\" _v-054581c4=\"\">\n        <div class=\"box_arrow\" _v-054581c4=\"\"></div>\n        <div class=\"user_img\" _v-054581c4=\"\">\n          <img :src=\"item.comments.avatar\" alt=\"\" _v-054581c4=\"\">\n        </div>\n        <div class=\"comment_txt\" _v-054581c4=\"\">\n          <span class=\"user_name\" _v-054581c4=\"\">{{item.comments.nickName}}：</span>\n          <span _v-054581c4=\"\">{{item.comments.content}}</span>\n        </div>\n      </div>\n    </div>\n  </a>\n</div>\n";
-=======
 	var require;/* WEBPACK VAR INJECTION */(function(process, global) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
@@ -12083,7 +11353,6 @@
 	 *            See https://raw.githubusercontent.com/stefanpenner/es6-promise/master/LICENSE
 	 * @version   4.1.1
 	 */
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	(function (global, factory) {
 		 true ? module.exports = factory() :
@@ -12095,22 +11364,6 @@
 	  var type = typeof x;
 	  return x !== null && (type === 'object' || type === 'function');
 	}
-<<<<<<< HEAD
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-0561b0c6/bd_goods_5.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 
 	function isFunction(x) {
 	  return typeof x === 'function';
@@ -12144,7 +11397,6 @@
 	    } else {
 	      scheduleFlush();
 	    }
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 	};
 
@@ -12156,26 +11408,6 @@
 	  asap = asapFn;
 	}
 
-<<<<<<< HEAD
-	// load the styles
-	var content = __webpack_require__(209);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0561b0c6&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_5.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0561b0c6&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_5.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-=======
 	var browserWindow = typeof window !== 'undefined' ? window : undefined;
 	var browserGlobal = browserWindow || {};
 	var BrowserMutationObserver = browserGlobal.MutationObserver || browserGlobal.WebKitMutationObserver;
@@ -12191,7 +11423,6 @@
 	  return function () {
 	    return process.nextTick(flush);
 	  };
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	}
 
 	// vertx
@@ -12211,15 +11442,10 @@
 	  var node = document.createTextNode('');
 	  observer.observe(node, { characterData: true });
 
-<<<<<<< HEAD
-	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy[_v-0561b0c6] {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail[_v-0561b0c6] {\n    width: 100%;\n    display: block;\n    position: relative; }\n\n.related-item-list-new.swiper-container[_v-0561b0c6] {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list-new .detail.swiper-slide[_v-0561b0c6] {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list-new .detail[_v-0561b0c6] {\n  text-align: left; }\n  .related-item-list-new .detail .goods_img_size[_v-0561b0c6] {\n    width: 120px;\n    height: 120px;\n    position: relative; }\n    .related-item-list-new .detail .goods_img_size .limitTag[_v-0561b0c6] {\n      height: 16px;\n      background: url(//pic.davdian.com/free/2017/06/07/limitTag.png) 0 0 no-repeat;\n      background-size: 100% 100%;\n      position: absolute;\n      left: 1px;\n      bottom: 0;\n      font-size: 10px;\n      color: #FFF;\n      text-align: center;\n      line-height: 16px;\n      display: inline-block;\n      padding: 0 11px 0 6px; }\n  .related-item-list-new .detail .goods_img_size[_v-0561b0c6]:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    border: 1px solid #ddd;\n    width: 100%;\n    height: 100%;\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n         box-sizing: border-box; }\n  .related-item-list-new .detail .new_name1[_v-0561b0c6] {\n    font-size: 13px;\n    margin: 10px 0;\n    text-overflow: ellipsis;\n    height: 18px;\n    white-space: nowrap;\n    line-height: 18px;\n    overflow: hidden;\n    color: #666;\n    padding-right: 25px; }\n  .related-item-list-new .detail .price1[_v-0561b0c6] {\n    line-height: 21px;\n    height: 21px;\n    overflow: hidden;\n    margin-bottom: 4px; }\n    .related-item-list-new .detail .price1 .current-price1[_v-0561b0c6] {\n      font-size: 17px;\n      color: #FF4A7D;\n      float: left; }\n    .related-item-list-new .detail .price1 .original-price1[_v-0561b0c6] {\n      font-size: 9px;\n      color: #999;\n      text-decoration: line-through;\n      float: left;\n      padding-left: 5px;\n      padding-top: 0.02rem; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list-new .detail .goods_img_size[_v-0561b0c6]:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */\n    border-radius: 8px; } }\n\n.df_new_title[_v-0561b0c6] {\n  position: relative;\n  height: 44px; }\n\n.df_new_title[_v-0561b0c6]:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title[_v-0561b0c6]:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font[_v-0561b0c6] {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font[_v-0561b0c6]:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font[_v-0561b0c6]:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more[_v-0561b0c6] {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span[_v-0561b0c6] {\n  font-size: 12px; }\n", ""]);
-=======
 	  return function () {
 	    node.data = iterations = ++iterations % 2;
 	  };
 	}
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// web worker
 	function useMessageChannel() {
@@ -12463,52 +11689,16 @@
 	  publish(promise);
 	}
 
-<<<<<<< HEAD
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-0561b0c6=\"\">\n  <tt_com_0 :data=\"data\" _v-0561b0c6=\"\"></tt_com_0>\n  <div _v-0561b0c6=\"\">\n      <div class=\"swiper-container related-item-list-new swiper-container-horizontal swiper-container-free-mode\" _v-0561b0c6=\"\">\n        <div class=\"swiper-wrapper\" _v-0561b0c6=\"\">\n          <div v-for=\"item in data.body.dataList\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-0561b0c6=\"\">\n            <a :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-0561b0c6=\"\">\n              <div class=\"goods_img_size\" _v-0561b0c6=\"\">\n                <img :src=\"item.imageUrl\" _v-0561b0c6=\"\">\n                <div v-if=\"item.promotionLabel\" class=\"limitTag\" _v-0561b0c6=\"\">{{item.promotionLabel}}</div>\n              </div>\n              <div class=\"new_name1\" _v-0561b0c6=\"\">{{ item.title }}</div>\n              <div class=\"price1\" _v-0561b0c6=\"\">\n                <span class=\"current-price1\" _v-0561b0c6=\"\"><span style=\"font-size: 12px;\" _v-0561b0c6=\"\">¥ </span>{{item.nowPrice}}</span>\n              </div>\n            </a>\n          </div>\n          <div v-if=\"data.body.more\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-0561b0c6=\"\">\n            <a :href=\"data.body.command.content\" position=\"more\" _v-0561b0c6=\"\">\n              <div class=\"goods_img_size\" _v-0561b0c6=\"\">\n                <img src=\"//pic.davdian.com/free/2016/12/20/300_300_2f12c4229c5444864431d2cd8cd1bdb3.jpg\" _v-0561b0c6=\"\">\n              </div>\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n</div>\n";
-=======
 	function fulfill(promise, value) {
 	  if (promise._state !== PENDING) {
 	    return;
 	  }
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	  promise._result = value;
 	  promise._state = FULFILLED;
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(213)
-	__vue_script__ = __webpack_require__(215)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_goods_7.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(216)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-052952c2/bd_goods_7.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 	  if (promise._subscribers.length !== 0) {
 	    asap(publish, promise);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 	}
 
@@ -12519,28 +11709,7 @@
 	  promise._state = REJECTED;
 	  promise._result = reason;
 
-<<<<<<< HEAD
-	// load the styles
-	var content = __webpack_require__(214);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-052952c2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_7.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-052952c2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_7.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-=======
 	  asap(publishRejection, promise);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	}
 
 	function subscribe(parent, child, onFulfillment, onRejection) {
@@ -12553,15 +11722,10 @@
 	  _subscribers[length + FULFILLED] = onFulfillment;
 	  _subscribers[length + REJECTED] = onRejection;
 
-<<<<<<< HEAD
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.f_l[_v-052952c2] {\n  float: left;\n}\n\n.newOriginal_price[_v-052952c2] {\n  font-size: 14px;\n}\n\n.list_style[_v-052952c2] {\n  /*height: 130px;*/\n}\n\nul li[_v-052952c2] {\n  padding: 0 10px 20px 10px;\n  height:140px;\n  position: relative;\n  overflow: hidden;\n}\n\nul li.online[_v-052952c2]:after {\n  content: \"\";\n  display: block;\n  background-color: #DDDDDD;\n  -webkit-transform: scale(0.5) translateX(280px);\n  -ms-transform: scale(0.5) translateX(280px);\n  transform: scale(0.5) translateX(280px);\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  bottom: 0;\n  z-index: 1;\n}\n\nul li .img_container[_v-052952c2] {\n  position: relative;\n}\n\nul li .img_container_inner[_v-052952c2] {\n  width: 140px;\n  position: relative;\n}\n\nul li .img_container_inner div[_v-052952c2] {\n  height: 60px;\n  width: 60px;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  margin: auto auto;\n  font-size: 14px;\n  color: #FFF;\n  text-align: center;\n  line-height: 60px;\n}\n\nul li .order_good_info_container[_v-052952c2] {\n  position: absolute;\n  padding-left: 150px;\n  top: 0;\n  padding-top: 10px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.order_good_name[_v-052952c2] {\n  font-size: 15px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  /*display: -webkit-box;*/\n  /*-webkit-line-clamp: 2;*/\n  /*-webkit-box-orient: vertical;*/\n  line-height: 20px;\n  color: #333333;\n}\n\n.order_good_name_in[_v-052952c2] {\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 3;\n  -webkit-box-orient: vertical;\n  font-size: 12px;\n  overflow: hidden;\n  color: #999999;\n  height: 51px;\n  line-height: 18px;\n  padding-top: 10px;\n  font-weight: 300;\n}\n\n.order_good_price[_v-052952c2] {\n  height: 28px;\n  line-height: 28px;\n  color: #FF4A7D;\n  margin-top: 6px;\n}\n.order_good_price > span[_v-052952c2]:nth-of-type(1){\n  font-weight: 500;\n}\n\n.price_symbol[_v-052952c2] {\n  font-size: 14px;\n  font-style: normal;\n}\n\n.price_symbol + span[_v-052952c2] {\n  font-size: 20px;\n}\n\n.membership_crown_pre[_v-052952c2] {\n  color: #999999;\n  text-decoration: line-through;\n  font-size: 12px;\n  margin-left: 5px;\n}\n\n.membership_crown .membership_crown_pre em[_v-052952c2] {\n  font-size: 10px;\n}\n\n.membership_crown[_v-052952c2] {\n  font-size: 12px;\n  color: #D6B471;\n  display: inline-block;\n  margin-left: 5px;\n  font-weight: 300;\n}\n\n.membership_crown em[_v-052952c2] {\n  font-size: 10px;\n  font-style: normal;\n}\n\n.tipswrap[_v-052952c2] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.51);\n  z-index: 99;\n}\n\n.tipswrap .tipsdiv[_v-052952c2] {\n  width: 72%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  overflow: hidden;\n  min-height: 20px;\n  max-width: 480px;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n\n.tipswrap .tipsdiv img[_v-052952c2] {\n  width: 100%;\n}\n\n.tipswrap .tipsdiv div[_v-052952c2] {\n  width: 100%;\n  height: 13%;\n  position: absolute;\n  bottom: 0;\n}\n\n.progress_bar[_v-052952c2] {\n  position: absolute;\n  width: 100%;\n  bottom: 20px;\n}\n\n.remain_btns_click[_v-052952c2] {\n  width: 90px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  bottom: 13px;\n  z-index: 2;\n}\n", ""]);
-=======
 	  if (length === 0 && parent._state) {
 	    asap(publish, parent);
 	  }
 	}
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	function publish(promise) {
 	  var subscribers = promise._subscribers;
@@ -12630,22 +11794,6 @@
 	    value = detail;
 	    succeeded = true;
 	  }
-<<<<<<< HEAD
-	  // </script>
-
-	};
-
-/***/ },
-/* 216 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-052952c2=\"\">\n  <tt_com_0 :data=\"data\" _v-052952c2=\"\"></tt_com_0>\n  <ul _v-052952c2=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-052952c2=\"\">\n      <a :href=\"item.command.content\" _v-052952c2=\"\">\n        <div class=\"img_container\" _v-052952c2=\"\">\n          <div class=\"img_container_inner\" _v-052952c2=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-052952c2=\"\">\n          </div>\n          <div class=\"order_good_info_container\" _v-052952c2=\"\">\n            <div class=\"order_good_name\" _v-052952c2=\"\">{{item.title}}</div>\n            <div class=\"order_good_name_in\" _v-052952c2=\"\">{{item.msg}}</div>\n            <div class=\"order_good_price\" _v-052952c2=\"\">\n              <span _v-052952c2=\"\"><em class=\"price_symbol\" _v-052952c2=\"\">￥</em><span _v-052952c2=\"\">{{item.nowPrice}}</span></span><span v-if=\"item.memReturn\" class=\"membership_crown\" _v-052952c2=\"\">会员返<em _v-052952c2=\"\">￥</em>{{item.memReturn}}</span><span v-if=\"item.prePrice\" class=\"membership_crown_pre\" _v-052952c2=\"\">\n            市场价<em _v-052952c2=\"\">￥</em>{{item.prePrice}}</span>\n            </div>\n          </div>\n        </div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-052952c2=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-052952c2=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-052952c2=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-052952c2=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-052952c2=\"\"></div>\n    </div>\n  </div>\n</div>\n";
-
-/***/ },
-/* 217 */
-/***/ function(module, exports, __webpack_require__) {
-=======
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	  if (promise._state !== PENDING) {
 	    // noop
@@ -12659,22 +11807,6 @@
 	      reject(promise, value);
 	    }
 	}
-<<<<<<< HEAD
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-ea627162/bd_menu_0.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 
 	function initializePromise(promise, resolver) {
 	  try {
@@ -12685,7 +11817,6 @@
 	    });
 	  } catch (e) {
 	    reject(promise, e);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 	}
 
@@ -12705,40 +11836,8 @@
 	  this._instanceConstructor = Constructor;
 	  this.promise = new Constructor(noop);
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(220)
-	__vue_script__ = __webpack_require__(222)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/tt_com_1.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(223)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-7a16fe82/tt_com_1.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 	  if (!this.promise[PROMISE_ID]) {
 	    makePromise(this.promise);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 
 	  if (isArray(input)) {
@@ -12831,41 +11930,7 @@
 	  rejected with the reason of the first passed promise to be rejected. It casts all
 	  elements of the passed iterable to promises as it runs this algorithm.
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(225)
-	__vue_script__ = __webpack_require__(227)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_web_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(229)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-3c2f0c54/bd_web_0.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-=======
 	  Example:
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	  ```javascript
 	  let promise1 = resolve(1);
@@ -13038,25 +12103,6 @@
 	function needsResolver() {
 	  throw new TypeError('You must pass a resolver function as the first argument to the promise constructor');
 	}
-<<<<<<< HEAD
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-09b3c20a/cover_0.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-=======
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	function needsNew() {
 	  throw new TypeError("Failed to construct 'Promise': Please use the 'new' operator, this object constructor cannot be called as a function.");
@@ -13127,37 +12173,6 @@
 	      xhr.setRequestHeader('Accept', 'application/json');
 	      xhr.send();
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(236)
-	__vue_script__ = __webpack_require__(238)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/title_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(239)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-321953eb/title_0.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-=======
 	      function handler() {
 	        if (this.readyState === this.DONE) {
 	          if (this.status === 200) {
@@ -13168,7 +12183,6 @@
 	        }
 	      };
 	    });
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 	  }
 
 	  getJSON('/posts.json').then(function(json) {
@@ -13502,41 +12516,7 @@
 /* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(241)
-	__vue_script__ = __webpack_require__(243)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/popularity_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(244)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-5b74c5b4/popularity_0.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-=======
 	'use strict';
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
@@ -14037,11 +13017,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-26b56ef0/course_desc_0.vue"
-=======
-	  var id = "_v-f832942c/index.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-81e18c02/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14065,13 +13041,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-26b56ef0&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./course_desc_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-26b56ef0&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./course_desc_0.vue");
-=======
 			module.hot.accept("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
 				var newContent = require("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -14089,11 +13060,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, ".no_discuss[_v-26b56ef0] {\n  padding-bottom: 20px;\n  text-align: center;\n  /*margin-top: -15px;*/ }\n  .no_discuss img[_v-26b56ef0] {\n    width: 120px;\n    display: inline-block; }\n  .no_discuss p[_v-26b56ef0] {\n    color: #666;\n    margin-top: .3rem;\n    padding-bottom: .1rem;\n    width: 100%;\n    text-align: center;\n    font-size: .14rem;\n    display: inline-block; }\n  .no_discuss .discuss_top_write[_v-26b56ef0] {\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n    .no_discuss .discuss_top_write img[_v-26b56ef0] {\n      width: 11px;\n      margin-left: 0; }\n  .no_discuss .discuss_top_no_write[_v-26b56ef0] {\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n\n.discuss_top[_v-26b56ef0] {\n  padding: 10px;\n  padding-top: 15px;\n  position: relative; }\n  .discuss_top .discuss_top_write[_v-26b56ef0] {\n    float: left;\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 130px;\n    font-size: 12px; }\n    .discuss_top .discuss_top_write img[_v-26b56ef0] {\n      width: 11px; }\n  .discuss_top .discuss_top_no_write[_v-26b56ef0] {\n    float: left;\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 139px;\n    font-size: 12px; }\n  .discuss_top .discuss_top_alldiscuss[_v-26b56ef0] {\n    float: right;\n    color: #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-right: 10px;\n    font-size: 12px; }\n  .discuss_top .icon[_v-26b56ef0] {\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n    transform: rotate(45deg);\n    background: none;\n    top: 22px;\n    position: absolute;\n    right: 11px; }\n\n.discuss_top[_v-26b56ef0]:after {\n  content: \"\";\n  height: 0;\n  clear: both;\n  display: table; }\n\n.discuss_container[_v-26b56ef0] {\n  padding-top: 0.21rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  padding-bottom: 0.15rem;\n  font-size: 0;\n  background: #fff;\n  border-bottom: 0.5px solid #F1F1F1; }\n\n.discuss_container_noborder[_v-26b56ef0] {\n  border-bottom: 0px; }\n\n.discuss_title .title_all[_v-26b56ef0] {\n  display: inline-block;\n  vertical-align: middle; }\n\n.discuss_title .title_img[_v-26b56ef0] {\n  width: 0.24rem;\n  height: 0.24rem;\n  border-radius: 50%;\n  background: red; }\n\n.discuss_title .title_name[_v-26b56ef0] {\n  font-size: 0.14rem;\n  color: #666666;\n  margin-left: 0.05rem; }\n\n.discuss_title .title_time[_v-26b56ef0] {\n  font-size: 0.12rem;\n  margin-left: 0.03rem;\n  color: #999999; }\n\n.discuss_title .title_star[_v-26b56ef0] {\n  width: 0.59rem;\n  float: right;\n  margin-top: 0.06rem; }\n\n.discuss_content[_v-26b56ef0] {\n  font-size: 0.13rem;\n  color: #333333;\n  margin-top: 0.1rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 5;\n  display: -webkit-box; }\n\n.discuss_seeAll[_v-26b56ef0] {\n  width: 0.8rem;\n  font-size: 0.13rem;\n  color: #FF4A7D;\n  padding-top: 0.1rem; }\n\n.discuss_imgContainer[_v-26b56ef0] {\n  font-size: 0;\n  width: 3.1rem;\n  /*min-height: 1rem;*/\n  margin-top: 0.1rem; }\n  .discuss_imgContainer .discuss_img[_v-26b56ef0] {\n    width: 0.9rem;\n    height: 0.9rem;\n    background: red;\n    display: inline-block;\n    vertical-align: top;\n    margin-right: 0.1rem;\n    margin-bottom: 0.1rem;\n    border-radius: 3px; }\n\n.discuss_share[_v-26b56ef0] {\n  width: 100%;\n  height: 0.16rem; }\n  .discuss_share .discuss_share_container[_v-26b56ef0] {\n    height: 0.16rem;\n    float: right;\n    font-size: 0.11rem;\n    color: #999999; }\n    .discuss_share .discuss_share_container img[_v-26b56ef0] {\n      width: 0.15rem; }\n\n.discuss_all[_v-26b56ef0] {\n  width: 100%;\n  color: #999999;\n  text-align: center;\n  height: 0.5rem; }\n  .discuss_all .discuss_all_content[_v-26b56ef0] {\n    display: inline-block;\n    border-bottom: 1px solid #999;\n    height: 19px; }\n\n.attention_all[_v-26b56ef0] {\n  font-size: 0;\n  display: inline-block;\n  vertical-align: middle; }\n\n.attention_yes[_v-26b56ef0] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  /*border: 0.5px solid #FF4A7D;*/\n  border-radius: 13px; }\n\n.attention_yes1[_v-26b56ef0] {\n  width: 0.45rem !important;\n  height: 0.18rem !important;\n  display: inline-block;\n  vertical-align: top; }\n\n.attention_no[_v-26b56ef0] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #fff;\n  background: #D8D8D8;\n  border: 0.5px solid #D8D8D8;\n  border-radius: 13px; }\n\n.maskAttention[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background: #000;\n  opacity: 0.4;\n  z-index: 1001; }\n\n.contentAttention[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 1202;\n  margin: auto;\n  background: #000;\n  width: 2.7rem;\n  opacity: 0.65;\n  border-radius: 6px;\n  color: #fff;\n  height: 0.72rem; }\n\n.contentAttention h1[_v-26b56ef0] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center;\n  margin-top: 0.15rem; }\n\n.contentAttention p[_v-26b56ef0] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center; }\n\n.course_desc_0 .class_introduce_tit[_v-26b56ef0] {\n  text-align: center !important;\n  line-height: 15px; }\n\n.course_desc_0 .class_introduce_tit .class_dis[_v-26b56ef0], .course_desc_0 .class_introduce_tit .theater_dis[_v-26b56ef0] {\n  display: inline-block !important; }\n\n.course_desc_0 .class_introduce_tit .class_dis .active[_v-26b56ef0] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .theater_dis .active[_v-26b56ef0] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .class_dis span[_v-26b56ef0] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .class_introduce_tit .theater_dis span[_v-26b56ef0] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .fixStyle[_v-26b56ef0] {\n  position: fixed;\n  top: 44px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0 .fixStyle1[_v-26b56ef0] {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0[_v-26b56ef0] {\n  position: relative; }\n\n.introduceGuide[_v-26b56ef0] {\n  position: absolute;\n  top: -14px;\n  width: 3.2rem;\n  right: 21px;\n  z-index: 1000; }\n\n.introduceGuide1[_v-26b56ef0] {\n  position: absolute;\n  left: 0;\n  width: 248px;\n  z-index: 1000;\n  bottom: -10px; }\n\n.introduceGuideMask[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 60px;\n  left: 0;\n  background: #000000;\n  opacity: 0.6;\n  z-index: 999; }\n\n.introduceGuidebtn[_v-26b56ef0] {\n  width: 120px;\n  height: 40px;\n  position: fixed;\n  left: 50%;\n  margin-left: -60px;\n  bottom: 60px;\n  z-index: 1000;\n  background: -webkit-linear-gradient(left, #FF7C7C, #FF6A8B);\n  border-radius: 100px;\n  text-align: center;\n  line-height: 40px;\n  color: #fff; }\n", ""]);
-=======
 	exports.push([module.id, ".vux-fade-enter-active,\n.vux-fade-leave-active {\n  opacity: 1;\n  -webkit-transition: opacity linear 0.2s;\n  transition: opacity linear 0.2s;\n}\n.vux-fade-enter,\n.vux-fade-leave-to {\n  opacity: 0;\n}\n.vux-dialog-enter-active,\n.vux-dialog-leave-active {\n  opacity: 1;\n  -webkit-transition-duration: 400ms;\n          transition-duration: 400ms;\n  -webkit-transform: translate(-50%, -50%) scale(1) !important;\n      -ms-transform: translate(-50%, -50%) scale(1) !important;\n          transform: translate(-50%, -50%) scale(1) !important;\n  -webkit-transition-property: opacity, -webkit-transform!important;\n  transition-property: opacity, -webkit-transform!important;\n  transition-property: transform, opacity!important;\n  transition-property: transform, opacity, -webkit-transform!important;\n}\n.vux-dialog-leave-active {\n  -webkit-transition-duration: 300ms;\n          transition-duration: 300ms;\n}\n.vux-dialog-enter {\n  opacity: 0;\n  -webkit-transform: translate(-50%, -50%) scale(1.185) !important;\n      -ms-transform: translate(-50%, -50%) scale(1.185) !important;\n          transform: translate(-50%, -50%) scale(1.185) !important;\n}\n.vux-dialog-leave-active {\n  opacity: 0;\n  -webkit-transform: translate(-50%, -50%) scale(0.85) !important;\n      -ms-transform: translate(-50%, -50%) scale(0.85) !important;\n          transform: translate(-50%, -50%) scale(0.85) !important;\n}\n.vux-mask-enter,\n.vux-mask-leave-active {\n  opacity: 0;\n}\n.vux-mask-leave-active,\n.vux-mask-enter-active {\n  -webkit-transition: opacity 300ms;\n  transition: opacity 300ms;\n}\n/**\n* actionsheet\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/* alias */\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* form-preview\n*/\n/**\n* load-more\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* toast\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* search\n*/\n/**\n* radio\n*/\n.weui-mask {\n  position: fixed;\n  z-index: 1000;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background: rgba(0, 0, 0, 0.6);\n}\n.weui-mask_transparent {\n  position: fixed;\n  z-index: 1000;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n}\n.weui-dialog {\n  position: fixed;\n  z-index: 5000;\n  width: 80%;\n  max-width: 300px;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n      -ms-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  background-color: #FFFFFF;\n  text-align: center;\n  border-radius: 3px;\n  overflow: hidden;\n}\n.weui-dialog__hd {\n  padding: 1.3em 1.6em 0.5em;\n}\n.weui-dialog__title {\n  font-weight: 400;\n  font-size: 18px;\n}\n.weui-dialog__bd {\n  padding: 0 1.6em 0.8em;\n  min-height: 40px;\n  font-size: 15px;\n  line-height: 1.3;\n  word-wrap: break-word;\n  word-break: break-all;\n  color: #999999;\n}\n.weui-dialog__bd:first-child {\n  padding: 2.7em 20px 1.7em;\n  color: #353535;\n}\n.weui-dialog__ft {\n  position: relative;\n  line-height: 48px;\n  font-size: 18px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.weui-dialog__ft:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D5D5D6;\n  color: #D5D5D6;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-dialog__btn {\n  display: block;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  color: #3CC51F;\n  text-decoration: none;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  position: relative;\n}\n.weui-dialog__btn:active {\n  background-color: #EEEEEE;\n}\n.weui-dialog__btn:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 1px;\n  bottom: 0;\n  border-left: 1px solid #D5D5D6;\n  color: #D5D5D6;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleX(0.5);\n      -ms-transform: scaleX(0.5);\n          transform: scaleX(0.5);\n}\n.weui-dialog__btn:first-child:after {\n  display: none;\n}\n.weui-dialog__btn_default {\n  color: #353535;\n}\n.weui-dialog__btn_primary {\n  color: #0BB20C;\n}\n.weui-skin_android .weui-dialog {\n  text-align: left;\n  -webkit-box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);\n          box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);\n}\n.weui-skin_android .weui-dialog__title {\n  font-size: 21px;\n}\n.weui-skin_android .weui-dialog__hd {\n  text-align: left;\n}\n.weui-skin_android .weui-dialog__bd {\n  color: #999999;\n  padding: 0.25em 1.6em 2em;\n  font-size: 17px;\n  text-align: left;\n}\n.weui-skin_android .weui-dialog__bd:first-child {\n  padding: 1.6em 1.6em 2em;\n  color: #353535;\n}\n.weui-skin_android .weui-dialog__ft {\n  display: block;\n  text-align: right;\n  line-height: 42px;\n  font-size: 16px;\n  padding: 0 1.6em 0.7em;\n}\n.weui-skin_android .weui-dialog__ft:after {\n  display: none;\n}\n.weui-skin_android .weui-dialog__btn {\n  display: inline-block;\n  vertical-align: top;\n  padding: 0 .8em;\n}\n.weui-skin_android .weui-dialog__btn:after {\n  display: none;\n}\n.weui-skin_android .weui-dialog__btn:active {\n  background-color: rgba(0, 0, 0, 0.06);\n}\n.weui-skin_android .weui-dialog__btn:visited {\n  background-color: rgba(0, 0, 0, 0.06);\n}\n.weui-skin_android .weui-dialog__btn:last-child {\n  margin-right: -0.8em;\n}\n.weui-skin_android .weui-dialog__btn_default {\n  color: #808080;\n}\n@media screen and (min-width: 1024px) {\n  .weui-dialog {\n    width: 35%;\n  }\n}\n", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -14227,7 +13194,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2a6eedc5/index.vue"
+	  var id = "_v-7a517590/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14623,7 +13590,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-226e80f5/index.vue"
+	  var id = "_v-5d97050a/index.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18038,7 +17005,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-e9b65e2e/index_feed.vue"
+	  var id = "_v-5a56717e/index_feed.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18243,49 +17210,11 @@
 
 	var _cover_ = __webpack_require__(403);
 
-<<<<<<< HEAD
-	module.exports = "\n<div class=\"course_desc_0\" :style=\"styleObject\" _v-26b56ef0=\"\">\n    <div class=\"block\" style=\"width: 100%;height: 47px;\" v-if=\"fixFlag\" _v-26b56ef0=\"\"></div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle: fixFlag}\" v-if=\"!isApp\" _v-26b56ef0=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-26b56ef0=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-26b56ef0=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-26b56ef0=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle1: fixFlag}\" v-if=\"isApp\" _v-26b56ef0=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-26b56ef0=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-26b56ef0=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-26b56ef0=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_intrduce_success\" _v-26b56ef0=\"\"></div>\n    <div v-if=\"class_introduce_left==1\" class=\"class_intrduce_left\" _v-26b56ef0=\"\">\n        <div v-if=\"courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_div\" _v-26b56ef0=\"\">\n            <img :src=\"item.imgUri\" v-for=\"(item,index) in courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_img\" _v-26b56ef0=\"\">\n        </div>\n        <div class=\"left_introduce_text\" _v-26b56ef0=\"\">\n            <p v-html=\"courseDescInfo.courseDesc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==0\" class=\"class_introduce_right\" _v-26b56ef0=\"\">\n        <div class=\"class_introduce_con\" _v-26b56ef0=\"\">\n            <a _v-26b56ef0=\"\">\n                <div class=\"teacher_tit\" _v-26b56ef0=\"\">\n                    <img @click=\"goTeacher(teacherDescInfo.command.content)\" class=\"img\" :src=\"teacherDescInfo.teacherAvatar\" alt=\"\" _v-26b56ef0=\"\">\n                    <div class=\"teacher_dis\" _v-26b56ef0=\"\">\n                        <span class=\"techer\" _v-26b56ef0=\"\">{{teacherDescInfo.teacherName}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != teacherDescInfo.teacherId\" _v-26b56ef0=\"\">\n                        <!-- <div class='attention_yes' v-if='attention==0' @click='attention_yes'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"attention==0\" @click=\"attention_yes\" _v-26b56ef0=\"\">\n                        <div class=\"attention_no\" v-if=\"attention==1\" _v-26b56ef0=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-26b56ef0=\"\">\n                <p v-html=\"teacherDescInfo.teacherDesc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n            </div>\n        </div>\n        <div class=\"class_introduce_con guest_introduce_con\" v-for=\"item in guestList\" _v-26b56ef0=\"\">\n            <a _v-26b56ef0=\"\">\n                <div class=\"teacher_tit\" _v-26b56ef0=\"\">\n                    <img @click=\"goTeacher(item.command.content)\" class=\"img\" :src=\"item.avatar\" alt=\"\" _v-26b56ef0=\"\">\n                    <div class=\"teacher_dis\" _v-26b56ef0=\"\">\n                        <span class=\"techer\" _v-26b56ef0=\"\">{{item.name}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != item.teacherId\" _v-26b56ef0=\"\">\n                        <!-- <div class='attention_yes' v-if='item.followStatus==0' @click='attention_yes_guest(item.teacherId)'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"item.followStatus==0\" @click=\"attention_yes_guest(item.teacherId)\" _v-26b56ef0=\"\">\n                        <div class=\"attention_no\" v-if=\"item.followStatus==1\" _v-26b56ef0=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-26b56ef0=\"\">\n                <p v-html=\"item.desc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n            </div>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==2\" _v-26b56ef0=\"\">\n        <div class=\"discuss_top\" _v-26b56ef0=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==1\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllSignUp.png\" _v-26b56ef0=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==0\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png\" _v-26b56ef0=\"\">\n            <div class=\"discuss_top_write\" @click=\"writeNote\" v-if=\"userTicket==1 &amp;&amp; AppVersionFlag\" _v-26b56ef0=\"\">\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\" _v-26b56ef0=\"\">\n\n            </div>\n            <div class=\"discuss_top_no_write\" v-if=\"userTicket==0 &amp;&amp; AppVersionFlag\" _v-26b56ef0=\"\">\n                报名后才能写笔记哦\n            </div>\n            <div class=\"discuss_top_alldiscuss\" @click=\"allNote\" _v-26b56ef0=\"\">\n                全部笔记\n                <!-- <img src=\"//pic.davdian.com/free/2017/07/26/entry.png\"> -->\n            </div>\n            <i class=\"icon\" _v-26b56ef0=\"\"></i>\n        </div>\n        <div class=\"discuss_container\" v-if=\"notesList.length!=0\" :class=\"{discuss_container_noborder: index == notesList.length-1}\" v-for=\"(item, index) in notesList\" @click.stop=\"show_all(item)\" _v-26b56ef0=\"\">\n            <div class=\"discuss_title\" _v-26b56ef0=\"\">\n                <div class=\"title_img title_all\" :style=\"{'background': 'url(' + item.headImg + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-26b56ef0=\"\"></div>    \n                <div class=\"title_name title_all\" v-text=\"item.userName\" _v-26b56ef0=\"\"></div>\n                <div class=\"title_time title_all\" v-text=\"item.createTime\" _v-26b56ef0=\"\"></div>\n                <img class=\"title_star title_all\" v-if=\"item.score == 1\" src=\"//pic.davdian.com/free/2017/05/09/star_1.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 2\" src=\"//pic.davdian.com/free/2017/05/09/star_2.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 3\" src=\"//pic.davdian.com/free/2017/05/09/star_3.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 4\" src=\"//pic.davdian.com/free/2017/05/09/star_4.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 5\" src=\"//pic.davdian.com/free/2017/05/09/star_5.png\" _v-26b56ef0=\"\">\n            </div>\n            <div class=\"discuss_content\" v-html=\"item.content.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==1\" @click.stop=\"showAll(index)\" _v-26b56ef0=\"\">查看全部</div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==2\" @click.stop=\"showAll1(index)\" _v-26b56ef0=\"\">收起</div>\n            <div class=\"discuss_imgContainer\" _v-26b56ef0=\"\">\n                <div class=\"discuss_img\" :style=\"{'background': 'url(' + item1 + ') center center / cover no-repeat' , 'background-size': 'cover'}\" v-for=\"(item1, index) in item.imgList\" @click=\"showImg(index,item.imgList, item1)\" _v-26b56ef0=\"\"></div>\n            </div>\n            <div class=\"discuss_share\" v-if=\"isApp\" _v-26b56ef0=\"\">\n                <div class=\"discuss_share_container\" @click.stop=\"share(item)\" v-if=\"isApp\" _v-26b56ef0=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/02/07/material-share.png\" _v-26b56ef0=\"\">\n                    <span v-text=\"item.shareNum\" v-if=\"item.shareNum !=0\" _v-26b56ef0=\"\"></span>\n                </div>\n            </div>\n        </div>\n        <!-- <div class='discuss_all'>\n            <div class=\"discuss_all_content\" @click='allNote' v-if='notesList.length!=0'>\n                查看全部{{notesNum}}条听课笔记\n            </div>\n        </div> -->\n        <div class=\"no_discuss\" v-if=\"notesList.length==0\" _v-26b56ef0=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/10/error_img.png\" _v-26b56ef0=\"\">\n            <p _v-26b56ef0=\"\">快来写笔记吧</p>\n            <!-- <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\">\n            </div>\n            <div class='discuss_top_no_write' v-if='userTicket==0 && AppVersionFlag'>\n                报名后才能写笔记哦\n            </div> -->\n        </div>\n    </div>\n    <!-- <div class='maskAttention' v-if='maskAttention'></div> -->\n    <div class=\"contentAttention\" v-if=\"maskAttention\" _v-26b56ef0=\"\">\n        <h1 _v-26b56ef0=\"\">关注成功</h1>\n        <p _v-26b56ef0=\"\">老师开讲新课，我们会悄悄告诉你呦</p>\n    </div>\n\n    <img v-if=\"introduceGuide &amp;&amp; guide==1\" class=\"introduceGuide lectureNnotesAll\" src=\"//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png\" _v-26b56ef0=\"\">\n\n    <div v-if=\"introduceGuide\" class=\"introduceGuideMask\" _v-26b56ef0=\"\"></div>\n    <div v-if=\"introduceGuide\" class=\"introduceGuidebtn\" @click=\"know\" _v-26b56ef0=\"\">知道了</div>\n\n</div>\n";
-=======
 	var cover_0 = _interopRequireWildcard(_cover_);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	var _title_ = __webpack_require__(408);
 
-<<<<<<< HEAD
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(284)
-	__vue_script__ = __webpack_require__(286)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/fire_work.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(288)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-2cd22748/fire_work.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-=======
 	var title_0 = _interopRequireWildcard(_title_);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	var _popularity_ = __webpack_require__(413);
 
@@ -18590,7 +17519,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-a0c318b0/bd_slide_0.vue"
+	  var id = "_v-869a2f9a/bd_slide_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18778,7 +17707,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3dbf3658/bd_icon_0.vue"
+	  var id = "_v-f2949a2e/bd_icon_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18955,11 +17884,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-2b46bb74/dvk1.vue"
-=======
-	  var id = "_v-19dacbb6/tt_com_0.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-7a08e701/tt_com_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -18983,13 +17908,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b46bb74&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk1.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b46bb74&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk1.vue");
-=======
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./tt_com_0.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./tt_com_0.vue");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19007,11 +17927,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk1_container[_v-2b46bb74]{\n    height: 76px;\n    position: relative;\n    padding-bottom: 25px;\n}\n.dvk1_img[_v-2b46bb74]{\n    height: 76px;\n    width: 110px;\n    position: relative;\n    float:left;\n    overflow: hidden;\n    background: #fff;\n    margin-top:2px;\n}\n.dvk1_content[_v-2b46bb74]{\n    vertical-align: top;\n    margin-left: 120px;\n    height: 76px;\n}\n.dvk1_text[_v-2b46bb74]{\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    font-size: 14px;\n    color: #333333;\n    margin-bottom: 5px;\n    line-height: 20px;\n}\n.dvk1_name[_v-2b46bb74]{\n    font-size: 12px;\n    line-height: 16px;\n    color: #999;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk1_share[_v-2b46bb74]{\n    margin-top: 5px;\n    font-size: 12px;\n    line-height:16px;\n    color: #999999;\n    overflow:hidden;\n}\n.dvk1_border[_v-2b46bb74]{\n    border-left: 0.5px solid #999;\n    margin-left: 5px;\n    /*margin-right: 0.07rem;*/\n}\n.dvk1_imgNav[_v-2b46bb74]{\n    position: absolute;\n    top: 30px;\n    left: 30px;\n    width: 30px;\n    height: 30px;\n}\n.dvk1_share_left[_v-2b46bb74]{\n\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk1_money[_v-2b46bb74]{\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    height: 18px;\n    line-height: 20px;\n    padding-left: 3px;\n    padding-right: 3px;\n    text-align: center;\n    color: #fff;\n    font-size: 11px;\n    background: #FF4A7D;\n}\n.circle[_v-2b46bb74]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2b46bb74] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n    border-radius: 4px;\n}\n.dvk1_mask[_v-2b46bb74]{\n  height: 79px;\n  padding: 0 10px;\n}\n.dvk1_line[_v-2b46bb74]{\n  height: 12px;\n  width: 1px;\n  background: #E1E1E1;\n  margin-left: 10px;\n}\n.dvk1_share>span[_v-2b46bb74]{\n  float: left;\n}\n.dvk1_share_left[_v-2b46bb74]{\n  margin-left: 10px;\n}\n", ""]);
-=======
 	exports.push([module.id, ".new_span {\n  display: -webkit-box;\n  height: 44px;\n  overflow: hidden;\n  width: -webkit-calc(100% - 80px);\n  width: calc(100% - 80px);\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 1;\n  display: -webkit-box; }\n", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -19155,11 +18071,7 @@
 /* 266 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b46bb74=\"\">\n    <tt_com_0 :data=\"data\" _v-2b46bb74=\"\"></tt_com_0>\n    <div class=\"dvk1_container\" :style=\"styleObject\" _v-2b46bb74=\"\">\n      <div class=\"dvk1_mask\" _v-2b46bb74=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b46bb74=\"\">\n          <div class=\"dvk1_img\" _v-2b46bb74=\"\">\n            <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b46bb74=\"\">\n            <div class=\"dvk1_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b46bb74=\"\"></div>\n          </div>\n          <div class=\"dvk1_content\" _v-2b46bb74=\"\">\n            <div class=\"dvk1_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b46bb74=\"\"></div>\n            <div class=\"dvk1_name\" _v-2b46bb74=\"\">\n              <span v-text=\"data.body.dataList[0].teacherName\" _v-2b46bb74=\"\"></span>\n            </div>\n            <div class=\"dvk1_share\" _v-2b46bb74=\"\">\n              <span class=\"dvk1_share_right\" _v-2b46bb74=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b46bb74=\"\"></span></span>\n              <span class=\"dvk1_line\" _v-2b46bb74=\"\"></span>\n              <span class=\"dvk1_share_left\" _v-2b46bb74=\"\">\n                <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b46bb74=\"\"></span>\n                <span v-if=\"livetext(data.body.dataList[0])\" _v-2b46bb74=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b46bb74=\"\"></span>\n              </span>\n            </div>\n          </div>\n        </a>\n      </div>\n    </div>\n</div>\n";
-=======
 	module.exports = "\n<div>\n    <span v-if='data.title && data.title.name && data.title.name == \"猜你喜欢\"' id='tt_com_0_like'></span>\n    <a v-if=\"show\" :href=\"data.title.command.content\" @click=\"clickAnalysis\" position=\"0\">\n        <div  v-if = \"data.title != undefined\" class=\"df_new_title_2\" :style=\"[styleObject,styleTop]\">\n            <span class=\"df_new_font new_span\" v-if='data.title && data.title.name' v-text='data.title.name'></span>\n            <!--<a  :href=\"data.title.btn.command.content\">-->\n                <span class=\"more\" v-if = \"data.title.btn != undefined\" style=\"width: 40px;display: inline-block;margin-top: -44px;\">\n                    <!-- <a  :href=\"data.title.btn.command.content\" @click=\"clickAnalysis\"> -->\n                    <span v-if='data.title && data.title.btn && data.title.btn.name' v-text='data.title.btn.name'></span> <i class=\"dav_icon_arrow\"></i>\n                    <!-- </a> -->\n                </span>\n        </div>\n    </a>\n\n\n    <div  v-if = \"data.title != undefined && !show\" class=\"df_new_title_2\" :style=\"[styleObject,styleTop]\">\n        <span class=\"df_new_font new_span\" v-if='data.title && data.title.name' v-text='data.title.name'></span>\n        <span class=\"more\" v-if = \"data.title.btn != undefined\" style=\"width: 40px;display: inline-block;margin-top: -44px;\">\n            <a  :href=\"data.title.btn.command.content\" @click=\"clickAnalysis\" position=\"0\">\n                <span v-if='data.title && data.title.btn && data.title.btn.name' v-text='data.title.btn.name'></span> <i class=\"dav_icon_arrow\"></i>\n            </a>\n        </span>\n    </div>\n</div>\n";
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 267 */
@@ -19195,11 +18107,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-2b2a8c72/dvk2.vue"
-=======
-	  var id = "_v-262b2890/bd_broadcast_0.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-8b68ba7a/bd_broadcast_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19223,13 +18131,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b2a8c72&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk2.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b2a8c72&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk2.vue");
-=======
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_broadcast_0.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_broadcast_0.vue");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19247,11 +18150,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk2_container[_v-2b2a8c72]{\n    height: 3.06rem;\n    width: 100%;\n    background: #fff;\n    padding-top: 0.1rem;\n}\n.dvk2_img[_v-2b2a8c72]{\n    width: 3.55rem;\n    height: 2.52rem;\n    margin-left: 0.1rem;\n    position: relative;\n}\n.dvk2_money[_v-2b2a8c72]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.dvk2_startTime[_v-2b2a8c72]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.2rem;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.35)),color-stop(100%,rgba(0,0,0,.7)),color-stop(100%,#fff));\n    bottom: 0;\n}\n.dvk2_text[_v-2b2a8c72]{\n    width: 3.55rem;\n    height: 0.4rem;\n    margin-left: 0.1rem;\n    margin-top: 0.05rem;\n}\n.dvk2_text_title[_v-2b2a8c72]{\n    width: 100%;\n    height: 0.17rem;\n    line-height: 0.17rem;\n    font-size: 0.12rem;\n    color: #333333;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk2_text_content[_v-2b2a8c72]{\n    width: 100%;\n    height: 0.17rem;\n    line-height: 0.17rem;\n    font-size: 0.11rem;\n    color: #999999;\n}\n.dvk2_text_name[_v-2b2a8c72]{\n    float: left;\n    width: 2.7rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk2_text_popular[_v-2b2a8c72]{\n    float: right;\n}\n.circle[_v-2b2a8c72]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2b2a8c72] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
-=======
 	exports.push([module.id, ".broadcast {\n  width: 100%;\n  height: 64px;\n  background: #FFF;\n  position: relative;\n  margin-top: 1px; }\n\n.broadcast_img {\n  text-align: center;\n  width: 69px;\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 3; }\n\n.broadcast_img img {\n  width: 38px;\n  margin-top: 15px; }\n\n.headline {\n  color: #FF4A7D;\n  margin-right: 5px;\n  white-space: nowrap; }\n\n.broadcast_title_txt {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  color: #333; }\n\n.broadcast_title {\n  overflow: hidden;\n  height: 64px;\n  position: relative;\n  padding-left: 69px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box; }\n\n.swiper {\n  width: 100%;\n  height: 100%;\n  padding: 13px 15px 0 15px;\n  display: block;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  text-align: left; }\n\n.rights {\n  height: 100%;\n  float: right;\n  width: 5px; }\n\n.broadcast_string {\n  height: 38px;\n  width: 1px;\n  background: #eee;\n  display: inline-block;\n  position: absolute;\n  right: 0;\n  top: 13px; }\n\n.broadcast_title_top {\n  width: 100%;\n  font-size: 15px; }\n\n.broadcast_title_bottom {\n  width: 100%;\n  font-size: 12px;\n  color: #999;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  margin-right: 5px;\n  line-height: 22px; }\n", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -19410,11 +18309,7 @@
 /* 273 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b2a8c72=\"\">\n    <tt_com_0 :data=\"data\" _v-2b2a8c72=\"\"></tt_com_0>\n    <div class=\"dvk2_container\" :style=\"styleObject\" _v-2b2a8c72=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b2a8c72=\"\">\n           <div class=\"dvk2_img\" _v-2b2a8c72=\"\">\n                <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b2a8c72=\"\">\n               <div class=\"dvk2_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b2a8c72=\"\"></div>\n               <div class=\"dvk2_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-2b2a8c72=\"\">\n                   <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b2a8c72=\"\"></span> \n                    <span v-if=\"livetext(data.body.dataList[0])\" _v-2b2a8c72=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                    <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b2a8c72=\"\"></span>\n               </div>\n           </div>\n           <div class=\"dvk2_text\" _v-2b2a8c72=\"\">\n               <div class=\"dvk2_text_title\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b2a8c72=\"\"></div>\n               <div class=\"dvk2_text_content\" _v-2b2a8c72=\"\">\n                   <span class=\"dvk2_text_name\" v-text=\"data.body.dataList[0].teacherName\" _v-2b2a8c72=\"\"></span>\n                   <span class=\"dvk2_text_popular\" _v-2b2a8c72=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b2a8c72=\"\"></span></span>\n               </div>\n           </div>\n        </a>\n    </div>\n</div>\n";
-=======
 	module.exports = "\n<div class=\"broadcast\" style=\"height: 64px;\">\n    <div class=\"broadcast_img\">\n        <img :src = \"data.body.titleImageUrl\">\n        <span class=\"broadcast_string\"></span>\n    </div>\n    <div class=\"broadcast_title swiper-container swiper-container-vertical\">\n        <div class=\"swiper_wrap swiper-wrapper\">\n            <div v-for = \"item in data.body.dataList\" class=\"swiper-slide swiper-no-swiping\" style=\"height: 64px;\">\n                <a :href=\"item.command.content\" class=\"swiper\" @click=\"clickAnalysis\" :position=\"item.position\">\n                    <div class = \"broadcast_title_top\">\n                        <span class=\"headline\">{{item.noticeText}}</span><span class=\"broadcast_title_txt\">{{ item.title }}</span>\n                    </div>\n                    <p class=\"broadcast_title_bottom text_ellipsis\">{{ item.subTitle }}</p>\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n";
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 274 */
@@ -19444,11 +18339,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-2b0e5d70/dvk3.vue"
-=======
-	  var id = "_v-5f6a8388/bd_timer_0.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-45419a72/bd_timer_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19472,13 +18363,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b0e5d70&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk3.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b0e5d70&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk3.vue");
-=======
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_timer_0.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_timer_0.vue");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19496,11 +18382,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk3_container[_v-2b0e5d70]{\n    height:2.15rem;\n    width: 100%;\n    background: #fff;\n}\n.dvk3_content1[_v-2b0e5d70]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 1.95rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk3_content2[_v-2b0e5d70]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 1.95rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk3_img[_v-2b0e5d70]{\n    height: 1.2rem;\n    background: #fff;\n    position: relative;\n}\n.dvk3_text[_v-2b0e5d70]{\n    width: 1.52rem;\n    /*height: 0.31rem;*/\n    line-height: 0.15rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n}\n.dvk3_detail[_v-2b0e5d70]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.08rem;\n    width: 1.52rem;\n}\n.dvk3_name[_v-2b0e5d70]{\n    float: left;\n    width: 0.9rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk3_popular[_v-2b0e5d70]{\n    float: right;\n}\n.dvk3_money[_v-2b0e5d70]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.dvk3_startTime[_v-2b0e5d70]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.2rem;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.35)),color-stop(100%,rgba(0,0,0,.7)),color-stop(100%,#fff));\n    bottom: 0;\n}\n.dvk3_startTimeLine[_v-2b0e5d70]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.24rem;\n    background: url('//pic.davdian.com/free/2017/03/06/bg_line1.png');\n    background-size:100% 100%;\n    bottom: 0;\n}\n.dvk3_circle_green[_v-2b0e5d70]{\n    width: 0.05rem;\n    height: 0.05rem;\n    margin-bottom: 0.02rem;\n    margin-right: 0.04rem;\n    border-radius: 50%;\n    display: inline-block;\n    border:0.5px solid #979797;\n    background: #92FDE0;\n}\n.dvk3_name_titlepic[_v-2b0e5d70]{\n    width: 0.14rem;\n    margin-left: 0.03rem;\n    margin-bottom: 0.02rem;\n}\n.circle[_v-2b0e5d70]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2b0e5d70] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
-=======
 	exports.push([module.id, ".index_model {\n  position: relative;\n  margin-top: 10px; }\n  .index_model a {\n    width: 100%;\n    display: block;\n    position: relative;\n    line-height: 0; }\n    .index_model a img {\n      width: 100%; }\n    .index_model a .right_border {\n      position: absolute;\n      right: 0;\n      top: 0;\n      height: 100%;\n      width: 1px; }\n    .index_model a .top_border {\n      position: absolute;\n      right: 0;\n      top: 0;\n      width: 100%;\n      height: 1px; }\n  .index_model .df_new_model_con {\n    position: relative; }\n    .index_model .df_new_model_con .haspadding {\n      padding: 0 10px 10px; }\n    .index_model .df_new_model_con .seckillCountdown {\n      position: absolute;\n      top: 0.12rem;\n      left: 0.5rem; }\n    .index_model .df_new_model_con .seckill_bg {\n      padding: 0 0.03rem;\n      height: 0.18rem;\n      line-height: 0.18rem;\n      color: #fff;\n      font-size: 0.12rem;\n      background: #7b7e85;\n      border-radius: 0.03rem;\n      text-align: center;\n      display: inline-block; }\n    .index_model .df_new_model_con .seckill2 .seckill_bg {\n      color: #ffffff !important;\n      background: #7b7e85 !important; }\n    .index_model .df_new_model_con .seckill_semicolon {\n      line-height: 0.18rem;\n      color: #3F4554;\n      font-size: 0.12rem;\n      text-align: center;\n      display: inline-block; }\n\n.dvd-col-12 {\n  width: 100%; }\n\n.dvd-col-6 {\n  width: 50%; }\n\n.dvd-col-4 {\n  width: 33.33333333%; }\n\n.dvd-col-3 {\n  width: 25%; }\n\n.dvd-col-2 {\n  width: 16.66666667%; }\n\n.dvd-col-1 {\n  width: 8.33333333%; }\n\n.dvd-new-index-module-child {\n  float: left;\n  position: relative; }\n", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -19703,11 +18585,7 @@
 /* 279 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b0e5d70=\"\">\n    <tt_com_0 :data=\"data\" _v-2b0e5d70=\"\"></tt_com_0>\n    <div class=\"dvk3_container\" :style=\"styleObject\" _v-2b0e5d70=\"\">\n           <div class=\"dvk3_content1\" _v-2b0e5d70=\"\">\n                <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b0e5d70=\"\">\n                   <div class=\"dvk3_img\" _v-2b0e5d70=\"\">\n                         <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b0e5d70=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b0e5d70=\"\"></div>\n                        <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-2b0e5d70=\"\">\n                            <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b0e5d70=\"\"></span> \n                            <span v-if=\"livetext(data.body.dataList[0])\" _v-2b0e5d70=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                            <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b0e5d70=\"\"></span>\n                        </div>\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b0e5d70=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-2b0e5d70=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[0].teacherName\" _v-2b0e5d70=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-2b0e5d70=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-2b0e5d70=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b0e5d70=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n           <div class=\"dvk3_content2\" _v-2b0e5d70=\"\">\n               <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2b0e5d70=\"\">\n                   <div class=\"dvk3_img\" _v-2b0e5d70=\"\">\n                        <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].courseCover)\" _v-2b0e5d70=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[1].price &amp;&amp; data.body.dataList[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[1].price\" _v-2b0e5d70=\"\"></div>\n                        <!-- <div class='dvk3_startTime'> -->\n                            <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[1])\" _v-2b0e5d70=\"\">\n                                <span v-if=\"livenow(data.body.dataList[1])\" class=\"circle\" _v-2b0e5d70=\"\"></span> \n                                <span v-if=\"livetext(data.body.dataList[1])\" _v-2b0e5d70=\"\">{{ livetext(data.body.dataList[1]) }}</span>\n                                <span v-if=\"!livetext(data.body.dataList[1])\" v-text=\"data.body.dataList[1].startTimestamp\" _v-2b0e5d70=\"\"></span>\n                            </div>\n                        <!-- </div> -->\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[1].courseTitle\" _v-2b0e5d70=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-2b0e5d70=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[1].teacherName\" _v-2b0e5d70=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-2b0e5d70=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-2b0e5d70=\"\"><span v-text=\"data.body.dataList[1].readTimes\" _v-2b0e5d70=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n       \n    </div>\n</div>\n";
-=======
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\">\n\n    <tt_com_0 :data=\"data\"></tt_com_0>\n\n    <div class=\"df_new_model_con\">\n        <div class=\"clearfix\">\n            <div class=\"dvd-col-12\" style=\"height: 2rem; overflow: hidden;\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 2rem;overflow: hidden;\" >\n                    <a  @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\"  style=\"height: 2rem;\" position=\"0\">\n                        <div class=\"seckillCountdown\" v-if=\"seckillTime >= -1\">\n                            <span class=\"seckill_bg\">{{ hours }}</span>\n                            <span class=\"seckill_semicolon\">:</span>\n                            <span class=\"seckill_bg\">{{ minutes }}</span>\n                            <span class=\"seckill_semicolon\">:</span>\n                            <span class=\"seckill_bg\">{{ seconds }}</span></div>\n                        <!-- <img class=\"newImage\" style=\"height: 2rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/374_400_9dd7740d145f63fcc1bb45acd3ca5562.png\" :data-original=\"data.body.dataList[0].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 2rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\">\n\n                        <div class=\"right_border\"  :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"dvd-new-index-module-child dvd-col-6\">\n                    <div class=\"dvd-col-12 \" style=\"height:1rem;overflow: hidden;\" :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[1].command.content\" @click.stop=\"clickAnalysis\"  style=\"height: 1rem;\"  position=\"1\">\n                            <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/374_200_8f1bcdbd06f1e4345047fb3bfad2741d.png\" :data-original=\"data.body.dataList[1].imageUrl\"> -->\n                            <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\">\n                        </a>\n                    </div>\n                    <div class=\"dvd-col-12\" style=\"height:1rem;overflow: hidden;\">\n                        <div class=\"dvd-new-index-module-child dvd-col-6\" :style=\"styleObject\">\n                            <a :href=\"data.body.dataList[2].command.content\" @click.stop=\"clickAnalysis\"  style=\"height: 1rem;\" position=\"2\">\n                                <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/186_200_fbaa0fc666e72f32a471934ce7621324.png\" :data-original=\"data.body.dataList[2].imageUrl\"> -->\n                                <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\"\n                                     v-lazy=\"imgObject(data.body.dataList[2].imageUrl)\">\n                                <div class=\"right_border\"  :style=\"styleObject\"></div>\n                                <div class=\"top_border\"  :style=\"styleObject\"></div>\n                            </a>\n                        </div>\n                        <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height:1rem;overflow: hidden;\" :style=\"styleObject\">\n                            <a :href=\"data.body.dataList[3].command.content\" @click.stop=\"clickAnalysis\"  style=\"height: 1rem;\" position=\"3\">\n                                <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/186_200_fbaa0fc666e72f32a471934ce7621324.png\" :data-original=\"data.body.dataList[3].imageUrl\"> -->\n                                <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\"\n                                     v-lazy=\"imgObject(data.body.dataList[3].imageUrl)\">\n                                <div class=\"top_border\"  :style=\"styleObject\"></div>\n                            </a>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div class=\"dvd-col-12\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\"  style=\"height:1rem;overflow: hidden;\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[4].command.content\" @click.stop=\"clickAnalysis\" position=\"4\" style=\"height: 1rem;\">\n                        <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/374_200_8f1bcdbd06f1e4345047fb3bfad2741d.png\" :data-original=\"data.body.dataList[4].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[4].imageUrl)\">\n                        <div class=\"top_border\"  :style=\"styleObject\"></div>\n                        <div class=\"right_border\"  :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height:1rem;overflow: hidden;\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[5].command.content\" @click.stop=\"clickAnalysis\" position=\"5\" style=\"height: 1rem;\">\n                        <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/2016/12/07/374_200_8f1bcdbd06f1e4345047fb3bfad2741d.png\" :data-original=\"data.body.dataList[5].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[5].imageUrl)\">\n                        <div class=\"top_border\"  :style=\"styleObject\"></div>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 280 */
@@ -19737,11 +18615,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-2af22e6e/dvk4.vue"
-=======
-	  var id = "_v-5f4e5486/bd_timer_1.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-45256b70/bd_timer_1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19765,13 +18639,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2af22e6e&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk4.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2af22e6e&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk4.vue");
-=======
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_timer_1.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_timer_1.vue");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19789,11 +18658,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk4_container[_v-2af22e6e]{\n    width: 100%;\n    height: 365px;\n    background: #fff;\n}\n.dvk4_title[_v-2af22e6e]{\n    width: 100%;\n    height: 43px;\n    border-bottom: 0.005rem solid #E1E1E1;\n    position: relative;\n}\n.dvk4_title_now[_v-2af22e6e]{\n    width: 1.86rem;\n    height: 0.3rem;\n    margin-top: 0.065rem;\n    line-height: 0.3rem;\n    text-align: center;\n    border-right: 0.005rem solid #E1E1E1;\n    display: block;\n    float: left;\n    position: relative;\n}\n.dvk4_title_bottom[_v-2af22e6e]{\n    position: absolute;\n    top: 41px;\n    width: 0.6rem;\n    left: 0.64rem;\n    border-bottom: 2px solid #FF4A7D;\n}\n.dvk4_title_bottom1[_v-2af22e6e]{\n    position: absolute;\n    top: 41px;\n    width: 0.6rem;\n    left: 2.5rem;\n    border-bottom: 2px solid #FF4A7D;\n}\n.dvk4_title_tomorrow[_v-2af22e6e]{\n    width: 1.87rem;\n    height: 0.3rem;\n    margin-top: 0.065rem;\n    line-height: 0.3rem;\n    text-align: center;\n    display: block;\n    float: left;\n    position: relative;\n}\n.active[_v-2af22e6e]{\n    color: #FF4A7D;\n}\n.dvk4_content[_v-2af22e6e]{\n    height: 3rem;\n    width: 3.55rem;\n    margin-left: 0.1rem;\n}\n.dvk4_detail[_v-2af22e6e]{\n    width: 100%;\n    height: 76px;\n    margin-top:25px;\n}\n.first[_v-2af22e6e]{\n  margin-top:21px;\n}\n.dvk4_detail_content[_v-2af22e6e]{\n    width: 100%;\n    height: 76px;\n}\n.dvk4_detail_content_img[_v-2af22e6e]{\n    width: 110px;\n    height: 76px;\n    float: left;\n    position: relative;\n}\n.dvk4_detail_content_text[_v-2af22e6e]{\n    height: 76px;\n    margin-left:120px;\n    position: relative;\n}\n.dvk4_detail_content_title[_v-2af22e6e]{\n    color: #333333;\n    font-size: 14px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    margin-bottom: 6px;\n    line-height:20px;\n}\n.dvk4_detail_content_name[_v-2af22e6e]{\n    color: #999999;\n    font-size: 12px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n    line-height:18px;\n}\n.dvk4_detail_content_time[_v-2af22e6e]{\n    font-size: 12px;\n    color: #999999;\n    margin-top: 2px;\n}\n.dvk4_detail_content_times[_v-2af22e6e]{\n    float: left;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n    height: 100%;\n    line-height: 14px;\n    color:#999999;\n    margin-left: 10px;\n}\n.dvk4_detail_content_line[_v-2af22e6e]{\n  width: 1px;\n  height: 12px;\n  float:left;\n  background: #E1E1E1;\n  margin-left:10px;\n\n}\n.dvk4_detail_content_popular[_v-2af22e6e]{\n    float: left;\n    height: 100%;\n    line-height: 14px;\n    color:#999999;\n}\n.dvk4_money[_v-2af22e6e]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.circle[_v-2af22e6e]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2af22e6e] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n    border-radius: 0.04rem;\n}\n", ""]);
-=======
 	exports.push([module.id, ".index_model2 {\n  position: relative;\n  margin-top: 10px; }\n  .index_model2 a {\n    width: 100%;\n    display: block;\n    position: relative;\n    line-height: 0; }\n    .index_model2 a img {\n      width: 100%;\n      border-radius: 5px; }\n    .index_model2 a .right_border {\n      position: absolute;\n      right: 0;\n      top: 0;\n      height: 100%;\n      width: 5px; }\n    .index_model2 a .top_border {\n      position: absolute;\n      right: 0;\n      top: 0;\n      width: 100%;\n      height: 5px; }\n  .index_model2 .df_new_model_con {\n    position: relative; }\n    .index_model2 .df_new_model_con .haspadding {\n      padding: 0 10px 10px; }\n    .index_model2 .df_new_model_con .seckillCountdown {\n      position: absolute;\n      top: 0.12rem;\n      left: 0.5rem; }\n    .index_model2 .df_new_model_con .seckill_bg {\n      padding: 0 0.03rem;\n      height: 0.18rem;\n      line-height: 0.18rem;\n      color: #fff;\n      font-size: 0.12rem;\n      background: #7b7e85;\n      border-radius: 0.03rem;\n      text-align: center;\n      display: inline-block; }\n    .index_model2 .df_new_model_con .seckill2 .seckill_bg {\n      color: #333;\n      background: #fff; }\n    .index_model2 .df_new_model_con .seckill_semicolon {\n      line-height: 0.18rem;\n      color: #3F4554;\n      font-size: 0.12rem;\n      text-align: center;\n      display: inline-block; }\n\n.dvd-col-12 {\n  width: 100%; }\n\n.dvd-col-6 {\n  width: 50%; }\n\n.dvd-col-4 {\n  width: 33.33333333%; }\n\n.dvd-col-3 {\n  width: 25%; }\n\n.dvd-col-2 {\n  width: 16.66666667%; }\n\n.dvd-col-1 {\n  width: 8.33333333%; }\n\n.dvd-new-index-module-child {\n  float: left;\n  position: relative; }\n", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -19988,11 +18853,7 @@
 /* 285 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2af22e6e=\"\">\n  <tt_com_0 :data=\"data\" _v-2af22e6e=\"\"></tt_com_0>\n  <div class=\"dvk4_container\" :style=\"styleObject\" _v-2af22e6e=\"\">\n     <div class=\"dvk4_title\" v-if=\"flag\" _v-2af22e6e=\"\">\n         <span class=\"dvk4_title_now active\" v-text=\"data.body.leftTitle\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_bottom\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_tomorrow\" @click=\"tomorrow\" v-text=\"data.body.rightTitle\" _v-2af22e6e=\"\"></span>\n     </div>\n     <div class=\"dvk4_title\" v-if=\"!flag\" _v-2af22e6e=\"\">\n         <span class=\"dvk4_title_now\" @click=\"now\" v-text=\"data.body.leftTitle\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_bottom1\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_tomorrow active\" v-text=\"data.body.rightTitle\" _v-2af22e6e=\"\"></span>\n     </div>\n     <!--  -->\n     <div class=\"dvk4_content\" v-if=\"flag\" _v-2af22e6e=\"\">\n\n         <div class=\"dvk4_detail first\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[0].command.content\" :position=\"data.body.leftContent[0].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                  <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[0].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[0].price &amp;&amp; data.body.leftContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[0].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[0].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[0].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n\n                         <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.leftContent[0].readTimes\" _v-2af22e6e=\"\"></span></span>\n                         <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[0])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[0])\" v-text=\"livetext(data.body.leftContent[0])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[0])\" v-text=\"data.body.leftContent[0].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n              <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[1].command.content\" :position=\"data.body.leftContent[1].position\" _v-2af22e6e=\"\">\n                <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                      <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[1].courseCover)\" _v-2af22e6e=\"\">\n                      <div class=\"dvk4_money\" v-if=\"data.body.leftContent[1].price &amp;&amp; data.body.leftContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[1].price\" _v-2af22e6e=\"\"></div>\n                   </div>\n                   <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                       <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[1].courseTitle\" _v-2af22e6e=\"\"></div>\n                       <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[1].teacherName\" _v-2af22e6e=\"\"></div>\n                       <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                         <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\">\n                          <span v-text=\"data.body.leftContent[1].readTimes\" _v-2af22e6e=\"\"></span>\n                         </span>\n                         <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[1])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[1])\" v-text=\"livetext(data.body.leftContent[1])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[1])\" v-text=\"data.body.leftContent[1].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                       </div>\n                   </div>\n                </div>\n              </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[2].command.content\" :position=\"data.body.leftContent[2].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[2].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[2].price &amp;&amp; data.body.leftContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[2].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[2].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[2].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                          <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.leftContent[2].readTimes\" _v-2af22e6e=\"\"></span></span>\n                          <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[2])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[2])\" v-text=\"livetext(data.body.leftContent[2])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[2])\" v-text=\"data.body.leftContent[2].startTimestamp\" _v-2af22e6e=\"\"></span>\n                          </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n     <div class=\"dvk4_content\" v-if=\"!flag\" _v-2af22e6e=\"\">\n         <div class=\"dvk4_detail first\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[0].command.content\" :position=\"data.body.rightContent[0].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[0].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[0].price &amp;&amp; data.body.rightContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[0].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[0].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[0].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[0].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[0])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[0])\" v-text=\"livetext(data.body.rightContent[0])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[0])\" v-text=\"data.body.rightContent[0].startTimestamp\" _v-2af22e6e=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[1].command.content\" :position=\"data.body.rightContent[1].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[1].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[1].price &amp;&amp; data.body.rightContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[1].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[1].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[1].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[1].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[1])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[1])\" v-text=\"livetext(data.body.rightContent[1])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[1])\" v-text=\"data.body.rightContent[1].startTimestamp\" _v-2af22e6e=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n          <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[2].command.content\" :position=\"data.body.rightContent[2].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[2].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[2].price &amp;&amp; data.body.rightContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[2].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[2].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[2].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[2].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[2])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[2])\" v-text=\"livetext(data.body.rightContent[2])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[2])\" v-text=\"data.body.rightContent[2].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n  </div>\n</div>\n";
-=======
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop}\">\n\n    <tt_com_0 :data=\"data\"></tt_com_0>\n\n    <div class=\"df_new_model_con\" :style=\"styleObject\">\n        <div class=\"clearfix\" style=\"padding:10px 7.5px 7.5px 7.5px;\">\n            <div class=\"dvd-col-12 need_js_height_seckill\" style=\"overflow: hidden;\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"padding: 0 0.025rem 0 2.5px;box-sizing: border-box;height: 1.81rem;overflow: hidden;\">\n                    <a :href=\"data.body.dataList[0].command.content\" @click.stop=\"clickAnalysis\" position=\"0\" style=\"height: 1.81rem;\">\n                        <div class=\"seckillCountdown seckill2\" v-if = \"seckillTime >= -1\">\n                            <span class=\"seckill_bg\">{{ hours }}</span>\n                            <span class=\"seckill_semicolon\">:</span>\n                            <span class=\"seckill_bg\">{{ minutes }}</span>\n                            <span class=\"seckill_semicolon\">:</span>\n                            <span class=\"seckill_bg\">{{ seconds }}</span>\n                        </div>\n                        <img class=\"newImage\" style=\"height: 1.81rem;border-radius: 3px;\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\">\n                    </a>\n                </div>\n\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"margin-bottom:0.05rem;padding: 0 0.025rem;box-sizing: border-box;height: 0.88rem;overflow: hidden;\">\n                    <a :href=\"data.body.dataList[1].command.content\" @click.stop=\"clickAnalysis\" position=\"1\"  style=\"height: 0.88rem;\">\n                        <img class=\"newImage\" style=\"height: 0.88rem;\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\">\n                    </a>\n                </div>\n\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"padding: 0 0.025rem;box-sizing: border-box;height: 0.88rem;overflow: hidden;\">\n                    <a :href=\"data.body.dataList[2].command.content\" @click.stop=\"clickAnalysis\" position=\"2\" style=\"height: 0.88rem;\">\n                        <img class=\"newImage\" style=\"height: 0.88rem;\" v-lazy=\"imgObject(data.body.dataList[2].imageUrl)\">\n                    </a>\n                </div>\n            </div>\n\n            <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"margin: 0.05rem 0 2.5px 0;padding: 0 0.025rem 0px 2.5px;box-sizing: border-box;height: 0.88rem;overflow: hidden;\">\n                <a :href=\"data.body.dataList[3].command.content\" @click.stop=\"clickAnalysis\" position=\"3\" style=\"height: 0.88rem;\">\n                    <img class=\"newImage\" style=\"height: 0.88rem;\" v-lazy=\"imgObject(data.body.dataList[3].imageUrl)\">\n                </a>\n            </div>\n            <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"margin: 0.05rem 0 2.5px 0;padding: 0 0.025rem 0px 0.025rem;box-sizing: border-box;height: 0.88rem;overflow: hidden;\">\n                <a :href=\"data.body.dataList[4].command.content\" @click.stop=\"clickAnalysis\" position=\"4\" style=\"height: 0.88rem;\">\n                    <img class=\"newImage\" style=\"height: 0.88rem;\" v-lazy=\"imgObject(data.body.dataList[4].imageUrl)\">\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n";
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 286 */
@@ -20022,11 +18883,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-2ad5ff6c/dvk5.vue"
-=======
-	  var id = "_v-201784e6/bd_goods_0.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-05ee9bd0/bd_goods_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -20050,13 +18907,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ad5ff6c&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk5.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ad5ff6c&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk5.vue");
-=======
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_0.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_0.vue");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -20074,11 +18926,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk5_container[_v-2ad5ff6c]{\n    width: 100%;\n    height: 2.63rem;\n    background: #fff;\n}\n.dvk5_content1[_v-2ad5ff6c]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk5_content2[_v-2ad5ff6c]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk5_img[_v-2ad5ff6c]{\n    height: 1.72rem;\n    position: relative;\n}\n.dvk5_text[_v-2ad5ff6c]{\n    width: 1.52rem;\n    /*height: 0.31rem;*/\n    line-height: 0.17rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    text-indent: 0.2rem;\n}\n.dvk5_detail[_v-2ad5ff6c]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.02rem;\n    width: 1.52rem;\n}\n.dvk5_name[_v-2ad5ff6c]{\n    float: left;\n}\n.dvk5_name_spanContainer[_v-2ad5ff6c]{\n    max-width: 0.7rem;\n    display: inline-block;\n    vertical-align: top;\n}\n.dvk5_name_span[_v-2ad5ff6c]{\n    max-width: 0.7rem;\n    vertical-align: top;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk5_popular[_v-2ad5ff6c]{\n    float: right;\n}\n.dvk5_money[_v-2ad5ff6c]{\n    position: absolute;\n    top: 0.1rem;\n    left: 0;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-indent: 0.03rem;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n    display: inline-block;\n    z-index: 1;\n}\n.circle[_v-2ad5ff6c]{\n    width: 0.18rem;\n    height: 0.18rem;\n    top: 0.1rem;\n    left: 0.36rem;\n    position: absolute;\n    color: #fff;\n    border-radius: 50%;\n    background: #FF4A7D;\n    display: inline-block;\n}\n.dvk5_startTime[_v-2ad5ff6c]{\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    line-height: 0.4rem;\n    color: #fff;\n    text-indent: 0.2rem;\n    bottom: 0;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.2)),color-stop(100%,#fff));\n}\n.dvk5_img_statue[_v-2ad5ff6c]{\n    position: absolute;\n    top: 0.1rem;\n    right: 0.1rem;\n    height: 0.17rem;\n}\n.dvk5_img_location[_v-2ad5ff6c]{\n    width: 0.11rem;\n    margin-bottom: 0.02rem;\n}\n.dvk5_img_official[_v-2ad5ff6c]{\n    width: 0.11rem;\n}\n.newImage[_v-2ad5ff6c] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n.video[_v-2ad5ff6c]{\n    position: absolute;\n    width: 0.12rem;\n    top: 1.85rem;\n    left: 0.12rem;\n}\n", ""]);
-=======
 	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail {\n    width: 100%;\n    display: block;\n    position: relative; }\n  .index_group_buy .df_new_model_con {\n    background: #fff; }\n\n.related-item-list.swiper-container {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list2.swiper-container {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list .detail {\n  text-align: left; }\n\n.related-item-list .detail.swiper-slide {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list .detail .goods_img_size {\n  width: 100px;\n  height: 100px;\n  position: relative; }\n\n.related-item-list .detail .goods_img_size:before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box; }\n\n.related-item-list .detail .name1 {\n  font-size: 12px;\n  padding-top: 0.07rem;\n  padding-right: 0.1rem;\n  text-overflow: ellipsis;\n  height: 0.3rem;\n  white-space: pre-line;\n  line-height: 0.16rem;\n  margin-bottom: 0.06rem;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  overflow: hidden;\n  color: #666; }\n\n.related-item-list .detail .name.he36 {\n  height: 36px; }\n\n.related-item-list .detail .price1 {\n  padding-top: 3px;\n  line-height: 12px;\n  height: 0.15rem;\n  padding-right: 10px;\n  overflow: hidden; }\n  .related-item-list .detail .price1 .current-price1 {\n    font-size: 17px;\n    color: #FF4A7D;\n    float: left; }\n  .related-item-list .detail .price1 .original-price1 {\n    font-size: 9px;\n    color: #999;\n    text-decoration: line-through;\n    float: left;\n    padding-left: 5px;\n    padding-top: 0.02rem; }\n\n.related-item-list2 .detail {\n  text-align: left; }\n\n.related-item-list2 .detail.swiper-slide {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list2 .detail .goods_img_size {\n  width: 120px;\n  height: 120px;\n  position: relative;\n  padding: 0 1px; }\n  .related-item-list2 .detail .goods_img_size .limitTag {\n    height: 16px;\n    background: url(//pic.davdian.com/free/2017/06/07/limitTag.png) 0 0 no-repeat;\n    background-size: 100% 100%;\n    position: absolute;\n    left: 1px;\n    bottom: 0;\n    font-size: 10px;\n    color: #FFF;\n    text-align: center;\n    line-height: 16px;\n    display: inline-block;\n    padding: 0 11px 0 6px; }\n\n.related-item-list2 .detail .name1 {\n  font-size: 14px;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  height: 20px;\n  line-height: 20px;\n  overflow: hidden;\n  color: #666;\n  margin: 10px 0; }\n\n.related-item-list2 .detail .name.he36 {\n  height: 36px; }\n\n.related-item-list2 .detail .price1 {\n  line-height: 12px;\n  height: 12px;\n  overflow: hidden; }\n  .related-item-list2 .detail .price1 .current-price1 {\n    font-size: 16px;\n    color: #FF4A7D;\n    float: left; }\n    .related-item-list2 .detail .price1 .current-price1 em {\n      font-size: 12px;\n      font-style: normal; }\n  .related-item-list2 .detail .price1 .original-price1 {\n    font-size: 9px;\n    color: #999;\n    text-decoration: line-through;\n    float: left;\n    padding-left: 5px;\n    padding-top: 0.02rem; }\n\n.related-item-list2 .detail .membership_crown {\n  height: 12px;\n  line-height: 12px;\n  font-size: 11px;\n  color: #D6B471;\n  background-repeat: no-repeat;\n  background-position: 1px 1px;\n  background-size: 11px 11px;\n  margin-top: 5px; }\n  .related-item-list2 .detail .membership_crown em {\n    font-style: normal; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list .detail .goods_img_size:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */ }\n  .related-item-list2 .detail .goods_img_size:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */ } }\n\n.df_new_title {\n  position: relative;\n  height: 44px; }\n\n.df_new_title:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span {\n  font-size: 12px; }\n\n.df_new_title_2 {\n  height: 44px;\n  line-height: 44px;\n  background-color: #fff;\n  position: relative;\n  border-bottom: 1px solid #f0f0f0; }\n\n.df_new_title_2 a {\n  line-height: inherit; }\n\n.df_new_title_2 .df_new_font {\n  font-size: 16px;\n  padding-left: 22px;\n  line-height: 44px; }\n\n.df_new_title_2 .df_new_font:before {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 14px;\n  position: absolute; }\n\n.df_new_title_2 .more {\n  padding-right: 10px;\n  float: right; }\n\n.df_new_title_2 .more span {\n  color: #666;\n  font-size: 12px;\n  line-height: 35px;\n  margin-right: -2px; }\n", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -20315,11 +19163,7 @@
 /* 291 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2ad5ff6c=\"\">\n    <tt_com_0 :data=\"data\" _v-2ad5ff6c=\"\"></tt_com_0>\n    <div class=\"dvk5_container\" :style=\"styleObject\" _v-2ad5ff6c=\"\">\n       <div class=\"dvk5_content1\" _v-2ad5ff6c=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2ad5ff6c=\"\">\n               <div class=\"dvk5_img\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-2ad5ff6c=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-2ad5ff6c=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[0].category==2\" _v-2ad5ff6c=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[0].category==2\" _v-2ad5ff6c=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-2ad5ff6c=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-2ad5ff6c=\"\"> \n                        <span v-if=\"data.body.dataList[0].address\" v-text=\"data.body.dataList[0].address\" _v-2ad5ff6c=\"\"></span>\n                        <span v-else=\"data.body.dataList[0].address\" _v-2ad5ff6c=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==1\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==2 || data.body.dataList[0].status==3\" _v-2ad5ff6c=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[0].title\" _v-2ad5ff6c=\"\"></div>\n               <div class=\"dvk5_detail\" _v-2ad5ff6c=\"\">\n                    <span class=\"dvk5_name\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_spanContainer\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[0].teacherName\" _v-2ad5ff6c=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[0].verify==1\" _v-2ad5ff6c=\"\"> </span>\n                    <span class=\"dvk5_popular\" _v-2ad5ff6c=\"\"><span v-text=\"data.body.dataList[0].pv\" _v-2ad5ff6c=\"\"></span></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk5_content2\" _v-2ad5ff6c=\"\">\n           <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2ad5ff6c=\"\">\n               <div class=\"dvk5_img\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-2ad5ff6c=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-2ad5ff6c=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[1].category==2\" _v-2ad5ff6c=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[1].category==2\" _v-2ad5ff6c=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-2ad5ff6c=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-2ad5ff6c=\"\"> \n                        <span v-if=\"data.body.dataList[1].address\" v-text=\"data.body.dataList[1].address\" _v-2ad5ff6c=\"\"></span>\n                        <span v-else=\"data.body.dataList[1].address\" _v-2ad5ff6c=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==1\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==2 || data.body.dataList[1].status==3\" _v-2ad5ff6c=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[1].title\" _v-2ad5ff6c=\"\"></div>\n               <div class=\"dvk5_detail\" _v-2ad5ff6c=\"\">\n                    <span class=\"dvk5_name\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_spanContainer\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[1].teacherName\" _v-2ad5ff6c=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[1].verify==1\" _v-2ad5ff6c=\"\"></span>\n                    <span class=\"dvk5_popular\" _v-2ad5ff6c=\"\"><span v-text=\"data.body.dataList[1].pv\" _v-2ad5ff6c=\"\"></span></span>\n                </div>\n           </a>\n       </div>\n    </div>\n</div>\n";
-=======
 	module.exports = "\n<div :style=\"styleObject\">\n  <a v-if=\"data.body.tplId == 'bd_goods_0'\" href=\"javascript:void(0)\" class=\"index_group_buy\" style=\"margin-top: 0px;\"\n     :style=\"styleTop\">\n    <tt_com_0 :data=\"data\"></tt_com_0>\n    <div class=\"df_new_model_con\" :style=\"styleObject\">\n      <div class=\"swiper-container related-item-list swiper-container-horizontal swiper-container-free-mode\">\n        <div class=\"swiper-wrapper\" style=\"transform: translate3d(10px, 0px, 0px); transition-duration: 0ms;\">\n          <div v-for=\"item in data.body.dataList\" class=\"detail swiper-slide\" style=\"width: 124.382px;\">\n            <a :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\">\n              <div class=\"goods_img_size\">\n                <img :src=\"item.imageUrl\">\n              </div>\n              <div class=\"name1\" :class=\"{'he36':(wrapline == 1)}\">{{ item.title }}</div>\n              <div class=\"price1\">\n                <span class=\"current-price1\">¥{{item.nowPrice}}</span><span\n                class=\"original-price1\">¥{{item.prePrice}}</span>\n              </div>\n            </a>\n\n          </div>\n        </div>\n      </div>\n    </div>\n  </a>\n\n  <div v-if=\"data.body.tplId == 'bd_goods_2'\" class=\"df_new_model_con\" :style=\"styleObject\">\n    <div class=\"swiper-container related-item-list swiper-container-horizontal swiper-container-free-mode\">\n      <div class=\"swiper-wrapper\" style=\"transform: translate3d(10px, 0px, 0px); transition-duration: 0ms;\">\n        <div v-for=\"item in data.body.dataList\" class=\"detail swiper-slide\" style=\"width: 124.382px;\">\n          <a :href=\"item.command.content\" @click.stop=\"clickAnalysis\" :position=\"item.position\">\n            <div class=\"goods_img_size\">\n              <img :src=\"item.imageUrl\">\n            </div>\n            <!-- <div class=\"name\" :class=\"{'he36':(wrapline == 1)}\">{{ item.title </div> -->\n            <div class=\"name1\">{{ item.title }}</div>\n            <div class=\"price1\">\n              <span class=\"current-price1\">¥{{ item.nowPrice }}</span>\n              <span class=\"original-price1\">¥{{ item.prePrice }}</span>\n            </div>\n          </a>\n        </div>\n\n\n        <div class=\"detail swiper-slide\" style=\"width: 124.382px;\">\n          <a :href=\"data.body.command.content\" @click.stop=\"clickAnalysis\" position=\"more\">\n            <div class=\"goods_img_size\">\n              <img src=\"//pic.davdian.com/free/2016/12/20/300_300_2f12c4229c5444864431d2cd8cd1bdb3.jpg\">\n            </div>\n          </a>\n        </div>\n\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"data.body.tplId == 'bd_ts_goods_0'\" class=\"df_new_model_con\" :style=\"styleObject\">\n    <div\n      class=\"swiper-container related-item-list2 swiper-container-horizontal swiper-container-free-mode\">\n      <div class=\"swiper-wrapper\" style=\"transform: translate3d(10px, 0px, 0px); transition-duration: 0ms;\">\n        <div v-for=\"item in data.body.dataList\" class=\"detail swiper-slide\" style=\"width: 124.382px;\">\n          <a :href=\"item.command.content\" @click.stop=\"clickAnalysis\" :position=\"item.position\">\n            <div class=\"goods_img_size\">\n              <img :src=\"item.imageUrl\">\n              <div v-if=\"item.limitTag\" class=\"limitTag\">{{item.limitTag}}</div>\n            </div>\n            <div class=\"name1\">{{ item.title }}</div>\n            <div class=\"price1\">\n              <span class=\"current-price1\"><em>¥</em><span>{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.nowPrice+'').split('.').length == 2\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span>\n            </div>\n            <div class=\"membership_crown\">会员返 <em _v-e9830e04=\"\">￥</em>{{item.timeshopIncome}}</div>\n          </a>\n        </div>\n        <div class=\"detail swiper-slide\" style=\"width: 124.382px;\">\n          <a :href=\"data.body.command.content\" @click.stop=\"clickAnalysis\" position=\"more\">\n            <div class=\"goods_img_size\">\n              <img src=\"//pic.davdian.com/free/2016/12/20/300_300_2f12c4229c5444864431d2cd8cd1bdb3.jpg\">\n            </div>\n          </a>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 292 */
@@ -20349,11 +19193,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-2ab9d06a/dvk6.vue"
-=======
-	  var id = "_v-1ffb55e4/bd_goods_1.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-05d26cce/bd_goods_1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -20377,13 +19217,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ab9d06a&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk6.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ab9d06a&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk6.vue");
-=======
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_1.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_1.vue");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -20401,11 +19236,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk6_container[_v-2ab9d06a]{\n    width: 100%;\n    height: 2.63rem;\n    background: #fff;\n}\n.dvk6_content1[_v-2ab9d06a]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk6_content2[_v-2ab9d06a]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk6_img[_v-2ab9d06a]{\n    height: 1.72rem;\n    position: relative;\n}\n.dvk6_text[_v-2ab9d06a]{\n    width: 1.52rem;\n    /*height: 0.16rem;*/\n    line-height: 0.16rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    margin-bottom: 0.05rem;\n}\n.dvk6_detail[_v-2ab9d06a]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.02rem;\n    width: 1.52rem;\n}\n.dvk6_name[_v-2ab9d06a]{\n    float: left;\n    width: 0.9rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n}\n.dvk6_popular[_v-2ab9d06a]{\n    float: right;\n}\n.dvk6_startTime[_v-2ab9d06a]{\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    line-height: 0.4rem;\n    color: #fff;\n    text-indent: 0.2rem;\n    bottom: 0;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.2)),color-stop(100%,#fff));\n}\n.dvk6_img_title[_v-2ab9d06a]{\n    width: 0.16rem;\n    margin-bottom: 0.02rem;\n    margin-right: 0.02rem;\n}\n.newImage[_v-2ab9d06a] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
-=======
 	exports.push([module.id, ".logo_left {\n  display: inline-block;\n  width: 162px;\n  height: 39px;\n  background-size: 100%;\n  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUQAAABOCAYAAABYBm8UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAEW5JREFUeNrsXQnUVVUVPjwmJ3AARE1FIUkDzTB1qdBg5RhOQKaioiYooCKRaAgSijizUFCQSEBzIIdKTU1NnMBQUzOcWiI5oeCApqYo0Pl659Xr7//fv787nn3e/dbaC4X97r3n3H33Pt8Z9m6xqPdgU4UOVr5tpbOVtVZetTLfyscmXLS00sdKdyutrbxv5UErbyhtz65WfuTe40buPS5373G6e6ca0cPK7lbaWllt5UknIWMzZ5ud3Ht8ycoDVtYobU8/J7tYKbm/e9bKXVZm+vCALaoc4hgrZ1rZoIHO21YmWZkSoMEdYeU8K10b/P0qK1dbOUVZe8a49jSFj6wMszJXmVOY6j6khlhoZZSVBQHa5uVWBrsAUI0lVs62coOitqxv5RYr+9bQWWTlSCsv++AQZ1k5vhndy6z8JCCDG2FlcjM6iMZ7K2nPSCuXCnV/YOVOBW3axMrTVrZqRm9/K3cHYpct3Gj+m83oneIChQY8amVPgd4yKztY+SCvB8Ww9SCBM6x8cEcHYnTfEDhD4DtWRitoT3fCGQLzXNT2HVcLnCFwmylP94SAaQJnCFxhZTsF7RktdIbA5m5knBtKbqTEGGgIhjeP0B2uoD0XkvrrWTnZ8zZt0QRNbgzrWPlVAHbZm3wvJ3reHky/jSd/c4wwCKbmELsQ+iEY3iVWtiX0tyT7KGvg2Q6J8LtRnr+nr5P6+ypnMC3JQA3s7HmbhjmfweKneTrEVXVkeKDKUeZBN/S4TWdE/B12Egz0uF2rI1Lsjkptc6qjjKwT9RXwLSMj/naI+f/F3cweem1Ew9NInedF/N3nnrannSmvREbFGI/fVZStJRiNzFFKlU+K8LsvPG4TBk2bRvxtGyun5uUQTUTD00adWaqsAadZaRXj99tb2SewPjnAymGBU2UNiBtsT49p25k6RG3UOSpV9hnYRD4igeuMC/BjnJsX5cqIKvsObIOKuwLeMQ//Uor5ey3UOcQIPCihvt/L8AsYvmN9o2PzeZ+IVNl3jE3oOmdrc4gaqHOIVBlIcn9kiKPEQxVQ5+sC7HesfO+R0LVwguxATQ7Rd+ocIlUG+lrpluD1Dgk0aPhMnRGotw6wzyckfL1ztDlEn6lziFQZGO/5iLOgzvUZqLd1wTpJIFnJbtocoo/UOVSqDOPoJdTFgfkVQt0TrGxcUOciUGcQVD+x8oiPo8RSgtfyiTqHGoFZ40ASh+uFutjicFqgfeYTdQ41UG/sgqoESPaAlWhpEgdspeqWRSNKCV/PF+ocagTu5oxDgnvc6PAa4vpwiK0L6lwE6ghg9sT+wpRT0V1LXD+TQwRJO0QfqHOoEZg1igvcn88YeSLVjYgoX1DnIlBX0JpgF8iverP7byZDE9hnJ20OMW/qHHIE7kT0K7IQz6/6/3OJ+4w24SJP6hxyoD7BBVNpP1SOZS61crvwdxh9nq7RIVao8yZFBE4UzFGmiQ3+/7dW/i787TZuNBUi8qLOIQdqJogikcz0Bn/3c+I+SIrbRqNDBHWeXUTgxIDzrsMISnJTI39/MXG/cQF/vHlQ53mB9+c2Qt0Zpjx3WA2mNg5G96me7GEc4uvktftmaHi9IkTg1xQZ3VAr7YnA0JQxSlf1kjxtkDZQAG2Zx9SZDdTPR/jW8gQTPJsKysyUTqq5EhmHeJXhV3qyMjz2CNSJjkZqgTTnYWOUpIIv3FRGaKNEjJ4xh/WUh9SZpcp4f0eYHGuKkNjDyJPU/qbGIISZ0kHC5v4+OEQY0fnkyCoLwxtvyoVppMCGUCz7b6bE6Po7I4hKSaqBVT1p4tX9yH7NC5iewUr6UR5SZ5YqD3Zt0XKkjwmazR3pY6Z0xqbVIMYhbuH+/KFHhodavewu9sPdn1pOZTAvvzmjwvzijcT1zlLSR19xVPMa8ndpMhiWKiNQz3Ej3hYK+nwHFzQlWCQYwTNTOjuZcgG4XB1iZan8MUeffTA8NgJjr9Sb7r9XKzC6Pu7lx6Uk1biAuD/q5G6qoJ/aVk2FMPOJaTEYliqvqRpo4DtZq6DPmWApmSNkp3RS2ajNOMTql4QVz6U5Gx6o8lfJCHy50YXxCVKSCv5q5T6hLkYrGvYlrqkKcj4wGDZQD6ty5GsU9HdnFywlWGLlDqEuM6XzXSs75ukQGzrHATkaHkuV10T4UPJGTyt7J0hJqsGULUXBn3UV9dsjERlMu5yoMo5YTldmmyONvMAVMzfITukknkA2zj7EJwx39CZJ6sxG4JMMvzUjNEpSjfvcSFE6uteW1TkKg5mZA1X+zPCLQXkDwXGoUPd9K7PI6zNTOhjkJFp+Ie7GbNT2fSFj6sxS5XsSMvYssWlKlCTqKPFMZf0XhcFgsW2/mPdlA/XxVt5V1rcnE4OaKw1fsRKB+gFCP9EpnSROqrB7guJQZ5Yqr1IYgdnR4cUR73GDlXcIB62tH6MwGOxnXSfi/ViqfJuRp2bzCaOEelgkmRLxHhNJB53UdEciDnGx4c4jxqHObAQ+WmEExih6SIqUpAJMXl+WkpP26eNlGEyHiGyCpco4XXOMwv48nKCoCC4rIt7nfuK9tSEofCYOsUJj0z4pwFLl24zOM6SIeNJFjCiUpBrTjLzYOUbnGms4swxmYATqzNoZnOFHCvuSWcS4KOa9JhG6WORJpIZzkskd+qVInVmq/InSCMxQktUxKEkFH5IjzLEK+zMKg2GoM0uVce1bFfYjtrn0FOr+wZQ3yscB+omZ0knke0/SIb5CfMwsdWYj8BFKIzBGJ52FutfHoCTVYBZXelv5msJ+ZRmMlDqzVPk9U948rhHMRujzE7gftsoxUzqJLK4knf4Lk9h/Spg6s1QZkeV3dWB0kxK6JwIZs0o9VmnfsgxGQp3ZQI05uE8V9h02QEuPyiE58YMJ3ZeZ0uluEqjhnEY+xEMMdyyuFnVmqfK7iiMw5ue2F+renwAlqQazjxGOpYvC/o3CYGpRZ5YqY/P1fUptk5k7nJjgfdkpndjV+dJwiG9ZGZ4QdWYj8AClEZgdeU1M+N446fIEoX+G0j5mGUxT1Hknkiovi/BN+IKtjPyUV1PJieOAmdJBDeddfHOIlWjIbK5sjDqzVJm9p0/AB9ZbqLs4pXYyFBxpqtop7WuWwTRGndn9gwOMjmQijYFJyHpJSiN7ZkpnvI8O0biowozWqqlzT3L4G2VU6hOYVdBJKT0DVj6lSTo113COYivV1BkfXA/it1gYeFRpX4G1SffE1kpOHBfnEbqoRf5lHx3iO24kwQDpfzAvM5X83aGKI3AXN2qRUpI0y7wyJztGGL01nPHhPkRSZ0xpdCcD9StGd3GpU428qFNzyYnjANMcTxP6kVecSyl3KApR/540PBSc+Rb5ET+m2OiY+bjJKT8LAtI/iHc1SHG/9ycZzOgIdtZPcf+wZT8vTvl5JhC6x5qINZxLGXQsthp8TOgzmayR2GCUYqNrR4yikRnlypSfB/dgUmedqbjvV5AMpiVpm5gGeUpx/2Cjc0ehrjQ5cRzg5Jm0+FZrE7GGcxYO8SOT3qkR7fWDTzPyI0czidFbHDCj0K5WDlbc/2Awd6Vw3edMzMl9D8DQzgkZPRMzCh1mIhznK2XUkFudh08SiMB/UWxwiGIjyKmBLIBFB2YVdazyD/9IksFI6bhmYINzd6Eum5w4DqYb+TwlyvYOYW9QyrCTMUpMKvPM4gAi8CBTnoeT0oWlGT4bs5KNfV97KH4PKxNmMJjCeV65bTILR+dm+FxYyZ5B6NM1nLN0iPDsAxO61mFGP6SUBPN6x2X8bEjSOZvQH6f8XSTFYJ7McCSfFhDgdhXq4ojeHRk/HwKO9Ax/F3a03irjxtxtynu6BsbskJeUG11fK92EuhhV729lPZNdeUqkFGNWYLFxeTsrf1P8To5xo/AOEX+PbV/a57TZ0eFyN+WQZc0dHOdD5UzpKjKmdG721SECOGv8PROtUHyULMg+gqH7qId9g4I2jTG6t+FUGEzURRZs9n5NuV12dcFaigGGL9WQNXAKDOV8H/aNMlfwacRORAQ+2OjHblZ6mfCA7OSdlbehwmBYoNLf9ADe4VkmTIgHIKWcHjCKAQ03/y0yXy+URBNgSyMDaAcYzFsZBHjfgD2HxwZqmyjn20NqxHmBoRgPBRKBMW94gAkXKH/QRnkbWAc3mHSgvuIUo/copgSiXKN5OkTpJDSW2vvX00tRDJy8GRpAO8BgJKeCcCz12gDa28o5xJCBLPpb+OwQAWxTOLUZHWyxWRHAC8Gq2NEmfIwOpB046fDHGv+OqnCHB9JWbGDeuA5ss9l9iSUPHvIKN1JseOpkoeP+dwbyMk43+azqZ43NAnIUKKyEZLwrGzCWG63sbnTW7YnkKAJy/Bv47hABHA5H8aJebkSIpfI9jd6Erw3R0o046gVnB9YWbPBFTRFsSenq6NeHgbTvUKOzJEQUrNvcd1jy7IFxJhInBp4N7EVgXq19HTnEnm50FQrg/Oab8qmMNwJ7V+NMfWFkLb/XyhTIAkzOQ8xb4az2eh49fyX5LqjwhsLfYAHp/uLVe429rOws1F1rysc5V3nmN7Ar4EtGnmQZNZwxlz+ncIj5ACvkWwp1P/B8ZIUM0NLED6CYmAZ5pjABb8HsiUWm9uM9bgsSakirVo5pyiGWCptIHUx6rBmetwWlHT5Lqe0FsgWcx/cJ/Ymet4fJ0IRz9/sXDjF74AzlToT+ZM/bg1XVmYR+P2J0XCBbMAtfqCf9guftwZHL5XGDdeEQ08V4Qhc1qDWceGCTa4wuzMA74Mz5UYT+hQratMaUKxxKgRyeuxQOMTtgpXVvQv88Je1aasrbpKTAcb72hTl4BWbf4QtuhKgBOF20itA/p3CI2YHJHIJEm5q2GjE1NOptD6bvwF68kwj9SYrahppDzDx8ZV9p4RBTBpb2jwzU6ADsF11I6GPvV+vCLLwAnOH6Ql0cmb1OWfvYcqhnFQ7Rr9Ehsn/fo7CNTC0NpJYaVJiFF2BKx04x5bk5TUAGrVsIfaQ861A4xPSA6MtU+7pQaTvvMlwph2JxJX8c5diLBF8Yrka31mD9P9UvC4eYPLCIIK0x8Y6VuYrbyjhz5II8sDAPNcxllpX3lLYThwEWEPr/qY9eOMTkMYrQneYisVbAmTOp2c4pzCM34ARUD0L/IuXtZXZttKuwusIhJgumrggq201V3l448ymEPspb7lWYSS5gghGmQ5Yoby87pYOtSKXCISYLZn/XbEeZteMqcpRbbMHJHkjg0Cel0ZXPYKZ0kAJtn3p2iC0T1t3ayo7ENS8NpB8xzzSL0MeHWSQVSQbS7/cg4ppI1LwgkP6ZSw46+qJD2wqV2wZmTMx2gs8FOh2J691r5cWA+pKJxJsbWWozplhVSLbZgmiPNKhvQNz/3ID6EsyFOc7XCQ7xY6Hyu4E5RKlDQvr4V4R6UkwIrC/RP3cIdbEI84lA73Xi/ssD6st/Gnk27iXENSXAWfqbA7PNaYTum3CIvxYq3xRYR/1SqIf6GZLzkUutvCzQQ/LXRwKkbz8T6s0zsjnHp4Uf/KtWFgXUj2Aj0kp+c4R60mA1KUC7RHC5ROrj4BAnCyLsbMMd1dKApwTRA6NiaelQUHBJKcdBJkzgLPb5gv5kVjuHC3R+bMrZnEMC0vq/IfgmHxZe73FTTvBaC9i7d0WgtjlGwAhxRHEhHCJy3PW28ucaHX9coB01vIYRoD+wRYTZnIql/qGm8TnHt025oM8TJlyMqTHKWOz6cyXZn0OaoNjILo4MzvcG2I+Vb7KpQciMCN/ksTXo8HxT3qe4NlC7XOVsb34T/44R+b9LBLdY1Htw9T/gaA+q3bV38wm3W3nIhA/kRRtgyoWskTFjgSCi1gIy8iK5Qxc3cnzOUfSVpj7QsD8fd4E1KrZyzq/Sny+6iL6sDvoS/YiV+U1ce+N+k3B8ODGE/bJYgUWmpVtN/aBmf/5LgAEAzQxLfXjSAv8AAAAASUVORK5CYII=); }\n\n@-webkit-keyframes plus {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  50% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes plus {\n  0% {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  50% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); }\n  100% {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n.logo_right {\n  display: inline-block;\n  width: 39px;\n  height: 39px;\n  -webkit-animation: plus 2s linear 0s infinite;\n  animation: plus 2s linear 0s infinite;\n  background-size: 100%;\n  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE4AAABOCAYAAACOqiAdAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABYpJREFUeNrs3FtoHFUYB/D/OWd2dtJsbC7UNJgoXkobaW2ViA/xikh9UcSH1FIp0YivPohiwSJ4qxgU8UX0QUSsKMYLaFsFEUFaFKnaoibFaKApEXNpm9tuNrsz43f2EpKw6e4kM+fszuaDf3YzezY5+e05c4EzYWM9PXDnAV4L1D1kZx7l95rqZkoX5TZKMyVB+YXSR/lCT5cYImwUX9l343V7N9rY+cxWY9HrYGb2UVM9TzlYYHs7ZR/lPcoj6rvlII0oZiiCnueLL3odbkIb3IEV0BZXN+UNlZ1yiUeOth+cDrxr344WNrkUTo40h9Cm+0R22tZlIRVVK+XlEts+QblRVccMJJHCRoLblmEsOOIYTdr0KMPsEZG1jinD6/LYvkfNno1waLQdsTtxzNmBK9gF4mAFpiptE/UukqcZpj8iRaEMb5PH9u0q0Aw2htM0RT9wbsGVbCIzbRcXX/4msYnwfleKl/S861GCth0H0ntoqgrUUheX/1Je6M0a8LyUrQZtLz230UTHU7sAE1/ph5Q5nla0S8JVE55XtKJw1YC3GrSS4MKMt1q0kuHCiLcWNE9wYcJbK5pnuDDg+YG2KrhKxvMLbdVwlYjnJ9qa4CoJz2+0NcNVAl4QaL7AlTNeUGi+wZUjXpBovsKVE17QaL7DlQOeCrRA4HTiqUILDE4Hnkq0QOFU4qlGCxxOBZ4ONCVwQeLpQlMGFwSeTjSlcH7i6UZTDucHXjmgyTJ0XA7l8ZwPDTTut0eFXNA1V8obiS0+Ff917AYcdPZoQysEF6E8CAXLDCQe/mYYfpvfOdtgQ6SLL5MyEwlcuGrz1t6OB55ltms0OUrQZihHKX+uBLeX8hLlalWfWk0LMHQS6D8F1MZKaD+Wxsjuxi3OrfyF+rkEbEfZSOtFdn3eY8itJMjDPUM5pHq4O9QFcyNQ10YoVvH2VpShrjEVN5101HZZVPEE7abQR4178weHm3SgVWjtpjych3t63cNTPUlpk3C71i081U5KB9d1SlLBJQ//zRyhXrwVWNkS7sy6g6eSNzqcknDvrFt4Knk+97OE+5Ly9bpHSTVMeY7i5s8h76d8o6MnLl15OfSlpDgUziwwFtXQ1e8pnblLsIUjaip3Rrwvhygvu5NBgzHhJqMmrjO5uNYUrOhlviV4RDA+Mhuz+q25RAQuHeGCuxOI5a7dz+Vm5OFLXeQfXt4gKDSDujQ/7yIVN55qirFDRsQtOorE5XVi6x8j/duO/3XfyTu2o/nceHbxvobbqAwdU1Oice7i7KCBqYvMilquyNzxU6RSlgFzMhHZ/9rnsA2O3zrbCW9CCx7XiTZ5nsGMukJul397sTDbxcxlG5gtOB595VPsOj6A/1qbsmhuSOEKoUVrvP+13HEwXR9D2pB4fdrweCWhlRMerzS0csHjlYhWDni8UtF04/FKRtOJxysdTRceDwOaDjweFjTVeDxMaCrxeNjQVOHxMKKpwONhRQsaj4cZLUg8Hna0oPB4NaAFgcerBc1vPF5NaH7i8WpD8wuPVyOaH3i8WtHWiserGW0teLza0VaLx8sAzes6EFMV3s4TAxjf3ADuuivDydfMqAsulI+0KY/tJ1WNvMdf/BjX9A/j7JYW2u4uGXkLcJGIi8Qsw9BAZlmCyun5icf2R1VNW7mmp+utY9jx4xnEY9aSZRYLcMIALk4ICqFZSvdpg5Q3S2wrVw69r2qfN97SgNbBf9Hd+xlqZuaQrDGXwnEBJOIM8RmgZoMLV/2xQP5/32+LtBmi3IXS7vrypUTaxlRDDEnLhJlMFR5xmQV+epdR34PsPRf/LDqOyR7JVZCvIntbwaDqTjGCsQ0hFzQu2cctLPNiLBvNJe+Z+o5yPaU2dyCQkD+V2+nL/wIMAKAWeEo/H9NGAAAAAElFTkSuQmCC); }\n\n.logo_container {\n  margin-top: 20px;\n  width: 100%;\n  text-align: center;\n  max-width: 640px; }\n\n.good_list_2_row {\n  background: #f1f1f1;\n  padding: 10px 5px; }\n\n.font-weight {\n  font-weight: 500; }\n\n.goods4_price_bar em {\n  font-style: normal;\n  font-size: 12px;\n  display: inline-block;\n  margin-right: 2px; }\n\n.good_list_2_row .good_item {\n  padding: 0 5px;\n  margin-bottom: 10px; }\n\n.good_list_2_row .good_item .good_img_container img {\n  border: none; }\n\n.good_con {\n  display: block;\n  background-color: #FFF;\n  padding: 10px;\n  padding-top: 0;\n  overflow: hidden; }\n\n.good_con .fz_12 {\n  overflow: hidden;\n  height: 16px;\n  line-height: 16px; }\n\n.good_con .fz_12 .dav-color-price {\n  display: inline-block; }\n\n.good_con .nowPrice {\n  font-size: 16px; }\n\n.good_list_2_row .good_item .lable {\n  color: #FF4A7D;\n  font-size: 10px;\n  display: inline-block;\n  margin-left: 4px;\n  font-family: sans-serif;\n  background-color: #FFF;\n  float: right;\n  -webkit-box-sizing: border-box;\n  position: relative;\n  top: 7.89473%;\n  padding: 0 2px;\n  border: 1px solid #FF4A7D;\n  line-height: 15px;\n  border-radius: 4px; }\n\n.good_list_2_row .good_item .lable .border {\n  -webkit-transform: scale(0.5);\n  -ms-transform: scale(0.5);\n      transform: scale(0.5);\n  position: absolute;\n  border: 1px solid #FF4A7D;\n  top: -50%;\n  right: -50%;\n  bottom: -50%;\n  left: -50%;\n  border-radius: 7px; }\n\n.good_list_2_row .good_item .good_title {\n  margin-bottom: 4px;\n  -webkit-line-clamp: 2;\n  line-clamp: 2;\n  line-height: 19px; }\n\n.goods4_price_bar {\n  overflow: hidden;\n  height: 19px;\n  width: 200%; }\n\n.good_list_sell_out {\n  z-index: 0; }\n\n.img_label {\n  font-weight: bold;\n  left: 0;\n  bottom: 0;\n  position: absolute;\n  font-size: 10px;\n  opacity: 0.8;\n  background: -webkit-gradient(linear, left top, right top, from(#ff5b5b), to(#fa1862));\n  background: linear-gradient(90deg, #ff5b5b, #fa1862);\n  background: -webkit-linear-gradient(left, #ff5b5b, #fa1862);\n  color: #fff;\n  line-height: 16px;\n  padding: 1px 8px 0 6px;\n  border-top-right-radius: 8px; }\n\n.img_label:after {\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-width: 0 4px 10px 0;\n  border-style: solid;\n  border-color: transparent transparent #fa1862 transparent;\n  position: absolute;\n  margin-left: 8px;\n  bottom: 0; }\n\n.img_container {\n  position: relative; }\n\n.vip_return {\n  line-height: 1;\n  font-size: 0;\n  color: #BF9D51;\n  padding-left: 4px;\n  position: relative;\n  display: inline-block;\n  -webkit-transform: scale(0.5);\n  -webkit-transform-origin: 0 60%;\n  -ms-transform: scale(0.5);\n      transform: scale(0.5);\n  -ms-transform-origin: 0 60%;\n      transform-origin: 0 60%;\n  vertical-align: middle;\n  margin-bottom: 4px; }\n\n.vip_return .vip_return_title {\n  font-size: 22px; }\n\n.vip_return .vip_return_f {\n  font-size: 18px;\n  padding: 0 2px 0 4px; }\n\n.vip_return .vip_return_price {\n  font-size: 24px; }\n\n@media screen and (max-width: 374px) {\n  .vip_return {\n    padding-left: 0;\n    margin-bottom: 3px; }\n  .vip_return .vip_return_title {\n    font-size: 20px; }\n  .vip_return .vip_return_f {\n    font-size: 14px;\n    padding: 0 2px 0 4px; }\n  .vip_return .vip_return_price {\n    font-size: 20px; } }\n", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -20767,9 +19598,6 @@
 	          // .then(
 	          //     scope.ajaxing = true,
 
-<<<<<<< HEAD
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2ab9d06a=\"\">\n    <tt_com_0 :data=\"data\" _v-2ab9d06a=\"\"></tt_com_0>\n    <div class=\"dvk6_container\" :style=\"styleObject\" _v-2ab9d06a=\"\">\n       <div class=\"dvk6_content1\" _v-2ab9d06a=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2ab9d06a=\"\">\n               <div class=\"dvk6_img\" _v-2ab9d06a=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-2ab9d06a=\"\">\n                    <div class=\"dvk6_startTime\" _v-2ab9d06a=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-2ab9d06a=\"\"><span v-text=\"data.body.dataList[0].time\" _v-2ab9d06a=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[0].title\" _v-2ab9d06a=\"\"></div>\n               <div class=\"dvk6_detail\" _v-2ab9d06a=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[0].pv\" _v-2ab9d06a=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[0].type\" _v-2ab9d06a=\"\"></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk6_content2\" _v-2ab9d06a=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2ab9d06a=\"\">\n               <div class=\"dvk6_img\" _v-2ab9d06a=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-2ab9d06a=\"\">\n                    <div class=\"dvk6_startTime\" _v-2ab9d06a=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-2ab9d06a=\"\"><span v-text=\"data.body.dataList[1].time\" _v-2ab9d06a=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[1].title\" _v-2ab9d06a=\"\"></div>\n               <div class=\"dvk6_detail\" _v-2ab9d06a=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[1].pv\" _v-2ab9d06a=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[1].type\" _v-2ab9d06a=\"\">\n                </span></div>\n            </a>\n       </div>\n    </div>\n</div>\n";
-=======
 	          //     scope.errors = false
 	          // )
 	          // .catch(e => console.log("Oops, error", e),
@@ -20808,7 +19636,6 @@
 	    }
 	  }
 	};
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 297 */
@@ -20838,11 +19665,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-059a0eca/bd_goods_3.vue"
-=======
-	  var id = "_v-71249cee/com-maybeyoulike.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-3d91a158/com-maybeyoulike.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -20866,13 +19689,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-059a0eca&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_3.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-059a0eca&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_3.vue");
-=======
 			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-maybeyoulike.vue", function() {
 				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-maybeyoulike.vue");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -20890,11 +19708,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*团购样式*/\n.tuan_list[_v-059a0eca] {\n    display: block;\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan_list a[_v-059a0eca] {\n    border-bottom: 1px solid #f0f0f0;\n    display: block;\n    position: relative;\n}\n\n.tuan_list a[_v-059a0eca]:last-child {\n    border-bottom: none;\n}\n\n.tuan_img_container img[_v-059a0eca] {\n    width: 100%;\n    display: block;\n    height: 43.75vw;\n    max-height: 280px;\n}\n\n.tuan_info_container[_v-059a0eca] {\n    position: absolute;\n    width: 1.62rem;\n    top: 0;\n    right: 10px;\n    height: 100%;\n}\n\n.tuan_list a .time[_v-059a0eca] {\n    background-color: rgba(0, 0, 0, .3);\n    line-height: normal;\n    display: block;\n    border-radius: .75rem;\n    position: absolute;\n    bottom: .14rem;\n    left: 0;\n    font-size: .12rem;\n    padding: 0.01rem 0.05rem;\n    color: #fff;\n}\n\n.tuan_list[_v-059a0eca]:hover, .tuan_list[_v-059a0eca]:focus {\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan_item[_v-059a0eca]:hover, .tuan_item[_v-059a0eca]:focus {\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan-other-info[_v-059a0eca] {\n    margin-top: 0.15rem;\n}\n\n.tuan_item_title[_v-059a0eca] {\n    text-overflow: ellipsis;\n    white-space: pre-line;\n    overflow: hidden;\n    height: 0.62rem;\n    line-height: 0.21rem;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 3;\n    display: -webkit-box;\n    overflow: hidden;\n    font-size: 0.14rem;\n    color: #333;\n}\n\n.tuan_item_price[_v-059a0eca] {\n    font-size: 0.11rem;\n    color: #333;\n    position: absolute;\n    bottom: 0.39rem;\n}\n\n.tuan_item_price .current_price[_v-059a0eca] {\n    font-size: 0.24rem;\n    padding-right: 6px;\n}\n\n.tuan_item_price .market_price[_v-059a0eca] {\n    text-decoration: line-through;\n    color: #999;\n}\n\n.tuan_img_container img[_v-059a0eca] {\n    width: 100%;\n}\n\n.tuan_item_icon[_v-059a0eca] {\n    width: 0.3rem;\n    height: 0.31rem;\n    background: url(//pic.davdian.com/free/tuanlist_icon_3x_0804.png) no-repeat;\n    background-size: 0.3rem;\n    display: inline-block;\n    position: absolute;\n    bottom: 0.11rem;\n    right: 2px;\n}\n.time1[_v-059a0eca]{\n    background-color: rgba(0, 0, 0, .3);\n    line-height: normal;\n    display: block;\n    border-radius: .75rem;\n    position: absolute;\n    bottom: .14rem;\n    left: 0;\n    font-size: .12rem;\n    padding: 0.01rem 0.05rem;\n    color: #fff;\n}\n", ""]);
-=======
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.clearfix:after {\n  content: '';\n  display: block;\n clear: both;\n}\n.no_more {\n  margin-bottom: 20px;\n}\n.good_list_2_row {\n  background: #f1f1f1;\n  padding: 10px 5px 0 5px;\n}\n.good_list_2_row .good_img_container {\n  padding: 0;\n  position: relative;\n  background-color: #fff;\n  min-height:145px;\n}\n.font-weight {\n  font-weight: 500;\n}\n.goods4_price_bar em {\n  font-style: normal;\n  font-size: 12px;\n  display: inline-block;\n  margin-right: 2px;\n}\n\n.good_list_2_row .good_item {\n  padding: 0 5px;\n  margin-bottom: 10px;\n  float: left;\n  width: 50%;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box;\n  -webkit-box-sizing: border-box;\n}\n\n.good_list_2_row .good_item .good_img_container img {\n  border: none;\n}\n\n.good_con {\n  display: block;\n  background-color: #FFF;\n  padding: 10px;\n  padding-top: 0;\n  overflow: hidden;\n}\n\n.good_con .fz_14 {\n  font-size: 14px;\n}\n\n.good_con .fz_12 {\n  overflow: hidden;\n  height: 16px;\n  line-height: 16px;\n}\n\n.good_con .fz_12 .dav-color-price {\n  display: inline-block;\n}\n\n.good_con .nowPrice {\n  font-size: 16px;\n}\n\n.good_list_2_row .good_item .lable {\n  color: #FF4A7D;\n  font-size: 10px;\n  display: inline-block;\n  margin-left: 4px;\n  font-family: sans-serif;\n  background-color: #FFF;\n  float: right;\n   -webkit-box-sizing: border-box;\n  position: relative;\n  top: 7.89473%;\n  padding: 0 2px;\n  border: 1px solid #FF4A7D;\n  line-height: 15px;\n  border-radius: 4px;\n}\n\n.good_list_2_row .good_item .lable .border {\n   -webkit-transform: scale(0.5);\n  -ms-transform: scale(0.5);\n      transform: scale(0.5);\n  position: absolute;\n  border: 1px solid #FF4A7D;\n  top: -50%;\n  right: -50%;\n  bottom: -50%;\n  left: -50%;\n  border-radius: 7px;\n}\n\n.good_list_2_row .good_item .good_title {\n  margin-bottom: 4px;\n   -webkit-line-clamp: 2;\n  line-clamp: 2;\n  line-height: 19px;\n  font-size: 12px;\n  color: #333;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  height: 36px;\n  -webkit-box-orient: vertical;\n  display: -webkit-box;\n  overflow: hidden;\n  padding-top: 6px;\n}\n.dav-color-price {\n  color: #FF4A7D;\n}\n.goods4_price_bar {\n  overflow: hidden;\n  height: 19px;\n  width: 200%;\n  font-size: 14px;\n}\n.good_list_sell_out{\n  font-size: 15px;\n  color: #fff;\n  background-color: rgba(0,0,0,.7);\n  width: 60px;\n  height: 60px;\n  border-radius: 30px;\n  line-height: 60px;\n  top: 50%;\n  position: absolute;\n  z-index: 2;\n  margin-top: -30px;\n  left: 50%;\n  margin-left: -30px;\n  text-align: center;\n}\n.img_label{\n  font-weight: bold;\n  left: 0;\n  bottom:0;\n  position:absolute;\n  font-size: 10px;\n  opacity: 0.8;\n  background: -webkit-gradient(linear,left top, right top,from(#ff5b5b),to(#fa1862));\n  background: linear-gradient(90deg,#ff5b5b,#fa1862);\n  background: -webkit-linear-gradient(left,#ff5b5b,#fa1862);\n  color:#fff;\n  line-height: 16px;\n  padding:1px 8px 0 6px;\n  border-top-right-radius: 8px;\n}\n.img_label:after{\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-width: 0 4px 10px 0;\n  border-style: solid;\n  border-color: transparent transparent #fa1862 transparent;\n  position: absolute;\n  margin-left: 8px;\n  bottom: 0;\n}\n.img_container{\n  position: relative;\n}\n.vip_return{\n  line-height: 1;\n  font-size: 0;\n  color: #BF9D51;\n  padding-left: 4px;\n  position: relative;\n  display: inline-block;\n   -webkit-transform: scale(0.5);\n   -webkit-transform-origin: 0 60%;\n  -ms-transform: scale(0.5);\n      transform: scale(0.5);\n  -ms-transform-origin: 0 60%;\n      transform-origin: 0 60%;\n  vertical-align: middle;\n  margin-bottom: 4px;\n}\n.vip_return .vip_return_title{\n  font-size: 22px;\n}\n.vip_return .vip_return_f{\n  font-size: 18px;\n  padding: 0 2px 0 4px;\n}\n.vip_return .vip_return_price{\n  font-size: 24px;\n}\n@media screen and (max-width:374px){\n  .vip_return{\n    padding-left:0;\n    margin-bottom: 3px;\n  }\n  .vip_return .vip_return_title{\n    font-size: 20px;\n  }\n  .vip_return .vip_return_f{\n    font-size: 14px;\n    padding: 0 2px 0 4px;\n  }\n  .vip_return .vip_return_price{\n    font-size: 20px;\n  }\n}\n\n.logo_left {\n  display                 : inline-block;\n  width                   : 162px;\n  height                  : 39px;\n  background-size         : 100%;\n  background-image        : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAUQAAABOCAYAAABYBm8UAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAEW5JREFUeNrsXQnUVVUVPjwmJ3AARE1FIUkDzTB1qdBg5RhOQKaioiYooCKRaAgSijizUFCQSEBzIIdKTU1NnMBQUzOcWiI5oeCApqYo0Pl659Xr7//fv787nn3e/dbaC4X97r3n3H33Pt8Z9m6xqPdgU4UOVr5tpbOVtVZetTLfyscmXLS00sdKdyutrbxv5UErbyhtz65WfuTe40buPS5373G6e6ca0cPK7lbaWllt5UknIWMzZ5ud3Ht8ycoDVtYobU8/J7tYKbm/e9bKXVZm+vCALaoc4hgrZ1rZoIHO21YmWZkSoMEdYeU8K10b/P0qK1dbOUVZe8a49jSFj6wMszJXmVOY6j6khlhoZZSVBQHa5uVWBrsAUI0lVs62coOitqxv5RYr+9bQWWTlSCsv++AQZ1k5vhndy6z8JCCDG2FlcjM6iMZ7K2nPSCuXCnV/YOVOBW3axMrTVrZqRm9/K3cHYpct3Gj+m83oneIChQY8amVPgd4yKztY+SCvB8Ww9SCBM6x8cEcHYnTfEDhD4DtWRitoT3fCGQLzXNT2HVcLnCFwmylP94SAaQJnCFxhZTsF7RktdIbA5m5knBtKbqTEGGgIhjeP0B2uoD0XkvrrWTnZ8zZt0QRNbgzrWPlVAHbZm3wvJ3reHky/jSd/c4wwCKbmELsQ+iEY3iVWtiX0tyT7KGvg2Q6J8LtRnr+nr5P6+ypnMC3JQA3s7HmbhjmfweKneTrEVXVkeKDKUeZBN/S4TWdE/B12Egz0uF2rI1Lsjkptc6qjjKwT9RXwLSMj/naI+f/F3cweem1Ew9NInedF/N3nnrannSmvREbFGI/fVZStJRiNzFFKlU+K8LsvPG4TBk2bRvxtGyun5uUQTUTD00adWaqsAadZaRXj99tb2SewPjnAymGBU2UNiBtsT49p25k6RG3UOSpV9hnYRD4igeuMC/BjnJsX5cqIKvsObIOKuwLeMQ//Uor5ey3UOcQIPCihvt/L8AsYvmN9o2PzeZ+IVNl3jE3oOmdrc4gaqHOIVBlIcn9kiKPEQxVQ5+sC7HesfO+R0LVwguxATQ7Rd+ocIlUG+lrpluD1Dgk0aPhMnRGotw6wzyckfL1ztDlEn6lziFQZGO/5iLOgzvUZqLd1wTpJIFnJbtocoo/UOVSqDOPoJdTFgfkVQt0TrGxcUOciUGcQVD+x8oiPo8RSgtfyiTqHGoFZ40ASh+uFutjicFqgfeYTdQ41UG/sgqoESPaAlWhpEgdspeqWRSNKCV/PF+ocagTu5oxDgnvc6PAa4vpwiK0L6lwE6ghg9sT+wpRT0V1LXD+TQwRJO0QfqHOoEZg1igvcn88YeSLVjYgoX1DnIlBX0JpgF8iverP7byZDE9hnJ20OMW/qHHIE7kT0K7IQz6/6/3OJ+4w24SJP6hxyoD7BBVNpP1SOZS61crvwdxh9nq7RIVao8yZFBE4UzFGmiQ3+/7dW/i787TZuNBUi8qLOIQdqJogikcz0Bn/3c+I+SIrbRqNDBHWeXUTgxIDzrsMISnJTI39/MXG/cQF/vHlQ53mB9+c2Qt0Zpjx3WA2mNg5G96me7GEc4uvktftmaHi9IkTg1xQZ3VAr7YnA0JQxSlf1kjxtkDZQAG2Zx9SZDdTPR/jW8gQTPJsKysyUTqq5EhmHeJXhV3qyMjz2CNSJjkZqgTTnYWOUpIIv3FRGaKNEjJ4xh/WUh9SZpcp4f0eYHGuKkNjDyJPU/qbGIISZ0kHC5v4+OEQY0fnkyCoLwxtvyoVppMCGUCz7b6bE6Po7I4hKSaqBVT1p4tX9yH7NC5iewUr6UR5SZ5YqD3Zt0XKkjwmazR3pY6Z0xqbVIMYhbuH+/KFHhodavewu9sPdn1pOZTAvvzmjwvzijcT1zlLSR19xVPMa8ndpMhiWKiNQz3Ej3hYK+nwHFzQlWCQYwTNTOjuZcgG4XB1iZan8MUeffTA8NgJjr9Sb7r9XKzC6Pu7lx6Uk1biAuD/q5G6qoJ/aVk2FMPOJaTEYliqvqRpo4DtZq6DPmWApmSNkp3RS2ajNOMTql4QVz6U5Gx6o8lfJCHy50YXxCVKSCv5q5T6hLkYrGvYlrqkKcj4wGDZQD6ty5GsU9HdnFywlWGLlDqEuM6XzXSs75ukQGzrHATkaHkuV10T4UPJGTyt7J0hJqsGULUXBn3UV9dsjERlMu5yoMo5YTldmmyONvMAVMzfITukknkA2zj7EJwx39CZJ6sxG4JMMvzUjNEpSjfvcSFE6uteW1TkKg5mZA1X+zPCLQXkDwXGoUPd9K7PI6zNTOhjkJFp+Ie7GbNT2fSFj6sxS5XsSMvYssWlKlCTqKPFMZf0XhcFgsW2/mPdlA/XxVt5V1rcnE4OaKw1fsRKB+gFCP9EpnSROqrB7guJQZ5Yqr1IYgdnR4cUR73GDlXcIB62tH6MwGOxnXSfi/ViqfJuRp2bzCaOEelgkmRLxHhNJB53UdEciDnGx4c4jxqHObAQ+WmEExih6SIqUpAJMXl+WkpP26eNlGEyHiGyCpco4XXOMwv48nKCoCC4rIt7nfuK9tSEofCYOsUJj0z4pwFLl24zOM6SIeNJFjCiUpBrTjLzYOUbnGms4swxmYATqzNoZnOFHCvuSWcS4KOa9JhG6WORJpIZzkskd+qVInVmq/InSCMxQktUxKEkFH5IjzLEK+zMKg2GoM0uVce1bFfYjtrn0FOr+wZQ3yscB+omZ0knke0/SIb5CfMwsdWYj8BFKIzBGJ52FutfHoCTVYBZXelv5msJ+ZRmMlDqzVPk9U948rhHMRujzE7gftsoxUzqJLK4knf4Lk9h/Spg6s1QZkeV3dWB0kxK6JwIZs0o9VmnfsgxGQp3ZQI05uE8V9h02QEuPyiE58YMJ3ZeZ0uluEqjhnEY+xEMMdyyuFnVmqfK7iiMw5ue2F+renwAlqQazjxGOpYvC/o3CYGpRZ5YqY/P1fUptk5k7nJjgfdkpndjV+dJwiG9ZGZ4QdWYj8AClEZgdeU1M+N446fIEoX+G0j5mGUxT1Hknkiovi/BN+IKtjPyUV1PJieOAmdJBDeddfHOIlWjIbK5sjDqzVJm9p0/AB9ZbqLs4pXYyFBxpqtop7WuWwTRGndn9gwOMjmQijYFJyHpJSiN7ZkpnvI8O0biowozWqqlzT3L4G2VU6hOYVdBJKT0DVj6lSTo113COYivV1BkfXA/it1gYeFRpX4G1SffE1kpOHBfnEbqoRf5lHx3iO24kwQDpfzAvM5X83aGKI3AXN2qRUpI0y7wyJztGGL01nPHhPkRSZ0xpdCcD9StGd3GpU428qFNzyYnjANMcTxP6kVecSyl3KApR/540PBSc+Rb5ET+m2OiY+bjJKT8LAtI/iHc1SHG/9ycZzOgIdtZPcf+wZT8vTvl5JhC6x5qINZxLGXQsthp8TOgzmayR2GCUYqNrR4yikRnlypSfB/dgUmedqbjvV5AMpiVpm5gGeUpx/2Cjc0ehrjQ5cRzg5Jm0+FZrE7GGcxYO8SOT3qkR7fWDTzPyI0czidFbHDCj0K5WDlbc/2Awd6Vw3edMzMl9D8DQzgkZPRMzCh1mIhznK2XUkFudh08SiMB/UWxwiGIjyKmBLIBFB2YVdazyD/9IksFI6bhmYINzd6Eum5w4DqYb+TwlyvYOYW9QyrCTMUpMKvPM4gAi8CBTnoeT0oWlGT4bs5KNfV97KH4PKxNmMJjCeV65bTILR+dm+FxYyZ5B6NM1nLN0iPDsAxO61mFGP6SUBPN6x2X8bEjSOZvQH6f8XSTFYJ7McCSfFhDgdhXq4ojeHRk/HwKO9Ax/F3a03irjxtxtynu6BsbskJeUG11fK92EuhhV729lPZNdeUqkFGNWYLFxeTsrf1P8To5xo/AOEX+PbV/a57TZ0eFyN+WQZc0dHOdD5UzpKjKmdG721SECOGv8PROtUHyULMg+gqH7qId9g4I2jTG6t+FUGEzURRZs9n5NuV12dcFaigGGL9WQNXAKDOV8H/aNMlfwacRORAQ+2OjHblZ6mfCA7OSdlbehwmBYoNLf9ADe4VkmTIgHIKWcHjCKAQ03/y0yXy+URBNgSyMDaAcYzFsZBHjfgD2HxwZqmyjn20NqxHmBoRgPBRKBMW94gAkXKH/QRnkbWAc3mHSgvuIUo/copgSiXKN5OkTpJDSW2vvX00tRDJy8GRpAO8BgJKeCcCz12gDa28o5xJCBLPpb+OwQAWxTOLUZHWyxWRHAC8Gq2NEmfIwOpB046fDHGv+OqnCHB9JWbGDeuA5ss9l9iSUPHvIKN1JseOpkoeP+dwbyMk43+azqZ43NAnIUKKyEZLwrGzCWG63sbnTW7YnkKAJy/Bv47hABHA5H8aJebkSIpfI9jd6Erw3R0o046gVnB9YWbPBFTRFsSenq6NeHgbTvUKOzJEQUrNvcd1jy7IFxJhInBp4N7EVgXq19HTnEnm50FQrg/Oab8qmMNwJ7V+NMfWFkLb/XyhTIAkzOQ8xb4az2eh49fyX5LqjwhsLfYAHp/uLVe429rOws1F1rysc5V3nmN7Ar4EtGnmQZNZwxlz+ncIj5ACvkWwp1P/B8ZIUM0NLED6CYmAZ5pjABb8HsiUWm9uM9bgsSakirVo5pyiGWCptIHUx6rBmetwWlHT5Lqe0FsgWcx/cJ/Ymet4fJ0IRz9/sXDjF74AzlToT+ZM/bg1XVmYR+P2J0XCBbMAtfqCf9guftwZHL5XGDdeEQ08V4Qhc1qDWceGCTa4wuzMA74Mz5UYT+hQratMaUKxxKgRyeuxQOMTtgpXVvQv88Je1aasrbpKTAcb72hTl4BWbf4QtuhKgBOF20itA/p3CI2YHJHIJEm5q2GjE1NOptD6bvwF68kwj9SYrahppDzDx8ZV9p4RBTBpb2jwzU6ADsF11I6GPvV+vCLLwAnOH6Ql0cmb1OWfvYcqhnFQ7Rr9Ehsn/fo7CNTC0NpJYaVJiFF2BKx04x5bk5TUAGrVsIfaQ861A4xPSA6MtU+7pQaTvvMlwph2JxJX8c5diLBF8Yrka31mD9P9UvC4eYPLCIIK0x8Y6VuYrbyjhz5II8sDAPNcxllpX3lLYThwEWEPr/qY9eOMTkMYrQneYisVbAmTOp2c4pzCM34ARUD0L/IuXtZXZttKuwusIhJgumrggq201V3l448ymEPspb7lWYSS5gghGmQ5Yoby87pYOtSKXCISYLZn/XbEeZteMqcpRbbMHJHkjg0Cel0ZXPYKZ0kAJtn3p2iC0T1t3ayo7ENS8NpB8xzzSL0MeHWSQVSQbS7/cg4ppI1LwgkP6ZSw46+qJD2wqV2wZmTMx2gs8FOh2J691r5cWA+pKJxJsbWWozplhVSLbZgmiPNKhvQNz/3ID6EsyFOc7XCQ7xY6Hyu4E5RKlDQvr4V4R6UkwIrC/RP3cIdbEI84lA73Xi/ssD6st/Gnk27iXENSXAWfqbA7PNaYTum3CIvxYq3xRYR/1SqIf6GZLzkUutvCzQQ/LXRwKkbz8T6s0zsjnHp4Uf/KtWFgXUj2Aj0kp+c4R60mA1KUC7RHC5ROrj4BAnCyLsbMMd1dKApwTRA6NiaelQUHBJKcdBJkzgLPb5gv5kVjuHC3R+bMrZnEMC0vq/IfgmHxZe73FTTvBaC9i7d0WgtjlGwAhxRHEhHCJy3PW28ucaHX9coB01vIYRoD+wRYTZnIql/qGm8TnHt025oM8TJlyMqTHKWOz6cyXZn0OaoNjILo4MzvcG2I+Vb7KpQciMCN/ksTXo8HxT3qe4NlC7XOVsb34T/44R+b9LBLdY1Htw9T/gaA+q3bV38wm3W3nIhA/kRRtgyoWskTFjgSCi1gIy8iK5Qxc3cnzOUfSVpj7QsD8fd4E1KrZyzq/Sny+6iL6sDvoS/YiV+U1ce+N+k3B8ODGE/bJYgUWmpVtN/aBmf/5LgAEAzQxLfXjSAv8AAAAASUVORK5CYII=);\n}\n\n@-webkit-keyframes plus {\n  0% {\n    -webkit-transform : rotate(0deg);\n    transform         : rotate(0deg);\n  }\n  50% {\n    -webkit-transform : rotate(360deg);\n    transform         : rotate(360deg);\n  }\n  100% {\n    -webkit-transform : rotate(360deg);\n    transform         : rotate(360deg);\n  }\n}\n\n@keyframes plus {\n  0% {\n    -webkit-transform : rotate(0deg);\n    transform         : rotate(0deg);\n  }\n  50% {\n    -webkit-transform : rotate(360deg);\n    transform         : rotate(360deg);\n  }\n  100% {\n    -webkit-transform : rotate(360deg);\n    transform         : rotate(360deg);\n  }\n}\n\n.logo_right {\n  display                 : inline-block;\n  width                   : 39px;\n  height                  : 39px;\n  -webkit-animation       : plus 2s linear 0s infinite;;\n  animation               : plus 2s linear 0s infinite;\n  background-size         : 100%;\n  background-image        : url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE4AAABOCAYAAACOqiAdAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABYpJREFUeNrs3FtoHFUYB/D/OWd2dtJsbC7UNJgoXkobaW2ViA/xikh9UcSH1FIp0YivPohiwSJ4qxgU8UX0QUSsKMYLaFsFEUFaFKnaoibFaKApEXNpm9tuNrsz43f2EpKw6e4kM+fszuaDf3YzezY5+e05c4EzYWM9PXDnAV4L1D1kZx7l95rqZkoX5TZKMyVB+YXSR/lCT5cYImwUX9l343V7N9rY+cxWY9HrYGb2UVM9TzlYYHs7ZR/lPcoj6rvlII0oZiiCnueLL3odbkIb3IEV0BZXN+UNlZ1yiUeOth+cDrxr344WNrkUTo40h9Cm+0R22tZlIRVVK+XlEts+QblRVccMJJHCRoLblmEsOOIYTdr0KMPsEZG1jinD6/LYvkfNno1waLQdsTtxzNmBK9gF4mAFpiptE/UukqcZpj8iRaEMb5PH9u0q0Aw2htM0RT9wbsGVbCIzbRcXX/4msYnwfleKl/S861GCth0H0ntoqgrUUheX/1Je6M0a8LyUrQZtLz230UTHU7sAE1/ph5Q5nla0S8JVE55XtKJw1YC3GrSS4MKMt1q0kuHCiLcWNE9wYcJbK5pnuDDg+YG2KrhKxvMLbdVwlYjnJ9qa4CoJz2+0NcNVAl4QaL7AlTNeUGi+wZUjXpBovsKVE17QaL7DlQOeCrRA4HTiqUILDE4Hnkq0QOFU4qlGCxxOBZ4ONCVwQeLpQlMGFwSeTjSlcH7i6UZTDucHXjmgyTJ0XA7l8ZwPDTTut0eFXNA1V8obiS0+Ff917AYcdPZoQysEF6E8CAXLDCQe/mYYfpvfOdtgQ6SLL5MyEwlcuGrz1t6OB55ltms0OUrQZihHKX+uBLeX8hLlalWfWk0LMHQS6D8F1MZKaD+Wxsjuxi3OrfyF+rkEbEfZSOtFdn3eY8itJMjDPUM5pHq4O9QFcyNQ10YoVvH2VpShrjEVN5101HZZVPEE7abQR4178weHm3SgVWjtpjych3t63cNTPUlpk3C71i081U5KB9d1SlLBJQ//zRyhXrwVWNkS7sy6g6eSNzqcknDvrFt4Knk+97OE+5Ly9bpHSTVMeY7i5s8h76d8o6MnLl15OfSlpDgUziwwFtXQ1e8pnblLsIUjaip3Rrwvhygvu5NBgzHhJqMmrjO5uNYUrOhlviV4RDA+Mhuz+q25RAQuHeGCuxOI5a7dz+Vm5OFLXeQfXt4gKDSDujQ/7yIVN55qirFDRsQtOorE5XVi6x8j/duO/3XfyTu2o/nceHbxvobbqAwdU1Oice7i7KCBqYvMilquyNzxU6RSlgFzMhHZ/9rnsA2O3zrbCW9CCx7XiTZ5nsGMukJul397sTDbxcxlG5gtOB595VPsOj6A/1qbsmhuSOEKoUVrvP+13HEwXR9D2pB4fdrweCWhlRMerzS0csHjlYhWDni8UtF04/FKRtOJxysdTRceDwOaDjweFjTVeDxMaCrxeNjQVOHxMKKpwONhRQsaj4cZLUg8Hna0oPB4NaAFgcerBc1vPF5NaH7i8WpD8wuPVyOaH3i8WtHWiserGW0teLza0VaLx8sAzes6EFMV3s4TAxjf3ADuuivDydfMqAsulI+0KY/tJ1WNvMdf/BjX9A/j7JYW2u4uGXkLcJGIi8Qsw9BAZlmCyun5icf2R1VNW7mmp+utY9jx4xnEY9aSZRYLcMIALk4ICqFZSvdpg5Q3S2wrVw69r2qfN97SgNbBf9Hd+xlqZuaQrDGXwnEBJOIM8RmgZoMLV/2xQP5/32+LtBmi3IXS7vrypUTaxlRDDEnLhJlMFR5xmQV+epdR34PsPRf/LDqOyR7JVZCvIntbwaDqTjGCsQ0hFzQu2cctLPNiLBvNJe+Z+o5yPaU2dyCQkD+V2+nL/wIMAKAWeEo/H9NGAAAAAElFTkSuQmCC);\n}\n.logo_container {\n  margin-top : 20px;\n  width      : 100%;\n  text-align : center;\n  max-width  : 640px;\n}\n\n.good_list_2_row .column3Con {\n  padding-bottom: 0;\n}\n.good_list_2_row .column3 {\n  width: 33.3%;\n}\n.good_list_2_row .column3Cont {\n  height: auto;\n}\n.good_list_2_row .column3Price {\n  display: block;\n  width: 50%;\n  text-align: center;\n}\n.good_list_2_row .column3VipReturn {\n  display: block;\n  text-align: center;\n}\n", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -21335,11 +20149,7 @@
 /* 301 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-059a0eca=\"\">\n    <tt_com_0 :data=\"data\" _v-059a0eca=\"\"></tt_com_0>\n    <div class=\"tuan_list\" _v-059a0eca=\"\">\n        <a :href=\"data.body.dataList[0].command.content\" :data-remain-second2=\"remainsecond\" data-dav-tj=\"goods_group|good|good|1|good@goods_group\" _v-059a0eca=\"\">\n            <div class=\"tuan_img_container\" _v-059a0eca=\"\">\n                <img v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" style=\"display: block;\" _v-059a0eca=\"\">\n            </div>\n            <div class=\"tuan_info_container\" _v-059a0eca=\"\">\n                <div class=\"time1\" v-if=\"remainsecond > 0\" _v-059a0eca=\"\">{{remainsecond | timeday}} </div>\n                <div class=\"time\" v-if=\"remainsecond < 1\" _v-059a0eca=\"\">团购已结束</div>\n                <div class=\"tuan_item_icon\" _v-059a0eca=\"\"></div>\n                <div class=\"tuan-other-info\" _v-059a0eca=\"\">\n                    <div class=\"tuan_item_title\" _v-059a0eca=\"\">\n                        {{data.body.dataList[0].title}}\n                    </div>\n                    <div class=\"tuan_item_price\" _v-059a0eca=\"\">\n                        <span class=\"current_price\" _v-059a0eca=\"\"><em _v-059a0eca=\"\">￥</em>{{data.body.dataList[0].nowPrice}}</span>\n                        <span class=\"market_price\" _v-059a0eca=\"\"><em _v-059a0eca=\"\">￥</em>{{data.body.dataList[0].prePrice}}</span>\n                    </div>\n                </div>\n            </div>\n        </a>\n    </div>\n</div>\n";
-=======
 	module.exports = "\n<div class=\"good_list_con\">\n  <div class=\"good_list_2_row clearfix\">\n    <a\n       v-for = \"item of list\"\n       @click = 'handleHref(item)'\n       class=\"good_item\" :class = \"{ column3: column && column == '3' }\">\n      <div class=\"good_img_container\">\n        <div class=\"img_container good_img_container\">\n          <img v-if = \"item.goods_img\" v-lazy=\"imgObject(item.goods_img)\" style=\"display: inline;\">\n          <img v-if = \"item.imageUrl\" v-lazy=\"imgObject(item.imageUrl)\" style=\"display: inline;\">\n          <span class=\"img_label\" v-if=\"item.goods_label || item.actInfo\" v-text=\"item.goods_label || item.actInfo\"></span>\n          <span class=\"img_label\" v-if=\"item.goods_label == '' && item.ratio\" v-text=\"'返现'+item.ratio+'倍'\"></span>\n        </div>\n        <div v-if = \"item.sale_status\" class=\"good_list_sell_out ng-scope\">\n          <span v-if = \"item.sale_status == 'soldout'\" class=\"ng-scope\">售罄</span>\n          <span v-if = \"item.sale_status == 'presale'\" class=\"ng-scope\">预售</span>\n          <span v-if = \"item.sale_status == 'offline'\" class=\"ng-scope\">未上架</span>\n        </div>\n      </div>\n\n      <div class=\"good_con\" :class = \"{ column3Con: column && column == '3' }\">\n        <div class=\"good_title\">{{item.goods_name || item.title}}</div>\n        <div class=\"goods4_price_bar\" :class = \"{ column3Cont: column && column == '3' }\">\n          <span v-if = \"item.shop_price\" class=\"dav-color-price font-weight\" :class = \"{ column3Price: column && column == 3 }\"><em class=\"fz_14\">¥</em><span class=\"nowPrice\"><span>{{(item.shop_price+\"\").split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.shop_price+'').split('.').length == 2\">.{{(item.shop_price+\"\").split(\".\")[1]}}</span></span></span>\n          <span v-if = \"item.nowPrice\" class=\"dav-color-price font-weight\" :class = \"{ column3Price: column && column == 3 }\"><em class=\"fz_14\">¥</em><span class=\"nowPrice\"><span>{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.nowPrice+'').split('.').length == 2\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span></span>\n          <span class=\"vip_return\" :class = \"{ column3VipReturn: column && column == 3 }\" v-if = \"(item.seller_income && item.seller_income != '0') || (item.comm_income && item.comm_income != '0') || (item.timeshopIncome && item.timeshopIncome != '0') || (item.income && item.income != '0')\">\n            <span class=\"vip_return_title\">会员返</span>\n            <span class=\"vip_return_f\">¥</span>\n            <span class=\"vip_return_price\">{{item.seller_income || item.comm_income || item.timeshopIncome || item.income}}</span>\n          </span>\n        </div>\n      </div>\n    </a>\n  </div>\n  <div class=\"logo_container\" v-if=\"loading\">\n    <div class=\"logo_left\"></div>\n    <div class=\"logo_right\"></div>\n  </div>\n  <div class=\"no_more\" v-if=\"errors\">\n    <span>（ &gt;_&lt; ）加载失败了</span>\n  </div>\n  <div v-if = \"no_more\" class=\"no_more\">\n    没有更多商品了\n  </div>\n</div>\n";
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 302 */
@@ -21375,11 +20185,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-22cdd3a2/bd_ts_0.vue"
-=======
-	  var id = "_v-6878f7d2/bd_image_0.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-758d6c5d/bd_image_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -21388,51 +20194,7 @@
 	})()}
 
 /***/ },
-<<<<<<< HEAD
-/* 325 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(326);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-22cdd3a2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-22cdd3a2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_0.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 326 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(42)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.ts_feeds section .index_model[_v-22cdd3a2] {\n  margin-top: 0;\n}\n\n#ts_menu_wrap[_v-22cdd3a2] {\n  height: 50px;\n  width: 100%;\n  overflow: hidden;\n}\n\n.ts_menu[_v-22cdd3a2] {\n  width: 100%;\n  z-index: 2;\n  background-color: #FDFCFC !important;\n  position: relative;\n}\n\n.ts_menu[_v-22cdd3a2]:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  background: rgba(216, 216, 216, 0.51);\n  -webkit-transform: scale(0.5);\n  bottom: 0;\n  z-index: 1;\n}\n\n.ts_menu li[_v-22cdd3a2] {\n  text-align: center;\n  font-size: 14px;\n  padding: 11px 0;\n  color: #666666;\n  background-color: #FDFCFC;\n}\n\n.ts_menu li.pitch_on[_v-22cdd3a2] {\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n  color: #FFF !important;\n}\n\n.ts_menu li > div .statusInfo[_v-22cdd3a2] {\n  font-size: 10px;\n}\n\n.ts_menu li > div > div[_v-22cdd3a2]:nth-of-type(1) {\n  line-height: 14px;\n  margin-bottom: 4px;\n}\n\n.ts_menu li > div > div[_v-22cdd3a2]:nth-of-type(2) {\n  line-height: 10px;\n}\n\n.ts_menu li:nth-of-type(1) > div[_v-22cdd3a2]:before {\n  width: 0px;\n}\n\n.ts_menu li.pitch_on > div[_v-22cdd3a2]:before {\n  width: 0px;\n}\n\n.ts_menu li.pitch_on + li > div[_v-22cdd3a2]:before {\n  width: 0px;\n}\n\n.ts_menu li > div[_v-22cdd3a2]:before {\n  content: \"\";\n  display: block;\n  position: absolute;\n  top: -10%;\n  height: 120%;\n  width: 1px;\n  background: #ededed;\n  -webkit-transform: scale(0.5);\n}\n\n\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 327 */
-=======
 /* 304 */
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
@@ -21575,11 +20337,7 @@
 /* 308 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div class=\"ts_feeds\" :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-22cdd3a2=\"\">\n  <div id=\"ts_menu_wrap\" _v-22cdd3a2=\"\">\n    <div :style=\"styleObject\" class=\"swiper-container ts_menu\" id=\"ts_menu\" _v-22cdd3a2=\"\">\n      <ul class=\"swiper-wrapper\" _v-22cdd3a2=\"\">\n        <li class=\"swiper-slide\" v-for=\"(item, index) in dataList\" :class=\"{pitch_on:item.selected == 1}\" @click=\"ts_tab(item,index)\" :data=\"item.timeshopActId\" _v-22cdd3a2=\"\">\n          <div class=\"\" v-if=\"item &amp;&amp; item.title\" _v-22cdd3a2=\"\">\n            <div class=\"time_state_span\" _v-22cdd3a2=\"\">{{item.title}}</div>\n            <div class=\"statusInfo\" _v-22cdd3a2=\"\">{{item.statusInfo}}</div>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>\n";
-=======
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"[{ marginTop:data.marginTop },styleObject]\">\n\n    <tt_com_0 :data=\"data\"></tt_com_0>\n\n    <div class=\"model_con\">\n        <div class=\"dvd-index-module clearfix\">\n            <!-- <div class=\"index_activity\" style=\"padding:0;margin:0;height:1.4rem;overflow:hidden;\">\n                <a :href=\"data.body.dataList[0].command.content\" style=\"height: 1.4rem;padding:0;margin:0;\" @click=\"clickAnalysis\" position=\"0\">\n                    <img class = \"newImage\" :src=\"data.body.dataList[0].imageUrl\" style=\"width:100%;height: 1.4rem;\">\n                </a>\n            </div> -->\n            <div class=\"index_activity\" style=\"padding:0;margin:0;overflow:hidden;\">\n                <a :href=\"data.body.dataList[0].command.content\" style=\"padding:0;margin:0;\" @click=\"clickAnalysis\" position=\"0\">\n                    <img class = \"newImage\" :src=\"data.body.dataList[0].imageUrl\" style=\"width:100%;\">\n                </a>\n            </div>\n        </div>\n    </div>\n</div>\n";
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 309 */
@@ -21609,11 +20367,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-366e10d9/bd_ts_prod_0.vue"
-=======
-	  var id = "_v-68870f53/bd_image_1.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-759b83de/bd_image_1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -21637,13 +20391,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-366e10d9&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_prod_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-366e10d9&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_prod_0.vue");
-=======
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_1.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_1.vue");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21661,11 +20410,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.f_l[_v-366e10d9]{\n  float: left;\n}\n.newOriginal_price[_v-366e10d9] {\n  font-size: 14px;\n}\n\n.list_style[_v-366e10d9] {\n  height: 130px;\n}\n\nul li[_v-366e10d9] {\n  padding: 10px 10px;\n  position: relative;\n  overflow: hidden;\n}\n\nul li.online[_v-366e10d9]:after {\n  content: \"\";\n  display: block;\n  background-color: #DDDDDD;\n  -webkit-transform: scale(0.5) translateX(280px);\n  -ms-transform: scale(0.5) translateX(280px);\n  transform: scale(0.5) translateX(280px);\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  bottom: 0;\n  z-index: 1;\n}\n\n\nul li .img_container[_v-366e10d9] {\n  position: relative;\n}\n\nul li .img_container_inner[_v-366e10d9] {\n  width: 130px;\n  position: relative;\n}\n\nul li .img_container_inner div[_v-366e10d9] {\n  height: 60px;\n  width: 60px;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  margin: auto auto;\n  font-size: 14px;\n  color: #FFF;\n  text-align: center;\n  line-height: 60px;\n}\n\nul li .order_good_info_container[_v-366e10d9] {\n  position: absolute;\n  padding-left: 140px;\n  top: 0;\n  padding-top: 10px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.order_good_name[_v-366e10d9] {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  /*display: -webkit-box;*/\n  /*-webkit-line-clamp: 2;*/\n  /*-webkit-box-orient: vertical;*/\n  height: 20px;\n  line-height: 20px;\n  color: #333333;\n}\n\n.order_good_name_in[_v-366e10d9] {\n  font-size: 12px;\n  color: #999999;\n}\n\n.order_good_price[_v-366e10d9] {\n  font-size: 16px;\n  height: 16px;\n  line-height: 16px;\n  color: #FF4A7D;\n  padding-top: 5px;\n}\n\n.price_symbol[_v-366e10d9] {\n  font-size: 12px;\n  font-style: normal;\n}\n\n.progress_info[_v-366e10d9]{\n  position: absolute;\n  width: 100%;\n  bottom: 14px;\n  font-size: 12px;\n  color: #999999;\n}\n.market_price[_v-366e10d9] {\n  text-decoration: line-through;\n  color: #999;\n  margin-left: 0px;\n  font-size: 11px !important;\n}\n\n.progress_bar_bg[_v-366e10d9] {\n  background-color: #EAEAEA;\n  border-radius: 8px;\n  height: 8px;\n  width: 21.3333333%;\n  position: relative;\n  overflow: hidden;\n}\n\n.progress_container[_v-366e10d9] {\n  height: 8px;\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n  /*position: absolute;*/\n  left: 0;\n  top: 0;\n}\n\n.panic_buying_btn.buy_gray[_v-366e10d9] {\n  background: -webkit-linear-gradient(left top, #DBDADA, #C5C5C5); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#DBDADA), to(#C5C5C5));\n  background: -webkit-linear-gradient(top left, #DBDADA, #C5C5C5);\n  background: linear-gradient(to bottom right, #DBDADA, #C5C5C5); /* 标准的语法 */\n}\n.panic_buying_btn.seteds[_v-366e10d9]{\n  color:#999999;\n}\n.panic_buying_btn.seteds[_v-366e10d9]:after{\n  border-color: #999999;\n}\n\n.progress_bar_percentage.wall[_v-366e10d9] {\n  width: 100%;\n  min-width: 10px;\n}\n\n.finish_percentage[_v-366e10d9] {\n  font-size: 11px;\n  color: #FF4A7D;\n  line-height: 11px;\n  margin-top: 5px;\n}\n\n.panic_buying_btn[_v-366e10d9] {\n  width: 70px;\n  height: 25px;\n  font-size: 11px;\n  line-height: 25px;\n  text-align: center;\n  color: #fff;\n  position: absolute;\n  right: 10px;\n  bottom: 21px;\n  border-radius: 12px;\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n}\n\n.panic_buying_btn2[_v-366e10d9] {\n  background: none;\n  color: #ff4a7d;\n  border-radius: 20px;\n  line-height: 26px;\n}\n\n.panic_buying_btn2[_v-366e10d9]:after {\n  content: \"\";\n  -webkit-transform: scale(0.5);\n      -ms-transform: scale(0.5);\n          transform: scale(0.5);\n  width: 200%;\n  height: 200%;\n  border: #FF4A7D solid 1px;\n  display: block;\n  position: absolute;\n  left: 0;\n  top: 0;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  border-radius: 50px;\n}\n.membership_crown_pre[_v-366e10d9]{\n  color:#999999;\n  text-decoration: line-through;\n  font-size: 11px;\n}\n.membership_crown .membership_crown_pre em[_v-366e10d9]{\n  font-size: 10px;\n}\n\n.membership_crown[_v-366e10d9] {\n  font-size: 11px;\n  color: #D6B471;\n  display: inline-block;\n  padding-left: 5px;\n  position: relative;\n  bottom: -1px;\n  float: left;\n}\n\n.membership_crown em[_v-366e10d9] {\n  font-size: 10px;\n  font-style: normal;\n}\n\n.tipswrap[_v-366e10d9] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.51);\n  z-index: 99;\n}\n\n.tipswrap .tipsdiv[_v-366e10d9] {\n  width: 72%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  overflow: hidden;\n  min-height: 20px;\n  max-width: 480px;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n\n.tipswrap .tipsdiv img[_v-366e10d9] {\n  width: 100%;\n}\n\n.tipswrap .tipsdiv div[_v-366e10d9] {\n  width: 100%;\n  height: 13%;\n  position: absolute;\n  bottom: 0;\n}\n\n.progress_bar[_v-366e10d9] {\n  position: absolute;\n  width: 100%;\n  bottom: 20px;\n}\n\n.remain_btns_click[_v-366e10d9] {\n  width: 90px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  bottom: 13px;\n  z-index: 2;\n}\n", ""]);
-=======
 	exports.push([module.id, ".clearfix:before {\n  display: table;\n  content: \" \"; }\n\n.clearfix:before {\n  display: table;\n  line-height: 0;\n  content: \"\"; }\n\n.dvd-col-4 {\n  width: 33.33333333%; }\n\n.pull-left {\n  float: left; }\n\n.index_model a {\n  overflow: hidden;\n  line-height: 0; }\n\nimg {\n  max-width: 100%;\n  vertical-align: middle; }\n", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -21779,11 +20524,7 @@
 /* 314 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-366e10d9=\"\">\n  <ul _v-366e10d9=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-366e10d9=\"\">\n      <a :href=\"item.command.content\" _v-366e10d9=\"\">\n        <div class=\"img_container\" _v-366e10d9=\"\">\n          <div class=\"img_container_inner\" _v-366e10d9=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-366e10d9=\"\">\n            <div v-if=\"item.buttonStatus == 3\" _v-366e10d9=\"\">已抢光</div>\n          </div>\n          <div class=\"order_good_info_container\" _v-366e10d9=\"\">\n            <div class=\"order_good_name\" _v-366e10d9=\"\">{{item.title}}</div>\n            <div class=\"order_good_name order_good_name_in\" _v-366e10d9=\"\">{{item.recomWord.split(\"\\n\")[0]}}</div>\n            <div class=\"order_good_price\" _v-366e10d9=\"\">\n              <span class=\"f_l\" _v-366e10d9=\"\"><em class=\"price_symbol\" _v-366e10d9=\"\">￥</em><span _v-366e10d9=\"\">{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span v-if=\"(item.nowPrice+'').split('.').length == 2\" class=\"newOriginal_price\" _v-366e10d9=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span><span v-if=\"item.timeshopIncome != '0'\" class=\"membership_crown\" _v-366e10d9=\"\">限时返 <em _v-366e10d9=\"\">￥</em>{{item.timeshopIncome}}\n              <span v-if=\"item.income\" class=\"membership_crown_pre\" _v-366e10d9=\"\">平日返<em _v-366e10d9=\"\">￥</em>{{item.income}}</span></span>\n            </div>\n            <div v-if=\"item.buttonStatus != 3 &amp;&amp; item.timeshopGoodsNum\" class=\"progress_info\" _v-366e10d9=\"\">\n              仅剩 {{item.timeshopGoodsNum}} 件\n            </div>\n            <!--<div class=\"progress_bar\" v-if=\"(item.buttonStatus != 0)&&(item.buttonStatus != 1)\">-->\n            <!--<div class=\"progress_bar_bg\">-->\n            <!--<div class=\"progress_container\" :style=\"{width:item.percentage+'%'}\">-->\n            <!--</div>-->\n            <!--</div>-->\n            <!--<div class=\"finish_percentage\">已售{{item.percentage}}%</div>-->\n            <!--</div>-->\n          </div>\n        </div>\n      </a>\n      <a class=\"remain_btns\" _v-366e10d9=\"\">\n        <div class=\"panic_buying_btn\" :class=\"{panic_buying_btn2:item.buttonStatus < 2,buy_gray:item.buttonStatus == '3',seteds:item.buttonStatus == '0'}\" _v-366e10d9=\"\">{{item.buttonName}}\n        </div>\n        <div @click=\"Panicbuying(item,index)\" class=\"remain_btns_click\" _v-366e10d9=\"\"></div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-366e10d9=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-366e10d9=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-366e10d9=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-366e10d9=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-366e10d9=\"\"></div>\n    </div>\n  </div>\n</div>\n";
-=======
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"[{ marginTop:data.marginTop },styleObject]\">\n\n    <tt_com_0 :data = \"data\"></tt_com_0>\n\n    <div class=\"model_con\">\n        <div class=\"dvd-index-module clearfix\">\n            <div class=\"dvd-index-module clearfix\" style=\"padding:6px 3px;\" :style=\"styleObject\">\n                <div v-for = \"item in data.body.dataList\" class=\"pull-left\" style=\" width: calc(33.3333333% - 8px);overflow: hidden;padding: 4px;\">\n                    <a :href=\"item.command.content\" target=\"_self\" @click=\"clickAnalysis\" :position=\"item.position\">\n                        <!-- <img class=\"newImage\" src=\"//pic.davdian.com/free/2016/12/07/246_246_06ffdb6b71c128464a35bae721bedae7.png\" :data-original=\"item.imageUrl\" style=\"width: 100%;display: inline;\"> -->\n                        <img class=\"newImage\" v-lazy=\"imgObject(item.imageUrl)\" style=\"width: 100%;display: inline;\">\n                    </a>\n                </div>\n\n            </div>\n        </div>\n    </div>\n</div>\n";
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 315 */
@@ -21813,11 +20554,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-1ecd6274/bd_ts_goods_0.vue"
-=======
-	  var id = "_v-689526d4/bd_image_2.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-75a99b5f/bd_image_2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -21841,13 +20578,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ecd6274&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_goods_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ecd6274&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_goods_0.vue");
-=======
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_2.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_2.vue");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21865,11 +20597,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy[_v-1ecd6274] {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail[_v-1ecd6274] {\n    width: 100%;\n    display: block;\n    position: relative; }\n  .index_group_buy .df_new_model_con[_v-1ecd6274] {\n    background: #fff; }\n\n.related-item-list.swiper-container[_v-1ecd6274] {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list .detail[_v-1ecd6274] {\n  text-align: left; }\n\n.related-item-list .detail.swiper-slide[_v-1ecd6274] {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list .detail .goods_img_size[_v-1ecd6274] {\n  width: 100px;\n  height: 100px;\n  position: relative; }\n\n.related-item-list .detail .goods_img_size[_v-1ecd6274]:before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box; }\n\n.related-item-list .detail .name[_v-1ecd6274] {\n  font-size: 12px;\n  padding-top: 7px;\n  padding-right: 10px;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  line-height: 18px;\n  margin-bottom: 2px;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  overflow: hidden; }\n\n.related-item-list .detail .price[_v-1ecd6274] {\n  padding-top: 3px;\n  line-height: 12px;\n  height: 11px;\n  padding-right: 10px;\n  overflow: hidden; }\n  .related-item-list .detail .price .current-price[_v-1ecd6274] {\n    font-size: 11px;\n    color: #FF4A7D;\n    float: left; }\n  .related-item-list .detail .price .original-price[_v-1ecd6274] {\n    font-size: 9px;\n    color: #999;\n    text-decoration: line-through;\n    float: left;\n    padding-left: 5px; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list .detail .goods_img_size[_v-1ecd6274]:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */ } }\n\n.df_new_title[_v-1ecd6274] {\n  position: relative;\n  height: 44px; }\n\n.df_new_title[_v-1ecd6274]:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title[_v-1ecd6274]:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font[_v-1ecd6274] {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font[_v-1ecd6274]:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font[_v-1ecd6274]:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more[_v-1ecd6274] {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span[_v-1ecd6274] {\n  font-size: 12px; }\n\n.df_new_title_2[_v-1ecd6274] {\n  height: 44px;\n  line-height: 44px;\n  background-color: #fff;\n  position: relative;\n  border-bottom: 1px solid #f0f0f0; }\n\n.df_new_title_2 a[_v-1ecd6274] {\n  line-height: inherit; }\n\n.df_new_title_2 .df_new_font[_v-1ecd6274] {\n  font-size: 16px;\n  padding-left: 22px;\n  line-height: 44px; }\n\n.df_new_title_2 .df_new_font[_v-1ecd6274]:before {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 14px;\n  position: absolute; }\n\n.df_new_title_2 .more[_v-1ecd6274] {\n  padding-right: 10px;\n  float: right; }\n\n.df_new_title_2 .more span[_v-1ecd6274] {\n  color: #666;\n  font-size: 12px;\n  line-height: 35px;\n  margin-right: -2px; }\n\n.df_new_title_3[_v-1ecd6274] {\n  height: auto;\n  position: relative; }\n  .df_new_title_3 .up_arrow[_v-1ecd6274] {\n    width: 0;\n    height: 0;\n    border-left: 6px solid transparent;\n    border-right: 6px solid transparent;\n    border-bottom: 7px solid #f0f0f0;\n    border-top: transparent;\n    position: absolute;\n    left: 50%;\n    margin-left: -3px;\n    bottom: 0; }\n\n.index_model[_v-1ecd6274] {\n  margin-top: 0px !important; }\n", ""]);
-=======
 	exports.push([module.id, ".index_model {\n  position: relative;\n  margin-top: 10px; }\n  .index_model a {\n    width: 100%;\n    display: block;\n    position: relative;\n    line-height: 0; }\n    .index_model a img {\n      width: 100%; }\n    .index_model a .right_border {\n      position: absolute;\n      right: 0;\n      top: 0;\n      height: 100%;\n      width: 1px; }\n    .index_model a .top_border {\n      position: absolute;\n      right: 0;\n      top: 0;\n      width: 100%;\n      height: 1px; }\n  .index_model .df_new_model_con {\n    position: relative; }\n    .index_model .df_new_model_con .haspadding {\n      padding: 0 10px 10px; }\n    .index_model .df_new_model_con .seckillCountdown {\n      position: absolute;\n      top: 0.12rem;\n      left: 0.5rem; }\n    .index_model .df_new_model_con .seckill_bg {\n      padding: 0 0.03rem;\n      height: 0.18rem;\n      line-height: 0.18rem;\n      color: #fff;\n      font-size: 0.12rem;\n      background: #7b7e85;\n      border-radius: 0.03rem;\n      text-align: center;\n      display: inline-block; }\n    .index_model .df_new_model_con .seckill2 .seckill_bg {\n      color: #333;\n      background: #fff; }\n    .index_model .df_new_model_con .seckill_semicolon {\n      line-height: 0.18rem;\n      color: #3F4554;\n      font-size: 0.12rem;\n      text-align: center;\n      display: inline-block; }\n\n.dvd-col-12 {\n  width: 100%; }\n\n.dvd-col-6 {\n  width: 50%; }\n\n.dvd-col-4 {\n  width: 33.33333333%; }\n\n.dvd-col-3 {\n  width: 25%; }\n\n.dvd-col-2 {\n  width: 16.66666667%; }\n\n.dvd-col-1 {\n  width: 8.33333333%; }\n\n.dvd-new-index-module-child {\n  float: left;\n  position: relative; }\n", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -21990,11 +20718,7 @@
 /* 320 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\" _v-1ecd6274=\"\">\n\n  <tt_com_0 :data=\"data\" _v-1ecd6274=\"\"></tt_com_0>\n\n  <div class=\"df_new_model_con\" :style=\"styleObject\" _v-1ecd6274=\"\">\n    <div class=\"df_new_model_con\" _v-1ecd6274=\"\">\n      <div class=\"df_new_title_3\" style=\"height:1.8rem;overflow: hidden;\" _v-1ecd6274=\"\">\n        <a :href=\"data.body.command.content\" @click=\"clickAnalysis\" style=\"height: 1.8rem;\" position=\"0\" _v-1ecd6274=\"\">\n          <img class=\"newImage\" style=\"display: inline;height: 1.8rem\" v-lazy=\"imgObject(data.body.imageUrl)\" _v-1ecd6274=\"\">\n        </a>\n        <span class=\"up_arrow\" :style=\"styleSpan\" _v-1ecd6274=\"\"></span>\n      </div>\n      <bd_goods_0 :data=\"data\" _v-1ecd6274=\"\"></bd_goods_0>\n    </div>\n  </div>\n</div>\n";
-=======
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\">\n\n    <tt_com_0 :data=\"data\"></tt_com_0>\n\n    <div class=\"df_new_model_con\">\n        <div class=\"clearfix\">\n            <div class=\"dvd-col-12\" style=\"height: 2rem; overflow: hidden;\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 2rem; overflow: hidden;\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[0].command.content\" @click=\"clickAnalysis\" style=\"height: 2rem;\" position=\"0\">\n                        <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" style=\"height: 2rem; overflow: hidden;\" >\n                        <div class=\"right_border\" :style=\"styleObject\" ></div>\n                    </a>\n                </div>\n                <div class=\"dvd-new-index-module-child dvd-col-6\">\n                    <div class=\"dvd-col-12\" style=\"height: 1rem; overflow: hidden;\" :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[1].command.content\" @click=\"clickAnalysis\" style=\"height: 1rem;\" position=\"1\">\n                            <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" style=\"height: 1rem; overflow: hidden;\">\n                        </a>\n                    </div>\n                    <div class=\"dvd-col-12\" style=\"height: 1rem; overflow: hidden;\" :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[2].command.content\" @click=\"clickAnalysis\" style=\"height: 1rem;\" position=\"2\">\n                            <div class=\"top_border\" :style=\"styleObject\"></div>\n                            <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[2].imageUrl)\"  style=\"height: 1rem; overflow: hidden;\">\n                        </a>\n                    </div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 321 */
@@ -22024,11 +20748,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-06461048/bd_ts_title_0.vue"
-=======
-	  var id = "_v-68a33e55/bd_image_3.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-75b7b2e0/bd_image_3.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22247,11 +20967,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-66ed76de/bd_image_1_2.vue"
-=======
-	  var id = "_v-68b155d6/bd_image_4.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-75c5ca61/bd_image_4.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22446,11 +21162,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-6b3bf654/bd_image_4_2.vue"
-=======
-	  var id = "_v-68bf6d57/bd_image_5.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-75d3e1e2/bd_image_5.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22474,13 +21186,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6b3bf654&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_4_2.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6b3bf654&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_4_2.vue");
-=======
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_5.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_5.vue");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22498,11 +21205,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.index_links[_v-6b3bf654] {\n    width:100%;\n    overflow: hidden;\n    min-height:50px;\n    background-color:#FFFFFF;\n}\n.bd_icon_0[_v-6b3bf654] {\n    overflow: hidden;\n     padding-top: 0px;\n    background-color: #fff;\n     margin-top: 0px;\n}\n.bd_icon_0 .link_item[_v-6b3bf654] {\n    float: left;\n    width: 25%;\n    text-align: center;\n     padding-bottom: 0px;\n     padding-top: 0px;\n}\n.bd_icon_0 .link_item .link_img[_v-6b3bf654] {\n    width:100%;\n    margin-bottom: 0;\n    max-width: 100%;\n    max-height: 100%;\n    display: inline-block;\n}\n", ""]);
-=======
 	exports.push([module.id, "", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -22645,11 +21348,7 @@
 /* 338 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-6b3bf654=\"\">\n    <tt_com_0 :data=\"data\" _v-6b3bf654=\"\"></tt_com_0>\n    <div v-if=\"show\" class=\"bd_icon_0 index_links\" :style=\"styleObject\" _v-6b3bf654=\"\">\n        <a class=\"link_item\" v-for=\"item in data.body.dataList\" :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-6b3bf654=\"\">\n            <img class=\"link_img newImage\" :src=\"item.imageUrl\" _v-6b3bf654=\"\">\n        </a>\n    </div>\n</div>\n\n";
-=======
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" style=\"position: relative\" :style=\"{ marginTop:data.marginTop }\">\n\n    <tt_com_0 :data = 'data'></tt_com_0>\n\n    <div class=\"model_con\">\n        <div class=\"dvd-index-module clearfix\">\n            <div class=\"index_activity\" style=\"padding:0;margin:0;\" :style=\"styleObject\">\n                <a :href=\"data.body.dataList[0].command.content\" style=\"padding:0;margin:0;\" @click=\"clickAnalysis\" position = \"0\">\n                    <!-- <img class=\"newImage\" src=\"//pic.davdian.com/free/2016/12/02/750_562_a0376febab4bafa94a6e0e4c3b6c87b4.png\" :data-original=\"data.body.dataList[0].imageUrl\" style=\"width:100%;height: 2.81rem; overflow: hidden;\"> -->\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" style=\"width:100%;height: 2.81rem; overflow: hidden;\">\n                </a>\n\n                <div class=\"df_new_model_con\" style=\"position: absolute;bottom: 0;width:100%;\">\n                    <div class=\"clearfix\" style=\"padding:0px 7.5px 5px 7.5px;\">\n                        <div class=\"dvd-new-index-module-child dvd-col-4\" style=\"padding: 0 2.5px;box-sizing: border-box;height: 1.31rem; overflow: hidden;\">\n                            <a :href=\"data.body.dataList[1].command.content\" @click=\"clickAnalysis\" position = \"1\">\n                                <!-- <img class=\"newImage\" src=\"//pic.davdian.com/free/2016/12/12/346_346_95d772212ba7dc702aaeabf7d32138cd.png\" :data-original=\"data.body.dataList[1].imageUrl\" style=\"height: 1.31rem;\"> -->\n                                <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" style=\"height: 1.31rem;\">\n                            </a>\n                        </div>\n                        <div class=\"dvd-new-index-module-child dvd-col-4\" style=\"padding: 0 2.5px;box-sizing: border-box;height: 1.31rem; overflow: hidden;\">\n                            <a :href=\"data.body.dataList[2].command.content\" @click=\"clickAnalysis\" position = \"2\">\n                                <!-- <img class=\"newImage\" src=\"//pic.davdian.com/free/2016/12/12/346_346_95d772212ba7dc702aaeabf7d32138cd.png\" :data-original=\"data.body.dataList[2].imageUrl\" style=\"height: 1.31rem;\"> -->\n                                <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[2].imageUrl)\" style=\"height: 1.31rem;\">\n                            </a>\n                        </div>\n                        <div class=\"dvd-new-index-module-child dvd-col-4\" style=\"padding: 0 2.5px;box-sizing: border-box;height: 1.31rem; overflow: hidden;\">\n                            <a :href=\"data.body.dataList[3].command.content\" @click=\"clickAnalysis\" position = \"3\">\n                                <!-- <img class=\"newImage\" src=\"//pic.davdian.com/free/2016/12/12/346_346_95d772212ba7dc702aaeabf7d32138cd.png\" :data-original=\"data.body.dataList[3].imageUrl\" style=\"height: 1.31rem;\"> -->\n                                <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[3].imageUrl)\" style=\"height: 1.31rem;\">\n                            </a>\n                        </div>\n                    </div>\n                </div>\n\n\n            </div>\n        </div>\n    </div>\n</div>\n";
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 339 */
@@ -22679,11 +21378,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-057ddfc8/bd_goods_4.vue"
-=======
-	  var id = "_v-68cd84d8/bd_image_6.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-75e1f963/bd_image_6.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22707,13 +21402,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-057ddfc8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_4.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-057ddfc8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_4.vue");
-=======
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_6.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_6.vue");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22731,11 +21421,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.img_label[_v-057ddfc8]{\n  font-weight: bold;\n  left: 0;\n  bottom:0;\n  position:absolute;\n  font-size: 10px;\n  opacity: 0.8;\n  background: -webkit-gradient(linear,left top, right top,from(#ff5b5b),to(#fa1862));\n  background: linear-gradient(90deg,#ff5b5b,#fa1862);\n  background: -webkit-linear-gradient(left,#ff5b5b,#fa1862);\n  color:#fff;\n  line-height: 16px;\n  padding:1px 8px 0 6px;\n  border-top-right-radius: 8px;\n}\n.img_label[_v-057ddfc8]:after{\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-width: 0 4px 10px 0;\n  border-style: solid;\n  border-color: transparent transparent #fa1862 transparent;\n  position: absolute;\n  margin-left: 8px;\n  bottom: 0;\n}\n.img_container[_v-057ddfc8]{\n  position: relative;\n}\n\n  .good_list_2_row[_v-057ddfc8] {\n    background: none;\n    padding: 0 5px;\n  }\n\n  .font-weight[_v-057ddfc8] {\n    font-weight: 500;\n  }\n  .goods4_price_bar em[_v-057ddfc8] {\n    font-style: normal;\n    font-size: 12px;\n    display: inline-block;\n    margin-right: 2px;\n    \n  }\n\n  .good_list_2_row .good_item[_v-057ddfc8] {\n    padding: 0 5px;\n    margin-bottom: 0;\n  }\n\n  .good_list_2_row .good_item .good_img_container img[_v-057ddfc8] {\n    border: none;\n  }\n\n  .good_con[_v-057ddfc8] {\n    display: block;\n    background-color: #FFF;\n    padding: 10px;\n    padding-top: 0;\n    overflow: hidden;\n  }\n\n  .good_con .fz_12[_v-057ddfc8] {\n    overflow: hidden;\n    height: 16px;\n    line-height: 16px;\n  }\n\n  .good_con .fz_12 .dav-color-price[_v-057ddfc8] {\n    display: inline-block;\n  }\n.good_con .nowPriceCont[_v-057ddfc8] {\n  font-size: 0;\n}\n  .good_con .nowPrice[_v-057ddfc8] {\n    font-size: 16px;\n  }\n\n  .good_list_2_row .good_item .lable[_v-057ddfc8] {\n    color: #FF4A7D;\n    font-size: 10px;\n    display: inline-block;\n    margin-left: 4px;\n    font-family: sans-serif;\n    background-color: #FFF;\n    float: right;\n    -webkit-box-sizing: border-box;\n    position: relative;\n    top: 7.89473%;\n    padding: 0 2px;\n    border: 1px solid #FF4A7D;\n    line-height: 15px;\n    border-radius: 4px;\n  }\n\n  .good_list_2_row .good_item .lable .border[_v-057ddfc8] {\n    -webkit-transform: scale(0.5);\n    -ms-transform: scale(0.5);\n        transform: scale(0.5);\n    position: absolute;\n    border: 1px solid #FF4A7D;\n    top: -50%;\n    right: -50%;\n    bottom: -50%;\n    left: -50%;\n    border-radius: 7px;\n  }\n\n  .good_list_2_row .good_item .good_title[_v-057ddfc8] {\n    margin-bottom: 4px;\n    -webkit-line-clamp: 2;\n    line-clamp: 2;\n    line-height: 19px;\n  }\n\n  .goods4_price_bar[_v-057ddfc8] {\n    overflow: hidden;\n    height: 19px;\n    width: 200%;\n  }\n  .good_list_sell_out[_v-057ddfc8]{\n    z-index: 0;\n  }\n\n  .vip_return[_v-057ddfc8]{\n  line-height: 1;\n  font-size: 0;\n  color: #BF9D51;\n  padding-left: 4px;\n  position: relative;\n  display: inline-block;\n    -webkit-transform: scale(0.5);\n  -webkit-transform-origin: 0 60%;\n  -ms-transform: scale(0.5);\n      transform: scale(0.5);\n  -ms-transform-origin: 0 60%;\n      transform-origin: 0 60%;\n  vertical-align: middle;\n  margin-bottom: 4px;\n}\n.vip_return .vip_return_title[_v-057ddfc8]{\n  font-size: 22px;\n}\n.vip_return .vip_return_f[_v-057ddfc8]{\n  font-size: 18px;\n  padding: 0 2px 0 4px;\n}\n.vip_return .vip_return_price[_v-057ddfc8]{\n  font-size: 24px;\n}\n @media screen and (max-width:374px){\n    .vip_return[_v-057ddfc8]{\n      padding-left:0;\n      margin-bottom: 3px;\n    }\n    .vip_return .vip_return_title[_v-057ddfc8]{\n      font-size: 20px;\n    }\n    .vip_return .vip_return_f[_v-057ddfc8]{\n      font-size: 14px;\n      padding: 0 2px 0 4px;\n    }\n    .vip_return .vip_return_price[_v-057ddfc8]{\n      font-size: 20px;\n    }\n }\n", ""]);
-=======
 	exports.push([module.id, "", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -22786,296 +21472,7 @@
 	// </template>
 	//
 	// <script>
-<<<<<<< HEAD
-	exports.default = {
-	  data: function data() {
-	    return {};
-	  },
-	  components: {
-	    category: _comMaybeyoulike2.default
-	  },
-	  props: ["data"],
-	  created: function created() {
-	    /**
-	     * 数据排序
-	     */
-	    _layout2.default.sort(this.data);
-	  },
-	  computed: {},
-	  methods: {
-	    imgObject: function imgObject(imgSrc) {
-	      return {
-	        src: imgSrc || '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
-	        error: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png',
-	        loading: '//pic.davdian.com/free/2016/12/28/519_360_fdc5daf1d2eab033a50af9f80246da60.png'
-	      };
-	    }
-	  },
-	  events: {
-	    'changeData': function changeData(msg) {
-	      this.list = msg;
-	    },
-	    'loadings': function loadings(msg) {
-	      this.loading = msg;
-	    },
-	    'no_mores': function no_mores(msg) {
-	      this.no_more = msg;
-	    }
-	  }
-	  // </script>
-	  // <style scoped >
-	  // .img_label{
-	  //   font-weight: bold;
-	  //   left: 0;
-	  //   bottom:0;
-	  //   position:absolute;
-	  //   font-size: 10px;
-	  //   opacity: 0.8;
-	  //   background: linear-gradient(90deg,#ff5b5b,#fa1862);
-	  //   background: -webkit-linear-gradient(left,#ff5b5b,#fa1862);
-	  //   color:#fff;
-	  //   line-height: 16px;
-	  //   padding:1px 8px 0 6px;
-	  //   border-top-right-radius: 8px;
-	  // }
-	  // .img_label:after{
-	  //   content: "";
-	  //   width: 0;
-	  //   height: 0;
-	  //   border-width: 0 4px 10px 0;
-	  //   border-style: solid;
-	  //   border-color: transparent transparent #fa1862 transparent;
-	  //   position: absolute;
-	  //   margin-left: 8px;
-	  //   bottom: 0;
-	  // }
-	  // .img_container{
-	  //   position: relative;
-	  // }
-	  //
-	  //   .good_list_2_row {
-	  //     background: none;
-	  //     padding: 0 5px;
-	  //   }
-	  //
-	  //   .font-weight {
-	  //     font-weight: 500;
-	  //   }
-	  //   .goods4_price_bar em {
-	  //     font-style: normal;
-	  //     font-size: 12px;
-	  //     display: inline-block;
-	  //     margin-right: 2px;
-	  //
-	  //   }
-	  //
-	  //   .good_list_2_row .good_item {
-	  //     padding: 0 5px;
-	  //     margin-bottom: 0;
-	  //   }
-	  //
-	  //   .good_list_2_row .good_item .good_img_container img {
-	  //     border: none;
-	  //   }
-	  //
-	  //   .good_con {
-	  //     display: block;
-	  //     background-color: #FFF;
-	  //     padding: 10px;
-	  //     padding-top: 0;
-	  //     overflow: hidden;
-	  //   }
-	  //
-	  //   .good_con .fz_12 {
-	  //     overflow: hidden;
-	  //     height: 16px;
-	  //     line-height: 16px;
-	  //   }
-	  //
-	  //   .good_con .fz_12 .dav-color-price {
-	  //     display: inline-block;
-	  //   }
-	  // .good_con .nowPriceCont {
-	  //   font-size: 0;
-	  // }
-	  //   .good_con .nowPrice {
-	  //     font-size: 16px;
-	  //   }
-	  //
-	  //   .good_list_2_row .good_item .lable {
-	  //     color: #FF4A7D;
-	  //     font-size: 10px;
-	  //     display: inline-block;
-	  //     margin-left: 4px;
-	  //     font-family: sans-serif;
-	  //     background-color: #FFF;
-	  //     float: right;
-	  //     -webkit-box-sizing: border-box;
-	  //     position: relative;
-	  //     top: 7.89473%;
-	  //     padding: 0 2px;
-	  //     border: 1px solid #FF4A7D;
-	  //     line-height: 15px;
-	  //     border-radius: 4px;
-	  //   }
-	  //
-	  //   .good_list_2_row .good_item .lable .border {
-	  //     -webkit-transform: scale(0.5);
-	  //     transform: scale(0.5);
-	  //     position: absolute;
-	  //     border: 1px solid #FF4A7D;
-	  //     top: -50%;
-	  //     right: -50%;
-	  //     bottom: -50%;
-	  //     left: -50%;
-	  //     border-radius: 7px;
-	  //   }
-	  //
-	  //   .good_list_2_row .good_item .good_title {
-	  //     margin-bottom: 4px;
-	  //     -webkit-line-clamp: 2;
-	  //     line-clamp: 2;
-	  //     line-height: 19px;
-	  //   }
-	  //
-	  //   .goods4_price_bar {
-	  //     overflow: hidden;
-	  //     height: 19px;
-	  //     width: 200%;
-	  //   }
-	  //   .good_list_sell_out{
-	  //     z-index: 0;
-	  //   }
-	  //
-	  //   .vip_return{
-	  //   line-height: 1;
-	  //   font-size: 0;
-	  //   color: #BF9D51;
-	  //   padding-left: 4px;
-	  //   position: relative;
-	  //   display: inline-block;
-	  //     -webkit-transform: scale(0.5);
-	  //   -webkit-transform-origin: 0 60%;
-	  //   transform: scale(0.5);
-	  //   transform-origin: 0 60%;
-	  //   vertical-align: middle;
-	  //   margin-bottom: 4px;
-	  // }
-	  // .vip_return .vip_return_title{
-	  //   font-size: 22px;
-	  // }
-	  // .vip_return .vip_return_f{
-	  //   font-size: 18px;
-	  //   padding: 0 2px 0 4px;
-	  // }
-	  // .vip_return .vip_return_price{
-	  //   font-size: 24px;
-	  // }
-	  //  @media screen and (max-width:374px){
-	  //     .vip_return{
-	  //       padding-left:0;
-	  //       margin-bottom: 3px;
-	  //     }
-	  //     .vip_return .vip_return_title{
-	  //       font-size: 20px;
-	  //     }
-	  //     .vip_return .vip_return_f{
-	  //       font-size: 14px;
-	  //       padding: 0 2px 0 4px;
-	  //     }
-	  //     .vip_return .vip_return_price{
-	  //       font-size: 20px;
-	  //     }
-	  //  }
-	  // </style>
-	  //
-
-	};
-
-/***/ },
-/* 361 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"good_list_con\" :style=\"{ marginTop:data.marginTop + 'px' }\" _v-057ddfc8=\"\">\n  <div class=\"good_list_2_row\" _v-057ddfc8=\"\">\n    <a v-for=\"item in data.body.dataList\" data-id=\"item.goods_id\" :href=\"item.command.content\" class=\"good_item\" _v-057ddfc8=\"\">\n      <div class=\"good_img_container\" _v-057ddfc8=\"\">\n        <div class=\"img_container\" _v-057ddfc8=\"\">\n          <img v-lazy=\"imgObject(item.imageUrl)\" style=\"display: inline;\" _v-057ddfc8=\"\">\n          <span class=\"img_label\" v-if=\"item.actInfo!=''\" v-text=\"item.actInfo\" _v-057ddfc8=\"\"></span>\n           <span class=\"img_label\" v-if=\"item.actInfo==''&amp;&amp;+item.ratio\" v-text=\"'返现'+item.ratio+'倍'\" _v-057ddfc8=\"\"></span>\n        </div>\n        <div v-if=\"item.statusInfo&amp;&amp;item.statusInfo != ''\" class=\"good_list_sell_out\" _v-057ddfc8=\"\"><span _v-057ddfc8=\"\">{{item.statusInfo}}</span></div>\n        <div v-if=\"item.pic_info &amp;&amp; item.ratio != 0\" class=\"pic_info\" _v-057ddfc8=\"\">{{item.ratio}}</div>\n      </div>\n      <div class=\"good_con\" _v-057ddfc8=\"\">\n        <div class=\"good_title\" _v-057ddfc8=\"\">{{item.title}}</div>\n        <div class=\"goods4_price_bar\" _v-057ddfc8=\"\">\n          <span class=\"dav-color-price font-weight\" _v-057ddfc8=\"\"><em class=\"fz_14\" _v-057ddfc8=\"\">￥</em><span class=\"nowPriceCont\" _v-057ddfc8=\"\"><span class=\"nowPrice\" _v-057ddfc8=\"\">{{(item.nowPrice+'').split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.nowPrice+'').split('.').length == 2\" _v-057ddfc8=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span></span>\n          <span class=\"vip_return\" v-if=\"item.income &amp;&amp; item.income != 0\" _v-057ddfc8=\"\">\n            <span class=\"vip_return_title\" _v-057ddfc8=\"\">会员返</span>\n            <span class=\"vip_return_f\" _v-057ddfc8=\"\">¥</span>\n            <span class=\"vip_return_price\" _v-057ddfc8=\"\">{{item.income}}</span>\n          </span>\n        </div>\n      </div>\n    </a>\n  </div>\n</div>\n<!--<category :list = \"data.body.dataList\"></category>-->\n";
-
-/***/ },
-/* 362 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(363)
-	__vue_script__ = __webpack_require__(365)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_course_info_series_0.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(366)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-6f21a6f4/bd_course_info_series_0.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 363 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(364);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6f21a6f4&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_info_series_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6f21a6f4&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_info_series_0.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 364 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(42)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "#series_course[_v-6f21a6f4] {\n  width: 100%;\n  background: #fff;\n  position: relative;\n  padding-bottom: 0.1rem; }\n\n.series_title[_v-6f21a6f4] {\n  width: 100%;\n  padding-top: 0.14rem;\n  padding-left: 0.1rem;\n  padding-bottom: 0.1rem;\n  font-size: 0.14rem;\n  color: #FF4A7D; }\n  .series_title span[_v-6f21a6f4] {\n    font-size: 0.1rem;\n    color: #999999; }\n\n.series_container[_v-6f21a6f4] {\n  width: 3rem;\n  padding-left: 0.1rem;\n  padding-right: 0.4rem;\n  font-size: 0.14rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 1;\n  display: -webkit-box;\n  color: #333333; }\n\n.series_content_img[_v-6f21a6f4] {\n  position: absolute;\n  height: 0.22rem;\n  right: 0.1rem;\n  top: 0.27rem; }\n\n.series_content_img1[_v-6f21a6f4] {\n  position: absolute;\n  width: 0.64rem;\n  height: 0.22rem;\n  right: 0.1rem;\n  top: 0.27rem;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  border-radius: 37px;\n  text-align: center;\n  line-height: 0.21rem; }\n\n.icon[_v-6f21a6f4] {\n  width: 0.12rem;\n  height: 0.12rem;\n  vertical-align: top;\n  margin-top: 0.03rem; }\n", ""]);
-
-	// exports
-
-=======
 	//    import './bd_image_6.scss'
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 343 */
@@ -23147,11 +21544,7 @@
 /* 344 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div id=\"series_course\" :style=\"{'marginTop':dataList.marginTop + 'px'}\" _v-6f21a6f4=\"\">\n    <a :href=\"dataList.body.command.content\" @click.stop=\"clickAnalysis\" :position=\"dataList.position\" _v-6f21a6f4=\"\">\n        <div class=\"series_title\" _v-6f21a6f4=\"\">所属系列课 <span _v-6f21a6f4=\"\">（第{{dataList.body.nowNo}}节 共{{dataList.body.courseNum}}节课）</span></div>\n        <div class=\"series_container\" _v-6f21a6f4=\"\">\n            <img src=\"//pic.davdian.com/free/2017/08/01/seriesicon.png\" class=\"icon\" _v-6f21a6f4=\"\">\n            <span v-text=\"dataList.body.seriesTitle\" _v-6f21a6f4=\"\"></span>\n        </div>\n        <div class=\"series_content_img1\" _v-6f21a6f4=\"\">进入系列</div>\n        <!-- <img class='series_content_img' src=\"//pic.davdian.com/free/2017/07/28/goSeriesCourse1.png\"> -->\n    </a>\n</div>\n";
-=======
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\">\n\n    <tt_com_0 :data = 'data'></tt_com_0>\n\n    <div class=\"df_new_model_con\">\n        <div class=\"clearfix\">\n\n\n            <div v-for = 'item in data.body.dataList' class=\"dvd-new-index-module-child dvd-col-3\"  style=\"height: 1rem;overflow: hidden;\" :style=\"styleObject\">\n                <a :href=\"item.command.content\" @click.stop=\"clickAnalysis\" :position=\"item.position\" style=\"height: 1rem;\">\n                    <!-- <img src=\"//pic.davdian.com/free/2016/12/12/186_200_a6669de09ca5ea05bbb83d30293165b5.png\" class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" :data-original=\"item.imageUrl\"> -->\n                    <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(item.imageUrl)\">\n                    <div v-if = \"item.position !=3\" class=\"right_border\" :style=\"styleObject\"></div>\n                </a>\n            </div>\n\n\n        </div>\n    </div>\n</div>\n";
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 345 */
@@ -23181,11 +21574,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-cd76f3e6/bd_course_notes_0.vue"
-=======
-	  var id = "_v-68db9c59/bd_image_7.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-75f010e4/bd_image_7.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23209,13 +21598,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-cd76f3e6&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_notes_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-cd76f3e6&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_notes_0.vue");
-=======
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_7.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_7.vue");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23233,11 +21617,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.seriesCommentContainer[_v-cd76f3e6]{\n    background: #fff;\n    height: 44px;\n    line-height: 44px;\n    padding-left: 0.18rem;\n    width: 100%;\n    color:#666666;\n    font-size: 0.14rem;\n    position: relative;\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.icon[_v-cd76f3e6]{\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n        transform: rotate(45deg);\n    background: none;\n    top: 16px;\n    position: absolute;\n    right: 12px\n}\n", ""]);
-=======
 	exports.push([module.id, ".index_model {\n  position: relative;\n  margin-top: 10px; }\n  .index_model a {\n    width: 100%;\n    display: block;\n    position: relative;\n    line-height: 0; }\n    .index_model a img {\n      width: 100%; }\n    .index_model a .right_border {\n      position: absolute;\n      right: 0;\n      top: 0;\n      height: 100%;\n      width: 5px; }\n    .index_model a .top_border {\n      position: absolute;\n      right: 0;\n      top: 0;\n      width: 100%;\n      height: 5px; }\n  .index_model .df_new_model_con {\n    position: relative; }\n    .index_model .df_new_model_con .haspadding {\n      padding: 0 10px 10px; }\n    .index_model .df_new_model_con .seckillCountdown {\n      position: absolute;\n      top: 0.12rem;\n      left: 0.5rem; }\n    .index_model .df_new_model_con .seckill_bg {\n      padding: 0 0.03rem;\n      height: 0.18rem;\n      line-height: 0.18rem;\n      color: #fff;\n      font-size: 0.12rem;\n      background: #7b7e85;\n      border-radius: 0.03rem;\n      text-align: center;\n      display: inline-block; }\n    .index_model .df_new_model_con .seckill2 .seckill_bg {\n      color: #333;\n      background: #fff; }\n    .index_model .df_new_model_con .seckill_semicolon {\n      line-height: 0.18rem;\n      color: #3F4554;\n      font-size: 0.12rem;\n      text-align: center;\n      display: inline-block; }\n\n.dvd-col-12 {\n  width: 100%; }\n\n.dvd-col-6 {\n  width: 50%; }\n\n.dvd-col-4 {\n  width: 33.33333333%; }\n\n.dvd-col-3 {\n  width: 25%; }\n\n.dvd-col-2 {\n  width: 16.66666667%; }\n\n.dvd-col-1 {\n  width: 8.33333333%; }\n\n.dvd-new-index-module-child {\n  float: left;\n  position: relative; }\n", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -23387,11 +21767,7 @@
 /* 350 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div class=\"seriesCommentContainer\" @click=\"gohref\" :style=\"{'marginTop':data.marginTop + 'px'}\" _v-cd76f3e6=\"\">\n    <span _v-cd76f3e6=\"\">听课笔记 <span v-if=\"data.body.notesNum\" _v-cd76f3e6=\"\">（ <span v-text=\"data.body.notesNum\" _v-cd76f3e6=\"\"></span>  ）</span></span>\n    <i class=\"icon\" _v-cd76f3e6=\"\"></i>\n</div>\n";
-=======
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\">\n    <tt_com_0 :data=\"data\"></tt_com_0>\n    <div class=\"df_new_model_con\">\n        <div class=\"clearfix\">\n            <div class=\"dvd-col-12\" style=\"overflow: hidden;\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 2rem;overflow: hidden;\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[0].command.content\" @click.stop=\"clickAnalysis\" position=\"0\" style=\"height: 2rem;\">\n                        <!-- <img class=\"newImage\" style=\"height: 2rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_320_400_1216.png\" :data-original=\"data.body.dataList[0].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 2rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\">\n                        <div class=\"right_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"dvd-new-index-module-child dvd-col-6\">\n                    <div class=\"dvd-col-12\" style=\"height: 1rem;overflow: hidden;\" :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[1].command.content\" @click.stop=\"clickAnalysis\" position=\"1\" style=\"height: 1rem;\">\n                            <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_320_200_1216.png\" :data-original=\"data.body.dataList[1].imageUrl\"> -->\n                            <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\">\n                        </a>\n                    </div>\n                    <div class=\"dvd-col-12\" style=\"height: 1rem;overflow: hidden;\" :style=\"styleObject\">\n                        <a :href=\"data.body.dataList[2].command.content\" @click.stop=\"clickAnalysis\" position=\"2\" style=\"height: 1rem;\">\n                            <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_320_200_1216.png\" :data-original=\"data.body.dataList[2].imageUrl\"> -->\n                            <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[2].imageUrl)\">\n                            <div class=\"top_border\" :style=\"styleObject\"></div>\n                        </a>\n                    </div>\n                </div>\n            </div>\n            <div class=\"dvd-col-12\">\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 1rem;overflow: hidden;\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[3].command.content\" @click.stop=\"clickAnalysis\" position=\"3\" style=\"height: 1rem;\">\n                        <!-- <img class=\"newImage\" style=\"height:1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_320_200_1216.png\" :data-original=\"data.body.dataList[3].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[3].imageUrl)\">\n                        <div class=\"top_border\" :style=\"styleObject\"></div>\n                        <div class=\"right_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n                <div class=\"dvd-new-index-module-child dvd-col-6\" style=\"height: 1rem;overflow: hidden;\" :style=\"styleObject\">\n                    <a :href=\"data.body.dataList[4].command.content\" @click.stop=\"clickAnalysis\" position=\"4\" style=\"height: 1rem;\">\n                        <!-- <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" src=\"//pic.davdian.com/free/loading_320_200_1216.png\" :data-original=\"data.body.dataList[4].imageUrl\"> -->\n                        <img class=\"newImage\" style=\"height: 1rem;overflow: hidden;\" v-lazy=\"imgObject(data.body.dataList[4].imageUrl)\">\n                        <div class=\"top_border\" :style=\"styleObject\"></div>\n                    </a>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n";
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 351 */
@@ -23421,11 +21797,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-7835bb1e/bd_album_0.vue"
-=======
-	  var id = "_v-68e9b3da/bd_image_8.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-75fe2865/bd_image_8.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23648,11 +22020,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-96cfcca8/bd_album_content_1.vue"
-=======
-	  var id = "_v-68f7cb5b/bd_image_9.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-760c3fe6/bd_image_9.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23676,13 +22044,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-96cfcca8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-96cfcca8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue");
-=======
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_9.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_9.vue");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23700,11 +22063,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-96cfcca8]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-96cfcca8]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-96cfcca8]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-96cfcca8]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-96cfcca8]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-96cfcca8]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-96cfcca8]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-96cfcca8]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-96cfcca8]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-96cfcca8]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n  max-width: 2.15rem;\n}\n.list_title[_v-96cfcca8]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-96cfcca8],.list_time[_v-96cfcca8]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-96cfcca8]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-96cfcca8]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-96cfcca8]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-96cfcca8]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-96cfcca8]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-96cfcca8],.mask_stop[_v-96cfcca8],.disable[_v-96cfcca8]{\n  z-index:3;\n}\n", ""]);
-=======
 	exports.push([module.id, "", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -23890,11 +22249,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-81e18c02/index.vue"
-=======
-	  var id = "_v-af535526/bd_image_10.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-3dd07242/bd_image_10.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -24136,11 +22491,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-7a517590/index.vue"
-=======
-	  var id = "_v-1fdf26e2/bd_goods_2.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-05b63dcc/bd_goods_2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -24331,7 +22682,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1f6e6ada/bd_goods_6.vue"
+	  var id = "_v-054581c4/bd_goods_6.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -24355,8 +22706,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f6e6ada&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_6.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f6e6ada&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_6.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-054581c4&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_6.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-054581c4&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_6.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -24374,7 +22725,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.hot_goods_index_md[_v-1f6e6ada] {\n  min-height: 130px;\n  position: relative;\n  padding: 15px 10px;\n  /*background-color: #FFFFFF;*/\n}\n\n.hot_goods_index_md .goods_desc[_v-1f6e6ada] {\n  position: relative;\n}\n\n.goods_desc .img_left[_v-1f6e6ada] {\n  width: 120px;\n  position: relative;\n}\n\n.goods_desc .goods_info_box[_v-1f6e6ada] {\n  position: absolute;\n  padding-left: 130px;\n  top: 0;\n  padding-top: 5px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.order_good_name[_v-1f6e6ada] {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n  line-height: 20px;\n  height: 40px;\n  color: #666666;\n}\n\n.goods_info_box .goods_praice[_v-1f6e6ada] {\n  height: 20px;\n  line-height: 20px;\n  color: #FF4A7D;\n  margin-top: 15px;\n  font-size: 20px;\n}\n\n.goods_info_box .goods_praice .price_symbol[_v-1f6e6ada] {\n  font-size: 14px;\n}\n\n.comment_star[_v-1f6e6ada] {\n  height: 12px;\n  font-size: 12px;\n  color: #FF4A7D;\n  line-height: 12px;\n  margin-top: 20px;\n}\n\n.comment_star img[_v-1f6e6ada] {\n  height: 11px;\n  width: 11px;\n  position: relative;\n  bottom: 1px;\n  left: 2px;\n  margin-left: 2px;\n}\n\n.goods_comment[_v-1f6e6ada] {\n  margin-top: 10px;\n  background-color: #f9f9f9;\n  position: relative;\n  padding: 10px 20px 10px 48px;\n}\n\n.goods_comment[_v-1f6e6ada]:after {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  border-radius: 10px;\n  width: 200%;\n  height: 200%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transform: scale(0.5) translateX(-50%) translateY(-50%);\n      -ms-transform: scale(0.5) translateX(-50%) translateY(-50%);\n          transform: scale(0.5) translateX(-50%) translateY(-50%);\n}\n\n.box_arrow[_v-1f6e6ada] {\n  width: 10px;\n  height: 5px;\n  background: url(\"//pic.davdian.com/free/2017/07/24/commentBox_arrow.png\");\n  background-size: 100%;\n  position: absolute;\n  top: -4px;\n  left: 22px;\n  z-index: 10;\n}\n\n.user_img[_v-1f6e6ada] {\n  height: 28px;\n  width: 28px;\n  position: absolute;\n  left: 10px;\n  top: 6px;\n  overflow: hidden;\n  border-radius: 50%;\n}\n\n.comment_txt[_v-1f6e6ada] {\n  font-size: 12px;\n  color: #151515;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  max-height: 60px;\n  -webkit-box-orient: vertical;\n  display: -webkit-box;\n  overflow: hidden;\n  -webkit-line-clamp: 3;\n}\n\n.comment_txt .user_name[_v-1f6e6ada] {\n  color: #999999;\n}\n.img_left .topImageUrl[_v-1f6e6ada]{\n  position: absolute;\n  width: 52px;\n  top:2px;\n  left:2px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.hot_goods_index_md[_v-054581c4] {\n  min-height: 130px;\n  position: relative;\n  padding: 15px 10px;\n  /*background-color: #FFFFFF;*/\n}\n\n.hot_goods_index_md .goods_desc[_v-054581c4] {\n  position: relative;\n}\n\n.goods_desc .img_left[_v-054581c4] {\n  width: 120px;\n  position: relative;\n}\n\n.goods_desc .goods_info_box[_v-054581c4] {\n  position: absolute;\n  padding-left: 130px;\n  top: 0;\n  padding-top: 5px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.order_good_name[_v-054581c4] {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n  line-height: 20px;\n  height: 40px;\n  color: #666666;\n}\n\n.goods_info_box .goods_praice[_v-054581c4] {\n  height: 20px;\n  line-height: 20px;\n  color: #FF4A7D;\n  margin-top: 15px;\n  font-size: 20px;\n}\n\n.goods_info_box .goods_praice .price_symbol[_v-054581c4] {\n  font-size: 14px;\n}\n\n.comment_star[_v-054581c4] {\n  height: 12px;\n  font-size: 12px;\n  color: #FF4A7D;\n  line-height: 12px;\n  margin-top: 20px;\n}\n\n.comment_star img[_v-054581c4] {\n  height: 11px;\n  width: 11px;\n  position: relative;\n  bottom: 1px;\n  left: 2px;\n  margin-left: 2px;\n}\n\n.goods_comment[_v-054581c4] {\n  margin-top: 10px;\n  background-color: #f9f9f9;\n  position: relative;\n  padding: 10px 20px 10px 48px;\n}\n\n.goods_comment[_v-054581c4]:after {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  border-radius: 10px;\n  width: 200%;\n  height: 200%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transform: scale(0.5) translateX(-50%) translateY(-50%);\n      -ms-transform: scale(0.5) translateX(-50%) translateY(-50%);\n          transform: scale(0.5) translateX(-50%) translateY(-50%);\n}\n\n.box_arrow[_v-054581c4] {\n  width: 10px;\n  height: 5px;\n  background: url(\"//pic.davdian.com/free/2017/07/24/commentBox_arrow.png\");\n  background-size: 100%;\n  position: absolute;\n  top: -4px;\n  left: 22px;\n  z-index: 10;\n}\n\n.user_img[_v-054581c4] {\n  height: 28px;\n  width: 28px;\n  position: absolute;\n  left: 10px;\n  top: 6px;\n  overflow: hidden;\n  border-radius: 50%;\n}\n\n.comment_txt[_v-054581c4] {\n  font-size: 12px;\n  color: #151515;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  max-height: 60px;\n  -webkit-box-orient: vertical;\n  display: -webkit-box;\n  overflow: hidden;\n  -webkit-line-clamp: 3;\n}\n\n.comment_txt .user_name[_v-054581c4] {\n  color: #999999;\n}\n.img_left .topImageUrl[_v-054581c4]{\n  position: absolute;\n  width: 52px;\n  top:2px;\n  left:2px;\n}\n", ""]);
 
 	// exports
 
@@ -24613,7 +22964,7 @@
 /* 379 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-1f6e6ada=\"\">\n  <tt_com_0 :data=\"data\" _v-1f6e6ada=\"\"></tt_com_0>\n  <a :href=\"item.command.content\" v-for=\"item in data.body.dataList\" _v-1f6e6ada=\"\">\n    <div class=\"hot_goods_index_md\" _v-1f6e6ada=\"\">\n      <div class=\"goods_desc\" _v-1f6e6ada=\"\">\n        <div class=\"img_left\" _v-1f6e6ada=\"\">\n          <img :src=\"item.imageUrl\" alt=\"\" _v-1f6e6ada=\"\">\n          <img v-if=\"item.topImageUrl\" class=\"topImageUrl\" :src=\"item.topImageUrl\" alt=\"\" _v-1f6e6ada=\"\">\n        </div>\n        <div class=\"goods_info_box\" _v-1f6e6ada=\"\">\n          <div _v-5ed5d0b8=\"\" class=\"order_good_name\" _v-1f6e6ada=\"\">{{item.title}}</div>\n          <div class=\"goods_praice\" _v-1f6e6ada=\"\">\n            <span _v-1f6e6ada=\"\"><em class=\"price_symbol\" _v-1f6e6ada=\"\">￥</em><span _v-1f6e6ada=\"\">{{item.nowPrice}}</span></span>\n          </div>\n          <div class=\"comment_star\" _v-1f6e6ada=\"\">\n            <span _v-1f6e6ada=\"\">好评度：{{item.rating*100 || 0}}% </span>\n            <img v-for=\"item in parseInt((item.rating*100)/20)\" src=\"//pic.davdian.com/free/2017/07/24/%20starSelected.png\" alt=\"\" _v-1f6e6ada=\"\">\n          </div>\n        </div>\n      </div>\n      <div v-if=\"item.comments.content\" class=\"goods_comment\" _v-1f6e6ada=\"\">\n        <div class=\"box_arrow\" _v-1f6e6ada=\"\"></div>\n        <div class=\"user_img\" _v-1f6e6ada=\"\">\n          <img :src=\"item.comments.avatar\" alt=\"\" _v-1f6e6ada=\"\">\n        </div>\n        <div class=\"comment_txt\" _v-1f6e6ada=\"\">\n          <span class=\"user_name\" _v-1f6e6ada=\"\">{{item.comments.nickName}}：</span>\n          <span _v-1f6e6ada=\"\">{{item.comments.content}}</span>\n        </div>\n      </div>\n    </div>\n  </a>\n</div>\n";
+	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-054581c4=\"\">\n  <tt_com_0 :data=\"data\" _v-054581c4=\"\"></tt_com_0>\n  <a :href=\"item.command.content\" v-for=\"item in data.body.dataList\" _v-054581c4=\"\">\n    <div class=\"hot_goods_index_md\" _v-054581c4=\"\">\n      <div class=\"goods_desc\" _v-054581c4=\"\">\n        <div class=\"img_left\" _v-054581c4=\"\">\n          <img :src=\"item.imageUrl\" alt=\"\" _v-054581c4=\"\">\n          <img v-if=\"item.topImageUrl\" class=\"topImageUrl\" :src=\"item.topImageUrl\" alt=\"\" _v-054581c4=\"\">\n        </div>\n        <div class=\"goods_info_box\" _v-054581c4=\"\">\n          <div _v-5ed5d0b8=\"\" class=\"order_good_name\" _v-054581c4=\"\">{{item.title}}</div>\n          <div class=\"goods_praice\" _v-054581c4=\"\">\n            <span _v-054581c4=\"\"><em class=\"price_symbol\" _v-054581c4=\"\">￥</em><span _v-054581c4=\"\">{{item.nowPrice}}</span></span>\n          </div>\n          <div class=\"comment_star\" _v-054581c4=\"\">\n            <span _v-054581c4=\"\">好评度：{{item.rating*100 || 0}}% </span>\n            <img v-for=\"item in parseInt((item.rating*100)/20)\" src=\"//pic.davdian.com/free/2017/07/24/%20starSelected.png\" alt=\"\" _v-054581c4=\"\">\n          </div>\n        </div>\n      </div>\n      <div v-if=\"item.comments.content\" class=\"goods_comment\" _v-054581c4=\"\">\n        <div class=\"box_arrow\" _v-054581c4=\"\"></div>\n        <div class=\"user_img\" _v-054581c4=\"\">\n          <img :src=\"item.comments.avatar\" alt=\"\" _v-054581c4=\"\">\n        </div>\n        <div class=\"comment_txt\" _v-054581c4=\"\">\n          <span class=\"user_name\" _v-054581c4=\"\">{{item.comments.nickName}}：</span>\n          <span _v-054581c4=\"\">{{item.comments.content}}</span>\n        </div>\n      </div>\n    </div>\n  </a>\n</div>\n";
 
 /***/ },
 /* 380 */
@@ -24643,11 +22994,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-5d97050a/index.vue"
-=======
-	  var id = "_v-1f8a99dc/bd_goods_5.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-0561b0c6/bd_goods_5.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -24671,8 +23018,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f8a99dc&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_5.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f8a99dc&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_5.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0561b0c6&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_5.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0561b0c6&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_5.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -24690,7 +23037,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy[_v-1f8a99dc] {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail[_v-1f8a99dc] {\n    width: 100%;\n    display: block;\n    position: relative; }\n\n.related-item-list-new.swiper-container[_v-1f8a99dc] {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list-new .detail.swiper-slide[_v-1f8a99dc] {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list-new .detail[_v-1f8a99dc] {\n  text-align: left; }\n  .related-item-list-new .detail .goods_img_size[_v-1f8a99dc] {\n    width: 120px;\n    height: 120px;\n    position: relative; }\n    .related-item-list-new .detail .goods_img_size .limitTag[_v-1f8a99dc] {\n      height: 16px;\n      background: url(//pic.davdian.com/free/2017/06/07/limitTag.png) 0 0 no-repeat;\n      background-size: 100% 100%;\n      position: absolute;\n      left: 1px;\n      bottom: 0;\n      font-size: 10px;\n      color: #FFF;\n      text-align: center;\n      line-height: 16px;\n      display: inline-block;\n      padding: 0 11px 0 6px; }\n  .related-item-list-new .detail .goods_img_size[_v-1f8a99dc]:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    border: 1px solid #ddd;\n    width: 100%;\n    height: 100%;\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n         box-sizing: border-box; }\n  .related-item-list-new .detail .new_name1[_v-1f8a99dc] {\n    font-size: 13px;\n    margin: 10px 0;\n    text-overflow: ellipsis;\n    height: 18px;\n    white-space: nowrap;\n    line-height: 18px;\n    overflow: hidden;\n    color: #666;\n    padding-right: 25px; }\n  .related-item-list-new .detail .price1[_v-1f8a99dc] {\n    line-height: 21px;\n    height: 21px;\n    overflow: hidden;\n    margin-bottom: 4px; }\n    .related-item-list-new .detail .price1 .current-price1[_v-1f8a99dc] {\n      font-size: 17px;\n      color: #FF4A7D;\n      float: left; }\n    .related-item-list-new .detail .price1 .original-price1[_v-1f8a99dc] {\n      font-size: 9px;\n      color: #999;\n      text-decoration: line-through;\n      float: left;\n      padding-left: 5px;\n      padding-top: 0.02rem; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list-new .detail .goods_img_size[_v-1f8a99dc]:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */\n    border-radius: 8px; } }\n\n.df_new_title[_v-1f8a99dc] {\n  position: relative;\n  height: 44px; }\n\n.df_new_title[_v-1f8a99dc]:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title[_v-1f8a99dc]:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font[_v-1f8a99dc] {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font[_v-1f8a99dc]:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font[_v-1f8a99dc]:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more[_v-1f8a99dc] {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span[_v-1f8a99dc] {\n  font-size: 12px; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy[_v-0561b0c6] {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail[_v-0561b0c6] {\n    width: 100%;\n    display: block;\n    position: relative; }\n\n.related-item-list-new.swiper-container[_v-0561b0c6] {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list-new .detail.swiper-slide[_v-0561b0c6] {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list-new .detail[_v-0561b0c6] {\n  text-align: left; }\n  .related-item-list-new .detail .goods_img_size[_v-0561b0c6] {\n    width: 120px;\n    height: 120px;\n    position: relative; }\n    .related-item-list-new .detail .goods_img_size .limitTag[_v-0561b0c6] {\n      height: 16px;\n      background: url(//pic.davdian.com/free/2017/06/07/limitTag.png) 0 0 no-repeat;\n      background-size: 100% 100%;\n      position: absolute;\n      left: 1px;\n      bottom: 0;\n      font-size: 10px;\n      color: #FFF;\n      text-align: center;\n      line-height: 16px;\n      display: inline-block;\n      padding: 0 11px 0 6px; }\n  .related-item-list-new .detail .goods_img_size[_v-0561b0c6]:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    border: 1px solid #ddd;\n    width: 100%;\n    height: 100%;\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n         box-sizing: border-box; }\n  .related-item-list-new .detail .new_name1[_v-0561b0c6] {\n    font-size: 13px;\n    margin: 10px 0;\n    text-overflow: ellipsis;\n    height: 18px;\n    white-space: nowrap;\n    line-height: 18px;\n    overflow: hidden;\n    color: #666;\n    padding-right: 25px; }\n  .related-item-list-new .detail .price1[_v-0561b0c6] {\n    line-height: 21px;\n    height: 21px;\n    overflow: hidden;\n    margin-bottom: 4px; }\n    .related-item-list-new .detail .price1 .current-price1[_v-0561b0c6] {\n      font-size: 17px;\n      color: #FF4A7D;\n      float: left; }\n    .related-item-list-new .detail .price1 .original-price1[_v-0561b0c6] {\n      font-size: 9px;\n      color: #999;\n      text-decoration: line-through;\n      float: left;\n      padding-left: 5px;\n      padding-top: 0.02rem; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list-new .detail .goods_img_size[_v-0561b0c6]:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */\n    border-radius: 8px; } }\n\n.df_new_title[_v-0561b0c6] {\n  position: relative;\n  height: 44px; }\n\n.df_new_title[_v-0561b0c6]:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title[_v-0561b0c6]:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font[_v-0561b0c6] {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font[_v-0561b0c6]:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font[_v-0561b0c6]:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more[_v-0561b0c6] {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span[_v-0561b0c6] {\n  font-size: 12px; }\n", ""]);
 
 	// exports
 
@@ -25030,7 +23377,7 @@
 /* 384 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-1f8a99dc=\"\">\n  <tt_com_0 :data=\"data\" _v-1f8a99dc=\"\"></tt_com_0>\n  <div _v-1f8a99dc=\"\">\n      <div class=\"swiper-container related-item-list-new swiper-container-horizontal swiper-container-free-mode\" _v-1f8a99dc=\"\">\n        <div class=\"swiper-wrapper\" _v-1f8a99dc=\"\">\n          <div v-for=\"item in data.body.dataList\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-1f8a99dc=\"\">\n            <a :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-1f8a99dc=\"\">\n              <div class=\"goods_img_size\" _v-1f8a99dc=\"\">\n                <img :src=\"item.imageUrl\" _v-1f8a99dc=\"\">\n                <div v-if=\"item.promotionLabel\" class=\"limitTag\" _v-1f8a99dc=\"\">{{item.promotionLabel}}</div>\n              </div>\n              <div class=\"new_name1\" _v-1f8a99dc=\"\">{{ item.title }}</div>\n              <div class=\"price1\" _v-1f8a99dc=\"\">\n                <span class=\"current-price1\" _v-1f8a99dc=\"\"><span style=\"font-size: 12px;\" _v-1f8a99dc=\"\">¥ </span>{{item.nowPrice}}</span>\n              </div>\n            </a>\n          </div>\n          <div v-if=\"data.body.more\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-1f8a99dc=\"\">\n            <a :href=\"data.body.command.content\" position=\"more\" _v-1f8a99dc=\"\">\n              <div class=\"goods_img_size\" _v-1f8a99dc=\"\">\n                <img src=\"//pic.davdian.com/free/2016/12/20/300_300_2f12c4229c5444864431d2cd8cd1bdb3.jpg\" _v-1f8a99dc=\"\">\n              </div>\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-0561b0c6=\"\">\n  <tt_com_0 :data=\"data\" _v-0561b0c6=\"\"></tt_com_0>\n  <div _v-0561b0c6=\"\">\n      <div class=\"swiper-container related-item-list-new swiper-container-horizontal swiper-container-free-mode\" _v-0561b0c6=\"\">\n        <div class=\"swiper-wrapper\" _v-0561b0c6=\"\">\n          <div v-for=\"item in data.body.dataList\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-0561b0c6=\"\">\n            <a :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-0561b0c6=\"\">\n              <div class=\"goods_img_size\" _v-0561b0c6=\"\">\n                <img :src=\"item.imageUrl\" _v-0561b0c6=\"\">\n                <div v-if=\"item.promotionLabel\" class=\"limitTag\" _v-0561b0c6=\"\">{{item.promotionLabel}}</div>\n              </div>\n              <div class=\"new_name1\" _v-0561b0c6=\"\">{{ item.title }}</div>\n              <div class=\"price1\" _v-0561b0c6=\"\">\n                <span class=\"current-price1\" _v-0561b0c6=\"\"><span style=\"font-size: 12px;\" _v-0561b0c6=\"\">¥ </span>{{item.nowPrice}}</span>\n              </div>\n            </a>\n          </div>\n          <div v-if=\"data.body.more\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-0561b0c6=\"\">\n            <a :href=\"data.body.command.content\" position=\"more\" _v-0561b0c6=\"\">\n              <div class=\"goods_img_size\" _v-0561b0c6=\"\">\n                <img src=\"//pic.davdian.com/free/2016/12/20/300_300_2f12c4229c5444864431d2cd8cd1bdb3.jpg\" _v-0561b0c6=\"\">\n              </div>\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n</div>\n";
 
 /***/ },
 /* 385 */
@@ -25060,7 +23407,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1f523bd8/bd_goods_7.vue"
+	  var id = "_v-052952c2/bd_goods_7.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -25084,8 +23431,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f523bd8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_7.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f523bd8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_7.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-052952c2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_7.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-052952c2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_7.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -25103,7 +23450,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.f_l[_v-1f523bd8] {\n  float: left;\n}\n\n.newOriginal_price[_v-1f523bd8] {\n  font-size: 14px;\n}\n\n.list_style[_v-1f523bd8] {\n  /*height: 130px;*/\n}\n\nul li[_v-1f523bd8] {\n  padding: 0 10px 20px 10px;\n  height:140px;\n  position: relative;\n  overflow: hidden;\n}\n\nul li.online[_v-1f523bd8]:after {\n  content: \"\";\n  display: block;\n  background-color: #DDDDDD;\n  -webkit-transform: scale(0.5) translateX(280px);\n  -ms-transform: scale(0.5) translateX(280px);\n  transform: scale(0.5) translateX(280px);\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  bottom: 0;\n  z-index: 1;\n}\n\nul li .img_container[_v-1f523bd8] {\n  position: relative;\n}\n\nul li .img_container_inner[_v-1f523bd8] {\n  width: 140px;\n  position: relative;\n}\n\nul li .img_container_inner div[_v-1f523bd8] {\n  height: 60px;\n  width: 60px;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  margin: auto auto;\n  font-size: 14px;\n  color: #FFF;\n  text-align: center;\n  line-height: 60px;\n}\n\nul li .order_good_info_container[_v-1f523bd8] {\n  position: absolute;\n  padding-left: 150px;\n  top: 0;\n  padding-top: 10px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.order_good_name[_v-1f523bd8] {\n  font-size: 15px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  /*display: -webkit-box;*/\n  /*-webkit-line-clamp: 2;*/\n  /*-webkit-box-orient: vertical;*/\n  line-height: 20px;\n  color: #333333;\n}\n\n.order_good_name_in[_v-1f523bd8] {\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 3;\n  -webkit-box-orient: vertical;\n  font-size: 12px;\n  overflow: hidden;\n  color: #999999;\n  height: 51px;\n  line-height: 18px;\n  padding-top: 10px;\n  font-weight: 300;\n}\n\n.order_good_price[_v-1f523bd8] {\n  height: 28px;\n  line-height: 28px;\n  color: #FF4A7D;\n  margin-top: 6px;\n}\n.order_good_price > span[_v-1f523bd8]:nth-of-type(1){\n  font-weight: 500;\n}\n\n.price_symbol[_v-1f523bd8] {\n  font-size: 14px;\n  font-style: normal;\n}\n\n.price_symbol + span[_v-1f523bd8] {\n  font-size: 20px;\n}\n\n.membership_crown_pre[_v-1f523bd8] {\n  color: #999999;\n  text-decoration: line-through;\n  font-size: 12px;\n  margin-left: 5px;\n}\n\n.membership_crown .membership_crown_pre em[_v-1f523bd8] {\n  font-size: 10px;\n}\n\n.membership_crown[_v-1f523bd8] {\n  font-size: 12px;\n  color: #D6B471;\n  display: inline-block;\n  margin-left: 5px;\n  font-weight: 300;\n}\n\n.membership_crown em[_v-1f523bd8] {\n  font-size: 10px;\n  font-style: normal;\n}\n\n.tipswrap[_v-1f523bd8] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.51);\n  z-index: 99;\n}\n\n.tipswrap .tipsdiv[_v-1f523bd8] {\n  width: 72%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  overflow: hidden;\n  min-height: 20px;\n  max-width: 480px;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n\n.tipswrap .tipsdiv img[_v-1f523bd8] {\n  width: 100%;\n}\n\n.tipswrap .tipsdiv div[_v-1f523bd8] {\n  width: 100%;\n  height: 13%;\n  position: absolute;\n  bottom: 0;\n}\n\n.progress_bar[_v-1f523bd8] {\n  position: absolute;\n  width: 100%;\n  bottom: 20px;\n}\n\n.remain_btns_click[_v-1f523bd8] {\n  width: 90px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  bottom: 13px;\n  z-index: 2;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.f_l[_v-052952c2] {\n  float: left;\n}\n\n.newOriginal_price[_v-052952c2] {\n  font-size: 14px;\n}\n\n.list_style[_v-052952c2] {\n  /*height: 130px;*/\n}\n\nul li[_v-052952c2] {\n  padding: 0 10px 20px 10px;\n  height:140px;\n  position: relative;\n  overflow: hidden;\n}\n\nul li.online[_v-052952c2]:after {\n  content: \"\";\n  display: block;\n  background-color: #DDDDDD;\n  -webkit-transform: scale(0.5) translateX(280px);\n  -ms-transform: scale(0.5) translateX(280px);\n  transform: scale(0.5) translateX(280px);\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  bottom: 0;\n  z-index: 1;\n}\n\nul li .img_container[_v-052952c2] {\n  position: relative;\n}\n\nul li .img_container_inner[_v-052952c2] {\n  width: 140px;\n  position: relative;\n}\n\nul li .img_container_inner div[_v-052952c2] {\n  height: 60px;\n  width: 60px;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  margin: auto auto;\n  font-size: 14px;\n  color: #FFF;\n  text-align: center;\n  line-height: 60px;\n}\n\nul li .order_good_info_container[_v-052952c2] {\n  position: absolute;\n  padding-left: 150px;\n  top: 0;\n  padding-top: 10px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.order_good_name[_v-052952c2] {\n  font-size: 15px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  /*display: -webkit-box;*/\n  /*-webkit-line-clamp: 2;*/\n  /*-webkit-box-orient: vertical;*/\n  line-height: 20px;\n  color: #333333;\n}\n\n.order_good_name_in[_v-052952c2] {\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 3;\n  -webkit-box-orient: vertical;\n  font-size: 12px;\n  overflow: hidden;\n  color: #999999;\n  height: 51px;\n  line-height: 18px;\n  padding-top: 10px;\n  font-weight: 300;\n}\n\n.order_good_price[_v-052952c2] {\n  height: 28px;\n  line-height: 28px;\n  color: #FF4A7D;\n  margin-top: 6px;\n}\n.order_good_price > span[_v-052952c2]:nth-of-type(1){\n  font-weight: 500;\n}\n\n.price_symbol[_v-052952c2] {\n  font-size: 14px;\n  font-style: normal;\n}\n\n.price_symbol + span[_v-052952c2] {\n  font-size: 20px;\n}\n\n.membership_crown_pre[_v-052952c2] {\n  color: #999999;\n  text-decoration: line-through;\n  font-size: 12px;\n  margin-left: 5px;\n}\n\n.membership_crown .membership_crown_pre em[_v-052952c2] {\n  font-size: 10px;\n}\n\n.membership_crown[_v-052952c2] {\n  font-size: 12px;\n  color: #D6B471;\n  display: inline-block;\n  margin-left: 5px;\n  font-weight: 300;\n}\n\n.membership_crown em[_v-052952c2] {\n  font-size: 10px;\n  font-style: normal;\n}\n\n.tipswrap[_v-052952c2] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.51);\n  z-index: 99;\n}\n\n.tipswrap .tipsdiv[_v-052952c2] {\n  width: 72%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  overflow: hidden;\n  min-height: 20px;\n  max-width: 480px;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n\n.tipswrap .tipsdiv img[_v-052952c2] {\n  width: 100%;\n}\n\n.tipswrap .tipsdiv div[_v-052952c2] {\n  width: 100%;\n  height: 13%;\n  position: absolute;\n  bottom: 0;\n}\n\n.progress_bar[_v-052952c2] {\n  position: absolute;\n  width: 100%;\n  bottom: 20px;\n}\n\n.remain_btns_click[_v-052952c2] {\n  width: 90px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  bottom: 13px;\n  z-index: 2;\n}\n", ""]);
 
 	// exports
 
@@ -25464,7 +23811,7 @@
 /* 389 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-1f523bd8=\"\">\n  <tt_com_0 :data=\"data\" _v-1f523bd8=\"\"></tt_com_0>\n  <ul _v-1f523bd8=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-1f523bd8=\"\">\n      <a :href=\"item.command.content\" _v-1f523bd8=\"\">\n        <div class=\"img_container\" _v-1f523bd8=\"\">\n          <div class=\"img_container_inner\" _v-1f523bd8=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-1f523bd8=\"\">\n          </div>\n          <div class=\"order_good_info_container\" _v-1f523bd8=\"\">\n            <div class=\"order_good_name\" _v-1f523bd8=\"\">{{item.title}}</div>\n            <div class=\"order_good_name_in\" _v-1f523bd8=\"\">{{item.msg}}</div>\n            <div class=\"order_good_price\" _v-1f523bd8=\"\">\n              <span _v-1f523bd8=\"\"><em class=\"price_symbol\" _v-1f523bd8=\"\">￥</em><span _v-1f523bd8=\"\">{{item.nowPrice}}</span></span><span v-if=\"item.memReturn\" class=\"membership_crown\" _v-1f523bd8=\"\">会员返<em _v-1f523bd8=\"\">￥</em>{{item.memReturn}}</span><span v-if=\"item.prePrice\" class=\"membership_crown_pre\" _v-1f523bd8=\"\">\n            市场价<em _v-1f523bd8=\"\">￥</em>{{item.prePrice}}</span>\n            </div>\n          </div>\n        </div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-1f523bd8=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-1f523bd8=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-1f523bd8=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-1f523bd8=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-1f523bd8=\"\"></div>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-052952c2=\"\">\n  <tt_com_0 :data=\"data\" _v-052952c2=\"\"></tt_com_0>\n  <ul _v-052952c2=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-052952c2=\"\">\n      <a :href=\"item.command.content\" _v-052952c2=\"\">\n        <div class=\"img_container\" _v-052952c2=\"\">\n          <div class=\"img_container_inner\" _v-052952c2=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-052952c2=\"\">\n          </div>\n          <div class=\"order_good_info_container\" _v-052952c2=\"\">\n            <div class=\"order_good_name\" _v-052952c2=\"\">{{item.title}}</div>\n            <div class=\"order_good_name_in\" _v-052952c2=\"\">{{item.msg}}</div>\n            <div class=\"order_good_price\" _v-052952c2=\"\">\n              <span _v-052952c2=\"\"><em class=\"price_symbol\" _v-052952c2=\"\">￥</em><span _v-052952c2=\"\">{{item.nowPrice}}</span></span><span v-if=\"item.memReturn\" class=\"membership_crown\" _v-052952c2=\"\">会员返<em _v-052952c2=\"\">￥</em>{{item.memReturn}}</span><span v-if=\"item.prePrice\" class=\"membership_crown_pre\" _v-052952c2=\"\">\n            市场价<em _v-052952c2=\"\">￥</em>{{item.prePrice}}</span>\n            </div>\n          </div>\n        </div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-052952c2=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-052952c2=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-052952c2=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-052952c2=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-052952c2=\"\"></div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 390 */
@@ -25488,7 +23835,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-358d0d8c/bd_menu_0.vue"
+	  var id = "_v-ea627162/bd_menu_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -25530,7 +23877,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-19e8e337/tt_com_1.vue"
+	  var id = "_v-7a16fe82/tt_com_1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -25726,7 +24073,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-fc8b42ea/bd_web_0.vue"
+	  var id = "_v-3c2f0c54/bd_web_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -25886,7 +24233,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-4067f2b5/cover_0.vue"
+	  var id = "_v-09b3c20a/cover_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -26009,7 +24356,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-68cd8496/title_0.vue"
+	  var id = "_v-321953eb/title_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -26144,7 +24491,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-41ab47e9/popularity_0.vue"
+	  var id = "_v-5b74c5b4/popularity_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -26256,11 +24603,7 @@
 /* 417 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div _v-96cfcca8=\"\">\n  <div class=\"list1\" _v-96cfcca8=\"\">\n    <div class=\"big_img\" _v-96cfcca8=\"\">\n      <div class=\"list_line\" _v-96cfcca8=\"\"></div>\n      <div class=\"list_date\" v-text=\"week\" _v-96cfcca8=\"\"></div>\n      <div class=\"list_line\" _v-96cfcca8=\"\"></div>\n    </div>\n    <div class=\"list\" v-for=\"(item,index) in dataList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-96cfcca8=\"\">\n      <div class=\"left_img\" _v-96cfcca8=\"\">\n        <img :src=\"item.imageUrl\" alt=\"\" _v-96cfcca8=\"\">\n      </div>\n      <div class=\"list_content\" _v-96cfcca8=\"\">\n        <div class=\"list_title\" v-text=\"item.music\" _v-96cfcca8=\"\"></div>\n        <div class=\"list_name\" v-text=\"item.album\" _v-96cfcca8=\"\"></div>\n        <div class=\"list_time\" v-text=\"timeFormat(item.time)\" _v-96cfcca8=\"\"></div>\n      </div>\n      <div class=\"right_img\" v-if=\"(item.isFree==0 || (item.isFree==1 &amp;&amp; item.isSub==1)) &amp;&amp; item.isPlay==1\" _v-96cfcca8=\"\">\n        <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-96cfcca8=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-96cfcca8=\"\"></div>\n        <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"!(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-96cfcca8=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-96cfcca8=\"\"></div>\n        <div class=\"circle_mask\" _v-96cfcca8=\"\"></div>\n        <div _v-96cfcca8=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-96cfcca8=\"\"></div>\n      </div>\n      <div class=\"right_img\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==0\" _v-96cfcca8=\"\">\n        <div class=\"disable\" @click.stop=\"stop_info\" _v-96cfcca8=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-96cfcca8=\"\"></div>\n        <div class=\"circle_mask\" _v-96cfcca8=\"\"></div>\n        <div _v-96cfcca8=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-96cfcca8=\"\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
-=======
 	module.exports = "\n<a class=\"popularity_0\" :style=\"styleObject\" :href=\"data.body.command.content\">\n    <div class=\"date\">\n        <span>{{data.body.startTime}}</span>\n    </div>\n    <div class=\"hot\">\n        <i class=\"heart\">\n            <img src=\"//pic.davdian.com/free/2016/12/22/30_28_d3f6958c35fed5bc31b976f8cddb8244.png\" alt=\"\">\n        </i>\n        <span class=\"pv\">{{data.body.pv}}人气</span>\n        <div class=\"headpic\">\n            <div class=\"img\" v-for=\"item in data.body.dataList\">\n                <img :src=\"item.avatar\" alt=\"\">\n            </div>\n            </div>\n\n    </div>\n    <div class=\"getmore\">\n        <i class=\"icon\"></i>\n    </div>\n\n\n</a>\n";
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 418 */
@@ -26290,11 +24633,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
-	  var id = "_v-8e6e84e0/bd_album_01.vue"
-=======
-	  var id = "_v-6581e61a/course_desc_0.vue"
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	  var id = "_v-26b56ef0/course_desc_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -26318,8 +24657,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6581e61a&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./course_desc_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6581e61a&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./course_desc_0.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-26b56ef0&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./course_desc_0.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-26b56ef0&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./course_desc_0.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -26337,7 +24676,7 @@
 
 
 	// module
-	exports.push([module.id, ".no_discuss[_v-6581e61a] {\n  padding-bottom: 20px;\n  text-align: center;\n  /*margin-top: -15px;*/ }\n  .no_discuss img[_v-6581e61a] {\n    width: 120px;\n    display: inline-block; }\n  .no_discuss p[_v-6581e61a] {\n    color: #666;\n    margin-top: .3rem;\n    padding-bottom: .1rem;\n    width: 100%;\n    text-align: center;\n    font-size: .14rem;\n    display: inline-block; }\n  .no_discuss .discuss_top_write[_v-6581e61a] {\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n    .no_discuss .discuss_top_write img[_v-6581e61a] {\n      width: 11px;\n      margin-left: 0; }\n  .no_discuss .discuss_top_no_write[_v-6581e61a] {\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n\n.discuss_top[_v-6581e61a] {\n  padding: 10px;\n  padding-top: 15px;\n  position: relative; }\n  .discuss_top .discuss_top_write[_v-6581e61a] {\n    float: left;\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 130px;\n    font-size: 12px; }\n    .discuss_top .discuss_top_write img[_v-6581e61a] {\n      width: 11px; }\n  .discuss_top .discuss_top_no_write[_v-6581e61a] {\n    float: left;\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 139px;\n    font-size: 12px; }\n  .discuss_top .discuss_top_alldiscuss[_v-6581e61a] {\n    float: right;\n    color: #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-right: 10px;\n    font-size: 12px; }\n  .discuss_top .icon[_v-6581e61a] {\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n    transform: rotate(45deg);\n    background: none;\n    top: 22px;\n    position: absolute;\n    right: 11px; }\n\n.discuss_top[_v-6581e61a]:after {\n  content: \"\";\n  height: 0;\n  clear: both;\n  display: table; }\n\n.discuss_container[_v-6581e61a] {\n  padding-top: 0.21rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  padding-bottom: 0.15rem;\n  font-size: 0;\n  background: #fff;\n  border-bottom: 0.5px solid #F1F1F1; }\n\n.discuss_container_noborder[_v-6581e61a] {\n  border-bottom: 0px; }\n\n.discuss_title .title_all[_v-6581e61a] {\n  display: inline-block;\n  vertical-align: middle; }\n\n.discuss_title .title_img[_v-6581e61a] {\n  width: 0.24rem;\n  height: 0.24rem;\n  border-radius: 50%;\n  background: red; }\n\n.discuss_title .title_name[_v-6581e61a] {\n  font-size: 0.14rem;\n  color: #666666;\n  margin-left: 0.05rem; }\n\n.discuss_title .title_time[_v-6581e61a] {\n  font-size: 0.12rem;\n  margin-left: 0.03rem;\n  color: #999999; }\n\n.discuss_title .title_star[_v-6581e61a] {\n  width: 0.59rem;\n  float: right;\n  margin-top: 0.06rem; }\n\n.discuss_content[_v-6581e61a] {\n  font-size: 0.13rem;\n  color: #333333;\n  margin-top: 0.1rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 5;\n  display: -webkit-box; }\n\n.discuss_seeAll[_v-6581e61a] {\n  width: 0.8rem;\n  font-size: 0.13rem;\n  color: #FF4A7D;\n  padding-top: 0.1rem; }\n\n.discuss_imgContainer[_v-6581e61a] {\n  font-size: 0;\n  width: 3.1rem;\n  /*min-height: 1rem;*/\n  margin-top: 0.1rem; }\n  .discuss_imgContainer .discuss_img[_v-6581e61a] {\n    width: 0.9rem;\n    height: 0.9rem;\n    background: red;\n    display: inline-block;\n    vertical-align: top;\n    margin-right: 0.1rem;\n    margin-bottom: 0.1rem;\n    border-radius: 3px; }\n\n.discuss_share[_v-6581e61a] {\n  width: 100%;\n  height: 0.16rem; }\n  .discuss_share .discuss_share_container[_v-6581e61a] {\n    height: 0.16rem;\n    float: right;\n    font-size: 0.11rem;\n    color: #999999; }\n    .discuss_share .discuss_share_container img[_v-6581e61a] {\n      width: 0.15rem; }\n\n.discuss_all[_v-6581e61a] {\n  width: 100%;\n  color: #999999;\n  text-align: center;\n  height: 0.5rem; }\n  .discuss_all .discuss_all_content[_v-6581e61a] {\n    display: inline-block;\n    border-bottom: 1px solid #999;\n    height: 19px; }\n\n.attention_all[_v-6581e61a] {\n  font-size: 0;\n  display: inline-block;\n  vertical-align: middle; }\n\n.attention_yes[_v-6581e61a] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  /*border: 0.5px solid #FF4A7D;*/\n  border-radius: 13px; }\n\n.attention_yes1[_v-6581e61a] {\n  width: 0.45rem !important;\n  height: 0.18rem !important;\n  display: inline-block;\n  vertical-align: top; }\n\n.attention_no[_v-6581e61a] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #fff;\n  background: #D8D8D8;\n  border: 0.5px solid #D8D8D8;\n  border-radius: 13px; }\n\n.maskAttention[_v-6581e61a] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background: #000;\n  opacity: 0.4;\n  z-index: 1001; }\n\n.contentAttention[_v-6581e61a] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 1202;\n  margin: auto;\n  background: #000;\n  width: 2.7rem;\n  opacity: 0.65;\n  border-radius: 6px;\n  color: #fff;\n  height: 0.72rem; }\n\n.contentAttention h1[_v-6581e61a] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center;\n  margin-top: 0.15rem; }\n\n.contentAttention p[_v-6581e61a] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center; }\n\n.course_desc_0 .class_introduce_tit[_v-6581e61a] {\n  text-align: center !important;\n  line-height: 15px; }\n\n.course_desc_0 .class_introduce_tit .class_dis[_v-6581e61a], .course_desc_0 .class_introduce_tit .theater_dis[_v-6581e61a] {\n  display: inline-block !important; }\n\n.course_desc_0 .class_introduce_tit .class_dis .active[_v-6581e61a] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .theater_dis .active[_v-6581e61a] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .class_dis span[_v-6581e61a] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .class_introduce_tit .theater_dis span[_v-6581e61a] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .fixStyle[_v-6581e61a] {\n  position: fixed;\n  top: 44px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0 .fixStyle1[_v-6581e61a] {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0[_v-6581e61a] {\n  position: relative; }\n\n.introduceGuide[_v-6581e61a] {\n  position: absolute;\n  top: -14px;\n  width: 3.2rem;\n  right: 21px;\n  z-index: 1000; }\n\n.introduceGuide1[_v-6581e61a] {\n  position: absolute;\n  left: 0;\n  width: 248px;\n  z-index: 1000;\n  bottom: -10px; }\n\n.introduceGuideMask[_v-6581e61a] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 60px;\n  left: 0;\n  background: #000000;\n  opacity: 0.6;\n  z-index: 999; }\n\n.introduceGuidebtn[_v-6581e61a] {\n  width: 120px;\n  height: 40px;\n  position: fixed;\n  left: 50%;\n  margin-left: -60px;\n  bottom: 60px;\n  z-index: 1000;\n  background: -webkit-linear-gradient(left, #FF7C7C, #FF6A8B);\n  border-radius: 100px;\n  text-align: center;\n  line-height: 40px;\n  color: #fff; }\n", ""]);
+	exports.push([module.id, ".no_discuss[_v-26b56ef0] {\n  padding-bottom: 20px;\n  text-align: center;\n  /*margin-top: -15px;*/ }\n  .no_discuss img[_v-26b56ef0] {\n    width: 120px;\n    display: inline-block; }\n  .no_discuss p[_v-26b56ef0] {\n    color: #666;\n    margin-top: .3rem;\n    padding-bottom: .1rem;\n    width: 100%;\n    text-align: center;\n    font-size: .14rem;\n    display: inline-block; }\n  .no_discuss .discuss_top_write[_v-26b56ef0] {\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n    .no_discuss .discuss_top_write img[_v-26b56ef0] {\n      width: 11px;\n      margin-left: 0; }\n  .no_discuss .discuss_top_no_write[_v-26b56ef0] {\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n\n.discuss_top[_v-26b56ef0] {\n  padding: 10px;\n  padding-top: 15px;\n  position: relative; }\n  .discuss_top .discuss_top_write[_v-26b56ef0] {\n    float: left;\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 130px;\n    font-size: 12px; }\n    .discuss_top .discuss_top_write img[_v-26b56ef0] {\n      width: 11px; }\n  .discuss_top .discuss_top_no_write[_v-26b56ef0] {\n    float: left;\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 139px;\n    font-size: 12px; }\n  .discuss_top .discuss_top_alldiscuss[_v-26b56ef0] {\n    float: right;\n    color: #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-right: 10px;\n    font-size: 12px; }\n  .discuss_top .icon[_v-26b56ef0] {\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n    transform: rotate(45deg);\n    background: none;\n    top: 22px;\n    position: absolute;\n    right: 11px; }\n\n.discuss_top[_v-26b56ef0]:after {\n  content: \"\";\n  height: 0;\n  clear: both;\n  display: table; }\n\n.discuss_container[_v-26b56ef0] {\n  padding-top: 0.21rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  padding-bottom: 0.15rem;\n  font-size: 0;\n  background: #fff;\n  border-bottom: 0.5px solid #F1F1F1; }\n\n.discuss_container_noborder[_v-26b56ef0] {\n  border-bottom: 0px; }\n\n.discuss_title .title_all[_v-26b56ef0] {\n  display: inline-block;\n  vertical-align: middle; }\n\n.discuss_title .title_img[_v-26b56ef0] {\n  width: 0.24rem;\n  height: 0.24rem;\n  border-radius: 50%;\n  background: red; }\n\n.discuss_title .title_name[_v-26b56ef0] {\n  font-size: 0.14rem;\n  color: #666666;\n  margin-left: 0.05rem; }\n\n.discuss_title .title_time[_v-26b56ef0] {\n  font-size: 0.12rem;\n  margin-left: 0.03rem;\n  color: #999999; }\n\n.discuss_title .title_star[_v-26b56ef0] {\n  width: 0.59rem;\n  float: right;\n  margin-top: 0.06rem; }\n\n.discuss_content[_v-26b56ef0] {\n  font-size: 0.13rem;\n  color: #333333;\n  margin-top: 0.1rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 5;\n  display: -webkit-box; }\n\n.discuss_seeAll[_v-26b56ef0] {\n  width: 0.8rem;\n  font-size: 0.13rem;\n  color: #FF4A7D;\n  padding-top: 0.1rem; }\n\n.discuss_imgContainer[_v-26b56ef0] {\n  font-size: 0;\n  width: 3.1rem;\n  /*min-height: 1rem;*/\n  margin-top: 0.1rem; }\n  .discuss_imgContainer .discuss_img[_v-26b56ef0] {\n    width: 0.9rem;\n    height: 0.9rem;\n    background: red;\n    display: inline-block;\n    vertical-align: top;\n    margin-right: 0.1rem;\n    margin-bottom: 0.1rem;\n    border-radius: 3px; }\n\n.discuss_share[_v-26b56ef0] {\n  width: 100%;\n  height: 0.16rem; }\n  .discuss_share .discuss_share_container[_v-26b56ef0] {\n    height: 0.16rem;\n    float: right;\n    font-size: 0.11rem;\n    color: #999999; }\n    .discuss_share .discuss_share_container img[_v-26b56ef0] {\n      width: 0.15rem; }\n\n.discuss_all[_v-26b56ef0] {\n  width: 100%;\n  color: #999999;\n  text-align: center;\n  height: 0.5rem; }\n  .discuss_all .discuss_all_content[_v-26b56ef0] {\n    display: inline-block;\n    border-bottom: 1px solid #999;\n    height: 19px; }\n\n.attention_all[_v-26b56ef0] {\n  font-size: 0;\n  display: inline-block;\n  vertical-align: middle; }\n\n.attention_yes[_v-26b56ef0] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  /*border: 0.5px solid #FF4A7D;*/\n  border-radius: 13px; }\n\n.attention_yes1[_v-26b56ef0] {\n  width: 0.45rem !important;\n  height: 0.18rem !important;\n  display: inline-block;\n  vertical-align: top; }\n\n.attention_no[_v-26b56ef0] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #fff;\n  background: #D8D8D8;\n  border: 0.5px solid #D8D8D8;\n  border-radius: 13px; }\n\n.maskAttention[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background: #000;\n  opacity: 0.4;\n  z-index: 1001; }\n\n.contentAttention[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 1202;\n  margin: auto;\n  background: #000;\n  width: 2.7rem;\n  opacity: 0.65;\n  border-radius: 6px;\n  color: #fff;\n  height: 0.72rem; }\n\n.contentAttention h1[_v-26b56ef0] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center;\n  margin-top: 0.15rem; }\n\n.contentAttention p[_v-26b56ef0] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center; }\n\n.course_desc_0 .class_introduce_tit[_v-26b56ef0] {\n  text-align: center !important;\n  line-height: 15px; }\n\n.course_desc_0 .class_introduce_tit .class_dis[_v-26b56ef0], .course_desc_0 .class_introduce_tit .theater_dis[_v-26b56ef0] {\n  display: inline-block !important; }\n\n.course_desc_0 .class_introduce_tit .class_dis .active[_v-26b56ef0] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .theater_dis .active[_v-26b56ef0] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .class_dis span[_v-26b56ef0] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .class_introduce_tit .theater_dis span[_v-26b56ef0] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .fixStyle[_v-26b56ef0] {\n  position: fixed;\n  top: 44px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0 .fixStyle1[_v-26b56ef0] {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0[_v-26b56ef0] {\n  position: relative; }\n\n.introduceGuide[_v-26b56ef0] {\n  position: absolute;\n  top: -14px;\n  width: 3.2rem;\n  right: 21px;\n  z-index: 1000; }\n\n.introduceGuide1[_v-26b56ef0] {\n  position: absolute;\n  left: 0;\n  width: 248px;\n  z-index: 1000;\n  bottom: -10px; }\n\n.introduceGuideMask[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 60px;\n  left: 0;\n  background: #000000;\n  opacity: 0.6;\n  z-index: 999; }\n\n.introduceGuidebtn[_v-26b56ef0] {\n  width: 120px;\n  height: 40px;\n  position: fixed;\n  left: 50%;\n  margin-left: -60px;\n  bottom: 60px;\n  z-index: 1000;\n  background: -webkit-linear-gradient(left, #FF7C7C, #FF6A8B);\n  border-radius: 100px;\n  text-align: center;\n  line-height: 40px;\n  color: #fff; }\n", ""]);
 
 	// exports
 
@@ -26880,13 +25219,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e6e84e0&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_01.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e6e84e0&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_01.vue");
-=======
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/index.js!./course_desc_0.scss", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/sass-loader/index.js!./course_desc_0.scss");
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -26904,22 +25238,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, ".class_introduce_right {\n  padding: 4px 10px 10px;\n  color: #666; }\n  .class_introduce_right a {\n    display: block; }\n  .class_introduce_right .class_introduce_con {\n    padding-top: 10px;\n    color: #333; }\n  .class_introduce_right .teacher_tit img {\n    width: 40px;\n    height: 40px;\n    border-radius: 40px; }\n  .class_introduce_right .teacher_tit .teacher_dis {\n    display: inline-block;\n    color: #333;\n    vertical-align: middle; }\n  .class_introduce_right .class_introduce_text {\n    color: #666;\n    margin-top: 10px;\n    word-break: break-all; }\n\n.guest_introduce_con {\n  margin-top: 10px;\n  border-top: #eee solid 1px; }\n\n.class_intrduce_left {\n  color: #666; }\n  .class_intrduce_left .class_intrduce_left_div {\n    padding-bottom: 6px; }\n  .class_intrduce_left .class_intrduce_left_img {\n    margin-bottom: 10px;\n    border-radius: 7px; }\n", ""]);
-=======
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-8e6e84e0] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-8e6e84e0] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-8e6e84e0] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-8e6e84e0] {\n  width: 3.75rem;\n}\n\n.content_title[_v-8e6e84e0] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-8e6e84e0] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-8e6e84e0] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-8e6e84e0] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-8e6e84e0] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-8e6e84e0] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-8e6e84e0]{\n  position: relative;\n}\n.history_mask[_v-8e6e84e0]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-8e6e84e0]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-8e6e84e0] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-8e6e84e0]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
-=======
-<<<<<<< HEAD
-	exports.push([module.id, ".class_introduce_right {\n  padding: 4px 10px 10px;\n  color: #666; }\n  .class_introduce_right a {\n    display: block; }\n  .class_introduce_right .class_introduce_con {\n    padding-top: 10px;\n    color: #333; }\n  .class_introduce_right .teacher_tit img {\n    width: 40px;\n    height: 40px;\n    border-radius: 40px; }\n  .class_introduce_right .teacher_tit .teacher_dis {\n    display: inline-block;\n    color: #333;\n    vertical-align: middle; }\n  .class_introduce_right .class_introduce_text {\n    color: #666;\n    margin-top: 10px;\n    word-break: break-all; }\n\n.guest_introduce_con {\n  margin-top: 10px;\n  border-top: #eee solid 1px; }\n\n.class_intrduce_left {\n  color: #666; }\n  .class_intrduce_left .class_intrduce_left_div {\n    padding-bottom: 6px; }\n  .class_intrduce_left .class_intrduce_left_img {\n    margin-bottom: 10px;\n    border-radius: 7px; }\n", ""]);
-=======
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-8e6e84e0] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-8e6e84e0] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-8e6e84e0] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-8e6e84e0] {\n  width: 3.75rem;\n}\n\n.content_title[_v-8e6e84e0] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-8e6e84e0] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-8e6e84e0] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-8e6e84e0] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-8e6e84e0] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-8e6e84e0] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-8e6e84e0]{\n  position: relative;\n}\n.history_mask[_v-8e6e84e0]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-8e6e84e0]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-8e6e84e0] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-8e6e84e0]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-234ea0bb] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-234ea0bb] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-234ea0bb] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-234ea0bb] {\n  width: 3.75rem;\n}\n\n.content_title[_v-234ea0bb] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-234ea0bb] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-234ea0bb] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-234ea0bb] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-234ea0bb] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-234ea0bb] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-234ea0bb]{\n  position: relative;\n}\n.history_mask[_v-234ea0bb]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-234ea0bb]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-234ea0bb] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-234ea0bb]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
->>>>>>> 748d3c90a4e0e363c9e690f0ad8b89bd04aaa4c9
->>>>>>> 0b54af84df02497af10090e204f4a8681b627f43
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	// exports
 
@@ -26928,236 +25247,6 @@
 /* 424 */
 /***/ function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _native = __webpack_require__(22);
-
-	var _native2 = _interopRequireDefault(_native);
-
-	var _utils = __webpack_require__(80);
-
-	var _utils2 = _interopRequireDefault(_utils);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  props: ["data"],
-	  mounted: function mounted() {
-	    var that = this;
-	    this.dataList = this.data.body.dataList[0];
-	    this.isFree = this.data.body.isFree;
-	    this.$nextTick(function () {
-	      this.audioPlayHistory();
-	    });
-	  },
-	  data: function data() {
-	    return {
-	      dataList: [],
-	      isFree: 0,
-	      historyName: "",
-	      sortNo: null,
-	      timestamp: null,
-	      isApp: _utils2.default.utils.isApp(),
-	      albumId: (0, _utils.getQuery)("albumId")
-	    };
-	  },
-
-	  methods: {
-	    go_history: function go_history() {
-	      var _this = this;
-	      if (this.isApp) {
-	        //调用app播放器
-	        _native2.default.Audio.audioPlay({
-	          "sortNo": _this.sortNo,
-	          "albumId": _this.albumId
-	        });
-	      } else {
-	        window.location.href = "/musicDetail.html?albumId=" + albumId + "&sortNo=" + sortNo;
-	      }
-	    },
-	    audioPlayHistory: function audioPlayHistory() {
-	      var _this = this;
-	      if (_this.isApp) {
-	        setTimeout(function () {
-	          _native2.default.Audio.audioPlayHistory({
-	            "albumId": _this.albumId,
-	            success: function success(obj) {
-	              alert(obj.name + ":" + obj.sortNo + ":" + obj.date);
-	              _this.historyName = obj.name;
-	              _this.sortNo = obj.sortNo;
-	              _this.timestamp = obj.date;
-	            }
-	          });
-	        }, 4000);
-	      }
-	    }
-	  }
-	  // </script>
-	  // <style scoped>
-	  //   .all {
-	  //     padding-bottom: 0.12rem;
-	  //     background: white;
-	  //   }
-	  //
-	  //   .big_img {
-	  //     margin-bottom: 0.1rem;
-	  //   }
-	  //
-	  //   .content {
-	  //     padding: 0.1rem 0.1rem 0 0.1rem;
-	  //   }
-	  //
-	  //   .big_img img {
-	  //     width: 3.75rem;
-	  //   }
-	  //
-	  //   .content_title {
-	  //     font-size: 14px;
-	  //     color: #333333;
-	  //     margin-bottom: 0.15rem;
-	  //   }
-	  //
-	  //   .content_price {
-	  //     margin-bottom: 0.15rem;
-	  //   }
-	  //
-	  //   .content_text {
-	  //     color: #999999;
-	  //     font-size: 12px;
-	  //   }
-	  //
-	  //   .content_price .pri_left {
-	  //     color: #FF4A7D;
-	  //     font-size: 18px;
-	  //   }
-	  //
-	  //   .content_price > div {
-	  //     display: inline-block;
-	  //     font-size: 0;
-	  //     vertical-align: top;
-	  //   }
-	  //
-	  //   .content_price .pri_right {
-	  //     color: #BF9D51;
-	  //     font-size: 11px;
-	  //     margin-top: 0.04rem;
-	  //   }
-	  //
-	  //
-	  //   .big_top{
-	  //     position: relative;
-	  //   }
-	  //   .history_mask{
-	  //     height: 35px;
-	  //     background: #000000;
-	  //     opacity:0.6;
-	  //     position: absolute;
-	  //     bottom: 0;
-	  //     z-index:2;
-	  //     width:3.75rem;
-	  //   }
-	  //   .history{
-	  //     position: absolute;
-	  //     bottom: 0;
-	  //     height: 35px;
-	  //     z-index:3;
-	  //     line-height: 35px;
-	  //     font-size: 0;
-	  //     width: 3.75rem;
-	  //     text-align: center;
-	  //   }
-	  //   .history>div {
-	  //     display: inline-block;
-	  //     height: 35px;
-	  //   }
-	  //   .history div>div{
-	  //     color:#FFFFFF;
-	  //     font-size: 12px;
-	  //     display: inline-block;
-	  //     vertical-align: top;
-	  //     height: 35px;
-	  //   }
-	  // </style>
-
-	}; // <template>
-	//   <div class="all">
-	//     <div class="big_top">
-	//       <div class="big_img">
-	//         <img id="uuu" :src="dataList.imageUrl" alt="">
-	//       </div>
-	//       <div class="history_mask" v-if="isApp"></div>
-	//       <div class="history" @click.stop="go_history" v-if="isApp">
-	//         <div>
-	//           <div>上次听到</div>
-	//           <div style="overflow: hidden;max-width: 96px;">{{ historyName }}</div>
-	//           <div>...,点我继续收听</div>
-	//         </div>
-	//       </div>
-	//
-	//     </div>
-	//
-	//     <div class="content">
-	//       <div class="content_title" v-text="dataList.album"></div>
-	//       <div class="content_price" v-if="isFree==1">
-	//         <div class="pri_left">
-	//           <span v-text="dataList.income"></span>
-	//         </div>
-	//         <div class="pri_right" v-text="dataList.memberMsg"></div>
-	//       </div>
-	//       <div class="content_text" v-text="dataList.comment"></div>
-	//     </div>
-	//   </div>
-	// </template>
-	// <script>
->>>>>>> 1b61be805c777f0c34710bf0b1f7f1b3ff3c171b
-
-/***/ },
-/* 408 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"all\" _v-8e6e84e0=\"\">\n  <div class=\"big_top\" _v-8e6e84e0=\"\">\n    <div class=\"big_img\" _v-8e6e84e0=\"\">\n      <img id=\"uuu\" :src=\"dataList.imageUrl\" alt=\"\" _v-8e6e84e0=\"\">\n    </div>\n    <div class=\"history_mask\" v-if=\"isApp\" _v-8e6e84e0=\"\"></div>\n    <div class=\"history\" @click.stop=\"go_history\" v-if=\"isApp\" _v-8e6e84e0=\"\">\n      <div _v-8e6e84e0=\"\">\n        <div _v-8e6e84e0=\"\">上次听到</div>\n        <div style=\"overflow: hidden;max-width: 96px;\" _v-8e6e84e0=\"\">{{ historyName }}</div>\n        <div _v-8e6e84e0=\"\">...,点我继续收听</div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"content\" _v-8e6e84e0=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-8e6e84e0=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-8e6e84e0=\"\">\n      <div class=\"pri_left\" _v-8e6e84e0=\"\">\n        <span v-text=\"dataList.income\" _v-8e6e84e0=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-8e6e84e0=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-8e6e84e0=\"\"></div>\n  </div>\n</div>\n";
-
-/***/ },
-/* 409 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(410)
-	__vue_script__ = __webpack_require__(412)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_album_02.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(413)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-8e5255de/bd_album_02.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-=======
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
 		Author Tobias Koppers @sokra
@@ -27405,7 +25494,6 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 /***/ },
 /* 425 */
@@ -27413,31 +25501,9 @@
 
 	"use strict";
 
-<<<<<<< HEAD
-	// load the styles
-	var content = __webpack_require__(411);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e5255de&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_02.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e5255de&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_02.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-=======
 	Object.defineProperty(exports, "__esModule", {
 	    value: true
 	});
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	var _api = __webpack_require__(426);
 
@@ -27445,12 +25511,7 @@
 
 	var _native = __webpack_require__(31);
 
-<<<<<<< HEAD
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.content2[_v-8e5255de] {\n  padding: 0 0.1rem 0.12rem 0.1rem;\n  background: white;\n}\n\n.content_buy[_v-8e5255de] {\n  position: relative;\n  height: 0.25rem;\n}\n\n.content_buy .count[_v-8e5255de] {\n  color: #666666;\n  font-size: 14px;\n  margin-top: 0.03rem;\n  line-height: 0.2rem;\n}\n\n.content_buy > div[_v-8e5255de] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_header[_v-8e5255de] {\n  position: absolute;\n  right: 0;\n}\n\n.content_header > div[_v-8e5255de] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n  margin-left: 0.05rem;\n}\n\n.content_header img[_v-8e5255de] {\n  border-radius: 50%;\n  height: 0.25rem;\n  width: 0.25rem;\n}\n", ""]);
-=======
 	var _native2 = _interopRequireDefault(_native);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27756,94 +25817,6 @@
 
 /***/ },
 /* 426 */
-<<<<<<< HEAD
-=======
-=======
-/* 413 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"content2\" _v-8e5255de=\"\">\n  <div class=\"content_buy\" _v-8e5255de=\"\">\n    <div class=\"count\" _v-8e5255de=\"\"><span v-text=\"data.body.purchase\" _v-8e5255de=\"\"></span><span _v-8e5255de=\"\">人订阅</span></div>\n    <div class=\"content_header\" _v-8e5255de=\"\">\n        <div v-for=\"item in dataList\" @click=\"go_href(item.command.content)\" _v-8e5255de=\"\">\n          <img :src=\"doImg(item.imageUrl)\" alt=\"\" _v-8e5255de=\"\">\n\n        </div>\n        <div _v-8e5255de=\"\">\n          <img src=\"//pic.davdian.com/free/2017/08/16/Group4.png\" alt=\"\" _v-8e5255de=\"\">\n        </div>\n    </div>\n  </div>\n</div>\n";
-
-/***/ },
-/* 414 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(415)
-	__vue_script__ = __webpack_require__(417)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_album_03.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(441)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-8e3626dc/bd_album_03.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 415 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(416);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e3626dc&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_03.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e3626dc&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_03.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 416 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(42)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-8e3626dc] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-8e3626dc] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-8e3626dc] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-8e3626dc] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-8e3626dc] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-8e3626dc], .b_right[_v-8e3626dc] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-8e3626dc] {\n  font-size: 14px;\n}\n\n.line[_v-8e3626dc] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-8e3626dc] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-8e3626dc] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-8e3626dc] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-8e3626dc] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-8e3626dc]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-8e3626dc]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-8e3626dc]{\n  font-size: 0;\n}\n.item_timee>div[_v-8e3626dc]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-8e3626dc]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-8e3626dc]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-8e3626dc]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-8e3626dc]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-8e3626dc]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-8e3626dc]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-8e3626dc]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-8e3626dc],.mask_stop[_v-8e3626dc],.disable[_v-8e3626dc]{\n  z-index:3;\n}\n\n\n\n.free[_v-8e3626dc]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.rea[_v-8e3626dc]{\n  position: relative;\n}\n\n\n.top[_v-8e3626dc]{\n  margin-top: 0.12rem;\n}\n.empty_tab[_v-8e3626dc]{\n  height: 0.5rem;\n}\n.tab_fixed[_v-8e3626dc]{\n  position: fixed;\n  top: 44px;\n  z-index:999;\n}\n.tab_fixed2[_v-8e3626dc]{\n  position: fixed;\n  top:0;\n  z-index:999;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 417 */
->>>>>>> 0b54af84df02497af10090e204f4a8681b627f43
->>>>>>> 1b61be805c777f0c34710bf0b1f7f1b3ff3c171b
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28281,7 +26254,7 @@
 /* 427 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"course_desc_0\" :style=\"styleObject\" _v-6581e61a=\"\">\n    <div class=\"block\" style=\"width: 100%;height: 47px;\" v-if=\"fixFlag\" _v-6581e61a=\"\"></div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle: fixFlag}\" v-if=\"!isApp\" _v-6581e61a=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-6581e61a=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-6581e61a=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-6581e61a=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle1: fixFlag}\" v-if=\"isApp\" _v-6581e61a=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-6581e61a=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-6581e61a=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-6581e61a=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_intrduce_success\" _v-6581e61a=\"\"></div>\n    <div v-if=\"class_introduce_left==1\" class=\"class_intrduce_left\" _v-6581e61a=\"\">\n        <div v-if=\"courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_div\" _v-6581e61a=\"\">\n            <img :src=\"item.imgUri\" v-for=\"(item,index) in courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_img\" _v-6581e61a=\"\">\n        </div>\n        <div class=\"left_introduce_text\" _v-6581e61a=\"\">\n            <p v-html=\"courseDescInfo.courseDesc.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></p>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==0\" class=\"class_introduce_right\" _v-6581e61a=\"\">\n        <div class=\"class_introduce_con\" _v-6581e61a=\"\">\n            <a _v-6581e61a=\"\">\n                <div class=\"teacher_tit\" _v-6581e61a=\"\">\n                    <img @click=\"goTeacher(teacherDescInfo.command.content)\" class=\"img\" :src=\"teacherDescInfo.teacherAvatar\" alt=\"\" _v-6581e61a=\"\">\n                    <div class=\"teacher_dis\" _v-6581e61a=\"\">\n                        <span class=\"techer\" _v-6581e61a=\"\">{{teacherDescInfo.teacherName}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != teacherDescInfo.teacherId\" _v-6581e61a=\"\">\n                        <!-- <div class='attention_yes' v-if='attention==0' @click='attention_yes'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"attention==0\" @click=\"attention_yes\" _v-6581e61a=\"\">\n                        <div class=\"attention_no\" v-if=\"attention==1\" _v-6581e61a=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-6581e61a=\"\">\n                <p v-html=\"teacherDescInfo.teacherDesc.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></p>\n            </div>\n        </div>\n        <div class=\"class_introduce_con guest_introduce_con\" v-for=\"item in guestList\" _v-6581e61a=\"\">\n            <a _v-6581e61a=\"\">\n                <div class=\"teacher_tit\" _v-6581e61a=\"\">\n                    <img @click=\"goTeacher(item.command.content)\" class=\"img\" :src=\"item.avatar\" alt=\"\" _v-6581e61a=\"\">\n                    <div class=\"teacher_dis\" _v-6581e61a=\"\">\n                        <span class=\"techer\" _v-6581e61a=\"\">{{item.name}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != item.teacherId\" _v-6581e61a=\"\">\n                        <!-- <div class='attention_yes' v-if='item.followStatus==0' @click='attention_yes_guest(item.teacherId)'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"item.followStatus==0\" @click=\"attention_yes_guest(item.teacherId)\" _v-6581e61a=\"\">\n                        <div class=\"attention_no\" v-if=\"item.followStatus==1\" _v-6581e61a=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-6581e61a=\"\">\n                <p v-html=\"item.desc.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></p>\n            </div>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==2\" _v-6581e61a=\"\">\n        <div class=\"discuss_top\" _v-6581e61a=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==1\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllSignUp.png\" _v-6581e61a=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==0\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png\" _v-6581e61a=\"\">\n            <div class=\"discuss_top_write\" @click=\"writeNote\" v-if=\"userTicket==1 &amp;&amp; AppVersionFlag\" _v-6581e61a=\"\">\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\" _v-6581e61a=\"\">\n\n            </div>\n            <div class=\"discuss_top_no_write\" v-if=\"userTicket==0 &amp;&amp; AppVersionFlag\" _v-6581e61a=\"\">\n                报名后才能写笔记哦\n            </div>\n            <div class=\"discuss_top_alldiscuss\" @click=\"allNote\" _v-6581e61a=\"\">\n                全部笔记\n                <!-- <img src=\"//pic.davdian.com/free/2017/07/26/entry.png\"> -->\n            </div>\n            <i class=\"icon\" _v-6581e61a=\"\"></i>\n        </div>\n        <div class=\"discuss_container\" v-if=\"notesList.length!=0\" :class=\"{discuss_container_noborder: index == notesList.length-1}\" v-for=\"(item, index) in notesList\" @click.stop=\"show_all(item)\" _v-6581e61a=\"\">\n            <div class=\"discuss_title\" _v-6581e61a=\"\">\n                <div class=\"title_img title_all\" :style=\"{'background': 'url(' + item.headImg + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-6581e61a=\"\"></div>    \n                <div class=\"title_name title_all\" v-text=\"item.userName\" _v-6581e61a=\"\"></div>\n                <div class=\"title_time title_all\" v-text=\"item.createTime\" _v-6581e61a=\"\"></div>\n                <img class=\"title_star title_all\" v-if=\"item.score == 1\" src=\"//pic.davdian.com/free/2017/05/09/star_1.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 2\" src=\"//pic.davdian.com/free/2017/05/09/star_2.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 3\" src=\"//pic.davdian.com/free/2017/05/09/star_3.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 4\" src=\"//pic.davdian.com/free/2017/05/09/star_4.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 5\" src=\"//pic.davdian.com/free/2017/05/09/star_5.png\" _v-6581e61a=\"\">\n            </div>\n            <div class=\"discuss_content\" v-html=\"item.content.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==1\" @click.stop=\"showAll(index)\" _v-6581e61a=\"\">查看全部</div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==2\" @click.stop=\"showAll1(index)\" _v-6581e61a=\"\">收起</div>\n            <div class=\"discuss_imgContainer\" _v-6581e61a=\"\">\n                <div class=\"discuss_img\" :style=\"{'background': 'url(' + item1 + ') center center / cover no-repeat' , 'background-size': 'cover'}\" v-for=\"(item1, index) in item.imgList\" @click=\"showImg(index,item.imgList, item1)\" _v-6581e61a=\"\"></div>\n            </div>\n            <div class=\"discuss_share\" v-if=\"isApp\" _v-6581e61a=\"\">\n                <div class=\"discuss_share_container\" @click.stop=\"share(item)\" v-if=\"isApp\" _v-6581e61a=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/02/07/material-share.png\" _v-6581e61a=\"\">\n                    <span v-text=\"item.shareNum\" v-if=\"item.shareNum !=0\" _v-6581e61a=\"\"></span>\n                </div>\n            </div>\n        </div>\n        <!-- <div class='discuss_all'>\n            <div class=\"discuss_all_content\" @click='allNote' v-if='notesList.length!=0'>\n                查看全部{{notesNum}}条听课笔记\n            </div>\n        </div> -->\n        <div class=\"no_discuss\" v-if=\"notesList.length==0\" _v-6581e61a=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/10/error_img.png\" _v-6581e61a=\"\">\n            <p _v-6581e61a=\"\">快来写笔记吧</p>\n            <!-- <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\">\n            </div>\n            <div class='discuss_top_no_write' v-if='userTicket==0 && AppVersionFlag'>\n                报名后才能写笔记哦\n            </div> -->\n        </div>\n    </div>\n    <!-- <div class='maskAttention' v-if='maskAttention'></div> -->\n    <div class=\"contentAttention\" v-if=\"maskAttention\" _v-6581e61a=\"\">\n        <h1 _v-6581e61a=\"\">关注成功</h1>\n        <p _v-6581e61a=\"\">老师开讲新课，我们会悄悄告诉你呦</p>\n    </div>\n\n    <img v-if=\"introduceGuide &amp;&amp; guide==1\" class=\"introduceGuide lectureNnotesAll\" src=\"//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png\" _v-6581e61a=\"\">\n\n    <div v-if=\"introduceGuide\" class=\"introduceGuideMask\" _v-6581e61a=\"\"></div>\n    <div v-if=\"introduceGuide\" class=\"introduceGuidebtn\" @click=\"know\" _v-6581e61a=\"\">知道了</div>\n\n</div>\n";
+	module.exports = "\n<div class=\"course_desc_0\" :style=\"styleObject\" _v-26b56ef0=\"\">\n    <div class=\"block\" style=\"width: 100%;height: 47px;\" v-if=\"fixFlag\" _v-26b56ef0=\"\"></div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle: fixFlag}\" v-if=\"!isApp\" _v-26b56ef0=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-26b56ef0=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-26b56ef0=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-26b56ef0=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle1: fixFlag}\" v-if=\"isApp\" _v-26b56ef0=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-26b56ef0=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-26b56ef0=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-26b56ef0=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_intrduce_success\" _v-26b56ef0=\"\"></div>\n    <div v-if=\"class_introduce_left==1\" class=\"class_intrduce_left\" _v-26b56ef0=\"\">\n        <div v-if=\"courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_div\" _v-26b56ef0=\"\">\n            <img :src=\"item.imgUri\" v-for=\"(item,index) in courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_img\" _v-26b56ef0=\"\">\n        </div>\n        <div class=\"left_introduce_text\" _v-26b56ef0=\"\">\n            <p v-html=\"courseDescInfo.courseDesc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==0\" class=\"class_introduce_right\" _v-26b56ef0=\"\">\n        <div class=\"class_introduce_con\" _v-26b56ef0=\"\">\n            <a _v-26b56ef0=\"\">\n                <div class=\"teacher_tit\" _v-26b56ef0=\"\">\n                    <img @click=\"goTeacher(teacherDescInfo.command.content)\" class=\"img\" :src=\"teacherDescInfo.teacherAvatar\" alt=\"\" _v-26b56ef0=\"\">\n                    <div class=\"teacher_dis\" _v-26b56ef0=\"\">\n                        <span class=\"techer\" _v-26b56ef0=\"\">{{teacherDescInfo.teacherName}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != teacherDescInfo.teacherId\" _v-26b56ef0=\"\">\n                        <!-- <div class='attention_yes' v-if='attention==0' @click='attention_yes'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"attention==0\" @click=\"attention_yes\" _v-26b56ef0=\"\">\n                        <div class=\"attention_no\" v-if=\"attention==1\" _v-26b56ef0=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-26b56ef0=\"\">\n                <p v-html=\"teacherDescInfo.teacherDesc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n            </div>\n        </div>\n        <div class=\"class_introduce_con guest_introduce_con\" v-for=\"item in guestList\" _v-26b56ef0=\"\">\n            <a _v-26b56ef0=\"\">\n                <div class=\"teacher_tit\" _v-26b56ef0=\"\">\n                    <img @click=\"goTeacher(item.command.content)\" class=\"img\" :src=\"item.avatar\" alt=\"\" _v-26b56ef0=\"\">\n                    <div class=\"teacher_dis\" _v-26b56ef0=\"\">\n                        <span class=\"techer\" _v-26b56ef0=\"\">{{item.name}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != item.teacherId\" _v-26b56ef0=\"\">\n                        <!-- <div class='attention_yes' v-if='item.followStatus==0' @click='attention_yes_guest(item.teacherId)'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"item.followStatus==0\" @click=\"attention_yes_guest(item.teacherId)\" _v-26b56ef0=\"\">\n                        <div class=\"attention_no\" v-if=\"item.followStatus==1\" _v-26b56ef0=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-26b56ef0=\"\">\n                <p v-html=\"item.desc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n            </div>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==2\" _v-26b56ef0=\"\">\n        <div class=\"discuss_top\" _v-26b56ef0=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==1\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllSignUp.png\" _v-26b56ef0=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==0\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png\" _v-26b56ef0=\"\">\n            <div class=\"discuss_top_write\" @click=\"writeNote\" v-if=\"userTicket==1 &amp;&amp; AppVersionFlag\" _v-26b56ef0=\"\">\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\" _v-26b56ef0=\"\">\n\n            </div>\n            <div class=\"discuss_top_no_write\" v-if=\"userTicket==0 &amp;&amp; AppVersionFlag\" _v-26b56ef0=\"\">\n                报名后才能写笔记哦\n            </div>\n            <div class=\"discuss_top_alldiscuss\" @click=\"allNote\" _v-26b56ef0=\"\">\n                全部笔记\n                <!-- <img src=\"//pic.davdian.com/free/2017/07/26/entry.png\"> -->\n            </div>\n            <i class=\"icon\" _v-26b56ef0=\"\"></i>\n        </div>\n        <div class=\"discuss_container\" v-if=\"notesList.length!=0\" :class=\"{discuss_container_noborder: index == notesList.length-1}\" v-for=\"(item, index) in notesList\" @click.stop=\"show_all(item)\" _v-26b56ef0=\"\">\n            <div class=\"discuss_title\" _v-26b56ef0=\"\">\n                <div class=\"title_img title_all\" :style=\"{'background': 'url(' + item.headImg + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-26b56ef0=\"\"></div>    \n                <div class=\"title_name title_all\" v-text=\"item.userName\" _v-26b56ef0=\"\"></div>\n                <div class=\"title_time title_all\" v-text=\"item.createTime\" _v-26b56ef0=\"\"></div>\n                <img class=\"title_star title_all\" v-if=\"item.score == 1\" src=\"//pic.davdian.com/free/2017/05/09/star_1.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 2\" src=\"//pic.davdian.com/free/2017/05/09/star_2.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 3\" src=\"//pic.davdian.com/free/2017/05/09/star_3.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 4\" src=\"//pic.davdian.com/free/2017/05/09/star_4.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 5\" src=\"//pic.davdian.com/free/2017/05/09/star_5.png\" _v-26b56ef0=\"\">\n            </div>\n            <div class=\"discuss_content\" v-html=\"item.content.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==1\" @click.stop=\"showAll(index)\" _v-26b56ef0=\"\">查看全部</div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==2\" @click.stop=\"showAll1(index)\" _v-26b56ef0=\"\">收起</div>\n            <div class=\"discuss_imgContainer\" _v-26b56ef0=\"\">\n                <div class=\"discuss_img\" :style=\"{'background': 'url(' + item1 + ') center center / cover no-repeat' , 'background-size': 'cover'}\" v-for=\"(item1, index) in item.imgList\" @click=\"showImg(index,item.imgList, item1)\" _v-26b56ef0=\"\"></div>\n            </div>\n            <div class=\"discuss_share\" v-if=\"isApp\" _v-26b56ef0=\"\">\n                <div class=\"discuss_share_container\" @click.stop=\"share(item)\" v-if=\"isApp\" _v-26b56ef0=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/02/07/material-share.png\" _v-26b56ef0=\"\">\n                    <span v-text=\"item.shareNum\" v-if=\"item.shareNum !=0\" _v-26b56ef0=\"\"></span>\n                </div>\n            </div>\n        </div>\n        <!-- <div class='discuss_all'>\n            <div class=\"discuss_all_content\" @click='allNote' v-if='notesList.length!=0'>\n                查看全部{{notesNum}}条听课笔记\n            </div>\n        </div> -->\n        <div class=\"no_discuss\" v-if=\"notesList.length==0\" _v-26b56ef0=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/10/error_img.png\" _v-26b56ef0=\"\">\n            <p _v-26b56ef0=\"\">快来写笔记吧</p>\n            <!-- <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\">\n            </div>\n            <div class='discuss_top_no_write' v-if='userTicket==0 && AppVersionFlag'>\n                报名后才能写笔记哦\n            </div> -->\n        </div>\n    </div>\n    <!-- <div class='maskAttention' v-if='maskAttention'></div> -->\n    <div class=\"contentAttention\" v-if=\"maskAttention\" _v-26b56ef0=\"\">\n        <h1 _v-26b56ef0=\"\">关注成功</h1>\n        <p _v-26b56ef0=\"\">老师开讲新课，我们会悄悄告诉你呦</p>\n    </div>\n\n    <img v-if=\"introduceGuide &amp;&amp; guide==1\" class=\"introduceGuide lectureNnotesAll\" src=\"//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png\" _v-26b56ef0=\"\">\n\n    <div v-if=\"introduceGuide\" class=\"introduceGuideMask\" _v-26b56ef0=\"\"></div>\n    <div v-if=\"introduceGuide\" class=\"introduceGuidebtn\" @click=\"know\" _v-26b56ef0=\"\">知道了</div>\n\n</div>\n";
 
 /***/ },
 /* 428 */
@@ -28311,7 +26284,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-44019e47/fire_work.vue"
+	  var id = "_v-2cd22748/fire_work.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -28765,7 +26738,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-ac41ad0a/dvk1.vue"
+	  var id = "_v-2b46bb74/dvk1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -28789,8 +26762,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac41ad0a&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk1.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac41ad0a&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk1.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b46bb74&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk1.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b46bb74&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk1.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -28808,7 +26781,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk1_container[_v-ac41ad0a]{\n    height: 76px;\n    position: relative;\n    padding-bottom: 25px;\n}\n.dvk1_img[_v-ac41ad0a]{\n    height: 76px;\n    width: 110px;\n    position: relative;\n    float:left;\n    overflow: hidden;\n    background: #fff;\n    margin-top:2px;\n}\n.dvk1_content[_v-ac41ad0a]{\n    vertical-align: top;\n    margin-left: 120px;\n    height: 76px;\n}\n.dvk1_text[_v-ac41ad0a]{\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    font-size: 14px;\n    color: #333333;\n    margin-bottom: 5px;\n    line-height: 20px;\n}\n.dvk1_name[_v-ac41ad0a]{\n    font-size: 12px;\n    line-height: 16px;\n    color: #999;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk1_share[_v-ac41ad0a]{\n    margin-top: 5px;\n    font-size: 12px;\n    line-height:16px;\n    color: #999999;\n    overflow:hidden;\n}\n.dvk1_border[_v-ac41ad0a]{\n    border-left: 0.5px solid #999;\n    margin-left: 5px;\n    /*margin-right: 0.07rem;*/\n}\n.dvk1_imgNav[_v-ac41ad0a]{\n    position: absolute;\n    top: 30px;\n    left: 30px;\n    width: 30px;\n    height: 30px;\n}\n.dvk1_share_left[_v-ac41ad0a]{\n\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk1_money[_v-ac41ad0a]{\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    height: 18px;\n    line-height: 20px;\n    padding-left: 3px;\n    padding-right: 3px;\n    text-align: center;\n    color: #fff;\n    font-size: 11px;\n    background: #FF4A7D;\n}\n.circle[_v-ac41ad0a]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-ac41ad0a] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n    border-radius: 4px;\n}\n.dvk1_mask[_v-ac41ad0a]{\n  height: 79px;\n  padding: 0 10px;\n}\n.dvk1_line[_v-ac41ad0a]{\n  height: 12px;\n  width: 1px;\n  background: #E1E1E1;\n  margin-left: 10px;\n}\n.dvk1_share>span[_v-ac41ad0a]{\n  float: left;\n}\n.dvk1_share_left[_v-ac41ad0a]{\n  margin-left: 10px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk1_container[_v-2b46bb74]{\n    height: 76px;\n    position: relative;\n    padding-bottom: 25px;\n}\n.dvk1_img[_v-2b46bb74]{\n    height: 76px;\n    width: 110px;\n    position: relative;\n    float:left;\n    overflow: hidden;\n    background: #fff;\n    margin-top:2px;\n}\n.dvk1_content[_v-2b46bb74]{\n    vertical-align: top;\n    margin-left: 120px;\n    height: 76px;\n}\n.dvk1_text[_v-2b46bb74]{\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    font-size: 14px;\n    color: #333333;\n    margin-bottom: 5px;\n    line-height: 20px;\n}\n.dvk1_name[_v-2b46bb74]{\n    font-size: 12px;\n    line-height: 16px;\n    color: #999;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk1_share[_v-2b46bb74]{\n    margin-top: 5px;\n    font-size: 12px;\n    line-height:16px;\n    color: #999999;\n    overflow:hidden;\n}\n.dvk1_border[_v-2b46bb74]{\n    border-left: 0.5px solid #999;\n    margin-left: 5px;\n    /*margin-right: 0.07rem;*/\n}\n.dvk1_imgNav[_v-2b46bb74]{\n    position: absolute;\n    top: 30px;\n    left: 30px;\n    width: 30px;\n    height: 30px;\n}\n.dvk1_share_left[_v-2b46bb74]{\n\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk1_money[_v-2b46bb74]{\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    height: 18px;\n    line-height: 20px;\n    padding-left: 3px;\n    padding-right: 3px;\n    text-align: center;\n    color: #fff;\n    font-size: 11px;\n    background: #FF4A7D;\n}\n.circle[_v-2b46bb74]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2b46bb74] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n    border-radius: 4px;\n}\n.dvk1_mask[_v-2b46bb74]{\n  height: 79px;\n  padding: 0 10px;\n}\n.dvk1_line[_v-2b46bb74]{\n  height: 12px;\n  width: 1px;\n  background: #E1E1E1;\n  margin-left: 10px;\n}\n.dvk1_share>span[_v-2b46bb74]{\n  float: left;\n}\n.dvk1_share_left[_v-2b46bb74]{\n  margin-left: 10px;\n}\n", ""]);
 
 	// exports
 
@@ -29058,7 +27031,7 @@
 /* 438 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-ac41ad0a=\"\">\n    <tt_com_0 :data=\"data\" _v-ac41ad0a=\"\"></tt_com_0>\n    <div class=\"dvk1_container\" :style=\"styleObject\" _v-ac41ad0a=\"\">\n      <div class=\"dvk1_mask\" _v-ac41ad0a=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-ac41ad0a=\"\">\n          <div class=\"dvk1_img\" _v-ac41ad0a=\"\">\n            <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-ac41ad0a=\"\">\n            <div class=\"dvk1_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-ac41ad0a=\"\"></div>\n          </div>\n          <div class=\"dvk1_content\" _v-ac41ad0a=\"\">\n            <div class=\"dvk1_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-ac41ad0a=\"\"></div>\n            <div class=\"dvk1_name\" _v-ac41ad0a=\"\">\n              <span v-text=\"data.body.dataList[0].teacherName\" _v-ac41ad0a=\"\"></span>\n            </div>\n            <div class=\"dvk1_share\" _v-ac41ad0a=\"\">\n              <span class=\"dvk1_share_right\" _v-ac41ad0a=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-ac41ad0a=\"\"></span></span>\n              <span class=\"dvk1_line\" _v-ac41ad0a=\"\"></span>\n              <span class=\"dvk1_share_left\" _v-ac41ad0a=\"\">\n                <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-ac41ad0a=\"\"></span>\n                <span v-if=\"livetext(data.body.dataList[0])\" _v-ac41ad0a=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-ac41ad0a=\"\"></span>\n              </span>\n            </div>\n          </div>\n        </a>\n      </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b46bb74=\"\">\n    <tt_com_0 :data=\"data\" _v-2b46bb74=\"\"></tt_com_0>\n    <div class=\"dvk1_container\" :style=\"styleObject\" _v-2b46bb74=\"\">\n      <div class=\"dvk1_mask\" _v-2b46bb74=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b46bb74=\"\">\n          <div class=\"dvk1_img\" _v-2b46bb74=\"\">\n            <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b46bb74=\"\">\n            <div class=\"dvk1_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b46bb74=\"\"></div>\n          </div>\n          <div class=\"dvk1_content\" _v-2b46bb74=\"\">\n            <div class=\"dvk1_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b46bb74=\"\"></div>\n            <div class=\"dvk1_name\" _v-2b46bb74=\"\">\n              <span v-text=\"data.body.dataList[0].teacherName\" _v-2b46bb74=\"\"></span>\n            </div>\n            <div class=\"dvk1_share\" _v-2b46bb74=\"\">\n              <span class=\"dvk1_share_right\" _v-2b46bb74=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b46bb74=\"\"></span></span>\n              <span class=\"dvk1_line\" _v-2b46bb74=\"\"></span>\n              <span class=\"dvk1_share_left\" _v-2b46bb74=\"\">\n                <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b46bb74=\"\"></span>\n                <span v-if=\"livetext(data.body.dataList[0])\" _v-2b46bb74=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b46bb74=\"\"></span>\n              </span>\n            </div>\n          </div>\n        </a>\n      </div>\n    </div>\n</div>\n";
 
 /***/ },
 /* 439 */
@@ -29088,7 +27061,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-ac257e08/dvk2.vue"
+	  var id = "_v-2b2a8c72/dvk2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -29112,8 +27085,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac257e08&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk2.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac257e08&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk2.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b2a8c72&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk2.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b2a8c72&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk2.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -29131,7 +27104,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk2_container[_v-ac257e08]{\n    height: 3.06rem;\n    width: 100%;\n    background: #fff;\n    padding-top: 0.1rem;\n}\n.dvk2_img[_v-ac257e08]{\n    width: 3.55rem;\n    height: 2.52rem;\n    margin-left: 0.1rem;\n    position: relative;\n}\n.dvk2_money[_v-ac257e08]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.dvk2_startTime[_v-ac257e08]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.2rem;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.35)),color-stop(100%,rgba(0,0,0,.7)),color-stop(100%,#fff));\n    bottom: 0;\n}\n.dvk2_text[_v-ac257e08]{\n    width: 3.55rem;\n    height: 0.4rem;\n    margin-left: 0.1rem;\n    margin-top: 0.05rem;\n}\n.dvk2_text_title[_v-ac257e08]{\n    width: 100%;\n    height: 0.17rem;\n    line-height: 0.17rem;\n    font-size: 0.12rem;\n    color: #333333;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk2_text_content[_v-ac257e08]{\n    width: 100%;\n    height: 0.17rem;\n    line-height: 0.17rem;\n    font-size: 0.11rem;\n    color: #999999;\n}\n.dvk2_text_name[_v-ac257e08]{\n    float: left;\n    width: 2.7rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk2_text_popular[_v-ac257e08]{\n    float: right;\n}\n.circle[_v-ac257e08]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-ac257e08] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk2_container[_v-2b2a8c72]{\n    height: 3.06rem;\n    width: 100%;\n    background: #fff;\n    padding-top: 0.1rem;\n}\n.dvk2_img[_v-2b2a8c72]{\n    width: 3.55rem;\n    height: 2.52rem;\n    margin-left: 0.1rem;\n    position: relative;\n}\n.dvk2_money[_v-2b2a8c72]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.dvk2_startTime[_v-2b2a8c72]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.2rem;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.35)),color-stop(100%,rgba(0,0,0,.7)),color-stop(100%,#fff));\n    bottom: 0;\n}\n.dvk2_text[_v-2b2a8c72]{\n    width: 3.55rem;\n    height: 0.4rem;\n    margin-left: 0.1rem;\n    margin-top: 0.05rem;\n}\n.dvk2_text_title[_v-2b2a8c72]{\n    width: 100%;\n    height: 0.17rem;\n    line-height: 0.17rem;\n    font-size: 0.12rem;\n    color: #333333;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk2_text_content[_v-2b2a8c72]{\n    width: 100%;\n    height: 0.17rem;\n    line-height: 0.17rem;\n    font-size: 0.11rem;\n    color: #999999;\n}\n.dvk2_text_name[_v-2b2a8c72]{\n    float: left;\n    width: 2.7rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk2_text_popular[_v-2b2a8c72]{\n    float: right;\n}\n.circle[_v-2b2a8c72]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2b2a8c72] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
 
 	// exports
 
@@ -29342,7 +27315,7 @@
 /* 443 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-ac257e08=\"\">\n    <tt_com_0 :data=\"data\" _v-ac257e08=\"\"></tt_com_0>\n    <div class=\"dvk2_container\" :style=\"styleObject\" _v-ac257e08=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-ac257e08=\"\">\n           <div class=\"dvk2_img\" _v-ac257e08=\"\">\n                <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-ac257e08=\"\">\n               <div class=\"dvk2_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-ac257e08=\"\"></div>\n               <div class=\"dvk2_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-ac257e08=\"\">\n                   <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-ac257e08=\"\"></span> \n                    <span v-if=\"livetext(data.body.dataList[0])\" _v-ac257e08=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                    <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-ac257e08=\"\"></span>\n               </div>\n           </div>\n           <div class=\"dvk2_text\" _v-ac257e08=\"\">\n               <div class=\"dvk2_text_title\" v-text=\"data.body.dataList[0].courseTitle\" _v-ac257e08=\"\"></div>\n               <div class=\"dvk2_text_content\" _v-ac257e08=\"\">\n                   <span class=\"dvk2_text_name\" v-text=\"data.body.dataList[0].teacherName\" _v-ac257e08=\"\"></span>\n                   <span class=\"dvk2_text_popular\" _v-ac257e08=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-ac257e08=\"\"></span></span>\n               </div>\n           </div>\n        </a>\n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b2a8c72=\"\">\n    <tt_com_0 :data=\"data\" _v-2b2a8c72=\"\"></tt_com_0>\n    <div class=\"dvk2_container\" :style=\"styleObject\" _v-2b2a8c72=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b2a8c72=\"\">\n           <div class=\"dvk2_img\" _v-2b2a8c72=\"\">\n                <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b2a8c72=\"\">\n               <div class=\"dvk2_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b2a8c72=\"\"></div>\n               <div class=\"dvk2_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-2b2a8c72=\"\">\n                   <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b2a8c72=\"\"></span> \n                    <span v-if=\"livetext(data.body.dataList[0])\" _v-2b2a8c72=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                    <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b2a8c72=\"\"></span>\n               </div>\n           </div>\n           <div class=\"dvk2_text\" _v-2b2a8c72=\"\">\n               <div class=\"dvk2_text_title\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b2a8c72=\"\"></div>\n               <div class=\"dvk2_text_content\" _v-2b2a8c72=\"\">\n                   <span class=\"dvk2_text_name\" v-text=\"data.body.dataList[0].teacherName\" _v-2b2a8c72=\"\"></span>\n                   <span class=\"dvk2_text_popular\" _v-2b2a8c72=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b2a8c72=\"\"></span></span>\n               </div>\n           </div>\n        </a>\n    </div>\n</div>\n";
 
 /***/ },
 /* 444 */
@@ -29372,7 +27345,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-ac094f06/dvk3.vue"
+	  var id = "_v-2b0e5d70/dvk3.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -29396,8 +27369,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac094f06&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk3.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac094f06&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk3.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b0e5d70&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk3.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b0e5d70&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk3.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -29415,7 +27388,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk3_container[_v-ac094f06]{\n    height:2.15rem;\n    width: 100%;\n    background: #fff;\n}\n.dvk3_content1[_v-ac094f06]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 1.95rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk3_content2[_v-ac094f06]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 1.95rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk3_img[_v-ac094f06]{\n    height: 1.2rem;\n    background: #fff;\n    position: relative;\n}\n.dvk3_text[_v-ac094f06]{\n    width: 1.52rem;\n    /*height: 0.31rem;*/\n    line-height: 0.15rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n}\n.dvk3_detail[_v-ac094f06]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.08rem;\n    width: 1.52rem;\n}\n.dvk3_name[_v-ac094f06]{\n    float: left;\n    width: 0.9rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk3_popular[_v-ac094f06]{\n    float: right;\n}\n.dvk3_money[_v-ac094f06]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.dvk3_startTime[_v-ac094f06]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.2rem;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.35)),color-stop(100%,rgba(0,0,0,.7)),color-stop(100%,#fff));\n    bottom: 0;\n}\n.dvk3_startTimeLine[_v-ac094f06]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.24rem;\n    background: url('//pic.davdian.com/free/2017/03/06/bg_line1.png');\n    background-size:100% 100%;\n    bottom: 0;\n}\n.dvk3_circle_green[_v-ac094f06]{\n    width: 0.05rem;\n    height: 0.05rem;\n    margin-bottom: 0.02rem;\n    margin-right: 0.04rem;\n    border-radius: 50%;\n    display: inline-block;\n    border:0.5px solid #979797;\n    background: #92FDE0;\n}\n.dvk3_name_titlepic[_v-ac094f06]{\n    width: 0.14rem;\n    margin-left: 0.03rem;\n    margin-bottom: 0.02rem;\n}\n.circle[_v-ac094f06]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-ac094f06] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk3_container[_v-2b0e5d70]{\n    height:2.15rem;\n    width: 100%;\n    background: #fff;\n}\n.dvk3_content1[_v-2b0e5d70]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 1.95rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk3_content2[_v-2b0e5d70]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 1.95rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk3_img[_v-2b0e5d70]{\n    height: 1.2rem;\n    background: #fff;\n    position: relative;\n}\n.dvk3_text[_v-2b0e5d70]{\n    width: 1.52rem;\n    /*height: 0.31rem;*/\n    line-height: 0.15rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n}\n.dvk3_detail[_v-2b0e5d70]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.08rem;\n    width: 1.52rem;\n}\n.dvk3_name[_v-2b0e5d70]{\n    float: left;\n    width: 0.9rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk3_popular[_v-2b0e5d70]{\n    float: right;\n}\n.dvk3_money[_v-2b0e5d70]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.dvk3_startTime[_v-2b0e5d70]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.2rem;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.35)),color-stop(100%,rgba(0,0,0,.7)),color-stop(100%,#fff));\n    bottom: 0;\n}\n.dvk3_startTimeLine[_v-2b0e5d70]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.24rem;\n    background: url('//pic.davdian.com/free/2017/03/06/bg_line1.png');\n    background-size:100% 100%;\n    bottom: 0;\n}\n.dvk3_circle_green[_v-2b0e5d70]{\n    width: 0.05rem;\n    height: 0.05rem;\n    margin-bottom: 0.02rem;\n    margin-right: 0.04rem;\n    border-radius: 50%;\n    display: inline-block;\n    border:0.5px solid #979797;\n    background: #92FDE0;\n}\n.dvk3_name_titlepic[_v-2b0e5d70]{\n    width: 0.14rem;\n    margin-left: 0.03rem;\n    margin-bottom: 0.02rem;\n}\n.circle[_v-2b0e5d70]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2b0e5d70] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
 
 	// exports
 
@@ -29683,7 +27656,7 @@
 /* 448 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-ac094f06=\"\">\n    <tt_com_0 :data=\"data\" _v-ac094f06=\"\"></tt_com_0>\n    <div class=\"dvk3_container\" :style=\"styleObject\" _v-ac094f06=\"\">\n           <div class=\"dvk3_content1\" _v-ac094f06=\"\">\n                <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-ac094f06=\"\">\n                   <div class=\"dvk3_img\" _v-ac094f06=\"\">\n                         <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-ac094f06=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-ac094f06=\"\"></div>\n                        <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-ac094f06=\"\">\n                            <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-ac094f06=\"\"></span> \n                            <span v-if=\"livetext(data.body.dataList[0])\" _v-ac094f06=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                            <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-ac094f06=\"\"></span>\n                        </div>\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-ac094f06=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-ac094f06=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[0].teacherName\" _v-ac094f06=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-ac094f06=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-ac094f06=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-ac094f06=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n           <div class=\"dvk3_content2\" _v-ac094f06=\"\">\n               <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-ac094f06=\"\">\n                   <div class=\"dvk3_img\" _v-ac094f06=\"\">\n                        <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].courseCover)\" _v-ac094f06=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[1].price &amp;&amp; data.body.dataList[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[1].price\" _v-ac094f06=\"\"></div>\n                        <!-- <div class='dvk3_startTime'> -->\n                            <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[1])\" _v-ac094f06=\"\">\n                                <span v-if=\"livenow(data.body.dataList[1])\" class=\"circle\" _v-ac094f06=\"\"></span> \n                                <span v-if=\"livetext(data.body.dataList[1])\" _v-ac094f06=\"\">{{ livetext(data.body.dataList[1]) }}</span>\n                                <span v-if=\"!livetext(data.body.dataList[1])\" v-text=\"data.body.dataList[1].startTimestamp\" _v-ac094f06=\"\"></span>\n                            </div>\n                        <!-- </div> -->\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[1].courseTitle\" _v-ac094f06=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-ac094f06=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[1].teacherName\" _v-ac094f06=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-ac094f06=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-ac094f06=\"\"><span v-text=\"data.body.dataList[1].readTimes\" _v-ac094f06=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n       \n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b0e5d70=\"\">\n    <tt_com_0 :data=\"data\" _v-2b0e5d70=\"\"></tt_com_0>\n    <div class=\"dvk3_container\" :style=\"styleObject\" _v-2b0e5d70=\"\">\n           <div class=\"dvk3_content1\" _v-2b0e5d70=\"\">\n                <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b0e5d70=\"\">\n                   <div class=\"dvk3_img\" _v-2b0e5d70=\"\">\n                         <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b0e5d70=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b0e5d70=\"\"></div>\n                        <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-2b0e5d70=\"\">\n                            <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b0e5d70=\"\"></span> \n                            <span v-if=\"livetext(data.body.dataList[0])\" _v-2b0e5d70=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                            <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b0e5d70=\"\"></span>\n                        </div>\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b0e5d70=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-2b0e5d70=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[0].teacherName\" _v-2b0e5d70=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-2b0e5d70=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-2b0e5d70=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b0e5d70=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n           <div class=\"dvk3_content2\" _v-2b0e5d70=\"\">\n               <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2b0e5d70=\"\">\n                   <div class=\"dvk3_img\" _v-2b0e5d70=\"\">\n                        <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].courseCover)\" _v-2b0e5d70=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[1].price &amp;&amp; data.body.dataList[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[1].price\" _v-2b0e5d70=\"\"></div>\n                        <!-- <div class='dvk3_startTime'> -->\n                            <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[1])\" _v-2b0e5d70=\"\">\n                                <span v-if=\"livenow(data.body.dataList[1])\" class=\"circle\" _v-2b0e5d70=\"\"></span> \n                                <span v-if=\"livetext(data.body.dataList[1])\" _v-2b0e5d70=\"\">{{ livetext(data.body.dataList[1]) }}</span>\n                                <span v-if=\"!livetext(data.body.dataList[1])\" v-text=\"data.body.dataList[1].startTimestamp\" _v-2b0e5d70=\"\"></span>\n                            </div>\n                        <!-- </div> -->\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[1].courseTitle\" _v-2b0e5d70=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-2b0e5d70=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[1].teacherName\" _v-2b0e5d70=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-2b0e5d70=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-2b0e5d70=\"\"><span v-text=\"data.body.dataList[1].readTimes\" _v-2b0e5d70=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n       \n    </div>\n</div>\n";
 
 /***/ },
 /* 449 */
@@ -29713,7 +27686,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-abed2004/dvk4.vue"
+	  var id = "_v-2af22e6e/dvk4.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -29737,8 +27710,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abed2004&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk4.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abed2004&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk4.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2af22e6e&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk4.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2af22e6e&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk4.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -29756,7 +27729,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk4_container[_v-abed2004]{\n    width: 100%;\n    height: 365px;\n    background: #fff;\n}\n.dvk4_title[_v-abed2004]{\n    width: 100%;\n    height: 43px;\n    border-bottom: 0.005rem solid #E1E1E1;\n    position: relative;\n}\n.dvk4_title_now[_v-abed2004]{\n    width: 1.86rem;\n    height: 0.3rem;\n    margin-top: 0.065rem;\n    line-height: 0.3rem;\n    text-align: center;\n    border-right: 0.005rem solid #E1E1E1;\n    display: block;\n    float: left;\n    position: relative;\n}\n.dvk4_title_bottom[_v-abed2004]{\n    position: absolute;\n    top: 41px;\n    width: 0.6rem;\n    left: 0.64rem;\n    border-bottom: 2px solid #FF4A7D;\n}\n.dvk4_title_bottom1[_v-abed2004]{\n    position: absolute;\n    top: 41px;\n    width: 0.6rem;\n    left: 2.5rem;\n    border-bottom: 2px solid #FF4A7D;\n}\n.dvk4_title_tomorrow[_v-abed2004]{\n    width: 1.87rem;\n    height: 0.3rem;\n    margin-top: 0.065rem;\n    line-height: 0.3rem;\n    text-align: center;\n    display: block;\n    float: left;\n    position: relative;\n}\n.active[_v-abed2004]{\n    color: #FF4A7D;\n}\n.dvk4_content[_v-abed2004]{\n    height: 3rem;\n    width: 3.55rem;\n    margin-left: 0.1rem;\n}\n.dvk4_detail[_v-abed2004]{\n    width: 100%;\n    height: 76px;\n    margin-top:25px;\n}\n.first[_v-abed2004]{\n  margin-top:21px;\n}\n.dvk4_detail_content[_v-abed2004]{\n    width: 100%;\n    height: 76px;\n}\n.dvk4_detail_content_img[_v-abed2004]{\n    width: 110px;\n    height: 76px;\n    float: left;\n    position: relative;\n}\n.dvk4_detail_content_text[_v-abed2004]{\n    height: 76px;\n    margin-left:120px;\n    position: relative;\n}\n.dvk4_detail_content_title[_v-abed2004]{\n    color: #333333;\n    font-size: 14px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    margin-bottom: 6px;\n    line-height:20px;\n}\n.dvk4_detail_content_name[_v-abed2004]{\n    color: #999999;\n    font-size: 12px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n    line-height:18px;\n}\n.dvk4_detail_content_time[_v-abed2004]{\n    font-size: 12px;\n    color: #999999;\n    margin-top: 2px;\n}\n.dvk4_detail_content_times[_v-abed2004]{\n    float: left;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n    height: 100%;\n    line-height: 14px;\n    color:#999999;\n    margin-left: 10px;\n}\n.dvk4_detail_content_line[_v-abed2004]{\n  width: 1px;\n  height: 12px;\n  float:left;\n  background: #E1E1E1;\n  margin-left:10px;\n\n}\n.dvk4_detail_content_popular[_v-abed2004]{\n    float: left;\n    height: 100%;\n    line-height: 14px;\n    color:#999999;\n}\n.dvk4_money[_v-abed2004]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.circle[_v-abed2004]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-abed2004] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n    border-radius: 0.04rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk4_container[_v-2af22e6e]{\n    width: 100%;\n    height: 365px;\n    background: #fff;\n}\n.dvk4_title[_v-2af22e6e]{\n    width: 100%;\n    height: 43px;\n    border-bottom: 0.005rem solid #E1E1E1;\n    position: relative;\n}\n.dvk4_title_now[_v-2af22e6e]{\n    width: 1.86rem;\n    height: 0.3rem;\n    margin-top: 0.065rem;\n    line-height: 0.3rem;\n    text-align: center;\n    border-right: 0.005rem solid #E1E1E1;\n    display: block;\n    float: left;\n    position: relative;\n}\n.dvk4_title_bottom[_v-2af22e6e]{\n    position: absolute;\n    top: 41px;\n    width: 0.6rem;\n    left: 0.64rem;\n    border-bottom: 2px solid #FF4A7D;\n}\n.dvk4_title_bottom1[_v-2af22e6e]{\n    position: absolute;\n    top: 41px;\n    width: 0.6rem;\n    left: 2.5rem;\n    border-bottom: 2px solid #FF4A7D;\n}\n.dvk4_title_tomorrow[_v-2af22e6e]{\n    width: 1.87rem;\n    height: 0.3rem;\n    margin-top: 0.065rem;\n    line-height: 0.3rem;\n    text-align: center;\n    display: block;\n    float: left;\n    position: relative;\n}\n.active[_v-2af22e6e]{\n    color: #FF4A7D;\n}\n.dvk4_content[_v-2af22e6e]{\n    height: 3rem;\n    width: 3.55rem;\n    margin-left: 0.1rem;\n}\n.dvk4_detail[_v-2af22e6e]{\n    width: 100%;\n    height: 76px;\n    margin-top:25px;\n}\n.first[_v-2af22e6e]{\n  margin-top:21px;\n}\n.dvk4_detail_content[_v-2af22e6e]{\n    width: 100%;\n    height: 76px;\n}\n.dvk4_detail_content_img[_v-2af22e6e]{\n    width: 110px;\n    height: 76px;\n    float: left;\n    position: relative;\n}\n.dvk4_detail_content_text[_v-2af22e6e]{\n    height: 76px;\n    margin-left:120px;\n    position: relative;\n}\n.dvk4_detail_content_title[_v-2af22e6e]{\n    color: #333333;\n    font-size: 14px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    margin-bottom: 6px;\n    line-height:20px;\n}\n.dvk4_detail_content_name[_v-2af22e6e]{\n    color: #999999;\n    font-size: 12px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n    line-height:18px;\n}\n.dvk4_detail_content_time[_v-2af22e6e]{\n    font-size: 12px;\n    color: #999999;\n    margin-top: 2px;\n}\n.dvk4_detail_content_times[_v-2af22e6e]{\n    float: left;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n    height: 100%;\n    line-height: 14px;\n    color:#999999;\n    margin-left: 10px;\n}\n.dvk4_detail_content_line[_v-2af22e6e]{\n  width: 1px;\n  height: 12px;\n  float:left;\n  background: #E1E1E1;\n  margin-left:10px;\n\n}\n.dvk4_detail_content_popular[_v-2af22e6e]{\n    float: left;\n    height: 100%;\n    line-height: 14px;\n    color:#999999;\n}\n.dvk4_money[_v-2af22e6e]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.circle[_v-2af22e6e]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2af22e6e] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n    border-radius: 0.04rem;\n}\n", ""]);
 
 	// exports
 
@@ -30195,7 +28168,7 @@
 /* 453 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-abed2004=\"\">\n  <tt_com_0 :data=\"data\" _v-abed2004=\"\"></tt_com_0>\n  <div class=\"dvk4_container\" :style=\"styleObject\" _v-abed2004=\"\">\n     <div class=\"dvk4_title\" v-if=\"flag\" _v-abed2004=\"\">\n         <span class=\"dvk4_title_now active\" v-text=\"data.body.leftTitle\" _v-abed2004=\"\"></span>\n         <span class=\"dvk4_title_bottom\" _v-abed2004=\"\"></span>\n         <span class=\"dvk4_title_tomorrow\" @click=\"tomorrow\" v-text=\"data.body.rightTitle\" _v-abed2004=\"\"></span>\n     </div>\n     <div class=\"dvk4_title\" v-if=\"!flag\" _v-abed2004=\"\">\n         <span class=\"dvk4_title_now\" @click=\"now\" v-text=\"data.body.leftTitle\" _v-abed2004=\"\"></span>\n         <span class=\"dvk4_title_bottom1\" _v-abed2004=\"\"></span>\n         <span class=\"dvk4_title_tomorrow active\" v-text=\"data.body.rightTitle\" _v-abed2004=\"\"></span>\n     </div>\n     <!--  -->\n     <div class=\"dvk4_content\" v-if=\"flag\" _v-abed2004=\"\">\n\n         <div class=\"dvk4_detail first\" _v-abed2004=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[0].command.content\" :position=\"data.body.leftContent[0].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                  <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[0].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[0].price &amp;&amp; data.body.leftContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[0].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[0].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[0].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n\n                         <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.leftContent[0].readTimes\" _v-abed2004=\"\"></span></span>\n                         <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[0])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[0])\" v-text=\"livetext(data.body.leftContent[0])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[0])\" v-text=\"data.body.leftContent[0].startTimestamp\" _v-abed2004=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-abed2004=\"\">\n              <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[1].command.content\" :position=\"data.body.leftContent[1].position\" _v-abed2004=\"\">\n                <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                   <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                      <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[1].courseCover)\" _v-abed2004=\"\">\n                      <div class=\"dvk4_money\" v-if=\"data.body.leftContent[1].price &amp;&amp; data.body.leftContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[1].price\" _v-abed2004=\"\"></div>\n                   </div>\n                   <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                       <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[1].courseTitle\" _v-abed2004=\"\"></div>\n                       <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[1].teacherName\" _v-abed2004=\"\"></div>\n                       <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                         <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\">\n                          <span v-text=\"data.body.leftContent[1].readTimes\" _v-abed2004=\"\"></span>\n                         </span>\n                         <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[1])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[1])\" v-text=\"livetext(data.body.leftContent[1])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[1])\" v-text=\"data.body.leftContent[1].startTimestamp\" _v-abed2004=\"\"></span>\n                         </span>\n                       </div>\n                   </div>\n                </div>\n              </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-abed2004=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[2].command.content\" :position=\"data.body.leftContent[2].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[2].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[2].price &amp;&amp; data.body.leftContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[2].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[2].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[2].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                          <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.leftContent[2].readTimes\" _v-abed2004=\"\"></span></span>\n                          <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[2])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[2])\" v-text=\"livetext(data.body.leftContent[2])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[2])\" v-text=\"data.body.leftContent[2].startTimestamp\" _v-abed2004=\"\"></span>\n                          </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n     <div class=\"dvk4_content\" v-if=\"!flag\" _v-abed2004=\"\">\n         <div class=\"dvk4_detail first\" _v-abed2004=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[0].command.content\" :position=\"data.body.rightContent[0].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[0].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[0].price &amp;&amp; data.body.rightContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[0].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[0].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[0].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.rightContent[0].readTimes\" _v-abed2004=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[0])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[0])\" v-text=\"livetext(data.body.rightContent[0])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[0])\" v-text=\"data.body.rightContent[0].startTimestamp\" _v-abed2004=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-abed2004=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[1].command.content\" :position=\"data.body.rightContent[1].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[1].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[1].price &amp;&amp; data.body.rightContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[1].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[1].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[1].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.rightContent[1].readTimes\" _v-abed2004=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[1])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[1])\" v-text=\"livetext(data.body.rightContent[1])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[1])\" v-text=\"data.body.rightContent[1].startTimestamp\" _v-abed2004=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-abed2004=\"\">\n          <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[2].command.content\" :position=\"data.body.rightContent[2].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[2].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[2].price &amp;&amp; data.body.rightContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[2].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[2].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[2].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.rightContent[2].readTimes\" _v-abed2004=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[2])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[2])\" v-text=\"livetext(data.body.rightContent[2])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[2])\" v-text=\"data.body.rightContent[2].startTimestamp\" _v-abed2004=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2af22e6e=\"\">\n  <tt_com_0 :data=\"data\" _v-2af22e6e=\"\"></tt_com_0>\n  <div class=\"dvk4_container\" :style=\"styleObject\" _v-2af22e6e=\"\">\n     <div class=\"dvk4_title\" v-if=\"flag\" _v-2af22e6e=\"\">\n         <span class=\"dvk4_title_now active\" v-text=\"data.body.leftTitle\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_bottom\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_tomorrow\" @click=\"tomorrow\" v-text=\"data.body.rightTitle\" _v-2af22e6e=\"\"></span>\n     </div>\n     <div class=\"dvk4_title\" v-if=\"!flag\" _v-2af22e6e=\"\">\n         <span class=\"dvk4_title_now\" @click=\"now\" v-text=\"data.body.leftTitle\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_bottom1\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_tomorrow active\" v-text=\"data.body.rightTitle\" _v-2af22e6e=\"\"></span>\n     </div>\n     <!--  -->\n     <div class=\"dvk4_content\" v-if=\"flag\" _v-2af22e6e=\"\">\n\n         <div class=\"dvk4_detail first\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[0].command.content\" :position=\"data.body.leftContent[0].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                  <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[0].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[0].price &amp;&amp; data.body.leftContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[0].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[0].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[0].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n\n                         <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.leftContent[0].readTimes\" _v-2af22e6e=\"\"></span></span>\n                         <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[0])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[0])\" v-text=\"livetext(data.body.leftContent[0])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[0])\" v-text=\"data.body.leftContent[0].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n              <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[1].command.content\" :position=\"data.body.leftContent[1].position\" _v-2af22e6e=\"\">\n                <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                      <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[1].courseCover)\" _v-2af22e6e=\"\">\n                      <div class=\"dvk4_money\" v-if=\"data.body.leftContent[1].price &amp;&amp; data.body.leftContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[1].price\" _v-2af22e6e=\"\"></div>\n                   </div>\n                   <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                       <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[1].courseTitle\" _v-2af22e6e=\"\"></div>\n                       <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[1].teacherName\" _v-2af22e6e=\"\"></div>\n                       <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                         <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\">\n                          <span v-text=\"data.body.leftContent[1].readTimes\" _v-2af22e6e=\"\"></span>\n                         </span>\n                         <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[1])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[1])\" v-text=\"livetext(data.body.leftContent[1])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[1])\" v-text=\"data.body.leftContent[1].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                       </div>\n                   </div>\n                </div>\n              </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[2].command.content\" :position=\"data.body.leftContent[2].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[2].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[2].price &amp;&amp; data.body.leftContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[2].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[2].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[2].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                          <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.leftContent[2].readTimes\" _v-2af22e6e=\"\"></span></span>\n                          <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[2])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[2])\" v-text=\"livetext(data.body.leftContent[2])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[2])\" v-text=\"data.body.leftContent[2].startTimestamp\" _v-2af22e6e=\"\"></span>\n                          </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n     <div class=\"dvk4_content\" v-if=\"!flag\" _v-2af22e6e=\"\">\n         <div class=\"dvk4_detail first\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[0].command.content\" :position=\"data.body.rightContent[0].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[0].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[0].price &amp;&amp; data.body.rightContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[0].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[0].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[0].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[0].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[0])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[0])\" v-text=\"livetext(data.body.rightContent[0])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[0])\" v-text=\"data.body.rightContent[0].startTimestamp\" _v-2af22e6e=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[1].command.content\" :position=\"data.body.rightContent[1].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[1].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[1].price &amp;&amp; data.body.rightContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[1].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[1].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[1].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[1].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[1])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[1])\" v-text=\"livetext(data.body.rightContent[1])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[1])\" v-text=\"data.body.rightContent[1].startTimestamp\" _v-2af22e6e=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n          <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[2].command.content\" :position=\"data.body.rightContent[2].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[2].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[2].price &amp;&amp; data.body.rightContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[2].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[2].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[2].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[2].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[2])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[2])\" v-text=\"livetext(data.body.rightContent[2])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[2])\" v-text=\"data.body.rightContent[2].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 454 */
@@ -30225,7 +28198,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-abd0f102/dvk5.vue"
+	  var id = "_v-2ad5ff6c/dvk5.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -30249,8 +28222,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abd0f102&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk5.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abd0f102&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk5.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ad5ff6c&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk5.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ad5ff6c&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk5.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -30268,7 +28241,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk5_container[_v-abd0f102]{\n    width: 100%;\n    height: 2.63rem;\n    background: #fff;\n}\n.dvk5_content1[_v-abd0f102]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk5_content2[_v-abd0f102]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk5_img[_v-abd0f102]{\n    height: 1.72rem;\n    position: relative;\n}\n.dvk5_text[_v-abd0f102]{\n    width: 1.52rem;\n    /*height: 0.31rem;*/\n    line-height: 0.17rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    text-indent: 0.2rem;\n}\n.dvk5_detail[_v-abd0f102]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.02rem;\n    width: 1.52rem;\n}\n.dvk5_name[_v-abd0f102]{\n    float: left;\n}\n.dvk5_name_spanContainer[_v-abd0f102]{\n    max-width: 0.7rem;\n    display: inline-block;\n    vertical-align: top;\n}\n.dvk5_name_span[_v-abd0f102]{\n    max-width: 0.7rem;\n    vertical-align: top;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk5_popular[_v-abd0f102]{\n    float: right;\n}\n.dvk5_money[_v-abd0f102]{\n    position: absolute;\n    top: 0.1rem;\n    left: 0;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-indent: 0.03rem;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n    display: inline-block;\n    z-index: 1;\n}\n.circle[_v-abd0f102]{\n    width: 0.18rem;\n    height: 0.18rem;\n    top: 0.1rem;\n    left: 0.36rem;\n    position: absolute;\n    color: #fff;\n    border-radius: 50%;\n    background: #FF4A7D;\n    display: inline-block;\n}\n.dvk5_startTime[_v-abd0f102]{\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    line-height: 0.4rem;\n    color: #fff;\n    text-indent: 0.2rem;\n    bottom: 0;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.2)),color-stop(100%,#fff));\n}\n.dvk5_img_statue[_v-abd0f102]{\n    position: absolute;\n    top: 0.1rem;\n    right: 0.1rem;\n    height: 0.17rem;\n}\n.dvk5_img_location[_v-abd0f102]{\n    width: 0.11rem;\n    margin-bottom: 0.02rem;\n}\n.dvk5_img_official[_v-abd0f102]{\n    width: 0.11rem;\n}\n.newImage[_v-abd0f102] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n.video[_v-abd0f102]{\n    position: absolute;\n    width: 0.12rem;\n    top: 1.85rem;\n    left: 0.12rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk5_container[_v-2ad5ff6c]{\n    width: 100%;\n    height: 2.63rem;\n    background: #fff;\n}\n.dvk5_content1[_v-2ad5ff6c]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk5_content2[_v-2ad5ff6c]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk5_img[_v-2ad5ff6c]{\n    height: 1.72rem;\n    position: relative;\n}\n.dvk5_text[_v-2ad5ff6c]{\n    width: 1.52rem;\n    /*height: 0.31rem;*/\n    line-height: 0.17rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    text-indent: 0.2rem;\n}\n.dvk5_detail[_v-2ad5ff6c]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.02rem;\n    width: 1.52rem;\n}\n.dvk5_name[_v-2ad5ff6c]{\n    float: left;\n}\n.dvk5_name_spanContainer[_v-2ad5ff6c]{\n    max-width: 0.7rem;\n    display: inline-block;\n    vertical-align: top;\n}\n.dvk5_name_span[_v-2ad5ff6c]{\n    max-width: 0.7rem;\n    vertical-align: top;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk5_popular[_v-2ad5ff6c]{\n    float: right;\n}\n.dvk5_money[_v-2ad5ff6c]{\n    position: absolute;\n    top: 0.1rem;\n    left: 0;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-indent: 0.03rem;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n    display: inline-block;\n    z-index: 1;\n}\n.circle[_v-2ad5ff6c]{\n    width: 0.18rem;\n    height: 0.18rem;\n    top: 0.1rem;\n    left: 0.36rem;\n    position: absolute;\n    color: #fff;\n    border-radius: 50%;\n    background: #FF4A7D;\n    display: inline-block;\n}\n.dvk5_startTime[_v-2ad5ff6c]{\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    line-height: 0.4rem;\n    color: #fff;\n    text-indent: 0.2rem;\n    bottom: 0;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.2)),color-stop(100%,#fff));\n}\n.dvk5_img_statue[_v-2ad5ff6c]{\n    position: absolute;\n    top: 0.1rem;\n    right: 0.1rem;\n    height: 0.17rem;\n}\n.dvk5_img_location[_v-2ad5ff6c]{\n    width: 0.11rem;\n    margin-bottom: 0.02rem;\n}\n.dvk5_img_official[_v-2ad5ff6c]{\n    width: 0.11rem;\n}\n.newImage[_v-2ad5ff6c] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n.video[_v-2ad5ff6c]{\n    position: absolute;\n    width: 0.12rem;\n    top: 1.85rem;\n    left: 0.12rem;\n}\n", ""]);
 
 	// exports
 
@@ -30517,7 +28490,7 @@
 /* 458 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-abd0f102=\"\">\n    <tt_com_0 :data=\"data\" _v-abd0f102=\"\"></tt_com_0>\n    <div class=\"dvk5_container\" :style=\"styleObject\" _v-abd0f102=\"\">\n       <div class=\"dvk5_content1\" _v-abd0f102=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-abd0f102=\"\">\n               <div class=\"dvk5_img\" _v-abd0f102=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-abd0f102=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-abd0f102=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[0].category==2\" _v-abd0f102=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[0].category==2\" _v-abd0f102=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-abd0f102=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-abd0f102=\"\"> \n                        <span v-if=\"data.body.dataList[0].address\" v-text=\"data.body.dataList[0].address\" _v-abd0f102=\"\"></span>\n                        <span v-else=\"data.body.dataList[0].address\" _v-abd0f102=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==1\" _v-abd0f102=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==2 || data.body.dataList[0].status==3\" _v-abd0f102=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[0].title\" _v-abd0f102=\"\"></div>\n               <div class=\"dvk5_detail\" _v-abd0f102=\"\">\n                    <span class=\"dvk5_name\" _v-abd0f102=\"\"> <span class=\"dvk5_name_spanContainer\" _v-abd0f102=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[0].teacherName\" _v-abd0f102=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[0].verify==1\" _v-abd0f102=\"\"> </span>\n                    <span class=\"dvk5_popular\" _v-abd0f102=\"\"><span v-text=\"data.body.dataList[0].pv\" _v-abd0f102=\"\"></span></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk5_content2\" _v-abd0f102=\"\">\n           <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-abd0f102=\"\">\n               <div class=\"dvk5_img\" _v-abd0f102=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-abd0f102=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-abd0f102=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[1].category==2\" _v-abd0f102=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[1].category==2\" _v-abd0f102=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-abd0f102=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-abd0f102=\"\"> \n                        <span v-if=\"data.body.dataList[1].address\" v-text=\"data.body.dataList[1].address\" _v-abd0f102=\"\"></span>\n                        <span v-else=\"data.body.dataList[1].address\" _v-abd0f102=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==1\" _v-abd0f102=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==2 || data.body.dataList[1].status==3\" _v-abd0f102=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[1].title\" _v-abd0f102=\"\"></div>\n               <div class=\"dvk5_detail\" _v-abd0f102=\"\">\n                    <span class=\"dvk5_name\" _v-abd0f102=\"\"> <span class=\"dvk5_name_spanContainer\" _v-abd0f102=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[1].teacherName\" _v-abd0f102=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[1].verify==1\" _v-abd0f102=\"\"></span>\n                    <span class=\"dvk5_popular\" _v-abd0f102=\"\"><span v-text=\"data.body.dataList[1].pv\" _v-abd0f102=\"\"></span></span>\n                </div>\n           </a>\n       </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2ad5ff6c=\"\">\n    <tt_com_0 :data=\"data\" _v-2ad5ff6c=\"\"></tt_com_0>\n    <div class=\"dvk5_container\" :style=\"styleObject\" _v-2ad5ff6c=\"\">\n       <div class=\"dvk5_content1\" _v-2ad5ff6c=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2ad5ff6c=\"\">\n               <div class=\"dvk5_img\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-2ad5ff6c=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-2ad5ff6c=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[0].category==2\" _v-2ad5ff6c=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[0].category==2\" _v-2ad5ff6c=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-2ad5ff6c=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-2ad5ff6c=\"\"> \n                        <span v-if=\"data.body.dataList[0].address\" v-text=\"data.body.dataList[0].address\" _v-2ad5ff6c=\"\"></span>\n                        <span v-else=\"data.body.dataList[0].address\" _v-2ad5ff6c=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==1\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==2 || data.body.dataList[0].status==3\" _v-2ad5ff6c=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[0].title\" _v-2ad5ff6c=\"\"></div>\n               <div class=\"dvk5_detail\" _v-2ad5ff6c=\"\">\n                    <span class=\"dvk5_name\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_spanContainer\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[0].teacherName\" _v-2ad5ff6c=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[0].verify==1\" _v-2ad5ff6c=\"\"> </span>\n                    <span class=\"dvk5_popular\" _v-2ad5ff6c=\"\"><span v-text=\"data.body.dataList[0].pv\" _v-2ad5ff6c=\"\"></span></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk5_content2\" _v-2ad5ff6c=\"\">\n           <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2ad5ff6c=\"\">\n               <div class=\"dvk5_img\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-2ad5ff6c=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-2ad5ff6c=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[1].category==2\" _v-2ad5ff6c=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[1].category==2\" _v-2ad5ff6c=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-2ad5ff6c=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-2ad5ff6c=\"\"> \n                        <span v-if=\"data.body.dataList[1].address\" v-text=\"data.body.dataList[1].address\" _v-2ad5ff6c=\"\"></span>\n                        <span v-else=\"data.body.dataList[1].address\" _v-2ad5ff6c=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==1\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==2 || data.body.dataList[1].status==3\" _v-2ad5ff6c=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[1].title\" _v-2ad5ff6c=\"\"></div>\n               <div class=\"dvk5_detail\" _v-2ad5ff6c=\"\">\n                    <span class=\"dvk5_name\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_spanContainer\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[1].teacherName\" _v-2ad5ff6c=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[1].verify==1\" _v-2ad5ff6c=\"\"></span>\n                    <span class=\"dvk5_popular\" _v-2ad5ff6c=\"\"><span v-text=\"data.body.dataList[1].pv\" _v-2ad5ff6c=\"\"></span></span>\n                </div>\n           </a>\n       </div>\n    </div>\n</div>\n";
 
 /***/ },
 /* 459 */
@@ -30547,7 +28520,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-abb4c200/dvk6.vue"
+	  var id = "_v-2ab9d06a/dvk6.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -30571,8 +28544,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abb4c200&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk6.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abb4c200&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk6.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ab9d06a&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk6.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ab9d06a&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk6.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -30590,7 +28563,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk6_container[_v-abb4c200]{\n    width: 100%;\n    height: 2.63rem;\n    background: #fff;\n}\n.dvk6_content1[_v-abb4c200]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk6_content2[_v-abb4c200]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk6_img[_v-abb4c200]{\n    height: 1.72rem;\n    position: relative;\n}\n.dvk6_text[_v-abb4c200]{\n    width: 1.52rem;\n    /*height: 0.16rem;*/\n    line-height: 0.16rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    margin-bottom: 0.05rem;\n}\n.dvk6_detail[_v-abb4c200]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.02rem;\n    width: 1.52rem;\n}\n.dvk6_name[_v-abb4c200]{\n    float: left;\n    width: 0.9rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n}\n.dvk6_popular[_v-abb4c200]{\n    float: right;\n}\n.dvk6_startTime[_v-abb4c200]{\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    line-height: 0.4rem;\n    color: #fff;\n    text-indent: 0.2rem;\n    bottom: 0;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.2)),color-stop(100%,#fff));\n}\n.dvk6_img_title[_v-abb4c200]{\n    width: 0.16rem;\n    margin-bottom: 0.02rem;\n    margin-right: 0.02rem;\n}\n.newImage[_v-abb4c200] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk6_container[_v-2ab9d06a]{\n    width: 100%;\n    height: 2.63rem;\n    background: #fff;\n}\n.dvk6_content1[_v-2ab9d06a]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk6_content2[_v-2ab9d06a]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk6_img[_v-2ab9d06a]{\n    height: 1.72rem;\n    position: relative;\n}\n.dvk6_text[_v-2ab9d06a]{\n    width: 1.52rem;\n    /*height: 0.16rem;*/\n    line-height: 0.16rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    margin-bottom: 0.05rem;\n}\n.dvk6_detail[_v-2ab9d06a]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.02rem;\n    width: 1.52rem;\n}\n.dvk6_name[_v-2ab9d06a]{\n    float: left;\n    width: 0.9rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n}\n.dvk6_popular[_v-2ab9d06a]{\n    float: right;\n}\n.dvk6_startTime[_v-2ab9d06a]{\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    line-height: 0.4rem;\n    color: #fff;\n    text-indent: 0.2rem;\n    bottom: 0;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.2)),color-stop(100%,#fff));\n}\n.dvk6_img_title[_v-2ab9d06a]{\n    width: 0.16rem;\n    margin-bottom: 0.02rem;\n    margin-right: 0.02rem;\n}\n.newImage[_v-2ab9d06a] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
 
 	// exports
 
@@ -30773,7 +28746,7 @@
 /* 463 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-abb4c200=\"\">\n    <tt_com_0 :data=\"data\" _v-abb4c200=\"\"></tt_com_0>\n    <div class=\"dvk6_container\" :style=\"styleObject\" _v-abb4c200=\"\">\n       <div class=\"dvk6_content1\" _v-abb4c200=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-abb4c200=\"\">\n               <div class=\"dvk6_img\" _v-abb4c200=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-abb4c200=\"\">\n                    <div class=\"dvk6_startTime\" _v-abb4c200=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-abb4c200=\"\"><span v-text=\"data.body.dataList[0].time\" _v-abb4c200=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[0].title\" _v-abb4c200=\"\"></div>\n               <div class=\"dvk6_detail\" _v-abb4c200=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[0].pv\" _v-abb4c200=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[0].type\" _v-abb4c200=\"\"></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk6_content2\" _v-abb4c200=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-abb4c200=\"\">\n               <div class=\"dvk6_img\" _v-abb4c200=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-abb4c200=\"\">\n                    <div class=\"dvk6_startTime\" _v-abb4c200=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-abb4c200=\"\"><span v-text=\"data.body.dataList[1].time\" _v-abb4c200=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[1].title\" _v-abb4c200=\"\"></div>\n               <div class=\"dvk6_detail\" _v-abb4c200=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[1].pv\" _v-abb4c200=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[1].type\" _v-abb4c200=\"\">\n                </span></div>\n            </a>\n       </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2ab9d06a=\"\">\n    <tt_com_0 :data=\"data\" _v-2ab9d06a=\"\"></tt_com_0>\n    <div class=\"dvk6_container\" :style=\"styleObject\" _v-2ab9d06a=\"\">\n       <div class=\"dvk6_content1\" _v-2ab9d06a=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2ab9d06a=\"\">\n               <div class=\"dvk6_img\" _v-2ab9d06a=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-2ab9d06a=\"\">\n                    <div class=\"dvk6_startTime\" _v-2ab9d06a=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-2ab9d06a=\"\"><span v-text=\"data.body.dataList[0].time\" _v-2ab9d06a=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[0].title\" _v-2ab9d06a=\"\"></div>\n               <div class=\"dvk6_detail\" _v-2ab9d06a=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[0].pv\" _v-2ab9d06a=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[0].type\" _v-2ab9d06a=\"\"></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk6_content2\" _v-2ab9d06a=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2ab9d06a=\"\">\n               <div class=\"dvk6_img\" _v-2ab9d06a=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-2ab9d06a=\"\">\n                    <div class=\"dvk6_startTime\" _v-2ab9d06a=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-2ab9d06a=\"\"><span v-text=\"data.body.dataList[1].time\" _v-2ab9d06a=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[1].title\" _v-2ab9d06a=\"\"></div>\n               <div class=\"dvk6_detail\" _v-2ab9d06a=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[1].pv\" _v-2ab9d06a=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[1].type\" _v-2ab9d06a=\"\">\n                </span></div>\n            </a>\n       </div>\n    </div>\n</div>\n";
 
 /***/ },
 /* 464 */
@@ -30803,7 +28776,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1fc2f7e0/bd_goods_3.vue"
+	  var id = "_v-059a0eca/bd_goods_3.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -30827,8 +28800,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1fc2f7e0&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_3.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1fc2f7e0&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_3.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-059a0eca&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_3.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-059a0eca&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_3.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -30846,7 +28819,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*团购样式*/\n.tuan_list[_v-1fc2f7e0] {\n    display: block;\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan_list a[_v-1fc2f7e0] {\n    border-bottom: 1px solid #f0f0f0;\n    display: block;\n    position: relative;\n}\n\n.tuan_list a[_v-1fc2f7e0]:last-child {\n    border-bottom: none;\n}\n\n.tuan_img_container img[_v-1fc2f7e0] {\n    width: 100%;\n    display: block;\n    height: 43.75vw;\n    max-height: 280px;\n}\n\n.tuan_info_container[_v-1fc2f7e0] {\n    position: absolute;\n    width: 1.62rem;\n    top: 0;\n    right: 10px;\n    height: 100%;\n}\n\n.tuan_list a .time[_v-1fc2f7e0] {\n    background-color: rgba(0, 0, 0, .3);\n    line-height: normal;\n    display: block;\n    border-radius: .75rem;\n    position: absolute;\n    bottom: .14rem;\n    left: 0;\n    font-size: .12rem;\n    padding: 0.01rem 0.05rem;\n    color: #fff;\n}\n\n.tuan_list[_v-1fc2f7e0]:hover, .tuan_list[_v-1fc2f7e0]:focus {\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan_item[_v-1fc2f7e0]:hover, .tuan_item[_v-1fc2f7e0]:focus {\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan-other-info[_v-1fc2f7e0] {\n    margin-top: 0.15rem;\n}\n\n.tuan_item_title[_v-1fc2f7e0] {\n    text-overflow: ellipsis;\n    white-space: pre-line;\n    overflow: hidden;\n    height: 0.62rem;\n    line-height: 0.21rem;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 3;\n    display: -webkit-box;\n    overflow: hidden;\n    font-size: 0.14rem;\n    color: #333;\n}\n\n.tuan_item_price[_v-1fc2f7e0] {\n    font-size: 0.11rem;\n    color: #333;\n    position: absolute;\n    bottom: 0.39rem;\n}\n\n.tuan_item_price .current_price[_v-1fc2f7e0] {\n    font-size: 0.24rem;\n    padding-right: 6px;\n}\n\n.tuan_item_price .market_price[_v-1fc2f7e0] {\n    text-decoration: line-through;\n    color: #999;\n}\n\n.tuan_img_container img[_v-1fc2f7e0] {\n    width: 100%;\n}\n\n.tuan_item_icon[_v-1fc2f7e0] {\n    width: 0.3rem;\n    height: 0.31rem;\n    background: url(//pic.davdian.com/free/tuanlist_icon_3x_0804.png) no-repeat;\n    background-size: 0.3rem;\n    display: inline-block;\n    position: absolute;\n    bottom: 0.11rem;\n    right: 2px;\n}\n.time1[_v-1fc2f7e0]{\n    background-color: rgba(0, 0, 0, .3);\n    line-height: normal;\n    display: block;\n    border-radius: .75rem;\n    position: absolute;\n    bottom: .14rem;\n    left: 0;\n    font-size: .12rem;\n    padding: 0.01rem 0.05rem;\n    color: #fff;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*团购样式*/\n.tuan_list[_v-059a0eca] {\n    display: block;\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan_list a[_v-059a0eca] {\n    border-bottom: 1px solid #f0f0f0;\n    display: block;\n    position: relative;\n}\n\n.tuan_list a[_v-059a0eca]:last-child {\n    border-bottom: none;\n}\n\n.tuan_img_container img[_v-059a0eca] {\n    width: 100%;\n    display: block;\n    height: 43.75vw;\n    max-height: 280px;\n}\n\n.tuan_info_container[_v-059a0eca] {\n    position: absolute;\n    width: 1.62rem;\n    top: 0;\n    right: 10px;\n    height: 100%;\n}\n\n.tuan_list a .time[_v-059a0eca] {\n    background-color: rgba(0, 0, 0, .3);\n    line-height: normal;\n    display: block;\n    border-radius: .75rem;\n    position: absolute;\n    bottom: .14rem;\n    left: 0;\n    font-size: .12rem;\n    padding: 0.01rem 0.05rem;\n    color: #fff;\n}\n\n.tuan_list[_v-059a0eca]:hover, .tuan_list[_v-059a0eca]:focus {\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan_item[_v-059a0eca]:hover, .tuan_item[_v-059a0eca]:focus {\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan-other-info[_v-059a0eca] {\n    margin-top: 0.15rem;\n}\n\n.tuan_item_title[_v-059a0eca] {\n    text-overflow: ellipsis;\n    white-space: pre-line;\n    overflow: hidden;\n    height: 0.62rem;\n    line-height: 0.21rem;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 3;\n    display: -webkit-box;\n    overflow: hidden;\n    font-size: 0.14rem;\n    color: #333;\n}\n\n.tuan_item_price[_v-059a0eca] {\n    font-size: 0.11rem;\n    color: #333;\n    position: absolute;\n    bottom: 0.39rem;\n}\n\n.tuan_item_price .current_price[_v-059a0eca] {\n    font-size: 0.24rem;\n    padding-right: 6px;\n}\n\n.tuan_item_price .market_price[_v-059a0eca] {\n    text-decoration: line-through;\n    color: #999;\n}\n\n.tuan_img_container img[_v-059a0eca] {\n    width: 100%;\n}\n\n.tuan_item_icon[_v-059a0eca] {\n    width: 0.3rem;\n    height: 0.31rem;\n    background: url(//pic.davdian.com/free/tuanlist_icon_3x_0804.png) no-repeat;\n    background-size: 0.3rem;\n    display: inline-block;\n    position: absolute;\n    bottom: 0.11rem;\n    right: 2px;\n}\n.time1[_v-059a0eca]{\n    background-color: rgba(0, 0, 0, .3);\n    line-height: normal;\n    display: block;\n    border-radius: .75rem;\n    position: absolute;\n    bottom: .14rem;\n    left: 0;\n    font-size: .12rem;\n    padding: 0.01rem 0.05rem;\n    color: #fff;\n}\n", ""]);
 
 	// exports
 
@@ -31079,7 +29052,7 @@
 /* 468 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-1fc2f7e0=\"\">\n    <tt_com_0 :data=\"data\" _v-1fc2f7e0=\"\"></tt_com_0>\n    <div class=\"tuan_list\" _v-1fc2f7e0=\"\">\n        <a :href=\"data.body.dataList[0].command.content\" :data-remain-second2=\"remainsecond\" data-dav-tj=\"goods_group|good|good|1|good@goods_group\" _v-1fc2f7e0=\"\">\n            <div class=\"tuan_img_container\" _v-1fc2f7e0=\"\">\n                <img v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" style=\"display: block;\" _v-1fc2f7e0=\"\">\n            </div>\n            <div class=\"tuan_info_container\" _v-1fc2f7e0=\"\">\n                <div class=\"time1\" v-if=\"remainsecond > 0\" _v-1fc2f7e0=\"\">{{remainsecond | timeday}} </div>\n                <div class=\"time\" v-if=\"remainsecond < 1\" _v-1fc2f7e0=\"\">团购已结束</div>\n                <div class=\"tuan_item_icon\" _v-1fc2f7e0=\"\"></div>\n                <div class=\"tuan-other-info\" _v-1fc2f7e0=\"\">\n                    <div class=\"tuan_item_title\" _v-1fc2f7e0=\"\">\n                        {{data.body.dataList[0].title}}\n                    </div>\n                    <div class=\"tuan_item_price\" _v-1fc2f7e0=\"\">\n                        <span class=\"current_price\" _v-1fc2f7e0=\"\"><em _v-1fc2f7e0=\"\">￥</em>{{data.body.dataList[0].nowPrice}}</span>\n                        <span class=\"market_price\" _v-1fc2f7e0=\"\"><em _v-1fc2f7e0=\"\">￥</em>{{data.body.dataList[0].prePrice}}</span>\n                    </div>\n                </div>\n            </div>\n        </a>\n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-059a0eca=\"\">\n    <tt_com_0 :data=\"data\" _v-059a0eca=\"\"></tt_com_0>\n    <div class=\"tuan_list\" _v-059a0eca=\"\">\n        <a :href=\"data.body.dataList[0].command.content\" :data-remain-second2=\"remainsecond\" data-dav-tj=\"goods_group|good|good|1|good@goods_group\" _v-059a0eca=\"\">\n            <div class=\"tuan_img_container\" _v-059a0eca=\"\">\n                <img v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" style=\"display: block;\" _v-059a0eca=\"\">\n            </div>\n            <div class=\"tuan_info_container\" _v-059a0eca=\"\">\n                <div class=\"time1\" v-if=\"remainsecond > 0\" _v-059a0eca=\"\">{{remainsecond | timeday}} </div>\n                <div class=\"time\" v-if=\"remainsecond < 1\" _v-059a0eca=\"\">团购已结束</div>\n                <div class=\"tuan_item_icon\" _v-059a0eca=\"\"></div>\n                <div class=\"tuan-other-info\" _v-059a0eca=\"\">\n                    <div class=\"tuan_item_title\" _v-059a0eca=\"\">\n                        {{data.body.dataList[0].title}}\n                    </div>\n                    <div class=\"tuan_item_price\" _v-059a0eca=\"\">\n                        <span class=\"current_price\" _v-059a0eca=\"\"><em _v-059a0eca=\"\">￥</em>{{data.body.dataList[0].nowPrice}}</span>\n                        <span class=\"market_price\" _v-059a0eca=\"\"><em _v-059a0eca=\"\">￥</em>{{data.body.dataList[0].prePrice}}</span>\n                    </div>\n                </div>\n            </div>\n        </a>\n    </div>\n</div>\n";
 
 /***/ },
 /* 469 */
@@ -31110,7 +29083,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-254d46da/bd_ts_0.vue"
+	  var id = "_v-22cdd3a2/bd_ts_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -31134,8 +29107,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-254d46da&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-254d46da&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_0.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-22cdd3a2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_0.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-22cdd3a2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_0.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -31153,7 +29126,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.ts_feeds section .index_model[_v-254d46da] {\n  margin-top: 0;\n}\n\n#ts_menu_wrap[_v-254d46da] {\n  height: 50px;\n  width: 100%;\n  overflow: hidden;\n}\n\n.ts_menu[_v-254d46da] {\n  width: 100%;\n  z-index: 2;\n  background-color: #FDFCFC !important;\n  position: relative;\n}\n\n.ts_menu[_v-254d46da]:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  background: rgba(216, 216, 216, 0.51);\n  -webkit-transform: scale(0.5);\n  bottom: 0;\n  z-index: 1;\n}\n\n.ts_menu li[_v-254d46da] {\n  text-align: center;\n  font-size: 14px;\n  padding: 11px 0;\n  color: #666666;\n  background-color: #FDFCFC;\n}\n\n.ts_menu li.pitch_on[_v-254d46da] {\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n  color: #FFF !important;\n}\n\n.ts_menu li > div .statusInfo[_v-254d46da] {\n  font-size: 10px;\n}\n\n.ts_menu li > div > div[_v-254d46da]:nth-of-type(1) {\n  line-height: 14px;\n  margin-bottom: 4px;\n}\n\n.ts_menu li > div > div[_v-254d46da]:nth-of-type(2) {\n  line-height: 10px;\n}\n\n.ts_menu li:nth-of-type(1) > div[_v-254d46da]:before {\n  width: 0px;\n}\n\n.ts_menu li.pitch_on > div[_v-254d46da]:before {\n  width: 0px;\n}\n\n.ts_menu li.pitch_on + li > div[_v-254d46da]:before {\n  width: 0px;\n}\n\n.ts_menu li > div[_v-254d46da]:before {\n  content: \"\";\n  display: block;\n  position: absolute;\n  top: -10%;\n  height: 120%;\n  width: 1px;\n  background: #ededed;\n  -webkit-transform: scale(0.5);\n}\n\n\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.ts_feeds section .index_model[_v-22cdd3a2] {\n  margin-top: 0;\n}\n\n#ts_menu_wrap[_v-22cdd3a2] {\n  height: 50px;\n  width: 100%;\n  overflow: hidden;\n}\n\n.ts_menu[_v-22cdd3a2] {\n  width: 100%;\n  z-index: 2;\n  background-color: #FDFCFC !important;\n  position: relative;\n}\n\n.ts_menu[_v-22cdd3a2]:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  background: rgba(216, 216, 216, 0.51);\n  -webkit-transform: scale(0.5);\n  bottom: 0;\n  z-index: 1;\n}\n\n.ts_menu li[_v-22cdd3a2] {\n  text-align: center;\n  font-size: 14px;\n  padding: 11px 0;\n  color: #666666;\n  background-color: #FDFCFC;\n}\n\n.ts_menu li.pitch_on[_v-22cdd3a2] {\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n  color: #FFF !important;\n}\n\n.ts_menu li > div .statusInfo[_v-22cdd3a2] {\n  font-size: 10px;\n}\n\n.ts_menu li > div > div[_v-22cdd3a2]:nth-of-type(1) {\n  line-height: 14px;\n  margin-bottom: 4px;\n}\n\n.ts_menu li > div > div[_v-22cdd3a2]:nth-of-type(2) {\n  line-height: 10px;\n}\n\n.ts_menu li:nth-of-type(1) > div[_v-22cdd3a2]:before {\n  width: 0px;\n}\n\n.ts_menu li.pitch_on > div[_v-22cdd3a2]:before {\n  width: 0px;\n}\n\n.ts_menu li.pitch_on + li > div[_v-22cdd3a2]:before {\n  width: 0px;\n}\n\n.ts_menu li > div[_v-22cdd3a2]:before {\n  content: \"\";\n  display: block;\n  position: absolute;\n  top: -10%;\n  height: 120%;\n  width: 1px;\n  background: #ededed;\n  -webkit-transform: scale(0.5);\n}\n\n\n", ""]);
 
 	// exports
 
@@ -31487,7 +29460,7 @@
 /* 475 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"ts_feeds\" :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-254d46da=\"\">\n  <div id=\"ts_menu_wrap\" _v-254d46da=\"\">\n    <div :style=\"styleObject\" class=\"swiper-container ts_menu\" id=\"ts_menu\" _v-254d46da=\"\">\n      <ul class=\"swiper-wrapper\" _v-254d46da=\"\">\n        <li class=\"swiper-slide\" v-for=\"(item, index) in dataList\" :class=\"{pitch_on:item.selected == 1}\" @click=\"ts_tab(item,index)\" :data=\"item.timeshopActId\" _v-254d46da=\"\">\n          <div class=\"\" v-if=\"item &amp;&amp; item.title\" _v-254d46da=\"\">\n            <div class=\"time_state_span\" _v-254d46da=\"\">{{item.title}}</div>\n            <div class=\"statusInfo\" _v-254d46da=\"\">{{item.statusInfo}}</div>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"ts_feeds\" :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-22cdd3a2=\"\">\n  <div id=\"ts_menu_wrap\" _v-22cdd3a2=\"\">\n    <div :style=\"styleObject\" class=\"swiper-container ts_menu\" id=\"ts_menu\" _v-22cdd3a2=\"\">\n      <ul class=\"swiper-wrapper\" _v-22cdd3a2=\"\">\n        <li class=\"swiper-slide\" v-for=\"(item, index) in dataList\" :class=\"{pitch_on:item.selected == 1}\" @click=\"ts_tab(item,index)\" :data=\"item.timeshopActId\" _v-22cdd3a2=\"\">\n          <div class=\"\" v-if=\"item &amp;&amp; item.title\" _v-22cdd3a2=\"\">\n            <div class=\"time_state_span\" _v-22cdd3a2=\"\">{{item.title}}</div>\n            <div class=\"statusInfo\" _v-22cdd3a2=\"\">{{item.statusInfo}}</div>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 476 */
@@ -31517,7 +29490,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1ca4930e/bd_ts_prod_0.vue"
+	  var id = "_v-366e10d9/bd_ts_prod_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -31541,8 +29514,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ca4930e&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_prod_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ca4930e&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_prod_0.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-366e10d9&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_prod_0.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-366e10d9&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_prod_0.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -31560,7 +29533,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.f_l[_v-1ca4930e]{\n  float: left;\n}\n.newOriginal_price[_v-1ca4930e] {\n  font-size: 14px;\n}\n\n.list_style[_v-1ca4930e] {\n  height: 130px;\n}\n\nul li[_v-1ca4930e] {\n  padding: 10px 10px;\n  position: relative;\n  overflow: hidden;\n}\n\nul li.online[_v-1ca4930e]:after {\n  content: \"\";\n  display: block;\n  background-color: #DDDDDD;\n  -webkit-transform: scale(0.5) translateX(280px);\n  -ms-transform: scale(0.5) translateX(280px);\n  transform: scale(0.5) translateX(280px);\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  bottom: 0;\n  z-index: 1;\n}\n\n\nul li .img_container[_v-1ca4930e] {\n  position: relative;\n}\n\nul li .img_container_inner[_v-1ca4930e] {\n  width: 130px;\n  position: relative;\n}\n\nul li .img_container_inner div[_v-1ca4930e] {\n  height: 60px;\n  width: 60px;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  margin: auto auto;\n  font-size: 14px;\n  color: #FFF;\n  text-align: center;\n  line-height: 60px;\n}\n\nul li .order_good_info_container[_v-1ca4930e] {\n  position: absolute;\n  padding-left: 140px;\n  top: 0;\n  padding-top: 10px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.order_good_name[_v-1ca4930e] {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  /*display: -webkit-box;*/\n  /*-webkit-line-clamp: 2;*/\n  /*-webkit-box-orient: vertical;*/\n  height: 20px;\n  line-height: 20px;\n  color: #333333;\n}\n\n.order_good_name_in[_v-1ca4930e] {\n  font-size: 12px;\n  color: #999999;\n}\n\n.order_good_price[_v-1ca4930e] {\n  font-size: 16px;\n  height: 16px;\n  line-height: 16px;\n  color: #FF4A7D;\n  padding-top: 5px;\n}\n\n.price_symbol[_v-1ca4930e] {\n  font-size: 12px;\n  font-style: normal;\n}\n\n.progress_info[_v-1ca4930e]{\n  position: absolute;\n  width: 100%;\n  bottom: 14px;\n  font-size: 12px;\n  color: #999999;\n}\n.market_price[_v-1ca4930e] {\n  text-decoration: line-through;\n  color: #999;\n  margin-left: 0px;\n  font-size: 11px !important;\n}\n\n.progress_bar_bg[_v-1ca4930e] {\n  background-color: #EAEAEA;\n  border-radius: 8px;\n  height: 8px;\n  width: 21.3333333%;\n  position: relative;\n  overflow: hidden;\n}\n\n.progress_container[_v-1ca4930e] {\n  height: 8px;\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n  /*position: absolute;*/\n  left: 0;\n  top: 0;\n}\n\n.panic_buying_btn.buy_gray[_v-1ca4930e] {\n  background: -webkit-linear-gradient(left top, #DBDADA, #C5C5C5); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#DBDADA), to(#C5C5C5));\n  background: -webkit-linear-gradient(top left, #DBDADA, #C5C5C5);\n  background: linear-gradient(to bottom right, #DBDADA, #C5C5C5); /* 标准的语法 */\n}\n.panic_buying_btn.seteds[_v-1ca4930e]{\n  color:#999999;\n}\n.panic_buying_btn.seteds[_v-1ca4930e]:after{\n  border-color: #999999;\n}\n\n.progress_bar_percentage.wall[_v-1ca4930e] {\n  width: 100%;\n  min-width: 10px;\n}\n\n.finish_percentage[_v-1ca4930e] {\n  font-size: 11px;\n  color: #FF4A7D;\n  line-height: 11px;\n  margin-top: 5px;\n}\n\n.panic_buying_btn[_v-1ca4930e] {\n  width: 70px;\n  height: 25px;\n  font-size: 11px;\n  line-height: 25px;\n  text-align: center;\n  color: #fff;\n  position: absolute;\n  right: 10px;\n  bottom: 21px;\n  border-radius: 12px;\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n}\n\n.panic_buying_btn2[_v-1ca4930e] {\n  background: none;\n  color: #ff4a7d;\n  border-radius: 20px;\n  line-height: 26px;\n}\n\n.panic_buying_btn2[_v-1ca4930e]:after {\n  content: \"\";\n  -webkit-transform: scale(0.5);\n      -ms-transform: scale(0.5);\n          transform: scale(0.5);\n  width: 200%;\n  height: 200%;\n  border: #FF4A7D solid 1px;\n  display: block;\n  position: absolute;\n  left: 0;\n  top: 0;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  border-radius: 50px;\n}\n.membership_crown_pre[_v-1ca4930e]{\n  color:#999999;\n  text-decoration: line-through;\n  font-size: 11px;\n}\n.membership_crown .membership_crown_pre em[_v-1ca4930e]{\n  font-size: 10px;\n}\n\n.membership_crown[_v-1ca4930e] {\n  font-size: 11px;\n  color: #D6B471;\n  display: inline-block;\n  padding-left: 5px;\n  position: relative;\n  bottom: -1px;\n  float: left;\n}\n\n.membership_crown em[_v-1ca4930e] {\n  font-size: 10px;\n  font-style: normal;\n}\n\n.tipswrap[_v-1ca4930e] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.51);\n  z-index: 99;\n}\n\n.tipswrap .tipsdiv[_v-1ca4930e] {\n  width: 72%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  overflow: hidden;\n  min-height: 20px;\n  max-width: 480px;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n\n.tipswrap .tipsdiv img[_v-1ca4930e] {\n  width: 100%;\n}\n\n.tipswrap .tipsdiv div[_v-1ca4930e] {\n  width: 100%;\n  height: 13%;\n  position: absolute;\n  bottom: 0;\n}\n\n.progress_bar[_v-1ca4930e] {\n  position: absolute;\n  width: 100%;\n  bottom: 20px;\n}\n\n.remain_btns_click[_v-1ca4930e] {\n  width: 90px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  bottom: 13px;\n  z-index: 2;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.f_l[_v-366e10d9]{\n  float: left;\n}\n.newOriginal_price[_v-366e10d9] {\n  font-size: 14px;\n}\n\n.list_style[_v-366e10d9] {\n  height: 130px;\n}\n\nul li[_v-366e10d9] {\n  padding: 10px 10px;\n  position: relative;\n  overflow: hidden;\n}\n\nul li.online[_v-366e10d9]:after {\n  content: \"\";\n  display: block;\n  background-color: #DDDDDD;\n  -webkit-transform: scale(0.5) translateX(280px);\n  -ms-transform: scale(0.5) translateX(280px);\n  transform: scale(0.5) translateX(280px);\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  bottom: 0;\n  z-index: 1;\n}\n\n\nul li .img_container[_v-366e10d9] {\n  position: relative;\n}\n\nul li .img_container_inner[_v-366e10d9] {\n  width: 130px;\n  position: relative;\n}\n\nul li .img_container_inner div[_v-366e10d9] {\n  height: 60px;\n  width: 60px;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  margin: auto auto;\n  font-size: 14px;\n  color: #FFF;\n  text-align: center;\n  line-height: 60px;\n}\n\nul li .order_good_info_container[_v-366e10d9] {\n  position: absolute;\n  padding-left: 140px;\n  top: 0;\n  padding-top: 10px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.order_good_name[_v-366e10d9] {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  /*display: -webkit-box;*/\n  /*-webkit-line-clamp: 2;*/\n  /*-webkit-box-orient: vertical;*/\n  height: 20px;\n  line-height: 20px;\n  color: #333333;\n}\n\n.order_good_name_in[_v-366e10d9] {\n  font-size: 12px;\n  color: #999999;\n}\n\n.order_good_price[_v-366e10d9] {\n  font-size: 16px;\n  height: 16px;\n  line-height: 16px;\n  color: #FF4A7D;\n  padding-top: 5px;\n}\n\n.price_symbol[_v-366e10d9] {\n  font-size: 12px;\n  font-style: normal;\n}\n\n.progress_info[_v-366e10d9]{\n  position: absolute;\n  width: 100%;\n  bottom: 14px;\n  font-size: 12px;\n  color: #999999;\n}\n.market_price[_v-366e10d9] {\n  text-decoration: line-through;\n  color: #999;\n  margin-left: 0px;\n  font-size: 11px !important;\n}\n\n.progress_bar_bg[_v-366e10d9] {\n  background-color: #EAEAEA;\n  border-radius: 8px;\n  height: 8px;\n  width: 21.3333333%;\n  position: relative;\n  overflow: hidden;\n}\n\n.progress_container[_v-366e10d9] {\n  height: 8px;\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n  /*position: absolute;*/\n  left: 0;\n  top: 0;\n}\n\n.panic_buying_btn.buy_gray[_v-366e10d9] {\n  background: -webkit-linear-gradient(left top, #DBDADA, #C5C5C5); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#DBDADA), to(#C5C5C5));\n  background: -webkit-linear-gradient(top left, #DBDADA, #C5C5C5);\n  background: linear-gradient(to bottom right, #DBDADA, #C5C5C5); /* 标准的语法 */\n}\n.panic_buying_btn.seteds[_v-366e10d9]{\n  color:#999999;\n}\n.panic_buying_btn.seteds[_v-366e10d9]:after{\n  border-color: #999999;\n}\n\n.progress_bar_percentage.wall[_v-366e10d9] {\n  width: 100%;\n  min-width: 10px;\n}\n\n.finish_percentage[_v-366e10d9] {\n  font-size: 11px;\n  color: #FF4A7D;\n  line-height: 11px;\n  margin-top: 5px;\n}\n\n.panic_buying_btn[_v-366e10d9] {\n  width: 70px;\n  height: 25px;\n  font-size: 11px;\n  line-height: 25px;\n  text-align: center;\n  color: #fff;\n  position: absolute;\n  right: 10px;\n  bottom: 21px;\n  border-radius: 12px;\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n}\n\n.panic_buying_btn2[_v-366e10d9] {\n  background: none;\n  color: #ff4a7d;\n  border-radius: 20px;\n  line-height: 26px;\n}\n\n.panic_buying_btn2[_v-366e10d9]:after {\n  content: \"\";\n  -webkit-transform: scale(0.5);\n      -ms-transform: scale(0.5);\n          transform: scale(0.5);\n  width: 200%;\n  height: 200%;\n  border: #FF4A7D solid 1px;\n  display: block;\n  position: absolute;\n  left: 0;\n  top: 0;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  border-radius: 50px;\n}\n.membership_crown_pre[_v-366e10d9]{\n  color:#999999;\n  text-decoration: line-through;\n  font-size: 11px;\n}\n.membership_crown .membership_crown_pre em[_v-366e10d9]{\n  font-size: 10px;\n}\n\n.membership_crown[_v-366e10d9] {\n  font-size: 11px;\n  color: #D6B471;\n  display: inline-block;\n  padding-left: 5px;\n  position: relative;\n  bottom: -1px;\n  float: left;\n}\n\n.membership_crown em[_v-366e10d9] {\n  font-size: 10px;\n  font-style: normal;\n}\n\n.tipswrap[_v-366e10d9] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.51);\n  z-index: 99;\n}\n\n.tipswrap .tipsdiv[_v-366e10d9] {\n  width: 72%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  overflow: hidden;\n  min-height: 20px;\n  max-width: 480px;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n\n.tipswrap .tipsdiv img[_v-366e10d9] {\n  width: 100%;\n}\n\n.tipswrap .tipsdiv div[_v-366e10d9] {\n  width: 100%;\n  height: 13%;\n  position: absolute;\n  bottom: 0;\n}\n\n.progress_bar[_v-366e10d9] {\n  position: absolute;\n  width: 100%;\n  bottom: 20px;\n}\n\n.remain_btns_click[_v-366e10d9] {\n  width: 90px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  bottom: 13px;\n  z-index: 2;\n}\n", ""]);
 
 	// exports
 
@@ -32017,7 +29990,7 @@
 /* 480 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-1ca4930e=\"\">\n  <ul _v-1ca4930e=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-1ca4930e=\"\">\n      <a :href=\"item.command.content\" _v-1ca4930e=\"\">\n        <div class=\"img_container\" _v-1ca4930e=\"\">\n          <div class=\"img_container_inner\" _v-1ca4930e=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-1ca4930e=\"\">\n            <div v-if=\"item.buttonStatus == 3\" _v-1ca4930e=\"\">已抢光</div>\n          </div>\n          <div class=\"order_good_info_container\" _v-1ca4930e=\"\">\n            <div class=\"order_good_name\" _v-1ca4930e=\"\">{{item.title}}</div>\n            <div class=\"order_good_name order_good_name_in\" _v-1ca4930e=\"\">{{item.recomWord.split(\"\\n\")[0]}}</div>\n            <div class=\"order_good_price\" _v-1ca4930e=\"\">\n              <span class=\"f_l\" _v-1ca4930e=\"\"><em class=\"price_symbol\" _v-1ca4930e=\"\">￥</em><span _v-1ca4930e=\"\">{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span v-if=\"(item.nowPrice+'').split('.').length == 2\" class=\"newOriginal_price\" _v-1ca4930e=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span><span v-if=\"item.timeshopIncome != '0'\" class=\"membership_crown\" _v-1ca4930e=\"\">限时返 <em _v-1ca4930e=\"\">￥</em>{{item.timeshopIncome}}\n              <span v-if=\"item.income\" class=\"membership_crown_pre\" _v-1ca4930e=\"\">平日返<em _v-1ca4930e=\"\">￥</em>{{item.income}}</span></span>\n            </div>\n            <div v-if=\"item.buttonStatus != 3 &amp;&amp; item.timeshopGoodsNum\" class=\"progress_info\" _v-1ca4930e=\"\">\n              仅剩 {{item.timeshopGoodsNum}} 件\n            </div>\n            <!--<div class=\"progress_bar\" v-if=\"(item.buttonStatus != 0)&&(item.buttonStatus != 1)\">-->\n            <!--<div class=\"progress_bar_bg\">-->\n            <!--<div class=\"progress_container\" :style=\"{width:item.percentage+'%'}\">-->\n            <!--</div>-->\n            <!--</div>-->\n            <!--<div class=\"finish_percentage\">已售{{item.percentage}}%</div>-->\n            <!--</div>-->\n          </div>\n        </div>\n      </a>\n      <a class=\"remain_btns\" _v-1ca4930e=\"\">\n        <div class=\"panic_buying_btn\" :class=\"{panic_buying_btn2:item.buttonStatus < 2,buy_gray:item.buttonStatus == '3',seteds:item.buttonStatus == '0'}\" _v-1ca4930e=\"\">{{item.buttonName}}\n        </div>\n        <div @click=\"Panicbuying(item,index)\" class=\"remain_btns_click\" _v-1ca4930e=\"\"></div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-1ca4930e=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-1ca4930e=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-1ca4930e=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-1ca4930e=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-1ca4930e=\"\"></div>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-366e10d9=\"\">\n  <ul _v-366e10d9=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-366e10d9=\"\">\n      <a :href=\"item.command.content\" _v-366e10d9=\"\">\n        <div class=\"img_container\" _v-366e10d9=\"\">\n          <div class=\"img_container_inner\" _v-366e10d9=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-366e10d9=\"\">\n            <div v-if=\"item.buttonStatus == 3\" _v-366e10d9=\"\">已抢光</div>\n          </div>\n          <div class=\"order_good_info_container\" _v-366e10d9=\"\">\n            <div class=\"order_good_name\" _v-366e10d9=\"\">{{item.title}}</div>\n            <div class=\"order_good_name order_good_name_in\" _v-366e10d9=\"\">{{item.recomWord.split(\"\\n\")[0]}}</div>\n            <div class=\"order_good_price\" _v-366e10d9=\"\">\n              <span class=\"f_l\" _v-366e10d9=\"\"><em class=\"price_symbol\" _v-366e10d9=\"\">￥</em><span _v-366e10d9=\"\">{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span v-if=\"(item.nowPrice+'').split('.').length == 2\" class=\"newOriginal_price\" _v-366e10d9=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span><span v-if=\"item.timeshopIncome != '0'\" class=\"membership_crown\" _v-366e10d9=\"\">限时返 <em _v-366e10d9=\"\">￥</em>{{item.timeshopIncome}}\n              <span v-if=\"item.income\" class=\"membership_crown_pre\" _v-366e10d9=\"\">平日返<em _v-366e10d9=\"\">￥</em>{{item.income}}</span></span>\n            </div>\n            <div v-if=\"item.buttonStatus != 3 &amp;&amp; item.timeshopGoodsNum\" class=\"progress_info\" _v-366e10d9=\"\">\n              仅剩 {{item.timeshopGoodsNum}} 件\n            </div>\n            <!--<div class=\"progress_bar\" v-if=\"(item.buttonStatus != 0)&&(item.buttonStatus != 1)\">-->\n            <!--<div class=\"progress_bar_bg\">-->\n            <!--<div class=\"progress_container\" :style=\"{width:item.percentage+'%'}\">-->\n            <!--</div>-->\n            <!--</div>-->\n            <!--<div class=\"finish_percentage\">已售{{item.percentage}}%</div>-->\n            <!--</div>-->\n          </div>\n        </div>\n      </a>\n      <a class=\"remain_btns\" _v-366e10d9=\"\">\n        <div class=\"panic_buying_btn\" :class=\"{panic_buying_btn2:item.buttonStatus < 2,buy_gray:item.buttonStatus == '3',seteds:item.buttonStatus == '0'}\" _v-366e10d9=\"\">{{item.buttonName}}\n        </div>\n        <div @click=\"Panicbuying(item,index)\" class=\"remain_btns_click\" _v-366e10d9=\"\"></div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-366e10d9=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-366e10d9=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-366e10d9=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-366e10d9=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-366e10d9=\"\"></div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 481 */
@@ -32047,7 +30020,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5d99d99e/bd_ts_goods_0.vue"
+	  var id = "_v-1ecd6274/bd_ts_goods_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -32071,8 +30044,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5d99d99e&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_goods_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5d99d99e&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_goods_0.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ecd6274&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_goods_0.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ecd6274&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_goods_0.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -32090,7 +30063,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy[_v-5d99d99e] {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail[_v-5d99d99e] {\n    width: 100%;\n    display: block;\n    position: relative; }\n  .index_group_buy .df_new_model_con[_v-5d99d99e] {\n    background: #fff; }\n\n.related-item-list.swiper-container[_v-5d99d99e] {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list .detail[_v-5d99d99e] {\n  text-align: left; }\n\n.related-item-list .detail.swiper-slide[_v-5d99d99e] {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list .detail .goods_img_size[_v-5d99d99e] {\n  width: 100px;\n  height: 100px;\n  position: relative; }\n\n.related-item-list .detail .goods_img_size[_v-5d99d99e]:before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box; }\n\n.related-item-list .detail .name[_v-5d99d99e] {\n  font-size: 12px;\n  padding-top: 7px;\n  padding-right: 10px;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  line-height: 18px;\n  margin-bottom: 2px;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  overflow: hidden; }\n\n.related-item-list .detail .price[_v-5d99d99e] {\n  padding-top: 3px;\n  line-height: 12px;\n  height: 11px;\n  padding-right: 10px;\n  overflow: hidden; }\n  .related-item-list .detail .price .current-price[_v-5d99d99e] {\n    font-size: 11px;\n    color: #FF4A7D;\n    float: left; }\n  .related-item-list .detail .price .original-price[_v-5d99d99e] {\n    font-size: 9px;\n    color: #999;\n    text-decoration: line-through;\n    float: left;\n    padding-left: 5px; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list .detail .goods_img_size[_v-5d99d99e]:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */ } }\n\n.df_new_title[_v-5d99d99e] {\n  position: relative;\n  height: 44px; }\n\n.df_new_title[_v-5d99d99e]:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title[_v-5d99d99e]:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font[_v-5d99d99e] {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font[_v-5d99d99e]:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font[_v-5d99d99e]:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more[_v-5d99d99e] {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span[_v-5d99d99e] {\n  font-size: 12px; }\n\n.df_new_title_2[_v-5d99d99e] {\n  height: 44px;\n  line-height: 44px;\n  background-color: #fff;\n  position: relative;\n  border-bottom: 1px solid #f0f0f0; }\n\n.df_new_title_2 a[_v-5d99d99e] {\n  line-height: inherit; }\n\n.df_new_title_2 .df_new_font[_v-5d99d99e] {\n  font-size: 16px;\n  padding-left: 22px;\n  line-height: 44px; }\n\n.df_new_title_2 .df_new_font[_v-5d99d99e]:before {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 14px;\n  position: absolute; }\n\n.df_new_title_2 .more[_v-5d99d99e] {\n  padding-right: 10px;\n  float: right; }\n\n.df_new_title_2 .more span[_v-5d99d99e] {\n  color: #666;\n  font-size: 12px;\n  line-height: 35px;\n  margin-right: -2px; }\n\n.df_new_title_3[_v-5d99d99e] {\n  height: auto;\n  position: relative; }\n  .df_new_title_3 .up_arrow[_v-5d99d99e] {\n    width: 0;\n    height: 0;\n    border-left: 6px solid transparent;\n    border-right: 6px solid transparent;\n    border-bottom: 7px solid #f0f0f0;\n    border-top: transparent;\n    position: absolute;\n    left: 50%;\n    margin-left: -3px;\n    bottom: 0; }\n\n.index_model[_v-5d99d99e] {\n  margin-top: 0px !important; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy[_v-1ecd6274] {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail[_v-1ecd6274] {\n    width: 100%;\n    display: block;\n    position: relative; }\n  .index_group_buy .df_new_model_con[_v-1ecd6274] {\n    background: #fff; }\n\n.related-item-list.swiper-container[_v-1ecd6274] {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list .detail[_v-1ecd6274] {\n  text-align: left; }\n\n.related-item-list .detail.swiper-slide[_v-1ecd6274] {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list .detail .goods_img_size[_v-1ecd6274] {\n  width: 100px;\n  height: 100px;\n  position: relative; }\n\n.related-item-list .detail .goods_img_size[_v-1ecd6274]:before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box; }\n\n.related-item-list .detail .name[_v-1ecd6274] {\n  font-size: 12px;\n  padding-top: 7px;\n  padding-right: 10px;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  line-height: 18px;\n  margin-bottom: 2px;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  overflow: hidden; }\n\n.related-item-list .detail .price[_v-1ecd6274] {\n  padding-top: 3px;\n  line-height: 12px;\n  height: 11px;\n  padding-right: 10px;\n  overflow: hidden; }\n  .related-item-list .detail .price .current-price[_v-1ecd6274] {\n    font-size: 11px;\n    color: #FF4A7D;\n    float: left; }\n  .related-item-list .detail .price .original-price[_v-1ecd6274] {\n    font-size: 9px;\n    color: #999;\n    text-decoration: line-through;\n    float: left;\n    padding-left: 5px; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list .detail .goods_img_size[_v-1ecd6274]:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */ } }\n\n.df_new_title[_v-1ecd6274] {\n  position: relative;\n  height: 44px; }\n\n.df_new_title[_v-1ecd6274]:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title[_v-1ecd6274]:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font[_v-1ecd6274] {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font[_v-1ecd6274]:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font[_v-1ecd6274]:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more[_v-1ecd6274] {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span[_v-1ecd6274] {\n  font-size: 12px; }\n\n.df_new_title_2[_v-1ecd6274] {\n  height: 44px;\n  line-height: 44px;\n  background-color: #fff;\n  position: relative;\n  border-bottom: 1px solid #f0f0f0; }\n\n.df_new_title_2 a[_v-1ecd6274] {\n  line-height: inherit; }\n\n.df_new_title_2 .df_new_font[_v-1ecd6274] {\n  font-size: 16px;\n  padding-left: 22px;\n  line-height: 44px; }\n\n.df_new_title_2 .df_new_font[_v-1ecd6274]:before {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 14px;\n  position: absolute; }\n\n.df_new_title_2 .more[_v-1ecd6274] {\n  padding-right: 10px;\n  float: right; }\n\n.df_new_title_2 .more span[_v-1ecd6274] {\n  color: #666;\n  font-size: 12px;\n  line-height: 35px;\n  margin-right: -2px; }\n\n.df_new_title_3[_v-1ecd6274] {\n  height: auto;\n  position: relative; }\n  .df_new_title_3 .up_arrow[_v-1ecd6274] {\n    width: 0;\n    height: 0;\n    border-left: 6px solid transparent;\n    border-right: 6px solid transparent;\n    border-bottom: 7px solid #f0f0f0;\n    border-top: transparent;\n    position: absolute;\n    left: 50%;\n    margin-left: -3px;\n    bottom: 0; }\n\n.index_model[_v-1ecd6274] {\n  margin-top: 0px !important; }\n", ""]);
 
 	// exports
 
@@ -32145,7 +30118,7 @@
 /* 485 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\" _v-5d99d99e=\"\">\n\n  <tt_com_0 :data=\"data\" _v-5d99d99e=\"\"></tt_com_0>\n\n  <div class=\"df_new_model_con\" :style=\"styleObject\" _v-5d99d99e=\"\">\n    <div class=\"df_new_model_con\" _v-5d99d99e=\"\">\n      <div class=\"df_new_title_3\" style=\"height:1.8rem;overflow: hidden;\" _v-5d99d99e=\"\">\n        <a :href=\"data.body.command.content\" @click=\"clickAnalysis\" style=\"height: 1.8rem;\" position=\"0\" _v-5d99d99e=\"\">\n          <img class=\"newImage\" style=\"display: inline;height: 1.8rem\" v-lazy=\"imgObject(data.body.imageUrl)\" _v-5d99d99e=\"\">\n        </a>\n        <span class=\"up_arrow\" :style=\"styleSpan\" _v-5d99d99e=\"\"></span>\n      </div>\n      <bd_goods_0 :data=\"data\" _v-5d99d99e=\"\"></bd_goods_0>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\" _v-1ecd6274=\"\">\n\n  <tt_com_0 :data=\"data\" _v-1ecd6274=\"\"></tt_com_0>\n\n  <div class=\"df_new_model_con\" :style=\"styleObject\" _v-1ecd6274=\"\">\n    <div class=\"df_new_model_con\" _v-1ecd6274=\"\">\n      <div class=\"df_new_title_3\" style=\"height:1.8rem;overflow: hidden;\" _v-1ecd6274=\"\">\n        <a :href=\"data.body.command.content\" @click=\"clickAnalysis\" style=\"height: 1.8rem;\" position=\"0\" _v-1ecd6274=\"\">\n          <img class=\"newImage\" style=\"display: inline;height: 1.8rem\" v-lazy=\"imgObject(data.body.imageUrl)\" _v-1ecd6274=\"\">\n        </a>\n        <span class=\"up_arrow\" :style=\"styleSpan\" _v-1ecd6274=\"\"></span>\n      </div>\n      <bd_goods_0 :data=\"data\" _v-1ecd6274=\"\"></bd_goods_0>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 486 */
@@ -32175,7 +30148,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3240569a/bd_ts_title_0.vue"
+	  var id = "_v-06461048/bd_ts_title_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -32328,7 +30301,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-9a807274/bd_image_1_2.vue"
+	  var id = "_v-66ed76de/bd_image_1_2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -32450,7 +30423,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-51727889/bd_image_4_2.vue"
+	  var id = "_v-6b3bf654/bd_image_4_2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -32474,8 +30447,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-51727889&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_4_2.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-51727889&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_4_2.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6b3bf654&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_4_2.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6b3bf654&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_4_2.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -32493,7 +30466,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.index_links[_v-51727889] {\n    width:100%;\n    overflow: hidden;\n    min-height:50px;\n    background-color:#FFFFFF;\n}\n.bd_icon_0[_v-51727889] {\n    overflow: hidden;\n     padding-top: 0px;\n    background-color: #fff;\n     margin-top: 0px;\n}\n.bd_icon_0 .link_item[_v-51727889] {\n    float: left;\n    width: 25%;\n    text-align: center;\n     padding-bottom: 0px;\n     padding-top: 0px;\n}\n.bd_icon_0 .link_item .link_img[_v-51727889] {\n    width:100%;\n    margin-bottom: 0;\n    max-width: 100%;\n    max-height: 100%;\n    display: inline-block;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.index_links[_v-6b3bf654] {\n    width:100%;\n    overflow: hidden;\n    min-height:50px;\n    background-color:#FFFFFF;\n}\n.bd_icon_0[_v-6b3bf654] {\n    overflow: hidden;\n     padding-top: 0px;\n    background-color: #fff;\n     margin-top: 0px;\n}\n.bd_icon_0 .link_item[_v-6b3bf654] {\n    float: left;\n    width: 25%;\n    text-align: center;\n     padding-bottom: 0px;\n     padding-top: 0px;\n}\n.bd_icon_0 .link_item .link_img[_v-6b3bf654] {\n    width:100%;\n    margin-bottom: 0;\n    max-width: 100%;\n    max-height: 100%;\n    display: inline-block;\n}\n", ""]);
 
 	// exports
 
@@ -32563,7 +30536,7 @@
 /* 500 */
 /***/ function(module, exports) {
 
-	module.exports = "\n\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-51727889=\"\">\n    <tt_com_0 :data=\"data\" _v-51727889=\"\"></tt_com_0>\n    <div v-if=\"show\" class=\"bd_icon_0 index_links\" :style=\"styleObject\" _v-51727889=\"\">\n        <a class=\"link_item\" v-for=\"item in data.body.dataList\" :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-51727889=\"\">\n            <img class=\"link_img newImage\" :src=\"item.imageUrl\" _v-51727889=\"\">\n        </a>\n    </div>\n</div>\n\n";
+	module.exports = "\n\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-6b3bf654=\"\">\n    <tt_com_0 :data=\"data\" _v-6b3bf654=\"\"></tt_com_0>\n    <div v-if=\"show\" class=\"bd_icon_0 index_links\" :style=\"styleObject\" _v-6b3bf654=\"\">\n        <a class=\"link_item\" v-for=\"item in data.body.dataList\" :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-6b3bf654=\"\">\n            <img class=\"link_img newImage\" :src=\"item.imageUrl\" _v-6b3bf654=\"\">\n        </a>\n    </div>\n</div>\n\n";
 
 /***/ },
 /* 501 */
@@ -32593,7 +30566,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1fa6c8de/bd_goods_4.vue"
+	  var id = "_v-057ddfc8/bd_goods_4.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -32617,8 +30590,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1fa6c8de&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_4.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1fa6c8de&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_4.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-057ddfc8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_4.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-057ddfc8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_4.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -32636,7 +30609,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.img_label[_v-1fa6c8de]{\n  font-weight: bold;\n  left: 0;\n  bottom:0;\n  position:absolute;\n  font-size: 10px;\n  opacity: 0.8;\n  background: -webkit-gradient(linear,left top, right top,from(#ff5b5b),to(#fa1862));\n  background: linear-gradient(90deg,#ff5b5b,#fa1862);\n  background: -webkit-linear-gradient(left,#ff5b5b,#fa1862);\n  color:#fff;\n  line-height: 16px;\n  padding:1px 8px 0 6px;\n  border-top-right-radius: 8px;\n}\n.img_label[_v-1fa6c8de]:after{\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-width: 0 4px 10px 0;\n  border-style: solid;\n  border-color: transparent transparent #fa1862 transparent;\n  position: absolute;\n  margin-left: 8px;\n  bottom: 0;\n}\n.img_container[_v-1fa6c8de]{\n  position: relative;\n}\n\n  .good_list_2_row[_v-1fa6c8de] {\n    background: none;\n    padding: 0 5px;\n  }\n\n  .font-weight[_v-1fa6c8de] {\n    font-weight: 500;\n  }\n  .goods4_price_bar em[_v-1fa6c8de] {\n    font-style: normal;\n    font-size: 12px;\n    display: inline-block;\n    margin-right: 2px;\n    \n  }\n\n  .good_list_2_row .good_item[_v-1fa6c8de] {\n    padding: 0 5px;\n    margin-bottom: 0;\n  }\n\n  .good_list_2_row .good_item .good_img_container img[_v-1fa6c8de] {\n    border: none;\n  }\n\n  .good_con[_v-1fa6c8de] {\n    display: block;\n    background-color: #FFF;\n    padding: 10px;\n    padding-top: 0;\n    overflow: hidden;\n  }\n\n  .good_con .fz_12[_v-1fa6c8de] {\n    overflow: hidden;\n    height: 16px;\n    line-height: 16px;\n  }\n\n  .good_con .fz_12 .dav-color-price[_v-1fa6c8de] {\n    display: inline-block;\n  }\n.good_con .nowPriceCont[_v-1fa6c8de] {\n  font-size: 0;\n}\n  .good_con .nowPrice[_v-1fa6c8de] {\n    font-size: 16px;\n  }\n\n  .good_list_2_row .good_item .lable[_v-1fa6c8de] {\n    color: #FF4A7D;\n    font-size: 10px;\n    display: inline-block;\n    margin-left: 4px;\n    font-family: sans-serif;\n    background-color: #FFF;\n    float: right;\n    -webkit-box-sizing: border-box;\n    position: relative;\n    top: 7.89473%;\n    padding: 0 2px;\n    border: 1px solid #FF4A7D;\n    line-height: 15px;\n    border-radius: 4px;\n  }\n\n  .good_list_2_row .good_item .lable .border[_v-1fa6c8de] {\n    -webkit-transform: scale(0.5);\n    -ms-transform: scale(0.5);\n        transform: scale(0.5);\n    position: absolute;\n    border: 1px solid #FF4A7D;\n    top: -50%;\n    right: -50%;\n    bottom: -50%;\n    left: -50%;\n    border-radius: 7px;\n  }\n\n  .good_list_2_row .good_item .good_title[_v-1fa6c8de] {\n    margin-bottom: 4px;\n    -webkit-line-clamp: 2;\n    line-clamp: 2;\n    line-height: 19px;\n  }\n\n  .goods4_price_bar[_v-1fa6c8de] {\n    overflow: hidden;\n    height: 19px;\n    width: 200%;\n  }\n  .good_list_sell_out[_v-1fa6c8de]{\n    z-index: 0;\n  }\n\n  .vip_return[_v-1fa6c8de]{\n  line-height: 1;\n  font-size: 0;\n  color: #BF9D51;\n  padding-left: 4px;\n  position: relative;\n  display: inline-block;\n    -webkit-transform: scale(0.5);\n  -webkit-transform-origin: 0 60%;\n  -ms-transform: scale(0.5);\n      transform: scale(0.5);\n  -ms-transform-origin: 0 60%;\n      transform-origin: 0 60%;\n  vertical-align: middle;\n  margin-bottom: 4px;\n}\n.vip_return .vip_return_title[_v-1fa6c8de]{\n  font-size: 22px;\n}\n.vip_return .vip_return_f[_v-1fa6c8de]{\n  font-size: 18px;\n  padding: 0 2px 0 4px;\n}\n.vip_return .vip_return_price[_v-1fa6c8de]{\n  font-size: 24px;\n}\n @media screen and (max-width:374px){\n    .vip_return[_v-1fa6c8de]{\n      padding-left:0;\n      margin-bottom: 3px;\n    }\n    .vip_return .vip_return_title[_v-1fa6c8de]{\n      font-size: 20px;\n    }\n    .vip_return .vip_return_f[_v-1fa6c8de]{\n      font-size: 14px;\n      padding: 0 2px 0 4px;\n    }\n    .vip_return .vip_return_price[_v-1fa6c8de]{\n      font-size: 20px;\n    }\n }\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.img_label[_v-057ddfc8]{\n  font-weight: bold;\n  left: 0;\n  bottom:0;\n  position:absolute;\n  font-size: 10px;\n  opacity: 0.8;\n  background: -webkit-gradient(linear,left top, right top,from(#ff5b5b),to(#fa1862));\n  background: linear-gradient(90deg,#ff5b5b,#fa1862);\n  background: -webkit-linear-gradient(left,#ff5b5b,#fa1862);\n  color:#fff;\n  line-height: 16px;\n  padding:1px 8px 0 6px;\n  border-top-right-radius: 8px;\n}\n.img_label[_v-057ddfc8]:after{\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-width: 0 4px 10px 0;\n  border-style: solid;\n  border-color: transparent transparent #fa1862 transparent;\n  position: absolute;\n  margin-left: 8px;\n  bottom: 0;\n}\n.img_container[_v-057ddfc8]{\n  position: relative;\n}\n\n  .good_list_2_row[_v-057ddfc8] {\n    background: none;\n    padding: 0 5px;\n  }\n\n  .font-weight[_v-057ddfc8] {\n    font-weight: 500;\n  }\n  .goods4_price_bar em[_v-057ddfc8] {\n    font-style: normal;\n    font-size: 12px;\n    display: inline-block;\n    margin-right: 2px;\n    \n  }\n\n  .good_list_2_row .good_item[_v-057ddfc8] {\n    padding: 0 5px;\n    margin-bottom: 0;\n  }\n\n  .good_list_2_row .good_item .good_img_container img[_v-057ddfc8] {\n    border: none;\n  }\n\n  .good_con[_v-057ddfc8] {\n    display: block;\n    background-color: #FFF;\n    padding: 10px;\n    padding-top: 0;\n    overflow: hidden;\n  }\n\n  .good_con .fz_12[_v-057ddfc8] {\n    overflow: hidden;\n    height: 16px;\n    line-height: 16px;\n  }\n\n  .good_con .fz_12 .dav-color-price[_v-057ddfc8] {\n    display: inline-block;\n  }\n.good_con .nowPriceCont[_v-057ddfc8] {\n  font-size: 0;\n}\n  .good_con .nowPrice[_v-057ddfc8] {\n    font-size: 16px;\n  }\n\n  .good_list_2_row .good_item .lable[_v-057ddfc8] {\n    color: #FF4A7D;\n    font-size: 10px;\n    display: inline-block;\n    margin-left: 4px;\n    font-family: sans-serif;\n    background-color: #FFF;\n    float: right;\n    -webkit-box-sizing: border-box;\n    position: relative;\n    top: 7.89473%;\n    padding: 0 2px;\n    border: 1px solid #FF4A7D;\n    line-height: 15px;\n    border-radius: 4px;\n  }\n\n  .good_list_2_row .good_item .lable .border[_v-057ddfc8] {\n    -webkit-transform: scale(0.5);\n    -ms-transform: scale(0.5);\n        transform: scale(0.5);\n    position: absolute;\n    border: 1px solid #FF4A7D;\n    top: -50%;\n    right: -50%;\n    bottom: -50%;\n    left: -50%;\n    border-radius: 7px;\n  }\n\n  .good_list_2_row .good_item .good_title[_v-057ddfc8] {\n    margin-bottom: 4px;\n    -webkit-line-clamp: 2;\n    line-clamp: 2;\n    line-height: 19px;\n  }\n\n  .goods4_price_bar[_v-057ddfc8] {\n    overflow: hidden;\n    height: 19px;\n    width: 200%;\n  }\n  .good_list_sell_out[_v-057ddfc8]{\n    z-index: 0;\n  }\n\n  .vip_return[_v-057ddfc8]{\n  line-height: 1;\n  font-size: 0;\n  color: #BF9D51;\n  padding-left: 4px;\n  position: relative;\n  display: inline-block;\n    -webkit-transform: scale(0.5);\n  -webkit-transform-origin: 0 60%;\n  -ms-transform: scale(0.5);\n      transform: scale(0.5);\n  -ms-transform-origin: 0 60%;\n      transform-origin: 0 60%;\n  vertical-align: middle;\n  margin-bottom: 4px;\n}\n.vip_return .vip_return_title[_v-057ddfc8]{\n  font-size: 22px;\n}\n.vip_return .vip_return_f[_v-057ddfc8]{\n  font-size: 18px;\n  padding: 0 2px 0 4px;\n}\n.vip_return .vip_return_price[_v-057ddfc8]{\n  font-size: 24px;\n}\n @media screen and (max-width:374px){\n    .vip_return[_v-057ddfc8]{\n      padding-left:0;\n      margin-bottom: 3px;\n    }\n    .vip_return .vip_return_title[_v-057ddfc8]{\n      font-size: 20px;\n    }\n    .vip_return .vip_return_f[_v-057ddfc8]{\n      font-size: 14px;\n      padding: 0 2px 0 4px;\n    }\n    .vip_return .vip_return_price[_v-057ddfc8]{\n      font-size: 20px;\n    }\n }\n", ""]);
 
 	// exports
 
@@ -32901,7 +30874,7 @@
 /* 505 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"good_list_con\" :style=\"{ marginTop:data.marginTop + 'px' }\" _v-1fa6c8de=\"\">\n  <div class=\"good_list_2_row\" _v-1fa6c8de=\"\">\n    <a v-for=\"item in data.body.dataList\" data-id=\"item.goods_id\" :href=\"item.command.content\" class=\"good_item\" _v-1fa6c8de=\"\">\n      <div class=\"good_img_container\" _v-1fa6c8de=\"\">\n        <div class=\"img_container\" _v-1fa6c8de=\"\">\n          <img v-lazy=\"imgObject(item.imageUrl)\" style=\"display: inline;\" _v-1fa6c8de=\"\">\n          <span class=\"img_label\" v-if=\"item.actInfo!=''\" v-text=\"item.actInfo\" _v-1fa6c8de=\"\"></span>\n           <span class=\"img_label\" v-if=\"item.actInfo==''&amp;&amp;+item.ratio\" v-text=\"'返现'+item.ratio+'倍'\" _v-1fa6c8de=\"\"></span>\n        </div>\n        <div v-if=\"item.statusInfo&amp;&amp;item.statusInfo != ''\" class=\"good_list_sell_out\" _v-1fa6c8de=\"\"><span _v-1fa6c8de=\"\">{{item.statusInfo}}</span></div>\n        <div v-if=\"item.pic_info &amp;&amp; item.ratio != 0\" class=\"pic_info\" _v-1fa6c8de=\"\">{{item.ratio}}</div>\n      </div>\n      <div class=\"good_con\" _v-1fa6c8de=\"\">\n        <div class=\"good_title\" _v-1fa6c8de=\"\">{{item.title}}</div>\n        <div class=\"goods4_price_bar\" _v-1fa6c8de=\"\">\n          <span class=\"dav-color-price font-weight\" _v-1fa6c8de=\"\"><em class=\"fz_14\" _v-1fa6c8de=\"\">￥</em><span class=\"nowPriceCont\" _v-1fa6c8de=\"\"><span class=\"nowPrice\" _v-1fa6c8de=\"\">{{(item.nowPrice+'').split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.nowPrice+'').split('.').length == 2\" _v-1fa6c8de=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span></span>\n          <span class=\"vip_return\" v-if=\"item.income &amp;&amp; item.income != 0\" _v-1fa6c8de=\"\">\n            <span class=\"vip_return_title\" _v-1fa6c8de=\"\">会员返</span>\n            <span class=\"vip_return_f\" _v-1fa6c8de=\"\">¥</span>\n            <span class=\"vip_return_price\" _v-1fa6c8de=\"\">{{item.income}}</span>\n          </span>\n        </div>\n      </div>\n    </a>\n  </div>\n</div>\n<!--<category :list = \"data.body.dataList\"></category>-->\n";
+	module.exports = "\n<div class=\"good_list_con\" :style=\"{ marginTop:data.marginTop + 'px' }\" _v-057ddfc8=\"\">\n  <div class=\"good_list_2_row\" _v-057ddfc8=\"\">\n    <a v-for=\"item in data.body.dataList\" data-id=\"item.goods_id\" :href=\"item.command.content\" class=\"good_item\" _v-057ddfc8=\"\">\n      <div class=\"good_img_container\" _v-057ddfc8=\"\">\n        <div class=\"img_container\" _v-057ddfc8=\"\">\n          <img v-lazy=\"imgObject(item.imageUrl)\" style=\"display: inline;\" _v-057ddfc8=\"\">\n          <span class=\"img_label\" v-if=\"item.actInfo!=''\" v-text=\"item.actInfo\" _v-057ddfc8=\"\"></span>\n           <span class=\"img_label\" v-if=\"item.actInfo==''&amp;&amp;+item.ratio\" v-text=\"'返现'+item.ratio+'倍'\" _v-057ddfc8=\"\"></span>\n        </div>\n        <div v-if=\"item.statusInfo&amp;&amp;item.statusInfo != ''\" class=\"good_list_sell_out\" _v-057ddfc8=\"\"><span _v-057ddfc8=\"\">{{item.statusInfo}}</span></div>\n        <div v-if=\"item.pic_info &amp;&amp; item.ratio != 0\" class=\"pic_info\" _v-057ddfc8=\"\">{{item.ratio}}</div>\n      </div>\n      <div class=\"good_con\" _v-057ddfc8=\"\">\n        <div class=\"good_title\" _v-057ddfc8=\"\">{{item.title}}</div>\n        <div class=\"goods4_price_bar\" _v-057ddfc8=\"\">\n          <span class=\"dav-color-price font-weight\" _v-057ddfc8=\"\"><em class=\"fz_14\" _v-057ddfc8=\"\">￥</em><span class=\"nowPriceCont\" _v-057ddfc8=\"\"><span class=\"nowPrice\" _v-057ddfc8=\"\">{{(item.nowPrice+'').split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.nowPrice+'').split('.').length == 2\" _v-057ddfc8=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span></span>\n          <span class=\"vip_return\" v-if=\"item.income &amp;&amp; item.income != 0\" _v-057ddfc8=\"\">\n            <span class=\"vip_return_title\" _v-057ddfc8=\"\">会员返</span>\n            <span class=\"vip_return_f\" _v-057ddfc8=\"\">¥</span>\n            <span class=\"vip_return_price\" _v-057ddfc8=\"\">{{item.income}}</span>\n          </span>\n        </div>\n      </div>\n    </a>\n  </div>\n</div>\n<!--<category :list = \"data.body.dataList\"></category>-->\n";
 
 /***/ },
 /* 506 */
@@ -32931,7 +30904,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-78ed219f/bd_course_info_series_0.vue"
+	  var id = "_v-6f21a6f4/bd_course_info_series_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -32955,8 +30928,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-78ed219f&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_info_series_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-78ed219f&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_info_series_0.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6f21a6f4&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_info_series_0.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6f21a6f4&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_info_series_0.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -32974,7 +30947,7 @@
 
 
 	// module
-	exports.push([module.id, "#series_course[_v-78ed219f] {\n  width: 100%;\n  background: #fff;\n  position: relative;\n  padding-bottom: 0.1rem; }\n\n.series_title[_v-78ed219f] {\n  width: 100%;\n  padding-top: 0.14rem;\n  padding-left: 0.1rem;\n  padding-bottom: 0.1rem;\n  font-size: 0.14rem;\n  color: #FF4A7D; }\n  .series_title span[_v-78ed219f] {\n    font-size: 0.1rem;\n    color: #999999; }\n\n.series_container[_v-78ed219f] {\n  width: 3rem;\n  padding-left: 0.1rem;\n  padding-right: 0.4rem;\n  font-size: 0.14rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 1;\n  display: -webkit-box;\n  color: #333333; }\n\n.series_content_img[_v-78ed219f] {\n  position: absolute;\n  height: 0.22rem;\n  right: 0.1rem;\n  top: 0.27rem; }\n\n.series_content_img1[_v-78ed219f] {\n  position: absolute;\n  width: 0.64rem;\n  height: 0.22rem;\n  right: 0.1rem;\n  top: 0.27rem;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  border-radius: 37px;\n  text-align: center;\n  line-height: 0.21rem; }\n\n.icon[_v-78ed219f] {\n  width: 0.12rem;\n  height: 0.12rem;\n  vertical-align: top;\n  margin-top: 0.03rem; }\n", ""]);
+	exports.push([module.id, "#series_course[_v-6f21a6f4] {\n  width: 100%;\n  background: #fff;\n  position: relative;\n  padding-bottom: 0.1rem; }\n\n.series_title[_v-6f21a6f4] {\n  width: 100%;\n  padding-top: 0.14rem;\n  padding-left: 0.1rem;\n  padding-bottom: 0.1rem;\n  font-size: 0.14rem;\n  color: #FF4A7D; }\n  .series_title span[_v-6f21a6f4] {\n    font-size: 0.1rem;\n    color: #999999; }\n\n.series_container[_v-6f21a6f4] {\n  width: 3rem;\n  padding-left: 0.1rem;\n  padding-right: 0.4rem;\n  font-size: 0.14rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 1;\n  display: -webkit-box;\n  color: #333333; }\n\n.series_content_img[_v-6f21a6f4] {\n  position: absolute;\n  height: 0.22rem;\n  right: 0.1rem;\n  top: 0.27rem; }\n\n.series_content_img1[_v-6f21a6f4] {\n  position: absolute;\n  width: 0.64rem;\n  height: 0.22rem;\n  right: 0.1rem;\n  top: 0.27rem;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  border-radius: 37px;\n  text-align: center;\n  line-height: 0.21rem; }\n\n.icon[_v-6f21a6f4] {\n  width: 0.12rem;\n  height: 0.12rem;\n  vertical-align: top;\n  margin-top: 0.03rem; }\n", ""]);
 
 	// exports
 
@@ -33094,7 +31067,7 @@
 /* 510 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div id=\"series_course\" :style=\"{'marginTop':dataList.marginTop + 'px'}\" _v-78ed219f=\"\">\n    <a :href=\"dataList.body.command.content\" @click.stop=\"clickAnalysis\" :position=\"dataList.position\" _v-78ed219f=\"\">\n        <div class=\"series_title\" _v-78ed219f=\"\">所属系列课 <span _v-78ed219f=\"\">（第{{dataList.body.nowNo}}节 共{{dataList.body.courseNum}}节课）</span></div>\n        <div class=\"series_container\" _v-78ed219f=\"\">\n            <img src=\"//pic.davdian.com/free/2017/08/01/seriesicon.png\" class=\"icon\" _v-78ed219f=\"\">\n            <span v-text=\"dataList.body.seriesTitle\" _v-78ed219f=\"\"></span>\n        </div>\n        <div class=\"series_content_img1\" _v-78ed219f=\"\">进入系列</div>\n        <!-- <img class='series_content_img' src=\"//pic.davdian.com/free/2017/07/28/goSeriesCourse1.png\"> -->\n    </a>\n</div>\n";
+	module.exports = "\n<div id=\"series_course\" :style=\"{'marginTop':dataList.marginTop + 'px'}\" _v-6f21a6f4=\"\">\n    <a :href=\"dataList.body.command.content\" @click.stop=\"clickAnalysis\" :position=\"dataList.position\" _v-6f21a6f4=\"\">\n        <div class=\"series_title\" _v-6f21a6f4=\"\">所属系列课 <span _v-6f21a6f4=\"\">（第{{dataList.body.nowNo}}节 共{{dataList.body.courseNum}}节课）</span></div>\n        <div class=\"series_container\" _v-6f21a6f4=\"\">\n            <img src=\"//pic.davdian.com/free/2017/08/01/seriesicon.png\" class=\"icon\" _v-6f21a6f4=\"\">\n            <span v-text=\"dataList.body.seriesTitle\" _v-6f21a6f4=\"\"></span>\n        </div>\n        <div class=\"series_content_img1\" _v-6f21a6f4=\"\">进入系列</div>\n        <!-- <img class='series_content_img' src=\"//pic.davdian.com/free/2017/07/28/goSeriesCourse1.png\"> -->\n    </a>\n</div>\n";
 
 /***/ },
 /* 511 */
@@ -33124,7 +31097,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-55401cf8/bd_course_notes_0.vue"
+	  var id = "_v-cd76f3e6/bd_course_notes_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -33148,8 +31121,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-55401cf8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_notes_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-55401cf8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_notes_0.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-cd76f3e6&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_notes_0.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-cd76f3e6&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_notes_0.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -33167,7 +31140,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.seriesCommentContainer[_v-55401cf8]{\n    background: #fff;\n    height: 44px;\n    line-height: 44px;\n    padding-left: 0.18rem;\n    width: 100%;\n    color:#666666;\n    font-size: 0.14rem;\n    position: relative;\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.icon[_v-55401cf8]{\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n        transform: rotate(45deg);\n    background: none;\n    top: 16px;\n    position: absolute;\n    right: 12px\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.seriesCommentContainer[_v-cd76f3e6]{\n    background: #fff;\n    height: 44px;\n    line-height: 44px;\n    padding-left: 0.18rem;\n    width: 100%;\n    color:#666666;\n    font-size: 0.14rem;\n    position: relative;\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.icon[_v-cd76f3e6]{\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n        transform: rotate(45deg);\n    background: none;\n    top: 16px;\n    position: absolute;\n    right: 12px\n}\n", ""]);
 
 	// exports
 
@@ -33247,7 +31220,7 @@
 /* 515 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"seriesCommentContainer\" @click=\"gohref\" :style=\"{'marginTop':data.marginTop + 'px'}\" _v-55401cf8=\"\">\n    <span _v-55401cf8=\"\">听课笔记 <span v-if=\"data.body.notesNum\" _v-55401cf8=\"\">（ <span v-text=\"data.body.notesNum\" _v-55401cf8=\"\"></span>  ）</span></span>\n    <i class=\"icon\" _v-55401cf8=\"\"></i>\n</div>\n";
+	module.exports = "\n<div class=\"seriesCommentContainer\" @click=\"gohref\" :style=\"{'marginTop':data.marginTop + 'px'}\" _v-cd76f3e6=\"\">\n    <span _v-cd76f3e6=\"\">听课笔记 <span v-if=\"data.body.notesNum\" _v-cd76f3e6=\"\">（ <span v-text=\"data.body.notesNum\" _v-cd76f3e6=\"\"></span>  ）</span></span>\n    <i class=\"icon\" _v-cd76f3e6=\"\"></i>\n</div>\n";
 
 /***/ },
 /* 516 */
@@ -33277,7 +31250,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-925ea434/bd_album_0.vue"
+	  var id = "_v-7835bb1e/bd_album_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -33445,7 +31418,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-780f6021/bd_album_content_1.vue"
+	  var id = "_v-96cfcca8/bd_album_content_1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -33469,8 +31442,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-780f6021&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-780f6021&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-96cfcca8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-96cfcca8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -33488,7 +31461,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-780f6021]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-780f6021]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-780f6021]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-780f6021]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n  max-width: 2.15rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-780f6021]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-780f6021]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-780f6021],.mask_stop[_v-780f6021],.disable[_v-780f6021]{\n  z-index:3;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-96cfcca8]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-96cfcca8]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-96cfcca8]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-96cfcca8]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-96cfcca8]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-96cfcca8]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-96cfcca8]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-96cfcca8]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-96cfcca8]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-96cfcca8]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n  max-width: 2.15rem;\n}\n.list_title[_v-96cfcca8]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-96cfcca8],.list_time[_v-96cfcca8]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-96cfcca8]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-96cfcca8]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-96cfcca8]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-96cfcca8]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-96cfcca8]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-96cfcca8],.mask_stop[_v-96cfcca8],.disable[_v-96cfcca8]{\n  z-index:3;\n}\n", ""]);
 
 	// exports
 
@@ -33775,7 +31748,7 @@
 /* 525 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-780f6021=\"\">\n  <div class=\"list1\" _v-780f6021=\"\">\n    <div class=\"big_img\" _v-780f6021=\"\">\n      <div class=\"list_line\" _v-780f6021=\"\"></div>\n      <div class=\"list_date\" v-text=\"week\" _v-780f6021=\"\"></div>\n      <div class=\"list_line\" _v-780f6021=\"\"></div>\n    </div>\n    <div class=\"list\" v-for=\"(item,index) in dataList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-780f6021=\"\">\n      <div class=\"left_img\" _v-780f6021=\"\">\n        <img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\">\n      </div>\n      <div class=\"list_content\" _v-780f6021=\"\">\n        <div class=\"list_title\" v-text=\"item.music\" _v-780f6021=\"\"></div>\n        <div class=\"list_name\" v-text=\"item.album\" _v-780f6021=\"\"></div>\n        <div class=\"list_time\" v-text=\"timeFormat(item.time)\" _v-780f6021=\"\"></div>\n      </div>\n      <div class=\"right_img\" v-if=\"(item.isFree==0 || (item.isFree==1 &amp;&amp; item.isSub==1)) &amp;&amp; item.isPlay==1\" _v-780f6021=\"\">\n        <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-780f6021=\"\"></div>\n        <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"!(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-780f6021=\"\"></div>\n        <div class=\"circle_mask\" _v-780f6021=\"\"></div>\n        <div _v-780f6021=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\"></div>\n      </div>\n      <div class=\"right_img\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==0\" _v-780f6021=\"\">\n        <div class=\"disable\" @click.stop=\"stop_info\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-780f6021=\"\"></div>\n        <div class=\"circle_mask\" _v-780f6021=\"\"></div>\n        <div _v-780f6021=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
+	module.exports = "\n<div _v-96cfcca8=\"\">\n  <div class=\"list1\" _v-96cfcca8=\"\">\n    <div class=\"big_img\" _v-96cfcca8=\"\">\n      <div class=\"list_line\" _v-96cfcca8=\"\"></div>\n      <div class=\"list_date\" v-text=\"week\" _v-96cfcca8=\"\"></div>\n      <div class=\"list_line\" _v-96cfcca8=\"\"></div>\n    </div>\n    <div class=\"list\" v-for=\"(item,index) in dataList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-96cfcca8=\"\">\n      <div class=\"left_img\" _v-96cfcca8=\"\">\n        <img :src=\"item.imageUrl\" alt=\"\" _v-96cfcca8=\"\">\n      </div>\n      <div class=\"list_content\" _v-96cfcca8=\"\">\n        <div class=\"list_title\" v-text=\"item.music\" _v-96cfcca8=\"\"></div>\n        <div class=\"list_name\" v-text=\"item.album\" _v-96cfcca8=\"\"></div>\n        <div class=\"list_time\" v-text=\"timeFormat(item.time)\" _v-96cfcca8=\"\"></div>\n      </div>\n      <div class=\"right_img\" v-if=\"(item.isFree==0 || (item.isFree==1 &amp;&amp; item.isSub==1)) &amp;&amp; item.isPlay==1\" _v-96cfcca8=\"\">\n        <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-96cfcca8=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-96cfcca8=\"\"></div>\n        <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"!(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-96cfcca8=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-96cfcca8=\"\"></div>\n        <div class=\"circle_mask\" _v-96cfcca8=\"\"></div>\n        <div _v-96cfcca8=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-96cfcca8=\"\"></div>\n      </div>\n      <div class=\"right_img\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==0\" _v-96cfcca8=\"\">\n        <div class=\"disable\" @click.stop=\"stop_info\" _v-96cfcca8=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-96cfcca8=\"\"></div>\n        <div class=\"circle_mask\" _v-96cfcca8=\"\"></div>\n        <div _v-96cfcca8=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-96cfcca8=\"\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
 
 /***/ },
 /* 526 */
@@ -33805,7 +31778,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-234ea0bb/bd_album_01.vue"
+	  var id = "_v-8e6e84e0/bd_album_01.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -33829,8 +31802,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-234ea0bb&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_01.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-234ea0bb&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_01.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e6e84e0&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_01.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e6e84e0&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_01.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -33848,7 +31821,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-234ea0bb] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-234ea0bb] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-234ea0bb] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-234ea0bb] {\n  width: 3.75rem;\n}\n\n.content_title[_v-234ea0bb] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-234ea0bb] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-234ea0bb] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-234ea0bb] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-234ea0bb] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-234ea0bb] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-234ea0bb]{\n  position: relative;\n}\n.history_mask[_v-234ea0bb]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-234ea0bb]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-234ea0bb] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-234ea0bb]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-8e6e84e0] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-8e6e84e0] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-8e6e84e0] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-8e6e84e0] {\n  width: 3.75rem;\n}\n\n.content_title[_v-8e6e84e0] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-8e6e84e0] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-8e6e84e0] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-8e6e84e0] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-8e6e84e0] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-8e6e84e0] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-8e6e84e0]{\n  position: relative;\n}\n.history_mask[_v-8e6e84e0]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-8e6e84e0]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-8e6e84e0] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-8e6e84e0]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
 
 	// exports
 
@@ -34049,7 +32022,7 @@
 /* 530 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"all\" _v-234ea0bb=\"\">\n  <div class=\"big_top\" _v-234ea0bb=\"\">\n    <div class=\"big_img\" _v-234ea0bb=\"\">\n      <img id=\"uuu\" :src=\"dataList.imageUrl\" alt=\"\" _v-234ea0bb=\"\">\n    </div>\n    <div class=\"history_mask\" v-if=\"isApp &amp;&amp; history_mask\" _v-234ea0bb=\"\"></div>\n    <div class=\"history\" @click.stop=\"go_history\" v-if=\"isApp &amp;&amp; history_mask\" _v-234ea0bb=\"\">\n      <div _v-234ea0bb=\"\">\n        <div _v-234ea0bb=\"\">上次听到</div>\n        <div style=\"overflow: hidden;max-width: 96px;\" _v-234ea0bb=\"\">{{ historyName }}</div>\n        <div _v-234ea0bb=\"\">...,点我继续收听</div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"content\" _v-234ea0bb=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-234ea0bb=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-234ea0bb=\"\">\n      <div class=\"pri_left\" _v-234ea0bb=\"\">\n        <span v-text=\"dataList.income\" _v-234ea0bb=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-234ea0bb=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-234ea0bb=\"\"></div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"all\" _v-8e6e84e0=\"\">\n  <div class=\"big_top\" _v-8e6e84e0=\"\">\n    <div class=\"big_img\" _v-8e6e84e0=\"\">\n      <img id=\"uuu\" :src=\"dataList.imageUrl\" alt=\"\" _v-8e6e84e0=\"\">\n    </div>\n    <div class=\"history_mask\" v-if=\"isApp &amp;&amp; history_mask\" _v-8e6e84e0=\"\"></div>\n    <div class=\"history\" @click.stop=\"go_history\" v-if=\"isApp &amp;&amp; history_mask\" _v-8e6e84e0=\"\">\n      <div _v-8e6e84e0=\"\">\n        <div _v-8e6e84e0=\"\">上次听到</div>\n        <div style=\"overflow: hidden;max-width: 96px;\" _v-8e6e84e0=\"\">{{ historyName }}</div>\n        <div _v-8e6e84e0=\"\">...,点我继续收听</div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"content\" _v-8e6e84e0=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-8e6e84e0=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-8e6e84e0=\"\">\n      <div class=\"pri_left\" _v-8e6e84e0=\"\">\n        <span v-text=\"dataList.income\" _v-8e6e84e0=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-8e6e84e0=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-8e6e84e0=\"\"></div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 531 */
@@ -34079,7 +32052,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-235cb83c/bd_album_02.vue"
+	  var id = "_v-8e5255de/bd_album_02.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -34103,8 +32076,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-235cb83c&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_02.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-235cb83c&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_02.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e5255de&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_02.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e5255de&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_02.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -34122,7 +32095,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.content2[_v-235cb83c] {\n  padding: 0 0.1rem 0.12rem 0.1rem;\n  background: white;\n}\n\n.content_buy[_v-235cb83c] {\n  position: relative;\n  height: 0.25rem;\n}\n\n.content_buy .count[_v-235cb83c] {\n  color: #666666;\n  font-size: 14px;\n  margin-top: 0.03rem;\n  line-height: 0.2rem;\n}\n\n.content_buy > div[_v-235cb83c] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_header[_v-235cb83c] {\n  position: absolute;\n  right: 0;\n}\n\n.content_header > div[_v-235cb83c] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n  margin-left: 0.05rem;\n}\n\n.content_header img[_v-235cb83c] {\n  border-radius: 50%;\n  height: 0.25rem;\n  width: 0.25rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.content2[_v-8e5255de] {\n  padding: 0 0.1rem 0.12rem 0.1rem;\n  background: white;\n}\n\n.content_buy[_v-8e5255de] {\n  position: relative;\n  height: 0.25rem;\n}\n\n.content_buy .count[_v-8e5255de] {\n  color: #666666;\n  font-size: 14px;\n  margin-top: 0.03rem;\n  line-height: 0.2rem;\n}\n\n.content_buy > div[_v-8e5255de] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_header[_v-8e5255de] {\n  position: absolute;\n  right: 0;\n}\n\n.content_header > div[_v-8e5255de] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n  margin-left: 0.05rem;\n}\n\n.content_header img[_v-8e5255de] {\n  border-radius: 50%;\n  height: 0.25rem;\n  width: 0.25rem;\n}\n", ""]);
 
 	// exports
 
@@ -34141,9 +32114,8 @@
 	//     <div class="content_buy">
 	//       <div class="count"><span v-text="data.body.purchase"></span><span>人订阅</span></div>
 	//       <div class="content_header">
-	//           <div v-for="item in dataList" @click="go_href(item.command.content)">
+	//           <div v-for="item in dataList">
 	//             <img :src="doImg(item.imageUrl)" alt="">
-	//
 	//           </div>
 	//           <div>
 	//             <img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt="">
@@ -34165,9 +32137,6 @@
 	    this.dataList = this.data.body.dataList;
 	  },
 	  methods: {
-	    go_href: function go_href(href) {
-	      window.location.href = href;
-	    },
 	    doImg: function doImg(img) {
 	      if (img) return img;
 	      return "//pic.davdian.com/free/2017/08/22/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.png";
@@ -34223,7 +32192,7 @@
 /* 535 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"content2\" _v-235cb83c=\"\">\n  <div class=\"content_buy\" _v-235cb83c=\"\">\n    <div class=\"count\" _v-235cb83c=\"\"><span v-text=\"data.body.purchase\" _v-235cb83c=\"\"></span><span _v-235cb83c=\"\">人订阅</span></div>\n    <div class=\"content_header\" _v-235cb83c=\"\">\n        <div v-for=\"item in dataList\" @click=\"go_href(item.command.content)\" _v-235cb83c=\"\">\n          <img :src=\"doImg(item.imageUrl)\" alt=\"\" _v-235cb83c=\"\">\n\n        </div>\n        <div _v-235cb83c=\"\">\n          <img src=\"//pic.davdian.com/free/2017/08/16/Group4.png\" alt=\"\" _v-235cb83c=\"\">\n        </div>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"content2\" _v-8e5255de=\"\">\n  <div class=\"content_buy\" _v-8e5255de=\"\">\n    <div class=\"count\" _v-8e5255de=\"\"><span v-text=\"data.body.purchase\" _v-8e5255de=\"\"></span><span _v-8e5255de=\"\">人订阅</span></div>\n    <div class=\"content_header\" _v-8e5255de=\"\">\n        <div v-for=\"item in dataList\" _v-8e5255de=\"\">\n          <img :src=\"doImg(item.imageUrl)\" alt=\"\" _v-8e5255de=\"\">\n        </div>\n        <div _v-8e5255de=\"\">\n          <img src=\"//pic.davdian.com/free/2017/08/16/Group4.png\" alt=\"\" _v-8e5255de=\"\">\n        </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 536 */
@@ -34253,7 +32222,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-236acfbd/bd_album_03.vue"
+	  var id = "_v-8e3626dc/bd_album_03.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -34277,8 +32246,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-236acfbd&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_03.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-236acfbd&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_03.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e3626dc&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_03.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e3626dc&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_03.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -34296,7 +32265,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-236acfbd] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-236acfbd] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-236acfbd] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-236acfbd] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-236acfbd], .b_right[_v-236acfbd] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-236acfbd] {\n  font-size: 14px;\n}\n\n.line[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-236acfbd] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-236acfbd] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-236acfbd]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-236acfbd]{\n  font-size: 0;\n}\n.item_timee>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-236acfbd]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-236acfbd]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-236acfbd]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-236acfbd],.mask_stop[_v-236acfbd],.disable[_v-236acfbd]{\n  z-index:3;\n}\n\n\n\n.free[_v-236acfbd]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.rea[_v-236acfbd]{\n  position: relative;\n}\n\n\n.top[_v-236acfbd]{\n  margin-top: 0.12rem;\n}\n.empty_tab[_v-236acfbd]{\n  height: 0.5rem;\n}\n.tab_fixed[_v-236acfbd]{\n  position: fixed;\n  top: 44px;\n  z-index:999;\n}\n.tab_fixed2[_v-236acfbd]{\n  position: fixed;\n  top:0;\n  z-index:999;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-8e3626dc] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-8e3626dc] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-8e3626dc] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-8e3626dc] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-8e3626dc] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-8e3626dc], .b_right[_v-8e3626dc] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-8e3626dc] {\n  font-size: 14px;\n}\n\n.line[_v-8e3626dc] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-8e3626dc] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-8e3626dc] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-8e3626dc] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-8e3626dc] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-8e3626dc]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-8e3626dc]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-8e3626dc]{\n  font-size: 0;\n}\n.item_timee>div[_v-8e3626dc]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-8e3626dc]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-8e3626dc]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-8e3626dc]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-8e3626dc]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-8e3626dc]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-8e3626dc]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-8e3626dc]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-8e3626dc],.mask_stop[_v-8e3626dc],.disable[_v-8e3626dc]{\n  z-index:3;\n}\n\n\n\n.free[_v-8e3626dc]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.rea[_v-8e3626dc]{\n  position: relative;\n}\n\n\n.top[_v-8e3626dc]{\n  margin-top: 0.12rem;\n}\n.empty_tab[_v-8e3626dc]{\n  height: 0.5rem;\n}\n.tab_fixed[_v-8e3626dc]{\n  position: fixed;\n  top: 44px;\n  z-index:999;\n}\n.tab_fixed2[_v-8e3626dc]{\n  position: fixed;\n  top:0;\n  z-index:999;\n}\n", ""]);
 
 	// exports
 
@@ -34913,15 +32882,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.con[_v-671bd1c0]{\n  background: white;\n}\n.title img[_v-671bd1c0]{\n  margin-top: 0.02rem;\n  width: 2.5rem;\n  height: 0.16rem;\n}\n.list[_v-671bd1c0]{\n  padding-top:0.1rem;\n  padding-bottom:0.1rem;\n  font-size: 0;\n  position: relative;\n}\n.list>div[_v-671bd1c0]{\n  display:inline-block;\n}\n.list_left[_v-671bd1c0]{\n  font-size: 0.14rem;\n}\n.list_right[_v-671bd1c0]{\n  font-size:0.11rem;\n  position: absolute;\n  right: 0;\n  margin-top: 0.05rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n\n.list_content[_v-671bd1c0]{\n  max-width: 3rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  margin-bottom: 0.05rem;\n}\n.list_right img[_v-671bd1c0]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 47px;\n}\n\n.list_right>div[_v-671bd1c0]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-671bd1c0]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-671bd1c0],.mask_stop[_v-671bd1c0]{\n  z-index:3;\n}\n\n\n.list_all[_v-671bd1c0]{\n  padding: 0 0.1rem;\n  border-top: 1px solid #E1E1E1;\n}\n.times>div[_v-671bd1c0]{\n  display: inline-block;\n  font-size: 0;\n  line-height:0.16rem;\n}\n.times .time[_v-671bd1c0]{\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  font-size:11px;\n  margin-right:0.05rem;\n}\n.times .name[_v-671bd1c0]{\n  font-size: 11px;\n}\n.all .list_all[_v-671bd1c0]:nth-child(1){\n  border: 0;\n}\n\n\n\n.big_img[_v-671bd1c0]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.15rem;\n  padding-bottom:0.05rem;\n  font-size: 0;\n  position:relative;\n}\n.big_img>div[_v-671bd1c0]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-671bd1c0]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-671bd1c0]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n.fixed[_v-671bd1c0]{\n  position: absolute;\n  right: 0.1rem;\n  font-size: 0;\n}\n.fixed>div[_v-671bd1c0]{\n  display: inline-block;\n  vertical-align: top;\n}\n.arrow[_v-671bd1c0]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n.arrow img[_v-671bd1c0]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n\n.disable[_v-671bd1c0]{\n  z-index: 5;\n}\n\n", ""]);
-=======
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.con[_v-7430464b]{\n  background: white;\n}\n.title img[_v-7430464b]{\n  margin-top: 0.02rem;\n  width: 2.5rem;\n  height: 0.16rem;\n}\n.list[_v-7430464b]{\n  padding-top:0.1rem;\n  padding-bottom:0.1rem;\n  font-size: 0;\n  position: relative;\n}\n.list>div[_v-7430464b]{\n  display:inline-block;\n}\n.list_left[_v-7430464b]{\n  font-size: 0.14rem;\n}\n.list_right[_v-7430464b]{\n  font-size:0.11rem;\n  position: absolute;\n  right: 0;\n  margin-top: 0.05rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n\n.list_content[_v-7430464b]{\n  max-width: 3rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  margin-bottom: 0.05rem;\n}\n.list_right img[_v-7430464b]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 47px;\n}\n\n.list_right>div[_v-7430464b]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-7430464b]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-7430464b],.mask_stop[_v-7430464b]{\n  z-index:3;\n}\n\n\n.list_all[_v-7430464b]{\n  padding: 0 0.1rem;\n  border-top: 1px solid #E1E1E1;\n}\n.times>div[_v-7430464b]{\n  display: inline-block;\n  font-size: 0;\n  line-height:0.16rem;\n}\n.times .time[_v-7430464b]{\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  font-size:11px;\n  margin-right:0.05rem;\n}\n.times .name[_v-7430464b]{\n  font-size: 11px;\n}\n.all .list_all[_v-7430464b]:nth-child(1){\n  border: 0;\n}\n\n\n\n.big_img[_v-7430464b]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.15rem;\n  padding-bottom:0.05rem;\n  font-size: 0;\n  position:relative;\n}\n.big_img>div[_v-7430464b]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-7430464b]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-7430464b]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n.fixed[_v-7430464b]{\n  position: absolute;\n  right: 0.1rem;\n  font-size: 0;\n}\n.fixed>div[_v-7430464b]{\n  display: inline-block;\n  vertical-align: top;\n}\n.arrow[_v-7430464b]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n.arrow img[_v-7430464b]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n\n\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.con[_v-671bd1c0]{\n  background: white;\n}\n.title img[_v-671bd1c0]{\n  margin-top: 0.02rem;\n  width: 2.5rem;\n  height: 0.16rem;\n}\n.list[_v-671bd1c0]{\n  padding-top:0.1rem;\n  padding-bottom:0.1rem;\n  font-size: 0;\n  position: relative;\n}\n.list>div[_v-671bd1c0]{\n  display:inline-block;\n}\n.list_left[_v-671bd1c0]{\n  font-size: 0.14rem;\n}\n.list_right[_v-671bd1c0]{\n  font-size:0.11rem;\n  position: absolute;\n  right: 0;\n  margin-top: 0.05rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n\n.list_content[_v-671bd1c0]{\n  max-width: 3rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  margin-bottom: 0.05rem;\n}\n.list_right img[_v-671bd1c0]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 47px;\n}\n\n.list_right>div[_v-671bd1c0]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-671bd1c0]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-671bd1c0],.mask_stop[_v-671bd1c0]{\n  z-index:3;\n}\n\n\n.list_all[_v-671bd1c0]{\n  padding: 0 0.1rem;\n  border-top: 1px solid #E1E1E1;\n}\n.times>div[_v-671bd1c0]{\n  display: inline-block;\n  font-size: 0;\n  line-height:0.16rem;\n}\n.times .time[_v-671bd1c0]{\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  font-size:11px;\n  margin-right:0.05rem;\n}\n.times .name[_v-671bd1c0]{\n  font-size: 11px;\n}\n.all .list_all[_v-671bd1c0]:nth-child(1){\n  border: 0;\n}\n\n\n\n.big_img[_v-671bd1c0]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.15rem;\n  padding-bottom:0.05rem;\n  font-size: 0;\n  position:relative;\n}\n.big_img>div[_v-671bd1c0]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-671bd1c0]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-671bd1c0]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n.fixed[_v-671bd1c0]{\n  position: absolute;\n  right: 0.1rem;\n  font-size: 0;\n}\n.fixed>div[_v-671bd1c0]{\n  display: inline-block;\n  vertical-align: top;\n}\n.arrow[_v-671bd1c0]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n.arrow img[_v-671bd1c0]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n\n\n", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
->>>>>>> 1b61be805c777f0c34710bf0b1f7f1b3ff3c171b
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.con[_v-7430464b]{\n  background: white;\n}\n.title img[_v-7430464b]{\n  margin-top: 0.02rem;\n  width: 2.5rem;\n  height: 0.16rem;\n}\n.list[_v-7430464b]{\n  padding-top:0.1rem;\n  padding-bottom:0.1rem;\n  font-size: 0;\n  position: relative;\n}\n.list>div[_v-7430464b]{\n  display:inline-block;\n}\n.list_left[_v-7430464b]{\n  font-size: 0.14rem;\n}\n.list_right[_v-7430464b]{\n  font-size:0.11rem;\n  position: absolute;\n  right: 0;\n  margin-top: 0.05rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n\n.list_content[_v-7430464b]{\n  max-width: 3rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  margin-bottom: 0.05rem;\n}\n.list_right img[_v-7430464b]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 47px;\n}\n\n.list_right>div[_v-7430464b]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-7430464b]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-7430464b],.mask_stop[_v-7430464b]{\n  z-index:3;\n}\n\n\n.list_all[_v-7430464b]{\n  padding: 0 0.1rem;\n  border-top: 1px solid #E1E1E1;\n}\n.times>div[_v-7430464b]{\n  display: inline-block;\n  font-size: 0;\n  line-height:0.16rem;\n}\n.times .time[_v-7430464b]{\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  font-size:11px;\n  margin-right:0.05rem;\n}\n.times .name[_v-7430464b]{\n  font-size: 11px;\n}\n.all .list_all[_v-7430464b]:nth-child(1){\n  border: 0;\n}\n\n\n\n.big_img[_v-7430464b]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.15rem;\n  padding-bottom:0.05rem;\n  font-size: 0;\n  position:relative;\n}\n.big_img>div[_v-7430464b]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-7430464b]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-7430464b]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n.fixed[_v-7430464b]{\n  position: absolute;\n  right: 0.1rem;\n  font-size: 0;\n}\n.fixed>div[_v-7430464b]{\n  display: inline-block;\n  vertical-align: top;\n}\n.arrow[_v-7430464b]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n.arrow img[_v-7430464b]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n\n.disable[_v-7430464b]{\n  z-index: 5;\n}\n\n", ""]);
 
 	// exports
 
@@ -35187,11 +33148,7 @@
 /* 545 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div class=\"con\" @click=\"go_landing\" _v-671bd1c0=\"\">\n  <div class=\"big_img\" _v-671bd1c0=\"\">\n    <div class=\"list_line\" _v-671bd1c0=\"\"></div>\n    <div class=\"list_date\" _v-671bd1c0=\"\">免费学习专区</div>\n    <div class=\"list_line\" _v-671bd1c0=\"\"></div>\n    <div class=\"fixed\" _v-671bd1c0=\"\"><div style=\"color:#333333;font-size: 12px;\" _v-671bd1c0=\"\">更多</div><div class=\"arrow\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/entry.png\" alt=\"\" _v-671bd1c0=\"\"></div></div>\n  </div>\n  <div class=\"all\" _v-671bd1c0=\"\">\n    <div class=\"list_all\" v-for=\"item in dataList\" _v-671bd1c0=\"\">\n      <div class=\"list\" _v-671bd1c0=\"\">\n        <div class=\"list_left\" _v-671bd1c0=\"\">\n          <div class=\"list_content\" v-text=\"item.title\" _v-671bd1c0=\"\"></div>\n          <div class=\"times\" _v-671bd1c0=\"\">\n            <div class=\"time\" v-text=\"item.time\" _v-671bd1c0=\"\"></div>\n            <div class=\"name\" v-text=\"item.album\" _v-671bd1c0=\"\"></div>\n          </div>\n        </div>\n        <div class=\"list_right\" _v-671bd1c0=\"\">\n          <div class=\"disable\" @click.stop=\"stop_info\" v-if=\"item.isPlay==0\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-671bd1c0=\"\"></div>\n          <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp; ( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-671bd1c0=\"\"></div>\n          <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp;  !( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-671bd1c0=\"\"></div>\n          <div class=\"circle_mask\" _v-671bd1c0=\"\"></div>\n          <div _v-671bd1c0=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-671bd1c0=\"\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
-=======
-	module.exports = "\n<div class=\"con\" @click=\"go_landing\" _v-7430464b=\"\">\n  <div class=\"big_img\" _v-7430464b=\"\">\n    <div class=\"list_line\" _v-7430464b=\"\"></div>\n    <div class=\"list_date\" _v-7430464b=\"\">免费学习专区</div>\n    <div class=\"list_line\" _v-7430464b=\"\"></div>\n    <div class=\"fixed\" _v-7430464b=\"\"><div style=\"color:#333333;font-size: 12px;\" _v-7430464b=\"\">更多</div><div class=\"arrow\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/entry.png\" alt=\"\" _v-7430464b=\"\"></div></div>\n  </div>\n  <div class=\"all\" _v-7430464b=\"\">\n    <div class=\"list_all\" v-for=\"item in dataList\" _v-7430464b=\"\">\n      <div class=\"list\" _v-7430464b=\"\">\n        <div class=\"list_left\" _v-7430464b=\"\">\n          <div class=\"list_content\" v-text=\"item.title\" _v-7430464b=\"\"></div>\n          <div class=\"times\" _v-7430464b=\"\">\n            <div class=\"time\" v-text=\"item.time\" _v-7430464b=\"\"></div>\n            <div class=\"name\" v-text=\"item.album\" _v-7430464b=\"\"></div>\n          </div>\n        </div>\n        <div class=\"list_right\" _v-7430464b=\"\">\n          <div class=\"disable\" @click=\"stop_info\" v-if=\"item.isPlay==0\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp; ( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp;  !( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"circle_mask\" _v-7430464b=\"\"></div>\n          <div _v-7430464b=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-7430464b=\"\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
->>>>>>> 1b61be805c777f0c34710bf0b1f7f1b3ff3c171b
+	module.exports = "\n<div class=\"con\" @click=\"go_landing\" _v-7430464b=\"\">\n  <div class=\"big_img\" _v-7430464b=\"\">\n    <div class=\"list_line\" _v-7430464b=\"\"></div>\n    <div class=\"list_date\" _v-7430464b=\"\">免费学习专区</div>\n    <div class=\"list_line\" _v-7430464b=\"\"></div>\n    <div class=\"fixed\" _v-7430464b=\"\"><div style=\"color:#333333;font-size: 12px;\" _v-7430464b=\"\">更多</div><div class=\"arrow\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/entry.png\" alt=\"\" _v-7430464b=\"\"></div></div>\n  </div>\n  <div class=\"all\" _v-7430464b=\"\">\n    <div class=\"list_all\" v-for=\"item in dataList\" _v-7430464b=\"\">\n      <div class=\"list\" _v-7430464b=\"\">\n        <div class=\"list_left\" _v-7430464b=\"\">\n          <div class=\"list_content\" v-text=\"item.title\" _v-7430464b=\"\"></div>\n          <div class=\"times\" _v-7430464b=\"\">\n            <div class=\"time\" v-text=\"item.time\" _v-7430464b=\"\"></div>\n            <div class=\"name\" v-text=\"item.album\" _v-7430464b=\"\"></div>\n          </div>\n        </div>\n        <div class=\"list_right\" _v-7430464b=\"\">\n          <div class=\"disable\" @click.stop=\"stop_info\" v-if=\"item.isPlay==0\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp; ( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp;  !( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"circle_mask\" _v-7430464b=\"\"></div>\n          <div _v-7430464b=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-7430464b=\"\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 546 */
@@ -35853,468 +33810,6 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
-/* 463 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	var axios = __webpack_require__(254);
-	__webpack_require__(280).polyfill();
-	var WebStorageCache = __webpack_require__(330);
-	var WXShareCache = new WebStorageCache({ storage: 'sessionStorage' });
-	var _initShareInfo = void 0;
-
-	/**
-	 * 获取token
-	 * @param {boolean} forcedNetwork
-	 */
-	var getToken = function getToken(forcedNetwork) {
-	    var tokenInfo = getTokenFromSession();
-	    if (!tokenInfo || forcedNetwork) {
-	        getTokenFromNetwork().then(function (data) {
-	            tokenInfo = data.data;
-	            if (!tokenInfo.error) {
-	                initWXShare(tokenInfo);
-	                setTokenToSession(tokenInfo);
-	            } else {
-	                console.log("get token error");
-	            }
-	        }).catch(function () {
-	            retry();
-	        });
-	    } else {
-	        initWXShare(tokenInfo);
-	    }
-	};
-
-	var retry = function retry() {
-	    var timesKey = "init_wx_share_error_times";
-	    var times = +WXShareCache.get(timesKey) || 0;
-	    // 签名失败更新签名 5秒内不超过5次
-	    if (times < 5) {
-	        WXShareCache.set(timesKey, times + 1, { exp: 5 });
-	        getToken(true);
-	    }
-	};
-
-	var wxError = function wxError(res) {
-	    if (res.errMsg == "config:invalid signature") {
-	        retry();
-	    } else {
-	        console.log("wx error: " + res.errMsg);
-	    }
-	};
-
-	var wxReady = function wxReady() {
-	    var shareInfo = getShareInfo();
-	    timelineShare(shareInfo);
-	    appMessageShare(shareInfo);
-	    qqMessageShare(shareInfo);
-	    onMenuShareQZone(shareInfo);
-	    weiboMessageShare(shareInfo);
-	};
-
-	/**
-	 * 分享到朋友圈
-	 */
-	var timelineShare = function timelineShare(shareInfo) {
-	    wx.onMenuShareTimeline({
-	        title: shareInfo.title, // 分享标题
-	        link: shareInfo.link, // 分享链接
-	        imgUrl: shareInfo.imgUrl, // 分享图标
-	        desc: shareInfo.desc,
-	        success: function success() {
-	            // 用户确认分享后执行的回调函数
-	            if (shareInfo.successTimelineShare && typeof shareInfo.successTimelineShare == "function") {
-	                shareInfo.successTimelineShare();
-	            }
-	            if (shareInfo.alwaysTimelineShare && typeof shareInfo.alwaysTimelineShare == "function") {
-	                shareInfo.alwaysTimelineShare();
-	            }
-	            if (window.tlShareCallback) {
-	                window.tlShareCallback();
-	            }
-	        },
-	        cancel: function cancel() {
-	            // 用户取消分享后执行的回调函数
-	            if (shareInfo.cancelTimelineShare && typeof shareInfo.cancelTimelineShare == "function") {
-	                shareInfo.cancelTimelineShare();
-	            }
-	            if (shareInfo.alwaysTimelineShare && typeof shareInfo.alwaysTimelineShare == "function") {
-	                shareInfo.alwaysTimelineShare();
-	            }
-	        }
-	    });
-	};
-	var getNewLineLink = function getNewLineLink(href) {
-	    if (href && href.length > 5 && href.substring(0, 4) && href.substring(0, 5)) {
-	        var str = href.substring(0, 4);
-	        var str1 = href.substring(0, 5);
-	        // console.log(str =='http' && str1 != 'https')
-	        if (str == 'http' && str1 != 'https') {
-	            return href.replace('http', 'https');
-	        } else {
-	            return href;
-	        }
-	    }
-	};
-	var appMessageShare = function appMessageShare(shareInfo) {
-	    wx.onMenuShareAppMessage({
-	        title: shareInfo.title, // 分享标题
-	        link: shareInfo.link, // 分享链接
-	        imgUrl: shareInfo.imgUrl, // 分享图标
-	        desc: shareInfo.desc,
-	        success: function success() {
-	            // 用户确认分享后执行的回调函数
-	            if (shareInfo.successAppMessageShare && typeof shareInfo.successAppMessageShare == "function") {
-	                shareInfo.successAppMessageShare();
-	            }
-	            if (shareInfo.alwaysAppMessageShare && typeof shareInfo.alwaysAppMessageShare == "function") {
-	                shareInfo.alwaysAppMessageShare();
-	            }
-	            if (window.sendShareCallback) {
-	                window.sendShareCallback();
-	            }
-	        },
-	        cancel: function cancel() {
-	            // 用户取消分享后执行的回调函数
-	            if (shareInfo.cancelAppMessageShare && typeof shareInfo.cancelAppMessageShare == "function") {
-	                shareInfo.cancelAppMessageShare();
-	            }
-	            if (shareInfo.alwaysAppMessageShare && typeof shareInfo.alwaysAppMessageShare == "function") {
-	                shareInfo.alwaysAppMessageShare();
-	            }
-	        }
-	    });
-	};
-
-	var qqMessageShare = function qqMessageShare(shareInfo) {
-	    wx.onMenuShareQQ({
-	        title: shareInfo.title, // 分享标题
-	        link: shareInfo.link, // 分享链接
-	        imgUrl: shareInfo.imgUrl, // 分享图标
-	        desc: shareInfo.desc,
-	        success: function success() {
-	            // 用户确认分享后执行的回调函数
-	            if (shareInfo.successQqMessageShare && typeof shareInfo.successQqMessageShare == "function") {
-	                shareInfo.successQqMessageShare();
-	            }
-	            if (shareInfo.alwaysQqMessageShare && typeof shareInfo.alwaysQqMessageShare == "function") {
-	                shareInfo.alwaysQqMessageShare();
-	            }
-	        },
-	        cancel: function cancel() {
-	            // 用户取消分享后执行的回调函数
-	            if (shareInfo.cancelQqMessageShare && typeof shareInfo.cancelQqMessageShare == "function") {
-	                shareInfo.cancelQqMessageShare();
-	            }
-	            if (shareInfo.alwaysQqMessageShare && typeof shareInfo.alwaysQqMessageShare == "function") {
-	                shareInfo.alwaysQqMessageShare();
-	            }
-	        }
-	    });
-	};
-
-	var onMenuShareQZone = function onMenuShareQZone(shareInfo) {
-	    wx.onMenuShareQZone({
-	        title: shareInfo.title, // 分享标题
-	        link: shareInfo.link, // 分享链接
-	        imgUrl: shareInfo.imgUrl, // 分享图标
-	        desc: shareInfo.desc,
-	        success: function success() {
-	            if (shareInfo.successOnMenuShareQZone && typeof shareInfo.successOnMenuShareQZone == "function") {
-	                shareInfo.successOnMenuShareQZone();
-	            }
-	            if (shareInfo.successOnMenuShareQZone && typeof shareInfo.successOnMenuShareQZone == "function") {
-	                shareInfo.successOnMenuShareQZone();
-	            }
-	            if (window.QQShareCallback) {
-	                window.QQShareCallback();
-	            }
-	        },
-	        cancel: function cancel() {
-	            // 用户取消分享后执行的回调函数
-	            if (shareInfo.cancelOnMenuShareQZone && typeof shareInfo.cancelOnMenuShareQZone == "function") {
-	                shareInfo.cancelOnMenuShareQZone();
-	            }
-	            if (shareInfo.cancelOnMenuShareQZone && typeof shareInfo.cancelOnMenuShareQZone == "function") {
-	                shareInfo.cancelOnMenuShareQZone();
-	            }
-	        }
-	    });
-	};
-
-	var weiboMessageShare = function weiboMessageShare(shareInfo) {
-	    wx.onMenuShareWeibo({
-	        title: shareInfo.title, // 分享标题
-	        link: shareInfo.link, // 分享链接
-	        imgUrl: shareInfo.imgUrl, // 分享图标
-	        desc: shareInfo.desc,
-	        success: function success() {
-	            // 用户确认分享后执行的回调函数
-	            if (shareInfo.successWeiboMessageShare && typeof shareInfo.successWeiboMessageShare == "function") {
-	                shareInfo.successWeiboMessageShare();
-	            }
-	            if (shareInfo.alwaysWeiboMessageShare && typeof shareInfo.alwaysWeiboMessageShare == "function") {
-	                shareInfo.alwaysWeiboMessageShare();
-	            }
-	        },
-	        cancel: function cancel() {
-	            // 用户取消分享后执行的回调函数
-	            if (shareInfo.cancelWeiboMessageShare && typeof shareInfo.cancelWeiboMessageShare == "function") {
-	                shareInfo.cancelWeiboMessageShare();
-	            }
-	            if (shareInfo.alwaysWeiboMessageShare && typeof shareInfo.alwaysWeiboMessageShare == "function") {
-	                shareInfo.alwaysWeiboMessageShare();
-	            }
-	        }
-	    });
-	};
-
-	var initWXShare = function initWXShare(result) {
-	    if (window.wx) {
-	        var _wx = window.wx;
-	        _wx.error(wxError);
-	        _wx.ready(wxReady);
-	        _wx.config({
-	            debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
-	            appId: result["data"]["appId"], // 必填，公众号的唯一标识
-	            timestamp: result["data"]["timestamp"], // 必填，生成签名的时间戳
-	            nonceStr: result["data"]["nonceStr"], // 必填，生成签名的随机串
-	            signature: result["data"]["signature"], // 必填，签名，见附录1
-	            jsApiList: ["onMenuShareTimeline", "onMenuShareAppMessage", "onMenuShareQQ", "onMenuShareQZone", "onMenuShareWeibo"] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
-	        });
-	    }
-	};
-
-	/**
-	 * 从缓存中获取token
-	 */
-	var getTokenFromSession = function getTokenFromSession() {
-	    return WXShareCache.get("dvd_wx_token");
-	};
-
-	/**
-	 * 向缓存中设置token
-	 * @param {object} info
-	 */
-	var setTokenToSession = function setTokenToSession(info) {
-	    return WXShareCache.set("dvd_wx_token", info);
-	};
-
-	/**
-	 * 从网络上获取token
-	 */
-	var getTokenFromNetwork = function getTokenFromNetwork() {
-	    return new Promise(function (resolve, reject) {
-	        axios.get('/wechatJsToken', { params: { url: encodeURIComponent(location.href) } }).then(function (respone) {
-	            resolve(respone);
-	        }).catch(function (error) {
-	            reject(error);
-	        });
-	    });
-	};
-
-	var init = function init(shareInfo) {
-	    _initShareInfo = shareInfo || {};
-	    getToken(false);
-	};
-
-	var getShareInfo = function getShareInfo() {
-	    // 设置默认值，部分从window中取到
-	    var newShareInfo = {
-	        title: window.shareTitle || window.title || "大V店",
-	        link: getNewLineLink(window.lineLink || window.link || location.href),
-	        imgUrl: window.imgUrl || "http://pic.davdian.com/free/index0925_icon1.png?x-oss-process=image/resize,m_fill,w_80",
-	        desc: window.descContent || window.desc || "大V店"
-	    };
-	    Object.assign(newShareInfo, _initShareInfo);
-	    return newShareInfo;
-	};
-
-	exports.default = {
-	    init: init,
-	    getShareInfo: getShareInfo
-	};
-
-/***/ },
-/* 464 */,
-/* 465 */,
-/* 466 */,
-/* 467 */,
-/* 468 */,
-/* 469 */,
-/* 470 */,
-/* 471 */,
-/* 472 */,
-/* 473 */,
-/* 474 */,
-/* 475 */,
-/* 476 */,
-/* 477 */,
-/* 478 */,
-/* 479 */,
-/* 480 */,
-/* 481 */,
-/* 482 */,
-/* 483 */,
-/* 484 */,
-/* 485 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(486)
-	__vue_script__ = __webpack_require__(488)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/component/com-to-top-icon.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(489)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-5c521926/com-to-top-icon.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 486 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(487);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-to-top-icon.vue", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/vue-loader/lib/style-rewriter.js!../../node_modules/sass-loader/index.js!../../node_modules/vux-loader/src/style-loader.js!../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./com-to-top-icon.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 487 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(42)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".to-top-icon {\n  position: fixed;\n  /*right: .07rem;*/\n  margin-left: 3.25rem;\n  bottom: .7rem;\n  width: .44rem;\n  z-index: 1; }\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 488 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _$ = __webpack_require__(24);
-
-	var _$2 = _interopRequireDefault(_$);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  props: {},
-	  data: function data() {
-	    return {
-	      display: 'none'
-	    };
-	  },
-	  methods: {
-	    toTop: function toTop() {
-	      (0, _$2.default)('html,body').animate({ scrollTop: 0 }, 500);
-	    }
-	  },
-	  filters: {},
-	  computed: {},
-	  watch: {},
-	  mounted: function mounted() {
-	    var ts = this;
-	    window.addEventListener('scroll', function () {
-	      if (document.body.scrollTop >= 200) {
-	        ts.display = 'block';
-	      } else {
-	        ts.display = 'none';
-	      }
-	    }, false);
-	  }
-	  // </script>
-
-	}; // <template>
-	//   <!--滚动至顶图标-->
-	//   <img class="to-top-icon" @click="toTop" :style="{display: display}"
-	//        :src="'http://pic.davdian.com/free/back_top_icon_0803.png'">
-	// </template>
-	//
-	// <!--样式-->
-	// <style lang="sass" lang="scss" rel="stylesheet/scss">
-	//   @import "../common/css/util/all";
-	//
-	//   // 滚动至顶图标
-	//   .to-top-icon {
-	//     position: fixed;
-	//     /*right: .07rem;*/
-	//     margin-left: 3.25rem;
-	//     bottom: .7rem;
-	//     width: .44rem;
-	//     z-index: 1;
-	//   }
-	// </style>
-	//
-	// <!--组件定义-->
-	// <script>
-
-/***/ },
-/* 489 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<!--滚动至顶图标-->\n<img class=\"to-top-icon\" @click=\"toTop\" :style=\"{display: display}\"\n     :src=\"'http://pic.davdian.com/free/back_top_icon_0803.png'\">\n";
-
-/***/ },
-/* 490 */,
-/* 491 */
-=======
 /* 562 */,
 /* 563 */,
 /* 564 */,
@@ -36953,7 +34448,6 @@
 /* 1197 */,
 /* 1198 */,
 /* 1199 */
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
@@ -37023,11 +34517,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-52c32c2d]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-52c32c2d]{\n  height: 44px;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-f53c15bc]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-f53c15bc]{\n  height: 44px;\n}\n", ""]);
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-52c32c2d]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-52c32c2d]{\n  height: 44px;\n}\n", ""]);
 
 	// exports
 
@@ -37688,11 +35178,7 @@
 /* 1218 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
-	module.exports = "\n<div _v-52c32c2d=\"\">\n  <lheader class=\"top\" v-if=\"!isApp\" _v-52c32c2d=\"\"></lheader>\n  <div class=\"empty_div\" v-if=\"!isApp\" _v-52c32c2d=\"\"></div>\n  <index_feed :data=\"data\" _v-52c32c2d=\"\"></index_feed>\n  <maskk v-if=\"isApp &amp;&amp; maskFlag\" _v-52c32c2d=\"\"></maskk>\n  <maskk2 v-if=\"!isApp &amp;&amp; maskFlag\" _v-52c32c2d=\"\"></maskk2>\n</div>\n";
-=======
-	module.exports = "\n<div _v-f53c15bc=\"\">\n  <lheader class=\"top\" v-if=\"!isApp\" _v-f53c15bc=\"\"></lheader>\n  <div class=\"empty_div\" v-if=\"!isApp\" _v-f53c15bc=\"\"></div>\n  <index_feed :data=\"data\" _v-f53c15bc=\"\"></index_feed>\n  <maskk v-if=\"isApp &amp;&amp; maskFlag\" _v-f53c15bc=\"\"></maskk>\n  <maskk2 v-if=\"!isApp &amp;&amp; maskFlag\" _v-f53c15bc=\"\"></maskk2>\n  <top v-if=\"!isApp\" _v-f53c15bc=\"\"></top>\n</div>\n";
->>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+	module.exports = "\n<div _v-52c32c2d=\"\">\n  <lheader class=\"top\" v-if=\"!isApp\" _v-52c32c2d=\"\"></lheader>\n  <div class=\"empty_div\" v-if=\"!isApp\" _v-52c32c2d=\"\"></div>\n  <index_feed :data=\"data\" _v-52c32c2d=\"\"></index_feed>\n  <maskk v-if=\"isApp &amp;&amp; maskFlag\" _v-52c32c2d=\"\"></maskk>\n  <maskk2 v-if=\"!isApp &amp;&amp; maskFlag\" _v-52c32c2d=\"\"></maskk2>\n  <top v-if=\"!isApp\" _v-52c32c2d=\"\"></top>\n</div>\n";
 
 /***/ },
 /* 1219 */
