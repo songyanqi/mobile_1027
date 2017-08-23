@@ -89,7 +89,7 @@
                       that.pageFlag=true
                     }
                     native.Browser.setHead({
-                      'title':'合辑页',
+                      'title':that.title,
                       'backBtn':'1',
                       'shareBtn':"1",
                       'shareMoney':result.data.attr.income,

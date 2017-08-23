@@ -52,7 +52,7 @@
         this.scrol();
 
         native.Browser.setHead({
-          'title':'标题',
+          'title':'免费学习专区',
           'backBtn':'1',
           'shareBtn':"1"
         })
