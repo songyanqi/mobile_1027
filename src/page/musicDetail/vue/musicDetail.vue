@@ -316,7 +316,7 @@
               okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
               cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
               okBtnCallback: function(){
-                console.log(123)
+                that.subscription()
               },
               cancelBtnCallback: function(){}
             });
