@@ -10,7 +10,7 @@
       <div class="mask_tab" v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].isPlay != 1'>
         <div class="mask_text">
           <div class="mask_content">付费内容</div>
-          <div class="mask_content2"><span>99</span>订阅即可收听本专辑全部内容</div>
+          <div class="mask_content2">¥<span v-text="price"></span>订阅即可收听本专辑全部内容</div>
           <div class="mask_free">会员免费订阅</div>
           <div class="mask_btn" @click='subscription'>立即订阅</div>
         </div>
@@ -88,7 +88,8 @@
         allAudio: null,
         getDataFlag:true,
         scrollTop:1,
-        isapp: util.utils.isApp()
+        isapp: util.utils.isApp(),
+        price:-1
       }
     },
     computed: {
@@ -150,6 +151,7 @@
         api('/api/mg/content/music/getListData', obj).then(function(data){
           if (data.code ==0){
             if (data.data && data.data.dataList){
+              that.price=data.data.attr.price;
               that.musicList = that.musicList.concat(data.data.dataList)
               that.allAudio = data.data.attr.count
             } else {
@@ -544,6 +546,10 @@
     color: #333333;
     font-size: 16px;
     background: #fff;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0 0.1rem;
   }
 
   .range{
@@ -786,6 +792,10 @@
     position:absolute;
     left: 0.2rem;
     line-height: 0.18rem;
+    max-width: 3rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .list_name_select{
     color: #FF4A7D;
