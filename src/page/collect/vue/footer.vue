@@ -1,6 +1,5 @@
 <template>
   <div class="btn">
-    ::{{ isPrice }}::
     <div class="btn_left" v-if="userstatus==1 || userstatus==0">成为会员免费听</div>
     <div class="btn_left" v-if="userstatus==3"><span>邀请赚¥</span><span v-text="price"></span></div>
     <div class="btn_right">

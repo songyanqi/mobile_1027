@@ -242,10 +242,12 @@
                 "sortNo":that.sortNoIndex
               };
               if(localStorage.getItem("access_token")){
-                  obj[access_token]=localStorage.getItem("access_token");
+                  obj.access_token=localStorage.getItem("access_token");
+//                  console.log(localStorage.getItem("access_token"));
               }
               if(localStorage.getItem("expires_in")){
-                obj[expires_in]=localStorage.getItem("expires_in");
+                  obj.expires_in=localStorage.getItem("expires_in");
+//                  console.log(localStorage.getItem("expires_in"));
               }
               api("/api/mg/content/music/getListData",obj)
                 .then(function (result) {
@@ -292,7 +294,6 @@
               console.log(top);
             };
             $(window).scroll(function(){
-              console.log($("body").scrollTop())
               if($("body").scrollTop()>=top){
                 _this.empty_tab=true;
               }else{
