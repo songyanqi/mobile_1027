@@ -1,11 +1,11 @@
 <template>
   <div class="con" @click="go_landing">
-    <div class="big_img">
-      <div class="list_line"></div>
-      <div class="list_date">免费学习专区</div>
-      <div class="list_line"></div>
-      <div class="fixed"><div style="color:#333333;font-size: 12px;">更多</div><div class="arrow"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div></div>
-    </div>
+    <!--<div class="big_img">-->
+      <!--<div class="list_line"></div>-->
+      <!--<div class="list_date" v-text="title"></div>-->
+      <!--<div class="list_line"></div>-->
+      <!--<div class="fixed"><div style="color:#333333;font-size: 12px;">更多</div><div class="arrow"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div></div>-->
+    <!--</div>-->
     <div class="all">
       <div class="list_all" v-for="item in dataList">
         <div class="list">
@@ -36,6 +36,7 @@
     props:["data"],
     mounted:function () {
       this.dataList=this.data.body.dataList;
+      this.title=this.data.title.name;
       this.$nextTick(function () {
         this.audioLocation();
       });
@@ -47,7 +48,8 @@
          childrenName:"bd_study_0",
          albumId:null,
          sortNo:null,
-         btnStatus:0
+         btnStatus:0,
+          title:""
      }
     },
     methods:{
@@ -75,23 +77,14 @@
         }
       },
       go_landing(){
-        if(this.isApp){
+        if (this.isApp) {
           native.Browser.open({
-            "url":"/landingPage.html"
+            "url": "/landingPage.html"
           });
-        }else{
-          window.location.href="/landingPage.html";
+        } else {
+          window.location.href = "/landingPage.html";
         }
       }
-//      music_detail(albumId,sortNo){
-//          if(this.isApp){
-//            native.Browser.open({
-//              "url":"/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo
-//            });
-//          }else{
-//            window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
-//          }
-//      }
     }
   }
 </script>
