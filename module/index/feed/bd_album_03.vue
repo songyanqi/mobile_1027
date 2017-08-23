@@ -32,7 +32,7 @@
         </div>
       </div>
       <div class="list">
-        <div class="item" v-for="(item,index) in contentList" @click="go_href.stop(item.albumId,item.sortNo)" >
+        <div class="item" v-for="(item,index) in contentList" @click.stop="go_href(item.albumId,item.sortNo)" >
           <div class="rea">
             <div class="item_left">
               <div class="item_title" v-text="item.music"></div>
@@ -41,24 +41,25 @@
                 <div class="item_count"><span v-text="item.number"></span>次播放</div>
                 <div class="item_time">
                   <div class="clock"></div>
-                  <div class="times" v-text="item.time"></div>
+                  <div class="times" v-text="timeFormat(item.time)"></div>
                 </div>
               </div>
             </div>
-            <div class="item_right" v-if="item.isSub==1">
+            <div class="item_right" v-if="item.isFree==0 || (item.isFree==1 && item.isSub==1)">
               <div class="mask_stop" v-if="(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
               <div class="mask_play" v-if="!(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
-            <div class="item_right" v-if="item.isFree==1 && item.isSub==0">
+            <div class="item_right" v-if="item.isFree==1 && item.isSub==0 && item.isPlay==0">
               <div class="disable" @click.stop="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
-            <div class="item_right2" v-if="item.isFree==0 && isSub==0" @click="go_href(item.albumId,item.sortNo)">
+            <div class="item_right2" v-if="item.isFree==1 && item.isSub==0 && item.isPlay==1" @click="go_href(item.albumId,item.sortNo)">
               <div class="free">免费试听</div>
             </div>
+
           </div>
         </div>
       </div>
@@ -126,6 +127,41 @@
           }
       },
       methods:{
+          timeFormat(t){
+            let time = parseInt(t) + 1
+            if (time<60){
+              if (time<10){
+                time = '0' + parseInt(t)
+              }
+              return '00:'+time
+            }else {
+              if (time<3600){
+                let minutes = parseInt(time/60)
+                let seconds = time - minutes*60
+                if (minutes<10){
+                  minutes = '0' + minutes
+                }
+                if (seconds<10){
+                  seconds = '0' + seconds
+                }
+                return minutes + ':' + seconds
+              }else {
+                let hours = parseInt(time/3600)
+                let minutes = parseInt((time-hours*3600)/60)
+                let seconds = time - hours*3600 - minutes*60
+                if (hours<10){
+                  hours = '0' + hours
+                }
+                if (minutes<10){
+                  minutes = '0' + minutes
+                }
+                if (seconds<10){
+                  seconds = '0' + seconds
+                }
+                return hours + ':' + minutes + ':' + seconds
+              }
+            }
+          },
           audioLocation(){
             if(this.isApp){
               native.Audio.audioLocation({

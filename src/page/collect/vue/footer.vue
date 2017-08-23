@@ -1,12 +1,12 @@
 <template>
   <div class="btn">
-    ::{{ isSub }}::
+    ::{{ isPrice }}::
     <div class="btn_left" v-if="userstatus==1 || userstatus==0">成为会员免费听</div>
     <div class="btn_left" v-if="userstatus==3"><span>邀请赚¥</span><span v-text="price"></span></div>
     <div class="btn_right">
       <img src="//pic.davdian.com/free/2017/08/16/Rectangle.png" alt="">
       <div class="btn_text" @click="Subscribe" v-if="isSub==0 && (userstatus==1 || userstatus==0)">
-        <span><span>订阅合辑</span><span v-if="priceFlag">:¥</span><span v-text="doprice"></span></span>
+        <span><span>订阅合辑</span><span v-if="ifPrice">:¥</span><span v-text="isPrice"></span></span>
       </div>
       <div class="btn_text" @click="Subscribe" v-if="isSub==0 && userstatus==3">
         <span>会员免费订阅</span>
@@ -27,6 +27,9 @@
     computed:{
       isSub:function () {
         return this.sub;
+      },
+      isPrice:function () {
+        return this.price;
       }
     },
     data(){
@@ -34,13 +37,16 @@
         priceFlag:true
       }
     },
+    mounted:function () {
+      console.log(this.isPrice);
+    },
     methods:{
-      doprice(){
-          if(this.price=="0.00"){
-            this.priceFlag=false;
-            return "";
+      ifPrice(){
+          if(this.isPrice=="0.00"){
+              return false;
+          }else{
+              return true;
           }
-          return this.price;
       },
       nativePay(url, callback){
         var option = {};
@@ -81,11 +87,13 @@
                   });
                 } else {
                   that.sub=1;
+                  alert(123456);
                   // 报名成功
                 }
               } else {
                 that.sub=1;
                 dialog.alert(result.data.msg);
+                that.$emit("re");
               }
             }else {
               dialog.alert('code:' + code + 'msg:'+ result.data.msg)

@@ -4,7 +4,8 @@
       <div class="count"><span v-text="data.body.purchase"></span><span>人订阅</span></div>
       <div class="content_header">
           <div v-for="item in dataList" @click="go_href(item.command.content)">
-            <img :src="item.imageUrl" alt="">
+            <img :src="doImg(item.imageUrl)" alt="">
+
           </div>
           <div>
             <img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt="">
@@ -27,6 +28,10 @@
     methods:{
       go_href(href){
           window.location.href=href;
+      },
+      doImg(img){
+          if(img)return img;
+          return "//pic.davdian.com/free/2017/08/22/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.png"
       }
     }
   }

@@ -504,7 +504,7 @@
     /*padding: 0.19rem 0.1rem 0 0.1rem;*/
     position:relative;
     height: 0.26rem;
-    margin: 0 0.1rem;
+    padding: 0 0.1rem;
     background: #ffffff;
   }
   .gray{
@@ -512,7 +512,8 @@
     background: #ECECEC;
     position:absolute;
     top: 0.11rem;
-    width: 100%;
+    left: 0.1rem;
+    right: 0.1rem;
   }
   .red{
     height: 0.04rem;
