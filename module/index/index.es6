@@ -11,7 +11,6 @@ import layout from "./layout.es6"
 import {savebackData, getbackData} from "../../utils/utils.es6"
 import NProgress from 'nprogress'
 import share from '../../src/common/js/module/share.js'
-import native from "../../src/common/js/module/native.js"
 
 export default{
   data(){
@@ -82,9 +81,10 @@ export default{
         savebackData(that);
 
       })
-      native.Browser.initHead({
-        isAudioAbsorb:'1'
-      });
+      window.appData.isAudioAbsorb = 1
+      setTimeout(function(){
+        window.bravetime.initHead()
+      },500)
     })
   },
   methods: {

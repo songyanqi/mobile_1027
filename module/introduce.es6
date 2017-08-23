@@ -90,9 +90,10 @@ export default {
                             window.singlePicHold(ele);
                         })
                     });
-                    window.appData={
-                        isAudioAbsorb:1
-                    }
+                    window.appData.isAudioAbsorb = 1
+                    setTimeout(function(){
+                        window.bravetime.initHead()
+                      },500)
                     if (!error && deleteFlag){
                         
                     }

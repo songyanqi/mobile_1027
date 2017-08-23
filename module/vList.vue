@@ -108,7 +108,6 @@
     import vListContent from './vListContent.vue'
     import comFooter from '../src/component/com-footer.vue'
     import layout from "./layout/api.es6";
-    import native from "../src/common/js/module/native.js"
     export default{
         data(){
             return{
@@ -154,9 +153,6 @@
             init(){
                 this.haveMenu = !window.Units.getQuery('isMenu')
                 this.getData()
-                native.Browser.initHead({
-                  isAudioAbsorb:'1'
-                });
             },
             getData(){
                 var that = this
@@ -175,6 +171,7 @@
                     setTimeout(function(){
                         window.appData.showHead = 1
                         window.appData.backOnHead = 1
+                        window.appData.isAudioAbsorb = 1
                         window.bravetime.initHead()
                     },500)
                 }
