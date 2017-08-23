@@ -21,6 +21,7 @@
   import native from "../../../../src/common/js/module/native.js"
   import dialog from "../../../../utils/dialog.es6";
   import {getQuery} from "../../../../utils/utils.es6";
+  import util from "../../../../utils/utils.es6";
   export default {
     props:["income","sub","userstatus","albumid","price"],
     computed:{
@@ -33,7 +34,8 @@
     },
     data(){
       return {
-        priceFlag:true
+        priceFlag:true,
+        isapp: util.utils.isApp()
       }
     },
     mounted:function () {
@@ -95,6 +97,13 @@
                 that.$emit("re");
               }
             }else {
+              if (result.data.code == 400){
+                if (that.isapp){
+                  native.Account.login()
+                }else {
+                  window.location.href = '/login.html'
+                }
+              }
               dialog.alert('code:' + code + 'msg:'+ result.data.msg)
             }
           })
