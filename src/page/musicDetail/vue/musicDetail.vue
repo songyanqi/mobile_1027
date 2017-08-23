@@ -167,12 +167,13 @@
             localStorage.setItem('access_token', data.data.xmlyToken.access_token)
             localStorage.setItem('expires_in', data.data.xmlyToken.expires_in)
           }
-          if (data && data.data && data.data.shareInfo){
+          console.log(that.index ,data.data.dataList[that.index].shareInfo)
+          if (data && data.data && data.data.dataList && data.data.dataList[that.index] && data.data.dataList[that.index].shareInfo){
             share.setShareInfo({
-              title: data.data.shareInfo.title,
-              desc: data.data.shareInfo.desc,
-              link: data.data.shareInfo.link,
-              imgUrl: data.data.shareInfo.imgUrl
+              title: data.data.dataList[that.index].shareInfo.title,
+              desc: data.data.dataList[that.index].shareInfo.desc,
+              link: data.data.dataList[that.index].shareInfo.link,
+              imgUrl: data.data.dataList[that.index].shareInfo.imgUrl
             });
           }
         })
@@ -227,6 +228,20 @@
           }
           
         })
+      },
+      shareInfo(index){
+        var that = this
+        let shareInfo = {}
+        if (that.musicList[index].shareInfo){
+          shareInfo = that.musicList[index].shareInfo
+          share.setShareInfo({
+            title: shareInfo.title,
+            desc: shareInfo.desc,
+            link: shareInfo.link,
+            imgUrl: shareInfo.imgUrl
+          });
+        }
+        console.log('shareinfo-->', shareInfo)
       },
       goback(){
         window.history.back()
@@ -360,6 +375,7 @@
             clearInterval(that.playTimer)
             that.playAudio(that.index + 1)
           }
+          that.shareInfo(that.index)
         } else {
           if (that.isPlay){
             that.isPlay = false
