@@ -16,7 +16,6 @@
 //    import indexFoot from '../module/index/index_footer.vue'
     import indexFoot from '../src/component/com-footer.vue'
     import common from "./common/common.es6";
-    import native from "../src/common/js/module/native.js"
 
 
     export default{
@@ -38,9 +37,10 @@
         },
         mounted:function () {
             this.init()
-            native.Browser.initHead({
-              isAudioAbsorb:'1'
-            });
+            window.appData.isAudioAbsorb = 1
+            setTimeout(function(){
+                window.bravetime.initHead()
+            },500)
         },
 
         methods:{

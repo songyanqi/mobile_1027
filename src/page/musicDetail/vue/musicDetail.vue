@@ -174,7 +174,7 @@
             try {
               share.setShareInfo({
                 title: data.data.dataList[that.index].shareInfo.title,
-                desc: 'hahahahh',
+                desc: data.data.dataList[that.index].shareInfo.desc,
                 link: data.data.dataList[that.index].shareInfo.link,
                 imgUrl: data.data.dataList[that.index].shareInfo.imgUrl
               });
