@@ -31,6 +31,7 @@
 <script>
   import util from "../../../utils/utils.es6";
   import native from "../../../src/common/js/module/native";
+  import dialog from "../../../utils/dialog.es6";
   export default{
     props:["data"],
     mounted:function () {
@@ -50,6 +51,9 @@
      }
     },
     methods:{
+      stop_info(){
+        dialog.alert("订阅后才可收听");
+      },
       audioLocation(){
         if(this.isApp){
           native.Audio.audioLocation({

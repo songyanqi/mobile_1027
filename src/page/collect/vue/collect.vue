@@ -9,6 +9,7 @@
     <maskk2 v-if="!isApp && maskFlag"></maskk2>
     <data_mask v-if="isApp && maskFlag2"></data_mask>
     <data_mask2 v-if="!isApp && maskFlag2"></data_mask2>
+    <top v-if="!isApp"></top>
   </div>
 
 </template>
@@ -27,6 +28,7 @@
   import maskk2 from "./mask2.vue"
   import data_mask from "./data_mask.vue"
   import data_mask2 from "./data_mask2.vue"
+  import top from "../../../component/com-to-top-icon.vue"
   export default {
     components:{
       index_feed:index_feed,
@@ -35,7 +37,8 @@
       maskk:maskk,
       maskk2:maskk2,
       data_mask:data_mask,
-      data_mask2:data_mask2
+      data_mask2:data_mask2,
+      top:top
     },
     data(){
       return {

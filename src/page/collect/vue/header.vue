@@ -59,5 +59,11 @@
     text-align: center;
     line-height: 44px;
     font-size: 16px;
+
+    max-width: 2.15rem;
+    margin: 0 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 </style>

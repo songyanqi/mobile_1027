@@ -4,8 +4,8 @@
       <div class="big_img">
         <img id="uuu" :src="dataList.imageUrl" alt="">
       </div>
-      <div class="history_mask" v-if="isApp"></div>
-      <div class="history" @click.stop="go_history" v-if="isApp">
+      <div class="history_mask" v-if="isApp && history_mask"></div>
+      <div class="history" @click.stop="go_history" v-if="isApp && history_mask">
         <div>
           <div>上次听到</div>
           <div style="overflow: hidden;max-width: 96px;">{{ historyName }}</div>
@@ -49,7 +49,8 @@
             sortNo:null,
             timestamp:null,
             isApp:util.utils.isApp(),
-            albumId:getQuery("albumId")
+            albumId:getQuery("albumId"),
+            history_mask:false
         }
     },
     methods:{
@@ -76,6 +77,7 @@
                 _this.historyName=obj.name;
                 _this.sortNo=obj.sortNo;
                 _this.timestamp=obj.date;
+                _this.history_mask=true;
               }
             })
           },4000)
