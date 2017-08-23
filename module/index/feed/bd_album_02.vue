@@ -1,13 +1,12 @@
 <template>
   <div class="content2">
-    ::{{ dataList.length }}::
     <div class="content_buy">
       <div class="count"><span v-text="data.body.purchase"></span><span>人</span><span v-if="isFree==1">订阅</span><span v-if="isFree==0">听过</span></div>
       <div class="content_header">
           <div v-for="item in dataList">
             <img :src="doImg(item.imageUrl)" alt="">
           </div>
-          <div v-if="head_count < 8">
+          <div v-if="head_count() == 7">
             <img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt="">
           </div>
       </div>

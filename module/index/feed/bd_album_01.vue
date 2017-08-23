@@ -9,7 +9,8 @@
         <div>
           <div>上次听到</div>
           <div style="overflow: hidden;max-width: 96px;">{{ historyName }}</div>
-          <div>...,点我继续收听</div>
+          <div>...</div>
+          <div>，点我继续收听</div>
         </div>
       </div>
 

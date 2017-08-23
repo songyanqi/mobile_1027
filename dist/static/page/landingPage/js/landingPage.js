@@ -3997,11 +3997,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-1a34eddb/com-popup-toast.vue"
-=======
-	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5169,11 +5165,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-57b26686/com-share-pop-tip.vue"
-=======
-	  var id = "_v-7718a21b/com-share-pop-tip.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5406,7 +5398,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5a56717e/index_feed.vue"
+	  var id = "_v-e9b65e2e/index_feed.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5920,7 +5912,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-869a2f9a/bd_slide_0.vue"
+	  var id = "_v-a0c318b0/bd_slide_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7336,7 +7328,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-f2949a2e/bd_icon_0.vue"
+	  var id = "_v-3dbf3658/bd_icon_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7513,7 +7505,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7a08e701/tt_com_0.vue"
+	  var id = "_v-19dacbb6/tt_com_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7736,7 +7728,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-8b68ba7a/bd_broadcast_0.vue"
+	  var id = "_v-262b2890/bd_broadcast_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7968,7 +7960,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-45419a72/bd_timer_0.vue"
+	  var id = "_v-5f6a8388/bd_timer_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -8244,7 +8236,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-45256b70/bd_timer_1.vue"
+	  var id = "_v-5f4e5486/bd_timer_1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -8512,7 +8504,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-05ee9bd0/bd_goods_0.vue"
+	  var id = "_v-201784e6/bd_goods_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -8822,7 +8814,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-05d26cce/bd_goods_1.vue"
+	  var id = "_v-1ffb55e4/bd_goods_1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -9294,7 +9286,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3d91a158/com-maybeyoulike.vue"
+	  var id = "_v-71249cee/com-maybeyoulike.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -9814,7 +9806,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-758d6c5d/bd_image_0.vue"
+	  var id = "_v-6878f7d2/bd_image_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -9996,11 +9988,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-68870f53/bd_image_1.vue"
-=======
-	  var id = "_v-759b83de/bd_image_1.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10187,7 +10175,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75a99b5f/bd_image_2.vue"
+	  var id = "_v-689526d4/bd_image_2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10381,7 +10369,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75b7b2e0/bd_image_3.vue"
+	  var id = "_v-68a33e55/bd_image_3.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10600,7 +10588,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75c5ca61/bd_image_4.vue"
+	  var id = "_v-68b155d6/bd_image_4.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10795,7 +10783,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75d3e1e2/bd_image_5.vue"
+	  var id = "_v-68bf6d57/bd_image_5.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11011,7 +10999,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75e1f963/bd_image_6.vue"
+	  var id = "_v-68cd84d8/bd_image_6.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11207,7 +11195,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75f010e4/bd_image_7.vue"
+	  var id = "_v-68db9c59/bd_image_7.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11430,7 +11418,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75fe2865/bd_image_8.vue"
+	  var id = "_v-68e9b3da/bd_image_8.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11653,7 +11641,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-760c3fe6/bd_image_9.vue"
+	  var id = "_v-68f7cb5b/bd_image_9.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11882,7 +11870,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3dd07242/bd_image_10.vue"
+	  var id = "_v-af535526/bd_image_10.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12124,7 +12112,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-05b63dcc/bd_goods_2.vue"
+	  var id = "_v-1fdf26e2/bd_goods_2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12315,7 +12303,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-054581c4/bd_goods_6.vue"
+	  var id = "_v-1f6e6ada/bd_goods_6.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12339,8 +12327,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-054581c4&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_6.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-054581c4&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_6.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f6e6ada&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_6.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f6e6ada&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_6.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -12358,7 +12346,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.hot_goods_index_md[_v-054581c4] {\n  min-height: 130px;\n  position: relative;\n  padding: 15px 10px;\n  /*background-color: #FFFFFF;*/\n}\n\n.hot_goods_index_md .goods_desc[_v-054581c4] {\n  position: relative;\n}\n\n.goods_desc .img_left[_v-054581c4] {\n  width: 120px;\n  position: relative;\n}\n\n.goods_desc .goods_info_box[_v-054581c4] {\n  position: absolute;\n  padding-left: 130px;\n  top: 0;\n  padding-top: 5px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.order_good_name[_v-054581c4] {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n  line-height: 20px;\n  height: 40px;\n  color: #666666;\n}\n\n.goods_info_box .goods_praice[_v-054581c4] {\n  height: 20px;\n  line-height: 20px;\n  color: #FF4A7D;\n  margin-top: 15px;\n  font-size: 20px;\n}\n\n.goods_info_box .goods_praice .price_symbol[_v-054581c4] {\n  font-size: 14px;\n}\n\n.comment_star[_v-054581c4] {\n  height: 12px;\n  font-size: 12px;\n  color: #FF4A7D;\n  line-height: 12px;\n  margin-top: 20px;\n}\n\n.comment_star img[_v-054581c4] {\n  height: 11px;\n  width: 11px;\n  position: relative;\n  bottom: 1px;\n  left: 2px;\n  margin-left: 2px;\n}\n\n.goods_comment[_v-054581c4] {\n  margin-top: 10px;\n  background-color: #f9f9f9;\n  position: relative;\n  padding: 10px 20px 10px 48px;\n}\n\n.goods_comment[_v-054581c4]:after {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  border-radius: 10px;\n  width: 200%;\n  height: 200%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transform: scale(0.5) translateX(-50%) translateY(-50%);\n      -ms-transform: scale(0.5) translateX(-50%) translateY(-50%);\n          transform: scale(0.5) translateX(-50%) translateY(-50%);\n}\n\n.box_arrow[_v-054581c4] {\n  width: 10px;\n  height: 5px;\n  background: url(\"//pic.davdian.com/free/2017/07/24/commentBox_arrow.png\");\n  background-size: 100%;\n  position: absolute;\n  top: -4px;\n  left: 22px;\n  z-index: 10;\n}\n\n.user_img[_v-054581c4] {\n  height: 28px;\n  width: 28px;\n  position: absolute;\n  left: 10px;\n  top: 6px;\n  overflow: hidden;\n  border-radius: 50%;\n}\n\n.comment_txt[_v-054581c4] {\n  font-size: 12px;\n  color: #151515;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  max-height: 60px;\n  -webkit-box-orient: vertical;\n  display: -webkit-box;\n  overflow: hidden;\n  -webkit-line-clamp: 3;\n}\n\n.comment_txt .user_name[_v-054581c4] {\n  color: #999999;\n}\n.img_left .topImageUrl[_v-054581c4]{\n  position: absolute;\n  width: 52px;\n  top:2px;\n  left:2px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.hot_goods_index_md[_v-1f6e6ada] {\n  min-height: 130px;\n  position: relative;\n  padding: 15px 10px;\n  /*background-color: #FFFFFF;*/\n}\n\n.hot_goods_index_md .goods_desc[_v-1f6e6ada] {\n  position: relative;\n}\n\n.goods_desc .img_left[_v-1f6e6ada] {\n  width: 120px;\n  position: relative;\n}\n\n.goods_desc .goods_info_box[_v-1f6e6ada] {\n  position: absolute;\n  padding-left: 130px;\n  top: 0;\n  padding-top: 5px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.order_good_name[_v-1f6e6ada] {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n  line-height: 20px;\n  height: 40px;\n  color: #666666;\n}\n\n.goods_info_box .goods_praice[_v-1f6e6ada] {\n  height: 20px;\n  line-height: 20px;\n  color: #FF4A7D;\n  margin-top: 15px;\n  font-size: 20px;\n}\n\n.goods_info_box .goods_praice .price_symbol[_v-1f6e6ada] {\n  font-size: 14px;\n}\n\n.comment_star[_v-1f6e6ada] {\n  height: 12px;\n  font-size: 12px;\n  color: #FF4A7D;\n  line-height: 12px;\n  margin-top: 20px;\n}\n\n.comment_star img[_v-1f6e6ada] {\n  height: 11px;\n  width: 11px;\n  position: relative;\n  bottom: 1px;\n  left: 2px;\n  margin-left: 2px;\n}\n\n.goods_comment[_v-1f6e6ada] {\n  margin-top: 10px;\n  background-color: #f9f9f9;\n  position: relative;\n  padding: 10px 20px 10px 48px;\n}\n\n.goods_comment[_v-1f6e6ada]:after {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  border-radius: 10px;\n  width: 200%;\n  height: 200%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transform: scale(0.5) translateX(-50%) translateY(-50%);\n      -ms-transform: scale(0.5) translateX(-50%) translateY(-50%);\n          transform: scale(0.5) translateX(-50%) translateY(-50%);\n}\n\n.box_arrow[_v-1f6e6ada] {\n  width: 10px;\n  height: 5px;\n  background: url(\"//pic.davdian.com/free/2017/07/24/commentBox_arrow.png\");\n  background-size: 100%;\n  position: absolute;\n  top: -4px;\n  left: 22px;\n  z-index: 10;\n}\n\n.user_img[_v-1f6e6ada] {\n  height: 28px;\n  width: 28px;\n  position: absolute;\n  left: 10px;\n  top: 6px;\n  overflow: hidden;\n  border-radius: 50%;\n}\n\n.comment_txt[_v-1f6e6ada] {\n  font-size: 12px;\n  color: #151515;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  max-height: 60px;\n  -webkit-box-orient: vertical;\n  display: -webkit-box;\n  overflow: hidden;\n  -webkit-line-clamp: 3;\n}\n\n.comment_txt .user_name[_v-1f6e6ada] {\n  color: #999999;\n}\n.img_left .topImageUrl[_v-1f6e6ada]{\n  position: absolute;\n  width: 52px;\n  top:2px;\n  left:2px;\n}\n", ""]);
 
 	// exports
 
@@ -12597,7 +12585,7 @@
 /* 206 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-054581c4=\"\">\n  <tt_com_0 :data=\"data\" _v-054581c4=\"\"></tt_com_0>\n  <a :href=\"item.command.content\" v-for=\"item in data.body.dataList\" _v-054581c4=\"\">\n    <div class=\"hot_goods_index_md\" _v-054581c4=\"\">\n      <div class=\"goods_desc\" _v-054581c4=\"\">\n        <div class=\"img_left\" _v-054581c4=\"\">\n          <img :src=\"item.imageUrl\" alt=\"\" _v-054581c4=\"\">\n          <img v-if=\"item.topImageUrl\" class=\"topImageUrl\" :src=\"item.topImageUrl\" alt=\"\" _v-054581c4=\"\">\n        </div>\n        <div class=\"goods_info_box\" _v-054581c4=\"\">\n          <div _v-5ed5d0b8=\"\" class=\"order_good_name\" _v-054581c4=\"\">{{item.title}}</div>\n          <div class=\"goods_praice\" _v-054581c4=\"\">\n            <span _v-054581c4=\"\"><em class=\"price_symbol\" _v-054581c4=\"\">￥</em><span _v-054581c4=\"\">{{item.nowPrice}}</span></span>\n          </div>\n          <div class=\"comment_star\" _v-054581c4=\"\">\n            <span _v-054581c4=\"\">好评度：{{item.rating*100 || 0}}% </span>\n            <img v-for=\"item in parseInt((item.rating*100)/20)\" src=\"//pic.davdian.com/free/2017/07/24/%20starSelected.png\" alt=\"\" _v-054581c4=\"\">\n          </div>\n        </div>\n      </div>\n      <div v-if=\"item.comments.content\" class=\"goods_comment\" _v-054581c4=\"\">\n        <div class=\"box_arrow\" _v-054581c4=\"\"></div>\n        <div class=\"user_img\" _v-054581c4=\"\">\n          <img :src=\"item.comments.avatar\" alt=\"\" _v-054581c4=\"\">\n        </div>\n        <div class=\"comment_txt\" _v-054581c4=\"\">\n          <span class=\"user_name\" _v-054581c4=\"\">{{item.comments.nickName}}：</span>\n          <span _v-054581c4=\"\">{{item.comments.content}}</span>\n        </div>\n      </div>\n    </div>\n  </a>\n</div>\n";
+	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-1f6e6ada=\"\">\n  <tt_com_0 :data=\"data\" _v-1f6e6ada=\"\"></tt_com_0>\n  <a :href=\"item.command.content\" v-for=\"item in data.body.dataList\" _v-1f6e6ada=\"\">\n    <div class=\"hot_goods_index_md\" _v-1f6e6ada=\"\">\n      <div class=\"goods_desc\" _v-1f6e6ada=\"\">\n        <div class=\"img_left\" _v-1f6e6ada=\"\">\n          <img :src=\"item.imageUrl\" alt=\"\" _v-1f6e6ada=\"\">\n          <img v-if=\"item.topImageUrl\" class=\"topImageUrl\" :src=\"item.topImageUrl\" alt=\"\" _v-1f6e6ada=\"\">\n        </div>\n        <div class=\"goods_info_box\" _v-1f6e6ada=\"\">\n          <div _v-5ed5d0b8=\"\" class=\"order_good_name\" _v-1f6e6ada=\"\">{{item.title}}</div>\n          <div class=\"goods_praice\" _v-1f6e6ada=\"\">\n            <span _v-1f6e6ada=\"\"><em class=\"price_symbol\" _v-1f6e6ada=\"\">￥</em><span _v-1f6e6ada=\"\">{{item.nowPrice}}</span></span>\n          </div>\n          <div class=\"comment_star\" _v-1f6e6ada=\"\">\n            <span _v-1f6e6ada=\"\">好评度：{{item.rating*100 || 0}}% </span>\n            <img v-for=\"item in parseInt((item.rating*100)/20)\" src=\"//pic.davdian.com/free/2017/07/24/%20starSelected.png\" alt=\"\" _v-1f6e6ada=\"\">\n          </div>\n        </div>\n      </div>\n      <div v-if=\"item.comments.content\" class=\"goods_comment\" _v-1f6e6ada=\"\">\n        <div class=\"box_arrow\" _v-1f6e6ada=\"\"></div>\n        <div class=\"user_img\" _v-1f6e6ada=\"\">\n          <img :src=\"item.comments.avatar\" alt=\"\" _v-1f6e6ada=\"\">\n        </div>\n        <div class=\"comment_txt\" _v-1f6e6ada=\"\">\n          <span class=\"user_name\" _v-1f6e6ada=\"\">{{item.comments.nickName}}：</span>\n          <span _v-1f6e6ada=\"\">{{item.comments.content}}</span>\n        </div>\n      </div>\n    </div>\n  </a>\n</div>\n";
 
 /***/ },
 /* 207 */
@@ -12627,7 +12615,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0561b0c6/bd_goods_5.vue"
+	  var id = "_v-1f8a99dc/bd_goods_5.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12651,8 +12639,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0561b0c6&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_5.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0561b0c6&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_5.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f8a99dc&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_5.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f8a99dc&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_5.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -12670,7 +12658,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy[_v-0561b0c6] {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail[_v-0561b0c6] {\n    width: 100%;\n    display: block;\n    position: relative; }\n\n.related-item-list-new.swiper-container[_v-0561b0c6] {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list-new .detail.swiper-slide[_v-0561b0c6] {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list-new .detail[_v-0561b0c6] {\n  text-align: left; }\n  .related-item-list-new .detail .goods_img_size[_v-0561b0c6] {\n    width: 120px;\n    height: 120px;\n    position: relative; }\n    .related-item-list-new .detail .goods_img_size .limitTag[_v-0561b0c6] {\n      height: 16px;\n      background: url(//pic.davdian.com/free/2017/06/07/limitTag.png) 0 0 no-repeat;\n      background-size: 100% 100%;\n      position: absolute;\n      left: 1px;\n      bottom: 0;\n      font-size: 10px;\n      color: #FFF;\n      text-align: center;\n      line-height: 16px;\n      display: inline-block;\n      padding: 0 11px 0 6px; }\n  .related-item-list-new .detail .goods_img_size[_v-0561b0c6]:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    border: 1px solid #ddd;\n    width: 100%;\n    height: 100%;\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n         box-sizing: border-box; }\n  .related-item-list-new .detail .new_name1[_v-0561b0c6] {\n    font-size: 13px;\n    margin: 10px 0;\n    text-overflow: ellipsis;\n    height: 18px;\n    white-space: nowrap;\n    line-height: 18px;\n    overflow: hidden;\n    color: #666;\n    padding-right: 25px; }\n  .related-item-list-new .detail .price1[_v-0561b0c6] {\n    line-height: 21px;\n    height: 21px;\n    overflow: hidden;\n    margin-bottom: 4px; }\n    .related-item-list-new .detail .price1 .current-price1[_v-0561b0c6] {\n      font-size: 17px;\n      color: #FF4A7D;\n      float: left; }\n    .related-item-list-new .detail .price1 .original-price1[_v-0561b0c6] {\n      font-size: 9px;\n      color: #999;\n      text-decoration: line-through;\n      float: left;\n      padding-left: 5px;\n      padding-top: 0.02rem; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list-new .detail .goods_img_size[_v-0561b0c6]:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */\n    border-radius: 8px; } }\n\n.df_new_title[_v-0561b0c6] {\n  position: relative;\n  height: 44px; }\n\n.df_new_title[_v-0561b0c6]:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title[_v-0561b0c6]:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font[_v-0561b0c6] {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font[_v-0561b0c6]:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font[_v-0561b0c6]:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more[_v-0561b0c6] {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span[_v-0561b0c6] {\n  font-size: 12px; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy[_v-1f8a99dc] {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail[_v-1f8a99dc] {\n    width: 100%;\n    display: block;\n    position: relative; }\n\n.related-item-list-new.swiper-container[_v-1f8a99dc] {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list-new .detail.swiper-slide[_v-1f8a99dc] {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list-new .detail[_v-1f8a99dc] {\n  text-align: left; }\n  .related-item-list-new .detail .goods_img_size[_v-1f8a99dc] {\n    width: 120px;\n    height: 120px;\n    position: relative; }\n    .related-item-list-new .detail .goods_img_size .limitTag[_v-1f8a99dc] {\n      height: 16px;\n      background: url(//pic.davdian.com/free/2017/06/07/limitTag.png) 0 0 no-repeat;\n      background-size: 100% 100%;\n      position: absolute;\n      left: 1px;\n      bottom: 0;\n      font-size: 10px;\n      color: #FFF;\n      text-align: center;\n      line-height: 16px;\n      display: inline-block;\n      padding: 0 11px 0 6px; }\n  .related-item-list-new .detail .goods_img_size[_v-1f8a99dc]:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    border: 1px solid #ddd;\n    width: 100%;\n    height: 100%;\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n         box-sizing: border-box; }\n  .related-item-list-new .detail .new_name1[_v-1f8a99dc] {\n    font-size: 13px;\n    margin: 10px 0;\n    text-overflow: ellipsis;\n    height: 18px;\n    white-space: nowrap;\n    line-height: 18px;\n    overflow: hidden;\n    color: #666;\n    padding-right: 25px; }\n  .related-item-list-new .detail .price1[_v-1f8a99dc] {\n    line-height: 21px;\n    height: 21px;\n    overflow: hidden;\n    margin-bottom: 4px; }\n    .related-item-list-new .detail .price1 .current-price1[_v-1f8a99dc] {\n      font-size: 17px;\n      color: #FF4A7D;\n      float: left; }\n    .related-item-list-new .detail .price1 .original-price1[_v-1f8a99dc] {\n      font-size: 9px;\n      color: #999;\n      text-decoration: line-through;\n      float: left;\n      padding-left: 5px;\n      padding-top: 0.02rem; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list-new .detail .goods_img_size[_v-1f8a99dc]:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */\n    border-radius: 8px; } }\n\n.df_new_title[_v-1f8a99dc] {\n  position: relative;\n  height: 44px; }\n\n.df_new_title[_v-1f8a99dc]:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title[_v-1f8a99dc]:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font[_v-1f8a99dc] {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font[_v-1f8a99dc]:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font[_v-1f8a99dc]:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more[_v-1f8a99dc] {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span[_v-1f8a99dc] {\n  font-size: 12px; }\n", ""]);
 
 	// exports
 
@@ -13010,7 +12998,7 @@
 /* 211 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-0561b0c6=\"\">\n  <tt_com_0 :data=\"data\" _v-0561b0c6=\"\"></tt_com_0>\n  <div _v-0561b0c6=\"\">\n      <div class=\"swiper-container related-item-list-new swiper-container-horizontal swiper-container-free-mode\" _v-0561b0c6=\"\">\n        <div class=\"swiper-wrapper\" _v-0561b0c6=\"\">\n          <div v-for=\"item in data.body.dataList\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-0561b0c6=\"\">\n            <a :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-0561b0c6=\"\">\n              <div class=\"goods_img_size\" _v-0561b0c6=\"\">\n                <img :src=\"item.imageUrl\" _v-0561b0c6=\"\">\n                <div v-if=\"item.promotionLabel\" class=\"limitTag\" _v-0561b0c6=\"\">{{item.promotionLabel}}</div>\n              </div>\n              <div class=\"new_name1\" _v-0561b0c6=\"\">{{ item.title }}</div>\n              <div class=\"price1\" _v-0561b0c6=\"\">\n                <span class=\"current-price1\" _v-0561b0c6=\"\"><span style=\"font-size: 12px;\" _v-0561b0c6=\"\">¥ </span>{{item.nowPrice}}</span>\n              </div>\n            </a>\n          </div>\n          <div v-if=\"data.body.more\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-0561b0c6=\"\">\n            <a :href=\"data.body.command.content\" position=\"more\" _v-0561b0c6=\"\">\n              <div class=\"goods_img_size\" _v-0561b0c6=\"\">\n                <img src=\"//pic.davdian.com/free/2016/12/20/300_300_2f12c4229c5444864431d2cd8cd1bdb3.jpg\" _v-0561b0c6=\"\">\n              </div>\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-1f8a99dc=\"\">\n  <tt_com_0 :data=\"data\" _v-1f8a99dc=\"\"></tt_com_0>\n  <div _v-1f8a99dc=\"\">\n      <div class=\"swiper-container related-item-list-new swiper-container-horizontal swiper-container-free-mode\" _v-1f8a99dc=\"\">\n        <div class=\"swiper-wrapper\" _v-1f8a99dc=\"\">\n          <div v-for=\"item in data.body.dataList\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-1f8a99dc=\"\">\n            <a :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-1f8a99dc=\"\">\n              <div class=\"goods_img_size\" _v-1f8a99dc=\"\">\n                <img :src=\"item.imageUrl\" _v-1f8a99dc=\"\">\n                <div v-if=\"item.promotionLabel\" class=\"limitTag\" _v-1f8a99dc=\"\">{{item.promotionLabel}}</div>\n              </div>\n              <div class=\"new_name1\" _v-1f8a99dc=\"\">{{ item.title }}</div>\n              <div class=\"price1\" _v-1f8a99dc=\"\">\n                <span class=\"current-price1\" _v-1f8a99dc=\"\"><span style=\"font-size: 12px;\" _v-1f8a99dc=\"\">¥ </span>{{item.nowPrice}}</span>\n              </div>\n            </a>\n          </div>\n          <div v-if=\"data.body.more\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-1f8a99dc=\"\">\n            <a :href=\"data.body.command.content\" position=\"more\" _v-1f8a99dc=\"\">\n              <div class=\"goods_img_size\" _v-1f8a99dc=\"\">\n                <img src=\"//pic.davdian.com/free/2016/12/20/300_300_2f12c4229c5444864431d2cd8cd1bdb3.jpg\" _v-1f8a99dc=\"\">\n              </div>\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n</div>\n";
 
 /***/ },
 /* 212 */
@@ -13040,7 +13028,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-052952c2/bd_goods_7.vue"
+	  var id = "_v-1f523bd8/bd_goods_7.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13064,8 +13052,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-052952c2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_7.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-052952c2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_7.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f523bd8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_7.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f523bd8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_7.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -13083,7 +13071,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.f_l[_v-052952c2] {\n  float: left;\n}\n\n.newOriginal_price[_v-052952c2] {\n  font-size: 14px;\n}\n\n.list_style[_v-052952c2] {\n  /*height: 130px;*/\n}\n\nul li[_v-052952c2] {\n  padding: 0 10px 20px 10px;\n  height:140px;\n  position: relative;\n  overflow: hidden;\n}\n\nul li.online[_v-052952c2]:after {\n  content: \"\";\n  display: block;\n  background-color: #DDDDDD;\n  -webkit-transform: scale(0.5) translateX(280px);\n  -ms-transform: scale(0.5) translateX(280px);\n  transform: scale(0.5) translateX(280px);\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  bottom: 0;\n  z-index: 1;\n}\n\nul li .img_container[_v-052952c2] {\n  position: relative;\n}\n\nul li .img_container_inner[_v-052952c2] {\n  width: 140px;\n  position: relative;\n}\n\nul li .img_container_inner div[_v-052952c2] {\n  height: 60px;\n  width: 60px;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  margin: auto auto;\n  font-size: 14px;\n  color: #FFF;\n  text-align: center;\n  line-height: 60px;\n}\n\nul li .order_good_info_container[_v-052952c2] {\n  position: absolute;\n  padding-left: 150px;\n  top: 0;\n  padding-top: 10px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.order_good_name[_v-052952c2] {\n  font-size: 15px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  /*display: -webkit-box;*/\n  /*-webkit-line-clamp: 2;*/\n  /*-webkit-box-orient: vertical;*/\n  line-height: 20px;\n  color: #333333;\n}\n\n.order_good_name_in[_v-052952c2] {\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 3;\n  -webkit-box-orient: vertical;\n  font-size: 12px;\n  overflow: hidden;\n  color: #999999;\n  height: 51px;\n  line-height: 18px;\n  padding-top: 10px;\n  font-weight: 300;\n}\n\n.order_good_price[_v-052952c2] {\n  height: 28px;\n  line-height: 28px;\n  color: #FF4A7D;\n  margin-top: 6px;\n}\n.order_good_price > span[_v-052952c2]:nth-of-type(1){\n  font-weight: 500;\n}\n\n.price_symbol[_v-052952c2] {\n  font-size: 14px;\n  font-style: normal;\n}\n\n.price_symbol + span[_v-052952c2] {\n  font-size: 20px;\n}\n\n.membership_crown_pre[_v-052952c2] {\n  color: #999999;\n  text-decoration: line-through;\n  font-size: 12px;\n  margin-left: 5px;\n}\n\n.membership_crown .membership_crown_pre em[_v-052952c2] {\n  font-size: 10px;\n}\n\n.membership_crown[_v-052952c2] {\n  font-size: 12px;\n  color: #D6B471;\n  display: inline-block;\n  margin-left: 5px;\n  font-weight: 300;\n}\n\n.membership_crown em[_v-052952c2] {\n  font-size: 10px;\n  font-style: normal;\n}\n\n.tipswrap[_v-052952c2] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.51);\n  z-index: 99;\n}\n\n.tipswrap .tipsdiv[_v-052952c2] {\n  width: 72%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  overflow: hidden;\n  min-height: 20px;\n  max-width: 480px;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n\n.tipswrap .tipsdiv img[_v-052952c2] {\n  width: 100%;\n}\n\n.tipswrap .tipsdiv div[_v-052952c2] {\n  width: 100%;\n  height: 13%;\n  position: absolute;\n  bottom: 0;\n}\n\n.progress_bar[_v-052952c2] {\n  position: absolute;\n  width: 100%;\n  bottom: 20px;\n}\n\n.remain_btns_click[_v-052952c2] {\n  width: 90px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  bottom: 13px;\n  z-index: 2;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.f_l[_v-1f523bd8] {\n  float: left;\n}\n\n.newOriginal_price[_v-1f523bd8] {\n  font-size: 14px;\n}\n\n.list_style[_v-1f523bd8] {\n  /*height: 130px;*/\n}\n\nul li[_v-1f523bd8] {\n  padding: 0 10px 20px 10px;\n  height:140px;\n  position: relative;\n  overflow: hidden;\n}\n\nul li.online[_v-1f523bd8]:after {\n  content: \"\";\n  display: block;\n  background-color: #DDDDDD;\n  -webkit-transform: scale(0.5) translateX(280px);\n  -ms-transform: scale(0.5) translateX(280px);\n  transform: scale(0.5) translateX(280px);\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  bottom: 0;\n  z-index: 1;\n}\n\nul li .img_container[_v-1f523bd8] {\n  position: relative;\n}\n\nul li .img_container_inner[_v-1f523bd8] {\n  width: 140px;\n  position: relative;\n}\n\nul li .img_container_inner div[_v-1f523bd8] {\n  height: 60px;\n  width: 60px;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  margin: auto auto;\n  font-size: 14px;\n  color: #FFF;\n  text-align: center;\n  line-height: 60px;\n}\n\nul li .order_good_info_container[_v-1f523bd8] {\n  position: absolute;\n  padding-left: 150px;\n  top: 0;\n  padding-top: 10px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.order_good_name[_v-1f523bd8] {\n  font-size: 15px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  /*display: -webkit-box;*/\n  /*-webkit-line-clamp: 2;*/\n  /*-webkit-box-orient: vertical;*/\n  line-height: 20px;\n  color: #333333;\n}\n\n.order_good_name_in[_v-1f523bd8] {\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 3;\n  -webkit-box-orient: vertical;\n  font-size: 12px;\n  overflow: hidden;\n  color: #999999;\n  height: 51px;\n  line-height: 18px;\n  padding-top: 10px;\n  font-weight: 300;\n}\n\n.order_good_price[_v-1f523bd8] {\n  height: 28px;\n  line-height: 28px;\n  color: #FF4A7D;\n  margin-top: 6px;\n}\n.order_good_price > span[_v-1f523bd8]:nth-of-type(1){\n  font-weight: 500;\n}\n\n.price_symbol[_v-1f523bd8] {\n  font-size: 14px;\n  font-style: normal;\n}\n\n.price_symbol + span[_v-1f523bd8] {\n  font-size: 20px;\n}\n\n.membership_crown_pre[_v-1f523bd8] {\n  color: #999999;\n  text-decoration: line-through;\n  font-size: 12px;\n  margin-left: 5px;\n}\n\n.membership_crown .membership_crown_pre em[_v-1f523bd8] {\n  font-size: 10px;\n}\n\n.membership_crown[_v-1f523bd8] {\n  font-size: 12px;\n  color: #D6B471;\n  display: inline-block;\n  margin-left: 5px;\n  font-weight: 300;\n}\n\n.membership_crown em[_v-1f523bd8] {\n  font-size: 10px;\n  font-style: normal;\n}\n\n.tipswrap[_v-1f523bd8] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.51);\n  z-index: 99;\n}\n\n.tipswrap .tipsdiv[_v-1f523bd8] {\n  width: 72%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  overflow: hidden;\n  min-height: 20px;\n  max-width: 480px;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n\n.tipswrap .tipsdiv img[_v-1f523bd8] {\n  width: 100%;\n}\n\n.tipswrap .tipsdiv div[_v-1f523bd8] {\n  width: 100%;\n  height: 13%;\n  position: absolute;\n  bottom: 0;\n}\n\n.progress_bar[_v-1f523bd8] {\n  position: absolute;\n  width: 100%;\n  bottom: 20px;\n}\n\n.remain_btns_click[_v-1f523bd8] {\n  width: 90px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  bottom: 13px;\n  z-index: 2;\n}\n", ""]);
 
 	// exports
 
@@ -13444,7 +13432,7 @@
 /* 216 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-052952c2=\"\">\n  <tt_com_0 :data=\"data\" _v-052952c2=\"\"></tt_com_0>\n  <ul _v-052952c2=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-052952c2=\"\">\n      <a :href=\"item.command.content\" _v-052952c2=\"\">\n        <div class=\"img_container\" _v-052952c2=\"\">\n          <div class=\"img_container_inner\" _v-052952c2=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-052952c2=\"\">\n          </div>\n          <div class=\"order_good_info_container\" _v-052952c2=\"\">\n            <div class=\"order_good_name\" _v-052952c2=\"\">{{item.title}}</div>\n            <div class=\"order_good_name_in\" _v-052952c2=\"\">{{item.msg}}</div>\n            <div class=\"order_good_price\" _v-052952c2=\"\">\n              <span _v-052952c2=\"\"><em class=\"price_symbol\" _v-052952c2=\"\">￥</em><span _v-052952c2=\"\">{{item.nowPrice}}</span></span><span v-if=\"item.memReturn\" class=\"membership_crown\" _v-052952c2=\"\">会员返<em _v-052952c2=\"\">￥</em>{{item.memReturn}}</span><span v-if=\"item.prePrice\" class=\"membership_crown_pre\" _v-052952c2=\"\">\n            市场价<em _v-052952c2=\"\">￥</em>{{item.prePrice}}</span>\n            </div>\n          </div>\n        </div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-052952c2=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-052952c2=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-052952c2=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-052952c2=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-052952c2=\"\"></div>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-1f523bd8=\"\">\n  <tt_com_0 :data=\"data\" _v-1f523bd8=\"\"></tt_com_0>\n  <ul _v-1f523bd8=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-1f523bd8=\"\">\n      <a :href=\"item.command.content\" _v-1f523bd8=\"\">\n        <div class=\"img_container\" _v-1f523bd8=\"\">\n          <div class=\"img_container_inner\" _v-1f523bd8=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-1f523bd8=\"\">\n          </div>\n          <div class=\"order_good_info_container\" _v-1f523bd8=\"\">\n            <div class=\"order_good_name\" _v-1f523bd8=\"\">{{item.title}}</div>\n            <div class=\"order_good_name_in\" _v-1f523bd8=\"\">{{item.msg}}</div>\n            <div class=\"order_good_price\" _v-1f523bd8=\"\">\n              <span _v-1f523bd8=\"\"><em class=\"price_symbol\" _v-1f523bd8=\"\">￥</em><span _v-1f523bd8=\"\">{{item.nowPrice}}</span></span><span v-if=\"item.memReturn\" class=\"membership_crown\" _v-1f523bd8=\"\">会员返<em _v-1f523bd8=\"\">￥</em>{{item.memReturn}}</span><span v-if=\"item.prePrice\" class=\"membership_crown_pre\" _v-1f523bd8=\"\">\n            市场价<em _v-1f523bd8=\"\">￥</em>{{item.prePrice}}</span>\n            </div>\n          </div>\n        </div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-1f523bd8=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-1f523bd8=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-1f523bd8=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-1f523bd8=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-1f523bd8=\"\"></div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 217 */
@@ -13468,7 +13456,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-ea627162/bd_menu_0.vue"
+	  var id = "_v-358d0d8c/bd_menu_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13510,11 +13498,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-19e8e337/tt_com_1.vue"
-=======
-	  var id = "_v-7a16fe82/tt_com_1.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13710,7 +13694,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3c2f0c54/bd_web_0.vue"
+	  var id = "_v-fc8b42ea/bd_web_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13870,7 +13854,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-09b3c20a/cover_0.vue"
+	  var id = "_v-4067f2b5/cover_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13993,7 +13977,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-321953eb/title_0.vue"
+	  var id = "_v-68cd8496/title_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14128,11 +14112,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-41ab47e9/popularity_0.vue"
-=======
-	  var id = "_v-5b74c5b4/popularity_0.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14274,7 +14254,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-26b56ef0/course_desc_0.vue"
+	  var id = "_v-6581e61a/course_desc_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14298,13 +14278,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6581e61a&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./course_desc_0.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6581e61a&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./course_desc_0.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-26b56ef0&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./course_desc_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-26b56ef0&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./course_desc_0.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -14322,11 +14297,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, ".no_discuss[_v-6581e61a] {\n  padding-bottom: 20px;\n  text-align: center;\n  /*margin-top: -15px;*/ }\n  .no_discuss img[_v-6581e61a] {\n    width: 120px;\n    display: inline-block; }\n  .no_discuss p[_v-6581e61a] {\n    color: #666;\n    margin-top: .3rem;\n    padding-bottom: .1rem;\n    width: 100%;\n    text-align: center;\n    font-size: .14rem;\n    display: inline-block; }\n  .no_discuss .discuss_top_write[_v-6581e61a] {\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n    .no_discuss .discuss_top_write img[_v-6581e61a] {\n      width: 11px;\n      margin-left: 0; }\n  .no_discuss .discuss_top_no_write[_v-6581e61a] {\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n\n.discuss_top[_v-6581e61a] {\n  padding: 10px;\n  padding-top: 15px;\n  position: relative; }\n  .discuss_top .discuss_top_write[_v-6581e61a] {\n    float: left;\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 130px;\n    font-size: 12px; }\n    .discuss_top .discuss_top_write img[_v-6581e61a] {\n      width: 11px; }\n  .discuss_top .discuss_top_no_write[_v-6581e61a] {\n    float: left;\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 139px;\n    font-size: 12px; }\n  .discuss_top .discuss_top_alldiscuss[_v-6581e61a] {\n    float: right;\n    color: #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-right: 10px;\n    font-size: 12px; }\n  .discuss_top .icon[_v-6581e61a] {\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n    transform: rotate(45deg);\n    background: none;\n    top: 22px;\n    position: absolute;\n    right: 11px; }\n\n.discuss_top[_v-6581e61a]:after {\n  content: \"\";\n  height: 0;\n  clear: both;\n  display: table; }\n\n.discuss_container[_v-6581e61a] {\n  padding-top: 0.21rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  padding-bottom: 0.15rem;\n  font-size: 0;\n  background: #fff;\n  border-bottom: 0.5px solid #F1F1F1; }\n\n.discuss_container_noborder[_v-6581e61a] {\n  border-bottom: 0px; }\n\n.discuss_title .title_all[_v-6581e61a] {\n  display: inline-block;\n  vertical-align: middle; }\n\n.discuss_title .title_img[_v-6581e61a] {\n  width: 0.24rem;\n  height: 0.24rem;\n  border-radius: 50%;\n  background: red; }\n\n.discuss_title .title_name[_v-6581e61a] {\n  font-size: 0.14rem;\n  color: #666666;\n  margin-left: 0.05rem; }\n\n.discuss_title .title_time[_v-6581e61a] {\n  font-size: 0.12rem;\n  margin-left: 0.03rem;\n  color: #999999; }\n\n.discuss_title .title_star[_v-6581e61a] {\n  width: 0.59rem;\n  float: right;\n  margin-top: 0.06rem; }\n\n.discuss_content[_v-6581e61a] {\n  font-size: 0.13rem;\n  color: #333333;\n  margin-top: 0.1rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 5;\n  display: -webkit-box; }\n\n.discuss_seeAll[_v-6581e61a] {\n  width: 0.8rem;\n  font-size: 0.13rem;\n  color: #FF4A7D;\n  padding-top: 0.1rem; }\n\n.discuss_imgContainer[_v-6581e61a] {\n  font-size: 0;\n  width: 3.1rem;\n  /*min-height: 1rem;*/\n  margin-top: 0.1rem; }\n  .discuss_imgContainer .discuss_img[_v-6581e61a] {\n    width: 0.9rem;\n    height: 0.9rem;\n    background: red;\n    display: inline-block;\n    vertical-align: top;\n    margin-right: 0.1rem;\n    margin-bottom: 0.1rem;\n    border-radius: 3px; }\n\n.discuss_share[_v-6581e61a] {\n  width: 100%;\n  height: 0.16rem; }\n  .discuss_share .discuss_share_container[_v-6581e61a] {\n    height: 0.16rem;\n    float: right;\n    font-size: 0.11rem;\n    color: #999999; }\n    .discuss_share .discuss_share_container img[_v-6581e61a] {\n      width: 0.15rem; }\n\n.discuss_all[_v-6581e61a] {\n  width: 100%;\n  color: #999999;\n  text-align: center;\n  height: 0.5rem; }\n  .discuss_all .discuss_all_content[_v-6581e61a] {\n    display: inline-block;\n    border-bottom: 1px solid #999;\n    height: 19px; }\n\n.attention_all[_v-6581e61a] {\n  font-size: 0;\n  display: inline-block;\n  vertical-align: middle; }\n\n.attention_yes[_v-6581e61a] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  /*border: 0.5px solid #FF4A7D;*/\n  border-radius: 13px; }\n\n.attention_yes1[_v-6581e61a] {\n  width: 0.45rem !important;\n  height: 0.18rem !important;\n  display: inline-block;\n  vertical-align: top; }\n\n.attention_no[_v-6581e61a] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #fff;\n  background: #D8D8D8;\n  border: 0.5px solid #D8D8D8;\n  border-radius: 13px; }\n\n.maskAttention[_v-6581e61a] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background: #000;\n  opacity: 0.4;\n  z-index: 1001; }\n\n.contentAttention[_v-6581e61a] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 1202;\n  margin: auto;\n  background: #000;\n  width: 2.7rem;\n  opacity: 0.65;\n  border-radius: 6px;\n  color: #fff;\n  height: 0.72rem; }\n\n.contentAttention h1[_v-6581e61a] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center;\n  margin-top: 0.15rem; }\n\n.contentAttention p[_v-6581e61a] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center; }\n\n.course_desc_0 .class_introduce_tit[_v-6581e61a] {\n  text-align: center !important;\n  line-height: 15px; }\n\n.course_desc_0 .class_introduce_tit .class_dis[_v-6581e61a], .course_desc_0 .class_introduce_tit .theater_dis[_v-6581e61a] {\n  display: inline-block !important; }\n\n.course_desc_0 .class_introduce_tit .class_dis .active[_v-6581e61a] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .theater_dis .active[_v-6581e61a] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .class_dis span[_v-6581e61a] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .class_introduce_tit .theater_dis span[_v-6581e61a] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .fixStyle[_v-6581e61a] {\n  position: fixed;\n  top: 44px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0 .fixStyle1[_v-6581e61a] {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0[_v-6581e61a] {\n  position: relative; }\n\n.introduceGuide[_v-6581e61a] {\n  position: absolute;\n  top: -14px;\n  width: 3.2rem;\n  right: 21px;\n  z-index: 1000; }\n\n.introduceGuide1[_v-6581e61a] {\n  position: absolute;\n  left: 0;\n  width: 248px;\n  z-index: 1000;\n  bottom: -10px; }\n\n.introduceGuideMask[_v-6581e61a] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 60px;\n  left: 0;\n  background: #000000;\n  opacity: 0.6;\n  z-index: 999; }\n\n.introduceGuidebtn[_v-6581e61a] {\n  width: 120px;\n  height: 40px;\n  position: fixed;\n  left: 50%;\n  margin-left: -60px;\n  bottom: 60px;\n  z-index: 1000;\n  background: -webkit-linear-gradient(left, #FF7C7C, #FF6A8B);\n  border-radius: 100px;\n  text-align: center;\n  line-height: 40px;\n  color: #fff; }\n", ""]);
-=======
-	exports.push([module.id, ".no_discuss[_v-26b56ef0] {\n  padding-bottom: 20px;\n  text-align: center;\n  /*margin-top: -15px;*/ }\n  .no_discuss img[_v-26b56ef0] {\n    width: 120px;\n    display: inline-block; }\n  .no_discuss p[_v-26b56ef0] {\n    color: #666;\n    margin-top: .3rem;\n    padding-bottom: .1rem;\n    width: 100%;\n    text-align: center;\n    font-size: .14rem;\n    display: inline-block; }\n  .no_discuss .discuss_top_write[_v-26b56ef0] {\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n    .no_discuss .discuss_top_write img[_v-26b56ef0] {\n      width: 11px;\n      margin-left: 0; }\n  .no_discuss .discuss_top_no_write[_v-26b56ef0] {\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n\n.discuss_top[_v-26b56ef0] {\n  padding: 10px;\n  padding-top: 15px;\n  position: relative; }\n  .discuss_top .discuss_top_write[_v-26b56ef0] {\n    float: left;\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 130px;\n    font-size: 12px; }\n    .discuss_top .discuss_top_write img[_v-26b56ef0] {\n      width: 11px; }\n  .discuss_top .discuss_top_no_write[_v-26b56ef0] {\n    float: left;\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 139px;\n    font-size: 12px; }\n  .discuss_top .discuss_top_alldiscuss[_v-26b56ef0] {\n    float: right;\n    color: #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-right: 10px;\n    font-size: 12px; }\n  .discuss_top .icon[_v-26b56ef0] {\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n    transform: rotate(45deg);\n    background: none;\n    top: 22px;\n    position: absolute;\n    right: 11px; }\n\n.discuss_top[_v-26b56ef0]:after {\n  content: \"\";\n  height: 0;\n  clear: both;\n  display: table; }\n\n.discuss_container[_v-26b56ef0] {\n  padding-top: 0.21rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  padding-bottom: 0.15rem;\n  font-size: 0;\n  background: #fff;\n  border-bottom: 0.5px solid #F1F1F1; }\n\n.discuss_container_noborder[_v-26b56ef0] {\n  border-bottom: 0px; }\n\n.discuss_title .title_all[_v-26b56ef0] {\n  display: inline-block;\n  vertical-align: middle; }\n\n.discuss_title .title_img[_v-26b56ef0] {\n  width: 0.24rem;\n  height: 0.24rem;\n  border-radius: 50%;\n  background: red; }\n\n.discuss_title .title_name[_v-26b56ef0] {\n  font-size: 0.14rem;\n  color: #666666;\n  margin-left: 0.05rem; }\n\n.discuss_title .title_time[_v-26b56ef0] {\n  font-size: 0.12rem;\n  margin-left: 0.03rem;\n  color: #999999; }\n\n.discuss_title .title_star[_v-26b56ef0] {\n  width: 0.59rem;\n  float: right;\n  margin-top: 0.06rem; }\n\n.discuss_content[_v-26b56ef0] {\n  font-size: 0.13rem;\n  color: #333333;\n  margin-top: 0.1rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 5;\n  display: -webkit-box; }\n\n.discuss_seeAll[_v-26b56ef0] {\n  width: 0.8rem;\n  font-size: 0.13rem;\n  color: #FF4A7D;\n  padding-top: 0.1rem; }\n\n.discuss_imgContainer[_v-26b56ef0] {\n  font-size: 0;\n  width: 3.1rem;\n  /*min-height: 1rem;*/\n  margin-top: 0.1rem; }\n  .discuss_imgContainer .discuss_img[_v-26b56ef0] {\n    width: 0.9rem;\n    height: 0.9rem;\n    background: red;\n    display: inline-block;\n    vertical-align: top;\n    margin-right: 0.1rem;\n    margin-bottom: 0.1rem;\n    border-radius: 3px; }\n\n.discuss_share[_v-26b56ef0] {\n  width: 100%;\n  height: 0.16rem; }\n  .discuss_share .discuss_share_container[_v-26b56ef0] {\n    height: 0.16rem;\n    float: right;\n    font-size: 0.11rem;\n    color: #999999; }\n    .discuss_share .discuss_share_container img[_v-26b56ef0] {\n      width: 0.15rem; }\n\n.discuss_all[_v-26b56ef0] {\n  width: 100%;\n  color: #999999;\n  text-align: center;\n  height: 0.5rem; }\n  .discuss_all .discuss_all_content[_v-26b56ef0] {\n    display: inline-block;\n    border-bottom: 1px solid #999;\n    height: 19px; }\n\n.attention_all[_v-26b56ef0] {\n  font-size: 0;\n  display: inline-block;\n  vertical-align: middle; }\n\n.attention_yes[_v-26b56ef0] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  /*border: 0.5px solid #FF4A7D;*/\n  border-radius: 13px; }\n\n.attention_yes1[_v-26b56ef0] {\n  width: 0.45rem !important;\n  height: 0.18rem !important;\n  display: inline-block;\n  vertical-align: top; }\n\n.attention_no[_v-26b56ef0] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #fff;\n  background: #D8D8D8;\n  border: 0.5px solid #D8D8D8;\n  border-radius: 13px; }\n\n.maskAttention[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background: #000;\n  opacity: 0.4;\n  z-index: 1001; }\n\n.contentAttention[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 1202;\n  margin: auto;\n  background: #000;\n  width: 2.7rem;\n  opacity: 0.65;\n  border-radius: 6px;\n  color: #fff;\n  height: 0.72rem; }\n\n.contentAttention h1[_v-26b56ef0] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center;\n  margin-top: 0.15rem; }\n\n.contentAttention p[_v-26b56ef0] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center; }\n\n.course_desc_0 .class_introduce_tit[_v-26b56ef0] {\n  text-align: center !important;\n  line-height: 15px; }\n\n.course_desc_0 .class_introduce_tit .class_dis[_v-26b56ef0], .course_desc_0 .class_introduce_tit .theater_dis[_v-26b56ef0] {\n  display: inline-block !important; }\n\n.course_desc_0 .class_introduce_tit .class_dis .active[_v-26b56ef0] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .theater_dis .active[_v-26b56ef0] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .class_dis span[_v-26b56ef0] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .class_introduce_tit .theater_dis span[_v-26b56ef0] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .fixStyle[_v-26b56ef0] {\n  position: fixed;\n  top: 44px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0 .fixStyle1[_v-26b56ef0] {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0[_v-26b56ef0] {\n  position: relative; }\n\n.introduceGuide[_v-26b56ef0] {\n  position: absolute;\n  top: -14px;\n  width: 3.2rem;\n  right: 21px;\n  z-index: 1000; }\n\n.introduceGuide1[_v-26b56ef0] {\n  position: absolute;\n  left: 0;\n  width: 248px;\n  z-index: 1000;\n  bottom: -10px; }\n\n.introduceGuideMask[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 60px;\n  left: 0;\n  background: #000000;\n  opacity: 0.6;\n  z-index: 999; }\n\n.introduceGuidebtn[_v-26b56ef0] {\n  width: 120px;\n  height: 40px;\n  position: fixed;\n  left: 50%;\n  margin-left: -60px;\n  bottom: 60px;\n  z-index: 1000;\n  background: -webkit-linear-gradient(left, #FF7C7C, #FF6A8B);\n  border-radius: 100px;\n  text-align: center;\n  line-height: 40px;\n  color: #fff; }\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -16567,7 +16538,6 @@
 	        }
 	    }
 
-<<<<<<< HEAD
 
 
 	}
@@ -16633,73 +16603,6 @@
 	    this.fun = fun;
 	    this.array = array;
 	}
-=======
-
-
-	}
-	var queue = [];
-	var draining = false;
-	var currentQueue;
-	var queueIndex = -1;
-
-	function cleanUpNextTick() {
-	    if (!draining || !currentQueue) {
-	        return;
-	    }
-	    draining = false;
-	    if (currentQueue.length) {
-	        queue = currentQueue.concat(queue);
-	    } else {
-	        queueIndex = -1;
-	    }
-	    if (queue.length) {
-	        drainQueue();
-	    }
-	}
-
-	function drainQueue() {
-	    if (draining) {
-	        return;
-	    }
-	    var timeout = runTimeout(cleanUpNextTick);
-	    draining = true;
-
-	    var len = queue.length;
-	    while(len) {
-	        currentQueue = queue;
-	        queue = [];
-	        while (++queueIndex < len) {
-	            if (currentQueue) {
-	                currentQueue[queueIndex].run();
-	            }
-	        }
-	        queueIndex = -1;
-	        len = queue.length;
-	    }
-	    currentQueue = null;
-	    draining = false;
-	    runClearTimeout(timeout);
-	}
-
-	process.nextTick = function (fun) {
-	    var args = new Array(arguments.length - 1);
-	    if (arguments.length > 1) {
-	        for (var i = 1; i < arguments.length; i++) {
-	            args[i - 1] = arguments[i];
-	        }
-	    }
-	    queue.push(new Item(fun, args));
-	    if (queue.length === 1 && !draining) {
-	        runTimeout(drainQueue);
-	    }
-	};
-
-	// v8 likes predictible objects
-	function Item(fun, array) {
-	    this.fun = fun;
-	    this.array = array;
-	}
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	Item.prototype.run = function () {
 	    this.fun.apply(null, this.array);
 	};
@@ -18821,11 +18724,7 @@
 /* 282 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div class=\"course_desc_0\" :style=\"styleObject\" _v-6581e61a=\"\">\n    <div class=\"block\" style=\"width: 100%;height: 47px;\" v-if=\"fixFlag\" _v-6581e61a=\"\"></div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle: fixFlag}\" v-if=\"!isApp\" _v-6581e61a=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-6581e61a=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-6581e61a=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-6581e61a=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle1: fixFlag}\" v-if=\"isApp\" _v-6581e61a=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-6581e61a=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-6581e61a=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-6581e61a=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_intrduce_success\" _v-6581e61a=\"\"></div>\n    <div v-if=\"class_introduce_left==1\" class=\"class_intrduce_left\" _v-6581e61a=\"\">\n        <div v-if=\"courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_div\" _v-6581e61a=\"\">\n            <img :src=\"item.imgUri\" v-for=\"(item,index) in courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_img\" _v-6581e61a=\"\">\n        </div>\n        <div class=\"left_introduce_text\" _v-6581e61a=\"\">\n            <p v-html=\"courseDescInfo.courseDesc.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></p>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==0\" class=\"class_introduce_right\" _v-6581e61a=\"\">\n        <div class=\"class_introduce_con\" _v-6581e61a=\"\">\n            <a _v-6581e61a=\"\">\n                <div class=\"teacher_tit\" _v-6581e61a=\"\">\n                    <img @click=\"goTeacher(teacherDescInfo.command.content)\" class=\"img\" :src=\"teacherDescInfo.teacherAvatar\" alt=\"\" _v-6581e61a=\"\">\n                    <div class=\"teacher_dis\" _v-6581e61a=\"\">\n                        <span class=\"techer\" _v-6581e61a=\"\">{{teacherDescInfo.teacherName}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != teacherDescInfo.teacherId\" _v-6581e61a=\"\">\n                        <!-- <div class='attention_yes' v-if='attention==0' @click='attention_yes'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"attention==0\" @click=\"attention_yes\" _v-6581e61a=\"\">\n                        <div class=\"attention_no\" v-if=\"attention==1\" _v-6581e61a=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-6581e61a=\"\">\n                <p v-html=\"teacherDescInfo.teacherDesc.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></p>\n            </div>\n        </div>\n        <div class=\"class_introduce_con guest_introduce_con\" v-for=\"item in guestList\" _v-6581e61a=\"\">\n            <a _v-6581e61a=\"\">\n                <div class=\"teacher_tit\" _v-6581e61a=\"\">\n                    <img @click=\"goTeacher(item.command.content)\" class=\"img\" :src=\"item.avatar\" alt=\"\" _v-6581e61a=\"\">\n                    <div class=\"teacher_dis\" _v-6581e61a=\"\">\n                        <span class=\"techer\" _v-6581e61a=\"\">{{item.name}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != item.teacherId\" _v-6581e61a=\"\">\n                        <!-- <div class='attention_yes' v-if='item.followStatus==0' @click='attention_yes_guest(item.teacherId)'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"item.followStatus==0\" @click=\"attention_yes_guest(item.teacherId)\" _v-6581e61a=\"\">\n                        <div class=\"attention_no\" v-if=\"item.followStatus==1\" _v-6581e61a=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-6581e61a=\"\">\n                <p v-html=\"item.desc.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></p>\n            </div>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==2\" _v-6581e61a=\"\">\n        <div class=\"discuss_top\" _v-6581e61a=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==1\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllSignUp.png\" _v-6581e61a=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==0\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png\" _v-6581e61a=\"\">\n            <div class=\"discuss_top_write\" @click=\"writeNote\" v-if=\"userTicket==1 &amp;&amp; AppVersionFlag\" _v-6581e61a=\"\">\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\" _v-6581e61a=\"\">\n\n            </div>\n            <div class=\"discuss_top_no_write\" v-if=\"userTicket==0 &amp;&amp; AppVersionFlag\" _v-6581e61a=\"\">\n                报名后才能写笔记哦\n            </div>\n            <div class=\"discuss_top_alldiscuss\" @click=\"allNote\" _v-6581e61a=\"\">\n                全部笔记\n                <!-- <img src=\"//pic.davdian.com/free/2017/07/26/entry.png\"> -->\n            </div>\n            <i class=\"icon\" _v-6581e61a=\"\"></i>\n        </div>\n        <div class=\"discuss_container\" v-if=\"notesList.length!=0\" :class=\"{discuss_container_noborder: index == notesList.length-1}\" v-for=\"(item, index) in notesList\" @click.stop=\"show_all(item)\" _v-6581e61a=\"\">\n            <div class=\"discuss_title\" _v-6581e61a=\"\">\n                <div class=\"title_img title_all\" :style=\"{'background': 'url(' + item.headImg + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-6581e61a=\"\"></div>    \n                <div class=\"title_name title_all\" v-text=\"item.userName\" _v-6581e61a=\"\"></div>\n                <div class=\"title_time title_all\" v-text=\"item.createTime\" _v-6581e61a=\"\"></div>\n                <img class=\"title_star title_all\" v-if=\"item.score == 1\" src=\"//pic.davdian.com/free/2017/05/09/star_1.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 2\" src=\"//pic.davdian.com/free/2017/05/09/star_2.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 3\" src=\"//pic.davdian.com/free/2017/05/09/star_3.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 4\" src=\"//pic.davdian.com/free/2017/05/09/star_4.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 5\" src=\"//pic.davdian.com/free/2017/05/09/star_5.png\" _v-6581e61a=\"\">\n            </div>\n            <div class=\"discuss_content\" v-html=\"item.content.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==1\" @click.stop=\"showAll(index)\" _v-6581e61a=\"\">查看全部</div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==2\" @click.stop=\"showAll1(index)\" _v-6581e61a=\"\">收起</div>\n            <div class=\"discuss_imgContainer\" _v-6581e61a=\"\">\n                <div class=\"discuss_img\" :style=\"{'background': 'url(' + item1 + ') center center / cover no-repeat' , 'background-size': 'cover'}\" v-for=\"(item1, index) in item.imgList\" @click=\"showImg(index,item.imgList, item1)\" _v-6581e61a=\"\"></div>\n            </div>\n            <div class=\"discuss_share\" v-if=\"isApp\" _v-6581e61a=\"\">\n                <div class=\"discuss_share_container\" @click.stop=\"share(item)\" v-if=\"isApp\" _v-6581e61a=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/02/07/material-share.png\" _v-6581e61a=\"\">\n                    <span v-text=\"item.shareNum\" v-if=\"item.shareNum !=0\" _v-6581e61a=\"\"></span>\n                </div>\n            </div>\n        </div>\n        <!-- <div class='discuss_all'>\n            <div class=\"discuss_all_content\" @click='allNote' v-if='notesList.length!=0'>\n                查看全部{{notesNum}}条听课笔记\n            </div>\n        </div> -->\n        <div class=\"no_discuss\" v-if=\"notesList.length==0\" _v-6581e61a=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/10/error_img.png\" _v-6581e61a=\"\">\n            <p _v-6581e61a=\"\">快来写笔记吧</p>\n            <!-- <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\">\n            </div>\n            <div class='discuss_top_no_write' v-if='userTicket==0 && AppVersionFlag'>\n                报名后才能写笔记哦\n            </div> -->\n        </div>\n    </div>\n    <!-- <div class='maskAttention' v-if='maskAttention'></div> -->\n    <div class=\"contentAttention\" v-if=\"maskAttention\" _v-6581e61a=\"\">\n        <h1 _v-6581e61a=\"\">关注成功</h1>\n        <p _v-6581e61a=\"\">老师开讲新课，我们会悄悄告诉你呦</p>\n    </div>\n\n    <img v-if=\"introduceGuide &amp;&amp; guide==1\" class=\"introduceGuide lectureNnotesAll\" src=\"//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png\" _v-6581e61a=\"\">\n\n    <div v-if=\"introduceGuide\" class=\"introduceGuideMask\" _v-6581e61a=\"\"></div>\n    <div v-if=\"introduceGuide\" class=\"introduceGuidebtn\" @click=\"know\" _v-6581e61a=\"\">知道了</div>\n\n</div>\n";
-=======
-	module.exports = "\n<div class=\"course_desc_0\" :style=\"styleObject\" _v-26b56ef0=\"\">\n    <div class=\"block\" style=\"width: 100%;height: 47px;\" v-if=\"fixFlag\" _v-26b56ef0=\"\"></div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle: fixFlag}\" v-if=\"!isApp\" _v-26b56ef0=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-26b56ef0=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-26b56ef0=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-26b56ef0=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle1: fixFlag}\" v-if=\"isApp\" _v-26b56ef0=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-26b56ef0=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-26b56ef0=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-26b56ef0=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_intrduce_success\" _v-26b56ef0=\"\"></div>\n    <div v-if=\"class_introduce_left==1\" class=\"class_intrduce_left\" _v-26b56ef0=\"\">\n        <div v-if=\"courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_div\" _v-26b56ef0=\"\">\n            <img :src=\"item.imgUri\" v-for=\"(item,index) in courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_img\" _v-26b56ef0=\"\">\n        </div>\n        <div class=\"left_introduce_text\" _v-26b56ef0=\"\">\n            <p v-html=\"courseDescInfo.courseDesc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==0\" class=\"class_introduce_right\" _v-26b56ef0=\"\">\n        <div class=\"class_introduce_con\" _v-26b56ef0=\"\">\n            <a _v-26b56ef0=\"\">\n                <div class=\"teacher_tit\" _v-26b56ef0=\"\">\n                    <img @click=\"goTeacher(teacherDescInfo.command.content)\" class=\"img\" :src=\"teacherDescInfo.teacherAvatar\" alt=\"\" _v-26b56ef0=\"\">\n                    <div class=\"teacher_dis\" _v-26b56ef0=\"\">\n                        <span class=\"techer\" _v-26b56ef0=\"\">{{teacherDescInfo.teacherName}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != teacherDescInfo.teacherId\" _v-26b56ef0=\"\">\n                        <!-- <div class='attention_yes' v-if='attention==0' @click='attention_yes'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"attention==0\" @click=\"attention_yes\" _v-26b56ef0=\"\">\n                        <div class=\"attention_no\" v-if=\"attention==1\" _v-26b56ef0=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-26b56ef0=\"\">\n                <p v-html=\"teacherDescInfo.teacherDesc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n            </div>\n        </div>\n        <div class=\"class_introduce_con guest_introduce_con\" v-for=\"item in guestList\" _v-26b56ef0=\"\">\n            <a _v-26b56ef0=\"\">\n                <div class=\"teacher_tit\" _v-26b56ef0=\"\">\n                    <img @click=\"goTeacher(item.command.content)\" class=\"img\" :src=\"item.avatar\" alt=\"\" _v-26b56ef0=\"\">\n                    <div class=\"teacher_dis\" _v-26b56ef0=\"\">\n                        <span class=\"techer\" _v-26b56ef0=\"\">{{item.name}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != item.teacherId\" _v-26b56ef0=\"\">\n                        <!-- <div class='attention_yes' v-if='item.followStatus==0' @click='attention_yes_guest(item.teacherId)'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"item.followStatus==0\" @click=\"attention_yes_guest(item.teacherId)\" _v-26b56ef0=\"\">\n                        <div class=\"attention_no\" v-if=\"item.followStatus==1\" _v-26b56ef0=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-26b56ef0=\"\">\n                <p v-html=\"item.desc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n            </div>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==2\" _v-26b56ef0=\"\">\n        <div class=\"discuss_top\" _v-26b56ef0=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==1\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllSignUp.png\" _v-26b56ef0=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==0\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png\" _v-26b56ef0=\"\">\n            <div class=\"discuss_top_write\" @click=\"writeNote\" v-if=\"userTicket==1 &amp;&amp; AppVersionFlag\" _v-26b56ef0=\"\">\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\" _v-26b56ef0=\"\">\n\n            </div>\n            <div class=\"discuss_top_no_write\" v-if=\"userTicket==0 &amp;&amp; AppVersionFlag\" _v-26b56ef0=\"\">\n                报名后才能写笔记哦\n            </div>\n            <div class=\"discuss_top_alldiscuss\" @click=\"allNote\" _v-26b56ef0=\"\">\n                全部笔记\n                <!-- <img src=\"//pic.davdian.com/free/2017/07/26/entry.png\"> -->\n            </div>\n            <i class=\"icon\" _v-26b56ef0=\"\"></i>\n        </div>\n        <div class=\"discuss_container\" v-if=\"notesList.length!=0\" :class=\"{discuss_container_noborder: index == notesList.length-1}\" v-for=\"(item, index) in notesList\" @click.stop=\"show_all(item)\" _v-26b56ef0=\"\">\n            <div class=\"discuss_title\" _v-26b56ef0=\"\">\n                <div class=\"title_img title_all\" :style=\"{'background': 'url(' + item.headImg + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-26b56ef0=\"\"></div>    \n                <div class=\"title_name title_all\" v-text=\"item.userName\" _v-26b56ef0=\"\"></div>\n                <div class=\"title_time title_all\" v-text=\"item.createTime\" _v-26b56ef0=\"\"></div>\n                <img class=\"title_star title_all\" v-if=\"item.score == 1\" src=\"//pic.davdian.com/free/2017/05/09/star_1.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 2\" src=\"//pic.davdian.com/free/2017/05/09/star_2.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 3\" src=\"//pic.davdian.com/free/2017/05/09/star_3.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 4\" src=\"//pic.davdian.com/free/2017/05/09/star_4.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 5\" src=\"//pic.davdian.com/free/2017/05/09/star_5.png\" _v-26b56ef0=\"\">\n            </div>\n            <div class=\"discuss_content\" v-html=\"item.content.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==1\" @click.stop=\"showAll(index)\" _v-26b56ef0=\"\">查看全部</div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==2\" @click.stop=\"showAll1(index)\" _v-26b56ef0=\"\">收起</div>\n            <div class=\"discuss_imgContainer\" _v-26b56ef0=\"\">\n                <div class=\"discuss_img\" :style=\"{'background': 'url(' + item1 + ') center center / cover no-repeat' , 'background-size': 'cover'}\" v-for=\"(item1, index) in item.imgList\" @click=\"showImg(index,item.imgList, item1)\" _v-26b56ef0=\"\"></div>\n            </div>\n            <div class=\"discuss_share\" v-if=\"isApp\" _v-26b56ef0=\"\">\n                <div class=\"discuss_share_container\" @click.stop=\"share(item)\" v-if=\"isApp\" _v-26b56ef0=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/02/07/material-share.png\" _v-26b56ef0=\"\">\n                    <span v-text=\"item.shareNum\" v-if=\"item.shareNum !=0\" _v-26b56ef0=\"\"></span>\n                </div>\n            </div>\n        </div>\n        <!-- <div class='discuss_all'>\n            <div class=\"discuss_all_content\" @click='allNote' v-if='notesList.length!=0'>\n                查看全部{{notesNum}}条听课笔记\n            </div>\n        </div> -->\n        <div class=\"no_discuss\" v-if=\"notesList.length==0\" _v-26b56ef0=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/10/error_img.png\" _v-26b56ef0=\"\">\n            <p _v-26b56ef0=\"\">快来写笔记吧</p>\n            <!-- <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\">\n            </div>\n            <div class='discuss_top_no_write' v-if='userTicket==0 && AppVersionFlag'>\n                报名后才能写笔记哦\n            </div> -->\n        </div>\n    </div>\n    <!-- <div class='maskAttention' v-if='maskAttention'></div> -->\n    <div class=\"contentAttention\" v-if=\"maskAttention\" _v-26b56ef0=\"\">\n        <h1 _v-26b56ef0=\"\">关注成功</h1>\n        <p _v-26b56ef0=\"\">老师开讲新课，我们会悄悄告诉你呦</p>\n    </div>\n\n    <img v-if=\"introduceGuide &amp;&amp; guide==1\" class=\"introduceGuide lectureNnotesAll\" src=\"//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png\" _v-26b56ef0=\"\">\n\n    <div v-if=\"introduceGuide\" class=\"introduceGuideMask\" _v-26b56ef0=\"\"></div>\n    <div v-if=\"introduceGuide\" class=\"introduceGuidebtn\" @click=\"know\" _v-26b56ef0=\"\">知道了</div>\n\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 283 */
@@ -18855,11 +18754,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-44019e47/fire_work.vue"
-=======
-	  var id = "_v-2cd22748/fire_work.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19313,11 +19208,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-ac41ad0a/dvk1.vue"
-=======
-	  var id = "_v-2b46bb74/dvk1.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19341,13 +19232,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac41ad0a&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk1.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac41ad0a&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk1.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b46bb74&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk1.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b46bb74&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk1.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19365,11 +19251,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk1_container[_v-ac41ad0a]{\n    height: 76px;\n    position: relative;\n    padding-bottom: 25px;\n}\n.dvk1_img[_v-ac41ad0a]{\n    height: 76px;\n    width: 110px;\n    position: relative;\n    float:left;\n    overflow: hidden;\n    background: #fff;\n    margin-top:2px;\n}\n.dvk1_content[_v-ac41ad0a]{\n    vertical-align: top;\n    margin-left: 120px;\n    height: 76px;\n}\n.dvk1_text[_v-ac41ad0a]{\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    font-size: 14px;\n    color: #333333;\n    margin-bottom: 5px;\n    line-height: 20px;\n}\n.dvk1_name[_v-ac41ad0a]{\n    font-size: 12px;\n    line-height: 16px;\n    color: #999;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk1_share[_v-ac41ad0a]{\n    margin-top: 5px;\n    font-size: 12px;\n    line-height:16px;\n    color: #999999;\n    overflow:hidden;\n}\n.dvk1_border[_v-ac41ad0a]{\n    border-left: 0.5px solid #999;\n    margin-left: 5px;\n    /*margin-right: 0.07rem;*/\n}\n.dvk1_imgNav[_v-ac41ad0a]{\n    position: absolute;\n    top: 30px;\n    left: 30px;\n    width: 30px;\n    height: 30px;\n}\n.dvk1_share_left[_v-ac41ad0a]{\n\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk1_money[_v-ac41ad0a]{\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    height: 18px;\n    line-height: 20px;\n    padding-left: 3px;\n    padding-right: 3px;\n    text-align: center;\n    color: #fff;\n    font-size: 11px;\n    background: #FF4A7D;\n}\n.circle[_v-ac41ad0a]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-ac41ad0a] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n    border-radius: 4px;\n}\n.dvk1_mask[_v-ac41ad0a]{\n  height: 79px;\n  padding: 0 10px;\n}\n.dvk1_line[_v-ac41ad0a]{\n  height: 12px;\n  width: 1px;\n  background: #E1E1E1;\n  margin-left: 10px;\n}\n.dvk1_share>span[_v-ac41ad0a]{\n  float: left;\n}\n.dvk1_share_left[_v-ac41ad0a]{\n  margin-left: 10px;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk1_container[_v-2b46bb74]{\n    height: 76px;\n    position: relative;\n    padding-bottom: 25px;\n}\n.dvk1_img[_v-2b46bb74]{\n    height: 76px;\n    width: 110px;\n    position: relative;\n    float:left;\n    overflow: hidden;\n    background: #fff;\n    margin-top:2px;\n}\n.dvk1_content[_v-2b46bb74]{\n    vertical-align: top;\n    margin-left: 120px;\n    height: 76px;\n}\n.dvk1_text[_v-2b46bb74]{\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    font-size: 14px;\n    color: #333333;\n    margin-bottom: 5px;\n    line-height: 20px;\n}\n.dvk1_name[_v-2b46bb74]{\n    font-size: 12px;\n    line-height: 16px;\n    color: #999;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk1_share[_v-2b46bb74]{\n    margin-top: 5px;\n    font-size: 12px;\n    line-height:16px;\n    color: #999999;\n    overflow:hidden;\n}\n.dvk1_border[_v-2b46bb74]{\n    border-left: 0.5px solid #999;\n    margin-left: 5px;\n    /*margin-right: 0.07rem;*/\n}\n.dvk1_imgNav[_v-2b46bb74]{\n    position: absolute;\n    top: 30px;\n    left: 30px;\n    width: 30px;\n    height: 30px;\n}\n.dvk1_share_left[_v-2b46bb74]{\n\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk1_money[_v-2b46bb74]{\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    height: 18px;\n    line-height: 20px;\n    padding-left: 3px;\n    padding-right: 3px;\n    text-align: center;\n    color: #fff;\n    font-size: 11px;\n    background: #FF4A7D;\n}\n.circle[_v-2b46bb74]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2b46bb74] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n    border-radius: 4px;\n}\n.dvk1_mask[_v-2b46bb74]{\n  height: 79px;\n  padding: 0 10px;\n}\n.dvk1_line[_v-2b46bb74]{\n  height: 12px;\n  width: 1px;\n  background: #E1E1E1;\n  margin-left: 10px;\n}\n.dvk1_share>span[_v-2b46bb74]{\n  float: left;\n}\n.dvk1_share_left[_v-2b46bb74]{\n  margin-left: 10px;\n}\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -19619,11 +19501,7 @@
 /* 293 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-ac41ad0a=\"\">\n    <tt_com_0 :data=\"data\" _v-ac41ad0a=\"\"></tt_com_0>\n    <div class=\"dvk1_container\" :style=\"styleObject\" _v-ac41ad0a=\"\">\n      <div class=\"dvk1_mask\" _v-ac41ad0a=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-ac41ad0a=\"\">\n          <div class=\"dvk1_img\" _v-ac41ad0a=\"\">\n            <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-ac41ad0a=\"\">\n            <div class=\"dvk1_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-ac41ad0a=\"\"></div>\n          </div>\n          <div class=\"dvk1_content\" _v-ac41ad0a=\"\">\n            <div class=\"dvk1_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-ac41ad0a=\"\"></div>\n            <div class=\"dvk1_name\" _v-ac41ad0a=\"\">\n              <span v-text=\"data.body.dataList[0].teacherName\" _v-ac41ad0a=\"\"></span>\n            </div>\n            <div class=\"dvk1_share\" _v-ac41ad0a=\"\">\n              <span class=\"dvk1_share_right\" _v-ac41ad0a=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-ac41ad0a=\"\"></span></span>\n              <span class=\"dvk1_line\" _v-ac41ad0a=\"\"></span>\n              <span class=\"dvk1_share_left\" _v-ac41ad0a=\"\">\n                <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-ac41ad0a=\"\"></span>\n                <span v-if=\"livetext(data.body.dataList[0])\" _v-ac41ad0a=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-ac41ad0a=\"\"></span>\n              </span>\n            </div>\n          </div>\n        </a>\n      </div>\n    </div>\n</div>\n";
-=======
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b46bb74=\"\">\n    <tt_com_0 :data=\"data\" _v-2b46bb74=\"\"></tt_com_0>\n    <div class=\"dvk1_container\" :style=\"styleObject\" _v-2b46bb74=\"\">\n      <div class=\"dvk1_mask\" _v-2b46bb74=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b46bb74=\"\">\n          <div class=\"dvk1_img\" _v-2b46bb74=\"\">\n            <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b46bb74=\"\">\n            <div class=\"dvk1_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b46bb74=\"\"></div>\n          </div>\n          <div class=\"dvk1_content\" _v-2b46bb74=\"\">\n            <div class=\"dvk1_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b46bb74=\"\"></div>\n            <div class=\"dvk1_name\" _v-2b46bb74=\"\">\n              <span v-text=\"data.body.dataList[0].teacherName\" _v-2b46bb74=\"\"></span>\n            </div>\n            <div class=\"dvk1_share\" _v-2b46bb74=\"\">\n              <span class=\"dvk1_share_right\" _v-2b46bb74=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b46bb74=\"\"></span></span>\n              <span class=\"dvk1_line\" _v-2b46bb74=\"\"></span>\n              <span class=\"dvk1_share_left\" _v-2b46bb74=\"\">\n                <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b46bb74=\"\"></span>\n                <span v-if=\"livetext(data.body.dataList[0])\" _v-2b46bb74=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b46bb74=\"\"></span>\n              </span>\n            </div>\n          </div>\n        </a>\n      </div>\n    </div>\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 294 */
@@ -19653,11 +19531,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-ac257e08/dvk2.vue"
-=======
-	  var id = "_v-2b2a8c72/dvk2.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19681,13 +19555,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac257e08&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk2.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac257e08&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk2.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b2a8c72&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk2.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b2a8c72&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk2.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19705,11 +19574,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk2_container[_v-ac257e08]{\n    height: 3.06rem;\n    width: 100%;\n    background: #fff;\n    padding-top: 0.1rem;\n}\n.dvk2_img[_v-ac257e08]{\n    width: 3.55rem;\n    height: 2.52rem;\n    margin-left: 0.1rem;\n    position: relative;\n}\n.dvk2_money[_v-ac257e08]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.dvk2_startTime[_v-ac257e08]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.2rem;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.35)),color-stop(100%,rgba(0,0,0,.7)),color-stop(100%,#fff));\n    bottom: 0;\n}\n.dvk2_text[_v-ac257e08]{\n    width: 3.55rem;\n    height: 0.4rem;\n    margin-left: 0.1rem;\n    margin-top: 0.05rem;\n}\n.dvk2_text_title[_v-ac257e08]{\n    width: 100%;\n    height: 0.17rem;\n    line-height: 0.17rem;\n    font-size: 0.12rem;\n    color: #333333;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk2_text_content[_v-ac257e08]{\n    width: 100%;\n    height: 0.17rem;\n    line-height: 0.17rem;\n    font-size: 0.11rem;\n    color: #999999;\n}\n.dvk2_text_name[_v-ac257e08]{\n    float: left;\n    width: 2.7rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk2_text_popular[_v-ac257e08]{\n    float: right;\n}\n.circle[_v-ac257e08]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-ac257e08] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk2_container[_v-2b2a8c72]{\n    height: 3.06rem;\n    width: 100%;\n    background: #fff;\n    padding-top: 0.1rem;\n}\n.dvk2_img[_v-2b2a8c72]{\n    width: 3.55rem;\n    height: 2.52rem;\n    margin-left: 0.1rem;\n    position: relative;\n}\n.dvk2_money[_v-2b2a8c72]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.dvk2_startTime[_v-2b2a8c72]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.2rem;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.35)),color-stop(100%,rgba(0,0,0,.7)),color-stop(100%,#fff));\n    bottom: 0;\n}\n.dvk2_text[_v-2b2a8c72]{\n    width: 3.55rem;\n    height: 0.4rem;\n    margin-left: 0.1rem;\n    margin-top: 0.05rem;\n}\n.dvk2_text_title[_v-2b2a8c72]{\n    width: 100%;\n    height: 0.17rem;\n    line-height: 0.17rem;\n    font-size: 0.12rem;\n    color: #333333;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk2_text_content[_v-2b2a8c72]{\n    width: 100%;\n    height: 0.17rem;\n    line-height: 0.17rem;\n    font-size: 0.11rem;\n    color: #999999;\n}\n.dvk2_text_name[_v-2b2a8c72]{\n    float: left;\n    width: 2.7rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk2_text_popular[_v-2b2a8c72]{\n    float: right;\n}\n.circle[_v-2b2a8c72]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2b2a8c72] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -19920,11 +19785,7 @@
 /* 298 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-ac257e08=\"\">\n    <tt_com_0 :data=\"data\" _v-ac257e08=\"\"></tt_com_0>\n    <div class=\"dvk2_container\" :style=\"styleObject\" _v-ac257e08=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-ac257e08=\"\">\n           <div class=\"dvk2_img\" _v-ac257e08=\"\">\n                <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-ac257e08=\"\">\n               <div class=\"dvk2_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-ac257e08=\"\"></div>\n               <div class=\"dvk2_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-ac257e08=\"\">\n                   <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-ac257e08=\"\"></span> \n                    <span v-if=\"livetext(data.body.dataList[0])\" _v-ac257e08=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                    <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-ac257e08=\"\"></span>\n               </div>\n           </div>\n           <div class=\"dvk2_text\" _v-ac257e08=\"\">\n               <div class=\"dvk2_text_title\" v-text=\"data.body.dataList[0].courseTitle\" _v-ac257e08=\"\"></div>\n               <div class=\"dvk2_text_content\" _v-ac257e08=\"\">\n                   <span class=\"dvk2_text_name\" v-text=\"data.body.dataList[0].teacherName\" _v-ac257e08=\"\"></span>\n                   <span class=\"dvk2_text_popular\" _v-ac257e08=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-ac257e08=\"\"></span></span>\n               </div>\n           </div>\n        </a>\n    </div>\n</div>\n";
-=======
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b2a8c72=\"\">\n    <tt_com_0 :data=\"data\" _v-2b2a8c72=\"\"></tt_com_0>\n    <div class=\"dvk2_container\" :style=\"styleObject\" _v-2b2a8c72=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b2a8c72=\"\">\n           <div class=\"dvk2_img\" _v-2b2a8c72=\"\">\n                <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b2a8c72=\"\">\n               <div class=\"dvk2_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b2a8c72=\"\"></div>\n               <div class=\"dvk2_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-2b2a8c72=\"\">\n                   <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b2a8c72=\"\"></span> \n                    <span v-if=\"livetext(data.body.dataList[0])\" _v-2b2a8c72=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                    <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b2a8c72=\"\"></span>\n               </div>\n           </div>\n           <div class=\"dvk2_text\" _v-2b2a8c72=\"\">\n               <div class=\"dvk2_text_title\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b2a8c72=\"\"></div>\n               <div class=\"dvk2_text_content\" _v-2b2a8c72=\"\">\n                   <span class=\"dvk2_text_name\" v-text=\"data.body.dataList[0].teacherName\" _v-2b2a8c72=\"\"></span>\n                   <span class=\"dvk2_text_popular\" _v-2b2a8c72=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b2a8c72=\"\"></span></span>\n               </div>\n           </div>\n        </a>\n    </div>\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 299 */
@@ -19954,11 +19815,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-ac094f06/dvk3.vue"
-=======
-	  var id = "_v-2b0e5d70/dvk3.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19982,13 +19839,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac094f06&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk3.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac094f06&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk3.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b0e5d70&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk3.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b0e5d70&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk3.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -20006,11 +19858,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk3_container[_v-ac094f06]{\n    height:2.15rem;\n    width: 100%;\n    background: #fff;\n}\n.dvk3_content1[_v-ac094f06]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 1.95rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk3_content2[_v-ac094f06]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 1.95rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk3_img[_v-ac094f06]{\n    height: 1.2rem;\n    background: #fff;\n    position: relative;\n}\n.dvk3_text[_v-ac094f06]{\n    width: 1.52rem;\n    /*height: 0.31rem;*/\n    line-height: 0.15rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n}\n.dvk3_detail[_v-ac094f06]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.08rem;\n    width: 1.52rem;\n}\n.dvk3_name[_v-ac094f06]{\n    float: left;\n    width: 0.9rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk3_popular[_v-ac094f06]{\n    float: right;\n}\n.dvk3_money[_v-ac094f06]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.dvk3_startTime[_v-ac094f06]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.2rem;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.35)),color-stop(100%,rgba(0,0,0,.7)),color-stop(100%,#fff));\n    bottom: 0;\n}\n.dvk3_startTimeLine[_v-ac094f06]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.24rem;\n    background: url('//pic.davdian.com/free/2017/03/06/bg_line1.png');\n    background-size:100% 100%;\n    bottom: 0;\n}\n.dvk3_circle_green[_v-ac094f06]{\n    width: 0.05rem;\n    height: 0.05rem;\n    margin-bottom: 0.02rem;\n    margin-right: 0.04rem;\n    border-radius: 50%;\n    display: inline-block;\n    border:0.5px solid #979797;\n    background: #92FDE0;\n}\n.dvk3_name_titlepic[_v-ac094f06]{\n    width: 0.14rem;\n    margin-left: 0.03rem;\n    margin-bottom: 0.02rem;\n}\n.circle[_v-ac094f06]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-ac094f06] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk3_container[_v-2b0e5d70]{\n    height:2.15rem;\n    width: 100%;\n    background: #fff;\n}\n.dvk3_content1[_v-2b0e5d70]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 1.95rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk3_content2[_v-2b0e5d70]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 1.95rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk3_img[_v-2b0e5d70]{\n    height: 1.2rem;\n    background: #fff;\n    position: relative;\n}\n.dvk3_text[_v-2b0e5d70]{\n    width: 1.52rem;\n    /*height: 0.31rem;*/\n    line-height: 0.15rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n}\n.dvk3_detail[_v-2b0e5d70]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.08rem;\n    width: 1.52rem;\n}\n.dvk3_name[_v-2b0e5d70]{\n    float: left;\n    width: 0.9rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk3_popular[_v-2b0e5d70]{\n    float: right;\n}\n.dvk3_money[_v-2b0e5d70]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.dvk3_startTime[_v-2b0e5d70]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.2rem;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.35)),color-stop(100%,rgba(0,0,0,.7)),color-stop(100%,#fff));\n    bottom: 0;\n}\n.dvk3_startTimeLine[_v-2b0e5d70]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.24rem;\n    background: url('//pic.davdian.com/free/2017/03/06/bg_line1.png');\n    background-size:100% 100%;\n    bottom: 0;\n}\n.dvk3_circle_green[_v-2b0e5d70]{\n    width: 0.05rem;\n    height: 0.05rem;\n    margin-bottom: 0.02rem;\n    margin-right: 0.04rem;\n    border-radius: 50%;\n    display: inline-block;\n    border:0.5px solid #979797;\n    background: #92FDE0;\n}\n.dvk3_name_titlepic[_v-2b0e5d70]{\n    width: 0.14rem;\n    margin-left: 0.03rem;\n    margin-bottom: 0.02rem;\n}\n.circle[_v-2b0e5d70]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2b0e5d70] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -20278,11 +20126,7 @@
 /* 303 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-ac094f06=\"\">\n    <tt_com_0 :data=\"data\" _v-ac094f06=\"\"></tt_com_0>\n    <div class=\"dvk3_container\" :style=\"styleObject\" _v-ac094f06=\"\">\n           <div class=\"dvk3_content1\" _v-ac094f06=\"\">\n                <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-ac094f06=\"\">\n                   <div class=\"dvk3_img\" _v-ac094f06=\"\">\n                         <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-ac094f06=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-ac094f06=\"\"></div>\n                        <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-ac094f06=\"\">\n                            <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-ac094f06=\"\"></span> \n                            <span v-if=\"livetext(data.body.dataList[0])\" _v-ac094f06=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                            <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-ac094f06=\"\"></span>\n                        </div>\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-ac094f06=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-ac094f06=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[0].teacherName\" _v-ac094f06=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-ac094f06=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-ac094f06=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-ac094f06=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n           <div class=\"dvk3_content2\" _v-ac094f06=\"\">\n               <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-ac094f06=\"\">\n                   <div class=\"dvk3_img\" _v-ac094f06=\"\">\n                        <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].courseCover)\" _v-ac094f06=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[1].price &amp;&amp; data.body.dataList[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[1].price\" _v-ac094f06=\"\"></div>\n                        <!-- <div class='dvk3_startTime'> -->\n                            <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[1])\" _v-ac094f06=\"\">\n                                <span v-if=\"livenow(data.body.dataList[1])\" class=\"circle\" _v-ac094f06=\"\"></span> \n                                <span v-if=\"livetext(data.body.dataList[1])\" _v-ac094f06=\"\">{{ livetext(data.body.dataList[1]) }}</span>\n                                <span v-if=\"!livetext(data.body.dataList[1])\" v-text=\"data.body.dataList[1].startTimestamp\" _v-ac094f06=\"\"></span>\n                            </div>\n                        <!-- </div> -->\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[1].courseTitle\" _v-ac094f06=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-ac094f06=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[1].teacherName\" _v-ac094f06=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-ac094f06=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-ac094f06=\"\"><span v-text=\"data.body.dataList[1].readTimes\" _v-ac094f06=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n       \n    </div>\n</div>\n";
-=======
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b0e5d70=\"\">\n    <tt_com_0 :data=\"data\" _v-2b0e5d70=\"\"></tt_com_0>\n    <div class=\"dvk3_container\" :style=\"styleObject\" _v-2b0e5d70=\"\">\n           <div class=\"dvk3_content1\" _v-2b0e5d70=\"\">\n                <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b0e5d70=\"\">\n                   <div class=\"dvk3_img\" _v-2b0e5d70=\"\">\n                         <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b0e5d70=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b0e5d70=\"\"></div>\n                        <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-2b0e5d70=\"\">\n                            <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b0e5d70=\"\"></span> \n                            <span v-if=\"livetext(data.body.dataList[0])\" _v-2b0e5d70=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                            <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b0e5d70=\"\"></span>\n                        </div>\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b0e5d70=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-2b0e5d70=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[0].teacherName\" _v-2b0e5d70=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-2b0e5d70=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-2b0e5d70=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b0e5d70=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n           <div class=\"dvk3_content2\" _v-2b0e5d70=\"\">\n               <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2b0e5d70=\"\">\n                   <div class=\"dvk3_img\" _v-2b0e5d70=\"\">\n                        <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].courseCover)\" _v-2b0e5d70=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[1].price &amp;&amp; data.body.dataList[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[1].price\" _v-2b0e5d70=\"\"></div>\n                        <!-- <div class='dvk3_startTime'> -->\n                            <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[1])\" _v-2b0e5d70=\"\">\n                                <span v-if=\"livenow(data.body.dataList[1])\" class=\"circle\" _v-2b0e5d70=\"\"></span> \n                                <span v-if=\"livetext(data.body.dataList[1])\" _v-2b0e5d70=\"\">{{ livetext(data.body.dataList[1]) }}</span>\n                                <span v-if=\"!livetext(data.body.dataList[1])\" v-text=\"data.body.dataList[1].startTimestamp\" _v-2b0e5d70=\"\"></span>\n                            </div>\n                        <!-- </div> -->\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[1].courseTitle\" _v-2b0e5d70=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-2b0e5d70=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[1].teacherName\" _v-2b0e5d70=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-2b0e5d70=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-2b0e5d70=\"\"><span v-text=\"data.body.dataList[1].readTimes\" _v-2b0e5d70=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n       \n    </div>\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 304 */
@@ -20312,11 +20156,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-abed2004/dvk4.vue"
-=======
-	  var id = "_v-2af22e6e/dvk4.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -20340,13 +20180,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abed2004&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk4.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abed2004&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk4.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2af22e6e&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk4.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2af22e6e&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk4.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -20364,11 +20199,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk4_container[_v-abed2004]{\n    width: 100%;\n    height: 365px;\n    background: #fff;\n}\n.dvk4_title[_v-abed2004]{\n    width: 100%;\n    height: 43px;\n    border-bottom: 0.005rem solid #E1E1E1;\n    position: relative;\n}\n.dvk4_title_now[_v-abed2004]{\n    width: 1.86rem;\n    height: 0.3rem;\n    margin-top: 0.065rem;\n    line-height: 0.3rem;\n    text-align: center;\n    border-right: 0.005rem solid #E1E1E1;\n    display: block;\n    float: left;\n    position: relative;\n}\n.dvk4_title_bottom[_v-abed2004]{\n    position: absolute;\n    top: 41px;\n    width: 0.6rem;\n    left: 0.64rem;\n    border-bottom: 2px solid #FF4A7D;\n}\n.dvk4_title_bottom1[_v-abed2004]{\n    position: absolute;\n    top: 41px;\n    width: 0.6rem;\n    left: 2.5rem;\n    border-bottom: 2px solid #FF4A7D;\n}\n.dvk4_title_tomorrow[_v-abed2004]{\n    width: 1.87rem;\n    height: 0.3rem;\n    margin-top: 0.065rem;\n    line-height: 0.3rem;\n    text-align: center;\n    display: block;\n    float: left;\n    position: relative;\n}\n.active[_v-abed2004]{\n    color: #FF4A7D;\n}\n.dvk4_content[_v-abed2004]{\n    height: 3rem;\n    width: 3.55rem;\n    margin-left: 0.1rem;\n}\n.dvk4_detail[_v-abed2004]{\n    width: 100%;\n    height: 76px;\n    margin-top:25px;\n}\n.first[_v-abed2004]{\n  margin-top:21px;\n}\n.dvk4_detail_content[_v-abed2004]{\n    width: 100%;\n    height: 76px;\n}\n.dvk4_detail_content_img[_v-abed2004]{\n    width: 110px;\n    height: 76px;\n    float: left;\n    position: relative;\n}\n.dvk4_detail_content_text[_v-abed2004]{\n    height: 76px;\n    margin-left:120px;\n    position: relative;\n}\n.dvk4_detail_content_title[_v-abed2004]{\n    color: #333333;\n    font-size: 14px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    margin-bottom: 6px;\n    line-height:20px;\n}\n.dvk4_detail_content_name[_v-abed2004]{\n    color: #999999;\n    font-size: 12px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n    line-height:18px;\n}\n.dvk4_detail_content_time[_v-abed2004]{\n    font-size: 12px;\n    color: #999999;\n    margin-top: 2px;\n}\n.dvk4_detail_content_times[_v-abed2004]{\n    float: left;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n    height: 100%;\n    line-height: 14px;\n    color:#999999;\n    margin-left: 10px;\n}\n.dvk4_detail_content_line[_v-abed2004]{\n  width: 1px;\n  height: 12px;\n  float:left;\n  background: #E1E1E1;\n  margin-left:10px;\n\n}\n.dvk4_detail_content_popular[_v-abed2004]{\n    float: left;\n    height: 100%;\n    line-height: 14px;\n    color:#999999;\n}\n.dvk4_money[_v-abed2004]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.circle[_v-abed2004]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-abed2004] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n    border-radius: 0.04rem;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk4_container[_v-2af22e6e]{\n    width: 100%;\n    height: 365px;\n    background: #fff;\n}\n.dvk4_title[_v-2af22e6e]{\n    width: 100%;\n    height: 43px;\n    border-bottom: 0.005rem solid #E1E1E1;\n    position: relative;\n}\n.dvk4_title_now[_v-2af22e6e]{\n    width: 1.86rem;\n    height: 0.3rem;\n    margin-top: 0.065rem;\n    line-height: 0.3rem;\n    text-align: center;\n    border-right: 0.005rem solid #E1E1E1;\n    display: block;\n    float: left;\n    position: relative;\n}\n.dvk4_title_bottom[_v-2af22e6e]{\n    position: absolute;\n    top: 41px;\n    width: 0.6rem;\n    left: 0.64rem;\n    border-bottom: 2px solid #FF4A7D;\n}\n.dvk4_title_bottom1[_v-2af22e6e]{\n    position: absolute;\n    top: 41px;\n    width: 0.6rem;\n    left: 2.5rem;\n    border-bottom: 2px solid #FF4A7D;\n}\n.dvk4_title_tomorrow[_v-2af22e6e]{\n    width: 1.87rem;\n    height: 0.3rem;\n    margin-top: 0.065rem;\n    line-height: 0.3rem;\n    text-align: center;\n    display: block;\n    float: left;\n    position: relative;\n}\n.active[_v-2af22e6e]{\n    color: #FF4A7D;\n}\n.dvk4_content[_v-2af22e6e]{\n    height: 3rem;\n    width: 3.55rem;\n    margin-left: 0.1rem;\n}\n.dvk4_detail[_v-2af22e6e]{\n    width: 100%;\n    height: 76px;\n    margin-top:25px;\n}\n.first[_v-2af22e6e]{\n  margin-top:21px;\n}\n.dvk4_detail_content[_v-2af22e6e]{\n    width: 100%;\n    height: 76px;\n}\n.dvk4_detail_content_img[_v-2af22e6e]{\n    width: 110px;\n    height: 76px;\n    float: left;\n    position: relative;\n}\n.dvk4_detail_content_text[_v-2af22e6e]{\n    height: 76px;\n    margin-left:120px;\n    position: relative;\n}\n.dvk4_detail_content_title[_v-2af22e6e]{\n    color: #333333;\n    font-size: 14px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    margin-bottom: 6px;\n    line-height:20px;\n}\n.dvk4_detail_content_name[_v-2af22e6e]{\n    color: #999999;\n    font-size: 12px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n    line-height:18px;\n}\n.dvk4_detail_content_time[_v-2af22e6e]{\n    font-size: 12px;\n    color: #999999;\n    margin-top: 2px;\n}\n.dvk4_detail_content_times[_v-2af22e6e]{\n    float: left;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n    height: 100%;\n    line-height: 14px;\n    color:#999999;\n    margin-left: 10px;\n}\n.dvk4_detail_content_line[_v-2af22e6e]{\n  width: 1px;\n  height: 12px;\n  float:left;\n  background: #E1E1E1;\n  margin-left:10px;\n\n}\n.dvk4_detail_content_popular[_v-2af22e6e]{\n    float: left;\n    height: 100%;\n    line-height: 14px;\n    color:#999999;\n}\n.dvk4_money[_v-2af22e6e]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.circle[_v-2af22e6e]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2af22e6e] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n    border-radius: 0.04rem;\n}\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -20807,11 +20638,7 @@
 /* 308 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-abed2004=\"\">\n  <tt_com_0 :data=\"data\" _v-abed2004=\"\"></tt_com_0>\n  <div class=\"dvk4_container\" :style=\"styleObject\" _v-abed2004=\"\">\n     <div class=\"dvk4_title\" v-if=\"flag\" _v-abed2004=\"\">\n         <span class=\"dvk4_title_now active\" v-text=\"data.body.leftTitle\" _v-abed2004=\"\"></span>\n         <span class=\"dvk4_title_bottom\" _v-abed2004=\"\"></span>\n         <span class=\"dvk4_title_tomorrow\" @click=\"tomorrow\" v-text=\"data.body.rightTitle\" _v-abed2004=\"\"></span>\n     </div>\n     <div class=\"dvk4_title\" v-if=\"!flag\" _v-abed2004=\"\">\n         <span class=\"dvk4_title_now\" @click=\"now\" v-text=\"data.body.leftTitle\" _v-abed2004=\"\"></span>\n         <span class=\"dvk4_title_bottom1\" _v-abed2004=\"\"></span>\n         <span class=\"dvk4_title_tomorrow active\" v-text=\"data.body.rightTitle\" _v-abed2004=\"\"></span>\n     </div>\n     <!--  -->\n     <div class=\"dvk4_content\" v-if=\"flag\" _v-abed2004=\"\">\n\n         <div class=\"dvk4_detail first\" _v-abed2004=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[0].command.content\" :position=\"data.body.leftContent[0].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                  <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[0].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[0].price &amp;&amp; data.body.leftContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[0].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[0].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[0].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n\n                         <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.leftContent[0].readTimes\" _v-abed2004=\"\"></span></span>\n                         <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[0])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[0])\" v-text=\"livetext(data.body.leftContent[0])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[0])\" v-text=\"data.body.leftContent[0].startTimestamp\" _v-abed2004=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-abed2004=\"\">\n              <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[1].command.content\" :position=\"data.body.leftContent[1].position\" _v-abed2004=\"\">\n                <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                   <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                      <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[1].courseCover)\" _v-abed2004=\"\">\n                      <div class=\"dvk4_money\" v-if=\"data.body.leftContent[1].price &amp;&amp; data.body.leftContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[1].price\" _v-abed2004=\"\"></div>\n                   </div>\n                   <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                       <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[1].courseTitle\" _v-abed2004=\"\"></div>\n                       <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[1].teacherName\" _v-abed2004=\"\"></div>\n                       <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                         <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\">\n                          <span v-text=\"data.body.leftContent[1].readTimes\" _v-abed2004=\"\"></span>\n                         </span>\n                         <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[1])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[1])\" v-text=\"livetext(data.body.leftContent[1])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[1])\" v-text=\"data.body.leftContent[1].startTimestamp\" _v-abed2004=\"\"></span>\n                         </span>\n                       </div>\n                   </div>\n                </div>\n              </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-abed2004=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[2].command.content\" :position=\"data.body.leftContent[2].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[2].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[2].price &amp;&amp; data.body.leftContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[2].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[2].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[2].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                          <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.leftContent[2].readTimes\" _v-abed2004=\"\"></span></span>\n                          <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[2])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[2])\" v-text=\"livetext(data.body.leftContent[2])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[2])\" v-text=\"data.body.leftContent[2].startTimestamp\" _v-abed2004=\"\"></span>\n                          </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n     <div class=\"dvk4_content\" v-if=\"!flag\" _v-abed2004=\"\">\n         <div class=\"dvk4_detail first\" _v-abed2004=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[0].command.content\" :position=\"data.body.rightContent[0].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[0].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[0].price &amp;&amp; data.body.rightContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[0].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[0].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[0].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.rightContent[0].readTimes\" _v-abed2004=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[0])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[0])\" v-text=\"livetext(data.body.rightContent[0])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[0])\" v-text=\"data.body.rightContent[0].startTimestamp\" _v-abed2004=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-abed2004=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[1].command.content\" :position=\"data.body.rightContent[1].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[1].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[1].price &amp;&amp; data.body.rightContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[1].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[1].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[1].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.rightContent[1].readTimes\" _v-abed2004=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[1])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[1])\" v-text=\"livetext(data.body.rightContent[1])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[1])\" v-text=\"data.body.rightContent[1].startTimestamp\" _v-abed2004=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-abed2004=\"\">\n          <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[2].command.content\" :position=\"data.body.rightContent[2].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[2].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[2].price &amp;&amp; data.body.rightContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[2].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[2].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[2].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.rightContent[2].readTimes\" _v-abed2004=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[2])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[2])\" v-text=\"livetext(data.body.rightContent[2])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[2])\" v-text=\"data.body.rightContent[2].startTimestamp\" _v-abed2004=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n  </div>\n</div>\n";
-=======
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2af22e6e=\"\">\n  <tt_com_0 :data=\"data\" _v-2af22e6e=\"\"></tt_com_0>\n  <div class=\"dvk4_container\" :style=\"styleObject\" _v-2af22e6e=\"\">\n     <div class=\"dvk4_title\" v-if=\"flag\" _v-2af22e6e=\"\">\n         <span class=\"dvk4_title_now active\" v-text=\"data.body.leftTitle\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_bottom\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_tomorrow\" @click=\"tomorrow\" v-text=\"data.body.rightTitle\" _v-2af22e6e=\"\"></span>\n     </div>\n     <div class=\"dvk4_title\" v-if=\"!flag\" _v-2af22e6e=\"\">\n         <span class=\"dvk4_title_now\" @click=\"now\" v-text=\"data.body.leftTitle\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_bottom1\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_tomorrow active\" v-text=\"data.body.rightTitle\" _v-2af22e6e=\"\"></span>\n     </div>\n     <!--  -->\n     <div class=\"dvk4_content\" v-if=\"flag\" _v-2af22e6e=\"\">\n\n         <div class=\"dvk4_detail first\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[0].command.content\" :position=\"data.body.leftContent[0].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                  <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[0].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[0].price &amp;&amp; data.body.leftContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[0].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[0].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[0].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n\n                         <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.leftContent[0].readTimes\" _v-2af22e6e=\"\"></span></span>\n                         <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[0])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[0])\" v-text=\"livetext(data.body.leftContent[0])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[0])\" v-text=\"data.body.leftContent[0].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n              <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[1].command.content\" :position=\"data.body.leftContent[1].position\" _v-2af22e6e=\"\">\n                <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                      <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[1].courseCover)\" _v-2af22e6e=\"\">\n                      <div class=\"dvk4_money\" v-if=\"data.body.leftContent[1].price &amp;&amp; data.body.leftContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[1].price\" _v-2af22e6e=\"\"></div>\n                   </div>\n                   <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                       <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[1].courseTitle\" _v-2af22e6e=\"\"></div>\n                       <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[1].teacherName\" _v-2af22e6e=\"\"></div>\n                       <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                         <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\">\n                          <span v-text=\"data.body.leftContent[1].readTimes\" _v-2af22e6e=\"\"></span>\n                         </span>\n                         <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[1])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[1])\" v-text=\"livetext(data.body.leftContent[1])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[1])\" v-text=\"data.body.leftContent[1].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                       </div>\n                   </div>\n                </div>\n              </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[2].command.content\" :position=\"data.body.leftContent[2].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[2].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[2].price &amp;&amp; data.body.leftContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[2].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[2].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[2].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                          <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.leftContent[2].readTimes\" _v-2af22e6e=\"\"></span></span>\n                          <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[2])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[2])\" v-text=\"livetext(data.body.leftContent[2])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[2])\" v-text=\"data.body.leftContent[2].startTimestamp\" _v-2af22e6e=\"\"></span>\n                          </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n     <div class=\"dvk4_content\" v-if=\"!flag\" _v-2af22e6e=\"\">\n         <div class=\"dvk4_detail first\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[0].command.content\" :position=\"data.body.rightContent[0].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[0].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[0].price &amp;&amp; data.body.rightContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[0].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[0].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[0].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[0].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[0])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[0])\" v-text=\"livetext(data.body.rightContent[0])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[0])\" v-text=\"data.body.rightContent[0].startTimestamp\" _v-2af22e6e=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[1].command.content\" :position=\"data.body.rightContent[1].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[1].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[1].price &amp;&amp; data.body.rightContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[1].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[1].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[1].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[1].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[1])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[1])\" v-text=\"livetext(data.body.rightContent[1])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[1])\" v-text=\"data.body.rightContent[1].startTimestamp\" _v-2af22e6e=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n          <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[2].command.content\" :position=\"data.body.rightContent[2].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[2].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[2].price &amp;&amp; data.body.rightContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[2].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[2].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[2].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[2].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[2])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[2])\" v-text=\"livetext(data.body.rightContent[2])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[2])\" v-text=\"data.body.rightContent[2].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n  </div>\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 309 */
@@ -20841,11 +20668,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-abd0f102/dvk5.vue"
-=======
-	  var id = "_v-2ad5ff6c/dvk5.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -20869,13 +20692,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abd0f102&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk5.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abd0f102&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk5.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ad5ff6c&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk5.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ad5ff6c&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk5.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -20893,11 +20711,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk5_container[_v-abd0f102]{\n    width: 100%;\n    height: 2.63rem;\n    background: #fff;\n}\n.dvk5_content1[_v-abd0f102]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk5_content2[_v-abd0f102]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk5_img[_v-abd0f102]{\n    height: 1.72rem;\n    position: relative;\n}\n.dvk5_text[_v-abd0f102]{\n    width: 1.52rem;\n    /*height: 0.31rem;*/\n    line-height: 0.17rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    text-indent: 0.2rem;\n}\n.dvk5_detail[_v-abd0f102]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.02rem;\n    width: 1.52rem;\n}\n.dvk5_name[_v-abd0f102]{\n    float: left;\n}\n.dvk5_name_spanContainer[_v-abd0f102]{\n    max-width: 0.7rem;\n    display: inline-block;\n    vertical-align: top;\n}\n.dvk5_name_span[_v-abd0f102]{\n    max-width: 0.7rem;\n    vertical-align: top;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk5_popular[_v-abd0f102]{\n    float: right;\n}\n.dvk5_money[_v-abd0f102]{\n    position: absolute;\n    top: 0.1rem;\n    left: 0;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-indent: 0.03rem;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n    display: inline-block;\n    z-index: 1;\n}\n.circle[_v-abd0f102]{\n    width: 0.18rem;\n    height: 0.18rem;\n    top: 0.1rem;\n    left: 0.36rem;\n    position: absolute;\n    color: #fff;\n    border-radius: 50%;\n    background: #FF4A7D;\n    display: inline-block;\n}\n.dvk5_startTime[_v-abd0f102]{\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    line-height: 0.4rem;\n    color: #fff;\n    text-indent: 0.2rem;\n    bottom: 0;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.2)),color-stop(100%,#fff));\n}\n.dvk5_img_statue[_v-abd0f102]{\n    position: absolute;\n    top: 0.1rem;\n    right: 0.1rem;\n    height: 0.17rem;\n}\n.dvk5_img_location[_v-abd0f102]{\n    width: 0.11rem;\n    margin-bottom: 0.02rem;\n}\n.dvk5_img_official[_v-abd0f102]{\n    width: 0.11rem;\n}\n.newImage[_v-abd0f102] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n.video[_v-abd0f102]{\n    position: absolute;\n    width: 0.12rem;\n    top: 1.85rem;\n    left: 0.12rem;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk5_container[_v-2ad5ff6c]{\n    width: 100%;\n    height: 2.63rem;\n    background: #fff;\n}\n.dvk5_content1[_v-2ad5ff6c]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk5_content2[_v-2ad5ff6c]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk5_img[_v-2ad5ff6c]{\n    height: 1.72rem;\n    position: relative;\n}\n.dvk5_text[_v-2ad5ff6c]{\n    width: 1.52rem;\n    /*height: 0.31rem;*/\n    line-height: 0.17rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    text-indent: 0.2rem;\n}\n.dvk5_detail[_v-2ad5ff6c]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.02rem;\n    width: 1.52rem;\n}\n.dvk5_name[_v-2ad5ff6c]{\n    float: left;\n}\n.dvk5_name_spanContainer[_v-2ad5ff6c]{\n    max-width: 0.7rem;\n    display: inline-block;\n    vertical-align: top;\n}\n.dvk5_name_span[_v-2ad5ff6c]{\n    max-width: 0.7rem;\n    vertical-align: top;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk5_popular[_v-2ad5ff6c]{\n    float: right;\n}\n.dvk5_money[_v-2ad5ff6c]{\n    position: absolute;\n    top: 0.1rem;\n    left: 0;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-indent: 0.03rem;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n    display: inline-block;\n    z-index: 1;\n}\n.circle[_v-2ad5ff6c]{\n    width: 0.18rem;\n    height: 0.18rem;\n    top: 0.1rem;\n    left: 0.36rem;\n    position: absolute;\n    color: #fff;\n    border-radius: 50%;\n    background: #FF4A7D;\n    display: inline-block;\n}\n.dvk5_startTime[_v-2ad5ff6c]{\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    line-height: 0.4rem;\n    color: #fff;\n    text-indent: 0.2rem;\n    bottom: 0;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.2)),color-stop(100%,#fff));\n}\n.dvk5_img_statue[_v-2ad5ff6c]{\n    position: absolute;\n    top: 0.1rem;\n    right: 0.1rem;\n    height: 0.17rem;\n}\n.dvk5_img_location[_v-2ad5ff6c]{\n    width: 0.11rem;\n    margin-bottom: 0.02rem;\n}\n.dvk5_img_official[_v-2ad5ff6c]{\n    width: 0.11rem;\n}\n.newImage[_v-2ad5ff6c] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n.video[_v-2ad5ff6c]{\n    position: absolute;\n    width: 0.12rem;\n    top: 1.85rem;\n    left: 0.12rem;\n}\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -21146,11 +20960,7 @@
 /* 313 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-abd0f102=\"\">\n    <tt_com_0 :data=\"data\" _v-abd0f102=\"\"></tt_com_0>\n    <div class=\"dvk5_container\" :style=\"styleObject\" _v-abd0f102=\"\">\n       <div class=\"dvk5_content1\" _v-abd0f102=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-abd0f102=\"\">\n               <div class=\"dvk5_img\" _v-abd0f102=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-abd0f102=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-abd0f102=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[0].category==2\" _v-abd0f102=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[0].category==2\" _v-abd0f102=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-abd0f102=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-abd0f102=\"\"> \n                        <span v-if=\"data.body.dataList[0].address\" v-text=\"data.body.dataList[0].address\" _v-abd0f102=\"\"></span>\n                        <span v-else=\"data.body.dataList[0].address\" _v-abd0f102=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==1\" _v-abd0f102=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==2 || data.body.dataList[0].status==3\" _v-abd0f102=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[0].title\" _v-abd0f102=\"\"></div>\n               <div class=\"dvk5_detail\" _v-abd0f102=\"\">\n                    <span class=\"dvk5_name\" _v-abd0f102=\"\"> <span class=\"dvk5_name_spanContainer\" _v-abd0f102=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[0].teacherName\" _v-abd0f102=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[0].verify==1\" _v-abd0f102=\"\"> </span>\n                    <span class=\"dvk5_popular\" _v-abd0f102=\"\"><span v-text=\"data.body.dataList[0].pv\" _v-abd0f102=\"\"></span></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk5_content2\" _v-abd0f102=\"\">\n           <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-abd0f102=\"\">\n               <div class=\"dvk5_img\" _v-abd0f102=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-abd0f102=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-abd0f102=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[1].category==2\" _v-abd0f102=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[1].category==2\" _v-abd0f102=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-abd0f102=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-abd0f102=\"\"> \n                        <span v-if=\"data.body.dataList[1].address\" v-text=\"data.body.dataList[1].address\" _v-abd0f102=\"\"></span>\n                        <span v-else=\"data.body.dataList[1].address\" _v-abd0f102=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==1\" _v-abd0f102=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==2 || data.body.dataList[1].status==3\" _v-abd0f102=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[1].title\" _v-abd0f102=\"\"></div>\n               <div class=\"dvk5_detail\" _v-abd0f102=\"\">\n                    <span class=\"dvk5_name\" _v-abd0f102=\"\"> <span class=\"dvk5_name_spanContainer\" _v-abd0f102=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[1].teacherName\" _v-abd0f102=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[1].verify==1\" _v-abd0f102=\"\"></span>\n                    <span class=\"dvk5_popular\" _v-abd0f102=\"\"><span v-text=\"data.body.dataList[1].pv\" _v-abd0f102=\"\"></span></span>\n                </div>\n           </a>\n       </div>\n    </div>\n</div>\n";
-=======
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2ad5ff6c=\"\">\n    <tt_com_0 :data=\"data\" _v-2ad5ff6c=\"\"></tt_com_0>\n    <div class=\"dvk5_container\" :style=\"styleObject\" _v-2ad5ff6c=\"\">\n       <div class=\"dvk5_content1\" _v-2ad5ff6c=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2ad5ff6c=\"\">\n               <div class=\"dvk5_img\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-2ad5ff6c=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-2ad5ff6c=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[0].category==2\" _v-2ad5ff6c=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[0].category==2\" _v-2ad5ff6c=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-2ad5ff6c=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-2ad5ff6c=\"\"> \n                        <span v-if=\"data.body.dataList[0].address\" v-text=\"data.body.dataList[0].address\" _v-2ad5ff6c=\"\"></span>\n                        <span v-else=\"data.body.dataList[0].address\" _v-2ad5ff6c=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==1\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==2 || data.body.dataList[0].status==3\" _v-2ad5ff6c=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[0].title\" _v-2ad5ff6c=\"\"></div>\n               <div class=\"dvk5_detail\" _v-2ad5ff6c=\"\">\n                    <span class=\"dvk5_name\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_spanContainer\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[0].teacherName\" _v-2ad5ff6c=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[0].verify==1\" _v-2ad5ff6c=\"\"> </span>\n                    <span class=\"dvk5_popular\" _v-2ad5ff6c=\"\"><span v-text=\"data.body.dataList[0].pv\" _v-2ad5ff6c=\"\"></span></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk5_content2\" _v-2ad5ff6c=\"\">\n           <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2ad5ff6c=\"\">\n               <div class=\"dvk5_img\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-2ad5ff6c=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-2ad5ff6c=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[1].category==2\" _v-2ad5ff6c=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[1].category==2\" _v-2ad5ff6c=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-2ad5ff6c=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-2ad5ff6c=\"\"> \n                        <span v-if=\"data.body.dataList[1].address\" v-text=\"data.body.dataList[1].address\" _v-2ad5ff6c=\"\"></span>\n                        <span v-else=\"data.body.dataList[1].address\" _v-2ad5ff6c=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==1\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==2 || data.body.dataList[1].status==3\" _v-2ad5ff6c=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[1].title\" _v-2ad5ff6c=\"\"></div>\n               <div class=\"dvk5_detail\" _v-2ad5ff6c=\"\">\n                    <span class=\"dvk5_name\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_spanContainer\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[1].teacherName\" _v-2ad5ff6c=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[1].verify==1\" _v-2ad5ff6c=\"\"></span>\n                    <span class=\"dvk5_popular\" _v-2ad5ff6c=\"\"><span v-text=\"data.body.dataList[1].pv\" _v-2ad5ff6c=\"\"></span></span>\n                </div>\n           </a>\n       </div>\n    </div>\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 314 */
@@ -21180,11 +20990,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-abb4c200/dvk6.vue"
-=======
-	  var id = "_v-2ab9d06a/dvk6.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -21208,13 +21014,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abb4c200&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk6.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abb4c200&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk6.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ab9d06a&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk6.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ab9d06a&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk6.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21232,11 +21033,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk6_container[_v-abb4c200]{\n    width: 100%;\n    height: 2.63rem;\n    background: #fff;\n}\n.dvk6_content1[_v-abb4c200]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk6_content2[_v-abb4c200]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk6_img[_v-abb4c200]{\n    height: 1.72rem;\n    position: relative;\n}\n.dvk6_text[_v-abb4c200]{\n    width: 1.52rem;\n    /*height: 0.16rem;*/\n    line-height: 0.16rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    margin-bottom: 0.05rem;\n}\n.dvk6_detail[_v-abb4c200]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.02rem;\n    width: 1.52rem;\n}\n.dvk6_name[_v-abb4c200]{\n    float: left;\n    width: 0.9rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n}\n.dvk6_popular[_v-abb4c200]{\n    float: right;\n}\n.dvk6_startTime[_v-abb4c200]{\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    line-height: 0.4rem;\n    color: #fff;\n    text-indent: 0.2rem;\n    bottom: 0;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.2)),color-stop(100%,#fff));\n}\n.dvk6_img_title[_v-abb4c200]{\n    width: 0.16rem;\n    margin-bottom: 0.02rem;\n    margin-right: 0.02rem;\n}\n.newImage[_v-abb4c200] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk6_container[_v-2ab9d06a]{\n    width: 100%;\n    height: 2.63rem;\n    background: #fff;\n}\n.dvk6_content1[_v-2ab9d06a]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk6_content2[_v-2ab9d06a]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk6_img[_v-2ab9d06a]{\n    height: 1.72rem;\n    position: relative;\n}\n.dvk6_text[_v-2ab9d06a]{\n    width: 1.52rem;\n    /*height: 0.16rem;*/\n    line-height: 0.16rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    margin-bottom: 0.05rem;\n}\n.dvk6_detail[_v-2ab9d06a]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.02rem;\n    width: 1.52rem;\n}\n.dvk6_name[_v-2ab9d06a]{\n    float: left;\n    width: 0.9rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n}\n.dvk6_popular[_v-2ab9d06a]{\n    float: right;\n}\n.dvk6_startTime[_v-2ab9d06a]{\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    line-height: 0.4rem;\n    color: #fff;\n    text-indent: 0.2rem;\n    bottom: 0;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.2)),color-stop(100%,#fff));\n}\n.dvk6_img_title[_v-2ab9d06a]{\n    width: 0.16rem;\n    margin-bottom: 0.02rem;\n    margin-right: 0.02rem;\n}\n.newImage[_v-2ab9d06a] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -21419,11 +21216,7 @@
 /* 318 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-abb4c200=\"\">\n    <tt_com_0 :data=\"data\" _v-abb4c200=\"\"></tt_com_0>\n    <div class=\"dvk6_container\" :style=\"styleObject\" _v-abb4c200=\"\">\n       <div class=\"dvk6_content1\" _v-abb4c200=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-abb4c200=\"\">\n               <div class=\"dvk6_img\" _v-abb4c200=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-abb4c200=\"\">\n                    <div class=\"dvk6_startTime\" _v-abb4c200=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-abb4c200=\"\"><span v-text=\"data.body.dataList[0].time\" _v-abb4c200=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[0].title\" _v-abb4c200=\"\"></div>\n               <div class=\"dvk6_detail\" _v-abb4c200=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[0].pv\" _v-abb4c200=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[0].type\" _v-abb4c200=\"\"></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk6_content2\" _v-abb4c200=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-abb4c200=\"\">\n               <div class=\"dvk6_img\" _v-abb4c200=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-abb4c200=\"\">\n                    <div class=\"dvk6_startTime\" _v-abb4c200=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-abb4c200=\"\"><span v-text=\"data.body.dataList[1].time\" _v-abb4c200=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[1].title\" _v-abb4c200=\"\"></div>\n               <div class=\"dvk6_detail\" _v-abb4c200=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[1].pv\" _v-abb4c200=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[1].type\" _v-abb4c200=\"\">\n                </span></div>\n            </a>\n       </div>\n    </div>\n</div>\n";
-=======
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2ab9d06a=\"\">\n    <tt_com_0 :data=\"data\" _v-2ab9d06a=\"\"></tt_com_0>\n    <div class=\"dvk6_container\" :style=\"styleObject\" _v-2ab9d06a=\"\">\n       <div class=\"dvk6_content1\" _v-2ab9d06a=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2ab9d06a=\"\">\n               <div class=\"dvk6_img\" _v-2ab9d06a=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-2ab9d06a=\"\">\n                    <div class=\"dvk6_startTime\" _v-2ab9d06a=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-2ab9d06a=\"\"><span v-text=\"data.body.dataList[0].time\" _v-2ab9d06a=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[0].title\" _v-2ab9d06a=\"\"></div>\n               <div class=\"dvk6_detail\" _v-2ab9d06a=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[0].pv\" _v-2ab9d06a=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[0].type\" _v-2ab9d06a=\"\"></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk6_content2\" _v-2ab9d06a=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2ab9d06a=\"\">\n               <div class=\"dvk6_img\" _v-2ab9d06a=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-2ab9d06a=\"\">\n                    <div class=\"dvk6_startTime\" _v-2ab9d06a=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-2ab9d06a=\"\"><span v-text=\"data.body.dataList[1].time\" _v-2ab9d06a=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[1].title\" _v-2ab9d06a=\"\"></div>\n               <div class=\"dvk6_detail\" _v-2ab9d06a=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[1].pv\" _v-2ab9d06a=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[1].type\" _v-2ab9d06a=\"\">\n                </span></div>\n            </a>\n       </div>\n    </div>\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 319 */
@@ -21453,11 +21246,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-1fc2f7e0/bd_goods_3.vue"
-=======
-	  var id = "_v-059a0eca/bd_goods_3.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -21481,13 +21270,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1fc2f7e0&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_3.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1fc2f7e0&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_3.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-059a0eca&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_3.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-059a0eca&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_3.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21505,11 +21289,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*团购样式*/\n.tuan_list[_v-1fc2f7e0] {\n    display: block;\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan_list a[_v-1fc2f7e0] {\n    border-bottom: 1px solid #f0f0f0;\n    display: block;\n    position: relative;\n}\n\n.tuan_list a[_v-1fc2f7e0]:last-child {\n    border-bottom: none;\n}\n\n.tuan_img_container img[_v-1fc2f7e0] {\n    width: 100%;\n    display: block;\n    height: 43.75vw;\n    max-height: 280px;\n}\n\n.tuan_info_container[_v-1fc2f7e0] {\n    position: absolute;\n    width: 1.62rem;\n    top: 0;\n    right: 10px;\n    height: 100%;\n}\n\n.tuan_list a .time[_v-1fc2f7e0] {\n    background-color: rgba(0, 0, 0, .3);\n    line-height: normal;\n    display: block;\n    border-radius: .75rem;\n    position: absolute;\n    bottom: .14rem;\n    left: 0;\n    font-size: .12rem;\n    padding: 0.01rem 0.05rem;\n    color: #fff;\n}\n\n.tuan_list[_v-1fc2f7e0]:hover, .tuan_list[_v-1fc2f7e0]:focus {\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan_item[_v-1fc2f7e0]:hover, .tuan_item[_v-1fc2f7e0]:focus {\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan-other-info[_v-1fc2f7e0] {\n    margin-top: 0.15rem;\n}\n\n.tuan_item_title[_v-1fc2f7e0] {\n    text-overflow: ellipsis;\n    white-space: pre-line;\n    overflow: hidden;\n    height: 0.62rem;\n    line-height: 0.21rem;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 3;\n    display: -webkit-box;\n    overflow: hidden;\n    font-size: 0.14rem;\n    color: #333;\n}\n\n.tuan_item_price[_v-1fc2f7e0] {\n    font-size: 0.11rem;\n    color: #333;\n    position: absolute;\n    bottom: 0.39rem;\n}\n\n.tuan_item_price .current_price[_v-1fc2f7e0] {\n    font-size: 0.24rem;\n    padding-right: 6px;\n}\n\n.tuan_item_price .market_price[_v-1fc2f7e0] {\n    text-decoration: line-through;\n    color: #999;\n}\n\n.tuan_img_container img[_v-1fc2f7e0] {\n    width: 100%;\n}\n\n.tuan_item_icon[_v-1fc2f7e0] {\n    width: 0.3rem;\n    height: 0.31rem;\n    background: url(//pic.davdian.com/free/tuanlist_icon_3x_0804.png) no-repeat;\n    background-size: 0.3rem;\n    display: inline-block;\n    position: absolute;\n    bottom: 0.11rem;\n    right: 2px;\n}\n.time1[_v-1fc2f7e0]{\n    background-color: rgba(0, 0, 0, .3);\n    line-height: normal;\n    display: block;\n    border-radius: .75rem;\n    position: absolute;\n    bottom: .14rem;\n    left: 0;\n    font-size: .12rem;\n    padding: 0.01rem 0.05rem;\n    color: #fff;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*团购样式*/\n.tuan_list[_v-059a0eca] {\n    display: block;\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan_list a[_v-059a0eca] {\n    border-bottom: 1px solid #f0f0f0;\n    display: block;\n    position: relative;\n}\n\n.tuan_list a[_v-059a0eca]:last-child {\n    border-bottom: none;\n}\n\n.tuan_img_container img[_v-059a0eca] {\n    width: 100%;\n    display: block;\n    height: 43.75vw;\n    max-height: 280px;\n}\n\n.tuan_info_container[_v-059a0eca] {\n    position: absolute;\n    width: 1.62rem;\n    top: 0;\n    right: 10px;\n    height: 100%;\n}\n\n.tuan_list a .time[_v-059a0eca] {\n    background-color: rgba(0, 0, 0, .3);\n    line-height: normal;\n    display: block;\n    border-radius: .75rem;\n    position: absolute;\n    bottom: .14rem;\n    left: 0;\n    font-size: .12rem;\n    padding: 0.01rem 0.05rem;\n    color: #fff;\n}\n\n.tuan_list[_v-059a0eca]:hover, .tuan_list[_v-059a0eca]:focus {\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan_item[_v-059a0eca]:hover, .tuan_item[_v-059a0eca]:focus {\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan-other-info[_v-059a0eca] {\n    margin-top: 0.15rem;\n}\n\n.tuan_item_title[_v-059a0eca] {\n    text-overflow: ellipsis;\n    white-space: pre-line;\n    overflow: hidden;\n    height: 0.62rem;\n    line-height: 0.21rem;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 3;\n    display: -webkit-box;\n    overflow: hidden;\n    font-size: 0.14rem;\n    color: #333;\n}\n\n.tuan_item_price[_v-059a0eca] {\n    font-size: 0.11rem;\n    color: #333;\n    position: absolute;\n    bottom: 0.39rem;\n}\n\n.tuan_item_price .current_price[_v-059a0eca] {\n    font-size: 0.24rem;\n    padding-right: 6px;\n}\n\n.tuan_item_price .market_price[_v-059a0eca] {\n    text-decoration: line-through;\n    color: #999;\n}\n\n.tuan_img_container img[_v-059a0eca] {\n    width: 100%;\n}\n\n.tuan_item_icon[_v-059a0eca] {\n    width: 0.3rem;\n    height: 0.31rem;\n    background: url(//pic.davdian.com/free/tuanlist_icon_3x_0804.png) no-repeat;\n    background-size: 0.3rem;\n    display: inline-block;\n    position: absolute;\n    bottom: 0.11rem;\n    right: 2px;\n}\n.time1[_v-059a0eca]{\n    background-color: rgba(0, 0, 0, .3);\n    line-height: normal;\n    display: block;\n    border-radius: .75rem;\n    position: absolute;\n    bottom: .14rem;\n    left: 0;\n    font-size: .12rem;\n    padding: 0.01rem 0.05rem;\n    color: #fff;\n}\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -21742,11 +21522,7 @@
 /* 323 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-1fc2f7e0=\"\">\n    <tt_com_0 :data=\"data\" _v-1fc2f7e0=\"\"></tt_com_0>\n    <div class=\"tuan_list\" _v-1fc2f7e0=\"\">\n        <a :href=\"data.body.dataList[0].command.content\" :data-remain-second2=\"remainsecond\" data-dav-tj=\"goods_group|good|good|1|good@goods_group\" _v-1fc2f7e0=\"\">\n            <div class=\"tuan_img_container\" _v-1fc2f7e0=\"\">\n                <img v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" style=\"display: block;\" _v-1fc2f7e0=\"\">\n            </div>\n            <div class=\"tuan_info_container\" _v-1fc2f7e0=\"\">\n                <div class=\"time1\" v-if=\"remainsecond > 0\" _v-1fc2f7e0=\"\">{{remainsecond | timeday}} </div>\n                <div class=\"time\" v-if=\"remainsecond < 1\" _v-1fc2f7e0=\"\">团购已结束</div>\n                <div class=\"tuan_item_icon\" _v-1fc2f7e0=\"\"></div>\n                <div class=\"tuan-other-info\" _v-1fc2f7e0=\"\">\n                    <div class=\"tuan_item_title\" _v-1fc2f7e0=\"\">\n                        {{data.body.dataList[0].title}}\n                    </div>\n                    <div class=\"tuan_item_price\" _v-1fc2f7e0=\"\">\n                        <span class=\"current_price\" _v-1fc2f7e0=\"\"><em _v-1fc2f7e0=\"\">￥</em>{{data.body.dataList[0].nowPrice}}</span>\n                        <span class=\"market_price\" _v-1fc2f7e0=\"\"><em _v-1fc2f7e0=\"\">￥</em>{{data.body.dataList[0].prePrice}}</span>\n                    </div>\n                </div>\n            </div>\n        </a>\n    </div>\n</div>\n";
-=======
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-059a0eca=\"\">\n    <tt_com_0 :data=\"data\" _v-059a0eca=\"\"></tt_com_0>\n    <div class=\"tuan_list\" _v-059a0eca=\"\">\n        <a :href=\"data.body.dataList[0].command.content\" :data-remain-second2=\"remainsecond\" data-dav-tj=\"goods_group|good|good|1|good@goods_group\" _v-059a0eca=\"\">\n            <div class=\"tuan_img_container\" _v-059a0eca=\"\">\n                <img v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" style=\"display: block;\" _v-059a0eca=\"\">\n            </div>\n            <div class=\"tuan_info_container\" _v-059a0eca=\"\">\n                <div class=\"time1\" v-if=\"remainsecond > 0\" _v-059a0eca=\"\">{{remainsecond | timeday}} </div>\n                <div class=\"time\" v-if=\"remainsecond < 1\" _v-059a0eca=\"\">团购已结束</div>\n                <div class=\"tuan_item_icon\" _v-059a0eca=\"\"></div>\n                <div class=\"tuan-other-info\" _v-059a0eca=\"\">\n                    <div class=\"tuan_item_title\" _v-059a0eca=\"\">\n                        {{data.body.dataList[0].title}}\n                    </div>\n                    <div class=\"tuan_item_price\" _v-059a0eca=\"\">\n                        <span class=\"current_price\" _v-059a0eca=\"\"><em _v-059a0eca=\"\">￥</em>{{data.body.dataList[0].nowPrice}}</span>\n                        <span class=\"market_price\" _v-059a0eca=\"\"><em _v-059a0eca=\"\">￥</em>{{data.body.dataList[0].prePrice}}</span>\n                    </div>\n                </div>\n            </div>\n        </a>\n    </div>\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 324 */
@@ -21777,11 +21553,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-254d46da/bd_ts_0.vue"
-=======
-	  var id = "_v-22cdd3a2/bd_ts_0.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -21805,13 +21577,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-254d46da&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_0.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-254d46da&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_0.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-22cdd3a2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-22cdd3a2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_0.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21829,11 +21596,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.ts_feeds section .index_model[_v-254d46da] {\n  margin-top: 0;\n}\n\n#ts_menu_wrap[_v-254d46da] {\n  height: 50px;\n  width: 100%;\n  overflow: hidden;\n}\n\n.ts_menu[_v-254d46da] {\n  width: 100%;\n  z-index: 2;\n  background-color: #FDFCFC !important;\n  position: relative;\n}\n\n.ts_menu[_v-254d46da]:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  background: rgba(216, 216, 216, 0.51);\n  -webkit-transform: scale(0.5);\n  bottom: 0;\n  z-index: 1;\n}\n\n.ts_menu li[_v-254d46da] {\n  text-align: center;\n  font-size: 14px;\n  padding: 11px 0;\n  color: #666666;\n  background-color: #FDFCFC;\n}\n\n.ts_menu li.pitch_on[_v-254d46da] {\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n  color: #FFF !important;\n}\n\n.ts_menu li > div .statusInfo[_v-254d46da] {\n  font-size: 10px;\n}\n\n.ts_menu li > div > div[_v-254d46da]:nth-of-type(1) {\n  line-height: 14px;\n  margin-bottom: 4px;\n}\n\n.ts_menu li > div > div[_v-254d46da]:nth-of-type(2) {\n  line-height: 10px;\n}\n\n.ts_menu li:nth-of-type(1) > div[_v-254d46da]:before {\n  width: 0px;\n}\n\n.ts_menu li.pitch_on > div[_v-254d46da]:before {\n  width: 0px;\n}\n\n.ts_menu li.pitch_on + li > div[_v-254d46da]:before {\n  width: 0px;\n}\n\n.ts_menu li > div[_v-254d46da]:before {\n  content: \"\";\n  display: block;\n  position: absolute;\n  top: -10%;\n  height: 120%;\n  width: 1px;\n  background: #ededed;\n  -webkit-transform: scale(0.5);\n}\n\n\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.ts_feeds section .index_model[_v-22cdd3a2] {\n  margin-top: 0;\n}\n\n#ts_menu_wrap[_v-22cdd3a2] {\n  height: 50px;\n  width: 100%;\n  overflow: hidden;\n}\n\n.ts_menu[_v-22cdd3a2] {\n  width: 100%;\n  z-index: 2;\n  background-color: #FDFCFC !important;\n  position: relative;\n}\n\n.ts_menu[_v-22cdd3a2]:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  background: rgba(216, 216, 216, 0.51);\n  -webkit-transform: scale(0.5);\n  bottom: 0;\n  z-index: 1;\n}\n\n.ts_menu li[_v-22cdd3a2] {\n  text-align: center;\n  font-size: 14px;\n  padding: 11px 0;\n  color: #666666;\n  background-color: #FDFCFC;\n}\n\n.ts_menu li.pitch_on[_v-22cdd3a2] {\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n  color: #FFF !important;\n}\n\n.ts_menu li > div .statusInfo[_v-22cdd3a2] {\n  font-size: 10px;\n}\n\n.ts_menu li > div > div[_v-22cdd3a2]:nth-of-type(1) {\n  line-height: 14px;\n  margin-bottom: 4px;\n}\n\n.ts_menu li > div > div[_v-22cdd3a2]:nth-of-type(2) {\n  line-height: 10px;\n}\n\n.ts_menu li:nth-of-type(1) > div[_v-22cdd3a2]:before {\n  width: 0px;\n}\n\n.ts_menu li.pitch_on > div[_v-22cdd3a2]:before {\n  width: 0px;\n}\n\n.ts_menu li.pitch_on + li > div[_v-22cdd3a2]:before {\n  width: 0px;\n}\n\n.ts_menu li > div[_v-22cdd3a2]:before {\n  content: \"\";\n  display: block;\n  position: absolute;\n  top: -10%;\n  height: 120%;\n  width: 1px;\n  background: #ededed;\n  -webkit-transform: scale(0.5);\n}\n\n\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -22179,11 +21942,7 @@
 /* 331 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div class=\"ts_feeds\" :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-254d46da=\"\">\n  <div id=\"ts_menu_wrap\" _v-254d46da=\"\">\n    <div :style=\"styleObject\" class=\"swiper-container ts_menu\" id=\"ts_menu\" _v-254d46da=\"\">\n      <ul class=\"swiper-wrapper\" _v-254d46da=\"\">\n        <li class=\"swiper-slide\" v-for=\"(item, index) in dataList\" :class=\"{pitch_on:item.selected == 1}\" @click=\"ts_tab(item,index)\" :data=\"item.timeshopActId\" _v-254d46da=\"\">\n          <div class=\"\" v-if=\"item &amp;&amp; item.title\" _v-254d46da=\"\">\n            <div class=\"time_state_span\" _v-254d46da=\"\">{{item.title}}</div>\n            <div class=\"statusInfo\" _v-254d46da=\"\">{{item.statusInfo}}</div>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>\n";
-=======
-	module.exports = "\n<div class=\"ts_feeds\" :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-22cdd3a2=\"\">\n  <div id=\"ts_menu_wrap\" _v-22cdd3a2=\"\">\n    <div :style=\"styleObject\" class=\"swiper-container ts_menu\" id=\"ts_menu\" _v-22cdd3a2=\"\">\n      <ul class=\"swiper-wrapper\" _v-22cdd3a2=\"\">\n        <li class=\"swiper-slide\" v-for=\"(item, index) in dataList\" :class=\"{pitch_on:item.selected == 1}\" @click=\"ts_tab(item,index)\" :data=\"item.timeshopActId\" _v-22cdd3a2=\"\">\n          <div class=\"\" v-if=\"item &amp;&amp; item.title\" _v-22cdd3a2=\"\">\n            <div class=\"time_state_span\" _v-22cdd3a2=\"\">{{item.title}}</div>\n            <div class=\"statusInfo\" _v-22cdd3a2=\"\">{{item.statusInfo}}</div>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 332 */
@@ -22213,11 +21972,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-1ca4930e/bd_ts_prod_0.vue"
-=======
-	  var id = "_v-366e10d9/bd_ts_prod_0.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22241,13 +21996,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ca4930e&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_prod_0.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ca4930e&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_prod_0.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-366e10d9&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_prod_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-366e10d9&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_prod_0.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22265,11 +22015,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.f_l[_v-1ca4930e]{\n  float: left;\n}\n.newOriginal_price[_v-1ca4930e] {\n  font-size: 14px;\n}\n\n.list_style[_v-1ca4930e] {\n  height: 130px;\n}\n\nul li[_v-1ca4930e] {\n  padding: 10px 10px;\n  position: relative;\n  overflow: hidden;\n}\n\nul li.online[_v-1ca4930e]:after {\n  content: \"\";\n  display: block;\n  background-color: #DDDDDD;\n  -webkit-transform: scale(0.5) translateX(280px);\n  -ms-transform: scale(0.5) translateX(280px);\n  transform: scale(0.5) translateX(280px);\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  bottom: 0;\n  z-index: 1;\n}\n\n\nul li .img_container[_v-1ca4930e] {\n  position: relative;\n}\n\nul li .img_container_inner[_v-1ca4930e] {\n  width: 130px;\n  position: relative;\n}\n\nul li .img_container_inner div[_v-1ca4930e] {\n  height: 60px;\n  width: 60px;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  margin: auto auto;\n  font-size: 14px;\n  color: #FFF;\n  text-align: center;\n  line-height: 60px;\n}\n\nul li .order_good_info_container[_v-1ca4930e] {\n  position: absolute;\n  padding-left: 140px;\n  top: 0;\n  padding-top: 10px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.order_good_name[_v-1ca4930e] {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  /*display: -webkit-box;*/\n  /*-webkit-line-clamp: 2;*/\n  /*-webkit-box-orient: vertical;*/\n  height: 20px;\n  line-height: 20px;\n  color: #333333;\n}\n\n.order_good_name_in[_v-1ca4930e] {\n  font-size: 12px;\n  color: #999999;\n}\n\n.order_good_price[_v-1ca4930e] {\n  font-size: 16px;\n  height: 16px;\n  line-height: 16px;\n  color: #FF4A7D;\n  padding-top: 5px;\n}\n\n.price_symbol[_v-1ca4930e] {\n  font-size: 12px;\n  font-style: normal;\n}\n\n.progress_info[_v-1ca4930e]{\n  position: absolute;\n  width: 100%;\n  bottom: 14px;\n  font-size: 12px;\n  color: #999999;\n}\n.market_price[_v-1ca4930e] {\n  text-decoration: line-through;\n  color: #999;\n  margin-left: 0px;\n  font-size: 11px !important;\n}\n\n.progress_bar_bg[_v-1ca4930e] {\n  background-color: #EAEAEA;\n  border-radius: 8px;\n  height: 8px;\n  width: 21.3333333%;\n  position: relative;\n  overflow: hidden;\n}\n\n.progress_container[_v-1ca4930e] {\n  height: 8px;\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n  /*position: absolute;*/\n  left: 0;\n  top: 0;\n}\n\n.panic_buying_btn.buy_gray[_v-1ca4930e] {\n  background: -webkit-linear-gradient(left top, #DBDADA, #C5C5C5); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#DBDADA), to(#C5C5C5));\n  background: -webkit-linear-gradient(top left, #DBDADA, #C5C5C5);\n  background: linear-gradient(to bottom right, #DBDADA, #C5C5C5); /* 标准的语法 */\n}\n.panic_buying_btn.seteds[_v-1ca4930e]{\n  color:#999999;\n}\n.panic_buying_btn.seteds[_v-1ca4930e]:after{\n  border-color: #999999;\n}\n\n.progress_bar_percentage.wall[_v-1ca4930e] {\n  width: 100%;\n  min-width: 10px;\n}\n\n.finish_percentage[_v-1ca4930e] {\n  font-size: 11px;\n  color: #FF4A7D;\n  line-height: 11px;\n  margin-top: 5px;\n}\n\n.panic_buying_btn[_v-1ca4930e] {\n  width: 70px;\n  height: 25px;\n  font-size: 11px;\n  line-height: 25px;\n  text-align: center;\n  color: #fff;\n  position: absolute;\n  right: 10px;\n  bottom: 21px;\n  border-radius: 12px;\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n}\n\n.panic_buying_btn2[_v-1ca4930e] {\n  background: none;\n  color: #ff4a7d;\n  border-radius: 20px;\n  line-height: 26px;\n}\n\n.panic_buying_btn2[_v-1ca4930e]:after {\n  content: \"\";\n  -webkit-transform: scale(0.5);\n      -ms-transform: scale(0.5);\n          transform: scale(0.5);\n  width: 200%;\n  height: 200%;\n  border: #FF4A7D solid 1px;\n  display: block;\n  position: absolute;\n  left: 0;\n  top: 0;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  border-radius: 50px;\n}\n.membership_crown_pre[_v-1ca4930e]{\n  color:#999999;\n  text-decoration: line-through;\n  font-size: 11px;\n}\n.membership_crown .membership_crown_pre em[_v-1ca4930e]{\n  font-size: 10px;\n}\n\n.membership_crown[_v-1ca4930e] {\n  font-size: 11px;\n  color: #D6B471;\n  display: inline-block;\n  padding-left: 5px;\n  position: relative;\n  bottom: -1px;\n  float: left;\n}\n\n.membership_crown em[_v-1ca4930e] {\n  font-size: 10px;\n  font-style: normal;\n}\n\n.tipswrap[_v-1ca4930e] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.51);\n  z-index: 99;\n}\n\n.tipswrap .tipsdiv[_v-1ca4930e] {\n  width: 72%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  overflow: hidden;\n  min-height: 20px;\n  max-width: 480px;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n\n.tipswrap .tipsdiv img[_v-1ca4930e] {\n  width: 100%;\n}\n\n.tipswrap .tipsdiv div[_v-1ca4930e] {\n  width: 100%;\n  height: 13%;\n  position: absolute;\n  bottom: 0;\n}\n\n.progress_bar[_v-1ca4930e] {\n  position: absolute;\n  width: 100%;\n  bottom: 20px;\n}\n\n.remain_btns_click[_v-1ca4930e] {\n  width: 90px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  bottom: 13px;\n  z-index: 2;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.f_l[_v-366e10d9]{\n  float: left;\n}\n.newOriginal_price[_v-366e10d9] {\n  font-size: 14px;\n}\n\n.list_style[_v-366e10d9] {\n  height: 130px;\n}\n\nul li[_v-366e10d9] {\n  padding: 10px 10px;\n  position: relative;\n  overflow: hidden;\n}\n\nul li.online[_v-366e10d9]:after {\n  content: \"\";\n  display: block;\n  background-color: #DDDDDD;\n  -webkit-transform: scale(0.5) translateX(280px);\n  -ms-transform: scale(0.5) translateX(280px);\n  transform: scale(0.5) translateX(280px);\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  bottom: 0;\n  z-index: 1;\n}\n\n\nul li .img_container[_v-366e10d9] {\n  position: relative;\n}\n\nul li .img_container_inner[_v-366e10d9] {\n  width: 130px;\n  position: relative;\n}\n\nul li .img_container_inner div[_v-366e10d9] {\n  height: 60px;\n  width: 60px;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  margin: auto auto;\n  font-size: 14px;\n  color: #FFF;\n  text-align: center;\n  line-height: 60px;\n}\n\nul li .order_good_info_container[_v-366e10d9] {\n  position: absolute;\n  padding-left: 140px;\n  top: 0;\n  padding-top: 10px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.order_good_name[_v-366e10d9] {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  /*display: -webkit-box;*/\n  /*-webkit-line-clamp: 2;*/\n  /*-webkit-box-orient: vertical;*/\n  height: 20px;\n  line-height: 20px;\n  color: #333333;\n}\n\n.order_good_name_in[_v-366e10d9] {\n  font-size: 12px;\n  color: #999999;\n}\n\n.order_good_price[_v-366e10d9] {\n  font-size: 16px;\n  height: 16px;\n  line-height: 16px;\n  color: #FF4A7D;\n  padding-top: 5px;\n}\n\n.price_symbol[_v-366e10d9] {\n  font-size: 12px;\n  font-style: normal;\n}\n\n.progress_info[_v-366e10d9]{\n  position: absolute;\n  width: 100%;\n  bottom: 14px;\n  font-size: 12px;\n  color: #999999;\n}\n.market_price[_v-366e10d9] {\n  text-decoration: line-through;\n  color: #999;\n  margin-left: 0px;\n  font-size: 11px !important;\n}\n\n.progress_bar_bg[_v-366e10d9] {\n  background-color: #EAEAEA;\n  border-radius: 8px;\n  height: 8px;\n  width: 21.3333333%;\n  position: relative;\n  overflow: hidden;\n}\n\n.progress_container[_v-366e10d9] {\n  height: 8px;\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n  /*position: absolute;*/\n  left: 0;\n  top: 0;\n}\n\n.panic_buying_btn.buy_gray[_v-366e10d9] {\n  background: -webkit-linear-gradient(left top, #DBDADA, #C5C5C5); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#DBDADA), to(#C5C5C5));\n  background: -webkit-linear-gradient(top left, #DBDADA, #C5C5C5);\n  background: linear-gradient(to bottom right, #DBDADA, #C5C5C5); /* 标准的语法 */\n}\n.panic_buying_btn.seteds[_v-366e10d9]{\n  color:#999999;\n}\n.panic_buying_btn.seteds[_v-366e10d9]:after{\n  border-color: #999999;\n}\n\n.progress_bar_percentage.wall[_v-366e10d9] {\n  width: 100%;\n  min-width: 10px;\n}\n\n.finish_percentage[_v-366e10d9] {\n  font-size: 11px;\n  color: #FF4A7D;\n  line-height: 11px;\n  margin-top: 5px;\n}\n\n.panic_buying_btn[_v-366e10d9] {\n  width: 70px;\n  height: 25px;\n  font-size: 11px;\n  line-height: 25px;\n  text-align: center;\n  color: #fff;\n  position: absolute;\n  right: 10px;\n  bottom: 21px;\n  border-radius: 12px;\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n}\n\n.panic_buying_btn2[_v-366e10d9] {\n  background: none;\n  color: #ff4a7d;\n  border-radius: 20px;\n  line-height: 26px;\n}\n\n.panic_buying_btn2[_v-366e10d9]:after {\n  content: \"\";\n  -webkit-transform: scale(0.5);\n      -ms-transform: scale(0.5);\n          transform: scale(0.5);\n  width: 200%;\n  height: 200%;\n  border: #FF4A7D solid 1px;\n  display: block;\n  position: absolute;\n  left: 0;\n  top: 0;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  border-radius: 50px;\n}\n.membership_crown_pre[_v-366e10d9]{\n  color:#999999;\n  text-decoration: line-through;\n  font-size: 11px;\n}\n.membership_crown .membership_crown_pre em[_v-366e10d9]{\n  font-size: 10px;\n}\n\n.membership_crown[_v-366e10d9] {\n  font-size: 11px;\n  color: #D6B471;\n  display: inline-block;\n  padding-left: 5px;\n  position: relative;\n  bottom: -1px;\n  float: left;\n}\n\n.membership_crown em[_v-366e10d9] {\n  font-size: 10px;\n  font-style: normal;\n}\n\n.tipswrap[_v-366e10d9] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.51);\n  z-index: 99;\n}\n\n.tipswrap .tipsdiv[_v-366e10d9] {\n  width: 72%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  overflow: hidden;\n  min-height: 20px;\n  max-width: 480px;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n\n.tipswrap .tipsdiv img[_v-366e10d9] {\n  width: 100%;\n}\n\n.tipswrap .tipsdiv div[_v-366e10d9] {\n  width: 100%;\n  height: 13%;\n  position: absolute;\n  bottom: 0;\n}\n\n.progress_bar[_v-366e10d9] {\n  position: absolute;\n  width: 100%;\n  bottom: 20px;\n}\n\n.remain_btns_click[_v-366e10d9] {\n  width: 90px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  bottom: 13px;\n  z-index: 2;\n}\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -22726,11 +22472,7 @@
 /* 336 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-1ca4930e=\"\">\n  <ul _v-1ca4930e=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-1ca4930e=\"\">\n      <a :href=\"item.command.content\" _v-1ca4930e=\"\">\n        <div class=\"img_container\" _v-1ca4930e=\"\">\n          <div class=\"img_container_inner\" _v-1ca4930e=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-1ca4930e=\"\">\n            <div v-if=\"item.buttonStatus == 3\" _v-1ca4930e=\"\">已抢光</div>\n          </div>\n          <div class=\"order_good_info_container\" _v-1ca4930e=\"\">\n            <div class=\"order_good_name\" _v-1ca4930e=\"\">{{item.title}}</div>\n            <div class=\"order_good_name order_good_name_in\" _v-1ca4930e=\"\">{{item.recomWord.split(\"\\n\")[0]}}</div>\n            <div class=\"order_good_price\" _v-1ca4930e=\"\">\n              <span class=\"f_l\" _v-1ca4930e=\"\"><em class=\"price_symbol\" _v-1ca4930e=\"\">￥</em><span _v-1ca4930e=\"\">{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span v-if=\"(item.nowPrice+'').split('.').length == 2\" class=\"newOriginal_price\" _v-1ca4930e=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span><span v-if=\"item.timeshopIncome != '0'\" class=\"membership_crown\" _v-1ca4930e=\"\">限时返 <em _v-1ca4930e=\"\">￥</em>{{item.timeshopIncome}}\n              <span v-if=\"item.income\" class=\"membership_crown_pre\" _v-1ca4930e=\"\">平日返<em _v-1ca4930e=\"\">￥</em>{{item.income}}</span></span>\n            </div>\n            <div v-if=\"item.buttonStatus != 3 &amp;&amp; item.timeshopGoodsNum\" class=\"progress_info\" _v-1ca4930e=\"\">\n              仅剩 {{item.timeshopGoodsNum}} 件\n            </div>\n            <!--<div class=\"progress_bar\" v-if=\"(item.buttonStatus != 0)&&(item.buttonStatus != 1)\">-->\n            <!--<div class=\"progress_bar_bg\">-->\n            <!--<div class=\"progress_container\" :style=\"{width:item.percentage+'%'}\">-->\n            <!--</div>-->\n            <!--</div>-->\n            <!--<div class=\"finish_percentage\">已售{{item.percentage}}%</div>-->\n            <!--</div>-->\n          </div>\n        </div>\n      </a>\n      <a class=\"remain_btns\" _v-1ca4930e=\"\">\n        <div class=\"panic_buying_btn\" :class=\"{panic_buying_btn2:item.buttonStatus < 2,buy_gray:item.buttonStatus == '3',seteds:item.buttonStatus == '0'}\" _v-1ca4930e=\"\">{{item.buttonName}}\n        </div>\n        <div @click=\"Panicbuying(item,index)\" class=\"remain_btns_click\" _v-1ca4930e=\"\"></div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-1ca4930e=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-1ca4930e=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-1ca4930e=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-1ca4930e=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-1ca4930e=\"\"></div>\n    </div>\n  </div>\n</div>\n";
-=======
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-366e10d9=\"\">\n  <ul _v-366e10d9=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-366e10d9=\"\">\n      <a :href=\"item.command.content\" _v-366e10d9=\"\">\n        <div class=\"img_container\" _v-366e10d9=\"\">\n          <div class=\"img_container_inner\" _v-366e10d9=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-366e10d9=\"\">\n            <div v-if=\"item.buttonStatus == 3\" _v-366e10d9=\"\">已抢光</div>\n          </div>\n          <div class=\"order_good_info_container\" _v-366e10d9=\"\">\n            <div class=\"order_good_name\" _v-366e10d9=\"\">{{item.title}}</div>\n            <div class=\"order_good_name order_good_name_in\" _v-366e10d9=\"\">{{item.recomWord.split(\"\\n\")[0]}}</div>\n            <div class=\"order_good_price\" _v-366e10d9=\"\">\n              <span class=\"f_l\" _v-366e10d9=\"\"><em class=\"price_symbol\" _v-366e10d9=\"\">￥</em><span _v-366e10d9=\"\">{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span v-if=\"(item.nowPrice+'').split('.').length == 2\" class=\"newOriginal_price\" _v-366e10d9=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span><span v-if=\"item.timeshopIncome != '0'\" class=\"membership_crown\" _v-366e10d9=\"\">限时返 <em _v-366e10d9=\"\">￥</em>{{item.timeshopIncome}}\n              <span v-if=\"item.income\" class=\"membership_crown_pre\" _v-366e10d9=\"\">平日返<em _v-366e10d9=\"\">￥</em>{{item.income}}</span></span>\n            </div>\n            <div v-if=\"item.buttonStatus != 3 &amp;&amp; item.timeshopGoodsNum\" class=\"progress_info\" _v-366e10d9=\"\">\n              仅剩 {{item.timeshopGoodsNum}} 件\n            </div>\n            <!--<div class=\"progress_bar\" v-if=\"(item.buttonStatus != 0)&&(item.buttonStatus != 1)\">-->\n            <!--<div class=\"progress_bar_bg\">-->\n            <!--<div class=\"progress_container\" :style=\"{width:item.percentage+'%'}\">-->\n            <!--</div>-->\n            <!--</div>-->\n            <!--<div class=\"finish_percentage\">已售{{item.percentage}}%</div>-->\n            <!--</div>-->\n          </div>\n        </div>\n      </a>\n      <a class=\"remain_btns\" _v-366e10d9=\"\">\n        <div class=\"panic_buying_btn\" :class=\"{panic_buying_btn2:item.buttonStatus < 2,buy_gray:item.buttonStatus == '3',seteds:item.buttonStatus == '0'}\" _v-366e10d9=\"\">{{item.buttonName}}\n        </div>\n        <div @click=\"Panicbuying(item,index)\" class=\"remain_btns_click\" _v-366e10d9=\"\"></div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-366e10d9=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-366e10d9=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-366e10d9=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-366e10d9=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-366e10d9=\"\"></div>\n    </div>\n  </div>\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 337 */
@@ -22760,11 +22502,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-5d99d99e/bd_ts_goods_0.vue"
-=======
-	  var id = "_v-1ecd6274/bd_ts_goods_0.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22788,13 +22526,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5d99d99e&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_goods_0.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5d99d99e&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_goods_0.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ecd6274&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_goods_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ecd6274&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_goods_0.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22812,11 +22545,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy[_v-5d99d99e] {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail[_v-5d99d99e] {\n    width: 100%;\n    display: block;\n    position: relative; }\n  .index_group_buy .df_new_model_con[_v-5d99d99e] {\n    background: #fff; }\n\n.related-item-list.swiper-container[_v-5d99d99e] {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list .detail[_v-5d99d99e] {\n  text-align: left; }\n\n.related-item-list .detail.swiper-slide[_v-5d99d99e] {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list .detail .goods_img_size[_v-5d99d99e] {\n  width: 100px;\n  height: 100px;\n  position: relative; }\n\n.related-item-list .detail .goods_img_size[_v-5d99d99e]:before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box; }\n\n.related-item-list .detail .name[_v-5d99d99e] {\n  font-size: 12px;\n  padding-top: 7px;\n  padding-right: 10px;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  line-height: 18px;\n  margin-bottom: 2px;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  overflow: hidden; }\n\n.related-item-list .detail .price[_v-5d99d99e] {\n  padding-top: 3px;\n  line-height: 12px;\n  height: 11px;\n  padding-right: 10px;\n  overflow: hidden; }\n  .related-item-list .detail .price .current-price[_v-5d99d99e] {\n    font-size: 11px;\n    color: #FF4A7D;\n    float: left; }\n  .related-item-list .detail .price .original-price[_v-5d99d99e] {\n    font-size: 9px;\n    color: #999;\n    text-decoration: line-through;\n    float: left;\n    padding-left: 5px; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list .detail .goods_img_size[_v-5d99d99e]:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */ } }\n\n.df_new_title[_v-5d99d99e] {\n  position: relative;\n  height: 44px; }\n\n.df_new_title[_v-5d99d99e]:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title[_v-5d99d99e]:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font[_v-5d99d99e] {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font[_v-5d99d99e]:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font[_v-5d99d99e]:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more[_v-5d99d99e] {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span[_v-5d99d99e] {\n  font-size: 12px; }\n\n.df_new_title_2[_v-5d99d99e] {\n  height: 44px;\n  line-height: 44px;\n  background-color: #fff;\n  position: relative;\n  border-bottom: 1px solid #f0f0f0; }\n\n.df_new_title_2 a[_v-5d99d99e] {\n  line-height: inherit; }\n\n.df_new_title_2 .df_new_font[_v-5d99d99e] {\n  font-size: 16px;\n  padding-left: 22px;\n  line-height: 44px; }\n\n.df_new_title_2 .df_new_font[_v-5d99d99e]:before {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 14px;\n  position: absolute; }\n\n.df_new_title_2 .more[_v-5d99d99e] {\n  padding-right: 10px;\n  float: right; }\n\n.df_new_title_2 .more span[_v-5d99d99e] {\n  color: #666;\n  font-size: 12px;\n  line-height: 35px;\n  margin-right: -2px; }\n\n.df_new_title_3[_v-5d99d99e] {\n  height: auto;\n  position: relative; }\n  .df_new_title_3 .up_arrow[_v-5d99d99e] {\n    width: 0;\n    height: 0;\n    border-left: 6px solid transparent;\n    border-right: 6px solid transparent;\n    border-bottom: 7px solid #f0f0f0;\n    border-top: transparent;\n    position: absolute;\n    left: 50%;\n    margin-left: -3px;\n    bottom: 0; }\n\n.index_model[_v-5d99d99e] {\n  margin-top: 0px !important; }\n", ""]);
-=======
-	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy[_v-1ecd6274] {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail[_v-1ecd6274] {\n    width: 100%;\n    display: block;\n    position: relative; }\n  .index_group_buy .df_new_model_con[_v-1ecd6274] {\n    background: #fff; }\n\n.related-item-list.swiper-container[_v-1ecd6274] {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list .detail[_v-1ecd6274] {\n  text-align: left; }\n\n.related-item-list .detail.swiper-slide[_v-1ecd6274] {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list .detail .goods_img_size[_v-1ecd6274] {\n  width: 100px;\n  height: 100px;\n  position: relative; }\n\n.related-item-list .detail .goods_img_size[_v-1ecd6274]:before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box; }\n\n.related-item-list .detail .name[_v-1ecd6274] {\n  font-size: 12px;\n  padding-top: 7px;\n  padding-right: 10px;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  line-height: 18px;\n  margin-bottom: 2px;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  overflow: hidden; }\n\n.related-item-list .detail .price[_v-1ecd6274] {\n  padding-top: 3px;\n  line-height: 12px;\n  height: 11px;\n  padding-right: 10px;\n  overflow: hidden; }\n  .related-item-list .detail .price .current-price[_v-1ecd6274] {\n    font-size: 11px;\n    color: #FF4A7D;\n    float: left; }\n  .related-item-list .detail .price .original-price[_v-1ecd6274] {\n    font-size: 9px;\n    color: #999;\n    text-decoration: line-through;\n    float: left;\n    padding-left: 5px; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list .detail .goods_img_size[_v-1ecd6274]:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */ } }\n\n.df_new_title[_v-1ecd6274] {\n  position: relative;\n  height: 44px; }\n\n.df_new_title[_v-1ecd6274]:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title[_v-1ecd6274]:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font[_v-1ecd6274] {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font[_v-1ecd6274]:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font[_v-1ecd6274]:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more[_v-1ecd6274] {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span[_v-1ecd6274] {\n  font-size: 12px; }\n\n.df_new_title_2[_v-1ecd6274] {\n  height: 44px;\n  line-height: 44px;\n  background-color: #fff;\n  position: relative;\n  border-bottom: 1px solid #f0f0f0; }\n\n.df_new_title_2 a[_v-1ecd6274] {\n  line-height: inherit; }\n\n.df_new_title_2 .df_new_font[_v-1ecd6274] {\n  font-size: 16px;\n  padding-left: 22px;\n  line-height: 44px; }\n\n.df_new_title_2 .df_new_font[_v-1ecd6274]:before {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 14px;\n  position: absolute; }\n\n.df_new_title_2 .more[_v-1ecd6274] {\n  padding-right: 10px;\n  float: right; }\n\n.df_new_title_2 .more span[_v-1ecd6274] {\n  color: #666;\n  font-size: 12px;\n  line-height: 35px;\n  margin-right: -2px; }\n\n.df_new_title_3[_v-1ecd6274] {\n  height: auto;\n  position: relative; }\n  .df_new_title_3 .up_arrow[_v-1ecd6274] {\n    width: 0;\n    height: 0;\n    border-left: 6px solid transparent;\n    border-right: 6px solid transparent;\n    border-bottom: 7px solid #f0f0f0;\n    border-top: transparent;\n    position: absolute;\n    left: 50%;\n    margin-left: -3px;\n    bottom: 0; }\n\n.index_model[_v-1ecd6274] {\n  margin-top: 0px !important; }\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -22871,11 +22600,7 @@
 /* 341 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\" _v-5d99d99e=\"\">\n\n  <tt_com_0 :data=\"data\" _v-5d99d99e=\"\"></tt_com_0>\n\n  <div class=\"df_new_model_con\" :style=\"styleObject\" _v-5d99d99e=\"\">\n    <div class=\"df_new_model_con\" _v-5d99d99e=\"\">\n      <div class=\"df_new_title_3\" style=\"height:1.8rem;overflow: hidden;\" _v-5d99d99e=\"\">\n        <a :href=\"data.body.command.content\" @click=\"clickAnalysis\" style=\"height: 1.8rem;\" position=\"0\" _v-5d99d99e=\"\">\n          <img class=\"newImage\" style=\"display: inline;height: 1.8rem\" v-lazy=\"imgObject(data.body.imageUrl)\" _v-5d99d99e=\"\">\n        </a>\n        <span class=\"up_arrow\" :style=\"styleSpan\" _v-5d99d99e=\"\"></span>\n      </div>\n      <bd_goods_0 :data=\"data\" _v-5d99d99e=\"\"></bd_goods_0>\n    </div>\n  </div>\n</div>\n";
-=======
-	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\" _v-1ecd6274=\"\">\n\n  <tt_com_0 :data=\"data\" _v-1ecd6274=\"\"></tt_com_0>\n\n  <div class=\"df_new_model_con\" :style=\"styleObject\" _v-1ecd6274=\"\">\n    <div class=\"df_new_model_con\" _v-1ecd6274=\"\">\n      <div class=\"df_new_title_3\" style=\"height:1.8rem;overflow: hidden;\" _v-1ecd6274=\"\">\n        <a :href=\"data.body.command.content\" @click=\"clickAnalysis\" style=\"height: 1.8rem;\" position=\"0\" _v-1ecd6274=\"\">\n          <img class=\"newImage\" style=\"display: inline;height: 1.8rem\" v-lazy=\"imgObject(data.body.imageUrl)\" _v-1ecd6274=\"\">\n        </a>\n        <span class=\"up_arrow\" :style=\"styleSpan\" _v-1ecd6274=\"\"></span>\n      </div>\n      <bd_goods_0 :data=\"data\" _v-1ecd6274=\"\"></bd_goods_0>\n    </div>\n  </div>\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 342 */
@@ -22905,11 +22630,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-3240569a/bd_ts_title_0.vue"
-=======
-	  var id = "_v-06461048/bd_ts_title_0.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23062,11 +22783,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-9a807274/bd_image_1_2.vue"
-=======
-	  var id = "_v-66ed76de/bd_image_1_2.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23188,11 +22905,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-51727889/bd_image_4_2.vue"
-=======
-	  var id = "_v-6b3bf654/bd_image_4_2.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23216,13 +22929,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-51727889&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_4_2.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-51727889&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_4_2.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6b3bf654&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_4_2.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6b3bf654&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_4_2.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23240,11 +22948,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.index_links[_v-51727889] {\n    width:100%;\n    overflow: hidden;\n    min-height:50px;\n    background-color:#FFFFFF;\n}\n.bd_icon_0[_v-51727889] {\n    overflow: hidden;\n     padding-top: 0px;\n    background-color: #fff;\n     margin-top: 0px;\n}\n.bd_icon_0 .link_item[_v-51727889] {\n    float: left;\n    width: 25%;\n    text-align: center;\n     padding-bottom: 0px;\n     padding-top: 0px;\n}\n.bd_icon_0 .link_item .link_img[_v-51727889] {\n    width:100%;\n    margin-bottom: 0;\n    max-width: 100%;\n    max-height: 100%;\n    display: inline-block;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.index_links[_v-6b3bf654] {\n    width:100%;\n    overflow: hidden;\n    min-height:50px;\n    background-color:#FFFFFF;\n}\n.bd_icon_0[_v-6b3bf654] {\n    overflow: hidden;\n     padding-top: 0px;\n    background-color: #fff;\n     margin-top: 0px;\n}\n.bd_icon_0 .link_item[_v-6b3bf654] {\n    float: left;\n    width: 25%;\n    text-align: center;\n     padding-bottom: 0px;\n     padding-top: 0px;\n}\n.bd_icon_0 .link_item .link_img[_v-6b3bf654] {\n    width:100%;\n    margin-bottom: 0;\n    max-width: 100%;\n    max-height: 100%;\n    display: inline-block;\n}\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -23314,11 +23018,7 @@
 /* 356 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-51727889=\"\">\n    <tt_com_0 :data=\"data\" _v-51727889=\"\"></tt_com_0>\n    <div v-if=\"show\" class=\"bd_icon_0 index_links\" :style=\"styleObject\" _v-51727889=\"\">\n        <a class=\"link_item\" v-for=\"item in data.body.dataList\" :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-51727889=\"\">\n            <img class=\"link_img newImage\" :src=\"item.imageUrl\" _v-51727889=\"\">\n        </a>\n    </div>\n</div>\n\n";
-=======
-	module.exports = "\n\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-6b3bf654=\"\">\n    <tt_com_0 :data=\"data\" _v-6b3bf654=\"\"></tt_com_0>\n    <div v-if=\"show\" class=\"bd_icon_0 index_links\" :style=\"styleObject\" _v-6b3bf654=\"\">\n        <a class=\"link_item\" v-for=\"item in data.body.dataList\" :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-6b3bf654=\"\">\n            <img class=\"link_img newImage\" :src=\"item.imageUrl\" _v-6b3bf654=\"\">\n        </a>\n    </div>\n</div>\n\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 357 */
@@ -23348,11 +23048,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-1fa6c8de/bd_goods_4.vue"
-=======
-	  var id = "_v-057ddfc8/bd_goods_4.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23376,13 +23072,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1fa6c8de&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_4.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1fa6c8de&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_4.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-057ddfc8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_4.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-057ddfc8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_4.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23400,11 +23091,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.img_label[_v-1fa6c8de]{\n  font-weight: bold;\n  left: 0;\n  bottom:0;\n  position:absolute;\n  font-size: 10px;\n  opacity: 0.8;\n  background: -webkit-gradient(linear,left top, right top,from(#ff5b5b),to(#fa1862));\n  background: linear-gradient(90deg,#ff5b5b,#fa1862);\n  background: -webkit-linear-gradient(left,#ff5b5b,#fa1862);\n  color:#fff;\n  line-height: 16px;\n  padding:1px 8px 0 6px;\n  border-top-right-radius: 8px;\n}\n.img_label[_v-1fa6c8de]:after{\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-width: 0 4px 10px 0;\n  border-style: solid;\n  border-color: transparent transparent #fa1862 transparent;\n  position: absolute;\n  margin-left: 8px;\n  bottom: 0;\n}\n.img_container[_v-1fa6c8de]{\n  position: relative;\n}\n\n  .good_list_2_row[_v-1fa6c8de] {\n    background: none;\n    padding: 0 5px;\n  }\n\n  .font-weight[_v-1fa6c8de] {\n    font-weight: 500;\n  }\n  .goods4_price_bar em[_v-1fa6c8de] {\n    font-style: normal;\n    font-size: 12px;\n    display: inline-block;\n    margin-right: 2px;\n    \n  }\n\n  .good_list_2_row .good_item[_v-1fa6c8de] {\n    padding: 0 5px;\n    margin-bottom: 0;\n  }\n\n  .good_list_2_row .good_item .good_img_container img[_v-1fa6c8de] {\n    border: none;\n  }\n\n  .good_con[_v-1fa6c8de] {\n    display: block;\n    background-color: #FFF;\n    padding: 10px;\n    padding-top: 0;\n    overflow: hidden;\n  }\n\n  .good_con .fz_12[_v-1fa6c8de] {\n    overflow: hidden;\n    height: 16px;\n    line-height: 16px;\n  }\n\n  .good_con .fz_12 .dav-color-price[_v-1fa6c8de] {\n    display: inline-block;\n  }\n.good_con .nowPriceCont[_v-1fa6c8de] {\n  font-size: 0;\n}\n  .good_con .nowPrice[_v-1fa6c8de] {\n    font-size: 16px;\n  }\n\n  .good_list_2_row .good_item .lable[_v-1fa6c8de] {\n    color: #FF4A7D;\n    font-size: 10px;\n    display: inline-block;\n    margin-left: 4px;\n    font-family: sans-serif;\n    background-color: #FFF;\n    float: right;\n    -webkit-box-sizing: border-box;\n    position: relative;\n    top: 7.89473%;\n    padding: 0 2px;\n    border: 1px solid #FF4A7D;\n    line-height: 15px;\n    border-radius: 4px;\n  }\n\n  .good_list_2_row .good_item .lable .border[_v-1fa6c8de] {\n    -webkit-transform: scale(0.5);\n    -ms-transform: scale(0.5);\n        transform: scale(0.5);\n    position: absolute;\n    border: 1px solid #FF4A7D;\n    top: -50%;\n    right: -50%;\n    bottom: -50%;\n    left: -50%;\n    border-radius: 7px;\n  }\n\n  .good_list_2_row .good_item .good_title[_v-1fa6c8de] {\n    margin-bottom: 4px;\n    -webkit-line-clamp: 2;\n    line-clamp: 2;\n    line-height: 19px;\n  }\n\n  .goods4_price_bar[_v-1fa6c8de] {\n    overflow: hidden;\n    height: 19px;\n    width: 200%;\n  }\n  .good_list_sell_out[_v-1fa6c8de]{\n    z-index: 0;\n  }\n\n  .vip_return[_v-1fa6c8de]{\n  line-height: 1;\n  font-size: 0;\n  color: #BF9D51;\n  padding-left: 4px;\n  position: relative;\n  display: inline-block;\n    -webkit-transform: scale(0.5);\n  -webkit-transform-origin: 0 60%;\n  -ms-transform: scale(0.5);\n      transform: scale(0.5);\n  -ms-transform-origin: 0 60%;\n      transform-origin: 0 60%;\n  vertical-align: middle;\n  margin-bottom: 4px;\n}\n.vip_return .vip_return_title[_v-1fa6c8de]{\n  font-size: 22px;\n}\n.vip_return .vip_return_f[_v-1fa6c8de]{\n  font-size: 18px;\n  padding: 0 2px 0 4px;\n}\n.vip_return .vip_return_price[_v-1fa6c8de]{\n  font-size: 24px;\n}\n @media screen and (max-width:374px){\n    .vip_return[_v-1fa6c8de]{\n      padding-left:0;\n      margin-bottom: 3px;\n    }\n    .vip_return .vip_return_title[_v-1fa6c8de]{\n      font-size: 20px;\n    }\n    .vip_return .vip_return_f[_v-1fa6c8de]{\n      font-size: 14px;\n      padding: 0 2px 0 4px;\n    }\n    .vip_return .vip_return_price[_v-1fa6c8de]{\n      font-size: 20px;\n    }\n }\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.img_label[_v-057ddfc8]{\n  font-weight: bold;\n  left: 0;\n  bottom:0;\n  position:absolute;\n  font-size: 10px;\n  opacity: 0.8;\n  background: -webkit-gradient(linear,left top, right top,from(#ff5b5b),to(#fa1862));\n  background: linear-gradient(90deg,#ff5b5b,#fa1862);\n  background: -webkit-linear-gradient(left,#ff5b5b,#fa1862);\n  color:#fff;\n  line-height: 16px;\n  padding:1px 8px 0 6px;\n  border-top-right-radius: 8px;\n}\n.img_label[_v-057ddfc8]:after{\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-width: 0 4px 10px 0;\n  border-style: solid;\n  border-color: transparent transparent #fa1862 transparent;\n  position: absolute;\n  margin-left: 8px;\n  bottom: 0;\n}\n.img_container[_v-057ddfc8]{\n  position: relative;\n}\n\n  .good_list_2_row[_v-057ddfc8] {\n    background: none;\n    padding: 0 5px;\n  }\n\n  .font-weight[_v-057ddfc8] {\n    font-weight: 500;\n  }\n  .goods4_price_bar em[_v-057ddfc8] {\n    font-style: normal;\n    font-size: 12px;\n    display: inline-block;\n    margin-right: 2px;\n    \n  }\n\n  .good_list_2_row .good_item[_v-057ddfc8] {\n    padding: 0 5px;\n    margin-bottom: 0;\n  }\n\n  .good_list_2_row .good_item .good_img_container img[_v-057ddfc8] {\n    border: none;\n  }\n\n  .good_con[_v-057ddfc8] {\n    display: block;\n    background-color: #FFF;\n    padding: 10px;\n    padding-top: 0;\n    overflow: hidden;\n  }\n\n  .good_con .fz_12[_v-057ddfc8] {\n    overflow: hidden;\n    height: 16px;\n    line-height: 16px;\n  }\n\n  .good_con .fz_12 .dav-color-price[_v-057ddfc8] {\n    display: inline-block;\n  }\n.good_con .nowPriceCont[_v-057ddfc8] {\n  font-size: 0;\n}\n  .good_con .nowPrice[_v-057ddfc8] {\n    font-size: 16px;\n  }\n\n  .good_list_2_row .good_item .lable[_v-057ddfc8] {\n    color: #FF4A7D;\n    font-size: 10px;\n    display: inline-block;\n    margin-left: 4px;\n    font-family: sans-serif;\n    background-color: #FFF;\n    float: right;\n    -webkit-box-sizing: border-box;\n    position: relative;\n    top: 7.89473%;\n    padding: 0 2px;\n    border: 1px solid #FF4A7D;\n    line-height: 15px;\n    border-radius: 4px;\n  }\n\n  .good_list_2_row .good_item .lable .border[_v-057ddfc8] {\n    -webkit-transform: scale(0.5);\n    -ms-transform: scale(0.5);\n        transform: scale(0.5);\n    position: absolute;\n    border: 1px solid #FF4A7D;\n    top: -50%;\n    right: -50%;\n    bottom: -50%;\n    left: -50%;\n    border-radius: 7px;\n  }\n\n  .good_list_2_row .good_item .good_title[_v-057ddfc8] {\n    margin-bottom: 4px;\n    -webkit-line-clamp: 2;\n    line-clamp: 2;\n    line-height: 19px;\n  }\n\n  .goods4_price_bar[_v-057ddfc8] {\n    overflow: hidden;\n    height: 19px;\n    width: 200%;\n  }\n  .good_list_sell_out[_v-057ddfc8]{\n    z-index: 0;\n  }\n\n  .vip_return[_v-057ddfc8]{\n  line-height: 1;\n  font-size: 0;\n  color: #BF9D51;\n  padding-left: 4px;\n  position: relative;\n  display: inline-block;\n    -webkit-transform: scale(0.5);\n  -webkit-transform-origin: 0 60%;\n  -ms-transform: scale(0.5);\n      transform: scale(0.5);\n  -ms-transform-origin: 0 60%;\n      transform-origin: 0 60%;\n  vertical-align: middle;\n  margin-bottom: 4px;\n}\n.vip_return .vip_return_title[_v-057ddfc8]{\n  font-size: 22px;\n}\n.vip_return .vip_return_f[_v-057ddfc8]{\n  font-size: 18px;\n  padding: 0 2px 0 4px;\n}\n.vip_return .vip_return_price[_v-057ddfc8]{\n  font-size: 24px;\n}\n @media screen and (max-width:374px){\n    .vip_return[_v-057ddfc8]{\n      padding-left:0;\n      margin-bottom: 3px;\n    }\n    .vip_return .vip_return_title[_v-057ddfc8]{\n      font-size: 20px;\n    }\n    .vip_return .vip_return_f[_v-057ddfc8]{\n      font-size: 14px;\n      padding: 0 2px 0 4px;\n    }\n    .vip_return .vip_return_price[_v-057ddfc8]{\n      font-size: 20px;\n    }\n }\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -23669,11 +23356,7 @@
 /* 361 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div class=\"good_list_con\" :style=\"{ marginTop:data.marginTop + 'px' }\" _v-1fa6c8de=\"\">\n  <div class=\"good_list_2_row\" _v-1fa6c8de=\"\">\n    <a v-for=\"item in data.body.dataList\" data-id=\"item.goods_id\" :href=\"item.command.content\" class=\"good_item\" _v-1fa6c8de=\"\">\n      <div class=\"good_img_container\" _v-1fa6c8de=\"\">\n        <div class=\"img_container\" _v-1fa6c8de=\"\">\n          <img v-lazy=\"imgObject(item.imageUrl)\" style=\"display: inline;\" _v-1fa6c8de=\"\">\n          <span class=\"img_label\" v-if=\"item.actInfo!=''\" v-text=\"item.actInfo\" _v-1fa6c8de=\"\"></span>\n           <span class=\"img_label\" v-if=\"item.actInfo==''&amp;&amp;+item.ratio\" v-text=\"'返现'+item.ratio+'倍'\" _v-1fa6c8de=\"\"></span>\n        </div>\n        <div v-if=\"item.statusInfo&amp;&amp;item.statusInfo != ''\" class=\"good_list_sell_out\" _v-1fa6c8de=\"\"><span _v-1fa6c8de=\"\">{{item.statusInfo}}</span></div>\n        <div v-if=\"item.pic_info &amp;&amp; item.ratio != 0\" class=\"pic_info\" _v-1fa6c8de=\"\">{{item.ratio}}</div>\n      </div>\n      <div class=\"good_con\" _v-1fa6c8de=\"\">\n        <div class=\"good_title\" _v-1fa6c8de=\"\">{{item.title}}</div>\n        <div class=\"goods4_price_bar\" _v-1fa6c8de=\"\">\n          <span class=\"dav-color-price font-weight\" _v-1fa6c8de=\"\"><em class=\"fz_14\" _v-1fa6c8de=\"\">￥</em><span class=\"nowPriceCont\" _v-1fa6c8de=\"\"><span class=\"nowPrice\" _v-1fa6c8de=\"\">{{(item.nowPrice+'').split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.nowPrice+'').split('.').length == 2\" _v-1fa6c8de=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span></span>\n          <span class=\"vip_return\" v-if=\"item.income &amp;&amp; item.income != 0\" _v-1fa6c8de=\"\">\n            <span class=\"vip_return_title\" _v-1fa6c8de=\"\">会员返</span>\n            <span class=\"vip_return_f\" _v-1fa6c8de=\"\">¥</span>\n            <span class=\"vip_return_price\" _v-1fa6c8de=\"\">{{item.income}}</span>\n          </span>\n        </div>\n      </div>\n    </a>\n  </div>\n</div>\n<!--<category :list = \"data.body.dataList\"></category>-->\n";
-=======
-	module.exports = "\n<div class=\"good_list_con\" :style=\"{ marginTop:data.marginTop + 'px' }\" _v-057ddfc8=\"\">\n  <div class=\"good_list_2_row\" _v-057ddfc8=\"\">\n    <a v-for=\"item in data.body.dataList\" data-id=\"item.goods_id\" :href=\"item.command.content\" class=\"good_item\" _v-057ddfc8=\"\">\n      <div class=\"good_img_container\" _v-057ddfc8=\"\">\n        <div class=\"img_container\" _v-057ddfc8=\"\">\n          <img v-lazy=\"imgObject(item.imageUrl)\" style=\"display: inline;\" _v-057ddfc8=\"\">\n          <span class=\"img_label\" v-if=\"item.actInfo!=''\" v-text=\"item.actInfo\" _v-057ddfc8=\"\"></span>\n           <span class=\"img_label\" v-if=\"item.actInfo==''&amp;&amp;+item.ratio\" v-text=\"'返现'+item.ratio+'倍'\" _v-057ddfc8=\"\"></span>\n        </div>\n        <div v-if=\"item.statusInfo&amp;&amp;item.statusInfo != ''\" class=\"good_list_sell_out\" _v-057ddfc8=\"\"><span _v-057ddfc8=\"\">{{item.statusInfo}}</span></div>\n        <div v-if=\"item.pic_info &amp;&amp; item.ratio != 0\" class=\"pic_info\" _v-057ddfc8=\"\">{{item.ratio}}</div>\n      </div>\n      <div class=\"good_con\" _v-057ddfc8=\"\">\n        <div class=\"good_title\" _v-057ddfc8=\"\">{{item.title}}</div>\n        <div class=\"goods4_price_bar\" _v-057ddfc8=\"\">\n          <span class=\"dav-color-price font-weight\" _v-057ddfc8=\"\"><em class=\"fz_14\" _v-057ddfc8=\"\">￥</em><span class=\"nowPriceCont\" _v-057ddfc8=\"\"><span class=\"nowPrice\" _v-057ddfc8=\"\">{{(item.nowPrice+'').split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.nowPrice+'').split('.').length == 2\" _v-057ddfc8=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span></span>\n          <span class=\"vip_return\" v-if=\"item.income &amp;&amp; item.income != 0\" _v-057ddfc8=\"\">\n            <span class=\"vip_return_title\" _v-057ddfc8=\"\">会员返</span>\n            <span class=\"vip_return_f\" _v-057ddfc8=\"\">¥</span>\n            <span class=\"vip_return_price\" _v-057ddfc8=\"\">{{item.income}}</span>\n          </span>\n        </div>\n      </div>\n    </a>\n  </div>\n</div>\n<!--<category :list = \"data.body.dataList\"></category>-->\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 362 */
@@ -23703,11 +23386,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-78ed219f/bd_course_info_series_0.vue"
-=======
-	  var id = "_v-6f21a6f4/bd_course_info_series_0.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23731,13 +23410,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-78ed219f&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_info_series_0.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-78ed219f&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_info_series_0.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6f21a6f4&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_info_series_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6f21a6f4&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_info_series_0.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23755,11 +23429,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "#series_course[_v-78ed219f] {\n  width: 100%;\n  background: #fff;\n  position: relative;\n  padding-bottom: 0.1rem; }\n\n.series_title[_v-78ed219f] {\n  width: 100%;\n  padding-top: 0.14rem;\n  padding-left: 0.1rem;\n  padding-bottom: 0.1rem;\n  font-size: 0.14rem;\n  color: #FF4A7D; }\n  .series_title span[_v-78ed219f] {\n    font-size: 0.1rem;\n    color: #999999; }\n\n.series_container[_v-78ed219f] {\n  width: 3rem;\n  padding-left: 0.1rem;\n  padding-right: 0.4rem;\n  font-size: 0.14rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 1;\n  display: -webkit-box;\n  color: #333333; }\n\n.series_content_img[_v-78ed219f] {\n  position: absolute;\n  height: 0.22rem;\n  right: 0.1rem;\n  top: 0.27rem; }\n\n.series_content_img1[_v-78ed219f] {\n  position: absolute;\n  width: 0.64rem;\n  height: 0.22rem;\n  right: 0.1rem;\n  top: 0.27rem;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  border-radius: 37px;\n  text-align: center;\n  line-height: 0.21rem; }\n\n.icon[_v-78ed219f] {\n  width: 0.12rem;\n  height: 0.12rem;\n  vertical-align: top;\n  margin-top: 0.03rem; }\n", ""]);
-=======
-	exports.push([module.id, "#series_course[_v-6f21a6f4] {\n  width: 100%;\n  background: #fff;\n  position: relative;\n  padding-bottom: 0.1rem; }\n\n.series_title[_v-6f21a6f4] {\n  width: 100%;\n  padding-top: 0.14rem;\n  padding-left: 0.1rem;\n  padding-bottom: 0.1rem;\n  font-size: 0.14rem;\n  color: #FF4A7D; }\n  .series_title span[_v-6f21a6f4] {\n    font-size: 0.1rem;\n    color: #999999; }\n\n.series_container[_v-6f21a6f4] {\n  width: 3rem;\n  padding-left: 0.1rem;\n  padding-right: 0.4rem;\n  font-size: 0.14rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 1;\n  display: -webkit-box;\n  color: #333333; }\n\n.series_content_img[_v-6f21a6f4] {\n  position: absolute;\n  height: 0.22rem;\n  right: 0.1rem;\n  top: 0.27rem; }\n\n.series_content_img1[_v-6f21a6f4] {\n  position: absolute;\n  width: 0.64rem;\n  height: 0.22rem;\n  right: 0.1rem;\n  top: 0.27rem;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  border-radius: 37px;\n  text-align: center;\n  line-height: 0.21rem; }\n\n.icon[_v-6f21a6f4] {\n  width: 0.12rem;\n  height: 0.12rem;\n  vertical-align: top;\n  margin-top: 0.03rem; }\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -23879,11 +23549,7 @@
 /* 366 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div id=\"series_course\" :style=\"{'marginTop':dataList.marginTop + 'px'}\" _v-78ed219f=\"\">\n    <a :href=\"dataList.body.command.content\" @click.stop=\"clickAnalysis\" :position=\"dataList.position\" _v-78ed219f=\"\">\n        <div class=\"series_title\" _v-78ed219f=\"\">所属系列课 <span _v-78ed219f=\"\">（第{{dataList.body.nowNo}}节 共{{dataList.body.courseNum}}节课）</span></div>\n        <div class=\"series_container\" _v-78ed219f=\"\">\n            <img src=\"//pic.davdian.com/free/2017/08/01/seriesicon.png\" class=\"icon\" _v-78ed219f=\"\">\n            <span v-text=\"dataList.body.seriesTitle\" _v-78ed219f=\"\"></span>\n        </div>\n        <div class=\"series_content_img1\" _v-78ed219f=\"\">进入系列</div>\n        <!-- <img class='series_content_img' src=\"//pic.davdian.com/free/2017/07/28/goSeriesCourse1.png\"> -->\n    </a>\n</div>\n";
-=======
-	module.exports = "\n<div id=\"series_course\" :style=\"{'marginTop':dataList.marginTop + 'px'}\" _v-6f21a6f4=\"\">\n    <a :href=\"dataList.body.command.content\" @click.stop=\"clickAnalysis\" :position=\"dataList.position\" _v-6f21a6f4=\"\">\n        <div class=\"series_title\" _v-6f21a6f4=\"\">所属系列课 <span _v-6f21a6f4=\"\">（第{{dataList.body.nowNo}}节 共{{dataList.body.courseNum}}节课）</span></div>\n        <div class=\"series_container\" _v-6f21a6f4=\"\">\n            <img src=\"//pic.davdian.com/free/2017/08/01/seriesicon.png\" class=\"icon\" _v-6f21a6f4=\"\">\n            <span v-text=\"dataList.body.seriesTitle\" _v-6f21a6f4=\"\"></span>\n        </div>\n        <div class=\"series_content_img1\" _v-6f21a6f4=\"\">进入系列</div>\n        <!-- <img class='series_content_img' src=\"//pic.davdian.com/free/2017/07/28/goSeriesCourse1.png\"> -->\n    </a>\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 367 */
@@ -23913,11 +23579,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-55401cf8/bd_course_notes_0.vue"
-=======
-	  var id = "_v-cd76f3e6/bd_course_notes_0.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23941,13 +23603,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-55401cf8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_notes_0.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-55401cf8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_notes_0.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-cd76f3e6&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_notes_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-cd76f3e6&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_notes_0.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23965,11 +23622,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.seriesCommentContainer[_v-55401cf8]{\n    background: #fff;\n    height: 44px;\n    line-height: 44px;\n    padding-left: 0.18rem;\n    width: 100%;\n    color:#666666;\n    font-size: 0.14rem;\n    position: relative;\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.icon[_v-55401cf8]{\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n        transform: rotate(45deg);\n    background: none;\n    top: 16px;\n    position: absolute;\n    right: 12px\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.seriesCommentContainer[_v-cd76f3e6]{\n    background: #fff;\n    height: 44px;\n    line-height: 44px;\n    padding-left: 0.18rem;\n    width: 100%;\n    color:#666666;\n    font-size: 0.14rem;\n    position: relative;\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.icon[_v-cd76f3e6]{\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n        transform: rotate(45deg);\n    background: none;\n    top: 16px;\n    position: absolute;\n    right: 12px\n}\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -24049,11 +23702,7 @@
 /* 371 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div class=\"seriesCommentContainer\" @click=\"gohref\" :style=\"{'marginTop':data.marginTop + 'px'}\" _v-55401cf8=\"\">\n    <span _v-55401cf8=\"\">听课笔记 <span v-if=\"data.body.notesNum\" _v-55401cf8=\"\">（ <span v-text=\"data.body.notesNum\" _v-55401cf8=\"\"></span>  ）</span></span>\n    <i class=\"icon\" _v-55401cf8=\"\"></i>\n</div>\n";
-=======
-	module.exports = "\n<div class=\"seriesCommentContainer\" @click=\"gohref\" :style=\"{'marginTop':data.marginTop + 'px'}\" _v-cd76f3e6=\"\">\n    <span _v-cd76f3e6=\"\">听课笔记 <span v-if=\"data.body.notesNum\" _v-cd76f3e6=\"\">（ <span v-text=\"data.body.notesNum\" _v-cd76f3e6=\"\"></span>  ）</span></span>\n    <i class=\"icon\" _v-cd76f3e6=\"\"></i>\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 372 */
@@ -24083,11 +23732,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-925ea434/bd_album_0.vue"
-=======
-	  var id = "_v-7835bb1e/bd_album_0.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -24111,13 +23756,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-925ea434&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_0.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-925ea434&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_0.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_0.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -24135,11 +23775,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, ".box[_v-925ea434] {\n  font-size: 0;\n  padding-bottom: 0.22rem;\n  padding-right: 0.21rem;\n  padding-left: 0.3rem;\n  padding-top: 0.02rem; }\n\n.box > div[_v-925ea434] {\n  display: inline-block;\n  vertical-align: top;\n  margin-top: 0.12rem;\n  margin-right: 0.09rem;\n  background: #D8D8D8;\n  border: 1px solid #979797;\n  width: 0.72rem;\n  height: 0.35rem;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  background-size: cover;\n  background-position: center center;\n  background-repeat: no-repeat; }\n\n.item img[_v-925ea434] {\n  width: 0.72rem;\n  height: 0.35rem; }\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.box{\n  font-size: 0;\n  padding-bottom: 0.22rem;\n  padding-right: 0.21rem;\n  padding-left: 0.3rem;\n  padding-top:0.02rem;\n}\n.box>div{\n  display: inline-block;\n  vertical-align: top;\n  margin-top:0.12rem;\n  margin-right:0.09rem;\n  background: #D8D8D8;\n  border:1px solid #979797;\n  width: 0.72rem;\n  height: 0.35rem;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  background-size: cover;\n  background-position: center center;\n  background-repeat: no-repeat;\n}\n.item img{\n  width: 0.72rem;\n  height: 0.35rem;\n}\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -24200,11 +23836,7 @@
 	    }
 	  }
 	  // </script>
-<<<<<<< HEAD
 	  // <style scoped lang="sass">
-=======
-	  // <style>
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  //   .box{
 	  //     font-size: 0;
 	  //     padding-bottom: 0.22rem;
@@ -24238,11 +23870,7 @@
 /* 376 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	module.exports = "\n<div class=\"box\" _v-925ea434=\"\">\n  <div class=\"item\" v-for=\"item in dataList\" @click.stop=\"go_collect(item.albumId)\" :style=\"{'background-image':styleObject(item.imageUrl)}\" _v-925ea434=\"\">\n    <!--<img :src=\"item.imageUrl\" alt=\"\">-->\n  </div>\n</div>\n";
-=======
-	module.exports = "\n<div class=\"box\">\n  <div class=\"item\" v-for=\"item in dataList\"\n       @click.stop=\"go_collect(item.albumId)\" :style=\"{'background-image':styleObject(item.imageUrl)}\">\n    <!--<img :src=\"item.imageUrl\" alt=\"\">-->\n  </div>\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 377 */
@@ -24272,11 +23900,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-780f6021/bd_album_content_1.vue"
-=======
-	  var id = "_v-96cfcca8/bd_album_content_1.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -24300,13 +23924,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-780f6021&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue", function() {
 				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-780f6021&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-96cfcca8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-96cfcca8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -24324,11 +23943,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-780f6021]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-780f6021]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-780f6021]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-780f6021]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n  max-width: 2.15rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-780f6021]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-780f6021]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-780f6021],.mask_stop[_v-780f6021],.disable[_v-780f6021]{\n  z-index:3;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-96cfcca8]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-96cfcca8]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-96cfcca8]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-96cfcca8]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-96cfcca8]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-96cfcca8]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-96cfcca8]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-96cfcca8]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-96cfcca8]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-96cfcca8]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n  max-width: 2.15rem;\n}\n.list_title[_v-96cfcca8]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-96cfcca8],.list_time[_v-96cfcca8]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-96cfcca8]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-96cfcca8]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-96cfcca8]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-96cfcca8]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-96cfcca8]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-96cfcca8],.mask_stop[_v-96cfcca8],.disable[_v-96cfcca8]{\n  z-index:3;\n}\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -24355,7 +23970,6 @@
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
-<<<<<<< HEAD
 	var _popup = __webpack_require__(38);
 
 	var _popup2 = _interopRequireDefault(_popup);
@@ -24396,10 +24010,6 @@
 	//
 	// </template>
 	// <script>
-=======
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	exports.default = {
 	  props: ["data"],
 	  data: function data() {
@@ -24472,7 +24082,6 @@
 	      }
 	    },
 	    stop_info: function stop_info() {
-<<<<<<< HEAD
 	      _popup2.default.confirm({
 	        title: '提示', // 标题（支持传入html。有则显示。）
 	        text: '订阅后才能继续收听哦', // 文本（支持传入html。有则显示。）
@@ -24481,9 +24090,6 @@
 	        okBtnCallback: function okBtnCallback() {},
 	        cancelBtnCallback: function cancelBtnCallback() {}
 	      });
-=======
-	      _dialog2.default.alert("订阅后才可收听");
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	    },
 	    getLocalTime: function getLocalTime(nS) {
 	      var time = new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
@@ -24653,44 +24259,7 @@
 	  //   }
 	  // </style>
 
-<<<<<<< HEAD
 	};
-=======
-	}; // <template>
-	//   <div>
-	//     <div class="list1">
-	//       <div class="big_img">
-	//         <div class="list_line"></div>
-	//         <div class="list_date" v-text="week"></div>
-	//         <div class="list_line"></div>
-	//       </div>
-	//       <div class="list" v-for="(item,index) in dataList" @click.stop="go_href(item.albumId,item.sortNo)">
-	//         <div class="left_img">
-	//           <img :src="item.imageUrl" alt="">
-	//         </div>
-	//         <div class="list_content">
-	//           <div class="list_title" v-text="item.music"></div>
-	//           <div class="list_name" v-text="item.album"></div>
-	//           <div class="list_time" v-text="timeFormat(item.time)"></div>
-	//         </div>
-	//         <div class="right_img" v-if="(item.isFree==0 || (item.isFree==1 && item.isSub==1)) && item.isPlay==1">
-	//           <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-	//           <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="!(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
-	//           <div class="circle_mask"></div>
-	//           <div><img :src="item.imageUrl" alt=""></div>
-	//         </div>
-	//         <div class="right_img" v-if="item.isFree==1 && item.isSub==0 && item.isPlay==0">
-	//           <div class="disable" @click.stop="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-	//           <div class="circle_mask"></div>
-	//           <div><img :src="item.imageUrl" alt=""></div>
-	//         </div>
-	//       </div>
-	//     </div>
-	//   </div>
-	//
-	// </template>
-	// <script>
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 381 */
@@ -24873,11 +24442,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-f832942c/index.vue"
-=======
-	  var id = "_v-81e18c02/index.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -25054,11 +24619,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-2a6eedc5/index.vue"
-=======
-	  var id = "_v-7a517590/index.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -25454,11 +25015,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-226e80f5/index.vue"
-=======
-	  var id = "_v-5d97050a/index.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -26642,7 +26199,6 @@
 	        }, "transition-insert"), w && w(t), A && (St(t, b), St(t, $), Tt(function () {
 	          Et(t, b), T.cancelled || O || jt(t, i, T);
 	        })), e.data.show && C && C(t, T), A || O || T();
-<<<<<<< HEAD
 	      }
 	    }
 	  }function Pt(e, t) {
@@ -27246,611 +26802,6 @@
 	    for (var e = this, t = this.deps.length; t--;) {
 	      e.deps[t].depend();
 	    }
-=======
-	      }
-	    }
-	  }function Pt(e, t) {
-	    function n() {
-	      m.cancelled || (e.data.show || ((r.parentNode._pending || (r.parentNode._pending = {}))[e.key] = e), u && u(r), v && (St(r, s), St(r, c), Tt(function () {
-	        Et(r, s), m.cancelled || h || jt(r, a, m);
-	      })), l && l(r, m), v || h || m());
-	    }var r = e.elm;r._enterCb && (r._enterCb.cancelled = !0, r._enterCb());var i = Rt(e.data.transition);if (!i) return t();if (!r._leaveCb && 1 === r.nodeType) {
-	      var o = i.css,
-	          a = i.type,
-	          s = i.leaveClass,
-	          c = i.leaveActiveClass,
-	          u = i.beforeLeave,
-	          l = i.leave,
-	          f = i.afterLeave,
-	          d = i.leaveCancelled,
-	          p = i.delayLeave,
-	          v = o !== !1 && !Jr,
-	          h = l && (l._length || l.length) > 1,
-	          m = r._leaveCb = It(function () {
-	        r.parentNode && r.parentNode._pending && (r.parentNode._pending[e.key] = null), v && Et(r, c), m.cancelled ? (v && Et(r, s), d && d(r)) : (t(), f && f(r)), r._leaveCb = null;
-	      });p ? p(n) : n();
-	    }
-	  }function Rt(e) {
-	    if (e) {
-	      if ("object" == (typeof e === "undefined" ? "undefined" : _typeof(e))) {
-	        var t = {};return e.css !== !1 && u(t, mo(e.name || "v")), u(t, e), t;
-	      }return "string" == typeof e ? mo(e) : void 0;
-	    }
-	  }function It(e) {
-	    var t = !1;return function () {
-	      t || (t = !0, e());
-	    };
-	  }function Bt(e, t, n) {
-	    var r = t.value,
-	        i = e.multiple;if (!i || Array.isArray(r)) {
-	      for (var o, a, s = 0, c = e.options.length; s < c; s++) {
-	        if (a = e.options[s], i) o = m(r, Ht(a)) > -1, a.selected !== o && (a.selected = o);else if (h(Ht(a), r)) return void (e.selectedIndex !== s && (e.selectedIndex = s));
-	      }i || (e.selectedIndex = -1);
-	    }
-	  }function Ft(e, t) {
-	    for (var n = 0, r = t.length; n < r; n++) {
-	      if (h(Ht(t[n]), e)) return !1;
-	    }return !0;
-	  }function Ht(e) {
-	    return "_value" in e ? e._value : e.value;
-	  }function Ut(e) {
-	    e.target.composing = !0;
-	  }function zt(e) {
-	    e.target.composing = !1, Vt(e.target, "input");
-	  }function Vt(e, t) {
-	    var n = document.createEvent("HTMLEvents");n.initEvent(t, !0, !0), e.dispatchEvent(n);
-	  }function Jt(e) {
-	    return !e.child || e.data && e.data.transition ? e : Jt(e.child._vnode);
-	  }function qt(e) {
-	    var t = e && e.componentOptions;return t && t.Ctor.options.abstract ? qt(ee(t.children)) : e;
-	  }function Kt(e) {
-	    var t = {},
-	        n = e.$options;for (var r in n.propsData) {
-	      t[r] = e[r];
-	    }var i = n._parentListeners;
-	    for (var o in i) {
-	      t[Lr(o)] = i[o].fn;
-	    }return t;
-	  }function Wt(e, t) {
-	    return (/\d-keep-alive$/.test(t.tag) ? e("keep-alive") : null
-	    );
-	  }function Zt(e) {
-	    for (; e = e.parent;) {
-	      if (e.data.transition) return !0;
-	    }
-	  }function Gt(e) {
-	    e.elm._moveCb && e.elm._moveCb(), e.elm._enterCb && e.elm._enterCb();
-	  }function Yt(e) {
-	    e.data.newPos = e.elm.getBoundingClientRect();
-	  }function Qt(e) {
-	    var t = e.data.pos,
-	        n = e.data.newPos,
-	        r = t.left - n.left,
-	        i = t.top - n.top;if (r || i) {
-	      e.data.moved = !0;var o = e.elm.style;o.transform = o.WebkitTransform = "translate(" + r + "px," + i + "px)", o.transitionDuration = "0s";
-	    }
-	  }function Xt(e, t) {
-	    var n = document.createElement("div");return n.innerHTML = '<div a="' + e + '">', n.innerHTML.indexOf(t) > 0;
-	  }function en(e) {
-	    return Eo.innerHTML = e, Eo.textContent;
-	  }function tn(e, t) {
-	    return t && (e = e.replace(ba, "\n")), e.replace(ya, "<").replace(_a, ">").replace($a, "&").replace(wa, '"');
-	  }function nn(e, t) {
-	    function n(t) {
-	      f += t, e = e.substring(t);
-	    }function r() {
-	      var t = e.match(Ro);if (t) {
-	        var r = { tagName: t[1], attrs: [], start: f };n(t[0].length);for (var i, o; !(i = e.match(Io)) && (o = e.match(Do));) {
-	          n(o[0].length), r.attrs.push(o);
-	        }if (i) return r.unarySlash = i[1], n(i[0].length), r.end = f, r;
-	      }
-	    }function i(e) {
-	      var n = e.tagName,
-	          r = e.unarySlash;u && ("p" === s && Bi(n) && o("", s), Ii(n) && s === n && o("", n));for (var i = l(n) || "html" === n && "head" === s || !!r, a = e.attrs.length, f = new Array(a), d = 0; d < a; d++) {
-	        var p = e.attrs[d];zo && p[0].indexOf('""') === -1 && ("" === p[3] && delete p[3], "" === p[4] && delete p[4], "" === p[5] && delete p[5]);var v = p[3] || p[4] || p[5] || "";f[d] = { name: p[1], value: tn(v, t.shouldDecodeNewlines) };
-	      }i || (c.push({ tag: n, attrs: f }), s = n, r = ""), t.start && t.start(n, f, i, e.start, e.end);
-	    }function o(e, n, r, i) {
-	      var o;if (null == r && (r = f), null == i && (i = f), n) {
-	        var a = n.toLowerCase();for (o = c.length - 1; o >= 0 && c[o].tag.toLowerCase() !== a; o--) {}
-	      } else o = 0;if (o >= 0) {
-	        for (var u = c.length - 1; u >= o; u--) {
-	          t.end && t.end(c[u].tag, r, i);
-	        }c.length = o, s = o && c[o - 1].tag;
-	      } else "br" === n.toLowerCase() ? t.start && t.start(n, [], !0, r, i) : "p" === n.toLowerCase() && (t.start && t.start(n, [], !1, r, i), t.end && t.end(n, r, i));
-	    }for (var a, s, c = [], u = t.expectHTML, l = t.isUnaryTag || Ir, f = 0; e;) {
-	      if (a = e, s && ma(s, t.sfc, c)) {
-	        var d = s.toLowerCase(),
-	            p = ga[d] || (ga[d] = new RegExp("([\\s\\S]*?)(</" + d + "[^>]*>)", "i")),
-	            v = 0,
-	            h = e.replace(p, function (e, n, r) {
-	          return v = r.length, "script" !== d && "style" !== d && "noscript" !== d && (n = n.replace(/<!--([\s\S]*?)-->/g, "$1").replace(/<!\[CDATA\[([\s\S]*?)]]>/g, "$1")), t.chars && t.chars(n), "";
-	        });f += e.length - h.length, e = h, o("</" + d + ">", d, f - v, f);
-	      } else {
-	        var m = e.indexOf("<");if (0 === m) {
-	          if (Ho.test(e)) {
-	            var g = e.indexOf("-->");if (g >= 0) {
-	              n(g + 3);continue;
-	            }
-	          }if (Uo.test(e)) {
-	            var y = e.indexOf("]>");if (y >= 0) {
-	              n(y + 2);continue;
-	            }
-	          }var _ = e.match(Fo);if (_) {
-	            n(_[0].length);continue;
-	          }var b = e.match(Bo);if (b) {
-	            var $ = f;n(b[0].length), o(b[0], b[1], $, f);continue;
-	          }var w = r();if (w) {
-	            i(w);continue;
-	          }
-	        }var C = void 0,
-	            x = void 0,
-	            k = void 0;if (m > 0) {
-	          for (x = e.slice(m); !(Bo.test(x) || Ro.test(x) || Ho.test(x) || Uo.test(x) || (k = x.indexOf("<", 1), k < 0));) {
-	            m += k, x = e.slice(m);
-	          }C = e.substring(0, m), n(m);
-	        }m < 0 && (C = e, e = ""), t.chars && C && t.chars(C);
-	      }if (e === a && t.chars) {
-	        t.chars(e);break;
-	      }
-	    }o();
-	  }function rn(e) {
-	    function t() {
-	      (a || (a = [])).push(e.slice(d, i).trim()), d = i + 1;
-	    }var n,
-	        r,
-	        i,
-	        o,
-	        a,
-	        s = !1,
-	        c = !1,
-	        u = 0,
-	        l = 0,
-	        f = 0,
-	        d = 0;for (i = 0; i < e.length; i++) {
-	      if (r = n, n = e.charCodeAt(i), s) 39 === n && 92 !== r && (s = !s);else if (c) 34 === n && 92 !== r && (c = !c);else if (124 !== n || 124 === e.charCodeAt(i + 1) || 124 === e.charCodeAt(i - 1) || u || l || f) switch (n) {case 34:
-	          c = !0;break;case 39:
-	          s = !0;break;case 40:
-	          f++;break;case 41:
-	          f--;break;case 91:
-	          l++;break;case 93:
-	          l--;break;case 123:
-	          u++;break;case 125:
-	          u--;} else void 0 === o ? (d = i + 1, o = e.slice(0, i).trim()) : t();
-	    }if (void 0 === o ? o = e.slice(0, i).trim() : 0 !== d && t(), a) for (i = 0; i < a.length; i++) {
-	      o = on(o, a[i]);
-	    }return o;
-	  }function on(e, t) {
-	    var n = t.indexOf("(");if (n < 0) return '_f("' + t + '")(' + e + ")";var r = t.slice(0, n),
-	        i = t.slice(n + 1);return '_f("' + r + '")(' + e + "," + i;
-	  }function an(e, t) {
-	    var n = t ? ka(t) : Ca;if (n.test(e)) {
-	      for (var r, i, o = [], a = n.lastIndex = 0; r = n.exec(e);) {
-	        i = r.index, i > a && o.push(JSON.stringify(e.slice(a, i)));var s = rn(r[1].trim());o.push("_s(" + s + ")"), a = i + r[0].length;
-	      }return a < e.length && o.push(JSON.stringify(e.slice(a))), o.join("+");
-	    }
-	  }function sn(e) {
-	    console.error("[Vue parser]: " + e);
-	  }function cn(e, t) {
-	    return e ? e.map(function (e) {
-	      return e[t];
-	    }).filter(function (e) {
-	      return e;
-	    }) : [];
-	  }function un(e, t, n) {
-	    (e.props || (e.props = [])).push({ name: t, value: n });
-	  }function ln(e, t, n) {
-	    (e.attrs || (e.attrs = [])).push({ name: t, value: n });
-	  }function fn(e, t, n, r, i, o) {
-	    (e.directives || (e.directives = [])).push({ name: t, rawName: n, value: r, arg: i, modifiers: o });
-	  }function dn(e, t, n, r, i) {
-	    r && r.capture && (delete r.capture, t = "!" + t);var o;r && r.native ? (delete r.native, o = e.nativeEvents || (e.nativeEvents = {})) : o = e.events || (e.events = {});var a = { value: n, modifiers: r },
-	        s = o[t];Array.isArray(s) ? i ? s.unshift(a) : s.push(a) : s ? o[t] = i ? [a, s] : [s, a] : o[t] = a;
-	  }function pn(e, t, n) {
-	    var r = vn(e, ":" + t) || vn(e, "v-bind:" + t);if (null != r) return r;if (n !== !1) {
-	      var i = vn(e, t);if (null != i) return JSON.stringify(i);
-	    }
-	  }function vn(e, t) {
-	    var n;if (null != (n = e.attrsMap[t])) for (var r = e.attrsList, i = 0, o = r.length; i < o; i++) {
-	      if (r[i].name === t) {
-	        r.splice(i, 1);break;
-	      }
-	    }return n;
-	  }function hn(e, t) {
-	    Vo = t.warn || sn, Jo = t.getTagNamespace || Ir, qo = t.mustUseProp || Ir, Ko = t.isPreTag || Ir, Wo = cn(t.modules, "preTransformNode"), Zo = cn(t.modules, "transformNode"), Go = cn(t.modules, "postTransformNode"), Yo = t.delimiters;var n,
-	        r,
-	        i = [],
-	        o = t.preserveWhitespace !== !1,
-	        a = !1,
-	        s = !1;return nn(e, { expectHTML: t.expectHTML, isUnaryTag: t.isUnaryTag, shouldDecodeNewlines: t.shouldDecodeNewlines, start: function start(e, o, c) {
-	        function u(e) {}var l = r && r.ns || Jo(e);t.isIE && "svg" === l && (o = Ln(o));var f = { type: 1, tag: e, attrsList: o, attrsMap: Sn(o, t.isIE), parent: r, children: [] };l && (f.ns = l), jn(f) && (f.forbidden = !0);for (var d = 0; d < Wo.length; d++) {
-	          Wo[d](f, t);
-	        }if (a || (mn(f), f.pre && (a = !0)), Ko(f.tag) && (s = !0), a) gn(f);else {
-	          bn(f), $n(f), Cn(f), yn(f), f.plain = !f.key && !o.length, _n(f), xn(f), kn(f);for (var p = 0; p < Zo.length; p++) {
-	            Zo[p](f, t);
-	          }An(f);
-	        }n ? i.length || n.if && f.else && (u(f), n.elseBlock = f) : (n = f, u(n)), r && !f.forbidden && (f.else ? wn(f, r) : (r.children.push(f), f.parent = r)), c || (r = f, i.push(f));for (var v = 0; v < Go.length; v++) {
-	          Go[v](f, t);
-	        }
-	      }, end: function end() {
-	        var e = i[i.length - 1],
-	            t = e.children[e.children.length - 1];t && 3 === t.type && " " === t.text && e.children.pop(), i.length -= 1, r = i[i.length - 1], e.pre && (a = !1), Ko(e.tag) && (s = !1);
-	      }, chars: function chars(e) {
-	        if (r && (e = s || e.trim() ? Da(e) : o && r.children.length ? " " : "")) {
-	          var t;!a && " " !== e && (t = an(e, Yo)) ? r.children.push({ type: 2, expression: t, text: e }) : (e = e.replace(Na, ""), r.children.push({ type: 3, text: e }));
-	        }
-	      } }), n;
-	  }function mn(e) {
-	    null != vn(e, "v-pre") && (e.pre = !0);
-	  }function gn(e) {
-	    var t = e.attrsList.length;if (t) for (var n = e.attrs = new Array(t), r = 0; r < t; r++) {
-	      n[r] = { name: e.attrsList[r].name, value: JSON.stringify(e.attrsList[r].value) };
-	    } else e.pre || (e.plain = !0);
-	  }function yn(e) {
-	    var t = pn(e, "key");t && (e.key = t);
-	  }function _n(e) {
-	    var t = pn(e, "ref");t && (e.ref = t, e.refInFor = On(e));
-	  }function bn(e) {
-	    var t;if (t = vn(e, "v-for")) {
-	      var n = t.match(Oa);if (!n) return;e.for = n[2].trim();var r = n[1].trim(),
-	          i = r.match(Ta);i ? (e.alias = i[1].trim(), e.iterator1 = i[2].trim(), i[3] && (e.iterator2 = i[3].trim())) : e.alias = r;
-	    }
-	  }function $n(e) {
-	    var t = vn(e, "v-if");t && (e.if = t), null != vn(e, "v-else") && (e.else = !0);
-	  }function wn(e, t) {
-	    var n = En(t.children);n && n.if && (n.elseBlock = e);
-	  }function Cn(e) {
-	    var t = vn(e, "v-once");null != t && (e.once = !0);
-	  }function xn(e) {
-	    if ("slot" === e.tag) e.slotName = pn(e, "name");else {
-	      var t = pn(e, "slot");t && (e.slotTarget = t);
-	    }
-	  }function kn(e) {
-	    var t;(t = pn(e, "is")) && (e.component = t), null != vn(e, "inline-template") && (e.inlineTemplate = !0);
-	  }function An(e) {
-	    var t,
-	        n,
-	        r,
-	        i,
-	        o,
-	        a,
-	        s,
-	        c,
-	        u = e.attrsList;for (t = 0, n = u.length; t < n; t++) {
-	      if (r = i = u[t].name, o = u[t].value, Aa.test(r)) {
-	        if (e.hasBindings = !0, s = Tn(r), s && (r = r.replace(La, "")), Sa.test(r)) r = r.replace(Sa, ""), s && s.prop && (c = !0, r = Lr(r), "innerHtml" === r && (r = "innerHTML")), c || qo(r) ? un(e, r, o) : ln(e, r, o);else if (Ea.test(r)) r = r.replace(Ea, ""), dn(e, r, o, s);else {
-	          r = r.replace(Aa, "");var l = r.match(ja);l && (a = l[1]) && (r = r.slice(0, -(a.length + 1))), fn(e, r, i, o, a, s);
-	        }
-	      } else ln(e, r, JSON.stringify(o));
-	    }
-	  }function On(e) {
-	    for (var t = e; t;) {
-	      if (void 0 !== t.for) return !0;t = t.parent;
-	    }return !1;
-	  }function Tn(e) {
-	    var t = e.match(La);if (t) {
-	      var n = {};return t.forEach(function (e) {
-	        n[e.slice(1)] = !0;
-	      }), n;
-	    }
-	  }function Sn(e, t) {
-	    for (var n = {}, r = 0, i = e.length; r < i; r++) {
-	      n[e[r].name] = e[r].value;
-	    }return n;
-	  }function En(e) {
-	    for (var t = e.length; t--;) {
-	      if (e[t].tag) return e[t];
-	    }
-	  }function jn(e) {
-	    return "style" === e.tag || "script" === e.tag && (!e.attrsMap.type || "text/javascript" === e.attrsMap.type);
-	  }function Ln(e) {
-	    for (var t = [], n = 0; n < e.length; n++) {
-	      var r = e[n];Ma.test(r.name) || (r.name = r.name.replace(Pa, ""), t.push(r));
-	    }return t;
-	  }function Nn(e, t) {
-	    e && (Qo = Ra(t.staticKeys || ""), Xo = t.isReservedTag || function () {
-	      return !1;
-	    }, Mn(e), Pn(e, !1));
-	  }function Dn(e) {
-	    return n("type,tag,attrsList,attrsMap,plain,parent,children,attrs" + (e ? "," + e : ""));
-	  }function Mn(e) {
-	    if (e.static = Rn(e), 1 === e.type) for (var t = 0, n = e.children.length; t < n; t++) {
-	      var r = e.children[t];Mn(r), r.static || (e.static = !1);
-	    }
-	  }function Pn(e, t) {
-	    if (1 === e.type) {
-	      if ((e.static || e.once) && (e.staticInFor = t), e.static) return void (e.staticRoot = !0);if (e.children) for (var n = 0, r = e.children.length; n < r; n++) {
-	        Pn(e.children[n], t || !!e.for);
-	      }
-	    }
-	  }function Rn(e) {
-	    return 2 !== e.type && (3 === e.type || !(!e.pre && (e.hasBindings || e.if || e.for || Sr(e.tag) || !Xo(e.tag) || In(e) || !Object.keys(e).every(Qo))));
-	  }function In(e) {
-	    for (; e.parent;) {
-	      if (e = e.parent, "template" !== e.tag) return !1;if (e.for) return !0;
-	    }return !1;
-	  }function Bn(e, t) {
-	    var n = t ? "nativeOn:{" : "on:{";for (var r in e) {
-	      n += '"' + r + '":' + Fn(e[r]) + ",";
-	    }return n.slice(0, -1) + "}";
-	  }function Fn(e) {
-	    if (e) {
-	      if (Array.isArray(e)) return "[" + e.map(Fn).join(",") + "]";if (e.modifiers) {
-	        var t = "",
-	            n = [];for (var r in e.modifiers) {
-	          Fa[r] ? t += Fa[r] : n.push(r);
-	        }n.length && (t = Hn(n) + t);var i = Ia.test(e.value) ? e.value + "($event)" : e.value;return "function($event){" + t + i + "}";
-	      }return Ia.test(e.value) ? e.value : "function($event){" + e.value + "}";
-	    }return "function(){}";
-	  }function Hn(e) {
-	    var t = 1 === e.length ? Un(e[0]) : Array.prototype.concat.apply([], e.map(Un));return Array.isArray(t) ? "if(" + t.map(function (e) {
-	      return "$event.keyCode!==" + e;
-	    }).join("&&") + ")return;" : "if($event.keyCode!==" + t + ")return;";
-	  }function Un(e) {
-	    return parseInt(e, 10) || Ba[e] || "_k(" + JSON.stringify(e) + ")";
-	  }function zn(e, t) {
-	    e.wrapData = function (e) {
-	      return "_b(" + e + "," + t.value + (t.modifiers && t.modifiers.prop ? ",true" : "") + ")";
-	    };
-	  }function Vn(e, t) {
-	    var n = ia,
-	        r = ia = [],
-	        i = oa;oa = 0, aa = t, ea = t.warn || sn, ta = cn(t.modules, "transformCode"), na = cn(t.modules, "genData"), ra = t.directives || {};var o = e ? Jn(e) : '_h("div")';return ia = n, oa = i, { render: "with(this){return " + o + "}", staticRenderFns: r };
-	  }function Jn(e) {
-	    if (e.staticRoot && !e.staticProcessed) return qn(e);if (e.once && !e.onceProcessed) return Kn(e);if (e.for && !e.forProcessed) return Gn(e);if (e.if && !e.ifProcessed) return Wn(e);if ("template" !== e.tag || e.slotTarget) {
-	      if ("slot" === e.tag) return nr(e);var t;if (e.component) t = rr(e.component, e);else {
-	        var n = e.plain ? void 0 : Yn(e),
-	            r = e.inlineTemplate ? null : Xn(e);t = "_h('" + e.tag + "'" + (n ? "," + n : "") + (r ? "," + r : "") + ")";
-	      }for (var i = 0; i < ta.length; i++) {
-	        t = ta[i](e, t);
-	      }return t;
-	    }return Xn(e) || "void 0";
-	  }function qn(e) {
-	    return e.staticProcessed = !0, ia.push("with(this){return " + Jn(e) + "}"), "_m(" + (ia.length - 1) + (e.staticInFor ? ",true" : "") + ")";
-	  }function Kn(e) {
-	    if (e.onceProcessed = !0, e.staticInFor) {
-	      for (var t = "", n = e.parent; n;) {
-	        if (n.for) {
-	          t = n.key;break;
-	        }n = n.parent;
-	      }return t ? "_o(" + Jn(e) + "," + oa++ + (t ? "," + t : "") + ")" : Jn(e);
-	    }return qn(e);
-	  }function Wn(e) {
-	    var t = e.if;return e.ifProcessed = !0, "(" + t + ")?" + Jn(e) + ":" + Zn(e);
-	  }function Zn(e) {
-	    return e.elseBlock ? Jn(e.elseBlock) : "_e()";
-	  }function Gn(e) {
-	    var t = e.for,
-	        n = e.alias,
-	        r = e.iterator1 ? "," + e.iterator1 : "",
-	        i = e.iterator2 ? "," + e.iterator2 : "";return e.forProcessed = !0, "_l((" + t + "),function(" + n + r + i + "){return " + Jn(e) + "})";
-	  }function Yn(e) {
-	    var t = "{",
-	        n = Qn(e);n && (t += n + ","), e.key && (t += "key:" + e.key + ","), e.ref && (t += "ref:" + e.ref + ","), e.refInFor && (t += "refInFor:true,"), e.component && (t += 'tag:"' + e.tag + '",'), e.slotTarget && (t += "slot:" + e.slotTarget + ",");for (var r = 0; r < na.length; r++) {
-	      t += na[r](e);
-	    }if (e.attrs && (t += "attrs:{" + ir(e.attrs) + "},"), e.props && (t += "domProps:{" + ir(e.props) + "},"), e.events && (t += Bn(e.events) + ","), e.nativeEvents && (t += Bn(e.nativeEvents, !0) + ","), e.inlineTemplate) {
-	      var i = e.children[0];if (1 === i.type) {
-	        var o = Vn(i, aa);t += "inlineTemplate:{render:function(){" + o.render + "},staticRenderFns:[" + o.staticRenderFns.map(function (e) {
-	          return "function(){" + e + "}";
-	        }).join(",") + "]}";
-	      }
-	    }return t = t.replace(/,$/, "") + "}", e.wrapData && (t = e.wrapData(t)), t;
-	  }function Qn(e) {
-	    var t = e.directives;if (t) {
-	      var n,
-	          r,
-	          i,
-	          o,
-	          a = "directives:[",
-	          s = !1;for (n = 0, r = t.length; n < r; n++) {
-	        i = t[n], o = !0;var c = ra[i.name] || Ha[i.name];c && (o = !!c(e, i, ea)), o && (s = !0, a += '{name:"' + i.name + '",rawName:"' + i.rawName + '"' + (i.value ? ",value:(" + i.value + "),expression:" + JSON.stringify(i.value) : "") + (i.arg ? ',arg:"' + i.arg + '"' : "") + (i.modifiers ? ",modifiers:" + JSON.stringify(i.modifiers) : "") + "},");
-	      }return s ? a.slice(0, -1) + "]" : void 0;
-	    }
-	  }function Xn(e) {
-	    if (e.children.length) return "[" + e.children.map(er).join(",") + "]";
-	  }function er(e) {
-	    return 1 === e.type ? Jn(e) : tr(e);
-	  }function tr(e) {
-	    return 2 === e.type ? e.expression : JSON.stringify(e.text);
-	  }function nr(e) {
-	    var t = e.slotName || '"default"',
-	        n = Xn(e);return "_t(" + t + (n ? "," + n : "") + ")";
-	  }function rr(e, t) {
-	    var n = t.inlineTemplate ? null : Xn(t);return "_h(" + e + "," + Yn(t) + (n ? "," + n : "") + ")";
-	  }function ir(e) {
-	    for (var t = "", n = 0; n < e.length; n++) {
-	      var r = e[n];t += '"' + r.name + '":' + r.value + ",";
-	    }return t.slice(0, -1);
-	  }function or(e, t) {
-	    var n = hn(e.trim(), t);Nn(n, t);var r = Vn(n, t);return { ast: n, render: r.render, staticRenderFns: r.staticRenderFns };
-	  }function ar(e, t) {
-	    var n = (t.warn || sn, vn(e, "class"));n && (e.staticClass = JSON.stringify(n));var r = pn(e, "class", !1);r && (e.classBinding = r);
-	  }function sr(e) {
-	    var t = "";return e.staticClass && (t += "staticClass:" + e.staticClass + ","), e.classBinding && (t += "class:" + e.classBinding + ","), t;
-	  }function cr(e) {
-	    var t = pn(e, "style", !1);t && (e.styleBinding = t);
-	  }function ur(e) {
-	    return e.styleBinding ? "style:(" + e.styleBinding + ")," : "";
-	  }function lr(e) {
-	    if (ca = e, sa = ca.length, la = fa = da = 0, e.indexOf("[") < 0) return { exp: e, idx: null };for (; !dr();) {
-	      ua = fr(), pr(ua) ? hr(ua) : 91 === ua && vr(ua);
-	    }return { exp: e.substring(0, fa), idx: e.substring(fa + 1, da) };
-	  }function fr() {
-	    return ca.charCodeAt(++la);
-	  }function dr() {
-	    return la >= sa;
-	  }function pr(e) {
-	    return 34 === e || 39 === e;
-	  }function vr(e) {
-	    var t = 1;for (fa = la; !dr();) {
-	      if (e = fr(), pr(e)) hr(e);else if (91 === e && t++, 93 === e && t--, 0 === t) {
-	        da = la;break;
-	      }
-	    }
-	  }function hr(e) {
-	    for (var t = e; !dr() && (e = fr(), e !== t);) {}
-	  }function mr(e, t, n) {
-	    pa = n;var r = t.value,
-	        i = t.modifiers,
-	        o = e.tag,
-	        a = e.attrsMap.type;return "select" === o ? br(e, r, i) : "input" === o && "checkbox" === a ? gr(e, r, i) : "input" === o && "radio" === a ? yr(e, r, i) : _r(e, r, i), !0;
-	  }function gr(e, t, n) {
-	    var r = n && n.number,
-	        i = pn(e, "value") || "null",
-	        o = pn(e, "true-value") || "true",
-	        a = pn(e, "false-value") || "false";un(e, "checked", "Array.isArray(" + t + ")?_i(" + t + "," + i + ")>-1:_q(" + t + "," + o + ")"), dn(e, "change", "var $$a=" + t + ",$$el=$event.target,$$c=$$el.checked?(" + o + "):(" + a + ");if(Array.isArray($$a)){var $$v=" + (r ? "_n(" + i + ")" : i) + ",$$i=_i($$a,$$v);if($$c){$$i<0&&(" + t + "=$$a.concat($$v))}else{$$i>-1&&(" + t + "=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{" + t + "=$$c}", null, !0);
-	  }function yr(e, t, n) {
-	    var r = n && n.number,
-	        i = pn(e, "value") || "null";i = r ? "_n(" + i + ")" : i, un(e, "checked", "_q(" + t + "," + i + ")"), dn(e, "change", $r(t, i), null, !0);
-	  }function _r(e, t, n) {
-	    var r = e.attrsMap.type,
-	        i = n || {},
-	        o = i.lazy,
-	        a = i.number,
-	        s = i.trim,
-	        c = o || Vr && "range" === r ? "change" : "input",
-	        u = !o && "range" !== r,
-	        l = "input" === e.tag || "textarea" === e.tag,
-	        f = l ? "$event.target.value" + (s ? ".trim()" : "") : "$event";f = a || "number" === r ? "_n(" + f + ")" : f;var d = $r(t, f);l && u && (d = "if($event.target.composing)return;" + d), un(e, "value", l ? "_s(" + t + ")" : "(" + t + ")"), dn(e, c, d, null, !0);
-	  }function br(e, t, n) {
-	    var r = n && n.number,
-	        i = 'Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return ' + (r ? "_n(val)" : "val") + "})" + (null == e.attrsMap.multiple ? "[0]" : ""),
-	        o = $r(t, i);dn(e, "change", o, null, !0);
-	  }function $r(e, t) {
-	    var n = lr(e);return null === n.idx ? e + "=" + t : "var $$exp = " + n.exp + ", $$idx = " + n.idx + ";if (!Array.isArray($$exp)){" + e + "=" + t + "}else{$$exp.splice($$idx, 1, " + t + ")}";
-	  }function wr(e, t) {
-	    t.value && un(e, "textContent", "_s(" + t.value + ")");
-	  }function Cr(e, t) {
-	    t.value && un(e, "innerHTML", "_s(" + t.value + ")");
-	  }function xr(e, t) {
-	    return t = t ? u(u({}, Ka), t) : Ka, or(e, t);
-	  }function kr(e, t, n) {
-	    var r = (t && t.warn || $i, t && t.delimiters ? String(t.delimiters) + e : e);if (qa[r]) return qa[r];var i = {},
-	        o = xr(e, t);i.render = Ar(o.render);var a = o.staticRenderFns.length;i.staticRenderFns = new Array(a);for (var s = 0; s < a; s++) {
-	      i.staticRenderFns[s] = Ar(o.staticRenderFns[s]);
-	    }return qa[r] = i;
-	  }function Ar(e) {
-	    try {
-	      return new Function(e);
-	    } catch (e) {
-	      return p;
-	    }
-	  }function Or(e) {
-	    if (e.outerHTML) return e.outerHTML;var t = document.createElement("div");return t.appendChild(e.cloneNode(!0)), t.innerHTML;
-	  }var Tr,
-	      Sr = n("slot,component", !0),
-	      Er = Object.prototype.hasOwnProperty,
-	      jr = /-(\w)/g,
-	      Lr = a(function (e) {
-	    return e.replace(jr, function (e, t) {
-	      return t ? t.toUpperCase() : "";
-	    });
-	  }),
-	      Nr = a(function (e) {
-	    return e.charAt(0).toUpperCase() + e.slice(1);
-	  }),
-	      Dr = /([^-])([A-Z])/g,
-	      Mr = a(function (e) {
-	    return e.replace(Dr, "$1-$2").replace(Dr, "$1-$2").toLowerCase();
-	  }),
-	      Pr = Object.prototype.toString,
-	      Rr = "[object Object]",
-	      Ir = function Ir() {
-	    return !1;
-	  },
-	      Br = { optionMergeStrategies: Object.create(null), silent: !1, devtools: !1, errorHandler: null, ignoredElements: null, keyCodes: Object.create(null), isReservedTag: Ir, isUnknownElement: Ir, getTagNamespace: p, mustUseProp: Ir, _assetTypes: ["component", "directive", "filter"], _lifecycleHooks: ["beforeCreate", "created", "beforeMount", "mounted", "beforeUpdate", "updated", "beforeDestroy", "destroyed", "activated", "deactivated"], _maxUpdateCount: 100, _isServer: !1 },
-	      Fr = /[^\w.$]/,
-	      Hr = "__proto__" in {},
-	      Ur = "undefined" != typeof window && "[object Object]" !== Object.prototype.toString.call(window),
-	      zr = Ur && window.navigator.userAgent.toLowerCase(),
-	      Vr = zr && /msie|trident/.test(zr),
-	      Jr = zr && zr.indexOf("msie 9.0") > 0,
-	      qr = zr && zr.indexOf("edge/") > 0,
-	      Kr = zr && zr.indexOf("android") > 0,
-	      Wr = zr && /iphone|ipad|ipod|ios/.test(zr),
-	      Zr = Ur && window.__VUE_DEVTOOLS_GLOBAL_HOOK__,
-	      Gr = function () {
-	    function e() {
-	      r = !1;var e = n.slice(0);n.length = 0;for (var t = 0; t < e.length; t++) {
-	        e[t]();
-	      }
-	    }var t,
-	        n = [],
-	        r = !1;if ("undefined" != typeof Promise && b(Promise)) {
-	      var i = Promise.resolve();t = function t() {
-	        i.then(e), Wr && setTimeout(p);
-	      };
-	    } else if ("undefined" == typeof MutationObserver || !b(MutationObserver) && "[object MutationObserverConstructor]" !== MutationObserver.toString()) t = function t() {
-	      setTimeout(e, 0);
-	    };else {
-	      var o = 1,
-	          a = new MutationObserver(e),
-	          s = document.createTextNode(String(o));a.observe(s, { characterData: !0 }), t = function t() {
-	        o = (o + 1) % 2, s.data = String(o);
-	      };
-	    }return function (e, i) {
-	      var o = i ? function () {
-	        e.call(i);
-	      } : e;n.push(o), r || (r = !0, t());
-	    };
-	  }();Tr = "undefined" != typeof Set && b(Set) ? Set : function () {
-	    function e() {
-	      this.set = Object.create(null);
-	    }return e.prototype.has = function (e) {
-	      return void 0 !== this.set[e];
-	    }, e.prototype.add = function (e) {
-	      this.set[e] = 1;
-	    }, e.prototype.clear = function () {
-	      this.set = Object.create(null);
-	    }, e;
-	  }();var Yr = 0,
-	      Qr = function Qr() {
-	    this.id = Yr++, this.subs = [];
-	  };Qr.prototype.addSub = function (e) {
-	    this.subs.push(e);
-	  }, Qr.prototype.removeSub = function (e) {
-	    r(this.subs, e);
-	  }, Qr.prototype.depend = function () {
-	    Qr.target && Qr.target.addDep(this);
-	  }, Qr.prototype.notify = function () {
-	    for (var e = this.subs.slice(), t = 0, n = e.length; t < n; t++) {
-	      e[t].update();
-	    }
-	  }, Qr.target = null;var Xr = [],
-	      ei = [],
-	      ti = {},
-	      ni = !1,
-	      ri = !1,
-	      ii = 0,
-	      oi = 0,
-	      ai = function ai(e, t, n, r) {
-	    void 0 === r && (r = {}), this.vm = e, e._watchers.push(this), this.deep = !!r.deep, this.user = !!r.user, this.lazy = !!r.lazy, this.sync = !!r.sync, this.expression = t.toString(), this.cb = n, this.id = ++oi, this.active = !0, this.dirty = this.lazy, this.deps = [], this.newDeps = [], this.depIds = new Tr(), this.newDepIds = new Tr(), "function" == typeof t ? this.getter = t : (this.getter = _(t), this.getter || (this.getter = function () {})), this.value = this.lazy ? void 0 : this.get();
-	  };ai.prototype.get = function () {
-	    $(this);var e = this.getter.call(this.vm, this.vm);return this.deep && A(e), w(), this.cleanupDeps(), e;
-	  }, ai.prototype.addDep = function (e) {
-	    var t = e.id;this.newDepIds.has(t) || (this.newDepIds.add(t), this.newDeps.push(e), this.depIds.has(t) || e.addSub(this));
-	  }, ai.prototype.cleanupDeps = function () {
-	    for (var e = this, t = this.deps.length; t--;) {
-	      var n = e.deps[t];e.newDepIds.has(n.id) || n.removeSub(e);
-	    }var r = this.depIds;this.depIds = this.newDepIds, this.newDepIds = r, this.newDepIds.clear(), r = this.deps, this.deps = this.newDeps, this.newDeps = r, this.newDeps.length = 0;
-	  }, ai.prototype.update = function () {
-	    this.lazy ? this.dirty = !0 : this.sync ? this.run() : k(this);
-	  }, ai.prototype.run = function () {
-	    if (this.active) {
-	      var e = this.get();if (e !== this.value || l(e) || this.deep) {
-	        var t = this.value;if (this.value = e, this.user) try {
-	          this.cb.call(this.vm, e, t);
-	        } catch (e) {
-	          if (!Br.errorHandler) throw e;Br.errorHandler.call(null, e, this.vm);
-	        } else this.cb.call(this.vm, e, t);
-	      }
-	    }
-	  }, ai.prototype.evaluate = function () {
-	    this.value = this.get(), this.dirty = !1;
-	  }, ai.prototype.depend = function () {
-	    for (var e = this, t = this.deps.length; t--;) {
-	      e.deps[t].depend();
-	    }
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  }, ai.prototype.teardown = function () {
 	    var e = this;if (this.active) {
 	      this.vm._isBeingDestroyed || this.vm._vForRemoving || r(this.vm._watchers, this);for (var t = this.deps.length; t--;) {
@@ -28189,7 +27140,6 @@
 	    }return Za.call(this, e, t);
 	  }, Ae.compile = kr, Ae;
 	});
-<<<<<<< HEAD
 
 /***/ },
 /* 403 */
@@ -28199,16 +27149,6 @@
 
 /***/ },
 /* 404 */
-=======
-
-/***/ },
-/* 403 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div _v-96cfcca8=\"\">\n  <div class=\"list1\" _v-96cfcca8=\"\">\n    <div class=\"big_img\" _v-96cfcca8=\"\">\n      <div class=\"list_line\" _v-96cfcca8=\"\"></div>\n      <div class=\"list_date\" v-text=\"week\" _v-96cfcca8=\"\"></div>\n      <div class=\"list_line\" _v-96cfcca8=\"\"></div>\n    </div>\n    <div class=\"list\" v-for=\"(item,index) in dataList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-96cfcca8=\"\">\n      <div class=\"left_img\" _v-96cfcca8=\"\">\n        <img :src=\"item.imageUrl\" alt=\"\" _v-96cfcca8=\"\">\n      </div>\n      <div class=\"list_content\" _v-96cfcca8=\"\">\n        <div class=\"list_title\" v-text=\"item.music\" _v-96cfcca8=\"\"></div>\n        <div class=\"list_name\" v-text=\"item.album\" _v-96cfcca8=\"\"></div>\n        <div class=\"list_time\" v-text=\"timeFormat(item.time)\" _v-96cfcca8=\"\"></div>\n      </div>\n      <div class=\"right_img\" v-if=\"(item.isFree==0 || (item.isFree==1 &amp;&amp; item.isSub==1)) &amp;&amp; item.isPlay==1\" _v-96cfcca8=\"\">\n        <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-96cfcca8=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-96cfcca8=\"\"></div>\n        <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"!(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-96cfcca8=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-96cfcca8=\"\"></div>\n        <div class=\"circle_mask\" _v-96cfcca8=\"\"></div>\n        <div _v-96cfcca8=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-96cfcca8=\"\"></div>\n      </div>\n      <div class=\"right_img\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==0\" _v-96cfcca8=\"\">\n        <div class=\"disable\" @click.stop=\"stop_info\" _v-96cfcca8=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-96cfcca8=\"\"></div>\n        <div class=\"circle_mask\" _v-96cfcca8=\"\"></div>\n        <div _v-96cfcca8=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-96cfcca8=\"\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
-
-/***/ },
-/* 404 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __vue_script__, __vue_template__
@@ -28235,467 +27175,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-8e6e84e0/bd_album_01.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 405 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(406);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e6e84e0&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_01.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e6e84e0&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_01.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 406 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(42)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-8e6e84e0] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-8e6e84e0] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-8e6e84e0] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-8e6e84e0] {\n  width: 3.75rem;\n}\n\n.content_title[_v-8e6e84e0] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-8e6e84e0] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-8e6e84e0] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-8e6e84e0] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-8e6e84e0] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-8e6e84e0] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-8e6e84e0]{\n  position: relative;\n}\n.history_mask[_v-8e6e84e0]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-8e6e84e0]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-8e6e84e0] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-8e6e84e0]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 407 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _native = __webpack_require__(22);
-
-	var _native2 = _interopRequireDefault(_native);
-
-	var _utils = __webpack_require__(80);
-
-	var _utils2 = _interopRequireDefault(_utils);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  props: ["data"],
-	  mounted: function mounted() {
-	    var that = this;
-	    this.dataList = this.data.body.dataList[0];
-	    this.isFree = this.data.body.isFree;
-	    this.$nextTick(function () {
-	      this.audioPlayHistory();
-	    });
-	  },
-	  data: function data() {
-	    return {
-	      dataList: [],
-	      isFree: 0,
-	      historyName: "",
-	      sortNo: null,
-	      timestamp: null,
-	      isApp: _utils2.default.utils.isApp(),
-	      albumId: (0, _utils.getQuery)("albumId"),
-	      history_mask: false
-	    };
-	  },
-
-	  methods: {
-	    go_history: function go_history() {
-	      var _this = this;
-	      if (this.isApp) {
-	        //调用app播放器
-	        _native2.default.Audio.audioPlay({
-	          "sortNo": _this.sortNo,
-	          "albumId": _this.albumId
-	        });
-	      } else {
-	        window.location.href = "/musicDetail.html?albumId=" + albumId + "&sortNo=" + sortNo;
-	      }
-	    },
-	    audioPlayHistory: function audioPlayHistory() {
-	      var _this = this;
-	      if (_this.isApp) {
-	        setTimeout(function () {
-	          _native2.default.Audio.audioPlayHistory({
-	            "albumId": _this.albumId,
-	            success: function success(obj) {
-	              _this.historyName = obj.name;
-	              _this.sortNo = obj.sortNo;
-	              _this.timestamp = obj.date;
-	              _this.history_mask = true;
-	            }
-	          });
-	        }, 4000);
-	      }
-	    }
-	  }
-	  // </script>
-	  // <style scoped>
-	  //   .all {
-	  //     padding-bottom: 0.12rem;
-	  //     background: white;
-	  //   }
-	  //
-	  //   .big_img {
-	  //     margin-bottom: 0.1rem;
-	  //   }
-	  //
-	  //   .content {
-	  //     padding: 0.1rem 0.1rem 0 0.1rem;
-	  //   }
-	  //
-	  //   .big_img img {
-	  //     width: 3.75rem;
-	  //   }
-	  //
-	  //   .content_title {
-	  //     font-size: 14px;
-	  //     color: #333333;
-	  //     margin-bottom: 0.15rem;
-	  //   }
-	  //
-	  //   .content_price {
-	  //     margin-bottom: 0.15rem;
-	  //   }
-	  //
-	  //   .content_text {
-	  //     color: #999999;
-	  //     font-size: 12px;
-	  //   }
-	  //
-	  //   .content_price .pri_left {
-	  //     color: #FF4A7D;
-	  //     font-size: 18px;
-	  //   }
-	  //
-	  //   .content_price > div {
-	  //     display: inline-block;
-	  //     font-size: 0;
-	  //     vertical-align: top;
-	  //   }
-	  //
-	  //   .content_price .pri_right {
-	  //     color: #BF9D51;
-	  //     font-size: 11px;
-	  //     margin-top: 0.04rem;
-	  //   }
-	  //
-	  //
-	  //   .big_top{
-	  //     position: relative;
-	  //   }
-	  //   .history_mask{
-	  //     height: 35px;
-	  //     background: #000000;
-	  //     opacity:0.6;
-	  //     position: absolute;
-	  //     bottom: 0;
-	  //     z-index:2;
-	  //     width:3.75rem;
-	  //   }
-	  //   .history{
-	  //     position: absolute;
-	  //     bottom: 0;
-	  //     height: 35px;
-	  //     z-index:3;
-	  //     line-height: 35px;
-	  //     font-size: 0;
-	  //     width: 3.75rem;
-	  //     text-align: center;
-	  //   }
-	  //   .history>div {
-	  //     display: inline-block;
-	  //     height: 35px;
-	  //   }
-	  //   .history div>div{
-	  //     color:#FFFFFF;
-	  //     font-size: 12px;
-	  //     display: inline-block;
-	  //     vertical-align: top;
-	  //     height: 35px;
-	  //   }
-	  // </style>
-
-	}; // <template>
-	//   <div class="all">
-	//     <div class="big_top">
-	//       <div class="big_img">
-	//         <img id="uuu" :src="dataList.imageUrl" alt="">
-	//       </div>
-	//       <div class="history_mask" v-if="isApp && history_mask"></div>
-	//       <div class="history" @click.stop="go_history" v-if="isApp && history_mask">
-	//         <div>
-	//           <div>上次听到</div>
-	//           <div style="overflow: hidden;max-width: 96px;">{{ historyName }}</div>
-	//           <div>...,点我继续收听</div>
-	//         </div>
-	//       </div>
-	//
-	//     </div>
-	//
-	//     <div class="content">
-	//       <div class="content_title" v-text="dataList.album"></div>
-	//       <div class="content_price" v-if="isFree==1">
-	//         <div class="pri_left">
-	//           <span v-text="dataList.income"></span>
-	//         </div>
-	//         <div class="pri_right" v-text="dataList.memberMsg"></div>
-	//       </div>
-	//       <div class="content_text" v-text="dataList.comment"></div>
-	//     </div>
-	//   </div>
-	// </template>
-	// <script>
-
-/***/ },
-/* 408 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"all\" _v-8e6e84e0=\"\">\n  <div class=\"big_top\" _v-8e6e84e0=\"\">\n    <div class=\"big_img\" _v-8e6e84e0=\"\">\n      <img id=\"uuu\" :src=\"dataList.imageUrl\" alt=\"\" _v-8e6e84e0=\"\">\n    </div>\n    <div class=\"history_mask\" v-if=\"isApp &amp;&amp; history_mask\" _v-8e6e84e0=\"\"></div>\n    <div class=\"history\" @click.stop=\"go_history\" v-if=\"isApp &amp;&amp; history_mask\" _v-8e6e84e0=\"\">\n      <div _v-8e6e84e0=\"\">\n        <div _v-8e6e84e0=\"\">上次听到</div>\n        <div style=\"overflow: hidden;max-width: 96px;\" _v-8e6e84e0=\"\">{{ historyName }}</div>\n        <div _v-8e6e84e0=\"\">...,点我继续收听</div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"content\" _v-8e6e84e0=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-8e6e84e0=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-8e6e84e0=\"\">\n      <div class=\"pri_left\" _v-8e6e84e0=\"\">\n        <span v-text=\"dataList.income\" _v-8e6e84e0=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-8e6e84e0=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-8e6e84e0=\"\"></div>\n  </div>\n</div>\n";
-
-/***/ },
-/* 409 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(410)
-	__vue_script__ = __webpack_require__(412)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_album_02.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(413)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-8e5255de/bd_album_02.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 410 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(411);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e5255de&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_02.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e5255de&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_02.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 411 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(42)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.content2[_v-8e5255de] {\n  padding: 0 0.1rem 0.12rem 0.1rem;\n  background: white;\n}\n\n.content_buy[_v-8e5255de] {\n  position: relative;\n  height: 0.25rem;\n}\n\n.content_buy .count[_v-8e5255de] {\n  color: #666666;\n  font-size: 14px;\n  margin-top: 0.03rem;\n  line-height: 0.2rem;\n}\n\n.content_buy > div[_v-8e5255de] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_header[_v-8e5255de] {\n  position: absolute;\n  right: 0;\n}\n\n.content_header > div[_v-8e5255de] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n  margin-left: 0.05rem;\n}\n\n.content_header img[_v-8e5255de] {\n  border-radius: 50%;\n  height: 0.25rem;\n  width: 0.25rem;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 412 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	// <template>
-	//   <div class="content2">
-	//     <div class="content_buy">
-	//       <div class="count"><span v-text="data.body.purchase"></span><span>人</span><span v-if="isFree==1">订阅</span><span v-if="isFree==0">听过</span></div>
-	//       <div class="content_header">
-	//           <div v-for="item in dataList">
-	//             <img :src="doImg(item.imageUrl)" alt="">
-	//           </div>
-	//           <div>
-	//             <img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt="">
-	//           </div>
-	//       </div>
-	//     </div>
-	//   </div>
-	// </template>
-	// <script>
-	exports.default = {
-	  props: ["data"],
-	  data: function data() {
-	    return {
-	      dataList: [],
-	      isFree: -1
-	    };
-	  },
-
-	  created: function created() {
-	    this.dataList = this.data.body.dataList;
-	    this.isFree = this.data.body.isFree;
-	  },
-	  methods: {
-	    doImg: function doImg(img) {
-	      if (img) return img;
-	      return "//pic.davdian.com/free/2017/08/22/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.png";
-	    }
-	  }
-	  // </script>
-	  // <style scoped>
-	  //   .content2 {
-	  //     padding: 0 0.1rem 0.12rem 0.1rem;
-	  //     background: white;
-	  //   }
-	  //
-	  //   .content_buy {
-	  //     position: relative;
-	  //     height: 0.25rem;
-	  //   }
-	  //
-	  //   .content_buy .count {
-	  //     color: #666666;
-	  //     font-size: 14px;
-	  //     margin-top: 0.03rem;
-	  //     line-height: 0.2rem;
-	  //   }
-	  //
-	  //   .content_buy > div {
-	  //     display: inline-block;
-	  //     font-size: 0;
-	  //     vertical-align: top;
-	  //   }
-	  //
-	  //   .content_header {
-	  //     position: absolute;
-	  //     right: 0;
-	  //   }
-	  //
-	  //   .content_header > div {
-	  //     display: inline-block;
-	  //     font-size: 0;
-	  //     vertical-align: top;
-	  //     margin-left: 0.05rem;
-	  //   }
-	  //
-	  //   .content_header img {
-	  //     border-radius: 50%;
-	  //     height: 0.25rem;
-	  //     width: 0.25rem;
-	  //   }
-	  // </style>
-
-	};
-
-/***/ },
-/* 413 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"content2\" _v-8e5255de=\"\">\n  <div class=\"content_buy\" _v-8e5255de=\"\">\n    <div class=\"count\" _v-8e5255de=\"\"><span v-text=\"data.body.purchase\" _v-8e5255de=\"\"></span><span _v-8e5255de=\"\">人</span><span v-if=\"isFree==1\" _v-8e5255de=\"\">订阅</span><span v-if=\"isFree==0\" _v-8e5255de=\"\">听过</span></div>\n    <div class=\"content_header\" _v-8e5255de=\"\">\n        <div v-for=\"item in dataList\" _v-8e5255de=\"\">\n          <img :src=\"doImg(item.imageUrl)\" alt=\"\" _v-8e5255de=\"\">\n        </div>\n        <div _v-8e5255de=\"\">\n          <img src=\"//pic.davdian.com/free/2017/08/16/Group4.png\" alt=\"\" _v-8e5255de=\"\">\n        </div>\n    </div>\n  </div>\n</div>\n";
-
-/***/ },
-/* 414 */
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-<<<<<<< HEAD
-	__webpack_require__(405)
-	__vue_script__ = __webpack_require__(407)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_album_01.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(408)
-=======
-	__webpack_require__(415)
-	__vue_script__ = __webpack_require__(417)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_album_03.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(451)
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-234ea0bb/bd_album_01.vue"
-=======
-	  var id = "_v-8e3626dc/bd_album_03.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -28704,7 +27184,6 @@
 	})()}
 
 /***/ },
-<<<<<<< HEAD
 /* 405 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -28739,7 +27218,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-234ea0bb] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-234ea0bb] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-234ea0bb] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-234ea0bb] {\n  width: 3.75rem;\n}\n\n.content_title[_v-234ea0bb] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-234ea0bb] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-234ea0bb] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-234ea0bb] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-234ea0bb] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-234ea0bb] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-234ea0bb]{\n  position: relative;\n}\n.history_mask[_v-234ea0bb]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-234ea0bb]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-234ea0bb] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-234ea0bb]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-234ea0bb] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-234ea0bb] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-234ea0bb] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-234ea0bb] {\n  width: 3.75rem;\n}\n\n.content_title[_v-234ea0bb] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-234ea0bb] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-234ea0bb] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-234ea0bb] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-234ea0bb] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-234ea0bb] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-234ea0bb]{\n  position: relative;\n}\n.history_mask[_v-234ea0bb]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-234ea0bb]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-234ea0bb] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-234ea0bb]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
 
 	// exports
 
@@ -28753,66 +27232,11 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-=======
-/* 415 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(416);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e3626dc&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_03.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e3626dc&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_03.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 416 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(42)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-8e3626dc] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-8e3626dc] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-8e3626dc] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-8e3626dc] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-8e3626dc] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-8e3626dc], .b_right[_v-8e3626dc] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-8e3626dc] {\n  font-size: 14px;\n}\n\n.line[_v-8e3626dc] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-8e3626dc] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-8e3626dc] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-8e3626dc] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-8e3626dc] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-8e3626dc]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-8e3626dc]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-8e3626dc]{\n  font-size: 0;\n}\n.item_timee>div[_v-8e3626dc]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-8e3626dc]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-8e3626dc]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-8e3626dc]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-8e3626dc]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-8e3626dc]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-8e3626dc]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-8e3626dc]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-8e3626dc],.mask_stop[_v-8e3626dc],.disable[_v-8e3626dc]{\n  z-index:3;\n}\n\n\n\n.free[_v-8e3626dc]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.rea[_v-8e3626dc]{\n  position: relative;\n}\n\n\n.top[_v-8e3626dc]{\n  margin-top: 0.12rem;\n}\n.empty_tab[_v-8e3626dc]{\n  height: 0.5rem;\n}\n.tab_fixed[_v-8e3626dc]{\n  position: fixed;\n  top: 44px;\n  z-index:999;\n}\n.tab_fixed2[_v-8e3626dc]{\n  position: fixed;\n  top:0;\n  z-index:999;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 417 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _utils = __webpack_require__(80);
-
-	var _utils2 = _interopRequireDefault(_utils);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	var _native = __webpack_require__(22);
 
 	var _native2 = _interopRequireDefault(_native);
 
-<<<<<<< HEAD
 	var _utils = __webpack_require__(80);
 
 	var _utils2 = _interopRequireDefault(_utils);
@@ -28970,7 +27394,8 @@
 	//         <div>
 	//           <div>上次听到</div>
 	//           <div style="overflow: hidden;max-width: 96px;">{{ historyName }}</div>
-	//           <div>...,点我继续收听</div>
+	//           <div>...</div>
+	//           <div>，点我继续收听</div>
 	//         </div>
 	//       </div>
 	//
@@ -28994,7 +27419,7 @@
 /* 408 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"all\" _v-234ea0bb=\"\">\n  <div class=\"big_top\" _v-234ea0bb=\"\">\n    <div class=\"big_img\" _v-234ea0bb=\"\">\n      <img id=\"uuu\" :src=\"dataList.imageUrl\" alt=\"\" _v-234ea0bb=\"\">\n    </div>\n    <div class=\"history_mask\" v-if=\"isApp &amp;&amp; history_mask\" _v-234ea0bb=\"\"></div>\n    <div class=\"history\" @click.stop=\"go_history\" v-if=\"isApp &amp;&amp; history_mask\" _v-234ea0bb=\"\">\n      <div _v-234ea0bb=\"\">\n        <div _v-234ea0bb=\"\">上次听到</div>\n        <div style=\"overflow: hidden;max-width: 96px;\" _v-234ea0bb=\"\">{{ historyName }}</div>\n        <div _v-234ea0bb=\"\">...,点我继续收听</div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"content\" _v-234ea0bb=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-234ea0bb=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-234ea0bb=\"\">\n      <div class=\"pri_left\" _v-234ea0bb=\"\">\n        <span v-text=\"dataList.income\" _v-234ea0bb=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-234ea0bb=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-234ea0bb=\"\"></div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"all\" _v-234ea0bb=\"\">\n  <div class=\"big_top\" _v-234ea0bb=\"\">\n    <div class=\"big_img\" _v-234ea0bb=\"\">\n      <img id=\"uuu\" :src=\"dataList.imageUrl\" alt=\"\" _v-234ea0bb=\"\">\n    </div>\n    <div class=\"history_mask\" v-if=\"isApp &amp;&amp; history_mask\" _v-234ea0bb=\"\"></div>\n    <div class=\"history\" @click.stop=\"go_history\" v-if=\"isApp &amp;&amp; history_mask\" _v-234ea0bb=\"\">\n      <div _v-234ea0bb=\"\">\n        <div _v-234ea0bb=\"\">上次听到</div>\n        <div style=\"overflow: hidden;max-width: 96px;\" _v-234ea0bb=\"\">{{ historyName }}</div>\n        <div _v-234ea0bb=\"\">...</div>\n        <div _v-234ea0bb=\"\">，点我继续收听</div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"content\" _v-234ea0bb=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-234ea0bb=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-234ea0bb=\"\">\n      <div class=\"pri_left\" _v-234ea0bb=\"\">\n        <span v-text=\"dataList.income\" _v-234ea0bb=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-234ea0bb=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-234ea0bb=\"\"></div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 409 */
@@ -29067,7 +27492,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.content2[_v-235cb83c] {\n  padding: 0 0.1rem 0.12rem 0.1rem;\n  background: white;\n}\n\n.content_buy[_v-235cb83c] {\n  position: relative;\n  height: 0.25rem;\n}\n\n.content_buy .count[_v-235cb83c] {\n  color: #666666;\n  font-size: 14px;\n  margin-top: 0.03rem;\n  line-height: 0.2rem;\n}\n\n.content_buy > div[_v-235cb83c] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_header[_v-235cb83c] {\n  max-width: 2.4rem;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  white-space: nowrap;\n  position: absolute;\n  right: 0;\n}\n\n.content_header > div[_v-235cb83c] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n  margin-left: 0.05rem;\n}\n\n.content_header img[_v-235cb83c] {\n  border-radius: 50%;\n  height: 0.25rem;\n  width: 0.25rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.content2[_v-235cb83c] {\n  padding: 0 0.1rem 0.12rem 0.1rem;\n  background: white;\n}\n\n.content_buy[_v-235cb83c] {\n  position: relative;\n  height: 0.25rem;\n}\n\n.content_buy .count[_v-235cb83c] {\n  color: #666666;\n  font-size: 14px;\n  margin-top: 0.03rem;\n  line-height: 0.2rem;\n}\n\n.content_buy > div[_v-235cb83c] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_header[_v-235cb83c] {\n  max-width: 2.4rem;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  white-space: nowrap;\n  position: absolute;\n  right: 0;\n}\n\n.content_header > div[_v-235cb83c] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n  margin-left: 0.05rem;\n}\n\n.content_header img[_v-235cb83c] {\n  border-radius: 50%;\n  height: 0.25rem;\n  width: 0.25rem;\n}\n", ""]);
 
 	// exports
 
@@ -29083,14 +27508,13 @@
 	});
 	// <template>
 	//   <div class="content2">
-	//     ::{{ dataList.length }}::
 	//     <div class="content_buy">
 	//       <div class="count"><span v-text="data.body.purchase"></span><span>人</span><span v-if="isFree==1">订阅</span><span v-if="isFree==0">听过</span></div>
 	//       <div class="content_header">
 	//           <div v-for="item in dataList">
 	//             <img :src="doImg(item.imageUrl)" alt="">
 	//           </div>
-	//           <div v-if="head_count < 8">
+	//           <div v-if="head_count() == 7">
 	//             <img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt="">
 	//           </div>
 	//       </div>
@@ -29167,57 +27591,14 @@
 	  //     width: 0.25rem;
 	  //   }
 	  // </style>
-=======
-	var _dialog = __webpack_require__(381);
 
-	var _dialog2 = _interopRequireDefault(_dialog);
+	};
 
-	var _api = __webpack_require__(418);
-
-	var _api2 = _interopRequireDefault(_api);
-
-	var _mask = __webpack_require__(441);
-
-	var _mask2 = _interopRequireDefault(_mask);
-
-	var _mask3 = __webpack_require__(446);
-
-	var _mask4 = _interopRequireDefault(_mask3);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
-
-	exports.default = {
-	  props: ["data"],
-	  mounted: function mounted() {
-	    var that = this;
-	    this.dataList = this.data.body.dataList;
-	    this.contentList = this.data.body.dataList.contentList;
-	    this.isSub = this.data.body.isSub;
-	    this.initSortNoIndex();
-	    this.$nextTick(function () {
-	      this.scro();
-	    });
-	    //        window.audioPlayHistoryFn = function(obj){
-	    //          console.log(obj.sortNo, obj.date)
-	    //          console.log(that.name);
-	    //        }
-	    //        ////////todo
-	    //
-	    //
-	    //        this.$nextTick(function () {
-	    //          native.Audio.audioPlayHistory({
-	    //            "albumId":this.pageAlbumId,
-	    //            "result":'audioPlayHistoryFn'
-	    //          })
-	    //        });
-
-<<<<<<< HEAD
 /***/ },
 /* 413 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"content2\" _v-235cb83c=\"\">\n  ::{{ dataList.length }}::\n  <div class=\"content_buy\" _v-235cb83c=\"\">\n    <div class=\"count\" _v-235cb83c=\"\"><span v-text=\"data.body.purchase\" _v-235cb83c=\"\"></span><span _v-235cb83c=\"\">人</span><span v-if=\"isFree==1\" _v-235cb83c=\"\">订阅</span><span v-if=\"isFree==0\" _v-235cb83c=\"\">听过</span></div>\n    <div class=\"content_header\" _v-235cb83c=\"\">\n        <div v-for=\"item in dataList\" _v-235cb83c=\"\">\n          <img :src=\"doImg(item.imageUrl)\" alt=\"\" _v-235cb83c=\"\">\n        </div>\n        <div v-if=\"head_count < 8\" _v-235cb83c=\"\">\n          <img src=\"//pic.davdian.com/free/2017/08/16/Group4.png\" alt=\"\" _v-235cb83c=\"\">\n        </div>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"content2\" _v-235cb83c=\"\">\n  <div class=\"content_buy\" _v-235cb83c=\"\">\n    <div class=\"count\" _v-235cb83c=\"\"><span v-text=\"data.body.purchase\" _v-235cb83c=\"\"></span><span _v-235cb83c=\"\">人</span><span v-if=\"isFree==1\" _v-235cb83c=\"\">订阅</span><span v-if=\"isFree==0\" _v-235cb83c=\"\">听过</span></div>\n    <div class=\"content_header\" _v-235cb83c=\"\">\n        <div v-for=\"item in dataList\" _v-235cb83c=\"\">\n          <img :src=\"doImg(item.imageUrl)\" alt=\"\" _v-235cb83c=\"\">\n        </div>\n        <div v-if=\"head_count() == 7\" _v-235cb83c=\"\">\n          <img src=\"//pic.davdian.com/free/2017/08/16/Group4.png\" alt=\"\" _v-235cb83c=\"\">\n        </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 414 */
@@ -29781,426 +28162,6 @@
 	  //   }
 	  // </style>
 
-=======
-	    this.$nextTick(function () {
-	      setTimeout(function () {
-	        that.audioLocation();
-	      }, 2000);
-	    });
-
-	    this.check_contentList();
-	  },
-	  data: function data() {
-	    return {
-	      dataList: {},
-	      contentList: [],
-	      flag: true,
-	      isApp: _utils2.default.utils.isApp(),
-	      btnStatus: null,
-	      name: "bd_album_03",
-	      albumId: null,
-	      sortNo: null,
-	      sortNoIndex: 0,
-	      pageFlag: true,
-	      isSub: 0,
-	      pageAlbumId: (0, _utils.getQuery)("albumId"),
-	      empty_tab: false,
-	      maskFlag: false
-	    };
-	  },
-
-	  components: {
-	    maskk: _mask2.default,
-	    maskk2: _mask4.default
-	  },
-	  methods: {
-	    check_contentList: function check_contentList() {
-	      if (typeof this.contentList[0] === "undefined") {
-	        this.maskFlag = true;
-	      }
-	    },
-	    timeFormat: function timeFormat(t) {
-	      var time = Math.ceil(t);
-	      if (time < 60) {
-	        if (time < 10) {
-	          time = '0' + parseInt(t);
-	        }
-	        return '00:' + time;
-	      } else {
-	        if (time < 3600) {
-	          var minutes = parseInt(time / 60);
-	          var seconds = time - minutes * 60;
-	          if (minutes < 10) {
-	            minutes = '0' + minutes;
-	          }
-	          if (seconds < 10) {
-	            seconds = '0' + seconds;
-	          }
-	          return minutes + ':' + seconds;
-	        } else {
-	          var hours = parseInt(time / 3600);
-	          var _minutes = parseInt((time - hours * 3600) / 60);
-	          var _seconds = time - hours * 3600 - _minutes * 60;
-	          if (hours < 10) {
-	            hours = '0' + hours;
-	          }
-	          if (_minutes < 10) {
-	            _minutes = '0' + _minutes;
-	          }
-	          if (_seconds < 10) {
-	            _seconds = '0' + _seconds;
-	          }
-	          return hours + ':' + _minutes + ':' + _seconds;
-	        }
-	      }
-	    },
-	    audioLocation: function audioLocation() {
-	      if (this.isApp) {
-	        _native2.default.Audio.audioLocation({
-	          "success": function success(obj) {
-	            window.iosInterface.getAudioState(obj);
-	          }
-	        });
-	      }
-	    },
-	    go_play: function go_play(albumId, sortNo) {
-	      if (this.isApp) {
-	        //调用app播放器
-	        _native2.default.Audio.audioPlay({
-	          "sortNo": sortNo,
-	          "albumId": albumId
-	        });
-	      } else {
-	        window.location.href = "/musicDetail.html?albumId=" + albumId + "&sortNo=" + sortNo;
-	      }
-	    },
-	    initSortNoIndex: function initSortNoIndex() {
-	      var that = this;
-	      this.contentList.map(function (item, index) {
-	        if (item.sortNo) {
-	          that.sortNoIndex = item.sortNo;
-	        }
-	      });
-	    },
-	    stop_info: function stop_info() {
-	      _dialog2.default.alert("订阅后才可收听");
-	    },
-	    fn: function fn() {
-	      this.flag = !this.flag;
-	    },
-	    getLocalTime: function getLocalTime(nS) {
-	      var time = new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
-	      var timestamp = time.split(" ")[0].split("/");
-	      var y = parseInt(timestamp[0]);
-	      var m = parseInt(timestamp[1]);
-	      var d = parseInt(timestamp[2]);
-	      return y + "-" + m + "-" + d;
-	    },
-	    go_href: function go_href(albumId, sortNo) {
-	      if (this.isApp) {
-	        //调用app播放器
-	        _native2.default.Audio.goAudioDetail({
-	          "sortNo": sortNo,
-	          "albumId": albumId
-	        });
-	      } else {
-	        window.location.href = "/musicDetail.html?albumId=" + albumId + "&sortNo=" + sortNo;
-	      }
-	    },
-	    getMoreList: function getMoreList() {
-	      var that = this;
-	      if (this.pageFlag) {
-	        this.pageFlag = false;
-	        var obj = {
-	          "albumId": that.pageAlbumId,
-	          "sort": -1,
-	          "sortNo": that.sortNoIndex
-	        };
-	        if (localStorage.getItem("access_token")) {
-	          obj.access_token = localStorage.getItem("access_token");
-	          //                  console.log(localStorage.getItem("access_token"));
-	        }
-	        if (localStorage.getItem("expires_in")) {
-	          obj.expires_in = localStorage.getItem("expires_in");
-	          //                  console.log(localStorage.getItem("expires_in"));
-	        }
-	        (0, _api2.default)("/api/mg/content/music/getListData", obj).then(function (result) {
-	          if (result.code == 0) {
-	            if (result.data && result.data.dataList) {
-
-	              localStorage.setItem("access_token", result.data.xmlyToken.access_token);
-	              localStorage.setItem("expires_in", result.data.xmlyToken.expires_in);
-
-	              that.contentList = that.contentList.concat(result.data.dataList.reverse());
-	              result.data.dataList.map(function (item, index) {
-	                if (item.sortNo) {
-	                  that.sortNoIndex = item.sortNo;
-	                }
-	              });
-	              if (result.data.dataList.length > 0) {
-	                that.pageFlag = true;
-	              }
-	            } else {}
-	          } else {
-	            if (result.data.msg) {
-	              _dialog2.default.alert('code:' + result.code + ":msg" + result.data.msg);
-	            } else {
-	              _dialog2.default.alert('code:' + result.code);
-	            }
-	          }
-	        }).catch(function (e) {
-	          console.log('e:', e);
-	          //显示请求接口错误页
-	        });
-	      }
-	    },
-	    scro: function scro() {
-	      var _this = this;
-	      var top = 0;
-	      document.getElementById('uuu').onload = function () {
-	        if (_this.isApp) {
-	          top = document.getElementById('tab2').offsetTop;
-	        } else {
-	          top = document.getElementById('tab').offsetTop - 44;
-	        }
-	        console.log(top);
-	      };
-	      $(window).scroll(function () {
-	        if ($("body").scrollTop() >= top) {
-	          _this.empty_tab = true;
-	        } else {
-	          _this.empty_tab = false;
-	        }
-
-	        var el = $("#top").get(0);
-	        var bottom = el.offsetHeight + el.offsetTop - (window.screen.availHeight + window.scrollY);
-	        if (bottom < 100) {
-	          _this.getMoreList();
-	        }
-	      });
-	    }
-	  }
-	  // </script>
-	  // <style scoped>
-	  //   .tab {
-	  //     padding-top: 0.14rem;
-	  //     height: 0.36rem;
-	  //     background: white;
-	  //   }
-	  //
-	  //   .tab .tab_list {
-	  //     height: 0.36rem;
-	  //   }
-	  //
-	  //   .tab_list {
-	  //     font-size: 0;
-	  //     vertical-align: top;
-	  //     position: relative;
-	  //   }
-	  //
-	  //
-	  //   .update {
-	  //     padding-left: 0.1rem;
-	  //     padding-right: 0.1rem;
-	  //     border-top: 1px solid rgba(0, 0, 0, 0.1);
-	  //     height: 0.36rem;
-	  //     position: relative;
-	  //     padding-bottom: 0.1rem;
-	  //     background: #fff;
-	  //   }
-	  //
-	  //   .tab_list .border {
-	  //     border-right: 0.01rem solid rgba(0, 0, 0, 0.1);
-	  //     font-size: 14px;
-	  //     -webkit-box-sizing: border-box;
-	  //     -moz-box-sizing: border-box;
-	  //     box-sizing: border-box;
-	  //   }
-	  //
-	  //   .tab_list .border, .b_right {
-	  //     display: inline-block;
-	  //     height: 0.3rem;
-	  //     width: 1.87rem;
-	  //     line-height: 0.2rem;
-	  //     text-align: center;
-	  //   }
-	  //
-	  //   .tab_list .b_right {
-	  //     font-size: 14px;
-	  //   }
-	  //
-	  //   .line {
-	  //     height: 0.0365rem;
-	  //     width: 0.58rem;
-	  //     background: #FF4A7D;
-	  //     position: absolute;
-	  //     bottom: 0;
-	  //     left: 0.66rem;
-	  //   }
-	  //   .line2 {
-	  //     height: 0.0365rem;
-	  //     width: 0.58rem;
-	  //     background: #FF4A7D;
-	  //     position: absolute;
-	  //     bottom: 0;
-	  //     right: 0.64rem;
-	  //   }
-	  //   .up {
-	  //     position: absolute;
-	  //     bottom: 0.1rem;
-	  //     left: 0.1rem;
-	  //   }
-	  //   .color1 {
-	  //     color: #FF4A7D;
-	  //   }
-	  //
-	  //
-	  //
-	  //
-	  //   .item {
-	  //     font-size: 0;
-	  //     vertical-align: top;
-	  //     background: white;
-	  //     padding-top: 0.1rem;
-	  //     padding-bottom: 0.1rem;
-	  //     padding-left: 0.1rem;
-	  //     padding-right: 0.1rem;
-	  //     border-bottom: 1px solid #E1E1E1;
-	  //     position: relative;
-	  //   }
-	  //   .rea>div{
-	  //     display: inline-block;
-	  //     vertical-align: top;
-	  //   }
-	  //   .item_title{
-	  //     color: #333333;
-	  //     font-size: 14px;
-	  //     overflow: hidden;
-	  //     text-overflow: ellipsis;
-	  //     -webkit-box-orient: vertical;
-	  //     -webkit-line-clamp: 2;
-	  //     display: -webkit-box;
-	  //     max-width: 2.6rem;
-	  //     margin-bottom: 0.08rem;
-	  //     line-height: 0.2rem;
-	  //   }
-	  //   .item_timee{
-	  //     font-size: 0;
-	  //   }
-	  //   .item_timee>div{
-	  //     display: inline-block;
-	  //     vertical-align: top;
-	  //   }
-	  //   .item_date{
-	  //     color: #999999;
-	  //     font-size: 11px;
-	  //     line-height: 0.1rem;
-	  //     padding-right: 0.1rem;
-	  //     border-right: 1px solid #999999;
-	  //     margin-right: 0.1rem;
-	  //   }
-	  //   .item_count{
-	  //     color: #999999;
-	  //     font-size: 11px;
-	  //     line-height: 0.1rem;
-	  //     padding-right: 0.1rem;
-	  //     border-right: 1px solid #999999;
-	  //     margin-right: 0.1rem;
-	  //   }
-	  //   .item_time{
-	  //     color: #999999;
-	  //     font-size: 11px;
-	  //     height: 0.1rem;
-	  //   }
-	  //   .clock{
-	  //     display: inline-block;
-	  //     height: 0.1rem;
-	  //     width: 0.1rem;
-	  //     background-image: url(//pic.davdian.com/free/2017/05/04/history.png);
-	  //     background-size: 0.1rem 0.1rem;
-	  //     background-repeat: no-repeat;
-	  //     vertical-align: top;
-	  //   }
-	  //   .times{
-	  //     display: inline-block;
-	  //     height: 0.1rem;
-	  //     line-height: 0.1rem;
-	  //     vertical-align: top;
-	  //   }
-	  //   .item_right{
-	  //     position: absolute;
-	  //     right: 0;
-	  //     top: 50%;
-	  //     width: 0.34rem;
-	  //     height: 0.34rem;
-	  //     margin-top: -0.17rem;
-	  //   }
-	  //   .item_right2{
-	  //     position: absolute;
-	  //     right: 0;
-	  //     top: 50%;
-	  //     margin-top: -0.12rem;
-	  //   }
-	  //   .item_right img{
-	  //     height: 0.34rem;
-	  //     width: 0.34rem;
-	  //     border-radius: 50%;
-	  //   }
-	  //   .item_right>div{
-	  //     position: absolute;
-	  //     top: 0;
-	  //     left: 0;
-	  //     width: 0.34rem;
-	  //     height: 0.34rem;
-	  //   }
-	  //   .circle_mask{
-	  //     width: 0.34rem;
-	  //     height: 0.34rem;
-	  //     border-radius:50%;
-	  //     background: #000000;
-	  //     opacity:0.3;
-	  //     z-index:2;
-	  //   }
-	  //   .mask_play,.mask_stop,.disable{
-	  //     z-index:3;
-	  //   }
-	  //
-	  //
-	  //
-	  //   .free{
-	  //     width: 0.64rem;
-	  //     height: 0.22rem;
-	  //     border-radius: 37px;
-	  //     color: #FF4A7D;
-	  //     border: 0.5px solid #FF4A7D;
-	  //     font-size: 12px;
-	  //     text-align: center;
-	  //     line-height: 0.22rem;
-	  //   }
-	  //   .rea{
-	  //     position: relative;
-	  //   }
-	  //
-	  //
-	  //   .top{
-	  //     margin-top: 0.12rem;
-	  //   }
-	  //   .empty_tab{
-	  //     height: 0.5rem;
-	  //   }
-	  //   .tab_fixed{
-	  //     position: fixed;
-	  //     top: 44px;
-	  //     z-index:999;
-	  //   }
-	  //   .tab_fixed2{
-	  //     position: fixed;
-	  //     top:0;
-	  //     z-index:999;
-	  //   }
-	  // </style>
-
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	}; // <template>
 	//   <div class="top" id="top">
 	//     <div class="tab" id="tab2" :class="{ tab_fixed2 :empty_tab }" v-if="isApp">
@@ -30340,7 +28301,6 @@
 	  }
 	  for (var _p in strObj) {
 	    string += _p + '=' + strObj[_p];
-<<<<<<< HEAD
 	  }
 	  var sign = crypto.createHash('md5').update(string, 'utf8').digest('hex').toUpperCase();
 	  strObj.sign = sign;
@@ -30415,82 +28375,6 @@
 	exports.pbkdf2Sync = p.pbkdf2Sync
 
 
-=======
-	  }
-	  var sign = crypto.createHash('md5').update(string, 'utf8').digest('hex').toUpperCase();
-	  strObj.sign = sign;
-	  return strObj;
-	};
-	var isPrivateMode = function isPrivateMode() {
-	  try {
-	    localStorage.setItem('isPrivateMode', '1');
-	    localStorage.removeItem('isPrivateMode');
-	    return true;
-	  } catch (e) {
-	    return false;
-	  }
-	};
-
-	var api = function api(url, o, key) {
-	  var obj = o || {};
-	  if (key && isPrivateMode && sessionStorage.getItem(key) && JSON.parse(sessionStorage.getItem(key))) {
-	    return new Promise(function (resolve, reject) {
-	      resolve(JSON.parse(sessionStorage.getItem(key)));
-	    });
-	  } else {
-	    var urlT = url + '?' + new Date().getTime();
-	    return axios.post(urlT, strSign(obj)).then(function (respone) {
-	      if (key && isPrivateMode) sessionStorage.setItem(key, JSON.stringify(respone.data));
-	      return respone.data;
-	    });
-	  }
-	};
-	exports.default = api;
-
-/***/ },
-/* 419 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var rng = __webpack_require__(424)
-
-	function error () {
-	  var m = [].slice.call(arguments).join(' ')
-	  throw new Error([
-	    m,
-	    'we accept pull requests',
-	    'http://github.com/dominictarr/crypto-browserify'
-	    ].join('\n'))
-	}
-
-	exports.createHash = __webpack_require__(426)
-
-	exports.createHmac = __webpack_require__(438)
-
-	exports.randomBytes = function(size, callback) {
-	  if (callback && callback.call) {
-	    try {
-	      callback.call(this, undefined, new Buffer(rng(size)))
-	    } catch (err) { callback(err) }
-	  } else {
-	    return new Buffer(rng(size))
-	  }
-	}
-
-	function each(a, f) {
-	  for(var i in a)
-	    f(a[i], i)
-	}
-
-	exports.getHashes = function () {
-	  return ['sha1', 'sha256', 'sha512', 'md5', 'rmd160']
-	}
-
-	var p = __webpack_require__(439)(exports)
-	exports.pbkdf2 = p.pbkdf2
-	exports.pbkdf2Sync = p.pbkdf2Sync
-
-
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	// the least I can do is make error messages for the rest of the node.js/crypto api.
 	each(['createCredentials'
 	, 'createCipher'
@@ -30794,7 +28678,6 @@
 	  }
 	  return that
 	}
-<<<<<<< HEAD
 
 	function fromObject (that, obj) {
 	  if (Buffer.isBuffer(obj)) {
@@ -30809,22 +28692,6 @@
 	    return that
 	  }
 
-=======
-
-	function fromObject (that, obj) {
-	  if (Buffer.isBuffer(obj)) {
-	    var len = checked(obj.length) | 0
-	    that = createBuffer(that, len)
-
-	    if (that.length === 0) {
-	      return that
-	    }
-
-	    obj.copy(that, 0, 0, len)
-	    return that
-	  }
-
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (obj) {
 	    if ((typeof ArrayBuffer !== 'undefined' &&
 	        obj.buffer instanceof ArrayBuffer) || 'length' in obj) {
@@ -30867,7 +28734,6 @@
 	  if (!Buffer.isBuffer(a) || !Buffer.isBuffer(b)) {
 	    throw new TypeError('Arguments must be Buffers')
 	  }
-<<<<<<< HEAD
 
 	  if (a === b) return 0
 
@@ -31419,559 +29285,6 @@
 	        // Warning: maxLength not taken into account in base64Write
 	        return base64Write(this, string, offset, length)
 
-=======
-
-	  if (a === b) return 0
-
-	  var x = a.length
-	  var y = b.length
-
-	  for (var i = 0, len = Math.min(x, y); i < len; ++i) {
-	    if (a[i] !== b[i]) {
-	      x = a[i]
-	      y = b[i]
-	      break
-	    }
-	  }
-
-	  if (x < y) return -1
-	  if (y < x) return 1
-	  return 0
-	}
-
-	Buffer.isEncoding = function isEncoding (encoding) {
-	  switch (String(encoding).toLowerCase()) {
-	    case 'hex':
-	    case 'utf8':
-	    case 'utf-8':
-	    case 'ascii':
-	    case 'latin1':
-	    case 'binary':
-	    case 'base64':
-	    case 'ucs2':
-	    case 'ucs-2':
-	    case 'utf16le':
-	    case 'utf-16le':
-	      return true
-	    default:
-	      return false
-	  }
-	}
-
-	Buffer.concat = function concat (list, length) {
-	  if (!isArray(list)) {
-	    throw new TypeError('"list" argument must be an Array of Buffers')
-	  }
-
-	  if (list.length === 0) {
-	    return Buffer.alloc(0)
-	  }
-
-	  var i
-	  if (length === undefined) {
-	    length = 0
-	    for (i = 0; i < list.length; ++i) {
-	      length += list[i].length
-	    }
-	  }
-
-	  var buffer = Buffer.allocUnsafe(length)
-	  var pos = 0
-	  for (i = 0; i < list.length; ++i) {
-	    var buf = list[i]
-	    if (!Buffer.isBuffer(buf)) {
-	      throw new TypeError('"list" argument must be an Array of Buffers')
-	    }
-	    buf.copy(buffer, pos)
-	    pos += buf.length
-	  }
-	  return buffer
-	}
-
-	function byteLength (string, encoding) {
-	  if (Buffer.isBuffer(string)) {
-	    return string.length
-	  }
-	  if (typeof ArrayBuffer !== 'undefined' && typeof ArrayBuffer.isView === 'function' &&
-	      (ArrayBuffer.isView(string) || string instanceof ArrayBuffer)) {
-	    return string.byteLength
-	  }
-	  if (typeof string !== 'string') {
-	    string = '' + string
-	  }
-
-	  var len = string.length
-	  if (len === 0) return 0
-
-	  // Use a for loop to avoid recursion
-	  var loweredCase = false
-	  for (;;) {
-	    switch (encoding) {
-	      case 'ascii':
-	      case 'latin1':
-	      case 'binary':
-	        return len
-	      case 'utf8':
-	      case 'utf-8':
-	      case undefined:
-	        return utf8ToBytes(string).length
-	      case 'ucs2':
-	      case 'ucs-2':
-	      case 'utf16le':
-	      case 'utf-16le':
-	        return len * 2
-	      case 'hex':
-	        return len >>> 1
-	      case 'base64':
-	        return base64ToBytes(string).length
-	      default:
-	        if (loweredCase) return utf8ToBytes(string).length // assume utf8
-	        encoding = ('' + encoding).toLowerCase()
-	        loweredCase = true
-	    }
-	  }
-	}
-	Buffer.byteLength = byteLength
-
-	function slowToString (encoding, start, end) {
-	  var loweredCase = false
-
-	  // No need to verify that "this.length <= MAX_UINT32" since it's a read-only
-	  // property of a typed array.
-
-	  // This behaves neither like String nor Uint8Array in that we set start/end
-	  // to their upper/lower bounds if the value passed is out of range.
-	  // undefined is handled specially as per ECMA-262 6th Edition,
-	  // Section 13.3.3.7 Runtime Semantics: KeyedBindingInitialization.
-	  if (start === undefined || start < 0) {
-	    start = 0
-	  }
-	  // Return early if start > this.length. Done here to prevent potential uint32
-	  // coercion fail below.
-	  if (start > this.length) {
-	    return ''
-	  }
-
-	  if (end === undefined || end > this.length) {
-	    end = this.length
-	  }
-
-	  if (end <= 0) {
-	    return ''
-	  }
-
-	  // Force coersion to uint32. This will also coerce falsey/NaN values to 0.
-	  end >>>= 0
-	  start >>>= 0
-
-	  if (end <= start) {
-	    return ''
-	  }
-
-	  if (!encoding) encoding = 'utf8'
-
-	  while (true) {
-	    switch (encoding) {
-	      case 'hex':
-	        return hexSlice(this, start, end)
-
-	      case 'utf8':
-	      case 'utf-8':
-	        return utf8Slice(this, start, end)
-
-	      case 'ascii':
-	        return asciiSlice(this, start, end)
-
-	      case 'latin1':
-	      case 'binary':
-	        return latin1Slice(this, start, end)
-
-	      case 'base64':
-	        return base64Slice(this, start, end)
-
-	      case 'ucs2':
-	      case 'ucs-2':
-	      case 'utf16le':
-	      case 'utf-16le':
-	        return utf16leSlice(this, start, end)
-
-	      default:
-	        if (loweredCase) throw new TypeError('Unknown encoding: ' + encoding)
-	        encoding = (encoding + '').toLowerCase()
-	        loweredCase = true
-	    }
-	  }
-	}
-
-	// The property is used by `Buffer.isBuffer` and `is-buffer` (in Safari 5-7) to detect
-	// Buffer instances.
-	Buffer.prototype._isBuffer = true
-
-	function swap (b, n, m) {
-	  var i = b[n]
-	  b[n] = b[m]
-	  b[m] = i
-	}
-
-	Buffer.prototype.swap16 = function swap16 () {
-	  var len = this.length
-	  if (len % 2 !== 0) {
-	    throw new RangeError('Buffer size must be a multiple of 16-bits')
-	  }
-	  for (var i = 0; i < len; i += 2) {
-	    swap(this, i, i + 1)
-	  }
-	  return this
-	}
-
-	Buffer.prototype.swap32 = function swap32 () {
-	  var len = this.length
-	  if (len % 4 !== 0) {
-	    throw new RangeError('Buffer size must be a multiple of 32-bits')
-	  }
-	  for (var i = 0; i < len; i += 4) {
-	    swap(this, i, i + 3)
-	    swap(this, i + 1, i + 2)
-	  }
-	  return this
-	}
-
-	Buffer.prototype.swap64 = function swap64 () {
-	  var len = this.length
-	  if (len % 8 !== 0) {
-	    throw new RangeError('Buffer size must be a multiple of 64-bits')
-	  }
-	  for (var i = 0; i < len; i += 8) {
-	    swap(this, i, i + 7)
-	    swap(this, i + 1, i + 6)
-	    swap(this, i + 2, i + 5)
-	    swap(this, i + 3, i + 4)
-	  }
-	  return this
-	}
-
-	Buffer.prototype.toString = function toString () {
-	  var length = this.length | 0
-	  if (length === 0) return ''
-	  if (arguments.length === 0) return utf8Slice(this, 0, length)
-	  return slowToString.apply(this, arguments)
-	}
-
-	Buffer.prototype.equals = function equals (b) {
-	  if (!Buffer.isBuffer(b)) throw new TypeError('Argument must be a Buffer')
-	  if (this === b) return true
-	  return Buffer.compare(this, b) === 0
-	}
-
-	Buffer.prototype.inspect = function inspect () {
-	  var str = ''
-	  var max = exports.INSPECT_MAX_BYTES
-	  if (this.length > 0) {
-	    str = this.toString('hex', 0, max).match(/.{2}/g).join(' ')
-	    if (this.length > max) str += ' ... '
-	  }
-	  return '<Buffer ' + str + '>'
-	}
-
-	Buffer.prototype.compare = function compare (target, start, end, thisStart, thisEnd) {
-	  if (!Buffer.isBuffer(target)) {
-	    throw new TypeError('Argument must be a Buffer')
-	  }
-
-	  if (start === undefined) {
-	    start = 0
-	  }
-	  if (end === undefined) {
-	    end = target ? target.length : 0
-	  }
-	  if (thisStart === undefined) {
-	    thisStart = 0
-	  }
-	  if (thisEnd === undefined) {
-	    thisEnd = this.length
-	  }
-
-	  if (start < 0 || end > target.length || thisStart < 0 || thisEnd > this.length) {
-	    throw new RangeError('out of range index')
-	  }
-
-	  if (thisStart >= thisEnd && start >= end) {
-	    return 0
-	  }
-	  if (thisStart >= thisEnd) {
-	    return -1
-	  }
-	  if (start >= end) {
-	    return 1
-	  }
-
-	  start >>>= 0
-	  end >>>= 0
-	  thisStart >>>= 0
-	  thisEnd >>>= 0
-
-	  if (this === target) return 0
-
-	  var x = thisEnd - thisStart
-	  var y = end - start
-	  var len = Math.min(x, y)
-
-	  var thisCopy = this.slice(thisStart, thisEnd)
-	  var targetCopy = target.slice(start, end)
-
-	  for (var i = 0; i < len; ++i) {
-	    if (thisCopy[i] !== targetCopy[i]) {
-	      x = thisCopy[i]
-	      y = targetCopy[i]
-	      break
-	    }
-	  }
-
-	  if (x < y) return -1
-	  if (y < x) return 1
-	  return 0
-	}
-
-	// Finds either the first index of `val` in `buffer` at offset >= `byteOffset`,
-	// OR the last index of `val` in `buffer` at offset <= `byteOffset`.
-	//
-	// Arguments:
-	// - buffer - a Buffer to search
-	// - val - a string, Buffer, or number
-	// - byteOffset - an index into `buffer`; will be clamped to an int32
-	// - encoding - an optional encoding, relevant is val is a string
-	// - dir - true for indexOf, false for lastIndexOf
-	function bidirectionalIndexOf (buffer, val, byteOffset, encoding, dir) {
-	  // Empty buffer means no match
-	  if (buffer.length === 0) return -1
-
-	  // Normalize byteOffset
-	  if (typeof byteOffset === 'string') {
-	    encoding = byteOffset
-	    byteOffset = 0
-	  } else if (byteOffset > 0x7fffffff) {
-	    byteOffset = 0x7fffffff
-	  } else if (byteOffset < -0x80000000) {
-	    byteOffset = -0x80000000
-	  }
-	  byteOffset = +byteOffset  // Coerce to Number.
-	  if (isNaN(byteOffset)) {
-	    // byteOffset: it it's undefined, null, NaN, "foo", etc, search whole buffer
-	    byteOffset = dir ? 0 : (buffer.length - 1)
-	  }
-
-	  // Normalize byteOffset: negative offsets start from the end of the buffer
-	  if (byteOffset < 0) byteOffset = buffer.length + byteOffset
-	  if (byteOffset >= buffer.length) {
-	    if (dir) return -1
-	    else byteOffset = buffer.length - 1
-	  } else if (byteOffset < 0) {
-	    if (dir) byteOffset = 0
-	    else return -1
-	  }
-
-	  // Normalize val
-	  if (typeof val === 'string') {
-	    val = Buffer.from(val, encoding)
-	  }
-
-	  // Finally, search either indexOf (if dir is true) or lastIndexOf
-	  if (Buffer.isBuffer(val)) {
-	    // Special case: looking for empty string/buffer always fails
-	    if (val.length === 0) {
-	      return -1
-	    }
-	    return arrayIndexOf(buffer, val, byteOffset, encoding, dir)
-	  } else if (typeof val === 'number') {
-	    val = val & 0xFF // Search for a byte value [0-255]
-	    if (Buffer.TYPED_ARRAY_SUPPORT &&
-	        typeof Uint8Array.prototype.indexOf === 'function') {
-	      if (dir) {
-	        return Uint8Array.prototype.indexOf.call(buffer, val, byteOffset)
-	      } else {
-	        return Uint8Array.prototype.lastIndexOf.call(buffer, val, byteOffset)
-	      }
-	    }
-	    return arrayIndexOf(buffer, [ val ], byteOffset, encoding, dir)
-	  }
-
-	  throw new TypeError('val must be string, number or Buffer')
-	}
-
-	function arrayIndexOf (arr, val, byteOffset, encoding, dir) {
-	  var indexSize = 1
-	  var arrLength = arr.length
-	  var valLength = val.length
-
-	  if (encoding !== undefined) {
-	    encoding = String(encoding).toLowerCase()
-	    if (encoding === 'ucs2' || encoding === 'ucs-2' ||
-	        encoding === 'utf16le' || encoding === 'utf-16le') {
-	      if (arr.length < 2 || val.length < 2) {
-	        return -1
-	      }
-	      indexSize = 2
-	      arrLength /= 2
-	      valLength /= 2
-	      byteOffset /= 2
-	    }
-	  }
-
-	  function read (buf, i) {
-	    if (indexSize === 1) {
-	      return buf[i]
-	    } else {
-	      return buf.readUInt16BE(i * indexSize)
-	    }
-	  }
-
-	  var i
-	  if (dir) {
-	    var foundIndex = -1
-	    for (i = byteOffset; i < arrLength; i++) {
-	      if (read(arr, i) === read(val, foundIndex === -1 ? 0 : i - foundIndex)) {
-	        if (foundIndex === -1) foundIndex = i
-	        if (i - foundIndex + 1 === valLength) return foundIndex * indexSize
-	      } else {
-	        if (foundIndex !== -1) i -= i - foundIndex
-	        foundIndex = -1
-	      }
-	    }
-	  } else {
-	    if (byteOffset + valLength > arrLength) byteOffset = arrLength - valLength
-	    for (i = byteOffset; i >= 0; i--) {
-	      var found = true
-	      for (var j = 0; j < valLength; j++) {
-	        if (read(arr, i + j) !== read(val, j)) {
-	          found = false
-	          break
-	        }
-	      }
-	      if (found) return i
-	    }
-	  }
-
-	  return -1
-	}
-
-	Buffer.prototype.includes = function includes (val, byteOffset, encoding) {
-	  return this.indexOf(val, byteOffset, encoding) !== -1
-	}
-
-	Buffer.prototype.indexOf = function indexOf (val, byteOffset, encoding) {
-	  return bidirectionalIndexOf(this, val, byteOffset, encoding, true)
-	}
-
-	Buffer.prototype.lastIndexOf = function lastIndexOf (val, byteOffset, encoding) {
-	  return bidirectionalIndexOf(this, val, byteOffset, encoding, false)
-	}
-
-	function hexWrite (buf, string, offset, length) {
-	  offset = Number(offset) || 0
-	  var remaining = buf.length - offset
-	  if (!length) {
-	    length = remaining
-	  } else {
-	    length = Number(length)
-	    if (length > remaining) {
-	      length = remaining
-	    }
-	  }
-
-	  // must be an even number of digits
-	  var strLen = string.length
-	  if (strLen % 2 !== 0) throw new TypeError('Invalid hex string')
-
-	  if (length > strLen / 2) {
-	    length = strLen / 2
-	  }
-	  for (var i = 0; i < length; ++i) {
-	    var parsed = parseInt(string.substr(i * 2, 2), 16)
-	    if (isNaN(parsed)) return i
-	    buf[offset + i] = parsed
-	  }
-	  return i
-	}
-
-	function utf8Write (buf, string, offset, length) {
-	  return blitBuffer(utf8ToBytes(string, buf.length - offset), buf, offset, length)
-	}
-
-	function asciiWrite (buf, string, offset, length) {
-	  return blitBuffer(asciiToBytes(string), buf, offset, length)
-	}
-
-	function latin1Write (buf, string, offset, length) {
-	  return asciiWrite(buf, string, offset, length)
-	}
-
-	function base64Write (buf, string, offset, length) {
-	  return blitBuffer(base64ToBytes(string), buf, offset, length)
-	}
-
-	function ucs2Write (buf, string, offset, length) {
-	  return blitBuffer(utf16leToBytes(string, buf.length - offset), buf, offset, length)
-	}
-
-	Buffer.prototype.write = function write (string, offset, length, encoding) {
-	  // Buffer#write(string)
-	  if (offset === undefined) {
-	    encoding = 'utf8'
-	    length = this.length
-	    offset = 0
-	  // Buffer#write(string, encoding)
-	  } else if (length === undefined && typeof offset === 'string') {
-	    encoding = offset
-	    length = this.length
-	    offset = 0
-	  // Buffer#write(string, offset[, length][, encoding])
-	  } else if (isFinite(offset)) {
-	    offset = offset | 0
-	    if (isFinite(length)) {
-	      length = length | 0
-	      if (encoding === undefined) encoding = 'utf8'
-	    } else {
-	      encoding = length
-	      length = undefined
-	    }
-	  // legacy write(string, encoding, offset, length) - remove in v0.13
-	  } else {
-	    throw new Error(
-	      'Buffer.write(string, encoding, offset[, length]) is no longer supported'
-	    )
-	  }
-
-	  var remaining = this.length - offset
-	  if (length === undefined || length > remaining) length = remaining
-
-	  if ((string.length > 0 && (length < 0 || offset < 0)) || offset > this.length) {
-	    throw new RangeError('Attempt to write outside buffer bounds')
-	  }
-
-	  if (!encoding) encoding = 'utf8'
-
-	  var loweredCase = false
-	  for (;;) {
-	    switch (encoding) {
-	      case 'hex':
-	        return hexWrite(this, string, offset, length)
-
-	      case 'utf8':
-	      case 'utf-8':
-	        return utf8Write(this, string, offset, length)
-
-	      case 'ascii':
-	        return asciiWrite(this, string, offset, length)
-
-	      case 'latin1':
-	      case 'binary':
-	        return latin1Write(this, string, offset, length)
-
-	      case 'base64':
-	        // Warning: maxLength not taken into account in base64Write
-	        return base64Write(this, string, offset, length)
-
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	      case 'ucs2':
 	      case 'ucs-2':
 	      case 'utf16le':
@@ -32053,7 +29366,6 @@
 	            }
 	          }
 	      }
-<<<<<<< HEAD
 	    }
 
 	    if (codePoint === null) {
@@ -32080,34 +29392,6 @@
 	// We go 1 magnitude less, for safety
 	var MAX_ARGUMENTS_LENGTH = 0x1000
 
-=======
-	    }
-
-	    if (codePoint === null) {
-	      // we did not generate a valid codePoint so insert a
-	      // replacement char (U+FFFD) and advance only 1 byte
-	      codePoint = 0xFFFD
-	      bytesPerSequence = 1
-	    } else if (codePoint > 0xFFFF) {
-	      // encode to utf16 (surrogate pair dance)
-	      codePoint -= 0x10000
-	      res.push(codePoint >>> 10 & 0x3FF | 0xD800)
-	      codePoint = 0xDC00 | codePoint & 0x3FF
-	    }
-
-	    res.push(codePoint)
-	    i += bytesPerSequence
-	  }
-
-	  return decodeCodePointsArray(res)
-	}
-
-	// Based on http://stackoverflow.com/a/22747272/680742, the browser with
-	// the lowest limit is Chrome, with 0x10000 args.
-	// We go 1 magnitude less, for safety
-	var MAX_ARGUMENTS_LENGTH = 0x1000
-
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	function decodeCodePointsArray (codePoints) {
 	  var len = codePoints.length
 	  if (len <= MAX_ARGUMENTS_LENGTH) {
@@ -34650,7 +31934,6 @@
 	/* WEBPACK VAR INJECTION */(function(Buffer) {var intSize = 4;
 	var zeroBuffer = new Buffer(intSize); zeroBuffer.fill(0);
 	var chrsz = 8;
-<<<<<<< HEAD
 
 	function toArray(buf, bigEndian) {
 	  if ((buf.length % intSize) !== 0) {
@@ -34689,195 +31972,6 @@
 /* 437 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {
-	module.exports = ripemd160
-
-
-
-	/*
-	CryptoJS v3.1.2
-	code.google.com/p/crypto-js
-	(c) 2009-2013 by Jeff Mott. All rights reserved.
-	code.google.com/p/crypto-js/wiki/License
-	*/
-	/** @preserve
-	(c) 2012 by Cédric Mesnil. All rights reserved.
-
-	Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
-
-	    - Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
-	    - Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
-
-	THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-	*/
-
-	// Constants table
-	var zl = [
-	    0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11, 12, 13, 14, 15,
-	    7,  4, 13,  1, 10,  6, 15,  3, 12,  0,  9,  5,  2, 14, 11,  8,
-	    3, 10, 14,  4,  9, 15,  8,  1,  2,  7,  0,  6, 13, 11,  5, 12,
-	    1,  9, 11, 10,  0,  8, 12,  4, 13,  3,  7, 15, 14,  5,  6,  2,
-	    4,  0,  5,  9,  7, 12,  2, 10, 14,  1,  3,  8, 11,  6, 15, 13];
-	var zr = [
-	    5, 14,  7,  0,  9,  2, 11,  4, 13,  6, 15,  8,  1, 10,  3, 12,
-	    6, 11,  3,  7,  0, 13,  5, 10, 14, 15,  8, 12,  4,  9,  1,  2,
-	    15,  5,  1,  3,  7, 14,  6,  9, 11,  8, 12,  2, 10,  0,  4, 13,
-	    8,  6,  4,  1,  3, 11, 15,  0,  5, 12,  2, 13,  9,  7, 10, 14,
-	    12, 15, 10,  4,  1,  5,  8,  7,  6,  2, 13, 14,  0,  3,  9, 11];
-	var sl = [
-	     11, 14, 15, 12,  5,  8,  7,  9, 11, 13, 14, 15,  6,  7,  9,  8,
-	    7, 6,   8, 13, 11,  9,  7, 15,  7, 12, 15,  9, 11,  7, 13, 12,
-	    11, 13,  6,  7, 14,  9, 13, 15, 14,  8, 13,  6,  5, 12,  7,  5,
-	      11, 12, 14, 15, 14, 15,  9,  8,  9, 14,  5,  6,  8,  6,  5, 12,
-	    9, 15,  5, 11,  6,  8, 13, 12,  5, 12, 13, 14, 11,  8,  5,  6 ];
-	var sr = [
-	    8,  9,  9, 11, 13, 15, 15,  5,  7,  7,  8, 11, 14, 14, 12,  6,
-	    9, 13, 15,  7, 12,  8,  9, 11,  7,  7, 12,  7,  6, 15, 13, 11,
-	    9,  7, 15, 11,  8,  6,  6, 14, 12, 13,  5, 14, 13, 13,  7,  5,
-	    15,  5,  8, 11, 14, 14,  6, 14,  6,  9, 12,  9, 12,  5, 15,  8,
-	    8,  5, 12,  9, 12,  5, 14,  6,  8, 13,  6,  5, 15, 13, 11, 11 ];
-
-	var hl =  [ 0x00000000, 0x5A827999, 0x6ED9EBA1, 0x8F1BBCDC, 0xA953FD4E];
-	var hr =  [ 0x50A28BE6, 0x5C4DD124, 0x6D703EF3, 0x7A6D76E9, 0x00000000];
-
-	var bytesToWords = function (bytes) {
-	  var words = [];
-	  for (var i = 0, b = 0; i < bytes.length; i++, b += 8) {
-	    words[b >>> 5] |= bytes[i] << (24 - b % 32);
-	  }
-	  return words;
-	};
-
-	var wordsToBytes = function (words) {
-	  var bytes = [];
-	  for (var b = 0; b < words.length * 32; b += 8) {
-	    bytes.push((words[b >>> 5] >>> (24 - b % 32)) & 0xFF);
-	  }
-	  return bytes;
-	};
-
-	var processBlock = function (H, M, offset) {
-
-	  // Swap endian
-	  for (var i = 0; i < 16; i++) {
-	    var offset_i = offset + i;
-	    var M_offset_i = M[offset_i];
-
-	    // Swap
-	    M[offset_i] = (
-	        (((M_offset_i << 8)  | (M_offset_i >>> 24)) & 0x00ff00ff) |
-	        (((M_offset_i << 24) | (M_offset_i >>> 8))  & 0xff00ff00)
-	    );
-	  }
-
-	  // Working variables
-	  var al, bl, cl, dl, el;
-	  var ar, br, cr, dr, er;
-
-	  ar = al = H[0];
-	  br = bl = H[1];
-	  cr = cl = H[2];
-	  dr = dl = H[3];
-	  er = el = H[4];
-	  // Computation
-	  var t;
-	  for (var i = 0; i < 80; i += 1) {
-	    t = (al +  M[offset+zl[i]])|0;
-	    if (i<16){
-	        t +=  f1(bl,cl,dl) + hl[0];
-	    } else if (i<32) {
-	        t +=  f2(bl,cl,dl) + hl[1];
-	    } else if (i<48) {
-	        t +=  f3(bl,cl,dl) + hl[2];
-	    } else if (i<64) {
-	        t +=  f4(bl,cl,dl) + hl[3];
-	    } else {// if (i<80) {
-	        t +=  f5(bl,cl,dl) + hl[4];
-	    }
-	    t = t|0;
-	    t =  rotl(t,sl[i]);
-	    t = (t+el)|0;
-	    al = el;
-	    el = dl;
-	    dl = rotl(cl, 10);
-	    cl = bl;
-	    bl = t;
-
-	    t = (ar + M[offset+zr[i]])|0;
-	    if (i<16){
-	        t +=  f5(br,cr,dr) + hr[0];
-	    } else if (i<32) {
-	        t +=  f4(br,cr,dr) + hr[1];
-	    } else if (i<48) {
-	        t +=  f3(br,cr,dr) + hr[2];
-	    } else if (i<64) {
-	        t +=  f2(br,cr,dr) + hr[3];
-	    } else {// if (i<80) {
-	        t +=  f1(br,cr,dr) + hr[4];
-	    }
-	    t = t|0;
-	    t =  rotl(t,sr[i]) ;
-	    t = (t+er)|0;
-	    ar = er;
-	    er = dr;
-	    dr = rotl(cr, 10);
-	    cr = br;
-	    br = t;
-	  }
-	  // Intermediate hash value
-	  t    = (H[1] + cl + dr)|0;
-	  H[1] = (H[2] + dl + er)|0;
-	  H[2] = (H[3] + el + ar)|0;
-	  H[3] = (H[4] + al + br)|0;
-	  H[4] = (H[0] + bl + cr)|0;
-	  H[0] =  t;
-	};
-
-	function f1(x, y, z) {
-	  return ((x) ^ (y) ^ (z));
-	}
-=======
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
-
-	function toArray(buf, bigEndian) {
-	  if ((buf.length % intSize) !== 0) {
-	    var len = buf.length + (intSize - (buf.length % intSize));
-	    buf = Buffer.concat([buf, zeroBuffer], len);
-	  }
-
-	  var arr = [];
-	  var fn = bigEndian ? buf.readInt32BE : buf.readInt32LE;
-	  for (var i = 0; i < buf.length; i += intSize) {
-	    arr.push(fn.call(buf, i));
-	  }
-	  return arr;
-	}
-
-	function toBuffer(arr, size, bigEndian) {
-	  var buf = new Buffer(size);
-	  var fn = bigEndian ? buf.writeInt32BE : buf.writeInt32LE;
-	  for (var i = 0; i < arr.length; i++) {
-	    fn.call(buf, arr[i], i * 4, true);
-	  }
-	  return buf;
-	}
-
-	function hash(buf, fn, hashSize, bigEndian) {
-	  if (!Buffer.isBuffer(buf)) buf = new Buffer(buf);
-	  var arr = fn(toArray(buf, bigEndian), buf.length * chrsz);
-	  return toBuffer(arr, hashSize, bigEndian);
-	}
-
-	module.exports = { hash: hash };
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(420).Buffer))
-
-/***/ },
-/* 437 */
-/***/ function(module, exports, __webpack_require__) {
-
-<<<<<<< HEAD
-=======
 	/* WEBPACK VAR INJECTION */(function(Buffer) {
 	module.exports = ripemd160
 
@@ -35052,7 +32146,6 @@
 	  if (typeof message == 'string')
 	    message = new Buffer(message, 'utf8');
 
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  var m = bytesToWords(message);
 
 	  var nBitsLeft = message.length * 8;
@@ -35397,7 +32490,6 @@
 
 /***/ },
 /* 445 */
-<<<<<<< HEAD
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-9c964ee6=\"\">\n  <div class=\"mask\" _v-9c964ee6=\"\"></div>\n  <div class=\"banner\" _v-9c964ee6=\"\">\n    <div class=\"big_img\" _v-9c964ee6=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-9c964ee6=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-9c964ee6=\"\">合辑没有音频啊</div>\n    <!--<div class=\"btn\" style=\"margin-top: 0.2rem;\" @click=\"reload\">点击重新加载</div>-->\n  </div>\n</div>\n";
@@ -35556,172 +32648,12 @@
 /***/ function(module, exports) {
 
 	module.exports = "\n<div _v-f6043b16=\"\">\n  <div class=\"mask\" _v-f6043b16=\"\"></div>\n  <div class=\"banner\" _v-f6043b16=\"\">\n    <div class=\"big_img\" _v-f6043b16=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-f6043b16=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-f6043b16=\"\">合辑没有音频啊</div>\n    <!--<div class=\"btn\" style=\"margin-top: 0.2rem;\" @click=\"reload\">点击重新加载</div>-->\n  </div>\n</div>\n";
-=======
-/***/ function(module, exports) {
-
-	module.exports = "\n<div _v-7b00a7e2=\"\">\n  <div class=\"mask\" _v-7b00a7e2=\"\"></div>\n  <div class=\"banner\" _v-7b00a7e2=\"\">\n    <div class=\"big_img\" _v-7b00a7e2=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-7b00a7e2=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-7b00a7e2=\"\">合辑没有音频啊</div>\n    <!--<div class=\"btn\" style=\"margin-top: 0.2rem;\" @click=\"reload\">点击重新加载</div>-->\n  </div>\n</div>\n";
-
-/***/ },
-/* 446 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(447)
-	__vue_script__ = __webpack_require__(449)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/page/collect/vue/mask2.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(450)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-35a80480/mask2.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 447 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(448);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-35a80480&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask2.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-35a80480&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask2.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 448 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(42)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mask[_v-35a80480]{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #F1F1F1;\n  z-index: 12;\n}\n.banner[_v-35a80480]{\n  margin-top: 1.44rem;\n\n}\n.btn[_v-35a80480]{\n  width: 1.44rem;\n  height: 0.33rem;\n  border-radius: 100px;\n  border:1px solid #999999;\n  color: #333333;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.33rem;\n  margin: 0 auto;\n}\n\n.banner[_v-35a80480]{\n  position: fixed;\n  top: 0;\n  z-index: 13;\n  text-align: center;\n  width: 3.75rem;\n}\n.big_img[_v-35a80480]{\n  height: 1.2rem;\n  width: 1.2rem;\n  margin: 0 auto;\n}\n.big_img img[_v-35a80480]{\n  height: 1.2rem;\n  width: 1.2rem;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 449 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	// <template>
-	//   <div>
-	//     <div class="mask"></div>
-	//     <div class="banner">
-	//       <div class="big_img"><img src="//pic.davdian.com/free/2017/08/21/Group5.png" alt=""></div>
-	//       <div style="text-align: center;margin-top: 0.3rem;">合辑没有音频啊</div>
-	//       <!--<div class="btn" style="margin-top: 0.2rem;" @click="reload">点击重新加载</div>-->
-	//     </div>
-	//   </div>
-	// </template>
-	// <script>
-	exports.default = {
-	  methods: {
-	    reload: function reload() {
-	      window.location.reload();
-	    }
-	  }
-	  // </script>
-	  // <style scoped>
-	  //   .mask{
-	  //     position: fixed;
-	  //     top: 0;
-	  //     left: 0;
-	  //     right: 0;
-	  //     bottom: 0;
-	  //     background: #F1F1F1;
-	  //     z-index: 12;
-	  //   }
-	  //   .banner{
-	  //     margin-top: 1.44rem;
-	  //
-	  //   }
-	  //   .btn{
-	  //     width: 1.44rem;
-	  //     height: 0.33rem;
-	  //     border-radius: 100px;
-	  //     border:1px solid #999999;
-	  //     color: #333333;
-	  //     font-size: 12px;
-	  //     text-align: center;
-	  //     line-height: 0.33rem;
-	  //     margin: 0 auto;
-	  //   }
-	  //
-	  //   .banner{
-	  //     position: fixed;
-	  //     top: 0;
-	  //     z-index: 13;
-	  //     text-align: center;
-	  //     width: 3.75rem;
-	  //   }
-	  //   .big_img{
-	  //     height: 1.2rem;
-	  //     width: 1.2rem;
-	  //     margin: 0 auto;
-	  //   }
-	  //   .big_img img{
-	  //     height: 1.2rem;
-	  //     width: 1.2rem;
-	  //   }
-	  // </style>
-
-	};
-
-/***/ },
-/* 450 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div _v-35a80480=\"\">\n  <div class=\"mask\" _v-35a80480=\"\"></div>\n  <div class=\"banner\" _v-35a80480=\"\">\n    <div class=\"big_img\" _v-35a80480=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-35a80480=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-35a80480=\"\">合辑没有音频啊</div>\n    <!--<div class=\"btn\" style=\"margin-top: 0.2rem;\" @click=\"reload\">点击重新加载</div>-->\n  </div>\n</div>\n";
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 /***/ },
 /* 451 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"top\" id=\"top\" _v-8e3626dc=\"\">\n  <div class=\"tab\" id=\"tab2\" :class=\"{ tab_fixed2 :empty_tab }\" v-if=\"isApp\" _v-8e3626dc=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-8e3626dc=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-8e3626dc=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-8e3626dc=\"\"></div>\n      <div class=\"line\" _v-8e3626dc=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-8e3626dc=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-8e3626dc=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-8e3626dc=\"\"></div>\n      <div class=\"line2\" _v-8e3626dc=\"\"></div>\n    </div>\n  </div>\n  <div class=\"tab\" id=\"tab\" :class=\"{ tab_fixed :empty_tab }\" v-if=\"!isApp\" _v-8e3626dc=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-8e3626dc=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-8e3626dc=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-8e3626dc=\"\"></div>\n      <div class=\"line\" _v-8e3626dc=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-8e3626dc=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-8e3626dc=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-8e3626dc=\"\"></div>\n      <div class=\"line2\" _v-8e3626dc=\"\"></div>\n    </div>\n  </div>\n  <div class=\"empty_tab\" v-if=\"empty_tab\" _v-8e3626dc=\"\"></div>\n  <div v-if=\"flag\" _v-8e3626dc=\"\">\n    <div class=\"update\" _v-8e3626dc=\"\">\n      <div class=\"up\" _v-8e3626dc=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-8e3626dc=\"\"></span>期，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-8e3626dc=\"\"></span>期\n      </div>\n    </div>\n    <div class=\"list\" _v-8e3626dc=\"\">\n      <div class=\"item\" v-for=\"(item,index) in contentList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-8e3626dc=\"\">\n        <div class=\"rea\" _v-8e3626dc=\"\">\n          <div class=\"item_left\" _v-8e3626dc=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-8e3626dc=\"\"></div>\n            <div class=\"item_timee\" _v-8e3626dc=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-8e3626dc=\"\"></div>\n              <div class=\"item_count\" _v-8e3626dc=\"\"><span v-text=\"item.number\" _v-8e3626dc=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-8e3626dc=\"\">\n                <div class=\"clock\" _v-8e3626dc=\"\"></div>\n                <div class=\"times\" v-text=\"timeFormat(item.time)\" _v-8e3626dc=\"\"></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==0 || (item.isFree==1 &amp;&amp; item.isSub==1)\" _v-8e3626dc=\"\">\n            <div class=\"mask_stop\" v-if=\"(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-8e3626dc=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-8e3626dc=\"\"></div>\n            <div class=\"mask_play\" v-if=\"!(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-8e3626dc=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-8e3626dc=\"\"></div>\n            <div class=\"circle_mask\" _v-8e3626dc=\"\"></div>\n            <div _v-8e3626dc=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-8e3626dc=\"\"></div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==0\" _v-8e3626dc=\"\">\n            <div class=\"disable\" @click.stop=\"stop_info\" _v-8e3626dc=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-8e3626dc=\"\"></div>\n            <div class=\"circle_mask\" _v-8e3626dc=\"\"></div>\n            <div _v-8e3626dc=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-8e3626dc=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==1\" @click=\"go_href(item.albumId,item.sortNo)\" _v-8e3626dc=\"\">\n            <div class=\"free\" _v-8e3626dc=\"\">免费试听</div>\n          </div>\n\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"!flag\" v-html=\"dataList.recommendData\" _v-8e3626dc=\"\">\n\n  </div>\n  <maskk v-if=\"isApp &amp;&amp; maskFlag\" _v-8e3626dc=\"\"></maskk>\n  <maskk2 v-if=\"!isApp &amp;&amp; maskFlag\" _v-8e3626dc=\"\"></maskk2>\n</div>\n";
+	module.exports = "\n<div class=\"top\" id=\"top\" _v-236acfbd=\"\">\n  <div class=\"tab\" id=\"tab2\" :class=\"{ tab_fixed2 :empty_tab }\" v-if=\"isApp\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n  <div class=\"tab\" id=\"tab\" :class=\"{ tab_fixed :empty_tab }\" v-if=\"!isApp\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n  <div class=\"empty_tab\" v-if=\"empty_tab\" _v-236acfbd=\"\"></div>\n  <div v-if=\"flag\" _v-236acfbd=\"\">\n    <div class=\"update\" _v-236acfbd=\"\">\n      <div class=\"up\" _v-236acfbd=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-236acfbd=\"\"></span>期，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-236acfbd=\"\"></span>期\n      </div>\n    </div>\n    <div class=\"list\" _v-236acfbd=\"\">\n      <div class=\"item\" v-for=\"(item,index) in contentList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n        <div class=\"rea\" _v-236acfbd=\"\">\n          <div class=\"item_left\" _v-236acfbd=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-236acfbd=\"\"></div>\n            <div class=\"item_timee\" _v-236acfbd=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-236acfbd=\"\"></div>\n              <div class=\"item_count\" _v-236acfbd=\"\"><span v-text=\"item.number\" _v-236acfbd=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-236acfbd=\"\">\n                <div class=\"clock\" _v-236acfbd=\"\"></div>\n                <div class=\"times\" v-text=\"timeFormat(item.time)\" _v-236acfbd=\"\"></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==0 || (item.isFree==1 &amp;&amp; item.isSub==1)\" _v-236acfbd=\"\">\n            <div class=\"mask_stop\" v-if=\"(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_play\" v-if=\"!(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==0\" _v-236acfbd=\"\">\n            <div class=\"disable\" @click.stop=\"stop_info\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==1\" @click=\"go_href(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n            <div class=\"free\" _v-236acfbd=\"\">免费试听</div>\n          </div>\n\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"!flag\" v-html=\"dataList.recommendData\" _v-236acfbd=\"\">\n\n  </div>\n  <maskk v-if=\"isApp &amp;&amp; maskFlag\" _v-236acfbd=\"\"></maskk>\n  <maskk2 v-if=\"!isApp &amp;&amp; maskFlag\" _v-236acfbd=\"\"></maskk2>\n</div>\n";
 
 /***/ },
 /* 452 */
@@ -35794,11 +32726,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.con[_v-671bd1c0]{\n  background: white;\n}\n.title img[_v-671bd1c0]{\n  margin-top: 0.02rem;\n  width: 2.5rem;\n  height: 0.16rem;\n}\n.list[_v-671bd1c0]{\n  padding-top:0.1rem;\n  padding-bottom:0.1rem;\n  font-size: 0;\n  position: relative;\n}\n.list>div[_v-671bd1c0]{\n  display:inline-block;\n}\n.list_left[_v-671bd1c0]{\n  font-size: 0.14rem;\n}\n.list_right[_v-671bd1c0]{\n  font-size:0.11rem;\n  position: absolute;\n  right: 0;\n  margin-top: 0.05rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n\n.list_content[_v-671bd1c0]{\n  max-width: 3rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  margin-bottom: 0.05rem;\n}\n.list_right img[_v-671bd1c0]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 47px;\n}\n\n.list_right>div[_v-671bd1c0]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-671bd1c0]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-671bd1c0],.mask_stop[_v-671bd1c0]{\n  z-index:3;\n}\n\n\n.list_all[_v-671bd1c0]{\n  padding: 0 0.1rem;\n  border-top: 1px solid #E1E1E1;\n}\n.times>div[_v-671bd1c0]{\n  display: inline-block;\n  font-size: 0;\n  line-height:0.16rem;\n}\n.times .time[_v-671bd1c0]{\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  font-size:11px;\n  margin-right:0.05rem;\n}\n.times .name[_v-671bd1c0]{\n  font-size: 11px;\n}\n.all .list_all[_v-671bd1c0]:nth-child(1){\n  border: 0;\n}\n\n\n\n.big_img[_v-671bd1c0]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.15rem;\n  padding-bottom:0.05rem;\n  font-size: 0;\n  position:relative;\n}\n.big_img>div[_v-671bd1c0]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-671bd1c0]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-671bd1c0]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n.fixed[_v-671bd1c0]{\n  position: absolute;\n  right: 0.1rem;\n  font-size: 0;\n}\n.fixed>div[_v-671bd1c0]{\n  display: inline-block;\n  vertical-align: top;\n}\n.arrow[_v-671bd1c0]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n.arrow img[_v-671bd1c0]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n\n.disable[_v-671bd1c0]{\n  z-index: 5;\n}\n\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.con[_v-7430464b]{\n  background: white;\n}\n.title img[_v-7430464b]{\n  margin-top: 0.02rem;\n  width: 2.5rem;\n  height: 0.16rem;\n}\n.list[_v-7430464b]{\n  padding-top:0.1rem;\n  padding-bottom:0.1rem;\n  font-size: 0;\n  position: relative;\n}\n.list>div[_v-7430464b]{\n  display:inline-block;\n}\n.list_left[_v-7430464b]{\n  font-size: 0.14rem;\n}\n.list_right[_v-7430464b]{\n  font-size:0.11rem;\n  position: absolute;\n  right: 0;\n  margin-top: 0.05rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n\n.list_content[_v-7430464b]{\n  max-width: 3rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  margin-bottom: 0.05rem;\n}\n.list_right img[_v-7430464b]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 47px;\n}\n\n.list_right>div[_v-7430464b]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-7430464b]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-7430464b],.mask_stop[_v-7430464b]{\n  z-index:3;\n}\n\n\n.list_all[_v-7430464b]{\n  padding: 0 0.1rem;\n  border-top: 1px solid #E1E1E1;\n}\n.times>div[_v-7430464b]{\n  display: inline-block;\n  font-size: 0;\n  line-height:0.16rem;\n}\n.times .time[_v-7430464b]{\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  font-size:11px;\n  margin-right:0.05rem;\n}\n.times .name[_v-7430464b]{\n  font-size: 11px;\n}\n.all .list_all[_v-7430464b]:nth-child(1){\n  border: 0;\n}\n\n\n\n.big_img[_v-7430464b]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.15rem;\n  padding-bottom:0.05rem;\n  font-size: 0;\n  position:relative;\n}\n.big_img>div[_v-7430464b]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-7430464b]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-7430464b]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n.fixed[_v-7430464b]{\n  position: absolute;\n  right: 0.1rem;\n  font-size: 0;\n}\n.fixed>div[_v-7430464b]{\n  display: inline-block;\n  vertical-align: top;\n}\n.arrow[_v-7430464b]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n.arrow img[_v-7430464b]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n\n.disable[_v-7430464b]{\n  z-index: 5;\n}\n\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 
 	// exports
 
@@ -36108,7 +33036,7 @@
 /* 456 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"con\" @click=\"go_landing\" _v-7430464b=\"\">\n  <tt_com_0 :data=\"data\" _v-7430464b=\"\"></tt_com_0>\n  <!--<div class=\"big_img\">-->\n    <!--<div class=\"list_line\"></div>-->\n    <!--<div class=\"list_date\" v-text=\"title\"></div>-->\n    <!--<div class=\"list_line\"></div>-->\n    <!--<div class=\"fixed\"><div style=\"color:#333333;font-size: 12px;\">更多</div><div class=\"arrow\"><img src=\"//pic.davdian.com/free/2017/08/16/entry.png\" alt=\"\"></div></div>-->\n  <!--</div>-->\n  <div class=\"all\" _v-7430464b=\"\">\n    <div class=\"list_all\" v-for=\"item in dataList\" _v-7430464b=\"\">\n      <div class=\"list\" _v-7430464b=\"\">\n        <div class=\"list_left\" _v-7430464b=\"\">\n          <div class=\"list_content\" v-text=\"item.title\" _v-7430464b=\"\"></div>\n          <div class=\"times\" _v-7430464b=\"\">\n            <div class=\"time\" v-text=\"timeFormat(item.time)\" _v-7430464b=\"\"></div>\n            <div class=\"name\" v-text=\"item.album\" _v-7430464b=\"\"></div>\n          </div>\n        </div>\n\n        <div class=\"list_right\" _v-7430464b=\"\">\n          <div class=\"disable\" @click.stop=\"stop_info\" v-if=\"item.isPlay==0\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp; ( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp;  !( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"circle_mask\" _v-7430464b=\"\"></div>\n          <div _v-7430464b=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-7430464b=\"\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"con\" @click=\"go_landing\" _v-671bd1c0=\"\">\n  <tt_com_0 :data=\"data\" _v-671bd1c0=\"\"></tt_com_0>\n  <!--<div class=\"big_img\">-->\n    <!--<div class=\"list_line\"></div>-->\n    <!--<div class=\"list_date\" v-text=\"title\"></div>-->\n    <!--<div class=\"list_line\"></div>-->\n    <!--<div class=\"fixed\"><div style=\"color:#333333;font-size: 12px;\">更多</div><div class=\"arrow\"><img src=\"//pic.davdian.com/free/2017/08/16/entry.png\" alt=\"\"></div></div>-->\n  <!--</div>-->\n  <div class=\"all\" _v-671bd1c0=\"\">\n    <div class=\"list_all\" v-for=\"item in dataList\" _v-671bd1c0=\"\">\n      <div class=\"list\" _v-671bd1c0=\"\">\n        <div class=\"list_left\" _v-671bd1c0=\"\">\n          <div class=\"list_content\" v-text=\"item.title\" _v-671bd1c0=\"\"></div>\n          <div class=\"times\" _v-671bd1c0=\"\">\n            <div class=\"time\" v-text=\"timeFormat(item.time)\" _v-671bd1c0=\"\"></div>\n            <div class=\"name\" v-text=\"item.album\" _v-671bd1c0=\"\"></div>\n          </div>\n        </div>\n\n        <div class=\"list_right\" _v-671bd1c0=\"\">\n          <div class=\"disable\" @click.stop=\"stop_info\" v-if=\"item.isPlay==0\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-671bd1c0=\"\"></div>\n          <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp; ( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-671bd1c0=\"\"></div>\n          <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp;  !( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-671bd1c0=\"\"></div>\n          <div class=\"circle_mask\" _v-671bd1c0=\"\"></div>\n          <div _v-671bd1c0=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-671bd1c0=\"\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 457 */
@@ -37095,11 +34023,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-3c5cd698/com-to-top-icon.vue"
-=======
-	  var id = "_v-5c521926/com-to-top-icon.vue"
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -37293,11 +34217,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-f53c15bc]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-f53c15bc]{\n  height: 44px;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-52c32c2d]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-52c32c2d]{\n  height: 44px;\n}\n", ""]);
->>>>>>> 76b52555d1b562a5406a60c2cab06dd03c6ebaf3
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-f53c15bc]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-f53c15bc]{\n  height: 44px;\n}\n", ""]);
 
 	// exports
 
@@ -37404,11 +34324,13 @@
 	    this.getinitData();
 	    this.scrol();
 
-	    _native2.default.Browser.setHead({
-	      'title': '免费学习专区',
-	      'backBtn': '1',
-	      'shareBtn': "1"
-	    });
+	    setTimeout(function () {
+	      _native2.default.Browser.setHead({
+	        'title': '免费学习专区',
+	        'backBtn': '1',
+	        'shareBtn': "1"
+	      });
+	    }, 3000);
 	  },
 	  methods: {
 	    getinitData: function getinitData() {
