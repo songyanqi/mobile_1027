@@ -16,31 +16,53 @@
     <div class="new_title string_line">
       <span class="btns" @click="showadselect">
         <span class="name">
-          所在地区：<span class="onces_desc">{{address}}</span>
+          所在地区：
+          <span v-if="oncesdesc">{{address}}</span>
         </span>
-        <span class="more"><span>请选择<img
-          src="//fe-ws.davdian.com/wap/static/dist/static/page/center/img/arrow-right.png" class="arrow"></span></span></span>
+        <span class="more" v-if="!oncesdesc">
+          <span>
+            请选择<img src="//fe-ws.davdian.com/wap/static/dist/static/page/center/img/arrow-right.png" class="arrow">
+          </span>
+        </span>
+      </span>
     </div>
     <!--地址选择插件-->
     <com-picker-address :showaddress="showaddress2" @addressdata="getaddress"></com-picker-address>
     <div class="new_title">
       <span class="btns">
         <span class="name">
-          顾问特长（0/2）:
+          顾问特长（{{hobbyNUm}}/2）:
         </span>
        </span>
     </div>
     <!--特长9宫格-->
     <div class="specialty_nine">
-      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
-      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
-      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
-      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
-      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
-      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
-      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
-      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
-      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
+      <div @click="hobbys(0)" v-if="hobby[0]" class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReadingActive.png" alt=""></div>
+      <div @click="hobbys(0)" v-else class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
+
+      <div @click="hobbys(1)" v-if="hobby[1]" class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/kidsEnglishActive.png" alt=""></div>
+      <div @click="hobbys(1)" v-else class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/kidsEnglish.png" alt=""></div>
+
+      <div @click="hobbys(2)" v-if="hobby[2]" class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/familyRelationshipActive.png" alt=""></div>
+      <div @click="hobbys(2)" v-else class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/familyRelationship.png" alt=""></div>
+
+      <div @click="hobbys(3)" v-if="hobby[3]" class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/motherGrowActive.png" alt=""></div>
+      <div @click="hobbys(3)" v-else class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/motherGrow.png" alt=""></div>
+
+      <div @click="hobbys(4)" v-if="hobby[4]" class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childEducationActive.png" alt=""></div>
+      <div @click="hobbys(4)" v-else class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childEducation.png" alt=""></div>
+
+      <div @click="hobbys(5)" v-if="hobby[5]" class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childHealthActive.png" alt=""></div>
+      <div @click="hobbys(5)" v-else class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childHealth.png" alt=""></div>
+
+      <div @click="hobbys(6)" v-if="hobby[6]" class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/foodExpertActive.png" alt=""></div>
+      <div @click="hobbys(6)" v-else class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/foodExpert.png" alt=""></div>
+
+      <div @click="hobbys(7)" v-if="hobby[7]" class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/parentChildActivitiesActive.png" alt=""></div>
+      <div @click="hobbys(7)" v-else class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/parentChildActivities.png" alt=""></div>
+
+      <div @click="hobbys(8)" v-if="hobby[8]" class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/loveShareActive.png" alt=""></div>
+      <div @click="hobbys(8)" v-else class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/loveShare.png" alt=""></div>
     </div>
   </div>
 </div>

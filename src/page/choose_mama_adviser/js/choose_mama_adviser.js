@@ -11,8 +11,6 @@ import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
 
-
-
 // 渲染页面
 new Vue({
   el: ".app",
@@ -23,55 +21,52 @@ new Vue({
   data() {
     return {
       response: null,
-      showaddress2:{showaddress: false},
-      address:'',
-      onces_desc:false
+      showaddress2: {showaddress: false},
+      address: '',
+      oncesdesc: false,
+      hobby: [false, false, false, false, false, false, false, false, false]
     }
   },
-  computed: {},
-  watch: {
-
+  computed: {
+    hobbyNUm:function () {
+      var that = this;
+      let nums = 0;
+      that.hobby.forEach(function (value,index) {
+        if(value){
+          nums++;
+        }
+      });
+      return nums;
+    }
   },
+  watch: {},
   beforeCreate() {
   },
   created() {
     // this.getData();
   },
-  mounted(){
+  mounted() {
     var that = this;
     that.response = true;
   },
   methods: {
-    /**
-     * 接口名称:
-     * 接口文档:
-     */
-    // getData(){
-    //   let ts = this;
-    //   $.ajax({
-    //     cache: false,
-    //     async: true,
-    //     url: '?_=' + Date.now(),
-    //     type: 'post',
-    //     dataType: 'json',
-    //     data: encrypt({
-    //       js_wx_info: 1,
-    //     }),
-    //     success(response) {
-    //       ts.response = response;
-    //     },
-    //     error(error) {
-    //       ts.response = require('../json/choose_mama_adviser.json');
-    //       console.error('ajax error:' + error.status + ' ' + error.statusText);
-    //     }
-    //   });
-    // },
-    getaddress:function (msg) {
-        this.address = msg;
-        this.onces_desc = true;
+    getaddress: function (msg) {
+      var that = this;
+      that.address = msg;
     },
-    showadselect:function () {
-      this.showaddress2.showaddress = true;
+    showadselect: function () {
+      var that = this;
+      that.showaddress2.showaddress = true;
+      that.oncesdesc = true;
+    },
+    hobbys: function (code) {
+      var that = this;
+      if(that.hobbyNUm == 2 && !that.hobby[code]){
+        popup.toast("只能选择两个特长");
+      }else{
+        Vue.set(that.hobby, code, !that.hobby[code]);
+      }
+
     }
   },
   filters: {},
