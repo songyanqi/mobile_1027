@@ -3,11 +3,11 @@
     <audio preload="auto" class='allAudio'></audio>
     <div v-if='!isapp' class="tab2" @click='goback'><img src="//pic.davdian.com/free/2017/08/21/backRound.png" alt=""></div>
     <div class="top_img" v-if='!isapp'>
-      <div class="big_img" v-if='musicList[index] && musicList[index].imageUrl'>
-        <img :src="musicList[index].imageUrl" alt="">
+      <div class="big_img" v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].imageUrl'>
+        <img :src="musicList[musicList.length-index-1].imageUrl" alt="">
       </div>
-      <div class="big_mask" v-if='musicList[index] && musicList[index].isPlay != 1'></div>
-      <div class="mask_tab" v-if='musicList[index] && musicList[index].isPlay != 1'>
+      <div class="big_mask" v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].isPlay != 1'></div>
+      <div class="mask_tab" v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].isPlay != 1'>
         <div class="mask_text">
           <div class="mask_content">付费内容</div>
           <div class="mask_content2"><span>99</span>订阅即可收听本专辑全部内容</div>
@@ -16,14 +16,14 @@
         </div>
       </div>
     </div>
-    <div class="text" v-if='!isapp && musicList[index] && musicList[index].music' v-text='musicList[index].music'></div>
+    <div class="text" v-if='!isapp && musicList[musicList.length-index-1] && musicList[musicList.length-index-1].music' v-text='musicList[musicList.length-index-1].music'></div>
     <div class="range" v-if='!isapp'>
       <div class="gray"></div>
-      <div v-if='musicList[index] && musicList[index].time' class="red" :style='{width: playTime/musicList[index].time*100 + "%"}'></div>
+      <div v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].time' class="red" :style='{width: playTime/musicList[musicList.length-index-1].time*100 + "%"}'></div>
     </div>
     <div class="time" v-if='!isapp'>
       <div v-text='timeFormat(playTime)'></div>
-      <div v-if='musicList[index] && musicList[index].time' v-text='timeFormat(musicList[index].time)'></div>
+      <div v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].time' v-text='timeFormat(musicList[musicList.length-index-1].time)'></div>
     </div>
     <div class="btn" v-if='!isapp'>
       <div class="btn1"><img src="//pic.davdian.com/free/2017/08/16/time.png" alt="" @click='dialog'></div>
@@ -36,7 +36,7 @@
       <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
     </div>
     <div class="look_more" @click='goAlbumId' v-if='!isapp'>
-      <div class="look_count">查看合辑 (<span v-if='musicList[index]  && musicList[index].sortNo' v-text='parseInt(musicList[index].sortNo) + 1'></span>/<span v-text='allAudio'></span>)</div>
+      <div class="look_count">查看合辑 (<span v-if='musicList[musicList.length-index-1]  && musicList[musicList.length-index-1].sortNo' v-text='parseInt(musicList[musicList.length-index-1].sortNo) + 1'></span>/<span v-text='allAudio'></span>)</div>
       <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
     </div>
     <div style="height: 0.1rem;background: #F8F7F7;" v-if='!isapp'></div>
@@ -261,19 +261,18 @@
             that.scrollTop = $('.mask_banner').get(0).scrollTop
             if ($('.mask_banner').get(0).scrollTop<1){
               $('.mask_banner').get(0).scrollTop = 1
-              if (that.musicList[0].sortNo == 0){
-                // dialog.info('已经是第一首了')
+              if (that.musicList[that.musicList.length-1].sortNo == 0){
+
               }else {
-                that.getData(-1,that.musicList[0].sortNo, false)
+                that.getData(1,that.musicList[that.musicList.length-1].sortNo, false)
               }
             }
-            if ($('.mask_banner').get(0).scrollTop > $('.mask_banner_content').height()-$('.mask_banner').height()-1){
-              $('.mask_banner').get(0).scrollTop = $('.mask_banner_content').height()-$('.mask_banner').height()-1
+            if ($('.mask_banner').get(0).scrollTop > $('.mask_banner_content').height()-$('.mask_banner').height()-2){
+              $('.mask_banner').get(0).scrollTop = $('.mask_banner_content').height()-$('.mask_banner').height()-2
 
-              if (that.musicList[that.musicList.length-1].sortNo == that.allAudio-1){
-                // dialog.info('已经是最后一首了')
+              if (that.musicList[0].sortNo == that.allAudio-1){
               } else {
-                that.getData(1,that.musicList[that.musicList.length-1].sortNo, false)
+                that.getData(-1,that.musicList[0].sortNo, false)
               }
             }
           })
@@ -292,20 +291,20 @@
         //不传index代表点击当前歌曲
         if (index !=-100){
           if (index==-1){
-            if (that.musicList[0].sortNo == 0){
-              dialog.info('已经是第一首了')
+            if (that.musicList[that.musicList.length-1].sortNo == that.allAudio-1){
+              dialog.info('已经是最后一首了')
               return
             }else {
-              that.getData(-1,that.musicList[that.index].sortNo, true)
+              that.getData(1,that.musicList[that.musicList.length-1].sortNo, true)
               return
             }
           }
           if (index==that.musicList.length){
-            if (that.musicList[that.musicList.length-1].sortNo == that.allAudio-1){
-              dialog.info('已经是最后一首了')
+            if (that.musicList[0].sortNo == 0){
+              dialog.info('已经是第一首了')
               return
             } else {
-              that.getData(1,that.musicList[that.index].sortNo, true)
+              that.getData(-1,that.musicList[0].sortNo, true)
               return
             }
           }
@@ -322,7 +321,23 @@
             });
             return
           }
+        } else {
+          // alert(that.index)
+          if (that.musicList[that.index].isPlay != 1){
+            popup.confirm({
+              title: '提示',            // 标题（支持传入html。有则显示。）
+              text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
+              okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+              cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+              okBtnCallback: function(){
+                that.subscription()
+              },
+              cancelBtnCallback: function(){}
+            });
+            return
+          }
         }
+
         if (that.playTimer){
           clearInterval(that.playTimer)
         }
@@ -331,7 +346,7 @@
           that.index = index
           //传index代表播放别的歌
           that.isPlay = true
-          $('.allAudio').get(0).src = that.musicList[that.index].fileLink
+          $('.allAudio').get(0).src = that.musicList[that.musicList.length -1 - that.index].fileLink
           $('.allAudio').get(0).play()
           $('.allAudio').get(0).onloadedmetadata = function(){
             that.musicList[that.index].time = $('.allAudio').get(0).duration
@@ -372,7 +387,6 @@
       getData(sort,sortNo, flag){
         var that = this
         if (that.getDataFlag){
-          console.log('hello')
           that.getDataFlag = false
           let obj = {
             albumId:getQuery('albumId'),
@@ -391,13 +405,18 @@
                 if (sort == -1){
                   that.musicList = data.data.dataList.concat(that.musicList)
                   if (flag){
-                    that.index = that.index + data.data.dataList.length-2
-                  }else {
                     that.index = that.index + data.data.dataList.length
+                  }else {
+                    // that.index = that.index + data.data.dataList.length
                   }
                   
                 }else {
                   that.musicList = that.musicList.concat(data.data.dataList)
+                  if (flag){
+                    that.index = that.index + data.data.dataList.length-2
+                  }else {
+                    that.index = that.index + data.data.dataList.length
+                  }
                 }
                 if (flag){
                   that.playAudio(that.index + 1)
@@ -419,7 +438,7 @@
             },1000)
           })
         }else {
-          console.log(456)
+          // console.log(456)
         }
       },
       timeFormat(t){
@@ -725,7 +744,7 @@
   }
   .mask_list1{
     width: 3.75rem;
-    height: 0.46rem;
+    height: 0.48rem;
     padding-top: 0.13rem;
     box-sizing: border-box;
   }

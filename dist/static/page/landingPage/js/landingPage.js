@@ -23992,9 +23992,9 @@
 	    this.dataList = this.data.body.dataList;
 	    this.upTime = this.data.body.upTime;
 	    this.week = this.getLocalTime(this.upTime);
-	    // this.$nextTick(function () {
-	    //   this.audioLocation();
-	    // });
+	    this.$nextTick(function () {
+	      this.audioLocation();
+	    });
 	  },
 	  methods: {
 	    timeFormat: function timeFormat(t) {
