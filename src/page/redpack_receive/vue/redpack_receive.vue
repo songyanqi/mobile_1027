@@ -153,7 +153,7 @@
       <!--信封-->
       <div class="envelope">
         <p>领取失败啦～</p>
-        <p>仅会员专享红包~</p>
+        <p>开通会员才能领红包哦~</p>
       </div>
       <!--按钮-->
       <a class="btn" :href="response.data.useUrl"><p>立即开通会员</p></a>
