@@ -23,8 +23,7 @@ vueLazyload.init();
 window.collect=new Vue({
   el: ".app",
   components: {
-    'collect':require('../vue/collect.vue'),
-    'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
+    'collect':require('../vue/collect.vue')
   },
   data() {
     return {

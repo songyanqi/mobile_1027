@@ -5,6 +5,7 @@
     <index_feed :data="data"></index_feed>
     <maskk v-if="isApp && maskFlag"></maskk>
     <maskk2 v-if="!isApp && maskFlag"></maskk2>
+    <top v-if="!isApp"></top>
   </div>
 </template>
 <script>
@@ -19,14 +20,14 @@
   import util from "../../../../utils/utils.es6"
   import maskk from "./mask.vue"
   import maskk2 from "./mask2.vue"
+  import top from "../../../component/com-to-top-icon.vue"
   export default {
     components:{
       index_feed:index_feed,
       lheader:lheader,
       maskk:maskk,
       maskk2:maskk2,
-      maskFlag:false
-
+      top:top
     },
     data(){
         return {
