@@ -108,7 +108,7 @@
       introduction(){
         if (this.isapp){
           if ($('.bottom_text img').length ==0){
-            if (this.musicList && this.musicList[this.index] && this.musicList[this.index].introduction){
+            if (this.musicList && this.musicList[this.musicList.length-this.index-1] && this.musicList[this.musicList.length-this.index-1].introduction){
               setTimeout(function(){
                 native.Browser.showWebHeight({
                   "webHeight": ($('.bottom_text').height()+30).toString()
@@ -125,7 +125,7 @@
             },1200)
           }
         }
-        return this.musicList && this.musicList[this.index] && this.musicList[this.index].introduction || null
+        return this.musicList && this.musicList[this.musicList.length-this.index-1] && this.musicList[this.musicList.length-this.index-1].introduction || null
       }
     },
     created: function () {
@@ -205,6 +205,7 @@
           albumId:getQuery('albumId'),
           shareUserId:getQuery('shareUserId') || ''
         }
+        alert(1)
         api('/api/mg/content/album/subscription', obj).then(function(result){
           let {code,data:{msg,payUrl,jsApi}}=result;
           alert(0)
