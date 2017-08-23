@@ -16,8 +16,12 @@
             </div>
 
             <!--课程介绍页广告banner, 818需求-->
-            <!--<ad-banner ad-img="http://pic.davdian.com/free/2017/07/21/1125_780_3f570de26ccd4a07de4e28f8e33d55be.jpg?x-oss-process=image/format,webp" ad-url="wefewf">
-            </ad-banner>
+            <!--预热-->
+            <ad-banner ad-img="//pic.davdian.com/goods/2017/08/14/1125_200_a29c5542a83a6641f4dd51d807108dec.jpg" ad-url="/class_detail-11165.html?preview=1"
+                v-if="false && Date.now() >= new Date(2017,7,17) && Date.now() < new Date(2017,7,18)"></ad-banner>
+            <!--正式-->
+            <ad-banner ad-img="//pic.davdian.com/goods/2017/08/14/1125_200_612f2fd66f37092fd9a9b7111faaf509.jpg" ad-url="/class_detail-11165.html?preview=1"
+                v-if="false && Date.now() >= new Date(2017,7,18) && Date.now() < new Date(2017,7,24)"></ad-banner>
 
             <!-- <div class="other_info">
                 <div>课程须知：</div>

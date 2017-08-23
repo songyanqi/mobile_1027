@@ -340,7 +340,8 @@ export default {
     components: {
         vSchoolTitle:vSchoolTitle,
         inviteCard:inviteCard,
-        indexFeed:indexFeed
+        indexFeed:indexFeed,
+      'ad-banner': require('../src/page/goodsDetail/vue/ad-banner.vue')
 
     }
 }

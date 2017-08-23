@@ -13,10 +13,13 @@
       </div> -->
 
       <!--商品名下方文案，818需求-->
-      <!--<div class = "partys" v-if="response && response.sys_time * 1000 > new Date(2017, 8-1, 10, 0, 0, 0) && response.sys_time * 1000 < new Date(2017, 8-1, 18, 0, 0, 0)">-->
-      <!--<div class = "partys" v-if="Date.now() >= new Date(2017,7,18,0,0,0) && Date.now() < new Date(2017,7,24,0,0,0)">-->
-      <div class = "partys">
-        <a href="">开学季省钱有招.最强攻略来袭>></a>
+      <!--预热-->
+      <div class = "partys" v-if="Date.now() >= new Date(2017,7,17) && Date.now() < new Date(2017,7,18)">
+        <a href="/class_detail-11165.html?preview=1">开学季省钱有招，最强攻略来袭>></a>
+      </div>
+      <!--正式-->
+      <div class = "partys" v-if="Date.now() >= new Date(2017,7,18) && Date.now() < new Date(2017,7,24)">
+        <a href="/t-13685.html">开学季满359返60元无门槛红包，全场返现翻倍>></a>
       </div>
 
       <div class = "clearfix introPrice">
