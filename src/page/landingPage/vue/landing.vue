@@ -62,6 +62,20 @@
 
     },
     methods:{
+        shareInfo(){
+          window.iosInterface.getShareInfo = function () {
+            var shareInfo = {
+//              title: that.shareInfo.title,
+//              desc: that.shareInfo.desc,
+//              link: that.shareInfo.link,
+//              imgUrl: that.shareInfo.imgUrl
+            };
+            return JSON.stringify(shareInfo);
+          };
+          native.Browser.setHead({
+            shareBtn:'1'
+          })
+        },
         getinitData(){
           var that=this;
           api("/api/mg/content/indexAlbum/getContent")
@@ -69,6 +83,7 @@
               if(result.code==0){
                 if(result.data && result.data.feedList){
                   that.data=that.data.concat(result.data.feedList);
+                  that.shareInfo();
                   result.data.feedList.map(function (item,index) {
                     if(item.body.upTime){
                       that.upTime=item.body.upTime;

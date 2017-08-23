@@ -52,7 +52,7 @@
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
             <div class="item_right" v-if="item.isFree==1 && item.isSub==0 && item.isPlay==0">
-              <div class="disable" @click.stop="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+              <div class="disable" @click.stop="stop_info(item.albumId)"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
@@ -207,17 +207,56 @@
                 }
               });
           },
-          stop_info(){
+          stop_info(albumId){
+            var that=this;
             popup.confirm({
               title: '提示',            // 标题（支持传入html。有则显示。）
               text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
               okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
               cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
               okBtnCallback: function(){
-
+                that.Subscribe(albumId);
               },
               cancelBtnCallback: function(){}
             });
+          },
+          Subscribe(albumId){
+
+            var that=this;
+            var obj={
+              albumId:albumId,
+              shareUserId:getQuery('shareUserId') || ''
+            };
+            api("/api/mg/content/album/subscription",obj)
+              .then(function(result) {
+                let {code, data: {msg, payUrl, jsApi}} = result;
+                if (code == 0) {
+                  if (result.data.code == 300) {
+                    if (jsApi) {
+                      jsApi.jsApiParameters.dvdhref = location.href;
+                      window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                      // bravetime.goto("http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters)));
+                    } else if (payUrl) {
+                      that.nativePay(payUrl, function (flag) {
+                        if (flag) {
+                          that.sub=1;
+                          // 报名成功(进不来)
+                        }
+                      });
+                    } else {
+                      that.sub=1;
+                      alert(123456);
+                      // 报名成功
+                    }
+                  } else {
+                    that.sub=1;
+                    dialog.alert(result.data.msg);
+                    that.$emit("re");
+                  }
+                }else {
+                  dialog.alert('code:' + code + 'msg:'+ result.data.msg)
+                }
+              })
           },
           fn(){
               this.flag=!this.flag;

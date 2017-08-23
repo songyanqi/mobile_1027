@@ -34222,7 +34222,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-f53c15bc]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-f53c15bc]{\n  height: 44px;\n}\n.to-top-icon[_v-f53c15bc]{\n  z-index: 5;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-f53c15bc]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-f53c15bc]{\n  height: 44px;\n}\n.to-top-icon[_v-f53c15bc]{\n  z-index: 5;\n}\n", ""]);
 
 	// exports
 
@@ -34338,12 +34338,27 @@
 	    }, 3000);
 	  },
 	  methods: {
+	    shareInfo: function shareInfo() {
+	      window.iosInterface.getShareInfo = function () {
+	        var shareInfo = {
+	          //              title: that.shareInfo.title,
+	          //              desc: that.shareInfo.desc,
+	          //              link: that.shareInfo.link,
+	          //              imgUrl: that.shareInfo.imgUrl
+	        };
+	        return JSON.stringify(shareInfo);
+	      };
+	      _native2.default.Browser.setHead({
+	        shareBtn: '1'
+	      });
+	    },
 	    getinitData: function getinitData() {
 	      var that = this;
 	      (0, _api2.default)("/api/mg/content/indexAlbum/getContent").then(function (result) {
 	        if (result.code == 0) {
 	          if (result.data && result.data.feedList) {
 	            that.data = that.data.concat(result.data.feedList);
+	            that.shareInfo();
 	            result.data.feedList.map(function (item, index) {
 	              if (item.body.upTime) {
 	                that.upTime = item.body.upTime;

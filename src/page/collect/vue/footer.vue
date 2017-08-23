@@ -57,6 +57,19 @@
             "imgUrl": that.shareInfo.imgUrl,
             "link": that.shareInfo.link
           })
+
+          window.iosInterface.getShareInfo = function () {
+            var shareInfo = {
+              title: that.shareInfo.title,
+              desc: that.shareInfo.desc,
+              link: that.shareInfo.link,
+              imgUrl: that.shareInfo.imgUrl
+            };
+            return JSON.stringify(shareInfo);
+          };
+          native.Browser.setHead({
+            shareBtn:'1'
+          })
         }else {
           share.setShareInfo({
             title: that.shareInfo.title,
