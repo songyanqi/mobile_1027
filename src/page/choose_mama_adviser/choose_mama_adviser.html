@@ -1,57 +1,114 @@
 <!DOCTYPE html>
-<html>
+<htm>
 <head>
   @@include('meta.include')
   <link rel="stylesheet" href="[[static]]/page/choose_mama_adviser/css/choose_mama_adviser.css[[v]]">
 </head>
 <body>
-<div class="app">
+<div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
   <!--标题-->
-  <com-top-title :title="选择妈妈顾问" home></com-top-title>
-
+  <com-top-title title="选择妈妈顾问"></com-top-title>
   <div>
-    <!--&lt;!&ndash;妈妈顾问选择信息&ndash;&gt;-->
-    <!--<div class="title"><a href="http://murphylee.davdian.com/order_list.html" class="btns"><span-->
-      <!--class="name">我的订单</span> <span class="more"><span>全部订单<img-->
-      <!--src="//fe-ws.davdian.com/wap/static/dist/static/page/center/img/arrow-right.png" class="arrow"></span></span></a>-->
-    <!--</div>-->
+    <!--妈妈顾问选择信息-->
+    <!--妈妈顾问选择信息-->
+    <div class="strings"></div>
+    <!--地区展示框-->
+    <div class="new_title string_line">
+      <span class="btns" @click="showadselect">
+        <span class="name">
+          所在地区：<span class="onces_desc">{{address}}</span>
+        </span>
+        <span class="more"><span>请选择<img
+          src="//fe-ws.davdian.com/wap/static/dist/static/page/center/img/arrow-right.png" class="arrow"></span></span></span>
+    </div>
+    <!--地址选择插件-->
+    <com-picker-address :showaddress="showaddress2" @addressdata="getaddress"></com-picker-address>
+    <div class="new_title">
+      <span class="btns">
+        <span class="name">
+          顾问特长（0/2）:
+        </span>
+       </span>
+    </div>
+    <!--特长9宫格-->
+    <div class="specialty_nine">
+      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
+      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
+      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
+      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
+      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
+      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
+      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
+      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
+      <div class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/childReading.png" alt=""></div>
+    </div>
   </div>
 </div>
-
-@@include('vendor.include')
-<script src="[[static]]/page/choose_mama_adviser/js/choose_mama_adviser.js[[v]]"></script>
+  @@include('vendor.include')
+  <script src="[[static]]/page/choose_mama_adviser/js/choose_mama_adviser.js[[v]]"></script>
 </body>
-<style>
-  .title {
-    background: white;
-  }
-  .title .btns {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 10px;
-    line-height: 20px;
-  }
-  .title .btns .name {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -moz-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    display: block;
-    font-size: 14px;
-    text-align: left;
-  }
-  .title .btns .more {
-    font-size: 12px;
-    color: #999;
-  }
-  .title .btns .more .arrow {
-    position: relative;
-    top: 2px;
-    height: 14px;
-  }
-</style>
-</html>
+  <style scoped>
+    body{
+      background-color: #FFFFFF;
+    }
+    .new_title {
+      background: white;
+    }
+    .string_line:before,.string_line:after {
+      content: '';
+      display: block;
+      height: 1px;
+      background: #E1E1E1;
+      -webkit-transform: scaleY(0.5);
+      -ms-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+
+    .new_title .btns {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      padding: 10px;
+      line-height: 20px;
+    }
+
+    .new_title .btns .name {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -moz-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      display: block;
+      font-size: 14px;
+      color: #666666;
+      text-align: left;
+    }
+
+    .new_title .btns .more {
+      font-size: 12px;
+      color: #999;
+    }
+
+    .new_title .btns .more .arrow {
+      position: relative;
+      top: 2px;
+      height: 14px;
+    }
+    .specialty_nine{
+      width: 100%;
+      min-height: 200px;
+      padding: 5px 9.05%;
+      overflow: hidden;
+      background-color: #FFFFFF;
+    }
+    .specialty_nine .specialty_check{
+      width: 27.3%;
+      float: left;
+    }
+    .specialty_nine .specialty_check img{
+      width: 100%;
+    }
+  </style>
+</htm>

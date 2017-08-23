@@ -17,33 +17,29 @@ import native from '../../../common/js/module/native.js';
 new Vue({
   el: ".app",
   components: {
-    'com-top-title': require('../../../component/com-top-title.vue')
+    'com-top-title': require('../../../component/com-top-title.vue'),
+    'com-picker-address': require('../../../component/com-picker-address.vue')
   },
   data() {
     return {
       response: null,
+      showaddress2:{showaddress: false},
+      address:'',
+      onces_desc:false
     }
   },
   computed: {},
   watch: {
-    // // 监听response变化
-    // response(){
-    //   // response变化后并渲染完dom,设置其他事项
-    //   this.$nextTick(function () {
-    //     let ts = this;
-    //
-    //     // 设置app头部标题栏
-    //     native.custom.initHead({
-    //       shareOnHead: 1,
-    //     });
-    //
-    //   });
-    // }
+
   },
   beforeCreate() {
   },
   created() {
     // this.getData();
+  },
+  mounted(){
+    var that = this;
+    that.response = true;
   },
   methods: {
     /**
@@ -70,6 +66,13 @@ new Vue({
     //     }
     //   });
     // },
+    getaddress:function (msg) {
+        this.address = msg;
+        this.onces_desc = true;
+    },
+    showadselect:function () {
+      this.showaddress2.showaddress = true;
+    }
   },
   filters: {},
 });
