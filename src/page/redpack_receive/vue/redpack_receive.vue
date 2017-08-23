@@ -244,7 +244,7 @@
           let ts = this;
 
           // 设置app头部标题栏
-          native.initHead({
+          native.custom.initHead({
             shareOnHead: 1,
           });
 
