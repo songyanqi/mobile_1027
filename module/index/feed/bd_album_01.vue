@@ -7,10 +7,9 @@
       <div class="history_mask" v-if="isApp && history_mask"></div>
       <div class="history" @click.stop="go_history" v-if="isApp && history_mask">
         <div>
-          <div>上次听到</div>
-          <div style="overflow: hidden;max-width: 96px;">{{ historyName }}</div>
-          <div>...</div>
-          <div>，点我继续收听</div>
+          <div>上次听到"</div>
+          <div class="over_text">{{ historyName }}</div>
+          <div>"，点我继续收听</div>
         </div>
       </div>
 
@@ -169,5 +168,11 @@
     display: inline-block;
     vertical-align: top;
     height: 35px;
+  }
+  .over_text{
+    overflow: hidden;
+    max-width: 96px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 </style>

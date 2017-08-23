@@ -27218,7 +27218,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-234ea0bb] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-234ea0bb] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-234ea0bb] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-234ea0bb] {\n  width: 3.75rem;\n}\n\n.content_title[_v-234ea0bb] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-234ea0bb] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-234ea0bb] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-234ea0bb] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-234ea0bb] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-234ea0bb] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-234ea0bb]{\n  position: relative;\n}\n.history_mask[_v-234ea0bb]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-234ea0bb]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-234ea0bb] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-234ea0bb]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-234ea0bb] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-234ea0bb] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-234ea0bb] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-234ea0bb] {\n  width: 3.75rem;\n}\n\n.content_title[_v-234ea0bb] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-234ea0bb] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-234ea0bb] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-234ea0bb] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-234ea0bb] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-234ea0bb] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-234ea0bb]{\n  position: relative;\n}\n.history_mask[_v-234ea0bb]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-234ea0bb]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-234ea0bb] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-234ea0bb]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n.over_text[_v-234ea0bb]{\n  overflow: hidden;\n  max-width: 96px;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n", ""]);
 
 	// exports
 
@@ -27381,6 +27381,12 @@
 	  //     vertical-align: top;
 	  //     height: 35px;
 	  //   }
+	  //   .over_text{
+	  //     overflow: hidden;
+	  //     max-width: 96px;
+	  //     text-overflow: ellipsis;
+	  //     white-space: nowrap;
+	  //   }
 	  // </style>
 
 	}; // <template>
@@ -27392,10 +27398,9 @@
 	//       <div class="history_mask" v-if="isApp && history_mask"></div>
 	//       <div class="history" @click.stop="go_history" v-if="isApp && history_mask">
 	//         <div>
-	//           <div>上次听到</div>
-	//           <div style="overflow: hidden;max-width: 96px;">{{ historyName }}</div>
-	//           <div>...</div>
-	//           <div>，点我继续收听</div>
+	//           <div>上次听到"</div>
+	//           <div class="over_text">{{ historyName }}</div>
+	//           <div>"，点我继续收听</div>
 	//         </div>
 	//       </div>
 	//
@@ -27419,7 +27424,7 @@
 /* 408 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"all\" _v-234ea0bb=\"\">\n  <div class=\"big_top\" _v-234ea0bb=\"\">\n    <div class=\"big_img\" _v-234ea0bb=\"\">\n      <img id=\"uuu\" :src=\"dataList.imageUrl\" alt=\"\" _v-234ea0bb=\"\">\n    </div>\n    <div class=\"history_mask\" v-if=\"isApp &amp;&amp; history_mask\" _v-234ea0bb=\"\"></div>\n    <div class=\"history\" @click.stop=\"go_history\" v-if=\"isApp &amp;&amp; history_mask\" _v-234ea0bb=\"\">\n      <div _v-234ea0bb=\"\">\n        <div _v-234ea0bb=\"\">上次听到</div>\n        <div style=\"overflow: hidden;max-width: 96px;\" _v-234ea0bb=\"\">{{ historyName }}</div>\n        <div _v-234ea0bb=\"\">...</div>\n        <div _v-234ea0bb=\"\">，点我继续收听</div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"content\" _v-234ea0bb=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-234ea0bb=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-234ea0bb=\"\">\n      <div class=\"pri_left\" _v-234ea0bb=\"\">\n        <span v-text=\"dataList.income\" _v-234ea0bb=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-234ea0bb=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-234ea0bb=\"\"></div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"all\" _v-234ea0bb=\"\">\n  <div class=\"big_top\" _v-234ea0bb=\"\">\n    <div class=\"big_img\" _v-234ea0bb=\"\">\n      <img id=\"uuu\" :src=\"dataList.imageUrl\" alt=\"\" _v-234ea0bb=\"\">\n    </div>\n    <div class=\"history_mask\" v-if=\"isApp &amp;&amp; history_mask\" _v-234ea0bb=\"\"></div>\n    <div class=\"history\" @click.stop=\"go_history\" v-if=\"isApp &amp;&amp; history_mask\" _v-234ea0bb=\"\">\n      <div _v-234ea0bb=\"\">\n        <div _v-234ea0bb=\"\">上次听到\"</div>\n        <div class=\"over_text\" _v-234ea0bb=\"\">{{ historyName }}</div>\n        <div _v-234ea0bb=\"\">\"，点我继续收听</div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"content\" _v-234ea0bb=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-234ea0bb=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-234ea0bb=\"\">\n      <div class=\"pri_left\" _v-234ea0bb=\"\">\n        <span v-text=\"dataList.income\" _v-234ea0bb=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-234ea0bb=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-234ea0bb=\"\"></div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 409 */
@@ -34066,7 +34071,7 @@
 
 
 	// module
-	exports.push([module.id, ".to-top-icon {\n  position: fixed;\n  /*right: .07rem;*/\n  margin-left: 3.25rem;\n  bottom: .7rem;\n  width: .44rem;\n  z-index: 1; }\n", ""]);
+	exports.push([module.id, ".to-top-icon {\n  position: fixed;\n  /*right: .07rem;*/\n  margin-left: 3.25rem;\n  bottom: .7rem;\n  width: .44rem;\n  z-index: 5; }\n", ""]);
 
 	// exports
 
@@ -34124,14 +34129,14 @@
 	// <style lang="sass" lang="scss" rel="stylesheet/scss">
 	//   @import "../common/css/util/all";
 	//
-	//   // 滚动至顶图标
+	//
 	//   .to-top-icon {
 	//     position: fixed;
 	//     /*right: .07rem;*/
 	//     margin-left: 3.25rem;
 	//     bottom: .7rem;
 	//     width: .44rem;
-	//     z-index: 1;
+	//     z-index: 5;
 	//   }
 	// </style>
 	//
@@ -34217,7 +34222,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-f53c15bc]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-f53c15bc]{\n  height: 44px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-f53c15bc]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-f53c15bc]{\n  height: 44px;\n}\n.to-top-icon[_v-f53c15bc]{\n  z-index: 5;\n}\n", ""]);
 
 	// exports
 
@@ -34414,6 +34419,9 @@
 	  //   }
 	  //   .empty_div{
 	  //     height: 44px;
+	  //   }
+	  //   .to-top-icon{
+	  //     z-index: 5;
 	  //   }
 	  // </style>
 
