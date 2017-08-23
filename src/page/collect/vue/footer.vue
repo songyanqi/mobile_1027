@@ -1,7 +1,7 @@
 <template>
   <div class="btn">
-    <div class="btn_left" v-if="userstatus==1 || userstatus==0">成为会员免费听</div>
-    <div class="btn_left" v-if="userstatus==3"><span>邀请赚¥</span><span v-text="price"></span></div>
+    <div class="btn_left" v-if="userstatus==1 || userstatus==0" @click="vip">成为会员免费听</div>
+    <div class="btn_left" v-if="userstatus==3" @click="share"><span>邀请赚¥</span><span v-text="price"></span></div>
     <div class="btn_right">
       <img src="//pic.davdian.com/free/2017/08/16/Rectangle.png" alt="">
       <div class="btn_text" @click="Subscribe" v-if="isSub==0 && (userstatus==1 || userstatus==0)">
@@ -21,25 +21,55 @@
   import native from "../../../../src/common/js/module/native.js"
   import dialog from "../../../../utils/dialog.es6";
   import {getQuery} from "../../../../utils/utils.es6";
+  import util from "../../../../utils/utils.es6"
+  import share from "../../../../src/common/js/module/share.js"
   export default {
-    props:["income","sub","userstatus","albumid","price"],
+    props:["income","sub","userstatus","albumid","price","share"],
     computed:{
       isSub:function () {
         return this.sub;
       },
       isPrice:function () {
         return this.price;
+      },
+      shareInfo(){
+          return this.share;
       }
     },
     data(){
       return {
-        priceFlag:true
+        priceFlag:true,
+        isApp:util.utils.isApp()
       }
     },
     mounted:function () {
       console.log(this.isPrice);
     },
     methods:{
+      share(){
+        var that=this;
+        if(that.isApp){
+          native.custom.share({
+            "shareTitle":that.shareInfo.title,
+            "shareDesc": that.shareInfo.desc,
+            "title": that.shareInfo.title,
+            "desc": that.shareInfo.desc,
+            "imgUrl": that.shareInfo.imgUrl,
+            "link": that.shareInfo.link
+          })
+        }else {
+          share.setShareInfo({
+            title: that.shareInfo.title,
+            desc: that.shareInfo.desc,
+            link: that.shareInfo.link,
+            imgUrl: that.shareInfo.imgUrl,
+          })
+        }
+
+      },
+      vip(){
+          window.location.href="/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button";
+      },
       ifPrice(){
           if(this.isPrice=="0.00"){
               return false;

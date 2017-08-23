@@ -3,8 +3,8 @@
     <lheader :title="title" class="top" v-if="!isApp"></lheader>
     <div class="ndiv" v-if="!isApp"></div>
     <index_feed :data="data"></index_feed>
-    <div class="empty" v-if="isFree==1" ></div>
-    <lfooter @re="reGetData" v-if="isFree==1" :income="income" :sub="isSub" :userstatus="userStatus" :albumid="albumId" :price="price"></lfooter>
+    <div class="empty" v-if="isFree==1 && isSub==0" ></div>
+    <lfooter @re="reGetData" :share="shareInfo" v-if="isFree==1 && isSub==0" :income="income" :sub="isSub" :userstatus="userStatus" :albumid="albumId" :price="price"></lfooter>
     <maskk v-if="isApp && maskFlag"></maskk>
     <maskk2 v-if="!isApp && maskFlag"></maskk2>
     <data_mask v-if="isApp && maskFlag2"></data_mask>
@@ -54,7 +54,8 @@
         maskFlag:false,
         maskFlag2:false,
         title:"",
-        isFree:null
+        isFree:null,
+        shareInfo:{}
       }
     },
     mounted:function () {
@@ -80,6 +81,7 @@
                     that.isSub=result.data.attr.isSub;
                     that.title=result.data.shareInfo.title;
                     that.isFree=result.data.attr.isFree;
+                    that.shareInfo=result.data.shareInfo;
 
                     console.log("new=>>",that.isSub);
                     that.userStatus=result.visitor_status;
