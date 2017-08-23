@@ -51,12 +51,13 @@
           }
       },
       mounted:function () {
+        var that=this;
         this.dataList=this.data.body.dataList;
         this.upTime=this.data.body.upTime;
         this.week=this.getLocalTime(this.upTime);
         this.$nextTick(function () {
           setTimeout(function () {
-            this.audioLocation();
+            that.audioLocation();
           },2000)
         });
       },
@@ -100,7 +101,7 @@
           if(this.isApp){
             native.Audio.audioLocation({
               success: function (obj) {
-                // window.iosInterface.getAudioState(obj);
+                 window.iosInterface.getAudioState(obj);
               }
             })
           }
