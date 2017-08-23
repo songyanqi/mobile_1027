@@ -34,7 +34,6 @@
 <script>
   import util from "../../../utils/utils.es6";
   import native from "../../../src/common/js/module/native.js";
-  import dialog from '../../../utils/dialog.es6';
   import popup from "../../../src/common/js/module/popup"
   import {getQuery} from "../../../utils/utils.es6";
 
