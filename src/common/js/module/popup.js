@@ -116,4 +116,24 @@ export default {
       loading = null;
     }
   },
+  specialConfirm(param = {}){
+    new Vue({
+      components: {
+        'com-popup-special': require('../../../component/com-popup-special.vue')
+      },
+      el: getEl(),
+      data: {param},
+      template: '<com-popup-special type="confirm" :title="param.title" :text="param.text" :ok-btn-title="param.okBtnTitle" :ok-btn-callback="param.okBtnCallback" :cancel-btn-title="param.cancelBtnTitle" :cancel-btn-callback="param.cancelBtnCallback"/>',
+    });
+  },
+  specialAlert(param = {}){
+    new Vue({
+      components: {
+        'com-popup-special': require('../../../component/com-popup-special.vue')
+      },
+      el: getEl(),
+      data: {param},
+      template: '<com-popup-special type="alert" :title="param.title" :text="param.text" :ok-btn-title="param.btnTitle" :ok-btn-callback="param.btnCallback"/>',
+    });
+  },
 }
