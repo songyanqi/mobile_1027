@@ -40,12 +40,9 @@ window.collect=new Vue({
 
         // 设置app头部标题栏
         native.custom.initHead({
-          shareOnHead: 1,
-          isAudioAbsorb:1
+          shareOnHead: '1',
+          isAudioAbsorb:'1'
         });
-
-
-
 
         // 设置分享信息
         // try {

@@ -90,7 +90,7 @@ export default {
                             window.singlePicHold(ele);
                         })
                     });
-                    if (!error && deleteFlag && visitor_status!=0){
+                    if (!error && deleteFlag){
                         native.Browser.initHead({
                           isAudioAbsorb:'1'
                         });

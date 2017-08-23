@@ -72,7 +72,6 @@
   import api from "../../../../utils/api.es6"
   import util from "../../../../utils/utils.es6";
   import dialog from "../../../../utils/dialog.es6";
-  // import wx from "../../../../utils/WXShare.es6"
   import native from '../../../common/js/module/native.js'
   import popup from '../../../common/js/module/popup.js'
   import share from '../../../common/js/module/share.js';
@@ -169,12 +168,18 @@
           }
           console.log(that.index ,data.data.dataList[that.index].shareInfo)
           if (data && data.data && data.data.dataList && data.data.dataList[that.index] && data.data.dataList[that.index].shareInfo){
-            share.setShareInfo({
-              title: data.data.dataList[that.index].shareInfo.title,
-              desc: data.data.dataList[that.index].shareInfo.desc,
-              link: data.data.dataList[that.index].shareInfo.link,
-              imgUrl: data.data.dataList[that.index].shareInfo.imgUrl
-            });
+            // 
+            try {
+              share.setShareInfo({
+                title: data.data.dataList[that.index].shareInfo.title,
+                desc: 'hahahahh',
+                link: data.data.dataList[that.index].shareInfo.link,
+                imgUrl: data.data.dataList[that.index].shareInfo.imgUrl
+              });
+            } catch (err) {
+              alert(err)
+            }
+            
           }
         })
       })
@@ -200,14 +205,16 @@
           albumId:getQuery('albumId'),
           shareUserId:getQuery('shareUserId') || ''
         }
+        alert('hah')
         api('/api/mg/content/album/subscription', obj).then(function(result){
           let {code,data:{msg,payUrl,jsApi}}=result;
+          alert(code)
           if (code == 0){
             if (result.data.code == 300){
               if(jsApi){
                   jsApi.jsApiParameters.dvdhref=location.href;
-                  window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
-                  // bravetime.goto("http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters)));
+                  // window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                  window.location.href = "http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
               }else if(payUrl){
                 // that.nativePay(payUrl,function (flag) {
                 //   if(flag){
@@ -364,7 +371,7 @@
           $('.allAudio').get(0).src = that.musicList[that.musicList.length -1 - that.index].fileLink
           $('.allAudio').get(0).play()
           $('.allAudio').get(0).onloadedmetadata = function(){
-            that.musicList[that.index].time = $('.allAudio').get(0).duration
+            that.musicList[that.musicList.length -1 - that.index].time = $('.allAudio').get(0).duration
             that.playTimer = setInterval(function(){
               that.playTime = parseInt(that.playTime) + 1
             },1000)
@@ -382,9 +389,9 @@
             $('.allAudio').get(0).pause()
           }else {
             that.isPlay = true
-            $('.allAudio').get(0).src = that.musicList[that.index].fileLink
+            $('.allAudio').get(0).src = that.musicList[that.musicList.length -1 - that.index].fileLink
             $('.allAudio').get(0).onloadedmetadata = function(){
-              that.musicList[that.index].time = $('.allAudio').get(0).duration
+              that.musicList[that.musicList.length -1 - that.index].time = $('.allAudio').get(0).duration
               $('.allAudio').get(0).currentTime = that.playTime;
               $('.allAudio').get(0).play()
               that.playTimer = setInterval(function(){
