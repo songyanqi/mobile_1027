@@ -52,7 +52,7 @@
       <div class="mask_banner">
         <div class='mask_banner_content'>
           <div class="mask_padding mask_list" v-for='(item, i) in musicList' @click='playAudio(i)'>
-            <div class="list_name" v-text='item.music' :class='{list_name_select: i==index}'></div>
+            <div class="list_name" v-text='musicList[musicList.length-i-1].music' :class='{list_name_select: i==index}'></div>
             <div class="list_img">
               <img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt="" v-if='i!=index'>
               <img src="//pic.davdian.com/free/2017/08/22/audioIcon.gif" alt="" v-if='i==index' class='list_img_select'>
