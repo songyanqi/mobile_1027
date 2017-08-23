@@ -5,16 +5,53 @@
   <link rel="stylesheet" href="[[static]]/page/choose_mama_adviser/css/choose_mama_adviser.css[[v]]">
 </head>
 <body>
-  <div class="app">
-    <!--标题-->
-    <com-top-title title="选择妈妈顾问" home></com-top-title>
+<div class="app">
+  <!--标题-->
+  <com-top-title :title="选择妈妈顾问" home></com-top-title>
 
-
-    <!--返回顶部-->
-    <com-to-top-icon></com-to-top-icon>
+  <div>
+    <!--&lt;!&ndash;妈妈顾问选择信息&ndash;&gt;-->
+    <!--<div class="title"><a href="http://murphylee.davdian.com/order_list.html" class="btns"><span-->
+      <!--class="name">我的订单</span> <span class="more"><span>全部订单<img-->
+      <!--src="//fe-ws.davdian.com/wap/static/dist/static/page/center/img/arrow-right.png" class="arrow"></span></span></a>-->
+    <!--</div>-->
   </div>
+</div>
 
-  @@include('vendor.include')
-  <script src="[[static]]/page/choose_mama_adviser/js/choose_mama_adviser.js[[v]]"></script>
+@@include('vendor.include')
+<script src="[[static]]/page/choose_mama_adviser/js/choose_mama_adviser.js[[v]]"></script>
 </body>
+<style>
+  .title {
+    background: white;
+  }
+  .title .btns {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px;
+    line-height: 20px;
+  }
+  .title .btns .name {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: block;
+    font-size: 14px;
+    text-align: left;
+  }
+  .title .btns .more {
+    font-size: 12px;
+    color: #999;
+  }
+  .title .btns .more .arrow {
+    position: relative;
+    top: 2px;
+    height: 14px;
+  }
+</style>
 </html>
