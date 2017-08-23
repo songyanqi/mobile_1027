@@ -3,8 +3,8 @@
     <div class="mask"></div>
     <div class="banner">
       <div class="big_img"><img src="//pic.davdian.com/free/2017/08/21/Group5.png" alt=""></div>
-      <div style="text-align: center;margin-top: 0.3rem;">无法连接网络啦</div>
-      <div class="btn" style="margin-top: 0.2rem;" @click="reload">点击重新加载</div>
+      <div style="text-align: center;margin-top: 0.3rem;">合辑没有音频啊</div>
+      <!--<div class="btn" style="margin-top: 0.2rem;" @click="reload">点击重新加载</div>-->
     </div>
   </div>
 </template>

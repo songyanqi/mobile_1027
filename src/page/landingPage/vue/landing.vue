@@ -6,6 +6,8 @@
     <maskk v-if="isApp && maskFlag"></maskk>
     <maskk2 v-if="!isApp && maskFlag"></maskk2>
     <top v-if="!isApp"></top>
+    <data_mask v-if="isApp && maskFlag2"></data_mask>
+    <data_mask2 v-if="!isApp && maskFlag2"></data_mask2>
   </div>
 </template>
 <script>
@@ -21,11 +23,15 @@
   import maskk from "./mask.vue"
   import maskk2 from "./mask2.vue"
   import top from "../../../component/com-to-top-icon.vue"
+  import data_mask from "./data_mask.vue"
+  import data_mask2 from "./data_mask2.vue"
   export default {
     components:{
       index_feed:index_feed,
       lheader:lheader,
       maskk:maskk,
+      data_mask:data_mask,
+      data_mask2:data_mask2,
       maskk2:maskk2,
       top:top
     },
@@ -36,7 +42,8 @@
             upTime:0,
             name:"landingPage",
             isApp:util.utils.isApp(),
-            maskFlag:false
+            maskFlag:false,
+            maskFlag2:false
         }
     },
 
@@ -65,9 +72,10 @@
                     }
                   })
                 }else{
-                  that.maskFlag=true;
+                  that.maskFlag2=true;
                 }
               }else{
+                that.maskFlag=true;
                 if(result.data.msg){
                   dialog.alert('code:'+result.code+ ":msg"+result.data.msg);
                 }else{
@@ -101,7 +109,7 @@
                       that.pageFlag=true;
                     }
                   }else{
-                    //是显示错误页么？
+
                   }
 
                 }else{
@@ -110,10 +118,8 @@
                   }else{
                     dialog.alert('code:'+result.code);
                   }
-
                 }
               }).catch(function(e){
-                that.maskFlag=true;
                 console.log('e:', e)
             });
           }

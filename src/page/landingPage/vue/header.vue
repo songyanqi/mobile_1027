@@ -4,7 +4,7 @@
       <div class="head_img" @click="history">
         <i class="back-arrow"></i>
       </div>
-      <div class="head_title">标题标题</div>
+      <div class="head_title">免费学习专区</div>
     </div>
   </div>
 </template>

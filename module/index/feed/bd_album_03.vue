@@ -1,5 +1,6 @@
 <template>
   <div class="top" id="top">
+    ::{{ maskFlag }}::
     <div class="tab" id="tab2" :class="{ tab_fixed2 :empty_tab }" v-if="isApp">
       <div class="tab_list" v-if="flag" @click="fn">
         <div class="border color1" v-text="dataList.content"></div>
@@ -68,7 +69,8 @@
     <div v-if="!flag" v-html="dataList.recommendData">
 
     </div>
-
+    <maskk v-if="isApp && maskFlag"></maskk>
+    <maskk2 v-if="!isApp && maskFlag"></maskk2>
   </div>
 </template>
 <script>
@@ -77,6 +79,9 @@
   import dialog from '../../../utils/dialog.es6';
   import api from "../../../utils/api.es6"
   import {getQuery} from '../../../utils/utils.es6';
+
+  import maskk from "../../../src/page/collect/vue/mask.vue"
+  import maskk2 from "../../../src/page/collect/vue/mask2.vue"
   export default {
       props:["data"],
       mounted:function () {
@@ -108,6 +113,8 @@
           },2000)
           
         });
+
+        this.check_contentList();
       },
       data(){
           return {
@@ -123,12 +130,22 @@
               pageFlag:true,
               isSub:0,
               pageAlbumId:getQuery("albumId"),
-              empty_tab:false
+              empty_tab:false,
+              maskFlag:false
           }
       },
+      components:{
+        maskk:maskk,
+        maskk2:maskk2
+      },
       methods:{
+          check_contentList(){
+              if((typeof this.contentList[0])==="undefined"){
+                this.maskFlag=true;
+              }
+          },
           timeFormat(t){
-            let time = parseInt(t) + 1
+            let time = Math.ceil(t);
             if (time<60){
               if (time<10){
                 time = '0' + parseInt(t)
@@ -249,7 +266,7 @@
                         that.pageFlag=true;
                       }
                     }else{
-                        //显示请求接口错误页
+
                     }
                   }else{
                     if(result.data.msg){
