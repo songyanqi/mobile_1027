@@ -1018,12 +1018,14 @@ export default {
                 shareMoney = Number(dataExtra.price.normalIncome) * Number(dataExtra.price.activityRatio);
               }
             }
-
+            native.Browser.initHead({
+              isAudioAbsorb:'1'
+            });
             if (shareMoney > 0) {
+
               native.Browser.setHead({
                 shareMoney: shareMoney + "",
                 shareMoneyStr: '赚' + shareMoney + '元',
-                isAudioAbsorb:'1'
               });
               window.moreShareInfo = {
                 shareTitle: "分享至少赚" + shareMoney + "元",
