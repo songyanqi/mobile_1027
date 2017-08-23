@@ -22,7 +22,6 @@ vueLazyload.init();
 new Vue({
   el: ".app",
   components: {
-    'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
     'musicDetail': require('../vue/musicDetail.vue'),
   },
   data() {

@@ -65,7 +65,7 @@ export default {
                     } else {
                         if (code==30000){
                             that.visitor_status = 0
-                            native.Browser.setHead({shareBtn:'0'})
+                            native.Browser.setHead({shareBtn:'0',isAudioAbsorb:'1'})
                         }else {
                             that.error = true;
                             bravetime.info("数据获取异常"+code);
@@ -117,7 +117,7 @@ export default {
                     return false;
                 }
                 if (result.visitor_status == 0){
-                    native.Browser.setHead({shareBtn:'0'})
+                    native.Browser.setHead({shareBtn:'0',isAudioAbsorb:'1'})
                 }
                 let {code, data, visitor_status}=result;
                 if(+code){
@@ -128,7 +128,7 @@ export default {
                     } else {
                         if (code==30000){
                             that.visitor_status = 0
-                            native.Browser.setHead({shareBtn:'0'})
+                            native.Browser.setHead({shareBtn:'0',isAudioAbsorb:'1'})
                         }else {
                             that.error = true;
                             bravetime.info("数据获取异常"+code);
