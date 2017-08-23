@@ -50,13 +50,8 @@ native.custom.onWebviewBack();
  * 功能：检测是否需要domain跳转
  */
 function checkRedirect(domain) {
-  alrt(123);
   // 当前域名与强制域名和小写强制域名都不符时，跳转到强制域名
-  alert(domain && domain !== location.host && ''.toLowerCase && new String(domain).toLowerCase() !== location.host)
 
-  alert(domain && domain !== location.host && ''.toLowerCase && new String(domain).toLowerCase() !== location.host)
-  alert(domain)
-  alert(location.host)
   if (domain && domain !== location.host && ''.toLowerCase && new String(domain).toLowerCase() !== location.host) {
     // nemo逻辑，设置临时跳转路径
     // sessionStorage.setItem('temp_domain', location.hostname);
@@ -96,7 +91,6 @@ export default {
    * 说明：每个接口公参会返回强制跳转字段，如果这个字段有值并且与当前域名不同则跳转
    */
   checkRedirect(response) {
-    alert(44)
     // nemo逻辑 //
     // 百度脑图：http://naotu.baidu.com/file/845581a94947715ba1c8cf832d46eb37?token=bb2bd462d2f5f75f
     // if (response.code === 0 || response.code === '11012' || response.code === '11013') {
