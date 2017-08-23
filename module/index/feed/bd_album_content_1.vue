@@ -100,7 +100,7 @@
           if(this.isApp){
             native.Audio.audioLocation({
               success: function (obj) {
-                // window.iosInterface.getAudioState(obj);
+                 window.iosInterface.getAudioState(obj);
               }
             })
           }

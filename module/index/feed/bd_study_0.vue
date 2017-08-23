@@ -1,5 +1,6 @@
 <template>
   <div class="con" @click="go_landing">
+    <tt_com_0 :data="data"></tt_com_0>
     <!--<div class="big_img">-->
       <!--<div class="list_line"></div>-->
       <!--<div class="list_date" v-text="title"></div>-->
@@ -12,10 +13,11 @@
           <div class="list_left">
             <div class="list_content" v-text="item.title"></div>
             <div class="times">
-              <div class="time" v-text="item.time"></div>
+              <div class="time" v-text="timeFormat(item.time)"></div>
               <div class="name" v-text="item.album"></div>
             </div>
           </div>
+
           <div class="list_right">
             <div class="disable" @click.stop="stop_info" v-if="item.isPlay==0"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
             <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 && ( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
@@ -32,8 +34,12 @@
   import util from "../../../utils/utils.es6";
   import native from "../../../src/common/js/module/native";
   import dialog from "../../../utils/dialog.es6";
+  import tt_com_0 from './tt_com_0.vue'
   export default{
     props:["data"],
+    components:{
+      tt_com_0:tt_com_0
+    },
     mounted:function () {
       this.dataList=this.data.body.dataList;
       this.title=this.data.title.name;
@@ -53,6 +59,41 @@
      }
     },
     methods:{
+      timeFormat(t){
+        let time = Math.ceil(t);
+        if (time<60){
+          if (time<10){
+            time = '0' + parseInt(t)
+          }
+          return '00:'+time
+        }else {
+          if (time<3600){
+            let minutes = parseInt(time/60)
+            let seconds = time - minutes*60
+            if (minutes<10){
+              minutes = '0' + minutes
+            }
+            if (seconds<10){
+              seconds = '0' + seconds
+            }
+            return minutes + ':' + seconds
+          }else {
+            let hours = parseInt(time/3600)
+            let minutes = parseInt((time-hours*3600)/60)
+            let seconds = time - hours*3600 - minutes*60
+            if (hours<10){
+              hours = '0' + hours
+            }
+            if (minutes<10){
+              minutes = '0' + minutes
+            }
+            if (seconds<10){
+              seconds = '0' + seconds
+            }
+            return hours + ':' + minutes + ':' + seconds
+          }
+        }
+      },
       stop_info(){
         dialog.alert("订阅后才可收听");
       },
