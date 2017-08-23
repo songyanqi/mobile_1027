@@ -90,10 +90,11 @@ export default {
                             window.singlePicHold(ele);
                         })
                     });
-                    if (!error && deleteFlag && visitor_status!=0){
-                        native.Browser.initHead({
-                          isAudioAbsorb:'1'
-                        });
+                    window.appData={
+                        isAudioAbsorb:1
+                    }
+                    if (!error && deleteFlag){
+                        
                     }
                 }
                 console.log(that.userId, window.teacherId)

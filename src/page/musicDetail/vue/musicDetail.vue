@@ -72,7 +72,6 @@
   import api from "../../../../utils/api.es6"
   import util from "../../../../utils/utils.es6";
   import dialog from "../../../../utils/dialog.es6";
-  // import wx from "../../../../utils/WXShare.es6"
   import native from '../../../common/js/module/native.js'
   import popup from '../../../common/js/module/popup.js'
   import share from '../../../common/js/module/share.js';
@@ -109,7 +108,7 @@
       introduction(){
         if (this.isapp){
           if ($('.bottom_text img').length ==0){
-            if (this.musicList && this.musicList[this.index] && this.musicList[this.index].introduction){
+            if (this.musicList && this.musicList[this.musicList.length-this.index-1] && this.musicList[this.musicList.length-this.index-1].introduction){
               setTimeout(function(){
                 native.Browser.showWebHeight({
                   "webHeight": ($('.bottom_text').height()+30).toString()
@@ -126,7 +125,7 @@
             },1200)
           }
         }
-        return this.musicList && this.musicList[this.index] && this.musicList[this.index].introduction || null
+        return this.musicList && this.musicList[this.musicList.length-this.index-1] && this.musicList[this.musicList.length-this.index-1].introduction || null
       }
     },
     created: function () {
@@ -169,12 +168,18 @@
           }
           console.log(that.index ,data.data.dataList[that.index].shareInfo)
           if (data && data.data && data.data.dataList && data.data.dataList[that.index] && data.data.dataList[that.index].shareInfo){
-            share.setShareInfo({
-              title: data.data.dataList[that.index].shareInfo.title,
-              desc: data.data.dataList[that.index].shareInfo.desc,
-              link: data.data.dataList[that.index].shareInfo.link,
-              imgUrl: data.data.dataList[that.index].shareInfo.imgUrl
-            });
+            // 
+            try {
+              share.setShareInfo({
+                title: data.data.dataList[that.index].shareInfo.title,
+                desc: 'hahahahh',
+                link: data.data.dataList[that.index].shareInfo.link,
+                imgUrl: data.data.dataList[that.index].shareInfo.imgUrl
+              });
+            } catch (err) {
+              alert(err)
+            }
+            
           }
         })
       })
@@ -200,14 +205,17 @@
           albumId:getQuery('albumId'),
           shareUserId:getQuery('shareUserId') || ''
         }
+        alert(1)
         api('/api/mg/content/album/subscription', obj).then(function(result){
           let {code,data:{msg,payUrl,jsApi}}=result;
+          alert(0)
           if (code == 0){
             if (result.data.code == 300){
               if(jsApi){
+                  alert(jsApi)
                   jsApi.jsApiParameters.dvdhref=location.href;
-                  window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
-                  // bravetime.goto("http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters)));
+                  // window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                  window.location.href = "http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
               }else if(payUrl){
                 // that.nativePay(payUrl,function (flag) {
                 //   if(flag){
@@ -323,7 +331,7 @@
               return
             }
           }
-          if (that.musicList[index].isPlay != 1){
+          if (that.musicList[that.musicList.length-index-1].isPlay != 1){
             popup.confirm({
               title: '提示',            // 标题（支持传入html。有则显示。）
               text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
@@ -338,7 +346,7 @@
           }
         } else {
           // alert(that.index)
-          if (that.musicList[that.index].isPlay != 1){
+          if (that.musicList[that.musicList.length-that.index-1].isPlay != 1){
             popup.confirm({
               title: '提示',            // 标题（支持传入html。有则显示。）
               text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
@@ -364,7 +372,7 @@
           $('.allAudio').get(0).src = that.musicList[that.musicList.length -1 - that.index].fileLink
           $('.allAudio').get(0).play()
           $('.allAudio').get(0).onloadedmetadata = function(){
-            that.musicList[that.index].time = $('.allAudio').get(0).duration
+            that.musicList[that.musicList.length -1 - that.index].time = $('.allAudio').get(0).duration
             that.playTimer = setInterval(function(){
               that.playTime = parseInt(that.playTime) + 1
             },1000)
@@ -382,9 +390,9 @@
             $('.allAudio').get(0).pause()
           }else {
             that.isPlay = true
-            $('.allAudio').get(0).src = that.musicList[that.index].fileLink
+            $('.allAudio').get(0).src = that.musicList[that.musicList.length -1 - that.index].fileLink
             $('.allAudio').get(0).onloadedmetadata = function(){
-              that.musicList[that.index].time = $('.allAudio').get(0).duration
+              that.musicList[that.musicList.length -1 - that.index].time = $('.allAudio').get(0).duration
               $('.allAudio').get(0).currentTime = that.playTime;
               $('.allAudio').get(0).play()
               that.playTimer = setInterval(function(){
