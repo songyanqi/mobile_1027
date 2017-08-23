@@ -26905,6 +26905,9 @@
 
 	// module
 <<<<<<< HEAD
+	exports.push([module.id, ".class_introduce_right {\n  padding: 4px 10px 10px;\n  color: #666; }\n  .class_introduce_right a {\n    display: block; }\n  .class_introduce_right .class_introduce_con {\n    padding-top: 10px;\n    color: #333; }\n  .class_introduce_right .teacher_tit img {\n    width: 40px;\n    height: 40px;\n    border-radius: 40px; }\n  .class_introduce_right .teacher_tit .teacher_dis {\n    display: inline-block;\n    color: #333;\n    vertical-align: middle; }\n  .class_introduce_right .class_introduce_text {\n    color: #666;\n    margin-top: 10px;\n    word-break: break-all; }\n\n.guest_introduce_con {\n  margin-top: 10px;\n  border-top: #eee solid 1px; }\n\n.class_intrduce_left {\n  color: #666; }\n  .class_intrduce_left .class_intrduce_left_div {\n    padding-bottom: 6px; }\n  .class_intrduce_left .class_intrduce_left_img {\n    margin-bottom: 10px;\n    border-radius: 7px; }\n", ""]);
+=======
+<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-8e6e84e0] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-8e6e84e0] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-8e6e84e0] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-8e6e84e0] {\n  width: 3.75rem;\n}\n\n.content_title[_v-8e6e84e0] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-8e6e84e0] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-8e6e84e0] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-8e6e84e0] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-8e6e84e0] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-8e6e84e0] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-8e6e84e0]{\n  position: relative;\n}\n.history_mask[_v-8e6e84e0]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-8e6e84e0]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-8e6e84e0] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-8e6e84e0]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n", ""]);
 =======
 <<<<<<< HEAD
@@ -27111,6 +27114,7 @@
 	//   </div>
 	// </template>
 	// <script>
+>>>>>>> 1b61be805c777f0c34710bf0b1f7f1b3ff3c171b
 
 /***/ },
 /* 408 */
@@ -27751,8 +27755,9 @@
 	};
 
 /***/ },
-<<<<<<< HEAD
 /* 426 */
+<<<<<<< HEAD
+=======
 =======
 /* 413 */
 /***/ function(module, exports) {
@@ -27838,6 +27843,7 @@
 /***/ },
 /* 417 */
 >>>>>>> 0b54af84df02497af10090e204f4a8681b627f43
+>>>>>>> 1b61be805c777f0c34710bf0b1f7f1b3ff3c171b
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34908,10 +34914,14 @@
 
 	// module
 <<<<<<< HEAD
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.con[_v-671bd1c0]{\n  background: white;\n}\n.title img[_v-671bd1c0]{\n  margin-top: 0.02rem;\n  width: 2.5rem;\n  height: 0.16rem;\n}\n.list[_v-671bd1c0]{\n  padding-top:0.1rem;\n  padding-bottom:0.1rem;\n  font-size: 0;\n  position: relative;\n}\n.list>div[_v-671bd1c0]{\n  display:inline-block;\n}\n.list_left[_v-671bd1c0]{\n  font-size: 0.14rem;\n}\n.list_right[_v-671bd1c0]{\n  font-size:0.11rem;\n  position: absolute;\n  right: 0;\n  margin-top: 0.05rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n\n.list_content[_v-671bd1c0]{\n  max-width: 3rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  margin-bottom: 0.05rem;\n}\n.list_right img[_v-671bd1c0]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 47px;\n}\n\n.list_right>div[_v-671bd1c0]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-671bd1c0]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-671bd1c0],.mask_stop[_v-671bd1c0]{\n  z-index:3;\n}\n\n\n.list_all[_v-671bd1c0]{\n  padding: 0 0.1rem;\n  border-top: 1px solid #E1E1E1;\n}\n.times>div[_v-671bd1c0]{\n  display: inline-block;\n  font-size: 0;\n  line-height:0.16rem;\n}\n.times .time[_v-671bd1c0]{\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  font-size:11px;\n  margin-right:0.05rem;\n}\n.times .name[_v-671bd1c0]{\n  font-size: 11px;\n}\n.all .list_all[_v-671bd1c0]:nth-child(1){\n  border: 0;\n}\n\n\n\n.big_img[_v-671bd1c0]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.15rem;\n  padding-bottom:0.05rem;\n  font-size: 0;\n  position:relative;\n}\n.big_img>div[_v-671bd1c0]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-671bd1c0]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-671bd1c0]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n.fixed[_v-671bd1c0]{\n  position: absolute;\n  right: 0.1rem;\n  font-size: 0;\n}\n.fixed>div[_v-671bd1c0]{\n  display: inline-block;\n  vertical-align: top;\n}\n.arrow[_v-671bd1c0]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n.arrow img[_v-671bd1c0]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n\n.disable[_v-671bd1c0]{\n  z-index: 5;\n}\n\n", ""]);
+=======
+<<<<<<< HEAD
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.con[_v-7430464b]{\n  background: white;\n}\n.title img[_v-7430464b]{\n  margin-top: 0.02rem;\n  width: 2.5rem;\n  height: 0.16rem;\n}\n.list[_v-7430464b]{\n  padding-top:0.1rem;\n  padding-bottom:0.1rem;\n  font-size: 0;\n  position: relative;\n}\n.list>div[_v-7430464b]{\n  display:inline-block;\n}\n.list_left[_v-7430464b]{\n  font-size: 0.14rem;\n}\n.list_right[_v-7430464b]{\n  font-size:0.11rem;\n  position: absolute;\n  right: 0;\n  margin-top: 0.05rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n\n.list_content[_v-7430464b]{\n  max-width: 3rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  margin-bottom: 0.05rem;\n}\n.list_right img[_v-7430464b]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 47px;\n}\n\n.list_right>div[_v-7430464b]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-7430464b]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-7430464b],.mask_stop[_v-7430464b]{\n  z-index:3;\n}\n\n\n.list_all[_v-7430464b]{\n  padding: 0 0.1rem;\n  border-top: 1px solid #E1E1E1;\n}\n.times>div[_v-7430464b]{\n  display: inline-block;\n  font-size: 0;\n  line-height:0.16rem;\n}\n.times .time[_v-7430464b]{\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  font-size:11px;\n  margin-right:0.05rem;\n}\n.times .name[_v-7430464b]{\n  font-size: 11px;\n}\n.all .list_all[_v-7430464b]:nth-child(1){\n  border: 0;\n}\n\n\n\n.big_img[_v-7430464b]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.15rem;\n  padding-bottom:0.05rem;\n  font-size: 0;\n  position:relative;\n}\n.big_img>div[_v-7430464b]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-7430464b]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-7430464b]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n.fixed[_v-7430464b]{\n  position: absolute;\n  right: 0.1rem;\n  font-size: 0;\n}\n.fixed>div[_v-7430464b]{\n  display: inline-block;\n  vertical-align: top;\n}\n.arrow[_v-7430464b]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n.arrow img[_v-7430464b]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n\n\n", ""]);
 =======
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.con[_v-671bd1c0]{\n  background: white;\n}\n.title img[_v-671bd1c0]{\n  margin-top: 0.02rem;\n  width: 2.5rem;\n  height: 0.16rem;\n}\n.list[_v-671bd1c0]{\n  padding-top:0.1rem;\n  padding-bottom:0.1rem;\n  font-size: 0;\n  position: relative;\n}\n.list>div[_v-671bd1c0]{\n  display:inline-block;\n}\n.list_left[_v-671bd1c0]{\n  font-size: 0.14rem;\n}\n.list_right[_v-671bd1c0]{\n  font-size:0.11rem;\n  position: absolute;\n  right: 0;\n  margin-top: 0.05rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n\n.list_content[_v-671bd1c0]{\n  max-width: 3rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  margin-bottom: 0.05rem;\n}\n.list_right img[_v-671bd1c0]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 47px;\n}\n\n.list_right>div[_v-671bd1c0]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-671bd1c0]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-671bd1c0],.mask_stop[_v-671bd1c0]{\n  z-index:3;\n}\n\n\n.list_all[_v-671bd1c0]{\n  padding: 0 0.1rem;\n  border-top: 1px solid #E1E1E1;\n}\n.times>div[_v-671bd1c0]{\n  display: inline-block;\n  font-size: 0;\n  line-height:0.16rem;\n}\n.times .time[_v-671bd1c0]{\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  font-size:11px;\n  margin-right:0.05rem;\n}\n.times .name[_v-671bd1c0]{\n  font-size: 11px;\n}\n.all .list_all[_v-671bd1c0]:nth-child(1){\n  border: 0;\n}\n\n\n\n.big_img[_v-671bd1c0]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.15rem;\n  padding-bottom:0.05rem;\n  font-size: 0;\n  position:relative;\n}\n.big_img>div[_v-671bd1c0]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-671bd1c0]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-671bd1c0]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n.fixed[_v-671bd1c0]{\n  position: absolute;\n  right: 0.1rem;\n  font-size: 0;\n}\n.fixed>div[_v-671bd1c0]{\n  display: inline-block;\n  vertical-align: top;\n}\n.arrow[_v-671bd1c0]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n.arrow img[_v-671bd1c0]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n\n\n", ""]);
 >>>>>>> ac8c6a3f79157e0d30cd0ee3a50359f9a6cb8016
+>>>>>>> 1b61be805c777f0c34710bf0b1f7f1b3ff3c171b
 
 	// exports
 
@@ -35133,6 +35143,9 @@
 	  //     height: 0.14rem;
 	  //   }
 	  //
+	  //   .disable{
+	  //     z-index: 5;
+	  //   }
 	  //
 	  // </style>
 	  //
@@ -35157,7 +35170,7 @@
 	//             </div>
 	//           </div>
 	//           <div class="list_right">
-	//             <div class="disable" @click="stop_info" v-if="item.isPlay==0"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+	//             <div class="disable" @click.stop="stop_info" v-if="item.isPlay==0"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
 	//             <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 && ( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
 	//             <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 &&  !( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" ><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
 	//             <div class="circle_mask"></div>
@@ -35174,7 +35187,11 @@
 /* 545 */
 /***/ function(module, exports) {
 
+<<<<<<< HEAD
+	module.exports = "\n<div class=\"con\" @click=\"go_landing\" _v-671bd1c0=\"\">\n  <div class=\"big_img\" _v-671bd1c0=\"\">\n    <div class=\"list_line\" _v-671bd1c0=\"\"></div>\n    <div class=\"list_date\" _v-671bd1c0=\"\">免费学习专区</div>\n    <div class=\"list_line\" _v-671bd1c0=\"\"></div>\n    <div class=\"fixed\" _v-671bd1c0=\"\"><div style=\"color:#333333;font-size: 12px;\" _v-671bd1c0=\"\">更多</div><div class=\"arrow\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/entry.png\" alt=\"\" _v-671bd1c0=\"\"></div></div>\n  </div>\n  <div class=\"all\" _v-671bd1c0=\"\">\n    <div class=\"list_all\" v-for=\"item in dataList\" _v-671bd1c0=\"\">\n      <div class=\"list\" _v-671bd1c0=\"\">\n        <div class=\"list_left\" _v-671bd1c0=\"\">\n          <div class=\"list_content\" v-text=\"item.title\" _v-671bd1c0=\"\"></div>\n          <div class=\"times\" _v-671bd1c0=\"\">\n            <div class=\"time\" v-text=\"item.time\" _v-671bd1c0=\"\"></div>\n            <div class=\"name\" v-text=\"item.album\" _v-671bd1c0=\"\"></div>\n          </div>\n        </div>\n        <div class=\"list_right\" _v-671bd1c0=\"\">\n          <div class=\"disable\" @click.stop=\"stop_info\" v-if=\"item.isPlay==0\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-671bd1c0=\"\"></div>\n          <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp; ( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-671bd1c0=\"\"></div>\n          <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp;  !( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-671bd1c0=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-671bd1c0=\"\"></div>\n          <div class=\"circle_mask\" _v-671bd1c0=\"\"></div>\n          <div _v-671bd1c0=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-671bd1c0=\"\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
+=======
 	module.exports = "\n<div class=\"con\" @click=\"go_landing\" _v-7430464b=\"\">\n  <div class=\"big_img\" _v-7430464b=\"\">\n    <div class=\"list_line\" _v-7430464b=\"\"></div>\n    <div class=\"list_date\" _v-7430464b=\"\">免费学习专区</div>\n    <div class=\"list_line\" _v-7430464b=\"\"></div>\n    <div class=\"fixed\" _v-7430464b=\"\"><div style=\"color:#333333;font-size: 12px;\" _v-7430464b=\"\">更多</div><div class=\"arrow\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/entry.png\" alt=\"\" _v-7430464b=\"\"></div></div>\n  </div>\n  <div class=\"all\" _v-7430464b=\"\">\n    <div class=\"list_all\" v-for=\"item in dataList\" _v-7430464b=\"\">\n      <div class=\"list\" _v-7430464b=\"\">\n        <div class=\"list_left\" _v-7430464b=\"\">\n          <div class=\"list_content\" v-text=\"item.title\" _v-7430464b=\"\"></div>\n          <div class=\"times\" _v-7430464b=\"\">\n            <div class=\"time\" v-text=\"item.time\" _v-7430464b=\"\"></div>\n            <div class=\"name\" v-text=\"item.album\" _v-7430464b=\"\"></div>\n          </div>\n        </div>\n        <div class=\"list_right\" _v-7430464b=\"\">\n          <div class=\"disable\" @click=\"stop_info\" v-if=\"item.isPlay==0\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp; ( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp;  !( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"circle_mask\" _v-7430464b=\"\"></div>\n          <div _v-7430464b=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-7430464b=\"\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
+>>>>>>> 1b61be805c777f0c34710bf0b1f7f1b3ff3c171b
 
 /***/ },
 /* 546 */
