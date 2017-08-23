@@ -243,32 +243,29 @@ export default {
     this.getIsApp();
   },
   mounted() {
-    let that = this;
-    this.$nextTick(function () {
-      that.dumpToMamaAdviser();
-    });
   },
   methods: {
     dumpToMamaAdviser() {
       if(isTryShop()){
-        api('/api/mg/auth/inviter/checkAdviser', {
-          dataType: "json",
-          type: "post"
-        }).then(function (result) {
-          if (!result.code && result.data.needPop) {
-            popup.alert({
-              title: "请选择妈妈顾问",
-              text: "选择妈妈顾问，购物学习更轻松",
-              btnTitle: "好的",
-              btnCallback() {
-                location.href = result.data.url;
-              }
-            })
-          }
-        })
-          .catch(function (error) {
-            console.log('error:', error)
+          api('/api/mg/auth/inviter/checkAdviser', {
+            dataType: "json",
+            type: "post"
+          }).then(function (result) {
+            if (!result.code && result.data.needPop) {
+              popup.specialAlert({
+                title: "<div style='width: 1.51rem;margin-left: auto;margin-right: auto;margin-top: -0.5rem;'><img src='http://pic.davdian.com/free/2017816/mamaguwen.png'></div>",
+                text: " <div style='text-align:left'>亲爱的大V妈妈，我们将给您分配一个1对1服务的妈妈顾问，您有任何关于购物、学习、育儿、活动等疑问，都可以向她寻求帮助</div>",
+                btnTitle: "马上选择",
+                btnCallback() {
+                  location.replace(result.data.url)
+                }
+              })
+            }
           })
+            .catch(function (error) {
+              console.log('error:', error)
+            })
+
       }
     },
     getUrl() {
@@ -1140,6 +1137,8 @@ export default {
       };
       that.goodStatus = goodStatusObj;
 
+      // 判断妈妈顾问
+      that.dumpToMamaAdviser();
       //判断限时购是否抢光提示。
 
       if (dataExtra.status.onSale == '1' && dataExtra.sales.goodsStocks > '0' && dataExtra.hints.hintsInfo && dataExtra.hints.hintsInfo.length) {

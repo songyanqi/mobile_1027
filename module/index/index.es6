@@ -423,13 +423,13 @@ export default {
           dom.appendChild(mask);
           mask.style.height = document.body.offsetHeight + "px";
           mask.addEventListener("click", function () {
-            popup.confirm({
-              title: "请选择妈妈顾问",
-              text:"选择妈妈顾问，购物学习更轻松",
-              okBtnTitle:"我要选",
-              cancelBtnTitle:"我不选",
+            popup.specialConfirm({
+              title: "<div style='width: 1.51rem;margin-left: auto;margin-right: auto;margin-top: -0.5rem;'><img src='http://pic.davdian.com/free/2017816/mamaguwen.png'></div>",
+              text: " <div style='text-align:left'>亲爱的大V妈妈，我们将给您分配一个1对1服务的妈妈顾问，您有任何关于购物、学习、育儿、活动等疑问，都可以向她寻求帮助</div>",
+              okBtnTitle:"好的",
+              cancelBtnTitle:"暂不需要",
               okBtnCallback() {
-                location.href = result.data.url;
+                location.replace(result.data.url)
               },
               cancelBtnCallback() {
                 if(!isTryShop()){
