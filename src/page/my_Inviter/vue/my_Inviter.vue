@@ -89,7 +89,7 @@
               document.title = "我的邀请人";
               that.my_inviterPage = true;
               that.btnName = '修改邀请人';
-              if(response.data.editable == 1){
+              if(response.data.editable != 1){
                 that.trun_grey = true;
               }
             } else {

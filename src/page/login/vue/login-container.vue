@@ -328,18 +328,19 @@
           popup.toast("请输入正确的手机号");
           return false;
         }
-        document.title = "忘记密码";
         /*发送验证码成功后跳转到修改密码页*/
-
-        /*发送验证码*/
-        that.get_check_codes(1, 2, function () {
-          /*初始化数据*/
-          that.$emit("titlename", "忘记密码");
-          that.login_form = false;
-          that.forget_form = true;
-          that.get_check = true;
-          that.check_code = '';
-          that.password = '';
+        that.check_phone(function () {
+          /*发送验证码*/
+          that.get_check_codes(1, 2, function () {
+            /*初始化数据*/
+            that.$emit("titlename", "忘记密码");
+            document.title = "忘记密码";
+            that.login_form = false;
+            that.forget_form = true;
+            that.get_check = true;
+            that.check_code = '';
+            that.password = '';
+          })
         });
       },
       /*修改邀请人*/
@@ -462,6 +463,26 @@
             /*登录成功后跳转到refer页*/
             that.go_shop();
           },
+        });
+      },
+      /*验证手机号*/
+      check_phone:function (callback) {
+        var that = this;
+        $.ajax({
+          url: '/api/mg/auth/user/mobileExists?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: strSign({"mobile": that.mobile}),
+          success(response) {
+            if (response.code) {
+              popup.toast(response.data.msg || response.msg);
+            } else {
+              callback()
+            }
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+          }
         });
       }
     }
