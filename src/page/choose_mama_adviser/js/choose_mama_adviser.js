@@ -24,7 +24,7 @@ new Vue({
       showaddress2: {showaddress: false},
       address: '',
       addressId:-1,
-      oncesdesc: false,
+      oncesdesc: true,
       hobby: [false, false, false, false, false, false, false, false, false]
     }
   },

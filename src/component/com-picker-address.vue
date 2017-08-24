@@ -25,40 +25,54 @@
         this.$emit('addressdata',{name:this.addressName,value:this.addressValue[2]});
       },
       initValue:function(){
+        let that = this;
         console.time("initValue");
         if(this.addressid){
           this.addressValue[2] = this.addressid+"";
-          for(var i = 0,d=this.addressNow[i++];){
+          this.addressName = "";
+          for(var i = 0,d;d=this.addressNow[i++];){
             if(d.value==this.addressValue[2]){
               this.addressValue[1] = d.parent;
+              this.addressName=d.name;
               break;
             }
           }
-          for(var i = 0,d=this.addressNow[i++];){
+          for(var i = 0,d;d=this.addressNow[i++];){
             if(d.value==this.addressValue[1]){
               this.addressValue[0] = d.parent;
+              this.addressName=d.name+" "+this.addressName;
+              break;
+            }
+          }
+          for(var i = 0,d;d=this.addressNow[i++];){
+            if(d.value==this.addressValue[0]){
+              this.addressName=d.name+" "+this.addressName;
               break;
             }
           }
         }
-        
+        that.confirm();
         console.timeEnd("initValue");
+        
       }
     },
     props:['showaddress','addressid','addressDataUrl'],
     watch: {
 
     },
-    /*
+    
     created(){
       let that = this;
+      that.initValue();
+      /*
       let url = this.addressDataUrl||"https://src.davdian.com/data/region.1501055940.json";
       axios.get(url)
       .then(function(res){
         that.addressPre = res.data;
       })
+      */
     },
-    */
+    
     data() {
       return {
         addressNow: [
