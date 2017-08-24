@@ -133,6 +133,7 @@
     mounted: function () {
       var that =  this
       this.$nextTick(function(){
+        that.playData()
         $('a').on('click',function(event){
           event.preventDefault();
         })
@@ -207,6 +208,24 @@
       })
     },
     methods: {
+      playData(){
+        let that = this
+        let obj = {
+          albumId: getQuery('albumId'),
+          sortNo: getQuery('sortNo'),
+          duration: that.playTime,
+          play_type:1,
+        }
+        if (localStorage.getItem('expires_in')){
+          obj.expires_in = localStorage.getItem('expires_in')
+        }
+        if (localStorage.getItem('access_token')){
+          obj.expires_in = localStorage.getItem('access_token')
+        }
+        api('/api/mg/content/music/playTrackSingle',obj).then(function(data){
+          console.log('data--->', data)
+        })
+      },
       nativePay(url, callback){
         var option = {};
         option.url = encodeURIComponent(url);
@@ -227,14 +246,11 @@
           albumId:getQuery('albumId'),
           shareUserId:getQuery('shareUserId') || ''
         }
-        alert(1)
         api('/api/mg/content/album/subscription', obj).then(function(result){
           let {code,data:{msg,payUrl,jsApi}}=result;
-          alert(0)
           if (code == 0){
             if (result.data.code == 300){
               if(jsApi){
-                  alert(jsApi)
                   jsApi.jsApiParameters.dvdhref=location.href;
                   // window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
                   window.location.href = "http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
@@ -409,7 +425,6 @@
             return
           }
         } else {
-          // alert(that.index)
           if (that.musicList[that.musicList.length-that.index-1].isPlay != 1){
             popup.confirm({
               title: '提示',            // 标题（支持传入html。有则显示。）
