@@ -95,9 +95,11 @@ export default {
                     setTimeout(function(){
                         if (window.appData){
                             window.appData.isAudioAbsorb = 1
+                            window.appData.isShowAudio = 1
                         } else {
                             window.appData = {
-                                'isAudioAbsorb':1
+                                'isAudioAbsorb':1,
+                                'isShowAudio':1
                             }
                         }
                         window.bravetime.initHead()

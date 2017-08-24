@@ -236,8 +236,14 @@ export default {
           $(".top_h_s").css({"background": "rgba(250,250,250,"+ 0.01 * scrollTop +")"})
           sessionStorage['goodsPagePos'] = scrollTop;
         });
-        window.appData={
-          isAudioAbsorb:'1'
+        if (window.appData){
+          window.appData.isAudioAbsorb = 1
+          window.appData.isShowAudio = 1
+        } else {
+          window.appData = {
+            'isAudioAbsorb':1,
+            'isShowAudio':1
+          }
         }
       this.getCartNum();
       // this.getUrl();

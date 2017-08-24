@@ -41,7 +41,6 @@ new Vue({
         native.custom.initHead({
           shareOnHead: 1,
         });
-
         // 设置分享信息
         // try {
         //   share.setShareInfo({
