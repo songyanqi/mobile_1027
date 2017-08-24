@@ -134,24 +134,30 @@
                 if (result.data.code == 300) {
                   if (jsApi) {
                     jsApi.jsApiParameters.dvdhref = location.href;
-                    window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
-                    // bravetime.goto("http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters)));
+                    // window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                    window.location.href = "http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
                   } else if (payUrl) {
                     that.nativePay(payUrl, function (flag) {
                       if (flag) {
                         that.sub=1;
-                        // 报名成功(进不来)
                       }
                     });
                   } else {
                     that.sub=1;
-                    alert(123456);
-                    // 报名成功
+                    setTimeout(function(){
+                      that.$emit("re");
+                    },500)
                   }
                 } else {
-                  that.sub=1;
-                  dialog.alert(result.data.msg);
-                  that.$emit("re");
+                  if (result.data.code == 400){
+                    if (that.isapp){
+                      native.Account.login()
+                    }else {
+                      window.location.href = '/login.html'
+                    }
+                  }else {
+                    dialog.alert(result.data.msg);
+                  }
                 }
               }else {
                 dialog.alert('code:' + code + 'msg:'+ result.data.msg)

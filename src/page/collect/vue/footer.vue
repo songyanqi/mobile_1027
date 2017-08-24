@@ -21,7 +21,7 @@
   import native from "../../../../src/common/js/module/native.js"
   import dialog from "../../../../utils/dialog.es6";
   import {getQuery} from "../../../../utils/utils.es6";
-  import util from "../../../../utils/utils.es6"
+  import util from "../../../../utils/utils.es6";
   import share from "../../../../src/common/js/module/share.js"
   export default {
     props:["income","sub","userstatus","albumid","price","share"],
@@ -39,7 +39,7 @@
     data(){
       return {
         priceFlag:true,
-        isApp:util.utils.isApp()
+        isapp: util.utils.isApp()
       }
     },
     mounted:function () {
@@ -56,19 +56,6 @@
             "desc": that.shareInfo.desc,
             "imgUrl": that.shareInfo.imgUrl,
             "link": that.shareInfo.link
-          })
-
-          window.iosInterface.getShareInfo = function () {
-            var shareInfo = {
-              title: that.shareInfo.title,
-              desc: that.shareInfo.desc,
-              link: that.shareInfo.link,
-              imgUrl: that.shareInfo.imgUrl
-            };
-            return JSON.stringify(shareInfo);
-          };
-          native.Browser.setHead({
-            shareBtn:'1'
           })
         }else {
           share.setShareInfo({
@@ -118,24 +105,32 @@
               if (result.data.code == 300) {
                 if (jsApi) {
                   jsApi.jsApiParameters.dvdhref = location.href;
-                  window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
-                  // bravetime.goto("http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters)));
+                  // window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                  window.location.href = "http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
                 } else if (payUrl) {
                   that.nativePay(payUrl, function (flag) {
                     if (flag) {
                       that.sub=1;
-                      // 报名成功(进不来)
                     }
                   });
                 } else {
                   that.sub=1;
                   alert(123456);
-                  // 报名成功
+                  setTimeout(function(){
+                    that.$emit("re");
+                  },500)
                 }
               } else {
-                that.sub=1;
-                dialog.alert(result.data.msg);
-                that.$emit("re");
+                if (result.data.code == 400){
+                  if (that.isapp){
+                    native.Account.login()
+                  }else {
+                    window.location.href = '/login.html'
+                  }
+                } else {
+                  dialog.alert(result.data.msg);
+                }
+                
               }
             }else {
               dialog.alert('code:' + code + 'msg:'+ result.data.msg)

@@ -89,6 +89,15 @@
                     if (result.data.feedList.length >0){
                       that.pageFlag=true
                     }
+                    window.iosInterface.getShareInfo = function () {
+                      var shareInfo = {
+                        title: that.shareInfo.title,
+                        desc: that.shareInfo.desc,
+                        link: that.shareInfo.link,
+                        imgUrl: that.shareInfo.imgUrl
+                      };
+                      return JSON.stringify(shareInfo);
+                    };
                     native.Browser.setHead({
                       'title':that.title,
                       'backBtn':'1',

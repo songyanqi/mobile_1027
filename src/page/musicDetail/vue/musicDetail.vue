@@ -71,7 +71,6 @@
   import { getQuery } from "../../../../utils/utils.es6";
   import api from "../../../../utils/api.es6"
   import util from "../../../../utils/utils.es6";
-  import dialog from "../../../../utils/dialog.es6";
   import native from '../../../common/js/module/native.js'
   import popup from '../../../common/js/module/popup.js'
   import share from '../../../common/js/module/share.js';
@@ -155,13 +154,34 @@
               that.musicList = that.musicList.concat(data.data.dataList)
               that.allAudio = data.data.attr.count
             } else {
-              dialog.alert('接口返回feedlist数据为null')
+              popup.confirm({
+                title: '提示',
+                text: '接口返回feedlist数据为null',
+                okBtnTitle: '确定',
+                cancelBtnTitle: '取消',
+                okBtnCallback: function(){},
+                cancelBtnCallback: function(){}
+              });
             }
           } else {
             if (data.data && data.data.msg){
-              dialog.alert('code='+data.code + ';msg='+data.data.msg)
+              popup.confirm({
+                title: '提示',
+                text: 'code='+data.code + ';msg='+data.data.msg,
+                okBtnTitle: '确定',
+                cancelBtnTitle: '取消',
+                okBtnCallback: function(){},
+                cancelBtnCallback: function(){}
+              });
             } else {
-              dialog.alert('code='+data.code)
+              popup.confirm({
+                title: '提示',
+                text: 'code='+data.code,
+                okBtnTitle: '确定',
+                cancelBtnTitle: '取消',
+                okBtnCallback: function(){},
+                cancelBtnCallback: function(){}
+              });
             }
           }
           if (data && data.data && data.data.xmlyToken && data.data.xmlyToken.access_token){
@@ -230,11 +250,32 @@
               }
 
             }else {
-              dialog.alert(result.data.msg)
+              if (result.data.code == 400){
+                if (that.isapp){
+                  native.Account.login()
+                }else {
+                  window.location.href = '/login.html'
+                }
+              } else {
+                popup.confirm({
+                  title: '提示',
+                  text: result.data.msg,
+                  okBtnTitle: '确定',
+                  cancelBtnTitle: '取消',
+                  okBtnCallback: function(){},
+                  cancelBtnCallback: function(){}
+                });
+              }
             }
-            
           } else {
-            dialog.alert('code:' + code + 'msg:'+ result.data.msg)
+            popup.confirm({
+              title: '提示',
+              text: 'code:' + code + 'msg:'+ result.data.msg,
+              okBtnTitle: '确定',
+              cancelBtnTitle: '取消',
+              okBtnCallback: function(){},
+              cancelBtnCallback: function(){}
+            });
           }
           
         })
@@ -304,7 +345,14 @@
         },300)
       },
       dialog(){
-        dialog.alert('打开大V店APP，体验更佳')
+        popup.confirm({
+          title: '提示',
+          text: '打开大V店APP，体验更佳',
+          okBtnTitle: '确定',
+          cancelBtnTitle: '取消',
+          okBtnCallback: function(){},
+          cancelBtnCallback: function(){}
+        });
       },
       loadAudio(src, callback) {
           var audio = new Audio(src);
@@ -317,7 +365,14 @@
         if (index !=-100){
           if (index==-1){
             if (that.musicList[that.musicList.length-1].sortNo == that.allAudio-1){
-              dialog.info('已经是最后一首了')
+              popup.confirm({
+                title: '提示',
+                text: '已经是最后一首了',
+                okBtnTitle: '确定',
+                cancelBtnTitle: '取消',
+                okBtnCallback: function(){},
+                cancelBtnCallback: function(){}
+              });
               return
             }else {
               that.getData(1,that.musicList[that.musicList.length-1].sortNo, true)
@@ -326,7 +381,14 @@
           }
           if (index==that.musicList.length){
             if (that.musicList[0].sortNo == 0){
-              dialog.info('已经是第一首了')
+              popup.confirm({
+                title: '提示',
+                text: '已经是第一首了',
+                okBtnTitle: '确定',
+                cancelBtnTitle: '取消',
+                okBtnCallback: function(){},
+                cancelBtnCallback: function(){}
+              });
               return
             } else {
               that.getData(-1,that.musicList[0].sortNo, true)
@@ -450,9 +512,23 @@
               }
             } else { 
               if (data.data && data.data.msg){
-                dialog.alert('code='+data.code + ';msg='+data.data.msg)
+                popup.confirm({
+                  title: '提示',
+                  text: 'code='+data.code + ';msg='+data.data.msg,
+                  okBtnTitle: '确定',
+                  cancelBtnTitle: '取消',
+                  okBtnCallback: function(){},
+                  cancelBtnCallback: function(){}
+                });
               } else {
-                dialog.alert('code='+data.code)
+                popup.confirm({
+                  title: '提示',
+                  text: 'code='+data.code,
+                  okBtnTitle: '确定',
+                  cancelBtnTitle: '取消',
+                  okBtnCallback: function(){},
+                  cancelBtnCallback: function(){}
+                });
               }
             }
             if (data && data.data && data.data.xmlyToken && data.data.xmlyToken.access_token){
