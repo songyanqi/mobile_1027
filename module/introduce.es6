@@ -90,8 +90,9 @@ export default {
                             window.singlePicHold(ele);
                         })
                     });
-
-                    if (!that.error && that.deleteFlag){
+                }
+                if (!that.error && that.deleteFlag){
+                    setTimeout(function(){
                         if (window.appData){
                             window.appData.isAudioAbsorb = 1
                         } else {
@@ -99,12 +100,9 @@ export default {
                                 'isAudioAbsorb':1
                             }
                         }
-                        setTimeout(function(){
-                            window.bravetime.initHead()
-                        },500)   
-                    }
+                        window.bravetime.initHead()
+                    },500)   
                 }
-                console.log(that.userId, window.teacherId)
             },
             error:function () {
                 that.error = true;

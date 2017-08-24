@@ -341,12 +341,17 @@
           $('.mask_banner').get(0).scrollTop = that.scrollTop
           $('.mask_banner').scroll(function(e){
             that.scrollTop = $('.mask_banner').get(0).scrollTop
+            console.log(1,$('.mask_banner').get(0).scrollTop)
             if ($('.mask_banner').get(0).scrollTop<1){
+              // console.log(2)
               $('.mask_banner').get(0).scrollTop = 1
+              console.log(that.musicList[that.musicList.length-1].sortNo)
               if (that.musicList[that.musicList.length-1].sortNo == 0){
-
-              }else {
+                alert(1)
                 that.getData(1,that.musicList[that.musicList.length-1].sortNo, false)
+              }else {
+                // alert(123)
+                // that.getData(1,that.musicList[that.musicList.length-1].sortNo, false)
               }
             }
             if ($('.mask_banner').get(0).scrollTop > $('.mask_banner_content').height()-$('.mask_banner').height()-2){

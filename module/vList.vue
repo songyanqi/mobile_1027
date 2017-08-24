@@ -137,6 +137,11 @@
         },
         created(){
             this.inApp = Units.isApp();
+            if (window.appData){
+                window.appData.isAudioAbsorb = 1
+            } else {
+                window.appData = {'isAudioAbsorb': 1}
+            }
             this.init()
         },
         updated(){
@@ -171,7 +176,6 @@
                     setTimeout(function(){
                         window.appData.showHead = 1
                         window.appData.backOnHead = 1
-                        window.appData.isAudioAbsorb = 1
                         window.bravetime.initHead()
                     },500)
                 }
