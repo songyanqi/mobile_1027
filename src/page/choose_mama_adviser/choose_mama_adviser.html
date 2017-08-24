@@ -6,9 +6,9 @@
 </head>
 <body>
 <div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
-  <!--标题-->
-  <com-top-title title="选择妈妈顾问"></com-top-title>
+  <!--妈妈顾问爱好信息选择-->
   <div>
+    <div class="back-btn"><i class="back-arrow"></i></div>
     <!--妈妈顾问提示信息-->
     <div class="adviser_titles">
       <span>请选择您想要的妈妈顾问信息</span> <br>
@@ -29,7 +29,7 @@
       </span>
     </div>
     <!--地址选择插件-->
-    <com-picker-address :showaddress="showaddress2" :addressid="523" @addressdata="getaddress"></com-picker-address>
+    <com-picker-address :showaddress="showaddress2" :addressid="-1" @addressdata="getaddress"></com-picker-address>
     <div class="new_title">
       <span class="btns">
         <span class="name">
@@ -70,6 +70,10 @@
     <div class="next_step" style="margin-top: 19px;">
       下一步
     </div>
+  </div>
+  <!--妈妈顾问三选一-->
+  <div>
+
   </div>
 </div>
   @@include('vendor.include')
@@ -172,8 +176,7 @@
     }
     .adviser_titles{
       text-align: center;
-      padding-bottom: 20px;
-      padding-top: 10px;
+      padding: 30px 0 20px;
     }
     .adviser_titles span{
       display: inline-block;
@@ -186,6 +189,26 @@
       font-size: 12px;
       color: #999999;
       margin-top: 5px;
+    }
+    .back-btn {
+      position: absolute;
+      left: 0;
+      height: 44px;
+      width: 44px;
+    }
+    .back-btn .back-arrow {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-bottom: 1px solid #333;
+      border-left: 1px solid #333;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      cursor: pointer;
     }
   </style>
 </htm>
