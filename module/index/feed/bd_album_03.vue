@@ -45,18 +45,18 @@
                 </div>
               </div>
             </div>
-            <div class="item_right" v-if="item.isFree==0 || (item.isFree==1 && item.isSub==1)">
+            <div class="item_right" v-if="isFree==0 || (isFree==1 && item.isSub==1)">
               <div class="mask_stop" v-if="(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
               <div class="mask_play" v-if="!(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
-            <div class="item_right" v-if="item.isFree==1 && item.isSub==0 && item.isPlay==0">
+            <div class="item_right" v-if="isFree==1 && item.isFree==1 && item.isSub==0 && item.isPlay==0">
               <div class="disable" @click.stop="stop_info(item.albumId)"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
-            <div class="item_right2" v-if="item.isFree==1 && item.isSub==0 && item.isPlay==1" @click="go_href(item.albumId,item.sortNo)">
+            <div class="item_right2" v-if="isFree==1 && item.isFree==0 && item.isSub==0 && item.isPlay==1" @click="go_href(item.albumId,item.sortNo)">
               <div class="free">免费试听</div>
             </div>
 
@@ -89,6 +89,7 @@
         this.contentList=this.data.body.dataList.contentList;
         this.isSub=this.data.body.isSub;
         this.initSortNoIndex();
+        this.isFree=this.data.body.isFree;
         this.$nextTick(function () {
           this.scro();
         })
@@ -130,7 +131,8 @@
               isSub:0,
               pageAlbumId:getQuery("albumId"),
               empty_tab:false,
-              maskFlag:false
+              maskFlag:false,
+              isFree:null
           }
       },
       components:{
@@ -239,22 +241,31 @@
                     } else if (payUrl) {
                       that.nativePay(payUrl, function (flag) {
                         if (flag) {
-                          that.sub=1;
-                          // 报名成功(进不来)
+                          alert(333333);
+                          window.location.reload();
                         }
                       });
                     } else {
-                      that.sub=1;
-                      alert(123456);
-                      // 报名成功
+                      alert(111111);
+                      setTimeout(function () {
+                        window.location.reload();
+                      },1000)
                     }
                   } else {
-                    that.sub=1;
-                    dialog.alert(result.data.msg);
-                    that.$emit("re");
+                    popup.confirm({
+                      title: '提示',            // 标题（支持传入html。有则显示。）
+                      text: '订阅成功',             // 文本（支持传入html。有则显示。）
+                      okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                      cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                      okBtnCallback: function(){},
+                      cancelBtnCallback: function(){}
+                    });
+                    setTimeout(function () {
+                      window.location.reload();
+                    },1000)
                   }
                 }else {
-                  dialog.alert('code:' + code + 'msg:'+ result.data.msg)
+
                 }
               })
           },
