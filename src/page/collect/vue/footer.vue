@@ -1,7 +1,7 @@
 <template>
   <div class="btn">
     <div class="btn_left" v-if="userstatus==1 || userstatus==0" @click="vip">成为会员免费听</div>
-    <div class="btn_left" v-if="userstatus==3" @click="share"><span>邀请赚¥</span><span v-text="price"></span></div>
+    <div class="btn_left" v-if="userstatus==3" @click="share"><span>邀请赚¥</span><span v-text="income"></span></div>
     <div class="btn_right">
       <img src="//pic.davdian.com/free/2017/08/16/Rectangle.png" alt="">
       <div class="btn_text" @click="Subscribe" v-if="isSub==0 && (userstatus==1 || userstatus==0)">
@@ -95,6 +95,7 @@
             albumId:that.albumid,
             shareUserId:getQuery('shareUserId') || ''
         };
+        alert(obj.albumId +":"+obj.shareUserId);
         api("/api/mg/content/album/subscription",obj)
           .then(function(result) {
             let {code, data: {msg, payUrl, jsApi}} = result;
