@@ -189,7 +189,6 @@
             localStorage.setItem('access_token', data.data.xmlyToken.access_token)
             localStorage.setItem('expires_in', data.data.xmlyToken.expires_in)
           }
-          console.log(that.index ,data.data.dataList[that.index].shareInfo)
           if (data && data.data && data.data.dataList && data.data.dataList[that.index] && data.data.dataList[that.index].shareInfo){
             // 
             try {
@@ -262,11 +261,12 @@
                 // });
               }else{
                 // 报名成功
-                window.location.href = '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.index
+                // window.location.href = '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.index].sortNo
+                window.location.reload()
               }
 
             }else {
-              if (result.data.code == 400){
+              if (result.data.code == 100){
                 if (that.isapp){
                   native.Account.login()
                 }else {
