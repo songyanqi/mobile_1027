@@ -41,7 +41,7 @@
     </div>
     <div style="height: 0.1rem;background: #F8F7F7;" v-if='!isapp'></div>
     <div class="bottom_text" v-if='introduction || introduction==0' v-html='introduction'></div>
-    <div class="mask" v-if='audioListFlag'></div>
+    <div class="mask" v-if='audioListFlag' @click="closeAudioList"></div>
     <div class="mask_div" v-if='audioListFlag'>
       <div class="mask_top mask_padding">
         <div class="mi_left" @click='dialog'><img src="//pic.davdian.com/free/2017/08/16/playOrder.png" alt=""></div>
