@@ -6,9 +6,9 @@
 </head>
 <body>
 <div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
-  <!--标题-->
-  <com-top-title title="选择妈妈顾问"></com-top-title>
-  <div>
+  <!--妈妈顾问爱好信息选择-->
+  <div v-if="false">
+    <div class="back-btn"><i class="back-arrow"></i></div>
     <!--妈妈顾问提示信息-->
     <div class="adviser_titles">
       <span>请选择您想要的妈妈顾问信息</span> <br>
@@ -29,7 +29,7 @@
       </span>
     </div>
     <!--地址选择插件-->
-    <com-picker-address :showaddress="showaddress2" :addressid="523" @addressdata="getaddress"></com-picker-address>
+    <com-picker-address :showaddress="showaddress2" :addressid="-1" @addressdata="getaddress"></com-picker-address>
     <div class="new_title">
       <span class="btns">
         <span class="name">
@@ -69,6 +69,43 @@
     <!--下一步-->
     <div class="next_step" style="margin-top: 19px;">
       下一步
+    </div>
+  </div>
+  <!--妈妈顾问三选一-->
+  <div>
+    <div class="back-btn"><i class="back-arrow"></i></div>
+    <!--妈妈顾问提示信息-->
+    <div class="adviser_titles">
+      <span>根据您的需求，推荐3位妈妈顾问<br>请您选择一位</span>
+    </div>
+    <div class="adviser_list">
+      <div class="adviser_ob">
+        <div class="adviser_ob_left">
+
+        </div>
+        <div class="adviser_ob_right">
+          <input type="radio" name="adviser_select" value="1" v-model="adviser_select">
+          <img v-if="adviser_select == 1" src="../wap/static/dist/static/page/choose_mama_adviser/img/adviser_select.png" alt="">
+        </div>
+      </div>
+      <div class="adviser_ob">
+        <div class="adviser_ob_left"></div>
+        <div class="adviser_ob_right">
+          <input type="radio" name="adviser_select" value="2" v-model="adviser_select">
+          <img v-if="adviser_select == 2" src="../wap/static/dist/static/page/choose_mama_adviser/img/adviser_select.png" alt="">
+        </div>
+      </div>
+      <div class="adviser_ob">
+        <div class="adviser_ob_left"></div>
+        <div class="adviser_ob_right">
+          <input type="radio" name="adviser_select" value="3" v-model="adviser_select">
+          <img v-if="adviser_select == 3" src="../wap/static/dist/static/page/choose_mama_adviser/img/adviser_select.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!--下一步-->
+    <div class="next_step" style="margin-top: 19px;">
+      就是TA
     </div>
   </div>
 </div>
@@ -172,8 +209,7 @@
     }
     .adviser_titles{
       text-align: center;
-      padding-bottom: 20px;
-      padding-top: 10px;
+      padding: 30px 0 20px;
     }
     .adviser_titles span{
       display: inline-block;
@@ -181,11 +217,100 @@
     .adviser_titles span:nth-of-type(1){
       font-size: 16px;
       color: #666666;
+      line-height: 22px;
     }
     .adviser_titles span:nth-of-type(2){
       font-size: 12px;
       color: #999999;
       margin-top: 5px;
+    }
+    .back-btn {
+      position: absolute;
+      left: 0;
+      height: 44px;
+      width: 44px;
+    }
+    .back-btn .back-arrow {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-bottom: 1px solid #333;
+      border-left: 1px solid #333;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      cursor: pointer;
+    }
+    .adviser_list{
+      width: 285px;
+      min-height: 200px;
+      overflow: hidden;
+      margin: 0 auto;
+      padding-top: 20px;
+    }
+    .adviser_ob{
+      width: 100%;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+    .adviser_ob_left{
+      width: 240px;
+      height: 100%;
+      float: left;
+      border-radius: 4px;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(255, 177, 177, 0.3);
+      padding: 10px;
+    }
+    .adviser_ob_left:after{
+      content: "";
+      -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+      transform: scale(0.5);
+      width: 200%;
+      height: 200%;
+      border: 1px solid;
+      border-color: #FF9289;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      transform-origin: 0 0;
+      border-radius: 8px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .adviser_ob_right{
+      width: 30px;
+      height: 30px;
+      float: left;
+      border-radius: 15px;
+      border: 1px solid #FF9289;
+      box-sizing: border-box;
+      margin-left: 15px;
+      margin-top: 35px;
+      position: relative;
+    }
+    .adviser_ob_right input{
+      width: 30px;
+      height: 30px;
+      opacity: 0;
+      position: absolute;
+      top:0;left:0;
+      z-index: 9;
+    }
+    .adviser_ob_right img{
+      position: absolute;
+      top:-1px;
+      left:-1px;
+      width: 30px;
+      height: 30px;
     }
   </style>
 </htm>
