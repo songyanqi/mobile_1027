@@ -148,7 +148,7 @@
             </cell-box>
         </group>
         <!--店主页-->
-        <group class = "shopCont" v-if = "dataseller && activityinfo.isShopper != '3'">
+        <!--<group class = "shopCont" v-if = "dataseller && activityinfo.isShopper != '3'">
             <cell-box
                     is-link
                     :link = "activityinfo.shoppUrl"
@@ -162,7 +162,7 @@
                 </div>
                 <div class = "brandEnter">进入店铺</div>
             </cell-box>
-        </group>
+        </group>-->
 
         <!--服务弹框-->
         <popup v-model="serverShow"
