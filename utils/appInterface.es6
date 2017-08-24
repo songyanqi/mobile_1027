@@ -42,7 +42,6 @@ iosInterface.refreshPreviousPageData = function () {
 };
 //state 0表示暂停，1表示播放
 iosInterface.getAudioState = function (obj) {
-  alert("albumId:"+obj.albumId+":sortNo:"+obj.sortNo+":state:"+obj.state);
   if (window.landingPage) {
     window.landingPage.$children.map(function (item) {
       if (item.name == 'landingPage') {
