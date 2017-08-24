@@ -3997,7 +3997,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-a0a1eaa0/com-popup-toast.vue"
+	  var id = "_v-1a34eddb/com-popup-toast.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4471,7 +4471,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-09d7c958/com-popup-base.vue"
+	  var id = "_v-06795666/com-popup-base.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -4781,7 +4781,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2dc3a9f6/com-popup-loading.vue"
+	  var id = "_v-6c902120/com-popup-loading.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5165,7 +5165,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7718a21b/com-share-pop-tip.vue"
+	  var id = "_v-57b26686/com-share-pop-tip.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5398,7 +5398,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5a56717e/index_feed.vue"
+	  var id = "_v-e9b65e2e/index_feed.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -5912,7 +5912,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-869a2f9a/bd_slide_0.vue"
+	  var id = "_v-a0c318b0/bd_slide_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7328,7 +7328,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-f2949a2e/bd_icon_0.vue"
+	  var id = "_v-3dbf3658/bd_icon_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7505,7 +7505,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7a08e701/tt_com_0.vue"
+	  var id = "_v-19dacbb6/tt_com_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7728,7 +7728,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-8b68ba7a/bd_broadcast_0.vue"
+	  var id = "_v-262b2890/bd_broadcast_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -7960,7 +7960,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-45419a72/bd_timer_0.vue"
+	  var id = "_v-5f6a8388/bd_timer_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -8236,7 +8236,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-45256b70/bd_timer_1.vue"
+	  var id = "_v-5f4e5486/bd_timer_1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -8504,7 +8504,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-05ee9bd0/bd_goods_0.vue"
+	  var id = "_v-201784e6/bd_goods_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -8814,7 +8814,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-05d26cce/bd_goods_1.vue"
+	  var id = "_v-1ffb55e4/bd_goods_1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -9286,7 +9286,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3d91a158/com-maybeyoulike.vue"
+	  var id = "_v-71249cee/com-maybeyoulike.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -9806,7 +9806,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-758d6c5d/bd_image_0.vue"
+	  var id = "_v-6878f7d2/bd_image_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -9988,7 +9988,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-759b83de/bd_image_1.vue"
+	  var id = "_v-68870f53/bd_image_1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10175,7 +10175,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75a99b5f/bd_image_2.vue"
+	  var id = "_v-689526d4/bd_image_2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10369,7 +10369,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75b7b2e0/bd_image_3.vue"
+	  var id = "_v-68a33e55/bd_image_3.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10588,7 +10588,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75c5ca61/bd_image_4.vue"
+	  var id = "_v-68b155d6/bd_image_4.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10783,7 +10783,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75d3e1e2/bd_image_5.vue"
+	  var id = "_v-68bf6d57/bd_image_5.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -10999,7 +10999,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75e1f963/bd_image_6.vue"
+	  var id = "_v-68cd84d8/bd_image_6.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11195,7 +11195,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75f010e4/bd_image_7.vue"
+	  var id = "_v-68db9c59/bd_image_7.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11418,7 +11418,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-75fe2865/bd_image_8.vue"
+	  var id = "_v-68e9b3da/bd_image_8.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11641,7 +11641,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-760c3fe6/bd_image_9.vue"
+	  var id = "_v-68f7cb5b/bd_image_9.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -11870,7 +11870,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3dd07242/bd_image_10.vue"
+	  var id = "_v-af535526/bd_image_10.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12112,7 +12112,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-05b63dcc/bd_goods_2.vue"
+	  var id = "_v-1fdf26e2/bd_goods_2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12303,7 +12303,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-054581c4/bd_goods_6.vue"
+	  var id = "_v-1f6e6ada/bd_goods_6.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12327,8 +12327,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-054581c4&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_6.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-054581c4&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_6.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f6e6ada&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_6.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f6e6ada&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_6.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -12346,7 +12346,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.hot_goods_index_md[_v-054581c4] {\n  min-height: 130px;\n  position: relative;\n  padding: 15px 10px;\n  /*background-color: #FFFFFF;*/\n}\n\n.hot_goods_index_md .goods_desc[_v-054581c4] {\n  position: relative;\n}\n\n.goods_desc .img_left[_v-054581c4] {\n  width: 120px;\n  position: relative;\n}\n\n.goods_desc .goods_info_box[_v-054581c4] {\n  position: absolute;\n  padding-left: 130px;\n  top: 0;\n  padding-top: 5px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.order_good_name[_v-054581c4] {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n  line-height: 20px;\n  height: 40px;\n  color: #666666;\n}\n\n.goods_info_box .goods_praice[_v-054581c4] {\n  height: 20px;\n  line-height: 20px;\n  color: #FF4A7D;\n  margin-top: 15px;\n  font-size: 20px;\n}\n\n.goods_info_box .goods_praice .price_symbol[_v-054581c4] {\n  font-size: 14px;\n}\n\n.comment_star[_v-054581c4] {\n  height: 12px;\n  font-size: 12px;\n  color: #FF4A7D;\n  line-height: 12px;\n  margin-top: 20px;\n}\n\n.comment_star img[_v-054581c4] {\n  height: 11px;\n  width: 11px;\n  position: relative;\n  bottom: 1px;\n  left: 2px;\n  margin-left: 2px;\n}\n\n.goods_comment[_v-054581c4] {\n  margin-top: 10px;\n  background-color: #f9f9f9;\n  position: relative;\n  padding: 10px 20px 10px 48px;\n}\n\n.goods_comment[_v-054581c4]:after {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  border-radius: 10px;\n  width: 200%;\n  height: 200%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transform: scale(0.5) translateX(-50%) translateY(-50%);\n      -ms-transform: scale(0.5) translateX(-50%) translateY(-50%);\n          transform: scale(0.5) translateX(-50%) translateY(-50%);\n}\n\n.box_arrow[_v-054581c4] {\n  width: 10px;\n  height: 5px;\n  background: url(\"//pic.davdian.com/free/2017/07/24/commentBox_arrow.png\");\n  background-size: 100%;\n  position: absolute;\n  top: -4px;\n  left: 22px;\n  z-index: 10;\n}\n\n.user_img[_v-054581c4] {\n  height: 28px;\n  width: 28px;\n  position: absolute;\n  left: 10px;\n  top: 6px;\n  overflow: hidden;\n  border-radius: 50%;\n}\n\n.comment_txt[_v-054581c4] {\n  font-size: 12px;\n  color: #151515;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  max-height: 60px;\n  -webkit-box-orient: vertical;\n  display: -webkit-box;\n  overflow: hidden;\n  -webkit-line-clamp: 3;\n}\n\n.comment_txt .user_name[_v-054581c4] {\n  color: #999999;\n}\n.img_left .topImageUrl[_v-054581c4]{\n  position: absolute;\n  width: 52px;\n  top:2px;\n  left:2px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.hot_goods_index_md[_v-1f6e6ada] {\n  min-height: 130px;\n  position: relative;\n  padding: 15px 10px;\n  /*background-color: #FFFFFF;*/\n}\n\n.hot_goods_index_md .goods_desc[_v-1f6e6ada] {\n  position: relative;\n}\n\n.goods_desc .img_left[_v-1f6e6ada] {\n  width: 120px;\n  position: relative;\n}\n\n.goods_desc .goods_info_box[_v-1f6e6ada] {\n  position: absolute;\n  padding-left: 130px;\n  top: 0;\n  padding-top: 5px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.order_good_name[_v-1f6e6ada] {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 2;\n  -webkit-box-orient: vertical;\n  line-height: 20px;\n  height: 40px;\n  color: #666666;\n}\n\n.goods_info_box .goods_praice[_v-1f6e6ada] {\n  height: 20px;\n  line-height: 20px;\n  color: #FF4A7D;\n  margin-top: 15px;\n  font-size: 20px;\n}\n\n.goods_info_box .goods_praice .price_symbol[_v-1f6e6ada] {\n  font-size: 14px;\n}\n\n.comment_star[_v-1f6e6ada] {\n  height: 12px;\n  font-size: 12px;\n  color: #FF4A7D;\n  line-height: 12px;\n  margin-top: 20px;\n}\n\n.comment_star img[_v-1f6e6ada] {\n  height: 11px;\n  width: 11px;\n  position: relative;\n  bottom: 1px;\n  left: 2px;\n  margin-left: 2px;\n}\n\n.goods_comment[_v-1f6e6ada] {\n  margin-top: 10px;\n  background-color: #f9f9f9;\n  position: relative;\n  padding: 10px 20px 10px 48px;\n}\n\n.goods_comment[_v-1f6e6ada]:after {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  border-radius: 10px;\n  width: 200%;\n  height: 200%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-transform: scale(0.5) translateX(-50%) translateY(-50%);\n      -ms-transform: scale(0.5) translateX(-50%) translateY(-50%);\n          transform: scale(0.5) translateX(-50%) translateY(-50%);\n}\n\n.box_arrow[_v-1f6e6ada] {\n  width: 10px;\n  height: 5px;\n  background: url(\"//pic.davdian.com/free/2017/07/24/commentBox_arrow.png\");\n  background-size: 100%;\n  position: absolute;\n  top: -4px;\n  left: 22px;\n  z-index: 10;\n}\n\n.user_img[_v-1f6e6ada] {\n  height: 28px;\n  width: 28px;\n  position: absolute;\n  left: 10px;\n  top: 6px;\n  overflow: hidden;\n  border-radius: 50%;\n}\n\n.comment_txt[_v-1f6e6ada] {\n  font-size: 12px;\n  color: #151515;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  max-height: 60px;\n  -webkit-box-orient: vertical;\n  display: -webkit-box;\n  overflow: hidden;\n  -webkit-line-clamp: 3;\n}\n\n.comment_txt .user_name[_v-1f6e6ada] {\n  color: #999999;\n}\n.img_left .topImageUrl[_v-1f6e6ada]{\n  position: absolute;\n  width: 52px;\n  top:2px;\n  left:2px;\n}\n", ""]);
 
 	// exports
 
@@ -12585,7 +12585,7 @@
 /* 206 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-054581c4=\"\">\n  <tt_com_0 :data=\"data\" _v-054581c4=\"\"></tt_com_0>\n  <a :href=\"item.command.content\" v-for=\"item in data.body.dataList\" _v-054581c4=\"\">\n    <div class=\"hot_goods_index_md\" _v-054581c4=\"\">\n      <div class=\"goods_desc\" _v-054581c4=\"\">\n        <div class=\"img_left\" _v-054581c4=\"\">\n          <img :src=\"item.imageUrl\" alt=\"\" _v-054581c4=\"\">\n          <img v-if=\"item.topImageUrl\" class=\"topImageUrl\" :src=\"item.topImageUrl\" alt=\"\" _v-054581c4=\"\">\n        </div>\n        <div class=\"goods_info_box\" _v-054581c4=\"\">\n          <div _v-5ed5d0b8=\"\" class=\"order_good_name\" _v-054581c4=\"\">{{item.title}}</div>\n          <div class=\"goods_praice\" _v-054581c4=\"\">\n            <span _v-054581c4=\"\"><em class=\"price_symbol\" _v-054581c4=\"\">￥</em><span _v-054581c4=\"\">{{item.nowPrice}}</span></span>\n          </div>\n          <div class=\"comment_star\" _v-054581c4=\"\">\n            <span _v-054581c4=\"\">好评度：{{item.rating*100 || 0}}% </span>\n            <img v-for=\"item in parseInt((item.rating*100)/20)\" src=\"//pic.davdian.com/free/2017/07/24/%20starSelected.png\" alt=\"\" _v-054581c4=\"\">\n          </div>\n        </div>\n      </div>\n      <div v-if=\"item.comments.content\" class=\"goods_comment\" _v-054581c4=\"\">\n        <div class=\"box_arrow\" _v-054581c4=\"\"></div>\n        <div class=\"user_img\" _v-054581c4=\"\">\n          <img :src=\"item.comments.avatar\" alt=\"\" _v-054581c4=\"\">\n        </div>\n        <div class=\"comment_txt\" _v-054581c4=\"\">\n          <span class=\"user_name\" _v-054581c4=\"\">{{item.comments.nickName}}：</span>\n          <span _v-054581c4=\"\">{{item.comments.content}}</span>\n        </div>\n      </div>\n    </div>\n  </a>\n</div>\n";
+	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-1f6e6ada=\"\">\n  <tt_com_0 :data=\"data\" _v-1f6e6ada=\"\"></tt_com_0>\n  <a :href=\"item.command.content\" v-for=\"item in data.body.dataList\" _v-1f6e6ada=\"\">\n    <div class=\"hot_goods_index_md\" _v-1f6e6ada=\"\">\n      <div class=\"goods_desc\" _v-1f6e6ada=\"\">\n        <div class=\"img_left\" _v-1f6e6ada=\"\">\n          <img :src=\"item.imageUrl\" alt=\"\" _v-1f6e6ada=\"\">\n          <img v-if=\"item.topImageUrl\" class=\"topImageUrl\" :src=\"item.topImageUrl\" alt=\"\" _v-1f6e6ada=\"\">\n        </div>\n        <div class=\"goods_info_box\" _v-1f6e6ada=\"\">\n          <div _v-5ed5d0b8=\"\" class=\"order_good_name\" _v-1f6e6ada=\"\">{{item.title}}</div>\n          <div class=\"goods_praice\" _v-1f6e6ada=\"\">\n            <span _v-1f6e6ada=\"\"><em class=\"price_symbol\" _v-1f6e6ada=\"\">￥</em><span _v-1f6e6ada=\"\">{{item.nowPrice}}</span></span>\n          </div>\n          <div class=\"comment_star\" _v-1f6e6ada=\"\">\n            <span _v-1f6e6ada=\"\">好评度：{{item.rating*100 || 0}}% </span>\n            <img v-for=\"item in parseInt((item.rating*100)/20)\" src=\"//pic.davdian.com/free/2017/07/24/%20starSelected.png\" alt=\"\" _v-1f6e6ada=\"\">\n          </div>\n        </div>\n      </div>\n      <div v-if=\"item.comments.content\" class=\"goods_comment\" _v-1f6e6ada=\"\">\n        <div class=\"box_arrow\" _v-1f6e6ada=\"\"></div>\n        <div class=\"user_img\" _v-1f6e6ada=\"\">\n          <img :src=\"item.comments.avatar\" alt=\"\" _v-1f6e6ada=\"\">\n        </div>\n        <div class=\"comment_txt\" _v-1f6e6ada=\"\">\n          <span class=\"user_name\" _v-1f6e6ada=\"\">{{item.comments.nickName}}：</span>\n          <span _v-1f6e6ada=\"\">{{item.comments.content}}</span>\n        </div>\n      </div>\n    </div>\n  </a>\n</div>\n";
 
 /***/ },
 /* 207 */
@@ -12615,7 +12615,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-0561b0c6/bd_goods_5.vue"
+	  var id = "_v-1f8a99dc/bd_goods_5.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -12639,8 +12639,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0561b0c6&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_5.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-0561b0c6&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_5.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f8a99dc&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_5.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f8a99dc&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_5.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -12658,7 +12658,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy[_v-0561b0c6] {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail[_v-0561b0c6] {\n    width: 100%;\n    display: block;\n    position: relative; }\n\n.related-item-list-new.swiper-container[_v-0561b0c6] {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list-new .detail.swiper-slide[_v-0561b0c6] {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list-new .detail[_v-0561b0c6] {\n  text-align: left; }\n  .related-item-list-new .detail .goods_img_size[_v-0561b0c6] {\n    width: 120px;\n    height: 120px;\n    position: relative; }\n    .related-item-list-new .detail .goods_img_size .limitTag[_v-0561b0c6] {\n      height: 16px;\n      background: url(//pic.davdian.com/free/2017/06/07/limitTag.png) 0 0 no-repeat;\n      background-size: 100% 100%;\n      position: absolute;\n      left: 1px;\n      bottom: 0;\n      font-size: 10px;\n      color: #FFF;\n      text-align: center;\n      line-height: 16px;\n      display: inline-block;\n      padding: 0 11px 0 6px; }\n  .related-item-list-new .detail .goods_img_size[_v-0561b0c6]:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    border: 1px solid #ddd;\n    width: 100%;\n    height: 100%;\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n         box-sizing: border-box; }\n  .related-item-list-new .detail .new_name1[_v-0561b0c6] {\n    font-size: 13px;\n    margin: 10px 0;\n    text-overflow: ellipsis;\n    height: 18px;\n    white-space: nowrap;\n    line-height: 18px;\n    overflow: hidden;\n    color: #666;\n    padding-right: 25px; }\n  .related-item-list-new .detail .price1[_v-0561b0c6] {\n    line-height: 21px;\n    height: 21px;\n    overflow: hidden;\n    margin-bottom: 4px; }\n    .related-item-list-new .detail .price1 .current-price1[_v-0561b0c6] {\n      font-size: 17px;\n      color: #FF4A7D;\n      float: left; }\n    .related-item-list-new .detail .price1 .original-price1[_v-0561b0c6] {\n      font-size: 9px;\n      color: #999;\n      text-decoration: line-through;\n      float: left;\n      padding-left: 5px;\n      padding-top: 0.02rem; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list-new .detail .goods_img_size[_v-0561b0c6]:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */\n    border-radius: 8px; } }\n\n.df_new_title[_v-0561b0c6] {\n  position: relative;\n  height: 44px; }\n\n.df_new_title[_v-0561b0c6]:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title[_v-0561b0c6]:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font[_v-0561b0c6] {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font[_v-0561b0c6]:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font[_v-0561b0c6]:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more[_v-0561b0c6] {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span[_v-0561b0c6] {\n  font-size: 12px; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy[_v-1f8a99dc] {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail[_v-1f8a99dc] {\n    width: 100%;\n    display: block;\n    position: relative; }\n\n.related-item-list-new.swiper-container[_v-1f8a99dc] {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list-new .detail.swiper-slide[_v-1f8a99dc] {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list-new .detail[_v-1f8a99dc] {\n  text-align: left; }\n  .related-item-list-new .detail .goods_img_size[_v-1f8a99dc] {\n    width: 120px;\n    height: 120px;\n    position: relative; }\n    .related-item-list-new .detail .goods_img_size .limitTag[_v-1f8a99dc] {\n      height: 16px;\n      background: url(//pic.davdian.com/free/2017/06/07/limitTag.png) 0 0 no-repeat;\n      background-size: 100% 100%;\n      position: absolute;\n      left: 1px;\n      bottom: 0;\n      font-size: 10px;\n      color: #FFF;\n      text-align: center;\n      line-height: 16px;\n      display: inline-block;\n      padding: 0 11px 0 6px; }\n  .related-item-list-new .detail .goods_img_size[_v-1f8a99dc]:before {\n    content: '';\n    position: absolute;\n    top: 0;\n    left: 0;\n    border: 1px solid #ddd;\n    width: 100%;\n    height: 100%;\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n         box-sizing: border-box; }\n  .related-item-list-new .detail .new_name1[_v-1f8a99dc] {\n    font-size: 13px;\n    margin: 10px 0;\n    text-overflow: ellipsis;\n    height: 18px;\n    white-space: nowrap;\n    line-height: 18px;\n    overflow: hidden;\n    color: #666;\n    padding-right: 25px; }\n  .related-item-list-new .detail .price1[_v-1f8a99dc] {\n    line-height: 21px;\n    height: 21px;\n    overflow: hidden;\n    margin-bottom: 4px; }\n    .related-item-list-new .detail .price1 .current-price1[_v-1f8a99dc] {\n      font-size: 17px;\n      color: #FF4A7D;\n      float: left; }\n    .related-item-list-new .detail .price1 .original-price1[_v-1f8a99dc] {\n      font-size: 9px;\n      color: #999;\n      text-decoration: line-through;\n      float: left;\n      padding-left: 5px;\n      padding-top: 0.02rem; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list-new .detail .goods_img_size[_v-1f8a99dc]:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */\n    border-radius: 8px; } }\n\n.df_new_title[_v-1f8a99dc] {\n  position: relative;\n  height: 44px; }\n\n.df_new_title[_v-1f8a99dc]:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title[_v-1f8a99dc]:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font[_v-1f8a99dc] {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font[_v-1f8a99dc]:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font[_v-1f8a99dc]:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more[_v-1f8a99dc] {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span[_v-1f8a99dc] {\n  font-size: 12px; }\n", ""]);
 
 	// exports
 
@@ -12998,7 +12998,7 @@
 /* 211 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-0561b0c6=\"\">\n  <tt_com_0 :data=\"data\" _v-0561b0c6=\"\"></tt_com_0>\n  <div _v-0561b0c6=\"\">\n      <div class=\"swiper-container related-item-list-new swiper-container-horizontal swiper-container-free-mode\" _v-0561b0c6=\"\">\n        <div class=\"swiper-wrapper\" _v-0561b0c6=\"\">\n          <div v-for=\"item in data.body.dataList\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-0561b0c6=\"\">\n            <a :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-0561b0c6=\"\">\n              <div class=\"goods_img_size\" _v-0561b0c6=\"\">\n                <img :src=\"item.imageUrl\" _v-0561b0c6=\"\">\n                <div v-if=\"item.promotionLabel\" class=\"limitTag\" _v-0561b0c6=\"\">{{item.promotionLabel}}</div>\n              </div>\n              <div class=\"new_name1\" _v-0561b0c6=\"\">{{ item.title }}</div>\n              <div class=\"price1\" _v-0561b0c6=\"\">\n                <span class=\"current-price1\" _v-0561b0c6=\"\"><span style=\"font-size: 12px;\" _v-0561b0c6=\"\">¥ </span>{{item.nowPrice}}</span>\n              </div>\n            </a>\n          </div>\n          <div v-if=\"data.body.more\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-0561b0c6=\"\">\n            <a :href=\"data.body.command.content\" position=\"more\" _v-0561b0c6=\"\">\n              <div class=\"goods_img_size\" _v-0561b0c6=\"\">\n                <img src=\"//pic.davdian.com/free/2016/12/20/300_300_2f12c4229c5444864431d2cd8cd1bdb3.jpg\" _v-0561b0c6=\"\">\n              </div>\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-1f8a99dc=\"\">\n  <tt_com_0 :data=\"data\" _v-1f8a99dc=\"\"></tt_com_0>\n  <div _v-1f8a99dc=\"\">\n      <div class=\"swiper-container related-item-list-new swiper-container-horizontal swiper-container-free-mode\" _v-1f8a99dc=\"\">\n        <div class=\"swiper-wrapper\" _v-1f8a99dc=\"\">\n          <div v-for=\"item in data.body.dataList\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-1f8a99dc=\"\">\n            <a :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-1f8a99dc=\"\">\n              <div class=\"goods_img_size\" _v-1f8a99dc=\"\">\n                <img :src=\"item.imageUrl\" _v-1f8a99dc=\"\">\n                <div v-if=\"item.promotionLabel\" class=\"limitTag\" _v-1f8a99dc=\"\">{{item.promotionLabel}}</div>\n              </div>\n              <div class=\"new_name1\" _v-1f8a99dc=\"\">{{ item.title }}</div>\n              <div class=\"price1\" _v-1f8a99dc=\"\">\n                <span class=\"current-price1\" _v-1f8a99dc=\"\"><span style=\"font-size: 12px;\" _v-1f8a99dc=\"\">¥ </span>{{item.nowPrice}}</span>\n              </div>\n            </a>\n          </div>\n          <div v-if=\"data.body.more\" class=\"detail swiper-slide\" style=\"width: 124.382px;\" _v-1f8a99dc=\"\">\n            <a :href=\"data.body.command.content\" position=\"more\" _v-1f8a99dc=\"\">\n              <div class=\"goods_img_size\" _v-1f8a99dc=\"\">\n                <img src=\"//pic.davdian.com/free/2016/12/20/300_300_2f12c4229c5444864431d2cd8cd1bdb3.jpg\" _v-1f8a99dc=\"\">\n              </div>\n            </a>\n          </div>\n        </div>\n      </div>\n    </div>\n</div>\n";
 
 /***/ },
 /* 212 */
@@ -13028,7 +13028,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-052952c2/bd_goods_7.vue"
+	  var id = "_v-1f523bd8/bd_goods_7.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13052,8 +13052,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-052952c2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_7.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-052952c2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_7.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f523bd8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_7.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1f523bd8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_7.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -13071,7 +13071,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.f_l[_v-052952c2] {\n  float: left;\n}\n\n.newOriginal_price[_v-052952c2] {\n  font-size: 14px;\n}\n\n.list_style[_v-052952c2] {\n  /*height: 130px;*/\n}\n\nul li[_v-052952c2] {\n  padding: 0 10px 20px 10px;\n  height:140px;\n  position: relative;\n  overflow: hidden;\n}\n\nul li.online[_v-052952c2]:after {\n  content: \"\";\n  display: block;\n  background-color: #DDDDDD;\n  -webkit-transform: scale(0.5) translateX(280px);\n  -ms-transform: scale(0.5) translateX(280px);\n  transform: scale(0.5) translateX(280px);\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  bottom: 0;\n  z-index: 1;\n}\n\nul li .img_container[_v-052952c2] {\n  position: relative;\n}\n\nul li .img_container_inner[_v-052952c2] {\n  width: 140px;\n  position: relative;\n}\n\nul li .img_container_inner div[_v-052952c2] {\n  height: 60px;\n  width: 60px;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  margin: auto auto;\n  font-size: 14px;\n  color: #FFF;\n  text-align: center;\n  line-height: 60px;\n}\n\nul li .order_good_info_container[_v-052952c2] {\n  position: absolute;\n  padding-left: 150px;\n  top: 0;\n  padding-top: 10px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.order_good_name[_v-052952c2] {\n  font-size: 15px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  /*display: -webkit-box;*/\n  /*-webkit-line-clamp: 2;*/\n  /*-webkit-box-orient: vertical;*/\n  line-height: 20px;\n  color: #333333;\n}\n\n.order_good_name_in[_v-052952c2] {\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 3;\n  -webkit-box-orient: vertical;\n  font-size: 12px;\n  overflow: hidden;\n  color: #999999;\n  height: 51px;\n  line-height: 18px;\n  padding-top: 10px;\n  font-weight: 300;\n}\n\n.order_good_price[_v-052952c2] {\n  height: 28px;\n  line-height: 28px;\n  color: #FF4A7D;\n  margin-top: 6px;\n}\n.order_good_price > span[_v-052952c2]:nth-of-type(1){\n  font-weight: 500;\n}\n\n.price_symbol[_v-052952c2] {\n  font-size: 14px;\n  font-style: normal;\n}\n\n.price_symbol + span[_v-052952c2] {\n  font-size: 20px;\n}\n\n.membership_crown_pre[_v-052952c2] {\n  color: #999999;\n  text-decoration: line-through;\n  font-size: 12px;\n  margin-left: 5px;\n}\n\n.membership_crown .membership_crown_pre em[_v-052952c2] {\n  font-size: 10px;\n}\n\n.membership_crown[_v-052952c2] {\n  font-size: 12px;\n  color: #D6B471;\n  display: inline-block;\n  margin-left: 5px;\n  font-weight: 300;\n}\n\n.membership_crown em[_v-052952c2] {\n  font-size: 10px;\n  font-style: normal;\n}\n\n.tipswrap[_v-052952c2] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.51);\n  z-index: 99;\n}\n\n.tipswrap .tipsdiv[_v-052952c2] {\n  width: 72%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  overflow: hidden;\n  min-height: 20px;\n  max-width: 480px;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n\n.tipswrap .tipsdiv img[_v-052952c2] {\n  width: 100%;\n}\n\n.tipswrap .tipsdiv div[_v-052952c2] {\n  width: 100%;\n  height: 13%;\n  position: absolute;\n  bottom: 0;\n}\n\n.progress_bar[_v-052952c2] {\n  position: absolute;\n  width: 100%;\n  bottom: 20px;\n}\n\n.remain_btns_click[_v-052952c2] {\n  width: 90px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  bottom: 13px;\n  z-index: 2;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.f_l[_v-1f523bd8] {\n  float: left;\n}\n\n.newOriginal_price[_v-1f523bd8] {\n  font-size: 14px;\n}\n\n.list_style[_v-1f523bd8] {\n  /*height: 130px;*/\n}\n\nul li[_v-1f523bd8] {\n  padding: 0 10px 20px 10px;\n  height:140px;\n  position: relative;\n  overflow: hidden;\n}\n\nul li.online[_v-1f523bd8]:after {\n  content: \"\";\n  display: block;\n  background-color: #DDDDDD;\n  -webkit-transform: scale(0.5) translateX(280px);\n  -ms-transform: scale(0.5) translateX(280px);\n  transform: scale(0.5) translateX(280px);\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  bottom: 0;\n  z-index: 1;\n}\n\nul li .img_container[_v-1f523bd8] {\n  position: relative;\n}\n\nul li .img_container_inner[_v-1f523bd8] {\n  width: 140px;\n  position: relative;\n}\n\nul li .img_container_inner div[_v-1f523bd8] {\n  height: 60px;\n  width: 60px;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  margin: auto auto;\n  font-size: 14px;\n  color: #FFF;\n  text-align: center;\n  line-height: 60px;\n}\n\nul li .order_good_info_container[_v-1f523bd8] {\n  position: absolute;\n  padding-left: 150px;\n  top: 0;\n  padding-top: 10px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.order_good_name[_v-1f523bd8] {\n  font-size: 15px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  /*display: -webkit-box;*/\n  /*-webkit-line-clamp: 2;*/\n  /*-webkit-box-orient: vertical;*/\n  line-height: 20px;\n  color: #333333;\n}\n\n.order_good_name_in[_v-1f523bd8] {\n  text-overflow: ellipsis;\n  display: -webkit-box;\n  -webkit-line-clamp: 3;\n  -webkit-box-orient: vertical;\n  font-size: 12px;\n  overflow: hidden;\n  color: #999999;\n  height: 51px;\n  line-height: 18px;\n  padding-top: 10px;\n  font-weight: 300;\n}\n\n.order_good_price[_v-1f523bd8] {\n  height: 28px;\n  line-height: 28px;\n  color: #FF4A7D;\n  margin-top: 6px;\n}\n.order_good_price > span[_v-1f523bd8]:nth-of-type(1){\n  font-weight: 500;\n}\n\n.price_symbol[_v-1f523bd8] {\n  font-size: 14px;\n  font-style: normal;\n}\n\n.price_symbol + span[_v-1f523bd8] {\n  font-size: 20px;\n}\n\n.membership_crown_pre[_v-1f523bd8] {\n  color: #999999;\n  text-decoration: line-through;\n  font-size: 12px;\n  margin-left: 5px;\n}\n\n.membership_crown .membership_crown_pre em[_v-1f523bd8] {\n  font-size: 10px;\n}\n\n.membership_crown[_v-1f523bd8] {\n  font-size: 12px;\n  color: #D6B471;\n  display: inline-block;\n  margin-left: 5px;\n  font-weight: 300;\n}\n\n.membership_crown em[_v-1f523bd8] {\n  font-size: 10px;\n  font-style: normal;\n}\n\n.tipswrap[_v-1f523bd8] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.51);\n  z-index: 99;\n}\n\n.tipswrap .tipsdiv[_v-1f523bd8] {\n  width: 72%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  overflow: hidden;\n  min-height: 20px;\n  max-width: 480px;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n\n.tipswrap .tipsdiv img[_v-1f523bd8] {\n  width: 100%;\n}\n\n.tipswrap .tipsdiv div[_v-1f523bd8] {\n  width: 100%;\n  height: 13%;\n  position: absolute;\n  bottom: 0;\n}\n\n.progress_bar[_v-1f523bd8] {\n  position: absolute;\n  width: 100%;\n  bottom: 20px;\n}\n\n.remain_btns_click[_v-1f523bd8] {\n  width: 90px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  bottom: 13px;\n  z-index: 2;\n}\n", ""]);
 
 	// exports
 
@@ -13432,7 +13432,7 @@
 /* 216 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-052952c2=\"\">\n  <tt_com_0 :data=\"data\" _v-052952c2=\"\"></tt_com_0>\n  <ul _v-052952c2=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-052952c2=\"\">\n      <a :href=\"item.command.content\" _v-052952c2=\"\">\n        <div class=\"img_container\" _v-052952c2=\"\">\n          <div class=\"img_container_inner\" _v-052952c2=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-052952c2=\"\">\n          </div>\n          <div class=\"order_good_info_container\" _v-052952c2=\"\">\n            <div class=\"order_good_name\" _v-052952c2=\"\">{{item.title}}</div>\n            <div class=\"order_good_name_in\" _v-052952c2=\"\">{{item.msg}}</div>\n            <div class=\"order_good_price\" _v-052952c2=\"\">\n              <span _v-052952c2=\"\"><em class=\"price_symbol\" _v-052952c2=\"\">￥</em><span _v-052952c2=\"\">{{item.nowPrice}}</span></span><span v-if=\"item.memReturn\" class=\"membership_crown\" _v-052952c2=\"\">会员返<em _v-052952c2=\"\">￥</em>{{item.memReturn}}</span><span v-if=\"item.prePrice\" class=\"membership_crown_pre\" _v-052952c2=\"\">\n            市场价<em _v-052952c2=\"\">￥</em>{{item.prePrice}}</span>\n            </div>\n          </div>\n        </div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-052952c2=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-052952c2=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-052952c2=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-052952c2=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-052952c2=\"\"></div>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop + 'px'},styleObject]\" _v-1f523bd8=\"\">\n  <tt_com_0 :data=\"data\" _v-1f523bd8=\"\"></tt_com_0>\n  <ul _v-1f523bd8=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-1f523bd8=\"\">\n      <a :href=\"item.command.content\" _v-1f523bd8=\"\">\n        <div class=\"img_container\" _v-1f523bd8=\"\">\n          <div class=\"img_container_inner\" _v-1f523bd8=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-1f523bd8=\"\">\n          </div>\n          <div class=\"order_good_info_container\" _v-1f523bd8=\"\">\n            <div class=\"order_good_name\" _v-1f523bd8=\"\">{{item.title}}</div>\n            <div class=\"order_good_name_in\" _v-1f523bd8=\"\">{{item.msg}}</div>\n            <div class=\"order_good_price\" _v-1f523bd8=\"\">\n              <span _v-1f523bd8=\"\"><em class=\"price_symbol\" _v-1f523bd8=\"\">￥</em><span _v-1f523bd8=\"\">{{item.nowPrice}}</span></span><span v-if=\"item.memReturn\" class=\"membership_crown\" _v-1f523bd8=\"\">会员返<em _v-1f523bd8=\"\">￥</em>{{item.memReturn}}</span><span v-if=\"item.prePrice\" class=\"membership_crown_pre\" _v-1f523bd8=\"\">\n            市场价<em _v-1f523bd8=\"\">￥</em>{{item.prePrice}}</span>\n            </div>\n          </div>\n        </div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-1f523bd8=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-1f523bd8=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-1f523bd8=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-1f523bd8=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-1f523bd8=\"\"></div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 217 */
@@ -13456,7 +13456,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-ea627162/bd_menu_0.vue"
+	  var id = "_v-358d0d8c/bd_menu_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13498,7 +13498,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7a16fe82/tt_com_1.vue"
+	  var id = "_v-19e8e337/tt_com_1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13694,7 +13694,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3c2f0c54/bd_web_0.vue"
+	  var id = "_v-fc8b42ea/bd_web_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13854,7 +13854,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-09b3c20a/cover_0.vue"
+	  var id = "_v-4067f2b5/cover_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -13977,7 +13977,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-321953eb/title_0.vue"
+	  var id = "_v-68cd8496/title_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14112,7 +14112,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5b74c5b4/popularity_0.vue"
+	  var id = "_v-41ab47e9/popularity_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14254,7 +14254,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-26b56ef0/course_desc_0.vue"
+	  var id = "_v-6581e61a/course_desc_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -14278,8 +14278,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-26b56ef0&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./course_desc_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-26b56ef0&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./course_desc_0.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6581e61a&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./course_desc_0.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6581e61a&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./course_desc_0.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -14297,7 +14297,7 @@
 
 
 	// module
-	exports.push([module.id, ".no_discuss[_v-26b56ef0] {\n  padding-bottom: 20px;\n  text-align: center;\n  /*margin-top: -15px;*/ }\n  .no_discuss img[_v-26b56ef0] {\n    width: 120px;\n    display: inline-block; }\n  .no_discuss p[_v-26b56ef0] {\n    color: #666;\n    margin-top: .3rem;\n    padding-bottom: .1rem;\n    width: 100%;\n    text-align: center;\n    font-size: .14rem;\n    display: inline-block; }\n  .no_discuss .discuss_top_write[_v-26b56ef0] {\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n    .no_discuss .discuss_top_write img[_v-26b56ef0] {\n      width: 11px;\n      margin-left: 0; }\n  .no_discuss .discuss_top_no_write[_v-26b56ef0] {\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n\n.discuss_top[_v-26b56ef0] {\n  padding: 10px;\n  padding-top: 15px;\n  position: relative; }\n  .discuss_top .discuss_top_write[_v-26b56ef0] {\n    float: left;\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 130px;\n    font-size: 12px; }\n    .discuss_top .discuss_top_write img[_v-26b56ef0] {\n      width: 11px; }\n  .discuss_top .discuss_top_no_write[_v-26b56ef0] {\n    float: left;\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 139px;\n    font-size: 12px; }\n  .discuss_top .discuss_top_alldiscuss[_v-26b56ef0] {\n    float: right;\n    color: #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-right: 10px;\n    font-size: 12px; }\n  .discuss_top .icon[_v-26b56ef0] {\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n    transform: rotate(45deg);\n    background: none;\n    top: 22px;\n    position: absolute;\n    right: 11px; }\n\n.discuss_top[_v-26b56ef0]:after {\n  content: \"\";\n  height: 0;\n  clear: both;\n  display: table; }\n\n.discuss_container[_v-26b56ef0] {\n  padding-top: 0.21rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  padding-bottom: 0.15rem;\n  font-size: 0;\n  background: #fff;\n  border-bottom: 0.5px solid #F1F1F1; }\n\n.discuss_container_noborder[_v-26b56ef0] {\n  border-bottom: 0px; }\n\n.discuss_title .title_all[_v-26b56ef0] {\n  display: inline-block;\n  vertical-align: middle; }\n\n.discuss_title .title_img[_v-26b56ef0] {\n  width: 0.24rem;\n  height: 0.24rem;\n  border-radius: 50%;\n  background: red; }\n\n.discuss_title .title_name[_v-26b56ef0] {\n  font-size: 0.14rem;\n  color: #666666;\n  margin-left: 0.05rem; }\n\n.discuss_title .title_time[_v-26b56ef0] {\n  font-size: 0.12rem;\n  margin-left: 0.03rem;\n  color: #999999; }\n\n.discuss_title .title_star[_v-26b56ef0] {\n  width: 0.59rem;\n  float: right;\n  margin-top: 0.06rem; }\n\n.discuss_content[_v-26b56ef0] {\n  font-size: 0.13rem;\n  color: #333333;\n  margin-top: 0.1rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 5;\n  display: -webkit-box; }\n\n.discuss_seeAll[_v-26b56ef0] {\n  width: 0.8rem;\n  font-size: 0.13rem;\n  color: #FF4A7D;\n  padding-top: 0.1rem; }\n\n.discuss_imgContainer[_v-26b56ef0] {\n  font-size: 0;\n  width: 3.1rem;\n  /*min-height: 1rem;*/\n  margin-top: 0.1rem; }\n  .discuss_imgContainer .discuss_img[_v-26b56ef0] {\n    width: 0.9rem;\n    height: 0.9rem;\n    background: red;\n    display: inline-block;\n    vertical-align: top;\n    margin-right: 0.1rem;\n    margin-bottom: 0.1rem;\n    border-radius: 3px; }\n\n.discuss_share[_v-26b56ef0] {\n  width: 100%;\n  height: 0.16rem; }\n  .discuss_share .discuss_share_container[_v-26b56ef0] {\n    height: 0.16rem;\n    float: right;\n    font-size: 0.11rem;\n    color: #999999; }\n    .discuss_share .discuss_share_container img[_v-26b56ef0] {\n      width: 0.15rem; }\n\n.discuss_all[_v-26b56ef0] {\n  width: 100%;\n  color: #999999;\n  text-align: center;\n  height: 0.5rem; }\n  .discuss_all .discuss_all_content[_v-26b56ef0] {\n    display: inline-block;\n    border-bottom: 1px solid #999;\n    height: 19px; }\n\n.attention_all[_v-26b56ef0] {\n  font-size: 0;\n  display: inline-block;\n  vertical-align: middle; }\n\n.attention_yes[_v-26b56ef0] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  /*border: 0.5px solid #FF4A7D;*/\n  border-radius: 13px; }\n\n.attention_yes1[_v-26b56ef0] {\n  width: 0.45rem !important;\n  height: 0.18rem !important;\n  display: inline-block;\n  vertical-align: top; }\n\n.attention_no[_v-26b56ef0] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #fff;\n  background: #D8D8D8;\n  border: 0.5px solid #D8D8D8;\n  border-radius: 13px; }\n\n.maskAttention[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background: #000;\n  opacity: 0.4;\n  z-index: 1001; }\n\n.contentAttention[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 1202;\n  margin: auto;\n  background: #000;\n  width: 2.7rem;\n  opacity: 0.65;\n  border-radius: 6px;\n  color: #fff;\n  height: 0.72rem; }\n\n.contentAttention h1[_v-26b56ef0] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center;\n  margin-top: 0.15rem; }\n\n.contentAttention p[_v-26b56ef0] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center; }\n\n.course_desc_0 .class_introduce_tit[_v-26b56ef0] {\n  text-align: center !important;\n  line-height: 15px; }\n\n.course_desc_0 .class_introduce_tit .class_dis[_v-26b56ef0], .course_desc_0 .class_introduce_tit .theater_dis[_v-26b56ef0] {\n  display: inline-block !important; }\n\n.course_desc_0 .class_introduce_tit .class_dis .active[_v-26b56ef0] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .theater_dis .active[_v-26b56ef0] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .class_dis span[_v-26b56ef0] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .class_introduce_tit .theater_dis span[_v-26b56ef0] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .fixStyle[_v-26b56ef0] {\n  position: fixed;\n  top: 44px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0 .fixStyle1[_v-26b56ef0] {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0[_v-26b56ef0] {\n  position: relative; }\n\n.introduceGuide[_v-26b56ef0] {\n  position: absolute;\n  top: -14px;\n  width: 3.2rem;\n  right: 21px;\n  z-index: 1000; }\n\n.introduceGuide1[_v-26b56ef0] {\n  position: absolute;\n  left: 0;\n  width: 248px;\n  z-index: 1000;\n  bottom: -10px; }\n\n.introduceGuideMask[_v-26b56ef0] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 60px;\n  left: 0;\n  background: #000000;\n  opacity: 0.6;\n  z-index: 999; }\n\n.introduceGuidebtn[_v-26b56ef0] {\n  width: 120px;\n  height: 40px;\n  position: fixed;\n  left: 50%;\n  margin-left: -60px;\n  bottom: 60px;\n  z-index: 1000;\n  background: -webkit-linear-gradient(left, #FF7C7C, #FF6A8B);\n  border-radius: 100px;\n  text-align: center;\n  line-height: 40px;\n  color: #fff; }\n", ""]);
+	exports.push([module.id, ".no_discuss[_v-6581e61a] {\n  padding-bottom: 20px;\n  text-align: center;\n  /*margin-top: -15px;*/ }\n  .no_discuss img[_v-6581e61a] {\n    width: 120px;\n    display: inline-block; }\n  .no_discuss p[_v-6581e61a] {\n    color: #666;\n    margin-top: .3rem;\n    padding-bottom: .1rem;\n    width: 100%;\n    text-align: center;\n    font-size: .14rem;\n    display: inline-block; }\n  .no_discuss .discuss_top_write[_v-6581e61a] {\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n    .no_discuss .discuss_top_write img[_v-6581e61a] {\n      width: 11px;\n      margin-left: 0; }\n  .no_discuss .discuss_top_no_write[_v-6581e61a] {\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-left: 15px;\n    padding-right: 15px;\n    font-size: 12px;\n    display: inline-block; }\n\n.discuss_top[_v-6581e61a] {\n  padding: 10px;\n  padding-top: 15px;\n  position: relative; }\n  .discuss_top .discuss_top_write[_v-6581e61a] {\n    float: left;\n    color: #FF4A7D;\n    border-radius: 37px;\n    border: 1px solid #FF4A7D;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 130px;\n    font-size: 12px; }\n    .discuss_top .discuss_top_write img[_v-6581e61a] {\n      width: 11px; }\n  .discuss_top .discuss_top_no_write[_v-6581e61a] {\n    float: left;\n    color: #999999;\n    border-radius: 37px;\n    border: 1px solid #999999;\n    height: 24px;\n    line-height: 24px;\n    text-align: center;\n    width: 139px;\n    font-size: 12px; }\n  .discuss_top .discuss_top_alldiscuss[_v-6581e61a] {\n    float: right;\n    color: #999999;\n    padding-top: 3.5px;\n    padding-bottom: 2.5px;\n    padding-right: 10px;\n    font-size: 12px; }\n  .discuss_top .icon[_v-6581e61a] {\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n    transform: rotate(45deg);\n    background: none;\n    top: 22px;\n    position: absolute;\n    right: 11px; }\n\n.discuss_top[_v-6581e61a]:after {\n  content: \"\";\n  height: 0;\n  clear: both;\n  display: table; }\n\n.discuss_container[_v-6581e61a] {\n  padding-top: 0.21rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  padding-bottom: 0.15rem;\n  font-size: 0;\n  background: #fff;\n  border-bottom: 0.5px solid #F1F1F1; }\n\n.discuss_container_noborder[_v-6581e61a] {\n  border-bottom: 0px; }\n\n.discuss_title .title_all[_v-6581e61a] {\n  display: inline-block;\n  vertical-align: middle; }\n\n.discuss_title .title_img[_v-6581e61a] {\n  width: 0.24rem;\n  height: 0.24rem;\n  border-radius: 50%;\n  background: red; }\n\n.discuss_title .title_name[_v-6581e61a] {\n  font-size: 0.14rem;\n  color: #666666;\n  margin-left: 0.05rem; }\n\n.discuss_title .title_time[_v-6581e61a] {\n  font-size: 0.12rem;\n  margin-left: 0.03rem;\n  color: #999999; }\n\n.discuss_title .title_star[_v-6581e61a] {\n  width: 0.59rem;\n  float: right;\n  margin-top: 0.06rem; }\n\n.discuss_content[_v-6581e61a] {\n  font-size: 0.13rem;\n  color: #333333;\n  margin-top: 0.1rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 5;\n  display: -webkit-box; }\n\n.discuss_seeAll[_v-6581e61a] {\n  width: 0.8rem;\n  font-size: 0.13rem;\n  color: #FF4A7D;\n  padding-top: 0.1rem; }\n\n.discuss_imgContainer[_v-6581e61a] {\n  font-size: 0;\n  width: 3.1rem;\n  /*min-height: 1rem;*/\n  margin-top: 0.1rem; }\n  .discuss_imgContainer .discuss_img[_v-6581e61a] {\n    width: 0.9rem;\n    height: 0.9rem;\n    background: red;\n    display: inline-block;\n    vertical-align: top;\n    margin-right: 0.1rem;\n    margin-bottom: 0.1rem;\n    border-radius: 3px; }\n\n.discuss_share[_v-6581e61a] {\n  width: 100%;\n  height: 0.16rem; }\n  .discuss_share .discuss_share_container[_v-6581e61a] {\n    height: 0.16rem;\n    float: right;\n    font-size: 0.11rem;\n    color: #999999; }\n    .discuss_share .discuss_share_container img[_v-6581e61a] {\n      width: 0.15rem; }\n\n.discuss_all[_v-6581e61a] {\n  width: 100%;\n  color: #999999;\n  text-align: center;\n  height: 0.5rem; }\n  .discuss_all .discuss_all_content[_v-6581e61a] {\n    display: inline-block;\n    border-bottom: 1px solid #999;\n    height: 19px; }\n\n.attention_all[_v-6581e61a] {\n  font-size: 0;\n  display: inline-block;\n  vertical-align: middle; }\n\n.attention_yes[_v-6581e61a] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  /*border: 0.5px solid #FF4A7D;*/\n  border-radius: 13px; }\n\n.attention_yes1[_v-6581e61a] {\n  width: 0.45rem !important;\n  height: 0.18rem !important;\n  display: inline-block;\n  vertical-align: top; }\n\n.attention_no[_v-6581e61a] {\n  width: 0.45rem;\n  height: 0.18rem;\n  line-height: 0.18rem;\n  text-align: center;\n  display: inline-block;\n  vertical-align: top;\n  font-size: 0.12rem;\n  color: #fff;\n  background: #D8D8D8;\n  border: 0.5px solid #D8D8D8;\n  border-radius: 13px; }\n\n.maskAttention[_v-6581e61a] {\n  position: fixed;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  background: #000;\n  opacity: 0.4;\n  z-index: 1001; }\n\n.contentAttention[_v-6581e61a] {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 1202;\n  margin: auto;\n  background: #000;\n  width: 2.7rem;\n  opacity: 0.65;\n  border-radius: 6px;\n  color: #fff;\n  height: 0.72rem; }\n\n.contentAttention h1[_v-6581e61a] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center;\n  margin-top: 0.15rem; }\n\n.contentAttention p[_v-6581e61a] {\n  width: 100%;\n  font-size: 0.14rem;\n  text-align: center; }\n\n.course_desc_0 .class_introduce_tit[_v-6581e61a] {\n  text-align: center !important;\n  line-height: 15px; }\n\n.course_desc_0 .class_introduce_tit .class_dis[_v-6581e61a], .course_desc_0 .class_introduce_tit .theater_dis[_v-6581e61a] {\n  display: inline-block !important; }\n\n.course_desc_0 .class_introduce_tit .class_dis .active[_v-6581e61a] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .theater_dis .active[_v-6581e61a] {\n  color: #FF4A7D; }\n\n.course_desc_0 .class_introduce_tit .class_dis span[_v-6581e61a] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .class_introduce_tit .theater_dis span[_v-6581e61a] {\n  padding-top: 13px;\n  padding-bottom: 13px;\n  padding-left: 2px;\n  padding-right: 2px; }\n\n.course_desc_0 .fixStyle[_v-6581e61a] {\n  position: fixed;\n  top: 44px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0 .fixStyle1[_v-6581e61a] {\n  position: fixed;\n  top: 0px;\n  width: 100%;\n  background: #fff;\n  z-index: 666; }\n\n.course_desc_0[_v-6581e61a] {\n  position: relative; }\n\n.introduceGuide[_v-6581e61a] {\n  position: absolute;\n  top: -14px;\n  width: 3.2rem;\n  right: 21px;\n  z-index: 1000; }\n\n.introduceGuide1[_v-6581e61a] {\n  position: absolute;\n  left: 0;\n  width: 248px;\n  z-index: 1000;\n  bottom: -10px; }\n\n.introduceGuideMask[_v-6581e61a] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  bottom: 60px;\n  left: 0;\n  background: #000000;\n  opacity: 0.6;\n  z-index: 999; }\n\n.introduceGuidebtn[_v-6581e61a] {\n  width: 120px;\n  height: 40px;\n  position: fixed;\n  left: 50%;\n  margin-left: -60px;\n  bottom: 60px;\n  z-index: 1000;\n  background: -webkit-linear-gradient(left, #FF7C7C, #FF6A8B);\n  border-radius: 100px;\n  text-align: center;\n  line-height: 40px;\n  color: #fff; }\n", ""]);
 
 	// exports
 
@@ -18724,7 +18724,7 @@
 /* 282 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"course_desc_0\" :style=\"styleObject\" _v-26b56ef0=\"\">\n    <div class=\"block\" style=\"width: 100%;height: 47px;\" v-if=\"fixFlag\" _v-26b56ef0=\"\"></div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle: fixFlag}\" v-if=\"!isApp\" _v-26b56ef0=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-26b56ef0=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-26b56ef0=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-26b56ef0=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle1: fixFlag}\" v-if=\"isApp\" _v-26b56ef0=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-26b56ef0=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-26b56ef0=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-26b56ef0=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-26b56ef0=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_intrduce_success\" _v-26b56ef0=\"\"></div>\n    <div v-if=\"class_introduce_left==1\" class=\"class_intrduce_left\" _v-26b56ef0=\"\">\n        <div v-if=\"courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_div\" _v-26b56ef0=\"\">\n            <img :src=\"item.imgUri\" v-for=\"(item,index) in courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_img\" _v-26b56ef0=\"\">\n        </div>\n        <div class=\"left_introduce_text\" _v-26b56ef0=\"\">\n            <p v-html=\"courseDescInfo.courseDesc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==0\" class=\"class_introduce_right\" _v-26b56ef0=\"\">\n        <div class=\"class_introduce_con\" _v-26b56ef0=\"\">\n            <a _v-26b56ef0=\"\">\n                <div class=\"teacher_tit\" _v-26b56ef0=\"\">\n                    <img @click=\"goTeacher(teacherDescInfo.command.content)\" class=\"img\" :src=\"teacherDescInfo.teacherAvatar\" alt=\"\" _v-26b56ef0=\"\">\n                    <div class=\"teacher_dis\" _v-26b56ef0=\"\">\n                        <span class=\"techer\" _v-26b56ef0=\"\">{{teacherDescInfo.teacherName}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != teacherDescInfo.teacherId\" _v-26b56ef0=\"\">\n                        <!-- <div class='attention_yes' v-if='attention==0' @click='attention_yes'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"attention==0\" @click=\"attention_yes\" _v-26b56ef0=\"\">\n                        <div class=\"attention_no\" v-if=\"attention==1\" _v-26b56ef0=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-26b56ef0=\"\">\n                <p v-html=\"teacherDescInfo.teacherDesc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n            </div>\n        </div>\n        <div class=\"class_introduce_con guest_introduce_con\" v-for=\"item in guestList\" _v-26b56ef0=\"\">\n            <a _v-26b56ef0=\"\">\n                <div class=\"teacher_tit\" _v-26b56ef0=\"\">\n                    <img @click=\"goTeacher(item.command.content)\" class=\"img\" :src=\"item.avatar\" alt=\"\" _v-26b56ef0=\"\">\n                    <div class=\"teacher_dis\" _v-26b56ef0=\"\">\n                        <span class=\"techer\" _v-26b56ef0=\"\">{{item.name}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != item.teacherId\" _v-26b56ef0=\"\">\n                        <!-- <div class='attention_yes' v-if='item.followStatus==0' @click='attention_yes_guest(item.teacherId)'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"item.followStatus==0\" @click=\"attention_yes_guest(item.teacherId)\" _v-26b56ef0=\"\">\n                        <div class=\"attention_no\" v-if=\"item.followStatus==1\" _v-26b56ef0=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-26b56ef0=\"\">\n                <p v-html=\"item.desc.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></p>\n            </div>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==2\" _v-26b56ef0=\"\">\n        <div class=\"discuss_top\" _v-26b56ef0=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==1\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllSignUp.png\" _v-26b56ef0=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==0\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png\" _v-26b56ef0=\"\">\n            <div class=\"discuss_top_write\" @click=\"writeNote\" v-if=\"userTicket==1 &amp;&amp; AppVersionFlag\" _v-26b56ef0=\"\">\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\" _v-26b56ef0=\"\">\n\n            </div>\n            <div class=\"discuss_top_no_write\" v-if=\"userTicket==0 &amp;&amp; AppVersionFlag\" _v-26b56ef0=\"\">\n                报名后才能写笔记哦\n            </div>\n            <div class=\"discuss_top_alldiscuss\" @click=\"allNote\" _v-26b56ef0=\"\">\n                全部笔记\n                <!-- <img src=\"//pic.davdian.com/free/2017/07/26/entry.png\"> -->\n            </div>\n            <i class=\"icon\" _v-26b56ef0=\"\"></i>\n        </div>\n        <div class=\"discuss_container\" v-if=\"notesList.length!=0\" :class=\"{discuss_container_noborder: index == notesList.length-1}\" v-for=\"(item, index) in notesList\" @click.stop=\"show_all(item)\" _v-26b56ef0=\"\">\n            <div class=\"discuss_title\" _v-26b56ef0=\"\">\n                <div class=\"title_img title_all\" :style=\"{'background': 'url(' + item.headImg + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-26b56ef0=\"\"></div>    \n                <div class=\"title_name title_all\" v-text=\"item.userName\" _v-26b56ef0=\"\"></div>\n                <div class=\"title_time title_all\" v-text=\"item.createTime\" _v-26b56ef0=\"\"></div>\n                <img class=\"title_star title_all\" v-if=\"item.score == 1\" src=\"//pic.davdian.com/free/2017/05/09/star_1.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 2\" src=\"//pic.davdian.com/free/2017/05/09/star_2.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 3\" src=\"//pic.davdian.com/free/2017/05/09/star_3.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 4\" src=\"//pic.davdian.com/free/2017/05/09/star_4.png\" _v-26b56ef0=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 5\" src=\"//pic.davdian.com/free/2017/05/09/star_5.png\" _v-26b56ef0=\"\">\n            </div>\n            <div class=\"discuss_content\" v-html=\"item.content.replace(/\\n/g,'<br/>')\" _v-26b56ef0=\"\"></div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==1\" @click.stop=\"showAll(index)\" _v-26b56ef0=\"\">查看全部</div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==2\" @click.stop=\"showAll1(index)\" _v-26b56ef0=\"\">收起</div>\n            <div class=\"discuss_imgContainer\" _v-26b56ef0=\"\">\n                <div class=\"discuss_img\" :style=\"{'background': 'url(' + item1 + ') center center / cover no-repeat' , 'background-size': 'cover'}\" v-for=\"(item1, index) in item.imgList\" @click=\"showImg(index,item.imgList, item1)\" _v-26b56ef0=\"\"></div>\n            </div>\n            <div class=\"discuss_share\" v-if=\"isApp\" _v-26b56ef0=\"\">\n                <div class=\"discuss_share_container\" @click.stop=\"share(item)\" v-if=\"isApp\" _v-26b56ef0=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/02/07/material-share.png\" _v-26b56ef0=\"\">\n                    <span v-text=\"item.shareNum\" v-if=\"item.shareNum !=0\" _v-26b56ef0=\"\"></span>\n                </div>\n            </div>\n        </div>\n        <!-- <div class='discuss_all'>\n            <div class=\"discuss_all_content\" @click='allNote' v-if='notesList.length!=0'>\n                查看全部{{notesNum}}条听课笔记\n            </div>\n        </div> -->\n        <div class=\"no_discuss\" v-if=\"notesList.length==0\" _v-26b56ef0=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/10/error_img.png\" _v-26b56ef0=\"\">\n            <p _v-26b56ef0=\"\">快来写笔记吧</p>\n            <!-- <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\">\n            </div>\n            <div class='discuss_top_no_write' v-if='userTicket==0 && AppVersionFlag'>\n                报名后才能写笔记哦\n            </div> -->\n        </div>\n    </div>\n    <!-- <div class='maskAttention' v-if='maskAttention'></div> -->\n    <div class=\"contentAttention\" v-if=\"maskAttention\" _v-26b56ef0=\"\">\n        <h1 _v-26b56ef0=\"\">关注成功</h1>\n        <p _v-26b56ef0=\"\">老师开讲新课，我们会悄悄告诉你呦</p>\n    </div>\n\n    <img v-if=\"introduceGuide &amp;&amp; guide==1\" class=\"introduceGuide lectureNnotesAll\" src=\"//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png\" _v-26b56ef0=\"\">\n\n    <div v-if=\"introduceGuide\" class=\"introduceGuideMask\" _v-26b56ef0=\"\"></div>\n    <div v-if=\"introduceGuide\" class=\"introduceGuidebtn\" @click=\"know\" _v-26b56ef0=\"\">知道了</div>\n\n</div>\n";
+	module.exports = "\n<div class=\"course_desc_0\" :style=\"styleObject\" _v-6581e61a=\"\">\n    <div class=\"block\" style=\"width: 100%;height: 47px;\" v-if=\"fixFlag\" _v-6581e61a=\"\"></div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle: fixFlag}\" v-if=\"!isApp\" _v-6581e61a=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-6581e61a=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-6581e61a=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-6581e61a=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_introduce_tit\" :class=\"{fixStyle1: fixFlag}\" v-if=\"isApp\" _v-6581e61a=\"\">\n        <div @click=\"change(1)\" class=\"class_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 1 }\" _v-6581e61a=\"\">{{courseDescTitle}}</span>\n        </div>\n        <div @click=\"change(0)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 0 }\" _v-6581e61a=\"\">{{teacherDescTitle}}</span>\n        </div>\n        <div @click=\"change(2)\" class=\"theater_dis\" _v-6581e61a=\"\">\n            <span :class=\"{ active: class_introduce_left == 2 }\" _v-6581e61a=\"\">{{courseNotesTitle}}</span>\n        </div>\n    </div>\n    <div class=\"class_intrduce_success\" _v-6581e61a=\"\"></div>\n    <div v-if=\"class_introduce_left==1\" class=\"class_intrduce_left\" _v-6581e61a=\"\">\n        <div v-if=\"courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_div\" _v-6581e61a=\"\">\n            <img :src=\"item.imgUri\" v-for=\"(item,index) in courseDescInfo.courseDescImgUri\" class=\"class_intrduce_left_img\" _v-6581e61a=\"\">\n        </div>\n        <div class=\"left_introduce_text\" _v-6581e61a=\"\">\n            <p v-html=\"courseDescInfo.courseDesc.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></p>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==0\" class=\"class_introduce_right\" _v-6581e61a=\"\">\n        <div class=\"class_introduce_con\" _v-6581e61a=\"\">\n            <a _v-6581e61a=\"\">\n                <div class=\"teacher_tit\" _v-6581e61a=\"\">\n                    <img @click=\"goTeacher(teacherDescInfo.command.content)\" class=\"img\" :src=\"teacherDescInfo.teacherAvatar\" alt=\"\" _v-6581e61a=\"\">\n                    <div class=\"teacher_dis\" _v-6581e61a=\"\">\n                        <span class=\"techer\" _v-6581e61a=\"\">{{teacherDescInfo.teacherName}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != teacherDescInfo.teacherId\" _v-6581e61a=\"\">\n                        <!-- <div class='attention_yes' v-if='attention==0' @click='attention_yes'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"attention==0\" @click=\"attention_yes\" _v-6581e61a=\"\">\n                        <div class=\"attention_no\" v-if=\"attention==1\" _v-6581e61a=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-6581e61a=\"\">\n                <p v-html=\"teacherDescInfo.teacherDesc.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></p>\n            </div>\n        </div>\n        <div class=\"class_introduce_con guest_introduce_con\" v-for=\"item in guestList\" _v-6581e61a=\"\">\n            <a _v-6581e61a=\"\">\n                <div class=\"teacher_tit\" _v-6581e61a=\"\">\n                    <img @click=\"goTeacher(item.command.content)\" class=\"img\" :src=\"item.avatar\" alt=\"\" _v-6581e61a=\"\">\n                    <div class=\"teacher_dis\" _v-6581e61a=\"\">\n                        <span class=\"techer\" _v-6581e61a=\"\">{{item.name}}</span>\n                    </div>\n                    <div class=\"attention_all\" v-if=\"userId != item.teacherId\" _v-6581e61a=\"\">\n                        <!-- <div class='attention_yes' v-if='item.followStatus==0' @click='attention_yes_guest(item.teacherId)'>关注</div> -->\n                        <img class=\"attention_yes1\" src=\"//pic.davdian.com/free/2017/05/25/introduce_btn1.png\" v-if=\"item.followStatus==0\" @click=\"attention_yes_guest(item.teacherId)\" _v-6581e61a=\"\">\n                        <div class=\"attention_no\" v-if=\"item.followStatus==1\" _v-6581e61a=\"\">已关注</div>\n                    </div>\n                </div>\n            </a>\n            <div class=\"class_introduce_text\" _v-6581e61a=\"\">\n                <p v-html=\"item.desc.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></p>\n            </div>\n        </div>\n    </div>\n    <div v-if=\"class_introduce_left==2\" _v-6581e61a=\"\">\n        <div class=\"discuss_top\" _v-6581e61a=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==1\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllSignUp.png\" _v-6581e61a=\"\">\n             <img v-if=\"introduceGuide &amp;&amp; guide==2 &amp;&amp; userTicket==0\" class=\"introduceGuide1\" src=\"//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png\" _v-6581e61a=\"\">\n            <div class=\"discuss_top_write\" @click=\"writeNote\" v-if=\"userTicket==1 &amp;&amp; AppVersionFlag\" _v-6581e61a=\"\">\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\" _v-6581e61a=\"\">\n\n            </div>\n            <div class=\"discuss_top_no_write\" v-if=\"userTicket==0 &amp;&amp; AppVersionFlag\" _v-6581e61a=\"\">\n                报名后才能写笔记哦\n            </div>\n            <div class=\"discuss_top_alldiscuss\" @click=\"allNote\" _v-6581e61a=\"\">\n                全部笔记\n                <!-- <img src=\"//pic.davdian.com/free/2017/07/26/entry.png\"> -->\n            </div>\n            <i class=\"icon\" _v-6581e61a=\"\"></i>\n        </div>\n        <div class=\"discuss_container\" v-if=\"notesList.length!=0\" :class=\"{discuss_container_noborder: index == notesList.length-1}\" v-for=\"(item, index) in notesList\" @click.stop=\"show_all(item)\" _v-6581e61a=\"\">\n            <div class=\"discuss_title\" _v-6581e61a=\"\">\n                <div class=\"title_img title_all\" :style=\"{'background': 'url(' + item.headImg + ') center center / cover no-repeat' , 'background-size': 'cover'}\" _v-6581e61a=\"\"></div>    \n                <div class=\"title_name title_all\" v-text=\"item.userName\" _v-6581e61a=\"\"></div>\n                <div class=\"title_time title_all\" v-text=\"item.createTime\" _v-6581e61a=\"\"></div>\n                <img class=\"title_star title_all\" v-if=\"item.score == 1\" src=\"//pic.davdian.com/free/2017/05/09/star_1.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 2\" src=\"//pic.davdian.com/free/2017/05/09/star_2.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 3\" src=\"//pic.davdian.com/free/2017/05/09/star_3.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 4\" src=\"//pic.davdian.com/free/2017/05/09/star_4.png\" _v-6581e61a=\"\">\n                <img class=\"title_star title_all\" v-if=\"item.score == 5\" src=\"//pic.davdian.com/free/2017/05/09/star_5.png\" _v-6581e61a=\"\">\n            </div>\n            <div class=\"discuss_content\" v-html=\"item.content.replace(/\\n/g,'<br/>')\" _v-6581e61a=\"\"></div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==1\" @click.stop=\"showAll(index)\" _v-6581e61a=\"\">查看全部</div>\n            <div class=\"discuss_seeAll\" v-if=\"arr[index]==2\" @click.stop=\"showAll1(index)\" _v-6581e61a=\"\">收起</div>\n            <div class=\"discuss_imgContainer\" _v-6581e61a=\"\">\n                <div class=\"discuss_img\" :style=\"{'background': 'url(' + item1 + ') center center / cover no-repeat' , 'background-size': 'cover'}\" v-for=\"(item1, index) in item.imgList\" @click=\"showImg(index,item.imgList, item1)\" _v-6581e61a=\"\"></div>\n            </div>\n            <div class=\"discuss_share\" v-if=\"isApp\" _v-6581e61a=\"\">\n                <div class=\"discuss_share_container\" @click.stop=\"share(item)\" v-if=\"isApp\" _v-6581e61a=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/02/07/material-share.png\" _v-6581e61a=\"\">\n                    <span v-text=\"item.shareNum\" v-if=\"item.shareNum !=0\" _v-6581e61a=\"\"></span>\n                </div>\n            </div>\n        </div>\n        <!-- <div class='discuss_all'>\n            <div class=\"discuss_all_content\" @click='allNote' v-if='notesList.length!=0'>\n                查看全部{{notesNum}}条听课笔记\n            </div>\n        </div> -->\n        <div class=\"no_discuss\" v-if=\"notesList.length==0\" _v-6581e61a=\"\">\n            <img src=\"//pic.davdian.com/free/2017/05/10/error_img.png\" _v-6581e61a=\"\">\n            <p _v-6581e61a=\"\">快来写笔记吧</p>\n            <!-- <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>\n                写我的听课笔记\n                <img src=\"//pic.davdian.com/free/2017/07/26/write.png\">\n            </div>\n            <div class='discuss_top_no_write' v-if='userTicket==0 && AppVersionFlag'>\n                报名后才能写笔记哦\n            </div> -->\n        </div>\n    </div>\n    <!-- <div class='maskAttention' v-if='maskAttention'></div> -->\n    <div class=\"contentAttention\" v-if=\"maskAttention\" _v-6581e61a=\"\">\n        <h1 _v-6581e61a=\"\">关注成功</h1>\n        <p _v-6581e61a=\"\">老师开讲新课，我们会悄悄告诉你呦</p>\n    </div>\n\n    <img v-if=\"introduceGuide &amp;&amp; guide==1\" class=\"introduceGuide lectureNnotesAll\" src=\"//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png\" _v-6581e61a=\"\">\n\n    <div v-if=\"introduceGuide\" class=\"introduceGuideMask\" _v-6581e61a=\"\"></div>\n    <div v-if=\"introduceGuide\" class=\"introduceGuidebtn\" @click=\"know\" _v-6581e61a=\"\">知道了</div>\n\n</div>\n";
 
 /***/ },
 /* 283 */
@@ -18754,7 +18754,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2cd22748/fire_work.vue"
+	  var id = "_v-44019e47/fire_work.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19208,7 +19208,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2b46bb74/dvk1.vue"
+	  var id = "_v-ac41ad0a/dvk1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19232,8 +19232,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b46bb74&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk1.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b46bb74&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk1.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac41ad0a&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk1.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac41ad0a&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk1.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19251,7 +19251,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk1_container[_v-2b46bb74]{\n    height: 76px;\n    position: relative;\n    padding-bottom: 25px;\n}\n.dvk1_img[_v-2b46bb74]{\n    height: 76px;\n    width: 110px;\n    position: relative;\n    float:left;\n    overflow: hidden;\n    background: #fff;\n    margin-top:2px;\n}\n.dvk1_content[_v-2b46bb74]{\n    vertical-align: top;\n    margin-left: 120px;\n    height: 76px;\n}\n.dvk1_text[_v-2b46bb74]{\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    font-size: 14px;\n    color: #333333;\n    margin-bottom: 5px;\n    line-height: 20px;\n}\n.dvk1_name[_v-2b46bb74]{\n    font-size: 12px;\n    line-height: 16px;\n    color: #999;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk1_share[_v-2b46bb74]{\n    margin-top: 5px;\n    font-size: 12px;\n    line-height:16px;\n    color: #999999;\n    overflow:hidden;\n}\n.dvk1_border[_v-2b46bb74]{\n    border-left: 0.5px solid #999;\n    margin-left: 5px;\n    /*margin-right: 0.07rem;*/\n}\n.dvk1_imgNav[_v-2b46bb74]{\n    position: absolute;\n    top: 30px;\n    left: 30px;\n    width: 30px;\n    height: 30px;\n}\n.dvk1_share_left[_v-2b46bb74]{\n\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk1_money[_v-2b46bb74]{\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    height: 18px;\n    line-height: 20px;\n    padding-left: 3px;\n    padding-right: 3px;\n    text-align: center;\n    color: #fff;\n    font-size: 11px;\n    background: #FF4A7D;\n}\n.circle[_v-2b46bb74]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2b46bb74] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n    border-radius: 4px;\n}\n.dvk1_mask[_v-2b46bb74]{\n  height: 79px;\n  padding: 0 10px;\n}\n.dvk1_line[_v-2b46bb74]{\n  height: 12px;\n  width: 1px;\n  background: #E1E1E1;\n  margin-left: 10px;\n}\n.dvk1_share>span[_v-2b46bb74]{\n  float: left;\n}\n.dvk1_share_left[_v-2b46bb74]{\n  margin-left: 10px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk1_container[_v-ac41ad0a]{\n    height: 76px;\n    position: relative;\n    padding-bottom: 25px;\n}\n.dvk1_img[_v-ac41ad0a]{\n    height: 76px;\n    width: 110px;\n    position: relative;\n    float:left;\n    overflow: hidden;\n    background: #fff;\n    margin-top:2px;\n}\n.dvk1_content[_v-ac41ad0a]{\n    vertical-align: top;\n    margin-left: 120px;\n    height: 76px;\n}\n.dvk1_text[_v-ac41ad0a]{\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    font-size: 14px;\n    color: #333333;\n    margin-bottom: 5px;\n    line-height: 20px;\n}\n.dvk1_name[_v-ac41ad0a]{\n    font-size: 12px;\n    line-height: 16px;\n    color: #999;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk1_share[_v-ac41ad0a]{\n    margin-top: 5px;\n    font-size: 12px;\n    line-height:16px;\n    color: #999999;\n    overflow:hidden;\n}\n.dvk1_border[_v-ac41ad0a]{\n    border-left: 0.5px solid #999;\n    margin-left: 5px;\n    /*margin-right: 0.07rem;*/\n}\n.dvk1_imgNav[_v-ac41ad0a]{\n    position: absolute;\n    top: 30px;\n    left: 30px;\n    width: 30px;\n    height: 30px;\n}\n.dvk1_share_left[_v-ac41ad0a]{\n\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk1_money[_v-ac41ad0a]{\n    position: absolute;\n    top: 5px;\n    left: 5px;\n    height: 18px;\n    line-height: 20px;\n    padding-left: 3px;\n    padding-right: 3px;\n    text-align: center;\n    color: #fff;\n    font-size: 11px;\n    background: #FF4A7D;\n}\n.circle[_v-ac41ad0a]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-ac41ad0a] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n    border-radius: 4px;\n}\n.dvk1_mask[_v-ac41ad0a]{\n  height: 79px;\n  padding: 0 10px;\n}\n.dvk1_line[_v-ac41ad0a]{\n  height: 12px;\n  width: 1px;\n  background: #E1E1E1;\n  margin-left: 10px;\n}\n.dvk1_share>span[_v-ac41ad0a]{\n  float: left;\n}\n.dvk1_share_left[_v-ac41ad0a]{\n  margin-left: 10px;\n}\n", ""]);
 
 	// exports
 
@@ -19501,7 +19501,7 @@
 /* 293 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b46bb74=\"\">\n    <tt_com_0 :data=\"data\" _v-2b46bb74=\"\"></tt_com_0>\n    <div class=\"dvk1_container\" :style=\"styleObject\" _v-2b46bb74=\"\">\n      <div class=\"dvk1_mask\" _v-2b46bb74=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b46bb74=\"\">\n          <div class=\"dvk1_img\" _v-2b46bb74=\"\">\n            <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b46bb74=\"\">\n            <div class=\"dvk1_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b46bb74=\"\"></div>\n          </div>\n          <div class=\"dvk1_content\" _v-2b46bb74=\"\">\n            <div class=\"dvk1_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b46bb74=\"\"></div>\n            <div class=\"dvk1_name\" _v-2b46bb74=\"\">\n              <span v-text=\"data.body.dataList[0].teacherName\" _v-2b46bb74=\"\"></span>\n            </div>\n            <div class=\"dvk1_share\" _v-2b46bb74=\"\">\n              <span class=\"dvk1_share_right\" _v-2b46bb74=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b46bb74=\"\"></span></span>\n              <span class=\"dvk1_line\" _v-2b46bb74=\"\"></span>\n              <span class=\"dvk1_share_left\" _v-2b46bb74=\"\">\n                <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b46bb74=\"\"></span>\n                <span v-if=\"livetext(data.body.dataList[0])\" _v-2b46bb74=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b46bb74=\"\"></span>\n              </span>\n            </div>\n          </div>\n        </a>\n      </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-ac41ad0a=\"\">\n    <tt_com_0 :data=\"data\" _v-ac41ad0a=\"\"></tt_com_0>\n    <div class=\"dvk1_container\" :style=\"styleObject\" _v-ac41ad0a=\"\">\n      <div class=\"dvk1_mask\" _v-ac41ad0a=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-ac41ad0a=\"\">\n          <div class=\"dvk1_img\" _v-ac41ad0a=\"\">\n            <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-ac41ad0a=\"\">\n            <div class=\"dvk1_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-ac41ad0a=\"\"></div>\n          </div>\n          <div class=\"dvk1_content\" _v-ac41ad0a=\"\">\n            <div class=\"dvk1_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-ac41ad0a=\"\"></div>\n            <div class=\"dvk1_name\" _v-ac41ad0a=\"\">\n              <span v-text=\"data.body.dataList[0].teacherName\" _v-ac41ad0a=\"\"></span>\n            </div>\n            <div class=\"dvk1_share\" _v-ac41ad0a=\"\">\n              <span class=\"dvk1_share_right\" _v-ac41ad0a=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-ac41ad0a=\"\"></span></span>\n              <span class=\"dvk1_line\" _v-ac41ad0a=\"\"></span>\n              <span class=\"dvk1_share_left\" _v-ac41ad0a=\"\">\n                <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-ac41ad0a=\"\"></span>\n                <span v-if=\"livetext(data.body.dataList[0])\" _v-ac41ad0a=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-ac41ad0a=\"\"></span>\n              </span>\n            </div>\n          </div>\n        </a>\n      </div>\n    </div>\n</div>\n";
 
 /***/ },
 /* 294 */
@@ -19531,7 +19531,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2b2a8c72/dvk2.vue"
+	  var id = "_v-ac257e08/dvk2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19555,8 +19555,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b2a8c72&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk2.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b2a8c72&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk2.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac257e08&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk2.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac257e08&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk2.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19574,7 +19574,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk2_container[_v-2b2a8c72]{\n    height: 3.06rem;\n    width: 100%;\n    background: #fff;\n    padding-top: 0.1rem;\n}\n.dvk2_img[_v-2b2a8c72]{\n    width: 3.55rem;\n    height: 2.52rem;\n    margin-left: 0.1rem;\n    position: relative;\n}\n.dvk2_money[_v-2b2a8c72]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.dvk2_startTime[_v-2b2a8c72]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.2rem;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.35)),color-stop(100%,rgba(0,0,0,.7)),color-stop(100%,#fff));\n    bottom: 0;\n}\n.dvk2_text[_v-2b2a8c72]{\n    width: 3.55rem;\n    height: 0.4rem;\n    margin-left: 0.1rem;\n    margin-top: 0.05rem;\n}\n.dvk2_text_title[_v-2b2a8c72]{\n    width: 100%;\n    height: 0.17rem;\n    line-height: 0.17rem;\n    font-size: 0.12rem;\n    color: #333333;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk2_text_content[_v-2b2a8c72]{\n    width: 100%;\n    height: 0.17rem;\n    line-height: 0.17rem;\n    font-size: 0.11rem;\n    color: #999999;\n}\n.dvk2_text_name[_v-2b2a8c72]{\n    float: left;\n    width: 2.7rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk2_text_popular[_v-2b2a8c72]{\n    float: right;\n}\n.circle[_v-2b2a8c72]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2b2a8c72] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk2_container[_v-ac257e08]{\n    height: 3.06rem;\n    width: 100%;\n    background: #fff;\n    padding-top: 0.1rem;\n}\n.dvk2_img[_v-ac257e08]{\n    width: 3.55rem;\n    height: 2.52rem;\n    margin-left: 0.1rem;\n    position: relative;\n}\n.dvk2_money[_v-ac257e08]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.dvk2_startTime[_v-ac257e08]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.2rem;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.35)),color-stop(100%,rgba(0,0,0,.7)),color-stop(100%,#fff));\n    bottom: 0;\n}\n.dvk2_text[_v-ac257e08]{\n    width: 3.55rem;\n    height: 0.4rem;\n    margin-left: 0.1rem;\n    margin-top: 0.05rem;\n}\n.dvk2_text_title[_v-ac257e08]{\n    width: 100%;\n    height: 0.17rem;\n    line-height: 0.17rem;\n    font-size: 0.12rem;\n    color: #333333;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk2_text_content[_v-ac257e08]{\n    width: 100%;\n    height: 0.17rem;\n    line-height: 0.17rem;\n    font-size: 0.11rem;\n    color: #999999;\n}\n.dvk2_text_name[_v-ac257e08]{\n    float: left;\n    width: 2.7rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk2_text_popular[_v-ac257e08]{\n    float: right;\n}\n.circle[_v-ac257e08]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-ac257e08] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
 
 	// exports
 
@@ -19785,7 +19785,7 @@
 /* 298 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b2a8c72=\"\">\n    <tt_com_0 :data=\"data\" _v-2b2a8c72=\"\"></tt_com_0>\n    <div class=\"dvk2_container\" :style=\"styleObject\" _v-2b2a8c72=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b2a8c72=\"\">\n           <div class=\"dvk2_img\" _v-2b2a8c72=\"\">\n                <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b2a8c72=\"\">\n               <div class=\"dvk2_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b2a8c72=\"\"></div>\n               <div class=\"dvk2_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-2b2a8c72=\"\">\n                   <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b2a8c72=\"\"></span> \n                    <span v-if=\"livetext(data.body.dataList[0])\" _v-2b2a8c72=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                    <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b2a8c72=\"\"></span>\n               </div>\n           </div>\n           <div class=\"dvk2_text\" _v-2b2a8c72=\"\">\n               <div class=\"dvk2_text_title\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b2a8c72=\"\"></div>\n               <div class=\"dvk2_text_content\" _v-2b2a8c72=\"\">\n                   <span class=\"dvk2_text_name\" v-text=\"data.body.dataList[0].teacherName\" _v-2b2a8c72=\"\"></span>\n                   <span class=\"dvk2_text_popular\" _v-2b2a8c72=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b2a8c72=\"\"></span></span>\n               </div>\n           </div>\n        </a>\n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-ac257e08=\"\">\n    <tt_com_0 :data=\"data\" _v-ac257e08=\"\"></tt_com_0>\n    <div class=\"dvk2_container\" :style=\"styleObject\" _v-ac257e08=\"\">\n        <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-ac257e08=\"\">\n           <div class=\"dvk2_img\" _v-ac257e08=\"\">\n                <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-ac257e08=\"\">\n               <div class=\"dvk2_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-ac257e08=\"\"></div>\n               <div class=\"dvk2_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-ac257e08=\"\">\n                   <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-ac257e08=\"\"></span> \n                    <span v-if=\"livetext(data.body.dataList[0])\" _v-ac257e08=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                    <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-ac257e08=\"\"></span>\n               </div>\n           </div>\n           <div class=\"dvk2_text\" _v-ac257e08=\"\">\n               <div class=\"dvk2_text_title\" v-text=\"data.body.dataList[0].courseTitle\" _v-ac257e08=\"\"></div>\n               <div class=\"dvk2_text_content\" _v-ac257e08=\"\">\n                   <span class=\"dvk2_text_name\" v-text=\"data.body.dataList[0].teacherName\" _v-ac257e08=\"\"></span>\n                   <span class=\"dvk2_text_popular\" _v-ac257e08=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-ac257e08=\"\"></span></span>\n               </div>\n           </div>\n        </a>\n    </div>\n</div>\n";
 
 /***/ },
 /* 299 */
@@ -19815,7 +19815,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2b0e5d70/dvk3.vue"
+	  var id = "_v-ac094f06/dvk3.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -19839,8 +19839,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b0e5d70&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk3.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2b0e5d70&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk3.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac094f06&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk3.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ac094f06&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk3.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -19858,7 +19858,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk3_container[_v-2b0e5d70]{\n    height:2.15rem;\n    width: 100%;\n    background: #fff;\n}\n.dvk3_content1[_v-2b0e5d70]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 1.95rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk3_content2[_v-2b0e5d70]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 1.95rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk3_img[_v-2b0e5d70]{\n    height: 1.2rem;\n    background: #fff;\n    position: relative;\n}\n.dvk3_text[_v-2b0e5d70]{\n    width: 1.52rem;\n    /*height: 0.31rem;*/\n    line-height: 0.15rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n}\n.dvk3_detail[_v-2b0e5d70]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.08rem;\n    width: 1.52rem;\n}\n.dvk3_name[_v-2b0e5d70]{\n    float: left;\n    width: 0.9rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk3_popular[_v-2b0e5d70]{\n    float: right;\n}\n.dvk3_money[_v-2b0e5d70]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.dvk3_startTime[_v-2b0e5d70]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.2rem;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.35)),color-stop(100%,rgba(0,0,0,.7)),color-stop(100%,#fff));\n    bottom: 0;\n}\n.dvk3_startTimeLine[_v-2b0e5d70]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.24rem;\n    background: url('//pic.davdian.com/free/2017/03/06/bg_line1.png');\n    background-size:100% 100%;\n    bottom: 0;\n}\n.dvk3_circle_green[_v-2b0e5d70]{\n    width: 0.05rem;\n    height: 0.05rem;\n    margin-bottom: 0.02rem;\n    margin-right: 0.04rem;\n    border-radius: 50%;\n    display: inline-block;\n    border:0.5px solid #979797;\n    background: #92FDE0;\n}\n.dvk3_name_titlepic[_v-2b0e5d70]{\n    width: 0.14rem;\n    margin-left: 0.03rem;\n    margin-bottom: 0.02rem;\n}\n.circle[_v-2b0e5d70]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2b0e5d70] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk3_container[_v-ac094f06]{\n    height:2.15rem;\n    width: 100%;\n    background: #fff;\n}\n.dvk3_content1[_v-ac094f06]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 1.95rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk3_content2[_v-ac094f06]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 1.95rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk3_img[_v-ac094f06]{\n    height: 1.2rem;\n    background: #fff;\n    position: relative;\n}\n.dvk3_text[_v-ac094f06]{\n    width: 1.52rem;\n    /*height: 0.31rem;*/\n    line-height: 0.15rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n}\n.dvk3_detail[_v-ac094f06]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.08rem;\n    width: 1.52rem;\n}\n.dvk3_name[_v-ac094f06]{\n    float: left;\n    width: 0.9rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk3_popular[_v-ac094f06]{\n    float: right;\n}\n.dvk3_money[_v-ac094f06]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.dvk3_startTime[_v-ac094f06]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.2rem;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.35)),color-stop(100%,rgba(0,0,0,.7)),color-stop(100%,#fff));\n    bottom: 0;\n}\n.dvk3_startTimeLine[_v-ac094f06]{\n    position: absolute;\n    width: 100%;\n    height: 0.2rem;\n    color: #fff;\n    text-align: center;\n    line-height: 0.24rem;\n    background: url('//pic.davdian.com/free/2017/03/06/bg_line1.png');\n    background-size:100% 100%;\n    bottom: 0;\n}\n.dvk3_circle_green[_v-ac094f06]{\n    width: 0.05rem;\n    height: 0.05rem;\n    margin-bottom: 0.02rem;\n    margin-right: 0.04rem;\n    border-radius: 50%;\n    display: inline-block;\n    border:0.5px solid #979797;\n    background: #92FDE0;\n}\n.dvk3_name_titlepic[_v-ac094f06]{\n    width: 0.14rem;\n    margin-left: 0.03rem;\n    margin-bottom: 0.02rem;\n}\n.circle[_v-ac094f06]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-ac094f06] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
 
 	// exports
 
@@ -20126,7 +20126,7 @@
 /* 303 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2b0e5d70=\"\">\n    <tt_com_0 :data=\"data\" _v-2b0e5d70=\"\"></tt_com_0>\n    <div class=\"dvk3_container\" :style=\"styleObject\" _v-2b0e5d70=\"\">\n           <div class=\"dvk3_content1\" _v-2b0e5d70=\"\">\n                <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2b0e5d70=\"\">\n                   <div class=\"dvk3_img\" _v-2b0e5d70=\"\">\n                         <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-2b0e5d70=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-2b0e5d70=\"\"></div>\n                        <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-2b0e5d70=\"\">\n                            <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-2b0e5d70=\"\"></span> \n                            <span v-if=\"livetext(data.body.dataList[0])\" _v-2b0e5d70=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                            <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-2b0e5d70=\"\"></span>\n                        </div>\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-2b0e5d70=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-2b0e5d70=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[0].teacherName\" _v-2b0e5d70=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-2b0e5d70=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-2b0e5d70=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-2b0e5d70=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n           <div class=\"dvk3_content2\" _v-2b0e5d70=\"\">\n               <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2b0e5d70=\"\">\n                   <div class=\"dvk3_img\" _v-2b0e5d70=\"\">\n                        <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].courseCover)\" _v-2b0e5d70=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[1].price &amp;&amp; data.body.dataList[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[1].price\" _v-2b0e5d70=\"\"></div>\n                        <!-- <div class='dvk3_startTime'> -->\n                            <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[1])\" _v-2b0e5d70=\"\">\n                                <span v-if=\"livenow(data.body.dataList[1])\" class=\"circle\" _v-2b0e5d70=\"\"></span> \n                                <span v-if=\"livetext(data.body.dataList[1])\" _v-2b0e5d70=\"\">{{ livetext(data.body.dataList[1]) }}</span>\n                                <span v-if=\"!livetext(data.body.dataList[1])\" v-text=\"data.body.dataList[1].startTimestamp\" _v-2b0e5d70=\"\"></span>\n                            </div>\n                        <!-- </div> -->\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[1].courseTitle\" _v-2b0e5d70=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-2b0e5d70=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[1].teacherName\" _v-2b0e5d70=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-2b0e5d70=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-2b0e5d70=\"\"><span v-text=\"data.body.dataList[1].readTimes\" _v-2b0e5d70=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n       \n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-ac094f06=\"\">\n    <tt_com_0 :data=\"data\" _v-ac094f06=\"\"></tt_com_0>\n    <div class=\"dvk3_container\" :style=\"styleObject\" _v-ac094f06=\"\">\n           <div class=\"dvk3_content1\" _v-ac094f06=\"\">\n                <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-ac094f06=\"\">\n                   <div class=\"dvk3_img\" _v-ac094f06=\"\">\n                         <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].courseCover)\" _v-ac094f06=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[0].price &amp;&amp; data.body.dataList[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[0].price\" _v-ac094f06=\"\"></div>\n                        <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[0])\" _v-ac094f06=\"\">\n                            <span v-if=\"livenow(data.body.dataList[0])\" class=\"circle\" _v-ac094f06=\"\"></span> \n                            <span v-if=\"livetext(data.body.dataList[0])\" _v-ac094f06=\"\">{{ livetext(data.body.dataList[0]) }}</span>\n                            <span v-if=\"!livetext(data.body.dataList[0])\" v-text=\"data.body.dataList[0].startTimestamp\" _v-ac094f06=\"\"></span>\n                        </div>\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[0].courseTitle\" _v-ac094f06=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-ac094f06=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[0].teacherName\" _v-ac094f06=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-ac094f06=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-ac094f06=\"\"><span v-text=\"data.body.dataList[0].readTimes\" _v-ac094f06=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n           <div class=\"dvk3_content2\" _v-ac094f06=\"\">\n               <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-ac094f06=\"\">\n                   <div class=\"dvk3_img\" _v-ac094f06=\"\">\n                        <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].courseCover)\" _v-ac094f06=\"\">\n                        <div class=\"dvk3_money\" v-if=\"data.body.dataList[1].price &amp;&amp; data.body.dataList[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.dataList[1].price\" _v-ac094f06=\"\"></div>\n                        <!-- <div class='dvk3_startTime'> -->\n                            <div class=\"dvk3_startTime\" v-if=\"livetext(data.body.dataList[1])\" _v-ac094f06=\"\">\n                                <span v-if=\"livenow(data.body.dataList[1])\" class=\"circle\" _v-ac094f06=\"\"></span> \n                                <span v-if=\"livetext(data.body.dataList[1])\" _v-ac094f06=\"\">{{ livetext(data.body.dataList[1]) }}</span>\n                                <span v-if=\"!livetext(data.body.dataList[1])\" v-text=\"data.body.dataList[1].startTimestamp\" _v-ac094f06=\"\"></span>\n                            </div>\n                        <!-- </div> -->\n                   </div>\n                   <div class=\"dvk3_text\" v-text=\"data.body.dataList[1].courseTitle\" _v-ac094f06=\"\"></div>\n                   <div class=\"dvk3_detail\" _v-ac094f06=\"\">\n                        <span class=\"dvk3_name\" v-text=\"data.body.dataList[1].teacherName\" _v-ac094f06=\"\"><img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk3_name_titlepic\" _v-ac094f06=\"\"></span>\n                        <span class=\"dvk3_popular\" _v-ac094f06=\"\"><span v-text=\"data.body.dataList[1].readTimes\" _v-ac094f06=\"\"></span></span>\n                    </div>\n                </a>\n           </div>\n       \n    </div>\n</div>\n";
 
 /***/ },
 /* 304 */
@@ -20156,7 +20156,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2af22e6e/dvk4.vue"
+	  var id = "_v-abed2004/dvk4.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -20180,8 +20180,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2af22e6e&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk4.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2af22e6e&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk4.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abed2004&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk4.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abed2004&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk4.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -20199,7 +20199,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk4_container[_v-2af22e6e]{\n    width: 100%;\n    height: 365px;\n    background: #fff;\n}\n.dvk4_title[_v-2af22e6e]{\n    width: 100%;\n    height: 43px;\n    border-bottom: 0.005rem solid #E1E1E1;\n    position: relative;\n}\n.dvk4_title_now[_v-2af22e6e]{\n    width: 1.86rem;\n    height: 0.3rem;\n    margin-top: 0.065rem;\n    line-height: 0.3rem;\n    text-align: center;\n    border-right: 0.005rem solid #E1E1E1;\n    display: block;\n    float: left;\n    position: relative;\n}\n.dvk4_title_bottom[_v-2af22e6e]{\n    position: absolute;\n    top: 41px;\n    width: 0.6rem;\n    left: 0.64rem;\n    border-bottom: 2px solid #FF4A7D;\n}\n.dvk4_title_bottom1[_v-2af22e6e]{\n    position: absolute;\n    top: 41px;\n    width: 0.6rem;\n    left: 2.5rem;\n    border-bottom: 2px solid #FF4A7D;\n}\n.dvk4_title_tomorrow[_v-2af22e6e]{\n    width: 1.87rem;\n    height: 0.3rem;\n    margin-top: 0.065rem;\n    line-height: 0.3rem;\n    text-align: center;\n    display: block;\n    float: left;\n    position: relative;\n}\n.active[_v-2af22e6e]{\n    color: #FF4A7D;\n}\n.dvk4_content[_v-2af22e6e]{\n    height: 3rem;\n    width: 3.55rem;\n    margin-left: 0.1rem;\n}\n.dvk4_detail[_v-2af22e6e]{\n    width: 100%;\n    height: 76px;\n    margin-top:25px;\n}\n.first[_v-2af22e6e]{\n  margin-top:21px;\n}\n.dvk4_detail_content[_v-2af22e6e]{\n    width: 100%;\n    height: 76px;\n}\n.dvk4_detail_content_img[_v-2af22e6e]{\n    width: 110px;\n    height: 76px;\n    float: left;\n    position: relative;\n}\n.dvk4_detail_content_text[_v-2af22e6e]{\n    height: 76px;\n    margin-left:120px;\n    position: relative;\n}\n.dvk4_detail_content_title[_v-2af22e6e]{\n    color: #333333;\n    font-size: 14px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    margin-bottom: 6px;\n    line-height:20px;\n}\n.dvk4_detail_content_name[_v-2af22e6e]{\n    color: #999999;\n    font-size: 12px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n    line-height:18px;\n}\n.dvk4_detail_content_time[_v-2af22e6e]{\n    font-size: 12px;\n    color: #999999;\n    margin-top: 2px;\n}\n.dvk4_detail_content_times[_v-2af22e6e]{\n    float: left;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n    height: 100%;\n    line-height: 14px;\n    color:#999999;\n    margin-left: 10px;\n}\n.dvk4_detail_content_line[_v-2af22e6e]{\n  width: 1px;\n  height: 12px;\n  float:left;\n  background: #E1E1E1;\n  margin-left:10px;\n\n}\n.dvk4_detail_content_popular[_v-2af22e6e]{\n    float: left;\n    height: 100%;\n    line-height: 14px;\n    color:#999999;\n}\n.dvk4_money[_v-2af22e6e]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.circle[_v-2af22e6e]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-2af22e6e] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n    border-radius: 0.04rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk4_container[_v-abed2004]{\n    width: 100%;\n    height: 365px;\n    background: #fff;\n}\n.dvk4_title[_v-abed2004]{\n    width: 100%;\n    height: 43px;\n    border-bottom: 0.005rem solid #E1E1E1;\n    position: relative;\n}\n.dvk4_title_now[_v-abed2004]{\n    width: 1.86rem;\n    height: 0.3rem;\n    margin-top: 0.065rem;\n    line-height: 0.3rem;\n    text-align: center;\n    border-right: 0.005rem solid #E1E1E1;\n    display: block;\n    float: left;\n    position: relative;\n}\n.dvk4_title_bottom[_v-abed2004]{\n    position: absolute;\n    top: 41px;\n    width: 0.6rem;\n    left: 0.64rem;\n    border-bottom: 2px solid #FF4A7D;\n}\n.dvk4_title_bottom1[_v-abed2004]{\n    position: absolute;\n    top: 41px;\n    width: 0.6rem;\n    left: 2.5rem;\n    border-bottom: 2px solid #FF4A7D;\n}\n.dvk4_title_tomorrow[_v-abed2004]{\n    width: 1.87rem;\n    height: 0.3rem;\n    margin-top: 0.065rem;\n    line-height: 0.3rem;\n    text-align: center;\n    display: block;\n    float: left;\n    position: relative;\n}\n.active[_v-abed2004]{\n    color: #FF4A7D;\n}\n.dvk4_content[_v-abed2004]{\n    height: 3rem;\n    width: 3.55rem;\n    margin-left: 0.1rem;\n}\n.dvk4_detail[_v-abed2004]{\n    width: 100%;\n    height: 76px;\n    margin-top:25px;\n}\n.first[_v-abed2004]{\n  margin-top:21px;\n}\n.dvk4_detail_content[_v-abed2004]{\n    width: 100%;\n    height: 76px;\n}\n.dvk4_detail_content_img[_v-abed2004]{\n    width: 110px;\n    height: 76px;\n    float: left;\n    position: relative;\n}\n.dvk4_detail_content_text[_v-abed2004]{\n    height: 76px;\n    margin-left:120px;\n    position: relative;\n}\n.dvk4_detail_content_title[_v-abed2004]{\n    color: #333333;\n    font-size: 14px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    margin-bottom: 6px;\n    line-height:20px;\n}\n.dvk4_detail_content_name[_v-abed2004]{\n    color: #999999;\n    font-size: 12px;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n    line-height:18px;\n}\n.dvk4_detail_content_time[_v-abed2004]{\n    font-size: 12px;\n    color: #999999;\n    margin-top: 2px;\n}\n.dvk4_detail_content_times[_v-abed2004]{\n    float: left;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n    height: 100%;\n    line-height: 14px;\n    color:#999999;\n    margin-left: 10px;\n}\n.dvk4_detail_content_line[_v-abed2004]{\n  width: 1px;\n  height: 12px;\n  float:left;\n  background: #E1E1E1;\n  margin-left:10px;\n\n}\n.dvk4_detail_content_popular[_v-abed2004]{\n    float: left;\n    height: 100%;\n    line-height: 14px;\n    color:#999999;\n}\n.dvk4_money[_v-abed2004]{\n    position: absolute;\n    top: 0.05rem;\n    left: 0.05rem;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-align: center;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n}\n.circle[_v-abed2004]{\n    background-color: #92FDE0;\n    display: inline-block;\n    margin-right: 5px;\n    width: 8px;\n    height: 8px;\n    border-radius: 50%;\n}\n.newImage[_v-abed2004] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n    border-radius: 0.04rem;\n}\n", ""]);
 
 	// exports
 
@@ -20638,7 +20638,7 @@
 /* 308 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2af22e6e=\"\">\n  <tt_com_0 :data=\"data\" _v-2af22e6e=\"\"></tt_com_0>\n  <div class=\"dvk4_container\" :style=\"styleObject\" _v-2af22e6e=\"\">\n     <div class=\"dvk4_title\" v-if=\"flag\" _v-2af22e6e=\"\">\n         <span class=\"dvk4_title_now active\" v-text=\"data.body.leftTitle\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_bottom\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_tomorrow\" @click=\"tomorrow\" v-text=\"data.body.rightTitle\" _v-2af22e6e=\"\"></span>\n     </div>\n     <div class=\"dvk4_title\" v-if=\"!flag\" _v-2af22e6e=\"\">\n         <span class=\"dvk4_title_now\" @click=\"now\" v-text=\"data.body.leftTitle\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_bottom1\" _v-2af22e6e=\"\"></span>\n         <span class=\"dvk4_title_tomorrow active\" v-text=\"data.body.rightTitle\" _v-2af22e6e=\"\"></span>\n     </div>\n     <!--  -->\n     <div class=\"dvk4_content\" v-if=\"flag\" _v-2af22e6e=\"\">\n\n         <div class=\"dvk4_detail first\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[0].command.content\" :position=\"data.body.leftContent[0].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                  <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[0].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[0].price &amp;&amp; data.body.leftContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[0].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[0].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[0].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n\n                         <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.leftContent[0].readTimes\" _v-2af22e6e=\"\"></span></span>\n                         <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[0])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[0])\" v-text=\"livetext(data.body.leftContent[0])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[0])\" v-text=\"data.body.leftContent[0].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n              <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[1].command.content\" :position=\"data.body.leftContent[1].position\" _v-2af22e6e=\"\">\n                <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                      <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[1].courseCover)\" _v-2af22e6e=\"\">\n                      <div class=\"dvk4_money\" v-if=\"data.body.leftContent[1].price &amp;&amp; data.body.leftContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[1].price\" _v-2af22e6e=\"\"></div>\n                   </div>\n                   <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                       <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[1].courseTitle\" _v-2af22e6e=\"\"></div>\n                       <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[1].teacherName\" _v-2af22e6e=\"\"></div>\n                       <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                         <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\">\n                          <span v-text=\"data.body.leftContent[1].readTimes\" _v-2af22e6e=\"\"></span>\n                         </span>\n                         <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[1])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[1])\" v-text=\"livetext(data.body.leftContent[1])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[1])\" v-text=\"data.body.leftContent[1].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                       </div>\n                   </div>\n                </div>\n              </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[2].command.content\" :position=\"data.body.leftContent[2].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[2].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[2].price &amp;&amp; data.body.leftContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[2].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[2].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[2].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                          <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.leftContent[2].readTimes\" _v-2af22e6e=\"\"></span></span>\n                          <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[2])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[2])\" v-text=\"livetext(data.body.leftContent[2])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[2])\" v-text=\"data.body.leftContent[2].startTimestamp\" _v-2af22e6e=\"\"></span>\n                          </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n     <div class=\"dvk4_content\" v-if=\"!flag\" _v-2af22e6e=\"\">\n         <div class=\"dvk4_detail first\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[0].command.content\" :position=\"data.body.rightContent[0].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[0].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[0].price &amp;&amp; data.body.rightContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[0].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[0].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[0].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[0].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[0])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[0])\" v-text=\"livetext(data.body.rightContent[0])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[0])\" v-text=\"data.body.rightContent[0].startTimestamp\" _v-2af22e6e=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[1].command.content\" :position=\"data.body.rightContent[1].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[1].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[1].price &amp;&amp; data.body.rightContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[1].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[1].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[1].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[1].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[1])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[1])\" v-text=\"livetext(data.body.rightContent[1])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[1])\" v-text=\"data.body.rightContent[1].startTimestamp\" _v-2af22e6e=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-2af22e6e=\"\">\n          <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[2].command.content\" :position=\"data.body.rightContent[2].position\" _v-2af22e6e=\"\">\n             <div class=\"dvk4_detail_content\" _v-2af22e6e=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-2af22e6e=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[2].courseCover)\" _v-2af22e6e=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[2].price &amp;&amp; data.body.rightContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[2].price\" _v-2af22e6e=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-2af22e6e=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[2].courseTitle\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[2].teacherName\" _v-2af22e6e=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-2af22e6e=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-2af22e6e=\"\"><span v-text=\"data.body.rightContent[2].readTimes\" _v-2af22e6e=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-2af22e6e=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-2af22e6e=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[2])\" class=\"circle\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[2])\" v-text=\"livetext(data.body.rightContent[2])\" _v-2af22e6e=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[2])\" v-text=\"data.body.rightContent[2].startTimestamp\" _v-2af22e6e=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-abed2004=\"\">\n  <tt_com_0 :data=\"data\" _v-abed2004=\"\"></tt_com_0>\n  <div class=\"dvk4_container\" :style=\"styleObject\" _v-abed2004=\"\">\n     <div class=\"dvk4_title\" v-if=\"flag\" _v-abed2004=\"\">\n         <span class=\"dvk4_title_now active\" v-text=\"data.body.leftTitle\" _v-abed2004=\"\"></span>\n         <span class=\"dvk4_title_bottom\" _v-abed2004=\"\"></span>\n         <span class=\"dvk4_title_tomorrow\" @click=\"tomorrow\" v-text=\"data.body.rightTitle\" _v-abed2004=\"\"></span>\n     </div>\n     <div class=\"dvk4_title\" v-if=\"!flag\" _v-abed2004=\"\">\n         <span class=\"dvk4_title_now\" @click=\"now\" v-text=\"data.body.leftTitle\" _v-abed2004=\"\"></span>\n         <span class=\"dvk4_title_bottom1\" _v-abed2004=\"\"></span>\n         <span class=\"dvk4_title_tomorrow active\" v-text=\"data.body.rightTitle\" _v-abed2004=\"\"></span>\n     </div>\n     <!--  -->\n     <div class=\"dvk4_content\" v-if=\"flag\" _v-abed2004=\"\">\n\n         <div class=\"dvk4_detail first\" _v-abed2004=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[0].command.content\" :position=\"data.body.leftContent[0].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                  <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[0].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[0].price &amp;&amp; data.body.leftContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[0].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[0].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[0].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n\n                         <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.leftContent[0].readTimes\" _v-abed2004=\"\"></span></span>\n                         <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[0])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[0])\" v-text=\"livetext(data.body.leftContent[0])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[0])\" v-text=\"data.body.leftContent[0].startTimestamp\" _v-abed2004=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-abed2004=\"\">\n              <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[1].command.content\" :position=\"data.body.leftContent[1].position\" _v-abed2004=\"\">\n                <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                   <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                      <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[1].courseCover)\" _v-abed2004=\"\">\n                      <div class=\"dvk4_money\" v-if=\"data.body.leftContent[1].price &amp;&amp; data.body.leftContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[1].price\" _v-abed2004=\"\"></div>\n                   </div>\n                   <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                       <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[1].courseTitle\" _v-abed2004=\"\"></div>\n                       <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[1].teacherName\" _v-abed2004=\"\"></div>\n                       <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                         <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\">\n                          <span v-text=\"data.body.leftContent[1].readTimes\" _v-abed2004=\"\"></span>\n                         </span>\n                         <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[1])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[1])\" v-text=\"livetext(data.body.leftContent[1])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[1])\" v-text=\"data.body.leftContent[1].startTimestamp\" _v-abed2004=\"\"></span>\n                         </span>\n                       </div>\n                   </div>\n                </div>\n              </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-abed2004=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.leftContent[2].command.content\" :position=\"data.body.leftContent[2].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.leftContent[2].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.leftContent[2].price &amp;&amp; data.body.leftContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.leftContent[2].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.leftContent[2].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.leftContent[2].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                          <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.leftContent[2].readTimes\" _v-abed2004=\"\"></span></span>\n                          <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                          <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.leftContent[2])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.leftContent[2])\" v-text=\"livetext(data.body.leftContent[2])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.leftContent[2])\" v-text=\"data.body.leftContent[2].startTimestamp\" _v-abed2004=\"\"></span>\n                          </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n     <div class=\"dvk4_content\" v-if=\"!flag\" _v-abed2004=\"\">\n         <div class=\"dvk4_detail first\" _v-abed2004=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[0].command.content\" :position=\"data.body.rightContent[0].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[0].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[0].price &amp;&amp; data.body.rightContent[0].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[0].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[0].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[0].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.rightContent[0].readTimes\" _v-abed2004=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[0])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[0])\" v-text=\"livetext(data.body.rightContent[0])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[0])\" v-text=\"data.body.rightContent[0].startTimestamp\" _v-abed2004=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-abed2004=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[1].command.content\" :position=\"data.body.rightContent[1].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[1].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[1].price &amp;&amp; data.body.rightContent[1].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[1].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[1].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[1].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.rightContent[1].readTimes\" _v-abed2004=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                       <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[1])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[1])\" v-text=\"livetext(data.body.rightContent[1])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[1])\" v-text=\"data.body.rightContent[1].startTimestamp\" _v-abed2004=\"\"></span>\n                       </span>\n                     </div>\n                 </div>\n             </div>\n            </a>\n         </div>\n         <div class=\"dvk4_detail\" _v-abed2004=\"\">\n          <a @click.stop=\"clickAnalysis\" :href=\"data.body.rightContent[2].command.content\" :position=\"data.body.rightContent[2].position\" _v-abed2004=\"\">\n             <div class=\"dvk4_detail_content\" _v-abed2004=\"\">\n                 <div class=\"dvk4_detail_content_img\" _v-abed2004=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.rightContent[2].courseCover)\" _v-abed2004=\"\">\n                   <div class=\"dvk4_money\" v-if=\"data.body.rightContent[2].price &amp;&amp; data.body.rightContent[2].price!=&quot;¥ 0.00&quot;\" v-text=\"data.body.rightContent[2].price\" _v-abed2004=\"\"></div>\n                 </div>\n                 <div class=\"dvk4_detail_content_text\" _v-abed2004=\"\">\n                     <div class=\"dvk4_detail_content_title\" v-text=\"data.body.rightContent[2].courseTitle\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_name\" v-text=\"data.body.rightContent[2].teacherName\" _v-abed2004=\"\"></div>\n                     <div class=\"dvk4_detail_content_time\" _v-abed2004=\"\">\n                       <span class=\"dvk4_detail_content_popular\" _v-abed2004=\"\"><span v-text=\"data.body.rightContent[2].readTimes\" _v-abed2004=\"\"></span></span>\n                       <span class=\"dvk4_detail_content_line\" _v-abed2004=\"\"></span>\n                         <span class=\"dvk4_detail_content_times\" _v-abed2004=\"\">\n                            <span v-if=\"livenow(data.body.rightContent[2])\" class=\"circle\" _v-abed2004=\"\"></span>\n                            <span v-if=\"livetext(data.body.rightContent[2])\" v-text=\"livetext(data.body.rightContent[2])\" _v-abed2004=\"\"></span>\n                            <span v-if=\"!livetext(data.body.rightContent[2])\" v-text=\"data.body.rightContent[2].startTimestamp\" _v-abed2004=\"\"></span>\n                         </span>\n                     </div>\n                 </div>\n             </div>\n           </a>\n         </div>\n     </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 309 */
@@ -20668,7 +20668,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2ad5ff6c/dvk5.vue"
+	  var id = "_v-abd0f102/dvk5.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -20692,8 +20692,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ad5ff6c&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk5.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ad5ff6c&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk5.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abd0f102&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk5.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abd0f102&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk5.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -20711,7 +20711,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk5_container[_v-2ad5ff6c]{\n    width: 100%;\n    height: 2.63rem;\n    background: #fff;\n}\n.dvk5_content1[_v-2ad5ff6c]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk5_content2[_v-2ad5ff6c]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk5_img[_v-2ad5ff6c]{\n    height: 1.72rem;\n    position: relative;\n}\n.dvk5_text[_v-2ad5ff6c]{\n    width: 1.52rem;\n    /*height: 0.31rem;*/\n    line-height: 0.17rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    text-indent: 0.2rem;\n}\n.dvk5_detail[_v-2ad5ff6c]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.02rem;\n    width: 1.52rem;\n}\n.dvk5_name[_v-2ad5ff6c]{\n    float: left;\n}\n.dvk5_name_spanContainer[_v-2ad5ff6c]{\n    max-width: 0.7rem;\n    display: inline-block;\n    vertical-align: top;\n}\n.dvk5_name_span[_v-2ad5ff6c]{\n    max-width: 0.7rem;\n    vertical-align: top;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk5_popular[_v-2ad5ff6c]{\n    float: right;\n}\n.dvk5_money[_v-2ad5ff6c]{\n    position: absolute;\n    top: 0.1rem;\n    left: 0;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-indent: 0.03rem;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n    display: inline-block;\n    z-index: 1;\n}\n.circle[_v-2ad5ff6c]{\n    width: 0.18rem;\n    height: 0.18rem;\n    top: 0.1rem;\n    left: 0.36rem;\n    position: absolute;\n    color: #fff;\n    border-radius: 50%;\n    background: #FF4A7D;\n    display: inline-block;\n}\n.dvk5_startTime[_v-2ad5ff6c]{\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    line-height: 0.4rem;\n    color: #fff;\n    text-indent: 0.2rem;\n    bottom: 0;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.2)),color-stop(100%,#fff));\n}\n.dvk5_img_statue[_v-2ad5ff6c]{\n    position: absolute;\n    top: 0.1rem;\n    right: 0.1rem;\n    height: 0.17rem;\n}\n.dvk5_img_location[_v-2ad5ff6c]{\n    width: 0.11rem;\n    margin-bottom: 0.02rem;\n}\n.dvk5_img_official[_v-2ad5ff6c]{\n    width: 0.11rem;\n}\n.newImage[_v-2ad5ff6c] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n.video[_v-2ad5ff6c]{\n    position: absolute;\n    width: 0.12rem;\n    top: 1.85rem;\n    left: 0.12rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk5_container[_v-abd0f102]{\n    width: 100%;\n    height: 2.63rem;\n    background: #fff;\n}\n.dvk5_content1[_v-abd0f102]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk5_content2[_v-abd0f102]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk5_img[_v-abd0f102]{\n    height: 1.72rem;\n    position: relative;\n}\n.dvk5_text[_v-abd0f102]{\n    width: 1.52rem;\n    /*height: 0.31rem;*/\n    line-height: 0.17rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    text-indent: 0.2rem;\n}\n.dvk5_detail[_v-abd0f102]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.02rem;\n    width: 1.52rem;\n}\n.dvk5_name[_v-abd0f102]{\n    float: left;\n}\n.dvk5_name_spanContainer[_v-abd0f102]{\n    max-width: 0.7rem;\n    display: inline-block;\n    vertical-align: top;\n}\n.dvk5_name_span[_v-abd0f102]{\n    max-width: 0.7rem;\n    vertical-align: top;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 1;\n    display: -webkit-box;\n}\n.dvk5_popular[_v-abd0f102]{\n    float: right;\n}\n.dvk5_money[_v-abd0f102]{\n    position: absolute;\n    top: 0.1rem;\n    left: 0;\n    padding-left: 0.03rem;\n    padding-right: 0.03rem;\n    height: 0.18rem;\n    line-height: 0.2rem;\n    text-indent: 0.03rem;\n    color: #fff;\n    font-size: 0.11rem;\n    background: #FF4A7D;\n    display: inline-block;\n    z-index: 1;\n}\n.circle[_v-abd0f102]{\n    width: 0.18rem;\n    height: 0.18rem;\n    top: 0.1rem;\n    left: 0.36rem;\n    position: absolute;\n    color: #fff;\n    border-radius: 50%;\n    background: #FF4A7D;\n    display: inline-block;\n}\n.dvk5_startTime[_v-abd0f102]{\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    line-height: 0.4rem;\n    color: #fff;\n    text-indent: 0.2rem;\n    bottom: 0;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.2)),color-stop(100%,#fff));\n}\n.dvk5_img_statue[_v-abd0f102]{\n    position: absolute;\n    top: 0.1rem;\n    right: 0.1rem;\n    height: 0.17rem;\n}\n.dvk5_img_location[_v-abd0f102]{\n    width: 0.11rem;\n    margin-bottom: 0.02rem;\n}\n.dvk5_img_official[_v-abd0f102]{\n    width: 0.11rem;\n}\n.newImage[_v-abd0f102] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n.video[_v-abd0f102]{\n    position: absolute;\n    width: 0.12rem;\n    top: 1.85rem;\n    left: 0.12rem;\n}\n", ""]);
 
 	// exports
 
@@ -20960,7 +20960,7 @@
 /* 313 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2ad5ff6c=\"\">\n    <tt_com_0 :data=\"data\" _v-2ad5ff6c=\"\"></tt_com_0>\n    <div class=\"dvk5_container\" :style=\"styleObject\" _v-2ad5ff6c=\"\">\n       <div class=\"dvk5_content1\" _v-2ad5ff6c=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2ad5ff6c=\"\">\n               <div class=\"dvk5_img\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-2ad5ff6c=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-2ad5ff6c=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[0].category==2\" _v-2ad5ff6c=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[0].category==2\" _v-2ad5ff6c=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-2ad5ff6c=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-2ad5ff6c=\"\"> \n                        <span v-if=\"data.body.dataList[0].address\" v-text=\"data.body.dataList[0].address\" _v-2ad5ff6c=\"\"></span>\n                        <span v-else=\"data.body.dataList[0].address\" _v-2ad5ff6c=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==1\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==2 || data.body.dataList[0].status==3\" _v-2ad5ff6c=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[0].title\" _v-2ad5ff6c=\"\"></div>\n               <div class=\"dvk5_detail\" _v-2ad5ff6c=\"\">\n                    <span class=\"dvk5_name\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_spanContainer\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[0].teacherName\" _v-2ad5ff6c=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[0].verify==1\" _v-2ad5ff6c=\"\"> </span>\n                    <span class=\"dvk5_popular\" _v-2ad5ff6c=\"\"><span v-text=\"data.body.dataList[0].pv\" _v-2ad5ff6c=\"\"></span></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk5_content2\" _v-2ad5ff6c=\"\">\n           <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2ad5ff6c=\"\">\n               <div class=\"dvk5_img\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-2ad5ff6c=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-2ad5ff6c=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[1].category==2\" _v-2ad5ff6c=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[1].category==2\" _v-2ad5ff6c=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-2ad5ff6c=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-2ad5ff6c=\"\"> \n                        <span v-if=\"data.body.dataList[1].address\" v-text=\"data.body.dataList[1].address\" _v-2ad5ff6c=\"\"></span>\n                        <span v-else=\"data.body.dataList[1].address\" _v-2ad5ff6c=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==1\" _v-2ad5ff6c=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==2 || data.body.dataList[1].status==3\" _v-2ad5ff6c=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[1].title\" _v-2ad5ff6c=\"\"></div>\n               <div class=\"dvk5_detail\" _v-2ad5ff6c=\"\">\n                    <span class=\"dvk5_name\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_spanContainer\" _v-2ad5ff6c=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[1].teacherName\" _v-2ad5ff6c=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[1].verify==1\" _v-2ad5ff6c=\"\"></span>\n                    <span class=\"dvk5_popular\" _v-2ad5ff6c=\"\"><span v-text=\"data.body.dataList[1].pv\" _v-2ad5ff6c=\"\"></span></span>\n                </div>\n           </a>\n       </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-abd0f102=\"\">\n    <tt_com_0 :data=\"data\" _v-abd0f102=\"\"></tt_com_0>\n    <div class=\"dvk5_container\" :style=\"styleObject\" _v-abd0f102=\"\">\n       <div class=\"dvk5_content1\" _v-abd0f102=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-abd0f102=\"\">\n               <div class=\"dvk5_img\" _v-abd0f102=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-abd0f102=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-abd0f102=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[0].category==2\" _v-abd0f102=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[0].category==2\" _v-abd0f102=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-abd0f102=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-abd0f102=\"\"> \n                        <span v-if=\"data.body.dataList[0].address\" v-text=\"data.body.dataList[0].address\" _v-abd0f102=\"\"></span>\n                        <span v-else=\"data.body.dataList[0].address\" _v-abd0f102=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==1\" _v-abd0f102=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[0].status==2 || data.body.dataList[0].status==3\" _v-abd0f102=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[0].title\" _v-abd0f102=\"\"></div>\n               <div class=\"dvk5_detail\" _v-abd0f102=\"\">\n                    <span class=\"dvk5_name\" _v-abd0f102=\"\"> <span class=\"dvk5_name_spanContainer\" _v-abd0f102=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[0].teacherName\" _v-abd0f102=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[0].verify==1\" _v-abd0f102=\"\"> </span>\n                    <span class=\"dvk5_popular\" _v-abd0f102=\"\"><span v-text=\"data.body.dataList[0].pv\" _v-abd0f102=\"\"></span></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk5_content2\" _v-abd0f102=\"\">\n           <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-abd0f102=\"\">\n               <div class=\"dvk5_img\" _v-abd0f102=\"\">\n                    <img src=\"//pic.davdian.com/free/video_camera.png\" class=\"video\" _v-abd0f102=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-abd0f102=\"\">\n                    <div class=\"dvk5_money\" v-if=\"data.body.dataList[1].category==2\" _v-abd0f102=\"\">店主专享</div>\n                    <div class=\"circle\" v-if=\"data.body.dataList[1].category==2\" _v-abd0f102=\"\"></div>\n                    <div class=\"dvk5_startTime\" _v-abd0f102=\"\"> \n                        <img src=\"//pic.davdian.com/free/2017/03/06/location.png\" class=\"dvk5_img_location\" _v-abd0f102=\"\"> \n                        <span v-if=\"data.body.dataList[1].address\" v-text=\"data.body.dataList[1].address\" _v-abd0f102=\"\"></span>\n                        <span v-else=\"data.body.dataList[1].address\" _v-abd0f102=\"\">大V星球</span>\n                    </div>\n                    <img src=\"//pic.davdian.com/free/2017/03/06/broadcasting.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==1\" _v-abd0f102=\"\">\n                    <img src=\"//pic.davdian.com/free/2017/03/06/recorded.png\" class=\"dvk5_img_statue\" v-if=\"data.body.dataList[1].status==2 || data.body.dataList[1].status==3\" _v-abd0f102=\"\">\n               </div>\n               <div class=\"dvk5_text\" v-text=\"data.body.dataList[1].title\" _v-abd0f102=\"\"></div>\n               <div class=\"dvk5_detail\" _v-abd0f102=\"\">\n                    <span class=\"dvk5_name\" _v-abd0f102=\"\"> <span class=\"dvk5_name_spanContainer\" _v-abd0f102=\"\"> <span class=\"dvk5_name_span\" v-text=\"data.body.dataList[1].teacherName\" _v-abd0f102=\"\"></span></span> <img src=\"//pic.davdian.com/free/2017/03/06/official.png\" class=\"dvk5_img_official\" v-if=\"data.body.dataList[1].verify==1\" _v-abd0f102=\"\"></span>\n                    <span class=\"dvk5_popular\" _v-abd0f102=\"\"><span v-text=\"data.body.dataList[1].pv\" _v-abd0f102=\"\"></span></span>\n                </div>\n           </a>\n       </div>\n    </div>\n</div>\n";
 
 /***/ },
 /* 314 */
@@ -20990,7 +20990,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2ab9d06a/dvk6.vue"
+	  var id = "_v-abb4c200/dvk6.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -21014,8 +21014,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ab9d06a&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk6.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2ab9d06a&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk6.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abb4c200&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk6.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-abb4c200&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./dvk6.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21033,7 +21033,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk6_container[_v-2ab9d06a]{\n    width: 100%;\n    height: 2.63rem;\n    background: #fff;\n}\n.dvk6_content1[_v-2ab9d06a]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk6_content2[_v-2ab9d06a]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk6_img[_v-2ab9d06a]{\n    height: 1.72rem;\n    position: relative;\n}\n.dvk6_text[_v-2ab9d06a]{\n    width: 1.52rem;\n    /*height: 0.16rem;*/\n    line-height: 0.16rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    margin-bottom: 0.05rem;\n}\n.dvk6_detail[_v-2ab9d06a]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.02rem;\n    width: 1.52rem;\n}\n.dvk6_name[_v-2ab9d06a]{\n    float: left;\n    width: 0.9rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n}\n.dvk6_popular[_v-2ab9d06a]{\n    float: right;\n}\n.dvk6_startTime[_v-2ab9d06a]{\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    line-height: 0.4rem;\n    color: #fff;\n    text-indent: 0.2rem;\n    bottom: 0;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.2)),color-stop(100%,#fff));\n}\n.dvk6_img_title[_v-2ab9d06a]{\n    width: 0.16rem;\n    margin-bottom: 0.02rem;\n    margin-right: 0.02rem;\n}\n.newImage[_v-2ab9d06a] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.dvk6_container[_v-abb4c200]{\n    width: 100%;\n    height: 2.63rem;\n    background: #fff;\n}\n.dvk6_content1[_v-abb4c200]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-left: 0.1rem;\n    float: left;\n}\n.dvk6_content2[_v-abb4c200]{\n    margin-top: 0.1rem;\n    width: 1.74rem;\n    height: 2.4rem;\n    border: 0.5px solid #DDDDDD;\n    margin-right: 0.1rem;\n    float: right;\n}\n.dvk6_img[_v-abb4c200]{\n    height: 1.72rem;\n    position: relative;\n}\n.dvk6_text[_v-abb4c200]{\n    width: 1.52rem;\n    /*height: 0.16rem;*/\n    line-height: 0.16rem;\n    color: #333333;\n    margin-left: 0.1rem;\n    font-size: 0.12rem;\n    margin-top: 0.1rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n    margin-bottom: 0.05rem;\n}\n.dvk6_detail[_v-abb4c200]{\n    font-size: 0.11rem;\n    color: #999999;\n    margin-left: 0.1rem;\n    margin-top: 0.02rem;\n    width: 1.52rem;\n}\n.dvk6_name[_v-abb4c200]{\n    float: left;\n    width: 0.9rem;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 2;\n    display: -webkit-box;\n}\n.dvk6_popular[_v-abb4c200]{\n    float: right;\n}\n.dvk6_startTime[_v-abb4c200]{\n    position: absolute;\n    width: 100%;\n    height: 0.4rem;\n    line-height: 0.4rem;\n    color: #fff;\n    text-indent: 0.2rem;\n    bottom: 0;\n    background: -webkit-gradient(linear,left top,left bottom,color-stop(0,transparent),color-stop(50%,rgba(0,0,0,.1)),color-stop(100%,rgba(0,0,0,.2)),color-stop(100%,#fff));\n}\n.dvk6_img_title[_v-abb4c200]{\n    width: 0.16rem;\n    margin-bottom: 0.02rem;\n    margin-right: 0.02rem;\n}\n.newImage[_v-abb4c200] {\n    -o-object-fit: cover;\n       object-fit: cover;\n    -o-object-position: center;\n       object-position: center;\n    display: inline;\n    border: none;\n    width: 100%;\n}\n", ""]);
 
 	// exports
 
@@ -21216,7 +21216,7 @@
 /* 318 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-2ab9d06a=\"\">\n    <tt_com_0 :data=\"data\" _v-2ab9d06a=\"\"></tt_com_0>\n    <div class=\"dvk6_container\" :style=\"styleObject\" _v-2ab9d06a=\"\">\n       <div class=\"dvk6_content1\" _v-2ab9d06a=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-2ab9d06a=\"\">\n               <div class=\"dvk6_img\" _v-2ab9d06a=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-2ab9d06a=\"\">\n                    <div class=\"dvk6_startTime\" _v-2ab9d06a=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-2ab9d06a=\"\"><span v-text=\"data.body.dataList[0].time\" _v-2ab9d06a=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[0].title\" _v-2ab9d06a=\"\"></div>\n               <div class=\"dvk6_detail\" _v-2ab9d06a=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[0].pv\" _v-2ab9d06a=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[0].type\" _v-2ab9d06a=\"\"></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk6_content2\" _v-2ab9d06a=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-2ab9d06a=\"\">\n               <div class=\"dvk6_img\" _v-2ab9d06a=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-2ab9d06a=\"\">\n                    <div class=\"dvk6_startTime\" _v-2ab9d06a=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-2ab9d06a=\"\"><span v-text=\"data.body.dataList[1].time\" _v-2ab9d06a=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[1].title\" _v-2ab9d06a=\"\"></div>\n               <div class=\"dvk6_detail\" _v-2ab9d06a=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[1].pv\" _v-2ab9d06a=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[1].type\" _v-2ab9d06a=\"\">\n                </span></div>\n            </a>\n       </div>\n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-abb4c200=\"\">\n    <tt_com_0 :data=\"data\" _v-abb4c200=\"\"></tt_com_0>\n    <div class=\"dvk6_container\" :style=\"styleObject\" _v-abb4c200=\"\">\n       <div class=\"dvk6_content1\" _v-abb4c200=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[0].command.content\" :position=\"data.position\" _v-abb4c200=\"\">\n               <div class=\"dvk6_img\" _v-abb4c200=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" _v-abb4c200=\"\">\n                    <div class=\"dvk6_startTime\" _v-abb4c200=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-abb4c200=\"\"><span v-text=\"data.body.dataList[0].time\" _v-abb4c200=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[0].title\" _v-abb4c200=\"\"></div>\n               <div class=\"dvk6_detail\" _v-abb4c200=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[0].pv\" _v-abb4c200=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[0].type\" _v-abb4c200=\"\"></span>\n                </div>\n            </a>\n       </div>\n       <div class=\"dvk6_content2\" _v-abb4c200=\"\">\n            <a @click.stop=\"clickAnalysis\" :href=\"data.body.dataList[1].command.content\" :position=\"data.position\" _v-abb4c200=\"\">\n               <div class=\"dvk6_img\" _v-abb4c200=\"\">\n                    <img class=\"newImage\" v-lazy=\"imgObject(data.body.dataList[1].imageUrl)\" _v-abb4c200=\"\">\n                    <div class=\"dvk6_startTime\" _v-abb4c200=\"\"><img class=\"dvk6_img_title\" src=\"//pic.davdian.com/free/2017/03/06/timeWhite.png\" _v-abb4c200=\"\"><span v-text=\"data.body.dataList[1].time\" _v-abb4c200=\"\"></span></div>\n               </div>\n               <div class=\"dvk6_text\" v-text=\"data.body.dataList[1].title\" _v-abb4c200=\"\"></div>\n               <div class=\"dvk6_detail\" _v-abb4c200=\"\">\n                    <span class=\"dvk6_name\" v-text=\"data.body.dataList[1].pv\" _v-abb4c200=\"\"></span>\n                    <span class=\"dvk6_popular\" v-text=\"data.body.dataList[1].type\" _v-abb4c200=\"\">\n                </span></div>\n            </a>\n       </div>\n    </div>\n</div>\n";
 
 /***/ },
 /* 319 */
@@ -21246,7 +21246,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-059a0eca/bd_goods_3.vue"
+	  var id = "_v-1fc2f7e0/bd_goods_3.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -21270,8 +21270,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-059a0eca&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_3.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-059a0eca&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_3.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1fc2f7e0&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_3.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1fc2f7e0&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_3.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21289,7 +21289,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*团购样式*/\n.tuan_list[_v-059a0eca] {\n    display: block;\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan_list a[_v-059a0eca] {\n    border-bottom: 1px solid #f0f0f0;\n    display: block;\n    position: relative;\n}\n\n.tuan_list a[_v-059a0eca]:last-child {\n    border-bottom: none;\n}\n\n.tuan_img_container img[_v-059a0eca] {\n    width: 100%;\n    display: block;\n    height: 43.75vw;\n    max-height: 280px;\n}\n\n.tuan_info_container[_v-059a0eca] {\n    position: absolute;\n    width: 1.62rem;\n    top: 0;\n    right: 10px;\n    height: 100%;\n}\n\n.tuan_list a .time[_v-059a0eca] {\n    background-color: rgba(0, 0, 0, .3);\n    line-height: normal;\n    display: block;\n    border-radius: .75rem;\n    position: absolute;\n    bottom: .14rem;\n    left: 0;\n    font-size: .12rem;\n    padding: 0.01rem 0.05rem;\n    color: #fff;\n}\n\n.tuan_list[_v-059a0eca]:hover, .tuan_list[_v-059a0eca]:focus {\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan_item[_v-059a0eca]:hover, .tuan_item[_v-059a0eca]:focus {\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan-other-info[_v-059a0eca] {\n    margin-top: 0.15rem;\n}\n\n.tuan_item_title[_v-059a0eca] {\n    text-overflow: ellipsis;\n    white-space: pre-line;\n    overflow: hidden;\n    height: 0.62rem;\n    line-height: 0.21rem;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 3;\n    display: -webkit-box;\n    overflow: hidden;\n    font-size: 0.14rem;\n    color: #333;\n}\n\n.tuan_item_price[_v-059a0eca] {\n    font-size: 0.11rem;\n    color: #333;\n    position: absolute;\n    bottom: 0.39rem;\n}\n\n.tuan_item_price .current_price[_v-059a0eca] {\n    font-size: 0.24rem;\n    padding-right: 6px;\n}\n\n.tuan_item_price .market_price[_v-059a0eca] {\n    text-decoration: line-through;\n    color: #999;\n}\n\n.tuan_img_container img[_v-059a0eca] {\n    width: 100%;\n}\n\n.tuan_item_icon[_v-059a0eca] {\n    width: 0.3rem;\n    height: 0.31rem;\n    background: url(//pic.davdian.com/free/tuanlist_icon_3x_0804.png) no-repeat;\n    background-size: 0.3rem;\n    display: inline-block;\n    position: absolute;\n    bottom: 0.11rem;\n    right: 2px;\n}\n.time1[_v-059a0eca]{\n    background-color: rgba(0, 0, 0, .3);\n    line-height: normal;\n    display: block;\n    border-radius: .75rem;\n    position: absolute;\n    bottom: .14rem;\n    left: 0;\n    font-size: .12rem;\n    padding: 0.01rem 0.05rem;\n    color: #fff;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*团购样式*/\n.tuan_list[_v-1fc2f7e0] {\n    display: block;\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan_list a[_v-1fc2f7e0] {\n    border-bottom: 1px solid #f0f0f0;\n    display: block;\n    position: relative;\n}\n\n.tuan_list a[_v-1fc2f7e0]:last-child {\n    border-bottom: none;\n}\n\n.tuan_img_container img[_v-1fc2f7e0] {\n    width: 100%;\n    display: block;\n    height: 43.75vw;\n    max-height: 280px;\n}\n\n.tuan_info_container[_v-1fc2f7e0] {\n    position: absolute;\n    width: 1.62rem;\n    top: 0;\n    right: 10px;\n    height: 100%;\n}\n\n.tuan_list a .time[_v-1fc2f7e0] {\n    background-color: rgba(0, 0, 0, .3);\n    line-height: normal;\n    display: block;\n    border-radius: .75rem;\n    position: absolute;\n    bottom: .14rem;\n    left: 0;\n    font-size: .12rem;\n    padding: 0.01rem 0.05rem;\n    color: #fff;\n}\n\n.tuan_list[_v-1fc2f7e0]:hover, .tuan_list[_v-1fc2f7e0]:focus {\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan_item[_v-1fc2f7e0]:hover, .tuan_item[_v-1fc2f7e0]:focus {\n    text-decoration: none;\n    color: #333;\n}\n\n.tuan-other-info[_v-1fc2f7e0] {\n    margin-top: 0.15rem;\n}\n\n.tuan_item_title[_v-1fc2f7e0] {\n    text-overflow: ellipsis;\n    white-space: pre-line;\n    overflow: hidden;\n    height: 0.62rem;\n    line-height: 0.21rem;\n    -webkit-box-orient: vertical;\n    -webkit-line-clamp: 3;\n    display: -webkit-box;\n    overflow: hidden;\n    font-size: 0.14rem;\n    color: #333;\n}\n\n.tuan_item_price[_v-1fc2f7e0] {\n    font-size: 0.11rem;\n    color: #333;\n    position: absolute;\n    bottom: 0.39rem;\n}\n\n.tuan_item_price .current_price[_v-1fc2f7e0] {\n    font-size: 0.24rem;\n    padding-right: 6px;\n}\n\n.tuan_item_price .market_price[_v-1fc2f7e0] {\n    text-decoration: line-through;\n    color: #999;\n}\n\n.tuan_img_container img[_v-1fc2f7e0] {\n    width: 100%;\n}\n\n.tuan_item_icon[_v-1fc2f7e0] {\n    width: 0.3rem;\n    height: 0.31rem;\n    background: url(//pic.davdian.com/free/tuanlist_icon_3x_0804.png) no-repeat;\n    background-size: 0.3rem;\n    display: inline-block;\n    position: absolute;\n    bottom: 0.11rem;\n    right: 2px;\n}\n.time1[_v-1fc2f7e0]{\n    background-color: rgba(0, 0, 0, .3);\n    line-height: normal;\n    display: block;\n    border-radius: .75rem;\n    position: absolute;\n    bottom: .14rem;\n    left: 0;\n    font-size: .12rem;\n    padding: 0.01rem 0.05rem;\n    color: #fff;\n}\n", ""]);
 
 	// exports
 
@@ -21522,7 +21522,7 @@
 /* 323 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-059a0eca=\"\">\n    <tt_com_0 :data=\"data\" _v-059a0eca=\"\"></tt_com_0>\n    <div class=\"tuan_list\" _v-059a0eca=\"\">\n        <a :href=\"data.body.dataList[0].command.content\" :data-remain-second2=\"remainsecond\" data-dav-tj=\"goods_group|good|good|1|good@goods_group\" _v-059a0eca=\"\">\n            <div class=\"tuan_img_container\" _v-059a0eca=\"\">\n                <img v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" style=\"display: block;\" _v-059a0eca=\"\">\n            </div>\n            <div class=\"tuan_info_container\" _v-059a0eca=\"\">\n                <div class=\"time1\" v-if=\"remainsecond > 0\" _v-059a0eca=\"\">{{remainsecond | timeday}} </div>\n                <div class=\"time\" v-if=\"remainsecond < 1\" _v-059a0eca=\"\">团购已结束</div>\n                <div class=\"tuan_item_icon\" _v-059a0eca=\"\"></div>\n                <div class=\"tuan-other-info\" _v-059a0eca=\"\">\n                    <div class=\"tuan_item_title\" _v-059a0eca=\"\">\n                        {{data.body.dataList[0].title}}\n                    </div>\n                    <div class=\"tuan_item_price\" _v-059a0eca=\"\">\n                        <span class=\"current_price\" _v-059a0eca=\"\"><em _v-059a0eca=\"\">￥</em>{{data.body.dataList[0].nowPrice}}</span>\n                        <span class=\"market_price\" _v-059a0eca=\"\"><em _v-059a0eca=\"\">￥</em>{{data.body.dataList[0].prePrice}}</span>\n                    </div>\n                </div>\n            </div>\n        </a>\n    </div>\n</div>\n";
+	module.exports = "\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-1fc2f7e0=\"\">\n    <tt_com_0 :data=\"data\" _v-1fc2f7e0=\"\"></tt_com_0>\n    <div class=\"tuan_list\" _v-1fc2f7e0=\"\">\n        <a :href=\"data.body.dataList[0].command.content\" :data-remain-second2=\"remainsecond\" data-dav-tj=\"goods_group|good|good|1|good@goods_group\" _v-1fc2f7e0=\"\">\n            <div class=\"tuan_img_container\" _v-1fc2f7e0=\"\">\n                <img v-lazy=\"imgObject(data.body.dataList[0].imageUrl)\" style=\"display: block;\" _v-1fc2f7e0=\"\">\n            </div>\n            <div class=\"tuan_info_container\" _v-1fc2f7e0=\"\">\n                <div class=\"time1\" v-if=\"remainsecond > 0\" _v-1fc2f7e0=\"\">{{remainsecond | timeday}} </div>\n                <div class=\"time\" v-if=\"remainsecond < 1\" _v-1fc2f7e0=\"\">团购已结束</div>\n                <div class=\"tuan_item_icon\" _v-1fc2f7e0=\"\"></div>\n                <div class=\"tuan-other-info\" _v-1fc2f7e0=\"\">\n                    <div class=\"tuan_item_title\" _v-1fc2f7e0=\"\">\n                        {{data.body.dataList[0].title}}\n                    </div>\n                    <div class=\"tuan_item_price\" _v-1fc2f7e0=\"\">\n                        <span class=\"current_price\" _v-1fc2f7e0=\"\"><em _v-1fc2f7e0=\"\">￥</em>{{data.body.dataList[0].nowPrice}}</span>\n                        <span class=\"market_price\" _v-1fc2f7e0=\"\"><em _v-1fc2f7e0=\"\">￥</em>{{data.body.dataList[0].prePrice}}</span>\n                    </div>\n                </div>\n            </div>\n        </a>\n    </div>\n</div>\n";
 
 /***/ },
 /* 324 */
@@ -21553,7 +21553,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-22cdd3a2/bd_ts_0.vue"
+	  var id = "_v-254d46da/bd_ts_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -21577,8 +21577,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-22cdd3a2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-22cdd3a2&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_0.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-254d46da&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_0.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-254d46da&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_0.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21596,7 +21596,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.ts_feeds section .index_model[_v-22cdd3a2] {\n  margin-top: 0;\n}\n\n#ts_menu_wrap[_v-22cdd3a2] {\n  height: 50px;\n  width: 100%;\n  overflow: hidden;\n}\n\n.ts_menu[_v-22cdd3a2] {\n  width: 100%;\n  z-index: 2;\n  background-color: #FDFCFC !important;\n  position: relative;\n}\n\n.ts_menu[_v-22cdd3a2]:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  background: rgba(216, 216, 216, 0.51);\n  -webkit-transform: scale(0.5);\n  bottom: 0;\n  z-index: 1;\n}\n\n.ts_menu li[_v-22cdd3a2] {\n  text-align: center;\n  font-size: 14px;\n  padding: 11px 0;\n  color: #666666;\n  background-color: #FDFCFC;\n}\n\n.ts_menu li.pitch_on[_v-22cdd3a2] {\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n  color: #FFF !important;\n}\n\n.ts_menu li > div .statusInfo[_v-22cdd3a2] {\n  font-size: 10px;\n}\n\n.ts_menu li > div > div[_v-22cdd3a2]:nth-of-type(1) {\n  line-height: 14px;\n  margin-bottom: 4px;\n}\n\n.ts_menu li > div > div[_v-22cdd3a2]:nth-of-type(2) {\n  line-height: 10px;\n}\n\n.ts_menu li:nth-of-type(1) > div[_v-22cdd3a2]:before {\n  width: 0px;\n}\n\n.ts_menu li.pitch_on > div[_v-22cdd3a2]:before {\n  width: 0px;\n}\n\n.ts_menu li.pitch_on + li > div[_v-22cdd3a2]:before {\n  width: 0px;\n}\n\n.ts_menu li > div[_v-22cdd3a2]:before {\n  content: \"\";\n  display: block;\n  position: absolute;\n  top: -10%;\n  height: 120%;\n  width: 1px;\n  background: #ededed;\n  -webkit-transform: scale(0.5);\n}\n\n\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.ts_feeds section .index_model[_v-254d46da] {\n  margin-top: 0;\n}\n\n#ts_menu_wrap[_v-254d46da] {\n  height: 50px;\n  width: 100%;\n  overflow: hidden;\n}\n\n.ts_menu[_v-254d46da] {\n  width: 100%;\n  z-index: 2;\n  background-color: #FDFCFC !important;\n  position: relative;\n}\n\n.ts_menu[_v-254d46da]:after {\n  content: \"\";\n  display: block;\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  background: rgba(216, 216, 216, 0.51);\n  -webkit-transform: scale(0.5);\n  bottom: 0;\n  z-index: 1;\n}\n\n.ts_menu li[_v-254d46da] {\n  text-align: center;\n  font-size: 14px;\n  padding: 11px 0;\n  color: #666666;\n  background-color: #FDFCFC;\n}\n\n.ts_menu li.pitch_on[_v-254d46da] {\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n  color: #FFF !important;\n}\n\n.ts_menu li > div .statusInfo[_v-254d46da] {\n  font-size: 10px;\n}\n\n.ts_menu li > div > div[_v-254d46da]:nth-of-type(1) {\n  line-height: 14px;\n  margin-bottom: 4px;\n}\n\n.ts_menu li > div > div[_v-254d46da]:nth-of-type(2) {\n  line-height: 10px;\n}\n\n.ts_menu li:nth-of-type(1) > div[_v-254d46da]:before {\n  width: 0px;\n}\n\n.ts_menu li.pitch_on > div[_v-254d46da]:before {\n  width: 0px;\n}\n\n.ts_menu li.pitch_on + li > div[_v-254d46da]:before {\n  width: 0px;\n}\n\n.ts_menu li > div[_v-254d46da]:before {\n  content: \"\";\n  display: block;\n  position: absolute;\n  top: -10%;\n  height: 120%;\n  width: 1px;\n  background: #ededed;\n  -webkit-transform: scale(0.5);\n}\n\n\n", ""]);
 
 	// exports
 
@@ -21942,7 +21942,7 @@
 /* 331 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"ts_feeds\" :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-22cdd3a2=\"\">\n  <div id=\"ts_menu_wrap\" _v-22cdd3a2=\"\">\n    <div :style=\"styleObject\" class=\"swiper-container ts_menu\" id=\"ts_menu\" _v-22cdd3a2=\"\">\n      <ul class=\"swiper-wrapper\" _v-22cdd3a2=\"\">\n        <li class=\"swiper-slide\" v-for=\"(item, index) in dataList\" :class=\"{pitch_on:item.selected == 1}\" @click=\"ts_tab(item,index)\" :data=\"item.timeshopActId\" _v-22cdd3a2=\"\">\n          <div class=\"\" v-if=\"item &amp;&amp; item.title\" _v-22cdd3a2=\"\">\n            <div class=\"time_state_span\" _v-22cdd3a2=\"\">{{item.title}}</div>\n            <div class=\"statusInfo\" _v-22cdd3a2=\"\">{{item.statusInfo}}</div>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"ts_feeds\" :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-254d46da=\"\">\n  <div id=\"ts_menu_wrap\" _v-254d46da=\"\">\n    <div :style=\"styleObject\" class=\"swiper-container ts_menu\" id=\"ts_menu\" _v-254d46da=\"\">\n      <ul class=\"swiper-wrapper\" _v-254d46da=\"\">\n        <li class=\"swiper-slide\" v-for=\"(item, index) in dataList\" :class=\"{pitch_on:item.selected == 1}\" @click=\"ts_tab(item,index)\" :data=\"item.timeshopActId\" _v-254d46da=\"\">\n          <div class=\"\" v-if=\"item &amp;&amp; item.title\" _v-254d46da=\"\">\n            <div class=\"time_state_span\" _v-254d46da=\"\">{{item.title}}</div>\n            <div class=\"statusInfo\" _v-254d46da=\"\">{{item.statusInfo}}</div>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 332 */
@@ -21972,7 +21972,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-366e10d9/bd_ts_prod_0.vue"
+	  var id = "_v-1ca4930e/bd_ts_prod_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -21996,8 +21996,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-366e10d9&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_prod_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-366e10d9&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_prod_0.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ca4930e&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_prod_0.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ca4930e&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_prod_0.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22015,7 +22015,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.f_l[_v-366e10d9]{\n  float: left;\n}\n.newOriginal_price[_v-366e10d9] {\n  font-size: 14px;\n}\n\n.list_style[_v-366e10d9] {\n  height: 130px;\n}\n\nul li[_v-366e10d9] {\n  padding: 10px 10px;\n  position: relative;\n  overflow: hidden;\n}\n\nul li.online[_v-366e10d9]:after {\n  content: \"\";\n  display: block;\n  background-color: #DDDDDD;\n  -webkit-transform: scale(0.5) translateX(280px);\n  -ms-transform: scale(0.5) translateX(280px);\n  transform: scale(0.5) translateX(280px);\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  bottom: 0;\n  z-index: 1;\n}\n\n\nul li .img_container[_v-366e10d9] {\n  position: relative;\n}\n\nul li .img_container_inner[_v-366e10d9] {\n  width: 130px;\n  position: relative;\n}\n\nul li .img_container_inner div[_v-366e10d9] {\n  height: 60px;\n  width: 60px;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  margin: auto auto;\n  font-size: 14px;\n  color: #FFF;\n  text-align: center;\n  line-height: 60px;\n}\n\nul li .order_good_info_container[_v-366e10d9] {\n  position: absolute;\n  padding-left: 140px;\n  top: 0;\n  padding-top: 10px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.order_good_name[_v-366e10d9] {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  /*display: -webkit-box;*/\n  /*-webkit-line-clamp: 2;*/\n  /*-webkit-box-orient: vertical;*/\n  height: 20px;\n  line-height: 20px;\n  color: #333333;\n}\n\n.order_good_name_in[_v-366e10d9] {\n  font-size: 12px;\n  color: #999999;\n}\n\n.order_good_price[_v-366e10d9] {\n  font-size: 16px;\n  height: 16px;\n  line-height: 16px;\n  color: #FF4A7D;\n  padding-top: 5px;\n}\n\n.price_symbol[_v-366e10d9] {\n  font-size: 12px;\n  font-style: normal;\n}\n\n.progress_info[_v-366e10d9]{\n  position: absolute;\n  width: 100%;\n  bottom: 14px;\n  font-size: 12px;\n  color: #999999;\n}\n.market_price[_v-366e10d9] {\n  text-decoration: line-through;\n  color: #999;\n  margin-left: 0px;\n  font-size: 11px !important;\n}\n\n.progress_bar_bg[_v-366e10d9] {\n  background-color: #EAEAEA;\n  border-radius: 8px;\n  height: 8px;\n  width: 21.3333333%;\n  position: relative;\n  overflow: hidden;\n}\n\n.progress_container[_v-366e10d9] {\n  height: 8px;\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n  /*position: absolute;*/\n  left: 0;\n  top: 0;\n}\n\n.panic_buying_btn.buy_gray[_v-366e10d9] {\n  background: -webkit-linear-gradient(left top, #DBDADA, #C5C5C5); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#DBDADA), to(#C5C5C5));\n  background: -webkit-linear-gradient(top left, #DBDADA, #C5C5C5);\n  background: linear-gradient(to bottom right, #DBDADA, #C5C5C5); /* 标准的语法 */\n}\n.panic_buying_btn.seteds[_v-366e10d9]{\n  color:#999999;\n}\n.panic_buying_btn.seteds[_v-366e10d9]:after{\n  border-color: #999999;\n}\n\n.progress_bar_percentage.wall[_v-366e10d9] {\n  width: 100%;\n  min-width: 10px;\n}\n\n.finish_percentage[_v-366e10d9] {\n  font-size: 11px;\n  color: #FF4A7D;\n  line-height: 11px;\n  margin-top: 5px;\n}\n\n.panic_buying_btn[_v-366e10d9] {\n  width: 70px;\n  height: 25px;\n  font-size: 11px;\n  line-height: 25px;\n  text-align: center;\n  color: #fff;\n  position: absolute;\n  right: 10px;\n  bottom: 21px;\n  border-radius: 12px;\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n}\n\n.panic_buying_btn2[_v-366e10d9] {\n  background: none;\n  color: #ff4a7d;\n  border-radius: 20px;\n  line-height: 26px;\n}\n\n.panic_buying_btn2[_v-366e10d9]:after {\n  content: \"\";\n  -webkit-transform: scale(0.5);\n      -ms-transform: scale(0.5);\n          transform: scale(0.5);\n  width: 200%;\n  height: 200%;\n  border: #FF4A7D solid 1px;\n  display: block;\n  position: absolute;\n  left: 0;\n  top: 0;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  border-radius: 50px;\n}\n.membership_crown_pre[_v-366e10d9]{\n  color:#999999;\n  text-decoration: line-through;\n  font-size: 11px;\n}\n.membership_crown .membership_crown_pre em[_v-366e10d9]{\n  font-size: 10px;\n}\n\n.membership_crown[_v-366e10d9] {\n  font-size: 11px;\n  color: #D6B471;\n  display: inline-block;\n  padding-left: 5px;\n  position: relative;\n  bottom: -1px;\n  float: left;\n}\n\n.membership_crown em[_v-366e10d9] {\n  font-size: 10px;\n  font-style: normal;\n}\n\n.tipswrap[_v-366e10d9] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.51);\n  z-index: 99;\n}\n\n.tipswrap .tipsdiv[_v-366e10d9] {\n  width: 72%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  overflow: hidden;\n  min-height: 20px;\n  max-width: 480px;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n\n.tipswrap .tipsdiv img[_v-366e10d9] {\n  width: 100%;\n}\n\n.tipswrap .tipsdiv div[_v-366e10d9] {\n  width: 100%;\n  height: 13%;\n  position: absolute;\n  bottom: 0;\n}\n\n.progress_bar[_v-366e10d9] {\n  position: absolute;\n  width: 100%;\n  bottom: 20px;\n}\n\n.remain_btns_click[_v-366e10d9] {\n  width: 90px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  bottom: 13px;\n  z-index: 2;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.f_l[_v-1ca4930e]{\n  float: left;\n}\n.newOriginal_price[_v-1ca4930e] {\n  font-size: 14px;\n}\n\n.list_style[_v-1ca4930e] {\n  height: 130px;\n}\n\nul li[_v-1ca4930e] {\n  padding: 10px 10px;\n  position: relative;\n  overflow: hidden;\n}\n\nul li.online[_v-1ca4930e]:after {\n  content: \"\";\n  display: block;\n  background-color: #DDDDDD;\n  -webkit-transform: scale(0.5) translateX(280px);\n  -ms-transform: scale(0.5) translateX(280px);\n  transform: scale(0.5) translateX(280px);\n  position: absolute;\n  left: -50%;\n  width: 200%;\n  height: 1px;\n  bottom: 0;\n  z-index: 1;\n}\n\n\nul li .img_container[_v-1ca4930e] {\n  position: relative;\n}\n\nul li .img_container_inner[_v-1ca4930e] {\n  width: 130px;\n  position: relative;\n}\n\nul li .img_container_inner div[_v-1ca4930e] {\n  height: 60px;\n  width: 60px;\n  background-color: rgba(0, 0, 0, 0.5);\n  border-radius: 50%;\n  position: absolute;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  margin: auto auto;\n  font-size: 14px;\n  color: #FFF;\n  text-align: center;\n  line-height: 60px;\n}\n\nul li .order_good_info_container[_v-1ca4930e] {\n  position: absolute;\n  padding-left: 140px;\n  top: 0;\n  padding-top: 10px;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n}\n\n.order_good_name[_v-1ca4930e] {\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  /*display: -webkit-box;*/\n  /*-webkit-line-clamp: 2;*/\n  /*-webkit-box-orient: vertical;*/\n  height: 20px;\n  line-height: 20px;\n  color: #333333;\n}\n\n.order_good_name_in[_v-1ca4930e] {\n  font-size: 12px;\n  color: #999999;\n}\n\n.order_good_price[_v-1ca4930e] {\n  font-size: 16px;\n  height: 16px;\n  line-height: 16px;\n  color: #FF4A7D;\n  padding-top: 5px;\n}\n\n.price_symbol[_v-1ca4930e] {\n  font-size: 12px;\n  font-style: normal;\n}\n\n.progress_info[_v-1ca4930e]{\n  position: absolute;\n  width: 100%;\n  bottom: 14px;\n  font-size: 12px;\n  color: #999999;\n}\n.market_price[_v-1ca4930e] {\n  text-decoration: line-through;\n  color: #999;\n  margin-left: 0px;\n  font-size: 11px !important;\n}\n\n.progress_bar_bg[_v-1ca4930e] {\n  background-color: #EAEAEA;\n  border-radius: 8px;\n  height: 8px;\n  width: 21.3333333%;\n  position: relative;\n  overflow: hidden;\n}\n\n.progress_container[_v-1ca4930e] {\n  height: 8px;\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n  /*position: absolute;*/\n  left: 0;\n  top: 0;\n}\n\n.panic_buying_btn.buy_gray[_v-1ca4930e] {\n  background: -webkit-linear-gradient(left top, #DBDADA, #C5C5C5); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#DBDADA), to(#C5C5C5));\n  background: -webkit-linear-gradient(top left, #DBDADA, #C5C5C5);\n  background: linear-gradient(to bottom right, #DBDADA, #C5C5C5); /* 标准的语法 */\n}\n.panic_buying_btn.seteds[_v-1ca4930e]{\n  color:#999999;\n}\n.panic_buying_btn.seteds[_v-1ca4930e]:after{\n  border-color: #999999;\n}\n\n.progress_bar_percentage.wall[_v-1ca4930e] {\n  width: 100%;\n  min-width: 10px;\n}\n\n.finish_percentage[_v-1ca4930e] {\n  font-size: 11px;\n  color: #FF4A7D;\n  line-height: 11px;\n  margin-top: 5px;\n}\n\n.panic_buying_btn[_v-1ca4930e] {\n  width: 70px;\n  height: 25px;\n  font-size: 11px;\n  line-height: 25px;\n  text-align: center;\n  color: #fff;\n  position: absolute;\n  right: 10px;\n  bottom: 21px;\n  border-radius: 12px;\n  background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */ /* Opera 11.1 - 12.0 */ /* Firefox 3.6 - 15 */\n  background: -webkit-gradient(linear, left top, right bottom, from(#FF7676), to(#FF4A8F));\n  background: -webkit-linear-gradient(top left, #FF7676, #FF4A8F);\n  background: linear-gradient(to bottom right, #FF7676, #FF4A8F); /* 标准的语法 */\n}\n\n.panic_buying_btn2[_v-1ca4930e] {\n  background: none;\n  color: #ff4a7d;\n  border-radius: 20px;\n  line-height: 26px;\n}\n\n.panic_buying_btn2[_v-1ca4930e]:after {\n  content: \"\";\n  -webkit-transform: scale(0.5);\n      -ms-transform: scale(0.5);\n          transform: scale(0.5);\n  width: 200%;\n  height: 200%;\n  border: #FF4A7D solid 1px;\n  display: block;\n  position: absolute;\n  left: 0;\n  top: 0;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  border-radius: 50px;\n}\n.membership_crown_pre[_v-1ca4930e]{\n  color:#999999;\n  text-decoration: line-through;\n  font-size: 11px;\n}\n.membership_crown .membership_crown_pre em[_v-1ca4930e]{\n  font-size: 10px;\n}\n\n.membership_crown[_v-1ca4930e] {\n  font-size: 11px;\n  color: #D6B471;\n  display: inline-block;\n  padding-left: 5px;\n  position: relative;\n  bottom: -1px;\n  float: left;\n}\n\n.membership_crown em[_v-1ca4930e] {\n  font-size: 10px;\n  font-style: normal;\n}\n\n.tipswrap[_v-1ca4930e] {\n  position: fixed;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background-color: rgba(0, 0, 0, 0.51);\n  z-index: 99;\n}\n\n.tipswrap .tipsdiv[_v-1ca4930e] {\n  width: 72%;\n  position: fixed;\n  top: 50%;\n  left: 50%;\n  overflow: hidden;\n  min-height: 20px;\n  max-width: 480px;\n  -webkit-transform: translate(-50%, -50%);\n  -ms-transform: translate(-50%, -50%);\n  transform: translate(-50%, -50%);\n}\n\n.tipswrap .tipsdiv img[_v-1ca4930e] {\n  width: 100%;\n}\n\n.tipswrap .tipsdiv div[_v-1ca4930e] {\n  width: 100%;\n  height: 13%;\n  position: absolute;\n  bottom: 0;\n}\n\n.progress_bar[_v-1ca4930e] {\n  position: absolute;\n  width: 100%;\n  bottom: 20px;\n}\n\n.remain_btns_click[_v-1ca4930e] {\n  width: 90px;\n  height: 40px;\n  position: absolute;\n  right: 0;\n  bottom: 13px;\n  z-index: 2;\n}\n", ""]);
 
 	// exports
 
@@ -22472,7 +22472,7 @@
 /* 336 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-366e10d9=\"\">\n  <ul _v-366e10d9=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-366e10d9=\"\">\n      <a :href=\"item.command.content\" _v-366e10d9=\"\">\n        <div class=\"img_container\" _v-366e10d9=\"\">\n          <div class=\"img_container_inner\" _v-366e10d9=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-366e10d9=\"\">\n            <div v-if=\"item.buttonStatus == 3\" _v-366e10d9=\"\">已抢光</div>\n          </div>\n          <div class=\"order_good_info_container\" _v-366e10d9=\"\">\n            <div class=\"order_good_name\" _v-366e10d9=\"\">{{item.title}}</div>\n            <div class=\"order_good_name order_good_name_in\" _v-366e10d9=\"\">{{item.recomWord.split(\"\\n\")[0]}}</div>\n            <div class=\"order_good_price\" _v-366e10d9=\"\">\n              <span class=\"f_l\" _v-366e10d9=\"\"><em class=\"price_symbol\" _v-366e10d9=\"\">￥</em><span _v-366e10d9=\"\">{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span v-if=\"(item.nowPrice+'').split('.').length == 2\" class=\"newOriginal_price\" _v-366e10d9=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span><span v-if=\"item.timeshopIncome != '0'\" class=\"membership_crown\" _v-366e10d9=\"\">限时返 <em _v-366e10d9=\"\">￥</em>{{item.timeshopIncome}}\n              <span v-if=\"item.income\" class=\"membership_crown_pre\" _v-366e10d9=\"\">平日返<em _v-366e10d9=\"\">￥</em>{{item.income}}</span></span>\n            </div>\n            <div v-if=\"item.buttonStatus != 3 &amp;&amp; item.timeshopGoodsNum\" class=\"progress_info\" _v-366e10d9=\"\">\n              仅剩 {{item.timeshopGoodsNum}} 件\n            </div>\n            <!--<div class=\"progress_bar\" v-if=\"(item.buttonStatus != 0)&&(item.buttonStatus != 1)\">-->\n            <!--<div class=\"progress_bar_bg\">-->\n            <!--<div class=\"progress_container\" :style=\"{width:item.percentage+'%'}\">-->\n            <!--</div>-->\n            <!--</div>-->\n            <!--<div class=\"finish_percentage\">已售{{item.percentage}}%</div>-->\n            <!--</div>-->\n          </div>\n        </div>\n      </a>\n      <a class=\"remain_btns\" _v-366e10d9=\"\">\n        <div class=\"panic_buying_btn\" :class=\"{panic_buying_btn2:item.buttonStatus < 2,buy_gray:item.buttonStatus == '3',seteds:item.buttonStatus == '0'}\" _v-366e10d9=\"\">{{item.buttonName}}\n        </div>\n        <div @click=\"Panicbuying(item,index)\" class=\"remain_btns_click\" _v-366e10d9=\"\"></div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-366e10d9=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-366e10d9=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-366e10d9=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-366e10d9=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-366e10d9=\"\"></div>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div :style=\"[{ marginTop:data.marginTop },styleObject]\" _v-1ca4930e=\"\">\n  <ul _v-1ca4930e=\"\">\n    <li class=\"list_style\" :class=\"{online:item.showLine == '1'}\" v-for=\"(item, index) in data.body.dataList\" _v-1ca4930e=\"\">\n      <a :href=\"item.command.content\" _v-1ca4930e=\"\">\n        <div class=\"img_container\" _v-1ca4930e=\"\">\n          <div class=\"img_container_inner\" _v-1ca4930e=\"\">\n            <img v-lazy=\"imgObject(item.imageUrl)\" _v-1ca4930e=\"\">\n            <div v-if=\"item.buttonStatus == 3\" _v-1ca4930e=\"\">已抢光</div>\n          </div>\n          <div class=\"order_good_info_container\" _v-1ca4930e=\"\">\n            <div class=\"order_good_name\" _v-1ca4930e=\"\">{{item.title}}</div>\n            <div class=\"order_good_name order_good_name_in\" _v-1ca4930e=\"\">{{item.recomWord.split(\"\\n\")[0]}}</div>\n            <div class=\"order_good_price\" _v-1ca4930e=\"\">\n              <span class=\"f_l\" _v-1ca4930e=\"\"><em class=\"price_symbol\" _v-1ca4930e=\"\">￥</em><span _v-1ca4930e=\"\">{{(item.nowPrice+\"\").split(\".\")[0]}}</span><span v-if=\"(item.nowPrice+'').split('.').length == 2\" class=\"newOriginal_price\" _v-1ca4930e=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span><span v-if=\"item.timeshopIncome != '0'\" class=\"membership_crown\" _v-1ca4930e=\"\">限时返 <em _v-1ca4930e=\"\">￥</em>{{item.timeshopIncome}}\n              <span v-if=\"item.income\" class=\"membership_crown_pre\" _v-1ca4930e=\"\">平日返<em _v-1ca4930e=\"\">￥</em>{{item.income}}</span></span>\n            </div>\n            <div v-if=\"item.buttonStatus != 3 &amp;&amp; item.timeshopGoodsNum\" class=\"progress_info\" _v-1ca4930e=\"\">\n              仅剩 {{item.timeshopGoodsNum}} 件\n            </div>\n            <!--<div class=\"progress_bar\" v-if=\"(item.buttonStatus != 0)&&(item.buttonStatus != 1)\">-->\n            <!--<div class=\"progress_bar_bg\">-->\n            <!--<div class=\"progress_container\" :style=\"{width:item.percentage+'%'}\">-->\n            <!--</div>-->\n            <!--</div>-->\n            <!--<div class=\"finish_percentage\">已售{{item.percentage}}%</div>-->\n            <!--</div>-->\n          </div>\n        </div>\n      </a>\n      <a class=\"remain_btns\" _v-1ca4930e=\"\">\n        <div class=\"panic_buying_btn\" :class=\"{panic_buying_btn2:item.buttonStatus < 2,buy_gray:item.buttonStatus == '3',seteds:item.buttonStatus == '0'}\" _v-1ca4930e=\"\">{{item.buttonName}}\n        </div>\n        <div @click=\"Panicbuying(item,index)\" class=\"remain_btns_click\" _v-1ca4930e=\"\"></div>\n      </a>\n    </li>\n  </ul>\n  <div v-if=\"ts_tips\" class=\"tipswrap\" @click=\"tipsconfirm\" _v-1ca4930e=\"\">\n    <div class=\"tipsdiv\" @click.stop=\"events\" _v-1ca4930e=\"\">\n      <img v-if=\"isWechart\" src=\"//pic.davdian.com/free/2017/06/14/tips2.png\" alt=\"\" _v-1ca4930e=\"\">\n      <img v-else=\"\" src=\"//pic.davdian.com/free/2017/06/14/tips1.png\" alt=\"\" _v-1ca4930e=\"\">\n      <div v-if=\"!isWechart\" @click=\"tipsconfirm\" _v-1ca4930e=\"\"></div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 337 */
@@ -22502,7 +22502,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-1ecd6274/bd_ts_goods_0.vue"
+	  var id = "_v-5d99d99e/bd_ts_goods_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22526,8 +22526,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ecd6274&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_goods_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ecd6274&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_goods_0.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5d99d99e&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_goods_0.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5d99d99e&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_ts_goods_0.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22545,7 +22545,7 @@
 
 
 	// module
-	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy[_v-1ecd6274] {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail[_v-1ecd6274] {\n    width: 100%;\n    display: block;\n    position: relative; }\n  .index_group_buy .df_new_model_con[_v-1ecd6274] {\n    background: #fff; }\n\n.related-item-list.swiper-container[_v-1ecd6274] {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list .detail[_v-1ecd6274] {\n  text-align: left; }\n\n.related-item-list .detail.swiper-slide[_v-1ecd6274] {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list .detail .goods_img_size[_v-1ecd6274] {\n  width: 100px;\n  height: 100px;\n  position: relative; }\n\n.related-item-list .detail .goods_img_size[_v-1ecd6274]:before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box; }\n\n.related-item-list .detail .name[_v-1ecd6274] {\n  font-size: 12px;\n  padding-top: 7px;\n  padding-right: 10px;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  line-height: 18px;\n  margin-bottom: 2px;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  overflow: hidden; }\n\n.related-item-list .detail .price[_v-1ecd6274] {\n  padding-top: 3px;\n  line-height: 12px;\n  height: 11px;\n  padding-right: 10px;\n  overflow: hidden; }\n  .related-item-list .detail .price .current-price[_v-1ecd6274] {\n    font-size: 11px;\n    color: #FF4A7D;\n    float: left; }\n  .related-item-list .detail .price .original-price[_v-1ecd6274] {\n    font-size: 9px;\n    color: #999;\n    text-decoration: line-through;\n    float: left;\n    padding-left: 5px; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list .detail .goods_img_size[_v-1ecd6274]:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */ } }\n\n.df_new_title[_v-1ecd6274] {\n  position: relative;\n  height: 44px; }\n\n.df_new_title[_v-1ecd6274]:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title[_v-1ecd6274]:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font[_v-1ecd6274] {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font[_v-1ecd6274]:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font[_v-1ecd6274]:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more[_v-1ecd6274] {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span[_v-1ecd6274] {\n  font-size: 12px; }\n\n.df_new_title_2[_v-1ecd6274] {\n  height: 44px;\n  line-height: 44px;\n  background-color: #fff;\n  position: relative;\n  border-bottom: 1px solid #f0f0f0; }\n\n.df_new_title_2 a[_v-1ecd6274] {\n  line-height: inherit; }\n\n.df_new_title_2 .df_new_font[_v-1ecd6274] {\n  font-size: 16px;\n  padding-left: 22px;\n  line-height: 44px; }\n\n.df_new_title_2 .df_new_font[_v-1ecd6274]:before {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 14px;\n  position: absolute; }\n\n.df_new_title_2 .more[_v-1ecd6274] {\n  padding-right: 10px;\n  float: right; }\n\n.df_new_title_2 .more span[_v-1ecd6274] {\n  color: #666;\n  font-size: 12px;\n  line-height: 35px;\n  margin-right: -2px; }\n\n.df_new_title_3[_v-1ecd6274] {\n  height: auto;\n  position: relative; }\n  .df_new_title_3 .up_arrow[_v-1ecd6274] {\n    width: 0;\n    height: 0;\n    border-left: 6px solid transparent;\n    border-right: 6px solid transparent;\n    border-bottom: 7px solid #f0f0f0;\n    border-top: transparent;\n    position: absolute;\n    left: 50%;\n    margin-left: -3px;\n    bottom: 0; }\n\n.index_model[_v-1ecd6274] {\n  margin-top: 0px !important; }\n", ""]);
+	exports.push([module.id, "@charset \"UTF-8\";\n.index_group_buy[_v-5d99d99e] {\n  margin-top: 10px;\n  display: block; }\n  .index_group_buy .detail[_v-5d99d99e] {\n    width: 100%;\n    display: block;\n    position: relative; }\n  .index_group_buy .df_new_model_con[_v-5d99d99e] {\n    background: #fff; }\n\n.related-item-list.swiper-container[_v-5d99d99e] {\n  padding-top: 10px;\n  padding-bottom: 10px; }\n\n.related-item-list .detail[_v-5d99d99e] {\n  text-align: left; }\n\n.related-item-list .detail.swiper-slide[_v-5d99d99e] {\n  background: transparent;\n  line-height: inherit; }\n\n.related-item-list .detail .goods_img_size[_v-5d99d99e] {\n  width: 100px;\n  height: 100px;\n  position: relative; }\n\n.related-item-list .detail .goods_img_size[_v-5d99d99e]:before {\n  content: '';\n  position: absolute;\n  top: 0;\n  left: 0;\n  border: 1px solid #ddd;\n  width: 100%;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n       box-sizing: border-box; }\n\n.related-item-list .detail .name[_v-5d99d99e] {\n  font-size: 12px;\n  padding-top: 7px;\n  padding-right: 10px;\n  text-overflow: ellipsis;\n  white-space: pre-line;\n  line-height: 18px;\n  margin-bottom: 2px;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  overflow: hidden; }\n\n.related-item-list .detail .price[_v-5d99d99e] {\n  padding-top: 3px;\n  line-height: 12px;\n  height: 11px;\n  padding-right: 10px;\n  overflow: hidden; }\n  .related-item-list .detail .price .current-price[_v-5d99d99e] {\n    font-size: 11px;\n    color: #FF4A7D;\n    float: left; }\n  .related-item-list .detail .price .original-price[_v-5d99d99e] {\n    font-size: 9px;\n    color: #999;\n    text-decoration: line-through;\n    float: left;\n    padding-left: 5px; }\n\n/*Retina屏为2的时候调用下面的样式*/\n@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-resolution: 2dppx) {\n  .related-item-list .detail .goods_img_size[_v-5d99d99e]:before {\n    width: 200%;\n    height: 200%;\n    transform: scale(0.5);\n    transform-origin: left top;\n    -ms-transform: scale(0.5);\n    /* IE 9 */\n    -ms-transform-origin: left top;\n    /* IE 9 */\n    -webkit-transform: scale(0.5);\n    /* Safari 和 Chrome */\n    -webkit-transform-origin: left top;\n    /* Safari 和 Chrome */\n    -moz-transform: scale(0.5);\n    /* Firefox */\n    -moz-transform-origin: left top;\n    /* Firefox */\n    -o-transform: scale(0.5);\n    /* Opera */\n    -o-transform-origin: left top;\n    /* Opera */ } }\n\n.df_new_title[_v-5d99d99e] {\n  position: relative;\n  height: 44px; }\n\n.df_new_title[_v-5d99d99e]:after {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 0;\n  position: absolute; }\n\n.df_new_title[_v-5d99d99e]:before {\n  content: \"\";\n  border-left: 28px solid #f0f0f0;\n  border-bottom: 28px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 0;\n  top: 0;\n  position: absolute; }\n\n.df_new_title_font[_v-5d99d99e] {\n  font-size: 16px;\n  margin-left: 20px;\n  line-height: 44px; }\n\n.df_new_title_font[_v-5d99d99e]:before {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 6px;\n  top: 0;\n  right: 74px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title_font[_v-5d99d99e]:after {\n  content: \"\";\n  position: absolute;\n  background-color: #F2F0EC;\n  width: 3px;\n  bottom: -30px;\n  right: 24px;\n  height: 110%;\n  -webkit-transform: skew(-45deg);\n  -ms-transform: skew(-45deg);\n      transform: skew(-45deg); }\n\n.df_new_title .more[_v-5d99d99e] {\n  position: absolute;\n  right: 1px;\n  top: 0;\n  display: block;\n  line-height: 16px;\n  width: 50px;\n  padding-top: 14px;\n  height: 100%;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  overflow: inherit; }\n\n.df_new_title .more span[_v-5d99d99e] {\n  font-size: 12px; }\n\n.df_new_title_2[_v-5d99d99e] {\n  height: 44px;\n  line-height: 44px;\n  background-color: #fff;\n  position: relative;\n  border-bottom: 1px solid #f0f0f0; }\n\n.df_new_title_2 a[_v-5d99d99e] {\n  line-height: inherit; }\n\n.df_new_title_2 .df_new_font[_v-5d99d99e] {\n  font-size: 16px;\n  padding-left: 22px;\n  line-height: 44px; }\n\n.df_new_title_2 .df_new_font[_v-5d99d99e]:before {\n  content: \"\";\n  border-left: 8px solid #FF4A7D;\n  border-bottom: 8px solid transparent;\n  border-top: 8px solid transparent;\n  display: inline-block;\n  width: 0;\n  height: 0;\n  left: 3px;\n  top: 14px;\n  position: absolute; }\n\n.df_new_title_2 .more[_v-5d99d99e] {\n  padding-right: 10px;\n  float: right; }\n\n.df_new_title_2 .more span[_v-5d99d99e] {\n  color: #666;\n  font-size: 12px;\n  line-height: 35px;\n  margin-right: -2px; }\n\n.df_new_title_3[_v-5d99d99e] {\n  height: auto;\n  position: relative; }\n  .df_new_title_3 .up_arrow[_v-5d99d99e] {\n    width: 0;\n    height: 0;\n    border-left: 6px solid transparent;\n    border-right: 6px solid transparent;\n    border-bottom: 7px solid #f0f0f0;\n    border-top: transparent;\n    position: absolute;\n    left: 50%;\n    margin-left: -3px;\n    bottom: 0; }\n\n.index_model[_v-5d99d99e] {\n  margin-top: 0px !important; }\n", ""]);
 
 	// exports
 
@@ -22600,7 +22600,7 @@
 /* 341 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\" _v-1ecd6274=\"\">\n\n  <tt_com_0 :data=\"data\" _v-1ecd6274=\"\"></tt_com_0>\n\n  <div class=\"df_new_model_con\" :style=\"styleObject\" _v-1ecd6274=\"\">\n    <div class=\"df_new_model_con\" _v-1ecd6274=\"\">\n      <div class=\"df_new_title_3\" style=\"height:1.8rem;overflow: hidden;\" _v-1ecd6274=\"\">\n        <a :href=\"data.body.command.content\" @click=\"clickAnalysis\" style=\"height: 1.8rem;\" position=\"0\" _v-1ecd6274=\"\">\n          <img class=\"newImage\" style=\"display: inline;height: 1.8rem\" v-lazy=\"imgObject(data.body.imageUrl)\" _v-1ecd6274=\"\">\n        </a>\n        <span class=\"up_arrow\" :style=\"styleSpan\" _v-1ecd6274=\"\"></span>\n      </div>\n      <bd_goods_0 :data=\"data\" _v-1ecd6274=\"\"></bd_goods_0>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"hot_activity_cotnainer index_model\" :style=\"{ marginTop:data.marginTop }\" _v-5d99d99e=\"\">\n\n  <tt_com_0 :data=\"data\" _v-5d99d99e=\"\"></tt_com_0>\n\n  <div class=\"df_new_model_con\" :style=\"styleObject\" _v-5d99d99e=\"\">\n    <div class=\"df_new_model_con\" _v-5d99d99e=\"\">\n      <div class=\"df_new_title_3\" style=\"height:1.8rem;overflow: hidden;\" _v-5d99d99e=\"\">\n        <a :href=\"data.body.command.content\" @click=\"clickAnalysis\" style=\"height: 1.8rem;\" position=\"0\" _v-5d99d99e=\"\">\n          <img class=\"newImage\" style=\"display: inline;height: 1.8rem\" v-lazy=\"imgObject(data.body.imageUrl)\" _v-5d99d99e=\"\">\n        </a>\n        <span class=\"up_arrow\" :style=\"styleSpan\" _v-5d99d99e=\"\"></span>\n      </div>\n      <bd_goods_0 :data=\"data\" _v-5d99d99e=\"\"></bd_goods_0>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 342 */
@@ -22630,7 +22630,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-06461048/bd_ts_title_0.vue"
+	  var id = "_v-3240569a/bd_ts_title_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22783,7 +22783,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-66ed76de/bd_image_1_2.vue"
+	  var id = "_v-9a807274/bd_image_1_2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22905,7 +22905,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6b3bf654/bd_image_4_2.vue"
+	  var id = "_v-51727889/bd_image_4_2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -22929,8 +22929,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6b3bf654&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_4_2.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6b3bf654&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_4_2.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-51727889&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_4_2.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-51727889&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_image_4_2.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -22948,7 +22948,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.index_links[_v-6b3bf654] {\n    width:100%;\n    overflow: hidden;\n    min-height:50px;\n    background-color:#FFFFFF;\n}\n.bd_icon_0[_v-6b3bf654] {\n    overflow: hidden;\n     padding-top: 0px;\n    background-color: #fff;\n     margin-top: 0px;\n}\n.bd_icon_0 .link_item[_v-6b3bf654] {\n    float: left;\n    width: 25%;\n    text-align: center;\n     padding-bottom: 0px;\n     padding-top: 0px;\n}\n.bd_icon_0 .link_item .link_img[_v-6b3bf654] {\n    width:100%;\n    margin-bottom: 0;\n    max-width: 100%;\n    max-height: 100%;\n    display: inline-block;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.index_links[_v-51727889] {\n    width:100%;\n    overflow: hidden;\n    min-height:50px;\n    background-color:#FFFFFF;\n}\n.bd_icon_0[_v-51727889] {\n    overflow: hidden;\n     padding-top: 0px;\n    background-color: #fff;\n     margin-top: 0px;\n}\n.bd_icon_0 .link_item[_v-51727889] {\n    float: left;\n    width: 25%;\n    text-align: center;\n     padding-bottom: 0px;\n     padding-top: 0px;\n}\n.bd_icon_0 .link_item .link_img[_v-51727889] {\n    width:100%;\n    margin-bottom: 0;\n    max-width: 100%;\n    max-height: 100%;\n    display: inline-block;\n}\n", ""]);
 
 	// exports
 
@@ -23018,7 +23018,7 @@
 /* 356 */
 /***/ function(module, exports) {
 
-	module.exports = "\n\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-6b3bf654=\"\">\n    <tt_com_0 :data=\"data\" _v-6b3bf654=\"\"></tt_com_0>\n    <div v-if=\"show\" class=\"bd_icon_0 index_links\" :style=\"styleObject\" _v-6b3bf654=\"\">\n        <a class=\"link_item\" v-for=\"item in data.body.dataList\" :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-6b3bf654=\"\">\n            <img class=\"link_img newImage\" :src=\"item.imageUrl\" _v-6b3bf654=\"\">\n        </a>\n    </div>\n</div>\n\n";
+	module.exports = "\n\n<div :style=\"{ marginTop:data.marginTop + 'px' }\" _v-51727889=\"\">\n    <tt_com_0 :data=\"data\" _v-51727889=\"\"></tt_com_0>\n    <div v-if=\"show\" class=\"bd_icon_0 index_links\" :style=\"styleObject\" _v-51727889=\"\">\n        <a class=\"link_item\" v-for=\"item in data.body.dataList\" :href=\"item.command.content\" @click=\"clickAnalysis\" :position=\"item.position\" _v-51727889=\"\">\n            <img class=\"link_img newImage\" :src=\"item.imageUrl\" _v-51727889=\"\">\n        </a>\n    </div>\n</div>\n\n";
 
 /***/ },
 /* 357 */
@@ -23048,7 +23048,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-057ddfc8/bd_goods_4.vue"
+	  var id = "_v-1fa6c8de/bd_goods_4.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23072,8 +23072,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-057ddfc8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_4.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-057ddfc8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_4.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1fa6c8de&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_4.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1fa6c8de&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_goods_4.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23091,7 +23091,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.img_label[_v-057ddfc8]{\n  font-weight: bold;\n  left: 0;\n  bottom:0;\n  position:absolute;\n  font-size: 10px;\n  opacity: 0.8;\n  background: -webkit-gradient(linear,left top, right top,from(#ff5b5b),to(#fa1862));\n  background: linear-gradient(90deg,#ff5b5b,#fa1862);\n  background: -webkit-linear-gradient(left,#ff5b5b,#fa1862);\n  color:#fff;\n  line-height: 16px;\n  padding:1px 8px 0 6px;\n  border-top-right-radius: 8px;\n}\n.img_label[_v-057ddfc8]:after{\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-width: 0 4px 10px 0;\n  border-style: solid;\n  border-color: transparent transparent #fa1862 transparent;\n  position: absolute;\n  margin-left: 8px;\n  bottom: 0;\n}\n.img_container[_v-057ddfc8]{\n  position: relative;\n}\n\n  .good_list_2_row[_v-057ddfc8] {\n    background: none;\n    padding: 0 5px;\n  }\n\n  .font-weight[_v-057ddfc8] {\n    font-weight: 500;\n  }\n  .goods4_price_bar em[_v-057ddfc8] {\n    font-style: normal;\n    font-size: 12px;\n    display: inline-block;\n    margin-right: 2px;\n    \n  }\n\n  .good_list_2_row .good_item[_v-057ddfc8] {\n    padding: 0 5px;\n    margin-bottom: 0;\n  }\n\n  .good_list_2_row .good_item .good_img_container img[_v-057ddfc8] {\n    border: none;\n  }\n\n  .good_con[_v-057ddfc8] {\n    display: block;\n    background-color: #FFF;\n    padding: 10px;\n    padding-top: 0;\n    overflow: hidden;\n  }\n\n  .good_con .fz_12[_v-057ddfc8] {\n    overflow: hidden;\n    height: 16px;\n    line-height: 16px;\n  }\n\n  .good_con .fz_12 .dav-color-price[_v-057ddfc8] {\n    display: inline-block;\n  }\n.good_con .nowPriceCont[_v-057ddfc8] {\n  font-size: 0;\n}\n  .good_con .nowPrice[_v-057ddfc8] {\n    font-size: 16px;\n  }\n\n  .good_list_2_row .good_item .lable[_v-057ddfc8] {\n    color: #FF4A7D;\n    font-size: 10px;\n    display: inline-block;\n    margin-left: 4px;\n    font-family: sans-serif;\n    background-color: #FFF;\n    float: right;\n    -webkit-box-sizing: border-box;\n    position: relative;\n    top: 7.89473%;\n    padding: 0 2px;\n    border: 1px solid #FF4A7D;\n    line-height: 15px;\n    border-radius: 4px;\n  }\n\n  .good_list_2_row .good_item .lable .border[_v-057ddfc8] {\n    -webkit-transform: scale(0.5);\n    -ms-transform: scale(0.5);\n        transform: scale(0.5);\n    position: absolute;\n    border: 1px solid #FF4A7D;\n    top: -50%;\n    right: -50%;\n    bottom: -50%;\n    left: -50%;\n    border-radius: 7px;\n  }\n\n  .good_list_2_row .good_item .good_title[_v-057ddfc8] {\n    margin-bottom: 4px;\n    -webkit-line-clamp: 2;\n    line-clamp: 2;\n    line-height: 19px;\n  }\n\n  .goods4_price_bar[_v-057ddfc8] {\n    overflow: hidden;\n    height: 19px;\n    width: 200%;\n  }\n  .good_list_sell_out[_v-057ddfc8]{\n    z-index: 0;\n  }\n\n  .vip_return[_v-057ddfc8]{\n  line-height: 1;\n  font-size: 0;\n  color: #BF9D51;\n  padding-left: 4px;\n  position: relative;\n  display: inline-block;\n    -webkit-transform: scale(0.5);\n  -webkit-transform-origin: 0 60%;\n  -ms-transform: scale(0.5);\n      transform: scale(0.5);\n  -ms-transform-origin: 0 60%;\n      transform-origin: 0 60%;\n  vertical-align: middle;\n  margin-bottom: 4px;\n}\n.vip_return .vip_return_title[_v-057ddfc8]{\n  font-size: 22px;\n}\n.vip_return .vip_return_f[_v-057ddfc8]{\n  font-size: 18px;\n  padding: 0 2px 0 4px;\n}\n.vip_return .vip_return_price[_v-057ddfc8]{\n  font-size: 24px;\n}\n @media screen and (max-width:374px){\n    .vip_return[_v-057ddfc8]{\n      padding-left:0;\n      margin-bottom: 3px;\n    }\n    .vip_return .vip_return_title[_v-057ddfc8]{\n      font-size: 20px;\n    }\n    .vip_return .vip_return_f[_v-057ddfc8]{\n      font-size: 14px;\n      padding: 0 2px 0 4px;\n    }\n    .vip_return .vip_return_price[_v-057ddfc8]{\n      font-size: 20px;\n    }\n }\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.img_label[_v-1fa6c8de]{\n  font-weight: bold;\n  left: 0;\n  bottom:0;\n  position:absolute;\n  font-size: 10px;\n  opacity: 0.8;\n  background: -webkit-gradient(linear,left top, right top,from(#ff5b5b),to(#fa1862));\n  background: linear-gradient(90deg,#ff5b5b,#fa1862);\n  background: -webkit-linear-gradient(left,#ff5b5b,#fa1862);\n  color:#fff;\n  line-height: 16px;\n  padding:1px 8px 0 6px;\n  border-top-right-radius: 8px;\n}\n.img_label[_v-1fa6c8de]:after{\n  content: \"\";\n  width: 0;\n  height: 0;\n  border-width: 0 4px 10px 0;\n  border-style: solid;\n  border-color: transparent transparent #fa1862 transparent;\n  position: absolute;\n  margin-left: 8px;\n  bottom: 0;\n}\n.img_container[_v-1fa6c8de]{\n  position: relative;\n}\n\n  .good_list_2_row[_v-1fa6c8de] {\n    background: none;\n    padding: 0 5px;\n  }\n\n  .font-weight[_v-1fa6c8de] {\n    font-weight: 500;\n  }\n  .goods4_price_bar em[_v-1fa6c8de] {\n    font-style: normal;\n    font-size: 12px;\n    display: inline-block;\n    margin-right: 2px;\n    \n  }\n\n  .good_list_2_row .good_item[_v-1fa6c8de] {\n    padding: 0 5px;\n    margin-bottom: 0;\n  }\n\n  .good_list_2_row .good_item .good_img_container img[_v-1fa6c8de] {\n    border: none;\n  }\n\n  .good_con[_v-1fa6c8de] {\n    display: block;\n    background-color: #FFF;\n    padding: 10px;\n    padding-top: 0;\n    overflow: hidden;\n  }\n\n  .good_con .fz_12[_v-1fa6c8de] {\n    overflow: hidden;\n    height: 16px;\n    line-height: 16px;\n  }\n\n  .good_con .fz_12 .dav-color-price[_v-1fa6c8de] {\n    display: inline-block;\n  }\n.good_con .nowPriceCont[_v-1fa6c8de] {\n  font-size: 0;\n}\n  .good_con .nowPrice[_v-1fa6c8de] {\n    font-size: 16px;\n  }\n\n  .good_list_2_row .good_item .lable[_v-1fa6c8de] {\n    color: #FF4A7D;\n    font-size: 10px;\n    display: inline-block;\n    margin-left: 4px;\n    font-family: sans-serif;\n    background-color: #FFF;\n    float: right;\n    -webkit-box-sizing: border-box;\n    position: relative;\n    top: 7.89473%;\n    padding: 0 2px;\n    border: 1px solid #FF4A7D;\n    line-height: 15px;\n    border-radius: 4px;\n  }\n\n  .good_list_2_row .good_item .lable .border[_v-1fa6c8de] {\n    -webkit-transform: scale(0.5);\n    -ms-transform: scale(0.5);\n        transform: scale(0.5);\n    position: absolute;\n    border: 1px solid #FF4A7D;\n    top: -50%;\n    right: -50%;\n    bottom: -50%;\n    left: -50%;\n    border-radius: 7px;\n  }\n\n  .good_list_2_row .good_item .good_title[_v-1fa6c8de] {\n    margin-bottom: 4px;\n    -webkit-line-clamp: 2;\n    line-clamp: 2;\n    line-height: 19px;\n  }\n\n  .goods4_price_bar[_v-1fa6c8de] {\n    overflow: hidden;\n    height: 19px;\n    width: 200%;\n  }\n  .good_list_sell_out[_v-1fa6c8de]{\n    z-index: 0;\n  }\n\n  .vip_return[_v-1fa6c8de]{\n  line-height: 1;\n  font-size: 0;\n  color: #BF9D51;\n  padding-left: 4px;\n  position: relative;\n  display: inline-block;\n    -webkit-transform: scale(0.5);\n  -webkit-transform-origin: 0 60%;\n  -ms-transform: scale(0.5);\n      transform: scale(0.5);\n  -ms-transform-origin: 0 60%;\n      transform-origin: 0 60%;\n  vertical-align: middle;\n  margin-bottom: 4px;\n}\n.vip_return .vip_return_title[_v-1fa6c8de]{\n  font-size: 22px;\n}\n.vip_return .vip_return_f[_v-1fa6c8de]{\n  font-size: 18px;\n  padding: 0 2px 0 4px;\n}\n.vip_return .vip_return_price[_v-1fa6c8de]{\n  font-size: 24px;\n}\n @media screen and (max-width:374px){\n    .vip_return[_v-1fa6c8de]{\n      padding-left:0;\n      margin-bottom: 3px;\n    }\n    .vip_return .vip_return_title[_v-1fa6c8de]{\n      font-size: 20px;\n    }\n    .vip_return .vip_return_f[_v-1fa6c8de]{\n      font-size: 14px;\n      padding: 0 2px 0 4px;\n    }\n    .vip_return .vip_return_price[_v-1fa6c8de]{\n      font-size: 20px;\n    }\n }\n", ""]);
 
 	// exports
 
@@ -23356,7 +23356,7 @@
 /* 361 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"good_list_con\" :style=\"{ marginTop:data.marginTop + 'px' }\" _v-057ddfc8=\"\">\n  <div class=\"good_list_2_row\" _v-057ddfc8=\"\">\n    <a v-for=\"item in data.body.dataList\" data-id=\"item.goods_id\" :href=\"item.command.content\" class=\"good_item\" _v-057ddfc8=\"\">\n      <div class=\"good_img_container\" _v-057ddfc8=\"\">\n        <div class=\"img_container\" _v-057ddfc8=\"\">\n          <img v-lazy=\"imgObject(item.imageUrl)\" style=\"display: inline;\" _v-057ddfc8=\"\">\n          <span class=\"img_label\" v-if=\"item.actInfo!=''\" v-text=\"item.actInfo\" _v-057ddfc8=\"\"></span>\n           <span class=\"img_label\" v-if=\"item.actInfo==''&amp;&amp;+item.ratio\" v-text=\"'返现'+item.ratio+'倍'\" _v-057ddfc8=\"\"></span>\n        </div>\n        <div v-if=\"item.statusInfo&amp;&amp;item.statusInfo != ''\" class=\"good_list_sell_out\" _v-057ddfc8=\"\"><span _v-057ddfc8=\"\">{{item.statusInfo}}</span></div>\n        <div v-if=\"item.pic_info &amp;&amp; item.ratio != 0\" class=\"pic_info\" _v-057ddfc8=\"\">{{item.ratio}}</div>\n      </div>\n      <div class=\"good_con\" _v-057ddfc8=\"\">\n        <div class=\"good_title\" _v-057ddfc8=\"\">{{item.title}}</div>\n        <div class=\"goods4_price_bar\" _v-057ddfc8=\"\">\n          <span class=\"dav-color-price font-weight\" _v-057ddfc8=\"\"><em class=\"fz_14\" _v-057ddfc8=\"\">￥</em><span class=\"nowPriceCont\" _v-057ddfc8=\"\"><span class=\"nowPrice\" _v-057ddfc8=\"\">{{(item.nowPrice+'').split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.nowPrice+'').split('.').length == 2\" _v-057ddfc8=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span></span>\n          <span class=\"vip_return\" v-if=\"item.income &amp;&amp; item.income != 0\" _v-057ddfc8=\"\">\n            <span class=\"vip_return_title\" _v-057ddfc8=\"\">会员返</span>\n            <span class=\"vip_return_f\" _v-057ddfc8=\"\">¥</span>\n            <span class=\"vip_return_price\" _v-057ddfc8=\"\">{{item.income}}</span>\n          </span>\n        </div>\n      </div>\n    </a>\n  </div>\n</div>\n<!--<category :list = \"data.body.dataList\"></category>-->\n";
+	module.exports = "\n<div class=\"good_list_con\" :style=\"{ marginTop:data.marginTop + 'px' }\" _v-1fa6c8de=\"\">\n  <div class=\"good_list_2_row\" _v-1fa6c8de=\"\">\n    <a v-for=\"item in data.body.dataList\" data-id=\"item.goods_id\" :href=\"item.command.content\" class=\"good_item\" _v-1fa6c8de=\"\">\n      <div class=\"good_img_container\" _v-1fa6c8de=\"\">\n        <div class=\"img_container\" _v-1fa6c8de=\"\">\n          <img v-lazy=\"imgObject(item.imageUrl)\" style=\"display: inline;\" _v-1fa6c8de=\"\">\n          <span class=\"img_label\" v-if=\"item.actInfo!=''\" v-text=\"item.actInfo\" _v-1fa6c8de=\"\"></span>\n           <span class=\"img_label\" v-if=\"item.actInfo==''&amp;&amp;+item.ratio\" v-text=\"'返现'+item.ratio+'倍'\" _v-1fa6c8de=\"\"></span>\n        </div>\n        <div v-if=\"item.statusInfo&amp;&amp;item.statusInfo != ''\" class=\"good_list_sell_out\" _v-1fa6c8de=\"\"><span _v-1fa6c8de=\"\">{{item.statusInfo}}</span></div>\n        <div v-if=\"item.pic_info &amp;&amp; item.ratio != 0\" class=\"pic_info\" _v-1fa6c8de=\"\">{{item.ratio}}</div>\n      </div>\n      <div class=\"good_con\" _v-1fa6c8de=\"\">\n        <div class=\"good_title\" _v-1fa6c8de=\"\">{{item.title}}</div>\n        <div class=\"goods4_price_bar\" _v-1fa6c8de=\"\">\n          <span class=\"dav-color-price font-weight\" _v-1fa6c8de=\"\"><em class=\"fz_14\" _v-1fa6c8de=\"\">￥</em><span class=\"nowPriceCont\" _v-1fa6c8de=\"\"><span class=\"nowPrice\" _v-1fa6c8de=\"\">{{(item.nowPrice+'').split(\".\")[0]}}</span><span class=\"fz_14\" v-if=\"(item.nowPrice+'').split('.').length == 2\" _v-1fa6c8de=\"\">.{{(item.nowPrice+\"\").split(\".\")[1]}}</span></span></span>\n          <span class=\"vip_return\" v-if=\"item.income &amp;&amp; item.income != 0\" _v-1fa6c8de=\"\">\n            <span class=\"vip_return_title\" _v-1fa6c8de=\"\">会员返</span>\n            <span class=\"vip_return_f\" _v-1fa6c8de=\"\">¥</span>\n            <span class=\"vip_return_price\" _v-1fa6c8de=\"\">{{item.income}}</span>\n          </span>\n        </div>\n      </div>\n    </a>\n  </div>\n</div>\n<!--<category :list = \"data.body.dataList\"></category>-->\n";
 
 /***/ },
 /* 362 */
@@ -23386,7 +23386,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-6f21a6f4/bd_course_info_series_0.vue"
+	  var id = "_v-78ed219f/bd_course_info_series_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23410,8 +23410,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6f21a6f4&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_info_series_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-6f21a6f4&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_info_series_0.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-78ed219f&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_info_series_0.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-78ed219f&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_info_series_0.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23429,7 +23429,7 @@
 
 
 	// module
-	exports.push([module.id, "#series_course[_v-6f21a6f4] {\n  width: 100%;\n  background: #fff;\n  position: relative;\n  padding-bottom: 0.1rem; }\n\n.series_title[_v-6f21a6f4] {\n  width: 100%;\n  padding-top: 0.14rem;\n  padding-left: 0.1rem;\n  padding-bottom: 0.1rem;\n  font-size: 0.14rem;\n  color: #FF4A7D; }\n  .series_title span[_v-6f21a6f4] {\n    font-size: 0.1rem;\n    color: #999999; }\n\n.series_container[_v-6f21a6f4] {\n  width: 3rem;\n  padding-left: 0.1rem;\n  padding-right: 0.4rem;\n  font-size: 0.14rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 1;\n  display: -webkit-box;\n  color: #333333; }\n\n.series_content_img[_v-6f21a6f4] {\n  position: absolute;\n  height: 0.22rem;\n  right: 0.1rem;\n  top: 0.27rem; }\n\n.series_content_img1[_v-6f21a6f4] {\n  position: absolute;\n  width: 0.64rem;\n  height: 0.22rem;\n  right: 0.1rem;\n  top: 0.27rem;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  border-radius: 37px;\n  text-align: center;\n  line-height: 0.21rem; }\n\n.icon[_v-6f21a6f4] {\n  width: 0.12rem;\n  height: 0.12rem;\n  vertical-align: top;\n  margin-top: 0.03rem; }\n", ""]);
+	exports.push([module.id, "#series_course[_v-78ed219f] {\n  width: 100%;\n  background: #fff;\n  position: relative;\n  padding-bottom: 0.1rem; }\n\n.series_title[_v-78ed219f] {\n  width: 100%;\n  padding-top: 0.14rem;\n  padding-left: 0.1rem;\n  padding-bottom: 0.1rem;\n  font-size: 0.14rem;\n  color: #FF4A7D; }\n  .series_title span[_v-78ed219f] {\n    font-size: 0.1rem;\n    color: #999999; }\n\n.series_container[_v-78ed219f] {\n  width: 3rem;\n  padding-left: 0.1rem;\n  padding-right: 0.4rem;\n  font-size: 0.14rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 1;\n  display: -webkit-box;\n  color: #333333; }\n\n.series_content_img[_v-78ed219f] {\n  position: absolute;\n  height: 0.22rem;\n  right: 0.1rem;\n  top: 0.27rem; }\n\n.series_content_img1[_v-78ed219f] {\n  position: absolute;\n  width: 0.64rem;\n  height: 0.22rem;\n  right: 0.1rem;\n  top: 0.27rem;\n  font-size: 0.12rem;\n  color: #FF4A7D;\n  border: 1px solid #FF4A7D;\n  border-radius: 37px;\n  text-align: center;\n  line-height: 0.21rem; }\n\n.icon[_v-78ed219f] {\n  width: 0.12rem;\n  height: 0.12rem;\n  vertical-align: top;\n  margin-top: 0.03rem; }\n", ""]);
 
 	// exports
 
@@ -23549,7 +23549,7 @@
 /* 366 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div id=\"series_course\" :style=\"{'marginTop':dataList.marginTop + 'px'}\" _v-6f21a6f4=\"\">\n    <a :href=\"dataList.body.command.content\" @click.stop=\"clickAnalysis\" :position=\"dataList.position\" _v-6f21a6f4=\"\">\n        <div class=\"series_title\" _v-6f21a6f4=\"\">所属系列课 <span _v-6f21a6f4=\"\">（第{{dataList.body.nowNo}}节 共{{dataList.body.courseNum}}节课）</span></div>\n        <div class=\"series_container\" _v-6f21a6f4=\"\">\n            <img src=\"//pic.davdian.com/free/2017/08/01/seriesicon.png\" class=\"icon\" _v-6f21a6f4=\"\">\n            <span v-text=\"dataList.body.seriesTitle\" _v-6f21a6f4=\"\"></span>\n        </div>\n        <div class=\"series_content_img1\" _v-6f21a6f4=\"\">进入系列</div>\n        <!-- <img class='series_content_img' src=\"//pic.davdian.com/free/2017/07/28/goSeriesCourse1.png\"> -->\n    </a>\n</div>\n";
+	module.exports = "\n<div id=\"series_course\" :style=\"{'marginTop':dataList.marginTop + 'px'}\" _v-78ed219f=\"\">\n    <a :href=\"dataList.body.command.content\" @click.stop=\"clickAnalysis\" :position=\"dataList.position\" _v-78ed219f=\"\">\n        <div class=\"series_title\" _v-78ed219f=\"\">所属系列课 <span _v-78ed219f=\"\">（第{{dataList.body.nowNo}}节 共{{dataList.body.courseNum}}节课）</span></div>\n        <div class=\"series_container\" _v-78ed219f=\"\">\n            <img src=\"//pic.davdian.com/free/2017/08/01/seriesicon.png\" class=\"icon\" _v-78ed219f=\"\">\n            <span v-text=\"dataList.body.seriesTitle\" _v-78ed219f=\"\"></span>\n        </div>\n        <div class=\"series_content_img1\" _v-78ed219f=\"\">进入系列</div>\n        <!-- <img class='series_content_img' src=\"//pic.davdian.com/free/2017/07/28/goSeriesCourse1.png\"> -->\n    </a>\n</div>\n";
 
 /***/ },
 /* 367 */
@@ -23579,7 +23579,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-cd76f3e6/bd_course_notes_0.vue"
+	  var id = "_v-55401cf8/bd_course_notes_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23603,8 +23603,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-cd76f3e6&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_notes_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-cd76f3e6&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_notes_0.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-55401cf8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_notes_0.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-55401cf8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_course_notes_0.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23622,7 +23622,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.seriesCommentContainer[_v-cd76f3e6]{\n    background: #fff;\n    height: 44px;\n    line-height: 44px;\n    padding-left: 0.18rem;\n    width: 100%;\n    color:#666666;\n    font-size: 0.14rem;\n    position: relative;\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.icon[_v-cd76f3e6]{\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n        transform: rotate(45deg);\n    background: none;\n    top: 16px;\n    position: absolute;\n    right: 12px\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.seriesCommentContainer[_v-55401cf8]{\n    background: #fff;\n    height: 44px;\n    line-height: 44px;\n    padding-left: 0.18rem;\n    width: 100%;\n    color:#666666;\n    font-size: 0.14rem;\n    position: relative;\n    -webkit-box-sizing: border-box;\n       -moz-box-sizing: border-box;\n            box-sizing: border-box;\n}\n.icon[_v-55401cf8]{\n    display: inline-block;\n    vertical-align: 0;\n    width: 10px;\n    height: 10px;\n    border-top: 1px solid #999;\n    border-right: 1px solid #999;\n    -webkit-transform: rotate(45deg);\n    -ms-transform: rotate(45deg);\n        transform: rotate(45deg);\n    background: none;\n    top: 16px;\n    position: absolute;\n    right: 12px\n}\n", ""]);
 
 	// exports
 
@@ -23702,7 +23702,7 @@
 /* 371 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"seriesCommentContainer\" @click=\"gohref\" :style=\"{'marginTop':data.marginTop + 'px'}\" _v-cd76f3e6=\"\">\n    <span _v-cd76f3e6=\"\">听课笔记 <span v-if=\"data.body.notesNum\" _v-cd76f3e6=\"\">（ <span v-text=\"data.body.notesNum\" _v-cd76f3e6=\"\"></span>  ）</span></span>\n    <i class=\"icon\" _v-cd76f3e6=\"\"></i>\n</div>\n";
+	module.exports = "\n<div class=\"seriesCommentContainer\" @click=\"gohref\" :style=\"{'marginTop':data.marginTop + 'px'}\" _v-55401cf8=\"\">\n    <span _v-55401cf8=\"\">听课笔记 <span v-if=\"data.body.notesNum\" _v-55401cf8=\"\">（ <span v-text=\"data.body.notesNum\" _v-55401cf8=\"\"></span>  ）</span></span>\n    <i class=\"icon\" _v-55401cf8=\"\"></i>\n</div>\n";
 
 /***/ },
 /* 372 */
@@ -23732,7 +23732,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-7835bb1e/bd_album_0.vue"
+	  var id = "_v-925ea434/bd_album_0.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23756,8 +23756,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7835bb1e&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7835bb1e&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_0.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-925ea434&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_0.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-925ea434&scoped=true!../../../node_modules/sass-loader/index.js!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_0.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23775,7 +23775,7 @@
 
 
 	// module
-	exports.push([module.id, ".box[_v-7835bb1e] {\n  font-size: 0;\n  padding-bottom: 0.22rem;\n  padding-right: 0.21rem;\n  padding-left: 0.3rem;\n  padding-top: 0.02rem; }\n\n.box > div[_v-7835bb1e] {\n  display: inline-block;\n  vertical-align: top;\n  margin-top: 0.12rem;\n  margin-right: 0.09rem;\n  background: #D8D8D8;\n  border: 1px solid #979797;\n  width: 0.72rem;\n  height: 0.35rem;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  background-size: cover;\n  background-position: center center;\n  background-repeat: no-repeat; }\n\n.item img[_v-7835bb1e] {\n  width: 0.72rem;\n  height: 0.35rem; }\n", ""]);
+	exports.push([module.id, ".box[_v-925ea434] {\n  font-size: 0;\n  padding-bottom: 0.22rem;\n  padding-right: 0.21rem;\n  padding-left: 0.3rem;\n  padding-top: 0.02rem; }\n\n.box > div[_v-925ea434] {\n  display: inline-block;\n  vertical-align: top;\n  margin-top: 0.12rem;\n  margin-right: 0.09rem;\n  background: #D8D8D8;\n  border: 1px solid #979797;\n  width: 0.72rem;\n  height: 0.35rem;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  background-size: cover;\n  background-position: center center;\n  background-repeat: no-repeat; }\n\n.item img[_v-925ea434] {\n  width: 0.72rem;\n  height: 0.35rem; }\n", ""]);
 
 	// exports
 
@@ -23870,7 +23870,7 @@
 /* 376 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"box\" _v-7835bb1e=\"\">\n  <div class=\"item\" v-for=\"item in dataList\" @click.stop=\"go_collect(item.albumId)\" :style=\"{'background-image':styleObject(item.imageUrl)}\" _v-7835bb1e=\"\">\n    <!--<img :src=\"item.imageUrl\" alt=\"\">-->\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"box\" _v-925ea434=\"\">\n  <div class=\"item\" v-for=\"item in dataList\" @click.stop=\"go_collect(item.albumId)\" :style=\"{'background-image':styleObject(item.imageUrl)}\" _v-925ea434=\"\">\n    <!--<img :src=\"item.imageUrl\" alt=\"\">-->\n  </div>\n</div>\n";
 
 /***/ },
 /* 377 */
@@ -23900,7 +23900,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-96cfcca8/bd_album_content_1.vue"
+	  var id = "_v-780f6021/bd_album_content_1.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -23924,8 +23924,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-96cfcca8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-96cfcca8&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue");
+			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-780f6021&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue", function() {
+				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-780f6021&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_content_1.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -23943,11 +23943,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-780f6021]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-780f6021]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-780f6021]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-780f6021]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n  max-width: 2.15rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-780f6021]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-780f6021]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-780f6021],.mask_stop[_v-780f6021],.disable[_v-780f6021]{\n  z-index:3;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-96cfcca8]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-96cfcca8]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-96cfcca8]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-96cfcca8]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-96cfcca8]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-96cfcca8]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-96cfcca8]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-96cfcca8]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-96cfcca8]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-96cfcca8]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n  max-width: 2.15rem;\n}\n.list_title[_v-96cfcca8]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-96cfcca8],.list_time[_v-96cfcca8]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-96cfcca8]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-96cfcca8]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-96cfcca8]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-96cfcca8]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-96cfcca8]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-96cfcca8],.mask_stop[_v-96cfcca8],.disable[_v-96cfcca8]{\n  z-index:3;\n}\n", ""]);
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-780f6021]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-780f6021]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-780f6021]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-780f6021]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n  max-width: 2.15rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-780f6021]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-780f6021]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-780f6021],.mask_stop[_v-780f6021],.disable[_v-780f6021]{\n  z-index:3;\n}\n", ""]);
 
 	// exports
 
@@ -23993,13 +23989,13 @@
 	//           <div class="list_name" v-text="item.album"></div>
 	//           <div class="list_time" v-text="timeFormat(item.time)"></div>
 	//         </div>
-	//         <div class="right_img" v-if="(item.isFree==0 || (item.isFree==1 && item.isSub==1)) && item.isPlay==1">
+	//         <div class="right_img" v-if="item.isPlay==1">
 	//           <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
 	//           <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="!(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
 	//           <div class="circle_mask"></div>
 	//           <div><img :src="item.imageUrl" alt=""></div>
 	//         </div>
-	//         <div class="right_img" v-if="item.isFree==1 && item.isSub==0 && item.isPlay==0">
+	//         <div class="right_img" v-if="item.isPlay==0">
 	//           <div class="disable" @click.stop="stop_info(item.albumId)"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
 	//           <div class="circle_mask"></div>
 	//           <div><img :src="item.imageUrl" alt=""></div>
@@ -24112,27 +24108,31 @@
 	          if (result.data.code == 300) {
 	            if (jsApi) {
 	              jsApi.jsApiParameters.dvdhref = location.href;
-	              window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters));
-	              // bravetime.goto("http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters)));
+	              // window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+	              window.location.href = "http://open.vyohui.cn/wxpay_t3/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters));
 	            } else if (payUrl) {
 	              that.nativePay(payUrl, function (flag) {
 	                if (flag) {
 	                  that.sub = 1;
-	                  // 报名成功(进不来)
 	                }
 	              });
 	            } else {
 	              that.sub = 1;
-	              alert(123456);
-	              // 报名成功
+	              setTimeout(function () {
+	                that.$emit("re");
+	              }, 500);
 	            }
 	          } else {
-	            that.sub = 1;
-	            dialog.alert(result.data.msg);
-	            that.$emit("re");
+	            if (result.data.code == 400) {
+	              if (that.isapp) {
+	                _native2.default.Account.login();
+	              } else {
+	                window.location.href = '/login.html';
+	              }
+	            } else {}
 	          }
 	        } else {
-	          dialog.alert('code:' + code + 'msg:' + result.data.msg);
+	          //                dialog.alert('code:' + code + 'msg:'+ result.data.msg)
 	        }
 	      });
 	    },
@@ -24310,7 +24310,7 @@
 /* 381 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-780f6021=\"\">\n  <div class=\"list1\" _v-780f6021=\"\">\n    <div class=\"big_img\" _v-780f6021=\"\">\n      <div class=\"list_line\" _v-780f6021=\"\"></div>\n      <div class=\"list_date\" v-text=\"week\" _v-780f6021=\"\"></div>\n      <div class=\"list_line\" _v-780f6021=\"\"></div>\n    </div>\n    <div class=\"list\" v-for=\"(item,index) in dataList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-780f6021=\"\">\n      <div class=\"left_img\" _v-780f6021=\"\">\n        <img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\">\n      </div>\n      <div class=\"list_content\" _v-780f6021=\"\">\n        <div class=\"list_title\" v-text=\"item.music\" _v-780f6021=\"\"></div>\n        <div class=\"list_name\" v-text=\"item.album\" _v-780f6021=\"\"></div>\n        <div class=\"list_time\" v-text=\"timeFormat(item.time)\" _v-780f6021=\"\"></div>\n      </div>\n      <div class=\"right_img\" v-if=\"(item.isFree==0 || (item.isFree==1 &amp;&amp; item.isSub==1)) &amp;&amp; item.isPlay==1\" _v-780f6021=\"\">\n        <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-780f6021=\"\"></div>\n        <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"!(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-780f6021=\"\"></div>\n        <div class=\"circle_mask\" _v-780f6021=\"\"></div>\n        <div _v-780f6021=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\"></div>\n      </div>\n      <div class=\"right_img\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==0\" _v-780f6021=\"\">\n        <div class=\"disable\" @click.stop=\"stop_info(item.albumId)\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-780f6021=\"\"></div>\n        <div class=\"circle_mask\" _v-780f6021=\"\"></div>\n        <div _v-780f6021=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
+	module.exports = "\n<div _v-780f6021=\"\">\n  <div class=\"list1\" _v-780f6021=\"\">\n    <div class=\"big_img\" _v-780f6021=\"\">\n      <div class=\"list_line\" _v-780f6021=\"\"></div>\n      <div class=\"list_date\" v-text=\"week\" _v-780f6021=\"\"></div>\n      <div class=\"list_line\" _v-780f6021=\"\"></div>\n    </div>\n    <div class=\"list\" v-for=\"(item,index) in dataList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-780f6021=\"\">\n      <div class=\"left_img\" _v-780f6021=\"\">\n        <img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\">\n      </div>\n      <div class=\"list_content\" _v-780f6021=\"\">\n        <div class=\"list_title\" v-text=\"item.music\" _v-780f6021=\"\"></div>\n        <div class=\"list_name\" v-text=\"item.album\" _v-780f6021=\"\"></div>\n        <div class=\"list_time\" v-text=\"timeFormat(item.time)\" _v-780f6021=\"\"></div>\n      </div>\n      <div class=\"right_img\" v-if=\"item.isPlay==1\" _v-780f6021=\"\">\n        <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-780f6021=\"\"></div>\n        <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"!(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-780f6021=\"\"></div>\n        <div class=\"circle_mask\" _v-780f6021=\"\"></div>\n        <div _v-780f6021=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\"></div>\n      </div>\n      <div class=\"right_img\" v-if=\"item.isPlay==0\" _v-780f6021=\"\">\n        <div class=\"disable\" @click.stop=\"stop_info(item.albumId)\" _v-780f6021=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-780f6021=\"\"></div>\n        <div class=\"circle_mask\" _v-780f6021=\"\"></div>\n        <div _v-780f6021=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-780f6021=\"\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
 
 /***/ },
 /* 382 */
@@ -24340,11 +24340,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-234ea0bb/bd_album_01.vue"
-=======
-	  var id = "_v-81e18c02/index.vue"
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -24623,11 +24619,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-235cb83c/bd_album_02.vue"
-=======
-	  var id = "_v-7a517590/index.vue"
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -24849,7 +24841,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-236acfbd] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-236acfbd] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-236acfbd] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-236acfbd] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-236acfbd], .b_right[_v-236acfbd] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-236acfbd] {\n  font-size: 14px;\n}\n\n.line[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-236acfbd] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-236acfbd] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-236acfbd]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-236acfbd]{\n  font-size: 0;\n}\n.item_timee>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-236acfbd]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-236acfbd]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-236acfbd]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-236acfbd],.mask_stop[_v-236acfbd],.disable[_v-236acfbd]{\n  z-index:3;\n}\n\n\n\n.free[_v-236acfbd]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.rea[_v-236acfbd]{\n  position: relative;\n}\n\n\n.top[_v-236acfbd]{\n  margin-top: 0.12rem;\n}\n.empty_tab[_v-236acfbd]{\n  height: 0.5rem;\n}\n.tab_fixed[_v-236acfbd]{\n  position: fixed;\n  top: 44px;\n  z-index:999;\n}\n.tab_fixed2[_v-236acfbd]{\n  position: fixed;\n  top:0;\n  z-index:999;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-236acfbd] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-236acfbd] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-236acfbd] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-236acfbd] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-236acfbd], .b_right[_v-236acfbd] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-236acfbd] {\n  font-size: 14px;\n}\n\n.line[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-236acfbd] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-236acfbd] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-236acfbd] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-236acfbd] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-236acfbd]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-236acfbd]{\n  font-size: 0;\n}\n.item_timee>div[_v-236acfbd]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-236acfbd]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-236acfbd]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-236acfbd]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-236acfbd]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-236acfbd]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-236acfbd]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-236acfbd],.mask_stop[_v-236acfbd],.disable[_v-236acfbd]{\n  z-index:3;\n}\n\n\n\n.free[_v-236acfbd]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.rea[_v-236acfbd]{\n  position: relative;\n}\n\n\n.top[_v-236acfbd]{\n  margin-top: 0.12rem;\n}\n.empty_tab[_v-236acfbd]{\n  height: 0.5rem;\n}\n.tab_fixed[_v-236acfbd]{\n  position: fixed;\n  top: 44px;\n  z-index:999;\n}\n.tab_fixed2[_v-236acfbd]{\n  position: fixed;\n  top:0;\n  z-index:999;\n}\n", ""]);
 
 	// exports
 
@@ -24898,10 +24890,10 @@
 	    this.contentList = this.data.body.dataList.contentList;
 	    this.isSub = this.data.body.isSub;
 	    this.initSortNoIndex();
+	    this.isFree = this.data.body.isFree;
 	    this.$nextTick(function () {
 	      this.scro();
 	    });
-<<<<<<< HEAD
 	    //        window.audioPlayHistoryFn = function(obj){
 	    //          console.log(obj.sortNo, obj.date)
 	    //          console.log(that.name);
@@ -24915,103 +24907,6 @@
 	    //            "result":'audioPlayHistoryFn'
 	    //          })
 	    //        });
-=======
-	  }
-	};
-
-	exports.default = plugin;
-	var install = exports.install = plugin.install;
-
-/***/ },
-/* 396 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(397)
-	__vue_script__ = __webpack_require__(399)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] node_modules/vux/src/components/toast/index.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(401)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-5d97050a/index.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 397 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(398);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
-				var newContent = require("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 398 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(42)();
-	// imports
-
-
-	// module
-	exports.push([module.id, ".vux-fade-enter-active,\n.vux-fade-leave-active {\n  opacity: 1;\n  -webkit-transition: opacity linear 0.2s;\n  transition: opacity linear 0.2s;\n}\n.vux-fade-enter,\n.vux-fade-leave-to {\n  opacity: 0;\n}\n.vux-dialog-enter-active,\n.vux-dialog-leave-active {\n  opacity: 1;\n  -webkit-transition-duration: 400ms;\n          transition-duration: 400ms;\n  -webkit-transform: translate(-50%, -50%) scale(1) !important;\n      -ms-transform: translate(-50%, -50%) scale(1) !important;\n          transform: translate(-50%, -50%) scale(1) !important;\n  -webkit-transition-property: opacity, -webkit-transform!important;\n  transition-property: opacity, -webkit-transform!important;\n  transition-property: transform, opacity!important;\n  transition-property: transform, opacity, -webkit-transform!important;\n}\n.vux-dialog-leave-active {\n  -webkit-transition-duration: 300ms;\n          transition-duration: 300ms;\n}\n.vux-dialog-enter {\n  opacity: 0;\n  -webkit-transform: translate(-50%, -50%) scale(1.185) !important;\n      -ms-transform: translate(-50%, -50%) scale(1.185) !important;\n          transform: translate(-50%, -50%) scale(1.185) !important;\n}\n.vux-dialog-leave-active {\n  opacity: 0;\n  -webkit-transform: translate(-50%, -50%) scale(0.85) !important;\n      -ms-transform: translate(-50%, -50%) scale(0.85) !important;\n          transform: translate(-50%, -50%) scale(0.85) !important;\n}\n.vux-mask-enter,\n.vux-mask-leave-active {\n  opacity: 0;\n}\n.vux-mask-leave-active,\n.vux-mask-enter-active {\n  -webkit-transition: opacity 300ms;\n  transition: opacity 300ms;\n}\n/**\n* actionsheet\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/* alias */\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* form-preview\n*/\n/**\n* load-more\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* toast\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* search\n*/\n/**\n* radio\n*/\n.weui-mask {\n  position: fixed;\n  z-index: 1000;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background: rgba(0, 0, 0, 0.6);\n}\n.weui-mask_transparent {\n  position: fixed;\n  z-index: 1000;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n}\n@font-face {\n  font-weight: normal;\n  font-style: normal;\n  font-family: \"weui\";\n  src: url('data:application/octet-stream;base64,AAEAAAALAIAAAwAwR1NVQrD+s+0AAAE4AAAAQk9TLzJAKEx+AAABfAAAAFZjbWFw65cFHQAAAhwAAAJQZ2x5ZvCRR/EAAASUAAAKtGhlYWQMPROtAAAA4AAAADZoaGVhCCwD+gAAALwAAAAkaG10eEJo//8AAAHUAAAASGxvY2EYqhW4AAAEbAAAACZtYXhwASEAVQAAARgAAAAgbmFtZeNcHtgAAA9IAAAB5nBvc3T6bLhLAAARMAAAAOYAAQAAA+gAAABaA+j/////A+kAAQAAAAAAAAAAAAAAAAAAABIAAQAAAAEAACbZbxtfDzz1AAsD6AAAAADUm2dvAAAAANSbZ2///wAAA+kD6gAAAAgAAgAAAAAAAAABAAAAEgBJAAUAAAAAAAIAAAAKAAoAAAD/AAAAAAAAAAEAAAAKAB4ALAABREZMVAAIAAQAAAAAAAAAAQAAAAFsaWdhAAgAAAABAAAAAQAEAAQAAAABAAgAAQAGAAAAAQAAAAAAAQOwAZAABQAIAnoCvAAAAIwCegK8AAAB4AAxAQIAAAIABQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGZFZABA6gHqEQPoAAAAWgPqAAAAAAABAAAAAAAAAAAAAAPoAAAD6AAAA+gAAAPoAAAD6AAAA+gAAAPoAAAD6AAAA+gAAAPoAAAD6AAAA+gAAAPoAAAD6AAAA+j//wPoAAAD6AAAAAAABQAAAAMAAAAsAAAABAAAAXQAAQAAAAAAbgADAAEAAAAsAAMACgAAAXQABABCAAAABAAEAAEAAOoR//8AAOoB//8AAAABAAQAAAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAAAEGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAANwAAAAAAAAAEQAA6gEAAOoBAAAAAQAA6gIAAOoCAAAAAgAA6gMAAOoDAAAAAwAA6gQAAOoEAAAABAAA6gUAAOoFAAAABQAA6gYAAOoGAAAABgAA6gcAAOoHAAAABwAA6ggAAOoIAAAACAAA6gkAAOoJAAAACQAA6goAAOoKAAAACgAA6gsAAOoLAAAACwAA6gwAAOoMAAAADAAA6g0AAOoNAAAADQAA6g4AAOoOAAAADgAA6g8AAOoPAAAADwAA6hAAAOoQAAAAEAAA6hEAAOoRAAAAEQAAAAAARgCMANIBJAF4AcQCMgJgAqgC/ANIA6YD/gROBKAE9AVaAAAAAgAAAAADrwOtABQAKQAAASIHBgcGFBcWFxYyNzY3NjQnJicmAyInJicmNDc2NzYyFxYXFhQHBgcGAfV4Z2Q7PDw7ZGfwZmQ7PDw7ZGZ4bl5bNjc3Nlte215bNjc3NlteA608O2Rn8GdjOzw8O2Nn8GdkOzz8rzc1W17bXlw1Nzc1XF7bXls1NwAAAAACAAAAAAOzA7MAFwAtAAABIgcGBwYVFBcWFxYzMjc2NzY1NCcmJyYTBwYiLwEmNjsBETQ2OwEyFhURMzIWAe52Z2Q7PT07ZGd2fGpmOz4+O2ZpIXYOKA52Dg0XXQsHJgcLXRcNA7M+O2ZqfHZnZDs9PTtkZ3Z9aWY7Pv3wmhISmhIaARcICwsI/ukaAAMAAAAAA+UD5QAXACMALAAAASIHBgcGFRQXFhcWMzI3Njc2NTQnJicmAxQrASI1AzQ7ATIHJyImNDYyFhQGAe6Ecm9BRERBb3KEiXZxQkREQnF1aQIxAwgCQgMBIxIZGSQZGQPkREJxdomEcm9BRERBb3KEinVxQkT9HQICAWICAjEZIxkZIxkAAAAAAgAAAAADsQPkABkALgAAAQYHBgc2BREUFxYXFhc2NzY3NjURJBcmJyYTAQYvASY/ATYyHwEWNjclNjIfARYB9VVVQk+v/tFHPmxebGxdbT1I/tGvT0JVo/7VBASKAwMSAQUBcQEFAgESAgUBEQQD4xMYEhk3YP6sjnVlSD8cHD9IZXWOAVRgNxkSGP62/tkDA48EBBkCAVYCAQHlAQIQBAAAAAADAAAAAAOxA+QAGwAqADMAAAEGBwYHBgcGNxEUFxYXFhc2NzY3NjURJBcmJyYHMzIWFQMUBisBIicDNDYTIiY0NjIWFAYB9UFBODssO38gRz5sXmxsXW09SP7YqFBBVW80BAYMAwImBQELBh4PFhYeFRUD5A8SDhIOEikK/q2PdWRJPh0dPklkdY8BU141GRIY/AYE/sYCAwUBOgQG/kAVHxUVHxUAAAACAAAAAAPkA+QAFwAtAAABIgcGBwYVFBcWFxYzMjc2NzY1NCcmJyYTAQYiLwEmPwE2Mh8BFjI3ATYyHwEWAe6Ecm9BQ0NCbnODiXVxQkREQnF1kf6gAQUBowMDFgEFAYUCBQEBQwIFARUEA+NEQnF1iYNzbkJDQ0FvcoSJdXFCRP6j/qUBAagEBR4CAWYBAQENAgIVBAAAAAQAAAAAA68DrQAUACkAPwBDAAABIgcGBwYUFxYXFjI3Njc2NCcmJyYDIicmJyY0NzY3NjIXFhcWFAcGBwYTBQ4BLwEmBg8BBhYfARYyNwE+ASYiFzAfAQH1eGdkOzw8O2Rn8GZkOzw8O2RmeG5eWzY3NzZbXtteWzY3NzZbXmn+9gYSBmAGDwUDBQEGfQUQBgElBQELEBUBAQOtPDtkZ/BnYzs8PDtjZ/BnZDs8/K83NVte215cNTc3NVxe215bNTcCJt0FAQVJBQIGBAcRBoAGBQEhBQ8LBAEBAAABAAAAAAO7AzoAFwAAEy4BPwE+AR8BFjY3ATYWFycWFAcBBiInPQoGBwUHGgzLDCELAh0LHwsNCgr9uQoeCgGzCyEOCw0HCZMJAQoBvgkCCg0LHQv9sQsKAAAAAAIAAAAAA+UD5gAXACwAAAEiBwYHBhUUFxYXFjMyNzY3NjU0JyYnJhMHBi8BJicmNRM0NjsBMhYVExceAQHvhHJvQUNDQm5zg4l1cUJEREJxdVcQAwT6AwIEEAMCKwIDDsUCAQPlREJxdYmDc25CQ0NBb3KEiXVxQkT9VhwEAncCAgMGAXoCAwMC/q2FAgQAAAQAAAAAA68DrQADABgALQAzAAABMB8BAyIHBgcGFBcWFxYyNzY3NjQnJicmAyInJicmNDc2NzYyFxYXFhQHBgcGAyMVMzUjAuUBAfJ4Z2Q7PDw7ZGfwZmQ7PDw7ZGZ4bl5bNjc3Nlte215bNjc3NltemyT92QKDAQEBLDw7ZGfwZ2M7PDw7Y2fwZ2Q7PPyvNzVbXtteXDU3NzVcXtteWzU3AjH9JAAAAAMAAAAAA+QD5AAXACcAMAAAASIHBgcGFRQXFhcWMzI3Njc2NTQnJicmAzMyFhUDFAYrASImNQM0NhMiJjQ2MhYUBgHuhHJvQUNDQm5zg4l1cUJEREJxdZ42BAYMAwInAwMMBh8PFhYeFhYD40RCcXWJg3NuQkNDQW9yhIl1cUJE/vYGBf7AAgMDAgFABQb+NhYfFhYfFgAABAAAAAADwAPAAAgAEgAoAD0AAAEyNjQmIgYUFhcjFTMRIxUzNSMDIgcGBwYVFBYXFjMyNzY3NjU0Jy4BAyInJicmNDc2NzYyFxYXFhQHBgcGAfQYISEwISFRjzk5yTorhG5rPT99am+DdmhlPD4+PMyFbV5bNTc3NVte2l5bNTc3NVteAqAiLyIiLyI5Hf7EHBwCsT89a26Ed8w8Pj48ZWh2g29qffyjNzVbXtpeWzU3NzVbXtpeWzU3AAADAAAAAAOoA6gACwAgADUAAAEHJwcXBxc3FzcnNwMiBwYHBhQXFhcWMjc2NzY0JyYnJgMiJyYnJjQ3Njc2MhcWFxYUBwYHBgKOmpocmpocmpocmpq2dmZiOjs7OmJm7GZiOjs7OmJmdmtdWTQ2NjRZXdZdWTQ2NjRZXQKqmpocmpocmpocmpoBGTs6YmbsZmI6Ozs6YmbsZmI6O/zCNjRZXdZdWTQ2NjRZXdZdWTQ2AAMAAAAAA+kD6gAaAC8AMAAAAQYHBiMiJyYnJjQ3Njc2MhcWFxYVFAcGBwEHATI3Njc2NCcmJyYiBwYHBhQXFhcWMwKONUBCR21dWjU3NzVaXdpdWzU2GBcrASM5/eBXS0grKysrSEuuSkkqLCwqSUpXASMrFxg2NVtd2l1aNTc3NVpdbUdCQDX+3jkBGSsrSEuuSkkqLCwqSUquS0grKwAC//8AAAPoA+gAFAAwAAABIgcGBwYQFxYXFiA3Njc2ECcmJyYTFg4BIi8BBwYuATQ/AScmPgEWHwE3Nh4BBg8BAfSIdHFDRERDcXQBEHRxQ0REQ3F0SQoBFBsKoqgKGxMKqKIKARQbCqKoChsUAQqoA+hEQ3F0/vB0cUNERENxdAEQdHFDRP1jChsTCqiiCgEUGwqiqAobFAEKqKIKARQbCqIAAAIAAAAAA+QD5AAXADQAAAEiBwYHBhUUFxYXFjMyNzY3NjU0JyYnJhMUBiMFFxYUDwEGLwEuAT8BNh8BFhQPAQUyFh0BAe6Ecm9BQ0NCbnODiXVxQkREQnF1fwQC/pGDAQEVAwTsAgEC7AQEFAIBhAFwAgMD40RCcXWJg3NuQkNDQW9yhIl1cUJE/fYCAwuVAgQCFAQE0AIFAtEEBBQCBQGVCwMDJwAAAAUAAAAAA9QD0wAjACcANwBHAEgAAAERFAYjISImNREjIiY9ATQ2MyE1NDYzITIWHQEhMhYdARQGIyERIREHIgYVERQWOwEyNjURNCYjISIGFREUFjsBMjY1ETQmKwEDeyYb/XYbJkMJDQ0JAQYZEgEvExkBBgkNDQn9CQJc0QkNDQktCQ0NCf7sCQ0NCS0JDQ0JLQMi/TQbJiYbAswMCiwJDS4SGRkSLg0JLAoM/UwCtGsNCf5NCQ0NCQGzCQ0NCf5NCQ0NCQGzCQ0AAAAAEADGAAEAAAAAAAEABAAAAAEAAAAAAAIABwAEAAEAAAAAAAMABAALAAEAAAAAAAQABAAPAAEAAAAAAAUACwATAAEAAAAAAAYABAAeAAEAAAAAAAoAKwAiAAEAAAAAAAsAEwBNAAMAAQQJAAEACABgAAMAAQQJAAIADgBoAAMAAQQJAAMACAB2AAMAAQQJAAQACAB+AAMAAQQJAAUAFgCGAAMAAQQJAAYACACcAAMAAQQJAAoAVgCkAAMAAQQJAAsAJgD6d2V1aVJlZ3VsYXJ3ZXVpd2V1aVZlcnNpb24gMS4wd2V1aUdlbmVyYXRlZCBieSBzdmcydHRmIGZyb20gRm9udGVsbG8gcHJvamVjdC5odHRwOi8vZm9udGVsbG8uY29tAHcAZQB1AGkAUgBlAGcAdQBsAGEAcgB3AGUAdQBpAHcAZQB1AGkAVgBlAHIAcwBpAG8AbgAgADEALgAwAHcAZQB1AGkARwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABzAHYAZwAyAHQAdABmACAAZgByAG8AbQAgAEYAbwBuAHQAZQBsAGwAbwAgAHAAcgBvAGoAZQBjAHQALgBoAHQAdABwADoALwAvAGYAbwBuAHQAZQBsAGwAbwAuAGMAbwBtAAAAAgAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAQIBAwEEAQUBBgEHAQgBCQEKAQsBDAENAQ4BDwEQAREBEgETAAZjaXJjbGUIZG93bmxvYWQEaW5mbwxzYWZlX3N1Y2Nlc3MJc2FmZV93YXJuB3N1Y2Nlc3MOc3VjY2Vzcy1jaXJjbGURc3VjY2Vzcy1uby1jaXJjbGUHd2FpdGluZw53YWl0aW5nLWNpcmNsZQR3YXJuC2luZm8tY2lyY2xlBmNhbmNlbAZzZWFyY2gFY2xlYXIEYmFjawZkZWxldGUAAAAA') format('truetype');\n}\n[class^=\"weui-icon-\"],\n[class*=\" weui-icon-\"] {\n  display: inline-block;\n  vertical-align: middle;\n  font: normal normal normal 14px/1 \"weui\";\n  font-size: inherit;\n  text-rendering: auto;\n  -webkit-font-smoothing: antialiased;\n}\n[class^=\"weui-icon-\"]:before,\n[class*=\" weui-icon-\"]:before {\n  display: inline-block;\n  margin-left: .2em;\n  margin-right: .2em;\n}\n.weui-icon-circle:before {\n  content: \"\\EA01\";\n}\n/* '' */\n.weui-icon-download:before {\n  content: \"\\EA02\";\n}\n/* '' */\n.weui-icon-info:before {\n  content: \"\\EA03\";\n}\n/* '' */\n.weui-icon-safe-success:before {\n  content: \"\\EA04\";\n}\n/* '' */\n.weui-icon-safe-warn:before {\n  content: \"\\EA05\";\n}\n/* '' */\n.weui-icon-success:before {\n  content: \"\\EA06\";\n}\n/* '' */\n.weui-icon-success-circle:before {\n  content: \"\\EA07\";\n}\n/* '' */\n.weui-icon-success-no-circle:before {\n  content: \"\\EA08\";\n}\n/* '' */\n.weui-icon-waiting:before {\n  content: \"\\EA09\";\n}\n/* '' */\n.weui-icon-waiting-circle:before {\n  content: \"\\EA0A\";\n}\n/* '' */\n.weui-icon-warn:before {\n  content: \"\\EA0B\";\n}\n/* '' */\n.weui-icon-info-circle:before {\n  content: \"\\EA0C\";\n}\n/* '' */\n.weui-icon-cancel:before {\n  content: \"\\EA0D\";\n}\n/* '' */\n.weui-icon-search:before {\n  content: \"\\EA0E\";\n}\n/* '' */\n.weui-icon-clear:before {\n  content: \"\\EA0F\";\n}\n/* '' */\n.weui-icon-back:before {\n  content: \"\\EA10\";\n}\n/* '' */\n.weui-icon-delete:before {\n  content: \"\\EA11\";\n}\n/* '' */\n[class^=\"weui-icon_\"]:before,\n[class*=\" weui-icon_\"]:before {\n  margin: 0;\n}\n.weui-icon-success {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-waiting {\n  font-size: 23px;\n  color: #10AEFF;\n}\n.weui-icon-warn {\n  font-size: 23px;\n  color: #F43530;\n}\n.weui-icon-info {\n  font-size: 23px;\n  color: #10AEFF;\n}\n.weui-icon-success-circle {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-success-no-circle {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-waiting-circle {\n  font-size: 23px;\n  color: #10AEFF;\n}\n.weui-icon-circle {\n  font-size: 23px;\n  color: #C9C9C9;\n}\n.weui-icon-download {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-info-circle {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-safe-success {\n  color: #09BB07;\n}\n.weui-icon-safe-warn {\n  color: #FFBE00;\n}\n.weui-icon-cancel {\n  color: #F43530;\n  font-size: 22px;\n}\n.weui-icon-search {\n  color: #B2B2B2;\n  font-size: 14px;\n}\n.weui-icon-clear {\n  color: #B2B2B2;\n  font-size: 14px;\n}\n.weui-icon-delete.weui-icon_gallery-delete {\n  color: #FFFFFF;\n  font-size: 22px;\n}\n.weui-icon_msg {\n  font-size: 93px;\n}\n.weui-icon_msg.weui-icon-warn {\n  color: #F76260;\n}\n.weui-icon_msg-primary {\n  font-size: 93px;\n}\n.weui-icon_msg-primary.weui-icon-warn {\n  color: #FFBE00;\n}\n.weui-toast {\n  position: fixed;\n  z-index: 5000;\n  width: 7.6em;\n  min-height: 7.6em;\n  top: 180px;\n  left: 50%;\n  margin-left: -3.8em;\n  background: rgba(17, 17, 17, 0.7);\n  text-align: center;\n  border-radius: 5px;\n  color: #FFFFFF;\n}\n.weui-icon_toast {\n  margin: 22px 0 0;\n  display: block;\n}\n.weui-icon_toast.weui-icon-success-no-circle:before {\n  color: #FFFFFF;\n  font-size: 55px;\n}\n.weui-icon_toast.weui-loading {\n  margin: 30px 0 0;\n  width: 38px;\n  height: 38px;\n  vertical-align: baseline;\n}\n.weui-toast__content {\n  margin: 0 0 15px;\n}\n.weui-toast.vux-toast-top {\n  top: 10px;\n}\n.weui-toast.vux-toast-bottom {\n  top: auto;\n  bottom: 10px;\n  -webkit-transform: translateX(-50%);\n      -ms-transform: translateX(-50%);\n          transform: translateX(-50%);\n}\n.weui-toast.vux-toast-middle {\n  top: 50%;\n  -webkit-transform: translateX(-50%) translateY(-50%);\n      -ms-transform: translateX(-50%) translateY(-50%);\n          transform: translateX(-50%) translateY(-50%);\n}\n.vux-slide-from-top-enter,\n.vux-slide-from-top-leave-active {\n  opacity: 0;\n  -webkit-transform: translateX(-50%) translateY(-100%) !important;\n      -ms-transform: translateX(-50%) translateY(-100%) !important;\n          transform: translateX(-50%) translateY(-100%) !important;\n}\n.vux-slide-from-bottom-enter,\n.vux-slide-from-bottom-leave-active {\n  opacity: 0;\n  -webkit-transform: translateX(-50%) translateY(100%) !important;\n      -ms-transform: translateX(-50%) translateY(100%) !important;\n          transform: translateX(-50%) translateY(100%) !important;\n}\n.vux-slide-from-top-enter-active,\n.vux-slide-from-top-leave-active,\n.vux-slide-from-bottom-enter-active,\n.vux-slide-from-bottom-leave-active {\n  -webkit-transition: all 400ms cubic-bezier(0.36, 0.66, 0.04, 1);\n  transition: all 400ms cubic-bezier(0.36, 0.66, 0.04, 1);\n}\n.weui-toast {\n  -webkit-transform: translateX(-50%);\n      -ms-transform: translateX(-50%);\n          transform: translateX(-50%);\n  margin-left: 0!important;\n}\n.weui-toast.weui-toast_forbidden {\n  color: #F76260;\n}\n.weui-toast.weui-toast_forbidden .weui-toast__content {\n  margin-top: 10px;\n}\n.weui-toast.weui-toast_text {\n  min-height: 0;\n}\n.weui-toast_text .weui-toast__content {\n  margin: 0;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  border-radius: 15px;\n}\n.weui-toast__content {\n  font-size: 16px;\n}\n.weui-loading_toast .weui-toast__content {\n  margin-top: 0;\n}\n.weui-toast_success .weui-icon_toast:before {\n  content: \"\\EA08\";\n}\n.weui-toast_cancel .weui-icon_toast:before {\n  content: \"\\EA0D\";\n}\n.weui-toast_forbidden .weui-icon_toast.weui-icon-success-no-circle:before {\n  content: \"\\EA0B\";\n  color: #F76260;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 399 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _safariFix = __webpack_require__(400);
-
-	var _safariFix2 = _interopRequireDefault(_safariFix);
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 
 	    this.$nextTick(function () {
 	      setTimeout(function () {
@@ -25036,7 +24931,8 @@
 	      isSub: 0,
 	      pageAlbumId: (0, _utils.getQuery)("albumId"),
 	      empty_tab: false,
-	      maskFlag: false
+	      maskFlag: false,
+	      isFree: null
 	    };
 	  },
 
@@ -25149,23 +25045,30 @@
 	            } else if (payUrl) {
 	              that.nativePay(payUrl, function (flag) {
 	                if (flag) {
-	                  that.sub = 1;
-	                  // 报名成功(进不来)
+	                  alert(333333);
+	                  window.location.reload();
 	                }
 	              });
 	            } else {
-	              that.sub = 1;
-	              alert(123456);
-	              // 报名成功
+	              alert(111111);
+	              setTimeout(function () {
+	                window.location.reload();
+	              }, 1000);
 	            }
 	          } else {
-	            that.sub = 1;
-	            dialog.alert(result.data.msg);
-	            that.$emit("re");
+	            _popup2.default.confirm({
+	              title: '提示', // 标题（支持传入html。有则显示。）
+	              text: '订阅成功', // 文本（支持传入html。有则显示。）
+	              okBtnTitle: '确定', // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+	              cancelBtnTitle: '取消', // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+	              okBtnCallback: function okBtnCallback() {},
+	              cancelBtnCallback: function cancelBtnCallback() {}
+	            });
+	            setTimeout(function () {
+	              window.location.reload();
+	            }, 1000);
 	          }
-	        } else {
-	          dialog.alert('code:' + code + 'msg:' + result.data.msg);
-	        }
+	        } else {}
 	      });
 	    },
 	    fn: function fn() {
@@ -25530,18 +25433,18 @@
 	//                 </div>
 	//               </div>
 	//             </div>
-	//             <div class="item_right" v-if="item.isFree==0 || (item.isFree==1 && item.isSub==1)">
+	//             <div class="item_right" v-if="isFree==0 || (isFree==1 && item.isSub==1)">
 	//               <div class="mask_stop" v-if="(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
 	//               <div class="mask_play" v-if="!(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
 	//               <div class="circle_mask"></div>
 	//               <div><img :src="item.imageUrl" alt=""></div>
 	//             </div>
-	//             <div class="item_right" v-if="item.isFree==1 && item.isSub==0 && item.isPlay==0">
+	//             <div class="item_right" v-if="isFree==1 && item.isFree==1 && item.isSub==0 && item.isPlay==0">
 	//               <div class="disable" @click.stop="stop_info(item.albumId)"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
 	//               <div class="circle_mask"></div>
 	//               <div><img :src="item.imageUrl" alt=""></div>
 	//             </div>
-	//             <div class="item_right2" v-if="item.isFree==1 && item.isSub==0 && item.isPlay==1" @click="go_href(item.albumId,item.sortNo)">
+	//             <div class="item_right2" v-if="isFree==1 && item.isFree==0 && item.isSub==0 && item.isPlay==1" @click="go_href(item.albumId,item.sortNo)">
 	//               <div class="free">免费试听</div>
 	//             </div>
 	//
@@ -26804,2139 +26707,6 @@
 	    for (var i = 0; i < sliceLen; ++i) {
 	      newBuf[i] = this[i + start]
 	    }
-<<<<<<< HEAD
-=======
-	  }function Xn(e) {
-	    if (e.children.length) return "[" + e.children.map(er).join(",") + "]";
-	  }function er(e) {
-	    return 1 === e.type ? Jn(e) : tr(e);
-	  }function tr(e) {
-	    return 2 === e.type ? e.expression : JSON.stringify(e.text);
-	  }function nr(e) {
-	    var t = e.slotName || '"default"',
-	        n = Xn(e);return "_t(" + t + (n ? "," + n : "") + ")";
-	  }function rr(e, t) {
-	    var n = t.inlineTemplate ? null : Xn(t);return "_h(" + e + "," + Yn(t) + (n ? "," + n : "") + ")";
-	  }function ir(e) {
-	    for (var t = "", n = 0; n < e.length; n++) {
-	      var r = e[n];t += '"' + r.name + '":' + r.value + ",";
-	    }return t.slice(0, -1);
-	  }function or(e, t) {
-	    var n = hn(e.trim(), t);Nn(n, t);var r = Vn(n, t);return { ast: n, render: r.render, staticRenderFns: r.staticRenderFns };
-	  }function ar(e, t) {
-	    var n = (t.warn || sn, vn(e, "class"));n && (e.staticClass = JSON.stringify(n));var r = pn(e, "class", !1);r && (e.classBinding = r);
-	  }function sr(e) {
-	    var t = "";return e.staticClass && (t += "staticClass:" + e.staticClass + ","), e.classBinding && (t += "class:" + e.classBinding + ","), t;
-	  }function cr(e) {
-	    var t = pn(e, "style", !1);t && (e.styleBinding = t);
-	  }function ur(e) {
-	    return e.styleBinding ? "style:(" + e.styleBinding + ")," : "";
-	  }function lr(e) {
-	    if (ca = e, sa = ca.length, la = fa = da = 0, e.indexOf("[") < 0) return { exp: e, idx: null };for (; !dr();) {
-	      ua = fr(), pr(ua) ? hr(ua) : 91 === ua && vr(ua);
-	    }return { exp: e.substring(0, fa), idx: e.substring(fa + 1, da) };
-	  }function fr() {
-	    return ca.charCodeAt(++la);
-	  }function dr() {
-	    return la >= sa;
-	  }function pr(e) {
-	    return 34 === e || 39 === e;
-	  }function vr(e) {
-	    var t = 1;for (fa = la; !dr();) {
-	      if (e = fr(), pr(e)) hr(e);else if (91 === e && t++, 93 === e && t--, 0 === t) {
-	        da = la;break;
-	      }
-	    }
-	  }function hr(e) {
-	    for (var t = e; !dr() && (e = fr(), e !== t);) {}
-	  }function mr(e, t, n) {
-	    pa = n;var r = t.value,
-	        i = t.modifiers,
-	        o = e.tag,
-	        a = e.attrsMap.type;return "select" === o ? br(e, r, i) : "input" === o && "checkbox" === a ? gr(e, r, i) : "input" === o && "radio" === a ? yr(e, r, i) : _r(e, r, i), !0;
-	  }function gr(e, t, n) {
-	    var r = n && n.number,
-	        i = pn(e, "value") || "null",
-	        o = pn(e, "true-value") || "true",
-	        a = pn(e, "false-value") || "false";un(e, "checked", "Array.isArray(" + t + ")?_i(" + t + "," + i + ")>-1:_q(" + t + "," + o + ")"), dn(e, "change", "var $$a=" + t + ",$$el=$event.target,$$c=$$el.checked?(" + o + "):(" + a + ");if(Array.isArray($$a)){var $$v=" + (r ? "_n(" + i + ")" : i) + ",$$i=_i($$a,$$v);if($$c){$$i<0&&(" + t + "=$$a.concat($$v))}else{$$i>-1&&(" + t + "=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{" + t + "=$$c}", null, !0);
-	  }function yr(e, t, n) {
-	    var r = n && n.number,
-	        i = pn(e, "value") || "null";i = r ? "_n(" + i + ")" : i, un(e, "checked", "_q(" + t + "," + i + ")"), dn(e, "change", $r(t, i), null, !0);
-	  }function _r(e, t, n) {
-	    var r = e.attrsMap.type,
-	        i = n || {},
-	        o = i.lazy,
-	        a = i.number,
-	        s = i.trim,
-	        c = o || Vr && "range" === r ? "change" : "input",
-	        u = !o && "range" !== r,
-	        l = "input" === e.tag || "textarea" === e.tag,
-	        f = l ? "$event.target.value" + (s ? ".trim()" : "") : "$event";f = a || "number" === r ? "_n(" + f + ")" : f;var d = $r(t, f);l && u && (d = "if($event.target.composing)return;" + d), un(e, "value", l ? "_s(" + t + ")" : "(" + t + ")"), dn(e, c, d, null, !0);
-	  }function br(e, t, n) {
-	    var r = n && n.number,
-	        i = 'Array.prototype.filter.call($event.target.options,function(o){return o.selected}).map(function(o){var val = "_value" in o ? o._value : o.value;return ' + (r ? "_n(val)" : "val") + "})" + (null == e.attrsMap.multiple ? "[0]" : ""),
-	        o = $r(t, i);dn(e, "change", o, null, !0);
-	  }function $r(e, t) {
-	    var n = lr(e);return null === n.idx ? e + "=" + t : "var $$exp = " + n.exp + ", $$idx = " + n.idx + ";if (!Array.isArray($$exp)){" + e + "=" + t + "}else{$$exp.splice($$idx, 1, " + t + ")}";
-	  }function wr(e, t) {
-	    t.value && un(e, "textContent", "_s(" + t.value + ")");
-	  }function Cr(e, t) {
-	    t.value && un(e, "innerHTML", "_s(" + t.value + ")");
-	  }function xr(e, t) {
-	    return t = t ? u(u({}, Ka), t) : Ka, or(e, t);
-	  }function kr(e, t, n) {
-	    var r = (t && t.warn || $i, t && t.delimiters ? String(t.delimiters) + e : e);if (qa[r]) return qa[r];var i = {},
-	        o = xr(e, t);i.render = Ar(o.render);var a = o.staticRenderFns.length;i.staticRenderFns = new Array(a);for (var s = 0; s < a; s++) {
-	      i.staticRenderFns[s] = Ar(o.staticRenderFns[s]);
-	    }return qa[r] = i;
-	  }function Ar(e) {
-	    try {
-	      return new Function(e);
-	    } catch (e) {
-	      return p;
-	    }
-	  }function Or(e) {
-	    if (e.outerHTML) return e.outerHTML;var t = document.createElement("div");return t.appendChild(e.cloneNode(!0)), t.innerHTML;
-	  }var Tr,
-	      Sr = n("slot,component", !0),
-	      Er = Object.prototype.hasOwnProperty,
-	      jr = /-(\w)/g,
-	      Lr = a(function (e) {
-	    return e.replace(jr, function (e, t) {
-	      return t ? t.toUpperCase() : "";
-	    });
-	  }),
-	      Nr = a(function (e) {
-	    return e.charAt(0).toUpperCase() + e.slice(1);
-	  }),
-	      Dr = /([^-])([A-Z])/g,
-	      Mr = a(function (e) {
-	    return e.replace(Dr, "$1-$2").replace(Dr, "$1-$2").toLowerCase();
-	  }),
-	      Pr = Object.prototype.toString,
-	      Rr = "[object Object]",
-	      Ir = function Ir() {
-	    return !1;
-	  },
-	      Br = { optionMergeStrategies: Object.create(null), silent: !1, devtools: !1, errorHandler: null, ignoredElements: null, keyCodes: Object.create(null), isReservedTag: Ir, isUnknownElement: Ir, getTagNamespace: p, mustUseProp: Ir, _assetTypes: ["component", "directive", "filter"], _lifecycleHooks: ["beforeCreate", "created", "beforeMount", "mounted", "beforeUpdate", "updated", "beforeDestroy", "destroyed", "activated", "deactivated"], _maxUpdateCount: 100, _isServer: !1 },
-	      Fr = /[^\w.$]/,
-	      Hr = "__proto__" in {},
-	      Ur = "undefined" != typeof window && "[object Object]" !== Object.prototype.toString.call(window),
-	      zr = Ur && window.navigator.userAgent.toLowerCase(),
-	      Vr = zr && /msie|trident/.test(zr),
-	      Jr = zr && zr.indexOf("msie 9.0") > 0,
-	      qr = zr && zr.indexOf("edge/") > 0,
-	      Kr = zr && zr.indexOf("android") > 0,
-	      Wr = zr && /iphone|ipad|ipod|ios/.test(zr),
-	      Zr = Ur && window.__VUE_DEVTOOLS_GLOBAL_HOOK__,
-	      Gr = function () {
-	    function e() {
-	      r = !1;var e = n.slice(0);n.length = 0;for (var t = 0; t < e.length; t++) {
-	        e[t]();
-	      }
-	    }var t,
-	        n = [],
-	        r = !1;if ("undefined" != typeof Promise && b(Promise)) {
-	      var i = Promise.resolve();t = function t() {
-	        i.then(e), Wr && setTimeout(p);
-	      };
-	    } else if ("undefined" == typeof MutationObserver || !b(MutationObserver) && "[object MutationObserverConstructor]" !== MutationObserver.toString()) t = function t() {
-	      setTimeout(e, 0);
-	    };else {
-	      var o = 1,
-	          a = new MutationObserver(e),
-	          s = document.createTextNode(String(o));a.observe(s, { characterData: !0 }), t = function t() {
-	        o = (o + 1) % 2, s.data = String(o);
-	      };
-	    }return function (e, i) {
-	      var o = i ? function () {
-	        e.call(i);
-	      } : e;n.push(o), r || (r = !0, t());
-	    };
-	  }();Tr = "undefined" != typeof Set && b(Set) ? Set : function () {
-	    function e() {
-	      this.set = Object.create(null);
-	    }return e.prototype.has = function (e) {
-	      return void 0 !== this.set[e];
-	    }, e.prototype.add = function (e) {
-	      this.set[e] = 1;
-	    }, e.prototype.clear = function () {
-	      this.set = Object.create(null);
-	    }, e;
-	  }();var Yr = 0,
-	      Qr = function Qr() {
-	    this.id = Yr++, this.subs = [];
-	  };Qr.prototype.addSub = function (e) {
-	    this.subs.push(e);
-	  }, Qr.prototype.removeSub = function (e) {
-	    r(this.subs, e);
-	  }, Qr.prototype.depend = function () {
-	    Qr.target && Qr.target.addDep(this);
-	  }, Qr.prototype.notify = function () {
-	    for (var e = this.subs.slice(), t = 0, n = e.length; t < n; t++) {
-	      e[t].update();
-	    }
-	  }, Qr.target = null;var Xr = [],
-	      ei = [],
-	      ti = {},
-	      ni = !1,
-	      ri = !1,
-	      ii = 0,
-	      oi = 0,
-	      ai = function ai(e, t, n, r) {
-	    void 0 === r && (r = {}), this.vm = e, e._watchers.push(this), this.deep = !!r.deep, this.user = !!r.user, this.lazy = !!r.lazy, this.sync = !!r.sync, this.expression = t.toString(), this.cb = n, this.id = ++oi, this.active = !0, this.dirty = this.lazy, this.deps = [], this.newDeps = [], this.depIds = new Tr(), this.newDepIds = new Tr(), "function" == typeof t ? this.getter = t : (this.getter = _(t), this.getter || (this.getter = function () {})), this.value = this.lazy ? void 0 : this.get();
-	  };ai.prototype.get = function () {
-	    $(this);var e = this.getter.call(this.vm, this.vm);return this.deep && A(e), w(), this.cleanupDeps(), e;
-	  }, ai.prototype.addDep = function (e) {
-	    var t = e.id;this.newDepIds.has(t) || (this.newDepIds.add(t), this.newDeps.push(e), this.depIds.has(t) || e.addSub(this));
-	  }, ai.prototype.cleanupDeps = function () {
-	    for (var e = this, t = this.deps.length; t--;) {
-	      var n = e.deps[t];e.newDepIds.has(n.id) || n.removeSub(e);
-	    }var r = this.depIds;this.depIds = this.newDepIds, this.newDepIds = r, this.newDepIds.clear(), r = this.deps, this.deps = this.newDeps, this.newDeps = r, this.newDeps.length = 0;
-	  }, ai.prototype.update = function () {
-	    this.lazy ? this.dirty = !0 : this.sync ? this.run() : k(this);
-	  }, ai.prototype.run = function () {
-	    if (this.active) {
-	      var e = this.get();if (e !== this.value || l(e) || this.deep) {
-	        var t = this.value;if (this.value = e, this.user) try {
-	          this.cb.call(this.vm, e, t);
-	        } catch (e) {
-	          if (!Br.errorHandler) throw e;Br.errorHandler.call(null, e, this.vm);
-	        } else this.cb.call(this.vm, e, t);
-	      }
-	    }
-	  }, ai.prototype.evaluate = function () {
-	    this.value = this.get(), this.dirty = !1;
-	  }, ai.prototype.depend = function () {
-	    for (var e = this, t = this.deps.length; t--;) {
-	      e.deps[t].depend();
-	    }
-	  }, ai.prototype.teardown = function () {
-	    var e = this;if (this.active) {
-	      this.vm._isBeingDestroyed || this.vm._vForRemoving || r(this.vm._watchers, this);for (var t = this.deps.length; t--;) {
-	        e.deps[t].removeSub(e);
-	      }this.active = !1;
-	    }
-	  };var si = new Tr(),
-	      ci = Array.prototype,
-	      ui = Object.create(ci);["push", "pop", "shift", "unshift", "splice", "sort", "reverse"].forEach(function (e) {
-	    var t = ci[e];y(ui, e, function () {
-	      for (var n = arguments, r = arguments.length, i = new Array(r); r--;) {
-	        i[r] = n[r];
-	      }var o,
-	          a = t.apply(this, i),
-	          s = this.__ob__;switch (e) {case "push":
-	          o = i;break;case "unshift":
-	          o = i;break;case "splice":
-	          o = i.slice(2);}return o && s.observeArray(o), s.dep.notify(), a;
-	    });
-	  });var li = Object.getOwnPropertyNames(ui),
-	      fi = { shouldConvert: !0, isSettingProps: !1 },
-	      di = function di(e) {
-	    if (this.value = e, this.dep = new Qr(), this.vmCount = 0, y(e, "__ob__", this), Array.isArray(e)) {
-	      var t = Hr ? T : S;t(e, ui, li), this.observeArray(e);
-	    } else this.walk(e);
-	  };di.prototype.walk = function (e) {
-	    for (var t = Object.keys(e), n = 0; n < t.length; n++) {
-	      j(e, t[n], e[t[n]]);
-	    }
-	  }, di.prototype.observeArray = function (e) {
-	    for (var t = 0, n = e.length; t < n; t++) {
-	      E(e[t]);
-	    }
-	  };var pi = { enumerable: !0, configurable: !0, get: p, set: p },
-	      vi = function vi(e, t, n, r, i, o, a, s) {
-	    this.tag = e, this.data = t, this.children = n, this.text = r, this.elm = i, this.ns = o, this.context = a, this.functionalContext = void 0, this.key = t && t.key, this.componentOptions = s, this.child = void 0, this.parent = void 0, this.raw = !1, this.isStatic = !1, this.isRootInsert = !0, this.isComment = !1, this.isCloned = !1, this.isOnce = !1;
-	  },
-	      hi = function hi() {
-	    var e = new vi();return e.text = "", e.isComment = !0, e;
-	  },
-	      mi = null,
-	      gi = { init: se, prepatch: ce, insert: ue, destroy: le },
-	      yi = Object.keys(gi),
-	      _i = 0;Ce(Ae), z(Ae), we(Ae), ne(Ae), _e(Ae);var bi,
-	      $i = p,
-	      wi = Br.optionMergeStrategies;wi.data = function (e, t, n) {
-	    return n ? e || t ? function () {
-	      var r = "function" == typeof t ? t.call(n) : t,
-	          i = "function" == typeof e ? e.call(n) : void 0;return r ? Oe(r, i) : i;
-	    } : void 0 : t ? "function" != typeof t ? e : e ? function () {
-	      return Oe(t.call(this), e.call(this));
-	    } : t : e;
-	  }, Br._lifecycleHooks.forEach(function (e) {
-	    wi[e] = Te;
-	  }), Br._assetTypes.forEach(function (e) {
-	    wi[e + "s"] = Se;
-	  }), wi.watch = function (e, t) {
-	    if (!t) return e;if (!e) return t;var n = {};u(n, e);for (var r in t) {
-	      var i = n[r],
-	          o = t[r];i && !Array.isArray(i) && (i = [i]), n[r] = i ? i.concat(o) : [o];
-	    }return n;
-	  }, wi.props = wi.methods = wi.computed = function (e, t) {
-	    if (!t) return e;if (!e) return t;var n = Object.create(null);return u(n, e), u(n, t), n;
-	  };var Ci = function Ci(e, t) {
-	    return void 0 === t ? e : t;
-	  },
-	      xi = Object.freeze({ defineReactive: j, _toString: e, toNumber: t, makeMap: n, isBuiltInTag: Sr, remove: r, hasOwn: i, isPrimitive: o, cached: a, camelize: Lr, capitalize: Nr, hyphenate: Mr, bind: s, toArray: c, extend: u, isObject: l, isPlainObject: f, toObject: d, noop: p, no: Ir, genStaticKeys: v, looseEqual: h, looseIndexOf: m, isReserved: g, def: y, parsePath: _, hasProto: Hr, inBrowser: Ur, UA: zr, isIE: Vr, isIE9: Jr, isEdge: qr, isAndroid: Kr, isIOS: Wr, devtools: Zr, nextTick: Gr, get _Set() {
-	      return Tr;
-	    }, mergeOptions: Le, resolveAsset: Ne, warn: $i, formatComponentName: bi, validateProp: De }),
-	      ki = { name: "keep-alive", abstract: !0, created: function created() {
-	      this.cache = Object.create(null);
-	    }, render: function render() {
-	      var e = ee(this.$slots.default);if (e && e.componentOptions) {
-	        var t = e.componentOptions,
-	            n = null == e.key ? t.Ctor.cid + "::" + t.tag : e.key;this.cache[n] ? e.child = this.cache[n].child : this.cache[n] = e, e.data.keepAlive = !0;
-	      }return e;
-	    }, destroyed: function destroyed() {
-	      var e = this;for (var t in this.cache) {
-	        var n = e.cache[t];re(n.child, "deactivated"), n.child.$destroy();
-	      }
-	    } },
-	      Ai = { KeepAlive: ki };Ue(Ae), Object.defineProperty(Ae.prototype, "$isServer", { get: function get() {
-	      return Br._isServer;
-	    } }), Ae.version = "2.0.5";var Oi,
-	      Ti = n("value,selected,checked,muted"),
-	      Si = n("contenteditable,draggable,spellcheck"),
-	      Ei = n("allowfullscreen,async,autofocus,autoplay,checked,compact,controls,declare,default,defaultchecked,defaultmuted,defaultselected,defer,disabled,enabled,formnovalidate,hidden,indeterminate,inert,ismap,itemscope,loop,multiple,muted,nohref,noresize,noshade,novalidate,nowrap,open,pauseonexit,readonly,required,reversed,scoped,seamless,selected,sortable,translate,truespeed,typemustmatch,visible"),
-	      ji = "http://www.w3.org/1999/xlink",
-	      Li = function Li(e) {
-	    return ":" === e.charAt(5) && "xlink" === e.slice(0, 5);
-	  },
-	      Ni = function Ni(e) {
-	    return Li(e) ? e.slice(6, e.length) : "";
-	  },
-	      Di = function Di(e) {
-	    return null == e || e === !1;
-	  },
-	      Mi = { svg: "http://www.w3.org/2000/svg", math: "http://www.w3.org/1998/Math/MathML", xhtml: "http://www.w3.org/1999/xhtm" },
-	      Pi = n("html,body,base,head,link,meta,style,title,address,article,aside,footer,header,h1,h2,h3,h4,h5,h6,hgroup,nav,section,div,dd,dl,dt,figcaption,figure,hr,img,li,main,ol,p,pre,ul,a,b,abbr,bdi,bdo,br,cite,code,data,dfn,em,i,kbd,mark,q,rp,rt,rtc,ruby,s,samp,small,span,strong,sub,sup,time,u,var,wbr,area,audio,map,track,video,embed,object,param,source,canvas,script,noscript,del,ins,caption,col,colgroup,table,thead,tbody,td,th,tr,button,datalist,fieldset,form,input,label,legend,meter,optgroup,option,output,progress,select,textarea,details,dialog,menu,menuitem,summary,content,element,shadow,template"),
-	      Ri = n("area,base,br,col,embed,frame,hr,img,input,isindex,keygen,link,meta,param,source,track,wbr", !0),
-	      Ii = n("colgroup,dd,dt,li,options,p,td,tfoot,th,thead,tr,source", !0),
-	      Bi = n("address,article,aside,base,blockquote,body,caption,col,colgroup,dd,details,dialog,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,head,header,hgroup,hr,html,legend,li,menuitem,meta,optgroup,option,param,rp,rt,source,style,summary,tbody,td,tfoot,th,thead,title,tr,track", !0),
-	      Fi = n("svg,animate,circle,clippath,cursor,defs,desc,ellipse,filter,font,font-face,g,glyph,image,line,marker,mask,missing-glyph,path,pattern,polygon,polyline,rect,switch,symbol,text,textpath,tspan,use,view", !0),
-	      Hi = function Hi(e) {
-	    return "pre" === e;
-	  },
-	      Ui = function Ui(e) {
-	    return Pi(e) || Fi(e);
-	  },
-	      zi = Object.create(null),
-	      Vi = Object.freeze({ createElement: Ye, createElementNS: Qe, createTextNode: Xe, createComment: et, insertBefore: tt, removeChild: nt, appendChild: rt, parentNode: it, nextSibling: ot, tagName: at, setTextContent: st, childNodes: ct, setAttribute: ut }),
-	      Ji = { create: function create(e, t) {
-	      lt(t);
-	    }, update: function update(e, t) {
-	      e.data.ref !== t.data.ref && (lt(e, !0), lt(t));
-	    }, destroy: function destroy(e) {
-	      lt(e, !0);
-	    } },
-	      qi = new vi("", {}, []),
-	      Ki = ["create", "update", "remove", "destroy"],
-	      Wi = { create: mt, update: mt, destroy: function destroy(e) {
-	      mt(e, qi);
-	    } },
-	      Zi = Object.create(null),
-	      Gi = [Ji, Wi],
-	      Yi = { create: bt, update: bt },
-	      Qi = { create: wt, update: wt },
-	      Xi = { create: Ct, update: Ct },
-	      eo = { create: xt, update: xt },
-	      to = /^--/,
-	      no = function no(e, t, n) {
-	    to.test(t) ? e.style.setProperty(t, n) : e.style[io(t)] = n;
-	  },
-	      ro = ["Webkit", "Moz", "ms"],
-	      io = a(function (e) {
-	    if (Oi = Oi || document.createElement("div"), e = Lr(e), "filter" !== e && e in Oi.style) return e;for (var t = e.charAt(0).toUpperCase() + e.slice(1), n = 0; n < ro.length; n++) {
-	      var r = ro[n] + t;if (r in Oi.style) return r;
-	    }
-	  }),
-	      oo = { create: kt, update: kt },
-	      ao = Ur && !Jr,
-	      so = "transition",
-	      co = "animation",
-	      uo = "transition",
-	      lo = "transitionend",
-	      fo = "animation",
-	      po = "animationend";ao && (void 0 === window.ontransitionend && void 0 !== window.onwebkittransitionend && (uo = "WebkitTransition", lo = "webkitTransitionEnd"), void 0 === window.onanimationend && void 0 !== window.onwebkitanimationend && (fo = "WebkitAnimation", po = "webkitAnimationEnd"));var vo = Ur && window.requestAnimationFrame || setTimeout,
-	      ho = /\b(transform|all)(,|$)/,
-	      mo = a(function (e) {
-	    return { enterClass: e + "-enter", leaveClass: e + "-leave", appearClass: e + "-enter", enterActiveClass: e + "-enter-active", leaveActiveClass: e + "-leave-active", appearActiveClass: e + "-enter-active" };
-	  }),
-	      go = Ur ? { create: function create(e, t) {
-	      t.data.show || Mt(t);
-	    }, remove: function remove(e, t) {
-	      e.data.show ? t() : Pt(e, t);
-	    } } : {},
-	      yo = [Yi, Qi, Xi, eo, oo, go],
-	      _o = yo.concat(Gi),
-	      bo = ht({ nodeOps: Vi, modules: _o });Jr && document.addEventListener("selectionchange", function () {
-	    var e = document.activeElement;e && e.vmodel && Vt(e, "input");
-	  });var $o = { inserted: function inserted(e, t, n) {
-	      if ("select" === n.tag) {
-	        var r = function r() {
-	          Bt(e, t, n.context);
-	        };r(), (Vr || qr) && setTimeout(r, 0);
-	      } else "textarea" !== n.tag && "text" !== e.type || t.modifiers.lazy || (Kr || (e.addEventListener("compositionstart", Ut), e.addEventListener("compositionend", zt)), Jr && (e.vmodel = !0));
-	    }, componentUpdated: function componentUpdated(e, t, n) {
-	      if ("select" === n.tag) {
-	        Bt(e, t, n.context);var r = e.multiple ? t.value.some(function (t) {
-	          return Ft(t, e.options);
-	        }) : t.value !== t.oldValue && Ft(t.value, e.options);r && Vt(e, "change");
-	      }
-	    } },
-	      wo = { bind: function bind(e, t, n) {
-	      var r = t.value;n = Jt(n);var i = n.data && n.data.transition;r && i && !Jr && Mt(n);var o = "none" === e.style.display ? "" : e.style.display;e.style.display = r ? o : "none", e.__vOriginalDisplay = o;
-	    }, update: function update(e, t, n) {
-	      var r = t.value,
-	          i = t.oldValue;if (r !== i) {
-	        n = Jt(n);var o = n.data && n.data.transition;o && !Jr ? r ? (Mt(n), e.style.display = e.__vOriginalDisplay) : Pt(n, function () {
-	          e.style.display = "none";
-	        }) : e.style.display = r ? e.__vOriginalDisplay : "none";
-	      }
-	    } },
-	      Co = { model: $o, show: wo },
-	      xo = { name: String, appear: Boolean, css: Boolean, mode: String, type: String, enterClass: String, leaveClass: String, enterActiveClass: String, leaveActiveClass: String, appearClass: String, appearActiveClass: String },
-	      ko = { name: "transition", props: xo, abstract: !0, render: function render(e) {
-	      var t = this,
-	          n = this.$slots.default;if (n && (n = n.filter(function (e) {
-	        return e.tag;
-	      }), n.length)) {
-	        var r = this.mode,
-	            i = n[0];if (Zt(this.$vnode)) return i;var o = qt(i);if (!o) return i;if (this._leaving) return Wt(e, i);var a = o.key = null == o.key || o.isStatic ? "__v" + (o.tag + this._uid) + "__" : o.key,
-	            s = (o.data || (o.data = {})).transition = Kt(this),
-	            c = this._vnode,
-	            l = qt(c);if (o.data.directives && o.data.directives.some(function (e) {
-	          return "show" === e.name;
-	        }) && (o.data.show = !0), l && l.data && l.key !== a) {
-	          var f = l.data.transition = u({}, s);if ("out-in" === r) return this._leaving = !0, K(f, "afterLeave", function () {
-	            t._leaving = !1, t.$forceUpdate();
-	          }, a), Wt(e, i);if ("in-out" === r) {
-	            var d,
-	                p = function p() {
-	              d();
-	            };K(s, "afterEnter", p, a), K(s, "enterCancelled", p, a), K(f, "delayLeave", function (e) {
-	              d = e;
-	            }, a);
-	          }
-	        }return i;
-	      }
-	    } },
-	      Ao = u({ tag: String, moveClass: String }, xo);delete Ao.mode;var Oo = { props: Ao, render: function render(e) {
-	      for (var t = this.tag || this.$vnode.data.tag || "span", n = Object.create(null), r = this.prevChildren = this.children, i = this.$slots.default || [], o = this.children = [], a = Kt(this), s = 0; s < i.length; s++) {
-	        var c = i[s];c.tag && null != c.key && 0 !== String(c.key).indexOf("__vlist") && (o.push(c), n[c.key] = c, (c.data || (c.data = {})).transition = a);
-	      }if (r) {
-	        for (var u = [], l = [], f = 0; f < r.length; f++) {
-	          var d = r[f];d.data.transition = a, d.data.pos = d.elm.getBoundingClientRect(), n[d.key] ? u.push(d) : l.push(d);
-	        }this.kept = e(t, null, u), this.removed = l;
-	      }return e(t, null, o);
-	    }, beforeUpdate: function beforeUpdate() {
-	      this.__patch__(this._vnode, this.kept, !1, !0), this._vnode = this.kept;
-	    }, updated: function updated() {
-	      var e = this.prevChildren,
-	          t = this.moveClass || this.name + "-move";if (e.length && this.hasMove(e[0].elm, t)) {
-	        e.forEach(Gt), e.forEach(Yt), e.forEach(Qt);document.body.offsetHeight;e.forEach(function (e) {
-	          if (e.data.moved) {
-	            var n = e.elm,
-	                r = n.style;St(n, t), r.transform = r.WebkitTransform = r.transitionDuration = "", n.addEventListener(lo, n._moveCb = function e(r) {
-	              r && !/transform$/.test(r.propertyName) || (n.removeEventListener(lo, e), n._moveCb = null, Et(n, t));
-	            });
-	          }
-	        });
-	      }
-	    }, methods: { hasMove: function hasMove(e, t) {
-	        if (!ao) return !1;if (null != this._hasMove) return this._hasMove;St(e, t);var n = Lt(e);return Et(e, t), this._hasMove = n.hasTransform;
-	      } } },
-	      To = { Transition: ko, TransitionGroup: Oo };Ae.config.isUnknownElement = Ze, Ae.config.isReservedTag = Ui, Ae.config.getTagNamespace = We, Ae.config.mustUseProp = Ti, u(Ae.options.directives, Co), u(Ae.options.components, To), Ae.prototype.__patch__ = Br._isServer ? p : bo, Ae.prototype.$mount = function (e, t) {
-	    return e = e && !Br._isServer ? Ge(e) : void 0, this._mount(e, t);
-	  }, setTimeout(function () {
-	    Br.devtools && Zr && Zr.emit("init", Ae);
-	  }, 0);var So = !!Ur && Xt("\n", "&#10;"),
-	      Eo = document.createElement("div"),
-	      jo = /([^\s"'<>\/=]+)/,
-	      Lo = /(?:=)/,
-	      No = [/"([^"]*)"+/.source, /'([^']*)'+/.source, /([^\s"'=<>`]+)/.source],
-	      Do = new RegExp("^\\s*" + jo.source + "(?:\\s*(" + Lo.source + ")\\s*(?:" + No.join("|") + "))?"),
-	      Mo = "[a-zA-Z_][\\w\\-\\.]*",
-	      Po = "((?:" + Mo + "\\:)?" + Mo + ")",
-	      Ro = new RegExp("^<" + Po),
-	      Io = /^\s*(\/?)>/,
-	      Bo = new RegExp("^<\\/" + Po + "[^>]*>"),
-	      Fo = /^<!DOCTYPE [^>]+>/i,
-	      Ho = /^<!--/,
-	      Uo = /^<!\[/,
-	      zo = !1;"x".replace(/x(.)?/g, function (e, t) {
-	    zo = "" === t;
-	  });var Vo,
-	      Jo,
-	      qo,
-	      Ko,
-	      Wo,
-	      Zo,
-	      Go,
-	      Yo,
-	      Qo,
-	      Xo,
-	      ea,
-	      ta,
-	      na,
-	      ra,
-	      ia,
-	      oa,
-	      aa,
-	      sa,
-	      ca,
-	      ua,
-	      la,
-	      fa,
-	      da,
-	      pa,
-	      va = n("script,style", !0),
-	      ha = function ha(e) {
-	    return "lang" === e.name && "html" !== e.value;
-	  },
-	      ma = function ma(e, t, n) {
-	    return !!va(e) || !(!t || "template" !== e || 1 !== n.length || !n[0].attrs.some(ha));
-	  },
-	      ga = {},
-	      ya = /&lt;/g,
-	      _a = /&gt;/g,
-	      ba = /&#10;/g,
-	      $a = /&amp;/g,
-	      wa = /&quot;/g,
-	      Ca = /\{\{((?:.|\n)+?)\}\}/g,
-	      xa = /[-.*+?^${}()|[\]\/\\]/g,
-	      ka = a(function (e) {
-	    var t = e[0].replace(xa, "\\$&"),
-	        n = e[1].replace(xa, "\\$&");
-	    return new RegExp(t + "((?:.|\\n)+?)" + n, "g");
-	  }),
-	      Aa = /^v-|^@|^:/,
-	      Oa = /(.*?)\s+(?:in|of)\s+(.*)/,
-	      Ta = /\(([^,]*),([^,]*)(?:,([^,]*))?\)/,
-	      Sa = /^:|^v-bind:/,
-	      Ea = /^@|^v-on:/,
-	      ja = /:(.*)$/,
-	      La = /\.[^.]+/g,
-	      Na = /\u2028|\u2029/g,
-	      Da = a(en),
-	      Ma = /^xmlns:NS\d+/,
-	      Pa = /^NS\d+:/,
-	      Ra = a(Dn),
-	      Ia = /^\s*[A-Za-z_$][\w$]*(?:\.[A-Za-z_$][\w$]*|\['.*?']|\[".*?"]|\[\d+]|\[[A-Za-z_$][\w$]*])*\s*$/,
-	      Ba = { esc: 27, tab: 9, enter: 13, space: 32, up: 38, left: 37, right: 39, down: 40, delete: [8, 46] },
-	      Fa = { stop: "$event.stopPropagation();", prevent: "$event.preventDefault();", self: "if($event.target !== $event.currentTarget)return;" },
-	      Ha = { bind: zn, cloak: p },
-	      Ua = (new RegExp("\\b" + "do,if,for,let,new,try,var,case,else,with,await,break,catch,class,const,super,throw,while,yield,delete,export,import,return,switch,default,extends,finally,continue,debugger,function,arguments".split(",").join("\\b|\\b") + "\\b"), { staticKeys: ["staticClass"], transformNode: ar, genData: sr }),
-	      za = { transformNode: cr, genData: ur },
-	      Va = [Ua, za],
-	      Ja = { model: mr, text: wr, html: Cr },
-	      qa = Object.create(null),
-	      Ka = { isIE: Vr, expectHTML: !0, modules: Va, staticKeys: v(Va), directives: Ja, isReservedTag: Ui, isUnaryTag: Ri, mustUseProp: Ti, getTagNamespace: We, isPreTag: Hi },
-	      Wa = a(function (e) {
-	    var t = Ge(e);return t && t.innerHTML;
-	  }),
-	      Za = Ae.prototype.$mount;return Ae.prototype.$mount = function (e, t) {
-	    if (e = e && Ge(e), e === document.body || e === document.documentElement) return this;var n = this.$options;if (!n.render) {
-	      var r = n.template;if (r) {
-	        if ("string" == typeof r) "#" === r.charAt(0) && (r = Wa(r));else {
-	          if (!r.nodeType) return this;r = r.innerHTML;
-	        }
-	      } else e && (r = Or(e));if (r) {
-	        var i = kr(r, { warn: $i, shouldDecodeNewlines: So, delimiters: n.delimiters }, this),
-	            o = i.render,
-	            a = i.staticRenderFns;n.render = o, n.staticRenderFns = a;
-	      }
-	    }return Za.call(this, e, t);
-	  }, Ae.compile = kr, Ae;
-	});
-
-/***/ },
-/* 403 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div _v-96cfcca8=\"\">\n  <div class=\"list1\" _v-96cfcca8=\"\">\n    <div class=\"big_img\" _v-96cfcca8=\"\">\n      <div class=\"list_line\" _v-96cfcca8=\"\"></div>\n      <div class=\"list_date\" v-text=\"week\" _v-96cfcca8=\"\"></div>\n      <div class=\"list_line\" _v-96cfcca8=\"\"></div>\n    </div>\n    <div class=\"list\" v-for=\"(item,index) in dataList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-96cfcca8=\"\">\n      <div class=\"left_img\" _v-96cfcca8=\"\">\n        <img :src=\"item.imageUrl\" alt=\"\" _v-96cfcca8=\"\">\n      </div>\n      <div class=\"list_content\" _v-96cfcca8=\"\">\n        <div class=\"list_title\" v-text=\"item.music\" _v-96cfcca8=\"\"></div>\n        <div class=\"list_name\" v-text=\"item.album\" _v-96cfcca8=\"\"></div>\n        <div class=\"list_time\" v-text=\"timeFormat(item.time)\" _v-96cfcca8=\"\"></div>\n      </div>\n      <div class=\"right_img\" v-if=\"(item.isFree==0 || (item.isFree==1 &amp;&amp; item.isSub==1)) &amp;&amp; item.isPlay==1\" _v-96cfcca8=\"\">\n        <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-96cfcca8=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-96cfcca8=\"\"></div>\n        <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"!(item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==1)\" _v-96cfcca8=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-96cfcca8=\"\"></div>\n        <div class=\"circle_mask\" _v-96cfcca8=\"\"></div>\n        <div _v-96cfcca8=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-96cfcca8=\"\"></div>\n      </div>\n      <div class=\"right_img\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==0\" _v-96cfcca8=\"\">\n        <div class=\"disable\" @click.stop=\"stop_info\" _v-96cfcca8=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-96cfcca8=\"\"></div>\n        <div class=\"circle_mask\" _v-96cfcca8=\"\"></div>\n        <div _v-96cfcca8=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-96cfcca8=\"\"></div>\n      </div>\n    </div>\n  </div>\n</div>\n\n";
-
-/***/ },
-/* 404 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(405)
-	__vue_script__ = __webpack_require__(407)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_album_01.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(408)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-8e6e84e0/bd_album_01.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 405 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(406);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e6e84e0&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_01.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e6e84e0&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_01.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 406 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(42)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.all[_v-8e6e84e0] {\n  padding-bottom: 0.12rem;\n  background: white;\n}\n\n.big_img[_v-8e6e84e0] {\n  margin-bottom: 0.1rem;\n}\n\n.content[_v-8e6e84e0] {\n  padding: 0.1rem 0.1rem 0 0.1rem;\n}\n\n.big_img img[_v-8e6e84e0] {\n  width: 3.75rem;\n}\n\n.content_title[_v-8e6e84e0] {\n  font-size: 14px;\n  color: #333333;\n  margin-bottom: 0.15rem;\n}\n\n.content_price[_v-8e6e84e0] {\n  margin-bottom: 0.15rem;\n}\n\n.content_text[_v-8e6e84e0] {\n  color: #999999;\n  font-size: 12px;\n}\n\n.content_price .pri_left[_v-8e6e84e0] {\n  color: #FF4A7D;\n  font-size: 18px;\n}\n\n.content_price > div[_v-8e6e84e0] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_price .pri_right[_v-8e6e84e0] {\n  color: #BF9D51;\n  font-size: 11px;\n  margin-top: 0.04rem;\n}\n\n\n.big_top[_v-8e6e84e0]{\n  position: relative;\n}\n.history_mask[_v-8e6e84e0]{\n  height: 35px;\n  background: #000000;\n  opacity:0.6;\n  position: absolute;\n  bottom: 0;\n  z-index:2;\n  width:3.75rem;\n}\n.history[_v-8e6e84e0]{\n  position: absolute;\n  bottom: 0;\n  height: 35px;\n  z-index:3;\n  line-height: 35px;\n  font-size: 0;\n  width: 3.75rem;\n  text-align: center;\n}\n.history>div[_v-8e6e84e0] {\n  display: inline-block;\n  height: 35px;\n}\n.history div>div[_v-8e6e84e0]{\n  color:#FFFFFF;\n  font-size: 12px;\n  display: inline-block;\n  vertical-align: top;\n  height: 35px;\n}\n.over_text[_v-8e6e84e0]{\n  overflow: hidden;\n  max-width: 96px;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 407 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _native = __webpack_require__(22);
-
-	var _native2 = _interopRequireDefault(_native);
-
-	var _utils = __webpack_require__(80);
-
-	var _utils2 = _interopRequireDefault(_utils);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  props: ["data"],
-	  mounted: function mounted() {
-	    var that = this;
-	    this.dataList = this.data.body.dataList[0];
-	    this.isFree = this.data.body.isFree;
-	    this.$nextTick(function () {
-	      this.audioPlayHistory();
-	    });
-	  },
-	  data: function data() {
-	    return {
-	      dataList: [],
-	      isFree: 0,
-	      historyName: "",
-	      sortNo: null,
-	      timestamp: null,
-	      isApp: _utils2.default.utils.isApp(),
-	      albumId: (0, _utils.getQuery)("albumId"),
-	      history_mask: false
-	    };
-	  },
-
-	  methods: {
-	    go_history: function go_history() {
-	      var _this = this;
-	      if (this.isApp) {
-	        //调用app播放器
-	        _native2.default.Audio.audioPlay({
-	          "sortNo": _this.sortNo,
-	          "albumId": _this.albumId
-	        });
-	      } else {
-	        window.location.href = "/musicDetail.html?albumId=" + albumId + "&sortNo=" + sortNo;
-	      }
-	    },
-	    audioPlayHistory: function audioPlayHistory() {
-	      var _this = this;
-	      if (_this.isApp) {
-	        setTimeout(function () {
-	          _native2.default.Audio.audioPlayHistory({
-	            "albumId": _this.albumId,
-	            success: function success(obj) {
-	              _this.historyName = obj.name;
-	              _this.sortNo = obj.sortNo;
-	              _this.timestamp = obj.date;
-	              _this.history_mask = true;
-	            }
-	          });
-	        }, 4000);
-	      }
-	    }
-	  }
-	  // </script>
-	  // <style scoped>
-	  //   .all {
-	  //     padding-bottom: 0.12rem;
-	  //     background: white;
-	  //   }
-	  //
-	  //   .big_img {
-	  //     margin-bottom: 0.1rem;
-	  //   }
-	  //
-	  //   .content {
-	  //     padding: 0.1rem 0.1rem 0 0.1rem;
-	  //   }
-	  //
-	  //   .big_img img {
-	  //     width: 3.75rem;
-	  //   }
-	  //
-	  //   .content_title {
-	  //     font-size: 14px;
-	  //     color: #333333;
-	  //     margin-bottom: 0.15rem;
-	  //   }
-	  //
-	  //   .content_price {
-	  //     margin-bottom: 0.15rem;
-	  //   }
-	  //
-	  //   .content_text {
-	  //     color: #999999;
-	  //     font-size: 12px;
-	  //   }
-	  //
-	  //   .content_price .pri_left {
-	  //     color: #FF4A7D;
-	  //     font-size: 18px;
-	  //   }
-	  //
-	  //   .content_price > div {
-	  //     display: inline-block;
-	  //     font-size: 0;
-	  //     vertical-align: top;
-	  //   }
-	  //
-	  //   .content_price .pri_right {
-	  //     color: #BF9D51;
-	  //     font-size: 11px;
-	  //     margin-top: 0.04rem;
-	  //   }
-	  //
-	  //
-	  //   .big_top{
-	  //     position: relative;
-	  //   }
-	  //   .history_mask{
-	  //     height: 35px;
-	  //     background: #000000;
-	  //     opacity:0.6;
-	  //     position: absolute;
-	  //     bottom: 0;
-	  //     z-index:2;
-	  //     width:3.75rem;
-	  //   }
-	  //   .history{
-	  //     position: absolute;
-	  //     bottom: 0;
-	  //     height: 35px;
-	  //     z-index:3;
-	  //     line-height: 35px;
-	  //     font-size: 0;
-	  //     width: 3.75rem;
-	  //     text-align: center;
-	  //   }
-	  //   .history>div {
-	  //     display: inline-block;
-	  //     height: 35px;
-	  //   }
-	  //   .history div>div{
-	  //     color:#FFFFFF;
-	  //     font-size: 12px;
-	  //     display: inline-block;
-	  //     vertical-align: top;
-	  //     height: 35px;
-	  //   }
-	  //   .over_text{
-	  //     overflow: hidden;
-	  //     max-width: 96px;
-	  //     text-overflow: ellipsis;
-	  //     white-space: nowrap;
-	  //   }
-	  // </style>
-
-	}; // <template>
-	//   <div class="all">
-	//     <div class="big_top">
-	//       <div class="big_img">
-	//         <img id="uuu" :src="dataList.imageUrl" alt="">
-	//       </div>
-	//       <div class="history_mask" v-if="isApp && history_mask"></div>
-	//       <div class="history" @click.stop="go_history" v-if="isApp && history_mask">
-	//         <div>
-	//           <div>上次听到"</div>
-	//           <div class="over_text">{{ historyName }}</div>
-	//           <div>"，点我继续收听</div>
-	//         </div>
-	//       </div>
-	//
-	//     </div>
-	//
-	//     <div class="content">
-	//       <div class="content_title" v-text="dataList.album"></div>
-	//       <div class="content_price" v-if="isFree==1">
-	//         <div class="pri_left">
-	//           <span v-text="dataList.income"></span>
-	//         </div>
-	//         <div class="pri_right" v-text="dataList.memberMsg"></div>
-	//       </div>
-	//       <div class="content_text" v-text="dataList.comment"></div>
-	//     </div>
-	//   </div>
-	// </template>
-	// <script>
-
-/***/ },
-/* 408 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"all\" _v-8e6e84e0=\"\">\n  <div class=\"big_top\" _v-8e6e84e0=\"\">\n    <div class=\"big_img\" _v-8e6e84e0=\"\">\n      <img id=\"uuu\" :src=\"dataList.imageUrl\" alt=\"\" _v-8e6e84e0=\"\">\n    </div>\n    <div class=\"history_mask\" v-if=\"isApp &amp;&amp; history_mask\" _v-8e6e84e0=\"\"></div>\n    <div class=\"history\" @click.stop=\"go_history\" v-if=\"isApp &amp;&amp; history_mask\" _v-8e6e84e0=\"\">\n      <div _v-8e6e84e0=\"\">\n        <div _v-8e6e84e0=\"\">上次听到\"</div>\n        <div class=\"over_text\" _v-8e6e84e0=\"\">{{ historyName }}</div>\n        <div _v-8e6e84e0=\"\">\"，点我继续收听</div>\n      </div>\n    </div>\n\n  </div>\n\n  <div class=\"content\" _v-8e6e84e0=\"\">\n    <div class=\"content_title\" v-text=\"dataList.album\" _v-8e6e84e0=\"\"></div>\n    <div class=\"content_price\" v-if=\"isFree==1\" _v-8e6e84e0=\"\">\n      <div class=\"pri_left\" _v-8e6e84e0=\"\">\n        <span v-text=\"dataList.income\" _v-8e6e84e0=\"\"></span>\n      </div>\n      <div class=\"pri_right\" v-text=\"dataList.memberMsg\" _v-8e6e84e0=\"\"></div>\n    </div>\n    <div class=\"content_text\" v-text=\"dataList.comment\" _v-8e6e84e0=\"\"></div>\n  </div>\n</div>\n";
-
-/***/ },
-/* 409 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(410)
-	__vue_script__ = __webpack_require__(412)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_album_02.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(413)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-8e5255de/bd_album_02.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 410 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(411);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e5255de&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_02.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e5255de&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_02.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 411 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(42)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.content2[_v-8e5255de] {\n  padding: 0 0.1rem 0.12rem 0.1rem;\n  background: white;\n}\n\n.content_buy[_v-8e5255de] {\n  position: relative;\n  height: 0.25rem;\n}\n\n.content_buy .count[_v-8e5255de] {\n  color: #666666;\n  font-size: 14px;\n  margin-top: 0.03rem;\n  line-height: 0.2rem;\n}\n\n.content_buy > div[_v-8e5255de] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_header[_v-8e5255de] {\n  max-width: 2.4rem;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  white-space: nowrap;\n  position: absolute;\n  right: 0;\n}\n\n.content_header > div[_v-8e5255de] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n  margin-left: 0.05rem;\n}\n\n.content_header img[_v-8e5255de] {\n  border-radius: 50%;\n  height: 0.25rem;\n  width: 0.25rem;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 412 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	// <template>
-	//   <div class="content2">
-	//     <div class="content_buy">
-	//       <div class="count"><span v-text="data.body.purchase"></span><span>人</span><span v-if="isFree==1">订阅</span><span v-if="isFree==0">听过</span></div>
-	//       <div class="content_header">
-	//           <div v-for="item in dataList">
-	//             <img :src="doImg(item.imageUrl)" alt="">
-	//           </div>
-	//           <div v-if="head_count() == 7">
-	//             <img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt="">
-	//           </div>
-	//       </div>
-	//     </div>
-	//   </div>
-	// </template>
-	// <script>
-	exports.default = {
-	  props: ["data"],
-	  data: function data() {
-	    return {
-	      dataList: [],
-	      isFree: -1
-	    };
-	  },
-
-	  mounted: function mounted() {
-	    this.dataList = this.data.body.dataList;
-	    this.isFree = this.data.body.isFree;
-	  },
-	  methods: {
-	    head_count: function head_count() {
-	      return this.dataList.length;
-	    },
-	    doImg: function doImg(img) {
-	      if (img) return img;
-	      return "//pic.davdian.com/free/2017/08/22/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.png";
-	    }
-	  }
-	  // </script>
-	  // <style scoped>
-	  //   .content2 {
-	  //     padding: 0 0.1rem 0.12rem 0.1rem;
-	  //     background: white;
-	  //   }
-	  //
-	  //   .content_buy {
-	  //     position: relative;
-	  //     height: 0.25rem;
-	  //   }
-	  //
-	  //   .content_buy .count {
-	  //     color: #666666;
-	  //     font-size: 14px;
-	  //     margin-top: 0.03rem;
-	  //     line-height: 0.2rem;
-	  //   }
-	  //
-	  //   .content_buy > div {
-	  //     display: inline-block;
-	  //     font-size: 0;
-	  //     vertical-align: top;
-	  //   }
-	  //
-	  //   .content_header {
-	  //     max-width: 2.4rem;
-	  //     text-overflow: ellipsis;
-	  //     overflow: hidden;
-	  //     white-space: nowrap;
-	  //     position: absolute;
-	  //     right: 0;
-	  //   }
-	  //
-	  //   .content_header > div {
-	  //     display: inline-block;
-	  //     font-size: 0;
-	  //     vertical-align: top;
-	  //     margin-left: 0.05rem;
-	  //   }
-	  //
-	  //   .content_header img {
-	  //     border-radius: 50%;
-	  //     height: 0.25rem;
-	  //     width: 0.25rem;
-	  //   }
-	  // </style>
-
-	};
-
-/***/ },
-/* 413 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div class=\"content2\" _v-8e5255de=\"\">\n  <div class=\"content_buy\" _v-8e5255de=\"\">\n    <div class=\"count\" _v-8e5255de=\"\"><span v-text=\"data.body.purchase\" _v-8e5255de=\"\"></span><span _v-8e5255de=\"\">人</span><span v-if=\"isFree==1\" _v-8e5255de=\"\">订阅</span><span v-if=\"isFree==0\" _v-8e5255de=\"\">听过</span></div>\n    <div class=\"content_header\" _v-8e5255de=\"\">\n        <div v-for=\"item in dataList\" _v-8e5255de=\"\">\n          <img :src=\"doImg(item.imageUrl)\" alt=\"\" _v-8e5255de=\"\">\n        </div>\n        <div v-if=\"head_count() == 7\" _v-8e5255de=\"\">\n          <img src=\"//pic.davdian.com/free/2017/08/16/Group4.png\" alt=\"\" _v-8e5255de=\"\">\n        </div>\n    </div>\n  </div>\n</div>\n";
-
-/***/ },
-/* 414 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(415)
-	__vue_script__ = __webpack_require__(417)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] module/index/feed/bd_album_03.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(451)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-8e3626dc/bd_album_03.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
-	  }
-	})()}
-
-/***/ },
-/* 415 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(416);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(43)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e3626dc&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_03.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-8e3626dc&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_album_03.vue");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 416 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(42)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.tab[_v-8e3626dc] {\n  padding-top: 0.14rem;\n  height: 0.36rem;\n  background: white;\n}\n\n.tab .tab_list[_v-8e3626dc] {\n  height: 0.36rem;\n}\n\n.tab_list[_v-8e3626dc] {\n  font-size: 0;\n  vertical-align: top;\n  position: relative;\n}\n\n\n.update[_v-8e3626dc] {\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  height: 0.36rem;\n  position: relative;\n  padding-bottom: 0.1rem;\n  background: #fff;\n}\n\n.tab_list .border[_v-8e3626dc] {\n  border-right: 0.01rem solid rgba(0, 0, 0, 0.1);\n  font-size: 14px;\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n}\n\n.tab_list .border[_v-8e3626dc], .b_right[_v-8e3626dc] {\n  display: inline-block;\n  height: 0.3rem;\n  width: 1.87rem;\n  line-height: 0.2rem;\n  text-align: center;\n}\n\n.tab_list .b_right[_v-8e3626dc] {\n  font-size: 14px;\n}\n\n.line[_v-8e3626dc] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  left: 0.66rem;\n}\n.line2[_v-8e3626dc] {\n  height: 0.0365rem;\n  width: 0.58rem;\n  background: #FF4A7D;\n  position: absolute;\n  bottom: 0;\n  right: 0.64rem;\n}\n.up[_v-8e3626dc] {\n  position: absolute;\n  bottom: 0.1rem;\n  left: 0.1rem;\n}\n.color1[_v-8e3626dc] {\n  color: #FF4A7D;\n}\n\n\n\n\n.item[_v-8e3626dc] {\n  font-size: 0;\n  vertical-align: top;\n  background: white;\n  padding-top: 0.1rem;\n  padding-bottom: 0.1rem;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  border-bottom: 1px solid #E1E1E1;\n  position: relative;\n}\n.rea>div[_v-8e3626dc]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_title[_v-8e3626dc]{\n  color: #333333;\n  font-size: 14px;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  max-width: 2.6rem;\n  margin-bottom: 0.08rem;\n  line-height: 0.2rem;\n}\n.item_timee[_v-8e3626dc]{\n  font-size: 0;\n}\n.item_timee>div[_v-8e3626dc]{\n  display: inline-block;\n  vertical-align: top;\n}\n.item_date[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_count[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  line-height: 0.1rem;\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  margin-right: 0.1rem;\n}\n.item_time[_v-8e3626dc]{\n  color: #999999;\n  font-size: 11px;\n  height: 0.1rem;\n}\n.clock[_v-8e3626dc]{\n  display: inline-block;\n  height: 0.1rem;\n  width: 0.1rem;\n  background-image: url(//pic.davdian.com/free/2017/05/04/history.png);\n  background-size: 0.1rem 0.1rem;\n  background-repeat: no-repeat;\n  vertical-align: top;\n}\n.times[_v-8e3626dc]{\n  display: inline-block;\n  height: 0.1rem;\n  line-height: 0.1rem;\n  vertical-align: top;\n}\n.item_right[_v-8e3626dc]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  width: 0.34rem;\n  height: 0.34rem;\n  margin-top: -0.17rem;\n}\n.item_right2[_v-8e3626dc]{\n  position: absolute;\n  right: 0;\n  top: 50%;\n  margin-top: -0.12rem;\n}\n.item_right img[_v-8e3626dc]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 50%;\n}\n.item_right>div[_v-8e3626dc]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-8e3626dc]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-8e3626dc],.mask_stop[_v-8e3626dc],.disable[_v-8e3626dc]{\n  z-index:3;\n}\n\n\n\n.free[_v-8e3626dc]{\n  width: 0.64rem;\n  height: 0.22rem;\n  border-radius: 37px;\n  color: #FF4A7D;\n  border: 0.5px solid #FF4A7D;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.22rem;\n}\n.rea[_v-8e3626dc]{\n  position: relative;\n}\n\n\n.top[_v-8e3626dc]{\n  margin-top: 0.12rem;\n}\n.empty_tab[_v-8e3626dc]{\n  height: 0.5rem;\n}\n.tab_fixed[_v-8e3626dc]{\n  position: fixed;\n  top: 44px;\n  z-index:999;\n}\n.tab_fixed2[_v-8e3626dc]{\n  position: fixed;\n  top:0;\n  z-index:999;\n}\n", ""]);
-
-	// exports
-
-
-/***/ },
-/* 417 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _utils = __webpack_require__(80);
-
-	var _utils2 = _interopRequireDefault(_utils);
-
-	var _native = __webpack_require__(22);
-
-	var _native2 = _interopRequireDefault(_native);
-
-	var _popup = __webpack_require__(38);
-
-	var _popup2 = _interopRequireDefault(_popup);
-
-	var _api = __webpack_require__(418);
-
-	var _api2 = _interopRequireDefault(_api);
-
-	var _mask = __webpack_require__(441);
-
-	var _mask2 = _interopRequireDefault(_mask);
-
-	var _mask3 = __webpack_require__(446);
-
-	var _mask4 = _interopRequireDefault(_mask3);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	exports.default = {
-	  props: ["data"],
-	  mounted: function mounted() {
-	    var that = this;
-	    this.dataList = this.data.body.dataList;
-	    this.contentList = this.data.body.dataList.contentList;
-	    this.isSub = this.data.body.isSub;
-	    this.initSortNoIndex();
-	    this.$nextTick(function () {
-	      this.scro();
-	    });
-	    //        window.audioPlayHistoryFn = function(obj){
-	    //          console.log(obj.sortNo, obj.date)
-	    //          console.log(that.name);
-	    //        }
-	    //        ////////todo
-	    //
-	    //
-	    //        this.$nextTick(function () {
-	    //          native.Audio.audioPlayHistory({
-	    //            "albumId":this.pageAlbumId,
-	    //            "result":'audioPlayHistoryFn'
-	    //          })
-	    //        });
-
-	    this.$nextTick(function () {
-	      setTimeout(function () {
-	        that.audioLocation();
-	      }, 2000);
-	    });
-
-	    this.check_contentList();
-	  },
-	  data: function data() {
-	    return {
-	      dataList: {},
-	      contentList: [],
-	      flag: true,
-	      isApp: _utils2.default.utils.isApp(),
-	      btnStatus: null,
-	      name: "bd_album_03",
-	      albumId: null,
-	      sortNo: null,
-	      sortNoIndex: 0,
-	      pageFlag: true,
-	      isSub: 0,
-	      pageAlbumId: (0, _utils.getQuery)("albumId"),
-	      empty_tab: false,
-	      maskFlag: false
-	    };
-	  },
-
-	  components: {
-	    maskk: _mask2.default,
-	    maskk2: _mask4.default
-	  },
-	  methods: {
-	    check_contentList: function check_contentList() {
-	      if (typeof this.contentList[0] === "undefined") {
-	        this.maskFlag = true;
-	      }
-	    },
-	    timeFormat: function timeFormat(t) {
-	      var time = Math.ceil(t);
-	      if (time < 60) {
-	        if (time < 10) {
-	          time = '0' + parseInt(t);
-	        }
-	        return '00:' + time;
-	      } else {
-	        if (time < 3600) {
-	          var minutes = parseInt(time / 60);
-	          var seconds = time - minutes * 60;
-	          if (minutes < 10) {
-	            minutes = '0' + minutes;
-	          }
-	          if (seconds < 10) {
-	            seconds = '0' + seconds;
-	          }
-	          return minutes + ':' + seconds;
-	        } else {
-	          var hours = parseInt(time / 3600);
-	          var _minutes = parseInt((time - hours * 3600) / 60);
-	          var _seconds = time - hours * 3600 - _minutes * 60;
-	          if (hours < 10) {
-	            hours = '0' + hours;
-	          }
-	          if (_minutes < 10) {
-	            _minutes = '0' + _minutes;
-	          }
-	          if (_seconds < 10) {
-	            _seconds = '0' + _seconds;
-	          }
-	          return hours + ':' + _minutes + ':' + _seconds;
-	        }
-	      }
-	    },
-	    audioLocation: function audioLocation() {
-	      if (this.isApp) {
-	        _native2.default.Audio.audioLocation({
-	          "success": function success(obj) {
-	            window.iosInterface.getAudioState(obj);
-	          }
-	        });
-	      }
-	    },
-	    go_play: function go_play(albumId, sortNo) {
-	      if (this.isApp) {
-	        //调用app播放器
-	        _native2.default.Audio.audioPlay({
-	          "sortNo": sortNo,
-	          "albumId": albumId
-	        });
-	      } else {
-	        window.location.href = "/musicDetail.html?albumId=" + albumId + "&sortNo=" + sortNo;
-	      }
-	    },
-	    initSortNoIndex: function initSortNoIndex() {
-	      var that = this;
-	      this.contentList.map(function (item, index) {
-	        if (item.sortNo) {
-	          that.sortNoIndex = item.sortNo;
-	        }
-	      });
-	    },
-	    stop_info: function stop_info() {
-	      _popup2.default.confirm({
-	        title: '提示', // 标题（支持传入html。有则显示。）
-	        text: '订阅后才能继续收听哦', // 文本（支持传入html。有则显示。）
-	        okBtnTitle: '马上订阅', // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-	        cancelBtnTitle: '取消', // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-	        okBtnCallback: function okBtnCallback() {},
-	        cancelBtnCallback: function cancelBtnCallback() {}
-	      });
-	    },
-	    fn: function fn() {
-	      this.flag = !this.flag;
-	    },
-	    getLocalTime: function getLocalTime(nS) {
-	      var time = new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
-	      var timestamp = time.split(" ")[0].split("/");
-	      var y = parseInt(timestamp[0]);
-	      var m = parseInt(timestamp[1]);
-	      var d = parseInt(timestamp[2]);
-	      return y + "-" + m + "-" + d;
-	    },
-	    go_href: function go_href(albumId, sortNo) {
-	      if (this.isApp) {
-	        //调用app播放器
-	        _native2.default.Audio.goAudioDetail({
-	          "sortNo": sortNo,
-	          "albumId": albumId
-	        });
-	      } else {
-	        window.location.href = "/musicDetail.html?albumId=" + albumId + "&sortNo=" + sortNo;
-	      }
-	    },
-	    getMoreList: function getMoreList() {
-	      var that = this;
-	      if (this.pageFlag) {
-	        this.pageFlag = false;
-	        var obj = {
-	          "albumId": that.pageAlbumId,
-	          "sort": -1,
-	          "sortNo": that.sortNoIndex
-	        };
-	        if (localStorage.getItem("access_token")) {
-	          obj.access_token = localStorage.getItem("access_token");
-	          //                  console.log(localStorage.getItem("access_token"));
-	        }
-	        if (localStorage.getItem("expires_in")) {
-	          obj.expires_in = localStorage.getItem("expires_in");
-	          //                  console.log(localStorage.getItem("expires_in"));
-	        }
-	        (0, _api2.default)("/api/mg/content/music/getListData", obj).then(function (result) {
-	          if (result.code == 0) {
-	            if (result.data && result.data.dataList) {
-
-	              localStorage.setItem("access_token", result.data.xmlyToken.access_token);
-	              localStorage.setItem("expires_in", result.data.xmlyToken.expires_in);
-
-	              that.contentList = that.contentList.concat(result.data.dataList.reverse());
-	              result.data.dataList.map(function (item, index) {
-	                if (item.sortNo) {
-	                  that.sortNoIndex = item.sortNo;
-	                }
-	              });
-	              if (result.data.dataList.length > 0) {
-	                that.pageFlag = true;
-	              }
-	            } else {}
-	          } else {
-	            if (result.data.msg) {
-	              dialog.alert('code:' + result.code + ":msg" + result.data.msg);
-	            } else {
-	              dialog.alert('code:' + result.code);
-	            }
-	          }
-	        }).catch(function (e) {
-	          console.log('e:', e);
-	          //显示请求接口错误页
-	        });
-	      }
-	    },
-	    scro: function scro() {
-	      var _this = this;
-	      var top = 0;
-	      document.getElementById('uuu').onload = function () {
-	        if (_this.isApp) {
-	          top = document.getElementById('tab2').offsetTop;
-	        } else {
-	          top = document.getElementById('tab').offsetTop - 44;
-	        }
-	        console.log(top);
-	      };
-	      $(window).scroll(function () {
-	        if ($("body").scrollTop() >= top) {
-	          _this.empty_tab = true;
-	        } else {
-	          _this.empty_tab = false;
-	        }
-
-	        var el = $("#top").get(0);
-	        var bottom = el.offsetHeight + el.offsetTop - (window.screen.availHeight + window.scrollY);
-	        if (bottom < 100) {
-	          _this.getMoreList();
-	        }
-	      });
-	    }
-	  }
-	  // </script>
-	  // <style scoped>
-	  //   .tab {
-	  //     padding-top: 0.14rem;
-	  //     height: 0.36rem;
-	  //     background: white;
-	  //   }
-	  //
-	  //   .tab .tab_list {
-	  //     height: 0.36rem;
-	  //   }
-	  //
-	  //   .tab_list {
-	  //     font-size: 0;
-	  //     vertical-align: top;
-	  //     position: relative;
-	  //   }
-	  //
-	  //
-	  //   .update {
-	  //     padding-left: 0.1rem;
-	  //     padding-right: 0.1rem;
-	  //     border-top: 1px solid rgba(0, 0, 0, 0.1);
-	  //     height: 0.36rem;
-	  //     position: relative;
-	  //     padding-bottom: 0.1rem;
-	  //     background: #fff;
-	  //   }
-	  //
-	  //   .tab_list .border {
-	  //     border-right: 0.01rem solid rgba(0, 0, 0, 0.1);
-	  //     font-size: 14px;
-	  //     -webkit-box-sizing: border-box;
-	  //     -moz-box-sizing: border-box;
-	  //     box-sizing: border-box;
-	  //   }
-	  //
-	  //   .tab_list .border, .b_right {
-	  //     display: inline-block;
-	  //     height: 0.3rem;
-	  //     width: 1.87rem;
-	  //     line-height: 0.2rem;
-	  //     text-align: center;
-	  //   }
-	  //
-	  //   .tab_list .b_right {
-	  //     font-size: 14px;
-	  //   }
-	  //
-	  //   .line {
-	  //     height: 0.0365rem;
-	  //     width: 0.58rem;
-	  //     background: #FF4A7D;
-	  //     position: absolute;
-	  //     bottom: 0;
-	  //     left: 0.66rem;
-	  //   }
-	  //   .line2 {
-	  //     height: 0.0365rem;
-	  //     width: 0.58rem;
-	  //     background: #FF4A7D;
-	  //     position: absolute;
-	  //     bottom: 0;
-	  //     right: 0.64rem;
-	  //   }
-	  //   .up {
-	  //     position: absolute;
-	  //     bottom: 0.1rem;
-	  //     left: 0.1rem;
-	  //   }
-	  //   .color1 {
-	  //     color: #FF4A7D;
-	  //   }
-	  //
-	  //
-	  //
-	  //
-	  //   .item {
-	  //     font-size: 0;
-	  //     vertical-align: top;
-	  //     background: white;
-	  //     padding-top: 0.1rem;
-	  //     padding-bottom: 0.1rem;
-	  //     padding-left: 0.1rem;
-	  //     padding-right: 0.1rem;
-	  //     border-bottom: 1px solid #E1E1E1;
-	  //     position: relative;
-	  //   }
-	  //   .rea>div{
-	  //     display: inline-block;
-	  //     vertical-align: top;
-	  //   }
-	  //   .item_title{
-	  //     color: #333333;
-	  //     font-size: 14px;
-	  //     overflow: hidden;
-	  //     text-overflow: ellipsis;
-	  //     -webkit-box-orient: vertical;
-	  //     -webkit-line-clamp: 2;
-	  //     display: -webkit-box;
-	  //     max-width: 2.6rem;
-	  //     margin-bottom: 0.08rem;
-	  //     line-height: 0.2rem;
-	  //   }
-	  //   .item_timee{
-	  //     font-size: 0;
-	  //   }
-	  //   .item_timee>div{
-	  //     display: inline-block;
-	  //     vertical-align: top;
-	  //   }
-	  //   .item_date{
-	  //     color: #999999;
-	  //     font-size: 11px;
-	  //     line-height: 0.1rem;
-	  //     padding-right: 0.1rem;
-	  //     border-right: 1px solid #999999;
-	  //     margin-right: 0.1rem;
-	  //   }
-	  //   .item_count{
-	  //     color: #999999;
-	  //     font-size: 11px;
-	  //     line-height: 0.1rem;
-	  //     padding-right: 0.1rem;
-	  //     border-right: 1px solid #999999;
-	  //     margin-right: 0.1rem;
-	  //   }
-	  //   .item_time{
-	  //     color: #999999;
-	  //     font-size: 11px;
-	  //     height: 0.1rem;
-	  //   }
-	  //   .clock{
-	  //     display: inline-block;
-	  //     height: 0.1rem;
-	  //     width: 0.1rem;
-	  //     background-image: url(//pic.davdian.com/free/2017/05/04/history.png);
-	  //     background-size: 0.1rem 0.1rem;
-	  //     background-repeat: no-repeat;
-	  //     vertical-align: top;
-	  //   }
-	  //   .times{
-	  //     display: inline-block;
-	  //     height: 0.1rem;
-	  //     line-height: 0.1rem;
-	  //     vertical-align: top;
-	  //   }
-	  //   .item_right{
-	  //     position: absolute;
-	  //     right: 0;
-	  //     top: 50%;
-	  //     width: 0.34rem;
-	  //     height: 0.34rem;
-	  //     margin-top: -0.17rem;
-	  //   }
-	  //   .item_right2{
-	  //     position: absolute;
-	  //     right: 0;
-	  //     top: 50%;
-	  //     margin-top: -0.12rem;
-	  //   }
-	  //   .item_right img{
-	  //     height: 0.34rem;
-	  //     width: 0.34rem;
-	  //     border-radius: 50%;
-	  //   }
-	  //   .item_right>div{
-	  //     position: absolute;
-	  //     top: 0;
-	  //     left: 0;
-	  //     width: 0.34rem;
-	  //     height: 0.34rem;
-	  //   }
-	  //   .circle_mask{
-	  //     width: 0.34rem;
-	  //     height: 0.34rem;
-	  //     border-radius:50%;
-	  //     background: #000000;
-	  //     opacity:0.3;
-	  //     z-index:2;
-	  //   }
-	  //   .mask_play,.mask_stop,.disable{
-	  //     z-index:3;
-	  //   }
-	  //
-	  //
-	  //
-	  //   .free{
-	  //     width: 0.64rem;
-	  //     height: 0.22rem;
-	  //     border-radius: 37px;
-	  //     color: #FF4A7D;
-	  //     border: 0.5px solid #FF4A7D;
-	  //     font-size: 12px;
-	  //     text-align: center;
-	  //     line-height: 0.22rem;
-	  //   }
-	  //   .rea{
-	  //     position: relative;
-	  //   }
-	  //
-	  //
-	  //   .top{
-	  //     margin-top: 0.12rem;
-	  //   }
-	  //   .empty_tab{
-	  //     height: 0.5rem;
-	  //   }
-	  //   .tab_fixed{
-	  //     position: fixed;
-	  //     top: 44px;
-	  //     z-index:999;
-	  //   }
-	  //   .tab_fixed2{
-	  //     position: fixed;
-	  //     top:0;
-	  //     z-index:999;
-	  //   }
-	  // </style>
-
-	}; // <template>
-	//   <div class="top" id="top">
-	//     <div class="tab" id="tab2" :class="{ tab_fixed2 :empty_tab }" v-if="isApp">
-	//       <div class="tab_list" v-if="flag" @click="fn">
-	//         <div class="border color1" v-text="dataList.content"></div>
-	//         <div class="b_right" v-text="dataList.recommend"></div>
-	//         <div class="line"></div>
-	//       </div>
-	//       <div class="tab_list" v-if="!flag" @click="fn">
-	//         <div class="border" v-text="dataList.content"></div>
-	//         <div class="b_right color1" v-text="dataList.recommend"></div>
-	//         <div class="line2"></div>
-	//       </div>
-	//     </div>
-	//     <div class="tab" id="tab" :class="{ tab_fixed :empty_tab }" v-if="!isApp">
-	//       <div class="tab_list" v-if="flag" @click="fn">
-	//         <div class="border color1" v-text="dataList.content"></div>
-	//         <div class="b_right" v-text="dataList.recommend"></div>
-	//         <div class="line"></div>
-	//       </div>
-	//       <div class="tab_list" v-if="!flag" @click="fn">
-	//         <div class="border" v-text="dataList.content"></div>
-	//         <div class="b_right color1" v-text="dataList.recommend"></div>
-	//         <div class="line2"></div>
-	//       </div>
-	//     </div>
-	//     <div class="empty_tab" v-if="empty_tab"></div>
-	//     <div v-if="flag">
-	//       <div class="update">
-	//         <div class="up">
-	//           已更新<span class="color1" v-text="dataList.up"></span>期，计划更新<span class="color1" v-text="dataList.ex"></span>期
-	//         </div>
-	//       </div>
-	//       <div class="list">
-	//         <div class="item" v-for="(item,index) in contentList" @click.stop="go_href(item.albumId,item.sortNo)" >
-	//           <div class="rea">
-	//             <div class="item_left">
-	//               <div class="item_title" v-text="item.music"></div>
-	//               <div class="item_timee">
-	//                 <div class="item_date" v-text="getLocalTime(item.update_time)"></div>
-	//                 <div class="item_count"><span v-text="item.number"></span>次播放</div>
-	//                 <div class="item_time">
-	//                   <div class="clock"></div>
-	//                   <div class="times" v-text="timeFormat(item.time)"></div>
-	//                 </div>
-	//               </div>
-	//             </div>
-	//             <div class="item_right" v-if="item.isFree==0 || (item.isFree==1 && item.isSub==1)">
-	//               <div class="mask_stop" v-if="(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-	//               <div class="mask_play" v-if="!(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
-	//               <div class="circle_mask"></div>
-	//               <div><img :src="item.imageUrl" alt=""></div>
-	//             </div>
-	//             <div class="item_right" v-if="item.isFree==1 && item.isSub==0 && item.isPlay==0">
-	//               <div class="disable" @click.stop="stop_info"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-	//               <div class="circle_mask"></div>
-	//               <div><img :src="item.imageUrl" alt=""></div>
-	//             </div>
-	//             <div class="item_right2" v-if="item.isFree==1 && item.isSub==0 && item.isPlay==1" @click="go_href(item.albumId,item.sortNo)">
-	//               <div class="free">免费试听</div>
-	//             </div>
-	//
-	//           </div>
-	//         </div>
-	//       </div>
-	//     </div>
-	//
-	//     <div v-if="!flag" v-html="dataList.recommendData">
-	//
-	//     </div>
-	//     <maskk v-if="isApp && maskFlag"></maskk>
-	//     <maskk2 v-if="!isApp && maskFlag"></maskk2>
-	//   </div>
-	// </template>
-	// <script>
-
-/***/ },
-/* 418 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var axios = __webpack_require__(254);
-	var crypto = __webpack_require__(419);
-	__webpack_require__(280).polyfill();
-	var strSign = function strSign(obj) {
-	  var strObj = sortObj(obj);
-	  var str = '';
-	  for (var i in strObj) {
-	    str += i + '=' + strObj[i] + '&';
-	  }
-	  return str;
-	};
-
-	var sortObj = function sortObj(obj) {
-	  var string = '';
-	  var strObj = {};
-	  var t = null;
-	  var tValue = null;
-	  var arrKey = ['shop_url', 'sess_key', 'device_token', 'format', 'ts', 'osv', 'wh', 'data_version'];
-	  var osv = "web_h5_*_*";
-	  if (window.Units && Units.isApp() && Units.isIOS()) {
-	    osv = "web_ios_*_*";
-	  }
-	  if (window.Units && Units.isApp() && Units.isAndroid()) {
-	    osv = "web_android_*_*";
-	  }
-	  var arrValue = [location.href.split("/").slice(0, 3).join("/"), document.cookie.split(';').filter(function (x) {
-	    return x.indexOf("dvdsid") > -1;
-	  })[0] ? document.cookie.split(';').filter(function (x) {
-	    return x.indexOf("dvdsid") > -1;
-	  })[0].split("=")[1] : 0, "", 'json', new Date().getTime(), osv, '750_1334', 0];
-	  if (obj) {
-	    for (var p in obj) {
-	      arrKey.push(p);
-	      arrValue.push(obj[p]);
-	    }
-	  }
-	  for (var i = 0; i < arrKey.length; i++) {
-	    for (var j = 0; j < arrKey.length - i - 1; j++) {
-	      if (arrKey[j] > arrKey[j + 1]) {
-	        t = arrKey[j + 1];
-	        arrKey[j + 1] = arrKey[j];
-	        arrKey[j] = t;
-
-	        tValue = arrValue[j + 1];
-	        arrValue[j + 1] = arrValue[j];
-	        arrValue[j] = tValue;
-	      }
-	    }
-	  }
-	  for (var _i = 0; _i < arrKey.length; _i++) {
-	    strObj[arrKey[_i]] = arrValue[_i];
-	  }
-	  for (var _p in strObj) {
-	    string += _p + '=' + strObj[_p];
-	  }
-	  var sign = crypto.createHash('md5').update(string, 'utf8').digest('hex').toUpperCase();
-	  strObj.sign = sign;
-	  return strObj;
-	};
-	var isPrivateMode = function isPrivateMode() {
-	  try {
-	    localStorage.setItem('isPrivateMode', '1');
-	    localStorage.removeItem('isPrivateMode');
-	    return true;
-	  } catch (e) {
-	    return false;
-	  }
-	};
-
-	var api = function api(url, o, key) {
-	  var obj = o || {};
-	  if (key && isPrivateMode && sessionStorage.getItem(key) && JSON.parse(sessionStorage.getItem(key))) {
-	    return new Promise(function (resolve, reject) {
-	      resolve(JSON.parse(sessionStorage.getItem(key)));
-	    });
-	  } else {
-	    var urlT = url + '?' + new Date().getTime();
-	    return axios.post(urlT, strSign(obj)).then(function (respone) {
-	      if (key && isPrivateMode) sessionStorage.setItem(key, JSON.stringify(respone.data));
-	      return respone.data;
-	    });
-	  }
-	};
-	exports.default = api;
-
-/***/ },
-/* 419 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var rng = __webpack_require__(424)
-
-	function error () {
-	  var m = [].slice.call(arguments).join(' ')
-	  throw new Error([
-	    m,
-	    'we accept pull requests',
-	    'http://github.com/dominictarr/crypto-browserify'
-	    ].join('\n'))
-	}
-
-	exports.createHash = __webpack_require__(426)
-
-	exports.createHmac = __webpack_require__(438)
-
-	exports.randomBytes = function(size, callback) {
-	  if (callback && callback.call) {
-	    try {
-	      callback.call(this, undefined, new Buffer(rng(size)))
-	    } catch (err) { callback(err) }
-	  } else {
-	    return new Buffer(rng(size))
-	  }
-	}
-
-	function each(a, f) {
-	  for(var i in a)
-	    f(a[i], i)
-	}
-
-	exports.getHashes = function () {
-	  return ['sha1', 'sha256', 'sha512', 'md5', 'rmd160']
-	}
-
-	var p = __webpack_require__(439)(exports)
-	exports.pbkdf2 = p.pbkdf2
-	exports.pbkdf2Sync = p.pbkdf2Sync
-
-
-	// the least I can do is make error messages for the rest of the node.js/crypto api.
-	each(['createCredentials'
-	, 'createCipher'
-	, 'createCipheriv'
-	, 'createDecipher'
-	, 'createDecipheriv'
-	, 'createSign'
-	, 'createVerify'
-	, 'createDiffieHellman'
-	], function (name) {
-	  exports[name] = function () {
-	    error('sorry,', name, 'is not implemented yet')
-	  }
-	})
-
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(420).Buffer))
-
-/***/ },
-/* 420 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(Buffer, global) {/*!
-	 * The buffer module from node.js, for the browser.
-	 *
-	 * @author   Feross Aboukhadijeh <feross@feross.org> <http://feross.org>
-	 * @license  MIT
-	 */
-	/* eslint-disable no-proto */
-
-	'use strict'
-
-	var base64 = __webpack_require__(421)
-	var ieee754 = __webpack_require__(422)
-	var isArray = __webpack_require__(423)
-
-	exports.Buffer = Buffer
-	exports.SlowBuffer = SlowBuffer
-	exports.INSPECT_MAX_BYTES = 50
-
-	/**
-	 * If `Buffer.TYPED_ARRAY_SUPPORT`:
-	 *   === true    Use Uint8Array implementation (fastest)
-	 *   === false   Use Object implementation (most compatible, even IE6)
-	 *
-	 * Browsers that support typed arrays are IE 10+, Firefox 4+, Chrome 7+, Safari 5.1+,
-	 * Opera 11.6+, iOS 4.2+.
-	 *
-	 * Due to various browser bugs, sometimes the Object implementation will be used even
-	 * when the browser supports typed arrays.
-	 *
-	 * Note:
-	 *
-	 *   - Firefox 4-29 lacks support for adding new properties to `Uint8Array` instances,
-	 *     See: https://bugzilla.mozilla.org/show_bug.cgi?id=695438.
-	 *
-	 *   - Chrome 9-10 is missing the `TypedArray.prototype.subarray` function.
-	 *
-	 *   - IE10 has a broken `TypedArray.prototype.subarray` function which returns arrays of
-	 *     incorrect length in some situations.
-
-	 * We detect these buggy browsers and set `Buffer.TYPED_ARRAY_SUPPORT` to `false` so they
-	 * get the Object implementation, which is slower but behaves correctly.
-	 */
-	Buffer.TYPED_ARRAY_SUPPORT = global.TYPED_ARRAY_SUPPORT !== undefined
-	  ? global.TYPED_ARRAY_SUPPORT
-	  : typedArraySupport()
-
-	/*
-	 * Export kMaxLength after typed array support is determined.
-	 */
-	exports.kMaxLength = kMaxLength()
-
-	function typedArraySupport () {
-	  try {
-	    var arr = new Uint8Array(1)
-	    arr.__proto__ = {__proto__: Uint8Array.prototype, foo: function () { return 42 }}
-	    return arr.foo() === 42 && // typed array instances can be augmented
-	        typeof arr.subarray === 'function' && // chrome 9-10 lack `subarray`
-	        arr.subarray(1, 1).byteLength === 0 // ie10 has broken `subarray`
-	  } catch (e) {
-	    return false
-	  }
-	}
-
-	function kMaxLength () {
-	  return Buffer.TYPED_ARRAY_SUPPORT
-	    ? 0x7fffffff
-	    : 0x3fffffff
-	}
-
-	function createBuffer (that, length) {
-	  if (kMaxLength() < length) {
-	    throw new RangeError('Invalid typed array length')
-	  }
-	  if (Buffer.TYPED_ARRAY_SUPPORT) {
-	    // Return an augmented `Uint8Array` instance, for best performance
-	    that = new Uint8Array(length)
-	    that.__proto__ = Buffer.prototype
-	  } else {
-	    // Fallback: Return an object instance of the Buffer class
-	    if (that === null) {
-	      that = new Buffer(length)
-	    }
-	    that.length = length
-	  }
-
-	  return that
-	}
-
-	/**
-	 * The Buffer constructor returns instances of `Uint8Array` that have their
-	 * prototype changed to `Buffer.prototype`. Furthermore, `Buffer` is a subclass of
-	 * `Uint8Array`, so the returned instances will have all the node `Buffer` methods
-	 * and the `Uint8Array` methods. Square bracket notation works as expected -- it
-	 * returns a single octet.
-	 *
-	 * The `Uint8Array` prototype remains unmodified.
-	 */
-
-	function Buffer (arg, encodingOrOffset, length) {
-	  if (!Buffer.TYPED_ARRAY_SUPPORT && !(this instanceof Buffer)) {
-	    return new Buffer(arg, encodingOrOffset, length)
-	  }
-
-	  // Common case.
-	  if (typeof arg === 'number') {
-	    if (typeof encodingOrOffset === 'string') {
-	      throw new Error(
-	        'If encoding is specified then the first argument must be a string'
-	      )
-	    }
-	    return allocUnsafe(this, arg)
-	  }
-	  return from(this, arg, encodingOrOffset, length)
-	}
-
-	Buffer.poolSize = 8192 // not used by this implementation
-
-	// TODO: Legacy, not needed anymore. Remove in next major version.
-	Buffer._augment = function (arr) {
-	  arr.__proto__ = Buffer.prototype
-	  return arr
-	}
-
-	function from (that, value, encodingOrOffset, length) {
-	  if (typeof value === 'number') {
-	    throw new TypeError('"value" argument must not be a number')
-	  }
-
-	  if (typeof ArrayBuffer !== 'undefined' && value instanceof ArrayBuffer) {
-	    return fromArrayBuffer(that, value, encodingOrOffset, length)
-	  }
-
-	  if (typeof value === 'string') {
-	    return fromString(that, value, encodingOrOffset)
-	  }
-
-	  return fromObject(that, value)
-	}
-
-	/**
-	 * Functionally equivalent to Buffer(arg, encoding) but throws a TypeError
-	 * if value is a number.
-	 * Buffer.from(str[, encoding])
-	 * Buffer.from(array)
-	 * Buffer.from(buffer)
-	 * Buffer.from(arrayBuffer[, byteOffset[, length]])
-	 **/
-	Buffer.from = function (value, encodingOrOffset, length) {
-	  return from(null, value, encodingOrOffset, length)
-	}
-
-	if (Buffer.TYPED_ARRAY_SUPPORT) {
-	  Buffer.prototype.__proto__ = Uint8Array.prototype
-	  Buffer.__proto__ = Uint8Array
-	  if (typeof Symbol !== 'undefined' && Symbol.species &&
-	      Buffer[Symbol.species] === Buffer) {
-	    // Fix subarray() in ES2016. See: https://github.com/feross/buffer/pull/97
-	    Object.defineProperty(Buffer, Symbol.species, {
-	      value: null,
-	      configurable: true
-	    })
-	  }
-	}
-
-	function assertSize (size) {
-	  if (typeof size !== 'number') {
-	    throw new TypeError('"size" argument must be a number')
-	  } else if (size < 0) {
-	    throw new RangeError('"size" argument must not be negative')
-	  }
-	}
-
-	function alloc (that, size, fill, encoding) {
-	  assertSize(size)
-	  if (size <= 0) {
-	    return createBuffer(that, size)
-	  }
-	  if (fill !== undefined) {
-	    // Only pay attention to encoding if it's a string. This
-	    // prevents accidentally sending in a number that would
-	    // be interpretted as a start offset.
-	    return typeof encoding === 'string'
-	      ? createBuffer(that, size).fill(fill, encoding)
-	      : createBuffer(that, size).fill(fill)
-	  }
-	  return createBuffer(that, size)
-	}
-
-	/**
-	 * Creates a new filled Buffer instance.
-	 * alloc(size[, fill[, encoding]])
-	 **/
-	Buffer.alloc = function (size, fill, encoding) {
-	  return alloc(null, size, fill, encoding)
-	}
-
-	function allocUnsafe (that, size) {
-	  assertSize(size)
-	  that = createBuffer(that, size < 0 ? 0 : checked(size) | 0)
-	  if (!Buffer.TYPED_ARRAY_SUPPORT) {
-	    for (var i = 0; i < size; ++i) {
-	      that[i] = 0
-	    }
-	  }
-	  return that
-	}
-
-	/**
-	 * Equivalent to Buffer(num), by default creates a non-zero-filled Buffer instance.
-	 * */
-	Buffer.allocUnsafe = function (size) {
-	  return allocUnsafe(null, size)
-	}
-	/**
-	 * Equivalent to SlowBuffer(num), by default creates a non-zero-filled Buffer instance.
-	 */
-	Buffer.allocUnsafeSlow = function (size) {
-	  return allocUnsafe(null, size)
-	}
-
-	function fromString (that, string, encoding) {
-	  if (typeof encoding !== 'string' || encoding === '') {
-	    encoding = 'utf8'
-	  }
-
-	  if (!Buffer.isEncoding(encoding)) {
-	    throw new TypeError('"encoding" must be a valid string encoding')
-	  }
-
-	  var length = byteLength(string, encoding) | 0
-	  that = createBuffer(that, length)
-
-	  var actual = that.write(string, encoding)
-
-	  if (actual !== length) {
-	    // Writing a hex string, for example, that contains invalid characters will
-	    // cause everything after the first invalid character to be ignored. (e.g.
-	    // 'abxxcd' will be treated as 'ab')
-	    that = that.slice(0, actual)
-	  }
-
-	  return that
-	}
-
-	function fromArrayLike (that, array) {
-	  var length = array.length < 0 ? 0 : checked(array.length) | 0
-	  that = createBuffer(that, length)
-	  for (var i = 0; i < length; i += 1) {
-	    that[i] = array[i] & 255
-	  }
-	  return that
-	}
-
-	function fromArrayBuffer (that, array, byteOffset, length) {
-	  array.byteLength // this throws if `array` is not a valid ArrayBuffer
-
-	  if (byteOffset < 0 || array.byteLength < byteOffset) {
-	    throw new RangeError('\'offset\' is out of bounds')
-	  }
-
-	  if (array.byteLength < byteOffset + (length || 0)) {
-	    throw new RangeError('\'length\' is out of bounds')
-	  }
-
-	  if (byteOffset === undefined && length === undefined) {
-	    array = new Uint8Array(array)
-	  } else if (length === undefined) {
-	    array = new Uint8Array(array, byteOffset)
-	  } else {
-	    array = new Uint8Array(array, byteOffset, length)
-	  }
-
-	  if (Buffer.TYPED_ARRAY_SUPPORT) {
-	    // Return an augmented `Uint8Array` instance, for best performance
-	    that = array
-	    that.__proto__ = Buffer.prototype
-	  } else {
-	    // Fallback: Return an object instance of the Buffer class
-	    that = fromArrayLike(that, array)
-	  }
-	  return that
-	}
-
-	function fromObject (that, obj) {
-	  if (Buffer.isBuffer(obj)) {
-	    var len = checked(obj.length) | 0
-	    that = createBuffer(that, len)
-
-	    if (that.length === 0) {
-	      return that
-	    }
-
-	    obj.copy(that, 0, 0, len)
-	    return that
-	  }
-
-	  if (obj) {
-	    if ((typeof ArrayBuffer !== 'undefined' &&
-	        obj.buffer instanceof ArrayBuffer) || 'length' in obj) {
-	      if (typeof obj.length !== 'number' || isnan(obj.length)) {
-	        return createBuffer(that, 0)
-	      }
-	      return fromArrayLike(that, obj)
-	    }
-
-	    if (obj.type === 'Buffer' && isArray(obj.data)) {
-	      return fromArrayLike(that, obj.data)
-	    }
-	  }
-
-	  throw new TypeError('First argument must be a string, Buffer, ArrayBuffer, Array, or array-like object.')
-	}
-
-	function checked (length) {
-	  // Note: cannot use `length < kMaxLength()` here because that fails when
-	  // length is NaN (which is otherwise coerced to zero.)
-	  if (length >= kMaxLength()) {
-	    throw new RangeError('Attempt to allocate Buffer larger than maximum ' +
-	                         'size: 0x' + kMaxLength().toString(16) + ' bytes')
-	  }
-	  return length | 0
-	}
-
-	function SlowBuffer (length) {
-	  if (+length != length) { // eslint-disable-line eqeqeq
-	    length = 0
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 	  }
 
 	  return newBuf
@@ -32107,7 +29877,7 @@
 /* 429 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"top\" id=\"top\" _v-236acfbd=\"\">\n  <div class=\"tab\" id=\"tab2\" :class=\"{ tab_fixed2 :empty_tab }\" v-if=\"isApp\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n  <div class=\"tab\" id=\"tab\" :class=\"{ tab_fixed :empty_tab }\" v-if=\"!isApp\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n  <div class=\"empty_tab\" v-if=\"empty_tab\" _v-236acfbd=\"\"></div>\n  <div v-if=\"flag\" _v-236acfbd=\"\">\n    <div class=\"update\" _v-236acfbd=\"\">\n      <div class=\"up\" _v-236acfbd=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-236acfbd=\"\"></span>期，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-236acfbd=\"\"></span>期\n      </div>\n    </div>\n    <div class=\"list\" _v-236acfbd=\"\">\n      <div class=\"item\" v-for=\"(item,index) in contentList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n        <div class=\"rea\" _v-236acfbd=\"\">\n          <div class=\"item_left\" _v-236acfbd=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-236acfbd=\"\"></div>\n            <div class=\"item_timee\" _v-236acfbd=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-236acfbd=\"\"></div>\n              <div class=\"item_count\" _v-236acfbd=\"\"><span v-text=\"item.number\" _v-236acfbd=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-236acfbd=\"\">\n                <div class=\"clock\" _v-236acfbd=\"\"></div>\n                <div class=\"times\" v-text=\"timeFormat(item.time)\" _v-236acfbd=\"\"></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==0 || (item.isFree==1 &amp;&amp; item.isSub==1)\" _v-236acfbd=\"\">\n            <div class=\"mask_stop\" v-if=\"(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_play\" v-if=\"!(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==0\" _v-236acfbd=\"\">\n            <div class=\"disable\" @click.stop=\"stop_info(item.albumId)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==1\" @click=\"go_href(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n            <div class=\"free\" _v-236acfbd=\"\">免费试听</div>\n          </div>\n\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"!flag\" v-html=\"dataList.recommendData\" _v-236acfbd=\"\">\n\n  </div>\n  <maskk v-if=\"isApp &amp;&amp; maskFlag\" _v-236acfbd=\"\"></maskk>\n  <maskk2 v-if=\"!isApp &amp;&amp; maskFlag\" _v-236acfbd=\"\"></maskk2>\n</div>\n";
+	module.exports = "\n<div class=\"top\" id=\"top\" _v-236acfbd=\"\">\n  <div class=\"tab\" id=\"tab2\" :class=\"{ tab_fixed2 :empty_tab }\" v-if=\"isApp\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n  <div class=\"tab\" id=\"tab\" :class=\"{ tab_fixed :empty_tab }\" v-if=\"!isApp\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n  <div class=\"empty_tab\" v-if=\"empty_tab\" _v-236acfbd=\"\"></div>\n  <div v-if=\"flag\" _v-236acfbd=\"\">\n    <div class=\"update\" _v-236acfbd=\"\">\n      <div class=\"up\" _v-236acfbd=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-236acfbd=\"\"></span>期，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-236acfbd=\"\"></span>期\n      </div>\n    </div>\n    <div class=\"list\" _v-236acfbd=\"\">\n      <div class=\"item\" v-for=\"(item,index) in contentList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n        <div class=\"rea\" _v-236acfbd=\"\">\n          <div class=\"item_left\" _v-236acfbd=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-236acfbd=\"\"></div>\n            <div class=\"item_timee\" _v-236acfbd=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-236acfbd=\"\"></div>\n              <div class=\"item_count\" _v-236acfbd=\"\"><span v-text=\"item.number\" _v-236acfbd=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-236acfbd=\"\">\n                <div class=\"clock\" _v-236acfbd=\"\"></div>\n                <div class=\"times\" v-text=\"timeFormat(item.time)\" _v-236acfbd=\"\"></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"item_right\" v-if=\"isFree==0 || (isFree==1 &amp;&amp; item.isSub==1)\" _v-236acfbd=\"\">\n            <div class=\"mask_stop\" v-if=\"(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_play\" v-if=\"!(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right\" v-if=\"isFree==1 &amp;&amp; item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==0\" _v-236acfbd=\"\">\n            <div class=\"disable\" @click.stop=\"stop_info(item.albumId)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"isFree==1 &amp;&amp; item.isFree==0 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==1\" @click=\"go_href(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n            <div class=\"free\" _v-236acfbd=\"\">免费试听</div>\n          </div>\n\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"!flag\" v-html=\"dataList.recommendData\" _v-236acfbd=\"\">\n\n  </div>\n  <maskk v-if=\"isApp &amp;&amp; maskFlag\" _v-236acfbd=\"\"></maskk>\n  <maskk2 v-if=\"!isApp &amp;&amp; maskFlag\" _v-236acfbd=\"\"></maskk2>\n</div>\n";
 
 /***/ },
 /* 430 */
@@ -32834,11 +30604,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-f832942c/index.vue"
-=======
-	  var id = "_v-7b00a7e2/mask.vue"
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -32862,13 +30628,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
 				var newContent = require("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue");
-=======
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7b00a7e2&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7b00a7e2&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask.vue");
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -32886,11 +30647,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, ".vux-fade-enter-active,\n.vux-fade-leave-active {\n  opacity: 1;\n  -webkit-transition: opacity linear 0.2s;\n  transition: opacity linear 0.2s;\n}\n.vux-fade-enter,\n.vux-fade-leave-to {\n  opacity: 0;\n}\n.vux-dialog-enter-active,\n.vux-dialog-leave-active {\n  opacity: 1;\n  -webkit-transition-duration: 400ms;\n          transition-duration: 400ms;\n  -webkit-transform: translate(-50%, -50%) scale(1) !important;\n      -ms-transform: translate(-50%, -50%) scale(1) !important;\n          transform: translate(-50%, -50%) scale(1) !important;\n  -webkit-transition-property: opacity, -webkit-transform!important;\n  transition-property: opacity, -webkit-transform!important;\n  transition-property: transform, opacity!important;\n  transition-property: transform, opacity, -webkit-transform!important;\n}\n.vux-dialog-leave-active {\n  -webkit-transition-duration: 300ms;\n          transition-duration: 300ms;\n}\n.vux-dialog-enter {\n  opacity: 0;\n  -webkit-transform: translate(-50%, -50%) scale(1.185) !important;\n      -ms-transform: translate(-50%, -50%) scale(1.185) !important;\n          transform: translate(-50%, -50%) scale(1.185) !important;\n}\n.vux-dialog-leave-active {\n  opacity: 0;\n  -webkit-transform: translate(-50%, -50%) scale(0.85) !important;\n      -ms-transform: translate(-50%, -50%) scale(0.85) !important;\n          transform: translate(-50%, -50%) scale(0.85) !important;\n}\n.vux-mask-enter,\n.vux-mask-leave-active {\n  opacity: 0;\n}\n.vux-mask-leave-active,\n.vux-mask-enter-active {\n  -webkit-transition: opacity 300ms;\n  transition: opacity 300ms;\n}\n/**\n* actionsheet\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/* alias */\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* form-preview\n*/\n/**\n* load-more\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* toast\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* search\n*/\n/**\n* radio\n*/\n.weui-mask {\n  position: fixed;\n  z-index: 1000;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background: rgba(0, 0, 0, 0.6);\n}\n.weui-mask_transparent {\n  position: fixed;\n  z-index: 1000;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n}\n.weui-dialog {\n  position: fixed;\n  z-index: 5000;\n  width: 80%;\n  max-width: 300px;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n      -ms-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  background-color: #FFFFFF;\n  text-align: center;\n  border-radius: 3px;\n  overflow: hidden;\n}\n.weui-dialog__hd {\n  padding: 1.3em 1.6em 0.5em;\n}\n.weui-dialog__title {\n  font-weight: 400;\n  font-size: 18px;\n}\n.weui-dialog__bd {\n  padding: 0 1.6em 0.8em;\n  min-height: 40px;\n  font-size: 15px;\n  line-height: 1.3;\n  word-wrap: break-word;\n  word-break: break-all;\n  color: #999999;\n}\n.weui-dialog__bd:first-child {\n  padding: 2.7em 20px 1.7em;\n  color: #353535;\n}\n.weui-dialog__ft {\n  position: relative;\n  line-height: 48px;\n  font-size: 18px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.weui-dialog__ft:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D5D5D6;\n  color: #D5D5D6;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-dialog__btn {\n  display: block;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  color: #3CC51F;\n  text-decoration: none;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  position: relative;\n}\n.weui-dialog__btn:active {\n  background-color: #EEEEEE;\n}\n.weui-dialog__btn:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 1px;\n  bottom: 0;\n  border-left: 1px solid #D5D5D6;\n  color: #D5D5D6;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleX(0.5);\n      -ms-transform: scaleX(0.5);\n          transform: scaleX(0.5);\n}\n.weui-dialog__btn:first-child:after {\n  display: none;\n}\n.weui-dialog__btn_default {\n  color: #353535;\n}\n.weui-dialog__btn_primary {\n  color: #0BB20C;\n}\n.weui-skin_android .weui-dialog {\n  text-align: left;\n  -webkit-box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);\n          box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);\n}\n.weui-skin_android .weui-dialog__title {\n  font-size: 21px;\n}\n.weui-skin_android .weui-dialog__hd {\n  text-align: left;\n}\n.weui-skin_android .weui-dialog__bd {\n  color: #999999;\n  padding: 0.25em 1.6em 2em;\n  font-size: 17px;\n  text-align: left;\n}\n.weui-skin_android .weui-dialog__bd:first-child {\n  padding: 1.6em 1.6em 2em;\n  color: #353535;\n}\n.weui-skin_android .weui-dialog__ft {\n  display: block;\n  text-align: right;\n  line-height: 42px;\n  font-size: 16px;\n  padding: 0 1.6em 0.7em;\n}\n.weui-skin_android .weui-dialog__ft:after {\n  display: none;\n}\n.weui-skin_android .weui-dialog__btn {\n  display: inline-block;\n  vertical-align: top;\n  padding: 0 .8em;\n}\n.weui-skin_android .weui-dialog__btn:after {\n  display: none;\n}\n.weui-skin_android .weui-dialog__btn:active {\n  background-color: rgba(0, 0, 0, 0.06);\n}\n.weui-skin_android .weui-dialog__btn:visited {\n  background-color: rgba(0, 0, 0, 0.06);\n}\n.weui-skin_android .weui-dialog__btn:last-child {\n  margin-right: -0.8em;\n}\n.weui-skin_android .weui-dialog__btn_default {\n  color: #808080;\n}\n@media screen and (min-width: 1024px) {\n  .weui-dialog {\n    width: 35%;\n  }\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mask[_v-7b00a7e2]{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #F1F1F1;\n  z-index: 12;\n}\n.banner[_v-7b00a7e2]{\n  margin-top: 1rem;\n\n}\n.btn[_v-7b00a7e2]{\n  width: 1.44rem;\n  height: 0.33rem;\n  border-radius: 100px;\n  border:1px solid #999999;\n  color: #333333;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.33rem;\n  margin: 0 auto;\n}\n\n.banner[_v-7b00a7e2]{\n  position: fixed;\n  top: 0;\n  z-index: 13;\n  text-align: center;\n  width: 3.75rem;\n}\n.big_img[_v-7b00a7e2]{\n  height: 1.2rem;\n  width: 1.2rem;\n  margin: 0 auto;\n}\n.big_img img[_v-7b00a7e2]{\n  height: 1.2rem;\n  width: 1.2rem;\n}\n", ""]);
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 
 	// exports
 
@@ -32963,7 +30720,6 @@
 	  // @import '../../styles/weui/widget/weui_tips/weui_dialog';
 	  // </style>
 
-<<<<<<< HEAD
 	}; // <template>
 	//   <div class="vux-alert">
 	//     <x-dialog
@@ -32996,15 +30752,6 @@
 	// </i18n>
 	//
 	// <script>
-=======
-	};
-
-/***/ },
-/* 445 */
-/***/ function(module, exports) {
-
-	module.exports = "\n<div _v-7b00a7e2=\"\">\n  <div class=\"mask\" _v-7b00a7e2=\"\"></div>\n  <div class=\"banner\" _v-7b00a7e2=\"\">\n    <div class=\"big_img\" _v-7b00a7e2=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-7b00a7e2=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-7b00a7e2=\"\">合辑没有音频啊</div>\n    <!--<div class=\"btn\" style=\"margin-top: 0.2rem;\" @click=\"reload\">点击重新加载</div>-->\n  </div>\n</div>\n";
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 
 /***/ },
 /* 446 */
@@ -33034,11 +30781,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-2a6eedc5/index.vue"
-=======
-	  var id = "_v-35a80480/mask2.vue"
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -33062,13 +30805,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
 				var newContent = require("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue");
-=======
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-35a80480&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask2.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-35a80480&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask2.vue");
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -33086,11 +30824,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, ".vux-fade-enter-active,\n.vux-fade-leave-active {\n  opacity: 1;\n  -webkit-transition: opacity linear 0.2s;\n  transition: opacity linear 0.2s;\n}\n.vux-fade-enter,\n.vux-fade-leave-to {\n  opacity: 0;\n}\n.vux-dialog-enter-active,\n.vux-dialog-leave-active {\n  opacity: 1;\n  -webkit-transition-duration: 400ms;\n          transition-duration: 400ms;\n  -webkit-transform: translate(-50%, -50%) scale(1) !important;\n      -ms-transform: translate(-50%, -50%) scale(1) !important;\n          transform: translate(-50%, -50%) scale(1) !important;\n  -webkit-transition-property: opacity, -webkit-transform!important;\n  transition-property: opacity, -webkit-transform!important;\n  transition-property: transform, opacity!important;\n  transition-property: transform, opacity, -webkit-transform!important;\n}\n.vux-dialog-leave-active {\n  -webkit-transition-duration: 300ms;\n          transition-duration: 300ms;\n}\n.vux-dialog-enter {\n  opacity: 0;\n  -webkit-transform: translate(-50%, -50%) scale(1.185) !important;\n      -ms-transform: translate(-50%, -50%) scale(1.185) !important;\n          transform: translate(-50%, -50%) scale(1.185) !important;\n}\n.vux-dialog-leave-active {\n  opacity: 0;\n  -webkit-transform: translate(-50%, -50%) scale(0.85) !important;\n      -ms-transform: translate(-50%, -50%) scale(0.85) !important;\n          transform: translate(-50%, -50%) scale(0.85) !important;\n}\n.vux-mask-enter,\n.vux-mask-leave-active {\n  opacity: 0;\n}\n.vux-mask-leave-active,\n.vux-mask-enter-active {\n  -webkit-transition: opacity 300ms;\n  transition: opacity 300ms;\n}\n/**\n* actionsheet\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/* alias */\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* form-preview\n*/\n/**\n* load-more\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* toast\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* search\n*/\n/**\n* radio\n*/\n.weui-mask {\n  position: fixed;\n  z-index: 1000;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background: rgba(0, 0, 0, 0.6);\n}\n.weui-mask_transparent {\n  position: fixed;\n  z-index: 1000;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n}\n.weui-dialog {\n  position: fixed;\n  z-index: 5000;\n  width: 80%;\n  max-width: 300px;\n  top: 50%;\n  left: 50%;\n  -webkit-transform: translate(-50%, -50%);\n      -ms-transform: translate(-50%, -50%);\n          transform: translate(-50%, -50%);\n  background-color: #FFFFFF;\n  text-align: center;\n  border-radius: 3px;\n  overflow: hidden;\n}\n.weui-dialog__hd {\n  padding: 1.3em 1.6em 0.5em;\n}\n.weui-dialog__title {\n  font-weight: 400;\n  font-size: 18px;\n}\n.weui-dialog__bd {\n  padding: 0 1.6em 0.8em;\n  min-height: 40px;\n  font-size: 15px;\n  line-height: 1.3;\n  word-wrap: break-word;\n  word-break: break-all;\n  color: #999999;\n}\n.weui-dialog__bd:first-child {\n  padding: 2.7em 20px 1.7em;\n  color: #353535;\n}\n.weui-dialog__ft {\n  position: relative;\n  line-height: 48px;\n  font-size: 18px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex;\n}\n.weui-dialog__ft:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  right: 0;\n  height: 1px;\n  border-top: 1px solid #D5D5D6;\n  color: #D5D5D6;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleY(0.5);\n      -ms-transform: scaleY(0.5);\n          transform: scaleY(0.5);\n}\n.weui-dialog__btn {\n  display: block;\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n     -moz-box-flex: 1;\n      -ms-flex: 1;\n          flex: 1;\n  color: #3CC51F;\n  text-decoration: none;\n  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n  position: relative;\n}\n.weui-dialog__btn:active {\n  background-color: #EEEEEE;\n}\n.weui-dialog__btn:after {\n  content: \" \";\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 1px;\n  bottom: 0;\n  border-left: 1px solid #D5D5D6;\n  color: #D5D5D6;\n  -webkit-transform-origin: 0 0;\n      -ms-transform-origin: 0 0;\n          transform-origin: 0 0;\n  -webkit-transform: scaleX(0.5);\n      -ms-transform: scaleX(0.5);\n          transform: scaleX(0.5);\n}\n.weui-dialog__btn:first-child:after {\n  display: none;\n}\n.weui-dialog__btn_default {\n  color: #353535;\n}\n.weui-dialog__btn_primary {\n  color: #0BB20C;\n}\n.weui-skin_android .weui-dialog {\n  text-align: left;\n  -webkit-box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);\n          box-shadow: 0 6px 30px 0 rgba(0, 0, 0, 0.1);\n}\n.weui-skin_android .weui-dialog__title {\n  font-size: 21px;\n}\n.weui-skin_android .weui-dialog__hd {\n  text-align: left;\n}\n.weui-skin_android .weui-dialog__bd {\n  color: #999999;\n  padding: 0.25em 1.6em 2em;\n  font-size: 17px;\n  text-align: left;\n}\n.weui-skin_android .weui-dialog__bd:first-child {\n  padding: 1.6em 1.6em 2em;\n  color: #353535;\n}\n.weui-skin_android .weui-dialog__ft {\n  display: block;\n  text-align: right;\n  line-height: 42px;\n  font-size: 16px;\n  padding: 0 1.6em 0.7em;\n}\n.weui-skin_android .weui-dialog__ft:after {\n  display: none;\n}\n.weui-skin_android .weui-dialog__btn {\n  display: inline-block;\n  vertical-align: top;\n  padding: 0 .8em;\n}\n.weui-skin_android .weui-dialog__btn:after {\n  display: none;\n}\n.weui-skin_android .weui-dialog__btn:active {\n  background-color: rgba(0, 0, 0, 0.06);\n}\n.weui-skin_android .weui-dialog__btn:visited {\n  background-color: rgba(0, 0, 0, 0.06);\n}\n.weui-skin_android .weui-dialog__btn:last-child {\n  margin-right: -0.8em;\n}\n.weui-skin_android .weui-dialog__btn_default {\n  color: #808080;\n}\n@media screen and (min-width: 1024px) {\n  .weui-dialog {\n    width: 35%;\n  }\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mask[_v-35a80480]{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #F1F1F1;\n  z-index: 12;\n}\n.banner[_v-35a80480]{\n  margin-top: 1.44rem;\n\n}\n.btn[_v-35a80480]{\n  width: 1.44rem;\n  height: 0.33rem;\n  border-radius: 100px;\n  border:1px solid #999999;\n  color: #333333;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.33rem;\n  margin: 0 auto;\n}\n\n.banner[_v-35a80480]{\n  position: fixed;\n  top: 0;\n  z-index: 13;\n  text-align: center;\n  width: 3.75rem;\n}\n.big_img[_v-35a80480]{\n  height: 1.2rem;\n  width: 1.2rem;\n  margin: 0 auto;\n}\n.big_img img[_v-35a80480]{\n  height: 1.2rem;\n  width: 1.2rem;\n}\n", ""]);
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 
 	// exports
 
@@ -33321,11 +31055,7 @@
 /* 454 */
 /***/ function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 	'use strict';
-=======
-	module.exports = "\n<div _v-35a80480=\"\">\n  <div class=\"mask\" _v-35a80480=\"\"></div>\n  <div class=\"banner\" _v-35a80480=\"\">\n    <div class=\"big_img\" _v-35a80480=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-35a80480=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-35a80480=\"\">合辑没有音频啊</div>\n    <!--<div class=\"btn\" style=\"margin-top: 0.2rem;\" @click=\"reload\">点击重新加载</div>-->\n  </div>\n</div>\n";
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -33416,12 +31146,8 @@
 	  }
 	};
 
-<<<<<<< HEAD
 	exports.default = plugin;
 	var install = exports.install = plugin.install;
-=======
-	module.exports = "\n<div class=\"top\" id=\"top\" _v-8e3626dc=\"\">\n  <div class=\"tab\" id=\"tab2\" :class=\"{ tab_fixed2 :empty_tab }\" v-if=\"isApp\" _v-8e3626dc=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-8e3626dc=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-8e3626dc=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-8e3626dc=\"\"></div>\n      <div class=\"line\" _v-8e3626dc=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-8e3626dc=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-8e3626dc=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-8e3626dc=\"\"></div>\n      <div class=\"line2\" _v-8e3626dc=\"\"></div>\n    </div>\n  </div>\n  <div class=\"tab\" id=\"tab\" :class=\"{ tab_fixed :empty_tab }\" v-if=\"!isApp\" _v-8e3626dc=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-8e3626dc=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-8e3626dc=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-8e3626dc=\"\"></div>\n      <div class=\"line\" _v-8e3626dc=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-8e3626dc=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-8e3626dc=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-8e3626dc=\"\"></div>\n      <div class=\"line2\" _v-8e3626dc=\"\"></div>\n    </div>\n  </div>\n  <div class=\"empty_tab\" v-if=\"empty_tab\" _v-8e3626dc=\"\"></div>\n  <div v-if=\"flag\" _v-8e3626dc=\"\">\n    <div class=\"update\" _v-8e3626dc=\"\">\n      <div class=\"up\" _v-8e3626dc=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-8e3626dc=\"\"></span>期，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-8e3626dc=\"\"></span>期\n      </div>\n    </div>\n    <div class=\"list\" _v-8e3626dc=\"\">\n      <div class=\"item\" v-for=\"(item,index) in contentList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-8e3626dc=\"\">\n        <div class=\"rea\" _v-8e3626dc=\"\">\n          <div class=\"item_left\" _v-8e3626dc=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-8e3626dc=\"\"></div>\n            <div class=\"item_timee\" _v-8e3626dc=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-8e3626dc=\"\"></div>\n              <div class=\"item_count\" _v-8e3626dc=\"\"><span v-text=\"item.number\" _v-8e3626dc=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-8e3626dc=\"\">\n                <div class=\"clock\" _v-8e3626dc=\"\"></div>\n                <div class=\"times\" v-text=\"timeFormat(item.time)\" _v-8e3626dc=\"\"></div>\n              </div>\n            </div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==0 || (item.isFree==1 &amp;&amp; item.isSub==1)\" _v-8e3626dc=\"\">\n            <div class=\"mask_stop\" v-if=\"(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-8e3626dc=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-8e3626dc=\"\"></div>\n            <div class=\"mask_play\" v-if=\"!(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-8e3626dc=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-8e3626dc=\"\"></div>\n            <div class=\"circle_mask\" _v-8e3626dc=\"\"></div>\n            <div _v-8e3626dc=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-8e3626dc=\"\"></div>\n          </div>\n          <div class=\"item_right\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==0\" _v-8e3626dc=\"\">\n            <div class=\"disable\" @click.stop=\"stop_info\" _v-8e3626dc=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-8e3626dc=\"\"></div>\n            <div class=\"circle_mask\" _v-8e3626dc=\"\"></div>\n            <div _v-8e3626dc=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-8e3626dc=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==1\" @click=\"go_href(item.albumId,item.sortNo)\" _v-8e3626dc=\"\">\n            <div class=\"free\" _v-8e3626dc=\"\">免费试听</div>\n          </div>\n\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"!flag\" v-html=\"dataList.recommendData\" _v-8e3626dc=\"\">\n\n  </div>\n  <maskk v-if=\"isApp &amp;&amp; maskFlag\" _v-8e3626dc=\"\"></maskk>\n  <maskk2 v-if=\"!isApp &amp;&amp; maskFlag\" _v-8e3626dc=\"\"></maskk2>\n</div>\n";
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 
 /***/ },
 /* 455 */
@@ -33451,11 +31177,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-<<<<<<< HEAD
 	  var id = "_v-226e80f5/index.vue"
-=======
-	  var id = "_v-7430464b/bd_study_0.vue"
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -33479,13 +31201,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-<<<<<<< HEAD
 			module.hot.accept("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
 				var newContent = require("!!../../../../css-loader/index.js!../../../../vue-loader/lib/style-rewriter.js!../../../../less-loader/index.js!../../../../vux-loader/src/style-loader.js!../../../../vue-loader/lib/selector.js?type=style&index=0!./index.vue");
-=======
-			module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7430464b&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_study_0.vue", function() {
-				var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7430464b&scoped=true!../../../node_modules/vux-loader/src/style-loader.js!../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./bd_study_0.vue");
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -33503,11 +31220,7 @@
 
 
 	// module
-<<<<<<< HEAD
 	exports.push([module.id, ".vux-fade-enter-active,\n.vux-fade-leave-active {\n  opacity: 1;\n  -webkit-transition: opacity linear 0.2s;\n  transition: opacity linear 0.2s;\n}\n.vux-fade-enter,\n.vux-fade-leave-to {\n  opacity: 0;\n}\n.vux-dialog-enter-active,\n.vux-dialog-leave-active {\n  opacity: 1;\n  -webkit-transition-duration: 400ms;\n          transition-duration: 400ms;\n  -webkit-transform: translate(-50%, -50%) scale(1) !important;\n      -ms-transform: translate(-50%, -50%) scale(1) !important;\n          transform: translate(-50%, -50%) scale(1) !important;\n  -webkit-transition-property: opacity, -webkit-transform!important;\n  transition-property: opacity, -webkit-transform!important;\n  transition-property: transform, opacity!important;\n  transition-property: transform, opacity, -webkit-transform!important;\n}\n.vux-dialog-leave-active {\n  -webkit-transition-duration: 300ms;\n          transition-duration: 300ms;\n}\n.vux-dialog-enter {\n  opacity: 0;\n  -webkit-transform: translate(-50%, -50%) scale(1.185) !important;\n      -ms-transform: translate(-50%, -50%) scale(1.185) !important;\n          transform: translate(-50%, -50%) scale(1.185) !important;\n}\n.vux-dialog-leave-active {\n  opacity: 0;\n  -webkit-transform: translate(-50%, -50%) scale(0.85) !important;\n      -ms-transform: translate(-50%, -50%) scale(0.85) !important;\n          transform: translate(-50%, -50%) scale(0.85) !important;\n}\n.vux-mask-enter,\n.vux-mask-leave-active {\n  opacity: 0;\n}\n.vux-mask-leave-active,\n.vux-mask-enter-active {\n  -webkit-transition: opacity 300ms;\n  transition: opacity 300ms;\n}\n/**\n* actionsheet\n*/\n/**\n* datetime\n*/\n/**\n* tabbar\n*/\n/**\n* tab\n*/\n/**\n* dialog\n*/\n/**\n* x-number\n*/\n/**\n* checkbox\n*/\n/**\n* check-icon\n*/\n/**\n* Cell\n*/\n/**\n* Mask\n*/\n/**\n* Range\n*/\n/**\n* Tabbar\n*/\n/**\n* Header\n*/\n/**\n* Timeline\n*/\n/**\n* Switch\n*/\n/**\n* Button\n*/\n/**\n* swipeout\n*/\n/**\n* Cell\n*/\n/**\n* Badge\n*/\n/**\n* Popover\n*/\n/**\n* Button tab\n*/\n/* alias */\n/**\n* Swiper\n*/\n/**\n* checklist\n*/\n/**\n* popup-picker\n*/\n/**\n* popup\n*/\n/**\n* form-preview\n*/\n/**\n* load-more\n*/\n/**\n* sticky\n*/\n/**\n* group\n*/\n/**\n* toast\n*/\n/**\n* icon\n*/\n/**\n* calendar\n*/\n/**\n* search\n*/\n/**\n* radio\n*/\n.weui-mask {\n  position: fixed;\n  z-index: 1000;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n  background: rgba(0, 0, 0, 0.6);\n}\n.weui-mask_transparent {\n  position: fixed;\n  z-index: 1000;\n  top: 0;\n  right: 0;\n  left: 0;\n  bottom: 0;\n}\n@font-face {\n  font-weight: normal;\n  font-style: normal;\n  font-family: \"weui\";\n  src: url('data:application/octet-stream;base64,AAEAAAALAIAAAwAwR1NVQrD+s+0AAAE4AAAAQk9TLzJAKEx+AAABfAAAAFZjbWFw65cFHQAAAhwAAAJQZ2x5ZvCRR/EAAASUAAAKtGhlYWQMPROtAAAA4AAAADZoaGVhCCwD+gAAALwAAAAkaG10eEJo//8AAAHUAAAASGxvY2EYqhW4AAAEbAAAACZtYXhwASEAVQAAARgAAAAgbmFtZeNcHtgAAA9IAAAB5nBvc3T6bLhLAAARMAAAAOYAAQAAA+gAAABaA+j/////A+kAAQAAAAAAAAAAAAAAAAAAABIAAQAAAAEAACbZbxtfDzz1AAsD6AAAAADUm2dvAAAAANSbZ2///wAAA+kD6gAAAAgAAgAAAAAAAAABAAAAEgBJAAUAAAAAAAIAAAAKAAoAAAD/AAAAAAAAAAEAAAAKAB4ALAABREZMVAAIAAQAAAAAAAAAAQAAAAFsaWdhAAgAAAABAAAAAQAEAAQAAAABAAgAAQAGAAAAAQAAAAAAAQOwAZAABQAIAnoCvAAAAIwCegK8AAAB4AAxAQIAAAIABQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGZFZABA6gHqEQPoAAAAWgPqAAAAAAABAAAAAAAAAAAAAAPoAAAD6AAAA+gAAAPoAAAD6AAAA+gAAAPoAAAD6AAAA+gAAAPoAAAD6AAAA+gAAAPoAAAD6AAAA+j//wPoAAAD6AAAAAAABQAAAAMAAAAsAAAABAAAAXQAAQAAAAAAbgADAAEAAAAsAAMACgAAAXQABABCAAAABAAEAAEAAOoR//8AAOoB//8AAAABAAQAAAABAAIAAwAEAAUABgAHAAgACQAKAAsADAANAA4ADwAQABEAAAEGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAANwAAAAAAAAAEQAA6gEAAOoBAAAAAQAA6gIAAOoCAAAAAgAA6gMAAOoDAAAAAwAA6gQAAOoEAAAABAAA6gUAAOoFAAAABQAA6gYAAOoGAAAABgAA6gcAAOoHAAAABwAA6ggAAOoIAAAACAAA6gkAAOoJAAAACQAA6goAAOoKAAAACgAA6gsAAOoLAAAACwAA6gwAAOoMAAAADAAA6g0AAOoNAAAADQAA6g4AAOoOAAAADgAA6g8AAOoPAAAADwAA6hAAAOoQAAAAEAAA6hEAAOoRAAAAEQAAAAAARgCMANIBJAF4AcQCMgJgAqgC/ANIA6YD/gROBKAE9AVaAAAAAgAAAAADrwOtABQAKQAAASIHBgcGFBcWFxYyNzY3NjQnJicmAyInJicmNDc2NzYyFxYXFhQHBgcGAfV4Z2Q7PDw7ZGfwZmQ7PDw7ZGZ4bl5bNjc3Nlte215bNjc3NlteA608O2Rn8GdjOzw8O2Nn8GdkOzz8rzc1W17bXlw1Nzc1XF7bXls1NwAAAAACAAAAAAOzA7MAFwAtAAABIgcGBwYVFBcWFxYzMjc2NzY1NCcmJyYTBwYiLwEmNjsBETQ2OwEyFhURMzIWAe52Z2Q7PT07ZGd2fGpmOz4+O2ZpIXYOKA52Dg0XXQsHJgcLXRcNA7M+O2ZqfHZnZDs9PTtkZ3Z9aWY7Pv3wmhISmhIaARcICwsI/ukaAAMAAAAAA+UD5QAXACMALAAAASIHBgcGFRQXFhcWMzI3Njc2NTQnJicmAxQrASI1AzQ7ATIHJyImNDYyFhQGAe6Ecm9BRERBb3KEiXZxQkREQnF1aQIxAwgCQgMBIxIZGSQZGQPkREJxdomEcm9BRERBb3KEinVxQkT9HQICAWICAjEZIxkZIxkAAAAAAgAAAAADsQPkABkALgAAAQYHBgc2BREUFxYXFhc2NzY3NjURJBcmJyYTAQYvASY/ATYyHwEWNjclNjIfARYB9VVVQk+v/tFHPmxebGxdbT1I/tGvT0JVo/7VBASKAwMSAQUBcQEFAgESAgUBEQQD4xMYEhk3YP6sjnVlSD8cHD9IZXWOAVRgNxkSGP62/tkDA48EBBkCAVYCAQHlAQIQBAAAAAADAAAAAAOxA+QAGwAqADMAAAEGBwYHBgcGNxEUFxYXFhc2NzY3NjURJBcmJyYHMzIWFQMUBisBIicDNDYTIiY0NjIWFAYB9UFBODssO38gRz5sXmxsXW09SP7YqFBBVW80BAYMAwImBQELBh4PFhYeFRUD5A8SDhIOEikK/q2PdWRJPh0dPklkdY8BU141GRIY/AYE/sYCAwUBOgQG/kAVHxUVHxUAAAACAAAAAAPkA+QAFwAtAAABIgcGBwYVFBcWFxYzMjc2NzY1NCcmJyYTAQYiLwEmPwE2Mh8BFjI3ATYyHwEWAe6Ecm9BQ0NCbnODiXVxQkREQnF1kf6gAQUBowMDFgEFAYUCBQEBQwIFARUEA+NEQnF1iYNzbkJDQ0FvcoSJdXFCRP6j/qUBAagEBR4CAWYBAQENAgIVBAAAAAQAAAAAA68DrQAUACkAPwBDAAABIgcGBwYUFxYXFjI3Njc2NCcmJyYDIicmJyY0NzY3NjIXFhcWFAcGBwYTBQ4BLwEmBg8BBhYfARYyNwE+ASYiFzAfAQH1eGdkOzw8O2Rn8GZkOzw8O2RmeG5eWzY3NzZbXtteWzY3NzZbXmn+9gYSBmAGDwUDBQEGfQUQBgElBQELEBUBAQOtPDtkZ/BnYzs8PDtjZ/BnZDs8/K83NVte215cNTc3NVxe215bNTcCJt0FAQVJBQIGBAcRBoAGBQEhBQ8LBAEBAAABAAAAAAO7AzoAFwAAEy4BPwE+AR8BFjY3ATYWFycWFAcBBiInPQoGBwUHGgzLDCELAh0LHwsNCgr9uQoeCgGzCyEOCw0HCZMJAQoBvgkCCg0LHQv9sQsKAAAAAAIAAAAAA+UD5gAXACwAAAEiBwYHBhUUFxYXFjMyNzY3NjU0JyYnJhMHBi8BJicmNRM0NjsBMhYVExceAQHvhHJvQUNDQm5zg4l1cUJEREJxdVcQAwT6AwIEEAMCKwIDDsUCAQPlREJxdYmDc25CQ0NBb3KEiXVxQkT9VhwEAncCAgMGAXoCAwMC/q2FAgQAAAQAAAAAA68DrQADABgALQAzAAABMB8BAyIHBgcGFBcWFxYyNzY3NjQnJicmAyInJicmNDc2NzYyFxYXFhQHBgcGAyMVMzUjAuUBAfJ4Z2Q7PDw7ZGfwZmQ7PDw7ZGZ4bl5bNjc3Nlte215bNjc3NltemyT92QKDAQEBLDw7ZGfwZ2M7PDw7Y2fwZ2Q7PPyvNzVbXtteXDU3NzVcXtteWzU3AjH9JAAAAAMAAAAAA+QD5AAXACcAMAAAASIHBgcGFRQXFhcWMzI3Njc2NTQnJicmAzMyFhUDFAYrASImNQM0NhMiJjQ2MhYUBgHuhHJvQUNDQm5zg4l1cUJEREJxdZ42BAYMAwInAwMMBh8PFhYeFhYD40RCcXWJg3NuQkNDQW9yhIl1cUJE/vYGBf7AAgMDAgFABQb+NhYfFhYfFgAABAAAAAADwAPAAAgAEgAoAD0AAAEyNjQmIgYUFhcjFTMRIxUzNSMDIgcGBwYVFBYXFjMyNzY3NjU0Jy4BAyInJicmNDc2NzYyFxYXFhQHBgcGAfQYISEwISFRjzk5yTorhG5rPT99am+DdmhlPD4+PMyFbV5bNTc3NVte2l5bNTc3NVteAqAiLyIiLyI5Hf7EHBwCsT89a26Ed8w8Pj48ZWh2g29qffyjNzVbXtpeWzU3NzVbXtpeWzU3AAADAAAAAAOoA6gACwAgADUAAAEHJwcXBxc3FzcnNwMiBwYHBhQXFhcWMjc2NzY0JyYnJgMiJyYnJjQ3Njc2MhcWFxYUBwYHBgKOmpocmpocmpocmpq2dmZiOjs7OmJm7GZiOjs7OmJmdmtdWTQ2NjRZXdZdWTQ2NjRZXQKqmpocmpocmpocmpoBGTs6YmbsZmI6Ozs6YmbsZmI6O/zCNjRZXdZdWTQ2NjRZXdZdWTQ2AAMAAAAAA+kD6gAaAC8AMAAAAQYHBiMiJyYnJjQ3Njc2MhcWFxYVFAcGBwEHATI3Njc2NCcmJyYiBwYHBhQXFhcWMwKONUBCR21dWjU3NzVaXdpdWzU2GBcrASM5/eBXS0grKysrSEuuSkkqLCwqSUpXASMrFxg2NVtd2l1aNTc3NVpdbUdCQDX+3jkBGSsrSEuuSkkqLCwqSUquS0grKwAC//8AAAPoA+gAFAAwAAABIgcGBwYQFxYXFiA3Njc2ECcmJyYTFg4BIi8BBwYuATQ/AScmPgEWHwE3Nh4BBg8BAfSIdHFDRERDcXQBEHRxQ0REQ3F0SQoBFBsKoqgKGxMKqKIKARQbCqKoChsUAQqoA+hEQ3F0/vB0cUNERENxdAEQdHFDRP1jChsTCqiiCgEUGwqiqAobFAEKqKIKARQbCqIAAAIAAAAAA+QD5AAXADQAAAEiBwYHBhUUFxYXFjMyNzY3NjU0JyYnJhMUBiMFFxYUDwEGLwEuAT8BNh8BFhQPAQUyFh0BAe6Ecm9BQ0NCbnODiXVxQkREQnF1fwQC/pGDAQEVAwTsAgEC7AQEFAIBhAFwAgMD40RCcXWJg3NuQkNDQW9yhIl1cUJE/fYCAwuVAgQCFAQE0AIFAtEEBBQCBQGVCwMDJwAAAAUAAAAAA9QD0wAjACcANwBHAEgAAAERFAYjISImNREjIiY9ATQ2MyE1NDYzITIWHQEhMhYdARQGIyERIREHIgYVERQWOwEyNjURNCYjISIGFREUFjsBMjY1ETQmKwEDeyYb/XYbJkMJDQ0JAQYZEgEvExkBBgkNDQn9CQJc0QkNDQktCQ0NCf7sCQ0NCS0JDQ0JLQMi/TQbJiYbAswMCiwJDS4SGRkSLg0JLAoM/UwCtGsNCf5NCQ0NCQGzCQ0NCf5NCQ0NCQGzCQ0AAAAAEADGAAEAAAAAAAEABAAAAAEAAAAAAAIABwAEAAEAAAAAAAMABAALAAEAAAAAAAQABAAPAAEAAAAAAAUACwATAAEAAAAAAAYABAAeAAEAAAAAAAoAKwAiAAEAAAAAAAsAEwBNAAMAAQQJAAEACABgAAMAAQQJAAIADgBoAAMAAQQJAAMACAB2AAMAAQQJAAQACAB+AAMAAQQJAAUAFgCGAAMAAQQJAAYACACcAAMAAQQJAAoAVgCkAAMAAQQJAAsAJgD6d2V1aVJlZ3VsYXJ3ZXVpd2V1aVZlcnNpb24gMS4wd2V1aUdlbmVyYXRlZCBieSBzdmcydHRmIGZyb20gRm9udGVsbG8gcHJvamVjdC5odHRwOi8vZm9udGVsbG8uY29tAHcAZQB1AGkAUgBlAGcAdQBsAGEAcgB3AGUAdQBpAHcAZQB1AGkAVgBlAHIAcwBpAG8AbgAgADEALgAwAHcAZQB1AGkARwBlAG4AZQByAGEAdABlAGQAIABiAHkAIABzAHYAZwAyAHQAdABmACAAZgByAG8AbQAgAEYAbwBuAHQAZQBsAGwAbwAgAHAAcgBvAGoAZQBjAHQALgBoAHQAdABwADoALwAvAGYAbwBuAHQAZQBsAGwAbwAuAGMAbwBtAAAAAgAAAAAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAQIBAwEEAQUBBgEHAQgBCQEKAQsBDAENAQ4BDwEQAREBEgETAAZjaXJjbGUIZG93bmxvYWQEaW5mbwxzYWZlX3N1Y2Nlc3MJc2FmZV93YXJuB3N1Y2Nlc3MOc3VjY2Vzcy1jaXJjbGURc3VjY2Vzcy1uby1jaXJjbGUHd2FpdGluZw53YWl0aW5nLWNpcmNsZQR3YXJuC2luZm8tY2lyY2xlBmNhbmNlbAZzZWFyY2gFY2xlYXIEYmFjawZkZWxldGUAAAAA') format('truetype');\n}\n[class^=\"weui-icon-\"],\n[class*=\" weui-icon-\"] {\n  display: inline-block;\n  vertical-align: middle;\n  font: normal normal normal 14px/1 \"weui\";\n  font-size: inherit;\n  text-rendering: auto;\n  -webkit-font-smoothing: antialiased;\n}\n[class^=\"weui-icon-\"]:before,\n[class*=\" weui-icon-\"]:before {\n  display: inline-block;\n  margin-left: .2em;\n  margin-right: .2em;\n}\n.weui-icon-circle:before {\n  content: \"\\EA01\";\n}\n/* '' */\n.weui-icon-download:before {\n  content: \"\\EA02\";\n}\n/* '' */\n.weui-icon-info:before {\n  content: \"\\EA03\";\n}\n/* '' */\n.weui-icon-safe-success:before {\n  content: \"\\EA04\";\n}\n/* '' */\n.weui-icon-safe-warn:before {\n  content: \"\\EA05\";\n}\n/* '' */\n.weui-icon-success:before {\n  content: \"\\EA06\";\n}\n/* '' */\n.weui-icon-success-circle:before {\n  content: \"\\EA07\";\n}\n/* '' */\n.weui-icon-success-no-circle:before {\n  content: \"\\EA08\";\n}\n/* '' */\n.weui-icon-waiting:before {\n  content: \"\\EA09\";\n}\n/* '' */\n.weui-icon-waiting-circle:before {\n  content: \"\\EA0A\";\n}\n/* '' */\n.weui-icon-warn:before {\n  content: \"\\EA0B\";\n}\n/* '' */\n.weui-icon-info-circle:before {\n  content: \"\\EA0C\";\n}\n/* '' */\n.weui-icon-cancel:before {\n  content: \"\\EA0D\";\n}\n/* '' */\n.weui-icon-search:before {\n  content: \"\\EA0E\";\n}\n/* '' */\n.weui-icon-clear:before {\n  content: \"\\EA0F\";\n}\n/* '' */\n.weui-icon-back:before {\n  content: \"\\EA10\";\n}\n/* '' */\n.weui-icon-delete:before {\n  content: \"\\EA11\";\n}\n/* '' */\n[class^=\"weui-icon_\"]:before,\n[class*=\" weui-icon_\"]:before {\n  margin: 0;\n}\n.weui-icon-success {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-waiting {\n  font-size: 23px;\n  color: #10AEFF;\n}\n.weui-icon-warn {\n  font-size: 23px;\n  color: #F43530;\n}\n.weui-icon-info {\n  font-size: 23px;\n  color: #10AEFF;\n}\n.weui-icon-success-circle {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-success-no-circle {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-waiting-circle {\n  font-size: 23px;\n  color: #10AEFF;\n}\n.weui-icon-circle {\n  font-size: 23px;\n  color: #C9C9C9;\n}\n.weui-icon-download {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-info-circle {\n  font-size: 23px;\n  color: #09BB07;\n}\n.weui-icon-safe-success {\n  color: #09BB07;\n}\n.weui-icon-safe-warn {\n  color: #FFBE00;\n}\n.weui-icon-cancel {\n  color: #F43530;\n  font-size: 22px;\n}\n.weui-icon-search {\n  color: #B2B2B2;\n  font-size: 14px;\n}\n.weui-icon-clear {\n  color: #B2B2B2;\n  font-size: 14px;\n}\n.weui-icon-delete.weui-icon_gallery-delete {\n  color: #FFFFFF;\n  font-size: 22px;\n}\n.weui-icon_msg {\n  font-size: 93px;\n}\n.weui-icon_msg.weui-icon-warn {\n  color: #F76260;\n}\n.weui-icon_msg-primary {\n  font-size: 93px;\n}\n.weui-icon_msg-primary.weui-icon-warn {\n  color: #FFBE00;\n}\n.weui-toast {\n  position: fixed;\n  z-index: 5000;\n  width: 7.6em;\n  min-height: 7.6em;\n  top: 180px;\n  left: 50%;\n  margin-left: -3.8em;\n  background: rgba(17, 17, 17, 0.7);\n  text-align: center;\n  border-radius: 5px;\n  color: #FFFFFF;\n}\n.weui-icon_toast {\n  margin: 22px 0 0;\n  display: block;\n}\n.weui-icon_toast.weui-icon-success-no-circle:before {\n  color: #FFFFFF;\n  font-size: 55px;\n}\n.weui-icon_toast.weui-loading {\n  margin: 30px 0 0;\n  width: 38px;\n  height: 38px;\n  vertical-align: baseline;\n}\n.weui-toast__content {\n  margin: 0 0 15px;\n}\n.weui-toast.vux-toast-top {\n  top: 10px;\n}\n.weui-toast.vux-toast-bottom {\n  top: auto;\n  bottom: 10px;\n  -webkit-transform: translateX(-50%);\n      -ms-transform: translateX(-50%);\n          transform: translateX(-50%);\n}\n.weui-toast.vux-toast-middle {\n  top: 50%;\n  -webkit-transform: translateX(-50%) translateY(-50%);\n      -ms-transform: translateX(-50%) translateY(-50%);\n          transform: translateX(-50%) translateY(-50%);\n}\n.vux-slide-from-top-enter,\n.vux-slide-from-top-leave-active {\n  opacity: 0;\n  -webkit-transform: translateX(-50%) translateY(-100%) !important;\n      -ms-transform: translateX(-50%) translateY(-100%) !important;\n          transform: translateX(-50%) translateY(-100%) !important;\n}\n.vux-slide-from-bottom-enter,\n.vux-slide-from-bottom-leave-active {\n  opacity: 0;\n  -webkit-transform: translateX(-50%) translateY(100%) !important;\n      -ms-transform: translateX(-50%) translateY(100%) !important;\n          transform: translateX(-50%) translateY(100%) !important;\n}\n.vux-slide-from-top-enter-active,\n.vux-slide-from-top-leave-active,\n.vux-slide-from-bottom-enter-active,\n.vux-slide-from-bottom-leave-active {\n  -webkit-transition: all 400ms cubic-bezier(0.36, 0.66, 0.04, 1);\n  transition: all 400ms cubic-bezier(0.36, 0.66, 0.04, 1);\n}\n.weui-toast {\n  -webkit-transform: translateX(-50%);\n      -ms-transform: translateX(-50%);\n          transform: translateX(-50%);\n  margin-left: 0!important;\n}\n.weui-toast.weui-toast_forbidden {\n  color: #F76260;\n}\n.weui-toast.weui-toast_forbidden .weui-toast__content {\n  margin-top: 10px;\n}\n.weui-toast.weui-toast_text {\n  min-height: 0;\n}\n.weui-toast_text .weui-toast__content {\n  margin: 0;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  border-radius: 15px;\n}\n.weui-toast__content {\n  font-size: 16px;\n}\n.weui-loading_toast .weui-toast__content {\n  margin-top: 0;\n}\n.weui-toast_success .weui-icon_toast:before {\n  content: \"\\EA08\";\n}\n.weui-toast_cancel .weui-icon_toast:before {\n  content: \"\\EA0D\";\n}\n.weui-toast_forbidden .weui-icon_toast.weui-icon-success-no-circle:before {\n  content: \"\\EA0B\";\n  color: #F76260;\n}\n", ""]);
-=======
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.con[_v-7430464b]{\n  background: white;\n}\n.title img[_v-7430464b]{\n  margin-top: 0.02rem;\n  width: 2.5rem;\n  height: 0.16rem;\n}\n.list[_v-7430464b]{\n  padding-top:0.1rem;\n  padding-bottom:0.1rem;\n  font-size: 0;\n  position: relative;\n}\n.list>div[_v-7430464b]{\n  display:inline-block;\n}\n.list_left[_v-7430464b]{\n  font-size: 0.14rem;\n}\n.list_right[_v-7430464b]{\n  font-size:0.11rem;\n  position: absolute;\n  right: 0;\n  margin-top: 0.05rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n\n.list_content[_v-7430464b]{\n  max-width: 3rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  margin-bottom: 0.05rem;\n}\n.list_right img[_v-7430464b]{\n  height: 0.34rem;\n  width: 0.34rem;\n  border-radius: 47px;\n}\n\n.list_right>div[_v-7430464b]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-7430464b]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-7430464b],.mask_stop[_v-7430464b]{\n  z-index:3;\n}\n\n\n.list_all[_v-7430464b]{\n  padding: 0 0.1rem;\n  border-top: 1px solid #E1E1E1;\n}\n.times>div[_v-7430464b]{\n  display: inline-block;\n  font-size: 0;\n  line-height:0.16rem;\n}\n.times .time[_v-7430464b]{\n  padding-right: 0.1rem;\n  border-right: 1px solid #999999;\n  font-size:11px;\n  margin-right:0.05rem;\n}\n.times .name[_v-7430464b]{\n  font-size: 11px;\n}\n.all .list_all[_v-7430464b]:nth-child(1){\n  border: 0;\n}\n\n\n\n.big_img[_v-7430464b]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.15rem;\n  padding-bottom:0.05rem;\n  font-size: 0;\n  position:relative;\n}\n.big_img>div[_v-7430464b]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-7430464b]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-7430464b]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n.fixed[_v-7430464b]{\n  position: absolute;\n  right: 0.1rem;\n  font-size: 0;\n}\n.fixed>div[_v-7430464b]{\n  display: inline-block;\n  vertical-align: top;\n}\n.arrow[_v-7430464b]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n.arrow img[_v-7430464b]{\n  width: 0.14rem;\n  height: 0.14rem;\n}\n\n.disable[_v-7430464b]{\n  z-index: 5;\n}\n\n", ""]);
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 
 	// exports
 
@@ -33706,11 +31419,7 @@
 /* 459 */
 /***/ function(module, exports) {
 
-<<<<<<< HEAD
 	'use strict';
-=======
-	module.exports = "\n<div class=\"con\" @click=\"go_landing\" _v-7430464b=\"\">\n  <tt_com_0 :data=\"data\" _v-7430464b=\"\"></tt_com_0>\n  <!--<div class=\"big_img\">-->\n    <!--<div class=\"list_line\"></div>-->\n    <!--<div class=\"list_date\" v-text=\"title\"></div>-->\n    <!--<div class=\"list_line\"></div>-->\n    <!--<div class=\"fixed\"><div style=\"color:#333333;font-size: 12px;\">更多</div><div class=\"arrow\"><img src=\"//pic.davdian.com/free/2017/08/16/entry.png\" alt=\"\"></div></div>-->\n  <!--</div>-->\n  <div class=\"all\" _v-7430464b=\"\">\n    <div class=\"list_all\" v-for=\"item in dataList\" _v-7430464b=\"\">\n      <div class=\"list\" _v-7430464b=\"\">\n        <div class=\"list_left\" _v-7430464b=\"\">\n          <div class=\"list_content\" v-text=\"item.title\" _v-7430464b=\"\"></div>\n          <div class=\"times\" _v-7430464b=\"\">\n            <div class=\"time\" v-text=\"timeFormat(item.time)\" _v-7430464b=\"\"></div>\n            <div class=\"name\" v-text=\"item.album\" _v-7430464b=\"\"></div>\n          </div>\n        </div>\n\n        <div class=\"list_right\" _v-7430464b=\"\">\n          <div class=\"disable\" @click.stop=\"stop_info\" v-if=\"item.isPlay==0\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"mask_stop\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp; ( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_stop.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"mask_play\" @click.stop=\"go_play(item.albumId,item.sortNo)\" v-if=\"item.isPlay==1 &amp;&amp;  !( item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" _v-7430464b=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/b_play.png\" alt=\"\" _v-7430464b=\"\"></div>\n          <div class=\"circle_mask\" _v-7430464b=\"\"></div>\n          <div _v-7430464b=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-7430464b=\"\"></div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n";
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -33720,7 +31429,6 @@
 	    this.$overflowScrollingList = document.querySelectorAll('.vux-fix-safari-overflow-scrolling');
 	  },
 
-<<<<<<< HEAD
 	  methods: {
 	    fixSafariOverflowScrolling: function fixSafariOverflowScrolling(type) {
 	      if (!this.$overflowScrollingList.length) return;
@@ -33729,37 +31437,6 @@
 	        this.$overflowScrollingList[i].style.webkitOverflowScrolling = type;
 	      }
 	    }
-=======
-	var __vue_script__, __vue_template__
-	var __vue_styles__ = {}
-	__webpack_require__(458)
-	__vue_script__ = __webpack_require__(460)
-	if (__vue_script__ &&
-	    __vue_script__.__esModule &&
-	    Object.keys(__vue_script__).length > 1) {
-	  console.warn("[vue-loader] src/page/goodsDetail/vue/ad-banner.vue: named exports in *.vue files are ignored.")}
-	__vue_template__ = __webpack_require__(461)
-	module.exports = __vue_script__ || {}
-	if (module.exports.__esModule) module.exports = module.exports.default
-	var __vue_options__ = typeof module.exports === "function" ? (module.exports.options || (module.exports.options = {})) : module.exports
-	if (__vue_template__) {
-	__vue_options__.template = __vue_template__
-	}
-	if (!__vue_options__.computed) __vue_options__.computed = {}
-	Object.keys(__vue_styles__).forEach(function (key) {
-	var module = __vue_styles__[key]
-	__vue_options__.computed[key] = function () { return module }
-	})
-	if (false) {(function () {  module.hot.accept()
-	  var hotAPI = require("vue-hot-reload-api")
-	  hotAPI.install(require("vue"), false)
-	  if (!hotAPI.compatible) return
-	  var id = "_v-2a4b8aed/ad-banner.vue"
-	  if (!module.hot.data) {
-	    hotAPI.createRecord(id, module.exports)
-	  } else {
-	    hotAPI.update(id, module.exports, __vue_template__)
->>>>>>> 527259fe526318fb0bd1f6049c943efc8b71c830
 	  }
 	};
 
@@ -36450,7 +34127,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-5c521926/com-to-top-icon.vue"
+	  var id = "_v-3c5cd698/com-to-top-icon.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -36601,7 +34278,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-52c32c2d/landing.vue"
+	  var id = "_v-f53c15bc/landing.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -36625,8 +34302,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-52c32c2d&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./landing.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-52c32c2d&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./landing.vue");
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f53c15bc&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./landing.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f53c15bc&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./landing.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -36644,11 +34321,7 @@
 
 
 	// module
-<<<<<<< HEAD
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-52c32c2d]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-52c32c2d]{\n  height: 44px;\n}\n.to-top-icon[_v-52c32c2d]{\n  z-index: 5;\n}\n", ""]);
-=======
 	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.top[_v-f53c15bc]{\n  position: fixed;\n  top: 0;\n  background: #fff;\n  z-index:999;\n}\n.empty_div[_v-f53c15bc]{\n  height: 44px;\n}\n.to-top-icon[_v-f53c15bc]{\n  z-index: 5;\n}\n", ""]);
->>>>>>> 7067cfb31c5cf725ee2ad0ce8748ce2543d17e7e
 
 	// exports
 
@@ -36896,7 +34569,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-cee5e832/header.vue"
+	  var id = "_v-7926d052/header.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -36920,8 +34593,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-cee5e832&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-cee5e832&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue");
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7926d052&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7926d052&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./header.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -36939,7 +34612,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.header[_v-cee5e832]{\n  height: 44px;\n  position: relative;\n  background: #ffffff;\n  width: 3.75rem;\n}\n.head_img[_v-cee5e832]{\n  position: absolute;\n  left: 0;\n  height: 100%;\n  width: 44px;\n}\n.back-arrow[_v-cee5e832]{\n  position: absolute;\n  top: 15px;\n  left: 15px;\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  border-bottom: 1px solid #333;\n  border-left: 1px solid #333;\n  -webkit-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  transform: rotate(45deg);\n  cursor: pointer;\n  font-size: 16px;\n}\n.head_title[_v-cee5e832]{\n  height: 100%;\n  width: 100%;\n  text-align: center;\n  line-height: 44px;\n  font-size: 16px;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.header[_v-7926d052]{\n  height: 44px;\n  position: relative;\n  background: #ffffff;\n  width: 3.75rem;\n}\n.head_img[_v-7926d052]{\n  position: absolute;\n  left: 0;\n  height: 100%;\n  width: 44px;\n}\n.back-arrow[_v-7926d052]{\n  position: absolute;\n  top: 15px;\n  left: 15px;\n  display: inline-block;\n  width: 12px;\n  height: 12px;\n  border-bottom: 1px solid #333;\n  border-left: 1px solid #333;\n  -webkit-transform: rotate(45deg);\n  -ms-transform: rotate(45deg);\n  transform: rotate(45deg);\n  cursor: pointer;\n  font-size: 16px;\n}\n.head_title[_v-7926d052]{\n  height: 100%;\n  width: 100%;\n  text-align: center;\n  line-height: 44px;\n  font-size: 16px;\n}\n", ""]);
 
 	// exports
 
@@ -37024,7 +34697,7 @@
 /* 499 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-cee5e832=\"\">\n  <div class=\"header\" _v-cee5e832=\"\">\n    <div class=\"head_img\" @click=\"history\" _v-cee5e832=\"\">\n      <i class=\"back-arrow\" _v-cee5e832=\"\"></i>\n    </div>\n    <div class=\"head_title\" _v-cee5e832=\"\">免费学习专区</div>\n  </div>\n</div>\n";
+	module.exports = "\n<div _v-7926d052=\"\">\n  <div class=\"header\" _v-7926d052=\"\">\n    <div class=\"head_img\" @click=\"history\" _v-7926d052=\"\">\n      <i class=\"back-arrow\" _v-7926d052=\"\"></i>\n    </div>\n    <div class=\"head_title\" _v-7926d052=\"\">免费学习专区</div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 500 */
@@ -37054,7 +34727,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-24585146/mask.vue"
+	  var id = "_v-e243971e/mask.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -37078,8 +34751,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-24585146&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-24585146&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask.vue");
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e243971e&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-e243971e&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -37097,7 +34770,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mask[_v-24585146]{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #F1F1F1;\n  z-index: 12;\n}\n.banner[_v-24585146]{\n  margin-top: 1rem;\n\n}\n.btn[_v-24585146]{\n  width: 1.44rem;\n  height: 0.33rem;\n  border-radius: 100px;\n  border:1px solid #999999;\n  color: #333333;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.33rem;\n  margin: 0 auto;\n}\n\n.banner[_v-24585146]{\n  position: fixed;\n  top: 0;\n  z-index: 13;\n  text-align: center;\n  width: 3.75rem;\n}\n.big_img[_v-24585146]{\n  height: 1.2rem;\n  width: 1.2rem;\n  margin: 0 auto;\n}\n.big_img img[_v-24585146]{\n  height: 1.2rem;\n  width: 1.2rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mask[_v-e243971e]{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #F1F1F1;\n  z-index: 12;\n}\n.banner[_v-e243971e]{\n  margin-top: 1rem;\n\n}\n.btn[_v-e243971e]{\n  width: 1.44rem;\n  height: 0.33rem;\n  border-radius: 100px;\n  border:1px solid #999999;\n  color: #333333;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.33rem;\n  margin: 0 auto;\n}\n\n.banner[_v-e243971e]{\n  position: fixed;\n  top: 0;\n  z-index: 13;\n  text-align: center;\n  width: 3.75rem;\n}\n.big_img[_v-e243971e]{\n  height: 1.2rem;\n  width: 1.2rem;\n  margin: 0 auto;\n}\n.big_img img[_v-e243971e]{\n  height: 1.2rem;\n  width: 1.2rem;\n}\n", ""]);
 
 	// exports
 
@@ -37179,7 +34852,7 @@
 /* 504 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-24585146=\"\">\n  <div class=\"mask\" _v-24585146=\"\"></div>\n  <div class=\"banner\" _v-24585146=\"\">\n    <div class=\"big_img\" _v-24585146=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-24585146=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-24585146=\"\">合辑没有音频啊</div>\n    <!--<div class=\"btn\" style=\"margin-top: 0.2rem;\" @click=\"reload\">点击重新加载</div>-->\n  </div>\n</div>\n";
+	module.exports = "\n<div _v-e243971e=\"\">\n  <div class=\"mask\" _v-e243971e=\"\"></div>\n  <div class=\"banner\" _v-e243971e=\"\">\n    <div class=\"big_img\" _v-e243971e=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-e243971e=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-e243971e=\"\">合辑没有音频啊</div>\n    <!--<div class=\"btn\" style=\"margin-top: 0.2rem;\" @click=\"reload\">点击重新加载</div>-->\n  </div>\n</div>\n";
 
 /***/ },
 /* 505 */
@@ -37209,7 +34882,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-66c980dc/mask2.vue"
+	  var id = "_v-4d000311/mask2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -37233,8 +34906,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-66c980dc&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask2.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-66c980dc&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask2.vue");
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4d000311&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask2.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4d000311&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./mask2.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -37252,7 +34925,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mask[_v-66c980dc]{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #F1F1F1;\n  z-index: 12;\n}\n.banner[_v-66c980dc]{\n  margin-top: 1.44rem;\n\n}\n.btn[_v-66c980dc]{\n  width: 1.44rem;\n  height: 0.33rem;\n  border-radius: 100px;\n  border:1px solid #999999;\n  color: #333333;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.33rem;\n  margin: 0 auto;\n}\n\n.banner[_v-66c980dc]{\n  position: fixed;\n  top: 0;\n  z-index: 13;\n  text-align: center;\n  width: 3.75rem;\n}\n.big_img[_v-66c980dc]{\n  height: 1.2rem;\n  width: 1.2rem;\n  margin: 0 auto;\n}\n.big_img img[_v-66c980dc]{\n  height: 1.2rem;\n  width: 1.2rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mask[_v-4d000311]{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #F1F1F1;\n  z-index: 12;\n}\n.banner[_v-4d000311]{\n  margin-top: 1.44rem;\n\n}\n.btn[_v-4d000311]{\n  width: 1.44rem;\n  height: 0.33rem;\n  border-radius: 100px;\n  border:1px solid #999999;\n  color: #333333;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.33rem;\n  margin: 0 auto;\n}\n\n.banner[_v-4d000311]{\n  position: fixed;\n  top: 0;\n  z-index: 13;\n  text-align: center;\n  width: 3.75rem;\n}\n.big_img[_v-4d000311]{\n  height: 1.2rem;\n  width: 1.2rem;\n  margin: 0 auto;\n}\n.big_img img[_v-4d000311]{\n  height: 1.2rem;\n  width: 1.2rem;\n}\n", ""]);
 
 	// exports
 
@@ -37334,7 +35007,7 @@
 /* 509 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-66c980dc=\"\">\n  <div class=\"mask\" _v-66c980dc=\"\"></div>\n  <div class=\"banner\" _v-66c980dc=\"\">\n    <div class=\"big_img\" _v-66c980dc=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-66c980dc=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-66c980dc=\"\">合辑没有音频啊</div>\n    <!--<div class=\"btn\" style=\"margin-top: 0.2rem;\" @click=\"reload\">点击重新加载</div>-->\n  </div>\n</div>\n";
+	module.exports = "\n<div _v-4d000311=\"\">\n  <div class=\"mask\" _v-4d000311=\"\"></div>\n  <div class=\"banner\" _v-4d000311=\"\">\n    <div class=\"big_img\" _v-4d000311=\"\"><img src=\"//pic.davdian.com/free/2017/08/21/Group5.png\" alt=\"\" _v-4d000311=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-4d000311=\"\">合辑没有音频啊</div>\n    <!--<div class=\"btn\" style=\"margin-top: 0.2rem;\" @click=\"reload\">点击重新加载</div>-->\n  </div>\n</div>\n";
 
 /***/ },
 /* 510 */
@@ -37364,7 +35037,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-3fbe0012/data_mask.vue"
+	  var id = "_v-339d40a8/data_mask.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -37388,8 +35061,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3fbe0012&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./data_mask.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3fbe0012&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./data_mask.vue");
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-339d40a8&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./data_mask.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-339d40a8&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./data_mask.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -37407,7 +35080,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mask[_v-3fbe0012]{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #F1F1F1;\n  z-index: 12;\n}\n.banner[_v-3fbe0012]{\n  margin-top: 1rem;\n\n}\n.btn[_v-3fbe0012]{\n  width: 1.44rem;\n  height: 0.33rem;\n  border-radius: 100px;\n  border:1px solid #999999;\n  color: #333333;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.33rem;\n  margin: 0 auto;\n}\n\n.banner[_v-3fbe0012]{\n  position: fixed;\n  top: 0;\n  z-index: 13;\n  text-align: center;\n  width: 3.75rem;\n}\n.big_img[_v-3fbe0012]{\n  height: 1.2rem;\n  width: 1.2rem;\n  margin: 0 auto;\n}\n.big_img img[_v-3fbe0012]{\n  height: 1.2rem;\n  width: 1.2rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mask[_v-339d40a8]{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #F1F1F1;\n  z-index: 12;\n}\n.banner[_v-339d40a8]{\n  margin-top: 1rem;\n\n}\n.btn[_v-339d40a8]{\n  width: 1.44rem;\n  height: 0.33rem;\n  border-radius: 100px;\n  border:1px solid #999999;\n  color: #333333;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.33rem;\n  margin: 0 auto;\n}\n\n.banner[_v-339d40a8]{\n  position: fixed;\n  top: 0;\n  z-index: 13;\n  text-align: center;\n  width: 3.75rem;\n}\n.big_img[_v-339d40a8]{\n  height: 1.2rem;\n  width: 1.2rem;\n  margin: 0 auto;\n}\n.big_img img[_v-339d40a8]{\n  height: 1.2rem;\n  width: 1.2rem;\n}\n", ""]);
 
 	// exports
 
@@ -37488,7 +35161,7 @@
 /* 514 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-3fbe0012=\"\">\n  <div class=\"mask\" _v-3fbe0012=\"\"></div>\n  <div class=\"banner\" _v-3fbe0012=\"\">\n    <div class=\"big_img\" _v-3fbe0012=\"\"><img src=\"//pic.davdian.com/free/2017/08/22/Group12.png\" alt=\"\" _v-3fbe0012=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-3fbe0012=\"\">没有更多数据</div>\n  </div>\n</div>\n";
+	module.exports = "\n<div _v-339d40a8=\"\">\n  <div class=\"mask\" _v-339d40a8=\"\"></div>\n  <div class=\"banner\" _v-339d40a8=\"\">\n    <div class=\"big_img\" _v-339d40a8=\"\"><img src=\"//pic.davdian.com/free/2017/08/22/Group12.png\" alt=\"\" _v-339d40a8=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-339d40a8=\"\">没有更多数据</div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 515 */
@@ -37518,7 +35191,7 @@
 	  var hotAPI = require("vue-hot-reload-api")
 	  hotAPI.install(require("vue"), false)
 	  if (!hotAPI.compatible) return
-	  var id = "_v-2416a84b/data_mask2.vue"
+	  var id = "_v-3fdb8194/data_mask2.vue"
 	  if (!module.hot.data) {
 	    hotAPI.createRecord(id, module.exports)
 	  } else {
@@ -37542,8 +35215,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2416a84b&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./data_mask2.vue", function() {
-				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2416a84b&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./data_mask2.vue");
+			module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3fdb8194&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./data_mask2.vue", function() {
+				var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3fdb8194&scoped=true!../../../../node_modules/vux-loader/src/style-loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./data_mask2.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -37561,7 +35234,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mask[_v-2416a84b]{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #F1F1F1;\n  z-index: 12;\n}\n.banner[_v-2416a84b]{\n  margin-top: 1.44rem;\n\n}\n.btn[_v-2416a84b]{\n  width: 1.44rem;\n  height: 0.33rem;\n  border-radius: 100px;\n  border:1px solid #999999;\n  color: #333333;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.33rem;\n  margin: 0 auto;\n}\n\n.banner[_v-2416a84b]{\n  position: fixed;\n  top: 0;\n  z-index: 13;\n  text-align: center;\n  width: 3.75rem;\n}\n.big_img[_v-2416a84b]{\n  height: 1.2rem;\n  width: 1.2rem;\n  margin: 0 auto;\n}\n.big_img img[_v-2416a84b]{\n  height: 1.2rem;\n  width: 1.2rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.mask[_v-3fdb8194]{\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: #F1F1F1;\n  z-index: 12;\n}\n.banner[_v-3fdb8194]{\n  margin-top: 1.44rem;\n\n}\n.btn[_v-3fdb8194]{\n  width: 1.44rem;\n  height: 0.33rem;\n  border-radius: 100px;\n  border:1px solid #999999;\n  color: #333333;\n  font-size: 12px;\n  text-align: center;\n  line-height: 0.33rem;\n  margin: 0 auto;\n}\n\n.banner[_v-3fdb8194]{\n  position: fixed;\n  top: 0;\n  z-index: 13;\n  text-align: center;\n  width: 3.75rem;\n}\n.big_img[_v-3fdb8194]{\n  height: 1.2rem;\n  width: 1.2rem;\n  margin: 0 auto;\n}\n.big_img img[_v-3fdb8194]{\n  height: 1.2rem;\n  width: 1.2rem;\n}\n", ""]);
 
 	// exports
 
@@ -37642,13 +35315,13 @@
 /* 519 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-2416a84b=\"\">\n  <div class=\"mask\" _v-2416a84b=\"\"></div>\n  <div class=\"banner\" _v-2416a84b=\"\">\n    <div class=\"big_img\" _v-2416a84b=\"\"><img src=\"//pic.davdian.com/free/2017/08/22/Group12.png\" alt=\"\" _v-2416a84b=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-2416a84b=\"\">没有更多数据</div>\n  </div>\n</div>\n";
+	module.exports = "\n<div _v-3fdb8194=\"\">\n  <div class=\"mask\" _v-3fdb8194=\"\"></div>\n  <div class=\"banner\" _v-3fdb8194=\"\">\n    <div class=\"big_img\" _v-3fdb8194=\"\"><img src=\"//pic.davdian.com/free/2017/08/22/Group12.png\" alt=\"\" _v-3fdb8194=\"\"></div>\n    <div style=\"text-align: center;margin-top: 0.3rem;\" _v-3fdb8194=\"\">没有更多数据</div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 520 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div _v-52c32c2d=\"\">\n  <lheader class=\"top\" v-if=\"!isApp\" _v-52c32c2d=\"\"></lheader>\n  <div class=\"empty_div\" v-if=\"!isApp\" _v-52c32c2d=\"\"></div>\n  <index_feed :data=\"data\" _v-52c32c2d=\"\"></index_feed>\n  <maskk v-if=\"isApp &amp;&amp; maskFlag\" _v-52c32c2d=\"\"></maskk>\n  <maskk2 v-if=\"!isApp &amp;&amp; maskFlag\" _v-52c32c2d=\"\"></maskk2>\n  <top v-if=\"!isApp\" _v-52c32c2d=\"\"></top>\n  <data_mask v-if=\"isApp &amp;&amp; maskFlag2\" _v-52c32c2d=\"\"></data_mask>\n  <data_mask2 v-if=\"!isApp &amp;&amp; maskFlag2\" _v-52c32c2d=\"\"></data_mask2>\n</div>\n";
+	module.exports = "\n<div _v-f53c15bc=\"\">\n  <lheader class=\"top\" v-if=\"!isApp\" _v-f53c15bc=\"\"></lheader>\n  <div class=\"empty_div\" v-if=\"!isApp\" _v-f53c15bc=\"\"></div>\n  <index_feed :data=\"data\" _v-f53c15bc=\"\"></index_feed>\n  <maskk v-if=\"isApp &amp;&amp; maskFlag\" _v-f53c15bc=\"\"></maskk>\n  <maskk2 v-if=\"!isApp &amp;&amp; maskFlag\" _v-f53c15bc=\"\"></maskk2>\n  <top v-if=\"!isApp\" _v-f53c15bc=\"\"></top>\n  <data_mask v-if=\"isApp &amp;&amp; maskFlag2\" _v-f53c15bc=\"\"></data_mask>\n  <data_mask2 v-if=\"!isApp &amp;&amp; maskFlag2\" _v-f53c15bc=\"\"></data_mask2>\n</div>\n";
 
 /***/ },
 /* 521 */

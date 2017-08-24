@@ -642,6 +642,7 @@
     top: 0.11rem;
     left: 0.1rem;
     right: 0.1rem;
+    border-radius: 100px;
   }
   .red{
     height: 0.04rem;
@@ -709,8 +710,8 @@
     left: 0.93rem;
   }
   .btn2 img{
-    width: 0.31rem;
-    height: 0.21rem;
+    width: 0.3rem;
+    height: 0.2rem;
   }
   .btn3{
     top: 0.11rem;
@@ -744,7 +745,7 @@
     font-size: 0;
     position: relative;
     background: #ffffff;
-    border-top:1px solid #DDDDDD;
+    border-top:0.5px solid #DDDDDD;
   }
   .look_more>div{
     display: inline-block;
@@ -760,11 +761,11 @@
     left: 0.1rem;
   }
   .look_icon img{
-    height: 0.14rem;
-    width: 0.14rem;
+    height: 0.18rem;
+    width: 0.12rem;
     position: absolute;
     right: 0.1rem;
-    margin-top:0.13rem;
+    margin-top:0.12rem;
   }
   .bottom_text{
     padding-left:0.1rem;
