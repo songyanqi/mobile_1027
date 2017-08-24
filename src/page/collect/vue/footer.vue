@@ -88,67 +88,85 @@
         option.success = callback;
         native.Browser.pay(option)
       },
-      Subscribe(){
+      Subscribe(albumId){
 
         var that=this;
         var obj={
-            albumId:that.albumid,
-            shareUserId:getQuery('shareUserId') || ''
+          albumId:albumId,
+          shareUserId:getQuery('shareUserId') || ''
         };
-        alert(obj.albumId +":"+obj.shareUserId);
         api("/api/mg/content/album/subscription",obj)
           .then(function(result) {
             let {code, data: {msg, payUrl, jsApi}} = result;
-            if (code == 0) {
+            if (code == 0){
               if (result.data.code == 300) {
                 if (jsApi) {
                   jsApi.jsApiParameters.dvdhref = location.href;
-                  // window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
-                  window.location.href = "http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+//                      window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                  window.location.href="http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters));
                 } else if (payUrl) {
                   that.nativePay(payUrl, function (flag) {
                     if (flag) {
 
+                      popup.confirm({
+                        title: '提示',            // 标题（支持传入html。有则显示。）
+                        text: '订阅成功',             // 文本（支持传入html。有则显示。）
+                        okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                        cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                        okBtnCallback: function(){
+                          window.location.reload();
+                        },
+                        cancelBtnCallback: function(){
+                          window.location.reload();
+                        }
+                      });
                     }
                   });
                 } else {
+                  alert(3333);
                   popup.confirm({
                     title: '提示',            // 标题（支持传入html。有则显示。）
                     text: '订阅成功',             // 文本（支持传入html。有则显示。）
                     okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
                     cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
                     okBtnCallback: function(){
-                        window.location.reload();
+                      window.location.reload();
                     },
                     cancelBtnCallback: function(){
-                        window.location.reload();
+                      window.location.reload();
                     }
-                  })
+                  });
                 }
               } else {
                 if (result.data.code == 100){
-                  if (that.isapp){
+                  if (that.isApp){
                     native.Account.login()
                   }else {
                     window.location.href = '/login.html'
                   }
                 } else {
                   popup.confirm({
-                    title: '提示',            // 标题（支持传入html。有则显示。）
+                    title: '提示',
                     text: 'code:'+result.data.code+':msg'+result.data.msg, // 文本（支持传入html。有则显示。）
-                    okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-                    cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                    okBtnTitle: '确定',
+                    cancelBtnTitle: '取消',
                     okBtnCallback: function(){},
                     cancelBtnCallback: function(){}
-                  })
+                  });
                 }
-                
               }
             }else {
-              dialog.alert('code:' + code + 'msg:'+ result.data.msg)
+              popup.confirm({
+                title: '提示',
+                text: 'code:'+result.data.code+':msg'+result.data.msg, // 文本（支持传入html。有则显示。）
+                okBtnTitle: '确定',
+                cancelBtnTitle: '取消',
+                okBtnCallback: function(){},
+                cancelBtnCallback: function(){}
+              });
             }
           })
-      }
+      },
     }
   }
 </script>

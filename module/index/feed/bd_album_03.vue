@@ -303,7 +303,14 @@
                     }
                   }
                 }else {
-
+                  popup.confirm({
+                    title: '提示',
+                    text: 'code:'+result.data.code+':msg'+result.data.msg, // 文本（支持传入html。有则显示。）
+                    okBtnTitle: '确定',
+                    cancelBtnTitle: '取消',
+                    okBtnCallback: function(){},
+                    cancelBtnCallback: function(){}
+                  });
                 }
               })
           },
