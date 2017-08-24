@@ -66,7 +66,6 @@ new Vue({
       }else{
         Vue.set(that.hobby, code, !that.hobby[code]);
       }
-
     }
   },
   filters: {},
