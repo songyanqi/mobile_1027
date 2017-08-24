@@ -9,9 +9,11 @@
   <!--标题-->
   <com-top-title title="选择妈妈顾问"></com-top-title>
   <div>
-    <!--妈妈顾问选择信息-->
-    <!--妈妈顾问选择信息-->
-    <div class="strings"></div>
+    <!--妈妈顾问提示信息-->
+    <div class="adviser_titles">
+      <span>请选择您想要的妈妈顾问信息</span> <br>
+      <span>*若不满意，每30天可重新更换顾问</span>
+    </div>
     <!--地区展示框-->
     <div class="new_title string_line">
       <span class="btns" @click="showadselect">
@@ -64,6 +66,10 @@
       <div @click="hobbys(8)" v-if="hobby[8]" class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/loveShareActive.png" alt=""></div>
       <div @click="hobbys(8)" v-else class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/loveShare.png" alt=""></div>
     </div>
+    <!--下一步-->
+    <div class="next_step" style="margin-top: 19px;">
+      下一步
+    </div>
   </div>
 </div>
   @@include('vendor.include')
@@ -72,6 +78,7 @@
   <style scoped>
     body{
       background-color: #FFFFFF;
+      font-weight: normal;
     }
     .new_title {
       background: white;
@@ -109,8 +116,8 @@
     }
 
     .new_title .btns .more {
-      font-size: 12px;
-      color: #999;
+      font-size: 14px;
+      color: #666666;
     }
 
     .new_title .btns .more .arrow {
@@ -131,6 +138,54 @@
     }
     .specialty_nine .specialty_check img{
       width: 100%;
+    }
+    .next_step{
+      height: 32px;
+      width: 120px;
+      color: #FF4A7D;
+      font-size: 12px;
+      line-height: 32px;
+      text-align: center;
+      position: relative;
+      margin: 0 auto 50px;
+    }
+    .next_step:after{
+      content: "";
+      -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+      transform: scale(0.5);
+      width: 200%;
+      height: 200%;
+      border: 1px solid;
+      border-color: #FF4A7D;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      transform-origin: 0 0;
+      border-radius: 32px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    .adviser_titles{
+      text-align: center;
+      padding-bottom: 20px;
+      padding-top: 10px;
+    }
+    .adviser_titles span{
+      display: inline-block;
+    }
+    .adviser_titles span:nth-of-type(1){
+      font-size: 16px;
+      color: #666666;
+    }
+    .adviser_titles span:nth-of-type(2){
+      font-size: 12px;
+      color: #999999;
+      margin-top: 5px;
     }
   </style>
 </htm>
