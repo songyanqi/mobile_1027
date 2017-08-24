@@ -328,12 +328,13 @@
           popup.toast("请输入正确的手机号");
           return false;
         }
-        that.$emit("titlename", "忘记密码");
         document.title = "忘记密码";
         /*发送验证码成功后跳转到修改密码页*/
+
         /*发送验证码*/
         that.get_check_codes(1, 2, function () {
           /*初始化数据*/
+          that.$emit("titlename", "忘记密码");
           that.login_form = false;
           that.forget_form = true;
           that.get_check = true;

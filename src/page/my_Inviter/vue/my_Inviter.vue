@@ -11,17 +11,21 @@
     <!--我的邀请人-->
     <div v-if="my_inviterPage" class="myInviter">
       <div class="myInviter_img">
-        <img :src="response.data.headImage || '//fe.davdian.com/wap/static/dist/static/page/center/img/default-head.png'" alt="">
+        <img
+          :src="response.data.headImage || '//fe.davdian.com/wap/static/dist/static/page/center/img/default-head.png'"
+          alt="">
       </div>
       <div class="myInviter_name">
-        {{response.data.nickName || response.data.mobile.substr(0,3)+"****"+response.data.mobile.substr(7)}}
+        {{response.data.nickName || response.data.mobile.substr(0, 3) + "****" + response.data.mobile.substr(7)}}
       </div>
     </div>
     <!--修改邀请人-->
-    <div class="bottoms" v-if="response.data.editable == 1">
+    <div class="bottoms">
       <div v-if="trun_grey" class="changeBtn greybtn">{{btnName}}</div>
       <div v-else class="changeBtn" @click="modify_inviter">{{btnName}}</div>
-      <div class="change_time" v-if="response.data && response.data.endTime && show_edntime">{{response.data.endTime*1000 | getFullTime}}后不可再修改</div>
+      <div class="change_time" v-if="response.data && response.data.endTime && show_edntime">
+        {{response.data.endTime * 1000 | getFullTime}}后不可再修改
+      </div>
     </div>
 
     <!--什么是邀请码-->
@@ -56,7 +60,7 @@
         show_edntime: true,
         mobile: '',
         inviteCode: '',
-        info_bottom:false
+        info_bottom: false
       }
     },
     computed: {},
@@ -76,7 +80,6 @@
           dataType: 'json',
           data: encrypt({}),
           success(response) {
-            debugger
             that.response = response;
             if (response.code) {
               popup.toast(response.data.msg || response.msg);
@@ -86,6 +89,9 @@
               document.title = "我的邀请人";
               that.my_inviterPage = true;
               that.btnName = '修改邀请人';
+              if(response.data.editable == 1){
+                that.trun_grey = true;
+              }
             } else {
               that.$emit("titlename", "添加邀请人");
               document.title = "添加邀请人";
@@ -130,7 +136,7 @@
               that.my_inviterPage = true; //显示我的邀请人
               that.trun_grey = false;  //按钮可用
               that.response = response;
-              if(window.screen.height < 580){
+              if (window.screen.height < 580) {
                 that.info_bottom = true;
               }
               that.inviteCode = JSON.parse(JSON.stringify(that.mobile));
@@ -177,7 +183,7 @@
         return reg.test(tel);
       },
     },
-    filters:{
+    filters: {
       getFullTime: function (second) {
         var y = new Date(second).getFullYear();
         var monthtime = new Date(second).getMonth();
@@ -397,11 +403,12 @@
     position: fixed;
     bottom: 15px;
     margin: 50px auto 0;
-    left:0;
-    right:0;
+    left: 0;
+    right: 0;
     max-width: 467px;
   }
-  .invitation_info.bottom{
+
+  .invitation_info.bottom {
     position: static;
   }
 
