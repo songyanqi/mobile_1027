@@ -8,7 +8,8 @@
 </template>
 
 <script>
-  import {Picker} from 'vux'
+  import {Picker} from 'vux';
+  import axios from 'axios';
   export default {
     components: {
       Picker
@@ -16,18 +17,48 @@
     methods: {
       change(value) {
         var that = this;
-        console.log('new Value', value);
-        console.log('new Value', that.$refs.picker1.getNameValues());
-        that.$emit('addressdata',{name:that.$refs.picker1.getNameValues(),value:value[2]});
+        that.addressValue = value;
+        that.addressName = that.$refs.picker1.getNameValues();
       },
       confirm:function () {
         this.showaddress.showaddress = false;
+        this.$emit('addressdata',{name:this.addressName,value:this.addressValue[2]});
+      },
+      initValue:function(){
+        console.time("initValue");
+        if(this.addressid){
+          this.addressValue[2] = this.addressid+"";
+          for(var i = 0,d=this.addressNow[i++];){
+            if(d.value==this.addressValue[2]){
+              this.addressValue[1] = d.parent;
+              break;
+            }
+          }
+          for(var i = 0,d=this.addressNow[i++];){
+            if(d.value==this.addressValue[1]){
+              this.addressValue[0] = d.parent;
+              break;
+            }
+          }
+        }
+        
+        console.timeEnd("initValue");
       }
     },
-    props:['showaddress'],
+    props:['showaddress','addressid','addressDataUrl'],
     watch: {
 
     },
+    /*
+    created(){
+      let that = this;
+      let url = this.addressDataUrl||"https://src.davdian.com/data/region.1501055940.json";
+      axios.get(url)
+      .then(function(res){
+        that.addressPre = res.data;
+      })
+    },
+    */
     data() {
       return {
         addressNow: [
@@ -18777,38 +18808,43 @@
             "parent": "394"
           }
         ],
-        addressValue: []
+        addressName:"",
+        addressValue: [],
+        addressPre:[]
       }
     },
     computed: {
       /*遍历*/
-//      addressNow: function () {
-//        var that = this;
-//        var addressNos = [];
-//        for (var i = 0; i < that.addressPre.length; i++) {
-//          let prvince = {};
-//          prvince.value = that.addressPre[i][0];
-//          prvince.name = that.addressPre[i][1];
-//          prvince.parent = 0;
-//          addressNos.push(prvince);
-//          for(var m = 0;m<that.addressPre[i][2].length;m++){
-//            let city = {};
-//            city.value = that.addressPre[i][2][m][0];
-//            city.name = that.addressPre[i][2][m][1];
-//            city.parent = that.addressPre[i][0];
-//            addressNos.push(city);
-//            for(var n = 0;n<that.addressPre[i][2][m][2].length;n++) {
-//              let desc = {};
-//              desc.value = that.addressPre[i][2][m][2][n][0];
-//              desc.name = that.addressPre[i][2][m][2][n][1];
-//              desc.parent = that.addressPre[i][2][m][0];
-//              addressNos.push(desc);
-//            }
-//          }
-//        }
-//        console.log(JSON.stringify(addressNos));
-//        return addressNos;
-//      }
+      /*
+     addressNow: function () {
+       var that = this;
+       var addressNos = [];
+       console.time("ctime")
+       for (var i = 0; i < that.addressPre.length; i++) {
+         let prvince = {};
+         prvince.value = that.addressPre[i][0];
+         prvince.name = that.addressPre[i][1];
+         prvince.parent = 0;
+         addressNos.push(prvince);
+         for(var m = 0;m<that.addressPre[i][2].length;m++){
+           let city = {};
+           city.value = that.addressPre[i][2][m][0];
+           city.name = that.addressPre[i][2][m][1];
+           city.parent = that.addressPre[i][0];
+           addressNos.push(city);
+           for(var n = 0;n<that.addressPre[i][2][m][2].length;n++) {
+             let desc = {};
+             desc.value = that.addressPre[i][2][m][2][n][0];
+             desc.name = that.addressPre[i][2][m][2][n][1];
+             desc.parent = that.addressPre[i][2][m][0];
+             addressNos.push(desc);
+           }
+         }
+       }
+       console.timeEnd("ctime");
+       return addressNos;
+     }
+     */
     }
   }
 </script>
