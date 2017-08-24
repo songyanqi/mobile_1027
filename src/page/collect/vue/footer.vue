@@ -45,6 +45,7 @@
     methods:{
       share(){
         var that=this;
+        alert(123);
         if(that.isApp){
           native.custom.share({
             "title":that.shareInfo.title,

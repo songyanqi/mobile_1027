@@ -151,16 +151,16 @@
                 } else {
                   if (result.data.code == 400){
                     if (that.isapp){
-                      native.Account.login()
-                    }else {
-                      window.location.href = '/login.html'
-                    }
+                    native.Account.login()
                   }else {
-                    dialog.alert(result.data.msg);
+                    window.location.href = '/login.html'
+                  }
+                  }else {
+
                   }
                 }
               }else {
-                dialog.alert('code:' + code + 'msg:'+ result.data.msg)
+//                dialog.alert('code:' + code + 'msg:'+ result.data.msg)
               }
             })
         },
