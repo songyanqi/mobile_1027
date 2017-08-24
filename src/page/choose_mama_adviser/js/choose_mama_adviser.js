@@ -25,7 +25,8 @@ new Vue({
       address: '',
       addressId:-1,
       oncesdesc: false,
-      hobby: [false, false, false, false, false, false, false, false, false]
+      hobby: [false, false, false, false, false, false, false, false, false],
+      adviser_select:0
     }
   },
   computed: {
