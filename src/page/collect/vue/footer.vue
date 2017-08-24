@@ -16,7 +16,7 @@
 <script>
   import api from "../../../../utils/api.es6"
   import native from "../../../../src/common/js/module/native.js"
-  import dialog from "../../../../utils/dialog.es6";
+  import popup from "../../../../src/common/js/module/popup.js";
   import {getQuery} from "../../../../utils/utils.es6";
   import util from "../../../../utils/utils.es6";
   import share from "../../../../src/common/js/module/share.js"
@@ -108,25 +108,39 @@
                 } else if (payUrl) {
                   that.nativePay(payUrl, function (flag) {
                     if (flag) {
-                      that.sub=1;
+
                     }
                   });
                 } else {
-                  that.sub=1;
-                  alert(123456);
-                  setTimeout(function(){
-                    that.$emit("re");
-                  },500)
+                  popup.confirm({
+                    title: '提示',            // 标题（支持传入html。有则显示。）
+                    text: '订阅成功',             // 文本（支持传入html。有则显示。）
+                    okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                    cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                    okBtnCallback: function(){
+                        window.location.reload();
+                    },
+                    cancelBtnCallback: function(){
+                        window.location.reload();
+                    }
+                  })
                 }
               } else {
-                if (result.data.code == 400){
+                if (result.data.code == 100){
                   if (that.isapp){
                     native.Account.login()
                   }else {
                     window.location.href = '/login.html'
                   }
                 } else {
-                  dialog.alert(result.data.msg);
+                  popup.confirm({
+                    title: '提示',            // 标题（支持传入html。有则显示。）
+                    text: 'code:'+result.data.code+':msg'+result.data.msg, // 文本（支持传入html。有则显示。）
+                    okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                    cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                    okBtnCallback: function(){},
+                    cancelBtnCallback: function(){}
+                  })
                 }
                 
               }
