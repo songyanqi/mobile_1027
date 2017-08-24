@@ -10,9 +10,6 @@
       <div class="btn_text" @click="Subscribe" v-if="isSub==0 && userstatus==3">
         <span>会员免费订阅</span>
       </div>
-      <div class="btn_text2" v-if="isSub==1">
-        <span>已订阅</span>
-      </div>
     </div>
   </div>
 </template>
@@ -50,9 +47,7 @@
         var that=this;
         if(that.isApp){
           native.custom.share({
-            "shareTitle":that.shareInfo.title,
-            "shareDesc": that.shareInfo.desc,
-            "title": that.shareInfo.title,
+            "title":that.shareInfo.title,
             "desc": that.shareInfo.desc,
             "imgUrl": that.shareInfo.imgUrl,
             "link": that.shareInfo.link
