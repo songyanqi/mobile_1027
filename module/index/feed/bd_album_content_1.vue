@@ -36,6 +36,7 @@
   import native from "../../../src/common/js/module/native.js";
   import popup from "../../../src/common/js/module/popup"
   import {getQuery} from "../../../utils/utils.es6";
+  import api from "../../../utils/api.es6"
 
   export default {
       props:["data"],
@@ -127,6 +128,7 @@
             albumId:albumId,
             shareUserId:getQuery('shareUserId') || ''
           };
+          alert(obj.albumId +":"+obj.shareUserId);
           api("/api/mg/content/album/subscription",obj)
             .then(function(result) {
               let {code, data: {msg, payUrl, jsApi}} = result;
@@ -139,24 +141,23 @@
                   } else if (payUrl) {
                     that.nativePay(payUrl, function (flag) {
                       if (flag) {
-                        that.sub=1;
+
                       }
                     });
                   } else {
-                    that.sub=1;
                     setTimeout(function(){
-                      that.$emit("re");
+                      window.location.reload();
                     },500)
                   }
                 } else {
                   if (result.data.code == 400){
                     if (that.isapp){
-                    native.Account.login()
+                      native.Account.login()
+                    }else {
+                      window.location.href = '/login.html'
+                    }
                   }else {
-                    window.location.href = '/login.html'
-                  }
-                  }else {
-
+                    alert("嘿嘿");
                   }
                 }
               }else {

@@ -11,6 +11,7 @@
           <div class="over_text">{{ historyName }}</div>
           <div>"，点我继续收听</div>
         </div>
+        <div class="close_mask" @click="close"><img src="//pic.davdian.com/free/2017/08/22/clearInput.png" alt=""></div>
       </div>
 
     </div>
@@ -54,6 +55,9 @@
         }
     },
     methods:{
+      close(){
+          this.history_mask=false;
+      },
       go_history(){
         var _this=this;
         if(this.isApp){
@@ -174,5 +178,11 @@
     max-width: 96px;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+  .close_mask{
+    height: 0.16rem;
+    width: 0.16rem;
+    position: absolute;
+    right: 0.1rem;
   }
 </style>
