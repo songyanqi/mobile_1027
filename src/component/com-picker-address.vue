@@ -18,7 +18,7 @@
         var that = this;
         console.log('new Value', value);
         console.log('new Value', that.$refs.picker1.getNameValues());
-        that.$emit('addressdata',that.$refs.picker1.getNameValues());
+        that.$emit('addressdata',{name:that.$refs.picker1.getNameValues(),value:value[2]});
       },
       confirm:function () {
         this.showaddress.showaddress = false;

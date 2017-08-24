@@ -23,6 +23,7 @@ new Vue({
       response: null,
       showaddress2: {showaddress: false},
       address: '',
+      addressId:-1,
       oncesdesc: false,
       hobby: [false, false, false, false, false, false, false, false, false]
     }
@@ -52,7 +53,9 @@ new Vue({
   methods: {
     getaddress: function (msg) {
       var that = this;
-      that.address = msg;
+      that.address = msg.name;
+      that.addressId = msg.value;
+      console.log("address",that.address,that.addressId);
     },
     showadselect: function () {
       var that = this;
