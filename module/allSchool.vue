@@ -38,9 +38,13 @@
         mounted:function () {
             this.init()
             if (window.appData){
-                window.appData.isAudioAbsorb = 1
+              window.appData.isAudioAbsorb = 1
+              window.appData.isShowAudio = 1
             } else {
-                window.appData = {'isAudioAbsorb': 1}
+              window.appData = {
+                'isAudioAbsorb':1,
+                'isShowAudio':1
+              }
             }
             
             setTimeout(function(){
