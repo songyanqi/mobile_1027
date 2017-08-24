@@ -56,7 +56,7 @@
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
-            <div class="item_right2" v-if="isFree==1 && item.isFree==0 && item.isSub==0 && item.isPlay==1" @click="go_href(item.albumId,item.sortNo)">
+            <div class="item_right2" v-if="isFree==1 && item.isFree==0 && item.isSub==0 && item.isPlay==1" @click="go_href2(item.albumId,item.sortNo)">
               <div class="free">免费试听</div>
             </div>
 
@@ -247,14 +247,11 @@
                 let {code, data: {msg, payUrl, jsApi}} = result;
                 if (code == 0){
                   if (result.data.code == 300) {
-                    alert(jsApi+"："+payUrl);
                     if (jsApi) {
-                        alert(111);
                       jsApi.jsApiParameters.dvdhref = location.href;
 //                      window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
                       window.location.href="http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters));
                     } else if (payUrl) {
-                      alert(2222);
                       that.nativePay(payUrl, function (flag) {
                         if (flag) {
 
@@ -273,6 +270,7 @@
                         }
                       });
                     } else {
+                        alert(3333);
                       popup.confirm({
                         title: '提示',            // 标题（支持传入html。有则显示。）
                         text: '订阅成功',             // 文本（支持传入html。有则显示。）
@@ -330,6 +328,18 @@
               }else{
                 window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
               }
+
+          },
+          go_href2(albumId,sortNo){
+            if(this.isApp){
+              //调用app播放器
+              native.Audio.audioPlay({
+                "sortNo":sortNo,
+                "albumId":albumId
+              })
+            }else{
+              window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
+            }
 
           },
           getMoreList(){
