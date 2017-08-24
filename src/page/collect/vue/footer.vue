@@ -47,12 +47,14 @@
         var that=this;
         alert(123);
         if(that.isApp){
-          native.custom.share({
+          native.Share.shareInfo({
             "title":that.shareInfo.title,
             "desc": that.shareInfo.desc,
             "imgUrl": that.shareInfo.imgUrl,
-            "link": that.shareInfo.link
-          })
+            "link": that.shareInfo.link,
+            "shareTitle":that.shareInfo.title,
+            "shareDesc":that.shareInfo.desc
+        })
         }else {
           share.setShareInfo({
             title: that.shareInfo.title,
