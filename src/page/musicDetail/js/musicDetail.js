@@ -43,16 +43,16 @@ new Vue({
         });
 
         // 设置分享信息
-        try {
-          share.setShareInfo({
-            title: ts.response.data.shareTitle,
-            desc: ts.response.data.shareDesc,
-            link: location.href,
-            imgUrl: ts.response.data.shareImg
-          });
-        } catch (err) {
-          console.error(err);
-        }
+        // try {
+        //   share.setShareInfo({
+        //     title: ts.response.data.shareTitle,
+        //     desc: ts.response.data.shareDesc,
+        //     link: location.href,
+        //     imgUrl: ts.response.data.shareImg
+        //   });
+        // } catch (err) {
+        //   console.error(err);
+        // }
       });
     }
   },

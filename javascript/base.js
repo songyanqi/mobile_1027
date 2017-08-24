@@ -456,7 +456,6 @@ $(document).ready(function () {
       return false;
     }
     bravetime.callNative2('Browser', 'initHead', {content: JSON.parse(iosInterface.getHeadAndFootData())}, callback, '3.4.0', function () {
-
     });
   };
 

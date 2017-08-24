@@ -90,15 +90,19 @@ export default {
                             window.singlePicHold(ele);
                         })
                     });
-                    window.appData.isAudioAbsorb = 1
-                    setTimeout(function(){
-                        window.bravetime.initHead()
-                      },500)
-                    if (!error && deleteFlag){
-                        
-                    }
                 }
-                console.log(that.userId, window.teacherId)
+                if (!that.error && that.deleteFlag){
+                    setTimeout(function(){
+                        if (window.appData){
+                            window.appData.isAudioAbsorb = 1
+                        } else {
+                            window.appData = {
+                                'isAudioAbsorb':1
+                            }
+                        }
+                        window.bravetime.initHead()
+                    },500)   
+                }
             },
             error:function () {
                 that.error = true;

@@ -81,7 +81,14 @@ export default{
         savebackData(that);
 
       })
-      window.appData.isAudioAbsorb = 1
+      if (window.appData){
+        window.appData.isAudioAbsorb = 1
+      } else {
+        window.appData = {
+          'isAudioAbsorb': 1
+        }
+      }
+      
       setTimeout(function(){
         window.bravetime.initHead()
       },500)

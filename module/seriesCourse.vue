@@ -232,7 +232,7 @@
                 btnText: "",     // 头部文字按钮文字
                 btnLink: "",      // 头部文字按钮链接
                 haveShareCard:this.haveShareCard,
-                courseId: this.courseId
+                courseId: this.courseId,
             }
             app.init()
 
@@ -340,6 +340,7 @@
                 var obj = {seriesId:this.seriesId};
                 axios.post('/api/mg/content/series_course/detail',lay.strSign('series', obj))
                     .then(function (respone) {
+
                         if (respone.data && respone.data.code==30024){
                             // that.deleteFlag = false
                             if (JSON.parse(sessionStorage.getItem('history')).length > 1){
@@ -401,7 +402,18 @@
                                 }
                             }
                         }
-                        
+                        if (that.seriesType==1 && that.deleteFlag && that.state!=0){
+                            setTimeout(function(){
+                                if (window.appData){
+                                    window.appData.isAudioAbsorb = 1
+                                } else {
+                                    window.appData = {
+                                        'isAudioAbsorb':1
+                                    }
+                                }
+                                window.bravetime.initHead()
+                            },500)
+                        }
                     })
                     .catch(function (error) {
                         console.log(error,11111111)
