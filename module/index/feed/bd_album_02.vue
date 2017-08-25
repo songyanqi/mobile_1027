@@ -1,7 +1,13 @@
 <template>
   <div class="content2">
     <div class="content_buy">
-      <div class="count"><span v-text="data.body.purchase"></span><span>人</span><span v-if="isFree==1">订阅</span><span v-if="isFree==0">听过</span></div>
+      <div class="count">
+        <span v-text="data.body.purchase" v-if="isFree==1"></span>
+        <span v-text="data.body.number" v-if="isFree==0"></span>
+        <span>人</span>
+        <span v-if="isFree==1">订阅</span>
+        <span v-if="isFree==0">听过</span>
+      </div>
       <div class="content_header">
           <div v-for="item in dataList">
             <img :src="doImg(item.imageUrl)" alt="">
