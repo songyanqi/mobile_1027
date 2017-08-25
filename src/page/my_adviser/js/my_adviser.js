@@ -33,7 +33,6 @@ new Vue({
       // response变化后并渲染完dom,设置其他事项
       this.$nextTick(function () {
         let ts = this;
-
         // 设置app头部标题栏
         native.custom.initHead({
           shareOnHead: 1,
@@ -53,21 +52,19 @@ new Vue({
      * 接口文档:
      */
     getData() {
-      let ts = this;
+      let that = this;
       $.ajax({
         cache: false,
         async: true,
-        url: '?_=' + Date.now(),
+        url: '/api/mg/user/adviser/getByAdviserId?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
-        data: encrypt({
-          js_wx_info: 1,
-        }),
+        data: encrypt({}),
         success(response) {
-          ts.response = response;
+          that.response = response;
         },
         error(error) {
-          ts.response = require('../json/my_adviser.json');
+          that.response = require('../json/my_adviser.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
