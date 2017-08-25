@@ -27,6 +27,7 @@ import minimist from 'minimist';
 import WebpackConfig from './webpack.config.js';    // 老版webpack配置
 import WebpackSrcConfig from './webpack.src.config.js';   // 新版前后端分离webpack配置
 import DeveloperConfig from './developer.config.js';  // 开发者配置文件
+import liveReload from 'gulp-livereload';		// 文件变化时自动刷新浏览器，chrome需要安装LiveReload插件
 
 // 命令行参数
 let argv = minimist(process.argv);
@@ -467,6 +468,12 @@ gulp.task('default', () => {
         gulp.watch([`src/**/img/*.{png,jpg,gif,jpeg}`], ['img:dev', 'js:dev', 'html:dev']);
         // 监视html变化
         gulp.watch([`src/**/*.{html,include}`], ['html:dev']);
+        // 开启liveReload
+        liveReload.listen();
+        // 监听开发目录变化，触发liveReload刷新浏览器
+        gulp.watch([`dist/**/*`], function (file) {
+          liveReload.changed(file.path);
+        });
         console.log(`>>>>>>>>>>>>>>> gulp开始监听src目录文件变化...${util.getNow()}`);
         if (BuildArg.webpack) {
           runSequence(['webpack:default']);
