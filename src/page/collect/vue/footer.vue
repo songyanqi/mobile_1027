@@ -90,7 +90,7 @@
         native.Browser.pay(option)
       },
       Subscribe(){
-
+        alert(8);
         var that=this;
         var obj={
           albumId:this.albumId,
