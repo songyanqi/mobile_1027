@@ -216,7 +216,7 @@
           dataType: 'json',
           data: encrypt(param),
           success: function (response) {
-            debugger
+//            debugger
             if (response.code === 0) {
               if (type === 1) {
                 // 更新头像
@@ -228,7 +228,7 @@
             }
           },
           error: function (error) {
-            debugger
+//            debugger
             console.error('ajax error:' + error.status + ' ' + error.statusText);
 
             let response = require('../json/center_edit_input.json');

@@ -15,6 +15,11 @@
 export default {
   // env_stage: 'prod',
   // env_num: '',
+<<<<<<< HEAD
   page: '{musicDetail,collect,landingPage}',
   webpack: false
+=======
+  page: '{center,login,my_invitation_code,my_Inviter,goodsDetail}',
+  webpack: false,
+>>>>>>> b_20170814_jinlong
 };

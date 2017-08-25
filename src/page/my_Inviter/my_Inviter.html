@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @@include('meta.include')
+  <title>邀请人信息</title>
+  <link rel="stylesheet" href="[[static]]/page/my_Inviter/css/my_Inviter.css[[v]]">
+</head>
+<body>
+  <div class="app">
+    <!--标题-->
+    <com-top-title :title="title"></com-top-title>
+
+    <myinviter @titlename="titlename"></myinviter>
+  </div>
+
+  @@include('vendor.include')
+  <script src="[[static]]/page/my_Inviter/js/my_Inviter.js[[v]]"></script>
+</body>
+</html>
