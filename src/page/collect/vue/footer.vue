@@ -99,6 +99,7 @@
         api("/api/mg/content/album/subscription",obj)
           .then(function(result) {
             let {code, data: {msg, payUrl, jsApi}} = result;
+            alert(code);
             if (code == 0){
               if (result.data.code == 300) {
                 if (jsApi) {

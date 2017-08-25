@@ -45,6 +45,7 @@
                 </div>
               </div>
             </div>
+
             <div class="item_right" v-if="isFree==0 || (isFree==1 && item.isSub==1)">
               <div class="mask_stop" v-if="(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
               <div class="mask_play" v-if="!(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
@@ -274,6 +275,7 @@
                               window.location.reload();
                             }
                           });
+
                         }
                       });
                     } else {
