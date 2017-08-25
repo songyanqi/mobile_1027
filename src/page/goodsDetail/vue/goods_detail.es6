@@ -12,9 +12,9 @@ import popup from '../../../common/js/module/popup.js';
 import share from '../../../common/js/module/share.js';
 
 require('babel-polyfill');
-base.init();
 
 window.tj_path ="detail";
+base.init();
 //引入utils.es6;
 // import Utils from "../../../../utils/utils.es6";
 import layout from "../../../../module/index/layout.es6";
