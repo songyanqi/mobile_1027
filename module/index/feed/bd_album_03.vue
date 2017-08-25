@@ -374,6 +374,14 @@
                       localStorage.setItem("access_token",result.data.xmlyToken.access_token)
                       localStorage.setItem("expires_in",result.data.xmlyToken.expires_in)
 
+                      result.data.dataList.map(function (item,index) {
+                        if(that.isFree==1){
+                            if(item.isFree==0){
+                              result.data.dataList.splice(index,1);
+                            }
+                        }
+                      })
+
                       that.contentList=that.contentList.concat((result.data.dataList).reverse());
                       result.data.dataList.map(function (item,index) {
                         if(item.sortNo){
@@ -620,7 +628,6 @@
     border-radius: 37px;
     color: #FF4A7D;
     border: 1px solid #FF4A7D;
-    border: 0.5px solid #FF4A7D;
     font-size: 12px;
     text-align: center;
     line-height: 0.22rem;
