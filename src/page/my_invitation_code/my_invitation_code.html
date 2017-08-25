@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="[[static]]/page/my_invitation_code/css/my_invitation_code.css[[v]]">
 </head>
 <body>
-  <div class="app" style="display: none;" :style="{display: response ? null : 'none'}">
+  <div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
     <!--标题-->
     <com-top-title title="邀请好友安装大V店APP"></com-top-title>
 
@@ -13,7 +13,7 @@
     <div v-if-="response">
       <!--我的邀请码-->
       <div class="sharImg">
-        <img :src="response.data.shareUrl" alt="">
+        <img :src="response.data.shareUrl" alt="" @touchstart="gtouchstart" @touchend="gtouchend" @touchmove="gtouchmove">
       </div>
       <div v-if="isApp" :class="{'share_to_btn':isApp}" @click="shareto">
         分享给好友

@@ -25,7 +25,7 @@ new Vue({
       response: null,
       login_form: true,  //登录显示
       isApp: ua.isDvdApp(),
-      show_pop:false
+      show_pop: false
     }
   },
   computed: {},
@@ -41,7 +41,7 @@ new Vue({
           backOnHead: 1,  // 头部返回按钮
         });
         native.Browser.setHead({
-          'title' : document.title,
+          'title': document.title,
         });
 
         // 设置分享信息
@@ -89,7 +89,7 @@ new Vue({
         success: function (result) {
           popup.toast("邀请码已复制到剪切板");
         },
-        error:function (result) {
+        error: function (result) {
           popup.toast("复制失败，请手动复制");
         }
       })
@@ -109,6 +109,29 @@ new Vue({
       var that = this;
       that.rule_form = false;
     },
+    gtouchstart: function () {
+      var that = this;
+      window.timeOutEvent = setTimeout(function () {
+        that.longPress();
+      }, 1000);//这里设置定时器，定义长按500毫秒触发长按事件，时间可以自己改，个人感觉500毫秒非常合适
+      return false;
+    },
+    gtouchend: function () {
+      clearTimeout(window.timeOutEvent);//清除定时器
+      if (window.timeOutEvent != 0) {
+        //这里写要执行的内容（尤如onclick事件）
+        alert("你这是点击，不是长按");
+      }
+      return false;
+    },
+    gtouchmove: function () {
+      clearTimeout(window.timeOutEvent);//清除定时器
+      window.timeOutEvent = 0;
+    },
+    longPress: function () {
+      window.timeOutEvent = 0;
+
+    }
   },
   filters: {},
 });
