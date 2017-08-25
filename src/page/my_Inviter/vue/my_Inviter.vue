@@ -20,7 +20,7 @@
       </div>
     </div>
     <!--修改邀请人-->
-    <div class="bottoms">
+    <div class="bottoms" v-if="(response.data && response.data.editable != 0)&& modifier_inviter">
       <div v-if="trun_grey" class="changeBtn greybtn">{{btnName}}</div>
       <div v-else class="changeBtn" @click="modify_inviter">{{btnName}}</div>
       <div class="change_time" v-if="response.data && response.data.endTime && show_edntime">
@@ -60,7 +60,8 @@
         show_edntime: true,
         mobile: '',
         inviteCode: '',
-        info_bottom: false
+        info_bottom: false,
+        modifier_inviter:true
       }
     },
     computed: {},
@@ -167,6 +168,9 @@
               that.my_inviterPage = true; //隐藏我的邀请人
               that.show_edntime = false; //不显示截至修改时间
               that.trun_grey = false;  //置灰按钮
+              if(that.btnName == '确认修改'){
+                that.modifier_inviter = false;
+              }
               that.btnName = '修改邀请人';
               that.$emit("titlename", "我的邀请人");
               document.title = "我的邀请人";
