@@ -56,7 +56,7 @@
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
-            <div class="item_right2" v-if="isFree==1 && item.isFree==0 && item.isSub==0 && item.isPlay==1" @click="go_href(item.albumId,item.sortNo)">
+            <div class="item_right2" v-if="isFree==1 && item.isFree==0 && item.isSub==0 && item.isPlay==1" @click.stop="go_href2(item.albumId,item.sortNo)">
               <div class="free">免费试听</div>
             </div>
 
@@ -110,7 +110,7 @@
         this.$nextTick(function () {
           setTimeout(function(){
             that.audioLocation();
-          },2000)
+          },100)
           
         });
 
@@ -140,7 +140,20 @@
         maskk2:maskk2
       },
       methods:{
-
+          nativePay(url, callback){
+            var option = {};
+            option.url = encodeURIComponent(url);
+            if (url.split("app_pay/").length > 1) {
+              var list = url.split("app_pay/")[1].split("&");
+              for (var i = 0; i < list.length; i++) {
+                var key = list[i].split("=")[0];
+                var value = list[i].split("=")[1];
+                option[key] = value;
+              }
+            }
+            option.success = callback
+            native.Browser.pay(option)
+          },
           check_contentList(){
               if((typeof this.contentList[0])==="undefined"){
                 this.maskFlag=true;
@@ -232,42 +245,72 @@
             api("/api/mg/content/album/subscription",obj)
               .then(function(result) {
                 let {code, data: {msg, payUrl, jsApi}} = result;
-                if (code == 0) {
+                if (code == 0){
                   if (result.data.code == 300) {
                     if (jsApi) {
                       jsApi.jsApiParameters.dvdhref = location.href;
-                      window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
-                      // bravetime.goto("http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters)));
+//                      window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                      window.location.href="http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters));
                     } else if (payUrl) {
                       that.nativePay(payUrl, function (flag) {
                         if (flag) {
-                          alert(333333);
-                          window.location.reload();
+
+                          popup.confirm({
+                            title: '提示',            // 标题（支持传入html。有则显示。）
+                            text: '订阅成功',             // 文本（支持传入html。有则显示。）
+                            okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                            cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                            okBtnCallback: function(){
+                              window.location.reload();
+                            },
+                            cancelBtnCallback: function(){
+                              window.location.reload();
+                            }
+                          });
                         }
                       });
                     } else {
-                      alert(111111);
-                      setTimeout(function () {
-                        window.location.reload();
-                      },1000)
+                        alert(3333);
+                      popup.confirm({
+                        title: '提示',            // 标题（支持传入html。有则显示。）
+                        text: '订阅成功',             // 文本（支持传入html。有则显示。）
+                        okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                        cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                        okBtnCallback: function(){
+                           window.location.reload();
+                        },
+                        cancelBtnCallback: function(){
+                           window.location.reload();
+                        }
+                      });
                     }
                   } else {
-                      alert(result.data.code);
-                    popup.confirm({
-                      title: '提示',            // 标题（支持传入html。有则显示。）
-                      text: '订阅成功',             // 文本（支持传入html。有则显示。）
-                      okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-                      cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-                      okBtnCallback: function(){
-//                        window.location.reload();
-                      },
-                      cancelBtnCallback: function(){
-//                        window.location.reload();
+                    if (result.data.code == 100){
+                      if (that.isApp){
+                        native.Account.login()
+                      }else {
+                        window.location.href = '/login.html'
                       }
-                    });
+                    } else {
+                      popup.confirm({
+                        title: '提示',
+                        text: 'code:'+result.data.code+':msg'+result.data.msg, // 文本（支持传入html。有则显示。）
+                        okBtnTitle: '确定',
+                        cancelBtnTitle: '取消',
+                        okBtnCallback: function(){},
+                        cancelBtnCallback: function(){}
+                      });
+                    }
                   }
                 }else {
-
+                  popup.confirm({
+                    title: '提示',
+                    text: 'code:'+result.data.code+':msg'+result.data.msg, // 文本（支持传入html。有则显示。）
+                    okBtnTitle: '确定',
+                    cancelBtnTitle: '取消',
+                    okBtnCallback: function(){},
+                    cancelBtnCallback: function(){}
+                  });
                 }
               })
           },
@@ -292,6 +335,18 @@
               }else{
                 window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
               }
+
+          },
+          go_href2(albumId,sortNo){
+            if(this.isApp){
+              //调用app播放器
+              native.Audio.audioPlay({
+                "sortNo":sortNo,
+                "albumId":albumId
+              })
+            }else{
+              window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
+            }
 
           },
           getMoreList(){

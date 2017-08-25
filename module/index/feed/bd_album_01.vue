@@ -11,7 +11,7 @@
           <div class="over_text">{{ historyName }}</div>
           <div>"，点我继续收听</div>
         </div>
-        <div class="close_mask" @click="close"><img src="//pic.davdian.com/free/2017/08/22/clearInput.png" alt=""></div>
+        <div class="close_mask" @click.stop="close"><img src="//pic.davdian.com/free/2017/08/22/clearInput.png" alt=""></div>
       </div>
 
     </div>
@@ -83,7 +83,7 @@
                 _this.history_mask=true;
               }
             })
-          },4000)
+          },200)
         }
       },
     }
