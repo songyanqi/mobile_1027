@@ -1008,15 +1008,11 @@ export default {
                 shareMoney = Number(dataExtra.price.normalIncome) * Number(dataExtra.price.activityRatio);
               }
             }
-<<<<<<< HEAD
-            if (shareMoney > 0) {
 
-=======
             
             common1.initShare(5);
             base.ready();
             if (shareMoney > 0 && that.visitorStatus == '3') {
->>>>>>> b_20170814_jinlong
               native.Browser.setHead({
                 shareMoney: shareMoney + "",
                 shareMoneyStr: '赚' + shareMoney + '元',
