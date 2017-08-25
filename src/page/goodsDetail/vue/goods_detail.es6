@@ -9,7 +9,7 @@ import common1 from '../../../../module/common/common.es6';
 import native from '../../../common/js/module/native.js';
 import confirm from './confirm.vue';
 import popup from '../../../common/js/module/popup.js';
-import weixin from '../../../common/js/module/weixin.js';
+import share from '../../../common/js/module/share.js';
 
 require('babel-polyfill');
 base.init();
@@ -215,17 +215,6 @@ export default {
         }
     },
     created () {
-        // // if (platform == '2') {
-        // if (ua.isDvdApp() && ua.isAndroid()) {
-        //   alert(666)
-        //     window.title = shareTitle;
-        //     window.link = lineLink;
-        //     window.imgUrl = imgUrl.replace('pic.davdian.com','pic1.davdian.com');
-        //     window.desc = descContent;
-        //
-        //     base.ready();
-        // }
-
         $(window).scroll(() => {
           let topHead = $(".top_h_s_to");
           let scrollTop = $(window).scrollTop();
@@ -818,14 +807,6 @@ export default {
                             window.link = location.href;
                             window.imgUrl = dataBasis.shareImg.replace('pic.davdian.com','pic1.davdian.com');
                             window.desc = dataBasis.shareRecommend;
-                            common1.initShare(5);
-                            base.ready();
-                            weixin.setShareInfo({
-                              title: window.title, // 分享标题
-                              desc: window.desc, // 分享描述
-                              link: window.link, // 分享链接
-                              imgUrl: window.imgUrl, // 分享图标
-                            });
                         }
                     } else {
                       popup.toast(res.data.msg,3000);
@@ -1027,8 +1008,11 @@ export default {
                 shareMoney = Number(dataExtra.price.normalIncome) * Number(dataExtra.price.activityRatio);
               }
             }
-            if (shareMoney > 0) {
 
+            
+            common1.initShare(5);
+            base.ready();
+            if (shareMoney > 0 && that.visitorStatus == '3') {
               native.Browser.setHead({
                 shareMoney: shareMoney + "",
                 shareMoneyStr: '赚' + shareMoney + '元',
@@ -1038,6 +1022,16 @@ export default {
                 shareDesc: "当好友点击您分享的链接，并进入您的店铺购物，您就可以获得对应的商品返现啦！",
                 bigImgUrl: `http://img.davdian.com/add_qrcode.php?goods_id=${that.goodsId}&seller_id=${that.sellerId}&t=${Date.now()}`,
               };
+            } else {
+              native.custom.initHead({
+                shareOnHead: 1
+              });
+              share.setShareInfo({
+                title: window.title, // 分享标题
+                desc: window.desc, // 分享描述
+                link: window.link, // 分享链接
+                imgUrl: window.imgUrl, // 分享图标
+              });
             }
           }
 
