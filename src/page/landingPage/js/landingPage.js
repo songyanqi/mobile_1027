@@ -39,10 +39,7 @@ window.landingPage=new Vue({
         let ts = this;
 
         // 设置app头部标题栏
-        native.custom.initHead({
-          'shareOnHead': 1,
-          'isShowAudio':1
-        });
+
 
         // 设置分享信息
         try {

@@ -52,13 +52,20 @@
         this.scrol();
 
         setTimeout(function () {
+          native.custom.initHead({
+            'shareOnHead': 1,
+            'isShowAudio':1,
+            'isAudioAbsorb':0
+          });
+        },500)
+
+        setTimeout(function () {
           native.Browser.setHead({
             'title':'免费学习专区',
             'backBtn':'1',
             'shareBtn':"1"
           })
         },100)
-
 
     },
     methods:{
