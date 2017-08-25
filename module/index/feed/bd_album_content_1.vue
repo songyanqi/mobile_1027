@@ -232,6 +232,7 @@
           var h = time.getHours();
           var mm = time.getMinutes();
           var s = time.getSeconds();
+          console.log(time);
           return time;
         },
 //        getLocalTime(nS){

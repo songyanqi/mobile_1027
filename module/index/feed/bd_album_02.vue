@@ -2,11 +2,7 @@
   <div class="content2">
     <div class="content_buy">
       <div class="count">
-        <span v-text="data.body.purchase" v-if="isFree==1"></span>
-        <span v-text="data.body.number" v-if="isFree==0"></span>
-        <span>人</span>
-        <span v-if="isFree==1">订阅</span>
-        <span v-if="isFree==0">听过</span>
+        <span v-text="people_count()"></span><span>人</span><span v-text="status()"></span>
       </div>
       <div class="content_header">
           <div v-for="item in dataList">
@@ -39,6 +35,20 @@
       doImg(img){
           if(img)return img;
           return "//pic.davdian.com/free/2017/08/22/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.png"
+      },
+      people_count(){
+          if(this.isFree==1){
+            return this.data.body.purchase;
+          }else if(this.isFree==0){
+            return this.data.body.number;
+          }
+      },
+      status(){
+        if(this.isFree==1){
+          return "订阅";
+        }else if(this.isFree==0){
+          return "听过";
+        }
       }
     }
   }

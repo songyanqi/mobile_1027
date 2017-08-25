@@ -36,7 +36,8 @@
     data(){
       return {
         priceFlag:true,
-        isapp: util.utils.isApp()
+        isapp: util.utils.isApp(),
+        albumId:getQuery("albumId")
       }
     },
     mounted:function () {
@@ -88,11 +89,11 @@
         option.success = callback;
         native.Browser.pay(option)
       },
-      Subscribe(albumId){
+      Subscribe(){
 
         var that=this;
         var obj={
-          albumId:albumId,
+          albumId:this.albumId,
           shareUserId:getQuery('shareUserId') || ''
         };
         api("/api/mg/content/album/subscription",obj)
