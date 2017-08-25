@@ -316,7 +316,7 @@ gulp.task('img:dev', () => {
 // 生产环境图片编译
 gulp.task('img:dist', () => {
   return compileImg()
-    .pipe(imagemin())
+    // .pipe(imagemin())
     // 显示文件体积
     .pipe(size({showFiles: true}))
     .pipe(gulp.dest('dist/static'));

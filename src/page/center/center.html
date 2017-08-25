@@ -23,7 +23,7 @@
         <span class="info">
             <!--昵称-->
             <a href="/center_edit.html" @click="tj(4);">
-              <p class="nickname">{{response.data.userInfo.nickName}} [编辑]</p>
+              <p class="nickname">{{response.data.userInfo.nickName || response.data.userInfo.userName}} [编辑]</p>
             </a>
           <!--称号-->
             <p class="level" :class="{'g-guide-target-1': guideStep === 1}">
