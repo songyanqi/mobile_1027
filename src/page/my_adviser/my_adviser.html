@@ -11,7 +11,7 @@
   <!--主题部分-->
   <div class="adviser_box">
     <div class="adviserImg">
-      <img :src="response.data." alt="">
+      <img :src="response.data.avatar" alt="">
       <div>官方顾问</div>
     </div>
     <div class="adviserName">
@@ -22,19 +22,19 @@
       TA的宣言：{{response.data.title}}
       <div class="talk_tringle"></div>
     </div>
-    <div class="advisMark">
+    <div v-if="response.data.mark" class="advisMark">
       <div class="advisMark_wrap">
-        <div>匹配度80%</div>
-        <div>分享达人</div>
-        <div>有共同好友</div>
+        <div v-if="response.data.mark.matching_degree">匹配度{{response.data.mark.matching_degree}}%</div>
+        <div v-if="response.data.mark.share_mark">{{response.data.mark.share_mark}}</div>
+        <div v-if="response.data.mark.friend_mark">{{response.data.mark.friend_mark}}</div>
       </div>
     </div>
     <div class="adviserTip">与顾问建立联系，可获得精准服务</div>
     <div class="my_code_text">
-      顾问微信号：<span>lijinlong5200</span><span @click="show_wx = true">复制微信号</span>
+      顾问微信号：<span>{{response.data.wx}}</span><span @click="show_wx = true">复制微信号</span>
     </div>
     <div class="my_code_text">
-      顾问手机号：<span>17737701050</span><span @click="show_tel = true">复制手机号</span>
+      顾问手机号：<span>{{response.data.mobile}}</span><span @click="show_tel = true">复制手机号</span>
     </div>
     <div v-show="show_tel" class="g-pop mobile active">
       <ul>
@@ -57,17 +57,16 @@
       </ul>
     </div>
   </div>
-  <div class="adviserBottom">*{{response.data.nextModifyTime}}后可更改顾问</div>
-  <a class="replaceAdviser" style="margin-top: 80px;">更换顾问</a>
-  <div class="bottom_tops">妈妈顾问也可能会主动联系你，请留意微信和手机提醒；可在
-    “我的”-“妈妈顾问”中再次查看妈妈顾问信息。
-  </div>
-  <a class="replaceAdviser" style="margin-top: 16px;">进入大V店</a>
+  <span v-if="show_go_shop_btn">
+    <div class="bottom_tops">妈妈顾问也可能会主动联系你，请留意微信和手机提醒；可在“我的”-“妈妈顾问”中再次查看妈妈顾问信息。</div>
+    <a :href="response.shop_url" class="replaceAdviser" style="margin-top: 16px;">进入大V店</a>
+  </span>
+  <span v-else>
+    <div class="adviserBottom">*{{response.data.nextModifyTime}}后可更改顾问</div>
+    <a class="replaceAdviser" style="margin-top: 40px;">更换顾问</a>
+  </span>
 </div>
 @@include('vendor.include')
 <script src="[[static]]/page/my_adviser/js/my_adviser.js[[v]]"></script>
 </body>
-<style>
-
-</style>
 </html>

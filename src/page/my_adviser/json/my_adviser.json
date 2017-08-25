@@ -16,6 +16,11 @@
     "wx": "4567890",
     "avatar": "http://pic.davdian.com/shop_logo/2017/08/19/80_80_3a28a9c59bdd09a84d34fef0958fabcf.gif",
     "nextModifyTime": "2019-10-11 12:00:00",
-    "joinDays": 20
+    "joinDays": 20,
+    "mark":{
+      "matching_degree":"56",
+      "share_mark":"分享标兵",
+      "friend_mark":"有共同好友"
+    }
   }
 }
