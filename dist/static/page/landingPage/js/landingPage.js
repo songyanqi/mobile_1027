@@ -1226,6 +1226,22 @@
 	        action: 'goBackToRootPage',
 	        param: param
 	      });
+	    },
+
+	    /**
+	     * 功能: H5触发cmd客户端复制文案到剪切板
+	     * 用法:
+	     * native.BrowserTouch.copyText();
+	     */
+	    copyText: function copyText() {
+	      var param = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+	      call({
+	        v: '4.2.0',
+	        host: 'BrowserTouch',
+	        action: 'copyText',
+	        param: param
+	      });
 	    }
 	  },
 	  /****************************** 12、H5触发cmd命令 ******************************/
@@ -4041,7 +4057,7 @@
 
 
 	// module
-	exports.push([module.id, "@-webkit-keyframes com-alert-animation {\n  0% {\n    -webkit-transform: scale(0);\n            transform: scale(0); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n@keyframes com-alert-animation {\n  0% {\n    -webkit-transform: scale(0);\n            transform: scale(0); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n.com-popup-toast {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  max-width: 640px;\n  height: 100%;\n  display: table;\n  z-index: 9;\n  line-height: 1; }\n  .com-popup-toast .cell {\n    display: table-cell;\n    vertical-align: middle;\n    text-align: center; }\n    .com-popup-toast .cell .box {\n      display: inline-block;\n      -webkit-box-sizing: border-box;\n         -moz-box-sizing: border-box;\n              box-sizing: border-box;\n      padding: 0.1rem 0.15rem;\n      min-width: 1.2rem;\n      max-width: 2rem;\n      min-height: 0.4rem;\n      border-radius: 0.04rem;\n      background: rgba(0, 0, 0, 0.65);\n      color: #fff;\n      font-size: 0.14rem;\n      line-height: 0.2rem;\n      -webkit-animation: com-alert-animation 0.3s;\n              animation: com-alert-animation 0.3s; }\n      .com-popup-toast .cell .box .html {\n        display: inline-block;\n        text-align: left; }\n", ""]);
+	exports.push([module.id, "@-webkit-keyframes com-alert-animation {\n  0% {\n    -webkit-transform: scale(0);\n            transform: scale(0); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n@keyframes com-alert-animation {\n  0% {\n    -webkit-transform: scale(0);\n            transform: scale(0); }\n  100% {\n    -webkit-transform: scale(1);\n            transform: scale(1); } }\n\n.com-popup-toast {\n  position: fixed;\n  top: 0;\n  width: 100%;\n  max-width: 640px;\n  height: 100%;\n  display: table;\n  z-index: 99;\n  line-height: 1; }\n  .com-popup-toast .cell {\n    display: table-cell;\n    vertical-align: middle;\n    text-align: center; }\n    .com-popup-toast .cell .box {\n      display: inline-block;\n      -webkit-box-sizing: border-box;\n         -moz-box-sizing: border-box;\n              box-sizing: border-box;\n      padding: 0.1rem 0.15rem;\n      min-width: 1.2rem;\n      max-width: 2rem;\n      min-height: 0.4rem;\n      border-radius: 0.04rem;\n      background: rgba(0, 0, 0, 0.65);\n      color: #fff;\n      font-size: 0.14rem;\n      line-height: 0.2rem;\n      -webkit-animation: com-alert-animation 0.3s;\n              animation: com-alert-animation 0.3s; }\n      .com-popup-toast .cell .box .html {\n        display: inline-block;\n        text-align: left; }\n", ""]);
 
 	// exports
 
@@ -4408,7 +4424,7 @@
 	  //     max-width: $pageMaxWidth;
 	  //     height: 100%;
 	  //     display: table;
-	  //     z-index: 9;
+	  //     z-index: 99;
 	  //     line-height: 1;
 	  //     .cell {
 	  //       display: table-cell;
@@ -9096,14 +9112,12 @@
 	          if (offtop < 50) {
 	            if (!scope.begin_time) {
 	              scope.begin_time = new Date().valueOf();
-	              console.log("开始计算时间：", scope.begin_time);
 	            }
 	          }
 	          if (offtop > 50) {
 	            if (scope.begin_time) {
 	              if (!scope.end_time) {
 	                scope.end_time = new Date().valueOf();
-	                console.log("结束计算时间：", scope.end_time);
 	                var laytime = scope.end_time - scope.begin_time;
 	                if (laytime < 500) {
 	                  scope.begin_time = 0;
@@ -9111,6 +9125,7 @@
 	                  return false;
 	                }
 	                var tiData = {
+	                  "production": 22,
 	                  "period": laytime,
 	                  "page": 1,
 	                  "menu_id": scope.sData.menuId || scope.menuid
@@ -9238,7 +9253,6 @@
 	      if (scope.begin_time) {
 	        if (!scope.end_time) {
 	          scope.end_time = new Date().valueOf();
-	          console.log("结束计算时间：", scope.end_time);
 	          var laytime = scope.end_time - scope.begin_time;
 	          if (laytime < 500) {
 	            scope.begin_time = 0;
@@ -9246,6 +9260,7 @@
 	            return false;
 	          }
 	          var tiData = {
+	            "production": 22,
 	            "period": laytime,
 	            "page": 1,
 	            "menu_id": scope.sData.menuId || scope.menuid
@@ -23944,7 +23959,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-780f6021]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-780f6021]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-780f6021]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-780f6021]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n  max-width: 2.15rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-780f6021]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-780f6021]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-780f6021],.mask_stop[_v-780f6021],.disable[_v-780f6021]{\n  z-index:3;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-780f6021]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-780f6021]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-780f6021]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-780f6021]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n  max-width: 2.15rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-780f6021]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-780f6021]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-780f6021],.mask_stop[_v-780f6021],.disable[_v-780f6021]{\n  z-index:3;\n}\n", ""]);
 
 	// exports
 
@@ -24158,22 +24173,18 @@
 	        }
 	      });
 	    },
+	    add0: function add0(m) {
+	      return m < 10 ? '0' + m : m;
+	    },
 	    getLocalTime: function getLocalTime(nS) {
-	      var time = new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
-	      var timestamp = time.split(" ")[0].split("/");
-	      var y = parseInt(timestamp[0]);
-	      var m = parseInt(timestamp[1]);
-	      var d = parseInt(timestamp[2]);
-	      var year = parseInt(new Date().getFullYear());
-	      var month = parseInt(new Date().getMonth() + 1);
-	      var day = parseInt(new Date().getDate());
-	      var weekDay = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
-	      var week = new Date(y, m - 1, d).getDay();
-	      if (y === year && m === month && d === day) {
-	        return "今日更新";
-	      } else {
-	        return m + "月" + d + "日" + " " + weekDay[week];
-	      }
+	      var time = new Date(nS * 1000);
+	      var y = time.getFullYear();
+	      var m = time.getMonth() + 1;
+	      var d = time.getDate();
+	      var h = time.getHours();
+	      var mm = time.getMinutes();
+	      var s = time.getSeconds();
+	      return time;
 	    },
 
 	    //        getLocalTime(nS){
