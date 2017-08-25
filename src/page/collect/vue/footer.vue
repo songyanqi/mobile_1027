@@ -46,7 +46,6 @@
     methods:{
       share(){
         var that=this;
-        alert(123);
         if(that.isApp){
           native.custom.share({
             "title":that.shareInfo.title,
@@ -90,7 +89,6 @@
         native.Browser.pay(option)
       },
       Subscribe(){
-        alert(8);
         var that=this;
         var obj={
           albumId:this.albumId,
@@ -99,7 +97,6 @@
         api("/api/mg/content/album/subscription",obj)
           .then(function(result) {
             let {code, data: {msg, payUrl, jsApi}} = result;
-            alert(code);
             if (code == 0){
               if (result.data.code == 300) {
                 if (jsApi) {
@@ -125,7 +122,6 @@
                     }
                   });
                 } else {
-                  alert(3333);
                   popup.confirm({
                     title: '提示',            // 标题（支持传入html。有则显示。）
                     text: '订阅成功',             // 文本（支持传入html。有则显示。）
