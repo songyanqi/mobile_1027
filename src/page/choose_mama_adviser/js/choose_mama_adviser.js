@@ -68,17 +68,19 @@ new Vue({
         data: encrypt({}),
         success(response) {
           that.response = response;
+          if(response.code){
+
+          }else{
+
+          }
         },
         error(error) {
           that.response = require('../json/choose_mama_adviser.json');
-          console.log(that.response);
           if(that.response.data.distId){
             that.oncesdesc = true;
           }
-          console.log(that.response.data.tags[0].id);
-          console.log(that.response.data.tags[1].id);
-          Vue.set(that.hobby, that.response.data.tags[0].id, true);
-          Vue.set(that.hobby, that.response.data.tags[1].id, true);
+          Vue.set(that.hobby, that.response.data.tags[0].id - 1, true);
+          Vue.set(that.hobby, that.response.data.tags[1].id - 1, true);
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
