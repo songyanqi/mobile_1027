@@ -272,7 +272,7 @@
                 // });
               }else{
                 // 报名成功
-                window.location.href = '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.index].sortNo
+                window.location.href = '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.musicList.length - that.index - 1].sortNo
                 // window.location.reload()
               }
 
@@ -281,7 +281,7 @@
                 if (that.isapp){
                   native.Account.login()
                 }else {
-                  let url = window.location.origin + '?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.index].sortNo
+                  let url = window.location.origin + 'musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.musicList.length - that.index -1].sortNo
                   window.location.href = '/login.html?'+'referer=' + encodeURIComponent(url)
                 }
               } else {
