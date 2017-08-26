@@ -406,10 +406,15 @@
                             setTimeout(function(){
                                 if (window.appData){
                                     window.appData.isAudioAbsorb = 1
+                                } else {
+                                    window.appData = {
+                                        'isAudioAbsorb':1
+                                    }
+                                }
+                                if (window.appData){
                                     window.appData.isShowAudio = 1
                                 } else {
                                     window.appData = {
-                                        'isAudioAbsorb':1,
                                         'isShowAudio':1
                                     }
                                 }
