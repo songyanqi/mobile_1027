@@ -429,7 +429,7 @@ export default {
               okBtnTitle:"好的",
               cancelBtnTitle:"暂不需要",
               okBtnCallback() {
-                location.replace(result.data.url)
+                location.replace('/choose_mama_adviser.html')
               },
               cancelBtnCallback() {
                 if(!isTryShop()){
