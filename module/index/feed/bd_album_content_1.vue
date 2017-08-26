@@ -18,6 +18,7 @@
         <div class="right_img" v-if="item.isPlay==1">
           <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
           <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="!(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+          <div class='mask_play loading_play' v-if="item.sortNo==sortNo && item.albumId==albumId && btnStatus==2"><img src="//pic.davdian.com/free/2017/08/26/loading.png" alt=""></div>
           <div class="circle_mask"></div>
           <div><img :src="item.imageUrl" alt=""></div>
         </div>
@@ -375,5 +376,12 @@
   }
   .mask_play,.mask_stop,.disable{
     z-index:3;
+  }
+  .loading_play{
+    animation:rotating 1.2s linear infinite
+  }
+  @keyframes rotating{
+    from{transform:rotate(0)}
+    to{transform:rotate(360deg)}
   }
 </style>
