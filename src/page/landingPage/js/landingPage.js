@@ -23,7 +23,7 @@ vueLazyload.init();
 window.landingPage=new Vue({
   el: ".app",
   components: {
-    'landingPage':require('../vue/landing.vue')
+    'landingPage':require('../vue/landingPage.vue')
   },
   data() {
     return {
@@ -39,10 +39,7 @@ window.landingPage=new Vue({
         let ts = this;
 
         // 设置app头部标题栏
-        native.custom.initHead({
-          'shareOnHead': 1,
-          'isShowAudio':1
-        });
+
 
         // 设置分享信息
         try {

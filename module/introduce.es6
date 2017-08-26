@@ -91,15 +91,20 @@ export default {
                         })
                     });
                 }
+                if (window.appData){
+                    window.appData.isShowAudio = 1
+                } else {
+                    window.appData = {
+                        'isShowAudio':1
+                    }
+                }
                 if (!that.error && that.deleteFlag){
                     setTimeout(function(){
                         if (window.appData){
                             window.appData.isAudioAbsorb = 1
-                            window.appData.isShowAudio = 1
                         } else {
                             window.appData = {
-                                'isAudioAbsorb':1,
-                                'isShowAudio':1
+                                'isAudioAbsorb':1
                             }
                         }
                         window.bravetime.initHead()

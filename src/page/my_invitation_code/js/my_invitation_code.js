@@ -10,6 +10,7 @@ import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
 import ua from '../../../common/js/module/ua.js';
+import nativeAncestry from '../../../common/js/module/nativeAncestor.js';
 
 login.needLogin();
 
@@ -25,7 +26,7 @@ new Vue({
       response: null,
       login_form: true,  //登录显示
       isApp: ua.isDvdApp(),
-      show_pop:false
+      show_pop: false
     }
   },
   computed: {},
@@ -41,7 +42,7 @@ new Vue({
           backOnHead: 1,  // 头部返回按钮
         });
         native.Browser.setHead({
-          'title' : document.title,
+          'title': document.title,
         });
 
         // 设置分享信息
@@ -89,7 +90,7 @@ new Vue({
         success: function (result) {
           popup.toast("邀请码已复制到剪切板");
         },
-        error:function (result) {
+        error: function (result) {
           popup.toast("复制失败，请手动复制");
         }
       })
@@ -109,6 +110,25 @@ new Vue({
       var that = this;
       that.rule_form = false;
     },
+    gtouchstart: function (img) {
+      var that = this;
+      window.timeOutEvent = setTimeout(function () {
+        that.longPress(img);
+      }, 300);
+      return false;
+    },
+    gtouchend: function () {
+      clearTimeout(window.timeOutEvent);//清除定时器
+    },
+    gtouchmove: function () {
+      clearTimeout(window.timeOutEvent);//清除定时器
+      window.timeOutEvent = 0;
+    },
+    longPress: function (img) {
+      window.timeOutEvent = 0;
+      nativeAncestry.savePic(img);
+      console.log("长按");
+    }
   },
   filters: {},
 });

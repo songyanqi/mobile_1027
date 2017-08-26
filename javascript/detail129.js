@@ -36,7 +36,11 @@ $(document).ready(function(){
         kd(true,inviteCode);
     });
     $('.btn1').click(function () {
+      if(!!navigator.userAgent.match(/davdian|bravetime|vyohui/)){
+        window.location.href = '/'
+      }else{
         window.location.href = '/index.php?rp=goods_shop&rl=guang'
+      }
     })
     confirmContainer.find(".mask").click(function () {
         confirmContainer.addClass("hide").removeClass("show_slow");

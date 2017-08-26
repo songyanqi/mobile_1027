@@ -36,7 +36,8 @@
     data(){
       return {
         priceFlag:true,
-        isapp: util.utils.isApp()
+        isapp: util.utils.isApp(),
+        albumId:getQuery("albumId")
       }
     },
     mounted:function () {
@@ -45,7 +46,6 @@
     methods:{
       share(){
         var that=this;
-        alert(123);
         if(that.isApp){
           native.custom.share({
             "title":that.shareInfo.title,
@@ -88,11 +88,10 @@
         option.success = callback;
         native.Browser.pay(option)
       },
-      Subscribe(albumId){
-
+      Subscribe(){
         var that=this;
         var obj={
-          albumId:albumId,
+          albumId:this.albumId,
           shareUserId:getQuery('shareUserId') || ''
         };
         api("/api/mg/content/album/subscription",obj)
@@ -107,7 +106,6 @@
                 } else if (payUrl) {
                   that.nativePay(payUrl, function (flag) {
                     if (flag) {
-
                       popup.confirm({
                         title: '提示',            // 标题（支持传入html。有则显示。）
                         text: '订阅成功',             // 文本（支持传入html。有则显示。）
@@ -123,7 +121,6 @@
                     }
                   });
                 } else {
-                  alert(3333);
                   popup.confirm({
                     title: '提示',            // 标题（支持传入html。有则显示。）
                     text: '订阅成功',             // 文本（支持传入html。有则显示。）
@@ -177,6 +174,8 @@
     position: fixed;
     bottom: 0;
     z-index:7;
+    border-top:1px solid #E3DFD8 ;
+    border-top:0.5px solid #E3DFD8 ;
   }
   .btn>div{
     display: inline-block;

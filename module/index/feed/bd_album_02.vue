@@ -1,12 +1,14 @@
 <template>
   <div class="content2">
     <div class="content_buy">
-      <div class="count"><span v-text="data.body.purchase"></span><span>人</span><span v-if="isFree==1">订阅</span><span v-if="isFree==0">听过</span></div>
+      <div class="count">
+        <span v-text="people_count()"></span><span>人</span><span v-text="status()"></span>
+      </div>
       <div class="content_header">
           <div v-for="item in dataList">
             <img :src="doImg(item.imageUrl)" alt="">
           </div>
-          <div v-if="head_count() == 7">
+          <div v-if="number > 7">
             <img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt="">
           </div>
       </div>
@@ -23,7 +25,8 @@
       }
     },
     mounted:function () {
-      this.dataList=this.data.body.dataList;
+      this.dataList=this.data.body.dataList.reverse();
+      this.number = this.data.body.purchase
       this.isFree=this.data.body.isFree;
     },
     methods:{
@@ -33,6 +36,20 @@
       doImg(img){
           if(img)return img;
           return "//pic.davdian.com/free/2017/08/22/%E9%BB%98%E8%AE%A4%E5%A4%B4%E5%83%8F.png"
+      },
+      people_count(){
+          if(this.isFree==1){
+            return this.data.body.purchase;
+          }else if(this.isFree==0){
+            return this.data.body.number;
+          }
+      },
+      status(){
+        if(this.isFree==1){
+          return "订阅";
+        }else if(this.isFree==0){
+          return "听过";
+        }
       }
     }
   }

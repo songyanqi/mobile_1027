@@ -45,6 +45,7 @@
                 </div>
               </div>
             </div>
+
             <div class="item_right" v-if="isFree==0 || (isFree==1 && item.isSub==1)">
               <div class="mask_stop" v-if="(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
               <div class="mask_play" v-if="!(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
@@ -52,7 +53,7 @@
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
             <div class="item_right" v-if="isFree==1 && item.isFree==1 && item.isSub==0 && item.isPlay==0">
-              <div class="disable" @click.stop="stop_info(item.albumId)"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+              <div class="disable" @click.stop="stop_info(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
@@ -222,18 +223,22 @@
                 }
               });
           },
-          stop_info(albumId){
+          stop_info(albumId,sortNo){
             var that=this;
-            popup.confirm({
-              title: '提示',            // 标题（支持传入html。有则显示。）
-              text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
-              okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-              cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-              okBtnCallback: function(){
-                that.Subscribe(albumId);
-              },
-              cancelBtnCallback: function(){}
-            });
+            if(that.isApp){
+              that.Subscribe(albumId);
+            }else {
+              popup.confirm({
+                title: '提示',            // 标题（支持传入html。有则显示。）
+                text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
+                okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                okBtnCallback: function(){
+                  that.Subscribe(albumId);
+                },
+                cancelBtnCallback: function(){}
+              });
+            }
           },
           Subscribe(albumId){
 
@@ -267,10 +272,10 @@
                               window.location.reload();
                             }
                           });
+
                         }
                       });
                     } else {
-                        alert(3333);
                       popup.confirm({
                         title: '提示',            // 标题（支持传入html。有则显示。）
                         text: '订阅成功',             // 文本（支持传入html。有则显示。）
@@ -289,7 +294,7 @@
                       if (that.isApp){
                         native.Account.login()
                       }else {
-                        window.location.href = '/login.html'
+                        window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
                       }
                     } else {
                       popup.confirm({
@@ -374,6 +379,14 @@
                       localStorage.setItem("access_token",result.data.xmlyToken.access_token)
                       localStorage.setItem("expires_in",result.data.xmlyToken.expires_in)
 
+                      result.data.dataList.map(function (item,index) {
+                        if(that.isFree==1){
+                            if(item.isFree==0){
+                              result.data.dataList.splice(index,1);
+                            }
+                        }
+                      })
+
                       that.contentList=that.contentList.concat((result.data.dataList).reverse());
                       result.data.dataList.map(function (item,index) {
                         if(item.sortNo){
@@ -433,6 +446,8 @@
     padding-top: 0.14rem;
     height: 0.36rem;
     background: white;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+    border-bottom:0.5px solid rgba(0,0,0,0.1);
   }
 
   .tab .tab_list {
@@ -449,7 +464,6 @@
   .update {
     padding-left: 0.1rem;
     padding-right: 0.1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
     height: 0.36rem;
     position: relative;
     padding-bottom: 0.1rem;
@@ -466,7 +480,7 @@
 
   .tab_list .border, .b_right {
     display: inline-block;
-    height: 0.3rem;
+    height: 0.18rem;
     width: 1.87rem;
     line-height: 0.2rem;
     text-align: center;
@@ -513,6 +527,7 @@
     padding-left: 0.1rem;
     padding-right: 0.1rem;
     border-bottom: 1px solid #E1E1E1;
+    border-bottom: 0.5px solid #E1E1E1;
     position: relative;
   }
   .rea>div{
@@ -620,7 +635,6 @@
     border-radius: 37px;
     color: #FF4A7D;
     border: 1px solid #FF4A7D;
-    border: 0.5px solid #FF4A7D;
     font-size: 12px;
     text-align: center;
     line-height: 0.22rem;

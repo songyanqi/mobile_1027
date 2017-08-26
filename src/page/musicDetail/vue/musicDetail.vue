@@ -6,6 +6,7 @@
       <div class="big_img" v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].imageUrl'>
         <img :src="musicList[musicList.length-index-1].imageUrl" alt="">
       </div>
+      <div class="left_icon" v-if="musicList[musicList.length-index-1].showXmlyIcon==1"><img :src="musicList[musicList.length-index-1].xmlyIcon" alt=""></div>
       <div class="big_mask" v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].isPlay != 1'></div>
       <div class="mask_tab" v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].isPlay != 1'>
         <div class="mask_text">
@@ -36,7 +37,7 @@
       <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
     </div>
     <div class="look_more" @click='goAlbumId' v-if='!isapp'>
-      <div class="look_count">查看合辑 (<span v-if='musicList[musicList.length-index-1]  && musicList[musicList.length-index-1].sortNo' v-text='parseInt(musicList[musicList.length-index-1].sortNo) + 1'></span>/<span v-text='allAudio'></span>)</div>
+      <div class="look_count">查看合辑 (<span v-text='allAudio'></span>)</div>
       <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
     </div>
     <div style="height: 0.1rem;background: #F8F7F7;" v-if='!isapp'></div>
@@ -133,7 +134,7 @@
     mounted: function () {
       var that =  this
       this.$nextTick(function(){
-        that.playData()
+        // that.playData()
         $('a').on('click',function(event){
           event.preventDefault();
         })
@@ -157,11 +158,15 @@
             } else {
               popup.confirm({
                 title: '提示',
-                text: '接口返回feedlist数据为null',
+                text: '音频已经被删除',
                 okBtnTitle: '确定',
                 cancelBtnTitle: '取消',
-                okBtnCallback: function(){},
-                cancelBtnCallback: function(){}
+                okBtnCallback: function(){
+                  window.history.back()
+                },
+                cancelBtnCallback: function(){
+                  window.history.back()
+                }
               });
             }
           } else {
@@ -189,7 +194,6 @@
             localStorage.setItem('access_token', data.data.xmlyToken.access_token)
             localStorage.setItem('expires_in', data.data.xmlyToken.expires_in)
           }
-          console.log(that.index ,data.data.dataList[that.index].shareInfo)
           if (data && data.data && data.data.dataList && data.data.dataList[that.index] && data.data.dataList[that.index].shareInfo){
             // 
             try {
@@ -216,6 +220,9 @@
           duration: that.playTime,
           play_type:1,
         }
+        if (that.musicList && that.musicList[that.index] && that.musicList[that.index].musicId){
+          obj['musicId'] = that.musicList[that.index].musicId
+        }
         if (localStorage.getItem('expires_in')){
           obj.expires_in = localStorage.getItem('expires_in')
         }
@@ -224,6 +231,9 @@
         }
         api('/api/mg/content/music/playTrackSingle',obj).then(function(data){
           console.log('data--->', data)
+        })
+        api('/api/mg/content/music/click',obj).then(function(data){
+          console.log('clickdata-->', data)
         })
       },
       nativePay(url, callback){
@@ -262,15 +272,17 @@
                 // });
               }else{
                 // 报名成功
-                window.location.href = '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.index
+                window.location.href = '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.musicList.length - that.index - 1].sortNo
+                // window.location.reload()
               }
 
             }else {
-              if (result.data.code == 400){
+              if (result.data.code == 100){
                 if (that.isapp){
                   native.Account.login()
                 }else {
-                  window.location.href = '/login.html'
+                  let url = window.location.origin + '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.musicList.length - that.index -1].sortNo
+                  window.location.href = '/login.html?'+'referer=' + encodeURIComponent(url)
                 }
               } else {
                 popup.confirm({
@@ -386,7 +398,7 @@
             if (that.musicList[that.musicList.length-1].sortNo == that.allAudio-1){
               popup.confirm({
                 title: '提示',
-                text: '已经是最后一首了',
+                text: '已经是第一首了',
                 okBtnTitle: '确定',
                 cancelBtnTitle: '取消',
                 okBtnCallback: function(){},
@@ -402,7 +414,7 @@
             if (that.musicList[0].sortNo == 0){
               popup.confirm({
                 title: '提示',
-                text: '已经是第一首了',
+                text: '已经是最后一首了',
                 okBtnTitle: '确定',
                 cancelBtnTitle: '取消',
                 okBtnCallback: function(){},
@@ -465,6 +477,7 @@
             clearInterval(that.playTimer)
             that.playAudio(that.index + 1)
           }
+          that.playData()
           that.shareInfo(that.index)
         } else {
           if (that.isPlay){
@@ -487,6 +500,7 @@
               clearInterval(that.playTimer)
               that.playAudio(that.index + 1)
             }
+            that.playData()
           }
         }
       },
@@ -844,6 +858,7 @@
     padding-left: 0.2rem;
     padding-right: 0.2rem;
     border-bottom: 1px solid #DDDDDD;
+    border-bottom: 0.5px solid #DDDDDD;
   }
   .mask_padding1{
     padding-left: 0.2rem;
@@ -911,7 +926,7 @@
     overflow: scroll;
   }
   .mask_bottom{
-    line-height: 0.45rem;
+    line-height: 0.4rem;
     text-align: center;
     color: #333333;
     font-size: 14px;
@@ -976,7 +991,7 @@
   }
   .mask_text{
     color:#FFFFFF;
-    margin-top: 0.6rem;
+    margin-top: 1.24rem;
   }
   .mask_tab{
     display: inline-block;
@@ -1000,5 +1015,17 @@
     background-size: 1.8rem 0.36rem;
     text-align: center;
     line-height: 0.36rem;
+  }
+  .left_icon{
+    position: absolute;
+    height: 0.44rem;
+    width: 0.44rem;
+    left: 0.1rem;
+    bottom: 0.1rem;
+  }
+  .left_icon img{
+    height: 0.44rem;
+    width: 0.44rem;
+    border-radius: 50%;
   }
 </style>

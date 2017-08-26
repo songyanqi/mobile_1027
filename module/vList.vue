@@ -138,13 +138,18 @@
         created(){
             this.inApp = Units.isApp();
             if (window.appData){
-              window.appData.isAudioAbsorb = 1
-              window.appData.isShowAudio = 1
+                window.appData.isAudioAbsorb = 1
             } else {
-              window.appData = {
-                'isAudioAbsorb':1,
-                'isShowAudio':1
-              }
+                window.appData = {
+                    'isAudioAbsorb':1
+                }
+            }
+            if (window.appData){
+                window.appData.isShowAudio = 1
+            } else {
+                window.appData = {
+                    'isShowAudio':1
+                }
             }
             this.init()
         },

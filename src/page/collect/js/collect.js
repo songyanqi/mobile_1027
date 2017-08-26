@@ -12,7 +12,7 @@ import util from '../../../common/js/module/util.js';
 import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
-import native from '../../../common/js/module/native.js';
+// import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
 
@@ -39,10 +39,11 @@ window.collect=new Vue({
         let ts = this;
 
         // 设置app头部标题栏
-        native.custom.initHead({
-          'shareOnHead': '1',
-          'isAudioAbsorb':1
-        });
+        // native.custom.initHead({
+        //   'shareOnHead': '1',
+        //   'isShowAudio':1,
+        //   'isAudioAbsorb':1
+        // });
 
         // 设置分享信息
         // try {
