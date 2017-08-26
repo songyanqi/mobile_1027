@@ -6,26 +6,26 @@
   <link rel="stylesheet" href="[[static]]/page/center/css/center.css[[v]]">
 </head>
 <body>
-  <div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}"
-       ref="app" @touchmove="preventScroll" @mousewheel="preventScroll">
-    <!--个人信息-->
-    <div class="g-info" :style="shopBg">
-      <div class="mask"></div>
-      <!--设置-->
-      <a href="/settings.html" @click="tj(2);">
-        <img class="setting" v-lazy="'[[static]]/page/center/img/setting.png'">
+<div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}"
+     ref="app" @touchmove="preventScroll" @mousewheel="preventScroll">
+  <!--个人信息-->
+  <div class="g-info" :style="shopBg">
+    <div class="mask"></div>
+    <!--设置-->
+    <a href="/settings.html" @click="tj(2);">
+      <img class="setting" v-lazy="'[[static]]/page/center/img/setting.png'">
+    </a>
+    <div class="personal">
+      <!--头像-->
+      <a href="/center_edit.html" @click="tj(3);">
+        <img class="head" :src="response.data.userInfo.headImage || '[[static]]/page/center/img/default-head.png'">
       </a>
-      <div class="personal">
-        <!--头像-->
-        <a href="/center_edit.html" @click="tj(3);">
-          <img class="head" :src="response.data.userInfo.headImage || '[[static]]/page/center/img/default-head.png'">
-        </a>
-        <span class="info">
+      <span class="info">
             <!--昵称-->
             <a href="/center_edit.html" @click="tj(4);">
               <p class="nickname">{{response.data.userInfo.nickName}} [编辑]</p>
             </a>
-          <!--称号-->
+        <!--称号-->
             <p class="level" :class="{'g-guide-target-1': guideStep === 1}">
               <!--卖家跳转等级体系页面-->
               <a :href="response.data.userInfo.rankUrl" @click="tj(5);" v-if="response.visitor_status === 3">
@@ -39,118 +39,129 @@
               </a>
             </p>
           </span>
-      </div>
-    </div>
-
-    <!--feed流-->
-    <div class="g-feed">
-      <template v-for="(feed, index) in response.data.feedList">
-        <!--标题栏-->
-        <div class="title" :class="{'g-guide-target-3': feed.title.luminance == '1' && guideStep === 3}"
-             v-if="feed.title" @click="feed.title.oneKd == '1' && oneKdClick();"
-             :style="getMarginOrBorderTop(feed.marginTop, feed.title && feed.title.leftTitle && feed.title.leftTitle.indexOf('您是由') !== -1 ? 'border' : 'margin')">
-          <!--<div class="split-line-h" v-if="feed.title.luminance == '1' || feed.title.oneKd == '1'"></div>-->
-          <div class="btns">
-            <span class="name">{{feed.title.leftTitle || feed.title.title}}</span>
-            <span class="more" v-if="feed.title.rightTitle || feed.title.oneKd == '1'">
-            <a :href="(feed.title.command && feed.title.command.content) ? feed.title.command.content : '#'"
-               @click="tj(1, feed.title.command.log);">
-            {{feed.title.rightTitle}}<img class="arrow" src="[[static]]/page/center/img/arrow-right.png">
-            </a>
-            </span>
-          </div>
-        </div>
-
-        <!--body栏-->
-        <template v-if="feed.body">
-          <!--我的订单、功能-->
-          <div :class="{'body-order': feed.body.tplId == 'bd_user_action'}"
-               v-if="feed.body.tplId == 'bd_user_action'"
-               :style="getMarginOrBorderTop(feed.marginTop, 'margin')">
-            <!--分割线-->
-            <div class="split-line-h" v-if="feed.body.line === '1'"></div>
-            <!--按钮-->
-            <div class="btns">
-              <!--遍历输出订单按钮-->
-              <div class="btn" :class="{'g-guide-target-2': guideStep === 2 && (item.title == '课程' || item.title =='购物车')}"
-                   v-for="item of feed.body.dataList">
-                <a :href="item.command.content" @click="tj(1, item.command.log);">
-                  <div class="pic">
-                    <i class="num" v-if="item.num > 0">{{item.num > 99 ? '99+' : item.num}}</i>
-                    <img :src="item.imageUrl">
-                  </div>
-                  <div class="name">{{item.title}}</div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!--我的奖励-->
-          <div class="body-prize" v-if="feed.body.tplId == 'bd_user_award'"
-               :class="{'g-guide-target-3': guideStep === 3}"
-               :style="getMarginOrBorderTop(feed.marginTop, 'border')">
-            <!--分割线-->
-            <div class="split-line-h" v-if="feed.body.line === '1'"></div>
-            <!--按钮-->
-            <div class="btns">
-              <template v-for="(item,index) in feed.body.dataList">
-                <div class="btn">
-                  <a :href="item.command.content" @click="tj(1, item.command.log);">
-                    <div class="num">
-                      <i class="point" v-if="item.hasNewVisitor"></i>
-                      {{item.title}}<span class="unit">{{item.subTitle}}</span>
-                    </div>
-                    <div class="name">{{item.butTitle}}</div>
-                  </a>
-                </div>
-                <div class="split-line-v" v-if="index + 1 < feed.body.dataList.length"></div>
-              </template>
-            </div>
-          </div>
-          <!--菜单项-->
-          <div class="body-menu" v-if="feed.body.tplId == 'bd_user_manage'"
-               :style="getMarginOrBorderTop(feed.marginTop, 'margin')">
-            <!--分割线-->
-            <div class="split-line-h" v-if="feed.body.line === '1'"></div>
-            <!--按钮-->
-            <div class="btns">
-              <div class="btn" v-for="item of feed.body.dataList">
-                <a :href="item.command.content" @click="tj(1, item.command.log);">
-                  <img class="pic" :src="item.imageUrl">
-                  <div class="name">{{item.title}}</div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </template>
-      </template>
-    </div>
-
-    <!--底部菜单-->
-    <com-footer active="center" :cart-num="response.data.userInfo.cartNum"></com-footer>
-
-    <!--顶部提示-->
-    <g-top-tip :type="topTipType"></g-top-tip>
-
-    <!--引导浮层第一步-->
-    <div class="g-guide" ref="guide" v-show="isShowGuide">
-      <div class="guide-1" v-show="guideStep === 1">
-        <img class="pic-tip" v-lazy="'[[static]]/page/center/img/guide-tip-1.png'">
-        <div class="next-btn" @click="guideStepNext">知道啦</div>
-      </div>
-      <div class="guide-2" v-show="guideStep === 2">
-        <img class="pic-tip" v-lazy="'[[static]]/page/center/img/guide-tip-2.png?v=1'">
-        <div class="next-btn" @click="guideStepNext">知道啦</div>
-      </div>
-      <div class="guide-3" v-show="guideStep === 3">
-        <img class="pic-tip" v-lazy="'[[static]]/page/center/img/guide-tip-3.png'">
-        <div class="next-btn" @click="guideStepNext" :class="{iphone4: document.documentElement.clientHeight < 670}">
-          进入个人中心
-        </div>
-      </div>
     </div>
   </div>
 
-  @@include('vendor.include')
-  <script src="[[static]]/page/center/js/center.js[[v]]"></script>
+  <!--feed流-->
+  <div class="g-feed">
+    <template v-for="(feed, index) in response.data.feedList">
+      <!--标题栏-->
+      <!--<div class="title" :class="{'g-guide-target-3': feed.title.luminance == '1' && guideStep === 3}"-->
+      <!--v-if="feed.title" @click="feed.title.oneKd == '1' && oneKdClick();"-->
+      <!--:style="getMarginOrBorderTop(feed.marginTop, feed.title && feed.title.leftTitle && feed.title.leftTitle.indexOf('您是由') !== -1 ? 'border' : 'margin')">-->
+      <!--&lt;!&ndash;<div class="split-line-h" v-if="feed.title.luminance == '1' || feed.title.oneKd == '1'"></div>&ndash;&gt;-->
+      <!--<div class="btns">-->
+      <!--<span class="name">{{feed.title.leftTitle || feed.title.title}}</span>-->
+      <!--<span class="more" v-if="feed.title.rightTitle || feed.title.oneKd == '1'">-->
+      <!--<a :href="(feed.title.command && feed.title.command.content) ? feed.title.command.content : '#'"-->
+      <!--@click="tj(1, feed.title.command.log);">-->
+      <!--{{feed.title.rightTitle}}<img class="arrow" src="[[static]]/page/center/img/arrow-right.png">-->
+      <!--</a>-->
+      <!--</span>-->
+      <!--</div>-->
+      <!--</div>-->
+      <div class="title" :class="{'g-guide-target-3': feed.title.luminance == '1' && guideStep === 3}"
+           v-if="feed.title" @click="feed.title.oneKd == '1' && oneKdClick();"
+           :style="getMarginOrBorderTop(feed.marginTop, feed.title && feed.title.leftTitle && feed.title.leftTitle.indexOf('您是由') !== -1 ? 'border' : 'margin')">
+        <a class="btns" :href="(feed.title.command && feed.title.command.content) ? feed.title.command.content : '#'" @click="tj(1, feed.title.command.log);">
+          <span class="name">{{feed.title.leftTitle || feed.title.title}}</span>
+          <span class="more">
+            <span>{{feed.title.rightTitle}}<img v-if="feed.title.command && feed.title.command.content" class="arrow" src="[[static]]/page/center/img/arrow-right.png"></span>
+          </span>
+        </a>
+      </div>
+
+      <!--body栏-->
+      <template v-if="feed.body">
+        <!--我的订单、功能-->
+        <div :class="{'body-order': feed.body.tplId == 'bd_user_action'}"
+             v-if="feed.body.tplId == 'bd_user_action'"
+             :style="getMarginOrBorderTop(feed.marginTop, 'margin')">
+          <!--分割线-->
+          <div class="split-line-h" v-if="feed.body.line === '1'"></div>
+          <!--按钮-->
+          <div class="btns">
+            <!--遍历输出订单按钮-->
+            <div class="btn"
+                 :class="{'g-guide-target-2': guideStep === 2 && (item.title == '课程' || item.title =='购物车')}"
+                 v-for="item of feed.body.dataList">
+              <a :href="item.command.content" @click="tj(1, item.command.log);">
+                <div class="pic">
+                  <i class="num" v-if="item.num > 0">{{item.num > 99 ? '99+' : item.num}}</i>
+                  <img :src="item.imageUrl">
+                </div>
+                <div class="name">{{item.title}}</div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!--我的奖励-->
+        <div class="body-prize" v-if="feed.body.tplId == 'bd_user_award'"
+             :class="{'g-guide-target-3': guideStep === 3}"
+             :style="getMarginOrBorderTop(feed.marginTop, 'border')">
+          <!--分割线-->
+          <div class="split-line-h" v-if="feed.body.line === '1'"></div>
+          <!--按钮-->
+          <div class="btns">
+            <template v-for="(item,index) in feed.body.dataList">
+              <div class="btn">
+                <a :href="item.command.content" @click="tj(1, item.command.log);">
+                  <div class="num">
+                    <i class="point" v-if="item.hasNewVisitor"></i>
+                    {{item.title}}<span class="unit">{{item.subTitle}}</span>
+                  </div>
+                  <div class="name">{{item.butTitle}}</div>
+                </a>
+              </div>
+              <div class="split-line-v" v-if="index + 1 < feed.body.dataList.length"></div>
+            </template>
+          </div>
+        </div>
+        <!--菜单项-->
+        <div class="body-menu" v-if="feed.body.tplId == 'bd_user_manage'"
+             :style="getMarginOrBorderTop(feed.marginTop, 'margin')">
+          <!--分割线-->
+          <div class="split-line-h" v-if="feed.body.line === '1'"></div>
+          <!--按钮-->
+          <div class="btns">
+            <div class="btn" v-for="item of feed.body.dataList">
+              <a :href="item.command.content" @click="tj(1, item.command.log);">
+                <img class="pic" :src="item.imageUrl">
+                <div class="name">{{item.title}}</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </template>
+    </template>
+  </div>
+
+  <!--底部菜单-->
+  <com-footer active="center" :cart-num="response.data.userInfo.cartNum"></com-footer>
+
+  <!--顶部提示-->
+  <g-top-tip :type="topTipType"></g-top-tip>
+
+  <!--引导浮层第一步-->
+  <div class="g-guide" ref="guide" v-show="isShowGuide">
+    <div class="guide-1" v-show="guideStep === 1">
+      <img class="pic-tip" v-lazy="'[[static]]/page/center/img/guide-tip-1.png'">
+      <div class="next-btn" @click="guideStepNext">知道啦</div>
+    </div>
+    <div class="guide-2" v-show="guideStep === 2">
+      <img class="pic-tip" v-lazy="'[[static]]/page/center/img/guide-tip-2.png?v=1'">
+      <div class="next-btn" @click="guideStepNext">知道啦</div>
+    </div>
+    <div class="guide-3" v-show="guideStep === 3">
+      <img class="pic-tip" v-lazy="'[[static]]/page/center/img/guide-tip-3.png'">
+      <div class="next-btn" @click="guideStepNext" :class="{iphone4: document.documentElement.clientHeight < 670}">
+        进入个人中心
+      </div>
+    </div>
+  </div>
+</div>
+
+@@include('vendor.include')
+<script src="[[static]]/page/center/js/center.js[[v]]"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@
           <div><img :src="item.imageUrl" alt=""></div>
         </div>
         <div class="right_img" v-if="item.isPlay==0">
-          <div class="disable" @click.stop="stop_info(item.albumId)"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+          <div class="disable" @click.stop="stop_info(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
           <div class="circle_mask"></div>
           <div><img :src="item.imageUrl" alt=""></div>
         </div>
@@ -108,18 +108,45 @@
             })
           }
         },
-        stop_info(albumId){
+        stop_info(albumId,sortNo){
           var that=this;
-          popup.confirm({
-            title: '提示',            // 标题（支持传入html。有则显示。）
-            text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
-            okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-            cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-            okBtnCallback: function(){
-              that.Subscribe(albumId);
-            },
-            cancelBtnCallback: function(){}
-          });
+          if(that.isApp){
+            popup.confirm({
+              title: '提示',            // 标题（支持传入html。有则显示。）
+              text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
+              okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+              cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+              okBtnCallback: function(){
+                that.Subscribe(albumId);
+              },
+              cancelBtnCallback: function(){}
+            });
+          }else{
+            popup.confirm({
+              title: '提示',            // 标题（支持传入html。有则显示。）
+              text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
+              okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+              cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+              okBtnCallback: function(){
+                that.Subscribe(albumId);
+              },
+              cancelBtnCallback: function(){}
+            });
+          }
+        },
+        nativePay(url, callback){
+          var option = {};
+          option.url = encodeURIComponent(url);
+          if (url.split("app_pay/").length > 1) {
+            var list = url.split("app_pay/")[1].split("&");
+            for (var i = 0; i < list.length; i++) {
+              var key = list[i].split("=")[0];
+              var value = list[i].split("=")[1];
+              option[key] = value;
+            }
+          }
+          option.success = callback;
+          native.Browser.pay(option)
         },
         Subscribe(albumId){
 
@@ -128,79 +155,94 @@
             albumId:albumId,
             shareUserId:getQuery('shareUserId') || ''
           };
-          alert(obj.albumId +":"+obj.shareUserId);
           api("/api/mg/content/album/subscription",obj)
             .then(function(result) {
               let {code, data: {msg, payUrl, jsApi}} = result;
-              if (code == 0) {
+              if (code == 0){
                 if (result.data.code == 300) {
                   if (jsApi) {
                     jsApi.jsApiParameters.dvdhref = location.href;
-                    // window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
-                    window.location.href = "http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+//                      window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                    window.location.href="http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters));
                   } else if (payUrl) {
                     that.nativePay(payUrl, function (flag) {
                       if (flag) {
 
+                        popup.confirm({
+                          title: '提示',            // 标题（支持传入html。有则显示。）
+                          text: '订阅成功',             // 文本（支持传入html。有则显示。）
+                          okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                          cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                          okBtnCallback: function(){
+                            window.location.reload();
+                          },
+                          cancelBtnCallback: function(){
+                            window.location.reload();
+                          }
+                        });
                       }
                     });
                   } else {
-                    setTimeout(function(){
-                      window.location.reload();
-                    },500)
+                    popup.confirm({
+                      title: '提示',            // 标题（支持传入html。有则显示。）
+                      text: '订阅成功',             // 文本（支持传入html。有则显示。）
+                      okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                      cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                      okBtnCallback: function(){
+                        window.location.reload();
+                      },
+                      cancelBtnCallback: function(){
+                        window.location.reload();
+                      }
+                    });
                   }
                 } else {
-                  if (result.data.code == 400){
-                    if (that.isapp){
+                  if (result.data.code == 100){
+                    if (that.isApp){
                       native.Account.login()
                     }else {
                       window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
                     }
-                  }else {
-                    alert("嘿嘿");
+                  } else {
+                    popup.confirm({
+                      title: '提示',
+                      text: 'code:'+result.data.code+':msg'+result.data.msg, // 文本（支持传入html。有则显示。）
+                      okBtnTitle: '确定',
+                      cancelBtnTitle: '取消',
+                      okBtnCallback: function(){},
+                      cancelBtnCallback: function(){}
+                    });
                   }
                 }
               }else {
-//                dialog.alert('code:' + code + 'msg:'+ result.data.msg)
+                popup.confirm({
+                  title: '提示',
+                  text: 'code:'+result.data.code+':msg'+result.data.msg, // 文本（支持传入html。有则显示。）
+                  okBtnTitle: '确定',
+                  cancelBtnTitle: '取消',
+                  okBtnCallback: function(){},
+                  cancelBtnCallback: function(){}
+                });
               }
             })
         },
-        getLocalTime(nS){
-          let time= new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
-          let timestamp=time.split(" ")[0].split("/");
-          let y=parseInt(timestamp[0]);
-          let m=parseInt(timestamp[1]);
-          let d=parseInt(timestamp[2]);
-          let year=parseInt(new Date().getFullYear());
-          let month=parseInt(new Date().getMonth()+1);
-          let day=parseInt(new Date().getDate());
-          let weekDay = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
-          let week=new Date(y,m-1,d).getDay();
-          if(y === year && m === month && d === day){
-              return "今日更新";
-          }else {
-              return m + "月" + d + "日" + " " + weekDay[week];
-          }
+        add0(m){
+            return m<10?'0'+m:m;
         },
-//        getLocalTime(nS){
-//          let time= new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
-//          let timestamp=time.split(" ")[0].split("/");
-//          let y=parseInt(timestamp[0]);
-//          let m=parseInt(timestamp[1]);
-//          let d=parseInt(timestamp[2]);
-//          let year=parseInt(new Date().getFullYear());
-//          let month=parseInt(new Date().getMonth()+1);
-//          let day=parseInt(new Date().getDate());
-//          let weekDay = ["星期天", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
-//          let week=new Date(y,m-1,d).getDay();
-//          if(y === year && m === month && d === day){
-//            return "今日更新";
-//          }else {
-////            return Object.prototype.toString.call(time.split(" ")[0]);
-//
-//            return time.split(" ")[0];
-//          }
-//        },
+        getLocalTime(nS){
+          var time = new Date(nS*1000);
+          var y = time.getFullYear();
+          var m = time.getMonth()+1;
+          var d = time.getDate();
+          var day=time.getDay();
+          var h = time.getHours();
+          var mm = time.getMinutes();
+          var s = time.getSeconds();
+          console.log(time);
+//          return Object.prototype.toString.call(y);
+          var week=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+          return m+"月"+d+"日"+" "+week[day];
+        },
         go_href(albumId,sortNo){
             if(this.isApp){
               //调app播放器

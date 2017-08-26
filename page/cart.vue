@@ -281,9 +281,9 @@
   <div class="loading" v-if="loading">购物车商品读取中</div>
 
   <!--登录部分-->
-  <div class="account_in_cart login_container" v-show="!cartInfo.isEmpty">
-    <slot></slot>
-  </div>
+  <!--<div class="account_in_cart login_container" v-show="!cartInfo.isEmpty">-->
+    <!--<slot></slot>-->
+  <!--</div>-->
 
   <!--会员返现提示悬框-->
  <!--  <div v-if="cartInfo.total_income" class="income_bottom_fixed">

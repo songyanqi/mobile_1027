@@ -11,7 +11,7 @@ const BrandType = {
             brandType: '1',
         }
     },
-    props: ['brandlist'],
+    props: ['brandlist','visitorstatus'],
     methods: {
     }
 };

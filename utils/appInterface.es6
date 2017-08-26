@@ -42,7 +42,6 @@ iosInterface.refreshPreviousPageData = function () {
 };
 //state 0表示暂停，1表示播放
 iosInterface.getAudioState = function (obj) {
-  alert("albumId:"+obj.albumId+":sortNo:"+obj.sortNo+":state:"+obj.state);
   if (window.landingPage) {
     window.landingPage.$children.map(function (item) {
       if (item.name == 'landingPage') {
@@ -70,6 +69,12 @@ iosInterface.getAudioState = function (obj) {
                 item3.albumId = obj.albumId;
                 item3.sortNo = obj.sortNo;
                 item3.btnStatus = obj.state;
+                //+1
+                item3.contentList.map(function(item4){
+                  if (item4.albumId == obj.albumId && item4.sortNo == obj.sortNo && obj.state==1) {
+                    item4.number = parseInt(item4.number) + 1
+                  }
+                })
               }
             })
           }
@@ -78,6 +83,7 @@ iosInterface.getAudioState = function (obj) {
     })
   }
 }
+
 /**
  * 初始化头部
  */

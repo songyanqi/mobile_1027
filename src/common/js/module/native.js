@@ -43,9 +43,9 @@ function getProtocal(param = {}) {
     // 此处返回'1'时候正常回调success,但返回不等于'1'时一律执行error。
     // 如此一来,诸如Account.login这样的返回'0'|'1'|'2'的接口就可以处理'0'|'1'以外的情况了(在error中判断response === '0'|'2'|'3'|'4'|...)。
     if (response.code == '1') {
-      param.param.success(response)
+      param.param.success(response);
     } else {
-      param.param.error(response)
+      param.param.error(response);
     }
     // 执行完回收
     window[callbackName] = null;
@@ -775,6 +775,19 @@ const native = {
         param: param
       });
     },
+    /**
+     * 功能: H5触发cmd客户端复制文案到剪切板
+     * 用法:
+     * native.BrowserTouch.copyText();
+     */
+    copyText(param = {}){
+      call({
+        v: '4.2.0',
+        host: 'BrowserTouch',
+        action: 'copyText',
+        param: param
+      })
+    }
   },
   /****************************** 12、H5触发cmd命令 ******************************/
   Common: {

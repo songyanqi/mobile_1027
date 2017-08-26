@@ -3,23 +3,16 @@ import common from '../../../common/js/common.js';
 
 var layout = require("../../../../module/index/layout.es6").default;
 var dialog = require("../../../../utils/dialog.es6").default;
-var base = require("../../../../utils/base.es6").default;
+// var base = require("../../../../utils/base.es6").default;
 import share from '../../../common/js/module/share.js';
+import native from '../../../common/js/module/native.js';
 import ua from '../../../common/js/module/ua.js';
-import common1 from '../../../../module/common/common.es6';
-import weixin from '../../../common/js/module/weixin.js';
+// import common1 from '../../../../module/common/common.es6';
+// import weixin from '../../../common/js/module/weixin.js';
 
-base.init();
+// base.init();
 
 var isDev = true;
-
-// // if (platform == '2') {
-// if (ua.isDvdApp() && ua.isAndroid()) {
-//     window.title = 'wefwef';
-//     window.link = location.href;
-//     window.imgUrl = '';
-//     window.desc = 'wgggg';
-// }
 
 var detailData = function (query) {
   var type, dataObj,data;
@@ -330,14 +323,6 @@ function renderData(res) {
         window.link = location.href;
         window.imgUrl = dataBasis.shareImg.replace('pic.davdian.com','pic1.davdian.com');
         window.desc = dataBasis.shareRecommend;
-        common1.initShare(5);
-        base.ready();
-        weixin.setShareInfo({
-          title: window.title, // 分享标题
-          desc: window.desc, // 分享描述
-          link: window.link, // 分享链接
-          imgUrl: window.imgUrl, // 分享图标
-        });
       }
 
     } else {

@@ -154,7 +154,10 @@
               :commentobj = "commentObj"
             ></goods-evaluate>
 
-            <brand-type v-if="firstScreenFinish" :brandlist = "brandList"
+            <brand-type 
+              visitorstatus = "visitorStatus"
+              v-if="firstScreenFinish" 
+              :brandlist = "brandList"
             ></brand-type>
 
             <!--广告banner-->

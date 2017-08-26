@@ -6,6 +6,7 @@
       <div class="big_img" v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].imageUrl'>
         <img :src="musicList[musicList.length-index-1].imageUrl" alt="">
       </div>
+      <div class="left_icon" v-if="musicList[musicList.length-index-1].showXmlyIcon==1"><img :src="musicList[musicList.length-index-1].xmlyIcon" alt=""></div>
       <div class="big_mask" v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].isPlay != 1'></div>
       <div class="mask_tab" v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].isPlay != 1'>
         <div class="mask_text">
@@ -133,7 +134,7 @@
     mounted: function () {
       var that =  this
       this.$nextTick(function(){
-        that.playData()
+        // that.playData()
         $('a').on('click',function(event){
           event.preventDefault();
         })
@@ -141,9 +142,6 @@
           albumId:getQuery('albumId')|| 0,
           sort:'0',
           sortNo:getQuery('sortNo') || '0'
-        }
-        if (that.musicList && that.musicList[that.index] && that.musicList[that.index].musicId){
-          obj['musicId'] = that.musicList[that.index].musicId
         }
         if (localStorage.getItem('access_token')){
           obj['access_token'] = localStorage.getItem('access_token')
@@ -222,6 +220,9 @@
           duration: that.playTime,
           play_type:1,
         }
+        if (that.musicList && that.musicList[that.index] && that.musicList[that.index].musicId){
+          obj['musicId'] = that.musicList[that.index].musicId
+        }
         if (localStorage.getItem('expires_in')){
           obj.expires_in = localStorage.getItem('expires_in')
         }
@@ -278,7 +279,7 @@
                   native.Account.login()
                 }else {
                   let url = window.location.origin + '?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.index].sortNo
-                  window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
+                  window.location.href = '/login.html?'+'referer=' + encodeURIComponent(url)
                 }
               } else {
                 popup.confirm({
@@ -473,6 +474,7 @@
             clearInterval(that.playTimer)
             that.playAudio(that.index + 1)
           }
+          that.playData()
           that.shareInfo(that.index)
         } else {
           if (that.isPlay){
@@ -495,6 +497,7 @@
               clearInterval(that.playTimer)
               that.playAudio(that.index + 1)
             }
+            that.playData()
           }
         }
       },
@@ -852,6 +855,7 @@
     padding-left: 0.2rem;
     padding-right: 0.2rem;
     border-bottom: 1px solid #DDDDDD;
+    border-bottom: 0.5px solid #DDDDDD;
   }
   .mask_padding1{
     padding-left: 0.2rem;
@@ -919,7 +923,7 @@
     overflow: scroll;
   }
   .mask_bottom{
-    line-height: 0.45rem;
+    line-height: 0.4rem;
     text-align: center;
     color: #333333;
     font-size: 14px;
@@ -984,7 +988,7 @@
   }
   .mask_text{
     color:#FFFFFF;
-    margin-top: 0.6rem;
+    margin-top: 1.24rem;
   }
   .mask_tab{
     display: inline-block;
@@ -1008,5 +1012,17 @@
     background-size: 1.8rem 0.36rem;
     text-align: center;
     line-height: 0.36rem;
+  }
+  .left_icon{
+    position: absolute;
+    height: 0.44rem;
+    width: 0.44rem;
+    left: 0.1rem;
+    bottom: 0.1rem;
+  }
+  .left_icon img{
+    height: 0.44rem;
+    width: 0.44rem;
+    border-radius: 50%;
   }
 </style>

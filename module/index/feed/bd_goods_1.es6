@@ -126,14 +126,12 @@ export default {
           if (offtop < 50) {
             if (!scope.begin_time) {
               scope.begin_time = (new Date()).valueOf();
-              console.log("开始计算时间：",scope.begin_time);
             }
           }
           if (offtop > 50) {
             if (scope.begin_time) {
               if(!scope.end_time){
                 scope.end_time = (new Date()).valueOf();
-                console.log("结束计算时间：",scope.end_time);
                 var laytime = scope.end_time - scope.begin_time;
                 if(laytime < 500){
                   scope.begin_time = 0;
@@ -141,6 +139,7 @@ export default {
                   return false;
                 }
                 let tiData = {
+                  "production":22,
                   "period":laytime,
                   "page":1,
                   "menu_id":scope.sData.menuId || scope.menuid
@@ -269,7 +268,6 @@ export default {
       if (scope.begin_time) {
         if(!scope.end_time){
           scope.end_time = (new Date()).valueOf();
-          console.log("结束计算时间：",scope.end_time);
           var laytime = scope.end_time - scope.begin_time;
           if(laytime < 500){
             scope.begin_time = 0;
@@ -277,6 +275,7 @@ export default {
             return false;
           }
           let tiData = {
+            "production":22,
             "period":laytime,
             "page":1,
             "menu_id":scope.sData.menuId || scope.menuid
