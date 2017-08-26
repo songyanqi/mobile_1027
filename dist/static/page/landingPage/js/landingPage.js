@@ -31467,7 +31467,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-96cfcca8]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-96cfcca8]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-96cfcca8]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-96cfcca8]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-96cfcca8]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-96cfcca8]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-96cfcca8]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-96cfcca8]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-96cfcca8]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-96cfcca8]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n  max-width: 2.15rem;\n}\n.list_title[_v-96cfcca8]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-96cfcca8],.list_time[_v-96cfcca8]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-96cfcca8]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-96cfcca8]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-96cfcca8]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-96cfcca8]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-96cfcca8]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-96cfcca8],.mask_stop[_v-96cfcca8],.disable[_v-96cfcca8]{\n  z-index:3;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-96cfcca8]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-96cfcca8]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-96cfcca8]{\n  color:#333333;\n  font-size:16px;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n}\n.list_line[_v-96cfcca8]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.08rem;\n}\n\n.list1[_v-96cfcca8]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .list[_v-96cfcca8]:nth-child(2){\n  margin-bottom: 0.2rem;\n}\n\n\n.list[_v-96cfcca8]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  margin-bottom:0.27rem;\n  position: relative;\n}\n\n.list>div[_v-96cfcca8]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-96cfcca8]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-96cfcca8]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n  max-width: 2.15rem;\n}\n.list_title[_v-96cfcca8]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n}\n.list_name[_v-96cfcca8],.list_time[_v-96cfcca8]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_name[_v-96cfcca8]{\n  margin-bottom:0.07rem;\n}\n.right_img img[_v-96cfcca8]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-96cfcca8]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-96cfcca8]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-96cfcca8]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-96cfcca8],.mask_stop[_v-96cfcca8],.disable[_v-96cfcca8]{\n  z-index:3;\n}\n", ""]);
 
 	// exports
 
@@ -31705,10 +31705,12 @@
 	      var h = time.getHours();
 	      var mm = time.getMinutes();
 	      var s = time.getSeconds();
-	      console.log(time);
-	      //          return Object.prototype.toString.call(y);
 	      var week = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
-	      return m + "月" + d + "日" + " " + week[day];
+	      if (new Date().getMonth() + 1 == m && new Date().getFullYear() == y && new Date().getDate() == d) {
+	        return "今日更新";
+	      } else {
+	        return m + "月" + d + "日" + " " + week[day];
+	      }
 	    },
 	    go_href: function go_href(albumId, sortNo) {
 	      if (this.isApp) {
@@ -32243,7 +32245,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.content2[_v-8e5255de] {\n  padding: 0 0.1rem 0.12rem 0.1rem;\n  background: white;\n}\n\n.content_buy[_v-8e5255de] {\n  position: relative;\n  height: 0.25rem;\n}\n\n.content_buy .count[_v-8e5255de] {\n  color: #666666;\n  font-size: 14px;\n  margin-top: 0.03rem;\n  line-height: 0.2rem;\n}\n\n.content_buy > div[_v-8e5255de] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_header[_v-8e5255de] {\n  max-width: 2.4rem;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  white-space: nowrap;\n  position: absolute;\n  right: 0;\n}\n\n.content_header > div[_v-8e5255de] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n  margin-left: 0.05rem;\n}\n\n.content_header img[_v-8e5255de] {\n  border-radius: 50%;\n  height: 0.25rem;\n  width: 0.25rem;\n}\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.content2[_v-8e5255de] {\n  padding: 0 0.1rem 0.12rem 0.1rem;\n  background: white;\n}\n\n.content_buy[_v-8e5255de] {\n  position: relative;\n  height: 0.25rem;\n}\n\n.content_buy .count[_v-8e5255de] {\n  color: #666666;\n  font-size: 14px;\n  margin-top: 0.03rem;\n  line-height: 0.2rem;\n}\n\n.content_buy > div[_v-8e5255de] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n}\n\n.content_header[_v-8e5255de] {\n  max-width: 2.4rem;\n  text-overflow: ellipsis;\n  overflow: hidden;\n  white-space: nowrap;\n  position: absolute;\n  right: 0;\n}\n\n.content_header > div[_v-8e5255de] {\n  display: inline-block;\n  font-size: 0;\n  vertical-align: top;\n  margin-left: 0.05rem;\n}\n\n.content_header img[_v-8e5255de] {\n  border-radius: 50%;\n  height: 0.25rem;\n  width: 0.25rem;\n}\n", ""]);
 
 	// exports
 
@@ -32267,7 +32269,7 @@
 	//           <div v-for="item in dataList">
 	//             <img :src="doImg(item.imageUrl)" alt="">
 	//           </div>
-	//           <div v-if="head_count() == 7">
+	//           <div v-if="number > 7">
 	//             <img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt="">
 	//           </div>
 	//       </div>
@@ -32286,6 +32288,7 @@
 
 	  mounted: function mounted() {
 	    this.dataList = this.data.body.dataList.reverse();
+	    this.number = this.data.body.purchase;
 	    this.isFree = this.data.body.isFree;
 	  },
 	  methods: {
@@ -32365,7 +32368,7 @@
 /* 535 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"content2\" _v-8e5255de=\"\">\n  <div class=\"content_buy\" _v-8e5255de=\"\">\n    <div class=\"count\" _v-8e5255de=\"\">\n      <span v-text=\"people_count()\" _v-8e5255de=\"\"></span><span _v-8e5255de=\"\">人</span><span v-text=\"status()\" _v-8e5255de=\"\"></span>\n    </div>\n    <div class=\"content_header\" _v-8e5255de=\"\">\n        <div v-for=\"item in dataList\" _v-8e5255de=\"\">\n          <img :src=\"doImg(item.imageUrl)\" alt=\"\" _v-8e5255de=\"\">\n        </div>\n        <div v-if=\"head_count() == 7\" _v-8e5255de=\"\">\n          <img src=\"//pic.davdian.com/free/2017/08/16/Group4.png\" alt=\"\" _v-8e5255de=\"\">\n        </div>\n    </div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"content2\" _v-8e5255de=\"\">\n  <div class=\"content_buy\" _v-8e5255de=\"\">\n    <div class=\"count\" _v-8e5255de=\"\">\n      <span v-text=\"people_count()\" _v-8e5255de=\"\"></span><span _v-8e5255de=\"\">人</span><span v-text=\"status()\" _v-8e5255de=\"\"></span>\n    </div>\n    <div class=\"content_header\" _v-8e5255de=\"\">\n        <div v-for=\"item in dataList\" _v-8e5255de=\"\">\n          <img :src=\"doImg(item.imageUrl)\" alt=\"\" _v-8e5255de=\"\">\n        </div>\n        <div v-if=\"number > 7\" _v-8e5255de=\"\">\n          <img src=\"//pic.davdian.com/free/2017/08/16/Group4.png\" alt=\"\" _v-8e5255de=\"\">\n        </div>\n    </div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 536 */
@@ -33745,7 +33748,7 @@
 	              if (that.isApp) {
 	                _native2.default.Account.login();
 	              } else {
-	                window.location.href = '/login.html';
+	                window.location.href = '/login.html?' + 'referer=' + encodeURIComponent(window.location.href);
 	              }
 	            } else {
 	              _popup2.default.confirm({

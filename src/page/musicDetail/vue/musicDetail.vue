@@ -221,7 +221,7 @@
           play_type:1,
         }
         if (that.musicList && that.musicList[that.index] && that.musicList[that.index].musicId){
-          obj['musicId'] = that.musicList[that.index].musicId
+          obj['musicId'] = that.musicList[that.musicList.length - 1 - that.index].musicId
         }
         if (localStorage.getItem('expires_in')){
           obj.expires_in = localStorage.getItem('expires_in')
