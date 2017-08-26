@@ -37,7 +37,7 @@
       <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
     </div>
     <div class="look_more" @click='goAlbumId' v-if='!isapp'>
-      <div class="look_count">查看合辑 (<span v-if='musicList[musicList.length-index-1]  && musicList[musicList.length-index-1].sortNo' v-text='parseInt(musicList[musicList.length-index-1].sortNo) + 1'></span>/<span v-text='allAudio'></span>)</div>
+      <div class="look_count">查看合辑 (<span v-text='allAudio'></span>)</div>
       <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
     </div>
     <div style="height: 0.1rem;background: #F8F7F7;" v-if='!isapp'></div>
