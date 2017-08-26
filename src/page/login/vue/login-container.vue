@@ -474,10 +474,10 @@
           dataType: 'json',
           data: strSign({"mobile": that.mobile}),
           success(response) {
-            if (response.code) {
-              popup.toast(response.data.msg || response.msg);
-            } else {
+            if (response.code == '80006') {
               callback()
+            } else {
+              popup.toast(response.data.msg || response.msg);
             }
           },
           error(error) {
@@ -497,7 +497,6 @@
       invite_boxs.className += " " + "top";
     }
   }
-
   window.stren_invite_boxs = stren_invite_boxs;
 </script>
 <style lang="sass" lang="scss" rel="stylesheet/scss" scoped>
