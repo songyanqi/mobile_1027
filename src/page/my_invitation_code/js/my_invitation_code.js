@@ -10,6 +10,7 @@ import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
 import ua from '../../../common/js/module/ua.js';
+import nativeAncestry from '../../../common/js/module/nativeAncestor.js';
 
 login.needLogin();
 
@@ -109,18 +110,17 @@ new Vue({
       var that = this;
       that.rule_form = false;
     },
-    gtouchstart: function () {
+    gtouchstart: function (img) {
       var that = this;
       window.timeOutEvent = setTimeout(function () {
-        that.longPress();
-      }, 1000);//这里设置定时器，定义长按500毫秒触发长按事件，时间可以自己改，个人感觉500毫秒非常合适
+        that.longPress(img);
+      }, 900);//这里设置定时器，定义长按500毫秒触发长按事件，时间可以自己改，个人感觉500毫秒非常
       return false;
     },
     gtouchend: function () {
       clearTimeout(window.timeOutEvent);//清除定时器
       if (window.timeOutEvent != 0) {
-        //这里写要执行的内容（尤如onclick事件）
-        alert("你这是点击，不是长按");
+
       }
       return false;
     },
@@ -128,9 +128,9 @@ new Vue({
       clearTimeout(window.timeOutEvent);//清除定时器
       window.timeOutEvent = 0;
     },
-    longPress: function () {
+    longPress: function (img) {
       window.timeOutEvent = 0;
-
+      nativeAncestry.savePic(img);
     }
   },
   filters: {},
