@@ -174,6 +174,8 @@
     position: fixed;
     bottom: 0;
     z-index:7;
+    border-top:1px solid #E3DFD8 ;
+    border-top:0.5px solid #E3DFD8 ;
   }
   .btn>div{
     display: inline-block;

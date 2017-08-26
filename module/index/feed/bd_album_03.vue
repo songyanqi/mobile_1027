@@ -446,6 +446,8 @@
     padding-top: 0.14rem;
     height: 0.36rem;
     background: white;
+    border-bottom:1px solid rgba(0,0,0,0.1);
+    border-bottom:0.5px solid rgba(0,0,0,0.1);
   }
 
   .tab .tab_list {
@@ -462,7 +464,6 @@
   .update {
     padding-left: 0.1rem;
     padding-right: 0.1rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
     height: 0.36rem;
     position: relative;
     padding-bottom: 0.1rem;
@@ -479,7 +480,7 @@
 
   .tab_list .border, .b_right {
     display: inline-block;
-    height: 0.3rem;
+    height: 0.18rem;
     width: 1.87rem;
     line-height: 0.2rem;
     text-align: center;
@@ -526,6 +527,7 @@
     padding-left: 0.1rem;
     padding-right: 0.1rem;
     border-bottom: 1px solid #E1E1E1;
+    border-bottom: 0.5px solid #E1E1E1;
     position: relative;
   }
   .rea>div{

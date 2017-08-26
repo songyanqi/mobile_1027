@@ -4,6 +4,7 @@
     <div class="ndiv" v-if="!isApp"></div>
     <index_feed :data="data"></index_feed>
     <div class="empty" v-if="isFree==1 && isSub==0" ></div>
+    <div class="empty2" v-if="isFree==0 || (isFree==1 && isSub==1)"></div>
     <lfooter @re="reGetData" :share="shareInfo" v-if="isFree==1 && isSub==0" :income="income" :sub="isSub" :userstatus="userStatus" :albumid="albumId" :price="price"></lfooter>
     <maskk v-if="isApp && maskFlag"></maskk>
     <maskk2 v-if="!isApp && maskFlag"></maskk2>
@@ -130,6 +131,9 @@
   .empty{
     height:50px;
   }
+  .empty2{
+     height:10px;
+   }
   .top{
     position: fixed;
     top: 0;

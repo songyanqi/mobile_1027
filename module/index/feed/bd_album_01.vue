@@ -111,15 +111,16 @@
     font-size: 14px;
     color: #333333;
     margin-bottom: 0.15rem;
+    line-height: 0.2rem;
   }
 
   .content_price {
     margin-bottom: 0.15rem;
   }
-
   .content_text {
     color: #999999;
     font-size: 12px;
+    line-height: 0.17rem;
   }
 
   .content_price .pri_left {
