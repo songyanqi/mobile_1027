@@ -281,7 +281,7 @@
                 if (that.isapp){
                   native.Account.login()
                 }else {
-                  let url = window.location.origin + 'musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.musicList.length - that.index -1].sortNo
+                  let url = window.location.origin + '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.musicList.length - that.index -1].sortNo
                   window.location.href = '/login.html?'+'referer=' + encodeURIComponent(url)
                 }
               } else {
