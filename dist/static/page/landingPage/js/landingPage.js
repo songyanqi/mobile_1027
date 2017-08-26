@@ -34139,6 +34139,10 @@
 
 	var _dialog2 = _interopRequireDefault(_dialog);
 
+	var _api = __webpack_require__(108);
+
+	var _api2 = _interopRequireDefault(_api);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var utils = _utils2.default.utils;
@@ -34212,6 +34216,7 @@
 	                item3.contentList.map(function (item4) {
 	                  if (item4.albumId == obj.albumId && item4.sortNo == obj.sortNo && obj.state == 1) {
 	                    item4.number = parseInt(item4.number) + 1;
+	                    playData(obj.albumId, item4.musicId);
 	                  }
 	                });
 	              }
@@ -34222,7 +34227,15 @@
 	    });
 	  }
 	};
-
+	var playData = function playData(albumId, musicId) {
+	  var obj = {
+	    'albumId': albumId,
+	    'musicId': musicId
+	  };
+	  (0, _api2.default)('/api/mg/content/music/click', obj).then(function (data) {
+	    console.log('clickdata123-->', data);
+	  });
+	};
 	/**
 	 * 初始化头部
 	 */

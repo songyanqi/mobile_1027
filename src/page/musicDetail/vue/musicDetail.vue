@@ -232,6 +232,9 @@
         api('/api/mg/content/music/playTrackSingle',obj).then(function(data){
           console.log('data--->', data)
         })
+        api('/api/mg/content/music/click',obj).then(function(data){
+          console.log('clickdata-->', data)
+        })
       },
       nativePay(url, callback){
         var option = {};

@@ -1,6 +1,7 @@
 import utilsClass from "./utils.es6";
 import wxShare from './WXShare.es6';
 import dialog from './dialog.es6';
+import api from "./api.es6"
 
 let utils = utilsClass.utils;
 let iosInterface = window.iosInterface = {};
@@ -73,6 +74,7 @@ iosInterface.getAudioState = function (obj) {
                 item3.contentList.map(function(item4){
                   if (item4.albumId == obj.albumId && item4.sortNo == obj.sortNo && obj.state==1) {
                     item4.number = parseInt(item4.number) + 1
+                    playData(obj.albumId, item4.musicId)
                   }
                 })
               }
@@ -83,7 +85,15 @@ iosInterface.getAudioState = function (obj) {
     })
   }
 }
-
+let playData = (albumId, musicId) => {
+  let obj = {
+    'albumId':albumId,
+    'musicId':musicId
+  }
+  api('/api/mg/content/music/click',obj).then(function(data){
+    console.log('clickdata123-->', data)
+  })
+}
 /**
  * 初始化头部
  */
