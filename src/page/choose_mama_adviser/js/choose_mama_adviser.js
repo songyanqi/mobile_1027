@@ -21,11 +21,15 @@ new Vue({
   data() {
     return {
       response: null,
+      show_adviser_hobby_list:true,
+      show_adviser_list:false,
       showaddress2: {showaddress: false},
       address: '',
       addressId:-1,
       oncesdesc: false,
       hobby: [false, false, false, false, false, false, false, false, false],
+      hobbyid: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+      bobbyidlist:[],
       adviser_select:0
     }
   },
@@ -33,9 +37,11 @@ new Vue({
     hobbyNUm:function () {
       var that = this;
       let nums = 0;
+      that.bobbyidlist = [];
       that.hobby.forEach(function (value,index) {
         if(value){
           nums++;
+          Vue.set(that.bobbyidlist, index, that.hobbyid[index]);
         }
       });
       return nums;
@@ -56,7 +62,6 @@ new Vue({
       var that = this;
       that.address = msg.name;
       that.addressId = msg.value;
-      console.log("address",that.address,that.addressId);
     },
     showadselect: function () {
       var that = this;
@@ -70,6 +75,26 @@ new Vue({
       }else{
         Vue.set(that.hobby, code, !that.hobby[code]);
       }
+    },
+    nextstep:function () {
+      /*下一步*/
+      var that = this;
+      let data = {
+        "distId":that.addressId,
+        "hobby":that.hobby
+      };
+      console.log(data);
+      that.show_adviser_hobby_list = false;
+      that.show_adviser_list = true;
+    },
+    confirm_adviser:function () {
+      /*选定妈妈顾问*/
+
+    },
+    prestep:function () {
+      var that = this;
+      that.show_adviser_hobby_list = true;
+      that.show_adviser_list = false;
     }
   },
   filters: {},

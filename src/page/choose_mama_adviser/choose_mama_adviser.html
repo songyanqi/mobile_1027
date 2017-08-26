@@ -7,7 +7,7 @@
 <body>
 <div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
   <!--妈妈顾问爱好信息选择-->
-  <div v-if="false">
+  <div v-if="show_adviser_hobby_list">
     <div class="back-btn"><i class="back-arrow"></i></div>
     <!--妈妈顾问提示信息-->
     <div class="adviser_titles">
@@ -67,13 +67,15 @@
       <div @click="hobbys(8)" v-else class="specialty_check"><img src="../wap/static/dist/static/page/choose_mama_adviser/img/loveShare.png" alt=""></div>
     </div>
     <!--下一步-->
-    <div class="next_step" style="margin-top: 19px;">
+    <div class="next_step" style="margin-top: 19px;" @click="nextstep">
       下一步
     </div>
   </div>
+
+
   <!--妈妈顾问三选一-->
-  <div v-if="">
-    <div class="back-btn"><i class="back-arrow"></i></div>
+  <div v-if="show_adviser_list">
+    <div class="back-btn" @click="prestep"><i class="back-arrow"></i></div>
     <!--妈妈顾问提示信息-->
     <div class="adviser_titles">
       <span>根据您的需求，推荐3位妈妈顾问<br>请您选择一位</span>
@@ -137,8 +139,8 @@
         </div>
       </div>
     </div>
-    <!--下一步-->
-    <div class="next_step" style="margin-top: 19px;">
+    <!--就是她-->
+    <div class="next_step" style="margin-top: 19px;" @click="confirm_adviser">
       就是TA
     </div>
   </div>
@@ -146,259 +148,4 @@
   @@include('vendor.include')
   <script src="[[static]]/page/choose_mama_adviser/js/choose_mama_adviser.js[[v]]"></script>
 </body>
-  <style scoped>
-    body{
-      background-color: #FFFFFF;
-      font-weight: normal;
-    }
-    .new_title {
-      background: white;
-    }
-    .string_line:before,.string_line:after {
-      content: '';
-      display: block;
-      height: 1px;
-      background: #E1E1E1;
-      -webkit-transform: scaleY(0.5);
-      -ms-transform: scaleY(0.5);
-      transform: scaleY(0.5);
-    }
-
-    .new_title .btns {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: flex;
-      padding: 10px;
-      line-height: 20px;
-    }
-
-    .new_title .btns .name {
-      -webkit-box-flex: 1;
-      -webkit-flex: 1;
-      -moz-box-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-      display: block;
-      font-size: 14px;
-      color: #666666;
-      text-align: left;
-    }
-
-    .new_title .btns .more {
-      font-size: 14px;
-      color: #666666;
-    }
-
-    .new_title .btns .more .arrow {
-      position: relative;
-      top: 2px;
-      height: 14px;
-    }
-    .specialty_nine{
-      width: 100%;
-      min-height: 200px;
-      padding: 5px 9.05%;
-      overflow: hidden;
-      background-color: #FFFFFF;
-    }
-    .specialty_nine .specialty_check{
-      width: 27.3%;
-      float: left;
-    }
-    .specialty_nine .specialty_check img{
-      width: 100%;
-    }
-    .next_step{
-      height: 32px;
-      width: 120px;
-      color: #FF4A7D;
-      font-size: 12px;
-      line-height: 32px;
-      text-align: center;
-      position: relative;
-      margin: 0 auto 50px;
-    }
-    .next_step:after{
-      content: "";
-      -webkit-transform: scale(0.5);
-      -ms-transform: scale(0.5);
-      transform: scale(0.5);
-      width: 200%;
-      height: 200%;
-      border: 1px solid;
-      border-color: #FF4A7D;
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      -webkit-transform-origin: 0 0;
-      -ms-transform-origin: 0 0;
-      transform-origin: 0 0;
-      border-radius: 32px;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-    .adviser_titles{
-      text-align: center;
-      padding: 30px 0 20px;
-    }
-    .adviser_titles span{
-      display: inline-block;
-    }
-    .adviser_titles span:nth-of-type(1){
-      font-size: 16px;
-      color: #666666;
-      line-height: 22px;
-    }
-    .adviser_titles span:nth-of-type(2){
-      font-size: 12px;
-      color: #999999;
-      margin-top: 5px;
-    }
-    .back-btn {
-      position: absolute;
-      left: 0;
-      height: 44px;
-      width: 44px;
-    }
-    .back-btn .back-arrow {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      display: inline-block;
-      width: 12px;
-      height: 12px;
-      border-bottom: 1px solid #333;
-      border-left: 1px solid #333;
-      -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      transform: rotate(45deg);
-      cursor: pointer;
-    }
-    .adviser_list{
-      width: 285px;
-      min-height: 200px;
-      overflow: hidden;
-      margin: 0 auto;
-      padding-top: 20px;
-    }
-    .adviser_ob{
-      width: 100%;
-      height: 100px;
-      margin-bottom: 20px;
-    }
-    .adviser_ob_left{
-      width: 240px;
-      height: 100%;
-      float: left;
-      border-radius: 4px;
-      position: relative;
-      box-shadow: 0 4px 8px rgba(255, 177, 177, 0.3);
-    }
-    .adviser_ob_left:after{
-      content: "";
-      -webkit-transform: scale(0.5);
-      -ms-transform: scale(0.5);
-      transform: scale(0.5);
-      width: 200%;
-      height: 200%;
-      border: 1px solid;
-      border-color: #FF9289;
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      -webkit-transform-origin: 0 0;
-      -ms-transform-origin: 0 0;
-      transform-origin: 0 0;
-      border-radius: 8px;
-      -webkit-box-sizing: border-box;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-    .adviser_ob_right{
-      width: 30px;
-      height: 30px;
-      float: left;
-      border-radius: 15px;
-      border: 1px solid #FF9289;
-      box-sizing: border-box;
-      margin-left: 15px;
-      margin-top: 35px;
-      position: relative;
-    }
-    .adviser_ob_right input{
-      width: 30px;
-      height: 30px;
-      opacity: 0;
-      position: absolute;
-      top:0;left:0;
-      z-index: 9;
-    }
-    .adviser_ob_right img{
-      position: absolute;
-      top:-1px;
-      left:-1px;
-      width: 30px;
-      height: 30px;
-    }
-    .adviser_user_info{
-      height: 50px;
-      width: 100%;
-      position: relative;
-      margin: 10px 10px 0 10px;
-    }
-    .adviser_user_info img,.adviser_user_info div{
-      height: 50px;
-      float: left;
-    }
-    .adviser_user_info img{
-      width: 50px;
-      border-radius: 25px;
-    }
-    .adviser_user_info div{
-      position: absolute;
-      left: 50px;
-      right: 20px;
-      padding-left: 10px;
-      font-size: 14px;
-      overflow: hidden;
-    }
-    .adviser_user_info div span:nth-of-type(1){
-      margin-top: 5px;
-      display: inline-block;
-      color:#666666;
-      white-space: nowrap;
-    }
-    .adviser_user_info div span:nth-of-type(2){
-      color:#FF4A7D;
-      margin-top: 5px;
-      display: inline-block;
-    }
-    .adviser_marks{
-      height: 20px;
-      width: 189px;
-      margin: 10px 0 0 26px;
-    }
-    .adviser_marks div{
-      display: inline-block;
-      line-height: 20px;
-      text-align: left;
-      font-size: 14px;
-      color:#666666;
-      padding-left: 19px;
-      background-repeat: no-repeat;
-      background-position: 0 3px;
-      background-size: 14px 14px;
-    }
-    .adviser_marks div:nth-of-type(1){
-      background-image: url('//fe-ws.davdian.com/wap/static/dist/static/page/my_adviser/img/sharers.png');
-    }
-    .adviser_marks div:nth-of-type(2){
-      background-image: url('//fe-ws.davdian.com/wap/static/dist/static/page/my_adviser/img/commonfriend.png');
-    }
-  </style>
 </htm>

@@ -23,7 +23,8 @@ new Vue({
     return {
       response: null,
       show_tel: false,
-      show_wx: false
+      show_wx: false,
+      show_go_shop_btn:false //显示去大V店按钮
     }
   },
   computed: {},
@@ -33,16 +34,25 @@ new Vue({
       // response变化后并渲染完dom,设置其他事项
       this.$nextTick(function () {
         let ts = this;
-
         // 设置app头部标题栏
         native.custom.initHead({
           shareOnHead: 1,
         });
-
       });
     }
   },
   beforeCreate() {
+    var that = this;
+    /*做个判断是不是从详情页和购物车页还有首页过来的*/
+    var historys = JSON.parse(sessionStorage.getItem("history"));
+    var num = historys.length;
+    var referrer = document.referrer.split("/").pop();
+    if(referrer == 'choose_mama_adviser.html'){
+      var history2 = historys[num-2].path;
+      if(history2 == 'index' || history2 == 'detail' || history2 == 'cart'){
+        that.show_go_shop_btn = true;
+      }
+    }
   },
   created() {
     this.getData();
@@ -53,21 +63,19 @@ new Vue({
      * 接口文档:
      */
     getData() {
-      let ts = this;
+      let that = this;
       $.ajax({
         cache: false,
         async: true,
-        url: '?_=' + Date.now(),
+        url: '/api/mg/user/adviser/getByAdviserId?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
-        data: encrypt({
-          js_wx_info: 1,
-        }),
+        data: encrypt({}),
         success(response) {
-          ts.response = response;
+          that.response = response;
         },
         error(error) {
-          ts.response = require('../json/my_adviser.json');
+          that.response = require('../json/my_adviser.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
