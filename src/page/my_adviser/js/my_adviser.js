@@ -67,12 +67,15 @@ new Vue({
       $.ajax({
         cache: false,
         async: true,
-        url: '/api/mg/user/adviser/getByAdviserId?_=' + Date.now(),
+        url: '/api/mg/user/adviser/getAdviserInfo?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
         data: encrypt({}),
         success(response) {
           that.response = response;
+          if(response.code){
+            popup.toast(response.data.msg || response.msg);
+          }
         },
         error(error) {
           that.response = require('../json/my_adviser.json');

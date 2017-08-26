@@ -30,7 +30,8 @@ new Vue({
       hobby: [false, false, false, false, false, false, false, false, false],
       hobbyid: [1, 2, 3, 4, 5, 6, 7, 8, 9],
       bobbyidlist:[],
-      adviser_select:0
+      adviser_select:0,
+      response2:null
     }
   },
   computed: {
@@ -44,6 +45,7 @@ new Vue({
           Vue.set(that.bobbyidlist, index, that.hobbyid[index]);
         }
       });
+      console.log(that.bobbyidlist);
       return nums;
     }
   },
@@ -69,7 +71,7 @@ new Vue({
         success(response) {
           that.response = response;
           if(response.code){
-
+              popup.toast(response.data.msg || response.msg);
           }else{
 
           }
@@ -107,12 +109,32 @@ new Vue({
       /*下一步*/
       var that = this;
       let data = {
-        "distId":that.addressId,
-        "hobby":that.hobby
+        "proId":that.addressId[0],
+        "cityId":that.addressId[1],
+        "distId":that.addressId[2],
+        "tags":that.bobbyidlist.join(',')
       };
-      console.log(data);
-      that.show_adviser_hobby_list = false;
-      that.show_adviser_list = true;
+      $.ajax({
+        cache: false,
+        async: true,
+        url: '/api/mg/user/adviser/getRecommendAdvisers?_=' + Date.now(),
+        type: 'post',
+        dataType: 'json',
+        data: encrypt(data),
+        success(response) {
+          if(response.code){
+            popup.toast(response.data.msg || response.msg);
+          }else{
+            that.response2 = response;
+            that.show_adviser_hobby_list = false;
+            that.show_adviser_list = true;
+          }
+        },
+        error(error) {
+          that.response = require('../json/choose_mama_adviser.json');
+          console.error('ajax error:' + error.status + ' ' + error.statusText);
+        }
+      });
     },
     confirm_adviser:function () {
       /*选定妈妈顾问*/

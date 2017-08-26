@@ -81,61 +81,23 @@
       <span>根据您的需求，推荐3位妈妈顾问<br>请您选择一位</span>
     </div>
     <div class="adviser_list">
-      <div class="adviser_ob">
+      <div class="adviser_ob" v-for="advisers in response2.data.advisers" :data-for-id="advisers.adviserId">
         <div class="adviser_ob_left">
           <div class="adviser_user_info">
-            <img src="//fe.davdian.com/wap/static/dist/static/page/center/img/default-head.png" alt="">
+            <img :src="advisers.avatar" alt="">
             <div>
-              <span>这里橘子酸的昵称</span><br>
-              <span>匹配度98%</span>
+              <span>{{advisers.nickname}}</span><br>
+              <span v-if="advisers.matching_degree">匹配度{{advisers.matching_degree}}</span>
             </div>
           </div>
           <div class="adviser_marks">
-            <div>分享达人</div>
-            <div>有共同好友</div>
+            <div v-if="advisers.share_mark">{{advisers.share_mark}}</div>
+            <div v-if="advisers.friend_mark">{{advisers.friend_mark}}</div>
           </div>
         </div>
         <div class="adviser_ob_right">
-          <input type="radio" name="adviser_select" value="1" v-model="adviser_select">
-          <img v-if="adviser_select == 1" src="../wap/static/dist/static/page/choose_mama_adviser/img/adviser_select.png" alt="">
-        </div>
-      </div>
-      <div class="adviser_ob">
-        <div class="adviser_ob_left">
-          <div class="adviser_user_info">
-            <img src="//fe.davdian.com/wap/static/dist/static/page/center/img/default-head.png" alt="">
-            <div>
-              <span>这里橘子酸的昵称</span><br>
-              <span>匹配度98%</span>
-            </div>
-          </div>
-          <div class="adviser_marks">
-            <div>分享达人</div>
-            <div>有共同好友</div>
-          </div>
-        </div>
-        <div class="adviser_ob_right">
-          <input type="radio" name="adviser_select" value="2" v-model="adviser_select">
-          <img v-if="adviser_select == 2" src="../wap/static/dist/static/page/choose_mama_adviser/img/adviser_select.png" alt="">
-        </div>
-      </div>
-      <div class="adviser_ob">
-        <div class="adviser_ob_left">
-          <div class="adviser_user_info">
-            <img src="//fe.davdian.com/wap/static/dist/static/page/center/img/default-head.png" alt="">
-            <div>
-              <span>这里橘子酸的昵称</span><br>
-              <span>匹配度98%</span>
-            </div>
-          </div>
-          <div class="adviser_marks">
-            <div>分享达人</div>
-            <div>有共同好友</div>
-          </div>
-        </div>
-        <div class="adviser_ob_right">
-          <input type="radio" name="adviser_select" value="3" v-model="adviser_select">
-          <img v-if="adviser_select == 3" src="../wap/static/dist/static/page/choose_mama_adviser/img/adviser_select.png" alt="">
+          <input type="radio" name="adviser_select" :value="advisers.adviserId" v-model="adviser_select">
+          <img v-if="adviser_select == advisers.adviserId" src="../wap/static/dist/static/page/choose_mama_adviser/img/adviser_select.png" alt="">
         </div>
       </div>
     </div>
