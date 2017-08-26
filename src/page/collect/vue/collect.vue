@@ -108,6 +108,18 @@
                   }else{
                     that.maskFlag2=true;
                   }
+                  if (isFree==1 && isSub==0){
+                    native.custom.initHead({
+                      'shareOnHead': '1',
+                      'isShowAudio':1,
+                      'isAudioAbsorb':1
+                    });
+                  } else {
+                    native.custom.initHead({
+                      'shareOnHead': '1',
+                      'isShowAudio':1,
+                    });
+                  }
 
                 }else{
                   that.maskFlag=true;

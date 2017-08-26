@@ -91,6 +91,13 @@ export default {
                         })
                     });
                 }
+                if (window.appData){
+                    window.appData.isShowAudio = 1
+                } else {
+                    window.appData = {
+                        'isShowAudio':1
+                    }
+                }
                 if (!that.error && that.deleteFlag){
                     setTimeout(function(){
                         if (window.appData){
@@ -98,13 +105,6 @@ export default {
                         } else {
                             window.appData = {
                                 'isAudioAbsorb':1
-                            }
-                        }
-                        if (window.appData){
-                            window.appData.isShowAudio = 1
-                        } else {
-                            window.appData = {
-                                'isShowAudio':1
                             }
                         }
                         window.bravetime.initHead()

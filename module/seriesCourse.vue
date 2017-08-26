@@ -402,6 +402,13 @@
                                 }
                             }
                         }
+                        if (window.appData){
+                            window.appData.isShowAudio = 1
+                        } else {
+                            window.appData = {
+                                'isShowAudio':1
+                            }
+                        }
                         if (that.seriesType==1 && that.deleteFlag && that.state!=0){
                             setTimeout(function(){
                                 if (window.appData){
@@ -409,13 +416,6 @@
                                 } else {
                                     window.appData = {
                                         'isAudioAbsorb':1
-                                    }
-                                }
-                                if (window.appData){
-                                    window.appData.isShowAudio = 1
-                                } else {
-                                    window.appData = {
-                                        'isShowAudio':1
                                     }
                                 }
                                 window.bravetime.initHead()
