@@ -22,6 +22,7 @@
             <div class="disable" @click.stop="stop_info(item.albumId,item.sortNo)" v-if="item.isPlay==0"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
             <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 && ( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
             <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 &&  !( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+            <div class='mask_play loading_play' v-if="item.sortNo==sortNo && item.albumId==albumId && btnStatus==2"><img src="//pic.davdian.com/free/2017/08/26/loading.png" alt=""></div>
             <div class="circle_mask"></div>
             <div><img :src="item.imageUrl" alt=""></div>
           </div>

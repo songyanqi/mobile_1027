@@ -49,6 +49,7 @@
             <div class="item_right" v-if="isFree==0 || (isFree==1 && item.isSub==1)">
               <div class="mask_stop" v-if="(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
               <div class="mask_play" v-if="!(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+              <div class='mask_play loading_play' v-if="item.sortNo==sortNo && item.albumId==albumId && btnStatus==2"><img src="//pic.davdian.com/free/2017/08/26/loading.png" alt=""></div>
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
             </div>
