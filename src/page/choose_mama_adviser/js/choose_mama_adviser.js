@@ -31,7 +31,8 @@ new Vue({
       hobbyid: [1, 2, 3, 4, 5, 6, 7, 8, 9],
       bobbyidlist:[],
       adviser_select:0,
-      response2:null
+      response2:null,
+      inapp:!!navigator.userAgent.match(/davdian|bravetime|vyohui/)
     }
   },
   computed: {
@@ -77,7 +78,7 @@ new Vue({
           }
         },
         error(error) {
-          that.response = require('../json/choose_mama_adviser.json');
+          // that.response = require('../json/choose_mama_adviser.json');
           if(that.response.data.distId){
             that.oncesdesc = true;
           }
@@ -131,7 +132,7 @@ new Vue({
           }
         },
         error(error) {
-          that.response = require('../json/choose_mama_adviser.json');
+          // that.response = require('../json/choose_mama_adviser.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
