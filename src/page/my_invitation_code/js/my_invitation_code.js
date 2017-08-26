@@ -114,7 +114,7 @@ new Vue({
       var that = this;
       window.timeOutEvent = setTimeout(function () {
         that.longPress(img);
-      }, 500);
+      }, 300);
       return false;
     },
     gtouchend: function () {
