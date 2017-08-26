@@ -18,7 +18,6 @@
   import native from "../../../../src/common/js/module/native.js"
   import popup from "../../../../src/common/js/module/popup.js";
   import {getQuery} from "../../../../utils/utils.es6";
-  import native from "../../../../src/common/js/module/native.js"
   import util from "../../../../utils/utils.es6";
   import share from "../../../../src/common/js/module/share.js"
   export default {
