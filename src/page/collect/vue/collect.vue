@@ -108,7 +108,7 @@
                   }else{
                     that.maskFlag2=true;
                   }
-                  if (isFree==1 && isSub==0){
+                  if (that.isFree==1 && that.isSub==0){
                     native.custom.initHead({
                       'shareOnHead': '1',
                       'isShowAudio':1,
