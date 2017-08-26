@@ -99,7 +99,6 @@
                       };
                       return JSON.stringify(shareInfo);
                     };
-                    alert(that.title)
                   }else{
                     that.maskFlag2=true;
                   }
