@@ -78,12 +78,7 @@ new Vue({
           }
         },
         error(error) {
-          // that.response = require('../json/choose_mama_adviser.json');
-          if(that.response.data.distId){
-            that.oncesdesc = true;
-          }
-          Vue.set(that.hobby, that.response.data.tags[0].id - 1, true);
-          Vue.set(that.hobby, that.response.data.tags[1].id - 1, true);
+          popup.toast(error.statusText)
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
@@ -132,6 +127,7 @@ new Vue({
           }
         },
         error(error) {
+          popup.toast(error.statusText)
           // that.response = require('../json/choose_mama_adviser.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
