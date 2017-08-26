@@ -29,7 +29,7 @@
       </span>
     </div>
     <!--地址选择插件-->
-    <com-picker-address :showaddress="showaddress2" :addressid="-1" @addressdata="getaddress"></com-picker-address>
+    <com-picker-address :showaddress="showaddress2" :addressid="response.data.distId" @addressdata="getaddress"></com-picker-address>
     <div class="new_title">
       <span class="btns">
         <span class="name">

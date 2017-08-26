@@ -51,13 +51,38 @@ new Vue({
   beforeCreate() {
   },
   created() {
-    // this.getData();
+    this.getData();
   },
   mounted() {
-    var that = this;
-    that.response = true;
+
   },
   methods: {
+    getData:function () {
+      let that = this;
+      $.ajax({
+        cache: false,
+        async: true,
+        url: '/api/mg/user/adviser/getUserTagInfo?_=' + Date.now(),
+        type: 'post',
+        dataType: 'json',
+        data: encrypt({}),
+        success(response) {
+          that.response = response;
+        },
+        error(error) {
+          that.response = require('../json/choose_mama_adviser.json');
+          console.log(that.response);
+          if(that.response.data.distId){
+            that.oncesdesc = true;
+          }
+          console.log(that.response.data.tags[0].id);
+          console.log(that.response.data.tags[1].id);
+          Vue.set(that.hobby, that.response.data.tags[0].id, true);
+          Vue.set(that.hobby, that.response.data.tags[1].id, true);
+          console.error('ajax error:' + error.status + ' ' + error.statusText);
+        }
+      });
+    },
     getaddress: function (msg) {
       var that = this;
       that.address = msg.name;
