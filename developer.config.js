@@ -16,5 +16,5 @@ export default {
   // env_stage: 'prod',
   // env_num: '',
   // page: 'musicDetail',
-  // webpack: false
+  webpack: false
 };

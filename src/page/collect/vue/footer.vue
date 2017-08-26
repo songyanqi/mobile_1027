@@ -42,11 +42,12 @@
     },
     mounted:function () {
       console.log(this.isPrice);
+      var that = this
       share.setShareInfo({
-        title: that.share.title,
-        desc: that.share.desc,
-        link: that.share.link,
-        imgUrl: that.share.imgUrl,
+        title: that.shareInfo.title,
+        desc: that.shareInfo.desc,
+        link: that.shareInfo.link,
+        imgUrl: that.shareInfo.imgUrl,
       })
     },
     methods:{
@@ -54,15 +55,14 @@
         var that=this;
         if(that.isApp){
           native.custom.share({
-            "title":that.share.title,
-            "desc": that.share.desc,
-            "imgUrl": that.share.imgUrl,
-            "link": that.share.link,
-            "shareDesc":that.share.desc
+            "title":that.shareInfo.title,
+            "desc": that.shareInfo.desc,
+            "imgUrl": that.shareInfo.imgUrl,
+            "link": that.shareInfo.link,
+            "shareDesc":that.shareInfo.desc
           })
         }else {
           share.callShare()
-
         }
 
       },
