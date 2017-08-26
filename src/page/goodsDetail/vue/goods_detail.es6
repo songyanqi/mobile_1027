@@ -257,7 +257,7 @@ export default {
                 text: " <div style='text-align:left'>亲爱的大V妈妈，我们将给您分配一个1对1服务的妈妈顾问，您有任何关于购物、学习、育儿、活动等疑问，都可以向她寻求帮助</div>",
                 btnTitle: "马上选择",
                 btnCallback() {
-                  location.replace(result.data.url)
+                  location.replace('/choose_mama_adviser.html')
                 }
               })
             }
