@@ -294,7 +294,7 @@
                       if (that.isApp){
                         native.Account.login()
                       }else {
-                        window.location.href = '/login.html'
+                        window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
                       }
                     } else {
                       popup.confirm({

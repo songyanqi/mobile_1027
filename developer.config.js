@@ -15,6 +15,6 @@
 export default {
   // env_stage: 'prod',
   // env_num: '',
-  page: '{login,my_Inviter,my_invitation_code}',
+  page: 'musicDetail',
   webpack: false
 };

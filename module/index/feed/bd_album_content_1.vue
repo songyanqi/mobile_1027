@@ -201,7 +201,7 @@
                     if (that.isApp){
                       native.Account.login()
                     }else {
-                      window.location.href = '/login.html'
+                      window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
                     }
                   } else {
                     popup.confirm({
@@ -238,10 +238,12 @@
           var h = time.getHours();
           var mm = time.getMinutes();
           var s = time.getSeconds();
-          console.log(time);
-//          return Object.prototype.toString.call(y);
           var week=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
-          return m+"月"+d+"日"+" "+week[day];
+          if (new Date().getMonth() + 1 == m && new Date().getFullYear() == y && new Date().getDate() == d){
+            return "今日更新"
+          } else {
+            return m+"月"+d+"日"+" "+week[day];
+          }
         },
         go_href(albumId,sortNo){
             if(this.isApp){

@@ -23,7 +23,7 @@ vueLazyload.init();
 window.landingPage=new Vue({
   el: ".app",
   components: {
-    'landingPage':require('../vue/landing.vue')
+    'landingPage':require('../vue/landingPage.vue')
   },
   data() {
     return {
