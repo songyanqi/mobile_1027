@@ -410,17 +410,17 @@
                             }
                         }
                         if (that.seriesType==1 && that.deleteFlag && that.state!=0){
-                            setTimeout(function(){
-                                if (window.appData){
-                                    window.appData.isAudioAbsorb = 1
-                                } else {
-                                    window.appData = {
-                                        'isAudioAbsorb':1
-                                    }
+                            if (window.appData){
+                                window.appData.isAudioAbsorb = 1
+                            } else {
+                                window.appData = {
+                                    'isAudioAbsorb':1
                                 }
-                                window.bravetime.initHead()
-                            },500)
+                            }
                         }
+                        setTimeout(function(){
+                            window.bravetime.initHead()
+                        },500)
                     })
                     .catch(function (error) {
                         console.log(error,11111111)
