@@ -114,15 +114,11 @@ new Vue({
       var that = this;
       window.timeOutEvent = setTimeout(function () {
         that.longPress(img);
-      }, 900);//这里设置定时器，定义长按500毫秒触发长按事件，时间可以自己改，个人感觉500毫秒非常
+      }, 300);
       return false;
     },
     gtouchend: function () {
       clearTimeout(window.timeOutEvent);//清除定时器
-      if (window.timeOutEvent != 0) {
-
-      }
-      return false;
     },
     gtouchmove: function () {
       clearTimeout(window.timeOutEvent);//清除定时器
@@ -131,6 +127,7 @@ new Vue({
     longPress: function (img) {
       window.timeOutEvent = 0;
       nativeAncestry.savePic(img);
+      console.log("长按");
     }
   },
   filters: {},
