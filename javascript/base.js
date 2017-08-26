@@ -455,6 +455,7 @@ $(document).ready(function () {
     if (window.dataUrl == "index.php?c=Index&a=getCatNavList" || window.tj_id == 55) {
       return false;
     }
+    // alert(iosInterface.getHeadAndFootData())
     bravetime.callNative2('Browser', 'initHead', {content: JSON.parse(iosInterface.getHeadAndFootData())}, callback, '3.4.0', function () {
     });
   };

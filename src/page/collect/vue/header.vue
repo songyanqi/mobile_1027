@@ -24,6 +24,7 @@
   .top{
     position: fixed;
     top: 0;
+    z-index: 80px;
   }
   .header{
     height: 44px;

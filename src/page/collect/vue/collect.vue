@@ -99,15 +99,27 @@
                       };
                       return JSON.stringify(shareInfo);
                     };
-                      native.Browser.setHead({
-                        'title':that.title,
-                        'backBtn':'1',
-                        'shareBtn':"1",
-                        'shareMoney':result.data.attr.income,
-                      })
                   }else{
                     that.maskFlag2=true;
                   }
+                  if (that.isFree==1 && that.isSub==0){
+                    native.custom.initHead({
+                      'shareOnHead': '1',
+                      'isShowAudio':1,
+                      'isAudioAbsorb':1
+                    });
+                  } else {
+                    native.custom.initHead({
+                      'shareOnHead': '1',
+                      'isShowAudio':1,
+                    });
+                  }
+                  native.Browser.setHead({
+                    'title':that.title,
+                    'backBtn':'1',
+                    'shareBtn':"1",
+                    'shareMoney':result.data.attr.income,
+                  })
 
                 }else{
                   that.maskFlag=true;

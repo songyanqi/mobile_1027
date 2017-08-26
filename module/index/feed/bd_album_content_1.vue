@@ -18,6 +18,7 @@
         <div class="right_img" v-if="item.isPlay==1">
           <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
           <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="!(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+          <div class='mask_play loading_play' v-if="item.sortNo==sortNo && item.albumId==albumId && btnStatus==2"><img src="//pic.davdian.com/free/2017/08/26/loading.png" alt=""></div>
           <div class="circle_mask"></div>
           <div><img :src="item.imageUrl" alt=""></div>
         </div>
@@ -201,7 +202,7 @@
                     if (that.isApp){
                       native.Account.login()
                     }else {
-                      window.location.href = '/login.html'
+                      window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
                     }
                   } else {
                     popup.confirm({
@@ -238,10 +239,12 @@
           var h = time.getHours();
           var mm = time.getMinutes();
           var s = time.getSeconds();
-          console.log(time);
-//          return Object.prototype.toString.call(y);
           var week=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
-          return m+"月"+d+"日"+" "+week[day];
+          if (new Date().getMonth() + 1 == m && new Date().getFullYear() == y && new Date().getDate() == d){
+            return "今日更新"
+          } else {
+            return m+"月"+d+"日"+" "+week[day];
+          }
         },
         go_href(albumId,sortNo){
             if(this.isApp){
@@ -382,9 +385,16 @@
   .mask_play,.mask_stop,.disable{
     z-index:3;
   }
-  .gray{
+  .gray {
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     filter: gray;
+  }
+  .loading_play{
+    animation:rotating 1.2s linear infinite
+  }
+  @keyframes rotating{
+    from{transform:rotate(0)}
+    to{transform:rotate(360deg)}
   }
 </style>

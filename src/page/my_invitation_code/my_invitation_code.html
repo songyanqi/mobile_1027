@@ -13,7 +13,7 @@
     <div v-if-="response">
       <!--我的邀请码-->
       <div class="sharImg">
-        <img :src="response.data.shareUrl" alt="" @touchstart="gtouchstart" @touchend="gtouchend" @touchmove="gtouchmove">
+        <img :src="response.data.shareUrl" alt="" @touchstart="gtouchstart(response.data.shareUrl)" @touchend="gtouchend" @touchmove="gtouchmove">
       </div>
       <div v-if="isApp" :class="{'share_to_btn':isApp}" @click="shareto">
         分享给好友

@@ -50,7 +50,6 @@
     mounted:function () {
         this.getinitData();
         this.scrol();
-
         setTimeout(function () {
           native.custom.initHead({
             'shareOnHead': 1,
