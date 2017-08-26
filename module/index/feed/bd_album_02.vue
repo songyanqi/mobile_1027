@@ -8,7 +8,7 @@
           <div v-for="item in dataList">
             <img :src="doImg(item.imageUrl)" alt="">
           </div>
-          <div v-if="head_count() > 7">
+          <div v-if="number > 7">
             <img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt="">
           </div>
       </div>
@@ -26,6 +26,7 @@
     },
     mounted:function () {
       this.dataList=this.data.body.dataList.reverse();
+      this.number = this.data.body.purchase
       this.isFree=this.data.body.isFree;
     },
     methods:{
