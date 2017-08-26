@@ -142,6 +142,9 @@
           sort:'0',
           sortNo:getQuery('sortNo') || '0'
         }
+        if (that.musicList && that.musicList[that.index] && that.musicList[that.index].musicId){
+          obj['musicId'] = that.musicList[that.index].musicId
+        }
         if (localStorage.getItem('access_token')){
           obj['access_token'] = localStorage.getItem('access_token')
         }
@@ -157,11 +160,15 @@
             } else {
               popup.confirm({
                 title: '提示',
-                text: '接口返回feedlist数据为null',
+                text: '音频已经被删除',
                 okBtnTitle: '确定',
                 cancelBtnTitle: '取消',
-                okBtnCallback: function(){},
-                cancelBtnCallback: function(){}
+                okBtnCallback: function(){
+                  window.history.back()
+                },
+                cancelBtnCallback: function(){
+                  window.history.back()
+                }
               });
             }
           } else {
@@ -261,8 +268,8 @@
                 // });
               }else{
                 // 报名成功
-                // window.location.href = '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.index].sortNo
-                window.location.reload()
+                window.location.href = '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.index].sortNo
+                // window.location.reload()
               }
 
             }else {
@@ -270,7 +277,8 @@
                 if (that.isapp){
                   native.Account.login()
                 }else {
-                  window.location.href = '/login.html'
+                  let url = window.location.origin + '?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.index].sortNo
+                  window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
                 }
               } else {
                 popup.confirm({
@@ -386,7 +394,7 @@
             if (that.musicList[that.musicList.length-1].sortNo == that.allAudio-1){
               popup.confirm({
                 title: '提示',
-                text: '已经是最后一首了',
+                text: '已经是第一首了',
                 okBtnTitle: '确定',
                 cancelBtnTitle: '取消',
                 okBtnCallback: function(){},
@@ -402,7 +410,7 @@
             if (that.musicList[0].sortNo == 0){
               popup.confirm({
                 title: '提示',
-                text: '已经是第一首了',
+                text: '已经是最后一首了',
                 okBtnTitle: '确定',
                 cancelBtnTitle: '取消',
                 okBtnCallback: function(){},

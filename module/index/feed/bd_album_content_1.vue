@@ -154,7 +154,7 @@
                     if (that.isapp){
                       native.Account.login()
                     }else {
-                      window.location.href = '/login.html'
+                      window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
                     }
                   }else {
                     alert("嘿嘿");
