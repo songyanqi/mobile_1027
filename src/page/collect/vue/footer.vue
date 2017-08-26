@@ -1,7 +1,7 @@
 <template>
   <div class="btn">
     <div class="btn_left" v-if="userstatus==1 || userstatus==0" @click="vip">成为会员免费听</div>
-    <div class="btn_left" v-if="userstatus==3" @click="share"><span>邀请赚¥</span><span v-text="income"></span></div>
+    <div class="btn_left" v-if="userstatus==3" @click="share"><span v-text="income"></span></div>
     <div class="btn_right">
       <img src="//pic.davdian.com/free/2017/08/16/Rectangle.png" alt="">
       <div class="btn_text" @click="Subscribe" v-if="isSub==0 && (userstatus==1 || userstatus==0)">
@@ -18,6 +18,7 @@
   import native from "../../../../src/common/js/module/native.js"
   import popup from "../../../../src/common/js/module/popup.js";
   import {getQuery} from "../../../../utils/utils.es6";
+  import native from "../../../../src/common/js/module/native.js"
   import util from "../../../../utils/utils.es6";
   import share from "../../../../src/common/js/module/share.js"
   export default {
@@ -42,25 +43,27 @@
     },
     mounted:function () {
       console.log(this.isPrice);
+      share.setShareInfo({
+        title: that.share.title,
+        desc: that.share.desc,
+        link: that.share.link,
+        imgUrl: that.share.imgUrl,
+      })
     },
     methods:{
       share(){
         var that=this;
         if(that.isApp){
           native.custom.share({
-            "title":that.shareInfo.title,
-            "desc": that.shareInfo.desc,
-            "imgUrl": that.shareInfo.imgUrl,
-            "link": that.shareInfo.link,
-            "shareDesc":that.shareInfo.desc
-        })
-        }else {
-          share.setShareInfo({
-            title: that.shareInfo.title,
-            desc: that.shareInfo.desc,
-            link: that.shareInfo.link,
-            imgUrl: that.shareInfo.imgUrl,
+            "title":that.share.title,
+            "desc": that.share.desc,
+            "imgUrl": that.share.imgUrl,
+            "link": that.share.link,
+            "shareDesc":that.share.desc
           })
+        }else {
+          share.callShare()
+
         }
 
       },
