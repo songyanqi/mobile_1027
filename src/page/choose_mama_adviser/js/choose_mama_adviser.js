@@ -108,7 +108,7 @@ new Vue({
         "proId":that.addressId[0],
         "cityId":that.addressId[1],
         "distId":that.addressId[2],
-        "tags":that.bobbyidlist.join(',')
+        "tags":that.bobbyidlist.filter(function(x){return x}).join(',')
       };
       $.ajax({
         cache: false,
