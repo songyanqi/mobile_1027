@@ -105,7 +105,7 @@ new Vue({
       /*下一步*/
       var that = this;
       let data = {
-        "proId":that.addressId[0],
+        "provId":that.addressId[0],
         "cityId":that.addressId[1],
         "distId":that.addressId[2],
         "tags":that.bobbyidlist.filter(function(x){return x}).join(',')
