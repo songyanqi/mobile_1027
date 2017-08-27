@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "create": "gulp create",
     "start": "gulp",
+    "cs": "gulp create_sprite",
     "dev": "gulp build:dev",
     "build": "gulp build:dist",
     "new": "webpack --config webpack.new.config.js",
