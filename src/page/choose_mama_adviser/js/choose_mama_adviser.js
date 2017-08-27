@@ -135,7 +135,31 @@ new Vue({
     },
     confirm_adviser:function () {
       /*选定妈妈顾问*/
-
+      console.log("dddd",this.adviser_select);
+      var that = this;
+      let data = {
+        "adviserId":this.adviser_select
+      }
+      $.ajax({
+        cache: false,
+        async: true,
+        url: '/api/mg/user/adviser/confirmAdviser?_=' + Date.now(),
+        type: 'post',
+        dataType: 'json',
+        data: encrypt(data),
+        success(response) {
+          if(response.code){
+            popup.toast(response.data.msg || response.msg);
+          }else{
+            location.replace('/choose_mama_adviser.html');
+          }
+        },
+        error(error) {
+          popup.toast(error.statusText)
+          // that.response = require('../json/choose_mama_adviser.json');
+          console.error('ajax error:' + error.status + ' ' + error.statusText);
+        }
+      });
     },
     prestep:function () {
       var that = this;
