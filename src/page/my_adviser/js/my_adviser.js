@@ -58,6 +58,9 @@ new Vue({
     this.getData();
   },
   methods: {
+    dump2choose(){
+      location.replace("/choose_mama_adviser.html");
+    },
     /**
      * 接口名称:
      * 接口文档:
