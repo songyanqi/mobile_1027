@@ -73,6 +73,7 @@
     "gulp-sass": "2.3.1",
     "gulp-size": "2.1.0",
     "gulp-uglify": "2.1.2",
+    "gulp.spritesmith": "6.5.1",
     "inquirer": "3.0.6",
     "install": "0.10.1",
     "js-cookie": "2.1.4",
