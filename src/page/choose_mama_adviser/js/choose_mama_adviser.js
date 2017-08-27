@@ -25,7 +25,7 @@ new Vue({
       show_adviser_list:false,
       showaddress2: {showaddress: false},
       address: '',
-      addressId:-1,
+      addressId:[],
       oncesdesc: false,
       hobby: [false, false, false, false, false, false, false, false, false],
       hobbyid: [1, 2, 3, 4, 5, 6, 7, 8, 9],
@@ -74,7 +74,11 @@ new Vue({
           if(response.code){
               popup.toast(response.data.msg || response.msg);
           }else{
+            console.log("getUserTagInfo",response.data);
+            if(response.data.distId){
+              that.oncesdesc = true;
 
+            }
           }
         },
         error(error) {
@@ -85,6 +89,7 @@ new Vue({
     },
     getaddress: function (msg) {
       var that = this;
+      console.log("getaddress");
       that.address = msg.name;
       that.addressId = msg.value;
     },
