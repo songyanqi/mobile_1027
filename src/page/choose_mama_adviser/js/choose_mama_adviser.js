@@ -151,7 +151,7 @@ new Vue({
           if(response.code){
             popup.toast(response.data.msg || response.msg);
           }else{
-            location.replace('/choose_mama_adviser.html');
+            location.replace('/my_adviser.html');
           }
         },
         error(error) {
