@@ -72,10 +72,19 @@ new Vue({
         dataType: 'json',
         data: encrypt({}),
         success(response) {
-          that.response = response;
           if(response.code){
-            popup.toast(response.data.msg || response.msg);
+            if(response.code=="92001"){
+              popup.alert({title:"请您先选择妈妈顾问",btnCallback:function(){
+                location.replace("/choose_mama_adviser.html")
+              })
+            }else{
+              popup.toast(response.data.msg || response.msg);
+            }
+          }else{
+             that.response = response;
           }
+         
+          
         },
         error(error) {
           that.response = require('../json/my_adviser.json');

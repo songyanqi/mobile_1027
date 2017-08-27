@@ -157,7 +157,10 @@ new Vue({
     },
     confirm_adviser:function () {
       /*选定妈妈顾问*/
-      console.log("dddd",this.adviser_select);
+      if(!this.adviserId){
+        popup.toast("您必须要选择一个顾问");
+        return false;
+      }
       var that = this;
       let data = {
         "provId":that.addressId[0],
