@@ -77,7 +77,12 @@ new Vue({
             console.log("getUserTagInfo",response.data);
             if(response.data.distId){
               that.oncesdesc = true;
-
+            }
+            let tags = response.data.tags;
+            if(tags){
+              for(var i=0;i<tags.length;i++){
+                that.hobby[tags[i].id-1]=true;
+              }
             }
           }
         },
@@ -107,15 +112,26 @@ new Vue({
       }
     },
     nextstep:function () {
-      console.log("addressId",that.addressId);
       /*下一步*/
       var that = this;
+
       let data = {
         "provId":that.addressId[0],
         "cityId":that.addressId[1],
         "distId":that.addressId[2],
         "tags":that.bobbyidlist.filter(function(x){return x}).join(',')
       };
+
+      if(!data.distId){
+        popup.toast("请选择所在地区");
+        return false;
+      }
+
+      if(data.tags==""){
+        popup.toast("请选择标签");
+        return false;
+      }
+
       $.ajax({
         cache: false,
         async: true,

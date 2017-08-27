@@ -51,7 +51,7 @@
             }
           }
         }
-        that.confirm();
+        that.initData();
         console.timeEnd("initValue");
       },
       initData(){
@@ -59,6 +59,7 @@
         if(that.addressNameList.length&&that.addressid){
           that.addressValue = that.addressValueList[that.addressid];
           that.addressName = that.addressNameList[that.addressid];
+          console.log('fire')
           that.confirm();
         }
       }
