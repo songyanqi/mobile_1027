@@ -75,7 +75,7 @@
 
   <!--妈妈顾问三选一-->
   <div v-if="show_adviser_list">
-    <div class="back-btn" @click="prestep"><i class="back-arrow"></i></div>
+    <div class="back-btn" v-if="!inapp" @click="prestep"><i class="back-arrow"></i></div>
     <!--妈妈顾问提示信息-->
     <div class="adviser_titles">
       <span>根据您的需求，推荐3位妈妈顾问<br>请您选择一位</span>
