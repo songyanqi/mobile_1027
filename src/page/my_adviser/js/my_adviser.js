@@ -74,7 +74,7 @@ new Vue({
         success(response) {
           that.response = response;
           if(response.code){
-            popup.toast(response.data.msg || response.msg);
+            popup.toast(response.data.errMsg || response.msg);
           }
         },
         error(error) {

@@ -102,6 +102,7 @@ new Vue({
       }
     },
     nextstep:function () {
+      console.log("addressId",that.addressId);
       /*下一步*/
       var that = this;
       let data = {
@@ -138,6 +139,10 @@ new Vue({
       console.log("dddd",this.adviser_select);
       var that = this;
       let data = {
+        "provId":that.addressId[0],
+        "cityId":that.addressId[1],
+        "distId":that.addressId[2],
+        "tags":that.bobbyidlist.filter(function(x){return x}).join(','),
         "adviserId":this.adviser_select
       }
       $.ajax({

@@ -24,9 +24,8 @@
     </div>
     <div v-if="response.data.mark" class="advisMark">
       <div class="advisMark_wrap">
-        <div v-if="response.data.mark.matching_degree">匹配度{{response.data.mark.matching_degree}}%</div>
-        <div v-if="response.data.mark.share_mark">{{response.data.mark.share_mark}}</div>
-        <div v-if="response.data.mark.friend_mark">{{response.data.mark.friend_mark}}</div>
+        <div v-if="response.data.matching_degree">匹配度{{response.data.matching_degree}}%</div>
+        <div v-for="item in response.data.mark">{{item}}</div>
       </div>
     </div>
     <div class="adviserTip">与顾问建立联系，可获得精准服务</div>

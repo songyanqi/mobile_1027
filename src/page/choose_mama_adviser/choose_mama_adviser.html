@@ -91,8 +91,7 @@
             </div>
           </div>
           <div class="adviser_marks">
-            <div v-if="advisers.share_mark">{{advisers.share_mark}}</div>
-            <div v-if="advisers.friend_mark">{{advisers.friend_mark}}</div>
+            <div v-for="item in advisers.marks">{{item}}</div>
           </div>
         </div>
         <div class="adviser_ob_right">
