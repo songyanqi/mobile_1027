@@ -340,7 +340,27 @@
                 var obj = {seriesId:this.seriesId};
                 axios.post('/api/mg/content/series_course/detail',lay.strSign('series', obj))
                     .then(function (respone) {
-                        alert(123)
+                        if (window.appData){
+                            window.appData.isShowAudio = 1
+                        } else {
+                            window.appData = {
+                                'isShowAudio':1
+                            }
+                        }
+                        setTimeout(function(){
+                            if (that.seriesType==1 && that.deleteFlag && that.state!=0){
+                                if (window.appData){
+                                    window.appData.isAudioAbsorb = 1
+                                } else {
+                                    window.appData = {
+                                        'isAudioAbsorb':1
+                                    }
+                                }
+                            }
+                        },400)
+                        setTimeout(function(){
+                            window.bravetime.initHead()
+                        },500)
                         if (respone.data && respone.data.code==30024){
                             // that.deleteFlag = false
                             if (JSON.parse(sessionStorage.getItem('history')).length > 1){
@@ -402,27 +422,6 @@
                                 }
                             }
                         }
-                        if (window.appData){
-                            window.appData.isShowAudio = 1
-                        } else {
-                            window.appData = {
-                                'isShowAudio':1
-                            }
-                        }
-                        if (that.seriesType==1 && that.deleteFlag && that.state!=0){
-                            if (window.appData){
-                                window.appData.isAudioAbsorb = 1
-                            } else {
-                                window.appData = {
-                                    'isAudioAbsorb':1
-                                }
-                            }
-                        }
-                        alert(456)
-                        setTimeout(function(){
-                            alert(789)
-                            window.bravetime.initHead()
-                        },500)
                     })
                     .catch(function (error) {
                         console.log(error,11111111)
