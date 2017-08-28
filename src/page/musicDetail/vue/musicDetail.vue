@@ -6,7 +6,7 @@
       <div class="big_img" v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].imageUrl'>
         <img :src="musicList[musicList.length-index-1].imageUrl" alt="">
       </div>
-      <div class="left_icon" v-if="musicList[musicList.length-index-1].showXmlyIcon==1"><img :src="musicList[musicList.length-index-1].xmlyIcon" alt=""></div>
+      <div class="left_icon" v-if="musicList && musicList[musicList.length-index-1] && musicList[musicList.length-index-1].showXmlyIcon==1"><img :src="musicList[musicList.length-index-1].xmlyIcon" alt=""></div>
       <div class="big_mask" v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].isPlay != 1'></div>
       <div class="mask_tab" v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].isPlay != 1'>
         <div class="mask_text">
@@ -28,13 +28,16 @@
     </div>
     <div class="btn" v-if='!isapp'>
       <div class="btn1"><img src="//pic.davdian.com/free/2017/08/16/time.png" alt="" @click='dialog'></div>
-      <div class="btn2"><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt="" @click='playAudio(index-1)'></div>
+      {{index}}::{{allAudio}}:<span v-if='musicList && musicList[index]' v-text='musicList[musicList.length-1-index].sortNo'></span>
+      <div class="btn2" v-if='musicList && musicList[musicList.length-1-index] && musicList[musicList.length-1-index].sortNo == allAudio-1'><img src="//pic.davdian.com/free/2017/08/26/noupdata.png" alt=""></div>
+      <div class="btn2" v-if='musicList && musicList[musicList.length-1-index] && musicList[musicList.length-1-index].sortNo != allAudio-1'><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt="" @click='playAudio(index-1)'></div>
+
       <div class="btn3" >
-        <div><img src="//pic.davdian.com/free/2017/08/26/timeOutRotateSolid.png" alt=""></div>
         <div class="small_icon" v-if='!isPlay'><img src="//pic.davdian.com/free/2017/08/16/playBtn.png" alt="" @click='playAudio(-100)'></div>
         <div class="small_icon" v-if='isPlay'><img src="//pic.davdian.com/free/2017/08/18/timeOut.png" alt="" @click='playAudio(-100)'></div>
       </div>
-      <div class="btn4"><img src="//pic.davdian.com/free/2017/08/28/right.png" alt="" @click='playAudio(index+1)'></div>
+      <div class="btn4" v-if='musicList && musicList[musicList.length-1-index] && musicList[musicList.length-1-index].sortNo == 0'><img src="//pic.davdian.com/free/2017/08/26/npdownData.png" alt=""></div>
+      <div class="btn4" v-if='musicList && musicList[musicList.length-1-index] && musicList[musicList.length-1-index].sortNo != 0'><img src="//pic.davdian.com/free/2017/08/28/right.png" alt="" @click='playAudio(index+1)'></div>
       <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
     </div>
     <div class="look_more" @click='goAlbumId' v-if='!isapp'>
@@ -1030,12 +1033,7 @@
     border-radius: 50%;
   }
   .small_icon img{
-    height: 0.4rem;
-    width: 0.4rem;
-    position: absolute;
-    top: 50%;
-    margin-top: -0.2rem;
-    left: 50%;
-    margin-left: -0.2rem;
+    height: 0.46rem;
+    width: 0.46rem;
   }
 </style>
