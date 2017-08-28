@@ -45,7 +45,7 @@
     data(){
         return{
             dataList:[],
-            isFree:0,
+            isFree:-1,
             historyName:"",
             sortNo:null,
             timestamp:null,
