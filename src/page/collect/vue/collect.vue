@@ -30,6 +30,7 @@
   import data_mask from "./data_mask.vue"
   import data_mask2 from "./data_mask2.vue"
   import top from "../../../component/com-to-top-icon.vue"
+  import share from '../../../common/js/module/share.js';
   export default {
     components:{
       index_feed:index_feed,
@@ -76,6 +77,18 @@
             api("/api/mg/content/album/getAlbumData",obj)
               .then(function (result) {
                 if(result.code==0){
+                  if (result.data && result.data.shareInfo){
+                    try {
+                      share.setShareInfo({
+                        title: result.data.shareInfo.title,
+                        desc: result.data.shareInfo.desc,
+                        link: result.data.shareInfo.link,
+                        imgUrl: result.data.shareInfo.imgUrl
+                      });
+                    } catch (err) {
+                      alert(err)
+                    }
+                  }
                   if(result.data && result.data.feedList){
                     that.income=result.data.attr.income;
                     that.price=result.data.attr.price;

@@ -95,7 +95,6 @@
                   that.shareInfo = result.data.shareInfo
                   that.shareInfoFn();
                   try {
-                    alert(result.data.shareInfo.title)
                     share.setShareInfo({
                       title: result.data.shareInfo.title,
                       desc: result.data.shareInfo.desc,
