@@ -434,3 +434,21 @@ footer div {
   background-size: 16px 16px;
   background-position: center center;
 }
+.dump_to_mama_adviser_mask{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 8;
+}
+
+.com-popup-base{
+  z-index: 990 !important;
+}
+.com-popup-base .table-cell .box .btns .btn.btn-ok{
+  margin-left:0.1rem;
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+  -moz-box-flex: 2;
+  -ms-flex: 2;
+  flex: 2;
+}
