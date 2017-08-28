@@ -32,6 +32,7 @@
   import top from "../../../component/com-to-top-icon.vue"
   import share from '../../../common/js/module/share.js';
   import ua from '../../../common/js/module/ua.js';
+  import Cookies from 'js-cookie'
   export default {
     components:{
       index_feed:index_feed,
@@ -82,7 +83,7 @@
                 if (ua.isWeiXin()) {
                   // alert(ts.initResponse.data.needWxAuth === '1');
                   // alert(Cookies.get('act_baby_weixin_auth'));
-                  if (result.data.needWxAuth === '1' && Cookies.get('act_baby_weixin_auth') === undefined) {
+                  if (result.data.needWxAuth === 1 && Cookies.get('act_baby_weixin_auth') === undefined) {
                     Cookies.set('act_baby_weixin_auth', 1, {
                       // domain: util.getBaseDomain(),
                       // path: '/',
@@ -95,7 +96,7 @@
                     throw new Error(`即将跳转微信授权页(${location.href})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
                   }
                 }
-                
+
                 if(result.code==0){
                   if (result.data && result.data.shareInfo){
                     try {
