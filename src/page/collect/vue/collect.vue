@@ -99,12 +99,6 @@
                       };
                       return JSON.stringify(shareInfo);
                     };
-                      native.Browser.setHead({
-                        'title':that.title,
-                        'backBtn':'1',
-                        'shareBtn':"1",
-                        'shareMoney':result.data.attr.income,
-                      })
                   }else{
                     that.maskFlag2=true;
                   }
@@ -120,6 +114,12 @@
                       'isShowAudio':1,
                     });
                   }
+                  native.Browser.setHead({
+                    'title':that.title,
+                    'backBtn':'1',
+                    'shareBtn':"1",
+                    'shareMoney':result.data.attr.income,
+                  })
 
                 }else{
                   that.maskFlag=true;

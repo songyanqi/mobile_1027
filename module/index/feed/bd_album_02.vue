@@ -25,7 +25,7 @@
       }
     },
     mounted:function () {
-      this.dataList=this.data.body.dataList.reverse();
+      this.dataList=this.data.body.dataList;
       this.number = this.data.body.purchase
       this.isFree=this.data.body.isFree;
     },

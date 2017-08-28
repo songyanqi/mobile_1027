@@ -30,8 +30,9 @@
       <div class="btn1"><img src="//pic.davdian.com/free/2017/08/16/time.png" alt="" @click='dialog'></div>
       <div class="btn2"><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt="" @click='playAudio(index-1)'></div>
       <div class="btn3" >
-        <img v-if='!isPlay' src="//pic.davdian.com/free/2017/08/16/playBtn.png" alt="" @click='playAudio(-100)'>
-        <img v-if='isPlay' src="//pic.davdian.com/free/2017/08/18/timeOut.png" alt="" @click='playAudio(-100)'>
+        <div><img src="//pic.davdian.com/free/2017/08/26/timeOutRotateSolid.png" alt=""></div>
+        <div class="small_icon"><img v-if='!isPlay' src="//pic.davdian.com/free/2017/08/16/playBtn.png" alt="" @click='playAudio(-100)'></div>
+        <div class="small_icon"><img v-if='isPlay' src="//pic.davdian.com/free/2017/08/18/timeOut.png" alt="" @click='playAudio(-100)'></div>
       </div>
       <div class="btn4"><img src="//pic.davdian.com/free/2017/08/16/combinedShape.png" alt="" @click='playAudio(index+1)'></div>
       <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
@@ -221,7 +222,7 @@
           play_type:1,
         }
         if (that.musicList && that.musicList[that.index] && that.musicList[that.index].musicId){
-          obj['musicId'] = that.musicList[that.index].musicId
+          obj['musicId'] = that.musicList[that.musicList.length - 1 - that.index].musicId
         }
         if (localStorage.getItem('expires_in')){
           obj.expires_in = localStorage.getItem('expires_in')
@@ -1027,5 +1028,14 @@
     height: 0.44rem;
     width: 0.44rem;
     border-radius: 50%;
+  }
+  .small_icon img{
+    height: 0.4rem;
+    width: 0.4rem;
+    position: absolute;
+    top: 50%;
+    margin-top: -0.2rem;
+    left: 50%;
+    margin-left: -0.2rem;
   }
 </style>
