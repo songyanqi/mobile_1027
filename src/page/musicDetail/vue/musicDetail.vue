@@ -313,20 +313,20 @@
           
         })
       },
-      shareInfo(index){
-        var that = this
-        let shareInfo = {}
-        if (that.musicList[index].shareInfo){
-          shareInfo = that.musicList[index].shareInfo
-          share.setShareInfo({
-            title: shareInfo.title,
-            desc: shareInfo.desc,
-            link: shareInfo.link,
-            imgUrl: shareInfo.imgUrl
-          });
-        }
-        console.log('shareinfo-->', shareInfo)
-      },
+      // shareInfo(index){
+      //   var that = this
+      //   let shareInfo = {}
+      //   if (that.musicList[index].shareInfo){
+      //     shareInfo = that.musicList[index].shareInfo
+      //     share.setShareInfo({
+      //       title: shareInfo.title,
+      //       desc: shareInfo.desc,
+      //       link: shareInfo.link,
+      //       imgUrl: shareInfo.imgUrl
+      //     });
+      //   }
+      //   console.log('shareinfo-->', shareInfo)
+      // },
       goback(){
         window.history.back()
       },
@@ -483,7 +483,7 @@
             that.playAudio(that.index + 1)
           }
           that.playData()
-          that.shareInfo(that.index)
+          // that.shareInfo(that.index)
         } else {
           if (that.isPlay){
             that.isPlay = false

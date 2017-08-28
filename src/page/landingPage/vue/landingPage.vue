@@ -25,6 +25,7 @@
   import top from "../../../component/com-to-top-icon.vue"
   import data_mask from "./data_mask.vue"
   import data_mask2 from "./data_mask2.vue"
+  import share from '../../../common/js/module/share.js';
   export default {
     components:{
       index_feed:index_feed,
@@ -43,7 +44,8 @@
             name:"landingPage",
             isApp:util.utils.isApp(),
             maskFlag:false,
-            maskFlag2:false
+            maskFlag2:false,
+            shareInfo: {}
         }
     },
 
@@ -68,7 +70,7 @@
 
     },
     methods:{
-        shareInfo(){
+        shareInfoFn(){
           window.iosInterface.getShareInfo = function () {
             var shareInfo = {
 //              title: that.shareInfo.title,
@@ -86,10 +88,23 @@
           var that=this;
           api("/api/mg/content/indexAlbum/getContent")
             .then(function (result) {
+              console.log('result-->' , result)
               if(result.code==0){
                 if(result.data && result.data.feedList){
                   that.data=that.data.concat(result.data.feedList);
-                  that.shareInfo();
+                  that.shareInfo = result.data.shareInfo
+                  that.shareInfoFn();
+                  try {
+                    alert(result.data.shareInfo.title)
+                    share.setShareInfo({
+                      title: result.data.shareInfo.title,
+                      desc: result.data.shareInfo.desc,
+                      link: result.data.shareInfo.link,
+                      imgUrl: result.data.shareInfo.imgUrl
+                    });
+                  } catch (err) {
+                    alert(err)
+                  }
                   result.data.feedList.map(function (item,index) {
                     if(item.body.upTime){
                       that.upTime=item.body.upTime;
