@@ -28,7 +28,6 @@
     </div>
     <div class="btn" v-if='!isapp'>
       <div class="btn1"><img src="//pic.davdian.com/free/2017/08/16/time.png" alt="" @click='dialog'></div>
-      {{index}}::{{allAudio}}:<span v-if='musicList && musicList[index]' v-text='musicList[musicList.length-1-index].sortNo'></span>
       <div class="btn2" v-if='musicList && musicList[musicList.length-1-index] && musicList[musicList.length-1-index].sortNo == allAudio-1'><img src="//pic.davdian.com/free/2017/08/26/noupdata.png" alt=""></div>
       <div class="btn2" v-if='musicList && musicList[musicList.length-1-index] && musicList[musicList.length-1-index].sortNo != allAudio-1'><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt="" @click='playAudio(index-1)'></div>
 
