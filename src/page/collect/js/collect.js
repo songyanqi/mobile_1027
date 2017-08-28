@@ -19,6 +19,24 @@ import vueLazyload from '../../../common/js/module/vueLazyload.js';
 // 懒加载初始化
 vueLazyload.init();
 
+// 在微信中时，立即调用接口判断是否需要微信授权
+if (ua.isWeiXin()) {
+  // alert(ts.initResponse.data.needWxAuth === '1');
+  // alert(Cookies.get('act_baby_weixin_auth'));
+  if (ts.initResponse.data.needWxAuth === '1' && Cookies.get('act_baby_weixin_auth') === undefined) {
+    Cookies.set('act_baby_weixin_auth', 1, {
+      // domain: util.getBaseDomain(),
+      // path: '/',
+      // expires: 1,   // 有效时间1天
+      expires: 1 / 24 / 60    // 有效时间1分钟
+    });
+    // weixin.goAuthPage(true);
+    // ts.initResponse.data.authUrl值为http://open.davdian.com/WechatAPI/auth?access_key=davdian@)!$!)!*&get_open_id=1
+    location.href = ts.initResponse.data.authUrl + '&refer=' + location.href;
+    throw new Error(`即将跳转微信授权页(${location.href})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
+  }
+}
+
 // 渲染页面
 window.collect=new Vue({
   el: ".app",

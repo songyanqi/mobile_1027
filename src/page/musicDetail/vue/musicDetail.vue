@@ -255,6 +255,9 @@
       },
       subscription(){
         var that = this
+        if (!that.isapp){
+          window.location.href = '/collect.html?albumId=' + getQuery('albumId')
+        }
         let obj = {
           albumId:getQuery('albumId'),
           shareUserId:getQuery('shareUserId') || ''
