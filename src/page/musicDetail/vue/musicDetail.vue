@@ -28,18 +28,23 @@
     </div>
     <div class="btn" v-if='!isapp'>
       <div class="btn1"><img src="//pic.davdian.com/free/2017/08/16/time.png" alt="" @click='dialog'></div>
-      <div class="btn2"><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt="" @click='playAudio(index-1)'></div>
+      {{index}}::{{allAudio}}:<span v-if='musicList && musicList[index]' v-text='musicList[musicList.length-1-index].sortNo'></span>
+      <div class="btn2" v-if='musicList && musicList[musicList.length-1-index] && musicList[musicList.length-1-index].sortNo == allAudio-1'><img src="//pic.davdian.com/free/2017/08/26/noupdata.png" alt=""></div>
+      <div class="btn2" v-if='musicList && musicList[musicList.length-1-index] && musicList[musicList.length-1-index].sortNo != allAudio-1'><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt="" @click='playAudio(index-1)'></div>
+
       <div class="btn3" >
         <div><img src="//pic.davdian.com/free/2017/08/26/timeOutRotateSolid.png" alt=""></div>
         <div class="small_icon"><img v-if='!isPlay' src="//pic.davdian.com/free/2017/08/16/playBtn.png" alt="" @click='playAudio(-100)'></div>
         <div class="small_icon"><img v-if='isPlay' src="//pic.davdian.com/free/2017/08/18/timeOut.png" alt="" @click='playAudio(-100)'></div>
       </div>
-      <div class="btn4"><img src="//pic.davdian.com/free/2017/08/16/combinedShape.png" alt="" @click='playAudio(index+1)'></div>
+      <div class="btn4" v-if='musicList && musicList[musicList.length-1-index] && musicList[musicList.length-1-index].sortNo == 0'><img src="//pic.davdian.com/free/2017/08/26/npdownData.png" alt=""></div>
+      <div class="btn4" v-if='musicList && musicList[musicList.length-1-index] && musicList[musicList.length-1-index].sortNo != 0'><img src="//pic.davdian.com/free/2017/08/28/combinedShape.png" alt="" @click='playAudio(index+1)'></div>
+
       <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
     </div>
     <div class="look_more" @click='goAlbumId' v-if='!isapp'>
       <div class="look_count">查看合辑 (<span v-text='allAudio'></span>)</div>
-      <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
+      <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/28/entry.png" alt=""></div>
     </div>
     <div style="height: 0.1rem;background: #F8F7F7;" v-if='!isapp'></div>
     <div class="bottom_text" v-if='introduction || introduction==0' v-html='introduction'></div>

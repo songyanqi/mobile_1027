@@ -259,11 +259,8 @@
 	  var weixin_auth_try_times = _jsCookie2.default.get('weixin_auth_try_times');
 
 	  // 完成微信授权之后会在cookie设置is_auto_login=1,有这个标识了不需要再走授权逻辑
-	  // if (ua.isWeiXin()
-	  //   && !login.isLogined()
-	  //   && Cookies.get('is_auto_login') === undefined
-	  //   && (weixin_auth_try_times === undefined || weixin_auth_try_times < 1)) {
-	  if (_ua2.default.isWeiXin()) {
+	  if (_ua2.default.isWeiXin() && !_login2.default.isLogined() && _jsCookie2.default.get('is_auto_login') === undefined && (weixin_auth_try_times === undefined || weixin_auth_try_times < 1)) {
+	    // if (ua.isWeiXin()) {
 
 	    // 设置尝试授权次数，每次失败1天以后重新尝试
 	    _jsCookie2.default.set('weixin_auth_try_times', weixin_auth_try_times ? parseInt(weixin_auth_try_times) + 1 : 1, {
@@ -437,7 +434,7 @@
 
 	  // 拼接唤起native协议
 	  var protocal = 'davdian://call.' + param.host + '.com?action=' + param.action + '&params=' + encodeURIComponent(JSON.stringify(param.param)) + '&callback=' + callbackName + '&minv=' + param.v;
-	  alert(protocal);
+	  // alert(protocal)
 	  return protocal;
 	}
 
@@ -28903,7 +28900,7 @@
 	  data: function data() {
 	    return {
 	      dataList: [],
-	      isFree: 0,
+	      isFree: -1,
 	      historyName: "",
 	      sortNo: null,
 	      timestamp: null,
