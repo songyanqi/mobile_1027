@@ -109,8 +109,8 @@
               if (result.data.code == 300) {
                 if (jsApi) {
                   jsApi.jsApiParameters.dvdhref = location.href;
-//                      window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
-                  window.location.href="http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters));
+                     window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                  // window.location.href="http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters));
                 } else if (payUrl) {
                   that.nativePay(payUrl, function (flag) {
                     if (flag) {
