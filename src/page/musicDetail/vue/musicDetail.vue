@@ -34,7 +34,7 @@
         <div class="small_icon"><img v-if='!isPlay' src="//pic.davdian.com/free/2017/08/16/playBtn.png" alt="" @click='playAudio(-100)'></div>
         <div class="small_icon"><img v-if='isPlay' src="//pic.davdian.com/free/2017/08/18/timeOut.png" alt="" @click='playAudio(-100)'></div>
       </div>
-      <div class="btn4"><img src="//pic.davdian.com/free/2017/08/16/combinedShape.png" alt="" @click='playAudio(index+1)'></div>
+      <div class="btn4"><img src="//pic.davdian.com/free/2017/08/28/combinedShape.png" alt="" @click='playAudio(index+1)'></div>
       <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
     </div>
     <div class="look_more" @click='goAlbumId' v-if='!isapp'>
