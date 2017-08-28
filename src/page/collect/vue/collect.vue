@@ -116,13 +116,13 @@
                     that.maskFlag2=true;
                   }
                   if (that.isFree==1 && that.isSub==0){
-                    native.Browser.initHead({
+                    native.custom.initHead({
                       'shareOnHead': '1',
                       'isShowAudio':1,
                       'isAudioAbsorb':1
                     });
                   } else {
-                    native.Browser.initHead({
+                    native.custom.initHead({
                       'shareOnHead': '1',
                       'isShowAudio':1,
                     });
