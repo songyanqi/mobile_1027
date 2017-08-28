@@ -127,14 +127,14 @@
                       'isShowAudio':1,
                     });
                   }
-                  
-                  native.Browser.setHead({
-                    'title':that.title,
-                    'backBtn':'1',
-                    'shareBtn':"1",
-                    'shareMoney':result.data.attr.income,
-                  })
-
+                  setTimeout(function(){
+                    native.Browser.setHead({
+                      'title':that.title,
+                      'backBtn':'1',
+                      'shareBtn':"1",
+                      'shareMoney':result.data.attr.income,
+                    })
+                  },300)
                 }else{
                   that.maskFlag=true;
                   if(result.data.msg){
