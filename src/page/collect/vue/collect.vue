@@ -78,7 +78,6 @@
               .then(function (result) {
                 if(result.code==0){
                   if (result.data && result.data.shareInfo){
-                    alert(result.data.shareInfo.title)
                     try {
                       share.setShareInfo({
                         title: result.data.shareInfo.title,
