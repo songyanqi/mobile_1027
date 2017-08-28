@@ -1,6 +1,6 @@
 <template>
   <div>
-    <lheader :title="title" class="top" v-if="!isApp"></lheader>
+    <lheader :title="title" :price="price" class="top" v-if="!isApp"></lheader>
     <div class="ndiv" v-if="!isApp"></div>
     <index_feed :data="data"></index_feed>
     <div class="empty" v-if="isFree==1 && isSub==0" ></div>

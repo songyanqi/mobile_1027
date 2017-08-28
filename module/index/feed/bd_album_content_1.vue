@@ -3,7 +3,10 @@
     <div class="list1">
       <div class="big_img">
         <div class="list_line"></div>
-        <div class="list_date" v-text="week"></div>
+        <div class="list_date">
+          <div v-text="week" class="text"></div>
+          <div v-text="week2" v-if="week2!=''" class="entry"></div>
+        </div>
         <div class="list_line"></div>
       </div>
       <div class="list" v-for="(item,index) in dataList" @click.stop="go_href(item.albumId,item.sortNo)">
@@ -45,6 +48,7 @@
           return {
               upTime:"",
               week:"",
+              week2:"",
               isApp:util.utils.isApp(),
               btnStatus:null,
               dataList:[],
@@ -58,6 +62,7 @@
         this.dataList=this.data.body.dataList;
         this.upTime=this.data.body.upTime;
         this.week=this.getLocalTime(this.upTime);
+        this.week2=this.getLocalTime2(this.upTime);
         this.$nextTick(function () {
           setTimeout(function () {
             that.audioLocation();
@@ -243,7 +248,23 @@
           if (new Date().getMonth() + 1 == m && new Date().getFullYear() == y && new Date().getDate() == d){
             return "今日更新"
           } else {
-            return m+"月"+d+"日"+" "+week[day];
+            return m+"月"+d+"日";
+          }
+        },
+        getLocalTime2(nS){
+          var time = new Date(nS*1000);
+          var y = time.getFullYear();
+          var m = time.getMonth()+1;
+          var d = time.getDate();
+          var h = time.getHours();
+          var mm = time.getMinutes();
+          var s = time.getSeconds();
+          var day=time.getDay();
+          var week=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+          if (new Date().getMonth() + 1 == m && new Date().getFullYear() == y && new Date().getDate() == d){
+            return "";
+          } else {
+            return week[day];
           }
         },
         go_href(albumId,sortNo){
@@ -286,9 +307,13 @@
   }
   .list_date{
     color:#333333;
-    font-size:16px;
     padding-left: 0.1rem;
     padding-right: 0.1rem;
+    font-size: 0;
+  }
+  .list_date>div{
+    display: inline-block;
+    vertical-align: top;
   }
   .list_line{
     height: 0.01rem;
@@ -396,5 +421,18 @@
   @keyframes rotating{
     from{transform:rotate(0)}
     to{transform:rotate(360deg)}
+  }
+  .entry{
+    width: 0.42rem;
+    height: 0.16rem;
+    border-radius: 8px;
+    border:1px solid #979797;
+    border:0.5px solid #979797;
+    color: #999999;
+    line-height:0.16rem;
+    font-size: 11px;
+  }
+  .text{
+    font-size:16px;
   }
 </style>

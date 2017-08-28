@@ -28,7 +28,7 @@
     <div v-if="flag">
       <div class="update">
         <div class="up">
-          已更新<span class="color1" v-text="dataList.up"></span>期，计划更新<span class="color1" v-text="dataList.ex"></span>期
+          已更新<span class="color1" v-text="dataList.up"></span>期 <span v-if="dataList.ex!=0">，计划更新<span class="color1" v-text="dataList.ex"></span>期</span>
         </div>
       </div>
       <div class="list">
