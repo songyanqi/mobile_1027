@@ -420,7 +420,7 @@
                         }
                         setTimeout(function(){
                             window.bravetime.initHead()
-                        },1000)
+                        },500)
                     })
                     .catch(function (error) {
                         console.log(error,11111111)
