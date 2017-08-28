@@ -117,18 +117,21 @@
                       native.Audio.audioSubscription({
                         albumId:getQuery('albumId')
                       })
-                      popup.confirm({
-                        title: '提示',            // 标题（支持传入html。有则显示。）
-                        text: '订阅成功',             // 文本（支持传入html。有则显示。）
-                        okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-                        cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-                        okBtnCallback: function(){
-                          window.location.reload();
-                        },
-                        cancelBtnCallback: function(){
-                          window.location.reload();
-                        }
-                      });
+                      setTimeout(function(){
+                        popup.confirm({
+                          title: '提示',            // 标题（支持传入html。有则显示。）
+                          text: '订阅成功',             // 文本（支持传入html。有则显示。）
+                          okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                          cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                          okBtnCallback: function(){
+                            window.location.reload();
+                          },
+                          cancelBtnCallback: function(){
+                            window.location.reload();
+                          }
+                        });
+                      },600)
+                      
                     }
                   });
                 } else {
@@ -137,18 +140,21 @@
                       albumId:getQuery('albumId')
                     })
                   }
-                  popup.confirm({
-                    title: '提示',            // 标题（支持传入html。有则显示。）
-                    text: '订阅成功',             // 文本（支持传入html。有则显示。）
-                    okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-                    cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-                    okBtnCallback: function(){
-                      window.location.reload();
-                    },
-                    cancelBtnCallback: function(){
-                      window.location.reload();
-                    }
-                  });
+                  setTimeout(function(){
+                    popup.confirm({
+                      title: '提示',            // 标题（支持传入html。有则显示。）
+                      text: '订阅成功',             // 文本（支持传入html。有则显示。）
+                      okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                      cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                      okBtnCallback: function(){
+                        window.location.reload();
+                      },
+                      cancelBtnCallback: function(){
+                        window.location.reload();
+                      }
+                    });
+                  },600)
+                  
                 }
               } else {
                 if (result.data.code == 100){
