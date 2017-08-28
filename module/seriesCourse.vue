@@ -340,7 +340,7 @@
                 var obj = {seriesId:this.seriesId};
                 axios.post('/api/mg/content/series_course/detail',lay.strSign('series', obj))
                     .then(function (respone) {
-
+                        alert(123)
                         if (respone.data && respone.data.code==30024){
                             // that.deleteFlag = false
                             if (JSON.parse(sessionStorage.getItem('history')).length > 1){
@@ -418,7 +418,9 @@
                                 }
                             }
                         }
+                        alert(456)
                         setTimeout(function(){
+                            alert(789)
                             window.bravetime.initHead()
                         },500)
                     })
