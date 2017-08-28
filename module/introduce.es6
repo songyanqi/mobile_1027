@@ -107,9 +107,7 @@ export default {
                         }
                     }
                     setTimeout(function(){
-                        if (!that.bottomBtn){
-                            window.bravetime.initHead()
-                        }
+                        window.bravetime.initHead()
                     },500)   
                 }
             },
