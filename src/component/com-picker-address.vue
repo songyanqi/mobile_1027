@@ -22,7 +22,7 @@
       },
       confirm:function () {
         this.showaddress.showaddress = false;
-        this.$emit('addressdata',{name:this.addressName,value:this.addressValue[2]});
+        this.$emit('addressdata',{name:this.addressName,value:this.addressValue});
       },
       initValue:function(){
         let that = this;
@@ -51,9 +51,8 @@
             }
           }
         }
-        that.confirm();
+        that.initData();
         console.timeEnd("initValue");
-        
       },
       initData(){
         let that = this;
