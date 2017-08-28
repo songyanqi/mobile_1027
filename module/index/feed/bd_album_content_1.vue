@@ -157,6 +157,9 @@
         Subscribe(albumId){
 
           var that=this;
+          if (!that.isapp){
+            window.location.href = '/collect.html?albumId=' + getQuery('albumId') 
+          }
           var obj={
             albumId:albumId,
             shareUserId:getQuery('shareUserId') || ''

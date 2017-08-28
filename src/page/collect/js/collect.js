@@ -19,6 +19,7 @@ import vueLazyload from '../../../common/js/module/vueLazyload.js';
 // 懒加载初始化
 vueLazyload.init();
 
+
 // 渲染页面
 window.collect=new Vue({
   el: ".app",

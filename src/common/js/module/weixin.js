@@ -45,7 +45,6 @@ export default {
       cancel: function () {
       }, // 用户取消分享后执行的回调函数
     }, param);
-
     // 加载微信jssdk
     scriptjs('//res.wx.qq.com/open/js/jweixin-1.0.0.js', function () {
       // 更新cookie中weixin_verify_info
@@ -126,7 +125,6 @@ export default {
           updateVerifyInfo.execTimes = updateVerifyInfo.execTimes ? updateVerifyInfo.execTimes + 1 : 1;
         }
       });
-
       verify(response);
     });
   },
