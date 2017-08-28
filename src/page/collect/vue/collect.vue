@@ -132,7 +132,7 @@
                       'title':that.title,
                       'backBtn':'1',
                       'shareBtn':"1",
-                      'shareMoney':result.data.attr.income,
+                      'shareMoneyStr':'分享赚:¥' + result.data.attr.income,
                     })
                   },300)
                 }else{
