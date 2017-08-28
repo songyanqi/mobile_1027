@@ -242,7 +242,6 @@
             }
           },
           Subscribe(albumId){
-
             var that=this;
             var obj={
               albumId:albumId,
@@ -260,7 +259,9 @@
                     } else if (payUrl) {
                       that.nativePay(payUrl, function (flag) {
                         if (flag) {
-
+                          native.Audio.audioSubscription({
+                            albumId:getQuery('albumId')
+                          })
                           popup.confirm({
                             title: '提示',            // 标题（支持传入html。有则显示。）
                             text: '订阅成功',             // 文本（支持传入html。有则显示。）
@@ -277,6 +278,11 @@
                         }
                       });
                     } else {
+                      if (that.isApp){
+                        native.Audio.audioSubscription({
+                          albumId:getQuery('albumId')
+                        })
+                      }
                       popup.confirm({
                         title: '提示',            // 标题（支持传入html。有则显示。）
                         text: '订阅成功',             // 文本（支持传入html。有则显示。）
