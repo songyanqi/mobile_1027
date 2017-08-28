@@ -419,6 +419,7 @@
                             }
                         }
                         setTimeout(function(){
+                            alert(123)
                             window.bravetime.initHead()
                         },500)
                     })
