@@ -32,13 +32,11 @@
       <div class="btn2" v-if='musicList && musicList[musicList.length-1-index] && musicList[musicList.length-1-index].sortNo != allAudio-1'><img src="//pic.davdian.com/free/2017/08/16/combinedShape2.png" alt="" @click='playAudio(index-1)'></div>
 
       <div class="btn3" >
-        <div><img src="//pic.davdian.com/free/2017/08/26/timeOutRotateSolid.png" alt=""></div>
-        <div class="small_icon"><img v-if='!isPlay' src="//pic.davdian.com/free/2017/08/16/playBtn.png" alt="" @click='playAudio(-100)'></div>
-        <div class="small_icon"><img v-if='isPlay' src="//pic.davdian.com/free/2017/08/18/timeOut.png" alt="" @click='playAudio(-100)'></div>
+        <div class="small_icon" v-if='!isPlay'><img src="//pic.davdian.com/free/2017/08/16/playBtn.png" alt="" @click='playAudio(-100)'></div>
+        <div class="small_icon" v-if='isPlay'><img src="//pic.davdian.com/free/2017/08/18/timeOut.png" alt="" @click='playAudio(-100)'></div>
       </div>
       <div class="btn4" v-if='musicList && musicList[musicList.length-1-index] && musicList[musicList.length-1-index].sortNo == 0'><img src="//pic.davdian.com/free/2017/08/26/npdownData.png" alt=""></div>
-      <div class="btn4" v-if='musicList && musicList[musicList.length-1-index] && musicList[musicList.length-1-index].sortNo != 0'><img src="//pic.davdian.com/free/2017/08/28/combinedShape.png" alt="" @click='playAudio(index+1)'></div>
-
+      <div class="btn4" v-if='musicList && musicList[musicList.length-1-index] && musicList[musicList.length-1-index].sortNo != 0'><img src="//pic.davdian.com/free/2017/08/28/right.png" alt="" @click='playAudio(index+1)'></div>
       <div class="btn5"><img src="//pic.davdian.com/free/2017/08/16/list.png" alt="" @click='openAudioList'></div>
     </div>
     <div class="look_more" @click='goAlbumId' v-if='!isapp'>
@@ -1034,12 +1032,7 @@
     border-radius: 50%;
   }
   .small_icon img{
-    height: 0.4rem;
-    width: 0.4rem;
-    position: absolute;
-    top: 50%;
-    margin-top: -0.2rem;
-    left: 50%;
-    margin-left: -0.2rem;
+    height: 0.46rem;
+    width: 0.46rem;
   }
 </style>
