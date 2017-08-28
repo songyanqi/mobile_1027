@@ -25,7 +25,7 @@
         <div class="right_img" v-if="item.isPlay==0">
           <div class="disable" @click.stop="stop_info(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
           <div class="circle_mask"></div>
-          <div><img :src="item.imageUrl" alt=""></div>
+          <div class="a"><img class="gray" :src="item.imageUrl" alt=""></div>
         </div>
       </div>
     </div>
@@ -344,8 +344,16 @@
     line-height:0.16rem;
     color:#999999;
   }
+  .list_time{
+    position: absolute;
+    bottom: 0;
+  }
   .list_name{
     margin-bottom:0.07rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 2.15rem;
   }
   .right_img img{
     width: 0.34rem;
@@ -376,6 +384,11 @@
   }
   .mask_play,.mask_stop,.disable{
     z-index:3;
+  }
+  .gray {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
   }
   .loading_play{
     animation:rotating 1.2s linear infinite
