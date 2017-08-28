@@ -860,6 +860,19 @@ const native = {
         action: 'audioPlayHistory',
         param: param
       })
+    },
+    /**
+     * 功能:H5触发cmd客户端订阅某个音频
+     * 用法:
+     * native.Audio.audioSubscription();
+     */
+    audioSubscription(param = {}){
+      call({
+        v:'4.2.0',
+        host: 'Audio',
+        action: 'audioSubscription',
+        param: param
+      })
     }
   },
 
