@@ -39,7 +39,7 @@
     </div>
     <div class="look_more" @click='goAlbumId' v-if='!isapp'>
       <div class="look_count">查看合辑 (<span v-text='allAudio'></span>)</div>
-      <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/16/entry.png" alt=""></div>
+      <div class="look_icon"><img src="//pic.davdian.com/free/2017/08/28/entry.png" alt=""></div>
     </div>
     <div style="height: 0.1rem;background: #F8F7F7;" v-if='!isapp'></div>
     <div class="bottom_text" v-if='introduction || introduction==0' v-html='introduction'></div>
