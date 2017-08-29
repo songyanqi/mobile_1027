@@ -28,7 +28,7 @@
     <div v-if="flag">
       <div class="update">
         <div class="up">
-          已更新<span class="color1" v-text="dataList.up"></span>期，计划更新<span class="color1" v-text="dataList.ex"></span>期
+          已更新<span class="color1" v-text="dataList.up"></span>期 <span v-if="dataList.ex!=0">，计划更新<span class="color1" v-text="dataList.ex"></span>期</span>
         </div>
       </div>
       <div class="list">
@@ -242,7 +242,6 @@
             }
           },
           Subscribe(albumId){
-
             var that=this;
             var obj={
               albumId:albumId,
@@ -255,12 +254,14 @@
                   if (result.data.code == 300) {
                     if (jsApi) {
                       jsApi.jsApiParameters.dvdhref = location.href;
-//                      window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
-                      window.location.href="http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters));
+                     window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                      // window.location.href="http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters));
                     } else if (payUrl) {
                       that.nativePay(payUrl, function (flag) {
                         if (flag) {
-
+                          native.Audio.audioSubscription({
+                            albumId:getQuery('albumId')
+                          })
                           popup.confirm({
                             title: '提示',            // 标题（支持传入html。有则显示。）
                             text: '订阅成功',             // 文本（支持传入html。有则显示。）
@@ -277,6 +278,11 @@
                         }
                       });
                     } else {
+                      if (that.isApp){
+                        native.Audio.audioSubscription({
+                          albumId:getQuery('albumId')
+                        })
+                      }
                       popup.confirm({
                         title: '提示',            // 标题（支持传入html。有则显示。）
                         text: '订阅成功',             // 文本（支持传入html。有则显示。）

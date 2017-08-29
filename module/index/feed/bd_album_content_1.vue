@@ -3,7 +3,10 @@
     <div class="list1">
       <div class="big_img">
         <div class="list_line"></div>
-        <div class="list_date" v-text="week"></div>
+        <div class="list_date">
+          <div v-text="week" class="text"></div>
+          <div v-text="week2" v-if="week2!=''" class="entry"></div>
+        </div>
         <div class="list_line"></div>
       </div>
       <div class="list" v-for="(item,index) in dataList" @click.stop="go_href(item.albumId,item.sortNo)">
@@ -45,6 +48,7 @@
           return {
               upTime:"",
               week:"",
+              week2:"",
               isApp:util.utils.isApp(),
               btnStatus:null,
               dataList:[],
@@ -58,6 +62,7 @@
         this.dataList=this.data.body.dataList;
         this.upTime=this.data.body.upTime;
         this.week=this.getLocalTime(this.upTime);
+        this.week2=this.getLocalTime2(this.upTime);
         this.$nextTick(function () {
           setTimeout(function () {
             that.audioLocation();
@@ -111,29 +116,36 @@
         },
         stop_info(albumId,sortNo){
           var that=this;
-          if(that.isApp){
-            popup.confirm({
-              title: '提示',            // 标题（支持传入html。有则显示。）
-              text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
-              okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-              cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-              okBtnCallback: function(){
-                that.Subscribe(albumId);
-              },
-              cancelBtnCallback: function(){}
-            });
-          }else{
-            popup.confirm({
-              title: '提示',            // 标题（支持传入html。有则显示。）
-              text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
-              okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-              cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-              okBtnCallback: function(){
-                that.Subscribe(albumId);
-              },
-              cancelBtnCallback: function(){}
-            });
-          }
+          // if(that.isApp){
+          popup.confirm({
+            title: '提示',            // 标题（支持传入html。有则显示。）
+            text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
+            okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+            cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+            okBtnCallback: function(){
+              if (this.isApp) {
+                native.Browser.open({
+                  "url": "/collect.html?albumId=" + albumId
+                });
+              } else {
+                window.location.href = "/collect.html?albumId=" + albumId;
+              }
+              // that.Subscribe(albumId);
+            },
+            cancelBtnCallback: function(){}
+          });
+          // }else{
+          //   popup.confirm({
+          //     title: '提示',            // 标题（支持传入html。有则显示。）
+          //     text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
+          //     okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+          //     cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+          //     okBtnCallback: function(){
+          //       that.Subscribe(albumId);
+          //     },
+          //     cancelBtnCallback: function(){}
+          //   });
+          // }
         },
         nativePay(url, callback){
           var option = {};
@@ -152,6 +164,9 @@
         Subscribe(albumId){
 
           var that=this;
+          if (!that.isapp){
+            window.location.href = '/collect.html?albumId=' + getQuery('albumId') 
+          }
           var obj={
             albumId:albumId,
             shareUserId:getQuery('shareUserId') || ''
@@ -243,7 +258,23 @@
           if (new Date().getMonth() + 1 == m && new Date().getFullYear() == y && new Date().getDate() == d){
             return "今日更新"
           } else {
-            return m+"月"+d+"日"+" "+week[day];
+            return m+"月"+d+"日";
+          }
+        },
+        getLocalTime2(nS){
+          var time = new Date(nS*1000);
+          var y = time.getFullYear();
+          var m = time.getMonth()+1;
+          var d = time.getDate();
+          var h = time.getHours();
+          var mm = time.getMinutes();
+          var s = time.getSeconds();
+          var day=time.getDay();
+          var week=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+          if (new Date().getMonth() + 1 == m && new Date().getFullYear() == y && new Date().getDate() == d){
+            return "";
+          } else {
+            return week[day];
           }
         },
         go_href(albumId,sortNo){
@@ -286,9 +317,15 @@
   }
   .list_date{
     color:#333333;
-    font-size:16px;
     padding-left: 0.1rem;
     padding-right: 0.1rem;
+    font-size: 0;
+    height:0.2rem;
+    line-height:0.2rem;
+  }
+  .list_date>div{
+    display: inline-block;
+    vertical-align: top;
   }
   .list_line{
     height: 0.01rem;
@@ -396,5 +433,21 @@
   @keyframes rotating{
     from{transform:rotate(0)}
     to{transform:rotate(360deg)}
+  }
+  .entry{
+    width: 0.42rem;
+    height: 0.16rem;
+    border-radius: 8px;
+    border:1px solid #979797;
+    border:0.5px solid #979797;
+    color: #999999;
+    line-height:0.16rem;
+    font-size: 11px;
+    box-sizing: border-box;
+    margin-top: 0.02rem;
+  }
+
+  .text{
+    font-size:16px;
   }
 </style>

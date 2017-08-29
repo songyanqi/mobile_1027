@@ -33,6 +33,7 @@ export default {
             cache:false,
             bottomBtn: false,
             enterClassroomFlag: true,
+            visitorFlag:-1,
         }
     },
     created(){
@@ -65,6 +66,7 @@ export default {
                     } else {
                         if (code==30000){
                             that.visitor_status = 0
+                            that.visitorFlag = 0
                             native.Browser.setHead({shareBtn:'0'})
                         }else {
                             that.error = true;
@@ -99,14 +101,14 @@ export default {
                     }
                 }
                 if (!that.error && that.deleteFlag){
-                    setTimeout(function(){
-                        if (window.appData){
-                            window.appData.isAudioAbsorb = 1
-                        } else {
-                            window.appData = {
-                                'isAudioAbsorb':1
-                            }
+                    if (window.appData){
+                        window.appData.isAudioAbsorb = 1
+                    } else {
+                        window.appData = {
+                            'isAudioAbsorb':1
                         }
+                    }
+                    setTimeout(function(){
                         window.bravetime.initHead()
                     },500)   
                 }
@@ -146,6 +148,7 @@ export default {
                     } else {
                         if (code==30000){
                             that.visitor_status = 0
+                            that.visitorFlag = 0
                             native.Browser.setHead({shareBtn:'0'})
                         }else {
                             that.error = true;

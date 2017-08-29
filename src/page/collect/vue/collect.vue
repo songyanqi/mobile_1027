@@ -1,6 +1,6 @@
 <template>
   <div>
-    <lheader :title="title" class="top" v-if="!isApp"></lheader>
+    <lheader :title="title" :price="price" class="top" v-if="!isApp"></lheader>
     <div class="ndiv" v-if="!isApp"></div>
     <index_feed :data="data"></index_feed>
     <div class="empty" v-if="isFree==1 && isSub==0" ></div>
@@ -31,6 +31,8 @@
   import data_mask2 from "./data_mask2.vue"
   import top from "../../../component/com-to-top-icon.vue"
   import share from '../../../common/js/module/share.js';
+  import ua from '../../../common/js/module/ua.js';
+  import Cookies from 'js-cookie'
   export default {
     components:{
       index_feed:index_feed,
@@ -76,6 +78,25 @@
               };
             api("/api/mg/content/album/getAlbumData",obj)
               .then(function (result) {
+
+                // 在微信中时，立即调用接口判断是否需要微信授权
+                if (ua.isWeiXin()) {
+                  // alert(ts.initResponse.data.needWxAuth === '1');
+                  // alert(Cookies.get('act_baby_weixin_auth'));
+                  if (result.data.needWxAuth === 1 && Cookies.get('act_baby_weixin_auth') === undefined) {
+                    Cookies.set('act_baby_weixin_auth', 1, {
+                      // domain: util.getBaseDomain(),
+                      // path: '/',
+                      // expires: 1,   // 有效时间1天
+                      expires: 1 / 24 / 60    // 有效时间1分钟
+                    });
+                    // weixin.goAuthPage(true);
+                    // ts.initResponse.data.authUrl值为http://open.davdian.com/WechatAPI/auth?access_key=davdian@)!$!)!*&get_open_id=1
+                    location.href = result.data.authUrl + '&refer=' + location.href;
+                    throw new Error(`即将跳转微信授权页(${location.href})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
+                  }
+                }
+
                 if(result.code==0){
                   if (result.data && result.data.shareInfo){
                     try {
@@ -132,7 +153,7 @@
                       'title':that.title,
                       'backBtn':'1',
                       'shareBtn':"1",
-                      'shareMoneyStr': result.data.attr.income.substring(2,result.data.attr.income.length),
+                      'shareMoneyStr': result.data.attr.income
                     })
                   },300)
                 }else{

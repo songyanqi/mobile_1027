@@ -53,7 +53,7 @@
     methods:{
       share(){
         var that=this;
-        if(that.isApp){
+        if(that.isapp){
           native.custom.share({
             "title":that.shareInfo.title,
             "desc": that.shareInfo.desc,
@@ -67,7 +67,13 @@
 
       },
       vip(){
+        if (this.isapp){
+          native.Browser.open({
+            url: url
+          });
+        }else {
           window.location.href="/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button";
+        }
       },
       ifPrice(){
           if(this.isPrice=="0.00"){
@@ -103,42 +109,56 @@
               if (result.data.code == 300) {
                 if (jsApi) {
                   jsApi.jsApiParameters.dvdhref = location.href;
-//                      window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
-                  window.location.href="http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters));
+                     window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                  // window.location.href="http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters));
                 } else if (payUrl) {
                   that.nativePay(payUrl, function (flag) {
                     if (flag) {
-                      popup.confirm({
-                        title: '提示',            // 标题（支持传入html。有则显示。）
-                        text: '订阅成功',             // 文本（支持传入html。有则显示。）
-                        okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-                        cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-                        okBtnCallback: function(){
-                          window.location.reload();
-                        },
-                        cancelBtnCallback: function(){
-                          window.location.reload();
-                        }
-                      });
+                      native.Audio.audioSubscription({
+                        albumId:getQuery('albumId')
+                      })
+                      setTimeout(function(){
+                        popup.confirm({
+                          title: '提示',            // 标题（支持传入html。有则显示。）
+                          text: '订阅成功',             // 文本（支持传入html。有则显示。）
+                          okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                          cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                          okBtnCallback: function(){
+                            window.location.reload();
+                          },
+                          cancelBtnCallback: function(){
+                            window.location.reload();
+                          }
+                        });
+                      },600)
+                      
                     }
                   });
                 } else {
-                  popup.confirm({
-                    title: '提示',            // 标题（支持传入html。有则显示。）
-                    text: '订阅成功',             // 文本（支持传入html。有则显示。）
-                    okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-                    cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-                    okBtnCallback: function(){
-                      window.location.reload();
-                    },
-                    cancelBtnCallback: function(){
-                      window.location.reload();
-                    }
-                  });
+                  if (that.isapp){
+                    native.Audio.audioSubscription({
+                      albumId:getQuery('albumId')
+                    })
+                  }
+                  setTimeout(function(){
+                    popup.confirm({
+                      title: '提示',            // 标题（支持传入html。有则显示。）
+                      text: '订阅成功',             // 文本（支持传入html。有则显示。）
+                      okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                      cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                      okBtnCallback: function(){
+                        window.location.reload();
+                      },
+                      cancelBtnCallback: function(){
+                        window.location.reload();
+                      }
+                    });
+                  },600)
+                  
                 }
               } else {
                 if (result.data.code == 100){
-                  if (that.isApp){
+                  if (that.isapp){
                     native.Account.login()
                   }else {
                     window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)

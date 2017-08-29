@@ -6,13 +6,17 @@
           <i class="back-arrow"></i>
         </div>
         <div class="head_title" v-text="title"></div>
+        <div class="share">
+          <div class="text">赚<span v-text="price"></span>元</div>
+          <div class="icon"><img src="//pic.davdian.com/free/2017/08/28/homeShare.png" alt=""></div>
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
  export default {
-     props:["title"],
+     props:["title","price"],
      methods:{
        history(){
            history.back();
@@ -66,5 +70,30 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+  .share{
+    position: absolute;
+    right: 10px;
+    display: inline-block;
+    width: 73px;
+    height: 28px;
+    border: 1px solid #FF4A7D;
+    border: 0.5px solid #FF4A7D;
+    color: #FF4A7D;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 8px;
+    top: 0;
+    border-radius:2px;
+    text-align: center;
+    line-height: 28px;
+  }
+  .share>div{
+    display: inline-block;
+
+  }
+  .icon img{
+    height: 15px;
+    width: 15px;
   }
 </style>

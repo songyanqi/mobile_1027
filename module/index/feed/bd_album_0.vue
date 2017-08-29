@@ -1,8 +1,8 @@
 <template>
   <div class="box">
-    <div class="item" v-for="item in dataList"
-         @click.stop="go_collect(item.albumId)" :style="{'background-image':styleObject(item.imageUrl)}">
-      <!--<img :src="item.imageUrl" alt="">-->
+    <div @click="go_collect(item.albumId)" v-for="item in dataList">
+      <div class="circle" :style="{'background-image':styleObject(item.imageUrl)}"></div>
+      <div class="text"></div>
     </div>
   </div>
 </template>
@@ -38,28 +38,33 @@
 </script>
 <style scoped lang="sass">
   .box{
+    height: 1.86rem;
+    width: 100%;
     font-size: 0;
-    padding-bottom: 0.22rem;
-    padding-right: 0.21rem;
-    padding-left: 0.3rem;
-    padding-top:0.02rem;
+    background: #fff;
   }
   .box>div{
     display: inline-block;
+    width: 25%;
+    height: 0.93rem;
     vertical-align: top;
-    margin-top:0.12rem;
-    margin-right:0.09rem;
-    background: #D8D8D8;
-    border:1px solid #979797;
-    width: 0.72rem;
-    height: 0.35rem;
-    box-sizing: border-box;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    text-align: center;
   }
-  .item img{
-    width: 0.72rem;
-    height: 0.35rem;
+  .circle{
+    margin-top: 0.2rem;
+    border-radius:50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-block;
+    height: 0.45rem;
+    width: 0.45rem;
+  }
+  .text{
+    margin-top: 0.05rem;
+    text-align: center;
+    line-height: 0.17rem;
+    height: 0.17rem;
+    font-size: 12px;
   }
 </style>
