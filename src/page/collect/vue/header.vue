@@ -6,10 +6,10 @@
           <i class="back-arrow"></i>
         </div>
         <div class="head_title" v-text="title"></div>
-        <div class="share">
+        <!-- <div class="share">
           <div class="text">赚<span v-text="price"></span>元</div>
           <div class="icon"><img src="//pic.davdian.com/free/2017/08/28/homeShare.png" alt=""></div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
