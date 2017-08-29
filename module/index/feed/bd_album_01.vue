@@ -70,6 +70,9 @@
         }else{
           window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
         }
+        setTimeout(function(){
+          _this.history_mask=false;
+        },500)
       },
       audioPlayHistory(){
         var _this=this;
