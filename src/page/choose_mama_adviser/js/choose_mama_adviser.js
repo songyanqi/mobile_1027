@@ -10,7 +10,6 @@ import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
-
 // 渲染页面
 new Vue({
   el: ".app",
@@ -57,8 +56,8 @@ new Vue({
       this.$nextTick(function () {
         let that = this;
         // 设置app头部标题栏
-        native.custom.initHead({
-
+        native.Browser.setHead({
+          'title' : '选择我的顾问'
         });
       });
     }

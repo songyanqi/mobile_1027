@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="[[static]]/page/choose_mama_adviser/css/choose_mama_adviser.css[[v]]">
 </head>
 <body>
-<div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
+<div class="app" :class="{'inapp':inapp}" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
   <!--妈妈顾问爱好信息选择-->
   <div v-if="show_adviser_hobby_list">
     <div class="back-btn" v-if="!inapp"><a href="javascript:history.back();"><i class="back-arrow"></i></a></div>

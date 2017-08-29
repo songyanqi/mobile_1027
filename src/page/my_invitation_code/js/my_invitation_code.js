@@ -84,7 +84,6 @@ new Vue({
     },
     /*原生复制*/
     copyText: function (text) {
-      debugger
       native.BrowserTouch.copyText({
         "text": text,
         success: function (result) {

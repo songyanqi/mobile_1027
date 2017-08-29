@@ -88,6 +88,18 @@ new Vue({
         }
       });
     },
+    /*原生复制*/
+    copyText: function (text) {
+      native.BrowserTouch.copyText({
+        "text": text,
+        success: function (result) {
+          popup.toast("已复制到剪切板");
+        },
+        error: function (result) {
+          popup.toast("复制失败，请手动复制");
+        }
+      })
+    }
   },
   filters: {},
 });
