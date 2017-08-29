@@ -69,7 +69,7 @@
       vip(){
         if (this.isapp){
           native.Browser.open({
-            url: url
+            url: "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button"
           });
         }else {
           window.location.href="/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button";
