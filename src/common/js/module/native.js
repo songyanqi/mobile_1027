@@ -867,7 +867,6 @@ const native = {
      * native.Audio.audioSubscription();
      */
     audioSubscription(param = {}){
-      alert('订阅')
       call({
         v:'4.2.0',
         host: 'Audio',
