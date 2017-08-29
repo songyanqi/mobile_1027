@@ -5,7 +5,7 @@
     <!--正常登陆-->
     <div v-if="login_form">
       <div class="inputbox" style="margin-top: 50px">
-        <input type="tel" placeholder="请输入您的手机号" v-model="mobile" name="mobile">
+        <input type="tel" placeholder="请输入您的手机号" v-model="mobile" name="mobile" autofocus="autofocus">
         <img src="../img/clearInput.png" v-if="mobile != ''" v-on:click="mobile = ''">
       </div>
       <div class="inputbox">
@@ -26,7 +26,7 @@
     <div v-if="sign_form">
       <div class="inputbox" style="margin-top: 50px">
         <input v-if="get_check" type="tel" v-model="mobile" name="mobile" disabled style="color:#999999;">
-        <input v-else type="tel" placeholder="请输入您的手机号" v-model="mobile" name="mobile">
+        <input v-else type="tel" placeholder="请输入您的手机号" v-model="mobile" name="mobile" autofocus="autofocus">
         <img src="../img/clearInput.png" v-if="mobile != '' && !get_check" v-on:click="mobile = ''">
       </div>
       <div class="inputbox check_input">
@@ -79,7 +79,7 @@
     <!--输入邀请码-->
     <div v-if="invite_form">
       <div class="inputbox" style="margin-top: 50px">
-        <input type="tel" placeholder="请输入邀请码" v-model="invitation_code" name="mobile">
+        <input type="tel" placeholder="请输入邀请码" v-model="invitation_code" name="mobile" autofocus="autofocus">
         <img src="../img/clearInput.png" v-if="invitation_code != ''" v-on:click="invitation_code = ''">
       </div>
       <!--完成-->
@@ -108,7 +108,7 @@
       </div>
       <div class="inputbox check_input">
         <div>
-          <input type="tel" placeholder="请输入验证码" v-model="check_code" name="mobile">
+          <input type="tel" placeholder="请输入验证码" v-model="check_code" name="mobile" autofocus="autofocus">
           <img src="../img/clearInput.png" v-if="check_code != ''" v-on:click="check_code = ''">
         </div>
         <div v-if="get_check" class="get_check_code disable">{{get_checkbtnname}}</div>
@@ -343,7 +343,7 @@
           })
         });
       },
-      /*修改邀请人*/
+      /*添加邀请人*/
       modify_inviter: function (code) {
         var that = this;
         $.ajax({
@@ -834,5 +834,21 @@
   .invite_boxs .invite_info p {
     line-height: 17px;
     margin-top: 8px;
+  }
+  .com-top-title:after{
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.05);
+    -webkit-transform-origin: 0 100%;
+    -ms-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    -ms-transform: scaleY(0.5);
+    transform: scaleY(0.5);
   }
 </style>

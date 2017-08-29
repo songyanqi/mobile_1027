@@ -29,17 +29,7 @@ new Vue({
   },
   computed: {},
   watch: {
-    // 监听response变化
-    response() {
-      // response变化后并渲染完dom,设置其他事项
-      this.$nextTick(function () {
-        let ts = this;
-        // 设置app头部标题栏
-        native.custom.initHead({
-          shareOnHead: 1,
-        });
-      });
-    }
+
   },
   beforeCreate() {
     var that = this;
