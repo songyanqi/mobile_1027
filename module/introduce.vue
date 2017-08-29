@@ -10,7 +10,7 @@
     <div class="introduce_inner">
         <v-school-title></v-school-title>
         <!--内容-->
-        <div id="scroll_container" v-if="!error && deleteFlag && visitor_status!=0">
+        <div id="scroll_container" v-if="!error && deleteFlag && visitorFlag!=0">
             <div class="scroll">
                 <index-feed :data="feedData"></index-feed>
             </div>
@@ -19,7 +19,7 @@
                 <div>1、本次课堂内容永久保存，可反复收听；</div>
             </div> -->
         </div>
-        <div class="invite_and_enroll" v-if="!error && deleteFlag && visitor_status!=0" >
+        <div class="invite_and_enroll" v-if="!error && deleteFlag && visitorFlag!=0" >
             <div class='bottomBtn' v-if='bottomBtn'></div>
             <div class="btn_container left1">
                 <div class="invite" @click="invite1" v-if='visitor_status!=3 && type==2'>
@@ -57,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div v-if='visitor_status==0 && !error' class='noApply'>
+        <div v-if='visitorFlag==0 && !error' class='noApply'>
             <img src="//pic.davdian.com/free/2017/08/16/noApply.png">
             <p>登陆后才能继续访问</p>
             <span  @click='login'>立即登陆</span>

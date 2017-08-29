@@ -116,29 +116,36 @@
         },
         stop_info(albumId,sortNo){
           var that=this;
-          if(that.isApp){
-            popup.confirm({
-              title: '提示',            // 标题（支持传入html。有则显示。）
-              text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
-              okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-              cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-              okBtnCallback: function(){
-                that.Subscribe(albumId);
-              },
-              cancelBtnCallback: function(){}
-            });
-          }else{
-            popup.confirm({
-              title: '提示',            // 标题（支持传入html。有则显示。）
-              text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
-              okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-              cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-              okBtnCallback: function(){
-                that.Subscribe(albumId);
-              },
-              cancelBtnCallback: function(){}
-            });
-          }
+          // if(that.isApp){
+          popup.confirm({
+            title: '提示',            // 标题（支持传入html。有则显示。）
+            text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
+            okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+            cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+            okBtnCallback: function(){
+              if (this.isApp) {
+                native.Browser.open({
+                  "url": "/collect.html?albumId=" + albumId
+                });
+              } else {
+                window.location.href = "/collect.html?albumId=" + albumId;
+              }
+              // that.Subscribe(albumId);
+            },
+            cancelBtnCallback: function(){}
+          });
+          // }else{
+          //   popup.confirm({
+          //     title: '提示',            // 标题（支持传入html。有则显示。）
+          //     text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
+          //     okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+          //     cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+          //     okBtnCallback: function(){
+          //       that.Subscribe(albumId);
+          //     },
+          //     cancelBtnCallback: function(){}
+          //   });
+          // }
         },
         nativePay(url, callback){
           var option = {};

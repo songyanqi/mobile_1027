@@ -254,65 +254,64 @@
         native.Browser.pay(option)
       },
       subscription(){
-        var that = this
-        if (!that.isapp){
-          window.location.href = '/collect.html?albumId=' + getQuery('albumId')
+        if (this.isapp) {
+          native.Browser.open({
+            "url": "/collect.html?albumId=" + getQuery('albumId')
+          });
+        } else {
+          window.location.href = "/collect.html?albumId=" + getQuery('albumId');
         }
-        let obj = {
-          albumId:getQuery('albumId'),
-          shareUserId:getQuery('shareUserId') || ''
-        }
-        api('/api/mg/content/album/subscription', obj).then(function(result){
-          let {code,data:{msg,payUrl,jsApi}}=result;
-          if (code == 0){
-            if (result.data.code == 300){
-              if(jsApi){
-                  jsApi.jsApiParameters.dvdhref=location.href;
-                  // window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
-                  window.location.href = "http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
-              }else if(payUrl){
-                // that.nativePay(payUrl,function (flag) {
-                //   if(flag){
-                //     // 报名成功(进不来)
-                //   }
-                // });
-              }else{
-                // 报名成功
-                window.location.href = '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.musicList.length - that.index - 1].sortNo
-                // window.location.reload()
-              }
+        // var that = this
+        // if (!that.isapp){
+        //   window.location.href = '/collect.html?albumId=' + getQuery('albumId')
+        // }
+        // let obj = {
+        //   albumId:getQuery('albumId'),
+        //   shareUserId:getQuery('shareUserId') || ''
+        // }
+        // api('/api/mg/content/album/subscription', obj).then(function(result){
+        //   let {code,data:{msg,payUrl,jsApi}}=result;
+        //   if (code == 0){
+        //     if (result.data.code == 300){
+        //       if(jsApi){
+        //           jsApi.jsApiParameters.dvdhref=location.href;
+        //           // window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+        //           window.location.href = "http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+        //       }else if(payUrl){
+        //       }else{
+        //         window.location.href = '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.musicList.length - that.index - 1].sortNo
+        //       }
 
-            }else {
-              if (result.data.code == 100){
-                if (that.isapp){
-                  native.Account.login()
-                }else {
-                  let url = window.location.origin + '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.musicList.length - that.index -1].sortNo
-                  window.location.href = '/login.html?'+'referer=' + encodeURIComponent(url)
-                }
-              } else {
-                popup.confirm({
-                  title: '提示',
-                  text: result.data.msg,
-                  okBtnTitle: '确定',
-                  cancelBtnTitle: '取消',
-                  okBtnCallback: function(){},
-                  cancelBtnCallback: function(){}
-                });
-              }
-            }
-          } else {
-            popup.confirm({
-              title: '提示',
-              text: 'code:' + code + 'msg:'+ result.data.msg,
-              okBtnTitle: '确定',
-              cancelBtnTitle: '取消',
-              okBtnCallback: function(){},
-              cancelBtnCallback: function(){}
-            });
-          }
-          
-        })
+        //     }else {
+        //       if (result.data.code == 100){
+        //         if (that.isapp){
+        //           native.Account.login()
+        //         }else {
+        //           let url = window.location.origin + '/musicDetail.html?albumId=' + getQuery('albumId') + '&sortNo='+ that.musicList[that.musicList.length - that.index -1].sortNo
+        //           window.location.href = '/login.html?'+'referer=' + encodeURIComponent(url)
+        //         }
+        //       } else {
+        //         popup.confirm({
+        //           title: '提示',
+        //           text: result.data.msg,
+        //           okBtnTitle: '确定',
+        //           cancelBtnTitle: '取消',
+        //           okBtnCallback: function(){},
+        //           cancelBtnCallback: function(){}
+        //         });
+        //       }
+        //     }
+        //   } else {
+        //     popup.confirm({
+        //       title: '提示',
+        //       text: 'code:' + code + 'msg:'+ result.data.msg,
+        //       okBtnTitle: '确定',
+        //       cancelBtnTitle: '取消',
+        //       okBtnCallback: function(){},
+        //       cancelBtnCallback: function(){}
+        //     });
+        //   }
+        // })
       },
       // shareInfo(index){
       //   var that = this

@@ -64,7 +64,11 @@
         modifier_inviter:true
       }
     },
-    computed: {},
+    computed: {
+      origin_shop:function(){
+        return location.origin
+      }
+    },
     created() {
       var that = this;
       that.getData()
@@ -163,17 +167,21 @@
               if (response.code) {
                 popup.toast(response.data.msg || response.msg);
                 return false;
+              }else{
+                that.show_code_input = false;  //显示邀请码输入框
+                that.my_inviterPage = true; //隐藏我的邀请人
+                that.show_edntime = false; //不显示截至修改时间
+                that.trun_grey = false;  //置灰按钮
+                if(that.btnName == '确认修改'){
+                  that.modifier_inviter = false;
+                }
+                that.btnName = '修改邀请人';
+                that.$emit("titlename", "我的邀请人");
+                document.title = "我的邀请人";
+                if(response.shop_url != that.origin_shop){
+                  location.href = location.href.replace(that.origin_shop, response.shop_url);
+                }
               }
-              that.show_code_input = false;  //显示邀请码输入框
-              that.my_inviterPage = true; //隐藏我的邀请人
-              that.show_edntime = false; //不显示截至修改时间
-              that.trun_grey = false;  //置灰按钮
-              if(that.btnName == '确认修改'){
-                that.modifier_inviter = false;
-              }
-              that.btnName = '修改邀请人';
-              that.$emit("titlename", "我的邀请人");
-              document.title = "我的邀请人";
             },
             error(error) {
               console.error('ajax error:' + error.status + ' ' + error.statusText);

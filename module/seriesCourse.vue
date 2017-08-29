@@ -1,6 +1,6 @@
 <template>
     <div id="series">
-        <div class="top0" v-if='deleteFlag && !isApp && state!=0'>
+        <div class="top0" v-if='deleteFlag && !isApp && visitorFlag!=0'>
             <div class="top_container">
                 <div class="top_left">
                     <a class="top_back" href="javascript:history.back();">
@@ -20,25 +20,25 @@
                 </div>
             </div>
         </div>
-        <div class='seriesImgTop' v-if='deleteFlag && !isApp && state!=0'></div>
+        <div class='seriesImgTop' v-if='deleteFlag && !isApp && visitorFlag!=0'></div>
 
-        <div class='seriesImg' v-if='deleteFlag && state!=0'>
+        <div class='seriesImg' v-if='deleteFlag && visitorFlag!=0'>
             <!--专题头图-->
             <img :src="seriesCover" v-if='seriesCover'>
             
         </div>
 
-        <div class='seriesImg' v-if='deleteFlag && state!=0'>
+        <div class='seriesImg' v-if='deleteFlag && visitorFlag!=0'>
             <!--专题头图-->
             <div class='seriesImgTitle' v-text='dataList.seriesTitle'></div>
         </div>
 
-        <div class='seriesImg' v-if='deleteFlag && state!=0'>
+        <div class='seriesImg' v-if='deleteFlag && visitorFlag!=0'>
             <!--专题头图-->
             <div class='seriesImgPrice' v-text='seriesPrice'></div>
         </div>
 
-        <div class='dvk4_container' v-if='deleteFlag && userTicket==1 && state!=0' :class='{marginTopStyle: userTicket==1}'>
+        <div class='dvk4_container' v-if='deleteFlag && userTicket==1 && visitorFlag!=0' :class='{marginTopStyle: userTicket==1}'>
             <div class='dvk4_content'>
                 <div class="dvk4_detail" v-for='(item, index) in dataList.dataList'>
                     <div class='dvk4_detail_content' @click='dvkHref(item)'>
@@ -78,7 +78,7 @@
             </div>
         </div>
 
-        <div class='seriesImg' v-if='deleteFlag && state!=0'>
+        <div class='seriesImg' v-if='deleteFlag && visitorFlag!=0'>
             <!--专题简介-->
             <div class="summary">
                 <!-- <p v-text='dataList.seriesDesc'></p> -->
@@ -86,7 +86,7 @@
             </div>
         </div>
 
-        <div class='dvk4_container' v-if='deleteFlag && userTicket==0 && state!=0'>
+        <div class='dvk4_container' v-if='deleteFlag && userTicket==0 && visitorFlag!=0'>
             <div class='dvk4_content'>
                 <div class="dvk4_detail" v-for='(item, index) in dataList.dataList'>
                     <div class='dvk4_detail_content' @click='dvkHref(item)'>
@@ -126,8 +126,8 @@
             </div>
         </div>
 
-        <div class="containerPadding" v-if='deleteFlag && state!=0'></div>
-        <div class='seriesBtn' v-if='seriesType==1 && deleteFlag && state!=0'>
+        <div class="containerPadding" v-if='deleteFlag && visitorFlag!=0'></div>
+        <div class='seriesBtn' v-if='seriesType==1 && deleteFlag && visitorFlag!=0'>
             <div class='btn btn1 btn_left'>
                 <span class='btn_span' @click='share' v-if='state == 3'>邀请好友赚: {{seriesShareIncome}}
                 <img src="//pic.davdian.com/free/2017/07/28/centerShare.png"></span>
@@ -153,12 +153,12 @@
        <invite-card :show="inviteShow" :id="seriesId" statistics="3" @close="share" kind="1"></invite-card>
 
         <div class='shareToastMark' v-if='beSuccess' @click='successMark'></div>
-        <div class='shareToast shareToastNew' v-if='beSuccess && state!=0'>
+        <div class='shareToast shareToastNew' v-if='beSuccess && visitorFlag!=0'>
             <h1 class='shareToastNewTitle'>报名成功</h1>
             <div class='shareToastTitle1'>现在您点击系列课中的任意课程,就可以随时开始听课了~</div>
             <div class='shareToastBtn' @click='successMark'>确定</div>
         </div>
-        <div v-if='!deleteFlag && state!=0'>
+        <div v-if='!deleteFlag && visitorFlag!=0'>
             <img class='delete_img' src="//pic.davdian.com/free/introduce_fail.png">
             <p class='delete_content'>
                 <span>课程不存在啦</span>
@@ -214,7 +214,8 @@
 
                 inviteShow:false,
 
-                haveShareCard:0
+                haveShareCard:0,
+                visitorFlag:-1,
             }
         },
         ready:function(){
@@ -259,6 +260,7 @@
                         } else {
                             if (respone.data.code==30000){
                                 that.state=0
+                                that.visitorFlag = 0
                                 native.Browser.setHead({shareBtn:'0'})
                             }else {
                                 if (respone.data.data && respone.data.code==0){
@@ -372,6 +374,7 @@
                         } else {
                             if (respone.data.code==30000){
                                 that.state=0
+                                that.visitorFlag = 0
                                 native.Browser.setHead({shareBtn:'0'})
                             }else {
                                 if (respone.data.data && respone.data.code==0){

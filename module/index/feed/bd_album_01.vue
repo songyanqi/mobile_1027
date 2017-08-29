@@ -37,7 +37,7 @@
     mounted:function () {
       var that = this
       this.dataList=this.data.body.dataList[0];
-      this.isFree=this.data.body.isFree;
+      this.isFree=this.data.body.dataList[0].isFree;
       this.$nextTick(function () {
         this.audioPlayHistory();
       });
