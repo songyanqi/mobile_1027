@@ -2,7 +2,6 @@
   <div class="box">
     <div @click="go_collect(item.albumId)" v-for="item in dataList">
       <div class="circle" :style="{'background-image':styleObject(item.imageUrl)}"></div>
-      <div class="text"></div>
     </div>
   </div>
 </template>
@@ -51,7 +50,7 @@
     text-align: center;
   }
   .circle{
-    margin-top: 0.2rem;
+    margin-top: 0.25rem;
     border-radius:50%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -59,12 +58,5 @@
     display: inline-block;
     height: 0.45rem;
     width: 0.45rem;
-  }
-  .text{
-    margin-top: 0.05rem;
-    text-align: center;
-    line-height: 0.17rem;
-    height: 0.17rem;
-    font-size: 12px;
   }
 </style>

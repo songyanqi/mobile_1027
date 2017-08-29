@@ -20,7 +20,8 @@
       <div class="content_title" v-text="dataList.album"></div>
       <div class="content_price" v-if="isFree==1">
         <div class="pri_left">
-          <span v-text="dataList.income"></span>
+          <span v-if="dataList.price">¥</span>
+          <span v-text="dataList.price"></span>
         </div>
         <div class="pri_right" v-text="dataList.memberMsg"></div>
       </div>
@@ -37,7 +38,7 @@
     mounted:function () {
       var that = this
       this.dataList=this.data.body.dataList[0];
-      this.isFree=this.data.body.isFree;
+      this.isFree=this.data.body.dataList[0].isFree;
       this.$nextTick(function () {
         this.audioPlayHistory();
       });

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <lheader :title="title" :price="price" class="top" v-if="!isApp"></lheader>
+    <lheader :title="titleN" :price="price" class="top" v-if="!isApp"></lheader>
     <div class="ndiv" v-if="!isApp"></div>
     <index_feed :data="data"></index_feed>
     <div class="empty" v-if="isFree==1 && isSub==0" ></div>
@@ -59,11 +59,22 @@
         maskFlag2:false,
         title:"",
         isFree:null,
+        titleN: '合辑详情',
         shareInfo:{}
       }
     },
     mounted:function () {
       this.getData();
+      if (window.iosInterface){
+        window.iosInterface.audioInfoReload = function(){
+          window.location.reload()
+        }
+      }else {
+        window.iosInterface = {}
+        window.iosInterface.audioInfoReload = function(){
+          window.location.reload()
+        }
+      }
     },
     methods:{
         reGetData(){
