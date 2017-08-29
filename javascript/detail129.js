@@ -81,7 +81,6 @@ $(document).ready(function(){
                 if($(that).hasClass("btn-disable")){
                     return;
                 }
-
                 if(window["needCode"]){
 
                     confirmContainer.removeClass("hide").addClass("show_slow");
@@ -113,15 +112,20 @@ $(document).ready(function(){
                 dataType:"json",
                 type:"POST",
                 success:function(result){
+                    alert(result["data"]["url"])
                     bravetime.removeLoader();
                     // kd_btn.removeClass("btn-disable").find("span").html("立即加入");
                     if(result.errcode==0){
+                        alert(1)
                         window.bravetime.goto(result["data"]["url"]);
                     } else if (result.errcode == 100204 || result.errcode == 100205) {
+                        alert(2)
                         window.bravetime.goto(result["data"]["url"]);
                     } else if(result.errcode == 2017){
+                        alert(3)
                         errorText.removeClass("hide").html(result["errmsg"]||"");
                     }else {
+                        alert(4)
                         window.bravetime.newAlert(result["errmsg"]);
                     }
                 },
