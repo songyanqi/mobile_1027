@@ -53,7 +53,7 @@
     methods:{
       share(){
         var that=this;
-        if(that.isApp){
+        if(that.isapp){
           native.custom.share({
             "title":that.shareInfo.title,
             "desc": that.shareInfo.desc,
@@ -135,7 +135,7 @@
                     }
                   });
                 } else {
-                  if (that.isApp){
+                  if (that.isapp){
                     native.Audio.audioSubscription({
                       albumId:getQuery('albumId')
                     })
@@ -158,7 +158,7 @@
                 }
               } else {
                 if (result.data.code == 100){
-                  if (that.isApp){
+                  if (that.isapp){
                     native.Account.login()
                   }else {
                     window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
