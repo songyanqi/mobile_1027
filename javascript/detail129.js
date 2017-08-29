@@ -117,6 +117,7 @@ $(document).ready(function(){
                     if(result.errcode==0){
                         // window.bravetime.goto(result["data"]["url"]);
                         var url = getCommand(result["data"]["url"])
+                        alert(url)
                         window.bravetime.goto(url);
                     } else if (result.errcode == 100204 || result.errcode == 100205) {
                         window.bravetime.goto(result["data"]["url"]);
