@@ -313,6 +313,8 @@
     padding-left: 0.1rem;
     padding-right: 0.1rem;
     font-size: 0;
+    height:0.2rem;
+    line-height:0.2rem;
   }
   .list_date>div{
     display: inline-block;
@@ -434,7 +436,10 @@
     color: #999999;
     line-height:0.16rem;
     font-size: 11px;
+    box-sizing: border-box;
+    margin-top: 0.02rem;
   }
+
   .text{
     font-size:16px;
   }
