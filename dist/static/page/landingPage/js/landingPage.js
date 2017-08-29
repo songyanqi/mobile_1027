@@ -24205,7 +24205,11 @@
 
 
 	// module
+<<<<<<< HEAD
+	exports.push([module.id, ".box[_v-925ea434] {\n  height: 1.86rem;\n  width: 100%;\n  font-size: 0;\n  background: #fff; }\n\n.box > div[_v-925ea434] {\n  display: inline-block;\n  width: 25%;\n  height: 0.93rem;\n  vertical-align: top;\n  text-align: center; }\n\n.circle[_v-925ea434] {\n  margin-top: 0.2rem;\n  border-radius: 50%;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center center;\n  display: inline-block;\n  height: 0.45rem;\n  width: 0.45rem; }\n", ""]);
+=======
 	exports.push([module.id, ".box[_v-53b0fa13] {\n  height: 1.86rem;\n  width: 100%;\n  font-size: 0;\n  background: #fff; }\n\n.box > div[_v-53b0fa13] {\n  display: inline-block;\n  width: 25%;\n  height: 0.93rem;\n  vertical-align: top;\n  text-align: center; }\n\n.circle[_v-53b0fa13] {\n  margin-top: 0.2rem;\n  border-radius: 50%;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center center;\n  display: inline-block;\n  height: 0.45rem;\n  width: 0.45rem; }\n\n.text[_v-53b0fa13] {\n  margin-top: 0.05rem;\n  text-align: center;\n  line-height: 0.17rem;\n  height: 0.17rem;\n  font-size: 12px; }\n", ""]);
+>>>>>>> cde200d9ae3e1d841ebc7b9a5913643d587f6eb0
 
 	// exports
 
@@ -24234,7 +24238,6 @@
 	//   <div class="box">
 	//     <div @click="go_collect(item.albumId)" v-for="item in dataList">
 	//       <div class="circle" :style="{'background-image':styleObject(item.imageUrl)}"></div>
-	//       <div class="text"></div>
 	//     </div>
 	//   </div>
 	// </template>
@@ -24290,13 +24293,6 @@
 	  //     height: 0.45rem;
 	  //     width: 0.45rem;
 	  //   }
-	  //   .text{
-	  //     margin-top: 0.05rem;
-	  //     text-align: center;
-	  //     line-height: 0.17rem;
-	  //     height: 0.17rem;
-	  //     font-size: 12px;
-	  //   }
 	  // </style>
 
 	};
@@ -24305,7 +24301,11 @@
 /* 423 */
 /***/ function(module, exports) {
 
+<<<<<<< HEAD
+	module.exports = "\n<div class=\"box\" _v-925ea434=\"\">\n  <div @click=\"go_collect(item.albumId)\" v-for=\"item in dataList\" _v-925ea434=\"\">\n    <div class=\"circle\" :style=\"{'background-image':styleObject(item.imageUrl)}\" _v-925ea434=\"\"></div>\n  </div>\n</div>\n";
+=======
 	module.exports = "\n<div class=\"box\" _v-53b0fa13=\"\">\n  <div @click=\"go_collect(item.albumId)\" v-for=\"item in dataList\" _v-53b0fa13=\"\">\n    <div class=\"circle\" :style=\"{'background-image':styleObject(item.imageUrl)}\" _v-53b0fa13=\"\"></div>\n    <div class=\"text\" _v-53b0fa13=\"\"></div>\n  </div>\n</div>\n";
+>>>>>>> cde200d9ae3e1d841ebc7b9a5913643d587f6eb0
 
 /***/ },
 /* 424 */
