@@ -10,6 +10,7 @@ import encrypt from '../../../common/js/module/encrypt.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
+import ua from '../../../common/js/module/ua.js';
 
 // login.needLogin();
 
@@ -24,7 +25,9 @@ new Vue({
       response: null,
       show_tel: false,
       show_wx: false,
-      show_go_shop_btn:false //显示去大V店按钮
+      show_go_shop_btn:false, //显示去大V店按钮
+      inapp: ua.isDvdApp()
+
     }
   },
   computed: {},
@@ -88,6 +91,18 @@ new Vue({
         }
       });
     },
+    /*原生复制*/
+    copyText: function (text) {
+      native.BrowserTouch.copyText({
+        "text": text,
+        success: function (result) {
+          popup.toast("已复制到剪切板");
+        },
+        error: function (result) {
+          popup.toast("复制失败，请手动复制");
+        }
+      })
+    }
   },
   filters: {},
 });
