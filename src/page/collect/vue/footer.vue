@@ -1,7 +1,7 @@
 <template>
   <div class="btn">
     <div class="btn_left" v-if="userstatus==1 || userstatus==0" @click="vip">成为会员免费听</div>
-    <div class="btn_left" v-if="userstatus==3" @click="share"><span v-text="income"></span></div>
+    <div class="btn_left" v-if="userstatus==3" @click="share">邀请好友<span v-text="income"></span></div>
     <div class="btn_right">
       <img src="//pic.davdian.com/free/2017/08/16/Rectangle.png" alt="">
       <div class="btn_text" @click="Subscribe" v-if="isSub==0 && (userstatus==1 || userstatus==0)">
@@ -131,7 +131,6 @@
                           }
                         });
                       },600)
-                      
                     }
                   });
                 } else {

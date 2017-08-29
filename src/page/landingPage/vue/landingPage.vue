@@ -67,7 +67,17 @@
             'shareBtn':"1"
           })
         },100)
-
+        if (window.iosInterface){
+          window.iosInterface.audioInfoReload = function(){
+            window.location.reload()
+          }
+        }else {
+          window.iosInterface = {}
+          window.iosInterface.audioInfoReload = function(){
+            window.location.reload()
+          }
+        }
+        
     },
     methods:{
         shareInfoFn(){

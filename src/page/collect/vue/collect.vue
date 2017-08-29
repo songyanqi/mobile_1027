@@ -64,6 +64,16 @@
     },
     mounted:function () {
       this.getData();
+      if (window.iosInterface){
+        window.iosInterface.audioInfoReload = function(){
+          window.location.reload()
+        }
+      }else {
+        window.iosInterface = {}
+        window.iosInterface.audioInfoReload = function(){
+          window.location.reload()
+        }
+      }
     },
     methods:{
         reGetData(){
