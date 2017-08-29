@@ -1057,7 +1057,9 @@ export default {
                 bigImgUrl: `http://img.davdian.com/add_qrcode.php?goods_id=${that.goodsId}&seller_id=${that.sellerId}&t=${Date.now()}`,};
             } else {
               native.custom.initHead({
-                shareOnHead: 1
+                shareOnHead: 1,
+                isAudioAbsorb:1,
+                isShowAudio:1
               });
               share.setShareInfo({
                 title: window.title, // 分享标题
