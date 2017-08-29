@@ -50,7 +50,19 @@ new Vue({
       return nums;
     }
   },
-  watch: {},
+  watch: {
+    // 监听response变化
+    response() {
+      // response变化后并渲染完dom,设置其他事项
+      this.$nextTick(function () {
+        let that = this;
+        // 设置app头部标题栏
+        native.custom.initHead({
+
+        });
+      });
+    }
+  },
   beforeCreate() {
   },
   created() {
@@ -168,7 +180,7 @@ new Vue({
         "distId":that.addressId[2],
         "tags":that.bobbyidlist.filter(function(x){return x}).join(','),
         "adviserId":this.adviser_select
-      }
+      };
       $.ajax({
         cache: false,
         async: true,

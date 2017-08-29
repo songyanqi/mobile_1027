@@ -8,7 +8,7 @@
 <div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
   <!--妈妈顾问爱好信息选择-->
   <div v-if="show_adviser_hobby_list">
-    <div class="back-btn" v-if="!inapp"><i class="back-arrow"></i></div>
+    <div class="back-btn" v-if="!inapp"><a href="javascript:history.back();"><i class="back-arrow"></i></a></div>
     <!--妈妈顾问提示信息-->
     <div class="adviser_titles">
       <span>请选择您想要的妈妈顾问信息</span> <br>
