@@ -96,12 +96,7 @@
 </script>
 <style scoped>
   .all {
-    padding-bottom: 0.12rem;
     background: white;
-  }
-
-  .big_img {
-    margin-bottom: 0.1rem;
   }
 
   .content {

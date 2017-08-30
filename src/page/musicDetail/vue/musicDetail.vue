@@ -58,7 +58,8 @@
           <div class="mask_padding mask_list" v-for='(item, i) in musicList' @click='playAudio(i)'>
             <div class="list_name" v-text='musicList[musicList.length-i-1].music' :class='{list_name_select: i==index}'></div>
             <div class="list_img">
-              <img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt="" v-if='i!=index'>
+              <img src="//pic.davdian.com/free/2017/08/16/listPlay.png" alt="" v-if='i!=index && item.isPlay == 1'>
+              <img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt="" v-if='i!=index && item.isPlay == 0'>
               <img src="//pic.davdian.com/free/2017/08/22/audioIcon.gif" alt="" v-if='i==index' class='list_img_select'>
             </div>
           </div>
@@ -198,13 +199,12 @@
             localStorage.setItem('expires_in', data.data.xmlyToken.expires_in)
           }
           if (data && data.data && data.data.dataList && data.data.dataList[that.index] && data.data.dataList[that.index].shareInfo){
-            // 
             try {
               share.setShareInfo({
-                title: data.data.dataList[that.index].shareInfo.title,
-                desc: data.data.dataList[that.index].shareInfo.desc,
-                link: data.data.dataList[that.index].shareInfo.link,
-                imgUrl: data.data.dataList[that.index].shareInfo.imgUrl
+                title: data.data.dataList[that.musicList.length - that.index -1].shareInfo.title,
+                desc: data.data.dataList[that.musicList.length - that.index -1].shareInfo.desc,
+                link: data.data.dataList[that.musicList.length - that.index -1].shareInfo.link,
+                imgUrl: data.data.dataList[that.musicList.length - that.index -1].shareInfo.imgUrl
               });
             } catch (err) {
               alert(err)

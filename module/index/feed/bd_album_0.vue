@@ -41,6 +41,7 @@
     width: 100%;
     font-size: 0;
     background: #fff;
+    margin-bottom: 0.1rem;
   }
   .box>div{
     display: inline-block;

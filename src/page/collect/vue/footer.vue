@@ -63,7 +63,7 @@
           })
         }else {
           share.callShare()
-        }
+      }
       },
       vip(){
         if (this.isapp){

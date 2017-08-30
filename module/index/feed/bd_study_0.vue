@@ -19,9 +19,9 @@
           </div>
 
           <div class="list_right">
-            <div class="disable" @click.stop="stop_info(item.albumId,item.sortNo)" v-if="item.isPlay==0"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-            <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 && ( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-            <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 &&  !( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+            <div class="disable" @click.stop="stop_info(item.albumId,item.sortNo)" v-if="item.isPlay==0"><img class="gray" src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+            <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 && ( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/28/listSuspend.png" alt=""></div>
+            <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 &&  !( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/28/listPlay2.png" alt=""></div>
             <div class='mask_play loading_play' v-if="item.sortNo==sortNo && item.albumId==albumId && btnStatus==2"><img src="//pic.davdian.com/free/2017/08/26/loading.png" alt=""></div>
             <div class="circle_mask"></div>
             <div><img :src="item.imageUrl" alt=""></div>
@@ -99,24 +99,31 @@
       },
       stop_info(albumId,sortNo){
         var that=this;
-        popup.confirm({
-          title: '提示',            // 标题（支持传入html。有则显示。）
-          text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
-          okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-          cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-          okBtnCallback: function(){
-            if (this.isApp) {
-              native.Browser.open({
-                "url": "/collect.html?albumId=" + albumId
-              });
-            } else {
-              window.location.href = "/collect.html?albumId=" + albumId;
+        if(that.isApp){
+          native.Audio.audioPlay({
+            "sortNo":sortNo,
+            "albumId":albumId
+          })
+        }else{
+          popup.confirm({
+            title: '提示',            // 标题（支持传入html。有则显示。）
+            text: '订阅后才能继续收听哦',             // 文本（支持传入html。有则显示。）
+            okBtnTitle: '马上订阅',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+            cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+            okBtnCallback: function(){
+              if (this.isApp) {
+                native.Browser.open({
+                  "url": "/collect.html?albumId=" + albumId
+                });
+              } else {
+                window.location.href = "/collect.html?albumId=" + albumId;
+              }
+              // that.Subscribe(albumId);
+            },
+            cancelBtnCallback: function(){
             }
-            // that.Subscribe(albumId);
-          },
-          cancelBtnCallback: function(){
-          }
-        });
+          });
+        }
       },
       nativePay(url, callback){
         var option = {};
@@ -269,7 +276,8 @@
     font-size:0.11rem;
     position: absolute;
     right: 0;
-    margin-top: 0.05rem;
+    top: 50%;
+    margin-top: -0.17rem;
     width: 0.34rem;
     height: 0.34rem;
   }
@@ -376,7 +384,11 @@
   .disable{
     z-index: 5;
   }
-
+  .gray {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+  }
 </style>
 
 
