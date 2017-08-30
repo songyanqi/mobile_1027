@@ -8,15 +8,31 @@ import $ from '$';
 import config from '../config.js';
 
 // 默认标题栏
-const defaultTitleBar = {
+const defaultInitHead = {
   showHead: 1,    // 是否展示头部
   backOnHead: 1,  // 头部返回按钮
   homeOnHead: 0,  // 头部首页按钮
   shareOnHead: 0, // 头部分享按钮
   btnOnHead: 0,   // 头部文字按钮
-  btnText: "",    // 头部文字按钮文字
-  btnLink: "",    // 头部文字按钮链接
+  btnText: '',    // 头部文字按钮文字
+  btnLink: '',    // 头部文字按钮链接
   showFoot: 0     // 是否展示底部
+};
+
+
+// 默认标题栏
+const defaultSetHead = {
+  title: '',
+  backBtn: '1',     // 0表示头部不展示返回按钮，1表示展示
+  homeBtn: '0',     // 0表示头部不展示首页按钮，1表示展示
+  shareBtn: '0',    //0表示头部不展示分享按钮，1表示展示
+  shareMoney: '',    //0表示分享佣金为0不显示分享赚钱按钮，非0：展示分享赚钱按钮，在3.9.1之前用该字段
+  shareMoneyStr: '',   //在3.9.1中会用该字段
+  rightBtn: {
+    text: '',
+    textColor: '#ff4a7d',
+    action: ''
+  },
 };
 
 /**
@@ -50,7 +66,7 @@ function getProtocal(param = {}) {
     // 执行完回收
     window[callbackName] = null;
   };
-  
+
   // 拼接唤起native协议
   let protocal = `davdian:\/\/call.${param.host}.com?action=${param.action}&params=${encodeURIComponent(JSON.stringify(param.param))}&callback=${callbackName}&minv=${param.v}`;
   // alert(protocal)
@@ -132,10 +148,10 @@ function outerCall(param = {}) {
     location.href = outerProtocal;
 
     // 兜底跳转下载页
-    setTimeout(function(){
+    setTimeout(function () {
       location.href = `//a.app.qq.com/o/simple.jsp?pkgname=com.davdian.seller`;
     }, 3000);
-  }else if(ua.isIos()){
+  } else if (ua.isIos()) {
     // let env = /(davdian\.com|vyohui\.cn|bravetime\.net)/.exec(location.href)[0];
 
     // 端外唤起协议
@@ -167,10 +183,10 @@ function outerCall(param = {}) {
  */
 function call(param = {}) {
   // 如果param.param.invoke为真,需要先唤起native再执行cmd
-  if(param.param.invoke){
+  if (param.param.invoke) {
     delete param.param.invoke;
     outerCall(param);
-  }else{
+  } else {
     innerCall(param);
   }
 }
@@ -481,7 +497,7 @@ const native = {
         param: param
       });
     },
-    showWebHeight(param={}){
+    showWebHeight(param = {}){
       call({
         v: '4.2.0',
         host: 'Browser',
@@ -682,7 +698,7 @@ const native = {
      * 功能: 进入全部笔记页面
      * 用法:
      * native.VoiceLive.callAppEnterAllNote()
-       });
+     });
      */
     callAppEnterAllNote(param = {}) {
       call({
@@ -696,7 +712,7 @@ const native = {
      * 功能: 进入写笔记页面
      * 用法:
      * native.VoiceLive.callAppEnterWriteNote()
-       });
+     });
      */
     callAppEnterWriteNote(param = {}) {
       call({
@@ -829,7 +845,7 @@ const native = {
      */
     audioPlay(param = {}){
       call({
-        v:'4.2.0',
+        v: '4.2.0',
         host: 'Audio',
         action: 'audioPlay',
         param: param
@@ -842,7 +858,7 @@ const native = {
      */
     audioLocation(param = {}){
       call({
-        v:'4.2.0',
+        v: '4.2.0',
         host: 'Audio',
         action: 'audioLocation',
         param: param
@@ -855,7 +871,7 @@ const native = {
      */
     audioPlayHistory(param = {}){
       call({
-        v:'4.2.0',
+        v: '4.2.0',
         host: 'Audio',
         action: 'audioPlayHistory',
         param: param
@@ -868,7 +884,7 @@ const native = {
      */
     audioSubscription(param = {}){
       call({
-        v:'4.2.0',
+        v: '4.2.0',
         host: 'Audio',
         action: 'audioSubscription',
         param: param
@@ -915,7 +931,7 @@ const native = {
      */
     onWebviewBack(param = {}){
       // 参数处理
-      param.callback = param.callback || function(){
+      param.callback = param.callback || function () {
           location.reload();
         };
 
@@ -927,7 +943,7 @@ const native = {
         param.callback();
       };
     },
-    
+
     /**
      * 功能: 初始化native头部标题栏
      * 用法:
@@ -944,10 +960,25 @@ const native = {
      */
     initHead(param = {}) {
       // 参数合并
-      param = $.extend({}, defaultTitleBar, param);
+      param = $.extend({}, defaultInitHead, param);
 
       // 调用Browser.initHead接口
       native.Browser.initHead({
+        content: param
+      });
+    },
+
+    /**
+     * 功能: 初始化native头部标题栏
+     * 用法:
+     * native.custom.initHead()
+     */
+    setHead(param = {}) {
+      // 参数合并
+      param = $.extend({}, defaultSetHead, param);
+
+      // 调用Browser.initHead接口
+      native.Browser.setHead({
         content: param
       });
     },

@@ -70,7 +70,8 @@ new Vue({
           if(response.code){
             if(response.code=="92001"){
               popup.alert({
-                title:"请您先选择妈妈顾问",
+                title:"妈妈顾问",
+                text:"请您先选择妈妈顾问",
                 btnCallback:function(){
                   location.replace("/choose_mama_adviser.html")
                 }

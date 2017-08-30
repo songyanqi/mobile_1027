@@ -20,7 +20,7 @@
     <div class="text" v-if='!isapp && musicList[musicList.length-index-1] && musicList[musicList.length-index-1].music' v-text='musicList[musicList.length-index-1].music'></div>
     <div class="range" v-if='!isapp'>
       <div class="gray"></div>
-      <div v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].time' class="red" :style='{width: playTime/musicList[musicList.length-index-1].time*100 + "%"}'></div>
+      <div v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].time' class="red" :style='{width: playTime/musicList[musicList.length-index-1].time*95 + "%"}'></div>
     </div>
     <div class="time" v-if='!isapp'>
       <div v-text='timeFormat(playTime)'></div>
@@ -199,13 +199,12 @@
             localStorage.setItem('expires_in', data.data.xmlyToken.expires_in)
           }
           if (data && data.data && data.data.dataList && data.data.dataList[that.index] && data.data.dataList[that.index].shareInfo){
-            // 
             try {
               share.setShareInfo({
-                title: data.data.dataList[that.index].shareInfo.title,
-                desc: data.data.dataList[that.index].shareInfo.desc,
-                link: data.data.dataList[that.index].shareInfo.link,
-                imgUrl: data.data.dataList[that.index].shareInfo.imgUrl
+                title: data.data.dataList[that.musicList.length - that.index -1].shareInfo.title,
+                desc: data.data.dataList[that.musicList.length - that.index -1].shareInfo.desc,
+                link: data.data.dataList[that.musicList.length - that.index -1].shareInfo.link,
+                imgUrl: data.data.dataList[that.musicList.length - that.index -1].shareInfo.imgUrl
               });
             } catch (err) {
               alert(err)
@@ -460,7 +459,6 @@
             return
           }
         }
-
         if (that.playTimer){
           clearInterval(that.playTimer)
         }
@@ -492,6 +490,8 @@
           }else {
             that.isPlay = true
             $('.allAudio').get(0).src = that.musicList[that.musicList.length -1 - that.index].fileLink
+            $('.allAudio').get(0).play()
+            $('.allAudio').get(0).pause()
             $('.allAudio').get(0).onloadedmetadata = function(){
               that.musicList[that.musicList.length -1 - that.index].time = $('.allAudio').get(0).duration
               $('.allAudio').get(0).currentTime = that.playTime;
