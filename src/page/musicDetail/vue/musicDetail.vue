@@ -20,7 +20,7 @@
     <div class="text" v-if='!isapp && musicList[musicList.length-index-1] && musicList[musicList.length-index-1].music' v-text='musicList[musicList.length-index-1].music'></div>
     <div class="range" v-if='!isapp'>
       <div class="gray"></div>
-      <div v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].time' class="red" :style='{width: playTime/musicList[musicList.length-index-1].time*100 + "%"}'></div>
+      <div v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].time' class="red" :style='{width: playTime/musicList[musicList.length-index-1].time*95 + "%"}'></div>
     </div>
     <div class="time" v-if='!isapp'>
       <div v-text='timeFormat(playTime)'></div>
