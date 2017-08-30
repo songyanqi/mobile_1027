@@ -137,7 +137,7 @@
   .content_price .pri_right {
     color: #BF9D51;
     font-size: 11px;
-    margin-top: 0.04rem;
+    margin-top: 0.05rem;
   }
 
 

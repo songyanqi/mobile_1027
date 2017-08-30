@@ -314,7 +314,6 @@ $(document).ready(function () {
       })) {
       var t = Date.now() + "_" + Math.round(Math.random() * 10000);
       window["callback_" + t] = callback;
-
       var str = "davdian:\/\/call." + host + ".com?action=" + encodeURIComponent(action) + "&params=" + encodeURIComponent(JSON.stringify(params)) + "&callback=" + encodeURIComponent("callback_" + t) + "&minv=" + encodeURIComponent(minv);
       window.bravetime.goto(str);
     } else {
@@ -375,7 +374,6 @@ $(document).ready(function () {
     setTimeout(function () {
       bravetime.callNative2("Browser", "setHead", opt, callback, '2.6.0');
     }, 100);
-
   };
 
   window.bravetime.selectIdentity = function (callback, mincallback) {
@@ -455,8 +453,7 @@ $(document).ready(function () {
     if (window.dataUrl == "index.php?c=Index&a=getCatNavList" || window.tj_id == 55) {
       return false;
     }
-    bravetime.callNative2('Browser', 'initHead', {content: JSON.parse(iosInterface.getHeadAndFootData())}, callback, '3.4.0', function () {
-    });
+    bravetime.callNative2('Browser', 'initHead', {content: JSON.parse(iosInterface.getHeadAndFootData())}, callback, '3.4.0', function () {});
   };
 
   /**
@@ -1672,6 +1669,7 @@ $(document).ready(function () {
   window.nativeLoginFunction = nativeLoginFunction;
 
   window.bravetime.initHead();
+  window.bravetime.setHead({"title":"订单列表"});
 
   if (window.Units && Units.isApp()) {
     $(document.body).addClass("in_app");

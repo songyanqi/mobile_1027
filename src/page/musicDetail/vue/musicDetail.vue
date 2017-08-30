@@ -459,7 +459,6 @@
             return
           }
         }
-
         if (that.playTimer){
           clearInterval(that.playTimer)
         }
@@ -491,6 +490,8 @@
           }else {
             that.isPlay = true
             $('.allAudio').get(0).src = that.musicList[that.musicList.length -1 - that.index].fileLink
+            $('.allAudio').get(0).play()
+            $('.allAudio').get(0).pause()
             $('.allAudio').get(0).onloadedmetadata = function(){
               that.musicList[that.musicList.length -1 - that.index].time = $('.allAudio').get(0).duration
               $('.allAudio').get(0).currentTime = that.playTime;

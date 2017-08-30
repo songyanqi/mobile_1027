@@ -27,6 +27,9 @@
     export default{
         components:{
             orderlistswitcher:orderlistswitcher
+        },
+        created(){
+
         }
     }
 </script>
