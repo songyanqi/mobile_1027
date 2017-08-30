@@ -504,6 +504,14 @@ const native = {
         action: 'showWebHeight',
         param: param
       });
+    },
+    goNativeHomePage(param = {}){
+      call({
+        v: '4.2.0',
+        host: 'Browser',
+        action: 'goNativeHomePage',
+        param: param
+      });
     }
   },
 
