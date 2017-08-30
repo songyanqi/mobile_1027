@@ -449,7 +449,7 @@ export default {
                 location.replace('/choose_mama_adviser.html')
               },
               cancelBtnCallback() {
-                if(!isTryShop()){
+                if(!+result.data.force){
                   dom.removeChild(mask);
                 }
               }
