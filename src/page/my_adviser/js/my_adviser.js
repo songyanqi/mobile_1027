@@ -26,7 +26,6 @@ new Vue({
       show_wx: false,
       show_go_shop_btn:false, //显示去大V店按钮
       inapp:!!navigator.userAgent.match(/davdian|bravetime|vyohui/)
-
     }
   },
   computed: {},
@@ -70,10 +69,10 @@ new Vue({
           if(response.code){
             if(response.code=="92001"){
               popup.alert({
-                title:"妈妈顾问",
+                title:"提示",
                 text:"请您先选择妈妈顾问",
                 btnCallback:function(){
-                  location.replace("/choose_mama_adviser.html")
+                  location.replace("/choose_mama_adviser.html");
                 }
               })
             }else{
@@ -82,8 +81,6 @@ new Vue({
           }else{
              that.response = response;
           }
-         
-          
         },
         error(error) {
           that.response = require('../json/my_adviser.json');

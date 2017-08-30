@@ -192,7 +192,7 @@
                 that.loginBtn = "登录";
               } else {
                 that.response = response;
-                if (response.data.hasSellerRel || response.visitor_status == 3) {
+                if (response.data.hasSellerRel || response.visitor_status == '3' || that.hname != 'bravetime') {
                   that.go_shop();
                 } else {
                   that.promptconfirm();
