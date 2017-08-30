@@ -16,8 +16,7 @@ export default {
             userTicket: window.userTicket,
             arr:[],
             introduceGuide:false,
-            guide:0,
-            AppVersionFlag: true
+            guide:0
         }
     },
     filters: {
@@ -35,8 +34,6 @@ export default {
         }
         this.userId = window.userId
         window.teacherId = this.data.body.teacherDescInfo.teacherId
-        if (that.getAppVersion()<410 && that.isApp)
-            that.AppVersionFlag = false
     },
     mounted(){
         let that = this
