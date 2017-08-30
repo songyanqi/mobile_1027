@@ -116,6 +116,6 @@
         height: 50px;
     }
   .footer{
-    z-index: 4;
+    z-index: 40;
   }
 </style>

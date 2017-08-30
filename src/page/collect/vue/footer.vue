@@ -42,12 +42,12 @@
     },
     mounted:function () {
       console.log(this.isPrice);
-      var that = this
+      var that = this;
       share.setShareInfo({
         title: that.shareInfo.title,
         desc: that.shareInfo.desc,
         link: that.shareInfo.link,
-        imgUrl: that.shareInfo.imgUrl,
+        imgUrl: that.shareInfo.imgUrl
       })
     },
     methods:{
@@ -64,7 +64,6 @@
         }else {
           share.callShare()
         }
-
       },
       vip(){
         if (this.isapp){
