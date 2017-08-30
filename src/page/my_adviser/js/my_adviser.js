@@ -37,11 +37,13 @@ new Vue({
     /*做个判断是不是从详情页和购物车页还有首页过来的*/
     var historys = JSON.parse(sessionStorage.getItem("history"));
     var num = historys.length;
-    var referrer = document.referrer.split("/").pop();
-    if(referrer == 'choose_mama_adviser.html'){
-      var history2 = historys[num-2].path;
-      if(history2 == 'index' || history2 == 'detail' || history2 == 'cart'){
-        that.show_go_shop_btn = true;
+    if(num >= 3){
+      var referrer = document.referrer.split("/").pop();
+      if(referrer == 'choose_mama_adviser.html'){
+        var history2 = historys[num-2].path;
+        if(history2 == 'index' || history2 == 'detail' || history2 == 'cart'){
+          that.show_go_shop_btn = true;
+        }
       }
     }
   },
