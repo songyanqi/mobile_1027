@@ -72,14 +72,21 @@
         for (var i0 = 0,d0; d0=that.addressPre[i0++];) {
          addressNow.push({value:d0[0],name:d0[1],parent:0});
          for(var i1 = 0,d1;d1=d0[2][i1++];){
+          if(d1[0]==-1){
+            d1[0]=d0[0]+"-1"
+          }
            addressNow.push({value:d1[0],name:d1[1],parent:d0[0]});
            for(var i2 = 0,d2;d2=d1[2][i2++];) {
+            if(d2[0]==-1){
+              d2[0]=d0[0]+"-"+d1[0]+"-1"
+            }
              addressNow.push({value:d2[0],name:d2[1],parent:d1[0]});
              addressNameList[d2[0]]=d0[1]+" "+d1[1]+" "+d2[1];
              addressValueList[d2[0]]= [d0[0],d1[0],d2[0]];
            }
          }
        }
+       console.log("addressNow",addressNow);
        that.addressNow = addressNow;
        that.addressValueList = addressValueList;
        that.addressNameList = addressNameList;
