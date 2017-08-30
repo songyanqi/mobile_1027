@@ -227,7 +227,10 @@
           stop_info(albumId,sortNo){
             var that=this;
             if(that.isApp){
-              that.Subscribe(albumId);
+              native.Audio.audioPlay({
+                "sortNo":sortNo,
+                "albumId":albumId
+              })
             }else {
               popup.confirm({
                 title: '提示',            // 标题（支持传入html。有则显示。）
