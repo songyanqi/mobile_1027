@@ -44,6 +44,7 @@
       tt_com_0:tt_com_0
     },
     mounted:function () {
+        alert(1);
       this.dataList=this.data.body.dataList;
       this.title=this.data.title.name;
       this.$nextTick(function () {
