@@ -67,7 +67,7 @@
       </div>
     </div>
 
-    <div v-if="!flag" v-html="dataList.recommendData">
+    <div v-if="!flag" v-html="dataList.recommendData" class="recommendData">
 
     </div>
     <maskk v-if="isApp && maskFlag"></maskk>
@@ -674,5 +674,8 @@
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
     filter: gray;
+  }
+  .recommendData{
+    width: 100%;
   }
 </style>

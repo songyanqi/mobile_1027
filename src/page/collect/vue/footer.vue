@@ -37,7 +37,8 @@
       return {
         priceFlag:true,
         isapp: util.utils.isApp(),
-        albumId:getQuery("albumId")
+        albumId:getQuery("albumId"),
+        SubscribeFlag:true
       }
     },
     mounted:function () {
@@ -97,92 +98,97 @@
       },
       Subscribe(){
         var that=this;
-        var obj={
-          albumId:this.albumId,
-          shareUserId:getQuery('shareUserId') || ''
-        };
-        api("/api/mg/content/album/subscription",obj)
-          .then(function(result) {
-            let {code, data: {msg, payUrl, jsApi}} = result;
-            if (code == 0){
-              if (result.data.code == 300) {
-                if (jsApi) {
-                  jsApi.jsApiParameters.dvdhref = location.href;
-                     window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
-                  // window.location.href="http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters));
-                } else if (payUrl) {
-                  that.nativePay(payUrl, function (flag) {
-                    if (flag) {
+        if(that.SubscribeFlag){
+          that.SubscribeFlag=false;
+          var obj={
+            albumId:this.albumId,
+            shareUserId:getQuery('shareUserId') || ''
+          };
+          api("/api/mg/content/album/subscription",obj)
+            .then(function(result) {
+              let {code, data: {msg, payUrl, jsApi}} = result;
+              if (code == 0){
+                if (result.data.code == 300) {
+                  if (jsApi) {
+                    jsApi.jsApiParameters.dvdhref = location.href;
+                    window.location.href = "http://open.davdian.com/wxpay_t2/davke_pay.php?info=" + encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
+                    // window.location.href="http://open.vyohui.cn/wxpay_t3/davke_pay.php?info="+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters));
+                  } else if (payUrl) {
+                    that.nativePay(payUrl, function (flag) {
+                      if (flag) {
+                        native.Audio.audioSubscription({
+                          albumId:getQuery('albumId')
+                        })
+                        setTimeout(function(){
+                          popup.confirm({
+                            title: '提示',            // 标题（支持传入html。有则显示。）
+                            text: '订阅成功',             // 文本（支持传入html。有则显示。）
+                            okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                            cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                            okBtnCallback: function(){
+                              window.location.reload();
+                            },
+                            cancelBtnCallback: function(){
+                              window.location.reload();
+                            }
+                          });
+                        },600)
+                      }
+                    });
+                  } else {
+                    if (that.isapp){
                       native.Audio.audioSubscription({
                         albumId:getQuery('albumId')
                       })
-                      setTimeout(function(){
-                        popup.confirm({
-                          title: '提示',            // 标题（支持传入html。有则显示。）
-                          text: '订阅成功',             // 文本（支持传入html。有则显示。）
-                          okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-                          cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-                          okBtnCallback: function(){
-                            window.location.reload();
-                          },
-                          cancelBtnCallback: function(){
-                            window.location.reload();
-                          }
-                        });
-                      },600)
                     }
-                  });
-                } else {
-                  if (that.isapp){
-                    native.Audio.audioSubscription({
-                      albumId:getQuery('albumId')
-                    })
+                    setTimeout(function(){
+                      popup.confirm({
+                        title: '提示',            // 标题（支持传入html。有则显示。）
+                        text: '订阅成功',             // 文本（支持传入html。有则显示。）
+                        okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+                        cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+                        okBtnCallback: function(){
+                          window.location.reload();
+                        },
+                        cancelBtnCallback: function(){
+                          window.location.reload();
+                        }
+                      });
+                    },600)
+
                   }
-                  setTimeout(function(){
+                } else {
+                  if (result.data.code == 100){
+                    if (that.isapp){
+                      native.Account.login()
+                    }else {
+                      window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
+                    }
+                  } else {
                     popup.confirm({
-                      title: '提示',            // 标题（支持传入html。有则显示。）
-                      text: '订阅成功',             // 文本（支持传入html。有则显示。）
-                      okBtnTitle: '确定',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
-                      cancelBtnTitle: '取消',   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
-                      okBtnCallback: function(){
-                        window.location.reload();
-                      },
-                      cancelBtnCallback: function(){
-                        window.location.reload();
-                      }
+                      title: '提示',
+                      text: 'code:'+result.data.code+':msg'+result.data.msg, // 文本（支持传入html。有则显示。）
+                      okBtnTitle: '确定',
+                      cancelBtnTitle: '取消',
+                      okBtnCallback: function(){},
+                      cancelBtnCallback: function(){}
                     });
-                  },600)
-                  
-                }
-              } else {
-                if (result.data.code == 100){
-                  if (that.isapp){
-                    native.Account.login()
-                  }else {
-                    window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
                   }
-                } else {
-                  popup.confirm({
-                    title: '提示',
-                    text: 'code:'+result.data.code+':msg'+result.data.msg, // 文本（支持传入html。有则显示。）
-                    okBtnTitle: '确定',
-                    cancelBtnTitle: '取消',
-                    okBtnCallback: function(){},
-                    cancelBtnCallback: function(){}
-                  });
                 }
+              }else {
+                popup.confirm({
+                  title: '提示',
+                  text: 'code:'+result.data.code+':msg'+result.data.msg, // 文本（支持传入html。有则显示。）
+                  okBtnTitle: '确定',
+                  cancelBtnTitle: '取消',
+                  okBtnCallback: function(){},
+                  cancelBtnCallback: function(){}
+                });
               }
-            }else {
-              popup.confirm({
-                title: '提示',
-                text: 'code:'+result.data.code+':msg'+result.data.msg, // 文本（支持传入html。有则显示。）
-                okBtnTitle: '确定',
-                cancelBtnTitle: '取消',
-                okBtnCallback: function(){},
-                cancelBtnCallback: function(){}
-              });
-            }
-          })
+              that.SubscribeFlag=true;
+            })
+        }
+
       },
     }
   }

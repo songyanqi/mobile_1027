@@ -26,7 +26,6 @@
       },
       initValue:function(){
         let that = this;
-        console.time("initValue");
         if(this.addressid){
           this.addressValue[2] = this.addressid+"";
           this.addressName = "";
@@ -52,7 +51,6 @@
           }
         }
         that.initData();
-        console.timeEnd("initValue");
       },
       initData(){
         let that = this;
@@ -68,7 +66,6 @@
       addressPre:function(v,o){
         var that = this;
         var addressNow = [],addressNameList=[],addressValueList=[];
-        console.time("ctime")
         for (var i0 = 0,d0; d0=that.addressPre[i0++];) {
          addressNow.push({value:d0[0],name:d0[1],parent:0});
          for(var i1 = 0,d1;d1=d0[2][i1++];){
@@ -86,13 +83,11 @@
            }
          }
        }
-       console.log("addressNow",addressNow);
        that.addressNow = addressNow;
        that.addressValueList = addressValueList;
        that.addressNameList = addressNameList;
        that.initData();
-       
-       console.timeEnd("ctime");
+
      },
      addressid:function(){
         this.initData();

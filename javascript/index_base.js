@@ -184,6 +184,7 @@ $(document).ready(function () {
             if(minCallback){
                 minCallback();
             }else{
+                console.trace("");
                 bravetime.newAlert("请升级您的APP")
             }
         }

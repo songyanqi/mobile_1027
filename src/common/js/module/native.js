@@ -94,6 +94,7 @@ function innerCall(param = {}) {
 
   // 参数默认值
   param.invalid = param.invalid || function () {
+    console.trace();
       alert("请升级您的APP");
     };
 
