@@ -51,13 +51,11 @@
     text-align: center;
   }
   .circle{
-    margin-top: 0.25rem;
-    border-radius:50%;
+    display: inline-block;
+    width: 100%;
+    height: 0.93rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    display: inline-block;
-    height: 0.45rem;
-    width: 0.45rem;
   }
 </style>
