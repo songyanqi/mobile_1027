@@ -25,6 +25,7 @@ new Vue({
   components: {
     'com-top-title': require('../../../component/com-top-title.vue'),
     'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
+    "parentingTime":require("../vue/parentingTime.vue")
   },
   data() {
     return {

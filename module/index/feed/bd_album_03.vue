@@ -675,4 +675,7 @@
     filter: grayscale(100%);
     filter: gray;
   }
+  .recommendData{
+    width: 100%;
+  }
 </style>
