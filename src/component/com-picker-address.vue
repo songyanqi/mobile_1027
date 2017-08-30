@@ -83,7 +83,6 @@
            }
          }
        }
-       console.log("addressNow",addressNow);
        that.addressNow = addressNow;
        that.addressValueList = addressValueList;
        that.addressNameList = addressNameList;

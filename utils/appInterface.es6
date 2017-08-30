@@ -209,6 +209,7 @@ let callApp = (host, action, params, callback = nullFunction, minv, minCallback)
     if (minCallback) {
       minCallback();
     } else {
+      console.trace()
       alert("请升级您的APP")
     }
   }

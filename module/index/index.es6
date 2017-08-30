@@ -98,7 +98,7 @@ export default {
           }
       }
       setTimeout(function(){
-        window.bravetime.initHead()
+        window.bravetime.initHead&&window.bravetime.initHead()
       },500)
     })
   },
@@ -443,7 +443,7 @@ export default {
                 location.replace('/choose_mama_adviser.html')
               },
               cancelBtnCallback() {
-               dom.removeChild(mask);
+               
               }
             })
 
