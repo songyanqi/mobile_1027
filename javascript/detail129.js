@@ -116,8 +116,12 @@ $(document).ready(function(){
                     // kd_btn.removeClass("btn-disable").find("span").html("立即加入");
                     if(result.errcode==0){
                         // window.bravetime.goto(result["data"]["url"]);
-                        var url = getCommand(result["data"]["url"])
-                        window.bravetime.goto(url);
+                        if (window.Units.isApp()){
+                            var url = getCommand(result["data"]["url"])
+                            window.bravetime.goto(url);
+                        }else {
+                            window.bravetime.goto(result["data"]["url"]);
+                        }
                     } else if (result.errcode == 100204 || result.errcode == 100205) {
                         window.bravetime.goto(result["data"]["url"]);
                     } else if(result.errcode == 2017){
