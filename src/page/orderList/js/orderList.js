@@ -32,7 +32,7 @@ $(function () {
         return false
     }
     var orderList = require("../vue/orderList.vue");
-
+     window.bravetime.setHead({"title":"订单列表"});
     new Vue({
         el: "body",
         components:{

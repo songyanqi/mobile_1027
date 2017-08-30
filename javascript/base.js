@@ -1669,7 +1669,6 @@ $(document).ready(function () {
   window.nativeLoginFunction = nativeLoginFunction;
 
   window.bravetime.initHead();
-  window.bravetime.setHead({"title":"订单列表"});
 
   if (window.Units && Units.isApp()) {
     $(document.body).addClass("in_app");

@@ -389,15 +389,30 @@
 
 
 	// 默认标题栏
-	var defaultTitleBar = {
+	var defaultInitHead = {
 	  showHead: 1, // 是否展示头部
 	  backOnHead: 1, // 头部返回按钮
 	  homeOnHead: 0, // 头部首页按钮
 	  shareOnHead: 0, // 头部分享按钮
 	  btnOnHead: 0, // 头部文字按钮
-	  btnText: "", // 头部文字按钮文字
-	  btnLink: "", // 头部文字按钮链接
+	  btnText: '', // 头部文字按钮文字
+	  btnLink: '', // 头部文字按钮链接
 	  showFoot: 0 // 是否展示底部
+	};
+
+	// 默认标题栏
+	var defaultSetHead = {
+	  title: '',
+	  backBtn: '1', // 0表示头部不展示返回按钮，1表示展示
+	  homeBtn: '0', // 0表示头部不展示首页按钮，1表示展示
+	  shareBtn: '0', //0表示头部不展示分享按钮，1表示展示
+	  shareMoney: '', //0表示分享佣金为0不显示分享赚钱按钮，非0：展示分享赚钱按钮，在3.9.1之前用该字段
+	  shareMoneyStr: '', //在3.9.1中会用该字段
+	  rightBtn: {
+	    text: '',
+	    textColor: '#ff4a7d',
+	    action: ''
+	  }
 	};
 
 	/**
@@ -1119,7 +1134,7 @@
 	     * 功能: 进入全部笔记页面
 	     * 用法:
 	     * native.VoiceLive.callAppEnterAllNote()
-	       });
+	     });
 	     */
 	    callAppEnterAllNote: function callAppEnterAllNote() {
 	      var param = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
@@ -1136,7 +1151,7 @@
 	     * 功能: 进入写笔记页面
 	     * 用法:
 	     * native.VoiceLive.callAppEnterWriteNote()
-	       });
+	     });
 	     */
 	    callAppEnterWriteNote: function callAppEnterWriteNote() {
 	      var param = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
@@ -1420,10 +1435,28 @@
 	      var param = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
 	      // 参数合并
-	      param = _$2.default.extend({}, defaultTitleBar, param);
+	      param = _$2.default.extend({}, defaultInitHead, param);
 
 	      // 调用Browser.initHead接口
 	      native.Browser.initHead({
+	        content: param
+	      });
+	    },
+
+
+	    /**
+	     * 功能: 初始化native头部标题栏
+	     * 用法:
+	     * native.custom.initHead()
+	     */
+	    setHead: function setHead() {
+	      var param = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+	      // 参数合并
+	      param = _$2.default.extend({}, defaultSetHead, param);
+
+	      // 调用Browser.initHead接口
+	      native.Browser.setHead({
 	        content: param
 	      });
 	    },
@@ -24496,7 +24529,7 @@
 
 
 	// module
-	exports.push([module.id, ".box[_v-925ea434] {\n  height: 1.86rem;\n  width: 100%;\n  font-size: 0;\n  background: #fff;\n  margin-bottom: 0.1rem; }\n\n.box > div[_v-925ea434] {\n  display: inline-block;\n  width: 25%;\n  height: 0.93rem;\n  vertical-align: top;\n  text-align: center; }\n\n.circle[_v-925ea434] {\n  display: inline-block;\n  width: 100%;\n  height: 0.93rem;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center center; }\n", ""]);
+	exports.push([module.id, ".box[_v-925ea434] {\n  width: 100%;\n  font-size: 0;\n  background: #fff;\n  margin-bottom: 0.1rem; }\n\n.box > div[_v-925ea434] {\n  display: inline-block;\n  width: 25%;\n  height: 0.93rem;\n  vertical-align: top;\n  text-align: center; }\n\n.circle[_v-925ea434] {\n  display: inline-block;\n  width: 100%;\n  height: 0.93rem;\n  background-size: cover;\n  background-repeat: no-repeat;\n  background-position: center center; }\n", ""]);
 
 	// exports
 
@@ -24508,7 +24541,7 @@
 	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+	    value: true
 	});
 
 	var _utils = __webpack_require__(85);
@@ -24523,63 +24556,73 @@
 
 	// <template>
 	//   <div class="box">
-	//     <div @click="go_collect(item.albumId)" v-for="item in dataList">
+	//     <div @click="go_collect(item.albumId)" v-for="item in length()">
 	//       <div class="circle" :style="{'background-image':styleObject(item.imageUrl)}"></div>
 	//     </div>
 	//   </div>
 	// </template>
 	// <script>
 	exports.default = {
-	  props: ["data"],
-	  mounted: function mounted() {
-	    this.dataList = this.data.body.dataList;
-	  },
-	  data: function data() {
-	    return {
-	      dataList: [],
-	      isApp: _utils2.default.utils.isApp()
-	    };
-	  },
-
-	  methods: {
-	    styleObject: function styleObject(item) {
-	      return "url(" + item + ")";
+	    props: ["data"],
+	    mounted: function mounted() {
+	        this.dataList = this.data.body.dataList;
 	    },
-	    go_collect: function go_collect(albumId) {
-	      if (this.isApp) {
-	        _native2.default.Browser.open({
-	          "url": "/collect.html?albumId=" + albumId
-	        });
-	      } else {
-	        window.location.href = "/collect.html?albumId=" + albumId;
-	      }
+	    data: function data() {
+	        return {
+	            dataList: [],
+	            isApp: _utils2.default.utils.isApp()
+	        };
+	    },
+
+	    methods: {
+	        length: function length() {
+	            if (this.dataList.length >= 4 && this.dataList.length < 8) {
+	                return this.dataList.slice(0, 4);
+	            } else if (this.dataList.length < 4) {
+	                return [];
+	            } else if (this.dataList.length == 8) {
+	                return this.dataList;
+	            } else if (this.dataList.length > 8) {
+	                return this.dataList.slice(0, 8);
+	            }
+	        },
+	        styleObject: function styleObject(item) {
+	            return "url(" + item + ")";
+	        },
+	        go_collect: function go_collect(albumId) {
+	            if (this.isApp) {
+	                _native2.default.Browser.open({
+	                    "url": "/collect.html?albumId=" + albumId
+	                });
+	            } else {
+	                window.location.href = "/collect.html?albumId=" + albumId;
+	            }
+	        }
 	    }
-	  }
-	  // </script>
-	  // <style scoped lang="sass">
-	  //   .box{
-	  //     height: 1.86rem;
-	  //     width: 100%;
-	  //     font-size: 0;
-	  //     background: #fff;
-	  //     margin-bottom: 0.1rem;
-	  //   }
-	  //   .box>div{
-	  //     display: inline-block;
-	  //     width: 25%;
-	  //     height: 0.93rem;
-	  //     vertical-align: top;
-	  //     text-align: center;
-	  //   }
-	  //   .circle{
-	  //     display: inline-block;
-	  //     width: 100%;
-	  //     height: 0.93rem;
-	  //     background-size: cover;
-	  //     background-repeat: no-repeat;
-	  //     background-position: center center;
-	  //   }
-	  // </style>
+	    // </script>
+	    // <style scoped lang="sass">
+	    //   .box{
+	    //     width: 100%;
+	    //     font-size: 0;
+	    //     background: #fff;
+	    //     margin-bottom: 0.1rem;
+	    //   }
+	    //   .box>div{
+	    //     display: inline-block;
+	    //     width: 25%;
+	    //     height: 0.93rem;
+	    //     vertical-align: top;
+	    //     text-align: center;
+	    //   }
+	    //   .circle{
+	    //     display: inline-block;
+	    //     width: 100%;
+	    //     height: 0.93rem;
+	    //     background-size: cover;
+	    //     background-repeat: no-repeat;
+	    //     background-position: center center;
+	    //   }
+	    // </style>
 
 	};
 
@@ -24587,7 +24630,7 @@
 /* 381 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"box\" _v-925ea434=\"\">\n  <div @click=\"go_collect(item.albumId)\" v-for=\"item in dataList\" _v-925ea434=\"\">\n    <div class=\"circle\" :style=\"{'background-image':styleObject(item.imageUrl)}\" _v-925ea434=\"\"></div>\n  </div>\n</div>\n";
+	module.exports = "\n<div class=\"box\" _v-925ea434=\"\">\n  <div @click=\"go_collect(item.albumId)\" v-for=\"item in length()\" _v-925ea434=\"\">\n    <div class=\"circle\" :style=\"{'background-image':styleObject(item.imageUrl)}\" _v-925ea434=\"\"></div>\n  </div>\n</div>\n";
 
 /***/ },
 /* 382 */
@@ -24660,7 +24703,7 @@
 
 
 	// module
-	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-780f6021]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-780f6021]{\n  color:#333333;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  font-size: 0;\n  height:0.2rem;\n  line-height:0.2rem;\n}\n.list_date>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.list_line[_v-780f6021]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.095rem;\n}\n\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .flist:last-child .line[_v-780f6021]{\n  background: #fff;\n}\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  position: relative;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n  max-width: 2.15rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  margin-top: -0.03rem;\n\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_time[_v-780f6021]{\n  position: absolute;\n  bottom: 0;\n  margin-bottom: -0.03rem;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  max-width: 2.15rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-780f6021]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-780f6021]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-780f6021],.mask_stop[_v-780f6021],.disable[_v-780f6021]{\n  z-index:3;\n}\n.gray[_v-780f6021] {\n  -webkit-filter: grayscale(100%);\n  filter: grayscale(100%);\n  -webkit-filter: gray;\n          filter: gray;\n}\n.loading_play[_v-780f6021]{\n  -webkit-animation:rotating 1.2s linear infinite;\n          animation:rotating 1.2s linear infinite\n}\n@-webkit-keyframes rotating{\n  from{-webkit-transform:rotate(0);transform:rotate(0)}\n  to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}\n}\n@keyframes rotating{\n  from{-webkit-transform:rotate(0);transform:rotate(0)}\n  to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}\n}\n.entry[_v-780f6021]{\n  width: 0.42rem;\n  height: 0.16rem;\n  border-radius: 8px;\n  border:1px solid #979797;\n  border:0.5px solid #979797;\n  color: #999999;\n  line-height:0.16rem;\n  font-size: 11px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  margin-top: 0.02rem;\n}\n\n.text[_v-780f6021]{\n  font-size:16px;\n}\n.line[_v-780f6021]{\n  width: 3.55rem;\n  margin-left: 0.1rem;\n  height: 0.01rem;\n  margin-top: 0.135rem;\n  margin-bottom: 0.134rem;\n  background:#E1E1E1;\n}\n\n", ""]);
+	exports.push([module.id, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.big_img[_v-780f6021]{\n  text-align: center;\n  height: 0.2rem;\n  padding-top:0.13rem;\n  padding-bottom:0.15rem;\n  font-size: 0;\n}\n.big_img>div[_v-780f6021]{\n  display:inline-block;\n  vertical-align: top;\n}\n.list_date[_v-780f6021]{\n  color:#333333;\n  padding-left: 0.1rem;\n  padding-right: 0.1rem;\n  font-size: 0;\n  height:0.2rem;\n  line-height:0.2rem;\n}\n.list_date>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.list_line[_v-780f6021]{\n  height: 0.01rem;\n  background: #333333;\n  width: 0.15rem;\n  margin-top: 0.095rem;\n}\n\n.list1[_v-780f6021]{\n  border-bottom: 1px solid #E1E1E1;\n  background: #ffffff;\n}\n.list1 .flist:last-child .line[_v-780f6021]{\n  background: #fff;\n}\n\n.list[_v-780f6021]{\n  font-size: 0;\n  height: 0.76rem;\n  padding:0 0.1rem;\n  position: relative;\n}\n\n.list>div[_v-780f6021]{\n  display: inline-block;\n  vertical-align: top;\n}\n.left_img img[_v-780f6021]{\n  width:0.76rem;\n  height: 0.76rem;\n  border-radius:4px;\n}\n.list_content[_v-780f6021]{\n  margin-left: 0.1rem;\n  height: 0.76rem;\n  max-width: 2.15rem;\n}\n.list_title[_v-780f6021]{\n  font-size:14px;\n  line-height:0.2rem;\n  color:#333333;\n  max-width:2.15rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  -webkit-box-orient: vertical;\n  -webkit-line-clamp: 2;\n  display: -webkit-box;\n  margin-top: -0.03rem;\n\n}\n.list_name[_v-780f6021],.list_time[_v-780f6021]{\n  font-size:11px;\n  line-height:0.16rem;\n  color:#999999;\n}\n.list_time[_v-780f6021]{\n  position: absolute;\n  bottom: 0;\n  margin-bottom: -0.03rem;\n}\n.list_name[_v-780f6021]{\n  margin-bottom:0.07rem;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  max-width: 2.15rem;\n}\n.right_img img[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n}\n.right_img[_v-780f6021]{\n  position: absolute;\n  right: 0.1rem;\n  margin-top: 0.24rem;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.right_img > div[_v-780f6021]{\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 0.34rem;\n  height: 0.34rem;\n}\n.circle_mask[_v-780f6021]{\n  width: 0.34rem;\n  height: 0.34rem;\n  border-radius:50%;\n  background: #000000;\n  opacity:0.3;\n  z-index:2;\n}\n.mask_play[_v-780f6021],.mask_stop[_v-780f6021],.disable[_v-780f6021]{\n  z-index:3;\n}\n.gray[_v-780f6021] {\n  -webkit-filter: grayscale(100%);\n  filter: grayscale(100%);\n  -webkit-filter: gray;\n          filter: gray;\n}\n.loading_play[_v-780f6021]{\n  -webkit-animation:rotating 1.2s linear infinite;\n          animation:rotating 1.2s linear infinite\n}\n@-webkit-keyframes rotating{\n  from{-webkit-transform:rotate(0);transform:rotate(0)}\n  to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}\n}\n@keyframes rotating{\n  from{-webkit-transform:rotate(0);transform:rotate(0)}\n  to{-webkit-transform:rotate(360deg);transform:rotate(360deg)}\n}\n.entry[_v-780f6021]{\n  width: 0.42rem;\n  height: 0.16rem;\n  border-radius: 8px;\n  border:1px solid #979797;\n  border:0.5px solid #979797;\n  color: #999999;\n  line-height:0.16rem;\n  font-size: 11px;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  margin-top: 0.02rem;\n}\n\n.text[_v-780f6021]{\n  font-size:16px;\n}\n.line[_v-780f6021]{\n  width: 3.55rem;\n  margin-left: 0.1rem;\n  height: 0.01rem;\n  height: 0.005rem;\n  margin-top: 0.135rem;\n  margin-bottom: 0.134rem;\n  background:#E1E1E1;\n}\n\n", ""]);
 
 	// exports
 
@@ -25096,6 +25139,7 @@
 	  //     width: 3.55rem;
 	  //     margin-left: 0.1rem;
 	  //     height: 0.01rem;
+	  //     height: 0.005rem;
 	  //     margin-top: 0.135rem;
 	  //     margin-bottom: 0.134rem;
 	  //     background:#E1E1E1;
@@ -30510,7 +30554,7 @@
 	//       </div>
 	//     </div>
 	//
-	//     <div v-if="!flag" v-html="dataList.recommendData">
+	//     <div v-if="!flag" v-html="dataList.recommendData" class="recommendData">
 	//
 	//     </div>
 	//     <maskk v-if="isApp && maskFlag"></maskk>
@@ -30833,7 +30877,7 @@
 /* 434 */
 /***/ function(module, exports) {
 
-	module.exports = "\n<div class=\"top\" id=\"top\" _v-236acfbd=\"\">\n  <div class=\"tab\" id=\"tab2\" :class=\"{ tab_fixed2 :empty_tab }\" v-if=\"isApp\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n  <div class=\"tab\" id=\"tab\" :class=\"{ tab_fixed :empty_tab }\" v-if=\"!isApp\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n  <div class=\"empty_tab\" v-if=\"empty_tab\" _v-236acfbd=\"\"></div>\n  <div v-if=\"flag\" _v-236acfbd=\"\">\n    <div class=\"update\" _v-236acfbd=\"\">\n      <div class=\"up\" _v-236acfbd=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-236acfbd=\"\"></span>期 <span v-if=\"dataList.ex!=0\" _v-236acfbd=\"\">，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-236acfbd=\"\"></span>期</span>\n      </div>\n    </div>\n    <div class=\"list\" _v-236acfbd=\"\">\n      <div class=\"item\" v-for=\"(item,index) in contentList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n        <div class=\"rea\" _v-236acfbd=\"\">\n          <div class=\"item_left\" _v-236acfbd=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-236acfbd=\"\"></div>\n            <div class=\"item_timee\" _v-236acfbd=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-236acfbd=\"\"></div>\n              <div class=\"item_count\" _v-236acfbd=\"\"><span v-text=\"item.number\" _v-236acfbd=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-236acfbd=\"\">\n                <div class=\"clock\" _v-236acfbd=\"\"></div>\n                <div class=\"times\" v-text=\"timeFormat(item.time)\" _v-236acfbd=\"\"></div>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"item_right\" v-if=\"isFree==0 || (isFree==1 &amp;&amp; item.isSub==1)\" _v-236acfbd=\"\">\n            <div class=\"mask_stop\" v-if=\"(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/28/listSuspend.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_play\" v-if=\"!(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/28/listPlay2.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_play loading_play\" v-if=\"item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==2\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/26/loading.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right\" v-if=\"isFree==1 &amp;&amp; item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==0\" _v-236acfbd=\"\">\n            <div class=\"disable\" @click.stop=\"stop_info(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" class=\"gray\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"isFree==1 &amp;&amp; item.isFree==0 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==1\" @click.stop=\"go_href2(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n            <div class=\"free\" _v-236acfbd=\"\">免费试听</div>\n          </div>\n\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"!flag\" v-html=\"dataList.recommendData\" _v-236acfbd=\"\">\n\n  </div>\n  <maskk v-if=\"isApp &amp;&amp; maskFlag\" _v-236acfbd=\"\"></maskk>\n  <maskk2 v-if=\"!isApp &amp;&amp; maskFlag\" _v-236acfbd=\"\"></maskk2>\n</div>\n";
+	module.exports = "\n<div class=\"top\" id=\"top\" _v-236acfbd=\"\">\n  <div class=\"tab\" id=\"tab2\" :class=\"{ tab_fixed2 :empty_tab }\" v-if=\"isApp\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n  <div class=\"tab\" id=\"tab\" :class=\"{ tab_fixed :empty_tab }\" v-if=\"!isApp\" _v-236acfbd=\"\">\n    <div class=\"tab_list\" v-if=\"flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border color1\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line\" _v-236acfbd=\"\"></div>\n    </div>\n    <div class=\"tab_list\" v-if=\"!flag\" @click=\"fn\" _v-236acfbd=\"\">\n      <div class=\"border\" v-text=\"dataList.content\" _v-236acfbd=\"\"></div>\n      <div class=\"b_right color1\" v-text=\"dataList.recommend\" _v-236acfbd=\"\"></div>\n      <div class=\"line2\" _v-236acfbd=\"\"></div>\n    </div>\n  </div>\n  <div class=\"empty_tab\" v-if=\"empty_tab\" _v-236acfbd=\"\"></div>\n  <div v-if=\"flag\" _v-236acfbd=\"\">\n    <div class=\"update\" _v-236acfbd=\"\">\n      <div class=\"up\" _v-236acfbd=\"\">\n        已更新<span class=\"color1\" v-text=\"dataList.up\" _v-236acfbd=\"\"></span>期 <span v-if=\"dataList.ex!=0\" _v-236acfbd=\"\">，计划更新<span class=\"color1\" v-text=\"dataList.ex\" _v-236acfbd=\"\"></span>期</span>\n      </div>\n    </div>\n    <div class=\"list\" _v-236acfbd=\"\">\n      <div class=\"item\" v-for=\"(item,index) in contentList\" @click.stop=\"go_href(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n        <div class=\"rea\" _v-236acfbd=\"\">\n          <div class=\"item_left\" _v-236acfbd=\"\">\n            <div class=\"item_title\" v-text=\"item.music\" _v-236acfbd=\"\"></div>\n            <div class=\"item_timee\" _v-236acfbd=\"\">\n              <div class=\"item_date\" v-text=\"getLocalTime(item.update_time)\" _v-236acfbd=\"\"></div>\n              <div class=\"item_count\" _v-236acfbd=\"\"><span v-text=\"item.number\" _v-236acfbd=\"\"></span>次播放</div>\n              <div class=\"item_time\" _v-236acfbd=\"\">\n                <div class=\"clock\" _v-236acfbd=\"\"></div>\n                <div class=\"times\" v-text=\"timeFormat(item.time)\" _v-236acfbd=\"\"></div>\n              </div>\n            </div>\n          </div>\n\n          <div class=\"item_right\" v-if=\"isFree==0 || (isFree==1 &amp;&amp; item.isSub==1)\" _v-236acfbd=\"\">\n            <div class=\"mask_stop\" v-if=\"(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/28/listSuspend.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_play\" v-if=\"!(item.albumId==albumId &amp;&amp; item.sortNo==sortNo &amp;&amp; btnStatus==1)\" @click.stop=\"go_play(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/28/listPlay2.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"mask_play loading_play\" v-if=\"item.sortNo==sortNo &amp;&amp; item.albumId==albumId &amp;&amp; btnStatus==2\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/26/loading.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right\" v-if=\"isFree==1 &amp;&amp; item.isFree==1 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==0\" _v-236acfbd=\"\">\n            <div class=\"disable\" @click.stop=\"stop_info(item.albumId,item.sortNo)\" _v-236acfbd=\"\"><img src=\"//pic.davdian.com/free/2017/08/16/Group1.png\" alt=\"\" _v-236acfbd=\"\"></div>\n            <div class=\"circle_mask\" _v-236acfbd=\"\"></div>\n            <div _v-236acfbd=\"\"><img :src=\"item.imageUrl\" alt=\"\" class=\"gray\" _v-236acfbd=\"\"></div>\n          </div>\n          <div class=\"item_right2\" v-if=\"isFree==1 &amp;&amp; item.isFree==0 &amp;&amp; item.isSub==0 &amp;&amp; item.isPlay==1\" @click.stop=\"go_href2(item.albumId,item.sortNo)\" _v-236acfbd=\"\">\n            <div class=\"free\" _v-236acfbd=\"\">免费试听</div>\n          </div>\n\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div v-if=\"!flag\" v-html=\"dataList.recommendData\" class=\"recommendData\" _v-236acfbd=\"\">\n\n  </div>\n  <maskk v-if=\"isApp &amp;&amp; maskFlag\" _v-236acfbd=\"\"></maskk>\n  <maskk2 v-if=\"!isApp &amp;&amp; maskFlag\" _v-236acfbd=\"\"></maskk2>\n</div>\n";
 
 /***/ },
 /* 435 */
