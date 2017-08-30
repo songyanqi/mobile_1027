@@ -74,12 +74,12 @@
             <div class='discuss_top'>
                  <img v-if='introduceGuide && guide==2 && userTicket==1' class='introduceGuide1' src="//pic.davdian.com/free/2017/08/11/writeAllSignUp.png" class='writeAllSignUp'>
                  <img v-if='introduceGuide && guide==2 && userTicket==0' class='introduceGuide1' src="//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png" class='writeAllSignUp'>
-                <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>
+                <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1'>
                     写我的听课笔记
                     <img src="//pic.davdian.com/free/2017/07/26/write.png">
 
                 </div>
-                <div class='discuss_top_no_write' v-if='userTicket==0 && AppVersionFlag'>
+                <div class='discuss_top_no_write' v-if='userTicket==0'>
                     报名后才能写笔记哦
                 </div>
                 <div class='discuss_top_alldiscuss' @click='allNote'>
