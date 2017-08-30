@@ -19,8 +19,8 @@
           <div class="list_time" v-text="timeFormat(item.time)"></div>
         </div>
         <div class="right_img" v-if="item.isPlay==1">
-          <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-          <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="!(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+          <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/28/listSuspend.png" alt=""></div>
+          <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="!(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/28/listPlay2.png" alt=""></div>
           <div class='mask_play loading_play' v-if="item.sortNo==sortNo && item.albumId==albumId && btnStatus==2"><img src="//pic.davdian.com/free/2017/08/26/loading.png" alt=""></div>
           <div class="circle_mask"></div>
           <div><img :src="item.imageUrl" alt=""></div>
@@ -331,7 +331,7 @@
     height: 0.01rem;
     background: #333333;
     width: 0.15rem;
-    margin-top: 0.08rem;
+    margin-top: 0.095rem;
   }
 
   .list1{
@@ -375,6 +375,8 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     display: -webkit-box;
+    margin-top: -0.03rem;
+
   }
   .list_name,.list_time{
     font-size:11px;
@@ -384,6 +386,7 @@
   .list_time{
     position: absolute;
     bottom: 0;
+    margin-bottom: -0.03rem;
   }
   .list_name{
     margin-bottom:0.07rem;

@@ -56,7 +56,7 @@
 </script>
 <style scoped>
   .content2 {
-    padding: 0 0.1rem 0.12rem 0.1rem;
+    padding: 0.12rem 0.1rem 0.12rem 0.1rem;
     background: white;
   }
 

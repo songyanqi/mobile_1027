@@ -19,9 +19,9 @@
           </div>
 
           <div class="list_right">
-            <div class="disable" @click.stop="stop_info(item.albumId,item.sortNo)" v-if="item.isPlay==0"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-            <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 && ( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-            <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 &&  !( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+            <div class="disable" @click.stop="stop_info(item.albumId,item.sortNo)" v-if="item.isPlay==0"><img class="gray" src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+            <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 && ( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/28/listSuspend.png" alt=""></div>
+            <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 &&  !( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/28/listPlay2.png" alt=""></div>
             <div class='mask_play loading_play' v-if="item.sortNo==sortNo && item.albumId==albumId && btnStatus==2"><img src="//pic.davdian.com/free/2017/08/26/loading.png" alt=""></div>
             <div class="circle_mask"></div>
             <div><img :src="item.imageUrl" alt=""></div>
@@ -269,7 +269,8 @@
     font-size:0.11rem;
     position: absolute;
     right: 0;
-    margin-top: 0.05rem;
+    top: 50%;
+    margin-top: -0.17rem;
     width: 0.34rem;
     height: 0.34rem;
   }
@@ -376,7 +377,11 @@
   .disable{
     z-index: 5;
   }
-
+  .gray {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+  }
 </style>
 
 
