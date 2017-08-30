@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="[[static]]/page/choose_mama_adviser/css/choose_mama_adviser.css[[v]]">
 </head>
 <body>
-<div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
+<div class="app" :class="{'inapp':inapp}" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
   <!--妈妈顾问爱好信息选择-->
   <div v-if="show_adviser_hobby_list">
     <div class="back-btn" v-if="!inapp"><a href="javascript:history.back();"><i class="back-arrow"></i></a></div>
@@ -91,7 +91,12 @@
             </div>
           </div>
           <div class="adviser_marks">
-            <div v-for="item in advisers.marks">{{item}}</div>
+            <div v-if="advisers.marks.invite" class="invite">{{advisers.marks.invite}}</div>
+            <div v-if="advisers.marks.friend" class="friend">{{advisers.marks.friend}}</div>
+            <div v-if="advisers.marks.share" class="share">{{advisers.marks.share}}</div>
+            <div v-if="advisers.marks.teachMaster" class="teachMaster">{{advisers.marks.teachMaster}}</div>
+            <div v-if="advisers.marks.houseHelper" class="houseHelper">{{advisers.marks.houseHelper}}</div>
+            <div v-if="advisers.marks.service" class="service">{{advisers.marks.service}}</div>
           </div>
         </div>
         <div class="adviser_ob_right">

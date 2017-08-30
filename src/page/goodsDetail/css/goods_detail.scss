@@ -1181,7 +1181,7 @@ $crossBord: #FF4A7D;
     .labelList {
       //margin-right: 3px;
       display: inline-block;
-      vertical-align: bottom;
+      vertical-align: middle;
     }
     .price_icon {
       font-size: 20px;
@@ -1213,7 +1213,8 @@ $crossBord: #FF4A7D;
   .question_ico {
     margin-right: 4px;
     margin-left: 4px;
-    margin-top: -2px;
+    // margin-top: -2px;
+    margin-top: -9px;
     background: url(http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/goodsDetail/questionIcon.png) no-repeat;
     background-size: 100%;
   }
@@ -1256,7 +1257,7 @@ $crossBord: #FF4A7D;
     @include tagTheme;
     vertical-align: text-bottom;
   }
-  .commission {
+  /*.commission {
     font-size: 12px;
     margin: 0 0 0 0;
     color: #666;
@@ -1276,7 +1277,40 @@ $crossBord: #FF4A7D;
     .memColor {
       color: #666;
     }
+  }*/
+
+  .commission {
+    font-size: 12px;
+    margin: 0 0 0 0;
+    color: #666;
   }
+  .memBack {
+    font-size: 0;
+    color: #BF9D51;
+  }
+  .memColor {
+    color: #666;
+  }
+  .sellerTiems {
+    color: #FF4A7D;
+    font-size: 12px;
+    span {
+      font-size: 17px;
+      top: 4px;
+      position: relative;
+    }
+  }
+  .f12 {
+    font-size: 12px;
+  }
+  .inlinem {
+    display:inline-block;
+    margin:0 3px;
+  }
+
+
+
+
   .member_iconCont {
       display: inline-block;
       // width: 30px;
@@ -1943,7 +1977,7 @@ $crossBord: #FF4A7D;
     .service_h_icon {
       font-size: 15px;
       color: $crossBord;
-      vertical-align: sub;
+      vertical-align: top;
     }
     .server_c {
       font-size: 12px;

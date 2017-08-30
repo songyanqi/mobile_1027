@@ -18,22 +18,27 @@
       {{response.data.nickname}}
       <span>成为我的顾问<span style="color:#FF4A7D">{{response.data.joinDays}}天</span></span>
     </div>
-    <div class="declaration">
+    <div class="declaration" v-if="response.data.title">
       TA的宣言：{{response.data.title}}
       <div class="talk_tringle"></div>
     </div>
     <div v-if="response.data.mark" class="advisMark">
       <div class="advisMark_wrap">
         <div v-if="response.data.matching_degree">匹配度{{response.data.matching_degree}}%</div>
-        <div v-for="item in response.data.mark">{{item}}</div>
+        <div v-if="response.data.marks.invite" class="invite">{{response.data.marks.invite}}</div>
+        <div v-if="response.data.marks.friend" class="friend">{{response.data.marks.friend}}</div>
+        <div v-if="response.data.marks.share" class="share">{{response.data.marks.share}}</div>
+        <div v-if="response.data.marks.teachMaster" class="teachMaster">{{response.data.marks.teachMaster}}</div>
+        <div v-if="response.data.marks.houseHelper" class="houseHelper">{{response.data.marks.houseHelper}}</div>
+        <div v-if="response.data.marks.service" class="service">{{response.data.marks.service}}</div>
       </div>
     </div>
-    <div class="adviserTip">与顾问建立联系，可获得精准服务</div>
-    <div class="my_code_text">
-      顾问微信号：<span>{{response.data.wx}}</span><span @click="show_wx = true">复制微信号</span>
+    <div class="adviserTip" v-if="response.data.wx || response.data.mobile">与顾问建立联系，可获得精准服务</div>
+    <div class="my_code_text" v-if="response.data.wx">
+      顾问微信号：<span>{{response.data.wx}}</span><span v-if="!inapp" @click="show_wx = true">复制微信号</span><span v-else @click="show_wx = true" @click="copyText(response.data.wx)">复制微信号</span>
     </div>
-    <div class="my_code_text">
-      顾问手机号：<span>{{response.data.mobile}}</span><span @click="show_tel = true">复制手机号</span>
+    <div class="my_code_text" v-if="response.data.mobile">
+      顾问手机号：<span>{{response.data.mobile}}</span><span v-if="!inapp" @click="show_tel = true">复制手机号</span><span v-else @click="show_tel = true" @click="copyText(response.data.mobile)">复制手机号</span>
     </div>
     <div v-show="show_tel" class="g-pop mobile active">
       <ul>
