@@ -91,7 +91,12 @@
             </div>
           </div>
           <div class="adviser_marks">
-            <div v-for="item in advisers.marks">{{item}}</div>
+            <div v-if="advisers.marks.invite" class="invite">{{advisers.marks.invite}}</div>
+            <div v-if="advisers.marks.friend" class="friend">{{advisers.marks.friend}}</div>
+            <div v-if="advisers.marks.share" class="share">{{advisers.marks.share}}</div>
+            <div v-if="advisers.marks.teachMaster" class="teachMaster">{{advisers.marks.teachMaster}}</div>
+            <div v-if="advisers.marks.houseHelper" class="houseHelper">{{advisers.marks.houseHelper}}</div>
+            <div v-if="advisers.marks.service" class="service">{{advisers.marks.service}}</div>
           </div>
         </div>
         <div class="adviser_ob_right">

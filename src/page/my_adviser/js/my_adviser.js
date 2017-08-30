@@ -10,7 +10,6 @@ import encrypt from '../../../common/js/module/encrypt.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
-import ua from '../../../common/js/module/ua.js';
 
 // login.needLogin();
 
@@ -26,7 +25,7 @@ new Vue({
       show_tel: false,
       show_wx: false,
       show_go_shop_btn:false, //显示去大V店按钮
-      inapp: ua.isDvdApp()
+      inapp:!!navigator.userAgent.match(/davdian|bravetime|vyohui/)
 
     }
   },
