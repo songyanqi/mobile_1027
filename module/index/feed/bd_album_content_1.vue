@@ -280,6 +280,8 @@
         go_href(albumId,sortNo){
             if(this.isApp){
               //调app播放器
+              alert(albumId)
+              alert(sortNo)
               native.Audio.goAudioDetail({
                 "sortNo":sortNo,
                 "albumId":albumId
