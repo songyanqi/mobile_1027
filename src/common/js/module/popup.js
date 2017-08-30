@@ -3,6 +3,7 @@ let getEl = function () {
 };
 
 let loading = null;
+let loading2 = null;
 
 export default {
   /**

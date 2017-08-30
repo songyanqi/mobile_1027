@@ -251,9 +251,25 @@ body{
   background-position: 0 3px;
   background-size: 14px 14px;
 }
-.adviser_marks div:nth-of-type(1){
-  background-image: url('//fe-ws.davdian.com/wap/static/dist/static/page/my_adviser/img/sharers.png');
+/*有共同好友*/
+.adviser_marks .invite{
+  background-image: url("../../my_adviser/img/commonfriend.png");
 }
-.adviser_marks div:nth-of-type(2){
-  background-image: url('//fe-ws.davdian.com/wap/static/dist/static/page/my_adviser/img/commonfriend.png');
+/*分享达人*/
+.adviser_marks .share{
+  background-image: url("../../my_adviser/img/sharers.png");
+}
+/*育儿能手*/
+.adviser_marks .teachMaster{
+  background-image: url("../../my_adviser/img/parenting.png");
+}
+/*完美主妇*/
+.adviser_marks .houseHelper{
+  background-image: url("../../my_adviser/img/perfectHousewife.png");
+}
+.adviser_marks .service{
+  background-image: url("../../my_adviser/img/goodService.png");
+}
+.adviser_marks .friend{
+  background-image: url("../../my_adviser/img/sameCity.png");
 }

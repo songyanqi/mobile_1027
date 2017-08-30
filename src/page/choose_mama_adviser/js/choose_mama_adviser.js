@@ -142,7 +142,7 @@ new Vue({
         popup.toast("请选择标签");
         return false;
       }
-
+      popup.loading();
       $.ajax({
         cache: false,
         async: true,
@@ -152,16 +152,18 @@ new Vue({
         data: encrypt(data),
         success(response) {
           if(response.code){
+            popup.loading(false);
             popup.toast(response.data.msg || response.msg);
           }else{
+            popup.loading(false);
             that.response2 = response;
             that.show_adviser_hobby_list = false;
             that.show_adviser_list = true;
           }
         },
         error(error) {
+          popup.loading(false);
           popup.toast(error.statusText)
-          // that.response = require('../json/choose_mama_adviser.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });

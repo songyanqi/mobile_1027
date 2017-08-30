@@ -25,7 +25,12 @@
     <div v-if="response.data.mark" class="advisMark">
       <div class="advisMark_wrap">
         <div v-if="response.data.matching_degree">匹配度{{response.data.matching_degree}}%</div>
-        <div v-for="item in response.data.mark">{{item}}</div>
+        <div v-if="response.data.marks.invite" class="invite">{{response.data.marks.invite}}</div>
+        <div v-if="response.data.marks.friend" class="friend">{{response.data.marks.friend}}</div>
+        <div v-if="response.data.marks.share" class="share">{{response.data.marks.share}}</div>
+        <div v-if="response.data.marks.teachMaster" class="teachMaster">{{response.data.marks.teachMaster}}</div>
+        <div v-if="response.data.marks.houseHelper" class="houseHelper">{{response.data.marks.houseHelper}}</div>
+        <div v-if="response.data.marks.service" class="service">{{response.data.marks.service}}</div>
       </div>
     </div>
     <div class="adviserTip" v-if="response.data.wx || response.data.mobile">与顾问建立联系，可获得精准服务</div>
