@@ -24,22 +24,14 @@ new Vue({
       response: null,
       show_tel: false,
       show_wx: false,
-      show_go_shop_btn:false //显示去大V店按钮
+      show_go_shop_btn:false, //显示去大V店按钮
+      inapp:!!navigator.userAgent.match(/davdian|bravetime|vyohui/)
+
     }
   },
   computed: {},
   watch: {
-    // 监听response变化
-    response() {
-      // response变化后并渲染完dom,设置其他事项
-      this.$nextTick(function () {
-        let ts = this;
-        // 设置app头部标题栏
-        native.custom.initHead({
-          shareOnHead: 1,
-        });
-      });
-    }
+
   },
   beforeCreate() {
     var that = this;
@@ -98,6 +90,18 @@ new Vue({
         }
       });
     },
+    /*原生复制*/
+    copyText: function (text) {
+      native.BrowserTouch.copyText({
+        "text": text,
+        success: function (result) {
+          popup.toast("已复制到剪切板");
+        },
+        error: function (result) {
+          popup.toast("复制失败，请手动复制");
+        }
+      })
+    }
   },
   filters: {},
 });

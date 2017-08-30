@@ -81,7 +81,6 @@ $(document).ready(function(){
                 if($(that).hasClass("btn-disable")){
                     return;
                 }
-
                 if(window["needCode"]){
 
                     confirmContainer.removeClass("hide").addClass("show_slow");
@@ -116,7 +115,13 @@ $(document).ready(function(){
                     bravetime.removeLoader();
                     // kd_btn.removeClass("btn-disable").find("span").html("立即加入");
                     if(result.errcode==0){
-                        window.bravetime.goto(result["data"]["url"]);
+                        // window.bravetime.goto(result["data"]["url"]);
+                        if (window.Units.isApp()){
+                            var url = getCommand(result["data"]["url"])
+                            window.bravetime.goto(url);
+                        }else {
+                            window.bravetime.goto(result["data"]["url"]);
+                        }
                     } else if (result.errcode == 100204 || result.errcode == 100205) {
                         window.bravetime.goto(result["data"]["url"]);
                     } else if(result.errcode == 2017){
@@ -131,6 +136,17 @@ $(document).ready(function(){
                     bravetime.ajaxError(15);
                 }
             });
+        }
+        window.getCommand = function(url){
+            var arr = url.split('/')
+            var str = arr[arr.length-1]
+            var pay_id = str.split('&')[0].split('=')[1]
+            var obj = {
+                'openDVD':1,
+                'pay_id':pay_id
+            }
+            var command = 'davdian://call.Browser.com?action=pay&params='+ encodeURIComponent(JSON.stringify(obj)) +'&callback=kdcommand&minv=4.2.0'
+            return command
         }
 
         window.tlShareCallback = function(){

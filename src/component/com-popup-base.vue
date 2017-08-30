@@ -1,7 +1,7 @@
 <!--公共确认框-->
 <template>
   <!--满屏容器-->
-  <div class="com-popup-base">
+  <div class="com-popup-base" :class="[className]">
     <!--居中容器-->
     <div class="table-cell">
       <!--弹窗-->
@@ -10,21 +10,21 @@
         <div class="tip">
           <!--标题-->
           <div class="title" v-html="title" v-if="title"></div>
-          <!--文案-->
-          <div class="text" v-html="text" v-if="text"></div>
           <!--输入框-->
           <input class="input" ref="input" type="text" :placeholder="placeholder" v-if="type == 'prompt'">
+          <!--文案-->
+          <div class="text" v-html="text" v-if="text"></div>
         </div>
         <!--水平分割线-->
         <div class="h-split"></div>
         <!--按钮区域-->
         <div class="btns">
           <!--取消按钮-->
-          <div class="btn cancel" v-html="cancelBtnTitle" @click="cancelBtnClick" v-if="type == 'confirm'"></div>
+          <div class="btn cancel" v-html="cancelBtnTitle || '取消'" @click="cancelBtnClick" v-if="cancelBtnTitle !== null"></div>
           <!--垂直分割线-->
-          <div class="v-split" v-if="type == 'confirm'"></div>
+          <div class="v-split" v-if="cancelBtnTitle !== null"></div>
           <!--确定按钮-->
-          <div class="btn ok" v-html="okBtnTitle" @click="okBtnClick"></div>
+          <div class="btn ok" v-html="okBtnTitle || '确定'" @click="okBtnClick"></div>
         </div>
       </div>
     </div>
@@ -34,6 +34,11 @@
 <script>
   export default {
     props: {
+      // 取值范围，
+      className: {
+        type: String,
+        default: null
+      },
       // 取值范围，'alert' || 'confirm' || 'prompt'
       type: {
         type: String,
@@ -52,7 +57,7 @@
       // 确定按钮-标题
       okBtnTitle: {
         type: String,
-        default: '确定'
+        default: null
       },
       // 确定按钮-点击回调
       okBtnCallback: {
@@ -62,7 +67,7 @@
       // 取消按钮-标题
       cancelBtnTitle: {
         type: String,
-        default: '取消'
+        default: null
       },
       // 取消按钮-点击回调
       cancelBtnCallback: {

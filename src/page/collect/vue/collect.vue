@@ -161,7 +161,7 @@
                   }
                   setTimeout(function(){
                     native.Browser.setHead({
-                      'title':that.title,
+                      'title':that.titleN,
                       'backBtn':'1',
                       'shareBtn':"1",
                       'shareMoneyStr': result.data.attr.income

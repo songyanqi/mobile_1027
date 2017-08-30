@@ -8,7 +8,7 @@
         <span><span>订阅合辑</span><span v-if="ifPrice">:¥</span><span v-text="isPrice"></span></span>
       </div>
       <div class="btn_text" @click="Subscribe" v-if="isSub==0 && userstatus==3">
-        <span>会员免费订阅</span>
+        <span>会员免费订阅 <span style='text-decoration: line-through;'><span v-if="ifPrice">:¥</span><span v-text="isPrice"></span></span></span>    
       </div>
     </div>
   </div>

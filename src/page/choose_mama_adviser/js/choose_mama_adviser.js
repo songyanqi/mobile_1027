@@ -10,7 +10,6 @@ import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
-
 // 渲染页面
 new Vue({
   el: ".app",
@@ -50,7 +49,19 @@ new Vue({
       return nums;
     }
   },
-  watch: {},
+  watch: {
+    // 监听response变化
+    response() {
+      // response变化后并渲染完dom,设置其他事项
+      this.$nextTick(function () {
+        let that = this;
+        // 设置app头部标题栏
+        native.Browser.setHead({
+          'title' : '选择我的顾问'
+        });
+      });
+    }
+  },
   beforeCreate() {
   },
   created() {
@@ -131,7 +142,7 @@ new Vue({
         popup.toast("请选择标签");
         return false;
       }
-
+      popup.loading();
       $.ajax({
         cache: false,
         async: true,
@@ -141,16 +152,18 @@ new Vue({
         data: encrypt(data),
         success(response) {
           if(response.code){
+            popup.loading(false);
             popup.toast(response.data.msg || response.msg);
           }else{
+            popup.loading(false);
             that.response2 = response;
             that.show_adviser_hobby_list = false;
             that.show_adviser_list = true;
           }
         },
         error(error) {
+          popup.loading(false);
           popup.toast(error.statusText)
-          // that.response = require('../json/choose_mama_adviser.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
@@ -168,7 +181,7 @@ new Vue({
         "distId":that.addressId[2],
         "tags":that.bobbyidlist.filter(function(x){return x}).join(','),
         "adviserId":this.adviser_select
-      }
+      };
       $.ajax({
         cache: false,
         async: true,

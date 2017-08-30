@@ -21,7 +21,8 @@
       <div class="content_title" v-text="dataList.album"></div>
       <div class="content_price" v-if="isFree==1">
         <div class="pri_left">
-          <span v-text="dataList.income"></span>
+          <span v-if="dataList.price">¥</span>
+          <span v-text="dataList.price"></span>
         </div>
         <div class="pri_right" v-text="dataList.memberMsg"></div>
       </div>
@@ -70,6 +71,9 @@
         }else{
           window.location.href="/musicDetail.html?albumId="+albumId+"&sortNo="+sortNo;
         }
+        setTimeout(function(){
+          _this.history_mask=false;
+        },500)
       },
       audioPlayHistory(){
         var _this=this;

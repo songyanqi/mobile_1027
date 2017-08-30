@@ -96,7 +96,7 @@
       let that = this;
       that.initValue();
       
-      let url = this.addressDataUrl||"https://src.davdian.com/data/region.1501055940.json";
+      let url = this.addressDataUrl||"//src.davdian.com/data/region.1501055940.json";
       axios.get(url)
       .then(function(res){
         that.netData = res.data;
