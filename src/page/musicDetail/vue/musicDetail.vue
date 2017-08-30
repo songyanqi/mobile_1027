@@ -199,13 +199,12 @@
             localStorage.setItem('expires_in', data.data.xmlyToken.expires_in)
           }
           if (data && data.data && data.data.dataList && data.data.dataList[that.index] && data.data.dataList[that.index].shareInfo){
-            // 
             try {
               share.setShareInfo({
-                title: data.data.dataList[that.index].shareInfo.title,
-                desc: data.data.dataList[that.index].shareInfo.desc,
-                link: data.data.dataList[that.index].shareInfo.link,
-                imgUrl: data.data.dataList[that.index].shareInfo.imgUrl
+                title: data.data.dataList[that.musicList.length - that.index -1].shareInfo.title,
+                desc: data.data.dataList[that.musicList.length - that.index -1].shareInfo.desc,
+                link: data.data.dataList[that.musicList.length - that.index -1].shareInfo.link,
+                imgUrl: data.data.dataList[that.musicList.length - that.index -1].shareInfo.imgUrl
               });
             } catch (err) {
               alert(err)
