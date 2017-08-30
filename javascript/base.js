@@ -320,6 +320,8 @@ $(document).ready(function () {
       if (minCallback) {
         minCallback();
       } else {
+        console.log("1请升级您的APP")
+        console.trace();
         bravetime.newAlert("请升级您的APP")
       }
     }
