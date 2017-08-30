@@ -130,7 +130,15 @@
   background-repeat:no-repeat;
   background-position:0 3px;
   background-size: 14px 14px;
+}
+.advisMark_wrap div:nth-child(1){
   float: left;
+}
+.advisMark_wrap div:nth-child(3){
+  float:right;
+}
+.advisMark_wrap .matching_degree{
+  background-image: url("../img/matching.png");
 }
 /*有共同好友*/
 .advisMark_wrap .invite{

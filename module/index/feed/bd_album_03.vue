@@ -47,8 +47,8 @@
             </div>
 
             <div class="item_right" v-if="isFree==0 || (isFree==1 && item.isSub==1)">
-              <div class="mask_stop" v-if="(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_stop.png" alt=""></div>
-              <div class="mask_play" v-if="!(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/b_play.png" alt=""></div>
+              <div class="mask_stop" v-if="(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/28/listSuspend.png" alt=""></div>
+              <div class="mask_play" v-if="!(item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)" @click.stop="go_play(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/28/listPlay2.png" alt=""></div>
               <div class='mask_play loading_play' v-if="item.sortNo==sortNo && item.albumId==albumId && btnStatus==2"><img src="//pic.davdian.com/free/2017/08/26/loading.png" alt=""></div>
               <div class="circle_mask"></div>
               <div><img :src="item.imageUrl" alt=""></div>
@@ -56,7 +56,7 @@
             <div class="item_right" v-if="isFree==1 && item.isFree==1 && item.isSub==0 && item.isPlay==0">
               <div class="disable" @click.stop="stop_info(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
               <div class="circle_mask"></div>
-              <div><img :src="item.imageUrl" alt=""></div>
+              <div><img :src="item.imageUrl" alt="" class="gray"></div>
             </div>
             <div class="item_right2" v-if="isFree==1 && item.isFree==0 && item.isSub==0 && item.isPlay==1" @click.stop="go_href2(item.albumId,item.sortNo)">
               <div class="free">免费试听</div>
@@ -227,7 +227,10 @@
           stop_info(albumId,sortNo){
             var that=this;
             if(that.isApp){
-              that.Subscribe(albumId);
+              native.Audio.audioPlay({
+                "sortNo":sortNo,
+                "albumId":albumId
+              })
             }else {
               popup.confirm({
                 title: '提示',            // 标题（支持传入html。有则显示。）
@@ -450,7 +453,7 @@
 </script>
 <style scoped>
   .tab {
-    padding-top: 0.14rem;
+    padding-top: 0.16rem;
     height: 0.36rem;
     background: white;
     border-bottom:1px solid rgba(0,0,0,0.1);
@@ -666,5 +669,10 @@
     position: fixed;
     top:0;
     z-index:999;
+  }
+  .gray {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
   }
 </style>

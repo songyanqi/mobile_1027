@@ -51,9 +51,9 @@ if (argv._[2] === 'build:dev' || argv._[2] === 'build:dist') {
 // 项目路径配置
 let config = {
   html: `src/page/${BuildArg.page}/*.html`,
-  css: `src/page/${BuildArg.page}/css/*.scss`,
+  css: `src/*page/${BuildArg.page}/css/*.scss`,
   js: `src/page/${BuildArg.page}/js/*.js`,
-  img: `src/page/${BuildArg.page}/img/*`,
+  img: `src/*page/${BuildArg.page}/img/*`,
   iconDir: `src/page/${BuildArg.page}/img/icon*`,
   temp: `.temp`,
 };

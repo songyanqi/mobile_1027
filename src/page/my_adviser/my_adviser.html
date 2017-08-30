@@ -18,13 +18,13 @@
       {{response.data.nickname}}
       <span>成为我的顾问<span style="color:#FF4A7D">{{response.data.joinDays}}天</span></span>
     </div>
-    <div class="declaration" v-if="response.data.title">
-      TA的宣言：{{response.data.title}}
+    <div class="declaration">
+      TA的宣言：{{response.data.title || 'TA很懒，暂时没有宣言。'}}
       <div class="talk_tringle"></div>
     </div>
-    <div v-if="response.data.mark" class="advisMark">
+    <div v-if="response.data.marks && response.data.matching_degree != '0%'" class="advisMark">
       <div class="advisMark_wrap">
-        <div v-if="response.data.matching_degree">匹配度{{response.data.matching_degree}}%</div>
+        <div v-if="response.data.matching_degree" class="matching_degree">匹配度{{response.data.matching_degree}}</div>
         <div v-if="response.data.marks.invite" class="invite">{{response.data.marks.invite}}</div>
         <div v-if="response.data.marks.friend" class="friend">{{response.data.marks.friend}}</div>
         <div v-if="response.data.marks.share" class="share">{{response.data.marks.share}}</div>
@@ -33,7 +33,7 @@
         <div v-if="response.data.marks.service" class="service">{{response.data.marks.service}}</div>
       </div>
     </div>
-    <div class="adviserTip" v-if="response.data.wx || response.data.mobile">与顾问建立联系，可获得精准服务</div>
+    <div class="adviserTip">与顾问建立联系，可获得精准服务</div>
     <div class="my_code_text" v-if="response.data.wx">
       顾问微信号：<span>{{response.data.wx}}</span><span v-if="!inapp" @click="show_wx = true">复制微信号</span><span v-else @click="show_wx = true" @click="copyText(response.data.wx)">复制微信号</span>
     </div>
@@ -47,7 +47,7 @@
         <a class="sms" href=" ">
           <li>发送短信</li>
         </a>
-        <a class="tel" href="tel:{{response.data.mobile}}">
+        <a class="tel" :href="'tel:'+response.data.mobile">
           <li>拨打电话</li>
         </a>
         <li class="cancel" @click="show_tel = false">取消</li>

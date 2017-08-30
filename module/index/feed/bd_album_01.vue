@@ -14,6 +14,7 @@
         <div class="close_mask" @click.stop="close"><img src="//pic.davdian.com/free/2017/08/22/clearInput.png" alt=""></div>
       </div>
 
+
     </div>
 
     <div class="content">
@@ -95,12 +96,7 @@
 </script>
 <style scoped>
   .all {
-    padding-bottom: 0.12rem;
     background: white;
-  }
-
-  .big_img {
-    margin-bottom: 0.1rem;
   }
 
   .content {
