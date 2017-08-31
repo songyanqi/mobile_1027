@@ -65,6 +65,7 @@
       }
     },
     mounted:function () {
+
       this.getData();
       if (window.iosInterface){
         window.iosInterface.audioInfoReload = function(){
@@ -160,17 +161,27 @@
                       'isShowAudio':1,
                     });
                   }
-                  var obj={
-                    'title':that.titleN,
-                    'backBtn':'1',
-                    'shareBtn':"1"
-                  };
-                  if(result.data.attr.income!=0){
-                    obj.shareMoneyStr=result.data.attr.income
+
+                  if(result.data.attr.income!="赚0元"){
+                    var obj={
+                      'title':that.titleN,
+                      'backBtn':'1',
+                      'shareBtn':"1",
+                      'shareMoneyStr':result.data.attr.income
+                    };
+                    setTimeout(function(){
+                      native.Browser.setHead(obj)
+                    },100)
+                  }else{
+                    var obj={
+                      'title':that.titleN,
+                      'backBtn':'1',
+                      'shareBtn':"1"
+                    };
+                    setTimeout(function(){
+                      native.Browser.setHead(obj)
+                    },100)
                   }
-                  setTimeout(function(){
-                    native.Browser.setHead(obj)
-                  },400)
                 }else{
                   that.maskFlag=true;
                   if(result.data.msg){
