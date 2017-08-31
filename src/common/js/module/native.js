@@ -69,7 +69,7 @@ function getProtocal(param = {}) {
 
   // 拼接唤起native协议
   let protocal = `davdian:\/\/call.${param.host}.com?action=${param.action}&params=${encodeURIComponent(JSON.stringify(param.param))}&callback=${callbackName}&minv=${param.v}`;
-  alert(protocal)
+  // alert(protocal)
   return protocal;
 }
 
