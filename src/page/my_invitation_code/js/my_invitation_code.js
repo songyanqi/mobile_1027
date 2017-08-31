@@ -37,7 +37,7 @@ new Vue({
       this.$nextTick(function () {
         let that = this;
         // 设置app头部标题栏
-        native.custom.initHead({
+        native.Browser.initHead({
           showHead: 1,    // 是否展示头部
           backOnHead: 1,  // 头部返回按钮
         });
