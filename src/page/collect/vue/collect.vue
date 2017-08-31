@@ -33,6 +33,7 @@
   import share from '../../../common/js/module/share.js';
   import ua from '../../../common/js/module/ua.js';
   import Cookies from 'js-cookie'
+  import common from '../../../common/js/common.js'
   export default {
     components:{
       index_feed:index_feed,
@@ -89,7 +90,7 @@
               };
             api("/api/mg/content/album/getAlbumData",obj)
               .then(function (result) {
-
+                common.checkRedirect(result)
                 // 在微信中时，立即调用接口判断是否需要微信授权
                 if (ua.isWeiXin()) {
                   // alert(ts.initResponse.data.needWxAuth === '1');
@@ -159,13 +160,16 @@
                       'isShowAudio':1,
                     });
                   }
+                  var obj={
+                    'title':that.titleN,
+                    'backBtn':'1',
+                    'shareBtn':"1"
+                  };
+                  if(result.data.attr.income!=0){
+                    obj.shareMoneyStr=result.data.attr.income
+                  }
                   setTimeout(function(){
-                    native.Browser.setHead({
-                      'title':that.titleN,
-                      'backBtn':'1',
-                      'shareBtn':"1",
-                      'shareMoneyStr': result.data.attr.income
-                    })
+                    native.Browser.setHead(obj)
                   },400)
                 }else{
                   that.maskFlag=true;
