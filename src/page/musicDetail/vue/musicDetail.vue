@@ -111,7 +111,6 @@
         return arr
       },
       introduction(){
-          alert(1);
         if (this.isapp){
           if ($('.bottom_text img').length ==0){
             if (this.musicList && this.musicList[this.musicList.length-this.index-1] && this.musicList[this.musicList.length-this.index-1].introduction){
@@ -124,15 +123,13 @@
               console.log('introduction is null')
             }
           } else {
-            console.log(1);
             var imgIndex=0;
             var imgs=$('.bottom_text img');
             imgs.map(function (item,index) {
-              console.log(index)
               imgs[index].onload = function () {
                   imgIndex++;
                   if(imgIndex==$('.bottom_text img').length){
-                    alert("666666");
+
                   }
               };
             });
