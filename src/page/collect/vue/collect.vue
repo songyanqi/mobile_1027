@@ -198,7 +198,6 @@
                 that.maskFlag=true;
                 that.pageFlag = true;
                 console.log('e:', e)
-                alert(e)
             });
           }
         }
