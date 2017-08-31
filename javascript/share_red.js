@@ -33,7 +33,7 @@ $(function () {
                         bravetime.info(result.msg);
                     }else{
                         bravetime.info(result.msg);
-                        $(".share_red_receive_success_con .success_info").html('已存入手机'+tel+'，使用手机号注册大V店账号，即可使用红包购物，还可以帮好友获得免费赠送的图书~');
+                        $(".share_red_receive_success_con .success_info").html('已存入手机'+tel+'，使用手机号注册大V店账号，即可使用红包购物~');
                         $(".share_red_receive_success_con .amount").html(result.amount+"元");
                         $(".share_red_receive_con").addClass("hide");
                         $(".share_red_receive_success_con").removeClass("hide");

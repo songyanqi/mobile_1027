@@ -41,8 +41,10 @@ export default {
       type: '', // 分享类型,music、video或link，不填默认为link
       dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
       success: function () {
+        param.success()
       },  // 用户确认分享后执行的回调函数
       cancel: function () {
+        param.cancel()
       }, // 用户取消分享后执行的回调函数
     }, param);
     // 加载微信jssdk

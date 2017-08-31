@@ -123,6 +123,17 @@
               console.log('introduction is null')
             }
           } else {
+            var imgIndex=0;
+            var imgs=$('.bottom_text img');
+            imgs.map(function (item,index) {
+              imgs[index].onload = function () {
+                  imgIndex++;
+                  if(imgIndex==$('.bottom_text img').length){
+
+                  }
+              };
+            });
+
             setTimeout(function(){
               native.Browser.showWebHeight({
                 "webHeight": ($('.bottom_text').height()+30).toString()
@@ -134,6 +145,7 @@
       }
     },
     created: function () {
+
     },
     mounted: function () {
       var that =  this
@@ -204,7 +216,16 @@
                 title: data.data.dataList[that.musicList.length - that.index -1].shareInfo.title,
                 desc: data.data.dataList[that.musicList.length - that.index -1].shareInfo.desc,
                 link: data.data.dataList[that.musicList.length - that.index -1].shareInfo.link,
-                imgUrl: data.data.dataList[that.musicList.length - that.index -1].shareInfo.imgUrl
+                imgUrl: data.data.dataList[that.musicList.length - that.index -1].shareInfo.imgUrl,
+                success:function(){
+                  var obj = {
+                    albumId: getQuery('albumId'),
+                    musicId: that.musicList[that.index].musicId
+                  }
+                  api('/api/mg/content/music/click',obj).then(function(data){
+                    console.log('data--->', data)
+                  })
+                }
               });
             } catch (err) {
               alert(err)
