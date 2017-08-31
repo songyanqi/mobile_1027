@@ -204,7 +204,16 @@
                 title: data.data.dataList[that.musicList.length - that.index -1].shareInfo.title,
                 desc: data.data.dataList[that.musicList.length - that.index -1].shareInfo.desc,
                 link: data.data.dataList[that.musicList.length - that.index -1].shareInfo.link,
-                imgUrl: data.data.dataList[that.musicList.length - that.index -1].shareInfo.imgUrl
+                imgUrl: data.data.dataList[that.musicList.length - that.index -1].shareInfo.imgUrl,
+                success:function(){
+                  var obj = {
+                    albumId: getQuery('albumId'),
+                    musicId: that.musicList[that.index].musicId
+                  }
+                  api('/api/mg/content/music/click',obj).then(function(data){
+                    console.log('data--->', data)
+                  })
+                }
               });
             } catch (err) {
               alert(err)
