@@ -61,11 +61,11 @@
         mobile: '',
         inviteCode: '',
         info_bottom: false,
-        modifier_inviter: true
+        modifier_inviter:true
       }
     },
     computed: {
-      origin_shop: function () {
+      origin_shop:function(){
         return location.origin
       }
     },
@@ -94,7 +94,7 @@
               document.title = "我的邀请人";
               that.my_inviterPage = true;
               that.btnName = '修改邀请人';
-              if (response.data.editable != 1) {
+              if(response.data.editable != 1){
                 that.trun_grey = true;
               }
             } else {
@@ -167,28 +167,26 @@
               if (response.code) {
                 popup.toast(response.data.msg || response.msg);
                 return false;
-              } else {
+              }else{
                 that.show_code_input = false;  //显示邀请码输入框
                 that.my_inviterPage = true; //隐藏我的邀请人
                 that.show_edntime = false; //不显示截至修改时间
                 that.trun_grey = false;  //置灰按钮
-//              that.modifier_inviter = false;
-                if (response.shop_url != that.origin_shop) {
-                  if (that.btnName == '确认修改') {
-                    popup.alert({
-                      title: '邀请人修改成功',        // 标题（支持传入html。有则显示。）
-                      text: '请重新登录',         // 文本（支持传入html。有则显示。）
-                      btnCallback() {   // 按钮点击回调（有则执行该回调）
-                        location.href = location.href.replace(that.origin_shop, response.shop_url);
-                      }
-                    })
-                  }else{
-                    location.href = location.href.replace(that.origin_shop, response.shop_url);
-                  }
+                if(that.btnName == '确认修改'){
+                  that.modifier_inviter = false;
                 }
-//                that.btnName = '修改邀请人';
-//                that.$emit("titlename", "我的邀请人");
-//                document.title = "我的邀请人";
+                that.btnName = '修改邀请人';
+                that.$emit("titlename", "我的邀请人");
+                document.title = "我的邀请人";
+                if(response.shop_url != that.origin_shop){
+                  popup.alert({
+                    title: '邀请人修改成功',        // 标题（支持传入html。有则显示。）
+                    text: '请重新登录',         // 文本（支持传入html。有则显示。）
+                    btnCallback() {   // 按钮点击回调（有则执行该回调）
+                      location.href = location.href.replace(that.origin_shop, response.shop_url);
+                    }
+                  });
+                }
               }
             },
             error(error) {
