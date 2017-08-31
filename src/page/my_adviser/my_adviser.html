@@ -67,7 +67,7 @@
   </span>
   <span v-else>
     <div class="adviserBottom" v-if="response.data.nextModifyTime&&response.data.nextModifyTime!=''">*{{response.data.nextModifyTime}}后可更改顾问</div>
-    <a @click="dump2choose" class="replaceAdviser" style="margin-top: 40px;">更换顾问</a>
+    <a @click="dump2choose" class="replaceAdviser" v-if="response.data.canChange == '1'" style="margin-top: 40px;">更换顾问</a>
   </span>
 </div>
 @@include('vendor.include')
