@@ -35,8 +35,8 @@ $(function () {
     }else  if(!window.isSeller){
         upload_container.find(".upload_input").addClass("hide");
         upload_container.find(".pic_upload").click(function () {
-            bravetime.newConfirm("您还不是卖家",{
-                okText:"去开店",
+            bravetime.newConfirm("您还不是会员",{
+                okText:"开通会员",
                 cancelText:"确定",
                 okLink:'/348.html'
             });
@@ -96,8 +96,8 @@ $(function () {
             return false;
         }
         if(!isSeller){
-            bravetime.newConfirm("您还不是卖家",{
-                okText:"去开店",
+            bravetime.newConfirm("您还不是会员",{
+                okText:"开通会员",
                 cancelText:"确定",
                 okLink:'/348.html'
             });
