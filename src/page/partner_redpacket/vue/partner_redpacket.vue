@@ -18,7 +18,7 @@
             <div class='bottomImg' v-if='giftButton' @click='linkUrl(giftButton.linkUrl)' :style="{'background': 'url(' + giftButton.imageUrl + ') center center / cover no-repeat' , 'background-size': 'cover'}"></div>
             <!-- <div class='bottomImg' @click='linkUrl(giftButton.linkUrl)' style='background:red'></div> -->
         </div>
-        <div class='guide2' v-if='goodsList'>会员专享，限时抢购中</div>
+        <!-- <div class='guide2' v-if='goodsList'>会员专享，限时抢购中</div>
         <div class='guide3' v-if='goodsList'>
             <div v-if='goodsList' class='guide3Container' @click='linkUrl(goods.linkUrl)' v-for='goods in goodsList'>
                 <img :src="goods.imageUrl" class='guide3img'>
@@ -34,7 +34,7 @@
                 </div>
                 
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 
@@ -152,7 +152,7 @@
                                 that.bonusFlag = true
                             }
                             if (respone.data && respone.data.data && respone.data.data.giftButton)
-                            that.giftButton = respone.data.data.giftButton
+                            that.giftButton = respone.data.data.giftButtongoNativeHomePage
                             if (respone.data && respone.data.data && respone.data.data.goodsList)
                             that.goodsList = respone.data.data.goodsList
                             if (respone.data && respone.data.data && respone.data.data.giftButton)
@@ -170,7 +170,12 @@
                 window.location.href = linkurl;
             },
             goProfile(){
-                window.location.href = window.location.host
+                if (that.app) {
+                    native.Browser.goNativeHomePage()
+                }else {
+                    window.location.href = window.location.host
+                }
+                
             },
         },
         components:{

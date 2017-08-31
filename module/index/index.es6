@@ -459,8 +459,7 @@ export default {
             popup.specialAlert({
               title: "<div style='width: 1.51rem;margin-left: auto;margin-right: auto;margin-top: -0.5rem;'><img src='http://pic.davdian.com/free/2017816/mamaguwen.png'></div>",
               text: " <div style='text-align:left'>亲爱的大V妈妈，我们将给您分配一个1对1服务的妈妈顾问，您有任何关于购物、学习、育儿、活动等疑问，都可以向她寻求帮助</div>",
-              okBtnTitle:"好的",
-              cancelBtnTitle:"暂不需要",
+              btnTitle: "马上选择",
               btnCallback() {
                 location.replace('/choose_mama_adviser.html')
               }
