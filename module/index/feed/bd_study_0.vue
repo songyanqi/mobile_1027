@@ -49,7 +49,7 @@
     },
     mounted:function () {
       this.dataList=this.data.body.dataList;
-      this.title=this.data.title.name;
+      this.title=this.data.title;
       this.$nextTick(function () {
         this.audioLocation();
       });
