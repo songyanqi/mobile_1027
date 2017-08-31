@@ -123,6 +123,17 @@
               console.log('introduction is null')
             }
           } else {
+            var imgIndex=0;
+            var imgs=$('.bottom_text img');
+            imgs.map(function (item,index) {
+              imgs[index].onload = function () {
+                  imgIndex++;
+                  if(imgIndex!=$('.bottom_text img').length-1){
+
+                  }
+              };
+            });
+
             setTimeout(function(){
               native.Browser.showWebHeight({
                 "webHeight": ($('.bottom_text').height()+30).toString()
