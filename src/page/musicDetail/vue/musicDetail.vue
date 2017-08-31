@@ -123,17 +123,27 @@
               console.log('introduction is null')
             }
           } else {
-            setTimeout(function(){
-              native.Browser.showWebHeight({
-                "webHeight": ($('.bottom_text').height()+30).toString()
-              })
-            },1200)
+              var imgIndex=0;
+              var imgs=$('.bottom_text img');
+              imgs.map(function (item,index) {
+                imgs[index].onload = function () {
+                    imgIndex++;
+                    if(imgIndex==$('.bottom_text img').length){
+                      setTimeout(function(){
+                        native.Browser.showWebHeight({
+                          "webHeight": ($('.bottom_text').height()+30).toString()
+                        })
+                      },200)
+                    }
+                };
+              });
           }
         }
         return this.musicList && this.musicList[this.musicList.length-this.index-1] && this.musicList[this.musicList.length-this.index-1].introduction || null
       }
     },
     created: function () {
+
     },
     mounted: function () {
       var that =  this
@@ -544,7 +554,6 @@
                   }else {
                     // that.index = that.index + data.data.dataList.length
                   }
-                  
                 }else {
                   that.musicList = that.musicList.concat(data.data.dataList)
                   if (flag){

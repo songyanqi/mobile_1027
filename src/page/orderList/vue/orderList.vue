@@ -24,12 +24,21 @@
 
 <script>
     var orderlistswitcher = require("./orderlistswitcher.vue");
+    import util from "../../../../utils/utils.es6";
     export default{
+        data(){
+          return {
+            isApp:util.utils.isApp()
+          }
+        },
         components:{
             orderlistswitcher:orderlistswitcher
         },
-        created(){
-
+        mounted(){
+          if(this.isApp){
+            alert(1);
+            window.bravetime.setHead({"title":"订单列表"});
+          }
         }
     }
 </script>
