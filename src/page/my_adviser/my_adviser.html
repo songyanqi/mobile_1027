@@ -12,7 +12,7 @@
   <div class="adviser_box">
     <div class="adviserImg">
       <img :src="response.data.avatar" alt="">
-      <div>官方顾问</div>
+      <div><span>官方顾问</span></div>
     </div>
     <div class="adviserName">
       {{response.data.nickname}}
@@ -44,9 +44,6 @@
       <ul>
         <li class="number">{{response.data.mobile}}</li>
         <li class="copy">复制电话号码（可在微信中尝试添加好友）</li>
-        <a class="sms" href=" ">
-          <li>发送短信</li>
-        </a>git
         <a class="tel" :href="'tel:'+response.data.mobile">
           <li>拨打电话</li>
         </a>
