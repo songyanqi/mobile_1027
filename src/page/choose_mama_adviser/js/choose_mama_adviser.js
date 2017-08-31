@@ -193,6 +193,9 @@ new Vue({
           if(response.code){
             popup.toast(response.data.msg || response.msg);
           }else{
+            if(that.inapp){
+              location.href = "davdian://call.Account.com?action=refreshUserInfo&callback=result&minv=4.2.0";
+            }
             location.replace('/my_adviser.html');
           }
         },

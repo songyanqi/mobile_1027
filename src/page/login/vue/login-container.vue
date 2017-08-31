@@ -34,7 +34,7 @@
           <input type="tel" placeholder="请输入验证码" v-model="check_code" name="mobile">
           <img src="../img/clearInput.png" v-if="check_code != ''" v-on:click="check_code = ''">
         </div>
-        <div v-if="mobile=='' || get_check || mobile.length < 11" class="get_check_code disable" :class="{'color3':get_checkbtnname != '重新发送' || get_checkbtnname != '获取验证码'}">{{get_checkbtnname}}</div>
+        <div v-if="mobile=='' || get_check || mobile.length < 11" class="get_check_code disable" :class="{'color3':get_checkbtnname != '重新发送' && get_checkbtnname != '获取验证码'}">{{get_checkbtnname}}</div>
         <div v-else class="get_check_code" @click="get_check_codes(1,1,function() {})">{{get_checkbtnname}}</div>
       </div>
       <div class="inputbox">
