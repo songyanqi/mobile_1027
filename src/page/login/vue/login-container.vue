@@ -25,7 +25,7 @@
     <!--注册账号-->
     <div v-if="sign_form">
       <div class="inputbox" style="margin-top: 50px">
-        <input v-if="get_check" type="tel" v-model="mobile" name="mobile" disabled style="color:#999999;">
+        <input v-if="get_check" type="tel" v-model="mobile" name="mobile" disabled style="color:#333333;">
         <input v-else type="tel" placeholder="请输入您的手机号" v-model="mobile" name="mobile" autofocus="autofocus">
         <img src="../img/clearInput.png" v-if="mobile != '' && !get_check" v-on:click="mobile = ''">
       </div>

@@ -166,7 +166,7 @@
                       'shareBtn':"1",
                       'shareMoneyStr': result.data.attr.income
                     })
-                  },300)
+                  },400)
                 }else{
                   that.maskFlag=true;
                   if(result.data.msg){
