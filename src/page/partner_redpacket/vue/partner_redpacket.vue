@@ -3,8 +3,8 @@
         <div class='guide1'>
             <img src="//pic.davdian.com/free/2017/06/28/partner_bg2.png" v-if='!giftButton' class='guide1Bg'>
             <img src="//pic.davdian.com/free/2017/06/28/partner_bg1.png" v-if='giftButton' class='guide1Bg'>
-            <div class='exit' @click='goProfile'></div>
-            <div class='guide1Title guide1all'>{{bonus.bonusCountMoney}}元红包已到账</div>
+            <div class='exit' @click='goProfile1'></div>
+            <div class='guide1Title guide1all'><span v-if='bonus && bonus.bonusCountMoney' v-text='bonus.bonusCountMoney'></span>元红包已到账</div>
             <div class='guide1Img guide1all' v-if='bonusFlag'>
                 <img src="//pic.davdian.com/free/2017/06/07/ticket.png" class='guide1all' @click='linkUrl(bonus.linkUrl)'>
                 <div class='guide1Img1 guide1all'><span>¥&nbsp;</span>{{bonus.bonusMoney}}</div>
@@ -170,8 +170,11 @@
             linkUrl(linkurl){
                 window.location.href = linkurl;
             },
+            goProfile1(){
+                window.location.reload()
+            },
             goProfile(){
-                if (that.app) {
+                if (this.app) {
                     native.Browser.goNativeHomePage()
                 }else {
                     window.location.href = window.location.host
