@@ -90,8 +90,7 @@
               };
             api("/api/mg/content/album/getAlbumData",obj)
               .then(function (result) {
-                try{
-                  common.checkRedirect(result);
+
                   // 在微信中时，立即调用接口判断是否需要微信授权
                   if (ua.isWeiXin()) {
                     // alert(ts.initResponse.data.needWxAuth === '1');
@@ -109,6 +108,8 @@
                       throw new Error(`即将跳转微信授权页(${location.href})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
                     }
                   }
+                try{
+                  common.checkRedirect(result);
                 }catch(e){
                 }
                 if(result.code==0){
