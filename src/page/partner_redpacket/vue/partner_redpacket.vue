@@ -42,6 +42,7 @@
     let axios = require("axios");
     require('es6-promise').polyfill();
     import { strSign, getQuery } from "../../../../utils/utils.es6";
+    import native from '../../../common/js/module/native.js'
     import app from "../../../../utils/appInterface.es6";
     import wx from "../../../../utils/WXShare.es6"
     export default{
