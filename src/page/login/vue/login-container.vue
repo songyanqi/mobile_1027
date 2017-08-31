@@ -25,7 +25,7 @@
     <!--注册账号-->
     <div v-if="sign_form">
       <div class="inputbox" style="margin-top: 50px">
-        <input v-if="get_check" type="tel" v-model="mobile" name="mobile" style="color:#333333;">
+        <input v-if="get_check" type="tel" v-model="mobile" name="mobile">
         <input v-else type="tel" placeholder="请输入您的手机号" v-model="mobile" name="mobile" autofocus="autofocus">
         <img src="../img/clearInput.png" v-if="mobile != '' && !get_check" v-on:click="mobile = ''">
       </div>
@@ -34,7 +34,7 @@
           <input type="tel" placeholder="请输入验证码" v-model="check_code" name="mobile">
           <img src="../img/clearInput.png" v-if="check_code != ''" v-on:click="check_code = ''">
         </div>
-        <div v-if="mobile=='' || get_check || mobile.length < 11" class="get_check_code disable">{{get_checkbtnname}}</div>
+        <div v-if="mobile=='' || get_check || mobile.length < 11" class="get_check_code disable" :class="{'color3':get_checkbtnname != '重新发送' || get_checkbtnname != '获取验证码'}">{{get_checkbtnname}}</div>
         <div v-else class="get_check_code" @click="get_check_codes(1,1,function() {})">{{get_checkbtnname}}</div>
       </div>
       <div class="inputbox">
@@ -57,7 +57,6 @@
       <div class="forget_sign voice_check">
         <a v-on:click="go_login">已有账号登录</a>
       </div>
-
       <!--邀请码规则-->
     </div>
 
@@ -851,4 +850,10 @@
     -ms-transform: scaleY(0.5);
     transform: scaleY(0.5);
   }
+  .inputbox.check_input .get_check_code.disable.color3{
+    color:#333333;
+  }
+  /*.app .check_input .disable.color3{*/
+    /*color:#333333;*/
+  /*}*/
 </style>
