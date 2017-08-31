@@ -12,7 +12,6 @@
     <data_mask2 v-if="!isApp && maskFlag2"></data_mask2>
     <top v-if="!isApp"></top>
   </div>
-
 </template>
 <script>
   import index_feed from '../../../../module/index/index_feed.vue'
