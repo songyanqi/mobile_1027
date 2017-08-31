@@ -15,6 +15,6 @@
 export default {
   //env_stage: 'beta',
   //env_num: '2',
-  page: '{musicDetail,collect}',
+  page: '{my_adviser,choose_mama_adviser}',
   webpack: false,
 };

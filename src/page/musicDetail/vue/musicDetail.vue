@@ -228,7 +228,7 @@
                     albumId: getQuery('albumId'),
                     musicId: that.musicList[that.index].musicId
                   }
-                  api('/api/mg/content/music/click',obj).then(function(data){
+                  api('/api/mg/content/music/onSub',obj).then(function(data){
                     console.log('data--->', data)
                   })
                 }
