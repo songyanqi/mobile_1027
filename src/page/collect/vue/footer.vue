@@ -162,6 +162,7 @@
                     if (that.isapp){
                       native.Account.login()
                     }else {
+                        alert(window.location.href);
                       window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
                     }
                   } else {
