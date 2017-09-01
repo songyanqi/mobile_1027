@@ -69,7 +69,8 @@ function judgeApp(){
 function setAppAndWx(){
 	// 设置app头部标题栏
       native.custom.initHead({
-        shareOnHead: 1
+        shareOnHead: 1,
+        homeOnHead:1
       });
 
       // 设置分享信息

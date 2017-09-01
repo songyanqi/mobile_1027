@@ -73,6 +73,25 @@
     a{
       position: absolute;
     }
+    .img_info{
+      background-color: #fff;
+      font-size: 12px;
+      line-height: 1.5;
+      padding: 10px;
+      color: #333;
+      .img_title{
+        font-size: 16px;
+      }
+      .img_content{
+        color: #666;
+        line-clamp: 2;
+        max-height: 36px;
+        display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+        -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+        -webkit-line-clamp: 2; /** 显示的行数 **/
+        overflow: hidden;  /** 隐藏超出的内容 **/
+      }
+    }
   }
 }
 
