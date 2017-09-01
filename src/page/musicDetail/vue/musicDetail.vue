@@ -243,7 +243,7 @@
       })
     },
     methods: {
-      playData(){
+      playTrackSingle(){
         let that = this
         let obj = {
           albumId: getQuery('albumId'),
@@ -263,6 +263,24 @@
         api('/api/mg/content/music/playTrackSingle',obj).then(function(data){
           console.log('data--->', data)
         })
+      },
+      playData(){
+        let that = this
+        let obj = {
+          albumId: getQuery('albumId'),
+          sortNo: getQuery('sortNo'),
+          duration: that.playTime,
+          play_type:1,
+        }
+        if (that.musicList && that.musicList[that.index] && that.musicList[that.index].musicId){
+          obj['musicId'] = that.musicList[that.musicList.length - 1 - that.index].musicId
+        }
+        if (localStorage.getItem('expires_in')){
+          obj.expires_in = localStorage.getItem('expires_in')
+        }
+        if (localStorage.getItem('access_token')){
+          obj.expires_in = localStorage.getItem('access_token')
+        }
         api('/api/mg/content/music/click',obj).then(function(data){
           console.log('clickdata-->', data)
         })
@@ -507,6 +525,7 @@
             that.isPlay = false
             that.playTime = 0
             clearInterval(that.playTimer)
+            that.playTrackSingle()
             that.playAudio(that.index + 1)
           }
           that.playData()
@@ -532,6 +551,7 @@
               that.isPlay = false
               that.playTime = 0
               clearInterval(that.playTimer)
+              that.playTrackSingle()
               that.playAudio(that.index + 1)
             }
             that.playData()
