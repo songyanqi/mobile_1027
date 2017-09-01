@@ -31,9 +31,7 @@ $(function () {
         },200);
         return false
     }
-
     var orderList = require("../vue/orderList.vue");
-
     new Vue({
         el: "body",
         components:{

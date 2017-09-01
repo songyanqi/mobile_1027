@@ -94,6 +94,7 @@ function innerCall(param = {}) {
 
   // 参数默认值
   param.invalid = param.invalid || function () {
+    console.trace();
       alert("请升级您的APP");
     };
 
@@ -502,6 +503,14 @@ const native = {
         v: '4.2.0',
         host: 'Browser',
         action: 'showWebHeight',
+        param: param
+      });
+    },
+    goNativeHomePage(param = {}){
+      call({
+        v: '4.2.0',
+        host: 'Browser',
+        action: 'goNativeHomePage',
         param: param
       });
     }

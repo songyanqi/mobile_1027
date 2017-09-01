@@ -12,7 +12,7 @@
   <div class="adviser_box">
     <div class="adviserImg">
       <img :src="response.data.avatar" alt="">
-      <div>官方顾问</div>
+      <div><span>官方顾问</span></div>
     </div>
     <div class="adviserName">
       {{response.data.nickname}}
@@ -22,7 +22,7 @@
       TA的宣言：{{response.data.title || 'TA很懒，暂时没有宣言。'}}
       <div class="talk_tringle"></div>
     </div>
-    <div v-if="response.data.marks && response.data.matching_degree != '0%'" class="advisMark">
+    <div v-if="response.data.marks && response.data.matching_degree != '0%' && response.data.matching_degree" class="advisMark">
       <div class="advisMark_wrap">
         <div v-if="response.data.matching_degree" class="matching_degree">匹配度{{response.data.matching_degree}}</div>
         <div v-if="response.data.marks.invite" class="invite">{{response.data.marks.invite}}</div>
@@ -35,18 +35,15 @@
     </div>
     <div class="adviserTip">与顾问建立联系，可获得精准服务</div>
     <div class="my_code_text" v-if="response.data.wx">
-      顾问微信号：<span>{{response.data.wx}}</span><span v-if="!inapp" @click="show_wx = true">复制微信号</span><span v-else @click="show_wx = true" @click="copyText(response.data.wx)">复制微信号</span>
+      顾问微信号：<span>{{response.data.wx}}</span><span v-if="!inapp" @click="show_wx = true">复制微信号</span><span v-else @click="copyText(response.data.wx)">复制微信号</span>
     </div>
     <div class="my_code_text" v-if="response.data.mobile">
-      顾问手机号：<span>{{response.data.mobile}}</span><span v-if="!inapp" @click="show_tel = true">复制手机号</span><span v-else @click="show_tel = true" @click="copyText(response.data.mobile)">复制手机号</span>
+      顾问手机号：<span>{{response.data.mobile}}</span><span v-if="!inapp" @click="show_tel = true">复制手机号</span><span v-else @click="copyText(response.data.mobile)">复制手机号</span>
     </div>
     <div v-show="show_tel" class="g-pop mobile active">
       <ul>
         <li class="number">{{response.data.mobile}}</li>
         <li class="copy">复制电话号码（可在微信中尝试添加好友）</li>
-        <a class="sms" href=" ">
-          <li>发送短信</li>
-        </a>
         <a class="tel" :href="'tel:'+response.data.mobile">
           <li>拨打电话</li>
         </a>
@@ -67,7 +64,7 @@
   </span>
   <span v-else>
     <div class="adviserBottom" v-if="response.data.nextModifyTime&&response.data.nextModifyTime!=''">*{{response.data.nextModifyTime}}后可更改顾问</div>
-    <a @click="dump2choose" class="replaceAdviser" style="margin-top: 40px;">更换顾问</a>
+    <a @click="dump2choose" class="replaceAdviser" v-if="response.data.canChange == '1'" style="margin-top: 40px;">更换顾问</a>
   </span>
 </div>
 @@include('vendor.include')

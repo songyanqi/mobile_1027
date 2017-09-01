@@ -8,7 +8,7 @@
           <div v-for="item in dataList">
             <img :src="doImg(item.imageUrl)" alt="">
           </div>
-          <div v-if="number > 7">
+          <div v-if="purchase > 7 && isFree==1">
             <img src="//pic.davdian.com/free/2017/08/16/Group4.png" alt="">
           </div>
       </div>
@@ -21,12 +21,15 @@
     data(){
       return{
           dataList:[],
-          isFree:-1
+          isFree:-1,
+          number:-1,
+          purchase:-1
       }
     },
     mounted:function () {
       this.dataList=this.data.body.dataList;
-      this.number = this.data.body.purchase
+      this.number = this.data.body.number
+      this.purchase = this.data.body.purchase
       this.isFree=this.data.body.isFree;
     },
     methods:{

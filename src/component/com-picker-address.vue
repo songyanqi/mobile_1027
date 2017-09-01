@@ -26,7 +26,6 @@
       },
       initValue:function(){
         let that = this;
-        console.time("initValue");
         if(this.addressid){
           this.addressValue[2] = this.addressid+"";
           this.addressName = "";
@@ -52,7 +51,6 @@
           }
         }
         that.initData();
-        console.timeEnd("initValue");
       },
       initData(){
         let that = this;
@@ -68,12 +66,17 @@
       addressPre:function(v,o){
         var that = this;
         var addressNow = [],addressNameList=[],addressValueList=[];
-        console.time("ctime")
         for (var i0 = 0,d0; d0=that.addressPre[i0++];) {
          addressNow.push({value:d0[0],name:d0[1],parent:0});
          for(var i1 = 0,d1;d1=d0[2][i1++];){
+          if(d1[0]==-1){
+            d1[0]=d0[0]+"-1"
+          }
            addressNow.push({value:d1[0],name:d1[1],parent:d0[0]});
            for(var i2 = 0,d2;d2=d1[2][i2++];) {
+            if(d2[0]==-1){
+              d2[0]=d0[0]+"-"+d1[0]+"-1"
+            }
              addressNow.push({value:d2[0],name:d2[1],parent:d1[0]});
              addressNameList[d2[0]]=d0[1]+" "+d1[1]+" "+d2[1];
              addressValueList[d2[0]]= [d0[0],d1[0],d2[0]];
@@ -84,8 +87,7 @@
        that.addressValueList = addressValueList;
        that.addressNameList = addressNameList;
        that.initData();
-       
-       console.timeEnd("ctime");
+
      },
      addressid:function(){
         this.initData();

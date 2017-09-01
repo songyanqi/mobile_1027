@@ -59,96 +59,96 @@
 
 </template> -->
 <style>
-.classification_list li .classification_container.p0{
+  .classification_list li .classification_container.p0{
     padding:0;
-}
+  }
 
 </style>
 <script>
-import * as bd_articles_1 from './component/bd_articles_1.vue'
-import * as bd_articles_2 from './component/bd_articles_2.vue'
-    export default{
-        props: ['initList','hasMore','category'],
-        data(){
-            return{
-                msg:'hello vue',
-                list:this.initList,
-                dev:location.href.indexOf("localhost")>-1
+  import * as bd_articles_1 from '../../../../module/component/bd_articles_1.vue'
+  import * as bd_articles_2 from '../../../../module/component/bd_articles_2.vue'
+  export default{
+    props: ['initList','hasMore','category'],
+    data(){
+      return{
+        msg:'hello vue',
+        list:this.initList,
+        dev:location.href.indexOf("localhost")>-1
+      }
+    },
+    watch:{
+      initList:function(){
+        this.list = this.initList;
+      }
+    },
+    render: function (createElement) {
+      var that = this;
+      return createElement("section", this.list.map(function (item) {
+        if(item.body != undefined){
+          return createElement(item.body.tplId, {
+            props:{
+              data: item
             }
-        },
-        watch:{
-            initList:function(){
-                this.list = this.initList;
-            }
-        },
-        render: function (createElement) {
-            var that = this;
-            return createElement("section", this.list.map(function (item) {
-                if(item.body != undefined){
-                    return createElement(item.body.tplId, {
-                        props:{
-                        data: item
-                      }
-                    })
-                }else if(item.body == undefined && item.title != undefined){
-                    return createElement(item.title.tplId, {
-                        props:{
-                            data: item
-                        },
-                        on: {
-                            refresh: that.refresh
-                        }
-                    })
-                }
-            }))
-        },
-        methods:{
-            dump:function(page_id,event){
-                var top = window.scrollY;
-                if($(event.target).hasClass("point_praise")){
-
-                }else{
-                    if(this.dev){
-                        bravetime.goto('./classroom_detail.html');
-                    }else{
-                        bravetime.goto('/class_detail-'+page_id+'.html');
-                    }
-
-                    this.$emit('top', top)
-                }
+          })
+        }else if(item.body == undefined && item.title != undefined){
+          return createElement(item.title.tplId, {
+            props:{
+              data: item
             },
-            praise(index){
-                if(this.list[index]["has_been_like"]){
-                        window.bravetime.info("您已经点过赞了");
-                    }else{
-                        this.send(+this.list[index].page_id);
-                        if(window.is_login){
-                            this.$emit('praise',index)
-                        }
-                    }
-
-            },
-            send(id){
-                $.ajax({
-                    url: window.praiseUrl,
-                    dataType: "json",
-                    data: {
-                        id: id,
-                        collect: 1
-                    }, success: function (result) {
-                        if (result["error"] == -1) {
-                            window.nativeLoginFunction(result["url"]);
-                        }
-                    }, error: function () {
-                        bravetime.ajaxError(36);
-                    }
-                });
+            on: {
+              refresh: that.refresh
             }
-        },
-        components:{
-            bd_articles_1,
-            bd_articles_2
+          })
         }
+      }))
+    },
+    methods:{
+      dump:function(page_id,event){
+        var top = window.scrollY;
+        if($(event.target).hasClass("point_praise")){
+
+        }else{
+          if(this.dev){
+            bravetime.goto('./classroom_detail.html');
+          }else{
+            bravetime.goto('/class_detail-'+page_id+'.html');
+          }
+
+          this.$emit('top', top)
+        }
+      },
+      praise(index){
+        if(this.list[index]["has_been_like"]){
+          window.bravetime.info("您已经点过赞了");
+        }else{
+          this.send(+this.list[index].page_id);
+          if(window.is_login){
+            this.$emit('praise',index)
+          }
+        }
+
+      },
+      send(id){
+        $.ajax({
+          url: window.praiseUrl,
+          dataType: "json",
+          data: {
+            id: id,
+            collect: 1
+          }, success: function (result) {
+            if (result["error"] == -1) {
+              window.nativeLoginFunction(result["url"]);
+            }
+          }, error: function () {
+            bravetime.ajaxError(36);
+          }
+        });
+      }
+    },
+    components:{
+      bd_articles_1,
+      bd_articles_2
     }
+  }
 
 </script>

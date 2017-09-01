@@ -193,6 +193,18 @@ new Vue({
           if(response.code){
             popup.toast(response.data.msg || response.msg);
           }else{
+            if(that.inapp){
+              var href = location.href;
+              var baseHref;
+              if (href.indexOf("davdian.com") > 0) {
+                baseHref = "davdian.com";
+              } else if (href.indexOf("vyohui.cn") > 0) {
+                baseHref = "vyohui.cn"
+              } else {
+                baseHref = "bravetime.net";
+              }
+              location.href = "davdian://invoke." + baseHref + "?cmd="+encodeURIComponent("davdian://call.Account.com?action=refreshUserInfo&callback=result&minv=4.2.0");
+            }
             location.replace('/my_adviser.html');
           }
         },

@@ -18,13 +18,17 @@
             </div>
           </div>
 
-          <div class="list_right">
-            <div class="disable" @click.stop="stop_info(item.albumId,item.sortNo)" v-if="item.isPlay==0"><img class="gray" src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-            <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 && ( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/28/listSuspend.png" alt=""></div>
-            <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="item.isPlay==1 &&  !( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/28/listPlay2.png" alt=""></div>
+          <div class="list_right" v-if="item.isPlay==1">
+            <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/28/listSuspend.png" alt=""></div>
+            <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="!( item.albumId==albumId && item.sortNo==sortNo && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/28/listPlay2.png" alt=""></div>
             <div class='mask_play loading_play' v-if="item.sortNo==sortNo && item.albumId==albumId && btnStatus==2"><img src="//pic.davdian.com/free/2017/08/26/loading.png" alt=""></div>
             <div class="circle_mask"></div>
             <div><img :src="item.imageUrl" alt=""></div>
+          </div>
+          <div class="list_right" v-if="item.isPlay==0">
+            <div class="disable" @click.stop="stop_info(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+            <div class="circle_mask"></div>
+            <div><img class="gray" :src="item.imageUrl" alt=""></div>
           </div>
         </div>
       </div>
@@ -45,7 +49,6 @@
     },
     mounted:function () {
       this.dataList=this.data.body.dataList;
-      this.title=this.data.title.name;
       this.$nextTick(function () {
         this.audioLocation();
       });
@@ -58,7 +61,7 @@
          albumId:null,
          sortNo:null,
          btnStatus:0,
-          title:""
+         title:""
      }
     },
     methods:{

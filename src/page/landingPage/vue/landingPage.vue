@@ -136,6 +136,7 @@
           });
         },
         getData(){
+          console.log(6666);
           var that=this;
           if(that.pageFlag){
             console.log(that.pageFlag);

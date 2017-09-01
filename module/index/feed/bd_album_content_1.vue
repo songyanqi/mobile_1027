@@ -9,28 +9,32 @@
         </div>
         <div class="list_line"></div>
       </div>
-      <div class="list" v-for="(item,index) in dataList" @click.stop="go_href(item.albumId,item.sortNo)">
-        <div class="left_img">
-          <img :src="item.imageUrl" alt="">
+      <div class="flist" v-for="(item,index) in dataList">
+        <div class="list" @click.stop="go_href(item.albumId,item.sortNo)">
+          <div class="left_img">
+            <img :src="item.imageUrl" alt="">
+          </div>
+          <div class="list_content">
+            <div class="list_title" v-text="item.music"></div>
+            <div class="list_name" v-text="item.album"></div>
+            <div class="list_time" v-text="timeFormat(item.time)"></div>
+          </div>
+          <div class="right_img" v-if="item.isPlay==1">
+            <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/28/listSuspend.png" alt=""></div>
+            <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="!(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/28/listPlay2.png" alt=""></div>
+            <div class='mask_play loading_play' v-if="item.sortNo==sortNo && item.albumId==albumId && btnStatus==2"><img src="//pic.davdian.com/free/2017/08/26/loading.png" alt=""></div>
+            <div class="circle_mask"></div>
+            <div><img :src="item.imageUrl" alt=""></div>
+          </div>
+          <div class="right_img" v-if="item.isPlay==0">
+            <div class="disable" @click.stop="stop_info(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
+            <div class="circle_mask"></div>
+            <div class="a"><img class="gray" :src="item.imageUrl" alt=""></div>
+          </div>
         </div>
-        <div class="list_content">
-          <div class="list_title" v-text="item.music"></div>
-          <div class="list_name" v-text="item.album"></div>
-          <div class="list_time" v-text="timeFormat(item.time)"></div>
-        </div>
-        <div class="right_img" v-if="item.isPlay==1">
-          <div class="mask_stop" @click.stop="go_play(item.albumId,item.sortNo)" v-if="(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/28/listSuspend.png" alt=""></div>
-          <div class="mask_play" @click.stop="go_play(item.albumId,item.sortNo)" v-if="!(item.sortNo==sortNo && item.albumId==albumId && btnStatus==1)"><img src="//pic.davdian.com/free/2017/08/28/listPlay2.png" alt=""></div>
-          <div class='mask_play loading_play' v-if="item.sortNo==sortNo && item.albumId==albumId && btnStatus==2"><img src="//pic.davdian.com/free/2017/08/26/loading.png" alt=""></div>
-          <div class="circle_mask"></div>
-          <div><img :src="item.imageUrl" alt=""></div>
-        </div>
-        <div class="right_img" v-if="item.isPlay==0">
-          <div class="disable" @click.stop="stop_info(item.albumId,item.sortNo)"><img src="//pic.davdian.com/free/2017/08/16/Group1.png" alt=""></div>
-          <div class="circle_mask"></div>
-          <div class="a"><img class="gray" :src="item.imageUrl" alt=""></div>
-        </div>
+        <div class="line"></div>
       </div>
+
     </div>
   </div>
 
@@ -322,19 +326,17 @@
   }
 
   .list1{
-    border-bottom: 1px solid #E1E1E1;
+    margin-bottom: 0.1rem;
     background: #ffffff;
   }
-  .list1 .list:nth-child(2){
-    margin-bottom: 0.2rem;
+  .list1 .flist:last-child .line{
+    background: #fff;
   }
-
 
   .list{
     font-size: 0;
     height: 0.76rem;
     padding:0 0.1rem;
-    margin-bottom:0.27rem;
     position: relative;
   }
 
@@ -440,4 +442,13 @@
   .text{
     font-size:16px;
   }
+  .line{
+    width: 3.55rem;
+    margin-left: 0.1rem;
+    height: 0.01rem;
+    margin-top: 0.135rem;
+    margin-bottom: 0.134rem;
+    background:#E1E1E1;
+  }
+
 </style>

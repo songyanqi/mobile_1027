@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <div @click="go_collect(item.albumId)" v-for="item in dataList">
+    <div @click="go_collect(item.albumId)" v-for="item in length()">
       <div class="circle" :style="{'background-image':styleObject(item.imageUrl)}"></div>
     </div>
   </div>
@@ -20,6 +20,17 @@
           }
       },
       methods:{
+        length(){
+          if(this.dataList.length>=4 && this.dataList.length<8){
+              return this.dataList.slice(0,4);
+          }else if(this.dataList.length<4){
+              return [];
+          }else if(this.dataList.length==8){
+              return this.dataList;
+          }else if(this.dataList.length>8){
+             return this.dataList.slice(0,8);
+          }
+        },
         styleObject(item){
             return "url("+ item +")";
         },
@@ -37,7 +48,6 @@
 </script>
 <style scoped lang="sass">
   .box{
-    height: 1.86rem;
     width: 100%;
     font-size: 0;
     background: #fff;
@@ -51,13 +61,11 @@
     text-align: center;
   }
   .circle{
-    margin-top: 0.25rem;
-    border-radius:50%;
+    display: inline-block;
+    width: 100%;
+    height: 0.93rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    display: inline-block;
-    height: 0.45rem;
-    width: 0.45rem;
   }
 </style>
