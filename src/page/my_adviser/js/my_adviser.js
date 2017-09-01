@@ -30,11 +30,22 @@ new Vue({
   },
   computed: {},
   watch: {
-
+    // 监听response变化
+    response() {
+      // response变化后并渲染完dom,设置其他事项
+      this.$nextTick(function () {
+        let that = this;
+        // 设置app头部标题栏
+        native.Browser.setHead({
+          'title' : '我的顾问',
+          "rightBtn":0
+        });
+      });
+    }
   },
   beforeCreate() {
     var that = this;
-    /*做个判断是不是从详情页和购物车页还有首页过来的*/
+     /*做个判断是不是从详情页和购物车页还有首页过来的*/
     // var historys = JSON.parse(sessionStorage.getItem("history"));
     // var num = historys.length;
     // if(num >= 3){
@@ -48,6 +59,10 @@ new Vue({
     // }
   },
   created() {
+    var that = this;
+    if(that.getQueryString("firsttime")){
+      that.show_go_shop_btn = true;
+    }
     this.getData();
   },
   methods: {
@@ -101,6 +116,12 @@ new Vue({
           popup.toast("复制失败，请手动复制");
         }
       })
+    },
+    getQueryString: function (name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]);
+      return null;
     }
   },
   filters: {},
