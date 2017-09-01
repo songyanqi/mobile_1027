@@ -15,19 +15,28 @@
       </div>
     </div>
     <div class="banner">
-      <v-list></v-list>
+      <v-list v-if="flag==1" :menu="21"></v-list>
+      <v-list2 v-if="flag==2" :menu="15"></v-list2>
+      <v-list3 v-if="flag==3" :menu="20"></v-list3>
+      <v-list4 v-if="flag==4" :menu="9"></v-list4>
     </div>
 
   </div>
 </template>
 <script>
   import vList from "./list.vue";
+  import vList2 from "./list2.vue";
+  import vList3 from "./list3.vue";
+  import vList4 from "./list4.vue";
   require("../../../../javascript/units.js");
   require("../../../../javascript/model.js");
   require("../../../../javascript/base.js");
   export default{
     components:{
-      vList:vList
+      vList:vList,
+      vList2:vList2,
+      vList3:vList3,
+      vList4:vList4
     },
     data(){
       return {

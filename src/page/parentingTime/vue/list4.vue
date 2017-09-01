@@ -1,6 +1,6 @@
 <template>
   <div class="classroom_container">
-    ::{{ menu }}::
+    ::{{ category }}::
     <v-list-switcher v-if='inApp && haveMenu' class="out_switch out_switch_top" :list="switcherListDate" :init-category="category" v-on:category="changeCategory"></v-list-switcher>
     <div class='content-top-top' v-if='inApp && haveMenu'></div>
     <v-list-content :init-list="contentListData" :has-more="hasMore" :category="category" v-on:top="changeTop" v-on:praise="praise"></v-list-content>
@@ -92,7 +92,7 @@
       return{
         pageSize:window.pagesize||10,
         sort:window.sort||0,
-        category:window.category||0,
+        category:this.menu,
         // pageIndex:window.pageIndexStart||0,
         // category: 0,
         pageIndex: 0,
@@ -168,8 +168,9 @@
           },500)
         }
         if (window.Units.getQuery('menuId') || window.Units.getQuery('menuId')==0){
-          data.menuId = window.Units.getQuery('menuId')
-          this.category = window.Units.getQuery('menuId')
+//          data.menuId = window.Units.getQuery('menuId')
+          data.menuId =that.category;
+//          this.category = window.Units.getQuery('menuId')
           that.getDataByApi(obj)
         }else {
           let sessionList = JSON.parse(sessionStorage.getItem("history"))
