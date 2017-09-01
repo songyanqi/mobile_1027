@@ -130,6 +130,7 @@
             var imgIndex=0;
             var imgs=$('.bottom_text img');
             for(var i=0;i<imgs.length;i++){
+                $(imgs[i]).css("max-width","100%");
                 imgs[i].onload = function () {
                   imgIndex++;
                   console.log("一个结束啦");
@@ -226,7 +227,7 @@
                 success:function(){
                   var obj = {
                     albumId: getQuery('albumId'),
-                    musicId: that.musicList[that.index].musicId
+                    musicId: that.musicList[that.musicList.length - 1 - that.index].musicId
                   }
                   api('/api/mg/content/music/onSub',obj).then(function(data){
                     console.log('data--->', data)
@@ -832,6 +833,7 @@
     margin-top:0.12rem;
   }
   .bottom_text{
+    width: 3.55rem;
     padding-left:0.1rem;
     padding-right:0.1rem;
     color:#666666;
@@ -841,9 +843,9 @@
     background: #fff;
     line-height: 0.18rem;
   }
-  .bottom_text img{
-    width: 3.55rem;
-  }
+  /*.bottom_text img{*/
+    /*width: 100%;*/
+  /*}*/
 
   .mask{
     background: #000000;

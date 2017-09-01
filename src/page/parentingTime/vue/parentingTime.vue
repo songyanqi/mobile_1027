@@ -8,6 +8,31 @@
       <div>有声绘本</div>
       <div>家庭百科</div>
     </div>
+    <div class="tab">
+      <div>早安音乐</div>
+      <div class="color">睡前故事
+        <div class="line"></div></div>
+      <div>有声绘本</div>
+      <div>家庭百科</div>
+    </div>
+    <div class="tab">
+      <div>早安音乐
+
+      </div>
+      <div>睡前故事</div>
+      <div class="color">有声绘本
+        <div class="line"></div>
+      </div>
+      <div>家庭百科</div>
+    </div>
+    <div class="tab">
+      <div class="color">早安音乐
+        <div class="line"></div>
+      </div>
+      <div>睡前故事</div>
+      <div>有声绘本</div>
+      <div>家庭百科</div>
+    </div>
   </div>
 </template>
 <script>
@@ -34,9 +59,12 @@
     position: absolute;
     bottom: 0;
     height: 1px;
-    background: green;
+    background: #FF4A7D;
     width: 0.58rem;
     left: 50%;
     margin-left: -0.29rem;
+  }
+  .color{
+    color:#FF4A7D;
   }
 </style>
