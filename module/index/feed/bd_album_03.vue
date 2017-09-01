@@ -677,5 +677,6 @@
   }
   .recommendData{
     width: 100%;
+    background: #fff;
   }
 </style>

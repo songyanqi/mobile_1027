@@ -35,7 +35,8 @@
     bottom: 0;
     height: 1px;
     background: green;
-    width: 80%;
-    margin:0 auto;
+    width: 0.58rem;
+    left: 50%;
+    margin-left: -0.29rem;
   }
 </style>
