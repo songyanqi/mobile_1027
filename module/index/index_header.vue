@@ -5,9 +5,9 @@
         <div class="head_index_top clearfix" :style="{'background': head.bgColor}">
           <a :href="head.image && head.image.command.content" class="left_icon_container">
             <span v-if="usersta == 3" class="shop_icon"></span>
-            <img v-if="usersta != 0" :src="head.image && head.image.url" class="shop_img">
-            <img v-if="usersta == 0" class="shop_img"
-                 src="http://pic.davdian.com/shop_logo/2016/06/13/80_80_f81f91d7ef5e31fa354fa935124dab20.png">
+            <img :src="head.image && head.image.url" class="shop_img">
+            <!--<img v-if="usersta == 0" class="shop_img"-->
+                 <!--src="http://pic.davdian.com/shop_logo/2016/06/13/80_80_f81f91d7ef5e31fa354fa935124dab20.png">-->
           </a>
           <a :href="head.search && head.search.command.content">
             <div class="search_con search_button" v-on:click='turn'>

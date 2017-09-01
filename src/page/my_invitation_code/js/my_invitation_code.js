@@ -9,7 +9,6 @@ import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
-import ua from '../../../common/js/module/ua.js';
 import nativeAncestry from '../../../common/js/module/nativeAncestor.js';
 
 login.needLogin();
@@ -25,7 +24,7 @@ new Vue({
       rule_form: false,
       response: null,
       login_form: true,  //登录显示
-      isApp: ua.isDvdApp(),
+      isApp: !!navigator.userAgent.match(/davdian|bravetime|vyohui/),
       show_pop: false
     }
   },
