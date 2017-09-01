@@ -31,7 +31,8 @@ new Vue({
       bobbyidlist:[],
       adviser_select:0,
       response2:null,
-      inapp:!!navigator.userAgent.match(/davdian|bravetime|vyohui/)
+      inapp:!!navigator.userAgent.match(/davdian|bravetime|vyohui/),
+      firsttime:0 //是否是第一次选定顾问
     }
   },
   computed: {
@@ -57,7 +58,8 @@ new Vue({
         let that = this;
         // 设置app头部标题栏
         native.Browser.setHead({
-          'title' : '选择我的顾问'
+          'title' : '选择我的顾问',
+          "rightBtn":0
         });
       });
     }
@@ -85,6 +87,12 @@ new Vue({
           if(response.code){
               popup.toast(response.data.msg || response.msg);
           }else{
+            /*如果有数据，证明不是第一次选定妈妈顾问*/
+            if(response.data&&response.data.tags.length){
+              that.firsttime = 0
+            }else{
+              that.firsttime = 1
+            }
             console.log("getUserTagInfo",response.data);
             if(response.data.distId){
               that.oncesdesc = true;
@@ -174,6 +182,7 @@ new Vue({
         popup.toast("您必须要选择一个顾问");
         return false;
       }
+      popup.loading();
       var that = this;
       let data = {
         "provId":that.addressId[0],
@@ -191,6 +200,7 @@ new Vue({
         data: encrypt(data),
         success(response) {
           if(response.code){
+            popup.loading(false);
             popup.toast(response.data.msg || response.msg);
           }else{
             if(that.inapp){
@@ -203,12 +213,18 @@ new Vue({
               } else {
                 baseHref = "bravetime.net";
               }
-              location.href = "davdian://invoke." + baseHref + "?cmd="+encodeURIComponent("davdian://call.Account.com?action=refreshUserInfo&callback=result&minv=4.2.0");
+              /*调起native*/
+              location.href = "davdian://call.Account.com?action=refreshUserInfo&callback=result&minv=4.2.0";
+              setTimeout(function () {
+                location.replace('/my_adviser.html?firsttime='+that.firsttime);
+              },500)
+            }else{
+              location.replace('/my_adviser.html?firsttime='+that.firsttime);
             }
-            location.replace('/my_adviser.html');
           }
         },
         error(error) {
+          popup.loading(false);
           popup.toast(error.statusText)
           // that.response = require('../json/choose_mama_adviser.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
