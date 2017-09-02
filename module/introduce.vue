@@ -58,9 +58,9 @@
             </div>
         </div>
         <div v-if='visitorFlag==0 && !error' class='noApply'>
-            <img src="//pic.davdian.com/free/2017/08/16/noApply.png">
-            <p>登陆后才能继续访问</p>
-            <span  @click='login'>立即登陆</span>
+            <img src="//pic.davdian.com/free/2017/09/01/Group.png">
+            <p>登录后才能继续访问</p>
+            <span @click='login'>立即登录</span>
         </div>
         <invite-card :show="inviteShow" :id="courseId" statistics="3" v-on:close="closeCard" kind="0"></invite-card>
         <div class="other_info">
@@ -183,16 +183,18 @@
         }
         span{
             display: inline-block;
-            height: 24px;
-            line-height: 22px;
-            width: 80px;
-            border: 1px solid #FF4A7D;
-            border-radius: 24px;
-            color: #FF4A7D;
-            background: #fff;
+            height: 66px;
+            line-height: 66px;
+            width: 280px;
+            border: 1px solid #999999;
+            border-radius: 200px;
+            color: #333333;
             text-align: center;
             margin-top: 0.1rem;
+            font-size:24px;
+            -webkit-transform:scale(0.5)
         }
+
     }
 </style>
 <script>

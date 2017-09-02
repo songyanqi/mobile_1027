@@ -443,12 +443,15 @@
     font-size:16px;
   }
   .line{
-    width: 3.55rem;
-    margin-left: 0.1rem;
-    height: 0.01rem;
+    position: relative;
+    left: -50%;
+    width: 7.1rem;
+    margin-left: 0.2rem;
+    height: 1px;
     margin-top: 0.135rem;
     margin-bottom: 0.134rem;
     background:#E1E1E1;
+    -webkit-transform:scale(0.5);
   }
 
 </style>

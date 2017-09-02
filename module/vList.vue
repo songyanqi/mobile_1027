@@ -130,6 +130,7 @@
                 haveMenu: true,
                 menuName: document.title || '动态',
                 needSaveParas:['pageIndex','category','hasMore','contentListData','switcherListDate','bannerListData','pos']
+
             }
         },
         watch:{
