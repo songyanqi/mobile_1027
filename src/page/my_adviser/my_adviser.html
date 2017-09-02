@@ -60,7 +60,7 @@
   </div>
   <span v-if="show_go_shop_btn">
     <div class="bottom_tops">妈妈顾问也可能会主动联系你，请留意微信和手机提醒；可在“我的”-“妈妈顾问”中再次查看妈妈顾问信息。</div>
-    <a :href="/" class="replaceAdviser" style="margin-top: 16px;">进入大V店</a>
+    <a href="/" class="replaceAdviser" style="margin-top: 16px;">进入大V店</a>
   </span>
   <span v-else>
     <div class="adviserBottom" v-if="response.data.nextModifyTime&&response.data.nextModifyTime!=''">*{{response.data.nextModifyTime}}后可更改顾问</div>

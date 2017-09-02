@@ -100,7 +100,6 @@ new Vue({
           }
         },
         error(error) {
-          that.response = require('../json/my_adviser.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
