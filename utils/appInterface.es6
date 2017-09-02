@@ -4,7 +4,9 @@ import dialog from './dialog.es6';
 import api from "./api.es6"
 
 let utils = utilsClass.utils;
+// console.log(window.iosInterface);
 let iosInterface = window.iosInterface = {};
+// console.log(window.iosInterface);
 
 iosInterface.getHeadAndFootData = () => {
   let defaultData = {
