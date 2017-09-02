@@ -39,12 +39,8 @@ new Vue({
         native.custom.initHead({
           showHead: 1,    // 是否展示头部
           backOnHead: 1,  // 头部返回按钮
+          btnText:""
         });
-        native.Browser.setHead({
-          'title': document.title,
-
-        });
-
         // 设置分享信息
         try {
           share.setShareInfo({

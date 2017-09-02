@@ -56,10 +56,14 @@ new Vue({
       // response变化后并渲染完dom,设置其他事项
       this.$nextTick(function () {
         let that = this;
+        native.custom.initHead({
+          showHead: 1,    // 是否展示头部
+          backOnHead: 1,  // 头部返回按钮
+          btnText:""
+        });
         // 设置app头部标题栏
         native.Browser.setHead({
-          'title' : '选择我的顾问',
-          "rightBtn":0
+          'title' : '选择我的顾问'
         });
       });
     }
