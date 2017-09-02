@@ -9,28 +9,43 @@
 
 <script>
   import {Picker} from 'vux';
-  import axios from 'axios';
+//  import axios from 'axios';
   export default {
     components: {
       Picker
     },
     methods: {
-      getDataFromNet(){
+      getData:function () {
         let that = this;
         let url = this.addressDataUrl||"//src.davdian.com/data/region.1501055940.json";
-        $.ajax()
-        axios.get(url)
-          .then(function(res){
-            that.netData = res.data;
+        //使用了原生JS的get请求
+        var obj = new XMLHttpRequest();  // XMLHttpRequest对象用于在后台与服务器交换数据
+        obj.open('GET', url, true);
+        obj.onreadystatechange = function() {
+          if (obj.readyState == 4 && obj.status == 200 || obj.status == 304) { // readyState == 4说明请求已完成
+            that.netData = JSON.parse(obj.responseText);
             that.addressPre = that.netData;
-          })
-          .catch(function (err) {
-            console.log("errrrrr");
-
+          }
+          if(obj.status == 0){
             setTimeout(function () {
-              that.getDataFromNet()
-            },200);
-          })
+              that.getData();
+            },200)
+          }
+        };
+        obj.send();
+//        $.ajax({
+//          url: url,
+//          success(res) {
+//            that.netData = res;
+//            that.addressPre = that.netData;
+//          },
+//          error(error) {
+//            console.log("就是",error);
+//            setTimeout(function () {
+//              that.getData();
+//            },200)
+//          }
+//        });
       },
       change(value) {
         var that = this;
@@ -100,20 +115,22 @@
            }
          }
        }
+       console.log("addressNow",addressNow);
        that.addressNow = addressNow;
        that.addressValueList = addressValueList;
        that.addressNameList = addressNameList;
        that.initData();
 
      },
-     addressid:function(){
+      addressid:function(){
         this.initData();
      }
    },
+
     created(){
       let that = this;
       that.initValue();
-      that.getDataFromNet();
+      that.getData();
     },
     data() {
       return {
