@@ -15,6 +15,23 @@
       Picker
     },
     methods: {
+      getDataFromNet(){
+        let that = this;
+        let url = this.addressDataUrl||"//src.davdian.com/data/region.1501055940.json";
+        $.ajax()
+        axios.get(url)
+          .then(function(res){
+            that.netData = res.data;
+            that.addressPre = that.netData;
+          })
+          .catch(function (err) {
+            console.log("errrrrr");
+
+            setTimeout(function () {
+              that.getDataFromNet()
+            },200);
+          })
+      },
       change(value) {
         var that = this;
         that.addressValue = value;
@@ -93,20 +110,11 @@
         this.initData();
      }
    },
-    
     created(){
       let that = this;
       that.initValue();
-      
-      let url = this.addressDataUrl||"//src.davdian.com/data/region.1501055940.json";
-      axios.get(url)
-      .then(function(res){
-        that.netData = res.data;
-        that.addressPre = that.netData;
-      })
-      
+      that.getDataFromNet();
     },
-    
     data() {
       return {
         addressNow:[],
