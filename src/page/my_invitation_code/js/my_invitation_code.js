@@ -41,6 +41,9 @@ new Vue({
           backOnHead: 1,  // 头部返回按钮
           btnText:""
         });
+        native.custom.setHead({
+          title: '邀请好友安装大V店APP',    // 是否展示头部
+        });
         // 设置分享信息
         try {
           share.setShareInfo({
