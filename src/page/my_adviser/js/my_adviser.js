@@ -60,7 +60,7 @@ new Vue({
   },
   created() {
     var that = this;
-    if (that.getQueryString("firsttime")) {
+    if (that.getQueryString("firsttime") == '1') {
       that.show_go_shop_btn = true;
     }
     this.getData();

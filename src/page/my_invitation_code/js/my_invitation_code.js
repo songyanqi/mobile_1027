@@ -126,7 +126,6 @@ new Vue({
     longPress: function (img) {
       window.timeOutEvent = 0;
       nativeAncestry.savePic(img);
-      console.log("长按");
     }
   },
   filters: {},
