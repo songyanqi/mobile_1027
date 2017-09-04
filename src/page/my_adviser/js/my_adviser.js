@@ -24,8 +24,8 @@ new Vue({
       response: null,
       show_tel: false,
       show_wx: false,
-      show_go_shop_btn:false, //显示去大V店按钮
-      inapp:!!navigator.userAgent.match(/davdian|bravetime|vyohui/)
+      show_go_shop_btn: false, //显示去大V店按钮
+      inapp: !!navigator.userAgent.match(/davdian|bravetime|vyohui/)
     }
   },
   computed: {},
@@ -37,15 +37,15 @@ new Vue({
         let that = this;
         // 设置app头部标题栏
         native.Browser.setHead({
-          'title' : '我的顾问',
-          "rightBtn":0
+          title: '我的顾问',
+          rightBtn: ""
         });
       });
     }
   },
   beforeCreate() {
     var that = this;
-     /*做个判断是不是从详情页和购物车页还有首页过来的*/
+    /*做个判断是不是从详情页和购物车页还有首页过来的*/
     // var historys = JSON.parse(sessionStorage.getItem("history"));
     // var num = historys.length;
     // if(num >= 3){
@@ -60,13 +60,13 @@ new Vue({
   },
   created() {
     var that = this;
-    if(that.getQueryString("firsttime")){
+    if (that.getQueryString("firsttime")) {
       that.show_go_shop_btn = true;
     }
     this.getData();
   },
   methods: {
-    dump2choose(){
+    dump2choose() {
       location.replace("/choose_mama_adviser.html");
     },
     /**
@@ -83,20 +83,20 @@ new Vue({
         dataType: 'json',
         data: encrypt({}),
         success(response) {
-          if(response.code){
-            if(response.code=="92001"){
+          if (response.code) {
+            if (response.code == "92001") {
               popup.alert({
-                title:"提示",
-                text:"请您先选择妈妈顾问",
-                btnCallback:function(){
+                title: "提示",
+                text: "请您先选择妈妈顾问",
+                btnCallback: function () {
                   location.replace("/choose_mama_adviser.html");
                 }
               })
-            }else{
+            } else {
               popup.toast(response.data.msg || response.msg);
             }
-          }else{
-             that.response = response;
+          } else {
+            that.response = response;
           }
         },
         error(error) {
