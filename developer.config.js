@@ -16,5 +16,5 @@ export default {
   //env_stage: 'beta',
   //env_num: '2',
   //page: '{collect}',
-  webpack: false,
+  //webpack: false,
 };

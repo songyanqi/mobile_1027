@@ -375,7 +375,9 @@
                             if (respone.data.code==30000){
                                 that.state=0
                                 that.visitorFlag = 0
-                                native.Browser.setHead({shareBtn:'0'})
+                                setTimeout(function () {
+                                  native.Browser.setHead({shareBtn:'0'})
+                                },500);
                             }else {
                                 if (respone.data.data && respone.data.code==0){
                                 if (respone.data){
@@ -1055,15 +1057,16 @@ only screen and (min-resolution:2dppx)
         }
         span{
             display: inline-block;
-            height: 33px;
-            line-height: 33px;
-            width: 140px;
-            border: 0.5px solid #999999;
-            border-radius: 100px;
+            height: 66px;
+            line-height: 66px;
+            width: 280px;
+            border: 1px solid #999999;
+            border-radius: 200px;
             color: #333333;
             text-align: center;
             margin-top: 0.1rem;
-          font-size:12px;
+            font-size:24px;
+            -webkit-transform: scale(0.5);
         }
     }
 </style>
