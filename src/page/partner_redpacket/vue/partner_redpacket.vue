@@ -48,7 +48,7 @@
     export default{
         data:function(){
             return{
-                app: !!navigator.userAgent.match(/davdian|bravetime|vyohui/),
+                isapp: !!navigator.userAgent.match(/davdian|bravetime|vyohui/),
                 bonusFlag:false,
                 bonus:{},
                 goodsList:false,
@@ -171,7 +171,7 @@
                 window.location.href = linkurl;
             },
             goProfile(){
-                if (this.app) {
+                if (this.isapp) {
                     native.Browser.goNativeHomePage()
                 }else {
                     window.location.href = window.location.host
