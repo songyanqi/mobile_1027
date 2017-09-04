@@ -41,8 +41,9 @@ new Vue({
           backOnHead: 1,  // 头部返回按钮
           btnText:""
         });
-        native.custom.setHead({
-          title: '邀请好友安装大V店APP',    // 是否展示头部
+        native.Browser.setHead({
+          title: '邀请好友安装大V店APP',
+          rightBtn:0
         });
         // 设置分享信息
         try {
@@ -56,7 +57,7 @@ new Vue({
     }
   },
   beforeCreate() {
-
+    document.title ='邀请好友安装大V店APP';
   },
   created() {
     this.getData();
