@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <htm>
 <head>
+  <script>
+    window.onerror = function(errorMessage, scriptURI, lineNumber) {
+        alert("on");
+        alert(errorMessage);
+      }
+  </script>
   @@include('meta.include')
   <link rel="stylesheet" href="[[static]]/page/choose_mama_adviser/css/choose_mama_adviser.css[[v]]">
 </head>
