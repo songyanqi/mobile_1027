@@ -853,6 +853,8 @@ const native = {
      * native.Audio.audioPlay();
      */
     audioPlay(param = {}){
+      param.sortNo=param.sortNo.toString();
+      param.albumId=param.albumId.toString();
       call({
         v: '4.2.0',
         host: 'Audio',

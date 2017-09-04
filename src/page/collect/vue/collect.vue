@@ -205,10 +205,10 @@
 </script>
 <style scoped>
   .empty{
-    height:50px;
+    height:100px;
   }
   .empty2{
-     height:10px;
+     height:50px;
    }
   .top{
     position: fixed;
