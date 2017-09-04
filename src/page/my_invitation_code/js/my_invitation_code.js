@@ -43,6 +43,7 @@ new Vue({
         });
         native.Browser.setHead({
           title: '邀请好友安装大V店APP',
+          rightBtn:0
         });
         // 设置分享信息
         try {
