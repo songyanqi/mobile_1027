@@ -15,6 +15,6 @@
 export default {
   //env_stage: 'beta',
   //env_num: '2',
-  page: '{my_adviser,choose_mama_adviser,my_invitation_code}',
-  webpack: false,
+  //page: '{my_adviser,choose_mama_adviser,my_invitation_code}',
+  //webpack: false,
 };
