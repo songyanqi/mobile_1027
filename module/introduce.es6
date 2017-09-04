@@ -205,8 +205,15 @@ export default {
             this.inviteShow=true;
         },
         invite1 () {
-            // window.location.href = '/t-10838.html?rp=course_detail&rl=inv_button'
+          if(this.inApp){
+            native.Browser.open({
+              "url":'/join_vip.html?id=348&kd_type=2&rp=course_detail&rl=inv_button'
+            });
+          }else{
             window.location.href = '/join_vip.html?id=348&kd_type=2&rp=course_detail&rl=inv_button'
+          }
+            // window.location.href = '/t-10838.html?rp=course_detail&rl=inv_button'
+
         },
         closeCard() {
             this.inviteShow = false;
