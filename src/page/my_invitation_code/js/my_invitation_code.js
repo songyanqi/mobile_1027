@@ -39,11 +39,13 @@ new Vue({
         native.custom.initHead({
           showHead: 1,    // 是否展示头部
           backOnHead: 1,  // 头部返回按钮
-          btnText:""
+          btnText: ""
         });
         native.Browser.setHead({
-          title: '邀请好友安装大V店APP',
-          rightBtn:""
+          'title': '邀请好友安装大V店APP',
+          'rightBtn': {
+            'text': ''
+          }
         });
         // 设置分享信息
         try {
@@ -57,7 +59,7 @@ new Vue({
     }
   },
   beforeCreate() {
-    document.title ='邀请好友安装大V店APP';
+
   },
   created() {
     this.getData();
@@ -97,7 +99,7 @@ new Vue({
     /*分享*/
     shareto: function () {
       var that = this;
-      native.custom.shareImg({"bigImageUrl": that.response.data.shareUrl,"shareType": '3',})
+      native.custom.shareImg({"bigImageUrl": that.response.data.shareUrl, "shareType": '3',})
     },
     /*什么是邀请码*/
     what_invite_code: function () {
@@ -126,7 +128,6 @@ new Vue({
     longPress: function (img) {
       window.timeOutEvent = 0;
       nativeAncestry.savePic(img);
-      console.log("长按");
     }
   },
   filters: {},

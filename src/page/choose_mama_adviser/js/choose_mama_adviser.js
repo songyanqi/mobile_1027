@@ -45,7 +45,6 @@ new Vue({
           Vue.set(that.bobbyidlist, index, that.hobbyid[index]);
         }
       });
-      console.log(that.bobbyidlist);
       return nums;
     }
   },
@@ -62,8 +61,10 @@ new Vue({
         });
         // 设置app头部标题栏
         native.Browser.setHead({
-          title: '选择我的顾问',
-          rightBtn: ""
+          'title': '选择我的顾问',
+          'rightBtn': {
+            'text': ''
+          }
         });
       });
     }
@@ -97,7 +98,6 @@ new Vue({
             } else {
               that.firsttime = 1
             }
-            console.log("getUserTagInfo", response.data);
             if (response.data.distId) {
               that.oncesdesc = true;
             }
@@ -117,7 +117,6 @@ new Vue({
     },
     getaddress: function (msg) {
       var that = this;
-      console.log("getaddress");
       that.address = msg.name;
       that.addressId = msg.value;
     },
