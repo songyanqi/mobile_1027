@@ -99,7 +99,7 @@ new Vue({
     /*分享*/
     shareto: function () {
       var that = this;
-      native.custom.shareImg({"bigImageUrl": that.response.data.shareUrl, "shareType": '3',})
+      native.custom.shareImg({"bigImageUrl": that.response.data.shareUrl, "shareType": '3',"v":"4.2.0"});
     },
     /*什么是邀请码*/
     what_invite_code: function () {
