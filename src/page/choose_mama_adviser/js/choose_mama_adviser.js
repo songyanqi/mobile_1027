@@ -61,8 +61,10 @@ new Vue({
         });
         // 设置app头部标题栏
         native.Browser.setHead({
-          title: '选择我的顾问',
-          rightBtn: ""
+          'title': '选择我的顾问',
+          'rightBtn': {
+            'text': ''
+          }
         });
       });
     }
