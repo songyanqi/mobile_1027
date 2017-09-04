@@ -148,6 +148,23 @@
     export default course_desc_0
 </script>
 <style scoped lang='sass'>
+    .course_desc_0 .class_introduce_tit .class_dis, .course_desc_0 .class_introduce_tit .theater_dis{
+      /*-webkit-box-flex: 1;*/
+      /*-webkit-flex: 1;*/
+      /*flex: 1;*/
+      width: 1.22rem;
+      /*display: -webkit-box;*/
+      /*display: -webkit-flex;*/
+      /*display: flex;*/
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      height: 16px;
+      box-sizing: border-box;
+    }
     .no_discuss{
         padding-bottom: 20px;
         text-align: center;

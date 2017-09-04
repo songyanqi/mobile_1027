@@ -168,7 +168,9 @@
                     });
             },
             linkUrl(linkurl){
-                window.location.href = linkurl;
+                if(!this.isapp){
+                  window.location.href = linkurl;
+                }
             },
             goProfile(){
                 if (this.isapp) {
