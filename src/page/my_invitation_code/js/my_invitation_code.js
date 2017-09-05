@@ -41,7 +41,7 @@ new Vue({
           backOnHead: 1,  // 头部返回按钮
           btnText: ""
         });
-        native.Browser.setHead({
+        native.custom.setHead({
           'title': '邀请好友安装大V店APP',
           'rightBtn': {
             'text': ''
