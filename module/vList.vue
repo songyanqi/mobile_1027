@@ -1,7 +1,7 @@
 <template>
   <div class="classroom_container">
     <div class="top0 true_top" v-if='!inApp'>
-      <div class="top_container">
+      <div class="top_container" v-if="!isShow">
         <div class="top_left">
           <a class="top_back" href="javascript:history.back();">
             <span class="home_arrow"></span>
@@ -9,6 +9,23 @@
         </div>
         <div class="title_container" v-if='haveMenu'>
           动态
+        </div>
+        <div class="title_container" v-text='menuName' v-if='!haveMenu'></div>
+        <div class="top_right" v-if='haveMenu'>
+          <a class="top_back" href="class_category.html"
+             data-dav-tj="classroom|category|category|1|category@classroom">
+            <span class="classification_search_ico"></span>
+          </a>
+        </div>
+      </div>
+      <div class="top_container" v-if="isShow">
+        <div class="top_left">
+          <a class="top_back" href="javascript:history.back();">
+            <span class="home_arrow"></span>
+          </a>
+        </div>
+        <div class="title_container" v-if='haveMenu'>
+          亲子时光
         </div>
         <div class="title_container" v-text='menuName' v-if='!haveMenu'></div>
         <div class="top_right" v-if='haveMenu'>
