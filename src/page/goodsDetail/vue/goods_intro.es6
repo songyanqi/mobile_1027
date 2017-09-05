@@ -52,6 +52,15 @@ export default {
         },
         deep: true,
       },
+      goodsname: {
+        handler () {
+          this.initMember(this.infoObj);
+          if (this.infoObj.isComingActivity) {
+            this.isLimitBuy = true;
+          }
+        },
+        deep: true,
+      },
       singleactivity: {
         handler (newInfoObj,oldInfoObj) {
           this.cutDownTime(newInfoObj.lastTime);
