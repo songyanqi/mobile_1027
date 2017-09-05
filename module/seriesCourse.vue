@@ -378,7 +378,7 @@
                                 that.state=0
                                 that.visitorFlag = 0
                                 setTimeout(function () {
-                                  native.Browser.setHead({shareBtn:'0'})
+                                  native.Browser.initHead({shareBtn:'0'})
                                 },500);
                             }else {
                                 if (respone.data.data && respone.data.code==0){
