@@ -41,12 +41,14 @@ new Vue({
           backOnHead: 1,  // 头部返回按钮
           btnText: ""
         });
-        native.custom.setHead({
-          'title': '邀请好友安装大V店APP',
-          'rightBtn': {
-            'text': ''
-          }
-        });
+        setTimeout(function () {
+          native.custom.setHead({
+            'title': '邀请好友安装大V店APP',
+            'rightBtn': {
+              'text': ''
+            }
+          });
+        },200);
         // 设置分享信息
         try {
           share.setShareInfo({

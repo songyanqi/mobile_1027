@@ -166,7 +166,7 @@
             </p>
             <p class='delete_btn' @click='goTeacherProfile'>进入老师个人主页</p>
         </div>
-        <div v-if='state==0' class='noApply'>
+        <div v-if='visitorFlag==0' class='noApply'>
             <img src="//pic.davdian.com/free/2017/09/01/Group.png">
             <p>登录后才能继续访问</p>
             <span @click='login'>立即登录</span>
@@ -263,8 +263,10 @@
                                 that.visitorFlag = 0
                                 native.Browser.setHead({shareBtn:'0'})
                             }else {
+
                                 if (respone.data.data && respone.data.code==0){
                                     if (respone.data){
+
                                             that.haveShareCard = respone.data.data.haveShareCard;
                                             console.log("response",respone.data);
                                             that.seriesCover = respone.data.data.seriesCover
@@ -282,10 +284,10 @@
         //                                    window.imgUrl = that.seriesCover
         //                                    window.descContent = respone.data.data.seriesDesc
         //                                    window.shareTitle = respone.data.data.seriesTitle
-                                            that.setTitle(that.seriesShareIncome)
                                             console.log(that.haveShareCard, that.haveShareCard !='0')
                                             if (that.haveShareCard && that.haveShareCard !='0' && that.haveShareCard !=0)
                                             window.moreShareInfo = {seriesId:that.seriesId}
+                                        that.setTitle(that.seriesShareIncome)
                                             var shareInfo = {
                                                 successTimelineShare: function () {
                                                     layout.statisticsShare({shareType:1,shareSource:18})
@@ -383,24 +385,26 @@
                                 if (respone.data){
                                         that.haveShareCard = respone.data.data.haveShareCard;
                                         console.log("response",respone.data);
-                                        that.seriesCover = respone.data.data.seriesCover
-                                        that.dataList = respone.data.data
-                                        that.state = respone.data.visitor_status
-                                        if (that.state == 0){
+                                          that.seriesCover = respone.data.data.seriesCover
+                                          that.dataList = respone.data.data
+                                          that.state = respone.data.visitor_status
+                                          if (that.state == 0){
                                             native.Browser.setHead({shareBtn:'0'})
-                                        }
-                                        that.userTicket = respone.data.data.userTicket
-                                        that.courseTypeSwitch = respone.data.data.courseTypeSwitch
-                                        that.coursePriceSwitch = respone.data.data.coursePriceSwitch
-                                        that.seriesType = respone.data.data.seriesType
-                                        that.seriesPrice = respone.data.data.seriesPrice
-                                        that.seriesShareIncome = respone.data.data.seriesShareIncome
-    //                                    window.imgUrl = that.seriesCover
-    //                                    window.descContent = respone.data.data.seriesDesc
-    //                                    window.shareTitle = respone.data.data.seriesTitle
-                                        that.setTitle(that.seriesShareIncome)
+                                          }
+                                          that.userTicket = respone.data.data.userTicket
+                                          that.courseTypeSwitch = respone.data.data.courseTypeSwitch
+                                          that.coursePriceSwitch = respone.data.data.coursePriceSwitch
+                                          that.seriesType = respone.data.data.seriesType
+                                          that.seriesPrice = respone.data.data.seriesPrice
+                                          that.seriesShareIncome = respone.data.data.seriesShareIncome
+                                          //                                    window.imgUrl = that.seriesCover
+                                          //                                    window.descContent = respone.data.data.seriesDesc
+                                          //                                    window.shareTitle = respone.data.data.seriesTitle
+
+
                                         if (that.haveShareCard && that.haveShareCard !='0' && that.haveShareCard !=0)
                                         window.moreShareInfo = {seriesId:that.seriesId}
+                                        that.setTitle(that.seriesShareIncome);
                                         var shareInfo = {
                                             successTimelineShare: function () {
                                                 layout.statisticsShare({shareType:1,shareSource:18})
