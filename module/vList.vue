@@ -1,7 +1,7 @@
 <template>
   <div class="classroom_container">
     <div class="top0 true_top" v-if='!inApp'>
-      <div class="top_container">
+      <div class="top_container" v-if="!isShow">
         <div class="top_left">
           <a class="top_back" href="javascript:history.back();">
             <span class="home_arrow"></span>
@@ -9,6 +9,23 @@
         </div>
         <div class="title_container" v-if='haveMenu'>
           动态
+        </div>
+        <div class="title_container" v-text='menuName' v-if='!haveMenu'></div>
+        <div class="top_right" v-if='haveMenu'>
+          <a class="top_back" href="class_category.html"
+             data-dav-tj="classroom|category|category|1|category@classroom">
+            <span class="classification_search_ico"></span>
+          </a>
+        </div>
+      </div>
+      <div class="top_container" v-if="isShow">
+        <div class="top_left">
+          <a class="top_back" href="javascript:history.back();">
+            <span class="home_arrow"></span>
+          </a>
+        </div>
+        <div class="title_container" v-if='haveMenu'>
+          亲子时光
         </div>
         <div class="title_container" v-text='menuName' v-if='!haveMenu'></div>
         <div class="top_right" v-if='haveMenu'>
@@ -108,6 +125,7 @@
   import comFooter from '../src/component/com-footer.vue'
   import layout from "./layout/api.es6";
   import {getQuery} from "../utils/utils.es6"
+  import share from "../src/common/js/module/share.js"
   export default{
     data(){
       return{
@@ -150,6 +168,16 @@
     },
     mounted(){
 
+      try {
+        share.setShareInfo({
+          title: "亲子时光|妈妈商学院",
+          desc: "睡前故事|早安音乐|有声绘本|家庭百科，全都在这里",
+          link: window.location.href,
+          imgUrl: "http://pic.davdian.com/free/2017/08/30/210_210_f115620a5e0d745863faaa11f7b49aa3.jpeg"
+        })
+      } catch (err) {
+        alert(err)
+      }
     },
     components:{
       vListSwitcher:vListSwitcher,
