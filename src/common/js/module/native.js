@@ -576,7 +576,7 @@ const native = {
      */
     shareInfo(param = {}) {
       call({
-        v: '3.3.0',
+        v: param.v || '3.3.0',
         host: 'Share',
         action: 'shareInfo',
         param: param,

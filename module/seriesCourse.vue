@@ -166,7 +166,7 @@
             </p>
             <p class='delete_btn' @click='goTeacherProfile'>进入老师个人主页</p>
         </div>
-        <div v-if='state==0' class='noApply'>
+        <div v-if='visitorFlag==0' class='noApply'>
             <img src="//pic.davdian.com/free/2017/09/01/Group.png">
             <p>登录后才能继续访问</p>
             <span @click='login'>立即登录</span>
