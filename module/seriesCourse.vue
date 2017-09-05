@@ -261,9 +261,10 @@
                             if (respone.data.code==30000){
                                 that.state=0
                                 that.visitorFlag = 0
-                                native.Browser.initHead({shareBtn:'0'})
+                                setTimeout(function () {
+                                  native.Browser.initHead({content:{shareOnHead:'0'}})
+                                },100)
                             }else {
-
                                 if (respone.data.data && respone.data.code==0){
                                     if (respone.data){
 
@@ -364,7 +365,7 @@
                         },400)
                         setTimeout(function(){
                             window.bravetime.initHead()
-                        },500)
+                        },50)
                         if (respone.data && respone.data.code==30024){
                             // that.deleteFlag = false
                             if (JSON.parse(sessionStorage.getItem('history')).length > 1){
@@ -377,10 +378,14 @@
                             if (respone.data.code==30000){
                                 that.state=0
                                 that.visitorFlag = 0
-                                alert(8);
                                 setTimeout(function () {
-                                  native.Browser.setHead({shareBtn:'0'})
-                                },500);
+                                  native.Browser.initHead(
+                                      {
+                                        content: {
+                                          shareOnHead: 0
+                                        }
+                                      })
+                                },100);
 
                             }else {
                                 if (respone.data.data && respone.data.code==0){
