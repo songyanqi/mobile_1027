@@ -988,10 +988,8 @@ const native = {
       // 参数合并
       param = $.extend({}, defaultSetHead, param);
 
-      // 调用Browser.initHead接口
-      native.Browser.setHead({
-        content: param
-      });
+      // 调用Browser.setHead接口
+      native.Browser.setHead(param);
     },
 
     /**
