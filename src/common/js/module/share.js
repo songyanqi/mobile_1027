@@ -23,6 +23,7 @@ export default {
     });
    */
   setShareInfo(param = {}, response) {
+
     if (ua.isWeiXin()) {
       weixin.setShareInfo(param, response);
     } else if (ua.isDvdApp()) {

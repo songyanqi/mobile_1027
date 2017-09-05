@@ -35,7 +35,6 @@ export default {
     if (location.href.indexOf("localhost") > -1 || (location.href.indexOf("//192.168") > -1)) {
       return;
     }
-
     // param分享参数覆盖默认分享信息
     let shareInfo = $.extend({}, config.defaultShareInfo, {
       type: '', // 分享类型,music、video或link，不填默认为link
@@ -99,10 +98,9 @@ export default {
           updateVerifyInfo(verify);
           return;
         }
-
         // 通过config接口注入权限验证配置
         wx.config({
-          debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+          debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
           appId: appInfo.appId, // 必填，公众号的唯一标识
           timestamp: appInfo.timestamp, // 必填，生成签名的时间戳
           nonceStr: appInfo.nonceStr, // 必填，生成签名的随机串
