@@ -131,6 +131,7 @@
                 menuName: document.title || '动态',
                 needSaveParas:['pageIndex','category','hasMore','contentListData','switcherListDate','bannerListData','pos']
 
+
             }
         },
         watch:{
@@ -153,6 +154,13 @@
                 }
             }
             this.init()
+            if(this.isShow){
+              if (sessionStorage.getItem("v_list")){
+                this.category = layout.sStorageGet('v_list','category');
+              }else{
+                this.category=this.isShow.split("-")[0];
+              }
+            }
         },
         updated(){
 
