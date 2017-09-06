@@ -5,11 +5,21 @@
     <!-- Swiper -->
     <div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
+        <div class="swiper-slide">
+          <a href="">
+            <img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="">
+            <img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'">
+          </a>
+        </div>
+        <div class="swiper-slide">
+          <a href="">
+            <img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'">
+          </a>
+        </div>
         <div class="swiper-slide"><a href="">查看更多</a></div>
       </div>
     </div>
@@ -19,16 +29,22 @@
 
 <script>
   export default {
-    props: {
-    },
+    props: {},
     data() {
-      return {
-      }
+      return {}
     },
     computed: {},
     created(){
     },
     mounted() {
+      // 初始化轮播图
+      var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 'auto',
+        paginationClickable: true,
+        spaceBetween: 30,
+        freeMode: true
+      });
     },
     methods: {
       /**
@@ -64,6 +80,8 @@
 
   // 底部菜单栏
   .com-act-subscribe {
-
+    .swiper-slide {
+      width: 1rem;
+    }
   }
 </style>
