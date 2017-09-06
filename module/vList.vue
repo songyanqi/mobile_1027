@@ -164,7 +164,6 @@
 
     },
     mounted(){
-
       try {
         share.setShareInfo({
           title: "亲子时光|妈妈商学院",
