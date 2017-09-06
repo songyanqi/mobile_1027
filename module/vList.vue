@@ -183,15 +183,17 @@
             shareBtn:"1",
           });
         },400);
-        window.iosInterface.getShareInfo = function () {
-          var shareInfo = {
-            title: "亲子时光|妈妈商学院",
-            desc: "睡前故事|早安音乐|有声绘本|家庭百科，全都在这里",
-            link: window.location.href,
-            imgUrl: "http://pic.davdian.com/free/2017/08/30/210_210_f115620a5e0d745863faaa11f7b49aa3.jpeg"
+        setTimeout(function(){
+          window.iosInterface.getShareInfo = function () {
+            var shareInfo = {
+              title: "亲子时光|妈妈商学院",
+              desc: "睡前故事|早安音乐|有声绘本|家庭百科，全都在这里",
+              link: window.location.href,
+              imgUrl: "http://pic.davdian.com/free/2017/08/30/210_210_f115620a5e0d745863faaa11f7b49aa3.jpeg"
+            };
+            return JSON.stringify(shareInfo);
           };
-          return JSON.stringify(shareInfo);
-        };
+        },300);
       }
     },
     components:{
