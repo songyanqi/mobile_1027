@@ -41,12 +41,14 @@ new Vue({
           backOnHead: 1,  // 头部返回按钮
           btnText: ""
         });
-        native.Browser.setHead({
-          'title': '邀请好友安装大V店APP',
-          'rightBtn': {
-            'text': ''
-          }
-        });
+        setTimeout(function () {
+          native.custom.setHead({
+            'title': '邀请好友安装大V店APP',
+            'rightBtn': {
+              'text': ''
+            }
+          });
+        },200);
         // 设置分享信息
         try {
           share.setShareInfo({
@@ -99,7 +101,7 @@ new Vue({
     /*分享*/
     shareto: function () {
       var that = this;
-      native.custom.shareImg({"bigImageUrl": that.response.data.shareUrl, "shareType": '3',})
+      native.custom.shareImg({"bigImageUrl": that.response.data.shareUrl, "shareType": '3',"v":"4.2.0"})
     },
     /*什么是邀请码*/
     what_invite_code: function () {

@@ -166,7 +166,7 @@
             </p>
             <p class='delete_btn' @click='goTeacherProfile'>进入老师个人主页</p>
         </div>
-        <div v-if='state==0' class='noApply'>
+        <div v-if='visitorFlag==0' class='noApply'>
             <img src="//pic.davdian.com/free/2017/09/01/Group.png">
             <p>登录后才能继续访问</p>
             <span @click='login'>立即登录</span>
@@ -261,9 +261,10 @@
                             if (respone.data.code==30000){
                                 that.state=0
                                 that.visitorFlag = 0
-                                native.Browser.setHead({shareBtn:'0'})
+                                setTimeout(function () {
+                                  native.Browser.initHead({content:{shareOnHead:'0'}})
+                                },100)
                             }else {
-
                                 if (respone.data.data && respone.data.code==0){
                                     if (respone.data){
 
@@ -364,7 +365,7 @@
                         },400)
                         setTimeout(function(){
                             window.bravetime.initHead()
-                        },500)
+                        },50)
                         if (respone.data && respone.data.code==30024){
                             // that.deleteFlag = false
                             if (JSON.parse(sessionStorage.getItem('history')).length > 1){
@@ -378,8 +379,14 @@
                                 that.state=0
                                 that.visitorFlag = 0
                                 setTimeout(function () {
-                                  native.Browser.setHead({shareBtn:'0'})
-                                },500);
+                                  native.Browser.initHead(
+                                      {
+                                        content: {
+                                          shareOnHead: 0
+                                        }
+                                      })
+                                },100);
+
                             }else {
                                 if (respone.data.data && respone.data.code==0){
                                 if (respone.data){

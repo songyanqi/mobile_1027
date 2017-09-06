@@ -35,7 +35,6 @@ export default {
     if (location.href.indexOf("localhost") > -1 || (location.href.indexOf("//192.168") > -1)) {
       return;
     }
-
     // param分享参数覆盖默认分享信息
     let shareInfo = $.extend({}, config.defaultShareInfo, {
       type: '', // 分享类型,music、video或link，不填默认为link

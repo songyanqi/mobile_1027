@@ -263,7 +263,6 @@ body.in_app .top0.true_top{
     font-size: 14px;
     margin-bottom: 1px;
     height: 38px;
-    border-bottom: 0.5px solid rgba(0,0,0,0.05);
     background-color: #fff;
 }
 .v_menu[v-cloak]{
@@ -296,7 +295,6 @@ body.in_app .top0.true_top{
 }
 .v_menu .swiper-slide{
     width:22.22vw;
-    max-width:142px;
 }
 
 .v_menu li.hover span {

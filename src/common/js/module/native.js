@@ -86,12 +86,10 @@ function getProtocal(param = {}) {
 function innerCall(param = {}) {
   // 不在app中,直接返回
   if (!ua.isDvdApp()) return;
-
   // 参数检查
   if (!param.host || !param.action || !param.v) {
     throw new Error('参数不全');
   }
-
   // 参数默认值
   param.invalid = param.invalid || function () {
     console.trace();
@@ -576,7 +574,7 @@ const native = {
      */
     shareInfo(param = {}) {
       call({
-        v: '3.3.0',
+        v: param.v || '3.3.0',
         host: 'Share',
         action: 'shareInfo',
         param: param,
@@ -841,7 +839,7 @@ const native = {
      */
     goAudioDetail(param = {}) {
       call({
-        v: '4.2.0',
+        v: '5.0.0',
         host: 'Audio',
         action: 'goAudioDetail',
         param: param
@@ -856,7 +854,7 @@ const native = {
       param.sortNo=param.sortNo.toString();
       param.albumId=param.albumId.toString();
       call({
-        v: '4.2.0',
+        v: '5.0.0',
         host: 'Audio',
         action: 'audioPlay',
         param: param
@@ -869,7 +867,7 @@ const native = {
      */
     audioLocation(param = {}){
       call({
-        v: '4.2.0',
+        v: '5.0.0',
         host: 'Audio',
         action: 'audioLocation',
         param: param
@@ -882,7 +880,7 @@ const native = {
      */
     audioPlayHistory(param = {}){
       call({
-        v: '4.2.0',
+        v: '5.0.0',
         host: 'Audio',
         action: 'audioPlayHistory',
         param: param
@@ -895,7 +893,7 @@ const native = {
      */
     audioSubscription(param = {}){
       call({
-        v: '4.2.0',
+        v: '5.0.0',
         host: 'Audio',
         action: 'audioSubscription',
         param: param
@@ -988,10 +986,8 @@ const native = {
       // 参数合并
       param = $.extend({}, defaultSetHead, param);
 
-      // 调用Browser.initHead接口
-      native.Browser.setHead({
-        content: param
-      });
+      // 调用Browser.setHead接口
+      native.Browser.setHead(param);
     },
 
     /**
