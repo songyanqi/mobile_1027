@@ -2,6 +2,18 @@
   <!--底部菜单栏-->
   <div class="com-act-subscribe">
     爆品预约
+    <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
+        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
+        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
+        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
+        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
+        <div class="swiper-slide"><a href="">查看更多</a></div>
+      </div>
+    </div>
+
   </div>
 </template>
 
