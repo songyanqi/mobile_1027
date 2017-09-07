@@ -204,10 +204,10 @@
           }
           .btn {
             flex: 1;
+            @include height(ptr(44));
             color: #FF4A7D;
             font-size: ptr(16);
             text-align: center;
-            line-height: ptr(44);
             &.cancel {
               color: #666;
             }

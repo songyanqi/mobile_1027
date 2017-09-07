@@ -12,7 +12,7 @@
   <div class="adviser_box">
     <div class="adviserImg">
       <img :src="response.data.avatar" alt="">
-      <div>官方顾问</div>
+      <div><span>官方顾问</span></div>
     </div>
     <div class="adviserName">
       {{response.data.nickname}}
@@ -44,9 +44,6 @@
       <ul>
         <li class="number">{{response.data.mobile}}</li>
         <li class="copy">复制电话号码（可在微信中尝试添加好友）</li>
-        <a class="sms" href=" ">
-          <li>发送短信</li>
-        </a>
         <a class="tel" :href="'tel:'+response.data.mobile">
           <li>拨打电话</li>
         </a>
@@ -63,11 +60,11 @@
   </div>
   <span v-if="show_go_shop_btn">
     <div class="bottom_tops">妈妈顾问也可能会主动联系你，请留意微信和手机提醒；可在“我的”-“妈妈顾问”中再次查看妈妈顾问信息。</div>
-    <a :href="response.shop_url" class="replaceAdviser" style="margin-top: 16px;">进入大V店</a>
+    <a href="/" class="replaceAdviser" style="margin-top: 16px;">进入大V店</a>
   </span>
   <span v-else>
     <div class="adviserBottom" v-if="response.data.nextModifyTime&&response.data.nextModifyTime!=''">*{{response.data.nextModifyTime}}后可更改顾问</div>
-    <a @click="dump2choose" class="replaceAdviser" style="margin-top: 40px;">更换顾问</a>
+    <a @click="dump2choose" class="replaceAdviser" v-if="response.data.canChange == '1'" style="margin-top: 40px;">更换顾问</a>
   </span>
 </div>
 @@include('vendor.include')

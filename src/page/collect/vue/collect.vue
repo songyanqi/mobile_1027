@@ -12,7 +12,6 @@
     <data_mask2 v-if="!isApp && maskFlag2"></data_mask2>
     <top v-if="!isApp"></top>
   </div>
-
 </template>
 <script>
   import index_feed from '../../../../module/index/index_feed.vue'
@@ -33,6 +32,7 @@
   import share from '../../../common/js/module/share.js';
   import ua from '../../../common/js/module/ua.js';
   import Cookies from 'js-cookie'
+  import common from '../../../common/js/common.js'
   export default {
     components:{
       index_feed:index_feed,
@@ -55,8 +55,8 @@
         price:0,
         name:"collect",
         isApp:util.utils.isApp(),
-        maskFlag:false,
-        maskFlag2:false,
+        maskFlag:null,
+        maskFlag2:null,
         title:"",
         isFree:null,
         titleN: '合辑详情',
@@ -89,24 +89,27 @@
               };
             api("/api/mg/content/album/getAlbumData",obj)
               .then(function (result) {
-
-                // 在微信中时，立即调用接口判断是否需要微信授权
-                if (ua.isWeiXin()) {
-                  // alert(ts.initResponse.data.needWxAuth === '1');
-                  // alert(Cookies.get('act_baby_weixin_auth'));
-                  if (result.data.needWxAuth === 1 && Cookies.get('act_baby_weixin_auth') === undefined) {
-                    Cookies.set('act_baby_weixin_auth', 1, {
-                      // domain: util.getBaseDomain(),
-                      // path: '/',
-                      // expires: 1,   // 有效时间1天
-                      expires: 1 / 24 / 60    // 有效时间1分钟
-                    });
-                    // weixin.goAuthPage(true);
-                    // ts.initResponse.data.authUrl值为http://open.davdian.com/WechatAPI/auth?access_key=davdian@)!$!)!*&get_open_id=1
-                    location.href = result.data.authUrl + '&refer=' + location.href;
-                    throw new Error(`即将跳转微信授权页(${location.href})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
+                  try{
+                    common.checkRedirect(result);
+                  }catch(e){
                   }
-                }
+                  // 在微信中时，立即调用接口判断是否需要微信授权
+                  if (ua.isWeiXin()) {
+                    // alert(ts.initResponse.data.needWxAuth === '1');
+                    // alert(Cookies.get('act_baby_weixin_auth'));
+                    if (result.data.needWxAuth === 1 && Cookies.get('act_baby_weixin_auth') === undefined) {
+                      Cookies.set('act_baby_weixin_auth', 1, {
+                        // domain: util.getBaseDomain(),
+                        // path: '/',
+                        // expires: 1,   // 有效时间1天
+                        expires: 1 / 24 / 60    // 有效时间1分钟
+                      });
+                      // weixin.goAuthPage(true);
+                      // ts.initResponse.data.authUrl值为http://open.davdian.com/WechatAPI/auth?access_key=davdian@)!$!)!*&get_open_id=1
+                      location.href = result.data.authUrl + '&refer=' + location.href;
+//                      throw new Error(`即将跳转微信授权页(${location.href})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
+                    }
+                  }
 
                 if(result.code==0){
                   if (result.data && result.data.shareInfo){
@@ -159,20 +162,35 @@
                       'isShowAudio':1,
                     });
                   }
-                  setTimeout(function(){
-                    native.Browser.setHead({
+
+                  if(result.data.attr.income!="赚0元"){
+                    var obj={
                       'title':that.titleN,
                       'backBtn':'1',
                       'shareBtn':"1",
-                      'shareMoneyStr': result.data.attr.income
-                    })
-                  },400)
-                }else{
-                  that.maskFlag=true;
-                  if(result.data.msg){
-                    dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                      'shareMoneyStr':result.data.attr.income
+                    };
+                    setTimeout(function(){
+                      native.Browser.setHead(obj)
+                    },100)
                   }else{
-                    dialog.alert('code:'+result.code);
+                    var obj={
+                      'title':that.titleN,
+                      'backBtn':'1',
+                      'shareBtn':"1"
+                    };
+                    setTimeout(function(){
+                      native.Browser.setHead(obj)
+                    },100)
+                  }
+                }else{
+                  if(result.code!=11012){
+                    that.maskFlag=true;
+                    if(result.data.msg){
+                      dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                    }else{
+                      dialog.alert('code:'+result.code);
+                    }
                   }
                 }
               }).catch(function(e){
@@ -187,10 +205,10 @@
 </script>
 <style scoped>
   .empty{
-    height:50px;
+    height:100px;
   }
   .empty2{
-     height:10px;
+     height:50px;
    }
   .top{
     position: fixed;

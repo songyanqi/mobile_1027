@@ -147,9 +147,7 @@
         .tip {
           border-radius: ptr(4);
           background: white;
-          display: flex;
           align-items: center;
-          flex-direction: column;
           box-sizing: border-box;
           padding: ptr(15) ptr(15);
           min-height: ptr(72);

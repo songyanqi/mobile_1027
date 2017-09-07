@@ -6,15 +6,45 @@
     </div>
   </div>
 </template>
-
 <script>
-  import {Picker} from 'vux';
-  import axios from 'axios';
+  import Picker from "../page/vux-fix/picker.vue";
   export default {
     components: {
       Picker
     },
     methods: {
+      getData:function () {
+        let that = this;
+        let url = this.addressDataUrl||"//src.davdian.com/data/region.1501055940.json";
+        //使用了原生JS的get请求
+        var obj = new XMLHttpRequest();  // XMLHttpRequest对象用于在后台与服务器交换数据
+        obj.open('GET', url, true);
+        obj.onreadystatechange = function() {
+          if (obj.readyState == 4 && obj.status == 200 || obj.status == 304) { // readyState == 4说明请求已完成
+            that.netData = JSON.parse(obj.responseText);
+            that.addressPre = that.netData;
+          }
+          if(obj.status == 0){
+            setTimeout(function () {
+              that.getData();
+            },200)
+          }
+        };
+        obj.send();
+//        $.ajax({
+//          url: url,
+//          success(res) {
+//            that.netData = res;
+//            that.addressPre = that.netData;
+//          },
+//          error(error) {
+//            console.log("就是",error);
+//            setTimeout(function () {
+//              that.getData();
+//            },200)
+//          }
+//        });
+      },
       change(value) {
         var that = this;
         that.addressValue = value;
@@ -83,36 +113,87 @@
            }
          }
        }
+       console.log("addressNow",addressNow);
        that.addressNow = addressNow;
        that.addressValueList = addressValueList;
        that.addressNameList = addressNameList;
        that.initData();
 
      },
-     addressid:function(){
+      addressid:function(){
         this.initData();
      }
    },
-    
+
     created(){
       let that = this;
       that.initValue();
-      
-      let url = this.addressDataUrl||"//src.davdian.com/data/region.1501055940.json";
-      axios.get(url)
-      .then(function(res){
-        that.netData = res.data;
-        that.addressPre = that.netData;
-      })
-      
+      that.getData();
     },
-    
     data() {
       return {
         addressNow:[],
         addressValue: [],
         addressPre:[],
-        addressNameList:[]
+        addressNameList:[],
+        year7: [{
+          name: '中国',
+          value: 'china',
+          parent: 0
+        }, {
+          name: '美国',
+          value: 'USA',
+          parent: 0
+        }, {
+          name: '广东',
+          value: 'china001',
+          parent: 'china'
+        }, {
+          name: '广西',
+          value: 'china002',
+          parent: 'china'
+        }, {
+          name: '美国001',
+          value: 'usa001',
+          parent: 'USA'
+        }, {
+          name: '美国002',
+          value: 'usa002',
+          parent: 'USA'
+        }, {
+          name: '广州',
+          value: 'gz',
+          parent: 'china001'
+        }, {
+          name: '深圳',
+          value: 'sz',
+          parent: 'china001'
+        }, {
+          name: '广西001',
+          value: 'gz',
+          parent: 'china002'
+        }, {
+          name: '广西002',
+          value: 'sz',
+          parent: 'china002'
+        }, {
+          name: '美国001_001',
+          value: '0003',
+          parent: 'usa001'
+        }, {
+          name: '美国001_002',
+          value: '0004',
+          parent: 'usa001'
+        }, {
+          name: '美国002_001',
+          value: '0005',
+          parent: 'usa002'
+        }, {
+          name: '美国002_002',
+          value: '0006',
+          parent: 'usa002'
+        }],
+        year7Value: []
       }
     }
   }
@@ -164,5 +245,4 @@
       transform: translateY(0%);
     }
   }
-
 </style>

@@ -166,10 +166,10 @@
             </p>
             <p class='delete_btn' @click='goTeacherProfile'>进入老师个人主页</p>
         </div>
-        <div v-if='state==0' class='noApply'>
-            <img src="//pic.davdian.com/free/2017/08/16/noApply.png">
-            <p>登陆后才能继续访问</p>
-            <span @click='login'>立即登陆</span>
+        <div v-if='visitorFlag==0' class='noApply'>
+            <img src="//pic.davdian.com/free/2017/09/01/Group.png">
+            <p>登录后才能继续访问</p>
+            <span @click='login'>立即登录</span>
         </div>
     </div>
 </template>
@@ -261,10 +261,13 @@
                             if (respone.data.code==30000){
                                 that.state=0
                                 that.visitorFlag = 0
-                                native.Browser.setHead({shareBtn:'0'})
+                                setTimeout(function () {
+                                  native.Browser.initHead({content:{shareOnHead:'0'}})
+                                },100)
                             }else {
                                 if (respone.data.data && respone.data.code==0){
                                     if (respone.data){
+
                                             that.haveShareCard = respone.data.data.haveShareCard;
                                             console.log("response",respone.data);
                                             that.seriesCover = respone.data.data.seriesCover
@@ -282,10 +285,10 @@
         //                                    window.imgUrl = that.seriesCover
         //                                    window.descContent = respone.data.data.seriesDesc
         //                                    window.shareTitle = respone.data.data.seriesTitle
-                                            that.setTitle(that.seriesShareIncome)
                                             console.log(that.haveShareCard, that.haveShareCard !='0')
                                             if (that.haveShareCard && that.haveShareCard !='0' && that.haveShareCard !=0)
                                             window.moreShareInfo = {seriesId:that.seriesId}
+                                        that.setTitle(that.seriesShareIncome)
                                             var shareInfo = {
                                                 successTimelineShare: function () {
                                                     layout.statisticsShare({shareType:1,shareSource:18})
@@ -362,7 +365,7 @@
                         },400)
                         setTimeout(function(){
                             window.bravetime.initHead()
-                        },500)
+                        },50)
                         if (respone.data && respone.data.code==30024){
                             // that.deleteFlag = false
                             if (JSON.parse(sessionStorage.getItem('history')).length > 1){
@@ -375,30 +378,40 @@
                             if (respone.data.code==30000){
                                 that.state=0
                                 that.visitorFlag = 0
-                                native.Browser.setHead({shareBtn:'0'})
+                                setTimeout(function () {
+                                  native.Browser.initHead(
+                                      {
+                                        content: {
+                                          shareOnHead: 0
+                                        }
+                                      })
+                                },100);
+
                             }else {
                                 if (respone.data.data && respone.data.code==0){
                                 if (respone.data){
                                         that.haveShareCard = respone.data.data.haveShareCard;
                                         console.log("response",respone.data);
-                                        that.seriesCover = respone.data.data.seriesCover
-                                        that.dataList = respone.data.data
-                                        that.state = respone.data.visitor_status
-                                        if (that.state == 0){
+                                          that.seriesCover = respone.data.data.seriesCover
+                                          that.dataList = respone.data.data
+                                          that.state = respone.data.visitor_status
+                                          if (that.state == 0){
                                             native.Browser.setHead({shareBtn:'0'})
-                                        }
-                                        that.userTicket = respone.data.data.userTicket
-                                        that.courseTypeSwitch = respone.data.data.courseTypeSwitch
-                                        that.coursePriceSwitch = respone.data.data.coursePriceSwitch
-                                        that.seriesType = respone.data.data.seriesType
-                                        that.seriesPrice = respone.data.data.seriesPrice
-                                        that.seriesShareIncome = respone.data.data.seriesShareIncome
-    //                                    window.imgUrl = that.seriesCover
-    //                                    window.descContent = respone.data.data.seriesDesc
-    //                                    window.shareTitle = respone.data.data.seriesTitle
-                                        that.setTitle(that.seriesShareIncome)
+                                          }
+                                          that.userTicket = respone.data.data.userTicket
+                                          that.courseTypeSwitch = respone.data.data.courseTypeSwitch
+                                          that.coursePriceSwitch = respone.data.data.coursePriceSwitch
+                                          that.seriesType = respone.data.data.seriesType
+                                          that.seriesPrice = respone.data.data.seriesPrice
+                                          that.seriesShareIncome = respone.data.data.seriesShareIncome
+                                          //                                    window.imgUrl = that.seriesCover
+                                          //                                    window.descContent = respone.data.data.seriesDesc
+                                          //                                    window.shareTitle = respone.data.data.seriesTitle
+
+
                                         if (that.haveShareCard && that.haveShareCard !='0' && that.haveShareCard !=0)
                                         window.moreShareInfo = {seriesId:that.seriesId}
+                                        that.setTitle(that.seriesShareIncome);
                                         var shareInfo = {
                                             successTimelineShare: function () {
                                                 layout.statisticsShare({shareType:1,shareSource:18})
@@ -1055,15 +1068,16 @@ only screen and (min-resolution:2dppx)
         }
         span{
             display: inline-block;
-            height: 24px;
-            line-height: 22px;
-            width: 80px;
-            border: 1px solid #FF4A7D;
-            border-radius: 24px;
-            color: #FF4A7D;
-            background: #fff;
+            height: 66px;
+            line-height: 66px;
+            width: 280px;
+            border: 1px solid #999999;
+            border-radius: 200px;
+            color: #333333;
             text-align: center;
             margin-top: 0.1rem;
+            font-size:24px;
+            -webkit-transform: scale(0.5);
         }
     }
 </style>

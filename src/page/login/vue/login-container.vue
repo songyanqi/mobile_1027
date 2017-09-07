@@ -25,7 +25,7 @@
     <!--注册账号-->
     <div v-if="sign_form">
       <div class="inputbox" style="margin-top: 50px">
-        <input v-if="get_check" type="tel" v-model="mobile" name="mobile" disabled style="color:#333333;">
+        <input v-if="get_check" type="tel" v-model="mobile" name="mobile">
         <input v-else type="tel" placeholder="请输入您的手机号" v-model="mobile" name="mobile" autofocus="autofocus">
         <img src="../img/clearInput.png" v-if="mobile != '' && !get_check" v-on:click="mobile = ''">
       </div>
@@ -34,7 +34,7 @@
           <input type="tel" placeholder="请输入验证码" v-model="check_code" name="mobile">
           <img src="../img/clearInput.png" v-if="check_code != ''" v-on:click="check_code = ''">
         </div>
-        <div v-if="mobile=='' || get_check || mobile.length < 11" class="get_check_code disable">{{get_checkbtnname}}</div>
+        <div v-if="mobile=='' || get_check || mobile.length < 11" class="get_check_code disable" :class="{'color3':get_checkbtnname != '重新发送' && get_checkbtnname != '获取验证码'}">{{get_checkbtnname}}</div>
         <div v-else class="get_check_code" @click="get_check_codes(1,1,function() {})">{{get_checkbtnname}}</div>
       </div>
       <div class="inputbox">
@@ -42,7 +42,7 @@
         <img src="../img/clearInput.png" v-if="password != ''" v-on:click="password = ''">
       </div>
       <div v-if="Invite" class="inputbox">
-        <input type="text" placeholder="请输入邀请码（非必填）" v-model="invitation_code">
+        <input type="text" placeholder="填写邀请码得30元红包(选填)" v-model="invitation_code">
         <img src="../img/clearInput.png" v-if="invitation_code != ''" v-on:click="invitation_code = ''">
       </div>
       <div v-if="Invite" class="what_invitation_code">
@@ -57,7 +57,6 @@
       <div class="forget_sign voice_check">
         <a v-on:click="go_login">已有账号登录</a>
       </div>
-
       <!--邀请码规则-->
     </div>
 
@@ -445,7 +444,7 @@
       promptconfirm: function () {
         var that = this;
         var input_html = '<div class="text">\n' +
-          '<input type="text" placeholder="请输入邀请码" id="inviteCode" class="input" style="width: 2.4rem;"><div id="invite_boxs" class="invite_boxs top"><div class="invite_title" onclick="stren_invite_boxs()">什么是邀请码？<i class="icon"></i></div><div class="invite_info"><p>1. 每个大V店会员都有一个专属邀请码，您可以向身边的大V店会员索取邀请码；</p>\n' +
+          '<input type="text" placeholder="填写邀请码得30元红包(选填)" id="inviteCode" class="input" style="width: 2.4rem;"><div id="invite_boxs" class="invite_boxs top"><div class="invite_title" onclick="stren_invite_boxs()">什么是邀请码？<i class="icon"></i></div><div class="invite_info"><p>1. 每个大V店会员都有一个专属邀请码，您可以向身边的大V店会员索取邀请码；</p>\n' +
           '<p>2. 邀请码为6位数字+字母组合，或邀请人大V店账户手机号；</p>\n' +
           '<p>3. 绑定邀请人后，您在大V店APP及果敢时代大V店公众号内都将访问邀请人店铺；</p>\n' +
           '<p>4. 一个用户只能有一个邀请人，在您绑定邀请人后，可在7天内更换一次邀请人。</p></div></div></div>';
@@ -851,4 +850,10 @@
     -ms-transform: scaleY(0.5);
     transform: scaleY(0.5);
   }
+  .inputbox.check_input .get_check_code.disable.color3{
+    color:#333333;
+  }
+  /*.app .check_input .disable.color3{*/
+    /*color:#333333;*/
+  /*}*/
 </style>

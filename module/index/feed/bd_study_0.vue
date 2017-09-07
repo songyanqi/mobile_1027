@@ -49,7 +49,6 @@
     },
     mounted:function () {
       this.dataList=this.data.body.dataList;
-      this.title=this.data.title.name;
       this.$nextTick(function () {
         this.audioLocation();
       });
@@ -62,7 +61,7 @@
          albumId:null,
          sortNo:null,
          btnStatus:0,
-          title:""
+         title:""
      }
     },
     methods:{

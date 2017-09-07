@@ -124,6 +124,10 @@ export default {
       throw new Error(`即将跳转强制域名(${location.href})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
     } else {
       checkRedirect(Cookies.get('force_domain'));
+      // 接口response设置的cookie在部分手机上并不会立即生效
+      setTimeout(function(){
+        checkRedirect(Cookies.get('force_domain'));
+      }, 100);
     }
   },
 }

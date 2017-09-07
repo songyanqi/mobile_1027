@@ -111,29 +111,48 @@
         return arr
       },
       introduction(){
-        if (this.isapp){
-          if ($('.bottom_text img').length ==0){
+        var that=this;
+        this.$nextTick(function(){
+          var length=$('.bottom_text img').length;
+          if (length ==0){
             if (this.musicList && this.musicList[this.musicList.length-this.index-1] && this.musicList[this.musicList.length-this.index-1].introduction){
               setTimeout(function(){
-                native.Browser.showWebHeight({
-                  "webHeight": ($('.bottom_text').height()+30).toString()
-                })
+                if(that.isapp){
+                  native.Browser.showWebHeight({
+                    "webHeight": ($('.bottom_text').height()+30).toString()
+                  })
+                }
               },200)
             } else {
               console.log('introduction is null')
             }
           } else {
-            setTimeout(function(){
-              native.Browser.showWebHeight({
-                "webHeight": ($('.bottom_text').height()+30).toString()
-              })
-            },1200)
+            var imgIndex=0;
+            var imgs=$('.bottom_text img');
+            for(var i=0;i<imgs.length;i++){
+                $(imgs[i]).css("max-width","100%");
+                imgs[i].onload = function () {
+                  imgIndex++;
+                  console.log("一个结束啦");
+                  if(imgIndex==$('.bottom_text img').length){
+//                    alert("加载完毕");
+                    if(that.isapp){
+                      setTimeout(function(){
+                        native.Browser.showWebHeight({
+                          "webHeight": ($('.bottom_text').height()+30).toString()
+                        })
+                      },200)
+                    }
+                  }
+                };
+            }
           }
-        }
+        })
         return this.musicList && this.musicList[this.musicList.length-this.index-1] && this.musicList[this.musicList.length-this.index-1].introduction || null
       }
     },
     created: function () {
+
     },
     mounted: function () {
       var that =  this
@@ -204,7 +223,16 @@
                 title: data.data.dataList[that.musicList.length - that.index -1].shareInfo.title,
                 desc: data.data.dataList[that.musicList.length - that.index -1].shareInfo.desc,
                 link: data.data.dataList[that.musicList.length - that.index -1].shareInfo.link,
-                imgUrl: data.data.dataList[that.musicList.length - that.index -1].shareInfo.imgUrl
+                imgUrl: data.data.dataList[that.musicList.length - that.index -1].shareInfo.imgUrl,
+                success:function(){
+                  var obj = {
+                    albumId: getQuery('albumId'),
+                    musicId: that.musicList[that.musicList.length - 1 - that.index].musicId
+                  }
+                  api('/api/mg/content/music/onSub',obj).then(function(data){
+                    console.log('data--->', data)
+                  })
+                }
               });
             } catch (err) {
               alert(err)
@@ -215,7 +243,7 @@
       })
     },
     methods: {
-      playData(){
+      playTrackSingle(){
         let that = this
         let obj = {
           albumId: getQuery('albumId'),
@@ -235,6 +263,24 @@
         api('/api/mg/content/music/playTrackSingle',obj).then(function(data){
           console.log('data--->', data)
         })
+      },
+      playData(){
+        let that = this
+        let obj = {
+          albumId: getQuery('albumId'),
+          sortNo: getQuery('sortNo'),
+          duration: that.playTime,
+          play_type:1,
+        }
+        if (that.musicList && that.musicList[that.index] && that.musicList[that.index].musicId){
+          obj['musicId'] = that.musicList[that.musicList.length - 1 - that.index].musicId
+        }
+        if (localStorage.getItem('expires_in')){
+          obj.expires_in = localStorage.getItem('expires_in')
+        }
+        if (localStorage.getItem('access_token')){
+          obj.expires_in = localStorage.getItem('access_token')
+        }
         api('/api/mg/content/music/click',obj).then(function(data){
           console.log('clickdata-->', data)
         })
@@ -479,6 +525,7 @@
             that.isPlay = false
             that.playTime = 0
             clearInterval(that.playTimer)
+            that.playTrackSingle()
             that.playAudio(that.index + 1)
           }
           that.playData()
@@ -504,6 +551,7 @@
               that.isPlay = false
               that.playTime = 0
               clearInterval(that.playTimer)
+              that.playTrackSingle()
               that.playAudio(that.index + 1)
             }
             that.playData()
@@ -535,7 +583,6 @@
                   }else {
                     // that.index = that.index + data.data.dataList.length
                   }
-                  
                 }else {
                   that.musicList = that.musicList.concat(data.data.dataList)
                   if (flag){
@@ -806,6 +853,7 @@
     margin-top:0.12rem;
   }
   .bottom_text{
+    width: 3.55rem;
     padding-left:0.1rem;
     padding-right:0.1rem;
     color:#666666;
@@ -815,6 +863,10 @@
     background: #fff;
     line-height: 0.18rem;
   }
+  /*.bottom_text img{*/
+    /*width: 100%;*/
+  /*}*/
+
   .mask{
     background: #000000;
     opacity: 0.5;

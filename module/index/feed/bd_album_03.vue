@@ -117,6 +117,7 @@
         });
 
         this.check_contentList();
+
       },
       data(){
           return {
@@ -134,7 +135,8 @@
               pageAlbumId:getQuery("albumId"),
               empty_tab:false,
               maskFlag:false,
-              isFree:null
+              isFree:null,
+              empty_tab_flag:false
           }
       },
       components:{
@@ -431,7 +433,7 @@
               }else{
                 top=document.getElementById('tab').offsetTop-44;
               }
-              console.log(top);
+
             };
             $(window).scroll(function(){
               if($("body").scrollTop()>=top){
@@ -440,6 +442,16 @@
                 _this.empty_tab=false;
               }
 
+//              alert($("body").height());
+//              if(($("body").scrollTop()+window.screen.availHeight)==$("body").height()){
+//                alert(($("body").scrollTop()+window.screen.availHeight));
+////              }
+//              if(($("body").scrollTop()+window.screen.availHeight)>$("body").height()){
+//
+//                //alert("scrollTop"+($("body").scrollTop()+window.screen.availHeight)+":height"+$("body").height());
+//              }
+////              console.log($("body").scrollTop()+window.screen.availHeight);
+//              console.log($("body").height());
               var el = $("#top").get(0);
               var bottom = el.offsetHeight + el.offsetTop - (window.screen.availHeight + window.scrollY);
               if (bottom<100){
@@ -456,8 +468,7 @@
     padding-top: 0.16rem;
     height: 0.36rem;
     background: white;
-    border-bottom:1px solid rgba(0,0,0,0.1);
-    border-bottom:0.5px solid rgba(0,0,0,0.1);
+    border-bottom:0.01rem solid rgba(0,0,0,0.1);
   }
 
   .tab .tab_list {
@@ -658,7 +669,7 @@
     margin-top: 0.12rem;
   }
   .empty_tab{
-    height: 0.5rem;
+    height: 0.53rem;
   }
   .tab_fixed{
     position: fixed;
@@ -669,6 +680,7 @@
     position: fixed;
     top:0;
     z-index:999;
+
   }
   .gray {
     -webkit-filter: grayscale(100%);
@@ -677,5 +689,6 @@
   }
   .recommendData{
     width: 100%;
+    background: #fff;
   }
 </style>

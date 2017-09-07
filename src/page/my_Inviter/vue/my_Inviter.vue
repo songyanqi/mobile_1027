@@ -179,7 +179,13 @@
                 that.$emit("titlename", "我的邀请人");
                 document.title = "我的邀请人";
                 if(response.shop_url != that.origin_shop){
-                  location.href = location.href.replace(that.origin_shop, response.shop_url);
+                  popup.alert({
+                    title: '邀请人修改成功',        // 标题（支持传入html。有则显示。）
+                    text: '请重新登录',         // 文本（支持传入html。有则显示。）
+                    btnCallback() {   // 按钮点击回调（有则执行该回调）
+                      location.href = location.href.replace(that.origin_shop, response.shop_url);
+                    }
+                  });
                 }
               }
             },

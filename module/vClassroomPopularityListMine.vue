@@ -62,11 +62,9 @@
 <template>
     <div id="main">
         <top></top>
-<<<<<<< HEAD
+
         <invite-card :show="show" :id="courseId" :kind="0" :statistics="5" v-on:close="closeCard"></invite-card>
-=======
-        <invite-card :kind="0" :show="show" :id="courseId" :statistics="5" v-on:close="closeCard"></invite-card>
->>>>>>> master
+
         <!--用户信息-->
         <div style="position: fixed;width:100%;max-width: 640px;z-index: 10;">
             <div class="popularity">

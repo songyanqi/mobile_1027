@@ -4,7 +4,7 @@
             <img src="//pic.davdian.com/free/2017/06/28/partner_bg2.png" v-if='!giftButton' class='guide1Bg'>
             <img src="//pic.davdian.com/free/2017/06/28/partner_bg1.png" v-if='giftButton' class='guide1Bg'>
             <div class='exit' @click='goProfile'></div>
-            <div class='guide1Title guide1all'>{{bonus.bonusCountMoney}}元红包已到账</div>
+            <div class='guide1Title guide1all'><span v-if='bonus && bonus.bonusCountMoney' v-text='bonus.bonusCountMoney'></span>元红包已到账</div>
             <div class='guide1Img guide1all' v-if='bonusFlag'>
                 <img src="//pic.davdian.com/free/2017/06/07/ticket.png" class='guide1all' @click='linkUrl(bonus.linkUrl)'>
                 <div class='guide1Img1 guide1all'><span>¥&nbsp;</span>{{bonus.bonusMoney}}</div>
@@ -42,12 +42,13 @@
     let axios = require("axios");
     require('es6-promise').polyfill();
     import { strSign, getQuery } from "../../../../utils/utils.es6";
+    import native from '../../../common/js/module/native.js'
     import app from "../../../../utils/appInterface.es6";
     import wx from "../../../../utils/WXShare.es6"
     export default{
         data:function(){
             return{
-                app: !!navigator.userAgent.match(/davdian|bravetime|vyohui/),
+                isapp: !!navigator.userAgent.match(/davdian|bravetime|vyohui/),
                 bonusFlag:false,
                 bonus:{},
                 goodsList:false,
@@ -167,10 +168,12 @@
                     });
             },
             linkUrl(linkurl){
-                window.location.href = linkurl;
+                if(!this.isapp){
+                  window.location.href = linkurl;
+                }
             },
             goProfile(){
-                if (that.app) {
+                if (this.isapp) {
                     native.Browser.goNativeHomePage()
                 }else {
                     window.location.href = window.location.host

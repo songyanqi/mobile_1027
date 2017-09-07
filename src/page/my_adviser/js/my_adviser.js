@@ -24,34 +24,49 @@ new Vue({
       response: null,
       show_tel: false,
       show_wx: false,
-      show_go_shop_btn:false, //显示去大V店按钮
-      inapp:!!navigator.userAgent.match(/davdian|bravetime|vyohui/)
+      show_go_shop_btn: false, //显示去大V店按钮
+      inapp: !!navigator.userAgent.match(/davdian|bravetime|vyohui/)
     }
   },
   computed: {},
   watch: {
-
+    // 监听response变化
+    response() {
+      // response变化后并渲染完dom,设置其他事项
+      this.$nextTick(function () {
+        let that = this;
+        // 设置app头部标题栏
+        native.Browser.setHead({
+          title: '我的顾问',
+          rightBtn: ""
+        });
+      });
+    }
   },
   beforeCreate() {
     var that = this;
     /*做个判断是不是从详情页和购物车页还有首页过来的*/
-    var historys = JSON.parse(sessionStorage.getItem("history"));
-    var num = historys.length;
-    if(num >= 3){
-      var referrer = document.referrer.split("/").pop();
-      if(referrer == 'choose_mama_adviser.html'){
-        var history2 = historys[num-2].path;
-        if(history2 == 'index' || history2 == 'detail' || history2 == 'cart'){
-          that.show_go_shop_btn = true;
-        }
-      }
-    }
+    // var historys = JSON.parse(sessionStorage.getItem("history"));
+    // var num = historys.length;
+    // if(num >= 3){
+    //   var referrer = document.referrer.split("/").pop();
+    //   if(referrer == 'choose_mama_adviser.html'){
+    //     var history2 = historys[num-2].path;
+    //     if(history2 == 'index' || history2 == 'detail' || history2 == 'cart'){
+    //       that.show_go_shop_btn = true;
+    //     }
+    //   }
+    // }
   },
   created() {
+    var that = this;
+    if (that.getQueryString("firsttime") == '1') {
+      that.show_go_shop_btn = true;
+    }
     this.getData();
   },
   methods: {
-    dump2choose(){
+    dump2choose() {
       location.replace("/choose_mama_adviser.html");
     },
     /**
@@ -68,24 +83,23 @@ new Vue({
         dataType: 'json',
         data: encrypt({}),
         success(response) {
-          if(response.code){
-            if(response.code=="92001"){
+          if (response.code) {
+            if (response.code == "92001") {
               popup.alert({
-                title:"提示",
-                text:"请您先选择妈妈顾问",
-                btnCallback:function(){
+                title: "提示",
+                text: "请您先选择妈妈顾问",
+                btnCallback: function () {
                   location.replace("/choose_mama_adviser.html");
                 }
               })
-            }else{
+            } else {
               popup.toast(response.data.msg || response.msg);
             }
-          }else{
-             that.response = response;
+          } else {
+            that.response = response;
           }
         },
         error(error) {
-          that.response = require('../json/my_adviser.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
@@ -101,6 +115,12 @@ new Vue({
           popup.toast("复制失败，请手动复制");
         }
       })
+    },
+    getQueryString: function (name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]);
+      return null;
     }
   },
   filters: {},

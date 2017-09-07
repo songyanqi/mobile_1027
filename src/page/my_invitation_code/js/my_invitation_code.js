@@ -9,7 +9,6 @@ import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
-import ua from '../../../common/js/module/ua.js';
 import nativeAncestry from '../../../common/js/module/nativeAncestor.js';
 
 login.needLogin();
@@ -25,7 +24,7 @@ new Vue({
       rule_form: false,
       response: null,
       login_form: true,  //登录显示
-      isApp: ua.isDvdApp(),
+      isApp: !!navigator.userAgent.match(/davdian|bravetime|vyohui/),
       show_pop: false
     }
   },
@@ -40,11 +39,16 @@ new Vue({
         native.custom.initHead({
           showHead: 1,    // 是否展示头部
           backOnHead: 1,  // 头部返回按钮
+          btnText: ""
         });
-        native.Browser.setHead({
-          'title': document.title,
-        });
-
+        setTimeout(function () {
+          native.custom.setHead({
+            'title': '邀请好友安装大V店APP',
+            'rightBtn': {
+              'text': ''
+            }
+          });
+        },200);
         // 设置分享信息
         try {
           share.setShareInfo({
@@ -97,7 +101,7 @@ new Vue({
     /*分享*/
     shareto: function () {
       var that = this;
-      native.custom.shareImg({"bigImageUrl": that.response.data.shareUrl,"shareType": '3',})
+      native.custom.shareImg({"bigImageUrl": that.response.data.shareUrl, "shareType": '3',"v":"4.2.0"})
     },
     /*什么是邀请码*/
     what_invite_code: function () {
@@ -126,7 +130,6 @@ new Vue({
     longPress: function (img) {
       window.timeOutEvent = 0;
       nativeAncestry.savePic(img);
-      console.log("长按");
     }
   },
   filters: {},
