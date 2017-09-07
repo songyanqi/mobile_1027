@@ -14,24 +14,24 @@ import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
-import vueLazyload from '../../../common/js/module/vueLazyload.js';
 
-// 懒加载初始化
-vueLazyload.init();
 
 // 渲染页面
 new Vue({
   el: ".app",
   components: {
-    'com-top-title': require('../../../component/com-top-title.vue'),
-    'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
+    'com-top-title': require('../../../component/com-top-title.vue')
   },
   data() {
     return {
       response: null,
     }
   },
-  computed: {},
+  computed: {
+    goodsId:function () {
+      return location.pathname.split("_")[1].split(".")[0];
+    }
+  },
   watch: {
     // 监听response变化
     response(){
@@ -61,7 +61,8 @@ new Vue({
   beforeCreate() {
   },
   created() {
-    this.getData();
+    alert(this.goodsId);
+    // this.getData();
   },
   methods: {
     /**
