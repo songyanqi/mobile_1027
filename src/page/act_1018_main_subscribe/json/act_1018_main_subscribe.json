@@ -1,0 +1,71 @@
+{
+  "code": "0",
+  "data_version": "0d7999964ba7a1e0ca417626f7dc9720",
+  "shop_url": "http:\\/\\/13269099242.vyohui.cn",
+  "visitor_status": "3",
+  "sys_time": "1500861119",
+  "sess_key": "9f77e015508eb71179aef79906a60d0303341cd3",
+  "data": {
+    "menuList": [
+      {
+        "timeMenu": "08:00",
+        "menu": "10月19日",
+        "screenings": "8"
+      },
+      {
+        "timeMenu": "10:00",
+        "menu": "已开枪",
+        "screenings": "10"
+      },
+      {
+        "timeMenu": "14:00",
+        "menu": "等待开枪",
+        "screenings": "14"
+      },
+      {
+        "timeMenu": "16:00",
+        "menu": "等待开枪",
+        "screenings": "16"
+      },
+      {
+        "timeMenu": "20:00",
+        "menu": "等待开枪",
+        "screenings": "20"
+      }
+    ],
+    "dataList": [
+      {
+        "goods_id": "商品id",
+        "goodsName": "商品名称",
+        "goodsPrice": "商品价格",
+        "imageUrl": "图片地址",
+        "startTime": "开始时间",
+        "buttonName": "预约提醒",
+        "buttonStatus": "1",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goods_id": "商品id",
+        "goodsName": "商品名称",
+        "goodsPrice": "商品价格",
+        "imageUrl": "图片地址",
+        "startTime": "开始时间",
+        "buttonName": "预约提醒",
+        "buttonStatus": "1",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      }
+    ]
+  }
+}

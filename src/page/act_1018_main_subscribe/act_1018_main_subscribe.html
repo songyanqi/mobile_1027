@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @@include('meta.include')
+  <link rel="stylesheet" href="[[vendor]]/swiper/swiper-3.3.1.min.css">
+  <link rel="stylesheet" href="[[static]]/page/act_1018_main_subscribe/css/act_1018_main_subscribe.css[[v]]">
+</head>
+<body>
+<div class="app">
+  <!--标题-->
+  <com-top-title title="疯抢好货 提前预约" home></com-top-title>
+  <!-- Swiper -->
+  <div class="swiper-container" @click="subscribe($event, 1)">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'">
+      </div>
+      <div class="swiper-slide">
+        <img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'">
+      </div>
+      <div class="swiper-slide">
+        <img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'">
+      </div>
+      <div class="swiper-slide">
+        <img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'">
+      </div>
+      <div class="swiper-slide">
+        <img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'">
+      </div>
+      <div class="swiper-slide"><a href="">查看更多</a></div>
+    </div>
+  </div>
+
+  <!--返回顶部-->
+  <com-to-top-icon></com-to-top-icon>
+</div>
+
+@@include('vendor.include')
+<script src="[[vendor]]/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script src="[[static]]/page/act_1018_main_subscribe/js/act_1018_main_subscribe.js[[v]]"></script>
+</body>
+</html>
