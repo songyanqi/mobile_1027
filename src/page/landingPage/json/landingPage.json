@@ -1,0 +1,177 @@
+
+{
+  "code":"0",
+  "shop_url":"https://15201663952.davdian.com",
+  "visitor_status":"3",
+  "sess_key":"48a275a991a0a6295706e6d9f8c3a784b62a4bbc",
+  "data_version":"xxxxxx",
+  "data": {
+    "webUrl":"https://15201663952.davdian.com",
+    "feedList":[
+      {
+        "body":{
+          "tplId":"bd_album_0",
+          "bgColor":"0x333333",
+          "dataList":[
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "15776832314.davdian.com"
+              }
+            },
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "body":{
+          "tplId":"bd_album_content_1",
+          "bgColor":"0x333333",
+          "upTime":"1502442864",
+          "showLines":"1",
+          "dataList":[
+            {
+              "albumId":"0",
+              "musicId":"0",
+              "isPlay":"0",
+              "music":"音频名",
+              "album":"专辑名",
+              "time":"240",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "fileLink":"http://haba.davdian.com/aaaa/01.mp3",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "albumId":"0",
+              "musicId":"0",
+              "isPlay":"0",
+              "music":"音频名",
+              "album":"专辑名",
+              "time":"240",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "fileLink":"http://haba.davdian.com/aaaa/01.mp3",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "body":{
+          "tplId":"bd_album_content_1",
+          "bgColor":"0x333333",
+          "upTime":"1502442864",
+          "showLines":"1",
+          "dataList":[
+            {
+              "albumId":"0",
+              "musicId":"0",
+              "isPlay":"0",
+              "music":"音频名",
+              "album":"专辑名",
+              "time":"240",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "fileLink":"http://haba.davdian.com/aaaa/01.mp3",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            },
+            {
+              "albumId":"0",
+              "musicId":"0",
+              "isPlay":"0",
+              "music":"音频名",
+              "album":"专辑名",
+              "time":"240",
+              "imageUrl":"//pic.davdian.com/free/2017/08/16/181efe7696e4dc1981c7bc0473f21783.jpg",
+              "fileLink":"http://haba.davdian.com/aaaa/01.mp3",
+              "command": {
+                "content" : "点击时的动作"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -54,7 +54,7 @@
     max-width: $pageMaxWidth;
     height: 100%;
     display: table;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.05);
     z-index: 9;
     line-height: 1;
     .middle-wrapper {

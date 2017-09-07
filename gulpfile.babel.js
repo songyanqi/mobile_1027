@@ -27,6 +27,10 @@ import minimist from 'minimist';
 import WebpackConfig from './webpack.config.js';    // 老版webpack配置
 import WebpackSrcConfig from './webpack.src.config.js';   // 新版前后端分离webpack配置
 import DeveloperConfig from './developer.config.js';  // 开发者配置文件
+import liveReload from 'gulp-livereload';		// 文件变化时自动刷新浏览器，chrome需要安装LiveReload插件
+import mergeStream from 'merge-stream';		// 合并流然后返回给run-sequence保证任务顺序执行
+import path from 'path';		// 路径解析模块
+import spritesmith from 'gulp.spritesmith';		// 精灵图
 
 // 命令行参数
 let argv = minimist(process.argv);
@@ -49,7 +53,8 @@ let config = {
   html: `src/page/${BuildArg.page}/*.html`,
   css: `src/*page/${BuildArg.page}/css/*.scss`,
   js: `src/page/${BuildArg.page}/js/*.js`,
-  img: `src/*page/*${BuildArg.page}/img/*`,
+  img: `src/*page/${BuildArg.page}/img/*`,
+  iconDir: `src/page/${BuildArg.page}/img/icon*`,
   temp: `.temp`,
 };
 
@@ -208,6 +213,40 @@ gulp.task('clean:temp', () => {
 });
 
 
+/************************************ 合成精灵图 ************************************/
+
+gulp.task('create_sprite', () => {
+  console.log(`>>>>>>>>>>>>>>> 开始合成精灵图。${util.getNow()}`);
+  let merged = mergeStream();
+
+  // 遍历icon*名称的目录
+  glob.sync(path.normalize(config.iconDir)).forEach(function (iconDir) {
+    if (!fs.statSync(iconDir).isDirectory()) return;
+
+    // 生成文件的basename
+    let dirName = iconDir.split('/').pop();
+
+    let stream = gulp.src(iconDir + '/*')
+      .pipe(spritesmith({
+        cssTemplate: `./spritesmith.hbs`,
+        padding: 10,
+        layout: 'top-down',
+        imgName: `${dirName}.png`,
+        cssName: `../css/_${dirName}.scss`,
+        // 取相对路径即可,因为css和img是部署在一起的
+        imgPath: `../img/${dirName}.png`,
+        cssVarMap: function (sprite) {
+          sprite.mixinName = `i-${sprite.name}`;
+        }
+      }));
+
+    merged.add(stream.img.pipe(gulp.dest(iconDir + '/..')));
+    merged.add(stream.css.pipe(gulp.dest(iconDir + '/..')));
+  });
+  return merged.isEmpty() ? null : merged;  // 保证顺序执行
+});
+
+
 /************************************ 编译JS ************************************/
 
 // JS公共编译方法
@@ -315,8 +354,8 @@ gulp.task('img:dev', () => {
 // 生产环境图片编译
 gulp.task('img:dist', () => {
   return compileImg()
-    .pipe(imagemin())
-    // 显示文件体积
+  // .pipe(imagemin())
+  // 显示文件体积
     .pipe(size({showFiles: true}))
     .pipe(gulp.dest('dist/static'));
 });
@@ -451,12 +490,14 @@ gulp.task('default', () => {
   promptBuildArg(function () {
     return runSequence(
       // ['clean:dist'],
+      // ['create_sprite'],
       ['js:dev'],
       ['css:dev'],
       ['img:dev'],
       ['html:dev'],
       // ['webpack:default'],
       function () {
+        // gulp.watch([`src/**/img/icon*/*`], ['create_sprite', 'img:dev', 'js:dev', 'html:dev']);
         // 监视js变化
         gulp.watch([`src/**/*.{js,vue,json,es6}`], ['js:dev', 'html:dev']);
         // 监视旧的js变化
@@ -467,6 +508,12 @@ gulp.task('default', () => {
         gulp.watch([`src/**/img/*.{png,jpg,gif,jpeg}`], ['img:dev', 'js:dev', 'html:dev']);
         // 监视html变化
         gulp.watch([`src/**/*.{html,include}`], ['html:dev']);
+        // 开启liveReload
+        liveReload.listen();
+        // 监听开发目录变化，触发liveReload刷新浏览器
+        gulp.watch([`dist/**/*`], function (file) {
+          liveReload.changed(file.path);
+        });
         console.log(`>>>>>>>>>>>>>>> gulp开始监听src目录文件变化...${util.getNow()}`);
         if (BuildArg.webpack) {
           runSequence(['webpack:default']);
@@ -481,6 +528,7 @@ gulp.task('build:dev', () => {
   promptBuildArg(function () {
     return runSequence(
       // ['clean:dist'],
+      // ['sprite'],
       ['js:dev'],
       ['css:dev'],
       ['img:dev'],
@@ -498,6 +546,7 @@ gulp.task('build:dist', () => {
   promptBuildArg(function () {
     return runSequence(
       // ['clean:dist'],
+      // ['sprite'],
       ['js:dist'],
       ['css:dist'],
       ['img:dist'],

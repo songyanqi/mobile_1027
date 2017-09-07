@@ -315,6 +315,11 @@ export const getbackData = function (obj, top) {
   }
 }
 
+export const isTryShop = function () {
+  const shopName = location.href.split("/")[2].split(".")[0];
+  return shopName === "bravetime";
+};
+
 
 export default {
     utils

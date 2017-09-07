@@ -33,6 +33,7 @@ native.custom.onWebviewBack();
     && !login.isLogined()
     && Cookies.get('is_auto_login') === undefined
     && (weixin_auth_try_times === undefined || weixin_auth_try_times < 1)) {
+  // if (ua.isWeiXin()) {
 
     // 设置尝试授权次数，每次失败1天以后重新尝试
     Cookies.set('weixin_auth_try_times', weixin_auth_try_times ? parseInt(weixin_auth_try_times) + 1 : 1, {
@@ -51,6 +52,7 @@ native.custom.onWebviewBack();
  */
 function checkRedirect(domain) {
   // 当前域名与强制域名和小写强制域名都不符时，跳转到强制域名
+
   if (domain && domain !== location.host && ''.toLowerCase && new String(domain).toLowerCase() !== location.host) {
     // nemo逻辑，设置临时跳转路径
     // sessionStorage.setItem('temp_domain', location.hostname);
@@ -122,6 +124,10 @@ export default {
       throw new Error(`即将跳转强制域名(${location.href})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
     } else {
       checkRedirect(Cookies.get('force_domain'));
+      // 接口response设置的cookie在部分手机上并不会立即生效
+      setTimeout(function(){
+        checkRedirect(Cookies.get('force_domain'));
+      }, 100);
     }
   },
 }

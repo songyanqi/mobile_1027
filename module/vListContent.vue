@@ -87,8 +87,8 @@ import * as bd_articles_2 from './component/bd_articles_2.vue'
                 if(item.body != undefined){
                     return createElement(item.body.tplId, {
                         props:{
-                            data: item
-                        }
+                        data: item
+                      }
                     })
                 }else if(item.body == undefined && item.title != undefined){
                     return createElement(item.title.tplId, {

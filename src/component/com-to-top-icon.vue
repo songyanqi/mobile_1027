@@ -8,14 +8,14 @@
 <style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../common/css/util/all";
 
-  // 滚动至顶图标
+
   .to-top-icon {
     position: fixed;
     /*right: .07rem;*/
     margin-left: 3.25rem;
     bottom: .7rem;
     width: .44rem;
-    z-index: 1;
+    z-index: 5;
   }
 </style>
 

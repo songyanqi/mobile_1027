@@ -7,6 +7,11 @@
     <span class="title">{{title}}</span>
     <i class="home" v-if="home !== undefined" @click="goHome"></i>
     <slot></slot>
+    <div v-if="btn !== undefined" class="top_right">
+      <a class="top_btn" :href="btn.href">
+        <span class="text_btn">{{btn.name}}</span>
+      </a>
+    </div>
   </div>
 </template>
 
@@ -19,6 +24,10 @@
       title: String,
       home: {
         type: String,
+      },
+      btn: {
+        name: String,
+        href: String
       },
       'back-btn-click': Function,
       'border-bottom': Boolean,
@@ -36,13 +45,13 @@
       }
     },
     computed: {},
-    created(){
+    created() {
     },
     mounted() {
       // document.title与H5标题栏同步
       document.title = this.title;
       native.Browser.setHead({
-        'title' : document.title,
+        'title': document.title,
       });
 
       // 非native环境下,要显示H5标题栏并且要设置.app的padding-top
@@ -72,10 +81,10 @@
           }
         }
       },
-      goHome(){
+      goHome() {
         location.href = this.home || '/';
       },
-      setAutoAnimation(){
+      setAutoAnimation() {
         let ts = this;
         // 控制隐藏出现
         let titleBarHeight = ts.$el.clientHeight;
@@ -197,5 +206,27 @@
     &.animate-show {
       animation: animation-top-title-show 0.2s forwards;
     }
+  }
+
+  .top_right {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .top_btn {
+    float: right;
+    margin-right: 15px;
+  }
+
+  .top_right .text_btn {
+    font-size: 14px;
+    display: block;
+    line-height: 44px;
+    padding-left: 12px;
+    margin-right: -15px;
+    cursor: pointer;
+    padding-right: 12px;
+    color: #FF4A7D;
   }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div id="series">
-        <div class="top0" v-if='deleteFlag && !isApp'>
+        <div class="top0" v-if='deleteFlag && !isApp && visitorFlag!=0'>
             <div class="top_container">
                 <div class="top_left">
                     <a class="top_back" href="javascript:history.back();">
@@ -20,25 +20,25 @@
                 </div>
             </div>
         </div>
-        <div class='seriesImgTop' v-if='deleteFlag && !isApp'></div>
+        <div class='seriesImgTop' v-if='deleteFlag && !isApp && visitorFlag!=0'></div>
 
-        <div class='seriesImg' v-if='deleteFlag'>
+        <div class='seriesImg' v-if='deleteFlag && visitorFlag!=0'>
             <!--专题头图-->
             <img :src="seriesCover" v-if='seriesCover'>
             
         </div>
 
-        <div class='seriesImg' v-if='deleteFlag'>
+        <div class='seriesImg' v-if='deleteFlag && visitorFlag!=0'>
             <!--专题头图-->
             <div class='seriesImgTitle' v-text='dataList.seriesTitle'></div>
         </div>
 
-        <div class='seriesImg' v-if='deleteFlag'>
+        <div class='seriesImg' v-if='deleteFlag && visitorFlag!=0'>
             <!--专题头图-->
             <div class='seriesImgPrice' v-text='seriesPrice'></div>
         </div>
 
-        <div class='dvk4_container' v-if='deleteFlag && userTicket==1' :class='{marginTopStyle: userTicket==1}'>
+        <div class='dvk4_container' v-if='deleteFlag && userTicket==1 && visitorFlag!=0' :class='{marginTopStyle: userTicket==1}'>
             <div class='dvk4_content'>
                 <div class="dvk4_detail" v-for='(item, index) in dataList.dataList'>
                     <div class='dvk4_detail_content' @click='dvkHref(item)'>
@@ -78,7 +78,7 @@
             </div>
         </div>
 
-        <div class='seriesImg' v-if='deleteFlag'>
+        <div class='seriesImg' v-if='deleteFlag && visitorFlag!=0'>
             <!--专题简介-->
             <div class="summary">
                 <!-- <p v-text='dataList.seriesDesc'></p> -->
@@ -86,7 +86,7 @@
             </div>
         </div>
 
-        <div class='dvk4_container' v-if='deleteFlag && userTicket==0'>
+        <div class='dvk4_container' v-if='deleteFlag && userTicket==0 && visitorFlag!=0'>
             <div class='dvk4_content'>
                 <div class="dvk4_detail" v-for='(item, index) in dataList.dataList'>
                     <div class='dvk4_detail_content' @click='dvkHref(item)'>
@@ -126,8 +126,8 @@
             </div>
         </div>
 
-        <div class="containerPadding" v-if='deleteFlag'></div>
-        <div class='seriesBtn' v-if='seriesType==1 && deleteFlag'>
+        <div class="containerPadding" v-if='deleteFlag && visitorFlag!=0'></div>
+        <div class='seriesBtn' v-if='seriesType==1 && deleteFlag && visitorFlag!=0'>
             <div class='btn btn1 btn_left'>
                 <span class='btn_span' @click='share' v-if='state == 3'>邀请好友赚: {{seriesShareIncome}}
                 <img src="//pic.davdian.com/free/2017/07/28/centerShare.png"></span>
@@ -152,19 +152,24 @@
 
        <invite-card :show="inviteShow" :id="seriesId" statistics="3" @close="share" kind="1"></invite-card>
 
-      <div class='shareToastMark' v-if='beSuccess' @click='successMark'></div>
-        <div class='shareToast shareToastNew' v-if='beSuccess'>
+        <div class='shareToastMark' v-if='beSuccess' @click='successMark'></div>
+        <div class='shareToast shareToastNew' v-if='beSuccess && visitorFlag!=0'>
             <h1 class='shareToastNewTitle'>报名成功</h1>
             <div class='shareToastTitle1'>现在您点击系列课中的任意课程,就可以随时开始听课了~</div>
             <div class='shareToastBtn' @click='successMark'>确定</div>
         </div>
-        <div v-if='!deleteFlag'>
+        <div v-if='!deleteFlag && visitorFlag!=0'>
             <img class='delete_img' src="//pic.davdian.com/free/introduce_fail.png">
             <p class='delete_content'>
                 <span>课程不存在啦</span>
                 <span>去看看老师的其他课程</span>
             </p>
             <p class='delete_btn' @click='goTeacherProfile'>进入老师个人主页</p>
+        </div>
+        <div v-if='visitorFlag==0' class='noApply'>
+            <img src="//pic.davdian.com/free/2017/09/01/Group.png">
+            <p>登录后才能继续访问</p>
+            <span @click='login'>立即登录</span>
         </div>
     </div>
 </template>
@@ -182,6 +187,7 @@
     import layout from "./layout/api.es6"
 
     import inviteCard from './inviteCard/inviteCard.vue'
+    import native from "../src/common/js/module/native.js"
 
     export default {
         data () {
@@ -208,7 +214,8 @@
 
                 inviteShow:false,
 
-                haveShareCard:0
+                haveShareCard:0,
+                visitorFlag:-1,
             }
         },
         ready:function(){
@@ -226,7 +233,7 @@
                 btnText: "",     // 头部文字按钮文字
                 btnLink: "",      // 头部文字按钮链接
                 haveShareCard:this.haveShareCard,
-                courseId: this.courseId
+                courseId: this.courseId,
             }
             app.init()
 
@@ -237,7 +244,7 @@
         },
         methods: {
             appUpData(){
-                alert(456)
+                
                 var that = this
                 var obj = {seriesId:this.seriesId};
                 axios.post('/api/mg/content/series_course/detail',lay.strSign('series', obj))
@@ -251,52 +258,63 @@
                             }
                             
                         } else {
-                            if (respone.data.data && respone.data.code==0){
-                            if (respone.data){
-                                    that.haveShareCard = respone.data.data.haveShareCard;
-                                    console.log("response",respone.data);
-                                    that.seriesCover = respone.data.data.seriesCover
-                                    that.dataList = respone.data.data
-                                    that.state = respone.data.visitor_status
-                                    that.userTicket = respone.data.data.userTicket
-                                    that.courseTypeSwitch = respone.data.data.courseTypeSwitch
-                                    that.coursePriceSwitch = respone.data.data.coursePriceSwitch
-                                    that.seriesType = respone.data.data.seriesType
-                                    that.seriesPrice = respone.data.data.seriesPrice
-                                    that.seriesShareIncome = respone.data.data.seriesShareIncome
-//                                    window.imgUrl = that.seriesCover
-//                                    window.descContent = respone.data.data.seriesDesc
-//                                    window.shareTitle = respone.data.data.seriesTitle
-                                    that.setTitle(that.seriesShareIncome)
-                                    console.log(that.haveShareCard, that.haveShareCard !='0')
-                                    if (that.haveShareCard && that.haveShareCard !='0' && that.haveShareCard !=0)
-                                    window.moreShareInfo = {seriesId:that.seriesId}
-                                    var shareInfo = {
-                                        successTimelineShare: function () {
-                                            layout.statisticsShare({shareType:1,shareSource:18})
-                                        },
-                                        successAppMessageShare: function () {
-                                            layout.statistics({shareType:2,shareSource:18})
-                                        },
-                                        successQqMessageShare: function () {
-                                            layout.statistics({shareType:4,shareSource:18})
-                                        },
-                                        successWeiboMessageShare: function (){
-                                            layout.statistics({shareType:7,shareSource:18})
+                            if (respone.data.code==30000){
+                                that.state=0
+                                that.visitorFlag = 0
+                                setTimeout(function () {
+                                  native.Browser.initHead({content:{shareOnHead:'0'}})
+                                },100)
+                            }else {
+                                if (respone.data.data && respone.data.code==0){
+                                    if (respone.data){
+
+                                            that.haveShareCard = respone.data.data.haveShareCard;
+                                            console.log("response",respone.data);
+                                            that.seriesCover = respone.data.data.seriesCover
+                                            that.dataList = respone.data.data
+                                            that.state = respone.data.visitor_status
+                                            if (that.state == 0){
+                                                native.Browser.setHead({shareBtn:'0'})
+                                            }
+                                            that.userTicket = respone.data.data.userTicket
+                                            that.courseTypeSwitch = respone.data.data.courseTypeSwitch
+                                            that.coursePriceSwitch = respone.data.data.coursePriceSwitch
+                                            that.seriesType = respone.data.data.seriesType
+                                            that.seriesPrice = respone.data.data.seriesPrice
+                                            that.seriesShareIncome = respone.data.data.seriesShareIncome
+        //                                    window.imgUrl = that.seriesCover
+        //                                    window.descContent = respone.data.data.seriesDesc
+        //                                    window.shareTitle = respone.data.data.seriesTitle
+                                            console.log(that.haveShareCard, that.haveShareCard !='0')
+                                            if (that.haveShareCard && that.haveShareCard !='0' && that.haveShareCard !=0)
+                                            window.moreShareInfo = {seriesId:that.seriesId}
+                                        that.setTitle(that.seriesShareIncome)
+                                            var shareInfo = {
+                                                successTimelineShare: function () {
+                                                    layout.statisticsShare({shareType:1,shareSource:18})
+                                                },
+                                                successAppMessageShare: function () {
+                                                    layout.statistics({shareType:2,shareSource:18})
+                                                },
+                                                successQqMessageShare: function () {
+                                                    layout.statistics({shareType:4,shareSource:18})
+                                                },
+                                                successWeiboMessageShare: function (){
+                                                    layout.statistics({shareType:7,shareSource:18})
+                                                }
+                                            }
+                                            wx.init(shareInfo)
                                         }
+                                    } else {
+                                        if (respone.data){
+                                            dialog.alert('detail code:'+ respone.data.code);
+                                        } else {
+                                            dialog.alert('detail接口无data')
+                                        }
+                                        
                                     }
-                                    wx.init(shareInfo)
                                 }
-                            } else {
-                                if (respone.data){
-                                    dialog.alert('detail code:'+ respone.data.code);
-                                } else {
-                                    dialog.alert('detail接口无data')
-                                }
-                                
                             }
-                        }
-                        
                     })
                     .catch(function (error) {
                         console.log(error,11111111)
@@ -319,12 +337,35 @@
                     alert('cmd为:', this.cmd)
                 }
             },
+            login(){
+                native.Account.login()
+            },
             init(){
-
                 var that = this
                 var obj = {seriesId:this.seriesId};
                 axios.post('/api/mg/content/series_course/detail',lay.strSign('series', obj))
                     .then(function (respone) {
+                        if (window.appData){
+                            window.appData.isShowAudio = 1
+                        } else {
+                            window.appData = {
+                                'isShowAudio':1
+                            }
+                        }
+                        setTimeout(function(){
+                            if (that.seriesType==1 && that.deleteFlag && that.state!=0){
+                                if (window.appData){
+                                    window.appData.isAudioAbsorb = 1
+                                } else {
+                                    window.appData = {
+                                        'isAudioAbsorb':1
+                                    }
+                                }
+                            }
+                        },400)
+                        setTimeout(function(){
+                            window.bravetime.initHead()
+                        },50)
                         if (respone.data && respone.data.code==30024){
                             // that.deleteFlag = false
                             if (JSON.parse(sessionStorage.getItem('history')).length > 1){
@@ -334,51 +375,69 @@
                             }
                             
                         } else {
-                            if (respone.data.data && respone.data.code==0){
-                            if (respone.data){
-                                    that.haveShareCard = respone.data.data.haveShareCard;
-                                    console.log("response",respone.data);
-                                    that.seriesCover = respone.data.data.seriesCover
-                                    that.dataList = respone.data.data
-                                    that.state = respone.data.visitor_status
-                                    that.userTicket = respone.data.data.userTicket
-                                    that.courseTypeSwitch = respone.data.data.courseTypeSwitch
-                                    that.coursePriceSwitch = respone.data.data.coursePriceSwitch
-                                    that.seriesType = respone.data.data.seriesType
-                                    that.seriesPrice = respone.data.data.seriesPrice
-                                    that.seriesShareIncome = respone.data.data.seriesShareIncome
-//                                    window.imgUrl = that.seriesCover
-//                                    window.descContent = respone.data.data.seriesDesc
-//                                    window.shareTitle = respone.data.data.seriesTitle
-                                    that.setTitle(that.seriesShareIncome)
-                                    if (that.haveShareCard && that.haveShareCard !='0' && that.haveShareCard !=0)
-                                    window.moreShareInfo = {seriesId:that.seriesId}
-                                    var shareInfo = {
-                                        successTimelineShare: function () {
-                                            layout.statisticsShare({shareType:1,shareSource:18})
-                                        },
-                                        successAppMessageShare: function () {
-                                            layout.statistics({shareType:2,shareSource:18})
-                                        },
-                                        successQqMessageShare: function () {
-                                            layout.statistics({shareType:4,shareSource:18})
-                                        },
-                                        successWeiboMessageShare: function (){
-                                            layout.statistics({shareType:7,shareSource:18})
+                            if (respone.data.code==30000){
+                                that.state=0
+                                that.visitorFlag = 0
+                                setTimeout(function () {
+                                  native.Browser.initHead(
+                                      {
+                                        content: {
+                                          shareOnHead: 0
                                         }
-                                    }
-                                    wx.init(shareInfo)
-                                }
-                            } else {
+                                      })
+                                },100);
+
+                            }else {
+                                if (respone.data.data && respone.data.code==0){
                                 if (respone.data){
-                                    dialog.alert('detail code:'+ respone.data.code);
+                                        that.haveShareCard = respone.data.data.haveShareCard;
+                                        console.log("response",respone.data);
+                                          that.seriesCover = respone.data.data.seriesCover
+                                          that.dataList = respone.data.data
+                                          that.state = respone.data.visitor_status
+                                          if (that.state == 0){
+                                            native.Browser.setHead({shareBtn:'0'})
+                                          }
+                                          that.userTicket = respone.data.data.userTicket
+                                          that.courseTypeSwitch = respone.data.data.courseTypeSwitch
+                                          that.coursePriceSwitch = respone.data.data.coursePriceSwitch
+                                          that.seriesType = respone.data.data.seriesType
+                                          that.seriesPrice = respone.data.data.seriesPrice
+                                          that.seriesShareIncome = respone.data.data.seriesShareIncome
+                                          //                                    window.imgUrl = that.seriesCover
+                                          //                                    window.descContent = respone.data.data.seriesDesc
+                                          //                                    window.shareTitle = respone.data.data.seriesTitle
+
+
+                                        if (that.haveShareCard && that.haveShareCard !='0' && that.haveShareCard !=0)
+                                        window.moreShareInfo = {seriesId:that.seriesId}
+                                        that.setTitle(that.seriesShareIncome);
+                                        var shareInfo = {
+                                            successTimelineShare: function () {
+                                                layout.statisticsShare({shareType:1,shareSource:18})
+                                            },
+                                            successAppMessageShare: function () {
+                                                layout.statistics({shareType:2,shareSource:18})
+                                            },
+                                            successQqMessageShare: function () {
+                                                layout.statistics({shareType:4,shareSource:18})
+                                            },
+                                            successWeiboMessageShare: function (){
+                                                layout.statistics({shareType:7,shareSource:18})
+                                            }
+                                        }
+                                        wx.init(shareInfo)
+                                    }
                                 } else {
-                                    dialog.alert('detail接口无data')
+                                    if (respone.data){
+                                        dialog.alert('detail code:'+ respone.data.code);
+                                    } else {
+                                        dialog.alert('detail接口无data')
+                                    }
+                                    
                                 }
-                                
                             }
                         }
-                        
                     })
                     .catch(function (error) {
                         console.log(error,11111111)
@@ -420,7 +479,16 @@
                                     window.location = 'http://open.davdian.com/wxpay_t2/davke_pay.php?info='+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
                                     // window.location = 'http://open.vyohui.cn/wxpay_t3/davke_pay.php?info='+encodeURIComponent(JSON.stringify(jsApi.jsApiParameters))
                                 }else if (respone.data.data.payUrl){
-                                    window.location.href = respone.data.data.payUrl
+                                    // window.location.href = respone.data.data.payUrl
+                                    bravetime.nativePay(respone.data.data.payUrl,function (flag) {
+                                        if(flag){
+                                            // 先改状态
+                                            that.userTicket = 1;
+                                            dialog.info('系列课报名成功')
+                                            // that.userTicket = 0;
+                                            // goCourse();
+                                        }
+                                    });
                                 } else{
                                     that.userTicket = 1
                                     dialog.info('系列课报名成功')
@@ -490,7 +558,7 @@
         }
     }
 </script>
-<style type="text/css" scoped>
+<style type="text/css" scoped lang='sass'>
     .new_detail{
         position: absolute;
         width: 0.64rem;
@@ -986,5 +1054,30 @@ only screen and (min-resolution:2dppx)
     }
     .btn_right{
         width: 2.15rem;
+    }
+    .noApply{
+        text-align: center;
+        img{
+            width: 1.2rem;
+            margin-top: 1rem;
+        }
+        p{
+            color: #666;
+            margin-top: 0.3rem;
+            text-align: center;
+        }
+        span{
+            display: inline-block;
+            height: 66px;
+            line-height: 66px;
+            width: 280px;
+            border: 1px solid #999999;
+            border-radius: 200px;
+            color: #333333;
+            text-align: center;
+            margin-top: 0.1rem;
+            font-size:24px;
+            -webkit-transform: scale(0.5);
+        }
     }
 </style>

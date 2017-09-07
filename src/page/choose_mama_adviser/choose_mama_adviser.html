@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<htm>
+<head>
+  @@include('meta.include')
+  <link rel="stylesheet" href="[[static]]/page/choose_mama_adviser/css/choose_mama_adviser.css[[v]]">
+</head>
+<body>
+<div class="app" :class="{'inapp':inapp}" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
+  <!--妈妈顾问爱好信息选择-->
+  <div v-if="show_adviser_hobby_list">
+    <div class="back-btn" v-if="!inapp"><a href="javascript:history.back();"><i class="back-arrow"></i></a></div>
+    <!--妈妈顾问提示信息-->
+    <div class="adviser_titles">
+      <span>请选择您想要的妈妈顾问信息</span> <br>
+      <span>*若不满意，每30天可重新更换顾问</span>
+    </div>
+    <div style="width: 100%;height: 10px;" v-if="!inapp"></div>
+    <!--地区展示框-->
+    <div class="new_title string_line">
+      <span class="btns" @click="showadselect">
+        <span class="name">
+          所在地区：
+          <span v-if="oncesdesc">{{address}}</span>
+        </span>
+        <span class="more" v-if="!oncesdesc">
+          <span>
+            请选择<img src="//fe-ws.davdian.com/wap/static/dist/static/page/center/img/arrow-right.png" class="arrow">
+          </span>
+        </span>
+      </span>
+    </div>
+    <!--地址选择插件-->
+    <com-picker-address :showaddress="showaddress2" :addressid="response.data.distId" @addressdata="getaddress"></com-picker-address>
+    <div class="new_title">
+      <span class="btns">
+        <span class="name">
+          顾问特长（{{hobbyNUm}}/2）:
+        </span>
+       </span>
+    </div>
+    <!--特长9宫格-->
+    <div class="specialty_nine">
+      <div @click="hobbys(0)" v-if="hobby[0]" class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/childReadingActive.png" alt=""></div>
+      <div @click="hobbys(0)" v-else class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/childReading.png" alt=""></div>
+
+      <div @click="hobbys(1)" v-if="hobby[1]" class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/kidsEnglishActive.png" alt=""></div>
+      <div @click="hobbys(1)" v-else class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/kidsEnglish.png" alt=""></div>
+
+      <div @click="hobbys(2)" v-if="hobby[2]" class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/familyRelationshipActive.png" alt=""></div>
+      <div @click="hobbys(2)" v-else class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/familyRelationship.png" alt=""></div>
+
+      <div @click="hobbys(3)" v-if="hobby[3]" class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/motherGrowActive.png" alt=""></div>
+      <div @click="hobbys(3)" v-else class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/motherGrow.png" alt=""></div>
+
+      <div @click="hobbys(4)" v-if="hobby[4]" class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/childEducationActive.png" alt=""></div>
+      <div @click="hobbys(4)" v-else class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/childEducation.png" alt=""></div>
+
+      <div @click="hobbys(5)" v-if="hobby[5]" class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/childHealthActive.png" alt=""></div>
+      <div @click="hobbys(5)" v-else class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/childHealth.png" alt=""></div>
+
+      <div @click="hobbys(6)" v-if="hobby[6]" class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/foodExpertActive.png" alt=""></div>
+      <div @click="hobbys(6)" v-else class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/foodExpert.png" alt=""></div>
+
+      <div @click="hobbys(7)" v-if="hobby[7]" class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/parentChildActivitiesActive.png" alt=""></div>
+      <div @click="hobbys(7)" v-else class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/parentChildActivities.png" alt=""></div>
+
+      <div @click="hobbys(8)" v-if="hobby[8]" class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/loveShareActive.png" alt=""></div>
+      <div @click="hobbys(8)" v-else class="specialty_check"><img src="[[static]]/page/choose_mama_adviser/img/loveShare.png" alt=""></div>
+    </div>
+    <!--下一步-->
+    <div class="next_step" style="margin-top: 19px;" @click="nextstep">
+      下一步
+    </div>
+  </div>
+
+
+  <!--妈妈顾问三选一-->
+  <div v-if="show_adviser_list">
+    <div class="back-btn" v-if="!inapp" @click="prestep"><i class="back-arrow"></i></div>
+    <!--妈妈顾问提示信息-->
+    <div class="adviser_titles">
+      <span>根据您的需求，推荐3位妈妈顾问<br>请您选择一位</span>
+    </div>
+    <div class="adviser_list">
+      <div class="adviser_ob" v-for="advisers in response2.data.advisers" :data-for-id="advisers.adviserId">
+        <div class="adviser_ob_left">
+          <div class="adviser_user_info">
+            <img :src="advisers.avatar" alt="">
+            <div>
+              <span>{{advisers.nickname}}</span><br>
+              <span v-if="advisers.matching_degree != '0%'">匹配度{{advisers.matching_degree}}</span>
+            </div>
+          </div>
+          <div class="adviser_marks">
+            <div v-if="advisers.marks.invite" class="invite">{{advisers.marks.invite}}</div>
+            <div v-if="advisers.marks.friend" class="friend">{{advisers.marks.friend}}</div>
+            <div v-if="advisers.marks.share" class="share">{{advisers.marks.share}}</div>
+            <div v-if="advisers.marks.teachMaster" class="teachMaster">{{advisers.marks.teachMaster}}</div>
+            <div v-if="advisers.marks.houseHelper" class="houseHelper">{{advisers.marks.houseHelper}}</div>
+            <div v-if="advisers.marks.service" class="service">{{advisers.marks.service}}</div>
+          </div>
+        </div>
+        <div class="adviser_ob_right">
+          <input type="radio" name="adviser_select" :value="advisers.adviserId" v-model="adviser_select">
+          <img v-if="adviser_select == advisers.adviserId" src="[[static]]/page/choose_mama_adviser/img/adviser_select.png" alt="">
+        </div>
+      </div>
+    </div>
+    <!--就是她-->
+    <div class="next_step" style="margin-top: 19px;" @click="confirm_adviser">
+      就是TA
+    </div>
+  </div>
+</div>
+  @@include('vendor.include')
+  <script src="[[static]]/page/choose_mama_adviser/js/choose_mama_adviser.js[[v]]"></script>
+</body>
+</htm>

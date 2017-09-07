@@ -104,7 +104,13 @@ const GoodsBottom = {
             return;
           }
           if (this.infoobj.isComingActivity) {
-            let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            let contText;
+            if (this.visitorstatus == '3') {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            } else {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购";
+            }
+            // let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
             let okFun = () => {
               //立即购买是否跳出弹框
               this.isBuyModal = false;
@@ -141,7 +147,13 @@ const GoodsBottom = {
             return;
           }
           if (this.infoobj.isComingActivity) {
-            let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            let contText;
+            if (this.visitorstatus == '3') {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            } else {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购";
+            }
+            // let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
             let okFun = () => {
               //立即购买是否跳出弹框
               this.isBuyModal = true;
@@ -180,7 +192,13 @@ const GoodsBottom = {
             return;
           }
           if (this.infoobj.isComingActivity) {
-            let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            let contText;
+            if (this.visitorstatus == '3') {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            } else {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购";
+            }
+            // let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
             let okFun = () => {
               //立即购买是否跳出弹框
               this.$emit('confirm-id','', 0);
@@ -265,7 +283,13 @@ const GoodsBottom = {
 
           //新增的
           if (this.infoobj.isComingActivity) {
-            let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            let contText;
+            if (this.visitorstatus == '3') {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            } else {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购";
+            }
+            // let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
             let okFun = () => {
 
               if (this.seckill) {

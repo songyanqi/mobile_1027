@@ -137,7 +137,13 @@ export default {
 
           //新增
           if (this.infoobj.isComingActivity) {
-            let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            let contText;
+            if (this.visitorstatus == '3') {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            } else {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购";
+            }
+            // let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
             let okFun = () => {
               this.$emit("confirm-id",dataId, 0);
               if (isClose) {
@@ -181,7 +187,13 @@ export default {
 
           //新增
           if (this.infoobj.isComingActivity) {
-            let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            let contText;
+            if (this.visitorstatus == '3') {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            } else {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购";
+            }
+            // let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
             let okFun = () => {
               this.$emit("confirm-id",dataId, 1);
               if (isClose) {

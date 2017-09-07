@@ -1,6 +1,6 @@
 <template>
     <!--品牌介绍-->
-    <div>
+    <div v-if = "visitorstatus =='3'">
         <group v-if = "brandlist.length" class = "brand_wrap">
             <panel :list="brandlist" :type="brandType"></panel>
             <span v-if = "brandlist[0] && brandlist[0].url" class = "brand_arrow"></span>

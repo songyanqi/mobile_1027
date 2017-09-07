@@ -40,7 +40,9 @@ export default {
         this.$nextTick(function(){
             that.scroolFun()
             setTimeout(function(){
-                if (localStorage.getItem('introduceGuide')){
+                var reg = new RegExp("open");
+                let flagUrl = reg.test(window.location.href)
+                if (localStorage.getItem('introduceGuide') || flagUrl){
                     that.introduceGuide = false
                 }else {
                     window.backNewData.$children[0].bottomBtn = true

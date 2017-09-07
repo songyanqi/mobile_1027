@@ -70,7 +70,8 @@ let api = (url,o,key) =>{
 			resolve(JSON.parse(sessionStorage.getItem(key)));
 		});
 	}else {
-		return axios.post(url,strSign(obj))
+    let urlT = url + '?' +new Date().getTime()
+		return axios.post(urlT,strSign(obj))
 	    .then(function (respone) {
 			if (key && isPrivateMode)
 			sessionStorage.setItem(key, JSON.stringify(respone.data))
