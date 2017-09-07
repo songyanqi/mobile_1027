@@ -48,9 +48,9 @@
             <span>¥</span>
             <span>{{this.response.data.bonusList[0].bonusMoney}}</span>
             <span>
-          <p>{{this.response.data.bonusList[0].content}}</p>
-          <p>满{{this.response.data.bonusList[0].minConsumePrice}}元使用</p>
-          </span>
+              <p>{{this.response.data.bonusList[0].content}}</p>
+              <p>满{{this.response.data.bonusList[0].minConsumePrice}}元使用</p>
+            </span>
           </p>
           <p>{{this.response.data.bonusList[0].useBeginTime}}-{{this.response.data.bonusList[0].useEndTime}}</p>
         </div>
@@ -148,6 +148,24 @@
       </div>
     </div>
 
+    <!--状态:非会员领取【会员专享红包活动】的时候触发-->
+    <div class="wrapper no-remain" v-if="response.code === 90010">
+      <!--标题-->
+      <com-top-title home title="会员专享红包"></com-top-title>
+      <!--信封-->
+      <div class="envelope">
+        <p>领取失败啦～</p>
+        <p>开通会员才能领红包哦~</p>
+      </div>
+      <!--按钮-->
+      <a class="btn" href="/348.html?rp=bonusactivity&rl=button"><p>立即开通会员</p></a>
+      <!--使用说明-->
+      <div class="rule">
+        <img class="title" src="http://pic.davdian.com/free/redpack_receive/rule-title.png">
+        <div class="rich-text" v-html="response.data.bonusContent"></div>
+      </div>
+    </div>
+
     <!--状态:出错了-->
     <div class="wrapper error" v-if="isError">
       <!--标题-->
@@ -214,7 +232,7 @@
       },
       // 本次领取红包是否发生错误
       isError(){
-        if (this.response.code === 0 || this.response.code === 90005 || this.response.code === 90006 || this.response.code === 90001 || this.response.code === 90000) {
+        if (this.response.code === 0 || this.response.code === 90005 || this.response.code === 90006 || this.response.code === 90001 || this.response.code === 90000 || this.response.code === 90010) {
           return false;
         }
         return true;
@@ -228,8 +246,13 @@
           let ts = this;
 
           // 设置app头部标题栏
-          native.initHead({
+          native.custom.initHead({
             shareOnHead: 1,
+          });
+
+          // 设置app头部标题栏title
+          native.Browser.setHead({
+            'title' : document.title,
           });
 
           /*// 设置分享信息
@@ -251,6 +274,12 @@
             // 如果本次领取红包未发生错误,去掉之前在本地存储的记录
             localStorage.removeItem('error');
           }
+
+          // 设置背景图位置
+          if($('.com-top-title').length > 0) {
+            $('.wrapper').css('background-position', '0 44px');
+          }
+
         });
       }
     },

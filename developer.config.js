@@ -13,8 +13,8 @@
  * webpack              是否需要编译html分离前的js(webpack.config.js)，默认true
  */
 export default {
-  // env_stage: 'prod',
-  // env_num: '',
-  // page: 'noteDetail',
-  // webpack: false,
+  //env_stage: 'beta',
+  //env_num: '2',
+  page: '{my_invitation_code}',
+  webpack: false,
 };

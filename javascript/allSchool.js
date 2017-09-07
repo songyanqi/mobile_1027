@@ -5,7 +5,7 @@ Vue.use(VueLazyload, {
     preload:2
 });
 
-new Vue({
+window.allsclool=new Vue({
     el: "#allScholl",
     data:function(){
         return{

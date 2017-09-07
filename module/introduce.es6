@@ -3,6 +3,7 @@ import indexFeed from './index/index_feed.vue'
 import inviteCard from './inviteCard/inviteCard.vue'
 import common from "./common/common.es6";
 import lay from "./layout/api.es6"
+import native from "../src/common/js/module/native.js"
 let axios = require("axios");
 require('babel-polyfill');
 require('es6-promise').polyfill();
@@ -24,17 +25,18 @@ export default {
             homeLink:common.baseJumpUrl().courseHomePage,
             shareUserId:window.shareUserId||0,
             entered:0,
-            visitor_status:0,
+            visitor_status:-1,
             deleteFlag: true,
             teacherId: null,
             userId: null,
             cmd:null,
             cache:false,
-            bottomBtn: false
+            bottomBtn: false,
+            enterClassroomFlag: true,
+            visitorFlag:-1,
         }
     },
     created(){
-      console.log(window);
         let that = this;
         //  用通用方法请求数据
         common.getDataWithSign({
@@ -52,6 +54,9 @@ export default {
                     that.error = true;
                     return false;
                 }
+                if (result.visitor_status == 0){
+                    native.Browser.setHead({shareBtn:'0'})
+                }
                 let {code, data, visitor_status}=result;
                 if(+code){
                     if (code==30024){
@@ -59,8 +64,14 @@ export default {
                         that.cmd = result.data.cmd
                         // that.teacherId = result.data.teacherId
                     } else {
-                        that.error = true;
-                        bravetime.info("数据获取异常"+code);
+                        if (code==30000){
+                            that.visitor_status = 0
+                            that.visitorFlag = 0
+                            native.Browser.setHead({shareBtn:'0'})
+                        }else {
+                            that.error = true;
+                            bravetime.info("数据获取异常"+code);
+                        }
                     }
                 }else{
                     let {userRole, userTicket, course:{type,money,income},feedList}= data;
@@ -82,7 +93,25 @@ export default {
                         })
                     });
                 }
-                console.log(that.userId, window.teacherId)
+                if (window.appData){
+                    window.appData.isShowAudio = 1
+                } else {
+                    window.appData = {
+                        'isShowAudio':1
+                    }
+                }
+                if (!that.error && that.deleteFlag){
+                    if (window.appData){
+                        window.appData.isAudioAbsorb = 1
+                    } else {
+                        window.appData = {
+                            'isAudioAbsorb':1
+                        }
+                    }
+                    setTimeout(function(){
+                        window.bravetime.initHead()
+                    },500)   
+                }
             },
             error:function () {
                 that.error = true;
@@ -107,6 +136,9 @@ export default {
                     that.error = true;
                     return false;
                 }
+                if (result.visitor_status == 0){
+                    native.Browser.setHead({shareBtn:'0'})
+                }
                 let {code, data, visitor_status}=result;
                 if(+code){
                     if (code==30024){
@@ -114,8 +146,14 @@ export default {
                         that.cmd = result.data.cmd
                         // that.teacherId = result.data.teacherId
                     } else {
-                        that.error = true;
-                        bravetime.info("数据获取异常"+code);
+                        if (code==30000){
+                            that.visitor_status = 0
+                            that.visitorFlag = 0
+                            native.Browser.setHead({shareBtn:'0'})
+                        }else {
+                            that.error = true;
+                            bravetime.info("数据获取异常"+code);
+                        }
                     }
                 }else{
                     let {userRole, userTicket, course:{type,money,income},feedList}= data;
@@ -157,15 +195,25 @@ export default {
             //     alert('teacherId数据为:', this.teacherId)
             // }
         },
+        login(){
+            native.Account.login()
+        },
         getData(){
-            // window.location.reload();
+            window.location.reload();
         },
         invite () {
             this.inviteShow=true;
         },
         invite1 () {
+          if(this.inApp){
+            native.Browser.open({
+              "url":'/join_vip.html?id=348&kd_type=2&rp=course_detail&rl=inv_button'
+            });
+          }else{
+            window.location.href = '/join_vip.html?id=348&kd_type=2&rp=course_detail&rl=inv_button'
+          }
             // window.location.href = '/t-10838.html?rp=course_detail&rl=inv_button'
-            window.location.href = '/index.php?c=ShopGoods&a=index&id=348&kd_type=2'
+
         },
         closeCard() {
             this.inviteShow = false;
@@ -192,7 +240,6 @@ export default {
                 type:"post",
                 success:function (result) {
                     let {code,data:{msg,payUrl,jsApi}}=result;
-                    that.appUpData()
                     if(+code){
                         if (code==30024){
                             bravetime.info("课程已删除");
@@ -212,7 +259,8 @@ export default {
                             bravetime.nativePay(payUrl,function (flag) {
                                 if(flag){
                                     // 先改状态
-                                    that.userTicket = 0;
+                                    that.userTicket = 1;
+                                    // that.userTicket = 0;
                                     goCourse();
                                 }
                             });
@@ -247,7 +295,6 @@ export default {
                 bravetime.info("报名成功");
                 setTimeout(function () {
                     that.enterClassroom();
-                    that.appUpData()
                 },1800);
             }
         },
@@ -270,6 +317,12 @@ export default {
         // 进入课堂
         enterClassroom(){
             let that = this;
+            if (!that.enterClassroomFlag)
+                return
+            that.enterClassroomFlag = false
+            setTimeout(function(){
+                that.enterClassroomFlag = true
+            },5000)
             if(this.inApp){
                 // app的话进入app指定课堂
                 that.enterAppCourse();

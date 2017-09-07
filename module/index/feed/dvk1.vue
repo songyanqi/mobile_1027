@@ -105,8 +105,7 @@
     .dvk1_container{
         height: 76px;
         position: relative;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-bottom: 25px;
     }
     .dvk1_img{
         height: 76px;
@@ -115,6 +114,7 @@
         float:left;
         overflow: hidden;
         background: #fff;
+        margin-top:2px;
     }
     .dvk1_content{
         vertical-align: top;
@@ -127,13 +127,14 @@
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 2;
         display: -webkit-box;
-        font-size: 17px;
+        font-size: 14px;
         color: #333333;
         margin-bottom: 5px;
+        line-height: 20px;
     }
     .dvk1_name{
         font-size: 12px;
-        line-height: 12px;
+        line-height: 16px;
         color: #999;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -144,7 +145,7 @@
     .dvk1_share{
         margin-top: 5px;
         font-size: 12px;
-        line-height:15px;
+        line-height:16px;
         color: #999999;
         overflow:hidden;
     }

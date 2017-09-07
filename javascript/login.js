@@ -47,13 +47,16 @@ var loginReady = function () {
         }
     };
 
-    document.getElementById("phone").onkeyup = function(event) {
+    if(document.getElementById("phone")){
+      document.getElementById("phone").onkeyup = function(event) {
         var e = event ? event : window.event;
         var text_len = this.value.length;
         if ((text_len === 3 || text_len === 8)&& e.keyCode !== 8) {
-            this.value += " ";
+          this.value += " ";
         }
-    };
+      };
+    }
+
 
 
     var container = $(".login_container");

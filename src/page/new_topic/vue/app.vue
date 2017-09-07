@@ -184,9 +184,13 @@
       });
 
       that.$nextTick(function () {
+        
+        // 加上后ios微信有bug 暂时去掉
         if (ua.isIos() && ua.isWeiXin()) {
-          document.querySelector(".app").style.height = window.innerHeight - 44 + "px";
+          document.querySelector(".app").style.paddingBottom = "36px";
         }
+        
+
         setTimeout(function () {
           that.restorePosition();
         },10);

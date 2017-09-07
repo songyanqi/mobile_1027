@@ -1181,7 +1181,7 @@ $crossBord: #FF4A7D;
     .labelList {
       //margin-right: 3px;
       display: inline-block;
-      vertical-align: bottom;
+      vertical-align: middle;
     }
     .price_icon {
       font-size: 20px;
@@ -1213,13 +1213,16 @@ $crossBord: #FF4A7D;
   .question_ico {
     margin-right: 4px;
     margin-left: 4px;
-    margin-top: -2px;
+    // margin-top: -2px;
+    margin-top: -9px;
     background: url(http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/goodsDetail/questionIcon.png) no-repeat;
     background-size: 100%;
   }
   .question_icon_m {
-    // margin-left: 5px;
     margin-left: 0;
+  }
+  .question_icon_m5 {
+    margin-left: 4px;
   }
   .salesCount {
     margin-top: 5px;
@@ -1254,7 +1257,7 @@ $crossBord: #FF4A7D;
     @include tagTheme;
     vertical-align: text-bottom;
   }
-  .commission {
+  /*.commission {
     font-size: 12px;
     margin: 0 0 0 0;
     color: #666;
@@ -1274,7 +1277,40 @@ $crossBord: #FF4A7D;
     .memColor {
       color: #666;
     }
+  }*/
+
+  .commission {
+    font-size: 12px;
+    margin: 0 0 0 0;
+    color: #666;
   }
+  .memBack {
+    font-size: 0;
+    color: #BF9D51;
+  }
+  .memColor {
+    color: #666;
+  }
+  .sellerTiems {
+    color: #FF4A7D;
+    font-size: 12px;
+    span {
+      font-size: 17px;
+      top: 4px;
+      position: relative;
+    }
+  }
+  .f12 {
+    font-size: 12px;
+  }
+  .inlinem {
+    display:inline-block;
+    margin:0 3px;
+  }
+
+
+
+
   .member_iconCont {
       display: inline-block;
       // width: 30px;
@@ -1941,7 +1977,7 @@ $crossBord: #FF4A7D;
     .service_h_icon {
       font-size: 15px;
       color: $crossBord;
-      vertical-align: sub;
+      vertical-align: top;
     }
     .server_c {
       font-size: 12px;
@@ -2379,6 +2415,11 @@ $crossBord: #FF4A7D;
     }
     .b_relative_items:nth-child(even) {
       margin-right: 1%;
+    }
+    @media screen and(max-width: 320px) {
+      .vux-popup-dialog {
+        min-height: 320px!important;
+      }
     }
   }
   //底部导航
@@ -2823,8 +2864,46 @@ $crossBord: #FF4A7D;
       padding: 0 10px 10px 10px;
       color: $crossBord;
       position: relative;
-      //border-bottom: 1px solid #E1E1E1;
     }
+    .modalPicCont {
+      .titleInfo {
+        display: inline-block;
+        margin-left: 107px;
+        vertical-align: middle;
+      }
+      .titleM5 {
+        margin-right: 15px;
+      }
+      .titlePic {
+        position: absolute;
+        width: 100px;
+        border-radius: 5px;
+        height: 100px;
+        bottom: 12px;
+        background: #fff;
+        img {
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+      .titlePic:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        border-radius: 10px;
+        width: 200%;
+        height: 200%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border: 1px solid #E1E1E1;
+        -webkit-transform: scale(.5,.5);
+        transform: scale(.5,.5);
+        -webkit-transform-origin: left top;
+        transform-origin: left top;
+      }
+    }
+
     .singleSkuControl {
       height: 330px;
     }
@@ -3365,8 +3444,24 @@ $crossBord: #FF4A7D;
     transform: rotate(45deg);;
   }
 }
+// #goodsDetail .goodsTypeModal .sku-control {
+//   height: 309px;
+// }
+@media screen and(max-width: 320px) {
+  #goodsDetail .goodsTypeModal .sku-control {
+    height: 200px;
+  }
+  #goodsDetail .goodsTypeModal .singleSkuControl {
+    height: 242px;
+  }
+}
 
 
 //.vux-popup-mask{
 //  max-width: 640px;
 //}
+
+
+.com-popup-base{
+  z-index: 990 !important;
+}

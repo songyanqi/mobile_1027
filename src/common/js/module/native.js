@@ -8,15 +8,31 @@ import $ from '$';
 import config from '../config.js';
 
 // 默认标题栏
-const defaultTitleBar = {
+const defaultInitHead = {
   showHead: 1,    // 是否展示头部
   backOnHead: 1,  // 头部返回按钮
   homeOnHead: 0,  // 头部首页按钮
   shareOnHead: 0, // 头部分享按钮
   btnOnHead: 0,   // 头部文字按钮
-  btnText: "",    // 头部文字按钮文字
-  btnLink: "",    // 头部文字按钮链接
+  btnText: '',    // 头部文字按钮文字
+  btnLink: '',    // 头部文字按钮链接
   showFoot: 0     // 是否展示底部
+};
+
+
+// 默认标题栏
+const defaultSetHead = {
+  title: '',
+  backBtn: '1',     // 0表示头部不展示返回按钮，1表示展示
+  homeBtn: '0',     // 0表示头部不展示首页按钮，1表示展示
+  shareBtn: '0',    //0表示头部不展示分享按钮，1表示展示
+  shareMoney: '',    //0表示分享佣金为0不显示分享赚钱按钮，非0：展示分享赚钱按钮，在3.9.1之前用该字段
+  shareMoneyStr: '',   //在3.9.1中会用该字段
+  rightBtn: {
+    text: '',
+    textColor: '#ff4a7d',
+    action: ''
+  },
 };
 
 /**
@@ -31,23 +47,21 @@ const defaultTitleBar = {
  */
 function getProtocal(param = {}) {
   // 参数默认值
-  param.success = param.success || function () {
+  param.param.success = param.param.success || function () {
     };
-  param.error = param.error || function () {
+  param.param.error = param.param.error || function () {
     };
-
   // 回调名称
   let callbackName = `native_callback_${Math.random().toString().split('.')[1]}`;
-
   // 设置全局回调
   window[callbackName] = function (response) {
     // 多数native接口执行成功时response.code就会返回'1',执行失败时就会返回'0'。
     // 此处返回'1'时候正常回调success,但返回不等于'1'时一律执行error。
     // 如此一来,诸如Account.login这样的返回'0'|'1'|'2'的接口就可以处理'0'|'1'以外的情况了(在error中判断response === '0'|'2'|'3'|'4'|...)。
     if (response.code == '1') {
-      param.success(response)
+      param.param.success(response);
     } else {
-      param.error(response)
+      param.param.error(response);
     }
     // 执行完回收
     window[callbackName] = null;
@@ -55,7 +69,7 @@ function getProtocal(param = {}) {
 
   // 拼接唤起native协议
   let protocal = `davdian:\/\/call.${param.host}.com?action=${param.action}&params=${encodeURIComponent(JSON.stringify(param.param))}&callback=${callbackName}&minv=${param.v}`;
-
+  // alert(protocal)
   return protocal;
 }
 
@@ -72,14 +86,13 @@ function getProtocal(param = {}) {
 function innerCall(param = {}) {
   // 不在app中,直接返回
   if (!ua.isDvdApp()) return;
-
   // 参数检查
   if (!param.host || !param.action || !param.v) {
     throw new Error('参数不全');
   }
-
   // 参数默认值
   param.invalid = param.invalid || function () {
+    console.trace();
       alert("请升级您的APP");
     };
 
@@ -134,10 +147,10 @@ function outerCall(param = {}) {
     location.href = outerProtocal;
 
     // 兜底跳转下载页
-    setTimeout(function(){
+    setTimeout(function () {
       location.href = `//a.app.qq.com/o/simple.jsp?pkgname=com.davdian.seller`;
     }, 3000);
-  }else if(ua.isIos()){
+  } else if (ua.isIos()) {
     // let env = /(davdian\.com|vyohui\.cn|bravetime\.net)/.exec(location.href)[0];
 
     // 端外唤起协议
@@ -169,10 +182,10 @@ function outerCall(param = {}) {
  */
 function call(param = {}) {
   // 如果param.param.invoke为真,需要先唤起native再执行cmd
-  if(param.param.invoke){
+  if (param.param.invoke) {
     delete param.param.invoke;
     outerCall(param);
-  }else{
+  } else {
     innerCall(param);
   }
 }
@@ -483,6 +496,22 @@ const native = {
         param: param
       });
     },
+    showWebHeight(param = {}){
+      call({
+        v: '4.2.0',
+        host: 'Browser',
+        action: 'showWebHeight',
+        param: param
+      });
+    },
+    goNativeHomePage(param = {}){
+      call({
+        v: '4.2.0',
+        host: 'Browser',
+        action: 'goNativeHomePage',
+        param: param
+      });
+    }
   },
 
 
@@ -545,7 +574,7 @@ const native = {
      */
     shareInfo(param = {}) {
       call({
-        v: '3.3.0',
+        v: param.v || '3.3.0',
         host: 'Share',
         action: 'shareInfo',
         param: param,
@@ -676,7 +705,7 @@ const native = {
      * 功能: 进入全部笔记页面
      * 用法:
      * native.VoiceLive.callAppEnterAllNote()
-       });
+     });
      */
     callAppEnterAllNote(param = {}) {
       call({
@@ -690,7 +719,7 @@ const native = {
      * 功能: 进入写笔记页面
      * 用法:
      * native.VoiceLive.callAppEnterWriteNote()
-       });
+     });
      */
     callAppEnterWriteNote(param = {}) {
       call({
@@ -770,13 +799,26 @@ const native = {
         param: param
       });
     },
+    /**
+     * 功能: H5触发cmd客户端复制文案到剪切板
+     * 用法:
+     * native.BrowserTouch.copyText();
+     */
+    copyText(param = {}){
+      call({
+        v: '4.2.0',
+        host: 'BrowserTouch',
+        action: 'copyText',
+        param: param
+      })
+    }
   },
   /****************************** 12、H5触发cmd命令 ******************************/
   Common: {
     /**
      * 功能: H5触发cmd客户端实现回到上一级页面
      * 用法:
-     * native.BrowserTouch.goBackToRootPage();
+     * native.Common.log();
      */
     log(param = {}) {
       call({
@@ -786,6 +828,77 @@ const native = {
         param: param
       });
     },
+  },
+
+  /****************************** 13、音频command命令 ****************************/
+  Audio: {
+    /**
+     * 功能: H5触发cmd客户端实现回到上一级页面
+     * 用法:
+     * native.Audio.goAudioDetail();
+     */
+    goAudioDetail(param = {}) {
+      call({
+        v: '5.0.0',
+        host: 'Audio',
+        action: 'goAudioDetail',
+        param: param
+      });
+    },
+    /**
+     * 功能: H5触发cmd客户端播放暂停音频
+     * 用法:
+     * native.Audio.audioPlay();
+     */
+    audioPlay(param = {}){
+      param.sortNo=param.sortNo.toString();
+      param.albumId=param.albumId.toString();
+      call({
+        v: '5.0.0',
+        host: 'Audio',
+        action: 'audioPlay',
+        param: param
+      })
+    },
+    /**
+     * 功能: H5触发cmd客户端回调js告诉我们正在播放是哪一条
+     * 用法:
+     * native.Audio.audioLocation();
+     */
+    audioLocation(param = {}){
+      call({
+        v: '5.0.0',
+        host: 'Audio',
+        action: 'audioLocation',
+        param: param
+      })
+    },
+    /**
+     * 功能: H5触发cmd客户端回调js告诉我们上次听到了那一条
+     * 用法:
+     * native.Audio.audioLocation();
+     */
+    audioPlayHistory(param = {}){
+      call({
+        v: '5.0.0',
+        host: 'Audio',
+        action: 'audioPlayHistory',
+        param: param
+      })
+    },
+    /**
+     * 功能:H5触发cmd客户端订阅某个音频
+     * 用法:
+     * native.Audio.audioSubscription();
+     */
+    audioSubscription(param = {}){
+      call({
+        v: '5.0.0',
+        host: 'Audio',
+        action: 'audioSubscription',
+        param: param
+      })
+    }
   },
 
 
@@ -827,7 +940,7 @@ const native = {
      */
     onWebviewBack(param = {}){
       // 参数处理
-      param.callback = param.callback || function(){
+      param.callback = param.callback || function () {
           location.reload();
         };
 
@@ -839,7 +952,7 @@ const native = {
         param.callback();
       };
     },
-    
+
     /**
      * 功能: 初始化native头部标题栏
      * 用法:
@@ -856,12 +969,25 @@ const native = {
      */
     initHead(param = {}) {
       // 参数合并
-      param = $.extend({}, defaultTitleBar, param);
+      param = $.extend({}, defaultInitHead, param);
 
       // 调用Browser.initHead接口
       native.Browser.initHead({
         content: param
       });
+    },
+
+    /**
+     * 功能: 初始化native头部标题栏
+     * 用法:
+     * native.custom.initHead()
+     */
+    setHead(param = {}) {
+      // 参数合并
+      param = $.extend({}, defaultSetHead, param);
+
+      // 调用Browser.setHead接口
+      native.Browser.setHead(param);
     },
 
     /**

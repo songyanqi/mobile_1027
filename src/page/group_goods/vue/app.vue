@@ -133,8 +133,11 @@
 
       // 已下架
       if (!this.response.data.goodsInfo) {
-        popup.alert('<p>该商品组团已结束啦～</p>看看其他组团商品吧～', function () {
-          location.href = '/group_list.html';
+        popup.alert({
+          text: '<p>该商品组团已结束啦～</p>看看其他组团商品吧～',         // 文本（支持传入html。有则显示。）
+          btnCallback(){    // 按钮点击回调（有则执行该回调）
+            location.href = '/group_list.html';
+          }
         });
       }
 

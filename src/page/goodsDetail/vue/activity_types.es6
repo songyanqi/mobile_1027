@@ -137,7 +137,13 @@ export default {
 
           //新增
           if (this.infoobj.isComingActivity) {
-            let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            let contText;
+            if (this.visitorstatus == '3') {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            } else {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购";
+            }
+            // let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
             let okFun = () => {
               this.$emit("confirm-id",dataId, 0);
               if (isClose) {
@@ -150,7 +156,15 @@ export default {
               }
             };
             let Title = "限时购活动预告", okText = '任性买',cancleText = "再等等";
-            popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+            // popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+            popup.confirm({
+              title: Title,            // 标题（支持传入html。有则显示。）
+              text: contText,             // 文本（支持传入html。有则显示。）
+              okBtnTitle: okText,       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+              cancelBtnTitle: cancleText,   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+              okBtnCallback: okFun,
+              cancelBtnCallback: cancleFun,
+            });
           } else {
             this.$emit("confirm-id",dataId, 0);
             if (isClose) {
@@ -173,7 +187,13 @@ export default {
 
           //新增
           if (this.infoobj.isComingActivity) {
-            let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            let contText;
+            if (this.visitorstatus == '3') {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
+            } else {
+              contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购";
+            }
+            // let contText = "此商品将在"+ this.infoobj.comingBegTime +"参加限时购会员返现¥"+ this.infoobj.comingActIncome +"";
             let okFun = () => {
               this.$emit("confirm-id",dataId, 1);
               if (isClose) {
@@ -186,7 +206,15 @@ export default {
               }
             };
             let Title = "限时购活动预告", okText = '任性买',cancleText = "再等等";
-            popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+            // popup.confirm(contText,okFun,cancleFun,Title,okText,cancleText);
+            popup.confirm({
+              title: Title,            // 标题（支持传入html。有则显示。）
+              text: contText,             // 文本（支持传入html。有则显示。）
+              okBtnTitle: okText,       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+              cancelBtnTitle: cancleText,   // 取消按钮标题（支持传入html。有则显示，无则显示默认'取消'。）
+              okBtnCallback: okFun,
+              cancelBtnCallback: cancleFun,
+            });
           } else {
             this.$emit("confirm-id",dataId, 1);
             if (isClose) {

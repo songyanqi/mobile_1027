@@ -2,10 +2,9 @@
     <div>
         <coursetitle v-if="!inApp"></coursetitle>
         <index-feed :data="feedList"></index-feed>
-        
         <div class='footerBlock'></div>
         <!--<index-foot :data='footData' v-if='!app'></index-foot>-->
-        <index-foot active="school" v-if='!app'></index-foot>
+        <index-foot active="school" v-if='!app' class="footer"></index-foot>
     </div>
 </template>
 
@@ -18,6 +17,7 @@
     import indexFoot from '../src/component/com-footer.vue'
     import common from "./common/common.es6";
 
+
     export default{
         data:function(){
             return{
@@ -27,7 +27,9 @@
                     cart: 0
                 },
                 app: !!navigator.userAgent.match(/davdian|bravetime|vyohui/),
-                inApp:window.Units&&Units.isApp()
+                inApp:window.Units&&Units.isApp(),
+                name:"allSchool",
+                data:[]
             }
         },
         created:function () {
@@ -35,7 +37,26 @@
         },
         mounted:function () {
             this.init()
+            if (window.appData){
+                window.appData.isAudioAbsorb = 1
+            } else {
+                window.appData = {
+                    'isAudioAbsorb':1
+                }
+            }
+            if (window.appData){
+                window.appData.isShowAudio = 1
+            } else {
+                window.appData = {
+                    'isShowAudio':1
+                }
+            }
+            
+            setTimeout(function(){
+                window.bravetime.initHead()
+            },500)
         },
+
         methods:{
             init(){
               var that = this
@@ -94,4 +115,7 @@
         width: 100%;
         height: 50px;
     }
+  .footer{
+    z-index: 40;
+  }
 </style>

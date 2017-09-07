@@ -1,0 +1,376 @@
+@import "../../../common/css/common.scss";
+
+.adviser_box {
+  background-color: #FFFFFF;
+  overflow: hidden;
+  padding-bottom: 15px;
+}
+
+.adviserImg {
+  width: 80px;
+  height: 80px;
+  margin: 30px auto 0;
+  position: relative;
+}
+
+.adviserImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.adviserImg div {
+  position: absolute;
+  width: 50px;
+  height: 14px;
+  background-color: #FF4F4F;
+  background: -webkit-linear-gradient(left, #FF4F4F, #F78B1C);
+  background: -webkit-gradient(linear, left left, right right, from(#FF4F4F), to(#F78B1C));
+  background: linear-gradient(to right, #FF4F4F, #F78B1C);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 10px;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 300;
+  border-radius: 7px;
+}
+
+.adviserImg div span {
+  display: inline-block;
+  height: 10px;
+  line-height: 10px;
+  margin-top: 2px;
+}
+
+.adviserName {
+  font-size: 14px;
+  color: #666666;
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+  overflow: hidden;
+}
+
+.adviserName > span {
+  font-size: 12px;
+  color: #999999;
+  text-align: center;
+  display: block;
+  margin-top: 8px;
+}
+
+.declaration {
+  width: 83%;
+  margin: 20px auto 0;
+  background-color: #FAFAFA;
+  position: relative;
+  padding: 10px;
+  color: #999999;
+  line-height: 17px;
+  font-size: 12px;
+}
+
+.talk_tringle {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  top: -9px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: url(../img/talk_tringle.png);
+  background-size: 10px 10px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  z-index: 9;
+}
+
+.declaration:after {
+  content: "";
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  width: 200%;
+  height: 200%;
+  border: 1px solid;
+  border-color: #E4E4E4;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  border-radius: 16px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.advisMark {
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.advisMark:after {
+  content: "";
+  height: 1px;
+  width: 200%;
+  display: block;
+  position: absolute;
+  left: -50%;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+.advisMark_wrap {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #666666;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.advisMark_wrap div {
+  display: inline-block;
+  padding-left: 19px;
+  background-repeat: no-repeat;
+  background-position: 0 3px;
+  background-size: 14px 14px;
+}
+
+.advisMark_wrap div:nth-child(2) {
+  margin: 0 25px;
+}
+
+.advisMark_wrap .matching_degree {
+  background-image: url("../img/matching.png");
+}
+
+/*有共同好友*/
+.advisMark_wrap .invite {
+  background-image: url("../img/commonfriend.png");
+}
+
+/*分享达人*/
+.advisMark_wrap .share {
+  background-image: url("../img/sharers.png");
+}
+
+/*育儿能手*/
+.advisMark_wrap .teachMaster {
+  background-image: url("../img/parenting.png");
+}
+
+/*完美主妇*/
+.advisMark_wrap .houseHelper {
+  background-image: url("../img/perfectHousewife.png");
+}
+
+.advisMark_wrap .service {
+  background-image: url("../img/goodService.png");
+}
+
+.advisMark_wrap .friend {
+  background-image: url("../img/sameCity.png");
+}
+
+.adviserTip {
+  font-size: 14px;
+  color: #666666;
+  width: 100%;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 15px;
+}
+
+.my_code_text {
+  text-align: center;
+  font-size: 12px;
+  color: #999999;
+  height: 24px;
+  //line-height: 24px;
+  margin-top: 10px;
+}
+.my_code_text span:nth-of-type(1) {
+  display: inline-block;
+  max-width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.my_code_text span:nth-of-type(2) {
+  height: 24px;
+  width: 91px;
+  color: #FF4A7D;
+  font-size: 12px;
+  position: relative;
+  display: inline-block;
+  line-height: 24px;
+  text-align: center;
+  top: -2px;
+  left: 10px;
+}
+
+.my_code_text span:nth-of-type(2):after {
+  content: "";
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  width: 200%;
+  height: 200%;
+  border: 1px solid;
+  border-color: #FF4A7D;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  border-radius: 24px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.adviserBottom {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #999999;
+  margin: 40px 0;
+}
+
+/* 手机号弹出面板 */
+.g-pop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 640px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.50);
+  z-index: 100;
+  display: none;
+}
+
+.g-pop.active {
+  display: block;
+}
+
+@keyframes g-pop-show-animation {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.g-pop ul {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #E1E1E1;
+  text-align: center;
+  animation: g-pop-show-animation 0.5s;
+}
+
+.g-pop ul li {
+  position: relative;
+  line-height: .44rem;
+  background: white;
+}
+
+.g-pop ul li:after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: #E1E1E1;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.g-pop ul li.number {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.g-pop ul li.copy {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.g-pop ul li.cancel {
+  margin-top: 0.05rem;
+}
+
+.g-pop ul li.cancel:after {
+  display: none;
+}
+
+.g-list .title-wrapper .title.active {
+  border-bottom: none;
+  color: #000;
+}
+
+.replaceAdviser {
+  height: 32px;
+  width: 120px;
+  color: #FF4A7D;
+  font-size: 12px;
+  line-height: 32px;
+  text-align: center;
+  position: relative;
+  margin: 0 auto 40px;
+  display: block;
+}
+
+.replaceAdviser:after {
+  content: "";
+  -webkit-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  width: 200%;
+  height: 200%;
+  border: 1px solid;
+  border-color: #FF4A7D;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  border-radius: 32px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.bottom_tops {
+  margin-top: 30px;
+  line-height: 17px;
+  font-size: 12px;
+  color: #999999;
+  padding: 0 20px;
+}
+
+.com-popup-base {
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}

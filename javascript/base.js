@@ -10,6 +10,7 @@ if ($(".kd_prompt_con").length) {
   });
 }
 
+
 var js = document.scripts;
 for (var i = 0; i < js.length; i++) {
   var src = js[i].src;
@@ -171,6 +172,26 @@ $(document).ready(function () {
   window.iosInterface.alreadyCached = function(){
     window.backNewData.$children[0].cache = true
   }
+  window.iosInterface.getAudioState=function (obj) {
+    if(window.allsclool){
+      window.allsclool.$children.map(function (item) {
+        if (item.name == 'allSchool') {
+          item.$children.map(function (item2) {
+            if (item2.childrenName == "feedList") {
+              item2.$children.map(function (item3) {
+                if (item3.childrenName == "bd_study_0") {
+                  item3.albumId = obj.albumId;
+                  item3.sortNo = obj.sortNo;
+                  item3.btnStatus = obj.state;
+                }
+              })
+            }
+          })
+        }
+      })
+    }
+
+  }
 
   window.iosInterface.setCookie = function (_name, _value) {
     var setCookie = function (name, value) {
@@ -293,13 +314,14 @@ $(document).ready(function () {
       })) {
       var t = Date.now() + "_" + Math.round(Math.random() * 10000);
       window["callback_" + t] = callback;
-
       var str = "davdian:\/\/call." + host + ".com?action=" + encodeURIComponent(action) + "&params=" + encodeURIComponent(JSON.stringify(params)) + "&callback=" + encodeURIComponent("callback_" + t) + "&minv=" + encodeURIComponent(minv);
       window.bravetime.goto(str);
     } else {
       if (minCallback) {
         minCallback();
       } else {
+        console.log("1请升级您的APP")
+        console.trace();
         bravetime.newAlert("请升级您的APP")
       }
     }
@@ -354,7 +376,6 @@ $(document).ready(function () {
     setTimeout(function () {
       bravetime.callNative2("Browser", "setHead", opt, callback, '2.6.0');
     }, 100);
-
   };
 
   window.bravetime.selectIdentity = function (callback, mincallback) {
@@ -434,9 +455,7 @@ $(document).ready(function () {
     if (window.dataUrl == "index.php?c=Index&a=getCatNavList" || window.tj_id == 55) {
       return false;
     }
-    bravetime.callNative2('Browser', 'initHead', {content: JSON.parse(iosInterface.getHeadAndFootData())}, callback, '3.4.0', function () {
-
-    });
+    bravetime.callNative2('Browser', 'initHead', {content: JSON.parse(iosInterface.getHeadAndFootData())}, callback, '3.4.0', function () {});
   };
 
   /**

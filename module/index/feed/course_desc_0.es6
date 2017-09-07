@@ -16,8 +16,7 @@ export default {
             userTicket: window.userTicket,
             arr:[],
             introduceGuide:false,
-            guide:0,
-            AppVersionFlag: true
+            guide:0
         }
     },
     filters: {
@@ -35,28 +34,41 @@ export default {
         }
         this.userId = window.userId
         window.teacherId = this.data.body.teacherDescInfo.teacherId
-        if (that.getAppVersion()<410 && that.isApp)
-            that.AppVersionFlag = false
     },
     mounted(){
         let that = this
         this.$nextTick(function(){
             that.scroolFun()
             setTimeout(function(){
-                if (!that.isApp){
-                    if (localStorage.getItem('introduceGuide')){
-                        that.introduceGuide = false
-                    }else {
-                        window.backNewData.$children[0].bottomBtn = true
-                        localStorage.setItem('introduceGuide', 1)
-                        if ($('.class_introduce_tit').offset().top > 400){
-                            $('#scroll_container').scrollTop($('.class_introduce_tit').offset().top-400)
-                        }
-                        that.introduceGuide = true
-                        that.class_introduce_left = 2
-                        that.guide = 1
+                var reg = new RegExp("open");
+                let flagUrl = reg.test(window.location.href)
+                if (localStorage.getItem('introduceGuide') || flagUrl){
+                    that.introduceGuide = false
+                }else {
+                    window.backNewData.$children[0].bottomBtn = true
+                    localStorage.setItem('introduceGuide', 1)
+                    if ($('.class_introduce_tit').offset().top > 400){
+                        $('#scroll_container').scrollTop($('.class_introduce_tit').offset().top-400)
                     }
+                    that.introduceGuide = true
+                    that.class_introduce_left = 2
+                    that.guide = 1
+                    setTimeout(function(){
+                        $(".introduceGuideMask").on('touchmove',function(e){
+                            e.preventDefault();
+                        })
+                        $(".bottomBtn").on('touchmove',function(e){
+                            e.preventDefault();
+                        })
+                        $(".lectureNnotesAll").on('touchmove',function(e){
+                            e.preventDefault();
+                        })
+                        $(".writeAllSignUp").on('touchmove',function(e){
+                            e.preventDefault();
+                        })
+                    },100)
                 }
+                
             },1000)
         })
     },

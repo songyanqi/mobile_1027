@@ -72,14 +72,14 @@
         </div>
         <div v-if="class_introduce_left==2">
             <div class='discuss_top'>
-                 <img v-if='introduceGuide && guide==2 && userTicket==1' class='introduceGuide1' src="//pic.davdian.com/free/2017/08/11/writeAllSignUp.png">
-                 <img v-if='introduceGuide && guide==2 && userTicket==0' class='introduceGuide1' src="//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png">
-                <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1 && AppVersionFlag'>
+                 <img v-if='introduceGuide && guide==2 && userTicket==1' class='introduceGuide1' src="//pic.davdian.com/free/2017/08/11/writeAllSignUp.png" class='writeAllSignUp'>
+                 <img v-if='introduceGuide && guide==2 && userTicket==0' class='introduceGuide1' src="//pic.davdian.com/free/2017/08/11/writeAllNotSignUp.png" class='writeAllSignUp'>
+                <div class='discuss_top_write' @click='writeNote' v-if='userTicket==1'>
                     写我的听课笔记
                     <img src="//pic.davdian.com/free/2017/07/26/write.png">
 
                 </div>
-                <div class='discuss_top_no_write' v-if='userTicket==0 && AppVersionFlag'>
+                <div class='discuss_top_no_write' v-if='userTicket==0'>
                     报名后才能写笔记哦
                 </div>
                 <div class='discuss_top_alldiscuss' @click='allNote'>
@@ -135,7 +135,7 @@
             <p>老师开讲新课，我们会悄悄告诉你呦</p>
         </div>
 
-        <img v-if='introduceGuide && guide==1' class='introduceGuide' src="//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png">
+        <img v-if='introduceGuide && guide==1' class='introduceGuide lectureNnotesAll' src="//pic.davdian.com/free/2017/08/08/lectureNnotesAll.png">
 
         <div v-if='introduceGuide' class='introduceGuideMask'></div>
         <div v-if='introduceGuide' class='introduceGuidebtn' @click='know'>知道了</div>
@@ -148,6 +148,23 @@
     export default course_desc_0
 </script>
 <style scoped lang='sass'>
+    .course_desc_0 .class_introduce_tit .class_dis, .course_desc_0 .class_introduce_tit .theater_dis{
+      /*-webkit-box-flex: 1;*/
+      /*-webkit-flex: 1;*/
+      /*flex: 1;*/
+      width: 1.22rem;
+      /*display: -webkit-box;*/
+      /*display: -webkit-flex;*/
+      /*display: flex;*/
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      height: 16px;
+      box-sizing: border-box;
+    }
     .no_discuss{
         padding-bottom: 20px;
         text-align: center;
@@ -482,7 +499,7 @@
         position: fixed;
         top: 0;
         right: 0;
-        bottom: 0;
+        bottom: 60px;
         left: 0;
         background: #000000;
         opacity: 0.6;

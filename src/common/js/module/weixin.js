@@ -35,17 +35,17 @@ export default {
     if (location.href.indexOf("localhost") > -1 || (location.href.indexOf("//192.168") > -1)) {
       return;
     }
-
     // param分享参数覆盖默认分享信息
     let shareInfo = $.extend({}, config.defaultShareInfo, {
       type: '', // 分享类型,music、video或link，不填默认为link
       dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
       success: function () {
+        param.success()
       },  // 用户确认分享后执行的回调函数
       cancel: function () {
+        param.cancel()
       }, // 用户取消分享后执行的回调函数
     }, param);
-
     // 加载微信jssdk
     scriptjs('//res.wx.qq.com/open/js/jweixin-1.0.0.js', function () {
       // 更新cookie中weixin_verify_info
@@ -109,7 +109,6 @@ export default {
           jsApiList: [].concat(jsApiList) // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
         });
       };
-
       // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
       wx.ready(function () {
         console.log('微信验证成功');
@@ -127,7 +126,6 @@ export default {
           updateVerifyInfo.execTimes = updateVerifyInfo.execTimes ? updateVerifyInfo.execTimes + 1 : 1;
         }
       });
-
       verify(response);
     });
   },
