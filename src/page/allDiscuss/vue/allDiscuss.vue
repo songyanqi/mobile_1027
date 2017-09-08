@@ -182,6 +182,11 @@
     </div>
   </div>
 
+    <div v-if='noLogin' class='noApply'>
+      <img src="//pic.davdian.com/free/2017/09/01/Group.png">
+      <p>登录后才能继续访问</p>
+    </div>
+  </div>
 </template>
 <script>
   import api from '../../../../utils/api.es6';
@@ -214,8 +219,8 @@
             dataFlag1: false,
             isapp:!!navigator.userAgent.match(/davdian|bravetime|vyohui/),
             show_list:[],
-            show_list2:[]
-
+            show_list2:[],
+            noLogin:false
 
         }
       },
@@ -398,6 +403,7 @@
               };
 
               api("/api/mg/content/course/myNotesList",obj2).then(function (my_discuss) {
+//                alert("myNote"+my_discuss.code);
                 common.checkRedirect(my_discuss)
                 if(my_discuss.code==0){
                   that.pageIndex2= parseInt(that.pageIndex2) + parseInt(that.pageSize2);
@@ -418,8 +424,11 @@
                     that.pageFlag2=true
                   }
                 }else{
-                  dialog.alert('code:'+result.code + ';msg:' + result.data.msg);
-                  that.pageFlag2=true
+                  if(my_discuss.code == 30000) {
+                    that.noLogin = true;
+                  }else{
+                    dialog.alert('code:' + my_discuss.code + ';msg:'+my_discuss.data.msg);
+                  }
                 }
 
               }).catch(function (e) {
@@ -463,7 +472,11 @@
                     that.pageFlag1=true
                   }
                 } else {
-                  dialog.alert('code:'+result.code + ';msg:' + result.data.msg)
+                  if(result.code == 30000){
+                      that.noLogin=true;
+                  }else{
+                    dialog.alert('code:' + result.code + ';msg:'+result.data.msg);
+                  }
                 }
               }).catch(function(e){
                 that.pageFlag1 = true
@@ -501,6 +514,7 @@
           },
           fn:function (){
             var _this=this;
+
             if(this.flag){
                 if(!_this.my_note_data[0]){
                   this.myNote();
@@ -570,6 +584,7 @@
               localStorage.setItem("dialog","localStorage");
             }
           }
+
       },
 
       mounted:function(){
@@ -945,5 +960,16 @@
     width: 3.17rem;
     height: 2.16rem;
   }
-
+  .noApply{
+    text-align: center;
+  }
+  .noApply img{
+    width: 1.2rem;
+    margin-top: 1rem;
+  }
+  .noApply p{
+    color: #666;
+    margin-top: 0.3rem;
+    text-align: center;
+  }
 </style>
