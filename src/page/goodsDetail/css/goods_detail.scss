@@ -2661,43 +2661,25 @@ $crossBord: #FF4A7D;
     .cart_wrapper {
       width: 54%;
       float: right;
-      //flex: 3;
-      //-webkit-flex: 3;
-      //-webkit-box-flex: 3;
-      //display: flex;
-      //display: -webkit-flex;
+    }
+    .w100 {
+      width: 100%;
     }
     .disableGray {
-      //background-image: -webkit-linear-gradient(left,#C1C1C1,#999);
-      //background-image: -moz-linear-gradient(right,#C1C1C1,#999);
-      //background-image: -o-linear-gradient(right,#C1C1C1,#999);
-      //background-image: linear-gradient(to right,#C1C1C1,#999);
       background: linear-gradient(to right,#C1C1C1,#999);
       background: -moz-linear-gradient(right,#C1C1C1,#999);
       background: -o-linear-gradient(right,#C1C1C1,#999);
       background: -webkit-linear-gradient(left,#C1C1C1,#999);
     }
     .cart_cont {
-      //display: flex;
-      //display: -webkit-flex;
-      //flex: 1;
-      //-webkit-flex: 1;
-      //-webkit-box-flex: 1;
     }
     .look_btn {
-      //flex: 1;
-      //-webkit-flex: 1;
-      //-webkit-box-flex: 1;
       width: 100%;
       float:left;
       height: 100%;
       line-height: 47px;
       color: #fff;
       text-align: center;
-      //background-image: -webkit-linear-gradient(left, #FDAF17, #FB803A);
-      //background-image: -moz-linear-gradient(right, #FDAF17, #FB803A);
-      //background-image: -o-linear-gradient(right, #FDAF17, #FB803A);
-      //background-image: linear-gradient(to right, #FDAF17, #FB803A);
       background: linear-gradient(to right, #FDAF17, #FB803A);
       background: -moz-linear-gradient(right, #FDAF17, #FB803A);
       background: -o-linear-gradient(right, #FDAF17, #FB803A);
@@ -2734,30 +2716,18 @@ $crossBord: #FF4A7D;
     }
 
     .btn_buy,.haveGoods_tips {
-      //background-image: -webkit-linear-gradient(left, #FF5B5B, #FA1862);
-      //background-image: -o-linear-gradient(right, #FF5B5B, #FA1862);
-      //background-image: -moz-linear-gradient(right, #FF5B5B, #FA1862);
-      //background-image: linear-gradient(to right, #FF5B5B, #FA1862);
       background: linear-gradient(to right, #FF5B5B, #FA1862);
       background: -o-linear-gradient(right, #FF5B5B, #FA1862);
       background: -moz-linear-gradient(right, #FF5B5B, #FA1862);
       background: -webkit-linear-gradient(left, #FF5B5B, #FA1862);
     }
     .look_again {
-      //background-image: -webkit-linear-gradient(left, #FFB21A, #FF7C31);
-      //background-image: -moz-linear-gradient(right, #FFB21A, #FF7C31);
-      //background-image: -o-linear-gradient(right, #FFB21A, #FF7C31);
-      //background-image: linear-gradient(to right, #FFB21A, #FF7C31);
       background: linear-gradient(to right, #FFB21A, #FF7C31);
       background: -moz-linear-gradient(right, #FFB21A, #FF7C31);
       background: -o-linear-gradient(right, #FFB21A, #FF7C31);
       background: -webkit-linear-gradient(left, #FFB21A, #FF7C31);
     }
     .disableGray {
-      //background-image: -webkit-linear-gradient(left,#C1C1C1,#999);
-      //background-image: -moz-linear-gradient(right,#C1C1C1,#999);
-      //background-image: -o-linear-gradient(right,#C1C1C1,#999);
-      //background-image: linear-gradient(to right,#C1C1C1,#999);
       background: linear-gradient(to right,#C1C1C1,#999);
       background: -moz-linear-gradient(right,#C1C1C1,#999);
       background: -o-linear-gradient(right,#C1C1C1,#999);

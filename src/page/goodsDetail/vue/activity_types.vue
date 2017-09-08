@@ -379,10 +379,11 @@
                             <x-number
                                     class = "x_number"
                                     :min="1"
-                                    :value="handlechangenum"
+                                    :value="1"
                                     :max = "Number(goodslimitnum)"
                                     width = "43px"
                                     align="left"
+                                    fillable
                                     @on-change="handleChange"></x-number>
                         </div>
                     </div>
