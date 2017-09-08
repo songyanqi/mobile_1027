@@ -118,7 +118,7 @@ export default {
 </script>
 
 <style lang="less">
-@import '../../node_modules/vux/src/styles/weui/widget/weui_cell/weui_cell_global';
+@import '../../../node_modules/vux/src/styles/weui/widget/weui_cell/weui_cell_global';
 
 .vux-cell-primary {
   flex: 1;
