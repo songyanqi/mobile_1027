@@ -129,7 +129,7 @@
       </div>
     </div>
     <div v-if="environment=='show'" class="goods_group">
-      <category :list = "itemData.previewData"></category>
+      <category :list = "itemData.previewData" :referer="itemData.referer"></category>
     </div>
   </div>
 </template>
