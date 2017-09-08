@@ -465,8 +465,8 @@
     width: 7.1rem;
     margin-left: 0.2rem;
     height: 1px;
-    margin-top: 0.135rem;
-    margin-bottom: 0.134rem;
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
     background:#E1E1E1;
     -webkit-transform:scale(0.5);
   }
