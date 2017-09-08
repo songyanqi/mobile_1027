@@ -175,7 +175,7 @@
         font-weight: bold;
       }
       .text {
-        margin-top: ptr(20);
+        margin-top: ptr(15);
         padding: 0 ptr(30);
         color: #8D3737;
         font-size: ptr(14);
@@ -188,6 +188,16 @@
         background: linear-gradient(to right, #FF5C5C, #FA1862);
         color: white;
         border-radius: ptr(100);
+      }
+      .qrcode{
+        display: block;
+        margin: ptr(20) auto 0;
+        @include square(ptr(90));
+      }
+      .qrcode-tip{
+        margin-top: ptr(10);
+        font-size: ptr(12);
+        color: #999;
       }
     }
     .box.web-focus {
