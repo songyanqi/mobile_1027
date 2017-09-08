@@ -449,7 +449,7 @@
     border-radius: 8px;
     border:1px solid #e1e1e1;
     color: #999999;
-    line-height:0.16rem;
+    line-height:0.15rem;
     font-size: 0.11rem;
     box-sizing: border-box;
     margin-top: 0.02rem;
