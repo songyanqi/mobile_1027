@@ -20,7 +20,7 @@ export default {
       v_index: {},
       begin_time: 0,
       end_time: 0,
-      menuId: this.getQuery('menuId')
+      menuId: this.getQuery('menuId') || 8
     }
   },
   props: ['menuids'],
@@ -29,6 +29,7 @@ export default {
       let scope = this;
       scope.menuId = this.menuids;
       scope.beforeinit();
+      scope.inits();
     }
   },
   created: function () {
@@ -57,7 +58,6 @@ export default {
   methods: {
     beforeinit: function () {
       var scope = this;
-      console.log('menuId', scope.menuId);
       scope.list = [];
       if (scope.menuId && scope.menuId != 8) {
         scope.no_more = false;
@@ -77,11 +77,11 @@ export default {
         scope.list = JSON.parse(socialCache.get('likeList' + scope.menuId)).data.feedList[0].body.dataList;
         scope.beforeFirstLoading = false;
         /*如果是首页没有更多是 true 如果不是首页 需要知道猜你喜欢是否加载完毕*/
-        if (scope.menuId) {
+        if (scope.menuId && scope.menuId != 8) {
           //存储的页码
-          scope.sData.pageIndex = socialCache.get('pageIndex' + scope.menuId);
+          scope.sData.pageIndex = sessionStorage.getItem('pageIndex' + scope.menuId);
           /*是否已经是最后一页*/
-          if (socialCache.get('lastPage' + scope.menuId) == 1) {
+          if (sessionStorage.getItem('lastPage' + scope.menuId) == 1) {
             scope.no_more = true;
           } else {
             scope.no_more = false;
@@ -112,7 +112,6 @@ export default {
         if (window.disabledGoodsLoading) {
           return false;
         }
-
         var offset = window.pageYOffset;
         var offsetTop = document.body.scrollHeight;
         /*统计部分 猜你喜欢页面停留时长*/
@@ -167,7 +166,7 @@ export default {
             success: function (data) {
               if (data.data) {
                 /*如果不是首页*/
-                if (scope.menuId) {
+                if (scope.menuId && scope.menuId != 8) {
                   /*如果有数据*/
                   if (data.data.feedList[0].body.dataList.length) {
                     scope.list = scope.list.concat(data.data.feedList[0].body.dataList);
@@ -176,21 +175,21 @@ export default {
                     socialCache.set('likeList' + scope.menuId, JSON.stringify(data), {exp: 60});
                     /*页码加1*/
                     scope.sData.pageIndex++;
-                    socialCache.set('pageIndex' + scope.menuId, scope.sData.pageIndex);
+                    sessionStorage.setItem('pageIndex' + scope.menuId, scope.sData.pageIndex);
                     /*如果是最后一页*/
                     if (data.data.feedList[0].body.lastPage == 1) {
                       scope.no_more = true;
                       /*存储最后一页*/
-                      socialCache.set('lastPage' + scope.menuId, 1);
+                      sessionStorage.setItem('lastPage' + scope.menuId, 1);
                     } else {
                       scope.no_more = false;
-                      socialCache.set('lastPage' + scope.menuId, 0);
+                      sessionStorage.setItem('lastPage' + scope.menuId, 0);
                     }
                   }
                   /*如果没有数据*/
                   else {
                     scope.no_more = true;
-                    socialCache.set('lastPage' + scope.menuId, 1);
+                    sessionStorage.setItem('lastPage' + scope.menuId, 1);
                   }
                   scope.beforeFirstLoading = false;
                 }
