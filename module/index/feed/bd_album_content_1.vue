@@ -13,7 +13,6 @@
         <div class="list" @click.stop="go_href(item.albumId,item.sortNo)">
           <div class="left_img" :style="{'background-image':styleObject(item.imageUrl)}">
             <!--<img :src="item.imageUrl" alt="">-->
-
           </div>
           <div class="list_content">
             <div class="list_title" v-text="item.music"></div>
@@ -448,7 +447,7 @@
     width: 0.46rem;
     height: 0.16rem;
     border-radius: 8px;
-    border:1px solid #979797;
+    border:1px solid #e1e1e1;
     color: #999999;
     line-height:0.16rem;
     font-size: 0.11rem;
