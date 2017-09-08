@@ -664,6 +664,11 @@ $(function(){
     }
 
     function pay() {
+        if (!$(".order_rule_ipt").hasClass("order_rule_ipt_checked")) {
+          $(".order_navList").addClass("order_navList_line");
+          bravetime.info("请先同意预售规则，才能去支付哦～")
+          return;
+        }
         var payData = {}, el;
 
 
@@ -1015,6 +1020,13 @@ $(function(){
             // $(".buy").removeClass("btn-disable")
         }
     }
+    // 预定商品点击相关规则
+    $(".order_navList").on("click",function () {
+      $(this).find(".order_rule_ipt").toggleClass("order_rule_ipt_checked");
+      if ($(".order_rule_ipt").hasClass("order_rule_ipt_checked")) {
+        $(this).removeClass("order_navList_line");
+      }
+    });
 
 });
 

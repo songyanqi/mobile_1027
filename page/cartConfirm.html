@@ -283,6 +283,34 @@
             </div>
         </div>
 
+        <!-- 新增预订 -->
+        <div class = "order_goods">
+          <div class = "stageList color_red">
+            <div class = "order_stage_title">阶段1：</div>
+            <div class = "order_stage_cont">
+                <span>定金 ¥ 1.6 </span><span>(抵扣¥10)</span>
+            </div>
+          </div>
+          <div class = "stageList">
+            <div class = "order_stage_title">
+                阶段2：
+            </div>
+            <div class = "order_stage_cont">尾款 ¥ 9</div>
+          </div>
+          <div class = "stage_date"><span class = "order_triangle"></span>10月18日 00:00:00 开始支付尾款</div>
+          <div class = "stageList">
+            <div class = "order_stage_title">邮费：</div>
+            <div class = "order_stage_cont">尾款 ¥ 9</div>
+          </div>
+        </div>
+        <!-- checkbox -->
+        <div class = "order_navList">
+          <span>我已同意预订款不退等相关规则 <span class = "order_question"></span></span>
+          <!-- <input class = "orderCheckbox reasonIpt" type="checkbox"> -->
+          <i class = "order_rule_ipt"></i>
+        </div>
+
+
         <div class="cart_confirm_picc mt20">
             正品由<span class="picc_pic"></span>保险承保
         </div>
@@ -314,7 +342,7 @@
     <!--</div>-->
     <div class = "newConfirm_nav">
       <div class = "newConfirm_left"><span class = "newConfirm_l_tips">应付: </span><span class = "newConfirm_money" id="all_price_reduce_bouns">￥331.00</span></div>
-      <div class = "newConfirm_right disableGray">去支付</div>
+      <div class = "newConfirm_right">去支付</div>
       <!--<div class="back dav-btn btn-orange btn-small pull-left">-->
         <!--返回-->
       <!--</div>-->
@@ -451,7 +479,7 @@
 </div>
 
 
-<script src="//cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://cdn.davdian.com/jquery/1.9.1/jquery.min.js"></script>
 <!--下面这个jquery要带着version哈-->
 <script type="text/javascript">
     !window.jQuery && document.write('<script type="text/javascript" src="//fe.davdian.com/wap/17225/cdn/jquery/1.9.1/jquery-1.9.1.min.js"><\/script>');
@@ -465,5 +493,6 @@
 <script type="text/javascript" src="../javascript/base.js"></script>
 <script type="text/javascript" src="../javascript/units.js"></script>
 <script type="text/javascript" src="../dist/cartConfirm.js"></script>
+<script type="text/javascript" src="../javascript/cartConfirm.js"></script>
 </body>
 </html>
