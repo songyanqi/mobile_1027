@@ -11,8 +11,9 @@
       </div>
       <div class="flist" v-for="(item,index) in dataList">
         <div class="list" @click.stop="go_href(item.albumId,item.sortNo)">
-          <div class="left_img">
-            <img :src="item.imageUrl" alt="">
+          <div class="left_img" :style="{'background-image':styleObject(item.imageUrl)}">
+            <!--<img :src="item.imageUrl" alt="">-->
+
           </div>
           <div class="list_content">
             <div class="list_title" v-text="item.music"></div>
@@ -79,6 +80,9 @@
       });
     },
     methods:{
+      styleObject(item){
+        return "url("+ item +")";
+      },
       timeFormat(t){
         let time = Math.ceil(t);
         if (time<60){
@@ -349,11 +353,20 @@
     display: inline-block;
     vertical-align: top;
   }
-  .left_img img{
+  .left_img{
     width:0.7rem;
     height: 0.7rem;
     border-radius:4px;
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
+  /*.left_img img{*/
+    /*width:0.7rem;*/
+    /*height: 0.7rem;*/
+    /**/
+  /*}*/
   .list_content{
     margin-left: 0.1rem;
     height: 0.7rem;
@@ -436,13 +449,13 @@
     height: 0.16rem;
     border-radius: 8px;
     border:1px solid #979797;
-    border:0.5px solid #979797;
     color: #999999;
     line-height:0.16rem;
     font-size: 0.11rem;
     box-sizing: border-box;
     margin-top: 0.02rem;
   }
+
 
   .text{
     font-size:0.16rem;
@@ -491,4 +504,5 @@
     border-right: 1px solid #999999;
     margin-right: 0.09rem;
   }
+
 </style>
