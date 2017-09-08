@@ -27,7 +27,7 @@
             <b v-if="cart" v-text="cart"></b>
           </a>
         </div>
-        <div v-if="menudata" class="swiper-container v_menu index_con_menu" id="v_menu" id="v_menu">
+        <div v-if="menudata" class="swiper-container v_menu index_con_menu" id="v_menu">
           <ul class="swiper-wrapper">
             <li class="swiper-slide" v-for="(item, index) in menudata.menuList"
                 @click='changeCategory(item.id,index,$event)'>

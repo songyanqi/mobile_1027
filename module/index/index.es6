@@ -41,7 +41,7 @@ export default {
       unLoadFlag: false,
       state: 0,
       app: !!navigator.userAgent.match(/davdian|bravetime|vyohui/),
-      initcate: window.menuId,
+      initcate: this.getQuery('menuId'),
       queryPathType: window.queryPathType,
       date: new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate(),
       iftips: false,
@@ -53,7 +53,6 @@ export default {
       menudata: {},
       page_index: 0,
       menuId: 8,
-      likeNum: 0
     }
   },
   computed: {
@@ -108,15 +107,6 @@ export default {
      *
      *
      */
-    // sessionHistory(){
-    //     if (window.Units.isMobileIOS() || window.Units.isAndroid()){
-    //         if (sessionStorage.getItem('history') && JSON.parse(sessionStorage.getItem('history')).length >1){
-    //             if (JSON.parse(sessionStorage.getItem('history'))[JSON.parse(sessionStorage.getItem('history')).length-1].path != JSON.parse(sessionStorage.getItem('history'))[JSON.parse(sessionStorage.getItem('history')).length-2].path){
-    //                 window.location.reload()
-    //             }
-    //         }
-    //     }
-    // },
     sessionHistory() {
       if (window.Units.isMobileIOS() || window.Units.isAndroid()) {
         if (sessionStorage.getItem('history') && JSON.parse(sessionStorage.getItem('history')).length > 1) {
@@ -183,7 +173,6 @@ export default {
       $.ajax({
         type: "POST",
         url: strUrl,
-        // url: '../data/index_data.json',
         data: strData,
         dataType: 'json',
         success: function (data) {
@@ -474,13 +463,12 @@ export default {
         })
     },
     changeCategory: function (category, index) {
-      this.page_index = index;
-      this.menuId = category;
       if (category == '-1') {
         window.location.href = this.menuList[this.menuList.length - 1].command.content
         return
       }
-      var that = this
+      var that = this;
+      that.menuId = category;
       if (this.initCategory == index) {
         return
       }
@@ -905,6 +893,12 @@ export default {
     },
     events: function () {
 
+    },
+    getQuery: function (name) {
+      var reg = new RegExp('(^|&?)' + name + '=([^&]*)(&|$)', 'i');
+      var r = window.location.search.match(reg)
+      if (r != null) return decodeURIComponent(r[2]);
+      return null
     }
   },
   components: {
@@ -949,12 +943,6 @@ export default {
       $('body').css("paddingBottom", "48px")
     } else {
       $('body').css("paddingBottom", "0px")
-    }
-  },
-  watch: {
-    menuId: function () {
-      var scope = this;
-      this.likeNum++;
     }
   }
 }
