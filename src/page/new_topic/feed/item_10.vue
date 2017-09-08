@@ -24,7 +24,8 @@
           <!--<x-img v-if="index>3" :src="item.goods_img" default-src="http://pic.davdian.com/free/2017/06/08/160_160_4d0f1e2009fdfd8bb0c430cda8e22a82.png" container="#vux_view_box_body"></x-img>-->
           <!--<img v-else  :src="item.goods_img">-->
           <img :src="item.goods_img">
-          <span class="img_label" v-if="item.goods_label&&item.goods_label.length" v-text="item.goods_label"></span>
+          <span class="img_label" v-if="item.actInfo!=''" v-text="item.actInfo"></span>
+            <span class="img_label" v-if="item.actInfo==''&&+item.ratio" v-text="'返现'+item.ratio+'倍'"></span>
         </div>
         <div class="goods_title" v-text="item.goods_name"></div>
         <div class="goods_price_outer">

@@ -115,7 +115,8 @@
       <div  v-for="(item, index) in itemData.previewData" :key="index" class="goods_item">
         <div class="goods_img">
           <img :src="item.goods_img" :alt="item.goods_name" >
-          <span class="img_label" v-if="item.goods_label&&item.goods_label.length" v-text="item.goods_label"></span>
+          <span class="img_label" v-if="item.actInfo!=''" v-text="item.actInfo"></span>
+            <span class="img_label" v-if="item.actInfo==''&&+item.ratio" v-text="'返现'+item.ratio+'倍'"></span>
         </div>
         <div v-text="item.goods_name" class="goods_name"></div>
         <div class="goods_price">
