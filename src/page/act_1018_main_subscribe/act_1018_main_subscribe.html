@@ -9,26 +9,104 @@
 <div class="app">
   <!--标题-->
   <com-top-title title="疯抢好货 提前预约" home></com-top-title>
-  <!-- Swiper -->
-  <div class="swiper-container" @click="subscribe($event, 1)">
+
+  <!-- 场次tab -->
+  <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">
-        <img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'">
+      <div class="swiper-slide" @click="swiperSlideClick(i - 1)" v-for="i in 10">
+        <div class="item" :class="{selected: tabIndex === i - 1}">
+          <p>13:50</p>
+          <p>2017-09-08</p>
+          <i></i>
+        </div>
       </div>
-      <div class="swiper-slide">
-        <img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'">
-      </div>
-      <div class="swiper-slide">
-        <img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'">
-      </div>
-      <div class="swiper-slide">
-        <img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'">
-      </div>
-      <div class="swiper-slide">
-        <img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'">
-      </div>
-      <div class="swiper-slide"><a href="">查看更多</a></div>
     </div>
+  </div>
+
+  <!-- 商品列表 -->
+  <ul class="g-goods-list">
+    <li>
+      <img class="pic" src="http://pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/quality,Q_90">
+      <span class="info">
+        <div class="name">婴儿绘本馆第一辑</div>
+        <div class="desc">反季清仓，不抢后悔</div>
+        <div class="status">765人已预约<i></i>10.19 11点开抢</div>
+        <div class="price">
+          <span class="discount-symbol">￥</span><span class="discount-price">9.90</span>
+          <span class="origin-price">￥9.90</span>
+          <span class="btn subscribe">我要预约</span>
+        </div>
+      </span>
+    </li>
+    <li>
+      <img class="pic" src="http://pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/quality,Q_90">
+      <span class="info">
+        <div class="name">婴儿绘本馆第一辑</div>
+        <div class="desc">反季清仓，不抢后悔</div>
+        <div class="status">765人已预约<i></i>10.19 11点开抢</div>
+        <div class="price">
+          <span class="discount-symbol">￥</span><span class="discount-price">9.90</span>
+          <span class="origin-price">￥9.90</span>
+          <span class="btn subscribed">已设预约</span>
+        </div>
+      </span>
+    </li>
+    <li>
+      <img class="pic" src="http://pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/quality,Q_90">
+      <span class="info">
+        <div class="name">婴儿绘本馆第一辑</div>
+        <div class="desc">反季清仓，不抢后悔</div>
+        <div class="status">765人已预约<i></i>10.19 11点开抢</div>
+        <div class="price">
+          <span class="discount-symbol">￥</span><span class="discount-price">9.90</span>
+          <span class="origin-price">￥9.90</span>
+          <span class="btn wait-buy">等待抢购</span>
+        </div>
+      </span>
+    </li>
+    <li>
+      <img class="pic" src="http://pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/quality,Q_90">
+      <span class="info">
+        <div class="name">婴儿绘本馆第一辑</div>
+        <div class="desc">反季清仓，不抢后悔</div>
+        <div class="status">765人已预约<i></i>10.19 11点开抢</div>
+        <div class="price">
+          <span class="discount-symbol">￥</span><span class="discount-price">9.90</span>
+          <span class="origin-price">￥9.90</span>
+          <span class="btn buy">立即抢购</span>
+        </div>
+      </span>
+    </li>
+    <li>
+      <img class="pic" src="http://pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/quality,Q_90">
+      <span class="info">
+        <div class="name">婴儿绘本馆第一辑</div>
+        <div class="desc">反季清仓，不抢后悔</div>
+        <div class="status"><span class="progress"><i></i></span>已有54人抢购</div>
+        <div class="price">
+          <span class="discount-symbol">￥</span><span class="discount-price">9.90</span>
+          <span class="origin-price">￥9.90</span>
+          <span class="btn buy">立即抢购</span>
+        </div>
+      </span>
+    </li>
+  </ul>
+
+  <!-- 关注结果 -->
+  <div class="g-tip">
+    <!--<div class="box weixin-no-focus">-->
+      <!--<div class="title">请关注“果敢时代大V店”公众号</div>-->
+    <!--</div>-->
+    <div class="box web-no-focus">
+      <div class="title">请关注“果敢时代大V店”公众号</div>
+      <div class="text">在微信中搜索“果敢时代大V店”并关注，不关注公众号可能无法预约，错过抢购商品哦！</div>
+      <div class="btn">确定</div>
+    </div>
+    <!--<div class="box web-focus">-->
+      <!--<div class="title">预约成功</div>-->
+      <!--<div class="text">活动开始前5分钟将在微信公众号中进行提醒</div>-->
+      <!--<div class="btn">确定</div>-->
+    <!--</div>-->
   </div>
 
   <!--返回顶部-->

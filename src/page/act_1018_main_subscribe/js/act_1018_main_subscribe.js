@@ -30,6 +30,7 @@ new Vue({
     return {
       response: null,
       swiper: null,
+      tabIndex: 5,
     }
   },
   computed: {},
@@ -40,11 +41,12 @@ new Vue({
       this.$nextTick(function () {
         let ts = this;
 
-        ts.swiper = new Swiper('.swiper-container', {
+        this.swiper = new Swiper('.swiper-container', {
           pagination: '.swiper-pagination',
-          slidesPerView: 3.5,
+          slidesPerView: 'auto',
           paginationClickable: true,
-          spaceBetween: 30
+          spaceBetween: 0,
+          initialSlide: 2,
         });
 
         // 设置app头部标题栏
@@ -128,8 +130,9 @@ new Vue({
       });
     },
     /** tab切换 */
-    tabClickEvent() {
-      this.swiper.slideTo();
+    swiperSlideClick(index) {
+      this.swiper.slideTo(index - 2);
+      this.tabIndex = index;
     },
   },
   filters: {},

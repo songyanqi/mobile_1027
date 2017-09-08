@@ -1,5 +1,208 @@
 @import "../../../common/css/common.scss";
+@import "./_icon.scss";
 
 .app {
+  background: white;
+  .swiper-container {
+    height: ptr(55);
+    .swiper-slide {
+      width: ptr(80);
+      height: ptr(55);
+      .item {
+        position: relative;
+        box-sizing: border-box;
+        padding-top: ptr(5);
+        width: ptr(80);
+        height: ptr(50);
+        background: #666;
+        text-align: center;
+        &.selected {
+          background: #FF4A7D;
+          i {
+            @include i-tab-arrow;
+            position: absolute;
+            bottom: ptr(-5);
+            left: 50%;
+            margin-left: ptr(-7);
+          }
+        }
+        p {
+          color: white;
+          &:first-of-type {
+            font-size: ptr(20);
+            font-weight: bold;
+          }
+          &:last-of-type {
+            margin-top: ptr(6);
+            font-size: ptr(13);
+          }
+        }
+      }
+    }
+  }
 
+  .g-goods-list {
+
+    li {
+      padding: ptr(10) 0;
+      @include v-list-split-line;
+      display: flex;
+      .pic {
+        margin-left: ptr(5);
+        width: ptr(120);
+        height: ptr(120);
+      }
+      .info {
+        flex: 1;
+        padding: 0 ptr(10);
+        .name {
+          margin-top: ptr(5);
+          font-size: ptr(15);
+          @include height(ptr(22));
+        }
+        .desc {
+          margin-top: ptr(6);
+          font-size: ptr(12);
+          @include height(ptr(17));
+        }
+        .status {
+          margin-top: ptr(15);
+          font-size: ptr(12);
+          @include height(ptr(18));
+          color: #FF4a7d;
+          > i {
+            display: inline-block;
+            margin: 0 ptr(5);
+            width: 1px;
+            height: ptr(15);
+            background: #E1E1E1;
+            vertical-align: middle;
+          }
+          .progress {
+            position: relative;
+            margin-right: ptr(10);
+            display: inline-block;
+            width: ptr(80);
+            height: ptr(8);
+            border-radius: ptr(100);
+            background: #EEEEEE;
+            i {
+              position: absolute;
+              display: inline-block;
+              width: 50%;
+              height: ptr(8);
+              border-radius: ptr(100);
+              background: #FF5C5C;
+            }
+          }
+        }
+        .price {
+          position: relative;
+          margin-top: ptr(4);
+          color: #FF4a7d;
+          .discount-symbol {
+            font-size: ptr(14);
+            @include height(ptr(28));
+          }
+          .discount-price {
+            font-size: ptr(20);
+            @include height(ptr(28));
+          }
+          .origin-price {
+            margin-left: ptr(5);
+            font-size: ptr(11);
+            @include height(ptr(16));
+            color: #999;
+            text-decoration: line-through;
+          }
+          .btn {
+            position: absolute;
+            right: 0;
+            top: ptr(1);
+            display: inline-block;
+            padding-top: ptr(1);
+            width: ptr(70) * 2;
+            border: 1px solid #FF4a7d;
+            border-radius: ptr(100);
+            color: #FF4a7d;
+            font-size: ptr(12) * 2;
+            @include height(ptr(24) * 2);
+            text-align: center;
+            transform: scale(0.5);
+            transform-origin: top right;
+            &.subscribe {
+
+            }
+            &.subscribed {
+              background: linear-gradient(to right, #DBDADA, #C4C4C4);
+              color: white;
+              border: none;
+            }
+            &.wait-buy {
+              background: linear-gradient(to right, #DBDADA, #C4C4C4);
+              color: white;
+              border: none;
+            }
+            &.buy {
+              background: #FF4a7d;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .g-tip {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    .box {
+      @include center;
+      width: ptr(287);
+      height: ptr(469);
+      background: url(../img/subscribe-tip.png) no-repeat;
+      background-size: 100% 100%;
+      text-align: center;
+      .title {
+        margin-top: ptr(200);
+        color: #8D3737;
+        font-size: ptr(16);
+        @include height(ptr(24));
+        font-weight: bold;
+      }
+      .text {
+        margin-top: ptr(20);
+        padding: 0 ptr(30);
+        color: #8D3737;
+        font-size: ptr(14);
+        line-height: ptr(24);
+      }
+      .btn {
+        margin: ptr(30) auto 0;
+        width: ptr(190);
+        @include height(ptr(35));
+        background: linear-gradient(to right, #FF5C5C, #FA1862);
+        color: white;
+        border-radius: ptr(100);
+      }
+    }
+    .box.web-focus {
+      width: ptr(287);
+      height: ptr(469);
+      background-image: url(../img/subscribe-tip.png);
+      .title {
+        //margin-top: ptr(100);
+      }
+      .text {
+        //margin-top: ptr(150);
+      }
+      .btn {
+        //margin-top: ptr(20);
+      }
+    }
+  }
 }
