@@ -20,12 +20,12 @@ export default {
       v_index: {},
       begin_time: 0,
       end_time: 0,
-      menuId:this.getQuery('menuId')
+      menuId: this.getQuery('menuId')
     }
   },
   props: ['menuids'],
-  watch:{
-    menuids:function () {
+  watch: {
+    menuids: function () {
       let scope = this;
       scope.menuId = this.menuids;
       scope.beforeinit();
@@ -55,11 +55,11 @@ export default {
     category: category,
   },
   methods: {
-    beforeinit:function () {
+    beforeinit: function () {
       var scope = this;
-      console.log('menuId',scope.menuId);
+      console.log('menuId', scope.menuId);
       scope.list = [];
-      if (scope.menuId) {
+      if (scope.menuId && scope.menuId != 8) {
         scope.no_more = false;
         scope.apiURL = "/api/mg/sale/channel/getGuessBody";
         scope.sData = {
@@ -173,7 +173,7 @@ export default {
                     scope.list = scope.list.concat(data.data.feedList[0].body.dataList);
                     data.data.feedList[0].body.dataList = scope.list;
                     /*不确定新添加进来的数据是否联动了*/
-                    socialCache.set('likeList' + scope.menuId, JSON.stringify(data), {exp: 40});
+                    socialCache.set('likeList' + scope.menuId, JSON.stringify(data), {exp: 60});
                     /*页码加1*/
                     scope.sData.pageIndex++;
                     socialCache.set('pageIndex' + scope.menuId, scope.sData.pageIndex);
@@ -197,7 +197,7 @@ export default {
                 /*如果是首页*/
                 else {
                   localStorage.setItem('likeList' + scope.menuId, JSON.stringify(data));
-                  socialCache.set('likeList' + scope.menuId, JSON.stringify(data), {exp: 40});
+                  socialCache.set('likeList' + scope.menuId, JSON.stringify(data), {exp: 60});
                   scope.list = data.data.feedList[0].body.dataList;
                   scope.no_more = true;
                   scope.beforeFirstLoading = false;

@@ -41,7 +41,7 @@ export default {
       unLoadFlag: false,
       state: 0,
       app: !!navigator.userAgent.match(/davdian|bravetime|vyohui/),
-      initcate: window.menuId,
+      initcate: this.getQuery('menuId'),
       queryPathType: window.queryPathType,
       date: new Date().getFullYear() + '-' + (new Date().getMonth() + 1) + '-' + new Date().getDate(),
       iftips: false,
@@ -173,7 +173,6 @@ export default {
       $.ajax({
         type: "POST",
         url: strUrl,
-        // url: '../data/index_data.json',
         data: strData,
         dataType: 'json',
         success: function (data) {
@@ -894,6 +893,12 @@ export default {
     },
     events: function () {
 
+    },
+    getQuery: function (name) {
+      var reg = new RegExp('(^|&?)' + name + '=([^&]*)(&|$)', 'i');
+      var r = window.location.search.match(reg)
+      if (r != null) return decodeURIComponent(r[2]);
+      return null
     }
   },
   components: {
