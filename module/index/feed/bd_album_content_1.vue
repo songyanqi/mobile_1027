@@ -18,7 +18,7 @@
             <div class="list_title" v-text="item.music"></div>
             <div class="list_name" v-text="item.album"></div>
             <div class="new_time">
-              <div class="audio_count" v-if="item.number!=0"><span v-text="item.number"></span>次播放</div>
+              <!--<div class="audio_count" v-if="item.number!=0"><span v-text="item.number"></span>次播放</div>-->
               <div class="list_time">
                 <span class="clock"></span><span v-text="timeFormat(item.time)" class="se_text"></span>
               </div>
