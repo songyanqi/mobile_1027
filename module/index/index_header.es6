@@ -2,10 +2,11 @@ export default {
   data() {
     return {
       msg: 'hello vue',
-      swiperIndex: 0
+      swiperIndex: 0,
+      cate:this.getQuery("menuId") || 8
     }
   },
-  props: ['data', 'menudata', 'initCategory', 'initcate', 'usersta'],
+  props: ['data', 'menudata', 'usersta'],
   computed: {
     cart: function () {
       return this.data.cart || 0;
@@ -18,12 +19,6 @@ export default {
     },
     head: function () {
       return this.data.head || {}
-    },
-    category: function () {
-      return this.initCategory + 0
-    },
-    cate: function () {
-      return this.initcate
     }
   },
   components: {},
@@ -54,12 +49,12 @@ export default {
       }
       var length = that.menudata.menuList.length;
       for (var i = 0; i < length; i++) {
-        if (that.menudata.menuList[i].id == that.initcate) {
+        if (that.menudata.menuList[i].id == that.cate) {
           that.swiperIndex = i;
         }
       }
       this.$nextTick(function () {
-         var swiper_num = window.screen.width / 59;
+        var swiper_num = window.screen.width / 59;
 
         if (length > swiper_num) {
           this.menuswiper = new Swiper('#v_menu', {
@@ -76,20 +71,25 @@ export default {
       })
     },
     changeinit() {
-      // var that = this;
-      // window.addEventListener('orientationchange', function (event) {
-      //   if (window.orientation == 180 || window.orientation == 0) {
-      //     setTimeout(function () {
-      //       that.init();
-      //     }, 300)
-      //   }
-      // });
+
     },
     changeCategory(category, index) {
-      this.initCategory = index;
-      this.$emit('categorya', category, index);
-      this.menuswiper.slideTo(Math.max(0, index - 2));
+      var scope = this;
+      var str = location.origin;
+      if (index) {
+        str = location.origin + '?menuId=' + category;
+      }
+      history.replaceState("", "", str);
+      this.cate = category;
+      scope.$emit('categorya', category, index);
+      scope.menuswiper.slideTo(Math.max(0, index - 2));
     },
+    getQuery: function (name) {
+      var reg = new RegExp('(^|&?)' + name + '=([^&]*)(&|$)', 'i');
+      var r = window.location.search.match(reg)
+      if (r != null) return decodeURIComponent(r[2]);
+      return null
+    }
   },
   ready: function () {
     this.$http.get('url').then(data => {
