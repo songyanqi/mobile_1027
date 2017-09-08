@@ -34,9 +34,8 @@
         components:{
             orderlistswitcher:orderlistswitcher
         },
-        mounted(){
+        ready(){
           if(this.isApp){
-            alert(1);
             window.bravetime.setHead({"title":"订单列表"});
           }
         }
