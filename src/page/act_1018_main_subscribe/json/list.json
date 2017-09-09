@@ -31,6 +31,16 @@
         "timeMenu": "20:00",
         "menu": "等待开枪",
         "screenings": "20"
+      },
+      {
+        "timeMenu": "20:00",
+        "menu": "等待开枪",
+        "screenings": "20"
+      },
+      {
+        "timeMenu": "20:00",
+        "menu": "等待开枪",
+        "screenings": "20"
       }
     ],
     "dataList": [
@@ -38,23 +48,7 @@
         "goods_id": "商品id",
         "goodsName": "商品名称",
         "goodsPrice": "商品价格",
-        "imageUrl": "图片地址",
-        "startTime": "开始时间",
-        "buttonName": "预约提醒",
-        "buttonStatus": "1",
-        "price": "20.9",
-        "recommendDesc": "推荐语",
-        "bespeakNum": "51",
-        "sellNum": "51",
-        "command": {
-          "content": "点击时的动作 请求商品详情接口"
-        }
-      },
-      {
-        "goods_id": "商品id",
-        "goodsName": "商品名称",
-        "goodsPrice": "商品价格",
-        "imageUrl": "图片地址",
+        "imageUrl": "http://pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/quality,Q_90",
         "startTime": "开始时间",
         "buttonName": "预约提醒",
         "buttonStatus": "1",

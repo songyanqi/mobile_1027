@@ -30,7 +30,7 @@ new Vue({
     return {
       response: null,
       swiper: null,
-      tabIndex: 5,
+      tabIndex: 0,
     }
   },
   computed: {},
@@ -78,7 +78,7 @@ new Vue({
      * 接口名称: 获取爆款预约场次及商品列表
      * 接口文档: http://wiki.bravetime.net/pages/viewpage.action?pageId=18547026
      */
-    getData() {
+    getData(screenings) {
       let ts = this;
       $.ajax({
         cache: false,
@@ -88,13 +88,13 @@ new Vue({
         dataType: 'json',
         data: encrypt({
           js_wx_info: 1,
-          screenings: '',
+          screenings: screenings,
         }),
         success(response) {
           ts.response = response;
         },
         error(error) {
-          ts.response = require('../json/act_1018_main_subscribe.json');
+          ts.response = require('../json/list.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
@@ -130,9 +130,10 @@ new Vue({
       });
     },
     /** tab切换 */
-    swiperSlideClick(index) {
+    swiperSlideClick(index, screenings) {
       this.swiper.slideTo(index - 2);
       this.tabIndex = index;
+      this.getData(screenings);
     },
   },
   filters: {},
