@@ -107,8 +107,8 @@ export default {
       var scope = this;
       scope.begin_time = 0;
       scope.end_time = 0;
-      $(window).off('scroll');
-      $(window).scroll(function () {//滚动条滚动事件
+      $(document).off('scroll');
+      $(document).scroll(function () {//滚动条滚动事件
         if (window.disabledGoodsLoading) {
           return false;
         }
