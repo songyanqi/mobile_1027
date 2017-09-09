@@ -323,12 +323,12 @@ function renderData(res) {
         window.link = location.href;
         window.imgUrl = dataBasis.shareImg.replace('pic.davdian.com','pic1.davdian.com');
         window.desc = dataBasis.shareRecommend;
-        share.setShareInfo({
-            title: window.title, // 分享标题
-            desc: window.desc, // 分享描述
-            link: window.link, // 分享链接
-            imgUrl: window.imgUrl, // 分享图标
-        });
+        // share.setShareInfo({
+        //     title: window.title, // 分享标题
+        //     desc: window.desc, // 分享描述
+        //     link: window.link, // 分享链接
+        //     imgUrl: window.imgUrl, // 分享图标
+        // });
       }
 
     } else {
