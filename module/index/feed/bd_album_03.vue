@@ -38,7 +38,7 @@
               <div class="item_title" v-text="item.music"></div>
               <div class="item_timee">
                 <div class="item_date" v-text="getLocalTime(item.update_time)"></div>
-                <div class="item_count"><span v-text="item.number"></span>次播放</div>
+                <div class="item_count" v-if="item.number!=0"><span v-text="item.number"></span>次播放</div>
                 <div class="item_time">
                   <div class="clock"></div>
                   <div class="times" v-text="timeFormat(item.time)"></div>

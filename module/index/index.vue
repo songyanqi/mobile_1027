@@ -71,7 +71,6 @@
 <style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../../node_modules/nprogress/nprogress.css";
   @import "./index.css";
-
   #nprogress .spinner {
     display: none !important;
   }
