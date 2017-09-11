@@ -67,6 +67,7 @@ Vue.component('feed', {
         success:function (result) {
           result = JSON.parse(result);
           item.previewData = result.data;
+          item.referer = result.referer;
         },
         error: function (err) {
           console.log(err)

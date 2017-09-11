@@ -842,6 +842,13 @@ export default {
                             window.link = location.href;
                             window.imgUrl = dataBasis.shareImg.replace('pic.davdian.com','pic1.davdian.com');
                             window.desc = dataBasis.shareRecommend;
+                            
+                            // share.setShareInfo({
+                            //     title: window.title, // 分享标题
+                            //     desc: window.desc, // 分享描述
+                            //     link: window.link, // 分享链接
+                            //     imgUrl: window.imgUrl, // 分享图标
+                            //   });
 
                         }
                     } else {
@@ -1045,30 +1052,43 @@ export default {
           }
         }
 
-            common1.initShare(5);
-            base.ready();if (shareMoney > 0&& that.visitorStatus == '3') {
-              native.Browser.setHead({
-                shareMoney: shareMoney + "",
-                shareMoneyStr: '赚' + shareMoney + '元',
-              });
-              window.moreShareInfo = {
-                shareTitle: "分享至少赚" + shareMoney + "元",
-                shareDesc: "当好友点击您分享的链接，并进入您的店铺购物，您就可以获得对应的商品返现啦！",
-                bigImgUrl: `http://img.davdian.com/add_qrcode.php?goods_id=${that.goodsId}&seller_id=${that.sellerId}&t=${Date.now()}`,};
-            } else {
-              native.custom.initHead({
-                shareOnHead: 1,
-                isAudioAbsorb:1,
-                isShowAudio:1
-              });
-              share.setShareInfo({
-                title: window.title, // 分享标题
-                desc: window.desc, // 分享描述
-                link: window.link, // 分享链接
-                imgUrl: window.imgUrl, // 分享图标
-              });
-            }
-          }
+        common1.initShare(5);
+        base.ready();
+        if (shareMoney > 0&& that.visitorStatus == '3') {
+          native.Browser.setHead({
+            shareMoney: shareMoney + "",
+            shareMoneyStr: '赚' + shareMoney + '元',
+          });
+          window.moreShareInfo = {
+            shareTitle: "分享至少赚" + shareMoney + "元",
+            shareDesc: "当好友点击您分享的链接，并进入您的店铺购物，您就可以获得对应的商品返现啦！",
+            bigImgUrl: `http://img.davdian.com/add_qrcode.php?goods_id=${that.goodsId}&seller_id=${that.sellerId}&t=${Date.now()}`,};
+        } else {
+          native.custom.initHead({
+            shareOnHead: 1,
+            isAudioAbsorb:1,
+            isShowAudio:1
+          });
+          share.setShareInfo({
+            title: window.title, // 分享标题
+            desc: window.desc, // 分享描述
+            link: window.link, // 分享链接
+            imgUrl: window.imgUrl, // 分享图标
+          });
+        }
+      } else {
+        native.custom.initHead({
+          shareOnHead: 1,
+          isAudioAbsorb:1,
+          isShowAudio:1
+        });
+        share.setShareInfo({
+          title: window.title, // 分享标题
+          desc: window.desc, // 分享描述
+          link: window.link, // 分享链接
+          imgUrl: window.imgUrl, // 分享图标
+        });
+      }
 
       //活动
       this.activityNum = dataExtra.activity.length;
