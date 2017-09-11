@@ -26,6 +26,8 @@
         var cancelOrderUrl = "../data/testCancel.json";
         var arriveUrl = '../data/success.json'; // 确认收货地址
         var arriveJumpUrl = '//nemo.davdian.com';
+        var presale_surplus_time = 5;
+        var presale_type = "reserve";
     </script>
 </head>
 <body class="orderDetail">
@@ -52,11 +54,23 @@
     <!-- 新增预定 -->
     <div class = "order_presale">
       <div class = "order_count_down">
-        <span>剩余：</span><span></span>
-        <span>应付定金：¥1.6</span>
+        <div class = "oder_cut">
+          <span>剩余：</span><span class = "cutTime">00 : 00 : 00</span>
+        </div>
+        <div>应付定金：¥1.6</div>
       </div>
       <div class = " order_presale_tips">请在30分钟之内支付定金，若未及时支付，则该订单自动关闭。</div>
     </div>
+    <!-- 订单预定成功 -->
+    <div class = "orderSuccess">
+      <div class = "orderSuccess_time"><span class = "orderIcon"></span><span class = "orderSuccess_title">恭喜您预定成功！</span></div>
+      <div class = "orderSuccess_tips">请与 2017年10月18日 00:00:00 至 23:59:59 之间支付尾款，若尾款超时未支付，则该订单自动关闭。</div>
+    </div>
+
+
+
+
+
 
     <div class="current_address dav-shadow">
         <div class="info dav-red dav-small">

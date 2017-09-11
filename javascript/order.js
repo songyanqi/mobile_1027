@@ -1141,4 +1141,42 @@ jQuery(document).ready(function ($) {
     }
 
 
+  //预定商品倒计时
+  function cutDown(numTime) {
+    var oneMinute = 60,
+        oneHour = 60 * 60,
+        oneDay = 60 * 60 * 24;
+
+    var hours = 00,
+        minutes = 00,
+        seconds = 00;
+    cutTimer = setInterval(function () {
+      if (numTime > 0) {
+        hours = parseInt(numTime % oneDay / oneHour);
+        minutes = parseInt(numTime % oneDay % oneHour / oneMinute);
+        seconds = parseInt(numTime % oneDay % oneHour % oneMinute);
+
+        hours = hours >= 10 ? hours : "0"+hours;
+        minutes = minutes >= 10 ? minutes : "0"+minutes;
+        seconds = seconds>=10 ? seconds : "0" +seconds
+        numTime--;
+        $(".cutTime").html(hours + " : " + minutes + " : " + seconds)
+      } else {
+        clearInterval(cutTimer);
+        if (presale_type == "reserve") {
+          $(".order_presale").html("<div class = 'overCutDown'>定金超时支付，交易关闭</div>");
+        }
+        if (presale_type == "final") {
+          $(".order_presale").html("<div class = 'overCutDown'>尾款超时支付，交易关闭</div>");
+        }
+      }
+    },1000);
+    
+    
+  };
+  // 如果是定金单或者尾款单就倒计时
+  if (presale_type == "reserve" || presale_type == "final") {
+    cutDown(presale_surplus_time);
+  };
+
 });
