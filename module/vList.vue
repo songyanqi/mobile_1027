@@ -28,12 +28,6 @@
           亲子时光
         </div>
         <div class="title_container" v-text='menuName' v-if='!haveMenu'></div>
-        <div class="top_right" v-if='haveMenu'>
-          <a class="top_back" href="class_category.html"
-             data-dav-tj="classroom|category|category|1|category@classroom">
-            <span class="classification_search_ico"></span>
-          </a>
-        </div>
       </div>
       <v-list-switcher v-if='haveMenu' class="out_switch" :list="switcherListDate" :init-category="category" v-on:category="changeCategory"></v-list-switcher>
     </div>
@@ -60,7 +54,7 @@
       <div v-if="hasMore">数据加载中...</div>
       <div v-else>没有更多</div>
     </div>
-    <com-footer active="dynamic" v-if='haveMenu'></com-footer>
+    <com-footer active="dynamic" v-if='haveMenu && !isShow'></com-footer>
   </div>
 </template>
 <style>
@@ -126,6 +120,8 @@
   import layout from "./layout/api.es6";
   import {getQuery} from "../utils/utils.es6"
   import share from "../src/common/js/module/share.js"
+  import native from "../src/common/js/module/native.js"
+  import appInterface from "../utils/appInterface.es6"
   export default{
     data(){
       return{
@@ -161,13 +157,13 @@
         }else{
           this.category=this.isShow.split("-")[0];
         }
+        document.title="亲子时光";
       }
     },
     updated(){
 
     },
     mounted(){
-
       try {
         share.setShareInfo({
           title: "亲子时光|妈妈商学院",
@@ -177,6 +173,26 @@
         })
       } catch (err) {
         alert(err)
+      }
+      if(this.isShow){
+        setTimeout(function(){
+          native.Browser.setHead({
+            title:"亲子时光",
+            backBtn:"1",
+            shareBtn:"1",
+          });
+        },400);
+        setTimeout(function(){
+          window.iosInterface.getShareInfo = function () {
+            var shareInfo = {
+              title: "亲子时光|妈妈商学院",
+              desc: "睡前故事|早安音乐|有声绘本|家庭百科，全都在这里",
+              link: window.location.href,
+              imgUrl: "http://pic.davdian.com/free/2017/08/30/210_210_f115620a5e0d745863faaa11f7b49aa3.jpeg"
+            };
+            return JSON.stringify(shareInfo);
+          };
+        },300);
       }
     },
     components:{

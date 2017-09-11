@@ -12,9 +12,9 @@ export default {
           //显示的价格
           memPrice: 0,
           //未登陆显示的会员价
-          unMemPrice: 0,
+          // unMemPrice: 0,
           //省的价格
-          savePrice: 0,
+          // savePrice: 0,
           //从父组件获取的价格
           infoObj: {},
           // 倒计时
@@ -26,6 +26,11 @@ export default {
           },
           // 是否是限时购
           isLimitBuy: false,
+          // 倒计时
+          isFirstCutDown: true,
+          cutDownTimer: null,
+          //多规格判断上次lastTime和这次的lastTime是否相同，相同就不调用倒计时
+          cutDownTimeLimit: '',
         }
     },
     // activitytypename去掉了
@@ -54,6 +59,7 @@ export default {
       },
       goodsname: {
         handler () {
+          this.isFirstCutDown = true;
           this.initMember(this.infoObj);
           if (this.infoObj.isComingActivity) {
             this.isLimitBuy = true;
@@ -63,7 +69,14 @@ export default {
       },
       singleactivity: {
         handler (newInfoObj,oldInfoObj) {
-          this.cutDownTime(newInfoObj.lastTime);
+           if (newInfoObj.lastTime == this.cutDownTimeLimit) {
+            return;
+          }
+          this.cutDownTimeLimit = newInfoObj.lastTime;
+          if (this.isFirstCutDown) {
+            clearInterval(this.cutDownTimer);
+            this.cutDownTime(newInfoObj.lastTime);
+          }
           if (newInfoObj.typeId == '8') {
             this.isLimitBuy = true;
           }
@@ -88,30 +101,6 @@ export default {
             } else {
               this.memPrice = newInfoObj.memberPrice;
             }
-          }
-        }
-
-        //未登录计算会员价
-        let regs = /\.[1-9]0$/ig;
-        if (newInfoObj.memberGoods == '0') {
-          this.unMemPrice = parseFloat(Number(this.memPrice) - Number(this.actTatio)).toFixed(2);
-          if (this.unMemPrice.indexOf('.00') > -1) {
-            this.unMemPrice = parseInt(this.unMemPrice);
-          } else if (regs.test(this.unMemPrice)) {
-            this.unMemPrice = this.unMemPrice.substring(0,this.unMemPrice.length - 1);
-          }
-          this.savePrice = this.actTatio;
-        } else {
-          this.unMemPrice = this.infoobj.memberPrice;
-          if (this.memPrice == this.infoobj.memberPrice) {
-            this.savePrice = parseFloat(Number(newInfoObj.finalPrice - this.unMemPrice)).toFixed(2);
-          } else {
-            this.savePrice = parseFloat(Number(this.memPrice - this.unMemPrice)).toFixed(2);
-          }
-          if (this.savePrice.indexOf('.00') > -1) {
-            this.savePrice = parseInt(this.savePrice);
-          } else if (regs.test(this.savePrice)) {
-            this.savePrice = this.savePrice.substring(0,this.savePrice.length - 1);
           }
         }
       },
@@ -152,8 +141,8 @@ export default {
         let numTime = Number(time),that = this;
         let newTime = numTime * 1000;
         let timeStr = "";
-
-        let timer = setInterval(() => {
+        clearInterval(this.cutDownTimer);
+        this.cutDownTimer = setInterval(() => {
           if (numTime > 0) {
             numTime--;
            // 计算显示数值
@@ -167,7 +156,7 @@ export default {
             that.remainTime.minute = minute >= 10 ? minute : `0${minute}`;
             that.remainTime.second = second >= 10 ? second : `0${second}`;
           } else {
-            clearInterval(timer);
+            clearInterval(this.cutDownTimer);
             that.isOver = true;
             that.$root.eventHub.$emit('time_over',that.isOver);
             that.memPrice = that.infoobj.shopPrice;

@@ -35,43 +35,39 @@
                   </div>
               </div>
           </div>
-          <!--判断状态-->
             <!--先判断是否上架-->
             <div v-if = "goodstatusonsale == 1" class = "cart_wrapper">
-                <div v-if = "seckill" style = "width: 100%;">
-                    <div
-                         class = "btn_buy"
-                         :class = "{ disableGray: Number(goodstatus.goodsStocks) <= 0}"
-                         style = "width: 100%;"
-                         :dataid = "datarepresentid"
-                         @click = "handleBuy($event)">立即秒杀</div>
-                </div>
-                <div v-else style = "width: 100%;">
-                    <div v-if = "Number(goodstatus.goodsStocks) <= 0" style = "width: 100%;">
-                        <div class = "look_again" @click = "handleLook">再逛逛</div>
-                        <div class = "haveGoods_tips"
-                             @click = "handleTips">到货提醒</div>
+                <div v-if = "!seckill" class = "w100">
+                  <div class = "w100" v-if = "Number(goodstatus.goodsStocks) <= 0">
+                      <div class = "look_again" @click = "handleLook">再逛逛</div>
+                      <div class = "haveGoods_tips"
+                        @click = "handleTips">到货提醒</div>
+                  </div>
+                  <div v-else class = "clearfix w100">
+                    <div>
+                        <div class = "add_cart" v-if = "ismultigoods" @click = "handleAddCart">加入购物车</div>
+                        <div class = "add_cart" v-else @click = "handleSingleCart">加入购物车</div>
                     </div>
-                    <div v-else style = "width: 100%;" class = "clearfix">
-                        <div>
-                            <div class = "add_cart" v-if = "ismultigoods" @click = "handleAddCart">加入购物车</div>
-                            <div class = "add_cart" v-else @click = "handleSingleCart">加入购物车</div>
-                        </div>
-                        <div v-if = "isclose == true"
-                             class = "btn_buy"
-                             :dataid = "datarepresentid"
-                             @click = "handleBuy($event)">立即购买</div>
-                        <div v-else
+                    <div v-if = "isclose == true"
                          class = "btn_buy"
-                         @click = "handleAddCartBuy">立即购买</div>
+                         :dataid = "datarepresentid"
+                         @click = "handleBuy($event)">立即购买</div>
+                    <div v-else
+                     class = "btn_buy"
+                     @click = "handleAddCartBuy">立即购买</div>
+                  </div>
                 </div>
+                <div v-else class = "w100">
+                  <div
+                    class = "btn_buy w100"
+                    :class = "{ disableGray: Number(goodstatus.goodsStocks) <= 0}"
+                    :dataid = "datarepresentid"
+                    @click = "handleBuy($event)">立即秒杀</div>
                 </div>
             </div>
             <div v-else  class = "cart_wrapper" @click = "handleLook">
                 <div class = "look_btn">再逛逛</div>
             </div>
-            <!--删掉了1-->
-
         </div>
         <!--售罄和未上架显示看看别的-->
         <div class = "recommend_goods" v-if = 'mayyoulikelist && mayyoulikelist.length'>
@@ -258,11 +254,12 @@
                             <x-number
                                     class = "x_number"
                                     style = "padding-right: 0;"
-                                    :value="handlechangenum"
+                                    :value="1"
                                     :min="1"
                                     :max = "Number(goodslimitnum)"
                                     width = "43px"
                                     align="left"
+                                    fillable
                                     @on-change="change"></x-number>
                         </div>
                     </div>
