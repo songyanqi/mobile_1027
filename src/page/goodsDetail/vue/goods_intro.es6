@@ -35,7 +35,7 @@ export default {
     },
     // activitytypename去掉了
     props: ['infoobj', 'goodsname', 'shopurl', 'membercont', 'seckill', 'goodsstocknumber',
-            'visitorstatus', 'singleactivity', 'isshowactive','actendtime','isshowa','isshowb'],
+            'visitorstatus', 'singleactivity', 'isshowactive','actendtime','isshowa','isshowb','response'],
     created () {
         let that = this;
         this.$root.eventHub.$on('time_over',(isover) => {

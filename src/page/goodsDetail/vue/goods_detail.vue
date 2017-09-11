@@ -114,7 +114,8 @@
               :visitorstatus = "visitorStatus"
               :goodsname = "goodsName"
               :goodsstocknumber = "goodsStockNumber"
-              :infoobj = "infoObj"></goods-intro>
+              :infoobj = "infoObj"
+              :response="response"></goods-intro>
             <activity-types
               v-if = "firstScreenFinish"
               :infoobj = "infoObj"
