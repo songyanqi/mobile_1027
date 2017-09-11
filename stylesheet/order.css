@@ -2490,5 +2490,66 @@ body.orderDetail, body.orderDelivery {
 
 
 
+.order_detail_container .order_presale {
+  padding: 15px 10px;
+  background: linear-gradient(to right, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  background: -moz-linear-gradient(right, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  background: -o-linear-gradient(right, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  background: -webkit-linear-gradient(left, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  color: #fff;
+}
+.order_detail_container .order_count_down {
+  font-weight: bold;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 10px;
+  line-height: 21px;
+}
+.order_detail_container .oder_cut {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.order_detail_container .order_presale_tips {
+  font-size: 12px;
+  line-height: 22px;
+}
+.order_detail_container .overCutDown {
+  text-align: center;
+}
+.order_detail_container .orderSuccess {
+  padding: 15px 10px;
+  background: linear-gradient(to right, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  background: -moz-linear-gradient(right, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  background: -o-linear-gradient(right, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  background: -webkit-linear-gradient(left, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  color: #fff;
+}
+.order_detail_container .orderIcon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -2px;
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+  background: url(http://mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/goodsDetail/select.png) no-repeat;
+  background-size: 100%;
+}
+.order_detail_container .orderSuccess_time {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.order_detail_container .orderSuccess_title {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 21px;
+}
+.order_detail_container .orderSuccess_tips {
+  font-size: 12px;
+}
+
+
+
 
 
