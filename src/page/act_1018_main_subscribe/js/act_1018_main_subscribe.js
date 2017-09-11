@@ -15,6 +15,7 @@ import login from '../../../common/js/module/login.js';
 import ua from '../../../common/js/module/ua.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
+import date from '../../../common/js/module/date.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
 
 // 懒加载初始化
@@ -34,6 +35,9 @@ new Vue({
       tabIndex: 0,
       tipType: null,
       screenings: null,
+      isDvdApp: ua.isDvdApp(),
+      date: date,
+      subscribe_1018_goods_ids: localStorage.getItem('subscribe_1018_goods_ids') ? JSON.parse(localStorage.getItem('subscribe_1018_goods_ids')) : [],
     }
   },
   computed: {},
@@ -150,11 +154,11 @@ new Vue({
       });
     },
     /** tab切换 */
-    swiperSlideClick(index, screenings) {
+    swiperSlideClick(index, item) {
       this.swiper.slideTo(index - 2);
       this.tabIndex = index;
-      this.screenings = screenings;
-      this.getData(screenings);
+      this.screenings = item.screenings;
+      this.getData(item.screenings);
     },
     /** 我要预约 */
     btnClickSubscribe(goods) {
@@ -163,7 +167,7 @@ new Vue({
           // 调接口
           this.subscribe(goods, function (response) {
             if (response.code == '0') {
-              popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品');
+              popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
               goods.buttonName = '已设预约';
             } else {
               popup.toast('预约失败:' + response.data.msg);
@@ -173,7 +177,23 @@ new Vue({
           this.tipType = 'weixin-no-focus';
         }
       } else if (ua.isDvdApp()) {
-        subscribe(goods);
+        native.Browser.goodsBook({
+          goodsTitle: goods.goodsName,
+          goodsImage: goods.imageUrl,
+          goodsStartTime: goods.startTime,
+          goodsUrl: `${location.origin}/${goods.goodsId}.html`,
+          goodsListUrl: location.href,
+          success() {
+            // 放入localStorage
+            this.subscribe_1018_goods_ids.push(goods.goodsId);
+            localStorage.setItem('subscribe_1018_goods_ids', JSON.stringify(this.subscribe_1018_goods_ids));
+            popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
+            goods.buttonName = '已设预约';
+          },
+          error() {
+            debugger
+          }
+        });
       } else {
         if (this.response.data.isFollow === '1') {
           // 调接口
@@ -186,12 +206,21 @@ new Vue({
     },
     /** 已设预约 */
     btnClickSubscribed() {
-      popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品');
+      popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
     },
     /** 等待抢购 */
     btnClickWaitBuy() {
       popup.toast('活动马上就开始抢购了，不要走开～');
     },
+    /** 判断是否已经在app中预约 */
+    isSubscribedInApp(goodsId) {
+      for(let i in this.subscribe_1018_goods_ids){
+        if(goodsId == this.subscribe_1018_goods_ids[i]){
+          return true;
+        }
+      }
+      return false;
+    }
   },
   filters: {},
 });

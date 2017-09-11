@@ -13,7 +13,7 @@
   <!-- 场次tab -->
   <div class="swiper-container">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" @click="swiperSlideClick(i, item.screenings)"
+      <div class="swiper-slide" @click="swiperSlideClick(i, item)"
            v-for="(item, i) in response.data.menuList">
         <div class="item" :class="{selected: tabIndex === i}">
           <p>{{item.timeMenu}}</p>
@@ -33,21 +33,28 @@
         <div class="desc">{{item.recommendDesc}}</div>
         <div class="status">
           <template v-if="item.buttonName === '我要预约' || item.buttonName === '已设预约'">
-            {{item.bespeakNum}}人已预约<i></i>{{item.startTime}}开抢
+            {{item.bespeakNum}}人已预约<i></i>{{date.format(item.startTime, 'MM.dd hh')}}点开抢
           </template>
-          <template v-else-if="item.buttonName === '等待抢购' || item.buttonName === '立即抢购'">
-            <span class="progress"><i></i></span>已有54人抢购
+          <template v-else-if="(item.buttonName === '等待抢购' || item.buttonName === '立即抢购') && item.sellNum > 0">
+            <span class="progress"><i></i></span>已有{{item.sellNum}}人抢购
           </template>
         </div>
         <div class="price">
           <span class="discount-symbol">￥</span><span class="discount-price">{{item.price}}</span>
           <span class="origin-price">￥{{item.goodsPrice}}</span>
           <!--按钮-->
-          <span class="btn subscribe" @click.stop="btnClickSubscribe(item)" v-if="item.buttonName === '我要预约'">我要预约</span>
-          <span class="btn subscribed" @click.stop="btnClickSubscribed"
-                v-else-if="item.buttonName === '已设预约'">已设预约</span>
-          <span class="btn buy" v-else-if="item.buttonName === '立即抢购'">立即抢购</span>
-          <span class="btn wait-buy" @click.stop="btnClickWaitBuy" v-else-if="item.buttonName === '等待抢购'">等待抢购</span>
+          <template v-if="isDvdApp">
+            <span class="btn buy" v-if="item.buttonName === '立即抢购'">立即抢购</span>
+            <span class="btn wait-buy" @click.stop="btnClickWaitBuy" v-else-if="item.buttonName === '等待抢购'">等待抢购</span>
+            <span class="btn subscribed" @click.stop="btnClickSubscribed" v-else-if="isSubscribedInApp(item.goodsId)">已设预约</span>
+            <span class="btn subscribe" @click.stop="btnClickSubscribe(item)" v-else>我要预约</span>
+          </template>
+          <template v-else>
+            <span class="btn subscribe" @click.stop="btnClickSubscribe(item)" v-if="item.buttonName === '我要预约'">我要预约</span>
+            <span class="btn subscribed" @click.stop="btnClickSubscribed" v-else-if="item.buttonName === '已设预约'">已设预约</span>
+            <span class="btn buy" v-else-if="item.buttonName === '立即抢购'">立即抢购</span>
+            <span class="btn wait-buy" @click.stop="btnClickWaitBuy" v-else-if="item.buttonName === '等待抢购'">等待抢购</span>
+          </template>
         </div>
       </span>
     </li>

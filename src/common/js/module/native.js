@@ -3,7 +3,8 @@
  * 模块目标: 本模块要封装app2.4.0之后为前端提供的所有native接口
  * 文档地址: http://wiki.bravetime.net/pages/viewpage.action?pageId=8192341
  */
-import ua from './ua';
+import ua from './ua.js';
+import popup from './popup.js';
 import $ from '$';
 import config from '../config.js';
 
@@ -92,8 +93,7 @@ function innerCall(param = {}) {
   }
   // 参数默认值
   param.invalid = param.invalid || function () {
-    console.trace();
-      alert("请升级您的APP");
+      popup.toast("请升级您的APP到最新版");
     };
 
   // 当前版本高于指定版本,可以调用native,否则进行提示
@@ -108,7 +108,7 @@ function innerCall(param = {}) {
     console.log(`location.href方式唤起native,协议为: ${protocal}`);
 
     // 调用native
-    console.log(protocal)
+    console.log(protocal);
     location.href = protocal;
   } else {
     // 版本错误提示
@@ -511,6 +511,24 @@ const native = {
         action: 'goNativeHomePage',
         param: param
       });
+    },
+    /**
+     * 1018爆款商品预约
+     * native.Browser.goodsBook({
+        goodsTitle: '商品标题',
+        goodsImage: '商品图片',
+        goodsStartTime: '开抢时间',
+        goodsUrl: '商品详情链接',
+        goodsListUrl: '商品列表链接'
+      });
+     */
+    goodsBook(param = {}){
+      call({
+        v: '5.1.0',
+        host: 'Browser',
+        action: 'goodsBook',
+        param: param
+      });
     }
   },
 
@@ -851,8 +869,8 @@ const native = {
      * native.Audio.audioPlay();
      */
     audioPlay(param = {}){
-      param.sortNo=param.sortNo.toString();
-      param.albumId=param.albumId.toString();
+      param.sortNo = param.sortNo.toString();
+      param.albumId = param.albumId.toString();
       call({
         v: '5.0.0',
         host: 'Audio',
