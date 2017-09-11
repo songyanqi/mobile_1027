@@ -15,7 +15,7 @@
         position: relative;
         box-sizing: border-box;
         padding-top: ptr(5);
-        width: ptr(80);
+        width: ptr(81);
         height: ptr(50);
         background: #666;
         text-align: center;
@@ -66,6 +66,7 @@
         .desc {
           margin-top: ptr(6);
           font-size: ptr(12);
+          color: #999999;
           @include height(ptr(17));
         }
         .status {
