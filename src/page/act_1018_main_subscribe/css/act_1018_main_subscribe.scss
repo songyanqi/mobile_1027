@@ -139,12 +139,12 @@
             &.subscribed {
               background: linear-gradient(to right, #DBDADA, #C4C4C4);
               color: white;
-              border: none;
+              border-color: transparent;
             }
             &.wait-buy {
               background: linear-gradient(to right, #DBDADA, #C4C4C4);
               color: white;
-              border: none;
+              border-color: transparent;
             }
             &.buy {
               background: #FF4a7d;
