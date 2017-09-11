@@ -1,8 +1,9 @@
 /**
  * create by dony in 2017.03.10
  * **/
-import { Group, Cell, Icon, CellBox, XNumber, XInput } from 'vux';
+import { Group, Cell, Icon, CellBox, XInput } from 'vux';
 
+import XNumber from "../../vux-fix/xnumber.vue";
 import Popup from "../../vux-fix/popup.vue";
 import confirm from './confirm.vue';
 import popup from '../../../common/js/module/popup.js';

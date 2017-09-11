@@ -186,7 +186,7 @@
         Vue.set(scope.searchData, "keywords", v);
         if (window.Units.getQuery('c_bind')) {
           var c_bind = window.Units.getQuery('c_bind');
-          str = location.href.split('?')[0] + '?q=' + encodeURIComponent(v) + '&c_bind=' + encodeURIComponent(c_bind);
+          str = location.origin + '?q=' + encodeURIComponent(v) + '&c_bind=' + encodeURIComponent(c_bind);
           Vue.set(scope.searchData, "c_bind", c_bind);
         }
         //传递数据
