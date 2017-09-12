@@ -1,0 +1,40 @@
+// arrow-right 图片:
+@mixin i-arrow-right($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (16rem / 100 / $ratio);
+  height: (24rem / 100 / $ratio);
+  background: url(../img/icon.png) (-36rem / 100 / $ratio) (-42rem / 100 / $ratio) no-repeat;
+  background-size: (122rem / 100 / $ratio) (68rem / 100 / $ratio);
+}
+
+// more 图片:
+@mixin i-more($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (26rem / 100 / $ratio);
+  height: (26rem / 100 / $ratio);
+  background: url(../img/icon.png) (0rem / 100 / $ratio) (-42rem / 100 / $ratio) no-repeat;
+  background-size: (122rem / 100 / $ratio) (68rem / 100 / $ratio);
+}
+
+// title-type-2-left 图片:
+@mixin i-title-type-2-left($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (56rem / 100 / $ratio);
+  height: (32rem / 100 / $ratio);
+  background: url(../img/icon.png) (0rem / 100 / $ratio) (0rem / 100 / $ratio) no-repeat;
+  background-size: (122rem / 100 / $ratio) (68rem / 100 / $ratio);
+}
+
+// title-type-2-right 图片:
+@mixin i-title-type-2-right($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (56rem / 100 / $ratio);
+  height: (32rem / 100 / $ratio);
+  background: url(../img/icon.png) (-66rem / 100 / $ratio) (0rem / 100 / $ratio) no-repeat;
+  background-size: (122rem / 100 / $ratio) (68rem / 100 / $ratio);
+}
+

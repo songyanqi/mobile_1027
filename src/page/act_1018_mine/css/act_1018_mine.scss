@@ -1,7 +1,161 @@
 @import "../../../common/css/common.scss";
+@import "icon";
 
 .app {
-  .swiper-slide{
-    width: ptr(100);
+  background: url(../img/head-bg.png) no-repeat top, linear-gradient(to bottom, #FF6288, #FF3857) 100px;
+  background-size: contain;
+  min-height: ptr(800);
+  .g-info {
+    margin-top: ptr(25);
+    display: flex;
+    color: white;
+    .head-pic {
+      margin: 0 ptr(10);
+      display: block;
+      @include circle(ptr(58));
+    }
+    .info {
+      flex: 1;
+      display: block;
+      margin-right: ptr(10);
+      .nickname {
+        margin-top: ptr(5);
+        font-size: ptr(15);
+        line-height: ptr(21);
+      }
+      .adviser-prize {
+        margin-top: ptr(10);
+        font-size: ptr(12);
+        line-height: ptr(17);
+      }
+      .detail {
+        float: right;
+        i {
+          @include i-arrow-right;
+          margin-left: ptr(5);
+          position: relative;
+          top: ptr(1);
+        }
+      }
+    }
+  }
+
+  .g-head-btn {
+    margin: ptr(45) auto 0 ptr(50);
+    width: ptr(263);
+  }
+
+  .g-act {
+    padding-top: ptr(52);
+    > div {
+      margin-top: ptr(30);
+    }
+
+    /*公共*/
+    .title-type-1 {
+      text-align: center;
+      font-size: ptr(18);
+      line-height: ptr(25);
+      color: white;
+      .sub-title {
+        position: relative;
+        display: inline-block;
+        margin-top: ptr(5);
+        padding: 0 ptr(45);
+        font-size: ptr(14);
+        line-height: ptr(20);
+        &:after {
+          //@include i-title-1-sub-bg;
+          content: '';
+          display: block;
+          background: url(../img/title-1-sub-bg.png) no-repeat;
+          @include center;
+          position: absolute;
+          top: ptr(12);
+          width: 100%;
+          height: ptr(11);
+          background-size: 100% 100%;
+        }
+      }
+    }
+    .title-type-2 {
+      padding: ptr(20) 0;
+      text-align: center;
+      color: #EC2D72;
+      font-size: ptr(18);
+      line-height: ptr(25);
+      font-weight: bold;
+      &:before {
+        content: '';
+        @include i-title-type-2-left;
+        margin-right: ptr(5);
+      }
+      &:after {
+        content: '';
+        @include i-title-type-2-right();
+        margin-left: ptr(5);
+      }
+    }
+    .swiper-slide.more {
+      width: ptr(56);
+      .btn {
+        display: block;
+        margin: ptr(40) auto auto ptr(5);
+        .words {
+          font-size: ptr(14);
+          line-height: ptr(20);
+        }
+        i {
+          @include i-more;
+          position: relative;
+          top: ptr(-7);
+          margin-left: ptr(5);
+        }
+      }
+    }
+
+    .service-award {
+      .swiper-container {
+        margin-top: ptr(24);
+        padding: 0 ptr(5);
+        .swiper-slide {
+          margin: 0 ptr(5);
+          width: ptr(120);
+          color: white;
+          .goods-pic {
+            @include square(ptr(120));
+            border-radius: ptr(4);
+          }
+          .service-object {
+            margin-top: ptr(7);
+            .head {
+              @include circle(ptr(25));
+              vertical-align: middle;
+            }
+            .nickname {
+              margin-left: ptr(6);
+              font-size: ptr(13);
+              line-height: ptr(18);
+              vertical-align: middle;
+              @include ellipsis(1);
+            }
+          }
+          .award {
+            margin-top: ptr(4);
+            font-size: ptr(12);
+            line-height: ptr(17);
+            @include ellipsis(1);
+          }
+        }
+      }
+    }
+
+    .redpack {
+      margin-left: ptr(10);
+      margin-right: ptr(10);
+      padding: 0 ptr(13);
+      background: #FFF8E2;
+      border-radius: ptr(4);
+    }
   }
 }

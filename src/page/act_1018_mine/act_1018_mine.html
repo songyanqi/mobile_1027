@@ -6,28 +6,97 @@
   <link rel="stylesheet" href="[[static]]/page/act_1018_mine/css/act_1018_mine.css[[v]]">
 </head>
 <body>
-  <div class="app">
-    <!--标题-->
-    <com-top-title title="我的10.18心愿单" home></com-top-title>
+<div class="app">
+  <!--标题-->
+  <com-top-title title="我的10.18心愿单" home></com-top-title>
 
-    <!-- Swiper -->
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
-        <div class="swiper-slide"><a href="">查看更多</a></div>
+  <!--个人信息-->
+  <div class="g-info">
+    <img class="head-pic" src="http://pic.davdian.com/shop_logo/2017/07/01/80_80_8535effa0ef94715a088c7f25e696c2f.jpg">
+    <span class="info">
+        <div class="nickname">昵称</div>
+        <a href="">
+          <div class="adviser-prize">服务人群销售额: 120000元，获得Iphone8 <span class="detail">详情<i></i></span></div>
+        </a>
+      </span>
+  </div>
+
+  <!--周年庆按钮-->
+  <a href="">
+    <img class="g-head-btn" v-lazy="'[[static]]/page/act_1018_mine/img/head-btn.png'">
+  </a>
+
+  <!--我的活动-->
+  <div class="g-act">
+    <!--服务人群预定奖励-->
+    <div class="service-award">
+      <!--标题-->
+      <div class="title-type-1">
+        <div class="main-title">服务人群预定奖励</div>
+        <div class="sub-title"><span class="word">共得9999元</span></div>
+      </div>
+      <!--手滑轮播-->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="i in 3">
+            <img class="goods-pic"
+                 v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
+            <div class="service-object">
+              <img class="head"
+                   v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
+              <span class="nickname">糖心沙果</span>
+            </div>
+            <div class="award">预定2件获得2元奖励</div>
+          </div>
+          <div class="swiper-slide more">
+            <a href="">
+              <div class="btn">
+                <span class="words">查看</br>更多</span>
+                <i></i>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!--返回顶部-->
-    <com-to-top-icon></com-to-top-icon>
+    <!--服务人群预定奖励-->
+    <div class="redpack">
+      <!--标题-->
+      <div class="title-type-2">我的10.18红包</div>
+      <!--手滑轮播-->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="i in 3">
+            <img class="goods-pic"
+                 v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
+            <div class="service-object">
+              <img class="head"
+                   v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
+              <span class="nickname">糖心沙果</span>
+            </div>
+            <div class="award">预定2件获得2元奖励</div>
+          </div>
+          <div class="swiper-slide more">
+            <a href="">
+              <div class="btn">
+                <span class="words">查看</br>更多</span>
+                <i></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  @@include('vendor.include')
-  <script src="[[vendor]]/swiper/swiper-3.3.1.jquery.min.js"></script>
-  <script src="[[static]]/page/act_1018_mine/js/act_1018_mine.js[[v]]"></script>
+
+  <!--返回顶部-->
+  <com-to-top-icon></com-to-top-icon>
+</div>
+
+@@include('vendor.include')
+<script src="[[vendor]]/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script src="[[static]]/page/act_1018_mine/js/act_1018_mine.js[[v]]"></script>
 </body>
 </html>
