@@ -38,7 +38,7 @@
       <!--手滑轮播-->
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="i in 3">
+          <div class="swiper-slide" v-for="i in 10">
             <img class="goods-pic"
                  v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
             <div class="service-object">
@@ -60,22 +60,44 @@
       </div>
     </div>
 
-    <!--服务人群预定奖励-->
+    <!--我的10.18红包-->
     <div class="redpack">
       <!--标题-->
       <div class="title-type-2">我的10.18红包</div>
+      <!--红包列表-->
+      <ul class="list">
+        <li v-for="i in 4">
+          <div class="name">限母婴类商品使用</div>
+          <div class="price">
+            <span class="symbol">￥</span>
+            <span class="num">40</span>
+            <span class="limit">满199可用</span>
+          </div>
+          <div class="time">有效期：2017.03.01 23:59:59</div>
+        </li>
+      </ul>
+      <!--查看更多-->
+      <a href="">
+        <div class="more">查看更多<i></i></div>
+      </a>
+    </div>
+
+    <!--我发起的助力省钱-->
+    <div class="assist">
+      <!--标题-->
+      <div class="title-type-1">
+        <div class="main-title">我发起的助力省钱</div>
+        <div class="sub-title"><span class="word">等待10.18当天抢</span></div>
+      </div>
       <!--手滑轮播-->
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="i in 3">
+          <div class="swiper-slide" v-for="i in 10">
             <img class="goods-pic"
                  v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
-            <div class="service-object">
-              <img class="head"
-                   v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
-              <span class="nickname">糖心沙果</span>
+            <div class="info">
+
             </div>
-            <div class="award">预定2件获得2元奖励</div>
           </div>
           <div class="swiper-slide more">
             <a href="">

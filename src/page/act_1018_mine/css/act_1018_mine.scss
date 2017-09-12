@@ -4,7 +4,7 @@
 .app {
   background: url(../img/head-bg.png) no-repeat top, linear-gradient(to bottom, #FF6288, #FF3857) 100px;
   background-size: contain;
-  min-height: ptr(800);
+  min-height: ptr(1800);
   .g-info {
     margin-top: ptr(25);
     display: flex;
@@ -153,9 +153,99 @@
     .redpack {
       margin-left: ptr(10);
       margin-right: ptr(10);
-      padding: 0 ptr(13);
+      padding: 0 0 ptr(23);
       background: #FFF8E2;
       border-radius: ptr(4);
+      .list {
+        text-align: center;
+        font-size: 0;
+        li {
+          @include i-redpack-bg;
+          margin: 0 ptr(4) ptr(10);
+          padding: 0 ptr(14);
+          color: white;
+          box-sizing: border-box;
+          text-align: left;
+          > * {
+            @include ellipsis;
+          }
+          .name {
+            margin-top: ptr(5);
+            font-size: ptr(12);
+            line-height: ptr(17);
+          }
+          .price {
+            margin-top: ptr(3);
+            > * {
+              vertical-align: middle;
+            }
+            .symbol {
+              font-size: ptr(12);
+              line-height: ptr(17);
+            }
+            .num {
+              margin-left: ptr(3);
+              font-size: ptr(24);
+              line-height: ptr(33);
+            }
+            .limit {
+              margin-left: ptr(9);
+              font-size: ptr(11);
+              line-height: ptr(16);
+            }
+          }
+          .time {
+            margin-top: ptr(3);
+            font-size: ptr(10);
+            line-height: ptr(14);
+          }
+        }
+      }
+      .more {
+        margin: ptr(9) auto auto;
+        width: ptr(117);
+        @include height(ptr(25));
+        background: #FFE0C5;
+        border-radius: 100px;
+        color: #EC2D72;
+        text-align: center;
+        i {
+          @include i-arrow-right-red;
+          margin-left: ptr(5);
+          position: relative;
+          top: ptr(1);
+        }
+      }
+    }
+
+    .assist {
+      .swiper-container {
+        margin-top: ptr(24);
+        padding: 0 ptr(5);
+        .swiper-slide {
+          margin: 0 ptr(5);
+          width: ptr(120);
+          color: white;
+          .goods-pic {
+            @include square(ptr(120));
+            border-radius: ptr(4);
+          }
+          .info {
+            @include i-assist-bg-1;
+            height: ptr(66);
+            margin-top: ptr(-11);
+          }
+        }
+        .swiper-slide:nth-of-type(1n) .info {
+          @include i-assist-bg-1;
+        }
+        .swiper-slide:nth-of-type(2n) .info {
+          @include i-assist-bg-2;
+        }
+        .swiper-slide:nth-of-type(3n) .info {
+          @include i-assist-bg-3;
+        }
+      }
     }
   }
 }
