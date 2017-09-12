@@ -15,6 +15,7 @@ import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
+
 // 懒加载初始化
 vueLazyload.init();
 
@@ -24,7 +25,7 @@ new Vue({
   components: {
     'com-top-title': require('../../../component/com-top-title.vue'),
     'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
-    "lightBrand":require("../vue/lightBrand.vue")
+    'myLightBrand':require('../vue/myLightBrand.vue')
   },
   data() {
     return {
@@ -83,7 +84,7 @@ new Vue({
           ts.response = response;
         },
         error(error) {
-          ts.response = require('../json/lightBrand.json');
+          ts.response = require('../json/myLightBrand.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });

@@ -1,16 +1,5 @@
 <template>
   <div>
-    <div class="banner">
-      <div class="big_img"><img src="//pic.davdian.com/free/2017/09/09/banner.png" alt=""></div>
-      <div class="banner_title">2017最受欢迎的TOP品牌</div>
-      <div class="banner_name">点亮品牌 10.18 优惠由你定</div>
-      <div class="banner_rute"></div>
-      <div class="rute_title">点亮规则</div>
-      <div class="rute_list">
-        <div class="rute_1">1. 点亮规则点亮规则点亮规则点亮规则点亮规则点亮规则</div>
-        <div class="rute_1">2. 点亮规则点亮规则点亮规则点亮规则点亮规则点亮规则</div>
-      </div>
-    </div>
     <div class="all_list">
       <div class="list" v-for="item in dataList">
         <div class="list_b_img">
@@ -40,16 +29,6 @@
           </div>
           <div class="list_need">还需<span v-text="item.remainLight"></span>人点亮</div>
 
-          <div class="list_button">
-            <div class="btn" v-if="item.isLighted!=1">
-              <img src="//pic.davdian.com/free/2017/09/09/Group.png" alt="">
-            </div>
-            <div class="btn" v-if="item.isLighted==1">
-              <img src="//pic.davdian.com/free/2017/09/09/Group2.png" alt="">
-            </div>
-          </div>
-
-
         </div>
       </div>
     </div>
@@ -61,27 +40,27 @@
   import dialog from "../../../../utils/dialog.es6"
   export default{
     data(){
-        return {
-           dataList:[]
-        }
+      return {
+        dataList:[]
+      }
     },
     mounted(){
-      var json=require("../json/lightBrand.json");
+      var json=require("../json/myLightBrand.json");
       this.dataList=json.data;
       api("/api/mg/sale/explosion/getCenterBands")
         .then(function (result) {
-            if(result.code==0){
-              if(result.data){
-                  this.dataList=result.data;
-              }
-            }else{
-              if(result.data.msg){
-                dialog.alert('code:'+result.code+":msg"+result.data.msg);
-              }else{
-                dialog.alert('code:'+result.code);
-              }
+          if(result.code==0){
+            if(result.data){
+              this.dataList=result.data;
             }
-            console.log(result.data);
+          }else{
+            if(result.data.msg){
+              dialog.alert('code:'+result.code+":msg"+result.data.msg);
+            }else{
+              dialog.alert('code:'+result.code);
+            }
+          }
+          console.log(result.data);
         })
         .catch(function (e) {
 //          dialog.alert(e);
@@ -165,7 +144,7 @@
     display: inline-block;
     vertical-align: top;
     width: 1.72rem;
-    height: 3.38rem;
+    height: 3rem;
     margin-right: 0.1rem;
     margin-top: 0.1rem;
   }
@@ -178,7 +157,7 @@
     height: 2rem;
   }
   .list_bottom{
-    height: 1.38rem;
+    height: 1rem;
     width: 100%;
     position:relative;
   }

@@ -15,6 +15,6 @@
 export default {
   //env_stage: 'beta',
   //env_num: '2',
-  //page: '{lightBrand}',
+  page: '{lightBrand,myLightBrand}',
   webpack: false,
 };
