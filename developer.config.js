@@ -17,5 +17,4 @@ export default {
   //env_num: '2',
   page: '{goodsDetail,111}',
   webpack: false,
->>>>>>> dev
 };
