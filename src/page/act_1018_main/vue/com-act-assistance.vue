@@ -33,20 +33,16 @@
                 <div class="order_good_name">
                   健康小超人（精装5册，我要长高，保护视力，拒绝蛀牙，拒绝肥胖，小心过敏，帮助孩子提升自控力，快速养成健康的生活习惯，杜绝不良行为习惯，附赠孩子们无比喜爱的贴纸，以及记录孩子成长的身高尺。3~6岁适读）
                 </div>
-                <div class="order_good_name order_good_name_in">
-                  健康好习惯养成书
-                </div>
                 <div class="order_good_price">
                   <span class="f_l"><em class="price_symbol">￥</em><span>99</span></span>
-                  <span class="membership_crown">限时返 <em>￥</em>32
-              <span class="membership_crown_pre">平日返<em>￥</em>5.2</span></span>
-                </div>
-                <div class="progress_info">
-                  仅剩 148 件
+                  <span class="membership_crown_pre"><em>￥</em>5.2</span>
                 </div>
               </div>
             </div>
           </a>
+          <div class="progress_info">
+            仅剩 148 件
+          </div>
           <a class="remain_btns">
             <div class="panic_buying_btn">立即抢购</div>
           </a>
@@ -125,13 +121,8 @@
   .f_l {
     float: left;
   }
-
   .newOriginal_price {
     font-size: 14px;
-  }
-
-  .list_style {
-    height: 130px;
   }
 
   ul li {
@@ -141,7 +132,30 @@
     background-color: #FFFFFF;
   }
 
-  /*ul li.online:after {
+
+  ul li .img_container {
+    position: relative;
+  }
+
+  ul li .img_container_inner {
+    width: 80px;
+    position: relative;
+  }
+  ul li .img_container_inner img{
+    width: 100%;
+    height: 100%;
+  }
+
+  ul li .order_good_info_container {
+    position: absolute;
+    padding-left: 90px;
+    top: 0;
+    padding-top: 10px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+  }
+  ul li.online:after {
     content: "";
     display: block;
     background-color: #DDDDDD;
@@ -155,37 +169,12 @@
     bottom: 0;
     z-index: 1;
   }
-  */
-
-  ul li .img_container {
-    position: relative;
-  }
-
-  ul li .img_container_inner {
-    width: 130px;
-    position: relative;
-  }
-  ul li .img_container_inner img{
-    width: 100%;
-    height: 100%;
-  }
-
-  ul li .order_good_info_container {
-    position: absolute;
-    padding-left: 140px;
-    top: 0;
-    padding-top: 10px;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-  }
-
   .order_good_name {
     font-size: 14px;
    @include ellipsis(1);
     height: 20px;
     line-height: 20px;
-    color: #333333;
+    color: #666666;
   }
 
   .order_good_name_in {
@@ -209,9 +198,10 @@
   .progress_info {
     position: absolute;
     width: 100%;
-    bottom: 14px;
+    bottom: 10px;
     font-size: 12px;
     color: #999999;
+    left: 100px;
   }
 
   .market_price {
@@ -277,7 +267,7 @@
     color: #fff;
     position: absolute;
     right: 10px;
-    bottom: 21px;
+    bottom: 10px;
     border-radius: 12px;
     background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(bottom right, #FF7676, #FF4A8F); /* Opera 11.1 - 12.0 */

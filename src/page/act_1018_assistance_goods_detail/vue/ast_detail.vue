@@ -22,6 +22,28 @@
         </div>
         <div>已有<span>283789</span>人参与</div>
       </div>
+      <!--流程-->
+      <div class="flow_path">
+        <div>省钱助力流程</div>
+        <div>
+          <span>➊ 分享助力&nbsp;&nbsp;</span>
+          <span>➋ 好友来助力&nbsp;&nbsp; </span>
+          <span>➌ 10.18当天省钱购买</span>
+        </div>
+      </div>
+      <!--detail_rule-->
+      <div class="detail_rule">
+        详细规则：<br>
+        助力省钱时间：2017年10月1日0:00:00-2017年10月17日23:59:59
+        助力省钱时间：2017年10月1日0:00:00-2017年10月17日23:59:59
+        助力省钱时间：2017年10月1日0:00:00-2017年10月17日23:59:59
+        助力省钱时间：2017年10月1日0:00:00-2017年10月17日23:59:59
+      </div>
+      <!--按钮-->
+      <div class="main_btn">
+        喊人助力
+      </div>
+      <div class="good_detail">商品详情</div>
     </div>
   </div>
 </template>
@@ -30,13 +52,9 @@
   export default {
     props: {},
     data() {
-      return {
-
-      }
+      return {}
     },
-    components: {
-
-    },
+    components: {},
     computed: {
       goodsId: function () {
         return location.pathname.split("_")[1].split(".")[0];
@@ -112,39 +130,93 @@
     color: #333333;
     margin-top: 10px;
   }
-  .price_info{
+
+  .price_info {
     width: 100%;
     height: 36px;
     overflow: hidden;
-    div:nth-of-type(1){
+    div:nth-of-type(1) {
       color: #FF4A7D;
       float: left;
       margin-left: 10px;
       line-height: 36px;
-      span:nth-of-type(1){
+      span:nth-of-type(1) {
         font-size: 14px;
       }
-      span:nth-of-type(2){
+      span:nth-of-type(2) {
         font-size: 14px;
       }
-      span:nth-of-type(3){
+      span:nth-of-type(3) {
         font-size: 25px;
       }
-      span:nth-of-type(4){
+      span:nth-of-type(4) {
         font-size: 11px;
         color: #999999;
       }
     }
-    div:nth-of-type(2){
+    div:nth-of-type(2) {
       float: right;
       margin-right: 10px;
       font-size: 11px;
-      color:#999999;
+      color: #999999;
       position: relative;
       top: 17px;
-      span{
-        color:#FF4A7D
+      span {
+        color: #FF4A7D
       }
     }
+  }
+
+  .flow_path {
+    background-color: #FFF0F0;
+    color: #FF4A7D;
+    font-size: 12px;
+    position: relative;
+    margin: 5px 10px 0;
+    padding: 10px;
+    line-height: 17px;
+    :after {
+      content: "";
+      -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+      transform: scale(0.5);
+      width: 200%;
+      height: 200%;
+      border: #FF4A7D solid 1px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      -webkit-transform-origin: 0 0;
+      -ms-transform-origin: 0 0;
+      transform-origin: 0 0;
+      border-radius: 8px;
+    }
+  }
+
+  .detail_rule {
+    font-size: 12px;
+    color: #666666;
+    margin: 10px;
+    line-height: 17px;
+  }
+
+  .main_btn {
+    height: 50px;
+    background: -webkit-linear-gradient(left top, #FF5C5C, #FA1862);
+    background: -webkit-gradient(linear, left top, right bottom, from(#FF5C5C), to(#FA1862));
+    background: -webkit-linear-gradient(top left, #FF5C5C, #FA1862);
+    background: linear-gradient(to bottom right, #FF5C5C, #FA1862);
+    line-height: 50px;
+    font-size: 16px;
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  .good_detail {
+    font-size: 12px;
+    color: #666666;
+    text-align: center;
+    padding: 10px;
   }
 </style>
