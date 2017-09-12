@@ -355,7 +355,6 @@ export default {
       }
 
       this.loadingShow = true;
-      let that = this;
       let goods = {
         number: this.handleChangeNum,
         goods_id: this.dataRepresentId
