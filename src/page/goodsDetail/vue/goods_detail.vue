@@ -254,7 +254,6 @@
           :seckill = "secKill"
         ></goods-bottom>
       </div>
-      <!--<alert v-model="alertShow" title="提示" @on-hide="handleAlertHide"> {{ alertMsg }}</alert>-->
       <confirm v-if="confirmShow" title="提示"
                @on-cancel="handleConfirmCancel"
                :confirm-text = 'confirmText'

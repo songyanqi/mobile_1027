@@ -41,8 +41,6 @@ export default {
   data() {
     return {
       response: null,
-      // goodListTitle: ['商品','详情'],
-      // selectedTitle: '商品',
       goodListTitle: ['商品详情'],
       selectedTitle: '商品参数',
       detailListTitle: ['图文详情', '商品参数'],
@@ -61,6 +59,7 @@ export default {
       trendInfo: '',
 
       goodsName: '',
+      // 是否是预定善品也放到这里面了
       infoObj: {
         shopPrice: 0,
         marketPrice: 0,
@@ -68,6 +67,7 @@ export default {
         isActivity: false,
         //是否有预告活动
         isComingActivity: false,
+        presale: null,
       },
 
       activityNum: 0,
@@ -129,12 +129,7 @@ export default {
       //是否超过限购或者库存数量
       goodsLimitNum: 1,
       isLimitNum: false,
-
-      // alertShow: false,
-      // alertMsg: '',
       loadingShow: false,
-      //dataUrl,加入购物车返回的为url
-      // dataUrl: '',
       confirmShow: false,
       confirmMsg: '',
       //confirm
@@ -163,14 +158,6 @@ export default {
       trendsList: [],
       //判断是否在app中
       isApp: false,
-      // pullDownModal: {
-      //     pullDownStatus: 'default'
-      // },
-      // pullUpModal: {
-      //     pullupStatus: 'default'
-      // },
-      // //容器滚动到一定地方加载详情
-      // scrollPos: 0,
       //推广
       spread: '',
       activitysList: [],
@@ -179,7 +166,6 @@ export default {
       //商品图片
       cartGoodsImg: '',
       isDev: true,
-      // cartModal: 0,
       //商品页面是否存在
       isGoods: false,
       //titleBar改变
@@ -188,43 +174,40 @@ export default {
       isMiddleTab: false,
       loadBefore: true,
 
-            firstScreenFinish:false,
-            type: 'ios',
-            memberCont: {
-              memberGoods: '',
-              memberPrice: ''
-            },
-          //库存
-          goodsStockNumber: 0,
-          trendTime: null,
-          timeHide: null,
-          timeShow: null,
-          videoObj: {},
-          //有预告的活动
-          isComingActive: 0,
-          singleComeActivity: null,
-          // actComingTime: 0,
-          //六一八
-          isShowa: false,
-          isShowb: false,
-          backTop: 0,
-          //图文详情
-          minHeight: window.innerHeight - 128,
-          //分享卡id
-          sellerId: "",
-          goodsId: "",
-          goodsDataBasis: null,
-        }
-    },
+      firstScreenFinish:false,
+      type: 'ios',
+      memberCont: {
+        memberGoods: '',
+        memberPrice: ''
+      },
+      //库存
+      goodsStockNumber: 0,
+      trendTime: null,
+      timeHide: null,
+      timeShow: null,
+      videoObj: {},
+      //有预告的活动
+      isComingActive: 0,
+      singleComeActivity: null,
+      //六一八
+      isShowa: false,
+      isShowb: false,
+      backTop: 0,
+      //图文详情
+      minHeight: window.innerHeight - 128,
+      //分享卡id
+      sellerId: "",
+      goodsId: "",
+      goodsDataBasis: null,
+    }
+  },
     created () {
-
-
         $(window).scroll(() => {
           let topHead = $(".top_h_s_to");
           let scrollTop = $(window).scrollTop();
 
-      topHead.css({"opacity": scrollTop * 0.01 < 1 ? scrollTop * 0.01 : 1});
-      this.isChange = scrollTop * 0.01 > 1;
+          topHead.css({"opacity": scrollTop * 0.01 < 1 ? scrollTop * 0.01 : 1});
+          this.isChange = scrollTop * 0.01 > 1;
 
           $(".top_h_s").css({"background": "rgba(250,250,250,"+ 0.01 * scrollTop +")"})
           sessionStorage['goodsPagePos'] = scrollTop;
@@ -238,35 +221,36 @@ export default {
             'isShowAudio':1
           }
         }this.getCartNum();
-      // this.getUrl();
+      this.getUrl();
       this.getIsApp();
     },
     mounted () {
     },
     methods: {
-    dumpToMamaAdviser() {
-      if(isTryShop()){
-          api('/api/mg/auth/inviter/checkAdviser', {
-            dataType: "json",
-            type: "post"
-          }).then(function (result) {
-            if (!result.code && result.data.needPop) {
-              popup.specialAlert({
-                title: "<div style='width: 1.51rem;margin-left: auto;margin-right: auto;margin-top: -0.5rem;'><img src='http://pic.davdian.com/free/2017816/mamaguwen.png'></div>",
-                text: " <div style='text-align:left'>亲爱的大V妈妈，我们将给您分配一个1对1服务的妈妈顾问，您有任何关于购物、学习、育儿、活动等疑问，都可以向她寻求帮助</div>",
-                btnTitle: "马上选择",
-                btnCallback() {
-                  location.replace('/choose_mama_adviser.html')
-                }
-              })
-            }
-          })
-            .catch(function (error) {
-              console.log('error:', error)
+      dumpToMamaAdviser() {
+        if(isTryShop()){
+            api('/api/mg/auth/inviter/checkAdviser', {
+              dataType: "json",
+              type: "post"
+            }).then(function (result) {
+              if (!result.code && result.data.needPop) {
+                popup.specialAlert({
+                  title: "<div style='width: 1.51rem;margin-left: auto;margin-right: auto;margin-top: -0.5rem;'><img src='http://pic.davdian.com/free/2017816/mamaguwen.png'></div>",
+                  text: " <div style='text-align:left'>亲爱的大V妈妈，我们将给您分配一个1对1服务的妈妈顾问，您有任何关于购物、学习、育儿、活动等疑问，都可以向她寻求帮助</div>",
+                  btnTitle: "马上选择",
+                  btnCallback() {
+                    location.replace('/choose_mama_adviser.html')
+                  }
+                })
+              }
             })
+              .catch(function (error) {
+                console.log('error:', error)
+              })
 
-      }
-    },    getUrl () {
+        }
+      },    
+      getUrl () {
           if (this.isDev) {
             const locationUrl = window.location.href;
             let goods = locationUrl.match(/(\d+)\.html/ig)[0],
@@ -398,7 +382,6 @@ export default {
               popup.toast('跳转中', 3000);
               // 购买就直接跳走,不是秒杀跳到购物车
               setTimeout(() => {
-                // let goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
                 window.location = secURL;
               }, 500);
             }
@@ -1102,6 +1085,11 @@ export default {
         this.secKill = false;
       } else {
         this.secKill = true;
+      }
+      // 是否是预定商品
+      that.infoObj.presale = null;
+      if (item.typeId == '9') {
+        that.infoObj.presale = item;
       }
       //商品标签单独提出来了
       this.infoObj.labelTag = dataExtra.labels;
