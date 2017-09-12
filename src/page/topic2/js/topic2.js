@@ -32,7 +32,7 @@ function backToTop(){
 	var b2t = document.createElement("img");
 	b2t.src="//pic.davdian.com/free/back_top_icon_0803.png";
 	b2t.style.display="none";
-	b2t.className="to-top-icon"
+  addClass(b2t,"to-top-icon");
 	dom.appendChild(b2t);
 	window.addEventListener('scroll', function () {
         if (document.body.scrollTop >= 200) {
@@ -54,6 +54,12 @@ function removeClass(obj, cls) {
     }
 }
 
+function addClass(ele, cls) {
+  if (!hasClass(ele, cls)) {
+    ele.className = ele.className == '' ? cls : ele.className + ' ' + cls;
+  }
+}
+
 /**
  * 判断是否在app中
  */
@@ -64,6 +70,17 @@ function judgeApp(){
 	}else{
 		dom.className += " in_app";
 	}
+}
+
+/**
+ * 判断头部锚点
+ */
+function judgeLinkGroup(){
+  var dom = document.querySelector(".app")||document.body;
+  if(document.querySelector(".link_group")){
+    var n = document.querySelectorAll(".link_row").length;
+    addClass(dom, "link_row_"+n);
+  }
 }
 
 function setAppAndWx(){
@@ -82,10 +99,47 @@ function setAppAndWx(){
       });
 }
 
+
+/*
+* 初始化头部锚点
+*/
+function initLinkGroup(){
+  var links = document.querySelector(".link_group").querySelectorAll("a");
+  links.forEach(function(e){
+    e.onclick=function(){
+      links.forEach(function(e1){
+          removeClass(e1,"active");
+      })
+      addClass(e,"active");
+    }
+  });
+  window.addEventListener('scroll', function () {
+    var target;
+    var targetList = document.querySelectorAll(".target-fix");
+    targetList.forEach(function(e){
+      var pos = e.offsetTop - window.scrollY;
+      var name = e.attributes.name.value;
+      if(pos<0){
+        target = name;
+      }
+      if(target){
+        links.forEach(function(e1){
+          removeClass(e1,"active");
+        })
+        console.log("a[href='#"+target+"']")
+        var activeDom = document.querySelector(".link_group").querySelector("a[href='#"+target+"']");
+        addClass(activeDom,"active");
+      }
+    });
+  }, false);
+}
+
 function init(){
 	backToTop();
 	judgeApp();
 	setAppAndWx();
+  judgeLinkGroup();
+  initLinkGroup();
 }
 
 init();
