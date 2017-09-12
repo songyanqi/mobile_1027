@@ -587,6 +587,7 @@ export default {
                 dataBasis = data.basis;
 
               that.goodsDataBasis = data.basis;
+              that.response = res;
               //分享卡
               that.sellerId = data.shop.sellerId.toString();
               // that.goodsId = dataBasis.goodsId;

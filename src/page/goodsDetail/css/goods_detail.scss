@@ -5,10 +5,11 @@ body {
   color: #333;
   background-color: #f0f0f0;
   margin: 0 auto;
-  font-family: Microsoft YaHei,Arial,Helvetica,sans-serif;
+  font-family: Microsoft YaHei, Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 20px !important;
 }
+
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -20,10 +21,12 @@ i.icon {
   height: 20px;
   background-repeat: no-repeat;
 }
+
 .no_more {
   text-align: center;
   margin: 10px;
 }
+
 .no_more {
   margin-bottom: 20px;
 }
@@ -32,7 +35,7 @@ $themColor: #666;
 //商品作者，出版社等
 $goodsInfo: #333;
 //动态条背景色
-$tendsColor: rgba(0,0,0,.5);
+$tendsColor: rgba(0, 0, 0, .5);
 //跨境标志的颜色
 $crossBord: #FF4A7D;
 
@@ -42,19 +45,21 @@ $crossBord: #FF4A7D;
 }
 
 .spinnerStyle {
-  position:absolute;
-  margin:auto;
+  position: absolute;
+  margin: auto;
   bottom: 0;
-  top:0;
-  z-index:500;
-  left:0;
-  right:0;
+  top: 0;
+  z-index: 500;
+  left: 0;
+  right: 0;
 }
+
 .hintsTitle {
   padding-bottom: 10px;
   color: #333;
   font-size: 16px;
 }
+
 .hintsCont {
   font-size: 14px;
   color: #666;
@@ -89,6 +94,7 @@ $crossBord: #FF4A7D;
   font-size: 25px;
   display: none;
 }
+
 .clearfix:after {
   display: block;
   clear: both;
@@ -121,6 +127,7 @@ $crossBord: #FF4A7D;
   overflow: hidden;
   height: 100%;
 }
+
 .startScroll {
   overflow: visible;
 }
@@ -130,21 +137,21 @@ $crossBord: #FF4A7D;
   z-index: 1000;
   top: 50%;
   left: 50%;
-  -webkit-transform:  translateX(-50%) translateY(-50%);
-  -moz-transform:  translateX(-50%) translateY(-50%);
-  -ms-transform:  translateX(-50%) translateY(-50%);
-  -o-transform:  translateX(-50%) translateY(-50%);
-  transform:  translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
   min-width: 100px;
   text-align: center;
   color: #fff;
-  background: rgba(255, 74, 125,.7);
+  background: rgba(255, 74, 125, .7);
   border-radius: 5px;
   padding: 10px;
 }
 
 .tipLimit {
-  background: rgba(0,0,0,.65);
+  background: rgba(0, 0, 0, .65);
   padding: 15px;
   min-width: 120px;
   min-height: 40px;
@@ -158,7 +165,7 @@ $crossBord: #FF4A7D;
   .com-popup-alert {
     background-color: rgba(0, 0, 0, 0.5);
   }
-  .com-popup-toast,.com-popup-alert {
+  .com-popup-toast, .com-popup-alert {
     z-index: 550;
   }
   .com-popup-confirm {
@@ -200,8 +207,8 @@ $crossBord: #FF4A7D;
     height: 280%;
     top: -20%;
     border-left: 1px solid #E1E1E1;
-    -webkit-transform: scale(.5,.5);
-    transform: scale(.5,.5);
+    -webkit-transform: scale(.5, .5);
+    transform: scale(.5, .5);
     -webkit-transform-origin: left top;
     transform-origin: left top;
   }
@@ -215,8 +222,8 @@ $crossBord: #FF4A7D;
 }
 
 #goodsDetail {
-  -webkit-user-select: text!important;
-  user-select: text!important;
+  -webkit-user-select: text !important;
+  user-select: text !important;
   .fz14 {
     font-size: 14px;
   }
@@ -227,10 +234,10 @@ $crossBord: #FF4A7D;
     right: 13px;
   }
   .vux-tab .vux-tab-item {
-    background: -webkit-linear-gradient(top,rgba(255,255,255,0), rgba(255,255,255,0), rgba(229, 229, 229, 0)) bottom left no-repeat;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(229, 229, 229, 0)) bottom left no-repeat;
   }
   .vux-tab-ink-bar {
-    display: none!important;
+    display: none !important;
   }
   .vux-tab-selected {
     position: relative;
@@ -256,8 +263,8 @@ $crossBord: #FF4A7D;
     bottom: 0;
     right: 0;
     height: 1px;
-    border-bottom: 1px solid rgba(0,0,0,.05);
-    color: rgba(0,0,0,.05);
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+    color: rgba(0, 0, 0, .05);
     -webkit-transform-origin: 0 100%;
     -ms-transform-origin: 0 100%;
     transform-origin: 0 100%;
@@ -279,9 +286,9 @@ $crossBord: #FF4A7D;
     stroke-width: 50;
   }
   .vux-slider > .vux-indicator, .vux-slider .vux-indicator-right {
-    bottom:0px;
+    bottom: 0px;
   }
-  .vux-tap-active:active,.weui-cell_access:active,.weui-panel_access:active {
+  .vux-tap-active:active, .weui-cell_access:active, .weui-panel_access:active {
     background: #fff !important;
   }
 
@@ -306,8 +313,8 @@ $crossBord: #FF4A7D;
     -webkit-flex: 1;
   }
   .spanFlex1 {
-    -webkit-box-flex:1;
-    flex:1;
+    -webkit-box-flex: 1;
+    flex: 1;
     -webkit-flex: 1;
   }
   .tax_cont {
@@ -331,7 +338,7 @@ $crossBord: #FF4A7D;
       opacity: 1;
     }
     .weui-mask {
-      background: rgba(0,0,0,.5);
+      background: rgba(0, 0, 0, .5);
     }
 
     .dialog-title {
@@ -377,7 +384,7 @@ $crossBord: #FF4A7D;
     }
   }
   .weui-toast {
-    width: auto!important;
+    width: auto !important;
     min-width: 7.6em;
   }
   .vux-slider > .vux-swiper > .vux-swiper-item > a > .vux-swiper-desc {
@@ -431,9 +438,9 @@ $crossBord: #FF4A7D;
       position: absolute;
       font-size: 10px;
       opacity: 0.8;
-      background: -webkit-gradient(linear,left top, right top,from(#ff5b5b),to(#fa1862));
-      background: linear-gradient(90deg,#ff5b5b,#fa1862);
-      background: -webkit-linear-gradient(left,#ff5b5b,#fa1862);
+      background: -webkit-gradient(linear, left top, right top, from(#ff5b5b), to(#fa1862));
+      background: linear-gradient(90deg, #ff5b5b, #fa1862);
+      background: -webkit-linear-gradient(left, #ff5b5b, #fa1862);
       color: #fff;
       line-height: 16px;
       padding: 1px 8px 0 6px;
@@ -551,10 +558,10 @@ $crossBord: #FF4A7D;
       -webkit-flex: 6;
     }
     .overTimes {
-      -webkit-flex:1; 
-      -webkit-box-flex: 1; 
+      -webkit-flex: 1;
+      -webkit-box-flex: 1;
       flex: 1;
-      text-align: right; 
+      text-align: right;
       font-weight: 400
     }
     .timeConts {
@@ -870,7 +877,7 @@ $crossBord: #FF4A7D;
     top: 0;
     margin-top: 0;
   }
-  .top_h_s,.top_h_s_c {
+  .top_h_s, .top_h_s_c {
     box-sizing: border-box;
     position: fixed;
     top: 44px;
@@ -884,14 +891,14 @@ $crossBord: #FF4A7D;
     display: -webkit-flex;
     .vux-tab {
       width: 40%;
-      background: rgba(250,250,250,0);
+      background: rgba(250, 250, 250, 0);
     }
     .top_back {
       display: inline-block;
       height: 44px;
     }
   }
-  .home_arrow,.home_o_arrow,.right_arrow,.right_o_arrow {
+  .home_arrow, .home_o_arrow, .right_arrow, .right_o_arrow {
     display: inline-block;
     width: 40px;
     height: 44px;
@@ -1065,7 +1072,6 @@ $crossBord: #FF4A7D;
     }
   }
 
-
   .isProTends {
     top: 98px;
     //top: 135px;
@@ -1083,7 +1089,7 @@ $crossBord: #FF4A7D;
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    margin:2px;
+    margin: 2px;
   }
   //swiper
   .good_top_wraper {
@@ -1102,7 +1108,7 @@ $crossBord: #FF4A7D;
     .vux-slider > .vux-swiper > .vux-swiper-item {
       text-align: center;
     }
-    .crossBorder,.appCrossBorder {
+    .crossBorder, .appCrossBorder {
       position: absolute;
       z-index: 20;
       right: 0;
@@ -1130,13 +1136,13 @@ $crossBord: #FF4A7D;
     left: 50%;
     width: 90px;
     height: 90px;
-    -webkit-transform: translate3d(-50%,0,0);
-    -moz-transform: translate3d(-50%,0,0);
-    -ms-transform: translate3d(-50%,0,0);
-    -o-transform: translate3d(-50%,0,0);
-    transform: translate3d(-50%,0,0);
+    -webkit-transform: translate3d(-50%, 0, 0);
+    -moz-transform: translate3d(-50%, 0, 0);
+    -ms-transform: translate3d(-50%, 0, 0);
+    -o-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
     z-index: 10;
-    background: rgba(0,0,0,0.50);
+    background: rgba(0, 0, 0, 0.50);
     border-radius: 50%;
     text-align: center;
   }
@@ -1170,7 +1176,7 @@ $crossBord: #FF4A7D;
     font-size: 12px;
     color: #999;
     font-weight: 300;
-    margin:0 5px;
+    margin: 0 5px;
     margin-right: 0;
     top: -2px;
   }
@@ -1202,10 +1208,10 @@ $crossBord: #FF4A7D;
   .stock_tips {
     display: inline-block;
     border-radius: 15px;
-    background: linear-gradient(to right,rgba(255,92,92,.8),rgba(250,24,98,.8));
-    background: -moz-linear-gradient(right, rgba(255,92,92,.8),rgba(250,24,98,.8));
-    background: -o-linear-gradient(right, rgba(255,92,92,.8),rgba(250,24,98,.8));
-    background: -webkit-linear-gradient(left, rgba(255,92,92,.8),rgba(250,24,98,.8));
+    background: linear-gradient(to right, rgba(255, 92, 92, .8), rgba(250, 24, 98, .8));
+    background: -moz-linear-gradient(right, rgba(255, 92, 92, .8), rgba(250, 24, 98, .8));
+    background: -o-linear-gradient(right, rgba(255, 92, 92, .8), rgba(250, 24, 98, .8));
+    background: -webkit-linear-gradient(left, rgba(255, 92, 92, .8), rgba(250, 24, 98, .8));
     font-size: 14px;
     color: #fff;
     padding: 5px 55px;
@@ -1241,7 +1247,7 @@ $crossBord: #FF4A7D;
   .goodsStock {
     float: left;
   }
-  .swiperCont{
+  .swiperCont {
     background: #fff;
   }
   .videoPlayer {
@@ -1249,8 +1255,8 @@ $crossBord: #FF4A7D;
   }
   #iframepage {
     height: 375px;
-    display: block!important;
-    opacity: 1!important;
+    display: block !important;
+    opacity: 1 !important;
   }
 
   .tags {
@@ -1304,17 +1310,14 @@ $crossBord: #FF4A7D;
     font-size: 12px;
   }
   .inlinem {
-    display:inline-block;
-    margin:0 3px;
+    display: inline-block;
+    margin: 0 3px;
   }
 
-
-
-
   .member_iconCont {
-      display: inline-block;
-      // width: 30px;
-    }
+    display: inline-block;
+    // width: 30px;
+  }
   .comissionInline {
     display: inline;
   }
@@ -1449,7 +1452,7 @@ $crossBord: #FF4A7D;
     display: inline-block;
     width: 13px;
     height: 8px;
-    margin-right:10px;
+    margin-right: 10px;
     background: url(//pic.davdian.com/free/goodsDetail/upo_icon.png) no-repeat;
     background-size: 100%;
   }
@@ -1459,7 +1462,7 @@ $crossBord: #FF4A7D;
     -moz-transform: translateX(-265%);
     -ms-transform: translateX(-265%);
     -o-transform: translateX(-265%);
-    transform: translateX(-265%);; 
+    transform: translateX(-265%);;
     display: none;
   }
   //.upArrow:before {
@@ -1480,7 +1483,7 @@ $crossBord: #FF4A7D;
   //  top: 4px;
   //}
 
-//各种活动
+  //各种活动
   .activity_show {
     .vux-cell-box {
       div {
@@ -1491,7 +1494,7 @@ $crossBord: #FF4A7D;
   .activitys {
     margin-top: 10px;
     .actModal {
-      height: 428px!important;
+      height: 428px !important;
       background: #fff;
       overflow: auto;
     }
@@ -1527,7 +1530,7 @@ $crossBord: #FF4A7D;
       z-index: 1000;
       width: 100%;
       min-height: 100%;
-      background:#fff;
+      background: #fff;
       overflow: auto;
       padding: 10px;
       .dialogHead {
@@ -1737,8 +1740,8 @@ $crossBord: #FF4A7D;
       height: 28px;
       border: 1px solid $crossBord;
       border-radius: 20px;
-      transform: scale(.5,.5);
-      -webkit-transform: scale(.5,.5);
+      transform: scale(.5, .5);
+      -webkit-transform: scale(.5, .5);
       transform-origin: left top;
       -webkit-transform-origin: left top;
       box-sizing: border-box;
@@ -1819,13 +1822,13 @@ $crossBord: #FF4A7D;
       }
     }
   }
-//  服务弹框
+  //  服务弹框
   .server_scroll {
     padding: 15px 10px 0 10px;
     position: relative;
     box-sizing: border-box;
     background: #fff;
-    -webkit-overflow-scrolling : touch;
+    -webkit-overflow-scrolling: touch;
     overflow-y: auto;
     .weui-cell_access.vux-cell-box:after {
       height: 8px;
@@ -1853,7 +1856,7 @@ $crossBord: #FF4A7D;
     .server_title {
       font-size: 16px;
       text-align: center;
-      color:#666;
+      color: #666;
       margin-bottom: 15px;
     }
 
@@ -2034,7 +2037,7 @@ $crossBord: #FF4A7D;
     margin-right: 2px;
   }
 
-//  评论
+  //  评论
   .goodsEvaluate > div > .weui-cells:before {
     height: 0;
     border-top: 0;
@@ -2086,7 +2089,7 @@ $crossBord: #FF4A7D;
           font-size: 14px;
         }
       }
-      .unUserStar,.useStar {
+      .unUserStar, .useStar {
         display: inline-block;
         width: 11px;
         height: 11px;
@@ -2154,7 +2157,7 @@ $crossBord: #FF4A7D;
         margin-top: 2px;
         -webkit-box-flex: 1;
         -webkit-flex: 1;
-        flex:1;
+        flex: 1;
         display: block;
         //padding-right: 10px;
         text-align: right;
@@ -2175,17 +2178,17 @@ $crossBord: #FF4A7D;
       margin-right: 10px;
     }
   }
-//  品牌介绍
+  //  品牌介绍
 
   .brand_wrap {
     a:active {
       background: #fff;
     }
-    .weui-cells:before,.weui-panel:before {
+    .weui-cells:before, .weui-panel:before {
       height: 0;
       border-top: 0;
     }
-    .weui-cells:after,.weui-panel:after {
+    .weui-cells:after, .weui-panel:after {
       height: 0;
       border-bottom: 0;
     }
@@ -2254,7 +2257,7 @@ $crossBord: #FF4A7D;
       -webkit-align-items: flex-start;
     }
   }
-//  图文详情
+  //  图文详情
   .attribute_head {
     div {
       text-align: center;
@@ -2304,7 +2307,7 @@ $crossBord: #FF4A7D;
       -webkit-flex: 1;
       -webkit-box-flex: 1;
     }
-    .vux-number-selector-sub,.vux-number-selector-plus {
+    .vux-number-selector-sub, .vux-number-selector-plus {
       padding: 2px 4.5px 1px 4.5px;
     }
     .vux-number-input {
@@ -2326,7 +2329,7 @@ $crossBord: #FF4A7D;
     display: flex;
     display: -webkit-flex;
   }
-//  商品参数
+  //  商品参数
   .goods_params .vux-cell-box > div {
     //display: -webkit-box;
     //display: -webkit-flex;
@@ -2378,7 +2381,7 @@ $crossBord: #FF4A7D;
   }
   .goods_params_nav {
     .vux-tab-ink-bar {
-      display: none!important;
+      display: none !important;
     }
     .downParmes {
       position: fixed;
@@ -2405,7 +2408,7 @@ $crossBord: #FF4A7D;
   }
   .goods_bottom_wrapper {
     .vux-popup-dialog {
-      min-height: 428px!important;
+      min-height: 428px !important;
       //background: #fff;
       //height: 64.2%!important;
     }
@@ -2418,7 +2421,7 @@ $crossBord: #FF4A7D;
     }
     @media screen and(max-width: 320px) {
       .vux-popup-dialog {
-        min-height: 320px!important;
+        min-height: 320px !important;
       }
     }
   }
@@ -2430,7 +2433,7 @@ $crossBord: #FF4A7D;
     max-width: 640px;
     width: 100%;
     height: 49px;
-    background: rgba(249,247,248,1);
+    background: rgba(249, 247, 248, 1);
     font-size: 14px;
     .cart_num {
       //position: absolute;
@@ -2465,10 +2468,10 @@ $crossBord: #FF4A7D;
       transform: scale(.9);
       display: inline-block;
       text-align: center;
-      background: linear-gradient(to right,#FF5B5B,#FA1862);
-      background: -moz-linear-gradient(right,#FF5B5B,#FA1862);
-      background: -o-linear-gradient(right,#FF5B5B,#FA1862);
-      background: -webkit-linear-gradient(left,#FF5B5B,#FA1862);
+      background: linear-gradient(to right, #FF5B5B, #FA1862);
+      background: -moz-linear-gradient(right, #FF5B5B, #FA1862);
+      background: -o-linear-gradient(right, #FF5B5B, #FA1862);
+      background: -webkit-linear-gradient(left, #FF5B5B, #FA1862);
       color: #fff;
       font-size: 12px;
       height: 16px;
@@ -2564,11 +2567,10 @@ $crossBord: #FF4A7D;
     .menu_cart {
       position: relative;
       //background: url(//pic.davdian.com/free/goodsDetail/shoppingCart.png) center no-repeat;
-    background: url(//pic.davdian.com/free/goodsDetail/shoppingCart.png) no-repeat;
+      background: url(//pic.davdian.com/free/goodsDetail/shoppingCart.png) no-repeat;
       background-size: 100%;
       width: 21px;
       height: 22px;
-
 
       //position: relative;
       //background: url(//pic.davdian.com//free/goodsDetail/icon/shoppingCart.png) center no-repeat;
@@ -2588,7 +2590,7 @@ $crossBord: #FF4A7D;
       //left: 0;
       //bottom: 2px;
     }
-    .collect_icon,.favorited_icon,.spread_icon {
+    .collect_icon, .favorited_icon, .spread_icon {
       display: block;
       margin: auto;
 
@@ -2632,7 +2634,7 @@ $crossBord: #FF4A7D;
       width: 21px;
       height: 21px;
     }
-    .add_cart, .btn_buy,.look_again,.haveGoods_tips {
+    .add_cart, .btn_buy, .look_again, .haveGoods_tips {
       //flex: 1;
       //-webkit-flex: 1;
       //-webkit-box-flex: 1;
@@ -2646,13 +2648,13 @@ $crossBord: #FF4A7D;
     .btn_buy_width {
       width: 100%;
     }
-    .add_cart,.look_again {
+    .add_cart, .look_again {
       background: linear-gradient(to right, #FFB21A, #FF7C31);
       background: -moz-linear-gradient(right, #FFB21A, #FF7C31);
       background: -o-linear-gradient(right, #FFB21A, #FF7C31);
       background: -webkit-linear-gradient(left, #FFB21A, #FF7C31);
     }
-    .btn_buy,.haveGoods_tips {
+    .btn_buy, .haveGoods_tips {
       background: linear-gradient(to right, #FF5B5B, #FA1862);
       background: -moz-linear-gradient(right, #FF5B5B, #FA1862);
       background: -o-linear-gradient(right, #FF5B5B, #FA1862);
@@ -2666,16 +2668,16 @@ $crossBord: #FF4A7D;
       width: 100%;
     }
     .disableGray {
-      background: linear-gradient(to right,#C1C1C1,#999);
-      background: -moz-linear-gradient(right,#C1C1C1,#999);
-      background: -o-linear-gradient(right,#C1C1C1,#999);
-      background: -webkit-linear-gradient(left,#C1C1C1,#999);
+      background: linear-gradient(to right, #C1C1C1, #999);
+      background: -moz-linear-gradient(right, #C1C1C1, #999);
+      background: -o-linear-gradient(right, #C1C1C1, #999);
+      background: -webkit-linear-gradient(left, #C1C1C1, #999);
     }
     .cart_cont {
     }
     .look_btn {
       width: 100%;
-      float:left;
+      float: left;
       height: 100%;
       line-height: 47px;
       color: #fff;
@@ -2700,12 +2702,12 @@ $crossBord: #FF4A7D;
     -webkit-transform: scaleY(0.5);
     transform: scaleY(0.5);
   }
-//  多规格弹窗
+  //  多规格弹窗
   .goodsTypeModal {
     padding-top: 16px;
     background: #fff;
     //min-height: 412px;
-    .btn_buy,.look_again,.haveGoods_tips {
+    .btn_buy, .look_again, .haveGoods_tips {
       flex: 1;
       -webkit-flex: 1;
       -webkit-box-flex: 1;
@@ -2715,7 +2717,7 @@ $crossBord: #FF4A7D;
       text-align: center;
     }
 
-    .btn_buy,.haveGoods_tips {
+    .btn_buy, .haveGoods_tips {
       background: linear-gradient(to right, #FF5B5B, #FA1862);
       background: -o-linear-gradient(right, #FF5B5B, #FA1862);
       background: -moz-linear-gradient(right, #FF5B5B, #FA1862);
@@ -2728,10 +2730,10 @@ $crossBord: #FF4A7D;
       background: -webkit-linear-gradient(left, #FFB21A, #FF7C31);
     }
     .disableGray {
-      background: linear-gradient(to right,#C1C1C1,#999);
-      background: -moz-linear-gradient(right,#C1C1C1,#999);
-      background: -o-linear-gradient(right,#C1C1C1,#999);
-      background: -webkit-linear-gradient(left,#C1C1C1,#999);
+      background: linear-gradient(to right, #C1C1C1, #999);
+      background: -moz-linear-gradient(right, #C1C1C1, #999);
+      background: -o-linear-gradient(right, #C1C1C1, #999);
+      background: -webkit-linear-gradient(left, #C1C1C1, #999);
     }
     .activeBottomBtn {
       float: left;
@@ -2867,8 +2869,8 @@ $crossBord: #FF4A7D;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         border: 1px solid #E1E1E1;
-        -webkit-transform: scale(.5,.5);
-        transform: scale(.5,.5);
+        -webkit-transform: scale(.5, .5);
+        transform: scale(.5, .5);
         -webkit-transform-origin: left top;
         transform-origin: left top;
       }
@@ -2916,12 +2918,12 @@ $crossBord: #FF4A7D;
       display: -webkit-flex;
       display: -webkit-box;
     }
-   .isLimit {
-     font-size: 12px;
-     color: $crossBord;
-     line-height: 48px;
-     opacity: 0;
-   }
+    .isLimit {
+      font-size: 12px;
+      color: $crossBord;
+      line-height: 48px;
+      opacity: 0;
+    }
     .summary_number_cont {
       display: -webkit-box;
       display: flex;
@@ -2930,7 +2932,7 @@ $crossBord: #FF4A7D;
         height: 0;
         border-top: 0;
       }
-      .vux-number-selector-sub,.vux-number-selector-plus {
+      .vux-number-selector-sub, .vux-number-selector-plus {
         padding: 2px 5px 2px 5px
       }
       .vux-number-input {
@@ -2986,7 +2988,7 @@ $crossBord: #FF4A7D;
       background: -webkit-linear-gradient(left, #FF5B5B, #FA1862);
       font-size: 16px;
     }
-    .cart_buy_b,.add_cart_b {
+    .cart_buy_b, .add_cart_b {
       //flex: 1;
       //-webkit-flex: 1;
       //-webkit-box-flex: 1;
@@ -3063,7 +3065,7 @@ $crossBord: #FF4A7D;
       position: absolute;
       top: 12px;
       left: 50%;
-      color: rgba(107,70,9,0.10);
+      color: rgba(107, 70, 9, 0.10);
     }
     .vux-tab-selected {
       color: rgb(255, 74, 125);
@@ -3153,10 +3155,10 @@ $crossBord: #FF4A7D;
       }
     }
     .other_title_hide {
-      background: rgba(0,0,0,.5);
+      background: rgba(0, 0, 0, .5);
       color: #fff;
     }
-    .upArrowIcon::after,.downArrowIcon::after {
+    .upArrowIcon::after, .downArrowIcon::after {
       content: " ";
       display: inline-block;
       height: 10px;
@@ -3239,6 +3241,7 @@ $crossBord: #FF4A7D;
     }
   }
 }
+
 //.sku-control .items span {
 //  border-color: #BBB;
 //  border-width: 1px;
@@ -3272,6 +3275,7 @@ $crossBord: #FF4A7D;
 
   position: relative;
 }
+
 //.activieType {
 //  border: 1px solid #FF4A7D;
 //  color: #FF4A7D;
@@ -3284,24 +3288,26 @@ $crossBord: #FF4A7D;
   height: 60px;
   border-radius: 30px;
   border: 1px solid #BBB;
-  -webkit-transform: scale(.5,.5);
-  -moz-transform: scale(.5,.5);
-  -ms-transform: scale(.5,.5);
-  -o-transform: scale(.5,.5);
-  transform: scale(.5,.5);
+  -webkit-transform: scale(.5, .5);
+  -moz-transform: scale(.5, .5);
+  -ms-transform: scale(.5, .5);
+  -o-transform: scale(.5, .5);
+  transform: scale(.5, .5);
   -webkit-transform-origin: left top;
-  -moz-transform-origin:left top;
-  -ms-transform-origin:left top;
-  -o-transform-origin:left top;
-  transform-origin:left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left top;
   box-sizing: border-box;
   width: 200%;
   z-index: 10;
 }
+
 .activieType {
   position: relative;
   color: #FF4A7D;
 }
+
 .activieType:before {
   border: 1px solid #FF4A7D;
   position: absolute;
@@ -3310,21 +3316,20 @@ $crossBord: #FF4A7D;
   left: 0;
   height: 60px;
   border-radius: 30px;
-  -webkit-transform: scale(.5,.5);
-  -moz-transform: scale(.5,.5);
-  -ms-transform: scale(.5,.5);
-  -o-transform: scale(.5,.5);
-  transform: scale(.5,.5);
+  -webkit-transform: scale(.5, .5);
+  -moz-transform: scale(.5, .5);
+  -ms-transform: scale(.5, .5);
+  -o-transform: scale(.5, .5);
+  transform: scale(.5, .5);
   -webkit-transform-origin: left top;
-  -moz-transform-origin:left top;
-  -ms-transform-origin:left top;
-  -o-transform-origin:left top;
-  transform-origin:left top;
+  -moz-transform-origin: left top;
+  -ms-transform-origin: left top;
+  -o-transform-origin: left top;
+  transform-origin: left top;
   box-sizing: border-box;
   width: 200%;
   z-index: 10;
 }
-
 
 //@media screen and (-webkit-min-device-pixel-ratio: 2) {
 //  .relative_items { border-width: 0.5px; }
@@ -3356,17 +3361,27 @@ $crossBord: #FF4A7D;
 .trendsAnimateShow {
   animation: trendsShow 2s;
 }
+
 @include keyframes(trendsShow) {
-  from {opacity: 0}
-  to {opacity: 1}
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
 }
 
 .trendsAnimateHide {
   animation: trendsHide 2s;
 }
+
 @include keyframes(trendsHide) {
-  from {opacity: 1}
-  to {opacity: 0}
+  from {
+    opacity: 1
+  }
+  to {
+    opacity: 0
+  }
 }
 
 //商品不存在
@@ -3414,6 +3429,7 @@ $crossBord: #FF4A7D;
     transform: rotate(45deg);;
   }
 }
+
 // #goodsDetail .goodsTypeModal .sku-control {
 //   height: 309px;
 // }
@@ -3426,12 +3442,40 @@ $crossBord: #FF4A7D;
   }
 }
 
-
 //.vux-popup-mask{
 //  max-width: 640px;
 //}
 
-
-.com-popup-base{
+.com-popup-base {
   z-index: 990 !important;
+}
+
+/* 10.18爆品预约提醒 */
+.bao-pin-1018-tip {
+  margin: ptr(10) 0 ptr(10) -10px;
+  padding-top: ptr(26);
+  box-sizing: border-box;
+  width: ptr(375);
+  height: ptr(56);
+  background: url(//pic.davdian.com/free/1018_goodsDetail_yugao-1.png) no-repeat;
+  background-size: 100%;
+  font-weight: bold;
+  color: #FB1254;
+  > * {
+    line-height: 1;
+  }
+  .act-symbol {
+    position: relative;
+    top: ptr(1);
+    margin-left: ptr(11);
+    font-size: ptr(18);
+  }
+  .act-price {
+    font-size: ptr(25);
+    vertical-align: bottom;
+  }
+  .start-time {
+    margin-left: ptr(9);
+    font-size: ptr(14);
+  }
 }
