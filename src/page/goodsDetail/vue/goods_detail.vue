@@ -100,10 +100,10 @@
 
               :goodsimglist = "goodsImgList"></goods-swiper>
             <goods-intro
-              :actendtime = "actEndTime"
               :isshowactive = "isShowActive"
               :shopurl = "shopUrl"
               :membercont = "memberCont"
+              :datarepresentid = "dataRepresentId"
 
               :seckill = "secKill"
 

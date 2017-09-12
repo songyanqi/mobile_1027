@@ -337,11 +337,17 @@ export default {
     },
     //加入购物车封装的ajax;
     cartAjax(isBuy) {
+      let that = this;
       if (!this.secKill) {
         if (isBuy == 1) {
           // 购买就直接跳走
+          let goods;
           setTimeout(() => {
-            let goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
+            if (that.infoObj.presale) {
+              goods = encodeURI(`advance[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
+            } else {
+              goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
+            }
             window.location = `/${buyURL}&${goods}`;
           }, 500);
           return;
@@ -960,8 +966,12 @@ export default {
     getChanges(dataExtra) {
       let that = this;
       this.handleChangeNum = 1;
-      //限购或者库存数量
-      that.goodsLimitNum = dataExtra.sales.goodsStocks;
+      //限购或者库存数量,如果是预定商品，让其等于dataExtra.limitNum
+      if (dataExtra.limitNum) {
+        that.goodsLimitNum = dataExtra.limitNum;
+      } else {
+        that.goodsLimitNum = dataExtra.sales.goodsStocks;
+      }
       //信息
       if (Number(dataExtra.sales.goodsStocks) <= 1) {
         $(".vux-number-selector-plus").css({"background": "#eee"});
@@ -1026,30 +1036,30 @@ export default {
           }
         }
 
-            common1.initShare(5);
-            base.ready();if (shareMoney > 0&& that.visitorStatus == '3') {
-              native.Browser.setHead({
-                shareMoney: shareMoney + "",
-                shareMoneyStr: '赚' + shareMoney + '元',
-              });
-              window.moreShareInfo = {
-                shareTitle: "分享至少赚" + shareMoney + "元",
-                shareDesc: "当好友点击您分享的链接，并进入您的店铺购物，您就可以获得对应的商品返现啦！",
-                bigImgUrl: `http://img.davdian.com/add_qrcode.php?goods_id=${that.goodsId}&seller_id=${that.sellerId}&t=${Date.now()}`,};
-            } else {
-              native.custom.initHead({
-                shareOnHead: 1,
-                isAudioAbsorb:1,
-                isShowAudio:1
-              });
-              share.setShareInfo({
-                title: window.title, // 分享标题
-                desc: window.desc, // 分享描述
-                link: window.link, // 分享链接
-                imgUrl: window.imgUrl, // 分享图标
-              });
-            }
-          }
+        common1.initShare(5);
+        base.ready();if (shareMoney > 0&& that.visitorStatus == '3') {
+          native.Browser.setHead({
+            shareMoney: shareMoney + "",
+            shareMoneyStr: '赚' + shareMoney + '元',
+          });
+          window.moreShareInfo = {
+            shareTitle: "分享至少赚" + shareMoney + "元",
+            shareDesc: "当好友点击您分享的链接，并进入您的店铺购物，您就可以获得对应的商品返现啦！",
+            bigImgUrl: `http://img.davdian.com/add_qrcode.php?goods_id=${that.goodsId}&seller_id=${that.sellerId}&t=${Date.now()}`,};
+        } else {
+          native.custom.initHead({
+            shareOnHead: 1,
+            isAudioAbsorb:1,
+            isShowAudio:1
+          });
+          share.setShareInfo({
+            title: window.title, // 分享标题
+            desc: window.desc, // 分享描述
+            link: window.link, // 分享链接
+            imgUrl: window.imgUrl, // 分享图标
+          });
+        }
+      }
 
       //活动
       this.activityNum = dataExtra.activity.length;

@@ -457,7 +457,8 @@ jQuery(document).ready(function ($) {
         });
 
         // 删除订单
-        $(".order-delete-order").click(function () {
+        $(".order_detail_container").on("click",".order-delete-order",function () {
+        // $(".order-delete-order").click(function () {
             window.bravetime.newConfirm("您确定要删除订单么？", {
                 okLink: function () {
                     window.bravetime.addLoader();
@@ -1139,10 +1140,12 @@ jQuery(document).ready(function ($) {
             return value;
         }
     }
+    var cutTimer;
 
 
   //预定商品倒计时
   function cutDown(numTime) {
+    clearInterval(cutTimer);
     var oneMinute = 60,
         oneHour = 60 * 60,
         oneDay = 60 * 60 * 24;
@@ -1163,20 +1166,30 @@ jQuery(document).ready(function ($) {
         $(".cutTime").html(hours + " : " + minutes + " : " + seconds)
       } else {
         clearInterval(cutTimer);
-        if (presale_type == "reserve") {
-          $(".order_presale").html("<div class = 'overCutDown'>定金超时支付，交易关闭</div>");
-        }
-        if (presale_type == "final") {
-          $(".order_presale").html("<div class = 'overCutDown'>尾款超时支付，交易关闭</div>");
-        }
+        changeTips();
       }
-    },1000);
-    
-    
+    },1000); 
   };
+
+  function changeTips() {
+    if (presale_type == "reserve") {
+      $(".order_presale").html("<div class = 'overCutDown'>定金超时支付，交易关闭</div>");
+    }
+    if (presale_type == "final") {
+      $(".order_presale").html("<div class = 'overCutDown'>尾款超时支付，交易关闭</div>");
+    }
+    $(".order_id").find(".dav-red").html("已关闭");
+    $(".stage1Title").html("(已关闭)");
+    $(".stage2Title").html("(已关闭)");
+    $(".order_goods_state").html("<a class = 'dav-btn btn-white order-delete-order' data-dav-tj = 'order_detail|delete|delete|1|delete@order_detail'>删除订单</a>");
+  }
   // 如果是定金单或者尾款单就倒计时
-  if (presale_type == "reserve" || presale_type == "final") {
+  if (is_presale_order && Number(presale_surplus_time) > 0) {
     cutDown(presale_surplus_time);
+  };
+
+  if (is_presale_order && Number(presale_surplus_time) == 0) {
+    changeTips();
   };
 
 });

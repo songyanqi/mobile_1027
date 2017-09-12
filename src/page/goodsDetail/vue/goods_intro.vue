@@ -42,6 +42,19 @@
           </div>
         </div>
       </div>
+      <!-- 预定商品 -->
+      <!-- <div v-if = "infoobj.presale" class = "presale">
+        <div>定金：<span>¥</span> <span>{{ infoobj.presale.price.advancePrice }}</span></div>
+        <div>尾款<span>¥</span> <span>{{ infoobj.presale.price.endPrice }}</span></div>
+        <div>尾款支付时间：<span></span></div>
+        <div class = "pre_list">流程：1.付定金 - 2.付尾款 - 3.发货 <span class = "presale_icon"></span></div>
+      </div> -->
+      <div class = "presale">
+        <div class = "pre_list">定金：<span class = "pre_de_f12">¥ </span><span class = "pre_deposit_num">45</span><span class = "pre_deducte">定金可抵扣¥45</span></div>
+        <div class = "pre_list">尾款：<span class = "pre_final_f12">¥ </span><span class = "pre_final_num">56</span></div>
+        <div class = "pre_list">尾款支付时间：10月18日</div>
+        <div class = "pre_list">流程：1.付定金 - 2.付尾款 - 3.发货 <span class = "presale_icon"></span></div>
+      </div>
  
       <!--预告开始-->
       <div class = "limitBuy" v-if = "visitorstatus == '3' && infoobj.isComingActivity">

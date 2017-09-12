@@ -169,12 +169,12 @@
             <div class = "goodsTypeModal">
                 <i class="dav_icon_detail_close_btn"></i>
                 <div class="summary modalPicCont">
-                    <div class = "titlePic">
+                    <div class = "titlePic" :class = "{ titlePresalePic: infoobj.presale }">
                       <img :src="infoobj.goodsShortPic" alt="">
                     </div>
                     <div class = "titleInfo">
                       <div class = "titleM5">
-                        <span class = "summary_price"><span class = "summary_p_icon">¥</span>{{ allPrice }}</span>
+                        <span class = "summary_price"><span class = "summary_p_icon">¥</span><span v-if = "infoobj.presale">定金</span>{{ allPrice }}</span>
                         <span class = "summary_activity">
                             <span v-for = "(item,index) of goodsmodalobj.activityName">
                                 <span v-if = "index == goodsmodalobj.activityName.length - 1">
@@ -188,6 +188,7 @@
                             </span>
                         </span>
                       </div>
+                      <div class = "pre_final_price" v-if = "infoobj.presale">尾款 ¥ {{ infoobj.presale.price.finalPrice }}</div>
                       <div class = "summary_select" v-if = "relativegoodslist.length || goodstags.length"><span>选择</span>
                         <span v-if = "relativegoodslist.length" style = "margin-right: 10px;">
                             <span v-for = "item of relativegoodslist">
@@ -230,8 +231,7 @@
                             <div v-if = "infoobj.presale" class = "isLimit">限购{{ infoobj.presaleNum }}件</div>
                             <div v-if = "islimitnum" class = "isLimit">库存不足</div>
                             <x-number
-                                    class = "x_number"
-                                    style = "padding-right: 0;"
+                                    class = "x_number x_number_p0"
                                     :value="1"
                                     :min="1"
                                     :max = "Number(goodslimitnum)"

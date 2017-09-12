@@ -33,18 +33,18 @@ export default {
           cutDownTimeLimit: '',
         }
     },
-    // activitytypename去掉了
-    props: ['infoobj', 'goodsname', 'shopurl', 'membercont', 'seckill', 'goodsstocknumber',
-            'visitorstatus', 'singleactivity', 'isshowactive','actendtime','isshowa','isshowb','response'],
+    // actendtime去掉了
+    props: ['infoobj', 'goodsname', 'shopurl', 'membercont', 'seckill', 'goodsstocknumber', 'datarepresentid',
+            'visitorstatus', 'singleactivity', 'isshowactive','isshowa','isshowb','response'],
     created () {
-        let that = this;
-        this.$root.eventHub.$on('time_over',(isover) => {
-            that.isOver = isover;
-          if (that.isOver) {
-            that.memPrice = that.infoobj.shopPrice;
-            this.initMember(this.infoObj);
-          }
-        });
+      let that = this;
+      this.$root.eventHub.$on('time_over',(isover) => {
+          that.isOver = isover;
+        if (that.isOver) {
+          that.memPrice = that.infoobj.shopPrice;
+          this.initMember(this.infoObj);
+        }
+      });
     },
     watch: {
       infoobj: {
@@ -57,8 +57,8 @@ export default {
         },
         deep: true,
       },
-      goodsname: {
-        handler () {
+      datarepresentid: {
+        handler (newInfoObj,oldInfoObj) {
           this.isFirstCutDown = true;
           this.initMember(this.infoObj);
           if (this.infoObj.isComingActivity) {

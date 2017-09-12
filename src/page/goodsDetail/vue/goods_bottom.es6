@@ -40,7 +40,6 @@ const GoodsBottom = {
         }
     },
     created () {
-      console.log(5)
       let that = this;
       this.$root.eventHub.$on('time_over',(isover) => {
           that.isOver = isover;
@@ -237,6 +236,13 @@ const GoodsBottom = {
         change (num) {
             if (Number(this.goodslimitnum) == 0) {
               this.goodslimitnum = 1;
+            }
+            if (num == 1) {
+              $(".vux-number-selector-sub").css({"background":"#eee"});
+              $(".vux-number-selector-sub path").css({"fill":"#bbb","stroke":"#bbb"});
+            } else {
+              $(".vux-number-selector-sub").css({"background":"#fff"});
+                $(".vux-number-selector-sub path").css({"fill":"#666","stroke":"#666"});
             }
             if (Number(this.goodslimitnum) == Number(num)) {
                 if (Number(num) != 1) {
