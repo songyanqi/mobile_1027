@@ -96,7 +96,92 @@
             <img class="goods-pic"
                  v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
             <div class="info">
+              <div class="no-assist" v-if="i % 2 === 1">还没获得好友助力继续加油吧</div>
+              <div class="assist" v-else>
+                已获100元助力
+                <div class="less">还差99元0元购</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!--我预定的商品-->
+    <div class="reserve">
+      <!--标题-->
+      <div class="title-type-1">
+        <div class="main-title">我预定的商品</div>
+        <div class="sub-title"><span class="word">尾款支付之间: 10.18 0点-24点</span></div>
+      </div>
+      <!--手滑轮播-->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="i in 10">
+            <img class="goods-pic"
+                 v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
+            <div class="price">定金￥13 (抵扣￥80)</div>
+          </div>
+          <div class="swiper-slide more">
+            <a href="">
+              <div class="btn">
+                <span class="words">查看</br>更多</span>
+                <i></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--我预约的商品-->
+    <div class="subscribe">
+      <!--标题-->
+      <div class="title-type-2">我预约的商品</div>
+      <!--手滑轮播-->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="i in 10">
+            <img class="goods-pic"
+                 v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
+            <div class="price">定金￥13 (抵扣￥80)</div>
+          </div>
+          <div class="swiper-slide more">
+            <a href="">
+              <div class="btn">
+                <span class="words">查看</br>更多</span>
+                <i></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--我点亮的品牌活动-->
+    <div class="lighten">
+      <!--标题-->
+      <div class="title-type-2">我点亮的品牌活动</div>
+      <!--手滑轮播-->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="i in 10">
+            <img class="goods-pic"
+                 v-lazy="'http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg'">
+            <div class="info" v-if="i % 3 === 1">
+              <div class="begin">满200减100</div>
+              <i class="v-line a"></i>
+              <div class="target">满200减150</div>
+              <div class="num">还需101803人点亮</div>
+            </div>
+            <div class="info" v-if="i % 3 === 2">
+              <div class="ok"></div>
+              <i class="v-line b"></i>
+              <div class="target">满200减150</div>
+              <div class="num">还需101803人点亮</div>
+            </div>
+            <div class="info" v-if="i % 3 === 0">
+              <div class="over">满200减150</div>
             </div>
           </div>
           <div class="swiper-slide more">
@@ -110,6 +195,7 @@
         </div>
       </div>
     </div>
+
   </div>
 
 
