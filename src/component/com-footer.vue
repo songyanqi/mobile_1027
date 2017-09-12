@@ -107,6 +107,7 @@
     background: white;
     font-size: 0;
     max-width: $pageMaxWidth;
+    z-index: 9;
     &:before {
       content: '';
       display: block;

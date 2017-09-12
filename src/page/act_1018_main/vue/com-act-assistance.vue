@@ -2,27 +2,76 @@
   <div class="com-box">
     <!--上边banner-->
     <div class="com-banner">
-      <a href="http://murphylee.davdian.com/t-14124.html?rp=index&rl=timeshop_sub_img-511-385">
-        <img
-          src="http://pic.davdian.com/activity/2017/09/05/1125_420_78328383b6cea53680ae037448709531.jpg?x-oss-process=image/format,webp"
-          alt="">
-      </a>
-      <div>活动规则></div>
+      <div href="http://murphylee.davdian.com/t-14124.html?rp=index&rl=timeshop_sub_img-511-385">
+        <img src="//pic.davdian.com/free/2017/09/12/pre_title.png">
+      </div>
+      <a href=""></a>
     </div>
     <!--滚动公告-->
-    <div>
+    <div class="rool_tip">
       <swiper auto loop height="30px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
-        <swiper-item><p>义务爱了 完成传奇世界H5-王者归来任务 获得20金币</p></swiper-item>
-        <swiper-item><p>基本世神 兑换《传奇世界H5》畅玩级礼包 消耗30金币</p></swiper-item>
-        <swiper-item><p>零哥章魚 完成传奇世界H5-王者归来任务 获得30金币</p></swiper-item>
-        <swiper-item><p>做迎而為 兑换【饿了么】畅享美食红包 消耗20金币</p></swiper-item>
-        <swiper-item><p>只知道不知道 兑换【饿了么】畅享美食红包 消耗20金币</p></swiper-item>
-        <swiper-item><p>基本世神 兑换《传奇世界H5》畅玩级礼包 消耗30金币</p></swiper-item>
+        <swiper-item>
+          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会1</p>
+        </swiper-item>
+        <swiper-item>
+          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会3</p>
+        </swiper-item>
+        <swiper-item>
+          <p>137****5567已得到好友xx元助力，获得10.1<br>137****5567已得到好友xx元助力，获得10.18当天</p>
+        </swiper-item>
       </swiper>
     </div>
     <!--助力商品-->
     <div>
       <ul>
+        <li class="list_style online">
+          <a href="/490812.html?rp=index&amp;rl=timeshop_goods-511-490812">
+            <div class="img_container">
+              <div class="img_container_inner">
+                <img src="http://pic.davdian.com/supplier/2017/07/20/1000_1000_a37751ad619ac1dd3a02a1b4d09000a2.jpg?x-oss-process=image/format,webp" lazy="loaded">
+              </div>
+              <div class="order_good_info_container">
+                <div class="order_good_name">
+                  健康小超人（精装5册，我要长高，保护视力，拒绝蛀牙，拒绝肥胖，小心过敏，帮助孩子提升自控力，快速养成健康的生活习惯，杜绝不良行为习惯，附赠孩子们无比喜爱的贴纸，以及记录孩子成长的身高尺。3~6岁适读）
+                </div>
+                <div class="order_good_price">
+                  <span class="f_l"><em class="price_symbol">￥</em><span>99</span></span>
+                  <span class="membership_crown_pre"><em>￥</em>5.2</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="progress_info">
+            仅剩 148 件
+          </div>
+          <a class="remain_btns">
+            <div class="panic_buying_btn">立即抢购</div>
+          </a>
+        </li>
+        <li class="list_style online">
+          <a href="/490812.html?rp=index&amp;rl=timeshop_goods-511-490812">
+            <div class="img_container">
+              <div class="img_container_inner">
+                <img src="http://pic.davdian.com/supplier/2017/07/20/1000_1000_a37751ad619ac1dd3a02a1b4d09000a2.jpg?x-oss-process=image/format,webp" lazy="loaded">
+              </div>
+              <div class="order_good_info_container">
+                <div class="order_good_name">
+                  健康小超人（精装5册，我要长高，保护视力，拒绝蛀牙，拒绝肥胖，小心过敏，帮助孩子提升自控力，快速养成健康的生活习惯，杜绝不良行为习惯，附赠孩子们无比喜爱的贴纸，以及记录孩子成长的身高尺。3~6岁适读）
+                </div>
+                <div class="order_good_price">
+                  <span class="f_l"><em class="price_symbol">￥</em><span>99</span></span>
+                  <span class="membership_crown_pre"><em>￥</em>5.2</span>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="progress_info">
+            仅剩 148 件
+          </div>
+          <a class="remain_btns">
+            <div class="panic_buying_btn">立即抢购</div>
+          </a>
+        </li>
         <li class="list_style online">
           <a href="/490812.html?rp=index&amp;rl=timeshop_goods-511-490812">
             <div class="img_container">
@@ -98,22 +147,31 @@
 </script>
 <style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../../../common/css/util/all";
-
+.com-box{
+  background-image: url("//pic.davdian.com/free/2017/09/12/bg_1.png");
+  background-size: 31px 67px;
+  padding-bottom: 60px;
+}
   // banner
   .com-banner {
     width: 100%;
     min-height: 20px;
     position: relative;
-    div {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-    }
     a {
+      position: absolute;
+      bottom: 19%;
+      right: 19%;
+      display: block;
+      height: 17%;
+      width: 21%;
+      background: tan;
+    }
+    div {
       width: 100%;
-      display: inline-block;
+      display: block;
       img {
         width: 100%;
+        display: block;
       }
     }
   }
@@ -125,7 +183,12 @@
     font-size: 14px;
   }
 
-  ul li {
+  .com-box div ul{
+    margin: 10px;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .com-box div ul li {
     padding: 10px 10px;
     position: relative;
     overflow: hidden;
@@ -133,20 +196,20 @@
   }
 
 
-  ul li .img_container {
+  .com-box div ul li .img_container {
     position: relative;
   }
 
-  ul li .img_container_inner {
+  .com-box div ul li .img_container_inner {
     width: 80px;
     position: relative;
   }
-  ul li .img_container_inner img{
+  .com-box div ul li .img_container_inner img{
     width: 100%;
     height: 100%;
   }
 
-  ul li .order_good_info_container {
+  .com-box div ul li .order_good_info_container {
     position: absolute;
     padding-left: 90px;
     top: 0;
@@ -155,7 +218,7 @@
     height: 100%;
     box-sizing: border-box;
   }
-  ul li.online:after {
+  .com-box div ul li.online:after {
     content: "";
     display: block;
     background-color: #DDDDDD;
@@ -319,5 +382,18 @@
   .membership_crown em {
     font-size: 10px;
     font-style: normal;
+  }
+  .rool_tip{
+    color:#BA2424;
+    font-size: 11px;
+    border:5px solid #E72664;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    margin: 0 10px;
+    padding: 10px;
+  }
+  .rool_tip p{
+    line-height: 16px;
   }
 </style>
