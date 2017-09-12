@@ -26,6 +26,7 @@ export default {
           dialogText: '',
           bounsShow: false,
           scrollTop: 0,
+          allPrice: 0,
         }
     },
     props: ['activityinfo','activityslist','activitynum','goodslimitnum',
@@ -33,10 +34,13 @@ export default {
         'goodstags','handlechangenum', 'relativegoodslist', 'activityurl','infoobj',
         'actendtime','isshowactive', 'islimitnum','goodstatusonsale','goodstatus','activityindex'],
     created () {
-        let that =this;
-        this.$root.eventHub.$on('time_over',(isover) => {
-            that.isOver = isover;
-        });
+      let that =this;
+      this.$root.eventHub.$on('time_over',(isover) => {
+          that.isOver = isover;
+      });
+      this.$root.eventHub.$on('finalPrices',(finalPrice) => {
+        that.allPrice = finalPrice;
+      });
     },
     methods: {
       handleModalShow() {
@@ -94,8 +98,6 @@ export default {
       //红包列表
         handleBounsClose () {
           this.bounsShow = !this.bounsShow;
-        },
-        handleModal () {
         },
         handleTypeModal () {
             this.cartModal = !this.cartModal;

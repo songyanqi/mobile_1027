@@ -403,8 +403,8 @@ export default {
         this.isConfirm = false;
       },
       handleFish () {
-          this.isOver = true;
-          this.$root.eventHub.$emit('time_over',this.isOver);
+        this.isOver = true;
+        this.$root.eventHub.$emit('time_over',this.isOver);
       },
     },
     components: {

@@ -276,7 +276,7 @@
         <popup v-model="cartModal"
                @on-show = "handleModalShow"
                @on-hide = "handleModalHide"
-               @click = "handleModal" >
+              >
             <div class = "modalCloseWrapper" @click = "handleTypeClose"><span class = "modal-close"></span></div>
             <div class = "goodsTypeModal">
                 <i class="dav_icon_detail_close_btn"></i>
@@ -286,52 +286,19 @@
                   </div>
                   <div class = "titleInfo">
                     <div class = "titleM5">
-                        <span v-if = "infoobj.memberGoods == '0'">
-                            <span v-if = "isshowactive == 1">
-                                <span v-if = "actendtime != 0" class = "summary_price">
-                                    <span v-if = "isOver"><span class = "summary_p_icon">¥</span>{{ infoobj.shopPrice }}</span>
-                                    <span v-else><span class = "summary_p_icon">¥</span>{{ infoobj.finalPrice }}</span>
-                                </span>
-                                <span v-else  class = "summary_price"><span class = "summary_p_icon">¥</span>{{ infoobj.shopPrice }}</span>
-                            </span>
-                            <span v-else class = "summary_price"><span class = "summary_p_icon">¥</span>{{ infoobj.finalPrice }}</span>
-                        </span>
-                        <span v-else>
-                            <span v-if = 'visitorstatus != 3'>
-                                <span v-if = "isshowactive == 1">
-                                    <span v-if = "actendtime != 0" class = "summary_price">
-                                        <span v-if = "isOver"><span class = "summary_p_icon">¥</span>{{ infoobj.shopPrice }}</span>
-                                        <span v-else><span class = "summary_p_icon">¥</span>{{ infoobj.finalPrice }}</span>
-                                    </span>
-                                    <span v-else  class = "summary_price"><span class = "summary_p_icon">¥</span>{{ infoobj.shopPrice }}</span>
-                                </span>
-                                <span v-else class = "summary_price"><span class = "summary_p_icon">¥</span>{{ infoobj.finalPrice }}</span>
-                            </span>
-                            <span v-else>
-                                <span v-if = "isshowactive == 1">
-                                    <span v-if = "actendtime != 0" class = "summary_price">
-                                        <span v-if = "isOver"><span class = "summary_p_icon">¥</span>{{ infoobj.shopPrice }}</span>
-                                        <span v-else><span class = "summary_p_icon">¥</span>{{ infoobj.memberPrice }}</span>
-                                    </span>
-                                    <span v-else  class = "summary_price"><span class = "summary_p_icon">¥</span>{{ infoobj.shopPrice }}</span>
-                                </span>
-                                <span v-else class = "summary_price"><span class = "summary_p_icon">¥</span>{{ infoobj.memberPrice }}</span>
-                            </span>
-                        </span>
-
-
-                        <span class = "summary_activity">
-                            <span v-for = "(item,index) of goodsmodalobj.activityName">
-                                <span v-if = "index == goodsmodalobj.activityName.length - 1">
-                                    <span v-if = "item.actTypeName === ''">{{ item.typeName }}</span>
-                                    <span v-else>{{ item.actTypeName }}</span>
-                                </span>
-                                <span v-else>
-                                    <span v-if = "item.actTypeName === ''">{{ item.typeName }}、</span>
-                                    <span v-else>{{ item.actTypeName }}、</span>
-                                </span>
-                            </span>
-                        </span>
+                      <span class = "summary_price"><span class = "summary_p_icon">¥</span>{{ allPrice }}</span>
+                      <span class = "summary_activity">
+                          <span v-for = "(item,index) of goodsmodalobj.activityName">
+                              <span v-if = "index == goodsmodalobj.activityName.length - 1">
+                                  <span v-if = "item.actTypeName === ''">{{ item.typeName }}</span>
+                                  <span v-else>{{ item.actTypeName }}</span>
+                              </span>
+                              <span v-else>
+                                  <span v-if = "item.actTypeName === ''">{{ item.typeName }}、</span>
+                                  <span v-else>{{ item.actTypeName }}、</span>
+                              </span>
+                          </span>
+                      </span>
                     </div>
                     <div class = "summary_select">选择
                       <span v-if = "relativegoodslist" class = "summary_m15">
@@ -375,16 +342,17 @@
                     <div class="summary_number">
                         <div class="summary_d_title">数量</div>
                         <div class = "summary_number_cont">
-                            <div v-if = "islimitnum" class = "isLimit">库存不足</div>
-                            <x-number
-                                    class = "x_number"
-                                    :min="1"
-                                    :value="1"
-                                    :max = "Number(goodslimitnum)"
-                                    width = "43px"
-                                    align="left"
-                                    fillable
-                                    @on-change="handleChange"></x-number>
+                          <div v-if = "infoobj.presale" class = "isLimit">限购{{ infoobj.presaleNum }}件</div>
+                          <div v-if = "islimitnum" class = "isLimit">库存不足</div>
+                          <x-number
+                                  class = "x_number"
+                                  :min="1"
+                                  :value="1"
+                                  :max = "Number(goodslimitnum)"
+                                  width = "43px"
+                                  align="left"
+                                  fillable
+                                  @on-change="handleChange"></x-number>
                         </div>
                     </div>
                 </div>
@@ -400,20 +368,30 @@
                       </div>
                     </div>
                     <div v-else>
-                      <div class = "flexCont flex1" v-if = "Number(goodstatus.goodsStocks) <= 0">
-                        <div class = "haveGoods_tips"
-                             style = "wdith: 100%;"
-                             @click = "handleTips">到货提醒</div>
+                      <!-- 是否是预定商品 -->
+                      <div  v-if = "infoobj.presale"
+                            class = "btn_buy btn_buy_width"
+                            :class = "{ disableGray: Number(goodstatus.goodsStocks) <= 0 }"
+                            :dataid = "datarepresentid"
+                            @click = "handleBuy($event)">
+                        立即付定金
                       </div>
                       <div v-else>
-                        <div class="add_cart_b"
-                             :dataid = "datarepresentid"
-                             :isclose = "isclose"
-                             @click = "handleModalConfirm($event)">加入购物车</div>
-                        <div class="cart_buy_b"
-                             :dataid = "datarepresentid"
-                             :isclose = "isclose"
-                             @click = "handleModalCart($event)">立即购买</div>
+                        <div class = "flexCont flex1" v-if = "Number(goodstatus.goodsStocks) <= 0">
+                          <div class = "haveGoods_tips"
+                               style = "wdith: 100%;"
+                               @click = "handleTips">到货提醒</div>
+                        </div>
+                        <div v-else>
+                          <div class="add_cart_b"
+                               :dataid = "datarepresentid"
+                               :isclose = "isclose"
+                               @click = "handleModalConfirm($event)">加入购物车</div>
+                          <div class="cart_buy_b"
+                               :dataid = "datarepresentid"
+                               :isclose = "isclose"
+                               @click = "handleModalCart($event)">立即购买</div>
+                        </div>
                       </div>
                     </div>
                   </div>
