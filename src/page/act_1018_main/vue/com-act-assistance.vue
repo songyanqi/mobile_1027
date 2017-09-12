@@ -100,7 +100,6 @@
     watch: {},
   }
 </script>
-
 <style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../../../common/css/util/all";
 
