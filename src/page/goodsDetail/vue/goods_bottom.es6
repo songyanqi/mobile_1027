@@ -36,13 +36,18 @@ const GoodsBottom = {
           collected: 0,
           //弹框是否是点击立即购买跳出来的
           isBuyModal: false,
+          allPrice: 0,
         }
     },
     created () {
-        let that = this;
-        this.$root.eventHub.$on('time_over',(isover) => {
-            that.isOver = isover;
-        });
+      console.log(5)
+      let that = this;
+      this.$root.eventHub.$on('time_over',(isover) => {
+          that.isOver = isover;
+      });
+      this.$root.eventHub.$on('finalPrices',(finalPrice) => {
+        that.allPrice = finalPrice;
+      });
     },
 
     methods: {
@@ -177,16 +182,9 @@ const GoodsBottom = {
             this.isBuyModal = true;
             this.cartModal = !this.cartModal;
           }
-
-
-
-          //立即购买是否跳出弹框
-          // this.isBuyModal = true;
-          //
-          // this.cartModal = !this.cartModal;
         },
         // 点击单个商品的加入购物车
-        handleSingleCart () {
+        handleSingleCart() {
           if (!window.navigator.onLine) {
             popup.toast('网络不太顺畅哦~');
             return;
@@ -220,9 +218,21 @@ const GoodsBottom = {
             //立即购买是否跳出弹框
             this.$emit('confirm-id','', 0);
           }
-            // this.$emit('confirm-id','', 0);
         },
-        handleModal () {
+        // 立即付定金,bottom下面的按钮
+        handleModalPresale () {
+          if (!window.navigator.onLine) {
+            popup.toast('网络不太顺畅哦~');
+            return;
+          }
+          if (Number(this.goodstatus.goodsStocks) <= 0) {
+            return;
+          }
+          if (this.ismultigoods) {
+            this.cartModal = !this.cartModal;
+          } else {
+            this.$emit('confirm-id','', 1);
+          }
         },
         change (num) {
             if (Number(this.goodslimitnum) == 0) {
@@ -328,20 +338,6 @@ const GoodsBottom = {
             }
             this.isBuyModal = true;
           }
-
-
-
-          // if (this.seckill) {
-          //   if (this.ismultigoods) {
-          //     this.cartModal = !this.cartModal;
-          //   } else {
-          //     this.$emit('confirm-id', goodId, 1);
-          //   }
-          // } else {
-          //   this.cartModal = !this.cartModal;
-          // }
-
-          // this.isBuyModal = true;
         },
         //点击推荐收起和展开
         handleRecommendGoods () {

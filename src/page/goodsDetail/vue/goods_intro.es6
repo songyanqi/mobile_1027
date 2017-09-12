@@ -106,6 +106,7 @@ export default {
             }
           }
         }
+        this.$root.eventHub.$emit('finalPrices',this.memPrice);
       },
       //成为会员的链接
       handleMember () {

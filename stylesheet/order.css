@@ -2550,6 +2550,56 @@ body.orderDetail, body.orderDelivery {
 }
 
 
+.order_detail_container .stageCont {
+  padding: 10px 0 12px 0;
+  background: #fff;
+  margin: 10px 0;
+}
+.order_detail_container .stageList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  font-size: 12px;
+  line-height: 17px;
+  padding-bottom: 10px;
+  color: #666;
+}
+.order_detail_container .clorLight {
+  color: #FF4A7D;
+}
+.order_detail_container .stageTips {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  color: #666;
+}
+.order_detail_container .stageF14 {
+  font-size: 14px;
+  padding-bottom: 0;
+  padding-top: 12px;
+}
+.order_detail_container .colorGray {
+  color: #999;
+}
+.order_detail_container .stages {
+  position: relative;
+}
+.order_detail_container .stages:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  border-bottom: 1px solid #e1e1e1;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+
+}
+
 
 
 
