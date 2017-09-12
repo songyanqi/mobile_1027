@@ -257,8 +257,9 @@
                             <div v-if = "islimitnum" class = "isLimit">库存不足</div>
                             <x-number
                                     class = "x_number"
+                                    fillable 
                                     style = "padding-right: 0;"
-                                    :value="handlechangenum"
+                                    :value="1"
                                     :min="1"
                                     :max = "Number(goodslimitnum)"
                                     width = "43px"
