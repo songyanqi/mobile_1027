@@ -34,6 +34,9 @@
             <span class="pull-right dav-red" v-show = "item.type == 1 && item.shipping_status == 1 && item.complete_status == 0  && !item.is_new_seller_order">待收货</span>
             <span class="pull-right dav-red" v-show = "item.type == 1 && item.shipping_status == 1 && item.complete_status == 0  && item.is_new_seller_order && item.is_expire != 1">赠品待领取</span>
             <span class="pull-right dav-red" v-show = "item.is_expire && item.is_new_seller_order">已关闭</span>
+            <!-- 预定商品 -->
+            <span class="pull-right dav-red" v-show = "item.is_presale_order && item.presale_info == 'reserve'">待支付定金</span>
+            <span class="pull-right dav-red" v-show = "item.is_presale_order && item.presale_info == 'final'">待支付尾款</span>
         </div>
         <a class="order_good_list" href="/o-{{item.order_id}}.html" v-if = '!item.is_delivery' v-bind = 'handleCurrentPage'>
             <div class="img_container">
@@ -61,7 +64,25 @@
                 </div>
             </div>
         </a>
-        <div class="sum">金额：<span class="payment"><span class="fz_12">￥</span>{{item.payment}}</span></div>
+        <!-- <div class="sum">金额：<span class="payment"><span class="fz_12">￥</span>{{item.payment}}</span></div> -->
+        <!-- 待预定 -->
+        <div class="sum">
+          <span v-if = "item.is_presale_order">
+            <span>共{{ item.goods_list_num }}件</span>
+            <span v-if = "item.presale_info.type == 'reserve'">
+              <span>应付定金：</span>
+              <span class="payment"><span class="fz_12">￥</span>{{item.presale_info.reserve_info.payment}}</span>
+            </span>
+            <span v-if = "item.presale_info.type == 'final'">
+              <span>应付尾款：</span>
+              <span class="payment"><span class="fz_12">￥</span>{{item.presale_info.final_info.payment}}</span>
+            </span>
+          </span>
+          <span v-else>
+            <span v-else>金额：</span>
+            <span class="payment"><span class="fz_12">￥</span>{{item.payment}}</span>
+          </span>
+        </div>
         <div class="order_buttons order_list_buttons clearfix">
             <!--该显示哪些信息-->
             <a v-show = "item | close" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/cart.html?rebuy_order_id={{item.id}}">再次购买</a>
@@ -93,8 +114,12 @@
             <a v-show = "item | applySale" data-deliveryid="{{item.delivery_id}}" data-id="{{ item.id }}" class="dav-btn btn-white pull-right" @click="orderApplay">申请售后</a>
             <!-- 售后进度 -->
             <a v-show = "item | applyProgress" data-deliveryid="{{item.delivery_id}}"  data-id="{{ item.id }}" data-cancel-id = "{{ item.cancel_id }}" class="dav-btn btn-white pull-right cancle_{{ item.id }}" @click="afterSale">查看售后进度</a>
-            <!-- 测试用 -->
-            <!-- <a data-deliveryid="{{item.delivery_id}}" data-id="{{ item.id }}" class="dav-btn btn-white pull-right cancle_{{ item.id }}" @click="cancelOrder">取消订单</a> -->
+            <!-- 预定 支付定金 -->
+             <a v-show = "item | orderReserve" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/cart.html?rebuy_order_id={{item.id}}">支付定金</a>
+             <!-- 支付尾款，显示日期 -->
+             <a v-show = "item | orderFinal" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="javascript:void(0)">{{ item.presale_info.final_info.paytime_start | changeDate }}</a>
+             <!-- 支付尾款，显示按钮 -->
+             <a v-show = "item | orderFinalBtn" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/cart.html?rebuy_order_id={{item.id}}">支付尾款</a>
         </div>
     </div>
     <div class="order_list_item type_4 dav-shadow" v-if = 'other'>
@@ -195,6 +220,8 @@
                 //取消原因
                 reasonName: "",
                 isapp: false,
+                // 当前时间，来判断支付尾款显示按钮还是支付时间
+                currentTime: Date.now(),
             }
         },
         created:function(){
@@ -228,6 +255,7 @@
           this.scroll();
         },
         methods:{
+          // 时间转换
           // 弹框弹出时给body添加fixed
           addFixed() {
             if (document.documentElement && document.documentElement.scrollTop) {
@@ -884,7 +912,45 @@
                       }
                     }
                 }
-            }
+            },
+            // 支付定金,首先要pay的逻辑，要加上
+            orderReserve (value) {
+              if(value.is_new_seller_order  == false && value.type == 3){
+                if (value.is_presale_order && value.presale_info.type == "reserve") {
+                  return true;
+                }
+              }
+            },
+            // 支付尾款,显示时间
+            orderFinal (value) {
+              if(value.is_new_seller_order  == false && value.type == 3){
+                if (value.is_presale_order && value.presale_info.type == "final") {
+                  if (Date.now() > Number(value.presale_info.final_info.paytime_start) * 1000) {
+                    return true;
+                  }
+                }
+              }
+            },
+            // 支付尾款，显示按钮
+            orderFinalBtn (value) {
+              if(value.is_new_seller_order  == false && value.type == 3){
+                if (value.is_presale_order && value.presale_info.type == "final") {
+                  if (Date.now() < Number(value.presale_info.final_info.paytime_start) * 1000) {
+                    return true;
+                  }
+                }
+              }
+            },
+            changeDate(time) {
+            var dates = new Date(time);
+            var month = dates.getMonths(),
+                days = dates.getDates(),
+                hours = dates.getHours(),
+                minutes = dates.getMinutes(),
+                seconds = dates.getSeconds();
+
+            return `${month}月${days}日 ${hours}:${minutes}:${seconds}`;
+          },
         },
         events:{
             'changeSort':function(msg){

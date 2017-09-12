@@ -54,6 +54,11 @@
         <span class = "limitBuy_tips">{{ infoobj.comingBegTime }}还剩 <span v-if = "Number(remainTime.day) != 0">{{ remainTime.day }}天</span>{{ remainTime.hour }}:{{ remainTime.minute }}:{{ remainTime.second }} 会员返恢复为<span class = "rColor"> ¥ {{ infoobj.normalIncome }}</span></span>
       </div>
 
+      <!--10.18爆品预约提醒-->
+      <div class="bao-pin-1018-tip">
+        <span class="act-symbol">¥ </span><span class="act-price">200</span><span class="start-time">10月19日08:00 正式开抢</span>
+      </div>
+
       <div class = "salesCount clearfix">
         <span class = "goodsStock"><span v-if = "seckill">秒杀库存</span><span v-else><span v-if = "infoobj.isActivity">活动剩余库存</span><span v-else>库存</span></span> {{ goodsstocknumber }}</span>
         <span class = "already_sale">已售 {{ infoobj.salesNumber }}</span>

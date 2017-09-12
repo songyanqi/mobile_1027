@@ -114,7 +114,8 @@
               :visitorstatus = "visitorStatus"
               :goodsname = "goodsName"
               :goodsstocknumber = "goodsStockNumber"
-              :infoobj = "infoObj"></goods-intro>
+              :infoobj = "infoObj"
+              :response="response"></goods-intro>
             <activity-types
               v-if = "firstScreenFinish"
               :infoobj = "infoObj"
@@ -254,7 +255,6 @@
           :seckill = "secKill"
         ></goods-bottom>
       </div>
-      <!--<alert v-model="alertShow" title="提示" @on-hide="handleAlertHide"> {{ alertMsg }}</alert>-->
       <confirm v-if="confirmShow" title="提示"
                @on-cancel="handleConfirmCancel"
                :confirm-text = 'confirmText'
