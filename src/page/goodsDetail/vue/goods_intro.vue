@@ -55,8 +55,8 @@
       </div>
 
       <!--10.18爆品预约提醒-->
-      <div class="bao-pin-1018-tip">
-        <span class="act-symbol">¥ </span><span class="act-price">200</span><span class="start-time">10月19日08:00 正式开抢</span>
+      <div class="bao-pin-1018-tip" v-if="response && response.data && response.data.explosion">
+        <span class="act-symbol">¥ </span><span class="act-price">{{response.data.explosion.price}}</span><span class="start-time">{{date.format(response.data.explosion.sTime, 'MM月dd日hh:mm')}} 正式开抢</span>
       </div>
 
       <div class = "salesCount clearfix">
