@@ -183,6 +183,7 @@ new Vue({
         }
       } else if (ua.isDvdApp()) {
         native.Browser.goodsBook({
+          goodsId: goods.goodsId,
           goodsTitle: goods.goodsName,
           goodsImage: goods.imageUrl,
           goodsStartTime: goods.startTime,

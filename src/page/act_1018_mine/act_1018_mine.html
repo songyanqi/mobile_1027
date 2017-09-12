@@ -6,28 +6,205 @@
   <link rel="stylesheet" href="[[static]]/page/act_1018_mine/css/act_1018_mine.css[[v]]">
 </head>
 <body>
-  <div class="app">
-    <!--标题-->
-    <com-top-title title="我的10.18心愿单" home></com-top-title>
+<div class="app">
+  <!--标题-->
+  <com-top-title title="我的10.18心愿单" home></com-top-title>
 
-    <!-- Swiper -->
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
-        <div class="swiper-slide"><a href=""><img v-lazy="'http://pic.davdian.com/free/project/seller_mobile/entry-1.png'"></a></div>
-        <div class="swiper-slide"><a href="">查看更多</a></div>
+  <!--个人信息-->
+  <div class="g-info">
+    <img class="head-pic" src="http://pic.davdian.com/shop_logo/2017/07/01/80_80_8535effa0ef94715a088c7f25e696c2f.jpg">
+    <span class="info">
+        <div class="nickname">昵称</div>
+        <a href="">
+          <div class="adviser-prize">服务人群销售额: 120000元，获得Iphone8 <span class="detail">详情<i></i></span></div>
+        </a>
+      </span>
+  </div>
+
+  <!--周年庆按钮-->
+  <a href="">
+    <img class="g-head-btn" v-lazy="'[[static]]/page/act_1018_mine/img/head-btn.png'">
+  </a>
+
+  <!--我的活动-->
+  <div class="g-act">
+    <!--服务人群预定奖励-->
+    <div class="service-award">
+      <!--标题-->
+      <div class="title-type-1">
+        <div class="main-title">服务人群预定奖励</div>
+        <div class="sub-title"><span class="word">共得9999元</span></div>
+      </div>
+      <!--手滑轮播-->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="i in 10">
+            <img class="goods-pic"
+                 v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
+            <div class="service-object">
+              <img class="head"
+                   v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
+              <span class="nickname">糖心沙果</span>
+            </div>
+            <div class="award">预定2件获得2元奖励</div>
+          </div>
+          <div class="swiper-slide more">
+            <a href="">
+              <div class="btn">
+                <span class="words">查看</br>更多</span>
+                <i></i>
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!--返回顶部-->
-    <com-to-top-icon></com-to-top-icon>
+    <!--我的10.18红包-->
+    <div class="redpack">
+      <!--标题-->
+      <div class="title-type-2">我的10.18红包</div>
+      <!--红包列表-->
+      <ul class="list">
+        <li v-for="i in 4">
+          <div class="name">限母婴类商品使用</div>
+          <div class="price">
+            <span class="symbol">￥</span>
+            <span class="num">40</span>
+            <span class="limit">满199可用</span>
+          </div>
+          <div class="time">有效期：2017.03.01 23:59:59</div>
+        </li>
+      </ul>
+      <!--查看更多-->
+      <a href="">
+        <div class="more">查看更多<i></i></div>
+      </a>
+    </div>
+
+    <!--我发起的助力省钱-->
+    <div class="assist">
+      <!--标题-->
+      <div class="title-type-1">
+        <div class="main-title">我发起的助力省钱</div>
+        <div class="sub-title"><span class="word">等待10.18当天抢</span></div>
+      </div>
+      <!--手滑轮播-->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="i in 10">
+            <img class="goods-pic"
+                 v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
+            <div class="info">
+              <div class="no-assist" v-if="i % 2 === 1">还没获得好友助力继续加油吧</div>
+              <div class="assist" v-else>
+                已获100元助力
+                <div class="less">还差99元0元购</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--我预定的商品-->
+    <div class="reserve">
+      <!--标题-->
+      <div class="title-type-1">
+        <div class="main-title">我预定的商品</div>
+        <div class="sub-title"><span class="word">尾款支付之间: 10.18 0点-24点</span></div>
+      </div>
+      <!--手滑轮播-->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="i in 10">
+            <img class="goods-pic"
+                 v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
+            <div class="price">定金￥13 (抵扣￥80)</div>
+          </div>
+          <div class="swiper-slide more">
+            <a href="">
+              <div class="btn">
+                <span class="words">查看</br>更多</span>
+                <i></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--我预约的商品-->
+    <div class="subscribe">
+      <!--标题-->
+      <div class="title-type-2">我预约的商品</div>
+      <!--手滑轮播-->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="i in 10">
+            <img class="goods-pic"
+                 v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
+            <div class="price">定金￥13 (抵扣￥80)</div>
+          </div>
+          <div class="swiper-slide more">
+            <a href="">
+              <div class="btn">
+                <span class="words">查看</br>更多</span>
+                <i></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--我点亮的品牌活动-->
+    <div class="lighten">
+      <!--标题-->
+      <div class="title-type-2">我点亮的品牌活动</div>
+      <!--手滑轮播-->
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" v-for="i in 10">
+            <img class="goods-pic"
+                 v-lazy="'http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg'">
+            <div class="info" v-if="i % 3 === 1">
+              <div class="begin">满200减100</div>
+              <i class="v-line a"></i>
+              <div class="target">满200减150</div>
+              <div class="num">还需101803人点亮</div>
+            </div>
+            <div class="info" v-if="i % 3 === 2">
+              <div class="ok"></div>
+              <i class="v-line b"></i>
+              <div class="target">满200减150</div>
+              <div class="num">还需101803人点亮</div>
+            </div>
+            <div class="info" v-if="i % 3 === 0">
+              <div class="over">满200减150</div>
+            </div>
+          </div>
+          <div class="swiper-slide more">
+            <a href="">
+              <div class="btn">
+                <span class="words">查看</br>更多</span>
+                <i></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  @@include('vendor.include')
-  <script src="[[vendor]]/swiper/swiper-3.3.1.jquery.min.js"></script>
-  <script src="[[static]]/page/act_1018_mine/js/act_1018_mine.js[[v]]"></script>
+
+  <!--返回顶部-->
+  <com-to-top-icon></com-to-top-icon>
+</div>
+
+@@include('vendor.include')
+<script src="[[vendor]]/swiper/swiper-3.3.1.jquery.min.js"></script>
+<script src="[[static]]/page/act_1018_mine/js/act_1018_mine.js[[v]]"></script>
 </body>
 </html>

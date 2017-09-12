@@ -1,3 +1,5 @@
+import date from '../../../common/js/module/date.js';
+
 export default {
     data () {
         return {
@@ -31,6 +33,7 @@ export default {
           cutDownTimer: null,
           //多规格判断上次lastTime和这次的lastTime是否相同，相同就不调用倒计时
           cutDownTimeLimit: '',
+          date: date,
         }
     },
     // actendtime去掉了

@@ -515,6 +515,7 @@ const native = {
     /**
      * 1018爆款商品预约
      * native.Browser.goodsBook({
+        goodsId: '商品Id',
         goodsTitle: '商品标题',
         goodsImage: '商品图片',
         goodsStartTime: '开抢时间',

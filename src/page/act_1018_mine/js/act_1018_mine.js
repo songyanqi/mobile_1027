@@ -47,9 +47,9 @@ new Vue({
         // 初始化轮播图
         var swiper = new Swiper('.swiper-container', {
           pagination: '.swiper-pagination',
-          slidesPerView: auto,
+          slidesPerView: 'auto',
           paginationClickable: true,
-          spaceBetween: 30,
+          // spaceBetween: 10,
           freeMode: true
         });
 
