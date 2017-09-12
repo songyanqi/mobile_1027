@@ -104,7 +104,8 @@ function setAppAndWx(){
 * 初始化头部锚点
 */
 function initLinkGroup(){
-  var links = document.querySelector(".link_group").querySelectorAll("a");
+   if(document.querySelector(".link_group")){
+    var links = document.querySelector(".link_group").querySelectorAll("a");
   links.forEach(function(e){
     e.onclick=function(){
       links.forEach(function(e1){
@@ -132,6 +133,8 @@ function initLinkGroup(){
       }
     });
   }, false);
+   }
+  
 }
 
 function init(){
