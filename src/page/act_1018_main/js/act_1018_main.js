@@ -33,12 +33,17 @@ new Vue({
   data() {
     return {
       response: null,
-      topicHtml1: null,
+      topics: [
+        {id: '14376', content: null},
+        {id: '14377', content: null},
+        {id: '14378', content: null}
+      ],
     }
   },
   computed: {
     currentDate(){
-      return date.format(this.response ? (this.response.sys_time + '000') : new Date(), 'yyyy-MM-dd');
+      let now = this.response ? (this.response.sys_time + '000') : new Date();
+      return date.format(now, 'yyyy-MM-dd');
     }
   },
   watch: {
@@ -71,7 +76,7 @@ new Vue({
   },
   created() {
     this.getData();
-    this.getTopic1();
+    this.getTopics();
   },
   methods: {
     /**
@@ -99,24 +104,28 @@ new Vue({
       });
     },
     /**
-     * 获取专题1的内容
+     * 获取头图图片地址
+     * 默认头图地址: http://pic.davdian.com/free/2017/09/13/750_895_fef7e55d54bb1a61d6598bdcbfc523ff.jpg
      */
-    getTopic1(){
+    getTopics(){
       let ts = this;
-      $.ajax({
-        cache: false,
-        async: true,
-        url: '/t-14278.html?_=' + Date.now(),
-        type: 'get',
-        dataType: 'text',
-        data: {},
-        success(response) {
-          ts.topicHtml1 = response;
-        },
-        error(error) {
-          console.error('ajax error:' + error.status + ' ' + error.statusText);
-        }
-      });
+      for (let i in ts.topics) {   //
+        let topic = ts.topics[i];
+        $.ajax({
+          cache: false,
+          async: true,
+          url: `/t-${topic.id}.html?_=${Date.now()}`,
+          type: 'get',
+          dataType: 'text',
+          data: {},
+          success(response) {
+            topic.content = response;
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+          }
+        });
+      }
     },
   },
   filters: {},
