@@ -172,7 +172,7 @@ export default {
                     scope.list = scope.list.concat(data.data.feedList[0].body.dataList);
                     data.data.feedList[0].body.dataList = scope.list;
                     /*不确定新添加进来的数据是否联动了*/
-                    socialCache.set('likeList' + scope.menuId, JSON.stringify(data), {exp: 60});
+                    socialCache.set('likeList' + scope.menuId, JSON.stringify(data), {exp: 180});
                     /*页码加1*/
                     scope.sData.pageIndex++;
                     sessionStorage.setItem('pageIndex' + scope.menuId, scope.sData.pageIndex);
@@ -196,7 +196,7 @@ export default {
                 /*如果是首页*/
                 else {
                   localStorage.setItem('likeList' + scope.menuId, JSON.stringify(data));
-                  socialCache.set('likeList' + scope.menuId, JSON.stringify(data), {exp: 60});
+                  socialCache.set('likeList' + scope.menuId, JSON.stringify(data), {exp: 180});
                   scope.list = data.data.feedList[0].body.dataList;
                   scope.no_more = true;
                   scope.beforeFirstLoading = false;
