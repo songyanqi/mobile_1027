@@ -92,6 +92,7 @@ export default {
         scope.errors = false
       }
       scope.wscroll();
+    //
     },
     imgObject: function (imgSrc) {
       return {
