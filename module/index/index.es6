@@ -99,6 +99,10 @@ export default {
       setTimeout(function(){
         window.bravetime.initHead&&window.bravetime.initHead()
       },500)
+
+
+      console.log(2);
+      that.getSkinPackage();
     })
   },
   methods: {

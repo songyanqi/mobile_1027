@@ -2,7 +2,7 @@
   <div class="index_inner">
     <!--头部-->
     <index-head :usersta="usersta" :menudata='menudata' :data='headData' v-if='!app' v-on:categorya="changeCategory"></index-head>
-    <div style='height: 80px' v-if='!app'></div>
+    <div style='height: 80px' v-if='!app' class="background"></div>
     <n-progress></n-progress>
     <!--内容-->
     <index-feed :data="feedData" v-if='!loadFlag && !unLoadFlag'></index-feed>
@@ -73,5 +73,7 @@
   @import "./index.css";
   #nprogress .spinner {
     display: none !important;
+  }
+  .background{
   }
 </style>

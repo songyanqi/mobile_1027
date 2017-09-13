@@ -24,14 +24,14 @@
     top: 8px;
     display: block;
 }
-.head_index_top .search_con .search_icon {
+.head_index_top .search_icon {
     position: absolute;
     display: inline-block;
     background: url(//pic.davdian.com/free/index_searchBarSearchIcon_2x.png) no-repeat;
     width: 14px;
     height: 16px;
     background-size: 14px;
-    top: 6px;
+    top: 14px;
     left: 64px;
 }
 .head_index_top .shop_name {

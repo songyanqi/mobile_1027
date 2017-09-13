@@ -5,7 +5,7 @@
       <a class="btn" :class="{active: active == 'home'}" href="/">
         <div class="pic-title">
           <img class="pic" src="//pic.davdian.com/free/footer-icon/home-active.png" v-if="active == 'home'">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/home.png" v-else>
+          <img class="pic" src="//pic.davdian.com/free/2017/09/13/home@2x.png" v-else>
           <div class="title">首页</div>
         </div>
       </a>
