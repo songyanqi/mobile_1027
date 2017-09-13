@@ -11,188 +11,37 @@
     <div class="rool_tip">
       <div class="marguee">
         <div class="marguee_innder">
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
+          <p v-for="pr in announcement">{{pr.message}}</p>
         </div>
       </div>
     </div>
     <!--助力商品-->
     <div>
       <ul>
-        <li class="list_style online">
-          <a href="/490812.html?rp=index&amp;rl=timeshop_goods-511-490812">
+        <li v-for="lis in helplist" class="list_style online">
+          <a :href="lis.activityLink">
             <div class="img_container">
               <div class="img_container_inner">
-                <img
-                  src="http://pic.davdian.com/supplier/2017/07/20/1000_1000_a37751ad619ac1dd3a02a1b4d09000a2.jpg?x-oss-process=image/format,webp"
-                  lazy="loaded">
+                <img :src="lis.goodsImage">
               </div>
               <div class="order_good_info_container">
                 <div class="order_good_name">
-                  健康小超人（精装5册，我要长高，保护视力，拒绝蛀牙，拒绝肥胖，小心过敏，帮助孩子提升自控力，快速养成健康的生活习惯，杜绝不良行为习惯，附赠孩子们无比喜爱的贴纸，以及记录孩子成长的身高尺。3~6岁适读）
+                  {{lis.goodsName}}
                 </div>
                 <div class="order_good_price">
-                  <span class="f_l">10.18互动家<em class="price_symbol">￥</em><span>99</span></span>
-                  <span class="membership_crown_pre"><em>￥</em>5.2</span>
+                  <span class="f_l">10.18活动价<em class="price_symbol">￥</em><span>{{lis.activityPrice}}</span></span>
+                  <span class="membership_crown_pre"><em>￥</em>{{lis.goodsPrice}}</span>
                 </div>
               </div>
             </div>
           </a>
           <div class="progress_info">
-            已有<span>100</span>人参与
+            {{lis.activityMessage}}
           </div>
           <a class="remain_btns">
-            <div class="panic_buying_btn">发起助力</div>
-          </a>
-        </li>
-        <li class="list_style online">
-          <a href="/490812.html?rp=index&amp;rl=timeshop_goods-511-490812">
-            <div class="img_container">
-              <div class="img_container_inner">
-                <img
-                  src="http://pic.davdian.com/supplier/2017/07/20/1000_1000_a37751ad619ac1dd3a02a1b4d09000a2.jpg?x-oss-process=image/format,webp"
-                  lazy="loaded">
-              </div>
-              <div class="order_good_info_container">
-                <div class="order_good_name">
-                  健康小超人（精装5册，我要长高，保护视力，拒绝蛀牙，拒绝肥胖，小心过敏，帮助孩子提升自控力，快速养成健康的生活习惯，杜绝不良行为习惯，附赠孩子们无比喜爱的贴纸，以及记录孩子成长的身高尺。3~6岁适读）
-                </div>
-                <div class="order_good_price">
-                  <span class="f_l"><em class="price_symbol">￥</em><span>99</span></span>
-                  <span class="membership_crown_pre"><em>￥</em>5.2</span>
-                </div>
-              </div>
-            </div>
-          </a>
-          <div class="progress_info">
-            已获得<span>100</span>元助力，还差99元
-          </div>
-          <a class="remain_btns">
-            <div class="panic_buying_btn yellows">我的助力</div>
-          </a>
-        </li>
-        <li class="list_style online">
-          <a href="/490812.html?rp=index&amp;rl=timeshop_goods-511-490812">
-            <div class="img_container">
-              <div class="img_container_inner">
-                <img
-                  src="http://pic.davdian.com/supplier/2017/07/20/1000_1000_a37751ad619ac1dd3a02a1b4d09000a2.jpg?x-oss-process=image/format,webp"
-                  lazy="loaded">
-              </div>
-              <div class="order_good_info_container">
-                <div class="order_good_name">
-                  健康小超人（精装5册，我要长高，保护视力，拒绝蛀牙，拒绝肥胖，小心过敏，帮助孩子提升自控力，快速养成健康的生活习惯，杜绝不良行为习惯，附赠孩子们无比喜爱的贴纸，以及记录孩子成长的身高尺。3~6岁适读）
-                </div>
-                <div class="order_good_price">
-                  <span class="f_l"><em class="price_symbol">￥</em><span>99</span></span>
-                  <span class="membership_crown_pre"><em>￥</em>5.2</span>
-                </div>
-              </div>
-            </div>
-          </a>
-          <div class="progress_info">
-            已获得<span>199</span>元助力
-          </div>
-          <a class="remain_btns">
-            <div class="panic_buying_btn big_1018">10.18当天0元抢</div>
+            <div class="panic_buying_btn" v-if="lis.activityBution == '发起助力'">{{lis.activityBution}}</div>
+            <div class="panic_buying_btn yellows" v-if="lis.activityBution == '我的助力'">{{lis.activityBution}}</div>
+            <div class="panic_buying_btn big_1018" v-if="lis.activityBution == '10.18当天0元抢'">{{lis.activityBution}}</div>
           </a>
         </li>
       </ul>
@@ -200,45 +49,81 @@
   </div>
 </template>
 <script>
-  import {Swiper, SwiperItem} from 'vux'
-
+  import encrypt from '../../../common/js/module/encrypt.js';
+  import popup from '../../../common/js/module/popup.js';
   export default {
     props: {},
     data() {
-      return {}
+      return {
+        announcement:null,
+        helplist:null
+      }
     },
     components: {
-      Swiper,
-      SwiperItem
     },
     computed: {},
     created() {
+      this.getHelpList();
+      this.getAnnouncement();
     },
     mounted() {
     },
     methods: {
       /**
-       * 接口名称:
+       * 接口名称:获取助力列表
        * 接口文档:
        */
-//      getData(){
-//        let ts = this;
-//        $.ajax({
-//          cache: false,
-//          async: true,
-//          url: '/?_=' + Date.now(),
-//          type: 'post',
-//          dataType: 'json',
-//          data: encrypt({}),
-//          success(response) {
-//            ts.response = response;
-//          },
-//          error(error) {
-////            ts.response = require('../json/center.json');
-//            console.error('ajax error:' + error.status + ' ' + error.statusText);
-//          }
-//        });
-//      },
+      getHelpList(){
+        let ts = this;
+        $.ajax({
+          cache: false,
+          async: true,
+//          url: '/api/mg/sale/userHelpBuy/getHelpList/?_=' + Date.now(),
+          url: 'http://www.easy-mock.com/mock/59b92127e0dc663341a8cccd/api/mg/sale/userHelpBuy/getHelpList?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: encrypt({}),
+          success(response) {
+            ts.helplist = response.data;
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+          }
+        });
+      },
+      /**
+       * 接口名称:获取公告列表
+       * 接口文档:
+       */
+      getAnnouncement(){
+        let ts = this;
+        $.ajax({
+          cache: false,
+          async: true,
+//          url: '/api/mg/sale/userHelpBuy/getHelpList/?_=' + Date.now(),
+          url: 'http://www.easy-mock.com/mock/59b92127e0dc663341a8cccd/api/mg/sale/userHelpBuy/getAnnouncement?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: encrypt({}),
+          success(response) {
+            /*如果公告条数小于100，为了让css动画保持一致，将条数补充为100条*/
+            if(response.data.length < 100){
+              let announcementData = [];
+              announcementData = response.data;
+              let nums = 100 - response.data.length;
+              for(var i=0;i<nums;i++){
+                announcementData.push(response.data[i])
+              }
+              ts.announcement = announcementData;
+            }else{
+              ts.announcement = response.data;
+            }
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+          }
+        });
+      },
     },
     filters: {},
     watch: {},
@@ -265,7 +150,7 @@
       display: block;
       height: 17%;
       width: 21%;
-      background: tan;
+      /*background: tan;*/
     }
     div {
       width: 100%;
@@ -356,6 +241,15 @@
     line-height: 16px;
     color: #FF4A7D;
     padding-top: 5px;
+  }
+  .order_good_price{
+    .f_l{
+      font-size:12px;
+      span{
+        font-size: 16px;
+      }
+    }
+
   }
 
   .price_symbol {
@@ -482,7 +376,8 @@
   .membership_crown_pre {
     color: #999999;
     text-decoration: line-through;
-    font-size: 11px;
+    font-size: 10px;
+    padding-left: 9px;
   }
 
   .membership_crown .membership_crown_pre em {
