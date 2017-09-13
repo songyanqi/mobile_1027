@@ -140,7 +140,7 @@ new Vue({
       $.ajax({
         cache: false,
         async: true,
-        url: '/api/mg/sale/explosionActive/subscribe?_=' + Date.now(),
+        url: '/api/mg/sale/explosion/subscribe?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
         data: encrypt({
