@@ -12,7 +12,28 @@
 
     <!--头图-->
     <div class="g-head-pic">
-      <img :src="topics[0].content">
+      <img class="pic" :src="topics[0].content">
+      <div class="count-down">
+        <div class="title">活动开始倒计时</div>
+        <div class="boxes">
+          <span class="box">
+            <div class="title">天</div>
+            <div class="text">{{countDown.day}}</div>
+          </span>
+          <span class="box">
+            <div class="title">小时</div>
+            <div class="text">{{countDown.hour}}</div>
+          </span>
+          <span class="box">
+            <div class="title">分钟</div>
+            <div class="text">{{countDown.minute}}</div>
+          </span>
+          <span class="box">
+            <div class="title">秒</div>
+            <div class="text">{{countDown.second}}</div>
+          </span>
+        </div>
+      </div>
     </div>
 
     <!--活动上方专题-->

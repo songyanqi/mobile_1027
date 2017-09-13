@@ -38,13 +38,15 @@ new Vue({
         {id: '14377', content: null},
         {id: '14378', content: null}
       ],
+      actBeginTime: new Date(2017, 10, 18),
+      countDown: date.getCountDown(new Date(2017, 10, 18)),
     }
   },
   computed: {
     currentDate(){
       let now = this.response ? (this.response.sys_time + '000') : new Date();
       return date.format(now, 'yyyy-MM-dd');
-    }
+    },
   },
   watch: {
     // 监听response变化
@@ -57,6 +59,12 @@ new Vue({
         native.custom.initHead({
           shareOnHead: 1,
         });
+
+        // 刷新倒计时
+        setInterval(function(){
+          ts.countDown = date.getCountDown(ts.actBeginTime);
+          // ts.$forceUpdate();
+        }, 1000);
 
         // 设置分享信息
         try {
@@ -77,6 +85,8 @@ new Vue({
   created() {
     this.getData();
     this.getTopics();
+  },
+  mounted() {
   },
   methods: {
     /**

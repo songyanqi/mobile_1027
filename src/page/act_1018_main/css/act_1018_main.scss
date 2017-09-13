@@ -3,18 +3,51 @@
 .app {
   padding-bottom: 51px;
   background: url(../img/bg.jpg) repeat-y;
-  .g-head-pic {
-    img {
-      width: 100%;
-    }
-  }
   .g-topic-top, .g-topic-bottom {
     color: white;
   }
   .com-footer {
     z-index: 1;
   }
-  .g-act{
+  .g-act {
     margin: ptr(10) auto;
+  }
+  .g-head-pic {
+    position: relative;
+    .pic {
+      width: 100%;
+    }
+    .count-down {
+      position: absolute;
+      top: ptr(243);
+      width: 100%;
+      text-align: center;
+      > .title {
+        color: #9f9f9f;
+        font-size: ptr(10);
+        line-height: ptr(20);
+      }
+      .boxes {
+        .box {
+          padding-top: ptr(4);
+          display: inline-block;
+          width: ptr(30);
+          height: ptr(35);
+          box-shadow: 0 0 ptr(5) #fbcbd6;
+          background: white;
+          border-radius: ptr(4);
+          .title {
+            font-size: ptr(9);
+            line-height: ptr(13);
+            color: #d10070;
+          }
+          .text {
+            font-size: ptr(18);
+            font-weight: bold;
+            color: #464646;
+          }
+        }
+      }
+    }
   }
 }
