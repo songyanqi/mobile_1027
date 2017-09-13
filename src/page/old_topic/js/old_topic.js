@@ -541,14 +541,14 @@ $(function () {
           }else{
             d.shop_price2 = '';
           }
-          if(d.ratio&&d.goods_label==""){
-              d.goods_label = "返现"+d.ratio+'倍';
+          if(d.ratio&&d.actInfo==""){
+              d.actInfo = "返现"+d.ratio+'倍';
           }
           str += '<div class="goods_item">' +
             '<a href="/'+d.goods_id+'.html?rl='+res.referer.rl+'&rp='+res.referer.rp+'">'+
             '<div class="goods_img">' +
             (i<4?('<img src=\"'+d.goods_img+'\">'):('<img src="http://pic.davdian.com/free/loading_320_320_v2.png" data-original=\"' + d.goods_img + '\">'))+
-            ((d.goods_label && d.goods_label.length) ? ('<span class="img_label">' + d.goods_label + '</span>') : "") +
+            ((d.actInfo && d.actInfo.length) ? ('<span class="img_label">' + d.actInfo + '</span>') : "") +
             '</div>' +
             '<div class="goods_name">' + d.goods_name + '</div>' +
             '<div class="goods_price">' +
@@ -818,9 +818,7 @@ $(function () {
 
 })(jQuery, window, document);
 
-jQuery(document).ready(function ($) {
-  $("img").lazyload({effect: "fadeIn", threshold: 100})
-});
+
 
 var hexcase = 0;
 var b64pad = "";
