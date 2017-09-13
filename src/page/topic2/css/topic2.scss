@@ -1,0 +1,184 @@
+@import "../../../common/css/common.scss";
+
+$titleHeght: 45px;
+$linkHeight: 35px;
+
+
+.app {
+  background-color: #fff;
+  padding-top: $titleHeght;
+  overflow: inherit;
+  z-index: 2;
+  a.target-fix{
+    position: relative;
+    top:-$titleHeght;;
+    display: block;
+  }
+  &.link_row_1{
+    padding-top: $titleHeght + $linkHeight;
+    a.target-fix{
+      top: -($titleHeght + $linkHeight);
+    }
+  }
+  &.link_row_2{
+     padding-top: $titleHeght + $linkHeight * 2;
+     a.target-fix{
+      top: -($titleHeght + $linkHeight * 2);
+    }
+  }
+  &.in_app{
+    padding-top: 0;
+    .com-top-title{
+      display: none;
+    }
+    &.link_row_1{
+      padding-top: $linkHeight;
+    }
+    &.link_row_2{
+       padding-top: $linkHeight*2;
+    }
+  }
+  
+  // 顶部标题
+  .com-top-title {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: $pageMaxWidth;
+    height: 44px;
+    line-height: 44px;
+    background-color: #fafafa;
+    color: #333;
+    text-align: center;
+    font-size: 16px;
+    z-index: 1;
+    &.border-bottom {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+    // 返回按钮
+    .back-btn {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: 44px;
+      // 箭头
+      .back-arrow {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-bottom: 1px solid #333;
+        border-left: 1px solid #333;
+        transform: rotate(45deg);
+        cursor: pointer;
+      }
+    }
+    // 标题
+    .title {
+      display: inline-block;
+      width: 60%;
+      @include ellipsis;
+    }
+    // 首页
+    .home {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: url(http://pic.davdian.com/free/home_icon_0825.png) no-repeat;
+      background-size: 100%;
+      cursor: pointer;
+    }
+  }
+
+  .link_group{
+    position: fixed;
+    top: 45px;
+    width: 100%;
+    z-index: 2;
+    .link_row{
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      background-color: #f74b76;
+      color: #fff;
+      font-size: 13px;
+      line-height: 2;
+      text-align: center;
+      border-bottom: #fff solid 1px;
+      a{
+        flex: 1;
+        padding: 4px 0;
+        border-right:  #fff solid 1px;
+        &:last-child{
+          border-right:none;
+        }
+        &.active{
+          background-color: #ff83a3;
+        }
+      }
+    }
+  }
+   &.in_app .link_group{
+      top:0;  
+    }
+
+
+  // 图片组
+  .img_group{
+    font-size: 0;
+    .img_item{
+      position: relative;
+      a{
+        position: absolute;
+      }
+      .img_info{
+        background-color: #fff;
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 10px;
+        color: #333;
+        .img_title{
+          font-size: 16px;
+        }
+        .img_content{
+          color: #666;
+          line-clamp: 2;
+          max-height: 36px;
+          display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+          -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+          -webkit-line-clamp: 2; /** 显示的行数 **/
+          overflow: hidden;  /** 隐藏超出的内容 **/
+        }
+      }
+    }
+  }
+
+  img{
+    max-width: 100%;
+  }
+
+  .to-top-icon{
+    position: fixed;
+    margin-left: 3.25rem;
+    bottom: .7rem;
+    width: .44rem;
+    z-index: 1;
+  }
+
+}
+
+.fz14{
+  font-size: 14px;
+}
+
+.summary{
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+}

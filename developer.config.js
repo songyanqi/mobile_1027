@@ -15,7 +15,7 @@
 export default {
   //env_stage: 'beta',
   //env_num: '2',
-  page: '{goodsDetail,111}',
+  page: 'topic2',
   webpack: false,
 >>>>>>> dev
 };
