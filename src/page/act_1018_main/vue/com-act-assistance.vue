@@ -9,17 +9,20 @@
     </div>
     <!--滚动公告-->
     <div class="rool_tip">
-      <swiper auto loop height="30px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
-        <swiper-item>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会1</p>
-        </swiper-item>
-        <swiper-item>
-          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会3</p>
-        </swiper-item>
-        <swiper-item>
-          <p>137****5567已得到好友xx元助力，获得10.1<br>137****5567已得到好友xx元助力，获得10.18当天</p>
-        </swiper-item>
-      </swiper>
+      <div class="marguee">
+        <div class="marguee_innder">
+          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
+          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
+          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
+          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
+          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
+          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
+          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
+          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
+          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
+          <p>137****5567已得到好友xx元助力，获得10.18当天0元购机会</p>
+        </div>
+      </div>
     </div>
     <!--助力商品-->
     <div>
@@ -28,7 +31,9 @@
           <a href="/490812.html?rp=index&amp;rl=timeshop_goods-511-490812">
             <div class="img_container">
               <div class="img_container_inner">
-                <img src="http://pic.davdian.com/supplier/2017/07/20/1000_1000_a37751ad619ac1dd3a02a1b4d09000a2.jpg?x-oss-process=image/format,webp" lazy="loaded">
+                <img
+                  src="http://pic.davdian.com/supplier/2017/07/20/1000_1000_a37751ad619ac1dd3a02a1b4d09000a2.jpg?x-oss-process=image/format,webp"
+                  lazy="loaded">
               </div>
               <div class="order_good_info_container">
                 <div class="order_good_name">
@@ -52,7 +57,9 @@
           <a href="/490812.html?rp=index&amp;rl=timeshop_goods-511-490812">
             <div class="img_container">
               <div class="img_container_inner">
-                <img src="http://pic.davdian.com/supplier/2017/07/20/1000_1000_a37751ad619ac1dd3a02a1b4d09000a2.jpg?x-oss-process=image/format,webp" lazy="loaded">
+                <img
+                  src="http://pic.davdian.com/supplier/2017/07/20/1000_1000_a37751ad619ac1dd3a02a1b4d09000a2.jpg?x-oss-process=image/format,webp"
+                  lazy="loaded">
               </div>
               <div class="order_good_info_container">
                 <div class="order_good_name">
@@ -76,7 +83,9 @@
           <a href="/490812.html?rp=index&amp;rl=timeshop_goods-511-490812">
             <div class="img_container">
               <div class="img_container_inner">
-                <img src="http://pic.davdian.com/supplier/2017/07/20/1000_1000_a37751ad619ac1dd3a02a1b4d09000a2.jpg?x-oss-process=image/format,webp" lazy="loaded">
+                <img
+                  src="http://pic.davdian.com/supplier/2017/07/20/1000_1000_a37751ad619ac1dd3a02a1b4d09000a2.jpg?x-oss-process=image/format,webp"
+                  lazy="loaded">
               </div>
               <div class="order_good_info_container">
                 <div class="order_good_name">
@@ -147,11 +156,13 @@
 </script>
 <style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../../../common/css/util/all";
-.com-box{
-  background-image: url("//pic.davdian.com/free/2017/09/12/bg_1.png");
-  background-size: 31px 67px;
-  padding-bottom: 60px;
-}
+
+  .com-box {
+    background-image: url("//pic.davdian.com/free/2017/09/12/bg_1.png");
+    background-size: 31px 67px;
+    padding-bottom: 60px;
+  }
+
   // banner
   .com-banner {
     width: 100%;
@@ -179,22 +190,23 @@
   .f_l {
     float: left;
   }
+
   .newOriginal_price {
     font-size: 14px;
   }
 
-  .com-box div ul{
+  .com-box div ul {
     margin: 10px;
     border-radius: 4px;
     overflow: hidden;
   }
+
   .com-box div ul li {
     padding: 10px 10px;
     position: relative;
     overflow: hidden;
     background-color: #FFFFFF;
   }
-
 
   .com-box div ul li .img_container {
     position: relative;
@@ -204,7 +216,8 @@
     width: 80px;
     position: relative;
   }
-  .com-box div ul li .img_container_inner img{
+
+  .com-box div ul li .img_container_inner img {
     width: 100%;
     height: 100%;
   }
@@ -218,6 +231,7 @@
     height: 100%;
     box-sizing: border-box;
   }
+
   .com-box div ul li.online:after {
     content: "";
     display: block;
@@ -232,9 +246,10 @@
     bottom: 0;
     z-index: 1;
   }
+
   .order_good_name {
     font-size: 14px;
-   @include ellipsis(1);
+    @include ellipsis(1);
     height: 20px;
     line-height: 20px;
     color: #666666;
@@ -383,17 +398,23 @@
     font-size: 10px;
     font-style: normal;
   }
-  .rool_tip{
-    color:#BA2424;
+
+  .rool_tip {
+    color: #BA2424;
     font-size: 11px;
-    border:5px solid #E72664;
+    border: 5px solid #E72664;
     border-radius: 5px;
     box-sizing: border-box;
     background: #FFFFFF;
     margin: 0 10px;
     padding: 10px;
   }
-  .rool_tip p{
+
+  .rool_tip p {
     line-height: 16px;
+  }
+  .marguee{
+    height: 32px;
+    overflow: hidden;
   }
 </style>
