@@ -80,15 +80,15 @@ new Vue({
   },
   methods: {
     /**
-     * 接口名称:
-     * 接口文档:
+     * 接口名称: 获取主会场活动信息
+     * 接口文档: http://wiki.ops.vyohui.com/pages/viewpage.action?pageId=18546916
      */
     getData(){
       let ts = this;
       $.ajax({
         cache: false,
         async: true,
-        url: '?_=' + Date.now(),
+        url: '/api/mg/sale/theThirdYears/index?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
         data: encrypt({
