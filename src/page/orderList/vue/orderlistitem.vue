@@ -915,20 +915,20 @@
             },
             // 支付定金,首先要pay的逻辑，要加上
             orderReserve (value) {
-              if(value.is_new_seller_order  == false && value.type == 3){
+              // if(value.is_new_seller_order  == false && value.type == 3){
                 if (value.is_presale_order && value.presale_info.type == "reserve") {
                   return true;
                 }
-              }
+              // }
             },
             // 支付尾款,显示时间
             orderFinal (value) {
-              if(value.is_new_seller_order  == false && value.type == 3){
+              // if(value.is_new_seller_order  == false && value.type == 3){
                 if (value.is_presale_order && value.presale_info.type == "final") {
                   if (Date.now() > Number(value.presale_info.final_info.paytime_start) * 1000) {
                     return true;
                   }
-                }
+                // }
               }
             },
             // 支付尾款，显示按钮

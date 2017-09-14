@@ -117,11 +117,13 @@ export default {
           if (Number(this.goodslimitnum) == Number(num)) {
               if (Number(num) != 1) {
                   $(".isLimit").animate({"opacity":"1"},200);
+                  // $(".isLimit").addClass("isLimitShow");
               }
               $(".vux-number-selector-plus").css({"background":"#eee"});
               $(".vux-number-selector-plus path").css({"fill":"#bbb","stroke":"#bbb"});
           } else {
               $(".isLimit").animate({"opacity":"0"},200);
+              // $(".isLimit").removeClass("isLimitShow");
               $(".vux-number-selector-plus").css({"background":"#fff"});
               $(".vux-number-selector-plus path").css({"fill":"#666","stroke":"#666"});
           }

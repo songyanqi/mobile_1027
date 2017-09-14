@@ -286,7 +286,7 @@
                   </div>
                   <div class = "titleInfo">
                     <div class = "titleM5">
-                      <span class = "summary_price"><span class = "summary_p_icon">¥</span><span v-if = "infoobj.presale">定金</span> {{ allPrice }}</span>
+                      <span class = "summary_price"><span class = "summary_p_icon"><span v-if = "infoobj.presale">定金</span> ¥ </span>{{ allPrice }}</span>
                       <span class = "summary_activity">
                           <span v-for = "(item,index) of goodsmodalobj.activityName">
                               <span v-if = "index == goodsmodalobj.activityName.length - 1">
@@ -300,7 +300,7 @@
                           </span>
                       </span>
                     </div>
-                    <div class = "pre_final_price" v-if = "infoobj.presale">尾款 ¥ {{ infoobj.presale.price.finalPrice }}</div>
+                    <div class = "pre_final_price" v-if = "infoobj.presale">尾款 ¥ {{ infoobj.price.finalPrice }}</div>
                     <div class = "summary_select">选择
                       <span v-if = "relativegoodslist" class = "summary_m15">
                           <span v-for = "item of relativegoodslist">
@@ -343,7 +343,8 @@
                     <div class="summary_number">
                         <div class="summary_d_title">数量</div>
                         <div class = "summary_number_cont">
-                          <div v-if = "infoobj.presale" class = "isLimit">限购{{ infoobj.presaleNum }}件</div>
+                          
+                          <div v-if = "infoobj.presale" class = "preIsLimit">限购{{ infoobj.limitNum }}件</div>
                           <div v-if = "islimitnum" class = "isLimit">库存不足</div>
                           <x-number
                                   class = "x_number"
