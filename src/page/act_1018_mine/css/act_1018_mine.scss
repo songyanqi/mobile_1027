@@ -2,9 +2,16 @@
 @import "icon";
 
 .app {
-  background: url(../img/head-bg.png) no-repeat top, linear-gradient(to bottom, #FF6288, #FF3857) 100px;
+  //background: url(../img/head-bg.png) no-repeat top, linear-gradient(to bottom, #FF6288, #FF3857) 100px;
+  background: url(../img/head-bg.png) no-repeat top, linear-gradient(
+      #FF6288 0, #FF5579 ptr(854),
+      #FFA000 ptr(854), #DD0311 ptr(1890),
+      #FF4363 ptr(1890), #FF3857 ptr(3000)
+  );
   background-size: contain;
-  min-height: ptr(2800);
+  //background-size: 100% 100%;
+  //background-size: cover;
+  padding-bottom: ptr(74);
 
   /*个人信息*/
   .g-info {
@@ -50,7 +57,7 @@
 
   /*我的活动*/
   .g-act {
-    padding-top: ptr(52);
+    padding-top: ptr(38);
     > div {
       margin-top: ptr(30);
     }
@@ -98,7 +105,7 @@
     }
     .swiper-slide.more {
       width: ptr(56) !important;
-      &.more{
+      &.more {
         padding-top: ptr(40);
       }
       .btn {
@@ -237,7 +244,8 @@
       }
       .swiper-container {
         margin-top: ptr(24);
-        padding: 0 ptr(5);
+        padding: ptr(10) ptr(5);
+        background: rgba(255, 255, 255, 0.1);
         .swiper-slide {
           margin: 0 ptr(5);
           width: ptr(120);
@@ -314,7 +322,7 @@
       .swiper-container {
         margin-top: ptr(20);
         padding: ptr(10) ptr(5);
-        background: rgba(245, 46, 80, 0.65);
+        background: rgba(255, 255, 255, 0.1);
         .swiper-slide {
           margin: 0 ptr(5);
           width: ptr(120);
@@ -336,13 +344,16 @@
 
     /*我预约的商品*/
     .subscribe {
-      .title-type-2 {
-        color: white;
+      .title-type-1 {
+        .sub-title {
+          width: ptr(284);
+          background-image: url(../img/sub-title-reserve.png);
+        }
       }
       .swiper-container {
         margin-top: ptr(20);
         padding: ptr(10) ptr(5);
-        background: rgba(245, 46, 80, 0.65);
+        background: rgba(255, 255, 255, 0.1);
         .swiper-slide {
           margin: 0 ptr(5);
           width: ptr(120);
@@ -356,6 +367,12 @@
             margin-top: ptr(10);
             font-size: ptr(13);
             line-height: ptr(18);
+            @include ellipsis;
+          }
+          .time {
+            margin-top: ptr(4);
+            font-size: ptr(11);
+            line-height: ptr(16);
             @include ellipsis;
           }
         }
@@ -374,7 +391,7 @@
           margin: 0 ptr(3);
           width: ptr(172);
           color: white;
-          &.more{
+          &.more {
             padding-top: ptr(100);
           }
           .goods-pic {
@@ -444,6 +461,166 @@
               font-size: ptr(11);
               line-height: ptr(16);
               text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    /*我的抽奖记录*/
+    .draw-record {
+      margin-left: ptr(10);
+      margin-right: ptr(10);
+      padding: 0 0 ptr(20);
+      background: #FFF8E2;
+      border-radius: ptr(4);
+      .title-type-2 {
+        padding: ptr(20) 0;
+      }
+      .list {
+        text-align: center;
+        font-size: 0;
+        li {
+          position: relative;
+          margin: auto;
+          color: white;
+          box-sizing: border-box;
+          text-align: center;
+          font-size: ptr(12);
+          line-height: ptr(17);
+          .title, .text, .time {
+            position: absolute;
+            right: 0;
+            width: ptr(235);
+          }
+          .title {
+            font-weight: bold;
+            .account {
+              text-decoration: underline;
+            }
+          }
+          &:not(:first-of-type) {
+            margin-top: ptr(10);
+          }
+          &.order {
+            @include i-draw-bg-order;
+            &.no-draw {
+              .title {
+                top: ptr(12);
+                font-size: ptr(15);
+                line-height: ptr(21);
+              }
+              .text {
+                top: ptr(45);
+                .btn {
+                  display: inline-block;
+                  width: ptr(110);
+                  @include height(ptr(22));
+                  background: #FF5C5C;
+                  border-radius: 100px;
+                }
+              }
+            }
+            &.draw {
+              .title {
+                top: ptr(19);
+                font-size: ptr(13);
+                line-height: ptr(18);
+              }
+              .time {
+                top: ptr(53);
+              }
+            }
+          }
+          &.assist {
+            @include i-draw-bg-assist;
+            .title {
+              top: ptr(10);
+              font-size: ptr(18);
+              line-height: ptr(25);
+            }
+            .time {
+              top: ptr(36);
+            }
+            .text {
+              top: ptr(53);
+            }
+          }
+        }
+      }
+    }
+
+    /*必败清单*/
+    .recommend {
+      .title-type-2 {
+        margin: ptr(20);
+        color: white;
+      }
+      ul {
+        text-align: center;
+        font-size: 0;
+        $border-radius: ptr(4);
+        li {
+          display: inline-block;
+          margin: 0 ptr(5) ptr(10);
+          box-sizing: border-box;
+          width: ptr(172);
+          text-align: left;
+          font-size: ptr(12);
+          background: white;
+          .pic {
+            position: relative;
+            img {
+              @include square(ptr(172));
+              border-top-left-radius: $border-radius;
+              border-top-right-radius: $border-radius;
+            }
+            .act {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              padding: ptr(4) 0 0 ptr(5);
+              @include i-recommend-act;
+              box-sizing: border-box;
+              font-size: ptr(10);
+              color: white;
+            }
+          }
+          .info {
+            padding: ptr(10);
+            .title {
+              color: #666;
+              @include ellipsis(2);
+              font-size: ptr(12);
+              line-height: ptr(17);
+              height: ptr(32);
+              &:before {
+                @include i-recommend-icon;
+                margin-right: ptr(5);
+                position: relative;
+                top: ptr(-1);
+              }
+            }
+            .price {
+              margin-top: ptr(8);
+              color: #FF4A7D;
+              .price-symbol {
+                font-size: ptr(12);
+              }
+              .price-int {
+                font-size: ptr(16);
+              }
+              .price-decimal {
+                font-size: ptr(14);
+              }
+              .member {
+                margin-left: ptr(10);
+                color: #BF9D51;
+                font-size: ptr(11);
+                .symbol {
+                  font-size: ptr(9);
+                }
+              }
             }
           }
         }

@@ -63,7 +63,10 @@ new Vue({
         });
 
         // 显示开启10.18弹窗
-        ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
+        setTimeout(function(){
+          ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
+        }, 5000);
+        // ts.isShowBeginPop = 1;
 
         // 刷新倒计时
         setInterval(function () {
