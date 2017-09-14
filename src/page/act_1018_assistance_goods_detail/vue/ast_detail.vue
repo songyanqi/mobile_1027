@@ -265,4 +265,9 @@
     text-align: center;
     padding: 10px;
   }
+  .good_detail_imgs{
+    img{
+      width: 100%;
+    }
+  }
 </style>
