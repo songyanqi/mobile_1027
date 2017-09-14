@@ -94,7 +94,6 @@ export default {
         scope.errors = false
       }
       scope.wscroll();
-      console.log("debuger_index2", scope.tableindex);
     },
     imgObject: function (imgSrc) {
       return {

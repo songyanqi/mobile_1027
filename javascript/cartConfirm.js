@@ -665,11 +665,11 @@ $(function(){
 
     function pay() {
       // 如果不是预定商品就不走这一行代码
-        if ($(".order_rule_ipt") && !$(".order_rule_ipt").hasClass("order_rule_ipt_checked")) {
-          $(".order_navList").addClass("order_navList_line");
-          bravetime.info("请先同意预售规则，才能去支付哦～")
-          return;
-        }
+        // if ($(".order_rule_ipt") && !$(".order_rule_ipt").hasClass("order_rule_ipt_checked")) {
+        //   $(".order_navList").addClass("order_navList_line");
+        //   bravetime.info("请先同意预售规则，才能去支付哦～")
+        //   return;
+        // }
         var payData = {}, el;
 
 

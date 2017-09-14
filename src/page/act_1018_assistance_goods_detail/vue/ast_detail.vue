@@ -1,26 +1,25 @@
 <template>
   <div style="font-weight: normal;">
     <!--商品详情主图-->
-    <div>
-      <img class="main_banner"
-           src="//pic.davdian.com/supplier/2017/03/23/800_800_15cae0a30dcf4759484440e72b6390b2.jpg?x-oss-process=image/resize,m_fill,w_640,h_640/format,webp">
+    <div v-for="good in response.data">
+      <img class="main_banner" :src="good.goodsImage">
       <div class="count_down">
         <span>10.18周年庆0元抢爆品</span><br>
-        <span>距助力结束：7天</span>
+        <span>距助力结束：{{overTimee}}</span>
       </div>
       <!--商品名称-->
       <div class="goods_title">
-        棕色的熊、棕色的熊，你在看什么？（纸板书，拼贴画大师艾瑞卡尔的处女作，全球畅销40余年，备受家长和老师推崇的阅读启蒙书。适合0-3岁）
+        {{good.goodsName}}
       </div>
       <!--价格信息-->
       <div class="price_info">
         <div>
           <span>10.18活动价</span>
           <span>¥</span>
-          <span>19.76</span>
-          <span>¥29.90</span>
+          <span>{{good.activityPrice}}</span>
+          <span>¥{{good.goodsPrice}}</span>
         </div>
-        <div>已有<span>283789</span>人参与</div>
+        <div v-html="good.activityMessage"></div>
       </div>
       <!--流程-->
       <div class="flow_path">
@@ -44,24 +43,39 @@
         喊人助力
       </div>
       <div class="good_detail">商品详情</div>
+      <div class="good_detail_imgs">
+        <img v-for="imgs in good.details" v-lazy="imgs.detailUrl" v-if="imgs.detailUrl" alt="">
+      </div>
     </div>
   </div>
 </template>
 <script>
+  import encrypt from '../../../common/js/module/encrypt.js';
+  import popup from '../../../common/js/module/popup.js';
+  import ua from '../../../common/js/module/ua.js';
+  // 业务模块
+  import vueLazyload from '../../../common/js/module/vueLazyload.js';
 
+  vueLazyload.init(true);
   export default {
     props: {},
     data() {
-      return {}
+      return {
+        response: null,
+        overTimes: null
+      }
     },
     components: {},
     computed: {
       goodsId: function () {
         return location.pathname.split("_")[1].split(".")[0];
+      },
+      overTimee:function () {
+        return this.formatRemainTime(this.overTimes);
       }
     },
     created() {
-
+      this.getData();
     },
     mounted() {
 
@@ -71,26 +85,56 @@
        * 接口名称:
        * 接口文档:
        */
-//      getData(){
-//        let ts = this;
-//        $.ajax({
-//          cache: false,
-//          async: true,
-//          url: '/?_=' + Date.now(),
-//          type: 'post',
-//          dataType: 'json',
-//          data: encrypt({}),
-//          success(response) {
-//            ts.response = response;
-//          },
-//          error(error) {
-////            ts.response = require('../json/center.json');
-//            console.error('ajax error:' + error.status + ' ' + error.statusText);
-//          }
-//        });
-//      },
+      getData() {
+        let ts = this;
+        $.ajax({
+          cache: false,
+          async: true,
+          url: 'http://www.easy-mock.com/mock/59b92127e0dc663341a8cccd/api/mg/sale/userHelpBuy/getHelpGoodsDetail?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: encrypt({goodsId: ts.goodsId}),
+          success(response) {
+            ts.response = response;
+            ts.overTimes = response.data[0].overTime;
+            ts.deltime();
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+          }
+        });
+      },
+      /**
+       * 格式化倒计时
+       */
+      formatRemainTime(second) {
+        let format = '';
+        let oneMinute = 60,
+          oneHour = 60 * 60,
+          oneDay = 60 * 60 * 24;
+        if (second >= oneDay) {
+          format = `剩余时间: ${parseInt(second / oneDay)}天${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+        } else if (second >= oneHour) {
+          format = `剩余时间: ${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+        } else if (second >= oneMinute) {
+          format = `剩余时间: ${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+        } else if (second > 0) {
+          format = `剩余时间: ${second}秒`;
+        } else if (second <= 0) {
+          format = '已开始';
+        }
+        return format;
+      },
+      deltime: function () {
+        var ts  =this;
+        setInterval(function () {
+          ts.overTimes--;
+        }, 1000)
+      }
     },
-    filters: {},
+    filters: {
+
+    },
     watch: {},
   }
 </script>
@@ -100,6 +144,8 @@
   .main_banner {
     width: 100%;
     display: block;
+    max-width: 450px;
+    margin: 0 auto;
   }
 
   .count_down {
@@ -218,5 +264,10 @@
     color: #666666;
     text-align: center;
     padding: 10px;
+  }
+  .good_detail_imgs{
+    img{
+      width: 100%;
+    }
   }
 </style>

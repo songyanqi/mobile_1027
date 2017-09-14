@@ -8,7 +8,6 @@
 // import ua from '../../../common/js/module/ua.js';
 
 // var isDev = true;
-
 // var detailData = function (query) {
 //   var type, dataObj,data;
 //   if (isDev) {
@@ -61,9 +60,9 @@
 //       return;
 //     }
 //     if (res.code == 0) {
-//       if (res.data.webUrl) {
-//         location.href = res.data.webUrl;
-//       } else {
+//       // if (res.data.webUrl) {
+//       //   location.href = res.data.webUrl;
+//       // } else {
 //         // window.goodsDetailData = res;
 //         var data = res.data,
 //             dataExtra,
@@ -316,7 +315,7 @@
 //         window.link = location.href;
 //         window.imgUrl = dataBasis.shareImg.replace('pic.davdian.com','pic1.davdian.com');
 //         window.desc = dataBasis.shareRecommend;
-//       }
+//       // }
 
 //     } else {
 //       dialog.info(res.data.msg);

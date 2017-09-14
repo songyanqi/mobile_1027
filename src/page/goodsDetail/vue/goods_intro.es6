@@ -13,11 +13,6 @@ export default {
           actTatio: 0,
           //显示的价格
           memPrice: 0,
-          //未登陆显示的会员价
-          // unMemPrice: 0,
-          //省的价格
-          // savePrice: 0,
-          //从父组件获取的价格
           infoObj: {},
           // 倒计时
           remainTime: {
@@ -44,29 +39,33 @@ export default {
       this.$root.eventHub.$on('time_over',(isover) => {
           that.isOver = isover;
         if (that.isOver) {
-          that.memPrice = that.infoobj.shopPrice;
+          that.memPrice = that.infoobj.price.shopPrice;
           this.initMember(this.infoObj);
         }
       });
     },
+    mounted: {
+
+    },
     watch: {
-      infoobj: {
-        handler (newInfoObj,oldInfoObj) {
-          this.infoObj = newInfoObj;
-          this.initMember(newInfoObj);
-          if (newInfoObj.isComingActivity) {
-            this.isLimitBuy = true;
-          }
-        },
-        deep: true,
-      },
+      // infoobj: {
+      //   handler (newInfoObj,oldInfoObj) {
+      //     this.infoObj = newInfoObj;
+      //     this.initMember(newInfoObj);
+      //     if (newInfoObj.isComingActivity) {
+      //       this.isLimitBuy = true;
+      //     }
+      //   },
+      //   deep: true,
+      // },
       datarepresentid: {
         handler (newInfoObj,oldInfoObj) {
           this.isFirstCutDown = true;
-          this.initMember(this.infoObj);
+          this.initMember(this.infoobj);
           if (this.infoObj.isComingActivity) {
             this.isLimitBuy = true;
           }
+          console.log(1234,$(".modalHeadTitle"))
         },
         deep: true,
       },
@@ -92,17 +91,17 @@ export default {
     methods: {
       //会员价
       initMember (newInfoObj) {
-        this.actTatio = newInfoObj.totalIncome;
+        this.actTatio = newInfoObj.price.totalIncome;
         if (this.isOver) {
-          this.memPrice = newInfoObj.shopPrice;
+          this.memPrice = newInfoObj.price.shopPrice;
         } else {
           if (this.visitorstatus != 3) {
-            this.memPrice = newInfoObj.finalPrice;
+            this.memPrice = newInfoObj.price.finalPrice;
           } else {
-            if (newInfoObj.memberGoods == '0') {
-              this.memPrice = newInfoObj.finalPrice;
+            if (newInfoObj.price.memberGoods == '0') {
+              this.memPrice = newInfoObj.price.finalPrice;
             } else {
-              this.memPrice = newInfoObj.memberPrice;
+              this.memPrice = newInfoObj.price.memberPrice;
             }
           }
         }
@@ -124,7 +123,7 @@ export default {
       showTags () {
         this.isMemContent = false;
         this.confirmTitle = '价格详情';
-        this.confirmText = `本商品含税${this.infoobj.taxPrice}元`;
+        this.confirmText = `本商品含税${this.infoobj.price.importTariff}元`;
           $(".tax_cont .weui-dialog").show();
           $(".tax_cont .weui-mask").show();
       },
@@ -163,13 +162,31 @@ export default {
             clearInterval(this.cutDownTimer);
             that.isOver = true;
             that.$root.eventHub.$emit('time_over',that.isOver);
-            that.memPrice = that.infoobj.shopPrice;
+            that.memPrice = that.infoobj.price.shopPrice;
             // 会员返的价格还没变
             
             // that.initMember(that.infoObj);
           }
         },1000);
       },
+      changeDate(date) {
+      if (date) {
+        date = new Date(Number(date));
+
+        if (date > new Date()) {
+          let year = date.getFullYear(),
+              month = date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1,
+              dates = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate(),
+              hours = date.getHours() < 10 ? `0${date.getHours()}` : date.getHours(),
+              minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes(),
+              seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds();
+          
+          return `${month}月${dates}日${hours}:${minutes}:${seconds}`
+        } else {
+          return 0;
+        }
+      }
+    },
     },
     components: {
     }
