@@ -21,21 +21,21 @@
             </div>
           </a>
           <a class="right_icon_container" style="right:40px;" href="/category_search.html">
-            <i class="cart_icon classification_icon"></i>
+            <i class="cart_icon classification_icon" :style="styleArr['classification_icon']"></i>
           </a>
           <a class="right_icon_container" href="/cart.html">
             <div class="count"></div>
-            <i class="cart_icon"></i>
+            <i class="cart_icon" :style="styleArr['cart_icon']"></i>
             <b v-if="cart" v-text="cart"></b>
           </a>
         </div>
         <div v-if="menudata" class="swiper-container v_menu index_con_menu" id="v_menu">
           <ul class="swiper-wrapper" id="swiperLi">
-            <li class="swiper-slide" v-for="(item, index) in menudata.menuList"
+            <li class="swiper-slide" v-for="(item, index) in menudata.menuList" :style="styleArr['li']"
                 @click='changeCategory(item.id,index,$event)'>
               <p class="time_state" v-if='item && item.title'>
                 <span class="time_state_span" :class="{time_state_span_active:item.id == cate}">{{item.title}}
-                  <i class='hoverSpan' v-if='item.id == cate'></i>
+                  <i class='hoverSpan' v-if='item.id == cate' :style="styleArr['hoverSpan']"></i>
                 </span>
               </p>
             </li>

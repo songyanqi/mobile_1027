@@ -2,38 +2,39 @@
   <!--底部菜单栏-->
   <div class="com-footer" v-if="!isDvdApp">
     <div class="btns">
-      <a class="btn" :class="{active: active == 'home'}" href="/">
+      <a class="btn" :class="{active: active == 'home'}" href="/" :style="styleList['btn1']">
         <div class="pic-title">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/home-active.png" v-if="active == 'home'">
-          <img class="pic" src="//pic.davdian.com/free/2017/09/13/home@2x.png" v-else>
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/home-active.png" v-if="active == 'home'" :src="btnList[0].selectedImage">
+          <img class="pic" src="//pic.davdian.com/free/2017/09/13/home@2x.png" v-else :src="btnList[0].defaultImage">
           <div class="title">首页</div>
         </div>
       </a>
-      <a class="btn" :class="{active: active == 'school'}" href="/course.html">
+      <a class="btn" :class="{active: active == 'school'}" href="/course.html"  :style="styleList['btn2']">
         <div class="pic-title">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/school-active.png" v-if="active == 'school'">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/school.png" v-else>
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/school-active.png" v-if="active == 'school'" :src="btnList[1].selectedImage">
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/school.png" v-else :src="btnList[1].defaultImage">
           <div class="title">学院</div>
         </div>
       </a>
-      <!--<a class="btn" href="/cart.html">-->
-      <!--<div class="pic">-->
-      <!--<i class="num" v-if="cartNum && cartNum > 0">{{cartNum}}</i>-->
-      <!--<img src="[[static]]/page/center/img/footer-cart.png">-->
-      <!--</div>-->
-      <!--<div class="name">购物车</div>-->
-      <!--</a>-->
-      <a class="btn" :class="{active: active == 'dynamic'}" href="/articles.html">
+
+
+      <a class="btn" v-if="btnList[2]" :style="styleList['btn3']" :href="styleList['showUrl']">
+        <img class="pic" v-if="active == 'dynamic'" :src="btnList[2].selectedImage">
+        <img class="pic" v-else :src="btnList[2].defaultImage">
+      </a>
+
+
+      <a class="btn" :class="{active: active == 'dynamic'}" href="/articles.html"  :style="styleList['btn4']">
         <div class="pic-title">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/dynamic-active.png?2" v-if="active == 'dynamic'">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/dynamic.png?2" v-else>
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/dynamic-active.png?2" v-if="active == 'dynamic'" :src="btnList[3].selectedImage">
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/dynamic.png?2" v-else :src="btnList[3].defaultImage">
           <div class="title">动态</div>
         </div>
       </a>
-      <a class="btn" :class="{active: active == 'center'}" href="/center.html">
+      <a class="btn" :class="{active: active == 'center'}" href="/center.html"  :style="styleList['btn5']">
         <div class="pic-title">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/center-active.png" v-if="active == 'center'">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/center.png" v-else>
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/center-active.png" v-if="active == 'center'" :src="btnList[4].selectedImage">
+          <img class="pic" src="//pic.davdian.com/free/footer-icon/center.png" v-else  :src="btnList[4].defaultImage">
           <div class="title">我的</div>
         </div>
       </a>
@@ -56,16 +57,32 @@
         type: Number,
         default: 0
       },
+      bottomTab: {
+        type: Array,
+        default: []
+      },
+      bottomStyle: {
+        type: Object,
+        default: {}
+      }
     },
     data() {
       return {
         isDvdApp: ua.isDvdApp(),
       }
     },
-    computed: {},
+    computed: {
+        btnList:function () {
+          return this.bottomTab;
+        },
+        styleList:function () {
+          return this.bottomStyle;
+        }
+    },
     created(){
     },
     mounted() {
+
     },
     methods: {
       /**

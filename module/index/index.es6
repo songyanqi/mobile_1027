@@ -59,10 +59,9 @@ export default {
       skinPackageList:"",
       skinPackageobj:{},
 
-      index_header_style:{
-
-
-      }
+      index_header_style:{},
+      bottomTab:[],
+      bottomStyle:{}
 
     }
   },
@@ -116,7 +115,8 @@ export default {
   },
   methods: {
     changStyle(json){
-
+      //初始化底部tab列表
+      this.bottomTab=[];
       //背景图片
       this.index_header_style.top0={
         "backgroundImage":"url("+json["8"].imageName+")"
@@ -142,19 +142,44 @@ export default {
       this.index_header_style.dav_base_red_color={
         "color":"#"+json["4"].textcolor
       };
-      $(".dav_base_red_color").css("color","#"+json["4"].textcolor);
+      // $(".dav_base_red_color").css("color","#"+json["4"].textcolor);
       //购物车icon
-      $(".cart_icon").css("backgroundImage","url("+json["6"].imageName+")");
+      this.index_header_style.cart_icon={
+        "backgroundImage":"url("+json["6"].imageName+")"
+      };
+      //$(".cart_icon").css("backgroundImage","url("+json["6"].imageName+")");
       //分类icon
-      $(".cart_icon.classification_icon").css("backgroundImage","url("+json["5"].imageName+")");
+      this.index_header_style.classification_icon={
+        "backgroundImage":"url("+json["5"].imageName+")"
+      };
+      //$(".cart_icon.classification_icon").css("backgroundImage","url("+json["5"].imageName+")");
       //购物车的数量
 
       //二级菜单视图属性
-      $(".index_con_menu li ").css("color","#"+json["9"].textColor);
-      $(".hoverSpan").css("borderBottom","2px solid #"+json["9"].bottomLineColor);
+      this.index_header_style.li={
+        "color":"#"+json["9"].textColor
+      };
+      this.index_header_style.hoverSpan={
+        "borderBottom":"2px solid #"+json["9"].bottomLineColor
+      };
+      // $(".index_con_menu li ").css("color","#"+json["9"].textColor);
+      // $(".hoverSpan").css("borderBottom","2px solid #"+json["9"].bottomLineColor);
       $(".time_state_span_active").css("color","#"+json["9"].textSelectedColor);
-      //
 
+
+      //底部tab
+      this.bottomTab.push({defaultImage:json["10"].listData[0].defaultImage,selectedImage:json["10"].listData[0].selectedImage});
+      this.bottomTab.push({defaultImage:json["10"].listData[1].defaultImage,selectedImage:json["10"].listData[1].selectedImage});
+      this.bottomTab.push({defaultImage:json["10"].listData[2].defaultImage,selectedImage:json["10"].listData[2].selectedImage});
+      this.bottomTab.push({defaultImage:json["10"].listData[3].defaultImage,selectedImage:json["10"].listData[3].selectedImage});
+      this.bottomTab.push({defaultImage:json["10"].listData[4].defaultImage,selectedImage:json["10"].listData[4].selectedImage});
+
+      this.bottomStyle.btn1={"marginTop":json["10"].listData[0].marginTop + "px"};
+      this.bottomStyle.btn2={"marginTop":json["10"].listData[1].marginTop + "px"};
+      this.bottomStyle.btn3={"marginTop":json["10"].listData[2].marginTop + "px"};
+      this.bottomStyle.btn4={"marginTop":json["10"].listData[3].marginTop + "px"};
+      this.bottomStyle.btn5={"marginTop":json["10"].listData[4].marginTop + "px"};
+      this.bottomStyle.showUrl=json["10"].listData[2].showActivityUrl;
     },
     getSkinPackage(){
       var that = this;

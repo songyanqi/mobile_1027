@@ -68,19 +68,20 @@
     "listData":[
       {
         "defaultImage":"activityTabBarDefault0",
-        "selectedImage":"activityTabBarSelected0",
+        "selectedImage":"//pic.davdian.com/free/2017/09/13/homeActive.png",
         "marginTop":"0"
       },
+
       {
-        "defaultImage":"activityTabBarDefault1",
+        "defaultImage":"//pic.davdian.com/free/2017/09/13/course.png",
         "selectedImage":"activityTabBarSelected1",
         "marginTop":"0"
       },
       {
-        "defaultImage":"activityTabBarDefault2",
+        "defaultImage":"//pic.davdian.com/free/2017/09/13/middleActive.png",
         "selectedImage":"activityTabBarSelected2",
         "showActivityUrl":"/1234.html",
-        "marginTop":"-5"
+        "marginTop":"-10"
       },
       {
         "defaultImage":"activityTabBarDefault3",
