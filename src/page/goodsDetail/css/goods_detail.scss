@@ -2499,6 +2499,20 @@ $crossBord: #FF4A7D;
       }
     }
   }
+  .modalHeadTitle {
+    margin-left: 107px;
+    padding: 0 10px 0 10px;
+    margin-bottom: -20px;
+    font-size: 12px;
+    opacity: 0;
+    .summar_select_title {
+      float: left;
+      margin-right: 5px;
+    }
+    .summary_m15 {
+      margin-right: 5px;
+    }
+  }
   //底部导航
   .goods_bottom {
     position: fixed;
@@ -2776,12 +2790,6 @@ $crossBord: #FF4A7D;
     -webkit-transform: scaleY(0.5);
     transform: scaleY(0.5);
   }
-  .modalHeadTitle {
-    display: none;
-    margin-left: 107px;
-    padding: 0 10px 10px 10px;
-    font-size: 12px;
-  }
   //  多规格弹窗
   .goodsTypeModal {
     padding-top: 16px;
@@ -2824,11 +2832,8 @@ $crossBord: #FF4A7D;
       box-sizing: border-box;
       bottom: 49px;
       top: 70px;
+      height: auto;
 
-
-
-
-      // height: 309px;
       .relative_line {
         position: relative;
       }
@@ -2927,7 +2932,7 @@ $crossBord: #FF4A7D;
     }
     .modalPicCont {
       .titleInfo {
-        display: inline-block;
+        // display: inline-block;
         margin-left: 107px;
         vertical-align: middle;
       }
@@ -3005,7 +3010,17 @@ $crossBord: #FF4A7D;
       font-size: 12px;
       color: #333;
       padding-top: 3px;
+      .summar_select_title {
+        float: left;
+        margin-right: 5px;
+      }
     }
+    // .summary_relative {
+    //   margin-right: 10px;
+    // }
+    // .summary_son {
+    //   margin-right: 5px;
+    // }
     .summary_m15 {
       margin-right: 5px;
     }
@@ -3061,16 +3076,6 @@ $crossBord: #FF4A7D;
     .weui-cells {
       margin-top: 0;
     }
-    //.activieType {
-    //  border: 1px solid $crossBord;
-    //  color: $crossBord;
-    //}
-    //@media screen and (-webkit-min-device-pixel-ratio: 2) {
-    //  .activieType { border-width: 0.5px; }
-    //}
-    //@media screen and (-webkit-min-device-pixel-ratio: 3) {
-    //  .activieType { border-width: 0.5px; }
-    //}
 
     .isDisabled {
       border: 1px solid #DDD;
