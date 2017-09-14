@@ -168,7 +168,7 @@
           class="miniPopUpModal"
           >
             <div class = "modalCloseWrapper" @click = "handleClose"><span class = "modal-close"></span></div>
-            <div class = "goodsTypeModal">
+            <div class = "goodsTypeModal" :style = "{ height: modalHeight }">
                 <i class="dav_icon_detail_close_btn"></i>
                 <div class="summary modalPicCont">
                     <div class = "titlePic" :class = "{ titlePresalePic: infoobj.presale }">
@@ -205,7 +205,8 @@
                       </div>
                     </div>
                 </div>
-                <div class="sku-control" :class = "{ singleSkuControl: !relativegoodslist.length && !goodstags.length }">
+                <div class="sku-control">
+                <!-- <div class="sku-control" :class = "{ singleSkuControl: !relativegoodslist.length && !goodstags.length }"> -->
                     <div class = "clearfix" style = "margin-top: 15px;" v-if = "relativegoodslist.length">
                       <div class="s-decision_title">相关商品</div>
                       <div class="relative_items b_relative_items"
@@ -244,7 +245,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class = "bottom_btn">
                   <div v-if = "Number(goodstatus.goodsStocks) <= 0">
                     <div class = "haveGoods_tips"
                          @click = "handleTips">到货提醒</div>

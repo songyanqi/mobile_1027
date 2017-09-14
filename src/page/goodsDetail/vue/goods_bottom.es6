@@ -37,6 +37,8 @@ const GoodsBottom = {
           //弹框是否是点击立即购买跳出来的
           isBuyModal: false,
           allPrice: 0,
+          modalHeight: `${window.innerHeight * 0.65}px`,
+          skuTop: '70px',
         }
     },
     created () {
