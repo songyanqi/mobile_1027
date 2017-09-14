@@ -37,8 +37,8 @@ const GoodsBottom = {
           //弹框是否是点击立即购买跳出来的
           isBuyModal: false,
           allPrice: 0,
-          modalHeight: `${window.innerHeight * 0.65}px`,
-          skuTop: '70px',
+          modalHeight: `${window.innerHeight * 0.65}px`
+          // skuTop: '70px',
         }
     },
     created () {
@@ -54,6 +54,7 @@ const GoodsBottom = {
     methods: {
       //弹框弹出时，给body添加position:fixed；width: 100%;并且让body跳到当前位置。
       handleModalShow() {
+        // this.skuTop = ($(".modalHeadTitle").height + 50) + 'px';
         if (document.documentElement && document.documentElement.scrollTop) {
           this.scrollTop = document.documentElement.scrollTop;
         } else if (document.body) {

@@ -27,6 +27,7 @@ export default {
           bounsShow: false,
           scrollTop: 0,
           allPrice: 0,
+          modalHeight: `${window.innerHeight * 0.65}px`
         }
     },
     props: ['activityinfo','activityslist','activitynum','goodslimitnum',

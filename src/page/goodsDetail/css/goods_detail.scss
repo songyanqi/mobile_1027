@@ -2776,6 +2776,12 @@ $crossBord: #FF4A7D;
     -webkit-transform: scaleY(0.5);
     transform: scaleY(0.5);
   }
+  .modalHeadTitle {
+    display: none;
+    margin-left: 107px;
+    padding: 0 10px 10px 10px;
+    font-size: 12px;
+  }
   //  多规格弹窗
   .goodsTypeModal {
     padding-top: 16px;
@@ -2914,7 +2920,7 @@ $crossBord: #FF4A7D;
     }
     .summary {
       // position: absolute;
-      
+
       padding: 0 10px 10px 10px;
       color: $crossBord;
       position: relative;
@@ -2962,7 +2968,7 @@ $crossBord: #FF4A7D;
     }
 
     .singleSkuControl {
-      height: 330px;
+      // height: 330px;
     }
     .summary:after {
       content: " ";

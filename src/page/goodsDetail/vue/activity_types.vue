@@ -278,7 +278,7 @@
                @on-hide = "handleModalHide"
               >
             <div class = "modalCloseWrapper" @click = "handleTypeClose"><span class = "modal-close"></span></div>
-            <div class = "goodsTypeModal">
+            <div class = "goodsTypeModal" :style = "{ height: modalHeight }">
                 <i class="dav_icon_detail_close_btn"></i>
                 <div class="summary modalPicCont">
                   <div class = "titlePic" :class = "{ titlePresalePic: infoobj.presale }">

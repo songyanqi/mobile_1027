@@ -160,6 +160,20 @@
                 </div>
             </div>
         </div>
+        <!-- 为了获取fixed中头部的高度 -->
+        <div class = "modalHeadTitle" v-if = "relativegoodslist.length || goodstags.length">
+          <span>选择</span>
+          <span v-if = "relativegoodslist.length" style = "margin-right: 10px;">
+              <span v-for = "item of relativegoodslist">
+                  <span v-if = "item.isActive">{{ item.title }}</span>
+              </span>
+          </span>
+          <span v-if = "goodstags.length" style = "margin-right: 5px">
+              <span v-for = "item of goodsmodalobj.goodsType">
+                  {{ item.title }}
+              </span>
+          </span>
+        </div>
         <!--多规格弹框-->
         <popup
           v-model="cartModal"
