@@ -109,6 +109,7 @@ export default {
                         }
                     }
                     setTimeout(function(){
+                        window.appData.backOnHead = 1;
                         window.bravetime.initHead()
                     },500)   
                 }
