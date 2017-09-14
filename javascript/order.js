@@ -1174,9 +1174,13 @@ jQuery(document).ready(function ($) {
   function changeTips() {
     if (presale_type == "reserve") {
       $(".order_presale").html("<div class = 'overCutDown'>定金超时支付，交易关闭</div>");
+      $(".stage1Title").addClass("colorLight");
+      $(".presaleNum").addClass("colorLight");
     }
     if (presale_type == "final") {
       $(".order_presale").html("<div class = 'overCutDown'>尾款超时支付，交易关闭</div>");
+      $(".stage2Title").addClass("colorLight");
+      $(".finalNum").addClass("colorLight");
     }
     $(".order_id").find(".dav-red").html("已关闭");
     $(".stage1Title").html("(已关闭)");
@@ -1186,6 +1190,18 @@ jQuery(document).ready(function ($) {
   // 如果是定金单或者尾款单就倒计时
   if (is_presale_order && Number(presale_surplus_time) > 0) {
     cutDown(presale_surplus_time);
+    if (presale_type == "reserve") {
+      $(".stage1Title").addClass("colorLight");
+      $(".presaleNum").addClass("colorLight");
+    }
+    if (presale_type == "final") {
+      $(".stage2Title").addClass("colorLight");
+      $(".finalNum").addClass("colorLight");
+    }
+    if (presale_type == "final_paid") {
+      $(".stage2Title").removeClass("colorLight");
+      $(".finalNum").removeClass("colorLight");
+    }
   };
 
   if (is_presale_order && Number(presale_surplus_time) == 0) {

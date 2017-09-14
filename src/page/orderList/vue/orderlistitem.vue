@@ -84,6 +84,10 @@
           </span>
         </div>
         <div class="order_buttons order_list_buttons clearfix">
+            <!-- 预定 支付定金 -->
+             <a v-show = "item | orderReserve" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/cart.html?rebuy_order_id={{item.id}}">支付定金</a>
+             <!-- 支付尾款，显示按钮 -->
+             <a v-show = "item | orderFinalBtn" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/cart.html?rebuy_order_id={{item.id}}">支付尾款</a>
             <!--该显示哪些信息-->
             <a v-show = "item | close" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/cart.html?rebuy_order_id={{item.id}}">再次购买</a>
             <a v-show = "item | again" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/cart.html?rebuy_order_id={{item.id}}">再次购买</a>
@@ -95,11 +99,8 @@
             <a v-show = "item | confirm" class="dav-btn btn-white order-btn-red pull-right order-buy-once-more" @click="orderArrive">确认收货</a>
             <a v-show = "item | pay" class="dav-btn btn-white order-btn-red pull-right order-btn-pay" href="/checkout.html?order_id={{item.id}}">立即支付</a>
             <a v-show = "item | receive" class="dav-btn btn-white order-btn-red pull-right" href="/change_address.html?order_id={{item.id}}&goal=get" v-if='item.is_expire==0'>领取会员赠品</a>
-            <a v-show = "item | checkship" class="dav-btn btn-white pull-right order-check-wl" href="/o-shipping-{{item.id}}.html?did={{item.delivery_id
-}}">查看物流</a>
-            <a v-show = "item | shipping" class="dav-btn btn-white pull-right order-check-wl" href="/o-shipping-{{item.id}}.html?did={{item.delivery_id
-}}">查看物流</a>
-
+            <a v-show = "item | checkship" class="dav-btn btn-white pull-right order-check-wl" href="/o-shipping-{{item.id}}.html?did={{item.delivery_id }}">查看物流</a>
+            <a v-show = "item | shipping" class="dav-btn btn-white pull-right order-check-wl" href="/o-shipping-{{item.id}}.html?did={{item.delivery_id }}">查看物流</a>
             <a class="dav-btn btn-white pull-right order-delete-order" v-if='(item.is_expire==1 && item.is_new_seller_order==1 && item.no_address==1)|| item.type == 4' @click = "deleteOrder">删除订单</a>
             <!-- <a v-show = "item | deleted" class="dav-btn btn-white pull-right order-delete-order" @click = "deleteOrder">删除订单</a> -->
             <!-- <a v-show = "item | close" class="dav-btn btn-white pull-right order-delete-order" @click = "deleteOrder">删除订单</a> -->
@@ -114,13 +115,9 @@
             <a v-show = "item | applySale" data-deliveryid="{{item.delivery_id}}" data-id="{{ item.id }}" class="dav-btn btn-white pull-right" @click="orderApplay">申请售后</a>
             <!-- 售后进度 -->
             <a v-show = "item | applyProgress" data-deliveryid="{{item.delivery_id}}"  data-id="{{ item.id }}" data-cancel-id = "{{ item.cancel_id }}" class="dav-btn btn-white pull-right cancle_{{ item.id }}" @click="afterSale">查看售后进度</a>
-            <!-- 预定 支付定金 -->
-             <a v-show = "item | orderReserve" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/cart.html?rebuy_order_id={{item.id}}">支付定金</a>
-             <!-- 支付尾款，显示日期 -->
-             <a v-show = "item | orderFinal" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="javascript:void(0)">{{ item.presale_info.final_info.paytime_start | changeDate }}</a>
-             <!-- 支付尾款，显示按钮 -->
-             <a v-show = "item | orderFinalBtn" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/cart.html?rebuy_order_id={{item.id}}">支付尾款</a>
         </div>
+        <!-- 支付尾款，显示日期 -->
+        <div v-show = "item | orderFinal" v-if='item.order_type !=1 && item.order_type !=2 && orderFinal' class="">{{ item.presale_info.final_info.paytime_start | changeDate }}</div>
     </div>
     <div class="order_list_item type_4 dav-shadow" v-if = 'other'>
         <ul class="be_evaluated_list">
@@ -915,20 +912,20 @@
             },
             // 支付定金,首先要pay的逻辑，要加上
             orderReserve (value) {
-              if(value.is_new_seller_order  == false && value.type == 3){
+              // if(value.is_new_seller_order  == false && value.type == 3){
                 if (value.is_presale_order && value.presale_info.type == "reserve") {
                   return true;
                 }
-              }
+              // }
             },
             // 支付尾款,显示时间
             orderFinal (value) {
-              if(value.is_new_seller_order  == false && value.type == 3){
+              // if(value.is_new_seller_order  == false && value.type == 3){
                 if (value.is_presale_order && value.presale_info.type == "final") {
                   if (Date.now() > Number(value.presale_info.final_info.paytime_start) * 1000) {
                     return true;
                   }
-                }
+                // }
               }
             },
             // 支付尾款，显示按钮
@@ -942,9 +939,9 @@
               }
             },
             changeDate(time) {
-            var dates = new Date(time);
-            var month = dates.getMonths(),
-                days = dates.getDates(),
+            var dates = new Date(time * 1000);
+            var month = dates.getMonth(),
+                days = dates.getDate(),
                 hours = dates.getHours(),
                 minutes = dates.getMinutes(),
                 seconds = dates.getSeconds();

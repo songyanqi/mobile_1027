@@ -61,9 +61,6 @@ export default {
       goodsName: '',
       // 是否是预定善品也放到这里面了
       infoObj: {
-        shopPrice: 0,
-        marketPrice: 0,
-        //是否有活动
         isActivity: false,
         //是否有预告活动
         isComingActivity: false,
@@ -162,7 +159,8 @@ export default {
       spread: '',
       activitysList: [],
       activityIndex: 0,
-      secKill: true,
+      // secKill: true,
+      secKill: false,
       //商品图片
       cartGoodsImg: '',
       isDev: true,
@@ -966,8 +964,9 @@ export default {
       let that = this;
       this.handleChangeNum = 1;
       //限购或者库存数量,如果是预定商品，让其等于dataExtra.limitNum
-      if (dataExtra.limitNum) {
-        that.goodsLimitNum = dataExtra.limitNum;
+      if (dataExtra.sales.limitNum) {
+        // that.goodsLimitNum = dataExtra.sales.limitNum;
+        that.goodsLimitNum = 1;
       } else {
         that.goodsLimitNum = dataExtra.sales.goodsStocks;
       }
@@ -979,27 +978,15 @@ export default {
         $(".vux-number-selector-plus").css({"background": "#fff"});
         $(".vux-number-selector-plus path").css({"fill": "#666", "stroke": "#666"});
       }
-      $(".isLimit").animate({"opacity": "0"}, 200);
-      that.infoObj.shopPrice = dataExtra.price.shopPrice;
-      that.infoObj.finalPrice = dataExtra.price.finalPrice;
-      //会员价
-      that.infoObj.memberGoods = dataExtra.price.memberGoods;
-      that.infoObj.memberPrice = dataExtra.price.memberPrice;
-
-      that.infoObj.marketPrice = dataExtra.price.marketPrice;
-      //将恢复为多少用到的
-      that.infoObj.normalIncome = dataExtra.price.normalIncome;
-      //正常的佣金
-      that.infoObj.sellerIncome = dataExtra.price.sellerIncome;
-      //sellerIncome乘以倍数得到的佣金
-      that.infoObj.totalIncome = dataExtra.price.totalIncome;
-      that.infoObj.taxPrice = dataExtra.price.importTariff;
-      that.infoObj.activityRatio = dataExtra.price.activityRatio;
-      that.infoObj.discountRatio = dataExtra.price.discountRatio;
+      // $(".isLimit").animate({"opacity": "0"}, 200);
+      $(".isLimit").removeClass("isLimitShow");
+      that.infoObj.price = dataExtra.price;
+      //将恢复为多少用到的normalIncome,正常的佣金sellerIncome,sellerIncome乘以倍数得到的佣金
       that.infoObj.goodsStockNumber = dataExtra.sales.goodsStocks;
       // 预定的限制数量
-      that.infoObj.presaleNum = dataExtra.limitNum;
-
+      that.infoObj.limitNum = dataExtra.sales.limitNum;
+      that.infoObj.goPayAdvance = dataExtra.goPayAdvance;
+     
       that.goodsStockNumber = dataExtra.sales.goodsStocks;
 
       that.memberCont.memberGoods = dataExtra.price.memberGoods;
@@ -1086,7 +1073,9 @@ export default {
           that.activitysList = item.gifts;
         }
 
-        if (Number(item.typeId) != 1 && Number(item.typeId) != 2 && Number(item.typeId) != 8 && Number(item.typeId) != 4) {
+        if (item.typeId == 1 || item.typeId == 2 || item.typeId == 8 || item.typeId == 4 || item.typeId == 9) {
+          
+        } else {
           that.activityInfo.activitys.push(item);
         }
 
@@ -1140,7 +1129,6 @@ export default {
       // 判断妈妈顾问
       that.dumpToMamaAdviser();
       //判断限时购是否抢光提示。
-
       if (dataExtra.status.onSale == '1' && dataExtra.sales.goodsStocks > '0' && dataExtra.hints.hintsInfo && dataExtra.hints.hintsInfo.length && that.visitorStatus == '3') {
         popup.alert({
           title: '该商品限时购活动库存售罄',        // 标题（支持传入html。有则显示。）
@@ -1151,7 +1139,6 @@ export default {
     //dataExtra为空的时候
     getDataExtra(dataBasis) {
       let that = this;
-
       //活动
       this.activityNum = 0;
       //移过来的

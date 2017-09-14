@@ -1,5 +1,7 @@
 <template>
     <div class = "goods_bottom_wrapper">
+    <!-- 预定商品付完定金后 -->
+      <div v-if = "infoobj.goPayAdvance && infoobj.goPayAdvance.desc" @click = "handlePresale" class = "preTips">{{ infoobj.goPayAdvance.desc }}<span class = "preSaleArrow"></span></div>
         <div class="goods_bottom">
             <!--购物车-->
             <a :href="cartURL" class="cart_link">
@@ -35,48 +37,48 @@
                   </div>
               </div>
           </div>
-            <!--先判断是否上架-->
-            <div v-if = "goodstatusonsale == 1" class = "cart_wrapper">
-              <div v-if = "!seckill" class = "w100">
-                <div class = "w100" v-if = "Number(goodstatus.goodsStocks) <= 0">
-                    <div class = "look_again" @click = "handleLook">再逛逛</div>
-                    <div class = "haveGoods_tips"
-                      @click = "handleTips">到货提醒</div>
-                </div>
-                <div v-else class = "clearfix w100">
-                  <div v-if = "!infoobj.presale">
-                    <div class = "add_cart" v-if = "ismultigoods" @click = "handleAddCart">加入购物车</div>
-                    <div class = "add_cart" v-else @click = "handleSingleCart">加入购物车</div>
-                  
-                    <div v-if = "isclose == true"
-                         class = "btn_buy"
-                         :dataid = "datarepresentid"
-                         @click = "handleBuy($event)">立即购买</div>
-                    <div v-else
-                     class = "btn_buy"
-                     @click = "handleAddCartBuy">立即购买</div>
-                  </div>
-                   <!-- 付定金 -->
+          <!--先判断是否上架-->
+          <div v-if = "goodstatusonsale == 1" class = "cart_wrapper">
+            <div v-if = "!seckill" class = "w100">
+              <div class = "w100" v-if = "Number(goodstatus.goodsStocks) <= 0">
+                  <div class = "look_again" @click = "handleLook">再逛逛</div>
+                  <div class = "haveGoods_tips"
+                    @click = "handleTips">到货提醒</div>
+              </div>
+              <div v-else class = "clearfix w100">
+                <div v-if = "!infoobj.presale">
+                  <div class = "add_cart" v-if = "ismultigoods" @click = "handleAddCart">加入购物车</div>
+                  <div class = "add_cart" v-else @click = "handleSingleCart">加入购物车</div>
+                
+                  <div v-if = "isclose == true"
+                       class = "btn_buy"
+                       :dataid = "datarepresentid"
+                       @click = "handleBuy($event)">立即购买</div>
                   <div v-else
-                      :class = "{ disableGray: Number(goodstatus.goodsStocks) <= 0}"
-                      @click = "handleModalPresale($event)"
-                      :dataid = "datarepresentid"
-                      class = "btn_buy w100">
-                    立即付定金
-                  </div>
+                   class = "btn_buy"
+                   @click = "handleAddCartBuy">立即购买</div>
+                </div>
+                 <!-- 付定金 -->
+                <div v-else
+                    :class = "{ disableGray: Number(goodstatus.goodsStocks) <= 0}"
+                    @click = "handleModalPresale($event)"
+                    :dataid = "datarepresentid"
+                    class = "btn_buy w100">
+                  立即付定金
                 </div>
               </div>
-              <div v-else class = "w100">
-                <div
-                  class = "btn_buy w100"
-                  :class = "{ disableGray: Number(goodstatus.goodsStocks) <= 0}"
-                  :dataid = "datarepresentid"
-                  @click = "handleBuy($event)">立即秒杀</div>
-              </div>
             </div>
-            <div v-else  class = "cart_wrapper" @click = "handleLook">
-                <div class = "look_btn">再逛逛</div>
+            <div v-else class = "w100">
+              <div
+                class = "btn_buy w100"
+                :class = "{ disableGray: Number(goodstatus.goodsStocks) <= 0}"
+                :dataid = "datarepresentid"
+                @click = "handleBuy($event)">立即秒杀</div>
             </div>
+          </div>
+          <div v-else  class = "cart_wrapper" @click = "handleLook">
+              <div class = "look_btn">再逛逛</div>
+          </div>
         </div>
         <!--售罄和未上架显示看看别的-->
         <div class = "recommend_goods" v-if = 'mayyoulikelist && mayyoulikelist.length'>
@@ -158,6 +160,20 @@
                 </div>
             </div>
         </div>
+        <!-- 为了获取fixed中头部的高度 -->
+        <div class = "modalHeadTitle" v-if = "relativegoodslist.length || goodstags.length">
+          <span>选择</span>
+          <span v-if = "relativegoodslist.length" style = "margin-right: 10px;">
+              <span v-for = "item of relativegoodslist">
+                  <span v-if = "item.isActive">{{ item.title }}</span>
+              </span>
+          </span>
+          <span v-if = "goodstags.length" style = "margin-right: 5px">
+              <span v-for = "item of goodsmodalobj.goodsType">
+                  {{ item.title }}
+              </span>
+          </span>
+        </div>
         <!--多规格弹框-->
         <popup
           v-model="cartModal"
@@ -166,7 +182,7 @@
           class="miniPopUpModal"
           >
             <div class = "modalCloseWrapper" @click = "handleClose"><span class = "modal-close"></span></div>
-            <div class = "goodsTypeModal">
+            <div class = "goodsTypeModal" :style = "{ height: modalHeight }">
                 <i class="dav_icon_detail_close_btn"></i>
                 <div class="summary modalPicCont">
                     <div class = "titlePic" :class = "{ titlePresalePic: infoobj.presale }">
@@ -174,7 +190,7 @@
                     </div>
                     <div class = "titleInfo">
                       <div class = "titleM5">
-                        <span class = "summary_price"><span class = "summary_p_icon">¥</span><span v-if = "infoobj.presale">定金</span>{{ allPrice }}</span>
+                        <span class = "summary_price"><span class = "summary_p_icon"><span v-if = "infoobj.presale">定金</span> ¥ </span>{{ allPrice }}</span>
                         <span class = "summary_activity">
                             <span v-for = "(item,index) of goodsmodalobj.activityName">
                                 <span v-if = "index == goodsmodalobj.activityName.length - 1">
@@ -188,7 +204,7 @@
                             </span>
                         </span>
                       </div>
-                      <div class = "pre_final_price" v-if = "infoobj.presale">尾款 ¥ {{ infoobj.presale.price.finalPrice }}</div>
+                      <div class = "pre_final_price" v-if = "infoobj.presale">尾款 ¥ {{ infoobj.price.finalPrice }}</div>
                       <div class = "summary_select" v-if = "relativegoodslist.length || goodstags.length"><span>选择</span>
                         <span v-if = "relativegoodslist.length" style = "margin-right: 10px;">
                             <span v-for = "item of relativegoodslist">
@@ -203,7 +219,8 @@
                       </div>
                     </div>
                 </div>
-                <div class="sku-control" :class = "{ singleSkuControl: !relativegoodslist.length && !goodstags.length }">
+                <div class="sku-control">
+                <!-- <div class="sku-control" :class = "{ singleSkuControl: !relativegoodslist.length && !goodstags.length }"> -->
                     <div class = "clearfix" style = "margin-top: 15px;" v-if = "relativegoodslist.length">
                       <div class="s-decision_title">相关商品</div>
                       <div class="relative_items b_relative_items"
@@ -228,21 +245,21 @@
                     <div class="summary_number">
                         <div class="summary_d_title">数量</div>
                         <div class = "summary_number_cont">
-                            <div v-if = "infoobj.presale" class = "isLimit">限购{{ infoobj.presaleNum }}件</div>
-                            <div v-if = "islimitnum" class = "isLimit">库存不足</div>
-                            <x-number
-                                    class = "x_number x_number_p0"
-                                    :value="1"
-                                    :min="1"
-                                    :max = "Number(goodslimitnum)"
-                                    width = "43px"
-                                    align="left"
-                                    fillable
-                                    @on-change="change"></x-number>
+                          <div v-if = "infoobj.presale" class = "preIsLimit">限购{{ infoobj.limitNum }}件</div>
+                          <div v-if = "islimitnum" class = "isLimit">库存不足</div>
+                          <x-number
+                                  class = "x_number x_number_p0"
+                                  :value="1"
+                                  :min="1"
+                                  :max = "Number(goodslimitnum)"
+                                  width = "43px"
+                                  align="left"
+                                  fillable
+                                  @on-change="change"></x-number>
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class = "bottom_btn">
                   <div v-if = "Number(goodstatus.goodsStocks) <= 0">
                     <div class = "haveGoods_tips"
                          @click = "handleTips">到货提醒</div>
