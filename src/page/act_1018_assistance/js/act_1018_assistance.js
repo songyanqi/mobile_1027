@@ -10,7 +10,7 @@ new Vue({
   el: ".app",
   components: {
     'com-top-title': require('../../../component/com-top-title.vue'),
-    'ast_detail': require('../vue/ast_detail.vue')
+    'com-act-assistance': require('../vue/com-act-assistance.vue')
   },
   data() {
     return {

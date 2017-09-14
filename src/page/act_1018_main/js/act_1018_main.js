@@ -28,7 +28,7 @@ new Vue({
     'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
     'com-footer': require('../../../component/com-footer.vue'),
     'com-act-subscribe': require('../vue/com-act-subscribe.vue'),
-    'com-act-assistance': require('../vue/com-act-assistance.vue'),
+    'com-act-assistance': require('../../act_1018_assistance/vue/com-act-assistance.vue'),
   },
   data() {
     return {
