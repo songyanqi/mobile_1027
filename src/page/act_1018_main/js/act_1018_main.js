@@ -40,6 +40,8 @@ new Vue({
       ],
       actBeginTime: new Date(2017, 10, 18),
       countDown: date.getCountDown(new Date(2017, 10, 18)),
+      isShowBeginPop: false,
+      isShowBeginPopCloseAnimation: false,
     }
   },
   computed: {
@@ -60,8 +62,11 @@ new Vue({
           shareOnHead: 1,
         });
 
+        // 显示开启10.18弹窗
+        ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
+
         // 刷新倒计时
-        setInterval(function(){
+        setInterval(function () {
           ts.countDown = date.getCountDown(ts.actBeginTime);
           // ts.$forceUpdate();
         }, 1000);
@@ -119,12 +124,14 @@ new Vue({
      */
     getTopics(){
       let ts = this;
-      for (let i in ts.topics) {   //
+      for (let i in ts.topics) {
         let topic = ts.topics[i];
         $.ajax({
           cache: false,
           async: true,
-          url: `/t-${topic.id}.html?_=${Date.now()}`,
+          url: `http://18686604386.davdian.com/t-${topic.id}.html?_=${Date.now()}`,
+          // url: `http://18686604386.vyohui.cn/t-9919.html?_=${Date.now()}`,
+          // url: `http://18686604386.bravetime.net/t-13451.html?_=${Date.now()}`,
           type: 'get',
           dataType: 'text',
           data: {},
@@ -137,6 +144,16 @@ new Vue({
         });
       }
     },
+    /** 关闭1018弹窗 */
+    closeBeginPop(){
+      let ts = this;
+      ts.isShowBeginPopCloseAnimation = true;
+      setTimeout(function () {
+        ts.isShowBeginPop = false;
+        localStorage.setItem('start_1018_flag', 1);
+        ts.$forceUpdate();
+      }, 1000);
+    }
   },
   filters: {},
 });
