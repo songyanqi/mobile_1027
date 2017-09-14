@@ -1,7 +1,7 @@
 <template>
   <div class="index_inner">
     <!--头部-->
-    <index-head :usersta="usersta" :menudata='menudata' :data='headData' v-if='!app' v-on:categorya="changeCategory"></index-head>
+    <index-head :usersta="usersta" :menudata='menudata' :data='headData' v-if='!app' v-on:categorya="changeCategory" :style-list="index_header_style"></index-head>
     <div style='height: 80px' v-if='!app' class="background"></div>
     <n-progress></n-progress>
     <!--内容-->

@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="top0" :style="{ top: - data.top + 'px' }">
+    <div class="top0" :style="mergeStyle(styleArr['top0'],{ top: - data.top + 'px' })">
       <div class="top_container" id="top_container">
         <div class="head_index_top clearfix" :style="{'background': head.bgColor}">
           <a :href="head.image && head.image.command.content" class="left_icon_container">
@@ -12,11 +12,11 @@
           <a :href="head.search && head.search.command.content">
             <div class="search_con search_button" v-on:click='turn'>
 
-              <input type="text" class="search_input" readonly="">
+              <input type="text" class="search_input" readonly="" :style="styleArr['search_input']">
             </div>
-            <span class="search_icon"></span>
-            <div class="shop_name" v-on:click='turn'>在
-              <span v-if='head&&head.search&&head.search.title' class="dav_base_red_color"
+            <span class="search_icon" :style="styleArr['search_icon']"></span>
+            <div class="shop_name" v-on:click='turn' :style="styleArr['shop_name']">在
+              <span v-if='head&&head.search&&head.search.title' class="dav_base_red_color" :style="styleArr['dav_base_red_color']"
                     v-text='head.search.title'></span>中搜索...
             </div>
           </a>
@@ -24,12 +24,13 @@
             <i class="cart_icon classification_icon"></i>
           </a>
           <a class="right_icon_container" href="/cart.html">
+            <div class="count"></div>
             <i class="cart_icon"></i>
             <b v-if="cart" v-text="cart"></b>
           </a>
         </div>
         <div v-if="menudata" class="swiper-container v_menu index_con_menu" id="v_menu">
-          <ul class="swiper-wrapper">
+          <ul class="swiper-wrapper" id="swiperLi">
             <li class="swiper-slide" v-for="(item, index) in menudata.menuList"
                 @click='changeCategory(item.id,index,$event)'>
               <p class="time_state" v-if='item && item.title'>
@@ -74,7 +75,7 @@
     background-image: url(//pic.davdian.com/free/2017/07/20/shoppingCart.png);
   }
   .cart_icon.classification_icon{
-    background-image: url(//pic.davdian.com/free/2017/07/20/classification.png);
+       background-image: url(//pic.davdian.com/free/2017/07/20/classification.png);
   }
   .head_index_top .shop_name{
     padding-right: 88px;
@@ -127,61 +128,63 @@
     padding-right: 82px;
   }
 
-  /*新加部分 首页头部 透明*/
+
+
+
+
+
+
+  /*新加部分 首页头部 透明*  使用皮肤包的时候打开  */
   #index_fe_container .top0 .top_container,#index_fe_container .head_index_top,#index_fe_container .v_menu,#index_fe_container .index_con_menu li{
     background: none;
   }
-  .head_index_top .search_con .search_input{
-    background-color: #ffffff;
-    opacity: 0.15;
-  }
   .top0{
     background-size: 3.75rem 80px;
-    background-image: url(//pic.davdian.com/free/2017/09/09/181efe7696e4dc1981c7bc0473f21783.jpg);
   }
 
+
+
+  /*.head_index_top .search_con .search_input{*/
+    /*background-color: #ffffff;*/
+    /*opacity: 0.15;*/
+  /*}*/
 
 
 
   /*1018主会场样式变更*/
 
-  .index_con_menu li {
-    /*background: #DD0855;*/
-    color:#FFFFFF;
-  }
+  /*.index_con_menu li {*/
+    /*!*background: #DD0855;*!*/
+    /*color:#FFFFFF;*/
+  /*}*/
   /*.index_con_menu {*/
     /*background: #DD0855;*/
   /*}*/
   /*.head_index_top{*/
     /*background: #DD0855;*/
   /*}*/
-  .cart_icon.classification_icon{
-    background-image: url(//pic.davdian.com/free/2017/09/12/classificationText.png);
-  }
-  .cart_icon{
-    background-image: url(//pic.davdian.com/free/2017/09/12/shoppingCartText.png);
-  }
+  /*.cart_icon .classification_icon{*/
+    /*background-image: url(//pic.davdian.com/free/2017/09/12/classificationText.png);*/
+  /*}*/
+  /*.cart_icon{*/
+    /*background-image: url(//pic.davdian.com/free/2017/09/12/shoppingCartText.png);*/
+  /*}*/
   /*.head_index_top .search_con{*/
     /*opacity:0.15;*/
   /*}*/
-  .head_index_top .shop_name{
-    color:#FFFFFF;
-  }
-  .dav_base_red_color{
-    color:#FFFFFF;
-  }
-  .head_index_top .search_icon{
-    background-image: url(//pic.davdian.com/free/2017/09/12/searchBarSearchIcon.png);
-  }
-  .hoverSpan {
-    display: block;
-    position: absolute;
-    top: 20px;
-    left: 0;
-    width: 100%;
-    border-bottom: 2px solid #FFFFFF;
-  }
-  .time_state_span_active {
-    color: #FFFFFF;
-  }
+  /*.head_index_top .shop_name{*/
+    /*color:#FFFFFF;*/
+  /*}*/
+  /*.dav_base_red_color{*/
+    /*color:#FFFFFF;*/
+  /*}*/
+  /*.head_index_top .search_icon{*/
+    /*background-image: url(//pic.davdian.com/free/2017/09/12/searchBarSearchIcon.png);*/
+  /*}*/
+  /*.hoverSpan {*/
+    /*border-bottom: 2px solid #FFFFFF;*/
+  /*}*/
+  /*.time_state_span_active {*/
+    /*color: #FFFFFF;*/
+  /*}*/
 </style>
