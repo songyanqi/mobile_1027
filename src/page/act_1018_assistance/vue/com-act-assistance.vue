@@ -35,8 +35,7 @@
               </div>
             </div>
           </a>
-          <div class="progress_info">
-            {{lis.activityMessage}}
+          <div class="progress_info" v-html="lis.activityMessage">
           </div>
           <a class="remain_btns">
             <div class="panic_buying_btn" v-if="lis.activityBution == '发起助力'">{{lis.activityBution}}</div>

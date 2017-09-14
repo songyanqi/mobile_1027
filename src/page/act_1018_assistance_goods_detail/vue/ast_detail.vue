@@ -1,26 +1,25 @@
 <template>
   <div style="font-weight: normal;">
     <!--商品详情主图-->
-    <div>
-      <img class="main_banner"
-           src="//pic.davdian.com/supplier/2017/03/23/800_800_15cae0a30dcf4759484440e72b6390b2.jpg?x-oss-process=image/resize,m_fill,w_640,h_640/format,webp">
+    <div v-for="good in response">
+      <img class="main_banner" :src="good.goodsImage">
       <div class="count_down">
         <span>10.18周年庆0元抢爆品</span><br>
         <span>距助力结束：7天</span>
       </div>
       <!--商品名称-->
       <div class="goods_title">
-        棕色的熊、棕色的熊，你在看什么？（纸板书，拼贴画大师艾瑞卡尔的处女作，全球畅销40余年，备受家长和老师推崇的阅读启蒙书。适合0-3岁）
+        {{good.goodsName}}
       </div>
       <!--价格信息-->
       <div class="price_info">
         <div>
           <span>10.18活动价</span>
           <span>¥</span>
-          <span>19.76</span>
-          <span>¥29.90</span>
+          <span>{{good.activityPrice}}</span>
+          <span>¥{{good.goodsPrice}}</span>
         </div>
-        <div>已有<span>283789</span>人参与</div>
+        <div v-html="good.activityMessage"></div>
       </div>
       <!--流程-->
       <div class="flow_path">
@@ -48,11 +47,14 @@
   </div>
 </template>
 <script>
-
+  import encrypt from '../../../common/js/module/encrypt.js';
+  import popup from '../../../common/js/module/popup.js';
   export default {
     props: {},
     data() {
-      return {}
+      return {
+        response:null
+      }
     },
     components: {},
     computed: {
@@ -61,7 +63,7 @@
       }
     },
     created() {
-
+      this.getData();
     },
     mounted() {
 
@@ -71,24 +73,23 @@
        * 接口名称:
        * 接口文档:
        */
-//      getData(){
-//        let ts = this;
-//        $.ajax({
-//          cache: false,
-//          async: true,
-//          url: '/?_=' + Date.now(),
-//          type: 'post',
-//          dataType: 'json',
-//          data: encrypt({}),
-//          success(response) {
-//            ts.response = response;
-//          },
-//          error(error) {
-////            ts.response = require('../json/center.json');
-//            console.error('ajax error:' + error.status + ' ' + error.statusText);
-//          }
-//        });
-//      },
+      getData(){
+        let ts = this;
+        $.ajax({
+          cache: false,
+          async: true,
+          url: 'http://www.easy-mock.com/mock/59b92127e0dc663341a8cccd/api/mg/sale/userHelpBuy/getHelpGoodsDetail?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: encrypt({goodsId:ts.goodsId}),
+          success(response) {
+            ts.response = response.data;
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+          }
+        });
+      },
     },
     filters: {},
     watch: {},
