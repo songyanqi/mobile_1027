@@ -10,7 +10,7 @@
     <bd_goods_1 :menuids="menuId"></bd_goods_1>
     <!--底部-->
     <!--<index-foot :data='footData' v-if='!app'></index-foot>-->
-    <index-foot active="home" v-if='!app' style="z-index: 13;" :bottom-tab="bottomTab" :bottom-style="bottomStyle"></index-foot>
+    <index-foot active="home" v-if='!app' style="z-index: 13;"></index-foot>
 
     <!--其他展示信息：签到 弹红包等-->
     <div class="other_info">

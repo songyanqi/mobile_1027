@@ -1,8 +1,8 @@
 <template>
   <header>
     <div class="top0" :style="mergeStyle(styleArr['top0'],{ top: - data.top + 'px' })">
-      <div class="top_container" id="top_container">
-        <div class="head_index_top clearfix" :style="{'background': head.bgColor}">
+      <div class="top_container" id="top_container" :style="styleArr['top_container']">
+        <div class="head_index_top clearfix" :style="styleArr['head']">
           <a :href="head.image && head.image.command.content" class="left_icon_container">
             <span v-if="usersta == 3" class="shop_icon"></span>
             <img :src="head.image && head.image.url" class="shop_img">
@@ -29,9 +29,9 @@
             <b v-if="cart" v-text="cart"></b>
           </a>
         </div>
-        <div v-if="menudata" class="swiper-container v_menu index_con_menu" id="v_menu">
+        <div v-if="menudata" class="swiper-container v_menu index_con_menu" id="v_menu" :style="styleArr['v_menu']">
           <ul class="swiper-wrapper" id="swiperLi">
-            <li class="swiper-slide" v-for="(item, index) in menudata.menuList" :style="styleArr['li']"
+            <li class="swiper-slide" v-for="(item, index) in menudata.menuList" :style="mergeStyle(styleArr['index_con_menu'],styleArr['li'])"
                 @click='changeCategory(item.id,index,$event)'>
               <p class="time_state" v-if='item && item.title'>
                 <span class="time_state_span" :class="{time_state_span_active:item.id == cate}">{{item.title}}
@@ -135,12 +135,15 @@
 
 
   /*新加部分 首页头部 透明*  使用皮肤包的时候打开  */
-  #index_fe_container .top0 .top_container,#index_fe_container .head_index_top,#index_fe_container .v_menu,#index_fe_container .index_con_menu li{
-    background: none;
-  }
-  .top0{
-    background-size: 3.75rem 80px;
-  }
+  /*#index_fe_container .top0 .top_container,*/
+  /*#index_fe_container .head_index_top,*/
+  /*#index_fe_container .v_menu,*/
+  /*#index_fe_container .index_con_menu li{*/
+    /*background: none;*/
+  /*}*/
+  /*.top0{*/
+    /*background-size: 3.75rem 80px;*/
+  /*}*/
 
 
 

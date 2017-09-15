@@ -4,37 +4,37 @@
     <div class="btns">
       <a class="btn" :class="{active: active == 'home'}" href="/" :style="styleList['btn1']">
         <div class="pic-title">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/home-active.png" v-if="active == 'home'" :src="btnList[0].selectedImage">
-          <img class="pic" src="//pic.davdian.com/free/2017/09/13/home@2x.png" v-else :src="btnList[0].defaultImage">
+          <img class="pic" v-if="active == 'home'" :src="useSkinPackageImg(btnList[0],'//pic.davdian.com/free/footer-icon/home-active.png',1)">
+          <img class="pic" v-else  :src="useSkinPackageImg(btnList[0],'//pic.davdian.com/free/footer-icon/home.png',0)">
           <div class="title">首页</div>
         </div>
       </a>
       <a class="btn" :class="{active: active == 'school'}" href="/course.html"  :style="styleList['btn2']">
         <div class="pic-title">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/school-active.png" v-if="active == 'school'" :src="btnList[1].selectedImage">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/school.png" v-else :src="btnList[1].defaultImage">
+          <img class="pic" v-if="active == 'school'" :src="useSkinPackageImg(btnList[1],'//pic.davdian.com/free/footer-icon/school-active.png',1)">
+          <img class="pic" v-else :src="useSkinPackageImg(btnList[1],'//pic.davdian.com/free/footer-icon/school.png',0)">
           <div class="title">学院</div>
         </div>
       </a>
 
 
       <a class="btn" v-if="btnList[2]" :style="styleList['btn3']" :href="styleList['showUrl']">
-        <img class="pic" v-if="active == 'dynamic'" :src="btnList[2].selectedImage">
-        <img class="pic" v-else :src="btnList[2].defaultImage">
+        <img class="pic" :src="useSkinPackageImg(btnList[2],'',1)">
+        <img class="pic" :src="useSkinPackageImg(btnList[2],'',0)">
       </a>
 
 
       <a class="btn" :class="{active: active == 'dynamic'}" href="/articles.html"  :style="styleList['btn4']">
         <div class="pic-title">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/dynamic-active.png?2" v-if="active == 'dynamic'" :src="btnList[3].selectedImage">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/dynamic.png?2" v-else :src="btnList[3].defaultImage">
+          <img class="pic" v-if="active == 'dynamic'" :src="useSkinPackageImg(btnList[3],'//pic.davdian.com/free/footer-icon/dynamic-active.png?2',1)">
+          <img class="pic" v-else :src="useSkinPackageImg(btnList[3],'//pic.davdian.com/free/footer-icon/dynamic.png?2',0)">
           <div class="title">动态</div>
         </div>
       </a>
       <a class="btn" :class="{active: active == 'center'}" href="/center.html"  :style="styleList['btn5']">
         <div class="pic-title">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/center-active.png" v-if="active == 'center'" :src="btnList[4].selectedImage">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/center.png" v-else  :src="btnList[4].defaultImage">
+          <img class="pic" v-if="active == 'center'" :src="useSkinPackageImg(btnList[4],'//pic.davdian.com/free/footer-icon/center-active.png',1)">
+          <img class="pic" v-else  :src="useSkinPackageImg(btnList[4],'//pic.davdian.com/free/footer-icon/center.png',0)">
           <div class="title">我的</div>
         </div>
       </a>
@@ -56,19 +56,13 @@
       cartNum: {
         type: Number,
         default: 0
-      },
-      bottomTab: {
-        type: Array,
-        default: []
-      },
-      bottomStyle: {
-        type: Object,
-        default: {}
       }
     },
     data() {
       return {
         isDvdApp: ua.isDvdApp(),
+        bottomTab:[],
+        bottomStyle:{}
       }
     },
     computed: {
@@ -82,9 +76,67 @@
     created(){
     },
     mounted() {
-
+      this.useSkinpackage();
     },
     methods: {
+      changStyle(json){
+        //初始化存储数组
+        this.bottomTab=[];
+        //存入图片信息
+        this.bottomTab.push({defaultImage:json["10"].listData[0].defaultImage,selectedImage:json["10"].listData[0].selectedImage});
+        this.bottomTab.push({defaultImage:json["10"].listData[1].defaultImage,selectedImage:json["10"].listData[1].selectedImage});
+        this.bottomTab.push({defaultImage:json["10"].listData[2].defaultImage,selectedImage:json["10"].listData[2].selectedImage});
+        this.bottomTab.push({defaultImage:json["10"].listData[3].defaultImage,selectedImage:json["10"].listData[3].selectedImage});
+        this.bottomTab.push({defaultImage:json["10"].listData[4].defaultImage,selectedImage:json["10"].listData[4].selectedImage});
+        //存入样式信息
+        this.bottomStyle.btn1={"marginTop":json["10"].listData[0].marginTop + "px"};
+        this.bottomStyle.btn2={"marginTop":json["10"].listData[1].marginTop + "px"};
+        this.bottomStyle.btn3={"marginTop":json["10"].listData[2].marginTop + "px"};
+        this.bottomStyle.btn4={"marginTop":json["10"].listData[3].marginTop + "px"};
+        this.bottomStyle.btn5={"marginTop":json["10"].listData[4].marginTop + "px"};
+        //存入活动的点击链接
+        this.bottomStyle.showUrl=json["10"].listData[2].showActivityUrl;
+      },
+      useSkinpackage(){
+        var that=this;
+
+//        if(localStorage.getItem("skinPackage")) {
+//          var skinInfo = JSON.parse((localStorage.getItem("skinPackage")));
+//          skinInfo.map(function (item, index) {
+//             var now = new Date().getTime();
+//             var startTime = item.startTime;
+//             var endTime = item.endTime;
+//             if (startTime <= now && endTime > now) {
+//               that.changStyle(item.json);
+//             }
+//           });
+//         }
+
+        if(localStorage.getItem("skinPackage")){
+          var skinInfo = JSON.parse((localStorage.getItem("skinPackage")));
+          skinInfo.map(function (item, index) {
+            that.changStyle(item.json);
+          });
+        }
+      },
+      useSkinPackageImg(newImg,oldImg,flag){
+          //flag=1 表示选中状态的图片
+          //flag=0 表示未选中状态的图片
+          if(newImg){
+              if(flag==1){//selectedImage
+                  if(newImg.selectedImage){
+                      return newImg.selectedImage;
+                  }
+                  return oldImg;
+              }else if(flag==0){//defaultImage
+                if(newImg.defaultImage){
+                  return newImg.defaultImage;
+                }
+                return oldImg;
+              }
+          }
+          return oldImg;
+      },
       /**
        * 接口名称:
        * 接口文档:

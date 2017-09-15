@@ -67,14 +67,15 @@
     "alpha":"0.95",
     "listData":[
       {
-        "defaultImage":"activityTabBarDefault0",
+        "defaultImage":"//pic.davdian.com/free/2017/09/13/home.png",
         "selectedImage":"//pic.davdian.com/free/2017/09/13/homeActive.png",
         "marginTop":"0"
       },
 
+
       {
         "defaultImage":"//pic.davdian.com/free/2017/09/13/course.png",
-        "selectedImage":"activityTabBarSelected1",
+        "selectedImage":"//pic.davdian.com/free/2017/09/13/courseActive.png",
         "marginTop":"0"
       },
       {

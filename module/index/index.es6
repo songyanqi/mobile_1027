@@ -115,71 +115,57 @@ export default {
   },
   methods: {
     changStyle(json){
-      //初始化底部tab列表
-      this.bottomTab=[];
+      //初始化header透明
+      this.index_header_style.top_container={
+        "background":"none"
+      };
+      this.index_header_style.head={
+        "background":"none"
+      };
+      this.index_header_style.v_menu={
+        "background":"none"
+      };
       //背景图片
       this.index_header_style.top0={
-        "backgroundImage":"url("+json["8"].imageName+")"
+        "backgroundImage":"url("+json["8"].imageName+")",
+        "backgroundSize":"3.75rem 80px"
       };
       //搜索框的样式
       this.index_header_style.search_input={
         "opacity":json[1].alpha,
         "backgroundColor":"#"+json[1].backgroundColor
       };
-      // $(".head_index_top .search_con .search_input").css("opacity",json[1].alpha);
-      // $(".head_index_top .search_con .search_input").css("backgroundColor","#"+json[1].backgroundColor);
       //搜索icon
       this.index_header_style.search_icon={
         "backgroundImage":"url("+json["2"].imageFilePath+")"
       };
-      // $(".head_index_top .search_icon").css("backgroundImage","url("+json["2"].imageFilePath+")");
       //搜索框一般字
       this.index_header_style.shop_name={
         "color":"#"+json["3"].textcolor
       };
-      // $(".head_index_top .shop_name").css("color","#"+json["3"].textcolor);
       //搜索框特殊字
       this.index_header_style.dav_base_red_color={
         "color":"#"+json["4"].textcolor
       };
-      // $(".dav_base_red_color").css("color","#"+json["4"].textcolor);
       //购物车icon
       this.index_header_style.cart_icon={
         "backgroundImage":"url("+json["6"].imageName+")"
       };
-      //$(".cart_icon").css("backgroundImage","url("+json["6"].imageName+")");
       //分类icon
       this.index_header_style.classification_icon={
         "backgroundImage":"url("+json["5"].imageName+")"
       };
-      //$(".cart_icon.classification_icon").css("backgroundImage","url("+json["5"].imageName+")");
       //购物车的数量
 
       //二级菜单视图属性
       this.index_header_style.li={
-        "color":"#"+json["9"].textColor
+        "color":"#"+json["9"].textColor,
+        "background":"none"
       };
       this.index_header_style.hoverSpan={
         "borderBottom":"2px solid #"+json["9"].bottomLineColor
       };
-      // $(".index_con_menu li ").css("color","#"+json["9"].textColor);
-      // $(".hoverSpan").css("borderBottom","2px solid #"+json["9"].bottomLineColor);
       $(".time_state_span_active").css("color","#"+json["9"].textSelectedColor);
-
-
-      //底部tab
-      this.bottomTab.push({defaultImage:json["10"].listData[0].defaultImage,selectedImage:json["10"].listData[0].selectedImage});
-      this.bottomTab.push({defaultImage:json["10"].listData[1].defaultImage,selectedImage:json["10"].listData[1].selectedImage});
-      this.bottomTab.push({defaultImage:json["10"].listData[2].defaultImage,selectedImage:json["10"].listData[2].selectedImage});
-      this.bottomTab.push({defaultImage:json["10"].listData[3].defaultImage,selectedImage:json["10"].listData[3].selectedImage});
-      this.bottomTab.push({defaultImage:json["10"].listData[4].defaultImage,selectedImage:json["10"].listData[4].selectedImage});
-
-      this.bottomStyle.btn1={"marginTop":json["10"].listData[0].marginTop + "px"};
-      this.bottomStyle.btn2={"marginTop":json["10"].listData[1].marginTop + "px"};
-      this.bottomStyle.btn3={"marginTop":json["10"].listData[2].marginTop + "px"};
-      this.bottomStyle.btn4={"marginTop":json["10"].listData[3].marginTop + "px"};
-      this.bottomStyle.btn5={"marginTop":json["10"].listData[4].marginTop + "px"};
-      this.bottomStyle.showUrl=json["10"].listData[2].showActivityUrl;
     },
     getSkinPackage(){
       var that = this;
@@ -187,8 +173,8 @@ export default {
 
       //取localStorage改变样式
       // if(localStorage.getItem("skinPackage")) {
-      //   that.skinPackageList = JSON.parse((localStorage.getItem("skinPackage")));
-      //   that.skinPackageList.map(function (item, index) {
+      //   var skinInfo = JSON.parse((localStorage.getItem("skinPackage")));
+      //   skinInfo.map(function (item, index) {
       //     var now = new Date().getTime();
       //     var startTime = item.startTime;
       //     var endTime = item.endTime;
@@ -203,13 +189,13 @@ export default {
       // api("/api/mg/user/init/getInit")
       //   .then(function (result) {
       //     if(result.code==0){
-      //       that.skinPackageList=result.data.list[1].listData;
-      //       that.skinPackageList.map(function (item,index) {
+      //       var store=result.data.list[1].listData;
+      //       store.map(function (item,index) {
       //         axios.get(item.viewFileUrl).then(function (data) {
       //           item.json=data.data;
       //           indexCount++;
-      //           if(indexCount==that.skinPackageList.length){
-      //             localStorage.setItem("skinPackage",JSON.stringify(that.skinPackageList));
+      //           if(indexCount==store.length){
+      //             localStorage.setItem("skinPackage",JSON.stringify(store));
       //           }
       //         });
       //       });
@@ -231,7 +217,6 @@ export default {
           that.changStyle(item.json);
         });
       }
-
       var data = require("../../src/page/allDiscuss/json/index.json")
       var data2 = data.data.list[1].listData;
       data2.map(function (item, index) {
@@ -240,6 +225,7 @@ export default {
           indexCount++;
           if(indexCount==data2.length){
             localStorage.setItem("skinPackage",JSON.stringify(data2));
+
           }
         });
       });

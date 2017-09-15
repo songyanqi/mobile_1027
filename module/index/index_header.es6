@@ -45,11 +45,12 @@ export default {
   },
   methods: {
     mergeStyle(obj1,obj2){
+      console.log("obj1",obj1);
+      console.log("obj2",obj2);
       var result=obj1 || {};
       for(var key in obj2){
         result[key]=obj2[key];
       }
-      console.log(result);
       return result;
     },
     turn: function (event) {
