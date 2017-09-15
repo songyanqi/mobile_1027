@@ -2517,6 +2517,7 @@ body.orderDetail, body.orderDelivery {
 }
 .order_detail_container .overCutDown {
   text-align: center;
+  padding: 15px 0;
 }
 .order_detail_container .orderSuccess {
   padding: 15px 10px;

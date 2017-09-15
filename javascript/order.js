@@ -1187,25 +1187,33 @@ jQuery(document).ready(function ($) {
     $(".stage2Title").html("(已关闭)");
     $(".order_goods_state").html("<a class = 'dav-btn btn-white order-delete-order' data-dav-tj = 'order_detail|delete|delete|1|delete@order_detail'>删除订单</a>");
   }
-  // 如果是定金单或者尾款单就倒计时
-  if (is_presale_order && Number(presale_surplus_time) > 0) {
-    cutDown(presale_surplus_time);
-    if (presale_type == "reserve") {
-      $(".stage1Title").addClass("colorLight");
-      $(".presaleNum").addClass("colorLight");
-    }
-    if (presale_type == "final") {
-      $(".stage2Title").addClass("colorLight");
-      $(".finalNum").addClass("colorLight");
-    }
-    if (presale_type == "final_paid") {
-      $(".stage2Title").removeClass("colorLight");
-      $(".finalNum").removeClass("colorLight");
-    }
-  };
 
-  if (is_presale_order && Number(presale_surplus_time) == 0) {
-    changeTips();
-  };
+  function changeStatus() {
+    // 如果是定金单或者尾款单就倒计时
+    if (is_presale_order == "1" && Number(presale_surplus_time) > 0) {
+      cutDown(presale_surplus_time);
+      if (presale_type == "reserve") {
+        $(".stage1Title").addClass("colorLight");
+        $(".presaleNum").addClass("colorLight");
+      }
+      if (presale_type == "final") {
+        $(".stage2Title").addClass("colorLight");
+        $(".finalNum").addClass("colorLight");
+      }
+      if (presale_type == "final_paid") {
+        $(".stage2Title").removeClass("colorLight");
+        $(".finalNum").removeClass("colorLight");
+      }
+    };
+    // 尾款支付超时
+    if (is_final_paytime == "1" && Number(presale_surplus_time) == "0") {
+      $(".orderSuccess").hide();
+    }
+
+    if (is_presale_order == "1" && Number(presale_surplus_time) == 0) {
+      changeTips();
+    };
+  }
+  changeStatus();
 
 });

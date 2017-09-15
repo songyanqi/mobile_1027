@@ -14,7 +14,7 @@
       </div>
     </div>
     <!-- 预定商品付完定金后 -->
-      <div v-if = "infoobj.goPayAdvance && infoobj.goPayAdvance.desc" @click = "handlePresale" class = "preTips">{{ infoobj.goPayAdvance.desc }}<span class = "preSaleArrow"></span></div>
+      <div v-if = "infoobj.goPayAdvance" @click = "handlePresale" class = "preTips">{{ infoobj.goPayAdvance.desc }}<span class = "preSaleArrow"></span></div>
         <div class="goods_bottom">
             <!--购物车-->
             <a :href="cartURL" class="cart_link">
