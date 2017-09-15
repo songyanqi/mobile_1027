@@ -15,6 +15,6 @@
 export default {
   //env_stage: 'beta',
   //env_num: '2',
-  page: 'topic2',
+  page: '{goodsDetail,my_invitation_code}',
   webpack: false,
 };
