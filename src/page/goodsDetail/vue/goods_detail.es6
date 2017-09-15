@@ -877,10 +877,9 @@ export default {
       this.dataExtraList.map((item) => {
         if (item.goPayAdvance.length) {
           goPayAdvanceList.push(item);
-          // this.infoObj.goPayAdvance = item.goPayAdvance;
         }
       });
-      
+
       function campare(a, b) {
         return a.addTime - a.addTime;
       };
@@ -889,9 +888,8 @@ export default {
         if (goPayAdvanceList.length == 1) {
           this.infoObj.goPayAdvance = goPayAdvanceList[0];
         } else {
-          goPayAdvanceList.map((item) => {
-
-          });
+          goPayAdvanceList.sort(campare);
+          this.infoObj.goPayAdvance = goPayAdvanceList[0];
         }
         
       }
