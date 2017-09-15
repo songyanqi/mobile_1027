@@ -15,6 +15,6 @@
 export default {
   //env_stage: 'beta',
   //env_num: '2',
-  page: '{act_1018_main_subscribe,act_1018_mine}',
+  page: '{act_1018_main,act_1018_assistance}',
   webpack: false,
 };
