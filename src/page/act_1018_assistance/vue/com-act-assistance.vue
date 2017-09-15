@@ -133,14 +133,14 @@
 
   .com-box {
     background-image: url("//pic.davdian.com/free/2017/09/12/bg_1.png");
-    background-size: 31px 67px;
+    background-size: 0.31rem 0.67rem;
     padding-bottom: 60px;
   }
 
   // banner
   .com-banner {
     width: 100%;
-    min-height: 20px;
+    min-height: 0.2rem;
     position: relative;
     a {
       position: absolute;
@@ -166,17 +166,17 @@
   }
 
   .newOriginal_price {
-    font-size: 14px;
+    font-size: 0.14rem;
   }
 
   .com-box div ul {
-    margin: 10px;
-    border-radius: 4px;
+    margin: 0.1rem;
+    border-radius: 0.04rem;
     overflow: hidden;
   }
 
   .com-box div ul li {
-    padding: 10px 10px;
+    padding: 0.1rem 0.1rem;
     position: relative;
     overflow: hidden;
     background-color: #FFFFFF;
@@ -187,7 +187,7 @@
   }
 
   .com-box div ul li .img_container_inner {
-    width: 80px;
+    width: 0.8rem;
     position: relative;
   }
 
@@ -198,9 +198,9 @@
 
   .com-box div ul li .order_good_info_container {
     position: absolute;
-    padding-left: 90px;
+    padding-left: 0.9rem;
     top: 0;
-    padding-top: 10px;
+    padding-top: 0.1rem;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -216,75 +216,75 @@
     position: absolute;
     left: -50%;
     width: 200%;
-    height: 1px;
+    height: 0.01rem;
     bottom: 0;
     z-index: 1;
   }
 
   .order_good_name {
-    font-size: 14px;
+    font-size: 0.14rem;
     @include ellipsis(1);
-    height: 20px;
-    line-height: 20px;
+    height: 0.2rem;
+    line-height: 0.2rem;
     color: #666666;
   }
 
   .order_good_name_in {
-    font-size: 12px;
+    font-size: 0.12rem;
     color: #999999;
   }
 
   .order_good_price {
-    font-size: 16px;
-    height: 16px;
-    line-height: 16px;
+    font-size: 0.16rem;
+    height: 0.16rem;
+    line-height: 0.16rem;
     color: #FF4A7D;
-    padding-top: 5px;
+    padding-top: 0.05rem;
   }
   .order_good_price{
     .f_l{
-      font-size:12px;
+      font-size:0.12rem;
       span{
-        font-size: 16px;
+        font-size: 0.16rem;
       }
     }
 
   }
 
   .price_symbol {
-    font-size: 12px;
+    font-size: 0.12rem;
     font-style: normal;
   }
 
   .progress_info {
     position: absolute;
     /* width: 100%; */
-    bottom: 10px;
-    font-size: 11px;
+    bottom: 0.1rem;
+    font-size: 0.12rem;
     color: #999999;
-    left: 100px;
-    padding-right: 84px;
-    line-height: 13px;
+    left: 1rem;
+    padding-right: 0.84rem;
+    line-height: 0.13rem;
   }
 
   .market_price {
     text-decoration: line-through;
     color: #999;
-    margin-left: 0px;
-    font-size: 11px !important;
+    margin-left: 0;
+    font-size: 0.11rem !important;
   }
 
   .progress_bar_bg {
     background-color: #EAEAEA;
-    border-radius: 8px;
-    height: 8px;
+    border-radius: 0.08rem;
+    height: 0.08rem;
     width: 21.3333333%;
     position: relative;
     overflow: hidden;
   }
 
   .progress_container {
-    height: 8px;
+    height: 0.08rem;
     background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(bottom right, #FF7676, #FF4A8F); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(bottom right, #FF7676, #FF4A8F); /* Firefox 3.6 - 15 */
@@ -311,7 +311,7 @@
     background: -o-linear-gradient(bottom right, #FFA8A8, #FF3030); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(bottom right, #FFA8A8, #FF3030); /* Firefox 3.6 - 15 */
     background: linear-gradient(to bottom right, #FFA8A8, #FF3030); /* 标准的语法 */
-    width: 99px;
+    width: 0.99rem;
   }
 
   .panic_buying_btn.seteds {
@@ -324,27 +324,27 @@
 
   .progress_bar_percentage.wall {
     width: 100%;
-    min-width: 10px;
+    min-width: 0.1rem;
   }
 
   .finish_percentage {
-    font-size: 11px;
+    font-size: 0.11rem;
     color: #FF4A7D;
-    line-height: 11px;
-    margin-top: 5px;
+    line-height: 0.11rem;
+    margin-top: 0.05rem;
   }
 
   .panic_buying_btn {
-    width: 70px;
-    height: 25px;
-    font-size: 11px;
-    line-height: 25px;
+    width: 0.7rem;
+    height: 0.25rem;
+    font-size: 0.11rem;
+    line-height: 0.25rem;
     text-align: center;
     color: #fff;
     position: absolute;
-    right: 10px;
-    bottom: 10px;
-    border-radius: 12px;
+    right: 0.1rem;
+    bottom: 0.1rem;
+    border-radius: 0.12rem;
     background: -webkit-linear-gradient(left top, #FF7676, #FF4A8F); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(bottom right, #FF7676, #FF4A8F); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(bottom right, #FF7676, #FF4A8F); /* Firefox 3.6 - 15 */
@@ -354,8 +354,8 @@
   .panic_buying_btn2 {
     background: none;
     color: #ff4a7d;
-    border-radius: 20px;
-    line-height: 26px;
+    border-radius: 0.2rem;
+    line-height: 0.26rem;
   }
 
   .panic_buying_btn2:after {
@@ -363,57 +363,57 @@
     transform: scale(0.5);
     width: 200%;
     height: 200%;
-    border: #FF4A7D solid 1px;
+    border: #FF4A7D solid 0.01rem;
     display: block;
     position: absolute;
     left: 0;
     top: 0;
     transform-origin: 0 0;
-    border-radius: 50px;
+    border-radius: 0.5rem;
   }
 
   .membership_crown_pre {
     color: #999999;
     text-decoration: line-through;
-    font-size: 10px;
-    padding-left: 9px;
+    font-size: 0.1rem;
+    padding-left: 0.09rem;
   }
 
   .membership_crown .membership_crown_pre em {
-    font-size: 10px;
+    font-size: 0.1rem;
   }
 
   .membership_crown {
-    font-size: 11px;
+    font-size: 0.11rem;
     color: #D6B471;
     display: inline-block;
-    padding-left: 5px;
+    padding-left: 0.05rem;
     position: relative;
-    bottom: -1px;
+    bottom: -0.01rem;
     float: left;
   }
 
   .membership_crown em {
-    font-size: 10px;
+    font-size: 0.1rem;
     font-style: normal;
   }
 
   .rool_tip {
     color: #BA2424;
-    font-size: 11px;
-    border: 5px solid #E72664;
-    border-radius: 5px;
+    font-size: 0.11rem;
+    border: 0.05rem solid #E72664;
+    border-radius: 0.05rem;
     box-sizing: border-box;
     background: #FFFFFF;
-    margin: 0 10px;
-    padding: 10px;
+    margin: 0 0.1rem;
+    padding: 0.1rem;
   }
 
   .rool_tip p {
-    line-height: 16px;
+    line-height: 0.16rem;
   }
   .marguee{
-    height: 32px;
+    height: 0.32rem;
     overflow: hidden;
   }
   .marguee_innder{

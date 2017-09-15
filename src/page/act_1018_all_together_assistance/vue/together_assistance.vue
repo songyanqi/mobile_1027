@@ -12,6 +12,10 @@
     <div class="rule_brand">
       <img src="//pic.davdian.com/free/2017/09/14/table_brand.png" alt="">
     </div>
+    <!--获奖好友轮播-->
+    <div class="loop_my_friend_reward">
+
+    </div>
   </div>
 </template>
 <script>
@@ -19,10 +23,6 @@
   import popup from '../../../common/js/module/popup.js';
   import ua from '../../../common/js/module/ua.js';
   import native from '../../../common/js/module/native.js';
-  // 业务模块
-  import vueLazyload from '../../../common/js/module/vueLazyload.js';
-
-  vueLazyload.init(true);
   export default {
     props: {},
     data() {
@@ -108,9 +108,9 @@
     }
   }
   .goods_info{
-    height: 100px;
+    height: 1rem;
     position: relative;
-    margin: 0 10px 10px;
+    margin: 0 0.1rem 0.1rem;
   }
   .goods_info:after{
     content: "";
@@ -119,7 +119,7 @@
     transform: scale(0.5);
     width: 200%;
     height: 200%;
-    border: #FFFFFF solid 1px;
+    border: #FFFFFF solid 0.01rem;
     display: block;
     position: absolute;
     left: 0;
@@ -127,7 +127,7 @@
     -webkit-transform-origin: 0 0;
     -ms-transform-origin: 0 0;
     transform-origin: 0 0;
-    border-radius: 8px;
+    border-radius: 0.08rem;
   }
   .rule_brand{
     img{
