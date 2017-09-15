@@ -301,17 +301,17 @@
                       </span>
                     </div>
                     <div class = "pre_final_price" v-if = "infoobj.presale">尾款 ¥ {{ infoobj.price.finalPrice }}</div>
-                    <div class = "summary_select">选择
-                      <span v-if = "relativegoodslist" class = "summary_m15">
+                    <div class = "summary_select"><span class = "summar_select_title">选择</span>
+                      <div v-if = "relativegoodslist" class = "summary_m15">
                           <span v-for = "item of relativegoodslist">
                               <span v-if = "item.isActive">{{ item.title }}</span>
                           </span>
-                      </span>
-                      <span v-if = "goodstags.length" class = "summary_m15">
+                      </div>
+                      <div v-if = "goodstags.length" class = "summary_m15">
                           <span v-for = "item of goodsmodalobj.goodsType">
                               {{ item.title }}
                           </span>
-                      </span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -347,9 +347,10 @@
                           <div v-if = "infoobj.presale" class = "preIsLimit">限购{{ infoobj.limitNum }}件</div>
                           <div v-if = "islimitnum" class = "isLimit">库存不足</div>
                           <x-number
+                                  ref = "xNumber"
                                   class = "x_number"
                                   :min="1"
-                                  :value="1"
+                                  :value="cartNum"
                                   :max = "Number(goodslimitnum)"
                                   width = "43px"
                                   align="left"
@@ -358,7 +359,7 @@
                         </div>
                     </div>
                 </div>
-                <div class = "clearfix">
+                <div class = "bottom_btn clearfix">
                   <div class = "activeBottomBtn" v-if = "goodstatusonsale != '0'">
                     <div v-if = "seckill">
                       <div

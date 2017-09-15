@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--<script>window.designWidth = 750;</script>-->
+  @@include('meta.include')
+  <link rel="stylesheet" href="[[static]]/page/act_1018_mine_list/css/act_1018_mine_list.css[[v]]">
+</head>
+<body>
+<div class="app">
+  <!--我的预定奖励部分-->
+  <div v-if="type == 1" class="prize" v-cloak>
+    <!--标题-->
+    <com-top-title title="我的预定奖励"></com-top-title>
+
+    <!--总预定奖励-->
+    <!--总奖励数字要改-->
+    <p class="total-prize">共获得<span class="money-icon">￥</span><span class="prize-detail">1000</span>&nbsp;预定奖励</p>
+
+    <!--好友支持列表-->
+    <!--头像要改-->
+    <ul>
+      <li v-for="(val,index) in list" :key="index" class="friend-list">
+        <img src="http://pic.davdian.com/free/seller-71/my-invite/default-head.png" class="user-photo"/>
+        <span class="user-name">{{val.advanceName}}</span>
+        <p class="list-text">预定<span class="text-special">{{val.advanceNum}}</span>件获得<span class="text-special">{{val.advanceReward}}</span>元奖励</p>
+      </li>
+    </ul>
+  </div>
+
+  <!--我预约的商品部分-->
+  <div v-if="type == 2" v-cloak>
+    <!--标题-->
+    <com-top-title title="我预约的商品"></com-top-title>
+
+    <!--商品列表-->
+    <ul class="goods-list">
+      <li v-for="(val,index) in list" :key="index" class="list-item">
+        <a :href="'../'+val.goodsId+'.html'">
+          <img src="http://pic.davdian.com/supplier/2017/03/25/1000_1000_9b24f1c92893fb94b21325e95da6fd48.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/format,webp" class="goods-pic"/>
+          <p class="goods-text text-special">活动价￥<span class="text-price">{{val.price}}</span></p>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!--我预定的商品部分-->
+  <div v-if="type == 3" v-cloak>
+    <!--标题-->
+    <com-top-title title="我预定的商品"></com-top-title>
+
+    <!--商品列表-->
+    <ul class="goods-list">
+      <li v-for="(val,index) in list" :key="index" class="list-item">
+        <a :href="'../'+val.goodsId+'.html'">
+          <img src="http://pic.davdian.com/supplier/2017/03/25/1000_1000_9b24f1c92893fb94b21325e95da6fd48.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/format,webp" class="goods-pic"/>
+          <p class="goods-text text-special">定金￥<span class="text-price">1</span> (抵扣￥60)</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <com-to-top-icon></com-to-top-icon>
+</div>
+@@include('vendor.include')
+<script src="[[static]]/page/act_1018_mine_list/js/act_1018_mine_list.js[[v]]"></script>
+</body>
+</html>

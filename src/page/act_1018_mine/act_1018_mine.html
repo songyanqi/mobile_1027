@@ -137,14 +137,19 @@
     <!--我预约的商品-->
     <div class="subscribe">
       <!--标题-->
-      <div class="title-type-2">我预约的商品</div>
+      <!--<div class="title-type-2">我预约的商品</div>-->
+      <div class="title-type-1">
+        <div class="main-title">我预约的商品</div>
+        <div class="sub-title"><span class="word">尾款支付之间: 10.19 0点-24点</span></div>
+      </div>
       <!--手滑轮播-->
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="i in 10">
             <img class="goods-pic"
                  v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
-            <div class="price">定金￥13 (抵扣￥80)</div>
+            <div class="price">活动价￥13</div>
+            <!--<div class="time">10.19 08:00开抢</div>-->
           </div>
           <div class="swiper-slide more">
             <a href="">
@@ -194,6 +199,52 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!--我的抽奖记录-->
+    <div class="draw-record">
+      <!--标题-->
+      <div class="title-type-2">我的抽奖记录</div>
+      <!--红包列表-->
+      <ul class="list">
+        <li class="order no-draw">
+          <div class="title">最高可中1018元现金大奖!</div>
+          <div class="text"><span class="btn">立即抽奖</span></div>
+        </li>
+        <li class="order draw">
+          <div class="title">抽中10.18现金！已送到你的<span class="account">大V账户</span>~</div>
+          <div class="time">抽奖时间: 2017.10.22 06:01:12</div>
+        </li>
+        <li class="assist">
+          <div class="title">抽中一台iPhone8</div>
+          <div class="text">请等待工作人员联系你</div>
+          <div class="time">抽奖时间: 2017.10.22 06:01:12</div>
+        </li>
+      </ul>
+    </div>
+
+    <!--必败清单-->
+    <div class="recommend">
+      <!--标题-->
+      <div class="title-type-2">必败清单</div>
+      <!--双排列表-->
+      <ul>
+        <li v-for="i in 4">
+          <div class="pic">
+            <img src="http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg">
+            <div class="act">满100减50</div>
+          </div>
+          <div class="info">
+            <div class="title">来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品</div>
+            <div class="price">
+              <span class="price-symbol">￥</span>
+              <span class="price-int">111</span>
+              <span class="price-decimal">.11</span>
+              <span class="member">会员返<span class="symbol">￥</span>171.6</span>
+            </div>
+          </div>
+        </li>
+      </ul>
     </div>
 
   </div>

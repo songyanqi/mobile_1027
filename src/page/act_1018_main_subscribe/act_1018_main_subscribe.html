@@ -36,7 +36,7 @@
             {{item.bespeakNum}}人已预约<i></i>{{date.format(item.startTime, 'MM.dd hh')}}点开抢
           </template>
           <template v-else-if="(item.buttonName === '等待抢购' || item.buttonName === '立即抢购') && item.sellNum > 0">
-            <span class="progress"><i></i></span>已有{{item.sellNum}}人抢购
+            <!--<span class="progress"><i></i></span>-->已有{{item.sellNum}}人抢购
           </template>
         </div>
         <div class="price">

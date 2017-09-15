@@ -38,7 +38,6 @@ const GoodsBottom = {
           isBuyModal: false,
           allPrice: 0,
           modalHeight: `${window.innerHeight * 0.65}px`
-          // skuTop: '70px',
         }
     },
     created () {
@@ -49,8 +48,21 @@ const GoodsBottom = {
       this.$root.eventHub.$on('finalPrices',(finalPrice) => {
         that.allPrice = finalPrice;
       });
+      this.$root.eventHub.$on('xNumberActive',(num) => {
+        that.cartNum = num;
+      });
     },
-
+    watch: {
+      datarepresentid: {
+        handler() {
+          // 当所有
+          this.$nextTick(function () {
+            $(".sku-control").css({top: (this.$refs.selects.offsetHeight+50)+'px'});
+          })
+        },
+        deep: true,
+      }
+    },
     methods: {
       //弹框弹出时，给body添加position:fixed；width: 100%;并且让body跳到当前位置。
       handleModalShow() {
@@ -238,9 +250,9 @@ const GoodsBottom = {
         }
       },
       change (num) {
-          if (Number(this.goodslimitnum) == 0) {
-            this.goodslimitnum = 1;
-          }
+          // if (Number(this.goodslimitnum) == 0) {
+          //   this.goodslimitnum = 1;
+          // }
           if (num == 1) {
             $(".vux-number-selector-sub").css({"background":"#eee"});
             $(".vux-number-selector-sub path").css({"fill":"#bbb","stroke":"#bbb"});
@@ -263,6 +275,7 @@ const GoodsBottom = {
           }
            this.$emit('change-cartnum',num);
           this.cartNum = num;
+          this.$root.eventHub.$emit('xNumberBottom',num);
       },
       handleTypes (items, item, e) {
           if (item.isDisabled) {
