@@ -167,21 +167,8 @@ new Vue({
     },
     /** 我要预约 */
     btnClickSubscribe(goods) {
-      if (ua.isWeiXin()) {
-        if (this.response.data.isFollow === '1') {
-          // 调接口
-          this.subscribe(goods, function (response) {
-            if (response.code == '0') {
-              popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
-              goods.buttonName = '已设预约';
-            } else {
-              popup.toast('预约失败:' + response.data.msg);
-            }
-          });
-        } else {
-          this.tipType = 'weixin-no-focus';
-        }
-      } else if (ua.isDvdApp()) {
+      let ts = this;
+      if (ua.isDvdApp()) {
         native.Browser.goodsBook({
           goodsId: goods.goodsId,
           goodsTitle: goods.goodsName,
@@ -190,6 +177,7 @@ new Vue({
           goodsUrl: `${location.origin}/${goods.goodsId}.html`,
           goodsListUrl: location.href,
           success() {
+            alert('success');
             // 放入localStorage
             this.subscribe_1018_goods_ids.push(goods.goodsId);
             localStorage.setItem('subscribe_1018_goods_ids', JSON.stringify(this.subscribe_1018_goods_ids));
@@ -197,17 +185,30 @@ new Vue({
             goods.buttonName = '已设预约';
           },
           error() {
+            alert('error');
             debugger
           }
         });
       } else {
-        if (this.response.data.isFollow === '1') {
-          // 调接口
-          this.tipType = 'web-focus';
-          item.buttonName = '已设预约';
-        } else {
-          this.tipType = 'web-no-focus';
-        }
+        // 调接口
+        this.subscribe(goods, function (response) {
+          if (response.code === 0) {
+            if (ua.isWeiXin()) {
+              popup.toast('将在活动开始前5分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
+            } else {
+              this.tipType = 'web-focus';
+            }
+            goods.buttonName = '已设预约';
+          } else if (response.code == 64404) {
+            if (ua.isWeiXin()) {
+              ts.tipType = 'weixin-no-focus';
+            } else {
+              ts.tipType = 'web-no-focus';
+            }
+          } else {
+            popup.toast('预约失败:' + response.data.msg);
+          }
+        });
       }
     },
     /** 已设预约 */
@@ -220,8 +221,8 @@ new Vue({
     },
     /** 判断是否已经在app中预约 */
     isSubscribedInApp(goodsId) {
-      for(let i in this.subscribe_1018_goods_ids){
-        if(goodsId == this.subscribe_1018_goods_ids[i]){
+      for (let i in this.subscribe_1018_goods_ids) {
+        if (goodsId == this.subscribe_1018_goods_ids[i]) {
           return true;
         }
       }

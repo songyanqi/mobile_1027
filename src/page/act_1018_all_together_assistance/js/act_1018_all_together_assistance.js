@@ -24,7 +24,7 @@ new Vue({
   el: ".app",
   components: {
     'com-top-title': require('../../../component/com-top-title.vue'),
-    'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
+    'together_assistance': require('../vue/together_assistance.vue'),
   },
   data() {
     return {

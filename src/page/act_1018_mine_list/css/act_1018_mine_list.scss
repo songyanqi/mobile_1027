@@ -1,0 +1,101 @@
+@import "../../../common/css/common.scss";
+
+.app {
+  min-height:100vh;
+  background-color:#F1F1F1;
+
+  .text-special {
+    color:#FF4A7D;
+  }
+
+  [v-cloak] {
+    display: none !important;
+  }
+
+  //我的预定奖励
+  .prize {
+    background-color:#fff;
+    min-height:100vh;
+  }
+  .total-prize{
+    height:ptr(86);
+    color:#fff;
+    font-size:ptr(14);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #FF6288 , #FF3857); /* 标准的语法 */
+
+    .money-icon {
+       font-size:ptr(18);
+    }
+    .prize-detail {
+      font-size:ptr(24);
+    }
+  }
+
+  .friend-list {
+    position:relative;
+    color:#333;
+    padding:ptr(15) ptr(10);
+    @include height(ptr(30));
+
+    &:after {
+      content:'';
+      position:absolute;
+      bottom:0;
+      left:0;
+      width:200%;
+      transform-origin: 0 0;
+      border-bottom: 1px solid #E1E1E1;
+      transform: scale(0.5, 0.5);
+      box-sizing:border-box;
+    }
+    .user-photo {
+      width:ptr(30);
+      height:ptr(30);
+      margin-right:ptr(10);
+      border-radius:50%;
+      float:left;
+    }
+    .user-name {
+      display:inline-block;
+      @include height(ptr(30));
+      font-size:ptr(14);
+      max-width: ptr(112);
+      @include ellipsis();
+    }
+    .list-text {
+      display:inline-block;
+      float:right;
+      font-size:ptr(12);
+    }
+  }
+
+  //我预约的商品
+  .goods-list {
+    .list-item {
+      width:ptr(172.5);
+      height:ptr(210);
+      background-color:#fff;
+      float:left;
+      margin:ptr(10) 0 0 ptr(10);
+    }
+
+    a {
+      display:block;
+    }
+    .goods-pic {
+      width:100%;
+    }
+    .goods-text{
+      font-size:ptr(12);
+      @include height(ptr(31));
+      padding:0 0 ptr(3.5) ptr(10);
+
+      .text-price {
+        font-size:ptr(16);
+      }
+    }
+  }
+}
