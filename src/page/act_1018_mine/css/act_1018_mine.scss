@@ -13,6 +13,10 @@
   //background-size: cover;
   padding-bottom: ptr(74);
 
+  .com-top-title {
+    z-index: 2;
+  }
+
   /*个人信息*/
   .g-info {
     margin-top: ptr(25);
@@ -79,7 +83,7 @@
         text-align: center;
         .word {
           position: relative;
-          top: ptr(-14);
+          top: ptr(-15);
           display: inline-block;
           font-size: ptr(14);
           line-height: ptr(20);
