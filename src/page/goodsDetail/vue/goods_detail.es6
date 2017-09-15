@@ -873,11 +873,18 @@ export default {
     },
     // 父商品下的子商品是否有要付尾款单的
     getFinalPay() {
+      let goPayAdvanceList = [];
       this.dataExtraList.map((item) => {
         if (item.goPayAdvance.length) {
-          this.infoObj.goPayAdvance = item.goPayAdvance;
+          goPayAdvanceList.push(item);
+          // this.infoObj.goPayAdvance = item.goPayAdvance;
         }
-      })
+      });
+      if (goPayAdvanceList.length) {
+        goPayAdvanceList.map((item) => {
+          
+        })
+      }
     },
     //判断是否要置灰
     getDisabled(dataExtraList, dataBasisTags) {

@@ -1187,7 +1187,7 @@ jQuery(document).ready(function ($) {
     $(".stage2Title").html("(已关闭)");
     $(".order_goods_state").html("<a class = 'dav-btn btn-white order-delete-order' data-dav-tj = 'order_detail|delete|delete|1|delete@order_detail'>删除订单</a>");
   }
-  cosnole.log(1234);
+  console.log(6789);
   function changeStatus() {
     // 如果是定金单或者尾款单就倒计时
     if (is_presale_order == "1" && Number(presale_surplus_time) > 0) {
