@@ -121,12 +121,12 @@ new Vue({
           }
         },
         error(error) {
-          if (screenings === 0) {
-            ts.response = require('../json/list.json');
-          } else {
-            ts.response.data.dataList = require('../json/list-1.json').data.dataList;
-            ts.$forceUpdate();
-          }
+          // if (screenings === 0) {
+          //   ts.response = require('../json/list.json');
+          // } else {
+          //   ts.response.data.dataList = require('../json/list-1.json').data.dataList;
+          //   ts.$forceUpdate();
+          // }
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
