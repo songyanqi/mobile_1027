@@ -3,7 +3,6 @@
     <div class="good_introduce">
       <!-- 商品名 -->
       <div class = "goods_name">{{ goodsname }}</div>
-
       <!--六一活动-->
      <!--  <div v-if = "isshowa" class = "partys">
         <a href="/t-12091.html?dp=goods_detail_618">618年中会员狂欢省钱攻略来袭>></a>

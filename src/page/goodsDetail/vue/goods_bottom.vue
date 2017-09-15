@@ -1,5 +1,18 @@
 <template>
     <div class = "goods_bottom_wrapper">
+    <!-- 为了获取fixed中头部的高度 -->
+    <div ref = "selects" class = "modalHeadTitle"><span class = "summar_select_title">选择</span>
+      <div class = "summary_m15" v-if = "relativegoodslist.length">
+          <span v-for = "item of relativegoodslist">
+              <span v-if = "item.isActive">{{ item.title }}</span>
+          </span>
+      </div>
+      <div class = "summary_m15" v-if = "goodstags.length">
+          <span v-for = "item of goodsmodalobj.goodsType">
+              {{ item.title }}
+          </span>
+      </div>
+    </div>
     <!-- 预定商品付完定金后 -->
       <div v-if = "infoobj.goPayAdvance && infoobj.goPayAdvance.desc" @click = "handlePresale" class = "preTips">{{ infoobj.goPayAdvance.desc }}<span class = "preSaleArrow"></span></div>
         <div class="goods_bottom">
@@ -160,20 +173,6 @@
                 </div>
             </div>
         </div>
-        <!-- 为了获取fixed中头部的高度 -->
-        <div class = "modalHeadTitle" v-if = "relativegoodslist.length || goodstags.length">
-          <span>选择</span>
-          <span v-if = "relativegoodslist.length" style = "margin-right: 10px;">
-              <span v-for = "item of relativegoodslist">
-                  <span v-if = "item.isActive">{{ item.title }}</span>
-              </span>
-          </span>
-          <span v-if = "goodstags.length" style = "margin-right: 5px">
-              <span v-for = "item of goodsmodalobj.goodsType">
-                  {{ item.title }}
-              </span>
-          </span>
-        </div>
         <!--多规格弹框-->
         <popup
           v-model="cartModal"
@@ -205,17 +204,17 @@
                         </span>
                       </div>
                       <div class = "pre_final_price" v-if = "infoobj.presale">尾款 ¥ {{ infoobj.price.finalPrice }}</div>
-                      <div class = "summary_select" v-if = "relativegoodslist.length || goodstags.length"><span>选择</span>
-                        <span v-if = "relativegoodslist.length" style = "margin-right: 10px;">
+                      <div class = "summary_select" v-if = "relativegoodslist.length || goodstags.length"><span class = "summar_select_title">选择</span>
+                        <div class = "summary_m15" v-if = "relativegoodslist.length">
                             <span v-for = "item of relativegoodslist">
                                 <span v-if = "item.isActive">{{ item.title }}</span>
                             </span>
-                        </span>
-                        <span v-if = "goodstags.length" style = "margin-right: 5px">
+                        </div>
+                        <div class = "summary_m15" v-if = "goodstags.length">
                             <span v-for = "item of goodsmodalobj.goodsType">
                                 {{ item.title }}
                             </span>
-                        </span>
+                        </div>
                       </div>
                     </div>
                 </div>
@@ -248,8 +247,9 @@
                           <div v-if = "infoobj.presale" class = "preIsLimit">限购{{ infoobj.limitNum }}件</div>
                           <div v-if = "islimitnum" class = "isLimit">库存不足</div>
                           <x-number
+                                  ref = "xNumber"
                                   class = "x_number x_number_p0"
-                                  :value="1"
+                                  :value="cartNum"
                                   :min="1"
                                   :max = "Number(goodslimitnum)"
                                   width = "43px"

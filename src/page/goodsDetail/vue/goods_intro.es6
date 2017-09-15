@@ -65,7 +65,6 @@ export default {
           if (this.infoObj.isComingActivity) {
             this.isLimitBuy = true;
           }
-          console.log(1234,$(".modalHeadTitle"))
         },
         deep: true,
       },

@@ -20,6 +20,7 @@ export default {
           activitySendShow: false,
           activitySendList: [],
           actInfo: null,
+          cartNum: 1,
 
           telVal: 0,
           tipsShow: false,
@@ -42,6 +43,9 @@ export default {
       this.$root.eventHub.$on('finalPrices',(finalPrice) => {
         that.allPrice = finalPrice;
       });
+      this.$root.eventHub.$on('xNumberBottom',(num) => {
+        this.cartNum = num;
+      })
     },
     methods: {
       handleModalShow() {
@@ -105,9 +109,9 @@ export default {
         },
         //多规格弹框的购物数量
         handleChange (num) {
-          if (Number(this.goodslimitnum) == 0) {
-            this.goodslimitnum = 1;
-          }
+          // if (Number(this.goodslimitnum) == 0) {
+          //   this.goodslimitnum = 1;
+          // }
           if (num == 1) {
             $(".vux-number-selector-sub").css({"background":"#eee"});
             $(".vux-number-selector-sub path").css({"fill":"#bbb","stroke":"#bbb"});
@@ -129,6 +133,8 @@ export default {
               $(".vux-number-selector-plus path").css({"fill":"#666","stroke":"#666"});
           }
           this.$emit('change-cartnum',num);
+          this.cartNum = num;
+          this.$root.eventHub.$emit('xNumberActive',num);
         },
         handleTypes (items, item, e) {
             if (item.isDisabled) {
