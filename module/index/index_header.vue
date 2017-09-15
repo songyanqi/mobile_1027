@@ -26,15 +26,20 @@
           <a class="right_icon_container" href="/cart.html">
             <div class="count"></div>
             <i class="cart_icon" :style="styleArr['cart_icon']"></i>
-            <b v-if="cart" v-text="cart"></b>
+            <b v-if="cart" v-text="cart" :style="styleArr['count']"></b>
           </a>
         </div>
         <div v-if="menudata" class="swiper-container v_menu index_con_menu" id="v_menu" :style="styleArr['v_menu']">
           <ul class="swiper-wrapper" id="swiperLi">
             <li class="swiper-slide" v-for="(item, index) in menudata.menuList" :style="mergeStyle(styleArr['index_con_menu'],styleArr['li'])"
                 @click='changeCategory(item.id,index,$event)'>
-              <p class="time_state" v-if='item && item.title'>
-                <span class="time_state_span" :class="{time_state_span_active:item.id == cate}">{{item.title}}
+              <p class="time_state" v-if='item && item.title && item.id==cate'>
+                <span class="time_state_span time_state_span_active" :style="styleArr['time_state_span_active']">{{item.title}}
+                  <i class='hoverSpan' v-if='item.id == cate' :style="styleArr['hoverSpan']"></i>
+                </span>
+              </p>
+              <p class="time_state" v-if='item && item.title && item.id!=cate'>
+                <span class="time_state_span" >{{item.title}}
                   <i class='hoverSpan' v-if='item.id == cate' :style="styleArr['hoverSpan']"></i>
                 </span>
               </p>

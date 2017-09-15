@@ -147,16 +147,19 @@ export default {
       this.index_header_style.dav_base_red_color={
         "color":"#"+json["4"].textcolor
       };
-      //购物车icon
-      this.index_header_style.cart_icon={
-        "backgroundImage":"url("+json["6"].imageName+")"
-      };
       //分类icon
       this.index_header_style.classification_icon={
         "backgroundImage":"url("+json["5"].imageName+")"
       };
+      //购物车icon
+      this.index_header_style.cart_icon={
+        "backgroundImage":"url("+json["6"].imageName+")"
+      };
       //购物车的数量
-
+      this.index_header_style.count={
+        "color":"#"+json["7"].textColor,
+        "background":"#"+json["7"].backgroundColor
+      };
       //二级菜单视图属性
       this.index_header_style.li={
         "color":"#"+json["9"].textColor,
@@ -165,7 +168,9 @@ export default {
       this.index_header_style.hoverSpan={
         "borderBottom":"2px solid #"+json["9"].bottomLineColor
       };
-      $(".time_state_span_active").css("color","#"+json["9"].textSelectedColor);
+      this.index_header_style.time_state_span_active={
+        "color":"#"+json["9"].textSelectedColor
+      };
     },
     getSkinPackage(){
       var that = this;
@@ -447,6 +452,7 @@ export default {
     },
     cart: function () {
       var that = this
+      console.log("cart",layout.config.cart);
       $.ajax({
         type: "POST",
         url: layout.config.cart,
