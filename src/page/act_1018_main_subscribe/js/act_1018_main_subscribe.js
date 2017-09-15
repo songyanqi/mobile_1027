@@ -153,8 +153,7 @@ new Vue({
         },
         error(error) {
           console.error('ajax error:' + error.status + ' ' + error.statusText);
-
-          callback(require('../json/subscribe.json'));
+          // callback(require('../json/subscribe.json'));
         }
       });
     },
@@ -173,7 +172,8 @@ new Vue({
           goodsId: goods.goodsId,
           goodsTitle: goods.goodsName,
           goodsImage: goods.imageUrl,
-          goodsStartTime: goods.startTime,
+          // goodsStartTime: goods.startTime,
+          goodsStartTime: new Date(Date.now() + 5 * 60 * 1000), // 开始时间设置为5分钟后
           goodsUrl: `${location.origin}/${goods.goodsId}.html`,
           goodsListUrl: location.href,
           success() {
@@ -188,7 +188,7 @@ new Vue({
             alert('error');
             debugger
           }
-        });
+        }, true);
       } else {
         // 调接口
         this.subscribe(goods, function (response) {

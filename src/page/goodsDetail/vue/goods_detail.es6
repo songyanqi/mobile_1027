@@ -310,9 +310,9 @@ export default {
                 this.isFirstLoad = false;
             }
         },
-        //加入购物车动画
-        addCartAnimate () {
-            let imgUrl = this.cartGoodsImg;
+    //加入购物车动画
+    addCartAnimate () {
+        let imgUrl = this.cartGoodsImg;
 
       let goodsImg = $('<img class = "hideImg" src = ' + imgUrl + '>');
       $("body").append(goodsImg);
@@ -799,6 +799,8 @@ export default {
                 }
                 //品牌
                 that.getBrand(dataBasis);
+                // 父商品下的子商品是否有要付尾款单的
+                that.getFinalPay();
                 //判断是否时未上架或者无货，如果是，请求猜你喜欢的接口，
                 that.getMayLike(dataExtra, that.mayLikeData);
 
@@ -868,6 +870,31 @@ export default {
         });
       //商品参数
       that.goodsParamObj = dataBasis.attributes;
+    },
+    // 父商品下的子商品是否有要付尾款单的
+    getFinalPay() {
+      let goPayAdvanceList = [];
+      this.dataExtraList.map((item) => {
+        if (item.goPayAdvance.length) {
+          goPayAdvanceList.push(item);
+          // this.infoObj.goPayAdvance = item.goPayAdvance;
+        }
+      });
+      
+      function campare(a, b) {
+        return a.addTime - a.addTime;
+      };
+
+      if (goPayAdvanceList.length) {
+        if (goPayAdvanceList.length == 1) {
+          this.infoObj.goPayAdvance = goPayAdvanceList[0];
+        } else {
+          goPayAdvanceList.map((item) => {
+
+          });
+        }
+        
+      }
     },
     //判断是否要置灰
     getDisabled(dataExtraList, dataBasisTags) {
@@ -985,7 +1012,7 @@ export default {
       that.infoObj.goodsStockNumber = dataExtra.sales.goodsStocks;
       // 预定的限制数量
       that.infoObj.limitNum = dataExtra.sales.limitNum;
-      that.infoObj.goPayAdvance = dataExtra.goPayAdvance;
+      // that.infoObj.goPayAdvance = dataExtra.goPayAdvance;
      
       that.goodsStockNumber = dataExtra.sales.goodsStocks;
 
