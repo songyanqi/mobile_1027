@@ -19,8 +19,8 @@
 
 
       <a class="btn" v-if="btnList[2]" :style="styleList['btn3']" :href="styleList['showUrl']">
-        <img class="pic" :src="useSkinPackageImg(btnList[2],'',1)">
-        <img class="pic" :src="useSkinPackageImg(btnList[2],'',0)">
+        <img class="pic" :src="useSkinPackageImg(btnList[2],'',1)" v-if="false">
+        <img class="pic" :src="useSkinPackageImg(btnList[2],'',0)" v-if="true">
       </a>
 
 
@@ -167,7 +167,9 @@
 
 <style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../common/css/util/all";
-
+  .pic{
+    max-width:100%;
+  }
   // 底部菜单栏
   .com-footer {
     position: fixed;
