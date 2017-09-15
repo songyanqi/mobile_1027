@@ -18,6 +18,8 @@ import share from '../../../common/js/module/share.js';
 import date from '../../../common/js/module/date.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
 
+login.needLogin();
+
 // 懒加载初始化
 vueLazyload.init();
 
