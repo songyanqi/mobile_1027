@@ -12,6 +12,7 @@ import util from '../../../common/js/module/util.js';
 import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
+import date from '../../../common/js/module/date.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
@@ -29,9 +30,15 @@ new Vue({
   data() {
     return {
       response: null,
+      date: date,
     }
   },
-  computed: {},
+  computed: {
+    currentDate(){
+      let now = this.response ? (this.response.sys_time + '000') : new Date();
+      return date.format(now, 'yyyy-MM-dd');
+    },
+  },
   watch: {
     // 监听response变化
     response(){

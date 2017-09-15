@@ -12,11 +12,11 @@
 
   <!--个人信息-->
   <div class="g-info">
-    <img class="head-pic" src="http://pic.davdian.com/shop_logo/2017/07/01/80_80_8535effa0ef94715a088c7f25e696c2f.jpg">
+    <img class="head-pic" v-lazy="response.data.header.userAvatar">
     <span class="info">
-        <div class="nickname">昵称</div>
+        <div class="nickname">{{response.data.header.nickName}}</div>
         <a href="">
-          <div class="adviser-prize">服务人群销售额: 120000元，获得Iphone8 <span class="detail">详情<i></i></span></div>
+          <!--<div class="adviser-prize">服务人群销售额: 120000元，获得Iphone8 <span class="detail">详情<i></i></span></div>-->
         </a>
       </span>
   </div>
@@ -27,29 +27,27 @@
   </a>
 
   <!--我的活动-->
-  <div class="g-act">
+  <div class="g-act" v-if="response">
     <!--服务人群预定奖励-->
     <div class="service-award">
       <!--标题-->
       <div class="title-type-1">
         <div class="main-title">服务人群预定奖励</div>
-        <div class="sub-title"><span class="word">共得9999元</span></div>
+        <div class="sub-title"><span class="word">共得{{response.data.award.totalReward}}元</span></div>
       </div>
       <!--手滑轮播-->
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="i in 10">
-            <img class="goods-pic"
-                 v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
+          <div class="swiper-slide" v-for="(item, i) in response.data.award.dataList" v-if="i < 10">
+            <img class="goods-pic" v-lazy="item.imageUrl">
             <div class="service-object">
-              <img class="head"
-                   v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
-              <span class="nickname">糖心沙果</span>
+              <img class="head" v-lazy="item.advanceAvatar">
+              <span class="nickname">{{item.advanceName}}</span>
             </div>
-            <div class="award">预定2件获得2元奖励</div>
+            <div class="award">预定{{item.advanceNum}}件获得{{item.advanceReward}}元奖励</div>
           </div>
-          <div class="swiper-slide more">
-            <a href="">
+          <div class="swiper-slide more" v-if="response.data.award.dataList.length > 10">
+            <a href="/act_1018_mine_list.html?type=1">
               <div class="btn">
                 <span class="words">查看</br>更多</span>
                 <i></i>
@@ -66,18 +64,22 @@
       <div class="title-type-2">我的10.18红包</div>
       <!--红包列表-->
       <ul class="list">
-        <li v-for="i in 4">
-          <div class="name">限母婴类商品使用</div>
+        <li v-for="(item, i) in response.data.myBonus" v-if="i < 4">
+          "name": "红包名称",
+          "money": "红包金额",
+          "desc": "满199可用",
+          "validity": "有效期"
+          <div class="name">{{item.name}}</div>
           <div class="price">
             <span class="symbol">￥</span>
-            <span class="num">40</span>
-            <span class="limit">满199可用</span>
+            <span class="num">{{item.money}}</span>
+            <span class="limit">{{item.desc}}</span>
           </div>
-          <div class="time">有效期：2017.03.01 23:59:59</div>
+          <div class="time">有效期：{{date.format(item.validity + '000', 'yyyy.MM.dd hh:mm:ss')}}</div>
         </li>
       </ul>
       <!--查看更多-->
-      <a href="">
+      <a href="/user_bonus.html">
         <div class="more">查看更多<i></i></div>
       </a>
     </div>
@@ -92,16 +94,18 @@
       <!--手滑轮播-->
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="i in 10">
-            <img class="goods-pic"
-                 v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
-            <div class="info">
-              <div class="no-assist" v-if="i % 2 === 1">还没获得好友助力继续加油吧</div>
-              <div class="assist" v-else>
-                已获100元助力
-                <div class="less">还差99元0元购</div>
+          <div class="swiper-slide" v-for="(item, i) in response.data.help">
+            <!--<a :href="'/act_1018_all_together_assistance.html?goodsId=' + item.goodsId">-->
+            <a :href="item.activityLink || 'javascript:void(0);'">
+              <img class="goods-pic" v-lazy="item.goodsImage">
+              <div class="info">
+                <div class="assist" v-if="item.havePrice && parseInt(item.havePrice) > 0">
+                  已获{{item.havePrice}}元助力
+                  <div class="less">还差{{item.surplusPrice}}元0元购</div>
+                </div>
+                <div class="no-assist" v-else>还没获得好友助力继续加油吧</div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -117,13 +121,12 @@
       <!--手滑轮播-->
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="i in 10">
-            <img class="goods-pic"
-                 v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
-            <div class="price">定金￥13 (抵扣￥80)</div>
+          <div class="swiper-slide" v-for="(item, i) in response.data.book" v-if="i < 10">
+            <img class="goods-pic" v-lazy="item.imageUrl">
+            <div class="price">定金￥{{item.advancePrice}} (抵扣￥{{item.discountPrice}})</div>
           </div>
-          <div class="swiper-slide more">
-            <a href="">
+          <div class="swiper-slide more" v-if="response.data.book.length > 10">
+            <a href="/act_1018_mine_list?type=3">
               <div class="btn">
                 <span class="words">查看</br>更多</span>
                 <i></i>
@@ -137,22 +140,20 @@
     <!--我预约的商品-->
     <div class="subscribe">
       <!--标题-->
-      <!--<div class="title-type-2">我预约的商品</div>-->
       <div class="title-type-1">
         <div class="main-title">我预约的商品</div>
-        <div class="sub-title"><span class="word">尾款支付之间: 10.19 0点-24点</span></div>
+        <div class="sub-title"><span class="word">抢购时间10.19 0点－24点</span></div>
       </div>
       <!--手滑轮播-->
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="i in 10">
-            <img class="goods-pic"
-                 v-lazy="'http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg'">
-            <div class="price">活动价￥13</div>
-            <!--<div class="time">10.19 08:00开抢</div>-->
+          <div class="swiper-slide" v-for="(item, i) in response.data.subscribe" v-if="i < 10">
+            <img class="goods-pic" v-lazy="item.imageUrl">
+            <div class="price">活动价￥{{item.price}}</div>
+            <!--<div class="time">{{item.startTime}}开抢</div>-->
           </div>
-          <div class="swiper-slide more">
-            <a href="">
+          <div class="swiper-slide more" v-if="response.data.subscribe.length > 10">
+            <a href="/act_1018_mine_list?type=2">
               <div class="btn">
                 <span class="words">查看</br>更多</span>
                 <i></i>
@@ -170,27 +171,36 @@
       <!--手滑轮播-->
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="i in 10">
-            <img class="goods-pic"
-                 v-lazy="'http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg'">
-            <div class="info" v-if="i % 3 === 1">
-              <div class="begin">满200减100</div>
-              <i class="v-line a"></i>
-              <div class="target">满200减150</div>
-              <div class="num">还需101803人点亮</div>
-            </div>
-            <div class="info" v-if="i % 3 === 2">
-              <div class="ok"></div>
-              <i class="v-line b"></i>
-              <div class="target">满200减150</div>
-              <div class="num">还需101803人点亮</div>
-            </div>
-            <div class="info" v-if="i % 3 === 0">
-              <div class="over">满200减150</div>
-            </div>
+          <div class="swiper-slide" v-for="(item, i) in response.data.lightenBrand" v-if="i < 10">
+            <a :href="item.linkUrl">
+              <img class="goods-pic" v-lazy="item.bandPic">
+              <div class="info">
+                <!--2017-10-18之前-->
+                <template v-if="currentDate < '2017-10-18'">
+                  <!--未达标-->
+                  <template v-if="item.isCompleted === '1'">
+                    <div class="begin">{{item.lowDiscount}}</div>
+                    <i class="v-line a"></i>
+                    <div class="target">{{item.highDiscount}}</div>
+                    <div class="num">还需{{item.remainLight}}人点亮</div>
+                  </template>
+                  <!--已达标-->
+                  <template v-else>
+                    <div class="ok"></div>
+                    <i class="v-line b"></i>
+                    <div class="target">{{item.highDiscount}}</div>
+                    <div class="num">已有{{item.remainLight}}人点亮</div>
+                  </template>
+                </template>
+                <!--2017-10-18之后-->
+                <template v-else>
+                  <div class="over">{{item.xxxx}}</div>
+                </template>
+              </div>
+            </a>
           </div>
-          <div class="swiper-slide more">
-            <a href="">
+          <div class="swiper-slide more" v-if="response.data.lightenBrand.length > 10">
+            <a href="/myLightBrand.html">
               <div class="btn">
                 <span class="words">查看</br>更多</span>
                 <i></i>
