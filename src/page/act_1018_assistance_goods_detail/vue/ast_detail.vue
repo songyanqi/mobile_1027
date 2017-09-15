@@ -1,5 +1,5 @@
 <template>
-  <div style="font-weight: normal;" v-if="response">
+  <div style="font-weight: normal;background-color: #FFFFFF;" v-if="response">
     <!--商品详情主图-->
     <div v-for="good in response.data">
       <img class="main_banner" :src="good.goodsImage">
@@ -175,6 +175,13 @@
 
           }
         })
+      },
+      /***
+       * 记录分享回调
+       * */
+      sharecallback: function () {
+        var that = this;
+
       }
     },
     filters: {},
