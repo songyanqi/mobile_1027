@@ -486,12 +486,15 @@
     ],
     "lightenBrand": [
       {
-        "brandId": "品牌id",
-        "brandCover": "品牌封面",
-        "minDiscounts": "最小满减",
-        "maxDiscounts": "最大满减",
-        "percent": "进度条百分比",
-        "percentDesc": "1000人点亮"
+        "bandId": 1,
+        "bandPic": "http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg",
+        "linkUrl": "http://bravetime.davdian.com/",
+        "upperLimit": 10000,
+        "remainLight": 500,
+        "lowDiscount": "满200减100",
+        "highDiscount": "满200减150",
+        "isCompleted": "1",
+        "hotDay": "1"
       }
     ],
     "drawRecord": [

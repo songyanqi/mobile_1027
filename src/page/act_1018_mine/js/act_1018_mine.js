@@ -33,13 +33,19 @@ new Vue({
       date: date,
     }
   },
-  computed: {},
+  computed: {
+    currentDate(){
+      let now = this.response ? (this.response.sys_time + '000') : new Date();
+      return date.format(now, 'yyyy-MM-dd');
+    },
+  },
   watch: {
     // 监听response变化
     response(){
       // response变化后并渲染完dom,设置其他事项
       this.$nextTick(function () {
         let ts = this;
+        alert(this.currentDate)
 
         // 设置app头部标题栏
         native.custom.initHead({

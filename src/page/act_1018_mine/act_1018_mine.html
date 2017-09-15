@@ -171,27 +171,36 @@
       <!--手滑轮播-->
       <div class="swiper-container">
         <div class="swiper-wrapper">
-          <div class="swiper-slide" v-for="i in 10">
-            <img class="goods-pic"
-                 v-lazy="'http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg'">
-            <div class="info" v-if="i % 3 === 1">
-              <div class="begin">满200减100</div>
-              <i class="v-line a"></i>
-              <div class="target">满200减150</div>
-              <div class="num">还需101803人点亮</div>
-            </div>
-            <div class="info" v-if="i % 3 === 2">
-              <div class="ok"></div>
-              <i class="v-line b"></i>
-              <div class="target">满200减150</div>
-              <div class="num">还需101803人点亮</div>
-            </div>
-            <div class="info" v-if="i % 3 === 0">
-              <div class="over">满200减150</div>
-            </div>
+          <div class="swiper-slide" v-for="(item, i) in response.data.lightenBrand" v-if="i < 10">
+            <a :href="item.linkUrl">
+              <img class="goods-pic" v-lazy="item.bandPic">
+              <div class="info">
+                <!--2017-10-18之前-->
+                <template v-if="currentDate < '2017-10-18'">
+                  <!--未达标-->
+                  <template v-if="item.isCompleted === '1'">
+                    <div class="begin">{{item.lowDiscount}}</div>
+                    <i class="v-line a"></i>
+                    <div class="target">{{item.highDiscount}}</div>
+                    <div class="num">还需{{item.remainLight}}人点亮</div>
+                  </template>
+                  <!--已达标-->
+                  <template v-else>
+                    <div class="ok"></div>
+                    <i class="v-line b"></i>
+                    <div class="target">{{item.highDiscount}}</div>
+                    <div class="num">已有{{item.remainLight}}人点亮</div>
+                  </template>
+                </template>
+                <!--2017-10-18之后-->
+                <template v-else>
+                  <div class="over">{{item.xxxx}}</div>
+                </template>
+              </div>
+            </a>
           </div>
-          <div class="swiper-slide more">
-            <a href="">
+          <div class="swiper-slide more" v-if="response.data.lightenBrand.length > 10">
+            <a href="/myLightBrand.html">
               <div class="btn">
                 <span class="words">查看</br>更多</span>
                 <i></i>
