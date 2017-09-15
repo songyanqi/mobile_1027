@@ -1145,6 +1145,7 @@ jQuery(document).ready(function ($) {
 
   //预定商品倒计时
   function cutDown(numTime) {
+    $(".orderSuccess").show();
     clearInterval(cutTimer);
     var oneMinute = 60,
         oneHour = 60 * 60,
@@ -1167,6 +1168,7 @@ jQuery(document).ready(function ($) {
       } else {
         clearInterval(cutTimer);
         changeTips();
+        $(".orderSuccess").hide();
       }
     },1000); 
   };
@@ -1187,11 +1189,22 @@ jQuery(document).ready(function ($) {
     $(".stage2Title").html("(已关闭)");
     $(".order_goods_state").html("<a class = 'dav-btn btn-white order-delete-order' data-dav-tj = 'order_detail|delete|delete|1|delete@order_detail'>删除订单</a>");
   }
-  console.log(6789);
+  
   function changeStatus() {
     // 如果是定金单或者尾款单就倒计时
-    if (is_presale_order == "1" && Number(presale_surplus_time) > 0) {
-      cutDown(presale_surplus_time);
+    if (is_presale_order == "1") {
+      if (Number(presale_surplus_time) > 0) {
+        cutDown(presale_surplus_time);
+      }
+      if (presale_surplus_time == 0) {
+        $(".orderSuccess").hide();
+        if (presale_type == "reserve") {
+          $(".order_presale").html("<div class = 'overCutDown'>定金超时支付，交易关闭</div>");
+        }
+        if (presale_type == "final") {
+          $(".order_presale").html("<div class = 'overCutDown'>尾款超时支付，交易关闭</div>");
+        }
+      }
       // 尾款单未支付时判
       if (final_paid == "0") {
         if (presale_type == "reserve") {
@@ -1205,7 +1218,7 @@ jQuery(document).ready(function ($) {
       }
     };
     // 尾款支付超时
-    // if (presale_type = "final" && is_final_paytime == "1" && Number(presale_surplus_time) == "0") {
+    // if (presale_surplus_time == "0") {
     //   $(".orderSuccess").hide();
     // }
   }

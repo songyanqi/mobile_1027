@@ -880,10 +880,20 @@ export default {
           // this.infoObj.goPayAdvance = item.goPayAdvance;
         }
       });
+      
+      function campare(a, b) {
+        return a.addTime - a.addTime;
+      };
+
       if (goPayAdvanceList.length) {
-        goPayAdvanceList.map((item) => {
-          
-        })
+        if (goPayAdvanceList.length == 1) {
+          this.infoObj.goPayAdvance = goPayAdvanceList[0];
+        } else {
+          goPayAdvanceList.map((item) => {
+
+          });
+        }
+        
       }
     },
     //判断是否要置灰
