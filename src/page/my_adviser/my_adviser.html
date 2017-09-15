@@ -24,7 +24,6 @@
     </div>
     <div v-if="response.data.marks && response.data.matching_degree != '0%' && response.data.matching_degree" class="advisMark">
       <div class="advisMark_wrap">
-        <div v-if="response.data.matching_degree" class="matching_degree">匹配度{{response.data.matching_degree}}</div>
         <div v-if="response.data.marks.invite" class="invite">{{response.data.marks.invite}}</div>
         <div v-if="response.data.marks.friend" class="friend">{{response.data.marks.friend}}</div>
         <div v-if="response.data.marks.share" class="share">{{response.data.marks.share}}</div>
