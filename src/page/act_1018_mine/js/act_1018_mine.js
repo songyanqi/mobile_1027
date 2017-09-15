@@ -45,7 +45,6 @@ new Vue({
       // response变化后并渲染完dom,设置其他事项
       this.$nextTick(function () {
         let ts = this;
-        alert(this.currentDate)
 
         // 设置app头部标题栏
         native.custom.initHead({
