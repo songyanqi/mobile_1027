@@ -138,22 +138,34 @@
     },
     "myBonus": [
       {
-        "name": "红包名称",
-        "money": "55",
-        "desc": "满199可用",
-        "validity": "1505462800"
+        "bonusId": "123",
+        "typeId": "123",
+        "typeName": "红包名称",
+        "typeMoney": "10",
+        "minGoodsAmount": "199",
+        "limitDesc": "满199可用",
+        "beginTime": "1505552738",
+        "endTime": "1505462800"
       },
       {
-        "name": "红包名称",
-        "money": "55",
-        "desc": "满199可用",
-        "validity": "1505462800"
+        "bonusId": "123",
+        "typeId": "123",
+        "typeName": "红包名称",
+        "typeMoney": "10",
+        "minGoodsAmount": "199",
+        "limitDesc": "满199可用",
+        "beginTime": "1505552738",
+        "endTime": "1505462800"
       },
       {
-        "name": "红包名称",
-        "money": "55",
-        "desc": "满199可用",
-        "validity": "1505462800"
+        "bonusId": "123",
+        "typeId": "123",
+        "typeName": "红包名称",
+        "typeMoney": "10",
+        "minGoodsAmount": "199",
+        "limitDesc": "满199可用",
+        "beginTime": "1505552738",
+        "endTime": "1505462800"
       }
     ],
     "help": [
