@@ -45,6 +45,8 @@
   </div>
 </template>
 <script>
+  // 基础模块
+  import common from '../../../common/js/common.js';
   import encrypt from '../../../common/js/module/encrypt.js';
   import popup from '../../../common/js/module/popup.js';
 
@@ -85,6 +87,7 @@
           dataType: 'json',
           data: encrypt({}),
           success(response) {
+            common.checkRedirect(response);
             that.response = response;
             if (response.code) {
               popup.toast(response.data.msg || response.msg);
@@ -133,6 +136,7 @@
           dataType: 'json',
           data: encrypt({"inviteCode": that.mobile}),
           success(response) {
+            common.checkRedirect(response);
             if (response.code) {
               popup.toast(response.data.msg || response.msg);
               that.my_inviterPage = false; //显示我的邀请人
@@ -164,6 +168,7 @@
             dataType: 'json',
             data: encrypt({"inviteCode": that.mobile}),
             success(response) {
+              common.checkRedirect(response);
               if (response.code) {
                 popup.toast(response.data.msg || response.msg);
                 return false;

@@ -22,9 +22,9 @@
     <!--</div>-->
     <div class="my_code_text">
       我的邀请码：<span @click="show_pop = true">{{response.data.inviteCode}}</span>
-      <!--<span v-if="isApp" @click="copyText(response.data.inviteCode)">复制邀请码</span>-->
+      <span @click="copyText(response.data.inviteCode)">复制邀请码</span>
       <!--<span v-else @click="show_pop = true">复制邀请码</span>-->
-      <span @click="show_pop = true">复制邀请码</span>
+      <!--<span @click="show_pop = true">复制邀请码</span>-->
     </div>
     <div class="other-info">
       <!--什么是邀请码？-->
@@ -49,7 +49,6 @@
         <div>
           <p>1. 每个大V店会员都有一个专属邀请码，您可以将您的邀请码分享给身边的好友；</p>
           <p>2. 邀请码为数字+字母的6位字符组合，您的大V店账户手机号也可作为邀请码使用；</p>
-          <p>2. 您的大V店账户手机号也可作为邀请码使用；</p>
           <p>3. 好友选定您作为邀请人后，TA在大V店APP及果敢时代大V店公众号内都将访问您的店铺；</p>
           <p>4. 一个用户只能有一个邀请人，添加邀请人后可在7天内更换一次；更换邀请人不可获得红包。</p>
         </div>
