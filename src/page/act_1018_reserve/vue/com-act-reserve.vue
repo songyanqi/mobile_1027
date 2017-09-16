@@ -10,21 +10,20 @@
     </div>
     <!-- 列表 -->
     <div class = "bookCont">
-    	<div class = "bookNav">
+    	<div class = "bookNav" v-for = "item in bookDataList">
     		<div class = "bookList">
     			<div class = "bookImg">
     				<img src="http://pic.davdian.com/supplier/2017/06/20/1000_1000_e1a9869947141510a8743e6c002553c1.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/format,webp">
     			</div>
-    			<div class = "bookName">棕色的熊，棕色的熊，棕色的熊，棕色的熊，棕色的熊，棕色的熊棕色的熊棕色的熊</div>
-    			<div class = "bookPrice"><span class = "f12">¥ </span>260</div>
+    			<div class = "bookName">{{ item.goodsName }}</div>
+    			<div class = "bookPrice"><span class = "f12">¥ </span>{{ item.shopPrice }}</div>
     			<div class = "advancePrice">
 	    			<span class = "a_tips">定金 ¥ </span>
-	    			<span class = "a_price">10 </span>
-	    			<span class = "a_tips">(抵扣 ¥ 60)</span>
+	    			<span class = "a_price">{{ item.advancePrice }} </span>
+	    			<span class = "a_tips">(抵扣 ¥ {{ item.discountPrice }})</span>
     			</div>
     			<div class = "bookBtn">立即预定</div>
     		</div>
-    		<div class = "bookList"></div>
     	</div>
     </div>
 	</div>
@@ -69,6 +68,7 @@
   				success(res) {
   					res.data.map((item) => {
   						that.bookNavList.push(item.typeName);
+  						that.bookDataList.push(item);
   					})
   				},
   				error(err) {

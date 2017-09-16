@@ -987,23 +987,23 @@ export default {
     //点击多规格和首次要改变的所有，封装成一个
     getChanges(dataExtra) {
       let that = this;
+      this.isLimitNum = false;
       this.handleChangeNum = 1;
       //限购或者库存数量,如果是预定商品，让其等于dataExtra.limitNum
       if (dataExtra.sales.limitNum) {
-        // that.goodsLimitNum = dataExtra.sales.limitNum;
-        that.goodsLimitNum = 1;
+        that.goodsLimitNum = dataExtra.sales.limitNum;
       } else {
         that.goodsLimitNum = dataExtra.sales.goodsStocks;
       }
-      //信息
-      if (Number(dataExtra.sales.goodsStocks) <= 1) {
+      if (that.goodsLimitNum <= 1) {
+        this.isLimitNum = true;
         $(".vux-number-selector-plus").css({"background": "#eee"});
         $(".vux-number-selector-plus path").css({"fill": "#bbb", "stroke": "#bbb"});
       } else {
         $(".vux-number-selector-plus").css({"background": "#fff"});
         $(".vux-number-selector-plus path").css({"fill": "#666", "stroke": "#666"});
       }
-      // $(".isLimit").animate({"opacity": "0"}, 200);
+      //信息
       $(".isLimit").removeClass("isLimitShow");
       that.infoObj.price = dataExtra.price;
       //将恢复为多少用到的normalIncome,正常的佣金sellerIncome,sellerIncome乘以倍数得到的佣金

@@ -516,6 +516,12 @@
     height: inherit!important;
     line-height: inherit;
 }
+.order_list_container .order_presale {
+    font-size: 12px;
+    color: #333;
+    padding: 10px;
+    text-align: right;
+}
 
 .order_list_container .order_buttons span {
     line-height: 24px;
