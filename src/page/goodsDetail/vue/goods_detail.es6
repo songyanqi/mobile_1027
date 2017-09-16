@@ -889,7 +889,7 @@ export default {
           this.infoObj.goPayAdvance = goPayAdvanceList[0];
         } else {
           goPayAdvanceList.sort(campare);
-          this.infoObj.goPayAdvance = goPayAdvanceList[0];
+          this.infoObj.goPayAdvance = goPayAdvanceList[0]
         }
         
       }
