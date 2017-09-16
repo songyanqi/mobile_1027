@@ -79,6 +79,7 @@ new Vue({
         dataType: 'json',
         data: encrypt({}),
         success(response) {
+          common.checkRedirect(response);
           that.response = response;
         },
         error(error) {
@@ -88,15 +89,20 @@ new Vue({
     },
     /*原生复制*/
     copyText: function (text) {
-      native.BrowserTouch.copyText({
-        "text": text,
-        success: function (result) {
-          popup.toast("邀请码已复制到剪切板");
-        },
-        error: function (result) {
-          popup.toast("复制失败，请手动复制");
-        }
-      })
+      var that = this;
+      if(that.vossion){
+        native.BrowserTouch.copyText({
+          "text": text,
+          success: function (result) {
+            popup.toast("已复制到剪切板");
+          },
+          error: function (result) {
+            popup.toast("复制失败，请手动复制");
+          }
+        })
+      }else{
+        that.show_pop = true;
+      }
     },
     /*分享*/
     shareto: function () {

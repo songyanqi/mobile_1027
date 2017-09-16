@@ -7,6 +7,7 @@ import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
+import ua from '../../../common/js/module/ua.js';
 // 第三方模块
 
 // 渲染页面
@@ -46,6 +47,15 @@ new Vue({
         }
       });
       return nums;
+    },
+    vossion:function () {
+      let nowv =  ua.getDvdAppVersion();
+      let comper = ua.compareVersion(nowv,'4.1.0');
+      if(comper == 1){
+        return true;
+      }else{
+        return false;
+      }
     }
   },
   watch: {
@@ -67,7 +77,7 @@ new Vue({
           }
         });
       });
-    }
+    },
   },
   beforeCreate() {
   },
@@ -88,6 +98,7 @@ new Vue({
         dataType: 'json',
         data: encrypt({}),
         success(response) {
+          common.checkRedirect(response);
           that.response = response;
           if (response.code) {
             popup.toast(response.data.msg || response.msg);
@@ -164,6 +175,7 @@ new Vue({
         dataType: 'json',
         data: encrypt(data),
         success(response) {
+          common.checkRedirect(response);
           if (response.code) {
             popup.loading(false);
             popup.toast(response.data.msg || response.msg);
@@ -206,6 +218,7 @@ new Vue({
         dataType: 'json',
         data: encrypt(data),
         success(response) {
+          common.checkRedirect(response);
           if (response.code) {
             popup.loading(false);
             popup.toast(response.data.msg || response.msg);
@@ -220,11 +233,16 @@ new Vue({
               } else {
                 baseHref = "bravetime.net";
               }
-              /*调起native*/
-              location.href = "davdian://call.Account.com?action=refreshUserInfo&callback=result&minv=4.2.0";
-              setTimeout(function () {
+              //先判断版本
+              if(that.vossion){
+                /*调起native*/
+                location.href = "davdian://call.Account.com?action=refreshUserInfo&callback=result&minv=4.2.0";
+                setTimeout(function () {
+                  location.replace('/my_adviser.html?firsttime=' + that.firsttime);
+                }, 500)
+              }else{
                 location.replace('/my_adviser.html?firsttime=' + that.firsttime);
-              }, 500)
+              }
             } else {
               location.replace('/my_adviser.html?firsttime=' + that.firsttime);
             }

@@ -34,10 +34,10 @@
     </div>
     <div class="adviserTip">与顾问建立联系，可获得精准服务</div>
     <div class="my_code_text" v-if="response.data.wx">
-      顾问微信号：<span>{{response.data.wx}}</span><span v-if="!inapp" @click="show_wx = true">复制微信号</span><span v-else @click="copyText(response.data.wx)">复制微信号</span>
+      顾问微信号：<span>{{response.data.wx}}</span><span @click="copyText('wx',response.data.wx)">复制微信号</span>
     </div>
     <div class="my_code_text" v-if="response.data.mobile">
-      顾问手机号：<span>{{response.data.mobile}}</span><span v-if="!inapp" @click="show_tel = true">复制手机号</span><span v-else @click="copyText(response.data.mobile)">复制手机号</span>
+      顾问手机号：<span>{{response.data.mobile}}</span><span @click="copyText('tel',response.data.mobile)">复制手机号</span>
     </div>
     <div v-show="show_tel" class="g-pop mobile active">
       <ul>
@@ -63,7 +63,8 @@
   </span>
   <span v-else>
     <div class="adviserBottom" v-if="response.data.nextModifyTime&&response.data.nextModifyTime!=''">*{{response.data.nextModifyTime}}后可更改顾问</div>
-    <a @click="dump2choose" class="replaceAdviser" v-if="response.data.canChange == '1'" style="margin-top: 40px;">更换顾问</a>
+    <div class="adviserBottom" v-if="response.data.canChange == '1'" style="margin: 0;">*如果您对顾问的服务不满意，可以更换顾问；<br>一旦更换，30天后才能再次更换哦！</div>
+    <a @click="dump2choose" class="replaceAdviser" v-if="response.data.canChange == '1'" style="margin-top: 16px;">更换顾问</a>
   </span>
 </div>
 @@include('vendor.include')
