@@ -83,8 +83,7 @@
             <span class="payment"><span class="fz_12">￥</span>{{item.payment}}</span>
           </span>
         </div>
-        <div>3434343</div>
-        <div class="order_buttons order_list_buttons clearfix">
+        <div v-if = "item | isFinalBtn" class="order_buttons order_list_buttons clearfix">
             <!-- 预定 支付定金 -->
              <a v-show = "item | orderReserve" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/checkout.html?order_id={{item.id}}">支付定金</a>
              <!-- 支付尾款，显示按钮 -->
@@ -922,11 +921,22 @@
                 }
               // }
             },
+            // 支付尾款显示时间时不显示所有的按钮
+            isFinalBtn (value) {
+              if (value.is_presale_order && value.presale_info.type == "final") {
+                if (Date.now() < Number(value.presale_info.final_info.paytime_start) * 1000) {
+                  
+                } else {
+                  return true;
+                }
+              } else {
+                return true;
+              }
+            },
             // 支付尾款,显示时间
             orderFinal (value) {
-                if (value.is_presale_order && value.presale_info.type == "final") {
+              if (value.is_presale_order && value.presale_info.type == "final") {
                 if (Date.now() < Number(value.presale_info.final_info.paytime_start) * 1000) {
-                  // $(".order_list_buttons").hide();
                   return true;
                 }
               }
