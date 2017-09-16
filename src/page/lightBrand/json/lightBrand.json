@@ -14,8 +14,9 @@
       "remainLight": 500,
       "lowDiscount": "满200减10",
       "highDiscount": "满200减10",
-      "isLighted": "0",
-      "isCompleted": "0",
+      "finalDiscount": "全场5折",
+      "isLighted": "1",
+      "isCompleted": "1",
       "hotDay":1
     },
     {
@@ -26,9 +27,10 @@
       "remainLight": 500,
       "lowDiscount": "全场7折",
       "highDiscount": "全场5折",
-      "isLighted": "1",
+      "finalDiscount": "全场5折",
+      "isLighted": "0",
       "isCompleted": "1",
-      "hotDay":1
+      "hotDay":-1
     }
     ,{
       "bandId": 2,
@@ -38,9 +40,10 @@
       "remainLight": 500,
       "lowDiscount": "全场7折",
       "highDiscount": "全场5折",
+      "finalDiscount": "全场5折",
       "isLighted": "1",
       "isCompleted": "1",
-      "hotDay":1
+      "hotDay":-1
     }
     ,{
       "bandId": 2,
@@ -50,9 +53,10 @@
       "remainLight": 500,
       "lowDiscount": "全场7折",
       "highDiscount": "全场5折",
+      "finalDiscount": "全场5折",
       "isLighted": "1",
       "isCompleted": "1",
-      "hotDay":1
+      "hotDay":-1
     }
     ,{
       "bandId": 2,
@@ -62,8 +66,9 @@
       "remainLight": 500,
       "lowDiscount": "全场7折",
       "highDiscount": "全场5折",
-      "isLighted": "1",
-      "isCompleted": "1",
+      "finalDiscount": "全场9折",
+      "isLighted": "0",
+      "isCompleted": "0",
       "hotDay":1
     }
   ]

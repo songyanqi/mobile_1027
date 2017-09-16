@@ -66,28 +66,28 @@
     "alpha":"0.95",
     "listData":[
       {
-        "defaultImage":"activityTabBarDefault0",
+        "normalImage":"activityTabBarDefault0",
         "selectedImage":"activityTabBarSelected0",
         "marginTop":"0"
       },
       {
-        "defaultImage":"activityTabBarDefault1",
+        "normalImage":"activityTabBarDefault1",
         "selectedImage":"activityTabBarSelected1",
         "marginTop":"0"
       },
       {
-        "defaultImage":"activityTabBarDefault2",
+        "normalImage":"activityTabBarDefault2",
         "selectedImage":"activityTabBarSelected2",
         "showActivityUrl":"/1234.html",
         "marginTop":"-5"
       },
       {
-        "defaultImage":"activityTabBarDefault3",
+        "normalImage":"activityTabBarDefault3",
         "selectedImage":"activityTabBarSelected3",
         "marginTop":"0"
       },
       {
-        "defaultImage":"activityTabBarDefault4",
+        "normalImage":"activityTabBarDefault4",
         "selectedImage":"activityTabBarSelected4",
         "newMessageImage":"activityTabBarHasNewMessage",
         "marginTop":"0"

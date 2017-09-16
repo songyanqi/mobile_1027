@@ -127,13 +127,13 @@ export default {
       };
       //背景图片
       this.index_header_style.top0={
-        "backgroundImage":"url("+json["8"].imageName+")",
+        "backgroundImage":"url("+json["8"].imageFilePath+")",
         "backgroundSize":"3.75rem 80px"
       };
       //搜索框的样式
       this.index_header_style.search_input={
         "opacity":json[1].alpha,
-        "backgroundColor":"#"+json[1].backgroundColor
+        "backgroundColor":"#"+json[1].backgroundColor.substr(2)
       };
       //搜索icon
       this.index_header_style.search_icon={
@@ -141,99 +141,98 @@ export default {
       };
       //搜索框一般字
       this.index_header_style.shop_name={
-        "color":"#"+json["3"].textcolor
+        "color":"#"+json["3"].textcolor.substr(2)
       };
       //搜索框特殊字
       this.index_header_style.dav_base_red_color={
-        "color":"#"+json["4"].textcolor
+        "color":"#"+json["4"].textcolor.substr(2)
       };
       //分类icon
       this.index_header_style.classification_icon={
-        "backgroundImage":"url("+json["5"].imageName+")"
+        "backgroundImage":"url("+json["5"].imageFilePath+")"
       };
       //购物车icon
       this.index_header_style.cart_icon={
-        "backgroundImage":"url("+json["6"].imageName+")"
+        "backgroundImage":"url("+json["6"].imageFilePath+")"
       };
       //购物车的数量
       this.index_header_style.count={
-        "color":"#"+json["7"].textColor,
-        "background":"#"+json["7"].backgroundColor
+        "color":"#"+json["7"].textColor.substr(2),
+        "background":"#"+json["7"].backgroundColor.substr(2)
       };
       //二级菜单视图属性
       this.index_header_style.li={
-        "color":"#"+json["9"].textColor,
+        "color":"#"+json["9"].textColor.substr(2),
         "background":"none"
       };
       this.index_header_style.hoverSpan={
-        "borderBottom":"2px solid #"+json["9"].bottomLineColor
+        "borderBottom":"2px solid #"+json["9"].bottomLineColor.substr(2)
       };
       this.index_header_style.time_state_span_active={
-        "color":"#"+json["9"].textSelectedColor
+        "color":"#"+json["9"].textSelectedColor.substr(2)
       };
     },
     getSkinPackage(){
       var that = this;
       var indexCount=0;
 
-      //取localStorage改变样式
-      // if(localStorage.getItem("skinPackage")) {
-      //   var skinInfo = JSON.parse((localStorage.getItem("skinPackage")));
-      //   skinInfo.map(function (item, index) {
-      //     var now = new Date().getTime();
-      //     var startTime = item.startTime;
-      //     var endTime = item.endTime;
-      //     if (startTime <= now && endTime > now) {
-      //       that.changStyle(item.json);
-      //     }
-      //   });
-      // }
-      //
-      //
-      // //请求接口取到皮肤存到localStorage
-      // api("/api/mg/user/init/getInit")
-      //   .then(function (result) {
-      //     if(result.code==0){
-      //       var store=result.data.list[1].listData;
-      //       store.map(function (item,index) {
-      //         axios.get(item.viewFileUrl).then(function (data) {
-      //           item.json=data.data;
-      //           indexCount++;
-      //           if(indexCount==store.length){
-      //             localStorage.setItem("skinPackage",JSON.stringify(store));
-      //           }
-      //         });
-      //       });
-      //     }else{
-      //       if(result.data.msg){
-      //         dialog.alert('code:'+result.code+":msg"+result.data.msg);
-      //       }else{
-      //         dialog.alert('code:'+result.code);
-      //       }
-      //     }
-      //   })
-      //   .catch(function (e) {
-      //     dialog.alert(e);
-      //   });
-
-      if(localStorage.getItem("skinPackage")){
-        var data3 = JSON.parse((localStorage.getItem("skinPackage")));
-        data3.map(function (item, index) {
-          that.changStyle(item.json);
+      // 取localStorage改变样式
+      if(localStorage.getItem("skinPackage")) {
+        var skinInfo = JSON.parse((localStorage.getItem("skinPackage")));
+        skinInfo.map(function (item, index) {
+          var now = new Date().getTime().toString().substr(0,10);
+          var startTime = item.startTime;
+          var endTime = item.endTime;
+           if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
+            that.changStyle(item.json);
+           }
         });
       }
-      var data = require("../../src/page/allDiscuss/json/index.json")
-      var data2 = data.data.list[1].listData;
-      data2.map(function (item, index) {
-        axios.get(item.viewFileUrl).then(function (data) {
-          item.json=data.data;
-          indexCount++;
-          if(indexCount==data2.length){
-            localStorage.setItem("skinPackage",JSON.stringify(data2));
 
+      // 请求接口取到皮肤存到localStorage
+      var obj={
+        "elements":JSON.stringify(['skin'])
+      };
+      api("/api/mg/user/init/getInit",obj)
+        .then(function (result) {
+          if(result.code==0){
+            var store=result.data.list[0].listData;
+            store.map(function (item,index) {
+                item.json=JSON.parse(item.viewFileUrl);
+                indexCount++;
+                if(indexCount==store.length){
+                  localStorage.setItem("skinPackage",JSON.stringify(store));
+                }
+            });
+          }else{
+            if(result.data.msg){
+              dialog.alert('code:'+result.code+":msg"+result.data.msg);
+            }else{
+              dialog.alert('code:'+result.code);
+            }
           }
+        })
+        .catch(function (e) {
+          dialog.alert(e);
         });
-      });
+      // if(localStorage.getItem("skinPackage")){
+      //   var data3 = JSON.parse((localStorage.getItem("skinPackage")));
+      //   data3.map(function (item, index) {
+      //     that.changStyle(item.json);
+      //   });
+      // }
+      // var data = require("../../src/page/allDiscuss/json/index.json")
+      // var data2 = data.data.list[1].listData;
+      // data2.map(function (item, index) {
+      //   axios.get(item.viewFileUrl).then(function (data) {
+      //     item.json=data.data;
+      //     indexCount++;
+      //     if(indexCount==data2.length){
+      //       localStorage.setItem("skinPackage",JSON.stringify(data2));
+      //
+      //     }
+      //   });
+      // });
     },
     /**
      * 初始化，调用后开始获取数据
@@ -452,7 +451,6 @@ export default {
     },
     cart: function () {
       var that = this
-      console.log("cart",layout.config.cart);
       $.ajax({
         type: "POST",
         url: layout.config.cart,

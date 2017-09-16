@@ -16,7 +16,9 @@
         <div class="list_b_img">
           <img :src="item.bandPic" alt="">
         </div>
-        <div class="list_bottom">
+
+        <div class="list_bottom" v-if="item.hotDay==-1">
+
           <template v-if="item.isCompleted!=1">
             <div class="list_start">
               <img class="start" src="//pic.davdian.com/free/2017/09/09/start_icon.png" alt="">
@@ -24,6 +26,7 @@
             </div>
             <div class="line"></div>
           </template>
+
           <template v-if="item.isCompleted==1">
             <div class="success">
               <div style="position: absolute;">
@@ -38,6 +41,7 @@
             <img class="start2" src="//pic.davdian.com/free/2017/09/09/end_icon.png" alt="">
             <span class="start_value2" v-text="item.highDiscount"></span>
           </div>
+
           <div class="list_need">还需<span v-text="item.remainLight"></span>人点亮</div>
 
           <div class="list_button" v-if="isLighted[index]!=1" @click="light(item.bandId,index)">
@@ -52,8 +56,15 @@
             </div>
           </div>
 
-
         </div>
+
+        <div class="list_bottom_complete" v-if="item.hotDay==1">
+          <div class="list_end_complete">
+            <img class="start2" src="//pic.davdian.com/free/2017/09/09/end_icon.png" alt="">
+            <span class="start_value2" v-text="item.finalDiscount"></span>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -73,64 +84,69 @@
       var that=this;
       var json=require("../json/lightBrand.json");
       this.dataList=json.data;
-      api("/api/mg/sale/explosion/getCenterBands")
-        .then(function (result) {
-            if(result.code==0){
-              if(result.data){
-                that.dataList=result.data;
-                that.initIsLighted(result.data);
-              }
-            }else{
-              if(result.data.msg){
-                dialog.alert('code:'+result.code+":msg"+result.data.msg);
-              }else{
-                dialog.alert('code:'+result.code);
-              }
-            }
-            console.log(result.data);
-        })
-        .catch(function (e) {
-          dialog.alert(e);
-        })
+      that.initIsLighted(this.dataList);
+//      api("/api/mg/sale/explosion/getCenterBands")
+//        .then(function (result) {
+//            if(result.code==0){
+//              if(result.data){
+//                that.dataList=result.data;
+//                that.initIsLighted(result.data);
+//              }
+//            }else{
+//              if(result.data.msg){
+//                dialog.alert('code:'+result.code+":msg"+result.data.msg);
+//              }else{
+//                dialog.alert('code:'+result.code);
+//              }
+//            }
+//            console.log(result.data);
+//        })
+//        .catch(function (e) {
+//          dialog.alert(e);
+//        })
 
     },
     methods:{
       initIsLighted(data){
+          var that=this;
           data.map(function (item) {
-            this.isLighted.push(item.isLighted);
+            that.isLighted.push(item.isLighted);
           });
       },
       changeIsLighted(index){
-          Vue.set(this.index,index,1);
+          console.log(index);
+          Vue.set(this.isLighted,index,1);
+          //变异方法
       },
       light(bandId,index){
         var that=this;
-        var obj={
-            "bandId":bandId
-        };
-        api("/api/mg/sale/explosionBand/lightUp",obj)
-          .then(function (result) {
-            if(result.code==0){
-              if(result.data.success==1){
-                that.changeIsLighted(index);
-              }else{
-                if(result.data.msg){
-                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
-                }else{
-                  dialog.alert('code:'+result.code);
-                }
-              }
-            }else{
-              if(result.data.msg){
-                dialog.alert('code:'+result.code+":msg"+result.data.msg);
-              }else{
-                dialog.alert('code:'+result.code);
-              }
-            }
-          })
-          .catch(function (e) {
-//          dialog.alert(e);
-          })
+        that.changeIsLighted(index);
+//        var obj={
+//            "bandId":bandId
+//        };
+//        api("/api/mg/sale/explosionBand/lightUp",obj)
+//          .then(function (result) {
+//            if(result.code==0){
+//              if(result.data.success==1){
+//                that.changeIsLighted(index);
+//              }else{
+//                if(result.data.msg){
+//                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
+//                }else{
+//                  dialog.alert('code:'+result.code);
+//                }
+//              }
+//            }else{
+//              if(result.data.msg){
+//                dialog.alert('code:'+result.code+":msg"+result.data.msg);
+//              }else{
+//                dialog.alert('code:'+result.code);
+//              }
+//            }
+//          })
+//          .catch(function (e) {
+////          dialog.alert(e);
+//          })
       }
 //      autoFontSize(){
 //        var html=$("html").css("fontSize").replace("px","");
@@ -141,6 +157,9 @@
   }
 </script>
 <style scoped>
+  body{
+    background: #F1F1F1;
+  }
   .banner{
     width: 3.75rem;
     height: 2.35rem;
@@ -208,9 +227,9 @@
     display: inline-block;
     vertical-align: top;
     width: 1.72rem;
-    height: 3.38rem;
     margin-right: 0.1rem;
     margin-top: 0.1rem;
+    background: white;
   }
   .list_b_img{
     width: 100%;
@@ -222,6 +241,11 @@
   }
   .list_bottom{
     height: 1.38rem;
+    width: 100%;
+    position:relative;
+  }
+  .list_bottom_complete{
+    height: 0.61rem;
     width: 100%;
     position:relative;
   }
@@ -306,8 +330,19 @@
     margin-top: -0.06rem;
     position:relative;
     text-align: center;
-
     line-height:0.37rem;
+  }
+  .list_end_complete{
+    background-image:url("//pic.davdian.com/free/2017/09/09/bea.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1.38rem;
+    height: 0.32rem;
+    margin-left:0.16rem;
+    position:relative;
+    text-align: center;
+    line-height:0.37rem;
+    margin-top: 0.05rem;
   }
   .list_need {
     height: 0.16rem;
