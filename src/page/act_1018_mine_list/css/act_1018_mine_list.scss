@@ -1,8 +1,10 @@
 @import "../../../common/css/common.scss";
 
+body {
+  background-color:#F1F1F1;
+}
 .app {
   min-height: 100vh;
-  background-color: #F1F1F1;
 
   .text-special {
     color: #FF4A7D;
@@ -123,7 +125,8 @@
       display:block;
     }
     .goods-pic {
-      width:100%;
+      width:ptr(172.5);
+      height:ptr(172.5);
     }
     .goods-text{
       font-size:ptr(12);
