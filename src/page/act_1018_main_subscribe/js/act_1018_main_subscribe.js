@@ -59,7 +59,7 @@ new Vue({
             this.tabIndex = i * 1;
             this.screenings = menuList[i].screenings;
           }
-          if (i === 0) {
+          if (i == '0') {
             this.screenings = menuList[i].screenings;
           }
         }
@@ -145,7 +145,6 @@ new Vue({
      */
     subscribe(goods, callback) {
       let ts = this;
-      debugger
       $.ajax({
         cache: false,
         async: true,
@@ -223,7 +222,11 @@ new Vue({
     },
     /** 已设预约 */
     btnClickSubscribed() {
-      popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
+      if (ua.isDvdApp()) {
+        popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
+      } else {
+        popup.toast('将在活动开始前5分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
+      }
     },
     /** 等待抢购 */
     btnClickWaitBuy() {
