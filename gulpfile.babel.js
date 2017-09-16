@@ -53,7 +53,7 @@ let config = {
   html: `src/page/${BuildArg.page}/*.html`,
   css: `src/*page/${BuildArg.page}/css/*.scss`,
   js: `src/page/${BuildArg.page}/js/*.js`,
-  img: `src/*page/${BuildArg.page}/img/*`,
+  img: [`src/*page/${BuildArg.page}/img/*`, `src/*common/img/*`],
   iconDir: `src/page/${BuildArg.page}/img/icon*`,
   temp: `.temp`,
 };
@@ -61,6 +61,7 @@ let config = {
 // 替换表
 let replacer = {
   '[[env_stage]]': '',
+  '[[base_domain]]': '',
   '[[env_num]]': '',
   '[[static]]': '',
   '[[vendor]]': '//cdn-ws.davdian.com',
@@ -103,10 +104,13 @@ function promptBuildArg(build, buidType) {
     let domain = 'domain';
     if (BuildArg.env_stage == 'dev') {
       domain = 'fe.bravetime.net';
+      replacer['[[base_domain]]'] = 'bravetime.net';
     } else if (BuildArg.env_stage == 'beta') {
       domain = 'fe.vyohui.cn';
+      replacer['[[base_domain]]'] = 'vyohui.cn';
     } else if (BuildArg.env_stage == 'gray' || BuildArg.env_stage == 'prod') {
       domain = 'fe-ws.davdian.com';
+      replacer['[[base_domain]]'] = 'davdian.com';
     } else {
       // throw new Error(`env_stage参数不正确: ${BuildArg.env_stage}`);
       let errorValue = BuildArg.env_stage;
