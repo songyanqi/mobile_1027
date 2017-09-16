@@ -109,7 +109,7 @@ new Vue({
       $.ajax({
         cache: false,
         async: true,
-        url: '/api/mg/sale/explosion/getGoodsList1?_=' + Date.now(),
+        url: '/api/mg/sale/explosion/getGoodsList?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
         data: encrypt({
@@ -126,12 +126,12 @@ new Vue({
           }
         },
         error(error) {
-          if (screenings === 0) {
-            ts.response = require('../json/list.json');
-          } else {
-            ts.response.data.dataList = require('../json/list-1.json').data.dataList;
-            ts.$forceUpdate();
-          }
+          // if (screenings === 0) {
+          //   ts.response = require('../json/list.json');
+          // } else {
+          //   ts.response.data.dataList = require('../json/list-1.json').data.dataList;
+          //   ts.$forceUpdate();
+          // }
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
@@ -177,9 +177,9 @@ new Vue({
           goodsId: goods.goodsId,
           goodsTitle: goods.goodsName,
           goodsImage: goods.imageUrl,
-          // goodsStartTime: goods.sTime,
+          goodsStartTime: goods.sTime,
           // goodsStartTime: parseInt(Date.now() / 1000 + 5 * 60), // 开始时间设置为5分钟后
-          goodsStartTime: tttt, // 开始时间设置为5分钟后
+          // goodsStartTime: tttt, // 开始时间设置为5分钟后
           goodsUrl: `${location.origin}/${goods.goodsId}.html`,
           goodsListUrl: location.href,
           success() {
