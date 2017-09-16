@@ -23,7 +23,7 @@ login.needLogin();
 // 懒加载初始化
 vueLazyload.init();
 
-let tttt = parseInt(Date.now() / 1000 + 6 * 60);
+// let tttt = parseInt(Date.now() / 1000 + 6 * 60);
 
 // 渲染页面
 new Vue({
@@ -57,6 +57,9 @@ new Vue({
         for (let i in menuList) {
           if (menuList[i].menu == '已开抢') {
             this.tabIndex = i * 1;
+            this.screenings = menuList[i].screenings;
+          }
+          if (i == '0') {
             this.screenings = menuList[i].screenings;
           }
         }
@@ -196,14 +199,15 @@ new Vue({
         }, true);
       } else {
         // 调接口
-        this.subscribe(goods, function (response) {
+        ts.subscribe(goods, function (response) {
           if (response.code === 0) {
             if (ua.isWeiXin()) {
               popup.toast('将在活动开始前5分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
             } else {
-              this.tipType = 'web-focus';
+              ts.tipType = 'web-focus';
             }
             goods.buttonName = '已设预约';
+            ts.$forceUpdate();
           } else if (response.code == 64404) {
             if (ua.isWeiXin()) {
               ts.tipType = 'weixin-no-focus';
@@ -218,7 +222,11 @@ new Vue({
     },
     /** 已设预约 */
     btnClickSubscribed() {
-      popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
+      if (ua.isDvdApp()) {
+        popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
+      } else {
+        popup.toast('将在活动开始前5分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
+      }
     },
     /** 等待抢购 */
     btnClickWaitBuy() {

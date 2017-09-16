@@ -73,17 +73,13 @@
       <!--红包列表-->
       <ul class="list">
         <li v-for="(item, i) in response.data.myBonus">
-          "name": "红包名称",
-          "money": "红包金额",
-          "desc": "满199可用",
-          "validity": "有效期"
-          <div class="name">{{item.name}}</div>
+          <div class="name">{{item.typeName}}</div>
           <div class="price">
             <span class="symbol">￥</span>
-            <span class="num">{{item.money}}</span>
-            <span class="limit">{{item.desc}}</span>
+            <span class="num">{{item.typeMoney}}</span>
+            <span class="limit">满{{item.minGoodsAmount}}可用</span>
           </div>
-          <div class="time">有效期：{{date.format(item.validity + '000', 'yyyy.MM.dd hh:mm:ss')}}</div>
+          <div class="time">有效期：{{date.format(item.endTime + '000', 'yyyy.MM.dd hh:mm:ss')}}</div>
         </li>
       </ul>
       <!--查看更多-->

@@ -62,7 +62,7 @@
 
       <!--10.18爆品预约提醒-->
       <div class="bao-pin-1018-tip" v-if="response && response.data && response.data.explosion && response.data.explosion.price">
-        <span class="act-symbol">¥ </span><span class="act-price">{{response.data.explosion.price}}</span><span class="start-time">{{date.format(response.data.explosion.sTime, 'MM月dd日hh:mm')}} 正式开抢</span>
+        <span class="act-symbol">¥ </span><span class="act-price">{{response.data.explosion.price}}</span><span class="start-time">{{date.format(response.data.explosion.sTime + '000', 'MM月dd日hh:mm')}} 正式开抢</span>
       </div>
 
       <div class = "salesCount clearfix">
