@@ -23,7 +23,6 @@ login.needLogin();
 // 懒加载初始化
 vueLazyload.init();
 
-
 let tttt = parseInt(Date.now() / 1000 + 6 * 60);
 
 // 渲染页面
@@ -118,6 +117,7 @@ new Vue({
           screenings: screenings,
         }),
         success(response) {
+          common.checkRedirect(response);
           if (screenings === 0) {
             ts.response = response;
           } else {
