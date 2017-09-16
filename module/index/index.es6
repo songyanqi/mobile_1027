@@ -141,11 +141,11 @@ export default {
       };
       //搜索框一般字
       this.index_header_style.shop_name={
-        "color":"#"+json["3"].textcolor.substr(2)
+        "color":"#"+json["1"].defaultTextColor.substr(2)
       };
       //搜索框特殊字
       this.index_header_style.dav_base_red_color={
-        "color":"#"+json["4"].textcolor.substr(2)
+        "color":"#"+json["1"].specificTextColor.substr(2)
       };
       //分类icon
       this.index_header_style.classification_icon={
