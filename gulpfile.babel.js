@@ -53,7 +53,7 @@ let config = {
   html: `src/page/${BuildArg.page}/*.html`,
   css: `src/*page/${BuildArg.page}/css/*.scss`,
   js: `src/page/${BuildArg.page}/js/*.js`,
-  img: `src/*page/${BuildArg.page}/img/*`,
+  img: [`src/*page/${BuildArg.page}/img/*`, `src/*common/img/*`],
   iconDir: `src/page/${BuildArg.page}/img/icon*`,
   temp: `.temp`,
 };

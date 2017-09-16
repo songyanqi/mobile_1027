@@ -18,7 +18,7 @@ import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
 
 // 懒加载初始化
-vueLazyload.init();
+vueLazyload.init(true);
 
 // 渲染页面
 new Vue({
@@ -31,6 +31,8 @@ new Vue({
     return {
       response: null,
       date: date,
+      isBuyer: login.isBuyer(),
+      isSeller: login.isSeller(),
     }
   },
   computed: {
@@ -38,6 +40,9 @@ new Vue({
       let now = this.response ? (this.response.sys_time + '000') : new Date();
       return date.format(now, 'yyyy-MM-dd');
     },
+    isAdviser(){
+      return true;
+    }
   },
   watch: {
     // 监听response变化

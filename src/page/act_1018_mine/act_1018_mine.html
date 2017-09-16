@@ -12,24 +12,32 @@
 
   <!--个人信息-->
   <div class="g-info">
-    <img class="head-pic" v-lazy="response.data.header.userAvatar">
-    <span class="info">
-        <div class="nickname">{{response.data.header.nickName}}</div>
-        <a href="">
-          <!--<div class="adviser-prize">服务人群销售额: 120000元，获得Iphone8 <span class="detail">详情<i></i></span></div>-->
-        </a>
+    <template v-if="response && response.data.header" style="display: none;" :style="{display: response && response.data.header ? null : 'none'}">
+      <img class="head-pic" v-lazy="response.data.header.userAvatar">
+      <span class="info">
+        <template v-if="true">
+          <div class="nickname">{{response.data.header.nickName}}</div>
+        </template>
+        <template v-else>
+          <div class="prize-nickname">{{response.data.header.nickName}}</div>
+          <a href="">
+            <div class="adviser-prize">服务人群销售额: 120000元，获得Iphone8 <span class="detail">详情<i></i></span></div>
+          </a>
+        </template>
       </span>
+    </template>
   </div>
 
   <!--周年庆按钮-->
   <a href="">
-    <img class="g-head-btn" v-lazy="'[[static]]/page/act_1018_mine/img/head-btn.png'">
+    <img class="g-head-btn" src="[[static]]/page/act_1018_mine/img/head-btn.png">
   </a>
 
   <!--我的活动-->
-  <div class="g-act" v-if="response">
+  <div class="g-act" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
     <!--服务人群预定奖励-->
-    <div class="service-award">
+    <!--<div class="service-award" v-if="isAdviser">-->
+    <div class="service-award" v-if="response.data.award">
       <!--标题-->
       <div class="title-type-1">
         <div class="main-title">服务人群预定奖励</div>
@@ -59,12 +67,12 @@
     </div>
 
     <!--我的10.18红包-->
-    <div class="redpack">
+    <div class="redpack" v-if="response.data.myBonus">
       <!--标题-->
       <div class="title-type-2">我的10.18红包</div>
       <!--红包列表-->
       <ul class="list">
-        <li v-for="(item, i) in response.data.myBonus" v-if="i < 4">
+        <li v-for="(item, i) in response.data.myBonus">
           "name": "红包名称",
           "money": "红包金额",
           "desc": "满199可用",
@@ -85,7 +93,8 @@
     </div>
 
     <!--我发起的助力省钱-->
-    <div class="assist">
+    <!--<div class="assist" v-if="isSeller || isAdviser">-->
+    <div class="assist" v-if="response.data.help">
       <!--标题-->
       <div class="title-type-1">
         <div class="main-title">我发起的助力省钱</div>
@@ -112,7 +121,8 @@
     </div>
 
     <!--我预定的商品-->
-    <div class="reserve">
+    <!--<div class="reserve" v-if="isSeller || isAdviser">-->
+    <div class="reserve" v-if="response.data.book">
       <!--标题-->
       <div class="title-type-1">
         <div class="main-title">我预定的商品</div>
@@ -138,7 +148,7 @@
     </div>
 
     <!--我预约的商品-->
-    <div class="subscribe">
+    <div class="subscribe" v-if="response.data.subscribe">
       <!--标题-->
       <div class="title-type-1">
         <div class="main-title">我预约的商品</div>
@@ -165,7 +175,7 @@
     </div>
 
     <!--我点亮的品牌活动-->
-    <div class="lighten">
+    <div class="lighten" v-if="response.data.lightenBrand">
       <!--标题-->
       <div class="title-type-2">我点亮的品牌活动</div>
       <!--手滑轮播-->
@@ -212,45 +222,51 @@
     </div>
 
     <!--我的抽奖记录-->
-    <div class="draw-record">
+    <!--<div class="draw-record" v-if="isSeller || isAdviser">-->
+    <div class="draw-record" v-if="response.data.drawRecord">
       <!--标题-->
       <div class="title-type-2">我的抽奖记录</div>
       <!--红包列表-->
       <ul class="list">
-        <li class="order no-draw">
-          <div class="title">最高可中1018元现金大奖!</div>
-          <div class="text"><span class="btn">立即抽奖</span></div>
-        </li>
-        <li class="order draw">
-          <div class="title">抽中10.18现金！已送到你的<a class="account" href="/s[[env_num]].[[base_domain]]/index.php?m=admin&c=newIncome&a=detail&status=0&cat=5">大V账户</a>~</div>
-          <div class="time">抽奖时间: 2017.10.22 06:01:12</div>
-        </li>
-        <li class="assist">
-          <div class="title">抽中一台iPhone8</div>
-          <div class="text">请等待工作人员联系你</div>
-          <div class="time">抽奖时间: 2017.10.22 06:01:12</div>
-        </li>
+        <template v-for="(item, i) in response.data.drawRecord">
+          <!--<li class="order no-draw">
+            <div class="title">最高可中1018元现金大奖!</div>
+            <div class="text"><span class="btn">立即抽奖</span></div>
+          </li>
+          <li class="order draw">
+            <div class="title">
+              抽中10.18现金！已送到你的
+              <a class="account" href="/s[[env_num]].[[base_domain]]/index.php?m=admin&c=newIncome&a=detail&status=0&cat=5">大V账户</a>~
+            </div>
+            <div class="time">抽奖时间: 2017.10.22 06:01:12</div>
+          </li>-->
+          <li class="assist" v-if="item.type == '1'">
+            <div class="title">抽中一台iPhone8</div>
+            <div class="text">请等待工作人员联系你</div>
+            <div class="time">抽奖时间: {{date.format(item.time + '000', 'yyyy.MM.dd hh:mm:ss')}}</div>
+          </li>
+        </template>
       </ul>
     </div>
 
     <!--必败清单-->
-    <div class="recommend">
+    <div class="recommend" v-if="response.data.willBuy">
       <!--标题-->
       <div class="title-type-2">必败清单</div>
       <!--双排列表-->
       <ul>
-        <li v-for="i in 4">
+        <li v-for="(item, i) in response.data.willBuy">
           <div class="pic">
-            <img src="http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg">
-            <div class="act">满100减50</div>
+            <img :src="item.imageUrl">
+            <div class="act">{{item.actInfo}}</div>
           </div>
           <div class="info">
-            <div class="title">来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品</div>
+            <div class="title">来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品{{item.title}}</div>
             <div class="price">
               <span class="price-symbol">￥</span>
-              <span class="price-int">111</span>
-              <span class="price-decimal">.11</span>
-              <span class="member">会员返<span class="symbol">￥</span>171.6</span>
+              <span class="price-int">{{item.nowPrice.split('.')[0]}}</span>
+              <span class="price-decimal" v-if="item.nowPrice.split('.')[1]">.{{item.nowPrice.split('.')[1]}}</span>
+              <span class="member">会员返<span class="symbol">￥</span>{{item.incomeInfo}}</span>
             </div>
           </div>
         </li>
