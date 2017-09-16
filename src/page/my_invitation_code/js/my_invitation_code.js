@@ -43,7 +43,7 @@ new Vue({
         });
         setTimeout(function () {
           native.custom.setHead({
-            'title': '邀请好友安装大V店APP',
+            'title': '邀请好友注册大V店',
             'rightBtn': {
               'text': ''
             }
