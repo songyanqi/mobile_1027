@@ -47,6 +47,14 @@ export default {
         this.cartNum = num;
       })
     },
+    watch: {
+      datarepresentid: {
+        handler (newInfoObj,oldInfoObj) {
+          this.cartNum = 1;
+        },
+        deep: true,
+      }
+    },
     methods: {
       handleModalShow() {
         if (document.documentElement && document.documentElement.scrollTop) {

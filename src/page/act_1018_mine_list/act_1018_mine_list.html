@@ -15,7 +15,7 @@
     <!--预定奖励头部信息-->
     <!--总奖励数字要改-->
     <div class="prize-head">
-      <p class="total-prize">共获得<span class="money-icon">￥</span><span class="prize-detail">100</span>&nbsp;&nbsp;预定奖励</p>
+      <p class="total-prize">共获得<span class="money-icon">￥</span><span class="prize-detail">{{response.data.totalReward}}</span>&nbsp;&nbsp;预定奖励</p>
       <div class="prize-tip">
         <p class="tip-title">发放奖励说明</p>
         <ul class="tip-detail">
@@ -30,9 +30,9 @@
     <!--头像要改-->
     <ul class="goods-list">
       <li v-for="(val,index) in list" :key="index" class="friend-list list-item">
-        <img src="http://pic.davdian.com/supplier/2017/03/25/1000_1000_9b24f1c92893fb94b21325e95da6fd48.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/format,webp" class="goods-pic"/>
+        <img :src="val.imageUrl" class="goods-pic"/>
         <div class="friend-show">
-          <img src="http://pic.davdian.com/free/seller-71/my-invite/default-head.png" class="user-photo"/>
+          <img :src="val.advanceAvatar" class="user-photo"/>
           <span class="user-name">{{val.advanceName}}</span>
         </div>
         <p class="list-text">预定{{val.advanceNum}}件获得{{val.advanceReward}}元奖励</p>
@@ -65,8 +65,8 @@
     <ul class="goods-list">
       <li v-for="(val,index) in list" :key="index" class="list-item">
         <a :href="'../'+val.goodsId+'.html'">
-          <img src="http://pic.davdian.com/supplier/2017/03/25/1000_1000_9b24f1c92893fb94b21325e95da6fd48.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/format,webp" class="goods-pic"/>
-          <p class="goods-text text-special">定金￥<span class="text-price">1</span> (抵扣￥60)</p>
+          <img :src="val.imageUrl" class="goods-pic"/>
+          <p class="goods-text text-special">定金￥<span class="text-price">{{val.advancePrice}}</span> (抵扣￥{{val.discountPrice}})</p>
         </a>
       </li>
     </ul>

@@ -189,7 +189,8 @@
                     </div>
                     <div class = "titleInfo">
                       <div class = "titleM5">
-                        <span class = "summary_price"><span class = "summary_p_icon"><span v-if = "infoobj.presale">定金</span> ¥ </span>{{ allPrice }}</span>
+                        <span class = "summary_p_icon" v-if = "infoobj.presale">定金 ¥ <span class = "summary_price">{{ infoobj.price.advancePrice }}</span></span>
+                        <span class = "summary_p_icon" v-else>¥ <span class = "summary_price">{{ allPrice }}</span></span>
                         <span class = "summary_activity">
                             <span v-for = "(item,index) of goodsmodalobj.activityName">
                                 <span v-if = "index == goodsmodalobj.activityName.length - 1">
@@ -203,7 +204,7 @@
                             </span>
                         </span>
                       </div>
-                      <div class = "pre_final_price" v-if = "infoobj.presale">尾款 ¥ {{ infoobj.price.finalPrice }}</div>
+                      <div class = "pre_final_price" v-if = "infoobj.presale">尾款 ¥ {{ infoobj.price.endPrice }}</div>
                       <div class = "summary_select" v-if = "relativegoodslist.length || goodstags.length"><span class = "summar_select_title">选择</span>
                         <div class = "summary_m15" v-if = "relativegoodslist.length">
                             <span v-for = "item of relativegoodslist">
@@ -245,7 +246,7 @@
                         <div class="summary_d_title">数量</div>
                         <div class = "summary_number_cont">
                           <div v-if = "infoobj.presale" class = "preIsLimit">限购{{ infoobj.limitNum }}件</div>
-                          <div v-if = "islimitnum" class = "isLimit">库存不足</div>
+                          <div v-else class = "isLimit"><span v-if = "islimitnum">库存不足</span></div>
                           <x-number
                                   ref = "xNumber"
                                   class = "x_number x_number_p0"

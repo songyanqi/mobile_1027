@@ -14,6 +14,7 @@ import date from '../../../common/js/module/date.js';
 import param from '../../../common/js/module/param.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
 
+login.needLogin();
 // 懒加载初始化
 vueLazyload.init();
 
@@ -54,8 +55,15 @@ new Vue({
   },
   methods: {
     /**
+     * type为1时
      * 接口名称: 服务人群
      * 接口文档: http://wiki.bravetime.net/pages/viewpage.action?pageId=18547189
+     * type为2时
+     * 接口名称: 我的预约列表
+     * 接口文档: http://wiki.bravetime.net/pages/viewpage.action?pageId=18547288
+     * type为3时
+     * 接口名称: 预定商品
+     * 接口文档: http://wiki.bravetime.net/pages/viewpage.action?pageId=18547187
      */
     getData() {
       // 已经结尾,不要再调接口
@@ -100,9 +108,7 @@ new Vue({
             ts.response = require('../json/getAdvanceList.json');
             ts.list = ts.list.concat(ts.response.data);
           }
-          // console.error('ajax error:' + error.status + ' ' + error.statusText);
-          console.log(ts.response.more == undefined);
-          console.log(ts.list);
+          console.error('ajax error:' + error.status + ' ' + error.statusText);
           ts.ajaxing = false;
         }
       });

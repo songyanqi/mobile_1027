@@ -83,6 +83,7 @@
             <span class="payment"><span class="fz_12">￥</span>{{item.payment}}</span>
           </span>
         </div>
+        <div>3434343</div>
         <div class="order_buttons order_list_buttons clearfix">
             <!-- 预定 支付定金 -->
              <a v-show = "item | orderReserve" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/checkout.html?order_id={{item.id}}">支付定金</a>
@@ -117,7 +118,8 @@
             <a v-show = "item | applyProgress" data-deliveryid="{{item.delivery_id}}"  data-id="{{ item.id }}" data-cancel-id = "{{ item.cancel_id }}" class="dav-btn btn-white pull-right cancle_{{ item.id }}" @click="afterSale">查看售后进度</a>
         </div>
         <!-- 支付尾款，显示日期 -->
-        <div v-show = "item | orderFinal" v-if='item.order_type !=1 && item.order_type !=2 && orderFinal' class="">{{ item.presale_info.final_info.paytime_start | changeDate }}</div>
+        <div v-show = "item | orderFinal" class="order_presale"><span v-if = "item.presale_info && item.presale_info.final_info">{{ item.presale_info.final_info.paytime_start | changeDate }}</span> 开始支付尾款</div>
+
     </div>
     <div class="order_list_item type_4 dav-shadow" v-if = 'other'>
         <ul class="be_evaluated_list">
@@ -922,34 +924,39 @@
             },
             // 支付尾款,显示时间
             orderFinal (value) {
-              // if(value.is_new_seller_order  == false && value.type == 3){
                 if (value.is_presale_order && value.presale_info.type == "final") {
-                  if (Date.now() > Number(value.presale_info.final_info.paytime_start) * 1000) {
-                    return true;
-                  }
-                // }
+                if (Date.now() < Number(value.presale_info.final_info.paytime_start) * 1000) {
+                  // $(".order_list_buttons").hide();
+                  return true;
+                }
               }
             },
             // 支付尾款，显示按钮
             orderFinalBtn (value) {
               if(value.is_new_seller_order  == false && value.type == 3){
                 if (value.is_presale_order && value.presale_info.type == "final") {
-                  if (Date.now() < Number(value.presale_info.final_info.paytime_start) * 1000) {
+                  if (Date.now() < Number(value.presale_info.final_info.paytime_end) * 1000 && Date.now() > Number(value.presale_info.final_info.paytime_start) * 1000) {
                     return true;
                   }
                 }
               }
             },
             changeDate(time) {
-            var dates = new Date(time * 1000);
-            var month = dates.getMonth(),
-                days = dates.getDate(),
-                hours = dates.getHours(),
-                minutes = dates.getMinutes(),
-                seconds = dates.getSeconds();
+                var dates = new Date(time * 1000);
+                var month = dates.getMonth(),
+                    days = dates.getDate(),
+                    hours = dates.getHours(),
+                    minutes = dates.getMinutes(),
+                    seconds = dates.getSeconds();
 
-            return `${month}月${days}日 ${hours}:${minutes}:${seconds}`;
-          },
+                month = month < 10 ? `0${month}` : month;
+                days = days < 10 ? `0${days}` : days;
+                hours = hours < 10 ? `0${hours}` : hours;
+                minutes = minutes < 10 ? `0${minutes}` : minutes;
+                seconds = seconds < 10 ? `0${seconds}` : seconds;
+
+                return `${month}月${days}日 ${hours}:${minutes}:${seconds}`;
+              },
         },
         events:{
             'changeSort':function(msg){
