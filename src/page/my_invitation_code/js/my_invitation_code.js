@@ -8,6 +8,7 @@ import encrypt from '../../../common/js/module/encrypt.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
+import ua from '../../../common/js/module/ua.js';
 import share from '../../../common/js/module/share.js';
 import nativeAncestry from '../../../common/js/module/nativeAncestor.js';
 
@@ -28,7 +29,17 @@ new Vue({
       show_pop: false
     }
   },
-  computed: {},
+  computed: {
+    vossion:function () {
+      let nowv =  ua.getDvdAppVersion();
+      let comper = ua.compareVersion(nowv,'4.1.0');
+      if(comper == 1){
+        return true;
+      }else{
+        return false;
+      }
+    }
+  },
   watch: {
     // 监听response变化
     response() {
