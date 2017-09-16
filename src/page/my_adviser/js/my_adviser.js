@@ -82,7 +82,8 @@ new Vue({
   },
   methods: {
     dump2choose() {
-      location.replace("/choose_mama_adviser.html");
+      popup.toast("更换算法正在优化中...");
+      // location.replace("/choose_mama_adviser.html");
     },
     /**
      * 接口名称:
