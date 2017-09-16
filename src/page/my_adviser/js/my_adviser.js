@@ -82,7 +82,7 @@ new Vue({
   },
   methods: {
     dump2choose() {
-      popup.toast("更换算法正在优化中...");
+      popup.toast("更换顾问算法正在更新中...");
       // location.replace("/choose_mama_adviser.html");
     },
     /**
