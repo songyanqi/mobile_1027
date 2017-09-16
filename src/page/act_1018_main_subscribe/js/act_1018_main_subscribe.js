@@ -107,7 +107,7 @@ new Vue({
       $.ajax({
         cache: false,
         async: true,
-        url: '/api/mg/sale/explosion/getGoodsList111?_=' + Date.now(),
+        url: '/api/mg/sale/explosion/getGoodsList11?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
         data: encrypt({
@@ -170,12 +170,13 @@ new Vue({
     btnClickSubscribe(goods) {
       let ts = this;
       if (ua.isDvdApp()) {
+        debugger
         native.Browser.goodsBook({
           goodsId: goods.goodsId,
           goodsTitle: goods.goodsName,
           goodsImage: goods.imageUrl,
           // goodsStartTime: goods.startTime,
-          goodsStartTime: new Date(Date.now() + 5 * 60 * 1000), // 开始时间设置为5分钟后
+          goodsStartTime: parseInt(Date.now() / 1000 + 5 * 60), // 开始时间设置为5分钟后
           goodsUrl: `${location.origin}/${goods.goodsId}.html`,
           goodsListUrl: location.href,
           success() {
