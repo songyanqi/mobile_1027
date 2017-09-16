@@ -128,6 +128,8 @@
   </div>
 </template>
 <script>
+  // 基础模块
+  import common from '../../../common/js/common.js';
   import popup from '../../../common/js/module/popup.js';
   import ua from '../../../common/js/module/ua.js';
   import strSign from '../../../common/js/module/encrypt.js';

@@ -45,6 +45,8 @@
   </div>
 </template>
 <script>
+  // 基础模块
+  import common from '../../../common/js/common.js';
   import encrypt from '../../../common/js/module/encrypt.js';
   import popup from '../../../common/js/module/popup.js';
 
