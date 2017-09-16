@@ -34,6 +34,7 @@
         <div class="goods_info_title">
           棕色的熊、棕色的熊，你在看什么？（纸板书，适合0-3岁）
         </div>
+        <div class="order_good_price"><span class="f_l">10.18活动价<em class="price_symbol">￥</em><span>109</span></span> <span class="membership_crown_pre"><em>￥</em>199</span></div>
       </div>
     </div>
     <!--板-->
@@ -215,7 +216,10 @@
     .goods_info_desc{
       margin-left: 0.9rem;
       .goods_info_title{
-
+        height: 0.4rem;
+        line-height: 0.2rem;
+        color: #FFFFFF;
+        font-size: 14px;
       }
     }
   }
@@ -315,6 +319,12 @@
       padding-left: 0.1rem;
     }
   }
-
+  .order_good_price {
+    font-size: 0.16rem;
+    height: 0.16rem;
+    line-height: 0.16rem;
+    color: #FF4A7D;
+    padding-top: 0.05rem;
+  }
   
 </style>
