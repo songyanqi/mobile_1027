@@ -15,7 +15,7 @@
       },
       {
         "timeMenu": "10:00",
-        "menu": "已开枪",
+        "menu": "已开抢",
         "screenings": "10"
       },
       {
@@ -25,12 +25,12 @@
       },
       {
         "timeMenu": "16:00",
-        "menu": "等待开枪",
+        "menu": "等待开抢",
         "screenings": "16"
       },
       {
         "timeMenu": "20:00",
-        "menu": "等待开枪",
+        "menu": "等待开抢",
         "screenings": "20"
       },
       {
@@ -40,7 +40,7 @@
       },
       {
         "timeMenu": "20:00",
-        "menu": "等待开枪",
+        "menu": "等待开抢",
         "screenings": "20"
       }
     ],

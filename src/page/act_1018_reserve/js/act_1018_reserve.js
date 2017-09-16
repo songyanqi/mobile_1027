@@ -8,10 +8,10 @@ import $ from '$';
 new Vue({
 	el: ".app",
 	component: {
-		'com-top-title': require('../../../component/com-top-title.vue'),
-    	'com-act-reserve': require('../vue/com-act-reserve.vue')
+        // 'com-top-title': require('../../../component/com-top-title.vue'),
+    	// 'com-act-reserve': require('../vue/com-act-reserve.vue')
 	},
-	data: {
+	data() {
 		return {
       response: null,
     }

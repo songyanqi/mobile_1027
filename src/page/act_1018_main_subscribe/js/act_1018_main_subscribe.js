@@ -23,6 +23,8 @@ login.needLogin();
 // 懒加载初始化
 vueLazyload.init();
 
+let tttt = parseInt(Date.now() / 1000 + 6 * 60);
+
 // 渲染页面
 new Vue({
   el: ".app",
@@ -107,7 +109,7 @@ new Vue({
       $.ajax({
         cache: false,
         async: true,
-        url: '/api/mg/sale/explosion/getGoodsList?_=' + Date.now(),
+        url: '/api/mg/sale/explosion/getGoodsList1?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
         data: encrypt({
@@ -115,6 +117,7 @@ new Vue({
           screenings: screenings,
         }),
         success(response) {
+          common.checkRedirect(response);
           if (screenings === 0) {
             ts.response = response;
           } else {
@@ -123,12 +126,12 @@ new Vue({
           }
         },
         error(error) {
-          // if (screenings === 0) {
-          //   ts.response = require('../json/list.json');
-          // } else {
-          //   ts.response.data.dataList = require('../json/list-1.json').data.dataList;
-          //   ts.$forceUpdate();
-          // }
+          if (screenings === 0) {
+            ts.response = require('../json/list.json');
+          } else {
+            ts.response.data.dataList = require('../json/list-1.json').data.dataList;
+            ts.$forceUpdate();
+          }
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
@@ -174,21 +177,21 @@ new Vue({
           goodsId: goods.goodsId,
           goodsTitle: goods.goodsName,
           goodsImage: goods.imageUrl,
-          // goodsStartTime: goods.startTime,
-          goodsStartTime: new Date(Date.now() + 5 * 60 * 1000), // 开始时间设置为5分钟后
+          // goodsStartTime: goods.sTime,
+          // goodsStartTime: parseInt(Date.now() / 1000 + 5 * 60), // 开始时间设置为5分钟后
+          goodsStartTime: tttt, // 开始时间设置为5分钟后
           goodsUrl: `${location.origin}/${goods.goodsId}.html`,
           goodsListUrl: location.href,
           success() {
-            alert('success');
             // 放入localStorage
             this.subscribe_1018_goods_ids.push(goods.goodsId);
             localStorage.setItem('subscribe_1018_goods_ids', JSON.stringify(this.subscribe_1018_goods_ids));
-            popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
+            //已改为由app弹 popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
             goods.buttonName = '已设预约';
+            ts.$forceUpdate()
           },
           error() {
-            alert('error');
-            debugger
+
           }
         }, true);
       } else {
