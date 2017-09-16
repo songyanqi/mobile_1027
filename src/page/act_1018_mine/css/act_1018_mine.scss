@@ -8,10 +8,11 @@
       #FFA000 ptr(854), #DD0311 ptr(1890),
       #FF4363 ptr(1890), #FF3857 ptr(3000)
   );
-  background-size: contain;
+  background-size: 100% auto;
   //background-size: 100% 100%;
   //background-size: cover;
   padding-bottom: ptr(74);
+  min-height: ptr(600);
 
   .com-top-title {
     z-index: 2;
@@ -20,6 +21,7 @@
   /*个人信息*/
   .g-info {
     margin-top: ptr(25);
+    height: ptr(58);
     display: flex;
     color: white;
     .head-pic {
@@ -32,6 +34,11 @@
       display: block;
       margin-right: ptr(10);
       .nickname {
+        margin-top: ptr(20);
+        font-size: ptr(15);
+        line-height: ptr(21);
+      }
+      .prize-nickname {
         margin-top: ptr(5);
         font-size: ptr(15);
         line-height: ptr(21);
@@ -55,8 +62,9 @@
 
   /*周年庆按钮*/
   .g-head-btn {
-    margin: ptr(45) auto 0 ptr(50);
+    margin: ptr(40) auto 0 ptr(50);
     width: ptr(263);
+    height: ptr(59);
   }
 
   /*我的活动*/
@@ -223,6 +231,7 @@
       }
       .more {
         margin: ptr(9) auto auto;
+        padding-top: ptr(2);
         width: ptr(117);
         @include height(ptr(25));
         background: #FFE0C5;
@@ -608,6 +617,7 @@
             .price {
               margin-top: ptr(8);
               color: #FF4A7D;
+              font-size: 0;
               .price-symbol {
                 font-size: ptr(12);
               }

@@ -621,22 +621,56 @@
     ],
     "drawRecord": [
       {
-        "imageUrl": "图标",
-        "title": "标题",
-        "desc": "描述",
-        "抽奖时间": "2017.10.22 06:01:12"
+        "type": "1",
+        "time": "1505543917"
       }
     ],
     "willBuy": [
       {
-        "imageUrl": "图片下载地址",
-        "title": "商品标题",
-        "nowPrice": "价格",
-        "actInfo": "活动信息",
-        "incomeInfo": "佣金信息",
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "title": "来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品",
+        "nowPrice": "111.23",
+        "actInfo": "满100减50",
+        "incomeInfo": "171.6",
         "statusInfo": "状态信息",
         "command": {
-          "content": "点击时的动作",
+          "content": "/58784.html?rp=index&rl=timeshop_goods-560-58784",
+          "log": "统计动作"
+        }
+      },
+      {
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "title": "来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品",
+        "nowPrice": "111",
+        "actInfo": "满100减50",
+        "incomeInfo": "171.6",
+        "statusInfo": "状态信息",
+        "command": {
+          "content": "/58784.html?rp=index&rl=timeshop_goods-560-58784",
+          "log": "统计动作"
+        }
+      },
+      {
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "title": "来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品",
+        "nowPrice": "111.23",
+        "actInfo": "满100减50",
+        "incomeInfo": "171.6",
+        "statusInfo": "状态信息",
+        "command": {
+          "content": "/58784.html?rp=index&rl=timeshop_goods-560-58784",
+          "log": "统计动作"
+        }
+      },
+      {
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "title": "来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品",
+        "nowPrice": "111.23",
+        "actInfo": "满200减50",
+        "incomeInfo": "171.6",
+        "statusInfo": "状态信息",
+        "command": {
+          "content": "/58784.html?rp=index&rl=timeshop_goods-560-58784",
           "log": "统计动作"
         }
       }
