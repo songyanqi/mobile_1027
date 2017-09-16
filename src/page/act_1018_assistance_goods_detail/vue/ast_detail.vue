@@ -5,7 +5,7 @@
       <img class="main_banner" :src="good.goodsImage">
       <div class="count_down">
         <span>10.18周年庆0元抢爆品</span><br>
-        <span>距助力结束：{{overTimee}}</span>
+        <span>距助力结束：{{overTimes | formatRemainTime}}</span>
       </div>
       <!--商品名称-->
       <div class="goods_title">
@@ -72,9 +72,6 @@
     computed: {
       goodsId: function () {
         return location.pathname.split("_")[1].split(".")[0];
-      },
-      overTimee: function () {
-        return this.formatRemainTime(this.overTimes);
       }
     },
     watch: {
@@ -93,7 +90,7 @@
                 "link": ts.shareInfo.link,
                 "shareDesc": ts.shareInfo.desc,
                 success:function () {
-
+                  that.sharecallback();
                 }
               });
             } catch (err) {
@@ -133,27 +130,6 @@
           }
         });
       },
-      /**
-       * 格式化倒计时
-       */
-      formatRemainTime(second) {
-        let format = '';
-        let oneMinute = 60,
-          oneHour = 60 * 60,
-          oneDay = 60 * 60 * 24;
-        if (second >= oneDay) {
-          format = `剩余时间: ${parseInt(second / oneDay)}天${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
-        } else if (second >= oneHour) {
-          format = `剩余时间: ${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
-        } else if (second >= oneMinute) {
-          format = `剩余时间: ${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
-        } else if (second > 0) {
-          format = `剩余时间: ${second}秒`;
-        } else if (second <= 0) {
-          format = '已开始';
-        }
-        return format;
-      },
       deltime: function () {
         var ts = this;
         setInterval(function () {
@@ -172,7 +148,7 @@
           link: that.shareInfo.link,
           shareDesc: that.shareInfo.desc,
           success: function () {
-
+              that.sharecallback();
           }
         })
       },
@@ -181,10 +157,45 @@
        * */
       sharecallback: function () {
         var that = this;
+        $.ajax({
+          cache: false,
+          async: true,
+          url: this.moke + '/api/mg/sale/userHelpBuy/userShareGoods?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: encrypt({goodsId: that.goodsId}),
+          success() {
 
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+          }
+        });
       }
     },
-    filters: {},
+    filters: {
+      /**
+       * 格式化时间
+       * */
+      formatRemainTime(second) {
+        let format = '';
+        let oneMinute = 60,
+          oneHour = 60 * 60,
+          oneDay = 60 * 60 * 24;
+        if (second >= oneDay) {
+          format = `剩余时间: ${parseInt(second / oneDay)}天${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+        } else if (second >= oneHour) {
+          format = `剩余时间: ${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+        } else if (second >= oneMinute) {
+          format = `剩余时间: ${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+        } else if (second > 0) {
+          format = `剩余时间: ${second}秒`;
+        } else if (second <= 0) {
+          format = '已开始';
+        }
+        return format;
+      }
+    },
   }
 </script>
 <style lang="sass" lang="scss" rel="stylesheet/scss">
