@@ -70,7 +70,7 @@ function getProtocal(param = {}) {
 
   // 拼接唤起native协议
   let protocal = `davdian:\/\/call.${param.host}.com?action=${param.action}&params=${encodeURIComponent(JSON.stringify(param.param))}&callback=${callbackName}&minv=${param.v}`;
-  // alert(protocal)
+
   return protocal;
 }
 
@@ -101,14 +101,19 @@ function innerCall(param = {}) {
     // 客户端端内调用协议
     let protocal = getProtocal(param);
 
-    // 打印协议
-    console.log(protocal);
+    // 是否输出调试信息
+    if (param.debug) {
+      // 在页面底部打印调用native协议
+      let logDom = document.createElement('div');
+      logDom.style.margin = '10px';
+      logDom.textContent = protocal;
+      document.body.appendChild(logDom);
+    }
 
-    // logger
-    console.log(`location.href方式唤起native,协议为: ${protocal}`);
+    // 日志
+    console.log(protocal);
 
     // 调用native
-    console.log(protocal);
     location.href = protocal;
   } else {
     // 版本错误提示
@@ -523,12 +528,13 @@ const native = {
         goodsListUrl: '商品列表链接'
       });
      */
-    goodsBook(param = {}){
+    goodsBook(param = {}, debug = false){
       call({
         v: '5.1.0',
         host: 'Browser',
         action: 'goodsBook',
-        param: param
+        param: param,
+        debug: debug
       });
     }
   },

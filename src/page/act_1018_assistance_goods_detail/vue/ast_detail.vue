@@ -1,5 +1,5 @@
 <template>
-  <div style="font-weight: normal;">
+  <div style="font-weight: normal;" v-if="response">
     <!--商品详情主图-->
     <div v-for="good in response.data">
       <img class="main_banner" :src="good.goodsImage">
@@ -39,10 +39,8 @@
         助力省钱时间：2017年10月1日0:00:00-2017年10月17日23:59:59
       </div>
       <!--按钮-->
-      <div class="main_btn">
-        喊人助力
-      </div>
-      <div class="good_detail">商品详情</div>
+      <div v-if="isWeixin" class="main_btn">点击右上角“···”按钮发起助力</div>
+      <div v-if="isDvdApp" @click="shares" class="main_btn">喊人助力</div>
       <div class="good_detail_imgs">
         <img v-for="imgs in good.details" v-lazy="imgs.detailUrl" v-if="imgs.detailUrl" alt="">
       </div>
@@ -53,6 +51,7 @@
   import encrypt from '../../../common/js/module/encrypt.js';
   import popup from '../../../common/js/module/popup.js';
   import ua from '../../../common/js/module/ua.js';
+  import native from '../../../common/js/module/native.js';
   // 业务模块
   import vueLazyload from '../../../common/js/module/vueLazyload.js';
 
@@ -61,8 +60,12 @@
     props: {},
     data() {
       return {
+        moke: 'http://www.easy-mock.com/mock/59b92127e0dc663341a8cccd',
         response: null,
-        overTimes: null
+        overTimes: null,
+        shareInfo: null,
+        isWeixin: ua.isWeiXin(),
+        isDvdApp: ua.isDvdApp()
       }
     },
     components: {},
@@ -70,8 +73,34 @@
       goodsId: function () {
         return location.pathname.split("_")[1].split(".")[0];
       },
-      overTimee:function () {
+      overTimee: function () {
         return this.formatRemainTime(this.overTimes);
+      }
+    },
+    watch: {
+      // 监听response变化
+      response() {
+        // response变化后并渲染完dom,设置其他事项
+        this.$nextTick(function () {
+          let ts = this;
+          // 设置分享信息
+          if (shareInfo) {
+            try {
+              native.custom.setShareInfo({
+                "title": ts.shareInfo.title,
+                "desc": ts.shareInfo.desc,
+                "imgUrl": ts.shareInfo.imgUrl,
+                "link": ts.shareInfo.link,
+                "shareDesc": ts.shareInfo.desc,
+                success:function () {
+
+                }
+              });
+            } catch (err) {
+              console.error(err);
+            }
+          }
+        });
       }
     },
     created() {
@@ -90,7 +119,7 @@
         $.ajax({
           cache: false,
           async: true,
-          url: 'http://www.easy-mock.com/mock/59b92127e0dc663341a8cccd/api/mg/sale/userHelpBuy/getHelpGoodsDetail?_=' + Date.now(),
+          url: this.moke + '/api/mg/sale/userHelpBuy/getHelpGoodsDetail?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId}),
@@ -126,16 +155,29 @@
         return format;
       },
       deltime: function () {
-        var ts  =this;
+        var ts = this;
         setInterval(function () {
           ts.overTimes--;
         }, 1000)
+      },
+      /***
+       * 分享
+       * */
+      shares: function () {
+        var that = this;
+        native.custom.share({
+          title: that.shareInfo.title,
+          desc: that.shareInfo.desc,
+          imgUrl: that.shareInfo.imgUrl,
+          link: that.shareInfo.link,
+          shareDesc: that.shareInfo.desc,
+          success: function () {
+
+          }
+        })
       }
     },
-    filters: {
-
-    },
-    watch: {},
+    filters: {},
   }
 </script>
 <style lang="sass" lang="scss" rel="stylesheet/scss">
@@ -259,15 +301,10 @@
     text-align: center;
   }
 
-  .good_detail {
-    font-size: 12px;
-    color: #666666;
-    text-align: center;
-    padding: 10px;
-  }
-  .good_detail_imgs{
-    img{
+  .good_detail_imgs {
+    img {
       width: 100%;
+      display: inherit;
     }
   }
 </style>

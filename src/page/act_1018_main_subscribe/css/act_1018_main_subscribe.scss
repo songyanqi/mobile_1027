@@ -51,22 +51,27 @@
       display: flex;
       .pic {
         margin-left: ptr(5);
-        width: ptr(120);
-        height: ptr(120);
+        @include square(ptr(120));
+        img {
+          @include square(ptr(120));
+        }
       }
       .info {
         flex: 1;
         padding: 0 ptr(10);
+        max-width: ptr(230);
         .name {
           margin-top: ptr(5);
           font-size: ptr(15);
           @include height(ptr(22));
+          @include ellipsis;
         }
         .desc {
           margin-top: ptr(6);
           font-size: ptr(12);
           color: #999999;
           @include height(ptr(17));
+          @include ellipsis;
         }
         .status {
           margin-top: ptr(15);

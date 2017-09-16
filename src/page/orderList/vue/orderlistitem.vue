@@ -36,7 +36,7 @@
             <span class="pull-right dav-red" v-show = "item.is_expire && item.is_new_seller_order">已关闭</span>
             <!-- 预定商品 -->
             <span class="pull-right dav-red" v-show = "item.is_presale_order && item.presale_info == 'reserve'">待支付定金</span>
-            <span class="pull-right dav-red" v-show = "item.is_presale_order && item.presale_info == 'final'">待支付尾款</span>
+            <span class="pull-right dav-red" v-show = "item.type == 2 && item.is_presale_order && item.presale_info == 'final'">待支付尾款</span>
         </div>
         <a class="order_good_list" href="/o-{{item.order_id}}.html" v-if = '!item.is_delivery' v-bind = 'handleCurrentPage'>
             <div class="img_container">
@@ -222,6 +222,7 @@
             }
         },
         created:function(){
+            console.log(123456);
           let that = this;
           this.isapp = this.isApp();
 
