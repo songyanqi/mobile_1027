@@ -7,8 +7,8 @@
       <div class="banner_rute"></div>
       <div class="rute_title">点亮规则</div>
       <div class="rute_list">
-        <div class="rute_1">1. 点亮规则点亮规则点亮规则点亮规则点亮规则点亮规则</div>
-        <div class="rute_1">2. 点亮规则点亮规则点亮规则点亮规则点亮规则点亮规则</div>
+        <div class="rute_1">1. 10.18周年庆期间（10.18-10.22），为了回馈我们的妈妈们，品牌活动优惠力度由大家点亮来决定。</div>
+        <div class="rute_1">2. 每个品牌都设定了最高优惠的指定点亮人数，达到最高人数即可享最高优惠。</div>
       </div>
     </div>
     <div class="all_list">
@@ -188,7 +188,7 @@
   }
 
   .banner_rute{
-    height: 0.87rem;
+    height: 1.24rem;
     background: #FFFFFF;
     opacity:0.15;
     color:#FFFFFF;
@@ -210,7 +210,10 @@
     font-size:12px;
     width: 100%;
     text-align: center;
-    margin-top: 0.05rem;
+    margin-top: 0.08rem;
+    max-width: 3.25rem;
+    margin-left: 0.25rem;
+    line-height: 0.17rem;
   }
   .rute_list{
     width: 100%;

@@ -73,7 +73,7 @@
       var that=this;
       var json=require("../json/myLightBrand.json");
       this.dataList=json.data;
-      that.initIsLighted(this.dataList);
+//      that.initIsLighted(this.dataList);
 //      api("/api/mg/sale/explosion/getCenterBands")
 //        .then(function (result) {
 //            if(result.code==0){
