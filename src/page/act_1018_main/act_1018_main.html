@@ -57,10 +57,11 @@
       <!--<com-act-assistance :response="response" v-if="response.data.help" :current-date="currentDate"></com-act-assistance>-->
 
       <!--品牌点亮-->
-      <!--<com-act-xxx :response="response" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-xxx>-->
+      <!--<com-act-lightBrand :response="response" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightBrand>-->
+      <com-act-lightBrand :response="response" :current-date="currentDate"></com-act-lightBrand>
 
       <!--爆品预约-->
-      <com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>
+      <!--<com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>-->
 
       <!--商品预定-->
       <!--<com-act-xxx :response="response" v-if="response.data.book" :current-date="currentDate"></com-act-xxx>-->

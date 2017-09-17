@@ -74,6 +74,7 @@
   import api from "../../../../utils/api.es6"
   import dialog from "../../../../utils/dialog.es6"
   export default{
+    props:["currentDate"],
     data(){
       return {
         dataList:[],

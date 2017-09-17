@@ -28,6 +28,7 @@ new Vue({
     'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
     'com-footer': require('../../../component/com-footer.vue'),
     'com-act-subscribe': require('../vue/com-act-subscribe.vue'),
+    'com-act-lightBrand': require('../vue/lightBrand.vue'),
     'com-act-assistance': require('../../act_1018_assistance/vue/com-act-assistance.vue'),
   },
   data() {
@@ -91,8 +92,8 @@ new Vue({
   beforeCreate() {
   },
   created() {
-    this.getData();
-    this.getTopics();
+    // this.getData();
+    // this.getTopics();
   },
   mounted() {
   },
