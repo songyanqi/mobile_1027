@@ -875,7 +875,7 @@ export default {
     getFinalPay() {
       let goPayAdvanceList = [];
       this.dataExtraList.map((item) => {
-        if (item.goPayAdvance.length) {
+        if (item.goPayAdvance && item.goPayAdvance.length) {
           goPayAdvanceList.push(item);
         }
       });
