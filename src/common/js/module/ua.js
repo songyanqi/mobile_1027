@@ -163,7 +163,7 @@ Ua.prototype = {
    * @returns {true | false}
    * android(正式环境):	Mozilla/5.0 (Linux; Android 7.0; MI 5 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36 android.davdian.com/3.6.2
    * android(beta环境):	Mozilla/5.0 (Linux; Android 7.0; MI 5 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36 android.vyohui.cn/3.7.0/dvddomain=1
-   * ios
+   * ios(正式环境):	Mozilla/5.0 (iPhone; CPU iPhone OS 8_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12D508 ios.davdian.com/5.0.0 /WebView=WKWeb
    */
   isDvdApp: function(){
     return this.getFromCache('isDvdApp', ['davdian', 'vyohui', 'bravetime']);
