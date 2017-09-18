@@ -34,6 +34,17 @@ new Vue({
       url: ''
     }
   },
+  computed: {
+    currentDate(){
+      let now = '';
+      if (param.get('deviceTime') !== undefined) {
+        now = Date.now();
+      } else if (this.response) {
+        now = this.response.sys_time + '000';
+      }
+      return date.format(now, 'yyyy-MM-dd');
+    },
+  },
   mounted() {
     let ts = this;
     ts.getData();

@@ -9,7 +9,7 @@ import Cookies from 'js-cookie';
 // 业务模块
 import encrypt from '../../../common/js/module/encrypt.js';
 import util from '../../../common/js/module/util.js';
-import tj from '../../../common/js/module/tj.js';
+import param from '../../../common/js/module/param.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import ua from '../../../common/js/module/ua.js';
@@ -21,9 +21,7 @@ import vueLazyload from '../../../common/js/module/vueLazyload.js';
 login.needLogin();
 
 // 懒加载初始化
-vueLazyload.init();
-
-// let tttt = parseInt(Date.now() / 1000 + 6 * 60);
+vueLazyload.init(true);
 
 // 渲染页面
 new Vue({
@@ -44,7 +42,17 @@ new Vue({
       subscribe_1018_goods_ids: localStorage.getItem('subscribe_1018_goods_ids') ? JSON.parse(localStorage.getItem('subscribe_1018_goods_ids')) : [],
     }
   },
-  computed: {},
+  computed: {
+    currentDate(){
+      let now = '';
+      if (param.get('deviceTime') !== undefined) {
+        now = Date.now();
+      } else if (this.response) {
+        now = this.response.sys_time + '000';
+      }
+      return date.format(now, 'yyyy-MM-dd');
+    },
+  },
   watch: {
     // 监听response变化
     response(){
@@ -86,10 +94,10 @@ new Vue({
         // 设置分享信息
         try {
           share.setShareInfo({
-            title: ts.response.data.shareTitle,
-            desc: ts.response.data.shareDesc,
+            title: '测试title疯抢好货 提前预约',
+            desc: '测试desc疯抢好货 提前预约',
             link: location.href,
-            imgUrl: ts.response.data.shareImg
+            imgUrl: '[[static]]/page/act_1018_main_subscribe/img/share.png'
           });
         } catch (err) {
           console.error(err);
