@@ -1219,10 +1219,12 @@ jQuery(document).ready(function ($) {
         if (presale_type == "final") {
           $(".orderSuccess").show();
         }
+        if (is_final_paytime_end == "1") {
+          $(".orderSuccess").hide();
+          $(".order_presale").html("<div class = 'overCutDown'>尾款超时支付，交易关闭</div>");
+        }
       }
-      if (presale_type == "final" && presale_surplus_time == "0") {
-        
-      }
+      
       // 尾款单未支付时判
       if (final_paid == "0") {
         if (presale_type == "reserve") {
