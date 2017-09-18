@@ -31,7 +31,7 @@
             <span class="start_value2" v-text="item.highDiscount"></span>
           </div>
 
-          <div class="list_need">还需<span v-text="item.remainLight"></span>人点亮</div>
+          <div class="list_need">还需<span v-text="remainLight[index]"></span>人点亮</div>
 
           <div class="list_button" v-if="isLighted[index]!=1" @click="light(item.bandId,index)">
             <div class="btn" >
@@ -66,34 +66,35 @@
     data(){
       return {
         dataList:[],
-        isLighted:[]
+        isLighted:[],
+        isShow:-1,
+        remainLight:[]
       }
     },
     mounted(){
       var that=this;
-      var json=require("../json/myLightBrand.json");
-      this.dataList=json.data;
-//      that.initIsLighted(this.dataList);
-//      api("/api/mg/sale/explosion/getCenterBands")
-//        .then(function (result) {
-//            if(result.code==0){
-//              if(result.data){
-//                that.dataList=result.data;
-//                that.initIsLighted(result.data);
-//              }
-//            }else{
-//              if(result.data.msg){
-//                dialog.alert('code:'+result.code+":msg"+result.data.msg);
-//              }else{
-//                dialog.alert('code:'+result.code);
-//              }
-//            }
-//            console.log(result.data);
-//        })
-//        .catch(function (e) {
-//          dialog.alert(e);
-//        })
+      that.initIsLighted(this.dataList);
+      api("/api/mg/sale/bandLitUp/getCenterBands")
+        .then(function (result) {
+            if(result.code==0){
+              if(result.data){
+                that.dataList=result.data.dataList;
+                that.isShow=result.data.isShow;
+                that.initIsLighted(result.data.dataList);
+                that.initNeedCount(result.data.dataList);
+              }
+            }else{
+              if(result.data.msg){
+                dialog.alert('code:'+result.code+":msg"+result.data.msg);
+              }else{
+                dialog.alert('code:'+result.code);
+              }
+            }
+            console.log(result.data);
+        })
+        .catch(function (e) {
 
+        })
     },
     methods:{
       initIsLighted(data){
@@ -102,40 +103,49 @@
           that.isLighted.push(item.isLighted);
         });
       },
+      initNeedCount(){
+        var that=this;
+        data.map(function (item) {
+          that.remainLight.push(item.remainLight);
+        });
+      },
       changeIsLighted(index){
         console.log(index);
         Vue.set(this.isLighted,index,1);
         //变异方法
       },
+      changeNeedCount(index){
+        Vue.set(this.remainLight,index,this.remainLight[index]-1);
+      },
       light(bandId,index){
         var that=this;
-        that.changeIsLighted(index);
-//        var obj={
-//            "bandId":bandId
-//        };
-//        api("/api/mg/sale/explosionBand/lightUp",obj)
-//          .then(function (result) {
-//            if(result.code==0){
-//              if(result.data.success==1){
-//                that.changeIsLighted(index);
-//              }else{
-//                if(result.data.msg){
-//                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
-//                }else{
-//                  dialog.alert('code:'+result.code);
-//                }
-//              }
-//            }else{
-//              if(result.data.msg){
-//                dialog.alert('code:'+result.code+":msg"+result.data.msg);
-//              }else{
-//                dialog.alert('code:'+result.code);
-//              }
-//            }
-//          })
-//          .catch(function (e) {
-////          dialog.alert(e);
-//          })
+        var obj={
+            "bandId":bandId
+        };
+        api("/api/mg/sale/bandLitUp/lightUp",obj)
+          .then(function (result) {
+            if(result.code==0){
+              if(result.data.success==1){
+                that.changeIsLighted(index);
+                that.changeNeedCount(index);
+              }else{
+                if(result.data.msg){
+                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                }else{
+                  dialog.alert('code:'+result.code);
+                }
+              }
+            }else{
+              if(result.data.msg){
+                dialog.alert('code:'+result.code+":msg"+result.data.msg);
+              }else{
+                dialog.alert('code:'+result.code);
+              }
+            }
+          })
+          .catch(function (e) {
+//          dialog.alert(e);
+          })
       }
 //      autoFontSize(){
 //        var html=$("html").css("fontSize").replace("px","");

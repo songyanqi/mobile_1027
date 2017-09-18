@@ -1,159 +1,195 @@
 <template>
   <div>
-    <div class="banner">
-      <div class="big_img"><img src="//pic.davdian.com/free/2017/09/09/banner.png" alt=""></div>
-      <div class="banner_title">2017最受欢迎的TOP品牌</div>
-      <div class="banner_name">点亮品牌 10.18 优惠由你定</div>
-      <div class="banner_rute"></div>
-      <div class="rute_title">点亮规则</div>
-      <div class="rute_list">
-        <div class="rute_1">1. 10.18周年庆期间（10.18-10.22），为了回馈我们的妈妈们，品牌活动优惠力度由大家点亮来决定。</div>
-        <div class="rute_1">2. 每个品牌都设定了最高优惠的指定点亮人数，达到最高人数即可享最高优惠。</div>
-      </div>
-    </div>
-    <div class="all_list">
-      <div class="list" v-for="(item,index) in dataList">
-        <div class="list_b_img">
-          <img :src="item.bandPic" alt="">
+    <template v-if="isShow==1">
+      <div class="banner">
+        <div class="big_img"><img src="//pic.davdian.com/free/2017/09/09/banner.png" alt=""></div>
+        <div class="banner_title">2017最受欢迎的TOP品牌</div>
+        <div class="banner_name">点亮品牌 10.18 优惠由你定</div>
+        <div class="banner_rute"></div>
+        <div class="rute_title">点亮规则</div>
+        <div class="rute_list">
+          <div class="rute_1">1. 10.18周年庆期间（10.18-10.22），为了回馈我们的妈妈们，品牌活动优惠力度由大家点亮来决定。</div>
+          <div class="rute_1">2. 每个品牌都设定了最高优惠的指定点亮人数，达到最高人数即可享最高优惠。</div>
         </div>
+      </div>
+      <div class="all_list">
+        <div class="list" v-for="(item,index) in dataList">
+          <div class="list_b_img">
+            <img :src="item.bandPic" alt="">
+          </div>
 
-        <div class="list_bottom" v-if="item.hotDay==-1">
+          <div class="list_bottom" v-if="item.hotDay==-1">
 
-          <template v-if="item.isCompleted!=1">
-            <div class="list_start">
-              <img class="start" src="//pic.davdian.com/free/2017/09/09/start_icon.png" alt="">
-              <span class="start_value" v-text="item.lowDiscount"></span>
-            </div>
-            <div class="line"></div>
-          </template>
-
-          <template v-if="item.isCompleted==1">
-            <div class="success">
-              <div style="position: absolute;">
-                <img src="//pic.davdian.com/free/2017/09/09/com.png" alt="">
+            <template v-if="item.isCompleted!=1">
+              <div class="list_start">
+                <img class="start" src="//pic.davdian.com/free/2017/09/09/start_icon.png" alt="">
+                <span class="start_value" v-text="item.lowDiscount"></span>
               </div>
-              <div class="text">目标达成</div>
-            </div>
-            <div class="line_suc"></div>
-          </template>
+              <div class="line"></div>
+            </template>
 
-          <div class="list_end">
-            <img class="start2" src="//pic.davdian.com/free/2017/09/09/end_icon.png" alt="">
-            <span class="start_value2" v-text="item.highDiscount"></span>
+            <template v-if="item.isCompleted==1">
+              <div class="success">
+                <div style="position: absolute;">
+                  <img src="//pic.davdian.com/free/2017/09/09/com.png" alt="">
+                </div>
+                <div class="text">目标达成</div>
+              </div>
+              <div class="line_suc"></div>
+            </template>
+
+            <div class="list_end">
+              <img class="start2" src="//pic.davdian.com/free/2017/09/09/end_icon.png" alt="">
+              <span class="start_value2" v-text="item.highDiscount"></span>
+            </div>
+
+            <div class="list_need">还需<span v-text="remainLight[index]"></span>人点亮</div>
+
+            <div class="list_button" v-if="isLighted[index]!=1" @click="light(item.bandId,index)">
+              <div class="btn" >
+                <img src="//pic.davdian.com/free/2017/09/09/Group.png" alt="">
+              </div>
+            </div>
+
+            <div class="list_button" v-if="isLighted[index]==1">
+              <div class="btn">
+                <img src="//pic.davdian.com/free/2017/09/09/Group2.png" alt="">
+              </div>
+            </div>
+
           </div>
 
-          <div class="list_need">还需<span v-text="item.remainLight"></span>人点亮</div>
-
-          <div class="list_button" v-if="isLighted[index]!=1" @click="light(item.bandId,index)">
-            <div class="btn" >
-              <img src="//pic.davdian.com/free/2017/09/09/Group.png" alt="">
-            </div>
-          </div>
-
-          <div class="list_button" v-if="isLighted[index]==1">
-            <div class="btn">
-              <img src="//pic.davdian.com/free/2017/09/09/Group2.png" alt="">
+          <div class="list_bottom_complete" v-if="item.hotDay==1">
+            <div class="list_end_complete">
+              <img class="start2" src="//pic.davdian.com/free/2017/09/09/end_icon.png" alt="">
+              <span class="start_value2" v-text="item.finalDiscount"></span>
             </div>
           </div>
 
         </div>
-
-        <div class="list_bottom_complete" v-if="item.hotDay==1">
-          <div class="list_end_complete">
-            <img class="start2" src="//pic.davdian.com/free/2017/09/09/end_icon.png" alt="">
-            <span class="start_value2" v-text="item.finalDiscount"></span>
-          </div>
-        </div>
-
       </div>
+    </template>
+
+
+    <div class="error" v-if="isShow==-1 && !isApp">
+      <div class="mask"></div>
+      <img class="mask_img" src="//pic.davdian.com/free/2017/09/16/nosale.png" alt="">
+      <div class="mask_text">
+        <div>活动已结束</div>
+        <div>关注更多精彩活动</div>
+      </div>
+      <div class="button" @click="go_href">去店铺逛逛</div>
     </div>
-
-    <div class="error" v-if="isShow==-1">
-
+    <div class="error" v-if="isShow==-1 && isApp">
+      <div class="mask2"></div>
+      <img class="mask_img" src="//pic.davdian.com/free/2017/09/16/nosale.png" alt="">
+      <div class="mask_text">
+        <div>活动已结束</div>
+        <div>关注更多精彩活动</div>
+      </div>
+      <div class="button" @click="go_href">去店铺逛逛</div>
     </div>
-
   </div>
 </template>
 <script>
   import api from "../../../../utils/api.es6"
   import dialog from "../../../../utils/dialog.es6"
+  import util from "../../../../utils/utils.es6"
   export default{
     data(){
         return {
            dataList:[],
            isLighted:[],
-           isShow:-1
+           isShow:0,
+            remainLight:[],
+            styleObject:{},
+          isApp:util.utils.isApp()
         }
     },
+
     mounted(){
       var that=this;
-      var json=require("../json/lightBrand.json");
-      this.dataList=json.data.dataList;
-      that.initIsLighted(this.dataList);
-      that.isshow=json.data.isShow;
-//      api("/api/mg/sale/explosion/getCenterBands")
-//        .then(function (result) {
-//            if(result.code==0){
-//              if(result.data){
-//                that.dataList=result.data.dataList;
-//                that.inshow=result.data.isShow;
-//                that.initIsLighted(result.data,dataList);
-//              }
-//            }else{
-//              if(result.data.msg){
-//                dialog.alert('code:'+result.code+":msg"+result.data.msg);
-//              }else{
-//                dialog.alert('code:'+result.code);
-//              }
-//            }
-//            console.log(result.data);
-//        })
-//        .catch(function (e) {
-//          dialog.alert(e);
-//        })
+
+      api("/api/mg/sale/bandLitUp/getCenterBands")
+        .then(function (result) {
+            if(result.code==0){
+              if(result.data){
+                that.dataList=result.data.dataList;
+                that.isShow=result.data.is_show;
+                if(that.isShow==-1){
+                  $("body").css("overflow","hidden")
+                }
+                that.initIsLighted(result.data.dataList);
+                that.initNeedCount(result.data.dataList);
+              }
+            }else{
+              if(result.data.msg){
+                dialog.alert('code:'+result.code+":msg"+result.data.msg);
+              }else{
+                dialog.alert('code:'+result.code);
+              }
+            }
+            console.log(result.data);
+        })
+        .catch(function (e) {
+
+        })
 
     },
     methods:{
+      go_href(){
+        window.location.href="/";
+      },
       initIsLighted(data){
           var that=this;
           data.map(function (item) {
             that.isLighted.push(item.isLighted);
           });
       },
+      initNeedCount(data){
+        var that=this;
+        data.map(function (item) {
+          console.log(item.remainLight);
+          that.remainLight.push(item.remainLight);
+        });
+      },
+      changeNeedCount(index){
+        Vue.set(this.remainLight,index,this.remainLight[index]-1);
+      },
       changeIsLighted(index){
-          console.log(index);
           Vue.set(this.isLighted,index,1);
           //变异方法
       },
       light(bandId,index){
         var that=this;
-        that.changeIsLighted(index);
-//        var obj={
-//            "bandId":bandId
-//        };
-//        api("/api/mg/sale/explosionBand/lightUp",obj)
-//          .then(function (result) {
-//            if(result.code==0){
-//              if(result.data.success==1){
-//                that.changeIsLighted(index);
-//              }else{
-//                if(result.data.msg){
-//                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
-//                }else{
-//                  dialog.alert('code:'+result.code);
-//                }
-//              }
-//            }else{
-//              if(result.data.msg){
-//                dialog.alert('code:'+result.code+":msg"+result.data.msg);
-//              }else{
-//                dialog.alert('code:'+result.code);
-//              }
-//            }
-//          })
-//          .catch(function (e) {
-////          dialog.alert(e);
-//          })
+
+        var obj={
+            "bandId":bandId
+        };
+        api("/api/mg/sale/bandLitUp/lightUp",obj)
+          .then(function (result) {
+            if(result.code==0){
+              if(result.data.success==1){
+                that.changeIsLighted(index);
+                that.changeNeedCount(index);
+              }else{
+                if(result.data.msg){
+                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                }else{
+                  dialog.alert('code:'+result.code);
+                }
+              }
+            }else{
+              if(result.data.msg){
+                dialog.alert('code:'+result.code+":msg"+result.data.msg);
+              }else{
+                dialog.alert('code:'+result.code);
+              }
+            }
+          })
+          .catch(function (e) {
+//          dialog.alert(e);
+          })
       }
 //      autoFontSize(){
 //        var html=$("html").css("fontSize").replace("px","");
@@ -379,5 +415,57 @@
   .btn img{
     width: 0.72rem;
     height: 0.18rem;
+  }
+
+
+  .mask{
+    background: #F1F1F1;
+    position: fixed;
+    top: 44px;
+    left:0;
+    right: 0;
+    bottom: 0;
+  }
+  .mask2{
+    background: #F1F1F1;
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+  }
+  .mask_img{
+    position: fixed;
+    top: 1rem;
+    left: 1.28rem;
+    width: 1.19rem;
+    height: 1.19rem;
+  }
+  .button{
+    display: inline-block;
+    width: 1.95rem;
+    height: 0.4rem;
+    background-image: url("//pic.davdian.com/free/2017/09/16/bg.png");
+    background-size: 1.95rem 0.4rem;
+    background-repeat: no-repeat;
+    line-height: 0.4rem;
+    text-align: center;
+    position: fixed;
+    top: 3.19rem;
+    color:#FFFFFF;
+    font-size:14px;
+    margin-left: 0.9rem;
+  }
+  .mask_text{
+    position: fixed;
+    top: 2.49rem;
+    width: 100%;
+  }
+  .mask_text>div{
+    text-align: center;
+    width: 100%;
+    color:#666666;
+    font-size: 14px;
+    margin-top: 0.05rem;
   }
 </style>

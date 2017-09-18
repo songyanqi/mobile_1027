@@ -113,23 +113,24 @@ export default {
       that.getSkinPackage();
     })
   },
+
   methods: {
     changStyle(json){
       //初始化header透明
-      this.index_header_style.top_container={
-        "background":"none"
-      };
-      this.index_header_style.head={
-        "background":"none"
-      };
-      this.index_header_style.v_menu={
-        "background":"none"
-      };
+      // this.index_header_style.top_container={
+      //   'background': 'hsla(0,0%,98%,0)'
+      // };
+      // this.index_header_style.head={
+      //   'background': 'hsla(0,0%,98%,0)'
+      // };
+      // this.index_header_style.v_menu={
+      //   'background': 'hsla(0,0%,98%,0)'
+      // };
       //背景图片
       this.index_header_style.top0={
-        "backgroundImage":"url("+json["8"].imageFilePath+")",
-        "backgroundSize":"3.75rem 80px"
+        "backgroundImage":"url("+json["8"].imageFilePath+")"
       };
+
       //搜索框的样式
       this.index_header_style.search_input={
         "opacity":json[1].alpha,
@@ -171,6 +172,7 @@ export default {
       this.index_header_style.time_state_span_active={
         "color":"#"+json["9"].textSelectedColor.substr(2)
       };
+
     },
     getSkinPackage(){
       var that = this;
@@ -184,11 +186,11 @@ export default {
           var startTime = item.startTime;
           var endTime = item.endTime;
            if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
+             console.log(item.json);
             that.changStyle(item.json);
            }
         });
       }
-
       // 请求接口取到皮肤存到localStorage
       var obj={
         "elements":JSON.stringify(['skin'])
@@ -213,7 +215,7 @@ export default {
           }
         })
         .catch(function (e) {
-          dialog.alert(e);
+          //dialog.alert(e);
         });
       // if(localStorage.getItem("skinPackage")){
       //   var data3 = JSON.parse((localStorage.getItem("skinPackage")));

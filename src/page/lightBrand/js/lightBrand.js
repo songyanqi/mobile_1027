@@ -47,10 +47,10 @@ new Vue({
         // 设置分享信息
         try {
           share.setShareInfo({
-            title: ts.response.data.shareTitle,
-            desc: ts.response.data.shareDesc,
-            link: location.href,
-            imgUrl: ts.response.data.shareImg
+            title: "最受欢迎的100个品牌贺3周年庆，这是要搞大事情！",
+            desc: "大V店周年庆|这次玩大了！点亮100个品牌，周年庆优惠由你定，快去参加>",
+            link: window.location.href,
+            imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/16/1.png"
           });
         } catch (err) {
           console.error(err);
