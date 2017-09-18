@@ -149,8 +149,10 @@
   .g-my-1018 {
     position: fixed;
     top: 40%;
-    right: 0;
+    //right: 0;
+    //left: ptr(375);
     width: ptr(101);
+    margin-left: ptr(375-101);
     animation: g-my-1018-animation 1s;
     transform-origin: right;
     z-index: 1;

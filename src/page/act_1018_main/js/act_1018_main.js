@@ -12,6 +12,7 @@ import param from '../../../common/js/module/param.js';
 import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
+import ua from '../../../common/js/module/ua.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
@@ -43,6 +44,7 @@ new Vue({
       isShowBeginPop: false,
       isShowBeginPopCloseAnimation: false,
       start_1018_flag: false,
+      ua: ua,
     }
   },
   computed: {
@@ -63,15 +65,19 @@ new Vue({
       this.$nextTick(function () {
         let ts = this;
 
+        // alert(ua.compareVersion('10.0.0', '10') >= 0)
+
         // 头图自动播放
         let video = document.querySelector('video');
-        video.muted = true;
-        function playVideo(){
-          video.play();
+        if(video){
+          video.muted = true;
+          function playVideo(){
+            video.play();
+          }
+          document.addEventListener("WeixinJSBridgeReady", playVideo, false);
+          document.addEventListener('touchstart', playVideo, false);
+          setTimeout(playVideo, 1000);
         }
-        document.addEventListener("WeixinJSBridgeReady", playVideo, false);
-        document.addEventListener('touchstart', playVideo, false);
-        setTimeout(playVideo, 1000);
 
         // var options = {};
         //
