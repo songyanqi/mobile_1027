@@ -8,7 +8,7 @@ import Cookies from 'js-cookie';
 
 // 业务模块
 import encrypt from '../../../common/js/module/encrypt.js';
-import util from '../../../common/js/module/util.js';
+import param from '../../../common/js/module/param.js';
 import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';

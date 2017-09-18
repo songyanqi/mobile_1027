@@ -8,7 +8,7 @@ import Cookies from 'js-cookie';
 
 // 业务模块
 import encrypt from '../../../common/js/module/encrypt.js';
-import util from '../../../common/js/module/util.js';
+import param from '../../../common/js/module/param.js';
 import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
@@ -42,6 +42,7 @@ new Vue({
       countDown: date.getCountDown(new Date(2017, 10, 18)),
       isShowBeginPop: false,
       isShowBeginPopCloseAnimation: false,
+      start_1018_flag: false,
     }
   },
   computed: {
@@ -62,16 +63,23 @@ new Vue({
       this.$nextTick(function () {
         let ts = this;
 
+        // videojs('aaa');
+
         // 设置app头部标题栏
         native.custom.initHead({
           shareOnHead: 1,
         });
 
-        // 显示开启10.18弹窗
+        // 开启10.18弹窗
         setTimeout(function(){
           ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
         }, 5000);
         // ts.isShowBeginPop = 1;
+
+        // 我的10.18弹窗
+        setTimeout(function(){
+          ts.start_1018_flag = localStorage.getItem('start_1018_flag');
+        }, 1000);
 
         // 刷新倒计时
         setInterval(function () {
