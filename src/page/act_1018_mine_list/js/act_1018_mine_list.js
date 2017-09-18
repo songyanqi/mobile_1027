@@ -73,11 +73,11 @@ new Vue({
       this.ajaxing = true;
       let ts = this;
       if(ts.type == 1){
-        ts.url = '/api/mg/sale/mainMeetin/getAwardList?_=';
+        ts.url = '/api/mg/sale/advance/getAwardList?_=';
       } else if(ts.type == 2) {
         ts.url = '/api/mg/sale/explosion/getMyBespeakList?_='
       } else if(ts.type == 3) {
-        ts.url = '/api/mg/sale/mainMeeting/getAdvanceList?_='
+        ts.url = '/api/mg/sale/advance/getAdvanceList?_='
       }
       $.ajax({
         cache: false,
