@@ -1158,15 +1158,15 @@ only screen and (min-resolution:2dppx)
   display: -webkit-box;
   display: -webkit-flex;
   display: flex;
+  padding-bottom: 10px;
 }
 .cart_confirm_container .order_stage_title {
   margin-right: 27px;
 }
-.cart_confirm_container .stageList {
+.cart_confirm_container .order_stage_cont {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   flex: 1;
-  padding-bottom: 10px;
 }
 .cart_confirm_container .stageList:last-child {
   padding-bottom: 0;
@@ -1178,6 +1178,7 @@ only screen and (min-resolution:2dppx)
 .cart_confirm_container .stage_date {
   position: relative;
   background: #F9F9F9;
+  color: #666;
   padding: 10px;
   font-size: 12px;
   margin-bottom: 10px;
@@ -1208,6 +1209,7 @@ only screen and (min-resolution:2dppx)
   background-size: 100%;
 }
 .cart_confirm_container .order_navList {
+  max-width: 640px;
   position: fixed;
   bottom: 95px;
   z-index: 20;
