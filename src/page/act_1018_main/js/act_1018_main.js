@@ -8,7 +8,7 @@ import Cookies from 'js-cookie';
 
 // 业务模块
 import encrypt from '../../../common/js/module/encrypt.js';
-import util from '../../../common/js/module/util.js';
+import param from '../../../common/js/module/param.js';
 import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
@@ -42,6 +42,7 @@ new Vue({
       countDown: date.getCountDown(new Date(2017, 10, 18)),
       isShowBeginPop: false,
       isShowBeginPopCloseAnimation: false,
+      start_1018_flag: false,
     }
   },
   computed: {
@@ -62,16 +63,47 @@ new Vue({
       this.$nextTick(function () {
         let ts = this;
 
+        let video = document.querySelector('video');
+        video.muted = true;
+        // alert(video);
+        video.play();
+
+        //微信必须加入Weixin JSAPI的WeixinJSBridgeReady才能生效
+        document.addEventListener("WeixinJSBridgeReady", function () {
+          // alert('WeixinJSBridgeReady');
+          video.play(); //视频自动播放
+        }, false);
+
+        // var options = {};
+        //
+        // var player = videojs('aaa', options, function onPlayerReady() {
+        //   videojs.log('Your player is ready!');
+        //
+        //   debugger
+        //   // In this context, `this` is the player that was created by Video.js.
+        //   this.play();
+        //
+        //   // How about an event listener?
+        //   this.on('ended', function() {
+        //     videojs.log('Awww...over so soon?!');
+        //   });
+        // });
+
         // 设置app头部标题栏
         native.custom.initHead({
           shareOnHead: 1,
         });
 
-        // 显示开启10.18弹窗
-        setTimeout(function(){
+        // 开启10.18弹窗
+        setTimeout(function () {
           ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
         }, 5000);
         // ts.isShowBeginPop = 1;
+
+        // 我的10.18弹窗
+        setTimeout(function () {
+          ts.start_1018_flag = localStorage.getItem('start_1018_flag');
+        }, 1000);
 
         // 刷新倒计时
         setInterval(function () {
@@ -159,6 +191,7 @@ new Vue({
       setTimeout(function () {
         ts.isShowBeginPop = false;
         localStorage.setItem('start_1018_flag', 1);
+        ts.start_1018_flag = 1;
         ts.$forceUpdate();
       }, 1000);
     }

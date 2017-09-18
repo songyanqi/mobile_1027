@@ -3,81 +3,107 @@
 <head>
   @@include('meta.include')
   <link rel="stylesheet" href="[[vendor]]/swiper/swiper-3.3.1.min.css">
+  <!--<link href="//cdn.bootcss.com/video.js/6.2.8/video-js.min.css" rel="stylesheet">-->
   <link rel="stylesheet" href="[[static]]/page/act_1018_main/css/act_1018_main.css[[v]]">
+  <script>
+//    alert(2)
+  </script>
 </head>
 <body>
-  <div class="app" style="padding-bottom: 40px">
-    <!--标题-->
-    <com-top-title title="10.18周年庆" home></com-top-title>
+  <div class="app">
+    <template v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
+      <!--标题-->
+      <com-top-title title="10.18周年庆" home></com-top-title>
 
-    <!--头图-->
-    <div class="g-head-pic">
-      <img class="pic" :src="topics[0].content">
-      <div class="count-down">
-        <div class="title">活动开始倒计时</div>
-        <div class="boxes">
-          <span class="box">
-            <div class="title">天</div>
-            <div class="text">{{countDown.day}}</div>
-          </span>
-          <span class="box">
-            <div class="title">小时</div>
-            <div class="text">{{countDown.hour}}</div>
-          </span>
-          <span class="box">
-            <div class="title">分钟</div>
-            <div class="text">{{countDown.minute}}</div>
-          </span>
-          <span class="box">
-            <div class="title">秒</div>
-            <div class="text">{{countDown.second}}</div>
-          </span>
+      <!--进度条-->
+      <div class="g-progess-pic">
+        <!--//pic.davdian.com/activity/2017/09/18/750_69_6dc690a5b4a337888ae3dfe6919d45d0.jpg-->
+        <img :src="topics[0].content.split('|||')[0]" v-if="topics[0].content">
+      </div>
+
+      <!--头图 :style="{'background-image': 'url('+(topics[0].content && topics[0].content.split('|||')[1])+')'}"-->
+      <div class="g-head-pic" :style="{'background-image': 'url('+(topics[0].content && topics[0].content.split('|||')[1])+')'}">
+        <!--视频 //pic.davdian.com/activity/2017/09/18/750_630_ffedafe358bdbc4ce22f226adbb1c027.png-->
+        <video id="aaa" controls autoplay loop :poster="topics[0].content && topics[0].content.split('|||')[1]"
+               webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="false" style="object-fit: fill;">
+          <!--<source src="[[static]]/page/act_1018_main/img/video.mp4" type="video/mp4"/>-->
+          <!--<source src="http://v.cctv.com/flash/mp4video6/TMS/2011/01/05/cf752b1c12ce452b3040cab2f90bc265_h264818000nero_aac32-1.mp4" type="video/mp4"/>-->
+          <!--<source src="http://www.w3school.com.cn/i/movie.ogg" type="video/ogg"/>-->
+          <!--<source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4"/>-->
+          <source src="http://data.video.qiyi.com/videos/other/20170911/73/a2/b69f338fd1172dabfa1e2ec758d92cfc.mp4?pv=0.2" type="video/mp4"/>
+          <!--<source src="[[static]]/page/act_1018_main/img/video.ogg" type="video/ogg"/>-->
+          <!--<source src="[[static]]/page/act_1018_main/img/video.webm" type="video/webm"/>-->
+          不支持
+        </video>
+
+        <!--倒计时-->
+        <div class="count-down" style="display: none;" :style="{display: response ? null : 'none'}">
+          <div class="title">活动开始倒计时</div>
+          <div class="boxes">
+            <span class="box">
+              <div class="title">天</div>
+              <div class="text">{{countDown.day}}</div>
+            </span>
+            <span class="box">
+              <div class="title">小时</div>
+              <div class="text">{{countDown.hour}}</div>
+            </span>
+            <span class="box">
+              <div class="title">分钟</div>
+              <div class="text">{{countDown.minute}}</div>
+            </span>
+            <span class="box">
+              <div class="title">秒</div>
+              <div class="text">{{countDown.second}}</div>
+            </span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!--活动开启弹窗-->
-    <div class="g-begin-pop" @touchmove.prevent @mousewheel.prevent style="display: none;" :style="{display: isShowBeginPop ? null : 'none'}">
-      <img class="pic" src="[[static]]/page/act_1018_main/img/game-begin.png" :class="{close: isShowBeginPopCloseAnimation}">
-      <div class="btn" @click="closeBeginPop"></div>
-    </div>
+      <!--活动开启弹窗-->
+      <div class="g-begin-pop" @touchmove.prevent @mousewheel.prevent style="display: none;" :style="{display: isShowBeginPop ? null : 'none'}">
+        <img class="pic" src="[[static]]/page/act_1018_main/img/game-begin.png" :class="{close: isShowBeginPopCloseAnimation}">
+        <div class="btn" @click="closeBeginPop"></div>
+      </div>
 
-    <!--我的1018-->
-    <a href="/act_1018_mine.html">
-      <img class="g-my-1018" src="[[static]]/page/act_1018_main/img/my1018.png"
-           style="display: none;" :style="{display: localStorage.getItem('start_1018_flag') ? null : 'none'}">
-    </a>
+      <!--我的1018-->
+      <a href="/act_1018_mine.html">
+        <img class="g-my-1018" src="[[static]]/page/act_1018_main/img/my1018.png"
+             style="display: none;" :style="{display: start_1018_flag ? null : 'none'}">
+      </a>
 
-    <!--活动上方专题-->
-    <div class="g-topic-top" v-html="topics[1].content"></div>
+      <!--活动上方专题-->
+      <div class="g-topic-top" v-html="topics[1].content"></div>
 
-    <!--活动区域-->
-    <div class="g-act" v-if="response && response.data || true">
-      <!--好友助力-->
-      <!--<com-act-assistance :response="response" v-if="response.data.help" :current-date="currentDate"></com-act-assistance>-->
+      <!--活动区域-->
+      <div class="g-act" v-if="response && response.data">
+        <!--好友助力-->
+        <!--<com-act-assistance :response="response" v-if="response.data.help" :current-date="currentDate"></com-act-assistance>-->
 
-      <!--品牌点亮-->
-      <com-act-lightbrand :response="response" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightbrand>
+        <!--品牌点亮-->
+        <com-act-lightbrand :response="response" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightbrand>
 
-      <!--爆品预约-->
-      <!--<com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>-->
+        <!--爆品预约-->
+        <!--<com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>-->
 
-      <!--商品预定-->
-      <!--<com-act-xxx :response="response" v-if="response.data.book" :current-date="currentDate"></com-act-xxx>-->
-    </div>
+        <!--商品预定-->
+        <!--<com-act-xxx :response="response" v-if="response.data.book" :current-date="currentDate"></com-act-xxx>-->
+      </div>
 
-    <!--活动下方专题-->
-    <div class="g-topic-bottom" v-html="topics[2].content"></div>
+      <!--活动下方专题-->
+      <div class="g-topic-bottom" v-html="topics[2].content"></div>
 
-    <!--底部角标-->
-    <com-footer></com-footer>
+      <!--底部角标-->
+      <com-footer></com-footer>
 
-    <!--返回顶部-->
-    <com-to-top-icon></com-to-top-icon>
+      <!--返回顶部-->
+      <com-to-top-icon></com-to-top-icon>
+    </template>
   </div>
 
   @@include('vendor.include')
   <script src="[[vendor]]/swiper/swiper-3.3.1.jquery.min.js"></script>
+  <!--<script src="//cdn.bootcss.com/video.js/6.2.8/video.min.js"></script>-->
   @@include('js.include')
   <script src="[[static]]/page/act_1018_main/js/act_1018_main.js[[v]]"></script>
 </body>
