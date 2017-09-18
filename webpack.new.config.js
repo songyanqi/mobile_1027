@@ -6,7 +6,7 @@ const vuxLoader = require('vux-loader')
 
 var webpackConfig = {
   entry: {
-    // 组团begin 12345
+    // 组团begin 12346
     group_list: "./src/page/group_list/js/group_list.js",
     group_detail: "./src/page/group_detail/js/group_detail.js",
     // 组团end
