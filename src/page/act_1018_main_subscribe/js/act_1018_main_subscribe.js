@@ -21,9 +21,7 @@ import vueLazyload from '../../../common/js/module/vueLazyload.js';
 login.needLogin();
 
 // 懒加载初始化
-vueLazyload.init();
-
-// let tttt = parseInt(Date.now() / 1000 + 6 * 60);
+vueLazyload.init(true);
 
 // 渲染页面
 new Vue({
@@ -99,7 +97,7 @@ new Vue({
             title: ts.response.data.shareTitle,
             desc: ts.response.data.shareDesc,
             link: location.href,
-            imgUrl: ts.response.data.shareImg
+            imgUrl: '[[static]]/page/act_1018_main_subscribe/img/share.png'
           });
         } catch (err) {
           console.error(err);
