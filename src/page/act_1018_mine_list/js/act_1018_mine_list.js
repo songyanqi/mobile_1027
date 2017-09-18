@@ -48,7 +48,7 @@ new Vue({
       var scrollHeight = window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop || 0;
-      if(pageHeight - viewportHeight - scrollHeight == 0) {
+      if(pageHeight - viewportHeight - scrollHeight <= 5) {
         ts.getData();
       }
     }
