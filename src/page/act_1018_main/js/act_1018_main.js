@@ -16,7 +16,6 @@ import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
 import date from '../../../common/js/module/date.js';
-
 // 懒加载初始化
 vueLazyload.init();
 
@@ -28,6 +27,7 @@ new Vue({
     'com-to-top-icon': require('../../../component/com-to-top-icon.vue'),
     'com-footer': require('../../../component/com-footer.vue'),
     'com-act-subscribe': require('../vue/com-act-subscribe.vue'),
+    'com-act-lightbrand': require('../vue/lightBrand.vue'),
     'com-act-assistance': require('../../act_1018_assistance/vue/com-act-assistance.vue'),
   },
   data() {
