@@ -65,8 +65,14 @@ new Vue({
 
         let video = document.querySelector('video');
         video.muted = true;
-        alert(video)
+        alert(video);
         video.play();
+
+        //微信必须加入Weixin JSAPI的WeixinJSBridgeReady才能生效
+        document.addEventListener("WeixinJSBridgeReady", function () {
+          alert('WeixinJSBridgeReady');
+          video.play(); //视频自动播放
+        }, false);
 
         // var options = {};
         //
