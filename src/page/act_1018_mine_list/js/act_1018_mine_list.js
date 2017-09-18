@@ -48,7 +48,7 @@ new Vue({
       var scrollHeight = window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop || 0;
-      if(pageHeight - viewportHeight - scrollHeight <= 20) {
+      if(pageHeight - viewportHeight - scrollHeight == 0) {
         ts.getData();
       }
     }
@@ -98,16 +98,16 @@ new Vue({
           }
         },
         error(error) {
-          if(ts.type == 1){
-            ts.response = require('../json/getAwardList.json');
-            ts.list = ts.list.concat(ts.response.data.dataList);
-          }else if(ts.type == 2) {
-            ts.response = require('../json/getMyBespeakList.json');
-            ts.list = ts.list.concat(ts.response.data.dataList);
-          }else if(ts.type == 3) {
-            ts.response = require('../json/getAdvanceList.json');
-            ts.list = ts.list.concat(ts.response.data);
-          }
+          // if(ts.type == 1){
+          //   ts.response = require('../json/getAwardList.json');
+          //   ts.list = ts.list.concat(ts.response.data.dataList);
+          // }else if(ts.type == 2) {
+          //   ts.response = require('../json/getMyBespeakList.json');
+          //   ts.list = ts.list.concat(ts.response.data.dataList);
+          // }else if(ts.type == 3) {
+          //   ts.response = require('../json/getAdvanceList.json');
+          //   ts.list = ts.list.concat(ts.response.data);
+          // }
           console.error('ajax error:' + error.status + ' ' + error.statusText);
           ts.ajaxing = false;
         }
