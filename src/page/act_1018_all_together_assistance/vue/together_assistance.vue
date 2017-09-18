@@ -34,7 +34,8 @@
         <div class="goods_info_title">
           棕色的熊、棕色的熊，你在看什么？（纸板书，适合0-3岁）
         </div>
-        <div class="order_good_price"><span class="f_l">10.18活动价<em class="price_symbol">￥</em><span>109</span></span> <span class="membership_crown_pre"><em>￥</em>199</span></div>
+        <div class="order_good_price"><span class="f_l">10.18活动价<em class="price_symbol">￥</em><span>109</span></span>
+          <span class="membership_crown_pre"><em>￥</em>199</span></div>
       </div>
     </div>
     <!--板-->
@@ -176,23 +177,25 @@
     color: #FFFFFF;
     margin-top: 0.1rem;
   }
-  .qiqiu_ing{
+
+  .qiqiu_ing {
     height: 0.1rem;
     position: relative;
-    img{
+    img {
       bottom: -0.05rem;
       position: absolute;
     }
-    img:nth-of-type(1){
+    img:nth-of-type(1) {
       width: 0.7rem;
-      left:0.1rem;
+      left: 0.1rem;
     }
-    img:nth-of-type(2){
+    img:nth-of-type(2) {
       width: 0.78rem;
-      right:0.1rem;
+      right: 0.1rem;
     }
   }
-  .title_img .qiqiu_ing .qiqiua{
+
+  .title_img .qiqiu_ing .qiqiua {
     width: 0.78rem;
     right: 0.01rem;
     left: auto;
@@ -203,19 +206,19 @@
     margin: 0 0.1rem 0.1rem;
     padding: 0.1rem;
     height: 0.8rem;
-    .goods_info_img{
-      width:0.8rem;
-      height:0.8rem;
+    .goods_info_img {
+      width: 0.8rem;
+      height: 0.8rem;
       float: left;
       background: tan;
       overflow: hidden;
-      img{
+      img {
         width: 100%;
       }
     }
-    .goods_info_desc{
+    .goods_info_desc {
       margin-left: 0.9rem;
-      .goods_info_title{
+      .goods_info_title {
         height: 0.4rem;
         line-height: 0.2rem;
         color: #FFFFFF;
@@ -250,16 +253,16 @@
     margin: 0 auto;
     position: relative;
     z-index: 2;
-    img{
+    img {
       position: absolute;
       z-index: 3;
     }
-    img:nth-of-type(1){
+    img:nth-of-type(1) {
       width: 0.87rem;
-      right:0.1rem;
+      right: 0.1rem;
       top: -0.04rem;
     }
-    img:nth-of-type(2){
+    img:nth-of-type(2) {
       width: 0.7rem;
       bottom: -0.3rem;
       left: -0.1rem;
@@ -291,40 +294,52 @@
     transform-origin: 0 0;
     border-radius: 0.08rem;
   }
-  .table_brand{
+
+  .table_brand {
     width: 100%;
     margin-top: -0.27rem;
   }
-  .friend_mark{
+
+  .friend_mark {
     height: 0.4rem;
     margin-left: 0.1rem;
     margin-top: 0.2rem;
-    div{
+    div {
       float: left;
     }
-    div:nth-of-type(1){
-      width:0.4rem;
-      height:0.4rem;
+    div:nth-of-type(1) {
+      width: 0.4rem;
+      height: 0.4rem;
       border-radius: 0.2rem;
       background-color: tan;
-      img{
+      img {
         width: 100%;
       }
     }
-    div:nth-of-type(2){
-      color:#FFFFFF;
+    div:nth-of-type(2) {
+      color: #FFFFFF;
       font-size: 0.14rem;
       line-height: 0.2rem;
       text-align: left;
       padding-left: 0.1rem;
     }
   }
+
   .order_good_price {
-    font-size: 0.16rem;
-    height: 0.16rem;
+    height: 0.36rem;
     line-height: 0.16rem;
-    color: #FF4A7D;
-    padding-top: 0.05rem;
+    color: #FFFFFF;
+    overflow: hidden;
+    font-style: normal;
+    .fl {
+      font-size: 0.14rem;
+    }
+    .membership_crown_pre {
+      font-size: 0.11rem;
+      text-decoration: line-through;
+      em {
+        font-style: normal;
+      }
+    }
   }
-  
 </style>
