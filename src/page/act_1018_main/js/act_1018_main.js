@@ -63,7 +63,22 @@ new Vue({
       this.$nextTick(function () {
         let ts = this;
 
-        // videojs('aaa');
+        document.querySelector('video').play();
+
+        // var options = {};
+        //
+        // var player = videojs('aaa', options, function onPlayerReady() {
+        //   videojs.log('Your player is ready!');
+        //
+        //   debugger
+        //   // In this context, `this` is the player that was created by Video.js.
+        //   this.play();
+        //
+        //   // How about an event listener?
+        //   this.on('ended', function() {
+        //     videojs.log('Awww...over so soon?!');
+        //   });
+        // });
 
         // 设置app头部标题栏
         native.custom.initHead({
@@ -167,6 +182,7 @@ new Vue({
       setTimeout(function () {
         ts.isShowBeginPop = false;
         localStorage.setItem('start_1018_flag', 1);
+        ts.start_1018_flag = 1;
         ts.$forceUpdate();
       }, 1000);
     }
