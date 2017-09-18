@@ -63,7 +63,10 @@ new Vue({
       this.$nextTick(function () {
         let ts = this;
 
-        document.querySelector('video').play();
+        let video = document.querySelector('video');
+        video.muted = true;
+        alert(video)
+        video.play();
 
         // var options = {};
         //
@@ -86,13 +89,13 @@ new Vue({
         });
 
         // 开启10.18弹窗
-        setTimeout(function(){
+        setTimeout(function () {
           ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
         }, 5000);
         // ts.isShowBeginPop = 1;
 
         // 我的10.18弹窗
-        setTimeout(function(){
+        setTimeout(function () {
           ts.start_1018_flag = localStorage.getItem('start_1018_flag');
         }, 1000);
 
