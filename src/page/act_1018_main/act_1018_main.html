@@ -52,13 +52,12 @@
     <div class="g-topic-top" v-html="topics[1].content"></div>
 
     <!--活动区域-->
-    <div class="g-act" v-if="response && response.data">
+    <div class="g-act" v-if="response && response.data || true">
       <!--好友助力-->
       <!--<com-act-assistance :response="response" v-if="response.data.help" :current-date="currentDate"></com-act-assistance>-->
 
       <!--品牌点亮-->
-      <!--<com-act-lightBrand :response="response" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightBrand>-->
-      <com-act-lightBrand :response="response" :current-date="currentDate"></com-act-lightBrand>
+      <com-act-lightbrand :response="response" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightbrand>
 
       <!--爆品预约-->
       <!--<com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>-->
