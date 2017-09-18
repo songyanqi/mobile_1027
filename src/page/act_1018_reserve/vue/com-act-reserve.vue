@@ -11,8 +11,8 @@
     <!-- 列表 -->
     <div class = "bookCont">
     	<!-- <div class = "bookNav"> -->
-    		<div class = "bookList" v-for = "(item,index) in singleList">
-    			<div class = "bookImg" data-id = "item.linkUrl" @click = "handleListImg($event)">
+    		<div class = "bookList" v-for = "(item,index) in singleList" @click = "handleList($event, item, index)">
+    			<div class = "bookImg" data-id = "item.linkUrl">
     				<img data-id = "item.linkUrl" src="http://pic.davdian.com/supplier/2017/06/20/1000_1000_e1a9869947141510a8743e6c002553c1.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/format,webp">
     			</div>
     			<div class = "bookName">{{ item.goodsName }}</div>
@@ -62,8 +62,8 @@
 
   	},
   	methods: {
-  		handleList(e) {
-  			console.log(e.target);
+  		handleList(e,item,index) {
+  			console.log(e,item,index);
   		},
   		getData() {
   			let that = this;
@@ -84,7 +84,7 @@
   			})
   		},
   		// 每个商品跳转链接
-  		handleListImg(e) {
+  		handleList(e) {
   			console.log(3,e);
   		},
   		// 头部导航
