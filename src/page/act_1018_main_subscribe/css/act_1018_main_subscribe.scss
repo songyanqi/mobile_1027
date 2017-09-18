@@ -36,8 +36,10 @@
             font-weight: bold;
           }
           &:last-of-type {
+            padding-right: ptr(3);
             margin-top: ptr(6);
             font-size: ptr(12);
+            @include ellipsis;
           }
         }
       }

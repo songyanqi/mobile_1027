@@ -256,32 +256,9 @@ const GoodsBottom = {
         }
       },
       change (num) {
-          // if (Number(this.goodslimitnum) == 0) {
-          //   this.goodslimitnum = 1;
-          // }
-          if (num == 1) {
-            $(".vux-number-selector-sub").css({"background":"#eee"});
-            $(".vux-number-selector-sub path").css({"fill":"#bbb","stroke":"#bbb"});
-          } else {
-            $(".vux-number-selector-sub").css({"background":"#fff"});
-              $(".vux-number-selector-sub path").css({"fill":"#666","stroke":"#666"});
-          }
-          if (Number(this.goodslimitnum) == Number(num)) {
-              if (Number(num) != 1) {
-                  // $(".isLimit").animate({"opacity":"1"},200);
-                  $(".isLimit").addClass("isLimitShow");
-              }
-              $(".vux-number-selector-plus").css({"background":"#eee"});
-              $(".vux-number-selector-plus path").css({"fill":"#bbb","stroke":"#bbb"});
-          } else {
-              // $(".isLimit").animate({"opacity":"0"},200);
-              $(".isLimit").removeClass("isLimitShow");
-              $(".vux-number-selector-plus").css({"background":"#fff"});
-              $(".vux-number-selector-plus path").css({"fill":"#666","stroke":"#666"});
-          }
-           this.$emit('change-cartnum',num);
-          this.cartNum = num;
-          this.$root.eventHub.$emit('xNumberBottom',num);
+        this.$emit('change-cartnum',num);
+        this.cartNum = num;
+        this.$root.eventHub.$emit('xNumberBottom',num);
       },
       handleTypes (items, item, e) {
           if (item.isDisabled) {

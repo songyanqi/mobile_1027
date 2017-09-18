@@ -29,7 +29,7 @@
     <ul class="g-goods-list">
       <li v-for="(item, i) in response.data.dataList" @click="location = item.goodsId+'.html';">
         <span class="pic">
-          <img :src="item.imageUrl">
+          <img v-lazy="item.imageUrl">
         </span>
         <span class="info">
           <div class="name">{{item.goodsName}}</div>
