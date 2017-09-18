@@ -5,6 +5,8 @@ import common from '../../../common/js/common.js';
 import Vue from 'Vue';
 import $ from '$';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
+// 懒加载初始化
+vueLazyload.init();
 
 new Vue({
 	el: ".app",

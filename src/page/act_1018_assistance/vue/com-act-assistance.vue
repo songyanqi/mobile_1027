@@ -173,6 +173,7 @@
     margin: 0.1rem;
     border-radius: 0.04rem;
     overflow: hidden;
+    background-color: #FFFFFF;
   }
 
   .com-box div ul li {
