@@ -239,10 +239,27 @@
     }
   }
 
-  .g-act-over{
-    img{
+  .g-act-over {
+    padding-top: ptr(100);
+    background: #f5f5f5;
+    text-align: center;
+    .pic {
       @include square(ptr(120));
     }
-
+    .title {
+      margin-top: ptr(29);
+      font-size: ptr(14);
+      line-height: ptr(20);
+      color: #666;
+    }
+    .btn {
+      margin: ptr(30) auto 0;
+      display: block;
+      width: ptr(195);
+      @include height(ptr(40));
+      background: linear-gradient(to right, #FF5C5C, #FA1862);
+      border-radius: 100px;
+      color: white;
+    }
   }
 }

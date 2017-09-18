@@ -44,7 +44,12 @@ new Vue({
       subscribe_1018_goods_ids: localStorage.getItem('subscribe_1018_goods_ids') ? JSON.parse(localStorage.getItem('subscribe_1018_goods_ids')) : [],
     }
   },
-  computed: {},
+  computed: {
+    currentDate(){
+      let now = this.response ? (this.response.sys_time + '000') : new Date();
+      return date.format(now, 'yyyy-MM-dd');
+    },
+  },
   watch: {
     // 监听response变化
     response(){
