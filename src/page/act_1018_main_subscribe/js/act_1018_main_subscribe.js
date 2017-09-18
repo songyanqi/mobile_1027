@@ -9,7 +9,7 @@ import Cookies from 'js-cookie';
 // 业务模块
 import encrypt from '../../../common/js/module/encrypt.js';
 import util from '../../../common/js/module/util.js';
-import tj from '../../../common/js/module/tj.js';
+import param from '../../../common/js/module/param.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import ua from '../../../common/js/module/ua.js';
@@ -46,7 +46,12 @@ new Vue({
   },
   computed: {
     currentDate(){
-      let now = this.response ? (this.response.sys_time + '000') : new Date();
+      let now = '';
+      if (param.get('deviceTime') !== undefined) {
+        now = Date.now();
+      } else if (this.response) {
+        now = this.response.sys_time + '000';
+      }
       return date.format(now, 'yyyy-MM-dd');
     },
   },
