@@ -1202,7 +1202,7 @@ jQuery(document).ready(function ($) {
     $(".order_id").find(".dav-red").html("已关闭");
     $(".stage1Title").html("(已关闭)");
     $(".stage2Title").html("(已关闭)");
-    $(".order_goods_state").html("<a class = 'dav-btn btn-white order-delete-order' data-dav-tj = 'order_detail|delete|delete|1|delete@order_detail'>删除订单</a>");
+    $(".order_goods_state").html("<a class = 'dav-btn btn-white cancel_order'>取消订单</a>");
   }
   
   function changeStatus() {

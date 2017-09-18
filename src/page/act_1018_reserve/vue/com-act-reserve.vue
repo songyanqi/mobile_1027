@@ -10,10 +10,10 @@
     </div>
     <!-- 列表 -->
     <div class = "bookCont">
-    	<div class = "bookNav" v-for = "item in bookDataList">
-    		<div class = "bookList">
-    			<div class = "bookImg">
-    				<img src="http://pic.davdian.com/supplier/2017/06/20/1000_1000_e1a9869947141510a8743e6c002553c1.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/format,webp">
+    	<!-- <div class = "bookNav"> -->
+    		<div class = "bookList" v-for = "(item,index) in singleList">
+    			<div class = "bookImg" data-id = "item.linkUrl" @click = "handleListImg($event)">
+    				<img data-id = "item.linkUrl" src="http://pic.davdian.com/supplier/2017/06/20/1000_1000_e1a9869947141510a8743e6c002553c1.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/format,webp">
     			</div>
     			<div class = "bookName">{{ item.goodsName }}</div>
     			<div class = "bookPrice"><span class = "f12">¥ </span>{{ item.shopPrice }}</div>
@@ -24,7 +24,7 @@
     			</div>
     			<div class = "bookBtn">立即预定</div>
     		</div>
-    	</div>
+    	<!-- </div> -->
     </div>
 	</div>
 </template>
@@ -39,7 +39,10 @@
   	data () {
   		return {
   			bookNavList: [],
+  			// 全部list
   			bookDataList: [],
+  			// 单个list
+  			singleList: [],
   		}
   	},
   	created() {
@@ -59,6 +62,9 @@
 
   	},
   	methods: {
+  		handleList(e) {
+  			console.log(e.target);
+  		},
   		getData() {
   			let that = this;
   			$.ajax({
@@ -68,16 +74,26 @@
   				success(res) {
   					res.data.map((item) => {
   						that.bookNavList.push(item.typeName);
-  						that.bookDataList.push(item);
-  					})
+  						that.bookDataList.push(item.dataList);
+  					});
+  					that.singleList = res.data[0].dataList;
   				},
   				error(err) {
   					console.log(err);
   				}
   			})
   		},
+  		// 每个商品跳转链接
+  		handleListImg(e) {
+  			console.log(3,e);
+  		},
+  		// 头部导航
   		handleNav(item,index) {
-  			console.log(item,index);
+  			this.bookDataList.map((item,idx) => {
+  				if (index == idx) {
+  					this.singleList = item;
+  				}
+  			});
   		},
   	},
   }
