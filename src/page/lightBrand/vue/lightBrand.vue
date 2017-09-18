@@ -68,6 +68,10 @@
       </div>
     </div>
 
+    <div class="error" v-if="isShow==-1">
+
+    </div>
+
   </div>
 </template>
 <script>
@@ -77,20 +81,23 @@
     data(){
         return {
            dataList:[],
-           isLighted:[]
+           isLighted:[],
+           isShow:-1
         }
     },
     mounted(){
       var that=this;
       var json=require("../json/lightBrand.json");
-      this.dataList=json.data;
+      this.dataList=json.data.dataList;
       that.initIsLighted(this.dataList);
+      that.isshow=json.data.isShow;
 //      api("/api/mg/sale/explosion/getCenterBands")
 //        .then(function (result) {
 //            if(result.code==0){
 //              if(result.data){
-//                that.dataList=result.data;
-//                that.initIsLighted(result.data);
+//                that.dataList=result.data.dataList;
+//                that.inshow=result.data.isShow;
+//                that.initIsLighted(result.data,dataList);
 //              }
 //            }else{
 //              if(result.data.msg){

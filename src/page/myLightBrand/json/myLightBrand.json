@@ -1,21 +1,21 @@
-
 {
   "code":"0",
   "shop_url":"https://15201663952.davdian.com",
   "visitor_status":"3",
   "sess_key":"48a275a991a0a6295706e6d9f8c3a784b62a4bbc",
   "data_version":"xxxxxx",
-  "data": [
+  "data":
+  [
     {
       "bandId": 1,
-      "bandPic": "//pic.davdian.com/free/2017/09/09/181efe7696e4dc1981c7bc0473f21783.jpg",
+      "bandPic": "http://pic.davdian.com/free/seller-71/my-invite/default-head.png",
       "linkUrl": "http://bravetime.davdian.com/",
       "upperLimit": 10000,
+      "lightNum": 10000,
       "remainLight": 500,
-      "lowDiscount": "满200减10",
-      "highDiscount": "满200减10",
+      "lowDiscount": "满200减100",
+      "highDiscount": "满200减150",
       "finalDiscount": "全场5折",
-      "isLighted": "1",
       "isCompleted": "1",
       "hotDay":1
     },
@@ -24,51 +24,12 @@
       "bandPic": "http://pic.davdian.com/free/seller-71/my-invite/default-head.png",
       "linkUrl": "http://bravetime.davdian.com/",
       "upperLimit": 10000,
+      "lightNum": 10000,
       "remainLight": 500,
       "lowDiscount": "全场7折",
       "highDiscount": "全场5折",
       "finalDiscount": "全场5折",
-      "isLighted": "0",
       "isCompleted": "1",
-      "hotDay":-1
-    }
-  ,{
-      "bandId": 2,
-      "bandPic": "http://pic.davdian.com/free/seller-71/my-invite/default-head.png",
-      "linkUrl": "http://bravetime.davdian.com/",
-      "upperLimit": 10000,
-      "remainLight": 500,
-      "lowDiscount": "全场7折",
-      "highDiscount": "全场5折",
-      "finalDiscount": "全场5折",
-      "isLighted": "1",
-      "isCompleted": "1",
-      "hotDay":-1
-    }
-  ,{
-      "bandId": 2,
-      "bandPic": "http://pic.davdian.com/free/seller-71/my-invite/default-head.png",
-      "linkUrl": "http://bravetime.davdian.com/",
-      "upperLimit": 10000,
-      "remainLight": 500,
-      "lowDiscount": "全场7折",
-      "highDiscount": "全场5折",
-      "finalDiscount": "全场5折",
-      "isLighted": "1",
-      "isCompleted": "1",
-      "hotDay":-1
-    }
-  ,{
-      "bandId": 2,
-      "bandPic": "http://pic.davdian.com/free/seller-71/my-invite/default-head.png",
-      "linkUrl": "http://bravetime.davdian.com/",
-      "upperLimit": 10000,
-      "remainLight": 500,
-      "lowDiscount": "全场7折",
-      "highDiscount": "全场5折",
-      "finalDiscount": "全场9折",
-      "isLighted": "0",
-      "isCompleted": "0",
       "hotDay":1
     }
   ]
