@@ -1168,6 +1168,9 @@ only screen and (min-resolution:2dppx)
   -webkit-flex: 1;
   flex: 1;
 }
+.cart_confirm_container .order_discont {
+  font-size: 12px;
+}
 .cart_confirm_container .stageList:last-child {
   padding-bottom: 0;
 }

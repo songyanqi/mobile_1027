@@ -55,9 +55,15 @@ const GoodsBottom = {
     watch: {
       datarepresentid: {
         handler() {
-          // 当所有
+          let offsetH = 0;
+          if (this.infoobj.presale) {
+            offsetH = 70;
+          } else {
+            offsetH = 50;
+          }
+          // 当所有dom都渲染完后执行
           this.$nextTick(function () {
-            $(".sku-control").css({top: (this.$refs.selects.offsetHeight+50)+'px'});
+            $(".sku-control").css({top: (this.$refs.selects.offsetHeight+offsetH)+'px'});
           })
         },
         deep: true,
