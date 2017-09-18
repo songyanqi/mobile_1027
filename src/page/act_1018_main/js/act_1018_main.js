@@ -63,7 +63,31 @@ new Vue({
       this.$nextTick(function () {
         let ts = this;
 
-        // videojs('aaa');
+        let video = document.querySelector('video');
+        video.muted = true;
+        // alert(video);
+        video.play();
+
+        //微信必须加入Weixin JSAPI的WeixinJSBridgeReady才能生效
+        document.addEventListener("WeixinJSBridgeReady", function () {
+          // alert('WeixinJSBridgeReady');
+          video.play(); //视频自动播放
+        }, false);
+
+        // var options = {};
+        //
+        // var player = videojs('aaa', options, function onPlayerReady() {
+        //   videojs.log('Your player is ready!');
+        //
+        //   debugger
+        //   // In this context, `this` is the player that was created by Video.js.
+        //   this.play();
+        //
+        //   // How about an event listener?
+        //   this.on('ended', function() {
+        //     videojs.log('Awww...over so soon?!');
+        //   });
+        // });
 
         // 设置app头部标题栏
         native.custom.initHead({
@@ -71,13 +95,13 @@ new Vue({
         });
 
         // 开启10.18弹窗
-        setTimeout(function(){
+        setTimeout(function () {
           ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
         }, 5000);
         // ts.isShowBeginPop = 1;
 
         // 我的10.18弹窗
-        setTimeout(function(){
+        setTimeout(function () {
           ts.start_1018_flag = localStorage.getItem('start_1018_flag');
         }, 1000);
 
@@ -167,6 +191,7 @@ new Vue({
       setTimeout(function () {
         ts.isShowBeginPop = false;
         localStorage.setItem('start_1018_flag', 1);
+        ts.start_1018_flag = 1;
         ts.$forceUpdate();
       }, 1000);
     }
