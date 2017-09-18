@@ -116,7 +116,7 @@
         $.ajax({
           cache: false,
           async: true,
-          url: this.moke + '/api/mg/sale/userHelpBuy/getHelpGoodsDetail?_=' + Date.now(),
+          url: this.moke + '/api/mg/sale/userhelpbuy/getHelpGoodsDetail?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId}),
@@ -160,7 +160,7 @@
         $.ajax({
           cache: false,
           async: true,
-          url: this.moke + '/api/mg/sale/userHelpBuy/userShareGoods?_=' + Date.now(),
+          url: this.moke + '/api/mg/sale/userhelpbuy/userShareGoods?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
           data: encrypt({goodsId: that.goodsId}),

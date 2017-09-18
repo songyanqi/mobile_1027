@@ -42,11 +42,49 @@
     <div class="rule_brand">
       <img src="//pic.davdian.com/free/20170915_assistance/rule.png">
       <img src="//pic.davdian.com/free/20170915_assistance/bear.png">
+      <!--获得0元购机会-->
+      <span v-if="isfree">
+          <div class="ast_deep">恭喜你获得10.18当天0元抢购的机会</div>
+          <div class="ast_bigtxt">得到好友的xx元助力，战胜了80%的人</div>
+          <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10月18日开抢 数量有限 先到先得!</div>
+      </span>
+      <!--没有获得0元购机会-->
+      <span v-else>
+        <!--没有好友助力呢-->
+        <span v-if="!alreadyAst">
+          <div class="no_ast ast_txt" style="padding: 0.48rem 0 0.34rem;">还没有好友帮你助力，快去召集好友助力省钱吧！</div>
+          <div v-if="isApp" class="share_btn bd_r">喊人助力</div>
+          <div v-if="isWx" class="share_btn bd_r">点击右上角“···”按钮分享</div>
+          <div v-if="!isWx && !isApp" class="share_btn bd_r" @click="gowxorapp">喊人助力</div>
+        </span>
+          <!--已经得到好友的助力-->
+        <span v-else>
+          <div class="ast_bigtxt">得到好友的xx元助力，战胜了80%的人</div>
+          <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10.18当天购买只需yy元，继续召集好友助力得0元抢购，加油吧！</div>
+          <div v-if="isApp" class="share_btn bd_r">喊人助力</div>
+          <div v-if="isWx" class="share_btn bd_r">点击右上角“···”按钮分享</div>
+          <div v-if="!isWx && !isApp" class="share_btn bd_r" @click="gowxorapp">喊人助力</div>
+        </span>
+      </span>
     </div>
     <img class="table_brand" src="//pic.davdian.com/free/20170915_assistance/table_brand.png">
+
+    <div class="share_btn bd_p">我也想要商品0元购</div>
     <!--获奖好友轮播-->
     <div class="loop_my_friend_reward">
-
+      <swiper auto height="60px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
+        <swiper-item>
+          <div class="swiperItem">
+            <div>
+              <img src="//pic.davdian.com/free/20170915_assistance/qiqiu.png" alt="">
+            </div>
+            <div>
+              棕色的熊、棕色的熊，你在看什么？（纸板书，适合0-3岁）
+              棕色的熊、棕色的熊，你在看什么？（纸板书，适合0-3岁）
+            </div>
+          </div>
+        </swiper-item>
+      </swiper>
     </div>
   </div>
 </template>
@@ -55,6 +93,7 @@
   import popup from '../../../common/js/module/popup.js';
   import ua from '../../../common/js/module/ua.js';
   import native from '../../../common/js/module/native.js';
+  import {Swiper, SwiperItem} from 'vux'
 
   export default {
     props: {},
@@ -64,10 +103,17 @@
         response: null,
         shareInfo: null,
         ask_assists: true, //呼唤朋友助攻
-        assists_friend: false //助朋友0元购
+        assists_friend: false, //助朋友0元购
+        isWx: ua.isWeiXin(),
+        isApp: ua.isDvdApp(),
+        alreadyAst: false, //好友已经助力
+        isfree:false, //获得0元购机会
       }
     },
-    components: {},
+    components: {
+      Swiper,
+      SwiperItem
+    },
     computed: {},
     watch: {
       // 监听response变化
@@ -108,7 +154,7 @@
         $.ajax({
           cache: false,
           async: true,
-          url: this.moke + '/api/mg/sale/userHelpBuy/getHelpGoodsDetail?_=' + Date.now(),
+          url: this.moke + '/api/mg/sale/userhelpbuy/getHelpGoodsDetail?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId}),
@@ -120,6 +166,9 @@
           }
         });
       },
+      gowxorapp: function () {
+        popup.toast("请去微信或者APP分享");
+      }
 
     },
     filters: {
@@ -210,7 +259,6 @@
       width: 0.8rem;
       height: 0.8rem;
       float: left;
-      background: tan;
       overflow: hidden;
       img {
         width: 100%;
@@ -222,7 +270,7 @@
         height: 0.4rem;
         line-height: 0.2rem;
         color: #FFFFFF;
-        font-size: 14px;
+        font-size: 0.14rem;
       }
     }
   }
@@ -267,14 +315,31 @@
       bottom: -0.3rem;
       left: -0.1rem;
     }
-  }
-
-  .loop_my_friend_reward {
-    width: 3.55rem;
-    height: 0.6rem;
-    margin: 0 auto;
-    position: relative;
-    background-color: #FF7B9B;
+    .ast_txt {
+      font-size: 0.14rem;
+      color: #BA2424;
+      line-height: 0.2rem;
+      width: 2.64rem;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .ast_bigtxt {
+      font-size: 0.18rem;
+      color: #BA2424;
+      line-height: 0.25rem;
+      height: 0.25rem;
+      text-align: center;
+      margin: 0.34rem auto 0;
+    }
+    .ast_deep{
+      font-size: 0.18rem;
+      color: #BA2424;
+      line-height: 0.33rem;
+      height: 0.33rem;
+      text-align: center;
+      margin: 0.39rem auto 0;
+      font-weight: bold;
+    }
   }
 
   .loop_my_friend_reward:after {
@@ -311,7 +376,6 @@
       width: 0.4rem;
       height: 0.4rem;
       border-radius: 0.2rem;
-      background-color: tan;
       img {
         width: 100%;
       }
@@ -327,19 +391,90 @@
 
   .order_good_price {
     height: 0.36rem;
-    line-height: 0.16rem;
     color: #FFFFFF;
     overflow: hidden;
-    font-style: normal;
-    .fl {
+    line-height: 0.5rem;
+    .f_l {
       font-size: 0.14rem;
+      em {
+        font-style: normal;
+      }
+      span {
+        font-size: 0.25rem;
+      }
     }
     .membership_crown_pre {
       font-size: 0.11rem;
       text-decoration: line-through;
+      margin-left: 0.04rem;
       em {
         font-style: normal;
       }
+    }
+  }
+
+  .share_btn {
+    width: 2.4rem;
+    height: 0.32rem;
+    border: 0.04rem solid #FFFFFF;
+    border-radius: 0.32rem;
+    text-align: center;
+    line-height: 0.32rem;
+    font-size: 0.14rem;
+    color: #FFFFFF;
+    margin: 0 auto;
+  }
+
+  .bd_r {
+    background: -webkit-linear-gradient(left, #FF9636, #FA1862);
+    background: -webkit-gradient(linear, left left, right right, from(#FF9636), to(#FA1862));
+    background: -webkit-linear-gradient(left, #FF9636, #FA1862);
+    background: linear-gradient(to right, #FF9636, #FA1862);
+  }
+
+  .bd_p {
+    background: -webkit-linear-gradient(left, #E47CFF, #B26DE8);
+    background: -webkit-gradient(linear, left left, right right, from(#E47CFF), to(#B26DE8));
+    background: -webkit-linear-gradient(left, #E47CFF, #B26DE8);
+    background: linear-gradient(to right, #E47CFF, #B26DE8);
+  }
+
+  .loop_my_friend_reward {
+    width: 3.55rem;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #FF7B9B;
+  }
+
+  .swiperItem {
+    height: 60px;
+    position: relative;
+    div {
+      height: 60px;
+      float: left;
+    }
+    div:nth-of-type(1) {
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      float: left;
+      margin: 10px;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    div:nth-of-type(2) {
+      position: absolute;
+      height: 40px;
+      left: 60px;
+      top: 10px;
+      right: 10px;
+      line-height: 20px;
+      font-size: 14px;
+      color: #FFFFFF;
+      @include ellipsis(2);
     }
   }
 </style>
