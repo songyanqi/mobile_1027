@@ -339,13 +339,13 @@ export default {
       if (!this.secKill) {
         if (isBuy == 1) {
           // 购买就直接跳走
-          let goods;
+          let goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
           setTimeout(() => {
-            if (that.infoObj.presale) {
-              goods = encodeURI(`advance[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
-            } else {
-              goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
-            }
+            // if (that.infoObj.presale) {
+            //   goods = encodeURI(`advance[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
+            // } else {
+            //   goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
+            // }
             window.location = `/${buyURL}&${goods}`;
           }, 500);
           return;
@@ -875,8 +875,8 @@ export default {
     getFinalPay() {
       let goPayAdvanceList = [];
       this.dataExtraList.map((item) => {
-        if (item.goPayAdvance && item.goPayAdvance.length) {
-          goPayAdvanceList.push(item);
+        if (Object.prototype.toString.call(item.goPayAdvance) == '[object Object]') {
+          goPayAdvanceList.push(item.goPayAdvance);
         }
       });
 
@@ -997,11 +997,7 @@ export default {
       }
       if (that.goodsLimitNum <= 1) {
         this.isLimitNum = true;
-        $(".vux-number-selector-plus").css({"background": "#eee"});
-        $(".vux-number-selector-plus path").css({"fill": "#bbb", "stroke": "#bbb"});
       } else {
-        $(".vux-number-selector-plus").css({"background": "#fff"});
-        $(".vux-number-selector-plus path").css({"fill": "#666", "stroke": "#666"});
       }
       //信息
       $(".isLimit").removeClass("isLimitShow");
@@ -1107,6 +1103,7 @@ export default {
         // 是否是预定商品
         if (item.typeId == '9') {
           that.infoObj.presale = item;
+          that.infoObj.presale.isLimit = true;
         }
       });
       if (killArr.indexOf('1') === -1) {
