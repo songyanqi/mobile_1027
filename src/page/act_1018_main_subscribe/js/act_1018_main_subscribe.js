@@ -94,8 +94,8 @@ new Vue({
         // 设置分享信息
         try {
           share.setShareInfo({
-            title: ts.response.data.shareTitle,
-            desc: ts.response.data.shareDesc,
+            title: '测试title疯抢好货 提前预约',
+            desc: '测试desc疯抢好货 提前预约',
             link: location.href,
             imgUrl: '[[static]]/page/act_1018_main_subscribe/img/share.png'
           });
