@@ -87,7 +87,7 @@
             <!-- 预定 支付定金 -->
              <a v-show = "item | orderReserve" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/checkout.html?order_id={{item.id}}">支付定金</a>
              <!-- 支付尾款，显示按钮 -->
-             <a v-show = "item | orderFinalBtn" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/checkout.html?order_id={{item.id}}">支付尾款</a>
+             <a v-show = "item | orderFinalBtn" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" :href="item.pay_url">支付尾款</a>
             <!--该显示哪些信息-->
             <a v-show = "item | close" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/cart.html?rebuy_order_id={{item.id}}">再次购买</a>
             <a v-show = "item | again" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/cart.html?rebuy_order_id={{item.id}}">再次购买</a>
