@@ -276,7 +276,7 @@
         <popup v-model="cartModal"
                @on-show = "handleModalShow"
                @on-hide = "handleModalHide"
-               @click = "handleModal" >
+               >
             <div class = "modalCloseWrapper" @click = "handleTypeClose"><span class = "modal-close"></span></div>
             <div class = "goodsTypeModal">
                 <i class="dav_icon_detail_close_btn"></i>

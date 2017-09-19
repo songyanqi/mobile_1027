@@ -1,3 +1,100 @@
+<style  lang="sass"  rel="stylesheet/scss">
+  @import "../../../common/css/common.scss";
+  .reserve {
+    .swiper-container {
+      background: #fff;
+      font-size: 14px;
+    }
+    .swiper-slide {
+      // width: 67px;
+      text-align: center;
+      padding: 12px 0;
+    }
+    .slide_bar {
+      position: relative;
+      display: inline-block;
+      color: #ff4a7d;
+    }
+    .slide_bar:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: -12px;
+      border-bottom: 2px solid #ff4a7d;
+    }
+    .bookNav {
+      // display: -webkit-box;
+      // display: -webkit-flex;
+      // display: flex;
+      // margin: 0 5px;
+    }
+    .bookList {
+      float: left;
+      width: calc(50% - 10px);
+      // -webkit-box-flex: 1;
+      // -webkit-flex: 1;
+      // flex: 1;
+      background: #fff;
+      box-radius: 5px;
+      margin: 10px 5px; 
+    }
+    .bookImg {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .bookName {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #666;
+      font-size: 12px;
+      margin: 10px 10px 0 10px;
+      line-height: 14px;
+    }
+    .bookPrice {
+      font-size: 14px;
+      padding: 5px 0 10px 10px;
+      .f12 {
+        font-size: 12px;
+      }
+    }
+    .advancePrice {
+      color: #FF4A7D;
+      font-size: 0;
+      padding: 0 0 13px 10px;
+      .a_tips {
+        font-size: 12px;
+      }
+      .a_price {
+        font-size: 18px;
+      }
+    }
+    .bookBtn {
+      line-height: 18px;
+      color: #fff;
+      font-size: 12px;
+      padding: 3px 0;
+      margin: 0 10px 15px 10px;
+      background: linear-gradient(to right, #FF5B5B, #FA1862);
+      background: -moz-linear-gradient(right, #FF5B5B, #FA1862);
+      background: -o-linear-gradient(right, #FF5B5B, #FA1862);
+      background: -webkit-linear-gradient(left, #FF5B5B, #FA1862);
+      border-radius: 15px;
+      text-align: center;
+    }
+    .noMore {
+      font-size: 12px;
+      color: #666;
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+</style>
 <template>
 	<div class = "reserve">
 		<!-- 头部 -->
@@ -23,7 +120,7 @@
   			</div>
   			<div class = "bookBtn">立即预定</div>
   		</div>
-      <div class = "noMore">没有更多啦</div>
+      <!-- <div class = "noMore">没有更多啦</div> -->
     </div>
 	</div>
 </template>
@@ -44,8 +141,10 @@
   			// 单个list
   			singleList: [],
         currentIdx: 0,
+        bookSwiper: null,
   		}
   	},
+    props: ['response'],
   	created() {
   		this.getData();
   	},
@@ -57,13 +156,13 @@
           this.$nextTick(() => {
             let swiper_num = window.screen.width / 67;
             if (length > swiper_num) {
-              this.swiper = new Swiper('.swiper-container', {
+              that.bookSwiper = new Swiper('.swiper-container', {
                 slidesPerView: swiper_num,
                 grabCursor: true,
                 initialSlide: that.currentIdx - 2
               });
             } else {
-              this.swiper = new Swiper('.swiper-container', {
+              that.bookSwiper = new Swiper('.reserve .swiper-container', {
                 slidesPerView: length,
                 grabCursor: true,
               });
@@ -99,31 +198,24 @@
         }
       },
   		handleList(e,item,index) {
-        this.handleJump(item.linkUrl);
+        let shopUrl = `/${item.goodsId}.html`;
+        this.handleJump(shopUrl);
   		},
   		getData() {
   			let that = this;
-  			$.ajax({
-  				url: 'https://www.easy-mock.com/mock/59b9230be0dc663341a8ce57/upload',
-  				type: "POST",
-  				dataType: "JSON",
-  				success(res) {
-  					res.data.map((item) => {
-  						that.bookNavList.push(item.typeName);
-  						that.bookDataList.push(item.dataList);
-  					});
-  					that.singleList = res.data[0].dataList;
-  				},
-  				error(err) {
-  					console.log(err);
-  				}
-  			})
+        let datas = this.response.data.book;
+        let resArr = Object.keys(datas);
+        resArr.map((item) => {
+          that.bookNavList.push(datas[item].typeName);
+          that.bookDataList.push(datas[item].dataList);
+        });
+        that.singleList = that.bookDataList[0];
   		},
   		// 头部导航
   		handleNav(item,index) {
         this.currentIdx = index;
         console.log(index);
-        this.swiper.slideTo(Math.max(0, index - 2));
+        this.bookSwiper.slideTo(Math.max(0, index - 2));
   			this.bookDataList.map((item,idx) => {
   				if (index == idx) {
   					this.singleList = item;
