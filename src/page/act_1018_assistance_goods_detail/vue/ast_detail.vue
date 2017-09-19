@@ -1,25 +1,25 @@
 <template>
   <div style="font-weight: normal;background-color: #FFFFFF;" v-if="response">
     <!--商品详情主图-->
-    <div v-for="good in response.data">
-      <img class="main_banner" :src="good.goodsImage">
+    <div>
+      <img class="main_banner" :src="response.goodsImage">
       <div class="count_down">
         <span>10.18周年庆0元抢爆品</span><br>
         <span>距助力结束：{{overTimes | formatRemainTime}}</span>
       </div>
       <!--商品名称-->
       <div class="goods_title">
-        {{good.goodsName}}
+        {{response.goodsName}}
       </div>
       <!--价格信息-->
       <div class="price_info">
         <div>
           <span>10.18活动价</span>
           <span>¥</span>
-          <span>{{good.activityPrice}}</span>
-          <span>¥{{good.goodsPrice}}</span>
+          <span>{{response.activityPrice}}</span>
+          <span>¥{{response.goodsPrice}}</span>
         </div>
-        <div v-html="good.activityMessage"></div>
+        <div v-html="response.activityMessage"></div>
       </div>
       <!--流程-->
       <div class="flow_path">
@@ -46,7 +46,7 @@
       <div v-if="isDvdApp" @click="shares" class="main_btn">喊人助力</div>
       <div v-if="!isDvdApp&&!isWeixin" @click="shares" class="main_btn">去微信或者APP发起助力</div>
       <div class="good_detail_imgs">
-        <img v-for="imgs in good.details" v-lazy="imgs.detailUrl" v-if="imgs.detailUrl" alt="">
+        <img v-for="imgs in response.details" v-lazy="imgs.imgOriginal" v-if="imgs.imgOriginal" alt="">
       </div>
     </div>
   </div>
@@ -125,8 +125,9 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId}),
           success(response) {
-            ts.response = response;
-            ts.overTimes = response.data[0].overTime;
+            ts.response = response.data;
+            ts.overTimes = response.data.overTime;
+            ts.shareInfo = response.data.shareInfo;
             ts.deltime();
           },
           error(error) {

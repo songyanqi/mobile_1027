@@ -178,8 +178,7 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
-            ts.response = response.data[0];
-
+            ts.response = response.data;
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);
@@ -193,7 +192,7 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
-            ts.goodsdata = response.data[0];
+            ts.goodsdata = response.data;
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);
