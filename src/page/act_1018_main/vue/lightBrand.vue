@@ -77,35 +77,22 @@
     props:["currentDate","response"],
     data(){
       return {
-        dataList:[],
-        isLighted:[]
+
+      }
+    },
+    computed:{
+      dataList(){
+          return this.response;
+      },
+      isLighted(){
+        var arr=[];
+        this.response.map(function (item,index) {
+          arr.push(item.isLighted);
+        });
       }
     },
     mounted(){
-      var that=this;
-      var json=require("../json/lightBrand.json");
-      this.dataList=json.data;
-      that.initIsLighted(this.dataList);
-//      api("/api/mg/sale/explosion/getCenterBands")
-//        .then(function (result) {
-//            if(result.code==0){
-//              if(result.data){
-//                that.dataList=result.data;
-//                that.initIsLighted(result.data);
-//              }
-//            }else{
-//              if(result.data.msg){
-//                dialog.alert('code:'+result.code+":msg"+result.data.msg);
-//              }else{
-//                dialog.alert('code:'+result.code);
-//              }
-//            }
-//            console.log(result.data);
-//        })
-//        .catch(function (e) {
-//          dialog.alert(e);
-//        })
-
+      this.initIsLighted(this.dataList);
     },
     methods:{
       initIsLighted(data){
