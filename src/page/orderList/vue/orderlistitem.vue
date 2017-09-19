@@ -915,11 +915,13 @@
             },
             // 支付定金,首先要pay的逻辑，要加上
             orderReserve (value) {
-              // if(value.is_new_seller_order  == false && value.type == 3){
+              if(value.is_new_seller_order  == false && value.type == 3){
                 if (value.is_presale_order && value.presale_info.type == "reserve") {
-                  return true;
+                  if (Date.now() > value.create_time * 1000 + 1800000) {
+                    return true;
+                  }
                 }
-              // }
+              }
             },
             // 支付尾款显示时间时不显示所有的按钮
             isFinalBtn (value) {
