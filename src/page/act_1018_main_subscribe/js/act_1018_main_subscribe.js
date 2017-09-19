@@ -36,6 +36,7 @@ new Vue({
       tipType: null,
       screenings: null,
       isDvdApp: ua.isDvdApp(),
+      // isDvdApp: false,
       date: date,
       subscribe_1018_goods_ids: localStorage.getItem('subscribe_1018_goods_ids') ? JSON.parse(localStorage.getItem('subscribe_1018_goods_ids')) : [],
     }
@@ -86,7 +87,8 @@ new Vue({
 
         // 设置app头部标题栏
         native.custom.setHead({
-          title: document.title,
+          title: document.title + '123123',
+          shareBtn: '1',
         });
 
         // 设置分享信息
@@ -182,7 +184,7 @@ new Vue({
     btnClickSubscribe(goods) {
       let ts = this;
       login.needLogin();
-      if (ua.isDvdApp()) {
+      if (ts.isDvdApp) {
         native.Browser.goodsBook({
           goodsId: goods.goodsId,
           goodsTitle: goods.goodsName,
@@ -198,6 +200,7 @@ new Vue({
             localStorage.setItem('subscribe_1018_goods_ids', JSON.stringify(this.subscribe_1018_goods_ids));
             //已改为由app弹 popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
             goods.buttonName = '已设预约';
+            goods.bespeakNum = parseInt(goods.bespeakNum) + 1;
             ts.$forceUpdate()
           },
           error() {
@@ -214,7 +217,6 @@ new Vue({
               ts.tipType = 'web-focus';
             }
             goods.buttonName = '已设预约';
-            debugger
             goods.bespeakNum = parseInt(goods.bespeakNum) + 1;
             ts.$forceUpdate();
           } else if (response.code == 64404) {
@@ -231,7 +233,7 @@ new Vue({
     },
     /** 已设预约 */
     btnClickSubscribed() {
-      if (ua.isDvdApp()) {
+      if (this.isDvdApp) {
         popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
       } else {
         popup.toast('将在活动开始前5分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);

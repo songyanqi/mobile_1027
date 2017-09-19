@@ -416,12 +416,13 @@ const native = {
         }
       })
      */
-    setHead(param = {}) {
+    setHead(param = {}, debug) {
       call({
         v: '2.6.0',
         host: 'Browser',
         action: 'setHead',
-        param: param
+        param: param,
+        debug: debug
       });
     },
 
@@ -1007,12 +1008,12 @@ const native = {
      * 用法:
      * native.custom.initHead()
      */
-    setHead(param = {}) {
+    setHead(param = {}, debug) {
       // 参数合并
       param = $.extend({}, defaultSetHead, param);
 
       // 调用Browser.setHead接口
-      native.Browser.setHead(param);
+      native.Browser.setHead(param, debug);
     },
 
     /**

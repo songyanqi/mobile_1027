@@ -77,8 +77,7 @@
         $.ajax({
           cache: false,
           async: true,
-//          url: '/api/mg/sale/userhelpbuy/getHelpList/?_=' + Date.now(),
-          url: 'http://www.easy-mock.com/mock/59b92127e0dc663341a8cccd/api/mg/sale/userhelpbuy/getHelpList?_=' + Date.now(),
+          url: '/api/mg/sale/userhelpbuy/getHelpList?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
           data: encrypt({}),
@@ -99,8 +98,7 @@
         $.ajax({
           cache: false,
           async: true,
-//          url: '/api/mg/sale/userhelpbuy/getHelpList/?_=' + Date.now(),
-          url: 'http://www.easy-mock.com/mock/59b92127e0dc663341a8cccd/api/mg/sale/userhelpbuy/getAnnouncement?_=' + Date.now(),
+          url: '/api/mg/sale/userhelpbuy/getAnnouncement?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
           data: encrypt({}),
