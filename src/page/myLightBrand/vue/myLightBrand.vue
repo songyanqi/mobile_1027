@@ -62,13 +62,16 @@
 <script>
   import api from "../../../../utils/api.es6"
   import dialog from "../../../../utils/dialog.es6"
+  import util from "../../../../utils/utils.es6"
+  import native from "../../../../src/common/js/module/native.js"
   export default{
     data(){
       return {
         dataList:[],
         isLighted:[],
         isShow:-1,
-        remainLight:[]
+        remainLight:[],
+        isApp:util.utils.isApp()
       }
     },
     mounted(){
@@ -135,11 +138,20 @@
                 }
               }
             }else{
-              if(result.data.msg){
-                dialog.alert('code:'+result.code+":msg"+result.data.msg);
-              }else{
-                dialog.alert('code:'+result.code);
-              }
+                if(result.code==30000){
+                  if (that.isApp){
+                    native.Account.login()
+                  }else {
+                    window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
+                  }
+                }else{
+                  if(result.data.msg){
+                    dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                  }else{
+                    dialog.alert('code:'+result.code);
+                  }
+                }
+
             }
           })
           .catch(function (e) {
