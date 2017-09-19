@@ -1207,7 +1207,7 @@ $(document).ready(function () {
     if(window.isShowActivity){
         showActivityImg();
         setTimeout(function(){
-            bravetime.tj.pvSend("alert_activity",(window["tj_path"]||'other_path'));
+           // bravetime.tj.pvSend("alert_activity",(window["tj_path"]||'other_path'));
         },500);
 
     }

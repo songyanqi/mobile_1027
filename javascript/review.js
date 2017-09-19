@@ -134,7 +134,7 @@ $(function () {
                 var windowHeight = $(window).height();
                 if (bodyHeight - scrollTop - windowHeight < 100) {
                     var success = function success(result) {
-                        window.bravetime.tj.pvSend('reviews_d2refresh','reviews_d2refresh_id'+lastId);
+                        // window.bravetime.tj.pvSend('reviews_d2refresh','reviews_d2refresh_id'+lastId);
                         var error = result.error;
                         var msg = result.msg;
                         var list = result.list;

@@ -168,7 +168,7 @@ $(function () {
             $(this).addClass("hide");
             play();
             setTimeout(function () {
-                bravetime.tj.pvSend("play_game", (window["tj_path"] || 'other_path'));
+               // bravetime.tj.pvSend("play_game", (window["tj_path"] || 'other_path'));
             }, 500);
         }
 

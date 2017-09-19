@@ -26,7 +26,7 @@
     },
     methods: {
       searchs: function (msg) {
-        window.bravetime.tj.pvSend('search_linklike_click', '');
+        // window.bravetime.tj.pvSend('search_linklike_click', '');
         var data = {
           production:"14",
           action:"1",
