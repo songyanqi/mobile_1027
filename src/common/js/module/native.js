@@ -27,13 +27,13 @@ const defaultSetHead = {
   backBtn: '1',     // 0表示头部不展示返回按钮，1表示展示
   homeBtn: '0',     // 0表示头部不展示首页按钮，1表示展示
   shareBtn: '0',    //0表示头部不展示分享按钮，1表示展示
-  shareMoney: '',    //0表示分享佣金为0不显示分享赚钱按钮，非0：展示分享赚钱按钮，在3.9.1之前用该字段
-  shareMoneyStr: '',   //在3.9.1中会用该字段
-  rightBtn: {
-    text: '',
-    textColor: '#ff4a7d',
-    action: ''
-  },
+  // shareMoney: '',    //0表示分享佣金为0不显示分享赚钱按钮，非0：展示分享赚钱按钮，在3.9.1之前用该字段
+  // shareMoneyStr: '',   //在3.9.1中会用该字段
+  // rightBtn: {    // rightBtn会覆盖其他字段
+  //   text: '',
+  //   textColor: '#ff4a7d',
+  //   action: ''
+  // },
 };
 
 /**
