@@ -65,6 +65,7 @@ export default {
 
     }
   },
+
   computed: {
     feedData() {
       return this.contentData.feedList
@@ -115,22 +116,23 @@ export default {
   },
 
   methods: {
+
     changStyle(json){
       //初始化header透明
-      // this.index_header_style.top_container={
-      //   'background': 'hsla(0,0%,98%,0)'
-      // };
-      // this.index_header_style.head={
-      //   'background': 'hsla(0,0%,98%,0)'
-      // };
-      // this.index_header_style.v_menu={
-      //   'background': 'hsla(0,0%,98%,0)'
-      // };
+      this.index_header_style.top_container={
+        'background': 'inherit',
+        "backgroundImage":"url("+json["8"].imageFilePath+")"
+      };
+      this.index_header_style.head={
+        'background': 'none'
+      };
+      this.index_header_style.v_menu={
+        'background': 'none'
+      };
       //背景图片
       this.index_header_style.top0={
         "backgroundImage":"url("+json["8"].imageFilePath+")"
       };
-
       //搜索框的样式
       this.index_header_style.search_input={
         "opacity":json[1].alpha,
@@ -148,6 +150,7 @@ export default {
       this.index_header_style.dav_base_red_color={
         "color":"#"+json["1"].specificTextColor.substr(2)
       };
+
       //分类icon
       this.index_header_style.classification_icon={
         "backgroundImage":"url("+json["5"].imageFilePath+")"
@@ -164,7 +167,7 @@ export default {
       //二级菜单视图属性
       this.index_header_style.li={
         "color":"#"+json["9"].textColor.substr(2),
-        "background":"none"
+        'background': 'none'
       };
       this.index_header_style.hoverSpan={
         "borderBottom":"2px solid #"+json["9"].bottomLineColor.substr(2)

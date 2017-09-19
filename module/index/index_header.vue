@@ -2,7 +2,7 @@
   <header>
     <div class="top0" :style="mergeStyle(styleArr['top0'],{ top: - data.top + 'px' })">
       <div class="top_container" id="top_container" :style="styleArr['top_container']">
-        <div class="head_index_top clearfix" :style="styleArr['head']">
+        <div class="head_index_top clearfix" :style="styleArr['head']" id="first">
           <a :href="head.image && head.image.command.content" class="left_icon_container">
             <span v-if="usersta == 3" class="shop_icon"></span>
             <img :src="head.image && head.image.url" class="shop_img">
@@ -31,7 +31,7 @@
         </div>
         <div v-if="menudata" class="swiper-container v_menu index_con_menu" id="v_menu" :style="styleArr['v_menu']">
           <ul class="swiper-wrapper" id="swiperLi">
-            <li class="swiper-slide" v-for="(item, index) in menudata.menuList" :style="mergeStyle(styleArr['index_con_menu'],styleArr['li'])"
+            <li class="swiper-slide" v-for="(item, index) in menudata.menuList" :style="styleArr['li']"
                 @click='changeCategory(item.id,index,$event)'>
               <p class="time_state" v-if='item && item.title && item.id==cate'>
                 <span class="time_state_span time_state_span_active" :style="styleArr['time_state_span_active']">{{item.title}}

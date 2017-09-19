@@ -139,14 +139,13 @@
     },
     methods:{
       go_detail(linkUrl){
-          if(this.isApp){
-            native.Browser.open({
-              url: linkUrl
-            })
-          }else{
-            window.location.href=linkUrl;
-          }
-
+        if(this.isApp){
+          native.Browser.open({
+            url: linkUrl
+          })
+        }else{
+          window.location.href=linkUrl;
+        }
       },
       go_href(){
         window.location.href="/";
