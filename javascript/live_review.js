@@ -8,7 +8,7 @@ $(function () {
     var live_id =$(".con_list").attr("id");
 
     window.tlShareCallback = window.sendShareCallback = window.QQShareCallback = window.weiboShareCallback = window.qZoneShareCallbackCancel = function () {
-        bravetime.tj.evSend({category:"live",action:"share",label:"share_"+live_id,"value":1});
+        // bravetime.tj.evSend({category:"live",action:"share",label:"share_"+live_id,"value":1});
     };
 
     if ($(".live_review").length) {
@@ -197,5 +197,5 @@ function stopVoice(voiceDiv,flag) {
 }
 
 window.tlShareCallback = window.sendShareCallback = window.QQShareCallback = window.weiboShareCallback = window.qZoneShareCallbackCancel = function () {
-    bravetime.tj.evSend({category:"live",action:"share",label:"share_"+live_id,"value":1});
+    // bravetime.tj.evSend({category:"live",action:"share",label:"share_"+live_id,"value":1});
 };

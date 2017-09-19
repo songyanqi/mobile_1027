@@ -199,7 +199,7 @@ $(function () {
             }
           }
         });
-        bravetime.tj.pvSend(window.tj_path + "_share")
+       // bravetime.tj.pvSend(window.tj_path + "_share")
       });
 
       return false;
@@ -218,7 +218,7 @@ $(function () {
       if (window.shareButtonClickCallback && typeof window.shareButtonClickCallback == "function") {
         window.shareButtonClickCallback();
       }
-      bravetime.tj.pvSend(window.tj_path + "_share")
+     // bravetime.tj.pvSend(window.tj_path + "_share")
     });
     msk.click(function (event) {
       msk.addClass('hide');

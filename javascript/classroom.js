@@ -272,7 +272,7 @@ $(function () {
                             setArticleListToCache(p,saveData);
                         }
                         pageIndex = pageIndex + 1;
-                        window.bravetime.tj.pvSend('classroom_d2refresh', 'classroom_d2refresh_id' + pageIndex);
+                        // window.bravetime.tj.pvSend('classroom_d2refresh', 'classroom_d2refresh_id' + pageIndex);
                     }
                 }, error: function () {
                     bravetime.ajaxError(37);
