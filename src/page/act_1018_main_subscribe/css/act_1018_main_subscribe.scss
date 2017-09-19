@@ -60,6 +60,7 @@
       }
       .info {
         flex: 1;
+        display: block;
         padding: 0 ptr(10);
         max-width: ptr(230);
         .name {
