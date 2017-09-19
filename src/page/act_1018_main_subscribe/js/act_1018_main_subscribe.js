@@ -89,7 +89,7 @@ new Vue({
         native.custom.setHead({
           title: document.title + '123123',
           shareBtn: '1',
-        }, true);
+        });
 
         // 设置分享信息
         try {
@@ -184,7 +184,6 @@ new Vue({
     btnClickSubscribe(goods) {
       let ts = this;
       login.needLogin();
-      debugger
       if (ts.isDvdApp) {
         native.Browser.goodsBook({
           goodsId: goods.goodsId,
