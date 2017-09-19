@@ -73,7 +73,6 @@
     },
     mounted(){
       var that=this;
-      that.initIsLighted(this.dataList);
       api("/api/mg/sale/bandLitUp/getCenterBands")
         .then(function (result) {
             if(result.code==0){
@@ -103,7 +102,7 @@
           that.isLighted.push(item.isLighted);
         });
       },
-      initNeedCount(){
+      initNeedCount(data){
         var that=this;
         data.map(function (item) {
           that.remainLight.push(item.remainLight);
