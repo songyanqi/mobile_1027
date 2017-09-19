@@ -210,6 +210,15 @@ Ua.prototype = {
     }
     return 0;
   },
+  /**
+   * 获取url参数
+   */
+  getQuery(name) {
+    var reg = new RegExp('(^|&?)' + name + '=([^&]*)(&|$)', 'i');
+    var r = window.location.search.match(reg)
+    if (r != null) return decodeURIComponent(r[2]);
+    return null
+  }
 };
 Ua.prototype.constructor = Ua;
 
