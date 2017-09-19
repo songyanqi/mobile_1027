@@ -182,6 +182,11 @@
     </div>
   </div>
 
+    <div v-if='noLogin' class='noApply'>
+      <img src="//pic.davdian.com/free/2017/09/01/Group.png">
+      <p>登录后才能继续访问</p>
+    </div>
+  </div>
 </template>
 <script>
   import api from '../../../../utils/api.es6';
@@ -214,8 +219,8 @@
             dataFlag1: false,
             isapp:!!navigator.userAgent.match(/davdian|bravetime|vyohui/),
             show_list:[],
-            show_list2:[]
-
+            show_list2:[],
+            noLogin:false
 
         }
       },
@@ -223,6 +228,18 @@
 
       },
       methods:{
+        getStaus(){
+          var token=login.getDvdsid().substr(32,8);
+          if(token=="00000001"){
+             return 0;
+          }else{
+              if(token.substr(7,1)==1){
+                return 1;
+              }else{
+                return 3
+              }
+          }
+        },
         startTimestamp:function (time) {
           return time.substring(0,16);
         },
@@ -387,46 +404,53 @@
             }
           },
           myNote:function () {
-            var that=this;
-            if(this.pageFlag2){
-              this.pageFlag2=false;
-              var obj2={
-                "userId":login.getUserId(),
-                "courseId":getQuery('courseId'),
-                "pageIndex":this.pageIndex2,
-                "pageSize":this.pageSize2
-              };
-
-              api("/api/mg/content/course/myNotesList",obj2).then(function (my_discuss) {
-                common.checkRedirect(my_discuss)
-                if(my_discuss.code==0){
-                  that.pageIndex2= parseInt(that.pageIndex2) + parseInt(that.pageSize2);
-                  that.userWrite=my_discuss.data.userWrite;
-                  var start=that.my_note_data.length;
-                  that.my_note_data= that.my_note_data.concat(my_discuss.data.dataList);
-                  var end=start+my_discuss.data.dataList.length;
-                  setTimeout(function () {
-                    that.text_over2(start,end);
-                    that.auto_click2();
-                  },100);
-                  that.note_name=my_discuss.data.userName;
-                  that.note_header=my_discuss.data.headImg;
-                  if (that.my_note_data.length==0){
-                    that.dataFlag = true
+            if(this.getStaus()==0){
+              this.noLogin = true;
+            }else{
+              var that=this;
+              if(this.pageFlag2){
+                this.pageFlag2=false;
+                var obj2={
+                  "userId":login.getUserId(),
+                  "courseId":getQuery('courseId'),
+                  "pageIndex":this.pageIndex2,
+                  "pageSize":this.pageSize2
+                };
+                api("/api/mg/content/course/myNotesList",obj2).then(function (my_discuss) {
+//                alert("myNote"+my_discuss.code);
+                  common.checkRedirect(my_discuss)
+                  if(my_discuss.code==0){
+                    that.pageIndex2= parseInt(that.pageIndex2) + parseInt(that.pageSize2);
+                    that.userWrite=my_discuss.data.userWrite;
+                    var start=that.my_note_data.length;
+                    that.my_note_data= that.my_note_data.concat(my_discuss.data.dataList);
+                    var end=start+my_discuss.data.dataList.length;
+                    setTimeout(function () {
+                      that.text_over2(start,end);
+                      that.auto_click2();
+                    },100);
+                    that.note_name=my_discuss.data.userName;
+                    that.note_header=my_discuss.data.headImg;
+                    if (that.my_note_data.length==0){
+                      that.dataFlag = true
+                    }
+                    if (my_discuss.data.dataList.length == that.pageSize2){
+                      that.pageFlag2=true
+                    }
+                  }else{
+//                    if(my_discuss.code == 30000) {
+//                      that.noLogin = true;
+//                    }else{
+                      dialog.alert('code:' + my_discuss.code + ';msg:'+my_discuss.data.msg);
+//                    }
                   }
-                  if (my_discuss.data.dataList.length == that.pageSize2){
-                    that.pageFlag2=true
-                  }
-                }else{
-                  dialog.alert('code:'+result.code + ';msg:' + result.data.msg);
-                  that.pageFlag2=true
-                }
-
-              }).catch(function (e) {
+                }).catch(function (e) {
                   that.pageFlag2 = true;
                   console.log('e:', e)
-              });
+                });
+              }
             }
+
           },
           write_note:function () {
             if (this.isapp){
@@ -463,7 +487,11 @@
                     that.pageFlag1=true
                   }
                 } else {
-                  dialog.alert('code:'+result.code + ';msg:' + result.data.msg)
+                  if(result.code == 30000){
+                      that.noLogin=true;
+                  }else{
+                    dialog.alert('code:' + result.code + ';msg:'+result.data.msg);
+                  }
                 }
               }).catch(function(e){
                 that.pageFlag1 = true
@@ -501,6 +529,7 @@
           },
           fn:function (){
             var _this=this;
+
             if(this.flag){
                 if(!_this.my_note_data[0]){
                   this.myNote();
@@ -570,6 +599,7 @@
               localStorage.setItem("dialog","localStorage");
             }
           }
+
       },
 
       mounted:function(){
@@ -945,5 +975,16 @@
     width: 3.17rem;
     height: 2.16rem;
   }
-
+  .noApply{
+    text-align: center;
+  }
+  .noApply img{
+    width: 1.2rem;
+    margin-top: 1rem;
+  }
+  .noApply p{
+    color: #666;
+    margin-top: 0.3rem;
+    text-align: center;
+  }
 </style>

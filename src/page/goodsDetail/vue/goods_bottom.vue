@@ -62,7 +62,7 @@
                 <div v-if = "!infoobj.presale">
                   <div class = "add_cart" v-if = "ismultigoods" @click = "handleAddCart">加入购物车</div>
                   <div class = "add_cart" v-else @click = "handleSingleCart">加入购物车</div>
-                
+
                   <div v-if = "isclose == true"
                        class = "btn_buy"
                        :dataid = "datarepresentid"

@@ -8,6 +8,7 @@ import encrypt from '../../../common/js/module/encrypt.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
+import ua from '../../../common/js/module/ua.js';
 import share from '../../../common/js/module/share.js';
 import nativeAncestry from '../../../common/js/module/nativeAncestor.js';
 
@@ -24,11 +25,25 @@ new Vue({
       rule_form: false,
       response: null,
       login_form: true,  //登录显示
-      isApp: !!navigator.userAgent.match(/davdian|bravetime|vyohui/),
+      isApp: ua.isDvdApp(),
       show_pop: false
     }
   },
-  computed: {},
+  computed: {
+    vossion:function () {
+      if(this.isApp){
+        let nowv =  ua.getDvdAppVersion();
+        let comper = ua.compareVersion(nowv,'4.1.0');
+        if(comper == 1){
+          return true;
+        }else{
+          return false;
+        }
+      }else{
+        return false;
+      }
+    }
+  },
   watch: {
     // 监听response变化
     response() {
@@ -43,7 +58,7 @@ new Vue({
         });
         setTimeout(function () {
           native.custom.setHead({
-            'title': '邀请好友安装大V店APP',
+            'title': '邀请好友注册大V店',
             'rightBtn': {
               'text': ''
             }
@@ -79,6 +94,7 @@ new Vue({
         dataType: 'json',
         data: encrypt({}),
         success(response) {
+          common.checkRedirect(response);
           that.response = response;
         },
         error(error) {
@@ -88,15 +104,20 @@ new Vue({
     },
     /*原生复制*/
     copyText: function (text) {
-      native.BrowserTouch.copyText({
-        "text": text,
-        success: function (result) {
-          popup.toast("邀请码已复制到剪切板");
-        },
-        error: function (result) {
-          popup.toast("复制失败，请手动复制");
-        }
-      })
+      var that = this;
+      if(that.vossion){
+        native.BrowserTouch.copyText({
+          "text": text,
+          success: function (result) {
+            popup.toast("已复制到剪切板");
+          },
+          error: function (result) {
+            popup.toast("复制失败，请手动复制");
+          }
+        })
+      }else{
+        that.show_pop = true;
+      }
     },
     /*分享*/
     shareto: function () {

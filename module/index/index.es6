@@ -53,7 +53,6 @@ export default {
       menudata: {},
       page_index: 0,
       menuId: 8,
-      likeNum: 0
     }
   },
   computed: {
@@ -108,15 +107,6 @@ export default {
      *
      *
      */
-    // sessionHistory(){
-    //     if (window.Units.isMobileIOS() || window.Units.isAndroid()){
-    //         if (sessionStorage.getItem('history') && JSON.parse(sessionStorage.getItem('history')).length >1){
-    //             if (JSON.parse(sessionStorage.getItem('history'))[JSON.parse(sessionStorage.getItem('history')).length-1].path != JSON.parse(sessionStorage.getItem('history'))[JSON.parse(sessionStorage.getItem('history')).length-2].path){
-    //                 window.location.reload()
-    //             }
-    //         }
-    //     }
-    // },
     sessionHistory() {
       if (window.Units.isMobileIOS() || window.Units.isAndroid()) {
         if (sessionStorage.getItem('history') && JSON.parse(sessionStorage.getItem('history')).length > 1) {
@@ -129,28 +119,24 @@ export default {
       }
     },
     initHistory() {
-      if (layout.sStorageGet('v_index', 'category') && (layout.sStorageGet('v_index', 'index') || layout.sStorageGet('v_index', 'index') == 0)) {
-        if (layout.sStorageGet('v_index', 'index') == 0) {
+      let that =this;
+      let menuId = that.getQuery('menuId') || 8;
+        if (menuId == 8) {
           var str = "index_first"
         } else {
-          var str = "first_" + layout.sStorageGet('v_index', 'category')
+          var str = "first_" + menuId;
         }
         if (layout.sStorageGet(str, 'data')) {
           this.contentData = layout.sStorageGet(str, 'data')
-          this.initcate = layout.sStorageGet('v_index', 'category')
-          this.initCategory = layout.sStorageGet('v_index', 'index')
-          if (+this.initCategory) {
+          this.initcate = menuId;
+          if (menuId != 8) {
             this.channel(this.initcate)
           } else {
             this.getPageFirst();
           }
-
         } else {
           this.init()
         }
-      } else {
-        this.init()
-      }
     },
     afterHandle() {
       let that = this;
@@ -183,7 +169,6 @@ export default {
       $.ajax({
         type: "POST",
         url: strUrl,
-        // url: '../data/index_data.json',
         data: strData,
         dataType: 'json',
         success: function (data) {
@@ -474,13 +459,12 @@ export default {
         })
     },
     changeCategory: function (category, index) {
-      this.page_index = index;
-      this.menuId = category;
       if (category == '-1') {
         window.location.href = this.menuList[this.menuList.length - 1].command.content
         return
       }
-      var that = this
+      var that = this;
+      that.menuId = category;
       if (this.initCategory == index) {
         return
       }
@@ -905,6 +889,12 @@ export default {
     },
     events: function () {
 
+    },
+    getQuery: function (name) {
+      var reg = new RegExp('(^|&?)' + name + '=([^&]*)(&|$)', 'i');
+      var r = window.location.search.match(reg)
+      if (r != null) return decodeURIComponent(r[2]);
+      return null
     }
   },
   components: {
@@ -947,14 +937,9 @@ export default {
     if (!Units.isApp()) {
       $('body').addClass('scroll_flag self_shop');
       $('body').css("paddingBottom", "48px")
-    } else {
-      $('body').css("paddingBottom", "0px")
     }
-  },
-  watch: {
-    menuId: function () {
-      var scope = this;
-      this.likeNum++;
+    else {
+      $('body').css("paddingBottom", "0px")
     }
   }
 }

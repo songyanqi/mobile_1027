@@ -249,7 +249,7 @@ export default {
               })
 
         }
-      },    
+      },
       getUrl () {
           if (this.isDev) {
             const locationUrl = window.location.href;
@@ -891,7 +891,7 @@ export default {
           goPayAdvanceList.sort(campare);
           this.infoObj.goPayAdvance = goPayAdvanceList[0]
         }
-        
+
       }
     },
     //判断是否要置灰
@@ -1007,7 +1007,7 @@ export default {
       // 预定的限制数量
       that.infoObj.limitNum = dataExtra.sales.limitNum;
       // that.infoObj.goPayAdvance = dataExtra.goPayAdvance;
-     
+
       that.goodsStockNumber = dataExtra.sales.goodsStocks;
 
       that.memberCont.memberGoods = dataExtra.price.memberGoods;
@@ -1044,7 +1044,8 @@ export default {
         }
 
         common1.initShare(5);
-        base.ready();if (shareMoney > 0&& that.visitorStatus == '3') {
+        base.ready();
+        if (shareMoney > 0&& that.visitorStatus == '3') {
           native.Browser.setHead({
             shareMoney: shareMoney + "",
             shareMoneyStr: '赚' + shareMoney + '元',
@@ -1066,6 +1067,18 @@ export default {
             imgUrl: window.imgUrl, // 分享图标
           });
         }
+      } else {
+        native.custom.initHead({
+          shareOnHead: 1,
+          isAudioAbsorb:1,
+          isShowAudio:1
+        });
+        share.setShareInfo({
+          title: window.title, // 分享标题
+          desc: window.desc, // 分享描述
+          link: window.link, // 分享链接
+          imgUrl: window.imgUrl, // 分享图标
+        });
       }
 
       //活动
@@ -1095,7 +1108,7 @@ export default {
         }
 
         if (item.typeId == 1 || item.typeId == 2 || item.typeId == 8 || item.typeId == 4 || item.typeId == 9) {
-          
+
         } else {
           that.activityInfo.activitys.push(item);
         }
