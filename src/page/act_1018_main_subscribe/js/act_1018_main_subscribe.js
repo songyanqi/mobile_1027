@@ -87,7 +87,7 @@ new Vue({
 
         // 设置app头部标题栏
         native.custom.setHead({
-          title: document.title + '123123',
+          title: document.title,
           shareBtn: '1',
         });
 
