@@ -3,7 +3,7 @@
     <!--呼朋唤友省更多-->
     <div v-if="response.type == '0'" class="title_img">
       <img style="width:1.8rem;" src="//pic.davdian.com/free/20170915_assistance/huhaoyou2.png">
-      <div class="dtime">距离结束：7天18时38分39秒</div>
+      <div class="dtime">距离结束：{{goodsdata.goods.overTime | formatRemainTime}}</div>
       <div class="qiqiu_ing">
         <img src="//pic.davdian.com/free/20170915_assistance/qiqiu.png">
         <img src="//pic.davdian.com/free/20170915_assistance/bangbangtang.png">
@@ -34,7 +34,8 @@
         <div class="goods_info_title">
           {{goodsdata.goods.goodsName}}
         </div>
-        <div class="order_good_price"><span class="f_l">10.18活动价<em class="price_symbol">￥</em><span>{{goodsdata.goods.activityPrice}}</span></span>
+        <div class="order_good_price"><span class="f_l">10.18活动价<em
+          class="price_symbol">￥</em><span>{{goodsdata.goods.activityPrice}}</span></span>
           <span class="membership_crown_pre"><em>￥</em>{{goodsdata.goods.goodsPrice}}</span></div>
       </div>
     </div>
@@ -59,7 +60,8 @@
         </span>
         <!--已经得到好友的助力-->
         <span v-else>
-          <div class="ast_bigtxt" style="padding-top:0.34rem;">得到好友的{{response.source.supporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
+          <div class="ast_bigtxt"
+               style="padding-top:0.34rem;">得到好友的{{response.source.supporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
           <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10.18当天购买只需{{response.source.surplusPrice}}元，继续召集好友助力得0元抢购，加油吧！</div>
           <div v-if="isApp" class="share_btn bd_r">喊人助力</div>
           <div v-if="isWx" class="share_btn bd_r">点击右上角“···”按钮分享</div>
@@ -89,7 +91,7 @@
         </swiper>
       </div>
 
-        <!--共得到几位好友支持-->
+      <!--共得到几位好友支持-->
       <div class="friend_list">
         <div class="friend_list_title">共得到{{goodsdata.friendNum}}位好友支持：</div>
         <div class="friend_desc">
@@ -98,7 +100,7 @@
               <img :src="friend.imageUrl" alt="">
             </div>
             <div>
-              <span><span>{{friend.nickName}}</span><span>助力时间：{{friend.dateTime}}</span></span>
+              <span><span>{{friend.nickName}}</span><span>助力时间：{{friend.dateTime | formatDate}}</span></span>
               <span>{{friend.title}}{{friend.price}}元</span>
             </div>
           </div>
@@ -118,13 +120,13 @@
     props: {},
     data() {
       return {
-        moke: 'http://www.easy-mock.com/mock/59b92127e0dc663341a8cccd',
+        moke: '',
         response: null,
         shareInfo: null,
         isWx: ua.isWeiXin(),
         isApp: ua.isDvdApp(),
-        goodsId:ua.getQuery("goodsId"),
-        shareUserId:ua.getQuery("shareUserId")
+        goodsId: ua.getQuery("goodsId"),
+        shareUserId: ua.getQuery("shareUserId")
       }
     },
     components: {
@@ -174,7 +176,7 @@
           url: this.moke + '/api/mg/sale/userhelpbuy/getUserHelpInfo?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
-          data: encrypt({goodsId: ts.goodsId,shareUserId:ts.shareUserId}),
+          data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
             ts.response = response.data[0];
 
@@ -189,7 +191,7 @@
           url: this.moke + '/api/mg/sale/userhelpbuy/getUserHelpActivity?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
-          data: encrypt({goodsId: ts.goodsId,shareUserId:ts.shareUserId}),
+          data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
             ts.goodsdata = response.data[0];
           },
@@ -224,6 +226,15 @@
           format = '已开始';
         }
         return format;
+      },
+      formatDate(now) {
+        var year = now.getYear();
+        var month = now.getMonth() + 1;
+        var date = now.getDate();
+        var hour = now.getHours();
+        var minute = now.getMinutes();
+        var second = now.getSeconds();
+        return "20" + year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second;
       }
     },
   }
@@ -237,7 +248,7 @@
     background: -webkit-linear-gradient(top, #F54B74, #FF9F8F);
     background: linear-gradient(to bottom, #F54B74, #FF9F8F);
     width: 100%;
-    overflow-y:scroll;
+    overflow-y: scroll;
     position: fixed;
     top: 44px;
     bottom: 0;
@@ -512,24 +523,25 @@
       @include ellipsis(2);
     }
   }
-  .friend_list{
+
+  .friend_list {
     margin: 0 0.1rem;
     position: relative;
     padding-bottom: 0.6rem;
-    .friend_list_title{
+    .friend_list_title {
       font-size: 0.14rem;
       height: 0.2rem;
       text-align: left;
       line-height: 0.2rem;
-      color:#FFFFFF;
+      color: #FFFFFF;
       text-indent: 0.1rem;
     }
-    .friend_desc{
+    .friend_desc {
       .swiperItem {
         height: 0.5rem;
         position: relative;
         div {
-          height:  0.5rem;
+          height: 0.5rem;
           float: left;
         }
         div:nth-of-type(1) {
@@ -552,37 +564,37 @@
           line-height: 0.2rem;
           font-size: 0.14rem;
           color: #FFFFFF;
-          span{
+          span {
             display: block;
           }
-          span:nth-of-type(1){
+          span:nth-of-type(1) {
             font-size: 0.1rem;
             height: 0.14rem;
             line-height: 0.14rem;
-            span:nth-of-type(1){
+            span:nth-of-type(1) {
               display: inline-block;
               float: left;
             }
-            span:nth-of-type(2){
+            span:nth-of-type(2) {
               display: inline-block;
               float: right;
               font-size: 0.1rem;
             }
           }
-          span:nth-of-type(2){
+          span:nth-of-type(2) {
             height: 0.17rem;
             font-size: 0.12rem;
           }
         }
       }
-      .swiperItem:after{
+      .swiperItem:after {
         content: "";
         display: block;
         position: absolute;
         left: -50%;
         width: 200%;
         height: 1px;
-        background:#FFFFFF;
+        background: #FFFFFF;
         transform: scale(0.5);
         bottom: 0;
         z-index: 1;
