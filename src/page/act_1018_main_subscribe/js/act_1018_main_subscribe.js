@@ -35,8 +35,8 @@ new Vue({
       tabIndex: 0,
       tipType: null,
       screenings: null,
-      // isDvdApp: ua.isDvdApp(),
-      isDvdApp: false,
+      isDvdApp: ua.isDvdApp(),
+      // isDvdApp: false,
       date: date,
       subscribe_1018_goods_ids: localStorage.getItem('subscribe_1018_goods_ids') ? JSON.parse(localStorage.getItem('subscribe_1018_goods_ids')) : [],
     }
@@ -87,8 +87,9 @@ new Vue({
 
         // 设置app头部标题栏
         native.custom.setHead({
-          title: document.title,
-        });
+          title: document.title + '123123',
+          shareBtn: '1',
+        }, true);
 
         // 设置分享信息
         try {
@@ -183,7 +184,8 @@ new Vue({
     btnClickSubscribe(goods) {
       let ts = this;
       login.needLogin();
-      if (ua.isDvdApp()) {
+      debugger
+      if (ts.isDvdApp) {
         native.Browser.goodsBook({
           goodsId: goods.goodsId,
           goodsTitle: goods.goodsName,
