@@ -982,12 +982,12 @@ $(function(){
                         if(typeof callback=="function"){
                             callback();
                         }
-                        bravetime.tj.evSend({category: tj_path, action: "address_tj", label: "address_ok", value: 1, nodeid: tj_id});
+                        // bravetime.tj.evSend({category: tj_path, action: "address_tj", label: "address_ok", value: 1, nodeid: tj_id});
                     },
                     error: function () {
 
                         isError = true;
-                        bravetime.tj.evSend({category: tj_path, action: "address_tj", label: "address_error", value: 1, nodeid: tj_id});
+                        // bravetime.tj.evSend({category: tj_path, action: "address_tj", label: "address_error", value: 1, nodeid: tj_id});
                     }
                 });
             }

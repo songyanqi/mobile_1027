@@ -156,5 +156,5 @@ function stopVoice(voiceDiv) {
 }
 
 window.tlShareCallback = window.sendShareCallback = window.QQShareCallback = window.weiboShareCallback = window.qZoneShareCallbackCancel = function () {
-    bravetime.tj.evSend({category:"live",action:"share",label:"share_"+live_id,"value":1});
+    // bravetime.tj.evSend({category:"live",action:"share",label:"share_"+live_id,"value":1});
 };
