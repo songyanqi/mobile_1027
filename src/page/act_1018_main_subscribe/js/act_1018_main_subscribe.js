@@ -87,7 +87,7 @@ new Vue({
 
         // 设置app头部标题栏
         native.custom.setHead({
-          title: document.title + '123123',
+          title: document.title,
           shareBtn: '1',
         });
 
@@ -97,7 +97,7 @@ new Vue({
             title: '周年庆抢不到牛货？快来跟我混！',
             desc: '大V店周年庆|谁说抢货要拼颜值？快来跟我混！提前预约，再也不用担心我抢不到牛货了>>',
             link: location.href,
-            imgUrl: '[[static]]/page/act_1018_main_subscribe/img/share.png'
+            imgUrl: `${location.protocol}[[static]]/page/act_1018_main_subscribe/img/share.png`
           });
         } catch (err) {
           console.error(err);
@@ -196,8 +196,8 @@ new Vue({
           goodsListUrl: location.href,
           success() {
             // 放入localStorage
-            this.subscribe_1018_goods_ids.push(goods.goodsId);
-            localStorage.setItem('subscribe_1018_goods_ids', JSON.stringify(this.subscribe_1018_goods_ids));
+            ts.subscribe_1018_goods_ids.push(goods.goodsId);
+            localStorage.setItem('subscribe_1018_goods_ids', JSON.stringify(ts.subscribe_1018_goods_ids));
             //已改为由app弹 popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
             goods.buttonName = '已设预约';
             goods.bespeakNum = parseInt(goods.bespeakNum) + 1;

@@ -36,8 +36,11 @@ new Vue({
     return {
       response: null,
       topics: [
+        // 头图
         {id: '14376', content: null},
+        // 上方专题
         {id: '14377', content: null},
+        // 下方专题
         {id: '14378', content: null}
       ],
       actBeginTime: new Date(2017, 10, 18),
@@ -180,6 +183,9 @@ new Vue({
           dataType: 'text',
           data: {},
           success(response) {
+            if(topic.id == '14376'){
+              response = JSON.parse(response);
+            }
             topic.content = response;
           },
           error(error) {
