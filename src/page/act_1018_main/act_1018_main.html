@@ -22,7 +22,7 @@
            :style="{'background-image': topics[0].content ? 'url('+(topics[0].content && topics[0].content.split('|||')[1])+')' : 'url(//pic.davdian.com/activity/2017/09/18/750_630_ffedafe358bdbc4ce22f226adbb1c027.png)'}">
         <!--gif-->
         <template v-if="ua.isAndroid() || ua.isIos() && ua.compareVersion('10.0.0', '10') < 0">
-          <img class="gif" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505808067875&di=1f69960cac13e686c941543fff06d6eb&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01ddeb5542e7de0000019ae958da1c.jpg" alt="">
+          <img class="gif" :src="topics[0].content && topics[0].content.split('|||')[3]">
         </template>
         <!--视频-->
         <template v-else>
