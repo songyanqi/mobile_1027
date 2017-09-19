@@ -30,6 +30,7 @@ new Vue({
     'com-act-subscribe': require('../vue/com-act-subscribe.vue'),
     'com-act-lightbrand': require('../vue/lightBrand.vue'),
     'com-act-assistance': require('../../act_1018_assistance/vue/com-act-assistance.vue'),
+    'com-act-reserve': require('../../act_1018_reserve/vue/com-act-reserve.vue'),
   },
   data() {
     return {
@@ -100,7 +101,7 @@ new Vue({
         // 开启10.18弹窗
         setTimeout(function () {
           ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
-        }, 5000);
+        }, 3000);
         // ts.isShowBeginPop = 1;
 
         // 我的10.18弹窗

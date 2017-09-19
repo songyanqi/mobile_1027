@@ -22,6 +22,7 @@
   }
   .g-head-pic {
     position: relative;
+    height: ptr(315);
     background: no-repeat;
     background-size: 100% 100%;
     video {
@@ -29,7 +30,10 @@
       min-height: ptr(317);
       vertical-align: middle;
     }
-    .aaa-dimensions{
+    .gif {
+      width: 100%;
+    }
+    .aaa-dimensions {
       width: 100%;
       height: auto;
     }
@@ -111,7 +115,7 @@
         }
         100% {
           opacity: 0;
-          transform: scale(0.1) translate(ptr(2250), ptr(-950));
+          transform: scale(0.1) translate(ptr(2250), ptr(-50));
         }
       }
       &.close {
@@ -155,6 +159,6 @@
     margin-left: ptr(375-101);
     animation: g-my-1018-animation 1s;
     transform-origin: right;
-    z-index: 1;
+    z-index: 3;
   }
 }

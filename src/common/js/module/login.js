@@ -1,4 +1,6 @@
 import Cookies from 'js-cookie';
+import ua from './ua.js';
+import native from './native.js';
 
 /**
  * 模块: 登录相关
@@ -48,8 +50,12 @@ export default {
    * 说明: 调用此方法说明当前页面需要登录，如果未登录跳转登录页
    */
   goLoginPage(){
-    location.href = '/login.html?referer=' + encodeURIComponent(location.href);
-    throw new Error(`即将跳转登录页(${location.href})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
+    if (ua.isDvdApp()) {
+      native.Account.login();
+    } else {
+      location.href = '/login.html?referer=' + encodeURIComponent(location.href);
+      throw new Error(`即将跳转登录页(${location.href})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
+    }
   },
   /**
    * 功能: 自动跳转登录页
