@@ -1,5 +1,6 @@
 <template>
   <div>
+
     <div class="banner">
       <div class="big_img"><img src="//pic.davdian.com/free/2017/09/09/banner.png" alt=""></div>
       <div class="banner_title">2017最受欢迎的TOP品牌</div>
@@ -89,6 +90,7 @@
         this.response.map(function (item,index) {
           arr.push(item.isLighted);
         });
+        return arr;
       }
     },
     mounted(){
