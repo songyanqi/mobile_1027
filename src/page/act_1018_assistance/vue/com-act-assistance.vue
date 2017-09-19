@@ -38,10 +38,10 @@
           <div class="progress_info" v-html="lis.activityMessage">
           </div>
           <a class="remain_btns">
-            <div class="panic_buying_btn" v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</div>
-            <div class="panic_buying_btn yellows" v-if="lis.activityButton == '我的助力'">{{lis.activityButton}}</div>
-            <div class="panic_buying_btn big_1018" v-if="lis.activityButton == '10.18当天0元抢'">{{lis.activityButton}}
-            </div>
+            <a class="panic_buying_btn" :href="lis.activityLink" v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>
+            <a class="panic_buying_btn yellows" :href="lis.activityLink" v-if="lis.activityButton == '我的助力'">{{lis.activityButton}}</a>
+            <a class="panic_buying_btn big_1018" href="javascript:void(0)" v-if="lis.activityButton == '10.18当天0元抢'">{{lis.activityButton}}
+            </a>
           </a>
         </li>
       </ul>
@@ -193,6 +193,11 @@
     }
   }
 
+  .remain_btns{
+    a{
+      display: block;
+    }
+  }
   .f_l {
     float: left;
   }
