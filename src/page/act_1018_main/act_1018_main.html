@@ -14,29 +14,24 @@
 
       <!--进度条-->
       <div class="g-progess-pic">
-        <!--//pic.davdian.com/activity/2017/09/18/750_69_6dc690a5b4a337888ae3dfe6919d45d0.jpg-->
-        <img :src="topics[0].content.split('|||')[0]" v-if="topics[0].content">
+        <img :src="topics[0].content ? topics[0].content.split('|||')[0] : '//pic.davdian.com/activity/2017/09/18/750_69_6dc690a5b4a337888ae3dfe6919d45d0.jpg'">
       </div>
 
-      <!--头图 :style="{'background-image': 'url('+(topics[0].content && topics[0].content.split('|||')[1])+')'}"-->
-      <div class="g-head-pic">
-          <!--图片-->
-          <img :src="topics[0].content && topics[0].content.split('|||')[1]" v-if="ua.isAndroid() || ua.isIos() && ua.compareVersion('10.0.0', '10') < 0">
-
-          <!--视频 //pic.davdian.com/activity/2017/09/18/750_630_ffedafe358bdbc4ce22f226adbb1c027.png-->
+      <!--头图-->
+      <div class="g-head-pic"
+           :style="{'background-image': topics[0].content ? 'url('+(topics[0].content && topics[0].content.split('|||')[1])+')' : 'url(//pic.davdian.com/activity/2017/09/18/750_630_ffedafe358bdbc4ce22f226adbb1c027.png)'}">
+        <!--gif-->
+        <template v-if="ua.isAndroid() || ua.isIos() && ua.compareVersion('10.0.0', '10') < 0">
+          <img class="gif" src="//timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1505808067875&di=1f69960cac13e686c941543fff06d6eb&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01ddeb5542e7de0000019ae958da1c.jpg" alt="">
+        </template>
+        <!--视频-->
+        <template v-else>
           <video autoplay loop :poster="topics[0].content && topics[0].content.split('|||')[1]"
                  webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5"
-                 x5-video-player-fullscreen="false" style="object-fit: fill;"
-              v-else>
-            <!--<source src="[[static]]/page/act_1018_main/img/video.mp4" type="video/mp4"/>-->
-            <!--<source src="http://v.cctv.com/flash/mp4video6/TMS/2011/01/05/cf752b1c12ce452b3040cab2f90bc265_h264818000nero_aac32-1.mp4" type="video/mp4"/>-->
-            <!--<source src="http://www.w3school.com.cn/i/movie.ogg" type="video/ogg"/>-->
-            <!--<source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4"/>-->
-            <source src="http://data.video.qiyi.com/videos/other/20170911/73/a2/b69f338fd1172dabfa1e2ec758d92cfc.mp4?pv=0.2" type="video/mp4"/>
-            <!--<source src="[[static]]/page/act_1018_main/img/b69f338fd1172dabfa1e2ec758d92cfc.mp4" type="video/mp4"/>-->
-            <!--<source src="[[static]]/page/act_1018_main/img/video.ogg" type="video/ogg"/>-->
-            <!--<source src="[[static]]/page/act_1018_main/img/video.webm" type="video/webm"/>-->
+                 x5-video-player-fullscreen="false" style="object-fit: fill;">
+            <source :src="topics[0].content && topics[0].content.split('|||')[2]" type="video/mp4"/>
           </video>
+        </template>
 
         <!--倒计时-->
         <div class="count-down" style="display: none;" :style="{display: response ? null : 'none'}">

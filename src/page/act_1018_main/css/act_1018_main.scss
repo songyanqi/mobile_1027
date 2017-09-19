@@ -22,6 +22,7 @@
   }
   .g-head-pic {
     position: relative;
+    height: ptr(315);
     background: no-repeat;
     background-size: 100% 100%;
     video {
@@ -29,7 +30,10 @@
       min-height: ptr(317);
       vertical-align: middle;
     }
-    .aaa-dimensions{
+    .gif {
+      width: 100%;
+    }
+    .aaa-dimensions {
       width: 100%;
       height: auto;
     }

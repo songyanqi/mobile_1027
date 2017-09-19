@@ -18,8 +18,6 @@ import share from '../../../common/js/module/share.js';
 import date from '../../../common/js/module/date.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
 
-login.needLogin();
-
 // 懒加载初始化
 vueLazyload.init(true);
 
@@ -183,6 +181,7 @@ new Vue({
     /** 我要预约 */
     btnClickSubscribe(goods) {
       let ts = this;
+      login.needLogin();
       if (ua.isDvdApp()) {
         native.Browser.goodsBook({
           goodsId: goods.goodsId,
@@ -215,6 +214,8 @@ new Vue({
               ts.tipType = 'web-focus';
             }
             goods.buttonName = '已设预约';
+            debugger
+            goods.bespeakNum = parseInt(goods.bespeakNum) + 1;
             ts.$forceUpdate();
           } else if (response.code == 64404) {
             if (ua.isWeiXin()) {
