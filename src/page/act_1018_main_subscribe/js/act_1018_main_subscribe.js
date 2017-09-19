@@ -97,7 +97,7 @@ new Vue({
             title: '周年庆抢不到牛货？快来跟我混！',
             desc: '大V店周年庆|谁说抢货要拼颜值？快来跟我混！提前预约，再也不用担心我抢不到牛货了>>',
             link: location.href,
-            imgUrl: '[[static]]/page/act_1018_main_subscribe/img/share.png'
+            imgUrl: `${location.protocol}[[static]]/page/act_1018_main_subscribe/img/share.png`
           });
         } catch (err) {
           console.error(err);
