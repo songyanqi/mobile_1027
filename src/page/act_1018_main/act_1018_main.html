@@ -80,16 +80,16 @@
       <!--活动区域-->
       <div class="g-act" v-if="response && response.data">
         <!--好友助力-->
-        <!--<com-act-assistance :response="response" v-if="response.data.help" :current-date="currentDate"></com-act-assistance>-->
+        <com-act-assistance :response="response" v-if="response.data.help" :current-date="currentDate"></com-act-assistance>
 
         <!--品牌点亮-->
         <com-act-lightbrand :response="response" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightbrand>
 
         <!--爆品预约-->
-        <!--<com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>-->
+        <com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>
 
         <!--商品预定-->
-        <!--<com-act-reserve :response="response" v-if="response.data.book" :current-date="currentDate"></com-act-reserve>-->
+        <com-act-reserve :response="response" v-if="response.data.book" :current-date="currentDate"></com-act-reserve>
       </div>
 
       <!--活动下方专题-->

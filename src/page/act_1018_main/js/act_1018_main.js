@@ -65,8 +65,6 @@ new Vue({
       this.$nextTick(function () {
         let ts = this;
 
-        // alert(ua.compareVersion('10.0.0', '10') >= 0)
-
         // 头图自动播放
         let video = document.querySelector('video');
         if(video){
@@ -158,7 +156,7 @@ new Vue({
           ts.response = response;
         },
         error(error) {
-          ts.response = require('../json/act_1018_main.json');
+          // ts.response = require('../json/act_1018_main.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
