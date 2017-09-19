@@ -41,6 +41,7 @@
       <!--按钮-->
       <div v-if="isWeixin" class="main_btn">点击右上角“···”按钮发起助力</div>
       <div v-if="isDvdApp" @click="shares" class="main_btn">喊人助力</div>
+      <div v-if="!isDvdApp&&!isWeixin" @click="shares" class="main_btn">去微信或者APP发起助力</div>
       <div class="good_detail_imgs">
         <img v-for="imgs in good.details" v-lazy="imgs.detailUrl" v-if="imgs.detailUrl" alt="">
       </div>

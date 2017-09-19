@@ -1,7 +1,7 @@
 <template>
   <div class="assistance_box" v-if="response">
     <!--呼朋唤友省更多-->
-    <div v-if="ask_assists" class="title_img">
+    <div v-if="response.type == '0'" class="title_img">
       <img style="width:1.8rem;" src="//pic.davdian.com/free/20170915_assistance/huhaoyou2.png">
       <div class="dtime">距离结束：7天18时38分39秒</div>
       <div class="qiqiu_ing">
@@ -10,13 +10,13 @@
       </div>
     </div>
     <!--助好友0元购-->
-    <div v-if="assists_friend" class="title_img">
-      <img style="width: 2.57rem;" src="//pic.davdian.com/free/20170915_assistance/zhuhaoyou.png">
+    <div v-if="response.type == '1'" class="title_img">
+      <img style="width: 2.57rem;" :src="response.supporter.imageUrl">
       <div class="dtime">距离结束：7天18时38分39秒</div>
       <div class="friend_mark">
         <div></div>
         <div>
-          13788927683 <br>
+          {{response.supporter.nickName}} <br>
           正在呼朋唤友助力中…
         </div>
       </div>
@@ -32,10 +32,10 @@
       </div>
       <div class="goods_info_desc">
         <div class="goods_info_title">
-          棕色的熊、棕色的熊，你在看什么？（纸板书，适合0-3岁）
+          {{goodsdata.goods.goodsName}}
         </div>
-        <div class="order_good_price"><span class="f_l">10.18活动价<em class="price_symbol">￥</em><span>109</span></span>
-          <span class="membership_crown_pre"><em>￥</em>199</span></div>
+        <div class="order_good_price"><span class="f_l">10.18活动价<em class="price_symbol">￥</em><span>{{goodsdata.goods.activityPrice}}</span></span>
+          <span class="membership_crown_pre"><em>￥</em>{{goodsdata.goods.goodsPrice}}</span></div>
       </div>
     </div>
     <!--板-->
@@ -43,24 +43,24 @@
       <img src="//pic.davdian.com/free/20170915_assistance/rule.png">
       <img src="//pic.davdian.com/free/20170915_assistance/bear.png">
       <!--获得0元购机会-->
-      <span v-if="isfree">
+      <span v-if="response.source.surplusPrice == '0'">
           <div class="ast_deep">恭喜你获得10.18当天0元抢购的机会</div>
-          <div class="ast_bigtxt">得到好友的xx元助力，战胜了80%的人</div>
+          <div class="ast_bigtxt">得到好友的{{response.source.supporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
           <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10月18日开抢 数量有限 先到先得!</div>
       </span>
       <!--没有获得0元购机会-->
       <span v-else>
         <!--没有好友助力呢-->
-        <span v-if="!alreadyAst">
+        <span v-if="response.source.isSupporter == '0'">
           <div class="no_ast ast_txt" style="padding: 0.48rem 0 0.34rem;">还没有好友帮你助力，快去召集好友助力省钱吧！</div>
           <div v-if="isApp" class="share_btn bd_r">喊人助力</div>
           <div v-if="isWx" class="share_btn bd_r">点击右上角“···”按钮分享</div>
           <div v-if="!isWx && !isApp" class="share_btn bd_r" @click="gowxorapp">喊人助力</div>
         </span>
-          <!--已经得到好友的助力-->
+        <!--已经得到好友的助力-->
         <span v-else>
-          <div class="ast_bigtxt">得到好友的xx元助力，战胜了80%的人</div>
-          <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10.18当天购买只需yy元，继续召集好友助力得0元抢购，加油吧！</div>
+          <div class="ast_bigtxt" style="padding-top:0.34rem;">得到好友的{{response.source.supporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
+          <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10.18当天购买只需{{response.source.surplusPrice}}元，继续召集好友助力得0元抢购，加油吧！</div>
           <div v-if="isApp" class="share_btn bd_r">喊人助力</div>
           <div v-if="isWx" class="share_btn bd_r">点击右上角“···”按钮分享</div>
           <div v-if="!isWx && !isApp" class="share_btn bd_r" @click="gowxorapp">喊人助力</div>
@@ -69,23 +69,42 @@
     </div>
     <img class="table_brand" src="//pic.davdian.com/free/20170915_assistance/table_brand.png">
 
-    <div class="share_btn bd_p">我也想要商品0元购</div>
+    <div v-if="response.type == '1'" class="share_btn bd_p">我也想要商品0元购</div>
+
+    <!--是不是已经有助力-->
+    <span v-if="response.source.isSupporter == '1'">
     <!--获奖好友轮播-->
-    <div class="loop_my_friend_reward">
-      <swiper auto height="60px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
-        <swiper-item>
-          <div class="swiperItem">
+      <div class="loop_my_friend_reward">
+        <swiper auto height="60px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
+          <swiper-item>
+            <div class="swiperItem">
+              <div>
+                <img :src="goodsdata.notice.imageUrl" alt="">
+              </div>
+              <div>
+                {{goodsdata.notice.message}}
+              </div>
+            </div>
+          </swiper-item>
+        </swiper>
+      </div>
+
+        <!--共得到几位好友支持-->
+      <div class="friend_list">
+        <div class="friend_list_title">共得到{{goodsdata.friendNum}}位好友支持：</div>
+        <div class="friend_desc">
+          <div class="swiperItem" v-if="friend in goodsdata.friends">
             <div>
-              <img src="//pic.davdian.com/free/20170915_assistance/qiqiu.png" alt="">
+              <img :src="friend.imageUrl" alt="">
             </div>
             <div>
-              棕色的熊、棕色的熊，你在看什么？（纸板书，适合0-3岁）
-              棕色的熊、棕色的熊，你在看什么？（纸板书，适合0-3岁）
+              <span><span>{{friend.nickName}}</span><span>助力时间：{{friend.dateTime}}</span></span>
+              <span>{{friend.title}}{{friend.price}}元</span>
             </div>
           </div>
-        </swiper-item>
-      </swiper>
-    </div>
+        </div>
+      </div>
+    </span>
   </div>
 </template>
 <script>
@@ -102,12 +121,10 @@
         moke: 'http://www.easy-mock.com/mock/59b92127e0dc663341a8cccd',
         response: null,
         shareInfo: null,
-        ask_assists: true, //呼唤朋友助攻
-        assists_friend: false, //助朋友0元购
         isWx: ua.isWeiXin(),
         isApp: ua.isDvdApp(),
-        alreadyAst: false, //好友已经助力
-        isfree:false, //获得0元购机会
+        goodsId:ua.getQuery("goodsId"),
+        shareUserId:ua.getQuery("shareUserId")
       }
     },
     components: {
@@ -146,7 +163,7 @@
     },
     methods: {
       /**
-       * 接口名称:
+       * 接口名称:用户助力数据项
        * 接口文档:
        */
       getData() {
@@ -154,12 +171,27 @@
         $.ajax({
           cache: false,
           async: true,
-          url: this.moke + '/api/mg/sale/userhelpbuy/getHelpGoodsDetail?_=' + Date.now(),
+          url: this.moke + '/api/mg/sale/userhelpbuy/getUserHelpInfo?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
-          data: encrypt({goodsId: ts.goodsId}),
+          data: encrypt({goodsId: ts.goodsId,shareUserId:ts.shareUserId}),
           success(response) {
-            ts.response = response;
+            ts.response = response.data[0];
+
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+          }
+        });
+        $.ajax({
+          cache: false,
+          async: true,
+          url: this.moke + '/api/mg/sale/userhelpbuy/getUserHelpActivity?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: encrypt({goodsId: ts.goodsId,shareUserId:ts.shareUserId}),
+          success(response) {
+            ts.goodsdata = response.data[0];
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);
@@ -205,8 +237,11 @@
     background: -webkit-linear-gradient(top, #F54B74, #FF9F8F);
     background: linear-gradient(to bottom, #F54B74, #FF9F8F);
     width: 100%;
-    height: 1000px;
-    overflow: hidden;
+    overflow-y:scroll;
+    position: fixed;
+    top: 44px;
+    bottom: 0;
+    max-width: 640px;
   }
 
   .title_img {
@@ -300,7 +335,7 @@
     border-radius: 0.04rem;
     margin: 0 auto;
     position: relative;
-    z-index: 2;
+    z-index: 1;
     img {
       position: absolute;
       z-index: 3;
@@ -331,7 +366,7 @@
       text-align: center;
       margin: 0.34rem auto 0;
     }
-    .ast_deep{
+    .ast_deep {
       font-size: 0.18rem;
       color: #BA2424;
       line-height: 0.33rem;
@@ -442,7 +477,7 @@
   .loop_my_friend_reward {
     width: 3.55rem;
     height: 60px;
-    margin: 0 auto;
+    margin: 0.03rem auto 0.1rem;
     position: relative;
     background-color: #FF7B9B;
   }
@@ -476,5 +511,83 @@
       color: #FFFFFF;
       @include ellipsis(2);
     }
+  }
+  .friend_list{
+    margin: 0 0.1rem;
+    position: relative;
+    padding-bottom: 0.6rem;
+    .friend_list_title{
+      font-size: 0.14rem;
+      height: 0.2rem;
+      text-align: left;
+      line-height: 0.2rem;
+      color:#FFFFFF;
+      text-indent: 0.1rem;
+    }
+    .friend_desc{
+      .swiperItem {
+        height: 0.5rem;
+        position: relative;
+        div {
+          height:  0.5rem;
+          float: left;
+        }
+        div:nth-of-type(1) {
+          width: 0.3rem;
+          height: 0.3rem;
+          border-radius: 100%;
+          float: left;
+          margin: 0.1rem;
+          overflow: hidden;
+          img {
+            width: 100%;
+          }
+        }
+        div:nth-of-type(2) {
+          position: absolute;
+          height: 0.3rem;
+          left: 0.5rem;
+          top: 0.1rem;
+          right: 0.1rem;
+          line-height: 0.2rem;
+          font-size: 0.14rem;
+          color: #FFFFFF;
+          span{
+            display: block;
+          }
+          span:nth-of-type(1){
+            font-size: 0.1rem;
+            height: 0.14rem;
+            line-height: 0.14rem;
+            span:nth-of-type(1){
+              display: inline-block;
+              float: left;
+            }
+            span:nth-of-type(2){
+              display: inline-block;
+              float: right;
+              font-size: 0.1rem;
+            }
+          }
+          span:nth-of-type(2){
+            height: 0.17rem;
+            font-size: 0.12rem;
+          }
+        }
+      }
+      .swiperItem:after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: -50%;
+        width: 200%;
+        height: 1px;
+        background:#FFFFFF;
+        transform: scale(0.5);
+        bottom: 0;
+        z-index: 1;
+      }
+    }
+
   }
 </style>
