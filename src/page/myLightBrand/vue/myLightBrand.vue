@@ -2,7 +2,7 @@
   <div>
     <div class="all_list">
       <div class="list" v-for="(item,index) in dataList">
-        <div class="list_b_img">
+        <div class="list_b_img" @click.stop="go_detail(item.linkUrl)">
           <img :src="item.bandPic" alt="">
         </div>
 
@@ -99,6 +99,15 @@
         })
     },
     methods:{
+      go_detail(linkUrl){
+        if(this.isApp){
+          native.Browser.open({
+            url: linkUrl
+          })
+        }else{
+          window.location.href=linkUrl;
+        }
+      },
       initIsLighted(data){
         var that=this;
         data.map(function (item) {
