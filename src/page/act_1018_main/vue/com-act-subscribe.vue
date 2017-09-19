@@ -5,7 +5,7 @@
     <img class="banner" src="[[static]]/page/act_1018_main/img/subscribe-banner.png">
 
     <!-- 场次tab -->
-    <div class="swiper-container">
+    <div class="swiper-container" v-if="list">
       <div class="swiper-wrapper">
         <div class="swiper-slide" @click="swiperSlideClick(i, item)" v-for="(item, i) in list">
           <div class="item" :class="{selected: tabIndex === i}">
@@ -17,7 +17,7 @@
     </div>
 
     <!-- 商品列表 -->
-    <div class="g-goods-wrapper">
+    <div class="g-goods-wrapper" v-if="list">
       <ul>
         <li v-for="(item, i) in list[tabIndex].goodsList" v-if="i < 3" @click="goodsClick(item.goodsId)">
           <img class="pic" :src="item.imgUrl">
@@ -53,35 +53,64 @@
     },
     data() {
       return {
-        list: require('../json/act-subscribe.json'),
+        list: null,
         tabIndex: 0,
         date: date,
       }
     },
     computed: {},
-    watch: {},
+    watch: {
+      // 监听response变化
+      list(){
+        // response变化后并渲染完dom,设置其他事项
+        this.$nextTick(function () {
+          let ts = this;
+
+          // 初始化轮播tab
+          this.swiper = new Swiper('.com-act-subscribe .swiper-container', {
+            pagination: '.swiper-pagination',
+            slidesPerView: 'auto',
+            paginationClickable: true,
+            spaceBetween: 0,
+            initialSlide: this.tabIndex,
+          });
+        });
+      }
+    },
     created(){
+      this.getData();
     },
     mounted() {
-      // 初始化轮播tab
-      this.swiper = new Swiper('.com-act-subscribe .swiper-container', {
-        pagination: '.swiper-pagination',
-        slidesPerView: 'auto',
-        paginationClickable: true,
-        spaceBetween: 0,
-        initialSlide: this.tabIndex,
-      });
     },
     methods: {
+      getData() {
+        let ts = this;
+        $.ajax({
+          cache: false,
+          async: true,
+          url: `http://18686604386.davdian.com/t-14537.html?_=${Date.now()}`,
+          type: 'get',
+          dataType: 'json',
+          data: {},
+          success(response) {
+              debugger
+            ts.list = response;
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+//            ts.list = require('../json/act-subscribe.json');
+          }
+        });
+      },
       /** tab切换 */
       swiperSlideClick(index, item) {
         this.swiper.slideTo(index - 2);
         this.tabIndex = index;
         this.screenings = item.screenings;
-        this.getData(item.screenings);
+        this.$forceUpdate();
       },
       /** 商品点击 */
-      goodsClick(goodsId){
+      goodsClick(goodsId) {
         if (this.currentDate < '2017-10-19') {
           location.href = '/act_1018_main_subscribe.html';
         } else {
@@ -89,11 +118,12 @@
         }
       },
       /** '预约更多单品'点击 */
-      moreClick(){
+      moreClick() {
         location.href = '/act_1018_main_subscribe.html';
       }
     },
-    filters: {},
+    filters: {}
+    ,
   }
 </script>
 

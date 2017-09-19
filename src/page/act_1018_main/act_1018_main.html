@@ -12,11 +12,6 @@
       <!--标题-->
       <com-top-title title="10.18周年庆" home></com-top-title>
 
-      <!--进度条-->
-      <div class="g-progess-pic">
-        <img :src="topics[0].content ? topics[0].content.split('|||')[0] : '//pic.davdian.com/activity/2017/09/18/750_69_6dc690a5b4a337888ae3dfe6919d45d0.jpg'">
-      </div>
-
       <!--头图-->
       <div class="g-head-pic"
            :style="{'background-image': topics[0].content ? 'url('+(topics[0].content && topics[0].content.split('|||')[1])+')' : 'url(//pic.davdian.com/activity/2017/09/18/750_630_ffedafe358bdbc4ce22f226adbb1c027.png)'}">
@@ -55,6 +50,11 @@
             </span>
           </div>
         </div>
+      </div>
+
+      <!--进度条-->
+      <div class="g-progess-pic">
+        <img :src="topics[0].content ? topics[0].content.split('|||')[0] : '//pic.davdian.com/activity/2017/09/18/750_69_6dc690a5b4a337888ae3dfe6919d45d0.jpg'">
       </div>
 
       <!--活动开启弹窗-->
