@@ -93,7 +93,6 @@
           dataType: 'json',
           data: {},
           success(response) {
-              debugger
             ts.list = response;
           },
           error(error) {

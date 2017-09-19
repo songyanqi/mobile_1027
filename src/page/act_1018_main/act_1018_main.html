@@ -14,17 +14,17 @@
 
       <!--头图-->
       <div class="g-head-pic"
-           :style="{'background-image': topics[0].content ? 'url('+(topics[0].content && topics[0].content.split('|||')[1])+')' : 'url(//pic.davdian.com/activity/2017/09/18/750_630_ffedafe358bdbc4ce22f226adbb1c027.png)'}">
+           :style="{'background-image': topics[0].content ? 'url('+topics[0].content.headPic+')' : 'url(//pic.davdian.com/activity/2017/09/18/750_630_ffedafe358bdbc4ce22f226adbb1c027.png)'}">
         <!--gif-->
         <template v-if="ua.isAndroid() || ua.isIos() && ua.compareVersion('10.0.0', '10') < 0">
-          <img class="gif" :src="topics[0].content && topics[0].content.split('|||')[3]">
+          <img class="gif" :src="topics[0].content && topics[0].content.headGif">
         </template>
         <!--视频-->
         <template v-else>
-          <video autoplay loop :poster="topics[0].content && topics[0].content.split('|||')[1]"
+          <video autoplay loop :poster="topics[0].content && topics[0].content.headPic"
                  webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5"
                  x5-video-player-fullscreen="false" style="object-fit: fill;">
-            <source :src="topics[0].content && topics[0].content.split('|||')[2]" type="video/mp4"/>
+            <source :src="topics[0].content && topics[0].content.headVideo" type="video/mp4"/>
           </video>
         </template>
 
@@ -54,7 +54,7 @@
 
       <!--进度条-->
       <div class="g-progess-pic">
-        <img :src="topics[0].content ? topics[0].content.split('|||')[0] : '//pic.davdian.com/activity/2017/09/18/750_69_6dc690a5b4a337888ae3dfe6919d45d0.jpg'">
+        <img :src="topics[0].content ? topics[0].content.progress : '//pic.davdian.com/activity/2017/09/18/750_69_6dc690a5b4a337888ae3dfe6919d45d0.jpg'">
       </div>
 
       <!--活动开启弹窗-->
