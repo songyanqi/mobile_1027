@@ -5,7 +5,7 @@
       <div href="http://murphylee.davdian.com/t-14124.html?rp=index&rl=timeshop_sub_img-511-385">
         <img src="//pic.davdian.com/free/2017/09/12/pre_title.png">
       </div>
-      <a href=""></a>
+      <a href="javascript:void(0)" @click="check_rule"></a>
     </div>
     <!--滚动公告-->
     <div class="rool_tip">
@@ -38,28 +38,48 @@
           <div class="progress_info" v-html="lis.activityMessage">
           </div>
           <a class="remain_btns">
-            <div class="panic_buying_btn" v-if="lis.activityBution == '发起助力'">{{lis.activityBution}}</div>
-            <div class="panic_buying_btn yellows" v-if="lis.activityBution == '我的助力'">{{lis.activityBution}}</div>
-            <div class="panic_buying_btn big_1018" v-if="lis.activityBution == '10.18当天0元抢'">{{lis.activityBution}}</div>
+            <div class="panic_buying_btn" v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</div>
+            <div class="panic_buying_btn yellows" v-if="lis.activityButton == '我的助力'">{{lis.activityButton}}</div>
+            <div class="panic_buying_btn big_1018" v-if="lis.activityButton == '10.18当天0元抢'">{{lis.activityButton}}
+            </div>
           </a>
         </li>
       </ul>
+    </div>
+    <!--查看规则-->
+    <div v-if="rule_form" class="com-popup-base">
+      <div class="table-cell">
+        <div v-show="rule_form" class="box">
+          <div>助力规则</div>
+          <div>
+            <p>1.助力时间：2017.10.01 00:00:00-2017.10.17 23:59:59；</p>
+            <p>2.抢购时间：2017.10.18 00:00:00- 2017.10.18 23:59:59；</p>
+            <p>3.活动仅限大V店会员参与；</p>
+            <p>4.每个活动商品每人可发起1次助力，分享至微信好友或朋友圈获得好友助力;</p>
+            <p>5. 每天仅有1次给好友助力的机会，成功助力后好友可获得随机减钱;</p>
+            <p>6.10月18日当天已活动价支付购买，支付成功后，会将该商品得到的助力金额以返现的形式返到【我的】－【总额】－【待结算金额】－【其他收入】里30天后没有退货转到【待提现金额】，最高可0元抢购该商品。</p>
+            <p>7.已发起的助力商品可在【我的10.18】中查看；</p>
+          </div>
+          <div @click="close_what_invite"></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 <script>
   import encrypt from '../../../common/js/module/encrypt.js';
   import popup from '../../../common/js/module/popup.js';
+
   export default {
     props: {},
     data() {
       return {
-        announcement:null,
-        helplist:null
+        announcement: null,
+        helplist: null,
+        rule_form:false
       }
     },
-    components: {
-    },
+    components: {},
     computed: {},
     created() {
       this.getHelpList();
@@ -72,7 +92,7 @@
        * 接口名称:获取助力列表
        * 接口文档:
        */
-      getHelpList(){
+      getHelpList() {
         let ts = this;
         $.ajax({
           cache: false,
@@ -93,7 +113,7 @@
        * 接口名称:获取公告列表
        * 接口文档:
        */
-      getAnnouncement(){
+      getAnnouncement() {
         let ts = this;
         $.ajax({
           cache: false,
@@ -104,15 +124,15 @@
           data: encrypt({}),
           success(response) {
             /*如果公告条数小于100，为了让css动画保持一致，将条数补充为100条*/
-            if(response.data.length < 100){
+            if (response.data.length < 100) {
               let announcementData = [];
               announcementData = response.data;
               let nums = 100 - response.data.length;
-              for(var i=0;i<nums;i++){
+              for (var i = 0; i < nums; i++) {
                 announcementData.push(response.data[i])
               }
               ts.announcement = announcementData;
-            }else{
+            } else {
               ts.announcement = response.data;
             }
           },
@@ -121,6 +141,15 @@
           }
         });
       },
+      /***
+       * 查看规则
+       */
+      check_rule: function () {
+        this.rule_form = true;
+      },
+      close_what_invite:function () {
+        this.rule_form = false;
+      }
     },
     filters: {},
     watch: {},
@@ -130,9 +159,14 @@
   @import "../../../common/css/util/all";
 
   .com-box {
-    background-image: url("//pic.davdian.com/free/2017/09/12/bg_1.png");
+    background-image: url(//pic.davdian.com/free/2017/09/12/bg_1.png);
     background-size: 0.31rem 0.67rem;
     padding-bottom: 60px;
+    position: fixed;
+    max-width: 640px;
+    top: 44px;
+    bottom: 0;
+    overflow-y: scroll;
   }
 
   // banner
@@ -240,10 +274,11 @@
     color: #FF4A7D;
     padding-top: 0.05rem;
   }
-  .order_good_price{
-    .f_l{
-      font-size:0.12rem;
-      span{
+
+  .order_good_price {
+    .f_l {
+      font-size: 0.12rem;
+      span {
         font-size: 0.16rem;
       }
     }
@@ -299,13 +334,15 @@
     background: -moz-linear-gradient(bottom right, #DBDADA, #C5C5C5); /* Firefox 3.6 - 15 */
     background: linear-gradient(to bottom right, #DBDADA, #C5C5C5); /* 标准的语法 */
   }
-  .panic_buying_btn.yellows{
+
+  .panic_buying_btn.yellows {
     background: -webkit-linear-gradient(left top, #FFE138, #FF8700); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(bottom right, #FFE138, #FF8700); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(bottom right, #FFE138, #FF8700); /* Firefox 3.6 - 15 */
     background: linear-gradient(to bottom right, #FFE138, #FF8700); /* 标准的语法 */
   }
-  .panic_buying_btn.big_1018{
+
+  .panic_buying_btn.big_1018 {
     background: -webkit-linear-gradient(left top, #FFA8A8, #FF3030); /* Safari 5.1 - 6.0 */
     background: -o-linear-gradient(bottom right, #FFA8A8, #FF3030); /* Opera 11.1 - 12.0 */
     background: -moz-linear-gradient(bottom right, #FFA8A8, #FF3030); /* Firefox 3.6 - 15 */
@@ -411,19 +448,108 @@
   .rool_tip p {
     line-height: 0.16rem;
   }
-  .marguee{
+
+  .marguee {
     height: 0.32rem;
     overflow: hidden;
   }
-  .marguee_innder{
+
+  .marguee_innder {
     animation: marguees 120s infinite linear;
   }
+
   @keyframes marguees {
-    from{
+    from {
       transform: translateY(0);
     }
-    to{
+    to {
       transform: translateY(-100%);
     }
+  }
+
+  // 动画
+  @keyframes com-alert-animation {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .com-popup-base {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    display: table;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    line-height: 1;
+  }
+  .com-popup-base .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+  .com-popup-base .table-cell .box {
+    display: inline-block;
+    border-radius: 0.04rem;
+    animation: com-alert-animation 0.5s;
+    width: 73.333%;
+    min-height: 200px;
+    position: relative;
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 0 10px 15px;
+  }
+
+
+
+  .com-popup-base .table-cell .box div:nth-of-type(1) {
+    font-size: 14px;
+    color: #666666;
+    text-align: center;
+    padding: 12px 0;
+    position: relative;
+  }
+
+  .com-popup-base .table-cell .box div:nth-of-type(2) {
+    font-size: 14px;
+    color: #333333;
+    text-align: left;
+    line-height: 20px;
+    padding-top: 5px;
+  }
+
+  .com-popup-base .table-cell .box div:nth-of-type(3) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/clearInput.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+  }
+
+  .com-popup-base .table-cell .box div:nth-of-type(2) p {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .com-popup-base .table-cell .box div:nth-of-type(1):after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -50%;
+    width: 200%;
+    height: 1px;
+    background: rgba(216, 216, 216, 0.51);
+    -webkit-transform: scale(0.5);
+    bottom: 0;
+    z-index: 1;
   }
 </style>
