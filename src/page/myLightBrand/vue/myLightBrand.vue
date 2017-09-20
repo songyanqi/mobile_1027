@@ -33,13 +33,8 @@
 
           <div class="list_need">还需<span v-text="remainLight[index]"></span>人点亮</div>
 
-          <div class="list_button" v-if="isLighted[index]!=1" @click="light(item.bandId,index)">
-            <div class="btn" >
-              <img src="//pic.davdian.com/free/2017/09/09/Group.png" alt="">
-            </div>
-          </div>
 
-          <div class="list_button" v-if="isLighted[index]==1">
+          <div class="list_button">
             <div class="btn">
               <img src="//pic.davdian.com/free/2017/09/09/Group2.png" alt="">
             </div>
@@ -76,20 +71,28 @@
     },
     mounted(){
       var that=this;
-      api("/api/mg/sale/bandLitUp/getCenterBands")
+      api("/api/mg/sale/bandLitUp/getMyBands")
         .then(function (result) {
             if(result.code==0){
               if(result.data){
-                that.dataList=result.data.dataList;
+                that.dataList=result.data;
                 that.isShow=result.data.isShow;
-                that.initIsLighted(result.data.dataList);
-                that.initNeedCount(result.data.dataList);
+                that.initIsLighted(that.dataList);
+                that.initNeedCount(that.dataList);
               }
             }else{
-              if(result.data.msg){
-                dialog.alert('code:'+result.code+":msg"+result.data.msg);
+              if(result.code==30000){
+                if (that.isApp){
+                  native.Account.login()
+                }else {
+                  window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
+                }
               }else{
-                dialog.alert('code:'+result.code);
+                if(result.data.msg){
+                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                }else{
+                  dialog.alert('code:'+result.code);
+                }
               }
             }
             console.log(result.data);
@@ -126,7 +129,9 @@
         //变异方法
       },
       changeNeedCount(index){
-        Vue.set(this.remainLight,index,this.remainLight[index]-1);
+        if(this.remainLight[index]>0){
+          Vue.set(this.remainLight,index,this.remainLight[index]-1);
+        }
       },
       light(bandId,index){
         var that=this;

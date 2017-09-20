@@ -171,7 +171,9 @@
         });
       },
       changeNeedCount(index){
-        Vue.set(this.remainLight,index,this.remainLight[index]-1);
+        if(this.remainLight[index]>0){
+          Vue.set(this.remainLight,index,this.remainLight[index]-1);
+        }
       },
       changeIsLighted(index){
           Vue.set(this.isLighted,index,1);
