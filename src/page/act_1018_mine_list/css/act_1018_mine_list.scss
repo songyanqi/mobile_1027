@@ -131,10 +131,16 @@ body {
     .goods-text{
       font-size:ptr(12);
       @include height(ptr(31));
-      padding:0 0 ptr(3.5) ptr(10);
+      padding:0 ptr(10) ptr(3.5) ptr(10);
 
       .text-price {
         font-size:ptr(16);
+      }
+
+      .from-app {
+        font-size: ptr(10);
+        float:right;
+        color:#ccc;
       }
     }
   }

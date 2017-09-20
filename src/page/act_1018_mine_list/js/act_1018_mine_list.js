@@ -31,7 +31,10 @@ new Vue({
       response: null,
       ajaxing: false,
       list: [],
-      url: ''
+      url: '',
+      totalReward: 0,
+      myAppointment: null,
+      act_1018_mine_list: localStorage.getItem('act_1018_mine_list')
     }
   },
   computed: {
@@ -47,6 +50,12 @@ new Vue({
   },
   mounted() {
     let ts = this;
+    if(ts.type == 2 && ts.act_1018_mine_list) {
+      ts.myAppointment = JSON.parse(ts.act_1018_mine_list);
+      for(i in myAppointment) {
+        myAppointment[i].from = 'app预约'
+      }
+    };
     ts.getData();
     //页面滚动加载
     window.onscroll = function() {
@@ -103,9 +112,13 @@ new Vue({
         success(response) {
           ts.ajaxing = false;
           ts.response = response;
+          ts.totalReward = response.data.totalReward?response.data.totalReward:ts.totalReward;
           common.checkRedirect(ts.response);
           if(ts.response.data) {
             ts.list = ts.list.concat(ts.response.data.dataList || ts.response.data);
+          }
+          if(ts.type == 2 && ts.myAppointment != null) {
+            ts.list = ts.list.concat(ts.myAppointment);
           }
         },
         error(error) {
@@ -123,6 +136,22 @@ new Vue({
           ts.ajaxing = false;
         }
       });
+    }
+  },
+  watch: {
+    response() {
+      // response变化后并渲染完dom,设置其他事项
+      this.$nextTick(function () {
+        // 设置app头部标题栏
+        native.custom.initHead({
+          shareOnHead: 1,
+        });
+
+        // 设置app头部标题栏
+        native.custom.setHead({
+          title: document.title,
+        });
+      })
     }
   }
 });
