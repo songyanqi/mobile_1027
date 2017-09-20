@@ -183,8 +183,8 @@
           //从绑定目标触发
 
         }
-
-        $(ev.target).addClass("animated infinite bounce");
+        console.log(1);
+        $(ev.target).addClass("animated bounceln bounce");
 //        var obj={
 //            "bandId":bandId
 //        };
