@@ -50,7 +50,7 @@
             </div>
           </div>
 
-          <div class="list_button" v-if="lightArr[index]==1">
+          <div class="list_button" v-if="lightArr[index]==1" :style="{'border':'1px solid #FF4A7D'}">
             <div class="btn">
               <img src="//pic.davdian.com/free/2017/09/09/Group2.png" alt="">
             </div>
@@ -141,10 +141,18 @@
                 }
               }
             }else{
-              if(result.data.msg){
-                dialog.alert('code:'+result.code+":msg"+result.data.msg);
+              if(result.code==30000){
+                if (that.isApp){
+                  native.Account.login()
+                }else {
+                  window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
+                }
               }else{
-                dialog.alert('code:'+result.code);
+                if(result.data.msg){
+                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                }else{
+                  dialog.alert('code:'+result.code);
+                }
               }
             }
           })

@@ -27,7 +27,7 @@
           <div class="title" :style="styleList[active == 'dynamic'?'selectedColor':'normalColor']">动态</div>
         </div>
       </a>
-      <a class="btn" :class="{active: active == 'center' ? true : false}" href=" "  :style="styleList['btn5']">
+      <a class="btn" :class="{active: active == 'center' ? true : false}" href="/center.html"  :style="styleList['btn5']">
         <div class="pic-title">
           <img class="pic" v-if="active == 'center'" :src="useSkinPackageImg(btnList[4],'//pic.davdian.com/free/footer-icon/center-active.png',1)">
           <img class="pic" v-else  :src="useSkinPackageImg(btnList[4],'//pic.davdian.com/free/footer-icon/center.png',0)">
