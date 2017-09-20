@@ -13,7 +13,7 @@
     </div>
     <div class="all_list">
       <div class="list" v-for="(item,index) in response">
-        <div class="list_b_img">
+        <div class="list_b_img" @click.stop="go_detail(item.linkUrl)">
           <img :src="item.bandPic" alt="">
         </div>
 
@@ -73,12 +73,15 @@
 <script>
   import api from "../../../../utils/api.es6"
   import dialog from "../../../../utils/dialog.es6"
+  import native from '../../../../src/common/js/module/native.js'
+  import util from "../../../../utils/utils.es6"
   export default{
     props:["currentDate","response"],
     data(){
       return {
         lightArr:this.returnLight(),
-        need:this.returnCount()
+        need:this.returnCount(),
+        isApp:util.utils.isApp()
       }
     },
     computed:{
@@ -88,6 +91,15 @@
 
     },
     methods:{
+      go_detail(linkUrl){
+        if(this.isApp){
+          native.Browser.open({
+            url: linkUrl
+          })
+        }else{
+          window.location.href=linkUrl;
+        }
+      },
       returnLight(){
         var arr=[];
         this.response.map(function (item,index) {

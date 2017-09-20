@@ -217,8 +217,10 @@ new Vue({
           goodsStartTime: goods.sTime,
           // goodsStartTime: parseInt(Date.now() / 1000 + 5 * 60), // 开始时间设置为5分钟后
           // goodsStartTime: tttt, // 开始时间设置为5分钟后
-          goodsUrl: `${location.origin}/${goods.goodsId}.html`,
-          goodsListUrl: location.href,
+          // goodsUrl: `${location.origin}/${goods.goodsId}.html`,
+          goodsUrl: `/${goods.goodsId}.html`,
+          // goodsListUrl: location.href,
+          goodsListUrl: location.pathname,
           success() {
             // 放入localStorage
             // ts.subscribe_1018_goods_ids.push(goods.goodsId);

@@ -17,6 +17,7 @@ import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
 import date from '../../../common/js/module/date.js';
+
 // 懒加载初始化
 vueLazyload.init();
 
