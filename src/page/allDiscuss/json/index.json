@@ -1,0 +1,43 @@
+{
+  "code": 0,
+  "shop_url": "https://15522634982.davdian.com",
+  "visitor_status": 3,
+  "sess_key": "42df8bf6e510c97c11afe81a96569014027bf803",
+  "data": {
+    "list":[
+      {
+        "action":"video",
+        "listData":[
+          {
+            "icon" : "xxxx",
+            "title" : "xxxx",
+            "videoUrl" : "xxx",
+            "startTime" : "xxx",
+            "endTime" : "3xxx"
+          }
+        ],
+        "version":"1473228617"
+      },
+      {
+        "action":"skin",
+        "version":"1473228617",
+        "listData":[
+          {
+            "activity":"1018",
+            "startTime":"1473228617",
+            "endTime":"1473228617",
+            "imageZipUrl":"imageZipUrl",
+            "viewFileUrl":"/text.json"
+          },
+          {
+            "activity":"1018",
+            "startTime":"1473228617",
+            "endTime":"1473228617",
+            "imageZipUrl":"imageZipUrl",
+            "viewFileUrl":"/text2.json"
+          }
+        ]
+      }
+    ]
+  }
+}
