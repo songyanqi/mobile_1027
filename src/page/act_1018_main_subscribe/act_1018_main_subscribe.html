@@ -13,14 +13,16 @@
   <!--20号0点结束-->
   <template v-if="currentDate < '2017-10-20'">
     <!-- 场次tab -->
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide" @click="swiperSlideClick(i, item)"
-             v-for="(item, i) in response.data.menuList">
-          <div class="item" :class="{selected: tabIndex === i}">
-            <p>{{item.timeMenu}}</p>
-            <p>{{item.menu}}</p>
-            <i></i>
+    <div class="g-tab">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" @click="swiperSlideClick(i, item)"
+               v-for="(item, i) in response.data.menuList">
+            <div class="item" :class="{selected: tabIndex === i}">
+              <p>{{item.timeMenu}}</p>
+              <p>{{item.menu}}</p>
+              <i></i>
+            </div>
           </div>
         </div>
       </div>

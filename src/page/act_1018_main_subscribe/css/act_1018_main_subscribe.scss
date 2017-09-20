@@ -6,6 +6,10 @@
   .com-top-title {
     z-index: 2;
   }
+  .g-tab {
+    height: ptr(50);
+    background: #666;
+  }
   .swiper-container {
     height: ptr(55);
     .swiper-slide {
@@ -14,7 +18,7 @@
       .item {
         position: relative;
         box-sizing: border-box;
-        padding-top: ptr(5);
+        padding-top: ptr(7);
         width: ptr(81);
         height: ptr(50);
         background: #666;
@@ -32,12 +36,11 @@
         p {
           color: white;
           &:first-of-type {
-            font-size: ptr(20);
-            font-weight: bold;
+            font-size: ptr(18);
           }
           &:last-of-type {
             padding-right: ptr(3);
-            margin-top: ptr(4);
+            margin-top: ptr(5);
             font-size: ptr(11);
             line-height: ptr(15);
             @include ellipsis;
@@ -48,6 +51,7 @@
   }
 
   .g-goods-list {
+    padding-top: ptr(5);
     li {
       padding: ptr(10) 0;
       @include v-list-split-line;
@@ -135,6 +139,8 @@
             @include height(ptr(28));
           }
           .origin-price {
+            position: relative;
+            top: ptr(-1);
             margin-left: ptr(5);
             font-size: ptr(11);
             @include height(ptr(16));
@@ -170,7 +176,7 @@
               border-color: transparent;
             }
             &.buy {
-              background: #FF4a7d;
+              background: linear-gradient(to right, #FF5C5C, #FA1862);
               color: white;
             }
           }
@@ -203,7 +209,7 @@
         font-weight: bold;
       }
       .text {
-        margin-top: ptr(15);
+        margin-top: ptr(10);
         padding: 0 ptr(30);
         color: #8D3737;
         font-size: ptr(14);
@@ -232,7 +238,7 @@
       height: ptr(838) / 2;
       background-image: url(../img/web-focus.png);
       .title {
-        margin-top: ptr(200);
+        margin-top: ptr(205);
       }
       .qrcode {
         margin-top: ptr(10);
@@ -252,7 +258,7 @@
       height: ptr(774) / 2;
       background-image: url(../img/web-no-focus.png);
       .title {
-        margin-top: ptr(180);
+        margin-top: ptr(190);
       }
     }
   }
