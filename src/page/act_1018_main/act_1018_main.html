@@ -78,7 +78,7 @@
         <com-act-assistance :response="response" v-if="response.data.help" :current-date="currentDate"></com-act-assistance>
 
         <!--品牌点亮-->
-        <com-act-lightbrand :response="response" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightbrand>
+        <com-act-lightbrand :response="response.data.lightenBrand" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightbrand>
 
         <!--爆品预约-->
         <com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>
