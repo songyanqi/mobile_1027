@@ -144,14 +144,15 @@ new Vue({
       this.$nextTick(function () {
         // 设置app头部标题栏
         native.custom.initHead({
-          shareOnHead: 1,
+          shareOnHead: 0
         });
 
         // 设置app头部标题栏
         native.custom.setHead({
           title: document.title,
+          homeBtn: 1
         });
-      })
+      });
     }
   }
 });

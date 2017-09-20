@@ -43,7 +43,8 @@
               <span class="start_value2" v-text="item.highDiscount"></span>
             </div>
 
-            <div class="list_need">还需<span v-text="remainLight[index]"></span>人点亮</div>
+            <div class="list_need" v-if="item.isCompleted==-1">还需<span v-text="remainLight[index]"></span>人点亮</div>
+            <div class="list_need" v-if="item.isCompleted==1">已有<span v-text="item.lightNum"></span>人点亮</div>
 
             <div class="list_button" v-if="isLighted[index]!=1" @click.stop="light(item.bandId,index,$event)">
               <div class="btn" >
@@ -171,7 +172,9 @@
         });
       },
       changeNeedCount(index){
-        Vue.set(this.remainLight,index,this.remainLight[index]-1);
+        if(this.remainLight[index]>0){
+          Vue.set(this.remainLight,index,this.remainLight[index]-1);
+        }
       },
       changeIsLighted(index){
           Vue.set(this.isLighted,index,1);
