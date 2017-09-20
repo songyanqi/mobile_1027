@@ -83,12 +83,12 @@
       <div class="loop_my_friend_reward">
         <swiper auto height="60px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
           <swiper-item>
-            <div class="swiperItem">
+            <div class="swiperItem" v-for="notice in goodsdata.notice">
               <div>
-                <img :src="response.notice.imageUrl" alt="">
+                <img :src="notice.imageUrl" alt="">
               </div>
               <div>
-                {{response.notice.message}}
+                {{notice.message}}
               </div>
             </div>
           </swiper-item>
@@ -97,9 +97,9 @@
 
       <!--共得到几位好友支持-->
       <div class="friend_list">
-        <div class="friend_list_title">共得到{{response.friendNum}}位好友支持：</div>
+        <div class="friend_list_title">共得到{{goodsdata.friendNum}}位好友支持：</div>
         <div class="friend_desc">
-          <div class="swiperItem" v-if="friend in response.friends">
+          <div class="swiperItem" v-if="friend in goodsdata.friends">
             <div>
               <img :src="friend.imageUrl" alt="">
             </div>
