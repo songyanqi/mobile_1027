@@ -9,8 +9,8 @@
           <div class="img_container good_img_container">
             <img v-if = "item.goods_img" v-lazy="imgObject(item.goods_img)" style="display: inline;">
             <img v-if = "item.imageUrl" v-lazy="imgObject(item.imageUrl)" style="display: inline;">
-            <span class="img_label" v-if="item.goods_label || item.actInfo" v-text="item.goods_label || item.actInfo"></span>
-            <span class="img_label" v-if="item.goods_label == '' && item.ratio" v-text="'返现'+item.ratio+'倍'"></span>
+            <span class="img_label" v-if="item.actInfo!=''" v-text="item.actInfo"></span>
+            <span class="img_label" v-if="item.actInfo==''&&+item.ratio" v-text="'返现'+item.ratio+'倍'"></span>
           </div>
           <div v-if = "item.sale_status" class="good_list_sell_out ng-scope">
             <span v-if = "item.sale_status == 'soldout'" class="ng-scope">售罄</span>

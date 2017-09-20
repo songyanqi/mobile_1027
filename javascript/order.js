@@ -1202,7 +1202,7 @@ jQuery(document).ready(function ($) {
     $(".order_id").find(".dav-red").html("已关闭");
     $(".stage1Title").html("(已关闭)");
     $(".stage2Title").html("(已关闭)");
-    $(".order_goods_state").html("<a class = 'dav-btn btn-white cancel_order'>取消订单</a>");
+    $(".order_goods_state").html("<a class = 'dav-btn btn-white order-close-order' data-dav-tj='order_detail|again|again|1|again@order_detail'>取消订单</a>");
   }
   
   function changeStatus() {
@@ -1219,10 +1219,19 @@ jQuery(document).ready(function ($) {
         if (presale_type == "final") {
           $(".orderSuccess").show();
         }
+        if (is_final_paytime_end == "1") {
+          $(".orderSuccess").hide();
+          $(".order_presale").html("<div class = 'overCutDown'>尾款超时支付，交易关闭</div>");
+        }
       }
-      if (presale_type == "final" && presale_surplus_time == "0") {
-        
+      // 用户关闭订单
+      if (presale_order_close == "1") {
+        $(".finalNum").removeClass("colorLight"); //
+        $(".stage2Title").removeClass(".colorLight");
+        $(".presaleNum").removeClass(".colorLight");
+        $(".stage1Title").removeClass(".colorLight");
       }
+      
       // 尾款单未支付时判
       if (final_paid == "0") {
         if (presale_type == "reserve") {

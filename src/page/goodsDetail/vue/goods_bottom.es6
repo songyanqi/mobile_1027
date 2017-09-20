@@ -1,8 +1,9 @@
 /**
  * create by dony in 2017.03.13
  **/
-import {  Group, Cell, XNumber,
+import {  Group, Cell,
   Scroller, XInput } from 'vux';
+import XNumber from "../../vux-fix/xnumber.vue";
 
 import Popup from "../../vux-fix/popup.vue";
 import confirm from './confirm.vue';
@@ -55,9 +56,15 @@ const GoodsBottom = {
     watch: {
       datarepresentid: {
         handler() {
-          // 当所有
+          let offsetH = 0;
+          if (this.infoobj.presale) {
+            offsetH = 70;
+          } else {
+            offsetH = 50;
+          }
+          // 当所有dom都渲染完后执行
           this.$nextTick(function () {
-            $(".sku-control").css({top: (this.$refs.selects.offsetHeight+50)+'px'});
+            $(".sku-control").css({top: (this.$refs.selects.offsetHeight+offsetH)+'px'});
           })
         },
         deep: true,
@@ -250,32 +257,9 @@ const GoodsBottom = {
         }
       },
       change (num) {
-          // if (Number(this.goodslimitnum) == 0) {
-          //   this.goodslimitnum = 1;
-          // }
-          if (num == 1) {
-            $(".vux-number-selector-sub").css({"background":"#eee"});
-            $(".vux-number-selector-sub path").css({"fill":"#bbb","stroke":"#bbb"});
-          } else {
-            $(".vux-number-selector-sub").css({"background":"#fff"});
-              $(".vux-number-selector-sub path").css({"fill":"#666","stroke":"#666"});
-          }
-          if (Number(this.goodslimitnum) == Number(num)) {
-              if (Number(num) != 1) {
-                  // $(".isLimit").animate({"opacity":"1"},200);
-                  $(".isLimit").addClass("isLimitShow");
-              }
-              $(".vux-number-selector-plus").css({"background":"#eee"});
-              $(".vux-number-selector-plus path").css({"fill":"#bbb","stroke":"#bbb"});
-          } else {
-              // $(".isLimit").animate({"opacity":"0"},200);
-              $(".isLimit").removeClass("isLimitShow");
-              $(".vux-number-selector-plus").css({"background":"#fff"});
-              $(".vux-number-selector-plus path").css({"fill":"#666","stroke":"#666"});
-          }
-           this.$emit('change-cartnum',num);
-          this.cartNum = num;
-          this.$root.eventHub.$emit('xNumberBottom',num);
+        this.$emit('change-cartnum',num);
+        this.cartNum = num;
+        this.$root.eventHub.$emit('xNumberBottom',num);
       },
       handleTypes (items, item, e) {
           if (item.isDisabled) {

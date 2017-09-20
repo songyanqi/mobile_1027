@@ -1,25 +1,25 @@
 <template>
   <div style="font-weight: normal;background-color: #FFFFFF;" v-if="response">
     <!--商品详情主图-->
-    <div v-for="good in response.data">
-      <img class="main_banner" :src="good.goodsImage">
+    <div>
+      <img class="main_banner" :src="response.goodsImage">
       <div class="count_down">
         <span>10.18周年庆0元抢爆品</span><br>
         <span>距助力结束：{{overTimes | formatRemainTime}}</span>
       </div>
       <!--商品名称-->
       <div class="goods_title">
-        {{good.goodsName}}
+        {{response.goodsName}}
       </div>
       <!--价格信息-->
       <div class="price_info">
         <div>
           <span>10.18活动价</span>
           <span>¥</span>
-          <span>{{good.activityPrice}}</span>
-          <span>¥{{good.goodsPrice}}</span>
+          <span>{{response.activityPrice}}</span>
+          <span>¥{{response.goodsPrice}}</span>
         </div>
-        <div v-html="good.activityMessage"></div>
+        <div v-html="response.activityMessage"></div>
       </div>
       <!--流程-->
       <div class="flow_path">
@@ -33,16 +33,20 @@
       <!--detail_rule-->
       <div class="detail_rule">
         详细规则：<br>
-        助力省钱时间：2017年10月1日0:00:00-2017年10月17日23:59:59
-        助力省钱时间：2017年10月1日0:00:00-2017年10月17日23:59:59
-        助力省钱时间：2017年10月1日0:00:00-2017年10月17日23:59:59
-        助力省钱时间：2017年10月1日0:00:00-2017年10月17日23:59:59
+        1.助力时间：2017.10.01 00:00:00-2017.10.17 23:59:59；<br>
+        2.抢购时间：2017.10.18 00:00:00- 2017.10.18 23:59:59；<br>
+        3.活动仅限大V店会员参与；<br>
+        4.每个活动商品每人可发起1次助力，分享至微信好友或朋友圈获得好友助力;<br>
+        5. 每天仅有1次给好友助力的机会，成功助力后好友可获得随机减钱;<br>
+        6.10月18日当天已活动价支付购买，支付成功后，会将该商品得到的助力金额以返现的形式返到【我的】－【总额】－【待结算金额】－【其他收入】里30天后没有退货转到【待提现金额】，最高可0元抢购该商品。<br>
+        7.已发起的助力商品可在【我的10.18】中查看；
       </div>
       <!--按钮-->
       <div v-if="isWeixin" class="main_btn">点击右上角“···”按钮发起助力</div>
       <div v-if="isDvdApp" @click="shares" class="main_btn">喊人助力</div>
+      <div v-if="!isDvdApp&&!isWeixin" @click="gowxapp" class="main_btn">喊人助力</div>
       <div class="good_detail_imgs">
-        <img v-for="imgs in good.details" v-lazy="imgs.detailUrl" v-if="imgs.detailUrl" alt="">
+        <img v-for="imgs in response.details" v-lazy="imgs.imgOriginal" v-if="imgs.imgOriginal" alt="">
       </div>
     </div>
   </div>
@@ -60,7 +64,7 @@
     props: {},
     data() {
       return {
-        moke: 'http://www.easy-mock.com/mock/59b92127e0dc663341a8cccd',
+        moke: '',
         response: null,
         overTimes: null,
         shareInfo: null,
@@ -116,13 +120,14 @@
         $.ajax({
           cache: false,
           async: true,
-          url: this.moke + '/api/mg/sale/userHelpBuy/getHelpGoodsDetail?_=' + Date.now(),
+          url: this.moke + '/api/mg/sale/userhelpbuy/getHelpGoodsDetail?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId}),
           success(response) {
-            ts.response = response;
-            ts.overTimes = response.data[0].overTime;
+            ts.response = response.data;
+            ts.overTimes = response.data.overTime;
+            ts.shareInfo = response.data.shareInfo;
             ts.deltime();
           },
           error(error) {
@@ -160,7 +165,7 @@
         $.ajax({
           cache: false,
           async: true,
-          url: this.moke + '/api/mg/sale/userHelpBuy/userShareGoods?_=' + Date.now(),
+          url: this.moke + '/api/mg/sale/userhelpbuy/userShareGoods?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
           data: encrypt({goodsId: that.goodsId}),
@@ -171,6 +176,9 @@
             console.error('ajax error:' + error.status + ' ' + error.statusText);
           }
         });
+      },
+      gowxapp:function () {
+        popup.toast("请去微信或者APP发起助力");
       }
     },
     filters: {
@@ -183,13 +191,13 @@
           oneHour = 60 * 60,
           oneDay = 60 * 60 * 24;
         if (second >= oneDay) {
-          format = `剩余时间: ${parseInt(second / oneDay)}天${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+          format = `${parseInt(second / oneDay)}天${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
         } else if (second >= oneHour) {
-          format = `剩余时间: ${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+          format = `${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
         } else if (second >= oneMinute) {
-          format = `剩余时间: ${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+          format = `${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
         } else if (second > 0) {
-          format = `剩余时间: ${second}秒`;
+          format = `${second}秒`;
         } else if (second <= 0) {
           format = '已开始';
         }
@@ -258,6 +266,7 @@
       span:nth-of-type(4) {
         font-size: 11px;
         color: #999999;
+        text-decoration: line-through;
       }
     }
     div:nth-of-type(2) {

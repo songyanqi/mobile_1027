@@ -2,7 +2,9 @@
 
 .app {
   padding-bottom: 51px;
-  background: url(../img/bg.jpg) repeat-y;
+  min-height: ptr(600);
+  //background: url(../img/bg.jpg) repeat-y;
+  background: #c80064;
   .g-topic-top, .g-topic-bottom {
     color: white;
   }
@@ -12,14 +14,33 @@
   .g-act {
     margin: ptr(10) auto;
   }
+  .g-progess-pic {
+    min-height: ptr(34);
+    img {
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
   .g-head-pic {
     position: relative;
-    .pic {
+    height: ptr(315);
+    background: no-repeat;
+    background-size: 100% 100%;
+    video {
       width: 100%;
+      min-height: ptr(317);
+      vertical-align: middle;
+    }
+    .gif {
+      width: 100%;
+    }
+    .aaa-dimensions {
+      width: 100%;
+      height: auto;
     }
     .count-down {
       position: absolute;
-      top: ptr(243);
+      top: ptr(171);
       width: 100%;
       text-align: center;
       > .title {
@@ -42,6 +63,7 @@
             color: #d10070;
           }
           .text {
+            margin-top: ptr(3);
             font-size: ptr(18);
             color: #9D6868;
           }
@@ -94,7 +116,7 @@
         }
         100% {
           opacity: 0;
-          transform: scale(0.1) translate(ptr(2250), ptr(-950));
+          transform: scale(0.1) translate(ptr(2250), ptr(-50));
         }
       }
       &.close {
@@ -131,10 +153,13 @@
   }
   .g-my-1018 {
     position: fixed;
-    top: ptr(160);
-    right: 0;
+    top: 30%;
+    //right: 0;
+    //left: ptr(375);
     width: ptr(101);
+    margin-left: ptr(375-101);
     animation: g-my-1018-animation 1s;
     transform-origin: right;
+    z-index: 3;
   }
 }

@@ -29,9 +29,9 @@
       },
       searchs: function (msg, url) {
         if (this.clear) {
-          window.bravetime.tj.pvSend('search_history_click', '');
+          // window.bravetime.tj.pvSend('search_history_click', '');
         } else {
-          window.bravetime.tj.pvSend('search_hotword_click', '');
+          // window.bravetime.tj.pvSend('search_hotword_click', '');
         }
         if (url != '') {
           window.location.href = url

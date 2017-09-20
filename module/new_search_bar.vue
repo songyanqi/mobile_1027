@@ -72,7 +72,7 @@
       submits: function () {
         var scope = this;
         this.search_like = false;
-        window.bravetime.tj.pvSend('search_search_input', scope.search_input);
+        // window.bravetime.tj.pvSend('search_search_input', scope.search_input);
         scope.$emit("transfersearchtext", scope.search_input);
       },
       searchs: function (msg) {

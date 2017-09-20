@@ -10,8 +10,9 @@ import encrypt from '../../../common/js/module/encrypt.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
+import ua from '../../../common/js/module/ua.js';
 
-// login.needLogin();
+login.needLogin();
 
 // 渲染页面
 new Vue({
@@ -25,10 +26,24 @@ new Vue({
       show_tel: false,
       show_wx: false,
       show_go_shop_btn: false, //显示去大V店按钮
-      inapp: !!navigator.userAgent.match(/davdian|bravetime|vyohui/)
+      inapp: ua.isDvdApp()
     }
   },
-  computed: {},
+  computed: {
+    vossion:function () {
+      if(this.inapp){
+        let nowv =  ua.getDvdAppVersion();
+        let comper = ua.compareVersion(nowv,'4.1.0');
+        if(comper == 1){
+          return true;
+        }else{
+          return false;
+        }
+      }else{
+        return false;
+      }
+    }
+  },
   watch: {
     // 监听response变化
     response() {
@@ -67,7 +82,8 @@ new Vue({
   },
   methods: {
     dump2choose() {
-      location.replace("/choose_mama_adviser.html");
+      popup.toast("更换顾问算法正在更新中...");
+      // location.replace("/choose_mama_adviser.html");
     },
     /**
      * 接口名称:
@@ -83,6 +99,7 @@ new Vue({
         dataType: 'json',
         data: encrypt({}),
         success(response) {
+          common.checkRedirect(response);
           if (response.code) {
             if (response.code == "92001") {
               popup.alert({
@@ -105,16 +122,26 @@ new Vue({
       });
     },
     /*原生复制*/
-    copyText: function (text) {
-      native.BrowserTouch.copyText({
-        "text": text,
-        success: function (result) {
-          popup.toast("已复制到剪切板");
-        },
-        error: function (result) {
-          popup.toast("复制失败，请手动复制");
+    copyText: function (wxapp,text) {
+      var that = this;
+      if(that.vossion){
+        native.BrowserTouch.copyText({
+          "text": text,
+          success: function (result) {
+            popup.toast("已复制到剪切板");
+          },
+          error: function (result) {
+            popup.toast("复制失败，请手动复制");
+          }
+        })
+      }else{
+        if(wxapp == 'wx'){
+          that.show_wx = true;
         }
-      })
+        if(wxapp == 'tel'){
+          that.show_tel = true;
+        }
+      }
     },
     getQueryString: function (name) {
       var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");

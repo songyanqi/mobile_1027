@@ -249,7 +249,7 @@ export default {
               })
 
         }
-      },    
+      },
       getUrl () {
           if (this.isDev) {
             const locationUrl = window.location.href;
@@ -339,13 +339,13 @@ export default {
       if (!this.secKill) {
         if (isBuy == 1) {
           // 购买就直接跳走
-          let goods;
+          let goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
           setTimeout(() => {
-            if (that.infoObj.presale) {
-              goods = encodeURI(`advance[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
-            } else {
-              goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
-            }
+            // if (that.infoObj.presale) {
+            //   goods = encodeURI(`advance[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
+            // } else {
+            //   goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
+            // }
             window.location = `/${buyURL}&${goods}`;
           }, 500);
           return;
@@ -875,8 +875,8 @@ export default {
     getFinalPay() {
       let goPayAdvanceList = [];
       this.dataExtraList.map((item) => {
-        if (item.goPayAdvance && item.goPayAdvance.length) {
-          goPayAdvanceList.push(item);
+        if (Object.prototype.toString.call(item.goPayAdvance) == '[object Object]') {
+          goPayAdvanceList.push(item.goPayAdvance);
         }
       });
 
@@ -891,7 +891,7 @@ export default {
           goPayAdvanceList.sort(campare);
           this.infoObj.goPayAdvance = goPayAdvanceList[0]
         }
-        
+
       }
     },
     //判断是否要置灰
@@ -997,11 +997,7 @@ export default {
       }
       if (that.goodsLimitNum <= 1) {
         this.isLimitNum = true;
-        $(".vux-number-selector-plus").css({"background": "#eee"});
-        $(".vux-number-selector-plus path").css({"fill": "#bbb", "stroke": "#bbb"});
       } else {
-        $(".vux-number-selector-plus").css({"background": "#fff"});
-        $(".vux-number-selector-plus path").css({"fill": "#666", "stroke": "#666"});
       }
       //信息
       $(".isLimit").removeClass("isLimitShow");
@@ -1011,7 +1007,7 @@ export default {
       // 预定的限制数量
       that.infoObj.limitNum = dataExtra.sales.limitNum;
       // that.infoObj.goPayAdvance = dataExtra.goPayAdvance;
-     
+
       that.goodsStockNumber = dataExtra.sales.goodsStocks;
 
       that.memberCont.memberGoods = dataExtra.price.memberGoods;
@@ -1048,7 +1044,8 @@ export default {
         }
 
         common1.initShare(5);
-        base.ready();if (shareMoney > 0&& that.visitorStatus == '3') {
+        base.ready();
+        if (shareMoney > 0&& that.visitorStatus == '3') {
           native.Browser.setHead({
             shareMoney: shareMoney + "",
             shareMoneyStr: '赚' + shareMoney + '元',
@@ -1070,6 +1067,18 @@ export default {
             imgUrl: window.imgUrl, // 分享图标
           });
         }
+      } else {
+        native.custom.initHead({
+          shareOnHead: 1,
+          isAudioAbsorb:1,
+          isShowAudio:1
+        });
+        share.setShareInfo({
+          title: window.title, // 分享标题
+          desc: window.desc, // 分享描述
+          link: window.link, // 分享链接
+          imgUrl: window.imgUrl, // 分享图标
+        });
       }
 
       //活动
@@ -1099,7 +1108,7 @@ export default {
         }
 
         if (item.typeId == 1 || item.typeId == 2 || item.typeId == 8 || item.typeId == 4 || item.typeId == 9) {
-          
+
         } else {
           that.activityInfo.activitys.push(item);
         }
@@ -1107,6 +1116,7 @@ export default {
         // 是否是预定商品
         if (item.typeId == '9') {
           that.infoObj.presale = item;
+          that.infoObj.presale.isLimit = true;
         }
       });
       if (killArr.indexOf('1') === -1) {
@@ -1227,8 +1237,23 @@ export default {
         success: (res) => {
           if (res.code == 0) {
             let data = res.data;
-            if (data && data.dataList && data.dataList.length) {
-              data.dataList.map((item, index) => {
+            let dataList = [];
+            if (data.dataList.length) {
+              dataList = data.dataList;
+            } else {
+              $.ajax({
+                url: '/api/mg/sale/index/getPageSecond',
+                type: "POST",
+                dataType: "JSON",
+                success(res) {
+                  if (res.code == 0) {
+                    dataList = res.data.feedList[0].body.dataList;
+                  }
+                }
+              })
+            }
+            if (dataList.length) {
+              dataList.map((item, index) => {
                 item.imageUrl = `${item.imageUrl}`;
               });
 
@@ -1236,15 +1261,8 @@ export default {
               that.mayYouLikeNoMore = true;//判定值 改为false
               that.isFirstLoad = false;
             }
-            if (this.$refs.detailScroller) {
-              document.querySelector('.good_list_2_row').style.height = `${Math.ceil(data.dataList.length / 2) * 187 + 124}px`;
-              this.$nextTick(() => {
-                this.$refs.detailScroller.reset();
-              });
-            }
           } else {
             popup.toast(res.data.msg, 3000);
-
           }
         },
         error: (err) => {

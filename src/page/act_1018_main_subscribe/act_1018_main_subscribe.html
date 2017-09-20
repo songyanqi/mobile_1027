@@ -10,80 +10,91 @@
   <!--标题-->
   <com-top-title title="疯抢好货 提前预约" home></com-top-title>
 
-  <!-- 场次tab -->
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide" @click="swiperSlideClick(i, item)"
-           v-for="(item, i) in response.data.menuList">
-        <div class="item" :class="{selected: tabIndex === i}">
-          <p>{{item.timeMenu}}</p>
-          <p>{{item.menu}}</p>
-          <i></i>
+  <!--20号0点结束-->
+  <template v-if="currentDate < '2017-10-20'">
+    <!-- 场次tab -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" @click="swiperSlideClick(i, item)"
+             v-for="(item, i) in response.data.menuList">
+          <div class="item" :class="{selected: tabIndex === i}">
+            <p>{{item.timeMenu}}</p>
+            <p>{{item.menu}}</p>
+            <i></i>
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- 商品列表 -->
+    <ul class="g-goods-list">
+      <li v-for="(item, i) in response.data.dataList" @click="location = item.goodsId+'.html';">
+        <span class="pic">
+          <img v-lazy="item.imageUrl">
+        </span>
+        <span class="info">
+          <div class="name">{{item.goodsName}}</div>
+          <div class="desc">{{item.recommendDesc}}</div>
+          <div class="status">
+            <template v-if="item.buttonName === '我要预约' || item.buttonName === '已设预约'">
+              {{item.bespeakNum}}人已预约<i></i>{{date.format(item.sTime + '000', 'MM.dd ')}}
+              {{date.format(item.sTime + '000', 'hh').indexOf('0') === 0 ? date.format(item.sTime + '000', 'h') : date.format(item.sTime + '000', 'hh')}}点开抢
+            </template>
+            <template v-else-if="(item.buttonName === '等待抢购' || item.buttonName === '立即抢购') && item.sellNum > 0">
+              <!--<span class="progress"><i></i></span>-->已有{{item.sellNum}}人抢购
+            </template>
+          </div>
+          <div class="price">
+            <span class="discount-symbol">￥</span><span class="discount-price">{{item.price}}</span>
+            <span class="origin-price">￥{{item.goodsPrice}}</span>
+            <!--按钮-->
+            <template v-if="isDvdApp">
+              <span class="btn buy" v-if="item.buttonName === '立即抢购'">立即抢购</span>
+              <span class="btn wait-buy" @click.stop="btnClickWaitBuy" v-else-if="item.buttonName === '等待抢购'">等待抢购</span>
+              <span class="btn subscribed" @click.stop="btnClickSubscribed" v-else-if="isSubscribedInApp(item.goodsId)">已设预约</span>
+              <span class="btn subscribe" @click.stop="btnClickSubscribe(item)" v-else>我要预约</span>
+            </template>
+            <template v-else>
+              <span class="btn subscribe" @click.stop="btnClickSubscribe(item)" v-if="item.buttonName === '我要预约'">我要预约</span>
+              <span class="btn subscribed" @click.stop="btnClickSubscribed" v-else-if="item.buttonName === '已设预约'">已设预约</span>
+              <span class="btn buy" v-else-if="item.buttonName === '立即抢购'">立即抢购</span>
+              <span class="btn wait-buy" @click.stop="btnClickWaitBuy" v-else-if="item.buttonName === '等待抢购'">等待抢购</span>
+            </template>
+          </div>
+        </span>
+      </li>
+    </ul>
+
+    <!-- 关注结果 -->
+    <div class="g-tip" @touchmove.prevent @mousewheel.prevent :style="{display: tipType ? 'block' : null}">
+      <div class="box weixin-no-focus" v-if="tipType === 'weixin-no-focus'" @click="tipType = null;">
+        <div class="title">请关注“果敢时代大V店”公众号</div>
+        <div class="text">关注后才能预约哦~</div>
+        <img class="qrcode" v-lazy="'[[static]]/page/act_1018_main_subscribe/img/qrcode.png'">
+        <div class="qrcode-tip">长按扫描二维码，关注公众号</div>
+      </div>
+      <div class="box web-focus" v-if="tipType === 'web-focus'">
+        <div class="title">预约成功</div>
+        <div class="text">活动开始前5分钟将在微信公众号中进行提醒</div>
+        <div class="btn" @click="tipType = null;">确定</div>
+      </div>
+      <div class="box web-no-focus" v-if="tipType === 'web-no-focus'">
+        <div class="title">请关注“果敢时代大V店”公众号</div>
+        <div class="text">在微信中搜索“果敢时代大V店”并关注，不关注公众号可能无法预约，错过抢购商品哦！</div>
+        <div class="btn" @click="tipType = null;">确定</div>
+      </div>
+    </div>
+
+    <!--返回顶部-->
+    <com-to-top-icon></com-to-top-icon>
+  </template>
+
+  <!-- 活动结束 -->
+  <div class="g-act-over" v-else>
+    <img class="pic" v-lazy="'[[static]]/page/act_1018_main_subscribe/img/over.png[[v]]'">
+    <div class="title">活动已结束</br>关注更多精彩活动</div>
+    <a class="btn" href="/">去店铺逛逛</a>
   </div>
-
-  <!-- 商品列表 -->
-  <ul class="g-goods-list">
-    <li v-for="(item, i) in response.data.dataList" @click="location = item.goodsId+'.html';">
-      <span class="pic">
-        <img :src="item.imageUrl">
-      </span>
-      <span class="info">
-        <div class="name">{{item.goodsName}}</div>
-        <div class="desc">{{item.recommendDesc}}</div>
-        <div class="status">
-          <template v-if="item.buttonName === '我要预约' || item.buttonName === '已设预约'">
-            {{item.bespeakNum}}人已预约<i></i>{{date.format(item.sTime + '000', 'MM.dd hh')}}点开抢
-          </template>
-          <template v-else-if="(item.buttonName === '等待抢购' || item.buttonName === '立即抢购') && item.sellNum > 0">
-            <!--<span class="progress"><i></i></span>-->已有{{item.sellNum}}人抢购
-          </template>
-        </div>
-        <div class="price">
-          <span class="discount-symbol">￥</span><span class="discount-price">{{item.price}}</span>
-          <span class="origin-price">￥{{item.goodsPrice}}</span>
-          <!--按钮-->
-          <template v-if="isDvdApp">
-            <span class="btn buy" v-if="item.buttonName === '立即抢购'">立即抢购</span>
-            <span class="btn wait-buy" @click.stop="btnClickWaitBuy" v-else-if="item.buttonName === '等待抢购'">等待抢购</span>
-            <span class="btn subscribed" @click.stop="btnClickSubscribed" v-else-if="isSubscribedInApp(item.goodsId)">已设预约</span>
-            <span class="btn subscribe" @click.stop="btnClickSubscribe(item)" v-else>我要预约</span>
-          </template>
-          <template v-else>
-            <span class="btn subscribe" @click.stop="btnClickSubscribe(item)" v-if="item.buttonName === '我要预约'">我要预约</span>
-            <span class="btn subscribed" @click.stop="btnClickSubscribed" v-else-if="item.buttonName === '已设预约'">已设预约</span>
-            <span class="btn buy" v-else-if="item.buttonName === '立即抢购'">立即抢购</span>
-            <span class="btn wait-buy" @click.stop="btnClickWaitBuy" v-else-if="item.buttonName === '等待抢购'">等待抢购</span>
-          </template>
-        </div>
-      </span>
-    </li>
-  </ul>
-
-  <!-- 关注结果 -->
-  <div class="g-tip" @touchmove.prevent @mousewheel.prevent :style="{display: tipType ? 'block' : null}">
-    <div class="box weixin-no-focus" v-if="tipType === 'weixin-no-focus'" @click="tipType = null;">
-      <div class="title">请关注“果敢时代大V店”公众号</div>
-      <div class="text">关注后才能预约哦~</div>
-      <img class="qrcode" v-lazy="'[[static]]/page/act_1018_main_subscribe/img/qrcode.png'">
-      <div class="qrcode-tip">长按扫描二维码，关注公众号</div>
-    </div>
-    <div class="box web-focus" v-if="tipType === 'web-focus'">
-      <div class="title">预约成功</div>
-      <div class="text">活动开始前5分钟将在微信公众号中进行提醒</div>
-      <div class="btn" @click="tipType = null;">确定</div>
-    </div>
-    <div class="box web-no-focus" v-if="tipType === 'web-no-focus'">
-      <div class="title">请关注“果敢时代大V店”公众号</div>
-      <div class="text">在微信中搜索“果敢时代大V店”并关注，不关注公众号可能无法预约，错过抢购商品哦！</div>
-      <div class="btn" @click="tipType = null;">确定</div>
-    </div>
-  </div>
-
-  <!--返回顶部-->
-  <com-to-top-icon></com-to-top-icon>
 </div>
 
 @@include('vendor.include')

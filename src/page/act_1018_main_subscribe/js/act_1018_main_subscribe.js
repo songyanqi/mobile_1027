@@ -9,7 +9,7 @@ import Cookies from 'js-cookie';
 // 业务模块
 import encrypt from '../../../common/js/module/encrypt.js';
 import util from '../../../common/js/module/util.js';
-import tj from '../../../common/js/module/tj.js';
+import param from '../../../common/js/module/param.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
 import ua from '../../../common/js/module/ua.js';
@@ -18,12 +18,8 @@ import share from '../../../common/js/module/share.js';
 import date from '../../../common/js/module/date.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
 
-login.needLogin();
-
 // 懒加载初始化
-vueLazyload.init();
-
-// let tttt = parseInt(Date.now() / 1000 + 6 * 60);
+vueLazyload.init(true);
 
 // 渲染页面
 new Vue({
@@ -40,11 +36,22 @@ new Vue({
       tipType: null,
       screenings: null,
       isDvdApp: ua.isDvdApp(),
+      // isDvdApp: false,
       date: date,
       subscribe_1018_goods_ids: localStorage.getItem('subscribe_1018_goods_ids') ? JSON.parse(localStorage.getItem('subscribe_1018_goods_ids')) : [],
     }
   },
-  computed: {},
+  computed: {
+    currentDate(){
+      let now = '';
+      if (param.get('deviceTime') !== undefined) {
+        now = Date.now();
+      } else if (this.response) {
+        now = this.response.sys_time + '000';
+      }
+      return date.format(now, 'yyyy-MM-dd');
+    },
+  },
   watch: {
     // 监听response变化
     response(){
@@ -81,15 +88,16 @@ new Vue({
         // 设置app头部标题栏
         native.custom.setHead({
           title: document.title,
+          shareBtn: '1',
         });
 
         // 设置分享信息
         try {
           share.setShareInfo({
-            title: ts.response.data.shareTitle,
-            desc: ts.response.data.shareDesc,
+            title: '周年庆抢不到牛货？快来跟我混！',
+            desc: '大V店周年庆|谁说抢货要拼颜值？快来跟我混！提前预约，再也不用担心我抢不到牛货了>>',
             link: location.href,
-            imgUrl: ts.response.data.shareImg
+            imgUrl: `${location.protocol}[[static]]/page/act_1018_main_subscribe/img/share.png`
           });
         } catch (err) {
           console.error(err);
@@ -175,7 +183,8 @@ new Vue({
     /** 我要预约 */
     btnClickSubscribe(goods) {
       let ts = this;
-      if (ua.isDvdApp()) {
+      login.needLogin();
+      if (ts.isDvdApp) {
         native.Browser.goodsBook({
           goodsId: goods.goodsId,
           goodsTitle: goods.goodsName,
@@ -187,10 +196,11 @@ new Vue({
           goodsListUrl: location.href,
           success() {
             // 放入localStorage
-            this.subscribe_1018_goods_ids.push(goods.goodsId);
-            localStorage.setItem('subscribe_1018_goods_ids', JSON.stringify(this.subscribe_1018_goods_ids));
+            ts.subscribe_1018_goods_ids.push(goods.goodsId);
+            localStorage.setItem('subscribe_1018_goods_ids', JSON.stringify(ts.subscribe_1018_goods_ids));
             //已改为由app弹 popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
             goods.buttonName = '已设预约';
+            goods.bespeakNum = parseInt(goods.bespeakNum) + 1;
             ts.$forceUpdate()
           },
           error() {
@@ -207,6 +217,7 @@ new Vue({
               ts.tipType = 'web-focus';
             }
             goods.buttonName = '已设预约';
+            goods.bespeakNum = parseInt(goods.bespeakNum) + 1;
             ts.$forceUpdate();
           } else if (response.code == 64404) {
             if (ua.isWeiXin()) {
@@ -222,7 +233,7 @@ new Vue({
     },
     /** 已设预约 */
     btnClickSubscribed() {
-      if (ua.isDvdApp()) {
+      if (this.isDvdApp) {
         popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
       } else {
         popup.toast('将在活动开始前5分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);

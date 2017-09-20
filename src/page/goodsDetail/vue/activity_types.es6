@@ -1,8 +1,9 @@
 /**
  * create by dony in 2017.03.10
  * **/
-import { Group, Cell, Icon, CellBox, XNumber, XInput } from 'vux';
+import { Group, Cell, Icon, CellBox, XInput } from 'vux';
 
+import XNumber from "../../vux-fix/xnumber.vue";
 import Popup from "../../vux-fix/popup.vue";
 import confirm from './confirm.vue';
 import popup from '../../../common/js/module/popup.js';
@@ -120,26 +121,19 @@ export default {
           // if (Number(this.goodslimitnum) == 0) {
           //   this.goodslimitnum = 1;
           // }
-          if (num == 1) {
-            $(".vux-number-selector-sub").css({"background":"#eee"});
-            $(".vux-number-selector-sub path").css({"fill":"#bbb","stroke":"#bbb"});
-          } else {
-            $(".vux-number-selector-sub").css({"background":"#fff"});
-              $(".vux-number-selector-sub path").css({"fill":"#666","stroke":"#666"});
-          }
-          if (Number(this.goodslimitnum) == Number(num)) {
-              if (Number(num) != 1) {
-                  $(".isLimit").animate({"opacity":"1"},200);
-                  // $(".isLimit").addClass("isLimitShow");
-              }
-              $(".vux-number-selector-plus").css({"background":"#eee"});
-              $(".vux-number-selector-plus path").css({"fill":"#bbb","stroke":"#bbb"});
-          } else {
-              $(".isLimit").animate({"opacity":"0"},200);
-              // $(".isLimit").removeClass("isLimitShow");
-              $(".vux-number-selector-plus").css({"background":"#fff"});
-              $(".vux-number-selector-plus path").css({"fill":"#666","stroke":"#666"});
-          }
+          // if (num == 1) {
+          //   $(".vux-number-selector-sub").addClass("plusDisable");
+          //   $(".vux-number-selector-sub path").addClass("plusPathDisable");
+          // }
+          // if (Number(this.goodslimitnum) == Number(num)) {
+          //     if (Number(num) != 1) {
+          //     }
+          //     $(".vux-number-selector-plus").addClass("plusDisable");
+          //     $(".vux-number-selector-plus path").addClass("plusPathDisable");
+          // } else {
+          //     $(".vux-number-selector-plus").removeClass("plusDisable");
+          //     $(".vux-number-selector-plus path").removeClass("plusPathDisable");
+          // }
           this.$emit('change-cartnum',num);
           this.cartNum = num;
           this.$root.eventHub.$emit('xNumberActive',num);

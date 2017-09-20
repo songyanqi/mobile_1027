@@ -8,10 +8,11 @@ import Cookies from 'js-cookie';
 
 // 业务模块
 import encrypt from '../../../common/js/module/encrypt.js';
-import util from '../../../common/js/module/util.js';
+import param from '../../../common/js/module/param.js';
 import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
+import ua from '../../../common/js/module/ua.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
@@ -29,24 +30,35 @@ new Vue({
     'com-act-subscribe': require('../vue/com-act-subscribe.vue'),
     'com-act-lightbrand': require('../vue/lightBrand.vue'),
     'com-act-assistance': require('../../act_1018_assistance/vue/com-act-assistance.vue'),
+    'com-act-reserve': require('../../act_1018_reserve/vue/com-act-reserve.vue'),
   },
   data() {
     return {
       response: null,
       topics: [
+        // 头图
         {id: '14376', content: null},
+        // 上方专题
         {id: '14377', content: null},
+        // 下方专题
         {id: '14378', content: null}
       ],
       actBeginTime: new Date(2017, 10, 18),
       countDown: date.getCountDown(new Date(2017, 10, 18)),
       isShowBeginPop: false,
       isShowBeginPopCloseAnimation: false,
+      start_1018_flag: false,
+      ua: ua,
     }
   },
   computed: {
     currentDate(){
-      let now = this.response ? (this.response.sys_time + '000') : new Date();
+      let now = '';
+      if (param.get('deviceTime') !== undefined) {
+        now = Date.now();
+      } else if (this.response) {
+        now = this.response.sys_time + '000';
+      }
       return date.format(now, 'yyyy-MM-dd');
     },
   },
@@ -57,16 +69,48 @@ new Vue({
       this.$nextTick(function () {
         let ts = this;
 
+        // 头图自动播放
+        let video = document.querySelector('video');
+        if(video){
+          video.muted = true;
+          function playVideo(){
+            video.play();
+          }
+          document.addEventListener("WeixinJSBridgeReady", playVideo, false);
+          document.addEventListener('touchstart', playVideo, false);
+          setTimeout(playVideo, 1000);
+        }
+
+        // var options = {};
+        //
+        // var player = videojs('aaa', options, function onPlayerReady() {
+        //   videojs.log('Your player is ready!');
+        //
+        //   debugger
+        //   // In this context, `this` is the player that was created by Video.js.
+        //   this.play();
+        //
+        //   // How about an event listener?
+        //   this.on('ended', function() {
+        //     videojs.log('Awww...over so soon?!');
+        //   });
+        // });
+
         // 设置app头部标题栏
         native.custom.initHead({
           shareOnHead: 1,
         });
 
-        // 显示开启10.18弹窗
-        setTimeout(function(){
+        // 开启10.18弹窗
+        setTimeout(function () {
           ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
-        }, 5000);
+        }, 3000);
         // ts.isShowBeginPop = 1;
+
+        // 我的10.18弹窗
+        setTimeout(function () {
+          ts.start_1018_flag = localStorage.getItem('start_1018_flag');
+        }, 1000);
 
         // 刷新倒计时
         setInterval(function () {
@@ -116,7 +160,7 @@ new Vue({
           ts.response = response;
         },
         error(error) {
-          ts.response = require('../json/act_1018_main.json');
+          // ts.response = require('../json/act_1018_main.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
@@ -139,6 +183,9 @@ new Vue({
           dataType: 'text',
           data: {},
           success(response) {
+            if(topic.id == '14376'){
+              response = JSON.parse(response);
+            }
             topic.content = response;
           },
           error(error) {
@@ -154,6 +201,7 @@ new Vue({
       setTimeout(function () {
         ts.isShowBeginPop = false;
         localStorage.setItem('start_1018_flag', 1);
+        ts.start_1018_flag = 1;
         ts.$forceUpdate();
       }, 1000);
     }

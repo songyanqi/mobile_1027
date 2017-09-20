@@ -6,6 +6,7 @@
 .article-info .shop a {color:#FF4A7D;}
 .article-image {font-size:0px;text-align: center;margin-top:20px;}
 .article-content {line-height: 150%;font-size:16px;position: relative;overflow: hidden;}
+.article-content *{box-sizing:border-box;}
 .article-num {  color: #999; margin-top: 10px; font-size: 12px;}
 .article-num span {margin-right:5px;}
 .article-num span:nth-child(2) {margin-right:20px;} 

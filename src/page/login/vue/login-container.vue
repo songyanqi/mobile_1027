@@ -128,6 +128,8 @@
   </div>
 </template>
 <script>
+  // 基础模块
+  import common from '../../../common/js/common.js';
   import popup from '../../../common/js/module/popup.js';
   import ua from '../../../common/js/module/ua.js';
   import strSign from '../../../common/js/module/encrypt.js';
@@ -186,6 +188,7 @@
             dataType: 'json',
             data: strSign(tData),
             success(response) {
+              common.checkRedirect(response);
               if (response.code) {
                 popup.toast(response.data.msg || response.msg);
                 that.loginBtn = "登录";
@@ -231,6 +234,7 @@
           dataType: 'json',
           data: strSign(regiserData),
           success(response) {
+            common.checkRedirect(response);
             that.response = response;
             if (response.code) {
               popup.toast(response.data.msg || response.msg);
@@ -272,6 +276,7 @@
           dataType: 'json',
           data: strSign(tData),
           success(response) {
+            common.checkRedirect(response);
             that.response = response;
             if (response.code) {
               popup.toast(response.data.msg || response.msg);
@@ -351,6 +356,7 @@
           dataType: 'json',
           data: strSign({"inviteCode": code}),
           success(response) {
+            common.checkRedirect(response);
             if (response.code) {
               popup.toast(response.data.msg || response.msg);
               that.promptconfirm();
@@ -392,6 +398,7 @@
             dataType: 'json',
             data: strSign(sData),
             success(response) {
+              common.checkRedirect(response);
               that.response = response;
               if (that.response.code) {
                 popup.toast(that.response.data.msg || response.msg);
@@ -473,6 +480,7 @@
           dataType: 'json',
           data: strSign({"mobile": that.mobile}),
           success(response) {
+            common.checkRedirect(response);
             if (response.code == '80006') {
               callback()
             } else {
