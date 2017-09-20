@@ -46,7 +46,7 @@
         <div class = "pre_list">定金：<span class = "pre_de_f12">¥ </span><span class = "pre_deposit_num">{{ infoobj.price.advancePrice }}</span><span class = "pre_deducte">定金可抵扣 ¥ {{ infoobj.price.discountPrice }}</span></div>
         <div class = "pre_list">尾款：<span class = "pre_final_f12">¥ </span><span class = "pre_final_num">{{ infoobj.price.endPrice }}</span></div>
         <div class = "pre_list">尾款支付时间：{{ changeDate(infoobj.presale.begPayTime) }} - {{ changeDate(infoobj.presale.endPayTime) }}</div>
-        <div class = "pre_list">流程：1.付定金 - 2.付尾款 - 3.发货 <span class = "presale_icon"></span></div>
+        <div class = "pre_list">流程：1.付定金 - 2.付尾款 - 3.发货 <span class = "presale_icon" @click = "handlePreRule"></span></div>
       </div>
  
       <!--预告开始-->

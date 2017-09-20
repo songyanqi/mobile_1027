@@ -43,14 +43,17 @@
     <div class="rule_brand">
       <img src="//pic.davdian.com/free/20170915_assistance/rule.png">
       <img src="//pic.davdian.com/free/20170915_assistance/bear.png">
-      <!--获得0元购机会-->
-      <span v-if="response.source.surplusPrice == '0'">
-          <div class="ast_deep">恭喜你获得10.18当天0元抢购的机会</div>
-          <div class="ast_bigtxt">得到好友的{{response.source.supporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
-          <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10月18日开抢 数量有限 先到先得!</div>
-      </span>
-      <!--没有获得0元购机会-->
-      <span v-else>
+      <!--助力者页面按钮信息-->
+
+      <!--发起者页面信息-->
+      <span v-if="response.type == '0'">
+        <!--获得0元购机会-->
+        <span v-if="response.source.surplusPrice == '0'">
+            <div class="ast_deep">恭喜你获得10.18当天0元抢购的机会</div>
+            <div class="ast_bigtxt">得到好友的{{response.source.supporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
+            <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10月18日开抢 数量有限 先到先得!</div>
+        </span><!--没有获得0元购机会-->
+        <span v-else>
         <!--没有好友助力呢-->
         <span v-if="response.source.isSupporter == '0'">
           <div class="no_ast ast_txt" style="padding: 0.48rem 0 0.34rem;">还没有好友帮你助力，快去召集好友助力省钱吧！</div>
@@ -68,6 +71,7 @@
           <div v-if="!isWx && !isApp" class="share_btn bd_r" @click="gowxorapp">喊人助力</div>
         </span>
       </span>
+      </span>
     </div>
     <img class="table_brand" src="//pic.davdian.com/free/20170915_assistance/table_brand.png">
 
@@ -79,12 +83,12 @@
       <div class="loop_my_friend_reward">
         <swiper auto height="60px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
           <swiper-item>
-            <div class="swiperItem">
+            <div class="swiperItem" v-for="notice in goodsdata.notice">
               <div>
-                <img :src="goodsdata.notice.imageUrl" alt="">
+                <img :src="notice.imageUrl" alt="">
               </div>
               <div>
-                {{goodsdata.notice.message}}
+                {{notice.message}}
               </div>
             </div>
           </swiper-item>
@@ -116,6 +120,7 @@
   import native from '../../../common/js/module/native.js';
   import {Swiper, SwiperItem} from 'vux'
   import login from '../../../common/js/module/login.js';
+
   login.needLogin();
   export default {
     props: {},
@@ -128,7 +133,7 @@
         isApp: ua.isDvdApp(),
         goodsId: ua.getQuery("goodsId"),
         shareUserId: ua.getQuery("shareUserId"),
-        goodsdata:null
+        goodsdata: null
       }
     },
     components: {
@@ -143,17 +148,17 @@
         this.$nextTick(function () {
           let ts = this;
           // 设置分享信息
-            try {
-              native.custom.setShareInfo({
-                "title": "大V店10.18周年庆 猛点一下帮我0元抢爆品，你抽iPhone8！",
-                "desc": '好友助力随机减钱，助力越多越省钱',
-                "imgUrl": "//pic.davdian.com/free/20170915_assistance/assistance.png",
-                "link": location.href,
-                "shareDesc": '好友助力随机减钱，助力越多越省钱'
-              });
-            } catch (err) {
-              console.error(err);
-            }
+          try {
+            native.custom.setShareInfo({
+              "title": "大V店10.18周年庆 猛点一下帮我0元抢爆品，你抽iPhone8！",
+              "desc": '好友助力随机减钱，助力越多越省钱',
+              "imgUrl": "//pic.davdian.com/free/20170915_assistance/assistance.png",
+              "link": location.href,
+              "shareDesc": '好友助力随机减钱，助力越多越省钱'
+            });
+          } catch (err) {
+            console.error(err);
+          }
         });
       }
     },

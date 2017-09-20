@@ -170,11 +170,11 @@
     background-image: url(//pic.davdian.com/free/2017/09/12/bg_1.png);
     background-size: 0.31rem 0.67rem;
     padding-bottom: 60px;
-    position: fixed;
+    /*position: fixed;*/
     max-width: 640px;
-    top: 44px;
-    bottom: 0;
-    overflow-y: scroll;
+    /*top: 44px;*/
+    /*bottom: 0;*/
+    /*overflow-y: scroll;*/
   }
 
   // banner

@@ -1025,7 +1025,7 @@ $(function(){
     // 预定商品点击相关规则
     $(".order_navList").on("click",function (e) {
       if (e.target.className == "dealIcon") {
-        console.log("dealIcon");
+        location.href = "/t-14491.html";
         return;
       }
       $(this).find(".order_rule_ipt").toggleClass("order_rule_ipt_checked");

@@ -169,19 +169,23 @@ export default {
         },1000);
       },
       changeDate(date) {
-      if (date) {
-        date = new Date(Number(date));
+        if (date) {
+          date = new Date(Number(date) * 1000);
 
-        let year = date.getFullYear(),
-            month = date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1,
-            dates = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate(),
-            hours = date.getHours() < 10 ? `0${date.getHours()}` : date.getHours(),
-            minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes(),
-            seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds();
-        
-        return `${month}月${dates}日${hours}:${minutes}:${seconds}`
-      }
-    },
+          let year = date.getFullYear(),
+              month = date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1,
+              dates = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate(),
+              hours = date.getHours() < 10 ? `0${date.getHours()}` : date.getHours(),
+              minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes(),
+              seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds();
+          
+          return `${month}月${dates}日${hours}:${minutes}:${seconds}`
+        }
+      },
+      // 预售规则
+      handlePreRule() {
+        location.href = "/t-14491.html";
+      },
     },
     components: {
     }
