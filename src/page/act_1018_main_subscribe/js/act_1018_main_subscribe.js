@@ -201,15 +201,6 @@ new Vue({
           popup.toast('马上开抢啦，请返回重新进入~');
           return;
         }
-        // 放入localStorage
-        // ts.subscribe_1018_goods_ids.push(goods.goodsId);
-        ts.subscribe_1018_goods.push(goods);
-        // localStorage.setItem('subscribe_1018_goods_ids', JSON.stringify(ts.subscribe_1018_goods_ids));
-        localStorage.setItem('subscribe_1018_goods', JSON.stringify(ts.subscribe_1018_goods));
-        popup.toast('将在活动开始前3分钟进行提醒，可在“我的10.18”中查看已预约的商品', 3000);
-        goods.buttonName = '已设预约';
-        goods.bespeakNum = parseInt(goods.bespeakNum) + 1;
-        ts.$forceUpdate();
         native.Browser.goodsBook({
           goodsId: goods.goodsId,
           goodsTitle: goods.goodsName,
