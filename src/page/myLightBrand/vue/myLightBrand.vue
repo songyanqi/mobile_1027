@@ -37,7 +37,7 @@
 
           <div class="list_button">
             <div class="btn">
-              <img src="//pic.davdian.com/free/2017/09/09/Group2.png" alt="">
+              <img src="//pic.davdian.com/free/2017/09/20/red.png" alt="">
             </div>
           </div>
 
@@ -133,45 +133,6 @@
         if(this.remainLight[index]>0){
           Vue.set(this.remainLight,index,this.remainLight[index]-1);
         }
-      },
-      light(bandId,index){
-        var that=this;
-        var obj={
-            "bandId":bandId
-        };
-        api("/api/mg/sale/bandLitUp/lightUp",obj)
-          .then(function (result) {
-            if(result.code==0){
-              if(result.data.success==1){
-                that.changeIsLighted(index);
-                that.changeNeedCount(index);
-              }else{
-                if(result.data.msg){
-                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
-                }else{
-                  dialog.alert('code:'+result.code);
-                }
-              }
-            }else{
-                if(result.code==30000){
-                  if (that.isApp){
-                    native.Account.login()
-                  }else {
-                    window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
-                  }
-                }else{
-                  if(result.data.msg){
-                    dialog.alert('code:'+result.code+":msg"+result.data.msg);
-                  }else{
-                    dialog.alert('code:'+result.code);
-                  }
-                }
-
-            }
-          })
-          .catch(function (e) {
-//          dialog.alert(e);
-          })
       }
 //      autoFontSize(){
 //        var html=$("html").css("fontSize").replace("px","");

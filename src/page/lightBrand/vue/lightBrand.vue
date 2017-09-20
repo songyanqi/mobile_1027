@@ -47,19 +47,35 @@
             <div class="list_need" v-if="item.isCompleted==1">已有<span v-text="item.lightNum"></span>人点亮</div>
 
 
-            <div class="list_button" :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" v-if="isLighted[index]!=1" @click.stop="light(item.bandId,index,$event)">
+            <!--<div class="list_button" :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" v-if="isLighted[index]!=1" @click.stop="light(item.bandId,index,$event)">-->
+              <!--<div class="btn" >-->
+                <!--<span><img class="light_icon" src="//pic.davdian.com/free/2017/09/19/gray.png" alt=""></span>-->
+                <!--<span class="gray">我要点亮</span>-->
+              <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="list_button" :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" v-if="isLighted[index]==1" :style="{'border':'1px solid #FF4A7D'}">-->
+              <!--<div class="btn">-->
+                <!--<span><img src="//pic.davdian.com/free/2017/09/19/red.png" alt=""></span>-->
+                <!--<span class="red">我已点亮</span>-->
+              <!--</div>-->
+            <!--</div>-->
+
+            <div class="list_button" v-if="isLighted[index]!=1" @click.stop="light(item.bandId,index,$event)">
               <div class="btn" >
-                <span><img class="light_icon" src="//pic.davdian.com/free/2017/09/19/gray.png" alt=""></span>
+                <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" class="light_icon" src="//pic.davdian.com/free/2017/09/19/gray.png" alt=""></span>
                 <span class="gray">我要点亮</span>
               </div>
             </div>
 
-            <div class="list_button" :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" v-if="isLighted[index]==1" :style="{'border':'1px solid #FF4A7D'}">
+            <div class="list_button" v-if="isLighted[index]==1" :style="{'border':'1px solid #FF4A7D'}">
               <div class="btn">
-                <span><img src="//pic.davdian.com/free/2017/09/19/red.png" alt=""></span>
+                <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" src="//pic.davdian.com/free/2017/09/20/red.png" alt=""></span>
                 <span class="red">我已点亮</span>
               </div>
             </div>
+
+
 
           </div>
 
@@ -193,9 +209,13 @@
           .then(function (result) {
             if(result.code==0){
               if(result.data.success==1){
-                that.changeIsLighted(index);
-                that.changeNeedCount(index);
                 that.changeAnimateFn(index);
+                setTimeout(function(){
+                  that.changeIsLighted(index);
+                },100);
+                setTimeout(function(){
+                  that.changeNeedCount(index);
+                },600);
               }else{
                 if(result.data.msg){
                   dialog.alert('code:'+result.code+":msg"+result.data.msg);
@@ -254,6 +274,7 @@
     margin:0 auto;
     width: 100%;
     text-align:center;
+    font-weight: 500;
   }
   .banner_name{
     font-size:18px;
