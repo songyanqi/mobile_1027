@@ -116,6 +116,12 @@
               :goodsstocknumber = "goodsStockNumber"
               :infoobj = "infoObj"
               :response="response"></goods-intro>
+
+            <!--广告banner-->
+            <ad-banner :ad-img="response.data.ADBanner.imageUrl" :ad-url="response.data.ADBanner.content"
+                       v-if="response && response.data && response.data.ADBanner && response.data.ADBanner.imageUrl">
+            </ad-banner>
+
             <activity-types
               v-if = "firstScreenFinish"
               :infoobj = "infoObj"
@@ -160,11 +166,6 @@
               v-if="firstScreenFinish" 
               :brandlist = "brandList"
             ></brand-type>
-
-            <!--广告banner-->
-            <ad-banner :ad-img="response.data.ADBanner.imageUrl" :ad-url="response.data.ADBanner.content"
-                       v-if="response && response.data && response.data.ADBanner && response.data.ADBanner.imageUrl">
-            </ad-banner>
 
             <div class = "parmas_wrapper clearfix"
                  v-if = "firstScreenFinish"

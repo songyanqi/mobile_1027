@@ -221,7 +221,6 @@
             show_list:[],
             show_list2:[],
             noLogin:false
-
         }
       },
       updated:function () {

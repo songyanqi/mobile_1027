@@ -3,11 +3,15 @@ export default {
     return {
       msg: 'hello vue',
       swiperIndex: 0,
-      cate:this.getQuery("menuId") || 8
+      cate:this.getQuery("menuId") || 8,
+      top0:{}
     }
   },
-  props: ['data', 'menudata', 'usersta'],
+  props: ['data', 'menudata', 'usersta','styleList'],
   computed: {
+    styleArr:function(){
+      return this.styleList;
+    },
     cart: function () {
       return this.data.cart || 0;
     },
@@ -26,7 +30,8 @@ export default {
 
   },
   mounted: function () {
-
+     console.log(this.data.top);
+    // this.mergeStyle(this.styleArr["top0"],{ top: - this.data.top + 'px' });
   },
   updated: function () {
     var that = this;
@@ -39,11 +44,19 @@ export default {
     }
   },
   methods: {
+    mergeStyle(obj1,obj2){
+      var result=obj1 || {};
+      for(var key in obj2){
+        result[key]=obj2[key];
+      }
+      return result;
+    },
     turn: function (event) {
       window.location = this.head.search.command.content
     },
     init: function () {
       var that = this;
+
       if (!that.menudata.menuList) {
         return false;
       }

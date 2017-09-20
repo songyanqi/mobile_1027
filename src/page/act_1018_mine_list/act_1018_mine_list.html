@@ -16,7 +16,7 @@
     <!--总奖励数字要改-->
     <div v-if="response">
       <div class="prize-head">
-        <p class="total-prize">共获得<span class="money-icon">￥</span><span class="prize-detail">{{response.data.totalReward}}</span>&nbsp;&nbsp;预定奖励</p>
+        <p class="total-prize">共获得<span class="money-icon">￥</span><span class="prize-detail">{{totalReward}}</span>&nbsp;&nbsp;预定奖励</p>
         <div class="prize-tip">
           <p class="tip-title">发放奖励说明</p>
           <ul class="tip-detail">
@@ -52,7 +52,7 @@
       <li v-for="(val,index) in list" :key="index" class="list-item">
         <a :href="'../'+val.goodsId+'.html'">
           <img :src="val.imageUrl" class="goods-pic"/>
-          <p class="goods-text text-special">活动价￥<span class="text-price">{{val.price}}</span></p>
+          <p class="goods-text text-special">活动价￥<span class="text-price">{{val.price}}</span><span class="from-app" v-text="val.from"></span></p>
         </a>
       </li>
     </ul>
