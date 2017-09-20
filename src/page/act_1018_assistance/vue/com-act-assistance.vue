@@ -39,7 +39,7 @@
           </div>
           <a class="remain_btns">
             <a class="panic_buying_btn" :href="lis.activityLink" v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>
-            <a class="panic_buying_btn yellows" :href="lis.activityLink" v-if="lis.activityButton == '我的助力'">{{lis.activityButton}}</a>
+            <a class="panic_buying_btn yellows" :href="lis.activityLink" v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>
             <a class="panic_buying_btn big_1018" href="javascript:void(0)" v-if="lis.activityButton == '10.18当天0元抢'">{{lis.activityButton}}
             </a>
           </a>
@@ -104,11 +104,12 @@
           dataType: 'json',
           data: encrypt({}),
           success(response) {
-            ts.helplist = response.data;
             /*判断是不是主会场页面如果是将助力列表截取前三个*/
             let pathname = location.pathname;
             if(pathname != "/act_1018_assistance.html"){
-              ts.helplist = ts.helplist.slice(0,2);
+              ts.helplist = response.data.slice(0,3);
+            }else{
+              ts.helplist = response.data;
             }
           },
           error(error) {

@@ -54,7 +54,7 @@
         <!--没有好友助力呢-->
         <span v-if="response.source.isSupporter == '0'">
           <div class="no_ast ast_txt" style="padding: 0.48rem 0 0.34rem;">还没有好友帮你助力，快去召集好友助力省钱吧！</div>
-          <div v-if="isApp" class="share_btn bd_r">喊人助力</div>
+          <div v-if="isApp" class="share_btn bd_r" @click="shares">喊人助力</div>
           <div v-if="isWx" class="share_btn bd_r">点击右上角“···”按钮分享</div>
           <div v-if="!isWx && !isApp" class="share_btn bd_r" @click="gowxorapp">喊人助力</div>
         </span>
@@ -147,7 +147,7 @@
               native.custom.setShareInfo({
                 "title": "大V店10.18周年庆 猛点一下帮我0元抢爆品，你抽iPhone8！",
                 "desc": '好友助力随机减钱，助力越多越省钱',
-                "imgUrl": ts.shareInfo.imgUrl,
+                "imgUrl": "//pic.davdian.com/free/20170915_assistance/assistance.png",
                 "link": location.href,
                 "shareDesc": '好友助力随机减钱，助力越多越省钱'
               });
@@ -217,7 +217,7 @@
         native.custom.share({
           "title": "大V店10.18周年庆 猛点一下帮我0元抢爆品，你抽iPhone8！",
           "desc": '好友助力随机减钱，助力越多越省钱',
-          "imgUrl": ts.shareInfo.imgUrl,
+          "imgUrl": "//pic.davdian.com/free/20170915_assistance/assistance.png",
           "link": location.href,
           "shareDesc": '好友助力随机减钱，助力越多越省钱',
           success: function () {
