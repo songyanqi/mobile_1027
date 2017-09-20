@@ -27,14 +27,14 @@ new Vue({
   },
   data() {
     return {
-      type: param.get('type',window.location.href), //type为1时是我的预定奖励，type为2时是我预约的商品，type为3时是我预定的商品
+      type: param.get('type', window.location.href), //type为1时是我的预定奖励，type为2时是我预约的商品，type为3时是我预定的商品
       response: null,
       ajaxing: false,
       list: [],
       url: '',
       totalReward: 0,
       myAppointment: null,
-      act_1018_mine_list: localStorage.getItem('act_1018_mine_list')
+      act_1018_mine_list: localStorage.getItem('subscribe_1018_goods')
     }
   },
   computed: {
@@ -50,16 +50,17 @@ new Vue({
   },
   mounted() {
     let ts = this;
-    if(ts.type == 2 && ts.act_1018_mine_list) {
+    if (ts.type == 2 && ts.act_1018_mine_list) {
       ts.myAppointment = JSON.parse(ts.act_1018_mine_list);
-      for(var i in ts.myAppointment) {
+      for (var i in ts.myAppointment) {
         ts.myAppointment[i].from = 'app预约'
       }
-    };
+    }
+    ;
     ts.getData();
     //页面滚动加载
-    window.onscroll = function() {
-      var pageHeight = Math.max(document.body.scrollHeight,document.body.offsetHeight);//真实内容高度
+    window.onscroll = function () {
+      var pageHeight = Math.max(document.body.scrollHeight, document.body.offsetHeight);//真实内容高度
       //视窗高度
       var viewportHeight = window.innerHeight ||
         document.documentElement.clientHeight ||
@@ -68,7 +69,7 @@ new Vue({
       var scrollHeight = window.pageYOffset ||
         document.documentElement.scrollTop ||
         document.body.scrollTop || 0;
-      if(pageHeight - viewportHeight - scrollHeight <= 5) {
+      if (pageHeight - viewportHeight - scrollHeight <= 5) {
         ts.getData();
       }
     }
@@ -92,11 +93,11 @@ new Vue({
       if (this.ajaxing) return;
       this.ajaxing = true;
       let ts = this;
-      if(ts.type == 1){
+      if (ts.type == 1) {
         ts.url = '/api/mg/sale/advance/getAwardList?_=';
-      } else if(ts.type == 2) {
+      } else if (ts.type == 2) {
         ts.url = '/api/mg/sale/explosion/getMyBespeakList?_='
-      } else if(ts.type == 3) {
+      } else if (ts.type == 3) {
         ts.url = '/api/mg/sale/advance/getAdvanceList?_='
       }
       $.ajax({
@@ -112,12 +113,12 @@ new Vue({
         success(response) {
           ts.ajaxing = false;
           ts.response = response;
-          ts.totalReward = response.data.totalReward?response.data.totalReward:ts.totalReward;
+          ts.totalReward = response.data.totalReward ? response.data.totalReward : ts.totalReward;
           common.checkRedirect(ts.response);
-          if(ts.type == 2 && ts.myAppointment != null) {
+          if (ts.type == 2 && ts.myAppointment != null) {
             ts.list = ts.list.concat(ts.myAppointment);
           }
-          if(ts.response.data) {
+          if (ts.response.data) {
             ts.list = ts.list.concat(ts.response.data.dataList || ts.response.data);
           }
         },
@@ -142,15 +143,35 @@ new Vue({
     response() {
       // response变化后并渲染完dom,设置其他事项
       this.$nextTick(function () {
+        // // 设置app头部标题栏
+        // native.custom.initHead({
+        //   shareOnHead: 0,
+        //   btnOnHead: '0'
+        // });
+        //
+        // // 设置app头部标题栏
+        // native.custom.setHead({
+        //   title: document.title,
+        //   homeBtn: '1',
+        //   shareBtn: '0',
+        //   rightBtn: {    // rightBtn会覆盖其他字段
+        //     text: '',
+        //     textColor: '#ff4a7d',
+        //     action: ''
+        //   },
+        // });
+
+
         // 设置app头部标题栏
         native.custom.initHead({
-          shareOnHead: 0
+          shareOnHead: 1,
         });
 
         // 设置app头部标题栏
         native.custom.setHead({
           title: document.title,
-          homeBtn: 1
+          homeBtn: '1',
+          shareBtn: '0',
         });
       });
     }
