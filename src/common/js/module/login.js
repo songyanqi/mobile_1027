@@ -64,7 +64,9 @@ export default {
   needLogin(){
     if (!this.isLogined()) {
       this.goLoginPage();
+      return true;
     }
+    return false;
   },
   /**
    * 功能: 是否是已登录的买家

@@ -183,8 +183,14 @@ new Vue({
     /** 我要预约 */
     btnClickSubscribe(goods) {
       let ts = this;
-      login.needLogin();
+      if(login.needLogin()){
+        return;
+      }
       if (ts.isDvdApp) {
+        // if (startTimeDistance > 0 && startTimeDistance < 3 * 60 * 1000) {
+        //   popup.toast('马上开抢啦，请返回重新进入~', 3000);
+        //   return;
+        // }
         native.Browser.goodsBook({
           goodsId: goods.goodsId,
           goodsTitle: goods.goodsName,
@@ -198,16 +204,20 @@ new Vue({
             // 放入localStorage
             ts.subscribe_1018_goods_ids.push(goods.goodsId);
             localStorage.setItem('subscribe_1018_goods_ids', JSON.stringify(ts.subscribe_1018_goods_ids));
-            //已改为由app弹 popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
+            popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
             goods.buttonName = '已设预约';
             goods.bespeakNum = parseInt(goods.bespeakNum) + 1;
-            ts.$forceUpdate()
+            ts.$forceUpdate();
           },
           error() {
 
           }
-        }, true);
+        });
       } else {
+        // if (parseInt(goods.sTime + '000' - Date.now()) < 3 * 60 * 1000) {
+        //   popup.toast('马上开抢啦，请返回重新进入~', 5000);
+        //   return;
+        // }
         // 调接口
         ts.subscribe(goods, function (response) {
           if (response.code === 0) {
