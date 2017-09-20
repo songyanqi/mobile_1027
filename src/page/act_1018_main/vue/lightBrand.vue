@@ -1,6 +1,5 @@
 <template>
   <div>
-
     <div class="banner">
       <div class="big_img"><img src="//pic.davdian.com/free/2017/09/09/banner.png" alt=""></div>
       <div class="banner_title">2017最受欢迎的TOP品牌</div>
@@ -13,7 +12,7 @@
       </div>
     </div>
     <div class="all_list">
-      <div class="list" v-for="(item,index) in dataList">
+      <div class="list" v-for="(item,index) in response">
         <div class="list_b_img">
           <img :src="item.bandPic" alt="">
         </div>
@@ -43,15 +42,15 @@
             <span class="start_value2" v-text="item.highDiscount"></span>
           </div>
 
-          <div class="list_need">还需<span v-text="item.remainLight"></span>人点亮</div>
+          <div class="list_need">还需<span v-text="need[index]"></span>人点亮</div>
 
-          <div class="list_button" v-if="isLighted[index]!=1" @click="light(item.bandId,index)">
+          <div class="list_button" v-if="lightArr[index]!=1" @click.stop="light(item.bandId,index)">
             <div class="btn" >
               <img src="//pic.davdian.com/free/2017/09/09/Group.png" alt="">
             </div>
           </div>
 
-          <div class="list_button" v-if="isLighted[index]==1">
+          <div class="list_button" v-if="lightArr[index]==1">
             <div class="btn">
               <img src="//pic.davdian.com/free/2017/09/09/Group2.png" alt="">
             </div>
@@ -78,34 +77,37 @@
     props:["currentDate","response"],
     data(){
       return {
-
+        lightArr:this.returnLight(),
+        need:this.returnCount()
       }
     },
     computed:{
-      dataList(){
-          return this.response;
-      },
-      isLighted(){
+
+    },
+    mounted(){
+
+    },
+    methods:{
+      returnLight(){
         var arr=[];
         this.response.map(function (item,index) {
           arr.push(item.isLighted);
         });
         return arr;
-      }
-    },
-    mounted(){
-      this.initIsLighted(this.dataList);
-    },
-    methods:{
-      initIsLighted(data){
-        var that=this;
-        data.map(function (item) {
-          that.isLighted.push(item.isLighted);
+      },
+      returnCount(){
+        var arr=[];
+        this.response.map(function (item,index) {
+          arr.push(item.remainLight);
         });
+        return arr;
       },
       changeIsLighted(index){
-        console.log(index);
-        Vue.set(this.isLighted,index,1);
+        Vue.set(this.lightArr,index,1);
+        //变异方法
+      },
+      changeNeedCount(index){
+        Vue.set(this.need,index,this.need[index]-1);
         //变异方法
       },
       light(bandId,index){
@@ -113,11 +115,12 @@
         var obj={
             "bandId":bandId
         };
-        api("/api/mg/sale/explosionBand/lightUp",obj)
+        api("/api/mg/sale/bandLitUp/lightUp",obj)
           .then(function (result) {
             if(result.code==0){
               if(result.data.success==1){
                 that.changeIsLighted(index);
+                that.changeNeedCount(index);
               }else{
                 if(result.data.msg){
                   dialog.alert('code:'+result.code+":msg"+result.data.msg);
@@ -135,7 +138,7 @@
           })
           .catch(function (e) {
           })
-      }
+       }
 //      autoFontSize(){
 //        var html=$("html").css("fontSize").replace("px","");
 //        $(".start_value").css("transform","scale("+ html/100 +")")
