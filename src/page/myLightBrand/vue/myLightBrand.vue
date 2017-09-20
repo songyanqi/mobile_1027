@@ -31,7 +31,8 @@
             <span class="start_value2" v-text="item.highDiscount"></span>
           </div>
 
-          <div class="list_need">还需<span v-text="remainLight[index]"></span>人点亮</div>
+          <div class="list_need" v-if="item.isCompleted==-1">还需<span v-text="remainLight[index]"></span>人点亮</div>
+          <div class="list_need" v-if="item.isCompleted==1">已有<span v-text="item.lightNum"></span>人点亮</div>
 
 
           <div class="list_button">
