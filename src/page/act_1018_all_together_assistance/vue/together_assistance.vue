@@ -54,20 +54,14 @@
                style="padding-top:0.1rem;">TA共得到好友{{+response.source.supporterPrice + addsupporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
           <div class="ast_txt" style="padding-top:0.1rem;">别忘啦，明天还可以帮好友助力哦</div>
           <div class="awd_touch">
-            <div>
-              <div style="margin-top: 0.18rem">刮一刮，抽iPhone8大奖</div>
-            </div>
-          </div>
-          <div class="awd_touch">
-             <div style="background-color: #FF5353;">
-              <div>恭喜你被iPhone8砸中了</div>
-              <div>您的大V账户会收到红包凭证，请等待工作人员联系您</div>
-            </div>
-          </div>
-          <div class="awd_touch">
-            <div style="background-color: #FF9E9E;">
-              <div>很遗憾 未中奖</div>
-              <div>明天助力再赢iPhone8吧</div>
+            <div :class="['awd_pre','awd_no','awd_yes'][awd_type]">
+              <div v-if="awd_type == 0" class="awd_title"></div>
+              <div v-if="awd_type == 0" class="awd_tip"></div>
+              <div v-if="awd_type == 1" class="awd_title">很遗憾 未中奖</div>
+              <div v-if="awd_type == 1" class="awd_tip">明天助力再赢iPhone8吧</div>
+               <div v-if="awd_type == 2" class="awd_title">恭喜你被iPhone8砸中了</div>
+              <div v-if="awd_type == 2" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
+              <com-scratch-card></com-scratch-card>
             </div>
           </div>
         </span>
@@ -184,12 +178,14 @@
         shareUserId: ua.getQuery("shareUserId"),
         goodsdata: null,
         visitor_status: null,
-        addsupporterPrice: null
+        addsupporterPrice: null,
+        awd_type:2
       }
     },
     components: {
       Swiper,
-      SwiperItem
+      SwiperItem,
+      'com-scratch-card':require('../../../component/com-scratch-card.vue')
     },
     computed: {},
     watch: {
@@ -735,28 +731,40 @@
     height: 0.76rem;
     margin: 0 auto;
     background-size: 100%;
-    overflow: hidden;
-    padding-bottom: 0.2rem;
     background-repeat: no-repeat;
+    overflow: hidden;
     >div{
       width:2.95rem;
       height: 0.66rem;
-      background-color: #D5CECE;
       color:#FFFFFF;
       text-align: center;
       margin: 0.07rem 0 0 0.2rem;
       overflow: hidden;
-      >div:nth-of-type(1){
+      >div{
+        width:2.95rem;
+        height: 0.66rem;
+        top: -0.54rem;
+      }
+      .awd_title{
         font-size: 0.2rem;
         height: 0.28rem;
         line-height: 0.28rem;
         margin-top: 0.12rem;
       }
-      >div:nth-of-type(2){
+      .awd_tip{
         font-size: 0.1rem;
         height: 0.14rem;
         line-height: 0.14rem;
       }
     }
+  }
+  .awd_pre{
+    background-color: #FFFFFF;
+  }
+  .awd_no{
+    background-color: #FF9E9E;
+  }
+  .awd_yes{
+    background-color: #FF5353;
   }
 </style>
