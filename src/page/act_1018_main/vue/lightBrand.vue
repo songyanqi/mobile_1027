@@ -110,33 +110,31 @@
       },
       light(bandId,index){
         var that=this;
-        that.changeIsLighted(index);
-//        var obj={
-//            "bandId":bandId
-//        };
-//        api("/api/mg/sale/explosionBand/lightUp",obj)
-//          .then(function (result) {
-//            if(result.code==0){
-//              if(result.data.success==1){
-//                that.changeIsLighted(index);
-//              }else{
-//                if(result.data.msg){
-//                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
-//                }else{
-//                  dialog.alert('code:'+result.code);
-//                }
-//              }
-//            }else{
-//              if(result.data.msg){
-//                dialog.alert('code:'+result.code+":msg"+result.data.msg);
-//              }else{
-//                dialog.alert('code:'+result.code);
-//              }
-//            }
-//          })
-//          .catch(function (e) {
-////          dialog.alert(e);
-//          })
+        var obj={
+            "bandId":bandId
+        };
+        api("/api/mg/sale/explosionBand/lightUp",obj)
+          .then(function (result) {
+            if(result.code==0){
+              if(result.data.success==1){
+                that.changeIsLighted(index);
+              }else{
+                if(result.data.msg){
+                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                }else{
+                  dialog.alert('code:'+result.code);
+                }
+              }
+            }else{
+              if(result.data.msg){
+                dialog.alert('code:'+result.code+":msg"+result.data.msg);
+              }else{
+                dialog.alert('code:'+result.code);
+              }
+            }
+          })
+          .catch(function (e) {
+          })
       }
 //      autoFontSize(){
 //        var html=$("html").css("fontSize").replace("px","");
