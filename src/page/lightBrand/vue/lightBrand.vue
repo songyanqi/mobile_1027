@@ -48,15 +48,13 @@
 
             <div class="list_button" v-if="isLighted[index]!=1" @click.stop="light(item.bandId,index,$event)">
               <div class="btn" >
-                <!--<img src="//pic.davdian.com/free/2017/09/09/Group.png" alt="">-->
-                <span><img class="light_icon" @click.stop="light(item.bandId,index,$event)" src="//pic.davdian.com/free/2017/09/19/gray.png" alt=""></span>
-                <span @click.stop="light(item.bandId,index,$event)" class="gray">我要点亮</span>
+                <span><img class="light_icon" src="//pic.davdian.com/free/2017/09/19/gray.png" alt=""></span>
+                <span class="gray">我要点亮</span>
               </div>
             </div>
 
             <div class="list_button" v-if="isLighted[index]==1">
               <div class="btn">
-                <!--<img src="//pic.davdian.com/free/2017/09/09/Group2.png" alt="">-->
                 <span><img src="//pic.davdian.com/free/2017/09/19/red.png" alt=""></span>
                 <span class="red">我已点亮</span>
               </div>
@@ -183,11 +181,10 @@
       light(bandId,index,ev){
         var that=this;
         if (ev.target === ev.currentTarget) {
-          //从绑定目标触发
-
+          that.changeIsLighted(index);
+          that.changeNeedCount(index);
+          $(ev.target).addClass("animated bounceIn");
         }
-        console.log(1);
-        $(ev.target).addClass("animated bounceln bounce");
 //        var obj={
 //            "bandId":bandId
 //        };
