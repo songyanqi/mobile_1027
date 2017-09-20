@@ -1,7 +1,7 @@
 /**
  * Created by luming on 2017/1/9.
  */
-require("../../stylesheet/base.css");
+require("../../stylesheet/baclse.css");
 require("../../stylesheet/model.css");
 require("../../stylesheet/index.css");
 
