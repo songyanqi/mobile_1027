@@ -689,6 +689,20 @@
                                     scope.ajaxing = true;
                                     scope.typePage[orderType] = scope.typePage[orderType] + 1;//ajax中的参数中页数加1
                                     if (result["data"].length) {//返回函数中有数据
+                                        // 将超时的预定单改为已关闭订单
+                                        result.data.map(function (value,index) {
+                                          if (value.is_presale_order && value.presale_info.type == "reserve") {
+                                            if (Date.now() > value.create_time * 1000 + 1800000) {
+                                              value.type = 4;
+                                            }
+                                          }
+                                          if (value.is_presale_order && value.presale_info.type == "final") {
+                                            if (Date.now() > value.presale_info.final_info.paytime_end * 1000) {
+                                              value.type = 4;
+                                            }
+                                          }
+                                        })
+
                                         scope.allData[orderType] = scope.allData[orderType].concat(result.data);//缓存中添加数据
                                         scope.list_type = scope.allData[orderType];
                                         sessionStorage.setItem('data',JSON.stringify(scope.allData))
@@ -916,7 +930,7 @@
             orderReserve (value) {
               if(value.is_new_seller_order  == false && value.type == 3){
                 if (value.is_presale_order && value.presale_info.type == "reserve") {
-                  if (Date.now() > value.create_time * 1000 + 1800000) {
+                  if (Date.now() < value.create_time * 1000 + 1800000) {
                     return true;
                   }
                 }
