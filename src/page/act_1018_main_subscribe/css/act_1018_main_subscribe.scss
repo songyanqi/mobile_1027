@@ -52,10 +52,24 @@
       @include v-list-split-line;
       display: flex;
       .pic {
+        position: relative;
         margin-left: ptr(5);
         @include square(ptr(120));
         img {
           @include square(ptr(120));
+        }
+        .sold-out {
+          height: ptr(60);
+          width: ptr(60);
+          background-color: rgba(0, 0, 0, 0.5);
+          border-radius: 50%;
+          position: absolute;
+          @include center;
+          font-size: ptr(14);
+          color: #FFF;
+          text-align: center;
+          line-height: ptr(60);
+          font-style: normal;
         }
       }
       .info {
@@ -171,7 +185,7 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    z-index: 6;
     display: none;
     .box {
       @include center;

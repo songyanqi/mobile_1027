@@ -31,6 +31,7 @@
       <li v-for="(item, i) in response.data.dataList" @click="location = item.goodsId+'.html';">
         <span class="pic">
           <img v-lazy="item.imageUrl">
+          <i class="sold-out" v-if="false">已抢光</i>
         </span>
         <span class="info">
           <div class="name">{{item.goodsName}}</div>
@@ -73,12 +74,12 @@
         <img class="qrcode" v-lazy="'[[static]]/page/act_1018_main_subscribe/img/qrcode.png'">
         <div class="qrcode-tip">长按扫描二维码，关注公众号</div>
       </div>
-      <div class="box web-focus" v-if="tipType === 'web-focus'">
+      <div class="box web-focus" @click.stop v-if="tipType === 'web-focus'">
         <div class="title">预约成功</div>
         <div class="text">活动开始前5分钟将在微信公众号中进行提醒</div>
         <div class="btn" @click="tipType = null;">确定</div>
       </div>
-      <div class="box web-no-focus" v-if="tipType === 'web-no-focus'">
+      <div class="box web-no-focus" @click.stop v-if="tipType === 'web-no-focus'">
         <div class="title">请关注“果敢时代大V店”公众号</div>
         <div class="text">在微信中搜索“果敢时代大V店”并关注，不关注公众号可能无法预约，错过抢购商品哦！</div>
         <div class="btn" @click="tipType = null;">确定</div>
