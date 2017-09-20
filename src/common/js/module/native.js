@@ -203,12 +203,13 @@ const native = {
      * 用法:
      * native.Account.login()
      */
-    login(param = {}) {
+    login(param = {}, debug) {
       call({
         v: '2.4.0',
         host: 'Account',
         action: 'login',
-        param: param
+        param: param,
+        debug: debug
       });
     },
   },

@@ -75,10 +75,10 @@
       <!--活动区域-->
       <div class="g-act" v-if="response && response.data">
         <!--好友助力-->
-        <com-act-assistance :response="response" v-if="response.data.help" :current-date="currentDate"></com-act-assistance>
+        <!--<com-act-assistance :response="response" v-if="response.data.help" :current-date="currentDate"></com-act-assistance>-->
 
         <!--品牌点亮-->
-        <com-act-lightbrand :response="response" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightbrand>
+        <com-act-lightbrand :response="response.data.lightenBrand" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightbrand>
 
         <!--爆品预约-->
         <com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>
@@ -89,7 +89,7 @@
 
       <!--助力商品活动-->
       <com-act-assistance></com-act-assistance>
-3
+
       <!--活动下方专题-->
       <div class="g-topic-bottom" v-html="topics[2].content"></div>
 
