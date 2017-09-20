@@ -664,7 +664,7 @@ $(function(){
     }
 
     function pay() {
-      // 如果不是预定商品就不走这一行代码
+      //如果不是预定商品就不走这一行代码
         // if (is_advance && is_advance == "1") {
         //   if (!$(".order_rule_ipt").hasClass("order_rule_ipt_checked")) {
         //     $(".order_navList").addClass("order_navList_line");

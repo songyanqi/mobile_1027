@@ -409,7 +409,6 @@ gulp.task('old:rev', () => {
   return gulp.src([
     `stylesheet/base.css`,
     `stylesheet/model.css`,
-    `javascript/tongji.js`,
     `javascript/units.js`,
     `javascript/base.js`,
     `javascript/model.js`,
