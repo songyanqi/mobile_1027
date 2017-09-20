@@ -10,7 +10,7 @@
   <!--我的预定奖励部分-->
   <div v-if="type == 1" v-cloak>
     <!--标题-->
-    <com-top-title title="我的预定奖励"></com-top-title>
+    <com-top-title title="我的预定奖励" home></com-top-title>
 
     <!--预定奖励头部信息-->
     <!--总奖励数字要改-->
@@ -45,7 +45,7 @@
   <!--我预约的商品部分-->
   <div v-if="type == 2" v-cloak>
     <!--标题-->
-    <com-top-title title="我预约的商品"></com-top-title>
+    <com-top-title title="我预约的商品" home></com-top-title>
 
     <!--商品列表-->
     <ul class="goods-list" v-if="response">
@@ -61,7 +61,7 @@
   <!--我预定的商品部分-->
   <div v-if="type == 3" v-cloak>
     <!--标题-->
-    <com-top-title title="我预定的商品"></com-top-title>
+    <com-top-title title="我预定的商品" home></com-top-title>
 
     <!--商品列表-->
     <ul class="goods-list" v-if="response">
