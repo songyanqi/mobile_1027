@@ -99,7 +99,7 @@ new Vue({
       $.ajax({
         cache: false,
         async: true,
-        url: '?_=' + Date.now(),
+        url: '/api/mg/sale/theThirdYears/myWishList?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
         data: encrypt({
@@ -109,7 +109,7 @@ new Vue({
           ts.response = response;
         },
         error(error) {
-          ts.response = require('../json/act_1018_mine.json');
+          // ts.response = require('../json/act_1018_mine.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
