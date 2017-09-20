@@ -52,8 +52,8 @@ new Vue({
     let ts = this;
     if(ts.type == 2 && ts.act_1018_mine_list) {
       ts.myAppointment = JSON.parse(ts.act_1018_mine_list);
-      for(i in myAppointment) {
-        myAppointment[i].from = 'app预约'
+      for(var i in ts.myAppointment) {
+        ts.myAppointment[i].from = 'app预约'
       }
     };
     ts.getData();
@@ -114,11 +114,11 @@ new Vue({
           ts.response = response;
           ts.totalReward = response.data.totalReward?response.data.totalReward:ts.totalReward;
           common.checkRedirect(ts.response);
-          if(ts.response.data) {
-            ts.list = ts.list.concat(ts.response.data.dataList || ts.response.data);
-          }
           if(ts.type == 2 && ts.myAppointment != null) {
             ts.list = ts.list.concat(ts.myAppointment);
+          }
+          if(ts.response.data) {
+            ts.list = ts.list.concat(ts.response.data.dataList || ts.response.data);
           }
         },
         error(error) {
