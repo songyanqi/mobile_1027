@@ -206,7 +206,7 @@ new Vue({
         ts.subscribe_1018_goods.push(goods);
         // localStorage.setItem('subscribe_1018_goods_ids', JSON.stringify(ts.subscribe_1018_goods_ids));
         localStorage.setItem('subscribe_1018_goods', JSON.stringify(ts.subscribe_1018_goods));
-        popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
+        popup.toast('将在活动开始前3分钟进行提醒，可在“我的10.18”中查看已预约的商品', 3000);
         goods.buttonName = '已设预约';
         goods.bespeakNum = parseInt(goods.bespeakNum) + 1;
         ts.$forceUpdate();
@@ -227,7 +227,7 @@ new Vue({
             ts.subscribe_1018_goods.push(goods);
             // localStorage.setItem('subscribe_1018_goods_ids', JSON.stringify(ts.subscribe_1018_goods_ids));
             localStorage.setItem('subscribe_1018_goods', JSON.stringify(ts.subscribe_1018_goods));
-            popup.toast('将在活动开始前3分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
+            popup.toast('将在活动开始前3分钟进行提醒，可在“我的10.18”中查看已预约的商品', 3000);
             goods.buttonName = '已设预约';
             goods.bespeakNum = parseInt(goods.bespeakNum) + 1;
             ts.$forceUpdate();
