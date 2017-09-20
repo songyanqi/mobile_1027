@@ -1,9 +1,9 @@
 <template>
-  <div class="assistance_box" v-if="response">
+  <div class="assistance_box" v-if="response && goodsdata">
     <!--呼朋唤友省更多-->
     <div v-if="response.type == '0'" class="title_img">
       <img style="width:1.8rem;" src="//pic.davdian.com/free/20170915_assistance/huhaoyou2.png">
-      <div class="dtime">距离结束：{{goodsdata.goods.overTime | formatRemainTime}}</div>
+      <div class="dtime">{{goodsdata.goods.overTime | formatRemainTime}}</div>
       <div class="qiqiu_ing">
         <img src="//pic.davdian.com/free/20170915_assistance/qiqiu.png">
         <img src="//pic.davdian.com/free/20170915_assistance/bangbangtang.png">
@@ -12,7 +12,7 @@
     <!--助好友0元购-->
     <div v-if="response.type == '1'" class="title_img">
       <img style="width: 2.57rem;" :src="response.supporter.imageUrl">
-      <div class="dtime">距离结束：7天18时38分39秒</div>
+      <div class="dtime">距离结束：{{goodsdata.goods.overTime | formatRemainTime}}</div>
       <div class="friend_mark">
         <div></div>
         <div>
@@ -28,7 +28,7 @@
     <!--商品信息-->
     <div class="goods_info">
       <div class="goods_info_img">
-        <img src="//pic.davdian.com/free/20170915_assistance/qiqiu.png" alt="">
+        <img :src="goodsdata.goods.goodsImage" alt="">
       </div>
       <div class="goods_info_desc">
         <div class="goods_info_title">
@@ -115,7 +115,8 @@
   import ua from '../../../common/js/module/ua.js';
   import native from '../../../common/js/module/native.js';
   import {Swiper, SwiperItem} from 'vux'
-
+  import login from '../../../common/js/module/login.js';
+  login.needLogin();
   export default {
     props: {},
     data() {
@@ -126,7 +127,8 @@
         isWx: ua.isWeiXin(),
         isApp: ua.isDvdApp(),
         goodsId: ua.getQuery("goodsId"),
-        shareUserId: ua.getQuery("shareUserId")
+        shareUserId: ua.getQuery("shareUserId"),
+        goodsdata:null
       }
     },
     components: {
@@ -141,24 +143,23 @@
         this.$nextTick(function () {
           let ts = this;
           // 设置分享信息
-          if (ts.shareInfo) {
             try {
               native.custom.setShareInfo({
-                "title": ts.shareInfo.title,
-                "desc": ts.shareInfo.desc,
+                "title": "大V店10.18周年庆 猛点一下帮我0元抢爆品，你抽iPhone8！",
+                "desc": '好友助力随机减钱，助力越多越省钱',
                 "imgUrl": ts.shareInfo.imgUrl,
-                "link": ts.shareInfo.link,
-                "shareDesc": ts.shareInfo.desc
+                "link": location.href,
+                "shareDesc": '好友助力随机减钱，助力越多越省钱'
               });
             } catch (err) {
               console.error(err);
             }
-          }
         });
       }
     },
     created() {
       this.getData();
+      this.deltime();
     },
     mounted() {
 
@@ -201,8 +202,29 @@
       },
       gowxorapp: function () {
         popup.toast("请去微信或者APP分享");
+      },
+      deltime: function () {
+        var ts = this;
+        setInterval(function () {
+          ts.goodsdata.goods.overTime--;
+        }, 1000)
+      },
+      /***
+       * 分享
+       * */
+      shares: function () {
+        var that = this;
+        native.custom.share({
+          "title": "大V店10.18周年庆 猛点一下帮我0元抢爆品，你抽iPhone8！",
+          "desc": '好友助力随机减钱，助力越多越省钱',
+          "imgUrl": ts.shareInfo.imgUrl,
+          "link": location.href,
+          "shareDesc": '好友助力随机减钱，助力越多越省钱',
+          success: function () {
+            that.sharecallback();
+          }
+        })
       }
-
     },
     filters: {
       /***
@@ -214,25 +236,25 @@
           oneHour = 60 * 60,
           oneDay = 60 * 60 * 24;
         if (second >= oneDay) {
-          format = `剩余时间: ${parseInt(second / oneDay)}天${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+          format = `距离结束: ${parseInt(second / oneDay)}天${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
         } else if (second >= oneHour) {
-          format = `剩余时间: ${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+          format = `距离结束: ${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
         } else if (second >= oneMinute) {
-          format = `剩余时间: ${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+          format = `距离结束: ${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
         } else if (second > 0) {
-          format = `剩余时间: ${second}秒`;
+          format = `距离结束: ${second}秒`;
         } else if (second <= 0) {
           format = '已开始';
         }
         return format;
       },
       formatDate(now) {
-        var year = now.getYear();
-        var month = now.getMonth() + 1;
-        var date = now.getDate();
-        var hour = now.getHours();
-        var minute = now.getMinutes();
-        var second = now.getSeconds();
+        let year = now.getYear();
+        let month = now.getMonth() + 1;
+        let date = now.getDate();
+        let hour = now.getHours();
+        let minute = now.getMinutes();
+        let second = now.getSeconds();
         return "20" + year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second;
       }
     },

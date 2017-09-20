@@ -69,7 +69,8 @@
 <script>
   import encrypt from '../../../common/js/module/encrypt.js';
   import popup from '../../../common/js/module/popup.js';
-
+  import login from '../../../common/js/module/login.js';
+  login.needLogin();
   export default {
     props: {},
     data() {
@@ -82,8 +83,9 @@
     components: {},
     computed: {},
     created() {
-      this.getHelpList();
-      this.getAnnouncement();
+      var that = this;
+      that.getHelpList();
+      that.getAnnouncement();
     },
     mounted() {
     },
@@ -103,6 +105,11 @@
           data: encrypt({}),
           success(response) {
             ts.helplist = response.data;
+            /*判断是不是主会场页面如果是将助力列表截取前三个*/
+            let pathname = location.pathname;
+            if(pathname != "/act_1018_assistance.html"){
+              ts.helplist = ts.helplist.slice(0,2);
+            }
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);

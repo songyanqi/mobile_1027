@@ -44,7 +44,7 @@
       <!--按钮-->
       <div v-if="isWeixin" class="main_btn">点击右上角“···”按钮发起助力</div>
       <div v-if="isDvdApp" @click="shares" class="main_btn">喊人助力</div>
-      <div v-if="!isDvdApp&&!isWeixin" @click="shares" class="main_btn">去微信或者APP发起助力</div>
+      <div v-if="!isDvdApp&&!isWeixin" @click="gowxapp" class="main_btn">喊人助力</div>
       <div class="good_detail_imgs">
         <img v-for="imgs in response.details" v-lazy="imgs.imgOriginal" v-if="imgs.imgOriginal" alt="">
       </div>
@@ -176,6 +176,9 @@
             console.error('ajax error:' + error.status + ' ' + error.statusText);
           }
         });
+      },
+      gowxapp:function () {
+        popup.toast("请去微信或者APP发起助力");
       }
     },
     filters: {
@@ -188,13 +191,13 @@
           oneHour = 60 * 60,
           oneDay = 60 * 60 * 24;
         if (second >= oneDay) {
-          format = `剩余时间: ${parseInt(second / oneDay)}天${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+          format = `${parseInt(second / oneDay)}天${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
         } else if (second >= oneHour) {
-          format = `剩余时间: ${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+          format = `${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
         } else if (second >= oneMinute) {
-          format = `剩余时间: ${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+          format = `${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
         } else if (second > 0) {
-          format = `剩余时间: ${second}秒`;
+          format = `${second}秒`;
         } else if (second <= 0) {
           format = '已开始';
         }
@@ -263,6 +266,7 @@
       span:nth-of-type(4) {
         font-size: 11px;
         color: #999999;
+        text-decoration: line-through;
       }
     }
     div:nth-of-type(2) {
