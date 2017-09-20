@@ -50,7 +50,7 @@
             </div>
           </div>
 
-          <div class="list_button" v-if="lightArr[index]==1">
+          <div class="list_button" v-if="lightArr[index]==1" :style="{'border':'1px solid #FF4A7D'}">
             <div class="btn">
               <img src="//pic.davdian.com/free/2017/09/09/Group2.png" alt="">
             </div>

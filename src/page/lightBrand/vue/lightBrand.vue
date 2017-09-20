@@ -46,6 +46,7 @@
             <div class="list_need" v-if="item.isCompleted==-1">还需<span v-text="remainLight[index]"></span>人点亮</div>
             <div class="list_need" v-if="item.isCompleted==1">已有<span v-text="item.lightNum"></span>人点亮</div>
 
+
             <div class="list_button" v-if="isLighted[index]!=1" @click.stop="light(item.bandId,index,$event)">
               <div class="btn" >
                 <span><img class="light_icon" src="//pic.davdian.com/free/2017/09/19/gray.png" alt=""></span>
@@ -53,7 +54,7 @@
               </div>
             </div>
 
-            <div class="list_button" v-if="isLighted[index]==1">
+            <div class="list_button" v-if="isLighted[index]==1" :style="{'border':'1px solid #FF4A7D'}">
               <div class="btn">
                 <span><img src="//pic.davdian.com/free/2017/09/19/red.png" alt=""></span>
                 <span class="red">我已点亮</span>
@@ -181,10 +182,11 @@
       light(bandId,index,ev){
         var that=this;
         if (ev.target === ev.currentTarget) {
-          that.changeIsLighted(index);
-          that.changeNeedCount(index);
-          $(ev.target).addClass("animated bounceIn");
+
         }
+        that.changeIsLighted(index);
+        that.changeNeedCount(index);
+        $(ev.target).addClass("animated bounceIn");
 //        var obj={
 //            "bandId":bandId
 //        };
@@ -438,7 +440,6 @@
     margin-left: 0.1rem;
     margin-top: 0.15rem;
   }
-
 
 
   .btn{
