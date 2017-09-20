@@ -37,8 +37,9 @@
           }
           &:last-of-type {
             padding-right: ptr(3);
-            margin-top: ptr(6);
-            font-size: ptr(12);
+            margin-top: ptr(4);
+            font-size: ptr(11);
+            line-height: ptr(15);
             @include ellipsis;
           }
         }
