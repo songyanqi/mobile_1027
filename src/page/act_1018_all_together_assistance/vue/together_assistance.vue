@@ -11,10 +11,12 @@
     </div>
     <!--助好友0元购-->
     <div v-if="response.type == '1'" class="title_img">
-      <img style="width: 2.57rem;" :src="response.supporter.imageUrl">
-      <div class="dtime">距离结束：{{goodsdata.goods.overTime | formatRemainTime}}</div>
+      <img style="width: 2.57rem;" src="//pic.davdian.com/free/20170915_assistance/zhuhaoyou.png">
+      <div class="dtime">距助力结束：{{goodsdata.goods.overTime | formatRemainTime}}</div>
       <div class="friend_mark">
-        <div></div>
+        <div>
+          <img :src="response.supporter.imageUrl" alt="">
+        </div>
         <div>
           {{response.supporter.nickName}} <br>
           正在呼朋唤友助力中…
@@ -43,7 +45,23 @@
     <div class="rule_brand">
       <img src="//pic.davdian.com/free/20170915_assistance/rule.png">
       <img src="//pic.davdian.com/free/20170915_assistance/bear.png">
+
       <!--助力者页面按钮信息-->
+      <span v-if="response.type == '1'">
+        <!--没有好友助力呢-->
+        <span>
+         <div class="ast_bigtxt" style="padding: 0.49rem 0 0.16rem;">轻轻一点为TA赢得商品0元购</div>
+          <div class="share_btn bd_r" @click="assistance">给TA助力  我赢iPhone8</div>
+          <div class="ast_txt" style="font-size: 0.1rem;line-height: 0.14rem;padding-top: 0.06rem;">助力后即刻抽奖</div>
+        </span>
+          <!--已经得到好友的助力-->
+        <!--<span v-else>-->
+          <!--<div class="ast_bigtxt" style="padding-top:0.34rem;">TA已得到好友<span style="font-size: 0.24rem;">{{response.supporter.supporterPrice}}</span>元助力，战胜了{{response.supporter.rate}}%的人</div>-->
+          <!--<div class="ast_txt" style="padding: 0.1rem 0 0.04rem;">帮TA再接再厉赢得商品0元购 ！</div>-->
+          <!--<div class="share_btn bd_r">给TA助力  我赢iPhone8</div>-->
+          <!--<div class="ast_txt" style="font-size: 0.1rem;line-height: 0.14rem;padding-top: 0.06rem;">助力后即刻抽奖</div>-->
+        <!--</span>-->
+      </span>
 
       <!--发起者页面信息-->
       <span v-if="response.type == '0'">
@@ -52,7 +70,8 @@
             <div class="ast_deep">恭喜你获得10.18当天0元抢购的机会</div>
             <div class="ast_bigtxt">得到好友的{{response.source.supporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
             <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10月18日开抢 数量有限 先到先得!</div>
-        </span><!--没有获得0元购机会-->
+        </span>
+        <!--没有获得0元购机会-->
         <span v-else>
         <!--没有好友助力呢-->
         <span v-if="response.source.isSupporter == '0'">
@@ -73,17 +92,16 @@
       </span>
       </span>
     </div>
+
     <img class="table_brand" src="//pic.davdian.com/free/20170915_assistance/table_brand.png">
-
     <div v-if="response.type == '1'" class="share_btn bd_p">我也想要商品0元购</div>
-
     <!--是不是已经有助力-->
     <span v-if="response.source.isSupporter == '1'">
     <!--获奖好友轮播-->
       <div class="loop_my_friend_reward">
         <swiper auto height="60px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
-          <swiper-item>
-            <div class="swiperItem" v-for="notice in goodsdata.notice">
+          <swiper-item v-for="notice in goodsdata.notice">
+            <div class="swiperItem">
               <div>
                 <img :src="notice.imageUrl" alt="">
               </div>
@@ -97,15 +115,15 @@
 
       <!--共得到几位好友支持-->
       <div class="friend_list">
-        <div class="friend_list_title">共得到{{goodsdata.friendNum}}位好友支持：</div>
+        <div class="friend_list_title">共得到{{goodsdata.friendsNum}}位好友支持：</div>
         <div class="friend_desc">
-          <div class="swiperItem" v-if="friend in goodsdata.friends">
+          <div class="swiperItem" v-for="friend in goodsdata.friends">
             <div>
               <img :src="friend.imageUrl" alt="">
             </div>
             <div>
               <span><span>{{friend.nickName}}</span><span>助力时间：{{friend.dateTime | formatDate}}</span></span>
-              <span>{{friend.title}}{{friend.price}}元</span>
+              <span>帮Ta省下{{friend.price}}元，{{friend.title}}</span>
             </div>
           </div>
         </div>
@@ -117,10 +135,9 @@
   import encrypt from '../../../common/js/module/encrypt.js';
   import popup from '../../../common/js/module/popup.js';
   import ua from '../../../common/js/module/ua.js';
-  import native from '../../../common/js/module/native.js';
+  import share from '../../../common/js/module/share.js';
   import {Swiper, SwiperItem} from 'vux'
   import login from '../../../common/js/module/login.js';
-
   login.needLogin();
   export default {
     props: {},
@@ -149,12 +166,11 @@
           let ts = this;
           // 设置分享信息
           try {
-            native.custom.setShareInfo({
+            share.setShareInfo({
               "title": "大V店10.18周年庆 猛点一下帮我0元抢爆品，你抽iPhone8！",
               "desc": '好友助力随机减钱，助力越多越省钱',
               "imgUrl": "//pic.davdian.com/free/20170915_assistance/assistance.png",
-              "link": location.href,
-              "shareDesc": '好友助力随机减钱，助力越多越省钱'
+              "link": location.href
             });
           } catch (err) {
             console.error(err);
@@ -185,6 +201,12 @@
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
             ts.response = response.data;
+            /*助力发起和助力者title变化*/
+            if(response.data.type == '0'){
+              ts.$emit("doctitle","召集好友助力，最低0元购买商品");
+            }else{
+              ts.$emit("doctitle",response.data.source.nickName+"正在发起助力");
+            }
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);
@@ -206,7 +228,7 @@
         });
       },
       gowxorapp: function () {
-        popup.toast("请去微信或者APP分享");
+        popup.toast("复制地址栏链接在微信中打开或直接打开大V店APP发起助力");
       },
       deltime: function () {
         var ts = this;
@@ -219,16 +241,21 @@
        * */
       shares: function () {
         var that = this;
-        native.custom.share({
+        share.setShareInfo({
           "title": "大V店10.18周年庆 猛点一下帮我0元抢爆品，你抽iPhone8！",
           "desc": '好友助力随机减钱，助力越多越省钱',
           "imgUrl": "//pic.davdian.com/free/20170915_assistance/assistance.png",
           "link": location.href,
-          "shareDesc": '好友助力随机减钱，助力越多越省钱',
           success: function () {
             that.sharecallback();
           }
         })
+      },
+      /***
+       * 给他助力
+       * */
+      assistance:function () {
+
       }
     },
     filters: {
@@ -241,19 +268,20 @@
           oneHour = 60 * 60,
           oneDay = 60 * 60 * 24;
         if (second >= oneDay) {
-          format = `距离结束: ${parseInt(second / oneDay)}天${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+          format = `${parseInt(second / oneDay)}天${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
         } else if (second >= oneHour) {
-          format = `距离结束: ${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+          format = `${parseInt(second % oneDay / oneHour)}小时${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
         } else if (second >= oneMinute) {
-          format = `距离结束: ${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
+          format = `${parseInt(second % oneDay % oneHour / oneMinute)}分${parseInt(second % oneDay % oneHour % oneMinute)}秒`
         } else if (second > 0) {
-          format = `距离结束: ${second}秒`;
+          format = `${second}秒`;
         } else if (second <= 0) {
           format = '已开始';
         }
         return format;
       },
       formatDate(now) {
+        now = new Date(now/1000);
         let year = now.getYear();
         let month = now.getMonth() + 1;
         let date = now.getDate();
@@ -448,6 +476,7 @@
       width: 0.4rem;
       height: 0.4rem;
       border-radius: 0.2rem;
+      overflow: hidden;
       img {
         width: 100%;
       }
@@ -560,7 +589,6 @@
       text-align: left;
       line-height: 0.2rem;
       color: #FFFFFF;
-      text-indent: 0.1rem;
     }
     .friend_desc {
       .swiperItem {

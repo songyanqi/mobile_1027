@@ -38,9 +38,12 @@
           <div class="progress_info" v-html="lis.activityMessage">
           </div>
           <a class="remain_btns">
-            <a class="panic_buying_btn" :href="lis.activityLink" v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>
-            <a class="panic_buying_btn yellows" :href="lis.activityLink" v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>
-            <a class="panic_buying_btn big_1018" href="javascript:void(0)" v-if="lis.activityButton == '10.18当天0元抢'">{{lis.activityButton}}
+            <a class="panic_buying_btn" :href="lis.activityLink"
+               v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>
+            <a class="panic_buying_btn yellows" :href="lis.activityLink"
+               v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>
+            <a class="panic_buying_btn big_1018" href="javascript:void(0)"
+               v-if="lis.activityButton == '10.18当天0元抢'">{{lis.activityButton}}
             </a>
           </a>
         </li>
@@ -70,22 +73,33 @@
   import encrypt from '../../../common/js/module/encrypt.js';
   import popup from '../../../common/js/module/popup.js';
   import login from '../../../common/js/module/login.js';
+
   login.needLogin();
   export default {
-    props: {},
+    props: {
+      response: {
+        type: Object,
+        default: null
+      }
+    },
     data() {
       return {
-        announcement: null,
         helplist: null,
-        rule_form:false
+        announcement: null,
+        rule_form: false
       }
     },
     components: {},
     computed: {},
     created() {
       var that = this;
-      that.getHelpList();
-      that.getAnnouncement();
+      if (that.response) {
+        that.helplist = that.response.goodsInfo;
+        that.announcement = that.response.notice;
+      } else {
+        that.getHelpList();
+        that.getAnnouncement();
+      }
     },
     mounted() {
     },
@@ -104,13 +118,7 @@
           dataType: 'json',
           data: encrypt({}),
           success(response) {
-            /*判断是不是主会场页面如果是将助力列表截取前三个*/
-            let pathname = location.pathname;
-            if(pathname != "/act_1018_assistance.html"){
-              ts.helplist = response.data.slice(0,3);
-            }else{
-              ts.helplist = response.data;
-            }
+            ts.helplist = response.data;
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);
@@ -155,7 +163,7 @@
       check_rule: function () {
         this.rule_form = true;
       },
-      close_what_invite:function () {
+      close_what_invite: function () {
         this.rule_form = false;
       }
     },
@@ -201,11 +209,12 @@
     }
   }
 
-  .remain_btns{
-    a{
+  .remain_btns {
+    a {
       display: block;
     }
   }
+
   .f_l {
     float: left;
   }
@@ -489,6 +498,7 @@
       transform: scale(1);
     }
   }
+
   .com-popup-base {
     position: fixed;
     top: 0;
@@ -500,11 +510,13 @@
     z-index: 9;
     line-height: 1;
   }
+
   .com-popup-base .table-cell {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
   }
+
   .com-popup-base .table-cell .box {
     display: inline-block;
     border-radius: 0.04rem;
@@ -516,8 +528,6 @@
     background-color: #FFFFFF;
     padding: 0 10px 15px;
   }
-
-
 
   .com-popup-base .table-cell .box div:nth-of-type(1) {
     font-size: 14px;

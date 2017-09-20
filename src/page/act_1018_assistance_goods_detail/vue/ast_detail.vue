@@ -55,7 +55,7 @@
   import encrypt from '../../../common/js/module/encrypt.js';
   import popup from '../../../common/js/module/popup.js';
   import ua from '../../../common/js/module/ua.js';
-  import native from '../../../common/js/module/native.js';
+  import share from '../../../common/js/module/share.js';
   // 业务模块
   import vueLazyload from '../../../common/js/module/vueLazyload.js';
 
@@ -87,12 +87,11 @@
           // 设置分享信息
           if (shareInfo) {
             try {
-              native.custom.setShareInfo({
+              share.setShareInfo({
                 "title": ts.shareInfo.title,
                 "desc": ts.shareInfo.desc,
                 "imgUrl": ts.shareInfo.imgUrl,
                 "link": ts.shareInfo.link,
-                "shareDesc": ts.shareInfo.desc,
                 success:function () {
                   that.sharecallback();
                 }
@@ -125,10 +124,14 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId}),
           success(response) {
-            ts.response = response.data;
-            ts.overTimes = response.data.overTime;
-            ts.shareInfo = response.data.shareInfo;
-            ts.deltime();
+            if(response.data){
+              ts.response = response.data;
+              ts.overTimes = response.data.overTime;
+              ts.shareInfo = response.data.shareInfo;
+              ts.deltime();
+            }else{
+              popup.toast("没有该商品");
+            }
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);
@@ -146,12 +149,11 @@
        * */
       shares: function () {
         var that = this;
-        native.custom.share({
+        share.setShareInfo({
           title: that.shareInfo.title,
           desc: that.shareInfo.desc,
           imgUrl: that.shareInfo.imgUrl,
           link: that.shareInfo.link,
-          shareDesc: that.shareInfo.desc,
           success: function () {
               that.sharecallback();
           }
@@ -178,7 +180,7 @@
         });
       },
       gowxapp:function () {
-        popup.toast("请去微信或者APP发起助力");
+        popup.toast("复制地址栏链接在微信中打开或直接打开大V店APP发起助力");
       }
     },
     filters: {
