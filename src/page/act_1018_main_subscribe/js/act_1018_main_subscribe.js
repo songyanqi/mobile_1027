@@ -183,14 +183,18 @@ new Vue({
     /** 我要预约 */
     btnClickSubscribe(goods) {
       let ts = this;
-      if(login.needLogin()){
+      if (login.needLogin()) {
         return;
       }
+      let startTimeDistance = goods.sTime + '000' - Date.now();
+      if (startTimeDistance <= 0) {
+        popup.toast('已经开抢啦，请返回重新进入~');
+      }
       if (ts.isDvdApp) {
-        // if (startTimeDistance > 0 && startTimeDistance < 3 * 60 * 1000) {
-        //   popup.toast('马上开抢啦，请返回重新进入~', 3000);
-        //   return;
-        // }
+        if (startTimeDistance < 3 * 60 * 1000) {
+          popup.toast('马上开抢啦，请返回重新进入~');
+          return;
+        }
         native.Browser.goodsBook({
           goodsId: goods.goodsId,
           goodsTitle: goods.goodsName,
@@ -214,10 +218,10 @@ new Vue({
           }
         });
       } else {
-        // if (parseInt(goods.sTime + '000' - Date.now()) < 3 * 60 * 1000) {
-        //   popup.toast('马上开抢啦，请返回重新进入~', 5000);
-        //   return;
-        // }
+        if (startTimeDistance < 5 * 60 * 1000) {
+          popup.toast('马上开抢啦，请返回重新进入~');
+          return;
+        }
         // 调接口
         ts.subscribe(goods, function (response) {
           if (response.code === 0) {
