@@ -61,7 +61,7 @@
               <div v-if="awd_type == 1" class="awd_tip">明天助力再赢iPhone8吧</div>
                <div v-if="awd_type == 2" class="awd_title">恭喜你被iPhone8砸中了</div>
               <div v-if="awd_type == 2" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
-              <com-scratch-card></com-scratch-card>
+              <com-scratch-card :touchstart="start_awd" :mousedown="start_awd"></com-scratch-card>
             </div>
           </div>
         </span>
@@ -179,7 +179,7 @@
         goodsdata: null,
         visitor_status: null,
         addsupporterPrice: null,
-        awd_type:2
+        awd_type:0
       }
     },
     components: {
@@ -303,6 +303,32 @@
               popup.toast("助力成功");
             } else if (response.data.code == '100') {
               popup.toast("每天只能助力一次哦");
+            }
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+          }
+        });
+      },
+      /***
+       * 刮奖
+       * */
+      start_awd:function (e) {
+        var that =this;
+        $.ajax({
+          cache: false,
+          async: true,
+          url: that.moke + '/api/mg/sale/userhelpbuy/addPrizesLottery?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
+          success(response) {
+            if(!response.code){
+              if(response.data.status == '1'){
+                that.awd_type = 2
+              }else{
+                that.awd_type = 1
+              }
             }
           },
           error(error) {

@@ -40,7 +40,7 @@ new Vue({
       this.title = title;
       document.title= title;
       native.custom.setHead({
-        'title': '邀请好友注册大V店',
+        'title': title,
         'rightBtn': {
           'text': ''
         }
