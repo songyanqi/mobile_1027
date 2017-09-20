@@ -201,7 +201,6 @@ export default {
   },
     created () {
       this.getUrl();
-      console.log("create",Date.now());
         $(window).scroll(() => {
           let topHead = $(".top_h_s_to");
           let scrollTop = $(window).scrollTop();
@@ -563,7 +562,6 @@ export default {
         data: dataObj,
         dataType: 'JSON',
         success(res) {
-          console.log("success",Date.now());
           that.loadBefore = false;
 
           //清空，不然有串商品会一直添加
