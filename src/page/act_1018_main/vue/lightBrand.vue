@@ -44,13 +44,13 @@
 
           <div class="list_need">还需<span v-text="need[index]"></span>人点亮</div>
 
-          <div class="list_button" v-if="lightArr[index]!=1" @click.stop="light(item.bandId,index)">
+          <div class="list_button" :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" v-if="lightArr[index]!=1" @click.stop="light(item.bandId,index)">
             <div class="btn" >
               <img src="//pic.davdian.com/free/2017/09/09/Group.png" alt="">
             </div>
           </div>
 
-          <div class="list_button" v-if="lightArr[index]==1" :style="{'border':'1px solid #FF4A7D'}">
+          <div class="list_button" :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" v-if="lightArr[index]==1" :style="{'border':'1px solid #FF4A7D'}">
             <div class="btn">
               <img src="//pic.davdian.com/free/2017/09/09/Group2.png" alt="">
             </div>
@@ -81,7 +81,8 @@
       return {
         lightArr:this.returnLight(),
         need:this.returnCount(),
-        isApp:util.utils.isApp()
+        isApp:util.utils.isApp(),
+        animateArr:[]
       }
     },
     computed:{
@@ -122,6 +123,10 @@
         Vue.set(this.need,index,this.need[index]-1);
         //变异方法
       },
+      changeAnimateFn(index){
+        Vue.set(this.animateArr,index,1);
+        //变异方法
+      },
       light(bandId,index){
         var that=this;
         var obj={
@@ -133,6 +138,7 @@
               if(result.data.success==1){
                 that.changeIsLighted(index);
                 that.changeNeedCount(index);
+                that.changeAnimateFn(index);
               }else{
                 if(result.data.msg){
                   dialog.alert('code:'+result.code+":msg"+result.data.msg);
@@ -167,7 +173,9 @@
 
   }
 </script>
+
 <style scoped>
+  @import "../css/animate.scss";
   body{
     background: #F1F1F1;
   }
