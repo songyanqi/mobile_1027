@@ -20,7 +20,7 @@
     <div class="g-goods-wrapper" v-if="list">
       <ul>
         <li v-for="(item, i) in list[tabIndex].goodsList" v-if="i < 3" @click="goodsClick(item.goodsId)">
-          <img class="pic" :src="item.imgUrl">
+          <img class="pic" v-lazy="item.imgUrl">
           <div class="price">
             <div class="act">抢购价:￥{{item.actPrice}}</div>
             <div class="origin">原价：￥{{item.originPrice}}</div>

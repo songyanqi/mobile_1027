@@ -56,9 +56,10 @@
   import popup from '../../../common/js/module/popup.js';
   import ua from '../../../common/js/module/ua.js';
   import share from '../../../common/js/module/share.js';
+  import login from '../../../common/js/module/login.js';
+  login.needLogin();
   // 业务模块
   import vueLazyload from '../../../common/js/module/vueLazyload.js';
-
   vueLazyload.init(true);
   export default {
     props: {},
@@ -85,7 +86,7 @@
         this.$nextTick(function () {
           let ts = this;
           // 设置分享信息
-          if (shareInfo) {
+          if (ts.shareInfo) {
             try {
               share.setShareInfo({
                 "title": ts.shareInfo.title,

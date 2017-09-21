@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="banner">
-      <div class="big_img"><img src="//pic.davdian.com/free/2017/09/09/banner.png" alt=""></div>
+      <div class="big_img"><img v-lazy="'//pic.davdian.com/free/2017/09/09/banner.png'"></div>
       <div class="banner_title">2017最受欢迎的TOP品牌</div>
       <div class="banner_name">点亮品牌 10.18 优惠由你定</div>
       <div class="banner_rute"></div>
@@ -14,14 +14,14 @@
     <div class="all_list">
       <div class="list" v-for="(item,index) in response">
         <div class="list_b_img" @click.stop="go_detail(item.linkUrl)">
-          <img :src="item.bandPic" alt="">
+          <img v-lazy="item.bandPic">
         </div>
 
         <div class="list_bottom" v-if="item.hotDay==-1">
 
           <template v-if="item.isCompleted!=1">
             <div class="list_start">
-              <img class="start" src="//pic.davdian.com/free/2017/09/09/start_icon.png" alt="">
+              <img class="start" v-lazy="'//pic.davdian.com/free/2017/09/09/start_icon.png'">
               <span class="start_value" v-text="item.lowDiscount"></span>
             </div>
             <div class="line"></div>
@@ -30,7 +30,7 @@
           <template v-if="item.isCompleted==1">
             <div class="success">
               <div style="position: absolute;">
-                <img src="//pic.davdian.com/free/2017/09/09/com.png" alt="">
+                <img v-lazy="'//pic.davdian.com/free/2017/09/09/com.png'">
               </div>
               <div class="text">目标达成</div>
             </div>
@@ -38,7 +38,7 @@
           </template>
 
           <div class="list_end">
-            <img class="start2" src="//pic.davdian.com/free/2017/09/09/end_icon.png" alt="">
+            <img class="start2" v-lazy="'//pic.davdian.com/free/2017/09/09/end_icon.png'">
             <span class="start_value2" v-text="item.highDiscount"></span>
           </div>
 
@@ -48,7 +48,7 @@
             <div class="list_border"></div>
             <div class="list_button">
               <div class="btn" >
-                <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" src="//pic.davdian.com/free/2017/09/19/gray.png" alt=""></span>
+                <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" v-lazy="'//pic.davdian.com/free/2017/09/19/gray.png'"></span>
                 <span class="gray">我要点亮</span>
               </div>
             </div>
@@ -57,7 +57,7 @@
             <div class="list_border" :style="{'border':'0.5px solid #FF4A7D'}"></div>
             <div class="list_button">
               <div class="btn">
-                <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" src="//pic.davdian.com/free/2017/09/20/red.png" alt=""></span>
+                <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" v-lazy="'//pic.davdian.com/free/2017/09/20/red.png'"></span>
                 <span class="red">我已点亮</span>
               </div>
             </div>
@@ -67,7 +67,7 @@
 
         <div class="list_bottom_complete" v-if="item.hotDay==1">
           <div class="list_end_complete">
-            <img class="start2" src="//pic.davdian.com/free/2017/09/09/end_icon.png" alt="">
+            <img class="start2" v-lazy="'//pic.davdian.com/free/2017/09/09/end_icon.png'">
             <span class="start_value2" v-text="item.finalDiscount"></span>
           </div>
         </div>

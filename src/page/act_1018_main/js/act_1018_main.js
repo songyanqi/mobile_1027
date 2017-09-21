@@ -152,7 +152,7 @@ new Vue({
       $.ajax({
         cache: false,
         async: true,
-        url: '/api/mg/sale/theThirdYears/index?_=' + Date.now(),
+        url: '/api/mg/sale/thethirdyears/index?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
         data: encrypt({

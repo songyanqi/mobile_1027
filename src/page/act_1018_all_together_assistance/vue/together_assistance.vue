@@ -51,8 +51,8 @@
         <span v-if="addsupporterPrice">
           <div class="ast_bigtxt">本次助力帮TA省了<span style="font-size:0.24rem">{{supporterData.supporterPrice}}</span>元</div>
           <div class="ast_bigtxt"
-               style="padding-top:0.1rem;">TA共得到好友{{+response.source.supporterPrice + supporterData.supporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
-          <div class="ast_txt" style="padding-top:0.1rem;">别忘啦，明天还可以帮好友助力哦</div>
+               style="padding-top:0.1rem;">TA共得到好友{{supporterData.surplusPrice}}元助力<span v-if="response.source.rate">，战胜了{{response.source.rate}}%的人</span></div>
+          <div class="ast_txt" style="padding:0.1rem 0 0.2rem;">别忘啦，明天还可以帮好友助力哦</div>
           <div class="awd_touch">
             <div :class="['awd_pre','awd_no','awd_yes'][awd_type]">
               <div v-if="awd_type == 0" class="awd_title"></div>
@@ -75,12 +75,12 @@
           <span v-else>
            <!--获得0元购机会-->
             <span v-if="response.source.surplusPrice == '0'">
-              <div class="ast_bigtxt">TA已得到好友<span style="font-size:0.24rem">{{response.source.supporterPrice}}</span>元助力，<br>战胜{{response.source.rate}}%的人</div>
+              <div class="ast_bigtxt">TA已得到好友<span style="font-size:0.24rem">{{response.source.supporterPrice}}</span>元助力<span v-if="response.source.rate">，<br>战胜{{response.source.rate}}%的人</span></div>
               <div class="ast_txt" style="padding-top:0.1rem;">获得10.18当天0元抢购的机会</div>
             </span>
             <span v-else>
               <div class="ast_bigtxt" style="padding-top:0.34rem;">TA已得到好友<span
-                style="font-size: 0.24rem;">{{response.supporter.supporterPrice}}</span>元助力，战胜了{{response.supporter.rate}}%的人</div>
+                style="font-size: 0.24rem;">{{response.supporter.supporterPrice}}</span>元助力<span v-if="response.supporter.rate">，战胜了{{response.supporter.rate}}%的人</span></div>
               <div class="ast_txt" style="padding: 0.1rem 0 0.04rem;">帮TA再接再厉赢得商品0元购 ！</div>
               <div class="share_btn bd_r" @click="assistance">给TA助力  我赢iPhone8</div>
               <div class="ast_txt" style="font-size: 0.1rem;line-height: 0.14rem;padding-top: 0.06rem;">助力后即刻抽奖</div>
@@ -93,7 +93,7 @@
         <!--获得0元购机会-->
         <span v-if="response.source.surplusPrice == '0'">
             <div class="ast_deep">恭喜你获得10.18当天0元抢购的机会</div>
-            <div class="ast_bigtxt">得到好友的{{response.source.supporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
+            <div class="ast_bigtxt">得到好友的{{response.source.supporterPrice}}元助力<span v-if="response.source.rate">，战胜了{{response.source.rate}}%的人</span></div>
             <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10月18日开抢 数量有限 先到先得!</div>
         </span>
         <!--没有获得0元购机会-->
@@ -108,7 +108,7 @@
           <!--已经得到好友的助力-->
         <span v-else>
           <div class="ast_bigtxt"
-               style="padding-top:0.34rem;">得到好友的{{response.source.supporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
+               style="padding-top:0.34rem;">得到好友的{{response.source.supporterPrice}}元助力<span v-if="response.source.rate">，战胜了{{response.source.rate}}%的人</span></div>
           <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10.18当天购买只需{{response.source.surplusPrice}}元，继续召集好友助力得0元抢购，加油吧！</div>
           <div v-if="isApp" class="share_btn bd_r">喊人助力</div>
           <div v-if="isWx" class="share_btn bd_r">点击右上角“···”按钮分享</div>
@@ -163,7 +163,6 @@
   import share from '../../../common/js/module/share.js';
   import {Swiper, SwiperItem} from 'vux'
   import login from '../../../common/js/module/login.js';
-
   login.needLogin();
   export default {
     props: {},
