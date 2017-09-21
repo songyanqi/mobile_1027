@@ -95,7 +95,7 @@
                 "imgUrl": ts.shareInfo.imgUrl,
                 "link": ts.shareInfo.link,
                 success:function () {
-                  that.sharecallback();
+                  ts.sharecallback();
                 }
               });
             } catch (err) {

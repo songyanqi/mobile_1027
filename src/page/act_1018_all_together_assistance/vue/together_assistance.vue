@@ -201,7 +201,10 @@
               "title": "大V店10.18周年庆 猛点一下帮我0元抢爆品，你抽iPhone8！",
               "desc": '好友助力随机减钱，助力越多越省钱',
               "imgUrl": "http://pic.davdian.com/free/20170915_assistance/assistance.png",
-              "link": location.href
+              "link": location.href,
+              success:function () {
+                ts.sharecallback();
+              }
             });
           } catch (err) {
             console.error(err);
@@ -332,7 +335,27 @@
             }
           });
         }
-      }
+      },
+      /***
+       * 记录分享回调
+       * */
+      sharecallback: function () {
+        var that = this;
+        $.ajax({
+          cache: false,
+          async: true,
+          url: this.moke + '/api/mg/sale/userhelpbuy/userShareGoods?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: encrypt({goodsId: that.goodsId}),
+          success() {
+
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+          }
+        });
+      },
     },
     filters: {
       /***
