@@ -104,10 +104,10 @@ new Vue({
         });
 
         // 开启10.18弹窗
-        setTimeout(function () {
-          ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
-        }, 3000);
-        // ts.isShowBeginPop = 1;
+        // setTimeout(function () {
+        //   ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
+        // }, 3000);
+        ts.isShowBeginPop = 1;
 
         // 我的10.18弹窗
         setTimeout(function () {

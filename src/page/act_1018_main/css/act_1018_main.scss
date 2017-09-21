@@ -80,6 +80,7 @@
     background: rgba(0, 0, 0, 0.7);
     background-size: ptr(319);
     z-index: 6;
+    /* 弹窗出现 */
     @keyframes begin-pop-pic-animation {
       0% {
         transform: scale(0);
@@ -100,6 +101,7 @@
       left: ptr(30);
       width: ptr(319);
       animation: begin-pop-pic-animation 1s;
+      /* 弹窗收起 */
       @keyframes begin-pop-pic-close-animation {
         0% {
           opacity: 1;
@@ -116,7 +118,7 @@
         }
         100% {
           opacity: 0;
-          transform: scale(0.1) translate(ptr(2250), ptr(-450));
+          transform: scale(0.1) translate(ptr(1750), ptr(-450));
         }
       }
       &.close {
@@ -131,6 +133,7 @@
       height: ptr(50);
     }
   }
+  /* 我的出现 */
   @keyframes g-my-1018-animation {
     0% {
       transform: translateX(ptr(350));

@@ -236,7 +236,7 @@ new Vue({
         ts.subscribe(goods, function (response) {
           if (response.code === 0) {
             if (ua.isWeiXin()) {
-              popup.toast('将在活动开始前5分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
+              popup.toast('将在活动开始前15分钟进行提醒 可在“我的10.18”中查看已预约的商品', 3000);
             } else {
               ts.tipType = 'web-focus';
             }
