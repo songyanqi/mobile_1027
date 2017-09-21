@@ -44,17 +44,22 @@
 
           <div class="list_need">还需<span v-text="need[index]"></span>人点亮</div>
 
-          <div class="list_button" v-if="lightArr[index]!=1" @click.stop="light(item.bandId,index)">
-            <div class="btn" >
-              <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" class="light_icon" src="//pic.davdian.com/free/2017/09/19/gray.png" alt=""></span>
-              <span class="gray">我要点亮</span>
+          <div class="list_margin" v-if="lightArr[index]!=1" @click.stop="light(item.bandId,index,$event)">
+            <div class="list_border"></div>
+            <div class="list_button">
+              <div class="btn" >
+                <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" src="//pic.davdian.com/free/2017/09/19/gray.png" alt=""></span>
+                <span class="gray">我要点亮</span>
+              </div>
             </div>
           </div>
-
-          <div class="list_button" v-if="lightArr[index]==1" :style="{'border':'1px solid #FF4A7D'}">
-            <div class="btn">
-              <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" src="//pic.davdian.com/free/2017/09/20/red.png" alt=""></span>
-              <span class="red">我已点亮</span>
+          <div class="list_margin" v-if="lightArr[index]==1">
+            <div class="list_border" :style="{'border':'0.5px solid #FF4A7D'}"></div>
+            <div class="list_button">
+              <div class="btn">
+                <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" src="//pic.davdian.com/free/2017/09/20/red.png" alt=""></span>
+                <span class="red">我已点亮</span>
+              </div>
             </div>
           </div>
 
@@ -84,7 +89,8 @@
         lightArr:this.returnLight(),
         need:this.returnCount(),
         isApp:util.utils.isApp(),
-        animateArr:[]
+        animateArr:[],
+        isLighted:[]
       }
     },
     computed:{
@@ -122,7 +128,9 @@
         //变异方法
       },
       changeNeedCount(index){
-        Vue.set(this.need,index,this.need[index]-1);
+        if(this.need[index]>0){
+          Vue.set(this.need,index,this.need[index]-1);
+        }
         //变异方法
       },
       changeAnimateFn(index){
@@ -383,10 +391,26 @@
   .list_button{
     width: 1.52rem;
     height: 0.28rem;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  .list_border{
+    width: 3.04rem;
+    height: 0.56rem;
+    position: absolute;
     border: 1px solid #DDDDDD;
-    border-radius:100px;
+    border-radius:200px;
+    top: -0.14rem;
+    left: -0.76rem;
+    transform: scale(0.5);
+  }
+  .list_margin{
+    width: 1.52rem;
+    height: 0.28rem;
     margin-left: 0.1rem;
     margin-top: 0.15rem;
+    position: relative;
   }
   .btn{
     height: 100%;
