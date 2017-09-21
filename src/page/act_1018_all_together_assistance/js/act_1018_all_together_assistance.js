@@ -22,7 +22,7 @@ new Vue({
   data() {
     return {
       response: null,
-      title:"召集好友助力，最低0元购买商品"
+      titles:""
     }
   },
   computed: {},
@@ -37,7 +37,8 @@ new Vue({
   },
   methods: {
     doc_title:function (title) {
-      this.title = title;
+      var that = this;
+      that.titles = title;
       document.title= title;
       native.custom.setHead({
         'title': title,

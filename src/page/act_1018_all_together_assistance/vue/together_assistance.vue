@@ -48,10 +48,10 @@
       <!--助力者页面按钮信息-->
       <span v-if="response.type == '1'">
         <!--展示抽奖-->
-        <span v-if="!addsupporterPrice">
-          <div class="ast_bigtxt">本次助力帮TA省了<span style="font-size:0.24rem">{{addsupporterPrice}}</span>元</div>
+        <span v-if="addsupporterPrice">
+          <div class="ast_bigtxt">本次助力帮TA省了<span style="font-size:0.24rem">{{supporterData.supporterPrice}}</span>元</div>
           <div class="ast_bigtxt"
-               style="padding-top:0.1rem;">TA共得到好友{{+response.source.supporterPrice + addsupporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
+               style="padding-top:0.1rem;">TA共得到好友{{+response.source.supporterPrice + supporterData.supporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
           <div class="ast_txt" style="padding-top:0.1rem;">别忘啦，明天还可以帮好友助力哦</div>
           <div class="awd_touch">
             <div :class="['awd_pre','awd_no','awd_yes'][awd_type]">
@@ -61,7 +61,7 @@
               <div v-if="awd_type == 1" class="awd_tip">明天助力再赢iPhone8吧</div>
                <div v-if="awd_type == 2" class="awd_title">恭喜你被iPhone8砸中了</div>
               <div v-if="awd_type == 2" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
-              <com-scratch-card :touchstart="start_awd" :mousedown="start_awd"></com-scratch-card>
+              <com-scratch-card @touchstart="start_awd" @mousedown="start_awd"></com-scratch-card>
             </div>
           </div>
         </span>
@@ -179,7 +179,9 @@
         goodsdata: null,
         visitor_status: null,
         addsupporterPrice: null,
-        awd_type:0
+        supporterData:null, //助力结果数据
+        awd_type:0,
+        start_awd_al:false //是否已经刮奖过
       }
     },
     components: {
@@ -235,7 +237,7 @@
             if (response.data.type == '0') {
               ts.$emit("doctitle", "召集好友助力，最低0元购买商品");
             } else {
-              ts.$emit("doctitle", response.data.source.nickName + "正在发起助力");
+              ts.$emit("doctitle", response.data.supporter.nickName + "正在发起助力");
             }
           },
           error(error) {
@@ -301,6 +303,8 @@
           success(response) {
             if (response.data.code == '200') {
               popup.toast("助力成功");
+              that.addsupporterPrice = true;
+              that.supporterData = response.data;
             } else if (response.data.code == '100') {
               popup.toast("每天只能助力一次哦");
             }
@@ -313,28 +317,31 @@
       /***
        * 刮奖
        * */
-      start_awd:function (e) {
+      start_awd:function () {
         var that =this;
-        $.ajax({
-          cache: false,
-          async: true,
-          url: that.moke + '/api/mg/sale/userhelpbuy/addPrizesLottery?_=' + Date.now(),
-          type: 'post',
-          dataType: 'json',
-          data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
-          success(response) {
-            if(!response.code){
-              if(response.data.status == '1'){
-                that.awd_type = 2
-              }else{
-                that.awd_type = 1
+        if(!that.start_awd_al){
+          that.start_awd_al = true;
+          $.ajax({
+            cache: false,
+            async: true,
+            url: that.moke + '/api/mg/sale/userhelpbuy/addPrizesLottery?_=' + Date.now(),
+            type: 'post',
+            dataType: 'json',
+            data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
+            success(response) {
+              if(!response.code){
+                if(response.data.status == '1'){
+                  that.awd_type = 2
+                }else{
+                  that.awd_type = 1
+                }
               }
+            },
+            error(error) {
+              console.error('ajax error:' + error.status + ' ' + error.statusText);
             }
-          },
-          error(error) {
-            console.error('ajax error:' + error.status + ' ' + error.statusText);
-          }
-        });
+          });
+        }
       }
     },
     filters: {
@@ -759,6 +766,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     overflow: hidden;
+    padding-bottom: 0.2rem;
     >div{
       width:2.95rem;
       height: 0.66rem;
