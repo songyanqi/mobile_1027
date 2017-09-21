@@ -10,6 +10,9 @@
   <!--标题-->
   <com-top-title title="我的10.18心愿单" home></com-top-title>
 
+  <!--标题栏占位-->
+  <div class="g-top-placeholder"></div>
+
   <!--个人信息-->
   <div class="g-info">
     <template v-if="response && response.data.header" style="display: none;" :style="{display: response && response.data.header ? null : 'none'}">

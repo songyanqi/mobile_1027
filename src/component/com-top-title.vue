@@ -1,6 +1,6 @@
 <template>
   <!--顶部标题-->
-  <div class="com-top-title" :class="classObject" v-if="!isDvdApp" :style="styleObject">
+  <div class="com-top-title" :class="classObject" v-if="!isDvdApp" :style="styleObject" ref="comTopTitle">
     <div class="back-btn" @click="back">
       <i class="back-arrow"></i>
     </div>
@@ -69,6 +69,10 @@
         if (!this.hideDisable) {
           this.setAutoAnimation();
         }
+
+        if (ua.isIos()) {
+          this.iosDownPull();
+        }
       }
     },
     methods: {
@@ -95,6 +99,7 @@
         let upOutSwitcher = true;
         window.addEventListener('scroll', function () {
           let y = document.body.scrollTop;
+
           // 页面向下滚动
           if (y - lastY > 0) {
             // 滚动距离大于topbar高度
@@ -102,22 +107,33 @@
               // top-title向上滑出
               ts.classObject['animate-show'] = false;
               ts.classObject['animate-hide'] = true;
-              upOutSwitcher = false;
-              setTimeout(function () {
-                upOutSwitcher = true;
-              }, 500);
+//              upOutSwitcher = false;
+//              setTimeout(function () {
+//                upOutSwitcher = true;
+//              }, 500);
             }
             // 页面向上滚动
           } else if (downInSwitcher && y - lastY < -0) {
             // top-title向下滑入
             ts.classObject['animate-show'] = true;
             ts.classObject['animate-hide'] = false;
-            downInSwitcher = false;
-            setTimeout(function () {
-              downInSwitcher = true;
-            }, 500);
+//            downInSwitcher = false;
+//            setTimeout(function () {
+//              downInSwitcher = true;
+//            }, 500);
           }
           lastY = document.body.scrollTop;
+        }, false);
+      },
+      iosDownPull() {
+        let ts = this;
+        window.addEventListener('scroll', function () {
+          let y = document.body.scrollTop;
+          if (y < 0) {
+            ts.$refs.comTopTitle.style.position = 'absolute';
+          } else {
+            ts.$refs.comTopTitle.style.position = 'fixed';
+          }
         }, false);
       }
     },

@@ -15,12 +15,17 @@
   min-height: ptr(600);
 
   // 特殊
-  margin-top: 44px;
+  //margin-top: 44px;
   padding-top: 0 !important;
   background-position: 0 0 !important;
 
   .com-top-title {
     z-index: 2;
+  }
+
+  .g-top-placeholder {
+    height: 44px;
+    background: #FF6288;
   }
 
   /*个人信息*/
