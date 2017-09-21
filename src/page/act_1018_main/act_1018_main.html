@@ -17,19 +17,21 @@
            :style="{'background-image': topics[0].content ? 'url('+topics[0].content.headPic+')' : 'url(//pic.davdian.com/activity/2017/09/18/750_630_ffedafe358bdbc4ce22f226adbb1c027.png)'}">
         <!--gif-->
         <template v-if="ua.isAndroid() || ua.isIos() && ua.compareVersion('10.0.0', '10') < 0 || topics[0].content && !topics[0].content.headVideo">
-          <img class="gif" :src="topics[0].content && topics[0].content.headGif">
+          <img class="gif" :src="topics[0].content && topics[0].content.headGif" v-if="topics[0].content && topics[0].content.headGif">
         </template>
         <!--视频-->
         <template v-else>
           <video autoplay loop :poster="topics[0].content && topics[0].content.headPic"
                  webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5"
-                 x5-video-player-fullscreen="false" style="object-fit: fill;">
+                 x5-video-player-fullscreen="false" style="object-fit: fill;"
+                 v-if="topics[0].content && topics[0].content.headVideo">
             <source :src="topics[0].content && topics[0].content.headVideo" type="video/mp4"/>
           </video>
         </template>
 
         <!--倒计时-->
-        <div class="count-down" style="display: none;" :style="{display: response ? null : 'none'}">
+        <div class="count-down" style="display: none;"
+             :style="{display: response ? null : 'none', top: topics[0].content.top || null, left: topics[0].content.left || null}">
           <div class="title">活动开始倒计时</div>
           <div class="boxes">
             <span class="box">
@@ -59,8 +61,10 @@
 
       <!--活动开启弹窗-->
       <div class="g-begin-pop" @touchmove.prevent @mousewheel.prevent style="display: none;" :style="{display: isShowBeginPop ? null : 'none'}">
-        <img class="pic" src="[[static]]/page/act_1018_main/img/game-begin.png" :class="{close: isShowBeginPopCloseAnimation}">
-        <div class="btn" @click="closeBeginPop"></div>
+        <div class="box">
+          <img class="pic" src="[[static]]/page/act_1018_main/img/game-begin.png" :class="{close: isShowBeginPopCloseAnimation}">
+          <div class="btn" @click="closeBeginPop"></div>
+        </div>
       </div>
 
       <!--我的1018-->

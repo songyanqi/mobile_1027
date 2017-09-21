@@ -39,11 +39,11 @@ new Vue({
       response: null,
       topics: [
         // 头图
-        {id: '14376', content: null},
+        {id: param.get('t1') || '14376', content: null},
         // 上方专题
-        {id: '14377', content: null},
+        {id: param.get('t2') || '14377', content: null},
         // 下方专题
-        {id: '14378', content: null}
+        {id: param.get('t3') || '14378', content: null}
       ],
       actBeginTime: new Date(2017, 10, 18),
       countDown: date.getCountDown(new Date(2017, 10, 18)),
@@ -197,7 +197,7 @@ new Vue({
           dataType: 'text',
           data: {},
           success(response) {
-            if (topic.id == '14376') {
+            if (topic.id == param.get('t1') || '14376') {
               response = JSON.parse(response);
             }
             topic.content = response;
