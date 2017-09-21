@@ -11,14 +11,14 @@
     <div class="rool_tip">
       <div class="marguee">
         <div class="marguee_innder">
-          <p v-for="pr in announcement">{{pr.message}}</p>
+          <p v-for="pr in response.notice">{{pr.message}}</p>
         </div>
       </div>
     </div>
     <!--助力商品-->
     <div>
       <ul>
-        <li v-for="lis in helplist" class="list_style online">
+        <li v-for="lis in response.goodsInfo" class="list_style online">
           <a :href="lis.activityLink">
             <div class="img_container">
               <div class="img_container_inner">
@@ -38,12 +38,9 @@
           <div class="progress_info" v-html="lis.activityMessage">
           </div>
           <a class="remain_btns">
-            <a class="panic_buying_btn" :href="lis.activityLink"
-               v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>
-            <a class="panic_buying_btn yellows" :href="lis.activityLink"
-               v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>
-            <a class="panic_buying_btn big_1018" href="javascript:void(0)"
-               v-if="lis.activityButton == '10.18当天0元抢'">{{lis.activityButton}}
+            <a class="panic_buying_btn" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>
+            <a class="panic_buying_btn yellows" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>
+            <a class="panic_buying_btn big_1018" href="javascript:void(0)" v-if="lis.activityButton == '10.18当天0元抢'">{{lis.activityButton}}
             </a>
           </a>
         </li>
@@ -70,93 +67,27 @@
   </div>
 </template>
 <script>
-  import encrypt from '../../../common/js/module/encrypt.js';
-  import popup from '../../../common/js/module/popup.js';
   import login from '../../../common/js/module/login.js';
-
-  login.needLogin();
   export default {
     props: {
-      response: {
-        type: Object,
-        default: null
-      }
+        response: {
+          type: Object,
+          default: null
+        }
     },
     data() {
       return {
-        helplist: null,
-        announcement: null,
         rule_form: false
       }
     },
     components: {},
     computed: {},
     created() {
-      var that = this;
-      if (that.response) {
-        that.helplist = that.response.goodsInfo;
-        that.announcement = that.response.notice;
-      } else {
-        that.getHelpList();
-        that.getAnnouncement();
-      }
     },
     mounted() {
+
     },
     methods: {
-      /**
-       * 接口名称:获取助力列表
-       * 接口文档:
-       */
-      getHelpList() {
-        let ts = this;
-        $.ajax({
-          cache: false,
-          async: true,
-          url: '/api/mg/sale/userhelpbuy/getHelpList?_=' + Date.now(),
-          type: 'post',
-          dataType: 'json',
-          data: encrypt({}),
-          success(response) {
-            ts.helplist = response.data;
-          },
-          error(error) {
-            console.error('ajax error:' + error.status + ' ' + error.statusText);
-          }
-        });
-      },
-      /**
-       * 接口名称:获取公告列表
-       * 接口文档:
-       */
-      getAnnouncement() {
-        let ts = this;
-        $.ajax({
-          cache: false,
-          async: true,
-          url: '/api/mg/sale/userhelpbuy/getAnnouncement?_=' + Date.now(),
-          type: 'post',
-          dataType: 'json',
-          data: encrypt({}),
-          success(response) {
-            /*如果公告条数小于100，为了让css动画保持一致，将条数补充为100条*/
-            if (response.data.length < 100) {
-              let announcementData = [];
-              announcementData = response.data;
-              let nums = 100 - response.data.length;
-              for (var i = 0; i < nums; i++) {
-                announcementData.push(response.data[i])
-              }
-              ts.announcement = announcementData;
-            } else {
-              ts.announcement = response.data;
-            }
-          },
-          error(error) {
-            console.error('ajax error:' + error.status + ' ' + error.statusText);
-          }
-        });
-      },
       /***
        * 查看规则
        */
@@ -165,6 +96,10 @@
       },
       close_what_invite: function () {
         this.rule_form = false;
+      },
+      activebtn:function (url) {
+        login.needLogin();
+        location.href = url;
       }
     },
     filters: {},
