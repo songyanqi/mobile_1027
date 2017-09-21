@@ -35,9 +35,13 @@
           <div class="list_need" v-if="item.isCompleted==1">已有<span v-text="item.lightNum"></span>人点亮</div>
 
 
-          <div class="list_button">
-            <div class="btn">
-              <img src="//pic.davdian.com/free/2017/09/20/red.png" alt="">
+          <div class="list_margin">
+            <div class="list_border" :style="{'border':'0.5px solid #FF4A7D'}"></div>
+            <div class="list_button">
+              <div class="btn">
+                <span><img src="//pic.davdian.com/free/2017/09/20/red.png" alt=""></span>
+                <span class="red">我已点亮</span>
+              </div>
             </div>
           </div>
 
@@ -341,19 +345,45 @@
   .list_button{
     width: 1.52rem;
     height: 0.28rem;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  .list_border{
+    width: 3.04rem;
+    height: 0.56rem;
+    position: absolute;
     border: 1px solid #DDDDDD;
-    border-radius:100px;
+    border-radius:200px;
+    top: -0.14rem;
+    left: -0.76rem;
+    transform: scale(0.5);
+  }
+  .list_margin{
+    width: 1.52rem;
+    height: 0.28rem;
     margin-left: 0.1rem;
     margin-top: 0.15rem;
+    position: relative;
   }
   .btn{
-    width: 0.72rem;
-    height: 0.18rem;
-    margin-top: 0.05rem;
+    height: 100%;
     margin-left: 0.4rem;
   }
   .btn img{
-    width: 0.72rem;
+    width: 0.18rem;
     height: 0.18rem;
+    margin-top: 0.05rem;
+    margin-right: 0.06rem;
+  }
+  .btn>span{
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    line-height: 0.28rem;
+  }
+  .red{
+    color:#FF4A7D;
+    font-size: 12px;
   }
 </style>

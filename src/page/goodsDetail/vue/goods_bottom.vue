@@ -221,7 +221,7 @@
                 </div>
                 <div class="sku-control">
                 <!-- <div class="sku-control" :class = "{ singleSkuControl: !relativegoodslist.length && !goodstags.length }"> -->
-                    <div class = "clearfix" style = "margin-top: 15px;" v-if = "relativegoodslist.length">
+                    <div class = "clearfix s-title-cont" v-if = "relativegoodslist.length">
                       <div class="s-decision_title">相关商品</div>
                       <div class="relative_items b_relative_items"
                            @click = "handleRelativeGoods(item, relativegoodslist, $event)"

@@ -38,7 +38,7 @@ const GoodsBottom = {
           //弹框是否是点击立即购买跳出来的
           isBuyModal: false,
           allPrice: 0,
-          modalHeight: `${window.innerHeight * 0.65}px`
+          modalHeight: `${window.innerHeight * 0.65}px`,
         }
     },
     created () {
@@ -61,6 +61,11 @@ const GoodsBottom = {
             offsetH = 70;
           } else {
             offsetH = 50;
+          }
+          if (!this.relativegoodslist.length && !this.goodstags.length) {
+            this.modalHeight = `${window.innerHeight * 0.4}px`
+          } else {
+            this.modalHeight = `${window.innerHeight * 0.65}px`
           }
           // 当所有dom都渲染完后执行
           this.$nextTick(function () {
