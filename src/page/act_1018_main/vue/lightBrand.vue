@@ -46,13 +46,15 @@
 
           <div class="list_button" v-if="lightArr[index]!=1" @click.stop="light(item.bandId,index)">
             <div class="btn" >
-              <img src="//pic.davdian.com/free/2017/09/09/Group.png" alt="">
+              <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" class="light_icon" src="//pic.davdian.com/free/2017/09/19/gray.png" alt=""></span>
+              <span class="gray">我要点亮</span>
             </div>
           </div>
 
-          <div class="list_button" v-if="lightArr[index]==1">
+          <div class="list_button" v-if="lightArr[index]==1" :style="{'border':'1px solid #FF4A7D'}">
             <div class="btn">
-              <img src="//pic.davdian.com/free/2017/09/09/Group2.png" alt="">
+              <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" src="//pic.davdian.com/free/2017/09/20/red.png" alt=""></span>
+              <span class="red">我已点亮</span>
             </div>
           </div>
 
@@ -81,7 +83,8 @@
       return {
         lightArr:this.returnLight(),
         need:this.returnCount(),
-        isApp:util.utils.isApp()
+        isApp:util.utils.isApp(),
+        animateArr:[]
       }
     },
     computed:{
@@ -122,6 +125,10 @@
         Vue.set(this.need,index,this.need[index]-1);
         //变异方法
       },
+      changeAnimateFn(index){
+        Vue.set(this.animateArr,index,1);
+        //变异方法
+      },
       light(bandId,index){
         var that=this;
         var obj={
@@ -131,8 +138,13 @@
           .then(function (result) {
             if(result.code==0){
               if(result.data.success==1){
-                that.changeIsLighted(index);
-                that.changeNeedCount(index);
+                that.changeAnimateFn(index);
+                setTimeout(function(){
+                  that.changeIsLighted(index);
+                },100);
+                setTimeout(function(){
+                  that.changeNeedCount(index);
+                },600);
               }else{
                 if(result.data.msg){
                   dialog.alert('code:'+result.code+":msg"+result.data.msg);
@@ -141,10 +153,18 @@
                 }
               }
             }else{
-              if(result.data.msg){
-                dialog.alert('code:'+result.code+":msg"+result.data.msg);
+              if(result.code==30000){
+                if (that.isApp){
+                  native.Account.login()
+                }else {
+                  window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
+                }
               }else{
-                dialog.alert('code:'+result.code);
+                if(result.data.msg){
+                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                }else{
+                  dialog.alert('code:'+result.code);
+                }
               }
             }
           })
@@ -159,7 +179,9 @@
 
   }
 </script>
+
 <style scoped>
+  @import "../css/animate.scss";
   body{
     background: #F1F1F1;
   }
@@ -367,13 +389,27 @@
     margin-top: 0.15rem;
   }
   .btn{
-    width: 0.72rem;
-    height: 0.18rem;
-    margin-top: 0.05rem;
+    height: 100%;
     margin-left: 0.4rem;
   }
   .btn img{
-    width: 0.72rem;
+    width: 0.18rem;
     height: 0.18rem;
+    margin-top: 0.05rem;
+    margin-right: 0.06rem;
+  }
+  .btn>span{
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    line-height: 0.28rem;
+  }
+  .gray{
+    color:#666666;
+    font-size: 12px;
+  }
+  .red{
+    color:#FF4A7D;
+    font-size: 12px;
   }
 </style>

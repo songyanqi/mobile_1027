@@ -128,11 +128,13 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="(item, i) in response.data.book" v-if="i < 10">
-            <img class="goods-pic" v-lazy="item.imageUrl">
-            <div class="price">定金￥{{item.advancePrice}} (抵扣￥{{item.discountPrice}})</div>
+            <a :href="'/'+item.goodsId+'.html'">
+              <img class="goods-pic" v-lazy="item.imageUrl">
+              <div class="price">定金￥{{item.advancePrice}} (抵扣￥{{item.discountPrice}})</div>
+            </a>
           </div>
           <div class="swiper-slide more" v-if="response.data.book.length > 10">
-            <a href="/act_1018_mine_list?type=3">
+            <a href="/act_1018_mine_list.html?type=3">
               <div class="btn">
                 <span class="words">查看</br>更多</span>
                 <i></i>
@@ -154,12 +156,14 @@
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide" v-for="(item, i) in response.data.subscribe" v-if="i < 10">
-            <img class="goods-pic" v-lazy="item.imageUrl">
-            <div class="price">活动价￥{{item.price}}</div>
-            <!--<div class="time">{{item.startTime}}开抢</div>-->
+            <a :href="'/'+item.goodsId+'.html'">
+              <img class="goods-pic" v-lazy="item.imageUrl">
+              <div class="price">活动价￥{{item.price}}</div>
+              <!--<div class="time">{{item.startTime}}开抢</div>-->
+            </a>
           </div>
           <div class="swiper-slide more" v-if="response.data.subscribe.length > 10">
-            <a href="/act_1018_mine_list?type=2">
+            <a href="/act_1018_mine_list.html?type=2">
               <div class="btn">
                 <span class="words">查看</br>更多</span>
                 <i></i>

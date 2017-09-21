@@ -4,16 +4,9 @@ import common from '../../../common/js/common.js';
 // 第三方模块
 import Vue from 'Vue';
 import $ from '$';
-import Cookies from 'js-cookie';
 
 // 业务模块
-import encrypt from '../../../common/js/module/encrypt.js';
-import util from '../../../common/js/module/util.js';
-import tj from '../../../common/js/module/tj.js';
-import popup from '../../../common/js/module/popup.js';
-import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
-import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
 
 // 懒加载初始化
@@ -29,6 +22,7 @@ new Vue({
   data() {
     return {
       response: null,
+      title:"召集好友助力，最低0元购买商品"
     }
   },
   computed: {},
@@ -36,12 +30,24 @@ new Vue({
 
   },
   beforeCreate() {
+
   },
   created() {
 
   },
   methods: {
+    doc_title:function (title) {
+      this.title = title;
+      document.title= title;
+      native.custom.setHead({
+        'title': title,
+        'rightBtn': {
+          'text': ''
+        }
+      });
+    }
+  },
+  filters: {
 
   },
-  filters: {},
 });

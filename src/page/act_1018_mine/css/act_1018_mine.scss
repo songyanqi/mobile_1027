@@ -14,6 +14,11 @@
   padding-bottom: ptr(74);
   min-height: ptr(600);
 
+  // 特殊
+  margin-top: 44px;
+  padding-top: 0 !important;
+  background-position: 0 0 !important;
+
   .com-top-title {
     z-index: 2;
   }
@@ -69,7 +74,7 @@
 
   /*我的活动*/
   .g-act {
-    padding-top: ptr(38);
+    padding-top: ptr(48);
     > div {
       margin-top: ptr(30);
     }
@@ -152,6 +157,7 @@
           }
           .service-object {
             margin-top: ptr(7);
+            font-size: 0;
             .head {
               @include circle(ptr(25));
               vertical-align: middle;
@@ -215,6 +221,7 @@
               margin-left: ptr(3);
               font-size: ptr(24);
               line-height: ptr(33);
+              font-weight: bold;
             }
             .limit {
               margin-left: ptr(9);
@@ -233,11 +240,12 @@
         margin: ptr(9) auto auto;
         padding-top: ptr(2);
         width: ptr(117);
-        @include height(ptr(25));
+        @include height(ptr(24));
         background: #FFE0C5;
         border-radius: 100px;
         color: #EC2D72;
         text-align: center;
+        font-size: ptr(12);
         i {
           @include i-arrow-right-red;
           margin-left: ptr(5);
@@ -249,6 +257,7 @@
 
     /*我发起的助力省钱*/
     .assist {
+      margin-top: ptr(50);
       .title-type-1 {
         .sub-title {
           width: ptr(193);
@@ -285,8 +294,7 @@
               .less {
                 margin-top: ptr(5);
                 width: ptr(110);
-                height: ptr(18);
-                line-height: ptr(20);
+                @include height(ptr(20));
                 border-radius: 100px;
                 color: white;
                 font-size: ptr(11);
@@ -394,6 +402,7 @@
 
     /*我点亮的品牌活动*/
     .lighten {
+      margin-top: ptr(50);
       .title-type-2 {
         color: white;
       }
@@ -404,6 +413,8 @@
           margin: 0 ptr(3);
           width: ptr(172);
           color: white;
+          border-radius: ptr(4);
+          overflow: hidden;
           &.more {
             padding-top: ptr(140);
           }
@@ -581,6 +592,7 @@
           text-align: left;
           font-size: ptr(12);
           background: white;
+          border-radius: ptr(4);
           .pic {
             position: relative;
             img {

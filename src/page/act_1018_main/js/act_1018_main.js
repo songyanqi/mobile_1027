@@ -72,11 +72,12 @@ new Vue({
 
         // 头图自动播放
         let video = document.querySelector('video');
-        if(video){
+        if (video) {
           video.muted = true;
-          function playVideo(){
+          function playVideo() {
             video.play();
           }
+
           document.addEventListener("WeixinJSBridgeReady", playVideo, false);
           document.addEventListener('touchstart', playVideo, false);
           setTimeout(playVideo, 1000);
@@ -184,7 +185,7 @@ new Vue({
           dataType: 'text',
           data: {},
           success(response) {
-            if(topic.id == '14376'){
+            if (topic.id == '14376') {
               response = JSON.parse(response);
             }
             topic.content = response;
