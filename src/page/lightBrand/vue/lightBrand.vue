@@ -5,7 +5,10 @@
         <div class="big_img"><img src="//pic.davdian.com/free/2017/09/09/banner.png" alt=""></div>
         <div class="banner_title">2017最受欢迎的TOP品牌</div>
         <div class="banner_name">点亮品牌 10.18 优惠由你定</div>
-        <div class="banner_rute"></div>
+        <div class="banner_r">
+          <div class="banner_rute"></div>
+          <div class="banner_rute2"></div>
+        </div>
         <div class="rute_title">点亮规则</div>
         <div class="rute_list">
           <div class="rute_1">1. 10.18周年庆期间(10.18-10.22),为了回馈我们的妈妈们,品牌活动优惠力度由大家点亮来决定。</div>
@@ -277,7 +280,13 @@
     position: absolute;
     top: 0.6rem;
   }
-
+  .banner_r{
+    height: 1.24rem;
+    width: 3.45rem;
+    position: absolute;
+    top: 1rem;
+    left:0.15rem;
+  }
   .banner_rute{
     height: 1.24rem;
     background: #FFFFFF;
@@ -286,9 +295,19 @@
     width: 3.45rem;
     text-align:center;
     position: absolute;
-    top: 1rem;
-    left:0.15rem;
     border-radius: 4px;
+    top: 0;
+    left:0;
+  }
+  .banner_rute2{
+    height: 2.48rem;
+    width: 6.89rem;
+    position: absolute;
+    top: -0.63rem;
+    left:-1.735rem;
+    border-radius: 8px;
+    border:1px solid rgba(255,255,255,0.2);
+    transform: scale(0.5);
   }
   .rute_title{
     font-size:14px;

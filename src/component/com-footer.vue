@@ -1,15 +1,16 @@
 <template>
   <!--底部菜单栏-->
   <div class="com-footer" v-if="!isDvdApp">
+    ::{{ active }}::
     <div class="btns">
-      <a class="btn" :class="{active: active == 'home'}" href="/" :style="styleList['btn1']">
+      <a class="btn" :class="{active: active == 'home'?true:false }" href="/" :style="styleList['btn1']">
         <div class="pic-title">
           <img class="pic" v-if="active == 'home'" :src="useSkinPackageImg(btnList[0],'//pic.davdian.com/free/footer-icon/home-active.png',1)">
           <img class="pic" v-else  :src="useSkinPackageImg(btnList[0],'//pic.davdian.com/free/footer-icon/home.png',0)">
           <div class="title" :style="styleList[active == 'home'?'selectedColor':'normalColor']">首页</div>
         </div>
       </a>
-      <a class="btn" :class="{active:active == 'school'}" href="/course.html"  :style="styleList['btn2']">
+      <a class="btn" :class="{active:active == 'school'?true:false}" href="/course.html"  :style="styleList['btn2']">
         <div class="pic-title">
           <img class="pic" v-if="active == 'school'" :src="useSkinPackageImg(btnList[1],'//pic.davdian.com/free/footer-icon/school-active.png',1)">
           <img class="pic" v-else :src="useSkinPackageImg(btnList[1],'//pic.davdian.com/free/footer-icon/school.png',0)">
@@ -17,17 +18,18 @@
         </div>
       </a>
       <a class="btn" v-if="btnList[2]" :style="styleList['btn3']" :href="styleList['showUrl']">
-        <img class="pic" :src="useSkinPackageImg(btnList[2],'',1)" v-if="false">
-        <img class="pic" :src="useSkinPackageImg(btnList[2],'',0)" v-if="true">
+        <img class="pic" :src="useSkinPackageImg(btnList[2],'',1)" v-if="active == 'activity'">
+        <img class="pic" :src="useSkinPackageImg(btnList[2],'',0)" v-else>
       </a>
-      <a class="btn" :class="{active:active == 'dynamic'}" href="/articles.html"  :style="styleList['btn4']">
+      <a class="btn" :class="{active:active == 'dynamic'?true:false}" href="/articles.html"  :style="styleList['btn4']">
         <div class="pic-title">
           <img class="pic" v-if="active == 'dynamic'" :src="useSkinPackageImg(btnList[3],'//pic.davdian.com/free/footer-icon/dynamic-active.png?2',1)">
           <img class="pic" v-else :src="useSkinPackageImg(btnList[3],'//pic.davdian.com/free/footer-icon/dynamic.png?2',0)">
           <div class="title" :style="styleList[active == 'dynamic'?'selectedColor':'normalColor']">动态</div>
         </div>
       </a>
-      <a class="btn" :class="{active: active == 'center'}" href="/center.html"  :style="styleList['btn5']">
+
+      <a class="btn" :class="{active: active == 'center' ? true : false}" href="/center.html"  :style="styleList['btn5']">
         <div class="pic-title">
           <img class="pic" v-if="active == 'center'" :src="useSkinPackageImg(btnList[4],'//pic.davdian.com/free/footer-icon/center-active.png',1)">
           <img class="pic" v-else  :src="useSkinPackageImg(btnList[4],'//pic.davdian.com/free/footer-icon/center.png',0)">
