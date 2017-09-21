@@ -2,8 +2,8 @@
   <div class="com-box">
     <!--上边banner-->
     <div class="com-banner">
-      <div href="http://murphylee.davdian.com/t-14124.html?rp=index&rl=timeshop_sub_img-511-385">
-        <img v-lazy="'//pic.davdian.com/free/2017/09/12/pre_title.png'">
+      <div>
+        <img src="//pic.davdian.com/free/20170915_assistance/ast_banners.png">
       </div>
       <a href="javascript:void(0)" @click="check_rule"></a>
     </div>
@@ -83,6 +83,9 @@
     components: {},
     computed: {},
     created() {
+
+    },
+    mounted() {
       var that = this;
       if (that.response.notice.length < 100) {
         let announcementData = [];
@@ -93,9 +96,6 @@
         }
         that.response.notice = announcementData;
       }
-    },
-    mounted() {
-      console.log('mounted',this.response);
     },
     methods: {
       /***
@@ -120,30 +120,24 @@
   @import "../../../common/css/util/all";
 
   .com-box {
-    /*background-image: url(//pic.davdian.com/free/2017/09/12/bg_1.png);*/
     background: #c80064;
     background-size: 0.31rem 0.67rem;
-    padding-bottom: 60px;
-    /*position: fixed;*/
+    padding-bottom: 0.1rem;
     max-width: 640px;
-    /*top: 44px;*/
-    /*bottom: 0;*/
-    /*overflow-y: scroll;*/
   }
 
-  // banner
   .com-banner {
     width: 100%;
     min-height: 0.2rem;
     position: relative;
+    margin-bottom: 0.1rem;
     a {
       position: absolute;
-      bottom: 19%;
-      right: 19%;
+      bottom: 14%;
+      right: 18%;
       display: block;
       height: 17%;
       width: 21%;
-      /*background: tan;*/
     }
     div {
       width: 100%;
@@ -405,7 +399,7 @@
   .rool_tip {
     color: #BA2424;
     font-size: 0.11rem;
-    border: 0.05rem solid #E72664;
+    border: 0.05rem solid #ffc23e;
     border-radius: 0.05rem;
     box-sizing: border-box;
     background: #FFFFFF;

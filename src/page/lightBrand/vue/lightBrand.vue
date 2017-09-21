@@ -405,11 +405,13 @@
     width: 0.20rem;
     height: 0.12rem;
     vertical-align: sub;
+    margin-right: 0.05rem;
   }
   .start2{
     width: 0.20rem;
     height: 0.12rem;
     vertical-align: sub;
+    margin-right: 0.05rem;
   }
   .start_value{
     display: inline-block;
