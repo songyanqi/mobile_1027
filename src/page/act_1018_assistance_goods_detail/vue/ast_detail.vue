@@ -150,6 +150,7 @@
        * */
       shares: function () {
         var that = this;
+
         share.setShareInfo({
           title: that.shareInfo.title,
           desc: that.shareInfo.desc,
