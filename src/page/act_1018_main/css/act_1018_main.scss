@@ -5,8 +5,14 @@
   min-height: ptr(600);
   //background: url(../img/bg.jpg) repeat-y;
   background: #c80064;
+  /*上、下方专题*/
   .g-topic-top, .g-topic-bottom {
+    position: relative;
     color: white;
+    img {
+      max-width: 100%;
+      vertical-align: middle;
+    }
   }
   .com-footer {
     z-index: 1;
