@@ -1236,28 +1236,40 @@ export default {
           if (res.code == 0) {
             let data = res.data;
             let dataList = [];
-            if (data.dataList.length) {
+            if (data && data.dataList.length) {
               dataList = data.dataList;
+              
+              if (dataList.length) {
+                dataList.map((item, index) => {
+                  item.imageUrl = `${item.imageUrl}`;
+                });
+
+                that.mayYouLikeList = data.dataList;
+                that.mayYouLikeNoMore = true;//判定值 改为false
+                that.isFirstLoad = false;
+              }
             } else {
               $.ajax({
                 url: '/api/mg/sale/index/getPageSecond',
                 type: "POST",
+                data: layout.strSign("detailLike", ""),
                 dataType: "JSON",
                 success(res) {
                   if (res.code == 0) {
                     dataList = res.data.feedList[0].body.dataList;
+
+                    if (dataList.length) {
+                      dataList.map((item, index) => {
+                        item.imageUrl = `${item.imageUrl}`;
+                      });
+
+                      that.mayYouLikeList = dataList;
+                      that.mayYouLikeNoMore = true;//判定值 改为false
+                      that.isFirstLoad = false;
+                    }
                   }
                 }
               })
-            }
-            if (dataList.length) {
-              dataList.map((item, index) => {
-                item.imageUrl = `${item.imageUrl}`;
-              });
-
-              that.mayYouLikeList = data.dataList;
-              that.mayYouLikeNoMore = true;//判定值 改为false
-              that.isFirstLoad = false;
             }
           } else {
             popup.toast(res.data.msg, 3000);
