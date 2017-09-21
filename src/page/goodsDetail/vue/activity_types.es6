@@ -51,6 +51,12 @@ export default {
     watch: {
       datarepresentid: {
         handler (newInfoObj,oldInfoObj) {
+          if (!this.relativegoodslist.length && !this.goodstags.length) {
+            this.modalHeight = `${window.innerHeight * 0.4}px`
+          } else {
+            this.modalHeight = `${window.innerHeight * 0.65}px`
+          }
+          
           this.cartNum = 1;
         },
         deep: true,
