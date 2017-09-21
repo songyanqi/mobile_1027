@@ -61,7 +61,7 @@
               <div v-if="awd_type == 1" class="awd_tip">明天助力再赢iPhone8吧</div>
                <div v-if="awd_type == 2" class="awd_title">恭喜你被iPhone8砸中了</div>
               <div v-if="awd_type == 2" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
-              <com-scratch-card :touchstart="start_awd" :mousedown="start_awd"></com-scratch-card>
+              <com-scratch-card @touchstart="start_awd" @mousedown="start_awd"></com-scratch-card>
             </div>
           </div>
         </span>
@@ -179,7 +179,8 @@
         goodsdata: null,
         visitor_status: null,
         addsupporterPrice: null,
-        awd_type:0
+        awd_type:0,
+        start_awd_al:false //是否已经刮奖过
       }
     },
     components: {
@@ -235,7 +236,7 @@
             if (response.data.type == '0') {
               ts.$emit("doctitle", "召集好友助力，最低0元购买商品");
             } else {
-              ts.$emit("doctitle", response.data.source.nickName + "正在发起助力");
+              ts.$emit("doctitle", response.data.supporter.nickName + "正在发起助力");
             }
           },
           error(error) {
@@ -313,28 +314,31 @@
       /***
        * 刮奖
        * */
-      start_awd:function (e) {
+      start_awd:function () {
         var that =this;
-        $.ajax({
-          cache: false,
-          async: true,
-          url: that.moke + '/api/mg/sale/userhelpbuy/addPrizesLottery?_=' + Date.now(),
-          type: 'post',
-          dataType: 'json',
-          data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
-          success(response) {
-            if(!response.code){
-              if(response.data.status == '1'){
-                that.awd_type = 2
-              }else{
-                that.awd_type = 1
+        if(!that.start_awd_al){
+          that.start_awd_al = true;
+          $.ajax({
+            cache: false,
+            async: true,
+            url: that.moke + '/api/mg/sale/userhelpbuy/addPrizesLottery?_=' + Date.now(),
+            type: 'post',
+            dataType: 'json',
+            data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
+            success(response) {
+              if(!response.code){
+                if(response.data.status == '1'){
+                  that.awd_type = 2
+                }else{
+                  that.awd_type = 1
+                }
               }
+            },
+            error(error) {
+              console.error('ajax error:' + error.status + ' ' + error.statusText);
             }
-          },
-          error(error) {
-            console.error('ajax error:' + error.status + ' ' + error.statusText);
-          }
-        });
+          });
+        }
       }
     },
     filters: {
@@ -759,6 +763,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     overflow: hidden;
+    padding-bottom: 0.2rem;
     >div{
       width:2.95rem;
       height: 0.66rem;
