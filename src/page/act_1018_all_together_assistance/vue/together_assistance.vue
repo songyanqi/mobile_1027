@@ -48,10 +48,10 @@
       <!--助力者页面按钮信息-->
       <span v-if="response.type == '1'">
         <!--展示抽奖-->
-        <span v-if="!addsupporterPrice">
-          <div class="ast_bigtxt">本次助力帮TA省了<span style="font-size:0.24rem">{{addsupporterPrice}}</span>元</div>
+        <span v-if="addsupporterPrice">
+          <div class="ast_bigtxt">本次助力帮TA省了<span style="font-size:0.24rem">{{supporterData.supporterPrice}}</span>元</div>
           <div class="ast_bigtxt"
-               style="padding-top:0.1rem;">TA共得到好友{{+response.source.supporterPrice + addsupporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
+               style="padding-top:0.1rem;">TA共得到好友{{+response.source.supporterPrice + supporterData.supporterPrice}}元助力，战胜了{{response.source.rate}}%的人</div>
           <div class="ast_txt" style="padding-top:0.1rem;">别忘啦，明天还可以帮好友助力哦</div>
           <div class="awd_touch">
             <div :class="['awd_pre','awd_no','awd_yes'][awd_type]">
@@ -179,6 +179,7 @@
         goodsdata: null,
         visitor_status: null,
         addsupporterPrice: null,
+        supporterData:null, //助力结果数据
         awd_type:0,
         start_awd_al:false //是否已经刮奖过
       }
@@ -302,6 +303,8 @@
           success(response) {
             if (response.data.code == '200') {
               popup.toast("助力成功");
+              that.addsupporterPrice = true;
+              that.supporterData = response.data;
             } else if (response.data.code == '100') {
               popup.toast("每天只能助力一次哦");
             }
