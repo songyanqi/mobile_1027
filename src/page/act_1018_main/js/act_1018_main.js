@@ -137,8 +137,17 @@ new Vue({
   beforeCreate() {
   },
   created() {
+    let ts = this;
+
     this.getData();
     this.getTopics();
+
+    // app下拉异步刷新
+    window.iosInterface = window.iosInterface || {};
+    window.iosInterface.asynRefresh = function () {
+      ts.getData();
+      ts.getTopics();
+    }
   },
   mounted() {
   },
@@ -160,6 +169,8 @@ new Vue({
         }),
         success(response) {
           ts.response = response;
+          // 刷新页面
+          ts.$forceUpdate();
         },
         error(error) {
           // ts.response = require('../json/act_1018_main.json');
@@ -189,6 +200,8 @@ new Vue({
               response = JSON.parse(response);
             }
             topic.content = response;
+            // 刷新页面
+            ts.$forceUpdate();
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);

@@ -103,9 +103,10 @@
     }
     .pic {
       position: absolute;
-      top: ptr(135);
-      left: ptr(30);
-      width: ptr(319);
+      //top: ptr(135);
+      //left: ptr(30);
+      @include center;
+      width: ptr(309);
       animation: begin-pop-pic-animation 1s;
       /* 弹窗收起 */
       @keyframes begin-pop-pic-close-animation {
@@ -165,8 +166,8 @@
     top: 30%;
     //right: 0;
     //left: ptr(375);
-    width: ptr(101);
-    margin-left: ptr(375-101);
+    width: ptr(42);
+    margin-left: ptr(375-42);
     animation: g-my-1018-animation 1s;
     transform-origin: right;
     z-index: 3;

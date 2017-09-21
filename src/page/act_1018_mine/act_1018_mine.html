@@ -10,6 +10,9 @@
   <!--标题-->
   <com-top-title title="我的10.18心愿单" home></com-top-title>
 
+  <!--标题栏占位-->
+  <div class="g-top-placeholder"></div>
+
   <!--个人信息-->
   <div class="g-info">
     <template v-if="response && response.data.header" style="display: none;" :style="{display: response && response.data.header ? null : 'none'}">
@@ -266,7 +269,7 @@
               <span class="price-symbol">￥</span>
               <span class="price-int">{{item.nowPrice.split('.')[0]}}</span>
               <span class="price-decimal" v-if="item.nowPrice.split('.')[1]">.{{item.nowPrice.split('.')[1]}}</span>
-              <span class="member">会员返<span class="symbol">￥</span>{{item.incomeInfo}}</span>
+              <span class="member">会员返<span class="symbol">￥</span>{{item.timeshopIncome}}</span>
             </div>
           </div>
         </li>
