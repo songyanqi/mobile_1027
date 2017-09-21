@@ -36,8 +36,8 @@ new Vue({
       tipType: null,
       screenings: null,
       // app 5.1.0以上
-      isDvdApp: ua.isDvdApp() && ua.compareVersion(ua.getDvdAppVersion(), '5.1.0') >= 0,
-      // isDvdApp: false,
+      // isDvdApp: ua.isDvdApp() && ua.compareVersion(ua.getDvdAppVersion(), '5.1.0') >= 0,
+      isDvdApp: false,
       date: date,
       // subscribe_1018_goods_ids: localStorage.getItem('subscribe_1018_goods_ids') ? JSON.parse(localStorage.getItem('subscribe_1018_goods_ids')) : [],
       subscribe_1018_goods: localStorage.getItem('subscribe_1018_goods') ? JSON.parse(localStorage.getItem('subscribe_1018_goods')) : [],
