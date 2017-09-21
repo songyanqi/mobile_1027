@@ -8,11 +8,12 @@
         <div class="banner_rute"></div>
         <div class="rute_title">点亮规则</div>
         <div class="rute_list">
-          <div class="rute_1">1. 10.18周年庆期间（10.18-10.22），为了回馈我们的妈妈们，品牌活动优惠力度由大家点亮来决定。</div>
-          <div class="rute_1">2. 每个品牌都设定了最高优惠的指定点亮人数，达到最高人数即可享最高优惠。</div>
+          <div class="rute_1">1. 10.18周年庆期间(10.18-10.22),为了回馈我们的妈妈们,品牌活动优惠力度由大家点亮来决定。</div>
+          <div class="rute_1">2. 每个品牌都设定了最高优惠的指定点亮人数,达到最高人数即可享最高优惠。</div>
         </div>
       </div>
       <div class="all_list">
+
         <div class="list" v-for="(item,index) in dataList">
           <div class="list_b_img" @click.stop="go_detail(item.linkUrl)">
             <img :src="item.bandPic" alt="">
@@ -45,21 +46,6 @@
 
             <div class="list_need" v-if="item.isCompleted==-1">还需<span v-text="remainLight[index]"></span>人点亮</div>
             <div class="list_need" v-if="item.isCompleted==1">已有<span v-text="item.lightNum"></span>人点亮</div>
-
-
-            <!--<div class="list_button" :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" v-if="isLighted[index]!=1" @click.stop="light(item.bandId,index,$event)">-->
-              <!--<div class="btn" >-->
-                <!--<span><img class="light_icon" src="//pic.davdian.com/free/2017/09/19/gray.png" alt=""></span>-->
-                <!--<span class="gray">我要点亮</span>-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="list_button" :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" v-if="isLighted[index]==1" :style="{'border':'1px solid #FF4A7D'}">-->
-              <!--<div class="btn">-->
-                <!--<span><img src="//pic.davdian.com/free/2017/09/19/red.png" alt=""></span>-->
-                <!--<span class="red">我已点亮</span>-->
-              <!--</div>-->
-            <!--</div>-->
 
             <div class="list_button" v-if="isLighted[index]!=1" @click.stop="light(item.bandId,index,$event)">
               <div class="btn" >
@@ -259,12 +245,12 @@
   }
   .banner{
     width: 3.75rem;
-    height: 2.35rem;
+    height: 2.75rem;
     position:relative;
   }
   .big_img img{
     width: 3.75rem;
-    height: 2.35rem;
+    height: 2.75rem;
   }
   .banner_title{
     font-size:25px;
@@ -295,6 +281,7 @@
     position: absolute;
     top: 1rem;
     left:0.15rem;
+    border-radius: 4px;
   }
   .rute_title{
     font-size:14px;
