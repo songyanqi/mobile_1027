@@ -18,17 +18,13 @@ new Vue({
   data() {
     return {
       response: {
-        goodsInfo:null,
-        notice:null
+        goodsInfo: null,
+        notice: null
       },
     }
   },
-  computed: {
-
-  },
-  watch: {
-
-  },
+  computed: {},
+  watch: {},
   beforeCreate() {
 
   },
@@ -73,19 +69,7 @@ new Vue({
         dataType: 'json',
         data: encrypt({}),
         success(response) {
-          /*如果公告条数小于100，为了让css动画保持一致，将条数补充为100条*/
-          if (response.data.length < 100) {
-            let announcementData = [];
-            announcementData = response.data;
-            let nums = 100 - response.data.length;
-            for (var i = 0; i < nums; i++) {
-              announcementData.push(response.data[i])
-            }
-            ts.response.notice = announcementData;
-          } else {
-            ts.response.notice = response.data;
-          }
-          console.log(ts.response);
+          ts.response.notice = response.data;
         },
         error(error) {
           console.error('ajax error:' + error.status + ' ' + error.statusText);
@@ -93,7 +77,5 @@ new Vue({
       });
     },
   },
-  filters: {
-
-  },
+  filters: {},
 });
