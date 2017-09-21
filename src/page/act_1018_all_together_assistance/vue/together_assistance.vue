@@ -275,6 +275,8 @@
        * 分享
        * */
       shares: function () {
+        var ts = this;
+        ts.sharecallback();
         share.callShare();
       },
       /***
@@ -347,7 +349,7 @@
           url: this.moke + '/api/mg/sale/userhelpbuy/userShareGoods?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
-          data: encrypt({goodsId: that.goodsId}),
+          data: encrypt({goodsId: that.goodsId,shareUserId:that.shareUserId}),
           success() {
 
           },

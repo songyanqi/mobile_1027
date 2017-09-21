@@ -197,12 +197,16 @@ new Vue({
           dataType: 'text',
           data: {},
           success(response) {
+            try{
             if (topic.id == param.get('t1') || '14376') {
               response = JSON.parse(response);
             }
             topic.content = response;
             // 刷新页面
             ts.$forceUpdate();
+            }catch(err){
+
+            }
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);

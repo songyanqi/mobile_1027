@@ -104,7 +104,7 @@
           };
           setTimeout(function () {
             native.custom.initHead({
-              'shareOnHead': '1'
+              'shareOnHead': '0'
             });
           },300);
         });
@@ -155,6 +155,8 @@
        * 分享
        * */
       shares: function () {
+        var ts = this;
+        ts.sharecallback();
         share.callShare();
       },
       /***
@@ -162,13 +164,14 @@
        * */
       sharecallback: function () {
         var that = this;
+        popup.toast("分享成功");
         $.ajax({
           cache: false,
           async: true,
           url: this.moke + '/api/mg/sale/userhelpbuy/userShareGoods?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
-          data: encrypt({goodsId: that.goodsId}),
+          data: encrypt({goodsId: that.goodsId,shareUserId:that.shareUserId}),
           success() {
 
           },
