@@ -58,7 +58,6 @@
   import share from '../../../common/js/module/share.js';
   // 业务模块
   import vueLazyload from '../../../common/js/module/vueLazyload.js';
-
   vueLazyload.init(true);
   export default {
     props: {},
@@ -85,7 +84,7 @@
         this.$nextTick(function () {
           let ts = this;
           // 设置分享信息
-          if (shareInfo) {
+          if (ts.shareInfo) {
             try {
               share.setShareInfo({
                 "title": ts.shareInfo.title,

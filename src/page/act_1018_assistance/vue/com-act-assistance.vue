@@ -38,12 +38,9 @@
           <div class="progress_info" v-html="lis.activityMessage">
           </div>
           <a class="remain_btns">
-            <a class="panic_buying_btn" :href="lis.activityLink"
-               v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>
-            <a class="panic_buying_btn yellows" :href="lis.activityLink"
-               v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>
-            <a class="panic_buying_btn big_1018" href="javascript:void(0)"
-               v-if="lis.activityButton == '10.18当天0元抢'">{{lis.activityButton}}
+            <a class="panic_buying_btn" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>
+            <a class="panic_buying_btn yellows" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>
+            <a class="panic_buying_btn big_1018" href="javascript:void(0)" v-if="lis.activityButton == '10.18当天0元抢'">{{lis.activityButton}}
             </a>
           </a>
         </li>
@@ -70,7 +67,7 @@
   </div>
 </template>
 <script>
-
+  import login from '../../../common/js/module/login.js';
   export default {
     props: {
         response: {
@@ -99,6 +96,10 @@
       },
       close_what_invite: function () {
         this.rule_form = false;
+      },
+      activebtn:function (url) {
+        login.needLogin();
+        location.href = url;
       }
     },
     filters: {},
