@@ -70,6 +70,7 @@
         response: null,
         overTimes: null,
         shareInfo: null,
+        shareUserId: ua.getQuery("shareUserId"),
         isWeixin: ua.isWeiXin(),
         isDvdApp: ua.isDvdApp()
       }
@@ -164,7 +165,6 @@
        * */
       sharecallback: function () {
         var that = this;
-        popup.toast("分享成功");
         $.ajax({
           cache: false,
           async: true,

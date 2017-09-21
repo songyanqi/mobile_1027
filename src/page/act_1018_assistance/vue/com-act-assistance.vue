@@ -38,9 +38,12 @@
           <div class="progress_info" v-html="lis.activityMessage">
           </div>
           <a class="remain_btns">
-            <a class="panic_buying_btn" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>
-            <a class="panic_buying_btn yellows" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>
-            <a class="panic_buying_btn big_1018" href="javascript:void(0)" v-if="lis.activityButton == '10.18当天0元抢'">{{lis.activityButton}}
+            <a class="panic_buying_btn" @click="activebtn(lis.activityLink)" href="javascript:void(0)"
+               v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>
+            <a class="panic_buying_btn yellows" @click="activebtn(lis.activityLink)" href="javascript:void(0)"
+               v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>
+            <a class="panic_buying_btn big_1018" href="javascript:void(0)"
+               v-if="lis.activityButton == '10.18当天0元抢'">{{lis.activityButton}}
             </a>
           </a>
         </li>
@@ -68,12 +71,13 @@
 </template>
 <script>
   import login from '../../../common/js/module/login.js';
+
   export default {
     props: {
-        response: {
-          type: Object,
-          default: null
-        }
+      response: {
+        type: Object,
+        default: null
+      }
     },
     data() {
       return {
@@ -82,20 +86,27 @@
     },
     components: {},
     computed: {},
+    watch: {
+
+    },
     created() {
 
     },
     mounted() {
       var that = this;
-      if (that.response.notice.length < 100) {
-        let announcementData = [];
-        announcementData = that.response.notice;
-        let nums = 100 - that.response.notice.length;
-        for (var i = 0; i < nums; i++) {
-          announcementData.push(that.response.notice[i])
+      setTimeout(function () {
+        if(that.response.notice){
+          if (that.response.notice.length < 100) {
+            let announcementData = [];
+            announcementData = that.response.notice;
+            let nums = 100 - that.response.notice.length;
+            for (var i = 0; i < nums; i++) {
+              announcementData.push(that.response.notice[i])
+            }
+            that.response.notice = announcementData;
+          }
         }
-        that.response.notice = announcementData;
-      }
+      },1000);
     },
     methods: {
       /***
@@ -107,13 +118,12 @@
       close_what_invite: function () {
         this.rule_form = false;
       },
-      activebtn:function (url) {
+      activebtn: function (url) {
         login.needLogin();
         location.href = url;
       }
     },
-    filters: {},
-    watch: {},
+    filters: {}
   }
 </script>
 <style lang="sass" lang="scss" rel="stylesheet/scss">
@@ -468,7 +478,7 @@
     text-align: center;
     background-color: #FFFFFF;
     padding: 0 10px 15px;
-    color:#FF4A7D
+    color: #FF4A7D
   }
 
   .com-popup-base .table-cell .box div:nth-of-type(1) {
