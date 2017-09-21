@@ -16,7 +16,7 @@
       <div class="g-head-pic"
            :style="{'background-image': topics[0].content ? 'url('+topics[0].content.headPic+')' : 'url(//pic.davdian.com/activity/2017/09/18/750_630_ffedafe358bdbc4ce22f226adbb1c027.png)'}">
         <!--gif-->
-        <template v-if="ua.isAndroid() || ua.isIos() && ua.compareVersion('10.0.0', '10') < 0">
+        <template v-if="ua.isAndroid() || ua.isIos() && ua.compareVersion('10.0.0', '10') < 0 || topics[0].content && !topics[0].content.headVideo">
           <img class="gif" :src="topics[0].content && topics[0].content.headGif">
         </template>
         <!--视频-->

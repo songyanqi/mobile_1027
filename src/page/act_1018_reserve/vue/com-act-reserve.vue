@@ -114,7 +114,7 @@
     <div class = "bookCont clearfix">
   		<div class = "bookList" v-for = "(item,index) in singleList" @click = "handleList($event, item, index)">
   			<div class = "bookImg" data-id = "item.linkUrl">
-  				<img data-id = "item.linkUrl" src="http://pic.davdian.com/supplier/2017/06/20/1000_1000_e1a9869947141510a8743e6c002553c1.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/format,webp">
+  				<img data-id = "item.linkUrl" v-lazy="'http://pic.davdian.com/supplier/2017/06/20/1000_1000_e1a9869947141510a8743e6c002553c1.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/format,webp'">
   			</div>
   			<div class = "bookName">{{ item.goodsName }}</div>
   			<div class = "bookPrice"><span class = "f12">¥ </span>{{ item.shopPrice }}</div>

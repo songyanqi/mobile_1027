@@ -3,7 +3,7 @@
     <!--上边banner-->
     <div class="com-banner">
       <div href="http://murphylee.davdian.com/t-14124.html?rp=index&rl=timeshop_sub_img-511-385">
-        <img src="//pic.davdian.com/free/2017/09/12/pre_title.png">
+        <img v-lazy="'//pic.davdian.com/free/2017/09/12/pre_title.png'">
       </div>
       <a href="javascript:void(0)" @click="check_rule"></a>
     </div>
@@ -22,7 +22,7 @@
           <a :href="lis.activityLink">
             <div class="img_container">
               <div class="img_container_inner">
-                <img :src="lis.goodsImage">
+                <img v-lazy="lis.goodsImage">
               </div>
               <div class="order_good_info_container">
                 <div class="order_good_name">
