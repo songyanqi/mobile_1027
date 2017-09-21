@@ -325,7 +325,7 @@
             data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
             success(response) {
               if(!response.code){
-                if(response.data.status == '1'){
+                if(response.data.lotteryResult == 'success'){
                   that.awd_type = 2
                 }else{
                   that.awd_type = 1
@@ -502,6 +502,7 @@
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    padding-bottom: 0.2rem;
     >img {
       position: absolute;
       z-index: 3;
@@ -781,7 +782,6 @@
     background-size: 100%;
     background-repeat: no-repeat;
     overflow: hidden;
-    padding-bottom: 0.2rem;
     >div{
       width:2.95rem;
       height: 0.66rem;
