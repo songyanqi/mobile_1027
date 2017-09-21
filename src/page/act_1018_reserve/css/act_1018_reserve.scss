@@ -1,6 +1,7 @@
 @import "../../../common/css/common.scss";
 
 .reserve {
+	margin-top: 10px;
 	.swiper-container {
 		background: #fff;
 		font-size: 14px;
@@ -23,6 +24,9 @@
 		bottom: -12px;
 		border-bottom: 2px solid #ff4a7d;
 	}
+	.bookCont {
+		padding: 5px 5px 0 5px;
+	}
 	.bookNav {
 		// display: -webkit-box;
 		// display: -webkit-flex;
@@ -36,8 +40,9 @@
 		// -webkit-flex: 1;
 		// flex: 1;
 		background: #fff;
-		box-radius: 5px;
-		margin: 10px 5px; 
+		border-radius: 5px;
+		margin: 5px 5px; 
+		overflow: hidden;
 	}
 	.bookImg {
 		width: 100%;

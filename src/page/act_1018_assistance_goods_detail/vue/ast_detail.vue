@@ -56,6 +56,7 @@
   import popup from '../../../common/js/module/popup.js';
   import ua from '../../../common/js/module/ua.js';
   import share from '../../../common/js/module/share.js';
+  import native from '../../../common/js/module/native.js';
   import login from '../../../common/js/module/login.js';
   login.needLogin();
   // 业务模块
@@ -100,7 +101,12 @@
             } catch (err) {
               console.error(err);
             }
-          }
+          };
+          setTimeout(function () {
+            native.custom.initHead({
+              'shareOnHead': '1'
+            });
+          },300);
         });
       }
     },
@@ -149,17 +155,7 @@
        * 分享
        * */
       shares: function () {
-        var that = this;
-
-        share.setShareInfo({
-          title: that.shareInfo.title,
-          desc: that.shareInfo.desc,
-          imgUrl: that.shareInfo.imgUrl,
-          link: that.shareInfo.link,
-          success: function () {
-              that.sharecallback();
-          }
-        })
+        share.callShare();
       },
       /***
        * 记录分享回调

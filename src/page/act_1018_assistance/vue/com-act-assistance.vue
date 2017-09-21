@@ -140,8 +140,9 @@
       width: 21%;
     }
     div {
-      width: 100%;
+      width: 3.55rem;
       display: block;
+      margin: 0 auto;
       img {
         width: 100%;
         display: block;
@@ -467,6 +468,7 @@
     text-align: center;
     background-color: #FFFFFF;
     padding: 0 10px 15px;
+    color:#FF4A7D
   }
 
   .com-popup-base .table-cell .box div:nth-of-type(1) {
