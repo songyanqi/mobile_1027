@@ -175,7 +175,8 @@
   @import "../../../common/css/util/all";
 
   .com-box {
-    background-image: url(//pic.davdian.com/free/2017/09/12/bg_1.png);
+    /*background-image: url(//pic.davdian.com/free/2017/09/12/bg_1.png);*/
+    background: #c80064;
     background-size: 0.31rem 0.67rem;
     padding-bottom: 60px;
     /*position: fixed;*/
