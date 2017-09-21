@@ -83,9 +83,19 @@
     components: {},
     computed: {},
     created() {
+      var that = this;
+      if (that.response.notice.length < 100) {
+        let announcementData = [];
+        announcementData = that.response.notice;
+        let nums = 100 - that.response.notice.length;
+        for (var i = 0; i < nums; i++) {
+          announcementData.push(that.response.notice[i])
+        }
+        that.response.notice = announcementData;
+      }
     },
     mounted() {
-
+      console.log('mounted',this.response);
     },
     methods: {
       /***

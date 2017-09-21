@@ -75,7 +75,7 @@
       <!--活动区域-->
       <div class="g-act" v-if="response && response.data">
         <!--好友助力-->
-        <com-act-assistance :response="response" v-if="response.data.help" :current-date="currentDate"></com-act-assistance>
+        <com-act-assistance :response="response.data.help" v-if="response.data.help" :current-date="currentDate"></com-act-assistance>
 
         <!--品牌点亮-->
         <com-act-lightbrand :response="response.data.lightenBrand" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightbrand>
