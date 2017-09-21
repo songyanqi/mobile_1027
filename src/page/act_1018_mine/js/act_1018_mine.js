@@ -99,7 +99,7 @@ new Vue({
       $.ajax({
         cache: false,
         async: true,
-        url: '/api/mg/sale/theThirdYears/myWishList?_=' + Date.now(),
+        url: '/api/mg/sale/thethirdyears/myWishList?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
         data: encrypt({
