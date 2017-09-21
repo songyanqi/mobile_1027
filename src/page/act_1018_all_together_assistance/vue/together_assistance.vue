@@ -272,16 +272,7 @@
        * 分享
        * */
       shares: function () {
-        var that = this;
-        share.setShareInfo({
-          "title": "大V店10.18周年庆 猛点一下帮我0元抢爆品，你抽iPhone8！",
-          "desc": '好友助力随机减钱，助力越多越省钱',
-          "imgUrl": "//pic.davdian.com/free/20170915_assistance/assistance.png",
-          "link": location.href,
-          success: function () {
-            that.sharecallback();
-          }
-        })
+        share.callShare();
       },
       /***
        * 给他助力

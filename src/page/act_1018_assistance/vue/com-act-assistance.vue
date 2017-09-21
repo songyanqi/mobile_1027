@@ -468,6 +468,7 @@
     text-align: center;
     background-color: #FFFFFF;
     padding: 0 10px 15px;
+    color:#FF4A7D
   }
 
   .com-popup-base .table-cell .box div:nth-of-type(1) {
