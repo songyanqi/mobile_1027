@@ -17,10 +17,12 @@
           <div class="title" :style="styleList[active == 'school'?'selectedColor':'normalColor']">学院</div>
         </div>
       </a>
+
       <a class="btn" v-if="btnList[2]" :style="styleList['btn3']" :href="styleList['showUrl']">
         <img class="pic" :src="useSkinPackageImg(btnList[2],'',1)" v-if="active == 'activity'">
         <img class="pic" :src="useSkinPackageImg(btnList[2],'',0)" v-else>
       </a>
+
       <a class="btn" :class="{active:active == 'dynamic'?true:false}" href="/articles.html"  :style="styleList['btn4']">
         <div class="pic-title">
           <img class="pic" v-if="active == 'dynamic'" :src="useSkinPackageImg(btnList[3],'//pic.davdian.com/free/footer-icon/dynamic-active.png?2',1)">
