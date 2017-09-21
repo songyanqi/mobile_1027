@@ -140,8 +140,9 @@
       width: 21%;
     }
     div {
-      width: 100%;
+      width: 3.55rem;
       display: block;
+      margin: 0 auto;
       img {
         width: 100%;
         display: block;

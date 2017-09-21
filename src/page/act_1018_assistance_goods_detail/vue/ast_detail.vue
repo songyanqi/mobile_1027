@@ -43,7 +43,7 @@
       </div>
       <!--按钮-->
       <div v-if="isWeixin" class="main_btn">点击右上角“···”按钮发起助力</div>
-      <div v-if="isDvdApp" @click="shares" class="main_btn">喊人助力</div>
+      <div @click="shares" class="main_btn">喊人助力</div>
       <div v-if="!isDvdApp&&!isWeixin" @click="gowxapp" class="main_btn">喊人助力</div>
       <div class="good_detail_imgs">
         <img v-for="imgs in response.details" v-lazy="imgs.imgOriginal" v-if="imgs.imgOriginal" alt="">
@@ -56,6 +56,7 @@
   import popup from '../../../common/js/module/popup.js';
   import ua from '../../../common/js/module/ua.js';
   import share from '../../../common/js/module/share.js';
+  import native from '../../../common/js/module/native.js';
   import login from '../../../common/js/module/login.js';
   login.needLogin();
   // 业务模块
@@ -100,7 +101,12 @@
             } catch (err) {
               console.error(err);
             }
-          }
+          };
+          setTimeout(function () {
+            native.custom.initHead({
+              'shareOnHead': '1'
+            });
+          },300);
         });
       }
     },
@@ -149,17 +155,7 @@
        * 分享
        * */
       shares: function () {
-        var that = this;
-
-        share.setShareInfo({
-          title: that.shareInfo.title,
-          desc: that.shareInfo.desc,
-          imgUrl: that.shareInfo.imgUrl,
-          link: that.shareInfo.link,
-          success: function () {
-              that.sharecallback();
-          }
-        })
+        share.callShare();
       },
       /***
        * 记录分享回调
