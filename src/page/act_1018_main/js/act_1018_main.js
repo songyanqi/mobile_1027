@@ -12,6 +12,7 @@ import param from '../../../common/js/module/param.js';
 import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
+import util from '../../../common/js/module/util.js';
 import ua from '../../../common/js/module/ua.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
@@ -189,7 +190,7 @@ new Vue({
         $.ajax({
           cache: false,
           async: true,
-          url: `http://18686604386.davdian.com/t-${topic.id}.html?_=${Date.now()}`,
+          url: `${location.protocol}//${util.getSecondDomain()}.davdian.com/t-${topic.id}.html?_=${Date.now()}`,
           // url: `http://18686604386.vyohui.cn/t-9919.html?_=${Date.now()}`,
           // url: `http://18686604386.bravetime.net/t-13451.html?_=${Date.now()}`,
           type: 'get',

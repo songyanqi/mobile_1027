@@ -31,5 +31,11 @@ export default {
    */
   getBaseDomain(){
     return /(bravetime.net|vyohui.cn|davdian.com)/.exec(location.host)[0];
-  }
+  },
+  /**
+   * 获取页面二级域名
+   */
+  getSecondDomain(){
+    return /(.*)[.](bravetime.net|vyohui.cn|davdian.com)/.exec(location.host)[1];
+  },
 }
