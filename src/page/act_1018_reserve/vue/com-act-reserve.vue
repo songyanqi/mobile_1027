@@ -1,7 +1,8 @@
 <style  lang="sass"  rel="stylesheet/scss">
   @import "../../../common/css/common.scss";
   .reserve {
-    margin-top: 10px;
+    // margin-top: 10px;
+    margin-top: 0.1rem;
     .clearfix:after {
       display: block;
       clear: both;
@@ -12,41 +13,31 @@
       font-size: 14px;
     }
     .swiper-slide {
-      // width: 67px;
       text-align: center;
-      padding: 12px 0;
+      padding: 15px 0;
+      background: #FF6582;
+      color: #fff;
+      .item {
+        line-height: 20px;
+      }
     }
     .slide_bar {
-      position: relative;
-      display: inline-block;
-      color: #ff4a7d;
-    }
-    .slide_bar:after {
-      position: absolute;
-      content: "";
-      left: 0;
-      right: 0;
-      bottom: -12px;
-      border-bottom: 2px solid #ff4a7d;
+      color: #FF6582;
+      background: #fff;
     }
     .bookCont {
-      padding: 5px 5px 0 5px;
-    }
-    .bookNav {
-      // display: -webkit-box;
-      // display: -webkit-flex;
-      // display: flex;
-      // margin: 0 5px;
+      // padding: 5px 5px 0 5px;
+      padding: 0.05rem 0.05rem 0 0.05rem;
     }
     .bookList {
       float: left;
-      width: calc(50% - 10px);
-      // -webkit-box-flex: 1;
-      // -webkit-flex: 1;
-      // flex: 1;
+      // width: calc(50% - 10px);
+      width: calc(50% - 0.1rem);
       background: #fff;
-      box-radius: 5px;
-      margin: 5px 5px; 
+      // box-radius: 5px;
+      // margin: 5px 5px; 
+      box-radius: 0.05rem;
+      margin: 0.05rem 0.05rem; 
       overflow: hidden;
     }
     .bookImg {
@@ -62,47 +53,67 @@
       overflow: hidden;
       text-overflow: ellipsis;
       color: #666;
-      font-size: 12px;
-      height: 28px;
-      margin: 10px 10px 0 10px;
-      line-height: 14px;
+      // font-size: 12px;
+      // height: 28px;
+      // margin: 10px 10px 0 10px;
+      font-size: 0.12rem;
+      height: 0.28rem;
+      margin: 0.1rem 0.1rem 0 0.1rem;
+      // line-height: 14px;
+      line-height: 0.14rem;
     }
     .bookPrice {
-      font-size: 14px;
-      padding: 5px 0 10px 10px;
+      // font-size: 14px;
+      // padding: 5px 0 10px 10px;
+      font-size: 0.14rem;
+      padding: 0.05rem 0 0.1rem 0.1rem;
       .f12 {
-        font-size: 12px;
+        // font-size: 12px;
+        font-size: 0.12rem;
       }
     }
     .advancePrice {
       color: #FF4A7D;
       font-size: 0;
-      padding: 0 0 13px 10px;
+      // padding: 0 0 13px 10px;
+      padding: 0 0 0.13rem 0.1rem;
       .a_tips {
-        font-size: 12px;
+        // font-size: 12px;
+        font-size: 0.12rem;
       }
       .a_price {
-        font-size: 18px;
+        // font-size: 18px;
+        font-size: 0.18rem;
       }
     }
     .bookBtn {
-      line-height: 18px;
+      // line-height: 18px;
+      line-height: 0.18rem;
       color: #fff;
-      font-size: 12px;
-      padding: 3px 0;
-      margin: 0 10px 15px 10px;
+      // font-size: 12px;
+      font-size: 0.12rem;
+      // padding: 3px 0;
+      // margin: 0 10px 15px 10px;
+       padding: 0.03rem 0;
+      margin: 0 0.1rem 0.15rem 0.1rem;
       background: linear-gradient(to right, #FF5B5B, #FA1862);
       background: -moz-linear-gradient(right, #FF5B5B, #FA1862);
       background: -o-linear-gradient(right, #FF5B5B, #FA1862);
       background: -webkit-linear-gradient(left, #FF5B5B, #FA1862);
-      border-radius: 15px;
+      // border-radius: 15px;
+      border-radius: 0.15rem;
       text-align: center;
     }
     .noMore {
-      font-size: 12px;
+      // font-size: 12px;
+      // color: #666;
+      // text-align: center;
+      // padding: 10px 0;
+
+      font-size: 0.12rem;
       color: #666;
       text-align: center;
-      padding: 10px 0;
+      padding: 0.1rem 0;
     }
     .reserveHead {
       width: 100%;
@@ -116,8 +127,8 @@
 		<!-- 头部 -->
 		<div class="swiper-container">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" @click = "handleNav(item,index)" v-for = "(item,index) in bookNavList">
-          <div class="item" :class = "{ slide_bar: currentIdx === index }">{{ item }}</div>
+        <div class="swiper-slide" :class = "{ slide_bar: currentIdx === index }" @click = "handleNav(item,index)" v-for = "(item,index) in bookNavList">
+          <div class="item">{{ item }}</div>
         </div>
       </div>
     </div>
@@ -231,7 +242,18 @@
       },
   		handleList(e,item,index) {
         let shopUrl = `/${item.goodsId}.html`;
-        this.handleJump(shopUrl);
+        this.isapp = this.isApp();
+        if (this.isapp) {
+          e.preventDefault();
+          native.Browser.open({
+            url: shopUrl
+          });
+        } else if (this.isMobile()) {
+          window.open(shopUrl, '_blank');
+        } else {
+          window.open(shopUrl, '_self');
+        }
+        // this.handleJump(shopUrl);
   		},
   		getData() {
   			let that = this;
