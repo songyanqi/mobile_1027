@@ -25,6 +25,7 @@
           <div class="list_bottom" v-if="item.hotDay==-1">
 
             <template v-if="item.isCompleted!=1">
+              <div class="list_start_border"></div>
               <div class="list_start">
                 <img class="start" src="//pic.davdian.com/free/2017/09/09/start_icon.png" alt="">
                 <span class="start_value" v-text="item.lowDiscount"></span>
@@ -206,6 +207,9 @@
       },
       light(bandId,index,isCompleted){
         var that=this;
+        that.changeAnimateFn(index);
+        that.changeIsLighted(index);
+        that.changeNeedCount(index,isCompleted);
         var obj={
             "bandId":bandId
         };
@@ -213,13 +217,7 @@
           .then(function (result) {
             if(result.code==0){
               if(result.data.success==1){
-                that.changeAnimateFn(index);
-                setTimeout(function(){
-                  that.changeIsLighted(index);
-                },100);
-                setTimeout(function(){
-                  that.changeNeedCount(index,isCompleted);
-                },600);
+
               }else{
                 if(result.data.msg){
                   dialog.alert('code:'+result.code+":msg"+result.data.msg);
@@ -375,14 +373,24 @@
     display: inline-block;
     width: 1.06rem;
     height: 0.2rem;
-    border:0.5px solid #FF4A7D;
-    border-radius:100px;
     margin-top: 0.02rem;
     margin-left: 0.33rem;
     box-sizing:border-box;
     position: relative;
     text-align: center;
     line-height: 0.2rem;
+  }
+  .list_start_border{
+    display: inline-block;
+    width: 2.12rem;
+    height: 0.4rem;
+    border:1px solid #FF4A7D;
+    border-radius:200px;
+    box-sizing:border-box;
+    position: absolute;
+    top: -0.08rem;
+    left: -0.2rem;
+    transform: scale(0.5);
   }
   .success{
     display: inline-block;
