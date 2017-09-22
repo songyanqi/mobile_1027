@@ -12,6 +12,7 @@ import param from '../../../common/js/module/param.js';
 import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
+import util from '../../../common/js/module/util.js';
 import ua from '../../../common/js/module/ua.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
@@ -38,11 +39,11 @@ new Vue({
       response: null,
       topics: [
         // 头图
-        {id: '14376', content: null},
+        {id: param.get('t1') || '14376', content: null},
         // 上方专题
-        {id: '14377', content: null},
+        {id: param.get('t2') || '14377', content: null},
         // 下方专题
-        {id: '14378', content: null}
+        {id: param.get('t3') || '14378', content: null}
       ],
       actBeginTime: new Date(2017, 10, 18),
       countDown: date.getCountDown(new Date(2017, 10, 18)),
@@ -189,19 +190,23 @@ new Vue({
         $.ajax({
           cache: false,
           async: true,
-          url: `http://18686604386.davdian.com/t-${topic.id}.html?_=${Date.now()}`,
+          url: `${location.protocol}//${util.getSecondDomain()}.davdian.com/t-${topic.id}.html?_=${Date.now()}`,
           // url: `http://18686604386.vyohui.cn/t-9919.html?_=${Date.now()}`,
           // url: `http://18686604386.bravetime.net/t-13451.html?_=${Date.now()}`,
           type: 'get',
           dataType: 'text',
           data: {},
           success(response) {
-            if (topic.id == '14376') {
+            try{
+            if (topic.id == param.get('t1') || '14376') {
               response = JSON.parse(response);
             }
             topic.content = response;
             // 刷新页面
             ts.$forceUpdate();
+            }catch(err){
+
+            }
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);

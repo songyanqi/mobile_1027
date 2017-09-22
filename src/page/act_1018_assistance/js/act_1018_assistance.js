@@ -48,7 +48,6 @@ new Vue({
         data: encrypt({}),
         success(response) {
           ts.response.goodsInfo = response.data;
-          console.log(ts.response);
         },
         error(error) {
           console.error('ajax error:' + error.status + ' ' + error.statusText);

@@ -200,8 +200,11 @@
             share.setShareInfo({
               "title": "大V店10.18周年庆 猛点一下帮我0元抢爆品，你抽iPhone8！",
               "desc": '好友助力随机减钱，助力越多越省钱',
-              "imgUrl": "//pic.davdian.com/free/20170915_assistance/assistance.png",
-              "link": location.href
+              "imgUrl": "http://pic.davdian.com/free/20170915_assistance/assistance.png",
+              "link": location.href,
+              success:function () {
+                ts.sharecallback();
+              }
             });
           } catch (err) {
             console.error(err);
@@ -272,16 +275,9 @@
        * 分享
        * */
       shares: function () {
-        var that = this;
-        share.setShareInfo({
-          "title": "大V店10.18周年庆 猛点一下帮我0元抢爆品，你抽iPhone8！",
-          "desc": '好友助力随机减钱，助力越多越省钱',
-          "imgUrl": "//pic.davdian.com/free/20170915_assistance/assistance.png",
-          "link": location.href,
-          success: function () {
-            that.sharecallback();
-          }
-        })
+        var ts = this;
+        ts.sharecallback();
+        share.callShare();
       },
       /***
        * 给他助力
@@ -329,7 +325,7 @@
             data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
             success(response) {
               if(!response.code){
-                if(response.data.status == '1'){
+                if(response.data.lotteryResult == 'success'){
                   that.awd_type = 2
                 }else{
                   that.awd_type = 1
@@ -341,7 +337,27 @@
             }
           });
         }
-      }
+      },
+      /***
+       * 记录分享回调
+       * */
+      sharecallback: function () {
+        var that = this;
+        $.ajax({
+          cache: false,
+          async: true,
+          url: this.moke + '/api/mg/sale/userhelpbuy/userShareGoods?_=' + Date.now(),
+          type: 'post',
+          dataType: 'json',
+          data: encrypt({goodsId: that.goodsId,shareUserId:that.shareUserId}),
+          success() {
+
+          },
+          error(error) {
+            console.error('ajax error:' + error.status + ' ' + error.statusText);
+          }
+        });
+      },
     },
     filters: {
       /***
@@ -486,6 +502,7 @@
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    padding-bottom: 0.2rem;
     >img {
       position: absolute;
       z-index: 3;
@@ -765,7 +782,6 @@
     background-size: 100%;
     background-repeat: no-repeat;
     overflow: hidden;
-    padding-bottom: 0.2rem;
     >div{
       width:2.95rem;
       height: 0.66rem;
