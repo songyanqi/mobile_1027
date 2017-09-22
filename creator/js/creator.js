@@ -44,6 +44,12 @@ new Vue({
           shareOnHead: 1,
         });
 
+        // 设置app头部标题栏
+        native.custom.setHead({
+          title: document.title,
+          homeBtn: '1',
+        });
+
         // 设置分享信息
         try {
           share.setShareInfo({

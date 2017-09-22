@@ -60,7 +60,12 @@ new Vue({
 
         // 设置app头部标题栏
         native.custom.initHead({
-          shareOnHead: 1,
+          homeOnHead: 1,
+        });
+
+        // 设置app头部标题栏
+        native.custom.setHead({
+          title: document.title,
         });
 
         // 初始化轮播图
