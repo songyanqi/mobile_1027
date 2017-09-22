@@ -2466,6 +2466,8 @@ $crossBord: #FF4A7D;
       bottom: 49px;
       line-height: 20px;
       width: 100%;
+      max-width: 640px;
+      box-sizing: border-box;
       padding: 10px;
       background: rgba(102,102,102,.95);
       color: #fff;

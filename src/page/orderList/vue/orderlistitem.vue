@@ -968,7 +968,7 @@
             },
             changeDate(time) {
                 var dates = new Date(time * 1000);
-                var month = dates.getMonth(),
+                var month = dates.getMonth()+1,
                     days = dates.getDate(),
                     hours = dates.getHours(),
                     minutes = dates.getMinutes(),
