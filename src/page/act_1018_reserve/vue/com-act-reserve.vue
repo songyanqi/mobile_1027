@@ -230,7 +230,6 @@
         }
       },
   		handleList(e,item,index) {
-        alert(345);
         let shopUrl = `/${item.goodsId}.html`;
         this.handleJump(shopUrl);
   		},
