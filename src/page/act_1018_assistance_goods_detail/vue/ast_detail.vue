@@ -60,6 +60,8 @@
   import share from '../../../common/js/module/share.js';
   import native from '../../../common/js/module/native.js';
   import login from '../../../common/js/module/login.js';
+  // 基础模块
+  import common from '../../../common/js/common.js';
   login.needLogin();
   // 业务模块
   import vueLazyload from '../../../common/js/module/vueLazyload.js';

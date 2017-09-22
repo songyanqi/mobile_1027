@@ -185,7 +185,8 @@
   import share from '../../../common/js/module/share.js';
   import {Swiper, SwiperItem} from 'vux'
   import login from '../../../common/js/module/login.js';
-
+  // 基础模块
+  import common from '../../../common/js/common.js';
   login.needLogin();
   export default {
     props: {},
