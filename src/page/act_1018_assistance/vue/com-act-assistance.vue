@@ -11,7 +11,7 @@
     <div class="rool_tip">
       <div class="marguee">
         <div class="marguee_innder">
-          <p v-for="pr in response.notice">{{pr.message}}</p>
+          <p v-for="pr in notices">{{pr.message}}</p>
         </div>
       </div>
     </div>
@@ -84,15 +84,17 @@
     computed: {
       notices:function () {
         var that = this;
-        if (that.response.notice.length < 100) {
-          var announcementData = [];
-          announcementData = that.response.notice;
-          let nums = 100 - that.response.notice.length;
-          for (var i = 0; i < nums; i++) {
-            announcementData.push(that.response.notice[i])
+        if(that.response.notice) {
+          if (that.response.notice.length < 100) {
+            var announcementData = [];
+            announcementData = that.response.notice;
+            let nums = 100 - that.response.notice.length;
+            for (var i = 0; i < nums; i++) {
+              announcementData.push(that.response.notice[i])
+            }
+            that.response.notice = announcementData;
+            return that.response.notice;
           }
-          that.response.notice = announcementData;
-          return that.response.notice;
         }
       }
     },
