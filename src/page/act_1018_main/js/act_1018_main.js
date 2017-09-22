@@ -84,14 +84,15 @@ new Vue({
           setTimeout(playVideo, 1000);
         }
 
-        $(document).on('click', 'a', function (event) {
-          if (ua.isDvdApp()) {
+        // app跳转打开新webview
+        if (ua.isDvdApp()) {
+          $(document).on('click', 'a', function (event) {
             event.preventDefault();
             native.Browser.open({
               url: `${this.href}`,
             });
-          }
-        });
+          });
+        }
 
         // alert(document.querySelector('.gif'));
         // alert(document.querySelector('video'));
