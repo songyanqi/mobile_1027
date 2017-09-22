@@ -12,6 +12,7 @@ import param from '../../../common/js/module/param.js';
 import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
+import localCache from '../../../common/js/module/localCache.js';
 import util from '../../../common/js/module/util.js';
 import ua from '../../../common/js/module/ua.js';
 import native from '../../../common/js/module/native.js';
@@ -183,6 +184,7 @@ new Vue({
         }),
         success(response) {
           ts.response = response;
+
           // 刷新页面
           ts.$forceUpdate();
         },
