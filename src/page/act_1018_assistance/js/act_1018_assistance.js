@@ -47,6 +47,7 @@ new Vue({
         dataType: 'json',
         data: encrypt({}),
         success(response) {
+          common.checkRedirect(response);
           ts.response.goodsInfo = response.data;
         },
         error(error) {
@@ -68,6 +69,7 @@ new Vue({
         dataType: 'json',
         data: encrypt({}),
         success(response) {
+          common.checkRedirect(response);
           ts.response.notice = response.data;
         },
         error(error) {

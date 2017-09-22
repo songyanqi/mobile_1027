@@ -176,7 +176,7 @@
     color: #333;
     text-align: center;
     font-size: 16px;
-    z-index: 1;
+    z-index: 9;
     &.border-bottom {
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }

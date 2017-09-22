@@ -5,7 +5,7 @@
       <div>
         <img src="//pic.davdian.com/free/20170915_assistance/ast_banners.png">
       </div>
-      <a href="javascript:void(0)" @click="check_rule"></a>
+      <span @click="check_rule"></span>
     </div>
     <!--滚动公告-->
     <div class="rool_tip">
@@ -71,7 +71,6 @@
 </template>
 <script>
   import login from '../../../common/js/module/login.js';
-
   export default {
     props: {
       response: {
@@ -141,7 +140,7 @@
     min-height: 0.2rem;
     position: relative;
     margin-bottom: 0.1rem;
-    a {
+    span {
       position: absolute;
       bottom: 14%;
       right: 18%;

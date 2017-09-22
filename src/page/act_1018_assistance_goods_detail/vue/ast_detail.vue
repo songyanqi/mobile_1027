@@ -1,5 +1,5 @@
 <template>
-  <div style="font-weight: normal;background-color: #FFFFFF;" v-if="response">
+  <div style="font-weight: normal;background-color: #FFFFFF;padding-bottom: 50px;" v-if="response">
     <!--商品详情主图-->
     <div>
       <img class="main_banner" :src="response.goodsImage">
@@ -134,6 +134,7 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId}),
           success(response) {
+            
             if(response.data){
               ts.response = response.data;
               ts.overTimes = response.data.overTime;
@@ -331,6 +332,10 @@
     font-size: 16px;
     color: #FFFFFF;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 640px;
   }
 
   .good_detail_imgs {

@@ -42,7 +42,6 @@
   import native from '../../../common/js/module/native.js';
   import util from '../../../common/js/module/util.js';
   import ua from '../../../common/js/module/ua.js';
-
   export default {
     props: {
       response: {
@@ -102,6 +101,7 @@
           dataType: 'json',
           data: {},
           success(response) {
+            
             ts.list = response;
           },
           error(error) {

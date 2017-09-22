@@ -123,6 +123,7 @@ new Vue({
           js_wx_info: 1,
         }),
         success(response) {
+          common.checkRedirect(response);
           ts.response = response;
         },
         error(error) {

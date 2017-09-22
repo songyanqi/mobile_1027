@@ -77,8 +77,9 @@
           <span v-else>
           <!--没有其他好友给他助力呢-->
           <span v-if="response.supporter.supporterPrice == '0'">
-           <div class="ast_bigtxt">轻轻一点为TA赢得商品0元购</div>
+           <div class="ast_bigtxt" style="padding: 0.49rem 0 0.2rem;">轻轻一点为TA赢得商品0元购</div>
             <div class="share_btn bd_r" @click="assistance">给TA助力  我赢iPhone8</div>
+            <div class="ast_txt" style="font-size: 0.1rem;line-height: 0.14rem;padding-top: 0.06rem;">助力后即刻抽奖</div>
           </span>
           <!--已经得到好友的助力-->
           <span v-else>
@@ -184,8 +185,7 @@
   import share from '../../../common/js/module/share.js';
   import {Swiper, SwiperItem} from 'vux'
   import login from '../../../common/js/module/login.js';
-
-  login.needLogin();
+//  login.needLogin();
   export default {
     props: {},
     data() {
@@ -276,6 +276,7 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
+            
             ts.goodsdata = response.data;
             ts.deltime();
           },
@@ -298,6 +299,7 @@
        * */
       shares: function () {
         var ts = this;
+        login.needLogin();
         ts.sharecallback();
         share.callShare();
       },
@@ -306,6 +308,7 @@
        * */
       assistance: function () {
         var that = this;
+        login.needLogin();
         if (that.visitor_status != 3) {
           popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
           return;
@@ -318,6 +321,7 @@
           dataType: 'json',
           data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
           success(response) {
+            
             if (response.data.code == '200') {
               popup.toast("助力成功");
               that.response.supporter.isHelp = 1;
@@ -350,6 +354,7 @@
             dataType: 'json',
             data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
             success(response) {
+              
               if (!response.code) {
                 if (response.data.lotteryResult == 'success') {
                   that.awd_type = 2
@@ -524,10 +529,10 @@
     border-radius: 0.04rem;
     margin: 0 auto;
     position: relative;
-    /*z-index: 1;*/
+    z-index: 1;
     > img {
       position: absolute;
-      /*z-index: 3;*/
+      z-index: 1;
     }
     > img:nth-of-type(1) {
       width: 0.87rem;
