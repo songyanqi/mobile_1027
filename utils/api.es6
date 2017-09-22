@@ -1,6 +1,7 @@
 var axios = require("axios");
 var crypto = require('crypto')
 require('es6-promise').polyfill();
+import util from "./utils.es6"
 let strSign =  (obj) => {
   let strObj = sortObj(obj)
   var str = ''
@@ -16,12 +17,12 @@ let sortObj = (obj) => {
   let t = null
   let tValue = null
   let arrKey = ['shop_url','sess_key','device_token','format','ts','osv','wh','data_version']
-  var osv = "web_h5_*_*";
+  var osv = "web_h5_"+util.utils.getAppVersion_new()+"_*";
   if(window.Units&&Units.isApp()&&Units.isIOS()){
-    osv = "web_ios_*_*";
+    osv = "web_ios_"+util.utils.getAppVersion_new()+"_*";
   }
   if(window.Units&&Units.isApp()&&Units.isAndroid()){
-      osv = "web_android_*_*";
+      osv = "web_android_"+util.utils.getAppVersion_new()+"_*";
   }
   let arrValue = [location.href.split("/").slice(0,3).join("/"), document.cookie.split(';').filter(function(x){return x.indexOf("dvdsid")>-1})[0]?document.cookie.split(';').filter(function(x){return x.indexOf("dvdsid")>-1})[0].split("=")[1]:0, "", 'json', new Date().getTime(), osv, '750_1334', 0]
   if (obj){

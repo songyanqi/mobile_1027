@@ -359,6 +359,7 @@
     border-radius:200px;
     top: -0.14rem;
     left: -0.76rem;
+    box-sizing: border-box;
     transform: scale(0.5);
   }
   .list_margin{

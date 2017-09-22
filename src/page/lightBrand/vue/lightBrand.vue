@@ -48,10 +48,10 @@
             </div>
 
             <div class="list_need" v-if="item.isCompleted==-1">还需<span v-text="remainLight[index]"></span>人点亮</div>
-            <div class="list_need" v-if="item.isCompleted==1">已有<span v-text="item.lightNum"></span>人点亮</div>
+            <div class="list_need" v-if="item.isCompleted==1">已有<span v-text="haveCount[index]"></span>人点亮</div>
 
 
-            <div class="list_margin" v-if="isLighted[index]!=1" @click.stop="light(item.bandId,index,$event)">
+            <div class="list_margin" v-if="isLighted[index]!=1" @click.stop="light(item.bandId,index,item.isCompleted)">
               <div class="list_border"></div>
               <div class="list_button">
                 <div class="btn" >
@@ -120,8 +120,10 @@
           isShow:0,
           remainLight:[],
           styleObject:{},
+          haveCount:[],
           isApp:util.utils.isApp(),
-          animateArr:[]
+          animateArr:[],
+          appVersion:util.utils.getAppVersion_new()
         }
     },
 
@@ -179,13 +181,19 @@
       initNeedCount(data){
         var that=this;
         data.map(function (item) {
-          console.log(item.remainLight);
           that.remainLight.push(item.remainLight);
         });
+        data.map(function (item) {
+          that.haveCount.push(item.lightNum);
+        });
       },
-      changeNeedCount(index){
-        if(this.remainLight[index]>0){
-          Vue.set(this.remainLight,index,this.remainLight[index]-1);
+      changeNeedCount(index,isCompleted){
+        if(isCompleted==-1){
+          if(this.remainLight[index]>0){
+            Vue.set(this.remainLight,index,this.remainLight[index]-1);
+          }
+        }else if(isCompleted==1){
+          Vue.set(this.haveCount,index,this.haveCount[index]+1);
         }
       },
       changeIsLighted(index){
@@ -196,7 +204,7 @@
         Vue.set(this.animateArr,index,1);
         //变异方法
       },
-      light(bandId,index,ev){
+      light(bandId,index,isCompleted){
         var that=this;
         var obj={
             "bandId":bandId
@@ -210,7 +218,7 @@
                   that.changeIsLighted(index);
                 },100);
                 setTimeout(function(){
-                  that.changeNeedCount(index);
+                  that.changeNeedCount(index,isCompleted);
                 },600);
               }else{
                 if(result.data.msg){
@@ -484,6 +492,7 @@
     top: -0.14rem;
     left: -0.76rem;
     transform: scale(0.5);
+    box-sizing: border-box;
   }
   .list_margin{
     width: 1.52rem;

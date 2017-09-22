@@ -1,7 +1,6 @@
 <template>
   <!--底部菜单栏-->
   <div class="com-footer" v-if="!isDvdApp">
-    ::{{ active }}::
     <div class="btns">
       <a class="btn" :class="{active: active == 'home'?true:false }" href="/" :style="styleList['btn1']">
         <div class="pic-title">
@@ -18,7 +17,7 @@
         </div>
       </a>
 
-      <a class="btn" v-if="btnList[2]" :style="styleList['btn3']" :href="styleList['showUrl']">
+      <a class="btn" v-if="btnList[2]" style="z-index: 1;" :style="styleList['btn3']" :href="styleList['showUrl']">
         <img class="pic" :src="useSkinPackageImg(btnList[2],'',1)" v-if="active == 'activity'">
         <img class="pic" :src="useSkinPackageImg(btnList[2],'',0)" v-else>
       </a>
@@ -172,6 +171,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 50px;
     background: white;
     font-size: 0;
     max-width: $pageMaxWidth;

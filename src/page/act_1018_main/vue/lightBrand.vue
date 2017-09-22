@@ -45,9 +45,10 @@
             <span class="start_value2" v-text="item.highDiscount"></span>
           </div>
 
-          <div class="list_need">还需<span v-text="need[index]"></span>人点亮</div>
+          <div class="list_need" v-if="item.isCompleted==-1">还需<span v-text="need[index]"></span>人点亮</div>
+          <div class="list_need" v-if="item.isCompleted==1">已有<span v-text="haveCount[index]"></span>人点亮</div>
 
-          <div class="list_margin" v-if="lightArr[index]!=1" @click.stop="light(item.bandId,index,$event)">
+          <div class="list_margin" v-if="lightArr[index]!=1" @click.stop="light(item.bandId,index,item.isCompleted)">
             <div class="list_border"></div>
             <div class="list_button">
               <div class="btn" >
@@ -93,7 +94,8 @@
         need:this.returnCount(),
         isApp:util.utils.isApp(),
         animateArr:[],
-        isLighted:[]
+        isLighted:[],
+        haveCount:this.returnHaveCount()
       }
     },
     computed:{
@@ -126,13 +128,24 @@
         });
         return arr;
       },
+      returnHaveCount(){
+        var arr=[];
+        this.response.map(function (item,index) {
+          arr.push(item.isCompleted);
+        });
+        return arr;
+      },
       changeIsLighted(index){
         Vue.set(this.lightArr,index,1);
         //变异方法
       },
-      changeNeedCount(index){
-        if(this.need[index]>0){
-          Vue.set(this.need,index,this.need[index]-1);
+      changeNeedCount(index,isCompleted){
+        if(isCompleted==-1){
+          if(this.need[index]>0){
+            Vue.set(this.need,index,this.need[index]-1);
+          }
+        }else if(isCompleted==1){
+          Vue.set(this.haveCount,index,this.haveCount[index]+1);
         }
         //变异方法
       },
@@ -140,7 +153,7 @@
         Vue.set(this.animateArr,index,1);
         //变异方法
       },
-      light(bandId,index){
+      light(bandId,index,isCompleted){
         var that=this;
         var obj={
             "bandId":bandId
@@ -154,7 +167,7 @@
                   that.changeIsLighted(index);
                 },100);
                 setTimeout(function(){
-                  that.changeNeedCount(index);
+                  that.changeNeedCount(index,isCompleted);
                 },600);
               }else{
                 if(result.data.msg){
@@ -427,6 +440,7 @@
     border-radius:200px;
     top: -0.14rem;
     left: -0.76rem;
+    box-sizing: border-box;
     transform: scale(0.5);
   }
   .list_margin{
