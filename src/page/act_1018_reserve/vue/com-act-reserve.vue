@@ -219,6 +219,7 @@
       handleJump(url) {
         this.isapp = this.isApp();
         if (this.isapp) {
+          event.preventDefault();
           native.Browser.open({
             url: url
           });
@@ -229,6 +230,7 @@
         }
       },
   		handleList(e,item,index) {
+        alert(345);
         let shopUrl = `/${item.goodsId}.html`;
         this.handleJump(shopUrl);
   		},

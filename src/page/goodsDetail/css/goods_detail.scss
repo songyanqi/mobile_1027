@@ -2460,6 +2460,17 @@ $crossBord: #FF4A7D;
     }
   }
   .goods_bottom_wrapper {
+    .preSaleTips {
+      line-height: 20px;
+      width: 100%;
+      max-width: 640px;
+      box-sizing: border-box;
+      padding: 10px;
+      background: rgba(102,102,102,.95);
+      color: #fff;
+      font-size: 14px;
+      position: relative;
+    }
     .preTips {
       position: fixed;
       z-index: 10;
@@ -2476,7 +2487,7 @@ $crossBord: #FF4A7D;
     .preSaleArrow {
       position: relative;
     }
-    .preTips:after {
+    .preSaleTips:after,.preTips:after {
       content: " ";
       display: inline-block;
       height: 10px;
