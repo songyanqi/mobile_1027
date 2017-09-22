@@ -31,7 +31,7 @@
 
         <!--倒计时-->
         <div class="count-down" style="display: none;"
-             :style="{display: response ? null : 'none', top: topics[0].content.top || null, left: topics[0].content.left || null}">
+             :style="{display: response ? null : 'none', top: topics[0].content && topics[0].content.top || null, left: topics[0].content && topics[0].content.left || null}">
           <div class="title">活动开始倒计时</div>
           <div class="boxes">
             <span class="box">
