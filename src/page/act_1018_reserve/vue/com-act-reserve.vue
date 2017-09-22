@@ -63,6 +63,7 @@
       text-overflow: ellipsis;
       color: #666;
       font-size: 12px;
+      height: 28px;
       margin: 10px 10px 0 10px;
       line-height: 14px;
     }
@@ -118,8 +119,8 @@
     <!-- 列表 -->
     <div class = "bookCont clearfix">
   		<div class = "bookList" v-for = "(item,index) in singleList" @click = "handleList($event, item, index)">
-  			<div class = "bookImg" data-id = "item.linkUrl">
-  				<img data-id = "item.linkUrl" v-lazy="'http://pic.davdian.com/supplier/2017/06/20/1000_1000_e1a9869947141510a8743e6c002553c1.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/format,webp'">
+  			<div class = "bookImg">
+  				<img v-lazy="item.imageUrl">
   			</div>
   			<div class = "bookName">{{ item.goodsName }}</div>
   			<div class = "bookPrice"><span class = "f12">¥ </span>{{ item.shopPrice }}</div>
@@ -181,7 +182,22 @@
           })
         },
         deep: true
-      }
+      },
+      // singleList: {
+      //   handler() {
+      //     this.singleList.map((item,index) => {
+      //       let imageIdx = item.imageUrl.indexOf(".jpg")+4;
+      //       if (imageIdx == -1) {
+      //         imageIdx = item.imageUrl.indexOf(".png")+4;
+      //       }
+      //       if (imageIdx == -1) {
+      //         imageIdx = item.imageUrl.indexOf(".jpeg")+5;
+      //       }
+      //       item.imageUrl = item.imageUrl.substr(0,imageIdx);
+      //     })
+      //   },
+      //   deep: true,
+      // }
   	},
   	methods: {
       isApp() {
