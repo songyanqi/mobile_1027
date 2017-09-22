@@ -3,7 +3,9 @@
     <!--呼朋唤友省更多-->
     <div v-if="response.type == '0'" class="title_img">
       <img style="width:1.8rem;" src="//pic.davdian.com/free/20170915_assistance/huhaoyou2.png">
-      <div class="dtime" v-if="goodsdata.goods.overTime">{{goodsdata.goods.overTime | formatRemainTime}}</div>
+      <div class="dtime" v-if="goodsdata.goods.overTime != '' || goodsdata.goods.overTime != '0'">
+        {{goodsdata.goods.overTime | formatRemainTime}}
+      </div>
       <div class="qiqiu_ing">
         <img src="//pic.davdian.com/free/20170915_assistance/qiqiu.png">
         <img src="//pic.davdian.com/free/20170915_assistance/bangbangtang.png">
@@ -12,7 +14,7 @@
     <!--助好友0元购-->
     <div v-if="response.type == '1'" class="title_img">
       <img style="width: 2.57rem;" src="//pic.davdian.com/free/20170915_assistance/zhuhaoyou.png">
-      <div class="dtime" v-if="goodsdata.goods.overTime">距助力结束：{{goodsdata.goods.overTime | formatRemainTime}}</div>
+      <div class="dtime" v-if="goodsdata.goods.overTime != '' || goodsdata.goods.overTime != '0'">距助力结束：{{goodsdata.goods.overTime | formatRemainTime}}</div>
       <div class="friend_mark">
         <div>
           <img :src="response.supporter.imageUrl" alt="">
@@ -48,17 +50,18 @@
       <!--助力者页面按钮信息-->
       <section v-if="response.type == '1'">
         <!--助力活动结束-->
-        <section v-if="!goodsdata.goods.overTime">
+        <section v-if="goodsdata.goods.overTime == '' || goodsdata.goods.overTime == '0'">
           <div class="ast_txt" style="padding:0.68rem 0 0.12rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
           <a href="/act_1018_main.html" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</a>
         </section>
         <section v-else>
           <!--进页面的时候已经助力过了-->
-          <span v-if="response.supporter.isHelp">
+          <span v-if="response.supporter.isHelp == '1'">
             <div class="ast_bigtxt">本次助力帮TA省了<span
               style="font-size:0.24rem">{{response.supporter.friendsPrice}}</span>元</div>
             <div class="ast_bigtxt"
-                 style="padding-top:0.1rem;">TA共得到好友{{response.supporter.supporterPrice}}元助力<span v-if="response.supporter.rate">，战胜了{{response.supporter.rate}}%的人</span></div>
+                 style="padding-top:0.1rem;">TA共得到好友{{response.supporter.supporterPrice}}元助力<span
+              v-if="response.supporter.rate">，战胜了{{response.supporter.rate}}%的人</span></div>
             <div class="ast_txt" style="padding:0.1rem 0 0.2rem;">别忘啦，明天还可以帮好友助力哦</div>
             <!--展示抽奖-->
             <div class="awd_touch">
@@ -68,7 +71,8 @@
                  <div v-if="response.supporter.isPrizes == 1" class="awd_title">恭喜你被iPhone8砸中了</div>
                 <div v-if="response.supporter.isPrizes == 1" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
                 <!--没抽奖时候-->
-                <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd" @mousedown="start_awd"></com-scratch-card>
+                <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd"
+                                  @mousedown="start_awd"></com-scratch-card>
               </div>
             </div>
             <div style="height: 0.2rem;"></div>
@@ -81,11 +85,12 @@
             <div class="share_btn bd_r" @click="assistance">给TA助力  我赢iPhone8</div>
             <div class="ast_txt" style="font-size: 0.1rem;line-height: 0.14rem;padding-top: 0.06rem;">助力后即刻抽奖</div>
           </span>
-          <!--已经得到好友的助力-->
+            <!--已经得到好友的助力-->
           <span v-else>
            <!--获得0元购机会-->
             <span v-if="response.supporter.surplusPrice == '0'">
-              <div class="ast_bigtxt">TA已得到好友<span style="font-size:0.24rem">{{response.supporter.supporterPrice}}</span>元助力<span
+              <div class="ast_bigtxt">TA已得到好友<span
+                style="font-size:0.24rem">{{response.supporter.supporterPrice}}</span>元助力<span
                 v-if="response.supporter.rate">，<br>战胜{{response.supporter.rate}}%的人</span></div>
               <div class="ast_txt" style="padding-top:0.1rem;">获得10.18当天0元抢购的机会</div>
             </span>
@@ -106,15 +111,15 @@
       <!--发起者页面信息-->
       <span v-if="response.type == '0'">
         <!--助力活动结束-->
-        <section v-if="!goodsdata.goods.overTime">
+        <section v-if="goodsdata.goods.overTime == '' || goodsdata.goods.overTime == '0'">
           <div class="ast_txt" style="padding:0.68rem 0 0.32rem;">很遗憾没有得到好友的助力支持</div>
           <a :href="response.activityLink" class="share_btn bd_r" style="display: block;">立即抢购</a>
         </section>
         <section v-else>
           <!--获得0元购机会-->
           <span v-if="response.source.surplusPrice == '0'">
-              <div class="ast_deep">恭喜你获得10.18当天0元抢购的机会</div>
-              <div class="ast_bigtxt">得到好友的{{response.source.supporterPrice}}元助力<span
+              <div class="ast_deep" style="padding:0.49rem 0 0.08rem">恭喜你获得10.18当天0元抢购的机会</div>
+              <div class="ast_bigtxt" style="padding: 0;">得到好友的{{response.source.supporterPrice}}元助力<span
                 v-if="response.source.rate">，战胜了{{response.source.rate}}%的人</span></div>
               <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10月18日开抢 数量有限 先到先得!</div>
           </span>
@@ -130,7 +135,8 @@
             <!--已经得到好友的助力-->
           <span v-else>
             <div class="ast_bigtxt"
-                 style="padding-top:0.34rem;">得到好友的{{response.source.supporterPrice}}元助力<span v-if="response.source.rate">，战胜了{{response.source.rate}}%的人</span></div>
+                 style="padding-top:0.34rem;">得到好友的{{response.source.supporterPrice}}元助力<span
+              v-if="response.source.rate">，战胜了{{response.source.rate}}%的人</span></div>
             <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10.18当天购买只需{{response.source.surplusPrice}}元，继续召集好友助力得0元抢购，加油吧！</div>
             <div v-if="isApp" class="share_btn bd_r" @click="shares">喊人助力</div>
             <div v-if="isWx" class="share_btn bd_r">点击右上角“···”按钮分享</div>
@@ -142,7 +148,9 @@
     </div>
 
     <img class="table_brand" src="//pic.davdian.com/free/20170915_assistance/table_brand.png">
-    <a :href="'/ast_'+goodsdata.goods.goodsId+'.html'" v-if="response.type == '1' && goodsdata.goods.overTime" style="margin-bottom: 0.2rem;display: block" class="share_btn bd_p">我也想要商品0元购</a>
+    <!--助力结束和助力发起页不显示这个-->
+    <a :href="'/ast_'+goodsdata.goods.goodsId+'.html'" v-if="response.type == 1 && (goodsdata.goods.overTime != '' || goodsdata.goods.overTime != '0')"
+       style="margin-bottom: 0.2rem;display: block" class="share_btn bd_p">我也想要商品0元购</a>
     <!--获奖好友轮播-->
     <div class="loop_my_friend_reward" v-if="goodsdata.notice.length">
       <swiper loop auto height="60px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
@@ -175,7 +183,7 @@
     </div>
 
     <!--去主会场-->
-    <a v-if="goodsdata.goods.overTime" href="/act_1018_main.html" class="main_btn">10.18周年庆主会场</a>
+    <a v-if="goodsdata.goods.overTime != '' || goodsdata.goods.overTime != '0'" href="/act_1018_main.html" class="main_btn">10.18周年庆主会场</a>
   </div>
 </template>
 <script>
@@ -183,9 +191,10 @@
   import popup from '../../../common/js/module/popup.js';
   import ua from '../../../common/js/module/ua.js';
   import share from '../../../common/js/module/share.js';
+  import native from '../../../common/js/module/native.js';
   import {Swiper, SwiperItem} from 'vux'
   import login from '../../../common/js/module/login.js';
-//  login.needLogin();
+  //  login.needLogin();
   export default {
     props: {},
     data() {
@@ -228,6 +237,11 @@
                 ts.sharecallback();
               }
             });
+            setTimeout(function () {
+              native.custom.initHead({
+                'shareOnHead': '0'
+              });
+            }, 300);
           } catch (err) {
             console.error(err);
           }
@@ -276,7 +290,7 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
-            
+
             ts.goodsdata = response.data;
             ts.deltime();
           },
@@ -321,15 +335,15 @@
           dataType: 'json',
           data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
           success(response) {
-            
             if (response.data.code == '200') {
+//              that.response.supporter.isHelp = 1;
+//              that.response.supporter.friendsPrice = response.data.friendsPrice;
+//              that.response.supporter.supporterPrice = response.data.supporterPrice;
+//              that.response.supporter.surplusPrice = response.data.surplusPrice;
+//              that.response.supporter.rate = response.data.rate;
+              /*初始化数据*/
               popup.toast("助力成功");
-              that.response.supporter.isHelp = 1;
-              that.response.supporter.friendsPrice = response.data.friendsPrice;
-              that.response.supporter.supporterPrice = response.data.supporterPrice;
-              that.response.supporter.surplusPrice = response.data.surplusPrice;
-              that.response.supporter.rate = response.data.rate;
-
+              that.getData();
             } else if (response.data.code == '100') {
               popup.toast("每天只能助力一次哦");
             }
@@ -354,7 +368,7 @@
             dataType: 'json',
             data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
             success(response) {
-              
+
               if (!response.code) {
                 if (response.data.lotteryResult == 'success') {
                   that.awd_type = 2
@@ -734,6 +748,8 @@
           float: left;
           margin: 0.1rem;
           overflow: hidden;
+          position: relative;
+          z-index: 1;
           img {
             width: 100%;
           }
@@ -774,11 +790,11 @@
         content: "";
         display: block;
         position: absolute;
-        left: -50%;
-        width: 200%;
+        left: 0;
+        width: 100%;
         height: 1px;
         background: #FFFFFF;
-        transform: scale(0.5);
+        transform: scaleY(0.3);
         bottom: 0;
         z-index: 1;
       }
@@ -852,9 +868,11 @@
   html {
     height: 100%;
   }
+
   body {
     height: 100%;
   }
+
   .app {
     height: 100%;
   }
@@ -864,6 +882,7 @@
     display: block;
     clear: both;
   }
+
   .clearfix {
     zoom: 1;
   }
