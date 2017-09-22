@@ -4,9 +4,12 @@
 .app {
   //background: url(../img/head-bg.png) no-repeat top, linear-gradient(to bottom, #FF6288, #FF3857) 100px;
   background: url(../img/head-bg.png) no-repeat top, linear-gradient(
-      #FF6288 0, #FF5579 ptr(854),
-      #FFA000 ptr(854), #DD0311 ptr(1890),
-      #FF4363 ptr(1890), #FF3857 ptr(3000)
+      #FF6288 0,
+      #FF567A ptr(754),
+      #FFA000 ptr(954),
+      #DD0012 ptr(1790),
+      #FF4364 ptr(1990),
+      #FF3857 ptr(3000)
   );
   background-size: 100% auto;
   //background-size: 100% 100%;
@@ -26,6 +29,7 @@
   .g-top-placeholder {
     height: 44px;
     background: #FF6288;
+    display: none;
   }
 
   /*个人信息*/
@@ -468,7 +472,7 @@
               box-sizing: border-box;
               width: ptr(138);
               height: ptr(32);
-              line-height: ptr(38);
+              line-height: ptr(39);
               background: url(../img/lighten-target.png) no-repeat;
               background-size: 100%;
               font-size: ptr(12);

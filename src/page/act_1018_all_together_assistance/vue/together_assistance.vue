@@ -47,42 +47,42 @@
       <img src="//pic.davdian.com/free/20170915_assistance/bear.png">
       <!--助力者页面按钮信息-->
       <span v-if="response.type == '1'">
-        <!--已经助力过了-->
+        <!--进页面的时候已经助力过了-->
         <span v-if="response.supporter.isHelp">
           <div class="ast_bigtxt">本次助力帮TA省了<span
-            style="font-size:0.24rem">{{supporterData.supporterPrice}}</span>元</div>
+            style="font-size:0.24rem">{{response.supporter.friendsPrice}}</span>元</div>
           <div class="ast_bigtxt"
-               style="padding-top:0.1rem;">TA共得到好友{{supporterData.surplusPrice}}元助力<span v-if="response.source.rate">，战胜了{{response.source.rate}}%的人</span></div>
+               style="padding-top:0.1rem;">TA共得到好友{{response.supporter.supporterPrice}}元助力<span v-if="response.supporter.rate">，战胜了{{response.supporter.rate}}%的人</span></div>
           <div class="ast_txt" style="padding:0.1rem 0 0.2rem;">别忘啦，明天还可以帮好友助力哦</div>
           <!--展示抽奖-->
           <div class="awd_touch">
             <div class="awd_pre" :class="['awd_no','awd_yes'][response.supporter.isPrizes]">
-              <div v-if="awd_type == 0" class="awd_title"></div>
-              <div v-if="awd_type == 0" class="awd_tip"></div>
-              <div v-if="awd_type == 1" class="awd_title">很遗憾 未中奖</div>
-              <div v-if="awd_type == 1" class="awd_tip">明天助力再赢iPhone8吧</div>
-               <div v-if="awd_type == 2" class="awd_title">恭喜你被iPhone8砸中了</div>
-              <div v-if="awd_type == 2" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
+              <div v-if="awd_type == 0" class="awd_title">很遗憾 未中奖</div>
+              <div v-if="awd_type == 0" class="awd_tip">明天助力再赢iPhone8吧</div>
+               <div v-if="awd_type == 1" class="awd_title">恭喜你被iPhone8砸中了</div>
+              <div v-if="awd_type == 1" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
               <!--没抽奖时候-->
               <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd" @mousedown="start_awd"></com-scratch-card>
             </div>
           </div>
           <div style="height: 0.2rem;"></div>
         </span>
+        <!--进页面时候还没有助力-->
         <span v-else>
-          <!--没有好友助力呢-->
-          <span v-if="response.source.isSupporter == '0'">
+          <!--没有其他好友给他助力呢-->
+          <span v-if="response.supporter.isSupporter == '0'">
            <div class="ast_bigtxt">轻轻一点为TA赢得商品0元购</div>
             <div class="share_btn bd_r" @click="assistance">给TA助力  我赢iPhone8</div>
           </span>
           <!--已经得到好友的助力-->
           <span v-else>
            <!--获得0元购机会-->
-            <span v-if="response.source.surplusPrice == '0'">
-              <div class="ast_bigtxt">TA已得到好友<span style="font-size:0.24rem">{{response.source.supporterPrice}}</span>元助力<span
-                v-if="response.source.rate">，<br>战胜{{response.source.rate}}%的人</span></div>
+            <span v-if="response.supporter.surplusPrice == '0'">
+              <div class="ast_bigtxt">TA已得到好友<span style="font-size:0.24rem">{{response.supporter.supporterPrice}}</span>元助力<span
+                v-if="response.supporter.rate">，<br>战胜{{response.supporter.rate}}%的人</span></div>
               <div class="ast_txt" style="padding-top:0.1rem;">获得10.18当天0元抢购的机会</div>
             </span>
+            <!--没有获得0元购-->
             <span v-else>
               <div class="ast_bigtxt" style="padding-top:0.34rem;">TA已得到好友<span
                 style="font-size: 0.24rem;">{{response.supporter.supporterPrice}}</span>元助力<span
@@ -94,6 +94,7 @@
         </span>
         </span>
       </span>
+
       <!--发起者页面信息-->
       <span v-if="response.type == '0'">
         <!--获得0元购机会-->
@@ -306,8 +307,12 @@
           success(response) {
             if (response.data.code == '200') {
               popup.toast("助力成功");
-              that.addsupporterPrice = true;
-              that.supporterData = response.data;
+              that.response.supporter.isHelp = 1;
+              that.response.supporter.friendsPrice = response.data.friendsPrice;
+              that.response.supporter.supporterPrice = response.data.supporterPrice;
+              that.response.supporter.surplusPrice = response.data.surplusPrice;
+              that.response.supporter.rate = response.data.rate;
+
             } else if (response.data.code == '100') {
               popup.toast("每天只能助力一次哦");
             }
