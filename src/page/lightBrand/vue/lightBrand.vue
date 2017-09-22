@@ -56,7 +56,7 @@
               <div class="list_border"></div>
               <div class="list_button">
                 <div class="btn" >
-                  <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" src="//pic.davdian.com/free/2017/09/19/gray.png" alt=""></span>
+                  <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" :style="{'transition-duration':'10s'}" src="//pic.davdian.com/free/2017/09/19/gray.png" alt=""></span>
                   <span class="gray">我要点亮</span>
                 </div>
               </div>
@@ -65,7 +65,7 @@
               <div class="list_border" :style="{'border':'0.5px solid #FF4A7D'}"></div>
               <div class="list_button">
                 <div class="btn">
-                  <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" src="//pic.davdian.com/free/2017/09/20/red.png" alt=""></span>
+                  <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" :style="{'transition-duration':'10s'}" src="//pic.davdian.com/free/2017/09/20/red.png" alt=""></span>
                   <span class="red">我已点亮</span>
                 </div>
               </div>

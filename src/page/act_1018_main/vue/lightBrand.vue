@@ -53,7 +53,7 @@
             <div class="list_border"></div>
             <div class="list_button">
               <div class="btn" >
-                <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" v-lazy="'//pic.davdian.com/free/2017/09/19/gray.png'"></span>
+                <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" :style="{'transition-duration':'10s'}" v-lazy="'//pic.davdian.com/free/2017/09/19/gray.png'"></span>
                 <span class="gray">我要点亮</span>
               </div>
             </div>
@@ -62,7 +62,7 @@
             <div class="list_border" :style="{'border':'0.5px solid #FF4A7D'}"></div>
             <div class="list_button">
               <div class="btn">
-                <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" v-lazy="'//pic.davdian.com/free/2017/09/20/red.png'"></span>
+                <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" :style="{'transition-duration':'10s'}" v-lazy="'//pic.davdian.com/free/2017/09/20/red.png'"></span>
                 <span class="red">我已点亮</span>
               </div>
             </div>
@@ -156,6 +156,9 @@
       },
       light(bandId,index,isCompleted){
         var that=this;
+        that.changeAnimateFn(index);
+        that.changeIsLighted(index);
+        that.changeNeedCount(index,isCompleted);
         var obj={
             "bandId":bandId
         };
@@ -163,13 +166,7 @@
           .then(function (result) {
             if(result.code==0){
               if(result.data.success==1){
-                that.changeAnimateFn(index);
-                setTimeout(function(){
-                  that.changeIsLighted(index);
-                },100);
-                setTimeout(function(){
-                  that.changeNeedCount(index,isCompleted);
-                },600);
+
               }else{
                 if(result.data.msg){
                   dialog.alert('code:'+result.code+":msg"+result.data.msg);
