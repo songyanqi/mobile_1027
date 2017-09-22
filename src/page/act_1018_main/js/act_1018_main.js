@@ -212,7 +212,7 @@ new Vue({
           data: {},
           success(response) {
             try {
-              if (topic.id == param.get('t1') || '14376') {
+              if (topic.id == (param.get('t1') || '14376')) {
                 response = JSON.parse(response);
               }
               topic.content = response;
@@ -223,6 +223,7 @@ new Vue({
             }
           },
           error(error) {
+            debugger
             console.error('ajax error:' + error.status + ' ' + error.statusText);
           }
         });
