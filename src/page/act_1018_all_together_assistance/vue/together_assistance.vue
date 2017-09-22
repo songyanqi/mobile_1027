@@ -77,8 +77,9 @@
           <span v-else>
           <!--没有其他好友给他助力呢-->
           <span v-if="response.supporter.supporterPrice == '0'">
-           <div class="ast_bigtxt">轻轻一点为TA赢得商品0元购</div>
+           <div class="ast_bigtxt" style="padding: 0.49rem 0 0.2rem;">轻轻一点为TA赢得商品0元购</div>
             <div class="share_btn bd_r" @click="assistance">给TA助力  我赢iPhone8</div>
+            <div class="ast_txt" style="font-size: 0.1rem;line-height: 0.14rem;padding-top: 0.06rem;">助力后即刻抽奖</div>
           </span>
           <!--已经得到好友的助力-->
           <span v-else>
@@ -524,10 +525,10 @@
     border-radius: 0.04rem;
     margin: 0 auto;
     position: relative;
-    /*z-index: 1;*/
+    z-index: 1;
     > img {
       position: absolute;
-      /*z-index: 3;*/
+      z-index: 1;
     }
     > img:nth-of-type(1) {
       width: 0.87rem;
