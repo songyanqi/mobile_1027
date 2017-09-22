@@ -70,12 +70,7 @@
                 </div>
               </div>
             </div>
-
-
-
-
           </div>
-
           <div class="list_bottom_complete" v-if="item.hotDay==1">
             <div class="list_end_complete">
               <img class="start2" src="//pic.davdian.com/free/2017/09/09/end_icon.png" alt="">
@@ -113,6 +108,7 @@
   import dialog from "../../../../utils/dialog.es6"
   import util from "../../../../utils/utils.es6"
   import native from "../../../../src/common/js/module/native.js"
+  import login from "../../../../src/common/js/module/login.js"
   export default{
     data(){
         return {
@@ -158,8 +154,17 @@
 
     },
     methods:{
-      animateFn(){
-
+      getStaus(){
+        var token=login.getDvdsid().substr(32,8);
+        if(token=="00000001"){
+          return 0;
+        }else{
+          if(token.substr(7,1)==1){
+            return 1;
+          }else{
+            return 3
+          }
+        }
       },
       go_detail(linkUrl){
         if(this.isApp){
@@ -206,45 +211,55 @@
         //变异方法
       },
       light(bandId,index,isCompleted){
+
         var that=this;
-        that.changeAnimateFn(index);
-        that.changeIsLighted(index);
-        that.changeNeedCount(index,isCompleted);
-        var obj={
+        if(this.getStaus()==0){
+          if (that.isApp) {
+            native.Account.login()
+          } else {
+            window.location.href = '/login.html?' + 'referer=' + encodeURIComponent(window.location.href)
+          }
+        }else {
+          that.changeAnimateFn(index);
+          that.changeIsLighted(index);
+          that.changeNeedCount(index,isCompleted);
+          var obj={
             "bandId":bandId
-        };
-        api("/api/mg/sale/bandLitUp/lightUp",obj)
-          .then(function (result) {
-            if(result.code==0){
-              if(result.data.success==1){
+          };
+          api("/api/mg/sale/bandLitUp/lightUp",obj)
+            .then(function (result) {
+              if(result.code==0){
+                if(result.data.success==1){
 
-              }else{
-                if(result.data.msg){
-                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
                 }else{
-                  dialog.alert('code:'+result.code);
+                  if(result.data.msg){
+                    dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                  }else{
+                    dialog.alert('code:'+result.code);
+                  }
+                }
+              }else{
+                if(result.code==30000){
+                  if (that.isApp){
+                    native.Account.login()
+                  }else {
+                    window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
+                  }
+
+                }else{
+                  if(result.data.msg){
+                    dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                  }else{
+                    dialog.alert('code:'+result.code);
+                  }
                 }
               }
-            }else{
-              if(result.code==30000){
-                if (that.isApp){
-                  native.Account.login()
-                }else {
-                  window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
-                }
-
-              }else{
-                if(result.data.msg){
-                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
-                }else{
-                  dialog.alert('code:'+result.code);
-                }
-              }
-            }
-          })
-          .catch(function (e) {
+            })
+            .catch(function (e) {
 //          dialog.alert(e);
-          })
+            })
+        }
+
       }
 //      autoFontSize(){
 //        var html=$("html").css("fontSize").replace("px","");

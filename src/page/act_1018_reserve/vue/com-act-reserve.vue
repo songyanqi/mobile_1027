@@ -1,6 +1,7 @@
 <style  lang="sass"  rel="stylesheet/scss">
   @import "../../../common/css/common.scss";
   .reserve {
+    margin-top: 10px;
     .clearfix:after {
       display: block;
       clear: both;
@@ -28,6 +29,9 @@
       bottom: -12px;
       border-bottom: 2px solid #ff4a7d;
     }
+    .bookCont {
+      padding: 5px 5px 0 5px;
+    }
     .bookNav {
       // display: -webkit-box;
       // display: -webkit-flex;
@@ -42,7 +46,8 @@
       // flex: 1;
       background: #fff;
       box-radius: 5px;
-      margin: 10px 5px; 
+      margin: 5px 5px; 
+      overflow: hidden;
     }
     .bookImg {
       width: 100%;

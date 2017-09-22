@@ -47,27 +47,29 @@
       <img src="//pic.davdian.com/free/20170915_assistance/bear.png">
       <!--助力者页面按钮信息-->
       <span v-if="response.type == '1'">
-        <!--展示抽奖-->
-        <span v-if="addsupporterPrice">
-          <div class="ast_bigtxt">本次助力帮TA省了<span style="font-size:0.24rem">{{supporterData.supporterPrice}}</span>元</div>
+        <!--已经助力过了-->
+        <span v-if="response.supporter.isHelp">
+          <div class="ast_bigtxt">本次助力帮TA省了<span
+            style="font-size:0.24rem">{{response.supporter.friendsPrice}}</span>元</div>
           <div class="ast_bigtxt"
-               style="padding-top:0.1rem;">TA共得到好友{{supporterData.surplusPrice}}元助力<span v-if="response.source.rate">，战胜了{{response.source.rate}}%的人</span></div>
+               style="padding-top:0.1rem;">TA共得到好友{{response.supporter.supporterPrice}}元助力<span v-if="response.supporter.rate">，战胜了{{response.supporter.rate}}%的人</span></div>
           <div class="ast_txt" style="padding:0.1rem 0 0.2rem;">别忘啦，明天还可以帮好友助力哦</div>
+          <!--展示抽奖-->
           <div class="awd_touch">
-            <div :class="['awd_pre','awd_no','awd_yes'][awd_type]">
-              <div v-if="awd_type == 0" class="awd_title"></div>
-              <div v-if="awd_type == 0" class="awd_tip"></div>
-              <div v-if="awd_type == 1" class="awd_title">很遗憾 未中奖</div>
-              <div v-if="awd_type == 1" class="awd_tip">明天助力再赢iPhone8吧</div>
-               <div v-if="awd_type == 2" class="awd_title">恭喜你被iPhone8砸中了</div>
-              <div v-if="awd_type == 2" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
-              <com-scratch-card @touchstart="start_awd" @mousedown="start_awd"></com-scratch-card>
+            <div class="awd_pre" :class="['awd_no','awd_yes'][response.supporter.isPrizes]">
+              <div v-if="awd_type == 0" class="awd_title">很遗憾 未中奖</div>
+              <div v-if="awd_type == 0" class="awd_tip">明天助力再赢iPhone8吧</div>
+               <div v-if="awd_type == 1" class="awd_title">恭喜你被iPhone8砸中了</div>
+              <div v-if="awd_type == 1" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
+              <!--没抽奖时候-->
+              <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd" @mousedown="start_awd"></com-scratch-card>
             </div>
           </div>
+          <div style="height: 0.2rem;"></div>
         </span>
         <span v-else>
           <!--没有好友助力呢-->
-          <span v-if="response.source.isSupporter == '0'">
+          <span v-if="response.supporter.isSupporter == '0'">
            <div class="ast_bigtxt">轻轻一点为TA赢得商品0元购</div>
             <div class="share_btn bd_r" @click="assistance">给TA助力  我赢iPhone8</div>
           </span>
@@ -75,12 +77,14 @@
           <span v-else>
            <!--获得0元购机会-->
             <span v-if="response.source.surplusPrice == '0'">
-              <div class="ast_bigtxt">TA已得到好友<span style="font-size:0.24rem">{{response.source.supporterPrice}}</span>元助力<span v-if="response.source.rate">，<br>战胜{{response.source.rate}}%的人</span></div>
+              <div class="ast_bigtxt">TA已得到好友<span style="font-size:0.24rem">{{response.supporter.supporterPrice}}</span>元助力<span
+                v-if="response.supporter.rate">，<br>战胜{{response.supporter.rate}}%的人</span></div>
               <div class="ast_txt" style="padding-top:0.1rem;">获得10.18当天0元抢购的机会</div>
             </span>
             <span v-else>
               <div class="ast_bigtxt" style="padding-top:0.34rem;">TA已得到好友<span
-                style="font-size: 0.24rem;">{{response.supporter.supporterPrice}}</span>元助力<span v-if="response.supporter.rate">，战胜了{{response.supporter.rate}}%的人</span></div>
+                style="font-size: 0.24rem;">{{response.supporter.supporterPrice}}</span>元助力<span
+                v-if="response.supporter.rate">，战胜了{{response.supporter.rate}}%的人</span></div>
               <div class="ast_txt" style="padding: 0.1rem 0 0.04rem;">帮TA再接再厉赢得商品0元购 ！</div>
               <div class="share_btn bd_r" @click="assistance">给TA助力  我赢iPhone8</div>
               <div class="ast_txt" style="font-size: 0.1rem;line-height: 0.14rem;padding-top: 0.06rem;">助力后即刻抽奖</div>
@@ -93,7 +97,8 @@
         <!--获得0元购机会-->
         <span v-if="response.source.surplusPrice == '0'">
             <div class="ast_deep">恭喜你获得10.18当天0元抢购的机会</div>
-            <div class="ast_bigtxt">得到好友的{{response.source.supporterPrice}}元助力<span v-if="response.source.rate">，战胜了{{response.source.rate}}%的人</span></div>
+            <div class="ast_bigtxt">得到好友的{{response.source.supporterPrice}}元助力<span
+              v-if="response.source.rate">，战胜了{{response.source.rate}}%的人</span></div>
             <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10月18日开抢 数量有限 先到先得!</div>
         </span>
         <!--没有获得0元购机会-->
@@ -123,7 +128,7 @@
        style="margin-bottom: 0.2rem;display: block" class="share_btn bd_p">我也想要商品0元购</a>
     <!--获奖好友轮播-->
     <div class="loop_my_friend_reward" v-if="goodsdata.notice.length">
-      <swiper auto height="60px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
+      <swiper loop auto height="60px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
         <swiper-item v-for="notice in goodsdata.notice">
           <div class="swiperItem">
             <div>
@@ -163,6 +168,7 @@
   import share from '../../../common/js/module/share.js';
   import {Swiper, SwiperItem} from 'vux'
   import login from '../../../common/js/module/login.js';
+
   login.needLogin();
   export default {
     props: {},
@@ -178,15 +184,15 @@
         goodsdata: null,
         visitor_status: null,
         addsupporterPrice: null,
-        supporterData:null, //助力结果数据
-        awd_type:0,
-        start_awd_al:false //是否已经刮奖过
+        supporterData: null, //助力结果数据
+        awd_type: 0,
+        start_awd_al: false //是否已经刮奖过
       }
     },
     components: {
       Swiper,
       SwiperItem,
-      'com-scratch-card':require('../../../component/com-scratch-card.vue')
+      'com-scratch-card': require('../../../component/com-scratch-card.vue')
     },
     computed: {},
     watch: {
@@ -202,7 +208,7 @@
               "desc": '好友助力随机减钱，助力越多越省钱',
               "imgUrl": "http://pic.davdian.com/free/20170915_assistance/assistance.png",
               "link": location.href,
-              success:function () {
+              success: function () {
                 ts.sharecallback();
               }
             });
@@ -298,8 +304,11 @@
           success(response) {
             if (response.data.code == '200') {
               popup.toast("助力成功");
-              that.addsupporterPrice = true;
-              that.supporterData = response.data;
+              that.response.supporter.isHelp = 1;
+              that.response.supporter.friendsPrice = response.data.supporterPrice;
+              that.response.supporter.supporterPrice = response.data.surplusPrice;
+              that.response.supporter.rate = response.data.rate;
+
             } else if (response.data.code == '100') {
               popup.toast("每天只能助力一次哦");
             }
@@ -312,9 +321,9 @@
       /***
        * 刮奖
        * */
-      start_awd:function () {
-        var that =this;
-        if(!that.start_awd_al){
+      start_awd: function () {
+        var that = this;
+        if (!that.start_awd_al) {
           that.start_awd_al = true;
           $.ajax({
             cache: false,
@@ -324,10 +333,10 @@
             dataType: 'json',
             data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
             success(response) {
-              if(!response.code){
-                if(response.data.lotteryResult == 'success'){
+              if (!response.code) {
+                if (response.data.lotteryResult == 'success') {
                   that.awd_type = 2
-                }else{
+                } else {
                   that.awd_type = 1
                 }
               }
@@ -349,7 +358,7 @@
           url: this.moke + '/api/mg/sale/userhelpbuy/userShareGoods?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
-          data: encrypt({goodsId: that.goodsId,shareUserId:that.shareUserId}),
+          data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
           success() {
 
           },
@@ -402,16 +411,13 @@
     background: -webkit-gradient(linear, top top, bottom bottom, from(#F54B74), to(#FF9F8F));
     background: -webkit-linear-gradient(top, #F54B74, #FF9F8F);
     background: linear-gradient(to bottom, #F54B74, #FF9F8F);
-    width: 100%;
-    overflow-y: scroll;
-    position: fixed;
-    top: 44px;
-    bottom: 0;
     max-width: 640px;
+    height: 100%;
+    overflow: scroll;
   }
 
   .title_img {
-    margin-top: 0.3rem;
+    padding-top: 0.3rem;
     text-align: center;
     overflow: hidden;
     img {
@@ -501,18 +507,17 @@
     border-radius: 0.04rem;
     margin: 0 auto;
     position: relative;
-    z-index: 1;
-    padding-bottom: 0.2rem;
-    >img {
+    /*z-index: 1;*/
+    > img {
       position: absolute;
-      z-index: 3;
+      /*z-index: 3;*/
     }
-    >img:nth-of-type(1) {
+    > img:nth-of-type(1) {
       width: 0.87rem;
       right: 0.1rem;
       top: -0.04rem;
     }
-    >img:nth-of-type(2) {
+    > img:nth-of-type(2) {
       width: 0.7rem;
       bottom: -0.3rem;
       left: -0.1rem;
@@ -774,7 +779,8 @@
     display: block;
     border-radius: 0.04rem;
   }
-  .awd_touch{
+
+  .awd_touch {
     background-image: url("//pic.davdian.com/free/20170915_assistance/awbg.png");
     width: 3.35rem;
     height: 0.76rem;
@@ -782,38 +788,61 @@
     background-size: 100%;
     background-repeat: no-repeat;
     overflow: hidden;
-    >div{
-      width:2.95rem;
+    > div {
+      width: 2.95rem;
       height: 0.66rem;
-      color:#FFFFFF;
+      color: #FFFFFF;
       text-align: center;
       margin: 0.07rem 0 0 0.2rem;
       overflow: hidden;
-      >div{
-        width:2.95rem;
+      > div {
+        width: 2.95rem;
         height: 0.66rem;
         top: -0.54rem;
       }
-      .awd_title{
+      .awd_title {
         font-size: 0.2rem;
         height: 0.28rem;
         line-height: 0.28rem;
         margin-top: 0.12rem;
       }
-      .awd_tip{
+      .awd_tip {
         font-size: 0.1rem;
         height: 0.14rem;
         line-height: 0.14rem;
       }
     }
   }
-  .awd_pre{
+
+  .awd_pre {
     background-color: #FFFFFF;
   }
-  .awd_no{
+
+  .awd_no {
     background-color: #FF9E9E;
   }
-  .awd_yes{
+
+  .awd_yes {
     background-color: #FF5353;
+  }
+</style>
+<style>
+  html {
+    height: 100%;
+  }
+  body {
+    height: 100%;
+  }
+  .app {
+    height: 100%;
+  }
+
+  .clearfix:before, .clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  .clearfix {
+    zoom: 1;
   }
 </style>
