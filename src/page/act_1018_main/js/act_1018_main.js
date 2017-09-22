@@ -84,14 +84,15 @@ new Vue({
           setTimeout(playVideo, 1000);
         }
 
-        $(document).on('click', 'a', function (event) {
-          if (ua.isDvdApp()) {
+        // app跳转打开新webview
+        if (ua.isDvdApp()) {
+          $(document).on('click', 'a', function (event) {
             event.preventDefault();
             native.Browser.open({
               url: `${this.href}`,
             });
-          }
-        });
+          });
+        }
 
         // alert(document.querySelector('.gif'));
         // alert(document.querySelector('video'));
@@ -211,7 +212,7 @@ new Vue({
           data: {},
           success(response) {
             try {
-              if (topic.id == param.get('t1') || '14376') {
+              if (topic.id == (param.get('t1') || '14376')) {
                 response = JSON.parse(response);
               }
               topic.content = response;
@@ -222,6 +223,7 @@ new Vue({
             }
           },
           error(error) {
+            debugger
             console.error('ajax error:' + error.status + ' ' + error.statusText);
           }
         });

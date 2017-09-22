@@ -83,6 +83,16 @@ new Vue({
         } catch (err) {
           console.error(err);
         }
+
+        // app跳转打开新webview
+        if (ua.isDvdApp()) {
+          $(document).on('click', 'a', function (event) {
+            event.preventDefault();
+            native.Browser.open({
+              url: `${this.href}`,
+            });
+          });
+        }
       });
     }
   },

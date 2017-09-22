@@ -216,13 +216,11 @@
     content: "";
     display: block;
     background-color: #DDDDDD;
-    -webkit-transform: scale(0.5) translateX(280px);
-    -ms-transform: scale(0.5) translateX(280px);
-    transform: scale(0.5) translateX(280px);
+    transform: scaleY(0.5) translateX(0.9rem);
     position: absolute;
-    left: -50%;
-    width: 200%;
-    height: 0.01rem;
+    right: 0;
+    width: 100%;
+    height: 1px;
     bottom: 0;
     z-index: 1;
   }
@@ -483,7 +481,6 @@
 
   .com-popup-base .table-cell .box div:nth-of-type(1) {
     font-size: 14px;
-    color: #666666;
     text-align: center;
     padding: 12px 0;
     position: relative;
@@ -491,7 +488,6 @@
 
   .com-popup-base .table-cell .box div:nth-of-type(2) {
     font-size: 14px;
-    color: #333333;
     text-align: left;
     line-height: 20px;
     padding-top: 5px;
