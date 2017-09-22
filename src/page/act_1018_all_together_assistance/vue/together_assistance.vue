@@ -410,10 +410,11 @@
     background: linear-gradient(to bottom, #F54B74, #FF9F8F);
     max-width: 640px;
     height: 100%;
+    overflow: scroll;
   }
 
   .title_img {
-    margin-top: 0.3rem;
+    padding-top: 0.3rem;
     text-align: center;
     overflow: hidden;
     img {
@@ -503,10 +504,10 @@
     border-radius: 0.04rem;
     margin: 0 auto;
     position: relative;
-    z-index: 1;
+    /*z-index: 1;*/
     > img {
       position: absolute;
-      z-index: 3;
+      /*z-index: 3;*/
     }
     > img:nth-of-type(1) {
       width: 0.87rem;
