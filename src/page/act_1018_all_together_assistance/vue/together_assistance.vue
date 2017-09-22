@@ -110,7 +110,7 @@
           <div class="ast_bigtxt"
                style="padding-top:0.34rem;">得到好友的{{response.source.supporterPrice}}元助力<span v-if="response.source.rate">，战胜了{{response.source.rate}}%的人</span></div>
           <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10.18当天购买只需{{response.source.surplusPrice}}元，继续召集好友助力得0元抢购，加油吧！</div>
-          <div v-if="isApp" class="share_btn bd_r">喊人助力</div>
+          <div v-if="isApp" class="share_btn bd_r" @click="shares">喊人助力</div>
           <div v-if="isWx" class="share_btn bd_r">点击右上角“···”按钮分享</div>
           <div v-if="!isWx && !isApp" class="share_btn bd_r" @click="gowxorapp">喊人助力</div>
         </span>
