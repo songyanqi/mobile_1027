@@ -427,14 +427,7 @@
         return format;
       },
       formatDate(now) {
-        now = new Date(now / 1000);
-        let year = now.getYear();
-        let month = now.getMonth() + 1;
-        let date = now.getDate();
-        let hour = now.getHours();
-        let minute = now.getMinutes();
-        let second = now.getSeconds();
-        return "20" + year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second;
+        return new Date(parseInt(now) * 1000).toLocaleString().replace(/下午/g, "").replace("/", "-").replace("/", "-")
       }
     },
   }

@@ -38,10 +38,10 @@
           <div class="progress_info" v-html="lis.activityMessage">
           </div>
           <a class="remain_btns">
-            <a class="panic_buying_btn" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>
-            <a class="panic_buying_btn yellows" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>
-            <a class="panic_buying_btn big_1018" href="javascript:void(0)" v-if="lis.activityButton == '10.18当日0元抢'">{{lis.activityButton}}
-            </a>
+            <a class="panic_buying_btn" @click="activebtn(lis.activityLink)" href="javascript:void(0)">{{lis.activityButton}}</a>
+            <!--<a class="panic_buying_btn" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>-->
+            <!--<a class="panic_buying_btn yellows" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>-->
+            <!--<a class="panic_buying_btn big_1018" href="javascript:void(0)" v-if="lis.activityButton == '10.18当日0元抢'">{{lis.activityButton}}</a>-->
           </a>
         </li>
       </ul>
