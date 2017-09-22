@@ -56,16 +56,17 @@
               <div class="list_border"></div>
               <div class="list_button">
                 <div class="btn" >
-                  <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" :style="{'transition-duration':'10s'}" src="//pic.davdian.com/free/2017/09/19/gray.png" alt=""></span>
+                  <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" :style="{'transition-duration':'10s'}" src="//pic.davdian.com/free/2017/09/20/red2.png" alt=""></span>
                   <span class="gray">我要点亮</span>
                 </div>
               </div>
             </div>
+
             <div class="list_margin" v-if="isLighted[index]==1">
-              <div class="list_border" :style="{'border':'0.5px solid #FF4A7D'}"></div>
+              <div class="list_border" :style="{'background':'#FF6F97'}"></div>
               <div class="list_button">
                 <div class="btn">
-                  <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" :style="{'transition-duration':'10s'}" src="//pic.davdian.com/free/2017/09/20/red.png" alt=""></span>
+                  <span><img :class="{'animated':animateArr[index]==1,'bounceIn':animateArr[index]==1}" :style="{'transition-duration':'10s'}" src="//pic.davdian.com/free/2017/09/20/new.png" alt=""></span>
                   <span class="red">我已点亮</span>
                 </div>
               </div>
@@ -510,7 +511,7 @@
     width: 3.04rem;
     height: 0.56rem;
     position: absolute;
-    border: 1px solid #DDDDDD;
+    border: 1px solid #FF4A7D;
     border-radius:200px;
     top: -0.14rem;
     left: -0.76rem;
@@ -537,7 +538,7 @@
   .btn img{
     width: 0.18rem;
     height: 0.18rem;
-    margin-top: 0.05rem;
+    margin-top: 0.03rem;
     margin-right: 0.06rem;
   }
   .btn>span{
@@ -547,11 +548,11 @@
     line-height: 0.28rem;
   }
   .gray{
-    color:#666666;
+    color:#FF4A7D;
     font-size: 12px;
   }
   .red{
-    color:#FF4A7D;
+    color:#FFFFFF;
     font-size: 12px;
   }
 

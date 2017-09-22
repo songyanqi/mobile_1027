@@ -104,10 +104,15 @@
       text-align: center;
       padding: 10px 0;
     }
+    .reserveHead {
+      width: 100%;
+      vertical-align: top;
+    }
   }
 </style>
 <template>
 	<div class = "reserve">
+    <div><img class = "reserveHead" src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/goodsDetail/reserve_header.png"></div>
 		<!-- 头部 -->
 		<div class="swiper-container">
       <div class="swiper-wrapper">
