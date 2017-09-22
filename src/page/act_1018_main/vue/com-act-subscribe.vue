@@ -39,6 +39,9 @@
 <script>
   import encrypt from '../../../common/js/module/encrypt.js';
   import date from '../../../common/js/module/date.js';
+  import native from '../../../common/js/module/native.js';
+  import util from '../../../common/js/module/util.js';
+  import ua from '../../../common/js/module/ua.js';
 
   export default {
     props: {
@@ -85,10 +88,16 @@
     methods: {
       getData() {
         let ts = this;
+
+        // 测试数据
+        setTimeout(function(){
+          ts.list = require('../json/act-subscribe.json');
+        }, 1000);
+
         $.ajax({
           cache: false,
           async: true,
-          url: `http://18686604386.davdian.com/t-14537.html?_=${Date.now()}`,
+          url: `${location.protocol}//${util.getSecondDomain()}.davdian.com/t-14537.html?_=${Date.now()}`,
           type: 'get',
           dataType: 'json',
           data: {},
@@ -97,7 +106,6 @@
           },
           error(error) {
             console.error('ajax error:' + error.status + ' ' + error.statusText);
-//            ts.list = require('../json/act-subscribe.json');
           }
         });
       },
@@ -110,16 +118,22 @@
       },
       /** 商品点击 */
       goodsClick(goodsId) {
+        let url = '';
         if (this.currentDate < '2017-10-19') {
-          location.href = '/act_1018_main_subscribe.html';
+          url = '/act_1018_main_subscribe.html';
         } else {
-          location.href = '/' + goodsId + '.html';
+          url = '/' + goodsId + '.html';
+        }
+        // 跳转
+        if (ua.isDvdApp()) {
+          event.preventDefault();
+          native.Browser.open({
+            url: url,
+          });
+        } else {
+          location.href = url;
         }
       },
-      /** '预约更多单品'点击 */
-      moreClick() {
-        location.href = '/act_1018_main_subscribe.html';
-      }
     },
     filters: {}
     ,

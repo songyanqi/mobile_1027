@@ -107,20 +107,20 @@
               // top-title向上滑出
               ts.classObject['animate-show'] = false;
               ts.classObject['animate-hide'] = true;
-//              upOutSwitcher = false;
-//              setTimeout(function () {
-//                upOutSwitcher = true;
-//              }, 500);
+              upOutSwitcher = false;
+              setTimeout(function () {
+                upOutSwitcher = true;
+              }, 50);
             }
             // 页面向上滚动
           } else if (downInSwitcher && y - lastY < -0) {
             // top-title向下滑入
             ts.classObject['animate-show'] = true;
             ts.classObject['animate-hide'] = false;
-//            downInSwitcher = false;
-//            setTimeout(function () {
-//              downInSwitcher = true;
-//            }, 500);
+            downInSwitcher = false;
+            setTimeout(function () {
+              downInSwitcher = true;
+            }, 50);
           }
           lastY = document.body.scrollTop;
         }, false);
