@@ -26,6 +26,7 @@
   .g-top-placeholder {
     height: 44px;
     background: #FF6288;
+    display: none;
   }
 
   /*个人信息*/
@@ -468,7 +469,7 @@
               box-sizing: border-box;
               width: ptr(138);
               height: ptr(32);
-              line-height: ptr(38);
+              line-height: ptr(39);
               background: url(../img/lighten-target.png) no-repeat;
               background-size: 100%;
               font-size: ptr(12);

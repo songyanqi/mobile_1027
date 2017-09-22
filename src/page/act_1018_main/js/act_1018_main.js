@@ -84,6 +84,18 @@ new Vue({
           setTimeout(playVideo, 1000);
         }
 
+        $(document).on('click', 'a', function (event) {
+          if (ua.isDvdApp()) {
+            event.preventDefault();
+            native.Browser.open({
+              url: `${this.href}`,
+            });
+          }
+        });
+
+        // alert(document.querySelector('.gif'));
+        // alert(document.querySelector('video'));
+
         // var options = {};
         //
         // var player = videojs('aaa', options, function onPlayerReady() {
@@ -187,10 +199,11 @@ new Vue({
       let ts = this;
       for (let i in ts.topics) {
         let topic = ts.topics[i];
+        let url = `${location.protocol}//${util.getSecondDomain()}.davdian.com/t-${topic.id}.html?_=${Date.now()}`;
         $.ajax({
           cache: false,
           async: true,
-          url: `${location.protocol}//${util.getSecondDomain()}.davdian.com/t-${topic.id}.html?_=${Date.now()}`,
+          url: url,
           // url: `http://18686604386.vyohui.cn/t-9919.html?_=${Date.now()}`,
           // url: `http://18686604386.bravetime.net/t-13451.html?_=${Date.now()}`,
           type: 'get',

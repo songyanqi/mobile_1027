@@ -11,6 +11,7 @@ import encrypt from '../../../common/js/module/encrypt.js';
 import param from '../../../common/js/module/param.js';
 import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
+import ua from '../../../common/js/module/ua.js';
 import login from '../../../common/js/module/login.js';
 import date from '../../../common/js/module/date.js';
 import native from '../../../common/js/module/native.js';
@@ -33,6 +34,7 @@ new Vue({
       date: date,
       isBuyer: login.isBuyer(),
       isSeller: login.isSeller(),
+      ua: ua,
     }
   },
   computed: {
