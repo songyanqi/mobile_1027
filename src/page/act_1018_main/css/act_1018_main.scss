@@ -1,5 +1,9 @@
 @import "../../../common/css/common.scss";
 
+body {
+  padding-top: 0 !important;
+}
+
 .app {
   padding-bottom: 51px;
   min-height: ptr(600);
