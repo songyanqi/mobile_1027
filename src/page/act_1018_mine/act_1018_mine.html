@@ -191,7 +191,7 @@
                 <!--2017-10-18之前-->
                 <template v-if="currentDate < '2017-10-18'">
                   <!--已达标-->
-                  <template v-if="item.isCompleted === '1'">
+                  <template v-if="item.isCompleted === '1' || item.isCompleted === 1">
                     <div class="ok"></div>
                     <i class="v-line b"></i>
                     <div class="target">{{item.highDiscount}}</div>
