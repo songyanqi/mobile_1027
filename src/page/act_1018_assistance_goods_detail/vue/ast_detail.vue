@@ -134,6 +134,7 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId}),
           success(response) {
+            common.checkRedirect(response);
             if(response.data){
               ts.response = response.data;
               ts.overTimes = response.data.overTime;

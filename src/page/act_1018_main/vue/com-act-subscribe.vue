@@ -102,6 +102,7 @@
           dataType: 'json',
           data: {},
           success(response) {
+            common.checkRedirect(response);
             ts.list = response;
           },
           error(error) {

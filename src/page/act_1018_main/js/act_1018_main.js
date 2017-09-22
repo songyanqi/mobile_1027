@@ -182,6 +182,7 @@ new Vue({
           js_wx_info: 1,
         }),
         success(response) {
+          common.checkRedirect(response);
           ts.response = response;
           // 刷新页面
           ts.$forceUpdate();
@@ -211,6 +212,7 @@ new Vue({
           dataType: 'text',
           data: {},
           success(response) {
+            common.checkRedirect(response);
             try {
               if (topic.id == (param.get('t1') || '14376')) {
                 response = JSON.parse(response);

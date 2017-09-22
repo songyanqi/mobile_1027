@@ -256,6 +256,7 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
+            common.checkRedirect(response);
             ts.response = response.data;
             ts.visitor_status = response.visitor_status;
             /*助力发起和助力者title变化*/
@@ -277,6 +278,7 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
+            common.checkRedirect(response);
             ts.goodsdata = response.data;
             ts.deltime();
           },
@@ -319,6 +321,7 @@
           dataType: 'json',
           data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
           success(response) {
+            common.checkRedirect(response);
             if (response.data.code == '200') {
               popup.toast("助力成功");
               that.response.supporter.isHelp = 1;
@@ -351,6 +354,7 @@
             dataType: 'json',
             data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
             success(response) {
+              common.checkRedirect(response);
               if (!response.code) {
                 if (response.data.lotteryResult == 'success') {
                   that.awd_type = 2
