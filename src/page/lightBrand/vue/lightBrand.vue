@@ -206,6 +206,9 @@
       },
       light(bandId,index,isCompleted){
         var that=this;
+        that.changeAnimateFn(index);
+        that.changeIsLighted(index);
+        that.changeNeedCount(index,isCompleted);
         var obj={
             "bandId":bandId
         };
@@ -213,13 +216,7 @@
           .then(function (result) {
             if(result.code==0){
               if(result.data.success==1){
-                that.changeAnimateFn(index);
-                setTimeout(function(){
-                  that.changeIsLighted(index);
-                },100);
-                setTimeout(function(){
-                  that.changeNeedCount(index,isCompleted);
-                },600);
+
               }else{
                 if(result.data.msg){
                   dialog.alert('code:'+result.code+":msg"+result.data.msg);
