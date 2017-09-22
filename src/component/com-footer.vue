@@ -1,5 +1,6 @@
 <template>
   <!--底部菜单栏-->
+  ::{{ active }}::
   <div class="com-footer" v-if="!isDvdApp">
     <div class="btns">
       <a class="btn" :class="{active: active == 'home'?true:false }" href="/" :style="styleList['btn1']">
@@ -17,7 +18,7 @@
         </div>
       </a>
 
-      <a class="btn" v-if="btnList[2]" style="z-index: 1;" :style="styleList['btn3']" :href="styleList['showUrl']">
+      <a class="btn" v-if="btnList[2]" style="z-index: 1;" :style="styleList['btn3']" :href="styleList[active != 'activity'?'showUrl':'1.html']">
         <img class="pic" :src="useSkinPackageImg(btnList[2],'',1)" v-if="active == 'activity'">
         <img class="pic" :src="useSkinPackageImg(btnList[2],'',0)" v-else>
       </a>
