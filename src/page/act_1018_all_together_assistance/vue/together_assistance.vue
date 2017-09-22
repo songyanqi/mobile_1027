@@ -185,9 +185,7 @@
   import share from '../../../common/js/module/share.js';
   import {Swiper, SwiperItem} from 'vux'
   import login from '../../../common/js/module/login.js';
-  // 基础模块
-  import common from '../../../common/js/common.js';
-  login.needLogin();
+//  login.needLogin();
   export default {
     props: {},
     data() {
@@ -257,7 +255,6 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
-            common.checkRedirect(response);
             ts.response = response.data;
             ts.visitor_status = response.visitor_status;
             /*助力发起和助力者title变化*/
@@ -279,7 +276,7 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
-            common.checkRedirect(response);
+            
             ts.goodsdata = response.data;
             ts.deltime();
           },
@@ -302,6 +299,7 @@
        * */
       shares: function () {
         var ts = this;
+        login.needLogin();
         ts.sharecallback();
         share.callShare();
       },
@@ -310,6 +308,7 @@
        * */
       assistance: function () {
         var that = this;
+        login.needLogin();
         if (that.visitor_status != 3) {
           popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
           return;
@@ -322,7 +321,7 @@
           dataType: 'json',
           data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
           success(response) {
-            common.checkRedirect(response);
+            
             if (response.data.code == '200') {
               popup.toast("助力成功");
               that.response.supporter.isHelp = 1;
@@ -355,7 +354,7 @@
             dataType: 'json',
             data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
             success(response) {
-              common.checkRedirect(response);
+              
               if (!response.code) {
                 if (response.data.lotteryResult == 'success') {
                   that.awd_type = 2

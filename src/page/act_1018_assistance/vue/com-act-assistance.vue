@@ -70,8 +70,6 @@
   </div>
 </template>
 <script>
-  // 基础模块
-  import common from '../../../common/js/common.js';
   import login from '../../../common/js/module/login.js';
   export default {
     props: {

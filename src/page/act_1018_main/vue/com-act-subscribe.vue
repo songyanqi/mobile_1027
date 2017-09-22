@@ -42,8 +42,6 @@
   import native from '../../../common/js/module/native.js';
   import util from '../../../common/js/module/util.js';
   import ua from '../../../common/js/module/ua.js';
-  // 基础模块
-  import common from '../../../common/js/common.js';
   export default {
     props: {
       response: {
@@ -103,7 +101,7 @@
           dataType: 'json',
           data: {},
           success(response) {
-            common.checkRedirect(response);
+            
             ts.list = response;
           },
           error(error) {
