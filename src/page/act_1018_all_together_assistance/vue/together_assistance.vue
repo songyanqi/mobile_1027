@@ -76,7 +76,7 @@
           <!--进页面时候还没有助力-->
           <span v-else>
           <!--没有其他好友给他助力呢-->
-          <span v-if="response.supporter.isSupporter == '0'">
+          <span v-if="response.supporter.supporterPrice == '0'">
            <div class="ast_bigtxt">轻轻一点为TA赢得商品0元购</div>
             <div class="share_btn bd_r" @click="assistance">给TA助力  我赢iPhone8</div>
           </span>
@@ -107,7 +107,7 @@
         <!--助力活动结束-->
         <section v-if="!goodsdata.goods.overTime">
           <div class="ast_txt" style="padding:0.68rem 0 0.32rem;">很遗憾没有得到好友的助力支持</div>
-          <a href="/act_1018_main.html" class="share_btn bd_r" style="display: block;">立即抢购</a>
+          <a :href="response.activityLink" class="share_btn bd_r" style="display: block;">立即抢购</a>
         </section>
         <section v-else>
           <!--获得0元购机会-->
@@ -120,7 +120,7 @@
           <!--没有获得0元购机会-->
           <span v-else>
           <!--没有好友助力呢-->
-          <span v-if="response.source.isSupporter == '0'">
+          <span v-if="response.source.supporterPrice == '0'">
             <div class="no_ast ast_txt" style="padding: 0.48rem 0 0.34rem;">还没有好友帮你助力，快去召集好友助力省钱吧！</div>
             <div v-if="isApp" class="share_btn bd_r" @click="shares">喊人助力</div>
             <div v-if="isWx" class="share_btn bd_r">点击右上角“···”按钮分享</div>
