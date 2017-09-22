@@ -47,22 +47,24 @@
       <img src="//pic.davdian.com/free/20170915_assistance/bear.png">
       <!--助力者页面按钮信息-->
       <span v-if="response.type == '1'">
-        <!--展示抽奖-->
-        <span v-if="addsupporterPrice">
+        <!--已经助力过了-->
+        <span v-if="response.supporter.isHelp">
           <div class="ast_bigtxt">本次助力帮TA省了<span
             style="font-size:0.24rem">{{supporterData.supporterPrice}}</span>元</div>
           <div class="ast_bigtxt"
                style="padding-top:0.1rem;">TA共得到好友{{supporterData.surplusPrice}}元助力<span v-if="response.source.rate">，战胜了{{response.source.rate}}%的人</span></div>
           <div class="ast_txt" style="padding:0.1rem 0 0.2rem;">别忘啦，明天还可以帮好友助力哦</div>
+          <!--展示抽奖-->
           <div class="awd_touch">
-            <div :class="['awd_pre','awd_no','awd_yes'][awd_type]">
+            <div class="awd_pre" :class="['awd_no','awd_yes'][response.supporter.isPrizes]">
               <div v-if="awd_type == 0" class="awd_title"></div>
               <div v-if="awd_type == 0" class="awd_tip"></div>
               <div v-if="awd_type == 1" class="awd_title">很遗憾 未中奖</div>
               <div v-if="awd_type == 1" class="awd_tip">明天助力再赢iPhone8吧</div>
                <div v-if="awd_type == 2" class="awd_title">恭喜你被iPhone8砸中了</div>
               <div v-if="awd_type == 2" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
-              <com-scratch-card @touchstart="start_awd" @mousedown="start_awd"></com-scratch-card>
+              <!--没抽奖时候-->
+              <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd" @mousedown="start_awd"></com-scratch-card>
             </div>
           </div>
           <div style="height: 0.2rem;"></div>
@@ -128,7 +130,7 @@
        style="margin-bottom: 0.2rem;display: block" class="share_btn bd_p">我也想要商品0元购</a>
     <!--获奖好友轮播-->
     <div class="loop_my_friend_reward" v-if="goodsdata.notice.length">
-      <swiper auto height="60px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
+      <swiper loop auto height="60px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
         <swiper-item v-for="notice in goodsdata.notice">
           <div class="swiperItem">
             <div>
