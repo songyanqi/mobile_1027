@@ -37,6 +37,7 @@
           color: white;
           &:first-of-type {
             font-size: ptr(18);
+            font-weight: 500;
           }
           &:last-of-type {
             padding-right: ptr(3);
@@ -136,6 +137,7 @@
           }
           .discount-price {
             font-size: ptr(20);
+            font-weight: 500;
             @include height(ptr(28));
           }
           .origin-price {
@@ -259,6 +261,9 @@
       background-image: url(../img/web-no-focus.png);
       .title {
         margin-top: ptr(190);
+      }
+      .text {
+        margin-top: ptr(8);
       }
     }
   }

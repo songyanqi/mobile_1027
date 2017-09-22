@@ -77,7 +77,7 @@
         <img class="qrcode" v-lazy="'[[static]]/page/act_1018_main_subscribe/img/qrcode.png'">
         <div class="qrcode-tip">长按扫描二维码，关注公众号</div>
       </div>
-      <div class="box web-focus" @click.stop v-if="tipType === 'web-focus'">
+      <div class="box web-focus" @click.stop>
         <div class="title">预约成功</div>
         <div class="text">活动开始前15分钟将在微信公众号中进行提醒</div>
         <div class="btn" @click="tipType = null;">确定</div>
