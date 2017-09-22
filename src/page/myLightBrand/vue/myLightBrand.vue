@@ -37,10 +37,10 @@
 
 
           <div class="list_margin">
-            <div class="list_border" :style="{'border':'0.5px solid #FF4A7D'}"></div>
+            <div class="list_border" :style="{'background':'#FF6F97'}"></div>
             <div class="list_button">
               <div class="btn">
-                <span><img src="//pic.davdian.com/free/2017/09/20/red.png" alt=""></span>
+                <span><img src="//pic.davdian.com/free/2017/09/20/new.png" alt=""></span>
                 <span class="red">我已点亮</span>
               </div>
             </div>
@@ -397,7 +397,7 @@
     line-height: 0.28rem;
   }
   .red{
-    color:#FF4A7D;
+    color:#FFFFFF;
     font-size: 12px;
   }
 </style>
