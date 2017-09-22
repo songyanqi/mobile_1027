@@ -40,7 +40,7 @@
           <div class="desc">{{item.recommendDesc}}</div>
           <div class="status">
             <template v-if="item.buttonName === '我要预约' || item.buttonName === '已设预约'">
-              {{item.bespeakNum}}人已预约<i></i>{{date.format(item.sTime + '000', 'MM.dd ')}}
+              {{item.bespeakNum}}人已预约<i></i>{{date.format(item.sTime + '000', 'MM月dd ')}}
               {{date.format(item.sTime + '000', 'hh').indexOf('0') === 0 ? date.format(item.sTime + '000', 'h') : date.format(item.sTime + '000', 'hh')}}点开抢
             </template>
             <template v-else-if="(item.buttonName === '等待抢购' || item.buttonName === '立即抢购') && item.sellNum > 0">
