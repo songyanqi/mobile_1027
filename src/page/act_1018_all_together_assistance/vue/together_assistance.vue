@@ -30,7 +30,7 @@
     </div>
 
     <!--商品信息-->
-    <div class="goods_info">
+    <a :href="goodsdata.goods.link" class="goods_info">
       <div class="goods_info_img">
         <img :src="goodsdata.goods.goodsImage" alt="">
       </div>
@@ -42,7 +42,7 @@
           class="price_symbol">￥</em><span>{{goodsdata.goods.activityPrice}}</span></span>
           <span class="membership_crown_pre"><em>￥</em>{{goodsdata.goods.goodsPrice}}</span></div>
       </div>
-    </div>
+    </a>
     <!--板-->
     <div class="rule_brand">
       <img src="//pic.davdian.com/free/20170915_assistance/rule.png">
@@ -499,6 +499,7 @@
     margin: 0 0.1rem 0.1rem;
     padding: 0.1rem;
     height: 0.8rem;
+    display: block;
     .goods_info_img {
       width: 0.8rem;
       height: 0.8rem;
