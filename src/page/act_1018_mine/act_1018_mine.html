@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="[[static]]/page/act_1018_mine/css/act_1018_mine.css[[v]]">
 </head>
 <body>
-<div class="app" :style="{background: error ? 'none' : null}">
+<div class="app" :style="{'background-image': error ? 'none' : null}">
   <!--标题-->
   <com-top-title title="我的10.18心愿单" home></com-top-title>
 
@@ -276,7 +276,7 @@
       <!--必败清单-->
       <div class="recommend" v-if="response.data.willBuy">
         <!--标题-->
-        <div class="title-type-2">必败清单</div>
+        <div class="title-type-2" @click="window.localStorage.clear();">必败清单</div>
         <!--双排列表-->
         <ul>
           <li v-for="(item, i) in response.data.willBuy">

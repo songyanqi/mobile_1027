@@ -110,6 +110,8 @@ new Vue({
   created() {
     this.getData();
   },
+  mounted() {
+  },
   methods: {
     /**
      * 接口名称:
