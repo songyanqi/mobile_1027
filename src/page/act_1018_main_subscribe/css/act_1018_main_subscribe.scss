@@ -37,6 +37,7 @@
           color: white;
           &:first-of-type {
             font-size: ptr(18);
+            font-weight: 500;
           }
           &:last-of-type {
             padding-right: ptr(3);
@@ -136,6 +137,7 @@
           }
           .discount-price {
             font-size: ptr(20);
+            font-weight: 500;
             @include height(ptr(28));
           }
           .origin-price {
@@ -211,7 +213,7 @@
       .text {
         margin-top: ptr(10);
         padding: 0 ptr(30);
-        color: #8D3737;
+        color: #9D5F5F;
         font-size: ptr(14);
         line-height: ptr(24);
       }

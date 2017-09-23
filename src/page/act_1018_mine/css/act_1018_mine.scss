@@ -3,9 +3,15 @@
 
 .app {
   //background: url(../img/head-bg.png) no-repeat top, linear-gradient(to bottom, #FF6288, #FF3857) 100px;
-  background: url(../img/head-bg.png) no-repeat top, linear-gradient(
-      #FF6288 0,
+  background: url(../img/head-bg-1.png) no-repeat top, linear-gradient(
+      /*#FF6288 0,
       #FF567A ptr(754),
+      #FFA000 ptr(954),
+      #DD0012 ptr(1790),
+      #FF4364 ptr(1990),
+      #FF3857 ptr(3000)*/
+      #EA426B 0,
+      #EA426B ptr(754),
       #FFA000 ptr(954),
       #DD0012 ptr(1790),
       #FF4364 ptr(1990),
@@ -205,7 +211,7 @@
         li {
           @include i-redpack-bg;
           margin: 0 ptr(4) ptr(10);
-          padding: 0 ptr(14);
+          padding: 0 ptr(5) 0 ptr(10);
           color: white;
           box-sizing: border-box;
           text-align: left;
@@ -223,17 +229,21 @@
               vertical-align: middle;
             }
             .symbol {
+              position: relative;
+              top: ptr(3);
               font-size: ptr(12);
               line-height: ptr(17);
             }
             .num {
-              margin-left: ptr(3);
+              margin-left: ptr(2);
               font-size: ptr(24);
               line-height: ptr(33);
               font-weight: bold;
             }
             .limit {
-              margin-left: ptr(9);
+              position: relative;
+              top: ptr(2);
+              margin-left: ptr(6);
               font-size: ptr(11);
               line-height: ptr(16);
             }

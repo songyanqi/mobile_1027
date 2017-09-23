@@ -60,7 +60,12 @@ new Vue({
 
         // 设置app头部标题栏
         native.custom.initHead({
-          shareOnHead: 1,
+          homeOnHead: 1,
+        });
+
+        // 设置app头部标题栏
+        native.custom.setHead({
+          title: document.title,
         });
 
         // 初始化轮播图
@@ -82,6 +87,16 @@ new Vue({
           });
         } catch (err) {
           console.error(err);
+        }
+
+        // app跳转打开新webview
+        if (ua.isDvdApp()) {
+          $(document).on('click', 'a', function (event) {
+            event.preventDefault();
+            native.Browser.open({
+              url: `${this.href}`,
+            });
+          });
         }
       });
     }
@@ -108,6 +123,7 @@ new Vue({
           js_wx_info: 1,
         }),
         success(response) {
+          common.checkRedirect(response);
           ts.response = response;
         },
         error(error) {

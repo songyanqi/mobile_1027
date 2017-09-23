@@ -69,6 +69,11 @@ body {
           font-size:ptr(12);
           color:#fff;
           line-height:ptr(17);
+
+          span {
+            display:inline-block;
+            padding-left:ptr(12);
+          }
         }
         li:not(:last-child) {
           padding-bottom:ptr(5);

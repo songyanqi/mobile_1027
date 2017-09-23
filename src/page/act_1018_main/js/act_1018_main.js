@@ -12,6 +12,7 @@ import param from '../../../common/js/module/param.js';
 import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
+import localCache from '../../../common/js/module/localCache.js';
 import util from '../../../common/js/module/util.js';
 import ua from '../../../common/js/module/ua.js';
 import native from '../../../common/js/module/native.js';
@@ -84,14 +85,15 @@ new Vue({
           setTimeout(playVideo, 1000);
         }
 
-        $(document).on('click', 'a', function (event) {
-          if (ua.isDvdApp()) {
+        // app跳转打开新webview
+        if (ua.isDvdApp()) {
+          $(document).on('click', 'a', function (event) {
             event.preventDefault();
             native.Browser.open({
               url: `${this.href}`,
             });
-          }
-        });
+          });
+        }
 
         // alert(document.querySelector('.gif'));
         // alert(document.querySelector('video'));
@@ -116,6 +118,12 @@ new Vue({
           shareOnHead: 1,
         });
 
+        // 设置app头部标题栏
+        native.custom.setHead({
+          title: document.title,
+          shareBtn: '1',
+        });
+
         // 开启10.18弹窗
         setTimeout(function () {
           ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
@@ -135,9 +143,24 @@ new Vue({
 
         // 设置分享信息
         try {
+          let title = null;
+          let desc = null;
+          if (ts.currentDate <= '2017-10-08') {
+            title = '大V店这次玩大啦！3周年庆必杀技提前大揭秘！';
+            desc = '大V店|3周年庆玩转全攻略，省钱有招，剁手不疼，快来助力0元抢牛听听>>';
+          } else if (ts.currentDate <= '2017-10-11') {
+            title = '最受欢迎的100个品牌贺3周年庆，这是要搞大事情！';
+            desc = '大V店周年庆|这次玩大了！点亮100个品牌，周年庆优惠由你定，快去参加>>';
+          } else if (ts.currentDate <= '2017-10-13') {
+            title = '这次玩的就是心跳！低倍通用券限量疯抢！提前预约牛货抢货无忧！';
+            desc = '大V店|拼手速抢低倍通用券！好货提前预约，再也不用担心抢不到牛货了>>';
+          } else {
+            title = '这！么！便宜！怪我咯？大V店3周年庆爆品预定火到爆炸！';
+            desc = '大V店|100款明星单品提前预定，预付10元定金最高可抵100元！划算到心花怒放';
+          }
           share.setShareInfo({
-            title: ts.response.data.shareTitle,
-            desc: ts.response.data.shareDesc,
+            title: title,
+            desc: desc,
             link: location.href,
             imgUrl: ts.response.data.shareImg
           });
@@ -181,7 +204,9 @@ new Vue({
           js_wx_info: 1,
         }),
         success(response) {
+          common.checkRedirect(response);
           ts.response = response;
+
           // 刷新页面
           ts.$forceUpdate();
         },
@@ -210,8 +235,9 @@ new Vue({
           dataType: 'text',
           data: {},
           success(response) {
+            common.checkRedirect(response);
             try {
-              if (topic.id == param.get('t1') || '14376') {
+              if (topic.id == (param.get('t1') || '14376')) {
                 response = JSON.parse(response);
               }
               topic.content = response;

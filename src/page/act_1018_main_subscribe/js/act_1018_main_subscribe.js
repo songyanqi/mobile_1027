@@ -171,6 +171,7 @@ new Vue({
           screenings: this.screenings,
         }),
         success(response) {
+          common.checkRedirect(response);
           callback(response);
         },
         error(error) {

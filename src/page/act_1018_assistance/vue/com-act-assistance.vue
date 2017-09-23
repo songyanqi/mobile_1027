@@ -5,13 +5,13 @@
       <div>
         <img src="//pic.davdian.com/free/20170915_assistance/ast_banners.png">
       </div>
-      <a href="javascript:void(0)" @click="check_rule"></a>
+      <span @click="check_rule"></span>
     </div>
     <!--滚动公告-->
     <div class="rool_tip">
       <div class="marguee">
         <div class="marguee_innder">
-          <p v-for="pr in response.notice">{{pr.message}}</p>
+          <p v-for="pr in notices">{{pr.message}}</p>
         </div>
       </div>
     </div>
@@ -38,13 +38,10 @@
           <div class="progress_info" v-html="lis.activityMessage">
           </div>
           <a class="remain_btns">
-            <a class="panic_buying_btn" @click="activebtn(lis.activityLink)" href="javascript:void(0)"
-               v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>
-            <a class="panic_buying_btn yellows" @click="activebtn(lis.activityLink)" href="javascript:void(0)"
-               v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>
-            <a class="panic_buying_btn big_1018" href="javascript:void(0)"
-               v-if="lis.activityButton == '10.18当天0元抢'">{{lis.activityButton}}
-            </a>
+            <a class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}" @click="activebtn(lis.activityLink)" href="javascript:void(0)">{{lis.activityButton}}</a>
+            <!--<a class="panic_buying_btn" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>-->
+            <!--<a class="panic_buying_btn yellows" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>-->
+            <!--<a class="panic_buying_btn big_1018" href="javascript:void(0)" v-if="lis.activityButton == '10.18当日0元抢'">{{lis.activityButton}}</a>-->
           </a>
         </li>
       </ul>
@@ -71,7 +68,6 @@
 </template>
 <script>
   import login from '../../../common/js/module/login.js';
-
   export default {
     props: {
       response: {
@@ -85,7 +81,23 @@
       }
     },
     components: {},
-    computed: {},
+    computed: {
+      notices:function () {
+        var that = this;
+        if(that.response.notice) {
+          if (that.response.notice.length < 100) {
+            var announcementData = [];
+            announcementData = that.response.notice;
+            let nums = 100 - that.response.notice.length;
+            for (var i = 0; i < nums; i++) {
+              announcementData.push(that.response.notice[i])
+            }
+            that.response.notice = announcementData;
+            return that.response.notice;
+          }
+        }
+      }
+    },
     watch: {
 
     },
@@ -93,20 +105,20 @@
 
     },
     mounted() {
-      var that = this;
-      setTimeout(function () {
-        if(that.response.notice){
-          if (that.response.notice.length < 100) {
-            let announcementData = [];
-            announcementData = that.response.notice;
-            let nums = 100 - that.response.notice.length;
-            for (var i = 0; i < nums; i++) {
-              announcementData.push(that.response.notice[i])
-            }
-            that.response.notice = announcementData;
-          }
-        }
-      },1000);
+//      var that = this;
+//      setTimeout(function () {
+//        if(that.response.notice){
+//          if (that.response.notice.length < 100) {
+//            var announcementData = [];
+//            announcementData = that.response.notice;
+//            let nums = 100 - that.response.notice.length;
+//            for (var i = 0; i < nums; i++) {
+//              announcementData.push(that.response.notice[i])
+//            }
+//            that.response.notice = announcementData;
+//          }
+//        }
+//      },1000);
     },
     methods: {
       /***
@@ -141,7 +153,7 @@
     min-height: 0.2rem;
     position: relative;
     margin-bottom: 0.1rem;
-    a {
+    span {
       position: absolute;
       bottom: 14%;
       right: 18%;
@@ -216,13 +228,11 @@
     content: "";
     display: block;
     background-color: #DDDDDD;
-    -webkit-transform: scale(0.5) translateX(280px);
-    -ms-transform: scale(0.5) translateX(280px);
-    transform: scale(0.5) translateX(280px);
+    transform: scaleY(0.5) translateX(0.9rem);
     position: absolute;
-    left: -50%;
-    width: 200%;
-    height: 0.01rem;
+    right: 0;
+    width: 100%;
+    height: 1px;
     bottom: 0;
     z-index: 1;
   }
@@ -483,7 +493,6 @@
 
   .com-popup-base .table-cell .box div:nth-of-type(1) {
     font-size: 14px;
-    color: #666666;
     text-align: center;
     padding: 12px 0;
     position: relative;
@@ -491,7 +500,6 @@
 
   .com-popup-base .table-cell .box div:nth-of-type(2) {
     font-size: 14px;
-    color: #333333;
     text-align: left;
     line-height: 20px;
     padding-top: 5px;

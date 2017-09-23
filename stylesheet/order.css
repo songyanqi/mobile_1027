@@ -2571,6 +2571,8 @@ body.orderDetail, body.orderDelivery {
   padding-left: 10px;
   padding-right: 10px;
   display: flex;
+  width: 100%;
+  box-sizing: border-box;
   font-size: 12px;
   line-height: 17px;
   padding-bottom: 10px;
