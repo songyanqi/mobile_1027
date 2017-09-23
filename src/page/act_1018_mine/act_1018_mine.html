@@ -125,18 +125,18 @@
                 <img class="goods-pic" v-lazy="item.goodsImage">
                 <div class="info">
                   <div class="assist" v-if="parseInt(item.surplusPrice) === 0">
-                    <template v-if="currentDate <= '2017-10-18'">已获得{{item.havePrice}}元助力1018当天0元购</template>
+                    <template v-if="currentDate < '2017-10-18'">已获得{{item.havePrice}}元助力1018当天0元购</template>
                     <template v-else>已获得0元购的机会快去下单！</template>
                   </div>
                   <div class="assist" v-else-if="parseInt(item.havePrice) > 0">
-                    <template v-if="currentDate <= '2017-10-18'">
+                    <template v-if="currentDate < '2017-10-18'">
                       已获{{item.havePrice}}元助力
                       <div class="less">{{item.surplusPrice}}元省钱购</div>
                     </template>
                     <template v-else>已获得0元购的机会快去下单！</template>
                   </div>
                   <div class="no-assist" v-else-if="parseInt(item.havePrice) === 0">
-                    <template v-if="currentDate <= '2017-10-18'">还没获得好友助力继续加油吧</template>
+                    <template v-if="currentDate < '2017-10-18'">还没获得好友助力继续加油吧</template>
                     <template v-else>没有获得助力，还是要抢购</template>
                   </div>
                 </div>
