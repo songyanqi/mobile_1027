@@ -39,15 +39,15 @@
           <div v-if="lis.buttonType == 2 || lis.buttonType == 1" class="progress_info" v-html="lis.activityMessage"></div>
           </div>
           <a class="remain_btns">
-            <a class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}" @click="activebtn(lis.activityLink)" href="javascript:void(0)">{{lis.activityButton}}</a>
+            <div class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}" @click="activebtn(lis.activityLink)">{{lis.activityButton}}</div>
           </a>
         </li>
       </ul>
     </div>
     <!--查看规则-->
-    <div v-if="rule_form" class="com-popup-base">
+    <div v-if="rule_form" class="com-popup-base" @click="rule_form = false">
       <div class="table-cell">
-        <div v-show="rule_form" class="box">
+        <div v-show="rule_form" class="box" @click.stop="events">
           <div>助力规则</div>
           <div>
             <p>1.助力时间：2017.10.01 00:00:00-2017.10.17 23:59:59；</p>
@@ -118,6 +118,9 @@
       activebtn: function (url) {
         login.needLogin();
         location.href = url;
+      },
+      events:function () {
+
       }
     },
     filters: {}
@@ -157,9 +160,7 @@
   }
 
   .remain_btns {
-    a {
-      display: block;
-    }
+
   }
 
   .f_l {

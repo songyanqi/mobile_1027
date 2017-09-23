@@ -191,7 +191,7 @@
     </div>
 
     <!--去主会场-->
-    <a v-if="response.actType != 2" href="/act_1018_main.html" class="main_btn">10.18周年庆主会场</a>
+    <div v-if="response.actType != 2" @click="a_link('/act_1018_main.html')" class="main_btn">10.18周年庆主会场</div>
   </div>
 </template>
 <script>
@@ -411,6 +411,19 @@
           }
         });
       },
+      /***
+       * 跳转
+       * */
+      a_link:function (url) {
+        if(ua.isDvdApp()){
+          event.preventDefault();
+          native.Browser.open({
+            url:url
+          })
+        }else{
+          location.href = url
+        }
+      }
     },
     filters: {
       /***
