@@ -38,6 +38,7 @@ new Vue({
       isBuyer: login.isBuyer(),
       isSeller: login.isSeller(),
       ua: ua,
+      error: false
     }
   },
   computed: {
@@ -132,6 +133,7 @@ new Vue({
         error(error) {
           // ts.response = require('../json/act_1018_mine.json');
           console.error('ajax error:' + error.status + ' ' + error.statusText);
+          ts.error = true;
         }
       });
     },

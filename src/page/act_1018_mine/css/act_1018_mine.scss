@@ -403,6 +403,12 @@
             line-height: ptr(18);
             @include ellipsis;
           }
+          .discount {
+            margin-top: ptr(3);
+            font-size: ptr(11);
+            line-height: ptr(16);
+            @include ellipsis;
+          }
         }
       }
     }
@@ -714,6 +720,29 @@
           }
         }
       }
+    }
+  }
+  .g-error {
+    padding-top: ptr(150);
+    text-align: center;
+    img {
+      @include square(ptr(120));
+    }
+    .text {
+      margin-top: ptr(20);
+      color: #666666;
+      font-size: ptr(14);
+      line-height: ptr(20);
+    }
+    .btn {
+      margin-top: ptr(20);
+      display: inline-block;
+      width: ptr(195);
+      @include height(ptr(40));
+      background: linear-gradient(to right, #FF5C5C, #FA1862);
+      border-radius: 100px;
+      font-size: ptr(14);
+      color: white;
     }
   }
 }
