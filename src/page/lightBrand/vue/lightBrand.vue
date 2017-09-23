@@ -9,15 +9,13 @@
           <div class="banner_rute"></div>
           <div class="banner_rute2"></div>
         </div>
-        <div class="rute_title">点亮规则</div>
         <div class="rute_list">
-          <div class="rute_1">1. 10.18周年庆期间(10.18-10.22),为了回馈我们的妈妈们,品牌活动优惠力度由大家点亮来决定。</div>
-          <div class="rute_1">2. 每个品牌都设定了最高优惠的指定点亮人数,达到最高人数即可享最高优惠。</div>
+          <div class="rute_1">每个品牌都设定了最高优惠力度和目标点亮人数，达到目标点亮人数的品牌将在10.18周年庆期间享最高优惠力度</div>
         </div>
       </div>
       <div class="all_list">
 
-        <div class="list" v-for="(item,index) in dataList">
+        <div class="list" v-for="(item,index) in dataList" :class="{'light':item.isCompleted==1}">
           <div class="list_b_img" @click.stop="go_detail(item.linkUrl)">
             <img :src="item.bandPic" alt="">
           </div>
@@ -279,12 +277,12 @@
   }
   .banner{
     width: 3.75rem;
-    height: 2.75rem;
+    height: 2rem;
     position:relative;
   }
   .big_img img{
     width: 3.75rem;
-    height: 2.75rem;
+    height: 2rem;
   }
   .banner_title{
     font-size:25px;
@@ -305,14 +303,14 @@
     top: 0.6rem;
   }
   .banner_r{
-    height: 1.24rem;
+    height: 0.6rem;
     width: 3.45rem;
     position: absolute;
     top: 1rem;
     left:0.15rem;
   }
   .banner_rute{
-    height: 1.24rem;
+    height: 0.6rem;
     background: #FFFFFF;
     opacity:0.15;
     color:#FFFFFF;
@@ -324,10 +322,10 @@
     left:0;
   }
   .banner_rute2{
-    height: 2.48rem;
+    height: 1.2rem;
     width: 6.89rem;
     position: absolute;
-    top: -0.63rem;
+    top: -0.3rem;
     left:-1.735rem;
     border-radius: 8px;
     border:1px solid rgba(255,255,255,0.2);
@@ -345,7 +343,7 @@
     font-size:12px;
     width: 100%;
     text-align: center;
-    margin-top: 0.08rem;
+    margin-top: 0.13rem;
     max-width: 3.25rem;
     margin-left: 0.25rem;
     line-height: 0.17rem;
@@ -353,7 +351,7 @@
   .rute_list{
     width: 100%;
     position:absolute;
-    top: 1.3rem;
+    top: 1rem;
     color:#ffffff;
   }
 
@@ -368,13 +366,16 @@
     margin-right: 0.1rem;
     margin-top: 0.1rem;
     background: white;
+    border-radius: 6px;
   }
   .list_b_img{
     width: 100%;
+    border-radius: 6px;
     height: 2rem;
   }
   .list_b_img img{
     width: 100%;
+    border-radius: 6px;
     height: 2rem;
   }
   .list_bottom{
@@ -540,7 +541,7 @@
   .btn img{
     width: 0.18rem;
     height: 0.18rem;
-    margin-top: 0.03rem;
+    margin-top: 0.04rem;
     margin-right: 0.06rem;
   }
   .btn>span{
@@ -611,5 +612,8 @@
     font-size: 14px;
     margin-top: 0.05rem;
   }
-
+  .light{
+    background-size: 100% 100%;
+    background-image: url("http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/20/%E6%94%BE%E5%B0%84%E5%85%89.png");
+  }
 </style>
