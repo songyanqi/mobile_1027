@@ -14,6 +14,10 @@
     <!--头图-->
     <div class="g-head-pic"
          :style="{'background-image': topics[0].content ? 'url('+topics[0].content.headPic+')' : 'url(//pic.davdian.com/activity/2017/09/18/750_630_ffedafe358bdbc4ce22f226adbb1c027.png)'}">
+
+      <!--app分享按钮-->
+      <img class="app-share" v-if="ua.isDvdApp()" @click="share.callShare();" src="[[static]]/page/act_1018_main/img/share.jpg">
+
       <!--gif-->
       <template v-if="ua.isAndroid() || ua.isIos() && ua.compareVersion('10.0.0', '10') < 0 || topics[0].content && !topics[0].content.headVideo">
         <img class="gif" :src="topics[0].content && topics[0].content.headGif" v-if="topics[0].content && topics[0].content.headGif">

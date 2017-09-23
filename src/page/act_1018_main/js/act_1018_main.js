@@ -52,6 +52,7 @@ new Vue({
       isShowBeginPopCloseAnimation: false,
       start_1018_flag: false,
       ua: ua,
+      share: share,
     }
   },
   computed: {
@@ -149,7 +150,7 @@ new Vue({
             title: title,
             desc: desc,
             link: location.href,
-            imgUrl: ts.response.data.shareImg
+            imgUrl: `${location.protocol}[[static]]/page/act_1018_main/img/share.jpg`
           });
         } catch (err) {
           console.error(err);
@@ -160,7 +161,7 @@ new Vue({
         window.iosInterface.asynRefresh = function () {
           ts.getData();
           ts.getTopics();
-        }
+        };
       });
     },
     topics: {
@@ -287,7 +288,7 @@ new Vue({
         ts.start_1018_flag = 1;
         ts.$forceUpdate();
       }, 1000);
-    }
+    },
   },
   filters: {},
 });
