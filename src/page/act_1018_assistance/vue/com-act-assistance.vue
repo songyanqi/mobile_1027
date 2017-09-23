@@ -35,13 +35,11 @@
               </div>
             </div>
           </a>
-          <div class="progress_info" v-html="lis.activityMessage">
+          <div v-if="lis.buttonType == 3" class="progress_info" style="padding-right: 1.1rem;" v-html="lis.activityMessage">
+            <div v-else class="progress_info" v-html="lis.activityMessage"></div>
           </div>
           <a class="remain_btns">
             <a class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}" @click="activebtn(lis.activityLink)" href="javascript:void(0)">{{lis.activityButton}}</a>
-            <!--<a class="panic_buying_btn" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>-->
-            <!--<a class="panic_buying_btn yellows" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>-->
-            <!--<a class="panic_buying_btn big_1018" href="javascript:void(0)" v-if="lis.activityButton == '10.18当日0元抢'">{{lis.activityButton}}</a>-->
           </a>
         </li>
       </ul>
@@ -105,20 +103,7 @@
 
     },
     mounted() {
-//      var that = this;
-//      setTimeout(function () {
-//        if(that.response.notice){
-//          if (that.response.notice.length < 100) {
-//            var announcementData = [];
-//            announcementData = that.response.notice;
-//            let nums = 100 - that.response.notice.length;
-//            for (var i = 0; i < nums; i++) {
-//              announcementData.push(that.response.notice[i])
-//            }
-//            that.response.notice = announcementData;
-//          }
-//        }
-//      },1000);
+
     },
     methods: {
       /***
