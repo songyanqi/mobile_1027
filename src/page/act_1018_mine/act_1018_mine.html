@@ -14,22 +14,25 @@
   <div class="g-top-placeholder" :style="{display: ua.isDvdApp() ? null : 'block'}"></div>
 
   <!--个人信息-->
-  <div class="g-info">
-    <template v-if="response && response.data.header" style="display: none;" :style="{display: response && response.data.header ? null : 'none'}">
+  <template v-if="false">
+    <div class="g-info" style="display: none;" :style="{display: response && response.data.header ? null : 'none'}"
+         v-if="response && response.data && response.data.header">
       <img class="head-pic" v-lazy="response.data.header.userAvatar">
       <span class="info">
-        <template v-if="true">
-          <div class="nickname">{{response.data.header.nickName}}</div>
-        </template>
-        <template v-else>
-          <div class="prize-nickname">{{response.data.header.nickName}}</div>
-          <a href="">
-            <div class="adviser-prize">服务人群销售额: 120000元，获得Iphone8 <span class="detail">详情<i></i></span></div>
-          </a>
-        </template>
+        <div class="prize-nickname">{{response.data.header.nickName}}</div>
+        <a href="">
+          <div class="adviser-prize">服务人群销售额: 120000元，获得Iphone8 <span class="detail">详情<i></i></span></div>
+        </a>
       </span>
-    </template>
-  </div>
+    </div>
+  </template>
+  <template v-else>
+    <div class="g-info-no-prize" style="display: none;" :style="{display: response && response.data.header ? null : 'none'}"
+         v-if="response && response.data && response.data.header">
+      <img class="head-pic" v-lazy="response.data.header.userAvatar">
+      <div class="nickname">{{response.data.header.nickName}}</div>
+    </div>
+  </template>
 
   <!--周年庆按钮-->
   <a href="/t-14439.html">
@@ -43,7 +46,7 @@
     <div class="service-award" v-if="response.data.award">
       <!--标题-->
       <div class="title-type-1">
-        <div class="main-title">服务人群预定奖励</div>
+        <div class="main-title">顾问服务人群预定奖励</div>
         <div class="sub-title"><span class="word">共得{{response.data.award.totalReward}}元</span></div>
       </div>
       <!--手滑轮播-->
@@ -181,6 +184,9 @@
     <div class="lighten" v-if="response.data.lightenBrand">
       <!--标题-->
       <div class="title-type-2">我点亮的品牌活动</div>
+      <div class="title-type-1">
+        <div class="sub-title"><span class="word">活动时间: 10.18 0点-10.22 24点</span></div>
+      </div>
       <!--手滑轮播-->
       <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -192,6 +198,7 @@
                 <template v-if="currentDate < '2017-10-18'">
                   <!--已达标-->
                   <template v-if="item.isCompleted === '1' || item.isCompleted === 1">
+                    <img class="lighten-ok-bg" :src="'[[static]]/page/act_1018_mine/img/lighten-ok-bg.png'">
                     <div class="ok"></div>
                     <i class="v-line b"></i>
                     <div class="target">{{item.highDiscount}}</div>

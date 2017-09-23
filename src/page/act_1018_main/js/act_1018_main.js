@@ -184,8 +184,6 @@ new Vue({
   beforeCreate() {
   },
   created() {
-    let ts = this;
-
     this.getTopics();
     this.getData();
   },
