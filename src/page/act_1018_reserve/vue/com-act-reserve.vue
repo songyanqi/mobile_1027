@@ -9,7 +9,7 @@
       content: "";
     }
     .swiper-container {
-      background: #fff;
+      background: #FF6582;
       font-size: 14px;
     }
     .swiper-slide {
