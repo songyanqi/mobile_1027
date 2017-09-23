@@ -72,19 +72,6 @@ new Vue({
       this.$nextTick(function () {
         let ts = this;
 
-        // 头图自动播放
-        let video = document.querySelector('video');
-        if (video) {
-          video.muted = true;
-          function playVideo() {
-            video.play();
-          }
-
-          document.addEventListener("WeixinJSBridgeReady", playVideo, false);
-          document.addEventListener('touchstart', playVideo, false);
-          setTimeout(playVideo, 1000);
-        }
-
         // app跳转打开新webview
         if (ua.isDvdApp()) {
           $(document).on('click', 'a', function (event) {
@@ -167,7 +154,32 @@ new Vue({
         } catch (err) {
           console.error(err);
         }
+
+        // app下拉异步刷新
+        window.iosInterface = window.iosInterface || {};
+        window.iosInterface.asynRefresh = function () {
+          ts.getData();
+          ts.getTopics();
+        }
       });
+    },
+    topics: {
+      handler(){
+        // 头图自动播放
+        let video = document.querySelector('video');
+        if (video) {
+          video.muted = true;
+          function playVideo() {
+            video.play();
+          }
+
+          document.addEventListener("WeixinJSBridgeReady", playVideo, false);
+          document.addEventListener('touchstart', playVideo, false);
+          setTimeout(playVideo, 1000);
+        }
+        console.log(11)
+      },
+      deep: true
     }
   },
   beforeCreate() {
@@ -175,15 +187,8 @@ new Vue({
   created() {
     let ts = this;
 
-    this.getData();
     this.getTopics();
-
-    // app下拉异步刷新
-    window.iosInterface = window.iosInterface || {};
-    window.iosInterface.asynRefresh = function () {
-      ts.getData();
-      ts.getTopics();
-    }
+    this.getData();
   },
   mounted() {
   },
@@ -234,6 +239,7 @@ new Vue({
           let data = localCache.getItem(cacheKey);
           if (data) {
             topic.content = data;
+            ts.$forceUpdate();
             continue;
           }
         }
