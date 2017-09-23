@@ -118,9 +118,7 @@ function innerCall(param = {}) {
     console.log(protocal);
 
     // 调用native, timeout解决协议覆盖问题
-    setTimeout(function () {
-      location.href = protocal;
-    }, parseInt(Math.random() * 500));
+    location.href = protocal;
   } else {
     // 版本错误提示
     param.invalid();
@@ -210,13 +208,15 @@ const native = {
      * native.Account.login()
      */
     login(param = {}, debug) {
-      call({
-        v: '2.4.0',
-        host: 'Account',
-        action: 'login',
-        param: param,
-        debug: debug,
-      });
+      setTimeout(function(){
+        call({
+          v: '2.4.0',
+          host: 'Account',
+          action: 'login',
+          param: param,
+          debug: debug,
+        });
+      }, 100);
     },
   },
 
