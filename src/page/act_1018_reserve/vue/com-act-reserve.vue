@@ -96,10 +96,10 @@
       // margin: 0 10px 15px 10px;
        padding: 0.03rem 0;
       margin: 0 0.1rem 0.15rem 0.1rem;
-      background: linear-gradient(to right, #FF5B5B, #FA1862);
-      background: -moz-linear-gradient(right, #FF5B5B, #FA1862);
-      background: -o-linear-gradient(right, #FF5B5B, #FA1862);
-      background: -webkit-linear-gradient(left, #FF5B5B, #FA1862);
+      background: linear-gradient(to right, #FF5C5C, #FA1862);
+      background: -moz-linear-gradient(right, #FF5C5C, #FA1862);
+      background: -o-linear-gradient(right, #FF5C5C, #FA1862);
+      background: -webkit-linear-gradient(left, #FF5C5C, #FA1862);
       // border-radius: 15px;
       border-radius: 0.15rem;
       text-align: center;
