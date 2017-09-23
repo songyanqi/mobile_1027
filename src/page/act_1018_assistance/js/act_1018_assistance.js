@@ -29,8 +29,8 @@ new Vue({
 
   },
   created() {
-    this.getHelpList();
     this.getAnnouncement();
+    this.getHelpList();
   },
   methods: {
     /**

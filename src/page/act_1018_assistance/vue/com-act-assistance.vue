@@ -10,7 +10,7 @@
     <!--滚动公告-->
     <div class="rool_tip">
       <div class="marguee">
-        <div class="marguee_innder">
+        <div :class="{'marguee_innder':marguee}">
           <p v-for="pr in notices">{{pr.message}}</p>
         </div>
       </div>
@@ -70,7 +70,8 @@
       response: {
         type: Object,
         default: null
-      }
+      },
+      marguee:false
     },
     data() {
       return {
@@ -90,8 +91,10 @@
               announcementData.push(that.response.notice[i])
             }
             that.response.notice = announcementData;
+            that.marguee = true;
             return that.response.notice;
           }else{
+            that.marguee = true;
             return that.response.notice;
           }
         }
@@ -422,9 +425,9 @@
   }
 
   .marguee_innder {
-    -webkit-animation: marguees 120s infinite linear;;
-    -o-animation: marguees 120s infinite linear;;
-    animation: marguees 120s infinite linear;;
+    -webkit-animation: marguees 120s infinite linear;
+    -o-animation: marguees 120s infinite linear;
+    animation: marguees 120s infinite linear;
   }
 
   @keyframes marguees {
