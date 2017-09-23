@@ -3,7 +3,7 @@
     <!--上边banner-->
     <div class="com-banner">
       <div>
-        <img src="//pic.davdian.com/free/20170915_assistance/ast_banners.png">
+        <img src="//pic.davdian.com/free/20170915_assistance/ass_banners.png">
       </div>
       <span @click="check_rule"></span>
     </div>
@@ -35,13 +35,11 @@
               </div>
             </div>
           </a>
-          <div class="progress_info" v-html="lis.activityMessage">
+          <div v-if="lis.buttonType == 3" class="progress_info" style="padding-right: 1.1rem;" v-html="lis.activityMessage">
+          <div v-if="lis.buttonType == 2 || lis.buttonType == 1" class="progress_info" v-html="lis.activityMessage"></div>
           </div>
           <a class="remain_btns">
             <a class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}" @click="activebtn(lis.activityLink)" href="javascript:void(0)">{{lis.activityButton}}</a>
-            <!--<a class="panic_buying_btn" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '发起助力'">{{lis.activityButton}}</a>-->
-            <!--<a class="panic_buying_btn yellows" @click="activebtn(lis.activityLink)" href="javascript:void(0)" v-if="lis.activityButton == '继续助力'">{{lis.activityButton}}</a>-->
-            <!--<a class="panic_buying_btn big_1018" href="javascript:void(0)" v-if="lis.activityButton == '10.18当日0元抢'">{{lis.activityButton}}</a>-->
           </a>
         </li>
       </ul>
@@ -105,20 +103,7 @@
 
     },
     mounted() {
-//      var that = this;
-//      setTimeout(function () {
-//        if(that.response.notice){
-//          if (that.response.notice.length < 100) {
-//            var announcementData = [];
-//            announcementData = that.response.notice;
-//            let nums = 100 - that.response.notice.length;
-//            for (var i = 0; i < nums; i++) {
-//              announcementData.push(that.response.notice[i])
-//            }
-//            that.response.notice = announcementData;
-//          }
-//        }
-//      },1000);
+
     },
     methods: {
       /***
@@ -152,7 +137,6 @@
     width: 100%;
     min-height: 0.2rem;
     position: relative;
-    margin-bottom: 0.1rem;
     span {
       position: absolute;
       bottom: 14%;
@@ -187,8 +171,7 @@
   }
 
   .com-box div ul {
-    margin: 0.1rem;
-    border-radius: 0.04rem;
+    margin:0 0.1rem;
     overflow: hidden;
     background-color: #FFFFFF;
   }
@@ -421,7 +404,6 @@
     color: #BA2424;
     font-size: 0.11rem;
     border: 0.05rem solid #ffc23e;
-    border-radius: 0.05rem;
     box-sizing: border-box;
     background: #FFFFFF;
     margin: 0 0.1rem;

@@ -2,20 +2,21 @@
 @import "icon";
 
 .app {
+  position: relative;
   //background: url(../img/head-bg.png) no-repeat top, linear-gradient(to bottom, #FF6288, #FF3857) 100px;
-  background: url(../img/head-bg-1.png) no-repeat top, linear-gradient(
-      /*#FF6288 0,
-      #FF567A ptr(754),
-      #FFA000 ptr(954),
-      #DD0012 ptr(1790),
-      #FF4364 ptr(1990),
-      #FF3857 ptr(3000)*/
+  background: url(../img/head-bg-2.png) no-repeat top, linear-gradient(
+    /*#FF6288 0,
+    #FF567A ptr(754),
+    #FFA000 ptr(954),
+    #DD0012 ptr(1790),
+    #FF4364 ptr(1990),
+    #FF3857 ptr(3000)*/
       #EA426B 0,
       #EA426B ptr(754),
-      #FFA000 ptr(954),
+      #F3A83C ptr(954),
       #DD0012 ptr(1790),
-      #FF4364 ptr(1990),
-      #FF3857 ptr(3000)
+      #ED5265 ptr(1990),
+      #ED5265 ptr(6000)
   );
   background-size: 100% auto;
   //background-size: 100% 100%;
@@ -39,6 +40,9 @@
   }
 
   /*个人信息*/
+  .g-info-wrapper {
+    min-height: ptr(58);
+  }
   .g-info {
     margin-top: ptr(25);
     height: ptr(58);
@@ -79,19 +83,41 @@
       }
     }
   }
+  .g-info-no-prize {
+    padding-top: ptr(20);
+    text-align: center;
+    min-height: ptr(89);
+    .pic-wrapper {
+      height: ptr(58);
+    }
+    .head-pic {
+      @include circle(ptr(58));
+    }
+    .nickname {
+      margin-top: ptr(10);
+      font-size: ptr(15);
+      line-height: ptr(21);
+      text-align: center;
+      color: white;
+    }
+  }
 
   /*周年庆按钮*/
   .g-head-btn {
-    margin: ptr(40) auto 0 ptr(50);
+    position: absolute;
+    top: ptr(176);
+    left: ptr(50);
+    //margin: ptr(20) auto 0 ptr(50);
     width: ptr(263);
     height: ptr(59);
   }
 
   /*我的活动*/
   .g-act {
+    margin-top: ptr(90);
     padding-top: ptr(48);
     > div {
-      margin-top: ptr(30);
+      margin-top: ptr(20);
     }
 
     /*公共*/
@@ -159,7 +185,7 @@
     /*服务人群预定奖励*/
     .service-award {
       .swiper-container {
-        margin-top: ptr(24);
+        margin-top: ptr(14);
         padding: 0 ptr(5);
         .swiper-slide {
           margin: 0 ptr(5);
@@ -203,7 +229,7 @@
       background: #FFF8E2;
       border-radius: ptr(4);
       .title-type-2 {
-        padding: ptr(20) 0;
+        padding: ptr(20) 0 ptr(10);
       }
       .list {
         text-align: center;
@@ -224,7 +250,7 @@
             line-height: ptr(17);
           }
           .price {
-            margin-top: ptr(3);
+            margin-top: ptr(2);
             > * {
               vertical-align: middle;
             }
@@ -256,7 +282,7 @@
         }
       }
       .more {
-        margin: ptr(9) auto auto;
+        margin: ptr(5) auto auto;
         padding-top: ptr(2);
         width: ptr(117);
         @include height(ptr(24));
@@ -275,8 +301,7 @@
     }
 
     /*我发起的助力省钱*/
-    .assist {
-      margin-top: ptr(50);
+    > .assist {
       .title-type-1 {
         .sub-title {
           width: ptr(193);
@@ -378,6 +403,12 @@
             line-height: ptr(18);
             @include ellipsis;
           }
+          .discount {
+            margin-top: ptr(3);
+            font-size: ptr(11);
+            line-height: ptr(16);
+            @include ellipsis;
+          }
         }
       }
     }
@@ -386,7 +417,7 @@
     .subscribe {
       .title-type-1 {
         .sub-title {
-          width: ptr(284);
+          width: ptr(264);
           background-image: url(../img/sub-title-reserve.png);
         }
       }
@@ -421,9 +452,14 @@
 
     /*我点亮的品牌活动*/
     .lighten {
-      margin-top: ptr(50);
       .title-type-2 {
         color: white;
+      }
+      .title-type-1 {
+        .sub-title {
+          width: ptr(284);
+          background-image: url(../img/sub-title-reserve.png);
+        }
       }
       .swiper-container {
         margin-top: ptr(20);
@@ -438,14 +474,22 @@
             padding-top: ptr(140);
           }
           .goods-pic {
+            position: relative;
             width: ptr(172);
             height: ptr(200);
             background: white;
+            z-index: 1;
           }
           .info {
+            position: relative;
             margin-top: ptr(-2);
             padding: ptr(10) 0 ptr(15);
             background: white;
+            .lighten-ok-bg {
+              position: absolute;
+              top: ptr(-90);
+              width: 100%;
+            }
             .begin {
               margin: auto;
               padding-left: ptr(33);
@@ -460,9 +504,11 @@
             .ok {
               margin: auto;
               width: ptr(106);
-              height: ptr(20);
+              height: ptr(23);
               background: url(../img/lighten-ok.png) no-repeat;
               background-size: 100%;
+              position: relative;
+              z-index: 1;
             }
             .v-line {
               margin: auto;
@@ -473,6 +519,8 @@
                 background: #FF4A7D;
               }
               &.b {
+                position: relative;
+                top: ptr(-4);
                 background: #FFD48D;
               }
             }
@@ -486,6 +534,8 @@
               background: url(../img/lighten-target.png) no-repeat;
               background-size: 100%;
               font-size: ptr(12);
+              position: relative;
+              z-index: 1;
             }
             .over {
               margin: auto;
@@ -518,7 +568,7 @@
       background: #FFF8E2;
       border-radius: ptr(4);
       .title-type-2 {
-        padding: ptr(20) 0;
+        padding: ptr(20) 0 ptr(10);
       }
       .list {
         text-align: center;
@@ -670,6 +720,29 @@
           }
         }
       }
+    }
+  }
+  .g-error {
+    padding-top: ptr(150);
+    text-align: center;
+    img {
+      @include square(ptr(120));
+    }
+    .text {
+      margin-top: ptr(20);
+      color: #666666;
+      font-size: ptr(14);
+      line-height: ptr(20);
+    }
+    .btn {
+      margin-top: ptr(20);
+      display: inline-block;
+      width: ptr(195);
+      @include height(ptr(40));
+      background: linear-gradient(to right, #FF5C5C, #FA1862);
+      border-radius: 100px;
+      font-size: ptr(14);
+      color: white;
     }
   }
 }

@@ -138,7 +138,7 @@ body {
           }
           100% {
             opacity: 0;
-            transform: scale(0.1) translate(ptr(1750), ptr(-550));
+            transform: scale(0.1) translate(ptr(1750), ptr(550));
           }
         }
         &.close {
@@ -180,7 +180,7 @@ body {
   }
   .g-my-1018 {
     position: fixed;
-    top: 30%;
+    top: 50%;
     //right: 0;
     //left: ptr(375);
     width: ptr(42);

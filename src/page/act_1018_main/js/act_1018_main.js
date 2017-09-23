@@ -46,8 +46,8 @@ new Vue({
         // 下方专题
         {id: param.get('t3') || '14378', content: null}
       ],
-      actBeginTime: new Date(2017, 10, 18),
-      countDown: date.getCountDown(new Date(2017, 10, 18)),
+      actBeginTime: new Date(2017, 10 - 1, 18),
+      countDown: date.getCountDown(new Date(2017, 10 - 1, 18)),
       isShowBeginPop: false,
       isShowBeginPopCloseAnimation: false,
       start_1018_flag: false,
@@ -71,19 +71,6 @@ new Vue({
       // response变化后并渲染完dom,设置其他事项
       this.$nextTick(function () {
         let ts = this;
-
-        // 头图自动播放
-        let video = document.querySelector('video');
-        if (video) {
-          video.muted = true;
-          function playVideo() {
-            video.play();
-          }
-
-          document.addEventListener("WeixinJSBridgeReady", playVideo, false);
-          document.addEventListener('touchstart', playVideo, false);
-          setTimeout(playVideo, 1000);
-        }
 
         // app跳转打开新webview
         if (ua.isDvdApp()) {
@@ -167,23 +154,38 @@ new Vue({
         } catch (err) {
           console.error(err);
         }
+
+        // app下拉异步刷新
+        window.iosInterface = window.iosInterface || {};
+        window.iosInterface.asynRefresh = function () {
+          ts.getData();
+          ts.getTopics();
+        }
       });
+    },
+    topics: {
+      handler(){
+        // 头图自动播放
+        let video = document.querySelector('video');
+        if (video) {
+          video.muted = true;
+          function playVideo() {
+            video.play();
+          }
+
+          document.addEventListener("WeixinJSBridgeReady", playVideo, false);
+          document.addEventListener('touchstart', playVideo, false);
+          setTimeout(playVideo, 1000);
+        }
+      },
+      deep: true
     }
   },
   beforeCreate() {
   },
   created() {
-    let ts = this;
-
-    this.getData();
     this.getTopics();
-
-    // app下拉异步刷新
-    window.iosInterface = window.iosInterface || {};
-    window.iosInterface.asynRefresh = function () {
-      ts.getData();
-      ts.getTopics();
-    }
+    this.getData();
   },
   mounted() {
   },
@@ -224,6 +226,21 @@ new Vue({
       let ts = this;
       for (let i in ts.topics) {
         let topic = ts.topics[i];
+
+        let cacheKey = `act_1018_main_t-${topic.id}`;
+
+        // 按时间取缓存
+        let minute = new Date().getMinutes();
+        if (minute > 5 && minute < 55) {
+          // 取缓存
+          let data = localCache.getItem(cacheKey);
+          if (data) {
+            topic.content = data;
+            ts.$forceUpdate();
+            continue;
+          }
+        }
+
         let url = `${location.protocol}//${util.getSecondDomain()}.davdian.com/t-${topic.id}.html?_=${Date.now()}`;
         $.ajax({
           cache: false,
@@ -235,7 +252,6 @@ new Vue({
           dataType: 'text',
           data: {},
           success(response) {
-            common.checkRedirect(response);
             try {
               if (topic.id == (param.get('t1') || '14376')) {
                 response = JSON.parse(response);
@@ -243,6 +259,14 @@ new Vue({
               topic.content = response;
               // 刷新页面
               ts.$forceUpdate();
+
+              // 存缓存
+              localCache.setItem({
+                Date: Date.now(),     // 当前时间（不传则取设备时间）
+                Expires: 10 * 60 * 1000,   // 过期时间（从当前时间开始计算过多少毫秒缓存失效）
+                key: cacheKey,        // 缓存key
+                data: response        // 缓存data（可以传json或String）
+              });
             } catch (err) {
 
             }

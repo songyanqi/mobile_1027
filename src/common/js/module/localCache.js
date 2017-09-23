@@ -1,3 +1,5 @@
+import param from './param.js';
+
 export default {
   /**
    * 存缓存数据
@@ -42,13 +44,14 @@ export default {
   /**
    * 取缓存数据
    * 调用方法：
-   * localCache.getItem({
-      key: 'okok',    // 缓存key
-      type: 'json'    // 数据类型
-    })
+   * localCache.getItem(key)
    */
-  getItem(param = {}) {
-    let value = window.localStorage.getItem(param.key);
+  getItem(key) {
+    if(!key) {
+      throw new Error('key不对');
+      return;
+    }
+    let value = window.localStorage.getItem(key);
 
     // 参数不对
     if (!value) return null;
@@ -64,8 +67,8 @@ export default {
     if (!value.Date || !value.Expires) return null;
 
     // 过期
-    if (Date.now() > new Date(value.Date).valueOf() + value.Expires) {
-      window.localStorage.removeItem(param.key);
+    if (Date.now() > new Date(value.Date).valueOf() + value.Expires || param.get('noCache') !== undefined) {
+      window.localStorage.removeItem(key);
       return null;
     }
 

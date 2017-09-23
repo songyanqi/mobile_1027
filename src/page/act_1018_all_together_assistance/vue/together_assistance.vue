@@ -3,7 +3,7 @@
     <!--呼朋唤友省更多-->
     <div v-if="response.type == '0'" class="title_img">
       <img style="width:1.8rem;" src="//pic.davdian.com/free/20170915_assistance/huhaoyou2.png">
-      <div class="dtime" v-if="goodsdata.goods.overTime != '' || goodsdata.goods.overTime != '0'">
+      <div class="dtime" v-if="response.actType == 0">
         {{goodsdata.goods.overTime | formatRemainTime}}
       </div>
       <div class="qiqiu_ing">
@@ -14,7 +14,7 @@
     <!--助好友0元购-->
     <div v-if="response.type == '1'" class="title_img">
       <img style="width: 2.57rem;" src="//pic.davdian.com/free/20170915_assistance/zhuhaoyou.png">
-      <div class="dtime" v-if="goodsdata.goods.overTime != '' || goodsdata.goods.overTime != '0'">距助力结束：{{goodsdata.goods.overTime | formatRemainTime}}</div>
+      <div class="dtime" v-if="response.actType == 0">距助力结束：{{goodsdata.goods.overTime | formatRemainTime}}</div>
       <div class="friend_mark">
         <div>
           <img :src="response.supporter.imageUrl" alt="">
@@ -50,7 +50,7 @@
       <!--助力者页面按钮信息-->
       <section v-if="response.type == '1'">
         <!--助力活动结束-->
-        <section v-if="goodsdata.goods.overTime == '' || goodsdata.goods.overTime == '0'">
+        <section v-if="response.actType != 0">
           <div class="ast_txt" style="padding:0.68rem 0 0.12rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
           <a href="/act_1018_main.html" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</a>
         </section>
@@ -111,9 +111,17 @@
       <!--发起者页面信息-->
       <span v-if="response.type == '0'">
         <!--助力活动结束-->
-        <section v-if="goodsdata.goods.overTime == '' || goodsdata.goods.overTime == '0'">
-          <div class="ast_txt" style="padding:0.68rem 0 0.32rem;">很遗憾没有得到好友的助力支持</div>
-          <a :href="response.activityLink" class="share_btn bd_r" style="display: block;">立即抢购</a>
+        <section v-if="response.actType != 0">
+          <span v-if="response.actType == 2">
+             <div class="ast_txt" style="padding:0.72rem 0 0.14rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
+          </span>
+          <span v-if="response.actType == 1">
+            <!--没有好友支持-->
+            <div v-if="response.source.supporterPrice == '0'" class="ast_txt" style="padding:0.68rem 0 0.32rem;">很遗憾没有得到好友的助力支持</div>
+              <!--0元购-->
+            <div v-else class="ast_deep" style="padding:0.72rem 0 0.21rem">已得到{{response.source.supporterPrice}}元助力快去<span v-if="response.source.surplusPrice == '0'" style="font-size: 0.24rem;">0元</span>抢购吧</div>
+          </span>
+          <a :href="response.activityLink" class="share_btn bd_r" style="display: block;">{{response.actType == 1 ? '立即抢购':'去店铺逛逛'}}</a>
         </section>
         <section v-else>
           <!--获得0元购机会-->
@@ -149,7 +157,7 @@
 
     <img class="table_brand" src="//pic.davdian.com/free/20170915_assistance/table_brand.png">
     <!--助力结束和助力发起页不显示这个-->
-    <a :href="'/ast_'+goodsdata.goods.goodsId+'.html'" v-if="response.type == 1 && (goodsdata.goods.overTime != '' || goodsdata.goods.overTime != '0')"
+    <a :href="'/ast_'+goodsdata.goods.goodsId+'.html'" v-if="response.type == 1 && response.actType == 0"
        style="margin-bottom: 0.2rem;display: block" class="share_btn bd_p">我也想要商品0元购</a>
     <!--获奖好友轮播-->
     <div class="loop_my_friend_reward" v-if="goodsdata.notice.length">
@@ -183,7 +191,7 @@
     </div>
 
     <!--去主会场-->
-    <a v-if="goodsdata.goods.overTime != '' || goodsdata.goods.overTime != '0'" href="/act_1018_main.html" class="main_btn">10.18周年庆主会场</a>
+    <a v-if="response.actType != 2" href="/act_1018_main.html" class="main_btn">10.18周年庆主会场</a>
   </div>
 </template>
 <script>
