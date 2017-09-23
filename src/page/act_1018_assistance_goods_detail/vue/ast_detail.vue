@@ -74,7 +74,8 @@
         shareInfo: null,
         shareUserId: ua.getQuery("shareUserId"),
         isWeixin: ua.isWeiXin(),
-        isDvdApp: ua.isDvdApp()
+        isDvdApp: ua.isDvdApp(),
+        visitor_status: null,
       }
     },
     components: {},
@@ -134,7 +135,7 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId}),
           success(response) {
-            
+            ts.visitor_status = response.visitor_status;
             if(response.data){
               ts.response = response.data;
               ts.overTimes = response.data.overTime;
@@ -160,6 +161,10 @@
        * */
       shares: function () {
         var ts = this;
+        if (that.visitor_status != 3) {
+          popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
+          return;
+        }
         ts.sharecallback();
         share.callShare();
       },
