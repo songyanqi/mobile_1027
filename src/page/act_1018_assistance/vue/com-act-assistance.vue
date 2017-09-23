@@ -3,7 +3,7 @@
     <!--上边banner-->
     <div class="com-banner">
       <div>
-        <img src="//pic.davdian.com/free/20170915_assistance/ast_banners.png">
+        <img src="//pic.davdian.com/free/20170915_assistance/ass_banners.png">
       </div>
       <span @click="check_rule"></span>
     </div>
@@ -36,7 +36,7 @@
             </div>
           </a>
           <div v-if="lis.buttonType == 3" class="progress_info" style="padding-right: 1.1rem;" v-html="lis.activityMessage">
-            <div v-else class="progress_info" v-html="lis.activityMessage"></div>
+          <div v-if="lis.buttonType == 2 || lis.buttonType == 1" class="progress_info" v-html="lis.activityMessage"></div>
           </div>
           <a class="remain_btns">
             <a class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}" @click="activebtn(lis.activityLink)" href="javascript:void(0)">{{lis.activityButton}}</a>
@@ -137,7 +137,6 @@
     width: 100%;
     min-height: 0.2rem;
     position: relative;
-    margin-bottom: 0.1rem;
     span {
       position: absolute;
       bottom: 14%;
@@ -172,8 +171,7 @@
   }
 
   .com-box div ul {
-    margin: 0.1rem;
-    border-radius: 0.04rem;
+    margin:0 0.1rem;
     overflow: hidden;
     background-color: #FFFFFF;
   }
@@ -406,7 +404,6 @@
     color: #BA2424;
     font-size: 0.11rem;
     border: 0.05rem solid #ffc23e;
-    border-radius: 0.05rem;
     box-sizing: border-box;
     background: #FFFFFF;
     margin: 0 0.1rem;
