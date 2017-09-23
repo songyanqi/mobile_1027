@@ -177,7 +177,6 @@ new Vue({
           document.addEventListener('touchstart', playVideo, false);
           setTimeout(playVideo, 1000);
         }
-        console.log(11)
       },
       deep: true
     }
