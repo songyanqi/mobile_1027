@@ -452,3 +452,21 @@ footer div {
   -ms-flex: 2;
   flex: 2;
 }
+
+
+@media
+only screen and (-webkit-min-device-pixel-ratio:2),
+only screen and (min-device-pixel-ratio:2),
+only screen and (min--moz-device-pixel-ratio:2),
+only screen and (-o-min-device-pixel-ratio:4/2),
+only screen and (min-resolution:2dppx)
+{
+  .top0 .top_container:after{
+    /*-webkit-transform: scaleY(0.5);*/
+    -webkit-transform: scaleY(0);
+    /*transform: scaleY(0.5);*/
+    transform: scaleY(0);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+}

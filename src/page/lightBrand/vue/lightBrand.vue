@@ -223,7 +223,9 @@
         }else {
           that.changeAnimateFn(index);
           that.changeIsLighted(index);
-          that.changeNeedCount(index,isCompleted);
+          setTimeout(function(){
+            that.changeNeedCount(index,isCompleted);
+          },600);
           var obj={
             "bandId":bandId
           };

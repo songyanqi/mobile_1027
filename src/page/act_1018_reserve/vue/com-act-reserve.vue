@@ -36,7 +36,7 @@
       background: #fff;
       // box-radius: 5px;
       // margin: 5px 5px; 
-      box-radius: 0.05rem;
+      border-radius: 0.05rem;
       margin: 0.05rem 0.05rem; 
       overflow: hidden;
     }

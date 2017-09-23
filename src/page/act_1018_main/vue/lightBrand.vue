@@ -176,9 +176,11 @@
             window.location.href = '/login.html?' + 'referer=' + encodeURIComponent(window.location.href)
           }
         }else {
+          setTimeout(function () {
+            that.changeNeedCount(index, isCompleted);
+          },600);
           that.changeAnimateFn(index);
           that.changeIsLighted(index);
-          that.changeNeedCount(index, isCompleted);
           var obj = {
             "bandId": bandId
           };
