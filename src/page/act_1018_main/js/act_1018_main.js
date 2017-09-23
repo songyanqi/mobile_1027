@@ -47,7 +47,7 @@ new Vue({
         {id: param.get('t3') || '14378', content: null}
       ],
       actBeginTime: new Date(2017, 10 - 1, 18),
-      countDown: date.getCountDown(new Date(2017, 10, 18)),
+      countDown: date.getCountDown(new Date(2017, 10 - 1, 18)),
       isShowBeginPop: false,
       isShowBeginPopCloseAnimation: false,
       start_1018_flag: false,
