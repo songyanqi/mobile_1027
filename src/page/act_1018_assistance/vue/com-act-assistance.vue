@@ -35,9 +35,8 @@
               </div>
             </div>
           </a>
-          <div v-if="lis.buttonType == 3" class="progress_info" style="padding-right: 1.1rem;" v-html="lis.activityMessage">
-          <div v-if="lis.buttonType == 2 || lis.buttonType == 1" class="progress_info" v-html="lis.activityMessage"></div>
-          </div>
+          <div v-if="lis.buttonType > 2" class="progress_info" style="padding-right: 1.1rem;" v-html="lis.activityMessage"></div>
+          <div v-else class="progress_info" v-html="lis.activityMessage"></div>
           <a class="remain_btns">
             <div class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}" @click="activebtn(lis.activityLink)">{{lis.activityButton}}</div>
           </a>
@@ -91,6 +90,8 @@
               announcementData.push(that.response.notice[i])
             }
             that.response.notice = announcementData;
+            return that.response.notice;
+          }else{
             return that.response.notice;
           }
         }
@@ -421,7 +422,9 @@
   }
 
   .marguee_innder {
-    animation: marguees 120s infinite linear;
+    -webkit-animation: marguees 120s infinite linear;;
+    -o-animation: marguees 120s infinite linear;;
+    animation: marguees 120s infinite linear;;
   }
 
   @keyframes marguees {
