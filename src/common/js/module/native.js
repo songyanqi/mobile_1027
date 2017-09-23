@@ -108,13 +108,19 @@ function innerCall(param = {}) {
       logDom.style.margin = '10px';
       logDom.textContent = protocal;
       document.body.appendChild(logDom);
+      popup.debug({
+        title: protocal
+      });
+      alert(protocal)
     }
 
     // 日志
     console.log(protocal);
 
-    // 调用native
-    location.href = protocal;
+    // 调用native, timeout解决协议覆盖问题
+    setTimeout(function () {
+      location.href = protocal;
+    }, parseInt(Math.random() * 500));
   } else {
     // 版本错误提示
     param.invalid();
@@ -209,7 +215,7 @@ const native = {
         host: 'Account',
         action: 'login',
         param: param,
-        debug: debug
+        debug: debug,
       });
     },
   },

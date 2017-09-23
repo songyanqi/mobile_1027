@@ -51,7 +51,18 @@ export default {
    */
   goLoginPage(){
     if (ua.isDvdApp()) {
-      native.Account.login();
+      native.Account.login({
+        success() {
+          setTimeout(function(){
+            location.reload();
+          }, 1000);
+        },
+        error() {
+          setTimeout(function(){
+            location.reload();
+          }, 1000);
+        }
+      });
     } else {
       location.href = '/login.html?referer=' + encodeURIComponent(location.href);
       throw new Error(`即将跳转登录页(${location.href})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
