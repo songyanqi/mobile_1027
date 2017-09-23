@@ -21,6 +21,9 @@ import vueLazyload from '../../../common/js/module/vueLazyload.js';
 // 懒加载初始化
 vueLazyload.init(true);
 
+// 页面需要登录
+login.needLogin();
+
 // 渲染页面
 new Vue({
   el: ".app",

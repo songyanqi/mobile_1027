@@ -224,6 +224,21 @@ new Vue({
       let ts = this;
       for (let i in ts.topics) {
         let topic = ts.topics[i];
+
+        let cacheKey = `act_1018_main_t-${topic.id}`;
+        let minute = new Date().getMinutes();
+        console.log(minute)
+        if (minute > 5 && minute < 55) {
+          // 取缓存
+          let data = localCache.getItem(cacheKey);
+          console.log(data)
+          if (data) {
+            console.log(11)
+            topic.content = data;
+            continue;
+          }
+        }
+
         let url = `${location.protocol}//${util.getSecondDomain()}.davdian.com/t-${topic.id}.html?_=${Date.now()}`;
         $.ajax({
           cache: false,
@@ -235,7 +250,6 @@ new Vue({
           dataType: 'text',
           data: {},
           success(response) {
-            common.checkRedirect(response);
             try {
               if (topic.id == (param.get('t1') || '14376')) {
                 response = JSON.parse(response);
@@ -243,6 +257,14 @@ new Vue({
               topic.content = response;
               // 刷新页面
               ts.$forceUpdate();
+
+              // 存缓存
+              localCache.setItem({
+                Date: Date.now(),     // 当前时间（不传则取设备时间）
+                Expires: 10 * 1000,   // 过期时间（从当前时间开始计算过多少毫秒缓存失效）
+                key: cacheKey,        // 缓存key
+                data: response        // 缓存data（可以传json或String）
+              });
             } catch (err) {
 
             }
