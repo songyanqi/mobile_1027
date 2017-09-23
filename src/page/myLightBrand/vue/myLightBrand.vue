@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="all_list">
-      <div class="list" v-for="(item,index) in dataList">
+      <div class="list" v-for="(item,index) in dataList"  :class="{'light':item.isCompleted==1}">
         <div class="list_b_img" @click.stop="go_detail(item.linkUrl)">
           <img :src="item.bandPic" alt="">
         </div>
@@ -221,14 +221,17 @@
     margin-right: 0.1rem;
     margin-top: 0.1rem;
     background: white;
+    border-radius: 6px;
   }
   .list_b_img{
     width: 100%;
     height: 2rem;
+    border-radius: 6px;
   }
   .list_b_img img{
     width: 100%;
     height: 2rem;
+    border-radius: 6px;
   }
   .list_bottom{
     height: 1.38rem;
@@ -387,7 +390,7 @@
   .btn img{
     width: 0.18rem;
     height: 0.18rem;
-    margin-top: 0.05rem;
+    margin-top: 0.04rem;
     margin-right: 0.06rem;
   }
   .btn>span{
@@ -399,5 +402,9 @@
   .red{
     color:#FFFFFF;
     font-size: 12px;
+  }
+  .light{
+    background-size: 100% 100%;
+    background-image: url("http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/20/%E6%94%BE%E5%B0%84%E5%85%89.png");
   }
 </style>
