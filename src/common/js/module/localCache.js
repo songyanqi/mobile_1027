@@ -1,3 +1,5 @@
+import param from './param.js';
+
 export default {
   /**
    * 存缓存数据
@@ -65,7 +67,7 @@ export default {
     if (!value.Date || !value.Expires) return null;
 
     // 过期
-    if (Date.now() > new Date(value.Date).valueOf() + value.Expires) {
+    if (Date.now() > new Date(value.Date).valueOf() + value.Expires || param.get('noCache') !== undefined) {
       window.localStorage.removeItem(key);
       return null;
     }

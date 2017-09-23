@@ -226,14 +226,13 @@ new Vue({
         let topic = ts.topics[i];
 
         let cacheKey = `act_1018_main_t-${topic.id}`;
+
+        // 按时间取缓存
         let minute = new Date().getMinutes();
-        console.log(minute)
         if (minute > 5 && minute < 55) {
           // 取缓存
           let data = localCache.getItem(cacheKey);
-          console.log(data)
           if (data) {
-            console.log(11)
             topic.content = data;
             continue;
           }
@@ -261,7 +260,7 @@ new Vue({
               // 存缓存
               localCache.setItem({
                 Date: Date.now(),     // 当前时间（不传则取设备时间）
-                Expires: 10 * 1000,   // 过期时间（从当前时间开始计算过多少毫秒缓存失效）
+                Expires: 10 * 60 * 1000,   // 过期时间（从当前时间开始计算过多少毫秒缓存失效）
                 key: cacheKey,        // 缓存key
                 data: response        // 缓存data（可以传json或String）
               });
