@@ -433,7 +433,8 @@ const GoodsBottom = {
       },
       // 预定商品跳转链接
       handlePresale () {
-        location.href = this.infoobj.goPayAdvance.payUrl;
+        // location.href = this.infoobj.goPayAdvance.payUrl;
+        location.href = `/o-${this.infoobj.goPayAdvance.orderId}?rp=order_pay_success&rl=order_detail`;
       }
     },
 };

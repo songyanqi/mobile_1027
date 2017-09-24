@@ -80,7 +80,10 @@
           </span>
           <span v-else>
             <span v-else>金额：</span>
-            <span class="payment"><span class="fz_12">￥</span>{{item.payment}}</span>
+            <span class="payment"><span class="fz_12">￥</span>
+              <span v-if = "item.is_presale_order">{{ changeAddNum(item.presale_info.final_info.payment,item.presale_info.reserve_info.payment) }}</span>
+              <span v-else>{{item.payment}}</span>
+            </span>
           </span>
         </div>
         <div v-if = "item | isFinalBtn" class="order_buttons order_list_buttons clearfix">
@@ -106,7 +109,7 @@
             <!-- <a v-show = "item | close" class="dav-btn btn-white pull-right order-delete-order" @click = "deleteOrder">删除订单</a> -->
             <a v-show = "item | pay1" class="dav-btn btn-white pull-right" href="/index.php?c=AgentPay&a=index&order_id={{item.id}}">找人代付</a>
 
-            <a v-show = "item | cancel" data-deliveryid="{{item.delivery_id}}" data-id="{{ item.id }}" class="dav-btn btn-white pull-right  order-cancel cancle_{{ item.id }}" @click = "cancelOrder">取消订单</a>
+            <a v-show = "item | cancel" data-deliveryid="{{item.delivery_id}}" data-id="{{ item.id }}" class="dav-btn btn-white pull-right  order-cancel cancle_{{ item.id }}" @click = "cancelOrder($event,item)">取消订单</a>
 
             <a v-show = "item | cancel1" class="dav-btn btn-white pull-right  btn-disable">取消审核中</a>
             <a v-show = "item | cancel2" class="dav-btn btn-white pull-right  btn-disable">取消成功</a>
@@ -139,8 +142,8 @@
     </div>
     <div v-show = 'no_more' class="refresh">没有更多{{word}}</div>
       <!-- 取消订单弹框 -->
-    <div class="modalMask" @click = "handleCloseModal" :class = "{ showMask: isModal }"></div>
-      <div class="modaOrderlWrapper" v-show = "isModal">
+    <div class="modalMask" @click = "handleCloseModal" :class = "{ showMask: isModal || isOrderConfirm }"></div>
+    <div class="modaOrderlWrapper" v-show = "isModal">
         <div class="modalCloseWrapper" @click = "handleCloseModal">
             <span class="modal-close"></span>
         </div>
@@ -173,6 +176,15 @@
         <div @click = "handleConfirm" class = "disabledModal" :class = "{ modalConfirm: !isConfirm }">确定</div>
     </div>
     <div class = "order_toast"></div>
+
+    <!-- 弹框 -->
+    <div class = "modalOrder" :class = "{orderModalShow: isOrderConfirm}">
+      <div class="modalCloseWrapper orderClose" @click = "handleCloseModal">
+          <span class="modal-close"></span>
+      </div>
+      <div class = "orderTitle">该订单为预定订单，定金不退哦，确认要取消么？</div>
+      <div class = "orderConfirm" @click = "handleOrderPresale">确定</div>
+    </div>
 </template>
 <script>
   import layout from "../../../../module/index/layout.es6";
@@ -220,6 +232,8 @@
                 isapp: false,
                 // 当前时间，来判断支付尾款显示按钮还是支付时间
                 currentTime: Date.now(),
+                // 是否显示预定单弹框
+                isOrderConfirm: false,
             }
         },
         created:function(){
@@ -253,6 +267,11 @@
           this.scroll();
         },
         methods:{
+          // 相加
+          changeAddNum(num1,num2) {
+            let sumNum = parseFloat(Number(num1)+Number(num2)).toFixed(2);
+            return sumNum;
+          },
           // 时间转换
           // 弹框弹出时给body添加fixed
           addFixed() {
@@ -293,6 +312,7 @@
           },
           handleCloseModal() {
             this.isModal = false;
+            this.isOrderConfirm = false;
             this.removeFixed();
           },
           // 取消原因
@@ -354,10 +374,15 @@
               }
             }
           },
-          // 新取消订单
-          cancelOrder (e) {
-            this.getDatas();
+          // 预定单弹框
+          handleOrderPresale() {
+            this.isOrderConfirm = false;
             this.isModal = true;
+
+            this.getDatas();
+          },
+          // 新取消订单
+          cancelOrder (e,item) {
             this.addFixed();
             this.dataId = e.target.getAttribute('data-id');
             let reasonId = e.target.getAttribute('reason-id');
@@ -369,6 +394,23 @@
                 $(".reasonIpt").prop("checked",false);
                 this.isConfirm = true;
             }
+            // 如果是预定单，先弹出确定框
+            if (item.is_presale_order) {
+              this.isOrderConfirm = true;
+              return;
+            }
+            this.getDatas();
+            this.isModal = true;
+            // this.dataId = e.target.getAttribute('data-id');
+            // let reasonId = e.target.getAttribute('reason-id');
+
+            // if (reasonId) {
+            //     $(".modalCont").find("#"+ reasonId +"").prop("checked",true);
+            //     this.isConfirm = false;
+            // } else {
+            //     $(".reasonIpt").prop("checked",false);
+            //     this.isConfirm = true;
+            // }
           },
           // 取消原因点击确定 /api/mg/order/cancelOrder/cancelByOrder
           handleConfirm() {

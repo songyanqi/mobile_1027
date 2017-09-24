@@ -2264,8 +2264,6 @@ body.orderDetail, body.orderDelivery {
   opacity: 0;
   tap-highlight-color: rgba(0, 0, 0, 0);
   z-index: -1;
-  // -webkit-transition: opacity 400ms;
-  // transition: opacity 400ms;
 }
 .showMask {
   opacity: 1;
@@ -2610,6 +2608,55 @@ body.orderDetail, body.orderDelivery {
   -webkit-transform-origin: left top;
   transform-origin: left top;
 
+}
+.modalOrder {
+  display: none;
+  background: #fff;
+  position: fixed;
+  z-index: 50;
+  width: 270px;
+  left: 50%;
+  top: 50%;
+  max-width: 640px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+  overflow: hidden;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fff;
+  z-index: 50;
+  color: #333;
+}
+.orderModalShow {
+  display: block;
+}
+.modalOrder .orderConfirm {
+  padding: 12px;
+  position: relative;
+   color: #FF4A7D;
+}
+.modalOrder .orderTitle {
+  padding: 30px 15px 15px 15px;
+  text-align: left;
+}
+.modalOrder .orderConfirm:after {
+  position: absolute;
+  content: "";
+  border-top: 1px solid #e1e1e1;
+  left: 0;
+  right: 0;
+  top: 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+}
+.modalOrder .orderClose {
+  right: 5px;
 }
 
 
