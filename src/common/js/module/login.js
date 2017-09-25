@@ -49,19 +49,7 @@ export default {
    * 功能: 跳转到登录页，登录后返回
    * 说明: 调用此方法说明当前页面需要登录，如果未登录跳转登录页
    */
-  goLoginPage(param = {}){
-    param = {
-      success() {
-        setTimeout(function () {
-          location.reload();
-        }, 500);
-      },
-      error() {
-        setTimeout(function () {
-          native.Browser.close();
-        }, 500);
-      }
-    };
+  goLoginPage(param){
     if (ua.isDvdApp()) {
       native.Account.login(param);
     } else {
@@ -73,9 +61,9 @@ export default {
    * 功能: 自动跳转登录页
    * 说明: 调用此方法说明当前页面需要登录，如果未登录跳转登录页
    */
-  needLogin(){
+  needLogin(param){
     if (!this.isLogined()) {
-      this.goLoginPage();
+      this.goLoginPage(param);
       return true;
     }
     return false;

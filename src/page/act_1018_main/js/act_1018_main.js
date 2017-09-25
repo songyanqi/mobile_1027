@@ -9,7 +9,7 @@ import $ from '$';
 import encrypt from '../../../common/js/module/encrypt.js';
 import param from '../../../common/js/module/param.js';
 import localCache from '../../../common/js/module/localCache.js';
-// import util from '../../../common/js/module/util.js';
+import login from '../../../common/js/module/login.js';
 import ua from '../../../common/js/module/ua.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
@@ -315,7 +315,13 @@ new Vue({
       localStorage.removeItem('act_1018_mine_data');
       localStorage.removeItem('act_1018_main_data');
       console.log('本地缓存act_1018_main_data、act_1018_mine_data已清除。')
-    }
+    },
+    isLogin(event) {
+      if(login.needLogin()){
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    },
   },
   filters: {},
 });

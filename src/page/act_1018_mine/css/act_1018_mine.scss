@@ -106,10 +106,9 @@
   .g-head-btn {
     position: absolute;
     top: ptr(172);
-    left: ptr(50);
+    left: ptr(44);
     //margin: ptr(20) auto 0 ptr(50);
-    width: ptr(263);
-    height: ptr(59);
+    height: ptr(63);
   }
 
   /*我的活动*/
@@ -309,7 +308,7 @@
         }
       }
       .swiper-container {
-        margin-top: ptr(24);
+        margin-top: ptr(10);
         padding: ptr(10) ptr(5);
         background: rgba(255, 255, 255, 0.1);
         .swiper-slide {
@@ -385,7 +384,7 @@
         }
       }
       .swiper-container {
-        margin-top: ptr(20);
+        margin-top: ptr(10);
         padding: ptr(10) ptr(5);
         background: rgba(255, 255, 255, 0.1);
         .swiper-slide {
@@ -462,7 +461,7 @@
         }
       }
       .swiper-container {
-        margin-top: ptr(20);
+        margin-top: ptr(10);
         padding: 0 ptr(7);
         .swiper-slide {
           margin: 0 ptr(3);
@@ -486,10 +485,10 @@
             margin-top: ptr(-2);
             padding: ptr(10) 0 ptr(15);
             background: white;
-            min-height: ptr(50);
+            min-height: ptr(40);
             .lighten-ok-bg {
               position: absolute;
-              top: ptr(-90);
+              top: ptr(-80);
               width: 100%;
             }
             .begin {
@@ -648,7 +647,7 @@
     /*必败清单*/
     .recommend {
       .title-type-2 {
-        margin: ptr(20);
+        margin: ptr(20) auto ptr(10);
         color: white;
       }
       ul {
