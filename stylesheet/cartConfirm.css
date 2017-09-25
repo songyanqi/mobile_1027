@@ -1199,9 +1199,9 @@ only screen and (min-resolution:2dppx)
 }
 .cart_confirm_container .order_navList {
   max-width: 640px;
-  position: fixed;
-  bottom: 95px;
-  z-index: 20;
+  /*position: fixed;*/
+  /*bottom: 95px;*/
+  /*z-index: 20;*/
   width: 100%;
   background: #fff;
   display: -webkit-box;
