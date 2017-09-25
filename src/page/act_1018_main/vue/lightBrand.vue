@@ -13,11 +13,10 @@
       </div>
     </div>
     <div class="all_list">
-      <div class="list" v-for="(item,index) in response"  :class="{'light':item.isCompleted==1}">
-        <div class="list_b_img" @click.stop="go_detail(item.linkUrl)">
+      <div class="list" @click="go_detail(item.linkUrl)" v-for="(item,index) in response"  :class="{'light':item.isCompleted==1}">
+        <div class="list_b_img">
           <img v-lazy="item.bandPic">
         </div>
-
         <div class="list_bottom" v-if="item.hotDay==-1">
 
           <template v-if="item.isCompleted!=1">
