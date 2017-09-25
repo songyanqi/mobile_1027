@@ -52,6 +52,7 @@
       margin: 0 ptr(10);
       display: block;
       @include circle(ptr(58));
+      border: ptr(3) solid rgba(255, 255, 255, 0.2);
     }
     .info {
       flex: 1;
@@ -92,6 +93,7 @@
     }
     .head-pic {
       @include circle(ptr(58));
+      border: ptr(3) solid rgba(255, 255, 255, 0.2);
     }
     .nickname {
       margin-top: ptr(10);
@@ -483,7 +485,7 @@
           .info {
             position: relative;
             margin-top: ptr(-2);
-            padding: ptr(10) 0 ptr(15);
+            padding: ptr(6) 0 ptr(15);
             background: white;
             min-height: ptr(40);
             .lighten-ok-bg {
@@ -599,7 +601,7 @@
             margin-top: ptr(10);
           }
           &.order {
-            @include i-draw-bg-order;
+            @include i-draw-bg-order(3);
             &.no-draw {
               .title {
                 top: ptr(12);
@@ -629,7 +631,7 @@
             }
           }
           &.assist {
-            @include i-draw-bg-assist;
+            @include i-draw-bg-assist(3);
             .title {
               top: ptr(10);
               font-size: ptr(18);
