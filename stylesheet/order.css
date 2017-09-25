@@ -424,8 +424,8 @@
     display: table;
     width: 100%;
 
-    position: fixed;
-    z-index: 20;
+    /*position: fixed;
+    z-index: 20;*/
 
 }
 
@@ -2700,9 +2700,9 @@ body.orderDetail, body.orderDelivery {
 .modalOrder .orderClose {
   right: 5px;
 }
-.margin44 {
+/*.margin44 {
   top: 44px;
-}
+}*/
 
 
 

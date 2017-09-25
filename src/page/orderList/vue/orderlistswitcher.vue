@@ -1,6 +1,7 @@
 <template>
     <div class="order_list_container">
-        <div class="order_list_switcher dav-shadow" :class = "{margin44: !isapp}">
+        <!-- <div class="order_list_switcher dav-shadow" :class = "{margin44: !isapp}"> -->
+        <div class="order_list_switcher dav-shadow">
             <div :class="{'selected':selected==0}" @click = 'all' class="switcher_item" data-type="0"><span>全部</span></div>
             <div :class="{'selected':selected==3}" @click = 'unpaid' class="switcher_item" data-type="3"><span>待付款</span></div>
             <div :class="{'selected':selected==2}" @click = 'delivery' class="switcher_item" data-type="2"><span>待发货</span></div>
@@ -10,9 +11,9 @@
         <div class="no-order hide">
             没有此类型订单
         </div>
-        <div class = "order_conts">
+        <!-- <div class = "order_conts"> -->
             <orderlistitem></orderlistitem>
-        </div>
+        <!-- </div> -->
     </div>
 </template>
 
