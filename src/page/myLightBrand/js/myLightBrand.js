@@ -43,6 +43,7 @@ new Vue({
         // 设置app头部标题栏
         setTimeout(function () {
           native.custom.initHead({
+            shareOnHead: 0,
             homeOnHead: 1,
             backOnHead: 1
           });
