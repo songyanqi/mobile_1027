@@ -47,11 +47,6 @@ new Vue({
             backOnHead: 1
           });
         },300);
-        setTimeout(function () {
-          native.Browser.setHead({
-            'backBtn' : '1'
-          })
-        },500);
         // 设置分享信息
         try {
           share.setShareInfo({

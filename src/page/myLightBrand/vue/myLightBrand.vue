@@ -76,6 +76,14 @@
       }
     },
     mounted(){
+      var obj={
+        'backBtn':'1',
+        'shareBtn':"1"
+      };
+      setTimeout(function(){
+        native.Browser.setHead(obj)
+      },400);
+
       var that=this;
       api("/api/mg/sale/bandLitUp/getMyBands")
         .then(function (result) {
