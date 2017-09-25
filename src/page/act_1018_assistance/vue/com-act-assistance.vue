@@ -91,10 +91,14 @@
               announcementData.push(that.response.notice[i])
             }
             that.response.notice = announcementData;
-            that.marguee = true;
+            setTimeout(function () {
+              that.marguee = true;
+            },1500);
             return that.response.notice;
           }else{
-            that.marguee = true;
+            setTimeout(function () {
+              that.marguee = true;
+            },1500);
             return that.response.notice;
           }
         }
