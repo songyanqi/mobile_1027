@@ -120,14 +120,17 @@
         this.rule_form = false;
       },
       activebtn: function (url) {
-        login.needLogin();
-        if(ua.isDvdApp()){
-          event.preventDefault();
-          native.Browser.open({
-            url:url
-          })
+        if(login.isLogined()){
+          if(ua.isDvdApp()){
+            event.preventDefault();
+            native.Browser.open({
+              url:url
+            })
+          }else{
+            location.href = url;
+          }
         }else{
-          location.href = url;
+          login.needLogin();
         }
       },
       events:function () {
