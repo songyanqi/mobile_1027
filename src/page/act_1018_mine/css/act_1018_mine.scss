@@ -486,6 +486,7 @@
             margin-top: ptr(-2);
             padding: ptr(10) 0 ptr(15);
             background: white;
+            min-height: ptr(50);
             .lighten-ok-bg {
               position: absolute;
               top: ptr(-90);
