@@ -358,8 +358,8 @@ export default {
           let goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
           setTimeout(() => {
             
-            // window.location.href = `/${buyURL}&${goods}`;
-            that.handleJump(`/${buyURL}&${goods}`);
+            window.location.href = `/${buyURL}&${goods}`;
+            // that.handleJump(`/${buyURL}&${goods}`);
           }, 500);
           return;
         }

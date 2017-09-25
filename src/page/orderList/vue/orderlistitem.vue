@@ -68,7 +68,7 @@
         <!-- 待预定 -->
         <div class="sum">
           <span v-if = "item.is_presale_order && (item.type == '3' || item.type == '4') ">
-            <span>共{{ item.goods[0].amount }}件</span>
+            <span>共{{ item.goods_list_num }}件</span>
             <span v-if = "item.presale_info.type == 'reserve'">
               <span>应付定金：</span>
               <span class="payment"><span class="fz_12">￥</span>{{item.presale_info.reserve_info.payment}}</span>
