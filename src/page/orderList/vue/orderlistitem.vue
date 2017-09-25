@@ -741,7 +741,7 @@
                                               value.type = 4;
                                             }
                                           }
-                                          if (value.is_presale_order && value.presale_info.type == "final") {
+                                          if (value.type != 1 && value.is_presale_order && value.presale_info.type == "final") {
                                             if (Date.now() > value.presale_info.final_info.paytime_end * 1000) {
                                               value.type = 4;
                                             }
