@@ -423,6 +423,10 @@
     font-size: 0;
     display: table;
     width: 100%;
+
+    position: fixed;
+    z-index: 20;
+
 }
 
 .order_list_container .no-order {
@@ -449,6 +453,9 @@
 .order_list_container .order_list_item {
     background-color: #fff;
     margin-top: 10px;
+}
+.order_list_container .order_conts {
+  margin-top: 54px;
 }
 
 .order_list_container .order_name {
@@ -2692,6 +2699,9 @@ body.orderDetail, body.orderDelivery {
 }
 .modalOrder .orderClose {
   right: 5px;
+}
+.margin44 {
+  top: 44px;
 }
 
 
