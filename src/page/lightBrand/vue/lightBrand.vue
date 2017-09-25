@@ -46,8 +46,8 @@
               <span class="start_value2" v-text="item.highDiscount"></span>
             </div>
 
-            <div class="list_need" v-if="item.isCompleted==-1">还需<span v-text="remainLight[index]"></span>人点亮</div>
-            <div class="list_need" v-if="item.isCompleted==1">已有<span v-text="haveCount[index]"></span>人点亮</div>
+            <div class="list_need" v-if="isCompleted[index]==-1">还需<span v-text="remainLight[index]"></span>人点亮</div>
+            <div class="list_need" v-if="isCompleted[index]==1">已有<span v-text="haveCount[index]"></span>人点亮</div>
 
 
             <div class="list_margin" v-if="isLighted[index]!=1" @click.stop="light(item.bandId,index,item.isCompleted)">
@@ -138,6 +138,7 @@
                 }
                 that.initIsLighted(result.data.dataList);
                 that.initNeedCount(result.data.dataList);
+                that.initIsCompleted(result.data.dataList);
               }
             }else{
               if(result.data.msg){
@@ -201,8 +202,11 @@
       },
       changeNeedCount(index,isCompleted){
         if(isCompleted==-1){
-          if(this.remainLight[index]>0){
+          if(this.remainLight[index]>1){
             Vue.set(this.remainLight,index,this.remainLight[index]-1);
+          }else if(this.remainLight[index]==1){
+            Vue.set(this.isCompleted,index,1);
+            Vue.set(this.haveCount,index,this.haveCount[index]+1);
           }
         }else if(isCompleted==1){
           Vue.set(this.haveCount,index,this.haveCount[index]+1);
