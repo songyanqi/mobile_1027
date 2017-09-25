@@ -503,7 +503,7 @@
               font-size: ptr(12);
             }
             .ok {
-              margin: auto;
+              margin: auto auto ptr(-3) auto;
               width: ptr(106);
               height: ptr(23);
               background: url(../img/lighten-ok.png) no-repeat;
