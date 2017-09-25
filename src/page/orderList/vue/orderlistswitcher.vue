@@ -1,5 +1,6 @@
 <template>
     <div class="order_list_container">
+        <!-- <div class="order_list_switcher dav-shadow" :class = "{margin44: !isapp}"> -->
         <div class="order_list_switcher dav-shadow">
             <div :class="{'selected':selected==0}" @click = 'all' class="switcher_item" data-type="0"><span>全部</span></div>
             <div :class="{'selected':selected==3}" @click = 'unpaid' class="switcher_item" data-type="3"><span>待付款</span></div>
@@ -10,7 +11,9 @@
         <div class="no-order hide">
             没有此类型订单
         </div>
-        <orderlistitem></orderlistitem>
+        <!-- <div class = "order_conts"> -->
+            <orderlistitem></orderlistitem>
+        <!-- </div> -->
     </div>
 </template>
 
@@ -22,6 +25,7 @@
                 selected:'',
                 currentType:+location.href.substr(location.href.indexOf("type=")+5,1)||0,
                 current:false,
+                // isapp: false,
             }
         },
         created:function(){
@@ -57,7 +61,15 @@
         components:{
             orderlistitem:orderlistitem
         },
+        mounted() {
+            // this.isapp = this.isApp();
+        },
         methods:{
+            // isApp() {
+            //     let u = navigator.userAgent;
+
+            //     return !!u.match(/davdian|bravetime|vyohui/);
+            // },
             all:function(){
                 var vm = this;
                 vm.selected = 0;

@@ -423,6 +423,10 @@
     font-size: 0;
     display: table;
     width: 100%;
+
+    /*position: fixed;
+    z-index: 20;*/
+
 }
 
 .order_list_container .no-order {
@@ -432,7 +436,9 @@
 }
 
 .order_list_container .order_list_switcher .switcher_item {
-    line-height: 38px;
+    /*line-height: 38px;*/
+    line-height: 14px;
+    padding: 14px 0;
     text-align: center;
     font-size: 14px;
     border: none;
@@ -447,6 +453,9 @@
 .order_list_container .order_list_item {
     background-color: #fff;
     margin-top: 10px;
+}
+.order_list_container .order_conts {
+  margin-top: 54px;
 }
 
 .order_list_container .order_name {
@@ -515,6 +524,12 @@
     padding: 0px 10px;
     height: inherit!important;
     line-height: inherit;
+}
+.order_list_container .order_presale {
+    font-size: 12px;
+    color: #333;
+    padding: 10px;
+    text-align: right;
 }
 
 .order_list_container .order_buttons span {
@@ -2258,8 +2273,6 @@ body.orderDetail, body.orderDelivery {
   opacity: 0;
   tap-highlight-color: rgba(0, 0, 0, 0);
   z-index: -1;
-  // -webkit-transition: opacity 400ms;
-  // transition: opacity 400ms;
 }
 .showMask {
   opacity: 1;
@@ -2487,3 +2500,210 @@ body.orderDetail, body.orderDelivery {
       transform: translate(-50%,-50%);
     }
 }
+
+
+
+.order_detail_container .order_presale {
+  /*padding: 15px 10px;*/
+  background: linear-gradient(to right, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  background: -moz-linear-gradient(right, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  background: -o-linear-gradient(right, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  background: -webkit-linear-gradient(left, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  color: #fff;
+}
+.order_detail_container .order_count_down {
+  padding: 15px 10px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 10px;
+  line-height: 21px;
+}
+.order_detail_container .oder_cut {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.order_detail_container .order_presale_tips {
+  font-size: 12px;
+  line-height: 22px;
+}
+.order_detail_container .overCutDown {
+  text-align: center;
+  padding: 30px 0;
+  font-weight: bold;
+}
+.order_detail_container .orderSuccess {
+  display: none;
+  background: linear-gradient(to right, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  background: -moz-linear-gradient(right, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  background: -o-linear-gradient(right, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  background: -webkit-linear-gradient(left, rgba(255, 92, 92,.6), rgba(250, 24, 98,.6));
+  color: #fff;
+}
+.order_detail_container .orderIcon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -2px;
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+  background: url(http://mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/goodsDetail/select.png) no-repeat;
+  background-size: 100%;
+}
+.order_detail_container .orderSuccess_time {
+  text-align: center;
+  margin-bottom: 10px;
+  padding-top: 15px;
+}
+.order_detail_container .orderSuccess_title {
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 21px;
+}
+.order_detail_container .orderSuccess_tips {
+  font-size: 12px;
+  padding: 0 10px 15px 10px;
+}
+
+
+.order_detail_container .stageCont {
+  padding: 10px 0 12px 0;
+  background: #fff;
+  margin: 10px 0;
+}
+.order_detail_container .stageList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 12px;
+  line-height: 17px;
+  padding-bottom: 10px;
+  color: #666;
+}
+.order_detail_container .colorLight {
+  color: #FF4A7D;
+}
+.order_detail_container .stageTips {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  color: #666;
+}
+.order_detail_container .stageF14 {
+  font-size: 14px;
+  padding-bottom: 0;
+  padding-top: 12px;
+}
+.order_detail_container .colorGray {
+  color: #999;
+}
+.order_detail_container .stages {
+  position: relative;
+}
+.order_detail_container .stages:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  border-bottom: 1px solid #e1e1e1;
+  -webkit-transform: scaleY(.5);
+  transform: scaleY(.5);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+
+}
+.modalOrder {
+  display: none;
+  background: #fff;
+  position: fixed;
+  z-index: 50;
+  width: 270px;
+  left: 50%;
+  top: 50%;
+  max-width: 640px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 14px;
+  overflow: hidden;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  text-align: center;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fff;
+  z-index: 50;
+  color: #333;
+}
+.orderModalShow {
+  display: block;
+}
+.modalOrder .modalCloseWrapper {
+  display: none;
+}
+.modalOrder .orderBtns {
+    position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+.modalOrder .orderConfirm {
+  position: relative;
+  padding: 12px;
+ color: #FF4A7D;
+ -webkit-box-flex: 1;
+ -webkit-flex: 1;
+ flex: 1;
+}
+.modalOrder .orderCancle {
+  padding: 12px;
+  -webkit-box-flex: 1;
+ -webkit-flex: 1;
+ flex: 1;
+}
+.modalOrder .orderConfirm:after {
+  position: absolute;
+  content: "";
+  width: 200%;
+  height: 200%;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-left: 1px solid #e1e1e1;
+  -webkit-transform: scale(0.5,0.5);
+  transform: scale(0.5,0.5);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+}
+.modalOrder .orderTitle {
+  padding: 30px 15px 15px 15px;
+  text-align: left;
+}
+.modalOrder .orderBtns:after {
+  position: absolute;
+  content: "";
+  border-top: 1px solid #e1e1e1;
+  left: 0;
+  right: 0;
+  top: 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+}
+.modalOrder .orderClose {
+  right: 5px;
+}
+/*.margin44 {
+  top: 44px;
+}*/
+
+
+
+

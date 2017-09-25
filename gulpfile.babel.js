@@ -53,7 +53,8 @@ let config = {
   html: `src/page/${BuildArg.page}/*.html`,
   css: `src/*page/${BuildArg.page}/css/*.scss`,
   js: `src/page/${BuildArg.page}/js/*.js`,
-  img: `src/*page/${BuildArg.page}/img/*`,
+  moveJs: `src/*common/js/autoRootSize.js`,
+  img: [`src/*page/${BuildArg.page}/img/*`, `src/*common/img/*`],
   iconDir: `src/page/${BuildArg.page}/img/icon*`,
   temp: `.temp`,
 };
@@ -61,6 +62,7 @@ let config = {
 // 替换表
 let replacer = {
   '[[env_stage]]': '',
+  '[[base_domain]]': '',
   '[[env_num]]': '',
   '[[static]]': '',
   '[[vendor]]': '//cdn-ws.davdian.com',
@@ -103,10 +105,13 @@ function promptBuildArg(build, buidType) {
     let domain = 'domain';
     if (BuildArg.env_stage == 'dev') {
       domain = 'fe.bravetime.net';
+      replacer['[[base_domain]]'] = 'bravetime.net';
     } else if (BuildArg.env_stage == 'beta') {
       domain = 'fe.vyohui.cn';
+      replacer['[[base_domain]]'] = 'vyohui.cn';
     } else if (BuildArg.env_stage == 'gray' || BuildArg.env_stage == 'prod') {
       domain = 'fe-ws.davdian.com';
+      replacer['[[base_domain]]'] = 'davdian.com';
     } else {
       // throw new Error(`env_stage参数不正确: ${BuildArg.env_stage}`);
       let errorValue = BuildArg.env_stage;
@@ -270,7 +275,7 @@ gulp.task('js:dev', () => {
   // 显示文件体积
     .pipe(size({showFiles: true}))
     // 输出
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/static'));
 });
 
 // 生产环境JS编译
@@ -282,11 +287,47 @@ gulp.task('js:dist', () => {
     // 显示文件体积
     .pipe(size({showFiles: true}))
     // 输出JS
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist/static'))
     // 记录MD5
     .pipe(rev.manifest('rev-md5/js.json'))
     // 输出MD5
     .pipe(gulp.dest(config.temp));
+});
+
+
+/************************************ 只移动、不编译的JS ************************************/
+
+// JS公共编译方法
+function moveJs() {
+  console.log(`>>>>>>>>>>>>>>> move-js文件开始编译。${util.getNow()}`);
+
+  // 编译并返回流
+  return gulp.src(config.moveJs);
+}
+
+// 开发环境JS编译
+gulp.task('move-js:dev', () => {
+  return moveJs()
+  // 显示文件体积
+    .pipe(size({showFiles: true}))
+    // 输出
+    .pipe(gulp.dest('dist/static'));
+});
+
+// 生产环境JS编译
+gulp.task('move-js:dist', () => {
+  return moveJs()
+    .pipe(uglify())
+    // 收集JS文件的MD5
+    // .pipe(rev())
+    // 显示文件体积
+    .pipe(size({showFiles: true}))
+    // 输出JS
+    .pipe(gulp.dest('dist/static'))
+    // 记录MD5
+    // .pipe(rev.manifest('rev-md5/js.json'))
+    // 输出MD5
+    // .pipe(gulp.dest(config.temp));
 });
 
 
@@ -368,7 +409,6 @@ gulp.task('old:rev', () => {
   return gulp.src([
     `stylesheet/base.css`,
     `stylesheet/model.css`,
-    `javascript/tongji.js`,
     `javascript/units.js`,
     `javascript/base.js`,
     `javascript/model.js`,
@@ -492,6 +532,7 @@ gulp.task('default', () => {
       // ['clean:dist'],
       // ['create_sprite'],
       ['js:dev'],
+      ['move-js:dev'],
       ['css:dev'],
       ['img:dev'],
       ['html:dev'],
@@ -499,7 +540,7 @@ gulp.task('default', () => {
       function () {
         // gulp.watch([`src/**/img/icon*/*`], ['create_sprite', 'img:dev', 'js:dev', 'html:dev']);
         // 监视js变化
-        gulp.watch([`src/**/*.{js,vue,json,es6}`], ['js:dev', 'html:dev']);
+        gulp.watch([`src/**/*.{js,vue,json,es6}`], ['js:dev', 'move-js:dev', 'html:dev']);
         // 监视旧的js变化
         gulp.watch([`{javascript,module,source,utils}/**/*.{js,vue,json,es6}`], ['js:dev', 'html:dev']);
         // 监视css变化
@@ -530,6 +571,7 @@ gulp.task('build:dev', () => {
       // ['clean:dist'],
       // ['sprite'],
       ['js:dev'],
+      ['move-js:dev'],
       ['css:dev'],
       ['img:dev'],
       ['html:dev'],
@@ -548,6 +590,7 @@ gulp.task('build:dist', () => {
       // ['clean:dist'],
       // ['sprite'],
       ['js:dist'],
+      ['move-js:dist'],
       ['css:dist'],
       ['img:dist'],
       ['old:rev'],

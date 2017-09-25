@@ -26,6 +26,10 @@
         var cancelOrderUrl = "../data/testCancel.json";
         var arriveUrl = '../data/success.json'; // 确认收货地址
         var arriveJumpUrl = '//nemo.davdian.com';
+        
+        var is_presale_order = true;
+        var presale_surplus_time = 30;
+        var presale_type = "reserve";
     </script>
 </head>
 <body class="orderDetail">
@@ -49,6 +53,29 @@
 </div>
 
 <div class="order_detail_container">
+    <!-- 新增预定 -->
+    <div class = "order_presale">
+
+
+      <div class = "order_count_down">
+        <div class = "oder_cut">
+          <span>剩余：</span><span class = "cutTime">00 : 00 : 00</span>
+        </div>
+        <div>应付定金：¥1.6</div>
+      </div>
+      <div class = " order_presale_tips">请在30分钟之内支付定金，若未及时支付，则该订单自动关闭。</div>
+    </div>
+    <!-- 订单预定成功 -->
+    <div class = "orderSuccess">
+      <div class = "orderSuccess_time"><span class = "orderIcon"></span><span class = "orderSuccess_title">恭喜您预定成功！</span></div>
+      <div class = "orderSuccess_tips">请与 2017年10月18日 00:00:00 至 23:59:59 之间支付尾款，若尾款超时未支付，则该订单自动关闭x。</div>
+    </div>
+
+
+
+
+
+
     <div class="current_address dav-shadow">
         <div class="info dav-red dav-small">
             提示：您购买的这件商品是团购商品，需要成团之后才能发货；如果在规定时间内没有成团，您支付的款项将在2-7天退回到您的支付账户。
@@ -447,6 +474,35 @@
             <div>商品总价：<span class="pull-right">＋ <span>¥57.00</span></span></div>
         </div>
         <div class="order_total_price">订单总价：<span class="pull-right dav-color-D73C6B">¥597.00</span></div>
+    </div>
+
+    <div class = "stageCont">
+      <div class = "stages">
+        <div class = "stageList">
+          <div class = "stageTips">
+            <span class = "colorGray">阶段1</span>
+            <span class = "clorLight">(已关闭)</span>
+          </div>
+          <div>定金 ¥ 1.6 (抵扣 ¥ 10)</div>
+        </div>
+        <div class = "stageList">
+          <div class = "stageTips">
+            <span class = "colorGray">阶段2</span>
+            <span>(已关闭)</span>
+          </div>
+          <div>尾款 ¥ 1.6</div>
+        </div>
+        <div class = "stageList">
+          <div class = "stageTips">
+            <span class = "colorGray">邮费</span>
+          </div>
+          <span>¥ 0.0</span>
+        </div>
+      </div>
+      <div class = "stageList stageF14">
+        <div class = "stageTips">应付定金</div>
+        <div>¥ 1.6</div>
+      </div>
     </div>
 
     <!--微信端联系客服-->

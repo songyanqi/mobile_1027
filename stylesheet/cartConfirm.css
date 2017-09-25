@@ -1021,7 +1021,7 @@ body.commission_use {
     text-decoration: line-through;
     margin-left: 5px;
 }
-.change_book_btn{
+.change_book_btn {
     width: 50px;
     height: 22px;
     line-height: 22px;
@@ -1134,6 +1134,116 @@ only screen and (min-resolution:2dppx)
 .in_app .top0{
     display: none;
 }
+.cart_confirm_container .order_goods {
+  padding: 10px;
+  background: #fff;
+  margin-top: 10px;
+  color: #666;
+}
+.cart_confirm_container .stageList {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding-bottom: 10px;
+}
+.cart_confirm_container .order_stage_title {
+  margin-right: 27px;
+}
+.cart_confirm_container .order_stage_cont {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.cart_confirm_container .order_discont {
+  font-size: 12px;
+}
+.cart_confirm_container .stageList:last-child {
+  padding-bottom: 0;
+}
+
+.cart_confirm_container .color_red {
+  color: #FF4A7D;
+}
+.cart_confirm_container .stage_date {
+  position: relative;
+  background: #F9F9F9;
+  color: #666;
+  padding: 10px;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.cart_confirm_container .stage_date:after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 200%;
+  height: 200%;
+  border: 1px solid #E1E1E1;
+  color: #E1E1E1;
+  -webkit-transform: scale(.5,.5);
+  transform: scale(.5,.5);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.cart_confirm_container .order_triangle {
+  position: absolute;
+  z-index: 10;
+  top: -5px;
+  width: 10px;
+  height: 6px;
+  background: url(http://mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/goodsDetail/trigrents.png);
+  background-size: 100%;
+}
+.cart_confirm_container .order_navList {
+  max-width: 640px;
+  /*position: fixed;*/
+  /*bottom: 95px;*/
+  /*z-index: 20;*/
+  position: relative;
+  width: 100%;
+  background: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  padding: 12px 10px;
+  line-height: 20px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+.cart_confirm_container .order_navList_line {
+  border: 1px dashed #FF4A7D;
+}
+.cart_confirm_container .order_rule_ipt {
+  position: absolute;
+  z-index: 10;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  background: url(http://mamaj-oss.oss-cn-beijing.aliyuncs.com/orderList/unselected.png) no-repeat center;
+  background-size: 100%;
+}
+.cart_confirm_container .order_rule_ipt_checked {
+  background: url(http://mamaj-oss.oss-cn-beijing.aliyuncs.com/orderList/select.png) no-repeat center;
+  background-size: 100%;
+}
+.cart_confirm_container  .order_rule_tips {
+  position: relative;
+}
+.cart_confirm_container .dealIcon {
+  position: absolute;
+  top: -6px;
+  right: -25px;
+  width: 30px;
+  height: 30px;
+  background: url(http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/goodsDetail/questionIcon.png) no-repeat center;
+  background-size: 11px;
+}
+.bodyOrderBt {
+  padding-bottom: 139px;
+}
 
 .dvd_gift {
     width: 70px;
@@ -1147,6 +1257,7 @@ only screen and (min-resolution:2dppx)
     line-height: 21px;
     z-index: 10;
 }
+
 
 
 

@@ -9,7 +9,7 @@
         <!--提示区域-->
         <div class="tip">
           <!--标题-->
-          <div class="title" v-html="title" v-if="title"></div>
+          <div class="title" v-html="title" v-if="title" :style="titleStyle"></div>
           <!--输入框-->
           <input class="input" ref="input" type="text" :placeholder="placeholder" v-if="type == 'prompt'">
           <!--文案-->
@@ -20,7 +20,8 @@
         <!--按钮区域-->
         <div class="btns">
           <!--取消按钮-->
-          <div class="btn cancel" v-html="cancelBtnTitle || '取消'" @click="cancelBtnClick" v-if="cancelBtnTitle !== null"></div>
+          <div class="btn cancel" v-html="cancelBtnTitle || '取消'" @click="cancelBtnClick"
+               v-if="cancelBtnTitle !== null"></div>
           <!--垂直分割线-->
           <div class="v-split" v-if="cancelBtnTitle !== null"></div>
           <!--确定按钮-->
@@ -39,7 +40,7 @@
         type: String,
         default: null
       },
-      // 取值范围，'alert' || 'confirm' || 'prompt'
+      // 取值范围，'alert' || 'confirm' || 'prompt' || 'debug'
       type: {
         type: String,
         default: 'alert'
@@ -83,7 +84,18 @@
     data() {
       return {}
     },
-    computed: {},
+    computed: {
+      titleStyle(){
+        if (this.type == 'debug') {
+          return {
+            '-webkit-user-select': 'text',
+            'user-select': 'text'
+          }
+        } else {
+          return null;
+        }
+      }
+    },
     created(){
     },
     mounted() {

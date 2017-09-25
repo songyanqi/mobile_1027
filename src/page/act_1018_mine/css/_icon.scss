@@ -1,0 +1,130 @@
+// arrow-right-red 图片:
+@mixin i-arrow-right-red($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (16rem / 100 / $ratio);
+  height: (24rem / 100 / $ratio);
+  background: url(../img/icon.png?v=1) (-902rem / 100 / $ratio) (-576rem / 100 / $ratio) no-repeat;
+  background-size: (987rem / 100 / $ratio) (786rem / 100 / $ratio);
+}
+
+// arrow-right 图片:
+@mixin i-arrow-right($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (16rem / 100 / $ratio);
+  height: (24rem / 100 / $ratio);
+  background: url(../img/icon.png?v=1) (-966rem / 100 / $ratio) (-534rem / 100 / $ratio) no-repeat;
+  background-size: (987rem / 100 / $ratio) (786rem / 100 / $ratio);
+}
+
+// assist-bg-1 图片:
+@mixin i-assist-bg-1($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (242rem / 100 / $ratio);
+  height: (132rem / 100 / $ratio);
+  background: url(../img/icon.png?v=1) (-330rem / 100 / $ratio) (-488rem / 100 / $ratio) no-repeat;
+  background-size: (987rem / 100 / $ratio) (786rem / 100 / $ratio);
+}
+
+// assist-bg-2 图片:
+@mixin i-assist-bg-2($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (242rem / 100 / $ratio);
+  height: (132rem / 100 / $ratio);
+  background: url(../img/icon.png?v=1) (-582rem / 100 / $ratio) (-488rem / 100 / $ratio) no-repeat;
+  background-size: (987rem / 100 / $ratio) (786rem / 100 / $ratio);
+}
+
+// assist-bg-3 图片:
+@mixin i-assist-bg-3($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (242rem / 100 / $ratio);
+  height: (132rem / 100 / $ratio);
+  background: url(../img/icon.png?v=1) (0rem / 100 / $ratio) (-654rem / 100 / $ratio) no-repeat;
+  background-size: (987rem / 100 / $ratio) (786rem / 100 / $ratio);
+}
+
+// draw-bg-assist 图片:
+@mixin i-draw-bg-assist($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (987rem / 100 / $ratio);
+  height: (234rem / 100 / $ratio);
+  background: url(../img/icon.png?v=1) (0rem / 100 / $ratio) (-244rem / 100 / $ratio) no-repeat;
+  background-size: (987rem / 100 / $ratio) (786rem / 100 / $ratio);
+}
+
+// draw-bg-order 图片:
+@mixin i-draw-bg-order($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (987rem / 100 / $ratio);
+  height: (234rem / 100 / $ratio);
+  background: url(../img/icon.png?v=1) (0rem / 100 / $ratio) (0rem / 100 / $ratio) no-repeat;
+  background-size: (987rem / 100 / $ratio) (786rem / 100 / $ratio);
+}
+
+// more 图片:
+@mixin i-more($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (26rem / 100 / $ratio);
+  height: (26rem / 100 / $ratio);
+  background: url(../img/icon.png?v=1) (-252rem / 100 / $ratio) (-654rem / 100 / $ratio) no-repeat;
+  background-size: (987rem / 100 / $ratio) (786rem / 100 / $ratio);
+}
+
+// recommend-act 图片:
+@mixin i-recommend-act($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (128rem / 100 / $ratio);
+  height: (36rem / 100 / $ratio);
+  background: url(../img/icon.png?v=1) (-834rem / 100 / $ratio) (-488rem / 100 / $ratio) no-repeat;
+  background-size: (987rem / 100 / $ratio) (786rem / 100 / $ratio);
+}
+
+// recommend-icon 图片:
+@mixin i-recommend-icon($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (58rem / 100 / $ratio);
+  height: (24rem / 100 / $ratio);
+  background: url(../img/icon.png?v=1) (-834rem / 100 / $ratio) (-576rem / 100 / $ratio) no-repeat;
+  background-size: (987rem / 100 / $ratio) (786rem / 100 / $ratio);
+}
+
+// redpack-bg 图片:
+@mixin i-redpack-bg($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (320rem / 100 / $ratio);
+  height: (156rem / 100 / $ratio);
+  background: url(../img/icon.png?v=1) (0rem / 100 / $ratio) (-488rem / 100 / $ratio) no-repeat;
+  background-size: (987rem / 100 / $ratio) (786rem / 100 / $ratio);
+}
+
+// title-type-2-left 图片:
+@mixin i-title-type-2-left($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (56rem / 100 / $ratio);
+  height: (32rem / 100 / $ratio);
+  background: url(../img/icon.png?v=1) (-900rem / 100 / $ratio) (-534rem / 100 / $ratio) no-repeat;
+  background-size: (987rem / 100 / $ratio) (786rem / 100 / $ratio);
+}
+
+// title-type-2-right 图片:
+@mixin i-title-type-2-right($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (56rem / 100 / $ratio);
+  height: (32rem / 100 / $ratio);
+  background: url(../img/icon.png?v=1) (-834rem / 100 / $ratio) (-534rem / 100 / $ratio) no-repeat;
+  background-size: (987rem / 100 / $ratio) (786rem / 100 / $ratio);
+}
+

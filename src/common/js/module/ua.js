@@ -115,6 +115,7 @@ Ua.prototype = {
 	 * @returns {true | false}
 	 * android	Mozilla/5.0 (Linux; Android 6.0; MI 5 Build/MRA58K) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/37.0.0.0 Mobile MQQBrowser/6.2 TBS/036523 Safari/537.36 MicroMessenger/6.3.18.800 NetType/WIFI Language/zh_CN
 	 * ios		Mozilla/5.0 (iPod touch; CPU iPhone OS 9_3_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Mobile/13F69 MicroMessenger/6.3.19 NetType/WIFI Language/zh_CN
+   * ios		Mozilla/5.0 (iPhone; CPU iPhone OS 8_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12D508 MicroMessenger/6.5.14 NetType/WIFI Language/zh_CN
 	 */
 	isWeiXin: function(){
 		return this.getFromCache('isWeiXin', ['MicroMessenger']);
@@ -163,7 +164,7 @@ Ua.prototype = {
    * @returns {true | false}
    * android(正式环境):	Mozilla/5.0 (Linux; Android 7.0; MI 5 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36 android.davdian.com/3.6.2
    * android(beta环境):	Mozilla/5.0 (Linux; Android 7.0; MI 5 Build/NRD90M; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/55.0.2883.91 Mobile Safari/537.36 android.vyohui.cn/3.7.0/dvddomain=1
-   * ios
+   * ios(正式环境):	Mozilla/5.0 (iPhone; CPU iPhone OS 8_2 like Mac OS X) AppleWebKit/600.1.4 (KHTML, like Gecko) Mobile/12D508 ios.davdian.com/5.0.0 /WebView=WKWeb
    */
   isDvdApp: function(){
     return this.getFromCache('isDvdApp', ['davdian', 'vyohui', 'bravetime']);
@@ -175,6 +176,15 @@ Ua.prototype = {
     let result = /(ios|android)\.(davdian\.com|vyohui\.cn|bravetime\.net)\/([\d\.]+)/.exec(navigator.userAgent);
     if (result) {
       return result[3];
+    }
+  },
+  /**
+   * 获取ios系统版本
+   */
+  getIosVersion() {
+    let result = /iPhone[ ]OS[ ](\d*_*\d*_*\d*)/.exec(navigator.userAgent);
+    if (result) {
+      return result[1] ? result[1].replace(/_/g, '.') : '';
     }
   },
   /**
@@ -200,6 +210,15 @@ Ua.prototype = {
     }
     return 0;
   },
+  /**
+   * 获取url参数
+   */
+  getQuery(name) {
+    var reg = new RegExp('(^|&?)' + name + '=([^&]*)(&|$)', 'i');
+    var r = window.location.search.match(reg)
+    if (r != null) return decodeURIComponent(r[2]);
+    return null
+  }
 };
 Ua.prototype.constructor = Ua;
 
