@@ -49,20 +49,21 @@ export default {
    * 功能: 跳转到登录页，登录后返回
    * 说明: 调用此方法说明当前页面需要登录，如果未登录跳转登录页
    */
-  goLoginPage(){
+  goLoginPage(param = {}){
+    param = {
+      success() {
+        setTimeout(function () {
+          location.reload();
+        }, 500);
+      },
+      error() {
+        setTimeout(function () {
+          native.Browser.close();
+        }, 500);
+      }
+    };
     if (ua.isDvdApp()) {
-      native.Account.login({
-        success() {
-          setTimeout(function(){
-            location.reload();
-          }, 1000);
-        },
-        error() {
-          setTimeout(function(){
-            location.reload();
-          }, 1000);
-        }
-      });
+      native.Account.login(param);
     } else {
       location.href = '/login.html?referer=' + encodeURIComponent(location.href);
       throw new Error(`即将跳转登录页(${location.href})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
