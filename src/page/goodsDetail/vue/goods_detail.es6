@@ -332,6 +332,23 @@ export default {
         $('html,body').animate({scrollTop: 0}, 500);
       }
     },
+    isMobile() {
+      let ua = navigator.userAgent;
+      return !!ua.match(/Mobile/i);
+    },
+  // 跳转方式
+    handleJump(url) {
+      // this.isapp = this.isApp();
+      if (this.isApp) {
+        native.Browser.open({
+          url: url
+        });
+      } else if (this.isMobile()) {
+        window.open(url, '_blank');
+      } else {
+        window.open(url, '_self');
+      }
+    },
     //加入购物车封装的ajax;
     cartAjax(isBuy) {
       let that = this;
@@ -340,12 +357,9 @@ export default {
           // 购买就直接跳走
           let goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
           setTimeout(() => {
-            // if (that.infoObj.presale) {
-            //   goods = encodeURI(`advance[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
-            // } else {
-            //   goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
-            // }
-            window.location.href = `/${buyURL}&${goods}`;
+            
+            // window.location.href = `/${buyURL}&${goods}`;
+            that.handleJump(`/${buyURL}&${goods}`);
           }, 500);
           return;
         }
