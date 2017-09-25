@@ -13,10 +13,11 @@
       </div>
     </div>
     <div class="all_list">
-      <div class="list" @click="go_detail(item.linkUrl)" v-for="(item,index) in response"  :class="{'light':item.isCompleted==1}">
+      <div class="list" v-for="(item,index) in response"  :class="{'light':item.isCompleted==1}" @click="go_detail(item.linkUrl)">
         <div class="list_b_img">
           <img v-lazy="item.bandPic">
         </div>
+
         <div class="list_bottom" v-if="item.hotDay==-1">
 
           <template v-if="item.isCompleted!=1">
@@ -204,6 +205,11 @@
                   }
                 }
               }
+
+              // 清缓存
+              localStorage.removeItem('act_1018_mine_data');
+              localStorage.removeItem('act_1018_main_data');
+              console.log('本地缓存act_1018_main_data、act_1018_mine_data已清除。');
             })
             .catch(function (e) {
             })

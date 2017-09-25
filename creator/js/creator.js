@@ -12,6 +12,7 @@ import util from '../../../common/js/module/util.js';
 import tj from '../../../common/js/module/tj.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
+import localCache from '../../../common/js/module/localCache.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
@@ -57,7 +58,7 @@ new Vue({
             desc: ts.response.data.shareDesc,
             link: location.href,
             imgUrl: ts.response.data.shareImg
-          });
+          }, ts.response);
         } catch (err) {
           console.error(err);
         }

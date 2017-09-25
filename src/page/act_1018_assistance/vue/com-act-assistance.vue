@@ -19,7 +19,6 @@
     <div>
       <ul>
         <li v-for="lis in response.goodsInfo" class="list_style online">
-          <a :href="lis.activityLink">
             <div class="img_container">
               <div class="img_container_inner">
                 <img v-lazy="lis.goodsImage">
@@ -34,12 +33,11 @@
                 </div>
               </div>
             </div>
-          </a>
           <div v-if="lis.buttonType > 2" class="progress_info" style="padding-right: 1.1rem;" v-html="lis.activityMessage"></div>
           <div v-else class="progress_info" v-html="lis.activityMessage"></div>
-          <a class="remain_btns">
+          <div class="remain_btns">
             <div class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}" @click="activebtn(lis.activityLink)">{{lis.activityButton}}</div>
-          </a>
+          </div>
         </li>
       </ul>
     </div>
@@ -64,7 +62,9 @@
   </div>
 </template>
 <script>
+  import ua from '../../../common/js/module/ua.js';
   import login from '../../../common/js/module/login.js';
+  import native from "../../../common/js/module/native";
   export default {
     props: {
       response: {
@@ -121,7 +121,14 @@
       },
       activebtn: function (url) {
         login.needLogin();
-        location.href = url;
+        if(ua.isDvdApp()){
+          event.preventDefault();
+          native.Browser.open({
+            url:url
+          })
+        }else{
+          location.href = url;
+        }
       },
       events:function () {
 
@@ -163,10 +170,6 @@
     }
   }
 
-  .remain_btns {
-
-  }
-
   .f_l {
     float: left;
   }
@@ -206,7 +209,7 @@
     position: absolute;
     padding-left: 0.9rem;
     top: 0;
-    padding-top: 0.1rem;
+    /*padding-top: 0.1rem;*/
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -243,7 +246,7 @@
     height: 0.16rem;
     line-height: 0.16rem;
     color: #FF4A7D;
-    padding-top: 0.05rem;
+    padding-top: 0.1rem;
   }
 
   .order_good_price {

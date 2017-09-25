@@ -158,7 +158,7 @@
     <img class="table_brand" src="//pic.davdian.com/free/20170915_assistance/table_brand.png">
     <!--助力结束和助力发起页不显示这个-->
     <a :href="'/ast_'+goodsdata.goods.goodsId+'.html'" v-if="response.type == 1 && response.actType == 0"
-       style="margin-bottom: 0.2rem;display: block" class="share_btn bd_p">我也想要商品0元购</a>
+       style="margin-bottom: 0.2rem;display: block;width: 1.8rem;" class="share_btn bd_p">我也想要商品0元购</a>
     <!--获奖好友轮播-->
     <div class="loop_my_friend_reward" v-if="goodsdata.notice.length">
       <swiper loop auto height="60px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">

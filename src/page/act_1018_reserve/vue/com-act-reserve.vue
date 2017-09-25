@@ -66,7 +66,7 @@
       // font-size: 14px;
       // padding: 5px 0 10px 10px;
       font-size: 0.14rem;
-      padding: 0.05rem 0 0.1rem 0.1rem;
+      padding: 0.05rem 0 0.08rem 0.1rem;
       .f12 {
         // font-size: 12px;
         font-size: 0.12rem;
@@ -76,7 +76,7 @@
       color: #FF4A7D;
       font-size: 0;
       // padding: 0 0 13px 10px;
-      padding: 0 0 0.13rem 0.1rem;
+      padding: 0 0 0.1rem 0.1rem;
       .a_tips {
         // font-size: 12px;
         font-size: 0.12rem;

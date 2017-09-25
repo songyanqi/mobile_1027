@@ -4,16 +4,12 @@ import common from '../../../common/js/common.js';
 // 第三方模块
 import Vue from 'Vue';
 import $ from '$';
-import Cookies from 'js-cookie';
 
 // 业务模块
 import encrypt from '../../../common/js/module/encrypt.js';
 import param from '../../../common/js/module/param.js';
-import tj from '../../../common/js/module/tj.js';
-import popup from '../../../common/js/module/popup.js';
-import login from '../../../common/js/module/login.js';
 import localCache from '../../../common/js/module/localCache.js';
-import util from '../../../common/js/module/util.js';
+// import util from '../../../common/js/module/util.js';
 import ua from '../../../common/js/module/ua.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
@@ -21,7 +17,7 @@ import vueLazyload from '../../../common/js/module/vueLazyload.js';
 import date from '../../../common/js/module/date.js';
 
 // 懒加载初始化
-vueLazyload.init();
+vueLazyload.init(true);
 
 // 渲染页面
 new Vue({
@@ -151,7 +147,7 @@ new Vue({
             desc: desc,
             link: location.href,
             imgUrl: `${location.protocol}[[static]]/page/act_1018_main/img/share.jpg`
-          });
+          }, ts.response);
         } catch (err) {
           console.error(err);
         }
@@ -195,8 +191,23 @@ new Vue({
      * 接口名称: 获取主会场活动信息
      * 接口文档: http://wiki.ops.vyohui.com/pages/viewpage.action?pageId=18546916
      */
-    getData(){
+    getData(refresh = false){
       let ts = this;
+
+      // 缓存
+      let cacheKey = `act_1018_main_data`;
+      // 按时间取缓存
+      let minute = new Date().getMinutes();
+      if (minute > 0 && minute < 59) {
+        // 取缓存
+        let data = localCache.getItem(cacheKey);
+        if (data && !refresh) {
+          this.response = data;
+          ts.$forceUpdate();
+          return;
+        }
+      }
+
       $.ajax({
         cache: false,
         async: true,
@@ -212,6 +223,14 @@ new Vue({
 
           // 刷新页面
           ts.$forceUpdate();
+
+          // 存缓存
+          localCache.setItem({
+            Date: Date.now(),     // 当前时间（不传则取设备时间）
+            Expires: 1 * 60 * 1000,   // 过期时间（从当前时间开始计算过多少毫秒缓存失效）
+            key: cacheKey,        // 缓存key
+            data: response        // 缓存data（可以传json或String）
+          });
         },
         error(error) {
           // ts.response = require('../json/act_1018_main.json');
@@ -220,10 +239,10 @@ new Vue({
       });
     },
     /**
-     * 获取头图图片地址
+     * 获取专题配置数据
      * 默认头图地址: http://pic.davdian.com/free/2017/09/13/750_895_fef7e55d54bb1a61d6598bdcbfc523ff.jpg
      */
-    getTopics(){
+    getTopics(refresh = false){
       let ts = this;
       for (let i in ts.topics) {
         let topic = ts.topics[i];
@@ -232,17 +251,18 @@ new Vue({
 
         // 按时间取缓存
         let minute = new Date().getMinutes();
-        if (minute > 5 && minute < 55) {
+        if (minute > 10) {
           // 取缓存
           let data = localCache.getItem(cacheKey);
-          if (data) {
+          if (data && !refresh) {
             topic.content = data;
             ts.$forceUpdate();
             continue;
           }
         }
 
-        let url = `${location.protocol}//${util.getSecondDomain()}.davdian.com/t-${topic.id}.html?_=${Date.now()}`;
+        // let url = `${location.protocol}//${util.getSecondDomain()}.davdian.com/t-${topic.id}.html?_=${Date.now()}`;
+        let url = `/t-${topic.id}.html?_=${Date.now()}`;
         $.ajax({
           cache: false,
           async: true,
@@ -254,11 +274,12 @@ new Vue({
           data: {},
           success(response) {
             try {
-              if (topic.id == (param.get('t1') || '14376')) {
+              // 头图json转换
+              if (topic.id == (param.get('t1') || ts.topics[0].id)) {
                 response = JSON.parse(response);
               }
+
               topic.content = response;
-              // 刷新页面
               ts.$forceUpdate();
 
               // 存缓存
@@ -289,6 +310,12 @@ new Vue({
         ts.$forceUpdate();
       }, 1000);
     },
+    /* 每次活动点击，清除本地缓存 */
+    removeLocalCache() {
+      localStorage.removeItem('act_1018_mine_data');
+      localStorage.removeItem('act_1018_main_data');
+      console.log('本地缓存act_1018_main_data、act_1018_mine_data已清除。')
+    }
   },
   filters: {},
 });

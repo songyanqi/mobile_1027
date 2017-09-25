@@ -82,7 +82,7 @@
     <div class="g-topic-top" v-html="topics[1].content"></div>
 
     <!--活动区域-->
-    <div class="g-act" v-if="response && response.data">
+    <div class="g-act" v-if="response && response.data" @click="removeLocalCache">
       <!--好友助力-->
       <com-act-assistance :response="response.data.help" v-if="response.data.help" :current-date="currentDate"></com-act-assistance>
 

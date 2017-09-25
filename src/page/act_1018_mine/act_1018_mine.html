@@ -292,7 +292,7 @@
       <!--必败清单-->
       <div class="recommend" v-if="response.data.willBuy">
         <!--标题-->
-        <div class="title-type-2" @click="window.localStorage.clear();">必败清单</div>
+        <div class="title-type-2" @click="removeLocalCache">必败清单</div>
         <!--双排列表-->
         <ul>
           <li v-for="(item, i) in response.data.willBuy">
@@ -302,7 +302,7 @@
                 <div class="act">{{item.actInfo}}</div>
               </div>
               <div class="info">
-                <div class="title">来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品{{item.title}}</div>
+                <div class="title">{{item.title}}</div>
                 <div class="price">
                   <span class="price-symbol">￥</span>
                   <span class="price-int">{{item.nowPrice.split('.')[0]}}</span>
