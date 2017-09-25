@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="all_list">
-      <div class="list" v-for="(item,index) in response"  :class="{'light':isCompleted[index]==1}" @click="go_detail(item.linkUrl)">
+      <div class="list" v-for="(item,index) in response"  :class="{'light':isCompleted[index]==1 && item.hotDay==-1}" @click="go_detail(item.linkUrl)">
         <div class="list_b_img">
           <img v-lazy="item.bandPic">
         </div>
