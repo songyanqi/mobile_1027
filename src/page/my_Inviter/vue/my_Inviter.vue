@@ -29,7 +29,7 @@
     </div>
 
     <!--什么是邀请码-->
-    <div v-if="show_code_input" class="invitation_info" :class="{'bottom':info_bottom}">
+    <div v-if="show_code_input" class="invitation_info">
       <div>
         <span>-</span>
         什么是邀请码？
@@ -461,4 +461,11 @@
     margin-top: 16px;
   }
 </style>
-
+<style>
+  body,html{
+    height: 100%;
+  }
+  .myInviter_wrap{
+    min-height: 100%;
+  }
+</style>
