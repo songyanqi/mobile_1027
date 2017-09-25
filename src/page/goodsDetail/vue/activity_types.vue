@@ -321,13 +321,13 @@
                         <div class="s-decision_title">相关商品</div>
 
                         <div class = "clearfix">
-                        <div class="relative_items"
-                             @click = "handleRelativeGoods(item, relativegoodslist, $event)"
-                             :class = "{activieType:item.isActive,isDisabled:item.onSale == '0'}"
-                             v-for = "item of relativegoodslist">
-                            <!--item是全部的规格，list是点击是的规格，$event为事件，必须是$event-->
-                            <span>{{ item.title }}</span>
-                        </div>
+                          <div class="relative_items"
+                               @click = "handleRelativeGoods(item, relativegoodslist, $event)"
+                               :class = "{activieType:item.isActive,isDisabled:item.onSale == '0'}"
+                               v-for = "item of relativegoodslist">
+                              <!--item是全部的规格，list是点击是的规格，$event为事件，必须是$event-->
+                              <span>{{ item.title }}</span>
+                          </div>
                         </div>
                     </div>
                     <ul>

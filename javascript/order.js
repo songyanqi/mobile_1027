@@ -1222,7 +1222,7 @@ jQuery(document).ready(function ($) {
         changeTips();
         $(".orderSuccess").hide();
         if (presale_type == "final") {
-          $(".order_presale").html("<div class = 'overCutDown'>尾款超时支付，交易关闭</div>");
+          $(".order_presale").html("<div class = 'overCutDown'>尾款超时未支付，交易关闭</div>");
         }
       }
     },1000); 
@@ -1230,12 +1230,12 @@ jQuery(document).ready(function ($) {
 
   function changeTips() {
     if (presale_type == "reserve") {
-      $(".order_presale").html("<div class = 'overCutDown'>定金超时支付，交易关闭</div>");
+      $(".order_presale").html("<div class = 'overCutDown'>定金超时未支付，交易关闭</div>");
       $(".stage1Title").addClass("colorLight");
       $(".presaleNum").addClass("colorLight");
     }
     if (presale_type == "final") {
-      $(".order_presale").html("<div class = 'overCutDown'>尾款超时支付，交易关闭</div>");
+      $(".order_presale").html("<div class = 'overCutDown'>尾款超时未支付，交易关闭</div>");
       $(".stage2Title").addClass("colorLight");
       $(".finalNum").addClass("colorLight");
     }
@@ -1255,14 +1255,14 @@ jQuery(document).ready(function ($) {
       if (presale_surplus_time == 0) {
         $(".orderSuccess").hide();
         if (presale_type == "reserve") {
-          $(".order_presale").html("<div class = 'overCutDown'>定金超时支付，交易关闭</div>");
+          $(".order_presale").html("<div class = 'overCutDown'>定金超时未支付，交易关闭</div>");
         }
         if (presale_type == "final") {
           $(".orderSuccess").show();
         }
         if (is_final_paytime_end == "1") {
           $(".orderSuccess").hide();
-          $(".order_presale").html("<div class = 'overCutDown'>尾款超时支付，交易关闭</div>");
+          $(".order_presale").html("<div class = 'overCutDown'>尾款超时未支付，交易关闭</div>");
         }
       }
       // 用户关闭订单
