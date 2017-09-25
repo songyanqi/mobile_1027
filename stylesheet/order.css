@@ -2634,16 +2634,48 @@ body.orderDetail, body.orderDelivery {
 .orderModalShow {
   display: block;
 }
+.modalOrder .modalCloseWrapper {
+  display: none;
+}
+.modalOrder .orderBtns {
+    position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
 .modalOrder .orderConfirm {
-  padding: 12px;
   position: relative;
-   color: #FF4A7D;
+  padding: 12px;
+ color: #FF4A7D;
+ -webkit-box-flex: 1;
+ -webkit-flex: 1;
+ flex: 1;
+}
+.modalOrder .orderCancle {
+  padding: 12px;
+  -webkit-box-flex: 1;
+ -webkit-flex: 1;
+ flex: 1;
+}
+.modalOrder .orderConfirm:after {
+  position: absolute;
+  content: "";
+  width: 200%;
+  height: 200%;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-left: 1px solid #e1e1e1;
+  -webkit-transform: scale(0.5,0.5);
+  transform: scale(0.5,0.5);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
 }
 .modalOrder .orderTitle {
   padding: 30px 15px 15px 15px;
   text-align: left;
 }
-.modalOrder .orderConfirm:after {
+.modalOrder .orderBtns:after {
   position: absolute;
   content: "";
   border-top: 1px solid #e1e1e1;
