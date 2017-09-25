@@ -448,7 +448,7 @@
         return format;
       },
       formatDate(now) {
-        return new Date(parseInt(now) * 1000).toLocaleString().replace(/下午/g, "").replace("/", "-").replace("/", "-")
+        return new Date(parseInt(now) * 1000).toLocaleString().replace("/", "-").replace("/", "-")
       }
     },
   }
