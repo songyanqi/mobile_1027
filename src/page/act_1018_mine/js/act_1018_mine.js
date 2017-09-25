@@ -163,6 +163,12 @@ new Vue({
         }
       });
     },
+    /* 清除本地缓存 */
+    removeLocalCache() {
+      localStorage.removeItem('act_1018_mine_data');
+      localStorage.removeItem('act_1018_main_data');
+      console.log('本地缓存act_1018_main_data、act_1018_mine_data已清除。')
+    }
   },
   filters: {},
 });

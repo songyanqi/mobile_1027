@@ -292,7 +292,7 @@
       <!--必败清单-->
       <div class="recommend" v-if="response.data.willBuy">
         <!--标题-->
-        <div class="title-type-2" @click="window.localStorage.clear();">必败清单</div>
+        <div class="title-type-2" @click="removeLocalCache">必败清单</div>
         <!--双排列表-->
         <ul>
           <li v-for="(item, i) in response.data.willBuy">

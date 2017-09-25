@@ -4,11 +4,9 @@ import common from '../../../common/js/common.js';
 // 第三方模块
 import Vue from 'Vue';
 import $ from '$';
-import Cookies from 'js-cookie';
 
 // 业务模块
 import encrypt from '../../../common/js/module/encrypt.js';
-import util from '../../../common/js/module/util.js';
 import param from '../../../common/js/module/param.js';
 import popup from '../../../common/js/module/popup.js';
 import login from '../../../common/js/module/login.js';
