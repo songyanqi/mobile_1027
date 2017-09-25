@@ -71,10 +71,9 @@
                  <div v-if="response.supporter.isPrizes == 1" class="awd_title">恭喜你被iPhone8砸中了</div>
                 <div v-if="response.supporter.isPrizes == 1" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
                 <!--没抽奖时候-->
-                <!--<com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd"-->
-                                  <!--@mousedown="start_awd" mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem" can-scratch="true"></com-scratch-card>-->
-                <com-scratch-card @touchstart="start_awd"
+                <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd"
                                   @mousedown="start_awd" mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem" can-scratch="true"></com-scratch-card>
+
               </div>
             </div>
             <div style="height: 0.2rem;"></div>
@@ -454,10 +453,6 @@
   @import "../../../common/css/util/all";
 
   .assistance_box {
-    background: -webkit-linear-gradient(top, #F54B74, #FF9F8F);
-    background: -webkit-gradient(linear, top top, bottom bottom, from(#F54B74), to(#FF9F8F));
-    background: -webkit-linear-gradient(top, #F54B74, #FF9F8F);
-    background: linear-gradient(to bottom, #F54B74, #FF9F8F);
     max-width: 640px;
     height: 100%;
     overflow: scroll;
@@ -878,15 +873,19 @@
 </style>
 <style>
   html {
-    /*height: 100%;*/
+    min-height: 100%;
   }
 
   body {
-    /*height: 100%;*/
+    min-height: 100%;
+    background: -webkit-linear-gradient(top, #F54B74, #FF9F8F);
+    background: -webkit-gradient(linear, top top, bottom bottom, from(#F54B74), to(#FF9F8F));
+    background: -webkit-linear-gradient(top, #F54B74, #FF9F8F);
+    background: linear-gradient(to bottom, #F54B74, #FF9F8F);
   }
 
   .app {
-    /*height: 100%;*/
+    height: 100%;
   }
 
   .clearfix:before, .clearfix:after {
