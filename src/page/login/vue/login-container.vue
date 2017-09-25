@@ -167,6 +167,7 @@
       }
     },
     created() {
+      var that = this;
       if(login.isLogined()){
         location.href = that.referer || "/";
       }
