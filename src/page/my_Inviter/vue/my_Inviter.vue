@@ -232,7 +232,7 @@
 </script>
 <style lang="sass" lang="scss" rel="stylesheet/scss" scoped>
   .myInviter_wrap {
-    padding-bottom: 10px;
+    padding-bottom: 215px;
   }
 
   .myInviter {
@@ -269,6 +269,9 @@
 
   .bottoms {
     margin-top: 40px;
+    position: relative;
+
+    z-index: 1;
   }
 
   .changeBtn {
@@ -423,9 +426,8 @@
     padding: 0 20px;
     color: #999999;
     line-height: 17px;
-    position: fixed;
+    position: absolute;
     bottom: 15px;
-    margin: 50px auto 0;
     left: 0;
     right: 0;
     max-width: 467px;
@@ -465,7 +467,7 @@
   body,html{
     height: 100%;
   }
-  .myInviter_wrap{
+  .app{
     min-height: 100%;
   }
 </style>
