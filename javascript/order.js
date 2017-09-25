@@ -83,13 +83,13 @@ var sortObj = function(obj) {
   return strObj
 }
 // php加上后去掉
-$("body").append('<div class = "modalOrder">\
-   <div class="modalCloseWrapper orderClose">\
-          <span class="modal-close"></span>\
-      </div>\
-      <div class = "orderTitle">该订单为预定订单，定金不退哦，确认要取消么？</div>\
-      <div class = "orderConfirm" >确定</div>\
-    </div>');
+// $("body").append('<div class = "modalOrder">\
+//    <div class="modalCloseWrapper orderClose">\
+//           <span class="modal-close"></span>\
+//       </div>\
+//       <div class = "orderTitle">该订单为预定订单，定金不退哦，确认要取消么？</div>\
+//       <div class = "orderConfirm" >确定</div>\
+//     </div>');
 
 jQuery(document).ready(function ($) {
     if(window.haveMask){
