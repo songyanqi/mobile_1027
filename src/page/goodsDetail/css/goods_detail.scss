@@ -841,7 +841,20 @@ $crossBord: #FF4A7D;
   }
 
   .s-title-cont {
+    position: relative;
     margin-top: 15px;
+  }
+  .s-title-cont:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #e1e1e1;
+    bottom: 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
   }
   .s-decision_title {
     color: #999;
@@ -3264,7 +3277,7 @@ $crossBord: #FF4A7D;
     position: fixed;
     width: 100%;
     z-index: 105;
-    bottom: 47px;
+    bottom: 49px;
     max-width: 640px;
   }
   .recommend_goods {
