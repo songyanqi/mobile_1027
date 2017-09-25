@@ -78,7 +78,8 @@
     mounted(){
       var obj={
         'backBtn':'1',
-        'shareBtn':"1"
+        'shareBtn':"0",
+        'homeBtn' : '1'
       };
       setTimeout(function(){
         native.Browser.setHead(obj)
