@@ -161,12 +161,12 @@
        * */
       shares: function () {
         var ts = this;
-        if (that.visitor_status != 3) {
+        if (ts.visitor_status == 3) {
+          ts.sharecallback();
+          share.callShare();
+        }else{
           popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
-          return;
         }
-        ts.sharecallback();
-        share.callShare();
       },
       /***
        * 记录分享回调

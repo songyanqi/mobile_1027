@@ -18,7 +18,7 @@
     <!--助力商品-->
     <div>
       <ul>
-        <li v-for="lis in response.goodsInfo" class="list_style online">
+        <li v-for="lis in response.goodsInfo" class="list_style online" @click="activebtn(lis.activityLink)">
             <div class="img_container">
               <div class="img_container_inner">
                 <img v-lazy="lis.goodsImage">
