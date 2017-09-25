@@ -15,14 +15,14 @@
       </div>
       <div class="all_list">
 
-        <div class="list"  @click="go_detail(item.linkUrl)" v-for="(item,index) in dataList" :class="{'light':item.isCompleted==1}">
+        <div class="list"  @click="go_detail(item.linkUrl)" v-for="(item,index) in dataList" :class="{'light':isCompleted[index]==1 && item.hotDay==-1}">
           <div class="list_b_img">
             <img :src="item.bandPic" alt="">
           </div>
 
           <div class="list_bottom" v-if="item.hotDay==-1">
 
-            <template v-if="item.isCompleted!=1">
+            <template v-if="isCompleted[index]!=1">
               <div class="list_start_border"></div>
               <div class="list_start">
                 <img class="start" src="//pic.davdian.com/free/2017/09/09/start_icon.png" alt="">
@@ -31,7 +31,7 @@
               <div class="line"></div>
             </template>
 
-            <template v-if="item.isCompleted==1">
+            <template v-if="isCompleted[index]==1">
               <div class="success">
                 <div style="position: absolute;">
                   <img src="//pic.davdian.com/free/2017/09/09/com.png" alt="">

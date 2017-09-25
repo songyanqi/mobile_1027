@@ -41,9 +41,12 @@ new Vue({
         let ts = this;
 
         // 设置app头部标题栏
-        native.custom.initHead({
-          shareOnHead: 1,
-        });
+        setTimeout(function () {
+          native.custom.initHead({
+            shareOnHead: 1,
+            backOnHead: 1
+          });
+        },300);
 
         // 设置分享信息
         try {

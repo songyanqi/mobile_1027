@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="all_list">
-      <div class="list" @click="go_detail(item.linkUrl)" v-for="(item,index) in dataList"  :class="{'light':item.isCompleted==1}">
+      <div class="list" @click="go_detail(item.linkUrl)" v-for="(item,index) in dataList"  :class="{'light':item.isCompleted==1 && item.hotDay==-1}">
         <div class="list_b_img">
           <img :src="item.bandPic" alt="">
         </div>
