@@ -216,7 +216,7 @@ const native = {
           param: param,
           debug: debug,
         });
-      }, 100);
+      }, 500);
     },
   },
 
