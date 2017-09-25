@@ -105,7 +105,7 @@
   /*周年庆按钮*/
   .g-head-btn {
     position: absolute;
-    top: ptr(176);
+    top: ptr(172);
     left: ptr(50);
     //margin: ptr(20) auto 0 ptr(50);
     width: ptr(263);
@@ -466,7 +466,7 @@
         padding: 0 ptr(7);
         .swiper-slide {
           margin: 0 ptr(3);
-          width: ptr(172);
+          width: ptr(152);
           color: white;
           border-radius: ptr(4);
           overflow: hidden;
@@ -475,8 +475,8 @@
           }
           .goods-pic {
             position: relative;
-            width: ptr(172);
-            height: ptr(200);
+            width: ptr(152);
+            height: ptr(180);
             background: white;
             z-index: 1;
             vertical-align: middle;

@@ -50,11 +50,11 @@
 
     <!--周年庆按钮-->
     <a href="/t-14439.html">
-      <img class="g-head-btn" src="[[static]]/page/act_1018_mine/img/head-btn.png">
+      <img class="g-head-btn" src="[[static]]/page/act_1018_mine/img/head-btn.png" :style="{top: ua.isDvdApp() ? '1.31rem' : null}">
     </a>
 
     <!--我的活动-->
-    <div class="g-act" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
+    <div class="g-act" @click="removeLocalCache" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
       <!--服务人群预定奖励-->
       <!--<div class="service-award" v-if="isAdviser">-->
       <div class="service-award" v-if="response.data.award">
