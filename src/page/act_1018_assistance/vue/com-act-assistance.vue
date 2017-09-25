@@ -209,7 +209,7 @@
     position: absolute;
     padding-left: 0.9rem;
     top: 0;
-    padding-top: 0.1rem;
+    /*padding-top: 0.1rem;*/
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -246,7 +246,7 @@
     height: 0.16rem;
     line-height: 0.16rem;
     color: #FF4A7D;
-    padding-top: 0.05rem;
+    padding-top: 0.1rem;
   }
 
   .order_good_price {
