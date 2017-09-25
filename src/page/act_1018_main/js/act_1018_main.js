@@ -251,7 +251,7 @@ new Vue({
 
         // 按时间取缓存
         let minute = new Date().getMinutes();
-        if (minute > 5 && minute < 55) {
+        if (minute > 10) {
           // 取缓存
           let data = localCache.getItem(cacheKey);
           if (data && !refresh) {
