@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="banner">
-      <div class="big_img"><img v-lazy="'//pic.davdian.com/free/2017/09/09/banner.png'"></div>
+      <div class="big_img" :style="{'backgroundImage':'url(//pic.davdian.com/free/2017/09/09/banner.png)'}">
+        <!--<img v-lazy="//pic.davdian.com/free/2017/09/09/banner.png">-->
+      </div>
       <div class="banner_title">2017最受欢迎的TOP品牌</div>
       <div class="banner_name">点亮品牌 10.18 优惠由你定</div>
       <div class="banner_r">
@@ -233,6 +235,12 @@
     width: 3.75rem;
     height: 2rem;
     position:relative;
+  }
+  .big_img{
+    width: 3.75rem;
+    height: 2rem;
+    background-size: 3.75rem 2rem;
+    background-repeat: no-repeat;
   }
   .big_img img{
     width: 3.75rem;

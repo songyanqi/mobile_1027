@@ -119,7 +119,8 @@
           haveCount:[],
           isApp:util.utils.isApp(),
           animateArr:[],
-          appVersion:util.utils.getAppVersion_new()
+          appVersion:util.utils.getAppVersion_new(),
+          isCompleted:[]
         }
     },
 
@@ -182,6 +183,12 @@
           data.map(function (item) {
             that.isLighted.push(item.isLighted);
           });
+      },
+      initIsCompleted(data){
+        var that=this;
+        data.map(function (item) {
+          that.isCompleted.push(item.isCompleted);
+        });
       },
       initNeedCount(data){
         var that=this;
