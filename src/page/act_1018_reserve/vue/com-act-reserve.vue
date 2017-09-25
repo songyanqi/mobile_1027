@@ -27,7 +27,7 @@
     }
     .bookCont {
       // padding: 5px 5px 0 5px;
-      padding: 0.05rem 0.05rem 0 0.05rem;
+      padding: 0.05rem;
     }
     .bookList {
       float: left;
