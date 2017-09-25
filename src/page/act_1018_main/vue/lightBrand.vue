@@ -84,7 +84,6 @@
 </template>
 <script>
   import api from "../../../../utils/api.es6"
-  import dialog from "../../../../utils/dialog.es6"
   import native from '../../../../src/common/js/module/native.js'
   import util from "../../../../utils/utils.es6"
   import login from "../../../../src/common/js/module/login.js"
@@ -202,9 +201,9 @@
 
                 } else {
                   if (result.data.msg) {
-                    dialog.alert('code:' + result.code + ":msg" + result.data.msg);
+                    alert('code:' + result.code + ":msg" + result.data.msg);
                   } else {
-                    dialog.alert('code:' + result.code);
+                    alert('code:' + result.code);
                   }
                 }
               } else {
@@ -212,9 +211,9 @@
 
                 } else {
                   if (result.data.msg) {
-                    dialog.alert('code:' + result.code + ":msg" + result.data.msg);
+                    alert(result.data.msg);
                   } else {
-                    dialog.alert('code:' + result.code);
+                    alert(result.code);
                   }
                 }
               }
