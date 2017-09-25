@@ -345,7 +345,7 @@ export default {
             // } else {
             //   goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
             // }
-            window.location = `/${buyURL}&${goods}`;
+            window.location.href = `/${buyURL}&${goods}`;
           }, 500);
           return;
         }
