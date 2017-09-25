@@ -189,7 +189,6 @@ export default {
           var startTime = item.startTime;
           var endTime = item.endTime;
            if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
-             console.log(item.json);
             that.changStyle(item.json);
            }
         });
@@ -220,24 +219,6 @@ export default {
         .catch(function (e) {
           //dialog.alert(e);
         });
-      // if(localStorage.getItem("skinPackage")){
-      //   var data3 = JSON.parse((localStorage.getItem("skinPackage")));
-      //   data3.map(function (item, index) {
-      //     that.changStyle(item.json);
-      //   });
-      // }
-      // var data = require("../../src/page/allDiscuss/json/index.json")
-      // var data2 = data.data.list[1].listData;
-      // data2.map(function (item, index) {
-      //   axios.get(item.viewFileUrl).then(function (data) {
-      //     item.json=data.data;
-      //     indexCount++;
-      //     if(indexCount==data2.length){
-      //       localStorage.setItem("skinPackage",JSON.stringify(data2));
-      //
-      //     }
-      //   });
-      // });
     },
     /**
      * 初始化，调用后开始获取数据
