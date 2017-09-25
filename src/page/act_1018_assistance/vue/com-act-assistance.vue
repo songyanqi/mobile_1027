@@ -10,7 +10,7 @@
     <!--滚动公告-->
     <div class="rool_tip">
       <div class="marguee">
-        <div class="marguee_innder">
+        <div :class="{'marguee_innder':marguee}">
           <p v-for="pr in notices">{{pr.message}}</p>
         </div>
       </div>
@@ -35,19 +35,18 @@
               </div>
             </div>
           </a>
-          <div v-if="lis.buttonType == 3" class="progress_info" style="padding-right: 1.1rem;" v-html="lis.activityMessage">
-          <div v-if="lis.buttonType == 2 || lis.buttonType == 1" class="progress_info" v-html="lis.activityMessage"></div>
-          </div>
+          <div v-if="lis.buttonType > 2" class="progress_info" style="padding-right: 1.1rem;" v-html="lis.activityMessage"></div>
+          <div v-else class="progress_info" v-html="lis.activityMessage"></div>
           <a class="remain_btns">
-            <a class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}" @click="activebtn(lis.activityLink)" href="javascript:void(0)">{{lis.activityButton}}</a>
+            <div class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}" @click="activebtn(lis.activityLink)">{{lis.activityButton}}</div>
           </a>
         </li>
       </ul>
     </div>
     <!--查看规则-->
-    <div v-if="rule_form" class="com-popup-base">
+    <div v-if="rule_form" class="com-popup-base" @click="rule_form = false">
       <div class="table-cell">
-        <div v-show="rule_form" class="box">
+        <div v-show="rule_form" class="box" @click.stop="events">
           <div>助力规则</div>
           <div>
             <p>1.助力时间：2017.10.01 00:00:00-2017.10.17 23:59:59；</p>
@@ -71,7 +70,8 @@
       response: {
         type: Object,
         default: null
-      }
+      },
+      marguee:false
     },
     data() {
       return {
@@ -91,6 +91,10 @@
               announcementData.push(that.response.notice[i])
             }
             that.response.notice = announcementData;
+            that.marguee = true;
+            return that.response.notice;
+          }else{
+            that.marguee = true;
             return that.response.notice;
           }
         }
@@ -118,6 +122,9 @@
       activebtn: function (url) {
         login.needLogin();
         location.href = url;
+      },
+      events:function () {
+
       }
     },
     filters: {}
@@ -157,9 +164,7 @@
   }
 
   .remain_btns {
-    a {
-      display: block;
-    }
+
   }
 
   .f_l {
@@ -420,6 +425,8 @@
   }
 
   .marguee_innder {
+    -webkit-animation: marguees 120s infinite linear;
+    -o-animation: marguees 120s infinite linear;
     animation: marguees 120s infinite linear;
   }
 

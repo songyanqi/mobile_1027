@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="[[static]]/page/act_1018_mine/css/act_1018_mine.css[[v]]">
 </head>
 <body>
-<div class="app" :style="{background: error ? 'none' : null}">
+<div class="app" :style="{'background-image': error ? 'none' : null}">
   <!--标题-->
   <com-top-title title="我的10.18心愿单" home></com-top-title>
 
@@ -16,7 +16,7 @@
     <com-top-title title="我的10.18心愿单" home></com-top-title>
     <img v-lazy="'[[static]]/page/act_1018_mine/img/error.png'">
     <div class="text">快去参加活动吧</div>
-    <a class="btn" @click="window.history.back();">去10.18周年庆会场</a>
+    <a class="btn" href="/act_1018_main.html">去10.18周年庆会场</a>
   </div>
   <template v-else>
     <!--标题栏占位-->
@@ -37,7 +37,8 @@
         </div>
       </template>
       <template v-else>
-        <div class="g-info-no-prize" style="display: none;" :style="{display: response && response.data.header ? null : 'none'}"
+        <div class="g-info-no-prize" style="display: none;"
+             :style="{display: response && response.data.header ? null : 'none'}"
              v-if="response && response.data && response.data.header">
           <div class="pic-wrapper">
             <img class="head-pic" v-lazy="response.data.header.userAvatar">
@@ -123,11 +124,26 @@
               <a :href="item.activityLink || 'javascript:void(0);'">
                 <img class="goods-pic" v-lazy="item.goodsImage">
                 <div class="info">
-                  <div class="assist" v-if="item.havePrice && parseInt(item.havePrice) > 0">
-                    已获{{item.havePrice}}元助力
-                    <div class="less">还差{{item.surplusPrice}}元0元购</div>
+                  <!--满额助力-->
+                  <div class="assist" v-if="parseInt(item.surplusPrice) === 0">
+                    <template v-if="currentDate < '2017-10-18'">已获得{{item.havePrice}}元助力1018当天0元购</template>
+                    <template v-else>已获得0元购的机会快去下单！</template>
                   </div>
-                  <div class="no-assist" v-else>还没获得好友助力继续加油吧</div>
+                  <!--半额助力-->
+                  <div class="assist" v-else-if="parseInt(item.havePrice) > 0">
+                    已获{{item.havePrice}}元助力
+                    <template v-if="currentDate < '2017-10-18'">
+                      <div class="less">还差yy.y{{item.surplusPrice}}元0元购</div>
+                    </template>
+                    <template v-else>
+                      <div class="less">{{item.surplusPrice}}元省钱购</div>
+                    </template>
+                  </div>
+                  <!--未获得助力-->
+                  <div class="no-assist" v-else-if="parseInt(item.havePrice) === 0">
+                    <template v-if="currentDate < '2017-10-18'">还没获得好友助力继续加油吧</template>
+                    <template v-else>没有获得助力，还是要抢购</template>
+                  </div>
                 </div>
               </a>
             </div>
@@ -276,7 +292,7 @@
       <!--必败清单-->
       <div class="recommend" v-if="response.data.willBuy">
         <!--标题-->
-        <div class="title-type-2">必败清单</div>
+        <div class="title-type-2" @click="window.localStorage.clear();">必败清单</div>
         <!--双排列表-->
         <ul>
           <li v-for="(item, i) in response.data.willBuy">

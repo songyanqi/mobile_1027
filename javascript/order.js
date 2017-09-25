@@ -82,6 +82,15 @@ var sortObj = function(obj) {
   strObj.sign = sign
   return strObj
 }
+// php加上后去掉
+// $("body").append('<div class = "modalOrder">\
+//    <div class="modalCloseWrapper orderClose">\
+//           <span class="modal-close"></span>\
+//       </div>\
+//       <div class = "orderTitle">该订单为预定订单，定金不退哦，确认要取消么？</div>\
+//       <div class = "orderConfirm" >确定</div>\
+//     </div>');
+
 jQuery(document).ready(function ($) {
     if(window.haveMask){
         $("body,html").css({"overflow":"hidden"});
@@ -160,6 +169,7 @@ jQuery(document).ready(function ($) {
     $(".modalMask").on("click",function () {
       $(".modalMask").removeClass("showMask");
       $(".modalWrapper").removeClass("showModal");
+      $(".modalOrder").removeClass("orderModalShow");
       $("body").removeClass("bodyFix");
       document.body.scrollTop = scrollTop;
     });
@@ -486,16 +496,19 @@ jQuery(document).ready(function ($) {
         });
 
         //取消订单
-        $(".order_detail_container").on("click",".modalMask",function () {
-          if ($(this).hasClass("showMask")) {
-            $(".modalMask").removeClass("showMask");
-            $(".modalWrapper").removeClass("showModal");
+        // $(".order_detail_container").on("click",".modalMask",function () {
+        // $(".modalMask").on("click",function () {
+        //   if ($(this).hasClass("showMask")) {
+        //     $(".modalMask").removeClass("showMask");
+        //     $(".modalWrapper").removeClass("showModal");
 
-            $("body").removeClass("bodyFix");
-            document.body.scrollTop = scrollTop;
-          }
-        });
-        $(".order_detail_container").on("click",".cancel_order",function () {
+        //     $("body").removeClass("bodyFix");
+        //     document.body.scrollTop = scrollTop;
+        //   }
+        // });
+        // 预定单弹框的确定
+        $(".orderConfirm").on("click",function () {
+          $(".modalOrder").removeClass("orderModalShow");
           if (isFirstLoad) {
             getAjax();
           }
@@ -511,7 +524,27 @@ jQuery(document).ready(function ($) {
           }
           document.body.style.top = -scrollTop + 'px';
           document.body.classList.add("bodyFix");
+        });
+        $(".order_detail_container").on("click",".cancel_order",function () {
+          $(".modalMask").addClass("showMask");
+          // 先判断是否是预定单
+          if (is_presale_order == "1") {
+            $(".modalOrder").addClass("orderModalShow");
+              return;
+          }
+          if (isFirstLoad) {
+            getAjax();
+          }
+          $(".disabledModal").attr('data-status',"cancle");
+          $(".modalWrapper").addClass("showModal");
 
+          if (document.documentElement && document.documentElement.scrollTop) {
+            scrollTop = document.documentElement.scrollTop;
+          } else if (document.body) {
+            scrollTop = document.body.scrollTop;
+          }
+          document.body.style.top = -scrollTop + 'px';
+          document.body.classList.add("bodyFix");
         });
         $(".order_detail_container").on("click",".modalCloseWrapper",function () {
           $(".modalMask").removeClass("showMask");

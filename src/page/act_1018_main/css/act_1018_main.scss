@@ -10,6 +10,14 @@ body {
   //background: url(../img/bg.jpg) repeat-y;
   background: #c80064;
 
+  .app-share {
+    position: absolute;
+    top: ptr(10);
+    right: ptr(10);
+    width: ptr(30);
+    height: ptr(30);
+  }
+
   .com-top-title {
     z-index: 2;
   }

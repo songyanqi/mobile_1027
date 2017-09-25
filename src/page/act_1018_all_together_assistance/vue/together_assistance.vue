@@ -30,7 +30,7 @@
     </div>
 
     <!--商品信息-->
-    <div class="goods_info">
+    <a :href="goodsdata.goods.link" class="goods_info">
       <div class="goods_info_img">
         <img :src="goodsdata.goods.goodsImage" alt="">
       </div>
@@ -42,7 +42,7 @@
           class="price_symbol">￥</em><span>{{goodsdata.goods.activityPrice}}</span></span>
           <span class="membership_crown_pre"><em>￥</em>{{goodsdata.goods.goodsPrice}}</span></div>
       </div>
-    </div>
+    </a>
     <!--板-->
     <div class="rule_brand">
       <img src="//pic.davdian.com/free/20170915_assistance/rule.png">
@@ -72,7 +72,7 @@
                 <div v-if="response.supporter.isPrizes == 1" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
                 <!--没抽奖时候-->
                 <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd"
-                                  @mousedown="start_awd"></com-scratch-card>
+                                  @mousedown="start_awd" mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem"></com-scratch-card>
               </div>
             </div>
             <div style="height: 0.2rem;"></div>
@@ -191,7 +191,7 @@
     </div>
 
     <!--去主会场-->
-    <a v-if="response.actType != 2" href="/act_1018_main.html" class="main_btn">10.18周年庆主会场</a>
+    <div v-if="response.actType != 2" @click="a_link('/act_1018_main.html')" class="main_btn">10.18周年庆主会场</div>
   </div>
 </template>
 <script>
@@ -411,6 +411,19 @@
           }
         });
       },
+      /***
+       * 跳转
+       * */
+      a_link:function (url) {
+        if(ua.isDvdApp()){
+          event.preventDefault();
+          native.Browser.open({
+            url:url
+          })
+        }else{
+          location.href = url
+        }
+      }
     },
     filters: {
       /***
@@ -499,6 +512,7 @@
     margin: 0 0.1rem 0.1rem;
     padding: 0.1rem;
     height: 0.8rem;
+    display: block;
     .goods_info_img {
       width: 0.8rem;
       height: 0.8rem;
