@@ -1202,6 +1202,7 @@ only screen and (min-resolution:2dppx)
   /*position: fixed;*/
   /*bottom: 95px;*/
   /*z-index: 20;*/
+  position: relative;
   width: 100%;
   background: #fff;
   display: -webkit-box;

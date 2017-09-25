@@ -179,11 +179,14 @@
 
     <!-- 弹框 -->
     <div class = "modalOrder" :class = "{orderModalShow: isOrderConfirm}">
-      <div class="modalCloseWrapper orderClose" @click = "handleCloseModal">
+      <!-- <div class="modalCloseWrapper orderClose" @click = "handleCloseModal">
           <span class="modal-close"></span>
-      </div>
+      </div> -->
       <div class = "orderTitle">该订单为预定订单，定金不退哦，确认要取消么？</div>
-      <div class = "orderConfirm" @click = "handleOrderPresale">确定</div>
+      <div  class = "orderBtns">
+        <div class = "orderCancle" @click = "handleCloseModal">取消</div>
+        <div class = "orderConfirm" @click = "handleOrderPresale">确定</div>
+      </div>
     </div>
 </template>
 <script>

@@ -60,7 +60,7 @@
       height: 0.28rem;
       margin: 0.1rem 0.1rem 0 0.1rem;
       // line-height: 14px;
-      line-height: 0.14rem;
+      line-height: 0.15rem;
     }
     .bookPrice {
       // font-size: 14px;
@@ -119,11 +119,109 @@
       width: 100%;
       vertical-align: top;
     }
+    .reserveHead_cont {
+      position: relative;
+    }
+    .reserveRole {
+      display: block;
+      position: absolute;
+      width: 100px;
+      height: 20px;
+      right: 16%;
+      bottom: 27%;
+    }
+  }
+  // 动画
+  @keyframes com-alert-animation {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  .com-popup-base {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    display: table;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    line-height: 1;
+  }
+
+  .com-popup-base .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .com-popup-base .table-cell .box {
+    display: inline-block;
+    border-radius: 0.04rem;
+    animation: com-alert-animation 0.5s;
+    width: 73.333%;
+    min-height: 200px;
+    position: relative;
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 0 10px 15px;
+    color: #FF4A7D
+  }
+
+  .com-popup-base .table-cell .box div:nth-of-type(1) {
+    font-size: 14px;
+    text-align: center;
+    padding: 12px 0;
+    position: relative;
+  }
+
+  .com-popup-base .table-cell .box div:nth-of-type(2) {
+    font-size: 14px;
+    text-align: left;
+    line-height: 20px;
+    padding-top: 5px;
+  }
+
+  .com-popup-base .table-cell .box div:nth-of-type(3) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/clearInput.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+  }
+
+  .com-popup-base .table-cell .box div:nth-of-type(2) p {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .com-popup-base .table-cell .box div:nth-of-type(1):after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -50%;
+    width: 200%;
+    height: 1px;
+    background: rgba(216, 216, 216, 0.51);
+    -webkit-transform: scale(0.5);
+    bottom: 0;
+    z-index: 1;
   }
 </style>
 <template>
 	<div class = "reserve">
-    <div><img class = "reserveHead" src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/goodsDetail/reserve_header.png"></div>
+    <div class = "reserveHead_cont">
+    <span @click = "handleReserveRole" class = "reserveRole"></span>
+    <img class = "reserveHead" src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/goodsDetail/reserve_icon.jpg">
+    </div>
 		<!-- 头部 -->
 		<div class="swiper-container">
       <div class="swiper-wrapper">
@@ -149,6 +247,22 @@
   		</div>
       <!-- <div class = "noMore">没有更多啦</div> -->
     </div>
+    <!--查看规则-->
+    <div v-if="rule_form" class="com-popup-base" @click="rule_form = false">
+      <div class="table-cell">
+        <div v-show="rule_form" class="box" @click.stop="events">
+          <div>预定规则</div>
+          <div>
+            <p>1.预定时间：2017.10.14 00:00:00-2017.10.17 23:59:59；</p>
+            <p>2.尾款结算时间：2017.10.18 00:00:00-2017.10.18 23:59:59；</p>
+            <p>3.预定期间，用户支付预定金并成功预定指定商品，在10月18日当天可享定金膨胀的优惠，定金膨胀后实际抵扣的金额以预定时实际约定的抵扣金额为准；例如：某品牌洁面仪大V售价100元，预定金20可抵40元使用，小明妈在2017.10.15日支付定金20元，成功预定了该洁面仪，在10月18日当天仅需支付60元即可获得该商品；</p>
+            <p>4.定金是否退回？如果在10月18日当天未及时结算预定商品的尾款，定金将不予退回</p>
+            <p>5.详情可咨询大V店客服。</p>
+          </div>
+          <div @click="close_what_invite"></div>
+        </div>
+      </div>
+    </div>
 	</div>
 </template>
 <script type="text/javascript">
@@ -169,6 +283,7 @@
   			singleList: [],
         currentIdx: 0,
         bookSwiper: null,
+        rule_form: false,
   		}
   	},
     props: ['response'],
@@ -221,6 +336,13 @@
 
         return !!u.match(/davdian|bravetime|vyohui/);
       },
+      handleReserveRole() {
+        this.rule_form = true;
+      },
+      close_what_invite() {
+        this.rule_form = false;
+      },
+      events() {},
       // 是否为mobile
       isMobile() {
         let ua = navigator.userAgent;

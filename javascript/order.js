@@ -165,6 +165,13 @@ jQuery(document).ready(function ($) {
       $("body").removeClass("bodyFix");
       document.body.scrollTop = scrollTop;
     });
+    // 预定的取消
+    $(".orderCancle").on("click",function () {
+      $(".modalMask").removeClass("showMask");
+      $(".modalOrder").removeClass("orderModalShow");
+      $("body").removeClass("bodyFix");
+      document.body.scrollTop = scrollTop;
+    });
     // 点击蒙层
     $(".modalMask").on("click",function () {
       $(".modalMask").removeClass("showMask");

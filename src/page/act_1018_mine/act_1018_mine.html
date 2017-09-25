@@ -133,7 +133,7 @@
                   <div class="assist" v-else-if="parseInt(item.havePrice) > 0">
                     已获{{item.havePrice}}元助力
                     <template v-if="currentDate < '2017-10-18'">
-                      <div class="less">还差yy.y{{item.surplusPrice}}元0元购</div>
+                      <div class="less">还差{{item.surplusPrice}}元0元购</div>
                     </template>
                     <template v-else>
                       <div class="less">{{item.surplusPrice}}元省钱购</div>
