@@ -110,8 +110,8 @@
               let clientLeft = ts.getClientLeft(canvas);
               let clientTop = ts.getClientTop(canvas);
               // 圆心坐标
-              let centerX = event.changedTouches[0].clientX + document.body.scrollLeft - clientLeft;
-              let centerY = event.changedTouches[0].clientY + document.body.scrollTop - clientTop;
+              let centerX = event.changedTouches[0].clientX + document.documentElement.scrollLeft - clientLeft;
+              let centerY = event.changedTouches[0].clientY + document.documentElement.scrollTop - clientTop;
               drawTransparentCircle(centerX, centerY);
             }
           }
@@ -123,8 +123,8 @@
               let clientLeft = ts.getClientLeft(canvas);
               let clientTop = ts.getClientTop(canvas);
               // 圆心坐标
-              let centerX = event.clientX + document.body.scrollLeft - clientLeft;
-              let centerY = event.clientY + document.body.scrollTop - clientTop;
+              let centerX = event.clientX + document.documentElement.scrollLeft - clientLeft;
+              let centerY = event.clientY + document.documentElement.scrollTop - clientTop;
               if (event.which === 1) {
                 drawTransparentCircle(centerX, centerY);
               }

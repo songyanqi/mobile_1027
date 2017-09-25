@@ -71,7 +71,9 @@
                  <div v-if="response.supporter.isPrizes == 1" class="awd_title">恭喜你被iPhone8砸中了</div>
                 <div v-if="response.supporter.isPrizes == 1" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
                 <!--没抽奖时候-->
-                <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd"
+                <!--<com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd"-->
+                                  <!--@mousedown="start_awd" mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem" can-scratch="true"></com-scratch-card>-->
+                <com-scratch-card @touchstart="start_awd"
                                   @mousedown="start_awd" mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem" can-scratch="true"></com-scratch-card>
               </div>
             </div>
@@ -876,15 +878,15 @@
 </style>
 <style>
   html {
-    height: 100%;
+    /*height: 100%;*/
   }
 
   body {
-    height: 100%;
+    /*height: 100%;*/
   }
 
   .app {
-    height: 100%;
+    /*height: 100%;*/
   }
 
   .clearfix:before, .clearfix:after {
