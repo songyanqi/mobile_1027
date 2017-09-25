@@ -72,7 +72,7 @@
                 <div v-if="response.supporter.isPrizes == 1" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
                 <!--没抽奖时候-->
                 <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd"
-                                  @mousedown="start_awd"></com-scratch-card>
+                                  @mousedown="start_awd" mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem"></com-scratch-card>
               </div>
             </div>
             <div style="height: 0.2rem;"></div>
