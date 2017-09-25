@@ -14,7 +14,7 @@
       <!--价格信息-->
       <div class="price_info">
         <div>
-          <span>10.18活动价</span>
+          <span>10.18到手价</span>
           <span>¥</span>
           <span>{{response.activityPrice}}</span>
           <span>¥{{response.goodsPrice}}</span>
