@@ -167,10 +167,6 @@
       }
     },
     created() {
-      var that = this;
-      if(login.isBuyer() || login.isSeller()){
-        location.href = that.referer;
-      }
     },
     mounted() {
       var that = this;
