@@ -25,7 +25,7 @@
                 selected:'',
                 currentType:+location.href.substr(location.href.indexOf("type=")+5,1)||0,
                 current:false,
-                isapp: false,
+                // isapp: false,
             }
         },
         created:function(){
@@ -62,14 +62,14 @@
             orderlistitem:orderlistitem
         },
         mounted() {
-            this.isapp = this.isApp();
+            // this.isapp = this.isApp();
         },
         methods:{
-            isApp() {
-                let u = navigator.userAgent;
+            // isApp() {
+            //     let u = navigator.userAgent;
 
-                return !!u.match(/davdian|bravetime|vyohui/);
-            },
+            //     return !!u.match(/davdian|bravetime|vyohui/);
+            // },
             all:function(){
                 var vm = this;
                 vm.selected = 0;
