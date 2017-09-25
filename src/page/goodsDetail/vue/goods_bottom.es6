@@ -42,7 +42,6 @@ const GoodsBottom = {
         }
     },
     created () {
-      alert(12345)
       let that = this;
       this.$root.eventHub.$on('time_over',(isover) => {
           that.isOver = isover;
