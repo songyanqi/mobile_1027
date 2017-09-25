@@ -426,7 +426,7 @@
 
     position: fixed;
     z-index: 20;
-
+    top: 0;
 }
 
 .order_list_container .no-order {
