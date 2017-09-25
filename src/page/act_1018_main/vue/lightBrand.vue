@@ -1,7 +1,9 @@
 <template>
   <div>
     <div class="banner">
-      <div class="big_img"><img v-lazy="'//pic.davdian.com/free/2017/09/09/banner.png'"></div>
+      <div class="big_img" :style="{'backgroundImage':'url(//pic.davdian.com/free/2017/09/09/banner.png)'}">
+        <!--<img v-lazy="//pic.davdian.com/free/2017/09/09/banner.png">-->
+      </div>
       <div class="banner_title">2017最受欢迎的TOP品牌</div>
       <div class="banner_name">点亮品牌 10.18 优惠由你定</div>
       <div class="banner_r">
@@ -44,8 +46,8 @@
             <span class="start_value2" v-text="item.highDiscount"></span>
           </div>
 
-          <div class="list_need" v-if="item.isCompleted==-1">还需<span v-text="need[index]"></span>人点亮</div>
-          <div class="list_need" v-if="item.isCompleted==1">已有<span v-text="haveCount[index]"></span>人点亮</div>
+          <div class="list_need" v-if="isCompleted[index]==-1">还需<span v-text="need[index]"></span>人点亮</div>
+          <div class="list_need" v-if="isCompleted[index]==1">已有<span v-text="haveCount[index]"></span>人点亮</div>
 
           <div class="list_margin" v-if="lightArr[index]!=1" @click.stop="light(item.bandId,index,item.isCompleted)">
             <div class="list_border"></div>
@@ -95,7 +97,8 @@
         isApp:util.utils.isApp(),
         animateArr:[],
         isLighted:[],
-        haveCount:this.returnHaveCount()
+        haveCount:this.returnHaveCount(),
+        isCompleted:this.returnIsCompleted()
       }
     },
     computed:{
@@ -140,6 +143,13 @@
         });
         return arr;
       },
+      returnIsCompleted(){
+        var arr=[];
+        this.response.map(function (item,index) {
+          arr.push(item.isCompleted);
+        });
+        return arr;
+      },
       returnHaveCount(){
         var arr=[];
         this.response.map(function (item,index) {
@@ -153,8 +163,11 @@
       },
       changeNeedCount(index,isCompleted){
         if(isCompleted==-1){
-          if(this.need[index]>0){
+          if(this.need[index]>1){
             Vue.set(this.need,index,this.need[index]-1);
+          }else if(this.need[index]==1){
+            Vue.set(this.isCompleted,index,1);
+            Vue.set(this.haveCount,index,this.haveCount[index]+1);
           }
         }else if(isCompleted==1){
           Vue.set(this.haveCount,index,this.haveCount[index]+1);
@@ -233,6 +246,12 @@
     width: 3.75rem;
     height: 2rem;
     position:relative;
+  }
+  .big_img{
+    width: 3.75rem;
+    height: 2rem;
+    background-size: 3.75rem 2rem;
+    background-repeat: no-repeat;
   }
   .big_img img{
     width: 3.75rem;
