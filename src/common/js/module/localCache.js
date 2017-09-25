@@ -15,7 +15,7 @@ export default {
   setItem(param = {}) {
     // 参数检查
     if (!param.key || param.key && !(param.key + '')) {
-      console.error(`缓存失败，key不正确：${param.key}`);
+      console.log(`缓存失败，key不正确：${param.key}`);
       return;
     }
 
@@ -29,7 +29,7 @@ export default {
     }
 
     if (!param.data || param.data && !(param.data + '')) {
-      console.error(`缓存失败，data不正确：${param.key}`);
+      console.log(`缓存失败，data不正确：${param.key}`);
       return;
     }
 

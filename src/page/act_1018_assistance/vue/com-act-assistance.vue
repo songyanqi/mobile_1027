@@ -28,7 +28,7 @@
                   {{lis.goodsName}}
                 </div>
                 <div class="order_good_price">
-                  <span class="f_l">10.18活动价<em class="price_symbol">￥</em><span>{{lis.activityPrice}}</span></span>
+                  <span class="f_l">10.18到手价<em class="price_symbol">￥</em><span>{{lis.activityPrice}}</span></span>
                   <span class="membership_crown_pre"><em>￥</em>{{lis.goodsPrice}}</span>
                 </div>
               </div>
@@ -70,12 +70,12 @@
       response: {
         type: Object,
         default: null
-      },
-      marguee:false
+      }
     },
     data() {
       return {
-        rule_form: false
+        rule_form: false,
+        marguee:false
       }
     },
     components: {},

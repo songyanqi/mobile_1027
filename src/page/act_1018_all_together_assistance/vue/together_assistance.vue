@@ -38,7 +38,7 @@
         <div class="goods_info_title">
           {{goodsdata.goods.goodsName}}
         </div>
-        <div class="order_good_price"><span class="f_l">10.18活动价<em
+        <div class="order_good_price"><span class="f_l">10.18到手价<em
           class="price_symbol">￥</em><span>{{goodsdata.goods.activityPrice}}</span></span>
           <span class="membership_crown_pre"><em>￥</em>{{goodsdata.goods.goodsPrice}}</span></div>
       </div>
@@ -157,7 +157,7 @@
 
     <img class="table_brand" src="//pic.davdian.com/free/20170915_assistance/table_brand.png">
     <!--助力结束和助力发起页不显示这个-->
-    <a :href="'/ast_'+goodsdata.goods.goodsId+'.html'" v-if="response.type == 1 && response.actType == 0"
+    <a :href="response.supporter.mylink || '/ast_'+goodsdata.goods.goodsId+'.html'" v-if="response.type == 1 && response.actType == 0"
        style="margin-bottom: 0.2rem;display: block;width: 1.8rem;" class="share_btn bd_p">我也想要商品0元购</a>
     <!--获奖好友轮播-->
     <div class="loop_my_friend_reward" v-if="goodsdata.notice.length">
@@ -331,35 +331,30 @@
       assistance: function () {
         var that = this;
         login.needLogin();
-        if (that.visitor_status != 3) {
-          popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
-          return;
-        }
-        $.ajax({
-          cache: false,
-          async: true,
-          url: that.moke + '/api/mg/sale/userhelpbuy/addHelpPrice?_=' + Date.now(),
-          type: 'post',
-          dataType: 'json',
-          data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
-          success(response) {
-            if (response.data.code == '200') {
-//              that.response.supporter.isHelp = 1;
-//              that.response.supporter.friendsPrice = response.data.friendsPrice;
-//              that.response.supporter.supporterPrice = response.data.supporterPrice;
-//              that.response.supporter.surplusPrice = response.data.surplusPrice;
-//              that.response.supporter.rate = response.data.rate;
-              /*初始化数据*/
-              popup.toast("助力成功");
-              that.getData();
-            } else if (response.data.code == '100') {
-              popup.toast("每天只能助力一次哦");
+        if (that.visitor_status == 3) {
+          $.ajax({
+            cache: false,
+            async: true,
+            url: that.moke + '/api/mg/sale/userhelpbuy/addHelpPrice?_=' + Date.now(),
+            type: 'post',
+            dataType: 'json',
+            data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
+            success(response) {
+              if (response.data.code == '200') {
+                /*初始化数据*/
+                popup.toast("助力成功");
+                that.getData();
+              } else if (response.data.code == '100') {
+                popup.toast("每天只能助力一次哦");
+              }
+            },
+            error(error) {
+              console.error('ajax error:' + error.status + ' ' + error.statusText);
             }
-          },
-          error(error) {
-            console.error('ajax error:' + error.status + ' ' + error.statusText);
-          }
-        });
+          });
+        }else{
+          popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
+        }
       },
       /***
        * 刮奖
