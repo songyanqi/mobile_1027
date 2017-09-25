@@ -142,7 +142,7 @@
       returnHaveCount(){
         var arr=[];
         this.response.map(function (item,index) {
-          arr.push(item.isCompleted);
+          arr.push(item.lightNum);
         });
         return arr;
       },
