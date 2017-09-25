@@ -221,7 +221,6 @@
         //变异方法
       },
       light(bandId,index,isCompleted){
-
         var that=this;
         if(this.getStaus()==0){
           if (that.isApp) {
@@ -245,24 +244,19 @@
 
                 }else{
                   if(result.data.msg){
-                    dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                    alert('code:'+result.code+":msg"+result.data.msg);
                   }else{
-                    dialog.alert('code:'+result.code);
+                    alert('code:'+result.code);
                   }
                 }
               }else{
                 if(result.code==30000){
-                  if (that.isApp){
-                    native.Account.login()
-                  }else {
-                    window.location.href = '/login.html?'+'referer=' + encodeURIComponent(window.location.href)
-                  }
 
                 }else{
                   if(result.data.msg){
-                    dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                    alert(result.data.msg);
                   }else{
-                    dialog.alert('code:'+result.code);
+                    alert(result.code);
                   }
                 }
               }

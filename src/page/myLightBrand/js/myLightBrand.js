@@ -47,7 +47,6 @@ new Vue({
             backOnHead: 1
           });
         },300);
-
         // 设置分享信息
         try {
           share.setShareInfo({

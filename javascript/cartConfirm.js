@@ -669,7 +669,7 @@ $(function(){
           if (!$(".order_rule_ipt").hasClass("order_rule_ipt_checked")) {
             $(".order_navList").addClass("order_navList_line");
             document.body.scrollTop = document.body.scrollHeight;
-            bravetime.info("请先同意预售规则，才能去支付哦～")
+            bravetime.info("请先同意定金不退相关规则，才能去支付哦～")
             return;
           }
         }
