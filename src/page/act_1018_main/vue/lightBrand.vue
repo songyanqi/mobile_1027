@@ -14,7 +14,7 @@
     </div>
     <div class="all_list">
       <div class="list" v-for="(item,index) in response"  :class="{'light':item.isCompleted==1}">
-        <div class="list_b_img" @click.stop="go_detail(item.linkUrl)">
+        <div class="list_b_img" @click="go_detail(item.linkUrl)">
           <img v-lazy="item.bandPic">
         </div>
 
@@ -47,7 +47,7 @@
           <div class="list_need" v-if="item.isCompleted==-1">还需<span v-text="need[index]"></span>人点亮</div>
           <div class="list_need" v-if="item.isCompleted==1">已有<span v-text="haveCount[index]"></span>人点亮</div>
 
-          <div class="list_margin" v-if="lightArr[index]!=1" @click.stop="light(item.bandId,index,item.isCompleted)">
+          <div class="list_margin" v-if="lightArr[index]!=1" @click="light(item.bandId,index,item.isCompleted)">
             <div class="list_border"></div>
             <div class="list_button">
               <div class="btn" >
@@ -205,6 +205,11 @@
                   }
                 }
               }
+
+              // 清缓存
+              localStorage.removeItem('act_1018_mine_data');
+              localStorage.removeItem('act_1018_main_data');
+              console.log('本地缓存act_1018_main_data、act_1018_mine_data已清除。');
             })
             .catch(function (e) {
             })
