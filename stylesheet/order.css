@@ -427,6 +427,7 @@
     position: fixed;
     z-index: 20;
     top: 0;
+    max-width: 640px;
 }
 
 .order_list_container .no-order {
