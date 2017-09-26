@@ -38,6 +38,7 @@
     }
     .bookImg {
       width: 100%;
+      height: 1.74rem;
       img {
         width: 100%;
       }

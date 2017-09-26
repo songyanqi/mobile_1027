@@ -435,7 +435,7 @@
     content: "";
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -1px;
     border-bottom: 1px solid #e1e1e1;
     -webkit-transform-origin: left top;
     transform-origin: left top;
