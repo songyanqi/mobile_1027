@@ -2570,7 +2570,7 @@ body.orderDetail, body.orderDelivery {
 
 
 .order_detail_container .stageCont {
-  padding: 10px 0 12px 0;
+  padding: 10px 0 0 0;
   background: #fff;
   margin: 10px 0;
 }
@@ -2600,6 +2600,7 @@ body.orderDetail, body.orderDelivery {
   font-size: 14px;
   padding-bottom: 0;
   padding-top: 12px;
+  padding-bottom: 12px;
 }
 .order_detail_container .colorGray {
   color: #999;
