@@ -1,7 +1,6 @@
 <style  lang="sass"  rel="stylesheet/scss">
   @import "../../../common/css/common.scss";
   .reserve {
-    // margin-top: 10px;
     margin-top: 0.1rem;
     .clearfix:after {
       display: block;
@@ -26,16 +25,13 @@
       background: #fff;
     }
     .bookCont {
-      // padding: 5px 5px 0 5px;
       padding: 0.05rem;
+      box-sizing: border-box;
     }
     .bookList {
       float: left;
-      // width: calc(50% - 10px);
-      width: calc(50% - 0.1rem);
+      width: 1.72rem;
       background: #fff;
-      // box-radius: 5px;
-      // margin: 5px 5px; 
       border-radius: 0.05rem;
       margin: 0.05rem 0.05rem; 
       overflow: hidden;
@@ -53,63 +49,43 @@
       overflow: hidden;
       text-overflow: ellipsis;
       color: #666;
-      // font-size: 12px;
-      // height: 28px;
-      // margin: 10px 10px 0 10px;
       font-size: 0.12rem;
       height: 0.28rem;
       margin: 0.1rem 0.1rem 0 0.1rem;
-      // line-height: 14px;
       line-height: 0.15rem;
     }
     .bookPrice {
-      // font-size: 14px;
-      // padding: 5px 0 10px 10px;
       font-size: 0.14rem;
       padding: 0.05rem 0 0.08rem 0.1rem;
       .f12 {
-        // font-size: 12px;
         font-size: 0.12rem;
       }
     }
     .advancePrice {
       color: #FF4A7D;
       font-size: 0;
-      // padding: 0 0 13px 10px;
       padding: 0 0 0.1rem 0.1rem;
       .a_tips {
-        // font-size: 12px;
         font-size: 0.12rem;
       }
       .a_price {
-        // font-size: 18px;
         font-size: 0.18rem;
       }
     }
     .bookBtn {
-      // line-height: 18px;
       line-height: 0.18rem;
       color: #fff;
-      // font-size: 12px;
       font-size: 0.12rem;
-      // padding: 3px 0;
-      // margin: 0 10px 15px 10px;
        padding: 0.03rem 0;
       margin: 0 0.1rem 0.15rem 0.1rem;
       background: linear-gradient(to right, #FF5C5C, #FA1862);
       background: -moz-linear-gradient(right, #FF5C5C, #FA1862);
       background: -o-linear-gradient(right, #FF5C5C, #FA1862);
       background: -webkit-linear-gradient(left, #FF5C5C, #FA1862);
-      // border-radius: 15px;
       border-radius: 0.15rem;
       text-align: center;
     }
     .noMore {
-      // font-size: 12px;
-      // color: #666;
-      // text-align: center;
-      // padding: 10px 0;
-
       font-size: 0.12rem;
       color: #666;
       text-align: center;
@@ -296,7 +272,11 @@
           let that = this;
           let length = this.bookNavList.length;
           this.$nextTick(() => {
-            let swiper_num = window.screen.width / 67;
+            let screenWidth = document.body.clientWidth;
+            if (screenWidth == 0) {
+              screenWidth = document.documentElement.clientWidth;
+            }
+            let swiper_num = screenWidth / 67;
             if (length > swiper_num) {
               that.bookSwiper = new Swiper('.swiper-container', {
                 slidesPerView: swiper_num,
