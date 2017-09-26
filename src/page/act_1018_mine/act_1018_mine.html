@@ -307,7 +307,7 @@
                   <span class="price-symbol">￥</span>
                   <span class="price-int">{{item.nowPrice.split('.')[0]}}</span>
                   <span class="price-decimal" v-if="item.nowPrice.split('.')[1]">.{{item.nowPrice.split('.')[1]}}</span>
-                  <span class="member">会员返<span class="symbol">￥</span>{{item.timeshopIncome}}</span>
+                  <span class="member" v-if="isSeller">会员返<span class="symbol">￥</span>{{item.timeshopIncome}}</span>
                 </div>
               </div>
             </a>
