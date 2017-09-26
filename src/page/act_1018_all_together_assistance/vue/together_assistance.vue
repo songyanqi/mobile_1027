@@ -62,7 +62,7 @@
             <div class="ast_bigtxt"
                  style="padding-top:0.1rem;">TA共得到好友{{response.supporter.supporterPrice}}元助力<span
               v-if="response.supporter.rate">，战胜了{{response.supporter.rate}}%的人</span></div>
-            <div class="ast_txt" style="padding:0.1rem 0 0.2rem;">别忘啦，明天还可以帮好友助力哦</div>
+            <div class="ast_txt" v-if="!date17" style="padding:0.1rem 0 0.2rem;">别忘啦，明天还可以帮好友助力哦</div>
             <!--展示抽奖-->
             <div class="awd_touch">
               <div class="awd_pre" :class="['awd_no','awd_yes'][response.supporter.isPrizes]">
@@ -73,7 +73,6 @@
                 <!--没抽奖时候-->
                 <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd"
                                   @mousedown="start_awd" mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem" can-scratch="true"></com-scratch-card>
-
               </div>
             </div>
             <div style="height: 0.2rem;"></div>
@@ -235,11 +234,11 @@
         shareUserId: ua.getQuery("shareUserId"),
         goodsdata: null,
         rule_form:false,
-        visitor_status: null,
         addsupporterPrice: null,
         supporterData: null, //助力结果数据
         awd_type: 0,
-        start_awd_al: false //是否已经刮奖过
+        start_awd_al: false, //是否已经刮奖过,
+        date17:false,  //是不是17号
       }
     },
     components: {
@@ -256,25 +255,26 @@
           let ts = this;
           // 设置分享信息
           if(ts.goodsdata){
-            try {
-              share.setShareInfo({
-                "title": ts.goodsdata.goods.shareInfo.title,
-                "desc": ts.goodsdata.goods.shareInfo.desc,
-                "imgUrl": ts.goodsdata.goods.shareInfo.imgUrl,
-                "link": ts.goodsdata.goods.shareInfo.link,
-                success: function () {
-                  ts.sharecallback();
-                }
-              });
-              setTimeout(function () {
-                native.custom.initHead({
-                  'shareOnHead': '0'
+            /*如果是不是会员，不设置分享信息*/
+              try {
+                share.setShareInfo({
+                  "title": ts.goodsdata.goods.shareInfo.title,
+                  "desc": ts.goodsdata.goods.shareInfo.desc,
+                  "imgUrl": ts.goodsdata.goods.shareInfo.imgUrl,
+                  "link": ts.goodsdata.goods.shareInfo.link,
+                  success: function () {
+                    ts.sharecallback();
+                  }
                 });
-              }, 300);
-            } catch (err) {
-              console.error(err);
+                setTimeout(function () {
+                  native.custom.initHead({
+                    'shareOnHead': '0'
+                  });
+                }, 300);
+              } catch (err) {
+                console.error(err);
+              }
             }
-          }
         });
       }
     },
@@ -300,12 +300,15 @@
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
             ts.response = response.data;
-            ts.visitor_status = response.visitor_status;
             /*助力发起和助力者title变化*/
             if (response.data.type == '0') {
               ts.$emit("doctitle", "召集好友助力，最低0元购买商品");
             } else {
               ts.$emit("doctitle", response.data.supporter.nickName + "正在发起助力");
+            }
+            /*日期是否是17号*/
+            if((response.sys_time | formatDate).split(" ")[0] == '2017-10-17'){
+              ts.date17 = true;
             }
           },
           error(error) {
@@ -320,7 +323,6 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
-
             ts.goodsdata = response.data;
             ts.deltime();
           },
@@ -353,7 +355,8 @@
       assistance: function () {
         var that = this;
         login.needLogin();
-        if (that.visitor_status == 3) {
+        /*是否是已登录的会员，公司早晚被死佬扣，臧凯给搞没了*/
+        if (login.isSeller()) {
           $.ajax({
             cache: false,
             async: true,
@@ -384,7 +387,7 @@
       metoogo:function (url) {
         var that = this;
         login.needLogin();
-        if (that.visitor_status == 3) {
+        if (login.isSeller()) {
           location.href = url || '/ast_'+goodsdata.goods.goodsId+'.html';
         }else{
           popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");

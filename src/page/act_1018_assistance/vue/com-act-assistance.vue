@@ -124,14 +124,20 @@
         this.rule_form = false;
       },
       activebtn: function (url) {
+        /*没登录去登录*/
         if(login.isLogined()){
-          if(ua.isDvdApp()){
-            event.preventDefault();
-            native.Browser.open({
-              url:url
-            })
+          /*如果不是会员提示他成为会员*/
+          if (login.isSeller()) {
+            if(ua.isDvdApp()){
+              event.preventDefault();
+              native.Browser.open({
+                url:url
+              })
+            }else{
+              location.href = url;
+            }
           }else{
-            location.href = url;
+            popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
           }
         }else{
           login.needLogin();
@@ -216,7 +222,6 @@
     position: absolute;
     padding-left: 0.9rem;
     top: 0;
-    /*padding-top: 0.1rem;*/
     width: 100%;
     height: 100%;
     box-sizing: border-box;

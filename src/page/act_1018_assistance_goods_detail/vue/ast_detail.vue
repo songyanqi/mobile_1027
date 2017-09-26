@@ -99,6 +99,7 @@
                 "imgUrl": ts.shareInfo.imgUrl,
                 "link": ts.shareInfo.link,
                 success:function () {
+                  alert("回掉成功");
                   ts.sharecallback();
                 }
               });
