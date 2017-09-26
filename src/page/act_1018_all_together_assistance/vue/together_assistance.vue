@@ -71,7 +71,9 @@
                  <div v-if="response.supporter.isPrizes == 1" class="awd_title">恭喜你被iPhone8砸中了</div>
                 <div v-if="response.supporter.isPrizes == 1" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
                 <!--没抽奖时候-->
-                <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd" @mousedown="start_awd" mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem"></com-scratch-card>
+                <com-scratch-card v-if="response.supporter.isLottery == 0 && touch200 < 120" @touchmove="touch_move"
+                                  @mousemove="touch_move" @touchstart="start_awd" @mousedown="start_awd"
+                                  mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem"></com-scratch-card>
               </div>
             </div>
             <div style="height: 0.2rem;"></div>
@@ -111,16 +113,21 @@
       <span v-if="response.type == '0'">
         <!--助力活动结束-->
         <section v-if="response.actType != 0">
-          <span v-if="response.actType == 2">
-             <div class="ast_txt" style="padding:0.72rem 0 0.14rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
-          </span>
           <span v-if="response.actType == 1">
             <!--没有好友支持-->
             <div v-if="response.source.supporterPrice == '0'" class="ast_txt" style="padding:0.68rem 0 0.32rem;">很遗憾没有得到好友的助力支持</div>
-              <!--0元购-->
-            <div v-else class="ast_deep" style="padding:0.72rem 0 0.21rem">已得到{{response.source.supporterPrice}}元助力快去<span v-if="response.source.surplusPrice == '0'" style="font-size: 0.24rem;">0元</span>抢购吧</div>
+            <!--0元购-->
+            <div v-else class="ast_deep"
+                 style="padding:0.72rem 0 0.21rem">已得到{{response.source.supporterPrice}}元助力快去<span
+              v-if="response.source.surplusPrice == '0'" style="font-size: 0.24rem;">0元</span>抢购吧</div>
+            <a :href="response.activityLink" class="share_btn bd_r" style="display: block;">立即抢购</a>
           </span>
-          <a :href="response.activityLink" class="share_btn bd_r" style="display: block;">{{response.actType == 1 ? '立即抢购':'去店铺逛逛'}}</a>
+
+           <span v-if="response.actType == 2">
+              <div class="ast_txt" style="padding:0.72rem 0 0.14rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
+              <a :href="response.activityLink" class="share_btn bd_r" style="display: block;">去店铺逛逛</a>
+          </span>
+
         </section>
         <section v-else>
           <!--获得0元购机会-->
@@ -232,12 +239,13 @@
         goodsId: ua.getQuery("goodsId"),
         shareUserId: ua.getQuery("shareUserId"),
         goodsdata: null,
-        rule_form:false,
+        rule_form: false,
         addsupporterPrice: null,
         supporterData: null, //助力结果数据
         awd_type: 0,
         start_awd_al: false, //是否已经刮奖过,
-        date17:false,  //是不是17号
+        date17: false,  //是不是17号
+        touch200: 0
       }
     },
     components: {
@@ -253,27 +261,27 @@
         this.$nextTick(function () {
           let ts = this;
           // 设置分享信息
-          if(ts.goodsdata){
+          if (ts.goodsdata) {
             /*如果是不是会员，不设置分享信息*/
-              try {
-                share.setShareInfo({
-                  "title": ts.goodsdata.goods.shareInfo.title,
-                  "desc": ts.goodsdata.goods.shareInfo.desc,
-                  "imgUrl": ts.goodsdata.goods.shareInfo.imgUrl,
-                  "link": ts.goodsdata.goods.shareInfo.link,
-                  success: function () {
-                    ts.sharecallback();
-                  }
+            try {
+              share.setShareInfo({
+                "title": ts.goodsdata.goods.shareInfo.title,
+                "desc": ts.goodsdata.goods.shareInfo.desc,
+                "imgUrl": ts.goodsdata.goods.shareInfo.imgUrl,
+                "link": ts.goodsdata.goods.shareInfo.link,
+                success: function () {
+                  ts.sharecallback();
+                }
+              });
+              setTimeout(function () {
+                native.custom.initHead({
+                  'shareOnHead': '0'
                 });
-                setTimeout(function () {
-                  native.custom.initHead({
-                    'shareOnHead': '0'
-                  });
-                }, 300);
-              } catch (err) {
-                console.error(err);
-              }
+              }, 300);
+            } catch (err) {
+              console.error(err);
             }
+          }
         });
       }
     },
@@ -306,7 +314,7 @@
               ts.$emit("doctitle", response.data.supporter.nickName + "正在发起助力");
             }
             /*日期是否是17号*/
-            if((response.sys_time | formatDate).split(" ")[0] == '2017-10-17'){
+            if (new Date(parseInt(response.sys_time) * 1000).toLocaleString().split(" ")[0] == "2017/10/17") {
               ts.date17 = true;
             }
           },
@@ -376,7 +384,7 @@
               console.error('ajax error:' + error.status + ' ' + error.statusText);
             }
           });
-        }else{
+        } else {
           popup.confirm({
             title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
             text: '',
@@ -391,12 +399,12 @@
       /***
        * 我也想要0元购
        * */
-      metoogo:function (url) {
+      metoogo: function (url) {
         var that = this;
         login.needLogin();
         if (login.isSeller()) {
-          location.href = url || '/ast_'+that.goodsdata.goods.goodsId+'.html';
-        }else{
+          location.href = url || '/ast_' + that.goodsdata.goods.goodsId + '.html';
+        } else {
           popup.confirm({
             title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
             text: '',
@@ -461,11 +469,11 @@
       /***
        * 去主会场   关闭当前
        * */
-      go_main:function (url) {
-        if(ua.isDvdApp()){
+      go_main: function (url) {
+        if (ua.isDvdApp()) {
           event.preventDefault();
           native.Browser.close({})
-        }else{
+        } else {
           location.href = url
         }
       },
@@ -475,12 +483,17 @@
       check_rule: function () {
         this.rule_form = true;
       },
-      events:function () {
+      events: function () {
 
       },
       close_what_invite: function () {
         this.rule_form = false;
       },
+      touch_move: function () {
+        var that = this;
+        that.touch200++;
+        console.log(that.touch200);
+      }
     },
     filters: {
       /***
