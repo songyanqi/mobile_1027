@@ -138,7 +138,22 @@
               location.href = url;
             }
           }else{
-            popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
+            popup.confirm({
+              title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
+              text: '',
+              okBtnTitle: '开通会员',
+              okBtnCallback() {
+                if(ua.isDvdApp()){
+                  event.preventDefault();
+                  native.Browser.open({
+                    url:"/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button"
+                  })
+                }else{
+                  location.href = "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button";
+                }
+              },
+              cancelBtnTitle: '取消',
+            });
           }
         }else{
           login.needLogin();

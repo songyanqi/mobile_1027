@@ -378,7 +378,15 @@
             }
           });
         }else{
-          popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
+          popup.confirm({
+            title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
+            text: '',
+            okBtnTitle: '开通会员',
+            okBtnCallback() {
+              location.href = "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button";
+            },
+            cancelBtnTitle: '取消',
+          });
         }
       },
       /***
@@ -390,7 +398,15 @@
         if (login.isSeller()) {
           location.href = url || '/ast_'+goodsdata.goods.goodsId+'.html';
         }else{
-          popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
+          popup.confirm({
+            title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
+            text: '',
+            okBtnTitle: '开通会员',
+            okBtnCallback() {
+              location.href = "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button";
+            },
+            cancelBtnTitle: '取消',
+          });
         }
       },
       /***
