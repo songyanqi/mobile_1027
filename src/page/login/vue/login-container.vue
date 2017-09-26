@@ -132,6 +132,7 @@
   import common from '../../../common/js/common.js';
   import popup from '../../../common/js/module/popup.js';
   import ua from '../../../common/js/module/ua.js';
+  import login from '../../../common/js/module/login.js';
   import strSign from '../../../common/js/module/encrypt.js';
 
   export default {
@@ -166,6 +167,10 @@
       }
     },
     created() {
+      var that = this;
+      if(login.isLogined()){
+        location.href = that.referer || "/";
+      }
     },
     mounted() {
       var that = this;
