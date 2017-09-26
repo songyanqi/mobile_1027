@@ -50,7 +50,7 @@
           <div class="price">
             <span class="discount-symbol">￥</span><span class="discount-price">{{item.price}}</span>
             <!--<span class="origin-price" @click.stop="localStorage.clear();">￥{{item.goodsPrice}}</span>-->
-            <span class="origin-price">￥{{item.goodsPrice}}</span>
+            <span class="origin-price">￥{{item.goodsShopPrice}}</span>
             <!--按钮-->
             <template v-if="isDvdApp">
               <span class="btn buy" v-if="item.buttonName === '立即抢购'">立即抢购</span>
