@@ -165,7 +165,16 @@
           ts.sharecallback();
           share.callShare();
         }else{
-          popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
+          popup.confirm({
+            className:'',
+            title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
+            text: '',
+            okBtnTitle: '开通会员',
+            okBtnCallback() {
+              location.href = "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button";
+            },
+            cancelBtnTitle: '取消',
+          });
         }
       },
       /***
@@ -217,7 +226,7 @@
     },
   }
 </script>
-<style lang="sass" lang="scss" rel="stylesheet/scss">
+<style lang="sass" lang="scss" rel="stylesheet/scss" scoped>
   @import "../../../common/css/util/all";
 
   .main_banner {

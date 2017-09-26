@@ -45,14 +45,15 @@
     </a>
     <!--板-->
     <div class="rule_brand">
-      <img src="//pic.davdian.com/free/20170915_assistance/rule.png">
+      <img @click="rule_form = true" title="0987654" src="//pic.davdian.com/free/20170915_assistance/rule.png">
       <img src="//pic.davdian.com/free/20170915_assistance/bear.png">
       <!--助力者页面按钮信息-->
       <section v-if="response.type == '1'">
         <!--助力活动结束-->
         <section v-if="response.actType != 0">
           <div class="ast_txt" style="padding:0.68rem 0 0.12rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
-          <a href="/act_1018_main.html" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</a>
+          <!--1018活动期间-->
+          <span @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</span>
         </section>
         <section v-else>
           <!--进页面的时候已经助力过了-->
@@ -62,7 +63,7 @@
             <div class="ast_bigtxt"
                  style="padding-top:0.1rem;">TA共得到好友{{response.supporter.supporterPrice}}元助力<span
               v-if="response.supporter.rate">，战胜了{{response.supporter.rate}}%的人</span></div>
-            <div class="ast_txt" style="padding:0.1rem 0 0.2rem;">别忘啦，明天还可以帮好友助力哦</div>
+            <div class="ast_txt" v-if="!date17" style="padding:0.1rem 0 0.2rem;">别忘啦，明天还可以帮好友助力哦</div>
             <!--展示抽奖-->
             <div class="awd_touch">
               <div class="awd_pre" :class="['awd_no','awd_yes'][response.supporter.isPrizes]">
@@ -71,8 +72,9 @@
                  <div v-if="response.supporter.isPrizes == 1" class="awd_title">恭喜你被iPhone8砸中了</div>
                 <div v-if="response.supporter.isPrizes == 1" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
                 <!--没抽奖时候-->
-                <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd"
-                                  @mousedown="start_awd" mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem" can-scratch="true"></com-scratch-card>
+                <com-scratch-card v-if="response.supporter.isLottery == 0 && touch200 < 120" @touchmove="touch_move"
+                                  @mousemove="touch_move" @touchstart="start_awd" @mousedown="start_awd"
+                                  mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem"></com-scratch-card>
               </div>
             </div>
             <div style="height: 0.2rem;"></div>
@@ -98,7 +100,7 @@
             <span v-else>
               <div class="ast_bigtxt" style="padding-top:0.34rem;">TA已得到好友<span
                 style="font-size: 0.24rem;">{{response.supporter.supporterPrice}}</span>元助力<span
-                v-if="response.supporter.rate">，战胜了{{response.supporter.rate}}%的人</span></div>
+                v-if="response.supporter.rate">，<br>战胜了{{response.supporter.rate}}%的人</span></div>
               <div class="ast_txt" style="padding: 0.1rem 0 0.04rem;">帮TA再接再厉赢得商品0元购 ！</div>
               <div class="share_btn bd_r" @click="assistance">给TA助力  我赢iPhone8</div>
               <div class="ast_txt" style="font-size: 0.1rem;line-height: 0.14rem;padding-top: 0.06rem;">助力后即刻抽奖</div>
@@ -112,16 +114,21 @@
       <span v-if="response.type == '0'">
         <!--助力活动结束-->
         <section v-if="response.actType != 0">
-          <span v-if="response.actType == 2">
-             <div class="ast_txt" style="padding:0.72rem 0 0.14rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
-          </span>
           <span v-if="response.actType == 1">
             <!--没有好友支持-->
             <div v-if="response.source.supporterPrice == '0'" class="ast_txt" style="padding:0.68rem 0 0.32rem;">很遗憾没有得到好友的助力支持</div>
-              <!--0元购-->
-            <div v-else class="ast_deep" style="padding:0.72rem 0 0.21rem">已得到{{response.source.supporterPrice}}元助力快去<span v-if="response.source.surplusPrice == '0'" style="font-size: 0.24rem;">0元</span>抢购吧</div>
+            <!--0元购-->
+            <div v-else class="ast_deep" style="padding:0.72rem 0 0.21rem">已得到{{response.source.supporterPrice}}元助力快去
+              <span v-if="response.source.surplusPrice == '0'" style="font-size: 0.24rem;">0元</span>抢购吧
+            </div>
+            <a :href="response.activityLink" class="share_btn bd_r" style="display: block;">立即抢购</a>
           </span>
-          <a :href="response.activityLink" class="share_btn bd_r" style="display: block;">{{response.actType == 1 ? '立即抢购':'去店铺逛逛'}}</a>
+
+           <span v-if="response.actType == 2">
+              <div class="ast_txt" style="padding:0.72rem 0 0.14rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
+              <span  @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</span>
+           </span>
+
         </section>
         <section v-else>
           <!--获得0元购机会-->
@@ -157,7 +164,7 @@
 
     <img class="table_brand" src="//pic.davdian.com/free/20170915_assistance/table_brand.png">
     <!--助力结束和助力发起页不显示这个-->
-    <a :href="response.supporter.mylink || '/ast_'+goodsdata.goods.goodsId+'.html'" v-if="response.type == 1 && response.actType == 0"
+    <a @click="metoogo(response.supporter.myLink)" v-if="response.type == 1 && response.actType == 0"
        style="margin-bottom: 0.2rem;display: block;width: 1.8rem;" class="share_btn bd_p">我也想要商品0元购</a>
     <!--获奖好友轮播-->
     <div class="loop_my_friend_reward" v-if="goodsdata.notice.length">
@@ -191,7 +198,25 @@
     </div>
 
     <!--去主会场-->
-    <div v-if="response.actType != 2" @click="a_link('/act_1018_main.html')" class="main_btn">10.18周年庆主会场</div>
+    <div v-if="response.actType != 2" @click="go_main('/act_1018_main.html')" class="main_btn">10.18周年庆主会场</div>
+    <!--查看规则-->
+    <div v-if="rule_form" class="com-popup-base2" @click="rule_form = false">
+      <div class="table-cell">
+        <div v-show="rule_form" class="box" @click.stop="events">
+          <div>助力规则</div>
+          <div>
+            <p>1.助力时间：2017.10.01 00:00:00-2017.10.17 23:59:59；</p>
+            <p>2.抢购时间：2017.10.18 00:00:00- 2017.10.18 23:59:59；</p>
+            <p>3.活动仅限大V店会员参与；</p>
+            <p>4.每个活动商品每人可发起1次助力，分享至微信好友或朋友圈获得好友助力;</p>
+            <p>5. 每天仅有1次给好友助力的机会，成功助力后好友可获得随机减钱;</p>
+            <p>6.10月18日当天已活动价支付购买，支付成功后，会将该商品得到的助力金额以返现的形式返到【我的】－【总额】－【待结算金额】－【其他收入】里30天后没有退货转到【待提现金额】，最高可0元抢购该商品。</p>
+            <p>7.已发起的助力商品可在【我的10.18】中查看；</p>
+          </div>
+          <div @click="rule_form = false"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -215,11 +240,13 @@
         goodsId: ua.getQuery("goodsId"),
         shareUserId: ua.getQuery("shareUserId"),
         goodsdata: null,
-        visitor_status: null,
+        rule_form: false,
         addsupporterPrice: null,
         supporterData: null, //助力结果数据
         awd_type: 0,
-        start_awd_al: false //是否已经刮奖过
+        start_awd_al: false, //是否已经刮奖过,
+        date17: false,  //是不是17号
+        touch200: 0
       }
     },
     components: {
@@ -230,28 +257,31 @@
     computed: {},
     watch: {
       // 监听response变化
-      response() {
+      goodsdata() {
         // response变化后并渲染完dom,设置其他事项
         this.$nextTick(function () {
           let ts = this;
           // 设置分享信息
-          try {
-            share.setShareInfo({
-              "title": "大V店10.18周年庆 猛点一下帮我0元抢爆品，你抽iPhone8！",
-              "desc": '好友助力随机减钱，助力越多越省钱',
-              "imgUrl": "http://pic.davdian.com/free/20170915_assistance/assistance.png",
-              "link": location.href,
-              success: function () {
-                ts.sharecallback();
-              }
-            });
-            setTimeout(function () {
-              native.custom.initHead({
-                'shareOnHead': '0'
+          if (ts.goodsdata) {
+            /*如果是不是会员，不设置分享信息*/
+            try {
+              share.setShareInfo({
+                "title": ts.goodsdata.goods.shareInfo.title,
+                "desc": ts.goodsdata.goods.shareInfo.desc,
+                "imgUrl": ts.goodsdata.goods.shareInfo.imgUrl,
+                "link": ts.goodsdata.goods.shareInfo.link,
+                success: function () {
+                  ts.sharecallback();
+                }
               });
-            }, 300);
-          } catch (err) {
-            console.error(err);
+              setTimeout(function () {
+                native.custom.initHead({
+                  'shareOnHead': '0'
+                });
+              }, 300);
+            } catch (err) {
+              console.error(err);
+            }
           }
         });
       }
@@ -278,12 +308,15 @@
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
             ts.response = response.data;
-            ts.visitor_status = response.visitor_status;
             /*助力发起和助力者title变化*/
             if (response.data.type == '0') {
               ts.$emit("doctitle", "召集好友助力，最低0元购买商品");
             } else {
               ts.$emit("doctitle", response.data.supporter.nickName + "正在发起助力");
+            }
+            /*日期是否是17号*/
+            if (new Date(parseInt(response.sys_time) * 1000).toLocaleString().split(" ")[0] == "2017/10/17") {
+              ts.date17 = true;
             }
           },
           error(error) {
@@ -298,7 +331,6 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
-
             ts.goodsdata = response.data;
             ts.deltime();
           },
@@ -331,7 +363,8 @@
       assistance: function () {
         var that = this;
         login.needLogin();
-        if (that.visitor_status == 3) {
+        /*是否是已登录的会员，公司早晚被死佬扣，臧凯给搞没了*/
+        if (login.isSeller()) {
           $.ajax({
             cache: false,
             async: true,
@@ -352,8 +385,36 @@
               console.error('ajax error:' + error.status + ' ' + error.statusText);
             }
           });
-        }else{
-          popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
+        } else {
+          popup.confirm({
+            title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
+            text: '',
+            okBtnTitle: '开通会员',
+            okBtnCallback() {
+              location.href = "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button";
+            },
+            cancelBtnTitle: '取消',
+          });
+        }
+      },
+      /***
+       * 我也想要0元购
+       * */
+      metoogo: function (url) {
+        var that = this;
+        login.needLogin();
+        if (login.isSeller()) {
+          location.href = url || '/ast_' + that.goodsdata.goods.goodsId + '.html';
+        } else {
+          popup.confirm({
+            title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
+            text: '',
+            okBtnTitle: '开通会员',
+            okBtnCallback() {
+              location.href = "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button";
+            },
+            cancelBtnTitle: '取消',
+          });
         }
       },
       /***
@@ -407,17 +468,32 @@
         });
       },
       /***
-       * 跳转
+       * 去主会场   关闭当前
        * */
-      a_link:function (url) {
-        if(ua.isDvdApp()){
+      go_main: function (url) {
+        if (ua.isDvdApp()) {
           event.preventDefault();
-          native.Browser.open({
-            url:url
-          })
-        }else{
+          native.Browser.close({})
+        } else {
           location.href = url
         }
+      },
+      /***
+       * 查看规则
+       */
+      check_rule: function () {
+        this.rule_form = true;
+      },
+      events: function () {
+
+      },
+      close_what_invite: function () {
+        this.rule_form = false;
+      },
+      touch_move: function () {
+        var that = this;
+        that.touch200++;
+        console.log(that.touch200);
       }
     },
     filters: {
@@ -452,10 +528,6 @@
   @import "../../../common/css/util/all";
 
   .assistance_box {
-    background: -webkit-linear-gradient(top, #F54B74, #FF9F8F);
-    background: -webkit-gradient(linear, top top, bottom bottom, from(#F54B74), to(#FF9F8F));
-    background: -webkit-linear-gradient(top, #F54B74, #FF9F8F);
-    background: linear-gradient(to bottom, #F54B74, #FF9F8F);
     max-width: 640px;
     height: 100%;
     overflow: scroll;
@@ -873,14 +945,104 @@
   .awd_yes {
     background-color: #FF5353;
   }
+
+  // 动画
+  @keyframes com-alert-animation {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .com-popup-base2 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    display: table;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    line-height: 1;
+  }
+
+  .com-popup-base2 .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .com-popup-base2 .table-cell .box {
+    display: inline-block;
+    border-radius: 0.04rem;
+    animation: com-alert-animation 0.5s;
+    width: 73.333%;
+    min-height: 200px;
+    position: relative;
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 0 10px 15px;
+    color: #FF4A7D
+  }
+
+  .com-popup-base2 .table-cell .box div:nth-of-type(1) {
+    font-size: 14px;
+    text-align: center;
+    padding: 12px 0;
+    position: relative;
+  }
+
+  .com-popup-base2 .table-cell .box div:nth-of-type(2) {
+    font-size: 14px;
+    text-align: left;
+    line-height: 20px;
+    padding-top: 5px;
+  }
+
+  .com-popup-base2 .table-cell .box div:nth-of-type(3) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/clearInput.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+  }
+
+  .com-popup-base2 .table-cell .box div:nth-of-type(2) p {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .com-popup-base2 .table-cell .box div:nth-of-type(1):after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -50%;
+    width: 200%;
+    height: 1px;
+    background: rgba(216, 216, 216, 0.51);
+    -webkit-transform: scale(0.5);
+    bottom: 0;
+    z-index: 1;
+  }
 </style>
 <style>
   html {
-    height: 100%;
+    min-height: 100%;
   }
 
   body {
-    height: 100%;
+    min-height: 100%;
+    background: -webkit-linear-gradient(top, #F54B74, #FF9F8F);
+    background: -webkit-gradient(linear, top top, bottom bottom, from(#F54B74), to(#FF9F8F));
+    background: -webkit-linear-gradient(top, #F54B74, #FF9F8F);
+    background: linear-gradient(to bottom, #F54B74, #FF9F8F);
   }
 
   .app {

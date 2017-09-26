@@ -36,13 +36,13 @@
           <div v-if="lis.buttonType > 2" class="progress_info" style="padding-right: 1.1rem;" v-html="lis.activityMessage"></div>
           <div v-else class="progress_info" v-html="lis.activityMessage"></div>
           <div class="remain_btns">
-            <div class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}" @click="activebtn(lis.activityLink)">{{lis.activityButton}}</div>
+            <div class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}">{{lis.activityButton}}</div>
           </div>
         </li>
       </ul>
     </div>
     <!--查看规则-->
-    <div v-if="rule_form" class="com-popup-base" @click="rule_form = false">
+    <div v-if="rule_form" class="com-popup-base2" @click="rule_form = false">
       <div class="table-cell">
         <div v-show="rule_form" class="box" @click.stop="events">
           <div>助力规则</div>
@@ -65,6 +65,7 @@
   import ua from '../../../common/js/module/ua.js';
   import login from '../../../common/js/module/login.js';
   import native from "../../../common/js/module/native";
+  import popup from "../../../common/js/module/popup.js";
   export default {
     props: {
       response: {
@@ -124,14 +125,39 @@
         this.rule_form = false;
       },
       activebtn: function (url) {
+        /*没登录去登录*/
         if(login.isLogined()){
-          if(ua.isDvdApp()){
-            event.preventDefault();
-            native.Browser.open({
-              url:url
-            })
+          /*如果不是会员提示他成为会员*/
+          if (login.isSeller()) {
+            if(ua.isDvdApp()){
+              event.preventDefault();
+              native.Browser.open({
+                url:url
+              })
+            }else{
+              location.href = url;
+            }
           }else{
-            location.href = url;
+            popup.confirm({
+              className:'',
+              title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
+              text: '',
+              okBtnTitle: '开通会员',
+              okBtnCallback() {
+                if(ua.isDvdApp()){
+                  event.preventDefault();
+                  native.Browser.open({
+                    url:"/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button"
+                  })
+                }else{
+                  location.href = "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button";
+                }
+              },
+              cancelBtnTitle: '取消',
+              cancelBtnCallback() {
+
+              }
+            });
           }
         }else{
           login.needLogin();
@@ -144,7 +170,7 @@
     filters: {}
   }
 </script>
-<style lang="sass" lang="scss" rel="stylesheet/scss">
+<style lang="sass" lang="scss" rel="stylesheet/scss" scoped>
   @import "../../../common/css/util/all";
 
   .com-box {
@@ -216,7 +242,6 @@
     position: absolute;
     padding-left: 0.9rem;
     top: 0;
-    /*padding-top: 0.1rem;*/
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -435,9 +460,9 @@
   }
 
   .marguee_innder {
-    -webkit-animation: marguees 120s infinite linear;
-    -o-animation: marguees 120s infinite linear;
-    animation: marguees 120s infinite linear;
+    -webkit-animation: marguees 150s infinite linear;
+    -o-animation: marguees 150s infinite linear;
+    animation: marguees 150s infinite linear;
   }
 
   @keyframes marguees {
@@ -459,7 +484,7 @@
     }
   }
 
-  .com-popup-base {
+  .com-popup-base2 {
     position: fixed;
     top: 0;
     width: 100%;
@@ -471,13 +496,13 @@
     line-height: 1;
   }
 
-  .com-popup-base .table-cell {
+  .com-popup-base2 .table-cell {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
   }
 
-  .com-popup-base .table-cell .box {
+  .com-popup-base2 .table-cell .box {
     display: inline-block;
     border-radius: 0.04rem;
     animation: com-alert-animation 0.5s;
@@ -490,21 +515,21 @@
     color: #FF4A7D
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(1) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(1) {
     font-size: 14px;
     text-align: center;
     padding: 12px 0;
     position: relative;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(2) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(2) {
     font-size: 14px;
     text-align: left;
     line-height: 20px;
     padding-top: 5px;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(3) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(3) {
     position: absolute;
     right: 0;
     top: 0;
@@ -517,12 +542,12 @@
     background-position: 10px 10px;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(2) p {
+  .com-popup-base2 .table-cell .box div:nth-of-type(2) p {
     display: inline-block;
     margin-top: 10px;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(1):after {
+  .com-popup-base2 .table-cell .box div:nth-of-type(1):after {
     content: "";
     display: block;
     position: absolute;

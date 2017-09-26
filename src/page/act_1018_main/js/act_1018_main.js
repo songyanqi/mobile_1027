@@ -99,7 +99,7 @@ new Vue({
 
         // 设置app头部标题栏
         native.custom.initHead({
-          shareOnHead: 1,
+          shareOnHead: 0,
         });
 
         // 设置app头部标题栏

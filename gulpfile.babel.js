@@ -31,6 +31,7 @@ import liveReload from 'gulp-livereload';		// 文件变化时自动刷新浏览�
 import mergeStream from 'merge-stream';		// 合并流然后返回给run-sequence保证任务顺序执行
 import path from 'path';		// 路径解析模块
 import spritesmith from 'gulp.spritesmith';		// 精灵图
+import addSrc from 'gulp-add-src';
 
 // 命令行参数
 let argv = minimist(process.argv);
@@ -228,8 +229,13 @@ gulp.task('create_sprite', () => {
   glob.sync(path.normalize(config.iconDir)).forEach(function (iconDir) {
     if (!fs.statSync(iconDir).isDirectory()) return;
 
+    let dirArr = iconDir.split('/');
+
     // 生成文件的basename
-    let dirName = iconDir.split('/').pop();
+    let dirName = dirArr.pop();
+
+    // 路径中的src替换成[[static]]
+    dirArr[0] = '[[static]]';
 
     let stream = gulp.src(iconDir + '/*')
       .pipe(spritesmith({
@@ -239,7 +245,9 @@ gulp.task('create_sprite', () => {
         imgName: `${dirName}.png`,
         cssName: `../css/_${dirName}.scss`,
         // 取相对路径即可,因为css和img是部署在一起的
-        imgPath: `../img/${dirName}.png`,
+        // imgPath: `../img/${dirName}.png`,
+        // 取绝对路径即可,因为要做md5版本号
+        imgPath: `${dirArr.join('/')}/${dirName}.png`,
         cssVarMap: function (sprite) {
           sprite.mixinName = `i-${sprite.name}`;
         }
@@ -324,10 +332,10 @@ gulp.task('move-js:dist', () => {
     .pipe(size({showFiles: true}))
     // 输出JS
     .pipe(gulp.dest('dist/static'))
-    // 记录MD5
-    // .pipe(rev.manifest('rev-md5/js.json'))
-    // 输出MD5
-    // .pipe(gulp.dest(config.temp));
+  // 记录MD5
+  // .pipe(rev.manifest('rev-md5/js.json'))
+  // 输出MD5
+  // .pipe(gulp.dest(config.temp));
 });
 
 
@@ -338,13 +346,13 @@ function compileCss() {
   console.log(`>>>>>>>>>>>>>>> CSS文件开始编译。${util.getNow()}`);
 
   return gulp.src(config.css)
-  // 替换环境变量
-    .pipe(replace(replacerRegExp, function (match) {
-      return replacer[match];
-    }))
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'uncompressed'
+    }))
+    // 替换环境变量
+    .pipe(replace(replacerRegExp, function (match) {
+      return replacer[match];
     }))
     .pipe(sourcemaps.write({
       includeContent: false
@@ -355,6 +363,8 @@ function compileCss() {
 // 开发环境CSS编译
 gulp.task('css:dev', () => {
   return compileCss()
+  // 替换版本号
+    .pipe(replace('[[v]]', `?v=${util.getTimeFormatVersion()}`))
     .pipe(sourcemaps.write('./'))
     // 显示文件体积
     .pipe(size({showFiles: true}))
@@ -364,6 +374,11 @@ gulp.task('css:dev', () => {
 // 生产环境CSS编译
 gulp.task('css:dist', () => {
   return compileCss()
+  // 替换版本号
+    .pipe(replace('[[v]]', ``))
+    .pipe(addSrc('.temp/rev-md5/img.json'))
+    // 增加MD5戳
+    .pipe(revCollector())
     .pipe(minifyCss())
     .pipe(rev())
     // 显示文件体积
@@ -381,7 +396,7 @@ gulp.task('css:dist', () => {
 function compileImg() {
   console.log(`>>>>>>>>>>>>>>> 图片文件开始编译。${util.getNow()}`);
 
-  return gulp.src(config.img);
+  return gulp.src(config.img)
 }
 
 // 开发环境图片编译
@@ -396,9 +411,13 @@ gulp.task('img:dev', () => {
 gulp.task('img:dist', () => {
   return compileImg()
   // .pipe(imagemin())
-  // 显示文件体积
+    .pipe(rev())
+    // 显示文件体积
     .pipe(size({showFiles: true}))
-    .pipe(gulp.dest('dist/static'));
+    .pipe(gulp.dest('dist/static'))
+    // 记录MD5
+    .pipe(rev.manifest('rev-md5/img.json'))
+    .pipe(gulp.dest(config.temp))
 });
 
 
@@ -533,8 +552,8 @@ gulp.task('default', () => {
       // ['create_sprite'],
       ['js:dev'],
       ['move-js:dev'],
-      ['css:dev'],
       ['img:dev'],
+      ['css:dev'],
       ['html:dev'],
       // ['webpack:default'],
       function () {
@@ -572,8 +591,8 @@ gulp.task('build:dev', () => {
       // ['sprite'],
       ['js:dev'],
       ['move-js:dev'],
-      ['css:dev'],
       ['img:dev'],
+      ['css:dev'],
       ['html:dev'],
       ['webpack:dev'],
       function () {
@@ -591,8 +610,8 @@ gulp.task('build:dist', () => {
       // ['sprite'],
       ['js:dist'],
       ['move-js:dist'],
-      ['css:dist'],
       ['img:dist'],
+      ['css:dist'],
       ['old:rev'],
       ['html:dist'],
       ['clean:temp'],
