@@ -65,6 +65,7 @@
   import ua from '../../../common/js/module/ua.js';
   import login from '../../../common/js/module/login.js';
   import native from "../../../common/js/module/native";
+  import popup from "../../../common/js/module/popup.js";
   export default {
     props: {
       response: {
