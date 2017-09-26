@@ -89,9 +89,9 @@
         let ts = this;
 
         // 测试数据
-        setTimeout(function(){
-          ts.list = require('../json/act-subscribe.json');
-        }, 1000);
+//        setTimeout(function(){
+//          ts.list = require('../json/act-subscribe.json');
+//        }, 1000);
 
         $.ajax({
           cache: false,
