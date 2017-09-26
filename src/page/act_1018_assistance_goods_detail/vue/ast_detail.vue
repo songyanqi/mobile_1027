@@ -166,6 +166,7 @@
           share.callShare();
         }else{
           popup.confirm({
+            className:'',
             title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
             text: '',
             okBtnTitle: '开通会员',
@@ -225,7 +226,7 @@
     },
   }
 </script>
-<style lang="sass" lang="scss" rel="stylesheet/scss">
+<style lang="sass" lang="scss" rel="stylesheet/scss" scoped>
   @import "../../../common/css/util/all";
 
   .main_banner {
