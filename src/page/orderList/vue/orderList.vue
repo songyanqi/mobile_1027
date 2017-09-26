@@ -37,7 +37,6 @@
         ready(){
           if(this.isApp){
             window.bravetime.setHead({"title":"订单列表"});
-            window.bravetime.initHead();
           }
         }
     }
