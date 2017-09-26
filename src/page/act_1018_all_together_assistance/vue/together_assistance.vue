@@ -99,7 +99,7 @@
             <span v-else>
               <div class="ast_bigtxt" style="padding-top:0.34rem;">TA已得到好友<span
                 style="font-size: 0.24rem;">{{response.supporter.supporterPrice}}</span>元助力<span
-                v-if="response.supporter.rate">，战胜了{{response.supporter.rate}}%的人</span></div>
+                v-if="response.supporter.rate">，<br>战胜了{{response.supporter.rate}}%的人</span></div>
               <div class="ast_txt" style="padding: 0.1rem 0 0.04rem;">帮TA再接再厉赢得商品0元购 ！</div>
               <div class="share_btn bd_r" @click="assistance">给TA助力  我赢iPhone8</div>
               <div class="ast_txt" style="font-size: 0.1rem;line-height: 0.14rem;padding-top: 0.06rem;">助力后即刻抽奖</div>
@@ -158,7 +158,7 @@
 
     <img class="table_brand" src="//pic.davdian.com/free/20170915_assistance/table_brand.png">
     <!--助力结束和助力发起页不显示这个-->
-    <a :href="response.supporter.mylink || '/ast_'+goodsdata.goods.goodsId+'.html'" v-if="response.type == 1 && response.actType == 0"
+    <a @click="metoogo" v-if="response.type == 1 && response.actType == 0"
        style="margin-bottom: 0.2rem;display: block;width: 1.8rem;" class="share_btn bd_p">我也想要商品0元购</a>
     <!--获奖好友轮播-->
     <div class="loop_my_friend_reward" v-if="goodsdata.notice.length">
@@ -192,7 +192,7 @@
     </div>
 
     <!--去主会场-->
-    <div v-if="response.actType != 2" @click="a_link('/act_1018_main.html')" class="main_btn">10.18周年庆主会场</div>
+    <div v-if="response.actType != 2" @click="go_main('/act_1018_main.html')" class="main_btn">10.18周年庆主会场</div>
     <!--查看规则-->
     <div v-if="rule_form" class="com-popup-base" @click="rule_form = false">
       <div class="table-cell">
@@ -250,28 +250,30 @@
     computed: {},
     watch: {
       // 监听response变化
-      response() {
+      goodsdata() {
         // response变化后并渲染完dom,设置其他事项
         this.$nextTick(function () {
           let ts = this;
           // 设置分享信息
-          try {
-            share.setShareInfo({
-              "title": "大V店10.18周年庆 猛点一下帮我0元抢爆品，你抽iPhone8！",
-              "desc": '好友助力随机减钱，助力越多越省钱',
-              "imgUrl": "http://pic.davdian.com/free/20170915_assistance/assistance.png",
-              "link": location.href,
-              success: function () {
-                ts.sharecallback();
-              }
-            });
-            setTimeout(function () {
-              native.custom.initHead({
-                'shareOnHead': '0'
+          if(ts.goodsdata){
+            try {
+              share.setShareInfo({
+                "title": ts.goodsdata.goods.shareInfo.title,
+                "desc": ts.goodsdata.goods.shareInfo.desc,
+                "imgUrl": ts.goodsdata.goods.shareInfo.imgUrl,
+                "link": ts.goodsdata.goods.shareInfo.link,
+                success: function () {
+                  ts.sharecallback();
+                }
               });
-            }, 300);
-          } catch (err) {
-            console.error(err);
+              setTimeout(function () {
+                native.custom.initHead({
+                  'shareOnHead': '0'
+                });
+              }, 300);
+            } catch (err) {
+              console.error(err);
+            }
           }
         });
       }
@@ -377,6 +379,18 @@
         }
       },
       /***
+       * 我也想要0元购
+       * */
+      metoogo:function (url) {
+        var that = this;
+        login.needLogin();
+        if (that.visitor_status == 3) {
+          location.href = url || '/ast_'+goodsdata.goods.goodsId+'.html';
+        }else{
+          popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
+        }
+      },
+      /***
        * 刮奖
        * */
       start_awd: function () {
@@ -427,14 +441,12 @@
         });
       },
       /***
-       * 跳转
+       * 去主会场   关闭当前
        * */
-      a_link:function (url) {
+      go_main:function (url) {
         if(ua.isDvdApp()){
           event.preventDefault();
-          native.Browser.open({
-            url:url
-          })
+          native.Browser.close({})
         }else{
           location.href = url
         }
