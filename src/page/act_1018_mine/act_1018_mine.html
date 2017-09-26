@@ -16,7 +16,7 @@
     <com-top-title title="我的10.18心愿单" home></com-top-title>
     <img v-lazy="'[[static]]/page/act_1018_mine/img/error.png'">
     <div class="text">快去参加活动吧</div>
-    <a class="btn" href="/act_1018_main.html">去10.18周年庆会场</a>
+    <a class="btn" href="/act_1018_main.html" @click="go1018Main">去10.18周年庆会场</a>
   </div>
   <template v-else>
     <!--标题栏占位-->
@@ -75,7 +75,7 @@
               <div class="award">预定{{item.advanceNum}}件获得{{item.advanceReward}}元奖励</div>
             </div>
             <div class="swiper-slide more" v-if="response.data.award.dataList.length > 10">
-              <a href="/act_1018_mine_list.html?type=1">
+              <a @click="isOpenWebview" href="/act_1018_mine_list.html?type=1">
                 <div class="btn">
                   <span class="words">查看</br>更多</span>
                   <i></i>
@@ -103,7 +103,7 @@
           </li>
         </ul>
         <!--查看更多-->
-        <a href="/user_bonus.html">
+        <a @click="isOpenWebview" href="/user_bonus.html">
           <div class="more">查看更多<i></i></div>
         </a>
       </div>
@@ -163,14 +163,14 @@
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="(item, i) in response.data.book" v-if="i < 10">
-              <a :href="'/'+item.goodsId+'.html'">
+              <a @click="isOpenWebview" :href="'/'+item.goodsId+'.html'">
                 <img class="goods-pic" v-lazy="item.imageUrl">
                 <div class="price">定金￥{{item.advancePrice}}</div>
                 <div class="discount">抵扣￥{{item.discountPrice}}</div>
               </a>
             </div>
             <div class="swiper-slide more" v-if="response.data.book.length > 10">
-              <a href="/act_1018_mine_list.html?type=3">
+              <a @click="isOpenWebview" href="/act_1018_mine_list.html?type=3">
                 <div class="btn">
                   <span class="words">查看</br>更多</span>
                   <i></i>
@@ -192,14 +192,14 @@
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="(item, i) in response.data.subscribe" v-if="i < 10">
-              <a :href="'/'+item.goodsId+'.html'">
+              <a @click="isOpenWebview" :href="'/'+item.goodsId+'.html'">
                 <img class="goods-pic" v-lazy="item.imageUrl">
                 <div class="price">活动价￥{{item.price}}</div>
                 <!--<div class="time">{{item.startTime}}开抢</div>-->
               </a>
             </div>
             <div class="swiper-slide more" v-if="response.data.subscribe.length > 10">
-              <a href="/act_1018_mine_list.html?type=2">
+              <a @click="isOpenWebview" href="/act_1018_mine_list.html?type=2">
                 <div class="btn">
                   <span class="words">查看</br>更多</span>
                   <i></i>
@@ -221,7 +221,7 @@
         <div class="swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide" v-for="(item, i) in response.data.lightenBrand" v-if="i < 10">
-              <a :href="item.linkUrl">
+              <a @click="isOpenWebview" :href="item.linkUrl">
                 <img class="goods-pic" v-lazy="item.bandPic">
                 <div class="info">
                   <!--2017-10-18之前-->
@@ -250,7 +250,7 @@
               </a>
             </div>
             <div class="swiper-slide more" v-if="response.data.lightenBrand.length > 10">
-              <a href="/myLightBrand.html">
+              <a @click="isOpenWebview" href="/myLightBrand.html">
                 <div class="btn">
                   <span class="words">查看</br>更多</span>
                   <i></i>
@@ -296,7 +296,7 @@
         <!--双排列表-->
         <ul>
           <li v-for="(item, i) in response.data.willBuy">
-            <a :href="item.command.content">
+            <a @click="isOpenWebview" :href="item.command.content">
               <div class="pic">
                 <img :src="item.imageUrl">
                 <div class="act">{{item.actInfo}}</div>

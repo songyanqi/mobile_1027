@@ -93,16 +93,6 @@ new Vue({
         } catch (err) {
           console.error(err);
         }
-
-        // app跳转打开新webview
-        if (ua.isDvdApp()) {
-          $('.g-act').on('click', 'a', function (event) {
-            event.preventDefault();
-            native.Browser.open({
-              url: `${this.href}`,
-            });
-          });
-        }
       });
     }
   },
@@ -168,6 +158,22 @@ new Vue({
       localStorage.removeItem('act_1018_mine_data');
       localStorage.removeItem('act_1018_main_data');
       console.log('本地缓存act_1018_main_data、act_1018_mine_data已清除。')
+    },
+    // app跳转打开新webview
+    isOpenWebview(event) {
+      if (ua.isDvdApp()) {
+        event.preventDefault();
+        native.Browser.open({
+          url: `${this.href}`,
+        });
+      }
+    },
+    // 去主会场
+    go1018Main(){
+      if (ua.isDvdApp()) {
+        event.preventDefault();
+        native.Browser.close();
+      }
     },
   },
   filters: {},
