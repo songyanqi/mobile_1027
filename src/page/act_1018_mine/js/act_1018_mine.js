@@ -164,7 +164,7 @@ new Vue({
       if (ua.isDvdApp()) {
         event.preventDefault();
         native.Browser.open({
-          url: `${this.href}`,
+          url: `${event.currentTarget.href}`,
         });
       }
     },
