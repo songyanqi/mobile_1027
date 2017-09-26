@@ -45,7 +45,7 @@
     </a>
     <!--板-->
     <div class="rule_brand">
-      <img src="//pic.davdian.com/free/20170915_assistance/rule.png">
+      <img @click="rule_form = true" title="0987654" src="//pic.davdian.com/free/20170915_assistance/rule.png">
       <img src="//pic.davdian.com/free/20170915_assistance/bear.png">
       <!--助力者页面按钮信息-->
       <section v-if="response.type == '1'">
@@ -193,6 +193,24 @@
 
     <!--去主会场-->
     <div v-if="response.actType != 2" @click="a_link('/act_1018_main.html')" class="main_btn">10.18周年庆主会场</div>
+    <!--查看规则-->
+    <div v-if="rule_form" class="com-popup-base" @click="rule_form = false">
+      <div class="table-cell">
+        <div v-show="rule_form" class="box" @click.stop="events">
+          <div>助力规则</div>
+          <div>
+            <p>1.助力时间：2017.10.01 00:00:00-2017.10.17 23:59:59；</p>
+            <p>2.抢购时间：2017.10.18 00:00:00- 2017.10.18 23:59:59；</p>
+            <p>3.活动仅限大V店会员参与；</p>
+            <p>4.每个活动商品每人可发起1次助力，分享至微信好友或朋友圈获得好友助力;</p>
+            <p>5. 每天仅有1次给好友助力的机会，成功助力后好友可获得随机减钱;</p>
+            <p>6.10月18日当天已活动价支付购买，支付成功后，会将该商品得到的助力金额以返现的形式返到【我的】－【总额】－【待结算金额】－【其他收入】里30天后没有退货转到【待提现金额】，最高可0元抢购该商品。</p>
+            <p>7.已发起的助力商品可在【我的10.18】中查看；</p>
+          </div>
+          <div @click="rule_form = false"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -216,6 +234,7 @@
         goodsId: ua.getQuery("goodsId"),
         shareUserId: ua.getQuery("shareUserId"),
         goodsdata: null,
+        rule_form:false,
         visitor_status: null,
         addsupporterPrice: null,
         supporterData: null, //助力结果数据
@@ -419,7 +438,19 @@
         }else{
           location.href = url
         }
-      }
+      },
+      /***
+       * 查看规则
+       */
+      check_rule: function () {
+        this.rule_form = true;
+      },
+      events:function () {
+
+      },
+      close_what_invite: function () {
+        this.rule_form = false;
+      },
     },
     filters: {
       /***
@@ -869,6 +900,92 @@
 
   .awd_yes {
     background-color: #FF5353;
+  }
+
+  // 动画
+  @keyframes com-alert-animation {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .com-popup-base {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 640px;
+    height: 100%;
+    display: table;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
+    line-height: 1;
+  }
+
+  .com-popup-base .table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .com-popup-base .table-cell .box {
+    display: inline-block;
+    border-radius: 0.04rem;
+    animation: com-alert-animation 0.5s;
+    width: 73.333%;
+    min-height: 200px;
+    position: relative;
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 0 10px 15px;
+    color: #FF4A7D
+  }
+
+  .com-popup-base .table-cell .box div:nth-of-type(1) {
+    font-size: 14px;
+    text-align: center;
+    padding: 12px 0;
+    position: relative;
+  }
+
+  .com-popup-base .table-cell .box div:nth-of-type(2) {
+    font-size: 14px;
+    text-align: left;
+    line-height: 20px;
+    padding-top: 5px;
+  }
+
+  .com-popup-base .table-cell .box div:nth-of-type(3) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/clearInput.png");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+  }
+
+  .com-popup-base .table-cell .box div:nth-of-type(2) p {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+  .com-popup-base .table-cell .box div:nth-of-type(1):after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -50%;
+    width: 200%;
+    height: 1px;
+    background: rgba(216, 216, 216, 0.51);
+    -webkit-transform: scale(0.5);
+    bottom: 0;
+    z-index: 1;
   }
 </style>
 <style>
