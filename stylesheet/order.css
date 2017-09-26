@@ -30,7 +30,8 @@
 .order_index .order_id .pull-right {
     position: relative;
     top: 8px;
-    font-size: 14px;
+    /*font-size: 14px;*/
+    font-size: 12px;
 }
 
 .kd_text {
@@ -425,8 +426,21 @@
     width: 100%;
 
     position: fixed;
-    z-index: 20;
+    z-index: 10;
     top: 0;
+    max-width: 640px;
+}
+.order_list_container .order_list_switcher:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    border-bottom: 1px solid #e1e1e1;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
 }
 
 .order_list_container .no-order {
@@ -2569,7 +2583,7 @@ body.orderDetail, body.orderDelivery {
 
 
 .order_detail_container .stageCont {
-  padding: 10px 0 12px 0;
+  padding: 10px 0 0 0;
   background: #fff;
   margin: 10px 0;
 }
@@ -2599,6 +2613,7 @@ body.orderDetail, body.orderDelivery {
   font-size: 14px;
   padding-bottom: 0;
   padding-top: 12px;
+  padding-bottom: 12px;
 }
 .order_detail_container .colorGray {
   color: #999;
@@ -2700,7 +2715,7 @@ body.orderDetail, body.orderDelivery {
 .modalOrder .orderClose {
   right: 5px;
 }
-.margin44 {
+.order_list_container .margin44 {
   top: 44px;
 }
 

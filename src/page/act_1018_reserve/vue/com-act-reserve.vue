@@ -38,6 +38,7 @@
     }
     .bookImg {
       width: 100%;
+      height: 1.74rem;
       img {
         width: 100%;
       }
@@ -116,7 +117,7 @@
       transform: scale(1);
     }
   }
-  .com-popup-base {
+  .com-popup-base2 {
     position: fixed;
     top: 0;
     width: 100%;
@@ -128,13 +129,13 @@
     line-height: 1;
   }
 
-  .com-popup-base .table-cell {
+  .com-popup-base2 .table-cell {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
   }
 
-  .com-popup-base .table-cell .box {
+  .com-popup-base2 .table-cell .box {
     display: inline-block;
     border-radius: 0.04rem;
     animation: com-alert-animation 0.5s;
@@ -147,21 +148,21 @@
     color: #FF4A7D
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(1) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(1) {
     font-size: 14px;
     text-align: center;
     padding: 12px 0;
     position: relative;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(2) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(2) {
     font-size: 14px;
     text-align: left;
     line-height: 20px;
     padding-top: 5px;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(3) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(3) {
     position: absolute;
     right: 0;
     top: 0;
@@ -174,12 +175,12 @@
     background-position: 10px 10px;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(2) p {
+  .com-popup-base2 .table-cell .box div:nth-of-type(2) p {
     display: inline-block;
     margin-top: 10px;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(1):after {
+  .com-popup-base2 .table-cell .box div:nth-of-type(1):after {
     content: "";
     display: block;
     position: absolute;
@@ -224,7 +225,7 @@
       <!-- <div class = "noMore">没有更多啦</div> -->
     </div>
     <!--查看规则-->
-    <div v-if="rule_form" class="com-popup-base" @click="rule_form = false">
+    <div v-if="rule_form" class="com-popup-base2" @click="rule_form = false">
       <div class="table-cell">
         <div v-show="rule_form" class="box" @click.stop="events">
           <div>预定规则</div>

@@ -4,6 +4,7 @@ import inviteCard from './inviteCard/inviteCard.vue'
 import common from "./common/common.es6";
 import lay from "./layout/api.es6"
 import native from "../src/common/js/module/native.js"
+import appInterface from "../utils/appInterface.es6"
 let axios = require("axios");
 require('babel-polyfill');
 require('es6-promise').polyfill();
@@ -34,6 +35,7 @@ export default {
             bottomBtn: false,
             enterClassroomFlag: true,
             visitorFlag:-1,
+            name:"introduce"
         }
     },
     created(){
@@ -395,6 +397,5 @@ export default {
         vSchoolTitle:vSchoolTitle,
         inviteCard:inviteCard,
         indexFeed:indexFeed
-
     }
 }

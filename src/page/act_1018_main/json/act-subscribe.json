@@ -1,145 +1,121 @@
 [
   {
     "line1": "10月19日",
-    "line2": "1231点开抢",
+    "line2": "8点开抢",
     "goodsList": [
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "111",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/supplier/2017/03/23/1000_1000_0fe6f4bccbc09faeb23e22c8bebcb2ea.jpg",
+        "actPrice": "27.46",
+        "originPrice": "42.9"
       },
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "222",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/supplier/2017/05/05/1000_1000_53a236b8276b64c2708147c5fa7c6943.jpg",
+        "actPrice": "53.89",
+        "originPrice": "84.2"
       },
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "333",
-        "originPrice": "200"
-      }
-    ]
-  },
-  {
-    "line1": "10月20日",
-    "line2": "2点开抢",
-    "goodsList": [
-      {
-        "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "444",
-        "originPrice": "200"
-      },
-      {
-        "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "555",
-        "originPrice": "200"
-      },
-      {
-        "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "666",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/supplier/2017/04/27/1000_1000_fd656248a9e7812a1284a45715e370ce.jpg",
+        "actPrice": "74.17",
+        "originPrice": "114.1"
       }
     ]
   },
   {
     "line1": "10月19日",
-    "line2": "3点开抢",
+    "line2": "10点开抢",
     "goodsList": [
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "777",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/supplier/2017/05/12/1000_1000_7937885decada6c7575f98b1ff94bb8d.jpg",
+        "actPrice": "47.58",
+        "originPrice": "79.3"
       },
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "888",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/supplier/2017/08/30/1000_1000_db86be44c0413ca5fbdfb3646e841990.jpg",
+        "actPrice": "68.34",
+        "originPrice": "113.9"
       },
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "999",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/supplier/2017/07/18/1000_1000_67ffb738c51b2f6f6e17231905197e2d.jpg",
+        "actPrice": "22.32",
+        "originPrice": "37.2"
       }
     ]
   },
   {
     "line1": "10月19日",
-    "line2": "4点开抢",
+    "line2": "14点开抢",
     "goodsList": [
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "123",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/supplier/2017/07/12/1000_1000_e7c4577befb081b9aaffd41e717c9c80.jpg",
+        "actPrice": "37.38",
+        "originPrice": "62.3"
       },
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "321",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/supplier/2017/05/20/1000_1000_3d88431a3fe52e827652033ea6749173.jpg",
+        "actPrice": "40.92",
+        "originPrice": "68.2"
       },
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "31",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/goods/2016/07/30/640_640_54c882413ddf168af6906795a5f745c2.jpg",
+        "actPrice": "38.94",
+        "originPrice": "64.9"
       }
     ]
   },
   {
     "line1": "10月19日",
-    "line2": "5点开抢",
+    "line2": "16点开抢",
     "goodsList": [
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "23",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/supplier/2017/04/27/1000_1000_8f3fd9d601289359245ece203df17ccc.jpg",
+        "actPrice": "52.92",
+        "originPrice": "94.5"
       },
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "25",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/supplier/2017/07/05/1000_1000_5b66bba62008a2b5552d9965093c24ac.jpg",
+        "actPrice": "39.2",
+        "originPrice": "70"
       },
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "346",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/supplier/2017/05/24/1000_1000_4a68c192e875669c45345d83dc40eb9a.jpg",
+        "actPrice": "28.5",
+        "originPrice": "50"
       }
     ]
   },
   {
     "line1": "10月19日",
-    "line2": "6点开抢",
+    "line2": "20点开抢",
     "goodsList": [
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "2345",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/supplier/2017/07/04/1000_1000_b1bcbeb7a86529ae442e988c84b78e58.jpg",
+        "actPrice": "29.75",
+        "originPrice": "59.5"
       },
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "35",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/supplier/2017/03/23/1000_1000_947bc7e2f76250da4969dca47e1ddbff.jpg",
+        "actPrice": "37.44",
+        "originPrice": "72"
       },
       {
         "goodsId": "1",
-        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
-        "actPrice": "123",
-        "originPrice": "200"
+        "imgUrl": "//pic.davdian.com/supplier/2017/05/20/1000_1000_ccc0a56667afba656c34544a261d2a87.jpg",
+        "actPrice": "21.04",
+        "originPrice": "39.7"
       }
     ]
   }

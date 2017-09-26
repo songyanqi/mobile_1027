@@ -52,7 +52,8 @@
         <!--助力活动结束-->
         <section v-if="response.actType != 0">
           <div class="ast_txt" style="padding:0.68rem 0 0.12rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
-          <a href="/act_1018_main.html" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</a>
+          <!--1018活动期间-->
+          <span @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</span>
         </section>
         <section v-else>
           <!--进页面的时候已经助力过了-->
@@ -62,7 +63,7 @@
             <div class="ast_bigtxt"
                  style="padding-top:0.1rem;">TA共得到好友{{response.supporter.supporterPrice}}元助力<span
               v-if="response.supporter.rate">，战胜了{{response.supporter.rate}}%的人</span></div>
-            <div class="ast_txt" style="padding:0.1rem 0 0.2rem;">别忘啦，明天还可以帮好友助力哦</div>
+            <div class="ast_txt" v-if="!date17" style="padding:0.1rem 0 0.2rem;">别忘啦，明天还可以帮好友助力哦</div>
             <!--展示抽奖-->
             <div class="awd_touch">
               <div class="awd_pre" :class="['awd_no','awd_yes'][response.supporter.isPrizes]">
@@ -71,9 +72,9 @@
                  <div v-if="response.supporter.isPrizes == 1" class="awd_title">恭喜你被iPhone8砸中了</div>
                 <div v-if="response.supporter.isPrizes == 1" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
                 <!--没抽奖时候-->
-                <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd"
-                                  @mousedown="start_awd" mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem" can-scratch="true"></com-scratch-card>
-
+                <com-scratch-card v-if="response.supporter.isLottery == 0 && touch200 < 120" @touchmove="touch_move"
+                                  @mousemove="touch_move" @touchstart="start_awd" @mousedown="start_awd"
+                                  mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem"></com-scratch-card>
               </div>
             </div>
             <div style="height: 0.2rem;"></div>
@@ -113,16 +114,21 @@
       <span v-if="response.type == '0'">
         <!--助力活动结束-->
         <section v-if="response.actType != 0">
-          <span v-if="response.actType == 2">
-             <div class="ast_txt" style="padding:0.72rem 0 0.14rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
-          </span>
           <span v-if="response.actType == 1">
             <!--没有好友支持-->
             <div v-if="response.source.supporterPrice == '0'" class="ast_txt" style="padding:0.68rem 0 0.32rem;">很遗憾没有得到好友的助力支持</div>
-              <!--0元购-->
-            <div v-else class="ast_deep" style="padding:0.72rem 0 0.21rem">已得到{{response.source.supporterPrice}}元助力快去<span v-if="response.source.surplusPrice == '0'" style="font-size: 0.24rem;">0元</span>抢购吧</div>
+            <!--0元购-->
+            <div v-else class="ast_deep" style="padding:0.72rem 0 0.21rem">已得到{{response.source.supporterPrice}}元助力快去
+              <span v-if="response.source.surplusPrice == '0'" style="font-size: 0.24rem;">0元</span>抢购吧
+            </div>
+            <a :href="response.activityLink" class="share_btn bd_r" style="display: block;">立即抢购</a>
           </span>
-          <a :href="response.activityLink" class="share_btn bd_r" style="display: block;">{{response.actType == 1 ? '立即抢购':'去店铺逛逛'}}</a>
+
+           <span v-if="response.actType == 2">
+              <div class="ast_txt" style="padding:0.72rem 0 0.14rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
+              <span  @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</span>
+           </span>
+
         </section>
         <section v-else>
           <!--获得0元购机会-->
@@ -158,7 +164,7 @@
 
     <img class="table_brand" src="//pic.davdian.com/free/20170915_assistance/table_brand.png">
     <!--助力结束和助力发起页不显示这个-->
-    <a @click="metoogo" v-if="response.type == 1 && response.actType == 0"
+    <a @click="metoogo(response.supporter.myLink)" v-if="response.type == 1 && response.actType == 0"
        style="margin-bottom: 0.2rem;display: block;width: 1.8rem;" class="share_btn bd_p">我也想要商品0元购</a>
     <!--获奖好友轮播-->
     <div class="loop_my_friend_reward" v-if="goodsdata.notice.length">
@@ -194,7 +200,7 @@
     <!--去主会场-->
     <div v-if="response.actType != 2" @click="go_main('/act_1018_main.html')" class="main_btn">10.18周年庆主会场</div>
     <!--查看规则-->
-    <div v-if="rule_form" class="com-popup-base" @click="rule_form = false">
+    <div v-if="rule_form" class="com-popup-base2" @click="rule_form = false">
       <div class="table-cell">
         <div v-show="rule_form" class="box" @click.stop="events">
           <div>助力规则</div>
@@ -234,12 +240,13 @@
         goodsId: ua.getQuery("goodsId"),
         shareUserId: ua.getQuery("shareUserId"),
         goodsdata: null,
-        rule_form:false,
-        visitor_status: null,
+        rule_form: false,
         addsupporterPrice: null,
         supporterData: null, //助力结果数据
         awd_type: 0,
-        start_awd_al: false //是否已经刮奖过
+        start_awd_al: false, //是否已经刮奖过,
+        date17: false,  //是不是17号
+        touch200: 0
       }
     },
     components: {
@@ -255,7 +262,8 @@
         this.$nextTick(function () {
           let ts = this;
           // 设置分享信息
-          if(ts.goodsdata){
+          if (ts.goodsdata) {
+            /*如果是不是会员，不设置分享信息*/
             try {
               share.setShareInfo({
                 "title": ts.goodsdata.goods.shareInfo.title,
@@ -300,12 +308,15 @@
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
             ts.response = response.data;
-            ts.visitor_status = response.visitor_status;
             /*助力发起和助力者title变化*/
             if (response.data.type == '0') {
               ts.$emit("doctitle", "召集好友助力，最低0元购买商品");
             } else {
               ts.$emit("doctitle", response.data.supporter.nickName + "正在发起助力");
+            }
+            /*日期是否是17号*/
+            if (new Date(parseInt(response.sys_time) * 1000).toLocaleString().split(" ")[0] == "2017/10/17") {
+              ts.date17 = true;
             }
           },
           error(error) {
@@ -320,7 +331,6 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
-
             ts.goodsdata = response.data;
             ts.deltime();
           },
@@ -353,7 +363,8 @@
       assistance: function () {
         var that = this;
         login.needLogin();
-        if (that.visitor_status == 3) {
+        /*是否是已登录的会员，公司早晚被死佬扣，臧凯给搞没了*/
+        if (login.isSeller()) {
           $.ajax({
             cache: false,
             async: true,
@@ -374,20 +385,36 @@
               console.error('ajax error:' + error.status + ' ' + error.statusText);
             }
           });
-        }else{
-          popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
+        } else {
+          popup.confirm({
+            title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
+            text: '',
+            okBtnTitle: '开通会员',
+            okBtnCallback() {
+              location.href = "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button";
+            },
+            cancelBtnTitle: '取消',
+          });
         }
       },
       /***
        * 我也想要0元购
        * */
-      metoogo:function (url) {
+      metoogo: function (url) {
         var that = this;
         login.needLogin();
-        if (that.visitor_status == 3) {
-          location.href = url || '/ast_'+goodsdata.goods.goodsId+'.html';
-        }else{
-          popup.toast("您还没有成为会员不能参与该活动哦，成为会员即可参与～");
+        if (login.isSeller()) {
+          location.href = url || '/ast_' + that.goodsdata.goods.goodsId + '.html';
+        } else {
+          popup.confirm({
+            title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
+            text: '',
+            okBtnTitle: '开通会员',
+            okBtnCallback() {
+              location.href = "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button";
+            },
+            cancelBtnTitle: '取消',
+          });
         }
       },
       /***
@@ -443,11 +470,11 @@
       /***
        * 去主会场   关闭当前
        * */
-      go_main:function (url) {
-        if(ua.isDvdApp()){
+      go_main: function (url) {
+        if (ua.isDvdApp()) {
           event.preventDefault();
           native.Browser.close({})
-        }else{
+        } else {
           location.href = url
         }
       },
@@ -457,12 +484,17 @@
       check_rule: function () {
         this.rule_form = true;
       },
-      events:function () {
+      events: function () {
 
       },
       close_what_invite: function () {
         this.rule_form = false;
       },
+      touch_move: function () {
+        var that = this;
+        that.touch200++;
+        console.log(that.touch200);
+      }
     },
     filters: {
       /***
@@ -924,7 +956,7 @@
     }
   }
 
-  .com-popup-base {
+  .com-popup-base2 {
     position: fixed;
     top: 0;
     width: 100%;
@@ -936,13 +968,13 @@
     line-height: 1;
   }
 
-  .com-popup-base .table-cell {
+  .com-popup-base2 .table-cell {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
   }
 
-  .com-popup-base .table-cell .box {
+  .com-popup-base2 .table-cell .box {
     display: inline-block;
     border-radius: 0.04rem;
     animation: com-alert-animation 0.5s;
@@ -955,21 +987,21 @@
     color: #FF4A7D
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(1) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(1) {
     font-size: 14px;
     text-align: center;
     padding: 12px 0;
     position: relative;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(2) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(2) {
     font-size: 14px;
     text-align: left;
     line-height: 20px;
     padding-top: 5px;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(3) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(3) {
     position: absolute;
     right: 0;
     top: 0;
@@ -982,12 +1014,12 @@
     background-position: 10px 10px;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(2) p {
+  .com-popup-base2 .table-cell .box div:nth-of-type(2) p {
     display: inline-block;
     margin-top: 10px;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(1):after {
+  .com-popup-base2 .table-cell .box div:nth-of-type(1):after {
     content: "";
     display: block;
     position: absolute;

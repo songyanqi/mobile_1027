@@ -40,7 +40,7 @@ if (location.pathname == '/channel.html') {
   window.menuId = '8';
 }
 
-new Vue({
+window.index = new Vue({
   el: "#index_fe_container",
   components: {
     index: require("../../../../module/index/index.vue")

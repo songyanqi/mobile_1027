@@ -33,7 +33,7 @@
             <div class='seriesImgTitle' v-text='dataList.seriesTitle'></div>
         </div>
 
-        <div class='seriesImg' v-if='deleteFlag && visitorFlag!=0'>
+        <div class='seriesImg' v-if='deleteFlag && visitorFlag!=0 && isAuditing'>
             <!--专题头图-->
             <div class='seriesImgPrice' v-text='seriesPrice'></div>
         </div>
@@ -51,16 +51,16 @@
                                 <span v-text='item.startTime'></span>
                                 <span v-text='item.teacher'></span>
                                 <span class='dvk4_detail_content_popular'>
-                                    <span v-if='item.type == 1'>
+                                    <span v-if='item.type == 1 && isAuditing'>
                                         <span class='popular_color'  v-if='courseTypeSwitch==1'>公开课</span>
                                         <span v-if='courseTypeSwitch==0' v-text='item.pv'></span>
                                     </span>
-                                    <span v-if='item.type == 2'>
+                                    <span v-if='item.type == 2 && isAuditing'>
                                         <span v-if='userTicket==1' style='text-decoration: line-through;color:#999;' class='popular_color'  v-if='coursePriceSwitch==1' v-text='item.coursePrice'></span>
                                         <span v-else class='popular_color'  v-if='coursePriceSwitch==1' v-text='item.coursePrice'></span>
                                         <span v-if='coursePriceSwitch==0' v-text='item.pv'></span>
                                     </span>
-                                    <span v-if='item.type == 3'>
+                                    <span v-if='item.type == 3 && isAuditing'>
                                         <span class='popular_color'  v-if='courseTypeSwitch==1'>加密课</span>
                                         <span v-if='courseTypeSwitch==0' v-text='item.pv'></span>
                                     </span>
@@ -99,16 +99,16 @@
                                 <span v-text='item.startTime'></span>
                                 <span v-text='item.teacher'></span>
                                 <span class='dvk4_detail_content_popular'>
-                                    <span v-if='item.type == 1'>
+                                    <span v-if='item.type == 1 && isAuditing'>
                                         <span class='popular_color'  v-if='courseTypeSwitch==1'>公开课</span>
                                         <span v-if='courseTypeSwitch==0' v-text='item.pv'></span>
                                     </span>
-                                    <span v-if='item.type == 2'>
+                                    <span v-if='item.type == 2 && isAuditing'>
                                         <span v-if='userTicket==1' style='text-decoration: line-through;color:#999;' class='popular_color'  v-if='coursePriceSwitch==1' v-text='item.coursePrice'></span>
                                         <span v-else class='popular_color'  v-if='coursePriceSwitch==1' v-text='item.coursePrice'></span>
                                         <span v-if='coursePriceSwitch==0' v-text='item.pv'></span>
                                     </span>
-                                    <span v-if='item.type == 3'>
+                                    <span v-if='item.type == 3 && isAuditing'>
                                         <span class='popular_color'  v-if='courseTypeSwitch==1'>加密课</span>
                                         <span v-if='courseTypeSwitch==0' v-text='item.pv'></span>
                                     </span>
@@ -126,8 +126,8 @@
             </div>
         </div>
 
-        <div class="containerPadding" v-if='deleteFlag && visitorFlag!=0'></div>
-        <div class='seriesBtn' v-if='seriesType==1 && deleteFlag && visitorFlag!=0'>
+        <div class="containerPadding" v-if='deleteFlag && visitorFlag!=0 && isAuditing'></div>
+        <div class='seriesBtn' v-if='seriesType==1 && deleteFlag && visitorFlag!=0 && isAuditing'>
             <div class='btn btn1 btn_left'>
                 <span class='btn_span' @click='share' v-if='state == 3'>邀请好友赚: {{seriesShareIncome}}
                 <img src="//pic.davdian.com/free/2017/07/28/centerShare.png"></span>
@@ -216,6 +216,9 @@
 
                 haveShareCard:0,
                 visitorFlag:-1,
+
+
+                isAuditing:false
             }
         },
         ready:function(){

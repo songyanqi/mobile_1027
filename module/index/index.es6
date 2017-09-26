@@ -19,6 +19,7 @@ import axios from"axios"
 export default {
   data() {
     return {
+      name:"index",
       dataUrl: '../data/index/index.json',
       contentData: {feedList: []},
       initCategory: 0,
@@ -60,13 +61,14 @@ export default {
       skinPackageobj:{},
 
       index_header_style:{},
-      bottomTab:[],
-      bottomStyle:{}
-
+      store:[]
     }
   },
 
   computed: {
+    aa(){
+      return this.index_header_style;
+    },
     feedData() {
       return this.contentData.feedList
     },
@@ -118,6 +120,7 @@ export default {
   methods: {
 
     changStyle(json){
+      this.index_header_style={};
       //初始化header透明
       this.index_header_style.top_container={
         'background': 'inherit',
@@ -177,22 +180,25 @@ export default {
       };
 
     },
+    changeStyleByData(data){
+      var that=this;
+      data.map(function (item, index) {
+        var now = new Date().getTime().toString().substr(0,10);
+        var startTime = item.startTime;
+        var endTime = item.endTime;
+        if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
+          that.changStyle(JSON.parse(item.viewFileUrl));
+        }
+      });
+    },
     getSkinPackage(){
       var that = this;
-      var indexCount=0;
-
       // 取localStorage改变样式
       if(localStorage.getItem("skinPackage")) {
         var skinInfo = JSON.parse((localStorage.getItem("skinPackage")));
-        skinInfo.map(function (item, index) {
-          var now = new Date().getTime().toString().substr(0,10);
-          var startTime = item.startTime;
-          var endTime = item.endTime;
-           if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
-            that.changStyle(item.json);
-           }
-        });
+         this.changeStyleByData(skinInfo);
       }
+
       // 请求接口取到皮肤存到localStorage
       var obj={
         "elements":JSON.stringify(['skin'])
@@ -201,13 +207,23 @@ export default {
         .then(function (result) {
           if(result.code==0){
             var store=result.data.list[0].listData;
-            store.map(function (item,index) {
-                item.json=JSON.parse(item.viewFileUrl);
-                indexCount++;
-                if(indexCount==store.length){
-                  localStorage.setItem("skinPackage",JSON.stringify(store));
-                }
+
+            //更改子组件的store数据，触发子组件的watch监听
+            window.index.$children.map(function(item,index){
+              if(item.name=="index"){
+                item.$children.map(function (item2,index2) {
+                  if(item2.name=="com-footer"){
+                    item2.store=store;
+                  }
+                });
+              }
             });
+
+            //存入localStorage
+            localStorage.setItem("skinPackage",JSON.stringify(store));
+
+            //使用皮肤包
+            that.changeStyleByData(store);
           }else{
             if(result.data.msg){
               dialog.alert('code:'+result.code+":msg"+result.data.msg);

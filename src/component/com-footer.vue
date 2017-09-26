@@ -1,6 +1,5 @@
 <template>
   <!--底部菜单栏-->
-  ::{{ active }}::
   <div class="com-footer" v-if="!isDvdApp">
     <div class="btns">
       <a class="btn" :class="{active: active == 'home'?true:false }" href="/" :style="styleList['btn1']">
@@ -62,7 +61,9 @@
       return {
         isDvdApp: ua.isDvdApp(),
         bottomTab:[],
-        bottomStyle:{}
+        bottomStyle:{},
+        name:"com-footer",
+        store:[]
       }
     },
     computed: {
@@ -73,15 +74,22 @@
           return this.bottomStyle;
         }
     },
-    created(){
+    mounted(){
+       this.useSkinpackageFromLocal();
     },
-    mounted() {
-      this.useSkinpackage();
+    watch:{
+      store: {
+        handler: function (val, oldval) {
+          this.useSkinpackage(val);
+        },
+        deep:true
+      }
     },
     methods: {
       changStyle(json){
         //初始化存储数组
         this.bottomTab=[];
+        this.bottomStyle={};
         //存入图片信息
         this.bottomTab.push({defaultImage:json["10"].listData[0].normalImagePath,selectedImage:json["10"].listData[0].selectedImagePath});
         this.bottomTab.push({defaultImage:json["10"].listData[1].normalImagePath,selectedImage:json["10"].listData[1].selectedImagePath});
@@ -101,20 +109,32 @@
         this.bottomStyle.selectedColor={"color":"#"+json["10"].listData[0].selectedColor.substr(2)};
 
       },
-      useSkinpackage(){
-        var that=this;
-
+      //读取本地的数据
+      useSkinpackageFromLocal(){
+          var that=this;
         if(localStorage.getItem("skinPackage")) {
           var skinInfo = JSON.parse((localStorage.getItem("skinPackage")));
           skinInfo.map(function (item, index) {
-             var now = new Date().getTime().toString().substr(0,10);
-             var startTime = item.startTime;
-             var endTime = item.endTime;
-             if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
-               that.changStyle(item.json);
-             }
-           });
-         }
+            var now = new Date().getTime().toString().substr(0,10);
+            var startTime = item.startTime;
+            var endTime = item.endTime;
+            if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
+              that.changStyle(JSON.parse(item.viewFileUrl));
+            }
+          });
+        }
+      },
+      //根据传入的值改变样式
+      useSkinpackage(data){
+        var that=this;
+          data.map(function (item, index) {
+          var now = new Date().getTime().toString().substr(0,10);
+          var startTime = item.startTime;
+          var endTime = item.endTime;
+          if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
+            that.changStyle(JSON.parse(item.viewFileUrl));
+          }
+        });
       },
       useSkinPackageImg(newImg,oldImg,flag){
           //flag=1 表示选中状态的图片
@@ -157,8 +177,7 @@
         });
       },
     },
-    filters: {},
-    watch: {},
+    filters: {}
   }
 </script>
 
