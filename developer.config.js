@@ -15,6 +15,6 @@
 export default {
   //env_stage: 'beta',
   //env_num: '2',
-  page: '{act_1018_mine,act_1018_main111,act_1018_main_subscribe111,act_1018_mine_list}',
-  webpack: false,
+  //page: '{index,act_1018_mine,act_1018_main111,landingPage,lightBrand,act_1018_main_subscribe111,act_1018_mine_list}',
+  //webpack: false,
 };

@@ -10,7 +10,7 @@ export default {
   props: ['data', 'menudata', 'usersta','styleList'],
   computed: {
     styleArr:function(){
-      return this.styleList;
+      return this.styleList || {};
     },
     cart: function () {
       return this.data.cart || 0;

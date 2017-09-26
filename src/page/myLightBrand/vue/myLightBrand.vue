@@ -5,9 +5,7 @@
         <div class="list_b_img">
           <img :src="item.bandPic" alt="">
         </div>
-
         <div class="list_bottom" v-if="item.hotDay==-1">
-
           <template v-if="item.isCompleted!=1">
             <div class="list_start_border"></div>
             <div class="list_start">
@@ -16,7 +14,6 @@
             </div>
             <div class="line"></div>
           </template>
-
           <template v-if="item.isCompleted==1">
             <div class="success">
               <div style="position: absolute;">
@@ -26,16 +23,12 @@
             </div>
             <div class="line_suc"></div>
           </template>
-
           <div class="list_end">
             <img class="start2" src="//pic.davdian.com/free/2017/09/09/end_icon.png" alt="">
             <span class="start_value2" v-text="item.highDiscount"></span>
           </div>
-
           <div class="list_need" v-if="item.isCompleted==-1">还需<span v-text="remainLight[index]"></span>人点亮</div>
           <div class="list_need" v-if="item.isCompleted==1">已有<span v-text="item.lightNum"></span>人点亮</div>
-
-
           <div class="list_margin">
             <div class="list_border" :style="{'background':'#FF6F97'}"></div>
             <div class="list_button">
@@ -45,19 +38,15 @@
               </div>
             </div>
           </div>
-
         </div>
-
         <div class="list_bottom_complete" v-if="item.hotDay==1">
           <div class="list_end_complete">
             <img class="start2" src="//pic.davdian.com/free/2017/09/09/end_icon.png" alt="">
             <span class="start_value2" v-text="item.finalDiscount"></span>
           </div>
         </div>
-
       </div>
     </div>
-
   </div>
 </template>
 <script>
@@ -84,7 +73,6 @@
       setTimeout(function(){
         native.Browser.setHead(obj)
       },400);
-
       var that=this;
       api("/api/mg/sale/bandLitUp/getMyBands")
         .then(function (result) {
