@@ -101,7 +101,6 @@
           dataType: 'json',
           data: {},
           success(response) {
-            
             ts.list = response;
           },
           error(error) {
