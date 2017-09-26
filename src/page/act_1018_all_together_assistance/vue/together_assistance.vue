@@ -156,7 +156,7 @@
 
     <img class="table_brand" src="//pic.davdian.com/free/20170915_assistance/table_brand.png">
     <!--助力结束和助力发起页不显示这个-->
-    <a @click="metoogo" v-if="response.type == 1 && response.actType == 0"
+    <a @click="metoogo(response.supporter.myLink)" v-if="response.type == 1 && response.actType == 0"
        style="margin-bottom: 0.2rem;display: block;width: 1.8rem;" class="share_btn bd_p">我也想要商品0元购</a>
     <!--获奖好友轮播-->
     <div class="loop_my_friend_reward" v-if="goodsdata.notice.length">
@@ -395,7 +395,7 @@
         var that = this;
         login.needLogin();
         if (login.isSeller()) {
-          location.href = url || '/ast_'+goodsdata.goods.goodsId+'.html';
+          location.href = url || '/ast_'+that.goodsdata.goods.goodsId+'.html';
         }else{
           popup.confirm({
             title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
