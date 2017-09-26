@@ -96,7 +96,7 @@ new Vue({
 
         // app跳转打开新webview
         if (ua.isDvdApp()) {
-          $(document).on('click', 'a', function (event) {
+          $('.g-act').on('click', 'a', function (event) {
             event.preventDefault();
             native.Browser.open({
               url: `${this.href}`,
