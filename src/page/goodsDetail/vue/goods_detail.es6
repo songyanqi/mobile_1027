@@ -843,7 +843,7 @@ export default {
               window.desc = dataBasis.shareRecommend;
 
               } else {
-                popup.toast(res.data.msg,3000);
+                popup.toast(res.msg,3000);
               }
             },
             error (err) {
@@ -1059,6 +1059,7 @@ export default {
         base.ready();
         if (shareMoney > 0&& that.visitorStatus == '3') {
           native.Browser.setHead({
+            backBtn: 1,
             shareMoney: shareMoney + "",
             shareMoneyStr: '赚' + shareMoney + '元',
           });
