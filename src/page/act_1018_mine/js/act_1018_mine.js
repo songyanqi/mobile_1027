@@ -121,19 +121,19 @@ new Vue({
     getData(refresh = false){
       let ts = this;
 
-      // 缓存
-      let cacheKey = `act_1018_mine_data`;
-      // 按时间取缓存
-      let minute = new Date().getMinutes();
-      if (minute > 0 && minute < 59) {
-        // 取缓存
-        let data = localCache.getItem(cacheKey);
-        if (data && !refresh) {
-          this.response = data;
-          ts.$forceUpdate();
-          return;
-        }
-      }
+      // // 缓存
+      // let cacheKey = `act_1018_mine_data`;
+      // // 按时间取缓存
+      // let minute = new Date().getMinutes();
+      // if (minute > 0 && minute < 59) {
+      //   // 取缓存
+      //   let data = localCache.getItem(cacheKey);
+      //   if (data && !refresh) {
+      //     this.response = data;
+      //     ts.$forceUpdate();
+      //     return;
+      //   }
+      // }
 
       $.ajax({
         cache: false,
@@ -149,12 +149,12 @@ new Vue({
           ts.response = response;
 
           // 存缓存
-          localCache.setItem({
-            Date: Date.now(),     // 当前时间（不传则取设备时间）
-            Expires: 1 * 60 * 1000,   // 过期时间（从当前时间开始计算过多少毫秒缓存失效）
-            key: cacheKey,        // 缓存key
-            data: response        // 缓存data（可以传json或String）
-          });
+          // localCache.setItem({
+          //   Date: Date.now(),     // 当前时间（不传则取设备时间）
+          //   Expires: 1 * 60 * 1000,   // 过期时间（从当前时间开始计算过多少毫秒缓存失效）
+          //   key: cacheKey,        // 缓存key
+          //   data: response        // 缓存data（可以传json或String）
+          // });
         },
         error(error) {
           // ts.response = require('../json/act_1018_mine.json');
