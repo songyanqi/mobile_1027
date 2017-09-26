@@ -53,7 +53,7 @@
         <!--先判断是否上架-->
         <div v-if = "goodstatusonsale == 1" class = "cart_wrapper">
           <div v-if = "!seckill" class = "w100">
-            <div class = "w100" v-if = "Number(goodstatus.goodsStocks) <= 0">
+            <div class = "w100" v-if = "Number(goodstatus.goodsStocks) <= 0 && !infoobj.presale">
                 <div class = "look_again" @click = "handleLook">再逛逛</div>
                 <div class = "haveGoods_tips"
                   @click = "handleTips">到货提醒</div>

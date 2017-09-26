@@ -427,6 +427,7 @@
     position: fixed;
     z-index: 20;
     top: 0;
+    max-width: 640px;
 }
 
 .order_list_container .no-order {
@@ -2700,7 +2701,7 @@ body.orderDetail, body.orderDelivery {
 .modalOrder .orderClose {
   right: 5px;
 }
-.margin44 {
+.order_list_container .margin44 {
   top: 44px;
 }
 
