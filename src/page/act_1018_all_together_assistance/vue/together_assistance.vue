@@ -71,8 +71,7 @@
                  <div v-if="response.supporter.isPrizes == 1" class="awd_title">恭喜你被iPhone8砸中了</div>
                 <div v-if="response.supporter.isPrizes == 1" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
                 <!--没抽奖时候-->
-                <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd"
-                                  @mousedown="start_awd" mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem" can-scratch="true"></com-scratch-card>
+                <com-scratch-card v-if="response.supporter.isLottery == 0" @touchstart="start_awd" @mousedown="start_awd" mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem"></com-scratch-card>
               </div>
             </div>
             <div style="height: 0.2rem;"></div>
@@ -193,7 +192,7 @@
     <!--去主会场-->
     <div v-if="response.actType != 2" @click="go_main('/act_1018_main.html')" class="main_btn">10.18周年庆主会场</div>
     <!--查看规则-->
-    <div v-if="rule_form" class="com-popup-base" @click="rule_form = false">
+    <div v-if="rule_form" class="com-popup-base2" @click="rule_form = false">
       <div class="table-cell">
         <div v-show="rule_form" class="box" @click.stop="events">
           <div>助力规则</div>
@@ -943,7 +942,7 @@
     }
   }
 
-  .com-popup-base {
+  .com-popup-base2 {
     position: fixed;
     top: 0;
     width: 100%;
@@ -955,13 +954,13 @@
     line-height: 1;
   }
 
-  .com-popup-base .table-cell {
+  .com-popup-base2 .table-cell {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
   }
 
-  .com-popup-base .table-cell .box {
+  .com-popup-base2 .table-cell .box {
     display: inline-block;
     border-radius: 0.04rem;
     animation: com-alert-animation 0.5s;
@@ -974,21 +973,21 @@
     color: #FF4A7D
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(1) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(1) {
     font-size: 14px;
     text-align: center;
     padding: 12px 0;
     position: relative;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(2) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(2) {
     font-size: 14px;
     text-align: left;
     line-height: 20px;
     padding-top: 5px;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(3) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(3) {
     position: absolute;
     right: 0;
     top: 0;
@@ -1001,12 +1000,12 @@
     background-position: 10px 10px;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(2) p {
+  .com-popup-base2 .table-cell .box div:nth-of-type(2) p {
     display: inline-block;
     margin-top: 10px;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(1):after {
+  .com-popup-base2 .table-cell .box div:nth-of-type(1):after {
     content: "";
     display: block;
     position: absolute;
