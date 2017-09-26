@@ -378,7 +378,7 @@
         }
         //销量
         else if (type == 2) {
-          window.bravetime.tj.pvSend('search_salesvolume_click', '');
+          // window.bravetime.tj.pvSend('search_salesvolume_click', '');
           scope.selected = 2;
           scope.data.sortType = "desc";
           scope.no_more = scope.anymore[number].flag;
@@ -393,7 +393,7 @@
         }
         //价格  倒叙
         else if (type == 3) {
-          window.bravetime.tj.pvSend('search_price_click', '');
+          // window.bravetime.tj.pvSend('search_price_click', '');
           scope.selected = 3;
           scope.data.sortType = "desc";
           scope.no_more = scope.anymore[number].flag;
@@ -664,7 +664,7 @@
       confirms: function () {
         var scope = this;
         scope.no_more = false;
-        window.bravetime.tj.pvSend('search_filterleft_confirm_click', '');
+        // window.bravetime.tj.pvSend('search_filterleft_confirm_click', '');
         scope.roings = true;
         if (parseInt(scope.priceMin) > parseInt(scope.priceMax)) {
           bravetime.info("您输入的价格有误，请重新输入");

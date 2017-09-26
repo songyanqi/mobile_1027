@@ -29,11 +29,14 @@
             <span class="pull-right dav-red" v-show = "item.type == 1 && item.complete_status == 1  && item.is_new_seller_order && item.is_expire != 1">赠品待领取</span>
             <span class="pull-right dav-red" v-show = "item.type == 2 && item.cancel_type == 1">已冻结</span>
 
-            <span class="pull-right dav-red" v-show = "item.type == 3">待付款</span>
+            <span class="pull-right dav-red" v-show = "item.type == 3 && !item.is_presale_order">待付款</span>
             <span class="pull-right dav-red" v-show = "item.type == 1 && item.shipping_status == 4">部分发货</span>
             <span class="pull-right dav-red" v-show = "item.type == 1 && item.shipping_status == 1 && item.complete_status == 0  && !item.is_new_seller_order">待收货</span>
             <span class="pull-right dav-red" v-show = "item.type == 1 && item.shipping_status == 1 && item.complete_status == 0  && item.is_new_seller_order && item.is_expire != 1">赠品待领取</span>
             <span class="pull-right dav-red" v-show = "item.is_expire && item.is_new_seller_order">已关闭</span>
+            <!-- 预定商品 -->
+            <span class="pull-right dav-red" v-show = "item.type == 3 && item.is_presale_order && item.presale_info.type == 'reserve'">待支付定金</span>
+            <span class="pull-right dav-red" v-show = "item.type == 3 && item.is_presale_order && item.presale_info.type == 'final'">待支付尾款</span>
         </div>
         <a class="order_good_list" href="/o-{{item.order_id}}.html" v-if = '!item.is_delivery' v-bind = 'handleCurrentPage'>
             <div class="img_container">
@@ -61,8 +64,33 @@
                 </div>
             </div>
         </a>
-        <div class="sum">金额：<span class="payment"><span class="fz_12">￥</span>{{item.payment}}</span></div>
-        <div class="order_buttons order_list_buttons clearfix">
+        <!-- <div class="sum">金额：<span class="payment"><span class="fz_12">￥</span>{{item.payment}}</span></div> -->
+        <!-- 待预定 -->
+        <div class="sum">
+          <span v-if = "item.is_presale_order && (item.type == '3' || item.type == '4') ">
+            <span>共{{ item.goods_list_num }}件</span>
+            <span v-if = "item.presale_info.type == 'reserve'">
+              <span>应付定金：</span>
+              <span class="payment"><span class="fz_12">￥</span>{{item.presale_info.reserve_info.payment}}</span>
+            </span>
+            <span v-if = "item.presale_info.type == 'final'">
+              <span>应付尾款：</span>
+              <span class="payment"><span class="fz_12">￥</span>{{item.presale_info.final_info.payment}}</span>
+            </span>
+          </span>
+          <span v-else>
+            <span v-else>金额：</span>
+            <span class="payment"><span class="fz_12">￥</span>
+              <span v-if = "item.is_presale_order">{{ changeAddNum(item.presale_info.final_info.payment,item.presale_info.reserve_info.payment) }}</span>
+              <span v-else>{{item.payment}}</span>
+            </span>
+          </span>
+        </div>
+        <div v-if = "item | isFinalBtn" class="order_buttons order_list_buttons clearfix">
+            <!-- 预定 支付定金 -->
+             <a v-show = "item | orderReserve" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/checkout.html?order_id={{item.id}}">支付定金</a>
+             <!-- 支付尾款，显示按钮 -->
+             <a v-show = "item | orderFinalBtn" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" :href="item.pay_url">支付尾款</a>
             <!--该显示哪些信息-->
             <a v-show = "item | close" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/cart.html?rebuy_order_id={{item.id}}">再次购买</a>
             <a v-show = "item | again" v-if='item.order_type !=1 && item.order_type !=2' class="dav-btn btn-white order-btn-red pull-right  order-buy-once-more" href="/cart.html?rebuy_order_id={{item.id}}">再次购买</a>
@@ -74,17 +102,14 @@
             <a v-show = "item | confirm" class="dav-btn btn-white order-btn-red pull-right order-buy-once-more" @click="orderArrive">确认收货</a>
             <a v-show = "item | pay" class="dav-btn btn-white order-btn-red pull-right order-btn-pay" href="/checkout.html?order_id={{item.id}}">立即支付</a>
             <a v-show = "item | receive" class="dav-btn btn-white order-btn-red pull-right" href="/change_address.html?order_id={{item.id}}&goal=get" v-if='item.is_expire==0'>领取会员赠品</a>
-            <a v-show = "item | checkship" class="dav-btn btn-white pull-right order-check-wl" href="/o-shipping-{{item.id}}.html?did={{item.delivery_id
-}}">查看物流</a>
-            <a v-show = "item | shipping" class="dav-btn btn-white pull-right order-check-wl" href="/o-shipping-{{item.id}}.html?did={{item.delivery_id
-}}">查看物流</a>
-
+            <a v-show = "item | checkship" class="dav-btn btn-white pull-right order-check-wl" href="/o-shipping-{{item.id}}.html?did={{item.delivery_id }}">查看物流</a>
+            <a v-show = "item | shipping" class="dav-btn btn-white pull-right order-check-wl" href="/o-shipping-{{item.id}}.html?did={{item.delivery_id }}">查看物流</a>
             <a class="dav-btn btn-white pull-right order-delete-order" v-if='(item.is_expire==1 && item.is_new_seller_order==1 && item.no_address==1)|| item.type == 4' @click = "deleteOrder">删除订单</a>
             <!-- <a v-show = "item | deleted" class="dav-btn btn-white pull-right order-delete-order" @click = "deleteOrder">删除订单</a> -->
             <!-- <a v-show = "item | close" class="dav-btn btn-white pull-right order-delete-order" @click = "deleteOrder">删除订单</a> -->
             <a v-show = "item | pay1" class="dav-btn btn-white pull-right" href="/index.php?c=AgentPay&a=index&order_id={{item.id}}">找人代付</a>
 
-            <a v-show = "item | cancel" data-deliveryid="{{item.delivery_id}}" data-id="{{ item.id }}" class="dav-btn btn-white pull-right  order-cancel cancle_{{ item.id }}" @click = "cancelOrder">取消订单</a>
+            <a v-show = "item | cancel" data-deliveryid="{{item.delivery_id}}" data-id="{{ item.id }}" class="dav-btn btn-white pull-right  order-cancel cancle_{{ item.id }}" @click = "cancelOrder($event,item)">取消订单</a>
 
             <a v-show = "item | cancel1" class="dav-btn btn-white pull-right  btn-disable">取消审核中</a>
             <a v-show = "item | cancel2" class="dav-btn btn-white pull-right  btn-disable">取消成功</a>
@@ -93,9 +118,10 @@
             <a v-show = "item | applySale" data-deliveryid="{{item.delivery_id}}" data-id="{{ item.id }}" class="dav-btn btn-white pull-right" @click="orderApplay">申请售后</a>
             <!-- 售后进度 -->
             <a v-show = "item | applyProgress" data-deliveryid="{{item.delivery_id}}"  data-id="{{ item.id }}" data-cancel-id = "{{ item.cancel_id }}" class="dav-btn btn-white pull-right cancle_{{ item.id }}" @click="afterSale">查看售后进度</a>
-            <!-- 测试用 -->
-            <!-- <a data-deliveryid="{{item.delivery_id}}" data-id="{{ item.id }}" class="dav-btn btn-white pull-right cancle_{{ item.id }}" @click="cancelOrder">取消订单</a> -->
         </div>
+        <!-- 支付尾款，显示日期 -->
+        <div v-show = "item | orderFinal" class="order_presale"><span v-if = "item.presale_info && item.presale_info.final_info">{{ item.presale_info.final_info.paytime_start | changeDate }}</span> 开始支付尾款</div>
+
     </div>
     <div class="order_list_item type_4 dav-shadow" v-if = 'other'>
         <ul class="be_evaluated_list">
@@ -116,8 +142,8 @@
     </div>
     <div v-show = 'no_more' class="refresh">没有更多{{word}}</div>
       <!-- 取消订单弹框 -->
-    <div class="modalMask" @click = "handleCloseModal" :class = "{ showMask: isModal }"></div>
-      <div class="modaOrderlWrapper" v-show = "isModal">
+    <div class="modalMask" @click = "handleCloseModal" :class = "{ showMask: isModal || isOrderConfirm }"></div>
+    <div class="modaOrderlWrapper" v-show = "isModal">
         <div class="modalCloseWrapper" @click = "handleCloseModal">
             <span class="modal-close"></span>
         </div>
@@ -150,6 +176,18 @@
         <div @click = "handleConfirm" class = "disabledModal" :class = "{ modalConfirm: !isConfirm }">确定</div>
     </div>
     <div class = "order_toast"></div>
+
+    <!-- 弹框 -->
+    <div class = "modalOrder" :class = "{orderModalShow: isOrderConfirm}">
+      <!-- <div class="modalCloseWrapper orderClose" @click = "handleCloseModal">
+          <span class="modal-close"></span>
+      </div> -->
+      <div class = "orderTitle">该订单为预定订单，定金不退哦，确认要取消么？</div>
+      <div  class = "orderBtns">
+        <div class = "orderCancle" @click = "handleCloseModal">取消</div>
+        <div class = "orderConfirm" @click = "handleOrderPresale">确定</div>
+      </div>
+    </div>
 </template>
 <script>
   import layout from "../../../../module/index/layout.es6";
@@ -195,6 +233,10 @@
                 //取消原因
                 reasonName: "",
                 isapp: false,
+                // 当前时间，来判断支付尾款显示按钮还是支付时间
+                currentTime: Date.now(),
+                // 是否显示预定单弹框
+                isOrderConfirm: false,
             }
         },
         created:function(){
@@ -228,6 +270,12 @@
           this.scroll();
         },
         methods:{
+          // 相加
+          changeAddNum(num1,num2) {
+            let sumNum = parseFloat(Number(num1)+Number(num2)).toFixed(2);
+            return sumNum;
+          },
+          // 时间转换
           // 弹框弹出时给body添加fixed
           addFixed() {
             if (document.documentElement && document.documentElement.scrollTop) {
@@ -267,6 +315,7 @@
           },
           handleCloseModal() {
             this.isModal = false;
+            this.isOrderConfirm = false;
             this.removeFixed();
           },
           // 取消原因
@@ -328,10 +377,15 @@
               }
             }
           },
-          // 新取消订单
-          cancelOrder (e) {
-            this.getDatas();
+          // 预定单弹框
+          handleOrderPresale() {
+            this.isOrderConfirm = false;
             this.isModal = true;
+
+            this.getDatas();
+          },
+          // 新取消订单
+          cancelOrder (e,item) {
             this.addFixed();
             this.dataId = e.target.getAttribute('data-id');
             let reasonId = e.target.getAttribute('reason-id');
@@ -343,6 +397,23 @@
                 $(".reasonIpt").prop("checked",false);
                 this.isConfirm = true;
             }
+            // 如果是预定单，先弹出确定框
+            if (item.is_presale_order) {
+              this.isOrderConfirm = true;
+              return;
+            }
+            this.getDatas();
+            this.isModal = true;
+            // this.dataId = e.target.getAttribute('data-id');
+            // let reasonId = e.target.getAttribute('reason-id');
+
+            // if (reasonId) {
+            //     $(".modalCont").find("#"+ reasonId +"").prop("checked",true);
+            //     this.isConfirm = false;
+            // } else {
+            //     $(".reasonIpt").prop("checked",false);
+            //     this.isConfirm = true;
+            // }
           },
           // 取消原因点击确定 /api/mg/order/cancelOrder/cancelByOrder
           handleConfirm() {
@@ -663,6 +734,20 @@
                                     scope.ajaxing = true;
                                     scope.typePage[orderType] = scope.typePage[orderType] + 1;//ajax中的参数中页数加1
                                     if (result["data"].length) {//返回函数中有数据
+                                        // 将超时的预定单改为已关闭订单
+                                        result.data.map(function (value,index) {
+                                          if (value.is_presale_order && value.presale_info.type == "reserve") {
+                                            if (Date.now() > value.create_time * 1000 + 1800000) {
+                                              value.type = 4;
+                                            }
+                                          }
+                                          if (value.type != 1 && value.is_presale_order && value.presale_info.type == "final") {
+                                            if (Date.now() > value.presale_info.final_info.paytime_end * 1000) {
+                                              value.type = 4;
+                                            }
+                                          }
+                                        })
+
                                         scope.allData[orderType] = scope.allData[orderType].concat(result.data);//缓存中添加数据
                                         scope.list_type = scope.allData[orderType];
                                         sessionStorage.setItem('data',JSON.stringify(scope.allData))
@@ -809,7 +894,8 @@
                 }
             },//取消订单
             pay:function(value){
-                if(value.is_new_seller_order  == false){
+                // if(value.is_new_seller_order  == false){
+                if(value.is_new_seller_order  == false && !value.is_presale_order){
                     if(value.type == 3){
                         return true;
                     }
@@ -884,7 +970,63 @@
                       }
                     }
                 }
-            }
+            },
+            // 支付定金,首先要pay的逻辑，要加上
+            orderReserve (value) {
+              if(value.is_new_seller_order  == false && value.type == 3){
+                if (value.is_presale_order && value.presale_info.type == "reserve") {
+                  if (Date.now() < value.create_time * 1000 + 1800000) {
+                    return true;
+                  }
+                }
+              }
+            },
+            // 支付尾款显示时间时不显示所有的按钮
+            isFinalBtn (value) {
+              if (value.is_presale_order && value.presale_info.type == "final") {
+                if (Date.now() < Number(value.presale_info.final_info.paytime_start) * 1000) {
+                  
+                } else {
+                  return true;
+                }
+              } else {
+                return true;
+              }
+            },
+            // 支付尾款,显示时间
+            orderFinal (value) {
+              if (value.is_presale_order && value.presale_info.type == "final") {
+                if (Date.now() < Number(value.presale_info.final_info.paytime_start) * 1000) {
+                  return true;
+                }
+              }
+            },
+            // 支付尾款，显示按钮
+            orderFinalBtn (value) {
+              if(value.is_new_seller_order  == false && value.type == 3){
+                if (value.is_presale_order && value.presale_info.type == "final") {
+                  if (Date.now() < Number(value.presale_info.final_info.paytime_end) * 1000 && Date.now() > Number(value.presale_info.final_info.paytime_start) * 1000) {
+                    return true;
+                  }
+                }
+              }
+            },
+            changeDate(time) {
+                var dates = new Date(time * 1000);
+                var month = dates.getMonth()+1,
+                    days = dates.getDate(),
+                    hours = dates.getHours(),
+                    minutes = dates.getMinutes(),
+                    seconds = dates.getSeconds();
+
+                month = month < 10 ? `0${month}` : month;
+                days = days < 10 ? `0${days}` : days;
+                hours = hours < 10 ? `0${hours}` : hours;
+                minutes = minutes < 10 ? `0${minutes}` : minutes;
+                seconds = seconds < 10 ? `0${seconds}` : seconds;
+
+                return `${month}月${days}日 ${hours}:${minutes}:${seconds}`;
+              },
         },
         events:{
             'changeSort':function(msg){

@@ -1,0 +1,155 @@
+{
+  "code": "0",
+  "data_version": "0d7999964ba7a1e0ca417626f7dc9720",
+  "shop_url": "http:\\/\\/13269099242.vyohui.cn",
+  "visitor_status": "3",
+  "sys_time": "1500861119",
+  "sess_key": "9f77e015508eb71179aef79906a60d0303341cd3",
+  "data": {
+    "isFollow": "0",
+    "menuList": [
+      {
+        "timeMenu": "08:00",
+        "menu": "10月19日",
+        "screenings": "8"
+      },
+      {
+        "timeMenu": "10:00",
+        "menu": "已开抢",
+        "screenings": "10"
+      },
+      {
+        "timeMenu": "14:00",
+        "menu": "已开抢",
+        "screenings": "14"
+      },
+      {
+        "timeMenu": "16:00",
+        "menu": "等待开抢",
+        "screenings": "16"
+      },
+      {
+        "timeMenu": "20:00",
+        "menu": "等待开抢",
+        "screenings": "20"
+      },
+      {
+        "timeMenu": "20:00",
+        "menu": "已开抢",
+        "screenings": "20"
+      },
+      {
+        "timeMenu": "20:00",
+        "menu": "等待开抢",
+        "screenings": "20"
+      }
+    ],
+    "dataList": [
+      {
+        "goodsId": "425165",
+        "goodsName": "商品名称",
+        "goodsPrice": "商品价格",
+        "imageUrl": "http://pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/quality,Q_90",
+        "startTime": "1505108815770",
+        "buttonName": "我要预约",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "460203",
+        "goodsName": "商品名称",
+        "goodsPrice": "已设预约",
+        "imageUrl": "http://pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/quality,Q_90",
+        "startTime": "1505108815770",
+        "buttonName": "已设预约",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "24805",
+        "goodsName": "商品名称",
+        "goodsPrice": "我要预约",
+        "imageUrl": "http://pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/quality,Q_90",
+        "startTime": "1505108815770",
+        "buttonName": "立即抢购",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "0",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "470327",
+        "goodsName": "商品名称",
+        "goodsPrice": "我要预约",
+        "imageUrl": "http://pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/quality,Q_90",
+        "startTime": "1505108815770",
+        "buttonName": "等待抢购",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "473381",
+        "goodsName": "商品名称",
+        "goodsPrice": "已设预约",
+        "imageUrl": "http://pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/quality,Q_90",
+        "startTime": "1505108815770",
+        "buttonName": "我要预约",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "438833",
+        "goodsName": "商品名称",
+        "goodsPrice": "已设预约",
+        "imageUrl": "http://pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/quality,Q_90",
+        "startTime": "1505108815770",
+        "buttonName": "我要预约",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "497841",
+        "goodsName": "商品名称",
+        "goodsPrice": "已设预约",
+        "imageUrl": "http://pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/quality,Q_90",
+        "startTime": "1505108815770",
+        "buttonName": "我要预约",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      }
+    ]
+  }
+}

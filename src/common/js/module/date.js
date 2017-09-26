@@ -52,6 +52,29 @@ export default {
     }
 
     return days;
+  },
+  /**
+   * 获取距离目标时刻的天、小时、分钟、秒
+   * @param date 目标时刻
+   * @returns {{second: Number, minute: Number, hour: Number, day: Number}}
+   */
+  getCountDown(targetDate){
+    targetDate = Object.prototype.toString.call(targetDate) == '[object String]' ? new Date(parseInt(targetDate)) :
+      Object.prototype.toString.call(targetDate) == '[object Number]' ? new Date(targetDate) :
+        targetDate || new Date();
+    let second = 1000;
+    let minute = 60000;
+    let hour = 3600000;
+    let day = 86400000;
+
+    let distance = targetDate - new Date();
+
+    return {
+      second: number.preZero(parseInt(distance % minute / second), 2),
+      minute: number.preZero(parseInt(distance % hour / minute), 2),
+      hour: number.preZero(parseInt(distance % day / hour), 2),
+      day: number.preZero(parseInt(distance / day), 2),
+    }
   }
 }
 

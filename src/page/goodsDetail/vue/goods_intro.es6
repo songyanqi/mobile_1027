@@ -1,3 +1,5 @@
+import date from '../../../common/js/module/date.js';
+
 export default {
     data () {
         return {
@@ -11,11 +13,6 @@ export default {
           actTatio: 0,
           //显示的价格
           memPrice: 0,
-          //未登陆显示的会员价
-          unMemPrice: 0,
-          //省的价格
-          savePrice: 0,
-          //从父组件获取的价格
           infoObj: {},
           // 倒计时
           remainTime: {
@@ -26,35 +23,45 @@ export default {
           },
           // 是否是限时购
           isLimitBuy: false,
+          // 倒计时
+          isFirstCutDown: true,
+          cutDownTimer: null,
+          //多规格判断上次lastTime和这次的lastTime是否相同，相同就不调用倒计时
+          cutDownTimeLimit: '',
+          date: date,
         }
     },
-    // activitytypename去掉了
-    props: ['infoobj', 'goodsname', 'shopurl', 'membercont', 'seckill', 'goodsstocknumber',
-            'visitorstatus', 'singleactivity', 'isshowactive','actendtime','isshowa','isshowb'],
+    // actendtime去掉了
+    props: ['infoobj', 'goodsname', 'shopurl', 'membercont', 'seckill', 'goodsstocknumber', 'datarepresentid',
+            'visitorstatus', 'singleactivity', 'isshowactive','isshowa','isshowb','response'],
     created () {
-        let that = this;
-        this.$root.eventHub.$on('time_over',(isover) => {
-            that.isOver = isover;
-          if (that.isOver) {
-            that.memPrice = that.infoobj.shopPrice;
-            this.initMember(this.infoObj);
-          }
-        });
+      let that = this;
+      this.$root.eventHub.$on('time_over',(isover) => {
+          that.isOver = isover;
+        if (that.isOver) {
+          that.memPrice = that.infoobj.price.shopPrice;
+          this.initMember(this.infoObj);
+        }
+      });
+    },
+    mounted: {
+
     },
     watch: {
-      infoobj: {
+      // infoobj: {
+      //   handler (newInfoObj,oldInfoObj) {
+      //     this.infoObj = newInfoObj;
+      //     this.initMember(newInfoObj);
+      //     if (newInfoObj.isComingActivity) {
+      //       this.isLimitBuy = true;
+      //     }
+      //   },
+      //   deep: true,
+      // },
+      datarepresentid: {
         handler (newInfoObj,oldInfoObj) {
-          this.infoObj = newInfoObj;
-          this.initMember(newInfoObj);
-          if (newInfoObj.isComingActivity) {
-            this.isLimitBuy = true;
-          }
-        },
-        deep: true,
-      },
-      goodsname: {
-        handler () {
-          this.initMember(this.infoObj);
+          this.isFirstCutDown = true;
+          this.initMember(this.infoobj);
           if (this.infoObj.isComingActivity) {
             this.isLimitBuy = true;
           }
@@ -63,7 +70,14 @@ export default {
       },
       singleactivity: {
         handler (newInfoObj,oldInfoObj) {
-          this.cutDownTime(newInfoObj.lastTime);
+           if (newInfoObj.lastTime == this.cutDownTimeLimit) {
+            return;
+          }
+          this.cutDownTimeLimit = newInfoObj.lastTime;
+          if (this.isFirstCutDown) {
+            clearInterval(this.cutDownTimer);
+            this.cutDownTime(newInfoObj.lastTime);
+          }
           if (newInfoObj.typeId == '8') {
             this.isLimitBuy = true;
           }
@@ -76,44 +90,21 @@ export default {
     methods: {
       //会员价
       initMember (newInfoObj) {
-        this.actTatio = newInfoObj.totalIncome;
+        this.actTatio = newInfoObj.price.totalIncome;
         if (this.isOver) {
-          this.memPrice = newInfoObj.shopPrice;
+          this.memPrice = newInfoObj.price.shopPrice;
         } else {
           if (this.visitorstatus != 3) {
-            this.memPrice = newInfoObj.finalPrice;
+            this.memPrice = newInfoObj.price.finalPrice;
           } else {
-            if (newInfoObj.memberGoods == '0') {
-              this.memPrice = newInfoObj.finalPrice;
+            if (newInfoObj.price.memberGoods == '0') {
+              this.memPrice = newInfoObj.price.finalPrice;
             } else {
-              this.memPrice = newInfoObj.memberPrice;
+              this.memPrice = newInfoObj.price.memberPrice;
             }
           }
         }
-
-        //未登录计算会员价
-        let regs = /\.[1-9]0$/ig;
-        if (newInfoObj.memberGoods == '0') {
-          this.unMemPrice = parseFloat(Number(this.memPrice) - Number(this.actTatio)).toFixed(2);
-          if (this.unMemPrice.indexOf('.00') > -1) {
-            this.unMemPrice = parseInt(this.unMemPrice);
-          } else if (regs.test(this.unMemPrice)) {
-            this.unMemPrice = this.unMemPrice.substring(0,this.unMemPrice.length - 1);
-          }
-          this.savePrice = this.actTatio;
-        } else {
-          this.unMemPrice = this.infoobj.memberPrice;
-          if (this.memPrice == this.infoobj.memberPrice) {
-            this.savePrice = parseFloat(Number(newInfoObj.finalPrice - this.unMemPrice)).toFixed(2);
-          } else {
-            this.savePrice = parseFloat(Number(this.memPrice - this.unMemPrice)).toFixed(2);
-          }
-          if (this.savePrice.indexOf('.00') > -1) {
-            this.savePrice = parseInt(this.savePrice);
-          } else if (regs.test(this.savePrice)) {
-            this.savePrice = this.savePrice.substring(0,this.savePrice.length - 1);
-          }
-        }
+        this.$root.eventHub.$emit('finalPrices',this.memPrice);
       },
       //成为会员的链接
       handleMember () {
@@ -131,7 +122,7 @@ export default {
       showTags () {
         this.isMemContent = false;
         this.confirmTitle = '价格详情';
-        this.confirmText = `本商品含税${this.infoobj.taxPrice}元`;
+        this.confirmText = `本商品含税${this.infoobj.price.importTariff}元`;
           $(".tax_cont .weui-dialog").show();
           $(".tax_cont .weui-mask").show();
       },
@@ -152,8 +143,8 @@ export default {
         let numTime = Number(time),that = this;
         let newTime = numTime * 1000;
         let timeStr = "";
-
-        let timer = setInterval(() => {
+        clearInterval(this.cutDownTimer);
+        this.cutDownTimer = setInterval(() => {
           if (numTime > 0) {
             numTime--;
            // 计算显示数值
@@ -167,15 +158,33 @@ export default {
             that.remainTime.minute = minute >= 10 ? minute : `0${minute}`;
             that.remainTime.second = second >= 10 ? second : `0${second}`;
           } else {
-            clearInterval(timer);
+            clearInterval(this.cutDownTimer);
             that.isOver = true;
             that.$root.eventHub.$emit('time_over',that.isOver);
-            that.memPrice = that.infoobj.shopPrice;
+            that.memPrice = that.infoobj.price.shopPrice;
             // 会员返的价格还没变
             
             // that.initMember(that.infoObj);
           }
         },1000);
+      },
+      changeDate(date) {
+        if (date) {
+          date = new Date(Number(date) * 1000);
+
+          let year = date.getFullYear(),
+              month = date.getMonth() + 1 < 10 ? `0${date.getMonth() + 1}` : date.getMonth() + 1,
+              dates = date.getDate() < 10 ? `0${date.getDate()}` : date.getDate(),
+              hours = date.getHours() < 10 ? `0${date.getHours()}` : date.getHours(),
+              minutes = date.getMinutes() < 10 ? `0${date.getMinutes()}` : date.getMinutes(),
+              seconds = date.getSeconds() < 10 ? `0${date.getSeconds()}` : date.getSeconds();
+          
+          return `${month}月${dates}日${hours}:${minutes}:${seconds}`
+        }
+      },
+      // 预售规则
+      handlePreRule() {
+        location.href = "/t-14491.html";
       },
     },
     components: {

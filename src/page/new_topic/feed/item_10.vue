@@ -17,7 +17,7 @@
         </div>
       </div>
     </div>
-
+    
     <div v-if="environment=='show'" class="goods_group_con">
       <a :href="item.url" v-for="(item, index) in previewData" :key="index" class="goods_item">
         <div class="goods_img">

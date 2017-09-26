@@ -1,0 +1,691 @@
+{
+  "code": "0",
+  "shop_url": "https://hellobabay.davdian.com",
+  "visitor_status": "3",
+  "sess_key": "48a275a991a0a6295706e6d9f8c3a784b62a4bbc",
+  "data_version": "xxxx",
+  "sys_time": "1505470494",
+  "data": {
+    "header": {
+      "userAvatar": "http://pic.davdian.com/shop_logo/2017/07/01/80_80_8535effa0ef94715a088c7f25e696c2f.jpg",
+      "nickName": "用户昵称"
+    },
+    "award": {
+      "totalReward": "100.10",
+      "dataList": [
+        {
+          "goodsId": 1,
+          "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "linkUrl": "http://bravetime.davdian.com/xxx.html",
+          "goodsName": "商品名称",
+          "shopPrice": "100",
+          "advanceAvatar": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "advanceName": "昵称",
+          "advanceNum": "3",
+          "advanceReward": "3"
+        },
+        {
+          "goodsId": 1,
+          "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "linkUrl": "http://bravetime.davdian.com/xxx.html",
+          "goodsName": "商品名称",
+          "shopPrice": "100",
+          "advanceAvatar": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "advanceName": "昵称",
+          "advanceNum": "3",
+          "advanceReward": "3"
+        },
+        {
+          "goodsId": 1,
+          "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "linkUrl": "http://bravetime.davdian.com/xxx.html",
+          "goodsName": "商品名称",
+          "shopPrice": "100",
+          "advanceAvatar": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "advanceName": "昵称",
+          "advanceNum": "3",
+          "advanceReward": "3"
+        },
+        {
+          "goodsId": 1,
+          "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "linkUrl": "http://bravetime.davdian.com/xxx.html",
+          "goodsName": "商品名称",
+          "shopPrice": "100",
+          "advanceAvatar": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "advanceName": "昵称",
+          "advanceNum": "3",
+          "advanceReward": "3"
+        },
+        {
+          "goodsId": 1,
+          "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "linkUrl": "http://bravetime.davdian.com/xxx.html",
+          "goodsName": "商品名称",
+          "shopPrice": "100",
+          "advanceAvatar": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "advanceName": "昵称",
+          "advanceNum": "3",
+          "advanceReward": "3"
+        },
+        {
+          "goodsId": 1,
+          "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "linkUrl": "http://bravetime.davdian.com/xxx.html",
+          "goodsName": "商品名称",
+          "shopPrice": "100",
+          "advanceAvatar": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "advanceName": "昵称",
+          "advanceNum": "3",
+          "advanceReward": "3"
+        },
+        {
+          "goodsId": 1,
+          "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "linkUrl": "http://bravetime.davdian.com/xxx.html",
+          "goodsName": "商品名称",
+          "shopPrice": "100",
+          "advanceAvatar": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "advanceName": "昵称",
+          "advanceNum": "3",
+          "advanceReward": "3"
+        },
+        {
+          "goodsId": 1,
+          "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "linkUrl": "http://bravetime.davdian.com/xxx.html",
+          "goodsName": "商品名称",
+          "shopPrice": "100",
+          "advanceAvatar": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "advanceName": "昵称",
+          "advanceNum": "3",
+          "advanceReward": "3"
+        },
+        {
+          "goodsId": 1,
+          "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "linkUrl": "http://bravetime.davdian.com/xxx.html",
+          "goodsName": "商品名称",
+          "shopPrice": "100",
+          "advanceAvatar": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "advanceName": "昵称",
+          "advanceNum": "3",
+          "advanceReward": "3"
+        },
+        {
+          "goodsId": 1,
+          "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "linkUrl": "http://bravetime.davdian.com/xxx.html",
+          "goodsName": "商品名称",
+          "shopPrice": "100",
+          "advanceAvatar": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "advanceName": "昵称",
+          "advanceNum": "3",
+          "advanceReward": "3"
+        },
+        {
+          "goodsId": 1,
+          "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "linkUrl": "http://bravetime.davdian.com/xxx.html",
+          "goodsName": "商品名称",
+          "shopPrice": "100",
+          "advanceAvatar": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+          "advanceName": "昵称",
+          "advanceNum": "3",
+          "advanceReward": "3"
+        }
+      ]
+    },
+    "myBonus": [
+      {
+        "bonusId": "123",
+        "typeId": "123",
+        "typeName": "红包名称",
+        "typeMoney": "10",
+        "minGoodsAmount": "199",
+        "limitDesc": "满199可用",
+        "beginTime": "1505552738",
+        "endTime": "1505462800"
+      },
+      {
+        "bonusId": "123",
+        "typeId": "123",
+        "typeName": "红包名称",
+        "typeMoney": "10",
+        "minGoodsAmount": "199",
+        "limitDesc": "满199可用",
+        "beginTime": "1505552738",
+        "endTime": "1505462800"
+      },
+      {
+        "bonusId": "123",
+        "typeId": "123",
+        "typeName": "红包名称",
+        "typeMoney": "10",
+        "minGoodsAmount": "199",
+        "limitDesc": "满199可用",
+        "beginTime": "1505552738",
+        "endTime": "1505462800"
+      }
+    ],
+    "help": [
+      {
+        "goodsId": "商品id",
+        "goodsName": "便便糖",
+        "goodsImage": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "havePrice": "100",
+        "surplusPrice": "100",
+        "activityLink": "http://zeliang.davdian.com/xxxxxx"
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "便便糖",
+        "goodsImage": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "havePrice": "0",
+        "surplusPrice": "100",
+        "activityLink": "http://zeliang.davdian.com/xxxxxx"
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "便便糖",
+        "goodsImage": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "havePrice": "",
+        "surplusPrice": "100",
+        "activityLink": ""
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "便便糖",
+        "goodsImage": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "havePrice": "",
+        "surplusPrice": "100",
+        "activityLink": ""
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "便便糖",
+        "goodsImage": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "havePrice": "",
+        "surplusPrice": "100",
+        "activityLink": ""
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "便便糖",
+        "goodsImage": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "havePrice": "",
+        "surplusPrice": "100",
+        "activityLink": ""
+      }
+    ],
+    "book": [
+      {
+        "goodsId": 1,
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "linkUrl": "http://bravetime.davdian.com/xxx.html",
+        "goodsName": "商品名称",
+        "advancePrice": "10",
+        "discountPrice": "60",
+        "shopPrice": "100"
+      },
+      {
+        "goodsId": 1,
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "linkUrl": "http://bravetime.davdian.com/xxx.html",
+        "goodsName": "商品名称",
+        "advancePrice": "10",
+        "discountPrice": "60",
+        "shopPrice": "100"
+      },
+      {
+        "goodsId": 1,
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "linkUrl": "http://bravetime.davdian.com/xxx.html",
+        "goodsName": "商品名称",
+        "advancePrice": "10",
+        "discountPrice": "60",
+        "shopPrice": "100"
+      },
+      {
+        "goodsId": 1,
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "linkUrl": "http://bravetime.davdian.com/xxx.html",
+        "goodsName": "商品名称",
+        "advancePrice": "10",
+        "discountPrice": "60",
+        "shopPrice": "100"
+      },
+      {
+        "goodsId": 1,
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "linkUrl": "http://bravetime.davdian.com/xxx.html",
+        "goodsName": "商品名称",
+        "advancePrice": "10",
+        "discountPrice": "60",
+        "shopPrice": "100"
+      },
+      {
+        "goodsId": 1,
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "linkUrl": "http://bravetime.davdian.com/xxx.html",
+        "goodsName": "商品名称",
+        "advancePrice": "10",
+        "discountPrice": "60",
+        "shopPrice": "100"
+      },
+      {
+        "goodsId": 1,
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "linkUrl": "http://bravetime.davdian.com/xxx.html",
+        "goodsName": "商品名称",
+        "advancePrice": "10",
+        "discountPrice": "60",
+        "shopPrice": "100"
+      },
+      {
+        "goodsId": 1,
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "linkUrl": "http://bravetime.davdian.com/xxx.html",
+        "goodsName": "商品名称",
+        "advancePrice": "10",
+        "discountPrice": "60",
+        "shopPrice": "100"
+      },
+      {
+        "goodsId": 1,
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "linkUrl": "http://bravetime.davdian.com/xxx.html",
+        "goodsName": "商品名称",
+        "advancePrice": "10",
+        "discountPrice": "60",
+        "shopPrice": "100"
+      },
+      {
+        "goodsId": 1,
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "linkUrl": "http://bravetime.davdian.com/xxx.html",
+        "goodsName": "商品名称",
+        "advancePrice": "10",
+        "discountPrice": "60",
+        "shopPrice": "100"
+      },
+      {
+        "goodsId": 1,
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "linkUrl": "http://bravetime.davdian.com/xxx.html",
+        "goodsName": "商品名称",
+        "advancePrice": "10",
+        "discountPrice": "60",
+        "shopPrice": "100"
+      }
+    ],
+    "subscribe": [
+      {
+        "goodsId": "商品id",
+        "goodsName": "商品名称",
+        "goodsPrice": "商品价格",
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "startTime": "开始时间",
+        "buttonName": "预约提醒",
+        "buttonStatus": "1",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "商品名称",
+        "goodsPrice": "商品价格",
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "startTime": "开始时间",
+        "buttonName": "预约提醒",
+        "buttonStatus": "1",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "商品名称",
+        "goodsPrice": "商品价格",
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "startTime": "开始时间",
+        "buttonName": "预约提醒",
+        "buttonStatus": "1",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "商品名称",
+        "goodsPrice": "商品价格",
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "startTime": "开始时间",
+        "buttonName": "预约提醒",
+        "buttonStatus": "1",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "商品名称",
+        "goodsPrice": "商品价格",
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "startTime": "开始时间",
+        "buttonName": "预约提醒",
+        "buttonStatus": "1",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "商品名称",
+        "goodsPrice": "商品价格",
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "startTime": "开始时间",
+        "buttonName": "预约提醒",
+        "buttonStatus": "1",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "商品名称",
+        "goodsPrice": "商品价格",
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "startTime": "开始时间",
+        "buttonName": "预约提醒",
+        "buttonStatus": "1",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "商品名称",
+        "goodsPrice": "商品价格",
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "startTime": "开始时间",
+        "buttonName": "预约提醒",
+        "buttonStatus": "1",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "商品名称",
+        "goodsPrice": "商品价格",
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "startTime": "开始时间",
+        "buttonName": "预约提醒",
+        "buttonStatus": "1",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "商品名称",
+        "goodsPrice": "商品价格",
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "startTime": "开始时间",
+        "buttonName": "预约提醒",
+        "buttonStatus": "1",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId": "商品id",
+        "goodsName": "商品名称",
+        "goodsPrice": "商品价格",
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "startTime": "开始时间",
+        "buttonName": "预约提醒",
+        "buttonStatus": "1",
+        "price": "20.9",
+        "recommendDesc": "推荐语",
+        "bespeakNum": "51",
+        "sellNum": "51",
+        "command": {
+          "content": "点击时的动作 请求商品详情接口"
+        }
+      }
+    ],
+    "lightenBrand": [
+      {
+        "bandId": 1,
+        "bandPic": "http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg",
+        "linkUrl": "http://bravetime.davdian.com/",
+        "upperLimit": 10000,
+        "remainLight": 500,
+        "lowDiscount": "满200减100",
+        "highDiscount": "满200减150",
+        "finalDiscount": "全场5折",
+        "isCompleted": "1",
+        "hotDay": "1"
+      },
+      {
+        "bandId": 1,
+        "bandPic": "http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg",
+        "linkUrl": "http://bravetime.davdian.com/",
+        "upperLimit": 10000,
+        "remainLight": 500,
+        "lowDiscount": "满200减100",
+        "highDiscount": "满200减150",
+        "finalDiscount": "全场5折",
+        "isCompleted": "0",
+        "hotDay": "1"
+      },
+      {
+        "bandId": 1,
+        "bandPic": "http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg",
+        "linkUrl": "http://bravetime.davdian.com/",
+        "upperLimit": 10000,
+        "remainLight": 500,
+        "lowDiscount": "满200减100",
+        "highDiscount": "满200减150",
+        "finalDiscount": "全场5折",
+        "isCompleted": "0",
+        "hotDay": "1"
+      },
+      {
+        "bandId": 1,
+        "bandPic": "http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg",
+        "linkUrl": "http://bravetime.davdian.com/",
+        "upperLimit": 10000,
+        "remainLight": 500,
+        "lowDiscount": "满200减100",
+        "highDiscount": "满200减150",
+        "finalDiscount": "全场5折",
+        "isCompleted": "0",
+        "hotDay": "1"
+      },
+      {
+        "bandId": 1,
+        "bandPic": "http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg",
+        "linkUrl": "http://bravetime.davdian.com/",
+        "upperLimit": 10000,
+        "remainLight": 500,
+        "lowDiscount": "满200减100",
+        "highDiscount": "满200减150",
+        "finalDiscount": "全场5折",
+        "isCompleted": "0",
+        "hotDay": "1"
+      },
+      {
+        "bandId": 1,
+        "bandPic": "http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg",
+        "linkUrl": "http://bravetime.davdian.com/",
+        "upperLimit": 10000,
+        "remainLight": 500,
+        "lowDiscount": "满200减100",
+        "highDiscount": "满200减150",
+        "finalDiscount": "全场5折",
+        "isCompleted": "0",
+        "hotDay": "1"
+      },
+      {
+        "bandId": 1,
+        "bandPic": "http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg",
+        "linkUrl": "http://bravetime.davdian.com/",
+        "upperLimit": 10000,
+        "remainLight": 500,
+        "lowDiscount": "满200减100",
+        "highDiscount": "满200减150",
+        "finalDiscount": "全场5折",
+        "isCompleted": "0",
+        "hotDay": "1"
+      },
+      {
+        "bandId": 1,
+        "bandPic": "http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg",
+        "linkUrl": "http://bravetime.davdian.com/",
+        "upperLimit": 10000,
+        "remainLight": 500,
+        "lowDiscount": "满200减100",
+        "highDiscount": "满200减150",
+        "finalDiscount": "全场5折",
+        "isCompleted": "0",
+        "hotDay": "1"
+      },
+      {
+        "bandId": 1,
+        "bandPic": "http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg",
+        "linkUrl": "http://bravetime.davdian.com/",
+        "upperLimit": 10000,
+        "remainLight": 500,
+        "lowDiscount": "满200减100",
+        "highDiscount": "满200减150",
+        "finalDiscount": "全场5折",
+        "isCompleted": "0",
+        "hotDay": "1"
+      },
+      {
+        "bandId": 1,
+        "bandPic": "http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg",
+        "linkUrl": "http://bravetime.davdian.com/",
+        "upperLimit": 10000,
+        "remainLight": 500,
+        "lowDiscount": "满200减100",
+        "highDiscount": "满200减150",
+        "finalDiscount": "全场5折",
+        "isCompleted": "0",
+        "hotDay": "1"
+      },
+      {
+        "bandId": 1,
+        "bandPic": "http://pic.davdian.com/supplier/2017/08/22/800_800_a6f5ac466e192d2bd6d4ec889b5d2ccc.jpg",
+        "linkUrl": "http://bravetime.davdian.com/",
+        "upperLimit": 10000,
+        "remainLight": 500,
+        "lowDiscount": "满200减100",
+        "highDiscount": "满200减150",
+        "finalDiscount": "全场5折",
+        "isCompleted": "0",
+        "hotDay": "1"
+      }
+    ],
+    "drawRecord": [
+      {
+        "type": "1",
+        "time": "1505543917"
+      }
+    ],
+    "willBuy": [
+      {
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "title": "来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品",
+        "nowPrice": "111.23",
+        "actInfo": "满100减50",
+        "incomeInfo": "171.6",
+        "statusInfo": "状态信息",
+        "command": {
+          "content": "/58784.html?rp=index&rl=timeshop_goods-560-58784",
+          "log": "统计动作"
+        }
+      },
+      {
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "title": "来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品",
+        "nowPrice": "111",
+        "actInfo": "满100减50",
+        "incomeInfo": "171.6",
+        "statusInfo": "状态信息",
+        "command": {
+          "content": "/58784.html?rp=index&rl=timeshop_goods-560-58784",
+          "log": "统计动作"
+        }
+      },
+      {
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "title": "来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品",
+        "nowPrice": "111.23",
+        "actInfo": "满100减50",
+        "incomeInfo": "171.6",
+        "statusInfo": "状态信息",
+        "command": {
+          "content": "/58784.html?rp=index&rl=timeshop_goods-560-58784",
+          "log": "统计动作"
+        }
+      },
+      {
+        "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
+        "title": "来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品",
+        "nowPrice": "111.23",
+        "actInfo": "满200减50",
+        "incomeInfo": "171.6",
+        "statusInfo": "状态信息",
+        "command": {
+          "content": "/58784.html?rp=index&rl=timeshop_goods-560-58784",
+          "log": "统计动作"
+        }
+      }
+    ]
+  }
+}

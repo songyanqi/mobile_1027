@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--<script>window.designWidth = 750;</script>-->
+  @@include('meta.include')
+  <link rel="stylesheet" href="[[static]]/page/act_1018_mine_list/css/act_1018_mine_list.css[[v]]">
+</head>
+<body>
+<div class="app">
+  <!--我的预定奖励部分-->
+  <div v-if="type == 1" v-cloak>
+    <!--标题-->
+    <com-top-title title="我的预定奖励" home></com-top-title>
+
+    <!--预定奖励头部信息-->
+    <!--总奖励数字要改-->
+    <div v-if="response">
+      <div class="prize-head">
+        <p class="total-prize">共获得<span class="money-icon">￥</span><span class="prize-detail">{{totalReward}}</span>&nbsp;&nbsp;预定奖励</p>
+        <div class="prize-tip">
+          <p class="tip-title">发放奖励说明</p>
+          <ul class="tip-detail">
+            <li>1. 活动时间：2017.10.14 00:00:00-2017.10.17 23:59:59；</li>
+            <li>2. 在活动期间内，妈妈顾问服务人群预定110款商品，每成功预<span>定1件商品，妈妈顾问即可获得1元钱的奖励；</span></li>
+            <li>3. 奖励将在10月23日24点前以返现的方式发放至账户</li>
+          </ul>
+        </div>
+      </div>
+
+      <!--好友支持列表-->
+      <!--头像要改-->
+      <ul class="goods-list">
+        <li v-for="(val,index) in list" :key="index" class="friend-list list-item">
+          <img :src="val.imageUrl" class="goods-pic"/>
+          <div class="friend-show">
+            <img :src="val.advanceAvatar" class="user-photo"/>
+            <span class="user-name">{{val.advanceName}}</span>
+          </div>
+          <p class="list-text">预定{{val.advanceNum}}件获得{{val.advanceReward}}元奖励</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!--我预约的商品部分-->
+  <div v-if="type == 2" v-cloak>
+    <!--标题-->
+    <com-top-title title="我预约的商品" home></com-top-title>
+
+    <!--商品列表-->
+    <ul class="goods-list" v-if="response">
+      <li v-for="(val,index) in list" :key="index" class="list-item">
+        <a :href="'../'+val.goodsId+'.html'">
+          <img :src="val.imageUrl" class="goods-pic"/>
+          <p class="goods-text text-special">活动价￥<span class="text-price">{{val.price}}</span><span class="from-app" v-text="val.from"></span></p>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!--我预定的商品部分-->
+  <div v-if="type == 3" v-cloak>
+    <!--标题-->
+    <com-top-title title="我预定的商品" home></com-top-title>
+
+    <!--商品列表-->
+    <ul class="goods-list" v-if="response">
+      <li v-for="(val,index) in list" :key="index" class="list-item">
+        <a :href="'../'+val.goodsId+'.html'">
+          <img :src="val.imageUrl" class="goods-pic"/>
+          <p class="goods-text text-special">定金￥<span class="text-price">{{val.advancePrice}}</span> (抵扣￥{{val.discountPrice}})</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <com-to-top-icon></com-to-top-icon>
+</div>
+@@include('vendor.include')
+@@include('js.include')
+<script src="[[static]]/page/act_1018_mine_list/js/act_1018_mine_list.js[[v]]"></script>
+</body>
+</html>
+

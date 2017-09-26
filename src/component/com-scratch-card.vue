@@ -103,6 +103,16 @@
             context.fill();
           }
 
+          //
+          function scrollD (direction) {
+            if(direction == "top"){
+              return document.body.scrollTop || window.pageYOffset || document.documentElement.scrollTop || 0;
+            }
+            if(direction == "left"){
+              return document.body.scrollLeft || window.pageXOffset || document.documentElement.scrollLeft || 0;
+            }
+          }
+
           // m端擦除
           function mobile(event) {
             if (ts.canScratch) {
@@ -110,8 +120,8 @@
               let clientLeft = ts.getClientLeft(canvas);
               let clientTop = ts.getClientTop(canvas);
               // 圆心坐标
-              let centerX = event.changedTouches[0].clientX + document.body.scrollLeft - clientLeft;
-              let centerY = event.changedTouches[0].clientY + document.body.scrollTop - clientTop;
+              let centerX = event.changedTouches[0].clientX + scrollD("left") - clientLeft;
+              let centerY = event.changedTouches[0].clientY + scrollD("top") - clientTop;
               drawTransparentCircle(centerX, centerY);
             }
           }
@@ -123,8 +133,8 @@
               let clientLeft = ts.getClientLeft(canvas);
               let clientTop = ts.getClientTop(canvas);
               // 圆心坐标
-              let centerX = event.clientX + document.body.scrollLeft - clientLeft;
-              let centerY = event.clientY + document.body.scrollTop - clientTop;
+              let centerX = event.clientX + scrollD("left") - clientLeft;
+              let centerY = event.clientY + scrollD("top") - clientTop;
               if (event.which === 1) {
                 drawTransparentCircle(centerX, centerY);
               }

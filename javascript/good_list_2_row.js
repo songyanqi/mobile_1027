@@ -83,7 +83,7 @@ good_list_2_row.init = function (id, showSales) {
                             if (typeof callback == "function") {
                                 callback(data);
                             }
-                            window.bravetime.tj.pvSend('goods_list_d2refresh','goods_list_d2refresh_id'+pageIndex);
+                            // window.bravetime.tj.pvSend('goods_list_d2refresh','goods_list_d2refresh_id'+pageIndex);
 
                         }else{
                             con.html("没有更多商品了！");

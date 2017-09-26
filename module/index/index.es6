@@ -13,6 +13,8 @@ import NProgress from 'nprogress'
 import share from '../../src/common/js/module/share.js'
 import popup from '../../src/common/js/module/popup.js'
 import api from '../../utils/api.es6';
+import dialog from "../../utils/dialog.es6"
+import axios from"axios"
 
 export default {
   data() {
@@ -53,8 +55,17 @@ export default {
       menudata: {},
       page_index: 0,
       menuId: 8,
+
+      skinPackageList:"",
+      skinPackageobj:{},
+
+      index_header_style:{},
+      bottomTab:[],
+      bottomStyle:{}
+
     }
   },
+
   computed: {
     feedData() {
       return this.contentData.feedList
@@ -99,9 +110,116 @@ export default {
       setTimeout(function(){
         window.bravetime.initHead&&window.bravetime.initHead()
       },500)
+
+      that.getSkinPackage();
     })
   },
+
   methods: {
+
+    changStyle(json){
+      //初始化header透明
+      this.index_header_style.top_container={
+        'background': 'inherit',
+        "backgroundImage":"url("+json["8"].imageFilePath+")"
+      };
+      this.index_header_style.head={
+        'background': 'none'
+      };
+      this.index_header_style.v_menu={
+        'background': 'none'
+      };
+      //背景图片
+      this.index_header_style.top0={
+        "backgroundImage":"url("+json["8"].imageFilePath+")"
+      };
+      //搜索框的样式
+      this.index_header_style.search_input={
+        "opacity":json[1].alpha,
+        "backgroundColor":"#"+json[1].backgroundColor.substr(2)
+      };
+      //搜索icon
+      this.index_header_style.search_icon={
+        "backgroundImage":"url("+json["2"].imageFilePath+")"
+      };
+      //搜索框一般字
+      this.index_header_style.shop_name={
+        "color":"#"+json["1"].defaultTextColor.substr(2)
+      };
+      //搜索框特殊字
+      this.index_header_style.dav_base_red_color={
+        "color":"#"+json["1"].specificTextColor.substr(2)
+      };
+
+      //分类icon
+      this.index_header_style.classification_icon={
+        "backgroundImage":"url("+json["5"].imageFilePath+")"
+      };
+      //购物车icon
+      this.index_header_style.cart_icon={
+        "backgroundImage":"url("+json["6"].imageFilePath+")"
+      };
+      //购物车的数量
+      this.index_header_style.count={
+        "color":"#"+json["7"].textColor.substr(2),
+        "background":"#"+json["7"].backgroundColor.substr(2)
+      };
+      //二级菜单视图属性
+      this.index_header_style.li={
+        "color":"#"+json["9"].textColor.substr(2),
+        'background': 'none'
+      };
+      this.index_header_style.hoverSpan={
+        "borderBottom":"2px solid #"+json["9"].bottomLineColor.substr(2)
+      };
+      this.index_header_style.time_state_span_active={
+        "color":"#"+json["9"].textSelectedColor.substr(2)
+      };
+
+    },
+    getSkinPackage(){
+      var that = this;
+      var indexCount=0;
+
+      // 取localStorage改变样式
+      if(localStorage.getItem("skinPackage")) {
+        var skinInfo = JSON.parse((localStorage.getItem("skinPackage")));
+        skinInfo.map(function (item, index) {
+          var now = new Date().getTime().toString().substr(0,10);
+          var startTime = item.startTime;
+          var endTime = item.endTime;
+           if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
+            that.changStyle(item.json);
+           }
+        });
+      }
+      // 请求接口取到皮肤存到localStorage
+      var obj={
+        "elements":JSON.stringify(['skin'])
+      };
+      api("/api/mg/user/init/getInit",obj)
+        .then(function (result) {
+          if(result.code==0){
+            var store=result.data.list[0].listData;
+            store.map(function (item,index) {
+                item.json=JSON.parse(item.viewFileUrl);
+                indexCount++;
+                if(indexCount==store.length){
+                  localStorage.setItem("skinPackage",JSON.stringify(store));
+                }
+            });
+          }else{
+            if(result.data.msg){
+              dialog.alert('code:'+result.code+":msg"+result.data.msg);
+            }else{
+              dialog.alert('code:'+result.code);
+            }
+          }
+        })
+        .catch(function (e) {
+          //dialog.alert(e);
+        });
+    },
     /**
      * 初始化，调用后开始获取数据
      *
@@ -494,7 +612,6 @@ export default {
           }, 150)
         } else {
           var flag_name = 'flag_' + Date.now();
-          console.log(flag_name)
           window[flag_name] = false;
           setTimeout(function () {
             if (!window[flag_name]) {
@@ -540,7 +657,6 @@ export default {
         }, 150)
       } else {
         var flag_name = 'flag_' + Date.now();
-        console.log(flag_name)
         window[flag_name] = false;
         setTimeout(function () {
           if (!window[flag_name]) {
@@ -646,7 +762,6 @@ export default {
           common.checkRedirect(data);
 
           that.menudata = data.data;
-          console.log(that.menudata);
           that.getDataForUse(0);
           that.checkdownTip(data.visitor_status);
           // 设置分享信息

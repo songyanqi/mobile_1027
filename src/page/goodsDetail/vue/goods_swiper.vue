@@ -293,23 +293,17 @@
                 <div v-if = "singleactivity.typeId == 5" style = "height: 44px;">
                     <div v-if = "singleactivity.actTypeId == 6">
                         <span class = "timeLimit"></span>
-                        <span class = "limit_num">{{ infoobj.discountRatio }}</span>
+                        <span class = "limit_num">{{ infoobj.price.discountRatio }}</span>
                         <span class = "timeLimitz"></span>
                     </div>
                 </div>
             </div>
             <div class = "promote_cont" :class = "{ limit_cont: singleactivity.typeId == 5,sellKill_cont: singleactivity.typeId == 1,member_cont: singleactivity.typeId == 4 }">
                 <div v-if = "actendtime">
-                    <!-- <div> -->
-                      <div v-if = "(singleactivity.typeId == 5 || singleactivity.typeId == 2 || singleactivity.typeId == 4) && !isOver" class = "price_show">价格将恢复 ¥ {{ infoobj.shopPrice }}</div>
-                      <!-- <div v-if = "singleactivity.typeId == 8 && !isOver && visitorstatus == '3'" class = "price_show">会员返现将恢复为 ¥ {{ infoobj.normalIncome }}</div> -->
-                    <!-- </div> -->
+                    <div v-if = "(singleactivity.typeId == 5 || singleactivity.typeId == 2 || singleactivity.typeId == 4) && !isOver" class = "price_show">价格将恢复 ¥ {{ infoobj.price.shopPrice }}</div>
                     <div class = "overTimes" v-if ="isOver">
                         活动已结束
                     </div>
-                    <!-- <div class = "timeConts"
-                         v-else
-                         :class = "{price_show: singleactivity.typeId == '5' || singleactivity.typeId == 2 || singleactivity.typeId == 4 || (singleactivity.typeId == 8 && visitorstatus == '3')}"> -->
                     <div class = "timeConts"
                          v-else
                          :class = "{price_show: singleactivity.typeId == '5' || singleactivity.typeId == 2 || singleactivity.typeId == 4 }">

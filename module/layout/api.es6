@@ -1,6 +1,6 @@
 // var crypto = require('crypto')
 import md5 from 'crypto-js/md5.js';
-
+import util from "../../utils/utils.es6"
 let config = {
   feed:  '/api/m/index/index?t=' + Date.now(),
   like: '/api/m/index/guess?t=' + Date.now(),
@@ -27,13 +27,13 @@ let sortObj = (obj) => {
   let t = null
   let tValue = null
   let arrKey = ['shop_url','sess_key','device_token','format','ts','osv','wh','data_version']
-  var osv = "web_h5_*_*";
+  var osv = "web_h5_"+util.utils.getAppVersion_new()+"_*";
   let dataVersion = obj.str
   if(window.Units&&Units.isApp()&&Units.isIOS()){
-    osv = "web_ios_*_*";
+    osv = "web_ios_"+util.utils.getAppVersion_new()+"_*";
   }
   if(window.Units&&Units.isApp()&&Units.isAndroid()){
-      osv = "web_android_*_*";
+      osv = "web_android_"+util.utils.getAppVersion_new()+"_*";
   }
   let arrValue = []
   if (dataVersion){

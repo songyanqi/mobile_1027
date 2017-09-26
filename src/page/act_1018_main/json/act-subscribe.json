@@ -1,0 +1,146 @@
+[
+  {
+    "line1": "10月19日",
+    "line2": "1231点开抢",
+    "goodsList": [
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "111",
+        "originPrice": "200"
+      },
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "222",
+        "originPrice": "200"
+      },
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "333",
+        "originPrice": "200"
+      }
+    ]
+  },
+  {
+    "line1": "10月20日",
+    "line2": "2点开抢",
+    "goodsList": [
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "444",
+        "originPrice": "200"
+      },
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "555",
+        "originPrice": "200"
+      },
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "666",
+        "originPrice": "200"
+      }
+    ]
+  },
+  {
+    "line1": "10月19日",
+    "line2": "3点开抢",
+    "goodsList": [
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "777",
+        "originPrice": "200"
+      },
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "888",
+        "originPrice": "200"
+      },
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "999",
+        "originPrice": "200"
+      }
+    ]
+  },
+  {
+    "line1": "10月19日",
+    "line2": "4点开抢",
+    "goodsList": [
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "123",
+        "originPrice": "200"
+      },
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "321",
+        "originPrice": "200"
+      },
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "31",
+        "originPrice": "200"
+      }
+    ]
+  },
+  {
+    "line1": "10月19日",
+    "line2": "5点开抢",
+    "goodsList": [
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "23",
+        "originPrice": "200"
+      },
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "25",
+        "originPrice": "200"
+      },
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "346",
+        "originPrice": "200"
+      }
+    ]
+  },
+  {
+    "line1": "10月19日",
+    "line2": "6点开抢",
+    "goodsList": [
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "2345",
+        "originPrice": "200"
+      },
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "35",
+        "originPrice": "200"
+      },
+      {
+        "goodsId": "1",
+        "imgUrl": "//pic.davdian.com/supplier/2016/04/22/640_640_32bdcb0eb8451267de83dd3130342de8.jpg",
+        "actPrice": "123",
+        "originPrice": "200"
+      }
+    ]
+  }
+]

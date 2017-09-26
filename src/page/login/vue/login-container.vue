@@ -259,12 +259,12 @@
         if ((that.hname == 'bravetime' || ua.isDvdApp()) && that.response.visitor_status != 3) {
           /*登录成功后跳转到refer页*/
           if (that.referer) {
-            location.href = that.referer.replace(that.origin, that.response.shop_url);
+            window.location.replace(that.referer.replace(that.origin, that.response.shop_url));
           } else {
-            location.href = that.response.shop_url
+            window.location.replace(that.response.shop_url);
           }
         } else {
-          location.href = that.referer || '/';
+          window.location.replace(that.referer || '/');
         }
       },
       /*重置密码*/
