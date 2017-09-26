@@ -30,7 +30,8 @@
 .order_index .order_id .pull-right {
     position: relative;
     top: 8px;
-    font-size: 14px;
+    /*font-size: 14px;*/
+    font-size: 12px;
 }
 
 .kd_text {
@@ -428,6 +429,18 @@
     z-index: 10;
     top: 0;
     max-width: 640px;
+}
+.order_list_container .order_list_switcher:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid #e1e1e1;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
 }
 
 .order_list_container .no-order {
