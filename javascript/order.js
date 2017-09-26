@@ -1195,9 +1195,12 @@ jQuery(document).ready(function ($) {
         minutes = 00,
         seconds = 00;
     if (numTime > 0) {
-      hours = parseInt(numTime % oneDay / oneHour);
-      minutes = parseInt(numTime % oneDay % oneHour / oneMinute);
-      seconds = parseInt(numTime % oneDay % oneHour % oneMinute);
+      // hours = parseInt(numTime % oneDay / oneHour);
+      // minutes = parseInt(numTime % oneDay % oneHour / oneMinute);
+      // seconds = parseInt(numTime % oneDay % oneHour % oneMinute);
+      hours = Math.floor(numTime / 3600);
+      minutes = Math.floor((numTime / 60 % 60));
+      seconds = Math.floor((numTime % 60));
 
       hours = hours >= 10 ? hours : "0"+hours;
       minutes = minutes >= 10 ? minutes : "0"+minutes;
@@ -1209,9 +1212,12 @@ jQuery(document).ready(function ($) {
     cutTimer = setInterval(function () {
       if (numTime > 0) {
         numTime--;
-        hours = parseInt(numTime % oneDay / oneHour);
-        minutes = parseInt(numTime % oneDay % oneHour / oneMinute);
-        seconds = parseInt(numTime % oneDay % oneHour % oneMinute);
+        // hours = parseInt(numTime % oneDay / oneHour);
+        // minutes = parseInt(numTime % oneDay % oneHour / oneMinute);
+        // seconds = parseInt(numTime % oneDay % oneHour % oneMinute);
+        hours = Math.floor(numTime / 3600);
+        minutes = Math.floor((numTime / 60 % 60));
+        seconds = Math.floor((numTime % 60));
 
         hours = hours >= 10 ? hours : "0"+hours;
         minutes = minutes >= 10 ? minutes : "0"+minutes;
