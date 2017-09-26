@@ -52,7 +52,8 @@
         <!--助力活动结束-->
         <section v-if="response.actType != 0">
           <div class="ast_txt" style="padding:0.68rem 0 0.12rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
-          <a href="/act_1018_main.html" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</a>
+          <span v-if="response.actType ==1" @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</span>
+          <a v-if="response.actType ==2" href="/" class="share_btn bd_r" style="display: block;">去首页逛逛</a>
         </section>
         <section v-else>
           <!--进页面的时候已经助力过了-->
