@@ -52,8 +52,8 @@
         <!--助力活动结束-->
         <section v-if="response.actType != 0">
           <div class="ast_txt" style="padding:0.68rem 0 0.12rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
-          <span v-if="response.actType ==1" @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</span>
-          <a v-if="response.actType ==2" href="/" class="share_btn bd_r" style="display: block;">去首页逛逛</a>
+          <!--1018活动期间-->
+          <span @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</span>
         </section>
         <section v-else>
           <!--进页面的时候已经助力过了-->
@@ -118,16 +118,16 @@
             <!--没有好友支持-->
             <div v-if="response.source.supporterPrice == '0'" class="ast_txt" style="padding:0.68rem 0 0.32rem;">很遗憾没有得到好友的助力支持</div>
             <!--0元购-->
-            <div v-else class="ast_deep"
-                 style="padding:0.72rem 0 0.21rem">已得到{{response.source.supporterPrice}}元助力快去<span
-              v-if="response.source.surplusPrice == '0'" style="font-size: 0.24rem;">0元</span>抢购吧</div>
+            <div v-else class="ast_deep" style="padding:0.72rem 0 0.21rem">已得到{{response.source.supporterPrice}}元助力快去
+              <span v-if="response.source.surplusPrice == '0'" style="font-size: 0.24rem;">0元</span>抢购吧
+            </div>
             <a :href="response.activityLink" class="share_btn bd_r" style="display: block;">立即抢购</a>
           </span>
 
            <span v-if="response.actType == 2">
               <div class="ast_txt" style="padding:0.72rem 0 0.14rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
-              <a :href="response.activityLink" class="share_btn bd_r" style="display: block;">去店铺逛逛</a>
-          </span>
+              <span  @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</span>
+           </span>
 
         </section>
         <section v-else>

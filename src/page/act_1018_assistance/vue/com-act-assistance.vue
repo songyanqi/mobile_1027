@@ -460,9 +460,9 @@
   }
 
   .marguee_innder {
-    -webkit-animation: marguees 120s infinite linear;
-    -o-animation: marguees 120s infinite linear;
-    animation: marguees 120s infinite linear;
+    -webkit-animation: marguees 150s infinite linear;
+    -o-animation: marguees 150s infinite linear;
+    animation: marguees 150s infinite linear;
   }
 
   @keyframes marguees {
