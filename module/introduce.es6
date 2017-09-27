@@ -98,7 +98,6 @@ export default {
                         })
                     });
                     that.$nextTick(function () {
-                      alert(result.data.isAuditVersion);
                       that.changeIsAuditVersion(result.data.isAuditVersion);
                       if(result.data.isAuditVersion==0){
                         that.isAuditing=true;
