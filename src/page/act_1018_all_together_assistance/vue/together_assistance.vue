@@ -550,8 +550,7 @@
         var timestamp3 = now;
         var newDate = new Date();
         newDate.setTime(timestamp3 * 1000);
-        //return new Date(parseInt(now) * 1000).toLocaleString().replace("/", "-").replace("/", "-")
-        return newDate.format('yyyy-MM-dd h:m:s')
+        return newDate.format('yyyy-MM-dd hh:mm:ss')
       }
     },
   }
