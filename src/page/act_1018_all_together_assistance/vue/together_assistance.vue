@@ -1018,7 +1018,7 @@
     color: #FF4A7D;
     max-height: 4rem;
     /*min-height: auto;*/
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(1) {

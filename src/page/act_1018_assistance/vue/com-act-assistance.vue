@@ -11,10 +11,10 @@
     <div class="rool_tip">
       <div class="marguee">
         <div>
-          <swiper auto height="32px" direction="vertical" :interval=200000 class="text-scroll" :show-dots="false">
+          <swiper auto height="32px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
             <swiper-item v-for="(pr,index) in notices">
-              <p>{{notices[index]}}</p>
-              <p>{{notices[index+1]}}</p>
+              <p>{{notices[index].message}}</p>
+              <p v-if="notices[index+1]">{{notices[index+1].message}}</p>
             </swiper-item>
           </swiper>
         </div>
@@ -452,20 +452,20 @@
 
   .rool_tip {
     color: #BA2424;
-    font-size: 0.11rem;
-    border: 0.05rem solid #ffc23e;
+    font-size: 11px;
+    border: 5px solid #ffc23e;
     box-sizing: border-box;
     background: #FFFFFF;
     margin: 0 0.1rem;
-    padding: 0.1rem;
+    padding: 10px;
   }
 
   .rool_tip p {
-    line-height: 0.16rem;
+    line-height: 16px;
   }
 
   .marguee {
-    height: 0.32rem;
+    height: 32px;
     overflow: hidden;
   }
 
@@ -524,7 +524,7 @@
     padding: 0 10px 15px;
     color: #FF4A7D;
     max-height: 4rem;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(1) {

@@ -147,7 +147,7 @@
     padding: 0 10px 15px;
     color: #FF4A7D;
     max-height: 4rem;
-    overflow: scroll;
+    overflow-y: scroll;
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(1) {
