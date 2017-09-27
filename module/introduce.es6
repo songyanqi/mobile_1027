@@ -35,7 +35,8 @@ export default {
             bottomBtn: false,
             enterClassroomFlag: true,
             visitorFlag:-1,
-            name:"introduce"
+            name:"introduce",
+            isAuditing:false
         }
     },
     created(){
@@ -94,6 +95,15 @@ export default {
                             window.singlePicHold(ele);
                         })
                     });
+                    that.$nextTick(function () {
+                      that.changeIsAuditVersion(result.data.isAuditVersion);
+                      if(result.data.isAuditVersion==0){
+                        that.isAuditing=true;
+                      }else if(result.data.isAuditVersion==1){
+                        that.isAuditing=false;
+                      }
+                    });
+
                 }
                 if (window.appData){
                     window.appData.isShowAudio = 1
@@ -122,6 +132,29 @@ export default {
         });
     },
     methods: {
+        changeIsAuditVersion(data){
+            var flag=false;
+            if(data==0){
+              flag=true;
+            }else if(data==1){
+              flag=false;
+            }
+            if (window.backNewData) {
+              window.backNewData.$children.map(function (item) {
+                if (item.name == 'introduce') {
+                  item.$children.map(function (item2) {
+                    if (item2.childrenName == "feedList") {
+                      item2.$children.map(function (item3) {
+                        if (item3.name && item3.name == "title_0") {
+                          item3.isAuditing = flag;
+                        }
+                      })
+                    }
+                  })
+                }
+              })
+            }
+        },
         appUpData(){
             let that = this;
         //  用通用方法请求数据

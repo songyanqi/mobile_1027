@@ -26,33 +26,36 @@
                     成为会员免费听
                 </div>
                 <div class="invite" @click="invite" v-else>
-                    邀请好友<template v-if="income">赚: ¥{{income}}<img src="//pic.davdian.com/free/2017/07/28/centerShare.png"></template>
+                    邀请好友<template v-if="income && isAuditing">赚: ¥{{income}}<img src="//pic.davdian.com/free/2017/07/28/centerShare.png"></template>
                 </div>
             </div>
 
             <div class="btn_container right1">
                 <!--已报名的观众 或者嘉宾 或者讲师-->
-                <div class="enroll1" @click="enterClassroom" v-if="!entered&&(userRole==1||userRole==0||userTicket==1)">
+                <div class="enroll1" @click="enterClassroom" v-if="!isAuditing">
+                  进入课程 <span v-if='cache'>(已缓存)</span>
+                </div>
+                <div class="enroll1" @click="enterClassroom" v-if="isAuditing && !entered&&(userRole==1||userRole==0||userTicket==1)">
                     进入课程 <span v-if='cache'>(已缓存)</span>     
                 </div>
                 <!--未报名的 人 看到的 公开课课-->
-                <div class="enroll1" @click="enroll" v-if="!entered&&(userRole==2&&userTicket==0&&type==1)">
+                <div class="enroll1" @click="enroll" v-if="isAuditing && !entered&&(userRole==2&&userTicket==0&&type==1)">
                     马上报名
                 </div>
                 <!--付费课-->
-                <div class="enroll1" @click="buyClassroom" v-if="!entered&&visitor_status!=3&&(userRole==2 && userTicket==0 && type==2)">
+                <div class="enroll1" @click="buyClassroom" v-if="isAuditing && !entered&&visitor_status!=3&&(userRole==2 && userTicket==0 && type==2)">
                     购买课程: ¥{{money}}
                 </div>
                 <!--卖家看到的付费课-->
-                <div class="enroll1" @click="enroll" v-if="!entered&&visitor_status==3&&(userRole==2 && userTicket==0 && type==2)">
+                <div class="enroll1" @click="enroll" v-if="isAuditing && !entered&&visitor_status==3&&(userRole==2 && userTicket==0 && type==2)">
                     会员免费: <del>¥{{money}}</del>
                 </div>
                 <!--加密课-->
-                <div class="enroll1 need_invite" @click="alertCode" v-if="!entered&&(userRole==2&&userTicket==0&&type==3)">
+                <div class="enroll1 need_invite" @click="alertCode" v-if="isAuditing && !entered&&(userRole==2&&userTicket==0&&type==3)">
                     请输入邀请码报名
                 </div>
                 <!--正在报名的的 所有人-->
-                <div class="enroll1" v-if="entered">
+                <div class="enroll1" v-if="isAuditing && entered">
                     进入课程中
                 </div>
             </div>
