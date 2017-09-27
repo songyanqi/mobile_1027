@@ -50,10 +50,12 @@
             <p>1.助力时间：2017.10.01 00:00:00-2017.10.17 23:59:59；</p>
             <p>2.抢购时间：2017.10.18 00:00:00- 2017.10.18 23:59:59；</p>
             <p>3.活动仅限大V店会员参与；</p>
-            <p>4.每个活动商品每人可发起1次助力，分享至微信好友或朋友圈获得好友助力;</p>
-            <p>5. 每天仅有1次给好友助力的机会，成功助力后好友可获得随机减钱;</p>
-            <p>6.10月18日当天已活动价支付购买，支付成功后，会将该商品得到的助力金额以返现的形式返到【我的】－【总额】－【待结算金额】－【其他收入】里30天后没有退货转到【待提现金额】，最高可0元抢购该商品。</p>
-            <p>7.已发起的助力商品可在【我的10.18】中查看；</p>
+            <p>4.邀请好友助力可获得随机减钱；</p>
+            <p>5.每天仅有1次给好友助力的机会，成功助力即可给好友随机减钱，还有机会抽取iphone8；</p>
+            <p>6.10月18日当天以活动价支付购买活动商品，支付成功后该商品得到的助力金额将以返现的形式返到【我的】－【总额】－【待结算金额】－【其他收入】里，30天后如果没有退货将转到【待提现金额】；</p>
+            <p>7.已发起的助力商品可在【我的10.18】中查看，商品库存有限，助力结束后10月18日当天请尽快购买支付，只有成功支付商品，助力减钱金额才能返现，最高返该商品的到手金额；</p>
+            <p>8.其中爸爸的选择纸尿裤和羽绒服这两款商品助力所减金额，最晚于10月19日24点前返现到账，其他商品将在商品支付成功后实时返现；</p>
+            <p>9.详情可咨询大V店客服。</p>
           </div>
           <div @click="close_what_invite"></div>
         </div>
@@ -460,9 +462,9 @@
   }
 
   .marguee_innder {
-    -webkit-animation: marguees 150s infinite linear;
-    -o-animation: marguees 150s infinite linear;
-    animation: marguees 150s infinite linear;
+    -webkit-animation: marguees 256s infinite linear;
+    -o-animation: marguees 256s infinite linear;
+    animation: marguees 256s infinite linear;
   }
 
   @keyframes marguees {
@@ -507,12 +509,14 @@
     border-radius: 0.04rem;
     animation: com-alert-animation 0.5s;
     width: 73.333%;
-    min-height: 200px;
+    /*min-height: 200px;*/
     position: relative;
     text-align: center;
     background-color: #FFFFFF;
     padding: 0 10px 15px;
-    color: #FF4A7D
+    color: #FF4A7D;
+    max-height: 4rem;
+    overflow: scroll;
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(1) {
