@@ -125,6 +125,7 @@
     },
 
     mounted(){
+        alert(1);
       var that=this;
 
       api("/api/mg/sale/bandLitUp/getCenterBands")
