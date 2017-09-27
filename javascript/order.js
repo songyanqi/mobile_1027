@@ -1181,7 +1181,6 @@ jQuery(document).ready(function ($) {
         }
     }
     var cutTimer;
-
   //预定商品倒计时
   function cutDown(numTime) {
     $(".orderSuccess").show();
@@ -1231,7 +1230,7 @@ jQuery(document).ready(function ($) {
           $(".order_presale").html("<div class = 'overCutDown'>尾款超时未支付，交易关闭</div>");
         }
       }
-    },1000); 
+    },1000);
   };
 
   function changeTips() {
