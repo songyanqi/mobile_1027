@@ -465,7 +465,7 @@
                 if (response.data.lotteryResult == 'success') {
                   that.response.supporter.isPrizes = 1
                 } else {
-                  that.response.supporter.isPrizes = 1
+                  that.response.supporter.isPrizes = 0
                 }
               }
             },
