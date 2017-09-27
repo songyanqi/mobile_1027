@@ -108,6 +108,7 @@
   import util from "../../../../utils/utils.es6"
   import native from "../../../../src/common/js/module/native.js"
   import login from "../../../../src/common/js/module/login.js"
+  import share from "../../../../src/common/js/module/share.js"
   export default{
     data(){
         return {
@@ -125,9 +126,13 @@
     },
 
     mounted(){
-        alert(1);
       var that=this;
-
+      share.setShareInfo({
+        title: "最受欢迎的100个品牌贺3周年庆，这是要搞大事情！",
+        desc: "大V店周年庆|这次玩大了！点亮100个品牌，周年庆优惠由你定，快去参加>",
+        link: window.location.href,
+        imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/16/1.png"
+      });
       api("/api/mg/sale/bandLitUp/getCenterBands")
         .then(function (result) {
             if(result.code==0){

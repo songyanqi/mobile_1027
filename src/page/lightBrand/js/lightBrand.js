@@ -45,6 +45,7 @@ new Vue({
         });
 
         // 设置分享信息
+
         try {
           share.setShareInfo({
             title: "最受欢迎的100个品牌贺3周年庆，这是要搞大事情！",
