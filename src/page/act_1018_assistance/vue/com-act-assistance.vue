@@ -10,8 +10,13 @@
     <!--滚动公告-->
     <div class="rool_tip">
       <div class="marguee">
-        <div :class="{'marguee_innder':marguee}">
-          <p v-for="pr in notices">{{pr.message}}</p>
+        <div>
+          <swiper auto height="32px" direction="vertical" :interval=200000 class="text-scroll" :show-dots="false">
+            <swiper-item v-for="(pr,index) in notices">
+              <p>{{notices[index]}}</p>
+              <p>{{notices[index+1]}}</p>
+            </swiper-item>
+          </swiper>
         </div>
       </div>
     </div>
@@ -68,6 +73,7 @@
   import login from '../../../common/js/module/login.js';
   import native from "../../../common/js/module/native";
   import popup from "../../../common/js/module/popup.js";
+  import { Swiper, SwiperItem } from 'vux'
   export default {
     props: {
       response: {
@@ -81,31 +87,33 @@
         marguee:false
       }
     },
-    components: {},
+    components: {
+      Swiper,
+      SwiperItem
+    },
     computed: {
       notices:function () {
         var that = this;
         if(that.response.notice) {
-          if (that.response.notice.length < 100) {
-            var announcementData = [];
-            announcementData = that.response.notice;
-            let nums = 100 - that.response.notice.length;
-            for (var i = 0; i < nums; i++) {
-              announcementData.push(that.response.notice[i])
-            }
-            that.response.notice = announcementData;
-            setTimeout(function () {
-              that.marguee = true;
-            },1500);
-            return that.response.notice;
-          }else{
-            setTimeout(function () {
-              that.marguee = true;
-            },1500);
+//          if (that.response.notice.length < 100) {
+//            var announcementData = [];
+//            announcementData = that.response.notice;
+//            let nums = 100 - that.response.notice.length;
+//            for (var i = 0; i < nums; i++) {
+//              announcementData.push(that.response.notice[i])
+//            }
+//            that.response.notice = announcementData;
+//            setTimeout(function () {
+//              that.marguee = true;
+//            },1500);
+//            return that.response.notice;
+//          }else{
+//            setTimeout(function () {
+//              that.marguee = true;
+//            },1500);
             return that.response.notice;
           }
         }
-      }
     },
     watch: {
 
@@ -462,9 +470,9 @@
   }
 
   .marguee_innder {
-    -webkit-animation: marguees 256s infinite linear;
-    -o-animation: marguees 256s infinite linear;
-    animation: marguees 256s infinite linear;
+    /*-webkit-animation: marguees 256s infinite linear;*/
+    /*-o-animation: marguees 256s infinite linear;*/
+    /*animation: marguees 256s infinite linear;*/
   }
 
   @keyframes marguees {

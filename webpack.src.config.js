@@ -8,7 +8,7 @@ import fs from 'fs';
 
 module.exports = function (jsPath, staticPath) {
   let entry = {
-    'static/common/js/autoRootSize': './src/common/js/autoRootSize.js',
+    // 'static/common/js/autoRootSize': './src/common/js/autoRootSize.js',
   };
 
   // 自动添加src下的JS
@@ -21,7 +21,7 @@ module.exports = function (jsPath, staticPath) {
     // console.log(filePath);
     // console.log(fs.existsSync(filePath));
     let result = /src[/](page[/].*).js/.exec(filePath);
-    let dest = `static/${result[1]}`;
+    let dest = `${result[1]}`;
     let src = `./src/${result[1]}.js`;
     entry[dest] = src;
     // console.log(`${dest}: ${src}`);
@@ -64,11 +64,11 @@ module.exports = function (jsPath, staticPath) {
     plugins: [
       new ExtractTextPlugin("[name].css"),
       // 将公共代码抽离出来合并为一个文件
-      // new webpack.optimize.CommonsChunkPlugin({
-      //   name: "commons",
-      //   filename: 'static/common/js/common.js',
-      //   minChunks: 2
-      // }),
+      new webpack.optimize.CommonsChunkPlugin({
+        name: "commons",
+        filename: 'static/common/js/common.js',
+        minChunks: 10
+      }),
     ],
     externals: {
       "jquery": "$",
