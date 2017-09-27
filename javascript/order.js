@@ -1182,7 +1182,6 @@ jQuery(document).ready(function ($) {
     }
     var cutTimer;
 
-
   //预定商品倒计时
   function cutDown(numTime) {
     $(".orderSuccess").show();
@@ -1212,6 +1211,7 @@ jQuery(document).ready(function ($) {
     cutTimer = setInterval(function () {
       if (numTime > 0) {
         numTime--;
+        window.presale_surplus_time = numTime;
         // hours = parseInt(numTime % oneDay / oneHour);
         // minutes = parseInt(numTime % oneDay % oneHour / oneMinute);
         // seconds = parseInt(numTime % oneDay % oneHour % oneMinute);
