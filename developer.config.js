@@ -15,6 +15,6 @@
 export default {
   //env_stage: 'beta',
   //env_num: '2',
-  // page: '{my_Inviter,my_invitation_code,my_adviser}',
-  // webpack: false,
+  page: '{act_1018_main,111}',
+  webpack: false,
 };
