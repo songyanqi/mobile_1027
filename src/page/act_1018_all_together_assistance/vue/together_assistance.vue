@@ -67,11 +67,17 @@
             <div class="ast_txt" v-if="!date17" style="padding:0.1rem 0 0.2rem;">别忘啦，明天还可以帮好友助力哦</div>
             <!--展示抽奖-->
             <div class="awd_touch">
-              <div class="awd_pre" :class="['awd_no','awd_yes'][response.supporter.isPrizes]">
-                <div v-if="response.supporter.isPrizes == 0" class="awd_title">很遗憾 未中奖</div>
-                <div v-if="response.supporter.isPrizes == 0" class="awd_tip">明天助力再赢iPhone8吧</div>
-                 <div v-if="response.supporter.isPrizes == 1" class="awd_title">恭喜你被iPhone8砸中了</div>
-                <div v-if="response.supporter.isPrizes == 1" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
+              <div class="awd_pre" :class="{'awd_no':response.supporter.isPrizes == 0,'awd_yes':response.supporter.isPrizes == 1}">
+                  <!--未中奖-->
+                  <section  v-if="response.supporter.isPrizes == 0">
+                    <div class="awd_title">很遗憾 未中奖</div>
+                    <div class="awd_tip">明天助力再赢iPhone8吧</div>
+                  </section>
+                  <!--中奖-->
+                  <section v-if="response.supporter.isPrizes == 1">
+                    <div class="awd_title">恭喜你被iPhone8砸中了</div>
+                    <div class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
+                  </section>
                 <!--没抽奖时候-->
                 <com-scratch-card v-if="response.supporter.isLottery == 0 && touch200 < 120" @touchmove="touch_move"
                                   @mousemove="touch_move" @touchstart="start_awd" @mousedown="start_awd"
@@ -229,7 +235,28 @@
   import native from '../../../common/js/module/native.js';
   import {Swiper, SwiperItem} from 'vux'
   import login from '../../../common/js/module/login.js';
-  //  login.needLogin();
+  /*时间格式化*/
+  Date.prototype.format = function(format) {
+    var date = {
+      "M+": this.getMonth() + 1,
+      "d+": this.getDate(),
+      "h+": this.getHours(),
+      "m+": this.getMinutes(),
+      "s+": this.getSeconds(),
+      "q+": Math.floor((this.getMonth() + 3) / 3),
+      "S+": this.getMilliseconds()
+    };
+    if (/(y+)/i.test(format)) {
+      format = format.replace(RegExp.$1, (this.getFullYear() + '').substr(4 - RegExp.$1.length));
+    }
+    for (var k in date) {
+      if (new RegExp("(" + k + ")").test(format)) {
+        format = format.replace(RegExp.$1, RegExp.$1.length == 1
+          ? date[k] : ("00" + date[k]).substr(("" + date[k]).length));
+      }
+    }
+    return format;
+  };
   export default {
     props: {},
     data() {
@@ -434,12 +461,11 @@
             dataType: 'json',
             data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
             success(response) {
-
               if (!response.code) {
                 if (response.data.lotteryResult == 'success') {
-                  that.awd_type = 2
+                  that.response.supporter.isPrizes = 1
                 } else {
-                  that.awd_type = 1
+                  that.response.supporter.isPrizes = 1
                 }
               }
             },
@@ -521,7 +547,11 @@
         return format;
       },
       formatDate(now) {
-        return new Date(parseInt(now) * 1000).toLocaleString().replace("/", "-").replace("/", "-")
+        var timestamp3 = now;
+        var newDate = new Date();
+        newDate.setTime(timestamp3 * 1000);
+        //return new Date(parseInt(now) * 1000).toLocaleString().replace("/", "-").replace("/", "-")
+        return newDate.format('yyyy-MM-dd h:m:s')
       }
     },
   }
