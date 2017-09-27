@@ -42,12 +42,14 @@ export default {
     created(){
         let that = this;
         //  用通用方法请求数据
+        // console.log(common);
         common.getDataWithSign({
             url:"/api/mg/content/course/detail",
             dataType:"json",
             updata:{courseId:that.courseId},
             type:"post",
             success:function (result) {
+                console.log(3455)
                 if (result.data.userId){
                     that.userId = result.data.userId
                     window.userId = result.data.userId
@@ -96,6 +98,7 @@ export default {
                         })
                     });
                     that.$nextTick(function () {
+                      alert(result.data.isAuditVersion);
                       that.changeIsAuditVersion(result.data.isAuditVersion);
                       if(result.data.isAuditVersion==0){
                         that.isAuditing=true;
@@ -103,7 +106,6 @@ export default {
                         that.isAuditing=false;
                       }
                     });
-
                 }
                 if (window.appData){
                     window.appData.isShowAudio = 1
