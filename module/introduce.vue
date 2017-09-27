@@ -22,12 +22,17 @@
         <div class="invite_and_enroll" v-if="!error && deleteFlag && visitorFlag!=0" >
             <div class='bottomBtn' v-if='bottomBtn'></div>
             <div class="btn_container left1">
-                <div class="invite" @click="invite1" v-if='visitor_status!=3 && type==2'>
+                <div class="invite" @click="invite" v-if="!isAuditing">
+                  邀请好友<template v-if="income && isAuditing">赚: ¥{{income}}<img src="//pic.davdian.com/free/2017/07/28/centerShare.png"></template>
+                </div>
+                <template v-if="isAuditing">
+                  <div class="invite" @click="invite1" v-if='visitor_status!=3 && type==2'>
                     成为会员免费听
-                </div>
-                <div class="invite" @click="invite" v-else>
-                    邀请好友<template v-if="income && isAuditing">赚: ¥{{income}}<img src="//pic.davdian.com/free/2017/07/28/centerShare.png"></template>
-                </div>
+                  </div>
+                  <div class="invite" @click="invite" v-else>
+                    邀请好友<template v-if="income">赚: ¥{{income}}<img src="//pic.davdian.com/free/2017/07/28/centerShare.png"></template>
+                  </div>
+                </template>
             </div>
 
             <div class="btn_container right1">
