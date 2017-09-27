@@ -4,13 +4,10 @@ var path = require("path");
 const vuxLoader = require('vux-loader');
 import glob from 'glob';
 import fs from 'fs';
-
-
 module.exports = function (jsPath, staticPath) {
   let entry = {
     'static/common/js/autoRootSize': './src/common/js/autoRootSize.js',
   };
-
   // 自动添加src下的JS
   glob.sync(`${__dirname}/${jsPath}`).forEach(function (filePath) {
     let check = /src\/page\/(.*)\/js\/(.*)\.js/.exec(filePath);
@@ -26,7 +23,6 @@ module.exports = function (jsPath, staticPath) {
     entry[dest] = src;
     // console.log(`${dest}: ${src}`);
   });
-
   var webpackConfig = {
     entry: entry,
     output: {
@@ -87,7 +83,6 @@ module.exports = function (jsPath, staticPath) {
       }
     }
   };
-
   return vuxLoader.merge(webpackConfig, {
     options: {},
     plugins: [
@@ -96,5 +91,4 @@ module.exports = function (jsPath, staticPath) {
       }
     ]
   });
-
 };
