@@ -167,6 +167,10 @@
       }
     },
     created() {
+      var that = this;
+      if(login.isLogined()){
+        location.href = that.referer || "/";
+      }
     },
     mounted() {
       var that = this;
@@ -733,11 +737,13 @@
     border-radius: 0.04rem;
     animation: com-alert-animation 0.5s;
     width: 73.333%;
-    min-height: 200px;
+    /*min-height: 200px;*/
     position: relative;
     text-align: center;
     background-color: #FFFFFF;
     padding: 0 10px 15px;
+    max-height: 4rem;
+    overflow: scroll;
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(1) {

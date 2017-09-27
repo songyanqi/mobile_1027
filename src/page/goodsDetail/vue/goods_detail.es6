@@ -11,9 +11,8 @@ import confirm from './confirm.vue';
 import popup from '../../../common/js/module/popup.js';
 import share from '../../../common/js/module/share.js';
 import {isTryShop} from "../../../../utils/utils.es6";
-
+import login from "../../../common/js/module/login.js";
 require('babel-polyfill');
-
 window.tj_path = "detail";
 base.init();
 //引入utils.es6;
@@ -354,6 +353,10 @@ export default {
       let that = this;
       if (!this.secKill) {
         if (isBuy == 1) {
+          if (that.visitorStatus != '3') {
+            login.needLogin();
+            return;
+          }
           // 购买就直接跳走
           let goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
           setTimeout(() => {
@@ -843,7 +846,7 @@ export default {
               window.desc = dataBasis.shareRecommend;
 
               } else {
-                popup.toast(res.data.msg,3000);
+                popup.toast(res.msg,3000);
               }
             },
             error (err) {
@@ -1059,6 +1062,7 @@ export default {
         base.ready();
         if (shareMoney > 0&& that.visitorStatus == '3') {
           native.Browser.setHead({
+            backBtn: 1,
             shareMoney: shareMoney + "",
             shareMoneyStr: '赚' + shareMoney + '元',
           });
