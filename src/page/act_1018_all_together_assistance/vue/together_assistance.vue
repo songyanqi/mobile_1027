@@ -75,7 +75,7 @@
                 <!--没抽奖时候-->
                 <com-scratch-card v-if="response.supporter.isLottery == 0 && touch200 < 120" @touchmove="touch_move"
                                   @mousemove="touch_move" @touchstart="start_awd" @mousedown="start_awd"
-                                  mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem"></com-scratch-card>
+                                  mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="20px"></com-scratch-card>
               </div>
             </div>
             <div style="height: 0.2rem;"></div>
