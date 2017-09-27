@@ -353,7 +353,7 @@ export default {
       let that = this;
       if (!this.secKill) {
         if (isBuy == 1) {
-          if (that.visitorStatus != '3') {
+          if (!login.isLogined()) {
             login.needLogin();
             return;
           }
