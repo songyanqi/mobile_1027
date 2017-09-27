@@ -406,6 +406,7 @@
                                           }else if(respone.data.data.isAuditVersion==1){
                                             that.isAuditing=false;
                                           }
+
                                           that.userTicket = respone.data.data.userTicket
                                           that.courseTypeSwitch = respone.data.data.courseTypeSwitch
                                           that.coursePriceSwitch = respone.data.data.coursePriceSwitch
