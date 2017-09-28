@@ -11,9 +11,8 @@
     <div class="rool_tip">
       <div class="marguee">
         <div>
-          <swiper auto height="32px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
+          <swiper loop auto height="32px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
             <swiper-item v-for="(pr,index) in notices" v-if="index%2==0">
-              <!--<p>{{notices[index].message}}</p>-->
               <p v-if="notices[index]">{{notices[index].message}}</p>
               <p v-if="notices[index+1]">{{notices[index+1].message}}</p>
             </swiper-item>
