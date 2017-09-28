@@ -1010,13 +1010,13 @@
     border-radius: 0.04rem;
     animation: com-alert-animation 0.5s;
     width: 73.333%;
-    /*min-height: 200px;*/
+    min-height: 200px;
     position: relative;
     text-align: center;
     background-color: #FFFFFF;
     padding: 0 10px 15px;
     color: #FF4A7D;
-    max-height: 4rem;
+    /*max-height: 4rem;*/
     /*min-height: auto;*/
     overflow-y: scroll;
   }
@@ -1033,6 +1033,8 @@
     text-align: left;
     line-height: 20px;
     padding-top: 5px;
+    max-height: 4rem;
+    overflow-y: scroll;
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(3) {
