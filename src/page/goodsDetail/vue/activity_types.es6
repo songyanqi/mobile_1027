@@ -75,7 +75,7 @@ export default {
       },
       handleModalHide() {
         document.body.classList.remove("bodyFix");
-        document.body.scrollTop = this.scrollTop;
+        $(document).scrollTop(this.scrollTop);
       },
         handleActivity () {
             this.activityShow = !this.activityShow;

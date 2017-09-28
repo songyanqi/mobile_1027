@@ -4,7 +4,7 @@
     <div v-if="response.type == '0'" class="title_img">
       <img style="width:1.8rem;" src="//pic.davdian.com/free/20170915_assistance/huhaoyou2.png">
       <div class="dtime" v-if="response.actType == 0">
-        {{goodsdata.goods.overTime | formatRemainTime}}
+        距助力结束：{{goodsdata.goods.overTime | formatRemainTime}}
       </div>
       <div class="qiqiu_ing">
         <img src="//pic.davdian.com/free/20170915_assistance/qiqiu.png">
@@ -53,7 +53,8 @@
         <section v-if="response.actType != 0">
           <div class="ast_txt" style="padding:0.68rem 0 0.12rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
           <!--1018活动期间-->
-          <span @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</span>
+          <span @click="go_main('/act_1018_main.html')" class="share_btn bd_r"
+                style="display: block;">去10.18周年庆主会场逛逛</span>
         </section>
         <section v-else>
           <!--进页面的时候已经助力过了-->
@@ -66,15 +67,21 @@
             <div class="ast_txt" v-if="!date17" style="padding:0.1rem 0 0.2rem;">别忘啦，明天还可以帮好友助力哦</div>
             <!--展示抽奖-->
             <div class="awd_touch">
-              <div class="awd_pre" :class="['awd_no','awd_yes'][response.supporter.isPrizes]">
-                <div v-if="response.supporter.isPrizes == 0" class="awd_title">很遗憾 未中奖</div>
-                <div v-if="response.supporter.isPrizes == 0" class="awd_tip">明天助力再赢iPhone8吧</div>
-                 <div v-if="response.supporter.isPrizes == 1" class="awd_title">恭喜你被iPhone8砸中了</div>
-                <div v-if="response.supporter.isPrizes == 1" class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
+              <div class="awd_pre" :class="{'awd_no':response.supporter.isPrizes == 0,'awd_yes':response.supporter.isPrizes == 1}">
+                  <!--未中奖-->
+                  <section  v-if="response.supporter.isPrizes == 0">
+                    <div class="awd_title">很遗憾 未中奖</div>
+                    <div class="awd_tip">明天助力再赢iPhone8吧</div>
+                  </section>
+                  <!--中奖-->
+                  <section v-if="response.supporter.isPrizes == 1">
+                    <div class="awd_title">恭喜你被iPhone8砸中了</div>
+                    <div class="awd_tip">您的大V账户会收到红包凭证，请等待工作人员联系您</div>
+                  </section>
                 <!--没抽奖时候-->
                 <com-scratch-card v-if="response.supporter.isLottery == 0 && touch200 < 120" @touchmove="touch_move"
                                   @mousemove="touch_move" @touchstart="start_awd" @mousedown="start_awd"
-                                  mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="0.2rem"></com-scratch-card>
+                                  mask-tip="刮一刮，抽iPhone8大奖" font-color="#FFFFFF" font-size="20px"></com-scratch-card>
               </div>
             </div>
             <div style="height: 0.2rem;"></div>
@@ -126,9 +133,8 @@
 
            <span v-if="response.actType == 2">
               <div class="ast_txt" style="padding:0.72rem 0 0.14rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
-              <span  @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</span>
+              <span @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</span>
            </span>
-
         </section>
         <section v-else>
           <!--获得0元购机会-->
@@ -208,10 +214,12 @@
             <p>1.助力时间：2017.10.01 00:00:00-2017.10.17 23:59:59；</p>
             <p>2.抢购时间：2017.10.18 00:00:00- 2017.10.18 23:59:59；</p>
             <p>3.活动仅限大V店会员参与；</p>
-            <p>4.每个活动商品每人可发起1次助力，分享至微信好友或朋友圈获得好友助力;</p>
-            <p>5. 每天仅有1次给好友助力的机会，成功助力后好友可获得随机减钱;</p>
-            <p>6.10月18日当天已活动价支付购买，支付成功后，会将该商品得到的助力金额以返现的形式返到【我的】－【总额】－【待结算金额】－【其他收入】里30天后没有退货转到【待提现金额】，最高可0元抢购该商品。</p>
-            <p>7.已发起的助力商品可在【我的10.18】中查看；</p>
+            <p>4.邀请好友助力可获得随机减钱；</p>
+            <p>5.每天仅有1次给好友助力的机会，成功助力即可给好友随机减钱，还有机会抽取iphone8；</p>
+            <p>6.10月18日当天以活动价支付购买活动商品，支付成功后该商品得到的助力金额将以返现的形式返到【我的】－【总额】－【待结算金额】－【其他收入】里，30天后如果没有退货将转到【待提现金额】；</p>
+            <p>7.已发起的助力商品可在【我的10.18】中查看，商品库存有限，助力结束后10月18日当天请尽快购买支付，只有成功支付商品，助力减钱金额才能返现，最高返该商品的到手金额；</p>
+            <p>8.其中爸爸的选择纸尿裤和羽绒服这两款商品助力所减金额，最晚于10月19日24点前返现到账，其他商品将在商品支付成功后实时返现；</p>
+            <p>9.详情可咨询大V店客服。</p>
           </div>
           <div @click="rule_form = false"></div>
         </div>
@@ -227,7 +235,28 @@
   import native from '../../../common/js/module/native.js';
   import {Swiper, SwiperItem} from 'vux'
   import login from '../../../common/js/module/login.js';
-  //  login.needLogin();
+  /*时间格式化*/
+  Date.prototype.format = function(format) {
+    var date = {
+      "M+": this.getMonth() + 1,
+      "d+": this.getDate(),
+      "h+": this.getHours(),
+      "m+": this.getMinutes(),
+      "s+": this.getSeconds(),
+      "q+": Math.floor((this.getMonth() + 3) / 3),
+      "S+": this.getMilliseconds()
+    };
+    if (/(y+)/i.test(format)) {
+      format = format.replace(RegExp.$1, (this.getFullYear() + '').substr(4 - RegExp.$1.length));
+    }
+    for (var k in date) {
+      if (new RegExp("(" + k + ")").test(format)) {
+        format = format.replace(RegExp.$1, RegExp.$1.length == 1
+          ? date[k] : ("00" + date[k]).substr(("" + date[k]).length));
+      }
+    }
+    return format;
+  };
   export default {
     props: {},
     data() {
@@ -432,12 +461,11 @@
             dataType: 'json',
             data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
             success(response) {
-
               if (!response.code) {
                 if (response.data.lotteryResult == 'success') {
-                  that.awd_type = 2
+                  that.response.supporter.isPrizes = 1
                 } else {
-                  that.awd_type = 1
+                  that.response.supporter.isPrizes = 0
                 }
               }
             },
@@ -519,7 +547,10 @@
         return format;
       },
       formatDate(now) {
-        return new Date(parseInt(now) * 1000).toLocaleString().replace("/", "-").replace("/", "-")
+        var timestamp3 = now;
+        var newDate = new Date();
+        newDate.setTime(timestamp3 * 1000);
+        return newDate.format('yyyy-MM-dd hh:mm:ss')
       }
     },
   }
@@ -979,12 +1010,15 @@
     border-radius: 0.04rem;
     animation: com-alert-animation 0.5s;
     width: 73.333%;
-    min-height: 200px;
+    /*min-height: 200px;*/
     position: relative;
     text-align: center;
     background-color: #FFFFFF;
     padding: 0 10px 15px;
-    color: #FF4A7D
+    color: #FF4A7D;
+    max-height: 4rem;
+    /*min-height: auto;*/
+    overflow-y: scroll;
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(1) {

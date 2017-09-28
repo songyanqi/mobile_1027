@@ -1,5 +1,6 @@
 // var crypto = require('crypto')
 import md5Third from 'crypto-js/md5.js';
+import util from "../../utils/utils.es6"
 
 
 let strSign = (str,flag,obj = {}) => {
@@ -21,12 +22,12 @@ let sortObj = (dataVersion, flag, obj = {}) => {//传入当前的信息名称 �
     /**
      * 获取当前的版本号信息,如果没有取0
      */
-    var osv = "web_h5_*_*";
+    var osv = "web_h5_"+util.utils.getAppVersion_new()+"_*";
     if(window.Units&&Units.isApp()&&Units.isIOS()){
-        osv = "web_ios_*_*";
+        osv = "web_ios_"+util.utils.getAppVersion_new()+"_*";
     }
     if(window.Units&&Units.isApp()&&Units.isAndroid()){
-        osv = "web_android_*_*";
+        osv = "web_android_"+util.utils.getAppVersion_new()+"_*";
     }
     let arrValue = [];
     if(flag && !window.isPrivateMode){

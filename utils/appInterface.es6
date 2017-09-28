@@ -43,24 +43,6 @@ iosInterface.getShareInfo = function () {
 iosInterface.refreshPreviousPageData = function () {
   backNewData.$children[0].appUpData()
 };
-iosInterface.changeIsAuditing = function () {
-  alert(1);
-  if (window.backNewData) {
-    window.backNewData.$children.map(function (item) {
-      if (item.name == 'introduce') {
-        item.$children.map(function (item2) {
-          if (item2.childrenName == "feedList") {
-            item2.$children.map(function (item3) {
-              if (item3.name == "title_0") {
-                item3.isAuditing = true;
-              }
-            })
-          }
-        })
-      }
-    })
-  }
-}
 //state 0表示暂停，1表示播放
 iosInterface.getAudioState = function (obj) {
   if (window.landingPage) {
