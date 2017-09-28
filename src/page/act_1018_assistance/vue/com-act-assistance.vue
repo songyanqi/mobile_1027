@@ -107,16 +107,27 @@
       rule_form: function () {
         var that = this;
         if (that.rule_form) {
-          document.documentElement.style.height = "100%";
-          document.documentElement.style.overflowY = "hidden";
-        }else{
-          document.documentElement.style.height = "auto";
-          document.documentElement.style.overflowY = "scroll";
+//          document.documentElement.style.height = "100%";
+//          document.documentElement.style.overflowY = "hidden";
+          if (document.documentElement && document.documentElement.scrollTop) {
+            this.scrollTop = document.documentElement.scrollTop;
+          } else if (document.body) {
+            this.scrollTop = document.body.scrollTop;
+          }
+          document.body.style.top = -this.scrollTop + 'px';
+          document.body.classList.add("bodyFix");
+
+        } else {
+          //document.documentElement.style.height = "auto";
+          //document.documentElement.style.overflowY = "scroll";
+          document.body.classList.remove("bodyFix");
+          $(document).scrollTop(this.scrollTop);
+
         }
       }
     },
     created() {
-
+      alert("mm")
     },
     mounted() {
 
@@ -237,12 +248,13 @@
 
   .com-box div ul li .img_container_inner {
     width: 0.8rem;
+    height: 0.8rem;
     position: relative;
   }
 
   .com-box div ul li .img_container_inner img {
-    width: 100%;
-    height: 100%;
+    width: 0.8rem;
+    height: 0.8rem;
   }
 
   .com-box div ul li .order_good_info_container {

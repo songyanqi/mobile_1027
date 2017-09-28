@@ -741,7 +741,7 @@
     position: relative;
     text-align: center;
     background-color: #FFFFFF;
-    padding: 0 10px 15px;
+    padding: 0 0 15px;
     /*max-height: 4rem;*/
     /*overflow-y: scroll;*/
   }
@@ -759,7 +759,7 @@
     color: #333333;
     text-align: left;
     line-height: 20px;
-    padding-top: 5px;
+    padding: 5px 10px 0;
     max-height: 4rem;
     overflow-y: scroll;
   }
