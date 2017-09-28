@@ -59,11 +59,11 @@ module.exports = function (jsPath, staticPath) {
     plugins: [
       new ExtractTextPlugin("[name].css"),
       // 将公共代码抽离出来合并为一个文件
-      // new webpack.optimize.CommonsChunkPlugin({
-      //   name: "commons",
-      //   filename: 'common/js/common.js',
-      //   minChunks: 10
-      // }),
+      new webpack.optimize.CommonsChunkPlugin({
+        name: "commons",
+        filename: 'common/js/common.js',
+        minChunks: 10
+      }),
     ],
     externals: {
       "jquery": "$",
