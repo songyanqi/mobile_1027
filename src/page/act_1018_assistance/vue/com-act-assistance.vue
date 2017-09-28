@@ -107,8 +107,6 @@
       rule_form: function () {
         var that = this;
         if (that.rule_form) {
-//          document.documentElement.style.height = "100%";
-//          document.documentElement.style.overflowY = "hidden";
           if (document.documentElement && document.documentElement.scrollTop) {
             this.scrollTop = document.documentElement.scrollTop;
           } else if (document.body) {
@@ -118,8 +116,6 @@
           document.body.classList.add("bodyFix");
 
         } else {
-          //document.documentElement.style.height = "auto";
-          //document.documentElement.style.overflowY = "scroll";
           document.body.classList.remove("bodyFix");
           $(document).scrollTop(this.scrollTop);
 

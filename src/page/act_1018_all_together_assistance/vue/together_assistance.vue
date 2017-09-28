@@ -313,6 +313,24 @@
             }
           }
         });
+      },
+      //阻止弹框事件冒泡
+      rule_form: function () {
+        var that = this;
+        if (that.rule_form) {
+          if (document.documentElement && document.documentElement.scrollTop) {
+            this.scrollTop = document.documentElement.scrollTop;
+          } else if (document.body) {
+            this.scrollTop = document.body.scrollTop;
+          }
+          document.body.style.top = -this.scrollTop + 'px';
+          document.body.classList.add("bodyFix");
+
+        } else {
+          document.body.classList.remove("bodyFix");
+          $(document).scrollTop(this.scrollTop);
+
+        }
       }
     },
     created() {
