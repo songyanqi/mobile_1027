@@ -1014,7 +1014,7 @@
     position: relative;
     text-align: center;
     background-color: #FFFFFF;
-    padding: 0 10px 15px;
+    padding: 0 0 15px;
     color: #FF4A7D;
     /*max-height: 4rem;*/
     /*min-height: auto;*/
@@ -1032,7 +1032,7 @@
     font-size: 14px;
     text-align: left;
     line-height: 20px;
-    padding-top: 5px;
+    padding: 5px 10px 0;
     max-height: 4rem;
     overflow-y: scroll;
   }
