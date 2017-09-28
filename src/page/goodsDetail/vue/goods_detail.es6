@@ -2,7 +2,6 @@
  * create by dony in 2017.3.12
  */
 import {Group, Cell, Tab, TabItem, Alert, Loading, Spinner} from 'vux';
-
 // 页面打开时
 import base from '../../../../utils/base.es6';
 import common1 from '../../../../module/common/common.es6';

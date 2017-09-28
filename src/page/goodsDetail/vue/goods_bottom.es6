@@ -37,6 +37,7 @@ const GoodsBottom = {
           collected: 0,
           //弹框是否是点击立即购买跳出来的
           isBuyModal: false,
+          scrollTop: 0,
           allPrice: 0,
           modalHeight: `${window.innerHeight * 0.65}px`,
         }
@@ -86,12 +87,12 @@ const GoodsBottom = {
         }
         document.body.style.top = -this.scrollTop + 'px';
         document.body.classList.add("bodyFix");
-
       },
       //弹框消失时
       handleModalHide() {
         document.body.classList.remove("bodyFix");
-        document.body.scrollTop = this.scrollTop;
+        
+        $(document).scrollTop(this.scrollTop);
       },
       handleGuess (item) {
         location.href = item.command.content;
