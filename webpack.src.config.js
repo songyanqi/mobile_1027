@@ -6,7 +6,6 @@ import glob from 'glob';
 import fs from 'fs';
 module.exports = function (jsPath, staticPath) {
   let entry = {
-    'static/common/js/autoRootSize': './src/common/js/autoRootSize.js',
   };
   // 自动添加src下的JS
   glob.sync(`${__dirname}/${jsPath}`).forEach(function (filePath) {
