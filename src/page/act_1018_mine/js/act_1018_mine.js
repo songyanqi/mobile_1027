@@ -136,7 +136,9 @@ new Vue({
         }),
         success(response) {
           common.checkRedirect(response);
-          ts.response = response;
+
+          // ts.response = response;
+          ts.response = require('../json/act_1018_mine.json');
 
           // 存缓存
           // localCache.setItem({

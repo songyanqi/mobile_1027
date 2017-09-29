@@ -593,15 +593,15 @@
           }
           .title {
             font-weight: bold;
-            .account {
-              text-decoration: underline;
-            }
+          }
+          .account {
+            text-decoration: underline;
           }
           &:not(:first-of-type) {
             margin-top: ptr(10);
           }
           &.order {
-            @include i-draw-bg-order(3);
+            @include i-draw-bg-order;
             &.no-draw {
               .title {
                 top: ptr(12);
@@ -631,17 +631,31 @@
             }
           }
           &.assist {
-            @include i-draw-bg-assist(3);
+            @include i-draw-bg-assist;
             .title {
               top: ptr(10);
               font-size: ptr(18);
               line-height: ptr(25);
             }
+            .text {
+              top: ptr(37);
+            }
             .time {
-              top: ptr(36);
+              top: ptr(56);
+            }
+          }
+          &.free {
+            @include i-draw-bg-free;
+            .title {
+              top: ptr(10);
+              font-size: ptr(18);
+              line-height: ptr(25);
             }
             .text {
-              top: ptr(53);
+              top: ptr(37);
+            }
+            .time {
+              top: ptr(56);
             }
           }
         }
