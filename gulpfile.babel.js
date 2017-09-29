@@ -26,12 +26,17 @@ import glob from 'glob';
 import minimist from 'minimist';
 import WebpackConfig from './webpack.config.js';    // 老版webpack配置
 import WebpackSrcConfig from './webpack.src.config.js';   // 新版前后端分离webpack配置
-import DeveloperConfig from './developer.config.js';  // 开发者配置文件
 import liveReload from 'gulp-livereload';		// 文件变化时自动刷新浏览器，chrome需要安装LiveReload插件
 import mergeStream from 'merge-stream';		// 合并流然后返回给run-sequence保证任务顺序执行
 import path from 'path';		// 路径解析模块
 import spritesmith from 'gulp.spritesmith';		// 精灵图
 import addSrc from 'gulp-add-src';
+
+// 开发者配置文件
+let DeveloperConfig = {};
+if (fs.existsSync('./developer.config.js')) {
+  DeveloperConfig = require('./developer.config.js').default;
+}
 
 // 命令行参数
 let argv = minimist(process.argv);
@@ -43,6 +48,7 @@ let BuildArg = {
   page: argv.page || DeveloperConfig.page || '*',
   webpack: argv.webpack !== undefined ? argv.webpack : (DeveloperConfig.webpack !== undefined ? DeveloperConfig.webpack : true),
 };
+
 // npm run dev 和 npm run build 是给服务端使用，强制编译所有页面。
 if (argv._[2] === 'build:dev' || argv._[2] === 'build:dist') {
   BuildArg.page = '*';
