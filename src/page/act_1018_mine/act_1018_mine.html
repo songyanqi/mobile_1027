@@ -195,7 +195,7 @@
               <a @click="isOpenWebview" :href="'/'+item.goodsId+'.html'">
                 <img class="goods-pic" v-lazy="item.imageUrl">
                 <div class="price">活动价￥{{item.price}}</div>
-                <!--<div class="time">{{item.startTime}}开抢</div>-->
+                <div class="time">{{date.format(item.sTime + '000', 'MM.dd hh:mm')}}开抢</div>
               </a>
             </div>
             <div class="swiper-slide more" v-if="response.data.subscribe.length > 10">
