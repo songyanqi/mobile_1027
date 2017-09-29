@@ -140,14 +140,14 @@
     border-radius: 0.04rem;
     animation: com-alert-animation 0.5s;
     width: 73.333%;
-    /*min-height: 200px;*/
+    min-height: 200px;
     position: relative;
     text-align: center;
     background-color: #FFFFFF;
-    padding: 0 10px 15px;
+    padding: 0 0 15px;
     color: #FF4A7D;
-    max-height: 4rem;
-    overflow-y: scroll;
+    /*max-height: 4rem;*/
+    /*overflow-y: scroll;*/
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(1) {
@@ -161,7 +161,9 @@
     font-size: 14px;
     text-align: left;
     line-height: 20px;
-    padding-top: 5px;
+    padding: 5px 10px 0;
+    max-height: 4rem;
+    overflow-y: scroll;
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(3) {
@@ -297,6 +299,23 @@
         },
         deep: true
       },
+      rule_form: function () {
+        var that = this;
+        if (that.rule_form) {
+          if (document.documentElement && document.documentElement.scrollTop) {
+            this.scrollTop = document.documentElement.scrollTop;
+          } else if (document.body) {
+            this.scrollTop = document.body.scrollTop;
+          }
+          document.body.style.top = -this.scrollTop + 'px';
+          document.body.classList.add("bodyFix");
+
+        } else {
+          document.body.classList.remove("bodyFix");
+          $(document).scrollTop(this.scrollTop);
+
+        }
+      }
       // singleList: {
       //   handler() {
       //     this.singleList.map((item,index) => {
