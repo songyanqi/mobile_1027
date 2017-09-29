@@ -266,9 +266,21 @@ gulp.task('create_sprite', () => {
 function compileJs() {
   console.log(`>>>>>>>>>>>>>>> js文件开始编译。${util.getNow()}`);
 
+  // webpack配置对象
+  let webpackConfig = WebpackSrcConfig(config.js, replacer['[[static]]']);
+
+  // 提取公共js
+  if (argv._[2] === 'build:dev' || argv._[2] === 'build:dist') {
+    webpackConfig.plugins.push(new webpack.optimize.CommonsChunkPlugin({
+      name: "commons",
+      filename: 'common/js/common.js',
+      minChunks: 10
+    }));
+  }
+
   // 编译并返回流
   return gulp.src('')
-    .pipe(webpackStream(WebpackSrcConfig(config.js, replacer['[[static]]']), webpack, function (err, stats) {
+    .pipe(webpackStream(webpackConfig, webpack, function (err, stats) {
       // console.log('webpackStream执行完毕');
     }))
     // 替换环境变量
