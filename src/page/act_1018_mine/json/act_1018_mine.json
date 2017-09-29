@@ -654,6 +654,7 @@
         "actInfo": "满100减50",
         "incomeInfo": "171.6",
         "statusInfo": "状态信息",
+        "timeshopIncome": "1",
         "command": {
           "content": "/58784.html?rp=index&rl=timeshop_goods-560-58784",
           "log": "统计动作"
@@ -666,6 +667,7 @@
         "actInfo": "满100减50",
         "incomeInfo": "171.6",
         "statusInfo": "状态信息",
+        "timeshopIncome": "1",
         "command": {
           "content": "/58784.html?rp=index&rl=timeshop_goods-560-58784",
           "log": "统计动作"
@@ -675,9 +677,10 @@
         "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
         "title": "来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品",
         "nowPrice": "111.23",
-        "actInfo": "满100减50",
+        "actInfo": "7折",
         "incomeInfo": "171.6",
         "statusInfo": "状态信息",
+        "timeshopIncome": "1",
         "command": {
           "content": "/58784.html?rp=index&rl=timeshop_goods-560-58784",
           "log": "统计动作"
@@ -687,9 +690,10 @@
         "imageUrl": "http://pic.davdian.com/supplier/2017/07/17/800_800_7fc5f14357f35ad1a77d3d6e49d50a95.jpg",
         "title": "来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品来袭拯救皮商品",
         "nowPrice": "111.23",
-        "actInfo": "满200减50",
+        "actInfo": "7折",
         "incomeInfo": "171.6",
         "statusInfo": "状态信息",
+        "timeshopIncome": "1",
         "command": {
           "content": "/58784.html?rp=index&rl=timeshop_goods-560-58784",
           "log": "统计动作"
