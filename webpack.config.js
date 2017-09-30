@@ -139,7 +139,7 @@ var webpackConfig = {
   resolve: {
     extensions: ['', '.js', '.vue', '.json'],
     alias: {
-      vue: __dirname + '/src/common/js/lib/vue/vue.min.js'
+      vue: __dirname + '/javascript/vue2.0.5.min.js'
     }
   }
 };

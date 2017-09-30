@@ -14,7 +14,7 @@
           <swiper loop auto height="32px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
             <swiper-item v-for="(pr,index) in notices" v-if="index%2==0">
               <p v-if="notices[index]">{{notices[index].message}}</p>
-              <p v-if="notices[index+1]">{{notices[index+1].message}}</p>
+              <p v-if="notices[index+1]">{{notices[index + 1].message}}</p>
             </swiper-item>
           </swiper>
         </div>
@@ -24,24 +24,27 @@
     <div>
       <ul>
         <li v-for="lis in response.goodsInfo" class="list_style online" @click="activebtn(lis.activityLink)">
-            <div class="img_container">
-              <div class="img_container_inner">
-                <img v-lazy="lis.goodsImage">
+          <div class="img_container">
+            <div class="img_container_inner">
+              <img v-lazy="lis.goodsImage">
+            </div>
+            <div class="order_good_info_container">
+              <div class="order_good_name">
+                {{lis.goodsName}}
               </div>
-              <div class="order_good_info_container">
-                <div class="order_good_name">
-                  {{lis.goodsName}}
-                </div>
-                <div class="order_good_price">
-                  <span class="f_l">10.18到手价<em class="price_symbol">￥</em><span>{{lis.activityPrice}}</span></span>
-                  <span class="membership_crown_pre"><em>￥</em>{{lis.goodsPrice}}</span>
-                </div>
+              <div class="order_good_price">
+                <span class="f_l">10.18到手价<em class="price_symbol">￥</em><span>{{lis.activityPrice}}</span></span>
+                <span class="membership_crown_pre"><em>￥</em>{{lis.goodsPrice}}</span>
               </div>
             </div>
-          <div v-if="lis.buttonType > 2" class="progress_info" style="padding-right: 1.1rem;" v-html="lis.activityMessage"></div>
+          </div>
+          <div v-if="lis.buttonType > 2" class="progress_info" style="padding-right: 1.1rem;"
+               v-html="lis.activityMessage"></div>
           <div v-else class="progress_info" v-html="lis.activityMessage"></div>
           <div class="remain_btns">
-            <div class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}">{{lis.activityButton}}</div>
+            <div class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}">
+              {{lis.activityButton}}
+            </div>
           </div>
         </li>
       </ul>
@@ -73,7 +76,8 @@
   import login from '../../../common/js/module/login.js';
   import native from "../../../common/js/module/native";
   import popup from "../../../common/js/module/popup.js";
-  import { Swiper, SwiperItem } from 'vux'
+  import {Swiper, SwiperItem} from 'vux'
+
   export default {
     props: {
       response: {
@@ -84,7 +88,7 @@
     data() {
       return {
         rule_form: false,
-        marguee:false
+        marguee: false
       }
     },
     components: {
@@ -92,31 +96,31 @@
       SwiperItem
     },
     computed: {
-      notices:function () {
+      notices: function () {
         var that = this;
-        if(that.response.notice) {
-//          if (that.response.notice.length < 100) {
-//            var announcementData = [];
-//            announcementData = that.response.notice;
-//            let nums = 100 - that.response.notice.length;
-//            for (var i = 0; i < nums; i++) {
-//              announcementData.push(that.response.notice[i])
-//            }
-//            that.response.notice = announcementData;
-//            setTimeout(function () {
-//              that.marguee = true;
-//            },1500);
-//            return that.response.notice;
-//          }else{
-//            setTimeout(function () {
-//              that.marguee = true;
-//            },1500);
-            return that.response.notice;
-          }
+        if (that.response.notice) {
+          return that.response.notice;
         }
+      }
     },
     watch: {
+      rule_form: function () {
+        var that = this;
+        if (that.rule_form) {
+          if (document.documentElement && document.documentElement.scrollTop) {
+            this.scrollTop = document.documentElement.scrollTop;
+          } else if (document.body) {
+            this.scrollTop = document.body.scrollTop;
+          }
+          document.body.style.top = -this.scrollTop + 'px';
+          document.body.classList.add("bodyFix");
 
+        } else {
+          document.body.classList.remove("bodyFix");
+          $(document).scrollTop(this.scrollTop);
+
+        }
+      }
     },
     created() {
 
@@ -136,30 +140,30 @@
       },
       activebtn: function (url) {
         /*没登录去登录*/
-        if(login.isLogined()){
+        if (login.isLogined()) {
           /*如果不是会员提示他成为会员*/
           if (login.isSeller()) {
-            if(ua.isDvdApp()){
+            if (ua.isDvdApp()) {
               event.preventDefault();
               native.Browser.open({
-                url:url
+                url: url
               })
-            }else{
+            } else {
               location.href = url;
             }
-          }else{
+          } else {
             popup.confirm({
-              className:'',
+              className: '',
               title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
               text: '',
               okBtnTitle: '开通会员',
               okBtnCallback() {
-                if(ua.isDvdApp()){
+                if (ua.isDvdApp()) {
                   event.preventDefault();
                   native.Browser.open({
-                    url:"/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button"
+                    url: "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button"
                   })
-                }else{
+                } else {
                   location.href = "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button";
                 }
               },
@@ -169,11 +173,11 @@
               }
             });
           }
-        }else{
+        } else {
           login.needLogin();
         }
       },
-      events:function () {
+      events: function () {
 
       }
     },
@@ -222,7 +226,7 @@
   }
 
   .com-box div ul {
-    margin:0 0.1rem;
+    margin: 0 0.1rem;
     overflow: hidden;
     background-color: #FFFFFF;
   }
@@ -240,12 +244,13 @@
 
   .com-box div ul li .img_container_inner {
     width: 0.8rem;
+    height: 0.8rem;
     position: relative;
   }
 
   .com-box div ul li .img_container_inner img {
-    width: 100%;
-    height: 100%;
+    width: 0.8rem;
+    height: 0.8rem;
   }
 
   .com-box div ul li .order_good_info_container {
@@ -517,14 +522,14 @@
     border-radius: 0.04rem;
     animation: com-alert-animation 0.5s;
     width: 73.333%;
-    /*min-height: 200px;*/
+    min-height: 200px;
     position: relative;
     text-align: center;
     background-color: #FFFFFF;
-    padding: 0 10px 15px;
+    padding: 0 0 15px;
     color: #FF4A7D;
-    max-height: 4rem;
-    overflow-y: scroll;
+    /*max-height: 4rem;*/
+    /*overflow-y: scroll;*/
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(1) {
@@ -538,7 +543,9 @@
     font-size: 14px;
     text-align: left;
     line-height: 20px;
-    padding-top: 5px;
+    padding: 5px 10px 0;
+    max-height: 4rem;
+    overflow-y: scroll;
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(3) {

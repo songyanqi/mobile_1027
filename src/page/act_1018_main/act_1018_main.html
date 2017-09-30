@@ -83,17 +83,38 @@
 
     <!--活动区域-->
     <div class="g-act" v-if="response && response.data" @click="removeLocalCache">
-      <!--好友助力-->
+      <!--1~8号，好友助力-->
       <com-act-assistance :response="response.data.help" v-if="response.data.help" :current-date="currentDate"></com-act-assistance>
 
-      <!--爆品预约-->
-      <com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>
+      <!--9~11号，品牌点亮-->
+      <com-act-lightbrand :response="response.data.lightenBrand" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightbrand>
 
-      <!--商品预定-->
+      <!--12~17号，爆品预约-->
+      <com-act-subscribe :response="response" v-if="response.data.subscribe && currentDate < '2017-10-19'" :current-date="currentDate"></com-act-subscribe>
+
+      <!--14~17号，商品预定-->
       <com-act-reserve :response="response" v-if="response.data.book" :current-date="currentDate"></com-act-reserve>
 
-      <!--品牌点亮-->
-      <com-act-lightbrand :response="response.data.lightenBrand" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightbrand>
+      <!--18号，妈妈顾问-->
+      <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
+
+      <!--18号，红包雨-->
+      <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
+
+      <!--18号，助力商品抢购-->
+      <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
+
+      <!--19号，满399返红包-->
+      <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
+
+      <!--19号，满399送纪念品-->
+      <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
+
+      <!--19号，爆品预约变抢购样式-->
+      <com-act-subscribe :response="response" v-if="response.data.subscribe && currentDate >= '2017-10-19'" :current-date="currentDate"></com-act-subscribe>
+
+      <!--22号，满500抽奖-->
+      <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
     </div>
 
     <!--活动下方专题-->

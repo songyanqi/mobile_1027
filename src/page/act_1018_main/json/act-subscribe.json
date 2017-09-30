@@ -1,5 +1,6 @@
 [
   {
+    "startTime": "new Date(2017,9,19,8)",
     "line1": "10月19日",
     "line2": "8点开抢",
     "goodsList": [
@@ -24,6 +25,7 @@
     ]
   },
   {
+    "startTime": "new Date(2017,9,19,10)",
     "line1": "10月19日",
     "line2": "10点开抢",
     "goodsList": [
@@ -48,6 +50,7 @@
     ]
   },
   {
+    "startTime": "new Date(2017,9,19,14)",
     "line1": "10月19日",
     "line2": "14点开抢",
     "goodsList": [
@@ -72,6 +75,7 @@
     ]
   },
   {
+    "startTime": "new Date(2017,9,19,16)",
     "line1": "10月19日",
     "line2": "16点开抢",
     "goodsList": [
@@ -96,6 +100,7 @@
     ]
   },
   {
+    "startTime": "new Date(2017,9,19,20)",
     "line1": "10月19日",
     "line2": "20点开抢",
     "goodsList": [

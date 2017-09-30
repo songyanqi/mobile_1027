@@ -195,7 +195,7 @@
               <a @click="isOpenWebview" :href="'/'+item.goodsId+'.html'">
                 <img class="goods-pic" v-lazy="item.imageUrl">
                 <div class="price">活动价￥{{item.price}}</div>
-                <!--<div class="time">{{item.startTime}}开抢</div>-->
+                <div class="time">{{date.format(item.sTime + '000', 'MM.dd hh:mm')}}开抢</div>
               </a>
             </div>
             <div class="swiper-slide more" v-if="response.data.subscribe.length > 10">
@@ -265,24 +265,32 @@
       <!--<div class="draw-record" v-if="isSeller || isAdviser">-->
       <div class="draw-record" v-if="response.data.drawRecord">
         <!--标题-->
-        <div class="title-type-2">我的抽奖记录</div>
+        <div class="title-type-2">我的中奖记录</div>
         <!--红包列表-->
         <ul class="list">
           <template v-for="(item, i) in response.data.drawRecord">
             <!--<li class="order no-draw">
               <div class="title">最高可中1018元现金大奖!</div>
               <div class="text"><span class="btn">立即抽奖</span></div>
-            </li>
-            <li class="order draw">
+            </li>-->
+            <li class="order draw" v-if="item.type == '2'">
               <div class="title">
-                抽中10.18现金！已送到你的
-                <a class="account" href="/s[[env_num]].[[base_domain]]/index.php?m=admin&c=newIncome&a=detail&status=0&cat=5">大V账户</a>~
+                抽中{{item.money}}现金！已送到你的
+                <a class="account" href="//s[[env_num]].[[base_domain]]/index.php?m=admin&c=newIncome&a=detail&status=0&cat=5">大V账户</a>~
               </div>
               <div class="time">抽奖时间: 2017.10.22 06:01:12</div>
-            </li>-->
-            <li class="assist" v-if="item.type == '1'">
+            </li>
+            <li class="assist" v-else-if="item.type == '1'">
               <div class="title">抽中一台iPhone8</div>
               <div class="text">请等待工作人员联系你</div>
+              <div class="time">抽奖时间: {{date.format(item.time + '000', 'yyyy.MM.dd hh:mm:ss')}}</div>
+            </li>
+            <li class="order free" v-else-if="item.type == '3'">
+              <div class="title">抽中免单机会！</div>
+              <div class="text">
+                返现金额已送到你的
+                <a class="account" href="//s[[env_num]].[[base_domain]]/index.php?m=admin&c=newIncome&a=detail&status=0&cat=5">大V账户</a>~
+              </div>
               <div class="time">抽奖时间: {{date.format(item.time + '000', 'yyyy.MM.dd hh:mm:ss')}}</div>
             </li>
           </template>
