@@ -9,7 +9,7 @@
       <img class="bg-pic" src="//pic.davdian.com/free/huibenjie/scratch/scratch-bg-money.png"
            v-if="window.isShowLottery === '2'">
       <!--刮奖-->
-      <com-scratch-card :show-mask="showMask" :can-scratch="valid" mask-tip="刮一刮" mask-img="//pic.davdian.com/free/scratch-mask-1018.png" font-size="30px" font-color="#e7e7e7"
+      <com-scratch-card :show-mask="showMask" :can-scratch="valid" mask-tip="" mask-img="//pic.davdian.com/free/scratch-mask-1018.png" font-size="30px" font-color="#e7e7e7"
                         @touchstart="bindCoupon(); addScratchTimes(); tongji('hbj_scratch');isValid(this);"
                         @mousedown="bindCoupon(); addScratchTimes(); tongji('hbj_scratch');"
                         @touchmove="addScratchTimes" @touchmove="addScratchTimes">
