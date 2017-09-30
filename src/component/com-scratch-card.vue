@@ -19,6 +19,11 @@
         type: String,
         default: ''
       },
+      // 浮层上提示刮奖图片,有则显示
+      maskImg: {
+        type: String,
+        default: ''
+      },
       // 刮奖文字颜色
       fontColor: {
         type: String,
@@ -84,13 +89,22 @@
           context.fillStyle = ts.maskColor;
           context.fillRect(0, 0, canvas.width, canvas.height);
 
+          // 绘制刮奖蒙层-文字
           if (ts.maskTip) {
-            // 绘制刮奖图层文字
             context.fillStyle = ts.fontColor;
             context.font = ts.fontSize + ' sans-serif';
             context.textBaseline = 'middle';
             context.textAlign = 'center';
             context.fillText(ts.maskTip, canvas.width / 2, canvas.height / 2);
+          }
+
+          // 绘制刮奖蒙层-图像
+          if (ts.maskImg) {
+            var img = new Image();
+            img.onload = function () {
+              context.drawImage(img, 0, 0, canvas.width, canvas.height);
+            };
+            img.src = ts.maskImg;
           }
 
           // 绘制透明圆
