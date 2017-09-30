@@ -15,7 +15,7 @@
                         @touchmove="addScratchTimes" @touchmove="addScratchTimes">
         <!--免单刮刮卡文案-->
         <template v-if="window.isShowLottery === '1'">
-          <img class="result-bg" src="//pic.davdian.com/free/scratch-yes-1018.png" v-if="window.isFreeOfCharge === '11'">
+          <img class="result-bg" src="//pic.davdian.com/free/scratch-yes-1018.png" v-if="window.isFreeOfCharge === '1'">
           <img class="result-bg" src="//pic.davdian.com/free/scratch-no-1018.png" v-else>
         </template>
         <!--现金刮刮卡文案-->
