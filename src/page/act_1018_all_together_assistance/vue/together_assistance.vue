@@ -54,7 +54,7 @@
           <div class="ast_txt" style="padding:0.68rem 0 0.12rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
           <!--1018活动期间-->
           <span @click="go_main('/act_1018_main.html')" class="share_btn bd_r"
-                style="display: block;">去10.18周年庆主会场逛逛</span>
+                style="display: block;">去大V店10.18周年庆主会场逛逛</span>
         </section>
         <section v-else>
           <!--进页面的时候已经助力过了-->
@@ -133,7 +133,7 @@
 
            <span v-if="response.actType == 2">
               <div class="ast_txt" style="padding:0.72rem 0 0.14rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
-              <span @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</span>
+              <span @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去大V店10.18周年庆主会场逛逛</span>
            </span>
         </section>
         <section v-else>
@@ -204,7 +204,7 @@
     </div>
 
     <!--去主会场-->
-    <div v-if="response.actType != 2" @click="go_main('/act_1018_main.html')" class="main_btn">10.18周年庆主会场</div>
+    <div v-if="response.actType != 2" @click="go_main('/act_1018_main.html')" class="main_btn">大V店10.18周年庆主会场</div>
     <!--查看规则-->
     <div v-if="rule_form" class="com-popup-base2" @click="rule_form = false">
       <div class="table-cell">
