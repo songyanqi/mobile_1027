@@ -130,10 +130,10 @@
     <!-- 场次tab -->
     <div class="swiper-container" v-if="list">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" @click="swiperSlideClick(i)" v-for="(item, key, i) in list.data">
+        <div class="swiper-slide" @click="swiperSlideClick(i)" v-for="(item, key, i) in list">
           <div class="item" :class="{selected: tabIndex === i}">
             <p class="item-timer">{{timer[i]}}</p>
-            <p>{{list.sys_time >= key ? '已开抢' : '待开抢'}}</p>
+            <p>{{response.sys_time >= key ? '已开抢' : '待开抢'}}</p>
           </div>
         </div>
       </div>
@@ -142,7 +142,7 @@
     <!-- 商品列表 -->
     <div class="g-goods-wrapper" v-if="list">
       <ul>
-        <li v-for="(item, i) in list.data[screenings[tabIndex]].goodsList" v-if="i < 3" @click="goodsClick(item.goodsId)" class="goods-item">
+        <li v-for="(item, i) in list[screenings[tabIndex]].goodsList" v-if="i < 3" @click="goodsClick(item.goodsId)" class="goods-item">
           <img class="pic" v-lazy="item.goodsImage" class="item-pic">
           <img class="item-icon" src="[[static]]/page/act_1018_main_explosion/img/explosion-icon.png">
           <!--状态判断-->
@@ -171,12 +171,12 @@
   import layout from "../../../../module/index/layout.es6";
 
   export default {
-//    props: {
-//      response: {
-//        type: Object,
-//        default: null
-//      }
-//    },
+    props: {
+      response: {
+        type: Object,
+        default: null
+      }
+    },
     data() {
       return {
         list: null,
@@ -204,7 +204,7 @@
           // 选中最近的已开抢
           let index = 0;
           for (let i in this.timer) {
-            if (ts.list.sys_time >= ts.screenings[i]) {
+            if (ts.response.sys_time >= ts.screenings[i]) {
               index = parseInt(i);
             }
           }
@@ -213,35 +213,35 @@
       }
     },
     created(){
-      this.getData();
+      this.list = this.response.data.hotHelp;
     },
     mounted() {
 
     },
     methods: {
-      getData() {
-        let ts = this;
-
-        // 测试数据
-        //ts.list = require('../json/act-explosion.json');
-        //ts.list = ts.list.data;
-        $.ajax({
-          cache: false,
-          async: true,
-          url: '/api/mg/sale/userhelpgoods/getUserHelpGoods?_='+ Date.now(),
-          type: 'post',
-          dataType: 'json',
-          data: layout.strSign("explosiion",{
-
-          }),
-          success(response) {
-            ts.list = response;
-          },
-          error(error) {
-            console.error('ajax error:' + error.status + ' ' + error.statusText);
-          }
-        });
-      },
+//      getData() {
+//        let ts = this;
+//
+//        // 测试数据
+//        //ts.list = require('../json/act-explosion.json');
+//        //ts.list = ts.list.data;
+//        $.ajax({
+//          cache: false,
+//          async: true,
+//          url: '/api/mg/sale/userhelpgoods/getUserHelpGoods?_='+ Date.now(),
+//          type: 'post',
+//          dataType: 'json',
+//          data: layout.strSign("explosiion",{
+//
+//          }),
+//          success(response) {
+//            ts.list = response;
+//          },
+//          error(error) {
+//            console.error('ajax error:' + error.status + ' ' + error.statusText);
+//          }
+//        });
+//      },
       /** tab切换 */
       swiperSlideClick(index) {
         this.swiper.slideTo(index - 2);
@@ -252,11 +252,6 @@
       /** 商品点击 */
       goodsClick(goodsId) {
         let url = '/' + goodsId + '.html';
-//        if (this.currentDate < '2017-10-18') {
-//          url = '/act_1018_main_subscribe.html';
-//        } else {
-//          url = '/' + goodsId + '.html';
-//        }
         // 跳转
         if (ua.isDvdApp()) {
           event.preventDefault();
