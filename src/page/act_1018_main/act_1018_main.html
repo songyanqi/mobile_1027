@@ -37,7 +37,8 @@
       <div class="count-down" style="display: none;"
            :style="{display: topics[0].content ? null : 'none', top: topics[0].content.top || null, left: topics[0].content.left || null}"
             v-if="topics[0].content">
-        <div class="title">活动开始倒计时</div>
+        <div class="title">
+          <template v-if=""></template>活动开始倒计时</div>
         <div class="boxes">
           <span class="box">
             <div class="title">天</div>
