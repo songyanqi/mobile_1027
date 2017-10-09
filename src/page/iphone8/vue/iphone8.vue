@@ -1,0 +1,283 @@
+<template>
+  <div class="background">
+    <div class="text" style="top: 1.87rem;">10月18日当天</div>
+    <div class="text" style="top: 2.1rem;">妈妈顾问服务人群销售额满<span v-text="awardMoney"></span></div>
+    <div class="text" style="top: 2.36rem;">妈妈顾问赢iPhone8一部</div>
+    <div class="text" style="top: 2.61rem;">仅<span v-text="allCount"></span>个名额，先到先得</div>
+    <!--未登录-->
+    <template v-if="false">
+      <div class="nologin" style="top: 3.73rem;">还未登录哦</div>
+      <div class="btn"></div>
+    </template>
+    <!--不是妈妈顾问-->
+    <template v-if="isAdviser==0">
+      <div class="nologin" style="top: 3.6rem;">您还不是妈顾问哦</div>
+      <div class="nologin" style="top: 3.85rem;">成为妈妈顾问才可以参与此活动哦</div>
+      <div class="btn2"></div>
+    </template>
+    <!--妈妈顾问-->
+    <template v-if="isAdviser==1">
+
+      <template v-if="isHotDay==1">
+        <!--有名额，获得iphone8-->
+        <template v-if="remainCount>0 && sales<awardMoney">
+          <div class="nologin" style="top: 3.18rem;">仅剩<span v-text="remainCount" style="font-size: 0.3rem;"></span>个名额</div>
+          <div class="nologin" style="top: 3.55rem;">当前顾问服务人群销售额:<span v-text="sales" style="font-size: 0.3rem;"></span>元</div>
+          <div class="nologin" style="top: 3.9rem;">还差<span v-text="awardMoney-sales" style="font-size: 0.3rem;">1213</span>元达到100000万</div>
+          <div class="nologin" style="top: 4.24rem;">即可赢得iPHONE8</div>
+          <div class="btn3"></div>
+        </template>
+
+        <!--有名额，没获得iphone8-->
+        <template v-if="remainCount>0 && sales>=awardMoney">
+          <div class="nologin" style="top: 3.18rem;">仅剩<span v-text="remainCount" style="font-size: 0.3rem;"></span>个名额</div>
+          <div class="nologin" style="top: 3.55rem;">当前顾问服务人群销售额:<span v-text="sales" style="font-size: 0.3rem;"></span>元</div>
+          <div class="nologin" style="top: 4rem;">恭喜，您已获得iPhone8一部</div>
+          <div class="nologin" style="top: 4.24rem;font-size: 0.1rem;">11月18日有工作人员联系您,请保持手机畅通</div>
+          <div class="btn3"></div>
+        </template>
+
+        <!--没名额了-->
+        <template v-if="remainCount==0">
+          <div class="nologin" style="top: 3.4rem;">没有名额啦</div>
+          <div class="nologin" style="top: 3.6rem;">当前顾问服务人群销售额:<span v-text="sales" style="font-size: 0.3rem;"></span>元</div>
+          <div class="nologin" style="top: 4rem;">没有名额啦，很遗憾您错过了这次活动</div>
+          <div class="btn"></div>
+        </template>
+      </template>
+
+      <template v-if="isHotDay==0">
+        <!--活动结束获得了-->
+        <template v-if="remainCount>0 && sales>=awardMoney">
+          <div class="nologin" style="top: 3.3rem;">活动结束啦</div>
+          <div class="nologin" style="top: 3.55rem;">当前顾问服务人群销售额:<span v-text="sales" style="font-size: 0.3rem;"></span>元</div>
+          <div class="nologin" style="top: 4rem;">恭喜，您已获得iPhone8一部</div>
+          <div class="nologin" style="top: 4.24rem;font-size: 0.1rem;color:#a68d41;">11月18日有工作人员联系您，请保持手机畅通</div>
+        </template>
+
+        <!--活动结束没获得-->
+        <template v-if="remainCount==0">
+          <div class="nologin" style="top: 3.6rem;">活动结束啦</div>
+          <div class="nologin" style="top: 3.8rem;">没有名额啦，很遗憾您错过了这次活动</div>
+          <div class="btn"></div>
+        </template>
+
+      </template>
+
+      <div class="bg"></div>
+      <div class="list">
+        <div class="title">获IPHONE8名单</div>
+        <div class="item" v-for="item in awardList">
+          <div><img :src="item.awatar" alt=""></div>
+          <div v-text="item.userName"></div>
+          <div style="position: absolute;right: 0;">已满足</div>
+        </div>
+      </div>
+    </template>
+
+
+    <div class="rute" :class="{'class1':isAdviser==1?true:false}">
+      <div style="margin-top: 0;text-align: center;">活动规则</div>
+      <div>1、活动时间：10月18日00:00:00~10月18日23:59:59;</div>
+      <div>2、仅妈妈顾问才可以参与该活动;</div>
+      <div>3、服务人群包括顾问服务的会员与非会员;</div>
+      <div>4、销售额统计方法：服务人群实际支付金额+使用佣金部分;</div>
+      <div>5、因退货、换货等原因导致服务人群销售额不满足10万，视为会员主动放弃该活动;</div>
+      <div>6、本活动仅有10个名额，最先完成10万销售额的妈妈顾问获得，名单会公布活动页面;</div>
+      <div>7、获得IPhone8后，11月18日会有工作人员通过手机号联系您，请保持手机号畅通，无法拨通电话视为放弃;</div>
+      <div>8.支付会员费用不参与该活动;</div>
+      <div>9.详情可咨询大V店客服。</div>
+    </div>
+  </div>
+</template>
+<script>
+  import api from "../../../../utils/api.es6"
+  import dialog from "../../../../utils/dialog.es6"
+  export default{
+    data(){
+        return {
+            allCount:null,
+            remainCount:null,
+            awardMoney:null,
+            sales:null,
+            isAdviser:null,
+            isHotDay:-1,
+            awardList:[]
+        }
+    },
+    mounted(){
+        this.init();
+    },
+    methods:{
+      init(){
+//          var that=this;
+//          var obj={
+//              'awardType':'iphone8'
+//          };
+//          api("/api/mg/user/adviser/activityAward",obj)
+//            .then(function (result) {
+//              if(result.code==0){
+//                if(result.data){
+//                  that.allCount=result.data.awardCount;
+//                  that.remainCount=result.data.remainCount;
+//                  that.awardMoney=result.data.awardMoney;
+//                  that.sales=result.data.sales;
+//                  that.isAdviser=result.data.isAdviser;
+//                  var now = new Date().getTime().toString().substr(0,11);
+//                  var startTime = result.data.startTime;
+//                  var endTime = result.data.endTime;
+//                  if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
+//                    that.isHotDay=1;
+//                  }else{
+//                    that.isHotDay=0;
+//                  }
+//                  that.awardList=result.data.awardList;
+//                }
+//              }else{
+//                if(result.data.msg){
+//                  dialog.alert('code:'+result.code+":msg"+result.data.msg);
+//                }else{
+//                  dialog.alert('code:'+result.code);
+//                }
+//              }
+//            })
+//            .catch(function (e) {
+//
+//            })
+
+          var data=require("../json/iphone8.json");
+          this.allCount=data.data.awardCount;
+          this.remainCount=data.data.remainCount;
+          this.awardMoney=data.data.awardMoney;
+          this.sales=data.data.sales;
+          this.isAdviser=data.data.isAdviser;
+          var now = new Date().getTime().toString().substr(0,11);
+          var startTime = data.data.startTime;
+          var endTime = data.data.endTime;
+          if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
+            this.isHotDay=1;
+          }else{
+            this.isHotDay=0;
+          }
+          this.awardList=data.data.awardList;
+      }
+    }
+  }
+</script>
+<style scoped>
+  .background{
+    position: relative;
+    width: 3.75rem;
+    height: 12.96rem;
+    background-image:url('//pic.davdian.com/free/2017/09/30/bg_1125.jpg');
+    background-size: 3.75rem 12.96rem;
+  }
+  .text{
+    position: absolute;
+    font-size: 0.14rem;
+    color:#ffffff;
+    width: 100%;
+    text-align: center;
+  }
+  .nologin{
+    position: absolute;
+    font-size: 0.14rem;
+    color:#ff4a7d;
+    width: 100%;
+    text-align: center;
+  }
+  .btn{
+    position: absolute;
+    display: inline-block;
+    top: 4.89rem;
+    left: 0.6rem;
+    width: 2.53rem;
+    height: 0.75rem;
+    background-size: 2.53rem 0.75rem;
+    background-image: url('http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/30/%E6%9F%A5%E7%9C%8B%E6%9B%B4%E5%A4%9A%E6%B4%BB%E5%8A%A8_3x.png');
+  }
+  .btn2{
+    position: absolute;
+    display: inline-block;
+    top: 4.89rem;
+    left: 0.6rem;
+    width: 2.53rem;
+    height: 0.75rem;
+    background-size: 2.53rem 0.75rem;
+    background-image: url('http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/30/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E5%A6%88%E5%A6%88%E9%A1%BE%E9%97%AE_3x.png');
+  }
+  .btn3{
+    position: absolute;
+    display: inline-block;
+    top: 4.89rem;
+    left: 0.6rem;
+    width: 2.53rem;
+    height: 0.75rem;
+    background-size: 2.53rem 0.75rem;
+    background-image: url('http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/30/%E5%BC%80%E5%90%AF%E4%B9%B0%E4%B9%B0%E4%B9%B0%E4%B9%8B%E6%97%85_3x.png');
+  }
+  .rute{
+    position: absolute;
+    width: 3.18rem;
+    display: inline-block;
+    left: 0.27rem;
+    top: 5.65rem;
+  }
+  .class1{
+    top: 9rem;
+  }
+  .rute>div{
+    color:#ffffff;
+    font-size: 0.12rem;
+    margin-top: 0.18rem;
+    line-height: 0.15rem;
+  }
+  .list{
+    position: absolute;
+    top: 5.64rem;
+    width: 3.18rem;
+    height: 3.18rem;
+    left: 0.3rem;
+    padding: 0 0.2rem;
+    box-sizing: border-box;
+    overflow: scroll;
+  }
+  .bg{
+    position: absolute;
+    top: 5.64rem;
+    width: 3.18rem;
+    height: 3.18rem;
+    left: 0.3rem;
+    background: #ffeade;
+    opacity: 0.75;
+  }
+  .title{
+    height: 0.45rem;
+    line-height: 0.45rem;
+    text-align: center;
+    color:#ffffff;
+    font-size: 0.14rem;
+  }
+  .item{
+    height: 0.36rem;
+    margin-bottom: 0.186rem;
+    font-size: 0;
+    position: relative;
+    width: 2.78rem;
+  }
+  .item>div{
+    display: inline-block;
+    vertical-align: top;
+    color:#ffffff;
+    font-size: 0.14rem;
+    height: 0.36rem;
+    line-height: 0.36rem;
+  }
+  .item img{
+    width: 0.36rem;
+    height: 0.36rem;
+    border-radius: 50%;
+    margin-right: 0.07rem;
+  }
+
+</style>
