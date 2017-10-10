@@ -13,7 +13,7 @@ vueLazyload.init();
 
 import layout from "../../../../module/index/layout.es6";
 import popup from '../../../common/js/module/popup.js';
-import loading from '../vue/loading.vue';
+// import loading from '../vue/loading.vue';
 
 new Vue({
 	el: ".app",
