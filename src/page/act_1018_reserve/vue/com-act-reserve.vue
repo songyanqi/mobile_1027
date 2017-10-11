@@ -37,6 +37,7 @@
       overflow: hidden;
     }
     .bookImg {
+      position: relative;
       width: 100%;
       height: 1.74rem;
       img {
@@ -106,6 +107,22 @@
       height: 20px;
       right: 16%;
       bottom: 27%;
+    }
+    .good_list_sell_out {
+      font-size: 15px;
+      color: #fff;
+      background-color: rgba(0,0,0,.7);
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 0.3rem;
+      line-height: 0.6rem;
+      top: 50%;
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      margin-top: -0.3rem;
+      margin-left: -0.3rem;
+      text-align: center;
     }
   }
   // 动画
@@ -216,6 +233,9 @@
   		<div class = "bookList" v-for = "(item,index) in singleList" @click = "handleList($event, item, index)">
   			<div class = "bookImg">
   				<img v-lazy="item.imageUrl">
+          <div v-if = "item.shopStocks == '0'" class = "good_list_sell_out ng-scope">
+            <div class = "ng-scope">售罄</div>
+          </div>
   			</div>
   			<div class = "bookName">{{ item.goodsName }}</div>
   			<div class = "bookPrice"><span class = "f12">¥ </span>{{ item.shopPrice }}</div>
@@ -365,6 +385,10 @@
           window.open(url, '_self');
         }
       },
+      // 排序
+      getSort(item1,item2) {
+        return item2.sort - item1.sort;
+      },
   		handleList(e,item,index) {
         let shopUrl = `/${item.goodsId}.html`;
         this.isapp = this.isApp();
@@ -388,15 +412,17 @@
           that.bookNavList.push(datas[item].typeName);
           that.bookDataList.push(datas[item].dataList);
         });
+        that.bookDataList[0].sort(that.getSort);
         that.singleList = that.bookDataList[0];
   		},
   		// 头部导航
   		handleNav(item,index) {
         this.currentIdx = index;
-        console.log(index);
+        
         this.bookSwiper.slideTo(Math.max(0, index - 2));
   			this.bookDataList.map((item,idx) => {
   				if (index == idx) {
+            item.sort(this.getSort);
   					this.singleList = item;
   				}
   			});
