@@ -1,0 +1,42 @@
+@import "../../../common/css/common.scss";
+
+.app {
+  background: url([[static]]/page/act_1018_video/img/bg.png[[v]]) repeat;
+  text-align: center;
+
+  .title-1 {
+    margin: ptr(24) auto auto;
+    width: 80%;
+  }
+  .words {
+    color: white;
+    line-height: 1.5;
+    margin-top: ptr(10);
+    font-size: ptr(12);
+  }
+  .tv {
+    margin: ptr(-40) auto auto;
+    padding: ptr(75) 0 0;
+    width: 100%;
+    height: ptr(210);
+    background: url([[static]]/page/act_1018_video/img/tv.png[[v]]) no-repeat;
+    background-size: 100%;
+    position: relative;
+    video {
+      width: 78%;
+      height: ptr(166);
+    }
+    .start {
+      position: absolute;
+      top: 38%;
+      left: 42%;
+      @include square(ptr(70));
+      cursor: pointer;
+    }
+  }
+  .go-main{
+    display: block;
+    margin: ptr(10) auto ptr(50);
+    width: 60%;
+  }
+}

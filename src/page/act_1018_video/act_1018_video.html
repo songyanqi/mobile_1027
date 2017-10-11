@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script>window.designWidth = 1245;</script>
+  @@include('meta.include')
+  <link rel="stylesheet" href="[[static]]/page/act_1018_video/css/act_1018_video.css[[v]]">
+</head>
+<body>
+  <div class="app">
+    <!--标题-->
+    <com-top-title title="10.18周年庆" home></com-top-title>
+
+    <!--标题1-->
+    <img class="title-1" src="[[static]]/page/act_1018_video/img/title.png[[v]]">
+
+    <!--文字-->
+    <div class="words">
+      大V店是致力于亲子阅读、妈妈成长的会员电商平台<br>
+      3周年一路走来的点点滴滴<br>
+      欢笑、泪水、感动与妈妈们共同经历<br>
+      观看视频来回顾我们的那些年
+    </div>
+
+    <!--电视机-->
+    <div class="tv" @click="videoClick">
+      <video webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="false" style="object-fit: fill;">
+        <source src="//pic.davdian.com/free/1018/head.mp4" type="video/mp4"/>
+      </video>
+      <img class="start" src="[[static]]/page/act_1018_video/img/start.png[[v]]" v-show="!videoStarted">
+    </div>
+
+    <!--主会场-->
+    <a href="/act_1018_main.html">
+      <img class="go-main" src="[[static]]/page/act_1018_video/img/go-main.png[[v]]">
+    </a>
+
+    <!--返回顶部-->
+    <com-to-top-icon></com-to-top-icon>
+  </div>
+
+  @@include('vendor.include')
+  @@include('js.include')
+  <script src="[[static]]/page/act_1018_video/js/act_1018_video.js[[v]]"></script>
+</body>
+</html>
