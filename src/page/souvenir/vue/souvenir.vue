@@ -1,43 +1,87 @@
 <template>
   <div class="background">
-      <!--未登录-->
-      <div class="big_img" v-if="flag==0"><img src="//pic.davdian.com/free/2017/09/29/bg2.png" alt=""></div>
-      <div class="nologin" v-if="flag==0">您还未登录哦~</div>
-      <div class="btn1" v-if="flag==0"></div>
-      <!--登录-->
-      <div class="big_img2" v-if="flag==1"><img src="//pic.davdian.com/free/2017/09/30/bg4.png" alt=""></div>
-      <div class="range" v-if="flag==1 || flag==3">
-        <div class="date">
-          <div class="default readyshop_date">10.19</div>
-          <div class="default noshop_date">10.20</div>
-          <div class="default readyshop_date">10.21</div>
-        </div>
-        <div class="circle">
-          <div><img src="//pic.davdian.com/free/2017/09/30/yellow.png" alt=""></div>
-          <div><img src="//pic.davdian.com/free/2017/09/30/white.png" alt=""></div>
-          <div><img src="//pic.davdian.com/free/2017/09/30/yellow.png" alt=""></div>
-        </div>
-        <div class="state">
-          <div class="default2 readyshop_date">已购物</div>
-          <div class="default2 noshop_date">已购物</div>
-          <div class="default2 readyshop_date">已购物</div>
-        </div>
-      </div>
-      <div class="noshop" v-if="flag==1">今天还未购物哦~</div>
-      <div class="goshop" v-if="flag==1">连续三天购物即可获得</div>
-      <div class="goods" v-if="flag==1">
-        <div style="width: 1.1rem;"><img src="//pic.davdian.com/free/2017/09/30/Rectangle%208.png" alt=""></div>
-        <div style="width: 1.5rem;">
-          <div style="font-size: 0.16rem;color:#333333;margin-top: 0.2rem;width: 100%;text-align: center">周年庆纪念品</div>
-          <div style="font-size: 0.12rem;color:#FF4A7D;margin-top: 0.2rem;width: 100%;text-align: center;">查看详情>>></div>
-        </div>
-      </div>
-      <div class="btn2" v-if="flag==1"></div>
-      <div class="btn3" v-if="flag==2"></div>
-      <div class="btn4" v-if="flag==2"></div>
+      <template v-if="false">
+        <!--未登录-->
+        <div class="big_img"><img src="//pic.davdian.com/free/2017/09/29/bg2.png" alt=""></div>
+        <div class="nologin">您还未登录哦~</div>
+        <div class="btn1"></div>
 
-      <!--最长的-->
-    <div class="big_img3" v-if="flag==3"><img src="//pic.davdian.com/free/2017/09/30/bg5.png" alt=""></div>
+        <!--登录（第二长的）-->
+        <div class="big_img2"><img src="//pic.davdian.com/free/2017/09/30/bg4.png" alt=""></div>
+        <div class="range">
+          <div class="date">
+            <div class="default readyshop_date">10.19</div>
+            <div class="default noshop_date">10.20</div>
+            <div class="default readyshop_date">10.21</div>
+          </div>
+          <div class="circle">
+            <div><img src="//pic.davdian.com/free/2017/09/30/yellow.png" alt=""></div>
+            <div><img src="//pic.davdian.com/free/2017/09/30/white.png" alt=""></div>
+            <div><img src="//pic.davdian.com/free/2017/09/30/yellow.png" alt=""></div>
+          </div>
+          <div class="state">
+            <div class="default2 readyshop_date">已购物</div>
+            <div class="default2 noshop_date">已购物</div>
+            <div class="default2 readyshop_date">已购物</div>
+          </div>
+        </div>
+
+        <div class="noshop">今天还未购物哦~</div>
+        <div class="noshop">今天已购物~</div>
+        <div class="noshop">很遗憾您错过了这次活动~</div>
+        <div class="noshop">活动结束啦~~</div>
+
+        <div class="goshop">连续三天购物即可获得</div>
+        <div class="goshop">已获得三周年纪念品</div>
+
+        <div class="goods">
+          <div style="width: 1.1rem;"><img src="//pic.davdian.com/free/2017/09/30/Rectangle%208.png" alt=""></div>
+          <div style="width: 1.5rem;">
+            <div style="font-size: 0.16rem;color:#333333;margin-top: 0.2rem;width: 100%;text-align: center">周年庆纪念品</div>
+            <div style="font-size: 0.12rem;color:#FF4A7D;margin-top: 0.2rem;width: 100%;text-align: center;">查看详情>>></div>
+          </div>
+        </div>
+
+        <div class="btn2"></div>
+        <div class="btn3"></div>
+        <div class="btn4"></div>
+
+
+      </template>
+
+
+
+    <!--最长的-->
+    <div class="big_img3"><img src="//pic.davdian.com/free/2017/09/30/bg5.png" alt=""></div>
+    <div class="range">
+      <div class="date">
+        <div class="default readyshop_date">10.19</div>
+        <div class="default noshop_date">10.20</div>
+        <div class="default readyshop_date">10.21</div>
+      </div>
+      <div class="circle">
+        <div><img src="//pic.davdian.com/free/2017/09/30/yellow.png" alt=""></div>
+        <div><img src="//pic.davdian.com/free/2017/09/30/white.png" alt=""></div>
+        <div><img src="//pic.davdian.com/free/2017/09/30/yellow.png" alt=""></div>
+      </div>
+      <div class="state">
+        <div class="default2 readyshop_date">已购物</div>
+        <div class="default2 noshop_date">已购物</div>
+        <div class="default2 readyshop_date">已购物</div>
+      </div>
+    </div>
+    <div>再购物一次就能获得周年庆纪念品啦</div>
+    <div>连续三天购物即可获得</div>
+    <div>仅剩 2345 个名额</div>
+    <div class="goodsLong">
+      <div style="width: 1.1rem;"><img src="//pic.davdian.com/free/2017/09/30/Rectangle%208.png" alt=""></div>
+      <div style="width: 1.5rem;">
+        <div style="font-size: 0.16rem;color:#333333;margin-top: 0.2rem;width: 100%;text-align: center">周年庆纪念品</div>
+        <div style="font-size: 0.12rem;color:#FF4A7D;margin-top: 0.2rem;width: 100%;text-align: center;">查看详情>>></div>
+      </div>
+    </div>
+
+    <div class="btnlong"></div>
 
 
 
@@ -122,6 +166,33 @@
     top: 6.75rem;
     left: 0.63rem;
   }
+  .btnlong{/*元气满满继续嗨长*/
+    width: 2.5rem;
+    height: 0.45rem;
+    background-image: url('//pic.davdian.com/free/2017/09/30/btn4.png');
+    background-size: 2.5rem 0.45rem;
+    position: absolute;
+    top: 7.32rem;
+    left: 0.63rem;
+  }
+  .btnlong2{/*快去买买买长*/
+    width: 2.5rem;
+    height: 0.45rem;
+    background-image: url('//pic.davdian.com/free/2017/09/30/button.png');
+    background-size: 2.5rem 0.45rem;
+    position: absolute;
+    top: 7.32rem;
+    left: 0.63rem;
+  }
+  .btnlong3{/*查看更多优惠活动长*/
+    width: 2.5rem;
+    height: 0.45rem;
+    background-image: url('//pic.davdian.com/free/2017/09/30/btn3.png');
+    background-size: 2.5rem 0.45rem;
+    position: absolute;
+    top: 7.32rem;
+    left: 0.63rem;
+  }
   .rute1{
     position: absolute;
     bottom: 0.58rem;
@@ -153,11 +224,22 @@
     border: 1px dashed #FF4A7D;
     box-sizing: border-box;
   }
-  .goods>div{
+  .goodsLong{
+    width: 2.63rem;
+    height: 1.12rem;
+    border-radius: 12px;
+    position: absolute;
+    left: 0.56rem;
+    top: 5.82rem;
+    font-size: 0;
+    border: 1px dashed #FF4A7D;
+    box-sizing: border-box;
+  }
+  .goods>div,.goodsLong>div{
     display: inline-block;
     vertical-align: top;
   }
-  .goods img {
+  .goods img ,.goodsLong img{
     height: 1.1rem;
     width: 1.1rem;
   }
