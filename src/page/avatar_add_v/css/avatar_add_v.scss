@@ -1,0 +1,88 @@
+@import "../../../common/css/common.scss";
+
+.avatarWrapper {
+	background: url(http://pic.davdian.com/free/Zhuanti/modify_bkg.png) repeat;
+	background-size: 100% 100%;
+	padding-bottom: 20px;
+	.avatarTitle {
+		img {
+			width: 100%;
+		}
+	}
+	.avatarStep {
+		padding-top: 11.8%;
+		img {
+			width: 100%;
+		}
+	}
+	.uploadPic {
+		padding-top: 25px;
+		text-align: center;
+		img {
+			padding: 10px;
+			width: 46%;
+			border-radius: 10px;
+			background: #fb6c46;
+		}
+	}
+	.uploadBtn {
+		position: relative;
+		text-align: center;
+		padding-top: 15px;
+		img {
+			width: 72.4%;
+		}
+		.uploadIpt {
+			position: absolute;
+			height: 40px;
+			opacity: 0;
+		}
+	}
+	.avatarTips {
+		padding: 20px 0;
+		line-height: 20px;
+		color: #fff;
+		font-size: 14px;
+		text-align: center;
+	}
+	.avatarPoster {
+		text-align: center;
+		.avatarTitleTips {
+			text-align: center;
+			color: #a15809;
+			padding: 15px 0;
+		}
+		.AvatarPosterCont {
+			margin: 0 20px;
+			display: inline-block;
+			background: #f3cba0;
+			border-radius: 10px;
+			img {
+				width: 100%;
+				padding: 0 15px 15px 15px;
+				box-sizing: border-box;
+			}
+		}
+	}
+	.avatarCont {
+		background: #f3cba0;
+		padding: 20px;
+		margin: 10px 20px;
+		border-radius: 10px;
+		.avatarListTips {
+			text-align: center;
+			color: #a15809;
+			font-size: 14px;
+			padding-bottom: 10px;
+		}
+	}
+	.avatarLists {
+		// padding-top: 10px;
+		img {
+			width: 30px;
+			height: 30px;
+			margin-left: 5px;
+			margin-bottom: 5px;
+		}
+	}
+}

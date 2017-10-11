@@ -18,7 +18,8 @@ import popup from '../../../common/js/module/popup.js';
 new Vue({
 	el: ".app",
 	components: {
-		
+		'com-top-title': require('../../../component/com-top-title.vue'),
+    'avatar-upload': require('../vue/avatar_upload.vue')
 	},
 	props: {},
 	data() {
