@@ -45,7 +45,7 @@
         10.详情可咨询大V店客服。
       </div>
       <!--按钮-->
-      <div v-if="isWeixin" class="main_btn">点击右上角“···”按钮发起助力</div>
+      <div v-if="isWeixin" class="main_btn">点击右上角“···”按钮喊好友帮我助力</div>
       <div v-if="isDvdApp" @click="shares" class="main_btn">喊人助力</div>
       <div v-if="!isDvdApp&&!isWeixin" @click="gowxapp" class="main_btn">喊人助力</div>
       <!--商品详情-->

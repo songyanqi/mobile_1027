@@ -232,7 +232,7 @@
           }
           .price {
             background: #f83757;
-            padding: ptr(10);
+            padding: ptr(10) 0;
             line-height: 1.5;
             color: white;
             .act {

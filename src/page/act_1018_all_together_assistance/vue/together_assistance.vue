@@ -54,7 +54,7 @@
           <div class="ast_txt" style="padding:0.68rem 0 0.12rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
           <!--1018活动期间-->
           <span @click="go_main('/act_1018_main.html')" class="share_btn bd_r"
-                style="display: block;">去10.18周年庆主会场逛逛</span>
+                style="display: block;">去大V店10.18周年庆主会场逛逛</span>
         </section>
         <section v-else>
           <!--进页面的时候已经助力过了-->
@@ -133,7 +133,7 @@
 
            <span v-if="response.actType == 2">
               <div class="ast_txt" style="padding:0.72rem 0 0.14rem;">助力省钱活动已结束<br>关注更多精彩活动</div>
-              <span @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去10.18周年庆主会场逛逛</span>
+              <span @click="go_main('/act_1018_main.html')" class="share_btn bd_r" style="display: block;">去大V店10.18周年庆主会场逛逛</span>
            </span>
         </section>
         <section v-else>
@@ -150,7 +150,7 @@
           <span v-if="response.source.supporterPrice == '0'">
             <div class="no_ast ast_txt" style="padding: 0.48rem 0 0.34rem;">还没有好友帮你助力，快去召集好友助力省钱吧！</div>
             <div v-if="isApp" class="share_btn bd_r" @click="shares">喊人助力</div>
-            <div v-if="isWx" class="share_btn bd_r">点击右上角“···”按钮分享</div>
+            <div v-if="isWx" class="share_btn bd_r">点击右上角“···”按钮喊好友帮我助力</div>
             <div v-if="!isWx && !isApp" class="share_btn bd_r" @click="gowxorapp">喊人助力</div>
           </span>
             <!--已经得到好友的助力-->
@@ -160,7 +160,7 @@
               v-if="response.source.rate">，战胜了{{response.source.rate}}%的人</span></div>
             <div class="ast_txt" style="padding: 0.15rem 0 0.1rem;">10.18当天购买只需{{response.source.surplusPrice}}元，继续召集好友助力得0元抢购，加油吧！</div>
             <div v-if="isApp" class="share_btn bd_r" @click="shares">喊人助力</div>
-            <div v-if="isWx" class="share_btn bd_r">点击右上角“···”按钮分享</div>
+            <div v-if="isWx" class="share_btn bd_r">点击右上角“···”按钮喊好友帮我助力</div>
             <div v-if="!isWx && !isApp" class="share_btn bd_r" @click="gowxorapp">喊人助力</div>
           </span>
           </span>
@@ -204,7 +204,7 @@
     </div>
 
     <!--去主会场-->
-    <div v-if="response.actType != 2" @click="go_main('/act_1018_main.html')" class="main_btn">10.18周年庆主会场</div>
+    <div v-if="response.actType != 2" @click="go_main('/act_1018_main.html')" class="main_btn">大V店10.18周年庆主会场</div>
     <!--查看规则-->
     <div v-if="rule_form" class="com-popup-base2" @click="rule_form = false">
       <div class="table-cell">
@@ -217,7 +217,7 @@
             <p>4.邀请好友助力可获得随机减钱；</p>
             <p>5.每天仅有1次给好友助力的机会，成功助力即可给好友随机减钱，还有机会抽取iPhone8；</p>
             <p>6.10月18日当天以活动价支付购买活动商品，支付成功后该商品得到的助力金额将以返现的形式返到【我的】－【总额】－【待结算金额】－【其他收入】里，30天后如果没有退货将转到【可提现金额】；</p>
-            <p>7.其中爸爸的选择纸尿裤、成人/儿童羽绒服、熊北鼻鲑鱼酱助力所减金额，可用于购买其同款任一规格商品，最晚于10月23日24点前返现到账，其他商品将在商品支付成功后5分钟左右返现；</p>
+            <p>7.其中爸爸的选择纸尿裤、成人/儿童羽绒服、熊北鼻鲑鱼酱助力所减金额，可用于购买其同款任一规格商品，最晚于10月19日24点前返现到账，其他商品将在商品支付成功后5分钟左右返现；</p>
             <p>8.已发起助力的商品可在【我的10.18】中查看，商品库存有限，助力结束后10月18日当天请尽快支付购买，最高返该商品的实际支付金额；</p>
             <p>9.只有在10月18日成功支付商品，助力减钱金额才能返现，若未及时支付购买，助力减钱金额将不会返现到账；</p>
             <p>10.详情可咨询大V店客服。</p>
