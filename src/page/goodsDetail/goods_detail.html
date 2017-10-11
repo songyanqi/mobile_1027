@@ -8,10 +8,138 @@
   <link rel="stylesheet" href="[[static]]/../../stylesheet/model.css[[v]]">
   <link rel="stylesheet" href="[[static]]/page/goodsDetail/css/detail.css[[v]]">
   <link rel="stylesheet" href="[[static]]/page/goodsDetail/css/goods_detail.css[[v]]">
+  <style>
+    body{
+      padding-top: 0;
+    }
+    .firstPageImg1{
+      position: absolute;top:0;left: 0;width: 40px;height: 44px;
+    }
+    .firstPageImg2{
+      position: absolute;top:0;right: 0;width: 40px;height: 44px;
+    }
+    .firstPageBtnAll{
+      position: fixed;bottom:0px;width: 100%;height: 49px; background: #f9f7f8;
+      font-size:14px;max-width:640px;z-index: 1
+    }
+    .firstPageBtn1{
+      float: right; width: 27%;height: 100%;line-height:49px;text-align: center;
+      color: #fff;
+      background: linear-gradient(to right, #FF5B5B, #FA1862);
+      background: -moz-linear-gradient(right, #FF5B5B, #FA1862);
+      background: -o-linear-gradient(right, #FF5B5B, #FA1862);
+      background: -webkit-linear-gradient(left, #FF5B5B, #FA1862);
+    }
+    .firstPageBtn2{
+      float: right; width: 27%;height: 100%;line-height:49px;text-align: center;
+      color: #fff;
+      background: linear-gradient(to right, #FFB21A, #FF7C31);
+      background: -moz-linear-gradient(right, #FFB21A, #FF7C31);
+      background: -o-linear-gradient(right, #FFB21A, #FF7C31);
+      background: -webkit-linear-gradient(left, #FFB21A, #FF7C31);
+    }
+    .firstPageCart{
+      float: left;
+      width: 15%;
+      height: 100%;
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      line-height: 12px;
+    }
+    .firstPageShowWidth{
+      position: absolute;
+      top:0;
+      width: 1px;
+      float:right;
+      height: 100%;
+      color: #ddd;
+      background: #ddd;
+      -webkit-transform: scaleX(0.5);
+      -ms-transform: scaleX(0.5);
+      transform: scaleX(0.5);
+      display: inline-block;
+    }
+    .firstPageCartImg{
+      background: url(//pic.davdian.com/free/goodsDetail/shoppingCart.png) no-repeat;
+      background-size: 100%;
+      width: 21px;
+      height: 22px;
+      display: inline-block;
+      margin-top: 6px;
+    }
+    .firstPageCartImg1{
+      background: url(//pic.davdian.com/free/goodsDetail/collect_icon.png) no-repeat;
+      background-size: 100%;
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-top: 7px;
+      margin-bottom: 1px;
+    }
+    .firstPageCartText{
+      font-size: 10px;
+      color: #999;
+      margin-top: 3px;
+      width: 100%;
+      text-align: center;
+      display: inline-block;
+    }
+    .firstPageShow{
+      width: 100%;height: 43px; background: #fff;padding-left: 10px;
+      color: #999;line-height: 44px;position: relative;
+    }
+    .firstPageShowBorder{
+      width: 100%;
+      height: 1px;
+      color: #eee;
+      background: #eee;
+      -webkit-transform: scaleY(0.5);
+      -ms-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+    #firstPageShowShopCart{
+      position: relative;
+      max-width: 640px;
+    }
+  </style>
 </head>
 <body id="detail" class="scroll_flag">
   <div id="goodsDetail">
     <goods-detail></goods-detail>
+  </div>
+
+  <div id='firstPageShowShopCart'>
+    <img src="//pic.davdian.com/free/goodsDetail/backRound.png" class='firstPageImg1'>
+    <img src="//pic.davdian.com/free/goodsDetail/homeRound.png" class='firstPageImg2'>
+    <div class='firstPageBtnAll'>
+      <div class='firstPageCart'>
+        <span class='firstPageCartImg'></span>
+        <span class='firstPageCartText'>购物车</span>
+        <div class='firstPageShowWidth'></div>
+      </div>
+      
+      <div class='firstPageCart'>
+        <span class='firstPageCartImg1'></span>
+        <span class='firstPageCartText'>收藏</span>
+      </div>
+      <div class='firstPageBtn1'>立即购买</div>
+      <div class='firstPageBtn2'>加入购物车</div>
+    </div>
+    <div style='width: 100%;height: 375px; background: #fff;'></div>
+    <div style='width: 100%;height: 127px; background: #fff'></div>
+
+    <div class='firstPageShow' style='margin-top:10px;'></div>
+    <div class='firstPageShowBorder'></div>
+    <div class='firstPageShow'></div>
+    <div class='firstPageShowBorder'></div>
+    <div class='firstPageShow'></div>
+    <div class='firstPageShowBorder'></div>
+    <div class='firstPageShow'></div>
+    <div class='firstPageShowBorder'></div>
+    <div class='firstPageShow'></div>
+    <div class='firstPageShowBorder'></div>
+    <div class='firstPageShow'></div>
   </div>
 
   @@include('vendor.include')

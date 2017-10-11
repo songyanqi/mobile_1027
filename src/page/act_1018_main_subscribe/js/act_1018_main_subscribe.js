@@ -34,8 +34,8 @@ new Vue({
       tipType: null,
       screenings: null,
       // app 5.1.0以上
-      // isDvdApp: ua.isDvdApp() && ua.compareVersion(ua.getDvdAppVersion(), '5.1.0') >= 0,
-      isDvdApp: false,
+      isDvdApp: ua.isDvdApp() && ua.compareVersion(ua.getDvdAppVersion(), '5.1.0') >= 0,
+      // isDvdApp: false,
       date: date,
       // subscribe_1018_goods_ids: localStorage.getItem('subscribe_1018_goods_ids') ? JSON.parse(localStorage.getItem('subscribe_1018_goods_ids')) : [],
       subscribe_1018_goods: localStorage.getItem('subscribe_1018_goods') ? JSON.parse(localStorage.getItem('subscribe_1018_goods')) : [],
@@ -155,19 +155,23 @@ new Vue({
      * 接口名称: 商品预定提醒
      * 接口文档: http://wiki.bravetime.net/pages/viewpage.action?pageId=18547021
      */
-    subscribe(goods, callback) {
+    subscribe(goods, callback, isApp) {
       let ts = this;
+      let data = {
+        goodsId: goods.goodsId,
+        goodsName: goods.goodsName,
+        screenings: this.screenings,
+      };
+      if (isApp) {
+        data.inAPP = '1';
+      }
       $.ajax({
         cache: false,
         async: true,
         url: '/api/mg/sale/explosion/subscribe?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
-        data: encrypt({
-          goodsId: goods.goodsId,
-          goodsName: goods.goodsName,
-          screenings: this.screenings,
-        }),
+        data: encrypt(data),
         success(response) {
           common.checkRedirect(response);
           callback(response);
@@ -200,32 +204,39 @@ new Vue({
           popup.toast('马上开抢啦，请返回重新进入~');
           return;
         }
-        native.Browser.goodsBook({
-          goodsId: goods.goodsId,
-          goodsTitle: goods.goodsName,
-          goodsImage: goods.imageUrl,
-          goodsStartTime: goods.sTime,
-          // goodsStartTime: parseInt(Date.now() / 1000 + 5 * 60), // 开始时间设置为5分钟后
-          // goodsStartTime: tttt, // 开始时间设置为5分钟后
-          // goodsUrl: `${location.origin}/${goods.goodsId}.html`,
-          goodsUrl: `/${goods.goodsId}.html`,
-          // goodsListUrl: location.href,
-          goodsListUrl: location.pathname,
-          success() {
-            // 放入localStorage
-            // ts.subscribe_1018_goods_ids.push(goods.goodsId);
-            ts.subscribe_1018_goods.push(goods);
-            // localStorage.setItem('subscribe_1018_goods_ids', JSON.stringify(ts.subscribe_1018_goods_ids));
-            localStorage.setItem('subscribe_1018_goods', JSON.stringify(ts.subscribe_1018_goods));
-            popup.toast('将在活动开始前3分钟进行提醒，可在“我的10.18”中查看已预约的商品', 3000);
-            goods.buttonName = '已设预约';
-            goods.bespeakNum = parseInt(goods.bespeakNum) + 1;
-            ts.$forceUpdate();
-          },
-          error() {
+        // 调接口
+        ts.subscribe(goods, function (response) {
+          if (response.code === 0) {
+            native.Browser.goodsBook({
+              goodsId: goods.goodsId,
+              goodsTitle: goods.goodsName,
+              goodsImage: goods.imageUrl,
+              goodsStartTime: goods.sTime,
+              // goodsStartTime: parseInt(Date.now() / 1000 + 5 * 60), // 开始时间设置为5分钟后
+              // goodsStartTime: tttt, // 开始时间设置为5分钟后
+              // goodsUrl: `${location.origin}/${goods.goodsId}.html`,
+              goodsUrl: `/${goods.goodsId}.html`,
+              // goodsListUrl: location.href,
+              goodsListUrl: location.pathname,
+              success() {
+                // 放入localStorage
+                // ts.subscribe_1018_goods_ids.push(goods.goodsId);
+                ts.subscribe_1018_goods.push(goods);
+                // localStorage.setItem('subscribe_1018_goods_ids', JSON.stringify(ts.subscribe_1018_goods_ids));
+                localStorage.setItem('subscribe_1018_goods', JSON.stringify(ts.subscribe_1018_goods));
+                popup.toast('将在活动开始前3分钟进行提醒，可在“我的10.18”中查看已预约的商品', 3000);
+                goods.buttonName = '已设预约';
+                goods.bespeakNum = parseInt(goods.bespeakNum) + 1;
+                ts.$forceUpdate();
+              },
+              error() {
 
+              }
+            });
+          } else {
+            popup.toast('预约失败:' + response.data.msg);
           }
-        });
+        }, true);
       } else {
         if (startTimeDistance < 5 * 60 * 1000) {
           popup.toast('马上开抢啦，请返回重新进入~');

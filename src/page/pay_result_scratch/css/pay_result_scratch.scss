@@ -1,10 +1,10 @@
 @import "../../../common/css/common.scss";
 
-body{
+body {
   margin: auto;
 }
 
-.activity_container{
+.activity_container {
   background: white;
   padding-bottom: ptr(5);
   overflow: scroll;
@@ -12,32 +12,42 @@ body{
 
 .activity_huibenjie_scratch {
   position: relative;
-  .bg-pic{
+  .bg-pic {
     width: 100%;
     height: ptr(174);
   }
   .com-scratch-card {
     position: absolute;
-    top: ptr(89);
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: ptr(296);
-    @include height(ptr(64));
-    background: #FFAFAF;
+    top: ptr(141 / 3);
+    left: ptr(585 / 3);
+    width: ptr(336 / 3);
+    height: ptr(246 / 3);
+    border: ptr(4 / 3) solid #bf9360;
+    //background: #FFAFAF;
     font-size: ptr(20);
     //font-size: 20px;
     color: #FFFFFF;
     text-align: center;
     font-weight: bold;
+    overflow: hidden;
+    .result-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      //height: 100%;
+    }
+    canvas {
+      z-index: 1;
+    }
   }
-  .rule{
+  .rule {
     margin: ptr(10);
     color: #666666;
     font-size: ptr(11);
     //font-size: 11px;
     line-height: 1.5;
-    .title{
+    .title {
       font-size: ptr(12);
       //font-size: 12px;
       line-height: 2
@@ -45,4 +55,6 @@ body{
   }
 }
 
-
+.activity_container {
+  overflow: auto;
+}
