@@ -39,30 +39,7 @@ new Vue({
     response(){
       // response变化后并渲染完dom,设置其他事项
       this.$nextTick(function () {
-        let ts = this;
 
-        // 设置app头部标题栏
-        native.custom.initHead({
-          shareOnHead: 1,
-        });
-
-        // 设置app头部标题栏
-        native.custom.setHead({
-          title: document.title,
-          homeBtn: '1',
-        });
-
-        // 设置分享信息
-        try {
-          share.setShareInfo({
-            title: ts.response.data.shareTitle,
-            desc: ts.response.data.shareDesc,
-            link: location.href,
-            imgUrl: ts.response.data.shareImg
-          }, ts.response);
-        } catch (err) {
-          console.error(err);
-        }
       });
     }
   },
@@ -70,6 +47,33 @@ new Vue({
   },
   created() {
     // this.getData();
+  },
+  mounted() {
+    let ts = this;
+
+    // 设置app头部标题栏
+    native.custom.initHead({
+      shareOnHead: 1,
+    });
+
+    // 设置app头部标题栏
+    native.custom.setHead({
+      title: document.title,
+      homeBtn: '1',
+      shareBtn: '1',
+    });
+
+    // 设置分享信息
+    try {
+      share.setShareInfo({
+        title: '祝大V店会员3周年快乐',
+        desc: '观看视频来回顾我们的那些年',
+        link: location.href,
+        imgUrl: `${location.protocol}[[static]]/page/act_1018_video/img/share.jpg`
+      });
+    } catch (err) {
+      console.error(err);
+    }
   },
   methods: {
     /**
