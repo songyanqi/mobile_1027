@@ -5,6 +5,8 @@ import common from '../../../common/js/common.js';
 import Vue from 'Vue';
 import $ from '$';
 import encrypt from '../../../common/js/module/encrypt.js';
+import share from '../../../common/js/module/share.js';
+import native from '../../../common/js/module/native.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
 // 懒加载初始化
 vueLazyload.init();
