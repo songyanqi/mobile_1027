@@ -69,7 +69,7 @@ new Vue({
   beforeCreate() {
   },
   created() {
-    this.getData();
+    // this.getData();
   },
   methods: {
     /**
