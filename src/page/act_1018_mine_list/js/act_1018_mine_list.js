@@ -34,7 +34,8 @@ new Vue({
       url: '',
       totalReward: 0,
       myAppointment: null,
-      act_1018_mine_list: localStorage.getItem('subscribe_1018_goods')
+      act_1018_mine_list: localStorage.getItem('subscribe_1018_goods'),
+      date: date,
     }
   },
   computed: {
