@@ -97,6 +97,9 @@
 		created() {},
 		watch: {},
 		methods: {
+			getData () {
+				
+			},
 			handleUpload () {
 				document.querySelector(".uploadIpt").addEventListener('change', function (event) {
           var files = event.target.files;

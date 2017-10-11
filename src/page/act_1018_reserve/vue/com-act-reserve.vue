@@ -399,8 +399,7 @@
           that.bookNavList.push(datas[item].typeName);
           that.bookDataList.push(datas[item].dataList);
         });
-        that.bookDataList.sort(that.getSort);
-        
+        that.bookDataList[0].sort(that.getSort);
         that.singleList = that.bookDataList[0];
   		},
   		// 头部导航
@@ -410,6 +409,7 @@
         this.bookSwiper.slideTo(Math.max(0, index - 2));
   			this.bookDataList.map((item,idx) => {
   				if (index == idx) {
+            item.sort(this.getSort);
   					this.singleList = item;
   				}
   			});
