@@ -229,6 +229,7 @@
   </div>
 </template>
 <script>
+  import common from '../../../common/js/common.js';
   import encrypt from '../../../common/js/module/encrypt.js';
   import popup from '../../../common/js/module/popup.js';
   import ua from '../../../common/js/module/ua.js';
@@ -355,6 +356,7 @@
           dataType: 'json',
           data: encrypt({goodsId: ts.goodsId, shareUserId: ts.shareUserId}),
           success(response) {
+            common.checkRedirect(response);
             ts.response = response.data;
             /*助力发起和助力者title变化*/
             if (response.data.type == '0') {
