@@ -24,7 +24,29 @@ new Vue({
     }
   },
   computed: {},
-  watch: {},
+  watch: {
+    goodsInfo() {
+      this.$nextTick(function () {
+        if (ts.goodsInfo) {
+          try {
+            share.setShareInfo({
+              "title": '10.18周年庆喊好友助力，0元抢爆品！',
+              "desc": '好友助力随机减钱，助力越多越省钱',
+              "imgUrl": 'http://pic.davdian.com/free/20170915_assistance/assistance.png',
+              "link": location.href
+            });
+            setTimeout(function () {
+              native.custom.initHead({
+                'shareOnHead': '1'
+              });
+            }, 300);
+          } catch (err) {
+            console.error(err);
+          }
+        }
+      });
+    },
+  },
   beforeCreate() {
 
   },
