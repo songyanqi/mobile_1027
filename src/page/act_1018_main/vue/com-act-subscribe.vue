@@ -7,10 +7,10 @@
     <!-- 场次tab -->
     <div class="swiper-container" v-if="list">
       <div class="swiper-wrapper">
-        <div class="swiper-slide" @click="swiperSlideClick(i, item)" v-for="(item, i) in list">
+        <div class="swiper-slide" @click="swiperSlideClick(i)" v-for="(item, i) in list">
           <div class="item" :class="{selected: tabIndex === i}">
             <p>{{item.line1}}</p>
-            <p>{{item.line2}}</p>
+            <p>{{response.sys_time + '000' > eval(item.startTime).valueOf() ? '已开抢' : item.line2}}</p>
           </div>
         </div>
       </div>
@@ -63,7 +63,7 @@
     computed: {},
     watch: {
       // 监听response变化
-      list(){
+      list() {
         // response变化后并渲染完dom,设置其他事项
         this.$nextTick(function () {
           let ts = this;
@@ -74,8 +74,25 @@
             slidesPerView: 'auto',
             paginationClickable: true,
             spaceBetween: 0,
-            initialSlide: this.tabIndex,
+            initialSlide: ts.tabIndex,
           });
+
+          // 选中最近的已开抢
+          let index = 0;
+          for (let i in ts.list) {
+            let item = ts.list[i];
+            let startTime = null;
+            try {
+              startTime = eval(item.startTime);
+            } catch (err) {
+              console.error(err);
+              return;
+            }
+            if (ts.response.sys_time + '000' > startTime.valueOf()) {
+              index = parseInt(i);
+            }
+          }
+          this.swiperSlideClick(index);
         });
       }
     },
@@ -109,10 +126,10 @@
         });
       },
       /** tab切换 */
-      swiperSlideClick(index, item) {
+      swiperSlideClick(index) {
         this.swiper.slideTo(index - 2);
         this.tabIndex = index;
-        this.screenings = item.screenings;
+        this.screenings = this.list[index].screenings;
         this.$forceUpdate();
       },
       /** 商品点击 */
@@ -215,7 +232,7 @@
           }
           .price {
             background: #f83757;
-            padding: ptr(10);
+            padding: ptr(10) 0;
             line-height: 1.5;
             color: white;
             .act {

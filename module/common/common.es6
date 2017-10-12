@@ -139,6 +139,7 @@ let getDataWithSign = (opt)=>{
         data : updatas,//获得了所有信息 店铺地址 版本号 等 flag来确定是否传入版本号
         dataType: 'json',
         success : function(result) {
+            console.log('result-->', result)
             // data.data = false;
             if (!window.isPrivateMode) {//如果不是隐身模式，能在本地存储
                 //如果版本号相同，取本地的数据，下拉的时候每次的版本号都不一样 不走这一步

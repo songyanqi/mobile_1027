@@ -64,15 +64,19 @@ function checkRedirect(domain) {
   }
 }
 
-/**
- * 功能：检测cookie是否需要强制跳转
- */
-(function () {
-  var script = document.querySelector('script');
-  if (script && script.src && script.src.indexOf('common/js/autoRootSize.js') !== -1) {
-    checkRedirect(Cookies.get('force_domain'));
-  }
-})();
+// /**
+//  * 功能：检测cookie是否需要强制跳转
+//  */
+// (function () {
+//   // app切换账号时无法清理force_domain
+//   if(ua.isDvdApp() && location.pathname.indexOf('/act_1018_main.html') !== -1) return;
+//
+//   var script = document.querySelector('script');
+//   if (script && script.src && script.src.indexOf('common/js/autoRootSize.js') !== -1) {
+//     // alert(Cookies.get('force_domain'));
+//     checkRedirect(Cookies.get('force_domain'));
+//   }
+// })();
 
 // fastclick
 // iPhone; CPU iPhone OS 10_3_2 like Mac OS X

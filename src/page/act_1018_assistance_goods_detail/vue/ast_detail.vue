@@ -37,14 +37,15 @@
         2.抢购时间：2017.10.18 00:00:00- 2017.10.18 23:59:59；<br>
         3.活动仅限大V店会员参与；<br>
         4.邀请好友助力可获得随机减钱；<br>
-        5.每天仅有1次给好友助力的机会，成功助力即可给好友随机减钱，还有机会抽取iphone8；<br>
-        6.10月18日当天以活动价支付购买活动商品，支付成功后该商品得到的助力金额将以返现的形式返到【我的】－【总额】－【待结算金额】－【其他收入】里，30天后如果没有退货将转到【待提现金额】；<br>
-        7.已发起的助力商品可在【我的10.18】中查看，商品库存有限，助力结束后10月18日当天请尽快购买支付，只有成功支付商品，助力减钱金额才能返现，最高返该商品的到手金额；<br>
-        8.其中爸爸的选择纸尿裤和羽绒服这两款商品助力所减金额，最晚于10月19日24点前返现到账，其他商品将在商品支付成功后实时返现；<br>
-        9.详情可咨询大V店客服。
+        5.每天仅有1次给好友助力的机会，成功助力即可给好友随机减钱，还有机会抽取iPhone8；<br>
+        6.10月18日当天以活动价支付购买活动商品，支付成功后该商品得到的助力金额将以返现的形式返到【我的】－【总额】－【待结算金额】－【其他收入】里，30天后如果没有退货将转到【可提现金额】；<br>
+        7.其中爸爸的选择纸尿裤、成人/儿童羽绒服、熊北鼻鲑鱼酱助力所减金额，可用于购买其同款任一规格商品，最晚于10月23日24点前返现到账，其他商品将在商品支付成功后5分钟左右返现；<br>
+        8.已发起助力的商品可在【我的10.18】中查看，商品库存有限，助力结束后10月18日当天请尽快支付购买，最高返该商品的实际支付金额；<br>
+        9.只有在10月18日成功支付商品，助力减钱金额才能返现，若未及时支付购买，助力减钱金额将不会返现到账；<br>
+        10.详情可咨询大V店客服。
       </div>
       <!--按钮-->
-      <div v-if="isWeixin" class="main_btn">点击右上角“···”按钮发起助力</div>
+      <div v-if="isWeixin" class="main_btn">点击右上角“···”按钮喊好友帮我助力</div>
       <div v-if="isDvdApp" @click="shares" class="main_btn">喊人助力</div>
       <div v-if="!isDvdApp&&!isWeixin" @click="gowxapp" class="main_btn">喊人助力</div>
       <!--商品详情-->
@@ -62,9 +63,11 @@
   import share from '../../../common/js/module/share.js';
   import native from '../../../common/js/module/native.js';
   import login from '../../../common/js/module/login.js';
+
   login.needLogin();
   // 业务模块
   import vueLazyload from '../../../common/js/module/vueLazyload.js';
+
   vueLazyload.init(true);
   export default {
     props: {},
@@ -100,19 +103,20 @@
                 "desc": ts.shareInfo.desc,
                 "imgUrl": ts.shareInfo.imgUrl,
                 "link": ts.shareInfo.link,
-                success:function () {
+                success: function () {
                   ts.sharecallback();
                 }
               });
             } catch (err) {
               console.error(err);
             }
-          };
+          }
+          ;
           setTimeout(function () {
             native.custom.initHead({
               'shareOnHead': '0'
             });
-          },300);
+          }, 300);
         });
       }
     },
@@ -138,12 +142,12 @@
           data: encrypt({goodsId: ts.goodsId}),
           success(response) {
             ts.visitor_status = response.visitor_status;
-            if(response.data){
+            if (response.data) {
               ts.response = response.data;
               ts.overTimes = response.data.overTime;
               ts.shareInfo = response.data.shareInfo;
               ts.deltime();
-            }else{
+            } else {
               popup.toast("没有该商品");
             }
           },
@@ -166,9 +170,9 @@
         if (ts.visitor_status == 3) {
           ts.sharecallback();
           share.callShare();
-        }else{
+        } else {
           popup.confirm({
-            className:'',
+            className: '',
             title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
             text: '',
             okBtnTitle: '开通会员',
@@ -190,7 +194,7 @@
           url: this.moke + '/api/mg/sale/userhelpbuy/userShareGoods?_=' + Date.now(),
           type: 'post',
           dataType: 'json',
-          data: encrypt({goodsId: that.goodsId,shareUserId:that.shareUserId}),
+          data: encrypt({goodsId: that.goodsId, shareUserId: that.shareUserId}),
           success() {
 
           },
@@ -199,7 +203,7 @@
           }
         });
       },
-      gowxapp:function () {
+      gowxapp: function () {
         popup.toast("复制地址栏链接在微信中打开或直接打开大V店APP发起助力");
       }
     },
@@ -360,7 +364,8 @@
       display: inherit;
     }
   }
-  .good_detail_title{
+
+  .good_detail_title {
     height: 44px;
     line-height: 44px;
     font-size: 14px;

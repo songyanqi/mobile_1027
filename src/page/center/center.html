@@ -63,7 +63,7 @@
       <div class="title" :class="{'g-guide-target-3': feed.title.luminance == '1' && guideStep === 3}"
            v-if="feed.title" @click="feed.title.oneKd == '1' && oneKdClick();"
            :style="getMarginOrBorderTop(feed.marginTop, feed.title && feed.title.leftTitle && feed.title.leftTitle.indexOf('您是由') !== -1 ? 'border' : 'margin')">
-        <a class="btns" :href="(feed.title.command && feed.title.command.content) ? feed.title.command.content : '#'" @click="tj(1, feed.title.command.log);">
+        <a class="btns" :href="(feed.title.command && feed.title.command.content) ? feed.title.command.content : '#'" @click="tj(1, feed.title.command && feed.title.command.log);">
           <span class="name">{{feed.title.leftTitle || feed.title.title}}</span>
           <span class="more">
             <span>{{feed.title.rightTitle}}<img v-if="feed.title.command && feed.title.command.content" class="arrow" src="[[static]]/page/center/img/arrow-right.png"></span>

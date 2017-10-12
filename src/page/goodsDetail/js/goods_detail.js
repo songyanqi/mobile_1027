@@ -11,7 +11,6 @@ import Vue from 'Vue';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
 
 vueLazyload.init();
-
 window.vm = new Vue({
     el: "#goodsDetail",
     data: {
