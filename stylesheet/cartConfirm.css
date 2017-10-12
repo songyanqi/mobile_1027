@@ -1232,9 +1232,6 @@ only screen and (min-resolution:2dppx)
 .cart_confirm_container  .order_rule_tips {
   position: relative;
 }
-.cart_confirm_container  .order_rule_tips .order_role_orderTips {
-    color: #FF4A7D;
-}
 .cart_confirm_container .dealIcon {
   position: absolute;
   top: -6px;
