@@ -35,9 +35,6 @@ new Vue({
   },
   data() {
     return {
-      aaaa:{
-        "couponStatus":2
-      },
       response: null,
       topics: [
         // 头图
