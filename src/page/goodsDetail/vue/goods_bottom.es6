@@ -19,7 +19,7 @@ const GoodsBottom = {
       XNumber: XNumber,
       Scroller: Scroller,
       confirm: confirm,
-      XInput: XInput,
+      // XInput: XInput,
     },
     props: ['goodstatus','goodstatusonsale','goodstags', 'ismultigoods','goodslimitnum',
         'goodsmodalobj', 'datarepresentid','isclose', 'handlechangenum',

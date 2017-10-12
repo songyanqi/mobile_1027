@@ -13,13 +13,13 @@ vueLazyload.init();
 
 import layout from "../../../../module/index/layout.es6";
 import popup from '../../../common/js/module/popup.js';
-// import loading from '../vue/loading.vue';
+import share from '../../../common/js/module/share.js';
 
 new Vue({
 	el: ".app",
 	components: {
 		'com-top-title': require('../../../component/com-top-title.vue'),
-    'avatar-upload': require('../vue/avatar_upload.vue')
+    'avatar-upload': require('../vue/avatar_upload.vue'),
 	},
 	props: {},
 	data() {
@@ -27,7 +27,6 @@ new Vue({
 			data: null,
 			response: null,
 			isapp: false,
-			isLoad: false,
 		}
 	},
 	created () {
@@ -38,8 +37,16 @@ new Vue({
 	mounted() {
 		// 设置app头部标题栏
     native.custom.initHead({
-      homeOnHead: 1,
       shareOnHead: 1,
+      isAudioAbsorb:1,
+      isShowAudio:1
+    });
+        
+    share.setShareInfo({
+    	title: '大V店组团包邮',
+      desc: '一件包邮！每天上新！好货低价又包邮，抢到了就赚翻啦',
+      link: location.href,
+      imgUrl: 'http://mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Bouns/avatarShare.jpg',
     });
 	},
 	methods: {
@@ -53,6 +60,9 @@ new Vue({
 				success (res) {
 					common.checkRedirect(res);
 					if (!res.code) {
+						if (res.data.dataList.length > 32) {
+							res.data.dataList.length = 31;
+						}
 						that.response = res;
 					} else {
 						popup.toast(res.data.msg);
@@ -69,18 +79,5 @@ new Vue({
 
 			return !!u.match(/davdian|bravetime|vyohui/);
 		},
-		// 获取参数
-		/*getParmas() {
-			let search = location.search;
-
-			if (search.indexOf("?") != -1) {
-				let newUrl = search.substr(1);
-				let substrUrl = newUrl.split("&");
-				substrUrl.map((item,index) => {
-					this.objUrl[item.split("=")[0]] = unescape(item.split("=")[1]);
-				});
-			};
-		}
-		*/
 	}
 })
