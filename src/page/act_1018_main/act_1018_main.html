@@ -16,7 +16,7 @@
          :style="{'background-image': topics[0].content ? 'url('+topics[0].content.headPic+')' : 'url(//pic.davdian.com/activity/2017/09/18/750_630_ffedafe358bdbc4ce22f226adbb1c027.png)'}">
 
       <!--app分享按钮-->
-      <img class="app-share" v-if="ua.isDvdApp()" @click="share.callShare();" src="[[static]]/page/act_1018_main/img/share-icon.png"
+      <img class="app-share" v-if="ua.isDvdApp() && param.get('noshare') === undefined" @click="share.callShare();" src="[[static]]/page/act_1018_main/img/share-icon.png"
            style="display: none;" :style="{display: ua.isDvdApp() ? 'block' : null}">
 
       <!--gif-->
@@ -95,31 +95,30 @@
       <com-act-lightbrand :response="response.data.lightenBrand" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightbrand>
 
       <!--12~17号，爆品预约-->
-      <com-act-subscribe :response="response" v-if="response.data.subscribe && currentDate < '2017-10-19'" :current-date="currentDate"></com-act-subscribe>
+      <com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>
 
       <!--14~17号，商品预定-->
       <com-act-reserve :response="response" v-if="response.data.book" :current-date="currentDate"></com-act-reserve>
 
       <!--18号，妈妈顾问-->
-      <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
-
+      <com-act-iphone8 :response="response.data.activityAward" v-if="response.data.activityAward" :current-date="currentDate"></com-act-iphone8>
       <!--18号，红包雨-->
       <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
 
       <!--18号，助力商品抢购-->
-      <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
+      <com-xxx :response="response" v-if="response.data.hotHelp" :current-date="currentDate"></com-xxx>
 
-      <!--19号，满399返红包-->
-      <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
+      <!--19号，满100返红包-->
+      <com-act-redPacket :response="response.data.bonus" v-if="response.data.bonus" :current-date="currentDate"></com-act-redPacket>
 
       <!--19号，满399送纪念品-->
-      <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
+      <com-xxx :response="response" v-if="response.data.souvenir" :current-date="currentDate"></com-xxx>
 
       <!--19号，爆品预约变抢购样式-->
-      <com-act-subscribe :response="response" v-if="response.data.subscribe && currentDate >= '2017-10-19'" :current-date="currentDate"></com-act-subscribe>
+      <com-act-subscribe :response="response" v-if="response.data.hotSubscribe" :current-date="currentDate"></com-act-subscribe>
 
       <!--22号，满500抽奖-->
-      <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
+      <com-xxx :response="response" v-if="response.data.drawMoney" :current-date="currentDate"></com-xxx>
     </div>
 
     <!--活动下方专题-->

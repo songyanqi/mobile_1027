@@ -5,6 +5,7 @@ import common from '../../../common/js/common.js';
 import Vue from 'Vue';
 // 业务模块
 import native from '../../../common/js/module/native.js';
+import login from '../../../common/js/module/login.js';
 // 渲染页面
 new Vue({
   el: ".app",
@@ -24,6 +25,12 @@ new Vue({
   computed: {},
   watch: {},
   beforeCreate() {
+    if(login.isLogined()){
+      setTimeout(function(){
+        native.Browser.close();
+      }, 500);
+      return;
+    }
     var that = this;
     /*如果是APP，跳转到原生登陆*/
     if (!!navigator.userAgent.match(/davdian|bravetime|vyohui/)) {
@@ -46,6 +53,9 @@ new Vue({
               location.href = referer;
             }
           }
+        },
+        error: function(){
+          history.back();
         }
       });
     }

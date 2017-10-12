@@ -82,6 +82,7 @@ export default {
     }
   },
   mounted: function () {
+    alert(2);
     // this.sessionHistory();
     var that = this;
     this.$nextTick(function () {

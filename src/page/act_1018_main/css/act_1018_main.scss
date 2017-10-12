@@ -9,6 +9,7 @@ body {
   min-height: ptr(600);
   //background: url(../img/bg.jpg) repeat-y;
   background: #c80064;
+  overflow-x: hidden !important;
 
   .app-share {
     position: absolute;
