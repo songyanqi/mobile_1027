@@ -14,7 +14,7 @@
           <swiper loop auto height="32px" direction="vertical" :interval=2000 class="text-scroll" :show-dots="false">
             <swiper-item v-for="(pr,index) in notices" v-if="index%2==0">
               <p v-if="notices[index]">{{notices[index].message}}</p>
-              <p v-if="notices[index+1]">{{notices[index+1].message}}</p>
+              <p v-if="notices[index+1]">{{notices[index + 1].message}}</p>
             </swiper-item>
           </swiper>
         </div>
@@ -24,24 +24,27 @@
     <div>
       <ul>
         <li v-for="lis in response.goodsInfo" class="list_style online" @click="activebtn(lis.activityLink)">
-            <div class="img_container">
-              <div class="img_container_inner">
-                <img v-lazy="lis.goodsImage">
+          <div class="img_container">
+            <div class="img_container_inner">
+              <img v-lazy="lis.goodsImage">
+            </div>
+            <div class="order_good_info_container">
+              <div class="order_good_name">
+                {{lis.goodsName}}
               </div>
-              <div class="order_good_info_container">
-                <div class="order_good_name">
-                  {{lis.goodsName}}
-                </div>
-                <div class="order_good_price">
-                  <span class="f_l">10.18到手价<em class="price_symbol">￥</em><span>{{lis.activityPrice}}</span></span>
-                  <span class="membership_crown_pre"><em>￥</em>{{lis.goodsPrice}}</span>
-                </div>
+              <div class="order_good_price">
+                <span class="f_l">10.18到手价<em class="price_symbol">￥</em><span>{{lis.activityPrice}}</span></span>
+                <span class="membership_crown_pre"><em>￥</em>{{lis.goodsPrice}}</span>
               </div>
             </div>
-          <div v-if="lis.buttonType > 2" class="progress_info" style="padding-right: 1.1rem;" v-html="lis.activityMessage"></div>
+          </div>
+          <div v-if="lis.buttonType > 2" class="progress_info" style="padding-right: 1.1rem;"
+               v-html="lis.activityMessage"></div>
           <div v-else class="progress_info" v-html="lis.activityMessage"></div>
           <div class="remain_btns">
-            <div class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}">{{lis.activityButton}}</div>
+            <div class="panic_buying_btn" :class="{'yellows':lis.buttonType == 2,'big_1018':lis.buttonType == 3}">
+              {{lis.activityButton}}
+            </div>
           </div>
         </li>
       </ul>
@@ -56,11 +59,12 @@
             <p>2.抢购时间：2017.10.18 00:00:00- 2017.10.18 23:59:59；</p>
             <p>3.活动仅限大V店会员参与；</p>
             <p>4.邀请好友助力可获得随机减钱；</p>
-            <p>5.每天仅有1次给好友助力的机会，成功助力即可给好友随机减钱，还有机会抽取iphone8；</p>
-            <p>6.10月18日当天以活动价支付购买活动商品，支付成功后该商品得到的助力金额将以返现的形式返到【我的】－【总额】－【待结算金额】－【其他收入】里，30天后如果没有退货将转到【待提现金额】；</p>
-            <p>7.已发起的助力商品可在【我的10.18】中查看，商品库存有限，助力结束后10月18日当天请尽快购买支付，只有成功支付商品，助力减钱金额才能返现，最高返该商品的到手金额；</p>
-            <p>8.其中爸爸的选择纸尿裤和羽绒服这两款商品助力所减金额，最晚于10月19日24点前返现到账，其他商品将在商品支付成功后实时返现；</p>
-            <p>9.详情可咨询大V店客服。</p>
+            <p>5.每天仅有1次给好友助力的机会，成功助力即可给好友随机减钱，还有机会抽取iPhone8；</p>
+            <p>6.10月18日当天以活动价支付购买活动商品，支付成功后该商品得到的助力金额将以返现的形式返到【我的】－【总额】－【待结算金额】－【其他收入】里，30天后如果没有退货将转到【可提现金额】；</p>
+            <p>7.其中爸爸的选择纸尿裤、成人/儿童羽绒服、熊北鼻鲑鱼酱助力所减金额，可用于购买其同款任一规格商品，最晚于10月23日24点前返现到账，其他商品将在商品支付成功后5分钟左右返现；</p>
+            <p>8.已发起助力的商品可在【我的10.18】中查看，商品库存有限，助力结束后10月18日当天请尽快支付购买，最高返该商品的实际支付金额；</p>
+            <p>9.只有在10月18日成功支付商品，助力减钱金额才能返现，若未及时支付购买，助力减钱金额将不会返现到账；</p>
+            <p>10.详情可咨询大V店客服。</p>
           </div>
           <div @click="close_what_invite"></div>
         </div>
@@ -73,7 +77,8 @@
   import login from '../../../common/js/module/login.js';
   import native from "../../../common/js/module/native";
   import popup from "../../../common/js/module/popup.js";
-  import { Swiper, SwiperItem } from 'vux'
+  import {Swiper, SwiperItem} from 'vux'
+
   export default {
     props: {
       response: {
@@ -84,7 +89,7 @@
     data() {
       return {
         rule_form: false,
-        marguee:false
+        marguee: false
       }
     },
     components: {
@@ -92,31 +97,31 @@
       SwiperItem
     },
     computed: {
-      notices:function () {
+      notices: function () {
         var that = this;
-        if(that.response.notice) {
-//          if (that.response.notice.length < 100) {
-//            var announcementData = [];
-//            announcementData = that.response.notice;
-//            let nums = 100 - that.response.notice.length;
-//            for (var i = 0; i < nums; i++) {
-//              announcementData.push(that.response.notice[i])
-//            }
-//            that.response.notice = announcementData;
-//            setTimeout(function () {
-//              that.marguee = true;
-//            },1500);
-//            return that.response.notice;
-//          }else{
-//            setTimeout(function () {
-//              that.marguee = true;
-//            },1500);
-            return that.response.notice;
-          }
+        if (that.response.notice) {
+          return that.response.notice;
         }
+      }
     },
     watch: {
+      rule_form: function () {
+        var that = this;
+        if (that.rule_form) {
+          if (document.documentElement && document.documentElement.scrollTop) {
+            this.scrollTop = document.documentElement.scrollTop;
+          } else if (document.body) {
+            this.scrollTop = document.body.scrollTop;
+          }
+          document.body.style.top = -this.scrollTop + 'px';
+          document.body.classList.add("bodyFix");
 
+        } else {
+          document.body.classList.remove("bodyFix");
+          $(document).scrollTop(this.scrollTop);
+
+        }
+      }
     },
     created() {
 
@@ -136,30 +141,30 @@
       },
       activebtn: function (url) {
         /*没登录去登录*/
-        if(login.isLogined()){
+        if (login.isLogined()) {
           /*如果不是会员提示他成为会员*/
           if (login.isSeller()) {
-            if(ua.isDvdApp()){
+            if (ua.isDvdApp()) {
               event.preventDefault();
               native.Browser.open({
-                url:url
+                url: url
               })
-            }else{
+            } else {
               location.href = url;
             }
-          }else{
+          } else {
             popup.confirm({
-              className:'',
+              className: '',
               title: '您还没有成为会员不能参与该活动哦，成为会员即可参与～',
               text: '',
               okBtnTitle: '开通会员',
               okBtnCallback() {
-                if(ua.isDvdApp()){
+                if (ua.isDvdApp()) {
                   event.preventDefault();
                   native.Browser.open({
-                    url:"/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button"
+                    url: "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button"
                   })
-                }else{
+                } else {
                   location.href = "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=shop_button";
                 }
               },
@@ -169,11 +174,11 @@
               }
             });
           }
-        }else{
+        } else {
           login.needLogin();
         }
       },
-      events:function () {
+      events: function () {
 
       }
     },
@@ -222,7 +227,7 @@
   }
 
   .com-box div ul {
-    margin:0 0.1rem;
+    margin: 0 0.1rem;
     overflow: hidden;
     background-color: #FFFFFF;
   }
@@ -240,12 +245,13 @@
 
   .com-box div ul li .img_container_inner {
     width: 0.8rem;
+    height: 0.8rem;
     position: relative;
   }
 
   .com-box div ul li .img_container_inner img {
-    width: 100%;
-    height: 100%;
+    width: 0.8rem;
+    height: 0.8rem;
   }
 
   .com-box div ul li .order_good_info_container {
@@ -517,14 +523,14 @@
     border-radius: 0.04rem;
     animation: com-alert-animation 0.5s;
     width: 73.333%;
-    /*min-height: 200px;*/
+    min-height: 200px;
     position: relative;
     text-align: center;
     background-color: #FFFFFF;
-    padding: 0 10px 15px;
+    padding: 0 0 15px;
     color: #FF4A7D;
-    max-height: 4rem;
-    overflow-y: scroll;
+    /*max-height: 4rem;*/
+    /*overflow-y: scroll;*/
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(1) {
@@ -538,7 +544,9 @@
     font-size: 14px;
     text-align: left;
     line-height: 20px;
-    padding-top: 5px;
+    padding: 5px 10px 0;
+    max-height: 4rem;
+    overflow-y: scroll;
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(3) {

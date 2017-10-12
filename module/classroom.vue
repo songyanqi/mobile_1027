@@ -659,7 +659,7 @@
                                     RongIMClient.setOnReceiveMessageListener({
                                         // 接收到的消息
                                         onReceived: function (message) {
-                                            log('message->', message)
+                                            console.log('message->', message,123)
                                             if (message.messageType == "TextMessage") {
                                                 var content2 = message.content.content;
                                                 var content = message.content;

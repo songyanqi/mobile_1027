@@ -163,14 +163,14 @@
     border-radius: 0.04rem;
     animation: com-alert-animation 0.5s;
     width: 73.333%;
-    /*min-height: 200px;*/
+    min-height: 200px;
     position: relative;
     text-align: center;
     background-color: #FFFFFF;
-    padding: 0 10px 15px;
+    padding: 0 0 15px;
     color: #FF4A7D;
-    max-height: 4rem;
-    overflow-y: scroll;
+    /*max-height: 4rem;*/
+    /*overflow-y: scroll;*/
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(1) {
@@ -184,7 +184,9 @@
     font-size: 14px;
     text-align: left;
     line-height: 20px;
-    padding-top: 5px;
+    padding: 5px 10px 0;
+    max-height: 4rem;
+    overflow-y: scroll;
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(3) {
@@ -261,8 +263,9 @@
             <p>1.预定时间：2017.10.14 00:00:00-2017.10.17 23:59:59；</p>
             <p>2.尾款结算时间：2017.10.18 00:00:00-2017.10.18 23:59:59；</p>
             <p>3.预定期间，用户支付预定金并成功预定指定商品，在10月18日当天可享定金膨胀的优惠，定金膨胀后实际抵扣的金额以预定时实际约定的抵扣金额为准；例如：某品牌洁面仪大V售价100元，预定金20可抵40元使用，小明妈在2017.10.15日支付定金20元，成功预定了该洁面仪，在10月18日当天仅需支付60元即可获得该商品；</p>
-            <p>4.定金是否退回？如果在10月18日当天未及时结算预定商品的尾款，定金将不予退回</p>
-            <p>5.详情可咨询大V店客服。</p>
+            <p>4.定金是否退回？如果在10月18日当天未及时结算预定商品的尾款，定金将不予退回；</p>
+            <p>5.购买或销售预定商品且成功结算尾款，会员将额外获得每件10元的奖励，奖励金额（退货订单除外）将于11月1日以返现方式发放；</p>
+            <p>6.详情可咨询大V店客服。</p>
           </div>
           <div @click="close_what_invite"></div>
         </div>
@@ -323,6 +326,23 @@
         },
         deep: true
       },
+      rule_form: function () {
+        var that = this;
+        if (that.rule_form) {
+          if (document.documentElement && document.documentElement.scrollTop) {
+            this.scrollTop = document.documentElement.scrollTop;
+          } else if (document.body) {
+            this.scrollTop = document.body.scrollTop;
+          }
+          document.body.style.top = -this.scrollTop + 'px';
+          document.body.classList.add("bodyFix");
+
+        } else {
+          document.body.classList.remove("bodyFix");
+          $(document).scrollTop(this.scrollTop);
+
+        }
+      }
       // singleList: {
       //   handler() {
       //     this.singleList.map((item,index) => {

@@ -9,6 +9,7 @@ import native from '../../../common/js/module/native.js';
 import confirm from './confirm.vue';
 import popup from '../../../common/js/module/popup.js';
 import share from '../../../common/js/module/share.js';
+import common from '../../../common/js/common.js';
 import {isTryShop} from "../../../../utils/utils.es6";
 import login from "../../../common/js/module/login.js";
 require('babel-polyfill');
@@ -578,6 +579,7 @@ export default {
         data: dataObj,
         dataType: 'JSON',
         success(res) {
+          common.checkRedirect(res);
           that.loadBefore = false;
 
           //清空，不然有串商品会一直添加

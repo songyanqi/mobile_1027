@@ -219,6 +219,10 @@ new Vue({
         }),
         success(response) {
           common.checkRedirect(response);
+
+          // 修改当前服务器时间
+          // response.sys_time = parseInt(new Date(2017,9,19,22) / 1000);
+
           ts.response = response;
 
           // 刷新页面

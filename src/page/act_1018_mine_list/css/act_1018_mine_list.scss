@@ -133,6 +133,10 @@ body {
       width:ptr(172.5);
       height:ptr(172.5);
     }
+    .start-time {
+      font-size:ptr(10);
+      padding:0 ptr(10) ptr(12) ptr(10);
+    }
     .goods-text{
       font-size:ptr(12);
       @include height(ptr(31));

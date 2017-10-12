@@ -1,0 +1,64 @@
+
+{
+  "code":"0",
+  "shop_url":"https://15201663952.davdian.com",
+  "visitor_status":"3",
+  "sess_key":"48a275a991a0a6295706e6d9f8c3a784b62a4bbc",
+  "data_version":"xxxxxx",
+  "data":{
+    "1508284800": {
+      "status": "1",
+      "goodsList": [
+        {
+          "goodsId": "313782",
+          "goodsName": "测试商品aaaaa",
+          "goodsImage": "http://pic.davdian.com/supplier/2017/03/16/1000_1000_48afa1740994d644ef681fc462977662.jpg",
+          "goodsPrice": "10",
+          "activityPrice": "23.3",
+          "lotteryPrice": "10",
+          "status": "1",
+          "link": "/313782.html",
+          "lotteryLink": "/lottery.html"
+        },
+        {
+          "goodsId": "34193",
+          "goodsName": "测试商品",
+          "goodsImage": "http://pic.davdian.com/goods/2016/01/26/640_640_3af1ac31a96194921e1ada2f48414d72.jpg",
+          "goodsPrice": "10",
+          "activityPrice": "18.9",
+          "status": "2",
+          "lotteryPrice": "10",
+          "link": "/34193.html",
+          "lotteryLink": "/lottery.html"
+        }
+      ]
+    },
+    "1508299200": {
+      "status": "0",
+      "goodsList": [
+        {
+          "goodsId": "579962",
+          "goodsName": "熊北鼻鲑鱼酱12罐",
+          "goodsImage": "http://pic.davdian.com/activity/2017/09/27/1200_1200_ca08074355d0775dc33863edddad9d7a.jpg",
+          "goodsPrice": "369",
+          "activityPrice": "139",
+          "status": "0",
+          "lotteryPrice": "10",
+          "link": "/579962.html",
+          "lotteryLink": "/lottery.html"
+        },
+        {
+          "goodsId": "578861",
+          "goodsName": "哈米尼冬款三件装",
+          "goodsImage": "http://pic.davdian.com/activity/2017/09/27/1200_1200_3d94cf8d953b0d21a9fa19337f95ad86.jpg",
+          "goodsPrice": "459",
+          "activityPrice": "209",
+          "status": "0",
+          "lotteryPrice": "10",
+          "link": "/578861.html",
+          "lotteryLink": "/lottery.html"
+        }
+      ]
+    }
+  }
+}

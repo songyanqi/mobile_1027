@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 @import 'util/all';
-@import 'lib/normalize';
 
 * {
   margin: 0;
@@ -38,8 +37,8 @@ body {
   color: #333;
   word-break: break-all;
   -webkit-tap-highlight-color: transparent;
-  //-webkit-user-select: none;
-  //user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .app {
@@ -70,7 +69,12 @@ body {
 :-ms-input-placeholder { /* Internet Explorer 10+ */
   color: #999;
 }
-
+.bodyFix {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
 // 超过最大展示边框
 //@media screen and (min-width: $pageMaxWidth) {
 //  .app {

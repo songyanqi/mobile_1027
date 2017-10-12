@@ -6,7 +6,6 @@ import glob from 'glob';
 import fs from 'fs';
 module.exports = function (jsPath, staticPath) {
   let entry = {
-    'static/common/js/autoRootSize': './src/common/js/autoRootSize.js',
   };
   // 自动添加src下的JS
   glob.sync(`${__dirname}/${jsPath}`).forEach(function (filePath) {
@@ -58,13 +57,13 @@ module.exports = function (jsPath, staticPath) {
       ]
     },
     plugins: [
-      new ExtractTextPlugin("[name].css"),
+      // new ExtractTextPlugin("[name].css"),
       // 将公共代码抽离出来合并为一个文件
-      new webpack.optimize.CommonsChunkPlugin({
-        name: "commons",
-        filename: 'common/js/common.js',
-        minChunks: 10
-      }),
+      // new webpack.optimize.CommonsChunkPlugin({
+      //   name: "commons",
+      //   filename: 'common/js/common.js',
+      //   minChunks: 10
+      // }),
     ],
     externals: {
       "jquery": "$",
@@ -79,7 +78,7 @@ module.exports = function (jsPath, staticPath) {
     resolve: {
       extensions: ['', '.js', '.vue', '.json'],
       alias: {
-        vue: __dirname + '/src/common/js/lib/vue/vue.min.js'
+        vue: __dirname + '/javascript/vue2.0.5.min.js'
       }
     }
   };

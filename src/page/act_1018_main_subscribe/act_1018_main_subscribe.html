@@ -52,18 +52,19 @@
             <!--<span class="origin-price" @click.stop="localStorage.clear();">￥{{item.goodsPrice}}</span>-->
             <span class="origin-price">￥{{item.goodsShopPrice}}</span>
             <!--按钮-->
-            <template v-if="isDvdApp">
-              <span class="btn buy" v-if="item.buttonName === '立即抢购'">立即抢购</span>
-              <span class="btn wait-buy" @click.stop="btnClickWaitBuy" v-else-if="item.buttonName === '等待抢购'">等待抢购</span>
-              <span class="btn subscribed" @click.stop="btnClickSubscribed" v-else-if="isSubscribedInApp(item.goodsId)">已设预约</span>
-              <span class="btn subscribe" @click.stop="btnClickSubscribe(item)" v-else>我要预约</span>
-            </template>
-            <template v-else>
+            <!--<template v-if="isDvdApp">-->
+              <!--<span class="btn buy" v-if="item.buttonName === '立即抢购'">立即抢购</span>-->
+              <!--<span class="btn wait-buy" @click.stop="btnClickWaitBuy" v-else-if="item.buttonName === '等待抢购'">等待抢购</span>-->
+              <!--&lt;!&ndash;<span class="btn subscribed" @click.stop="btnClickSubscribed" v-else-if="isSubscribedInApp(item.goodsId)">已设预约</span>&ndash;&gt;-->
+              <!--<span class="btn subscribed" @click.stop="btnClickSubscribed" v-else-if="item.buttonName === '已设预约'">已设预约</span>-->
+              <!--<span class="btn subscribe" @click.stop="btnClickSubscribe(item)" v-else>我要预约</span>-->
+            <!--</template>-->
+            <!--<template v-else>-->
               <span class="btn subscribe" @click.stop="btnClickSubscribe(item)" v-if="item.buttonName === '我要预约'">我要预约</span>
               <span class="btn subscribed" @click.stop="btnClickSubscribed" v-else-if="item.buttonName === '已设预约'">已设预约</span>
               <span class="btn buy" v-else-if="item.buttonName === '立即抢购'">立即抢购</span>
               <span class="btn wait-buy" @click.stop="btnClickWaitBuy" v-else-if="item.buttonName === '等待抢购'">等待抢购</span>
-            </template>
+            <!--</template>-->
           </div>
         </span>
       </li>

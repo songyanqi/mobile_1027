@@ -265,7 +265,7 @@ let getShareInfo = () =>{
     let newShareInfo = {
         title:window.shareTitle||window.title||"大V店",
         link: getNewLineLink(window.lineLink||window.link||location.href),
-        imgUrl:window.imgUrl||"http://pic.davdian.com/free/index0925_icon1.png?x-oss-process=image/resize,m_fill,w_80",
+        imgUrl:window.imgUrl||"http://pic.davdian.com/free/index0925_icon1.png?x-oss-process=image/resize,m_fill,w_80&",
         desc:window.descContent||window.desc||"大V店"
     };
     Object.assign(newShareInfo,_initShareInfo);
