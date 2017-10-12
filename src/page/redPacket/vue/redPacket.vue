@@ -62,8 +62,15 @@
   import util from "../../../../utils/utils.es6"
   import login from "../../../../src/common/js/module/login.js"
   import api from "../../../../utils/api.es6"
+  import share from "../../../../src/common/js/module/share.js"
   export default{
     mounted(){
+        share.setShareInfo({
+          title: "妈妈顾问赢IPhone 8",
+          desc: "妈妈顾问服务人群销售额达到10万，有机会获得IPhone 8一部",
+          link: window.location.href,
+          imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/11/%E8%BF%94100%E7%BA%A2%E5%8C%85%E5%88%86%E4%BA%ABicon.jpg"
+        });
         this.init();
     },
     data(){
