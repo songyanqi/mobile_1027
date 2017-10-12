@@ -30,9 +30,14 @@ new Vue({
     'com-act-lightbrand': require('../vue/lightBrand.vue'),
     'com-act-assistance': require('../../act_1018_assistance/vue/com-act-assistance.vue'),
     'com-act-reserve': require('../../act_1018_reserve/vue/com-act-reserve.vue'),
+    'com-act-iphone8':require('../vue/iphone8.vue'),
+    'com-act-redpacket':require('../vue/redPacket.vue')
   },
   data() {
     return {
+      aaaa:{
+        "couponStatus":2
+      },
       response: null,
       topics: [
         // 头图

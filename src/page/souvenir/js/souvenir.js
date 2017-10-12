@@ -55,11 +55,11 @@ new Vue({
         // 设置分享信息
         try {
           share.setShareInfo({
-            title: ts.response.data.shareTitle,
-            desc: ts.response.data.shareDesc,
-            link: location.href,
-            imgUrl: ts.response.data.shareImg
-          }, ts.response);
+            title: "连续三天购物可获得纪念品",
+            desc: "10月19、20、21三天连续购物可获得大V店周年纪念品，限量5000个，快来~~~",
+            link: window.location.href,
+            imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/11/%E8%BF%94100%E7%BA%A2%E5%8C%85%E5%88%86%E4%BA%ABicon.jpg"
+          });
         } catch (err) {
           console.error(err);
         }

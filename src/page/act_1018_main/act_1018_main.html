@@ -101,16 +101,17 @@
       <com-act-reserve :response="response" v-if="response.data.book" :current-date="currentDate"></com-act-reserve>
 
       <!--18号，妈妈顾问-->
-      <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
-
+      <com-act-iphone8 :response="response.data.activityAward" v-if="response.data.activityAward" :current-date="currentDate"></com-act-iphone8>
       <!--18号，红包雨-->
       <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
 
       <!--18号，助力商品抢购-->
       <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
 
-      <!--19号，满399返红包-->
-      <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
+      <!--19号，满100返红包-->
+      <!--<com-act-redPacket :response="response.data.bonus" v-if="response.data.bonus" :current-date="currentDate"></com-act-redPacket>-->
+      <com-act-redpacket :response="aaaa" :current-date="currentDate"></com-act-redpacket>
+
 
       <!--19号，满399送纪念品-->
       <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
