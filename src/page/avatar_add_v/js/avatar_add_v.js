@@ -46,8 +46,9 @@ new Vue({
 		getData () {
 			let that = this;
 			$.ajax({
-				url: 'https://www.easy-mock.com/mock/59b9230be0dc663341a8ce57/serviceMember',
+				url: '/api/mg/sale/avatarmake/getAvatarList',
 				type: "POST",
+				data: layout.strSign('avatarAddv',{}),
 				dataType: "JSON",
 				success (res) {
 					common.checkRedirect(res);
