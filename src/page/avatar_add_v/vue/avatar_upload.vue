@@ -44,8 +44,8 @@
 		data() {
 			return {
 				uploadPic: '//pic.davdian.com/free/Zhuanti/modify_avatar.png',
-				// avatarPoster: "//pic.davdian.com/free/Zhuanti/modify_avatar.png",
-				avatarPoster: "",
+				avatarPoster: "//pic.davdian.com/free/Zhuanti/modify_avatar.png",
+				// avatarPoster: "",
 			}
 		},
 		components: {},
