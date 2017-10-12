@@ -90,31 +90,32 @@
         }
       },
       init(){
+        var that=this;
         if(this.getStaus()==0){
           this.isLogin=false;
         }else{
           this.isLogin=true;
 
-//          api("/api/mg/sale/coupon/getNineteen")
-//            .then(function (result) {
-//                if(result.code==0){
-//                    if(result.data.activeStatus && result.data.couponStatus){
-//                      this.isRedPacket=result.data.couponStatus;
-//                      this.isHotDay=result.data.activeStatus;
-//                    }
-//                }else{
-//                   alert(result.code);
-//                }
-//            })
-//            .catch(function (e) {
-//              alert(e);
-//            })
+          api("/api/mg/sale/coupon/getNineteen")
+            .then(function (result) {
+                if(result.code==0){
+                    if(result.data.activeStatus && result.data.couponStatus){
+                      that.isRedPacket=result.data.couponStatus;
+                      that.isHotDay=result.data.activeStatus;
+                    }
+                }else{
+                   alert(result.code);
+                }
+            })
+            .catch(function (e) {
 
-          var result=require('../json/redPacket.json');
-          this.isRedPacket=result.data.couponStatus;
-          this.isHotDay=result.data.activeStatus;
-          console.log(this.isRedPacket);
-          console.log(this.isHotDay);
+            })
+//
+//          var result=require('../json/redPacket.json');
+//          this.isRedPacket=result.data.couponStatus;
+//          this.isHotDay=result.data.activeStatus;
+//          console.log(this.isRedPacket);
+//          console.log(this.isHotDay);
         }
 
       },
