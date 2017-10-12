@@ -12,6 +12,7 @@ new Vue({
 	el: ".app",
 	components: {
 		'com-top-title': require('../../../component/com-top-title.vue'),
+		'com-act-bouns-rain': require('../vue/com-act-bouns-rain.vue'),
 	},
 	data() {
 		return {
