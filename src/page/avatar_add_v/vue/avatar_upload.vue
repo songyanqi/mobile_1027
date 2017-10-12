@@ -8,7 +8,9 @@
 		</div>
 		<div>
 			<div class = "uploadPic">
-				<img :src="uploadPic">
+				<div class = "uploadPicCont">
+					<img :src="uploadPic">
+				</div>
 			</div>
 			<div class = "uploadBtn">
 				<input @click = "handleUpload" class = "uploadIpt" type="file" accept="image/*" name="">
@@ -35,16 +37,22 @@
 				<img v-for = "item of response.data.dataList" :src="item.avatar_url">
 			</div>
 		</div>
+		<loading v-if = "isLoad"></loading>
 	</div>
 </template>
 <script>
 	import nativeAncestry from '../../../common/js/module/nativeAncestor.js';
 	import popup from '../../../common/js/module/popup.js';
+	import layout from "../../../../module/index/layout.es6";
+	import loading from "../../cancle_order/vue/loading.vue";
+
 	export default {
+
 		data() {
 			return {
 				uploadPic: '//pic.davdian.com/free/Zhuanti/modify_avatar.png',
 				avatarPoster: "//pic.davdian.com/free/Zhuanti/modify_avatar.png",
+				isLoad: false,
 				// avatarPoster: "",
 			}
 		},
@@ -80,15 +88,16 @@
 			handleUpload () {
 				let that = this;
 				document.querySelector(".uploadIpt").addEventListener('change', function (event) {
-          var files = event.target.files;
-          var picStr = 'shop_logo';
-           var file = files[0];
-           var data = new FormData();
-           data.append(picStr, file);
-          // 全站默认上传接口/upload.php
-          var url = '/api/mg/sale/avatarmake/generatePoster';
-          $(".picBack img").attr("src","//pic.davdian.com/free/2017/03/01/304_200_5ed94acf11f8a6fb57e1138bea19dccd.gif");
-          $.ajax({
+					let files = event.target.files;
+          let picStr = 'shop_logo';
+	        let file = files[0];
+	        let data = new FormData();
+	        data.append(picStr, file);
+	        // 全站默认上传接口/upload.php
+	        let url = '/upload.php?owner_id=2547=' + Date.now();
+	        // that.uploadPic = "//pic.davdian.com/free/2017/03/01/304_200_5ed94acf11f8a6fb57e1138bea19dccd.gif";
+	        that.isLoad = true;
+	        $.ajax({
             cache: false,
             async: true,
             url: url,
@@ -99,15 +108,37 @@
             contentType: false,
             processData: false,
             success: function (res) {
-            	console.log("success",res);
-            	if (!res.code) {
-              	that.avatarPoster = res.data.shop_logo.s;
-            	} else {
-            		popup.toast(res.data.msg);
-            	}
+              if (!res.errorCode) {
+                // let imgPic = res.data.shop_logo.src+"@200h_304w_1e_1c_2o";
+                // that.uploadPic = res.data.shop_logo.src;
+                $.ajax({
+                	url: "/api/mg/sale/avatarmake/generatePoster",
+                	type: "POST",
+									data: layout.strSign('uploadPics',{uploadFile: res.data.shop_logo.src}),
+									dataType: "JSON",
+									success (res) {
+										if (!res.code) {
+											that.isLoad = false;
+											that.uploadPic = res.data.avatarUrl;
+											that.avatarPoster = res.data.posterUrl;
+										} else {
+											popup.toast(res.data.msg);
+										}
+									},
+									error () {
+										popup.toast("定制图片失败，请重试");
+									}
+                });
+              } else {
+                popup.toast(res.errorMsg);
+              }
             },
             error: function (e,e1) {
-              console.log("error",e,e1);
+              if(e1=="timeout"){
+                   popup.toast("图片过大,请选则较小的照片或者切换到较好的网络环境后重试");
+               }else{
+                   popup.toast("上传失败，请检查网络后重试("+e1+")");
+               }
             }
           });
         }, false);
