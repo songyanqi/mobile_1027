@@ -83,8 +83,12 @@
           if (history.length > 1) {
             history.back();
           } else {
-            window.location.href = "about:blank";
-            window.close();
+            if (ua.isWeiXin() && window.wx) {
+              window.wx.closeWindow();
+            } else {
+              window.location.href = "about:blank";
+              window.close();
+            }
           }
         }
       },
