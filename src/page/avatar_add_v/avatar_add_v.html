@@ -9,7 +9,7 @@
 	<div class = "app" :class = "{ bodypd0: isapp }">
 		<!-- <loading v-if = "isLoad"></loading> -->
 		<com-top-title title="定制你的周年庆头像" home></com-top-title>
-		<avatar-upload></avatar-upload>
+		<avatar-upload :response = "response"></avatar-upload>
 	</div>
 	
 	@@include('vendor.include')

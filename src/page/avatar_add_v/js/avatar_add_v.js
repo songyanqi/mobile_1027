@@ -25,24 +25,44 @@ new Vue({
 	data() {
 		return {
 			data: null,
-			objUrl: {},
+			response: null,
 			isapp: false,
 			isLoad: false,
 		}
 	},
 	created () {
 		// this.getParmas();
-		// this.getData();
+		this.getData();
 		this.isapp = this.isApp();
 	},
 	mounted() {
 		// 设置app头部标题栏
     native.custom.initHead({
       homeOnHead: 1,
-      shareOnHead: 0,
+      shareOnHead: 1,
     });
 	},
 	methods: {
+		getData () {
+			let that = this;
+			$.ajax({
+				url: 'https://www.easy-mock.com/mock/59b9230be0dc663341a8ce57/serviceMember',
+				type: "POST",
+				dataType: "JSON",
+				success (res) {
+					common.checkRedirect(res);
+					if (!res.code) {
+						that.response = res;
+					} else {
+						popup.toast(res.data.msg);
+					}
+					console.log(1234,res);
+				},
+				error (error) {
+					console.log(error)
+				},
+			})
+		},
 		isApp() {
 			let u = navigator.userAgent;
 
@@ -59,50 +79,7 @@ new Vue({
 					this.objUrl[item.split("=")[0]] = unescape(item.split("=")[1]);
 				});
 			};
-		},
-		getData() {
-			this.isLoad = true;
-			let that = this;
-			let isDev = true;
-			if (isDev) {
-				let queryObj = layout.strSign('create',{
-					deliveryId: this.objUrl.deliveryId,
-					orderId: this.objUrl.orderId
-				});
-				$.ajax({
-					url: "/api/mg/order/cancelOrder/createDetail?_="+Date.now(),
-					type: "POST",
-					data: queryObj,
-					dataType: "json",
-					success (res) {
-						common.checkRedirect(res);
-						that.isLoad = false;
-						if (!res.code) {
-							that.data = res;
-						}
-					},
-					error (err) {
-						that.isLoad = false;
-						popup.toast('网络异常，请稍后');
-					}
-				})
-			} else {
-				$.ajax({
-					url: "",
-					// type: "post",
-					// data: layout.strSign("createDetail",{
-					// 	deliveryId: 9542093
-					// }),
-					dataType: "json",
-					success (res) {
-					},
-					error (err) {
-						that.data = require("../json/createDetail.json");
-						console.log(2,that.data);
-						// console.log(1,err);
-					}
-				})
-			}
-		},*/
+		}
+		*/
 	}
 })

@@ -20,7 +20,7 @@
 			<p>与全国大v妈妈为大v店3周年加油</p>
 		</div>
 		<div class = "avatarPoster">
-			<div class = "AvatarPosterCont">
+			<div class = "AvatarPosterCont" v-if = "avatarPoster">
 				<p class = "avatarTitleTips">长按保存海报</p>
 				<img
 						@touchstart = "handleTouchStart"
@@ -29,121 +29,32 @@
             @touchcancle = "handleTouchCancle" :src="avatarPoster">
 			</div>
 		</div>
-		<div class = "avatarCont">
-			<p class = "avatarListTips">共有{{avatarListNum}}人换头像啦</p>
+		<div class = "avatarCont" v-if = "response">
+			<p class = "avatarListTips">共有{{response.data.total}}人换头像啦</p>
 			<div class = "avatarLists">
-				<img v-for = "item of avatarList" :src="item.avatarUrl">
+				<img v-for = "item of response.data.dataList" :src="item.avatarUrl">
 			</div>
 		</div>
 	</div>
 </template>
 <script>
 	import nativeAncestry from '../../../common/js/module/nativeAncestor.js';
+	import popup from '../../../common/js/module/popup.js';
 	export default {
 		data() {
 			return {
 				uploadPic: '//pic.davdian.com/free/Zhuanti/modify_avatar.png',
-				avatarPoster: "//pic.davdian.com/free/Zhuanti/modify_avatar.png",
-				avatarListNum: 11,
-				avatarList: [
-				 {
-				 	id: 2,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 3,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 4,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 2,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 3,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 4,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 2,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 3,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 4,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 2,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 3,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 4,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 4,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 2,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 3,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 4,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 4,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 4,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 2,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 3,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 },
-				 {
-				 	id: 4,
-				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
-				 }
-				]
+				// avatarPoster: "//pic.davdian.com/free/Zhuanti/modify_avatar.png",
+				avatarPoster: "",
 			}
 		},
 		components: {},
-		props: {},
+		props: ["response"],
 		created() {},
 		watch: {},
+		mounted () {
+		},
 		methods: {
-			getData () {
-				
-			},
-			handleClick () {
-				console.log(12)
-			},
 			handleTouchStart (e) {
         this.isLongTabTime = setTimeout(() => {
           if (this.isLongTap) {
@@ -167,6 +78,7 @@
         clearTimeout(this.isLongTabTime);
       },
 			handleUpload () {
+				let that = this;
 				document.querySelector(".uploadIpt").addEventListener('change', function (event) {
           var files = event.target.files;
           var picStr = 'shop_logo';
@@ -187,7 +99,12 @@
             contentType: false,
             processData: false,
             success: function (res) {
-              console.log("success",res);
+            	console.log("success",res);
+            	if (!res.code) {
+              	that.avatarPoster = res.data.shop_logo.s;
+            	} else {
+            		popup.toast(res.data.msg);
+            	}
             },
             error: function (e,e1) {
               console.log("error",e,e1);
