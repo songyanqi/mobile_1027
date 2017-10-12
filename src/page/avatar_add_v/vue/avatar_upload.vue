@@ -32,7 +32,7 @@
 		<div class = "avatarCont" v-if = "response">
 			<p class = "avatarListTips">共有{{response.data.total}}人换头像啦</p>
 			<div class = "avatarLists">
-				<img v-for = "item of response.data.dataList" :src="item.avatarUrl">
+				<img v-for = "item of response.data.dataList" :src="item.avatar_url">
 			</div>
 		</div>
 	</div>
@@ -86,7 +86,7 @@
            var data = new FormData();
            data.append(picStr, file);
           // 全站默认上传接口/upload.php
-          var url = '/upload.php?owner_id=2548=' + Date.now();
+          var url = '/api/mg/sale/avatarmake/generatePoster';
           $(".picBack img").attr("src","//pic.davdian.com/free/2017/03/01/304_200_5ed94acf11f8a6fb57e1138bea19dccd.gif");
           $.ajax({
             cache: false,
