@@ -48,6 +48,9 @@ new Vue({
           }
         }
       });
+      setTimeout(function(){
+        history.back();
+      }, 500);
     }
   },
   created() {
