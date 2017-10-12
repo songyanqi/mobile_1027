@@ -22,7 +22,11 @@
 		<div class = "avatarPoster">
 			<div class = "AvatarPosterCont">
 				<p class = "avatarTitleTips">长按保存海报</p>
-				<img :src="avatarPoster">
+				<img
+						@touchstart = "handleTouchStart"
+            @touchmove = "handleTouchMove"
+            @touchend = "handleTouchEnd"
+            @touchcancle = "handleTouchCancle" :src="avatarPoster">
 			</div>
 		</div>
 		<div class = "avatarCont">
@@ -34,6 +38,7 @@
 	</div>
 </template>
 <script>
+	import nativeAncestry from '../../../common/js/module/nativeAncestor.js';
 	export default {
 		data() {
 			return {
@@ -88,6 +93,42 @@
 				 {
 				 	id: 4,
 				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
+				 },
+				 {
+				 	id: 4,
+				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
+				 },
+				 {
+				 	id: 2,
+				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
+				 },
+				 {
+				 	id: 3,
+				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
+				 },
+				 {
+				 	id: 4,
+				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
+				 },
+				 {
+				 	id: 4,
+				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
+				 },
+				 {
+				 	id: 4,
+				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
+				 },
+				 {
+				 	id: 2,
+				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
+				 },
+				 {
+				 	id: 3,
+				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
+				 },
+				 {
+				 	id: 4,
+				 	avatarUrl: "https://pic.davdian.com/free/Bouns/3year_bigIcon.png@!webp",
 				 }
 				]
 			}
@@ -100,6 +141,31 @@
 			getData () {
 				
 			},
+			handleClick () {
+				console.log(12)
+			},
+			handleTouchStart (e) {
+        this.isLongTabTime = setTimeout(() => {
+          if (this.isLongTap) {
+            let picSrc = e.target.getAttribute('src');
+            // let idx = picSrc.indexOf("?");
+            // picSrc = picSrc.substr(0,idx);
+            nativeAncestry.savePic(picSrc);
+          }
+        },500);
+      },
+      handleTouchMove (e) {
+        this.isLongTap = false;
+        clearTimeout(this.isLongTabTime);
+      },
+      handleTouchEnd (e) {
+        this.isLongTap = true;
+        clearTimeout(this.isLongTabTime);
+      },
+      handleTouchCancle (e) {
+        this.isLongTap = true;
+        clearTimeout(this.isLongTabTime);
+      },
 			handleUpload () {
 				document.querySelector(".uploadIpt").addEventListener('change', function (event) {
           var files = event.target.files;
@@ -121,10 +187,10 @@
             contentType: false,
             processData: false,
             success: function (res) {
-              
+              console.log("success",res);
             },
             error: function (e,e1) {
-              
+              console.log("error",e,e1);
             }
           });
         }, false);
