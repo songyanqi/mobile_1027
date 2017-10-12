@@ -51,6 +51,7 @@ new Vue({
       start_1018_flag: false,
       ua: ua,
       share: share,
+      param: param,
     }
   },
   computed: {
