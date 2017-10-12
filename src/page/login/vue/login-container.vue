@@ -179,6 +179,7 @@
       /*登录*/
       login: function () {
         var that = this;
+        that.mobile = that.mobile.replace(/[ -]/g,"");
         if (!that.isTel(that.mobile)) {
           popup.toast("请输入正确的手机号");
         } else {
@@ -216,6 +217,7 @@
       /*注册*/
       registers: function () {
         var that = this;
+        that.mobile = that.mobile.replace(/[ -]/g,"");
         if (!that.isTel(that.mobile)) {
           popup.toast("请输入正确的手机号");
           return false;
@@ -331,6 +333,7 @@
           popup.toast("请输入手机号");
           return false;
         }
+        that.mobile = that.mobile.replace(/[ -]/g,"");
         if (that.isTel(that.mobile)) {
 
         } else {
@@ -387,6 +390,7 @@
       /*获取验证码*/
       get_check_codes: function (smsType, sendType, callback) {
         var that = this;
+        that.mobile = that.mobile.replace(/[ -]/g,"");
         if (that.isTel(that.mobile)) {
           if (that.get_check) {
             popup.toast("获取验证码过于频繁，一分钟内只能获取一次");
