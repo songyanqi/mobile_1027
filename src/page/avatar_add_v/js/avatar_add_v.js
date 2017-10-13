@@ -27,12 +27,24 @@ new Vue({
 			data: null,
 			response: null,
 			isapp: false,
+			isShowDot: false,
 		}
 	},
 	created () {
-		// this.getParmas();
 		this.getData();
 		this.isapp = this.isApp();
+	},
+	watch: {
+		response: {
+			handler() {
+				this.$nextTick(function () {
+					if ($(".avatarNavs").height() >= $(".avatarLists").height()) {
+						this.isShowDot = true;
+					}
+				})
+			},
+			deep: true,
+		}
 	},
 	mounted() {
 		// 设置app头部标题栏
@@ -60,14 +72,10 @@ new Vue({
 				success (res) {
 					common.checkRedirect(res);
 					if (!res.code) {
-						if (res.data.dataList.length > 32) {
-							res.data.dataList.length = 31;
-						}
 						that.response = res;
 					} else {
 						popup.toast(res.data.msg);
 					}
-					console.log(1234,res);
 				},
 				error (error) {
 					console.log(error)

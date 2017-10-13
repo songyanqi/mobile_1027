@@ -97,10 +97,14 @@
 		}
 		.avatarListDot {
 			position: absolute;
-	    bottom: 15px;
-	    right: 20px;
+			text-align: center;
+	    bottom: 7px;
+	    right: 15px;
 	    font-size: 25px;
 	    color: #fff;
+	    width: 30px;
+	    height: 30px;
+	    background: #f3cba0;
 		}
 	}
 }

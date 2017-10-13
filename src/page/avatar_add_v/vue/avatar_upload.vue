@@ -34,8 +34,11 @@
 		<div class = "avatarCont" v-if = "response">
 			<p class = "avatarListTips">共有{{response.data.total}}人换头像啦</p>
 			<div class = "avatarLists">
-				<img v-for = "item of response.data.dataList" :src="item.avatar_url">
-				<span v-if = "response.data.dataList.length == 31" class = "avatarListDot">...</span>
+				<div class = "avatarNavs">
+					<img v-for = "item of response.data.dataList" :src="item.avatar_url">
+					<span v-if = "isshowdot" class = "avatarListDot">
+					...</span>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -48,12 +51,12 @@
 	export default {
 		data() {
 			return {
-				uploadPic: '//pic.davdian.com/free/Zhuanti/modify_avatar.png',
+				uploadPic: '//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/modify_new_avatar.png',
 				avatarPoster: "",
 			}
 		},
 		components: {},
-		props: ["response"],
+		props: ["response","isshowdot"],
 		created() {},
 		watch: {},
 		mounted () {
