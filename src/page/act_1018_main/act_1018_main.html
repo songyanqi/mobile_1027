@@ -16,7 +16,7 @@
          :style="{'background-image': topics[0].content ? 'url('+topics[0].content.headPic+')' : 'url(//pic.davdian.com/activity/2017/09/18/750_630_ffedafe358bdbc4ce22f226adbb1c027.png)'}">
 
       <!--app分享按钮-->
-      <img class="app-share" v-if="ua.isDvdApp()" @click="share.callShare();" src="[[static]]/page/act_1018_main/img/share-icon.png"
+      <img class="app-share" v-if="ua.isDvdApp() && param.get('noshare') === undefined" @click="share.callShare();" src="[[static]]/page/act_1018_main/img/share-icon.png"
            style="display: none;" :style="{display: ua.isDvdApp() ? 'block' : null}">
 
       <!--gif-->
@@ -37,7 +37,11 @@
       <div class="count-down" style="display: none;"
            :style="{display: topics[0].content ? null : 'none', top: topics[0].content.top || null, left: topics[0].content.left || null}"
             v-if="topics[0].content">
-        <div class="title">活动开始倒计时</div>
+        <div class="title">
+          <template v-if="currentDate < '2017-10-18'">活动开始倒计时</template>
+          <template v-else-if="currentDate < '2017-10-23'">距离活动结束</template>
+          <template v-else>活动已结束</template>
+        </div>
         <div class="boxes">
           <span class="box">
             <div class="title">天</div>
@@ -106,16 +110,16 @@
       <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
 
       <!--18号，助力商品抢购-->
-      <com-xxx :response="response" v-if="response.data.hotHelp" :current-date="currentDate"></com-xxx>
+      <com-act-explosion :response="response" v-if="response.data.hotHelp" :current-date="currentDate"></com-act-explosion>
 
       <!--19号，满100返红包-->
       <com-act-redPacket :response="response.data.bonus" v-if="response.data.bonus" :current-date="currentDate"></com-act-redPacket>
 
-      <!--19号，满399送纪念品-->
+      <!--19~21号，满399送纪念品-->
       <com-act-souvenir :current-date="response.sys_time"></com-act-souvenir>
 
       <!--19号，爆品预约变抢购样式-->
-      <com-act-subscribe :response="response" v-if="response.data.hotSubscribe" :current-date="currentDate"></com-act-subscribe>
+      <com-act-subscribe :response="response" v-if="response.data.hotSubscribe" :current-date="currentDate" :begin="true"></com-act-subscribe>
 
       <!--22号，满500抽奖-->
       <com-xxx :response="response" v-if="response.data.drawMoney" :current-date="currentDate"></com-xxx>
