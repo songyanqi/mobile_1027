@@ -4,6 +4,27 @@
 	background: url(http://pic.davdian.com/free/Zhuanti/modify_bkg.png) repeat;
 	background-size: 100% 100%;
 	padding-bottom: 20px;
+	.imgRotate {
+		transform:rotate(90deg);
+		-ms-transform:rotate(90deg);
+		-moz-transform:rotate(90deg);
+		-webkit-transform:rotate(90deg);
+		-o-transform:rotate(90deg);
+	}
+	.imgRotate1 {
+		transform:rotate(-90deg);
+		-ms-transform:rotate(-90deg);
+		-moz-transform:rotate(-90deg);
+		-webkit-transform:rotate(-90deg);
+		-o-transform:rotate(-90deg);
+	}
+	.imgRotate2 {
+		transform:rotate(180deg);
+		-ms-transform:rotate(180deg);
+		-moz-transform:rotate(180deg);
+		-webkit-transform:rotate(180deg);
+		-o-transform:rotate(180deg);
+	}
 	.avatarTitle {
 		img {
 			width: 100%;

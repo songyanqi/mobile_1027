@@ -9,7 +9,9 @@
 		<div>
 			<div class = "uploadPic">
 				<div class = "uploadPicCont">
-					<img @touchstart = "handleTouchStart"
+					<img 
+							:class = "{ imgRotate: imgrotate == 1,imgRotate1: imgrotate == 2,imgRotate2: imgrotate == 3 }"
+							@touchstart = "handleTouchStart"
 	            @touchmove = "handleTouchMove"
 	            @touchend = "handleTouchEnd"
 	            @touchcancle = "handleTouchCancle" :src="uploadPic">
@@ -58,6 +60,7 @@
 			return {
 				uploadPic: '//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/modify_new_avatar.png',
 				avatarPoster: "",
+				imgrotate: 0,
 			}
 		},
 		components: {},
@@ -89,12 +92,22 @@
         this.isLongTap = true;
         clearTimeout(this.isLongTabTime);
       },
+      rotateImg(img) {
+
+      },
 			handleUpload (event) {
 				let that = this;
 				let files = event.target.files;
+				let picStr = 'shop_logo';
+        let file = files[0];
+        let Orientation = null; 
 				if (files.length) {
-	        let picStr = 'shop_logo';
-	        let file = files[0];
+
+					EXIF.getData(file, function() {  
+            EXIF.getAllTags(this);   
+            Orientation = EXIF.getTag(this, 'Orientation');  
+        });
+
 	        let data = new FormData();
 	        data.append(picStr, file);
 	        // 全站默认上传接口/upload.php
@@ -124,6 +137,23 @@
 										if (!res.code) {
 											// popup.loading(false);
 											that.uploadPic = res.data.avatarUrl;
+
+											if (navigator.userAgent.match(/iphone/i)) {  
+		                    console.log('iphone');  
+		                    if(Orientation != "" && Orientation != 1){  
+		                        switch(Orientation){  
+		                            case 6://需要顺时针（向左）90度旋转  
+		                                that.imgrotate = 1;
+		                                break;  
+		                            case 8://需要逆时针（向右）90度旋转  
+		                                that.imgrotate = 2; 
+		                                break;  
+		                            case 3://需要180度旋转  
+		                                that.imgrotate = 3;  
+		                                break;  
+		                        }         
+				                    }  
+				                } 
 											that.avatarPoster = res.data.posterUrl;
 										} else {
 											popup.toast(res.data.msg);

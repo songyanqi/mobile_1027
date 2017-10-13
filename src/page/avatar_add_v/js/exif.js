@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	@@include('meta.include')
-	<title>定制你的周年庆头像</title>
-	<link rel="stylesheet" href="[[static]]/page/avatar_add_v/css/avatar_add_v.css[[v]]">
-	  <script type="text/javascript">
-  	(function() {
+(function() {
 
     var debug = false;
 
@@ -810,17 +803,3 @@
     }
 }.call(this));
 
-
-  </script>
-</head>
-<body>
-	<div class = "app" :class = "{ bodypd0: isapp }">
-		<com-top-title title="定制你的周年庆头像" home></com-top-title>
-		<avatar-upload :avatarimg = "avatarImg" :isshowdot = "isShowDot" :response = "response"></avatar-upload>
-	</div>
-	
-	@@include('vendor.include')
-  @@include('js.include')
-  <script src="[[static]]//page/avatar_add_v/js/avatar_add_v.js[[v]]"></script>
-</body>
-</html>
