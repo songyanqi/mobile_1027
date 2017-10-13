@@ -178,8 +178,8 @@
     methods: {
       /*登录*/
       login: function () {
+        this.mobile = this.mobile.replace(/[ -]/g,"");
         var that = this;
-        that.mobile = that.mobile.replace(/[ -]/g,"");
         if (!that.isTel(that.mobile)) {
           popup.toast("请输入正确的手机号");
         } else {
@@ -216,8 +216,8 @@
       },
       /*注册*/
       registers: function () {
+        this.mobile = this.mobile.replace(/[ -]/g,"");
         var that = this;
-        that.mobile = that.mobile.replace(/[ -]/g,"");
         if (!that.isTel(that.mobile)) {
           popup.toast("请输入正确的手机号");
           return false;
@@ -328,12 +328,12 @@
       },
       /*忘记密码*/
       go_forget: function () {
+        this.mobile = this.mobile.replace(/[ -]/g,"");
         var that = this;
         if (that.mobile == '') {
           popup.toast("请输入手机号");
           return false;
         }
-        that.mobile = that.mobile.replace(/[ -]/g,"");
         if (that.isTel(that.mobile)) {
 
         } else {
@@ -389,8 +389,8 @@
       },
       /*获取验证码*/
       get_check_codes: function (smsType, sendType, callback) {
+        this.mobile = this.mobile.replace(/[ -]/g,"");
         var that = this;
-        that.mobile = that.mobile.replace(/[ -]/g,"");
         if (that.isTel(that.mobile)) {
           if (that.get_check) {
             popup.toast("获取验证码过于频繁，一分钟内只能获取一次");
