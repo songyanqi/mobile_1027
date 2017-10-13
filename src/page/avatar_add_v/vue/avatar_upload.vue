@@ -92,58 +92,60 @@
 			handleUpload (event) {
 				let that = this;
 				let files = event.target.files;
-        let picStr = 'shop_logo';
-        let file = files[0];
-        let data = new FormData();
-        data.append(picStr, file);
-        // 全站默认上传接口/upload.php
-        let url = '/upload.php?owner_id=2547=' + Date.now();
-        that.uploadPic = "//pic.davdian.com/free/2017/03/01/304_200_5ed94acf11f8a6fb57e1138bea19dccd.gif";
-        // popup.loading();
-        $.ajax({
-          cache: false,
-          async: true,
-          url: url,
-          type: 'post',
-          dataType: 'json',
-          timeout:20000,
-          data: data,
-          contentType: false,
-          processData: false,
-          success: function (res) {
-            if (!res.errorCode) {
-              // let imgPic = res.data.shop_logo.src+"@200h_304w_1e_1c_2o";
-              // that.uploadPic = res.data.shop_logo.src;
-              $.ajax({
-              	url: "/api/mg/sale/avatarmake/generatePoster",
-              	type: "POST",
-								data: layout.strSign('uploadPics',{uploadFile: res.data.shop_logo.src}),
-								dataType: "JSON",
-								success (res) {
-									if (!res.code) {
-										// popup.loading(false);
-										that.uploadPic = res.data.avatarUrl;
-										that.avatarPoster = res.data.posterUrl;
-									} else {
-										popup.toast(res.data.msg);
+				if (files.length) {
+	        let picStr = 'shop_logo';
+	        let file = files[0];
+	        let data = new FormData();
+	        data.append(picStr, file);
+	        // 全站默认上传接口/upload.php
+	        let url = '/upload.php?owner_id=2547=' + Date.now();
+	        that.uploadPic = "//pic.davdian.com/free/2017/03/01/304_200_5ed94acf11f8a6fb57e1138bea19dccd.gif";
+	        // popup.loading();
+	        $.ajax({
+	          cache: false,
+	          async: true,
+	          url: url,
+	          type: 'post',
+	          dataType: 'json',
+	          timeout:20000,
+	          data: data,
+	          contentType: false,
+	          processData: false,
+	          success: function (res) {
+	            if (!res.errorCode) {
+	              // let imgPic = res.data.shop_logo.src+"@200h_304w_1e_1c_2o";
+	              // that.uploadPic = res.data.shop_logo.src;
+	              $.ajax({
+	              	url: "/api/mg/sale/avatarmake/generatePoster",
+	              	type: "POST",
+									data: layout.strSign('uploadPics',{uploadFile: res.data.shop_logo.src}),
+									dataType: "JSON",
+									success (res) {
+										if (!res.code) {
+											// popup.loading(false);
+											that.uploadPic = res.data.avatarUrl;
+											that.avatarPoster = res.data.posterUrl;
+										} else {
+											popup.toast(res.data.msg);
+										}
+									},
+									error () {
+										popup.toast("定制图片失败，请重试");
 									}
-								},
-								error () {
-									popup.toast("定制图片失败，请重试");
-								}
-              });
-            } else {
-              popup.toast(res.errorMsg);
-            }
-          },
-          error: function (e,e1) {
-            if(e1=="timeout"){
-                 popup.toast("图片过大,请选则较小的照片或者切换到较好的网络环境后重试");
-             }else{
-                 popup.toast("上传失败，请检查网络后重试("+e1+")");
-             }
-          }
-        });
+	              });
+	            } else {
+	              popup.toast(res.errorMsg);
+	            }
+	          },
+	          error: function (e,e1) {
+	            if(e1=="timeout"){
+	                 popup.toast("图片过大,请选则较小的照片或者切换到较好的网络环境后重试");
+	             }else{
+	                 popup.toast("上传失败，请检查网络后重试("+e1+")");
+	             }
+	          }
+	        });
+	      }
 			},
 		},
 	}
