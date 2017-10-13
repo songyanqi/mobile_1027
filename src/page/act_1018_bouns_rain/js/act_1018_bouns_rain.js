@@ -8,7 +8,8 @@ import layout from "../../../../module/index/layout.es6";
 import popup from '../../../common/js/module/popup.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
 import login from '../../../common/js/module/login.js';
-console.log(12345,login);
+import tongji from '../../../common/js/module/tjAncestor.js';
+
 // 懒加载初始化
 vueLazyload.init();
 
@@ -41,9 +42,12 @@ new Vue({
   watch: {
 
   },
+  create() {
+  },
   mounted() {
   	this.isLogin = login.isLogined();
   	this.getData();
+    this.startGame();
   },
   methods: {
   	getData() {
@@ -85,13 +89,50 @@ new Vue({
         },
       })
 		},
+    loadImg (list, callback) {
+      var loaded = 0, callbacked = false;
+      for (var i = 0; i < list.length; i++) {
+        (function () {
+          var img = new Image();
+          img.onload = function () {
+            loaded++;
+            if (loaded == list.length) {
+              if (!callbacked) {
+                callbacked = true;
+                callback && callback();
+              }
+            }
+          };
+          img.src = list[i];
+        })();
+      }
+      setTimeout(function () {
+        if (!callbacked) {
+          callbacked = true;
+          callback && callback();
+        }
+      }, 500)
+    },
 		judgeLogin(callback) {
 			if (this.isLogin) {
         callback()
       } else {
-        bravetime.newConfirm("需要先登录才能参与红包雨活动哦，先去登录吧～", {
-          okLink: "/login.html?referer=" + encodeURI(location.href)
-        })
+        popup.confirm({
+          className: '',
+          title: '提示',
+          text: "需要先登录才能参与红包雨活动哦，先去登录吧～",
+          okBtnTitle: '',
+          okBtnCallback() {
+            location.href = "/login.html?referer=" + encodeURI(location.href);
+          },
+          cancelBtnTitle: '',
+          cancelBtnCallback() {
+
+          }
+        });
+        // bravetime.newConfirm("需要先登录才能参与红包雨活动哦，先去登录吧～", {
+        //   okLink: "/login.html?referer=" + encodeURI(location.href)
+        // })
       }
 		},
 		judgeTime(callback) {
@@ -119,14 +160,16 @@ new Vue({
       }
 		},
 		startGame() {
+      var that = this;
 			if(sessionStorage.getItem("20170420_hby")){
         return false;
       }
       var $container = $("<div class='game_container'><div class='mask'></div><div class='game'></div> </div>");
       $(document.body).addClass("gaming").append($container);
       var $game = $container.find(".game");
-      countdown($game);
-      bravetime.tj.pvSend("hongbaoyu_1704_play")
+      that.countdown($game);
+      // bravetime.tj.pvSend("hongbaoyu_1704_play");
+      this.tongji('hongbaoyu_1704_play');
 		},
 		countdown($game) {
 			let that = this;
@@ -149,7 +192,7 @@ new Vue({
         }
       }, 1000);
       //要替换的是这里的图片
-      loadImg(['//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon1.png', '//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon2.png',
+      that.loadImg(['//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon1.png', '//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon2.png',
         '//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon3.png', '//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon4.png',
         '//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon6.png']);
 		},
@@ -160,7 +203,7 @@ new Vue({
       setTimeout(function () {
         that.addRed($redContainer, 1);
       }, 300);
-      loadImg(['//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon7.png', '//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon8.png'])
+      that.loadImg(['//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon7.png', '//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon8.png'])
 		},
 		addRed($redContainer, redNum) {
 			var that = this;
