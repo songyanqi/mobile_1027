@@ -178,6 +178,7 @@
     methods: {
       /*登录*/
       login: function () {
+        this.mobile = this.mobile.replace(/[ -]/g,"");
         var that = this;
         if (!that.isTel(that.mobile)) {
           popup.toast("请输入正确的手机号");
@@ -215,6 +216,7 @@
       },
       /*注册*/
       registers: function () {
+        this.mobile = this.mobile.replace(/[ -]/g,"");
         var that = this;
         if (!that.isTel(that.mobile)) {
           popup.toast("请输入正确的手机号");
@@ -326,6 +328,7 @@
       },
       /*忘记密码*/
       go_forget: function () {
+        this.mobile = this.mobile.replace(/[ -]/g,"");
         var that = this;
         if (that.mobile == '') {
           popup.toast("请输入手机号");
@@ -386,6 +389,7 @@
       },
       /*获取验证码*/
       get_check_codes: function (smsType, sendType, callback) {
+        this.mobile = this.mobile.replace(/[ -]/g,"");
         var that = this;
         if (that.isTel(that.mobile)) {
           if (that.get_check) {

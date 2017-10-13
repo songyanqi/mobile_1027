@@ -37,6 +37,7 @@
       overflow: hidden;
     }
     .bookImg {
+      position: relative;
       width: 100%;
       height: 1.74rem;
       img {
@@ -105,7 +106,23 @@
       width: 100px;
       height: 20px;
       right: 16%;
-      bottom: 27%;
+      bottom: 21%;
+    }
+    .good_list_sell_out {
+      font-size: 15px;
+      color: #fff;
+      background-color: rgba(0,0,0,.7);
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 0.3rem;
+      line-height: 0.6rem;
+      top: 50%;
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      margin-top: -0.3rem;
+      margin-left: -0.3rem;
+      text-align: center;
     }
   }
   // 动画
@@ -201,7 +218,8 @@
 	<div class = "reserve">
     <div class = "reserveHead_cont">
     <span @click = "handleReserveRole" class = "reserveRole"></span>
-    <img class = "reserveHead" src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/goodsDetail/reserve_icon.jpg">
+    <!-- <img class = "reserveHead" src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/goodsDetail/reserve_icon.jpg"> -->
+    <img class = "reserveHead" src="http://mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/reserve_icon_title.jpg">
     </div>
 		<!-- 头部 -->
 		<div class="swiper-container">
@@ -216,6 +234,9 @@
   		<div class = "bookList" v-for = "(item,index) in singleList" @click = "handleList($event, item, index)">
   			<div class = "bookImg">
   				<img v-lazy="item.imageUrl">
+          <div v-if = "item.shopStocks == '0'" class = "good_list_sell_out ng-scope">
+            <div class = "ng-scope">售罄</div>
+          </div>
   			</div>
   			<div class = "bookName">{{ item.goodsName }}</div>
   			<div class = "bookPrice"><span class = "f12">¥ </span>{{ item.shopPrice }}</div>
@@ -236,7 +257,7 @@
           <div>
             <p>1.预定时间：2017.10.14 00:00:00-2017.10.17 23:59:59；</p>
             <p>2.尾款结算时间：2017.10.18 00:00:00-2017.10.18 23:59:59；</p>
-            <p>3.预定期间，用户支付预定金并成功预定指定商品，在10月18日当天可享定金膨胀的优惠，定金膨胀后实际抵扣的金额以预定时实际约定的抵扣金额为准；例如：某品牌洁面仪大V售价100元，预定金20可抵40元使用，小明妈在2017.10.15日支付定金20元，成功预定了该洁面仪，在10月18日当天仅需支付60元即可获得该商品；</p>
+            <p>3.预定期间，用户支付预定金并成功预定指定商品，在10月18日当天可享定金膨胀的优惠，定金膨胀后实际抵扣的金额以预定时实际约定的抵扣金额为准（预定商品不可使用红包）；</br>例如：某品牌洁面仪大V售价100元，预定金20可抵40元使用，小明妈在2017.10.15日支付定金20元，成功预定了该洁面仪，在10月18日当天仅需支付60元即可获得该商品；</p>
             <p>4.定金是否退回？如果在10月18日当天未及时结算预定商品的尾款，定金将不予退回；</p>
             <p>5.购买或销售预定商品且成功结算尾款，会员将额外获得每件10元的奖励，奖励金额（退货订单除外）将于11月1日以返现方式发放；</p>
             <p>6.详情可咨询大V店客服。</p>
@@ -365,7 +386,14 @@
           window.open(url, '_self');
         }
       },
+      // 排序
+      getSort(item1,item2) {
+        return item2.sort - item1.sort;
+      },
   		handleList(e,item,index) {
+        if (item.childGoodsId > 0) {
+          item.goodsId = item.childGoodsId;
+        }
         let shopUrl = `/${item.goodsId}.html`;
         this.isapp = this.isApp();
         if (this.isapp) {
@@ -380,23 +408,30 @@
         }
         // this.handleJump(shopUrl);
   		},
+      // 排序
+      getSort(item1,item2) {
+        return item2.sort - item1.sort;
+      },
   		getData() {
   			let that = this;
         let datas = this.response.data.book;
         let resArr = Object.keys(datas);
+
         resArr.map((item) => {
           that.bookNavList.push(datas[item].typeName);
           that.bookDataList.push(datas[item].dataList);
         });
+        that.bookDataList[0].sort(that.getSort);
         that.singleList = that.bookDataList[0];
   		},
   		// 头部导航
   		handleNav(item,index) {
         this.currentIdx = index;
-        console.log(index);
+        
         this.bookSwiper.slideTo(Math.max(0, index - 2));
   			this.bookDataList.map((item,idx) => {
   				if (index == idx) {
+            item.sort(this.getSort);
   					this.singleList = item;
   				}
   			});

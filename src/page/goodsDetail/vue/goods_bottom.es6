@@ -1,8 +1,10 @@
 /**
  * create by dony in 2017.03.13
  **/
+// import {  Group, Cell,
+//   Scroller, XInput } from 'vux';
 import {  Group, Cell,
-  Scroller, XInput } from 'vux';
+  Scroller } from 'vux';
 import XNumber from "../../vux-fix/xnumber.vue";
 
 import Popup from "../../vux-fix/popup.vue";
@@ -17,7 +19,7 @@ const GoodsBottom = {
       XNumber: XNumber,
       Scroller: Scroller,
       confirm: confirm,
-      XInput: XInput,
+      // XInput: XInput,
     },
     props: ['goodstatus','goodstatusonsale','goodstags', 'ismultigoods','goodslimitnum',
         'goodsmodalobj', 'datarepresentid','isclose', 'handlechangenum',
@@ -425,8 +427,8 @@ const GoodsBottom = {
       handleConfirmCancel () {
         this.tipsShow = false;
       },
-      hadleBlur (val) {
-          this.telVal = val;
+      hadleBlur (e) {
+        this.telVal = e.target.value;
       },
       //再逛逛；
       handleLook () {
