@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="get" v-if="isLogin && isRedPacket!=1" @click="goDeatil"></div>
-    <div class="no_get" v-if="isLogin && isRedPacket==1" @click="goDeatil"></div>
+    <div class="get" v-if="isLogin && isRedPacket==1" @click="goDeatil"></div>
+    <div class="no_get" v-if="isLogin && isRedPacket!=1" @click="goDeatil"></div>
     <div class="no_login" v-if="!isLogin" @click="login"></div>
   </div>
 </template>
@@ -14,7 +14,7 @@
     data(){
         return{
           isApp:util.utils.isApp(),
-          isRedPacket:this.response.couponStatus,
+          isRedPacket:this.response,
           isLogin:null
         }
     },
