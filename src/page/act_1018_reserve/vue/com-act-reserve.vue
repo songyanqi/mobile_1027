@@ -112,10 +112,6 @@
       font-size: 15px;
       color: #fff;
       background-color: rgba(0,0,0,.7);
-      // width: 60px;
-      // height: 60px;
-      // border-radius: 30px;
-      // line-height: 60px;
       width: 0.6rem;
       height: 0.6rem;
       border-radius: 0.3rem;
@@ -123,8 +119,6 @@
       top: 50%;
       position: absolute;
       z-index: 2;
-      // margin-top: -30px;
-      // margin-left: -30px;
       left: 50%;
       margin-top: -0.3rem;
       margin-left: -0.3rem;
@@ -391,7 +385,14 @@
           window.open(url, '_self');
         }
       },
+      // 排序
+      getSort(item1,item2) {
+        return item2.sort - item1.sort;
+      },
   		handleList(e,item,index) {
+        if (item.childGoodsId > 0) {
+          item.goodsId = item.childGoodsId;
+        }
         let shopUrl = `/${item.goodsId}.html`;
         this.isapp = this.isApp();
         if (this.isapp) {

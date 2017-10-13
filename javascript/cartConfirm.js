@@ -687,7 +687,7 @@ $(function(){
             payData['idcard'] = idcard;
         }
 
-        // 校验邮编 
+        // 校验邮编
         if ($("#zipcode").length) {
             var zipcode = $("#zipcode").val();
             if (!Units.isZipcode(zipcode)) {
@@ -730,7 +730,7 @@ $(function(){
                 // window.bravetime.goto(data["url"]);
             }  else if(data["status"]== -3){
                 location.replace(data["url"]);
-            } 
+            }
             else if (data["status"] == -10) {
                 window.bravetime.newAlert(data["msg"], function () {
                     window.bravetime.goto(data["url"]);
@@ -776,6 +776,7 @@ $(function(){
                 maybeError = true;
             }
         }
+
         if(consignee.search(/[^\u4E00-\u9FA5]/) > -1){
             maybeError = true;
         }
@@ -791,11 +792,14 @@ $(function(){
             return false;
         }
 
-        var tel = $("#mobile").val();
-        if (!Units.isTel(tel)) {
-            bravetime.newAlert("请填写正确的电话号码");
-            return false;
-        }
+      var tel = $("#mobile").val();
+      //手机号去空格和-处理
+      tel = tel.replace(/[ -]/g, "");
+      $("#mobile").val(tel)
+      if (!Units.isTel(tel)) {
+        bravetime.newAlert("请填写正确的电话号码");
+        return false;
+      }
 
         var selProvincesValue = $("#selProvinces").val();
         if (selProvincesValue == 0) {
