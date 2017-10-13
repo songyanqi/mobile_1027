@@ -59,7 +59,8 @@ new Vue({
     native.custom.initHead({
       shareOnHead: 1,
       isAudioAbsorb:1,
-      isShowAudio:1
+      isShowAudio:1,
+      homeOnHead: 1,
     });
         
     share.setShareInfo({
