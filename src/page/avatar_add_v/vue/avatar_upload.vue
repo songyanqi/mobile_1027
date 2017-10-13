@@ -116,7 +116,7 @@
 	              // let imgPic = res.data.shop_logo.src+"@200h_304w_1e_1c_2o";
 	              // that.uploadPic = res.data.shop_logo.src;
 	              $.ajax({
-	              	url: "/api/mg/sale/avatarmake/generatePoster",
+	              	url: "/api/mg/images/avatarmake/generatePoster",
 	              	type: "POST",
 									data: layout.strSign('uploadPics',{uploadFile: res.data.shop_logo.src}),
 									dataType: "JSON",

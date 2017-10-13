@@ -74,7 +74,7 @@ new Vue({
 		getData () {
 			let that = this;
 			$.ajax({
-				url: '/api/mg/sale/avatarmake/getAvatarList',
+				url: '/api/mg/images/avatarmake/getAvatarList',
 				type: "POST",
 				data: layout.strSign('avatarAddv',{}),
 				dataType: "JSON",
