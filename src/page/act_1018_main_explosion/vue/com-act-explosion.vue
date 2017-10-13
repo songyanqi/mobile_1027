@@ -1,5 +1,6 @@
 <style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../../../common/css/util/all";
+  @import "../../../common/css/common.scss";
 
   .com-act-explosion {
     background-color:#ce256d;
@@ -46,7 +47,6 @@
           position: absolute;
           top: 0;
           left: 0;
-          height: 200%;
           width: 200%;
           border-bottom: 1px solid #ce256d;
           transform-origin: 0 0;
