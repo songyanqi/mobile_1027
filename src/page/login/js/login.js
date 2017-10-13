@@ -24,6 +24,12 @@ new Vue({
   computed: {},
   watch: {},
   beforeCreate() {
+    if(login.isLogined()){
+      setTimeout(function(){
+        native.Browser.close();
+      }, 500);
+      return;
+    }
     var that = this;
     /*如果是APP，跳转到原生登陆*/
     if (!!navigator.userAgent.match(/davdian|bravetime|vyohui/)) {
@@ -46,6 +52,9 @@ new Vue({
               location.href = referer;
             }
           }
+        },
+        error: function(){
+          history.back();
         }
       });
     }
