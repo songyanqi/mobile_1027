@@ -184,7 +184,7 @@
 <template>
     <div class = "good_top_wraper">
       <!--商品图左下角周年庆icon，1018需求-->
-      <img class="left-bottom-logo" src="//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/yearLogo.png">
+      <img class="left-bottom-logo" src="//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/yearLogo.png" v-if = "Date.now() < new Date(2017,10,23)">
 
       <!--跨境标志-->
       <div v-if = "swiperinfo.crossBorder"
