@@ -98,7 +98,7 @@
 	        let data = new FormData();
 	        data.append(picStr, file);
 	        // 全站默认上传接口/upload.php
-	        let url = '/upload.php?owner_id=2547=' + Date.now();
+	        let url = '/upload_avatar.php?owner_id=2547=' + Date.now();
 	        that.uploadPic = "//pic.davdian.com/free/2017/03/01/304_200_5ed94acf11f8a6fb57e1138bea19dccd.gif";
 	        // popup.loading();
 	        $.ajax({
