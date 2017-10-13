@@ -38,7 +38,9 @@ new Vue({
 		response: {
 			handler() {
 				this.$nextTick(function () {
-					if ($(".avatarNavs").height() >= $(".avatarLists").height()) {
+					$(".avatarLists").height($(".avatarNavs img").width()*4+20);
+					console.log(12222356,$(".avatarNavs img").width()*4+20,$(".avatarLists").height())
+					if ($(".avatarNavs").height() > $(".avatarLists").height()) {
 						this.isShowDot = true;
 					}
 				})
@@ -46,6 +48,12 @@ new Vue({
 			deep: true,
 		}
 	},
+	// updated() {
+	// 	console.log(12345678,$(".avatarNavs img").width(),$(".avatarLists").height())
+	// 	if ($(".avatarNavs").height() > $(".avatarLists").height()) {
+	// 		this.isShowDot = true;
+	// 	}
+	// },
 	mounted() {
 		// 设置app头部标题栏
     native.custom.initHead({

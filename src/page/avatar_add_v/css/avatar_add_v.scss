@@ -38,7 +38,8 @@
 		text-align: center;
 		padding-top: 15px;
 		img {
-			width: 72.4%;
+			// width: 72.4%;
+			width: 100%;
 		}
 		.uploadIpt {
 			position: absolute;
@@ -90,20 +91,25 @@
 		position: relative;
 		// padding-top: 10px;
 		img {
-			width: 30px;
-			height: 30px;
-			margin-left: 5px;
+			// width: 30px;
+			// height: 30px;
+			// margin-left: 5px;
+			width: 11%;
+			margin-left: 1.5%;
 			margin-bottom: 5px;
+			vertical-align: top;
 		}
 		.avatarListDot {
 			position: absolute;
 			text-align: center;
-	    bottom: 7px;
-	    right: 15px;
+	    bottom: 1px;
+	    right: 0;
 	    font-size: 25px;
 	    color: #fff;
-	    width: 30px;
-	    height: 30px;
+	    width: 11%;
+	    padding-left: 1.5%;
+	    // width: 30px;
+	    // height: 30px;
 	    background: #f3cba0;
 		}
 	}
