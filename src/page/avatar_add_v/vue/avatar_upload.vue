@@ -9,7 +9,10 @@
 		<div>
 			<div class = "uploadPic">
 				<div class = "uploadPicCont">
-					<img :src="uploadPic">
+					<img @touchstart = "handleTouchStart"
+	            @touchmove = "handleTouchMove"
+	            @touchend = "handleTouchEnd"
+	            @touchcancle = "handleTouchCancle" :src="uploadPic">
 				</div>
 			</div>
 			<div class = "uploadBtn">
