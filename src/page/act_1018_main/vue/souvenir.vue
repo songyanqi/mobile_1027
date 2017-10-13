@@ -38,7 +38,6 @@
           }
         },
         goDetail(){
-          alert(this.url);
           var that=this;
           if(this.isApp){
             native.Browser.open({
