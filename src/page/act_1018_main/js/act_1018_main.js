@@ -59,6 +59,7 @@ new Vue({
       ua: ua,
       share: share,
       param: param,
+      login: login,
     }
   },
   computed: {
