@@ -390,6 +390,9 @@
         return item2.sort - item1.sort;
       },
   		handleList(e,item,index) {
+        if (item.childGoodsId > 0) {
+          item.goodsId = item.childGoodsId;
+        }
         let shopUrl = `/${item.goodsId}.html`;
         this.isapp = this.isApp();
         if (this.isapp) {
