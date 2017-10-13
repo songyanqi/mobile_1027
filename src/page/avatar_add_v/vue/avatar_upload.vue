@@ -103,10 +103,10 @@
         let Orientation = null; 
 				if (files.length) {
 
-					EXIF.getData(file, function() {  
-            EXIF.getAllTags(this);   
-            Orientation = EXIF.getTag(this, 'Orientation');  
-        });
+					// EXIF.getData(file, function() {  
+     //        EXIF.getAllTags(this);   
+     //        Orientation = EXIF.getTag(this, 'Orientation');  
+     //    });
 
 	        let data = new FormData();
 	        data.append(picStr, file);
@@ -138,22 +138,22 @@
 											// popup.loading(false);
 											that.uploadPic = res.data.avatarUrl;
 
-											if (navigator.userAgent.match(/iphone/i)) {  
-		                    console.log('iphone');  
-		                    if(Orientation != "" && Orientation != 1){  
-		                        switch(Orientation){  
-		                            case 6://需要顺时针（向左）90度旋转  
-		                                that.imgrotate = 1;
-		                                break;  
-		                            case 8://需要逆时针（向右）90度旋转  
-		                                that.imgrotate = 2; 
-		                                break;  
-		                            case 3://需要180度旋转  
-		                                that.imgrotate = 3;  
-		                                break;  
-		                        }         
-				                    }  
-				                } 
+											// if (navigator.userAgent.match(/iphone/i)) {  
+		         //            console.log('iphone');  
+		         //            if(Orientation != "" && Orientation != 1){  
+		         //                switch(Orientation){  
+		         //                    case 6://需要顺时针（向左）90度旋转  
+		         //                        that.imgrotate = 1;
+		         //                        break;  
+		         //                    case 8://需要逆时针（向右）90度旋转  
+		         //                        that.imgrotate = 2; 
+		         //                        break;  
+		         //                    case 3://需要180度旋转  
+		         //                        that.imgrotate = 3;  
+		         //                        break;  
+		         //                }         
+				       //          }  
+				       //        } 
 											that.avatarPoster = res.data.posterUrl;
 										} else {
 											popup.toast(res.data.msg);
