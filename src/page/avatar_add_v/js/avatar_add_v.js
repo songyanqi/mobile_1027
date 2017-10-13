@@ -28,6 +28,7 @@ new Vue({
 			response: null,
 			isapp: false,
 			isShowDot: false,
+			avatarImg: 0,
 		}
 	},
 	created () {
@@ -37,9 +38,14 @@ new Vue({
 	watch: {
 		response: {
 			handler() {
+				let that = this;
 				this.$nextTick(function () {
-					$(".avatarLists").height($(".avatarNavs img").width()*4+20);
-					console.log(12222356,$(".avatarNavs img").width()*4+20,$(".avatarLists").height())
+					that.avatarImg = $(".avatarNavs img").width();
+					let avatarContH = that.avatarImg * (that.response.data.dataList.length/8)+16;
+
+					$(".avatarNavs").height(avatarContH);
+					$(".avatarLists").height(that.avatarImg*4+16);
+
 					if ($(".avatarNavs").height() > $(".avatarLists").height()) {
 						this.isShowDot = true;
 					}
@@ -48,12 +54,6 @@ new Vue({
 			deep: true,
 		}
 	},
-	// updated() {
-	// 	console.log(12345678,$(".avatarNavs img").width(),$(".avatarLists").height())
-	// 	if ($(".avatarNavs").height() > $(".avatarLists").height()) {
-	// 		this.isShowDot = true;
-	// 	}
-	// },
 	mounted() {
 		// 设置app头部标题栏
     native.custom.initHead({
@@ -80,6 +80,7 @@ new Vue({
 				success (res) {
 					common.checkRedirect(res);
 					if (!res.code) {
+						res.data.dataList = res.data.dataList.splice(0,31);
 						that.response = res;
 					} else {
 						popup.toast(res.data.msg);

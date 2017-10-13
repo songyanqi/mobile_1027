@@ -38,7 +38,7 @@
 			<div class = "avatarLists">
 				<div class = "avatarNavs">
 					<img v-for = "item of response.data.dataList" :src="item.avatar_url">
-					<span v-if = "isshowdot" class = "avatarListDot">
+					<span v-if = "isshowdot" :style = "{ height: (avatarimg+2.5) + 'px' }" class = "avatarListDot">
 					...</span>
 				</div>
 			</div>
@@ -58,7 +58,7 @@
 			}
 		},
 		components: {},
-		props: ["response","isshowdot"],
+		props: ["response","isshowdot",'avatarimg'],
 		created() {},
 		watch: {},
 		mounted () {
