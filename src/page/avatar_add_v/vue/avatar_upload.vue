@@ -7,6 +7,7 @@
 			<img src="//pic.davdian.com/free/Zhuanti/modify_tilte_icon.png">
 		</div>
 		<div>
+			<!-- <div>12345 <img :src="firstUrl"></div> -->
 			<div class = "uploadPic">
 				<div class = "uploadPicCont">
 					<img 
@@ -19,8 +20,6 @@
 			</div>
 			<div class = "uploadBtn">
 				<input @change = "handleUpload" class = "uploadIpt" type="file" accept="image/*" name="">
-
-				<!-- <img src="//pic.davdian.com/free/Zhuanti/modify_btn_upload.png"> -->
 				<img src="http://mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/new_upload_icon.png">
 			</div>
 		</div>
@@ -61,6 +60,8 @@
 				uploadPic: '//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/modify_new_avatar.png',
 				avatarPoster: "",
 				imgrotate: 0,
+				// ceshi
+				firstUrl: '',
 			}
 		},
 		components: {},
@@ -125,6 +126,7 @@
 	          contentType: false,
 	          processData: false,
 	          success: function (res) {
+	          	that.firstUrl = res.data.shop_logo.src;
 	            if (!res.errorCode) {
 	              // let imgPic = res.data.shop_logo.src+"@200h_304w_1e_1c_2o";
 	              // that.uploadPic = res.data.shop_logo.src;
