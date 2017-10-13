@@ -12,6 +12,7 @@
     }
     .swiper-container {
       margin:ptr(-35) 0 1px;
+      background-color:#ff6582;
       .swiper-slide {
         width:ptr(80);
       }
@@ -159,7 +160,7 @@
       <ul>
         <li v-for="(item, i) in list[screenings[tabIndex]].goodsList" v-if="i < 3" @click="goodsClick(item.goodsId)" class="goods-item">
           <div class="goods-group">
-            <img class="pic" v-lazy="item.goodsImage" class="item-pic">
+            <img  v-lazy="item.goodsImage" class="item-pic">
             <!--状态判断-->
             <p class="stage-tip" v-if="item.status == 2">已售罄</p>   <!--确定一下是否是商品处的status在未开抢状态下都是未开抢-->
             <p class="stage-tip" v-else-if="item.status == 0">未开始</p>
