@@ -31,7 +31,8 @@ new Vue({
     'com-act-assistance': require('../../act_1018_assistance/vue/com-act-assistance.vue'),
     'com-act-reserve': require('../../act_1018_reserve/vue/com-act-reserve.vue'),
     'com-act-iphone8':require('../vue/iphone8.vue'),
-    'com-act-redpacket':require('../vue/redPacket.vue')
+    'com-act-redpacket':require('../vue/redPacket.vue'),
+    'com-act-explosion': require('../../act_1018_main_explosion/vue/com-act-explosion.vue')
   },
   data() {
     return {
