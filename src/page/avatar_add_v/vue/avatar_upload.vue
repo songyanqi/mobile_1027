@@ -19,7 +19,7 @@
 				<input @change = "handleUpload" class = "uploadIpt" type="file" accept="image/*" name="">
 
 				<!-- <img src="//pic.davdian.com/free/Zhuanti/modify_btn_upload.png"> -->
-				<img src="http://mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/modify_new_btn.png">
+				<img src="http://mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/new_upload_icon.png">
 			</div>
 		</div>
 		<div class = "avatarTips">
