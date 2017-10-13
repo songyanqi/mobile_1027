@@ -1,5 +1,6 @@
 <style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../../../common/css/util/all";
+  @import "../../../common/css/common.scss";
 
   .com-act-explosion {
     background-color:#ce256d;
@@ -10,7 +11,7 @@
       width:100%;
     }
     .swiper-container {
-      margin-top:ptr(-35);
+      margin:ptr(-35) 0 1px;
       .swiper-slide {
         width:ptr(80);
       }
@@ -34,19 +35,32 @@
       }
     }
     .g-goods-wrapper {
-      margin-bottom:1px;
 
       .goods-item {
-        margin-top:1px;
         padding:ptr(4) ptr(15) ptr(4) ptr(13);
         background-color:#fff;
         position:relative;
         overflow:hidden;
 
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 200%;
+          border-bottom: 1px solid #ce256d;
+          transform-origin: 0 0;
+          transform: scale(0.5,0.5);
+          box-sizing: border-box;
+        }
+
+        .goods-group {
+          position:relative;
+          float:left;
+        }
         .item-pic {
           width:ptr(132);
           height:ptr(132);
-          float:left;
         }
         .item-icon {
           width:ptr(31);
@@ -63,9 +77,10 @@
           color:#fff;
           border-radius:50%;
           background:rgba(0,0,0,.65);
-          position:absolute;
-          top:ptr(44);
-          left:ptr(40);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
         }
         .price {
           padding:ptr(22) 0 ptr(12) ptr(148);
@@ -143,11 +158,13 @@
     <div class="g-goods-wrapper" v-if="list">
       <ul>
         <li v-for="(item, i) in list[screenings[tabIndex]].goodsList" v-if="i < 3" @click="goodsClick(item.goodsId)" class="goods-item">
-          <img class="pic" v-lazy="item.goodsImage" class="item-pic">
+          <div class="goods-group">
+            <img class="pic" v-lazy="item.goodsImage" class="item-pic">
+            <!--状态判断-->
+            <p class="stage-tip" v-if="item.status == 2">已售罄</p>   <!--确定一下是否是商品处的status在未开抢状态下都是未开抢-->
+            <p class="stage-tip" v-else-if="item.status == 0">未开始</p>
+          </div>
           <img class="item-icon" src="[[static]]/page/act_1018_main_explosion/img/explosion-icon.png">
-          <!--状态判断-->
-          <p class="stage-tip" v-if="item.status == 2">已售罄</p>   <!--确定一下是否是商品处的status在未开抢状态下都是未开抢-->
-          <p class="stage-tip" v-else-if="item.status == 0">未开始</p>
 
           <div class="price">
             <p class="item-name">{{item.goodsName}}</p>
