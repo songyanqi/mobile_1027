@@ -176,15 +176,15 @@
     position: absolute;
     z-index: 1;
     left: 0;
-    bottom: .5rem;
+    /*bottom: .5rem;*/
+    bottom: 0;
     width: .9rem;
   }
 </style>
 <template>
     <div class = "good_top_wraper">
-      <!--商品图左下角开学季icon，818需求-->
-      <img class="left-bottom-logo" src="//pic.davdian.com/activity/2017/08/15/282_150_1aefb7e936ed666bf77e8303f8ba7d46.png"
-           v-if="Date.now() >= new Date(2017,7,17) && Date.now() < new Date(2017,7,24)">
+      <!--商品图左下角周年庆icon，1018需求-->
+      <img class="left-bottom-logo" src="//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/yearLogo.png">
 
       <!--跨境标志-->
       <div v-if = "swiperinfo.crossBorder"

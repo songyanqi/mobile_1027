@@ -80,7 +80,7 @@ new Vue({
 				success (res) {
 					common.checkRedirect(res);
 					if (!res.code) {
-						res.data.dataList = res.data.dataList.splice(0,31);
+						res.data.dataList = res.data.dataList;
 						that.response = res;
 					} else {
 						popup.toast(res.data.msg);
