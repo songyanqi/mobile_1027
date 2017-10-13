@@ -106,7 +106,7 @@
       width: 100px;
       height: 20px;
       right: 16%;
-      bottom: 27%;
+      bottom: 21%;
     }
     .good_list_sell_out {
       font-size: 15px;
@@ -218,7 +218,8 @@
 	<div class = "reserve">
     <div class = "reserveHead_cont">
     <span @click = "handleReserveRole" class = "reserveRole"></span>
-    <img class = "reserveHead" src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/goodsDetail/reserve_icon.jpg">
+    <!-- <img class = "reserveHead" src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/goodsDetail/reserve_icon.jpg"> -->
+    <img class = "reserveHead" src="http://mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/reserve_icon_title.jpg">
     </div>
 		<!-- 头部 -->
 		<div class="swiper-container">
