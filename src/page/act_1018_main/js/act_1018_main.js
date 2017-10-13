@@ -30,6 +30,10 @@ new Vue({
     'com-act-lightbrand': require('../vue/lightBrand.vue'),
     'com-act-assistance': require('../../act_1018_assistance/vue/com-act-assistance.vue'),
     'com-act-reserve': require('../../act_1018_reserve/vue/com-act-reserve.vue'),
+    'com-act-explosion': require('../../act_1018_main_explosion/vue/com-act-explosion.vue'),
+    'com-act-iphone8':require('../vue/iphone8.vue'),
+    'com-act-redpacket':require('../vue/redPacket.vue'),
+    'com-act-souvenir':require('../vue/souvenir.vue')
   },
   data() {
     return {
@@ -43,12 +47,20 @@ new Vue({
         {id: param.get('t3') || '14378', content: null}
       ],
       actBeginTime: new Date(2017, 10 - 1, 18),
-      countDown: date.getCountDown(new Date(2017, 10 - 1, 18)),
+      actEndTime: new Date(2017, 10 - 1, 23),
+      countDown: Date.now() < new Date(2017, 10 - 1, 23) ? (date.getCountDown(Date.now() < new Date(2017, 10 - 1, 18) ? new Date(2017, 10 - 1, 18) : new Date(2017, 10 - 1, 23))) : {
+        day: '00',
+        hour: '00',
+        minute: '00',
+        second: '00',
+      },
       isShowBeginPop: false,
       isShowBeginPopCloseAnimation: false,
       start_1018_flag: false,
       ua: ua,
       share: share,
+      param: param,
+      login: login,
     }
   },
   computed: {
@@ -121,7 +133,24 @@ new Vue({
 
         // 刷新倒计时
         setInterval(function () {
-          ts.countDown = date.getCountDown(ts.actBeginTime);
+          if (ts.currentDate < '2017-10-18') {
+            ts.countDown = date.getCountDown(ts.actBeginTime);
+            if (ts.countDown.day == '00' && ts.countDown.hour == '00' && ts.countDown.minute == '00' && ts.countDown.second == '00') {
+              location.reload();
+            }
+          } else if (ts.currentDate < '2017-10-23') {
+            ts.countDown = date.getCountDown(ts.actEndTime);
+            if (ts.countDown.day == '00' && ts.countDown.hour == '00' && ts.countDown.minute == '00' && ts.countDown.second == '00') {
+              location.reload();
+            }
+          } else {
+            ts.countDown = {
+              day: '00',
+              hour: '00',
+              minute: '00',
+              second: '00',
+            }
+          }
           // ts.$forceUpdate();
         }, 1000);
 
@@ -321,7 +350,7 @@ new Vue({
       console.log('本地缓存act_1018_main_data、act_1018_mine_data已清除。')
     },
     isLogin(event) {
-      if(login.needLogin()){
+      if (login.needLogin()) {
         event.preventDefault();
         event.stopPropagation();
       }

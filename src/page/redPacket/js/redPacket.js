@@ -55,8 +55,8 @@ new Vue({
         // 设置分享信息
         try {
           share.setShareInfo({
-            title: "妈妈顾问赢IPhone 8",
-            desc: "妈妈顾问服务人群销售额达到10万，有机会获得IPhone 8一部",
+            title: "单笔支付满100返100元红包",
+            desc: "每个用户只限一次，快来买买买~",
             link: window.location.href,
             imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/11/%E8%BF%94100%E7%BA%A2%E5%8C%85%E5%88%86%E4%BA%ABicon.jpg"
           });

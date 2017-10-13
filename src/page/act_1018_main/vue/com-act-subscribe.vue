@@ -52,6 +52,10 @@
         type: String,
         default: null
       },
+      begin: {
+        type: Boolean,
+        default: false
+      },
     },
     data() {
       return {
@@ -76,6 +80,11 @@
             spaceBetween: 0,
             initialSlide: ts.tabIndex,
           });
+
+          // 防止2个预约同时出现
+          if(Object.prototype.toString.call(this.swiper) == '[object Array]'){
+            this.swiper = this.swiper[1];
+          }
 
           // 选中最近的已开抢
           let index = 0;
@@ -135,7 +144,8 @@
       /** 商品点击 */
       goodsClick(goodsId) {
         let url = '';
-        if (this.currentDate < '2017-10-19') {
+//        if (this.currentDate < '2017-10-19') {
+        if (!this.begin) {
           url = '/act_1018_main_subscribe.html';
         } else {
           url = '/' + goodsId + '.html';

@@ -1,7 +1,7 @@
 <template>
   <div class="background">
     <div class="text" style="top: 1.87rem;">10月18日当天</div>
-    <div class="text" style="top: 2.1rem;">妈妈顾问服务人群销售额满<span v-text="awardMoney"></span></div>
+    <div class="text" style="top: 2.1rem;">妈妈顾问服务人群销售额满<span v-text="awardMoney"></span>元</div>
     <div class="text" style="top: 2.36rem;">妈妈顾问赢iPhone8一部</div>
     <div class="text" style="top: 2.61rem;">仅<span v-text="allCount"></span>个名额，先到先得</div>
     <!--未登录-->
@@ -12,7 +12,7 @@
     <!--不是妈妈顾问-->
     <template v-if="isLogin">
       <template v-if="isAdviser==0">
-        <div class="nologin" style="top: 3.6rem;">您还不是妈顾问哦</div>
+        <div class="nologin" style="top: 3.6rem;">您还不是妈妈顾问哦</div>
         <div class="nologin" style="top: 3.85rem;">成为妈妈顾问才可以参与此活动哦</div>
         <div class="btn2"></div>
       </template>
@@ -24,7 +24,7 @@
           <template v-if="remainCount>0 && sales<awardMoney">
             <div class="nologin" style="top: 3.18rem;">仅剩<span v-text="remainCount" style="font-size: 0.3rem;"></span>个名额</div>
             <div class="nologin" style="top: 3.55rem;">当前顾问服务人群销售额:<span v-text="sales" style="font-size: 0.3rem;"></span>元</div>
-            <div class="nologin" style="top: 3.9rem;">还差<span v-text="awardMoney-sales" style="font-size: 0.3rem;">1213</span>元达到100000万</div>
+            <div class="nologin" style="top: 3.9rem;">还差<span v-text="awardMoney-sales" style="font-size: 0.3rem;"></span>元达到<span v-text="awardMoney"></span>元</div>
             <div class="nologin" style="top: 4.24rem;">即可赢得iPHONE8</div>
             <div class="btn3" @click="goActMain"></div>
           </template>
@@ -71,7 +71,7 @@
           <div class="bg"></div>
           <div class="title">获IPHONE8名单</div>
           <div class="item" v-for="item in awardList">
-            <div><img :src="item.awatar" alt=""></div>
+            <div><img :src="item.avatar" alt=""></div>
             <div v-text="item.userName"></div>
             <div style="position: absolute;right: 0;">已满足</div>
           </div>
@@ -164,56 +164,56 @@
             this.isLogin=false;
           }else{
             this.isLogin=true;
-//            var obj={
-//              'awardType':'iphone8'
-//            };
-//            api("/api/mg/user/adviser/activityAward",obj)
-//              .then(function (result) {
-//                if(result.code==0){
-//                  if(result.data){
-//                    that.allCount=result.data.awardCount;
-//                    that.remainCount=result.data.remainCount;
-//                    that.awardMoney=result.data.awardMoney;
-//                    that.sales=result.data.sales;
-//                    that.isAdviser=result.data.isAdviser;
-//                    var now = new Date().getTime().toString().substr(0,11);
-//                    var startTime = result.data.startTime;
-//                    var endTime = result.data.endTime;
-//                    if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
-//                      that.isHotDay=1;
-//                    }else{
-//                      that.isHotDay=0;
-//                    }
-//                    that.awardList=result.data.awardList;
-//                  }
-//                }else{
-//                  if(result.data.msg){
-//                    dialog.alert('code:'+result.code+":msg"+result.data.msg);
-//                  }else{
-//                    dialog.alert('code:'+result.code);
-//                  }
-//                }
-//              })
-//              .catch(function (e) {
-//
-//              })
+            var obj={
+              'awardType':'iphone8'
+            };
+            api("/api/mg/user/adviser/activityAward",obj)
+              .then(function (result) {
+                if(result.code==0){
+                  if(result.data){
+                    that.allCount=result.data.awardCount;
+                    that.remainCount=result.data.remainCount;
+                    that.awardMoney=result.data.awardMoney;
+                    that.sales=result.data.sales;
+                    that.isAdviser=result.data.isAdviser;
+                    var now = new Date().getTime().toString().substr(0,10);
+                    var startTime = result.data.startTime;
+                    var endTime = result.data.endTime;
+                    if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
+                      that.isHotDay=1;
+                    }else{
+                      that.isHotDay=0;
+                    }
+                    that.awardList=result.data.awardList;
+                  }
+                }else{
+                  if(result.data.msg){
+                    dialog.alert('code:'+result.code+":msg"+result.data.msg);
+                  }else{
+                    dialog.alert('code:'+result.code);
+                  }
+                }
+              })
+              .catch(function (e) {
+
+              })
 
 
-            var data=require("../json/iphone8.json");
-            this.allCount=data.data.awardCount;
-            this.remainCount=data.data.remainCount;
-            this.awardMoney=data.data.awardMoney;
-            this.sales=data.data.sales;
-            this.isAdviser=data.data.isAdviser;
-            var now = new Date().getTime().toString().substr(0,11);
-            var startTime = data.data.startTime;
-            var endTime = data.data.endTime;
-            if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
-              this.isHotDay=0;
-            }else{
-              this.isHotDay=1;
-            }
-            this.awardList=data.data.awardList;
+//            var data=require("../json/iphone8.json");
+//            this.allCount=data.data.awardCount;
+//            this.remainCount=data.data.remainCount;
+//            this.awardMoney=data.data.awardMoney;
+//            this.sales=data.data.sales;
+//            this.isAdviser=data.data.isAdviser;
+//            var now = new Date().getTime().toString().substr(0,11);
+//            var startTime = data.data.startTime;
+//            var endTime = data.data.endTime;
+//            if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
+//              this.isHotDay=0;
+//            }else{
+//              this.isHotDay=1;
+//            }
+//            this.awardList=data.data.awardList;
           }
 
       }
