@@ -55,8 +55,8 @@ new Vue({
     });
         
     share.setShareInfo({
-    	title: '大V店组团包邮',
-      desc: '一件包邮！每天上新！好货低价又包邮，抢到了就赚翻啦',
+    	title: '定制自己的3周年头像，为大V店3周年加油。',
+      desc: '偷偷告诉你，还有海报分享哦',
       link: location.href,
       imgUrl: 'http://mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Bouns/avatarShare.jpg',
     });
