@@ -127,8 +127,14 @@ import common from '../../../common/js/common.js';
 			getMoreData() {
 				let that = this;
 				window.addEventListener('scroll',function () {
+          let scrollTop = 0;
+          if (document.documentElement && document.documentElement.scrollTop) {
+            scrollTop = document.documentElement.scrollTop;
+          } else if (document.body) {
+            scrollTop = document.body.scrollTop;
+          }
           if (!that.noMore) {
-  					if (document.documentElement.clientHeight + document.body.scrollTop >= document.body.clientHeight * 0.95) {
+  					if (document.documentElement.clientHeight + scrollTop >= document.body.clientHeight * 0.95) {
   						that.getData();
   					}
           }

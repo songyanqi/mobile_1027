@@ -393,6 +393,13 @@ $crossBord: #FF4A7D;
   .vux-slider > .vux-swiper > .vux-swiper-item > a > .vux-swiper-desc {
     display: none;
   }
+  .goodsIpt {
+    padding: 7px 10px;
+    input {
+      width: 100%;
+      padding: 5px;
+    }
+  }
   .good_list_2_row {
     //margin-bottom: 20px;
     .good_con {
