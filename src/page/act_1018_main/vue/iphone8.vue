@@ -46,6 +46,7 @@
     },
     methods:{
       goDetail(){
+        console.log("new");
         if(this.isApp){
           native.Browser.open({
             url: "/iphone8.html"
