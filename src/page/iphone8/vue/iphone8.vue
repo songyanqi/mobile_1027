@@ -123,7 +123,7 @@
           title: "妈妈顾问赢IPhone 8",
           desc: "妈妈顾问服务人群销售额达到10万，有机会获得IPhone 8一部",
           link: window.location.href,
-          imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/11/%E8%B5%A2iphone8%E5%88%86%E4%BA%ABicon.jpg"
+          imgUrl: "//pic.davdian.com/free/2017/10/11/%E8%B5%A2iphone8%E5%88%86%E4%BA%ABicon.jpg"
         });
         this.init();
         this.$nextTick(function () {
@@ -263,7 +263,7 @@
     width: 2.53rem;
     height: 0.75rem;
     background-size: 2.53rem 0.75rem;
-    background-image: url('http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/30/%E7%AB%8B%E5%8D%B3%E7%99%BB%E5%BD%95_3x.png');
+    background-image: url('//pic.davdian.com/free/2017/09/30/%E7%AB%8B%E5%8D%B3%E7%99%BB%E5%BD%95_3x.png');
   }
   .btn{
     position: absolute;
@@ -274,7 +274,7 @@
     height: 0.75rem;
     z-index: 2;
     background-size: 2.53rem 0.75rem;
-    background-image: url('http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/30/%E6%9F%A5%E7%9C%8B%E6%9B%B4%E5%A4%9A%E6%B4%BB%E5%8A%A8_3x.png');
+    background-image: url('//pic.davdian.com/free/2017/09/30/%E6%9F%A5%E7%9C%8B%E6%9B%B4%E5%A4%9A%E6%B4%BB%E5%8A%A8_3x.png');
   }
   .btn2{
     position: absolute;
@@ -284,7 +284,7 @@
     width: 2.53rem;
     height: 0.75rem;
     background-size: 2.53rem 0.75rem;
-    background-image: url('http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/30/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E5%A6%88%E5%A6%88%E9%A1%BE%E9%97%AE_3x.png');
+    background-image: url('//pic.davdian.com/free/2017/09/30/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E5%A6%88%E5%A6%88%E9%A1%BE%E9%97%AE_3x.png');
   }
   .btn3{
     position: absolute;
@@ -295,7 +295,7 @@
     width: 2.53rem;
     height: 0.75rem;
     background-size: 2.53rem 0.75rem;
-    background-image: url('http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/30/%E5%BC%80%E5%90%AF%E4%B9%B0%E4%B9%B0%E4%B9%B0%E4%B9%8B%E6%97%85_3x.png');
+    background-image: url('//pic.davdian.com/free/2017/09/30/%E5%BC%80%E5%90%AF%E4%B9%B0%E4%B9%B0%E4%B9%B0%E4%B9%8B%E6%97%85_3x.png');
   }
   .rute{
     /*position: absolute;*/

@@ -64,7 +64,7 @@
           title: "单笔支付满100返100元红包",
           desc: "每个用户只限一次，快来买买买~",
           link: window.location.href,
-          imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/11/%E8%BF%94100%E7%BA%A2%E5%8C%85%E5%88%86%E4%BA%ABicon.jpg"
+          imgUrl: "//pic.davdian.com/free/2017/10/11/%E8%BF%94100%E7%BA%A2%E5%8C%85%E5%88%86%E4%BA%ABicon.jpg"
         });
         this.init();
     },
@@ -144,7 +144,7 @@
     height: 8.66rem;
     position: relative;
     background-size: 3.75rem 8.66rem;
-    background-image: url('http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/30/bg1125.jpg');
+    background-image: url('//pic.davdian.com/free/2017/09/30/bg1125.jpg');
   }
   .btn{
     width: 1.28rem;
@@ -153,7 +153,7 @@
     top: 2.85rem;
     left: 1.235rem;
     background-size: 1.28rem 0.3rem;
-    background-image: url('http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/30/%E7%AB%8B%E5%8D%B3%E7%99%BB%E5%BD%95.png');
+    background-image: url('//pic.davdian.com/free/2017/09/30/%E7%AB%8B%E5%8D%B3%E7%99%BB%E5%BD%95.png');
   }
   .btn2{
     width: 1.28rem;
@@ -162,7 +162,7 @@
     top: 2.85rem;
     left: 1.235rem;
     background-size: 1.28rem 0.3rem;
-    background-image: url('http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/11/%E5%BF%AB%E5%8E%BB%E4%B9%B0%E4%B9%B0%E4%B9%B0.png');
+    background-image: url('//pic.davdian.com/free/2017/10/11/%E5%BF%AB%E5%8E%BB%E4%B9%B0%E4%B9%B0%E4%B9%B0.png');
   }
   .btn3{
     width: 1.28rem;
@@ -171,7 +171,7 @@
     top: 2.85rem;
     left: 1.235rem;
     background-size: 1.28rem 0.3rem;
-    background-image: url('http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/11/%E6%9F%A5%E7%9C%8B%E6%9B%B4%E5%A4%9A%E6%B4%BB%E5%8A%A8.png');
+    background-image: url('//pic.davdian.com/free/2017/10/11/%E6%9F%A5%E7%9C%8B%E6%9B%B4%E5%A4%9A%E6%B4%BB%E5%8A%A8.png');
   }
   .text{
     font-size: 0.16rem;
@@ -201,6 +201,5 @@
     color:#fbfbfb;
     font-size: 0.14rem;
     line-height: 0.15rem;
-    margin-bottom: 0.26rem;
   }
 </style>
