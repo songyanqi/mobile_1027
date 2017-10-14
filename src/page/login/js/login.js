@@ -6,6 +6,7 @@ import Vue from 'Vue';
 // 业务模块
 import native from '../../../common/js/module/native.js';
 import login from '../../../common/js/module/login.js';
+import ua from '../../../common/js/module/ua.js';
 // 渲染页面
 new Vue({
   el: ".app",
@@ -27,7 +28,11 @@ new Vue({
   beforeCreate() {
     if(login.isLogined()){
       setTimeout(function(){
-        native.Browser.close();
+        if(ua.isAndroid()){
+          native.Browser.close();
+        }else{
+          history.back();
+        }
       }, 500);
       return;
     }

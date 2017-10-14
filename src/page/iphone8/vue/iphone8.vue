@@ -14,23 +14,23 @@
       <template v-if="isAdviser==0">
         <div class="nologin" style="top: 3.6rem;">您还不是妈妈顾问哦</div>
         <div class="nologin" style="top: 3.85rem;">成为妈妈顾问才可以参与此活动哦</div>
-        <div class="btn2"></div>
+        <div class="btn2" @click="beMother"></div>
       </template>
       <!--妈妈顾问-->
       <template v-if="isAdviser==1">
 
         <template v-if="isHotDay==1">
-          <!--有名额，获得iphone8-->
-          <template v-if="remainCount>0 && sales<awardMoney">
+          <!--有名额，没获得iphone8-->
+          <template v-if="getAward==0 && remainCount>0">
             <div class="nologin" style="top: 3.18rem;">仅剩<span v-text="remainCount" style="font-size: 0.3rem;"></span>个名额</div>
             <div class="nologin" style="top: 3.55rem;">当前顾问服务人群销售额:<span v-text="sales" style="font-size: 0.3rem;"></span>元</div>
             <div class="nologin" style="top: 3.9rem;">还差<span v-text="awardMoney-sales" style="font-size: 0.3rem;"></span>元达到<span v-text="awardMoney"></span>元</div>
-            <div class="nologin" style="top: 4.24rem;">即可赢得iPHONE8</div>
+            <div class="nologin" style="top: 4.24rem;">即可赢得iPhone8</div>
             <div class="btn3" @click="goActMain"></div>
           </template>
 
-          <!--有名额，没获得iphone8-->
-          <template v-if="remainCount>0 && sales>=awardMoney">
+          <!--有名额，获得iphone8-->
+          <template v-if="getAward==1 && remainCount>0">
             <div class="nologin" style="top: 3.18rem;">仅剩<span v-text="remainCount" style="font-size: 0.3rem;"></span>个名额</div>
             <div class="nologin" style="top: 3.55rem;">当前顾问服务人群销售额:<span v-text="sales" style="font-size: 0.3rem;"></span>元</div>
             <div class="nologin" style="top: 4rem;">恭喜，您已获得iPhone8一部</div>
@@ -65,11 +65,10 @@
 
         </template>
 
-
         <div style="height: 5.64rem;"></div>
         <div class="list">
           <div class="bg"></div>
-          <div class="title">获IPHONE8名单</div>
+          <div class="title">获iPhone8名单</div>
           <div class="item" v-for="item in awardList">
             <div><img :src="item.avatar" alt=""></div>
             <div v-text="item.userName"></div>
@@ -84,14 +83,14 @@
 
     <div class="rute" :class="{'class1':isAdviser==0 || !isLogin ? true : false}">
       <div style="margin-top: 0;text-align: center;">活动规则</div>
-      <div>1、活动时间：10月18日00:00:00~10月18日23:59:59;</div>
-      <div>2、仅妈妈顾问才可以参与该活动;</div>
-      <div>3、服务人群包括顾问服务的会员与非会员;</div>
-      <div>4、销售额统计方法：服务人群实际支付金额+使用佣金部分;</div>
-      <div>5、因退货、换货等原因导致服务人群销售额不满足10万，视为会员主动放弃该活动;</div>
-      <div>6、本活动仅有10个名额，最先完成10万销售额的妈妈顾问获得，名单会公布活动页面;</div>
-      <div>7、获得IPhone8后，11月18日会有工作人员通过手机号联系您，请保持手机号畅通，无法拨通电话视为放弃;</div>
-      <div>8.支付会员费用不参与该活动;</div>
+      <div>1.活动时间：2017.10.18 00:00:00-2017.10.18 23:59:59；</div>
+      <div>2.仅妈妈顾问才可以参与该活动；</div>
+      <div>3.妈妈顾问的服务人群包括服务的会员与非会员；</div>
+      <div>4.销售额统计方法：服务人群实际支付金额+使用返现部分；</div>
+      <div>5.换货等原因导致服务人群销售额不足10万，视为会员主动放弃该活动；</div>
+      <div>6.本活动仅有<span v-text="allCount"></span>个名额，最先完成10万销售额的妈妈顾问获得，名单会公布在【我的10.18】中；</div>
+      <div>7.获得iPhone8奖励的妈妈顾问，11月18日会有工作人员通过手机号联系您，请保持手机畅通，无法拨通电话视为放弃；</div>
+      <div>8.支付会员费用不参与该活动；</div>
       <div>9.详情可咨询大V店客服。</div>
     </div>
   </div>
@@ -114,7 +113,8 @@
             isHotDay:-1,
             awardList:[],
             isApp:util.utils.isApp(),
-            isLogin:null
+            isLogin:null,
+            getAward:null
         }
     },
     mounted(){
@@ -130,6 +130,15 @@
         })
     },
     methods:{
+      beMother(){
+        if(this.isApp){
+          native.Browser.open({
+            url: "//s.davdian.com/index.php?m=admin&c=station&a=advisor"
+          })
+        }else{
+          window.location.href="//s.davdian.com/index.php?m=admin&c=station&a=advisor";
+        }
+      },
       login(){
         if (this.isApp) {
           native.Account.login()
@@ -176,6 +185,7 @@
                     that.awardMoney=result.data.awardMoney;
                     that.sales=result.data.sales;
                     that.isAdviser=result.data.isAdviser;
+                    that.getAward=result.data.getAward;
                     var now = new Date().getTime().toString().substr(0,10);
                     var startTime = result.data.startTime;
                     var endTime = result.data.endTime;

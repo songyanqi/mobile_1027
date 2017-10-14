@@ -66,11 +66,11 @@
     <!--进度条-->
     <div class="g-progess-pic">
       <img :src="topics[0].content ? topics[0].content.progress : '//pic.davdian.com/activity/2017/09/18/750_69_6dc690a5b4a337888ae3dfe6919d45d0.jpg'">
-      <div class="jump-mask" v-if="currentDate < '2017-10-18'">
-        <a :href="currentDate > '2017-10-08' ? '/act_1018_assistance.html' : null"></a>
-        <a :href="currentDate > '2017-10-11' ? '/lightBrand.html' : null"></a>
-        <a :href="currentDate > '2017-10-13' ? '/act_1018_main_subscribe.html' : null"></a>
-      </div>
+      <!--<div class="jump-mask" v-if="currentDate < '2017-10-18'">-->
+        <!--<a :href="currentDate > '2017-10-08' ? '/act_1018_assistance.html' : null"></a>-->
+        <!--<a :href="currentDate > '2017-10-11' ? '/lightBrand.html' : null"></a>-->
+        <!--<a :href="currentDate > '2017-10-13' ? '/act_1018_main_subscribe.html' : null"></a>-->
+      <!--</div>-->
     </div>
 
     <!--活动开启弹窗-->
@@ -110,7 +110,7 @@
       <com-act-iphone8 :response="response.data.activityAward" v-if="response.data.activityAward" :current-date="currentDate"></com-act-iphone8>
 
       <!--18号，红包雨-->
-      <com-xxx :response="response" v-if="response.data.xxx" :current-date="currentDate"></com-xxx>
+      <com-act-bouns-rain :response="response" :current-date="currentDate"></com-act-bouns-rain>
 
       <!--18号，助力商品抢购-->
       <com-act-explosion :response="response" v-if="response.data.hotHelp" :current-date="currentDate"></com-act-explosion>
