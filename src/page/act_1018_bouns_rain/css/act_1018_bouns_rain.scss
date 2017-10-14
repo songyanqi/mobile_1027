@@ -403,6 +403,10 @@ img {
   position: fixed;
   width: 100%;
   height: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .game_container .mask {
@@ -534,28 +538,25 @@ body.gaming .other {
   color: #fff;
   width: 100%;
   text-align: center;
-  bottom: 29%;
+  bottom: 32%;
   font-size: 13px;
+  line-height: 20px;
 }
 .result .close img {
   width: 100%;
 }
 
-.result_none .text {
-  bottom: 31%;
-}
-
 .result .num_text {
   position: absolute;
   color: #FF4A7D;
-  top: 21%;
+  top: 20%;
   font-size: 40px;
   margin-top: 6px;
   left: 21%;
   /*font-weight: bold;*/
 }
 .result .num_text .num_text_icon {
-  font-size: 32px;
+  font-size: 26px;
   margin-right: 10px;
 }
 
@@ -573,7 +574,7 @@ body.gaming .other {
   font-size: 12px;
   /*font-weight: bold;*/
   left: 21%;
-  top: 15%;
+  top: 16%;
 }
 
 .result .num_time {
@@ -581,7 +582,7 @@ body.gaming .other {
   width: 100%;
   text-align: center;
   color: #333;
-  top: 31%;
+  top: 32%;
   font-size: 11px;
   transform: scale(.8);
   -webkit-transform: scale(.8);
