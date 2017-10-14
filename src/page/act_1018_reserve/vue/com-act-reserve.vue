@@ -234,7 +234,7 @@
   		<div class = "bookList" v-for = "(item,index) in singleList" @click = "handleList($event, item, index)">
   			<div class = "bookImg">
   				<img v-lazy="item.imageUrl">
-          <div v-if = "item.shopStocks == '0'" class = "good_list_sell_out ng-scope">
+          <div v-if = "item.shopStocks <= '0'" class = "good_list_sell_out ng-scope">
             <div class = "ng-scope">售罄</div>
           </div>
   			</div>
