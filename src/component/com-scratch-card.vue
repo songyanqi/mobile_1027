@@ -165,7 +165,6 @@
           canvas.addEventListener('touchmove', function (event) {
             mobile(event);
             event.preventDefault();
-            event.stopPropagation();
             ts.$emit('touchmove');
           }, false);
           canvas.addEventListener('touchend', function (event) {
