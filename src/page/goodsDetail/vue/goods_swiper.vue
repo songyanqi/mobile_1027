@@ -177,7 +177,7 @@
     z-index: 1;
     left: 0;
     /*bottom: .5rem;*/
-    bottom: 0;
+    bottom: .3rem;
     width: .9rem;
   }
 </style>
