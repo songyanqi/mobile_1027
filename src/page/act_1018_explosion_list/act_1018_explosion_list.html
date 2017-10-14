@@ -7,10 +7,36 @@
 </head>
 <body>
 <div class="app">
+  <!--标题-->
+  <com-top-title title="爆款馆" home></com-top-title>
 
+  <img class="banner" src="[[static]]/page/act_1018_explosion_list/img/explosion-list-header.png">
+  <div v-for="(item,key,i) in response.data" v-if="response" class="g-goods-wrapper">
+    <p class="g-goods-title">{{timer[i]}} {{response.sys_time >= key ? '已开抢' : '待开抢'}}</p>
+    <ul>
+      <li v-for="goods in item.goodsList" @click="goodsClick(goods.goodsId)" class="goods-item">
+        <div class="goods-group">
+          <img v-lazy="goods.goodsImage" class="item-pic">
+          <!--状态判断-->
+          <p class="stage-tip" v-if="goods.status == 2">已售罄</p>
+          <p class="stage-tip" v-else-if="goods.status == 0">未开始</p>
+        </div>
+        <img class="item-icon" src="[[static]]/page/act_1018_explosion_list/img/explosion-icon.png">
+
+        <div class="price">
+          <p class="item-name">{{goods.goodsName}}</p>
+          <p class="item-detail">到手价: <span class="detail-money">{{goods.activityPrice}}元</span><span class="detail-reserve" v-if="goods.status != 0">仅剩{{goods.number}}件</span></p>
+          <a :href="goods.lotteryLink" class="item-lottery">{{goods.lotteryPrice}}元无门槛红包<span class="lottery-tip">领券更省</span></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <img class="footer-logo" src="[[static]]/page/act_1018_explosion_list/img/logoWhite.png">
+
+  <com-to-top-icon></com-to-top-icon>
 </div>
 @@include('vendor.include')
 @@include('js.include')
-<script src="[[static]]/page/act_1018_mine_list/js/act_1018_explosion_list.js[[v]]"></script>
+<script src="[[static]]/page/act_1018_explosion_list/js/act_1018_explosion_list.js[[v]]"></script>
 </body>
 </html>
