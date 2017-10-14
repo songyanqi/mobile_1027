@@ -81,7 +81,7 @@
 
 
 
-    <div class="rute" :class="{'class1':isAdviser==0 || !isLogin ? true : false}">
+    <div class="rute" :class="{'class1':isAdviser==1 ? true : false}">
       <div style="margin-top: 0;text-align: center;">活动规则</div>
       <div>1.活动时间：2017.10.18 00:00:00-2017.10.18 23:59:59；</div>
       <div>2.仅妈妈顾问才可以参与该活动；</div>
@@ -102,6 +102,7 @@
   import util from "../../../../utils/utils.es6"
   import native from "../../../../src/common/js/module/native.js"
   import share from "../../../../src/common/js/module/share.js"
+  import common from "../../../../src/common/js/common.js"
   export default{
     data(){
         return {
@@ -178,6 +179,7 @@
             };
             api("/api/mg/user/adviser/activityAward",obj)
               .then(function (result) {
+                common.checkRedirect(result)
                 if(result.code==0){
                   if(result.data){
                     that.allCount=result.data.awardCount;
@@ -301,9 +303,10 @@
     display: inline-block;
     margin-left: 0.27rem;
     margin-bottom: 0.2rem;
+    margin-top: 5.65rem;
   }
   .class1{
-    margin-top: 5.65rem;
+    margin-top: 0;
   }
   .rute>div{
     color:#ffffff;
