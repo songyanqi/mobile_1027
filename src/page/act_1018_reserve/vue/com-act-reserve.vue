@@ -118,7 +118,7 @@
       line-height: 0.6rem;
       top: 50%;
       position: absolute;
-      z-index: 2;
+      z-index: 1;
       left: 50%;
       margin-top: -0.3rem;
       margin-left: -0.3rem;
