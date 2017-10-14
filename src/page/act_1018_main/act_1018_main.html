@@ -62,6 +62,11 @@
     <!--进度条-->
     <div class="g-progess-pic">
       <img :src="topics[0].content ? topics[0].content.progress : '//pic.davdian.com/activity/2017/09/18/750_69_6dc690a5b4a337888ae3dfe6919d45d0.jpg'">
+      <div class="jump-mask" v-if="currentDate < '2017-10-18'">
+        <a :href="currentDate > '2017-10-08' ? '/act_1018_assistance.html' : null"></a>
+        <a :href="currentDate > '2017-10-11' ? '/lightBrand.html' : null"></a>
+        <a :href="currentDate > '2017-10-13' ? '/t-14585.html' : null"></a>
+      </div>
     </div>
 
     <!--活动开启弹窗-->
