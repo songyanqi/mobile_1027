@@ -118,7 +118,7 @@
       line-height: 0.6rem;
       top: 50%;
       position: absolute;
-      z-index: 2;
+      z-index: 1;
       left: 50%;
       margin-top: -0.3rem;
       margin-left: -0.3rem;
@@ -234,7 +234,7 @@
   		<div class = "bookList" v-for = "(item,index) in singleList" @click = "handleList($event, item, index)">
   			<div class = "bookImg">
   				<img v-lazy="item.imageUrl">
-          <div v-if = "item.shopStocks == '0'" class = "good_list_sell_out ng-scope">
+          <div v-if = "item.shopStocks <= '0'" class = "good_list_sell_out ng-scope">
             <div class = "ng-scope">售罄</div>
           </div>
   			</div>
