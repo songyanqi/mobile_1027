@@ -21,7 +21,7 @@
 
         <template v-if="isHotDay==1">
           <!--有名额，获得iphone8-->
-          <template v-if="remainCount>0 && sales<awardMoney">
+          <template v-if="getAward==1">
             <div class="nologin" style="top: 3.18rem;">仅剩<span v-text="remainCount" style="font-size: 0.3rem;"></span>个名额</div>
             <div class="nologin" style="top: 3.55rem;">当前顾问服务人群销售额:<span v-text="sales" style="font-size: 0.3rem;"></span>元</div>
             <div class="nologin" style="top: 3.9rem;">还差<span v-text="awardMoney-sales" style="font-size: 0.3rem;"></span>元达到<span v-text="awardMoney"></span>元</div>
@@ -30,7 +30,7 @@
           </template>
 
           <!--有名额，没获得iphone8-->
-          <template v-if="remainCount>0 && sales>=awardMoney">
+          <template v-if="getAward==0">
             <div class="nologin" style="top: 3.18rem;">仅剩<span v-text="remainCount" style="font-size: 0.3rem;"></span>个名额</div>
             <div class="nologin" style="top: 3.55rem;">当前顾问服务人群销售额:<span v-text="sales" style="font-size: 0.3rem;"></span>元</div>
             <div class="nologin" style="top: 4rem;">恭喜，您已获得iPhone8一部</div>
@@ -113,7 +113,8 @@
             isHotDay:-1,
             awardList:[],
             isApp:util.utils.isApp(),
-            isLogin:null
+            isLogin:null,
+            getAward:null
         }
     },
     mounted(){
@@ -184,6 +185,7 @@
                     that.awardMoney=result.data.awardMoney;
                     that.sales=result.data.sales;
                     that.isAdviser=result.data.isAdviser;
+                    that.getAward=result.data.getAward;
                     var now = new Date().getTime().toString().substr(0,10);
                     var startTime = result.data.startTime;
                     var endTime = result.data.endTime;
