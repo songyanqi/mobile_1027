@@ -5,7 +5,7 @@ export default {
    * 存缓存数据
    * 调用方法：
    * localCache.setItem({
-      Date: Date.now(),   // 当前时间（不传则取设备当前时间）
+      Date: Date.now(),   // 当前时间（不传则取设备当前时间，一般不需要这个参数，）
       Expires: 10 * 1000, // 过期时间（从当前时间开始计算过多少毫秒缓存失效）
       key: 'okok',        // 缓存key
       data: {             // 缓存data（可以传json或String）

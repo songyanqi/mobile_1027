@@ -98,8 +98,10 @@
       bindCoupon(){
         let ts = this;
 
+
         // 如果没有中奖、已经绑定成功了、或尝试3次之后,则不调用绑定接口
-        if (window.isFreeOfCharge !== '1' || ts.isBinded || ts.bindCouponTryTimes >= 3 || !ts.valid) return;
+//        if (window.isFreeOfCharge !== '1' || ts.isBinded || ts.bindCouponTryTimes >= 3 || !ts.valid) return;
+        if (ts.isBinded || ts.bindCouponTryTimes >= 3 || !ts.valid) return;
 
         // 绑定
         ts.bindCouponTryTimes++;
