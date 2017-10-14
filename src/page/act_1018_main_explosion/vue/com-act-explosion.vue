@@ -162,7 +162,7 @@
           <div class="goods-group">
             <img  v-lazy="item.goodsImage" class="item-pic">
             <!--状态判断-->
-            <p class="stage-tip" v-if="item.status == 2">已售罄</p>   <!--确定一下是否是商品处的status在未开抢状态下都是未开抢-->
+            <p class="stage-tip" v-if="item.status == 2">已售罄</p>
             <p class="stage-tip" v-else-if="item.status == 0">未开始</p>
           </div>
           <img class="item-icon" src="[[static]]/page/act_1018_main_explosion/img/explosion-icon.png">
@@ -200,7 +200,7 @@
         list: null,
         tabIndex: 0,
         timer: ['0:00','8:00','12:00','16:00','20:00'],
-        screenings: [1508256000,1508284800,1508299200,1508313600,1508328000]
+        screenings: [1507968937,1508284800,1508299200,1508313600,1508328000]
       }
     },
     watch: {
