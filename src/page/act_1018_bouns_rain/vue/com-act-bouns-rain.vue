@@ -1,3 +1,7 @@
+<style lang="sass"  rel="stylesheet/scss">
+	@import "../../../common/css/common.scss";
+	@import "../css/act_1018_bouns_rain.scss";
+</style>
 <template>
 	<div class = "bounsCont">
 		<div v-if = "isConfirm">
@@ -40,7 +44,7 @@ import popup from '../../../common/js/module/popup.js';
 	  		content: '需要先登录才能参与红包雨活动哦，先去登录吧～',
 	  		cancelText: "取消",
 	  		confirmText: "确定",
-	  		isConfirm: true,
+	  		isConfirm: false,
 			}
 		},
 		watch: {},
