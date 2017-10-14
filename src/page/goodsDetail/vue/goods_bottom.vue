@@ -290,11 +290,14 @@
              @on-confirm="handleConfirm"
              @on-cancel="handleConfirmCancel"
     >
-      <x-input placeholder="请输入手机号码"
+      <!-- <x-input placeholder="请输入手机号码"
                keyboard="number"
                @on-blur="hadleBlur"
                is-type="china-mobile"
-               type="tel"></x-input>
+               type="tel"></x-input> -->
+          <div class = "goodsIpt">
+            <input @input = "hadleBlur" maxlength="11" placeholder="请输入手机号码" type="tel">
+          </div>
     </confirm>
   </div>
 </template>
