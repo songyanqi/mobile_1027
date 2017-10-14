@@ -20,7 +20,7 @@
       <template v-if="isAdviser==1">
 
         <template v-if="isHotDay==1">
-          <!--有名额，获得iphone8-->
+          <!--有名额，没获得iphone8-->
           <template v-if="getAward==0 && remainCount>0">
             <div class="nologin" style="top: 3.18rem;">仅剩<span v-text="remainCount" style="font-size: 0.3rem;"></span>个名额</div>
             <div class="nologin" style="top: 3.55rem;">当前顾问服务人群销售额:<span v-text="sales" style="font-size: 0.3rem;"></span>元</div>
@@ -29,7 +29,7 @@
             <div class="btn3" @click="goActMain"></div>
           </template>
 
-          <!--有名额，没获得iphone8-->
+          <!--有名额，获得iphone8-->
           <template v-if="getAward==1 && remainCount>0">
             <div class="nologin" style="top: 3.18rem;">仅剩<span v-text="remainCount" style="font-size: 0.3rem;"></span>个名额</div>
             <div class="nologin" style="top: 3.55rem;">当前顾问服务人群销售额:<span v-text="sales" style="font-size: 0.3rem;"></span>元</div>
@@ -88,7 +88,7 @@
       <div>3.妈妈顾问的服务人群包括服务的会员与非会员；</div>
       <div>4.销售额统计方法：服务人群实际支付金额+使用返现部分；</div>
       <div>5.换货等原因导致服务人群销售额不足10万，视为会员主动放弃该活动；</div>
-      <div>6.本活动仅有10个名额，最先完成10万销售额的妈妈顾问获得，名单会公布在【我的10.18】中；</div>
+      <div>6.本活动仅有<span v-text="allCount"></span>个名额，最先完成10万销售额的妈妈顾问获得，名单会公布在【我的10.18】中；</div>
       <div>7.获得iPhone8奖励的妈妈顾问，11月18日会有工作人员通过手机号联系您，请保持手机畅通，无法拨通电话视为放弃；</div>
       <div>8.支付会员费用不参与该活动；</div>
       <div>9.详情可咨询大V店客服。</div>
