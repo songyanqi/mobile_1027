@@ -136,6 +136,7 @@
       });
       api("/api/mg/sale/bandLitUp/getCenterBands")
         .then(function (result) {
+            common.checkRedirect(result);
             if(result.code==0){
               if(result.data){
                 that.dataList=result.data.dataList;
