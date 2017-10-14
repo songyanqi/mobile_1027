@@ -113,7 +113,7 @@
       <com-act-bouns-rain :response="response" :current-date="currentDate"></com-act-bouns-rain>
 
       <!--18号，助力商品抢购-->
-      <!--<com-act-explosion :response="response" v-if="response.data.hotHelp" :current-date="currentDate"></com-act-explosion>-->
+      <com-act-explosion :response="response" v-if="response.data.hotHelp" :current-date="currentDate"></com-act-explosion>
 
       <!--19号，满100返红包-->
       <com-act-redPacket :response="response.data.bonus" v-if="response.data.bonus" :current-date="currentDate"></com-act-redPacket>
