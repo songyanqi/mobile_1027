@@ -2,6 +2,10 @@
 
 .app{
   background-color:#ce256d;
+
+  [v-cloak] {
+    display:none;
+  }
   .banner {
     width:100%;
   }

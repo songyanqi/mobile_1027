@@ -28,10 +28,12 @@ new Vue({
   },
   data() {
     return {
-      response: null,
       timer: ['0点早教专场','8点爸爸专场','12点教育专场','16点居家专场','20点暖心专场'],
-      screenings: [1508256000,1508284800,1508299200,1508313600,1508328000]
+      screenings: [1508256000,1508284800,1508299200,1508313600,1508328000],
+      response: null
     }
+  },
+  created() {
   },
   mounted() {
     this.getData();
@@ -57,7 +59,6 @@ new Vue({
         },
         error(error) {
           ts.response = require('../json/act-explosion.json');
-          console.log(ts.response);
           console.error('ajax error:' + error.status + ' ' + error.statusText);
         }
       });
