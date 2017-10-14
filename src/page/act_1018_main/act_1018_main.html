@@ -100,11 +100,11 @@
       <!--9~11号，品牌点亮-->
       <com-act-lightbrand :response="response.data.lightenBrand" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightbrand>
 
-      <!--12~17号，爆品预约-->
-      <com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>
-
       <!--14~17号，商品预定-->
       <com-act-reserve :response="response" v-if="response.data.book" :current-date="currentDate"></com-act-reserve>
+
+      <!--12~17号，爆品预约-->
+      <com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>
 
       <!--18号，妈妈顾问-->
       <com-act-iphone8 :response="response.data.activityAward" v-if="response.data.activityAward" :current-date="currentDate"></com-act-iphone8>

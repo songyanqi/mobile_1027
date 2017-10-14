@@ -1,7 +1,7 @@
 <template>
-  <div class="iphone8" v-if="isAdviser==1">
+  <div class="iphone8" v-if="isAdviser==1" @click="goDetail">
     <template v-if="remainCount>0">
-      <template v-if="getAward==0 && sales<awardMoney">
+      <template v-if="getAward==0 && remainCount>0">
         <!--未获得-->
         <div class="text" style="top: 0.45rem;">当前服务人群销售额:<span v-text="sales"></span>元</div>
         <div class="text" style="top: 0.6rem;">还差<span v-text="awardMoney-sales"></span>元达到<span v-text="awardMoney"></span>元</div>
@@ -9,7 +9,7 @@
         <div class="text" style="top: 0.9rem;">仅剩<span v-text="remainCount"></span>个名额</div>
       </template>
 
-      <template v-if="getAward==1 && sales>=awardMoney">
+      <template v-if="getAward==1 && remainCount>0">
         <!--获得-->
         <div class="text" style="top: 0.5rem;">当前服务人群销售额<span v-text="sales"></span>元</div>
         <div class="text" style="top: 0.675rem;">恭喜～获得iphone8一部!!!</div>
@@ -25,7 +25,7 @@
       <div class="text" style="top: 0.85rem;">您错过了本次活动</div>
     </template>
 
-    <div class="btn" @click="goDetail"></div>
+    <div class="btn"></div>
   </div>
 </template>
 <script>
@@ -46,6 +46,7 @@
     },
     methods:{
       goDetail(){
+        console.log("new");
         if(this.isApp){
           native.Browser.open({
             url: "/iphone8.html"
