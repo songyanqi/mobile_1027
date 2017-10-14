@@ -16,7 +16,7 @@
         <!--免单刮刮卡文案-->
         <template v-if="window.isShowLottery === '1'">
           <img class="result-bg" src="//pic.davdian.com/free/scratch-yes-1018.png" v-if="window.isFreeOfCharge === '1'">
-          <img class="result-bg" src="//pic.davdian.com/free/scratch-no-1018.png" v-else>
+          <img class="result-bg" src="//pic.davdian.com/free/scratch-no-1018.jpg" v-else>
         </template>
         <!--现金刮刮卡文案-->
         <template v-if="window.isShowLottery === '2'">
@@ -98,8 +98,10 @@
       bindCoupon(){
         let ts = this;
 
+
         // 如果没有中奖、已经绑定成功了、或尝试3次之后,则不调用绑定接口
-        if (window.isFreeOfCharge !== '1' || ts.isBinded || ts.bindCouponTryTimes >= 3 || !ts.valid) return;
+//        if (window.isFreeOfCharge !== '1' || ts.isBinded || ts.bindCouponTryTimes >= 3 || !ts.valid) return;
+        if (ts.isBinded || ts.bindCouponTryTimes >= 3 || !ts.valid) return;
 
         // 绑定
         ts.bindCouponTryTimes++;

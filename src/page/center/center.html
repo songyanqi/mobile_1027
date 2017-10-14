@@ -10,7 +10,7 @@
      ref="app" @touchmove="preventScroll" @mousewheel="preventScroll">
   <!--个人信息-->
   <div class="g-info" :style="shopBg">
-    <div class="mask"></div>
+    <div class="mask" @click="localStorage.clear();"></div>
     <!--设置-->
     <a href="/settings.html" @click="tj(2);">
       <img class="setting" v-lazy="'[[static]]/page/center/img/setting.png'">
