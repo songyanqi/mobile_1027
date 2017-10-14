@@ -46,10 +46,7 @@
         <div class="btn3"></div>
         <div class="btn4"></div>
 
-
       </template>
-
-
 
     <!--最长的-->
     <div class="big_img3"><img src="//pic.davdian.com/free/2017/09/30/bg5.png" alt=""></div>
@@ -83,26 +80,29 @@
 
     <div class="btnlong"></div>
 
-
-
       <div class="rute1">
         <div style="margin-top: 0;text-align: center;"><span class="line"></span><span style="padding: 0 0.1rem">活动规则</span><span class="line"></span></div>
         <div style="margin-top: 0.2rem">1.活动时间：10月19日00:00:00~10月21日23:59:59；</div>
         <div>2.仅限大V店会员参与该活动；</div>
-        <div>3.10月19日、20日、21日三天连续购物即可获得大V店3周年定制纪念品，每天购物金额不限，每个会员仅有1次获得纪念品的机会；</div>
+        <div>3.10月19日、20日、21日三天连续购物即可获得大V店3周年定制纪念品（限量5000个），每天购物金额不限，每个会员仅有1次获得纪念品的机会；</div>
         <div>4.因退货、换货等原因导致不满足连续3天购物的情况，视为主动放弃该活动；</div>
         <div>5.获得的纪念品将于15个工作日后安排发货，收货地址以10月21日首个已支付且未退货订单的收货地址为准；</div>
         <div>6.开通会员订单不参与该活动；</div>
-        <div>7.详情可咨询大V店客服</div>
+        <div>7.详情可咨询大V店客服。</div>
       </div>
+
   </div>
 </template>
 <script>
+  import share from "../../../../src/common/js/module/share.js"
   export default{
-    data(){
-        return{
-            flag:3
-        }
+    mounted(){
+      share.setShareInfo({
+        title: "连续三天购物可获得纪念品",
+        desc: "10月19、20、21三天连续购物可获得大V店周年纪念品，限量5000个，快来~~~",
+        link: window.location.href,
+        imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/12/%E6%BB%A1399%E9%80%81%E5%A4%A7V%E4%B8%89%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5%E5%93%81%E5%88%86%E4%BA%AB%E7%BC%A9%E7%95%A5%E5%9B%BE.png"
+      });
     }
   }
 </script>
