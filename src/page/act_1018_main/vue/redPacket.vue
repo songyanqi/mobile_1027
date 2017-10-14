@@ -19,8 +19,6 @@
         }
     },
     mounted(){
-        console.log("response",this.response);
-
         this.init();
     },
     methods:{

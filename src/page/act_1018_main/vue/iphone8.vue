@@ -32,6 +32,8 @@
   import util from "../../../../utils/utils.es6"
   import native from "../../../../src/common/js/module/native.js"
   export default{
+    mounted(){
+    },
     props:['response'],
     data(){
         return{
