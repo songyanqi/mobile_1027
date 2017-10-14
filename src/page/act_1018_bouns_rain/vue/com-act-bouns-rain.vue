@@ -49,9 +49,8 @@ import popup from '../../../common/js/module/popup.js';
 		},
 		watch: {},
 		created() {
-  		console.log("bouns-rains");
 			this.isLogin = login.isLogined();
-	  	// this.getData();
+	  	this.getData();
   	},
 		methods: {
 			_onCancel() {
@@ -214,7 +213,7 @@ import popup from '../../../common/js/module/popup.js';
 	      setTimeout(function () {
 	        that.addRed($redContainer, 1);
 	      }, 300);
-	      that.loadImg(['//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon7.png', '//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/bouns_yes_icon.png'])
+	      that.loadImg(['//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/bounsrain_no11.png', '//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/bouns_yes_icon.png'])
 			},
 			addRed($redContainer, redNum) {
 				var that = this;
@@ -326,9 +325,9 @@ import popup from '../../../common/js/module/popup.js';
 	        var templateText = "<div class='result_container'>" +
 	          "<div class='result result_none'><div class='img_con'>";
 	        if (that.isLastTime) {
-	          templateText += "<img src='//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon9.png'>";
+	          templateText += "<img src='//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/bouns_iconno22.png'>";
 	        } else {
-	          templateText += "<img src='//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon7.png'>";
+	          templateText += "<img src='//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/bounsrain_no11.png'>";
 	        }
 
 	        templateText += "<div class='text'>" + nextStr + "</div></div>" +
