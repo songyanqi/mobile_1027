@@ -1,5 +1,4 @@
 @import "../../../common/css/common.scss";
-// http://mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/luck_draw.jpg
 .luckDraw {
 	background: url('http://pic.davdian.com/avatar_poster/luck_draw.jpg') no-repeat;
 	background-size: 100% 100%;
@@ -21,7 +20,7 @@
 		width: 100%;
 	}
 	#lottery{height:584px;margin:20px auto 0;background:url(images/bg.jpg) no-repeat;}
-	#lottery table td{height:142px;text-align:center;vertical-align:middle;font-size:24px;color:#333;font-index:-999}
+	#lottery table td{text-align:center;vertical-align:middle;font-size:24px;color:#333;font-index:-999}
 	#lottery table td a{height:284px;line-height:150px;display:block;text-decoration:none;}
-	#lottery table td.active{background-color:#ea0000;}
+	#lottery table td.active{background-color:#fff;}
 }
