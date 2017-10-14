@@ -51,7 +51,7 @@ import popup from '../../../common/js/module/popup.js';
 		created() {
   		console.log("bouns-rains");
 			this.isLogin = login.isLogined();
-	  	this.getData();
+	  	// this.getData();
   	},
 		methods: {
 			_onCancel() {
@@ -214,7 +214,7 @@ import popup from '../../../common/js/module/popup.js';
 	      setTimeout(function () {
 	        that.addRed($redContainer, 1);
 	      }, 300);
-	      that.loadImg(['//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon7.png', '//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon8.png'])
+	      that.loadImg(['//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon7.png', '//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/bouns_yes_icon.png'])
 			},
 			addRed($redContainer, redNum) {
 				var that = this;
@@ -305,7 +305,7 @@ import popup from '../../../common/js/module/popup.js';
 
 	        if (currents.getTime() >= new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime() && currents.getTime() <= new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.overTime).getTime()) {
 	          if (index == that.actTimeList.length-1) {
-	            if (currents.getDate() == new Date(endTime).getDate()) {
+	            if (currents.getDate() == new Date(that.endTime).getDate()) {
 	              nextStr = '';
 	              that.isLastTime = true;
 	            } else {
@@ -355,7 +355,7 @@ import popup from '../../../common/js/module/popup.js';
 	              if (data.lotteryResult == 'success' && that.clickNum >= 5) {
 	                var $resultContainer = $("<div class='result_container'>" +
 	                  "<div class='result'><div class='img_con'>" +
-	                  "<img src='//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bouns_icon8.png'>" +
+	                  "<img src='//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/bouns_yes_icon.png'>" +
 	                  "<div class='text'>" + nextStr + "</div>" +
 	                  "<div class='min_text'>满" + data.bonusInfo.minConsumePrice + "元可用</div>" +
 	                  "<div class='num_text'><span class = 'num_text_icon'>¥</span>" +data.bonusInfo.bonusMoney+ "</div>" +
