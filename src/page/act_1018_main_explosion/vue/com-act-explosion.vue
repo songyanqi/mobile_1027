@@ -169,7 +169,7 @@
 
           <div class="price">
             <p class="item-name">{{item.goodsName}}</p>
-            <p class="item-detail">到手价: <span class="detail-money">{{item.activityPrice}}元</span><span class="detail-reserve" v-if="item.status != 0">仅剩{{item.number}}件</span></p>
+            <p class="item-detail">到手价: <span class="detail-money">{{item.activityPrice}}元</span><span class="detail-reserve" v-if="item.status == 1">仅剩{{item.number}}件</span></p>
             <a :href="item.lotteryLink" class="item-lottery">{{item.lotteryPrice}}元无门槛红包<span class="lottery-tip">领券更省</span></a>
           </div>
         </li>
