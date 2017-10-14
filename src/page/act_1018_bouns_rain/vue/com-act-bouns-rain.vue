@@ -45,15 +45,12 @@ import popup from '../../../common/js/module/popup.js';
 		},
 		watch: {},
 		created() {
-			console.log("bouns-rains")
-		},
-		mounted() {
-			console.log("bouns-rains")
+  		console.log("bouns-rains");
 			this.isLogin = login.isLogined();
 	  	this.getData();
 	    this.startGame();
 	    this.showResult();
-		},
+  	},
 		methods: {
 			_onCancel() {
 				this.isConfirm = false;
