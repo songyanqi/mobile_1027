@@ -25,7 +25,7 @@
 		</div>
 		<div class = "avatarTips">
 			<p>上传头像 可生成自己的专属海报</p>
-			<p>与全国大v妈妈为大v店3周年加油</p>
+			<p>与全国大V妈妈为大V店3周年加油</p>
 		</div>
 		<div class = "avatarPoster">
 			<div class = "AvatarPosterCont" v-if = "avatarPoster">
@@ -57,7 +57,7 @@
 	export default {
 		data() {
 			return {
-				uploadPic: '//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/modify_new_avatar.png',
+				uploadPic: '//pic.davdian.com/avatar_poster/2017/upload_addV.png',
 				avatarPoster: "",
 				imgrotate: 0,
 				// ceshi
