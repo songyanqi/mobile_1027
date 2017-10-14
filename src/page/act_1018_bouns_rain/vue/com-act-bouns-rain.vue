@@ -52,8 +52,6 @@ import popup from '../../../common/js/module/popup.js';
   		console.log("bouns-rains");
 			this.isLogin = login.isLogined();
 	  	this.getData();
-	    this.startGame();
-	    this.showResult();
   	},
 		methods: {
 			_onCancel() {
@@ -299,22 +297,22 @@ import popup from '../../../common/js/module/popup.js';
 
 	      that.actTimeList.map(function (item, index) {
 	        if (that.actTimeList[index+1]) {
-	          var getMinutes = new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + actTimeList[index+1].beginTime).getMinutes();
+	          var getMinutes = new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + that.actTimeList[index+1].beginTime).getMinutes();
 	          getMinutes = getMinutes < 10 ? '0'+getMinutes : getMinutes;
 	        }
-	        var getMinutesTo = new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + actTimeList[0].beginTime).getMinutes();
+	        var getMinutesTo = new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + that.actTimeList[0].beginTime).getMinutes();
 	        getMinutesTo = getMinutesTo < 10 ? '0'+getMinutesTo : getMinutesTo;
 
 	        if (currents.getTime() >= new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime() && currents.getTime() <= new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.overTime).getTime()) {
-	          if (index == actTimeList.length-1) {
+	          if (index == that.actTimeList.length-1) {
 	            if (currents.getDate() == new Date(endTime).getDate()) {
 	              nextStr = '';
 	              that.isLastTime = true;
 	            } else {
-	              nextStr = "下一场红包雨开始时间：明天 "+ new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + actTimeList[0].beginTime).getHours() +":"+ getMinutesTo +":00";
+	              nextStr = "下一场红包雨开始时间：明天 "+ new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + that.actTimeList[0].beginTime).getHours() +":"+ getMinutesTo +":00";
 	            }
 	          } else {
-	            nextStr = "下一场红包雨开始时间：今天 "+ new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + actTimeList[index+1].beginTime).getHours() +":"+ getMinutes +":00";
+	            nextStr = "下一场红包雨开始时间：今天 "+ new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + that.actTimeList[index+1].beginTime).getHours() +":"+ getMinutes +":00";
 	          }
 	        }
 	      });
