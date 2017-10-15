@@ -11,18 +11,16 @@ export default {
   /**
    * 存缓存数据
    * 调用方法：
-   * localCache.setItem({
-      Date: Date.now(),   // 当前时间（不传则取设备当前时间，一般不需要这个参数，）
-      Expires: {          // 缓存有效时长（从当前时间开始计算过多少毫秒缓存失效）
+   localCache.setItem({
+      key: '',            // 缓存key
+      data: {},           // 缓存data（可以传json或String）
+      expires: {          // 缓存有效时长（从当前时间开始计算过多少毫秒缓存失效）
         d: 0,             // 天
         h: 0,             // 小时
         m: 0,             // 分钟
         s: 0,             // 秒
         ms: 0,            // 毫秒
-      },
-      key: '',        // 缓存key
-      data: {             // 缓存data（可以传json或String）
-      },
+      }
     });
    */
   setItem(param = {}) {
@@ -32,26 +30,15 @@ export default {
       return;
     }
 
-    // 参数检查-当前日期格式(不进行缓存的条件：传入该参数并且用该参数实例化Date对象异常)
-    param.Date = param.Date || Date.now();
-    if (param.Date) {
-      try {
-        new Date(param.Date);
-      } catch (err) {
-        console.warn(`缓存失败，Date参数错误：${param.Date}`);
-        return;
-      }
-    }
-
     // 参数检查-过期时间
-    param.Expires = param.Expires || {};
-    let Expires = 0;
-    Expires += param.Expires.d ? parseInt(param.Expires.d) * one.d : 0;
-    Expires += param.Expires.h ? parseInt(param.Expires.h) * one.h : 0;
-    Expires += param.Expires.m ? parseInt(param.Expires.m) * one.m : 0;
-    Expires += param.Expires.s ? parseInt(param.Expires.s) * one.s : 0;
-    Expires += param.Expires.ms ? parseInt(param.Expires.ms) * one.ms : 0;
-    param.Expires = Expires;
+    param.expires = param.expires || {};
+    let expires = 0;
+    expires += param.expires.d ? parseInt(param.expires.d) * one.d : 0;
+    expires += param.expires.h ? parseInt(param.expires.h) * one.h : 0;
+    expires += param.expires.m ? parseInt(param.expires.m) * one.m : 0;
+    expires += param.expires.s ? parseInt(param.expires.s) * one.s : 0;
+    expires += param.expires.ms ? parseInt(param.expires.ms) * one.ms : 0;
+    param.expires = expires;
 
     // 参数检查-数据格式(不进行缓存的条件：数据为空或者转换异常)
     if (!param.data || param.data && !(param.data + '')) {
@@ -65,11 +52,18 @@ export default {
       return;
     }
 
-    window.localStorage.setItem(param.key, JSON.stringify({
-      Date: param.Date,
-      Expires: param.Expires || 0,
+    // 生成缓存value
+    let value = JSON.stringify({
+      now: Date.now(),
+      expires: param.expires || 0,
       data: param.data,
-    }));
+    });
+
+    // 存入localStorage
+    window.localStorage.setItem(param.key, value);
+
+    // 日志
+    console.log(`调用localCache模块缓存完成：${param.key}=${value}`);
   },
   /**
    * 取缓存数据
@@ -94,10 +88,10 @@ export default {
     }
 
     // 不是本模块存的
-    if (!value.Date || !value.Expires) return null;
+    if (!value.expires) return null;
 
     // 过期
-    if (Date.now() > new Date(value.Date).valueOf() + value.Expires || param.get('noCache') !== undefined) {
+    if (Date.now() > new Date(value.now).valueOf() + value.expires || param.get('noCache') !== undefined) {
       window.localStorage.removeItem(key);
       return null;
     }
