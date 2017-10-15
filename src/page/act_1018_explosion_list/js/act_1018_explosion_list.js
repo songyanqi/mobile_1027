@@ -7,7 +7,6 @@ import $ from '$';
 
 // 业务模块
 import encrypt from '../../../common/js/module/encrypt.js';
-import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
@@ -15,7 +14,6 @@ import layout from "../../../../module/index/layout.es6";
 import util from '../../../common/js/module/util.js';
 import ua from '../../../common/js/module/ua.js';
 
-login.needLogin();
 // 懒加载初始化
 vueLazyload.init();
 
@@ -123,6 +121,17 @@ new Vue({
         } catch (err) {
           console.error(err);
         }
+
+        // 选中最近的已开抢
+        let index = 0;
+        for (let i in this.timer) {
+          if (ts.response.sys_time >= ts.screenings[i]) {
+            index = parseInt(i);
+          }
+        }
+        var id = 'active-tab' + index;
+        var topHeight = $("#id").offset().top - $(window).scrollTop();
+        $("#id").animate({scrollTop:topHeight - "44" + "px"}, 500);
       });
     }
   }
