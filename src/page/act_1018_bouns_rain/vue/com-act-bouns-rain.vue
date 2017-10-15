@@ -309,7 +309,6 @@ import popup from '../../../common/js/module/popup.js';
 			setIntervalTime() {
 				let that = this;
 				that.time = setInterval(function () {
-					console.log(1);
           that.judgeTime(function () {
              that.judgeLogin(function () {
                that.loadImg(['//pic.davdian.com/free/2017/02/24/red_01.png'], function () {
