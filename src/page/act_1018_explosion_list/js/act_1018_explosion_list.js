@@ -98,7 +98,7 @@ new Vue({
         //     action: ''
         //   },
         // });
-
+        let ts = this;
 
         // 设置app头部标题栏
         native.custom.initHead({
@@ -111,6 +111,18 @@ new Vue({
           homeBtn: '0',
           shareBtn: '1',
         });
+
+        // 设置分享信息
+        try {
+          share.setShareInfo({
+            title: '大V店周年庆，超值爆品等你来~',
+            desc: '1018当天5个场次，可以持续不断买买买啦~',
+            link: location.href,
+            imgUrl: `${location.protocol}[[static]]/page/act_1018_explosion_list/img/share.png`
+          }, ts.response);
+        } catch (err) {
+          console.error(err);
+        }
       });
     }
   }

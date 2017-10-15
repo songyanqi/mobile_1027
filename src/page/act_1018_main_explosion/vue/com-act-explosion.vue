@@ -176,7 +176,7 @@
     </div>
 
     <!--更多-->
-    <a href="/act_1018_explosion_list.html" class="explosion-href">爆品馆  >>></a>
+    <a :href="'/act_1018_explosion_list.html#active-tab'+tabIndex" class="explosion-href">爆品馆  >>></a>
   </div>
 </template>
 <script>
