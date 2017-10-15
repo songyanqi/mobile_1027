@@ -31,6 +31,7 @@
   import encrypt from '../../../common/js/module/encrypt.js';
   import popup from '../../../common/js/module/popup.js';
   import native from '../../../common/js/module/native.js';
+  import layout from "../../../../module/index/layout.es6";
 
   export default {
     components: {
@@ -73,9 +74,10 @@
       getData() {
         let that = this;
         $.ajax({
-          url: " https://www.easy-mock.com/mock/59b9230be0dc663341a8ce57/clickbouns",
-          type: "GET",
+          url: "/api/mg/sale/returnbonus/getBonusNumber",
+          type: "POST",
           dataType: "JSON",
+          data: layout.strSign('luck_draw',{}),
           success(res) {
             if (!res.code) {
               that.luckNum = Number(res.data.number);
@@ -168,9 +170,10 @@
             that.click=false;
 
             $.ajax({
-              url: " https://www.easy-mock.com/mock/59b9230be0dc663341a8ce57/bounsDes",
-              type: "GET",
+              url: "/api/mg/sale/returnbonus/lotteryBonus",
+              type: "POST",
               dataType: "JSON",
+              data: layout.strSign('lottory_luck',{}),
               success(res) {
                 console.log("res",res);
               },
