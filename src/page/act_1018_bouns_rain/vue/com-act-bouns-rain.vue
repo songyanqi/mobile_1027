@@ -4,7 +4,9 @@
 </style>
 <template>
 	<div class = "bounsCont">
-
+	<div class = "bounsImgs">
+		<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsRain_icon.jpg">
+	</div>
 		<div v-if = "isConfirm">
 	    <div class = "weui-mask"></div>
 	    <div class="weui-dialog">
