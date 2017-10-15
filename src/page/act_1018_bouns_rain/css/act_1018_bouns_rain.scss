@@ -824,6 +824,7 @@ body.gaming .other {
       vertical-align: middle;
     }
     .bounsMask {
+      position: relative;
       width: 100%;
       .bouns_0,.bouns_1,.bouns_2,.bouns_3 {
         float: left;
@@ -853,6 +854,14 @@ body.gaming .other {
       .maskImging {
         background: url('//pic.davdian.com/free/Bouns/bouns_mianing.png') no-repeat;
         background-size: 100% 100%;
+      }
+      .bounsImgMast {
+        position: absolute;
+        bottom: 0;
+        img {
+          width: 25%;
+          float: left;
+        }
       }
     }
     .clearfix:after {

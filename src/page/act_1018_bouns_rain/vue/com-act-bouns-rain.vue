@@ -7,13 +7,10 @@
 	<div class = "bounsImgs">
 		<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsMain_iconnew.png">
 		<div class = "bounsMask clearfix">
-			<div class = "bouns_0">0点红包雨</div>
-			<div class = "bouns_1">8点红包雨</div>
-			<div class = "bouns_2">16点红包雨</div>
-			<div class = "bouns_3">20点红包雨</div>
-			<div class = "bounsImgMast">
-				<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsNewMask.png">
-			</div>
+			<div class = "bouns_0" :class = "{ maskImging:isBouns==1,maskImg:(isMask == 1 || isMask == 2 || isMask == 3 || isMask == 4) }">0点红包雨</div>
+			<div class = "bouns_1" :class = "{ maskImging:isBouns==2,maskImg:(isMask == 2 || isMask == 3 || isMask == 4) }">8点红包雨</div>
+			<div class = "bouns_2":class = "{ maskImging:isBouns==3,maskImg:(sMask == 3 || isMask == 4) }">16点红包雨</div>
+			<div class = "bouns_3" :class = "{ maskImging:isBouns==3,maskImg:isMask == 4 }">20点红包雨</div>
 		</div>
 	</div>
 		<div v-if = "isConfirm">
@@ -38,7 +35,7 @@ import popup from '../../../common/js/module/popup.js';
 	export default {
 		data() {
 			return {
-				bounsId: 126,
+				bounsId: 127,
 				startTime: "",
 	  		endTime: "",
 	  		isStartGame: false,
@@ -94,46 +91,51 @@ import popup from '../../../common/js/module/popup.js';
 						// 2017/10/18 20:15:00  1508328900000
 						// 0点到0:15:00
 						if (that.currentTime > 1508256000000 && that.currentTime <= 1508256900000) {
-							// that.isBounsing = 1;
-							$(".bouns_0").addClass("maskImging");
+							// $(".bouns_0").addClass("maskImging");
 							that.isBouns = 1;
 						}
 						if (that.currentTime > 1508256900000 && that.currentTime <= 1508284800000) {
-							$(".bouns_0").addClass("maskImg");
+							// $(".bouns_0").addClass("maskImg");
 							that.isMask = 1;
 						}
 
 						if (that.currentTime > 1508284800000 && that.currentTime <= 1508285700000) {
-							$(".bouns_0").addClass("maskImg");
-							$(".bouns_1").addClass("maskImging");
+							// $(".bouns_0").addClass("maskImg");
+							// $(".bouns_1").addClass("maskImging");
+							that.isBouns = 2;
 						}
 						if (that.currentTime > 1508285700000 && that.currentTime <= 1508313600000) {
-							$(".bouns_0").addClass("maskImg");
-							$(".bouns_1").addClass("maskImg");
+							// $(".bouns_0").addClass("maskImg");
+							// $(".bouns_1").addClass("maskImg");
+							that.isMask = 2;
 						}
 
 						if (that.currentTime > 1508313600000 && that.currentTime <= 1508314500000) {
-							$(".bouns_0").addClass("maskImg");
-							$(".bouns_1").addClass("maskImg");
-							$(".bouns_2").addClass("maskImging");
+							// $(".bouns_0").addClass("maskImg");
+							// $(".bouns_1").addClass("maskImg");
+							// $(".bouns_2").addClass("maskImging");
+							that.isBouns = 3;
 						}
 						if (that.currentTime > 1508314500000 && that.currentTime <= 1508328000000) {
-							$(".bouns_0").addClass("maskImg");
-							$(".bouns_1").addClass("maskImg");
-							$(".bouns_2").addClass("maskImg");
+							// $(".bouns_0").addClass("maskImg");
+							// $(".bouns_1").addClass("maskImg");
+							// $(".bouns_2").addClass("maskImg");
+							that.isMask = 3;
 						}
 
 						if (that.currentTime > 1508328000000 && that.currentTime <= 1508328900000) {
-							$(".bouns_0").addClass("maskImg");
-							$(".bouns_1").addClass("maskImg");
-							$(".bouns_2").addClass("maskImg");
-							$(".bouns_3").addClass("maskImging");
+							// $(".bouns_0").addClass("maskImg");
+							// $(".bouns_1").addClass("maskImg");
+							// $(".bouns_2").addClass("maskImg");
+							// $(".bouns_3").addClass("maskImging");
+							that.isBouns = 4;
 						}
 						if (that.currentTime > 1508328900000) {
-							$(".bouns_0").addClass("已经下完");
-							$(".bouns_1").addClass("已经下完");
-							$(".bouns_2").addClass("已经下完");
-							$(".bouns_3").addClass("已经下完");
+							// $(".bouns_0").addClass("已经下完");
+							// $(".bouns_1").addClass("已经下完");
+							// $(".bouns_2").addClass("已经下完");
+							// $(".bouns_3").addClass("已经下完");
+							that.isMask = 4;
 						}
 
 						if (!that.isStart) {
@@ -181,10 +183,6 @@ import popup from '../../../common/js/module/popup.js';
 	            that.startTime = data.startTime*1000;
 	            that.endTime = data.endTime*1000;
 	            that.actTimeList = data.timeScope;
-
-	            // imgUrl = data.shareInfo.imgUrl;  //分享图片
-	           	// descContent = data.shareInfo.desc; // 分享文案
-	            // shareTitle = data.shareInfo.title;  //分享标题
 
 	            if (that.isStartGame) {
 	            	sessionStorage.setItem("20170420_hby",0);
@@ -393,6 +391,13 @@ import popup from '../../../common/js/module/popup.js';
 			setIntervalTime() {
 				let that = this;
 				that.time = setInterval(function () {
+					that.actTimeList.map(function (item,index) {
+						if (Date.now() > Date.now() < new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime() -5000  && Date.now() < new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime()) {
+							that.getData();
+						};
+					});
+					// if (Date.now()+5000 == 1508284800000)
+
           that.judgeTime(function () {
              that.judgeLogin(function () {
                that.loadImg(['//pic.davdian.com/free/2017/02/24/red_01.png'], function () {
