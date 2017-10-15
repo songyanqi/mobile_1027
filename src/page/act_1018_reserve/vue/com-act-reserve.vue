@@ -33,7 +33,8 @@
       width: 1.72rem;
       background: #fff;
       border-radius: 0.05rem;
-      margin: 0.05rem 0.05rem; 
+      // margin: 0.05rem 0.05rem; 
+      margin: 0.05rem 0.04rem;
       overflow: hidden;
     }
     .bookImg {
