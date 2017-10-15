@@ -65,18 +65,18 @@
     width: 3.75rem;
     height: 0.94rem;
     background-size: 3.75rem 0.94rem;
-    background-image: url('http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/12/%E7%BA%A2%E5%8C%85_01.png');
+    background-image: url('//pic.davdian.com/free/2017/10/12/%E7%BA%A2%E5%8C%85_01.png');
   }
   .no_get{
     width: 3.75rem;
     height: 0.94rem;
     background-size: 3.75rem 0.94rem;
-    background-image: url('http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/12/%E7%BA%A2%E5%8C%85_03.png');
+    background-image: url('//pic.davdian.com/free/2017/10/12/%E7%BA%A2%E5%8C%85_03.png');
   }
   .no_login{
     width: 3.75rem;
     height: 0.645rem;
     background-size: 3.75rem 0.645rem;
-    background-image: url('http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/12/%E7%BA%A2%E5%8C%85_05.png');
+    background-image: url('//pic.davdian.com/free/2017/10/12/%E7%BA%A2%E5%8C%85_05.png');
   }
 </style>
