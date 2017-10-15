@@ -5,7 +5,14 @@
 <template>
 	<div class = "bounsCont">
 	<div class = "bounsImgs">
-		<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsRain_icon.jpg">
+		<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsMain_iconnew.png">
+		<div class = "bounsMask clearfix">
+			<div class = "bouns_0">0点红包雨</div>
+			<div class = "bouns_1 maskImging">8点红包雨</div>
+			<div class = "bouns_2">16点红包雨</div>
+			<div class = "bouns_3">20点红包雨</div>
+			<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsNewMask.png">
+		</div>
 	</div>
 		<div v-if = "isConfirm">
 	    <div class = "weui-mask"></div>
@@ -29,7 +36,7 @@ import popup from '../../../common/js/module/popup.js';
 	export default {
 		data() {
 			return {
-				bounsId: 121,
+				bounsId: 125,
 				startTime: "",
 	  		endTime: "",
 	  		isStartGame: false,
@@ -48,6 +55,8 @@ import popup from '../../../common/js/module/popup.js';
 	  		cancelText: "取消",
 	  		confirmText: "确定",
 	  		isConfirm: false,
+	  		isBounsMask: 0,
+	  		isBounsing: 0,
 			}
 		},
 		watch: {
@@ -55,6 +64,37 @@ import popup from '../../../common/js/module/popup.js';
 				handler() {
 					let that = this;
 					this.$nextTick(function () {
+						// 判断红包mask的显示
+						// 2017/10/18 00:00:00  1508256000000
+						// 2017/10/18 00:15:00  1508256900000
+						// 2017/10/18 08:00:00  1508284800000
+						// 2017/10/18 08:15:00  1508285700000
+						// 2017/10/18 16:00:00  1508313600000
+						// 2017/10/18 16:15:00  1508314500000
+						// 2017/10/18 20:00:00  1508328000000
+						// 2017/10/18 20:15:00  1508328900000
+						// 0点到0:15:00
+						if (Date.now() > 1508256000000 && Date.now() <= 1508256900000) {
+							// that.isBounsing = 1;
+							// $(".")
+						}
+						if (Date.now() > 1508256900000 && Date.now() <= 1508284800000) {
+
+						}
+
+
+
+						if (Date.now() <= 1508284800000 && Date.now() > 1508256000000) {
+							that.isBounsMask = 1;
+						}
+						if (Date.now() <= 1508313600000 && Date.now() > 1508284800000) {
+							that.isBounsMask = 2;
+						}
+						if (Date.now() <= 1508328000000 && Date.now() > 1508313600000) {
+							that.isBounsMask = 3;
+						}
+						if (Date.now() <= 1508328000000 && Date.now() > 1508328000000)
+
 						if (!that.isStart) {
 			        that.time = setInterval(function () {
 			          that.judgeTime(function () {
