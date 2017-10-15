@@ -815,3 +815,49 @@ body.gaming .other {
   .weui-dialog__title {
     font-size: 14px;
   }
+
+  .bounsImgs {
+    width: 100%;
+    position: relative;
+    img {
+      width: 100%;
+      vertical-align: middle;
+    }
+    .bounsMask {
+      width: 100%;
+      .bouns_0,.bouns_1,.bouns_2,.bouns_3 {
+        float: left;
+        font-size: 14px;
+        width: 25%;
+        color: #fff;
+        padding: 16px 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+        background: linear-gradient(to bottom, #fd6e58, #ef285f);
+        background: -moz-linear-gradient(bottom, #fd6e58, #ef285f);
+        background: -o-linear-gradient(bottom, #fd6e58, #ef285f);
+        background-colornd: -webkit-linear-gradient(top, #fd6e58, #ef285f);
+      }
+      .bouns_1 {
+        border-right: 2px solid #f33f5d;
+        border-left: 2px solid #f33f5d;
+      }
+      .bouns_2 {
+        border-right: 2px solid #f33f5d;
+      }
+      .maskImg {
+        background: url('//pic.davdian.com/free/Bouns/bounsNewMask.png') no-repeat;
+        background-size: 100% 100%;
+      }
+      .maskImging {
+        background: url('//pic.davdian.com/free/Bouns/bouns_mianing.png') no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+    .clearfix:after {
+      display: block;
+      content: "";
+      both: clear;
+    }
+  }
