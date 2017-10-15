@@ -1,13 +1,35 @@
 <template>
   <div class="background">
-      <template v-if="false">
-        <!--未登录-->
-        <div class="big_img"><img src="//pic.davdian.com/free/2017/09/29/bg2.png" alt=""></div>
-        <div class="nologin">您还未登录哦~</div>
-        <div class="btn1"></div>
+    <template v-if="!isLogin">
+      <!--未登录-->
+      <div class="big_img"><img src="//pic.davdian.com/free/2017/09/29/bg2.png" alt=""></div>
+      <div class="nologin">您还未登录哦~</div>
+      <div class="btn1" @click="login"></div>
+    </template>
 
+    <template v-if="isLogin">
+
+
+      <template v-if="false">
         <!--登录（第二长的）-->
-        <div class="big_img2"><img src="//pic.davdian.com/free/2017/09/30/bg4.png" alt=""></div>
+
+
+
+
+        <div class="noshop">活动结束啦~~</div>
+
+
+        <div class="goshop">已获得三周年纪念品</div>
+
+
+
+        <div class="btn2"></div>
+        <div class="btn3"></div>
+        <div class="btn4"></div>
+
+
+        <!--最长的-->
+        <div class="big_img3"><img src="//pic.davdian.com/free/2017/09/30/bg5.png" alt=""></div>
         <div class="range">
           <div class="date">
             <div class="default readyshop_date">10.19</div>
@@ -26,15 +48,9 @@
           </div>
         </div>
 
-        <div class="noshop">今天还未购物哦~</div>
-        <div class="noshop">今天已购物~</div>
-        <div class="noshop">很遗憾您错过了这次活动~</div>
-        <div class="noshop">活动结束啦~~</div>
-
-        <div class="goshop">连续三天购物即可获得</div>
-        <div class="goshop">已获得三周年纪念品</div>
-
-        <div class="goods">
+        <div>连续三天购物即可获得</div>
+        <div>仅剩 2345 个名额</div>
+        <div class="goodsLong">
           <div style="width: 1.1rem;"><img src="//pic.davdian.com/free/2017/09/30/Rectangle%208.png" alt=""></div>
           <div style="width: 1.5rem;">
             <div style="font-size: 0.16rem;color:#333333;margin-top: 0.2rem;width: 100%;text-align: center">周年庆纪念品</div>
@@ -42,43 +58,55 @@
           </div>
         </div>
 
-        <div class="btn2"></div>
-        <div class="btn3"></div>
-        <div class="btn4"></div>
-
+        <div class="btnlong"></div>
       </template>
 
-    <!--最长的-->
-    <div class="big_img3"><img src="//pic.davdian.com/free/2017/09/30/bg5.png" alt=""></div>
-    <div class="range">
-      <div class="date">
-        <div class="default readyshop_date">10.19</div>
-        <div class="default noshop_date">10.20</div>
-        <div class="default readyshop_date">10.21</div>
-      </div>
-      <div class="circle">
-        <div><img src="//pic.davdian.com/free/2017/09/30/yellow.png" alt=""></div>
-        <div><img src="//pic.davdian.com/free/2017/09/30/white.png" alt=""></div>
-        <div><img src="//pic.davdian.com/free/2017/09/30/yellow.png" alt=""></div>
-      </div>
-      <div class="state">
-        <div class="default2 readyshop_date">已购物</div>
-        <div class="default2 noshop_date">已购物</div>
-        <div class="default2 readyshop_date">已购物</div>
-      </div>
-    </div>
-    <div>再购物一次就能获得周年庆纪念品啦</div>
-    <div>连续三天购物即可获得</div>
-    <div>仅剩 2345 个名额</div>
-    <div class="goodsLong">
-      <div style="width: 1.1rem;"><img src="//pic.davdian.com/free/2017/09/30/Rectangle%208.png" alt=""></div>
-      <div style="width: 1.5rem;">
-        <div style="font-size: 0.16rem;color:#333333;margin-top: 0.2rem;width: 100%;text-align: center">周年庆纪念品</div>
-        <div style="font-size: 0.12rem;color:#FF4A7D;margin-top: 0.2rem;width: 100%;text-align: center;">查看详情>>></div>
-      </div>
-    </div>
 
-    <div class="btnlong"></div>
+      <div class="range">
+        <div class="date">
+          <template v-for="item in realTimeList">
+            <div :class="{ 'readyshop_date': item.isBuy==1,'noshop_date':item.isBuy==0}" class="default" v-text="item.text"></div>
+          </template>
+        </div>
+        <div class="circle">
+          <template v-for="item in realTimeList">
+            <div v-if="item.isBuy==1"><img src="//pic.davdian.com/free/2017/09/30/yellow.png" alt=""></div>
+            <div v-if="item.isBuy==0"><img src="//pic.davdian.com/free/2017/09/30/white.png" alt=""></div>
+          </template>
+        </div>
+        <div class="state">
+          <template v-for="item in realTimeList">
+            <div v-if="item.isBuy==1" class="default2 readyshop_date">已购物</div>
+            <div v-if="item.isBuy==0" class="default2 noshop_date">未购物</div>
+          </template>
+        </div>
+      </div>
+      <!--活动中-->
+      <div class="big_img2"><img src="//pic.davdian.com/free/2017/09/30/bg4.png" alt=""></div>
+
+      <div class="noshop" v-if="realTimeList[0].isBuy==0 && realTimeList[1].isBuy==0 && realTimeList[2].isBuy==0">今天还未购物哦~</div>
+      <div class="noshop" v-if="realTimeList[0].isBuy==1 && realTimeList[1].isBuy==0 && realTimeList[2].isBuy==0">今天已购物~</div>
+      <div class="noshop" v-if="(realTimeList[0].isBuy==0 && realTimeList[1].isBuy==1) ||
+      (realTimeList[1].isBuy==0 && realTimeList[2].isBuy==1)">很遗憾您错过了这次活动~</div>
+
+      <div v-if="realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1 && realTimeList[2].isBuy==0">再购物一次就能获得周年庆纪念品啦</div>
+
+      <div class="goshop">连续三天购物即可获得</div>
+
+      <div class="goods">
+        <div style="width: 1.1rem;"><img src="//pic.davdian.com/free/2017/09/30/Rectangle%208.png" alt=""></div>
+        <div style="width: 1.5rem;">
+          <div style="font-size: 0.16rem;color:#333333;margin-top: 0.2rem;width: 100%;text-align: center">周年庆纪念品</div>
+          <div style="font-size: 0.12rem;color:#FF4A7D;margin-top: 0.2rem;width: 100%;text-align: center;">查看详情>>></div>
+        </div>
+      </div>
+
+      <div class="btn2" v-if="realTimeList[0].isBuy==0 && realTimeList[1].isBuy==0 && realTimeList[2].isBuy==0"></div>
+      <div class="btn3" v-if="(realTimeList[0].isBuy==0 && realTimeList[1].isBuy==1) ||
+      (realTimeList[1].isBuy==0 && realTimeList[2].isBuy==1) || (realTimeList[0].isBuy==1 && realTimeList[1].isBuy==0 && realTimeList[2].isBuy==0)"></div>
+    </template>
+
+
 
       <div class="rute1">
         <div style="margin-top: 0;text-align: center;"><span class="line"></span><span style="padding: 0 0.1rem">活动规则</span><span class="line"></span></div>
@@ -95,6 +123,9 @@
 </template>
 <script>
   import share from "../../../../src/common/js/module/share.js"
+  import util from "../../../../utils/utils.es6"
+  import login from "../../../../src/common/js/module/login.js"
+  import native from "../../../../src/common/js/module/native.js"
   export default{
     mounted(){
       share.setShareInfo({
@@ -103,6 +134,76 @@
         link: window.location.href,
         imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/12/%E6%BB%A1399%E9%80%81%E5%A4%A7V%E4%B8%89%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5%E5%93%81%E5%88%86%E4%BA%AB%E7%BC%A9%E7%95%A5%E5%9B%BE.png"
       });
+      this.init();
+    },
+    data(){
+      return{
+        state:null,
+        gooodsId:null,
+        goodsImg:null,
+        shopStocks:null,
+        timeList:[],
+        isApp:util.utils.isApp(),
+        isLogin:null
+      }
+    },
+    computed:{
+      realTimeList(){
+        var arr=[];
+        this.timeList.map(function (item,index) {
+          if(item.time=='20171019'){
+            item.text='10.19';
+            Vue.set(arr,0,item);
+          }
+          if(item.time=='20171020'){
+            item.text='10.20';
+            Vue.set(arr,1,item);
+          }
+          if(item.time=='20171021'){
+            item.text='10.21';
+            Vue.set(arr,2,item);
+          }
+        });
+        return arr;
+      }
+    },
+    methods:{
+      getStaus(){
+        var token=login.getDvdsid().substr(32,8);
+        if(token=="00000001"){
+          return 0;
+        }else{
+          if(token.substr(7,1)==1){
+            return 1;
+          }else{
+            return 3
+          }
+        }
+      },
+      login(){
+        var that=this;
+        if (that.isApp) {
+          native.Account.login()
+        } else {
+          window.location.href = '/login.html?' + 'referer=' + encodeURIComponent(window.location.href)
+        }
+      },
+      init(){
+        if(this.getStaus()==0){
+          this.isLogin=false;
+        }else {
+          this.isLogin=true;
+          var result =require('../json/souvenir.json');
+          console.log(result);
+
+          this.state=result.data.code;
+          this.gooodsId=result.data.gooodsId;
+          this.goodsImg=result.data.goodsImg;
+          this.shopStocks=result.data.shopStocks;
+          this.timeList=result.data.timeList;
+        }
+
+      }
     }
   }
 </script>
@@ -239,7 +340,7 @@
     display: inline-block;
     vertical-align: top;
   }
-  .goods img ,.goodsLong img{
+  .goods img,.goodsLong img{
     height: 1.1rem;
     width: 1.1rem;
   }
