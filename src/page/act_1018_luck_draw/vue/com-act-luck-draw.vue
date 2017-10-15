@@ -176,6 +176,11 @@
               data: layout.strSign('lottory_luck',{}),
               success(res) {
                 console.log("res",res);
+                if (!res.code) {
+                  that.luckNum--;
+                } else {
+                  // popup.info()
+                }
               },
               error(error) {
                 console.log('error',error);
