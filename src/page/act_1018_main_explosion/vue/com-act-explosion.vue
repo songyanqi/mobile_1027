@@ -27,7 +27,6 @@
 
       .item-timer {
         font-size:ptr(16);
-        font-weight:bold;
         padding:ptr(8) 0;
       }
       &.selected {
