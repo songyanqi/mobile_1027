@@ -392,7 +392,8 @@ import popup from '../../../common/js/module/popup.js';
 				let that = this;
 				that.time = setInterval(function () {
 					that.actTimeList.map(function (item,index) {
-						if (Date.now() > Date.now() < new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime() -5000  && Date.now() < new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime()) {
+						if (Date.now() > new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime() -240000  && Date.now() < new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime()) {
+							console.log("倒计时");
 							that.getData();
 						};
 					});
