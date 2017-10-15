@@ -4,15 +4,15 @@
 </style>
 <template>
 	<div class = "bounsCont">
-	<div class = "bounsImgs">
-		<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsMain_iconnew.png">
-		<div class = "bounsMask clearfix">
-			<div class = "bouns_0" :class = "{ maskImging:isBouns==1,maskImg:(isMask == 1 || isMask == 2 || isMask == 3 || isMask == 4) }">0点红包雨</div>
-			<div class = "bouns_1" :class = "{ maskImging:isBouns==2,maskImg:(isMask == 2 || isMask == 3 || isMask == 4) }">8点红包雨</div>
-			<div class = "bouns_2":class = "{ maskImging:isBouns==3,maskImg:(isMask == 3 || isMask == 4) }">16点红包雨</div>
-			<div class = "bouns_3" :class = "{ maskImging:isBouns==4,maskImg:isMask == 4 }">20点红包雨</div>
+		<div class = "bounsImgs" v-if = "Date.now() > 1508256000000 && Date.now() < 1508342400000">
+			<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsMain_iconnew.png">
+			<div class = "bounsMask clearfix">
+				<div class = "bouns_0" :class = "{ maskImging:isBouns==1,maskImg:(isMask == 1 || isMask == 2 || isMask == 3 || isMask == 4) }">0点红包雨</div>
+				<div class = "bouns_1" :class = "{ maskImging:isBouns==2,maskImg:(isMask == 2 || isMask == 3 || isMask == 4) }">8点红包雨</div>
+				<div class = "bouns_2":class = "{ maskImging:isBouns==3,maskImg:(isMask == 3 || isMask == 4) }">16点红包雨</div>
+				<div class = "bouns_3" :class = "{ maskImging:isBouns==4,maskImg:isMask == 4 }">20点红包雨</div>
+			</div>
 		</div>
-	</div>
 		<div v-if = "isConfirm">
 	    <div class = "weui-mask"></div>
 	    <div class="weui-dialog">
@@ -35,7 +35,7 @@ import popup from '../../../common/js/module/popup.js';
 	export default {
 		data() {
 			return {
-				bounsId: 132,
+				bounsId: 141,
 				startTime: "",
 	  		endTime: "",
 	  		isStartGame: false,
@@ -58,9 +58,11 @@ import popup from '../../../common/js/module/popup.js';
 	  		isBounsing: 0,
 	  		currentTime: 0,
 	  		timeObj: null,
+	  		newTime: null,
 
 	  		isBouns: 0,
 	  		isMask: 0,
+	  		isNewStart: false,
 			}
 		},
 		watch: {
@@ -171,6 +173,7 @@ import popup from '../../../common/js/module/popup.js';
 	            that.startTime = data.startTime*1000;
 	            that.endTime = data.endTime*1000;
 	            that.actTimeList = data.timeScope;
+	            that.isNewStart = true;
 
 	            if (that.isStartGame) {
 	            	sessionStorage.setItem("20170420_hby",0);
@@ -382,22 +385,23 @@ import popup from '../../../common/js/module/popup.js';
 		        dateMounth = currents.getMonth() + 1,
 		        dateDay = currents.getDate();
 
-				that.time = setInterval(function () {
-					that.actTimeList.map(function (item,index) {
-						if (Date.now() > new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime() - 30000  && Date.now() < new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime()) {
-							that.getData();
-						};
-					});
-					// if (Date.now()+5000 == 1508284800000)
-
-          that.judgeTime(function () {
-             that.judgeLogin(function () {
-               that.loadImg(['//pic.davdian.com/free/2017/02/24/red_01.png'], function () {
-                 that.startGame();
-              });
-            });
-          });
-        },1000);
+		    clearInterval(that.newTime);
+		    if (!that.isNewStart) {
+					that.newTime = setInterval(function () {
+						that.actTimeList.map(function (item,index) {
+							if (Date.now() > new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime() - 30000  && (parseInt(Date.now()/1000))*1000 <= new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime()) {
+								that.getData();
+							};
+						});
+	          // that.judgeTime(function () {
+	          //    that.judgeLogin(function () {
+	          //      that.loadImg(['//pic.davdian.com/free/2017/02/24/red_01.png'], function () {
+	          //        that.startGame();
+	          //     });
+	          //   });
+	          // });
+	        },1000);
+				}
 			},
 			showResult(id) {
 				let that = this;
@@ -453,7 +457,9 @@ import popup from '../../../common/js/module/popup.js';
 	        $game.append($resultContainer);
 	        $(".close").click(function () {
 	          $(".game_container").hide();
+	          that.isNewStart = false;
 	          that.setIntervalTime();
+	          
 	        });
 	      } else {
 	        console.log("抽中id为" + id + "的红包")
@@ -483,10 +489,12 @@ import popup from '../../../common/js/module/popup.js';
 	                $game.append($resultContainer);
 	                $(".close").click(function () {
 	                  $(".game_container").hide();
+	                  that.isNewStart = false;
 	                  that.setIntervalTime();
 	                });
 	                $(".look_red").click(function () {
 	                	$(".game_container").hide();
+	                	that.isNewStart = false;
 	                  that.setIntervalTime();
 	                })
 	                if (!data.bonusInfo.minConsumePrice) {
@@ -498,6 +506,7 @@ import popup from '../../../common/js/module/popup.js';
 	            } else {
 	              popup.toast(result.data.msg);
 	              $(".game_container").hide();
+	              that.isNewStart = false;
 	              that.setIntervalTime();
 	            }
 	          }, error: function () {
