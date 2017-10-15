@@ -69,10 +69,10 @@
         <div class="list">
           <div class="bg"></div>
           <div class="title">获iPhone8名单</div>
-          <div class="item" v-for="item in awardList">
+          <div class="item" v-for="(item,index) in awardList">
             <div><img :src="item.avatar" alt=""></div>
             <div v-text="item.userName"></div>
-            <div style="position: absolute;right: 0;">已满足</div>
+            <div style="position: absolute;right: 0;">第<span v-text="index+1"></span>位获奖</div>
           </div>
         </div>
 

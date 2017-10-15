@@ -4,6 +4,7 @@
 </style>
 <template>
 	<div class = "bounsCont">
+
 		<div v-if = "isConfirm">
 	    <div class = "weui-mask"></div>
 	    <div class="weui-dialog">
@@ -47,7 +48,27 @@ import popup from '../../../common/js/module/popup.js';
 	  		isConfirm: false,
 			}
 		},
-		watch: {},
+		watch: {
+			startTime: {
+				handler() {
+					let that = this;
+					this.$nextTick(function () {
+						if (!that.isStart) {
+			        that.time = setInterval(function () {
+			          that.judgeTime(function () {
+			             that.judgeLogin(function () {
+			               that.loadImg(['//pic.davdian.com/free/2017/02/24/red_01.png'], function () {
+			                 that.startGame();
+			              });
+			            });
+			          });
+			        },1000);
+			      }
+					})
+				},
+				deep: true
+			}
+		},
 		created() {
 			this.isLogin = login.isLogined();
 	  	this.getData();
@@ -83,6 +104,7 @@ import popup from '../../../common/js/module/popup.js';
 	            // shareTitle = data.shareInfo.title;  //分享标题
 
 	            if (that.isStartGame) {
+	            	sessionStorage.setItem("20170420_hby",0);
 	              that.judgeTime(function () {
 	                that.judgeLogin(function () {
 	                  that.loadImg(['//pic.davdian.com/free/2017/02/24/red_01.png'], function () {
@@ -171,7 +193,7 @@ import popup from '../../../common/js/module/popup.js';
 			},
 			startGame() {
 	      var that = this;
-				if(sessionStorage.getItem("20170420_hby")){
+				if(sessionStorage.getItem("20170420_hby") == '1'){
 	        return false;
 	      }
 	      var $container = $("<div class='game_container'><div class='mask'></div><div class='game'></div> </div>");
@@ -283,6 +305,19 @@ import popup from '../../../common/js/module/popup.js';
 	      }
 	      return theList.id;
 			},
+			// 封装倒计时
+			setIntervalTime() {
+				let that = this;
+				that.time = setInterval(function () {
+          that.judgeTime(function () {
+             that.judgeLogin(function () {
+               that.loadImg(['//pic.davdian.com/free/2017/02/24/red_01.png'], function () {
+                 that.startGame();
+              });
+            });
+          });
+        },1000);
+			},
 			showResult(id) {
 				let that = this;
 				$(document.body).removeClass("gaming");
@@ -337,6 +372,7 @@ import popup from '../../../common/js/module/popup.js';
 	        $game.append($resultContainer);
 	        $(".close").click(function () {
 	          $(".game_container").hide();
+	          that.setIntervalTime();
 	        });
 	      } else {
 	        console.log("抽中id为" + id + "的红包")
@@ -366,20 +402,26 @@ import popup from '../../../common/js/module/popup.js';
 	                $game.append($resultContainer);
 	                $(".close").click(function () {
 	                  $(".game_container").hide();
+	                  that.setIntervalTime();
 	                });
+	                $(".look_red").click(function () {
+	                	$(".game_container").hide();
+	                  that.setIntervalTime();
+	                })
 	                if (!data.bonusInfo.minConsumePrice) {
 	                  $(".min_text").hide();
 	                };
 	              } else {
-	                showResult();
+	                that.showResult();
 	              }
 	            } else {
 	              popup.toast(result.data.msg);
 	              $(".game_container").hide();
+	              that.setIntervalTime();
 	            }
 	          }, error: function () {
 	            popup.toast("网络异常，请稍后重试")
-	            showResult();
+	            that.showResult();
 	          }
 	        });
 	      }
