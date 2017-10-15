@@ -9,7 +9,7 @@
 		<div class = "bounsMask clearfix">
 			<div class = "bouns_0" :class = "{ maskImging:isBouns==1,maskImg:(isMask == 1 || isMask == 2 || isMask == 3 || isMask == 4) }">0点红包雨</div>
 			<div class = "bouns_1" :class = "{ maskImging:isBouns==2,maskImg:(isMask == 2 || isMask == 3 || isMask == 4) }">8点红包雨</div>
-			<div class = "bouns_2":class = "{ maskImging:isBouns==3,maskImg:(sMask == 3 || isMask == 4) }">16点红包雨</div>
+			<div class = "bouns_2":class = "{ maskImging:isBouns==3,maskImg:(isMask == 3 || isMask == 4) }">16点红包雨</div>
 			<div class = "bouns_3" :class = "{ maskImging:isBouns==3,maskImg:isMask == 4 }">20点红包雨</div>
 		</div>
 	</div>
@@ -35,7 +35,7 @@ import popup from '../../../common/js/module/popup.js';
 	export default {
 		data() {
 			return {
-				bounsId: 127,
+				bounsId: 132,
 				startTime: "",
 	  		endTime: "",
 	  		isStartGame: false,
@@ -69,8 +69,37 @@ import popup from '../../../common/js/module/popup.js';
 					let that = this;
 					clearInterval(that.timeObj);
 					that.timeObj = setInterval(() => {
-						console.log(12);
 					  that.currentTime = Date.now();
+
+					  if (that.currentTime > 1508256000000 && that.currentTime <= 1508256900000) {
+							that.isBouns = 1;
+						}
+						if (that.currentTime > 1508256900000 && that.currentTime <= 1508284800000) {
+							that.isMask = 1;
+						}
+
+						if (that.currentTime > 1508284800000 && that.currentTime <= 1508285700000) {
+							that.isBouns = 2;
+						}
+						if (that.currentTime > 1508285700000 && that.currentTime <= 1508313600000) {
+							that.isMask = 2;
+						}
+
+						if (that.currentTime > 1508313600000 && that.currentTime <= 1508314500000) {
+							that.isBouns = 3;
+						}
+						if (that.currentTime > 1508314500000 && that.currentTime <= 1508328000000) {
+							that.isMask = 3;
+						}
+
+						if (that.currentTime > 1508328000000 && that.currentTime <= 1508328900000) {
+							that.isBouns = 4;
+						}
+						if (that.currentTime > 1508328900000) {
+							that.isMask = 4;
+						}
+
+
 					}, 1000);
 				},
 				deep: true,
@@ -90,53 +119,6 @@ import popup from '../../../common/js/module/popup.js';
 						// 2017/10/18 20:00:00  1508328000000
 						// 2017/10/18 20:15:00  1508328900000
 						// 0点到0:15:00
-						if (that.currentTime > 1508256000000 && that.currentTime <= 1508256900000) {
-							// $(".bouns_0").addClass("maskImging");
-							that.isBouns = 1;
-						}
-						if (that.currentTime > 1508256900000 && that.currentTime <= 1508284800000) {
-							// $(".bouns_0").addClass("maskImg");
-							that.isMask = 1;
-						}
-
-						if (that.currentTime > 1508284800000 && that.currentTime <= 1508285700000) {
-							// $(".bouns_0").addClass("maskImg");
-							// $(".bouns_1").addClass("maskImging");
-							that.isBouns = 2;
-						}
-						if (that.currentTime > 1508285700000 && that.currentTime <= 1508313600000) {
-							// $(".bouns_0").addClass("maskImg");
-							// $(".bouns_1").addClass("maskImg");
-							that.isMask = 2;
-						}
-
-						if (that.currentTime > 1508313600000 && that.currentTime <= 1508314500000) {
-							// $(".bouns_0").addClass("maskImg");
-							// $(".bouns_1").addClass("maskImg");
-							// $(".bouns_2").addClass("maskImging");
-							that.isBouns = 3;
-						}
-						if (that.currentTime > 1508314500000 && that.currentTime <= 1508328000000) {
-							// $(".bouns_0").addClass("maskImg");
-							// $(".bouns_1").addClass("maskImg");
-							// $(".bouns_2").addClass("maskImg");
-							that.isMask = 3;
-						}
-
-						if (that.currentTime > 1508328000000 && that.currentTime <= 1508328900000) {
-							// $(".bouns_0").addClass("maskImg");
-							// $(".bouns_1").addClass("maskImg");
-							// $(".bouns_2").addClass("maskImg");
-							// $(".bouns_3").addClass("maskImging");
-							that.isBouns = 4;
-						}
-						if (that.currentTime > 1508328900000) {
-							// $(".bouns_0").addClass("已经下完");
-							// $(".bouns_1").addClass("已经下完");
-							// $(".bouns_2").addClass("已经下完");
-							// $(".bouns_3").addClass("已经下完");
-							that.isMask = 4;
-						}
 
 						if (!that.isStart) {
 			        that.time = setInterval(function () {
@@ -249,7 +231,6 @@ import popup from '../../../common/js/module/popup.js';
 	      }
 			},
 			judgeTime(callback) {
-				console.log(12345);
 				var that = this;
 				if (that.isLimit) {
 	        var date = new Date(),
@@ -367,7 +348,7 @@ import popup from '../../../common/js/module/popup.js';
 			calculateResult() {
 				console.log("clickNum",this.clickNum);
 
-	      if (this.clickNum > 0) {
+	      if (this.clickNum >= 5) {
 	        this.showResult(this.bounsId);
 	      } else {
 	        this.showResult();
@@ -390,10 +371,14 @@ import popup from '../../../common/js/module/popup.js';
 			// 封装倒计时
 			setIntervalTime() {
 				let that = this;
+				let currents = new Date(),
+		        dateYears = currents.getFullYear(),
+		        dateMounth = currents.getMonth() + 1,
+		        dateDay = currents.getDate();
+
 				that.time = setInterval(function () {
 					that.actTimeList.map(function (item,index) {
-						if (Date.now() > new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime() -240000  && Date.now() < new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime()) {
-							console.log("倒计时");
+						if (Date.now() > new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime() - 30000  && Date.now() < new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime()) {
 							that.getData();
 						};
 					});
