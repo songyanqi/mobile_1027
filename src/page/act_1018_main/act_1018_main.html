@@ -106,9 +106,6 @@
       <!--12~17号，爆品预约-->
       <com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>
 
-      <!--12~17号，爆品预约-->
-      <com-act-subscribe :response="response" v-if="response.data.subscribe && currentDate < '2017-10-19'" :current-date="currentDate"></com-act-subscribe>
-
       <!--18号，妈妈顾问-->
       <com-act-iphone8 :response="response.data.activityAward" v-if="response.data.activityAward" :current-date="currentDate"></com-act-iphone8>
 
