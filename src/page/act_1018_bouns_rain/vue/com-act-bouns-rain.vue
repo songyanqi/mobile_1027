@@ -4,6 +4,7 @@
 </style>
 <template>
 	<div class = "bounsCont">
+
 		<div v-if = "isConfirm">
 	    <div class = "weui-mask"></div>
 	    <div class="weui-dialog">
@@ -26,7 +27,7 @@ import popup from '../../../common/js/module/popup.js';
 	export default {
 		data() {
 			return {
-				bounsId: 119,
+				bounsId: 121,
 				startTime: "",
 	  		endTime: "",
 	  		isStartGame: false,
@@ -371,7 +372,7 @@ import popup from '../../../common/js/module/popup.js';
 	                  $(".min_text").hide();
 	                };
 	              } else {
-	                showResult();
+	                that.showResult();
 	              }
 	            } else {
 	              popup.toast(result.data.msg);
@@ -379,7 +380,7 @@ import popup from '../../../common/js/module/popup.js';
 	            }
 	          }, error: function () {
 	            popup.toast("网络异常，请稍后重试")
-	            showResult();
+	            that.showResult();
 	          }
 	        });
 	      }
