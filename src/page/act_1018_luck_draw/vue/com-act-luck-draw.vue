@@ -166,6 +166,7 @@
             that.prize=-1;
             that.times=0;
             that.click=false;
+
             $.ajax({
               url: " https://www.easy-mock.com/mock/59b9230be0dc663341a8ce57/bounsDes",
               type: "GET",
@@ -184,8 +185,8 @@
             if (that.times<that.cycle) {
               that.speed -= 10;
             }else if(that.times==that.cycle) {
-              var index = Math.random()*(that.count)|0;
-              that.prize = index;  
+              // var index = Math.random()*(that.count)|0;
+              that.prize = 4;  
             }else{
               if (that.times > that.cycle+10 && ((that.prize==0 && that.index==7) || that.prize==that.index+1)) {
                 that.speed += 110;
