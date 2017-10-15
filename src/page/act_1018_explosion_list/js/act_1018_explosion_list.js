@@ -32,9 +32,10 @@ new Vue({
     }
   },
   created() {
+    this.getData();
   },
   mounted() {
-    this.getData();
+
   },
   methods: {
     /**
@@ -129,9 +130,9 @@ new Vue({
             index = parseInt(i);
           }
         }
-        var id = 'active-tab' + index;
-        var topHeight = $("#id").offset().top - $(window).scrollTop();
-        $("#id").animate({scrollTop:topHeight - "44" + "px"}, 500);
+        var id = '#active-tab' + index;
+        var topHeight = $(id).offset().top - $(window).scrollTop();
+        $('html,body').animate({scrollTop:topHeight - "44" + "px"}, 300);
       });
     }
   }
