@@ -77,6 +77,7 @@
             </div>
             <div class="number" style="position: absolute;right: 0;">第<span v-text="index+1"></span>位获奖</div>
           </div>
+          <div class="title" v-if="awardList[0]==null" style="font-size: 0.12rem;">还没有人获奖哦</div>
         </div>
 
       </template>
@@ -91,7 +92,7 @@
       <div>3.妈妈顾问的服务人群包括服务的会员与非会员；</div>
       <div>4.销售额统计方法：服务人群实际支付金额+使用返现部分；</div>
       <div>5.换货等原因导致服务人群销售额不足10万，视为会员主动放弃该活动；</div>
-      <div>6.本活动仅有<span v-text="allCount"></span>个名额，最先完成10万销售额的妈妈顾问获得，名单会公布在【我的10.18】中；</div>
+      <div>6.本活动仅有<span v-text="allCount"></span>个名额，最先完成10万销售额的妈妈顾问获得，名单会公布在【我的10.18】中,获奖名单更新有五分钟的延时；</div>
       <div>7.获得iPhone8奖励的妈妈顾问，11月18日会有工作人员通过手机号联系您，请保持手机畅通，无法拨通电话视为放弃；</div>
       <div>8.支付会员费用不参与该活动；</div>
       <div>9.详情可咨询大V店客服。</div>
@@ -123,8 +124,8 @@
     },
     mounted(){
         share.setShareInfo({
-          title: "妈妈顾问赢IPhone 8",
-          desc: "妈妈顾问服务人群销售额达到10万，有机会获得IPhone 8一部",
+          title: "大V店周年庆，妈妈顾问赢IPhone 8",
+          desc: "妈妈顾问服务人群销售额达到10万，有机会获得IPhone 8一部，仅此一天哦~",
           link: window.location.href,
           imgUrl: "//pic.davdian.com/free/2017/10/11/%E8%B5%A2iphone8%E5%88%86%E4%BA%ABicon.jpg"
         });
@@ -240,7 +241,7 @@
     position: relative;
     width: 3.75rem;
     /*height: 12.96rem;*/
-    background-image:url('//pic.davdian.com/free/2017/09/30/bg_1125.jpg');
+    background-image:url('//pic.davdian.com/free/2017/10/16/bg_new.jpg');
     background-size: 3.75rem 12.96rem;
     background-repeat: no-repeat;
   }
@@ -314,7 +315,6 @@
   .rute>div{
     color:#ffffff;
     font-size: 0.12rem;
-    margin-top: 0.18rem;
     line-height: 0.15rem;
   }
   .list{
@@ -335,7 +335,6 @@
     bottom: 0;
     background: #ffeade;
     opacity: 0.75;
-    height: 100%;
   }
   .title{
     height: 0.45rem;

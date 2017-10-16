@@ -117,4 +117,15 @@
       }
     }
   }
+
+  .explosion-rule {
+    padding: ptr(35) ptr(24) 0;
+    font-size:ptr(12);
+    color:#fff;
+
+    li {
+      line-height:ptr(22);
+    }
+
+  }
 }
