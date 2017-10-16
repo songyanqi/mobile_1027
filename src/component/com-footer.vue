@@ -18,8 +18,8 @@
       </a>
 
       <a class="btn" v-if="btnList[2]" style="z-index: 1;" :style="styleList['btn3']" :href="styleList[active != 'activity'?'showUrl':'1.html']">
-        <img class="pic" :src="useSkinPackageImg(btnList[2],'',1)" v-if="active == 'activity'">
-        <img class="pic" :src="useSkinPackageImg(btnList[2],'',0)" v-else>
+        <img class="pic" style="width: 100%;max-width: 86px;" :src="useSkinPackageImg(btnList[2],'',1)" v-if="active == 'activity'">
+        <img class="pic" style="width: 100%;max-width: 86px;" :src="useSkinPackageImg(btnList[2],'',0)" v-else>
       </a>
 
       <a class="btn" :class="{active:active == 'dynamic'?true:false}" href="/articles.html"  :style="styleList['btn4']">

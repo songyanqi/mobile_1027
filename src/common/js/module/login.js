@@ -69,6 +69,50 @@ export default {
     return false;
   },
   /**
+   * 功能: 登录
+   * @param url 登录成功后的回跳地址
+   */
+  login(url){
+    alert(1)
+    // 如果已登录则不继续执行
+    if (this.isLogined()) {
+      // 如果有url则跳转url
+      if (url) {
+        location.href = url;
+      }
+      return;
+    }
+
+    if (ua.isDvdApp()) {
+      // 唤起app登录
+      native.Account.login({
+        success(){
+          if (url) {
+            if (url.indexOf('/') === 0) {
+              // 若果url是/xxx.html格式，则url前面自动补全协议和域名
+              url = `${location.protocol}//${location.host}${url}`;
+            }
+            // 需要app把登录后的强制刷新当前页去掉才能生效
+            location.href = url;
+            throw new Error(`即将跳转${url}，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
+            // native.Browser.open({
+            //   url,
+            // });
+          } else {
+            location.reload();
+          }
+        }
+      });
+    } else {
+      // 登录成功回跳地址
+      url = url || location.href;
+
+      // 跳转H5登录页
+      location.href = '/login.html?referer=' + encodeURIComponent(url);
+      throw new Error(`即将跳转登录页(登录成功后回跳地址为：${url})，已主动抛出异常中断当前页面js执行，请忽略此异常信息~`);
+    }
+  },
+  /**
    * 功能: 是否是已登录的买家
    */
   isBuyer(){

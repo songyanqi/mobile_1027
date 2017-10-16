@@ -30,6 +30,11 @@ new Vue({
     'com-act-lightbrand': require('../vue/lightBrand.vue'),
     'com-act-assistance': require('../../act_1018_assistance/vue/com-act-assistance.vue'),
     'com-act-reserve': require('../../act_1018_reserve/vue/com-act-reserve.vue'),
+    'com-act-explosion': require('../../act_1018_main_explosion/vue/com-act-explosion.vue'),
+    'com-act-bouns-rain': require('../../act_1018_bouns_rain/vue/com-act-bouns-rain.vue'),
+    'com-act-iphone8': require('../vue/iphone8.vue'),
+    'com-act-redpacket': require('../vue/redPacket.vue'),
+    'com-act-souvenir': require('../vue/souvenir.vue')
   },
   data() {
     return {
@@ -43,12 +48,20 @@ new Vue({
         {id: param.get('t3') || '14378', content: null}
       ],
       actBeginTime: new Date(2017, 10 - 1, 18),
-      countDown: date.getCountDown(new Date(2017, 10 - 1, 18)),
+      actEndTime: new Date(2017, 10 - 1, 23),
+      countDown: Date.now() < new Date(2017, 10 - 1, 23) ? (date.getCountDown(Date.now() < new Date(2017, 10 - 1, 18) ? new Date(2017, 10 - 1, 18) : new Date(2017, 10 - 1, 23))) : {
+        day: '00',
+        hour: '00',
+        minute: '00',
+        second: '00',
+      },
       isShowBeginPop: false,
       isShowBeginPopCloseAnimation: false,
       start_1018_flag: false,
       ua: ua,
       share: share,
+      param: param,
+      login: login,
     }
   },
   computed: {
@@ -110,18 +123,43 @@ new Vue({
 
         // 开启10.18弹窗
         setTimeout(function () {
-          ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
+          if (ts.currentDate == '1017-10-18') {
+            ts.isShowBeginPop = false;
+          } else {
+            ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
+          }
         }, 3000);
         // ts.isShowBeginPop = 1;
 
         // 我的10.18弹窗
         setTimeout(function () {
-          ts.start_1018_flag = localStorage.getItem('start_1018_flag');
+          if (ts.currentDate == '1017-10-18') {
+            ts.start_1018_flag = true;
+          } else {
+            ts.start_1018_flag = localStorage.getItem('start_1018_flag');
+          }
         }, 1000);
 
         // 刷新倒计时
         setInterval(function () {
-          ts.countDown = date.getCountDown(ts.actBeginTime);
+          if (ts.currentDate < '2017-10-18') {
+            ts.countDown = date.getCountDown(ts.actBeginTime);
+            if (ts.countDown.day == '00' && ts.countDown.hour == '00' && ts.countDown.minute == '00' && ts.countDown.second == '00') {
+              location.reload();
+            }
+          } else if (ts.currentDate < '2017-10-23') {
+            ts.countDown = date.getCountDown(ts.actEndTime);
+            if (ts.countDown.day == '00' && ts.countDown.hour == '00' && ts.countDown.minute == '00' && ts.countDown.second == '00') {
+              location.reload();
+            }
+          } else {
+            ts.countDown = {
+              day: '00',
+              hour: '00',
+              minute: '00',
+              second: '00',
+            }
+          }
           // ts.$forceUpdate();
         }, 1000);
 
@@ -230,10 +268,15 @@ new Vue({
 
           // 存缓存
           localCache.setItem({
-            Date: Date.now(),     // 当前时间（不传则取设备时间）
-            Expires: 1 * 60 * 1000,   // 过期时间（从当前时间开始计算过多少毫秒缓存失效）
-            key: cacheKey,        // 缓存key
-            data: response        // 缓存data（可以传json或String）
+            key: cacheKey,            // 缓存key
+            data: response,           // 缓存data（可以传json或String）
+            expires: {          // 缓存有效时长（从当前时间开始计算过多少毫秒缓存失效）
+              d: 0,             // 天
+              h: 0,             // 小时
+              m: 1,             // 分钟
+              s: 0,             // 秒
+              ms: 0,            // 毫秒
+            }
           });
         },
         error(error) {
@@ -288,10 +331,15 @@ new Vue({
 
               // 存缓存
               localCache.setItem({
-                Date: Date.now(),     // 当前时间（不传则取设备时间）
-                Expires: 10 * 60 * 1000,   // 过期时间（从当前时间开始计算过多少毫秒缓存失效）
-                key: cacheKey,        // 缓存key
-                data: response        // 缓存data（可以传json或String）
+                key: cacheKey,            // 缓存key
+                data: response,           // 缓存data（可以传json或String）
+                expires: {          // 缓存有效时长（从当前时间开始计算过多少毫秒缓存失效）
+                  d: 0,             // 天
+                  h: 0,             // 小时
+                  m: 10,             // 分钟
+                  s: 0,             // 秒
+                  ms: 0,            // 毫秒
+                }
               });
             } catch (err) {
 
@@ -321,7 +369,7 @@ new Vue({
       console.log('本地缓存act_1018_main_data、act_1018_mine_data已清除。')
     },
     isLogin(event) {
-      if(login.needLogin()){
+      if (login.needLogin()) {
         event.preventDefault();
         event.stopPropagation();
       }

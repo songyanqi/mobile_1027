@@ -16,7 +16,7 @@
         <!--免单刮刮卡文案-->
         <template v-if="window.isShowLottery === '1'">
           <img class="result-bg" src="//pic.davdian.com/free/scratch-yes-1018.png" v-if="window.isFreeOfCharge === '1'">
-          <img class="result-bg" src="//pic.davdian.com/free/scratch-no-1018.png" v-else>
+          <img class="result-bg" src="//pic.davdian.com/free/scratch-no-1018.jpg" v-else>
         </template>
         <!--现金刮刮卡文案-->
         <template v-if="window.isShowLottery === '2'">
@@ -27,11 +27,12 @@
       <!--刮免单规则-->
       <div class="rule" v-if="window.isShowLottery === '1'">
         <p class="title">刮刮乐活动规则：</p>
-        <p>1.抽奖活动时间：2017.10.18 0点－24点；</p>
-        <p>2.只有会员可以参与；</p>
-        <p>3.每支付一个订单都可以抽奖一次；</p>
-        <p>4.中奖用户红包列表中会有一张免单券（商品券），做为免单凭证；</p>
-        <p>5.抽中后立返佣金：待结算－其他收入。</p>
+        <p>1.活动时间：2017.10.18 00:00:00-2017.10.18 23:59:59；</p>
+        <p>2.该活动仅限大V店会员参与；</p>
+        <p>3.活动期间，会员完成订单支付后，即有1次免单抽奖的机会，若抽中免单，则免当前订单的实际支付金额（包含返现支付部分）；</p>
+        <p>4.免单奖励将实时以返现形式返至【我的】－【总额】－【待结算金额】－【其他收入】里，30天后如果没有退货将转到【可提现金额】；</p>
+        <p>5.开通会员订单、组团订单不参与该活动；</p>
+        <p>6.违规处理：如遇退货，相应免单奖励将予以取消。</p>
       </div>
       <!--刮现金规则-->
       <div class="rule" v-if="window.isShowLottery === '2'">
@@ -98,8 +99,10 @@
       bindCoupon(){
         let ts = this;
 
+
         // 如果没有中奖、已经绑定成功了、或尝试3次之后,则不调用绑定接口
-        if (window.isFreeOfCharge !== '1' || ts.isBinded || ts.bindCouponTryTimes >= 3 || !ts.valid) return;
+//        if (window.isFreeOfCharge !== '1' || ts.isBinded || ts.bindCouponTryTimes >= 3 || !ts.valid) return;
+        if (ts.isBinded || ts.bindCouponTryTimes >= 3 || !ts.valid) return;
 
         // 绑定
         ts.bindCouponTryTimes++;
