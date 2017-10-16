@@ -4,16 +4,15 @@
 </style>
 <template>
 	<div class = "bounsCont">
-	<div class = "bounsImgs">
-		<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsMain_iconnew.png">
-		<div class = "bounsMask clearfix">
-			<div class = "bouns_0">0点红包雨</div>
-			<div class = "bouns_1 maskImging">8点红包雨</div>
-			<div class = "bouns_2">16点红包雨</div>
-			<div class = "bouns_3">20点红包雨</div>
-			<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsNewMask.png">
+		<div class = "bounsImgs" v-if = "Date.now() > 1508256000000 && Date.now() < 1508342400000">
+			<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsMain_iconnew.png">
+			<div class = "bounsMask clearfix">
+				<div class = "bouns_0" :class = "{ maskImging:isBouns==1,maskImg:(isMask == 1 || isMask == 2 || isMask == 3 || isMask == 4) }">0点红包雨</div>
+				<div class = "bouns_1" :class = "{ maskImging:isBouns==2,maskImg:(isMask == 2 || isMask == 3 || isMask == 4) }">8点红包雨</div>
+				<div class = "bouns_2":class = "{ maskImging:isBouns==3,maskImg:(isMask == 3 || isMask == 4) }">16点红包雨</div>
+				<div class = "bouns_3" :class = "{ maskImging:isBouns==4,maskImg:isMask == 4 }">20点红包雨</div>
+			</div>
 		</div>
-	</div>
 		<div v-if = "isConfirm">
 	    <div class = "weui-mask"></div>
 	    <div class="weui-dialog">
@@ -36,7 +35,7 @@ import popup from '../../../common/js/module/popup.js';
 	export default {
 		data() {
 			return {
-				bounsId: 125,
+				bounsId: 141,
 				startTime: "",
 	  		endTime: "",
 	  		isStartGame: false,
@@ -57,12 +56,66 @@ import popup from '../../../common/js/module/popup.js';
 	  		isConfirm: false,
 	  		isBounsMask: 0,
 	  		isBounsing: 0,
+	  		currentTime: 0,
+	  		timeObj: null,
+	  		newTime: null,
+
+	  		isBouns: 0,
+	  		isMask: 0,
+	  		isNewStart: false,
 			}
 		},
 		watch: {
+			currentTime: {
+				handler() {
+					let that = this;
+					clearInterval(that.timeObj);
+					that.timeObj = setInterval(() => {
+					  that.currentTime = Date.now();
+
+					  if (that.currentTime > 1508256000000 && that.currentTime <= 1508256900000) {
+							that.isBouns = 1;
+						}
+						if (that.currentTime > 1508256900000 && that.currentTime <= 1508284800000) {
+							that.isBouns = 0;
+							that.isMask = 1;
+						}
+
+						if (that.currentTime > 1508284800000 && that.currentTime <= 1508285700000) {
+							that.isBouns = 2;
+							that.isMask = 1;
+						}
+						if (that.currentTime > 1508285700000 && that.currentTime <= 1508313600000) {
+							that.isBouns = 0;
+							that.isMask = 2;
+						}
+
+						if (that.currentTime > 1508313600000 && that.currentTime <= 1508314500000) {
+							that.isBouns = 3;
+							that.isMask = 2;
+						}
+						if (that.currentTime > 1508314500000 && that.currentTime <= 1508328000000) {
+							that.isBouns = 0;
+							that.isMask = 3;
+						}
+
+						if (that.currentTime > 1508328000000 && that.currentTime <= 1508328900000) {
+							that.isBouns = 4;
+						}
+						if (that.currentTime > 1508328900000) {
+							that.isBouns = 0;
+							that.isMask = 4;
+						}
+
+
+					}, 1000);
+				},
+				deep: true,
+			},
 			startTime: {
 				handler() {
 					let that = this;
+					that.currentTime = Date.now();
 					this.$nextTick(function () {
 						// 判断红包mask的显示
 						// 2017/10/18 00:00:00  1508256000000
@@ -74,26 +127,6 @@ import popup from '../../../common/js/module/popup.js';
 						// 2017/10/18 20:00:00  1508328000000
 						// 2017/10/18 20:15:00  1508328900000
 						// 0点到0:15:00
-						if (Date.now() > 1508256000000 && Date.now() <= 1508256900000) {
-							// that.isBounsing = 1;
-							// $(".")
-						}
-						if (Date.now() > 1508256900000 && Date.now() <= 1508284800000) {
-
-						}
-
-
-
-						if (Date.now() <= 1508284800000 && Date.now() > 1508256000000) {
-							that.isBounsMask = 1;
-						}
-						if (Date.now() <= 1508313600000 && Date.now() > 1508284800000) {
-							that.isBounsMask = 2;
-						}
-						if (Date.now() <= 1508328000000 && Date.now() > 1508313600000) {
-							that.isBounsMask = 3;
-						}
-						if (Date.now() <= 1508328000000 && Date.now() > 1508328000000)
 
 						if (!that.isStart) {
 			        that.time = setInterval(function () {
@@ -140,10 +173,7 @@ import popup from '../../../common/js/module/popup.js';
 	            that.startTime = data.startTime*1000;
 	            that.endTime = data.endTime*1000;
 	            that.actTimeList = data.timeScope;
-
-	            // imgUrl = data.shareInfo.imgUrl;  //分享图片
-	           	// descContent = data.shareInfo.desc; // 分享文案
-	            // shareTitle = data.shareInfo.title;  //分享标题
+	            that.isNewStart = true;
 
 	            if (that.isStartGame) {
 	            	sessionStorage.setItem("20170420_hby",0);
@@ -327,7 +357,7 @@ import popup from '../../../common/js/module/popup.js';
 			calculateResult() {
 				console.log("clickNum",this.clickNum);
 
-	      if (this.clickNum > 0) {
+	      if (this.clickNum >= 5) {
 	        this.showResult(this.bounsId);
 	      } else {
 	        this.showResult();
@@ -350,15 +380,28 @@ import popup from '../../../common/js/module/popup.js';
 			// 封装倒计时
 			setIntervalTime() {
 				let that = this;
-				that.time = setInterval(function () {
-          that.judgeTime(function () {
-             that.judgeLogin(function () {
-               that.loadImg(['//pic.davdian.com/free/2017/02/24/red_01.png'], function () {
-                 that.startGame();
-              });
-            });
-          });
-        },1000);
+				let currents = new Date(),
+		        dateYears = currents.getFullYear(),
+		        dateMounth = currents.getMonth() + 1,
+		        dateDay = currents.getDate();
+
+		    clearInterval(that.newTime);
+		    if (!that.isNewStart) {
+					that.newTime = setInterval(function () {
+						that.actTimeList.map(function (item,index) {
+							if (Date.now() > new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime() - 30000  && (parseInt(Date.now()/1000))*1000 <= new Date(dateYears + '/' + dateMounth + '/' + dateDay + ' ' + item.beginTime).getTime()) {
+								that.getData();
+							};
+						});
+	          // that.judgeTime(function () {
+	          //    that.judgeLogin(function () {
+	          //      that.loadImg(['//pic.davdian.com/free/2017/02/24/red_01.png'], function () {
+	          //        that.startGame();
+	          //     });
+	          //   });
+	          // });
+	        },1000);
+				}
 			},
 			showResult(id) {
 				let that = this;
@@ -414,7 +457,9 @@ import popup from '../../../common/js/module/popup.js';
 	        $game.append($resultContainer);
 	        $(".close").click(function () {
 	          $(".game_container").hide();
+	          that.isNewStart = false;
 	          that.setIntervalTime();
+	          
 	        });
 	      } else {
 	        console.log("抽中id为" + id + "的红包")
@@ -444,10 +489,12 @@ import popup from '../../../common/js/module/popup.js';
 	                $game.append($resultContainer);
 	                $(".close").click(function () {
 	                  $(".game_container").hide();
+	                  that.isNewStart = false;
 	                  that.setIntervalTime();
 	                });
 	                $(".look_red").click(function () {
 	                	$(".game_container").hide();
+	                	that.isNewStart = false;
 	                  that.setIntervalTime();
 	                })
 	                if (!data.bonusInfo.minConsumePrice) {
@@ -459,6 +506,7 @@ import popup from '../../../common/js/module/popup.js';
 	            } else {
 	              popup.toast(result.data.msg);
 	              $(".game_container").hide();
+	              that.isNewStart = false;
 	              that.setIntervalTime();
 	            }
 	          }, error: function () {
