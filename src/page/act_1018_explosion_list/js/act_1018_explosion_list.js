@@ -10,9 +10,9 @@ import encrypt from '../../../common/js/module/encrypt.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
-import layout from "../../../../module/index/layout.es6";
 import util from '../../../common/js/module/util.js';
 import ua from '../../../common/js/module/ua.js';
+import weixin from '../../../common/js/module/weixin.js'
 
 // 懒加载初始化
 vueLazyload.init();
@@ -32,6 +32,7 @@ new Vue({
     }
   },
   created() {
+    alert(1);
     this.getData();
   },
   mounted() {
@@ -50,11 +51,12 @@ new Vue({
         url: '/api/mg/sale/userhelpgoods/getUserHelpGoods?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
-        data: layout.strSign("explosiion",{
-
-         }),
+        data: encrypt({
+          js_wx_info: 1,
+        }),
         success(response) {
           ts.response = response;
+          alert(ts.response);
         },
         error(error) {
           ts.response = require('../json/act-explosion.json');
@@ -117,11 +119,13 @@ new Vue({
             title: '大V店周年庆，超值爆品等你来~',
             desc: '1018当天5个场次，可以持续不断买买买啦~',
             link: location.href,
-            imgUrl: `${location.protocol}[[static]]/page/act_1018_explosion_list/img/share.png`
+            imgUrl: `${location.protocol}[[static]]/page/act_1018_explosion_list/img/share.png`,
           }, ts.response);
         } catch (err) {
           console.error(err);
         }
+
+
 
         // 选中最近的已开抢
         let index = 0;
