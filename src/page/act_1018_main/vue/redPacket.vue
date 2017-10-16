@@ -80,8 +80,8 @@
   }
   .no_login{
     width: 3.75rem;
-    height: 0.645rem;
-    background-size: 3.75rem 0.645rem;
-    background-image: url('//pic.davdian.com/free/2017/10/12/%E7%BA%A2%E5%8C%85_05.png');
+    height: 0.94rem;
+    background-size: 3.75rem 0.94rem;
+    background-image: url('//pic.davdian.com/free/2017/10/16/btn.png');
   }
 </style>
