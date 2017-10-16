@@ -73,7 +73,7 @@
             <div><img :src="item.avatar" alt=""></div>
             <div class="time">
               <div v-text="item.userName"></div>
-              <div class="timeStamp">获奖时间:<span v-text="item.awardTime"></span></div>
+              <div class="timeStamp"><span v-text="item.awardTime"></span></div>
             </div>
             <div class="number" style="position: absolute;right: 0;">第<span v-text="index+1"></span>位获奖</div>
           </div>
