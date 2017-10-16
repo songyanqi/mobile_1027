@@ -55,8 +55,8 @@ new Vue({
         // 设置分享信息
         try {
           share.setShareInfo({
-            title: "妈妈顾问赢IPhone 8",
-            desc: "妈妈顾问服务人群销售额达到10万，有机会获得IPhone 8一部",
+            title: "大V店周年庆，妈妈顾问赢IPhone 8",
+            desc: "妈妈顾问服务人群销售额达到10万，有机会获得IPhone 8一部，仅此一天哦~",
             link: window.location.href,
             imgUrl: "//pic.davdian.com/free/2017/10/11/%E8%B5%A2iphone8%E5%88%86%E4%BA%ABicon.jpg"
           });

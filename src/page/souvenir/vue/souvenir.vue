@@ -42,32 +42,40 @@
 
             <div class="goshop" v-if="buyStatus!='readyGet'">连续三天购物即可获得</div>
 
-            <div class="only" :class="{'class2':shopStocks>0 && buyStatus=='readyGet'}">仅剩 <span v-text="shopStocks"></span> 个名额</div>
+            <div class="only" :class="{'class2':buyStatus=='readyGet'}">仅剩 <span v-text="shopStocks"></span> 个名额</div>
 
             <div class="desc" v-if="buyStatus=='readyGet'">15个工作日后选取您21日首个已支付且未退货的订单收货地址，将纪念品寄给您</div>
           </template>
 
           <template v-if="shopStocks==0">
-            <div class="noshop" >没有名额啦~</div>
-            <div class="goshop" v-if="buyStatus!='readyGet'">很遗憾您错过了这次活动</div>
+            <div class="noshop">没有名额啦~</div>
+            <div class="goshop">很遗憾您错过了这次活动</div>
             <div class="only" :class="{'class2':shopStocks>0 && buyStatus=='readyGet'}">没有名额啦</div>
           </template>
 
           <div class="goods" :class="{'class3':shopStocks>0 && buyStatus=='readyGet'}">
             <div style="width: 1.1rem;"><img src="//pic.davdian.com/free/2017/09/30/Rectangle%208.png" alt=""></div>
             <div style="width: 1.5rem;">
-              <div style="font-size: 0.16rem;color:#333333;margin-top: 0.2rem;width: 100%;text-align: center">周年庆纪念品</div>
-              <div style="font-size: 0.12rem;color:#FF4A7D;margin-top: 0.2rem;width: 100%;text-align: center;">查看详情>>></div>
+              <div class="souvenir">周年庆纪念品</div>
+              <div class="souvenir_detail">查看详情>>></div>
             </div>
           </div>
 
           <div class="btn2" v-if="(buyStatus=='haveTwo') || (buyStatus=='noshop')"></div>
-          <div class="btn3" v-if="(buyStatus=='failed') || (buyStatus=='oneDay')"></div>
-          <div class="btn4" v-if="buyStatus=='readyGet'"></div>
+          <div class="btn3" v-if="(buyStatus=='failed') || (buyStatus=='oneDay') || (buyStatus=='readyGet' && shopStocks==0)"></div>
+          <div class="btn4" v-if="buyStatus=='readyGet' && shopStocks>0"></div>
 
       </template>
 
       <template v-if="state==2">
+        <div class="noshop" v-if="buyStatus=='noshop'">活动结束啦~~</div>
+        <template v-if="shopStocks>0">
+          <div class="goshop" v-if="buyStatus!='readyGet'">很遗憾您错过了这次活动</div>
+        </template>
+
+        <template v-if="shopStocks==0">
+          <div class="goshop" v-if="buyStatus!='readyGet'">已获得三周年纪念品</div>
+        </template>
 
       </template>
 
@@ -145,8 +153,7 @@
               this.buyStatus='noshop';
           }else if(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==0 && realTimeList[2].isBuy==0){
               this.buyStatus='oneDay';
-          }else if((realTimeList[0].isBuy==0 && realTimeList[1].isBuy==1) ||
-            (realTimeList[1].isBuy==0 && realTimeList[2].isBuy==1)){
+          }else if(!(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1 )){
               this.buyStatus='failed';
           }else if(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1 && realTimeList[2].isBuy==0){
               this.buyStatus='haveTwo';
@@ -223,7 +230,7 @@
     background-image: url('//pic.davdian.com/free/2017/09/29/button1.png');
     background-size: 2.5rem 0.45rem;
     position: absolute;
-    top: 7.2rem;
+    top: 4.3rem;
     left: 0.64rem;
   }
   .btn2{ /*快去买买买*/
@@ -361,7 +368,7 @@
     left: 1.05rem;
   }
   .class2{
-    top: 4.9rem;
+    top: 4.95rem;
   }
   .class3{
     top: 5.4rem;
@@ -376,5 +383,19 @@
     font-size: 0.11rem;
     color:#F00026;
     line-height:0.16rem;
+  }
+  .souvenir{
+    font-size: 0.16rem;
+    color:#333333;
+    margin-top: 0.2rem;
+    width: 100%;
+    text-align: center;
+  }
+  .souvenir_detail{
+    font-size: 0.12rem;
+    color:#FF4A7D;
+    margin-top: 0.2rem;
+    width: 100%;
+    text-align: center;
   }
 </style>

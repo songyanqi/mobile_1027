@@ -8,21 +8,22 @@
   "data": {
     "code":"0",
     "gooodsId":1111,
-    "shopStocks":1,
+    "shopStocks":0,
     "imageUrl":"http://pic.davdian.com/free/seller-71/my-invite/default-head.png",
     "timeList":[
       {
-        "isBuy": 0,
+        "isBuy": 1,
         "time":"20171021"
       },
       {
-        "isBuy": 0,
+        "isBuy": 1,
         "time":"20171020"
       },
       {
-        "isBuy": 0,
+        "isBuy": 1,
         "time":"20171019"
       }
+
     ]
   }
 }
