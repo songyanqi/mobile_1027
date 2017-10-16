@@ -116,7 +116,7 @@ function promptBuildArg(build, buidType) {
     } else if (BuildArg.env_stage == 'beta') {
       domain = 'fe.vyohui.cn';
       replacer['[[base_domain]]'] = 'vyohui.cn';
-    } else if (BuildArg.env_stage == 'gray' || BuildArg.env_stage == 'prod') {
+    } else if (BuildArg.env_stage == 'gray' || BuildArg.env_stage == 'tmp' || BuildArg.env_stage == 'prod') {
       domain = 'fe-ws.davdian.com';
       replacer['[[base_domain]]'] = 'davdian.com';
     } else {
