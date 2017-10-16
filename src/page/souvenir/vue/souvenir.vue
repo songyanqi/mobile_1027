@@ -9,101 +9,70 @@
 
     <template v-if="isLogin">
 
+    <!--活动中-->
+    <div class="big_img3"><img src="//pic.davdian.com/free/2017/09/30/bg5.png" alt=""></div>
 
-      <template v-if="false">
-        <!--登录（第二长的）-->
+    <div class="range">
+      <div class="date">
+        <template v-for="item in realTimeList">
+          <div :class="{ 'readyshop_date': item.isBuy==1,'noshop_date':item.isBuy==0}" class="default" v-text="item.text"></div>
+        </template>
+      </div>
+      <div class="circle">
+        <template v-for="item in realTimeList">
+          <div v-if="item.isBuy==1"><img src="//pic.davdian.com/free/2017/09/30/yellow.png" alt=""></div>
+          <div v-if="item.isBuy==0"><img src="//pic.davdian.com/free/2017/09/30/white.png" alt=""></div>
+        </template>
+      </div>
+      <div class="state">
+        <template v-for="item in realTimeList">
+          <div v-if="item.isBuy==1" class="default2 readyshop_date">已购物</div>
+          <div v-if="item.isBuy==0" class="default2 noshop_date">未购物</div>
+        </template>
+      </div>
+    </div>
 
+      <template v-if="state==0">
+          <template v-if="shopStocks>0">
+            <div class="noshop" v-if="buyStatus=='noshop'">今天还未购物哦~</div>
+            <div class="noshop" v-if="buyStatus=='oneDay'">今天已购物~</div>
+            <div class="noshop" v-if="buyStatus=='failed'">很遗憾您错过了这次活动~</div>
+            <div class="noshop" v-if="buyStatus=='haveTwo'">再购物一次就能获得周年庆纪念品啦</div>
+            <div class="noshop" v-if="buyStatus=='readyGet'">已获得三周年纪念品</div>
 
+            <div class="goshop" v-if="buyStatus!='readyGet'">连续三天购物即可获得</div>
 
+            <div class="only" :class="{'class2':shopStocks>0 && buyStatus=='readyGet'}">仅剩 <span v-text="shopStocks"></span> 个名额</div>
 
-        <div class="noshop">活动结束啦~~</div>
+            <div class="desc" v-if="buyStatus=='readyGet'">15个工作日后选取您21日首个已支付且未退货的订单收货地址，将纪念品寄给您</div>
+          </template>
 
+          <template v-if="shopStocks==0">
+            <div class="noshop" >没有名额啦~</div>
+            <div class="goshop" v-if="buyStatus!='readyGet'">很遗憾您错过了这次活动</div>
+            <div class="only" :class="{'class2':shopStocks>0 && buyStatus=='readyGet'}">没有名额啦</div>
+          </template>
 
-        <div class="goshop">已获得三周年纪念品</div>
-
-
-
-        <div class="btn2"></div>
-        <div class="btn3"></div>
-        <div class="btn4"></div>
-
-
-        <!--最长的-->
-        <div class="big_img3"><img src="//pic.davdian.com/free/2017/09/30/bg5.png" alt=""></div>
-        <div class="range">
-          <div class="date">
-            <div class="default readyshop_date">10.19</div>
-            <div class="default noshop_date">10.20</div>
-            <div class="default readyshop_date">10.21</div>
+          <div class="goods" :class="{'class3':shopStocks>0 && buyStatus=='readyGet'}">
+            <div style="width: 1.1rem;"><img src="//pic.davdian.com/free/2017/09/30/Rectangle%208.png" alt=""></div>
+            <div style="width: 1.5rem;">
+              <div style="font-size: 0.16rem;color:#333333;margin-top: 0.2rem;width: 100%;text-align: center">周年庆纪念品</div>
+              <div style="font-size: 0.12rem;color:#FF4A7D;margin-top: 0.2rem;width: 100%;text-align: center;">查看详情>>></div>
+            </div>
           </div>
-          <div class="circle">
-            <div><img src="//pic.davdian.com/free/2017/09/30/yellow.png" alt=""></div>
-            <div><img src="//pic.davdian.com/free/2017/09/30/white.png" alt=""></div>
-            <div><img src="//pic.davdian.com/free/2017/09/30/yellow.png" alt=""></div>
-          </div>
-          <div class="state">
-            <div class="default2 readyshop_date">已购物</div>
-            <div class="default2 noshop_date">已购物</div>
-            <div class="default2 readyshop_date">已购物</div>
-          </div>
-        </div>
 
-        <div>连续三天购物即可获得</div>
-        <div>仅剩 2345 个名额</div>
-        <div class="goodsLong">
-          <div style="width: 1.1rem;"><img src="//pic.davdian.com/free/2017/09/30/Rectangle%208.png" alt=""></div>
-          <div style="width: 1.5rem;">
-            <div style="font-size: 0.16rem;color:#333333;margin-top: 0.2rem;width: 100%;text-align: center">周年庆纪念品</div>
-            <div style="font-size: 0.12rem;color:#FF4A7D;margin-top: 0.2rem;width: 100%;text-align: center;">查看详情>>></div>
-          </div>
-        </div>
+          <div class="btn2" v-if="(buyStatus=='haveTwo') || (buyStatus=='noshop')"></div>
+          <div class="btn3" v-if="(buyStatus=='failed') || (buyStatus=='oneDay')"></div>
+          <div class="btn4" v-if="buyStatus=='readyGet'"></div>
 
-        <div class="btnlong"></div>
+      </template>
+
+      <template v-if="state==2">
+
       </template>
 
 
-      <div class="range">
-        <div class="date">
-          <template v-for="item in realTimeList">
-            <div :class="{ 'readyshop_date': item.isBuy==1,'noshop_date':item.isBuy==0}" class="default" v-text="item.text"></div>
-          </template>
-        </div>
-        <div class="circle">
-          <template v-for="item in realTimeList">
-            <div v-if="item.isBuy==1"><img src="//pic.davdian.com/free/2017/09/30/yellow.png" alt=""></div>
-            <div v-if="item.isBuy==0"><img src="//pic.davdian.com/free/2017/09/30/white.png" alt=""></div>
-          </template>
-        </div>
-        <div class="state">
-          <template v-for="item in realTimeList">
-            <div v-if="item.isBuy==1" class="default2 readyshop_date">已购物</div>
-            <div v-if="item.isBuy==0" class="default2 noshop_date">未购物</div>
-          </template>
-        </div>
-      </div>
-      <!--活动中-->
-      <div class="big_img2"><img src="//pic.davdian.com/free/2017/09/30/bg4.png" alt=""></div>
 
-      <div class="noshop" v-if="realTimeList[0].isBuy==0 && realTimeList[1].isBuy==0 && realTimeList[2].isBuy==0">今天还未购物哦~</div>
-      <div class="noshop" v-if="realTimeList[0].isBuy==1 && realTimeList[1].isBuy==0 && realTimeList[2].isBuy==0">今天已购物~</div>
-      <div class="noshop" v-if="(realTimeList[0].isBuy==0 && realTimeList[1].isBuy==1) ||
-      (realTimeList[1].isBuy==0 && realTimeList[2].isBuy==1)">很遗憾您错过了这次活动~</div>
-
-      <div v-if="realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1 && realTimeList[2].isBuy==0">再购物一次就能获得周年庆纪念品啦</div>
-
-      <div class="goshop">连续三天购物即可获得</div>
-
-      <div class="goods">
-        <div style="width: 1.1rem;"><img src="//pic.davdian.com/free/2017/09/30/Rectangle%208.png" alt=""></div>
-        <div style="width: 1.5rem;">
-          <div style="font-size: 0.16rem;color:#333333;margin-top: 0.2rem;width: 100%;text-align: center">周年庆纪念品</div>
-          <div style="font-size: 0.12rem;color:#FF4A7D;margin-top: 0.2rem;width: 100%;text-align: center;">查看详情>>></div>
-        </div>
-      </div>
-
-      <div class="btn2" v-if="realTimeList[0].isBuy==0 && realTimeList[1].isBuy==0 && realTimeList[2].isBuy==0"></div>
-      <div class="btn3" v-if="(realTimeList[0].isBuy==0 && realTimeList[1].isBuy==1) ||
-      (realTimeList[1].isBuy==0 && realTimeList[2].isBuy==1) || (realTimeList[0].isBuy==1 && realTimeList[1].isBuy==0 && realTimeList[2].isBuy==0)"></div>
     </template>
 
 
@@ -135,6 +104,7 @@
         imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/12/%E6%BB%A1399%E9%80%81%E5%A4%A7V%E4%B8%89%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5%E5%93%81%E5%88%86%E4%BA%AB%E7%BC%A9%E7%95%A5%E5%9B%BE.png"
       });
       this.init();
+      this.checkStatus();
     },
     data(){
       return{
@@ -144,7 +114,8 @@
         shopStocks:null,
         timeList:[],
         isApp:util.utils.isApp(),
-        isLogin:null
+        isLogin:null,
+        buyStatus:null
       }
     },
     computed:{
@@ -168,6 +139,21 @@
       }
     },
     methods:{
+      checkStatus(){
+          var realTimeList=this.realTimeList;
+          if(realTimeList[0].isBuy==0 && realTimeList[1].isBuy==0 && realTimeList[2].isBuy==0){
+              this.buyStatus='noshop';
+          }else if(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==0 && realTimeList[2].isBuy==0){
+              this.buyStatus='oneDay';
+          }else if((realTimeList[0].isBuy==0 && realTimeList[1].isBuy==1) ||
+            (realTimeList[1].isBuy==0 && realTimeList[2].isBuy==1)){
+              this.buyStatus='failed';
+          }else if(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1 && realTimeList[2].isBuy==0){
+              this.buyStatus='haveTwo';
+          }else if(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1 && realTimeList[2].isBuy==1){
+              this.buyStatus='readyGet';
+          }
+      },
       getStaus(){
         var token=login.getDvdsid().substr(32,8);
         if(token=="00000001"){
@@ -237,7 +223,7 @@
     background-image: url('//pic.davdian.com/free/2017/09/29/button1.png');
     background-size: 2.5rem 0.45rem;
     position: absolute;
-    top: 4.22rem;
+    top: 7.2rem;
     left: 0.64rem;
   }
   .btn2{ /*快去买买买*/
@@ -246,7 +232,7 @@
     background-image: url('//pic.davdian.com/free/2017/09/30/button.png');
     background-size: 2.5rem 0.45rem;
     position: absolute;
-    top: 6.75rem;
+    top: 7.2rem;
     left: 0.63rem;
   }
   .btn3{ /*查看更多优惠活动*/
@@ -255,7 +241,7 @@
     background-image: url('//pic.davdian.com/free/2017/09/30/btn3.png');
     background-size: 2.5rem 0.45rem;
     position: absolute;
-    top: 6.75rem;
+    top: 7.2rem;
     left: 0.63rem;
   }
   .btn4{ /*元气满满继续嗨*/
@@ -264,34 +250,7 @@
     background-image: url('//pic.davdian.com/free/2017/09/30/btn4.png');
     background-size: 2.5rem 0.45rem;
     position: absolute;
-    top: 6.75rem;
-    left: 0.63rem;
-  }
-  .btnlong{/*元气满满继续嗨长*/
-    width: 2.5rem;
-    height: 0.45rem;
-    background-image: url('//pic.davdian.com/free/2017/09/30/btn4.png');
-    background-size: 2.5rem 0.45rem;
-    position: absolute;
-    top: 7.32rem;
-    left: 0.63rem;
-  }
-  .btnlong2{/*快去买买买长*/
-    width: 2.5rem;
-    height: 0.45rem;
-    background-image: url('//pic.davdian.com/free/2017/09/30/button.png');
-    background-size: 2.5rem 0.45rem;
-    position: absolute;
-    top: 7.32rem;
-    left: 0.63rem;
-  }
-  .btnlong3{/*查看更多优惠活动长*/
-    width: 2.5rem;
-    height: 0.45rem;
-    background-image: url('//pic.davdian.com/free/2017/09/30/btn3.png');
-    background-size: 2.5rem 0.45rem;
-    position: absolute;
-    top: 7.32rem;
+    top: 7.2rem;
     left: 0.63rem;
   }
   .rute1{
@@ -320,27 +279,16 @@
     border-radius: 12px;
     position: absolute;
     left: 0.56rem;
-    top: 5.38rem;
-    font-size: 0;
-    border: 1px dashed #FF4A7D;
-    box-sizing: border-box;
-  }
-  .goodsLong{
-    width: 2.63rem;
-    height: 1.12rem;
-    border-radius: 12px;
-    position: absolute;
-    left: 0.56rem;
     top: 5.82rem;
     font-size: 0;
     border: 1px dashed #FF4A7D;
     box-sizing: border-box;
   }
-  .goods>div,.goodsLong>div{
+  .goods>div{
     display: inline-block;
     vertical-align: top;
   }
-  .goods img,.goodsLong img{
+  .goods img{
     height: 1.1rem;
     width: 1.1rem;
   }
@@ -397,5 +345,36 @@
   }
   .state{
     margin-bottom: 0;
+  }
+  .only{
+    width: 1.65rem;
+    height: 0.3rem;
+    background: #FFD997;
+    font-size: 0.12rem;
+    color:#F00026;
+    line-height: 0.3rem;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 100px;
+    position: absolute;
+    top: 5.3rem;
+    left: 1.05rem;
+  }
+  .class2{
+    top: 4.9rem;
+  }
+  .class3{
+    top: 5.4rem;
+  }
+  .desc{
+    position: absolute;
+    width: 3rem;
+    text-align: center;
+    margin: 0 auto;
+    top: 6.7rem;
+    left: 0.375rem;
+    font-size: 0.11rem;
+    color:#F00026;
+    line-height:0.16rem;
   }
 </style>
