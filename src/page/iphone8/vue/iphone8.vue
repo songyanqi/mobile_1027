@@ -71,8 +71,11 @@
           <div class="title">获iPhone8名单</div>
           <div class="item" v-for="(item,index) in awardList">
             <div><img :src="item.avatar" alt=""></div>
-            <div v-text="item.userName"></div>
-            <div style="position: absolute;right: 0;">第<span v-text="index+1"></span>位获奖</div>
+            <div class="time">
+              <div v-text="item.userName"></div>
+              <div class="timeStamp">获奖时间:<span v-text="item.awardTime"></span></div>
+            </div>
+            <div class="number" style="position: absolute;right: 0;">第<span v-text="index+1"></span>位获奖</div>
           </div>
         </div>
 
@@ -354,13 +357,23 @@
     color:#ffffff;
     font-size: 0.14rem;
     height: 0.36rem;
+  }
+  .item .number{
     line-height: 0.36rem;
   }
+
   .item img{
     width: 0.36rem;
     height: 0.36rem;
     border-radius: 50%;
     margin-right: 0.07rem;
   }
+  .time>div{
+    height:50%;
+    line-height: 0.18rem;
+  }
 
+  .timeStamp{
+    font-size: 0.11rem;
+  }
 </style>

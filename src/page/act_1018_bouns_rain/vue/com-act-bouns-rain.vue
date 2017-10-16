@@ -35,7 +35,7 @@ import popup from '../../../common/js/module/popup.js';
 	export default {
 		data() {
 			return {
-				bounsId: 141,
+				bounsId: 52,
 				startTime: "",
 	  		endTime: "",
 	  		isStartGame: false,
@@ -65,7 +65,7 @@ import popup from '../../../common/js/module/popup.js';
 	  		isNewStart: false,
 			}
 		},
-		// props: ['current-date'],
+		props: ['currentDate'],
 		watch: {
 			currentTime: {
 				handler() {
