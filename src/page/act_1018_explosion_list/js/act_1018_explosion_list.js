@@ -130,9 +130,11 @@ new Vue({
             index = parseInt(i);
           }
         }
-        var id = '#active-tab' + index;
-        var topHeight = $(id).offset().top - $(window).scrollTop();
-        $('html,body').animate({scrollTop:topHeight - "44" + "px"}, 300);
+        if(index != 0) {
+          var id = '#active-tab' + index;
+          var topHeight = $(id).offset().top - $(window).scrollTop();
+          $('html,body').animate({scrollTop: topHeight - "44" + "px"}, 300);
+        }
       });
     }
   }
