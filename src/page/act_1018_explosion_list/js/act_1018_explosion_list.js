@@ -10,7 +10,6 @@ import encrypt from '../../../common/js/module/encrypt.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
-import layout from "../../../../module/index/layout.es6";
 import util from '../../../common/js/module/util.js';
 import ua from '../../../common/js/module/ua.js';
 
@@ -50,9 +49,9 @@ new Vue({
         url: '/api/mg/sale/userhelpgoods/getUserHelpGoods?_=' + Date.now(),
         type: 'post',
         dataType: 'json',
-        data: layout.strSign("explosiion",{
-
-         }),
+        data: encrypt({
+          js_wx_info: 1,
+        }),
         success(response) {
           ts.response = response;
         },
