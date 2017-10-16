@@ -12,7 +12,7 @@
 
   <img class="banner" src="[[static]]/page/act_1018_explosion_list/img/explosion-list-banner.png">
   <template v-if="response">
-    <div v-for="(item,key,i) in response.data" class="g-goods-wrapper" v-cloak>
+    <div v-for="(item,key,i) in response.data" class="g-goods-wrapper" v-cloak :id="'active-tab'+i">
       <p class="g-goods-title">{{timer[i]}} {{response.sys_time >= key ? '已开抢' : '待开抢'}}</p>
       <ul>
         <li v-for="goods in item.goodsList" @click="goodsClick(goods.goodsId)" class="goods-item">

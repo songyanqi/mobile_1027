@@ -7,7 +7,6 @@ import $ from '$';
 
 // 业务模块
 import encrypt from '../../../common/js/module/encrypt.js';
-import login from '../../../common/js/module/login.js';
 import native from '../../../common/js/module/native.js';
 import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
@@ -15,7 +14,6 @@ import layout from "../../../../module/index/layout.es6";
 import util from '../../../common/js/module/util.js';
 import ua from '../../../common/js/module/ua.js';
 
-login.needLogin();
 // 懒加载初始化
 vueLazyload.init();
 
@@ -34,9 +32,10 @@ new Vue({
     }
   },
   created() {
+    this.getData();
   },
   mounted() {
-    this.getData();
+
   },
   methods: {
     /**
@@ -98,7 +97,7 @@ new Vue({
         //     action: ''
         //   },
         // });
-
+        let ts = this;
 
         // 设置app头部标题栏
         native.custom.initHead({
@@ -111,6 +110,31 @@ new Vue({
           homeBtn: '0',
           shareBtn: '1',
         });
+
+        // 设置分享信息
+        try {
+          share.setShareInfo({
+            title: '大V店周年庆，超值爆品等你来~',
+            desc: '1018当天5个场次，可以持续不断买买买啦~',
+            link: location.href,
+            imgUrl: `${location.protocol}[[static]]/page/act_1018_explosion_list/img/share.png`
+          }, ts.response);
+        } catch (err) {
+          console.error(err);
+        }
+
+        // 选中最近的已开抢
+        let index = 0;
+        for (let i in this.timer) {
+          if (ts.response.sys_time >= ts.screenings[i]) {
+            index = parseInt(i);
+          }
+        }
+        if(index != 0) {
+          var id = '#active-tab' + index;
+          var topHeight = $(id).offset().top - $(window).scrollTop();
+          $('html,body').animate({scrollTop: topHeight - "44" + "px"}, 300);
+        }
       });
     }
   }
