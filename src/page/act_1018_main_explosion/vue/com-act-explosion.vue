@@ -11,7 +11,7 @@
       width:100%;
     }
     .swiper-container {
-      margin:ptr(-35) 0 1px;
+      margin:ptr(-35) 0 0;
       background-color:#ff6582;
       .swiper-slide {
         width:ptr(80);
