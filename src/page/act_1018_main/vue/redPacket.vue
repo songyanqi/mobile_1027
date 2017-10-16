@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="all">
     <div class="get" v-if="isLogin && isRedPacket==1" @click="goDeatil"></div>
     <div class="no_get" v-if="isLogin && isRedPacket!=1" @click="goDeatil"></div>
     <div class="no_login" v-if="!isLogin" @click="login"></div>
@@ -61,6 +61,11 @@
   }
 </script>
 <style scoped>
+  .all{
+    margin-top: 0.1rem;
+    margin-bottom: 0.1rem;
+    box-sizing: border-box;
+  }
   .get{
     width: 3.75rem;
     height: 0.94rem;
