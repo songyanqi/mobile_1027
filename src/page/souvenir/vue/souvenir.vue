@@ -1,16 +1,27 @@
 <template>
   <div class="background">
+    <div class="title_text tit" style="top: 1.4rem;font-size: 0.21rem;">10月19、20、21日</div>
+    <div class="title_text tit" style="top: 1.75rem;">连续三天购物</div>
+    <div class="title_text tit" style="top: 2.1rem;">即可获大V店三周年纪念品</div>
+    <div class="title_text" style="font-size: 0.14rem;top: 2.6rem;">限量5000个，先到先得</div>
+
     <template v-if="!isLogin">
       <!--未登录-->
-      <div class="big_img"><img src="//pic.davdian.com/free/2017/09/29/bg2.png" alt=""></div>
+      <div class="big_img">
+        <!--<img src="//pic.davdian.com/free/2017/09/29/bg2.png" alt="">-->
+      </div>
       <div class="nologin">您还未登录哦~</div>
-      <div class="btn1" @click="login"></div>
+      <div class="btn1" @click="login">
+        立即登录
+      </div>
     </template>
 
     <template v-if="isLogin">
 
     <!--活动中-->
-    <div class="big_img3"><img src="//pic.davdian.com/free/2017/09/30/bg5.png" alt=""></div>
+    <div class="big_img3">
+      <!--<img src="//pic.davdian.com/free/2017/09/30/bg5.png" alt="">-->
+    </div>
 
     <div class="range">
       <div class="date">
@@ -20,8 +31,8 @@
       </div>
       <div class="circle">
         <template v-for="item in realTimeList">
-          <div v-if="item.isBuy==1"><img src="//pic.davdian.com/free/2017/09/30/yellow.png" alt=""></div>
-          <div v-if="item.isBuy==0"><img src="//pic.davdian.com/free/2017/09/30/white.png" alt=""></div>
+          <div v-if="item.isBuy==1"><img src="//pic.davdian.com/free/2017/09/30/%E8%BF%9B%E5%BA%A61%E5%B7%B2%E9%80%89%E4%B8%AD.png" alt=""></div>
+          <div v-if="item.isBuy==0"><img src="//pic.davdian.com/free/2017/09/30/%E8%BF%9B%E5%BA%A6%E6%9C%AA%E9%80%89%E4%B8%AD.png" alt=""></div>
         </template>
       </div>
       <div class="state">
@@ -32,13 +43,12 @@
       </div>
     </div>
 
+
       <template v-if="state==0">
           <template v-if="shopStocks>0">
-            <div class="noshop" v-if="buyStatus=='noshop'">今天还未购物哦~</div>
-            <div class="noshop" v-if="buyStatus=='oneDay'">今天已购物~</div>
             <div class="noshop" v-if="buyStatus=='failed'">很遗憾您错过了这次活动~</div>
             <div class="noshop" v-if="buyStatus=='haveTwo'">再购物一次就能获得周年庆纪念品啦</div>
-            <div class="noshop" v-if="buyStatus=='readyGet'">已获得三周年纪念品</div>
+            <div class="noshop" v-if="buyStatus=='readyGet' && getSouvenir==1">已获得三周年纪念品</div>
 
             <div class="goshop" v-if="buyStatus!='readyGet'">连续三天购物即可获得</div>
 
@@ -50,36 +60,62 @@
           <template v-if="shopStocks==0">
             <div class="noshop">没有名额啦~</div>
             <div class="goshop">很遗憾您错过了这次活动</div>
-            <div class="only" :class="{'class2':shopStocks>0 && buyStatus=='readyGet'}">没有名额啦</div>
+            <div class="only">没有名额啦</div>
           </template>
 
+          <div class="bg" :class="{'class3':shopStocks>0 && buyStatus=='readyGet'}"></div>
           <div class="goods" :class="{'class3':shopStocks>0 && buyStatus=='readyGet'}">
-            <div style="width: 1.1rem;"><img src="//pic.davdian.com/free/2017/09/30/Rectangle%208.png" alt=""></div>
+            <div style="width: 1.1rem;border-radius:12px;"><img :src="imageUrl" alt=""></div>
             <div style="width: 1.5rem;">
               <div class="souvenir">周年庆纪念品</div>
               <div class="souvenir_detail">查看详情>>></div>
             </div>
           </div>
 
-          <div class="btn2" v-if="(buyStatus=='haveTwo') || (buyStatus=='noshop')"></div>
-          <div class="btn3" v-if="(buyStatus=='failed') || (buyStatus=='oneDay') || (buyStatus=='readyGet' && shopStocks==0)"></div>
-          <div class="btn4" v-if="buyStatus=='readyGet' && shopStocks>0"></div>
+          <div class="btn_all" @click="goActMain" v-if="(buyStatus=='haveTwo')">
+            快去买买买
+          </div>
+          <div class="btn_all" @click="goActMain" v-if="(buyStatus=='failed') || (buyStatus=='readyGet' && shopStocks==0)">
+            快去买买买
+          </div>
+          <div class="btn_all" @click="goActMain" v-if="buyStatus=='readyGet' && shopStocks>0">
+            快去买买买
+          </div>
+
 
       </template>
 
       <template v-if="state==2">
-        <div class="noshop" v-if="buyStatus=='noshop'">活动结束啦~~</div>
-        <template v-if="shopStocks>0">
-          <div class="goshop" v-if="buyStatus!='readyGet'">很遗憾您错过了这次活动</div>
+
+        <div class="noshop">活动结束啦~~</div>
+
+        <template v-if="getSouvenir==0">
+          <div class="goshop">很遗憾您错过了这次活动</div>
+          <div class="btn_all" @click="goActMain">
+            查看更多优惠活动
+          </div>
         </template>
 
-        <template v-if="shopStocks==0">
-          <div class="goshop" v-if="buyStatus!='readyGet'">已获得三周年纪念品</div>
+        <template v-if="getSouvenir==1 && buyStatus=='readyGet'">
+          <div class="goshop">已获得三周年纪念品</div>
+          <div class="btn_all" @click="goActMain">
+            元气满满继续嗨
+          </div>
         </template>
+
+        <div class="only" v-if="shopStocks>0">仅剩 <span v-text="shopStocks"></span> 个名额</div>
+        <div class="only" v-if="shopStocks==0">没有名额啦</div>
+
+        <div class="bg"></div>
+        <div class="goods">
+          <div style="width: 1.1rem;"><img :src="imageUrl" alt=""></div>
+          <div style="width: 1.5rem;">
+            <div class="souvenir">周年庆纪念品</div>
+            <div class="souvenir_detail">查看详情>>></div>
+          </div>
+        </div>
 
       </template>
-
-
 
     </template>
 
@@ -118,12 +154,14 @@
       return{
         state:null,
         gooodsId:null,
-        goodsImg:null,
+        imageUrl:null,
         shopStocks:null,
         timeList:[],
         isApp:util.utils.isApp(),
         isLogin:null,
-        buyStatus:null
+        buyStatus:null,
+        getSouvenir:null,
+        imageUrl:''
       }
     },
     computed:{
@@ -149,17 +187,22 @@
     methods:{
       checkStatus(){
           var realTimeList=this.realTimeList;
-          if(realTimeList[0].isBuy==0 && realTimeList[1].isBuy==0 && realTimeList[2].isBuy==0){
-              this.buyStatus='noshop';
-          }else if(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==0 && realTimeList[2].isBuy==0){
-              this.buyStatus='oneDay';
-          }else if(!(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1 )){
+          if(!(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1 )){
               this.buyStatus='failed';
           }else if(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1 && realTimeList[2].isBuy==0){
               this.buyStatus='haveTwo';
           }else if(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1 && realTimeList[2].isBuy==1){
               this.buyStatus='readyGet';
           }
+      },
+      goActMain(){
+        if(this.isApp){
+          native.Browser.open({
+            url: "/act_1018_main.html"
+          })
+        }else{
+          window.location.href="/act_1018_main.html";
+        }
       },
       getStaus(){
         var token=login.getDvdsid().substr(32,8);
@@ -191,9 +234,10 @@
 
           this.state=result.data.code;
           this.gooodsId=result.data.gooodsId;
-          this.goodsImg=result.data.goodsImg;
+          this.imageUrl=result.data.imageUrl;
           this.shopStocks=result.data.shopStocks;
           this.timeList=result.data.timeList;
+          this.getSouvenir=result.data.getSouvenir;
         }
 
       }
@@ -204,17 +248,23 @@
   .background{
     position: relative;
   }
-  .big_img img{
+  .big_img{
     width: 3.75rem;
     height: 9.52rem;
+    background-size: 3.75rem 9.52rem;
+    background-image: url('//pic.davdian.com/free/2017/09/30/%E6%BB%A1399%E9%80%81%E5%A4%A7V%E4%B8%89%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5%E5%93%8101%E8%83%8C%E6%99%AF.png');
   }
-  .big_img2 img{
+  .big_img2{
     width: 3.75rem;
     height: 12.11rem;
+    background-size: 3.75rem 12.11rem;
+    background-image: url('//pic.davdian.com/free/2017/09/30/%E6%BB%A1399%E9%80%81%E5%A4%A7V%E4%B8%89%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5%E5%93%8102%E8%83%8C%E6%99%AF.png');
   }
-  .big_img3 img{
-    width: 3.75rem;
+  .big_img3{
     height: 12.4rem;
+    width: 100%;
+    background-size: 3.75rem 12.4rem;
+    background-image: url('//pic.davdian.com/free/2017/09/30/%E6%BB%A1399%E9%80%81%E5%A4%A7V%E4%B8%89%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5%E5%93%8103%E8%83%8C%E6%99%AF.png');
   }
   .nologin{
     color:#F00026;
@@ -224,45 +274,41 @@
     top: 3.69rem;
     width: 100%;
   }
-  .btn1{/*立即登录*/
+  .btn1{ /*立即登录*/
     width: 2.5rem;
     height: 0.45rem;
-    background-image: url('//pic.davdian.com/free/2017/09/29/button1.png');
-    background-size: 2.5rem 0.45rem;
-    position: absolute;
     top: 4.3rem;
     left: 0.64rem;
-  }
-  .btn2{ /*快去买买买*/
-    width: 2.5rem;
-    height: 0.45rem;
-    background-image: url('//pic.davdian.com/free/2017/09/30/button.png');
+    background-image: url('//pic.davdian.com/free/2017/09/30/btnALL.png');
     background-size: 2.5rem 0.45rem;
     position: absolute;
-    top: 7.2rem;
-    left: 0.63rem;
+    color:#FFFFFF;
+    font-size: 0.16rem;
+    line-height: 0.45rem;
+    padding-left: 0.54rem;
+    background-repeat: no-repeat;
+    font-weight: 500;
+    letter-spacing: 1px;
   }
-  .btn3{ /*查看更多优惠活动*/
+  .btn_all{ /*查看更多优惠活动*/
     width: 2.5rem;
     height: 0.45rem;
-    background-image: url('//pic.davdian.com/free/2017/09/30/btn3.png');
+    background-image: url('//pic.davdian.com/free/2017/09/30/btn_buy.png');
     background-size: 2.5rem 0.45rem;
     position: absolute;
-    top: 7.2rem;
+    top: 7.28rem;
     left: 0.63rem;
-  }
-  .btn4{ /*元气满满继续嗨*/
-    width: 2.5rem;
-    height: 0.45rem;
-    background-image: url('//pic.davdian.com/free/2017/09/30/btn4.png');
-    background-size: 2.5rem 0.45rem;
-    position: absolute;
-    top: 7.2rem;
-    left: 0.63rem;
+    color:#FFFFFF;
+    font-size: 0.16rem;
+    line-height: 0.45rem;
+    text-indent: 0.73rem;
+    background-repeat: no-repeat;
+    font-weight: 500;
+    letter-spacing: 1px;
   }
   .rute1{
     position: absolute;
-    bottom: 0.58rem;
+    bottom: 0.4rem;
     width: 3.45rem;
     height: 3.21rem;
     left: 0.15rem;
@@ -279,6 +325,7 @@
     height: 1px;
     background: #FFFFFF;
     vertical-align: middle;
+    margin-top: -0.02rem;
   }
   .goods{
     width: 2.63rem;
@@ -286,10 +333,22 @@
     border-radius: 12px;
     position: absolute;
     left: 0.56rem;
-    top: 5.82rem;
+    top: 5.9rem;
     font-size: 0;
     border: 1px dashed #FF4A7D;
     box-sizing: border-box;
+  }
+  .bg{
+    width: 2.63rem;
+    height: 1.12rem;
+    border: 1px dashed #FF4A7D;
+    border-radius: 12px;
+    position: absolute;
+    left: 0.56rem;
+    top: 5.9rem;
+    box-sizing: border-box;
+    background: #ffffff;
+    opacity:0.5 ;
   }
   .goods>div{
     display: inline-block;
@@ -298,22 +357,25 @@
   .goods img{
     height: 1.1rem;
     width: 1.1rem;
+    border-radius: 12px 0 0 12px;
   }
   .noshop{
     position: absolute;
-    top: 4.6rem;
+    top: 4.68rem;
     color:#F00026;
     font-size: 0.2rem;
     width: 100%;
     text-align: center;
+    font-weight: 500;
   }
   .goshop{
     color:#F00026;
     font-size: 0.15rem;
     width: 100%;
     text-align: center;
-    top: 4.97rem;
+    top: 5.05rem;
     position: absolute;
+    font-weight: 500;
   }
   .range{
     position: absolute;
@@ -329,6 +391,9 @@
   .date>div,.circle>div,.state>div{
     display: inline-block;
     vertical-align: top;
+  }
+  .date>div,.state>div{
+    font-weight: 500;
   }
   .circle>div>img{
     width: 0.91rem;
@@ -364,21 +429,21 @@
     margin: 0 auto;
     border-radius: 100px;
     position: absolute;
-    top: 5.3rem;
+    top: 5.38rem;
     left: 1.05rem;
   }
   .class2{
-    top: 4.95rem;
+    top: 5rem;
   }
   .class3{
-    top: 5.4rem;
+    top: 5.5rem;
   }
   .desc{
     position: absolute;
     width: 3rem;
     text-align: center;
     margin: 0 auto;
-    top: 6.7rem;
+    top: 6.8rem;
     left: 0.375rem;
     font-size: 0.11rem;
     color:#F00026;
@@ -388,14 +453,23 @@
     font-size: 0.16rem;
     color:#333333;
     margin-top: 0.2rem;
-    width: 100%;
-    text-align: center;
+    margin-left: 0.2rem;
   }
   .souvenir_detail{
     font-size: 0.12rem;
     color:#FF4A7D;
     margin-top: 0.2rem;
-    width: 100%;
+    margin-left: 0.2rem;
+  }
+  .title_text{
+    position: absolute;
     text-align: center;
+    width:100%;
+    font-size: 0.2rem;
+    color:#FFFFFF;
+  }
+  .tit{
+    text-shadow: 0 1px 3px #B6001E;
+    font-weight: 900;
   }
 </style>

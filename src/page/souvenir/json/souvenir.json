@@ -6,10 +6,11 @@
   "sess_key":"48a275a991a0a6295706e6d9f8c3a784b62a4bbc",
   "data_version":"xxxxxx",
   "data": {
-    "code":"0",
+    "code":0,
     "gooodsId":1111,
     "shopStocks":0,
-    "imageUrl":"http://pic.davdian.com/free/seller-71/my-invite/default-head.png",
+    "imageUrl":"//pic.davdian.com/free/2017/10/16/%E4%B8%BB%E5%9B%BE.jpg",
+    "getSouvenir":1,
     "timeList":[
       {
         "isBuy": 1,
