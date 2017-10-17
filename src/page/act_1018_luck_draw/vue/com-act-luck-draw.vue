@@ -4,7 +4,7 @@
 </style>
 <template>
 	<div class = "luckDraw">
-    <div class = "luckTitle">会员订单支付金额累计每满500元可抽奖一次</div>
+    <div class = "luckTitle">会员店铺订单支付金额累计每满500元可抽奖一次</div>
     <div v-if = "isLogin && luckNum" class = "luckNumNav">您有{{ luckNum }}次抽奖机会</div>
     <div class = "luckCont" id="lottery">
       <table border="0" cellpadding="0" cellspacing="0">
