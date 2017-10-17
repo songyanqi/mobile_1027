@@ -3,7 +3,7 @@
     <div class="title_text tit" style="top: 1.4rem;font-size: 0.21rem;">10月19、20、21日</div>
     <div class="title_text tit" style="top: 1.75rem;">连续三天购物</div>
     <div class="title_text tit" style="top: 2.1rem;">即可获大V店三周年纪念品</div>
-    <div class="title_text" style="font-size: 0.14rem;top: 2.6rem;">限量5000个，先到先得</div>
+    <div class="title_text" style="font-size: 0.14rem;top: 2.59rem;">限量5000个，先到先得</div>
 
     <template v-if="!isLogin">
       <!--未登录-->
@@ -54,7 +54,7 @@
 
             <div class="only" :class="{'class2':buyStatus=='readyGet'}">仅剩 <span v-text="shopStocks"></span> 个名额</div>
 
-            <div class="desc" v-if="buyStatus=='readyGet'">15个工作日后选取您21日首个已支付且未退货的订单收货地址，将纪念品寄给您</div>
+            <div class="desc" v-if="buyStatus=='readyGet'">15个工作日后选取您21日首个已支付且未退货的订单收货地址,将纪念品寄给您</div>
           </template>
 
           <template v-if="shopStocks==0">
@@ -65,7 +65,7 @@
 
           <div class="bg" :class="{'class3':shopStocks>0 && buyStatus=='readyGet'}"></div>
           <div class="goods" :class="{'class3':shopStocks>0 && buyStatus=='readyGet'}">
-            <div style="width: 1.1rem;border-radius:12px;"><img :src="imageUrl" alt=""></div>
+            <div style="width: 1.1rem;border-radius: 12px 0 0 12px;"><img :src="imageUrl" alt=""></div>
             <div style="width: 1.5rem;">
               <div class="souvenir">周年庆纪念品</div>
               <div class="souvenir_detail">查看详情>>></div>
@@ -92,14 +92,14 @@
         <template v-if="getSouvenir==0">
           <div class="goshop">很遗憾您错过了这次活动</div>
           <div class="btn_all" @click="goActMain">
-            查看更多优惠活动
+            快去买买买
           </div>
         </template>
 
         <template v-if="getSouvenir==1 && buyStatus=='readyGet'">
           <div class="goshop">已获得三周年纪念品</div>
           <div class="btn_all" @click="goActMain">
-            元气满满继续嗨
+            快去买买买
           </div>
         </template>
 
@@ -108,12 +108,13 @@
 
         <div class="bg"></div>
         <div class="goods">
-          <div style="width: 1.1rem;"><img :src="imageUrl" alt=""></div>
+          <div style="width: 1.1rem;border-radius: 12px 0 0 12px;"><img :src="imageUrl" alt=""></div>
           <div style="width: 1.5rem;">
             <div class="souvenir">周年庆纪念品</div>
             <div class="souvenir_detail">查看详情>>></div>
           </div>
         </div>
+
 
       </template>
 
@@ -122,14 +123,14 @@
 
 
       <div class="rute1">
-        <div style="margin-top: 0;text-align: center;"><span class="line"></span><span style="padding: 0 0.1rem">活动规则</span><span class="line"></span></div>
-        <div style="margin-top: 0.2rem">1.活动时间：10月19日00:00:00~10月21日23:59:59；</div>
-        <div>2.仅限大V店会员参与该活动；</div>
-        <div>3.10月19日、20日、21日三天连续购物即可获得大V店3周年定制纪念品（限量5000个），每天购物金额不限，每个会员仅有1次获得纪念品的机会；</div>
-        <div>4.因退货、换货等原因导致不满足连续3天购物的情况，视为主动放弃该活动；</div>
-        <div>5.获得的纪念品将于15个工作日后安排发货，收货地址以10月21日首个已支付且未退货订单的收货地址为准；</div>
-        <div>6.开通会员订单不参与该活动；</div>
-        <div>7.详情可咨询大V店客服。</div>
+        <div style="margin-top: 0;text-align: center;"><span class="line"></span><span style="font-size:0.15rem;padding: 0 0.1rem">活动规则</span><span class="line"></span></div>
+        <div style="margin-top: 0.2rem">1. 活动时间：10月19日00:00:00~10月21日23:59:59；</div>
+        <div>2. 仅限大V店会员参与该活动；</div>
+        <div>3. 10月19日、20日、21日三天连续购物即可获得大V店3周年定制纪念品(限量5000个),每天购物金额不限,每个会员仅有1次获得纪念品的机会；</div>
+        <div>4. 因退货、换货等原因导致不满足连续 3天购物的情况,视为主动放弃该活动；</div>
+        <div>5. 获得的纪念品将于15个工作日后安排发货,收货地址以10月21日首个已支付且未退货订单的收货地址为准；</div>
+        <div>6. 开通会员订单不参与该活动；</div>
+        <div>7. 详情可咨询大V店客服。</div>
       </div>
 
   </div>
@@ -271,24 +272,26 @@
     font-size: 0.2rem;
     text-align: center;
     position: absolute;
-    top: 3.69rem;
+    top: 3.74rem;
     width: 100%;
+    font-weight: 500;
   }
   .btn1{ /*立即登录*/
     width: 2.5rem;
     height: 0.45rem;
-    top: 4.3rem;
+    top: 4.28rem;
     left: 0.64rem;
-    background-image: url('//pic.davdian.com/free/2017/09/30/btnALL.png');
+    background-image: url('//pic.davdian.com/free/2017/09/30/btn_login.png');
     background-size: 2.5rem 0.45rem;
     position: absolute;
     color:#FFFFFF;
     font-size: 0.16rem;
     line-height: 0.45rem;
-    padding-left: 0.54rem;
     background-repeat: no-repeat;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
+    text-indent: 0.73rem;
+
   }
   .btn_all{ /*查看更多优惠活动*/
     width: 2.5rem;
@@ -301,9 +304,9 @@
     color:#FFFFFF;
     font-size: 0.16rem;
     line-height: 0.45rem;
-    text-indent: 0.73rem;
     background-repeat: no-repeat;
     font-weight: 500;
+    text-indent: 0.73rem;
     letter-spacing: 1px;
   }
   .rute1{
@@ -335,8 +338,9 @@
     left: 0.56rem;
     top: 5.9rem;
     font-size: 0;
-    border: 1px dashed #FF4A7D;
     box-sizing: border-box;
+    margin-left: 1px;
+    margin-top: 1px;
   }
   .bg{
     width: 2.63rem;
@@ -353,11 +357,13 @@
   .goods>div{
     display: inline-block;
     vertical-align: top;
+    box-sizing: border-box;
   }
   .goods img{
     height: 1.1rem;
     width: 1.1rem;
     border-radius: 12px 0 0 12px;
+    box-sizing: border-box;
   }
   .noshop{
     position: absolute;
@@ -440,11 +446,11 @@
   }
   .desc{
     position: absolute;
-    width: 3rem;
+    width: 3.1rem;
     text-align: center;
     margin: 0 auto;
     top: 6.8rem;
-    left: 0.375rem;
+    left: 0.325rem;
     font-size: 0.11rem;
     color:#F00026;
     line-height:0.16rem;

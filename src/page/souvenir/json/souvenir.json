@@ -8,16 +8,16 @@
   "data": {
     "code":0,
     "gooodsId":1111,
-    "shopStocks":0,
+    "shopStocks":1,
     "imageUrl":"//pic.davdian.com/free/2017/10/16/%E4%B8%BB%E5%9B%BE.jpg",
-    "getSouvenir":1,
+    "getSouvenir":0,
     "timeList":[
       {
         "isBuy": 1,
         "time":"20171021"
       },
       {
-        "isBuy": 1,
+        "isBuy": 0,
         "time":"20171020"
       },
       {
