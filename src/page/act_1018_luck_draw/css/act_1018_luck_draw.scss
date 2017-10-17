@@ -241,14 +241,14 @@
 	}
 	@media screen and (max-width: 320px) {
 		.bounsNav2 {
-			left: 0;
-			-webkit-transform: scale(.8rem);
-			transform: scale(.8rem);
+			left: .99rem;
+	    -webkit-transform: scale(0.8rem);
+	    -ms-transform: scale(0.8rem);
+	    transform: scale(0.8);
 		}
 		.bouns_limit {
-			-webkit-transform: scale(.8rem);
-			transform: scale(.8rem);
-			left: -0.1rem;
+			-webkit-transform: scale(.8);
+			transform: scale(.8);
     	position: relative;
 		}
 	}

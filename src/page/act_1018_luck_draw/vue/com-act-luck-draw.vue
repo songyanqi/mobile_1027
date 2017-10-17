@@ -40,9 +40,9 @@
       </div>
       <div class = "linkCont">
         <!-- 去购物 -->
-        <a @click = "handleGoShlping" class = "goShopLink" href="javascript:void(0)"></a>
+        <div @click = "handleGoShlping" class = "goShopLink"></div>
         <!-- 查看账户  -->
-        <a @click = "handleAccount" class = "lookLink" href="javascript:void(0)"></a>
+        <div @click = "handleAccount" class = "lookLink"></div>
       </div>
     </div>
     <div v-show = "isBouns" class = "bounsCont" @click = "handleBouns">
@@ -117,7 +117,7 @@
         click: false,
         isLogin: false,
         visitorStatus: 1,
-        isMoney: false,
+        isMoney: true,
         isBouns: false,
         lotteryId: 0,
 
