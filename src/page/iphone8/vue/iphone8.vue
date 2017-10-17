@@ -72,7 +72,7 @@
           <div class="item" v-for="(item,index) in awardList">
             <div><img :src="item.avatar" alt=""></div>
             <div class="time">
-              <div v-text="item.userName"></div>
+              <div v-text="telName(item.userName)"></div>
               <div class="timeStamp"><span v-text="item.awardTime"></span></div>
             </div>
             <div class="number" style="position: absolute;right: 0;">第<span v-text="index+1"></span>位获奖</div>
@@ -127,18 +127,36 @@
         'title': document.title,
           shareBtn:"1"
         });
+
         share.setShareInfo({
           title: "大V店周年庆，妈妈顾问赢IPhone 8",
           desc: "妈妈顾问服务人群销售额达到10万，有机会获得IPhone 8一部，仅此一天哦~",
           link: window.location.href,
-          imgUrl: "//pic.davdian.com/free/2017/10/11/%E8%B5%A2iphone8%E5%88%86%E4%BA%ABicon.jpg?x-oss-process=image/resize,m_fill,w_100,h_100/format,webp"
+          imgUrl: "http://pic.davdian.com/free/2017/09/30/share.jpg"
         });
+
+        window.iosInterface.getShareInfo = function () {
+          var shareInfo = {
+            title: "大V店周年庆，妈妈顾问赢IPhone 8",
+            desc: "妈妈顾问服务人群销售额达到10万，有机会获得IPhone 8一部，仅此一天哦~",
+            link: window.location.href,
+            imgUrl: "http://pic.davdian.com/free/2017/09/30/share.jpg"
+          }
+          return JSON.stringify(shareInfo);
+        };
         this.init();
         this.$nextTick(function () {
 
         })
     },
     methods:{
+      telName(tel){
+        if((/^1[34578]\d{9}$/.test(tel))){
+            return tel.substr(0,3)+"****"+tel.substr(7,4);
+        }else{
+            return tel;
+        }
+      },
       beMother(){
         if(this.isApp){
           native.Browser.open({
