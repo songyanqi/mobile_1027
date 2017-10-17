@@ -34,7 +34,7 @@
       <div class = "moneyWrapper"></div>
       <!-- <img src="http://note.youdao.com/yws/res/1629/WEBRESOURCEf68d2764a1c666f4414be7e3b4bfb29f"> -->
       <img src="http://pic.davdian.com/free/ydd1.png">
-      <div class = "moneyNum">
+      <div class = "moneyNum" v-if = "bounsNumMoney">
         <p>恭喜你抽中</p>
         <p><span class = "moneyNums_icon">{{ bounsNumMoney }}元</span>现金大奖</p>
       </div>
@@ -48,11 +48,11 @@
     <div v-show = "isBouns" class = "bounsCont" @click = "handleBouns">
       <div class = "bounsWrapper"></div>
       <img src="http://pic.davdian.com/free/ydd7.png">
-      <div class = "bounsNums_num">
+      <div class = "bounsNums_num" v-if = "bounsInfos && bounsInfos.bonusMoney">
         <p>恭喜你抽中</p>
         <p><span class = "bounsNums_w">{{ bounsInfos.bonusMoney }}元</span>红包</p>
       </div>
-      <div class = "bounsInfo" v-if = "bounsInfos">
+      <div class = "bounsInfo" v-if = "bounsInfos && bounsInfos.bonusMoney">
         <div class = "bounsNav">
           <div class = "bouns_Nums"><span class = "bouns_m">¥</span><span class = "bouns_N">{{ bounsInfos.bonusMoney }}</span>
           <!-- <span class = "bouns_nm">元</span> -->
@@ -117,7 +117,7 @@
         click: false,
         isLogin: false,
         visitorStatus: 1,
-        isMoney: true,
+        isMoney: false,
         isBouns: false,
         lotteryId: 0,
 
