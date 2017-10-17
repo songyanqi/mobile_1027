@@ -117,7 +117,7 @@
         click: false,
         isLogin: false,
         visitorStatus: 1,
-        isMoney: true,
+        isMoney: false,
         isBouns: false,
         lotteryId: 0,
 
