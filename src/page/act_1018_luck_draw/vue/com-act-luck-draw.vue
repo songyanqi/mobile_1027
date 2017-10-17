@@ -30,22 +30,22 @@
     <!-- 活动规则 -->
     <div @click = "handleReserveRole" class = "bounsLuckRule">活动规则</div>
     
-    <div @click = "handleMoney" v-if = "isMoney" class = "moneyCont">
+    <div @click = "handleMoney" v-show = "isMoney" class = "moneyCont">
       <div class = "moneyWrapper"></div>
       <!-- <img src="http://note.youdao.com/yws/res/1629/WEBRESOURCEf68d2764a1c666f4414be7e3b4bfb29f"> -->
       <img src="http://pic.davdian.com/free/ydd1.png">
       <div class = "moneyNum">
         <p>恭喜你抽中</p>
-        <p><span>{{ bounsNumMoney }}元</span>现金大奖</p>
+        <p><span class = "moneyNums_icon">{{ bounsNumMoney }}元</span>现金大奖</p>
       </div>
       <div class = "linkCont">
         <!-- 去购物 -->
         <a @click = "handleGoShlping" class = "goShopLink" href="javascript:void(0)"></a>
         <!-- 查看账户  -->
-        <a @click = "handleAccount" class = "lookLink" href=""></a>
+        <a @click = "handleAccount" class = "lookLink" href="javascript:void(0)"></a>
       </div>
     </div>
-    <div v-if = "isBouns" class = "bounsCont" @click = "handleBouns">
+    <div v-show = "isBouns" class = "bounsCont" @click = "handleBouns">
       <div class = "bounsWrapper"></div>
       <img src="http://pic.davdian.com/free/ydd7.png">
       <div class = "bounsNums_num">
@@ -117,7 +117,7 @@
         click: false,
         isLogin: false,
         visitorStatus: 1,
-        isMoney: false,
+        isMoney: true,
         isBouns: false,
         lotteryId: 0,
 
@@ -169,19 +169,14 @@
         location.href = "http://s.davdian.com/index.php?m=admin&c=newIncome&a=detail&status=0&cat=5";
       },
       handleMoney(e) {
-        if(e.target.className != "moneyWrapper") {
+        if(e.target.className == "") {
           this.isMoney = false;
-        } else {
-          this.isMoney = true;
         }
       },
       handleBouns(e) {
-        if (e.target.className != "bounsWrapper") {
+        if (e.target.className == "") {
           this.isBouns = false;
-        } else {
-          this.isBouns = true;
         }
-        // console.log(e.target)
       },
       handleGoShlping() {
         this.isMoney = false;
@@ -281,10 +276,6 @@
         that.roll();
         if (that.times > that.cycle+10 && that.prize==that.index) {
           clearTimeout(that.timer);
-          that.prize=-1;
-          that.times=0;
-          that.click=false;
-          console.log(1111111,that.index);
           setTimeout(() => {
             if (that.prize == 0 || that.prize == 2) {
               that.isMoney = true;
@@ -297,6 +288,10 @@
               that.isBouns = true;
             }
             $(".lottery-unit").removeClass("active");
+            that.prize=-1;
+            that.times=0;
+            that.click=false;
+            console.log(1111111,that.index);
           }, 500)
         }else{
           if (that.times<that.cycle) {
