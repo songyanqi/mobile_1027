@@ -14,7 +14,7 @@
       margin:ptr(-35) 0 0;
       background-color:#ff6582;
       .swiper-slide {
-        width:ptr(80);
+        width:ptr(75);
       }
     }
     .item {
@@ -261,10 +261,12 @@
 //      },
       /** tab切换 */
       swiperSlideClick(index) {
-        this.swiper.slideTo(index - 2);
         this.tabIndex = index;
         //this.screenings = this.list[index].screenings;
         this.$forceUpdate();
+        try{
+          this.swiper.slideTo(index - 2);
+        }catch(err){}
       },
       /** 商品点击 */
       goodsClick(goodsId) {
