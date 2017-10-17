@@ -102,6 +102,12 @@
       position: relative;
       max-width: 640px;
     }
+    #firstPageIsShow1{
+      display: none
+    }
+    #firstPageIsShow2{
+      display: none
+    }
   </style>
 </head>
 <body id="detail" class="scroll_flag">
@@ -109,9 +115,9 @@
     <goods-detail></goods-detail>
   </div>
 
-  <div id='firstPageShowShopCart' style="display: none">
-    <img src="//pic.davdian.com/free/goodsDetail/backRound.png" class='firstPageImg1'>
-    <img src="//pic.davdian.com/free/goodsDetail/homeRound.png" class='firstPageImg2'>
+  <div id='firstPageShowShopCart'>
+    <img src="//pic.davdian.com/free/goodsDetail/backRound.png" class='firstPageImg1' id='firstPageIsShow1'>
+    <img src="//pic.davdian.com/free/goodsDetail/homeRound.png" class='firstPageImg2' id='firstPageIsShow2'>
     <div class='firstPageBtnAll'>
       <div class='firstPageCart'>
         <span class='firstPageCartImg'></span>
