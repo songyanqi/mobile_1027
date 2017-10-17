@@ -4,6 +4,8 @@
 </style>
 <template>
 	<div class = "luckDraw">
+    <img style = "display: none;" src="http://pic.davdian.com/free/ydd1.png">
+    <img style = "display: none;" src="http://pic.davdian.com/free/ydd7.png">
     <div class = "luckTitle">会员店铺订单支付金额累计每满500元可抽奖一次</div>
     <div v-if = "isLogin && luckNum" class = "luckNumNav">您有{{ luckNum }}次抽奖机会</div>
     <div class = "luckCont" id="lottery">
@@ -169,11 +171,15 @@
       handleMoney(e) {
         if(e.target.className != "moneyWrapper") {
           this.isMoney = false;
+        } else {
+          this.isMoney = true;
         }
       },
       handleBouns(e) {
         if (e.target.className != "bounsWrapper") {
           this.isBouns = false;
+        } else {
+          this.isBouns = true;
         }
         // console.log(e.target)
       },
