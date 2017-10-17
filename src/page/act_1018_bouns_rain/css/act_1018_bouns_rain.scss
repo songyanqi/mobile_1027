@@ -838,7 +838,7 @@ body.gaming .other {
         background: linear-gradient(to bottom, #fd6e58, #ef285f);
         background: -moz-linear-gradient(bottom, #fd6e58, #ef285f);
         background: -o-linear-gradient(bottom, #fd6e58, #ef285f);
-        background-colornd: -webkit-linear-gradient(top, #fd6e58, #ef285f);
+        background-color: -webkit-linear-gradient(top, #fd6e58, #ef285f);
       }
       .bouns_1 {
         border-right: 2px solid #f33f5d;
@@ -855,6 +855,10 @@ body.gaming .other {
       .maskImging {
         background: url('//pic.davdian.com/free/Bouns/bouns_mianing.png') no-repeat;
         background-size: 100% 100%;
+        background-color:  #f64b5c;
+      }
+      .maskLine {
+        border-bottom: 1px solid #fff;
       }
       .bounsImgMast {
         position: absolute;

@@ -7,10 +7,10 @@
 		<div class = "bounsImgs" v-if = "Date.now() > 1508256000000 && Date.now() < 1508342400000">
 			<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsMain_iconnew.png">
 			<div class = "bounsMask clearfix">
-				<div class = "bouns_0" :class = "{ maskImging:isBouns==1,maskImg:(isMask == 1 || isMask == 2 || isMask == 3 || isMask == 4) }">0点红包雨</div>
-				<div class = "bouns_1" :class = "{ maskImging:isBouns==2,maskImg:(isMask == 2 || isMask == 3 || isMask == 4) }">8点红包雨</div>
-				<div class = "bouns_2":class = "{ maskImging:isBouns==3,maskImg:(isMask == 3 || isMask == 4) }">16点红包雨</div>
-				<div class = "bouns_3" :class = "{ maskImging:isBouns==4,maskImg:isMask == 4 }">20点红包雨</div>
+				<div class = "bouns_0" :class = "{ maskImging:isBouns==1,maskImg:(isMask == 1 || isMask == 2 || isMask == 3 || isMask == 4) }"><span :class = "{ maskLine:isBouns==1 }">0点红包雨</span></div>
+				<div class = "bouns_1" :class = "{ maskImging:isBouns==2,maskImg:(isMask == 2 || isMask == 3 || isMask == 4) }"><span :class = "{ maskLine: isBouns==2 }">8点红包雨</span></div>
+				<div class = "bouns_2":class = "{ maskImging:isBouns==3,maskImg:(isMask == 3 || isMask == 4) }"><span :class = "{ maskLine: isBouns==3 }">16点红包雨</span></div>
+				<div class = "bouns_3" :class = "{ maskImging:isBouns==4,maskImg:isMask == 4 }"><span :class = "{ maskLine: isBouns==4 }">20点红包雨</span></div>
 			</div>
 		</div>
 		<div v-if = "isConfirm">
@@ -65,6 +65,7 @@ import popup from '../../../common/js/module/popup.js';
 	  		isNewStart: false,
 			}
 		},
+		// props: ['current-date'],
 		watch: {
 			currentTime: {
 				handler() {
