@@ -123,7 +123,7 @@ new Vue({
 
         // 开启10.18弹窗
         setTimeout(function () {
-          if (ts.currentDate == '1017-10-18') {
+          if (ts.currentDate == '2017-10-18') {
             ts.isShowBeginPop = false;
           } else {
             ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
