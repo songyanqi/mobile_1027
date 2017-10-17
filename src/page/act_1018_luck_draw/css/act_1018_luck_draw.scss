@@ -202,12 +202,13 @@
 		}
 	}
 	.bouns_l {
-		margin: 0.05rem 0 0.12rem 0;
+		margin: 0.05rem 0 0.07rem 0;
 		overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     -webkit-line-clamp: 1;
     white-space: nowrap;
+    line-height: 0.23rem;
 	}
 	.bouns_limit {
 		padding: 1px 2px;
@@ -290,6 +291,7 @@
     padding: 5px 10px 0;
     max-height: 4rem;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
 
   .com-popup-base2 .table-cell .box div:nth-of-type(3) {
