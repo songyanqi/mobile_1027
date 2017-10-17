@@ -123,7 +123,6 @@
         }
     },
     mounted(){
-        alert(1);
         share.setShareInfo({
           title: "大V店周年庆，妈妈顾问赢IPhone 8",
           desc: "妈妈顾问服务人群销售额达到10万，有机会获得IPhone 8一部，仅此一天哦~",
