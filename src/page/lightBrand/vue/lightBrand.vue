@@ -10,7 +10,7 @@
           <div class="banner_rute2"></div>
         </div>
         <div class="rute_list">
-          <div class="rute_1">每个品牌都设定了最高优惠力度和目标点亮人数，达到目标点亮人数的品牌将在10.18周年庆期间享最高优惠力度</div>
+          <div class="rute_1">经过大V妈妈齐心合力，品牌点亮目标全部达成！所有品牌都已享受历史最低折扣力度，还等什么，赶快买买买吧～</div>
         </div>
       </div>
       <div class="all_list">
