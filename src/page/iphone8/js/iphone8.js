@@ -43,7 +43,6 @@ new Vue({
 
         // 设置app头部标题栏
 
-
         // 设置app头部标题栏
         // setTimeout(function () {
         //   native.custom.setHead({
