@@ -36,6 +36,7 @@
 		color:#333;
 		width: 0.86rem;
 		height: 0.86rem;
+		padding: 0.03rem 0;
 	}
 	#lottery table td:nth-child(2) {
 		padding: 0 0.1rem;
@@ -47,6 +48,104 @@
 		text-decoration:none;
 	}
 	#lottery table td.active {
-		background-color:#fff;
+		background: #ffcd33;
+		border-radius: 0.1rem;
+	}
+}
+.moneyCont {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	.moneyNum {
+		position: absolute;
+    bottom: 47%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f18424;
+    font-size: 18px;
+	}
+	.linkCont {
+		position: absolute;
+    width: 2rem;
+    bottom: 34%;
+    height: 0.4rem;
+    transform: translateX(-50%);
+    left: 50%;
+    border: 1px solid #fff;
+    .goShopLink,.lookLink {
+    	display: inline-block;
+    	height: 100%;
+    	float: left;
+    	width: 50%;
+    }
+	}
+}
+.bounsCont {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	.bounsInfo {
+		// display: -webkit-box;
+		// display: -webkit-flex;
+		// display: flex;
+		width: 2.47rem;
+		color: #fff;
+		font-size: 10px;
+		position: absolute;
+    left: 50%;
+    bottom: 35%;
+    transform: translateX(-50%);
+	}
+	.bounsNav,.bounsNav2 {
+		display: inline-block;
+		position: relative;
+		left: 0.3rem;
+	}
+	.bounsNav2 {
+		left: 0.44rem;
+		top: 0.08rem;
+	}
+	.bouns_Nums {
+		.bouns_m {
+			font-size: 0.1rem;
+		}
+		.bouns_N {
+			font-size: 0.3rem;
+			vertical-align: middle;
+			vertical-align: -webkit-baseline-middle;
+		}
+		.bouns_nm {
+			font-size: 0.1rem;
+		}
+	}
+	.bouns_l {
+		margin: 0.05rem 0 0.07rem 0;
+	}
+	.bouns_limit {
+		padding: 1px 2px;
+		background: #feedb8;
+		border-radius: 5px;
+		font-size: 0.1rem;
+		white-space: nowrap;
+		display: inline-block;
+		color: #ff6161;
+		margin-left: -0.07rem;
+	}
+	.bounsLink {
+		position: absolute;
+    bottom: 20%;
+    width: 1rem;
+    border: 1px solid #fff;
+    left: 50%;
+    height: 0.38rem;
+    transform: translateX(-50%);
 	}
 }

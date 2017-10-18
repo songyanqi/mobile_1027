@@ -7,22 +7,51 @@
     <div class = "luckNumNav">您有{{ luckNum }}次抽奖机会</div>
     <div class = "luckCont" id="lottery">
       <table border="0" cellpadding="0" cellspacing="0">
-    <tr>
-      <td class="lottery-unit lottery-unit-0"><img src="http://pic.davdian.com/avatar_poster/1018money.png"></td>
-      <td class="lottery-unit lottery-unit-1"><img src="http://pic.davdian.com/avatar_poster/renxing_icon.png"></td>
-      <td class="lottery-unit lottery-unit-2"><img src="http://pic.davdian.com/avatar_poster/1018money1.png"></td>
-    </tr>
-    <tr>
-      <td class="lottery-unit lottery-unit-7"><img src="http://pic.davdian.com/avatar_poster/mysterious_icon.png"></td>
-      <td @click = "handleClick"><img src="http://pic.davdian.com/avatar_poster/luckbtn.png"></td>
-      <td class="lottery-unit lottery-unit-3"><img src="http://pic.davdian.com/avatar_poster/meme_icon.png"></td>
-    </tr>
-    <tr>
-      <td class="lottery-unit lottery-unit-6"><img src="http://pic.davdian.com/avatar_poster/thanks_icon.png"></td>
-      <td class="lottery-unit lottery-unit-5"><img src="http://pic.davdian.com/avatar_poster/suprice_icon.png"></td>
-      <td class="lottery-unit lottery-unit-4"><img src="http://pic.davdian.com/avatar_poster/god_icon.png"></td>
-    </tr>
-  </table>
+        <tr>
+          <td class="lottery-unit lottery-unit-0"><img src="http://pic.davdian.com/avatar_poster/1018money.png"></td>
+          <td class="lottery-unit lottery-unit-1"><img src="http://pic.davdian.com/avatar_poster/renxing_icon.png"></td>
+          <td class="lottery-unit lottery-unit-2"><img src="http://pic.davdian.com/avatar_poster/1018money1.png"></td>
+        </tr>
+        <tr>
+          <td class="lottery-unit lottery-unit-7"><img src="http://pic.davdian.com/avatar_poster/mysterious_icon.png"></td>
+          <td @click = "handleClick"><img src="http://pic.davdian.com/avatar_poster/luckbtn.png"></td>
+          <td class="lottery-unit lottery-unit-3"><img src="http://pic.davdian.com/avatar_poster/meme_icon.png"></td>
+        </tr>
+        <tr>
+          <td class="lottery-unit lottery-unit-6"><img src="http://pic.davdian.com/avatar_poster/thanks_icon.png"></td>
+          <td class="lottery-unit lottery-unit-5"><img src="http://pic.davdian.com/avatar_poster/suprice_icon.png"></td>
+          <td class="lottery-unit lottery-unit-4"><img src="http://pic.davdian.com/avatar_poster/god_icon.png"></td>
+        </tr>
+      </table>
+    </div>
+    <!-- <div class = "mask"></div> -->
+    <div v-if = "isMoney" class = "moneyCont">
+      <img src="http://note.youdao.com/yws/res/1629/WEBRESOURCEf68d2764a1c666f4414be7e3b4bfb29f">
+      <div class = "moneyNum">
+        <p>恭喜你抽中免单</p>
+        <p>为你免单<span>xx</span>元</p>
+      </div>
+      <div class = "linkCont">
+        <!-- 去购物 -->
+        <a class = "goShopLink" href=""></a>
+        <!-- 查看账户  -->
+        <a class = "lookLink" href=""></a>
+      </div>
+    </div>
+    <div v-if = "isBouns" class = "bounsCont">
+      <img src="http://note.youdao.com/yws/res/1627/WEBRESOURCE967a424bdc653fc1cc494478785b45ba">
+      <div class = "bounsInfo">
+        <div class = "bounsNav">
+          <div class = "bouns_Nums"><span class = "bouns_m">¥</span><span class = "bouns_N">10</span><span class = "bouns_nm">元</span></div>
+          <div class = "bouns_limit">满10元可用</div>
+        </div>
+        <div class = "bounsNav2">
+          <div class = "bouns_b">仅购买</div>
+          <div class = "bouns_l">袋鼠妈妈品牌商品可用</div>
+          <div class = "bouns_d">2017.09.07 - 2017.09.07</div>
+        </div>
+      </div>
+      <div class = "bounsLink"></div>
     </div>
 	</div>
 </template>
@@ -32,7 +61,7 @@
   import popup from '../../../common/js/module/popup.js';
   import native from '../../../common/js/module/native.js';
   import layout from "../../../../module/index/layout.es6";
-
+  
   export default {
     components: {
 
@@ -53,6 +82,8 @@
         click: false,
         isLogin: false,
         visitorStatus: 1,
+        isMoney: false,
+        isBouns: true,
       }
     },
     props: [],
@@ -178,6 +209,8 @@
                 console.log("res",res);
                 if (!res.code) {
                   that.luckNum--;
+
+
                 } else {
                   // popup.info()
                 }
