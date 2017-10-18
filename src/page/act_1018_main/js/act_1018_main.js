@@ -133,7 +133,7 @@ new Vue({
 
         // 我的10.18弹窗
         setTimeout(function () {
-          if (ts.currentDate == '1017-10-18') {
+          if (ts.currentDate == '2017-10-18') {
             ts.start_1018_flag = true;
           } else {
             ts.start_1018_flag = localStorage.getItem('start_1018_flag');
