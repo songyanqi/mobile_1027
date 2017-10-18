@@ -826,10 +826,10 @@ body.gaming .other {
     .bounsMask {
       position: relative;
       width: 100%;
-      .bouns_0,.bouns_1,.bouns_2,.bouns_3 {
+      .bouns_0,.bouns_1,.bouns_2,.bouns_3,.bouns_4 {
         float: left;
         font-size: 0.14rem;
-        width: 25%;
+        width: 20%;
         color: #fff;
         padding: 0.14rem 0;
         -webkit-box-sizing: border-box;
@@ -845,6 +845,9 @@ body.gaming .other {
         border-left: 2px solid #f33f5d;
       }
       .bouns_2 {
+        border-right: 2px solid #f33f5d;
+      }
+      .bouns_3 {
         border-right: 2px solid #f33f5d;
       }
       .maskImg {
