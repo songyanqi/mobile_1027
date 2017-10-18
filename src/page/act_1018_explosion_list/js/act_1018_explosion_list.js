@@ -12,6 +12,7 @@ import share from '../../../common/js/module/share.js';
 import vueLazyload from '../../../common/js/module/vueLazyload.js';
 import util from '../../../common/js/module/util.js';
 import ua from '../../../common/js/module/ua.js';
+import utils from "../../../../utils/utils.es6"
 
 // 懒加载初始化
 vueLazyload.init();
@@ -27,7 +28,8 @@ new Vue({
     return {
       timer: ['0点早教专场','8点爸爸专场','12点教育专场','16点居家专场','20点暖心专场'],
       screenings: [1508256000,1508284800,1508299200,1508313600,1508328000],
-      response: null
+      response: null,
+      isApp:utils.utils.isApp()
     }
   },
   created() {
@@ -72,6 +74,15 @@ new Vue({
         });
       } else {
         location.href = url;
+      }
+    },
+    add_url(){
+      if(this.isApp){
+        native.Browser.open({
+          url: '/348.html?dp=yhzz_wjs_b1018'
+        })
+      }else{
+        window.location.href='/348.html?dp=yhzz_wjs_b1018';
       }
     }
   },
