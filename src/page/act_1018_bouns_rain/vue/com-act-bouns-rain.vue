@@ -65,7 +65,7 @@ import popup from '../../../common/js/module/popup.js';
 	  		isNewStart: false,
 			}
 		},
-		// props: ['current-date'],
+		props: ['currentDate'],
 		watch: {
 			currentTime: {
 				handler() {
