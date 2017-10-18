@@ -8,10 +8,12 @@
 		<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsMain_iconnew.png">
 		<div class = "bounsMask clearfix">
 			<div class = "bouns_0">0点红包雨</div>
-			<div class = "bouns_1 maskImging">8点红包雨</div>
+			<div class = "bouns_1">8点红包雨</div>
 			<div class = "bouns_2">16点红包雨</div>
 			<div class = "bouns_3">20点红包雨</div>
-			<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsNewMask.png">
+			<div class = "bounsImgMast">
+				<img src="http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/Bouns/bounsNewMask.png">
+			</div>
 		</div>
 	</div>
 		<div v-if = "isConfirm">
@@ -36,7 +38,7 @@ import popup from '../../../common/js/module/popup.js';
 	export default {
 		data() {
 			return {
-				bounsId: 125,
+				bounsId: 126,
 				startTime: "",
 	  		endTime: "",
 	  		isStartGame: false,
@@ -57,12 +59,29 @@ import popup from '../../../common/js/module/popup.js';
 	  		isConfirm: false,
 	  		isBounsMask: 0,
 	  		isBounsing: 0,
+	  		currentTime: 0,
+	  		timeObj: null,
+
+	  		isBouns: 0,
+	  		isMask: 0,
 			}
 		},
 		watch: {
+			currentTime: {
+				handler() {
+					let that = this;
+					clearInterval(that.timeObj);
+					that.timeObj = setInterval(() => {
+						console.log(12);
+					  that.currentTime = Date.now();
+					}, 1000);
+				},
+				deep: true,
+			},
 			startTime: {
 				handler() {
 					let that = this;
+					that.currentTime = Date.now();
 					this.$nextTick(function () {
 						// 判断红包mask的显示
 						// 2017/10/18 00:00:00  1508256000000
@@ -74,26 +93,48 @@ import popup from '../../../common/js/module/popup.js';
 						// 2017/10/18 20:00:00  1508328000000
 						// 2017/10/18 20:15:00  1508328900000
 						// 0点到0:15:00
-						if (Date.now() > 1508256000000 && Date.now() <= 1508256900000) {
+						if (that.currentTime > 1508256000000 && that.currentTime <= 1508256900000) {
 							// that.isBounsing = 1;
-							// $(".")
+							$(".bouns_0").addClass("maskImging");
+							that.isBouns = 1;
 						}
-						if (Date.now() > 1508256900000 && Date.now() <= 1508284800000) {
+						if (that.currentTime > 1508256900000 && that.currentTime <= 1508284800000) {
+							$(".bouns_0").addClass("maskImg");
+							that.isMask = 1;
+						}
 
+						if (that.currentTime > 1508284800000 && that.currentTime <= 1508285700000) {
+							$(".bouns_0").addClass("maskImg");
+							$(".bouns_1").addClass("maskImging");
+						}
+						if (that.currentTime > 1508285700000 && that.currentTime <= 1508313600000) {
+							$(".bouns_0").addClass("maskImg");
+							$(".bouns_1").addClass("maskImg");
 						}
 
+						if (that.currentTime > 1508313600000 && that.currentTime <= 1508314500000) {
+							$(".bouns_0").addClass("maskImg");
+							$(".bouns_1").addClass("maskImg");
+							$(".bouns_2").addClass("maskImging");
+						}
+						if (that.currentTime > 1508314500000 && that.currentTime <= 1508328000000) {
+							$(".bouns_0").addClass("maskImg");
+							$(".bouns_1").addClass("maskImg");
+							$(".bouns_2").addClass("maskImg");
+						}
 
-
-						if (Date.now() <= 1508284800000 && Date.now() > 1508256000000) {
-							that.isBounsMask = 1;
+						if (that.currentTime > 1508328000000 && that.currentTime <= 1508328900000) {
+							$(".bouns_0").addClass("maskImg");
+							$(".bouns_1").addClass("maskImg");
+							$(".bouns_2").addClass("maskImg");
+							$(".bouns_3").addClass("maskImging");
 						}
-						if (Date.now() <= 1508313600000 && Date.now() > 1508284800000) {
-							that.isBounsMask = 2;
+						if (that.currentTime > 1508328900000) {
+							$(".bouns_0").addClass("已经下完");
+							$(".bouns_1").addClass("已经下完");
+							$(".bouns_2").addClass("已经下完");
+							$(".bouns_3").addClass("已经下完");
 						}
-						if (Date.now() <= 1508328000000 && Date.now() > 1508313600000) {
-							that.isBounsMask = 3;
-						}
-						if (Date.now() <= 1508328000000 && Date.now() > 1508328000000)
 
 						if (!that.isStart) {
 			        that.time = setInterval(function () {
@@ -210,6 +251,7 @@ import popup from '../../../common/js/module/popup.js';
 	      }
 			},
 			judgeTime(callback) {
+				console.log(12345);
 				var that = this;
 				if (that.isLimit) {
 	        var date = new Date(),
