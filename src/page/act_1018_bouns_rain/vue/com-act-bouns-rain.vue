@@ -36,7 +36,7 @@ import popup from '../../../common/js/module/popup.js';
 	export default {
 		data() {
 			return {
-				bounsId: 63,
+				bounsId: 64,
 				startTime: "",
 	  		endTime: "",
 	  		isStartGame: false,
