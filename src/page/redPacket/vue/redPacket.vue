@@ -60,12 +60,24 @@
   import share from "../../../../src/common/js/module/share.js"
   export default{
     mounted(){
+        native.Browser.setHead({
+          shareBtn:"1"
+        });
         share.setShareInfo({
           title: "单笔支付满100返100元红包",
           desc: "每个用户只限一次，快来买买买~",
           link: window.location.href,
-          imgUrl: "//pic.davdian.com/free/2017/10/11/%E8%BF%94100%E7%BA%A2%E5%8C%85%E5%88%86%E4%BA%ABicon.jpg"
+          imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/30/redPacket.jpg"
         });
+        window.iosInterface.getShareInfo = function () {
+          var shareInfo = {
+            title: "单笔支付满100返100元红包",
+            desc: "每个用户只限一次，快来买买买~",
+            link: window.location.href,
+            imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/30/redPacket.jpg"
+          }
+          return JSON.stringify(shareInfo);
+        };
         this.init();
     },
     data(){

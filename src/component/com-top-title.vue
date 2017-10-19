@@ -51,7 +51,7 @@
       // document.title与H5标题栏同步
       document.title = this.title;
       native.Browser.setHead({
-        'title': document.title,
+        'title': document.title
       });
 
       // 非native环境下,要显示H5标题栏并且要设置.app的padding-top

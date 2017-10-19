@@ -124,7 +124,7 @@ new Vue({
 
         // 开启10.18弹窗
         setTimeout(function () {
-          if (ts.currentDate == '1017-10-18') {
+          if (ts.currentDate == '2017-10-18') {
             ts.isShowBeginPop = false;
           } else {
             ts.isShowBeginPop = localStorage.getItem('start_1018_flag') ? false : true;
@@ -134,7 +134,7 @@ new Vue({
 
         // 我的10.18弹窗
         setTimeout(function () {
-          if (ts.currentDate == '1017-10-18') {
+          if (ts.currentDate == '2017-10-18') {
             ts.start_1018_flag = true;
           } else {
             ts.start_1018_flag = localStorage.getItem('start_1018_flag');
@@ -177,9 +177,24 @@ new Vue({
           } else if (ts.currentDate <= '2017-10-13') {
             title = '这次玩的就是心跳！低倍通用券限量疯抢！提前预约牛货抢货无忧！';
             desc = '大V店|拼手速抢低倍通用券！好货提前预约，再也不用担心抢不到牛货了>>';
-          } else {
+          } else if (ts.currentDate <= '2017-10-17') {
             title = '这！么！便宜！怪我咯？大V店3周年庆爆品预定火到爆炸！';
             desc = '大V店|100款明星单品提前预定，预付10元定金最高可抵100元！划算到心花怒放';
+          } else if (ts.currentDate == '2017-10-18') {
+            title = '1亿优惠券、5000免单，还有超火爆品限量抢！这波热闹必须凑啊~';
+            desc = '慌了？APP挤不进去？周年庆会场已经燃爆了！1亿优惠券、5000免单，还有超级爆品限量抢！这波热闹必须凑啊>>>';
+          } else if (ts.currentDate == '2017-10-19') {
+            title = '3周年庆全场满100返100，优惠券在手更嗨';
+            desc = '惊！全场满100返100！越买越划算！狂欢继续任性，就看谁手快>>>';
+          } else if (ts.currentDate == '2017-10-20') {
+            title = '3周年庆品牌狂欢不停歇，不止是5折';
+            desc = '恭喜麻麻们您点亮的品牌拿到最大优惠啦！品牌狂欢不止5折，3周年庆就是要把你宠上天>>>';
+          } else if (ts.currentDate == '2017-10-21') {
+            title = '3周年庆连续三天下单即可获得大V店3周年纪念品';
+            desc = '定制纪念品心不心动？10.19-10.21连续三天下单即可获得，数量有限，速度要快>>>';
+          } else {
+            title = '3周年庆抽1018现金大奖';
+            desc = '抽奖啦！1018现金大奖已备好，这波操作会上瘾，实惠到底，真是够任性>>>';
           }
           share.setShareInfo({
             title: title,
