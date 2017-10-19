@@ -9,10 +9,13 @@
   import date from "../../../../src/common/js/module/date.js"
   export default{
       props:['currentDate'],
+      computed:{
+          now(){
+              return this.currentDate;
+          }
+      },
       mounted(){
-          console.log("hahaha",this.currentDate);
-          this.timeStamp();
-          this.show();
+          this.init();
       },
       data(){
         return{
@@ -22,19 +25,16 @@
         }
       },
       methods:{
-        show(){
-          if(this.currentDate >= 1508342400 && this.currentDate <= 1508601599){
+        init(){
+          if(this.now >= '2017-10-19' && this.now <= '2017-10-21'){
             this.isShow=true;
+            if(this.now >= '2017-10-19' && this.now <= '2017-10-20'){
+              this.url='/t-15071.html';
+            }else if( this.now == '2017-10-21'){
+              this.url='/souvenir.html';
+            }
           }else{
             this.isShow=false;
-          }
-        },
-        timeStamp(){
-          var now=date.format(this.currentDate+'000', 'yyyy-MM-dd');
-          if(now >= '2017-10-19' && now <= '2017-10-20'){
-            this.url='/t-15071.html';
-          }else if( now == '2017-10-21'){
-            this.url='/souvenir.html';
           }
         },
         goDetail(){
