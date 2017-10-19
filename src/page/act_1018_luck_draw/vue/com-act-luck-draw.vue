@@ -74,7 +74,7 @@
       <div @click = "handleGoShlping" class = "bounsLink"></div>
     </div>
     <!-- iphone 8 弹框 -->
-    <div @click = "handleIpone" class = "iphoneCont" v-show = "isIphone">
+    <div @click = "handleIphone" class = "iphoneCont" v-show = "isIphone">
       <div class = "iphoneWrapper"></div>
       <img src="//pic.davdian.com/free/1022/iphone8_mask_icon.png">
       <div class = "iponeNums">
@@ -85,7 +85,7 @@
         <!-- 去购物 -->
         <div @click = "handleGoShlping" class = "goShopLink"></div>
         <!-- 查看账户  -->
-        <div @click = "handleBouns" class = "lookLink"></div>
+        <div @click = "handleIphoneBouns" class = "lookLink"></div>
       </div>
     </div>
 
@@ -167,6 +167,71 @@
         },
         deep: true,
       },
+      times: {
+        handler(oldTimes,newTimes) {
+          let that = this;
+          console.log(1);
+          if (this.times == this.cycle) {
+            $.ajax({
+              url: "/api/mg/sale/returnbonus/lotteryBonus",
+              type: "POST",
+              async: false,
+              dataType: "JSON",
+              data: layout.strSign('lottory_luck',{}),
+              success(res) {
+                console.log("res",res);
+                if (!res.code) {
+                  that.luckNum--;
+                  if (res.data.lotteryResult == 'success') {
+                    // 最后两个是现金，其它按次序排的,prize为1的时候是苹果
+                    switch(res.data.bonusInfo.bonusTypeId) {
+                      case 3303: 
+                        that.prize = 1;
+                        break;
+                      case 3306:
+                        that.prize = 3;
+                        break;
+                      case 3308:
+                        that.prize = 4;
+                        break;
+                      case 3307:
+                        that.prize = 5;
+                        break;
+                      case 3305:
+                        that.prize = 6;
+                        break;
+                      case 3304:
+                        that.prize = 7;
+                        break;
+                      case 3311:
+                        that.prize = 0;
+                        break;
+                      case 3310:
+                        that.prize = 2;
+                        break;
+                    }
+                    if (res.data.bonusInfo) {
+                      res.data.bonusInfo.minConsumePrice = parseFloat(Number(res.data.bonusInfo.minConsumePrice));
+                      res.data.bonusInfo.bonusMoney = parseFloat(Number(res.data.bonusInfo.bonusMoney));
+
+                      that.bounsInfos = res.data.bonusInfo;
+                    }
+                  } else {
+                    // 不为success,为fail
+                    popup.info(res.data.msg);
+                  }
+                } else {
+                  // popup.info()
+                }
+              },
+              error(error) {
+                console.log('error',error);
+              },
+            })
+          }
+        },
+        deep: true,
+      },
       rule_form: function () {
         var that = this;
         if (that.rule_form) {
@@ -207,13 +272,13 @@
           $("body,html").removeClass("fixedClass");
         }
       },
-      handleIpone(e) {
+      handleIphone(e) {
         if (e.target.className == "") {
           this.isIphone = false;
           $("body,html").removeClass("fixedClass");
         }
       },
-      handleBouns() {
+      handleIphoneBouns() {
         location.href = "/user_bonus.html";
       },
       handleGoShlping() {
@@ -312,7 +377,7 @@
         that.times += 1;
         that.roll();
 
-        if (that.times > that.cycle+5) {
+        /*if (that.times > that.cycle+10) {
           if (that.isFirstAjax) {
             that.isFirstAjax = false;
             $.ajax({
@@ -372,6 +437,7 @@
               },
             })
           }
+          clearTimeout(that.timer);
           that.timer = setTimeout(that.getInit,that.speed);
           if (that.prize==that.index) {
             that.isFirstAjax = true;
@@ -404,7 +470,7 @@
           if (that.times<that.cycle) {
             that.speed -= 10;
           }else{
-            if (that.times > that.cycle+5 && ((that.prize==0 && that.index==7) || that.prize==that.index+1)) {
+            if (that.times > that.cycle+10 && ((that.prize==0 && that.index==7) || that.prize==that.index+1)) {
               that.speed += 110;
             }else{
               // that.speed += 20;
@@ -414,6 +480,50 @@
           if (that.speed<40) {
             that.speed=40;
           };
+          clearTimeout(that.timer);
+          that.timer = setTimeout(that.getInit,that.speed);
+        }*/
+
+        if (that.times > that.cycle+10 && that.prize==that.index) {
+            clearTimeout(that.showMaskTime);
+            that.showMaskTime = setTimeout(() => {
+              if (that.prize == 0 || that.prize == 2) {
+                that.isMoney = true;
+                $("body,html").addClass("fixedClass");
+                if (that.prize == 0) {
+                  that.bounsNumMoney = 10.18;
+                } else {
+                  that.bounsNumMoney = 1018;
+                }
+              } else if (that.prize == 1) {
+                that.isIphone = true;
+                $("body,html").addClass("fixedClass");
+              } else {
+                that.isBouns = true;
+                $("body,html").addClass("fixedClass");
+              }
+              $(".lottery-unit").removeClass("active");
+              that.prize=-1;
+              that.times=0;
+              that.click=false;
+              console.log(1111111,that.index);
+            }, 1000);
+          
+        }else{
+          if (that.times<that.cycle) {
+            that.speed -= 10;
+          }else{
+            if (that.times > that.cycle+10 && ((that.prize==0 && that.index==7) || that.prize==that.index+1)) {
+              that.speed += 110;
+            }else{
+              // that.speed += 20;
+              that.speed += 35;
+            }
+          }
+          if (that.speed<40) {
+            that.speed=40;
+          };
+          clearTimeout(that.timer);
           that.timer = setTimeout(that.getInit,that.speed);
         }
         return false;
