@@ -4,26 +4,32 @@
 </style>
 <template>
 	<div class = "luckDraw">
-    <img style = "display: none;" src="http://pic.davdian.com/free/ydd1.png">
-    <img style = "display: none;" src="http://pic.davdian.com/free/ydd7.png">
-    <div class = "luckTitle">会员店铺订单支付金额累计每满500元可抽奖一次</div>
+    <img style = "display: none;" src="//pic.davdian.com/free/ydd1.png">
+    <img style = "display: none;" src="//pic.davdian.com/free/ydd7.png">
+    <img style = "display: none;" src="//pic.davdian.com/free/1022/iphone8_mask_icon.png">
+    <div class = "luckTitle">
+      <div>会员店铺订单支付金额累计每满500元可抽奖一次</div>
+      <div>(不包含退货订单)</div>
+    </div>
+
+    <div v-if = "isLogin && visitorStatus == '3' && saleNum != '0'" class = "saleTitle">当前店铺销售额：{{ saleNum }}元</div>
     <div v-if = "isLogin && luckNum" class = "luckNumNav">您有{{ luckNum }}次抽奖机会</div>
     <div class = "luckCont" id="lottery">
       <table border="0" cellpadding="0" cellspacing="0">
         <tr>
-          <td class="lottery-unit lottery-unit-0"><img src="http://pic.davdian.com/avatar_poster/1018money.png"></td>
-          <td class="lottery-unit lottery-unit-1"><img src="http://pic.davdian.com/avatar_poster/renxing_icon.png"></td>
-          <td class="lottery-unit lottery-unit-2"><img src="http://pic.davdian.com/avatar_poster/1018money1.png"></td>
+          <td class="lottery-unit lottery-unit-0"><img src="//pic.davdian.com/avatar_poster/1018money.png"></td>
+          <td class="lottery-unit lottery-unit-1"><img src="//mamaj-oss.oss-cn-beijing.aliyuncs.com/free/1022/iphone8_icon.png"></td>
+          <td class="lottery-unit lottery-unit-2"><img src="//pic.davdian.com/avatar_poster/1018money1.png"></td>
         </tr>
         <tr>
-          <td class="lottery-unit lottery-unit-7"><img src="http://pic.davdian.com/avatar_poster/mysterious_icon.png"></td>
-          <td @click = "handleClick"><img src="http://pic.davdian.com/avatar_poster/luckbtn.png"></td>
-          <td class="lottery-unit lottery-unit-3"><img src="http://pic.davdian.com/avatar_poster/meme_icon.png"></td>
+          <td class="lottery-unit lottery-unit-7"><img src="//pic.davdian.com/avatar_poster/mysterious_icon.png"></td>
+          <td @click = "handleClick"><img src="//pic.davdian.com/avatar_poster/luckbtn.png"></td>
+          <td class="lottery-unit lottery-unit-3"><img src="//pic.davdian.com/avatar_poster/meme_icon.png"></td>
         </tr>
         <tr>
-          <td class="lottery-unit lottery-unit-6"><img src="http://pic.davdian.com/avatar_poster/thanks_icon.png"></td>
-          <td class="lottery-unit lottery-unit-5"><img src="http://pic.davdian.com/avatar_poster/suprice_icon.png"></td>
-          <td class="lottery-unit lottery-unit-4"><img src="http://pic.davdian.com/avatar_poster/god_icon.png"></td>
+          <td class="lottery-unit lottery-unit-6"><img src="//pic.davdian.com/avatar_poster/thanks_icon.png"></td>
+          <td class="lottery-unit lottery-unit-5"><img src="//pic.davdian.com/avatar_poster/renxing_icon.png"></td>
+          <td class="lottery-unit lottery-unit-4"><img src="//pic.davdian.com/avatar_poster/god_icon.png"></td>
         </tr>
       </table>
     </div>
@@ -32,8 +38,8 @@
     
     <div @click = "handleMoney" v-show = "isMoney" class = "moneyCont">
       <div class = "moneyWrapper"></div>
-      <!-- <img src="http://note.youdao.com/yws/res/1629/WEBRESOURCEf68d2764a1c666f4414be7e3b4bfb29f"> -->
-      <img src="http://pic.davdian.com/free/ydd1.png">
+      <!-- <img src="//note.youdao.com/yws/res/1629/WEBRESOURCEf68d2764a1c666f4414be7e3b4bfb29f"> -->
+      <img src="//pic.davdian.com/free/ydd1.png">
       <div class = "moneyNum" v-if = "bounsNumMoney">
         <p>恭喜你抽中</p>
         <p><span class = "moneyNums_icon">{{ bounsNumMoney }}元</span>现金大奖</p>
@@ -47,7 +53,7 @@
     </div>
     <div v-show = "isBouns" class = "bounsCont" @click = "handleBouns">
       <div class = "bounsWrapper"></div>
-      <img src="http://pic.davdian.com/free/ydd7.png">
+      <img src="//pic.davdian.com/free/ydd7.png">
       <div class = "bounsNums_num" v-if = "bounsInfos && bounsInfos.bonusMoney">
         <p>恭喜你抽中</p>
         <p><span class = "bounsNums_w">{{ bounsInfos.bonusMoney }}元</span>红包</p>
@@ -66,6 +72,21 @@
         </div>
       </div>
       <div @click = "handleGoShlping" class = "bounsLink"></div>
+    </div>
+    <!-- iphone 8 弹框 -->
+    <div @click = "handleIpone" class = "iphoneCont" v-show = "isIphone">
+      <div class = "iphoneWrapper"></div>
+      <img src="//pic.davdian.com/free/1022/iphone8_mask_icon.png">
+      <div class = "iponeNums">
+        <p>恭喜你抽中</p>
+        <p><span class = "ipone_icon">iPhone8</span>惊喜大奖</p>
+      </div>
+      <div class = "iponeLink">
+        <!-- 去购物 -->
+        <div @click = "handleGoShlping" class = "goShopLink"></div>
+        <!-- 查看账户  -->
+        <div @click = "handleBouns" class = "lookLink"></div>
+      </div>
     </div>
 
     <!--查看规则-->
@@ -106,6 +127,8 @@
         luckNum: 0,
         // 是否有抽奖机会
         isluck: false,
+        // 销售额
+        saleNum: 0,
 
         index:-1,
         count:0,
@@ -119,11 +142,15 @@
         visitorStatus: 1,
         isMoney: false,
         isBouns: false,
+        isIphone: false,
         lotteryId: 0,
 
         bounsNumMoney: 0,
         bounsInfos: null,
         rule_form: false,
+        // 是否是第一次请求ajax
+        isFirstAjax: true,
+        showMaskTime: null,
       }
     },
     props: [],
@@ -171,16 +198,29 @@
       handleMoney(e) {
         if(e.target.className == "") {
           this.isMoney = false;
+          $("body,html").removeClass("fixedClass");
         }
       },
       handleBouns(e) {
         if (e.target.className == "") {
           this.isBouns = false;
+          $("body,html").removeClass("fixedClass");
         }
+      },
+      handleIpone(e) {
+        if (e.target.className == "") {
+          this.isIphone = false;
+          $("body,html").removeClass("fixedClass");
+        }
+      },
+      handleBouns() {
+        location.href = "/user_bonus.html";
       },
       handleGoShlping() {
         this.isMoney = false;
         this.isBouns = false;
+        this.isIphone = false;
+        $("body,html").removeClass("fixedClass");
       },
       getData() {
         let that = this;
@@ -193,6 +233,8 @@
             if (!res.code) {
               that.luckNum = Number(res.data.number);
               that.visitorStatus = res.visitor_status;
+              that.saleNum = res.data.amount;
+
               if (res.data.number != '0') {
                 that.isluck = true;
               }
@@ -265,39 +307,14 @@
         this.index=index;
         return false;
       },
-      // stop(index) {
-      //   this.prize=index;
-      //   return false;
-      //   console.log("this.price",this.prize);
-      // },
       getInit() {
         let that = this;
         that.times += 1;
         that.roll();
-        if (that.times > that.cycle+10 && that.prize==that.index) {
-          clearTimeout(that.timer);
-          setTimeout(() => {
-            if (that.prize == 0 || that.prize == 2) {
-              that.isMoney = true;
-              if (that.prize == 0) {
-                that.bounsNumMoney = 10.18;
-              } else {
-                that.bounsNumMoney = 1018;
-              }
-            } else {
-              that.isBouns = true;
-            }
-            $(".lottery-unit").removeClass("active");
-            that.prize=-1;
-            that.times=0;
-            that.click=false;
-            console.log(1111111,that.index);
-          }, 500)
-        }else{
-          if (that.times<that.cycle) {
-            that.speed -= 10;
-          }else if(that.times==that.cycle) {
-            // var index = Math.random()*(that.count)|0;
+
+        if (that.times > that.cycle+5) {
+          if (that.isFirstAjax) {
+            that.isFirstAjax = false;
             $.ajax({
               url: "/api/mg/sale/returnbonus/lotteryBonus",
               type: "POST",
@@ -309,7 +326,7 @@
                 if (!res.code) {
                   that.luckNum--;
                   if (res.data.lotteryResult == 'success') {
-                    // 最后两个是现金，其它按次序排的
+                    // 最后两个是现金，其它按次序排的,prize为1的时候是苹果
                     switch(res.data.bonusInfo.bonusTypeId) {
                       case 3303: 
                         that.prize = 1;
@@ -353,12 +370,45 @@
               error(error) {
                 console.log('error',error);
               },
-            }) 
+            })
+          }
+          that.timer = setTimeout(that.getInit,that.speed);
+          if (that.prize==that.index) {
+            that.isFirstAjax = true;
+            clearTimeout(that.timer);
+            clearTimeout(that.showMaskTime);
+            that.showMaskTime = setTimeout(() => {
+              if (that.prize == 0 || that.prize == 2) {
+                that.isMoney = true;
+                $("body,html").addClass("fixedClass");
+                if (that.prize == 0) {
+                  that.bounsNumMoney = 10.18;
+                } else {
+                  that.bounsNumMoney = 1018;
+                }
+              } else if (that.prize == 1) {
+                that.isIphone = true;
+                $("body,html").addClass("fixedClass");
+              } else {
+                that.isBouns = true;
+                $("body,html").addClass("fixedClass");
+              }
+              $(".lottery-unit").removeClass("active");
+              that.prize=-1;
+              that.times=0;
+              that.click=false;
+              console.log(1111111,that.index);
+            }, 1000);
+          }
+        }else{
+          if (that.times<that.cycle) {
+            that.speed -= 10;
           }else{
-            if (that.times > that.cycle+10 && ((that.prize==0 && that.index==7) || that.prize==that.index+1)) {
+            if (that.times > that.cycle+5 && ((that.prize==0 && that.index==7) || that.prize==that.index+1)) {
               that.speed += 110;
             }else{
-              that.speed += 20;
+              // that.speed += 20;
+              that.speed += 35;
             }
           }
           if (that.speed<40) {
