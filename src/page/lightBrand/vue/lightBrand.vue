@@ -125,15 +125,18 @@
           isCompleted:[]
         }
     },
-
     mounted(){
       var that=this;
+      native.Browser.setHead({
+        shareBtn:"1"
+      });
       share.setShareInfo({
         title: "最受欢迎的100个品牌贺3周年庆，这是要搞大事情！",
         desc: "大V店周年庆|这次玩大了！点亮100个品牌，周年庆优惠由你定，快去参加>",
         link: window.location.href,
         imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/16/1.png"
       });
+
       api("/api/mg/sale/bandLitUp/getCenterBands")
         .then(function (result) {
             common.checkRedirect(result);
