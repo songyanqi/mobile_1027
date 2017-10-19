@@ -34,7 +34,8 @@ new Vue({
     'com-act-bouns-rain': require('../../act_1018_bouns_rain/vue/com-act-bouns-rain.vue'),
     'com-act-iphone8': require('../vue/iphone8.vue'),
     'com-act-redpacket': require('../vue/redPacket.vue'),
-    'com-act-souvenir': require('../vue/souvenir.vue')
+    'com-act-souvenir': require('../vue/souvenir.vue'),
+    'com-act-luck-draw': require('../../act_1018_luck_draw/vue/com-act-luck-draw.vue'),
   },
   data() {
     return {

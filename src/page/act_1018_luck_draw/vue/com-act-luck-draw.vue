@@ -1,5 +1,6 @@
 <style  lang="sass"  rel="stylesheet/scss">
-  
+  @import "../../../common/css/common.scss";
+  @import "../css/act_1018_luck_draw.scss";
 </style>
 <template>
 	<div class = "luckDraw">
