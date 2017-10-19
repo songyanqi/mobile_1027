@@ -25,7 +25,9 @@
         </tr>
       </table>
     </div>
-    <!-- <div class = "mask"></div> -->
+    <!-- 活动规则 -->
+    <div @click = "handleReserveRole" class = "bounsLuckRule">活动规则</div>
+    
     <div @click = "handleMoney" v-if = "isMoney" class = "moneyCont">
       <div class = "moneyWrapper"></div>
       <!-- <img src="http://note.youdao.com/yws/res/1629/WEBRESOURCEf68d2764a1c666f4414be7e3b4bfb29f"> -->
@@ -42,7 +44,6 @@
       </div>
     </div>
     <div v-if = "isBouns" class = "bounsCont" @click = "handleBouns">
-      <!-- <img src="http://note.youdao.com/yws/res/1627/WEBRESOURCE967a424bdc653fc1cc494478785b45ba"> -->
       <div class = "bounsWrapper"></div>
       <img src="http://pic.davdian.com/free/ydd2.png">
       <div class = "bounsInfo" v-if = "bounsInfos">
@@ -57,6 +58,27 @@
         </div>
       </div>
       <div @click = "handleGoShlping" class = "bounsLink"></div>
+    </div>
+
+    <!--查看规则-->
+    <div v-if="rule_form" class="com-popup-base2" @click="rule_form = false">
+      <div class="table-cell">
+        <div v-show="rule_form" class="box" @click.stop="events">
+          <div>活动规则</div>
+          <div>
+            <p>1.抽奖时间：2017.10.22 00:00:00-2017.10.22 23:59:59；</p>
+            <p>2.本活动仅限大V店会员参与；</p>
+            <p>3.抽奖规则：10月18日至10月22日期间，会员购物或销售累计实际支付金额（含返现支付部分）每满500元在10月22日即有一次抽奖机会，奖品随机抽取，100%中奖；</p>
+            <p>4.奖品发放方式：<br>
+            抽中现金，以返现方式实时返至【我的】－【总额】－【待结算金额】－【其他收入】中，30天后如无退货将转到【可提现金额】；</br>
+            抽中红包，红包实时发放到会员的红包账户，抽奖获得的红包请在2017.10.31 23:59:59前使用，过期失效；</p>
+            <p>5.如遇恶意订单、退货等导致不满足抽奖条件的，相应奖励将收回；</p>
+            <p>6.开通会员订单不参与该活动;</p>
+            <p>7.详情可咨询大V店客服。</p>
+          </div>
+          <div @click="close_what_invite"></div>
+        </div>
+      </div>
     </div>
 	</div>
 </template>
@@ -93,6 +115,7 @@
 
         bounsNumMoney: 0,
         bounsInfos: null,
+        rule_form: false,
       }
     },
     props: [],
@@ -109,8 +132,31 @@
         },
         deep: true,
       },
+      rule_form: function () {
+        var that = this;
+        if (that.rule_form) {
+          if (document.documentElement && document.documentElement.scrollTop) {
+            this.scrollTop = document.documentElement.scrollTop;
+          } else if (document.body) {
+            this.scrollTop = document.body.scrollTop;
+          }
+          document.body.style.top = -this.scrollTop + 'px';
+          document.body.classList.add("bodyFix");
+
+        } else {
+          document.body.classList.remove("bodyFix");
+          $(document).scrollTop(this.scrollTop);
+
+        }
+      }
     },
     methods: {
+      handleReserveRole() {
+        this.rule_form = true;
+      },
+      close_what_invite() {
+        this.rule_form = false;
+      },
       handleAccount() {
         location.href = "http://s.davdian.com/index.php?m=admin&c=newIncome&a=detail&status=0&cat=5";
       },
@@ -236,8 +282,8 @@
               }
             } else {
               that.isBouns = true;
-              // that.bounsInfos = res.data.bonusInfo;
             }
+            $(".lottery-unit").removeClass("active");
           }else{
             if (that.times<that.cycle) {
               that.speed -= 10;
