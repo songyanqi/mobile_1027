@@ -174,7 +174,11 @@
 	}
 	.bounsNav:after {
 		position: absolute;
-		content: "";
+    content: "";
+    border-right: 1px solid #fff;
+    height: 130%;
+    right: -0.05rem;
+    top: 0;
 	}
 	.bounsNav2 {
 		left: 0.25rem;
@@ -220,7 +224,7 @@
     height: 0.38rem;
     transform: translateX(-50%);
 	}
-	.@media screen and (max-width: 320px) {
+	@media screen and (max-width: 320px) {
 		.bounsNav2 {
 			left: 0;
 			-webkit-transform: scale(.8rem);
