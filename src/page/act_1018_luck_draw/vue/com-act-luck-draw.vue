@@ -302,28 +302,28 @@
                     if (res.data.lotteryResult == 'success') {
                       // 最后两个是现金，其它按次序排的
                       switch(res.data.bonusInfo.bonusTypeId) {
-                        case 2594: 
+                        case 3303: 
                           that.prize = 1;
                           break;
-                        case 2593:
+                        case 3306:
                           that.prize = 3;
                           break;
-                        case 2592:
+                        case 3308:
                           that.prize = 4;
                           break;
-                        case 2588:
+                        case 3307:
                           that.prize = 5;
                           break;
-                        case 2585:
-                          that.prize = 5;
-                          break;
-                        case 2582:
+                        case 3305:
                           that.prize = 6;
                           break;
-                        case 2597:
+                        case 3304:
+                          that.prize = 7;
+                          break;
+                        case 3311:
                           that.prize = 0;
                           break;
-                        case 2596:
+                        case 3310:
                           that.prize = 2;
                           break;
                       }
@@ -357,6 +357,7 @@
             };
             that.timer = setTimeout(that.getInit,that.speed);
           }
+
           return false;
       },
     }
