@@ -38,7 +38,7 @@
         <!-- 去购物 -->
         <a @click = "handleGoShlping" class = "goShopLink" href="javascript:void(0)"></a>
         <!-- 查看账户  -->
-        <a class = "lookLink" href=""></a>
+        <a @click = "handleAccount" class = "lookLink" href=""></a>
       </div>
     </div>
     <div v-if = "isBouns" class = "bounsCont" @click = "handleBouns">
@@ -111,6 +111,9 @@
       },
     },
     methods: {
+      handleAccount() {
+        location.href = "http://s.davdian.com/index.php?m=admin&c=newIncome&a=detail&status=0&cat=5";
+      },
       handleMoney(e) {
         if(e.target.className != "moneyWrapper") {
           this.isMoney = false;
