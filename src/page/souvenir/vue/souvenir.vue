@@ -17,34 +17,44 @@
     </template>
 
     <template v-if="isLogin">
+      <template v-if="!isVip">
+        <!--非会员-->
+        <div class="big_img">
+          <!--<img src="//pic.davdian.com/free/2017/09/29/bg2.png" alt="">-->
+        </div>
+        <div class="nologin">会员才能参与该活动哦~</div>
+        <div class="btn1" @click="vip">
+          开通会员
+        </div>
+      </template>
+      <template v-if="isVip">
+        <!--活动中-->
+        <div class="big_img3">
+          <!--<img src="//pic.davdian.com/free/2017/09/30/bg5.png" alt="">-->
+        </div>
 
-    <!--活动中-->
-    <div class="big_img3">
-      <!--<img src="//pic.davdian.com/free/2017/09/30/bg5.png" alt="">-->
-    </div>
-
-    <div class="range">
-      <div class="date">
-        <template v-for="item in realTimeList">
-          <div :class="{ 'readyshop_date': item.isBuy==1,'noshop_date':item.isBuy==0}" class="default" v-text="item.text"></div>
-        </template>
-      </div>
-      <div class="circle">
-        <template v-for="item in realTimeList">
-          <div v-if="item.isBuy==1"><img src="//pic.davdian.com/free/2017/09/30/%E8%BF%9B%E5%BA%A61%E5%B7%B2%E9%80%89%E4%B8%AD.png" alt=""></div>
-          <div v-if="item.isBuy==0"><img src="//pic.davdian.com/free/2017/09/30/%E8%BF%9B%E5%BA%A6%E6%9C%AA%E9%80%89%E4%B8%AD.png" alt=""></div>
-        </template>
-      </div>
-      <div class="state">
-        <template v-for="item in realTimeList">
-          <div v-if="item.isBuy==1" class="default2 readyshop_date">已购物</div>
-          <div v-if="item.isBuy==0" class="default2 noshop_date">未购物</div>
-        </template>
-      </div>
-    </div>
+        <div class="range">
+          <div class="date">
+            <template v-for="item in realTimeList">
+              <div :class="{ 'readyshop_date': item.isBuy==1,'noshop_date':item.isBuy==0}" class="default" v-text="item.text"></div>
+            </template>
+          </div>
+          <div class="circle">
+            <template v-for="item in realTimeList">
+              <div v-if="item.isBuy==1"><img src="//pic.davdian.com/free/2017/09/30/%E8%BF%9B%E5%BA%A61%E5%B7%B2%E9%80%89%E4%B8%AD.png" alt=""></div>
+              <div v-if="item.isBuy==0"><img src="//pic.davdian.com/free/2017/09/30/%E8%BF%9B%E5%BA%A6%E6%9C%AA%E9%80%89%E4%B8%AD.png" alt=""></div>
+            </template>
+          </div>
+          <div class="state">
+            <template v-for="item in realTimeList">
+              <div v-if="item.isBuy==1" class="default2 readyshop_date">已购物</div>
+              <div v-if="item.isBuy==0" class="default2 noshop_date">未购物</div>
+            </template>
+          </div>
+        </div>
 
 
-      <template v-if="state==0">
+        <template v-if="state==0">
           <template v-if="shopStocks>0">
             <div class="noshop" v-if="buyStatus=='failed'">很遗憾您错过了这次活动~</div>
             <div class="noshop" v-if="buyStatus=='haveTwo'">再购物一次就能获得周年庆纪念品啦</div>
@@ -68,7 +78,7 @@
             <div style="width: 1.1rem;border-radius: 12px 0 0 12px;"><img :src="imageUrl" alt=""></div>
             <div style="width: 1.5rem;">
               <div class="souvenir">周年庆纪念品</div>
-              <div class="souvenir_detail">查看详情>>></div>
+              <div class="souvenir_detail" @click="go_topic">查看详情>>></div>
             </div>
           </div>
 
@@ -83,39 +93,40 @@
           </div>
 
 
-      </template>
-
-      <template v-if="state==2">
-
-        <div class="noshop">活动结束啦~~</div>
-
-        <template v-if="getSouvenir==0">
-          <div class="goshop">很遗憾您错过了这次活动</div>
-          <div class="btn_all" @click="goActMain">
-            快去买买买
-          </div>
         </template>
 
-        <template v-if="getSouvenir==1 && buyStatus=='readyGet'">
-          <div class="goshop">已获得三周年纪念品</div>
-          <div class="btn_all" @click="goActMain">
-            快去买买买
+        <template v-if="state==2">
+
+          <div class="noshop">活动结束啦~~</div>
+
+          <template v-if="getSouvenir==0">
+            <div class="goshop">很遗憾您错过了这次活动</div>
+            <div class="btn_all" @click="goActMain">
+              快去买买买
+            </div>
+          </template>
+
+          <template v-if="getSouvenir==1 && buyStatus=='readyGet'">
+            <div class="goshop">已获得三周年纪念品</div>
+            <div class="btn_all" @click="goActMain">
+              快去买买买
+            </div>
+          </template>
+
+          <div class="only" v-if="shopStocks>0">仅剩 <span v-text="shopStocks"></span> 个名额</div>
+          <div class="only" v-if="shopStocks==0">没有名额啦</div>
+
+          <div class="bg"></div>
+          <div class="goods">
+            <div style="width: 1.1rem;border-radius: 12px 0 0 12px;"><img :src="imageUrl" alt=""></div>
+            <div style="width: 1.5rem;">
+              <div class="souvenir">周年庆纪念品</div>
+              <div class="souvenir_detail" @click="go_topic">查看详情>>></div>
+            </div>
           </div>
+
+
         </template>
-
-        <div class="only" v-if="shopStocks>0">仅剩 <span v-text="shopStocks"></span> 个名额</div>
-        <div class="only" v-if="shopStocks==0">没有名额啦</div>
-
-        <div class="bg"></div>
-        <div class="goods">
-          <div style="width: 1.1rem;border-radius: 12px 0 0 12px;"><img :src="imageUrl" alt=""></div>
-          <div style="width: 1.5rem;">
-            <div class="souvenir">周年庆纪念品</div>
-            <div class="souvenir_detail">查看详情>>></div>
-          </div>
-        </div>
-
-
       </template>
 
     </template>
@@ -141,6 +152,7 @@
   import login from "../../../../src/common/js/module/login.js"
   import common from "../../../../src/common/js/common.js"
   import native from "../../../../src/common/js/module/native.js"
+  import api from "../../../../utils/api.es6"
   export default{
     mounted(){
       share.setShareInfo({
@@ -150,20 +162,18 @@
         imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/12/%E6%BB%A1399%E9%80%81%E5%A4%A7V%E4%B8%89%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5%E5%93%81%E5%88%86%E4%BA%AB%E7%BC%A9%E7%95%A5%E5%9B%BE.png"
       });
       this.init();
-      this.checkStatus();
     },
     data(){
       return{
         state:null,
-        gooodsId:null,
         imageUrl:null,
         shopStocks:null,
         timeList:[],
         isApp:util.utils.isApp(),
         isLogin:null,
+        isVip:null,
         buyStatus:null,
-        getSouvenir:null,
-        imageUrl:''
+        getSouvenir:null
       }
     },
     computed:{
@@ -189,7 +199,7 @@
     methods:{
       checkStatus(){
           var realTimeList=this.realTimeList;
-          if(!(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1 )){
+          if(!(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1)){
               this.buyStatus='failed';
           }else if(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1 && realTimeList[2].isBuy==0){
               this.buyStatus='haveTwo';
@@ -204,6 +214,24 @@
           })
         }else{
           window.location.href="/act_1018_main.html";
+        }
+      },
+      go_topic(){
+        if(this.isApp){
+          native.Browser.open({
+            url: "/600562.html?rp=index&rl=timeshop_goods-728-66559"
+          })
+        }else{
+          window.location.href="/600562.html?rp=index&rl=timeshop_goods-728-66559";
+        }
+      },
+      vip(){
+        if(this.isApp){
+          native.Browser.open({
+            url: "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=invite_button"
+          })
+        }else{
+          window.location.href="/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=invite_button";
         }
       },
       getStaus(){
@@ -231,30 +259,44 @@
         if(this.getStaus()==0){
           this.isLogin=false;
         }else {
-          this.isLogin=true;
+          if(this.getStaus()==1){
+            this.isVip=false;
+            this.isLogin=true;
+          }else if(this.getStaus()==3){
+            this.isLogin=true;
+            this.isVip=true;
 
-          api("/api/mg/sale/continueshopgift/index")
-            .then(function (result) {
-              common.checkRedirect(result);
-              if(result.code==0){
-                if(result.data){
-                  that.state=result.data.code;
-                  that.gooodsId=result.data.gooodsId;
-                  that.goodsImg=result.data.goodsImg;
-                  that.shopStocks=result.data.shopStocks;
-                  that.timeList=result.data.timeList;
-                }
-              }else{
-                if(result.msg){
-                  alert("code:"+result.code+",msg:"+result.msg);
+            api("/api/mg/sale/continueshopgift/index")
+              .then(function (result) {
+                common.checkRedirect(result);
+                if(result.code==0){
+                  if(result.data){
+                    that.state=result.data.code;
+                    that.imageUrl=result.data.imageUrl;
+                    that.shopStocks=result.data.shopStocks;
+                    that.timeList=result.data.timeList;
+                    that.getSouvenir=result.data.getSouvenir;
+                    that.checkStatus();
+                  }
                 }else{
-                  alert("code:"+result.code);
+                  if(result.msg){
+                    alert("code:"+result.code+",msg:"+result.msg);
+                  }else{
+                    alert("code:"+result.code);
+                  }
                 }
-              }
-            })
-            .catch(function (e) {
-              alert("e",e);
-            });
+              })
+              .catch(function (e) {
+                alert("e",e);
+              });
+          }
+
+
+//          var result = require('../json/souvenir.json');
+//          that.state=result.data.code;
+//          that.imageUrl=result.data.imageUrl;
+//          that.shopStocks=result.data.shopStocks;
+//          that.timeList=result.data.timeList;
         }
       }
     }
