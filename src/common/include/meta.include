@@ -2,4 +2,5 @@
   <meta name="renderer" content="webkit">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
   <script src="[[static]]/common/js/autoRootSize.js[[v]]"></script>
+  <script>window.isHtml = 1;</script>
   <link rel="stylesheet" href="[[vendor]]/normalize/7.0.0/normalize.min.css">

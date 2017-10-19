@@ -109,6 +109,7 @@
   import native from "../../../../src/common/js/module/native.js"
   import login from "../../../../src/common/js/module/login.js"
   import share from "../../../../src/common/js/module/share.js"
+  import common from '../../../../src/common/js/common.js';
   export default{
     data(){
         return {
@@ -135,6 +136,7 @@
       });
       api("/api/mg/sale/bandLitUp/getCenterBands")
         .then(function (result) {
+            common.checkRedirect(result);
             if(result.code==0){
               if(result.data){
                 that.dataList=result.data.dataList;
@@ -245,6 +247,7 @@
           };
           api("/api/mg/sale/bandLitUp/lightUp",obj)
             .then(function (result) {
+              common.checkRedirect(result);
               if(result.code==0){
                 if(result.data.success==1){
 

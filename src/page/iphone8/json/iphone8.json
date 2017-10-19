@@ -1,0 +1,147 @@
+
+{
+  "code": 0,
+  "shop_url": "http://45330837.davdian.com",
+  "visitor_status": 3,
+  "sess_key": "4e3631bc3b6fe44cf2000150154153ca3936e640",
+  "data": {
+    "awardCount": 11,
+    "remainCount" : 1,
+    "awardMoney": 100000,
+    "sales": 12345.34,
+    "isAdviser": 1,
+    "startTime": "15002133232",
+    "endTime": "15002323232",
+    "awardList": [
+      {
+        "userId" : "123",
+        "userName": "吗很难",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "嘻嘻哈哈",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "马赫男",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },{
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },{
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },{
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },{
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },{
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },{
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },{
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      },
+      {
+        "userId" : "123",
+        "userName": "Jixin",
+        "awatar": "//pic.davdian.com/free/2017/09/30/1.png"
+      }
+    ]
+
+  }
+}

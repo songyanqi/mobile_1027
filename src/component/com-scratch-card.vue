@@ -12,6 +12,8 @@
 </template>
 
 <script>
+  import util from '../common/js/module/util.js';
+
   export default {
     props: {
       // 浮层上提示刮奖文字,有则显示
@@ -120,10 +122,10 @@
           //
           function scrollD (direction) {
             if(direction == "top"){
-              return document.body.scrollTop || window.pageYOffset || document.documentElement.scrollTop || 0;
+              return util.getDocumentScrollTop();
             }
             if(direction == "left"){
-              return document.body.scrollLeft || window.pageXOffset || document.documentElement.scrollLeft || 0;
+              return util.getDocumentScrollLeft();
             }
           }
 

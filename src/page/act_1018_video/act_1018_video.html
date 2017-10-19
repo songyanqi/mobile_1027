@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script>window.designWidth = 1245;</script>
   @@include('meta.include')
   <link rel="stylesheet" href="[[static]]/page/act_1018_video/css/act_1018_video.css[[v]]">
 </head>
@@ -15,18 +14,18 @@
 
     <!--文字-->
     <div class="words">
-      大V店是致力于亲子阅读、妈妈成长的会员电商平台<br>
-      经过3年以来的点点滴滴<br>
-      欢笑、泪水、感动与妈妈们共同经历<br>
-      观看视频来回顾我们的那些年
+      大V店是致力于亲子阅读、妈妈成长的会员电商平台，<br>
+      三年来最幸运的就是遇见了这么多可爱的大V妈妈，<br>
+      因为有你们，我们仿佛拥有了强大的动力！<br>
+      今天大V店三岁啦！陪伴是最长情的告白，<br>
+      今后的路我们还要一起走~
     </div>
 
     <!--电视机-->
     <!--<div class="tv" @click="videoClick">-->
     <div class="tv">
-      <video poster="[[static]]/page/act_1018_video/img/poster.jpg[[v]]]" controls>
-        <!--<source src="//pic.davdian.com/free/1018/head.mp4" type="video/mp4"/>-->
-        <source src="//123.125.110.150/vhot2.qqvideo.tc.qq.com/AAyYPVKRC4P5IhDMYE_3fz2J89ywIculJiskky4ee1zg/y0337qanb8w.m701.mp4?sdtfrom=v1103&guid=ad82725148515b2b06c5dca17c7a2d36&vkey=1E6E289C4112E6D622628AA0347C39114D1FA4F058FB9EE5A159871C893FD27C54B9E6B5D6A3CB99900A42EE2ACF9F55354D094FCE6B49FF487458198B819B38E0CDADA09B8BF667376198DCADB78E5CC0D8F6FF8F11FDD4A777261761FC815DD74D2EDAA75131B259D380FE97456E3904520282F43CC14D&platform=2" type="video/mp4"/>
+      <video poster="//pic.davdian.com/free/1018/zhufu-poster.jpg" controls>
+        <source src="//pic.davdian.com/free/1018/zhufu-5.mp4" type="video/mp4"/>
       </video>
       <!--<img class="start" src="[[static]]/page/act_1018_video/img/start.png[[v]]" v-show="!videoStarted">-->
     </div>
@@ -42,6 +41,7 @@
 
   @@include('vendor.include')
   @@include('js.include')
+  <script src="//cdn.bootcss.com/video.js/6.3.3/video.min.js"></script>
   <script src="[[static]]/page/act_1018_video/js/act_1018_video.js[[v]]"></script>
 </body>
 </html>

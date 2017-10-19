@@ -81,7 +81,7 @@ export default {
       let verify = function (response) {
         let appInfo = null;
 
-        if (response) {
+        if (response && response.wx_info) {
           // alert('wx_info:' + JSON.stringify(response.wx_info));
           // 使用接口公参的微信验证信息
           appInfo = {
