@@ -45,14 +45,20 @@
     </div>
     <div v-if = "isBouns" class = "bounsCont" @click = "handleBouns">
       <div class = "bounsWrapper"></div>
-      <img src="http://pic.davdian.com/free/ydd2.png">
+      <img src="http://pic.davdian.com/free/ydd7.png">
+      <div class = "bounsNums_num">
+        <p>恭喜你抽中</p>
+        <p><span class = "bounsNums_w">{{ bounsInfos.bonusMoney }}元</span>红包</p>
+      </div>
       <div class = "bounsInfo" v-if = "bounsInfos">
         <div class = "bounsNav">
-          <div class = "bouns_Nums"><span class = "bouns_m">¥</span><span class = "bouns_N">{{ bounsInfos.bonusMoney }}</span><span class = "bouns_nm">元</span></div>
+          <div class = "bouns_Nums"><span class = "bouns_m">¥</span><span class = "bouns_N">{{ bounsInfos.bonusMoney }}</span>
+          <!-- <span class = "bouns_nm">元</span> -->
+          </div>
           <div class = "bouns_limit">满{{ bounsInfos.minConsumePrice }}元可用</div>
         </div>
         <div class = "bounsNav2">
-          <div class = "bouns_b">仅购买</div>
+          <!-- <div class = "bouns_b">仅购买</div> -->
           <div class = "bouns_l">{{ bounsInfos.bonusName }}</div>
           <div class = "bouns_d">{{ bounsInfos.useBeginTime }} - {{ bounsInfos.useEndTime }}</div>
         </div>
@@ -266,13 +272,14 @@
       getInit() {
         let that = this;
         that.times += 1;
-          that.roll();
-          if (that.times > that.cycle+10 && that.prize==that.index) {
-            clearTimeout(that.timer);
-            that.prize=-1;
-            that.times=0;
-            that.click=false;
-            console.log(1111111,that.index);
+        that.roll();
+        if (that.times > that.cycle+10 && that.prize==that.index) {
+          clearTimeout(that.timer);
+          that.prize=-1;
+          that.times=0;
+          that.click=false;
+          console.log(1111111,that.index);
+          setTimeout(() => {
             if (that.prize == 0 || that.prize == 2) {
               that.isMoney = true;
               if (that.prize == 0) {
@@ -284,81 +291,81 @@
               that.isBouns = true;
             }
             $(".lottery-unit").removeClass("active");
-          }else{
-            if (that.times<that.cycle) {
-              that.speed -= 10;
-            }else if(that.times==that.cycle) {
-              // var index = Math.random()*(that.count)|0;
-              $.ajax({
-                url: "/api/mg/sale/returnbonus/lotteryBonus",
-                type: "POST",
-                async: false,
-                dataType: "JSON",
-                data: layout.strSign('lottory_luck',{}),
-                success(res) {
-                  console.log("res",res);
-                  if (!res.code) {
-                    that.luckNum--;
-                    if (res.data.lotteryResult == 'success') {
-                      // 最后两个是现金，其它按次序排的
-                      switch(res.data.bonusInfo.bonusTypeId) {
-                        case 3303: 
-                          that.prize = 1;
-                          break;
-                        case 3306:
-                          that.prize = 3;
-                          break;
-                        case 3308:
-                          that.prize = 4;
-                          break;
-                        case 3307:
-                          that.prize = 5;
-                          break;
-                        case 3305:
-                          that.prize = 6;
-                          break;
-                        case 3304:
-                          that.prize = 7;
-                          break;
-                        case 3311:
-                          that.prize = 0;
-                          break;
-                        case 3310:
-                          that.prize = 2;
-                          break;
-                      }
-                      if (res.data.bonusInfo) {
-                        res.data.bonusInfo.minConsumePrice = parseFloat(Number(res.data.bonusInfo.minConsumePrice));
-                        res.data.bonusInfo.bonusMoney = parseFloat(Number(res.data.bonusInfo.bonusMoney));
+          }, 500)
+        }else{
+          if (that.times<that.cycle) {
+            that.speed -= 10;
+          }else if(that.times==that.cycle) {
+            // var index = Math.random()*(that.count)|0;
+            $.ajax({
+              url: "/api/mg/sale/returnbonus/lotteryBonus",
+              type: "POST",
+              async: false,
+              dataType: "JSON",
+              data: layout.strSign('lottory_luck',{}),
+              success(res) {
+                console.log("res",res);
+                if (!res.code) {
+                  that.luckNum--;
+                  if (res.data.lotteryResult == 'success') {
+                    // 最后两个是现金，其它按次序排的
+                    switch(res.data.bonusInfo.bonusTypeId) {
+                      case 3303: 
+                        that.prize = 1;
+                        break;
+                      case 3306:
+                        that.prize = 3;
+                        break;
+                      case 3308:
+                        that.prize = 4;
+                        break;
+                      case 3307:
+                        that.prize = 5;
+                        break;
+                      case 3305:
+                        that.prize = 6;
+                        break;
+                      case 3304:
+                        that.prize = 7;
+                        break;
+                      case 3311:
+                        that.prize = 0;
+                        break;
+                      case 3310:
+                        that.prize = 2;
+                        break;
+                    }
+                    if (res.data.bonusInfo) {
+                      res.data.bonusInfo.minConsumePrice = parseFloat(Number(res.data.bonusInfo.minConsumePrice));
+                      res.data.bonusInfo.bonusMoney = parseFloat(Number(res.data.bonusInfo.bonusMoney));
 
-                        that.bounsInfos = res.data.bonusInfo;
-                      }
-                    } else {
-                      // 不为success,为fail
-                      popup.info(res.data.msg);
+                      that.bounsInfos = res.data.bonusInfo;
                     }
                   } else {
-                    // popup.info()
+                    // 不为success,为fail
+                    popup.info(res.data.msg);
                   }
-                },
-                error(error) {
-                  console.log('error',error);
-                },
-              }) 
+                } else {
+                  // popup.info()
+                }
+              },
+              error(error) {
+                console.log('error',error);
+              },
+            }) 
+          }else{
+            if (that.times > that.cycle+10 && ((that.prize==0 && that.index==7) || that.prize==that.index+1)) {
+              that.speed += 110;
             }else{
-              if (that.times > that.cycle+10 && ((that.prize==0 && that.index==7) || that.prize==that.index+1)) {
-                that.speed += 110;
-              }else{
-                that.speed += 20;
-              }
+              that.speed += 20;
             }
-            if (that.speed<40) {
-              that.speed=40;
-            };
-            that.timer = setTimeout(that.getInit,that.speed);
           }
-
-          return false;
+          if (that.speed<40) {
+            that.speed=40;
+          };
+          that.timer = setTimeout(that.getInit,that.speed);
+        }
+        return false;
       },
     }
   }
