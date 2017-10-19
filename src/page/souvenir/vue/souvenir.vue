@@ -102,6 +102,7 @@
   import share from "../../../../src/common/js/module/share.js"
   import util from "../../../../utils/utils.es6"
   import login from "../../../../src/common/js/module/login.js"
+  import common from "../../../../src/common/js/common.js"
   import native from "../../../../src/common/js/module/native.js"
   export default{
     mounted(){
@@ -182,20 +183,35 @@
         }
       },
       init(){
+        var that=this;
         if(this.getStaus()==0){
           this.isLogin=false;
         }else {
           this.isLogin=true;
-          var result =require('../json/souvenir.json');
-          console.log(result);
 
-          this.state=result.data.code;
-          this.gooodsId=result.data.gooodsId;
-          this.goodsImg=result.data.goodsImg;
-          this.shopStocks=result.data.shopStocks;
-          this.timeList=result.data.timeList;
+          api("/api/mg/sale/continueshopgift/index")
+            .then(function (result) {
+              common.checkRedirect(result);
+              if(result.code==0){
+                if(result.data){
+                  that.state=result.data.code;
+                  that.gooodsId=result.data.gooodsId;
+                  that.goodsImg=result.data.goodsImg;
+                  that.shopStocks=result.data.shopStocks;
+                  that.timeList=result.data.timeList;
+                }
+              }else{
+                if(result.msg){
+                  alert("code:"+result.code+",msg:"+result.msg);
+                }else{
+                  alert("code:"+result.code);
+                }
+              }
+            })
+            .catch(function (e) {
+              alert("e",e);
+            });
         }
-
       }
     }
   }
