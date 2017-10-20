@@ -156,7 +156,7 @@
   export default{
     mounted(){
       native.Browser.setHead({
-        shareBtn:"1"
+        shareBtn: "1"
       });
       share.setShareInfo({
         title: "连续三天购物可获得大V店纪念品",
@@ -167,90 +167,90 @@
       this.init();
     },
     data(){
-      return{
-        state:null,
-        imageUrl:null,
-        shopStocks:null,
-        timeList:[],
-        isApp:util.utils.isApp(),
-        isLogin:null,
-        isVip:null,
-        buyStatus:null,
-        getSouvenir:null
+      return {
+        state: null,
+        imageUrl: null,
+        shopStocks: null,
+        timeList: [],
+        isApp: util.utils.isApp(),
+        isLogin: null,
+        isVip: null,
+        buyStatus: null,
+        getSouvenir: null
       }
     },
-    computed:{
+    computed: {
       realTimeList(){
-        var arr=[];
-        this.timeList.map(function (item,index) {
-          if(item.time=='20171019'){
-            item.text='10.19';
-            Vue.set(arr,0,item);
+        var arr = [];
+        this.timeList.map(function (item, index) {
+          if (item.time == '20171019') {
+            item.text = '10.19';
+            Vue.set(arr, 0, item);
           }
-          if(item.time=='20171020'){
-            item.text='10.20';
-            Vue.set(arr,1,item);
+          if (item.time == '20171020') {
+            item.text = '10.20';
+            Vue.set(arr, 1, item);
           }
-          if(item.time=='20171021'){
-            item.text='10.21';
-            Vue.set(arr,2,item);
+          if (item.time == '20171021') {
+            item.text = '10.21';
+            Vue.set(arr, 2, item);
           }
         });
         return arr;
       }
     },
-    methods:{
+    methods: {
       checkStatus(){
-          var realTimeList=this.realTimeList;
-          if(!(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1)){
-              this.buyStatus='failed';
-          }else if(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1 && realTimeList[2].isBuy==0){
-              this.buyStatus='haveTwo';
-          }else if(realTimeList[0].isBuy==1 && realTimeList[1].isBuy==1 && realTimeList[2].isBuy==1){
-              this.buyStatus='readyGet';
-          }
+        var realTimeList = this.realTimeList;
+        if (!(realTimeList[0].isBuy == 1 && realTimeList[1].isBuy == 1)) {
+          this.buyStatus = 'failed';
+        } else if (realTimeList[0].isBuy == 1 && realTimeList[1].isBuy == 1 && realTimeList[2].isBuy == 0) {
+          this.buyStatus = 'haveTwo';
+        } else if (realTimeList[0].isBuy == 1 && realTimeList[1].isBuy == 1 && realTimeList[2].isBuy == 1) {
+          this.buyStatus = 'readyGet';
+        }
       },
       goActMain(){
-        if(this.isApp){
+        if (this.isApp) {
           native.Browser.open({
             url: "/act_1018_main.html"
           })
-        }else{
-          window.location.href="/act_1018_main.html";
+        } else {
+          window.location.href = "/act_1018_main.html";
         }
       },
       go_topic(){
-        if(this.isApp){
+        if (this.isApp) {
           native.Browser.open({
             url: "/600562.html?rp=index&rl=timeshop_goods-728-66559"
           })
-        }else{
-          window.location.href="/600562.html?rp=index&rl=timeshop_goods-728-66559";
+        } else {
+          window.location.href = "/600562.html?rp=index&rl=timeshop_goods-728-66559";
         }
       },
       vip(){
-        if(this.isApp){
+        if (this.isApp) {
           native.Browser.open({
             url: "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=invite_button"
           })
-        }else{
-          window.location.href="/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=invite_button";
+        } else {
+          window.location.href = "/index.php?c=ShopGoods&a=index&id=348&rp=index&rl=invite_button";
         }
       },
       getStaus(){
-        var token=login.getDvdsid().substr(32,8);
-        if(token=="00000001"){
+        var token = login.getDvdsid().substr(32, 8);
+        if (token == "00000001") {
           return 0;
-        }else{
-          if(token.substr(7,1)==1){
+        } else {
+          if (token.substr(7, 1) == 1) {
             return 1;
-          }else{
+          } else {
             return 3
           }
         }
       },
       login(){
-        var that=this;
+        var that = this;
         if (that.isApp) {
           native.Account.login()
         } else {
@@ -258,33 +258,33 @@
         }
       },
       init(){
-        var that=this;
-        if(this.getStaus()==0){
-          this.isLogin=false;
-        }else {
-          if(this.getStaus()==1){
-            this.isVip=false;
-            this.isLogin=true;
-          }else if(this.getStaus()==3){
-            this.isLogin=true;
-            this.isVip=true;
+        var that = this;
+        if (this.getStaus() == 0) {
+          this.isLogin = false;
+        } else {
+          if (this.getStaus() == 1) {
+            this.isVip = false;
+            this.isLogin = true;
+          } else if (this.getStaus() == 3) {
+            this.isLogin = true;
+            this.isVip = true;
             api("/api/mg/sale/continueshopgift/index")
               .then(function (result) {
                 common.checkRedirect(result);
-                if(result.code==0){
-                  if(result.data){
-                    that.state=result.data.code;
-                    that.imageUrl=result.data.imageUrl;
-                    that.shopStocks=result.data.shopStocks;
-                    that.timeList=result.data.timeList;
-                    that.getSouvenir=result.data.getSouvenir;
+                if (result.code == 0) {
+                  if (result.data) {
+                    that.state = result.data.code;
+                    that.imageUrl = result.data.imageUrl;
+                    that.shopStocks = result.data.shopStocks;
+                    that.timeList = result.data.timeList;
+                    that.getSouvenir = result.data.getSouvenir;
                     that.checkStatus();
                   }
-                }else{
-                  if(result.msg){
-                    alert("code:"+result.code+",msg:"+result.msg);
-                  }else{
-                    alert("code:"+result.code);
+                } else {
+                  if (result.msg) {
+                    alert("code:" + result.code + ",msg:" + result.msg);
+                  } else {
+                    alert("code:" + result.code);
                   }
                 }
               })
@@ -293,12 +293,6 @@
               });
           }
 
-
-//          var result = require('../json/souvenir.json');
-//          that.state=result.data.code;
-//          that.imageUrl=result.data.imageUrl;
-//          that.shopStocks=result.data.shopStocks;
-//          that.timeList=result.data.timeList;
         }
       }
     }
