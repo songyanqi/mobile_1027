@@ -10,7 +10,7 @@
           <div class="banner_rute2"></div>
         </div>
         <div class="rute_list">
-          <div class="rute_1">每个品牌都设定了最高优惠力度和目标点亮人数，达到目标点亮人数的品牌将在10.18周年庆期间享最高优惠力度</div>
+          <div class="rute_1">经过大V妈妈齐心合力，品牌点亮目标全部达成！所有品牌都已享受历史最低折扣力度，还等什么，赶快买买买吧～</div>
         </div>
       </div>
       <div class="all_list">
@@ -125,15 +125,18 @@
           isCompleted:[]
         }
     },
-
     mounted(){
       var that=this;
+      native.Browser.setHead({
+        shareBtn:"1"
+      });
       share.setShareInfo({
         title: "最受欢迎的100个品牌贺3周年庆，这是要搞大事情！",
         desc: "大V店周年庆|这次玩大了！点亮100个品牌，周年庆优惠由你定，快去参加>",
         link: window.location.href,
         imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/09/16/1.png"
       });
+
       api("/api/mg/sale/bandLitUp/getCenterBands")
         .then(function (result) {
             common.checkRedirect(result);

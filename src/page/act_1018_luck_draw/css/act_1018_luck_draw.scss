@@ -1,9 +1,11 @@
 @import "../../../common/css/common.scss";
+.fixedClass {
+	overflow: hidden;
+}
 .luckDraw {
 	background: url('http://pic.davdian.com/avatar_poster/luck_draw.jpg') no-repeat;
 	background-size: 100% 100%;
-	// height: 5.54rem;
-	height: 6rem;
+	height: 6.5rem;
 	.bounsLuckRule {
 		margin-top: 0.1rem;
     font-size: 0.12rem;	
@@ -15,16 +17,20 @@
 	img {
 		width: 100%;
 	}
-	.luckTitle {
-		font-size: 12px;
-		color: #fff;
+	.saleTitle {
 		text-align: center;
-		// padding-top: 1.5rem;
-		padding-top: 1.6rem;
+		color: #fff;
+		font-size: 0.14rem;
 		margin-bottom: 0.15rem;
 	}
+	.luckTitle {
+		font-size: 0.12rem;
+		color: #fff;
+		text-align: center;
+		padding-top: 1.7rem;
+		margin-bottom: 0.08rem;
+	}
 	.luckNumNav {
-		// padding: -0.05rem 0 0.15rem 0;
 		margin: -0.05rem 0 0.15rem 0;
 		font-size: 0.18rem;
 		color: #fdebb1;
@@ -54,15 +60,11 @@
 		padding: 0 0.1rem;
 	}
 	#lottery table td a { 
-		// height:284px;
-		// line-height:150px;
 		display:block;
 		text-decoration:none;
 	}
 	#lottery table td.active {
 		position: relative;
-		// background: #ffcd33;
-		// border-radius: 0.1rem;
 	}
 	#lottery table td.active:after {
 		position: absolute;
@@ -79,19 +81,17 @@
 	position: fixed;
 	width: 100%;
 	z-index: 10;
-	// animation: com-alert-animation 0.5s;
 	top: 50%;
 	left: 50%;
 	-webkit-transform: translate(-50%,-50%);
 	transform: translate(-50%,-50%);
 	.moneyNum {
 		position: absolute;
-    // bottom: 47%;
     bottom: 48%;
     left: 50%;
     transform: translateX(-50%);
     color: #f18424;
-    font-size: 18px;
+    font-size: 0.18rem;
 	}
 	.moneyNums_icon {
 		color: #fa3f59;
@@ -104,7 +104,6 @@
     height: 0.4rem;
     transform: translateX(-50%);
     left: 50%;
-    // border: 1px solid #fff;
     .goShopLink,.lookLink {
     	display: inline-block;
     	height: 100%;
@@ -120,13 +119,23 @@
 	left: 50%;
 	margin: 0 auto;
 	height: 2.8rem;
-	// border: 1px solid #fff;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
 }
 .moneyWrapper {
 	position: absolute;
 	bottom: 37%;
+	width: 2.8rem;
+	height: 2.4rem;
+	left: 50%;
+	margin: 0 auto;
+	// border: 1px solid #fff;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+.iphoneWrapper {
+	position: absolute;
+	bottom: 40%;
 	width: 2.8rem;
 	height: 2.4rem;
 	left: 50%;
@@ -147,7 +156,7 @@
 	.bounsNums_num {
 		width: 2.47rem;
     color: #fff;
-    font-size: 10px;
+    font-size: 10rem;
     position: absolute;
     left: 50%;
     bottom: 51%;
@@ -162,7 +171,7 @@
 	.bounsInfo {
 		width: 2.47rem;
 		color: #fff;
-		font-size: 10px;
+		font-size: 0.10rem;
 		position: absolute;
     left: 50%;
     bottom: 41%;
@@ -191,7 +200,7 @@
 	}
 	.bounsNav2 {
 		position: absolute;
-		left: 1.05rem;
+		left: 1rem;
 		// left: 0.35rem;
 		width: 1.4rem;
 	}
@@ -245,12 +254,49 @@
 	    -webkit-transform: scale(0.8rem);
 	    -ms-transform: scale(0.8rem);
 	    transform: scale(0.8);
+	    width: 1.6rem;
 		}
 		.bouns_limit {
 			-webkit-transform: scale(.8);
 			transform: scale(.8);
     	position: relative;
 		}
+	}
+}
+.iphoneCont {
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	.iponeNums {
+		position: absolute;
+    bottom: 49%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f18424;
+    font-size: 0.17rem;
+    text-align: center;
+		.ipone_icon {
+			color: #fa3f59;
+			font-weight: bold;
+		}
+	}
+	.iponeLink {
+		position: absolute;
+    width: 2rem;
+    bottom: 40%;
+    height: 0.4rem;
+    transform: translateX(-50%);
+    left: 50%;
+    .goShopLink,.lookLink {
+    	display: inline-block;
+    	height: 100%;
+    	float: left;
+    	width: 50%;
+    }
 	}
 }
 .com-popup-base2 {
