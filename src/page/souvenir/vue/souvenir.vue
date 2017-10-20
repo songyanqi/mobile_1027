@@ -156,8 +156,8 @@
   export default{
     mounted(){
       share.setShareInfo({
-        title: "连续三天购物可获得纪念品",
-        desc: "10月19、20、21三天连续购物可获得大V店周年纪念品，限量5000个，快来~~~",
+        title: "连续三天购物可获得大v店纪念品",
+        desc: "10月19、20、21三天连续购物可获得大V店周年纪念品，限量15000个，快来~~~",
         link: window.location.href,
         imgUrl: "http://mamaj-oss.oss-cn-beijing.aliyuncs.com/free/2017/10/12/%E6%BB%A1399%E9%80%81%E5%A4%A7V%E4%B8%89%E5%91%A8%E5%B9%B4%E7%BA%AA%E5%BF%B5%E5%93%81%E5%88%86%E4%BA%AB%E7%BC%A9%E7%95%A5%E5%9B%BE.png"
       });
@@ -287,7 +287,7 @@
                 }
               })
               .catch(function (e) {
-                alert("e",e);
+
               });
           }
 
