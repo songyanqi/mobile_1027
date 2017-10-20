@@ -155,6 +155,9 @@
   import api from "../../../../utils/api.es6"
   export default{
     mounted(){
+      native.Browser.setHead({
+        shareBtn:"1"
+      });
       share.setShareInfo({
         title: "连续三天购物可获得大V店纪念品",
         desc: "10月19、20、21三天连续购物可获得大V店周年纪念品，限量15000个，快来~~~",
@@ -265,7 +268,6 @@
           }else if(this.getStaus()==3){
             this.isLogin=true;
             this.isVip=true;
-
             api("/api/mg/sale/continueshopgift/index")
               .then(function (result) {
                 common.checkRedirect(result);
