@@ -580,6 +580,8 @@ export default {
         dataType: 'JSON',
         success(res) {
           common.checkRedirect(res);
+          if (document.getElementById('firstPageShowShopCart'))
+          document.getElementById('firstPageShowShopCart').style.display = 'none'
           that.loadBefore = false;
 
           //清空，不然有串商品会一直添加
