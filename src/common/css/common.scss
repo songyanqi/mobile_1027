@@ -69,12 +69,14 @@ body {
 :-ms-input-placeholder { /* Internet Explorer 10+ */
   color: #999;
 }
+
 .bodyFix {
   position: fixed;
   left: 0;
   right: 0;
   width: 100%;
 }
+
 // 超过最大展示边框
 //@media screen and (min-width: $pageMaxWidth) {
 //  .app {
@@ -82,3 +84,67 @@ body {
 //  }
 //}
 
+// 页面加载动画
+.page-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  &.mounted {
+    display: none;
+  }
+  .mask {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: $pageMaxWidth;
+    height: 100%;
+    background: white;
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      // 大圈半径
+      $big-radius: 40;
+      // 小圈半径
+      $small-radius: ptr(20) / 2;
+      // 小圈数量
+      $max: 10;
+      // 转一圈的时间
+      $time: 0.5s;
+      // 最小透明度
+      $min-opacity: 0;
+      div {
+        position: absolute;
+        @include circle($small-radius * 2);
+        background: #FF4a7d;
+      }
+      @for $i from 1 through ($max) {
+        div:nth-of-type(#{$i}) {
+          top: ptr($big-radius * sin(360 / $max * ($i - 1) * 3.14159 / 180)) - $small-radius / 2 - 0.08rem;
+          left: ptr($big-radius * cos(360 / $max * ($i - 1) * 3.14159 / 180)) - $small-radius / 2 - 0.08rem;
+          opacity: $min-opacity;
+          @keyframes rotate {
+            0% {
+              opacity: 1;
+              transform: scale(1);
+            }
+            100% {
+              opacity: $min-opacity;
+              transform: scale(0.5);
+            }
+          }
+          animation: rotate $time ($i - 1)*($time / $max) linear infinite;
+        }
+      }
+    }
+  }
+}
+
+// 页面加载动画-隐藏
+body.loaded .page-loading {
+  display: none;
+}
