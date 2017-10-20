@@ -172,7 +172,7 @@
 	.bounsInfo {
 		width: 2.47rem;
 		color: #fff;
-		font-size: 10rem;
+		font-size: 0.10rem;
 		position: absolute;
     left: 50%;
     bottom: 41%;
@@ -255,6 +255,7 @@
 	    -webkit-transform: scale(0.8rem);
 	    -ms-transform: scale(0.8rem);
 	    transform: scale(0.8);
+	    width: 1.6rem;
 		}
 		.bouns_limit {
 			-webkit-transform: scale(.8);
