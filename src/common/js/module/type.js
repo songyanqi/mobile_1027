@@ -14,4 +14,7 @@ export default {
   isArray(value){
     return Object.prototype.toString.call(value) === '[object Array]';
   },
+  isFunction(value){
+    return Object.prototype.toString.call(value) === '[object Function]';
+  },
 }
