@@ -12,7 +12,7 @@
       <div>(不包含退货订单)</div>
     </div>
 
-    <div v-if = "isLogin && visitorStatus == '3' && saleNum != '0'" class = "saleTitle">当前店铺销售额：{{ saleNum }}元</div>
+    <div v-if = "isLogin && visitorStatus == '3' && Number(saleNum) != '0'" class = "saleTitle">当前店铺销售额：{{ saleNum }}元</div>
     <div v-if = "isLogin && luckNum" class = "luckNumNav">您有{{ luckNum }}次抽奖机会</div>
     <div class = "luckCont" id="lottery">
       <table border="0" cellpadding="0" cellspacing="0">
@@ -99,7 +99,7 @@
             <p>2.本活动仅限大V店会员参与；</p>
             <p>3.抽奖规则：10月18日至10月22日期间，会员购物或销售累计实际支付金额（含返现支付部分）每满500元在10月22日即有一次抽奖机会，奖品随机抽取，100%中奖；</p>
             <p>4.奖品发放方式：<br>
-            抽中iPhone8，11月18日前会有工作人员通过手机号联系您，请保持手机畅通，无法拨通电话视为放弃；</br>
+            抽中iPhone8，当天会有工作人员通过手机号联系您，请保持手机畅通，无法拨通电话视为放弃；</br>
             抽中现金，以返现方式实时返至【我的】－【总额】－【待结算金额】－【其他收入】中，30天后如无退货将转到【可提现金额】；</br>
             抽中红包，红包实时发放到会员的红包账户，抽奖获得的红包请在2017.10.31 23:59:59前使用，过期失效；</p>
             <p>5.如遇恶意订单、退货等导致不满足抽奖条件的，相应奖励将收回；</p>
@@ -136,7 +136,7 @@
         timer:0,
         speed:20,
         times:0,
-        cycle:25,
+        cycle:15,
         prize:-1,
         click: false,
         isLogin: false,
@@ -296,11 +296,13 @@
           data: layout.strSign('luck_draw',{}),
           success(res) {
             if (!res.code) {
-              that.luckNum = Number(res.data.number);
               that.visitorStatus = res.visitor_status;
-              that.saleNum = res.data.amount;
+              if (res.data) {
+                that.luckNum = Number(res.data.number);
+                that.saleNum = res.data.amount;
+              }
 
-              if (res.data.number != '0') {
+              if (res.data && res.data.number != '0') {
                 that.isluck = true;
               }
             }
@@ -344,7 +346,7 @@
           return false;
         }
         else{
-          this.speed=100;
+          this.speed=250;
           this.getInit();
           this.click=true;
           return false;
@@ -484,7 +486,7 @@
           that.timer = setTimeout(that.getInit,that.speed);
         }*/
 
-        if (that.times > that.cycle+10 && that.prize==that.index) {
+        if (that.times > that.cycle+3 && that.prize==that.index) {
             clearTimeout(that.showMaskTime);
             that.showMaskTime = setTimeout(() => {
               if (that.prize == 0 || that.prize == 2) {
@@ -510,13 +512,14 @@
           
         }else{
           if (that.times<that.cycle) {
-            that.speed -= 10;
+            // that.speed -= 10;
+            that.speed -= 8;
           }else{
-            if (that.times > that.cycle+10 && ((that.prize==0 && that.index==7) || that.prize==that.index+1)) {
+            if (that.times > that.cycle+3 && ((that.prize==0 && that.index==7) || that.prize==that.index+1)) {
               that.speed += 110;
             }else{
               // that.speed += 20;
-              that.speed += 35;
+              that.speed += 40;
             }
           }
           if (that.speed<40) {
