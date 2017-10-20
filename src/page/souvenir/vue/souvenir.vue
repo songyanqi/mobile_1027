@@ -376,7 +376,6 @@
   .rute1>div{
     color:#FFFFFF;
     font-size: 0.14rem;
-    margin-top: 0.1rem;
     line-height:0.2rem;
   }
   .line{
