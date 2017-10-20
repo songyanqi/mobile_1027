@@ -3,7 +3,7 @@
     <div class="title_text tit" style="top: 1.4rem;font-size: 0.21rem;">10月19、20、21日</div>
     <div class="title_text tit" style="top: 1.75rem;">连续三天购物</div>
     <div class="title_text tit" style="top: 2.1rem;">即可获大V店三周年纪念品</div>
-    <div class="title_text" style="font-size: 0.14rem;top: 2.59rem;">限量5000个，先到先得</div>
+    <div class="title_text" style="font-size: 0.14rem;top: 2.59rem;">限量15000个，先到先得</div>
 
     <template v-if="!isLogin">
       <!--未登录-->
@@ -69,7 +69,9 @@
 
           <template v-if="shopStocks==0">
             <div class="noshop">没有名额啦~</div>
-            <div class="goshop">很遗憾您错过了这次活动</div>
+
+            <div class="goshop" v-if="getSouvenir==1">已获得三周年纪念品</div>
+            <div class="goshop" v-if="getSouvenir==0">很遗憾您错过了这次活动</div>
             <div class="only">没有名额啦</div>
           </template>
 
@@ -134,7 +136,7 @@
       <div style="margin-top: 0;text-align: center;"><span class="line"></span><span style="font-size:0.15rem;padding: 0 0.1rem">活动规则</span><span class="line"></span></div>
       <div style="margin-top: 0.2rem">1. 活动时间：10月19日00:00:00~10月21日23:59:59；</div>
       <div>2. 仅限大V店会员参与该活动；</div>
-      <div>3. 10月19日、20日、21日三天连续购物即可获得大V店3周年定制纪念品(限量5000个),每天购物金额不限,每个会员仅有1次获得纪念品的机会；</div>
+      <div>3. 10月19日、20日、21日三天连续购物即可获得大V店3周年定制纪念品(限量15000个),每天购物金额不限,每个会员仅有1次获得纪念品的机会；</div>
       <div>4. 因退货、换货等原因导致不满足连续 3天购物的情况,视为主动放弃该活动；</div>
       <div>5. 获得的纪念品将于15个工作日后安排发货,收货地址以10月21日首个已支付且未退货订单的收货地址为准；</div>
       <div>6. 开通会员订单不参与该活动；</div>
