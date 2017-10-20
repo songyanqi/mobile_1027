@@ -346,7 +346,7 @@
           return false;
         }
         else{
-          this.speed=250;
+          this.speed=200;
           this.getInit();
           this.click=true;
           return false;
