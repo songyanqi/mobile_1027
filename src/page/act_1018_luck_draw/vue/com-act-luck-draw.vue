@@ -253,6 +253,7 @@
         $.ajax({
           url: "/api/mg/sale/returnbonus/lotteryBonus",
           type: "POST",
+          // url: " https://www.easy-mock.com/mock/59b9230be0dc663341a8ce57/bounsDes",
           async: false,
           dataType: "JSON",
           data: layout.strSign('lottory_luck',{}),
@@ -332,12 +333,13 @@
         }
 
         if (this.luckNum == '0') {
-          popup.toast("抽奖机会已用完，订单累计实际支付金额每满500元可抽奖一次～");
+          popup.toast("抽奖机会已用完，订单实际支付金额累计每满500才能抽一次奖哦～");
           return;
         }
 
-        this.gitBounsInfo();
-
+        if(!this.click) {
+          this.gitBounsInfo();
+        }
         if(this.click) {
           return false;
         }
