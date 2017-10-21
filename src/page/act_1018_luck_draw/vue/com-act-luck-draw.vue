@@ -263,8 +263,34 @@
               that.luckNum--;
               if (res.data.lotteryResult == 'success') {
                 // 最后两个是现金，其它按次序排的,prize为1的时候是苹果
-                switch(res.data.bonusInfo.bonusTypeId) {
-                  case 3303: 
+                /*switch(res.data.bonusInfo.bonusTypeId) {
+                  case 3336: 
+                    that.prize = 1;
+                    break;
+                  case 3138:
+                    that.prize = 3;
+                    break;
+                  case 3140:
+                    that.prize = 4;
+                    break;
+                  case 3135:
+                    that.prize = 5;
+                    break;
+                  case 3137:
+                    that.prize = 6;
+                    break;
+                  case 3136:
+                    that.prize = 7;
+                    break;
+                  case 3192:
+                    that.prize = 0;
+                    break;
+                  case 3191:
+                    that.prize = 2;
+                    break;
+                }*/
+                switch (res.data.bonusInfo.bonusTypeId) {
+                  case 3303:
                     that.prize = 1;
                     break;
                   case 3306:
@@ -298,7 +324,8 @@
               } else {
                 // 不为success,为fail
                 clearTimeout(that.timer);
-                popup.toast(res.data.msg);
+                $(".lottery-unit").removeClass("active");
+                popup.toast("抽奖失败,请重试");
               }
             } else {
               // popup.info()
