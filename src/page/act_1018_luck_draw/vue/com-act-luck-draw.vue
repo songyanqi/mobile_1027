@@ -136,7 +136,7 @@
         timer:0,
         speed:20,
         times:0,
-        cycle:15,
+        cycle:25,
         prize:-1,
         click: false,
         isLogin: false,
@@ -165,70 +165,6 @@
           this.$nextTick(function() {
             this.init("lottery");
           })
-        },
-        deep: true,
-      },
-      times: {
-        handler(oldTimes,newTimes) {
-          let that = this;
-          if (this.times == this.cycle) {
-            $.ajax({
-              url: "/api/mg/sale/returnbonus/lotteryBonus",
-              type: "POST",
-              async: false,
-              dataType: "JSON",
-              data: layout.strSign('lottory_luck',{}),
-              success(res) {
-                console.log("res",res);
-                if (!res.code) {
-                  that.luckNum--;
-                  if (res.data.lotteryResult == 'success') {
-                    // 最后两个是现金，其它按次序排的,prize为1的时候是苹果
-                    switch(res.data.bonusInfo.bonusTypeId) {
-                      case 3303: 
-                        that.prize = 1;
-                        break;
-                      case 3306:
-                        that.prize = 3;
-                        break;
-                      case 3308:
-                        that.prize = 4;
-                        break;
-                      case 3307:
-                        that.prize = 5;
-                        break;
-                      case 3305:
-                        that.prize = 6;
-                        break;
-                      case 3304:
-                        that.prize = 7;
-                        break;
-                      case 3311:
-                        that.prize = 0;
-                        break;
-                      case 3310:
-                        that.prize = 2;
-                        break;
-                    }
-                    if (res.data.bonusInfo) {
-                      res.data.bonusInfo.minConsumePrice = parseFloat(Number(res.data.bonusInfo.minConsumePrice));
-                      res.data.bonusInfo.bonusMoney = parseFloat(Number(res.data.bonusInfo.bonusMoney));
-
-                      that.bounsInfos = res.data.bonusInfo;
-                    }
-                  } else {
-                    // 不为success,为fail
-                    popup.info(res.data.msg);
-                  }
-                } else {
-                  // popup.info()
-                }
-              },
-              error(error) {
-                console.log('error',error);
-              },
-            })
-          }
         },
         deep: true,
       },
@@ -312,6 +248,65 @@
           },
         })
       },
+      gitBounsInfo() {
+        let that = this;
+        $.ajax({
+          url: "/api/mg/sale/returnbonus/lotteryBonus",
+          type: "POST",
+          async: false,
+          dataType: "JSON",
+          data: layout.strSign('lottory_luck',{}),
+          success(res) {
+            console.log("res",res);
+            if (!res.code) {
+              that.luckNum--;
+              if (res.data.lotteryResult == 'success') {
+                // 最后两个是现金，其它按次序排的,prize为1的时候是苹果
+                switch(res.data.bonusInfo.bonusTypeId) {
+                  case 3303: 
+                    that.prize = 1;
+                    break;
+                  case 3306:
+                    that.prize = 3;
+                    break;
+                  case 3308:
+                    that.prize = 4;
+                    break;
+                  case 3307:
+                    that.prize = 5;
+                    break;
+                  case 3305:
+                    that.prize = 6;
+                    break;
+                  case 3304:
+                    that.prize = 7;
+                    break;
+                  case 3311:
+                    that.prize = 0;
+                    break;
+                  case 3310:
+                    that.prize = 2;
+                    break;
+                }
+                if (res.data.bonusInfo) {
+                  res.data.bonusInfo.minConsumePrice = parseFloat(Number(res.data.bonusInfo.minConsumePrice));
+                  res.data.bonusInfo.bonusMoney = parseFloat(Number(res.data.bonusInfo.bonusMoney));
+
+                  that.bounsInfos = res.data.bonusInfo;
+                }
+              } else {
+                // 不为success,为fail
+                popup.toast(res.data.msg);
+              }
+            } else {
+              // popup.info()
+            }
+          },
+          error(error) {
+            console.log('error',error);
+          },
+        })
+      },
       handleClick() {
         // 是否登陆
         if (!this.isLogin) {
@@ -332,7 +327,7 @@
         }
         // 是否有抽奖机会
         if (!this.isluck) {
-          popup.toast("订单累计实际支付金额满500元才能抽奖哦～");
+          popup.toast("订单实际支付金额累计满500才能抽奖哦～");
           return;
         }
 
@@ -341,12 +336,13 @@
           return;
         }
 
+        this.gitBounsInfo();
 
         if(this.click) {
           return false;
         }
         else{
-          this.speed=200;
+          this.speed=100;
           this.getInit();
           this.click=true;
           return false;
@@ -378,115 +374,7 @@
         let that = this;
         that.times += 1;
         that.roll();
-
-        /*if (that.times > that.cycle+10) {
-          if (that.isFirstAjax) {
-            that.isFirstAjax = false;
-            $.ajax({
-              url: "/api/mg/sale/returnbonus/lotteryBonus",
-              type: "POST",
-              async: false,
-              dataType: "JSON",
-              data: layout.strSign('lottory_luck',{}),
-              success(res) {
-                console.log("res",res);
-                if (!res.code) {
-                  that.luckNum--;
-                  if (res.data.lotteryResult == 'success') {
-                    // 最后两个是现金，其它按次序排的,prize为1的时候是苹果
-                    switch(res.data.bonusInfo.bonusTypeId) {
-                      case 3303: 
-                        that.prize = 1;
-                        break;
-                      case 3306:
-                        that.prize = 3;
-                        break;
-                      case 3308:
-                        that.prize = 4;
-                        break;
-                      case 3307:
-                        that.prize = 5;
-                        break;
-                      case 3305:
-                        that.prize = 6;
-                        break;
-                      case 3304:
-                        that.prize = 7;
-                        break;
-                      case 3311:
-                        that.prize = 0;
-                        break;
-                      case 3310:
-                        that.prize = 2;
-                        break;
-                    }
-                    if (res.data.bonusInfo) {
-                      res.data.bonusInfo.minConsumePrice = parseFloat(Number(res.data.bonusInfo.minConsumePrice));
-                      res.data.bonusInfo.bonusMoney = parseFloat(Number(res.data.bonusInfo.bonusMoney));
-
-                      that.bounsInfos = res.data.bonusInfo;
-                    }
-                  } else {
-                    // 不为success,为fail
-                    popup.info(res.data.msg);
-                  }
-                } else {
-                  // popup.info()
-                }
-              },
-              error(error) {
-                console.log('error',error);
-              },
-            })
-          }
-          clearTimeout(that.timer);
-          that.timer = setTimeout(that.getInit,that.speed);
-          if (that.prize==that.index) {
-            that.isFirstAjax = true;
-            clearTimeout(that.timer);
-            clearTimeout(that.showMaskTime);
-            that.showMaskTime = setTimeout(() => {
-              if (that.prize == 0 || that.prize == 2) {
-                that.isMoney = true;
-                $("body,html").addClass("fixedClass");
-                if (that.prize == 0) {
-                  that.bounsNumMoney = 10.18;
-                } else {
-                  that.bounsNumMoney = 1018;
-                }
-              } else if (that.prize == 1) {
-                that.isIphone = true;
-                $("body,html").addClass("fixedClass");
-              } else {
-                that.isBouns = true;
-                $("body,html").addClass("fixedClass");
-              }
-              $(".lottery-unit").removeClass("active");
-              that.prize=-1;
-              that.times=0;
-              that.click=false;
-              console.log(1111111,that.index);
-            }, 1000);
-          }
-        }else{
-          if (that.times<that.cycle) {
-            that.speed -= 10;
-          }else{
-            if (that.times > that.cycle+10 && ((that.prize==0 && that.index==7) || that.prize==that.index+1)) {
-              that.speed += 110;
-            }else{
-              // that.speed += 20;
-              that.speed += 35;
-            }
-          }
-          if (that.speed<40) {
-            that.speed=40;
-          };
-          clearTimeout(that.timer);
-          that.timer = setTimeout(that.getInit,that.speed);
-        }*/
-
-        if (that.times > that.cycle+3 && that.prize==that.index) {
+        if (that.times > that.cycle+8 && that.prize==that.index) {
             clearTimeout(that.showMaskTime);
             that.showMaskTime = setTimeout(() => {
               if (that.prize == 0 || that.prize == 2) {
@@ -512,14 +400,12 @@
           
         }else{
           if (that.times<that.cycle) {
-            // that.speed -= 10;
-            that.speed -= 8;
+            that.speed -= 10;
           }else{
-            if (that.times > that.cycle+3 && ((that.prize==0 && that.index==7) || that.prize==that.index+1)) {
+            if (that.times > that.cycle+8 && ((that.prize==0 && that.index==7) || that.prize==that.index+1)) {
               that.speed += 110;
             }else{
-              // that.speed += 20;
-              that.speed += 40;
+              that.speed += 35;
             }
           }
           if (that.speed<40) {
