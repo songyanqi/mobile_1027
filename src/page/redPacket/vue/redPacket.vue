@@ -58,6 +58,7 @@
   import login from "../../../../src/common/js/module/login.js"
   import api from "../../../../utils/api.es6"
   import share from "../../../../src/common/js/module/share.js"
+  import common from "../../../../src/common/js/common.js"
   export default{
     mounted(){
         native.Browser.setHead({
@@ -110,6 +111,7 @@
 
           api("/api/mg/sale/coupon/getNineteen")
             .then(function (result) {
+                common.checkRedirect(result);
                 if(result.code==0){
                     if(result.data.activeStatus && result.data.couponStatus){
                       that.isRedPacket=result.data.couponStatus;
