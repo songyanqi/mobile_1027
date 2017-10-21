@@ -288,7 +288,7 @@
                   case 3191:
                     that.prize = 2;
                     break;
-                }
+                }*/
                 /*switch (res.data.bonusInfo.bonusTypeId) {
                   case 3303:
                     that.prize = 1;
