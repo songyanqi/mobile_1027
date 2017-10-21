@@ -325,7 +325,7 @@
                 // 不为success,为fail
                 clearTimeout(that.timer);
                 $(".lottery-unit").removeClass("active");
-                popup.toast("抽奖失败,请重试");
+                popup.toast("抽奖失败,请刷新后重试");
               }
             } else {
               // popup.info()
