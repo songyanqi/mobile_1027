@@ -3,11 +3,11 @@
   @import "../css/act_1018_luck_draw.scss";
 </style>
 <template>
-	<div class = "luckDraw" >
+	<div class = "luckDraw"  :class = "{ luckPadding: isLogin && visitorStatus == '3' && Number(saleNum) != '0', luckMargin: isLogin && luckNum }">
     <img style = "display: none;" src="//pic.davdian.com/free/ydd1.png">
     <img style = "display: none;" src="//pic.davdian.com/free/ydd7.png">
     <img style = "display: none;" src="//pic.davdian.com/free/1022/iphone8_mask_icon.png">
-    <div class = "luckTitle" :class = "{ luckPadding: isLogin && visitorStatus == '3' && Number(saleNum) != '0', luckMargin: isLogin && luckNum }">
+    <div class = "luckTitle">
       <div>会员店铺订单支付金额累计每满500元可抽奖一次</div>
       <div>(不包含退货订单)</div>
     </div>
