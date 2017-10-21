@@ -136,7 +136,7 @@
         timer:0,
         speed:20,
         times:0,
-        cycle:25,
+        cycle:38,
         prize:-1,
         click: false,
         isLogin: false,
@@ -297,6 +297,7 @@
                 }
               } else {
                 // 不为success,为fail
+                clearTimeout(that.timer);
                 popup.toast(res.data.msg);
               }
             } else {
@@ -378,6 +379,7 @@
         that.roll();
         if (that.times > that.cycle+8 && that.prize==that.index) {
             clearTimeout(that.showMaskTime);
+            clearTimeout(that.timer);
             that.showMaskTime = setTimeout(() => {
               if (that.prize == 0 || that.prize == 2) {
                 that.isMoney = true;
