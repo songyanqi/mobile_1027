@@ -124,6 +124,15 @@ function checkRedirectByResponse(response) {
 // ios wkwebview返回上一页执行回调刷新页面
 native.custom.onWebviewBack();
 
+// 关闭page-loading
+/*if (window.Vue) {
+  window.Vue.nextTick(function () {
+    if (document.body.className.indexOf('loaded') === -1) {
+      document.body.className += ' loaded';
+    }
+  });
+}*/
+
 export default {
   checkRedirect: checkRedirectByResponse
 }

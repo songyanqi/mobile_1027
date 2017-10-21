@@ -125,7 +125,8 @@
       <com-act-subscribe :response="response" v-if="response.data.hotSubscribe" :current-date="currentDate" :begin="true"></com-act-subscribe>
 
       <!--22号，满500抽奖-->
-      <com-xxx :response="response" v-if="response.data.drawMoney" :current-date="currentDate"></com-xxx>
+      <!-- <com-xxx :response="response" v-if="response.data.drawMoney" :current-date="currentDate"></com-xxx> -->
+      <com-act-luck-draw :response="response" v-if="response.data.drawMoney" :current-date="currentDate"></com-act-luck-draw>
     </div>
 
     <!--活动下方专题-->

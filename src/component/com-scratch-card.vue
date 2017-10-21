@@ -13,6 +13,8 @@
 
 <script>
   import util from '../common/js/module/util.js';
+  import ua from '../common/js/module/ua.js';
+  import type from '../common/js/module/type.js';
 
   export default {
     props: {
@@ -120,11 +122,11 @@
           }
 
           //
-          function scrollD (direction) {
-            if(direction == "top"){
+          function scrollD(direction) {
+            if (direction == "top") {
               return util.getDocumentScrollTop();
             }
-            if(direction == "left"){
+            if (direction == "left") {
               return util.getDocumentScrollLeft();
             }
           }
@@ -161,6 +163,10 @@
           canvas.addEventListener('touchstart', function (event) {
             mobile(event);
             ts.$emit('touchstart');
+            /*// 解决安卓app中刮奖时页面跟随滚动问题
+            if (ua.isDvdApp() && ua.isAndroid() && window.paySuccessInterface && type.isFunction(window.paySuccessInterface.requestDisallowScroll)) {
+              window.paySuccessInterface.requestDisallowScroll('1');
+            }*/
           }, false);
           canvas.addEventListener('touchmove', function (event) {
             mobile(event);
@@ -170,6 +176,10 @@
           canvas.addEventListener('touchend', function (event) {
             mobile(event);
             ts.$emit('touchend');
+            /*// 解决安卓app中刮奖时页面跟随滚动问题
+            if (ua.isDvdApp() && ua.isAndroid() && window.paySuccessInterface && type.isFunction(window.paySuccessInterface.requestDisallowScroll)) {
+              window.paySuccessInterface.requestDisallowScroll('0');
+            }*/
           }, false);
 
           // 擦除图层时机,PC端
