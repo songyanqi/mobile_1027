@@ -38,7 +38,10 @@
            :style="{display: topics[0].content ? null : 'none', top: topics[0].content.top || null, left: topics[0].content.left || null}"
             v-if="topics[0].content">
         <div class="title">
-          <template v-if=""></template>活动开始倒计时</div>
+          <template v-if="currentDate < '2017-10-18'">活动开始倒计时</template>
+          <template v-else-if="currentDate < '2017-10-23'">距离活动结束</template>
+          <template v-else>活动已结束</template>
+        </div>
         <div class="boxes">
           <span class="box">
             <div class="title">天</div>
@@ -112,11 +115,11 @@
       <!--19号，满100返红包-->
       <com-act-redPacket :response="response.data.bonus" v-if="response.data.bonus" :current-date="currentDate"></com-act-redPacket>
 
-      <!--19号，满399送纪念品-->
-      <com-xxx :response="response" v-if="response.data.souvenir" :current-date="currentDate"></com-xxx>
+      <!--19~21号，满399送纪念品-->
+      <com-xxx :response="response" :current-date="currentDate"></com-xxx>
 
       <!--19号，爆品预约变抢购样式-->
-      <com-act-subscribe :response="response" v-if="response.data.hotSubscribe" :current-date="currentDate"></com-act-subscribe>
+      <com-act-subscribe :response="response" v-if="response.data.hotSubscribe" :current-date="currentDate" :begin="true"></com-act-subscribe>
 
       <!--22号，满500抽奖-->
       <com-xxx :response="response" v-if="response.data.drawMoney" :current-date="currentDate"></com-xxx>
