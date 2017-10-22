@@ -353,14 +353,14 @@
           });
           return;
         }
-        // 是否有抽奖机会
-        if (!this.isluck) {
-          popup.toast("订单实际支付金额累计满500才能抽奖哦～");
+        if (this.saleNum >= 500 && this.luckNum == '0') {
+          popup.toast("抽奖机会已用完，订单实际支付金额累计每满500才能抽一次奖哦～");
           return;
         }
 
-        if (this.luckNum == '0') {
-          popup.toast("抽奖机会已用完，订单实际支付金额累计每满500才能抽一次奖哦～");
+        // 是否有抽奖机会
+        if (!this.isluck) {
+          popup.toast("订单实际支付金额累计满500才能抽奖哦～");
           return;
         }
 
