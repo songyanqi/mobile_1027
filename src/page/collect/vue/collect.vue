@@ -185,7 +185,6 @@
                   }
                 }else{
                   if(result.code!=11012){
-                    that.maskFlag=true;
                     if(result.data.msg){
                       dialog.alert('code:'+result.code+":msg"+result.data.msg);
                     }else{

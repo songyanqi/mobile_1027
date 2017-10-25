@@ -245,7 +245,13 @@
     },
     methods: {
       goindex(){
-
+        if(this.isapp){
+          native.Browser.open({
+            url: "/"
+          })
+        }else{
+          window.location.href="/";
+        }
       },
       playTrackSingle(){
         let that = this
