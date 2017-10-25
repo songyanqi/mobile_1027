@@ -1,72 +1,67 @@
 <!DOCTYPE html>
 <html>
-<head>
-  @@include('meta.include')
-  <link rel="stylesheet" href="[[static]]/page/my_invitation_code/css/my_invitation_code.css[[v]]">
-</head>
-<body>
-<div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
-  <!--标题-->
-  <com-top-title title="邀请好友注册大V店"></com-top-title>
-  <!--<com-top-title title="邀请好友安装大V店APP"></com-top-title>-->
 
-  <!--主体内容-->
-  <div v-if-="response">
-    <!--我的邀请码-->
-    <!--<div class="sharImg">-->
-    <!--<img :src="response.data.shareUrl" alt="" @touchstart="gtouchstart(response.data.shareUrl)" @touchend="gtouchend" @touchmove="gtouchmove">-->
-    <!--</div>-->
-    <img class="tuiguang_tupian" src="//pic.davdian.com/free/2017/09/12/tuiguang.png" alt="">
-    <!--<div v-if="isApp" :class="{'share_to_btn':isApp}" @click="shareto">-->
-    <!--分享给好友-->
-    <!--</div>-->
-    <div class="my_code_text">
-      我的邀请码：<span>{{response.data.inviteCode}}</span>
-      <span @click="copyText(response.data.inviteCode)">复制邀请码</span>
-      <!--<span v-else @click="show_pop = true">复制邀请码</span>-->
-      <!--<span @click="show_pop = true">复制邀请码</span>-->
-    </div>
-    <div class="other-info">
-      <!--什么是邀请码？-->
-      <span @click="what_invite_code">推广邀请码的好处?</span>
-    </div>
-    <!--<a class="invitation_code_bottom_link" href="/class_detail-11628.html?hostp=https&preview=1">-->
-    <!--<img src="//pic.davdian.com/free/2017/09/06/fulired.jpg" alt="">-->
-    <!--</a>-->
-  </div>
-  <!--邀请码规则-->
-  <div v-if="rule_form" class="com-popup-base2">
-    <div class="table-cell">
-      <div v-show="rule_form" class="box">
-        <div>邀请码规则</div>
-        <!--<div>-->
-        <!--<p>1. 每个大V店会员都有一个专属邀请码，您可以将您的邀请码分享给身边的非会员朋友；</p>-->
-        <!--<p>2. 邀请码为6位数字+字母组合，您的大V店账户手机号也可作为邀请码使用；</p>-->
-        <!--<p>2. 您的大V店账户手机号也可作为邀请码使用；</p>-->
-        <!--<p>3. 好友选定您作为邀请人后，TA在大V店APP及果敢时代大V店公众号内都将访问您的店铺；</p>-->
-        <!--<p>4. 一个用户只能有一个邀请人，添加邀请人后可在7天内更换一次；更换后不可再修改。</p>-->
-        <!--</div>-->
-        <div>
-          <p>1. 每个大V店会员都有一个专属邀请码，您可以将您的邀请码分享给身边的好友；</p>
-          <p>2. 邀请码为数字+字母的6位字符组合，您的大V店账户手机号也可作为邀请码使用；</p>
-          <p>3. 好友选定您作为邀请人后，TA在大V店APP及果敢时代大V店公众号内都将访问您的店铺；</p>
-          <p>4. 一个用户只能有一个邀请人，添加邀请人后可在7天内更换一次；更换邀请人不可获得红包。</p>
+<head>
+    @@include('meta.include')
+    <link rel="stylesheet" href="[[static]]/page/my_invitation_code/css/my_invitation_code.css[[v]]">
+</head>
+
+<body>
+    <div class="app" v-if="response" style="display: none;" :style="{display: response ? null : 'none'}">
+        <!--标题-->
+        <com-top-title title="邀请好友注册大V店"></com-top-title>
+        <!--<com-top-title title="邀请好友安装大V店APP"></com-top-title>-->
+
+        <!--主体内容-->
+        <div v-if-="response">
+            <!--我的邀请码-->
+            <div class="sharImg">
+                <img :src="response.data.shareUrl" alt="" @touchstart="gtouchstart(response.data.shareUrl)" @touchend="gtouchend" @touchmove="gtouchmove">
+            </div>
+            <!-- <img class="tuiguang_tupian" src="//pic.davdian.com/free/2017/09/12/tuiguang.png" alt=""> -->
+            <div v-if="isApp" :class="{'share_to_btn':isApp}" @click="shareto">
+                分享给好友
+            </div>
+            <div class="my_code_text">
+                我的邀请码：<span>{{response.data.inviteCode}}</span>
+                <span @click="copyText(response.data.inviteCode)">复制邀请码</span>
+                <!--<span v-else @click="show_pop = true">复制邀请码</span>-->
+                <!--<span @click="show_pop = true">复制邀请码</span>-->
+            </div>
+            <div class="other-info">
+                <!--什么是邀请码？-->
+                <span @click="what_invite_code">推广邀请码的好处?</span>
+            </div>
+            <!-- <a class="invitation_code_bottom_link" href="/class_detail-11628.html?hostp=https&preview=1">
+    <img src="//pic.davdian.com/free/2017/09/06/fulired.jpg" alt=""> -->
+            <!--</a>-->
         </div>
-        <div @click="close_what_invite"></div>
-      </div>
+        <!--邀请码规则-->
+        <div v-if="rule_form" class="com-popup-base2">
+            <div class="table-cell">
+                <div v-show="rule_form" class="box">
+                    <div>邀请码规则</div>
+                    <div>
+                        <p>1. 每个大V店会员都有一个专属邀请码，您可以将您的邀请码分享给身边的好友；</p>
+                        <p>2. 邀请码为数字+字母的6位字符组合，您的大V店账户手机号也可作为邀请码使用；</p>
+                        <p>3. 好友选定您作为邀请人后，TA在大V店APP及果敢时代大V店公众号内都将访问您的店铺；</p>
+                        <p>4. 一个用户只能有一个邀请人，添加邀请人后可在7天内更换一次；更换邀请人不可获得红包。</p>
+                    </div>
+                    <div @click="close_what_invite"></div>
+                </div>
+            </div>
+        </div>
+        <!--电话操作面板 v-if="!isApp"-->
+        <div class="g-pop mobile" :class="{'active':show_pop}">
+            <ul>
+                <li class="number" style="display: block;">{{response.data.inviteCode}}</li>
+                <li class="copy">长按上方邀请码可选择复制</li>
+                <li class="cancel" @click="show_pop = false">取消</li>
+            </ul>
+        </div>
     </div>
-  </div>
-  <!--电话操作面板 v-if="!isApp"-->
-  <div class="g-pop mobile" :class="{'active':show_pop}">
-    <ul>
-      <li class="number" style="display: block;">{{response.data.inviteCode}}</li>
-      <li class="copy">长按上方邀请码可选择复制</li>
-      <li class="cancel" @click="show_pop = false">取消</li>
-    </ul>
-  </div>
-</div>
-@@include('vendor.include')
-@@include('js.include')
-<script src="[[static]]/page/my_invitation_code/js/my_invitation_code.js[[v]]"></script>
+    @@include('vendor.include') @@include('js.include')
+    <script src="[[static]]/page/my_invitation_code/js/my_invitation_code.js[[v]]"></script>
 </body>
+
 </html>
