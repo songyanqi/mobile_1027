@@ -72,7 +72,8 @@ const DetailPic = {
         scope.end_time = 0;
         $(window).scroll(() => {
           if (!scope.isLoader) {
-              if (document.body.scrollTop >= 200) {
+              // if (document.body.scrollTop >= 200) {
+              if ($(document).scrollTop() >= 200) {
                   scope.isLoader = true;
                   scope.$emit('loadmayyoulike', 1);
               }

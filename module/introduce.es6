@@ -4,6 +4,7 @@ import inviteCard from './inviteCard/inviteCard.vue'
 import common from "./common/common.es6";
 import lay from "./layout/api.es6"
 import native from "../src/common/js/module/native.js"
+import appInterface from "../utils/appInterface.es6"
 let axios = require("axios");
 require('babel-polyfill');
 require('es6-promise').polyfill();
@@ -34,17 +35,21 @@ export default {
             bottomBtn: false,
             enterClassroomFlag: true,
             visitorFlag:-1,
+            name:"introduce",
+            isAuditing:false
         }
     },
     created(){
         let that = this;
         //  用通用方法请求数据
+        // console.log(common);
         common.getDataWithSign({
             url:"/api/mg/content/course/detail",
             dataType:"json",
             updata:{courseId:that.courseId},
             type:"post",
             success:function (result) {
+                console.log(3455)
                 if (result.data.userId){
                     that.userId = result.data.userId
                     window.userId = result.data.userId
@@ -92,6 +97,14 @@ export default {
                             window.singlePicHold(ele);
                         })
                     });
+                    that.$nextTick(function () {
+                      that.changeIsAuditVersion(result.data.isAuditVersion);
+                      if(result.data.isAuditVersion==0){
+                        that.isAuditing=true;
+                      }else if(result.data.isAuditVersion==1){
+                        that.isAuditing=false;
+                      }
+                    });
                 }
                 if (window.appData){
                     window.appData.isShowAudio = 1
@@ -109,6 +122,7 @@ export default {
                         }
                     }
                     setTimeout(function(){
+                        window.appData.backOnHead = 1;
                         window.bravetime.initHead()
                     },500)   
                 }
@@ -119,6 +133,29 @@ export default {
         });
     },
     methods: {
+        changeIsAuditVersion(data){
+            var flag=false;
+            if(data==0){
+              flag=true;
+            }else if(data==1){
+              flag=false;
+            }
+            if (window.backNewData) {
+              window.backNewData.$children.map(function (item) {
+                if (item.name == 'introduce') {
+                  item.$children.map(function (item2) {
+                    if (item2.childrenName == "feedList") {
+                      item2.$children.map(function (item3) {
+                        if (item3.name && item3.name == "title_0") {
+                          item3.isAuditing = flag;
+                        }
+                      })
+                    }
+                  })
+                }
+              })
+            }
+        },
         appUpData(){
             let that = this;
         //  用通用方法请求数据
@@ -394,6 +431,5 @@ export default {
         vSchoolTitle:vSchoolTitle,
         inviteCard:inviteCard,
         indexFeed:indexFeed
-
     }
 }

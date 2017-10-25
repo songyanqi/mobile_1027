@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  @@include('meta.include')
+  <link rel="stylesheet" href="[[vendor]]/swiper/swiper-3.3.1.min.css">
+  <!--<link href="//cdn.bootcss.com/video.js/6.2.8/video-js.min.css" rel="stylesheet">-->
+  <link rel="stylesheet" href="[[static]]/page/act_1018_main/css/act_1018_main.css[[v]]">
+</head>
+<body>
+  <div class="app">
+    <!--标题-->
+    <com-top-title title="10.18周年庆" home></com-top-title>
+
+    <!--头图-->
+    <div class="g-head-pic"
+         :style="{'background-image': topics[0].content ? 'url('+topics[0].content.headPic+')' : 'url(//pic.davdian.com/activity/2017/09/18/750_630_ffedafe358bdbc4ce22f226adbb1c027.png)'}">
+
+      <!--app分享按钮-->
+      <img class="app-share" v-if="ua.isDvdApp() && param.get('noshare') === undefined" @click="share.callShare();" src="[[static]]/page/act_1018_main/img/share-icon.png"
+           style="display: none;" :style="{display: ua.isDvdApp() ? 'block' : null}">
+
+      <!--gif-->
+      <template v-if="ua.isAndroid() || ua.isIos() && ua.compareVersion('10.0.0', '10') < 0 || topics[0].content && !topics[0].content.headVideo">
+        <img class="gif" :src="topics[0].content && topics[0].content.headGif" v-if="topics[0].content && topics[0].content.headGif">
+      </template>
+      <!--视频-->
+      <template v-else>
+        <video autoplay loop :poster="topics[0].content && topics[0].content.headPic"
+               webkit-playsinline="true" x-webkit-airplay="true" playsinline="true" x5-video-player-type="h5"
+               x5-video-player-fullscreen="false" style="object-fit: fill;"
+               v-if="topics[0].content && topics[0].content.headVideo">
+          <source :src="topics[0].content && topics[0].content.headVideo" type="video/mp4"/>
+        </video>
+      </template>
+
+      <!--倒计时-->
+      <div class="count-down" style="display: none;"
+           :style="{display: topics[0].content ? null : 'none', top: topics[0].content.top || null, left: topics[0].content.left || null}"
+            v-if="topics[0].content">
+        <div class="title">
+          <template v-if="currentDate < '2017-10-18'">活动开始倒计时</template>
+          <template v-else-if="currentDate < '2017-10-23'">距离活动结束</template>
+          <template v-else>活动已结束</template>
+        </div>
+        <div class="boxes">
+          <span class="box">
+            <div class="title">天</div>
+            <div class="text">{{countDown.day}}</div>
+          </span>
+          <span class="box">
+            <div class="title">小时</div>
+            <div class="text">{{countDown.hour}}</div>
+          </span>
+          <span class="box">
+            <div class="title">分钟</div>
+            <div class="text">{{countDown.minute}}</div>
+          </span>
+          <span class="box">
+            <div class="title">秒</div>
+            <div class="text">{{countDown.second}}</div>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!--进度条-->
+    <div class="g-progess-pic">
+      <img :src="topics[0].content ? topics[0].content.progress : '//pic.davdian.com/activity/2017/09/18/750_69_6dc690a5b4a337888ae3dfe6919d45d0.jpg'">
+      <!--<div class="jump-mask" v-if="currentDate < '2017-10-18'">-->
+        <!--<a :href="currentDate > '2017-10-08' ? '/act_1018_assistance.html' : null"></a>-->
+        <!--<a :href="currentDate > '2017-10-11' ? '/lightBrand.html' : null"></a>-->
+        <!--<a :href="currentDate > '2017-10-13' ? '/act_1018_main_subscribe.html' : null"></a>-->
+      <!--</div>-->
+    </div>
+
+    <!--活动开启弹窗-->
+    <div class="g-begin-pop" @touchmove.prevent @mousewheel.prevent style="display: none;" :style="{display: isShowBeginPop ? null : 'none'}">
+      <div class="box">
+        <img class="pic" src="[[static]]/page/act_1018_main/img/game-begin.png" :class="{close: isShowBeginPopCloseAnimation}">
+        <div class="btn" @click="closeBeginPop"></div>
+      </div>
+    </div>
+
+    <!--我的1018-->
+    <a href="/act_1018_mine.html" @click="isLogin">
+      <img class="g-my-1018" src="[[static]]/page/act_1018_main/img/my1018.png"
+           style="display: none;" :style="{display: start_1018_flag ? null : 'none'}">
+      <img class="g-my-1018" src="[[static]]/page/act_1018_main/img/my1018-top.gif"
+           style="display: none;" :style="{display: start_1018_flag ? null : 'none'}">
+    </a>
+
+    <!--活动上方专题-->
+    <div class="g-topic-top" v-html="topics[1].content"></div>
+
+    <!--活动区域-->
+    <div class="g-act" v-if="response && response.data" @click="removeLocalCache">
+      <!--1~8号，好友助力-->
+      <com-act-assistance :response="response.data.help" v-if="response.data.help" :current-date="currentDate"></com-act-assistance>
+
+      <!--9~11号，品牌点亮-->
+      <com-act-lightbrand :response="response.data.lightenBrand" v-if="response.data.lightenBrand" :current-date="currentDate"></com-act-lightbrand>
+
+      <!--14~17号，商品预定-->
+      <com-act-reserve :response="response" v-if="response.data.book" :current-date="currentDate"></com-act-reserve>
+
+      <!--12~17号，爆品预约-->
+      <com-act-subscribe :response="response" v-if="response.data.subscribe" :current-date="currentDate"></com-act-subscribe>
+
+      <!--18号，红包雨-->
+      <com-act-bouns-rain :response="response" :current-date="currentDate"></com-act-bouns-rain>
+
+      <!--18号，助力商品抢购-->
+      <com-act-explosion :response="response" v-if="response.data.hotHelp" :current-date="currentDate"></com-act-explosion>
+
+      <!--18号，妈妈顾问-->
+      <com-act-iphone8 :response="response.data.activityAward" v-if="response.data.activityAward" :current-date="currentDate"></com-act-iphone8>
+
+      <!--19号，满100返红包-->
+      <com-act-redPacket :response="response.data.bonus" v-if="response.data.bonus || response.data.bonus==0" :current-date="currentDate"></com-act-redPacket>
+
+      <!--19~21号，满399送纪念品-->
+      <com-act-souvenir :current-date="currentDate"></com-act-souvenir>
+
+      <!--19号，爆品预约变抢购样式-->
+      <com-act-subscribe :response="response" v-if="response.data.hotSubscribe" :current-date="currentDate" :begin="true"></com-act-subscribe>
+
+      <!--22号，满500抽奖-->
+      <!-- <com-xxx :response="response" v-if="response.data.drawMoney" :current-date="currentDate"></com-xxx> -->
+      <com-act-luck-draw :response="response" v-if="response.data.drawMoney" :current-date="currentDate"></com-act-luck-draw>
+    </div>
+
+    <!--活动下方专题-->
+    <div class="g-topic-bottom" v-html="topics[2].content"></div>
+
+    <!--底部角标-->
+    <com-footer active="activity"></com-footer>
+
+    <!--返回顶部-->
+    <com-to-top-icon></com-to-top-icon>
+  </div>
+
+  @@include('vendor.include')
+  <script src="[[vendor]]/swiper/swiper-3.3.1.jquery.min.js"></script>
+  <!--<script src="//cdn.bootcss.com/video.js/6.2.8/video.min.js"></script>-->
+  @@include('js.include')
+  <script src="[[static]]/page/act_1018_main/js/act_1018_main.js[[v]]"></script>
+</body>
+</html>

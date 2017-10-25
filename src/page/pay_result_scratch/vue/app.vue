@@ -3,20 +3,20 @@
   <div class="activity_container">
     <div class="activity_huibenjie_scratch">
       <!--刮免单背景图-->
-      <img class="bg-pic" src="//pic.davdian.com/free/huibenjie/scratch/scratch-bg.jpg"
+      <img class="bg-pic" src="//pic.davdian.com/free/scratch-bg-1018.png"
            v-if="window.isShowLottery === '1'">
       <!--刮现金背景图-->
       <img class="bg-pic" src="//pic.davdian.com/free/huibenjie/scratch/scratch-bg-money.png"
            v-if="window.isShowLottery === '2'">
       <!--刮奖-->
-      <com-scratch-card :show-mask="showMask" :can-scratch="valid" mask-tip="刮一刮" font-size="30px" font-color="#CACACA"
+      <com-scratch-card :show-mask="showMask" :can-scratch="valid" mask-tip="" mask-img="//pic.davdian.com/free/scratch-mask-1018.png" font-size="30px" font-color="#e7e7e7"
                         @touchstart="bindCoupon(); addScratchTimes(); tongji('hbj_scratch');isValid(this);"
                         @mousedown="bindCoupon(); addScratchTimes(); tongji('hbj_scratch');"
                         @touchmove="addScratchTimes" @touchmove="addScratchTimes">
         <!--免单刮刮卡文案-->
         <template v-if="window.isShowLottery === '1'">
-          <template v-if="window.isFreeOfCharge === '1'">恭喜您抽中了此次免单</template>
-          <template v-if="window.isFreeOfCharge !== '1'">没中奖！再接再厉！</template>
+          <img class="result-bg" src="//pic.davdian.com/free/scratch-yes-1018.png" v-if="window.isFreeOfCharge === '1'">
+          <img class="result-bg" src="//pic.davdian.com/free/scratch-no-1018.jpg" v-else>
         </template>
         <!--现金刮刮卡文案-->
         <template v-if="window.isShowLottery === '2'">
@@ -26,13 +26,14 @@
       </com-scratch-card>
       <!--刮免单规则-->
       <div class="rule" v-if="window.isShowLottery === '1'">
-        <p class="title">母亲节免单规则：</p>
-        <p>活动时间：5月14日0点-5月14日24点</p>
-        <p>活动规则：</p>
-        <p>1.该活动只有大V店APP版本在3.8.0及以上的大V店店主才能参加，为了能正常参与抽奖，请及时升级您的版本；</p>
-        <p>2.活动期间，每个支付成功的订单都有一次抽奖机会，店主完成订单支付在支付成功页面可参与1次免单抽奖（仅免当前订单），如果抽中免单，则该订单的实际支付金额将于次月的14日以返现形式返回；</p>
-        <p>3.如果支付成功后店主离开了支付成功页未及时抽奖，将无法参与本次订单的免单抽奖活动，请谨慎操作；</p>
-        <p>4.违规处理：如遇退货，相应免单奖励予以取消。</p>
+        <p class="title">刮刮乐活动规则：</p>
+        <p>1.活动时间：2017.10.18 00:00:00-2017.10.18 23:59:59；</p>
+        <p>2.该活动仅限大V店会员参与；</p>
+        <p>3.朋友代付的订单不参与抽免单活动；</p>
+        <p>4.活动期间，会员完成订单支付后，即有1次免单抽奖的机会，若抽中免单，则免当前订单的实际支付金额（包含返现支付部分）；</p>
+        <p>5.免单奖励将实时以返现形式返至【我的】－【总额】－【待结算金额】－【其他收入】里，30天后如果没有退货将转到【可提现金额】；</p>
+        <p>6.开通会员订单、组团订单不参与该活动；</p>
+        <p>7.违规处理：如遇退货，相应免单奖励将予以取消。</p>
       </div>
       <!--刮现金规则-->
       <div class="rule" v-if="window.isShowLottery === '2'">
@@ -99,8 +100,10 @@
       bindCoupon(){
         let ts = this;
 
+
         // 如果没有中奖、已经绑定成功了、或尝试3次之后,则不调用绑定接口
-        if (window.isFreeOfCharge !== '1' || ts.isBinded || ts.bindCouponTryTimes >= 3 || !ts.valid) return;
+//        if (window.isFreeOfCharge !== '1' || ts.isBinded || ts.bindCouponTryTimes >= 3 || !ts.valid) return;
+        if (ts.isBinded || ts.bindCouponTryTimes >= 3 || !ts.valid) return;
 
         // 绑定
         ts.bindCouponTryTimes++;
@@ -142,7 +145,7 @@
           this.tongji('hbj_scratch');
         }
 
-        if (this.scratchTimes > 200 && this.valid) {
+        if (this.scratchTimes > 100 && this.valid) {
           this.showMask = false;
         }
       },

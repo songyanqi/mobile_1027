@@ -1,0 +1,139 @@
+@import "../../../common/css/common.scss";
+
+.app{
+  background-color:#ce256d;
+
+  [v-cloak] {
+    display:none;
+  }
+  .banner {
+    width:100%;
+  }
+  .footer-logo {
+    display:block;
+    width:ptr(220);
+    margin:0 auto;
+    padding:ptr(30) 0;
+  }
+  .g-goods-wrapper {
+    padding-top:ptr(8);
+
+    .g-goods-title {
+      @include height(ptr(56));
+      font-size:ptr(22);
+      color:#ff6600;
+      font-weight:bold;
+      text-align:center;
+      background:url([[static]]/page/act_1018_explosion_list/img/explosion-list-title.png) no-repeat;
+      background-size:100%;
+      margin-bottom:ptr(8);
+    }
+    .goods-item {
+      padding:ptr(4) ptr(15) ptr(4) ptr(13);
+      background-color:#fff;
+      position:relative;
+      overflow:hidden;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200%;
+        border-bottom: 1px solid #ce256d;
+        transform-origin: 0 0;
+        transform: scale(0.5,0.5);
+        box-sizing: border-box;
+      }
+
+      .goods-group {
+        position:relative;
+        float:left;
+      }
+      .item-pic {
+        width:ptr(132);
+        height:ptr(132);
+      }
+      .item-icon {
+        width:ptr(31);
+        height:ptr(31);
+        position:absolute;
+        top:ptr(15);
+        left:ptr(10);
+      }
+      .stage-tip {
+        width:ptr(50);
+        @include height(ptr(50));
+        text-align:center;
+        font-size:ptr(10);
+        color:#fff;
+        border-radius:50%;
+        background:rgba(0,0,0,.65);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+      }
+      .price {
+        padding:ptr(22) 0 ptr(12) ptr(148);
+        .item-name {
+          font-size:ptr(12);
+          color:#272727;
+          line-height:ptr(14);
+          border-bottom: 1px solid #dcdcdc;
+          padding-bottom:ptr(3);
+        }
+        .item-detail {
+          font-size:ptr(10);
+          color:#272727;
+          @include height(ptr(29));
+
+          .detail-money {
+            font-size:ptr(14);
+            color:#f5475c;
+          }
+          .detail-reserve {
+            color:#a3a3a3;
+            padding-left:ptr(10);
+          }
+        }
+        .item-lottery {
+          font-size:ptr(14);
+          color:#fff;
+          font-weight:bold;
+          display:block;
+          box-sizing:border-box;
+          position:relative;
+          width:ptr(200);
+          @include height(ptr(40));
+          background:url([[static]]/page/act_1018_explosion_list/img/redBag-bg.png) no-repeat;
+          background-size:ptr(200);
+          padding:0 ptr(8);
+
+          .lottery-tip {
+            float:right;
+          }
+        }
+      }
+    }
+  }
+
+  .explosion-rule {
+    padding: ptr(35) ptr(24) 0;
+    font-size:ptr(12);
+    color:#fff;
+
+    li {
+      line-height:ptr(22);
+    }
+
+  }
+}
+.add{
+  width: 3.75rem;
+  height: 0.715rem;
+}
+.add img{
+  width: 3.75rem;
+  height: 0.715rem;
+}

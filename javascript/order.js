@@ -82,6 +82,15 @@ var sortObj = function(obj) {
   strObj.sign = sign
   return strObj
 }
+// php加上后去掉
+// $("body").append('<div class = "modalOrder">\
+//    <div class="modalCloseWrapper orderClose">\
+//           <span class="modal-close"></span>\
+//       </div>\
+//       <div class = "orderTitle">该订单为预定订单，定金不退哦，确认要取消么？</div>\
+//       <div class = "orderConfirm" >确定</div>\
+//     </div>');
+
 jQuery(document).ready(function ($) {
     if(window.haveMask){
         $("body,html").css({"overflow":"hidden"});
@@ -156,10 +165,18 @@ jQuery(document).ready(function ($) {
       $("body").removeClass("bodyFix");
       document.body.scrollTop = scrollTop;
     });
+    // 预定的取消
+    $(".orderCancle").on("click",function () {
+      $(".modalMask").removeClass("showMask");
+      $(".modalOrder").removeClass("orderModalShow");
+      $("body").removeClass("bodyFix");
+      document.body.scrollTop = scrollTop;
+    });
     // 点击蒙层
     $(".modalMask").on("click",function () {
       $(".modalMask").removeClass("showMask");
       $(".modalWrapper").removeClass("showModal");
+      $(".modalOrder").removeClass("orderModalShow");
       $("body").removeClass("bodyFix");
       document.body.scrollTop = scrollTop;
     });
@@ -457,7 +474,8 @@ jQuery(document).ready(function ($) {
         });
 
         // 删除订单
-        $(".order-delete-order").click(function () {
+        $(".order_detail_container").on("click",".order-delete-order",function () {
+        // $(".order-delete-order").click(function () {
             window.bravetime.newConfirm("您确定要删除订单么？", {
                 okLink: function () {
                     window.bravetime.addLoader();
@@ -485,16 +503,19 @@ jQuery(document).ready(function ($) {
         });
 
         //取消订单
-        $(".order_detail_container").on("click",".modalMask",function () {
-          if ($(this).hasClass("showMask")) {
-            $(".modalMask").removeClass("showMask");
-            $(".modalWrapper").removeClass("showModal");
+        // $(".order_detail_container").on("click",".modalMask",function () {
+        // $(".modalMask").on("click",function () {
+        //   if ($(this).hasClass("showMask")) {
+        //     $(".modalMask").removeClass("showMask");
+        //     $(".modalWrapper").removeClass("showModal");
 
-            $("body").removeClass("bodyFix");
-            document.body.scrollTop = scrollTop;
-          }
-        });
-        $(".order_detail_container").on("click",".cancel_order",function () {
+        //     $("body").removeClass("bodyFix");
+        //     document.body.scrollTop = scrollTop;
+        //   }
+        // });
+        // 预定单弹框的确定
+        $(".orderConfirm").on("click",function () {
+          $(".modalOrder").removeClass("orderModalShow");
           if (isFirstLoad) {
             getAjax();
           }
@@ -510,7 +531,27 @@ jQuery(document).ready(function ($) {
           }
           document.body.style.top = -scrollTop + 'px';
           document.body.classList.add("bodyFix");
+        });
+        $(".order_detail_container").on("click",".cancel_order",function () {
+          $(".modalMask").addClass("showMask");
+          // 先判断是否是预定单
+          if (is_presale_order == "1") {
+            $(".modalOrder").addClass("orderModalShow");
+              return;
+          }
+          if (isFirstLoad) {
+            getAjax();
+          }
+          $(".disabledModal").attr('data-status',"cancle");
+          $(".modalWrapper").addClass("showModal");
 
+          if (document.documentElement && document.documentElement.scrollTop) {
+            scrollTop = document.documentElement.scrollTop;
+          } else if (document.body) {
+            scrollTop = document.body.scrollTop;
+          }
+          document.body.style.top = -scrollTop + 'px';
+          document.body.classList.add("bodyFix");
         });
         $(".order_detail_container").on("click",".modalCloseWrapper",function () {
           $(".modalMask").removeClass("showMask");
@@ -1139,6 +1180,116 @@ jQuery(document).ready(function ($) {
             return value;
         }
     }
+    var cutTimer;
+  //预定商品倒计时
+  function cutDown(numTime) {
+    $(".orderSuccess").show();
+    clearInterval(cutTimer);
+    var oneMinute = 60,
+        oneHour = 60 * 60,
+        oneDay = 60 * 60 * 24;
 
+    var hours = 00,
+        minutes = 00,
+        seconds = 00;
+    if (numTime > 0) {
+      // hours = parseInt(numTime % oneDay / oneHour);
+      // minutes = parseInt(numTime % oneDay % oneHour / oneMinute);
+      // seconds = parseInt(numTime % oneDay % oneHour % oneMinute);
+      hours = Math.floor(numTime / 3600);
+      minutes = Math.floor((numTime / 60 % 60));
+      seconds = Math.floor((numTime % 60));
 
+      hours = hours >= 10 ? hours : "0"+hours;
+      minutes = minutes >= 10 ? minutes : "0"+minutes;
+      seconds = seconds>=10 ? seconds : "0" +seconds;
+
+      $(".cutTime").html(hours + " : " + minutes + " : " + seconds);
+    }
+    
+    cutTimer = setInterval(function () {
+      if (numTime > 0) {
+        numTime--;
+        window.presale_surplus_time = numTime;
+        // hours = parseInt(numTime % oneDay / oneHour);
+        // minutes = parseInt(numTime % oneDay % oneHour / oneMinute);
+        // seconds = parseInt(numTime % oneDay % oneHour % oneMinute);
+        hours = Math.floor(numTime / 3600);
+        minutes = Math.floor((numTime / 60 % 60));
+        seconds = Math.floor((numTime % 60));
+
+        hours = hours >= 10 ? hours : "0"+hours;
+        minutes = minutes >= 10 ? minutes : "0"+minutes;
+        seconds = seconds>=10 ? seconds : "0" +seconds;
+        $(".cutTime").html(hours + " : " + minutes + " : " + seconds);
+      } else {
+        clearInterval(cutTimer);
+        changeTips();
+        $(".orderSuccess").hide();
+        if (presale_type == "final") {
+          $(".order_presale").html("<div class = 'overCutDown'>尾款超时未支付，交易关闭</div>");
+        }
+      }
+    },1000);
+  };
+
+  function changeTips() {
+    if (presale_type == "reserve") {
+      $(".order_presale").html("<div class = 'overCutDown'>定金超时未支付，交易关闭</div>");
+      $(".stage1Title").addClass("colorLight");
+      $(".presaleNum").addClass("colorLight");
+    }
+    if (presale_type == "final") {
+      $(".order_presale").html("<div class = 'overCutDown'>尾款超时未支付，交易关闭</div>");
+      $(".stage2Title").addClass("colorLight");
+      $(".finalNum").addClass("colorLight");
+    }
+    $(".order_id").find(".dav-red").html("已关闭");
+    $(".stage1Title").html("(已关闭)");
+    $(".stage2Title").html("(已关闭)");
+    // $(".order_goods_state").html("<a class = 'dav-btn btn-white order-close-order' data-dav-tj='order_detail|again|again|1|again@order_detail'>取消订单</a>");
+    $(".order_goods_state").html("");
+  }
+  
+  function changeStatus() {
+    // 如果是定金单或者尾款单就倒计时
+    if (is_presale_order == "1") {
+      if (Number(presale_surplus_time) > 0) {
+        cutDown(presale_surplus_time);
+      }
+      if (presale_surplus_time == 0) {
+        $(".orderSuccess").hide();
+        if (presale_type == "reserve") {
+          $(".order_presale").html("<div class = 'overCutDown'>定金超时未支付，交易关闭</div>");
+        }
+        if (presale_type == "final") {
+          $(".orderSuccess").show();
+        }
+        if (is_final_paytime_end == "1") {
+          $(".orderSuccess").hide();
+          $(".order_presale").html("<div class = 'overCutDown'>尾款超时未支付，交易关闭</div>");
+        }
+      }
+      // 用户关闭订单
+      if (presale_order_close == "1") {
+        $(".finalNum").removeClass("colorLight"); //
+        $(".stage2Title").removeClass(".colorLight");
+        $(".presaleNum").removeClass(".colorLight");
+        $(".stage1Title").removeClass(".colorLight");
+      }
+      
+      // 尾款单未支付时判
+      if (final_paid == "0") {
+        if (presale_type == "reserve") {
+          $(".stage1Title").addClass("colorLight");
+          $(".presaleNum").addClass("colorLight");
+        }
+        if (presale_type == "final") {
+          $(".stage2Title").addClass("colorLight");
+          $(".finalNum").addClass("colorLight");
+        }
+      }
+    };
+  }
+  changeStatus();
 });

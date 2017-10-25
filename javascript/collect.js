@@ -85,7 +85,7 @@ $(function () {
 
                         }
                     }
-                    window.bravetime.tj.pvSend('collect_d2refresh','collect_d2refresh_p'+pageIndex);
+                    // window.bravetime.tj.pvSend('collect_d2refresh','collect_d2refresh_p'+pageIndex);
                 }, error: function () {
                     bravetime.ajaxError(37);
                     ajaxing = 0;

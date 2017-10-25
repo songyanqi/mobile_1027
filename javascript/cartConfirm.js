@@ -664,8 +664,16 @@ $(function(){
     }
 
     function pay() {
+      //如果不是预定商品就不走这一行代码
+        if (window.is_advance && window.is_advance == "1") {
+          if (!$(".order_rule_ipt").hasClass("order_rule_ipt_checked")) {
+            $(".order_navList").addClass("order_navList_line");
+            document.body.scrollTop = document.body.scrollHeight;
+            bravetime.info("请先同意定金不退相关规则，才能去支付哦～")
+            return;
+          }
+        }
         var payData = {}, el;
-
 
         // 校验身份证
         if ($("#idcard").length) {
@@ -679,7 +687,7 @@ $(function(){
             payData['idcard'] = idcard;
         }
 
-        // 校验邮编 
+        // 校验邮编
         if ($("#zipcode").length) {
             var zipcode = $("#zipcode").val();
             if (!Units.isZipcode(zipcode)) {
@@ -722,7 +730,7 @@ $(function(){
                 // window.bravetime.goto(data["url"]);
             }  else if(data["status"]== -3){
                 location.replace(data["url"]);
-            } 
+            }
             else if (data["status"] == -10) {
                 window.bravetime.newAlert(data["msg"], function () {
                     window.bravetime.goto(data["url"]);
@@ -768,6 +776,7 @@ $(function(){
                 maybeError = true;
             }
         }
+
         if(consignee.search(/[^\u4E00-\u9FA5]/) > -1){
             maybeError = true;
         }
@@ -783,11 +792,14 @@ $(function(){
             return false;
         }
 
-        var tel = $("#mobile").val();
-        if (!Units.isTel(tel)) {
-            bravetime.newAlert("请填写正确的电话号码");
-            return false;
-        }
+      var tel = $("#mobile").val();
+      //手机号去空格和-处理
+      tel = tel.replace(/[ -]/g, "");
+      $("#mobile").val(tel)
+      if (!Units.isTel(tel)) {
+        bravetime.newAlert("请填写正确的电话号码");
+        return false;
+      }
 
         var selProvincesValue = $("#selProvinces").val();
         if (selProvincesValue == 0) {
@@ -975,12 +987,12 @@ $(function(){
                         if(typeof callback=="function"){
                             callback();
                         }
-                        bravetime.tj.evSend({category: tj_path, action: "address_tj", label: "address_ok", value: 1, nodeid: tj_id});
+                        // bravetime.tj.evSend({category: tj_path, action: "address_tj", label: "address_ok", value: 1, nodeid: tj_id});
                     },
                     error: function () {
 
                         isError = true;
-                        bravetime.tj.evSend({category: tj_path, action: "address_tj", label: "address_error", value: 1, nodeid: tj_id});
+                        // bravetime.tj.evSend({category: tj_path, action: "address_tj", label: "address_error", value: 1, nodeid: tj_id});
                     }
                 });
             }
@@ -1015,6 +1027,16 @@ $(function(){
             // $(".buy").removeClass("btn-disable")
         }
     }
-
+    // 预定商品点击相关规则
+    $(".order_navList").on("click",function (e) {
+      if (e.target.className == "dealIcon") {
+        location.href = "/t-14491.html";
+        return;
+      }
+      $(this).find(".order_rule_ipt").toggleClass("order_rule_ipt_checked");
+      if ($(".order_rule_ipt").hasClass("order_rule_ipt_checked")) {
+        $(this).removeClass("order_navList_line");
+      }
+    });
 });
 

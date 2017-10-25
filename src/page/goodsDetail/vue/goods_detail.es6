@@ -2,7 +2,6 @@
  * create by dony in 2017.3.12
  */
 import {Group, Cell, Tab, TabItem, Alert, Loading, Spinner} from 'vux';
-
 // 页面打开时
 import base from '../../../../utils/base.es6';
 import common1 from '../../../../module/common/common.es6';
@@ -10,10 +9,10 @@ import native from '../../../common/js/module/native.js';
 import confirm from './confirm.vue';
 import popup from '../../../common/js/module/popup.js';
 import share from '../../../common/js/module/share.js';
+import common from '../../../common/js/common.js';
 import {isTryShop} from "../../../../utils/utils.es6";
-
+import login from "../../../common/js/module/login.js";
 require('babel-polyfill');
-
 window.tj_path = "detail";
 base.init();
 //引入utils.es6;
@@ -41,8 +40,6 @@ export default {
   data() {
     return {
       response: null,
-      // goodListTitle: ['商品','详情'],
-      // selectedTitle: '商品',
       goodListTitle: ['商品详情'],
       selectedTitle: '商品参数',
       detailListTitle: ['图文详情', '商品参数'],
@@ -61,13 +58,12 @@ export default {
       trendInfo: '',
 
       goodsName: '',
+      // 是否是预定善品也放到这里面了
       infoObj: {
-        shopPrice: 0,
-        marketPrice: 0,
-        //是否有活动
         isActivity: false,
         //是否有预告活动
         isComingActivity: false,
+        presale: null,
       },
 
       activityNum: 0,
@@ -129,12 +125,7 @@ export default {
       //是否超过限购或者库存数量
       goodsLimitNum: 1,
       isLimitNum: false,
-
-      // alertShow: false,
-      // alertMsg: '',
       loadingShow: false,
-      //dataUrl,加入购物车返回的为url
-      // dataUrl: '',
       confirmShow: false,
       confirmMsg: '',
       //confirm
@@ -163,23 +154,15 @@ export default {
       trendsList: [],
       //判断是否在app中
       isApp: false,
-      // pullDownModal: {
-      //     pullDownStatus: 'default'
-      // },
-      // pullUpModal: {
-      //     pullupStatus: 'default'
-      // },
-      // //容器滚动到一定地方加载详情
-      // scrollPos: 0,
       //推广
       spread: '',
       activitysList: [],
       activityIndex: 0,
-      secKill: true,
+      // secKill: true,
+      secKill: false,
       //商品图片
       cartGoodsImg: '',
       isDev: true,
-      // cartModal: 0,
       //商品页面是否存在
       isGoods: false,
       //titleBar改变
@@ -188,85 +171,84 @@ export default {
       isMiddleTab: false,
       loadBefore: true,
 
-            firstScreenFinish:false,
-            type: 'ios',
-            memberCont: {
-              memberGoods: '',
-              memberPrice: ''
-            },
-          //库存
-          goodsStockNumber: 0,
-          trendTime: null,
-          timeHide: null,
-          timeShow: null,
-          videoObj: {},
-          //有预告的活动
-          isComingActive: 0,
-          singleComeActivity: null,
-          // actComingTime: 0,
-          //六一八
-          isShowa: false,
-          isShowb: false,
-          backTop: 0,
-          //图文详情
-          minHeight: window.innerHeight - 128,
-          //分享卡id
-          sellerId: "",
-          goodsId: "",
-          goodsDataBasis: null,
-        }
-    },
+      firstScreenFinish:false,
+      type: 'ios',
+      memberCont: {
+        memberGoods: '',
+        memberPrice: ''
+      },
+      //库存
+      goodsStockNumber: 0,
+      trendTime: null,
+      timeHide: null,
+      timeShow: null,
+      videoObj: {},
+      //有预告的活动
+      isComingActive: 0,
+      singleComeActivity: null,
+      //六一八
+      isShowa: false,
+      isShowb: false,
+      backTop: 0,
+      //图文详情
+      minHeight: window.innerHeight - 128,
+      //分享卡id
+      sellerId: "",
+      goodsId: "",
+      goodsDataBasis: null,
+    }
+  },
     created () {
-
-
+      this.getUrl();
         $(window).scroll(() => {
           let topHead = $(".top_h_s_to");
           let scrollTop = $(window).scrollTop();
 
-      topHead.css({"opacity": scrollTop * 0.01 < 1 ? scrollTop * 0.01 : 1});
-      this.isChange = scrollTop * 0.01 > 1;
+          topHead.css({"opacity": scrollTop * 0.01 < 1 ? scrollTop * 0.01 : 1});
+          this.isChange = scrollTop * 0.01 > 1;
 
           $(".top_h_s").css({"background": "rgba(250,250,250,"+ 0.01 * scrollTop +")"})
           sessionStorage['goodsPagePos'] = scrollTop;
         });
       if (window.appData){
-          window.appData.isAudioAbsorb = 1
-          window.appData.isShowAudio = 1
-        } else {
-          window.appData = {
-            'isAudioAbsorb':1,
-            'isShowAudio':1
-          }
-        }this.getCartNum();
-      // this.getUrl();
+        window.appData.isAudioAbsorb = 1
+        window.appData.isShowAudio = 1
+      } else {
+        window.appData = {
+          'isAudioAbsorb':1,
+          'isShowAudio':1
+        }
+      }
+      this.getCartNum();
       this.getIsApp();
     },
     mounted () {
     },
     methods: {
-    dumpToMamaAdviser() {
-      if(isTryShop()){
-          api('/api/mg/auth/inviter/checkAdviser', {
-            dataType: "json",
-            type: "post"
-          }).then(function (result) {
-            if (!result.code && result.data.needPop) {
-              popup.specialAlert({
-                title: "<div style='width: 1.51rem;margin-left: auto;margin-right: auto;margin-top: -0.5rem;'><img src='http://pic.davdian.com/free/2017816/mamaguwen.png'></div>",
-                text: " <div style='text-align:left'>亲爱的大V妈妈，我们将给您分配一个1对1服务的妈妈顾问，您有任何关于购物、学习、育儿、活动等疑问，都可以向她寻求帮助</div>",
-                btnTitle: "马上选择",
-                btnCallback() {
-                  location.replace('/choose_mama_adviser.html')
-                }
-              })
-            }
-          })
-            .catch(function (error) {
-              console.log('error:', error)
+      dumpToMamaAdviser() {
+        if(isTryShop()){
+            api('/api/mg/auth/inviter/checkAdviser', {
+              dataType: "json",
+              type: "post"
+            }).then(function (result) {
+              if (!result.code && result.data.needPop) {
+                popup.specialAlert({
+                  title: "<div style='width: 1.51rem;margin-left: auto;margin-right: auto;margin-top: -0.5rem;'><img src='http://pic.davdian.com/free/2017816/mamaguwen.png'></div>",
+                  text: " <div style='text-align:left'>亲爱的大V妈妈，我们将给您分配一个1对1服务的妈妈顾问，您有任何关于购物、学习、育儿、活动等疑问，都可以向她寻求帮助</div>",
+                  btnTitle: "马上选择",
+                  btnCallback() {
+                    location.replace('/choose_mama_adviser.html')
+                  }
+                })
+              }
             })
+              .catch(function (error) {
+                console.log('error:', error)
+              })
 
-      }
-    },    getUrl () {
+        }
+      },
+      getUrl () {
           if (this.isDev) {
             const locationUrl = window.location.href;
             let goods = locationUrl.match(/(\d+)\.html/ig)[0],
@@ -326,9 +308,9 @@ export default {
                 this.isFirstLoad = false;
             }
         },
-        //加入购物车动画
-        addCartAnimate () {
-            let imgUrl = this.cartGoodsImg;
+    //加入购物车动画
+    addCartAnimate () {
+        let imgUrl = this.cartGoodsImg;
 
       let goodsImg = $('<img class = "hideImg" src = ' + imgUrl + '>');
       $("body").append(goodsImg);
@@ -349,21 +331,44 @@ export default {
         $('html,body').animate({scrollTop: 0}, 500);
       }
     },
+    isMobile() {
+      let ua = navigator.userAgent;
+      return !!ua.match(/Mobile/i);
+    },
+  // 跳转方式
+    handleJump(url) {
+      // this.isapp = this.isApp();
+      if (this.isApp) {
+        native.Browser.open({
+          url: url
+        });
+      } else if (this.isMobile()) {
+        window.open(url, '_blank');
+      } else {
+        window.open(url, '_self');
+      }
+    },
     //加入购物车封装的ajax;
     cartAjax(isBuy) {
+      let that = this;
       if (!this.secKill) {
         if (isBuy == 1) {
+          if (!login.isLogined()) {
+            login.needLogin();
+            return;
+          }
           // 购买就直接跳走
+          let goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
           setTimeout(() => {
-            let goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
-            window.location = `/${buyURL}&${goods}`;
+            
+            window.location.href = `/${buyURL}&${goods}`;
+            // that.handleJump(`/${buyURL}&${goods}`);
           }, 500);
           return;
         }
       }
 
       this.loadingShow = true;
-      let that = this;
       let goods = {
         number: this.handleChangeNum,
         goods_id: this.dataRepresentId
@@ -398,7 +403,6 @@ export default {
               popup.toast('跳转中', 3000);
               // 购买就直接跳走,不是秒杀跳到购物车
               setTimeout(() => {
-                // let goods = encodeURI(`goods[0][id]=${this.dataRepresentId}&goods[0][number]=${this.handleChangeNum}`);
                 window.location = secURL;
               }, 500);
             }
@@ -568,13 +572,16 @@ export default {
         dataObj = "";
         type = "GET";
       }
-      ;
+
       $.ajax({
         type: type,
         url: detailURL,
         data: dataObj,
         dataType: 'JSON',
         success(res) {
+          common.checkRedirect(res);
+          if (document.getElementById('firstPageShowShopCart'))
+          document.getElementById('firstPageShowShopCart').style.display = 'none'
           that.loadBefore = false;
 
           //清空，不然有串商品会一直添加
@@ -594,23 +601,20 @@ export default {
             return;
           }
           if (res.code == 0) {
-            if (res.data.webUrl) {
-              location.href = res.data.webUrl;
-            } else {
               let data = res.data,
-                dataExtra,
-                dataComment = data.comments,
-                goodsStockSales = data.extra.parent,
-                dataBasis = data.basis;
+                  dataExtra,
+                  dataComment = data.comments,
+                  goodsStockSales = data.extra.parent,
+                  dataBasis = data.basis;
 
               that.goodsDataBasis = data.basis;
+              that.response = res;
               //分享卡
               that.sellerId = data.shop.sellerId.toString();
-              // that.goodsId = dataBasis.goodsId;
               that.goodsId = data.representId == '0' ? dataBasis.goodsId : data.representId;
 
               //六一
-              if (Number(res.sys_time) * 1000 > 1497369600000 && Number(res.sys_time) * 1000 < 1497456000000) {
+              /*if (Number(res.sys_time) * 1000 > 1497369600000 && Number(res.sys_time) * 1000 < 1497456000000) {
                 that.isShowa = true;
               } else {
                 that.isShowa = false;
@@ -619,7 +623,7 @@ export default {
                 that.isShowb = true;
               } else {
                 that.isShowb = false;
-              }
+              }*/
 
               //商品轮播图
               that.goodsImgList.push({
@@ -798,7 +802,6 @@ export default {
                   goodsStockSale = dataExtra.sales.goodsStocks;
                   that.infoObj.salesNumber = dataExtra.sales.salesNumber;
                 }
-                // that.infoObj.goodsStockNumber = goodsStockSale;
 
                 //活动
                 if (dataExtra) {
@@ -814,6 +817,8 @@ export default {
                 }
                 //品牌
                 that.getBrand(dataBasis);
+                // 父商品下的子商品是否有要付尾款单的
+                that.getFinalPay();
                 //判断是否时未上架或者无货，如果是，请求猜你喜欢的接口，
                 that.getMayLike(dataExtra, that.mayLikeData);
 
@@ -823,47 +828,46 @@ export default {
                   that.tendsShow();
                 }, 1000);
 
-                          //库存不足提示
-                          if (dataExtra.status.onSale == '1' && Number(goodsStockSale) < 20 && Number(goodsStockSale) > 0) {
-                                $(".stock_tips_wrapper").show().animate({"top": "58", "opacity": 1}, 1000, () => {
-                                    setTimeout(() => {
-                                        $(".stock_tips_wrapper").animate({"top": "0", "opacity": 0}, 1000);
-                                    }, 3000)
-                                });
-                          }
-                          //是否上架,让提示先隐藏，不然刷新页面会闪现出来
-                          if (dataExtra.status.onSale == '0') {
-                            $(".goods_status_wrapper").show();
-                          }
-                           });
-                            //分享
-                            // 异步获取数据后
-                            window.title = dataBasis.shareGoodsName;
-                            window.link = location.href;
-                            window.imgUrl = dataBasis.shareImg.replace('pic.davdian.com','pic1.davdian.com');
-                            window.desc = dataBasis.shareRecommend;
-
-                        }
-                    } else {
-                      popup.toast(res.data.msg,3000);
-                    }
-                },
-                error (err) {
-                    that.loadBefore = false;
+                //库存不足提示
+                if (dataExtra.status.onSale == '1' && Number(goodsStockSale) < 20 && Number(goodsStockSale) > 0) {
+                  $(".stock_tips_wrapper").show().animate({"top": "58", "opacity": 1}, 1000, () => {
+                      setTimeout(() => {
+                          $(".stock_tips_wrapper").animate({"top": "0", "opacity": 0}, 1000);
+                      }, 3000)
+                  });
                 }
-            })
-        },
-        //评论
-        getComment (dataComment) {
-            let commentInfo = {
-                commentRate: dataComment.commentRate,
-                commentNum: dataComment.commentNum,
-                commentUrl: dataComment.command.content,
-            };
-            this.commentObj = commentInfo;
-            dataComment.dataList.map((item, index) => {
-                item.commentUnRate = 5 - Number(item.commentRate);
-            });
+                //是否上架,让提示先隐藏，不然刷新页面会闪现出来
+                if (dataExtra.status.onSale == '0') {
+                  $(".goods_status_wrapper").show();
+                }
+              });
+              //分享
+              // 异步获取数据后
+              window.title = dataBasis.shareGoodsName;
+              window.link = location.href;
+              window.imgUrl = dataBasis.shareImg.replace('pic.davdian.com','pic1.davdian.com');
+              window.desc = dataBasis.shareRecommend;
+
+              } else {
+                popup.toast(res.msg,3000);
+              }
+            },
+            error (err) {
+                that.loadBefore = false;
+            }
+          })
+    },
+      //评论
+    getComment (dataComment) {
+      let commentInfo = {
+          commentRate: dataComment.commentRate,
+          commentNum: dataComment.commentNum,
+          commentUrl: dataComment.command.content,
+      };
+      this.commentObj = commentInfo;
+      dataComment.dataList.map((item, index) => {
+          item.commentUnRate = 5 - Number(item.commentRate);
+      });
 
       if (dataComment.dataList.length > 3) {
         this.commentObj.commentList = dataComment.dataList.slice(0, 3);
@@ -884,6 +888,29 @@ export default {
         });
       //商品参数
       that.goodsParamObj = dataBasis.attributes;
+    },
+    // 父商品下的子商品是否有要付尾款单的
+    getFinalPay() {
+      let goPayAdvanceList = [];
+      this.dataExtraList.map((item) => {
+        if (Object.prototype.toString.call(item.goPayAdvance) == '[object Object]') {
+          goPayAdvanceList.push(item.goPayAdvance);
+        }
+      });
+
+      function campare(a, b) {
+        return a.addTime - a.addTime;
+      };
+
+      if (goPayAdvanceList.length) {
+        if (goPayAdvanceList.length == 1) {
+          this.infoObj.goPayAdvance = goPayAdvanceList[0];
+        } else {
+          goPayAdvanceList.sort(campare);
+          this.infoObj.goPayAdvance = goPayAdvanceList[0]
+        }
+
+      }
     },
     //判断是否要置灰
     getDisabled(dataExtraList, dataBasisTags) {
@@ -978,37 +1005,26 @@ export default {
     //点击多规格和首次要改变的所有，封装成一个
     getChanges(dataExtra) {
       let that = this;
+      this.isLimitNum = false;
       this.handleChangeNum = 1;
-      //限购或者库存数量
-      that.goodsLimitNum = dataExtra.sales.goodsStocks;
-      //信息
-      if (Number(dataExtra.sales.goodsStocks) <= 1) {
-        $(".vux-number-selector-plus").css({"background": "#eee"});
-        $(".vux-number-selector-plus path").css({"fill": "#bbb", "stroke": "#bbb"});
+      //限购或者库存数量,如果是预定商品，让其等于dataExtra.limitNum
+      if (dataExtra.sales.limitNum) {
+        that.goodsLimitNum = dataExtra.sales.limitNum;
       } else {
-        $(".vux-number-selector-plus").css({"background": "#fff"});
-        $(".vux-number-selector-plus path").css({"fill": "#666", "stroke": "#666"});
+        that.goodsLimitNum = dataExtra.sales.goodsStocks;
       }
-      $(".isLimit").animate({"opacity": "0"}, 200);
-      that.infoObj.shopPrice = dataExtra.price.shopPrice;
-      that.infoObj.finalPrice = dataExtra.price.finalPrice;
-      //会员价
-      that.infoObj.memberGoods = dataExtra.price.memberGoods;
-      that.infoObj.memberPrice = dataExtra.price.memberPrice;
-
-      that.infoObj.marketPrice = dataExtra.price.marketPrice;
-      //将恢复为多少用到的
-      that.infoObj.normalIncome = dataExtra.price.normalIncome;
-      //正常的佣金
-      that.infoObj.sellerIncome = dataExtra.price.sellerIncome;
-      //sellerIncome乘以倍数得到的佣金
-      that.infoObj.totalIncome = dataExtra.price.totalIncome;
-      that.infoObj.taxPrice = dataExtra.price.importTariff;
-      that.infoObj.activityRatio = dataExtra.price.activityRatio;
-      that.infoObj.discountRatio = dataExtra.price.discountRatio;
+      if (that.goodsLimitNum <= 1) {
+        this.isLimitNum = true;
+      } else {
+      }
+      //信息
+      $(".isLimit").removeClass("isLimitShow");
+      that.infoObj.price = dataExtra.price;
+      //将恢复为多少用到的normalIncome,正常的佣金sellerIncome,sellerIncome乘以倍数得到的佣金
       that.infoObj.goodsStockNumber = dataExtra.sales.goodsStocks;
-      //新增的，取子商品的销量
-      // that.infoObj.salesNumber = dataExtra.sales.salesNumber;
+      // 预定的限制数量
+      that.infoObj.limitNum = dataExtra.sales.limitNum;
+      // that.infoObj.goPayAdvance = dataExtra.goPayAdvance;
 
       that.goodsStockNumber = dataExtra.sales.goodsStocks;
 
@@ -1045,30 +1061,44 @@ export default {
           }
         }
 
-            common1.initShare(5);
-            base.ready();if (shareMoney > 0&& that.visitorStatus == '3') {
-              native.Browser.setHead({
-                shareMoney: shareMoney + "",
-                shareMoneyStr: '赚' + shareMoney + '元',
-              });
-              window.moreShareInfo = {
-                shareTitle: "分享至少赚" + shareMoney + "元",
-                shareDesc: "当好友点击您分享的链接，并进入您的店铺购物，您就可以获得对应的商品返现啦！",
-                bigImgUrl: `http://img.davdian.com/add_qrcode.php?goods_id=${that.goodsId}&seller_id=${that.sellerId}&t=${Date.now()}`,};
-            } else {
-              native.custom.initHead({
-                shareOnHead: 1,
-                isAudioAbsorb:1,
-                isShowAudio:1
-              });
-              share.setShareInfo({
-                title: window.title, // 分享标题
-                desc: window.desc, // 分享描述
-                link: window.link, // 分享链接
-                imgUrl: window.imgUrl, // 分享图标
-              });
-            }
-          }
+        common1.initShare(5);
+        base.ready();
+        if (shareMoney > 0&& that.visitorStatus == '3') {
+          native.Browser.setHead({
+            backBtn: 1,
+            shareMoney: shareMoney + "",
+            shareMoneyStr: '赚' + shareMoney + '元',
+          });
+          window.moreShareInfo = {
+            shareTitle: "分享至少赚" + shareMoney + "元",
+            shareDesc: "当好友点击您分享的链接，并进入您的店铺购物，您就可以获得对应的商品返现啦！",
+            bigImgUrl: `http://img.davdian.com/add_qrcode.php?goods_id=${that.goodsId}&seller_id=${that.sellerId}&t=${Date.now()}`,};
+        } else {
+          native.custom.initHead({
+            shareOnHead: 1,
+            isAudioAbsorb:1,
+            isShowAudio:1
+          });
+          share.setShareInfo({
+            title: window.title, // 分享标题
+            desc: window.desc, // 分享描述
+            link: window.link, // 分享链接
+            imgUrl: window.imgUrl, // 分享图标
+          });
+        }
+      } else {
+        native.custom.initHead({
+          shareOnHead: 1,
+          isAudioAbsorb:1,
+          isShowAudio:1
+        });
+        share.setShareInfo({
+          title: window.title, // 分享标题
+          desc: window.desc, // 分享描述
+          link: window.link, // 分享链接
+          imgUrl: window.imgUrl, // 分享图标
+        });
+      }
 
       //活动
       this.activityNum = dataExtra.activity.length;
@@ -1088,14 +1118,24 @@ export default {
 
       //是否是秒杀,单品赠
       let killArr = [];
+      // 是否是预定商品
+      that.infoObj.presale = null;
       dataExtra.activity.map((item, index) => {
         killArr.push(item.typeId);
         if (item.gifts.length) {
           that.activitysList = item.gifts;
         }
 
-        if (Number(item.typeId) != 1 && Number(item.typeId) != 2 && Number(item.typeId) != 8 && Number(item.typeId) != 4) {
+        if (item.typeId == 1 || item.typeId == 2 || item.typeId == 8 || item.typeId == 4 || item.typeId == 9) {
+
+        } else {
           that.activityInfo.activitys.push(item);
+        }
+
+        // 是否是预定商品
+        if (item.typeId == '9') {
+          that.infoObj.presale = item;
+          that.infoObj.presale.isLimit = true;
         }
       });
       if (killArr.indexOf('1') === -1) {
@@ -1143,7 +1183,6 @@ export default {
       // 判断妈妈顾问
       that.dumpToMamaAdviser();
       //判断限时购是否抢光提示。
-
       if (dataExtra.status.onSale == '1' && dataExtra.sales.goodsStocks > '0' && dataExtra.hints.hintsInfo && dataExtra.hints.hintsInfo.length && that.visitorStatus == '3') {
         popup.alert({
           title: '该商品限时购活动库存售罄',        // 标题（支持传入html。有则显示。）
@@ -1154,7 +1193,6 @@ export default {
     //dataExtra为空的时候
     getDataExtra(dataBasis) {
       let that = this;
-
       //活动
       this.activityNum = 0;
       //移过来的
@@ -1218,24 +1256,44 @@ export default {
         success: (res) => {
           if (res.code == 0) {
             let data = res.data;
-            if (data && data.dataList && data.dataList.length) {
-              data.dataList.map((item, index) => {
-                item.imageUrl = `${item.imageUrl}`;
-              });
+            let dataList = [];
+            if (data && data.dataList.length) {
+              dataList = data.dataList;
+              
+              if (dataList.length) {
+                dataList.map((item, index) => {
+                  item.imageUrl = `${item.imageUrl}`;
+                });
 
-              that.mayYouLikeList = data.dataList;
-              that.mayYouLikeNoMore = true;//判定值 改为false
-              that.isFirstLoad = false;
-            }
-            if (this.$refs.detailScroller) {
-              document.querySelector('.good_list_2_row').style.height = `${Math.ceil(data.dataList.length / 2) * 187 + 124}px`;
-              this.$nextTick(() => {
-                this.$refs.detailScroller.reset();
-              });
+                that.mayYouLikeList = data.dataList;
+                that.mayYouLikeNoMore = true;//判定值 改为false
+                that.isFirstLoad = false;
+              }
+            } else {
+              $.ajax({
+                url: '/api/mg/sale/index/getPageSecond',
+                type: "POST",
+                data: layout.strSign("detailLike", ""),
+                dataType: "JSON",
+                success(res) {
+                  if (res.code == 0) {
+                    dataList = res.data.feedList[0].body.dataList;
+
+                    if (dataList.length) {
+                      dataList.map((item, index) => {
+                        item.imageUrl = `${item.imageUrl}`;
+                      });
+
+                      that.mayYouLikeList = dataList;
+                      that.mayYouLikeNoMore = true;//判定值 改为false
+                      that.isFirstLoad = false;
+                    }
+                  }
+                }
+              })
             }
           } else {
             popup.toast(res.data.msg, 3000);
-
           }
         },
         error: (err) => {

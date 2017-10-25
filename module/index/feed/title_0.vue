@@ -1,7 +1,7 @@
 <template>
     <div class="title_0" :style="styleObject">
         <div v-text='data.body.title'></div>
-        <div v-if='data.body.come && data.body.come != 0.00' class='title_o_come'>
+        <div v-if='data.body.come && data.body.come != 0.00 && isAuditing' class='title_o_come'>
             <i class='mui-price-rmb'>￥</i><span v-text='data.body.come'></span>
         </div>
     </div>
@@ -24,7 +24,9 @@
 export default {
     data(){
         return {
-            msg: 'hello vue'
+            msg: 'hello vue',
+            name:"title_0",
+            isAuditing:false
         }
     },
     props: ['data'],

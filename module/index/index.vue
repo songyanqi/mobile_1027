@@ -1,13 +1,13 @@
 <template>
   <div class="index_inner">
     <!--头部-->
-    <index-head :usersta="usersta" :menudata='menudata' :data='headData' :init-category='initCategory' :initcate='initcate' v-if='!app' v-on:categorya="changeCategory"></index-head>
-    <div style='height: 80px' v-if='!app'></div>
+    <index-head :usersta="usersta" :menudata='menudata' :data='headData' v-if='!app' v-on:categorya="changeCategory" :style-list="aa"></index-head>
+    <div style='height: 80px' v-if='!app' class="background"></div>
     <n-progress></n-progress>
     <!--内容-->
     <index-feed :data="feedData" v-if='!loadFlag && !unLoadFlag'></index-feed>
 
-    <bd_goods_1 :tableindex="page_index" :menuid="menuId" :likenum="likeNum"></bd_goods_1>
+    <bd_goods_1 :menuids="menuId"></bd_goods_1>
     <!--底部-->
     <!--<index-foot :data='footData' v-if='!app'></index-foot>-->
     <index-foot active="home" v-if='!app' style="z-index: 13;"></index-foot>
@@ -73,5 +73,7 @@
   @import "./index.css";
   #nprogress .spinner {
     display: none !important;
+  }
+  .background{
   }
 </style>

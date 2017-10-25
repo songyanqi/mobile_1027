@@ -42,12 +42,12 @@ let sortObj = (dataVersion, obj) => {
   // 测试
   // let arrValue = ['http://haba.davdian.com/', 'b63b64c250150b505ab0e8219325ef80adb73835', "", 'json', new Date().getTime(), 'web_h5_*_*', '750_1334', (JSON.parse(sessionStorage.getItem('dataVersion')) && JSON.parse(sessionStorage.getItem('dataVersion'))[dataVersion])?JSON.parse(sessionStorage.getItem('dataVersion'))[dataVersion]:0]
   // 线上
-  var osv = "web_h5_*_*";
+  var osv = "web_h5_"+utils.utils.getAppVersion_new()+"_*";
   if(window.Units&&Units.isApp()&&Units.isIOS()){
-    osv = "web_ios_*_*";
+    osv = "web_ios_"+utils.utils.getAppVersion_new()+"_*";
   }
   if(window.Units&&Units.isApp()&&Units.isAndroid()){
-      osv = "web_android_*_*";
+      osv = "web_android_"+utils.utils.getAppVersion_new()+"_*";
   }
   // let arrValue = [location.host, document.cookie.split(';').filter(function(x){return x.indexOf("dvdsid")>-1})[0]?document.cookie.split(';').filter(function(x){return x.indexOf("dvdsid")>-1})[0].split("=")[1]:0, "", 'json', new Date().getTime(), osv, '750_1334', (JSON.parse(sessionStorage.getItem('dataVersion')) && JSON.parse(sessionStorage.getItem('dataVersion'))[dataVersion])?JSON.parse(sessionStorage.getItem('dataVersion'))[dataVersion]:0]
   let arrValue = [location.href.split("/").slice(0,3).join("/"), document.cookie.split(';').filter(function(x){return x.indexOf("dvdsid")>-1})[0]?document.cookie.split(';').filter(function(x){return x.indexOf("dvdsid")>-1})[0].split("=")[1]:0, "", 'json', new Date().getTime(), osv, '750_1334', 0]

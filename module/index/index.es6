@@ -13,10 +13,13 @@ import NProgress from 'nprogress'
 import share from '../../src/common/js/module/share.js'
 import popup from '../../src/common/js/module/popup.js'
 import api from '../../utils/api.es6';
+import dialog from "../../utils/dialog.es6"
+import axios from"axios"
 
 export default {
   data() {
     return {
+      name:"index",
       dataUrl: '../data/index/index.json',
       contentData: {feedList: []},
       initCategory: 0,
@@ -53,10 +56,19 @@ export default {
       menudata: {},
       page_index: 0,
       menuId: 8,
-      likeNum: 0
+
+      skinPackageList:"",
+      skinPackageobj:{},
+
+      index_header_style:{},
+      store:[]
     }
   },
+
   computed: {
+    aa(){
+      return this.index_header_style;
+    },
     feedData() {
       return this.contentData.feedList
     },
@@ -100,23 +112,135 @@ export default {
       setTimeout(function(){
         window.bravetime.initHead&&window.bravetime.initHead()
       },500)
+
+      that.getSkinPackage();
     })
   },
+
   methods: {
+
+    changStyle(json){
+      this.index_header_style={};
+      //初始化header透明
+      this.index_header_style.top_container={
+        'background': 'inherit',
+        "backgroundImage":"url("+json["8"].imageFilePath+")"
+      };
+      this.index_header_style.head={
+        'background': 'none'
+      };
+      this.index_header_style.v_menu={
+        'background': 'none'
+      };
+      //背景图片
+      this.index_header_style.top0={
+        "backgroundImage":"url("+json["8"].imageFilePath+")"
+      };
+      //搜索框的样式
+      this.index_header_style.search_input={
+        "opacity":json[1].alpha,
+        "backgroundColor":"#"+json[1].backgroundColor.substr(2)
+      };
+      //搜索icon
+      this.index_header_style.search_icon={
+        "backgroundImage":"url("+json["2"].imageFilePath+")"
+      };
+      //搜索框一般字
+      this.index_header_style.shop_name={
+        "color":"#"+json["1"].defaultTextColor.substr(2)
+      };
+      //搜索框特殊字
+      this.index_header_style.dav_base_red_color={
+        "color":"#"+json["1"].specificTextColor.substr(2)
+      };
+
+      //分类icon
+      this.index_header_style.classification_icon={
+        "backgroundImage":"url("+json["5"].imageFilePath+")"
+      };
+      //购物车icon
+      this.index_header_style.cart_icon={
+        "backgroundImage":"url("+json["6"].imageFilePath+")"
+      };
+      //购物车的数量
+      this.index_header_style.count={
+        "color":"#"+json["7"].textColor.substr(2),
+        "background":"#"+json["7"].backgroundColor.substr(2)
+      };
+      //二级菜单视图属性
+      this.index_header_style.li={
+        "color":"#"+json["9"].textColor.substr(2),
+        'background': 'none'
+      };
+      this.index_header_style.hoverSpan={
+        "borderBottom":"2px solid #"+json["9"].bottomLineColor.substr(2)
+      };
+      this.index_header_style.time_state_span_active={
+        "color":"#"+json["9"].textSelectedColor.substr(2)
+      };
+
+    },
+    changeStyleByData(data){
+      var that=this;
+      data.map(function (item, index) {
+        var now = new Date().getTime().toString().substr(0,10);
+        var startTime = item.startTime;
+        var endTime = item.endTime;
+        if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
+          that.changStyle(JSON.parse(item.viewFileUrl));
+        }
+      });
+    },
+    getSkinPackage(){
+      var that = this;
+      // 取localStorage改变样式
+      if(localStorage.getItem("skinPackage")) {
+        var skinInfo = JSON.parse((localStorage.getItem("skinPackage")));
+         this.changeStyleByData(skinInfo);
+      }
+
+      // 请求接口取到皮肤存到localStorage
+      var obj={
+        "elements":JSON.stringify(['skin'])
+      };
+      api("/api/mg/user/init/getInit",obj)
+        .then(function (result) {
+          if(result.code==0){
+            var store=result.data.list[0].listData;
+
+            //更改子组件的store数据，触发子组件的watch监听
+            window.index.$children.map(function(item,index){
+              if(item.name=="index"){
+                item.$children.map(function (item2,index2) {
+                  if(item2.name=="com-footer"){
+                    item2.store=store;
+                  }
+                });
+              }
+            });
+
+            //存入localStorage
+            localStorage.setItem("skinPackage",JSON.stringify(store));
+
+            //使用皮肤包
+            that.changeStyleByData(store);
+          }else{
+            if(result.data.msg){
+              dialog.alert('code:'+result.code+":msg"+result.data.msg);
+            }else{
+              dialog.alert('code:'+result.code);
+            }
+          }
+        })
+        .catch(function (e) {
+          //dialog.alert(e);
+        });
+    },
     /**
      * 初始化，调用后开始获取数据
      *
      *
      */
-    // sessionHistory(){
-    //     if (window.Units.isMobileIOS() || window.Units.isAndroid()){
-    //         if (sessionStorage.getItem('history') && JSON.parse(sessionStorage.getItem('history')).length >1){
-    //             if (JSON.parse(sessionStorage.getItem('history'))[JSON.parse(sessionStorage.getItem('history')).length-1].path != JSON.parse(sessionStorage.getItem('history'))[JSON.parse(sessionStorage.getItem('history')).length-2].path){
-    //                 window.location.reload()
-    //             }
-    //         }
-    //     }
-    // },
     sessionHistory() {
       if (window.Units.isMobileIOS() || window.Units.isAndroid()) {
         if (sessionStorage.getItem('history') && JSON.parse(sessionStorage.getItem('history')).length > 1) {
@@ -129,28 +253,24 @@ export default {
       }
     },
     initHistory() {
-      if (layout.sStorageGet('v_index', 'category') && (layout.sStorageGet('v_index', 'index') || layout.sStorageGet('v_index', 'index') == 0)) {
-        if (layout.sStorageGet('v_index', 'index') == 0) {
+      let that =this;
+      let menuId = that.getQuery('menuId') || 8;
+        if (menuId == 8) {
           var str = "index_first"
         } else {
-          var str = "first_" + layout.sStorageGet('v_index', 'category')
+          var str = "first_" + menuId;
         }
         if (layout.sStorageGet(str, 'data')) {
           this.contentData = layout.sStorageGet(str, 'data')
-          this.initcate = layout.sStorageGet('v_index', 'category')
-          this.initCategory = layout.sStorageGet('v_index', 'index')
-          if (+this.initCategory) {
+          this.initcate = menuId;
+          if (menuId != 8) {
             this.channel(this.initcate)
           } else {
             this.getPageFirst();
           }
-
         } else {
           this.init()
         }
-      } else {
-        this.init()
-      }
     },
     afterHandle() {
       let that = this;
@@ -183,7 +303,6 @@ export default {
       $.ajax({
         type: "POST",
         url: strUrl,
-        // url: '../data/index_data.json',
         data: strData,
         dataType: 'json',
         success: function (data) {
@@ -474,13 +593,12 @@ export default {
         })
     },
     changeCategory: function (category, index) {
-      this.page_index = index;
-      this.menuId = category;
       if (category == '-1') {
         window.location.href = this.menuList[this.menuList.length - 1].command.content
         return
       }
-      var that = this
+      var that = this;
+      that.menuId = category;
       if (this.initCategory == index) {
         return
       }
@@ -510,7 +628,6 @@ export default {
           }, 150)
         } else {
           var flag_name = 'flag_' + Date.now();
-          console.log(flag_name)
           window[flag_name] = false;
           setTimeout(function () {
             if (!window[flag_name]) {
@@ -556,7 +673,6 @@ export default {
         }, 150)
       } else {
         var flag_name = 'flag_' + Date.now();
-        console.log(flag_name)
         window[flag_name] = false;
         setTimeout(function () {
           if (!window[flag_name]) {
@@ -662,7 +778,6 @@ export default {
           common.checkRedirect(data);
 
           that.menudata = data.data;
-          console.log(that.menudata);
           that.getDataForUse(0);
           that.checkdownTip(data.visitor_status);
           // 设置分享信息
@@ -905,6 +1020,12 @@ export default {
     },
     events: function () {
 
+    },
+    getQuery: function (name) {
+      var reg = new RegExp('(^|&?)' + name + '=([^&]*)(&|$)', 'i');
+      var r = window.location.search.match(reg)
+      if (r != null) return decodeURIComponent(r[2]);
+      return null
     }
   },
   components: {
@@ -947,14 +1068,9 @@ export default {
     if (!Units.isApp()) {
       $('body').addClass('scroll_flag self_shop');
       $('body').css("paddingBottom", "48px")
-    } else {
-      $('body').css("paddingBottom", "0px")
     }
-  },
-  watch: {
-    menuId: function () {
-      var scope = this;
-      this.likeNum++;
+    else {
+      $('body').css("paddingBottom", "0px")
     }
   }
 }

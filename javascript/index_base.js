@@ -12,59 +12,6 @@ for(var i=0;i<js.length;i++){
 
 }
 
-// 统一加 数据统计
-window.cnzz = false; // 是否使用cnzz
-window.baidu = true; // 是否使用百度统计
-
-window.google = false; // 是否使用google统计
-window.dvd_tj = true; // 大V店统计
-
-
-
-if (window.cnzz || window.baidu || window.google || window.dvd_tj) {
-    if(!window.bravetime||!window.bravetime.tj){
-        var js = document.scripts;
-        var tjscr = js[js.length - 1].src.substring(0, js[js.length - 1].src.lastIndexOf("/") + 1) + "tongji.js";
-        tjscr = tjscr.replace("dist","javascript");
-        var oScript = document.createElement("script");
-        oScript.type = "text/javascript";
-        oScript.src = tjscr;
-        var s = document.getElementsByTagName('head')[0].getElementsByTagName("link")[0];
-        s.parentNode.insertBefore(oScript, s);
-        window.bravetime = window.bravetime || {};
-    }
-}
-
-if(window.google){
-
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-61684246-2', 'auto');
-
-
-}
-
-if (window.cnzz) {
-    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
-    document.write(unescape("%3Cspan id='cnzz_stat_icon_1255599577'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1255599577' type='text/javascript'%3E%3C/script%3E"));
-}
-if (window.baidu) {
-    var _hmt = window._hmt || [];
-    if (window["tj_path"]) {
-        _hmt.push(['_setAutoPageview', false]);
-    }
-    window._hmt = _hmt;
-    (function () {
-        var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?9b39bbe0b5396b90787c80447d337d58";
-        var s = document.getElementsByTagName('head')[0].getElementsByTagName("link")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-}
-
 
 
 $(document).ready(function () {
@@ -1207,7 +1154,7 @@ $(document).ready(function () {
     if(window.isShowActivity){
         showActivityImg();
         setTimeout(function(){
-            bravetime.tj.pvSend("alert_activity",(window["tj_path"]||'other_path'));
+           // bravetime.tj.pvSend("alert_activity",(window["tj_path"]||'other_path'));
         },500);
 
     }

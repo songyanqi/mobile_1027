@@ -3,11 +3,24 @@
  */
 export default {
   /**
+   * 获取文档滚动条-上方距离
+   */
+  getDocumentScrollTop(){
+    return document.body.scrollTop || window.pageYOffset || document.documentElement.scrollTop || 0;
+  },
+  /**
+   * 获取文档滚动条-左侧距离
+   */
+  getDocumentScrollLeft(){
+    return document.body.scrollLeft || window.pageXOffset || document.documentElement.scrollLeft || 0;
+  },
+  /**
    * 页面触底通知回调
    */
   pageScrollToBottom(callback){
+    let ts = this;
     window.addEventListener('scroll', function () {
-      if (document.documentElement.clientHeight + document.body.scrollTop >= document.body.clientHeight * 0.95) {
+      if (document.documentElement.clientHeight + ts.getDocumentScrollTop() >= document.body.clientHeight * 0.95) {
         callback();
       }
     }, false);
@@ -31,5 +44,11 @@ export default {
    */
   getBaseDomain(){
     return /(bravetime.net|vyohui.cn|davdian.com)/.exec(location.host)[0];
-  }
+  },
+  /**
+   * 获取页面二级域名
+   */
+  getSecondDomain(){
+    return /(.*)[.](bravetime.net|vyohui.cn|davdian.com)/.exec(location.host)[1];
+  },
 }

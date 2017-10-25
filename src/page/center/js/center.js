@@ -113,26 +113,36 @@ new Vue({
     },
     // 一元开店点击
     oneKdClick(){
-      popup.confirm('<p>点击确定后将不能继续体验大V店</p><p>请慎重选择?</p>', function () {
-        $.ajax({
-          cache: false,
-          async: true,
-          url: '/index.php?c=User&a=ajaxDo&_=' + Date.now(),
-          dataType: 'json',
-          data: {},
-          success(response) {
-            if (response.code === 0) {
-              location.href = response.url;
-            } else {
-              response.msg;
+      popup.confirm({
+        title: '<p>点击确定后将不能继续体验大V店</p><p>请慎重选择?</p>',            // 标题（支持传入html。有则显示。）
+        // text: '<p>点击确定后将不能继续体验大V店</p><p>请慎重选择?</p>',             // 文本（支持传入html。有则显示。）
+        okBtnTitle: '',       // 确定按钮标题（支持传入html。有则显示，无则显示默认'确定'。）
+        okBtnCallback() {     // 确定按钮点击回调（有则执行该回调）
+          $.ajax({
+            cache: false,
+            async: true,
+            url: '/index.php?c=User&a=ajaxDo&_=' + Date.now(),
+            dataType: 'json',
+            data: {},
+            success(response) {
+              if (response.code === 0) {
+                location.href = response.url;
+              } else {
+                response.msg;
+              }
+            },
+            error(error) {
+              debugger
+              console.error('ajax error:' + error.status + ' ' + error.statusText);
             }
-          },
-          error(error) {
-            debugger
-            console.error('ajax error:' + error.status + ' ' + error.statusText);
-          }
-        });
-      });
+          });
+        },
+        cancelBtnTitle: '',   // 取消按钮标题（支持传入html。有则显示，无则不显示，传''时显示默认值'取消'。）
+        cancelBtnCallback() { // 取消按钮点击回调（有则执行该回调）
+
+        }
+      })
+
     },
     // 统计
     tj(action_type, cmdContent){

@@ -26,11 +26,17 @@ import glob from 'glob';
 import minimist from 'minimist';
 import WebpackConfig from './webpack.config.js';    // 老版webpack配置
 import WebpackSrcConfig from './webpack.src.config.js';   // 新版前后端分离webpack配置
-import DeveloperConfig from './developer.config.js';  // 开发者配置文件
 import liveReload from 'gulp-livereload';		// 文件变化时自动刷新浏览器，chrome需要安装LiveReload插件
 import mergeStream from 'merge-stream';		// 合并流然后返回给run-sequence保证任务顺序执行
 import path from 'path';		// 路径解析模块
 import spritesmith from 'gulp.spritesmith';		// 精灵图
+import addSrc from 'gulp-add-src';
+
+// 开发者配置文件
+let DeveloperConfig = {};
+if (fs.existsSync('./developer.config.js')) {
+  DeveloperConfig = require('./developer.config.js').default;
+}
 
 // 命令行参数
 let argv = minimist(process.argv);
@@ -42,6 +48,7 @@ let BuildArg = {
   page: argv.page || DeveloperConfig.page || '*',
   webpack: argv.webpack !== undefined ? argv.webpack : (DeveloperConfig.webpack !== undefined ? DeveloperConfig.webpack : true),
 };
+
 // npm run dev 和 npm run build 是给服务端使用，强制编译所有页面。
 if (argv._[2] === 'build:dev' || argv._[2] === 'build:dist') {
   BuildArg.page = '*';
@@ -53,7 +60,8 @@ let config = {
   html: `src/page/${BuildArg.page}/*.html`,
   css: `src/*page/${BuildArg.page}/css/*.scss`,
   js: `src/page/${BuildArg.page}/js/*.js`,
-  img: `src/*page/${BuildArg.page}/img/*`,
+  moveJs: `src/*common/js/autoRootSize.js`,
+  img: [`src/*page/${BuildArg.page}/img/*`, `src/*common/img/*`],
   iconDir: `src/page/${BuildArg.page}/img/icon*`,
   temp: `.temp`,
 };
@@ -61,6 +69,7 @@ let config = {
 // 替换表
 let replacer = {
   '[[env_stage]]': '',
+  '[[base_domain]]': '',
   '[[env_num]]': '',
   '[[static]]': '',
   '[[vendor]]': '//cdn-ws.davdian.com',
@@ -103,10 +112,13 @@ function promptBuildArg(build, buidType) {
     let domain = 'domain';
     if (BuildArg.env_stage == 'dev') {
       domain = 'fe.bravetime.net';
+      replacer['[[base_domain]]'] = 'bravetime.net';
     } else if (BuildArg.env_stage == 'beta') {
       domain = 'fe.vyohui.cn';
-    } else if (BuildArg.env_stage == 'gray' || BuildArg.env_stage == 'prod') {
+      replacer['[[base_domain]]'] = 'vyohui.cn';
+    } else if (BuildArg.env_stage == 'gray' || BuildArg.env_stage == 'tmp' || BuildArg.env_stage == 'prod') {
       domain = 'fe-ws.davdian.com';
+      replacer['[[base_domain]]'] = 'davdian.com';
     } else {
       // throw new Error(`env_stage参数不正确: ${BuildArg.env_stage}`);
       let errorValue = BuildArg.env_stage;
@@ -223,8 +235,13 @@ gulp.task('create_sprite', () => {
   glob.sync(path.normalize(config.iconDir)).forEach(function (iconDir) {
     if (!fs.statSync(iconDir).isDirectory()) return;
 
+    let dirArr = iconDir.split('/');
+
     // 生成文件的basename
-    let dirName = iconDir.split('/').pop();
+    let dirName = dirArr.pop();
+
+    // 路径中的src替换成[[static]]
+    dirArr[0] = '[[static]]';
 
     let stream = gulp.src(iconDir + '/*')
       .pipe(spritesmith({
@@ -234,7 +251,9 @@ gulp.task('create_sprite', () => {
         imgName: `${dirName}.png`,
         cssName: `../css/_${dirName}.scss`,
         // 取相对路径即可,因为css和img是部署在一起的
-        imgPath: `../img/${dirName}.png`,
+        // imgPath: `../img/${dirName}.png`,
+        // 取绝对路径即可,因为要做md5版本号
+        imgPath: `${dirArr.join('/')}/${dirName}.png`,
         cssVarMap: function (sprite) {
           sprite.mixinName = `i-${sprite.name}`;
         }
@@ -253,9 +272,21 @@ gulp.task('create_sprite', () => {
 function compileJs() {
   console.log(`>>>>>>>>>>>>>>> js文件开始编译。${util.getNow()}`);
 
+  // webpack配置对象
+  let webpackConfig = WebpackSrcConfig(config.js, replacer['[[static]]']);
+
+  // 提取公共js
+  if (argv._[2] === 'build:dev' || argv._[2] === 'build:dist') {
+    webpackConfig.plugins.push(new webpack.optimize.CommonsChunkPlugin({
+      name: "commons",
+      filename: 'common/js/common.js',
+      minChunks: 10
+    }));
+  }
+
   // 编译并返回流
   return gulp.src('')
-    .pipe(webpackStream(WebpackSrcConfig(config.js, replacer['[[static]]']), webpack, function (err, stats) {
+    .pipe(webpackStream(webpackConfig, webpack, function (err, stats) {
       // console.log('webpackStream执行完毕');
     }))
     // 替换环境变量
@@ -270,7 +301,7 @@ gulp.task('js:dev', () => {
   // 显示文件体积
     .pipe(size({showFiles: true}))
     // 输出
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/static'));
 });
 
 // 生产环境JS编译
@@ -282,11 +313,47 @@ gulp.task('js:dist', () => {
     // 显示文件体积
     .pipe(size({showFiles: true}))
     // 输出JS
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist/static'))
     // 记录MD5
     .pipe(rev.manifest('rev-md5/js.json'))
     // 输出MD5
     .pipe(gulp.dest(config.temp));
+});
+
+
+/************************************ 只移动、不编译的JS ************************************/
+
+// JS公共编译方法
+function moveJs() {
+  console.log(`>>>>>>>>>>>>>>> move-js文件开始编译。${util.getNow()}`);
+
+  // 编译并返回流
+  return gulp.src(config.moveJs);
+}
+
+// 开发环境JS编译
+gulp.task('move-js:dev', () => {
+  return moveJs()
+  // 显示文件体积
+    .pipe(size({showFiles: true}))
+    // 输出
+    .pipe(gulp.dest('dist/static'));
+});
+
+// 生产环境JS编译
+gulp.task('move-js:dist', () => {
+  return moveJs()
+    .pipe(uglify())
+    // 收集JS文件的MD5
+    // .pipe(rev())
+    // 显示文件体积
+    .pipe(size({showFiles: true}))
+    // 输出JS
+    .pipe(gulp.dest('dist/static'))
+  // 记录MD5
+  // .pipe(rev.manifest('rev-md5/js.json'))
+  // 输出MD5
+  // .pipe(gulp.dest(config.temp));
 });
 
 
@@ -297,13 +364,13 @@ function compileCss() {
   console.log(`>>>>>>>>>>>>>>> CSS文件开始编译。${util.getNow()}`);
 
   return gulp.src(config.css)
-  // 替换环境变量
-    .pipe(replace(replacerRegExp, function (match) {
-      return replacer[match];
-    }))
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'uncompressed'
+    }))
+    // 替换环境变量
+    .pipe(replace(replacerRegExp, function (match) {
+      return replacer[match];
     }))
     .pipe(sourcemaps.write({
       includeContent: false
@@ -314,6 +381,8 @@ function compileCss() {
 // 开发环境CSS编译
 gulp.task('css:dev', () => {
   return compileCss()
+  // 替换版本号
+    .pipe(replace('[[v]]', `?v=${util.getTimeFormatVersion()}`))
     .pipe(sourcemaps.write('./'))
     // 显示文件体积
     .pipe(size({showFiles: true}))
@@ -323,6 +392,11 @@ gulp.task('css:dev', () => {
 // 生产环境CSS编译
 gulp.task('css:dist', () => {
   return compileCss()
+  // 替换版本号
+    .pipe(replace('[[v]]', ``))
+    .pipe(addSrc('.temp/rev-md5/img.json'))
+    // 增加MD5戳
+    .pipe(revCollector())
     .pipe(minifyCss())
     .pipe(rev())
     // 显示文件体积
@@ -340,7 +414,7 @@ gulp.task('css:dist', () => {
 function compileImg() {
   console.log(`>>>>>>>>>>>>>>> 图片文件开始编译。${util.getNow()}`);
 
-  return gulp.src(config.img);
+  return gulp.src(config.img)
 }
 
 // 开发环境图片编译
@@ -355,9 +429,13 @@ gulp.task('img:dev', () => {
 gulp.task('img:dist', () => {
   return compileImg()
   // .pipe(imagemin())
-  // 显示文件体积
+    .pipe(rev())
+    // 显示文件体积
     .pipe(size({showFiles: true}))
-    .pipe(gulp.dest('dist/static'));
+    .pipe(gulp.dest('dist/static'))
+    // 记录MD5
+    .pipe(rev.manifest('rev-md5/img.json'))
+    .pipe(gulp.dest(config.temp))
 });
 
 
@@ -368,7 +446,6 @@ gulp.task('old:rev', () => {
   return gulp.src([
     `stylesheet/base.css`,
     `stylesheet/model.css`,
-    `javascript/tongji.js`,
     `javascript/units.js`,
     `javascript/base.js`,
     `javascript/model.js`,
@@ -492,14 +569,15 @@ gulp.task('default', () => {
       // ['clean:dist'],
       // ['create_sprite'],
       ['js:dev'],
-      ['css:dev'],
+      ['move-js:dev'],
       ['img:dev'],
+      ['css:dev'],
       ['html:dev'],
       // ['webpack:default'],
       function () {
         // gulp.watch([`src/**/img/icon*/*`], ['create_sprite', 'img:dev', 'js:dev', 'html:dev']);
         // 监视js变化
-        gulp.watch([`src/**/*.{js,vue,json,es6}`], ['js:dev', 'html:dev']);
+        gulp.watch([`src/**/*.{js,vue,json,es6}`], ['js:dev', 'move-js:dev', 'html:dev']);
         // 监视旧的js变化
         gulp.watch([`{javascript,module,source,utils}/**/*.{js,vue,json,es6}`], ['js:dev', 'html:dev']);
         // 监视css变化
@@ -530,8 +608,9 @@ gulp.task('build:dev', () => {
       // ['clean:dist'],
       // ['sprite'],
       ['js:dev'],
-      ['css:dev'],
+      ['move-js:dev'],
       ['img:dev'],
+      ['css:dev'],
       ['html:dev'],
       ['webpack:dev'],
       function () {
@@ -548,8 +627,9 @@ gulp.task('build:dist', () => {
       // ['clean:dist'],
       // ['sprite'],
       ['js:dist'],
-      ['css:dist'],
+      ['move-js:dist'],
       ['img:dist'],
+      ['css:dist'],
       ['old:rev'],
       ['html:dist'],
       ['clean:temp'],

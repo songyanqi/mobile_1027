@@ -1,0 +1,10 @@
+// tab-arrow 图片:
+@mixin i-tab-arrow($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (28rem / 100 / $ratio);
+  height: (10rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_main_subscribe/img/icon.png[[v]]) (0rem / 100 / $ratio) (0rem / 100 / $ratio) no-repeat;
+  background-size: (28rem / 100 / $ratio) (10rem / 100 / $ratio);
+}
+

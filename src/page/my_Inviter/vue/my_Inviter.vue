@@ -29,7 +29,7 @@
     </div>
 
     <!--什么是邀请码-->
-    <div v-if="show_code_input" class="invitation_info" :class="{'bottom':info_bottom}">
+    <div v-if="show_code_input" class="invitation_info">
       <div>
         <span>-</span>
         什么是邀请码？
@@ -45,6 +45,8 @@
   </div>
 </template>
 <script>
+  // 基础模块
+  import common from '../../../common/js/common.js';
   import encrypt from '../../../common/js/module/encrypt.js';
   import popup from '../../../common/js/module/popup.js';
 
@@ -85,6 +87,7 @@
           dataType: 'json',
           data: encrypt({}),
           success(response) {
+            common.checkRedirect(response);
             that.response = response;
             if (response.code) {
               popup.toast(response.data.msg || response.msg);
@@ -133,6 +136,7 @@
           dataType: 'json',
           data: encrypt({"inviteCode": that.mobile}),
           success(response) {
+            common.checkRedirect(response);
             if (response.code) {
               popup.toast(response.data.msg || response.msg);
               that.my_inviterPage = false; //显示我的邀请人
@@ -164,6 +168,7 @@
             dataType: 'json',
             data: encrypt({"inviteCode": that.mobile}),
             success(response) {
+              common.checkRedirect(response);
               if (response.code) {
                 popup.toast(response.data.msg || response.msg);
                 return false;
@@ -227,7 +232,7 @@
 </script>
 <style lang="sass" lang="scss" rel="stylesheet/scss" scoped>
   .myInviter_wrap {
-    padding-bottom: 10px;
+    padding-bottom: 215px;
   }
 
   .myInviter {
@@ -264,6 +269,9 @@
 
   .bottoms {
     margin-top: 40px;
+    position: relative;
+
+    z-index: 1;
   }
 
   .changeBtn {
@@ -418,9 +426,8 @@
     padding: 0 20px;
     color: #999999;
     line-height: 17px;
-    position: fixed;
+    position: absolute;
     bottom: 15px;
-    margin: 50px auto 0;
     left: 0;
     right: 0;
     max-width: 467px;
@@ -456,4 +463,11 @@
     margin-top: 16px;
   }
 </style>
-
+<style>
+  body,html{
+    height: 100%;
+  }
+  .app{
+    min-height: 100%;
+  }
+</style>

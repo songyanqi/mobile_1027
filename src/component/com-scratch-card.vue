@@ -12,10 +12,19 @@
 </template>
 
 <script>
+  import util from '../common/js/module/util.js';
+  import ua from '../common/js/module/ua.js';
+  import type from '../common/js/module/type.js';
+
   export default {
     props: {
       // 浮层上提示刮奖文字,有则显示
       maskTip: {
+        type: String,
+        default: ''
+      },
+      // 浮层上提示刮奖图片,有则显示
+      maskImg: {
         type: String,
         default: ''
       },
@@ -84,13 +93,22 @@
           context.fillStyle = ts.maskColor;
           context.fillRect(0, 0, canvas.width, canvas.height);
 
+          // 绘制刮奖蒙层-文字
           if (ts.maskTip) {
-            // 绘制刮奖图层文字
             context.fillStyle = ts.fontColor;
             context.font = ts.fontSize + ' sans-serif';
             context.textBaseline = 'middle';
             context.textAlign = 'center';
             context.fillText(ts.maskTip, canvas.width / 2, canvas.height / 2);
+          }
+
+          // 绘制刮奖蒙层-图像
+          if (ts.maskImg) {
+            var img = new Image();
+            img.onload = function () {
+              context.drawImage(img, 0, 0, canvas.width, canvas.height);
+            };
+            img.src = ts.maskImg;
           }
 
           // 绘制透明圆
@@ -103,6 +121,16 @@
             context.fill();
           }
 
+          //
+          function scrollD(direction) {
+            if (direction == "top") {
+              return util.getDocumentScrollTop();
+            }
+            if (direction == "left") {
+              return util.getDocumentScrollLeft();
+            }
+          }
+
           // m端擦除
           function mobile(event) {
             if (ts.canScratch) {
@@ -110,8 +138,8 @@
               let clientLeft = ts.getClientLeft(canvas);
               let clientTop = ts.getClientTop(canvas);
               // 圆心坐标
-              let centerX = event.changedTouches[0].clientX + document.body.scrollLeft - clientLeft;
-              let centerY = event.changedTouches[0].clientY + document.body.scrollTop - clientTop;
+              let centerX = event.changedTouches[0].clientX + scrollD("left") - clientLeft;
+              let centerY = event.changedTouches[0].clientY + scrollD("top") - clientTop;
               drawTransparentCircle(centerX, centerY);
             }
           }
@@ -123,8 +151,8 @@
               let clientLeft = ts.getClientLeft(canvas);
               let clientTop = ts.getClientTop(canvas);
               // 圆心坐标
-              let centerX = event.clientX + document.body.scrollLeft - clientLeft;
-              let centerY = event.clientY + document.body.scrollTop - clientTop;
+              let centerX = event.clientX + scrollD("left") - clientLeft;
+              let centerY = event.clientY + scrollD("top") - clientTop;
               if (event.which === 1) {
                 drawTransparentCircle(centerX, centerY);
               }
@@ -135,6 +163,10 @@
           canvas.addEventListener('touchstart', function (event) {
             mobile(event);
             ts.$emit('touchstart');
+            /*// 解决安卓app中刮奖时页面跟随滚动问题
+            if (ua.isDvdApp() && ua.isAndroid() && window.paySuccessInterface && type.isFunction(window.paySuccessInterface.requestDisallowScroll)) {
+              window.paySuccessInterface.requestDisallowScroll('1');
+            }*/
           }, false);
           canvas.addEventListener('touchmove', function (event) {
             mobile(event);
@@ -144,6 +176,10 @@
           canvas.addEventListener('touchend', function (event) {
             mobile(event);
             ts.$emit('touchend');
+            /*// 解决安卓app中刮奖时页面跟随滚动问题
+            if (ua.isDvdApp() && ua.isAndroid() && window.paySuccessInterface && type.isFunction(window.paySuccessInterface.requestDisallowScroll)) {
+              window.paySuccessInterface.requestDisallowScroll('0');
+            }*/
           }, false);
 
           // 擦除图层时机,PC端

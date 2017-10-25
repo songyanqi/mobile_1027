@@ -176,16 +176,13 @@
     position: absolute;
     z-index: 1;
     left: 0;
-    bottom: .5rem;
+    /*bottom: .5rem;*/
+    bottom: 0;
     width: .9rem;
   }
 </style>
 <template>
     <div class = "good_top_wraper">
-      <!--商品图左下角开学季icon，818需求-->
-      <img class="left-bottom-logo" src="//pic.davdian.com/activity/2017/08/15/282_150_1aefb7e936ed666bf77e8303f8ba7d46.png"
-           v-if="Date.now() >= new Date(2017,7,17) && Date.now() < new Date(2017,7,24)">
-
       <!--跨境标志-->
       <div v-if = "swiperinfo.crossBorder"
              class = "crossBorder"
@@ -208,6 +205,8 @@
                 dots-position = 'center'
                 @on-index-change = "handleIdxChange"
         >
+          <!--商品图左下角周年庆icon，1018需求-->
+          <!-- <img style = "height: .9rem" class="left-bottom-logo" src="//mamaj-oss-ws.oss-cn-beijing.aliyuncs.com/free/Zhuanti/yearLogo.png" v-if = "Date.now() < new Date(2017,10,23)"> -->
           <swiper-item
             @click.native = "handleSavePic"
             @touchstart.native = "handleTouchStart"
@@ -293,23 +292,17 @@
                 <div v-if = "singleactivity.typeId == 5" style = "height: 44px;">
                     <div v-if = "singleactivity.actTypeId == 6">
                         <span class = "timeLimit"></span>
-                        <span class = "limit_num">{{ infoobj.discountRatio }}</span>
+                        <span class = "limit_num">{{ infoobj.price.discountRatio }}</span>
                         <span class = "timeLimitz"></span>
                     </div>
                 </div>
             </div>
             <div class = "promote_cont" :class = "{ limit_cont: singleactivity.typeId == 5,sellKill_cont: singleactivity.typeId == 1,member_cont: singleactivity.typeId == 4 }">
                 <div v-if = "actendtime">
-                    <!-- <div> -->
-                      <div v-if = "(singleactivity.typeId == 5 || singleactivity.typeId == 2 || singleactivity.typeId == 4) && !isOver" class = "price_show">价格将恢复 ¥ {{ infoobj.shopPrice }}</div>
-                      <!-- <div v-if = "singleactivity.typeId == 8 && !isOver && visitorstatus == '3'" class = "price_show">会员返现将恢复为 ¥ {{ infoobj.normalIncome }}</div> -->
-                    <!-- </div> -->
+                    <div v-if = "(singleactivity.typeId == 5 || singleactivity.typeId == 2 || singleactivity.typeId == 4) && !isOver" class = "price_show">价格将恢复 ¥ {{ infoobj.price.shopPrice }}</div>
                     <div class = "overTimes" v-if ="isOver">
                         活动已结束
                     </div>
-                    <!-- <div class = "timeConts"
-                         v-else
-                         :class = "{price_show: singleactivity.typeId == '5' || singleactivity.typeId == 2 || singleactivity.typeId == 4 || (singleactivity.typeId == 8 && visitorstatus == '3')}"> -->
                     <div class = "timeConts"
                          v-else
                          :class = "{price_show: singleactivity.typeId == '5' || singleactivity.typeId == 2 || singleactivity.typeId == 4 }">

@@ -1,6 +1,6 @@
 <template>
   <!--顶部标题-->
-  <div class="com-top-title" :class="classObject" v-if="!isDvdApp" :style="styleObject">
+  <div class="com-top-title" :class="classObject" v-if="!isDvdApp" :style="styleObject" ref="comTopTitle">
     <div class="back-btn" @click="back">
       <i class="back-arrow"></i>
     </div>
@@ -51,21 +51,27 @@
       // document.title与H5标题栏同步
       document.title = this.title;
       native.Browser.setHead({
-        'title': document.title,
+        'title': document.title
       });
 
       // 非native环境下,要显示H5标题栏并且要设置.app的padding-top
       if (!ua.isDvdApp()) {
         let app = document.querySelector('.app');
-        this.$el.style.position = '-webkit-sticky';
-        this.$el.style.position = 'sticky';
-        if (this.$el.style.position == '-webkit-sticky' || this.$el.style.position == 'sticky') {
-        } else {
-          app.style.paddingTop = '44px';
-        }
+        // 安卓微信有bug，弃用
+//        this.$el.style.position = '-webkit-sticky';
+//        this.$el.style.position = 'sticky';
+//        if (this.$el.style.position == '-webkit-sticky' || this.$el.style.position == 'sticky') {
+//        } else {
+//          app.style.paddingTop = '44px';
+//        }
+        app.style.paddingTop = '44px';
         app.style.backgroundPosition = '0 44px';
         if (!this.hideDisable) {
           this.setAutoAnimation();
+        }
+
+        if (ua.isIos()) {
+          this.iosDownPull();
         }
       }
     },
@@ -77,7 +83,12 @@
           if (history.length > 1) {
             history.back();
           } else {
-            window.close();
+            if (ua.isWeiXin() && window.wx) {
+              window.wx.closeWindow();
+            } else {
+              window.location.href = "about:blank";
+              window.close();
+            }
           }
         }
       },
@@ -93,6 +104,7 @@
         let upOutSwitcher = true;
         window.addEventListener('scroll', function () {
           let y = document.body.scrollTop;
+
           // 页面向下滚动
           if (y - lastY > 0) {
             // 滚动距离大于topbar高度
@@ -103,7 +115,7 @@
               upOutSwitcher = false;
               setTimeout(function () {
                 upOutSwitcher = true;
-              }, 500);
+              }, 50);
             }
             // 页面向上滚动
           } else if (downInSwitcher && y - lastY < -0) {
@@ -113,9 +125,20 @@
             downInSwitcher = false;
             setTimeout(function () {
               downInSwitcher = true;
-            }, 500);
+            }, 50);
           }
           lastY = document.body.scrollTop;
+        }, false);
+      },
+      iosDownPull() {
+        let ts = this;
+        window.addEventListener('scroll', function () {
+          let y = document.body.scrollTop;
+          if (y < 0) {
+            ts.$refs.comTopTitle.style.position = 'absolute';
+          } else {
+            ts.$refs.comTopTitle.style.position = 'fixed';
+          }
         }, false);
       }
     },
@@ -158,7 +181,7 @@
     color: #333;
     text-align: center;
     font-size: 16px;
-    z-index: 1;
+    z-index: 9;
     &.border-bottom {
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     }

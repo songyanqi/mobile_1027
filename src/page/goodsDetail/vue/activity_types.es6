@@ -1,8 +1,9 @@
 /**
  * create by dony in 2017.03.10
  * **/
-import { Group, Cell, Icon, CellBox, XNumber, XInput } from 'vux';
+import { Group, Cell, Icon, CellBox, XInput } from 'vux';
 
+import XNumber from "../../vux-fix/xnumber.vue";
 import Popup from "../../vux-fix/popup.vue";
 import confirm from './confirm.vue';
 import popup from '../../../common/js/module/popup.js';
@@ -20,12 +21,15 @@ export default {
           activitySendShow: false,
           activitySendList: [],
           actInfo: null,
+          cartNum: 1,
 
           telVal: 0,
           tipsShow: false,
           dialogText: '',
           bounsShow: false,
           scrollTop: 0,
+          allPrice: 0,
+          modalHeight: `${window.innerHeight * 0.65}px`
         }
     },
     props: ['activityinfo','activityslist','activitynum','goodslimitnum',
@@ -33,10 +37,30 @@ export default {
         'goodstags','handlechangenum', 'relativegoodslist', 'activityurl','infoobj',
         'actendtime','isshowactive', 'islimitnum','goodstatusonsale','goodstatus','activityindex'],
     created () {
-        let that =this;
-        this.$root.eventHub.$on('time_over',(isover) => {
-            that.isOver = isover;
-        });
+      let that =this;
+      this.$root.eventHub.$on('time_over',(isover) => {
+          that.isOver = isover;
+      });
+      this.$root.eventHub.$on('finalPrices',(finalPrice) => {
+        that.allPrice = finalPrice;
+      });
+      this.$root.eventHub.$on('xNumberBottom',(num) => {
+        this.cartNum = num;
+      })
+    },
+    watch: {
+      datarepresentid: {
+        handler (newInfoObj,oldInfoObj) {
+          if (!this.relativegoodslist.length && !this.goodstags.length) {
+            this.modalHeight = `${window.innerHeight * 0.4}px`
+          } else {
+            this.modalHeight = `${window.innerHeight * 0.65}px`
+          }
+          
+          this.cartNum = 1;
+        },
+        deep: true,
+      }
     },
     methods: {
       handleModalShow() {
@@ -51,7 +75,7 @@ export default {
       },
       handleModalHide() {
         document.body.classList.remove("bodyFix");
-        document.body.scrollTop = this.scrollTop;
+        $(document).scrollTop(this.scrollTop);
       },
         handleActivity () {
             this.activityShow = !this.activityShow;
@@ -95,28 +119,30 @@ export default {
         handleBounsClose () {
           this.bounsShow = !this.bounsShow;
         },
-        handleModal () {
-        },
         handleTypeModal () {
             this.cartModal = !this.cartModal;
         },
         //多规格弹框的购物数量
         handleChange (num) {
-            if (Number(this.goodslimitnum) == 0) {
-              this.goodslimitnum = 1;
-            }
-            if (Number(this.goodslimitnum) == Number(num)) {
-                if (Number(num) != 1) {
-                    $(".isLimit").animate({"opacity":"1"},200);
-                }
-                $(".vux-number-selector-plus").css({"background":"#eee"});
-                $(".vux-number-selector-plus path").css({"fill":"#bbb","stroke":"#bbb"});
-            } else {
-                $(".isLimit").animate({"opacity":"0"},200);
-                $(".vux-number-selector-plus").css({"background":"#fff"});
-                $(".vux-number-selector-plus path").css({"fill":"#666","stroke":"#666"});
-            }
-            this.$emit('change-cartnum',num);
+          // if (Number(this.goodslimitnum) == 0) {
+          //   this.goodslimitnum = 1;
+          // }
+          // if (num == 1) {
+          //   $(".vux-number-selector-sub").addClass("plusDisable");
+          //   $(".vux-number-selector-sub path").addClass("plusPathDisable");
+          // }
+          // if (Number(this.goodslimitnum) == Number(num)) {
+          //     if (Number(num) != 1) {
+          //     }
+          //     $(".vux-number-selector-plus").addClass("plusDisable");
+          //     $(".vux-number-selector-plus path").addClass("plusPathDisable");
+          // } else {
+          //     $(".vux-number-selector-plus").removeClass("plusDisable");
+          //     $(".vux-number-selector-plus path").removeClass("plusPathDisable");
+          // }
+          this.$emit('change-cartnum',num);
+          this.cartNum = num;
+          this.$root.eventHub.$emit('xNumberActive',num);
         },
         handleTypes (items, item, e) {
             if (item.isDisabled) {

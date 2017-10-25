@@ -114,11 +114,11 @@
       init_play: function (num) {
         //开始游戏
         if (num == 1) {
-          window.bravetime.tj.pvSend('children_begin_init_click', '');
+          // window.bravetime.tj.pvSend('children_begin_init_click', '');
         }
         //继续游戏
         if (num == 2) {
-          window.bravetime.tj.pvSend('children_continue_begin', '');
+          // window.bravetime.tj.pvSend('children_continue_begin', '');
         }
         var scope = this;
         if (window.$user_status == 0) {
@@ -136,7 +136,7 @@
         }
       },
       begin: function () {
-        window.bravetime.tj.pvSend('children_play', '');
+        // window.bravetime.tj.pvSend('children_play', '');
         var scope = this;
         scope.accessrun = false;
         scope.tips = "红包位置会调换，注意力集中喽~";
@@ -194,7 +194,7 @@
       /*没有中奖*/
       select_no: function (num) {
         var scope = this;
-        window.bravetime.tj.pvSend('children_select_red', '');
+        // window.bravetime.tj.pvSend('children_select_red', '');
         if (!scope.accessClick) {
           return false;
         }
@@ -229,7 +229,7 @@
       /*中奖*/
       reward: function () {
         var scope = this;
-        window.bravetime.tj.pvSend('children_select_red', '');
+        // window.bravetime.tj.pvSend('children_select_red', '');
         if (!scope.accessClick) {
           return false;
         }

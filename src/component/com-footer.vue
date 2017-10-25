@@ -2,41 +2,41 @@
   <!--底部菜单栏-->
   <div class="com-footer" v-if="!isDvdApp">
     <div class="btns">
-      <a class="btn" :class="{active: active == 'home'}" href="/">
+      <a class="btn" :class="{active: active == 'home'?true:false }" href="/" :style="styleList['btn1']">
         <div class="pic-title">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/home-active.png" v-if="active == 'home'">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/home.png" v-else>
-          <div class="title">首页</div>
+          <img class="pic" v-if="active == 'home'" :src="useSkinPackageImg(btnList[0],'//pic.davdian.com/free/footer-icon/home-active.png',1)">
+          <img class="pic" v-else  :src="useSkinPackageImg(btnList[0],'//pic.davdian.com/free/footer-icon/home.png',0)">
+          <div class="title" :style="styleList[active == 'home'?'selectedColor':'normalColor']">首页</div>
         </div>
       </a>
-      <a class="btn" :class="{active: active == 'school'}" href="/course.html">
+      <a class="btn" :class="{active:active == 'school'?true:false}" href="/course.html"  :style="styleList['btn2']">
         <div class="pic-title">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/school-active.png" v-if="active == 'school'">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/school.png" v-else>
-          <div class="title">学院</div>
+          <img class="pic" v-if="active == 'school'" :src="useSkinPackageImg(btnList[1],'//pic.davdian.com/free/footer-icon/school-active.png',1)">
+          <img class="pic" v-else :src="useSkinPackageImg(btnList[1],'//pic.davdian.com/free/footer-icon/school.png',0)">
+          <div class="title" :style="styleList[active == 'school'?'selectedColor':'normalColor']">学院</div>
         </div>
       </a>
-      <!--<a class="btn" href="/cart.html">-->
-      <!--<div class="pic">-->
-      <!--<i class="num" v-if="cartNum && cartNum > 0">{{cartNum}}</i>-->
-      <!--<img src="[[static]]/page/center/img/footer-cart.png">-->
-      <!--</div>-->
-      <!--<div class="name">购物车</div>-->
-      <!--</a>-->
-      <a class="btn" :class="{active: active == 'dynamic'}" href="/articles.html">
+
+      <a class="btn" v-if="btnList[2]" style="z-index: 1;" :style="styleList['btn3']" :href="styleList[active != 'activity'?'showUrl':'1.html']">
+        <img class="pic" style="width: 100%;max-width: 86px;" :src="useSkinPackageImg(btnList[2],'',1)" v-if="active == 'activity'">
+        <img class="pic" style="width: 100%;max-width: 86px;" :src="useSkinPackageImg(btnList[2],'',0)" v-else>
+      </a>
+
+      <a class="btn" :class="{active:active == 'dynamic'?true:false}" href="/articles.html"  :style="styleList['btn4']">
         <div class="pic-title">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/dynamic-active.png?2" v-if="active == 'dynamic'">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/dynamic.png?2" v-else>
-          <div class="title">动态</div>
+          <img class="pic" v-if="active == 'dynamic'" :src="useSkinPackageImg(btnList[3],'//pic.davdian.com/free/footer-icon/dynamic-active.png?2',1)">
+          <img class="pic" v-else :src="useSkinPackageImg(btnList[3],'//pic.davdian.com/free/footer-icon/dynamic.png?2',0)">
+          <div class="title" :style="styleList[active == 'dynamic'?'selectedColor':'normalColor']">动态</div>
         </div>
       </a>
-      <a class="btn" :class="{active: active == 'center'}" href="/center.html">
+
+      <a class="btn" :class="{active: active == 'center' ? true : false}" href="/center.html"  :style="styleList['btn5']">
         <div class="pic-title">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/center-active.png" v-if="active == 'center'">
-          <img class="pic" src="//pic.davdian.com/free/footer-icon/center.png" v-else>
-          <div class="title">我的</div>
+          <img class="pic" v-if="active == 'center'" :src="useSkinPackageImg(btnList[4],'//pic.davdian.com/free/footer-icon/center-active.png',1)">
+          <img class="pic" v-else  :src="useSkinPackageImg(btnList[4],'//pic.davdian.com/free/footer-icon/center.png',0)">
+          <div class="title" :style="styleList[active == 'center' ? 'selectedColor' : 'normalColor']">我的</div>
         </div>
-      </a>
+      </a >
     </div>
   </div>
 </template>
@@ -55,19 +55,105 @@
       cartNum: {
         type: Number,
         default: 0
-      },
+      }
     },
     data() {
       return {
         isDvdApp: ua.isDvdApp(),
+        bottomTab:[],
+        bottomStyle:{},
+        name:"com-footer",
+        store:[]
       }
     },
-    computed: {},
-    created(){
+    computed: {
+        btnList:function () {
+          return this.bottomTab;
+        },
+        styleList:function () {
+          return this.bottomStyle;
+        }
     },
-    mounted() {
+    mounted(){
+       this.useSkinpackageFromLocal();
+    },
+    watch:{
+      store: {
+        handler: function (val, oldval) {
+          this.useSkinpackage(val);
+        },
+        deep:true
+      }
     },
     methods: {
+      changStyle(json){
+        //初始化存储数组
+        this.bottomTab=[];
+        this.bottomStyle={};
+        //存入图片信息
+        this.bottomTab.push({defaultImage:json["10"].listData[0].normalImagePath,selectedImage:json["10"].listData[0].selectedImagePath});
+        this.bottomTab.push({defaultImage:json["10"].listData[1].normalImagePath,selectedImage:json["10"].listData[1].selectedImagePath});
+        this.bottomTab.push({defaultImage:json["10"].listData[2].normalImagePath,selectedImage:json["10"].listData[2].selectedImagePath});
+        this.bottomTab.push({defaultImage:json["10"].listData[3].normalImagePath,selectedImage:json["10"].listData[3].selectedImagePath});
+        this.bottomTab.push({defaultImage:json["10"].listData[4].normalImagePath,selectedImage:json["10"].listData[4].selectedImagePath});
+        //存入样式信息
+        this.bottomStyle.btn1={"marginTop":json["10"].listData[0].marginTop + "px"};
+        this.bottomStyle.btn2={"marginTop":json["10"].listData[1].marginTop + "px"};
+        this.bottomStyle.btn3={"marginTop":json["10"].listData[2].marginTop + "px"};
+        this.bottomStyle.btn4={"marginTop":json["10"].listData[3].marginTop + "px"};
+        this.bottomStyle.btn5={"marginTop":json["10"].listData[4].marginTop + "px"};
+        //存入活动的点击链接
+        this.bottomStyle.showUrl=json["10"].listData[2].showActivityUrl;
+        //底部tab文字的默认样式和选中样式
+        this.bottomStyle.normalColor={"color":"#"+json["10"].listData[0].normalColor.substr(2)};
+        this.bottomStyle.selectedColor={"color":"#"+json["10"].listData[0].selectedColor.substr(2)};
+
+      },
+      //读取本地的数据
+      useSkinpackageFromLocal(){
+          var that=this;
+        if(localStorage.getItem("skinPackage")) {
+          var skinInfo = JSON.parse((localStorage.getItem("skinPackage")));
+          skinInfo.map(function (item, index) {
+            var now = new Date().getTime().toString().substr(0,10);
+            var startTime = item.startTime;
+            var endTime = item.endTime;
+            if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
+              that.changStyle(JSON.parse(item.viewFileUrl));
+            }
+          });
+        }
+      },
+      //根据传入的值改变样式
+      useSkinpackage(data){
+        var that=this;
+          data.map(function (item, index) {
+          var now = new Date().getTime().toString().substr(0,10);
+          var startTime = item.startTime;
+          var endTime = item.endTime;
+          if (parseInt(startTime) <= parseInt(now) && parseInt(endTime) > parseInt(now)) {
+            that.changStyle(JSON.parse(item.viewFileUrl));
+          }
+        });
+      },
+      useSkinPackageImg(newImg,oldImg,flag){
+          //flag=1 表示选中状态的图片
+          //flag=0 表示未选中状态的图片
+          if(newImg){
+              if(flag==1){//selectedImage
+                  if(newImg.selectedImage){
+                      return newImg.selectedImage;
+                  }
+                  return oldImg;
+              }else if(flag==0){//defaultImage
+                if(newImg.defaultImage){
+                  return newImg.defaultImage;
+                }
+                return oldImg;
+              }
+          }
+          return oldImg;
+      },
       /**
        * 接口名称:
        * 接口文档:
@@ -91,22 +177,25 @@
         });
       },
     },
-    filters: {},
-    watch: {},
+    filters: {}
   }
 </script>
 
 <style lang="sass" lang="scss" rel="stylesheet/scss">
   @import "../common/css/util/all";
-
+  .pic{
+    max-width:100%;
+  }
   // 底部菜单栏
   .com-footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    height: 50px;
     background: white;
     font-size: 0;
     max-width: $pageMaxWidth;
+    z-index: 9;
     &:before {
       content: '';
       display: block;

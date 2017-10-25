@@ -45,6 +45,18 @@ utils.getAppVersion = function () {
     }
     return +v;
 };
+utils.getAppVersion_new = function () {
+  // 空格分所有
+  var versionStr = u.match(/(ios|android)\.davdian\.com\/([\d\.]+)/i) ||
+    u.match(/(ios|android)\.bravetime\.net\/([\d\.]+)/i) ||
+    u.match(/(ios|android)\.vyohui\.cn\/([\d\.]+)/i);
+  if(versionStr == null){
+    return 0;
+  }else{
+    var v = versionStr[2];
+  }
+  return v;
+};
 utils.isAndroid = function () {
     if(u.match(/(android|linux)/i)) {
         return true;

@@ -1,0 +1,166 @@
+{
+  "data":{
+    "dataList":[
+      {
+        "goodsId":"商品id",
+        "goodsName":"商品名称",
+        "goodsPrice":"商品价格",
+        "imageUrl":"图片地址",
+        "startTime":"开始时间",
+        "buttonName":"预约提醒",
+        "buttonStatus":"1",
+        "price":"20.9",
+        "recommendDesc":"推荐语",
+        "bespeakNum":"51",
+        "sellNum":"51",
+        "command": {
+          "content" : "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId":"商品id",
+        "goodsName":"商品名称",
+        "goodsPrice":"商品价格",
+        "imageUrl":"图片地址",
+        "startTime":"开始时间",
+        "buttonName":"预约提醒",
+        "buttonStatus":"1",
+        "price":"20.9",
+        "recommendDesc":"推荐语",
+        "bespeakNum":"51",
+        "sellNum":"51",
+        "command": {
+          "content" : "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId":"商品id",
+        "goodsName":"商品名称",
+        "goodsPrice":"商品价格",
+        "imageUrl":"图片地址",
+        "startTime":"开始时间",
+        "buttonName":"预约提醒",
+        "buttonStatus":"1",
+        "price":"20.9",
+        "recommendDesc":"推荐语",
+        "bespeakNum":"51",
+        "sellNum":"51",
+        "command": {
+          "content" : "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId":"商品id",
+        "goodsName":"商品名称",
+        "goodsPrice":"商品价格",
+        "imageUrl":"图片地址",
+        "startTime":"开始时间",
+        "buttonName":"预约提醒",
+        "buttonStatus":"1",
+        "price":"20.9",
+        "recommendDesc":"推荐语",
+        "bespeakNum":"51",
+        "sellNum":"51",
+        "command": {
+          "content" : "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId":"商品id",
+        "goodsName":"商品名称",
+        "goodsPrice":"商品价格",
+        "imageUrl":"图片地址",
+        "startTime":"开始时间",
+        "buttonName":"预约提醒",
+        "buttonStatus":"1",
+        "price":"20.9",
+        "recommendDesc":"推荐语",
+        "bespeakNum":"51",
+        "sellNum":"51",
+        "command": {
+          "content" : "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId":"商品id",
+        "goodsName":"商品名称",
+        "goodsPrice":"商品价格",
+        "imageUrl":"图片地址",
+        "startTime":"开始时间",
+        "buttonName":"预约提醒",
+        "buttonStatus":"1",
+        "price":"20.9",
+        "recommendDesc":"推荐语",
+        "bespeakNum":"51",
+        "sellNum":"51",
+        "command": {
+          "content" : "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId":"商品id",
+        "goodsName":"商品名称",
+        "goodsPrice":"商品价格",
+        "imageUrl":"图片地址",
+        "startTime":"开始时间",
+        "buttonName":"预约提醒",
+        "buttonStatus":"1",
+        "price":"20.9",
+        "recommendDesc":"推荐语",
+        "bespeakNum":"51",
+        "sellNum":"51",
+        "command": {
+          "content" : "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId":"商品id",
+        "goodsName":"商品名称",
+        "goodsPrice":"商品价格",
+        "imageUrl":"图片地址",
+        "startTime":"开始时间",
+        "buttonName":"预约提醒",
+        "buttonStatus":"1",
+        "price":"20.9",
+        "recommendDesc":"推荐语",
+        "bespeakNum":"51",
+        "sellNum":"51",
+        "command": {
+          "content" : "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId":"商品id",
+        "goodsName":"商品名称",
+        "goodsPrice":"商品价格",
+        "imageUrl":"图片地址",
+        "startTime":"开始时间",
+        "buttonName":"预约提醒",
+        "buttonStatus":"1",
+        "price":"20.9",
+        "recommendDesc":"推荐语",
+        "bespeakNum":"51",
+        "sellNum":"51",
+        "command": {
+          "content" : "点击时的动作 请求商品详情接口"
+        }
+      },
+      {
+        "goodsId":"商品id",
+        "goodsName":"商品名称",
+        "goodsPrice":"商品价格",
+        "imageUrl":"图片地址",
+        "startTime":"开始时间",
+        "buttonName":"预约提醒",
+        "buttonStatus":"1",
+        "price":"20.9",
+        "recommendDesc":"推荐语",
+        "bespeakNum":"51",
+        "sellNum":"51",
+        "command": {
+          "content" : "点击时的动作 请求商品详情接口"
+        }
+      }
+    ]
+  }
+}

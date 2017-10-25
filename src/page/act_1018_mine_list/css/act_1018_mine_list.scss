@@ -1,0 +1,156 @@
+@import "../../../common/css/common.scss";
+
+body {
+  background-color:#F1F1F1;
+}
+.app {
+  min-height: 100vh;
+
+  .text-special {
+    color: #FF4A7D;
+  }
+
+  [v-cloak] {
+    display: none !important;
+  }
+
+  //我的预定奖励
+  .prize-head {
+    padding: ptr(10);
+    background: linear-gradient(to right, #FF6389, #FF3857); /* 标准的语法 */
+
+    .total-prize {
+      text-align:center;
+      height: ptr(41);
+      line-height:ptr(50);
+      color: #fff;
+      font-size: ptr(14);
+      padding-bottom: ptr(15);
+
+      .money-icon {
+        font-size: ptr(18);
+      }
+      .prize-detail {
+        font-size: ptr(24);
+      }
+    }
+
+    .prize-tip {
+      padding:ptr(10);
+      background-color:rgba(255,255,255,.2);
+      position:relative;
+      border-radius:ptr(4);
+      box-sizing:border-box;
+
+      &:after {
+        content:'';
+        position:absolute;
+        top:0;
+        left:0;
+        height:200%;
+        width:200%;
+        border:1px solid rgba(255,255,255,.4);
+        transform-origin:0 0;
+        transform:scale(0.5,0.5);
+        border-radius:ptr(8);
+        box-sizing:border-box;
+      }
+
+      .tip-title {
+        font-size:ptr(14);
+        @include height(ptr(20));
+        color:#fff;
+        text-align:center;
+        padding-bottom:ptr(7);
+      }
+
+      .tip-detail {
+        li {
+          font-size:ptr(12);
+          color:#fff;
+          line-height:ptr(17);
+
+          span {
+            display:inline-block;
+            padding-left:ptr(12);
+          }
+        }
+        li:not(:last-child) {
+          padding-bottom:ptr(5);
+        }
+      }
+    }
+  }
+
+  .friend-list {
+    box-sizing:border-box;
+    position:relative;
+    color:#333;
+
+    .friend-show {
+      @include height(ptr(25));
+      padding:ptr(9.5) 0 0 ptr(10);
+
+      .user-photo {
+        width: ptr(25);
+        height: ptr(25);
+        margin-right: ptr(6);
+        border-radius: 50%;
+        float: left;
+      }
+
+      .user-name {
+        display: inline-block;
+        @include height(ptr(25));
+        font-size: ptr(13);
+        max-width: ptr(112);
+        @include ellipsis();
+      }
+    }
+    .list-text {
+      font-size:ptr(12);
+      padding:ptr(4) 0 ptr(10) ptr(10);
+      line-height:ptr(17);
+    }
+  }
+
+  //我预约的商品
+  .goods-list {
+    overflow:hidden;
+    padding-bottom:ptr(34);
+
+    .list-item {
+      width:ptr(172.5);
+      background-color:#fff;
+      float:left;
+      margin:ptr(10) 0 0 ptr(10);
+    }
+
+    a {
+      display:block;
+    }
+    .goods-pic {
+      width:ptr(172.5);
+      height:ptr(172.5);
+    }
+    .start-time {
+      font-size:ptr(10);
+      padding:0 ptr(10) ptr(12) ptr(10);
+    }
+    .goods-text{
+      font-size:ptr(12);
+      @include height(ptr(31));
+      padding:0 ptr(10) ptr(3.5) ptr(10);
+
+      .text-price {
+        font-size:ptr(16);
+      }
+
+      .from-app {
+        font-size: ptr(10);
+        float:right;
+        color:#ccc;
+      }
+    }
+  }
+}

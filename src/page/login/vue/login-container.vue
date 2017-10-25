@@ -60,7 +60,7 @@
       <!--邀请码规则-->
     </div>
 
-    <div v-if="rule_form" class="com-popup-base">
+    <div v-if="rule_form" class="com-popup-base2">
       <div class="table-cell">
         <div v-show="rule_form" class="box">
           <div>邀请码规则</div>
@@ -128,8 +128,11 @@
   </div>
 </template>
 <script>
+  // 基础模块
+  import common from '../../../common/js/common.js';
   import popup from '../../../common/js/module/popup.js';
   import ua from '../../../common/js/module/ua.js';
+  import login from '../../../common/js/module/login.js';
   import strSign from '../../../common/js/module/encrypt.js';
 
   export default {
@@ -164,6 +167,10 @@
       }
     },
     created() {
+      var that = this;
+      if(login.isLogined()){
+        location.href = that.referer || "/";
+      }
     },
     mounted() {
       var that = this;
@@ -171,6 +178,7 @@
     methods: {
       /*登录*/
       login: function () {
+        this.mobile = this.mobile.replace(/[ -]/g,"");
         var that = this;
         if (!that.isTel(that.mobile)) {
           popup.toast("请输入正确的手机号");
@@ -186,6 +194,7 @@
             dataType: 'json',
             data: strSign(tData),
             success(response) {
+              common.checkRedirect(response);
               if (response.code) {
                 popup.toast(response.data.msg || response.msg);
                 that.loginBtn = "登录";
@@ -207,6 +216,7 @@
       },
       /*注册*/
       registers: function () {
+        this.mobile = this.mobile.replace(/[ -]/g,"");
         var that = this;
         if (!that.isTel(that.mobile)) {
           popup.toast("请输入正确的手机号");
@@ -231,6 +241,7 @@
           dataType: 'json',
           data: strSign(regiserData),
           success(response) {
+            common.checkRedirect(response);
             that.response = response;
             if (response.code) {
               popup.toast(response.data.msg || response.msg);
@@ -250,12 +261,12 @@
         if ((that.hname == 'bravetime' || ua.isDvdApp()) && that.response.visitor_status != 3) {
           /*登录成功后跳转到refer页*/
           if (that.referer) {
-            location.href = that.referer.replace(that.origin, that.response.shop_url);
+            window.location.replace(that.referer.replace(that.origin, that.response.shop_url));
           } else {
-            location.href = that.response.shop_url
+            window.location.replace(that.response.shop_url);
           }
         } else {
-          location.href = that.referer || '/';
+          window.location.replace(that.referer || '/');
         }
       },
       /*重置密码*/
@@ -272,6 +283,7 @@
           dataType: 'json',
           data: strSign(tData),
           success(response) {
+            common.checkRedirect(response);
             that.response = response;
             if (response.code) {
               popup.toast(response.data.msg || response.msg);
@@ -316,6 +328,7 @@
       },
       /*忘记密码*/
       go_forget: function () {
+        this.mobile = this.mobile.replace(/[ -]/g,"");
         var that = this;
         if (that.mobile == '') {
           popup.toast("请输入手机号");
@@ -351,6 +364,7 @@
           dataType: 'json',
           data: strSign({"inviteCode": code}),
           success(response) {
+            common.checkRedirect(response);
             if (response.code) {
               popup.toast(response.data.msg || response.msg);
               that.promptconfirm();
@@ -375,6 +389,7 @@
       },
       /*获取验证码*/
       get_check_codes: function (smsType, sendType, callback) {
+        this.mobile = this.mobile.replace(/[ -]/g,"");
         var that = this;
         if (that.isTel(that.mobile)) {
           if (that.get_check) {
@@ -392,6 +407,7 @@
             dataType: 'json',
             data: strSign(sData),
             success(response) {
+              common.checkRedirect(response);
               that.response = response;
               if (that.response.code) {
                 popup.toast(that.response.data.msg || response.msg);
@@ -473,6 +489,7 @@
           dataType: 'json',
           data: strSign({"mobile": that.mobile}),
           success(response) {
+            common.checkRedirect(response);
             if (response.code == '80006') {
               callback()
             } else {
@@ -701,7 +718,7 @@
     }
   }
 
-  .com-popup-base {
+  .com-popup-base2 {
     position: fixed;
     top: 0;
     width: 100%;
@@ -713,13 +730,13 @@
     line-height: 1;
   }
 
-  .com-popup-base .table-cell {
+  .com-popup-base2 .table-cell {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
   }
 
-  .com-popup-base .table-cell .box {
+  .com-popup-base2 .table-cell .box {
     display: inline-block;
     border-radius: 0.04rem;
     animation: com-alert-animation 0.5s;
@@ -728,10 +745,12 @@
     position: relative;
     text-align: center;
     background-color: #FFFFFF;
-    padding: 0 10px 15px;
+    padding: 0 0 15px;
+    /*max-height: 4rem;*/
+    /*overflow-y: scroll;*/
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(1) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(1) {
     font-size: 14px;
     color: #666666;
     text-align: center;
@@ -739,15 +758,17 @@
     position: relative;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(2) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(2) {
     font-size: 14px;
     color: #333333;
     text-align: left;
     line-height: 20px;
-    padding-top: 5px;
+    padding: 5px 10px 0;
+    max-height: 4rem;
+    overflow-y: scroll;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(3) {
+  .com-popup-base2 .table-cell .box div:nth-of-type(3) {
     position: absolute;
     right: 0;
     top: 0;
@@ -760,12 +781,12 @@
     background-position: 10px 10px;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(2) p {
+  .com-popup-base2 .table-cell .box div:nth-of-type(2) p {
     display: inline-block;
     margin-top: 10px;
   }
 
-  .com-popup-base .table-cell .box div:nth-of-type(1):after {
+  .com-popup-base2 .table-cell .box div:nth-of-type(1):after {
     content: "";
     display: block;
     position: absolute;

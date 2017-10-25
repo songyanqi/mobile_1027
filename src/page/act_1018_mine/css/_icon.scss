@@ -1,0 +1,140 @@
+// arrow-right-red 图片:
+@mixin i-arrow-right-red($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (16rem / 100 / $ratio);
+  height: (24rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_mine/img/icon.png[[v]]) (-828rem / 100 / $ratio) (-330rem / 100 / $ratio) no-repeat;
+  background-size: (910rem / 100 / $ratio) (654rem / 100 / $ratio);
+}
+
+// arrow-right 图片:
+@mixin i-arrow-right($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (16rem / 100 / $ratio);
+  height: (24rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_mine/img/icon.png[[v]]) (-802rem / 100 / $ratio) (-330rem / 100 / $ratio) no-repeat;
+  background-size: (910rem / 100 / $ratio) (654rem / 100 / $ratio);
+}
+
+// assist-bg-1 图片:
+@mixin i-assist-bg-1($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (242rem / 100 / $ratio);
+  height: (132rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_mine/img/icon.png[[v]]) (-330rem / 100 / $ratio) (-498rem / 100 / $ratio) no-repeat;
+  background-size: (910rem / 100 / $ratio) (654rem / 100 / $ratio);
+}
+
+// assist-bg-2 图片:
+@mixin i-assist-bg-2($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (242rem / 100 / $ratio);
+  height: (132rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_mine/img/icon.png[[v]]) (-668rem / 100 / $ratio) (0rem / 100 / $ratio) no-repeat;
+  background-size: (910rem / 100 / $ratio) (654rem / 100 / $ratio);
+}
+
+// assist-bg-3 图片:
+@mixin i-assist-bg-3($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (242rem / 100 / $ratio);
+  height: (132rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_mine/img/icon.png[[v]]) (-668rem / 100 / $ratio) (-142rem / 100 / $ratio) no-repeat;
+  background-size: (910rem / 100 / $ratio) (654rem / 100 / $ratio);
+}
+
+// draw-bg-assist 图片:
+@mixin i-draw-bg-assist($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (658rem / 100 / $ratio);
+  height: (156rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_mine/img/icon.png[[v]]) (0rem / 100 / $ratio) (-166rem / 100 / $ratio) no-repeat;
+  background-size: (910rem / 100 / $ratio) (654rem / 100 / $ratio);
+}
+
+// draw-bg-free 图片:
+@mixin i-draw-bg-free($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (658rem / 100 / $ratio);
+  height: (156rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_mine/img/icon.png[[v]]) (0rem / 100 / $ratio) (-332rem / 100 / $ratio) no-repeat;
+  background-size: (910rem / 100 / $ratio) (654rem / 100 / $ratio);
+}
+
+// draw-bg-order 图片:
+@mixin i-draw-bg-order($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (658rem / 100 / $ratio);
+  height: (156rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_mine/img/icon.png[[v]]) (0rem / 100 / $ratio) (0rem / 100 / $ratio) no-repeat;
+  background-size: (910rem / 100 / $ratio) (654rem / 100 / $ratio);
+}
+
+// more 图片:
+@mixin i-more($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (26rem / 100 / $ratio);
+  height: (26rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_mine/img/icon.png[[v]]) (-872rem / 100 / $ratio) (-284rem / 100 / $ratio) no-repeat;
+  background-size: (910rem / 100 / $ratio) (654rem / 100 / $ratio);
+}
+
+// recommend-act 图片:
+@mixin i-recommend-act($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (128rem / 100 / $ratio);
+  height: (36rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_mine/img/icon.png[[v]]) (-668rem / 100 / $ratio) (-284rem / 100 / $ratio) no-repeat;
+  background-size: (910rem / 100 / $ratio) (654rem / 100 / $ratio);
+}
+
+// recommend-icon 图片:
+@mixin i-recommend-icon($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (58rem / 100 / $ratio);
+  height: (24rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_mine/img/icon.png[[v]]) (-734rem / 100 / $ratio) (-330rem / 100 / $ratio) no-repeat;
+  background-size: (910rem / 100 / $ratio) (654rem / 100 / $ratio);
+}
+
+// redpack-bg 图片:
+@mixin i-redpack-bg($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (320rem / 100 / $ratio);
+  height: (156rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_mine/img/icon.png[[v]]) (0rem / 100 / $ratio) (-498rem / 100 / $ratio) no-repeat;
+  background-size: (910rem / 100 / $ratio) (654rem / 100 / $ratio);
+}
+
+// title-type-2-left 图片:
+@mixin i-title-type-2-left($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (56rem / 100 / $ratio);
+  height: (32rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_mine/img/icon.png[[v]]) (-668rem / 100 / $ratio) (-330rem / 100 / $ratio) no-repeat;
+  background-size: (910rem / 100 / $ratio) (654rem / 100 / $ratio);
+}
+
+// title-type-2-right 图片:
+@mixin i-title-type-2-right($ratio: 2) {
+  content: '';
+  display: inline-block;
+  width: (56rem / 100 / $ratio);
+  height: (32rem / 100 / $ratio);
+  background: url([[static]]/page/act_1018_mine/img/icon.png[[v]]) (-806rem / 100 / $ratio) (-284rem / 100 / $ratio) no-repeat;
+  background-size: (910rem / 100 / $ratio) (654rem / 100 / $ratio);
+}
+

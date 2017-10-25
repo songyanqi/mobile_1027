@@ -3,7 +3,8 @@
  * 模块目标: 本模块要封装app2.4.0之后为前端提供的所有native接口
  * 文档地址: http://wiki.bravetime.net/pages/viewpage.action?pageId=8192341
  */
-import ua from './ua';
+import ua from './ua.js';
+import popup from './popup.js';
 import $ from '$';
 import config from '../config.js';
 
@@ -26,13 +27,13 @@ const defaultSetHead = {
   backBtn: '1',     // 0表示头部不展示返回按钮，1表示展示
   homeBtn: '0',     // 0表示头部不展示首页按钮，1表示展示
   shareBtn: '0',    //0表示头部不展示分享按钮，1表示展示
-  shareMoney: '',    //0表示分享佣金为0不显示分享赚钱按钮，非0：展示分享赚钱按钮，在3.9.1之前用该字段
-  shareMoneyStr: '',   //在3.9.1中会用该字段
-  rightBtn: {
-    text: '',
-    textColor: '#ff4a7d',
-    action: ''
-  },
+  // shareMoney: '',    //0表示分享佣金为0不显示分享赚钱按钮，非0：展示分享赚钱按钮，在3.9.1之前用该字段
+  // shareMoneyStr: '',   //在3.9.1中会用该字段
+  // rightBtn: {    // rightBtn会覆盖其他字段
+  //   text: '',
+  //   textColor: '#ff4a7d',
+  //   action: ''
+  // },
 };
 
 /**
@@ -69,7 +70,7 @@ function getProtocal(param = {}) {
 
   // 拼接唤起native协议
   let protocal = `davdian:\/\/call.${param.host}.com?action=${param.action}&params=${encodeURIComponent(JSON.stringify(param.param))}&callback=${callbackName}&minv=${param.v}`;
-  // alert(protocal)
+
   return protocal;
 }
 
@@ -92,8 +93,7 @@ function innerCall(param = {}) {
   }
   // 参数默认值
   param.invalid = param.invalid || function () {
-    console.trace();
-      alert("请升级您的APP");
+      popup.toast("请升级您的APP到最新版");
     };
 
   // 当前版本高于指定版本,可以调用native,否则进行提示
@@ -101,14 +101,23 @@ function innerCall(param = {}) {
     // 客户端端内调用协议
     let protocal = getProtocal(param);
 
-    // 打印协议
+    // 是否输出调试信息
+    if (param.debug) {
+      // 在页面底部打印调用native协议
+      let logDom = document.createElement('div');
+      logDom.style.margin = '10px';
+      logDom.textContent = protocal;
+      document.body.appendChild(logDom);
+      popup.debug({
+        title: protocal
+      });
+      alert(protocal)
+    }
+
+    // 日志
     console.log(protocal);
 
-    // logger
-    console.log(`location.href方式唤起native,协议为: ${protocal}`);
-
-    // 调用native
-    console.log(protocal)
+    // 调用native, timeout解决协议覆盖问题
     location.href = protocal;
   } else {
     // 版本错误提示
@@ -198,13 +207,16 @@ const native = {
      * 用法:
      * native.Account.login()
      */
-    login(param = {}) {
-      call({
-        v: '2.4.0',
-        host: 'Account',
-        action: 'login',
-        param: param
-      });
+    login(param = {}, debug) {
+      setTimeout(function(){
+        call({
+          v: '2.4.0',
+          host: 'Account',
+          action: 'login',
+          param: param,
+          debug: debug,
+        });
+      }, 500);
     },
   },
 
@@ -411,12 +423,13 @@ const native = {
         }
       })
      */
-    setHead(param = {}) {
+    setHead(param = {}, debug) {
       call({
         v: '2.6.0',
         host: 'Browser',
         action: 'setHead',
-        param: param
+        param: param,
+        debug: debug
       });
     },
 
@@ -510,6 +523,26 @@ const native = {
         host: 'Browser',
         action: 'goNativeHomePage',
         param: param
+      });
+    },
+    /**
+     * 1018爆款商品预约
+     * native.Browser.goodsBook({
+        goodsId: '商品Id',
+        goodsTitle: '商品标题',
+        goodsImage: '商品图片',
+        goodsStartTime: '开抢时间',
+        goodsUrl: '商品详情链接',
+        goodsListUrl: '商品列表链接'
+      });
+     */
+    goodsBook(param = {}, debug = false){
+      call({
+        v: '5.1.0',
+        host: 'Browser',
+        action: 'goodsBook',
+        param: param,
+        debug: debug
       });
     }
   },
@@ -851,8 +884,8 @@ const native = {
      * native.Audio.audioPlay();
      */
     audioPlay(param = {}){
-      param.sortNo=param.sortNo.toString();
-      param.albumId=param.albumId.toString();
+      param.sortNo = param.sortNo.toString();
+      param.albumId = param.albumId.toString();
       call({
         v: '5.0.0',
         host: 'Audio',
@@ -982,12 +1015,12 @@ const native = {
      * 用法:
      * native.custom.initHead()
      */
-    setHead(param = {}) {
+    setHead(param = {}, debug) {
       // 参数合并
       param = $.extend({}, defaultSetHead, param);
 
       // 调用Browser.setHead接口
-      native.Browser.setHead(param);
+      native.Browser.setHead(param, debug);
     },
 
     /**

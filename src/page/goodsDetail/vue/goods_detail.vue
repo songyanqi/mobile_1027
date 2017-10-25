@@ -100,10 +100,10 @@
 
               :goodsimglist = "goodsImgList"></goods-swiper>
             <goods-intro
-              :actendtime = "actEndTime"
               :isshowactive = "isShowActive"
               :shopurl = "shopUrl"
               :membercont = "memberCont"
+              :datarepresentid = "dataRepresentId"
 
               :seckill = "secKill"
 
@@ -114,7 +114,14 @@
               :visitorstatus = "visitorStatus"
               :goodsname = "goodsName"
               :goodsstocknumber = "goodsStockNumber"
-              :infoobj = "infoObj"></goods-intro>
+              :infoobj = "infoObj"
+              :response="response"></goods-intro>
+
+            <!--广告banner-->
+            <ad-banner :ad-img="response.data.ADBanner.imageUrl" :ad-url="response.data.ADBanner.content"
+                       v-if="response && response.data && response.data.ADBanner && response.data.ADBanner.imageUrl">
+            </ad-banner>
+
             <activity-types
               v-if = "firstScreenFinish"
               :infoobj = "infoObj"
@@ -159,11 +166,6 @@
               v-if="firstScreenFinish" 
               :brandlist = "brandList"
             ></brand-type>
-
-            <!--广告banner-->
-            <ad-banner :ad-img="response.data.ADBanner.imageUrl" :ad-url="response.data.ADBanner.content"
-                       v-if="response && response.data && response.data.ADBanner && response.data.ADBanner.imageUrl">
-            </ad-banner>
 
             <div class = "parmas_wrapper clearfix"
                  v-if = "firstScreenFinish"
@@ -254,7 +256,6 @@
           :seckill = "secKill"
         ></goods-bottom>
       </div>
-      <!--<alert v-model="alertShow" title="提示" @on-hide="handleAlertHide"> {{ alertMsg }}</alert>-->
       <confirm v-if="confirmShow" title="提示"
                @on-cancel="handleConfirmCancel"
                :confirm-text = 'confirmText'
