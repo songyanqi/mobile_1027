@@ -2,6 +2,7 @@
   <div>
     <audio preload="auto" class='allAudio'></audio>
     <div v-if='!isapp' class="tab2" @click='goback'><img src="//pic.davdian.com/free/2017/08/21/backRound.png" alt=""></div>
+    <div v-if='!isapp' class="tab3" @click='goindex'><img src="//pic.davdian.com/free/goodsDetail/homeRound.png" alt=""></div>
     <div class="top_img" v-if='!isapp'>
       <div class="big_img" v-if='musicList[musicList.length-index-1] && musicList[musicList.length-index-1].imageUrl'>
         <img :src="musicList[musicList.length-index-1].imageUrl" alt="">
@@ -243,6 +244,9 @@
       })
     },
     methods: {
+      goindex(){
+
+      },
       playTrackSingle(){
         let that = this
         let obj = {
@@ -1025,6 +1029,14 @@
     height: 0.44rem;
     z-index: 100;
   }
+  .tab3{
+    position: absolute;
+    top: 20px;
+    width: 0.4rem;
+    height: 0.44rem;
+    z-index: 100;
+    right: 0;
+  }
   .tab1{
     margin-left: 0.04rem;
   }
@@ -1061,6 +1073,10 @@
     z-index: 3;
   }
   .tab2 img{
+    width: 0.4rem;
+    height: 0.44rem;
+  }
+  .tab3 img{
     width: 0.4rem;
     height: 0.44rem;
   }
