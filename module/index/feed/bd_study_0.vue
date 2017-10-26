@@ -334,7 +334,12 @@
     margin-right:0.05rem;
   }
   .times .name{
-    font-size: 11px;
+    font-size: 0.11rem;
+    max-width: 2.5rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: middle;
   }
   .all .list_all:nth-child(1){
     border: 0;

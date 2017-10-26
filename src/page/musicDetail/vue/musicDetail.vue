@@ -156,6 +156,9 @@
 
     },
     mounted: function () {
+
+      document.title='音频详情';
+
       var that =  this
       this.$nextTick(function(){
         // that.playData()
