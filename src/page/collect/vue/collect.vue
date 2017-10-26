@@ -55,12 +55,13 @@
         price:0,
         name:"collect",
         isApp:util.utils.isApp(),
-        maskFlag:null,
+        maskFlag:false,
         maskFlag2:null,
         title:"",
         isFree:null,
         titleN: '合辑详情',
         shareInfo:{}
+
       }
     },
     mounted:function () {
@@ -190,10 +191,10 @@
                     }else{
                       dialog.alert('code:'+result.code);
                     }
+                  }else{
                   }
                 }
               }).catch(function(e){
-                that.maskFlag=true;
                 that.pageFlag = true;
                 console.log('e:', e)
             });

@@ -80,7 +80,7 @@
   import native from '../../../common/js/module/native.js'
   import popup from '../../../common/js/module/popup.js'
   import share from '../../../common/js/module/share.js';
-  // import common from '../../../common/js/common.js'
+  import common from '../../../common/js/common.js'
   export default {
     data: function () {
       return {
@@ -174,6 +174,7 @@
           obj['expires_in'] = localStorage.getItem('expires_in')
         }
         api('/api/mg/content/music/getListData', obj).then(function(data){
+          common.checkRedirect(data);
           if (data.code ==0){
             if (data.data && data.data.dataList){
               that.price=data.data.attr.price;
@@ -204,14 +205,14 @@
                 cancelBtnCallback: function(){}
               });
             } else {
-              popup.confirm({
-                title: '提示',
-                text: 'code='+data.code,
-                okBtnTitle: '确定',
-                cancelBtnTitle: '取消',
-                okBtnCallback: function(){},
-                cancelBtnCallback: function(){}
-              });
+//              popup.confirm({
+//                title: '提示444',
+//                text: 'code='+data.code,
+//                okBtnTitle: '确定',
+//                cancelBtnTitle: '取消',
+//                okBtnCallback: function(){},
+//                cancelBtnCallback: function(){}
+//              });
             }
           }
           if (data && data.data && data.data.xmlyToken && data.data.xmlyToken.access_token){
