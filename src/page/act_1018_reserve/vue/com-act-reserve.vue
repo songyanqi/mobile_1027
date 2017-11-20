@@ -1,6 +1,11 @@
 <style  lang="sass"  rel="stylesheet/scss">
   @import "../../../common/css/common.scss";
   .reserve {
+    .clearfix:after {
+      display: block;
+      clear: both;
+      content: "";
+    }
     .swiper-container {
       background: #fff;
       font-size: 14px;
@@ -106,7 +111,7 @@
       </div>
     </div>
     <!-- 列表 -->
-    <div class = "bookCont">
+    <div class = "bookCont clearfix">
   		<div class = "bookList" v-for = "(item,index) in singleList" @click = "handleList($event, item, index)">
   			<div class = "bookImg" data-id = "item.linkUrl">
   				<img data-id = "item.linkUrl" src="http://pic.davdian.com/supplier/2017/06/20/1000_1000_e1a9869947141510a8743e6c002553c1.jpg?x-oss-process=image/resize,m_fill,w_320,h_320/format,webp">

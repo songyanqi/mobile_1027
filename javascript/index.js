@@ -131,7 +131,7 @@ $(document).ready(function(){
                         },
                         url:refreshUrl,
                         success:function(d){
-                            window.bravetime.tj.pvSend('index_d2refresh','index_d2refresh_p'+pageIndex);
+                            // window.bravetime.tj.pvSend('index_d2refresh','index_d2refresh_p'+pageIndex);
                             if(typeof d == "string"){
                                 var data = JSON.parse(d);
                             }else{

@@ -1237,8 +1237,23 @@ export default {
         success: (res) => {
           if (res.code == 0) {
             let data = res.data;
-            if (data && data.dataList && data.dataList.length) {
-              data.dataList.map((item, index) => {
+            let dataList = [];
+            if (data.dataList.length) {
+              dataList = data.dataList;
+            } else {
+              $.ajax({
+                url: '/api/mg/sale/index/getPageSecond',
+                type: "POST",
+                dataType: "JSON",
+                success(res) {
+                  if (res.code == 0) {
+                    dataList = res.data.feedList[0].body.dataList;
+                  }
+                }
+              })
+            }
+            if (dataList.length) {
+              dataList.map((item, index) => {
                 item.imageUrl = `${item.imageUrl}`;
               });
 
@@ -1246,15 +1261,8 @@ export default {
               that.mayYouLikeNoMore = true;//判定值 改为false
               that.isFirstLoad = false;
             }
-            if (this.$refs.detailScroller) {
-              document.querySelector('.good_list_2_row').style.height = `${Math.ceil(data.dataList.length / 2) * 187 + 124}px`;
-              this.$nextTick(() => {
-                this.$refs.detailScroller.reset();
-              });
-            }
           } else {
             popup.toast(res.data.msg, 3000);
-
           }
         },
         error: (err) => {
